@@ -1,46 +1,48 @@
 "use strict";
-a.d(t, { r: () => h });
-var s = a(627968),
-    r = a(64700),
-    n = a(333748),
-    i = a(397927),
-    l = a(647053),
-    o = a(985018),
-    c = a(856229),
-    d = a(806782),
-    u = a(277606);
-let h = (e) => {
-    let { onComplete: t, data: a } = e,
-        h = (0, r.useId)(),
-        p = null,
-        x = null,
-        f = a.scopes.some((e) => (0, l.RM)(e));
+s.d(t, { r: () => x });
+var a = s(627968),
+    r = s(64700),
+    n = s(333748),
+    i = s(534514),
+    l = s(834730),
+    o = s(821609),
+    c = s(647053),
+    d = s(985018),
+    u = s(313338),
+    h = s(806782),
+    p = s(277606);
+let x = (e) => {
+    let { onComplete: t, data: s } = e,
+        x = (0, r.useId)(),
+        f = null,
+        _ = null,
+        m = s.scopes.some((e) => (0, c.RM)(e));
     return (
-        a.clientId === n.i.PLAYSTATION_APPLICATION_ID || a.clientId === n.i.PLAYSTATION_STAGING_APPLICATION_ID
-            ? (p = d.A)
-            : f && (p = u.A),
-        null != a.twoWayLinkCode ? (x = o.intl.string(o.t.QhATl2)) : f && (x = o.intl.string(o.t.vBPvK3)),
-        (0, s.jsxs)("div", {
-            className: c.Qs,
+        s.clientId === n.i.PLAYSTATION_APPLICATION_ID || s.clientId === n.i.PLAYSTATION_STAGING_APPLICATION_ID
+            ? (f = h.A)
+            : m && (f = p.A),
+        null != s.twoWayLinkCode ? (_ = d.intl.string(d.t.QhATl2)) : m && (_ = d.intl.string(d.t.vBPvK3)),
+        (0, a.jsxs)("div", {
+            className: u.Qs,
             children: [
-                null != p ? (0, s.jsx)("img", { src: p, className: c.xX, alt: "", "aria-labelledby": h }) : null,
-                (0, s.jsxs)("div", {
-                    className: c.gx,
+                null != f ? (0, a.jsx)("img", { src: f, className: u.xX, alt: "", "aria-labelledby": x }) : null,
+                (0, a.jsxs)("div", {
+                    className: u.gx,
                     children: [
-                        (0, s.jsx)(i.Heading, {
+                        (0, a.jsx)(i.D, {
                             variant: "heading-xl/extrabold",
-                            id: h,
-                            children: o.intl.string(o.t.qDtJmD),
+                            id: x,
+                            children: d.intl.string(d.t.qDtJmD),
                         }),
-                        null != x
-                            ? (0, s.jsx)(i.Text, { variant: "text-md/normal", color: "text-default", children: x })
+                        null != _
+                            ? (0, a.jsx)(l.E, { variant: "text-md/normal", color: "text-default", children: _ })
                             : null,
                     ],
                 }),
-                (0, s.jsx)("div", {
+                (0, a.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: c.wC,
-                    children: (0, s.jsx)(i.Button, { variant: "primary", text: o.intl.string(o.t.i4jeWR), onClick: t }),
+                    className: u.wC,
+                    children: (0, a.jsx)(o.$, { variant: "primary", text: d.intl.string(d.t.i4jeWR), onClick: t }),
                 }),
             ],
         })

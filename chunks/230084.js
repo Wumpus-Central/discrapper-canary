@@ -1,66 +1,67 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(421380),
-    o = n(397927),
-    c = n(688810),
-    d = n(385612),
-    u = n(128450),
-    _ = n(339984),
-    m = n(985018),
-    A = n(897570);
-let g = [{ name: "gif", extensions: ["gif"] }];
-function E(e) {
+    l = n(503698),
+    a = n.n(l),
+    r = n(862482),
+    o = n(930861),
+    d = n(821609),
+    u = n(688810),
+    c = n(385612),
+    g = n(128450),
+    m = n(339984),
+    _ = n(985018),
+    A = n(114077);
+let h = [{ name: "gif", extensions: ["gif"] }];
+function p(e) {
     let {
             showRemoveAvatarButton: t,
             errors: n,
-            onAvatarChange: r,
-            sectionTitle: E,
-            changeAvatarButtonText: h,
-            guildId: p,
-            className: C,
-            disabled: x = !1,
-            isTryItOut: T = !1,
-            forcedDivider: I,
-            withHighlight: S = !1,
+            onAvatarChange: l,
+            sectionTitle: p,
+            changeAvatarButtonText: x,
+            guildId: E,
+            className: T,
+            disabled: S = !1,
+            isTryItOut: f = !1,
+            forcedDivider: b,
+            withHighlight: C = !1,
         } = e,
-        { newestAnalyticsLocation: f } = (0, c.Ay)(),
-        N = S ? o.wLn : l.$n,
-        b = s.useCallback(() => {
-            (0, d.XD)({
-                uploadType: _.HL.AVATAR,
-                analyticsSource: f,
-                filters: T ? g : void 0,
-                guildId: p,
-                isTryItOut: T,
+        { newestAnalyticsLocation: v } = (0, u.Ay)(),
+        N = C ? o.wL : r.$n,
+        I = s.useCallback(() => {
+            (0, c.XD)({
+                uploadType: m.HL.AVATAR,
+                analyticsSource: v,
+                filters: f ? h : void 0,
+                guildId: E,
+                isTryItOut: f,
             });
-        }, [p, f, T]);
-    return (0, i.jsx)(u.A, {
-        className: C,
-        title: E,
+        }, [E, v, f]);
+    return (0, i.jsx)(g.A, {
+        className: T,
+        title: p,
         errors: n,
-        disabled: x,
-        forcedDivider: I,
+        disabled: S,
+        forcedDivider: b,
         children: (0, i.jsxs)("div", {
             className: A.NC,
             children: [
                 (0, i.jsx)(N, {
-                    className: a()({ [A.yj]: S }),
-                    size: l.$n.Sizes.SMALL,
-                    onClick: b,
-                    children: h ?? m.intl.string(m.t["4OynCD"]),
+                    className: a()({ [A.yj]: C }),
+                    size: r.$n.Sizes.SMALL,
+                    onClick: I,
+                    children: x ?? _.intl.string(_.t["4OynCD"]),
                 }),
                 t &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: A.DT,
-                        children: (0, i.jsx)(o.Button, {
+                        children: (0, i.jsx)(d.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != p ? m.intl.string(m.t.TDjKDm) : m.intl.string(m.t.twB3fz),
-                            onClick: () => r(null),
+                            text: null != E ? _.intl.string(_.t.TDjKDm) : _.intl.string(_.t.twB3fz),
+                            onClick: () => l(null),
                         }),
                     }),
             ],

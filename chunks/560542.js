@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => i });
 var r = n(723176);
-class i {
+let i = new (class {
     actions = {
         BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
         CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
@@ -30,5 +30,4 @@ class i {
         r.A.guildsRequiringDeletedIdsSyncTransaction(t).delete(e.guild_id);
     }
     resetInMemoryState() {}
-}
-let a = new i();
+})();

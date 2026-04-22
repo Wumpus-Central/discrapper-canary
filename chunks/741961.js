@@ -1,128 +1,118 @@
 "use strict";
-let r;
-n.d(t, { A: () => R });
-var i = n(311907),
-    a = n(562465),
-    s = n(73153),
-    o = n(695870),
-    l = n(927813),
-    u = n(961350),
-    c = n(101392),
+let i;
+n.d(t, { A: () => C });
+var l = n(311907),
+    s = n(562465),
+    r = n(73153),
+    a = n(695870),
+    o = n(927813),
+    c = n(961350),
+    u = n(101392),
     d = n(652215);
-let _ = 10 * l.A.Millis.SECOND,
-    f = 1.5 * l.A.Millis.SECOND,
-    p = 5,
-    h = {},
-    m = Object.freeze({});
+let h = 10 * o.A.Millis.SECOND,
+    m = 1.5 * o.A.Millis.SECOND,
+    p = {},
+    f = Object.freeze({});
 function g(e) {
-    return h[e] ?? m;
-}
-function E(e) {
-    let { channelId: t } = e,
-        n = u.default.getId();
-    if (null == n || t === o.E) return !1;
-    null != r && r.channelId !== t && (null != r.timeout && clearTimeout(r.timeout), (r = null));
-    let i = Date.now(),
-        l = 0.8 * _;
-    if (null != r && (null != r.timeout || r.prevSend + l > i)) return !1;
-    let h = setTimeout(
-        () => {
-            null == r ||
-                r.channelId !== t ||
-                n !== u.default.getId() ||
-                null == r.timeout ||
-                ((r.timeout = null),
-                b(t) > p ||
-                    a.Bo.post({ url: d.Rsh.TYPING(t), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
-                        if (200 === e.status) {
-                            let n = e.body.message_send_cooldown_ms ?? 0,
-                                r = e.body.thread_create_cooldown_ms ?? 0;
-                            n > 0 &&
-                                s.h.dispatch({
-                                    type: "SLOWMODE_SET_COOLDOWN",
-                                    channelId: t,
-                                    slowmodeType: c.R.SendMessage,
-                                    cooldownMs: n,
-                                }),
-                                r > 0 &&
-                                    s.h.dispatch({
-                                        type: "SLOWMODE_SET_COOLDOWN",
-                                        channelId: t,
-                                        slowmodeType: c.R.CreateThread,
-                                        cooldownMs: r,
-                                    });
-                        }
-                    }));
-        },
-        null == r || r.prevSend > i - 2 * l ? f : 0,
-    );
-    return (r = { channelId: t, timeout: h, prevSend: i }), y({ channelId: t, userId: n });
-}
-function A(e) {
-    if (null == r || r.channelId !== e) return !1;
-    null != r.timeout && clearTimeout(r.timeout), (r = null);
-}
-function I(e) {
-    let { channelId: t } = e,
-        n = u.default.getId();
-    return (
-        null != n &&
-        null != r &&
-        r.channelId === t &&
-        null != r.timeout &&
-        (clearTimeout(r.timeout), (r = null), S({ channelId: t, userId: n }))
-    );
-}
-function T(e, t) {
-    return setTimeout(() => {
-        s.h.dispatch({ type: "TYPING_STOP", channelId: e, userId: t });
-    }, _);
-}
-function y(e) {
     let { channelId: t, userId: n } = e,
-        r = { ...g(t) };
-    clearTimeout(r[n]), (r[n] = T(t, n)), (h[t] = r);
+        i = { ...(p[t] ?? f) };
+    clearTimeout(i[n]),
+        (i[n] = setTimeout(() => {
+            r.h.dispatch({ type: "TYPING_STOP", channelId: t, userId: n });
+        }, h)),
+        (p[t] = i);
 }
-function S(e) {
+function _(e) {
     let { channelId: t, userId: n } = e,
-        r = h[t];
-    if (null == r || null == r[n]) return !1;
-    let i = { ...r };
-    clearTimeout(i[n]), delete i[n], (h[t] = i);
+        i = p[t];
+    if (null == i || null == i[n]) return !1;
+    let l = { ...i };
+    clearTimeout(l[n]), delete l[n], (p[t] = l);
 }
-function v(e) {
-    let {
-        channelId: t,
-        message: { author: n },
-        optimistic: r,
-    } = e;
-    return r && A(t), null != n && S({ channelId: t, userId: n.id });
+function x() {
+    p = {};
 }
-function C() {
-    h = {};
-}
-function b(e) {
-    let t = g(e);
-    return t === m ? 0 : Object.keys(t).length;
-}
-class N extends i.Ay.Store {
+class A extends l.Ay.Store {
     initialize() {
-        this.waitFor(u.default);
+        this.waitFor(c.default);
     }
     static displayName = "TypingStore";
     getTypingUsers(e) {
-        return g(e);
+        return p[e] ?? f;
     }
     isTyping(e, t) {
-        return null != g(e)[t];
+        return null != (p[e] ?? f)[t];
     }
 }
-let R = new N(s.h, {
-    TYPING_START: y,
-    TYPING_STOP: S,
-    TYPING_START_LOCAL: E,
-    TYPING_STOP_LOCAL: I,
-    CONNECTION_OPEN: C,
-    OVERLAY_INITIALIZE: C,
-    MESSAGE_CREATE: v,
+let C = new A(r.h, {
+    TYPING_START: g,
+    TYPING_STOP: _,
+    TYPING_START_LOCAL: function (e) {
+        let { channelId: t } = e,
+            n = c.default.getId();
+        if (null == n || t === a.E) return !1;
+        null != i && i.channelId !== t && (null != i.timeout && clearTimeout(i.timeout), (i = null));
+        let l = Date.now(),
+            o = 0.8 * h;
+        if (null != i && (null != i.timeout || i.prevSend + o > l)) return !1;
+        let _ = setTimeout(
+            () => {
+                let e;
+                null == i ||
+                    i.channelId !== t ||
+                    n !== c.default.getId() ||
+                    null == i.timeout ||
+                    ((i.timeout = null),
+                    ((e = p[t] ?? f) === f ? 0 : Object.keys(e).length) > 5 ||
+                        s.Bo.post({ url: d.Rsh.TYPING(t), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+                            if (200 === e.status) {
+                                let n = e.body.message_send_cooldown_ms ?? 0,
+                                    i = e.body.thread_create_cooldown_ms ?? 0;
+                                n > 0 &&
+                                    r.h.dispatch({
+                                        type: "SLOWMODE_SET_COOLDOWN",
+                                        channelId: t,
+                                        slowmodeType: u.R.SendMessage,
+                                        cooldownMs: n,
+                                    }),
+                                    i > 0 &&
+                                        r.h.dispatch({
+                                            type: "SLOWMODE_SET_COOLDOWN",
+                                            channelId: t,
+                                            slowmodeType: u.R.CreateThread,
+                                            cooldownMs: i,
+                                        });
+                            }
+                        }));
+            },
+            null == i || i.prevSend > l - 2 * o ? m : 0,
+        );
+        return (i = { channelId: t, timeout: _, prevSend: l }), g({ channelId: t, userId: n });
+    },
+    TYPING_STOP_LOCAL: function (e) {
+        let { channelId: t } = e,
+            n = c.default.getId();
+        return (
+            null != n &&
+            null != i &&
+            i.channelId === t &&
+            null != i.timeout &&
+            (clearTimeout(i.timeout), (i = null), _({ channelId: t, userId: n }))
+        );
+    },
+    CONNECTION_OPEN: x,
+    OVERLAY_INITIALIZE: x,
+    MESSAGE_CREATE: function (e) {
+        var t;
+        let {
+            channelId: n,
+            message: { author: l },
+            optimistic: s,
+        } = e;
+        return (
+            s &&
+                ((t = n), null == i || i.channelId !== t || (null != i.timeout && clearTimeout(i.timeout), (i = null))),
+            null != l && _({ channelId: n, userId: l.id })
+        );
+    },
 });

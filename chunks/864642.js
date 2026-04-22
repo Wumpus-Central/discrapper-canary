@@ -1,52 +1,51 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        Chrono: () => c.u,
-        Meridiem: () => _.FF,
-        ParsingComponents: () => d.BP,
-        ParsingResult: () => d.s4,
-        ReferenceWithTimezone: () => d.b5,
-        Weekday: () => _.Bw,
-        casual: () => g,
-        createCasualConfiguration: () => T,
-        createConfiguration: () => y,
-        parse: () => A,
-        parseDate: () => I,
-        strict: () => E,
+r.r(t),
+    r.d(t, {
+        Chrono: () => d.u,
+        Meridiem: () => c.FF,
+        ParsingComponents: () => m.BP,
+        ParsingResult: () => m.s4,
+        ReferenceWithTimezone: () => m.b5,
+        Weekday: () => c.Bw,
+        casual: () => y,
+        createCasualConfiguration: () => D,
+        createConfiguration: () => P,
+        parse: () => w,
+        parseDate: () => A,
+        strict: () => x,
     });
-var r = n(701153),
-    i = n(272081),
-    a = n(355497),
-    s = n(267118),
-    o = n(60538),
-    l = n(515875),
-    u = n(781309),
-    c = n(880683),
-    d = n(374372),
-    _ = n(322811),
-    f = n(309229),
-    p = n(851102),
-    h = n(125659),
-    m = n(483655);
-let g = new c.u(T()),
-    E = new c.u(y(!0));
-function A(e, t, n) {
-    return g.parse(e, t, n);
+var n = r(701153),
+    s = r(272081),
+    a = r(355497),
+    i = r(267118),
+    o = r(60538),
+    l = r(515875),
+    u = r(781309),
+    d = r(880683),
+    m = r(374372),
+    c = r(322811),
+    g = r(309229),
+    h = r(851102),
+    f = r(125659),
+    p = r(483655);
+let y = new d.u(D()),
+    x = new d.u(P(!0));
+function w(e, t, r) {
+    return y.parse(e, t, r);
 }
-function I(e, t, n) {
-    return g.parseDate(e, t, n);
+function A(e, t, r) {
+    return y.parseDate(e, t, r);
 }
-function T() {
-    let e = y(!1);
+function D() {
+    let e = P(!1);
     return e.parsers.unshift(new a.A()), e;
 }
-function y(e = !0) {
-    let t = (0, h.i)(
+function P(e = !0) {
+    let t = (0, f.i)(
         {
-            parsers: [new r.A(), new s.A(), new p.A(), new o.A(), new l.A()],
-            refiners: [new f.A(), new u.A(), new i.A()],
+            parsers: [new n.A(), new i.A(), new h.A(), new o.A(), new l.A()],
+            refiners: [new g.A(), new u.A(), new s.A()],
         },
         e,
     );
-    return (t.refiners = t.refiners.filter((e) => !(e instanceof m.A))), t;
+    return (t.refiners = t.refiners.filter((e) => !(e instanceof p.A))), t;
 }

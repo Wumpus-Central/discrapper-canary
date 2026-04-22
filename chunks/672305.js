@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     XM: "planOption_b13085",
     _R: "planOneTimeCost_b13085",

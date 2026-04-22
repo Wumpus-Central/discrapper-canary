@@ -1,6 +1,4 @@
 e.exports = function (e) {
-    let t = "\\[",
-        n = "\\]";
     return {
         name: "Inform 7",
         aliases: ["i7"],
@@ -15,7 +13,7 @@ e.exports = function (e) {
                 begin: '"',
                 end: '"',
                 relevance: 0,
-                contains: [{ className: "subst", begin: t, end: n }],
+                contains: [{ className: "subst", begin: "\\[", end: "\\]" }],
             },
             { className: "section", begin: /^(Volume|Book|Part|Chapter|Section|Table)\b/, end: "$" },
             {
@@ -23,7 +21,7 @@ e.exports = function (e) {
                 end: ":",
                 contains: [{ begin: "\\(This", end: "\\)" }],
             },
-            { className: "comment", begin: t, end: n, contains: ["self"] },
+            { className: "comment", begin: "\\[", end: "\\]", contains: ["self"] },
         ],
     };
 };

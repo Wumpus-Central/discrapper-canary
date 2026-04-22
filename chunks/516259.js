@@ -1,60 +1,61 @@
-s.d(t, { default: () => f }), s(321073);
-var i = s(627968),
-    n = s(64700),
-    a = s(110259),
-    o = s(732955),
-    r = s(397927),
-    c = s(311907),
-    l = s(49229),
-    u = s(688810),
-    _ = s(513297),
-    d = s(414711),
-    g = s(723690),
-    h = s(657331),
-    p = s(595623),
-    m = s(652215),
-    S = s(985018),
-    E = s(464908);
-function N(e) {
-    let { user: t, status: s, ignoredUser: n } = e,
-        { analyticsLocations: a } = (0, u.Ay)(),
-        o = (e) => {
-            e.stopPropagation(), l.A.cancelFriendRequest(t.id, { location: "Spam requests modal" });
+i.d(t, { default: () => f }), i(321073);
+var s = i(627968),
+    n = i(64700),
+    a = i(110259),
+    r = i(189213),
+    o = i(933832),
+    l = i(789645),
+    c = i(311907),
+    u = i(49229),
+    d = i(688810),
+    h = i(513297),
+    m = i(414711),
+    p = i(723690),
+    A = i(657331),
+    N = i(595623),
+    _ = i(652215),
+    I = i(985018),
+    g = i(452732);
+function y(e) {
+    let { user: t, status: i, ignoredUser: n } = e,
+        { analyticsLocations: a } = (0, d.Ay)(),
+        r = (e) => {
+            e.stopPropagation(), u.A.cancelFriendRequest(t.id, { location: "Spam requests modal" });
         },
         c = (e) => {
-            e.stopPropagation(), l.A.addRelationship({ userId: t.id, context: { location: "Spam requests modal" } });
+            e.stopPropagation(), u.A.addRelationship({ userId: t.id, context: { location: "Spam requests modal" } });
         },
-        p = s === m.clD.OFFLINE ? m.clD.UNKNOWN : s,
-        N = n ? S.intl.string(S.t.pO68Oz) : S.intl.string(S.t["gp+Ytz"]);
-    return (0, i.jsx)("div", {
-        className: E.Bi,
-        children: (0, i.jsx)(d.A, {
+        N = i === _.clD.OFFLINE ? _.clD.UNKNOWN : i,
+        y = n ? I.intl.string(I.t.pO68Oz) : I.intl.string(I.t["gp+Ytz"]);
+    return (0, s.jsx)("div", {
+        className: g.Bi,
+        children: (0, s.jsx)(m.A, {
             isFocused: !1,
             user: t,
-            className: E.Aw,
-            activeClassName: E.vu,
+            className: g.Aw,
+            activeClassName: g.vu,
             noBorder: !0,
-            onClick: () => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: a }),
+            onClick: () => (0, A.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: a }),
             children: (e) =>
-                (0, i.jsxs)("div", {
-                    className: E.a4,
+                (0, s.jsxs)("div", {
+                    className: g.a4,
                     children: [
-                        (0, i.jsx)(g.A, { user: t, hovered: e, status: p, subText: N, className: E.eF }),
-                        (0, i.jsxs)("div", {
-                            className: E.o1,
+                        (0, s.jsx)(p.A, { user: t, hovered: e, status: N, subText: y, className: g.eF }),
+                        (0, s.jsxs)("div", {
+                            className: g.o1,
                             children: [
-                                (0, i.jsx)(_.A, {
-                                    icon: r.A9s,
-                                    actionType: _.A.ActionTypes.ACCEPT,
-                                    tooltip: S.intl.string(S.t.Zcibdf),
+                                (0, s.jsx)(h.A, {
+                                    icon: o.A,
+                                    actionType: h.A.ActionTypes.ACCEPT,
+                                    tooltip: I.intl.string(I.t.Zcibdf),
                                     onClick: c,
                                     shouldHighlight: e,
                                 }),
-                                (0, i.jsx)(_.A, {
-                                    icon: r.PGe,
-                                    actionType: _.A.ActionTypes.DENY,
-                                    tooltip: S.intl.string(S.t.xuio0C),
-                                    onClick: o,
+                                (0, s.jsx)(h.A, {
+                                    icon: l.P,
+                                    actionType: h.A.ActionTypes.DENY,
+                                    tooltip: I.intl.string(I.t.xuio0C),
+                                    onClick: r,
                                     shouldHighlight: e,
                                 }),
                             ],
@@ -65,33 +66,33 @@ function N(e) {
     });
 }
 function f(e) {
-    let { transitionState: t, onClose: s } = e,
-        { rows: r } = (0, c.cf)([p.Ay], () => p.Ay.getState()),
-        u = r.filter(m.m3P.PENDING_IGNORED),
-        _ = r.filter(m.m3P.SPAM),
-        d = _.length + u.length;
+    let { transitionState: t, onClose: i } = e,
+        { rows: o } = (0, c.cf)([N.Ay], () => N.Ay.getState()),
+        l = o.filter(_.m3P.PENDING_IGNORED),
+        d = o.filter(_.m3P.SPAM),
+        h = d.length + l.length;
     n.useEffect(() => {
-        0 === d && s();
-    }, [d, s]);
-    let g = n.useCallback(() => {
-            l.A.clearPendingSpamAndIgnored(), s();
-        }, [s]),
-        h = n.useMemo(() => {
+        0 === h && i();
+    }, [h, i]);
+    let m = n.useCallback(() => {
+            u.A.clearPendingSpamAndIgnored(), i();
+        }, [i]),
+        p = n.useMemo(() => {
             let e = [];
-            return d > 1 && e.push({ text: S.intl.string(S.t.O8k7O4), onClick: g, variant: "secondary" }), e;
-        }, [g, d]);
-    return (0, i.jsx)(o.aFV, {
-        title: S.intl.string(S.t.kaYqnm),
-        subtitle: S.intl.string(S.t.tRxb4H),
-        actions: h,
+            return h > 1 && e.push({ text: I.intl.string(I.t.O8k7O4), onClick: m, variant: "secondary" }), e;
+        }, [m, h]);
+    return (0, s.jsx)(r.Modal, {
+        title: I.intl.string(I.t.kaYqnm),
+        subtitle: I.intl.string(I.t.tRxb4H),
+        actions: p,
         trackingProps: { impression: { impressionName: a.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX } },
-        onClose: s,
+        onClose: i,
         transitionState: t,
-        children: (0, i.jsxs)("div", {
-            className: E.jE,
+        children: (0, s.jsxs)("div", {
+            className: g.jE,
             children: [
-                u.map((e) => (0, n.createElement)(N, { ...e, isFocused: !1, key: e.key, ignoredUser: !0 })),
-                _.map((e) => (0, n.createElement)(N, { ...e, isFocused: !1, key: e.key })),
+                l.map((e) => (0, n.createElement)(y, { ...e, isFocused: !1, key: e.key, ignoredUser: !0 })),
+                d.map((e) => (0, n.createElement)(y, { ...e, isFocused: !1, key: e.key })),
             ],
         }),
     });

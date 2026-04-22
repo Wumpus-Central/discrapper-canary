@@ -1,134 +1,145 @@
-n.d(t, { A: () => j });
-var l = n(627968);
+n.d(t, { A: () => N });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
+var l = n(503698),
+    a = n.n(l),
     r = n(688807),
     s = n(311907),
-    o = n(435371),
-    c = n(397927),
-    d = n(442433),
-    u = n(775602),
-    m = n(915089),
-    h = n(961350),
-    p = n(183555),
-    g = n(735321),
-    x = n(606758),
-    f = n(518477),
-    y = n(985018),
-    v = n(183035);
-function j(e) {
-    let { widget: t, className: n, buttonRef: i, additionalMenuItems: r } = e,
-        s = (0, g.L)(t),
-        o = (0, m.GV)();
-    return (0, l.jsx)(E, {
-        targetRef: i,
+    o = n(990078),
+    c = n(939249),
+    d = n(772838),
+    u = n(140735),
+    m = n(834730),
+    p = n(192308),
+    h = n(265872),
+    g = n(861672),
+    x = n(477782),
+    f = n(241326),
+    E = n(442433),
+    y = n(775602),
+    T = n(915089),
+    v = n(961350),
+    A = n(183555),
+    j = n(735321),
+    I = n(606758),
+    _ = n(518477),
+    R = n(985018),
+    b = n(184390);
+function N(e) {
+    let { widget: t, className: n, buttonRef: l, additionalMenuItems: r } = e,
+        s = (0, j.L)(t),
+        o = (0, T.GV)();
+    return (0, i.jsx)(C, {
+        targetRef: l,
         widget: t,
         additionalMenuItems: r,
         children: (e) =>
-            (0, l.jsx)(T, {
-                children: (0, l.jsxs)(c.DUT, {
-                    innerRef: i,
-                    className: a()(v.x6, n),
+            (0, i.jsx)(D, {
+                children: (0, i.jsxs)(c.D, {
+                    innerRef: l,
+                    className: a()(b.x6, n),
                     "data-dnd-name": s,
-                    "aria-label": y.intl.formatToPlainString(y.t.HWNJJN, { widgetTitle: s }),
+                    "aria-label": R.intl.formatToPlainString(R.t.HWNJJN, { widgetTitle: s }),
                     "aria-describedby": o,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
-                        (0, l.jsx)(c.WP0, { size: "sm" }),
-                        (0, l.jsx)(c.AC4, { id: o, children: y.intl.string(y.t.bsuqFn) }),
+                        (0, i.jsx)(d.W, { size: "sm" }),
+                        (0, i.jsx)(u.A, { id: o, children: R.intl.string(R.t.bsuqFn) }),
                     ],
                 }),
             }),
     });
 }
-let T = (e) => {
+let D = (e) => {
         let { children: t } = e,
-            n = (0, s.bG)([u.A], () => u.A.keyboardModeEnabled),
-            { isDragging: i } = (0, r.V)((e) => ({ isDragging: e.isDragging() }));
-        return (0, l.jsx)(o.m_, {
-            __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
-                className: v.HE,
+            n = (0, s.bG)([y.A], () => y.A.keyboardModeEnabled),
+            { isDragging: l } = (0, r.V)((e) => ({ isDragging: e.isDragging() }));
+        return (0, i.jsx)(o.m, {
+            __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
+                className: b.HE,
                 children: [
-                    (0, l.jsx)(c.Text, {
+                    (0, i.jsx)(m.E, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: y.intl.format(n ? y.t["zvln/l"] : y.t["7cdwhg"], {
-                            emphasizeHook: (e) => (0, l.jsx)("strong", { children: e }),
+                        children: R.intl.format(n ? R.t["zvln/l"] : R.t["7cdwhg"], {
+                            emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                         }),
                     }),
-                    (0, l.jsx)(c.Text, {
+                    (0, i.jsx)(m.E, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: y.intl.format(y.t["4e0rM4"], {
-                            emphasizeHook: (e) => (0, l.jsx)("strong", { children: e }),
+                        children: R.intl.format(R.t["4e0rM4"], {
+                            emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                         }),
                     }),
                 ],
             }),
             position: "top",
-            shouldShow: !0 !== i,
+            shouldShow: !0 !== l,
             ariaHidden: !0,
             children: t,
         });
     },
-    E = (e) => {
-        let { children: t, widget: i, targetRef: a, additionalMenuItems: r } = e,
-            { trackUserProfileEditAction: s } = (0, p.NJ)(),
+    C = (e) => {
+        let { children: t, widget: l, targetRef: a, additionalMenuItems: r } = e,
+            { trackUserProfileEditAction: s } = (0, A.NJ)(),
             o = (e) => {
                 if (e.shiftKey) {
-                    (0, g.qA)(i),
-                        s({ action: "WIDGET_REMOVED", ...i.getProfileEditAnalyticsOptions() }),
-                        (0, x.XA)(f.jM.WIDGET_REMOVED);
+                    (0, j.qA)(l),
+                        s({ action: "WIDGET_REMOVED", ...l.getProfileEditAnalyticsOptions() }),
+                        (0, I.XA)(_.jM.WIDGET_REMOVED);
                     return;
                 }
-                (0, c.mMO)(
+                (0, p.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("95320"),
+                            n.e("87306"),
+                            n.e("38114"),
+                            n.e("19677"),
                             n.e("10117"),
-                            n.e("62371"),
-                            n.e("96759"),
-                            n.e("35526"),
+                            n.e("39558"),
+                            n.e("71555"),
+                            n.e("33577"),
+                            n.e("19783"),
                         ]).then(n.bind(n, 380035));
                         return (t) =>
-                            (0, l.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...t,
-                                userId: h.default.getId(),
-                                widget: i,
+                                userId: v.default.getId(),
+                                widget: l,
                                 trackUserProfileEditAction: s,
                             });
                     },
                     { stackingBehavior: "stack" },
                 );
             };
-        return (0, l.jsx)(c.YNO, {
+        return (0, i.jsx)(h.Y, {
             targetElementRef: a,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(c.W1t, {
+                return (0, i.jsx)(g.W, {
                     "data-menu-migrated": !0,
                     navId: "user-profile-widget-context-menu",
                     onClose: () => {
-                        (0, d.Z_)(), t();
+                        (0, E.Z_)(), t();
                     },
                     onSelect: () => {},
-                    "aria-label": y.intl.string(y.t.xpSHSk),
-                    className: v.MK,
-                    children: (0, l.jsxs)(c.rXV, {
+                    "aria-label": R.intl.string(R.t.xpSHSk),
+                    className: b.MK,
+                    children: (0, i.jsxs)(x.rX, {
                         children: [
                             r,
-                            (0, l.jsx)(c.Drp, {
+                            (0, i.jsx)(x.Dr, {
                                 id: "remove-widget",
-                                label: y.intl.string(y.t.Mm07Yc),
+                                label: R.intl.string(R.t.Mm07Yc),
                                 action: o,
                                 color: "danger",
-                                icon: c.ucK,
-                                leadingAccessory: { type: "icon", icon: c.ucK },
+                                icon: f.u,
+                                leadingAccessory: { type: "icon", icon: f.u },
                             }),
                         ],
                     }),

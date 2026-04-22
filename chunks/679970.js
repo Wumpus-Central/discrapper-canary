@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(775602),
-    o = n(607470),
-    l = n(157620),
-    u = n(561418);
-let c = (e) => {
-    let { className: t, animationState: n = "on" } = e,
-        c = (0, a.bG)([s.A], () => s.A.useReducedMotion),
-        [d, _] = (0, i.useState)(!1),
-        f = (0, i.useRef)(null),
-        p = "on" === n || ("on_hover" === n && d);
+a.d(t, { A: () => o });
+var r = a(627968),
+    n = a(64700),
+    l = a(311907),
+    s = a(775602),
+    i = a(607470),
+    c = a(157620),
+    d = a(561418);
+let o = (e) => {
+    let { className: t, animationState: a = "on" } = e,
+        o = (0, l.bG)([s.A], () => s.A.useReducedMotion),
+        [u, _] = (0, n.useState)(!1),
+        f = (0, n.useRef)(null),
+        E = "on" === a || ("on_hover" === a && u);
     return (
-        (0, i.useEffect)(() => {
-            null !== f.current && (p ? f.current.play() : ((f.current.currentTime = 0), f.current.pause()));
-        }, [p]),
+        (0, n.useEffect)(() => {
+            null !== f.current && (E ? f.current.play() : ((f.current.currentTime = 0), f.current.pause()));
+        }, [E]),
         (0, r.jsx)("div", {
-            onMouseEnter: "on_hover" === n ? () => _(!0) : void 0,
-            onMouseLeave: "on_hover" === n ? () => _(!1) : void 0,
-            children: c
-                ? (0, r.jsx)("img", { src: l.A, className: t, alt: "Orb" })
-                : (0, r.jsxs)(o.A, {
+            onMouseEnter: "on_hover" === a ? () => _(!0) : void 0,
+            onMouseLeave: "on_hover" === a ? () => _(!1) : void 0,
+            children: o
+                ? (0, r.jsx)("img", { src: c.A, className: t, alt: "Orb" })
+                : (0, r.jsxs)(i.A, {
                       className: t,
                       autoPlay: !0,
                       loop: !0,
                       ref: f,
                       children: [
-                          (0, r.jsx)("source", { src: u.A, type: "video/webm" }),
-                          (0, r.jsx)("img", { src: l.A, className: t, alt: "Orb" }),
+                          (0, r.jsx)("source", { src: d.A, type: "video/webm" }),
+                          (0, r.jsx)("img", { src: c.A, className: t, alt: "Orb" }),
                       ],
                   }),
         })

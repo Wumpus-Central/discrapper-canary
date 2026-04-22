@@ -7,15 +7,15 @@ var i = n(627968),
     r = n(284009),
     o = n.n(r),
     d = n(311907),
-    c = n(397927),
+    c = n(265872),
     u = n(442433),
     h = n(465532),
     p = n(843472),
-    A = n(684013),
-    f = n(414798),
-    g = n(147192),
-    m = n(47167),
-    _ = n(480870),
+    f = n(684013),
+    A = n(414798),
+    _ = n(147192),
+    g = n(47167),
+    m = n(480870),
     x = n(264140),
     E = n(387462),
     y = n(667285),
@@ -25,8 +25,8 @@ var i = n(627968),
     I = n(20737),
     N = n(133343),
     T = n(692051),
-    O = n(685603),
-    b = n(451909),
+    b = n(685603),
+    O = n(451909),
     j = n(926262),
     D = n(371648),
     R = n(118517),
@@ -105,7 +105,7 @@ class ea extends s.Component {
             channel: { id: i },
         } = this.props;
         h.A.changeDraft(i, this.state.textValue, M.C.ChannelMessage),
-            "" !== t ? f.A.startTyping(i) : f.A.stopTyping(i),
+            "" !== t ? A.A.startTyping(i) : A.A.stopTyping(i),
             this.setState({ textValue: t, richValue: n });
     };
     handleSendMessage = (e) => {
@@ -125,11 +125,11 @@ class ea extends s.Component {
                           ? (F._.dispatch(ee.jej.EMPHASIZE_SLOWMODE_COOLDOWN), { shouldClear: !1, shouldRefocus: !0 })
                           : { shouldClear: !1, shouldRefocus: !1 };
                   let r = p.A.getSendMessageOptionsForReply(i);
-                  return (p.A.sendMessage(n.id, b.Ay.parse(n, t), !0, { ...r, location: et.Hx.OVERLAY }),
+                  return (p.A.sendMessage(n.id, O.Ay.parse(n, t), !0, { ...r, location: et.Hx.OVERLAY }),
                   this.setState((0, C.N3)()),
                   (0, R.Jx)(n.id),
                   s)
-                      ? (A.A.deactivateAllRegions(), { shouldClear: !1, shouldRefocus: !1 })
+                      ? (f.A.deactivateAllRegions(), { shouldClear: !1, shouldRefocus: !1 })
                       : { shouldClear: !0, shouldRefocus: !0 };
               });
     };
@@ -151,7 +151,7 @@ class ea extends s.Component {
     render() {
         let { channel: e, placeholder: t, ...n } = this.props,
             { focused: s, textValue: l, contentWarningProps: a, richValue: r } = this.state,
-            d = (0, i.jsx)(c.YNO, {
+            d = (0, i.jsx)(c.Y, {
                 targetElementRef: this.textAreaRef,
                 position: "top",
                 onRequestClose: () => {
@@ -198,21 +198,21 @@ class er extends s.PureComponent {
             null != t &&
                 n &&
                 !e.activated &&
-                A.A.track(ee.HAw.OVERLAY_UNLOCKED, { channel_id: t.id, channel_type: t.type, guild_id: t.guild_id });
+                f.A.track(ee.HAw.OVERLAY_UNLOCKED, { channel_id: t.id, channel_type: t.type, guild_id: t.guild_id });
     }
     componentDidMount() {
         (0, J.j_)(this.props, this.shouldDisplay());
     }
     handlePin = () => {
         let e = !this.props.pinned;
-        A.A.track(ee.HAw.OVERLAY_PIN_TOGGLED, {
+        f.A.track(ee.HAw.OVERLAY_PIN_TOGGLED, {
             pinned: e,
             guild_id: this.props.channel?.guild_id,
             channel_id: this.props.channel?.id,
             channel_type: this.props.channel?.type,
             widget_type: ee.uss.TEXT,
         }),
-            A.A.setPinChat(e);
+            f.A.setPinChat(e);
     };
     getOpacity() {
         let { locked: e, activated: t, opacity: n, isPreviewingInGame: i } = this.props;
@@ -231,13 +231,13 @@ class er extends s.PureComponent {
                 pinned: u,
                 isPreviewingInGame: h,
                 dragging: p,
-                pendingReply: A,
+                pendingReply: f,
             } = this.props;
         if (null == t) return null;
-        let f = o || h,
-            _ = (0, m.m1)(t, W.default, U.A),
+        let A = o || h,
+            m = (0, g.m1)(t, W.default, U.A),
             x = !l && null != t && t.isNSFW(),
-            y = !f || d;
+            y = !A || d;
         return (
             (e =
                 x && null != r
@@ -248,14 +248,14 @@ class er extends s.PureComponent {
                               channel: t,
                               className: es.Wk,
                               forceCompact: u,
-                              showNewMessagesBar: !f,
+                              showNewMessagesBar: !A,
                               scrollerClassName: u ? es.XG : void 0,
                               showingQuarantineBanner: !1,
                           },
                           t.id,
                       )),
             (0, i.jsx)(T.Y.Provider, {
-                value: { disableInteractions: u && o && !d, disableAnimations: u && f && !d },
+                value: { disableInteractions: u && o && !d, disableAnimations: u && A && !d },
                 children: (0, i.jsxs)(s.Fragment, {
                     children: [
                         !o && !h && (0, i.jsx)(E.A, { channel: t, guild: r }),
@@ -279,11 +279,11 @@ class er extends s.PureComponent {
                                                         channel: t,
                                                         placeholder: n,
                                                         isTemporarilyActive: d,
-                                                        pendingReply: A,
+                                                        pendingReply: f,
                                                     }),
                                                     (0, i.jsx)("div", {
                                                         className: es.V_,
-                                                        children: (0, i.jsx)(g.Ay, {
+                                                        children: (0, i.jsx)(_.Ay, {
                                                             channel: t,
                                                             className: es.IW,
                                                             isInTextChannel: !0,
@@ -299,10 +299,10 @@ class er extends s.PureComponent {
                                                 children: (0, i.jsx)("div", {
                                                     className: a()(es.ew, es.__invalid_mediumBackgroundOpacity),
                                                     children:
-                                                        null != _ && _.length > 0
+                                                        null != m && m.length > 0
                                                             ? ei.intl.formatToPlainString(ei.t["9TkYMO"], {
                                                                   keybind: c,
-                                                                  channelName: t.isMultiUserDM() ? _ : `#${_}`,
+                                                                  channelName: t.isMultiUserDM() ? m : `#${m}`,
                                                               })
                                                             : ei.intl.formatToPlainString(ei.t["hxz/4E"], {
                                                                   keybind: c,
@@ -321,7 +321,7 @@ class er extends s.PureComponent {
         null != t &&
             null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("97579")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("97169")]).then(
                     n.bind(n, 385913),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, user: s, channelSelected: !0, channel: t });
@@ -329,11 +329,11 @@ class er extends s.PureComponent {
     };
     moveDragStart = (e) => {
         let { dragStart: t } = this.props;
-        t(O.P.MOVE, e.clientX, e.clientY);
+        t(b.P.MOVE, e.clientX, e.clientY);
     };
     resizeDragStart = (e) => {
         let { dragStart: t } = this.props;
-        t(O.P.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+        t(b.P.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
     };
     renderWidgetWrapper(e) {
         let { locked: t, pinned: n, activated: s, isPreviewingInGame: l, opacity: r, className: o } = this.props,
@@ -343,10 +343,10 @@ class er extends s.PureComponent {
             u = n && (c || s),
             h = n && s,
             p = n && c && !s,
-            A = (0, X.A)(r);
+            f = (0, X.A)(r);
         return (0, i.jsx)(q.Ay, {
             className: a()(
-                A,
+                f,
                 { [es.yw]: !n, [es.CP]: n, [es.xt]: p, [es.iM]: u, [es.ip]: h, [es.dp]: n, "overlay-unlocked": !t },
                 o,
             ),
@@ -399,23 +399,23 @@ function eo(e) {
             !t && B.default.isPreviewingInGame(),
         ]),
         p = (0, d.bG)([G.A], () => G.A.getGuild(s)),
-        A = (0, d.bG)([P.A], () => null != s && P.A.didAgree(s)),
-        f = null != a && a.isPrivate() ? a.getRecipientId() : null,
-        g = (0, d.bG)([L.A], () => (null != l ? L.A.getPendingReply(l) : void 0)),
-        m = (0, d.bG)([W.default], () => (null != f ? W.default.getUser(f) : null)),
-        { placeholder: E } = (0, _.A)({ channel: a });
+        f = (0, d.bG)([P.A], () => null != s && P.A.didAgree(s)),
+        A = null != a && a.isPrivate() ? a.getRecipientId() : null,
+        _ = (0, d.bG)([L.A], () => (null != l ? L.A.getPendingReply(l) : void 0)),
+        g = (0, d.bG)([W.default], () => (null != A ? W.default.getUser(A) : null)),
+        { placeholder: E } = (0, m.A)({ channel: a });
     return null != a && null != p && ee.kvI.GUILD_THREADS_ONLY.has(a.type)
         ? (0, i.jsx)(x.A, {})
         : (0, i.jsx)(er, {
               guild: p,
               channel: a,
-              user: m,
+              user: g,
               opacity: c,
-              nsfwAgree: A,
+              nsfwAgree: f,
               chatKeybind: o,
               activated: u.has(ee.ajI.TEXT_WIDGET),
               isPreviewingInGame: h,
-              pendingReply: g,
+              pendingReply: _,
               contained: t,
               placeholder: E,
               widget: ee.uss.TEXT,

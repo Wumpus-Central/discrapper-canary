@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, { closeUserProfileModal: () => p, openUserProfileModal: () => f });
-var r = n(397927),
+n.r(t), n.d(t, { closeUserProfileModal: () => E, openUserProfileModal: () => f });
+var r = n(778712),
     i = n(73153),
     s = n(803306),
     a = n(993327),
     o = n(626584),
     l = n(287809),
     u = n(576622);
-let c = (0, r.FT9)(r._3J.SIZE_120),
-    d = new o.A("UserProfileModalActionCreators"),
+let d = (0, r.FT)(r._3.SIZE_120),
+    c = new o.A("UserProfileModalActionCreators"),
     _ = async (e) => {
         try {
             await (0, a.A)(e);
         } catch (t) {
-            d.log(`Failed to fetch content inventory outbox for ${e}:`, t);
+            c.log(`Failed to fetch content inventory outbox for ${e}:`, t);
         }
     };
 async function f(e) {
@@ -23,12 +23,12 @@ async function f(e) {
             originGuildId: r,
             channelId: a,
             messageId: o,
-            roleId: d,
+            roleId: c,
             sessionId: f,
-            joinRequestId: p,
+            joinRequestId: E,
             tabSection: h,
-            scrollTarget: m,
-            hideRestrictedProfile: E,
+            scrollTarget: p,
+            hideRestrictedProfile: m,
             sourceAnalyticsLocations: g,
             appContext: A,
             customStatusPrompt: I = null,
@@ -43,15 +43,15 @@ async function f(e) {
                   withMutualFriendsCount: !0,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
-                  joinRequestId: p,
+                  joinRequestId: E,
               })
-            : (0, u.A)(S.id, S.getAvatarURL(void 0, c), {
+            : (0, u.A)(S.id, S.getAvatarURL(void 0, d), {
                   type: "modal",
                   guildId: n ?? void 0,
                   withMutualFriendsCount: !S.bot,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
-                  joinRequestId: p,
+                  joinRequestId: E,
               }),
         i.h.dispatch({
             type: "USER_PROFILE_MODAL_OPEN",
@@ -60,17 +60,17 @@ async function f(e) {
             originGuildId: r ?? void 0,
             channelId: a ?? void 0,
             messageId: o ?? void 0,
-            roleId: d ?? void 0,
+            roleId: c ?? void 0,
             sessionId: f ?? void 0,
             openedAt: T,
             customStatusPrompt: I,
             tabSection: h,
-            scrollTarget: m,
-            hideRestrictedProfile: E,
+            scrollTarget: p,
+            hideRestrictedProfile: m,
             sourceAnalyticsLocations: g,
             appContext: A,
         });
 }
-function p() {
+function E() {
     i.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
 }

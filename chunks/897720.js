@@ -1,27 +1,23 @@
 "use strict";
-n.d(t, { IV: () => u, In: () => a, ZO: () => l, cv: () => o, dO: () => s, zb: () => i });
-var r = n(652215),
-    i = (function (e) {
-        return (
-            (e[(e.GENERIC = 0)] = "GENERIC"),
-            (e[(e.TEXT = 1)] = "TEXT"),
-            (e[(e.INCOMING_CALL = 2)] = "INCOMING_CALL"),
-            (e[(e.NUDGE = 3)] = "NUDGE"),
-            e
-        );
-    })({}),
-    a = (function (e) {
-        return (e[(e.NORMAL = 0)] = "NORMAL"), (e[(e.HIGH = 1)] = "HIGH"), (e[(e.URGENT = 2)] = "URGENT"), e;
-    })({});
-function s(e) {
-    return e?.type === r.uss.GO_LIVE;
+n.d(t, { IV: () => _, In: () => l, ZO: () => c, cv: () => d, dO: () => u, zb: () => o });
+var r,
+    i,
+    s,
+    a = n(652215),
+    o =
+        (((r = {})[(r.GENERIC = 0)] = "GENERIC"),
+        (r[(r.TEXT = 1)] = "TEXT"),
+        (r[(r.INCOMING_CALL = 2)] = "INCOMING_CALL"),
+        (r[(r.NUDGE = 3)] = "NUDGE"),
+        r),
+    l = (((i = {})[(i.NORMAL = 0)] = "NORMAL"), (i[(i.HIGH = 1)] = "HIGH"), (i[(i.URGENT = 2)] = "URGENT"), i);
+function u(e) {
+    return e?.type === a.uss.GO_LIVE;
 }
-function o(e) {
-    return e.type === r.uss.VIDEO;
+function d(e) {
+    return e.type === a.uss.VIDEO;
 }
-function l(e) {
-    return e.type === r.uss.VOICE_V3;
+function c(e) {
+    return e.type === a.uss.VOICE_V3;
 }
-var u = (function (e) {
-    return (e.HORIZONTAL = "horizontal"), (e.VERTICAL = "vertical"), e;
-})({});
+var _ = (((s = {}).HORIZONTAL = "horizontal"), (s.VERTICAL = "vertical"), s);

@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { EF: () => N, K5: () => f, L9: () => E, SB: () => p, Vh: () => b, cG: () => j, gz: () => A, uc: () => _ }),
+n.d(t, { EF: () => j, K5: () => E, L9: () => N, SB: () => A, Vh: () => I, cG: () => f, gz: () => p, uc: () => _ }),
     n(321073);
 var i = n(64700),
-    s = n(91871),
-    l = n.n(s),
+    l = n(91871),
+    s = n.n(l),
     r = n(311907),
     a = n(696451),
     o = n(287809),
@@ -12,16 +11,16 @@ var i = n(64700),
     u = n(695184),
     m = n(427262),
     g = n(545868),
-    x = n(927573),
-    h = n(652215);
+    h = n(927573),
+    x = n(652215);
 let _ = 50,
-    A = 1e3;
-function p(e, t) {
+    p = 1e3;
+function A(e, t) {
     let n = (0, r.yK)([a.Ay], () => {
             let n = a.Ay.getMembers(e);
             return null == t ? n : n.filter(t);
         }, [e, t]),
-        s = (0, r.cf)(
+        l = (0, r.cf)(
             [o.default],
             () =>
                 n.reduce((e, t) => {
@@ -33,7 +32,7 @@ function p(e, t) {
     return i.useMemo(() => {
         let t = [];
         for (let i of n) {
-            let n = s[i.userId];
+            let n = l[i.userId];
             null != n &&
                 t.push({
                     name: i.nick ?? m.Ay.getName(n),
@@ -49,50 +48,50 @@ function p(e, t) {
                 });
         }
         return t;
-    }, [n, s, e]);
+    }, [n, l, e]);
 }
-function f(e, t, n) {
-    let s = i.useRef(n);
+function E(e, t, n) {
+    let l = i.useRef(n);
     return (
         i.useEffect(() => {
-            s.current = n;
+            l.current = n;
         }),
         i.useEffect(() => {
-            (0, g.a)(e, t).catch(s.current);
+            (0, g.a)(e, t).catch(l.current);
         }, [e, t]),
-        p(
+        A(
             e,
             i.useCallback((e) => e.roles.includes(t), [t]),
         )
     );
 }
-function j(e, t) {
+function f(e, t) {
     let n = i.useRef(!1);
     i.useEffect(() => {
         u.A.requestMembers(e, t, 200),
             "" === t ||
                 n.current ||
-                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
+                (d.default.track(x.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
     }, [e, t]);
 }
-function N(e, t) {
+function j(e, t) {
     let n = e.trim().toLowerCase();
-    return t.id === n || l()(n, t.name.toLowerCase()) || l()(n, t.userTag.toLowerCase());
+    return t.id === n || s()(n, t.name.toLowerCase()) || s()(n, t.userTag.toLowerCase());
 }
-function E(e) {
+function N(e) {
     switch (e) {
-        case x.T$.MEMBERS:
+        case h.T$.MEMBERS:
             return "Members";
-        case x.T$.PERMISSIONS:
+        case h.T$.PERMISSIONS:
             return "Permissions";
-        case x.T$.DISPLAY:
+        case h.T$.DISPLAY:
             return "Role Settings";
-        case x.T$.VERIFICATIONS:
+        case h.T$.VERIFICATIONS:
             return "Connections";
         default:
             (0, c.xb)(e);
     }
 }
-function b(e, t) {
+function I(e, t) {
     return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

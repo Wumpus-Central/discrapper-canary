@@ -1,35 +1,35 @@
 "use strict";
 s.d(t, { A: () => v });
 var n = s(627968),
-    r = s(64700),
-    l = s(172218),
+    l = s(64700),
+    r = s(172218),
     a = s(417597),
-    i = s(397927),
+    i = s(158142),
     o = s(287809),
     c = s(440938),
     d = s(940980),
     u = s(511265),
-    _ = s(206077),
-    g = s(100057),
-    m = s(903403),
-    h = s(392183),
+    g = s(206077),
+    h = s(100057),
+    _ = s(903403),
+    m = s(392183),
     p = s(751304),
     f = s(561769),
-    x = s(159439),
-    E = s(998694),
-    C = s(758836),
-    b = s(157884);
-function A(e) {
+    E = s(159439),
+    x = s(998694),
+    A = s(758836),
+    C = s(647685);
+function S(e) {
     let { category: t } = e,
         s = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        r = (0, _.X)(t.products),
-        l = (0, u.p)()(r),
+        l = (0, g.X)(t.products),
+        r = (0, u.p)()(l),
         i = (0, d.W)("CollectiblesCatalogContent");
-    return null == s || 0 === l.length
+    return null == s || 0 === r.length
         ? null
         : (0, n.jsx)("div", {
-              className: b.vY,
-              children: l.map((e, t) =>
+              className: C.vY,
+              children: r.map((e, t) =>
                   (0, n.jsx)(
                       c.R9,
                       {
@@ -45,25 +45,25 @@ function A(e) {
               ),
           });
 }
-function S(e) {
+function b(e) {
     let { category: t } = e,
-        [s, a] = r.useState(!1),
-        i = (0, l.K)((e) => {
+        [s, a] = l.useState(!1),
+        i = (0, r.K)((e) => {
             a(e);
         }, 0.15);
     return (0, n.jsxs)("div", {
-        className: b.EF,
+        className: C.EF,
         ref: i,
-        children: [(0, n.jsx)(m.A, { category: t }), (0, n.jsx)(A, { category: t })],
+        children: [(0, n.jsx)(_.A, { category: t }), (0, n.jsx)(S, { category: t })],
     });
 }
 function v(e) {
-    let { categories: t, setCategoryRef: s, currentPage: l, handlePageChange: a, initialCategoryId: o } = e,
+    let { categories: t, setCategoryRef: s, currentPage: r, handlePageChange: a, initialCategoryId: o } = e,
         d = (0, c.uM)(),
-        u = (0, x.U)(),
-        _ = d?.sessionId ?? "",
-        { noCache: m, includeUnpublished: p } = (0, E.A)(),
-        f = r.useMemo(
+        u = (0, E.U)(),
+        g = d?.sessionId ?? "",
+        { noCache: _, includeUnpublished: p } = (0, x.A)(),
+        f = l.useMemo(
             () =>
                 t
                     .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -73,46 +73,46 @@ function v(e) {
                     }),
             [t],
         ),
-        A = r.useRef(void 0);
-    r.useEffect(() => {
+        S = l.useRef(void 0);
+    l.useEffect(() => {
         if (null == o || 0 === f.length) {
-            A.current = void 0;
+            S.current = void 0;
             return;
         }
-        if (o === A.current) return;
+        if (o === S.current) return;
         let e = f.findIndex((e) => e.skuId === o);
         if (-1 === e) return;
-        let t = Math.floor(e / C.l5) + 1;
-        t !== l && a(t), (A.current = o);
-    }, [o, f, a, l]);
-    let v = r.useMemo(() => {
-        let e = (l - 1) * C.l5;
-        return f.slice(e, e + C.l5);
-    }, [f, l]);
-    return (r.useEffect(() => {
-        (0, g.z)({
-            sessionId: _,
-            checkpoint: g.t.SHOP_MOUNTED,
-            tab: C.G2.CATALOG,
+        let t = Math.floor(e / A.l5) + 1;
+        t !== r && a(t), (S.current = o);
+    }, [o, f, a, r]);
+    let v = l.useMemo(() => {
+        let e = (r - 1) * A.l5;
+        return f.slice(e, e + A.l5);
+    }, [f, r]);
+    return (l.useEffect(() => {
+        (0, h.z)({
+            sessionId: g,
+            checkpoint: h.t.SHOP_MOUNTED,
+            tab: A.G2.CATALOG,
             unpublishedCategoriesShown: p,
-            cacheDisabled: m,
+            cacheDisabled: _,
         });
     }, []),
-    r.useEffect(() => {
+    l.useEffect(() => {
         u ||
             0 === v.length ||
-            (0, g.z)({
-                sessionId: _,
-                checkpoint: g.t.SHOP_RENDERED,
-                tab: C.G2.CATALOG,
+            (0, h.z)({
+                sessionId: g,
+                checkpoint: h.t.SHOP_RENDERED,
+                tab: A.G2.CATALOG,
                 unpublishedCategoriesShown: p,
-                cacheDisabled: m,
+                cacheDisabled: _,
             });
-    }, [_, p, m, u, v.length]),
+    }, [g, p, _, u, v.length]),
     u)
-        ? (0, n.jsx)(h.A, {})
+        ? (0, n.jsx)(m.A, {})
         : (0, n.jsxs)("div", {
-              className: b.LZ,
+              className: C.LZ,
               children: [
                   v.map((e, t) =>
                       (0, n.jsx)(
@@ -121,18 +121,18 @@ function v(e) {
                               ref: (t) => s(e.skuId, t),
                               children: (0, n.jsx)(c.R9, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, n.jsx)(S, { category: e }),
+                                  children: (0, n.jsx)(b, { category: e }),
                               }),
                           },
                           e.skuId,
                       ),
                   ),
                   (0, n.jsx)("div", {
-                      className: b.Ej,
-                      children: (0, n.jsx)(i.mgR, {
-                          currentPage: l,
+                      className: C.Ej,
+                      children: (0, n.jsx)(i.m, {
+                          currentPage: r,
                           totalCount: f.length,
-                          pageSize: C.l5,
+                          pageSize: A.l5,
                           onPageChange: a,
                           disablePaginationGap: !0,
                       }),

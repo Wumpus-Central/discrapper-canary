@@ -1,86 +1,84 @@
-"use strict";
-n.d(t, { Y: () => c });
-var r = n(64700),
+n.d(t, { Y: () => o });
+var l = n(64700),
     i = n(202613),
-    s = n(459357),
-    a = n(652215);
-function o(e) {
-    return e.find((e) => e.source instanceof i.LQ) ?? null;
-}
-function l(e) {
-    let { giftCardWallet: t, dropdownPaymentSources: n, subscriptionPaymentSourceId: r } = e;
-    if (null != t && (null == r || r === t.id)) return t.id;
-    if (null != r) {
-        let e = n.find((e) => e.id === r);
-        if (null != e && e.enabled) return r;
+    a = n(459357),
+    r = n(652215);
+function s(e) {
+    let { giftCardWallet: t, dropdownPaymentSources: n, subscriptionPaymentSourceId: l } = e;
+    if (null != t && (null == l || l === t.id)) return t.id;
+    if (null != l) {
+        let e = n.find((e) => e.id === l);
+        if (null != e && e.enabled) return l;
     }
     return n.find((e) => e.enabled)?.id ?? null;
 }
-let u = (e) => {
-    let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: r } = e;
-    return (t.type !== a.hes.TDS_WALLET || !!r) && null != n && t.id === n && t.enabled;
-};
-function c(e) {
+function o(e) {
     let {
             checkoutPaymentSources: t,
             paymentSourceId: n,
-            setPaymentSourceId: i,
-            location: c,
-            isReady: d = !0,
-            subscriptionPaymentSourceId: _,
-            itemAmount: f,
+            setPaymentSourceId: o,
+            location: u,
+            isReady: c = !0,
+            subscriptionPaymentSourceId: d,
+            itemAmount: p,
         } = e,
-        { enabled: p } = (0, s.c)({ location: c }),
-        { dropdownPaymentSources: h, giftCardWallet: m } = r.useMemo(() => {
-            let e = t.filter((e) => e.type !== a.hes.TDS_WALLET);
-            return p
-                ? { dropdownPaymentSources: e, giftCardWallet: o(t) }
+        { enabled: m } = (0, a.c)({ location: u }),
+        { dropdownPaymentSources: h, giftCardWallet: A } = l.useMemo(() => {
+            let e = t.filter((e) => e.type !== r.hes.TDS_WALLET);
+            return m
+                ? { dropdownPaymentSources: e, giftCardWallet: t.find((e) => e.source instanceof i.LQ) ?? null }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
-        }, [t, p]),
-        [E, g] = r.useState(null),
-        A = null != m && n === m.id,
-        I = r.useMemo(
+        }, [t, m]),
+        [_, C] = l.useState(null),
+        E = null != A && n === A.id,
+        y = l.useMemo(
             () =>
-                null != E ? E : l({ giftCardWallet: null, dropdownPaymentSources: h, subscriptionPaymentSourceId: _ }),
-            [h, _, E],
+                null != _ ? _ : s({ giftCardWallet: null, dropdownPaymentSources: h, subscriptionPaymentSourceId: d }),
+            [h, d, _],
         ),
-        T = r.useMemo(() => (A ? I : (n ?? null)), [I, A, n]),
-        S = r.useRef(!1);
-    r.useEffect(() => {
-        !d ||
+        f = l.useMemo(() => (E ? y : (n ?? null)), [y, E, n]),
+        P = l.useRef(!1);
+    l.useEffect(() => {
+        !c ||
             0 === t.length ||
-            (null != n && t.some((e) => u({ paymentSource: e, paymentSourceId: n, giftCardsEnabled: p }))) ||
-            S.current ||
-            ((S.current = !0), i(l({ giftCardWallet: m, dropdownPaymentSources: h, subscriptionPaymentSourceId: _ })));
-    }, [d, p, t, h, m, n, _, i]);
-    let y = r.useCallback(
+            (null != n &&
+                t.some((e) =>
+                    ((e) => {
+                        let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: l } = e;
+                        return (t.type !== r.hes.TDS_WALLET || !!l) && null != n && t.id === n && t.enabled;
+                    })({ paymentSource: e, paymentSourceId: n, giftCardsEnabled: m }),
+                )) ||
+            P.current ||
+            ((P.current = !0), o(s({ giftCardWallet: A, dropdownPaymentSources: h, subscriptionPaymentSourceId: d })));
+    }, [c, m, t, h, A, n, d, o]);
+    let S = l.useCallback(
             (e) => {
-                i(null != e ? e.id : null);
+                o(null != e ? e.id : null);
             },
-            [i],
+            [o],
         ),
-        v = r.useCallback(
+        x = l.useCallback(
             (e) => {
-                if (e && null != m) {
-                    n !== m.id && g(n ?? null), i(m.id);
+                if (e && null != A) {
+                    n !== A.id && C(n ?? null), o(A.id);
                     return;
                 }
-                i(I);
+                o(y);
             },
-            [i, m, n, I],
+            [o, A, n, y],
         ),
-        N = r.useMemo(
-            () => (null == m ? null : { giftCardWallet: m, checked: A, onChange: v, itemAmount: f }),
-            [m, A, v, f],
+        T = l.useMemo(
+            () => (null == A ? null : { giftCardWallet: A, checked: E, onChange: x, itemAmount: p }),
+            [A, E, x, p],
         );
     return {
-        giftCardsEnabled: p,
+        giftCardsEnabled: m,
         dropdownPaymentSources: h,
-        dropdownPaymentSourceId: T,
-        giftCardWallet: m,
-        isGiftCardCreditsChecked: A,
-        handleGiftCardCreditsToggle: v,
-        handleDropdownPaymentSourceChange: y,
-        giftCardCheckboxProps: N,
+        dropdownPaymentSourceId: f,
+        giftCardWallet: A,
+        isGiftCardCreditsChecked: E,
+        handleGiftCardCreditsToggle: x,
+        handleDropdownPaymentSourceChange: S,
+        giftCardCheckboxProps: T,
     };
 }

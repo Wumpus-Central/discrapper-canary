@@ -1,39 +1,42 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var i = n(627968),
     l = n(64700),
     a = n(827734),
-    s = n(582754),
-    r = n(397927),
-    o = n(58149),
-    c = n(544028),
-    d = n(954571),
-    u = n(652215),
-    h = n(985018),
-    m = n(887008),
-    A = n(206314);
-function p(e) {
-    let { onClose: t, onConfirm: p, onCancel: g, channel: f, analyticsType: _, popoutText: E, animation: C } = e;
+    s = n(462887),
+    r = n(305866),
+    o = n(834730),
+    c = n(821609),
+    d = n(885574),
+    u = n(58149),
+    h = n(544028),
+    m = n(954571),
+    A = n(652215),
+    g = n(985018),
+    p = n(636801),
+    _ = n(992595);
+function f(e) {
+    let { onClose: t, onConfirm: f, onCancel: E, channel: C, analyticsType: x, popoutText: S, animation: I } = e;
     l.useEffect(() => {
-        d.default.track(u.HAw.OPEN_POPOUT, { type: _, ...(0, o.dI)(f) });
-    }, [_, f]);
-    let x = l.useCallback(() => {
-            p?.(), t();
-        }, [p, t]),
-        S = l.useCallback(() => {
-            g?.(), t();
-        }, [g, t]),
+        m.default.track(A.HAw.OPEN_POPOUT, { type: x, ...(0, u.dI)(C) });
+    }, [x, C]);
+    let N = l.useCallback(() => {
+            f?.(), t();
+        }, [f, t]),
+        v = l.useCallback(() => {
+            E?.(), t();
+        }, [E, t]),
         T = l.useRef(null);
     return (
         l.useEffect(() => {
             let e,
-                t = c.A.theme,
+                t = h.A.theme,
                 i = !1;
             return (
-                null != C &&
+                null != I &&
                     (async () => {
                         let [{ default: l }, a] = await Promise.all([
-                            Promise.resolve().then(n.t.bind(n, 883885, 23)),
-                            (0, s.Mw)(t) ? C.dark() : C.light(),
+                            n.e("96382").then(n.t.bind(n, 883885, 23)),
+                            (0, s.M)(t) ? I.dark() : I.light(),
                         ]);
                         i ||
                             null == T.current ||
@@ -49,64 +52,64 @@ function p(e) {
                     (i = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [C]),
-        (0, i.jsx)(r.lGe, {
+        }, [I]),
+        (0, i.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, i.jsxs)("form", {
-                className: m.$,
-                onSubmit: x,
+                className: p.$,
+                onSubmit: N,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: m.rf,
+                        className: p.rf,
                         children: [
-                            null != C && (0, i.jsx)("div", { className: m.lY, ref: T }),
+                            null != I && (0, i.jsx)("div", { className: p.lY, ref: T }),
                             (0, i.jsxs)("div", {
-                                className: m.Qs,
+                                className: p.Qs,
                                 children: [
-                                    (0, i.jsx)("div", { className: m.wx, children: h.intl.string(h.t.mY3Y38) }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)("div", { className: p.wx, children: g.intl.string(g.t.mY3Y38) }),
+                                    (0, i.jsx)(o.E, {
                                         id: "content-warning-popout-label",
-                                        className: A.PT,
+                                        className: _.PT,
                                         variant: "text-sm/normal",
-                                        children: E.body,
+                                        children: S.body,
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: m._o,
+                                        className: p._o,
                                         children: [
                                             (0, i.jsxs)("div", {
-                                                className: m.UD,
+                                                className: p.UD,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: m.x6,
-                                                        children: (0, i.jsx)(r.Button, {
+                                                        className: p.x6,
+                                                        children: (0, i.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: S,
-                                                            text: h.intl.string(h.t.fsBWmS),
+                                                            onClick: v,
+                                                            text: g.intl.string(g.t.fsBWmS),
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(r.Text, {
+                                                    (0, i.jsx)(o.E, {
                                                         variant: "text-xs/normal",
-                                                        className: m.uK,
-                                                        children: h.intl.format(h.t["0LzVPZ"], {}),
+                                                        className: p.uK,
+                                                        children: g.intl.format(g.t["0LzVPZ"], {}),
                                                     }),
                                                 ],
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: m.UD,
+                                                className: p.UD,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: m.x6,
-                                                        children: (0, i.jsx)(r.Button, {
+                                                        className: p.x6,
+                                                        children: (0, i.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: x,
-                                                            text: h.intl.string(h.t.KJnHq3),
+                                                            onClick: N,
+                                                            text: g.intl.string(g.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(r.Text, {
+                                                    (0, i.jsx)(o.E, {
                                                         variant: "text-xs/normal",
-                                                        className: m.uK,
-                                                        children: h.intl.format(h.t.khjqdH, {}),
+                                                        className: p.uK,
+                                                        children: g.intl.format(g.t.khjqdH, {}),
                                                     }),
                                                 ],
                                             }),
@@ -116,16 +119,16 @@ function p(e) {
                             }),
                         ],
                     }),
-                    null != E.footer && "" !== E.footer
+                    null != S.footer && "" !== S.footer
                         ? (0, i.jsxs)("div", {
-                              className: m.qr,
+                              className: p.qr,
                               children: [
-                                  (0, i.jsx)(r.mir, {
+                                  (0, i.jsx)(d.m, {
                                       size: "xs",
                                       color: a.A.unsafe_rawColors.PRIMARY_400.css,
-                                      className: m.Kk,
+                                      className: p.Kk,
                                   }),
-                                  (0, i.jsx)(r.Text, { variant: "text-sm/normal", children: E.footer }),
+                                  (0, i.jsx)(o.E, { variant: "text-sm/normal", children: S.footer }),
                               ],
                           })
                         : null,

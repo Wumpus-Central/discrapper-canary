@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { A: () => r });
 var i = n(64700),
-    s = n(599941),
-    l = n(386784);
+    l = n(599941),
+    s = n(386784);
 function r(e, t) {
-    let n = (0, s.uP)(e),
-        r = (0, l.A)(e);
+    let n = (0, l.uP)(e),
+        r = (0, s.A)(e);
     return i.useMemo(
         () =>
             n.map((e) => {

@@ -1,40 +1,41 @@
-i.d(t, { A: () => o });
-var n = i(627968),
-    s = i(158954),
-    l = i(311907),
-    a = i(610136),
-    r = i(594061),
-    d = i(985018);
-function o(e) {
+n.d(t, { A: () => c });
+var i = n(627968),
+    s = n(331322),
+    l = n(243721),
+    a = n(311907),
+    r = n(610136),
+    d = n(594061),
+    o = n(985018);
+function c(e) {
     let { guildId: t } = e,
-        i = (0, l.bG)([a.A], () => a.A.getGuildAlertSettings()[t]);
-    return (0, n.jsxs)(s.BJc, {
+        n = (0, a.bG)([r.A], () => r.A.getGuildAlertSettings()[t]);
+    return (0, i.jsxs)(s.B, {
         gap: 24,
         children: [
-            (0, n.jsx)(s.dOG, {
-                checked: !i?.disableRaidAlertNag,
-                label: d.intl.string(d.t.u6dc5B),
-                description: d.intl.string(d.t.z8Td48),
+            (0, i.jsx)(l.d, {
+                checked: !n?.disableRaidAlertNag,
+                label: o.intl.string(o.t.u6dc5B),
+                description: o.intl.string(o.t.z8Td48),
                 onChange: (e) =>
-                    (0, r.TG)(
+                    (0, d.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertNag = !e;
                         },
-                        r.Sb.INFREQUENT_USER_ACTION,
+                        d.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
-            (0, n.jsx)(s.dOG, {
-                checked: !i?.disableRaidAlertPush,
-                label: d.intl.string(d.t.P8MG6q),
-                description: d.intl.string(d.t.PyxXs8),
+            (0, i.jsx)(l.d, {
+                checked: !n?.disableRaidAlertPush,
+                label: o.intl.string(o.t.P8MG6q),
+                description: o.intl.string(o.t.PyxXs8),
                 onChange: (e) =>
-                    (0, r.TG)(
+                    (0, d.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertPush = !e;
                         },
-                        r.Sb.INFREQUENT_USER_ACTION,
+                        d.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
         ],

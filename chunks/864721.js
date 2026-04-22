@@ -1,27 +1,29 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(485845),
+    s = n.n(i),
+    a = n(485845),
     o = n(179771),
-    l = n(571356),
-    u = n(397927),
-    c = n(444927),
-    d = n(647053),
-    _ = n(985018),
-    f = n(406421);
+    l = n(834730),
+    u = n(285796),
+    d = n(628284),
+    c = n(534514),
+    _ = n(444927),
+    f = n(647053),
+    E = n(985018),
+    h = n(415122);
 function p(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)("div", {
-        className: f.z8,
+        className: h.z8,
         children: [
             i
-                ? (0, r.jsx)(u.aXh, { size: "md", color: "currentColor", className: a()(f.Kk, f.RC) })
-                : (0, r.jsx)(u.yr3, { size: "md", color: "currentColor", className: a()(f.Kk, f.sc) }),
+                ? (0, r.jsx)(u.a, { size: "md", color: "currentColor", className: s()(h.Kk, h.RC) })
+                : (0, r.jsx)(d.y, { size: "md", color: "currentColor", className: s()(h.Kk, h.sc) }),
             (0, r.jsxs)("div", {
-                className: f.rv,
+                className: h.rv,
                 children: [
                     (0, r.jsx)(l.E, { variant: "text-md/normal", color: i ? "text-muted" : void 0, children: t }),
                     null != n
@@ -32,37 +34,37 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     let {
             application: t,
             accountScopes: n,
             requestedScopes: i,
             integrationType: l,
-            errors: h,
-            isTrustedName: m = !1,
-            noDivider: g = !1,
+            errors: u,
+            isTrustedName: d = !1,
+            noDivider: m = !1,
         } = e,
-        E = (0, c.A)(() => d.O_[Math.floor(Math.random() * d.O_.length)]);
+        g = (0, _.A)(() => f.O_[Math.floor(Math.random() * f.O_.length)]);
     if (0 === n.length) return null;
-    let A = E(),
-        I = m ? _.t.PZpY9c : _.t["1Hz+Sl"],
-        T = l === s.b.USER_INSTALL && i.includes(o.F.APPLICATIONS_COMMANDS);
+    let A = g(),
+        I = d ? E.t.PZpY9c : E.t["1Hz+Sl"],
+        T = l === a.b.USER_INSTALL && i.includes(o.F.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)("div", {
-        className: a()(f.Wu, g ? f.bc : void 0),
+        className: s()(h.Wu, m ? h.bc : void 0),
         children: [
-            (0, r.jsx)(u.Heading, {
+            (0, r.jsx)(c.D, {
                 variant: "heading-sm/normal",
-                className: f.a9,
-                children: _.intl.format(I, { application: t?.name ?? "" }),
+                className: h.a9,
+                children: E.intl.format(I, { application: t?.name ?? "" }),
             }),
             n
                 .map((e) =>
-                    (0, d.rY)(e, n).map((t, n) =>
-                        (0, r.jsx)(p, { text: t, error: 0 === n ? h?.[e]?.[0] : void 0 }, `${e}-${n}`),
+                    (0, f.rY)(e, n).map((t, n) =>
+                        (0, r.jsx)(p, { text: t, error: 0 === n ? u?.[e]?.[0] : void 0 }, `${e}-${n}`),
                     ),
                 )
                 .flat(),
-            T && (0, r.jsx)(p, { text: _.intl.string(_.t.Ls2XRq) }),
+            T && (0, r.jsx)(p, { text: E.intl.string(E.t.Ls2XRq) }),
             (0, r.jsx)(p, { text: A, isFake: !0 }),
         ],
     });

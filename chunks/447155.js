@@ -1,14 +1,23 @@
-n.d(t, { A: () => m, v: () => h }), n(321073);
+n.d(t, { A: () => S, v: () => x }), n(321073);
 var i,
     l = n(827734),
-    a = n(397927),
-    s = n(833349),
-    r = n(47167),
-    o = n(994500),
-    c = n(287809),
-    d = n(652215),
-    u = n(985018),
-    h =
+    a = n(81369),
+    s = n(176781),
+    r = n(523056),
+    o = n(642846),
+    c = n(323384),
+    d = n(111219),
+    u = n(835723),
+    h = n(39623),
+    m = n(406810),
+    A = n(152367),
+    g = n(833349),
+    p = n(47167),
+    _ = n(994500),
+    f = n(287809),
+    E = n(652215),
+    C = n(985018),
+    x =
         (((i = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (i.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
         (i.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME"),
@@ -22,77 +31,77 @@ var i,
         (i.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
         (i.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         i);
-function m(e) {
+function S(e) {
     let {
             canAttachFiles: t,
             canStartThreads: n,
             useSlate: i,
-            canUseApplicationCommands: h,
-            hasClips: m,
-            channel: A,
-            activities: p,
-            newClipsCount: g,
-            canPostPolls: f,
-            appContext: _,
-            canSendScheduledMessages: E,
-            canSummarizeThreads: C,
+            canUseApplicationCommands: x,
+            hasClips: S,
+            channel: I,
+            activities: N,
+            newClipsCount: v,
+            canPostPolls: T,
+            appContext: y,
+            canSendScheduledMessages: b,
+            canSummarizeThreads: j,
         } = e,
-        x = [];
+        R = [];
     return (
         t &&
-            (x.push({ type: "UPLOAD_A_FILE", icon: a.H8$, display: u.intl.string(u.t["d3+iYs"]) }),
-            x.push({ type: "UPLOAD_TEXT_AS_FILE", icon: a.H8$, display: u.intl.string(u.t["G9s+EM"]) })),
-        m &&
+            (R.push({ type: "UPLOAD_A_FILE", icon: a.H, display: C.intl.string(C.t["d3+iYs"]) }),
+            R.push({ type: "UPLOAD_TEXT_AS_FILE", icon: a.H, display: C.intl.string(C.t["G9s+EM"]) })),
+        S &&
             t &&
-            _ !== d.BRT.POPOUT &&
-            x.push({
+            y !== E.BRT.POPOUT &&
+            R.push({
                 type: "CLIPS",
-                icon: a.xgA,
-                display: u.intl.string(u.t.o034cv),
-                badgeVal: g,
+                icon: s.x,
+                display: C.intl.string(C.t.o034cv),
+                badgeVal: v,
                 badgeColor: l.A.colors.BACKGROUND_BRAND.css,
             }),
-        n && x.push({ type: "CREATE_THREAD", icon: a.G_k, display: u.intl.string(u.t.rBIGBL) }),
-        f && x.push({ type: "POLL", icon: a.YRe, display: u.intl.string(u.t.Flr51u) }),
-        i && h && x.push({ type: "SLASH_COMMAND", icon: a.k9F, display: u.intl.string(u.t.Bbvp6G) }),
-        p.forEach((e) => {
-            !(0, s.A)(e, d.jUm.EMBEDDED) &&
-                (e.type === d.$pd.PLAYING &&
-                    (0, s.A)(e, d.jUm.JOIN) &&
-                    x.push({
+        n && R.push({ type: "CREATE_THREAD", icon: r.G, display: C.intl.string(C.t.rBIGBL) }),
+        T && R.push({ type: "POLL", icon: o.Y, display: C.intl.string(C.t.Flr51u) }),
+        i && x && R.push({ type: "SLASH_COMMAND", icon: c.k, display: C.intl.string(C.t.Bbvp6G) }),
+        N.forEach((e) => {
+            !(0, g.A)(e, E.jUm.EMBEDDED) &&
+                (e.type === E.$pd.PLAYING &&
+                    (0, g.A)(e, E.jUm.JOIN) &&
+                    R.push({
                         type: "INVITE_TO_GAME",
-                        icon: a.LVO,
-                        display: u.intl.formatToPlainString(u.t["KHLo+F"], {
-                            channel: (0, r.m1)(A, c.default, o.A, !0),
+                        icon: d.L,
+                        display: C.intl.formatToPlainString(C.t["KHLo+F"], {
+                            channel: (0, p.m1)(I, f.default, _.A, !0),
                             game: null != e ? e.name : "",
                         }),
                         activity: e,
                     }),
-                e.type === d.$pd.LISTENING &&
-                    (0, s.A)(e, d.jUm.SYNC) &&
-                    x.push({
+                e.type === E.$pd.LISTENING &&
+                    (0, g.A)(e, E.jUm.SYNC) &&
+                    R.push({
                         type: "INVITE_TO_LISTEN",
-                        icon: a.J2m,
-                        display: u.intl.formatToPlainString(u.t.I479px, {
-                            channel: (0, r.m1)(A, c.default, o.A, !0),
+                        icon: u.J,
+                        display: C.intl.formatToPlainString(C.t.I479px, {
+                            channel: (0, p.m1)(I, f.default, _.A, !0),
                             name: null != e ? e.name : "",
                         }),
                         activity: e,
                     }),
-                e.type === d.$pd.WATCHING &&
-                    (0, s.A)(e, d.jUm.SYNC) &&
-                    x.push({
+                e.type === E.$pd.WATCHING &&
+                    (0, g.A)(e, E.jUm.SYNC) &&
+                    R.push({
                         type: "INVITE_TO_WATCH",
-                        icon: a.bMW,
-                        display: u.intl.formatToPlainString(u.t["EvCP/g"], {
-                            channel: (0, r.m1)(A, c.default, o.A, !0),
+                        icon: h.b,
+                        display: C.intl.formatToPlainString(C.t["EvCP/g"], {
+                            channel: (0, p.m1)(I, f.default, _.A, !0),
                             name: null != e ? e.name : "",
                         }),
                         activity: e,
                     }));
         }),
-        E && x.push({ type: "SCHEDULED_MESSAGE", icon: a.O4, display: u.intl.string(u.t["3+ii4F"]) }),
-        A.isThread() && C && x.push({ type: "SUMMARIZE_THREAD", icon: a.Dud, display: u.intl.string(u.t.EXfguE) }),
-        x
+        b && R.push({ type: "SCHEDULED_MESSAGE", icon: m.O, display: C.intl.string(C.t["3+ii4F"]) }),
+        I.isThread() && j && R.push({ type: "SUMMARIZE_THREAD", icon: A.D, display: C.intl.string(C.t.EXfguE) }),
+        R
     );
 }

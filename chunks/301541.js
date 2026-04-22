@@ -1,26 +1,27 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => E });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    r = n(308528),
+    r = n(477782),
+    a = n(192308),
+    o = n(308528),
     d = n(267102),
-    o = n(474397),
-    u = n(961350),
-    s = n(652215),
-    c = n(985018);
-function A(e, t, n) {
-    let A = (0, d.aL)();
-    return (0, i.bG)([u.default], () => u.default.getId() === e) || t === s.BRT.POPOUT
+    u = n(474397),
+    s = n(961350),
+    c = n(652215),
+    A = n(985018);
+function E(e, t, n) {
+    let E = (0, d.aL)();
+    return (0, i.bG)([s.default], () => s.default.getId() === e) || t === c.BRT.POPOUT
         ? null
-        : (0, l.jsx)(a.Drp, {
+        : (0, l.jsx)(r.Dr, {
               id: "message-user",
-              label: c.intl.string(c.t.OAJQlP),
+              label: A.intl.string(A.t.OAJQlP),
               action: () => {
-                  (0, o.A)(t, !0),
-                      r.A.openPrivateChannel({ recipientIds: e }),
-                      A.dispatch(s.jej.POPOUT_CLOSE),
-                      (0, a.s7G)();
+                  (0, u.A)(t, !0),
+                      o.A.openPrivateChannel({ recipientIds: e }),
+                      E.dispatch(c.jej.POPOUT_CLOSE),
+                      (0, a.closeAllModals)();
               },
               icon: n,
               leadingAccessory: null != n ? { type: "icon", icon: n } : void 0,

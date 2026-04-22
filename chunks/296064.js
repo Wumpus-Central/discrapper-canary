@@ -1,100 +1,105 @@
-n.d(t, { r: () => j });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { r: () => U });
+var l = n(627968),
+    i = n(64700),
     r = n(6161),
     s = n(681154),
     a = n(974690),
-    o = n(311907),
-    u = n(435371),
-    d = n(397927),
-    c = n(933958),
-    h = n(776677),
-    g = n(206589),
-    m = n(833349),
-    f = n(672979),
-    A = n(734057),
-    I = n(498642),
-    E = n(71393),
-    p = n(375492),
-    _ = n(576705),
-    S = n(994500),
-    x = n(309010),
-    T = n(461213),
-    N = n(287809),
-    C = n(977997),
-    v = n(689168),
-    y = n(661191),
-    M = n(243612),
-    R = n(67103),
-    D = n(652215),
-    b = n(985018);
-function O(e) {
-    return e.find((e) => (0, m.A)(e, D.jUm.JOIN));
+    u = n(311907),
+    o = n(990078),
+    d = n(820081),
+    c = n(297152),
+    h = n(241541),
+    g = n(559647),
+    m = n(173054),
+    I = n(408278),
+    E = n(933958),
+    A = n(776677),
+    f = n(206589),
+    p = n(833349),
+    S = n(672979),
+    N = n(734057),
+    x = n(498642),
+    T = n(71393),
+    _ = n(375492),
+    y = n(576705),
+    v = n(994500),
+    C = n(309010),
+    R = n(461213),
+    D = n(287809),
+    b = n(977997),
+    j = n(689168),
+    M = n(661191),
+    k = n(243612),
+    O = n(67103),
+    w = n(652215),
+    L = n(985018);
+function F(e) {
+    return e.find((e) => (0, p.A)(e, w.jUm.JOIN));
 }
-function w(e, t) {
-    return null == t ? O(e) : (e.find((e) => (0, m.A)(e, D.jUm.JOIN) && e.application_id === t) ?? O(e));
+function G(e, t) {
+    return null == t ? F(e) : (e.find((e) => (0, p.A)(e, w.jUm.JOIN) && e.application_id === t) ?? F(e));
 }
-function j(e) {
-    let { user: t, friendActivities: n, currentUserPlayingActivities: m, gameProfileEntry: O, onPrimaryAction: j } = e,
-        [U, L] = l.useState(!1),
-        k = l.useRef(null);
-    l.useEffect(
+function U(e) {
+    let { user: t, friendActivities: n, currentUserPlayingActivities: p, gameProfileEntry: F, onPrimaryAction: U } = e,
+        [P, V] = i.useState(!1),
+        H = i.useRef(null);
+    i.useEffect(
         () => () => {
-            null != k.current && clearTimeout(k.current);
+            null != H.current && clearTimeout(H.current);
         },
         [],
     );
-    let G = (0, o.bG)([N.default, A.A, E.A, I.A, S.A, x.A, C.A, _.A, p.A, T.A, c.Ay, v.A], () => {
-            let e = N.default.getCurrentUser(),
-                i = (0, M.qv)(),
-                l = i?.altId ?? i?.id,
-                o = w(n, l),
-                u = w(m, l);
-            if (null != o && null != o.application_id) {
-                if (v.A.getState(o.application_id, D.xL.JOIN) === D.eAD.LOADING)
-                    return { kind: "joining", activity: o };
-                let n = (0, h.A)({
+    let Y = (0, u.bG)([D.default, N.A, T.A, x.A, v.A, C.A, b.A, y.A, _.A, R.A, E.Ay, j.A], () => {
+            let e = D.default.getCurrentUser(),
+                l = (0, k.qv)(),
+                i = l?.altId ?? l?.id,
+                u = G(n, i),
+                o = G(p, i);
+            if (null != u && null != u.application_id) {
+                if (j.A.getState(u.application_id, w.xL.JOIN) === w.eAD.LOADING)
+                    return { kind: "joining", activity: u };
+                let n = (0, A.A)({
                     user: t,
-                    activity: o,
+                    activity: u,
                     application: null,
                     channelId: null,
                     currentUser: e,
                     isEmbedded: !1,
-                    ChannelStore: A.A,
-                    GuildStore: E.A,
-                    GuildMemberCountStore: I.A,
-                    RelationshipStore: S.A,
-                    SelectedChannelStore: x.A,
-                    VoiceStateStore: C.A,
-                    PermissionStore: _.A,
-                    LocalActivityStore: p.A,
-                    SelfPresenceStore: T.A,
-                    EmbeddedActivitiesStore: c.Ay,
+                    ChannelStore: N.A,
+                    GuildStore: T.A,
+                    GuildMemberCountStore: x.A,
+                    RelationshipStore: v.A,
+                    SelectedChannelStore: C.A,
+                    VoiceStateStore: b.A,
+                    PermissionStore: y.A,
+                    LocalActivityStore: _.A,
+                    SelfPresenceStore: R.A,
+                    EmbeddedActivitiesStore: E.Ay,
                 });
-                if (n === h.o.JOINED) return { kind: "joined", activity: o };
-                if (n === h.o.CAN_JOIN) return { kind: "join", activity: o };
-                if (null == u) return { kind: "ask_to_join", activity: o };
+                if (n === A.o.JOINED) return { kind: "joined", activity: u };
+                if (n === A.o.CAN_JOIN) return { kind: "join", activity: u };
+                if (null == o) return { kind: "ask_to_join", activity: u };
             }
-            if (null != u)
+            if (null != o)
                 return {
-                    kind: n.some((e) => e.application_id === u.application_id && (0, g.w)(e, u))
+                    kind: n.some((e) => e.application_id === o.application_id && (0, f.w)(e, o))
                         ? "joined"
                         : "invite_to_activity",
-                    activity: u,
+                    activity: o,
                 };
-            if (null != O) return { kind: "send_game_invite_message", gameEntry: O };
-            let d = m.find(f.A);
+            if (null != F) return { kind: "send_game_invite_message", gameEntry: F };
+            let d = p.find(S.A);
             if (null != d) {
-                var R;
+                var c;
                 let e;
                 return {
                     kind: "send_game_invite_message",
                     gameEntry:
-                        ((R = t.id),
+                        ((c = t.id),
                         (e = d.timestamps?.start ?? Date.now()),
                         {
-                            id: y.default.fromTimestamp(e),
-                            author_id: R,
+                            id: M.default.fromTimestamp(e),
+                            author_id: c,
                             extra: {
                                 type: "played_game_extra",
                                 game_name: d.name,
@@ -109,84 +114,84 @@ function j(e) {
                 };
             }
             return null;
-        }, [n, m, O, t]),
-        P = l.useCallback(
+        }, [n, p, F, t]),
+        K = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    U ||
-                        null == G ||
-                        "joined" === G.kind ||
-                        "joining" === G.kind ||
-                        (L(!0),
-                        null != k.current && clearTimeout(k.current),
-                        (k.current = setTimeout(() => {
-                            L(!1), (k.current = null);
+                    P ||
+                        null == Y ||
+                        "joined" === Y.kind ||
+                        "joining" === Y.kind ||
+                        (V(!0),
+                        null != H.current && clearTimeout(H.current),
+                        (H.current = setTimeout(() => {
+                            V(!1), (H.current = null);
                         }, 2e3)),
-                        j?.({
+                        U?.({
                             type: (function (e) {
                                 switch (e) {
                                     case "ask_to_join":
-                                        return R.c.ASK_TO_JOIN;
+                                        return O.c.ASK_TO_JOIN;
                                     case "invite_to_activity":
-                                        return R.c.SEND_ACTIVITY_INVITE;
+                                        return O.c.SEND_ACTIVITY_INVITE;
                                     case "send_game_invite_message":
-                                        return R.c.SEND_GAME_INVITE_MESSAGE;
+                                        return O.c.SEND_GAME_INVITE_MESSAGE;
                                     case "join":
                                     case "joining":
                                     case "joined":
-                                        return R.c.JOIN;
+                                        return O.c.JOIN;
                                 }
-                            })(G.kind),
+                            })(Y.kind),
                             userId: t.id,
-                            activity: G.activity,
-                            gameEntry: G.gameEntry,
+                            activity: Y.activity,
+                            gameEntry: Y.gameEntry,
                         }));
             },
-            [U, G, t.id, j],
+            [P, Y, t.id, U],
         );
-    if (null == G || "joined" === G.kind) return null;
-    let F = (function (e, t) {
-            if (t) return d.BNr;
+    if (null == Y || "joined" === Y.kind) return null;
+    let z = (function (e, t) {
+            if (t) return d.B;
             switch (e) {
                 case "ask_to_join":
-                    return d.E7M;
+                    return c.E;
                 case "invite_to_activity":
-                    return d.DpX;
+                    return h.D;
                 case "send_game_invite_message":
-                    return d.lX7;
+                    return g.l;
                 case "join":
                 case "joining":
                 case "joined":
-                    return d.MRp;
+                    return m.M;
             }
-        })(G.kind, U),
-        V = (function (e) {
+        })(Y.kind, P),
+        X = (function (e) {
             switch (e) {
                 case "ask_to_join":
-                    return b.intl.string(b.t.OKsSCR);
+                    return L.intl.string(L.t.OKsSCR);
                 case "invite_to_activity":
-                    return b.intl.string(b.t["3fRySx"]);
+                    return L.intl.string(L.t["3fRySx"]);
                 case "send_game_invite_message":
-                    return b.intl.string(b.t.XHxDIV);
+                    return L.intl.string(L.t.XHxDIV);
                 case "join":
-                    return b.intl.string(b.t.VJlc0S);
+                    return L.intl.string(L.t.VJlc0S);
                 case "joining":
-                    return b.intl.string(b.t.bf6Ci7);
+                    return L.intl.string(L.t.bf6Ci7);
                 case "joined":
-                    return b.intl.string(b.t.KC26NR);
+                    return L.intl.string(L.t.KC26NR);
             }
-        })(G.kind);
-    return (0, i.jsx)(u.m_, {
-        text: V,
-        "aria-label": V,
-        children: (0, i.jsx)(d.K0, {
-            icon: F,
-            "aria-label": V,
+        })(Y.kind);
+    return (0, l.jsx)(o.m, {
+        text: X,
+        "aria-label": X,
+        children: (0, l.jsx)(I.K, {
+            icon: z,
+            "aria-label": X,
             size: "sm",
             variant: "icon-only",
-            onClick: P,
-            disabled: U || "joining" === G.kind,
+            onClick: K,
+            disabled: P || "joining" === Y.kind,
         }),
     });
 }

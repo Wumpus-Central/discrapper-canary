@@ -159,7 +159,7 @@ let i = {
     },
     GuildOnboardingManager: {
         actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT", "GUILD_DELETE"],
-        inlineRequire: () => n(58217).A,
+        inlineRequire: () => n(280598).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     GameConsoleManager: {

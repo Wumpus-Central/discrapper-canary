@@ -1,38 +1,33 @@
-"use strict";
 n.d(t, { Jp: () => s, qo: () => a });
-var r = n(860689),
+var r,
+    l = n(860689),
     i = n(652215),
-    a = (function (e) {
-        return (e.PUBLIC = "PUBLIC"), (e.INVITE_ONLY = "INVITE_ONLY"), (e.APPLY_TO_JOIN = "APPLY_TO_JOIN"), e;
-    })({});
+    a = (((r = {}).PUBLIC = "PUBLIC"), (r.INVITE_ONLY = "INVITE_ONLY"), (r.APPLY_TO_JOIN = "APPLY_TO_JOIN"), r);
 function s(e) {
-    let t = new Set(e.features),
-        n = "INVITE_ONLY";
-    t.has(i.GuildFeatures.COMMUNITY) && t.has(i.GuildFeatures.DISCOVERABLE)
-        ? (n = "PUBLIC")
-        : t.has(i.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-          t.has(i.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
-          (n = "APPLY_TO_JOIN");
-    let a = o(e),
+    var t;
+    let n = new Set(e.features),
+        r = "INVITE_ONLY";
+    n.has(i.GuildFeatures.COMMUNITY) && n.has(i.GuildFeatures.DISCOVERABLE)
+        ? (r = "PUBLIC")
+        : n.has(i.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+          n.has(i.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+          (r = "APPLY_TO_JOIN");
+    let a =
+            null != (t = e) &&
+            ((0, l.fh)(t)
+                ? t.premiumSubscriberCount > 0 || t.premiumTier > i.TVA.NONE
+                : null != t.premiumSubscriptionCount && t.premiumSubscriptionCount > 0),
         s = 0;
-    a && (s = ((0, r.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ?? 0);
-    let l = (0, r.fh)(e) ? e.premiumTier : i.TVA.NONE;
+    a && (s = ((0, l.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ?? 0);
+    let o = (0, l.fh)(e) ? e.premiumTier : i.TVA.NONE;
     return {
-        verified: t.has(i.GuildFeatures.VERIFIED),
-        partnered: t.has(i.GuildFeatures.PARTNERED),
-        community: t.has(i.GuildFeatures.COMMUNITY),
-        staff: t.has(i.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
-        visibility: n,
+        verified: n.has(i.GuildFeatures.VERIFIED),
+        partnered: n.has(i.GuildFeatures.PARTNERED),
+        community: n.has(i.GuildFeatures.COMMUNITY),
+        staff: n.has(i.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
+        visibility: r,
         premium: a,
         premiumSubscriberCount: s,
-        premiumTier: l,
+        premiumTier: o,
     };
-}
-function o(e) {
-    return (
-        null != e &&
-        ((0, r.fh)(e)
-            ? e.premiumSubscriberCount > 0 || e.premiumTier > i.TVA.NONE
-            : null != e.premiumSubscriptionCount && e.premiumSubscriptionCount > 0)
-    );
 }

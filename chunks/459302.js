@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(746280),
     i = n(90727),
-    a = (function () {
+    s = (function () {
         function e(e) {
             (this.done = !0), (this.rules = e);
         }
@@ -17,23 +17,22 @@ var r = n(746280),
                 (this.symbol = null), (this.value = null);
                 do {
                     if (this.done) return !1;
-                    var e,
-                        t,
-                        n = void 0;
-                    for (var r in ((e = null), this.rules)) {
-                        var i = (n = this.rules[r]).exec(this.text);
-                        i && (null === e || i[0].length > e[0].length) && ((e = i), (t = r));
+                    for (var e in ((t = null), this.rules)) {
+                        var t,
+                            n,
+                            r = this.rules[e].exec(this.text);
+                        r && (null === t || r[0].length > t[0].length) && ((t = r), (n = e));
                     }
                     if (
-                        (null != e &&
-                            ((this.text = this.text.substr(e[0].length)), "" === this.text && (this.done = !0)),
-                        null == e)
+                        (null != t &&
+                            ((this.text = this.text.substr(t[0].length)), "" === this.text && (this.done = !0)),
+                        null == t)
                     ) {
                         (this.done = !0), (this.symbol = null), (this.value = null);
                         return;
                     }
-                } while ("SKIP" === t);
-                return (this.symbol = t), (this.value = e), !0;
+                } while ("SKIP" === n);
+                return (this.symbol = n), (this.value = t), !0;
             }),
             (e.prototype.accept = function (e) {
                 if (this.symbol === e) {
@@ -55,127 +54,141 @@ var r = n(746280),
             e
         );
     })();
-function s(e, t) {
+function a(e, t) {
     void 0 === t && (t = r.A);
     var n = {},
-        s = new a(t.tokens);
-    if (!s.start(e)) return null;
-    return o(), n;
+        a = new s(t.tokens);
+    if (!a.start(e)) return null;
+    return (
+        (function () {
+            a.expect("every");
+            var e = a.acceptNumber();
+            if ((e && (n.interval = parseInt(e[0], 10)), a.isDone())) throw Error("Unexpected end");
+            switch (a.symbol) {
+                case "day(s)":
+                    (n.freq = i.p3.DAILY),
+                        a.nextSymbol() &&
+                            ((function () {
+                                if (a.accept("at"))
+                                    do {
+                                        var e = a.acceptNumber();
+                                        if (!e) throw Error("Unexpected symbol " + a.symbol + ", expected hour");
+                                        for (n.byhour = [parseInt(e[0], 10)]; a.accept("comma"); ) {
+                                            if (!(e = a.acceptNumber()))
+                                                throw Error("Unexpected symbol " + a.symbol + "; expected hour");
+                                            n.byhour.push(parseInt(e[0], 10));
+                                        }
+                                    } while (a.accept("comma") || a.accept("at"));
+                            })(),
+                            c());
+                    break;
+                case "weekday(s)":
+                    (n.freq = i.p3.WEEKLY),
+                        (n.byweekday = [i.p3.MO, i.p3.TU, i.p3.WE, i.p3.TH, i.p3.FR]),
+                        a.nextSymbol(),
+                        c();
+                    break;
+                case "week(s)":
+                    (n.freq = i.p3.WEEKLY), a.nextSymbol() && (o(), c());
+                    break;
+                case "hour(s)":
+                    (n.freq = i.p3.HOURLY), a.nextSymbol() && (o(), c());
+                    break;
+                case "minute(s)":
+                    (n.freq = i.p3.MINUTELY), a.nextSymbol() && (o(), c());
+                    break;
+                case "month(s)":
+                    (n.freq = i.p3.MONTHLY), a.nextSymbol() && (o(), c());
+                    break;
+                case "year(s)":
+                    (n.freq = i.p3.YEARLY), a.nextSymbol() && (o(), c());
+                    break;
+                case "monday":
+                case "tuesday":
+                case "wednesday":
+                case "thursday":
+                case "friday":
+                case "saturday":
+                case "sunday":
+                    n.freq = i.p3.WEEKLY;
+                    var t = a.symbol.substr(0, 2).toUpperCase();
+                    if (((n.byweekday = [i.p3[t]]), !a.nextSymbol())) return;
+                    for (; a.accept("comma"); ) {
+                        if (a.isDone()) throw Error("Unexpected end");
+                        var r = u();
+                        if (!r) throw Error("Unexpected symbol " + a.symbol + ", expected weekday");
+                        n.byweekday.push(i.p3[r]), a.nextSymbol();
+                    }
+                    (function () {
+                        a.accept("on"), a.accept("the");
+                        var e = d();
+                        if (e)
+                            for (n.bymonthday = [e], a.nextSymbol(); a.accept("comma"); ) {
+                                if (!(e = d())) throw Error("Unexpected symbol " + a.symbol + "; expected monthday");
+                                n.bymonthday.push(e), a.nextSymbol();
+                            }
+                    })(),
+                        c();
+                    break;
+                case "january":
+                case "february":
+                case "march":
+                case "april":
+                case "may":
+                case "june":
+                case "july":
+                case "august":
+                case "september":
+                case "october":
+                case "november":
+                case "december":
+                    if (((n.freq = i.p3.YEARLY), (n.bymonth = [l()]), !a.nextSymbol())) return;
+                    for (; a.accept("comma"); ) {
+                        if (a.isDone()) throw Error("Unexpected end");
+                        var s = l();
+                        if (!s) throw Error("Unexpected symbol " + a.symbol + ", expected month");
+                        n.bymonth.push(s), a.nextSymbol();
+                    }
+                    o(), c();
+                    break;
+                default:
+                    throw Error("Unknown symbol");
+            }
+        })(),
+        n
+    );
     function o() {
-        s.expect("every");
-        var e = s.acceptNumber();
-        if ((e && (n.interval = parseInt(e[0], 10)), s.isDone())) throw Error("Unexpected end");
-        switch (s.symbol) {
-            case "day(s)":
-                (n.freq = i.p3.DAILY), s.nextSymbol() && (u(), p());
-                break;
-            case "weekday(s)":
-                (n.freq = i.p3.WEEKLY),
-                    (n.byweekday = [i.p3.MO, i.p3.TU, i.p3.WE, i.p3.TH, i.p3.FR]),
-                    s.nextSymbol(),
-                    p();
-                break;
-            case "week(s)":
-                (n.freq = i.p3.WEEKLY), s.nextSymbol() && (l(), p());
-                break;
-            case "hour(s)":
-                (n.freq = i.p3.HOURLY), s.nextSymbol() && (l(), p());
-                break;
-            case "minute(s)":
-                (n.freq = i.p3.MINUTELY), s.nextSymbol() && (l(), p());
-                break;
-            case "month(s)":
-                (n.freq = i.p3.MONTHLY), s.nextSymbol() && (l(), p());
-                break;
-            case "year(s)":
-                (n.freq = i.p3.YEARLY), s.nextSymbol() && (l(), p());
-                break;
-            case "monday":
-            case "tuesday":
-            case "wednesday":
-            case "thursday":
-            case "friday":
-            case "saturday":
-            case "sunday":
-                n.freq = i.p3.WEEKLY;
-                var t = s.symbol.substr(0, 2).toUpperCase();
-                if (((n.byweekday = [i.p3[t]]), !s.nextSymbol())) return;
-                for (; s.accept("comma"); ) {
-                    if (s.isDone()) throw Error("Unexpected end");
-                    var r = d();
-                    if (!r) throw Error("Unexpected symbol " + s.symbol + ", expected weekday");
-                    n.byweekday.push(i.p3[r]), s.nextSymbol();
-                }
-                f(), p();
-                break;
-            case "january":
-            case "february":
-            case "march":
-            case "april":
-            case "may":
-            case "june":
-            case "july":
-            case "august":
-            case "september":
-            case "october":
-            case "november":
-            case "december":
-                if (((n.freq = i.p3.YEARLY), (n.bymonth = [c()]), !s.nextSymbol())) return;
-                for (; s.accept("comma"); ) {
-                    if (s.isDone()) throw Error("Unexpected end");
-                    var a = c();
-                    if (!a) throw Error("Unexpected symbol " + s.symbol + ", expected month");
-                    n.bymonth.push(a), s.nextSymbol();
-                }
-                l(), p();
-                break;
-            default:
-                throw Error("Unknown symbol");
-        }
-    }
-    function l() {
-        var e = s.accept("on"),
-            t = s.accept("the");
+        var e = a.accept("on"),
+            t = a.accept("the");
         if (e || t)
             do {
-                var r = _(),
-                    a = d(),
-                    o = c();
+                var r = d(),
+                    s = u(),
+                    o = l();
                 if (r)
-                    a
-                        ? (s.nextSymbol(), n.byweekday || (n.byweekday = []), n.byweekday.push(i.p3[a].nth(r)))
-                        : (n.bymonthday || (n.bymonthday = []), n.bymonthday.push(r), s.accept("day(s)"));
-                else if (a) s.nextSymbol(), n.byweekday || (n.byweekday = []), n.byweekday.push(i.p3[a]);
-                else if ("weekday(s)" === s.symbol)
-                    s.nextSymbol(), n.byweekday || (n.byweekday = [i.p3.MO, i.p3.TU, i.p3.WE, i.p3.TH, i.p3.FR]);
-                else if ("week(s)" === s.symbol) {
-                    s.nextSymbol();
-                    var l = s.acceptNumber();
-                    if (!l) throw Error("Unexpected symbol " + s.symbol + ", expected week number");
-                    for (n.byweekno = [parseInt(l[0], 10)]; s.accept("comma"); ) {
-                        if (!(l = s.acceptNumber()))
-                            throw Error("Unexpected symbol " + s.symbol + "; expected monthday");
-                        n.byweekno.push(parseInt(l[0], 10));
+                    s
+                        ? (a.nextSymbol(), n.byweekday || (n.byweekday = []), n.byweekday.push(i.p3[s].nth(r)))
+                        : (n.bymonthday || (n.bymonthday = []), n.bymonthday.push(r), a.accept("day(s)"));
+                else if (s) a.nextSymbol(), n.byweekday || (n.byweekday = []), n.byweekday.push(i.p3[s]);
+                else if ("weekday(s)" === a.symbol)
+                    a.nextSymbol(), n.byweekday || (n.byweekday = [i.p3.MO, i.p3.TU, i.p3.WE, i.p3.TH, i.p3.FR]);
+                else if ("week(s)" === a.symbol) {
+                    a.nextSymbol();
+                    var c = a.acceptNumber();
+                    if (!c) throw Error("Unexpected symbol " + a.symbol + ", expected week number");
+                    for (n.byweekno = [parseInt(c[0], 10)]; a.accept("comma"); ) {
+                        if (!(c = a.acceptNumber()))
+                            throw Error("Unexpected symbol " + a.symbol + "; expected monthday");
+                        n.byweekno.push(parseInt(c[0], 10));
                     }
                 } else {
                     if (!o) return;
-                    s.nextSymbol(), n.bymonth || (n.bymonth = []), n.bymonth.push(o);
+                    a.nextSymbol(), n.bymonth || (n.bymonth = []), n.bymonth.push(o);
                 }
-            } while (s.accept("comma") || s.accept("the") || s.accept("on"));
+            } while (a.accept("comma") || a.accept("the") || a.accept("on"));
     }
-    function u() {
-        if (s.accept("at"))
-            do {
-                var e = s.acceptNumber();
-                if (!e) throw Error("Unexpected symbol " + s.symbol + ", expected hour");
-                for (n.byhour = [parseInt(e[0], 10)]; s.accept("comma"); ) {
-                    if (!(e = s.acceptNumber())) throw Error("Unexpected symbol " + s.symbol + "; expected hour");
-                    n.byhour.push(parseInt(e[0], 10));
-                }
-            } while (s.accept("comma") || s.accept("at"));
-    }
-    function c() {
-        switch (s.symbol) {
+    function l() {
+        switch (a.symbol) {
             case "january":
                 return 1;
             case "february":
@@ -204,8 +217,8 @@ function s(e, t) {
                 return !1;
         }
     }
-    function d() {
-        switch (s.symbol) {
+    function u() {
+        switch (a.symbol) {
             case "monday":
             case "tuesday":
             case "wednesday":
@@ -213,43 +226,34 @@ function s(e, t) {
             case "friday":
             case "saturday":
             case "sunday":
-                return s.symbol.substr(0, 2).toUpperCase();
+                return a.symbol.substr(0, 2).toUpperCase();
             default:
                 return !1;
         }
     }
-    function _() {
-        switch (s.symbol) {
+    function d() {
+        switch (a.symbol) {
             case "last":
-                return s.nextSymbol(), -1;
+                return a.nextSymbol(), -1;
             case "first":
-                return s.nextSymbol(), 1;
+                return a.nextSymbol(), 1;
             case "second":
-                return s.nextSymbol(), s.accept("last") ? -2 : 2;
+                return a.nextSymbol(), a.accept("last") ? -2 : 2;
             case "third":
-                return s.nextSymbol(), s.accept("last") ? -3 : 3;
+                return a.nextSymbol(), a.accept("last") ? -3 : 3;
             case "nth":
-                var e = parseInt(s.value[1], 10);
+                var e = parseInt(a.value[1], 10);
                 if (e < -366 || e > 366) throw Error("Nth out of range: " + e);
-                return s.nextSymbol(), s.accept("last") ? -e : e;
+                return a.nextSymbol(), a.accept("last") ? -e : e;
             default:
                 return !1;
         }
     }
-    function f() {
-        s.accept("on"), s.accept("the");
-        var e = _();
-        if (e)
-            for (n.bymonthday = [e], s.nextSymbol(); s.accept("comma"); ) {
-                if (!(e = _())) throw Error("Unexpected symbol " + s.symbol + "; expected monthday");
-                n.bymonthday.push(e), s.nextSymbol();
-            }
-    }
-    function p() {
-        if ("until" === s.symbol) {
-            var e = Date.parse(s.text);
-            if (!e) throw Error("Cannot parse until date:" + s.text);
+    function c() {
+        if ("until" === a.symbol) {
+            var e = Date.parse(a.text);
+            if (!e) throw Error("Cannot parse until date:" + a.text);
             n.until = new Date(e);
-        } else s.accept("for") && ((n.count = parseInt(s.value[0], 10)), s.expect("number"));
+        } else a.accept("for") && ((n.count = parseInt(a.value[0], 10)), a.expect("number"));
     }
 }

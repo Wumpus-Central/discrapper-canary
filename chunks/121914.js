@@ -1,42 +1,45 @@
-n.d(t, { _: () => b, g: () => O });
+n.d(t, { _: () => k, g: () => D });
 var i,
-    l = n(627968),
-    r = n(64700),
+    r = n(627968),
+    a = n(64700),
     s = n(503698),
-    a = n.n(s),
+    l = n.n(s),
     o = n(311907),
-    u = n(459192),
-    d = n(397927),
-    c = n(47167),
-    h = n(713654),
-    g = n(941971),
-    m = n(734057),
-    f = n(71393),
+    d = n(459192),
+    c = n(602853),
+    u = n(827734),
+    h = n(534890),
+    m = n(939249),
+    p = n(47167),
+    g = n(713654),
+    f = n(941971),
+    _ = n(734057),
+    x = n(71393),
     A = n(222823),
-    I = n(994500),
-    E = n(485296),
-    p = n(741961),
-    _ = n(287809),
-    S = n(1193),
-    x = n(145567),
+    E = n(994500),
+    S = n(485296),
+    I = n(741961),
+    v = n(287809),
+    b = n(1193),
+    C = n(145567),
     T = n(922611),
-    N = n(651813),
-    C = n(919843),
-    v = n(534765),
-    y = n(34307),
-    M = n(652215),
-    R = n(985018),
-    D = n(95231),
-    b = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
-let O = r.memo(function (e) {
+    j = n(651813),
+    y = n(919843),
+    w = n(534765),
+    N = n(34307),
+    R = n(652215),
+    M = n(985018),
+    O = n(95231),
+    k = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
+let D = a.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,
         s = null != n && t === n,
-        b = (0, o.bG)([S.A], () => S.A.getSelectedChannelId() === t, [t]),
-        O = (0, o.bG)([S.A], () => S.A.getVoiceChatMinimized()),
-        w = (0, d.rdh)(d.LU0.colors.ICON_STATUS_ONLINE),
-        j = (0, o.bG)([E.A], () => !!s && !!(E.A.isAnyoneElseSpeaking() || E.A.isCurrentUserSpeaking()), [s]),
-        [U, L] = r.useState(!1),
-        { mentionCount: k, isMentionLowImportance: G } = (0, o.cf)(
+        k = (0, o.bG)([b.A], () => b.A.getSelectedChannelId() === t, [t]),
+        D = (0, o.bG)([b.A], () => b.A.getVoiceChatMinimized()),
+        z = (0, c.r)(u.A.colors.ICON_STATUS_ONLINE),
+        P = (0, o.bG)([S.A], () => !!s && !!(S.A.isAnyoneElseSpeaking() || S.A.isCurrentUserSpeaking()), [s]),
+        [L, V] = a.useState(!1),
+        { mentionCount: G, isMentionLowImportance: U } = (0, o.cf)(
             [A.Ay],
             () =>
                 null != t
@@ -48,102 +51,102 @@ let O = r.memo(function (e) {
             [t],
         ),
         {
-            label: P,
+            label: H,
             user: F,
-            guild: V,
-            channel: z,
-        } = (0, o.cf)([m.A, f.A, _.default, I.A], () => {
-            let e = m.A.getChannel(t) ?? null;
-            if (null == e) return { label: R.intl.string(R.t.zLZPmk), user: null, guild: null, channel: null };
-            let n = (0, c.m1)(e, _.default, I.A);
-            return { label: n, user: (0, N.j)(e, _.default), guild: (0, N.P)(e, f.A), channel: e };
+            guild: W,
+            channel: Z,
+        } = (0, o.cf)([_.A, x.A, v.default, E.A], () => {
+            let e = _.A.getChannel(t) ?? null;
+            if (null == e) return { label: M.intl.string(M.t.zLZPmk), user: null, guild: null, channel: null };
+            let n = (0, p.m1)(e, v.default, E.A);
+            return { label: n, user: (0, j.j)(e, v.default), guild: (0, j.P)(e, x.A), channel: e };
         }, [t]);
-    r.useEffect(() => {
-        null == z && (0, C.b)(t);
-    }, [z, t]);
-    let H = (0, o.bG)([p.A, _.default], () => {
-            if (null == z) return !1;
-            let e = _.default.getCurrentUser()?.id ?? null,
-                t = p.A.getTypingUsers(z.id);
+    a.useEffect(() => {
+        null == Z && (0, y.b)(t);
+    }, [Z, t]);
+    let Y = (0, o.bG)([I.A, v.default], () => {
+            if (null == Z) return !1;
+            let e = v.default.getCurrentUser()?.id ?? null,
+                t = I.A.getTypingUsers(Z.id);
             for (let n in t) if (n !== e) return !0;
             return !1;
-        }, [z]),
-        Y = (0, o.bG)([A.Ay], () => {
-            let e = z?.id;
+        }, [Z]),
+        X = (0, o.bG)([A.Ay], () => {
+            let e = Z?.id;
             return null != e && A.Ay.hasUnread(e);
-        }, [z]),
-        W = (0, l.jsx)("div", {
-            className: D.St,
+        }, [Z]),
+        B = (0, r.jsx)("div", {
+            className: O.St,
             children: (() => {
-                let e = z?.isPrivate() ?? !1;
+                let e = Z?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === i && !e) {
-                    let e = (0, h.gU)(z, V);
-                    e ??= d.oyn;
-                    let t = s && !O && j,
+                    let e = (0, g.gU)(Z, W);
+                    e ??= h.o;
+                    let t = s && !D && P,
                         n = { boxShadow: "none" },
-                        i = w.rgba({ opacity: 0.85 }),
-                        r = w.rgba({ opacity: 0.45 });
+                        i = z.rgba({ opacity: 0.85 }),
+                        a = z.rgba({ opacity: 0.45 });
                     return (
-                        t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${r})`),
-                        (0, l.jsx)("div", {
-                            className: a()(D.s, b && D.lJ),
+                        t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${a})`),
+                        (0, r.jsx)("div", {
+                            className: l()(O.s, k && O.lJ),
                             style: n,
-                            children: (0, l.jsx)(e, {
-                                className: D.Yc,
+                            children: (0, r.jsx)(e, {
+                                className: O.Yc,
                                 size: "sm",
-                                color: b ? d.LU0.colors.WHITE : d.LU0.colors.ICON_STATUS_ONLINE,
+                                color: k ? u.A.colors.WHITE : u.A.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
                 }
-                return (0, l.jsx)(T.g, {
-                    channel: z,
+                return (0, r.jsx)(T.g, {
+                    channel: Z,
                     user: F,
-                    guild: V,
-                    isSelected: b,
+                    guild: W,
+                    isSelected: k,
                     size: T.c.SIZE_40,
-                    isTyping: H,
-                    mentionCount: k,
-                    isMentionLowImportance: G,
+                    isTyping: Y,
+                    mentionCount: G,
+                    isMentionLowImportance: U,
                 });
             })(),
         }),
-        B = (0, v.r)({ channel: z, guild: V, user: F }),
-        Z = z?.isPrivate() ?? !1,
-        X = V?.name ?? "",
-        K = Z ? void 0 : P,
-        $ = Z ? P : "" !== X ? X : P,
-        q = (() => {
-            if (null == z || Z) return null;
-            let e = (0, h.gU)(z, V);
-            return (e ??= d.oyn), (0, l.jsx)(e, { size: "sm", color: d.LU0.colors.INTERACTIVE_ICON_DEFAULT });
+        K = (0, w.r)({ channel: Z, guild: W, user: F }),
+        q = Z?.isPrivate() ?? !1,
+        Q = W?.name ?? "",
+        $ = q ? void 0 : H,
+        J = q ? H : "" !== Q ? Q : H,
+        ee = (() => {
+            if (null == Z || q) return null;
+            let e = (0, g.gU)(Z, W);
+            return (e ??= h.o), (0, r.jsx)(e, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
-    return null == z
-        ? (0, l.jsx)("div", { className: D.R })
-        : (0, l.jsx)(u.u, {
-              title: K,
-              body: $,
-              asset: q,
+    return null == Z
+        ? (0, r.jsx)("div", { className: O.R })
+        : (0, r.jsx)(d.u, {
+              title: $,
+              body: J,
+              asset: ee,
               assetSize: 20,
-              "aria-label": P,
-              children: (0, l.jsxs)(d.DUT, {
-                  className: D.pc,
+              "aria-label": H,
+              children: (0, r.jsxs)(m.D, {
+                  className: O.pc,
                   onClick: () => {
-                      s && (0, x.S$)({ minimized: !1 }),
-                          (0, x.D$)({
-                              target: { kind: x.bB.CHANNEL, channelId: t, guildId: V?.id ?? null, messageId: null },
-                              source: y.B.MANUAL,
-                              widgetType: M.uss.TEXT_CHAT_V3,
+                      s && (0, C.S$)({ minimized: !1 }),
+                          (0, C.D$)({
+                              target: { kind: C.bB.CHANNEL, channelId: t, guildId: W?.id ?? null, messageId: null },
+                              source: N.B.MANUAL,
+                              widgetType: R.uss.TEXT_CHAT_V3,
                           });
                   },
-                  onContextMenu: B,
-                  onMouseEnter: () => L(!0),
-                  onMouseLeave: () => L(!1),
+                  onContextMenu: K,
+                  onMouseEnter: () => V(!0),
+                  onMouseLeave: () => V(!1),
                   children: [
-                      W,
-                      (0, l.jsx)("div", {
-                          className: D.vT,
-                          children: (0, l.jsx)(g.A, { selected: b, hovered: U, unread: Y }),
+                      B,
+                      (0, r.jsx)("div", {
+                          className: O.vT,
+                          children: (0, r.jsx)(f.A, { selected: k, hovered: L, unread: X }),
                       }),
                   ],
               }),

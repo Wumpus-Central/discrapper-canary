@@ -1,45 +1,46 @@
-e.d(n, { default: () => h });
+e.d(n, { default: () => p });
 var i = e(627968),
     a = e(64700),
-    l = e(158954),
-    s = e(817281),
-    c = e(964486),
-    r = e(47167),
-    o = e(954571),
-    d = e(652215),
-    u = e(985018);
-let h = (t) => {
-    let { onConfirm: n, channel: e, onClose: h, transitionState: p, ...C } = t,
-        g = (0, r.Ay)(e),
-        [k, y] = a.useState(!1);
-    return ((0, c.Ay)(() => {
-        o.default.track(d.HAw.OPEN_MODAL, { type: "Voice channel change confirmation", channel_id: e.id });
+    l = e(189213),
+    s = e(150934),
+    c = e(817281),
+    r = e(964486),
+    o = e(47167),
+    d = e(954571),
+    u = e(652215),
+    h = e(985018);
+let p = (t) => {
+    let { onConfirm: n, channel: e, onClose: p, transitionState: C, ...g } = t,
+        k = (0, o.Ay)(e),
+        [y, A] = a.useState(!1);
+    return ((0, r.Ay)(() => {
+        d.default.track(u.HAw.OPEN_MODAL, { type: "Voice channel change confirmation", channel_id: e.id });
     }),
-    null == g)
+    null == k)
         ? null
         : (0, i.jsx)(l.Modal, {
-              title: u.intl.string(u.t["0LZN5F"]),
-              subtitle: u.intl.format(u.t["vA+uEs"], { channel: g }),
-              transitionState: p,
+              title: h.intl.string(h.t["0LZN5F"]),
+              subtitle: h.intl.format(h.t["vA+uEs"], { channel: k }),
+              transitionState: C,
               size: "md",
-              onClose: h,
-              actionBarInput: (0, i.jsx)(l.Sc0, {
-                  checked: k,
+              onClose: p,
+              actionBarInput: (0, i.jsx)(s.S, {
+                  checked: y,
                   onChange: (t) => {
-                      s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), y(t);
+                      c.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), A(t);
                   },
-                  label: u.intl.string(u.t["JdIQ/Y"]),
+                  label: h.intl.string(h.t["JdIQ/Y"]),
               }),
               actions: [
-                  { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: h },
+                  { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: p },
                   {
                       variant: "primary",
-                      text: u.intl.string(u.t["cY+Oob"]),
+                      text: h.intl.string(h.t["cY+Oob"]),
                       onClick: () => {
-                          n(), h();
+                          n(), p();
                       },
                   },
               ],
-              ...C,
+              ...g,
           });
 };

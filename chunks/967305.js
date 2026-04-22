@@ -1,45 +1,43 @@
 "use strict";
-n.d(t, { Ih: () => A, Jg: () => m, default: () => g });
+n.d(t, { Ih: () => m, Jg: () => h, default: () => p });
 var r = n(284009),
     i = n.n(r),
-    a = n(397927),
-    s = n(686956),
+    s = n(192308),
+    a = n(686956),
     o = n(976860),
     l = n(669953),
     u = n(817818),
-    c = n(713125),
-    d = n(263594),
+    d = n(713125),
+    c = n(263594),
     _ = n(652215),
     f = n(746080);
-let p = {};
+let E = {};
 function h(e) {
-    p[e]?.(), (p[e] = null);
+    E[e] = null;
 }
-function m(e) {
-    p[e] = null;
-}
-async function g(e) {
+async function p(e) {
     let { guildId: t, returnChannelId: n, isPreview: r = !1 } = e;
-    (0, a.s7G)(), i()(null == p[t], "should not double-join guilds");
-    let l = await (0, s.k)(t);
-    if (l.features.has(_.GuildFeatures.COMMUNITY)) {
+    (0, s.closeAllModals)(), i()(null == E[t], "should not double-join guilds");
+    let h = await (0, a.k)(t);
+    if (h.features.has(_.GuildFeatures.COMMUNITY)) {
+        var p;
         if (r) (0, u.sy)(t);
         else {
-            if (!l.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return;
+            if (!h.features.has(_.GuildFeatures.GUILD_ONBOARDING)) return;
             await (0, u.h9)(t);
         }
-        c.Ay.shouldShowOnboarding(t) && (await E(t), null != n && (0, o.pX)(_.BVt.CHANNEL(t, n)));
+        d.Ay.shouldShowOnboarding(t) &&
+            (await ((p = t),
+            new Promise((e) => {
+                (E[p] = e),
+                    (0, c.Y)(p).then(() => {
+                        E[p]?.(), (E[p] = null), l.A.finishOnboarding(p);
+                    }),
+                    (0, o.pX)(_.BVt.CHANNEL(p, f.VV.GUILD_ONBOARDING));
+            })),
+            null != n && (0, o.pX)(_.BVt.CHANNEL(t, n)));
     }
 }
-function E(e) {
-    return new Promise((t) => {
-        (p[e] = t),
-            (0, d.Y)(e).then(() => {
-                h(e), l.A.finishOnboarding(e);
-            }),
-            (0, o.pX)(_.BVt.CHANNEL(e, f.VV.GUILD_ONBOARDING));
-    });
-}
-function A(e) {
-    return null != p[e];
+function m(e) {
+    return null != E[e];
 }

@@ -1,40 +1,41 @@
 "use strict";
 n.d(t, {
-    C8: () => l,
-    G1: () => s,
-    N$: () => r.Key,
-    Nu: () => c,
-    RX: () => f,
-    V8: () => u,
-    Yy: () => a,
-    dh: () => _,
-    g$: () => d,
-    mi: () => i,
-    zY: () => o,
+    C8: () => _,
+    G1: () => u,
+    N$: () => o.Key,
+    Nu: () => E,
+    RX: () => m,
+    V8: () => f,
+    Yy: () => d,
+    dh: () => p,
+    g$: () => h,
+    mi: () => l,
+    zY: () => c,
 });
-var r = n(16336);
-let i = r.Key.F6,
-    s = new Map([
-        [r.Key.F6, "f6"],
-        [r.Key.Tab, "tab"],
-        [r.Key.ArrowDown, "down"],
-        [r.Key.ArrowUp, "up"],
-        [r.Key.ArrowLeft, "left"],
-        [r.Key.ArrowRight, "right"],
-        [r.Key.Home, "home"],
-        [r.Key.End, "end"],
+var r,
+    i,
+    s,
+    a,
+    o = n(16336);
+let l = o.Key.F6,
+    u = new Map([
+        [o.Key.F6, "f6"],
+        [o.Key.Tab, "tab"],
+        [o.Key.ArrowDown, "down"],
+        [o.Key.ArrowUp, "up"],
+        [o.Key.ArrowLeft, "left"],
+        [o.Key.ArrowRight, "right"],
+        [o.Key.Home, "home"],
+        [o.Key.End, "end"],
     ]),
-    a = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
-var o = (function (e) {
-    return (
-        (e[(e.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
-        (e[(e.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
-        (e[(e.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
-        (e[(e.GAMEPAD_BUTTON = 3)] = "GAMEPAD_BUTTON"),
-        e
-    );
-})({});
-let l = Object.freeze({
+    d = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
+var c =
+    (((r = {})[(r.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
+    (r[(r.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
+    (r[(r.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
+    (r[(r.GAMEPAD_BUTTON = 3)] = "GAMEPAD_BUTTON"),
+    r);
+let _ = Object.freeze({
         esc: 9,
         f1: 67,
         f2: 68,
@@ -153,7 +154,7 @@ let l = Object.freeze({
         "track back": 173,
         "track skip": 171,
     }),
-    u = Object.freeze({
+    f = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -268,7 +269,7 @@ let l = Object.freeze({
         down: 81,
         up: 82,
     }),
-    c = Object.freeze({
+    E = Object.freeze({
         a: 65,
         s: 83,
         d: 68,
@@ -403,41 +404,32 @@ let l = Object.freeze({
             "'": 222,
         }),
     });
-var d = (function (e) {
-        return (
-            (e[(e.WINDOWS = 1)] = "WINDOWS"),
-            (e[(e.MACOS = 2)] = "MACOS"),
-            (e[(e.LINUX = 3)] = "LINUX"),
-            (e[(e.BROWSER = 4)] = "BROWSER"),
-            e
-        );
-    })({}),
-    _ = (function (e) {
-        return (
-            (e.ENTER = "Enter"),
-            (e.TAB = "Tab"),
-            (e.SPACE = " "),
-            (e.ESCAPE = "Escape"),
-            (e.SHIFT = "Shift"),
-            (e.ARROW_UP = "ArrowUp"),
-            (e.ARROW_DOWN = "ArrowDown"),
-            (e.ARROW_LEFT = "ArrowLeft"),
-            (e.ARROW_RIGHT = "ArrowRight"),
-            (e.HOME = "Home"),
-            (e.END = "End"),
-            (e.BACKSPACE = "Backspace"),
-            (e.DELETE = "Delete"),
-            (e.COMMA = ","),
-            e
-        );
-    })({}),
-    f = (function (e) {
-        return (
-            (e[(e.Left = 0)] = "Left"),
-            (e[(e.Right = 1)] = "Right"),
-            (e[(e.Center = 2)] = "Center"),
-            (e[(e.Back = 3)] = "Back"),
-            (e[(e.Forward = 4)] = "Forward"),
-            e
-        );
-    })({});
+var h =
+        (((i = {})[(i.WINDOWS = 1)] = "WINDOWS"),
+        (i[(i.MACOS = 2)] = "MACOS"),
+        (i[(i.LINUX = 3)] = "LINUX"),
+        (i[(i.BROWSER = 4)] = "BROWSER"),
+        i),
+    p =
+        (((s = {}).ENTER = "Enter"),
+        (s.TAB = "Tab"),
+        (s.SPACE = " "),
+        (s.ESCAPE = "Escape"),
+        (s.SHIFT = "Shift"),
+        (s.ARROW_UP = "ArrowUp"),
+        (s.ARROW_DOWN = "ArrowDown"),
+        (s.ARROW_LEFT = "ArrowLeft"),
+        (s.ARROW_RIGHT = "ArrowRight"),
+        (s.HOME = "Home"),
+        (s.END = "End"),
+        (s.BACKSPACE = "Backspace"),
+        (s.DELETE = "Delete"),
+        (s.COMMA = ","),
+        s),
+    m =
+        (((a = {})[(a.Left = 0)] = "Left"),
+        (a[(a.Right = 1)] = "Right"),
+        (a[(a.Center = 2)] = "Center"),
+        (a[(a.Back = 3)] = "Back"),
+        (a[(a.Forward = 4)] = "Forward"),
+        a);

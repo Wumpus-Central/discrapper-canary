@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Kk: "icon_f9347f",
     vo: "notAllowedIcon_f9347f icon_f9347f",

@@ -1,34 +1,35 @@
-"use strict";
-n.d(t, { A: () => d, Q: () => c });
-var r = n(627968);
-n(64700);
-var i = n(3026),
-    a = n(397927),
-    s = n(939496),
-    o = n(996988),
-    l = n(380297);
-function u(e) {
-    let { text: t, onClick: n, component: u, ...c } = e,
-        { themeType: d } = (0, s.E)(),
-        _ = "string" == typeof t ? t.trim() : t;
-    if (null == _ || "" === _) return null;
-    let f = () =>
-        d === o.d.MODAL || d === o.d.MODAL_V2
-            ? (0, r.jsx)(u, { color: "text-default", ...c, children: _ })
-            : (0, r.jsx)(u, { color: "text-default", ...c, children: (0, r.jsx)(i.A, { children: _ }) });
-    return null != n
-        ? (0, r.jsx)(a.DUT, {
-              onClick: (e) => {
-                  e.stopPropagation(), n(e);
+e.d(n, { A: () => x, Q: () => A });
+var i = e(627968);
+e(64700);
+var l = e(3026),
+    r = e(939249),
+    a = e(534514),
+    s = e(834730),
+    o = e(939496),
+    c = e(996988),
+    u = e(514566);
+function d(t) {
+    let { text: n, onClick: e, component: a, ...s } = t,
+        { themeType: d } = (0, o.E)(),
+        A = "string" == typeof n ? n.trim() : n;
+    if (null == A || "" === A) return null;
+    let x = () =>
+        d === c.d.MODAL || d === c.d.MODAL_V2
+            ? (0, i.jsx)(a, { color: "text-default", ...s, children: A })
+            : (0, i.jsx)(a, { color: "text-default", ...s, children: (0, i.jsx)(l.A, { children: A }) });
+    return null != e
+        ? (0, i.jsx)(r.D, {
+              onClick: (t) => {
+                  t.stopPropagation(), e(t);
               },
-              className: l.sd,
-              children: f(),
+              className: u.sd,
+              children: x(),
           })
-        : f();
+        : x();
 }
-function c(e) {
-    return (0, r.jsx)(u, { component: a.Heading, ...e });
+function A(t) {
+    return (0, i.jsx)(d, { component: a.D, ...t });
 }
-function d(e) {
-    return (0, r.jsx)(u, { component: a.Text, ...e });
+function x(t) {
+    return (0, i.jsx)(d, { component: s.E, ...t });
 }

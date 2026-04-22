@@ -1,33 +1,31 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(627968),
-    i = n(311907),
-    s = n(967198),
-    a = n(676279),
+n.d(t, { A: () => g });
+var a = n(627968),
+    r = n(311907),
+    l = n(967198),
+    i = n(676279),
     o = n(453771),
-    l = n(975571),
-    u = n(831318),
-    c = n(652215),
+    s = n(975571),
+    c = n(831318),
+    u = n(652215),
     d = n(985018),
-    _ = n(206433),
-    f = n(323454);
-let p = 2.1,
-    h = (e) => {
-        let { handleLearnMore: t, ...n } = e,
-            h = (0, i.bG)([s.A], () => s.A.getGuildId()),
-            m = (0, o.Iu)({
-                guildId: h,
-                onClick: () => {
-                    window.open(l.A.getArticleURL(c.MVz.NITRO_FAQ), "_blank");
-                },
-            }),
-            E = (0, a.TM)() ? _.A : f.A;
-        return (0, r.jsx)(u.A, {
-            title: d.intl.string(d.t["9C+41g"]),
-            subtitle: m,
-            graphic: { type: "video", src: E, loop: !0, loopAt: p },
-            secondaryCTA: d.intl.string(d.t.ZnqyZ2),
-            onSecondaryClick: t,
-            ...n,
-        });
-    };
+    p = n(206433),
+    A = n(323454);
+let g = (e) => {
+    let { handleLearnMore: t, ...n } = e,
+        g = (0, r.bG)([l.A], () => l.A.getGuildId()),
+        _ = (0, o.Iu)({
+            guildId: g,
+            onClick: () => {
+                window.open(s.A.getArticleURL(u.MVz.NITRO_FAQ), "_blank");
+            },
+        }),
+        v = (0, i.TM)() ? p.A : A.A;
+    return (0, a.jsx)(c.A, {
+        title: d.intl.string(d.t["9C+41g"]),
+        subtitle: _,
+        graphic: { type: "video", src: v, loop: !0, loopAt: 2.1 },
+        secondaryCTA: d.intl.string(d.t.ZnqyZ2),
+        onSecondaryClick: t,
+        ...n,
+    });
+};

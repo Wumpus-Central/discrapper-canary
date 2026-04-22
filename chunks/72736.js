@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     A9: "questionContainer__0a749",
     y: "disabledQuestionContainer__0a749",

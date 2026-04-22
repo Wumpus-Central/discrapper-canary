@@ -1,23 +1,21 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(668459);
-let i = { read: o },
-    a = 4,
-    s = 7;
+i.d(t, { A: () => r });
+var n = i(668459);
+let r = {
+    read: function (e, t) {
+        let i,
+            r,
+            a = {},
+            s = n.A.getByteAt(e, t);
+        return (
+            (a.Alpha = { value: +!!(i = 16 & s), description: i ? "Yes" : "No" }),
+            (a.Animation = { value: +!!(r = 2 & s), description: r ? "Yes" : "No" }),
+            (a.ImageWidth = o(e, t + 4)),
+            (a.ImageHeight = o(e, t + 7)),
+            a
+        );
+    },
+};
 function o(e, t) {
-    let n = {},
-        i = r.A.getByteAt(e, t);
-    return (n.Alpha = l(i)), (n.Animation = u(i)), (n.ImageWidth = c(e, t + a)), (n.ImageHeight = c(e, t + s)), n;
-}
-function l(e) {
-    let t = 16 & e;
-    return { value: +!!t, description: t ? "Yes" : "No" };
-}
-function u(e) {
-    let t = 2 & e;
-    return { value: +!!t, description: t ? "Yes" : "No" };
-}
-function c(e, t) {
-    let n = r.A.getByteAt(e, t) + 256 * r.A.getByteAt(e, t + 1) + 65536 * r.A.getByteAt(e, t + 2) + 1;
-    return { value: n, description: n + "px" };
+    let i = n.A.getByteAt(e, t) + 256 * n.A.getByteAt(e, t + 1) + 65536 * n.A.getByteAt(e, t + 2) + 1;
+    return { value: i, description: i + "px" };
 }

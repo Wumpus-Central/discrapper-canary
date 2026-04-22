@@ -1,41 +1,40 @@
-n.d(e, { default: () => p });
-var a = n(627968),
-    i = n(64700),
-    r = n(311907),
-    s = n(397927),
-    d = n(888940),
-    l = n(235986),
-    o = n(558179),
-    c = n(355190),
-    E = n(985018),
-    u = n(592738);
-function p(t) {
-    let { eulaId: e, transitionState: n, onClose: p } = t,
-        h = (0, r.bG)([c.A], () => c.A.getEULA(e));
-    i.useEffect(() => {
-        (0, d.E)(e);
-    }, [e]);
-    let g = h?.name ?? E.intl.string(E.t.ZTNur7),
-        A =
-            null != h
-                ? (0, a.jsx)(o.A, { children: h.content, className: u.w })
-                : (0, a.jsx)(s.y$y, { className: u.u });
-    return (0, a.jsxs)(s.EOs, {
+r.d(t, { default: () => p });
+var l = r(627968),
+    n = r(64700),
+    a = r(311907),
+    s = r(289873),
+    c = r(935462),
+    o = r(534514),
+    i = r(888940),
+    d = r(235986),
+    u = r(558179),
+    _ = r(355190),
+    h = r(985018),
+    g = r(191315);
+function p(e) {
+    let { eulaId: t, transitionState: r, onClose: p } = e,
+        b = (0, a.bG)([_.A], () => _.A.getEULA(t));
+    n.useEffect(() => {
+        (0, i.E)(t);
+    }, [t]);
+    let f = b?.name ?? h.intl.string(h.t.ZTNur7),
+        m = null != b ? (0, l.jsx)(u.A, { children: b.content, className: g.w }) : (0, l.jsx)(s.y, { className: g.u });
+    return (0, l.jsxs)(c.EO, {
         "data-migration-pending": !0,
-        transitionState: n,
-        size: s.rIJ.SMALL,
-        "aria-label": g,
+        transitionState: r,
+        size: c.rI.SMALL,
+        "aria-label": f,
         parentComponent: "EULA",
         children: [
-            (0, a.jsxs)(s.rQ0, {
+            (0, l.jsxs)(c.rQ, {
                 "data-migration-pending": !0,
-                justify: l.A.Justify.BETWEEN,
+                justify: d.A.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(s.Heading, { variant: "heading-lg/semibold", children: g }),
-                    (0, a.jsx)(s.s_y, { "data-migration-pending": !0, onClick: p }),
+                    (0, l.jsx)(o.D, { variant: "heading-lg/semibold", children: f }),
+                    (0, l.jsx)(c.s_, { "data-migration-pending": !0, onClick: p }),
                 ],
             }),
-            (0, a.jsx)(s.$mQ, { "data-migration-pending": !0, children: A }),
+            (0, l.jsx)(c.$m, { "data-migration-pending": !0, children: m }),
         ],
     });
 }

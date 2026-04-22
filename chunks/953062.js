@@ -1,35 +1,36 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(554146),
-    o = n(397927),
-    d = n(379848),
-    c = n(105390),
-    u = n(49999),
-    A = n(985018),
-    h = n(318012);
-let _ = (e) => {
-    let { isSelected: t, discountOffer: n } = e,
-        [a, _] = (0, d.kn)([s.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
-    return (r.useEffect(() => {
-        t && a === s.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && _(u.i.TAKE_ACTION);
-    }, [t, _, a]),
-    a === s.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
-        ? (0, i.jsx)(c.MA, {
-              badgeCopy: A.intl.format(A.t.AYcXGW, { discountOfferAmount: n.discount.amount }).toString(),
-              isTabSelected: t,
+a.d(l, { A: () => m });
+var t = a(627968),
+    s = a(64700),
+    i = a(503698),
+    n = a.n(i),
+    c = a(554146),
+    h = a(406810),
+    r = a(834730),
+    o = a(932001),
+    d = a(105390),
+    v = a(49999),
+    g = a(985018),
+    p = a(961773);
+let m = (e) => {
+    let { isSelected: l, discountOffer: a } = e,
+        [i, m] = (0, o.kn)([c.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
+    return (s.useEffect(() => {
+        l && i === c.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && m(v.i.TAKE_ACTION);
+    }, [l, m, i]),
+    i === c.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
+        ? (0, t.jsx)(d.MA, {
+              badgeCopy: g.intl.format(g.t.AYcXGW, { discountOfferAmount: a.discount.amount }).toString(),
+              isTabSelected: l,
               offerExpiresAt: null,
           })
-        : (0, i.jsxs)("div", {
-              className: l()(h.bv, h.Hf),
+        : (0, t.jsxs)("div", {
+              className: n()(p.bv, p.Hf),
               children: [
-                  (0, i.jsx)(o.O4, { size: "custom", width: 14, height: 14, color: "currentColor", className: h.aW }),
-                  (0, i.jsx)(o.Text, {
+                  (0, t.jsx)(h.O, { size: "custom", width: 14, height: 14, color: "currentColor", className: p.aW }),
+                  (0, t.jsx)(r.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
-                      children: A.intl.format(A.t.AYcXGW, { discountOfferAmount: n.discount.amount }),
+                      children: g.intl.format(g.t.AYcXGW, { discountOfferAmount: a.discount.amount }),
                   }),
               ],
           });

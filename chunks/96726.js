@@ -8,9 +8,8 @@ var t = (function () {
     return t;
 })();
 e.exports = function (e, n, r, i) {
-    var a = t,
-        s = i + r;
+    var s = i + r;
     e ^= -1;
-    for (var o = i; o < s; o++) e = (e >>> 8) ^ a[(e ^ n[o]) & 255];
+    for (var a = i; a < s; a++) e = (e >>> 8) ^ t[(e ^ n[a]) & 255];
     return -1 ^ e;
 };

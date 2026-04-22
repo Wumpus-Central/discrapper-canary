@@ -1,56 +1,55 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => y });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
     r = n(562465),
-    s = n(397927),
-    o = n(73153),
-    d = n(147087),
-    c = n(773669),
-    u = n(652215),
-    g = n(985018),
-    A = n(923545);
-let p = new Map();
-function m(e, t) {
-    let m,
+    s = n(691540),
+    o = n(857250),
+    d = n(97483),
+    c = n(477782),
+    u = n(37646),
+    g = n(73153),
+    A = n(147087),
+    h = n(773669),
+    m = n(652215),
+    f = n(985018),
+    p = n(535456);
+let E = new Map();
+function y(e, t) {
+    let y,
         {
-            handleTranslate: f,
-            handleRevertTranslation: y,
-            isTranslating: h,
-            isTranslated: E,
+            handleTranslate: v,
+            handleRevertTranslation: _,
+            isTranslating: S,
+            isTranslated: I,
         } = (function (e) {
             let [t, n] = l.useState(!1),
-                i = (0, a.bG)([c.default], () => c.default.locale);
+                i = (0, a.bG)([h.default], () => h.default.locale);
             return {
                 handleTranslate: l.useCallback(
                     async (l, a) => {
                         if (t) return;
-                        let d = l ?? i;
+                        let c = l ?? i;
                         n(!0);
-                        let c = a ?? (0, g.getAvailableLocales)().find((e) => e.value === d)?.name ?? d;
-                        p.has(e.id) || p.set(e.id, e.content),
-                            (0, s.showToast)(
-                                (0, s.createToast)(
-                                    g.intl.formatToPlainString(g.t.Znl8Z8, { targetLanguage: c }),
-                                    s.ToastType.AI,
-                                ),
-                            );
+                        let u = a ?? (0, f.getAvailableLocales)().find((e) => e.value === c)?.name ?? c;
+                        E.has(e.id) || E.set(e.id, e.content),
+                            (0, s.P0)((0, o.o)(f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: u }), d.Ck.AI));
                         try {
                             let t = await r.Bo.post({
-                                url: u.Rsh.AI_TRANSLATE,
-                                body: { content: e.content, locale: d },
+                                url: m.Rsh.AI_TRANSLATE,
+                                body: { content: e.content, locale: c },
                                 rejectWithError: !1,
                             });
                             t.ok &&
                                 t.body &&
-                                (o.h.dispatch({
+                                (g.h.dispatch({
                                     type: "MESSAGE_UPDATE",
                                     message: { id: e.id, channel_id: e.channel_id, content: t.body.content },
                                 }),
-                                (0, s.showToast)(
-                                    (0, s.createToast)(
-                                        g.intl.formatToPlainString(g.t.FtVUqm, { targetLanguage: c }),
-                                        s.ToastType.SUCCESS,
+                                (0, s.P0)(
+                                    (0, o.o)(
+                                        f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: u }),
+                                        d.Ck.SUCCESS,
                                     ),
                                 ));
                         } finally {
@@ -60,23 +59,23 @@ function m(e, t) {
                     [e, t, i],
                 ),
                 handleRevertTranslation: l.useCallback(() => {
-                    let t = p.get(e.id);
+                    let t = E.get(e.id);
                     null != t &&
-                        (o.h.dispatch({
+                        (g.h.dispatch({
                             type: "MESSAGE_UPDATE",
                             message: { id: e.id, channel_id: e.channel_id, content: t },
                         }),
-                        p.delete(e.id));
+                        E.delete(e.id));
                 }, [e.id, e.channel_id]),
                 isTranslating: t,
-                isTranslated: p.has(e.id),
+                isTranslated: E.has(e.id),
             };
         })(e),
-        S =
-            ((m = (0, g.getAvailableLocales)()),
+        x =
+            ((y = (0, f.getAvailableLocales)()),
             l.useMemo(
                 () =>
-                    m.map((e) => {
+                    y.map((e) => {
                         let t;
                         try {
                             t = n(579832)(`./${e.value}.png`);
@@ -84,38 +83,38 @@ function m(e, t) {
                             t = n(432706);
                         }
                         return (0, i.jsx)(
-                            s.Drp,
+                            c.Dr,
                             {
                                 id: `translate-${e.value}`,
                                 label: e.name,
-                                icon: () => (0, i.jsx)("img", { alt: "", src: t, className: A.M }),
+                                icon: () => (0, i.jsx)("img", { alt: "", src: t, className: p.M }),
                                 leadingAccessory: { type: "image", src: t },
-                                action: () => f(e.value, e.name),
-                                disabled: h,
+                                action: () => v(e.value, e.name),
+                                disabled: S,
                             },
                             e.value,
                         );
                     }),
-                [f, h, m],
+                [v, S, y],
             )),
-        _ = (0, d.b)();
-    return null != e.content && "" !== e.content.trim() && _
-        ? E
-            ? (0, i.jsx)(s.Drp, {
+        b = (0, A.b)();
+    return null != e.content && "" !== e.content.trim() && b
+        ? I
+            ? (0, i.jsx)(c.Dr, {
                   id: "revert-translation",
-                  label: g.intl.string(g.t.JC9BXn),
-                  leadingAccessory: { type: "icon", icon: s.UaP },
-                  icon: s.UaP,
-                  action: y,
-                  disabled: h,
+                  label: f.intl.string(f.t.JC9BXn),
+                  leadingAccessory: { type: "icon", icon: u.U },
+                  icon: u.U,
+                  action: _,
+                  disabled: S,
               })
-            : (0, i.jsx)(s.Drp, {
+            : (0, i.jsx)(c.Dr, {
                   id: "translate",
-                  label: h ? g.intl.string(g.t.SVKIdU) : g.intl.string(g.t["6epDlR"]),
-                  action: () => f(),
-                  leadingAccessory: { type: "icon", icon: s.UaP },
-                  disabled: h,
-                  children: S,
+                  label: S ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
+                  action: () => v(),
+                  leadingAccessory: { type: "icon", icon: u.U },
+                  disabled: S,
+                  children: x,
               })
         : null;
 }

@@ -1,21 +1,21 @@
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var l = n(158954),
-    a = n(735321),
-    r = n(985018),
-    s = n(997338);
-function o(e) {
-    let { widgetType: t, gameCount: n } = e,
-        o = (0, a.cv)(t);
-    return n <= o
+i.d(t, { A: () => d });
+var n = i(627968);
+i(64700);
+var l = i(683071),
+    s = i(735321),
+    a = i(985018),
+    r = i(529523);
+function d(e) {
+    let { widgetType: t, gameCount: i } = e,
+        d = (0, s.cv)(t);
+    return i <= d
         ? null
-        : (0, i.jsx)("div", {
+        : (0, n.jsx)("div", {
               role: "alert",
-              className: s.l,
-              children: (0, i.jsx)(l.wx6, {
+              className: r.l,
+              children: (0, n.jsx)(l.w, {
                   type: "warning",
-                  children: r.intl.formatToPlainString(r.t.Rv3wYq, { maxGames: o }),
+                  children: a.intl.formatToPlainString(a.t.Rv3wYq, { maxGames: d }),
               }),
           });
 }

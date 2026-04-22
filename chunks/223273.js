@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { Lb: () => l, Mh: () => s, q0: () => a, vI: () => u, xg: () => o });
-var r = n(315069),
-    i = n(611010),
-    s = (function (e) {
-        return (e[(e.LINKED = 1)] = "LINKED"), (e[(e.OFFICIAL = 2)] = "OFFICIAL"), e;
-    })({}),
-    a = (function (e) {
-        return (e.EROTIC = "Erotic"), e;
-    })({});
-class o extends r.A {
+n.d(t, { Lb: () => _, Mh: () => u, q0: () => d, vI: () => f, xg: () => c });
+var r,
+    i,
+    s,
+    a,
+    o = n(315069),
+    l = n(611010),
+    u = (((r = {})[(r.LINKED = 1)] = "LINKED"), (r[(r.OFFICIAL = 2)] = "OFFICIAL"), r),
+    d = (((i = {}).EROTIC = "Erotic"), i);
+class c extends o.A {
     id;
     name;
     description;
@@ -35,7 +35,7 @@ class o extends r.A {
             (this.icon_hash = e.icon_hash),
             (this.aliases = e.aliases || []),
             (this.cover_image_hash = e.cover_image_hash),
-            (this.executables = (e.executables ?? []).map(i.lg)),
+            (this.executables = (e.executables ?? []).map(l.lg)),
             (this.overlay = e.overlay || !1),
             (this.overlayWarn = e.overlayWarn || !1),
             (this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1),
@@ -55,21 +55,16 @@ class o extends r.A {
         return this.themes.includes(e);
     }
 }
-var l = (function (e) {
-        return (e[(e.NONE = 0)] = "NONE"), (e[(e.WINDOWED_ONLY = 1)] = "WINDOWED_ONLY"), (e[(e.ALL = 2)] = "ALL"), e;
-    })({}),
-    u = (function (e) {
-        return (
-            (e[(e.NO_USER_REVIEWS = 0)] = "NO_USER_REVIEWS"),
-            (e[(e.OVERWHELMINGLY_POSITIVE = 1)] = "OVERWHELMINGLY_POSITIVE"),
-            (e[(e.VERY_POSITIVE = 2)] = "VERY_POSITIVE"),
-            (e[(e.POSITIVE = 3)] = "POSITIVE"),
-            (e[(e.MOSTLY_POSITIVE = 4)] = "MOSTLY_POSITIVE"),
-            (e[(e.MIXED = 5)] = "MIXED"),
-            (e[(e.MOSTLY_NEGATIVE = 6)] = "MOSTLY_NEGATIVE"),
-            (e[(e.NEGATIVE = 7)] = "NEGATIVE"),
-            (e[(e.VERY_NEGATIVE = 8)] = "VERY_NEGATIVE"),
-            (e[(e.OVERWHELMINGLY_NEGATIVE = 9)] = "OVERWHELMINGLY_NEGATIVE"),
-            e
-        );
-    })({});
+var _ = (((s = {})[(s.NONE = 0)] = "NONE"), (s[(s.WINDOWED_ONLY = 1)] = "WINDOWED_ONLY"), (s[(s.ALL = 2)] = "ALL"), s),
+    f =
+        (((a = {})[(a.NO_USER_REVIEWS = 0)] = "NO_USER_REVIEWS"),
+        (a[(a.OVERWHELMINGLY_POSITIVE = 1)] = "OVERWHELMINGLY_POSITIVE"),
+        (a[(a.VERY_POSITIVE = 2)] = "VERY_POSITIVE"),
+        (a[(a.POSITIVE = 3)] = "POSITIVE"),
+        (a[(a.MOSTLY_POSITIVE = 4)] = "MOSTLY_POSITIVE"),
+        (a[(a.MIXED = 5)] = "MIXED"),
+        (a[(a.MOSTLY_NEGATIVE = 6)] = "MOSTLY_NEGATIVE"),
+        (a[(a.NEGATIVE = 7)] = "NEGATIVE"),
+        (a[(a.VERY_NEGATIVE = 8)] = "VERY_NEGATIVE"),
+        (a[(a.OVERWHELMINGLY_NEGATIVE = 9)] = "OVERWHELMINGLY_NEGATIVE"),
+        a);

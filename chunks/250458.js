@@ -1,43 +1,42 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(73153),
     i = n(256311),
-    a = n(439372),
-    s = n(773669),
+    s = n(439372),
+    a = n(773669),
     o = n(661191),
     l = n(883600),
     u = n(446023),
-    c = n(212031);
-function d(e, t) {
-    let n = 0,
-        r = null;
-    for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
-    return r;
-}
-class _ extends a.A {
+    d = n(212031);
+class c extends s.A {
     actions = { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) };
     handleConnectionOpen = async (e) => {
         try {
             let e = await i.A.fetchChangelogConfig(),
                 t = e.body,
                 n = (0, u.$)(),
-                a = d(t, n);
+                s = (function (e, t) {
+                    let n = 0,
+                        r = null;
+                    for (var [i, { min_version: s }] of Object.entries(e)) s <= t && s > n && ((n = s), (r = i));
+                    return r;
+                })(t, n);
             if (
-                (r.h.dispatch({ type: "CHANGE_LOG_SET_CONFIG", config: e.body, latestChangelogId: a }),
-                null == a || !0 !== t[a].show_on_startup)
+                (r.h.dispatch({ type: "CHANGE_LOG_SET_CONFIG", config: e.body, latestChangelogId: s }),
+                null == s || !0 !== t[s].show_on_startup)
             )
                 return;
-            let _ = l.A.lastSeenChangelogId(),
-                f = l.A.lastSeenChangelogDate();
-            if (null != _ && 0 >= o.default.compare(a, _)) return;
-            let p = await i.A.fetchChangelog(a, s.default.locale);
-            if (null == p) return;
-            if (null == f || null == l.A.lastSeenChangelogDate()) return void i.A.markChangelogAsSeen(a, p.date);
+            let c = l.A.lastSeenChangelogId(),
+                _ = l.A.lastSeenChangelogDate();
+            if (null != c && 0 >= o.default.compare(s, c)) return;
+            let f = await i.A.fetchChangelog(s, a.default.locale);
+            if (null == f) return;
+            if (null == _ || null == l.A.lastSeenChangelogDate()) return void i.A.markChangelogAsSeen(s, f.date);
             if (l.A.isLocked()) return;
-            new Date(p.date) > new Date(f) && (0, c.j)();
+            new Date(f.date) > new Date(_) && (0, d.j)();
         } finally {
             r.h.dispatch({ type: "CHANGE_LOG_RESOLVED" });
         }
     };
 }
-let f = new _();
+let _ = new c();

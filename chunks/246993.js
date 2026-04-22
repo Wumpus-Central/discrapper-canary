@@ -1,14 +1,14 @@
-n.d(t, { A: () => x });
-var a = n(627968),
-    i = n(64700),
-    s = n(311907),
-    l = n(397927),
-    r = n(513520),
-    o = n(209390),
-    d = n(734057),
-    c = n(303054),
-    u = n(709968),
-    m = n(310086);
+a.d(t, { A: () => p });
+var n = a(627968),
+    l = a(64700),
+    i = a(311907),
+    s = a(834730),
+    r = a(513520),
+    o = a(209390),
+    d = a(734057),
+    c = a(303054),
+    u = a(907360),
+    m = a(505206);
 let h = [
     {
         key: "channel",
@@ -20,7 +20,7 @@ let h = [
     },
     {
         key: "score",
-        renderHeader: () => (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "SCORE" }),
+        renderHeader: () => (0, n.jsx)(s.E, { variant: "text-sm/semibold", children: "SCORE" }),
         cellClassName: u.t6,
         render(e) {
             let { score: t } = e;
@@ -28,17 +28,17 @@ let h = [
         },
     },
 ];
-function x() {
-    i.useEffect(() => {
+function p() {
+    l.useEffect(() => {
         (0, r.I)();
     }, []);
-    let e = (0, s.yK)([o.A, d.A], () =>
+    let e = (0, i.yK)([o.A, d.A], () =>
         o.A.getChannelAffinities()
             .map((e) => {
-                let { channelId: t, score: n } = e;
-                return { key: t, channelName: d.A.getChannel(t)?.name ?? t, score: n };
+                let { channelId: t, score: a } = e;
+                return { key: t, channelName: d.A.getChannel(t)?.name ?? t, score: a };
             })
             .sort((e, t) => t.score - e.score),
     );
-    return 0 === e.length ? null : (0, a.jsx)(c.A, { className: m.nd, columns: h, rowClassName: u.nM, data: e });
+    return 0 === e.length ? null : (0, n.jsx)(c.A, { className: m.nd, columns: h, rowClassName: u.nM, data: e });
 }

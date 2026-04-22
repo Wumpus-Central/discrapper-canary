@@ -1,58 +1,57 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(976860),
-    s = n(954571),
-    o = n(396415),
-    d = n(652215),
-    c = n(985018),
-    u = n(605540);
-function A() {
+    s = n(64700),
+    l = n(827734),
+    a = n(834730),
+    r = n(534514),
+    o = n(836480),
+    c = n(976860),
+    d = n(954571),
+    u = n(396415),
+    m = n(652215),
+    A = n(985018),
+    h = n(505973);
+function x() {
     var e, t, n;
-    return (0, i.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(s.Fragment, {
         children: [
             (0, i.jsxs)("header", {
-                className: u.wx,
+                className: h.wx,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: c.intl.string(c.t.IuMx1Y),
+                        children: A.intl.string(A.t.IuMx1Y),
                     }),
-                    (0, i.jsx)(a.Text, {
-                        tag: "div",
-                        variant: "heading-md/normal",
-                        children: c.intl.string(c.t.DwevPs),
-                    }),
+                    (0, i.jsx)(a.E, { tag: "div", variant: "heading-md/normal", children: A.intl.string(A.t.DwevPs) }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: u.Vg,
+                className: h.Vg,
                 children:
-                    ((e = a.QGJ),
-                    (t = c.intl.string(c.t.AhKnz4)),
+                    ((e = o.Q),
+                    (t = A.intl.string(A.t.AhKnz4)),
                     (n = () => {
-                        s.default.track(d.HAw.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
-                            (0, l.pX)(d.BVt.GUILD_DISCOVERY);
+                        d.default.track(m.HAw.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
+                            (0, c.pX)(m.BVt.GUILD_DISCOVERY);
                     }),
                     (0, i.jsxs)(
                         "button",
                         {
-                            className: u.kL,
+                            className: h.kL,
                             onClick: n,
                             children: [
                                 "function" == typeof e
                                     ? (0, i.jsx)("div", {
-                                          className: u.Kk,
+                                          className: h.Kk,
                                           children: (0, i.jsx)(e, {
-                                              className: u.__invalid_iconInner,
-                                              color: a.LU0.colors.WHITE.css,
+                                              className: h.__invalid_iconInner,
+                                              color: l.A.colors.WHITE.css,
                                           }),
                                       })
-                                    : (0, i.jsx)("img", { className: u.Kk, alt: "", src: e }),
-                                (0, i.jsx)(a.Text, { className: u.Qq, variant: "text-md/medium", children: t }),
-                                (0, i.jsx)(o.A, { className: u.UE }),
+                                    : (0, i.jsx)("img", { className: h.Kk, alt: "", src: e }),
+                                (0, i.jsx)(a.E, { className: h.Qq, variant: "text-md/medium", children: t }),
+                                (0, i.jsx)(u.A, { className: h.UE }),
                             ],
                         },
                         t,

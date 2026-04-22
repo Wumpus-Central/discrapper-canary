@@ -1,43 +1,45 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => v });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     a = n(503698),
-    l = n.n(a),
-    s = n(989349),
-    o = n.n(s),
-    d = n(397927),
-    c = n(763754),
-    u = n(449859),
-    _ = n(943815),
-    m = n(447215),
-    h = n(287809),
-    p = n(405269),
-    g = n(641131),
-    A = n(985018),
-    x = n(197172),
-    f = n(679740),
-    C = n(513653);
-let E = (e) => {
-    let { reportingUserId: t, guildId: n, compact: a, channel: s, messageId: E, reportedTimestamp: I } = e,
-        v = h.default.getUser(t),
-        b = r.useMemo(() => (a ? (0, _.A)((0, p.i$)(o()(), "LT")) : null), [a]),
-        T = (0, m.P)({ user: v, channelId: s.id, guildId: n, messageId: E })((0, c.m2)(v, s)),
-        y = null != v ? v.getAvatarURL(n, (0, d.FT9)(d._3J.SIZE_16)) : C,
-        S =
-            null != v
-                ? A.intl.format(g.default["+zqXZs"], { username: v.username, onUserClick: T })
-                : A.intl.string(g.default.xpRjfS);
+    s = n.n(a),
+    r = n(989349),
+    o = n.n(r),
+    d = n(778712),
+    c = n(97808),
+    u = n(834730),
+    m = n(763754),
+    _ = n(449859),
+    h = n(943815),
+    p = n(447215),
+    g = n(287809),
+    A = n(405269),
+    f = n(221314),
+    x = n(985018),
+    C = n(237507),
+    E = n(334211),
+    I = n(513653);
+let v = (e) => {
+    let { reportingUserId: t, guildId: n, compact: a, channel: r, messageId: v, reportedTimestamp: b } = e,
+        T = g.default.getUser(t),
+        S = l.useMemo(() => (a ? (0, h.A)((0, A.i$)(o()(), "LT")) : null), [a]),
+        y = (0, p.P)({ user: T, channelId: r.id, guildId: n, messageId: v })((0, m.m2)(T, r)),
+        N = null != T ? T.getAvatarURL(n, (0, d.FT)(d._3.SIZE_16)) : I,
+        j =
+            null != T
+                ? x.intl.format(f.default["+zqXZs"], { username: T.username, onUserClick: y })
+                : x.intl.string(f.default.xpRjfS);
     return (0, i.jsxs)("div", {
-        className: l()(f.NB, f.JZ, b),
+        className: s()(E.NB, E.JZ, S),
         children: [
-            (0, i.jsx)(d.euF, { src: y, size: d._3J.SIZE_16, className: x.my, "aria-label": "" }),
-            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "text-subtle", className: x.Xh, children: S }),
-            (0, i.jsxs)(d.Text, {
+            (0, i.jsx)(c.eu, { src: N, size: d._3.SIZE_16, className: C.my, "aria-label": "" }),
+            (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-subtle", className: C.Xh, children: j }),
+            (0, i.jsxs)(u.E, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
                 children: [
-                    (0, i.jsx)("span", { className: x.Ek, children: "•" }),
-                    (0, i.jsx)(u.A, { timestamp: I, className: x.vE }),
+                    (0, i.jsx)("span", { className: C.Ek, children: "•" }),
+                    (0, i.jsx)(_.A, { timestamp: b, className: C.vE }),
                 ],
             }),
         ],

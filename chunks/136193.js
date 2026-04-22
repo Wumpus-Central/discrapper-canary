@@ -1,53 +1,51 @@
-"use strict";
-n.d(t, { L: () => l, n: () => o });
-var r = n(371926),
-    i = n(531684);
-let a = "row-header-column-" + Math.random().toString(36).slice(2),
-    s = "row-header-column-" + Math.random().toString(36).slice(2);
-for (; a === s; ) s = "row-header-column-" + Math.random().toString(36).slice(2);
-function o(e, t) {
+l.d(t, { L: () => u, n: () => s });
+var n = l(371926),
+    o = l(531684);
+let r = "row-header-column-" + Math.random().toString(36).slice(2),
+    i = "row-header-column-" + Math.random().toString(36).slice(2);
+for (; r === i; ) i = "row-header-column-" + Math.random().toString(36).slice(2);
+function s(e, t) {
     if (0 === t.length) return [];
-    let n = [],
-        r = new Map();
-    for (let s of t) {
-        let t = s.parentKey,
-            o = [s];
+    let l = [],
+        n = new Map();
+    for (let o of t) {
+        let t = o.parentKey,
+            r = [o];
         for (; t; ) {
-            let n = e.get(t);
-            if (!n) break;
-            if (r.has(n)) {
-                var i, a;
-                null != (a = (i = n).colSpan) || (i.colSpan = 0), n.colSpan++, (n.colspan = n.colSpan);
-                let { column: e, index: t } = r.get(n);
-                if (t > o.length) break;
-                for (let n = t; n < o.length; n++) e.splice(n, 0, null);
-                for (let t = o.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t);
-            } else (n.colSpan = 1), (n.colspan = 1), o.push(n), r.set(n, { column: o, index: o.length - 1 });
-            t = n.parentKey;
+            let l = e.get(t);
+            if (!l) break;
+            if (n.has(l)) {
+                null != l.colSpan || (l.colSpan = 0), l.colSpan++, (l.colspan = l.colSpan);
+                let { column: e, index: t } = n.get(l);
+                if (t > r.length) break;
+                for (let l = t; l < r.length; l++) e.splice(l, 0, null);
+                for (let t = r.length; t < e.length; t++) e[t] && n.has(e[t]) && (n.get(e[t]).index = t);
+            } else (l.colSpan = 1), (l.colspan = 1), r.push(l), n.set(l, { column: r, index: r.length - 1 });
+            t = l.parentKey;
         }
-        n.push(o), (s.index = n.length - 1);
+        l.push(r), (o.index = l.length - 1);
     }
-    let s = Math.max(...n.map((e) => e.length)),
-        o = Array(s)
+    let o = Math.max(...l.map((e) => e.length)),
+        r = Array(o)
             .fill(0)
             .map(() => []),
-        l = 0;
-    for (let e of n) {
-        let t = s - 1;
-        for (let n of e) {
-            if (n) {
-                let e = o[t],
-                    r = e.reduce((e, t) => {
-                        var n;
-                        return e + (null != (n = t.colSpan) ? n : 1);
+        i = 0;
+    for (let e of l) {
+        let t = o - 1;
+        for (let l of e) {
+            if (l) {
+                let e = r[t],
+                    n = e.reduce((e, t) => {
+                        var l;
+                        return e + (null != (l = t.colSpan) ? l : 1);
                     }, 0);
-                if (r < l) {
-                    let i = {
+                if (n < i) {
+                    let o = {
                         type: "placeholder",
-                        key: "placeholder-" + n.key,
-                        colspan: l - r,
-                        colSpan: l - r,
-                        index: r,
+                        key: "placeholder-" + l.key,
+                        colspan: i - n,
+                        colSpan: i - n,
+                        index: n,
                         value: null,
                         rendered: null,
                         level: t,
@@ -55,43 +53,43 @@ function o(e, t) {
                         childNodes: [],
                         textValue: "",
                     };
-                    e.length > 0 && ((e[e.length - 1].nextKey = i.key), (i.prevKey = e[e.length - 1].key)), e.push(i);
+                    e.length > 0 && ((e[e.length - 1].nextKey = o.key), (o.prevKey = e[e.length - 1].key)), e.push(o);
                 }
-                e.length > 0 && ((e[e.length - 1].nextKey = n.key), (n.prevKey = e[e.length - 1].key)),
-                    (n.level = t),
-                    (n.colIndex = l),
-                    e.push(n);
+                e.length > 0 && ((e[e.length - 1].nextKey = l.key), (l.prevKey = e[e.length - 1].key)),
+                    (l.level = t),
+                    (l.colIndex = i),
+                    e.push(l);
             }
             t--;
         }
-        l++;
+        i++;
     }
-    let u = 0;
-    for (let e of o) {
-        let n = e.reduce((e, t) => {
-            var n;
-            return e + (null != (n = t.colSpan) ? n : 1);
+    let s = 0;
+    for (let e of r) {
+        let l = e.reduce((e, t) => {
+            var l;
+            return e + (null != (l = t.colSpan) ? l : 1);
         }, 0);
-        if (n < t.length) {
-            let r = {
+        if (l < t.length) {
+            let n = {
                 type: "placeholder",
                 key: "placeholder-" + e[e.length - 1].key,
-                colSpan: t.length - n,
-                colspan: t.length - n,
-                index: n,
+                colSpan: t.length - l,
+                colspan: t.length - l,
+                index: l,
                 value: null,
                 rendered: null,
-                level: u,
+                level: s,
                 hasChildNodes: !1,
                 childNodes: [],
                 textValue: "",
                 prevKey: e[e.length - 1].key,
             };
-            e.push(r);
+            e.push(n);
         }
-        u++;
+        s++;
     }
-    return o.map((e, t) => ({
+    return r.map((e, t) => ({
         type: "headerrow",
         key: "headerrow-" + t,
         index: t,
@@ -103,7 +101,7 @@ function o(e, t) {
         textValue: "",
     }));
 }
-class l extends i.Z {
+class u extends o.Z {
     *[Symbol.iterator]() {
         yield* this.body.childNodes;
     }
@@ -115,21 +113,21 @@ class l extends i.Z {
     }
     getKeyBefore(e) {
         var t;
-        let n = this.keyMap.get(e);
-        return null != (t = null == n ? void 0 : n.prevKey) ? t : null;
+        let l = this.keyMap.get(e);
+        return null != (t = null == l ? void 0 : l.prevKey) ? t : null;
     }
     getKeyAfter(e) {
         var t;
-        let n = this.keyMap.get(e);
-        return null != (t = null == n ? void 0 : n.nextKey) ? t : null;
+        let l = this.keyMap.get(e);
+        return null != (t = null == l ? void 0 : l.nextKey) ? t : null;
     }
     getFirstKey() {
         var e, t;
-        return null != (t = null == (e = (0, r.ue)(this.body.childNodes)) ? void 0 : e.key) ? t : null;
+        return null != (t = null == (e = (0, n.ue)(this.body.childNodes)) ? void 0 : e.key) ? t : null;
     }
     getLastKey() {
         var e, t;
-        return null != (t = null == (e = (0, r.W)(this.body.childNodes)) ? void 0 : e.key) ? t : null;
+        return null != (t = null == (e = (0, n.W)(this.body.childNodes)) ? void 0 : e.key) ? t : null;
     }
     getItem(e) {
         var t;
@@ -146,40 +144,40 @@ class l extends i.Z {
         let t = this.getItem(e);
         if (!t) return "";
         if (t.textValue) return t.textValue;
-        let n = this.rowHeaderColumnKeys;
-        if (n) {
+        let l = this.rowHeaderColumnKeys;
+        if (l) {
             let e = [];
-            for (let r of t.childNodes) {
-                let t = this.columns[r.index];
-                if ((n.has(t.key) && r.textValue && e.push(r.textValue), e.length === n.size)) break;
+            for (let n of t.childNodes) {
+                let t = this.columns[n.index];
+                if ((l.has(t.key) && n.textValue && e.push(n.textValue), e.length === l.size)) break;
             }
             return e.join(" ");
         }
         return "";
     }
-    constructor(e, t, n) {
-        let r = new Set(),
-            i = null,
-            l = [];
-        if (null == n ? void 0 : n.showSelectionCheckboxes) {
+    constructor(e, t, l) {
+        let n = new Set(),
+            o = null,
+            u = [];
+        if (null == l ? void 0 : l.showSelectionCheckboxes) {
             let e = {
                 type: "column",
-                key: a,
+                key: r,
                 value: null,
                 textValue: "",
                 level: 0,
-                index: +(null != n && !!n.showDragButtons),
+                index: +(null != l && !!l.showDragButtons),
                 hasChildNodes: !1,
                 rendered: null,
                 childNodes: [],
                 props: { isSelectionCell: !0 },
             };
-            l.unshift(e);
+            u.unshift(e);
         }
-        if (null == n ? void 0 : n.showDragButtons) {
+        if (null == l ? void 0 : l.showDragButtons) {
             let e = {
                 type: "column",
-                key: s,
+                key: i,
                 value: null,
                 textValue: "",
                 level: 0,
@@ -189,42 +187,42 @@ class l extends i.Z {
                 childNodes: [],
                 props: { isDragButtonCell: !0 },
             };
-            l.unshift(e);
+            u.unshift(e);
         }
-        let u = [],
+        let a = [],
             c = new Map(),
             d = (e) => {
                 switch (e.type) {
                     case "body":
-                        i = e;
+                        o = e;
                         break;
                     case "column":
-                        c.set(e.key, e), !e.hasChildNodes && (l.push(e), e.props.isRowHeader && r.add(e.key));
+                        c.set(e.key, e), !e.hasChildNodes && (u.push(e), e.props.isRowHeader && n.add(e.key));
                         break;
                     case "item":
-                        u.push(e);
+                        a.push(e);
                         return;
                 }
                 for (let t of e.childNodes) d(t);
             };
         for (let t of e) d(t);
-        let _ = o(c, l);
+        let g = s(c, u);
         if (
-            (_.forEach((e, t) => u.splice(t, 0, e)),
-            super({ columnCount: l.length, items: u, visitNode: (e) => ((e.column = l[e.index]), e) }),
+            (g.forEach((e, t) => a.splice(t, 0, e)),
+            super({ columnCount: u.length, items: a, visitNode: (e) => ((e.column = u[e.index]), e) }),
             (this._size = 0),
-            (this.columns = l),
-            (this.rowHeaderColumnKeys = r),
-            (this.body = i),
-            (this.headerRows = _),
-            (this._size = [...i.childNodes].length),
+            (this.columns = u),
+            (this.rowHeaderColumnKeys = n),
+            (this.body = o),
+            (this.headerRows = g),
+            (this._size = [...o.childNodes].length),
             0 === this.rowHeaderColumnKeys.size)
         ) {
             let e = this.columns.find((e) => {
-                var t, n;
+                var t, l;
                 return (
                     !(null == (t = e.props) ? void 0 : t.isDragButtonCell) &&
-                    !(null == (n = e.props) ? void 0 : n.isSelectionCell)
+                    !(null == (l = e.props) ? void 0 : l.isSelectionCell)
                 );
             });
             e && this.rowHeaderColumnKeys.add(e.key);

@@ -1,81 +1,80 @@
-"use strict";
-n.d(t, { A: () => c }), n(323874), n(14289), n(35956);
-var r = n(627968),
-    i = n(64700),
-    s = n(854284),
-    a = n(676279),
-    o = n(728458),
-    l = n(881106),
-    u = n(182787);
-let c = (e) => {
+t.d(r, { A: () => i }), t(323874), t(14289), t(35956);
+var n = t(627968),
+    a = t(64700),
+    u = t(854284),
+    l = t(676279),
+    s = t(728458),
+    c = t(881106),
+    o = t(839827);
+let i = (e) => {
     let {
-            layerConfig: t,
-            animationType: n,
-            ticking: c,
-            time: d,
-            hasPlayedThrough: _,
-            setHasPlayedThrough: f,
-            maxLoops: p,
-            loopEnd: h,
-            bannerAdjustment: m,
-            imageData: E,
+            layerConfig: r,
+            animationType: t,
+            ticking: i,
+            time: f,
+            hasPlayedThrough: d,
+            setHasPlayedThrough: A,
+            maxLoops: T,
+            loopEnd: m,
+            bannerAdjustment: E,
+            imageData: I,
         } = e,
-        g = !0,
-        A = 0,
-        I = (0, a.gm)() && null != t.loopDelay && t.loopDelay > 0 && E?.src != null,
-        [T, S] = i.useState("reset"),
-        y = i.useRef(E?.src ?? t.src),
-        [v, N] = i.useState(E?.src ?? t.src);
-    i.useEffect(() => {
-        if (!I || "layer" === T) return;
+        h = !0,
+        p = 0,
+        N = (0, l.gm)() && null != r.loopDelay && r.loopDelay > 0 && I?.src != null,
+        [y, R] = a.useState("reset"),
+        b = a.useRef(I?.src ?? r.src),
+        [v, g] = a.useState(I?.src ?? r.src);
+    a.useEffect(() => {
+        if (!N || "layer" === y) return;
         let e = new AbortController();
         return (
             (async () => {
                 try {
-                    let t = y.current,
-                        n = await fetch(t, { signal: e.signal }),
-                        r = await n.blob();
+                    let r = b.current,
+                        t = await fetch(r, { signal: e.signal }),
+                        n = await t.blob();
                     if (e.signal.aborted) return;
-                    t !== E?.src && URL.revokeObjectURL(t), (y.current = URL.createObjectURL(r)), N(() => y.current);
+                    r !== I?.src && URL.revokeObjectURL(r), (b.current = URL.createObjectURL(n)), g(() => b.current);
                 } catch (e) {
                     if ("AbortError" === e.name) return null;
-                    o.A.captureException(e);
+                    s.A.captureException(e);
                 }
             })(),
             () => {
                 e.abort();
             }
         );
-    }, [T, I, N, E?.src]),
-        i.useEffect(
+    }, [y, N, g, I?.src]),
+        a.useEffect(
             () => () => {
-                y.current !== E?.src && URL.revokeObjectURL(y.current);
+                b.current !== I?.src && URL.revokeObjectURL(b.current);
             },
             [],
         );
-    let C = (e) => {
-        (0, a.gm)() && e !== T && S(e);
+    let S = (e) => {
+        (0, l.gm)() && e !== y && R(e);
     };
     if (
-        (c || (g = !1),
-        d < t.start && (g = !1),
-        !t.loop && d > t.duration + t.start && (g = !1),
-        n === s.l.ANIMATION_TYPE_PERSISTENT && !_ && null != p && d >= h && f(!0),
-        t.loop && void 0 !== t.loopDelay && t.loopDelay > 0)
+        (i || (h = !1),
+        f < r.start && (h = !1),
+        !r.loop && f > r.duration + r.start && (h = !1),
+        t === u.l.ANIMATION_TYPE_PERSISTENT && !d && null != T && f >= m && A(!0),
+        r.loop && void 0 !== r.loopDelay && r.loopDelay > 0)
     ) {
-        let e = t.duration + t.loopDelay;
-        (A = Math.floor((d - t.start) / e)),
-            d - t.start - A * e > t.duration &&
-                (n === s.l.ANIMATION_TYPE_INTERMITTENT && !_ && null != p && A >= p && f(!0), (g = !1));
+        let e = r.duration + r.loopDelay;
+        (p = Math.floor((f - r.start) / e)),
+            f - r.start - p * e > r.duration &&
+                (t === u.l.ANIMATION_TYPE_INTERMITTENT && !d && null != T && p >= T && A(!0), (h = !1));
     }
-    return g
-        ? (C("layer"),
-          (0, r.jsx)("img", {
+    return h
+        ? (S("layer"),
+          (0, n.jsx)("img", {
               src: v,
-              className: u.QZ,
-              style: { top: (t.position?.y ?? 0) - m, left: t.position?.x ?? 0 },
+              className: o.QZ,
+              style: { top: (r.position?.y ?? 0) - E, left: r.position?.x ?? 0 },
               alt: "",
               "aria-hidden": !0,
           }))
-        : (C("reset"), (0, r.jsx)("img", { src: l.Ut, alt: "", "aria-hidden": !0 }));
+        : (S("reset"), (0, n.jsx)("img", { src: c.Ut, alt: "", "aria-hidden": !0 }));
 };

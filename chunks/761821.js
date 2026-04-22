@@ -1,31 +1,31 @@
 "use strict";
 n.d(t, {
-    $o: () => T,
-    Gd: () => m,
-    Mr: () => C,
+    $o: () => I,
+    Gd: () => p,
+    Mr: () => N,
     RK: () => A,
     Su: () => _,
     VB: () => S,
-    Y5: () => p,
-    aw: () => g,
-    gc: () => y,
+    Y5: () => E,
+    aw: () => m,
+    gc: () => T,
     ii: () => h,
-    ob: () => E,
-    vI: () => v,
+    ob: () => g,
+    vI: () => y,
 }),
     n(321073);
 var r = n(638504),
     i = n(65412),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(803805),
     l = n(873298),
     u = n(813827),
-    c = n(355097),
-    d = n(652215);
+    d = n(355097),
+    c = n(652215);
 let _ = { readerFactory: (e) => new r.V(e, new TextDecoder("utf-8")) },
-    f = { [c.oD.PRELOADED_USER_SETTINGS]: l.nT, [c.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw };
-function p(e, t) {
+    f = { [d.oD.PRELOADED_USER_SETTINGS]: l.nT, [d.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw };
+function E(e, t) {
     return null != t && e in f ? h(f[e], t) : null;
 }
 function h(e, t) {
@@ -37,13 +37,13 @@ function h(e, t) {
         throw Error(`Settings proto failed to deserialize (potentially corrupt): ${e}`);
     }
 }
-function m(e) {
+function p(e) {
     return h(l.nT, e);
 }
-function g(e, t) {
-    return E(f[e], t);
+function m(e, t) {
+    return g(f[e], t);
 }
-function E(e, t) {
+function g(e, t) {
     return (0, i.C)(e.toBinary(t));
 }
 function A(e, t, n) {
@@ -51,18 +51,16 @@ function A(e, t, n) {
     return e.mergePartial(t, n), t;
 }
 function I(e, t, n) {
-    return null == e.guilds && (e.guilds = l.KJ.create()), T(e.guilds, t, n);
+    return (null == t || "null" === t) && (t = c.D0I), t in e.guilds || (e.guilds[t] = l.nx.create()), n(e.guilds[t]);
 }
-function T(e, t, n) {
-    return (null == t || "null" === t) && (t = d.D0I), t in e.guilds || (e.guilds[t] = l.nx.create()), n(e.guilds[t]);
-}
-function y(e, t, n, r) {
-    return I(e, t, (e) => S(e, n, r));
+function T(e, t, n, r) {
+    var i;
+    return (i = (e) => S(e, n, r)), null == e.guilds && (e.guilds = l.KJ.create()), I(e.guilds, t, i);
 }
 function S(e, t, n) {
     return t in e.channels || (e.channels[t] = l.Ju.create()), n(e.channels[t]);
 }
-function v(e, t) {
+function y(e, t) {
     null == e.versions && (e.versions = u.u.create());
     let n = 0;
     for (let e of t) {
@@ -71,7 +69,7 @@ function v(e, t) {
     }
     let r = 0.1 > Math.random(),
         i = !1,
-        a = [];
+        s = [];
     for (let n of t) {
         if (n.version <= e.versions.clientVersion) {
             r && n.cleanup?.();
@@ -82,15 +80,15 @@ function v(e, t) {
             n.cleanup?.();
             continue;
         }
-        (i = !0), null != n.cleanup && a.push(n.cleanup);
+        (i = !0), null != n.cleanup && s.push(n.cleanup);
     }
-    return { proto: e, isDirty: i, cleanupFuncs: a };
+    return { proto: e, isDirty: i, cleanupFuncs: s };
 }
-function C(e, t) {
+function N(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (
-            n = s()
+            n = a()
                 .sortBy(n, (e) => {
                     let [t, n] = e;
                     return n.recentUses[n.recentUses.length - 1];

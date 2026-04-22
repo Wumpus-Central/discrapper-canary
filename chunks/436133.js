@@ -1,12 +1,12 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    a = n(397927),
+    a = n(834730),
     r = n(769015),
-    o = n(693052);
-function c(e) {
+    o = n(999436);
+function d(e) {
     let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;
     {
@@ -22,7 +22,7 @@ function c(e) {
                 (0, i.jsx)(r.A, { game: n[0].application, className: o.wK }),
                 2 === n.length
                     ? (0, i.jsx)(r.A, { game: n[1].application, className: o.wK })
-                    : (0, i.jsx)(a.Text, {
+                    : (0, i.jsx)(a.E, {
                           className: o.ju,
                           variant: "text-xs/bold",
                           color: "interactive-text-active",

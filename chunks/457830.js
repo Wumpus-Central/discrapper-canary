@@ -1,37 +1,38 @@
-n.d(t, { b: () => u, k: () => A });
+n.d(t, { b: () => A, k: () => h });
 var i,
-    a = n(627968);
+    r = n(627968);
 n(64700);
-var r = n(110259),
-    l = n(397927),
-    s = n(139286),
-    o = n(985018),
-    d = n(510989),
+var a = n(110259),
+    l = n(534514),
+    s = n(834730),
+    o = n(139286),
+    d = n(985018),
+    u = n(640509),
     c = n(450603),
-    u = (((i = {}).GUILD_NOT_ELIGIBLE = "guild_not_eligible"), (i.NOT_GUILD_MEMBER = "not_guild_member"), i);
-let A = (e) => {
+    A = (((i = {}).GUILD_NOT_ELIGIBLE = "guild_not_eligible"), (i.NOT_GUILD_MEMBER = "not_guild_member"), i);
+let h = (e) => {
     let { errorType: t } = e;
     return (
-        (0, s.A)({
-            type: r.ImpressionTypes.PAGE,
-            name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+        (0, o.A)({
+            type: a.ImpressionTypes.PAGE,
+            name: a.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
             properties: { error_page_type: t },
         }),
-        (0, a.jsx)("div", {
-            className: d.Xd,
-            children: (0, a.jsxs)("div", {
-                className: d.lr,
+        (0, r.jsx)("div", {
+            className: u.Xd,
+            children: (0, r.jsxs)("div", {
+                className: u.lr,
                 children: [
-                    (0, a.jsx)("img", { src: c, alt: "", className: d.W9 }),
-                    (0, a.jsx)(l.Heading, {
+                    (0, r.jsx)("img", { src: c, alt: "", className: u.W9 }),
+                    (0, r.jsx)(l.D, {
                         variant: "heading-xl/extrabold",
-                        className: d.mW,
-                        children: "guild_not_eligible" === t ? o.intl.string(o.t.atZQVZ) : o.intl.string(o.t.gAdWBl),
+                        className: u.mW,
+                        children: "guild_not_eligible" === t ? d.intl.string(d.t.atZQVZ) : d.intl.string(d.t.gAdWBl),
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, r.jsx)(s.E, {
                         variant: "text-md/normal",
-                        className: d.LS,
-                        children: "guild_not_eligible" === t ? o.intl.string(o.t.teWe5G) : o.intl.string(o.t["X/yMrK"]),
+                        className: u.LS,
+                        children: "guild_not_eligible" === t ? d.intl.string(d.t.teWe5G) : d.intl.string(d.t["X/yMrK"]),
                     }),
                 ],
             }),

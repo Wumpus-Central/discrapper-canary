@@ -1,31 +1,33 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     r = n(492462),
     l = n(311907),
     a = n(562465),
-    o = n(397927),
-    d = n(396681),
-    c = n(854378),
-    u = n(210714),
-    h = n(718446),
-    _ = n(427157),
-    p = n(650048),
-    g = n(652215),
-    m = n(431144),
-    A = n(355097),
-    f = n(985018),
-    E = n(885106);
+    o = n(821609),
+    c = n(123292),
+    d = n(778712),
+    u = n(396681),
+    _ = n(854378),
+    h = n(210714),
+    m = n(718446),
+    p = n(427157),
+    g = n(650048),
+    A = n(652215),
+    f = n(431144),
+    x = n(355097),
+    E = n(985018),
+    I = n(818050);
 l.Ay.initialize();
-class x extends s.PureComponent {
+class v extends s.PureComponent {
     static defaultProps = { transitionTo: (e) => n.g.location.assign(e) };
     state = { busy: !0, success: !1, user: null, category: null };
     componentDidMount() {
-        let e = (0, d.A)(this.props.location),
+        let e = (0, u.A)(this.props.location),
             t = (0, r.parse)(this.props.location.search);
         a.Bo.post({
-            url: g.Rsh.DISABLE_EMAIL_NOTIFICATIONS,
+            url: A.Rsh.DISABLE_EMAIL_NOTIFICATIONS,
             body: { token: e, pixel_uuid: t.hash, category: t.category, email_type: t.email_type },
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -34,37 +36,33 @@ class x extends s.PureComponent {
                 let {
                         body: { user: n },
                     } = e,
-                    i = new _.A(n);
+                    i = new p.A(n);
                 this.setState({ success: !0, busy: !1, user: i, category: t.category });
             },
             () => this.setState({ success: !1, busy: !1 }),
         ),
-            (0, u.d)("disable_email_notifications");
+            (0, h.d)("disable_email_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(c.Ay, { children: (0, i.jsx)(c.CK, {}) });
+        return (0, i.jsx)(_.Ay, { children: (0, i.jsx)(_.CK, {}) });
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: s } = this.props,
-            r = f.intl.formatToPlainString(f.t.YDAohB, { category: t });
-        return (0, i.jsxs)(c.Ay, {
+            r = E.intl.formatToPlainString(E.t.YDAohB, { category: t });
+        return (0, i.jsxs)(_.Ay, {
             children: [
-                (0, i.jsx)(c.hE, { className: E.QB, children: f.intl.string(f.t.f6rdLg) }),
-                (0, i.jsx)(c.tK, { children: r }),
+                (0, i.jsx)(_.hE, { className: I.QB, children: E.intl.string(E.t.f6rdLg) }),
+                (0, i.jsx)(_.tK, { children: r }),
                 (0, i.jsx)("div", {
-                    className: E.QX,
-                    children: (0, i.jsx)(o.Button, {
-                        text: f.intl.string(f.t.fIv16B),
-                        fullWidth: !0,
-                        onClick: () => s(n),
-                    }),
+                    className: I.QX,
+                    children: (0, i.jsx)(o.$, { text: E.intl.string(E.t.fIv16B), fullWidth: !0, onClick: () => s(n) }),
                 }),
                 (0, i.jsx)("div", {
-                    className: E.Ot,
-                    children: (0, i.jsx)(o.QWc, {
-                        text: f.intl.string(f.t.YYTirT),
+                    className: I.Ot,
+                    children: (0, i.jsx)(c.Q, {
+                        text: E.intl.string(E.t.YYTirT),
                         textVariant: "text-sm/normal",
-                        onClick: () => s((0, h.settingsPathToRoute)(A.od.NOTIFICATIONS_EMAILS)),
+                        onClick: () => s((0, m.settingsPathToRoute)(x.od.NOTIFICATIONS_EMAILS)),
                     }),
                 }),
             ],
@@ -74,43 +72,35 @@ class x extends s.PureComponent {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: s } = this.state;
         if (null != s) {
-            let e = m.px.find((e) => e.category === s);
+            let e = f.px.find((e) => e.category === s);
             if (null != e) return this.renderCategorySuccess(s, e.label());
         }
-        return (0, i.jsxs)(c.Ay, {
+        return (0, i.jsxs)(_.Ay, {
             children: [
-                (0, i.jsx)(c.eu, {
+                (0, i.jsx)(_.eu, {
                     src: n?.getAvatarURL(void 0, 100),
-                    size: o._3J.DEPRECATED_SIZE_100,
-                    className: E.SX,
+                    size: d._3.DEPRECATED_SIZE_100,
+                    className: I.SX,
                 }),
-                (0, i.jsx)(c.hE, { className: E.QB, children: f.intl.string(f.t["6U6OMQ"]) }),
-                (0, i.jsx)(c.tK, { children: f.intl.string(f.t["yaDJ4/"]) }),
+                (0, i.jsx)(_.hE, { className: I.QB, children: E.intl.string(E.t["6U6OMQ"]) }),
+                (0, i.jsx)(_.tK, { children: E.intl.string(E.t["yaDJ4/"]) }),
                 (0, i.jsx)("div", {
-                    className: E.eT,
-                    children: (0, i.jsx)(o.Button, {
-                        text: f.intl.string(f.t.fIv16B),
-                        fullWidth: !0,
-                        onClick: () => t(e),
-                    }),
+                    className: I.eT,
+                    children: (0, i.jsx)(o.$, { text: E.intl.string(E.t.fIv16B), fullWidth: !0, onClick: () => t(e) }),
                 }),
             ],
         });
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, i.jsxs)(c.Ay, {
+        return (0, i.jsxs)(_.Ay, {
             children: [
-                (0, i.jsx)(c._V, { src: n(37772), className: E.SX }),
-                (0, i.jsx)(c.hE, { className: E.QB, children: f.intl.string(f.t.ox9hIS) }),
-                (0, i.jsx)(c.tK, { children: f.intl.string(f.t["/dcuR5"]) }),
+                (0, i.jsx)(_._V, { src: n(37772), className: I.SX }),
+                (0, i.jsx)(_.hE, { className: I.QB, children: E.intl.string(E.t.ox9hIS) }),
+                (0, i.jsx)(_.tK, { children: E.intl.string(E.t["/dcuR5"]) }),
                 (0, i.jsx)("div", {
-                    className: E.eT,
-                    children: (0, i.jsx)(o.Button, {
-                        text: f.intl.string(f.t.fIv16B),
-                        fullWidth: !0,
-                        onClick: () => t(e),
-                    }),
+                    className: I.eT,
+                    children: (0, i.jsx)(o.$, { text: E.intl.string(E.t.fIv16B), fullWidth: !0, onClick: () => t(e) }),
                 }),
             ],
         });
@@ -120,4 +110,4 @@ class x extends s.PureComponent {
         return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
     }
 }
-let I = l.Ay.connectStores([p.A], () => ({ defaultRoute: p.A.defaultRoute }))(x);
+let N = l.Ay.connectStores([g.A], () => ({ defaultRoute: g.A.defaultRoute }))(v);

@@ -1,19 +1,19 @@
-n.d(t, { A: () => l });
-var a = n(627968),
-    s = n(64700),
-    i = n(397927);
-let l = function (e) {
-    let { assetKey: t, initialValue: n, onMessageChange: l, title: r } = e,
-        [o, d] = s.useState("");
+a.d(t, { A: () => s });
+var n = a(627968),
+    l = a(64700),
+    i = a(292666);
+let s = function (e) {
+    let { assetKey: t, initialValue: a, onMessageChange: s, title: r } = e,
+        [o, d] = l.useState("");
     return (
-        s.useEffect(() => {
-            d(n ?? "");
-        }, [n]),
-        (0, a.jsx)(i.ksK, {
+        l.useEffect(() => {
+            d(a ?? "");
+        }, [a]),
+        (0, n.jsx)(i.k, {
             label: r,
             value: o,
             onChange: function (e) {
-                d(e), l(t, e);
+                d(e), s(t, e);
             },
         })
     );

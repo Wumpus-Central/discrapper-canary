@@ -1,105 +1,102 @@
 "use strict";
-n.d(t, { Jn: () => f, LO: () => _, kn: () => d });
-var r = n(873298),
-    i = n(731068),
-    a = n(253932),
-    s = n(930125),
-    o = n(338717),
-    l = n(632119),
-    u = n(444802),
-    c = n(652215),
-    d = (function (e) {
-        return (e.EXPLICIT = "explicit"), (e.GORE = "gore"), (e.SELF_HARM = "self_harm"), e;
-    })({}),
-    _ = (function (e) {
-        return (
-            (e[(e.NONE = 0)] = "NONE"),
-            (e[(e.EXPLICIT = 1)] = "EXPLICIT"),
-            (e[(e.GORE = 2)] = "GORE"),
-            (e[(e.SELF_HARM = 4)] = "SELF_HARM"),
-            (e[(e.ALL = 7)] = "ALL"),
-            e
-        );
-    })({});
-let f = {
+n.d(t, { Jn: () => h, LO: () => E, kn: () => f });
+var r,
+    i,
+    s = n(873298),
+    a = n(731068),
+    o = n(253932),
+    l = n(930125),
+    u = n(338717),
+    d = n(632119),
+    c = n(444802),
+    _ = n(652215),
+    f = (((r = {}).EXPLICIT = "explicit"), (r.GORE = "gore"), (r.SELF_HARM = "self_harm"), r),
+    E =
+        (((i = {})[(i.NONE = 0)] = "NONE"),
+        (i[(i.EXPLICIT = 1)] = "EXPLICIT"),
+        (i[(i.GORE = 2)] = "GORE"),
+        (i[(i.SELF_HARM = 4)] = "SELF_HARM"),
+        (i[(i.ALL = 7)] = "ALL"),
+        i);
+let h = {
     explicit: {
         harmType: "explicit",
-        obscureReason: o.Oc.EXPLICIT_CONTENT,
-        attachmentFlag: c.sbO.CONTAINS_EXPLICIT_MEDIA,
-        embedFlag: c.iSj.CONTAINS_EXPLICIT_MEDIA,
-        genericMediaFlag: i.IS.EXPLICIT,
+        obscureReason: u.Oc.EXPLICIT_CONTENT,
+        attachmentFlag: _.sbO.CONTAINS_EXPLICIT_MEDIA,
+        embedFlag: _.iSj.CONTAINS_EXPLICIT_MEDIA,
+        genericMediaFlag: a.IS.EXPLICIT,
         bitmask: 1,
         devSettingKey: "obscure_blur_effect_explicit_content_enabled",
         getProtoUserSettings: (e) => {
             let t = e?.textAndImages?.explicitContentSettings;
             return {
-                [s.v.GUILD]: t?.explicitContentGuilds,
-                [s.v.FRIEND_DM]: t?.explicitContentFriendDm,
-                [s.v.NON_FRIEND_DM]: t?.explicitContentNonFriendDm,
+                [l.v.GUILD]: t?.explicitContentGuilds,
+                [l.v.FRIEND_DM]: t?.explicitContentFriendDm,
+                [l.v.NON_FRIEND_DM]: t?.explicitContentNonFriendDm,
             };
         },
         getUserSettingsWithDefaults: (e) => {
             let t = e ?? {
-                [s.v.GUILD]: a.Vd.getSetting()?.explicitContentGuilds,
-                [s.v.FRIEND_DM]: a.Vd.getSetting()?.explicitContentFriendDm,
-                [s.v.NON_FRIEND_DM]: a.Vd.getSetting()?.explicitContentNonFriendDm,
+                [l.v.GUILD]: o.Vd.getSetting()?.explicitContentGuilds,
+                [l.v.FRIEND_DM]: o.Vd.getSetting()?.explicitContentFriendDm,
+                [l.v.NON_FRIEND_DM]: o.Vd.getSetting()?.explicitContentNonFriendDm,
             };
             return {
-                [s.v.GUILD]: (0, l.Ys)({ setting: t?.[s.v.GUILD] }),
-                [s.v.FRIEND_DM]: (0, l.Ys)({ setting: t?.[s.v.FRIEND_DM], isDm: !0, isFriend: !0 }),
-                [s.v.NON_FRIEND_DM]: (0, l.Ys)({ setting: t?.[s.v.NON_FRIEND_DM], isDm: !0 }),
+                [l.v.GUILD]: (0, d.Ys)({ setting: t?.[l.v.GUILD] }),
+                [l.v.FRIEND_DM]: (0, d.Ys)({ setting: t?.[l.v.FRIEND_DM], isDm: !0, isFriend: !0 }),
+                [l.v.NON_FRIEND_DM]: (0, d.Ys)({ setting: t?.[l.v.NON_FRIEND_DM], isDm: !0 }),
             };
         },
     },
     gore: {
         harmType: "gore",
-        obscureReason: o.Oc.GORE_CONTENT,
-        attachmentFlag: c.sbO.CONTAINS_GORE_CONTENT,
-        embedFlag: c.iSj.CONTAINS_GORE_CONTENT,
-        genericMediaFlag: i.IS.GORE,
+        obscureReason: u.Oc.GORE_CONTENT,
+        attachmentFlag: _.sbO.CONTAINS_GORE_CONTENT,
+        embedFlag: _.iSj.CONTAINS_GORE_CONTENT,
+        genericMediaFlag: a.IS.GORE,
         bitmask: 2,
         devSettingKey: "obscure_blur_effect_gore_content_enabled",
         getProtoUserSettings: (e) => {
             let t = e?.textAndImages?.goreContentSettings;
             return {
-                [s.v.GUILD]: t?.goreContentGuilds,
-                [s.v.FRIEND_DM]: t?.goreContentFriendDm,
-                [s.v.NON_FRIEND_DM]: t?.goreContentNonFriendDm,
+                [l.v.GUILD]: t?.goreContentGuilds,
+                [l.v.FRIEND_DM]: t?.goreContentFriendDm,
+                [l.v.NON_FRIEND_DM]: t?.goreContentNonFriendDm,
             };
         },
         getUserSettingsWithDefaults: (e) => {
             let t = e ?? {
-                [s.v.GUILD]: a.qN.getSetting()?.goreContentGuilds,
-                [s.v.FRIEND_DM]: a.qN.getSetting()?.goreContentFriendDm,
-                [s.v.NON_FRIEND_DM]: a.qN.getSetting()?.goreContentNonFriendDm,
+                [l.v.GUILD]: o.qN.getSetting()?.goreContentGuilds,
+                [l.v.FRIEND_DM]: o.qN.getSetting()?.goreContentFriendDm,
+                [l.v.NON_FRIEND_DM]: o.qN.getSetting()?.goreContentNonFriendDm,
             };
             return {
-                [s.v.GUILD]: (0, u.gC)({ setting: t?.[s.v.GUILD] }),
-                [s.v.FRIEND_DM]: (0, u.gC)({ setting: t?.[s.v.FRIEND_DM], isDm: !0, isFriend: !0 }),
-                [s.v.NON_FRIEND_DM]: (0, u.gC)({ setting: t?.[s.v.NON_FRIEND_DM], isDm: !0 }),
+                [l.v.GUILD]: (0, c.gC)({ setting: t?.[l.v.GUILD] }),
+                [l.v.FRIEND_DM]: (0, c.gC)({ setting: t?.[l.v.FRIEND_DM], isDm: !0, isFriend: !0 }),
+                [l.v.NON_FRIEND_DM]: (0, c.gC)({ setting: t?.[l.v.NON_FRIEND_DM], isDm: !0 }),
             };
         },
     },
     self_harm: {
         harmType: "self_harm",
-        obscureReason: o.Oc.SELF_HARM_CONTENT,
-        attachmentFlag: c.sbO.CONTAINS_SELF_HARM_CONTENT,
-        embedFlag: c.iSj.CONTAINS_SELF_HARM_CONTENT,
-        genericMediaFlag: i.IS.SELF_HARM,
+        obscureReason: u.Oc.SELF_HARM_CONTENT,
+        attachmentFlag: _.sbO.CONTAINS_SELF_HARM_CONTENT,
+        embedFlag: _.iSj.CONTAINS_SELF_HARM_CONTENT,
+        genericMediaFlag: a.IS.SELF_HARM,
         bitmask: 4,
         devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
         getProtoUserSettings: (e) => {
             let t = e?.textAndImages?.selfHarmContentSettings;
             return {
-                [s.v.GUILD]: t?.selfHarmContentGuilds,
-                [s.v.FRIEND_DM]: t?.selfHarmContentFriendDm,
-                [s.v.NON_FRIEND_DM]: t?.selfHarmContentNonFriendDm,
+                [l.v.GUILD]: t?.selfHarmContentGuilds,
+                [l.v.FRIEND_DM]: t?.selfHarmContentFriendDm,
+                [l.v.NON_FRIEND_DM]: t?.selfHarmContentNonFriendDm,
             };
         },
         getUserSettingsWithDefaults: () => ({
-            [s.v.GUILD]: r.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            [s.v.FRIEND_DM]: r.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            [s.v.NON_FRIEND_DM]: r.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            [l.v.GUILD]: s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            [l.v.FRIEND_DM]: s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            [l.v.NON_FRIEND_DM]: s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
         }),
     },
 };

@@ -1,26 +1,27 @@
 "use strict";
 n.d(t, {
     $l: () => g,
-    TF: () => o,
+    TF: () => l,
     Ul: () => m,
-    W0: () => u,
-    eZ: () => p,
-    pJ: () => f,
-    tB: () => s,
+    W0: () => d,
+    eZ: () => h,
+    pJ: () => E,
+    tB: () => o,
     w6: () => c,
-    yy: () => _,
+    yy: () => f,
 }),
     n(140667);
-var r = n(682572),
-    i = n.n(r),
+var r,
+    i = n(682572),
+    s = n.n(i),
     a = n(547830);
-let s = () => Math.floor(a.u5 + a.FO.now()),
-    o = new (class {
+let o = () => Math.floor(a.u5 + a.FO.now()),
+    l = new (class {
         now() {
-            return s();
+            return o();
         }
     })();
-class l {
+class u {
     milliseconds = 0;
     constructor(e, t, n, r) {
         (this.milliseconds += r || 0),
@@ -38,19 +39,19 @@ class l {
     isGreaterOrEqualTo(e) {
         return this.milliseconds >= e.milliseconds;
     }
-    add = (e) => l.fromMilliseconds(this.milliseconds + e.milliseconds);
-    subtract = (e) => l.fromMilliseconds(this.milliseconds - e.milliseconds);
-    subtractOrZero = (e) => l.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0));
-    static fromMilliseconds = (e) => new l(0, 0, 0, e);
-    static fromSeconds = (e) => new l(0, 0, e);
-    static fromMinutes = (e) => new l(0, e);
-    static fromHours = (e) => new l(e);
+    add = (e) => u.fromMilliseconds(this.milliseconds + e.milliseconds);
+    subtract = (e) => u.fromMilliseconds(this.milliseconds - e.milliseconds);
+    subtractOrZero = (e) => u.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0));
+    static fromMilliseconds = (e) => new u(0, 0, 0, e);
+    static fromSeconds = (e) => new u(0, 0, e);
+    static fromMinutes = (e) => new u(0, e);
+    static fromHours = (e) => new u(e);
 }
-class u {
+class d {
     timestampProducer;
     startTime = void 0;
     timePassed = 0;
-    constructor(e = o) {
+    constructor(e = l) {
         this.timestampProducer = e;
     }
     get lastElapsed() {
@@ -76,23 +77,23 @@ class u {
         e !== this.isRunning() && (e ? this.start() : this.stop());
     }
     elapsed() {
-        if (null == this.startTime) return l.fromMilliseconds(this.timePassed);
+        if (null == this.startTime) return u.fromMilliseconds(this.timePassed);
         let e = this.timestampProducer.now() - this.startTime;
-        return l.fromMilliseconds(this.timePassed + e);
+        return u.fromMilliseconds(this.timePassed + e);
     }
     isRunning() {
         return null != this.startTime;
     }
     static startNew() {
-        let e = new u();
+        let e = new d();
         return e.start(), e;
     }
 }
 class c {
     stopwatch;
     state;
-    constructor(e, t = o) {
-        (this.stopwatch = new u(t)), (this.state = e), this.stopwatch.toggle(e);
+    constructor(e, t = l) {
+        (this.stopwatch = new d(t)), (this.state = e), this.stopwatch.toggle(e);
     }
     set value(e) {
         this.stopwatch.toggle(e), (this.state = e);
@@ -110,9 +111,9 @@ class c {
         return this.stopwatch.elapsed().asSeconds();
     }
 }
-class d {
+class _ {
     timeout;
-    watch = new u();
+    watch = new d();
     constructor(e) {
         this.timeout = e;
     }
@@ -124,41 +125,38 @@ class d {
         this.watch.start();
     }
     static startNew(e) {
-        let t = new d(e);
+        let t = new _(e);
         return t.start(), t;
     }
     static async waitFor(e, t) {
         let n,
-            r = l.fromMilliseconds(100);
-        e instanceof l ? (n = e) : ((n = e.timeout), null != e.sleep && (r = e.sleep));
-        let i = d.startNew(n);
+            r = u.fromMilliseconds(100);
+        e instanceof u ? (n = e) : ((n = e.timeout), null != e.sleep && (r = e.sleep));
+        let i = _.startNew(n);
         do {
             if ((await t()) === !0) return !0;
-            await _(r);
+            await f(r);
         } while (!i.hasTimedOut());
         return !1;
     }
 }
-function _(e) {
+function f(e) {
     let t = "number" == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);
     });
 }
-var f = (function (e) {
-    return (
-        (e.NONE = "NONE"),
-        (e.SECONDS = "SECONDS"),
-        (e.MINUTES = "MINUTES"),
-        (e.HOURS = "HOURS"),
-        (e.DAYS = "DAYS"),
-        (e.WEEKS = "WEEKS"),
-        (e.MONTHS = "MONTHS"),
-        (e.YEARS = "YEARS"),
-        e
-    );
-})({});
-function p(e, t) {
+var E =
+    (((r = {}).NONE = "NONE"),
+    (r.SECONDS = "SECONDS"),
+    (r.MINUTES = "MINUTES"),
+    (r.HOURS = "HOURS"),
+    (r.DAYS = "DAYS"),
+    (r.WEEKS = "WEEKS"),
+    (r.MONTHS = "MONTHS"),
+    (r.YEARS = "YEARS"),
+    r);
+function h(e, t) {
     switch (t) {
         case "NONE":
             return 0;
@@ -178,7 +176,7 @@ function p(e, t) {
             return e / 60 / 24 / 365;
     }
 }
-let h = [
+let p = [
     { unit: "NONE", max: 0 },
     { unit: "SECONDS", max: 1 },
     { unit: "MINUTES", max: 60 },
@@ -189,12 +187,12 @@ let h = [
     { unit: "YEARS", max: 1 / 0 },
 ];
 function m(e, t) {
-    let n = h.findIndex((t) => {
+    let n = p.findIndex((t) => {
             let { max: n, unit: r } = t;
             return ("NONE" === r && e === n) || e < n;
         }),
-        r = i()(
-            h,
+        r = s()(
+            p,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -202,15 +200,15 @@ function m(e, t) {
             n,
         );
     if (null != r) return r.unit;
-    let a = h.find((e) => {
+    let i = p.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
-    return null != a ? a.unit : null;
+    return null != i ? i.unit : null;
 }
 function g(e, t) {
     if (null == e) return { unit: "NONE", time: 0 };
     let n = m(e, (e) => t.includes(e)),
-        r = null != n ? p(e, n) : null;
+        r = null != n ? h(e, n) : null;
     return { unit: n, time: null != r ? Math.floor(r) : null };
 }

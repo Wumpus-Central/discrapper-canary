@@ -1,50 +1,41 @@
 "use strict";
-n.d(t, { Q: () => u });
+n.d(t, { Q: () => o });
 var r = n(70298),
     i = n(973522),
     s = n(15285),
     a = n(321034);
 function o() {
-    let e = {};
-    {
-        let t = a.A.getMemoryUsageElectronRenderer();
-        null != t && (e.client_heartbeat_renderer_memory = t);
-        let n = a.A.getMemoryUsageElectronRendererUsedHeapSize();
-        null != n && (e.client_heartbeat_renderer_memory_used_heap = n);
-        let r = a.A.getMemoryUsageElectronProcessTypeDetails();
-        null != r &&
+    let e, t, n, o, l, u;
+    return {
+        ...((e = {}),
+        null != (t = a.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+        null != (n = a.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+            (e.client_heartbeat_renderer_memory_used_heap = n),
+        null != (o = a.A.getMemoryUsageElectronProcessTypeDetails()) &&
             ((e.electron_process_memory_private = [
-                r.unknown?.wss_priv_kb ?? -1,
-                r.main?.wss_priv_kb ?? -1,
-                r.renderer?.wss_priv_kb ?? -1,
-                r.gpu?.wss_priv_kb ?? -1,
-                r.crashpad?.wss_priv_kb ?? -1,
-                r.utility?.wss_priv_kb ?? -1,
+                o.unknown?.wss_priv_kb ?? -1,
+                o.main?.wss_priv_kb ?? -1,
+                o.renderer?.wss_priv_kb ?? -1,
+                o.gpu?.wss_priv_kb ?? -1,
+                o.crashpad?.wss_priv_kb ?? -1,
+                o.utility?.wss_priv_kb ?? -1,
             ]),
             (e.electron_process_memory_private_and_shared = [
-                r.unknown?.wss_kb ?? -1,
-                r.main?.wss_kb ?? -1,
-                r.renderer?.wss_kb ?? -1,
-                r.gpu?.wss_kb ?? -1,
-                r.crashpad?.wss_kb ?? -1,
-                r.utility?.wss_kb ?? -1,
-            ]));
-    }
-    return e;
-}
-function l() {
-    let e = {};
-    {
-        let t = s.Ay.getCurrentGameForAnalytics();
-        null != t &&
-            ((e.client_heartbeat_current_game_id = t.id),
-            (e.client_heartbeat_current_game_name = t.name),
-            (e.client_heartbeat_current_game_executable = (0, i.Ic)(t.exePath)),
-            (e.client_heartbeat_current_game_distributor = t.distributor),
-            (e.uses_client_mods = (0, r.b)()));
-    }
-    return e;
-}
-function u() {
-    return { ...o(), ...l() };
+                o.unknown?.wss_kb ?? -1,
+                o.main?.wss_kb ?? -1,
+                o.renderer?.wss_kb ?? -1,
+                o.gpu?.wss_kb ?? -1,
+                o.crashpad?.wss_kb ?? -1,
+                o.utility?.wss_kb ?? -1,
+            ])),
+        e),
+        ...((l = {}),
+        null != (u = s.Ay.getCurrentGameForAnalytics()) &&
+            ((l.client_heartbeat_current_game_id = u.id),
+            (l.client_heartbeat_current_game_name = u.name),
+            (l.client_heartbeat_current_game_executable = (0, i.Ic)(u.exePath)),
+            (l.client_heartbeat_current_game_distributor = u.distributor),
+            (l.uses_client_mods = (0, r.b)())),
+        l),
+    };
 }

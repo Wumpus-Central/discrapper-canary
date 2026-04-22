@@ -1,118 +1,122 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => R });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(877227),
     o = n(311907),
     d = n(319354),
-    c = n(990078),
-    u = n(397927),
-    A = n(573435),
-    _ = n(418842),
-    h = n(309010),
-    m = n(723702),
-    g = n(851109),
-    p = n(394953),
-    E = n(355216),
-    I = n(596540),
-    f = n(652215),
-    C = n(985018),
-    T = n(173733);
-let N = { cozy: 0, default: 0, compact: 0 },
-    S = { cozy: 36, default: 24, compact: 14 },
-    x = { cozy: 95, default: 84, compact: 72 };
-function v(e) {
-    let { onClick: t, selectedOverride: n = !1, popoutProps: r, ref: s, focusSectionProps: o } = e,
-        [h, g] = a.useState(!1),
-        I = (0, p.lI)(),
-        f = n || I,
-        v = n || f,
-        b = (0, i.jsx)(u.XFE, {
-            className: T.Kk,
-            color: h || v ? u.LU0.colors.ICON_STRONG : u.LU0.colors.ICON_MUTED,
+    u = n(990078),
+    c = n(782603),
+    A = n(827734),
+    h = n(331322),
+    _ = n(696986),
+    E = n(939249),
+    p = n(573435),
+    m = n(418842),
+    g = n(309010),
+    I = n(723702),
+    C = n(851109),
+    f = n(394953),
+    T = n(355216),
+    S = n(596540),
+    N = n(652215),
+    O = n(985018),
+    L = n(393058);
+let y = { cozy: 0, default: 0, compact: 0 },
+    v = { cozy: 36, default: 24, compact: 14 },
+    b = { cozy: 95, default: 84, compact: 72 };
+function D(e) {
+    let { onClick: t, selectedOverride: n = !1, popoutProps: a, ref: s, focusSectionProps: o } = e,
+        [g, C] = r.useState(!1),
+        S = (0, f.lI)(),
+        N = n || S,
+        D = n || N,
+        R = (0, i.jsx)(c.X, {
+            className: L.Kk,
+            color: g || D ? A.A.colors.ICON_STRONG : A.A.colors.ICON_MUTED,
             size: "sm",
         }),
-        { badge: y, badgeType: O } = (0, E.ux)({ isSelected: f }),
-        L = (0, m.isDesktop)(),
-        R = (0, _.C)(),
-        P = (0, m.isMac)() ? N[R] : L ? S[R] : x[R];
-    return (0, i.jsxs)(u.BJc, {
+        { badge: P, badgeType: w } = (0, T.ux)({ isSelected: N }),
+        M = (0, I.isDesktop)(),
+        U = (0, m.C)(),
+        x = (0, I.isMac)() ? y[U] : M ? v[U] : b[U];
+    return (0, i.jsxs)(h.B, {
         gap: 0,
         direction: "horizontal",
         children: [
-            (0, i.jsx)(u.hKd, { size: P, horizontal: !0 }),
-            (0, i.jsx)(c.m, {
+            (0, i.jsx)(_.h, { size: x, horizontal: !0 }),
+            (0, i.jsx)(u.m, {
                 asContainer: !0,
-                shouldShow: !v,
-                text: C.intl.string(C.t.HcoRu0),
-                children: (0, i.jsxs)(u.DUT, {
+                shouldShow: !D,
+                text: O.intl.string(O.t.HcoRu0),
+                children: (0, i.jsxs)(E.D, {
                     innerRef: s,
-                    className: T.OV,
+                    className: L.OV,
                     ...o,
-                    ...r,
+                    ...a,
                     onMouseEnter: () => {
-                        g(!0);
+                        C(!0);
                     },
                     onMouseLeave: () => {
-                        g(!1);
+                        C(!1);
                     },
                     onClick: () => {
-                        t?.(), r?.onClick?.();
+                        t?.(), a?.onClick?.();
                     },
                     children: [
                         (0, i.jsx)("div", {
-                            className: l()(T.P0, null),
+                            className: l()(L.P0, null),
                             children:
-                                "unread" === O
+                                "unread" === w
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              (0, i.jsx)(A.Ay, {
+                                              (0, i.jsx)(p.Ay, {
                                                   width: d.E.sm,
                                                   height: d.E.sm,
-                                                  mask: A.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                  children: b,
+                                                  mask: p.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                                  children: R,
                                               }),
-                                              (0, i.jsx)("div", { className: T.Zm }),
+                                              (0, i.jsx)("div", { className: L.Zm }),
                                           ],
                                       })
-                                    : b,
+                                    : R,
                         }),
-                        y,
+                        P,
                     ],
                 }),
             }),
         ],
     });
 }
-function b() {
+function R() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = a.useRef(null),
-        { notificationCenterVariant: n } = (0, g.X8)({ location: "NotificationsInboxButton" }),
-        r = (0, o.bG)([h.A], () => h.A.getChannelId()),
-        l = a.useMemo(() => f.BVt.CHANNEL(f.gNP, r ?? void 0), [r]),
-        d = (0, E.HN)();
-    return n === g.U5.SIDEBAR
-        ? (0, i.jsx)(v, {
+        t = r.useRef(null),
+        { notificationCenterVariant: n } = (0, C.X8)({ location: "NotificationsInboxButton" }),
+        a = (0, o.bG)([g.A], () => g.A.getChannelId()),
+        l = r.useMemo(() => N.BVt.CHANNEL(N.gNP, a ?? void 0), [a]),
+        d = (0, T.HN)();
+    return n === C.U5.SIDEBAR
+        ? (0, i.jsx)(D, {
               onClick: () => {
                   d(), (0, s.pX)(l);
               },
               focusSectionProps: e,
           })
-        : n === g.U5.POPOUT
-          ? (0, i.jsx)(I.A, {
+        : n === C.U5.POPOUT
+          ? (0, i.jsx)(S.A, {
                 targetElementRef: t,
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 spacing: 2,
-                children: (n, a, r) =>
-                    (0, i.jsx)(v, {
+                children: (n, r, a) =>
+                    (0, i.jsx)(D, {
                         ref: t,
-                        selectedOverride: a,
+                        selectedOverride: r,
                         onClick: () => {
                             d(), n();
                         },
-                        popoutProps: r,
+                        popoutProps: a,
                         focusSectionProps: e,
                     }),
             })

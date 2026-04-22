@@ -2,18 +2,18 @@
 n.d(t, { A: () => u });
 var r = n(157559),
     i = n(723702),
-    a = n(837921),
-    s = n(325639),
+    s = n(837921),
+    a = n(325639),
     o = n(765682);
-class l extends s.V {
-    nativeUtils = a.Ay.getDiscordUtils();
+class l extends a.V {
+    nativeUtils = s.Ay.getDiscordUtils();
     platformAlwaysPermits = (0, i.isLinux)() || (0, i.isWindows)();
     static requestTypeLookup = {
-        [o.iL.CAMERA]: a.kw.Camera,
-        [o.iL.AUDIO]: a.kw.Microphone,
-        [o.iL.PHOTOS]: a.kw.Photo,
-        [o.iL.INPUT_MONITORING]: a.kw.InputMonitoring,
-        [o.iL.SCREEN_RECORDING]: a.kw.ScreenRecording,
+        [o.iL.CAMERA]: s.kw.Camera,
+        [o.iL.AUDIO]: s.kw.Microphone,
+        [o.iL.PHOTOS]: s.kw.Photo,
+        [o.iL.INPUT_MONITORING]: s.kw.InputMonitoring,
+        [o.iL.SCREEN_RECORDING]: s.kw.ScreenRecording,
     };
     requestPermissionCore(e, t) {
         return this.asyncify(
@@ -31,9 +31,13 @@ class l extends s.V {
     }
     asyncify(e, t, n) {
         let r = l.requestTypeLookup[t];
-        if (void 0 === r) return Promise.resolve(!0);
-        let i = () => (null == e ? Promise.resolve(o.F5.AUTHORIZED) : new Promise((t, n) => e(t, r)));
-        return this.requestAuthorization(t, i, n);
+        return void 0 === r
+            ? Promise.resolve(!0)
+            : this.requestAuthorization(
+                  t,
+                  () => (null == e ? Promise.resolve(o.F5.AUTHORIZED) : new Promise((t, n) => e(t, r))),
+                  n,
+              );
     }
     openSettings(e) {
         if (this.nativeUtils?.nativePermissionOpenSettings == null) return;
@@ -44,8 +48,8 @@ class l extends s.V {
         return this.storage.hasPermission(e);
     }
     openAlertModal(e) {
-        let { title: t, body: n, onConfirm: i, cancelText: a, confirmText: s } = e;
-        r.A.show({ title: t, body: n, onConfirm: i, cancelText: a, confirmText: s });
+        let { title: t, body: n, onConfirm: i, cancelText: s, confirmText: a } = e;
+        r.A.show({ title: t, body: n, onConfirm: i, cancelText: s, confirmText: a });
     }
 }
 let u = new l();

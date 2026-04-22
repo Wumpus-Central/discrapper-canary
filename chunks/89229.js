@@ -1,33 +1,27 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(299146),
     i = n(1139),
-    a = n(527758),
-    s = n(47312);
+    s = n(527758),
+    a = n(47312);
 n(655972);
 var o = n(64700),
     l = n(167782),
     u = n(51813),
-    c =
+    d =
         Object.values ||
         function (e) {
             return Object.keys(e).map(function (t) {
                 return e[t];
             });
         },
-    d = {
-        component: "div",
-        childFactory: function (e) {
-            return e;
-        },
-    },
-    _ = (function (e) {
+    c = (function (e) {
         function t(t, n) {
             var r = e.call(this, t, n) || this,
-                i = r.handleExited.bind((0, a.A)(r));
+                i = r.handleExited.bind((0, s.A)(r));
             return (r.state = { contextValue: { isMounting: !0 }, handleExited: i, firstRender: !0 }), r;
         }
-        (0, s.A)(t, e);
+        (0, a.A)(t, e);
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
@@ -56,14 +50,20 @@ var o = n(64700),
                     t = e.component,
                     n = e.childFactory,
                     i = (0, r.A)(e, ["component", "childFactory"]),
-                    a = this.state.contextValue,
-                    s = c(this.state.children).map(n);
+                    s = this.state.contextValue,
+                    a = d(this.state.children).map(n);
                 return (delete i.appear, delete i.enter, delete i.exit, null === t)
-                    ? o.createElement(l.A.Provider, { value: a }, s)
-                    : o.createElement(l.A.Provider, { value: a }, o.createElement(t, i, s));
+                    ? o.createElement(l.A.Provider, { value: s }, a)
+                    : o.createElement(l.A.Provider, { value: s }, o.createElement(t, i, a));
             }),
             t
         );
     })(o.Component);
-(_.propTypes = {}), (_.defaultProps = d);
-let f = _;
+(c.propTypes = {}),
+    (c.defaultProps = {
+        component: "div",
+        childFactory: function (e) {
+            return e;
+        },
+    });
+let _ = c;

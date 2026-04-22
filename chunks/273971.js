@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     LL: "howItWorksContainer_dd30dc",
     kD: "howItWorksCard_dd30dc " + n(356028).Nr,

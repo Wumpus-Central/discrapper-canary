@@ -1,23 +1,24 @@
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    r = n(641324),
-    a = n(985018),
-    l = n(462250);
-function o(e) {
-    let { node: t } = e;
-    return (0, i.jsxs)(s.BJc, {
+t.d(n, { A: () => c });
+var l = t(627968);
+t(64700);
+var r = t(331322),
+    i = t(534514),
+    s = t(641324),
+    a = t(985018),
+    o = t(722899);
+function c(e) {
+    let { node: n } = e;
+    return (0, l.jsxs)(r.B, {
         gap: 8,
         padding: { top: 8 },
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, l.jsx)(i.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
-                className: l.D,
+                className: o.D,
                 children: a.intl.string(a.t.rPREPG),
             }),
-            t.layout.map((e) => (0, i.jsx)(r.A, { node: e }, e.key)),
+            n.layout.map((e) => (0, l.jsx)(s.A, { node: e }, e.key)),
         ],
     });
 }

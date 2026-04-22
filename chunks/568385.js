@@ -1,54 +1,49 @@
 "use strict";
-n.d(t, { J: () => p });
+n.d(t, { J: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(129844),
     l = n(974213),
-    u = n(426333),
-    c = n(934551),
-    d = n(331322),
+    u = n(187322),
+    d = n(820081),
+    c = n(331322),
     _ = n(834730),
-    f = n(264005);
-function p(e) {
+    f = n(197452);
+function E(e) {
     let {
             checked: t,
             description: n,
-            onChange: a,
-            disabled: p = !1,
+            onChange: s,
+            disabled: E = !1,
             displayOnly: h,
-            label: m,
-            labeledBy: g,
-            leadingIcon: E,
+            label: p,
+            labeledBy: m,
+            leadingIcon: g,
             value: A,
             labelType: I = "primary",
             usageVariant: T = "single",
         } = e,
-        y = (0, i.useRef)(null),
         S = (0, i.useRef)(null),
-        v = (0, i.useRef)(null),
-        [C, b] = (0, i.useState)(void 0),
-        N = (0, i.useRef)(!1),
-        R = null != m && "" !== m,
-        O = null != n && "" !== n,
-        D = null != E ? E : null;
+        y = (0, i.useRef)(null),
+        N = (0, i.useRef)(null),
+        [O, R] = (0, i.useState)(void 0),
+        v = (0, i.useRef)(!1),
+        C = null != g ? g : null;
     (0, i.useEffect)(() => {
-        if (!N.current) {
-            N.current = !0;
+        if (!v.current) {
+            v.current = !0;
             return;
         }
-        b(t ? "animateIn" : "animateOut");
+        R(t ? "animateIn" : "animateOut");
     }, [t]);
-    let L = (e) => {
-            null != a && a(e);
-        },
-        w = s()(f.checkboxOption, "string" == typeof C && f[C], "indicator" !== T && f.spacing),
-        x = (0, r.jsxs)(r.Fragment, {
+    let b = a()(f.checkboxOption, "string" == typeof O && f[O], "indicator" !== T && f.spacing),
+        D = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: f.checkboxIndicator,
-                    ref: y,
+                    ref: S,
                     "aria-hidden": !0,
                     children: [
                         (0, r.jsx)("svg", {
@@ -66,22 +61,19 @@ function p(e) {
                                 fill: "currentColor",
                             }),
                         }),
-                        (0, r.jsx)(c.CheckmarkSmallBoldIcon, {
-                            className: f.checkStroke,
-                            size: "sm",
-                            color: "currentColor",
-                        }),
+                        (0, r.jsx)(d.B, { className: f.checkStroke, size: "sm", color: "currentColor" }),
                     ],
                 }),
-                R &&
-                    (0, r.jsxs)(d.B, {
+                null != p &&
+                    "" !== p &&
+                    (0, r.jsxs)(c.B, {
                         gap: 4,
                         children: [
                             (0, r.jsxs)(o.J, {
                                 className: f.label,
                                 children: [
-                                    null != D &&
-                                        (0, r.jsx)(D, {
+                                    null != C &&
+                                        (0, r.jsx)(C, {
                                             className: f.leadingIcon,
                                             size: "sm",
                                             color: "currentColor",
@@ -91,32 +83,36 @@ function p(e) {
                                     (0, r.jsx)(_.E, {
                                         variant: "text-md/normal",
                                         color: "primary" === I ? "text-strong" : "text-subtle",
-                                        children: m,
+                                        children: p,
                                     }),
                                 ],
                             }),
-                            O && (0, r.jsx)(_.E, { variant: "text-sm/normal", color: "text-subtle", children: n }),
+                            null != n &&
+                                "" !== n &&
+                                (0, r.jsx)(_.E, { variant: "text-sm/normal", color: "text-subtle", children: n }),
                         ],
                     }),
             ],
         });
     return h
-        ? (0, r.jsx)("div", { className: w, "data-selected": t || void 0, "data-disabled": p || void 0, children: x })
+        ? (0, r.jsx)("div", { className: b, "data-selected": t || void 0, "data-disabled": E || void 0, children: D })
         : (0, r.jsx)(u.vN, {
-              focusTarget: S,
-              ringTarget: v,
+              focusTarget: y,
+              ringTarget: N,
               children: (0, r.jsx)(l.Sc, {
-                  ref: v,
-                  inputRef: S,
-                  "aria-labelledby": g,
+                  ref: N,
+                  inputRef: y,
+                  "aria-labelledby": m,
                   isSelected: t,
-                  onChange: L,
-                  isDisabled: p,
+                  onChange: (e) => {
+                      null != s && s(e);
+                  },
+                  isDisabled: E,
                   isReadOnly: h,
                   "data-mana-component": "checkbox",
-                  className: w,
+                  className: b,
                   value: String(A),
-                  children: x,
+                  children: D,
               }),
           });
 }

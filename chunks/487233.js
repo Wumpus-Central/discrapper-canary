@@ -1,60 +1,61 @@
-l.d(t, { A: () => f });
+l.d(t, { A: () => g });
 var a = l(627968);
 l(64700);
 var n = l(311907),
-    r = l(397927),
-    i = l(688810),
-    o = l(919395),
-    s = l(385612),
-    d = l(101058),
-    c = l(696451),
-    u = l(84540),
-    p = l(836602),
-    m = l(854627),
+    r = l(778712),
+    i = l(97808),
+    o = l(688810),
+    s = l(919395),
+    d = l(385612),
+    c = l(101058),
+    u = l(696451),
+    p = l(84540),
+    m = l(836602),
+    b = l(854627),
     h = l(930349),
     x = l(339984),
-    b = l(985018);
-let y = r._3J.SIZE_72;
-function f(e) {
-    let { user: t, guildId: l, disabled: f } = e,
-        { newestAnalyticsLocation: g } = (0, i.Ay)(),
-        v = null != l,
-        _ = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t.id) : null)),
-        E = (0, n.bG)([p.A], () => p.A.getPendingChanges(l ?? void 0).pendingAvatar),
-        C = (0, d.V7)({ userId: t.id, image: E }),
-        { avatarSrc: j } = (0, m.A)({ userId: t.id, guildId: l, avatarOverride: C, size: y }),
-        S = v ? _?.avatar : t.avatar,
+    y = l(985018);
+let v = r._3.SIZE_72;
+function g(e) {
+    let { user: t, guildId: l, disabled: r } = e,
+        { newestAnalyticsLocation: g } = (0, o.Ay)(),
+        f = null != l,
+        _ = (0, n.bG)([u.Ay], () => (null != l ? u.Ay.getMember(l, t.id) : null)),
+        E = (0, n.bG)([m.A], () => m.A.getPendingChanges(l ?? void 0).pendingAvatar),
+        C = (0, c.V7)({ userId: t.id, image: E }),
+        { avatarSrc: S } = (0, b.A)({ userId: t.id, guildId: l, avatarOverride: C, size: v }),
+        j = f ? _?.avatar : t.avatar,
         T = null != t.avatar,
-        A = v && _?.avatar != null,
-        P = null != E,
-        k = null === E,
-        I = (0, o.z5)(E, S),
-        R = v && T,
+        P = f && _?.avatar != null,
+        I = null != E,
+        A = null === E,
+        k = (0, s.z5)(E, j),
+        R = f && T,
         N = () =>
-            (0, s.XD)({ uploadType: x.HL.AVATAR, analyticsSource: g, guildId: l ?? void 0, stackingBehavior: "stack" });
-    if (!(k ? v && T : P || A || T))
+            (0, d.XD)({ uploadType: x.HL.AVATAR, analyticsSource: g, guildId: l ?? void 0, stackingBehavior: "stack" });
+    if (!(A ? f && T : I || P || T))
         return (0, a.jsx)(h.kL, {
             variant: "square",
             onClick: N,
-            accessibleLabel: b.intl.string(b.t["4OynCD"]),
-            disabled: f,
-            children: (0, a.jsx)(r.euF, { src: j, size: y, "aria-hidden": !0 }),
+            accessibleLabel: y.intl.string(y.t["4OynCD"]),
+            disabled: r,
+            children: (0, a.jsx)(i.eu, { src: S, size: v, "aria-hidden": !0 }),
         });
-    let M = I
+    let M = k
         ? {
               onClick: () => {
-                  (0, u.p)({ guildId: l ?? void 0, avatar: null }), (0, o.WU)(R ? "reset" : "remove");
+                  (0, p.p)({ guildId: l ?? void 0, avatar: null }), (0, s.WU)(R ? "reset" : "remove");
               },
               type: R ? "reset" : "remove",
-              accessibleLabel: b.intl.string(R ? b.t.Y0mxy1 : b.t.twB3fz),
+              accessibleLabel: y.intl.string(R ? y.t.Y0mxy1 : y.t.twB3fz),
           }
         : void 0;
     return (0, a.jsx)(h.NW, {
         variant: "square",
         onClick: N,
-        accessibleLabel: b.intl.string(b.t["4OynCD"]),
+        accessibleLabel: y.intl.string(y.t["4OynCD"]),
         deleteButtonConfig: M,
-        disabled: f,
-        children: (0, a.jsx)(r.euF, { src: j, size: y, "aria-hidden": !0 }),
+        disabled: r,
+        children: (0, a.jsx)(i.eu, { src: S, size: v, "aria-hidden": !0 }),
     });
 }

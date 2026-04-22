@@ -1,41 +1,43 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(239705),
-    r = n(985018),
-    a = n(524190);
-function o(e) {
-    let { action: t, triggerType: n, toggled: o, onToggleAction: d } = e,
-        c = (e) => () => d(e),
-        u = (0, l.x)(t.type, t, n);
-    if (null == u) return null;
-    let { headerText: m, descriptionText: g, icon: x } = u;
+var l = n(534514),
+    s = n(834730),
+    r = n(939249),
+    a = n(658675),
+    o = n(239705),
+    d = n(985018),
+    c = n(411374);
+function u(e) {
+    let { action: t, triggerType: n, toggled: u, onToggleAction: m } = e,
+        g = (e) => () => m(e),
+        h = (0, o.x)(t.type, t, n);
+    if (null == h) return null;
+    let { headerText: x, descriptionText: _, icon: p } = h;
     return (0, i.jsxs)("div", {
-        className: a.Ik,
+        className: c.Ik,
         children: [
             (0, i.jsx)("div", {
-                className: a.TV,
-                children: (0, i.jsx)(x, { size: "custom", color: "currentColor", className: a.gE }),
+                className: c.TV,
+                children: (0, i.jsx)(p, { size: "custom", color: "currentColor", className: c.gE }),
             }),
             (0, i.jsxs)("div", {
-                className: a.xj,
+                className: c.xj,
                 children: [
-                    (0, i.jsx)(s.Heading, { variant: "heading-sm/semibold", children: m }),
-                    (0, i.jsx)(s.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: g }),
-                    o
-                        ? (0, i.jsxs)(s.Text, {
+                    (0, i.jsx)(l.D, { variant: "heading-sm/semibold", children: x }),
+                    (0, i.jsx)(s.E, { color: "interactive-text-default", variant: "text-xs/medium", children: _ }),
+                    u
+                        ? (0, i.jsxs)(s.E, {
                               color: "text-muted",
                               variant: "text-xs/medium",
                               children: [
-                                  r.intl.string(r.t.Oa9oWJ),
-                                  (0, i.jsx)(s.DUT, {
-                                      onClick: c(!0),
-                                      className: a._2,
+                                  d.intl.string(d.t.Oa9oWJ),
+                                  (0, i.jsx)(r.D, {
+                                      onClick: g(!0),
+                                      className: c._2,
                                       tag: "span",
                                       role: "link",
-                                      children: r.intl.string(r.t.QupmYY),
+                                      children: d.intl.string(d.t.QupmYY),
                                   }),
                               ],
                           })
@@ -43,9 +45,9 @@ function o(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(s.DUT, {
-                    onClick: u.isEditable ? c(!1) : void 0,
-                    children: (0, i.jsx)(s.P7L, { checked: o, disabled: !u.isEditable }),
+                children: (0, i.jsx)(r.D, {
+                    onClick: h.isEditable ? g(!1) : void 0,
+                    children: (0, i.jsx)(a.P, { checked: u, disabled: !h.isEditable }),
                 }),
             }),
         ],

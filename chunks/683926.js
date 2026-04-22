@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     G3: "bodyText__959cb",
     Hd: "joinOptions__959cb",

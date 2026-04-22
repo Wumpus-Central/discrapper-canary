@@ -1,172 +1,180 @@
-t.d(n, { A: () => S });
-var i = t(627968),
-    l = t(64700),
-    d = t(503698),
-    r = t.n(d),
-    s = t(311907),
-    a = t(397927),
-    c = t(442433),
-    o = t(297413),
-    u = t(489673),
-    _ = t(342296),
-    g = t(961350),
-    f = t(290863),
-    h = t(461213),
-    x = t(287809),
-    m = t(826383),
-    v = t(988794),
-    p = t(985018),
-    A = t(775364);
-function I(e) {
-    let { children: n } = e;
-    return (0, i.jsxs)("div", {
-        className: A.do,
+n.d(t, { A: () => U });
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(311907),
+    c = n(177953),
+    o = n(534514),
+    d = n(834730),
+    u = n(939249),
+    _ = n(97808),
+    h = n(778712),
+    g = n(573613),
+    A = n(289873),
+    f = n(442433),
+    p = n(297413),
+    E = n(489673),
+    m = n(342296),
+    x = n(961350),
+    v = n(290863),
+    I = n(461213),
+    C = n(287809),
+    T = n(826383),
+    S = n(988794),
+    R = n(985018),
+    N = n(610324);
+function y(e) {
+    let { children: t } = e;
+    return (0, l.jsxs)("div", {
+        className: N.do,
         children: [
-            (0, i.jsx)(u.A, {
-                children: (0, i.jsx)("div", {
-                    className: A.n1,
-                    children: (0, i.jsx)(a.nFg, {
+            (0, l.jsx)(E.A, {
+                children: (0, l.jsx)("div", {
+                    className: N.n1,
+                    children: (0, l.jsx)(c.n, {
                         size: "custom",
                         color: "currentColor",
                         height: 40,
                         width: 40,
-                        className: A.Kk,
+                        className: N.Kk,
                     }),
                 }),
             }),
-            n,
+            t,
         ],
     });
 }
-function j() {
-    return (0, i.jsx)(I, {
-        children: (0, i.jsx)(a.Heading, {
+function b() {
+    return (0, l.jsx)(y, {
+        children: (0, l.jsx)(o.D, {
             color: "text-strong",
             variant: "heading-xl/semibold",
-            className: A.DD,
-            children: p.intl.string(p.t.hW0mBR),
+            className: N.DD,
+            children: R.intl.string(R.t.hW0mBR),
         }),
     });
 }
-function b() {
-    return (0, i.jsx)(I, {
-        children: (0, i.jsx)(a.Heading, {
+function L() {
+    return (0, l.jsx)(y, {
+        children: (0, l.jsx)(o.D, {
             color: "text-default",
             variant: "heading-md/semibold",
-            className: A.JU,
-            children: p.intl.string(p.t.obChXk),
+            className: N.JU,
+            children: R.intl.string(R.t.obChXk),
         }),
     });
 }
-function N(e) {
-    let { count: n } = e;
-    return (0, i.jsxs)("div", {
-        className: A.f0,
+function j(e) {
+    let { count: t } = e;
+    return (0, l.jsxs)("div", {
+        className: N.f0,
         children: [
-            (0, i.jsx)("div", {
-                className: r()(A.Pc, A.uY),
-                children: (0, i.jsx)(a.nFg, {
+            (0, l.jsx)("div", {
+                className: s()(N.Pc, N.uY),
+                children: (0, l.jsx)(c.n, {
                     size: "custom",
                     color: "currentColor",
                     height: 14,
                     width: 14,
-                    className: A.Kk,
+                    className: N.Kk,
                 }),
             }),
-            (0, i.jsx)(a.Text, {
+            (0, l.jsx)(d.E, {
                 color: "text-default",
                 variant: "text-md/normal",
-                children: p.intl.format(p.t.BdQTfR, { userRemainCount: n }),
+                children: R.intl.format(R.t.BdQTfR, { userRemainCount: t }),
             }),
         ],
     });
 }
-function C(e) {
-    let { eventUser: n, guildId: t, onContextMenu: d } = e,
-        c = l.useRef(null),
-        u = (0, s.bG)([x.default], () => x.default.getUser(n.user_id)),
-        m = (0, s.bG)(
-            [h.A, f.A, g.default],
-            () => (n.user_id === g.default.getId() ? h.A.getStatus() : f.A.getStatus(n.user_id, t)),
-            [n.user_id, t],
+function w(e) {
+    let { eventUser: t, guildId: n, onContextMenu: r } = e,
+        c = i.useRef(null),
+        o = (0, a.bG)([C.default], () => C.default.getUser(t.user_id)),
+        d = (0, a.bG)(
+            [I.A, v.A, x.default],
+            () => (t.user_id === x.default.getId() ? I.A.getStatus() : v.A.getStatus(t.user_id, n)),
+            [t.user_id, n],
         );
-    return null == u
+    return null == o
         ? null
-        : (0, i.jsx)(_.A, {
+        : (0, l.jsx)(m.A, {
               targetElementRef: c,
-              userId: n.user_id,
-              guildId: t,
+              userId: t.user_id,
+              guildId: n,
               position: "left",
               spacing: 16,
-              children: (e, l) => {
-                  let { isShown: s } = l;
-                  return (0, i.jsxs)(a.DUT, {
+              children: (e, i) => {
+                  let { isShown: a } = i;
+                  return (0, l.jsxs)(u.D, {
                       innerRef: c,
-                      className: r()(A.f0, A.fv, { [A.wH]: s }),
-                      onContextMenu: (e) => d(e, u),
+                      className: s()(N.f0, N.fv, { [N.wH]: a }),
+                      onContextMenu: (e) => r(e, o),
                       ...e,
                       children: [
-                          (0, i.jsx)(a.euF, {
-                              src: u.getAvatarURL(t, 24),
-                              "aria-label": u.username,
-                              size: a._3J.SIZE_24,
-                              className: A.uY,
-                              status: m,
+                          (0, l.jsx)(_.eu, {
+                              src: o.getAvatarURL(n, 24),
+                              "aria-label": o.username,
+                              size: h._3.SIZE_24,
+                              className: N.uY,
+                              status: d,
                           }),
-                          (0, i.jsx)(o.A, { user: u, className: A.sY, discriminatorClass: A.XU, nick: n.member?.nick }),
+                          (0, l.jsx)(p.A, { user: o, className: N.sY, discriminatorClass: N.XU, nick: t.member?.nick }),
                       ],
                   });
               },
           });
 }
-function y(e) {
-    let { eventUsers: n, guildId: t, usersNotShownCount: l = 0, onContextMenu: d } = e;
-    return (0, i.jsxs)(a.IpV, {
-        className: A.DK,
+function P(e) {
+    let { eventUsers: t, guildId: n, usersNotShownCount: i = 0, onContextMenu: r } = e;
+    return (0, l.jsxs)(g.Ip, {
+        className: N.DK,
         children: [
-            n.map((e) => (0, i.jsx)(C, { guildId: t, eventUser: e, onContextMenu: d }, e.user_id)),
-            l > 0 && (0, i.jsx)(N, { count: l }),
+            t.map((e) => (0, l.jsx)(w, { guildId: n, eventUser: e, onContextMenu: r }, e.user_id)),
+            i > 0 && (0, l.jsx)(j, { count: i }),
         ],
     });
 }
-function k(e) {
-    let { children: n, style: t } = e;
-    return (0, i.jsx)("div", { className: A.kL, style: null != t ? t : {}, children: n });
+function M(e) {
+    let { children: t, style: n } = e;
+    return (0, l.jsx)("div", { className: N.kL, style: null != n ? n : {}, children: t });
 }
-function E(e) {
-    let { children: n, height: t } = e;
-    return (0, i.jsx)(k, { style: { height: t }, children: n });
+function D(e) {
+    let { children: t, height: n } = e;
+    return (0, l.jsx)(M, { style: { height: n }, children: t });
 }
-function S(e) {
-    let { guildEvent: n, recurrenceId: l, eventUsers: d, loading: r, error: s, containerHeight: o } = e,
-        u = (0, m.A)(n.guild_id, n.id, l);
-    if (r && 0 === d.length)
-        return (0, i.jsx)(E, {
-            height: o,
-            children: (0, i.jsx)(a.y$y, { type: a.y$y.Type.SPINNING_CIRCLE, className: A.u1 }),
+function U(e) {
+    let { guildEvent: t, recurrenceId: i, eventUsers: r, loading: s, error: a, containerHeight: c } = e,
+        o = (0, T.A)(t.guild_id, t.id, i);
+    if (s && 0 === r.length)
+        return (0, l.jsx)(D, {
+            height: c,
+            children: (0, l.jsx)(A.y, { type: A.y.Type.SPINNING_CIRCLE, className: N.u1 }),
         });
-    if (null != s && 0 === d.length) return (0, i.jsx)(E, { height: o, children: (0, i.jsx)(b, {}) });
-    let _ = 0;
+    if (null != a && 0 === r.length) return (0, l.jsx)(D, { height: c, children: (0, l.jsx)(L, {}) });
+    let d = 0;
     return (
-        d.length >= v.C1 && u > v.C1 && (_ = Math.max(u - d.length, 0)),
-        0 === d.length
-            ? (0, i.jsx)(E, { height: o, children: (0, i.jsx)(j, {}) })
-            : (0, i.jsx)(k, {
-                  children: (0, i.jsx)(y, {
-                      eventUsers: d,
-                      guildId: n.guild_id,
-                      onContextMenu: function (e, n) {
-                          (0, c.L3)(e, async () => {
+        r.length >= S.C1 && o > S.C1 && (d = Math.max(o - r.length, 0)),
+        0 === r.length
+            ? (0, l.jsx)(D, { height: c, children: (0, l.jsx)(b, {}) })
+            : (0, l.jsx)(M, {
+                  children: (0, l.jsx)(P, {
+                      eventUsers: r,
+                      guildId: t.guild_id,
+                      onContextMenu: function (e, t) {
+                          (0, f.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("97262"),
-                                  t.e("3795"),
-                                  t.e("32418"),
-                                  t.e("73417"),
-                              ]).then(t.bind(t, 668569));
-                              return (t) => (0, i.jsx)(e, { ...t, user: n });
+                                  n.e("97262"),
+                                  n.e("92493"),
+                                  n.e("53635"),
+                                  n.e("32418"),
+                                  n.e("53330"),
+                              ]).then(n.bind(n, 668569));
+                              return (n) => (0, l.jsx)(e, { ...n, user: t });
                           });
                       },
-                      usersNotShownCount: _,
+                      usersNotShownCount: d,
                   }),
               })
     );

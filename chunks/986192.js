@@ -13,132 +13,127 @@ class u extends Error {
         this.status = e;
     }
 }
-function c(e) {
-    if (e instanceof Error) return e;
-    if ("object" == typeof e && null != e && "status" in e && "number" == typeof e.status) {
-        if ("body" in e && null != e.body && "object" == typeof e.body && "message" in e.body) {
-            let t = new u(String(e.body.message));
-            return t.setStatus(e.status), t;
-        }
-        let t = new u(
-            Object.entries(e)
-                .map((e) => {
-                    let [t, n] = e;
-                    return `${t}: [${String(n)}]`;
-                })
-                .join(","),
-        );
-        return t.setStatus(e.status), t;
-    }
-    return Error(String(e));
-}
-function d(e) {
-    let [t, n] = (0, r.useState)(e);
-    return e === t || (0, a.v)(e, t) || n(e), t;
-}
-function _(e, t) {
+function d(e, t) {
     return Array.isArray(e) && Array.isArray(t) ? (0, a.v)(e, t) : Object.is(e, t);
 }
-function f(e) {
+function c(e) {
     return e instanceof u && (e.status >= 500 || 429 === e.status);
 }
-let p = 5;
-function h() {
+function _() {
     return new s.A();
 }
-let m = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: new s.A() }));
+let f = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: new s.A() }));
 function E(e, t) {
     let {
             getQueryId: n,
             get: s,
-            load: a,
-            getIsLoading: u,
-            getError: E,
-            retryConfig: { maxRetries: g = p, backoff: A = h, retryableErrors: I = f } = {},
+            load: E,
+            getIsLoading: h,
+            getError: p,
+            retryConfig: { maxRetries: m = 5, backoff: g = _, retryableErrors: A = c } = {},
         } = t,
-        T = new Map();
-    function S(e) {
-        if (null == e) return m;
-        let t = T.get(e);
-        return null == t && ((t = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: A() }))), T.set(e, t)), t;
+        I = new Map();
+    function T(e) {
+        if (null == e) return f;
+        let t = I.get(e);
+        return null == t && ((t = (0, i.v)(() => ({ isLoading: !1, error: null, backoff: g() }))), I.set(e, t)), t;
     }
-    async function y(e) {
-        let { queryId: t, args: n, refetch: r = !1, useStoreState: i = S(t) } = e,
-            o = i.getState().backoff,
-            d = u?.(...n) ?? i.getState().isLoading;
-        if (null != t && !d) {
+    async function S(e) {
+        let { queryId: t, args: n, refetch: r = !1, useStoreState: i = T(t) } = e,
+            a = i.getState().backoff,
+            o = h?.(...n) ?? i.getState().isLoading;
+        if (null != t && !o) {
             if (!r) {
                 let e = s(...n);
                 if (e === l || null != e) return;
             }
             try {
-                i.setState({ isLoading: !0 }), await a(...n), o.succeed(), i.setState({ error: null, isLoading: !1 });
+                i.setState({ isLoading: !0 }), await E(...n), a.succeed(), i.setState({ error: null, isLoading: !1 });
             } catch (s) {
-                let e = c(s);
+                let e = (function (e) {
+                    if (e instanceof Error) return e;
+                    if ("object" == typeof e && null != e && "status" in e && "number" == typeof e.status) {
+                        if ("body" in e && null != e.body && "object" == typeof e.body && "message" in e.body) {
+                            let t = new u(String(e.body.message));
+                            return t.setStatus(e.status), t;
+                        }
+                        let t = new u(
+                            Object.entries(e)
+                                .map((e) => {
+                                    let [t, n] = e;
+                                    return `${t}: [${String(n)}]`;
+                                })
+                                .join(","),
+                        );
+                        return t.setStatus(e.status), t;
+                    }
+                    return Error(String(e));
+                })(s);
                 i.setState({ error: e, isLoading: !1 }),
-                    I(e) &&
-                        g > o.fails &&
+                    A(e) &&
+                        m > a.fails &&
                         (await new Promise((e, s) => {
-                            o.fail(() => {
-                                y({ queryId: t, args: n, useStoreState: i, refetch: r }).then(e, s);
+                            a.fail(() => {
+                                S({ queryId: t, args: n, useStoreState: i, refetch: r }).then(e, s);
                             });
                         }));
             }
         }
     }
-    function v() {
-        for (var t = arguments.length, i = Array(t), a = 0; a < t; a++) i[a] = arguments[a];
-        let c = d(i),
-            f = Array.isArray(e) ? e : [e],
-            p = n(...c),
-            h = S(p),
-            m = (0, o.bG)(f, () => u?.(...c), [c]),
-            g = h((e) => null == u && e.isLoading),
-            A = m ?? g,
-            I = (0, o.bG)(f, () => E?.(...c), [c]),
-            T = h((e) => (null == E ? e.error : null)),
-            v = I ?? T,
-            N = (0, o.bG)(f, () => s(...c), [c], _);
+    function y() {
+        for (var t = arguments.length, i = Array(t), u = 0; u < t; u++) i[u] = arguments[u];
+        let c = (function (e) {
+                let [t, n] = (0, r.useState)(e);
+                return e === t || (0, a.v)(e, t) || n(e), t;
+            })(i),
+            _ = Array.isArray(e) ? e : [e],
+            f = n(...c),
+            E = T(f),
+            m = (0, o.bG)(_, () => h?.(...c), [c]),
+            g = E((e) => null == h && e.isLoading),
+            A = (0, o.bG)(_, () => p?.(...c), [c]),
+            I = E((e) => (null == p ? e.error : null)),
+            y = (0, o.bG)(_, () => s(...c), [c], d);
         return (
             (0, r.useEffect)(() => {
-                y({ queryId: p, args: c, useStoreState: h });
-            }, [p, c, h]),
+                S({ queryId: f, args: c, useStoreState: E });
+            }, [f, c, E]),
             {
-                data: N === l ? null : N,
-                error: v,
-                isLoading: A,
+                data: y === l ? null : y,
+                error: A ?? I,
+                isLoading: m ?? g,
                 refetch: (0, r.useCallback)(() => {
-                    y({ queryId: p, args: c, useStoreState: h, refetch: !0 });
-                }, [p, c, h]),
+                    S({ queryId: f, args: c, useStoreState: E, refetch: !0 });
+                }, [f, c, E]),
             }
         );
     }
     return (
-        (v.refetch = async function () {
+        (y.refetch = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             let i = n(...t),
-                s = S(i);
-            s.getState().backoff.succeed(), await y({ queryId: i, args: t, useStoreState: s, refetch: !0 });
+                s = T(i);
+            s.getState().backoff.succeed(), await S({ queryId: i, args: t, useStoreState: s, refetch: !0 });
         }),
-        (v.fetchMany = async function () {
+        (y.fetchMany = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e);
-                    return y({ queryId: t, args: e, useStoreState: S(t) });
+                    return S({ queryId: t, args: e, useStoreState: T(t) });
                 }),
             );
         }),
-        (v.refetchMany = async function () {
+        (y.refetchMany = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e),
-                        r = S(t);
-                    return r.getState().backoff.succeed(), y({ queryId: t, args: e, useStoreState: r, refetch: !0 });
+                        r = T(t);
+                    return r.getState().backoff.succeed(), S({ queryId: t, args: e, useStoreState: r, refetch: !0 });
                 }),
             );
         }),
-        v
+        y
     );
 }

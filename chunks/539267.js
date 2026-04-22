@@ -1,10 +1,8 @@
 "use strict";
-n.d(t, { V: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.ONE_MONTH = 30)] = "ONE_MONTH"),
-        (e[(e.TWO_MONTHS = 60)] = "TWO_MONTHS"),
-        (e[(e.THREE_MONTHS = 90)] = "THREE_MONTHS"),
-        e
-    );
-})({});
+n.d(t, { V: () => s });
+var i,
+    s =
+        (((i = {})[(i.ONE_MONTH = 30)] = "ONE_MONTH"),
+        (i[(i.TWO_MONTHS = 60)] = "TWO_MONTHS"),
+        (i[(i.THREE_MONTHS = 90)] = "THREE_MONTHS"),
+        i);

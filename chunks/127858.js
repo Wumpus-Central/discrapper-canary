@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(355418),
-    i = n(658809),
-    a = n(996483);
-let s = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
-class o extends r.c {
+r.d(t, { A: () => o });
+var n = r(355418),
+    s = r(881190),
+    a = r(996483);
+let i = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
+class o extends n.c {
     innerPattern(e) {
-        return s;
+        return i;
     }
     innerExtract(e, t) {
-        let n = e.refDate,
-            r = t[0].toLowerCase(),
-            s = e.createParsingComponents();
-        switch (r) {
+        let r = e.refDate,
+            n = t[0].toLowerCase(),
+            i = e.createParsingComponents();
+        switch (n) {
             case "ora":
                 return a.tB(e.reference);
             case "oggi":
@@ -26,14 +25,14 @@ class o extends r.c {
             case "questa sera":
                 return a.A_(e.reference);
             default:
-                if (r.match(/ieri\s*sera/)) {
-                    if (n.getHours() > 6) {
-                        let e = new Date(n.getTime());
-                        e.setDate(e.getDate() - 1), (n = e);
+                if (n.match(/ieri\s*sera/)) {
+                    if (r.getHours() > 6) {
+                        let e = new Date(r.getTime());
+                        e.setDate(e.getDate() - 1), (r = e);
                     }
-                    (0, i.Pl)(s, n), s.imply("hour", 0);
+                    (0, s.Pl)(i, r), i.imply("hour", 0);
                 }
         }
-        return s;
+        return i;
     }
 }

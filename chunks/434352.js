@@ -1,21 +1,23 @@
-n.d(i, { A: () => r });
-var t = n(627968);
+n.d(e, { A: () => o });
+var l = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(494713),
-    d = n(985018);
-function r(e) {
-    let { guildFriendsEnabled: i } = a.A.useConfig({ location: "useFriendsItem" });
-    return i
-        ? (0, t.jsx)(l.Drp, {
+var t = n(192308),
+    a = n(477782),
+    d = n(214947),
+    r = n(494713),
+    s = n(985018);
+function o(i) {
+    let { guildFriendsEnabled: e } = r.A.useConfig({ location: "useFriendsItem" });
+    return e
+        ? (0, l.jsx)(a.Dr, {
               id: "friends",
-              label: d.intl.string(d.t.kYxEcH),
-              icon: l.$yI,
-              leadingAccessory: { type: "icon", icon: l.$yI },
+              label: s.intl.string(s.t.kYxEcH),
+              icon: d.$,
+              leadingAccessory: { type: "icon", icon: d.$ },
               action: () => {
-                  (0, l.mMO)(async () => {
-                      let { default: i } = await n.e("42048").then(n.bind(n, 151203));
-                      return (n) => (0, t.jsx)(i, { guild: e, ...n });
+                  (0, t.openModalLazy)(async () => {
+                      let { default: e } = await n.e("42048").then(n.bind(n, 151203));
+                      return (n) => (0, l.jsx)(e, { guild: i, ...n });
                   });
               },
           })

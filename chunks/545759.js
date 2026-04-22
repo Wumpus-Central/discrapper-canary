@@ -2,13 +2,13 @@
 n.d(t, { U: () => f });
 var r = n(790525),
     i = n(726402),
-    a = n(389704),
-    s = n(821085),
+    s = n(389704),
+    a = n(821085),
     o = n(8885),
     l = n(519948),
     u = n(182569),
-    c = n(444746),
-    d = { placement: "bottom", modifiers: [], strategy: "absolute" };
+    d = n(444746),
+    c = { placement: "bottom", modifiers: [], strategy: "absolute" };
 function _() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return !t.some(function (e) {
@@ -20,104 +20,99 @@ function f(e) {
     var t = e,
         n = t.defaultModifiers,
         f = void 0 === n ? [] : n,
-        p = t.defaultOptions,
-        h = void 0 === p ? d : p;
+        E = t.defaultOptions,
+        h = void 0 === E ? c : E;
     return function (e, t, n) {
         void 0 === n && (n = h);
-        var p = {
+        var E = {
                 placement: "bottom",
                 orderedModifiers: [],
-                options: Object.assign({}, d, h),
+                options: Object.assign({}, c, h),
                 modifiersData: {},
                 elements: { reference: e, popper: t },
                 attributes: {},
                 styles: {},
             },
-            m = [],
-            g = !1,
-            E = {
-                state: p,
+            p = [],
+            m = !1,
+            g = {
+                state: E,
                 setOptions: function (n) {
-                    var r = "function" == typeof n ? n(p.options) : n;
-                    I(),
-                        (p.options = Object.assign({}, h, p.options, r)),
-                        (p.scrollParents = {
-                            reference: (0, c.vq)(e) ? (0, a.A)(e) : e.contextElement ? (0, a.A)(e.contextElement) : [],
-                            popper: (0, a.A)(t),
+                    var r = "function" == typeof n ? n(E.options) : n;
+                    A(),
+                        (E.options = Object.assign({}, h, E.options, r)),
+                        (E.scrollParents = {
+                            reference: (0, d.vq)(e) ? (0, s.A)(e) : e.contextElement ? (0, s.A)(e.contextElement) : [],
+                            popper: (0, s.A)(t),
                         });
-                    var i = (0, o.A)((0, u.A)([].concat(f, p.options.modifiers)));
+                    var i = (0, o.A)((0, u.A)([].concat(f, E.options.modifiers)));
                     return (
-                        (p.orderedModifiers = i.filter(function (e) {
+                        (E.orderedModifiers = i.filter(function (e) {
                             return e.enabled;
                         })),
-                        A(),
-                        E.update()
+                        E.orderedModifiers.forEach(function (e) {
+                            var t = e.name,
+                                n = e.options,
+                                r = e.effect;
+                            if ("function" == typeof r) {
+                                var i = r({ state: E, name: t, instance: g, options: void 0 === n ? {} : n });
+                                p.push(i || function () {});
+                            }
+                        }),
+                        g.update()
                     );
                 },
                 forceUpdate: function () {
-                    if (!g) {
-                        var e = p.elements,
+                    if (!m) {
+                        var e = E.elements,
                             t = e.reference,
                             n = e.popper;
                         if (_(t, n)) {
-                            (p.rects = {
-                                reference: (0, r.A)(t, (0, s.A)(n), "fixed" === p.options.strategy),
+                            (E.rects = {
+                                reference: (0, r.A)(t, (0, a.A)(n), "fixed" === E.options.strategy),
                                 popper: (0, i.A)(n),
                             }),
-                                (p.reset = !1),
-                                (p.placement = p.options.placement),
-                                p.orderedModifiers.forEach(function (e) {
-                                    return (p.modifiersData[e.name] = Object.assign({}, e.data));
+                                (E.reset = !1),
+                                (E.placement = E.options.placement),
+                                E.orderedModifiers.forEach(function (e) {
+                                    return (E.modifiersData[e.name] = Object.assign({}, e.data));
                                 });
-                            for (var a = 0; a < p.orderedModifiers.length; a++) {
-                                if (!0 === p.reset) {
-                                    (p.reset = !1), (a = -1);
+                            for (var s = 0; s < E.orderedModifiers.length; s++) {
+                                if (!0 === E.reset) {
+                                    (E.reset = !1), (s = -1);
                                     continue;
                                 }
-                                var o = p.orderedModifiers[a],
+                                var o = E.orderedModifiers[s],
                                     l = o.fn,
                                     u = o.options,
-                                    c = void 0 === u ? {} : u,
-                                    d = o.name;
-                                "function" == typeof l && (p = l({ state: p, options: c, name: d, instance: E }) || p);
+                                    d = void 0 === u ? {} : u,
+                                    c = o.name;
+                                "function" == typeof l && (E = l({ state: E, options: d, name: c, instance: g }) || E);
                             }
                         }
                     }
                 },
                 update: (0, l.A)(function () {
                     return new Promise(function (e) {
-                        E.forceUpdate(), e(p);
+                        g.forceUpdate(), e(E);
                     });
                 }),
                 destroy: function () {
-                    I(), (g = !0);
+                    A(), (m = !0);
                 },
             };
-        if (!_(e, t)) return E;
+        if (!_(e, t)) return g;
         function A() {
-            p.orderedModifiers.forEach(function (e) {
-                var t = e.name,
-                    n = e.options,
-                    r = void 0 === n ? {} : n,
-                    i = e.effect;
-                if ("function" == typeof i) {
-                    var a = i({ state: p, name: t, instance: E, options: r }),
-                        s = function () {};
-                    m.push(a || s);
-                }
-            });
-        }
-        function I() {
-            m.forEach(function (e) {
+            p.forEach(function (e) {
                 return e();
             }),
-                (m = []);
+                (p = []);
         }
         return (
-            E.setOptions(n).then(function (e) {
-                !g && n.onFirstUpdate && n.onFirstUpdate(e);
+            g.setOptions(n).then(function (e) {
+                !m && n.onFirstUpdate && n.onFirstUpdate(e);
             }),
-            E
+            g
         );
     };
 }

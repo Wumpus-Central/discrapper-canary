@@ -4,11 +4,11 @@ n(64700);
 var l = n(503698),
     s = n.n(l),
     a = n(837381),
-    r = n(672117),
-    o = n(397927),
-    d = n(452051),
-    c = n(928409),
-    u = n(567431);
+    r = n(614820),
+    o = n(890856),
+    d = n(685328),
+    c = n(907305),
+    u = n(645591);
 function h(e) {
     let {
             id: t,
@@ -21,21 +21,21 @@ function h(e) {
             background: g,
             showUnread: p = !1,
             ref: f,
-            ...x
+            ...E
         } = e,
-        E = (0, a.rm)(t),
+        x = (0, a.rm)(t),
         I = (0, r.O)(A) ?? "";
     return (0, i.jsx)("li", {
         ref: f,
-        children: (0, i.jsxs)(o.sqX, {
-            ...x,
-            buttonProps: { ...E, id: t, role: "button" },
+        children: (0, i.jsxs)(o.s, {
+            ...E,
+            buttonProps: { ...x, id: t, role: "button" },
             tag: "div",
             "aria-label": I,
             focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
             onContextMenu:
-                null != x.onContextMenu
-                    ? x.onContextMenu
+                null != E.onContextMenu
+                    ? E.onContextMenu
                     : (e) => {
                           e.stopPropagation();
                       },

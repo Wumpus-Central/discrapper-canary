@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { Y: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+a.d(l, { Y: () => c });
+var t = a(627968);
+a(64700);
+var s = a(827734),
+    i = a(996682),
+    n = a(27989);
+let c = (e) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
+            size: l = "md",
+            width: a,
+            height: c,
+            color: h = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
+            ...o
         } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+        d = (0, n.J)(l),
+        v = d?.width ?? a,
+        g = d?.height ?? c;
+    return (0, t.jsx)("svg", {
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: v,
+        height: g,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof h ? h : h.css,
             d: "M11 2.5a1 1 0 1 1 2 0v2.3l1.6-1.05a1 1 0 0 1 1.1 1.67L13 7.2v4.34l4.18-1.35.88-3.1a1 1 0 1 1 1.93.54l-.52 1.82 2.22-.71a1 1 0 1 1 .62 1.9l-2.21.71 1.5 1.17a1 1 0 1 1-1.24 1.57l-2.56-2-4.17 1.35 2.57 3.5 3.26-.12a1 1 0 0 1 .08 2l-1.91.07 1.36 1.86a1 1 0 0 1-1.62 1.18L16 20.06l-.67 1.79a1 1 0 0 1-1.87-.7l1.12-3.02L12 14.61l-2.58 3.52 1.12 3.02a1 1 0 0 1-1.87.7L8 20.06l-1.37 1.88A1 1 0 1 1 5 20.76l1.36-1.86-1.9-.08a1 1 0 1 1 .07-2l3.26.14 2.57-3.51L6.2 12.1l-2.56 2a1 1 0 1 1-1.23-1.57l1.49-1.17-2.2-.7a1 1 0 0 1 .6-1.91l2.23.71L4 7.64a1 1 0 0 1 1.93-.54l.88 3.1L11 11.55V7.2L8.3 5.4a1 1 0 0 1 1.1-1.66L11 4.8V2.5Z",
-            className: u,
+            className: r,
         }),
     });
 };

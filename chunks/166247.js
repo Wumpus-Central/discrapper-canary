@@ -1,75 +1,82 @@
-i.d(s, { default: () => m });
-var n = i(627968),
-    e = i(64700),
-    a = i(935399),
-    d = i(158954),
-    r = i(492917),
-    c = i(367727),
-    l = i(975571),
-    o = i(87719),
-    _ = i(652215),
-    x = i(49999),
-    h = i(985018),
-    f = i(164466);
-function m(t) {
-    let { renderModalProps: s, dismissibleContent: i, markAsDismissed: m } = t,
-        { onClose: b, transitionState: p } = s,
-        { headingId: u } = (0, d.k34)();
+a.d(s, { default: () => A });
+var c = a(627968),
+    e = a(64700),
+    n = a(935399),
+    i = a(22856),
+    d = a(224640),
+    r = a(315629),
+    l = a(20742),
+    o = a(534514),
+    x = a(834730),
+    _ = a(821609),
+    b = a(403581),
+    h = a(326554),
+    p = a(367727),
+    f = a(975571),
+    m = a(87719),
+    u = a(652215),
+    g = a(49999),
+    v = a(985018),
+    j = a(886626);
+function A(t) {
+    let { renderModalProps: s, dismissibleContent: a, markAsDismissed: A } = t,
+        { onClose: C, transitionState: w } = s,
+        { headingId: k } = (0, i.k)();
     return (
-        (0, a.Ay)(() => {
-            (0, c.Wx)(i);
+        (0, n.Ay)(() => {
+            (0, p.Wx)(a);
         }),
         e.useEffect(
             () => () => {
-                m(x.i.AUTO_DISMISS);
+                A(g.i.AUTO_DISMISS);
             },
-            [m],
+            [A],
         ),
-        (0, n.jsx)(d.dWK, {
-            transitionState: p,
-            onClose: b,
+        (0, c.jsx)(d.d, {
+            transitionState: w,
+            onClose: C,
             size: "md",
             paddingSize: "lg",
-            children: (0, n.jsxs)(d.hLv, {
+            children: (0, c.jsxs)(r.h, {
                 color: "nitro-pink",
-                className: f.D7,
+                className: j.D7,
                 children: [
-                    (0, n.jsx)("div", { className: f.cG, children: (0, n.jsx)(d.s_y, { shouldColorMix: !0 }) }),
-                    (0, n.jsx)("div", {
-                        className: f.JS,
-                        children: (0, n.jsx)(r.DAD, { alt: "", width: 360, height: "auto" }),
+                    (0, c.jsx)("div", { className: j.cG, children: (0, c.jsx)(l.s_, { shouldColorMix: !0 }) }),
+                    (0, c.jsx)("div", {
+                        className: j.JS,
+                        children: (0, c.jsx)(h.D, { alt: "", width: 360, height: "auto" }),
                     }),
-                    (0, n.jsxs)("div", {
-                        className: f.Qs,
+                    (0, c.jsxs)("div", {
+                        className: j.Qs,
                         children: [
-                            (0, n.jsx)(d.DZT, {
-                                id: u,
+                            (0, c.jsx)(o.D, {
+                                id: k,
                                 variant: "display-md",
                                 color: "text-strong",
-                                className: f.wx,
-                                children: h.intl.string(h.t.Xm5q5l),
+                                className: j.wx,
+                                children: v.intl.string(v.t.Xm5q5l),
                             }),
-                            (0, n.jsx)(d.EYj, {
+                            (0, c.jsx)(x.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
-                                className: f.rf,
-                                children: h.intl.string(h.t.svsMII),
+                                className: j.rf,
+                                children: v.intl.string(v.t.svsMII),
                             }),
-                            (0, n.jsxs)("div", {
-                                className: f.v0,
+                            (0, c.jsxs)("div", {
+                                className: j.v0,
                                 children: [
-                                    (0, n.jsx)(d.$nd, {
+                                    (0, c.jsx)(_.$, {
                                         variant: "secondary",
                                         size: "md",
-                                        onClick: () => window.open(l.A.getArticleURL(_.MVz.PREMIUM_DETAILS), "_blank"),
-                                        text: h.intl.string(h.t.WHWwCY),
+                                        onClick: () => window.open(f.A.getArticleURL(u.MVz.PREMIUM_DETAILS), "_blank"),
+                                        text: v.intl.string(v.t.WHWwCY),
                                     }),
-                                    (0, n.jsx)(d.$nd, {
+                                    (0, c.jsx)(_.$, {
                                         variant: "primary",
                                         size: "md",
-                                        icon: d.tvc,
-                                        text: h.intl.string(h.t["mHF+AF"]),
-                                        onClick: () => (0, o.x)(b),
+                                        icon: b.t,
+                                        text: v.intl.string(v.t["mHF+AF"]),
+                                        onClick: () => (0, m.x)(C),
                                     }),
                                 ],
                             }),

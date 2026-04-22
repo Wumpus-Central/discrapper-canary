@@ -1,21 +1,21 @@
 "use strict";
 n.d(t, {
     $P: () => d,
-    KE: () => o,
-    U_: () => c,
-    VJ: () => g,
-    Y_: () => m,
-    ZO: () => h,
-    bc: () => S,
-    di: () => y,
-    kg: () => I,
-    kk: () => A,
-    lP: () => N,
-    o8: () => T,
-    vd: () => _,
-    w: () => v,
+    KE: () => a,
+    U_: () => u,
+    VJ: () => p,
+    Y_: () => E,
+    ZO: () => f,
+    bc: () => I,
+    di: () => T,
+    kg: () => g,
+    kk: () => m,
+    lP: () => y,
+    o8: () => A,
+    vd: () => c,
+    w: () => S,
     w$: () => i,
-    xk: () => R,
+    xk: () => O,
 });
 var r = n(391898),
     i = function (e, t, n, r, i, s) {
@@ -27,43 +27,40 @@ var r = n(391898),
         );
     },
     s = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    a = 864e5,
-    o = 9999,
-    l = i(1970, 1, 1),
-    u = [6, 0, 1, 2, 3, 4, 5],
-    c = function (e) {
+    a = 9999,
+    o = i(1970, 1, 1),
+    l = [6, 0, 1, 2, 3, 4, 5],
+    u = function (e) {
         return (e % 4 == 0 && e % 100 != 0) || e % 400 == 0;
     },
     d = function (e) {
         return e instanceof Date;
     },
-    _ = function (e) {
+    c = function (e) {
         return d(e) && !isNaN(e.getTime());
     },
-    f = function (e) {
+    _ = function (e) {
         return 60 * e.getTimezoneOffset() * 1e3;
     },
-    p = function (e, t) {
-        return Math.round((e.getTime() - f(e) - (t.getTime() - f(t))) / a);
-    },
-    h = function (e) {
-        return p(e, l);
-    },
-    m = function (e) {
-        return new Date(l.getTime() + e * a);
+    f = function (e) {
+        var t, n;
+        return (t = e), (n = o), Math.round((t.getTime() - _(t) - (n.getTime() - _(n))) / 864e5);
     },
     E = function (e) {
+        return new Date(o.getTime() + 864e5 * e);
+    },
+    h = function (e) {
         var t = e.getUTCMonth();
-        return 1 === t && c(e.getUTCFullYear()) ? 29 : s[t];
+        return 1 === t && u(e.getUTCFullYear()) ? 29 : s[t];
     },
-    g = function (e) {
-        return u[e.getUTCDay()];
+    p = function (e) {
+        return l[e.getUTCDay()];
     },
-    A = function (e, t) {
+    m = function (e, t) {
         var n = i(e, t + 1, 1);
-        return [g(n), E(n)];
+        return [p(n), h(n)];
     },
-    I = function (e, t) {
+    g = function (e, t) {
         return (
             (t = t || e),
             new Date(
@@ -79,19 +76,19 @@ var r = n(391898),
             )
         );
     },
-    T = function (e) {
+    A = function (e) {
         return new Date(e.getTime());
     },
-    S = function (e) {
-        for (var t = [], n = 0; n < e.length; n++) t.push(T(e[n]));
+    I = function (e) {
+        for (var t = [], n = 0; n < e.length; n++) t.push(A(e[n]));
         return t;
     },
-    y = function (e) {
+    T = function (e) {
         e.sort(function (e, t) {
             return e.getTime() - t.getTime();
         });
     },
-    v = function (e, t) {
+    S = function (e, t) {
         void 0 === t && (t = !0);
         var n = new Date(e);
         return [
@@ -105,7 +102,7 @@ var r = n(391898),
             t ? "Z" : "",
         ].join("");
     },
-    N = function (e) {
+    y = function (e) {
         var t = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(e);
         if (!t) throw Error("Invalid UNTIL value: ".concat(e));
         return new Date(
@@ -119,11 +116,11 @@ var r = n(391898),
             ),
         );
     },
-    C = function (e, t) {
+    N = function (e, t) {
         return e.toLocaleString("sv-SE", { timeZone: t }).replace(" ", "T") + "Z";
     },
-    R = function (e, t) {
-        var n = new Date(C(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
-            r = new Date(C(e, null != t ? t : "UTC")).getTime() - n.getTime();
+    O = function (e, t) {
+        var n = new Date(N(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
+            r = new Date(N(e, null != t ? t : "UTC")).getTime() - n.getTime();
         return new Date(e.getTime() - r);
     };

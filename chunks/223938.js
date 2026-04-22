@@ -1,54 +1,66 @@
-n.d(t, { A: () => X }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => ed }), n(321073), n(323874), n(14289), n(35956);
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    a = n(503698),
+    s = n.n(a),
     r = n(284009),
     o = n.n(r),
-    c = n(382222),
+    c = n(517738),
     d = n(835245),
     u = n(311907),
     h = n(827734),
     m = n(990078),
-    A = n(397927),
-    g = n(608299),
-    p = n(155718),
-    f = n(565150),
-    _ = n(775602),
-    E = n(793574),
-    x = n(688810),
-    C = n(861382),
-    S = n(875163),
-    I = n(224805),
-    T = n(598071),
-    N = n(101555),
-    v = n(834755),
-    b = n(703007),
-    y = n(2553),
-    j = n(946274),
-    R = n(135621),
-    M = n(406704),
-    D = n(253932),
-    O = n(31717),
-    L = n(638128),
-    P = n(522602),
-    w = n(515718),
-    k = n(723702),
-    U = n(518960),
-    G = n(486319),
-    F = n(355622),
-    H = n(415409),
-    B = n(147025),
-    V = n(133343),
-    K = n(851023),
-    W = n(171593),
-    z = n(652215);
+    A = n(717421),
+    g = n(187322),
+    p = n(265872),
+    _ = n(821609),
+    f = n(834730),
+    E = n(559647),
+    C = n(163328),
+    x = n(861672),
+    S = n(477782),
+    I = n(241326),
+    N = n(81369),
+    v = n(939249),
+    T = n(750943),
+    y = n(608299),
+    b = n(155718),
+    j = n(565150),
+    R = n(775602),
+    M = n(793574),
+    L = n(688810),
+    D = n(861382),
+    P = n(875163),
+    O = n(224805),
+    w = n(598071),
+    U = n(101555),
+    k = n(834755),
+    G = n(703007),
+    F = n(2553),
+    H = n(946274),
+    B = n(135621),
+    V = n(406704),
+    z = n(253932),
+    K = n(31717),
+    W = n(638128),
+    Y = n(522602),
+    J = n(515718),
+    q = n(723702),
+    $ = n(518960),
+    Z = n(486319),
+    X = n(355622),
+    Q = n(415409),
+    ee = n(147025),
+    et = n(133343),
+    en = n(851023),
+    ei = n(171593),
+    el = n(652215);
 n(827669), n(294920);
-var Y = n(478644),
-    q = n(985018),
-    J = n(287303),
-    $ = n(351671);
-function Z(e, t, n) {
+var ea = n(478644),
+    es = n(985018),
+    er = n(150679),
+    eo = n(266599);
+function ec(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
     if (i) {
@@ -56,358 +68,366 @@ function Z(e, t, n) {
         l = n ? `attachment://SPOILER_${t}` : e;
     }
     return {
-        media: { url: l, proxyUrl: l, loadingState: p.TD.UNKNOWN, flags: 0 },
+        media: { url: l, proxyUrl: l, loadingState: b.TD.UNKNOWN, flags: 0 },
         description: t ?? void 0,
         spoiler: n,
     };
 }
-let X = l.memo(
+let ed = l.memo(
     l.forwardRef(function (e, t) {
         let n,
             {
-                textValue: s,
+                textValue: a,
                 richValue: r,
                 className: d,
                 id: h,
                 required: m,
-                disabled: f,
-                accessibilityLabel: N,
-                channel: b,
-                type: y,
-                focused: j,
-                onChange: w,
-                onResize: U,
-                onBlur: K,
-                onFocus: Y,
-                onKeyDown: X,
-                onSubmit: ei,
-                promptToUpload: el,
-                canMentionRoles: es,
-                canMentionChannels: ea,
-                maxCharacterCount: er,
-                placeholder: eo,
-                "aria-describedby": ec,
-                "aria-labelledby": ed,
-                setEditorRef: eu,
-                autoCompletePosition: eh,
-                disableThemedBackground: em = !1,
-                emojiPickerCloseOnModalOuterClick: eA,
-                parentModalKey: eg,
+                disabled: x,
+                accessibilityLabel: S,
+                channel: I,
+                type: N,
+                focused: v,
+                onChange: T,
+                onResize: j,
+                onBlur: U,
+                onFocus: G,
+                onKeyDown: F,
+                onSubmit: H,
+                promptToUpload: J,
+                canMentionRoles: $,
+                canMentionChannels: en,
+                maxCharacterCount: ea,
+                placeholder: ed,
+                "aria-describedby": eg,
+                "aria-labelledby": ep,
+                setEditorRef: e_,
+                autoCompletePosition: ef,
+                disableThemedBackground: eE = !1,
+                emojiPickerCloseOnModalOuterClick: eC,
+                parentModalKey: ex,
             } = e,
-            ep = I.A.useField("channelDrafts")[b.id],
-            ef = ep?.title ?? "",
-            e_ = ep?.heroFile,
-            eE = ep?.publish ?? !0,
-            ex = ep?.createThread ?? !0;
-        o()(null != y, "chat input type must be set");
-        let { analyticsLocations: eC } = (0, x.Ay)(E.A.CHANNEL_TEXT_AREA),
-            eS = (0, V.L0)(t),
-            eI = l.useRef(null),
-            eT = l.useRef(null),
-            eN = l.useRef(null),
-            ev = l.useRef(null);
-        eu?.(eT.current);
-        let { activeCommand: eb } = (0, u.cf)([C.A], () => ({
-                activeCommand: y.commands?.enabled ? C.A.getActiveCommand(b.id) : null,
-                activeCommandSection: y.commands?.enabled ? C.A.getActiveCommandSection(b.id) : null,
+            eS = O.A.useField("channelDrafts")[I.id],
+            eI = eS?.title ?? "",
+            eN = eS?.heroFile,
+            ev = eS?.publish ?? !0,
+            eT = eS?.createThread ?? !0;
+        o()(null != N, "chat input type must be set");
+        let { analyticsLocations: ey } = (0, L.Ay)(M.A.CHANNEL_TEXT_AREA),
+            eb = (0, et.L0)(t),
+            ej = l.useRef(null),
+            eR = l.useRef(null),
+            eM = l.useRef(null),
+            eL = l.useRef(null);
+        e_?.(eR.current);
+        let { activeCommand: eD } = (0, u.cf)([D.A], () => ({
+                activeCommand: N.commands?.enabled ? D.A.getActiveCommand(I.id) : null,
+                activeCommandSection: N.commands?.enabled ? D.A.getActiveCommandSection(I.id) : null,
             })),
             {
-                isLurking: ey,
-                isPendingMember: ej,
-                disabled: eR,
-                canAttachFiles: eM,
-                canEveryoneSendMessages: eD,
-            } = (0, V.Sk)(b, y, eb, f),
-            eO = !D.D_.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
-            eL = !eO || !y.commands?.enabled || !j || "/" !== s,
-            eP = (0, R.A)(),
-            { fontSize: ew } = (0, u.cf)([_.A], () => ({
-                fontSize: _.A.fontSize,
-                isSubmitButtonEnabled: _.A.isSubmitButtonEnabled,
+                isLurking: eP,
+                isPendingMember: eO,
+                disabled: ew,
+                canAttachFiles: eU,
+                canEveryoneSendMessages: ek,
+            } = (0, et.Sk)(I, N, eD, x),
+            eG = !z.D_.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver,
+            eF = !eG || !N.commands?.enabled || !v || "/" !== a,
+            eH = (0, B.A)(),
+            { fontSize: eB } = (0, u.cf)([R.A], () => ({
+                fontSize: R.A.fontSize,
+                isSubmitButtonEnabled: R.A.isSubmitButtonEnabled,
             })),
-            ek = (0, u.bG)([L.A], () => L.A.isEnabled()),
-            eU = (0, M.n)(b);
-        (0, V.N_)(y, eR, b.id);
-        let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eT, s, r),
-            eH = l.useCallback(
+            eV = (0, u.bG)([W.A], () => W.A.isEnabled()),
+            ez = (0, V.n)(I);
+        (0, et.N_)(N, ew, I.id);
+        let { eventEmitter: eK, handleEditorSelectionChanged: eW } = (0, et.ml)(eR, a, r),
+            eY = l.useCallback(
                 (e) => {
                     let t = (e) => (
-                            e.shouldClear && ((0, I.x)(b.id, { title: "", heroFile: null }), eT.current?.blur()), e
+                            e.shouldClear && ((0, O.x)(I.id, { title: "", heroFile: null }), eR.current?.blur()), e
                         ),
                         n = [],
-                        i = (ef.length > 0 ? ef : e.value.length > 0 ? e.value : q.intl.string(q.t["7Xm5QI"])).slice(
+                        i = (eI.length > 0 ? eI : e.value.length > 0 ? e.value : es.intl.string(es.t["7Xm5QI"])).slice(
                             0,
-                            z.Ign,
+                            el.Ign,
                         );
-                    if (null == e_)
-                        return ei({
+                    if (null == eN)
+                        return H({
                             ...e,
-                            announcementSendOptions: { createThread: eU && ex, threadName: i, publish: eE },
+                            announcementSendOptions: { createThread: ez && eT, threadName: i, publish: ev },
                         }).then(t);
-                    n.push({ type: p.I5.MEDIA_GALLERY, items: [Z(`attachment://${e_.name}`, null, !1)], id: "82733" }),
-                        e.value.length > 0 && n.push({ type: p.I5.TEXT_DISPLAY, content: e.value, id: "82744" });
-                    let l = P.A.getUploads(b.id, O.C.ChannelMessage),
-                        s = l.filter((e) => (e.isImage || e.isVideo) && e.filename !== e_?.name),
-                        a = l.filter((e) => !e.isImage && !e.isVideo && e.filename !== e_?.name),
-                        r = s.map((e) => Z(`attachment://${e.filename}`, e.description, e.spoiler));
+                    n.push({ type: b.I5.MEDIA_GALLERY, items: [ec(`attachment://${eN.name}`, null, !1)], id: "82733" }),
+                        e.value.length > 0 && n.push({ type: b.I5.TEXT_DISPLAY, content: e.value, id: "82744" });
+                    let l = Y.A.getUploads(I.id, K.C.ChannelMessage),
+                        a = l.filter((e) => (e.isImage || e.isVideo) && e.filename !== eN?.name),
+                        s = l.filter((e) => !e.isImage && !e.isVideo && e.filename !== eN?.name),
+                        r = a.map((e) => ec(`attachment://${e.filename}`, e.description, e.spoiler));
                     return (
-                        r.length > 0 && n.push({ type: p.I5.MEDIA_GALLERY, items: r, id: "82755" }),
-                        a.forEach((e, t) => {
+                        r.length > 0 && n.push({ type: b.I5.MEDIA_GALLERY, items: r, id: "82755" }),
+                        s.forEach((e, t) => {
                             n.push({
-                                type: p.I5.FILE,
-                                file: Z(`attachment://${e.filename}`, e.description, e.spoiler).media,
+                                type: b.I5.FILE,
+                                file: ec(`attachment://${e.filename}`, e.description, e.spoiler).media,
                                 id: `${82766 + t}`,
                                 spoiler: e.spoiler,
                                 name: null,
                                 size: null,
                             });
                         }),
-                        ei({
+                        H({
                             ...e,
                             components: n,
-                            announcementSendOptions: { createThread: eU && ex, threadName: i, publish: eE },
+                            announcementSendOptions: { createThread: ez && eT, threadName: i, publish: ev },
                         }).then(t)
                     );
                 },
-                [ei, ef, e_, b.id, ex, eE, eU],
+                [H, eI, eN, I.id, eT, ev, ez],
             ),
-            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, y, eT, ev, b.id),
-            { autocompleteRef: eK, handleMaybeShowAutocomplete: eW, handleHideAutocomplete: ez } = (0, V.v7)(),
-            eY = l.useCallback(() => ev?.current?.hide(), []),
-            { editorHeight: eq, handleResize: eJ } = (0, V.ck)(U),
+            { submit: eJ, handleSubmit: eq } = (0, et.Zx)(eY, N, eR, eL, I.id),
+            { autocompleteRef: e$, handleMaybeShowAutocomplete: eZ, handleHideAutocomplete: eX } = (0, et.v7)(),
+            eQ = l.useCallback(() => eL?.current?.hide(), []),
+            { editorHeight: e0, handleResize: e1 } = (0, et.ck)(j),
             {
-                handleTab: e$,
-                handleEnter: eZ,
-                handleMoveSelection: eX,
+                handleTab: e2,
+                handleEnter: e3,
+                handleMoveSelection: e9,
             } = ((n = l.useCallback(
-                () => !!(!eL && eI.current?.onTabOrEnter(!1)) || eK.current?.onTabOrEnter(!1) || !1,
-                [eL],
+                () => !!(!eF && ej.current?.onTabOrEnter(!1)) || e$.current?.onTabOrEnter(!1) || !1,
+                [eF],
             )),
             {
                 handleTab: n,
                 handleEnter: l.useCallback(
-                    () => !!(!eL && eI.current?.onTabOrEnter(!0)) || eK.current?.onTabOrEnter(!1) || !1,
-                    [eL],
+                    () => !!(!eF && ej.current?.onTabOrEnter(!0)) || e$.current?.onTabOrEnter(!1) || !1,
+                    [eF],
                 ),
                 handleMoveSelection: l.useCallback(
-                    (e) => !!(!eL && eI.current?.onMoveSelection(e)) || eK.current?.onMoveSelection(e) || !1,
-                    [eL],
+                    (e) => !!(!eF && ej.current?.onMoveSelection(e)) || e$.current?.onMoveSelection(e) || !1,
+                    [eF],
                 ),
             }),
-            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(y, eT, b.id),
-            { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(y, b.id),
-            e3 = (0, V.NO)(eT),
-            e7 = (0, V.Vu)(eB, y, eT),
-            e5 = (0, V.HG)(eT),
-            e6 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: y, submit: eH });
-        (0, G.R)(eG, b.guild_id, b.id);
-        let [e9, e4] = l.useState(!1),
-            e8 = l.useCallback(() => {
-                e1(), e4(!0);
-            }, [e1]),
-            te = e9 || s.length > 0 || null != e_ || ef.length > 0,
-            { editorHeaderHeight: tt, paddingTop: tn } = (0, A.zhh)({
-                editorHeaderHeight: 122 * !!te,
-                paddingTop: 16 * !!te,
+            {
+                expressionPickerView: e7,
+                shouldHideExpressionPicker: e6,
+                handleOuterClick: e4,
+            } = (0, et.MD)(N, eR, I.id),
+            { handleAutocompleteVisibilityChange: e8 } = (0, et.uW)(N, I.id),
+            e5 = (0, et.NO)(eR),
+            te = (0, et.Vu)(eJ, N, eR),
+            tt = (0, et.HG)(eR),
+            tn = (0, et.C)({
+                editorRef: eR,
+                disabled: ew,
+                textValue: a,
+                channelId: I.id,
+                chatInputType: N,
+                submit: eY,
+            });
+        (0, Z.R)(eK, I.guild_id, I.id);
+        let [ti, tl] = l.useState(!1),
+            ta = l.useCallback(() => {
+                e4(), tl(!0);
+            }, [e4]),
+            ts = ti || a.length > 0 || null != eN || eI.length > 0,
+            { editorHeaderHeight: tr, paddingTop: to } = (0, A.z)({
+                editorHeaderHeight: 122 * !!ts,
+                paddingTop: 16 * !!ts,
                 config: { tension: 120, friction: 15, clamp: !0 },
             }),
-            ti = l.useRef(null),
-            [tl, ts] = l.useState(!1),
-            ta = l.useRef(!1),
-            tr = l.useCallback(() => {
-                ta.current = !0;
+            tc = l.useRef(null),
+            [td, tu] = l.useState(!1),
+            th = l.useRef(!1),
+            tm = l.useCallback(() => {
+                th.current = !0;
                 let e = setTimeout(() => {
-                    ta.current && ts(!0);
+                    th.current && tu(!0);
                 }, 100);
                 return () => clearTimeout(e);
             }, []),
-            to = l.useCallback(() => {
-                ta.current = !1;
+            tA = l.useCallback(() => {
+                th.current = !1;
                 let e = setTimeout(() => {
-                    ta.current || ts(!1);
+                    th.current || tu(!1);
                 }, 100);
                 return () => clearTimeout(e);
             }, []),
-            tc = l.useCallback(() => {
-                if (null == e_) return;
-                let e = P.A.getUploads(b.id, y.drafts.type),
-                    t = e.find((e) => e.filename === e_.name)?.id;
-                null != t && g.A.remove(b.id, t, O.C.ChannelMessage), (0, I.x)(b.id, { heroFile: null });
-            }, [b.id, e_, y.drafts.type]);
-        return (0, i.jsx)(T.Sv, {
-            value: eG,
-            children: (0, i.jsxs)(x.f5, {
-                value: eC,
+            tg = l.useCallback(() => {
+                if (null == eN) return;
+                let e = Y.A.getUploads(I.id, N.drafts.type),
+                    t = e.find((e) => e.filename === eN.name)?.id;
+                null != t && y.A.remove(I.id, t, K.C.ChannelMessage), (0, O.x)(I.id, { heroFile: null });
+            }, [I.id, eN, N.drafts.type]);
+        return (0, i.jsx)(w.Sv, {
+            value: eK,
+            children: (0, i.jsxs)(L.f5, {
+                value: ey,
                 children: [
                     (0, i.jsxs)("div", {
-                        ref: eS,
-                        className: a()(d, $.gM),
-                        onMouseDown: e8,
+                        ref: eb,
+                        className: s()(d, eo.gM),
+                        onMouseDown: ta,
                         children: [
                             (0, i.jsx)("div", {
-                                ref: eN,
-                                onScroll: eY,
-                                className: a()($.Ui, { [$.k6]: !em }),
+                                ref: eM,
+                                onScroll: eQ,
+                                className: s()(eo.Ui, { [eo.k6]: !eE }),
                                 children: (0, i.jsxs)("div", {
-                                    className: a()($.vW, J.vW),
+                                    className: s()(eo.vW, er.vW),
                                     children: [
                                         (0, i.jsxs)("div", {
-                                            className: J.rf,
+                                            className: er.rf,
                                             children: [
                                                 (0, i.jsxs)(c.animated.div, {
-                                                    className: J.ov,
-                                                    style: { height: tt, paddingTop: tn },
+                                                    className: er.ov,
+                                                    style: { height: tr, paddingTop: to },
                                                     children: [
-                                                        null != e_
-                                                            ? (0, i.jsx)(ee, { file: e_, onRemoveHeroImage: tc })
+                                                        null != eN
+                                                            ? (0, i.jsx)(eh, { file: eN, onRemoveHeroImage: tg })
                                                             : null,
-                                                        null != e_
+                                                        null != eN
                                                             ? null
-                                                            : (0, i.jsx)(en, {
-                                                                  channel: b,
+                                                            : (0, i.jsx)(eA, {
+                                                                  channel: I,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, I.x)(b.id, { heroFile: e }),
-                                                                  onFocus: () => e4(!0),
+                                                                      (0, O.x)(I.id, { heroFile: e }),
+                                                                  onFocus: () => tl(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
                                                             maxLength: 140,
-                                                            className: J.hz,
-                                                            placeholder: q.intl.string(q.t.Z8fYjO),
-                                                            value: ef,
-                                                            onChange: (e) => (0, I.x)(b.id, { title: e.target.value }),
+                                                            className: er.hz,
+                                                            placeholder: es.intl.string(es.t.Z8fYjO),
+                                                            value: eI,
+                                                            onChange: (e) => (0, O.x)(I.id, { title: e.target.value }),
                                                         }),
                                                     ],
                                                 }),
                                                 (0, i.jsx)("div", {
-                                                    className: J.I6,
-                                                    children: (0, i.jsx)(A.vN3, {
-                                                        ringTarget: eS,
-                                                        ringClassName: $.Rg,
-                                                        children: (0, i.jsx)(H.A, {
-                                                            ref: eT,
+                                                    className: er.I6,
+                                                    children: (0, i.jsx)(g.vN, {
+                                                        ringTarget: eb,
+                                                        ringClassName: eo.Rg,
+                                                        children: (0, i.jsx)(Q.A, {
+                                                            ref: eR,
                                                             id: h,
-                                                            focused: j,
-                                                            useSlate: eO,
-                                                            textValue: s,
+                                                            focused: v,
+                                                            useSlate: eG,
+                                                            textValue: a,
                                                             richValue: r,
-                                                            disabled: eR,
-                                                            placeholder: eo,
+                                                            disabled: ew,
+                                                            placeholder: ed,
                                                             required: m,
-                                                            accessibilityLabel: N,
-                                                            isPreviewing: (ey || ej) && eD,
-                                                            channel: b,
-                                                            type: F.oU.CREATE_ANNOUNCEMENT_POST,
-                                                            canPasteFiles: eM,
-                                                            uploadPromptCharacterCount: z.CS1,
-                                                            maxCharacterCount: er ?? eP,
+                                                            accessibilityLabel: S,
+                                                            isPreviewing: (eP || eO) && ek,
+                                                            channel: I,
+                                                            type: X.oU.CREATE_ANNOUNCEMENT_POST,
+                                                            canPasteFiles: eU,
+                                                            uploadPromptCharacterCount: el.CS1,
+                                                            maxCharacterCount: ea ?? eH,
                                                             allowNewLines: !0,
-                                                            "aria-describedby": ec,
-                                                            onChange: w,
-                                                            onResize: eJ,
-                                                            onBlur: K,
-                                                            onFocus: Y,
-                                                            onKeyDown: X,
-                                                            onSubmit: eB,
-                                                            onTab: e$,
-                                                            onEnter: eZ,
-                                                            onMoveSelection: eX,
-                                                            onSelectionChanged: eF,
-                                                            onMaybeShowAutocomplete: eW,
-                                                            onHideAutocomplete: ez,
-                                                            promptToUpload: el,
-                                                            fontSize: ew,
-                                                            spellcheckEnabled: ek,
+                                                            "aria-describedby": eg,
+                                                            onChange: T,
+                                                            onResize: e1,
+                                                            onBlur: U,
+                                                            onFocus: G,
+                                                            onKeyDown: F,
+                                                            onSubmit: eJ,
+                                                            onTab: e2,
+                                                            onEnter: e3,
+                                                            onMoveSelection: e9,
+                                                            onSelectionChanged: eW,
+                                                            onMaybeShowAutocomplete: eZ,
+                                                            onHideAutocomplete: eX,
+                                                            promptToUpload: J,
+                                                            fontSize: eB,
+                                                            spellcheckEnabled: eV,
                                                             canOnlyUseTextCommands: !1,
-                                                            "aria-labelledby": ed,
+                                                            "aria-labelledby": ep,
                                                         }),
                                                     }),
                                                 }),
                                             ],
                                         }),
                                         (0, i.jsx)("div", {
-                                            className: J.KK,
-                                            children: (0, i.jsx)(W.A, {
-                                                channelId: b.id,
-                                                type: y,
-                                                canAttachFiles: eM,
-                                                ignoreFile: e_?.name,
+                                            className: er.KK,
+                                            children: (0, i.jsx)(ei.A, {
+                                                channelId: I.id,
+                                                type: N,
+                                                canAttachFiles: eU,
+                                                ignoreFile: eN?.name,
                                                 smallAttachments: !0,
                                             }),
                                         }),
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)("div", { className: J.yF }),
+                            (0, i.jsx)("div", { className: er.yF }),
                             (0, i.jsxs)("div", {
-                                className: J.qr,
+                                className: er.qr,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: J.j4,
+                                        className: er.j4,
                                         children: [
-                                            (0, i.jsx)(et, { channel: b }),
-                                            (0, i.jsx)(B.A, {
-                                                type: F.oU.CREATE_ANNOUNCEMENT_POST,
-                                                disabled: eR,
-                                                channel: b,
-                                                handleSubmit: eV,
-                                                isEmpty: 0 === s.trim().length,
+                                            (0, i.jsx)(em, { channel: I }),
+                                            (0, i.jsx)(ee.A, {
+                                                type: X.oU.CREATE_ANNOUNCEMENT_POST,
+                                                disabled: ew,
+                                                channel: I,
+                                                handleSubmit: eq,
+                                                isEmpty: 0 === a.trim().length,
                                                 showAllButtons: !0,
                                             }),
                                         ],
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: J.j4,
+                                        className: er.j4,
                                         children: (0, i.jsx)("div", {
-                                            ref: ti,
-                                            className: J.Qo,
-                                            onMouseEnter: tr,
-                                            onMouseLeave: to,
-                                            children: (0, i.jsx)(A.YNO, {
-                                                targetElementRef: ti,
+                                            ref: tc,
+                                            className: er.Qo,
+                                            onMouseEnter: tm,
+                                            onMouseLeave: tA,
+                                            children: (0, i.jsx)(p.Y, {
+                                                targetElementRef: tc,
                                                 renderPopout: () =>
-                                                    (0, i.jsx)(Q, { channelId: b.id, canCreateThread: eU }),
-                                                shouldShow: tl,
+                                                    (0, i.jsx)(eu, { channelId: I.id, canCreateThread: ez }),
+                                                shouldShow: td,
                                                 autoInvert: !0,
                                                 nudgeAlignIntoViewport: !0,
                                                 position: "top",
                                                 align: "right",
                                                 children: (e) =>
-                                                    (0, i.jsx)(A.Button, {
+                                                    (0, i.jsx)(_.$, {
                                                         ...e,
                                                         onClick: () => {
-                                                            eB(
+                                                            eJ(
                                                                 `${
-                                                                    ef.length > 0
-                                                                        ? `# ${ef}
+                                                                    eI.length > 0
+                                                                        ? `# ${eI}
 `
                                                                         : ""
-                                                                }${s}`,
+                                                                }${a}`,
                                                             );
                                                         },
-                                                        disabled: 0 === s.length && 0 === ef.length,
+                                                        disabled: 0 === a.length && 0 === eI.length,
                                                         size: "sm",
-                                                        "aria-label": q.intl.string(q.t.TXNS7S),
-                                                        innerClassName: J.jo,
+                                                        "aria-label": es.intl.string(es.t.TXNS7S),
+                                                        innerClassName: er.jo,
                                                         text: (0, i.jsxs)("div", {
-                                                            className: J.f9,
+                                                            className: er.f9,
                                                             children: [
-                                                                (0, i.jsx)(A.Text, {
+                                                                (0, i.jsx)(f.E, {
                                                                     variant: "text-sm/semibold",
                                                                     color: "always-white",
-                                                                    children: q.intl.string(q.t.TXNS7S),
+                                                                    children: es.intl.string(es.t.TXNS7S),
                                                                 }),
                                                                 (0, i.jsxs)("div", {
-                                                                    className: J.pj,
+                                                                    className: er.pj,
                                                                     children: [
-                                                                        (0, i.jsx)(A.lX7, {
-                                                                            size: "xs",
-                                                                            color: "white",
-                                                                        }),
-                                                                        eU && ex
-                                                                            ? (0, i.jsx)(A.ysw, {
+                                                                        (0, i.jsx)(E.l, { size: "xs", color: "white" }),
+                                                                        ez && eT
+                                                                            ? (0, i.jsx)(C.y, {
                                                                                   size: "xxs",
                                                                                   color: "white",
-                                                                                  className: J.Q5,
+                                                                                  className: er.Q5,
                                                                               })
                                                                             : null,
                                                                     ],
@@ -420,92 +440,92 @@ let X = l.memo(
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(S.A, {
-                                targetRef: eS,
-                                ref: eK,
-                                channel: b,
-                                canMentionRoles: es,
-                                canMentionChannels: ea,
-                                useNewSlashCommands: eO,
+                            (0, i.jsx)(P.A, {
+                                targetRef: eb,
+                                ref: e$,
+                                channel: I,
+                                canMentionRoles: $,
+                                canMentionChannels: en,
+                                useNewSlashCommands: eG,
                                 canOnlyUseTextCommands: !1,
                                 canSendStickers: !0,
-                                textValue: s,
-                                focused: j,
-                                expressionPickerView: eQ,
-                                type: y,
-                                editorRef: eT,
-                                onSendMessage: eB,
+                                textValue: a,
+                                focused: v,
+                                expressionPickerView: e7,
+                                type: N,
+                                editorRef: eR,
+                                onSendMessage: eJ,
                                 onSendSticker: () => {},
-                                onVisibilityChange: e2,
-                                editorHeight: eq,
-                                setValue: (e, t) => w?.(null, e, t),
-                                position: eh,
+                                onVisibilityChange: e8,
+                                editorHeight: e0,
+                                setValue: (e, t) => T?.(null, e, t),
+                                position: ef,
                             }),
                         ],
                     }),
-                    e0
+                    e6
                         ? null
-                        : (0, i.jsx)(v.A, {
-                              positionTargetRef: eS,
-                              type: y,
-                              onSelectGIF: e7,
-                              onSelectEmoji: e3,
-                              onSelectKaomoji: e5,
-                              onSelectSticker: e6,
-                              channel: b,
-                              closeOnModalOuterClick: eA,
-                              parentModalKey: eg,
+                        : (0, i.jsx)(k.A, {
+                              positionTargetRef: eb,
+                              type: N,
+                              onSelectGIF: te,
+                              onSelectEmoji: e5,
+                              onSelectKaomoji: tt,
+                              onSelectSticker: tn,
+                              channel: I,
+                              closeOnModalOuterClick: eC,
+                              parentModalKey: ex,
                               position: "top",
                               align: "right",
-                              positionLayerClassName: $.BD,
+                              positionLayerClassName: eo.BD,
                           }),
                 ],
             }),
         });
     }),
 );
-function Q(e) {
+function eu(e) {
     let { channelId: t, canCreateThread: n } = e,
-        l = I.A.useField("channelDrafts")[t],
-        s = l?.createThread ?? !0,
-        a = l?.publish ?? !0;
-    return (0, i.jsxs)(A.W1t, {
+        l = O.A.useField("channelDrafts")[t],
+        a = l?.createThread ?? !0,
+        s = l?.publish ?? !0;
+    return (0, i.jsxs)(x.W, {
         "data-menu-migrated": !0,
-        "aria-label": q.intl.string(q.t["9WnJyo"]),
+        "aria-label": es.intl.string(es.t["9WnJyo"]),
         navId: "send-announcement-options",
-        onClose: z.tEg,
-        onSelect: z.tEg,
+        onClose: el.tEg,
+        onSelect: el.tEg,
         children: [
-            (0, i.jsx)(A.sLh, {
+            (0, i.jsx)(S.sL, {
                 id: "create-thread",
-                label: q.intl.string(q.t.rBIGBL),
-                checked: n && s,
+                label: es.intl.string(es.t.rBIGBL),
+                checked: n && a,
                 disabled: !n,
                 action: () => {
-                    (0, I.x)(t, { createThread: !s });
+                    (0, O.x)(t, { createThread: !a });
                 },
             }),
-            (0, i.jsx)(A.sLh, {
+            (0, i.jsx)(S.sL, {
                 id: "send-and-publish",
-                label: q.intl.string(q.t.MFGE51),
-                checked: a,
+                label: es.intl.string(es.t.MFGE51),
+                checked: s,
                 action: () => {
-                    (0, I.x)(t, { publish: !a });
+                    (0, O.x)(t, { publish: !s });
                 },
             }),
         ],
     });
 }
-function ee(e) {
+function eh(e) {
     let { file: t, onRemoveHeroImage: n } = e,
-        [s, a] = l.useState();
+        [a, s] = l.useState();
     l.useEffect(() => {
         if (null == t || !1 === ["image/jpeg", "image/png", "image/webp", "image/gif"].includes(t.type)) return;
         let e = URL.createObjectURL(t);
         return (
-            a(e),
+            s(e),
             () => {
-                a(void 0), URL.revokeObjectURL(e);
+                s(void 0), URL.revokeObjectURL(e);
             }
         );
     }, [t]);
@@ -516,42 +536,42 @@ function ee(e) {
         d = l.useCallback(() => {
             o(!1);
         }, []);
-    return null == s
+    return null == a
         ? null
         : (0, i.jsxs)("div", {
               onMouseEnter: c,
               onMouseLeave: d,
-              className: J.Lb,
+              className: er.Lb,
               "aria-hidden": !0,
               children: [
-                  (0, i.jsx)("img", { src: s, alt: q.intl.string(q.t["2ePvR8"]), className: J.c8 }),
+                  (0, i.jsx)("img", { src: a, alt: es.intl.string(es.t["2ePvR8"]), className: er.c8 }),
                   r
-                      ? (0, i.jsx)(N.Ay, {
-                            className: J.jM,
-                            children: (0, i.jsx)(K.A, {
-                                tooltip: q.intl.string(q.t.VjC21x),
+                      ? (0, i.jsx)(U.Ay, {
+                            className: er.jM,
+                            children: (0, i.jsx)(en.A, {
+                                tooltip: es.intl.string(es.t.VjC21x),
                                 onClick: n,
                                 dangerous: !0,
-                                children: (0, i.jsx)(A.ucK, {}),
+                                children: (0, i.jsx)(I.u, {}),
                             }),
                         })
                       : null,
               ],
           });
 }
-function et(e) {
+function em(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(b.A, {
-        "aria-label": q.intl.string(q.t["/IBYAq"]),
-        className: J.g$,
+    return (0, i.jsx)(G.A, {
+        "aria-label": es.intl.string(es.t["/IBYAq"]),
+        className: er.g$,
         size: "icon",
         color: "transparent",
         look: "blank",
         onChange: (e) => {
-            (0, U.R)(e.currentTarget.files, t, O.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
+            (0, $.R)(e.currentTarget.files, t, K.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
                 (e.currentTarget.value = null);
         },
-        children: (0, i.jsx)(A.H8$, {
+        children: (0, i.jsx)(N.H, {
             size: "custom",
             width: 20,
             height: 20,
@@ -559,42 +579,42 @@ function et(e) {
         }),
     });
 }
-function en(e) {
-    let { channel: t, onImageUploaded: n, onFocus: s } = e,
-        a = l.useRef(null),
+function eA(e) {
+    let { channel: t, onImageUploaded: n, onFocus: a } = e,
+        s = l.useRef(null),
         r = async (e, i) => {
-            let l = await (0, w.bX)(e, i.name, i.type),
-                s = { id: (0, d.A)(), file: l, platform: f.xz.WEB, isThumbnail: !1, origin: "file_picker" };
-            g.A.addFile({ file: s, channelId: t.id, draftType: O.C.ChannelMessage }), n(l);
+            let l = await (0, J.bX)(e, i.name, i.type),
+                a = { id: (0, d.A)(), file: l, platform: j.xz.WEB, isThumbnail: !1, origin: "file_picker" };
+            y.A.addFile({ file: a, channelId: t.id, draftType: K.C.ChannelMessage }), n(l);
         },
         [o, c] = l.useState(!1),
         u = l.useCallback(() => {
             c(!0);
         }, []),
-        p = l.useCallback(() => {
+        A = l.useCallback(() => {
             c(!1);
         }, []);
     return (0, i.jsx)("div", {
-        className: J.qN,
+        className: er.qN,
         children: (0, i.jsx)(m.m, {
             asContainer: !0,
-            text: q.intl.string(q.t["/IBYAq"]),
+            text: es.intl.string(es.t["/IBYAq"]),
             position: "top",
-            children: (0, i.jsxs)(A.DUT, {
-                className: J.qN,
+            children: (0, i.jsxs)(v.D, {
+                className: er.qN,
                 onMouseOver: u,
-                onMouseOut: p,
-                onFocus: s,
+                onMouseOut: A,
+                onFocus: a,
                 children: [
-                    (0, i.jsx)(j.Ay, {
-                        ref: a,
+                    (0, i.jsx)(H.Ay, {
+                        ref: s,
                         onChange: r,
                         "aria-hidden": !0,
                         tabIndex: -1,
-                        maxFileSizeBytes: Y.j,
-                        onFileSizeError: () => (0, y.A)(Y.j),
+                        maxFileSizeBytes: ea.j,
+                        onFileSizeError: () => (0, F.A)(ea.j),
                     }),
-                    (0, i.jsx)(A.XGR, {
+                    (0, i.jsx)(T.X, {
                         size: "md",
                         color: o ? h.A.colors.INTERACTIVE_TEXT_ACTIVE : h.A.colors.INTERACTIVE_TEXT_DEFAULT,
                     }),

@@ -1,62 +1,63 @@
-n.d(i, { default: () => E });
+n.d(i, { default: () => h });
 var e = n(627968);
 n(64700);
 var l = n(311907),
     a = n(314116),
-    r = n(397927),
-    s = n(442433),
-    o = n(50268),
-    d = n(624458),
-    p = n(513461),
-    u = n(212455),
-    c = n(976860),
-    g = n(967198),
-    A = n(652215),
-    m = n(985018);
-function E(t) {
+    r = n(861672),
+    s = n(477782),
+    o = n(442433),
+    d = n(50268),
+    u = n(624458),
+    c = n(513461),
+    p = n(212455),
+    g = n(976860),
+    A = n(967198),
+    m = n(652215),
+    E = n(985018);
+function h(t) {
     let { guild: i, onSelect: n } = t,
-        E = i.id,
-        h = (0, o.A)({ id: i.id, label: m.intl.string(m.t["94lLD7"]) }),
-        C = (0, l.bG)([u.A], () => u.A.getRequest(E)),
-        b = () => {
-            d.A.removeGuildJoinRequest(E), g.A.getGuildId() === E && (0, c.pX)(A.BVt.ME);
+        h = i.id,
+        C = (0, d.A)({ id: i.id, label: E.intl.string(E.t["94lLD7"]) }),
+        b = (0, l.bG)([p.A], () => p.A.getRequest(h)),
+        D = () => {
+            u.A.removeGuildJoinRequest(h), A.A.getGuildId() === h && (0, g.pX)(m.BVt.ME);
         };
-    return (0, e.jsxs)(r.W1t, {
+    return (0, e.jsxs)(r.W, {
         "data-menu-migrated-auto": !0,
         navId: "join-request-guild-context",
-        onClose: s.Z_,
-        "aria-label": m.intl.string(m.t.HpQykc),
+        onClose: o.Z_,
+        "aria-label": E.intl.string(E.t.HpQykc),
         onSelect: n,
         children: [
-            C?.applicationStatus === p.B5.REJECTED &&
-                (0, e.jsx)(r.Drp, {
+            b?.applicationStatus === c.B5.REJECTED &&
+                (0, e.jsx)(s.Dr, {
                     id: "reapply",
-                    label: m.intl.string(m.t.rpFCLs),
+                    label: E.intl.string(E.t.rpFCLs),
                     action: () => {
-                        d.A.resetGuildJoinRequest(E).then(() => {
-                            (0, c.pX)(A.BVt.GUILD_MEMBER_VERIFICATION(E));
+                        u.A.resetGuildJoinRequest(h).then(() => {
+                            (0, g.pX)(m.BVt.GUILD_MEMBER_VERIFICATION(h));
                         });
                     },
                     color: "default",
                 }),
-            (0, e.jsx)(r.Drp, {
+            (0, e.jsx)(s.Dr, {
                 id: "withdraw",
-                label: C?.applicationStatus === p.B5.STARTED ? m.intl.string(m.t.OQFlFD) : m.intl.string(m.t.mqtdmQ),
+                label: b?.applicationStatus === c.B5.STARTED ? E.intl.string(E.t.OQFlFD) : E.intl.string(E.t.mqtdmQ),
                 action: () => {
                     (0, a.A)({
-                        title: m.intl.string(m.t.y0CVes),
+                        title: E.intl.string(E.t.y0CVes),
                         subtitle:
-                            C?.applicationStatus === p.B5.STARTED
-                                ? m.intl.string(m.t.fJwWVt)
-                                : m.intl.format(m.t["9ZezpN"], { name: i.name }),
-                        confirmText: m.intl.string(m.t.p89ACt),
-                        cancelText: m.intl.string(m.t.oEAioF),
-                        onConfirm: b,
+                            b?.applicationStatus === c.B5.STARTED
+                                ? E.intl.string(E.t.fJwWVt)
+                                : E.intl.format(E.t["9ZezpN"], { name: i.name }),
+                        confirmText: E.intl.string(E.t.p89ACt),
+                        cancelText: E.intl.string(E.t.oEAioF),
+                        onConfirm: D,
                     });
                 },
                 color: "danger",
             }),
-            (0, e.jsx)(r.rXV, { children: h }),
+            (0, e.jsx)(s.rX, { children: C }),
         ],
     });
 }

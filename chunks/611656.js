@@ -1,67 +1,66 @@
-"use strict";
-n.d(t, { Ay: () => S, oS: () => T }), n(321073);
-var r = n(64700),
-    i = n(284009),
-    s = n.n(i),
-    a = n(353874),
-    o = n(763956),
-    l = n(665260),
-    u = n(574381),
-    c = n(311907),
-    d = n(587895),
-    _ = n(429913),
-    f = n(311043),
-    p = n(454908),
-    h = n(954571),
-    m = n(829806),
-    E = n(652215);
-let g = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            r = arguments.length > 3 ? arguments[3] : void 0;
-        h.default.track(E.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+t.d(i, { Ay: () => k, oS: () => S }), t(321073);
+var n = t(64700),
+    l = t(284009),
+    a = t.n(l),
+    o = t(353874),
+    r = t(763956),
+    s = t(665260),
+    d = t(574381),
+    u = t(311907),
+    c = t(587895),
+    p = t(429913),
+    _ = t(311043),
+    m = t(454908),
+    A = t(954571),
+    f = t(829806),
+    h = t(652215);
+let E = function (e, i) {
+        let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+            n = arguments.length > 3 ? arguments[3] : void 0;
+        A.default.track(h.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
             game_profile_available: e,
-            application_id: t,
-            rejection_reason: n,
-            source: r,
+            application_id: i,
+            rejection_reason: t,
+            source: n,
         });
     },
-    A = (e) => {
-        let t = [];
+    L = (e) => {
+        let i = [];
         return null == e
             ? ["no match"]
-            : (l.Lt(e.gameFlags, a.c.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
-              e.themes.includes(o.W.EROTIC) && t.push("nsfw"),
-              (null == e.description || 0 === e.description.length) && t.push("no summary"),
-              t);
+            : (s.Lt(e.gameFlags, o.c.GAME_PROFILE_DISABLED) && i.push("profile disabled"),
+              e.themes.includes(r.W.EROTIC) && i.push("nsfw"),
+              (null == e.description || 0 === e.description.length) && i.push("no summary"),
+              i);
     },
-    I = (e) => 0 === A(e).length,
-    T = (e) => I(f.A.getGame(e)),
-    S = (e) => {
-        let { applicationId: t = "", source: n, trackEntryPointImpression: i = !0 } = e,
-            a = r.useRef(!1),
-            o =
-                ((0, m.kW)("useShouldOpenGameProfileModal") && ((0, u.m0)() || (0, u.un)())) ||
-                (0, u.xl)() ||
-                (0, u.HZ)(),
-            l = (0, c.bG)([d.A], () => d.A.getApplication(t)),
-            h = r.useMemo(
-                () => [t, ...(l?.linkedGames?.map((e) => e.id) ?? [])].filter((e) => null != e && "" !== e),
-                [t, l],
+    I = (e) => 0 === L(e).length,
+    S = (e) => I(_.A.getGame(e)),
+    k = (e) => {
+        let { applicationId: i = "", source: t, trackEntryPointImpression: l = !0 } = e,
+            o = n.useRef(!1),
+            r =
+                ((0, f.kW)("useShouldOpenGameProfileModal") && ((0, d.m0)() || (0, d.un)())) ||
+                (0, d.xl)() ||
+                (0, d.HZ)(),
+            s = (0, u.bG)([c.A], () => c.A.getApplication(i)),
+            A = n.useMemo(
+                () => [i, ...(s?.linkedGames?.map((e) => e.id) ?? [])].filter((e) => null != e && "" !== e),
+                [i, s],
             );
-        (0, _.A)(o ? h : []), (0, p.x)(o ? h : []);
-        let E = (0, c.bG)([f.A], () => h.find((e) => I(f.A.getGame(e)))),
-            T = (0, c.bG)([f.A, d.A], () => h.every((e) => !f.A.isFetching(e) && !d.A.isFetchingApplication(e)));
+        (0, p.A)(r ? A : []), (0, m.x)(r ? A : []);
+        let h = (0, u.bG)([_.A], () => A.find((e) => I(_.A.getGame(e)))),
+            S = (0, u.bG)([_.A, c.A], () => A.every((e) => !_.A.isFetching(e) && !c.A.isFetchingApplication(e)));
         return (
-            r.useEffect(() => {
-                if (!a.current && o && i && null != l && (T || null != E)) {
-                    let e = null != E ? f.A.getGame(E) : f.A.getGame(l.id);
+            n.useEffect(() => {
+                if (!o.current && r && l && null != s && (S || null != h)) {
+                    let e = null != h ? _.A.getGame(h) : _.A.getGame(s.id);
                     if (null != e) {
-                        s()(null != n, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                        let t = A(e);
-                        g(null != E, e.applicationId, t, n), (a.current = !0);
+                        a()(null != t, "Cannot track a Game Profile Entry Point Impressions without a source.");
+                        let i = L(e);
+                        E(null != h, e.applicationId, i, t), (o.current = !0);
                     }
                 }
-            }, [E, l, o, T, n, i]),
-            { shouldOpenGameProfile: o && null != E, applicationId: E }
+            }, [h, s, r, S, t, l]),
+            { shouldOpenGameProfile: r && null != h, applicationId: h }
         );
     };

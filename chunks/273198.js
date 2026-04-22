@@ -1,84 +1,88 @@
 "use strict";
-n.d(t, { A: () => y });
-var r = n(627968),
-    i = n(64700),
-    a = n(56121),
-    s = n(927813),
-    o = n(562153),
-    l = n(939341),
-    u = n(583846),
-    c = n(821988),
+n.d(t, { A: () => A });
+var i = n(627968),
+    l = n(64700),
+    s = n(56121),
+    r = n(927813),
+    a = n(562153),
+    o = n(939341),
+    c = n(583846),
+    u = n(821988),
     d = n(176563),
-    _ = n(636202),
-    f = n(977001),
+    h = n(636202),
+    m = n(977001),
     p = n(506326),
-    h = n(910692),
-    m = n(18282),
-    g = n(299846),
-    E = n(985018);
-function A(e) {
-    if (e === a.j.WEEK) return E.t["7TXfc6"];
-}
-let I = (e, t, n, r) => {
-        let i = A(r),
-            a = o.Ay.getName(t.guild_id, t.id, n),
-            s = e.extra.game_name;
-        return E.intl.formatToMarkdownString(i, { gameName: s, userName: a }).replaceAll("*", "");
-    },
-    T = (e, t) => E.intl.formatToPlainString(E.t.tAwI1k, { username: t.username, activity: e.extra.game_name }),
-    y = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: o, onVoiceChannelPreview: A } = e,
-            { largeImage: y } = (0, l.nO)({ entry: n }),
-            { user: S, details: v, appName: C } = (0, g.u)(n),
-            { primaryColor: b, secondaryColor: N } = (0, d.A)(y?.src),
-            R = (0, u.ty)(n),
-            O = (0, u.TQ)(n),
-            D = i.useCallback(
-                (e) => {
-                    if (null != t && null != S && null != R && null != O && (0, f._E)(O))
-                        return (0, c.p6)({
-                            entry: n,
-                            applicationImageSrc: y?.src,
-                            avatarSrcs: [S.getAvatarURL(t?.guild_id, 128)],
-                            description: I(n, t, S, O),
-                            timestamp: E.intl.formatToPlainString(E.t.YL7UE3, {
-                                hours: Math.round(R / s.A.Seconds.HOUR),
-                            }),
-                            colors: [b, N],
-                            channelId: e,
-                        });
-                },
-                [y?.src, t, R, n, b, O, N, S],
-            );
-        if (null == S || null == R || null == O || !(0, f._E)(O)) return null;
-        let L = null != n.extra.platform ? _.n[n.extra.platform] : null;
-        return (0, r.jsxs)(h.YN, {
-            children: [
-                (0, r.jsx)(h.BC, {
-                    channel: t,
-                    headerIcons:
-                        null == L ? null : (0, r.jsx)(m.A, { Icon: L, "aria-label": E.intl.string(E.t.YR4cHH) }),
-                    entry: n,
-                    userDescription: E.t.rPqqts,
-                    title: C,
-                    subtitle: v,
-                    badges: (0, r.jsx)(p.mG, {
-                        location: p.N5.POPOUT,
-                        children: f.ac.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
-                    }),
-                    disableGameProfileLinks: a,
+    f = n(910692),
+    g = n(18282),
+    _ = n(299846),
+    x = n(985018);
+let A = (e) => {
+    let t,
+        n,
+        { channel: A, entry: C, disableGameProfileLinks: E, onReaction: I, onVoiceChannelPreview: v } = e,
+        { largeImage: y } = (0, o.nO)({ entry: C }),
+        { user: S, details: b, appName: N } = (0, _.u)(C),
+        { primaryColor: T, secondaryColor: j } = (0, d.A)(y?.src),
+        R = (0, c.ty)(C),
+        w = (0, c.TQ)(C),
+        L = l.useCallback(
+            (e) => {
+                if (null != A && null != S && null != R && null != w && (0, m._E)(w)) {
+                    var t, n, i;
+                    let l, o, c;
+                    return (0, u.p6)({
+                        entry: C,
+                        applicationImageSrc: y?.src,
+                        avatarSrcs: [S.getAvatarURL(A?.guild_id, 128)],
+                        description:
+                            ((t = C),
+                            (n = A),
+                            (i = S),
+                            (l = (function (e) {
+                                if (e === s.j.WEEK) return x.t["7TXfc6"];
+                            })(w)),
+                            (o = a.Ay.getName(n.guild_id, n.id, i)),
+                            (c = t.extra.game_name),
+                            x.intl.formatToMarkdownString(l, { gameName: c, userName: o }).replaceAll("*", "")),
+                        timestamp: x.intl.formatToPlainString(x.t.YL7UE3, { hours: Math.round(R / r.A.Seconds.HOUR) }),
+                        colors: [T, j],
+                        channelId: e,
+                    });
+                }
+            },
+            [y?.src, A, R, C, T, w, j, S],
+        );
+    if (null == S || null == R || null == w || !(0, m._E)(w)) return null;
+    let M = null != C.extra.platform ? h.n[C.extra.platform] : null;
+    return (0, i.jsxs)(f.YN, {
+        children: [
+            (0, i.jsx)(f.BC, {
+                channel: A,
+                headerIcons: null == M ? null : (0, i.jsx)(g.A, { Icon: M, "aria-label": x.intl.string(x.t.YR4cHH) }),
+                entry: C,
+                userDescription: x.t.rPqqts,
+                title: N,
+                subtitle: b,
+                badges: (0, i.jsx)(p.mG, {
+                    location: p.N5.POPOUT,
+                    children: m.ac.map((e, t) => (0, i.jsx)(e, { entry: C }, t)),
                 }),
-                (0, r.jsx)(h.Eh, {
-                    children: (0, r.jsx)(h.fD, {
-                        onReaction: o,
-                        onVoiceChannelPreview: A,
-                        user: S,
-                        channel: t,
-                        generateReactionImage: D,
-                        reactionImageAltText: T(n, S),
-                        entry: n,
-                    }),
+                disableGameProfileLinks: E,
+            }),
+            (0, i.jsx)(f.Eh, {
+                children: (0, i.jsx)(f.fD, {
+                    onReaction: I,
+                    onVoiceChannelPreview: v,
+                    user: S,
+                    channel: A,
+                    generateReactionImage: L,
+                    reactionImageAltText:
+                        ((t = C),
+                        (n = S),
+                        x.intl.formatToPlainString(x.t.tAwI1k, { username: n.username, activity: t.extra.game_name })),
+                    entry: C,
                 }),
-            ],
-        });
-    };
+            }),
+        ],
+    });
+};

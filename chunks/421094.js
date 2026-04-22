@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { K: () => l });
-var r = n(627968),
+n.d(t, { K: () => o });
+var l = n(627968),
     i = n(64700),
-    s = n(61572),
-    a = n(93159),
-    o = n(985018);
-let l = (e) => {
+    a = n(61572),
+    r = n(93159),
+    s = n(985018);
+let o = (e) => {
     let {
             handlePaymentSourceAdd: t,
             isTrial: n,
-            isDiscount: l,
+            isDiscount: o,
             disabled: u,
             hasEntitlements: c,
             eligiblePaymentGateways: d,
-            currencyDropdownProps: _,
-            label: f = o.intl.string(o.t["u+Cw58"]),
-            shouldUseUnifiedCheckoutUI: p,
-            paymentSourceDropdownClassName: h,
-            paymentSourceDropdownPrependOption: m,
-            location: E = "PremiumSubscriptionReview",
+            currencyDropdownProps: p,
+            label: m = s.intl.string(s.t["u+Cw58"]),
+            shouldUseUnifiedCheckoutUI: h,
+            paymentSourceDropdownClassName: A,
+            paymentSourceDropdownPrependOption: _,
+            location: C = "PremiumSubscriptionReview",
         } = e,
-        g = i.useMemo(() => (l || null == _ ? null : (0, r.jsx)(a.qX, { ..._ })), [l, _]),
-        A = i.useMemo(
+        E = i.useMemo(() => (o || null == p ? null : (0, l.jsx)(r.qX, { ...p })), [o, p]),
+        y = i.useMemo(
             () => ({
-                newPaymentMethodOptionLabel: c && !n ? o.intl.string(o.t.IGU7El) : null,
+                newPaymentMethodOptionLabel: c && !n ? s.intl.string(s.t.IGU7El) : null,
                 isTrial: n,
                 paymentGatewayRestrictions: d,
-                shouldUseUnifiedCheckoutUI: p,
-                className: h,
-                prependOption: m,
+                shouldUseUnifiedCheckoutUI: h,
+                className: A,
+                prependOption: _,
             }),
-            [c, n, d, p, h, m],
+            [c, n, d, h, A, _],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsx)(s.N, {
-                label: f,
+            (0, l.jsx)(a.N, {
+                label: m,
                 disabled: u,
                 onPaymentSourceAdd: t,
-                additionalPaymentSourceDropdownProps: A,
-                location: E,
+                additionalPaymentSourceDropdownProps: y,
+                location: C,
             }),
-            g,
+            E,
         ],
     });
 };

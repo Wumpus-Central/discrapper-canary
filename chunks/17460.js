@@ -1,14 +1,10 @@
-"use strict";
-n.d(t, { Pi: () => a, b_: () => l });
-var r = n(311907),
-    i = n(680243),
-    s = n(723702);
+e.d(n, { Pi: () => a, b_: () => s });
+var i = e(311907),
+    l = e(680243),
+    r = e(723702);
 function a() {
-    return s.isPlatformEmbedded;
+    return r.isPlatformEmbedded;
 }
-function o(e) {
-    return e || !1;
-}
-function l() {
-    return o((0, r.bG)([i.A], () => i.A.isSupported));
+function s() {
+    return (0, i.bG)([l.A], () => l.A.isSupported) || !1;
 }

@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { z: () => l });
-var r = n(64700),
-    i = n(575593),
-    s = n(466459),
-    a = n(790203),
-    o = n(574499);
-function l(e) {
-    let { userId: t, product: n, selectedVariantIndex: l, location: u, onError: c } = e,
-        d = r.useMemo(
-            () => (n.type === i.R.VARIANTS_GROUP && null != l && n.variants?.[l] != null ? n.variants[l] : n),
-            [n, l],
+i.d(e, { z: () => o });
+var r = i(64700),
+    s = i(575593),
+    n = i(466459),
+    l = i(790203),
+    a = i(574499);
+function o(t) {
+    let { userId: e, product: i, selectedVariantIndex: o, location: u, onError: d } = t,
+        c = r.useMemo(
+            () => (i.type === s.R.VARIANTS_GROUP && null != o && i.variants?.[o] != null ? i.variants[o] : i),
+            [i, o],
         ),
-        _ = d.skuId,
-        f = (0, o.c)({ userId: t, skuId: _, nuxGraphic: (0, a.b)({ product: d }), location: u, onError: c }),
-        { isPurchased: p } = (0, s.h)(d);
-    return { ...f, specificProductOrVariant: d, isPurchased: p };
+        p = c.skuId,
+        S = (0, a.c)({ userId: e, skuId: p, nuxGraphic: (0, l.b)({ product: c }), location: u, onError: d }),
+        { isPurchased: h } = (0, n.h)(c);
+    return { ...S, specificProductOrVariant: c, isPurchased: h };
 }

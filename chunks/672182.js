@@ -1,61 +1,61 @@
 "use strict";
-n.d(t, { A: () => T });
-var r = n(627968),
-    i = n(64700),
-    a = n(319060),
-    s = n(397927),
-    o = n(724511),
-    l = n(850992),
-    u = n(338464),
-    c = n(71393),
+n.d(t, { A: () => C });
+var i = n(627968),
+    l = n(64700),
+    s = n(319060),
+    r = n(307301),
+    a = n(724511),
+    o = n(850992),
+    c = n(338464),
+    u = n(71393),
     d = n(240248),
-    _ = n(679382),
-    f = n(842086),
+    h = n(679382),
+    m = n(842086),
     p = n(378058),
-    h = n(148355),
-    m = n(985018),
-    g = n(905208);
-let E = (0, d.xI)(a.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    A = (0, d.xI)(a.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    I = (e) => {
-        let t = null,
-            n = null;
-        if ((!(0, p.FD)(e) && !(0, p.Xw)(e)) || (0, p.Xw)(e)) {
-            let i = c.A.getGuild(e.guild_id);
-            null != i && ((t = m.intl.format(m.t.cZOkbs, { source: i.name })), (n = (0, r.jsx)(o.A, { guild: i })));
-        } else if ((0, p.FD)(e)) {
-            let i = _.A.getStickerPack(e.pack_id);
-            null != i &&
-                ((t = m.intl.format(m.t.cZOkbs, { source: i.name })),
-                (n = (0, r.jsx)(h.A, { size: A, sticker: (0, p.Id)(i), disableAnimation: !0 })));
-        }
-        return { title: t, graphic: n };
-    },
-    T = i.memo(function (e) {
+    f = n(148355),
+    g = n(985018),
+    _ = n(867981);
+let x = (0, d.xI)(s.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    A = (0, d.xI)(s.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    C = l.memo(function (e) {
         let { stickersGrid: t } = e,
-            n = l.bM.useStore((e) => e.inspectedExpressionPosition),
-            a = i.useMemo(() => {
-                let { rowIndex: e, columnIndex: r } = n,
-                    i = t[e]?.[r];
-                return i?.type === f.op.CREATE_STICKER
-                    ? { guild_id: i.guild_id, name: i.name }
-                    : i?.type !== f.op.STICKER
+            n = o.bM.useStore((e) => e.inspectedExpressionPosition),
+            s = l.useMemo(() => {
+                let { rowIndex: e, columnIndex: i } = n,
+                    l = t[e]?.[i];
+                return l?.type === m.op.CREATE_STICKER
+                    ? { guild_id: l.guild_id, name: l.name }
+                    : l?.type !== m.op.STICKER
                       ? null
-                      : i.sticker;
+                      : l.sticker;
             }, [t, n]);
-        if (null == a) return null;
-        let { graphic: o, title: c } = I(a),
-            d =
-                (0, p.FD)(a) || (0, p.Xw)(a)
-                    ? (0, r.jsx)(h.A, { isInteracting: !0, size: E, sticker: a, disableAnimation: !0 })
-                    : (0, r.jsx)("div", {
-                          className: g.P,
-                          children: (0, r.jsx)(s.j96, { size: "md", color: "currentColor", className: g.K }),
+        if (null == s) return null;
+        let { graphic: d, title: C } = ((e) => {
+                let t = null,
+                    n = null;
+                if ((!(0, p.FD)(e) && !(0, p.Xw)(e)) || (0, p.Xw)(e)) {
+                    let l = u.A.getGuild(e.guild_id);
+                    null != l &&
+                        ((t = g.intl.format(g.t.cZOkbs, { source: l.name })), (n = (0, i.jsx)(a.A, { guild: l })));
+                } else if ((0, p.FD)(e)) {
+                    let l = h.A.getStickerPack(e.pack_id);
+                    null != l &&
+                        ((t = g.intl.format(g.t.cZOkbs, { source: l.name })),
+                        (n = (0, i.jsx)(f.A, { size: A, sticker: (0, p.Id)(l), disableAnimation: !0 })));
+                }
+                return { title: t, graphic: n };
+            })(s),
+            E =
+                (0, p.FD)(s) || (0, p.Xw)(s)
+                    ? (0, i.jsx)(f.A, { isInteracting: !0, size: x, sticker: s, disableAnimation: !0 })
+                    : (0, i.jsx)("div", {
+                          className: _.P,
+                          children: (0, i.jsx)(r.j, { size: "md", color: "currentColor", className: _.K }),
                       });
-        return (0, r.jsx)(u.A, {
-            graphicPrimary: d,
-            graphicSecondary: o,
-            titlePrimary: a.name,
-            titleSecondary: (0, p.FD)(a) || (0, p.Xw)(a) ? c : null,
+        return (0, i.jsx)(c.A, {
+            graphicPrimary: E,
+            graphicSecondary: d,
+            titlePrimary: s.name,
+            titleSecondary: (0, p.FD)(s) || (0, p.Xw)(s) ? C : null,
         });
     });

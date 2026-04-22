@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { b: () => l });
-var r = n(627968),
+n.d(t, { b: () => o });
+var l = n(627968),
     i = n(64700),
     a = n(735438),
-    s = n.n(a),
-    o = n(775602);
-class l extends i.Component {
+    r = n.n(a),
+    s = n(775602);
+class o extends i.Component {
     static defaultProps = { isShaking: !0, intensity: 5 };
     ref = i.createRef();
     animationFrame;
@@ -32,14 +31,14 @@ class l extends i.Component {
         if (!t) return;
         let n = this.ref.current;
         if (this.shouldRenderFrame && null != n) {
-            let t = s().random(-e, e, !0),
-                r = s().random(-e, e, !0);
-            n.style.transform = o.A.useReducedMotion ? "" : `translate3d(${t}px,${r}px,0px)`;
+            let t = r().random(-e, e, !0),
+                l = r().random(-e, e, !0);
+            n.style.transform = s.A.useReducedMotion ? "" : `translate3d(${t}px,${l}px,0px)`;
         }
         (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
     };
     render() {
         let { className: e, children: t } = this.props;
-        return (0, r.jsx)("div", { className: e, ref: this.ref, children: t });
+        return (0, l.jsx)("div", { className: e, ref: this.ref, children: t });
     }
 }

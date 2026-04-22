@@ -1,74 +1,76 @@
 "use strict";
-n.d(t, { Bn: () => h, R4: () => p, ev: () => c, h: () => f, sW: () => _, tS: () => d }), n(323874), n(14289), n(35956);
-var r = n(839214),
-    i = n(334465),
-    a = n(976860),
-    s = n(212534),
-    o = n(767599),
-    l = n(435220),
-    u = n(652215),
-    c = (function (e) {
-        return (e.HOME = "home"), (e.SEARCH = "search"), (e.APPLICATION = "application"), (e.CATEGORY = "category"), e;
-    })({});
-let d = (0, r.D)(() => ({}));
-var _ = (function (e) {
-    return (
-        (e.EXTERNAL = "External"),
-        (e.KEYBOARD_SHORTCUT = "Keyboard Shortcut"),
-        (e.APPLICATION_DIRECTORY_URL = "Application Directory URL"),
-        (e.APPLICATION_MESSAGE_EMBED = "Application Message Embed"),
-        (e.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal"),
-        (e.GUILD_HEADER_POPOUT = "Guild Header Popout"),
-        (e.GUILD_SETTINGS = "Guild Settings"),
-        (e.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings"),
-        (e.GUILD_CONTEXT_MENU = "Guild Context Menu"),
-        (e.OAUTH2_EMBED = "OAuth2 Embed"),
-        (e.GLOBAL_DISCOVERY_BUTTON = "Global Discovery Button"),
-        (e.GLOBAL_DISCOVERY_SIDEBAR = "Global Discovery Sidebar"),
-        e
-    );
-})({});
-let f = (0, r.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
-function h() {
-    let {
-        location: { state: e },
-    } = (0, a.JK)();
-    return e?.previousView;
-}
+n.d(t, { Bn: () => p, R4: () => m, ev: () => _, h: () => h, sW: () => E, tS: () => f }), n(323874), n(14289), n(35956);
+var r,
+    i,
+    s = n(839214),
+    a = n(334465),
+    o = n(976860),
+    l = n(212534),
+    u = n(767599),
+    d = n(435220),
+    c = n(652215),
+    _ =
+        (((r = {}).HOME = "home"),
+        (r.SEARCH = "search"),
+        (r.APPLICATION = "application"),
+        (r.CATEGORY = "category"),
+        r);
+let f = (0, s.D)(() => ({}));
+var E =
+    (((i = {}).EXTERNAL = "External"),
+    (i.KEYBOARD_SHORTCUT = "Keyboard Shortcut"),
+    (i.APPLICATION_DIRECTORY_URL = "Application Directory URL"),
+    (i.APPLICATION_MESSAGE_EMBED = "Application Message Embed"),
+    (i.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal"),
+    (i.GUILD_HEADER_POPOUT = "Guild Header Popout"),
+    (i.GUILD_SETTINGS = "Guild Settings"),
+    (i.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings"),
+    (i.GUILD_CONTEXT_MENU = "Guild Context Menu"),
+    (i.OAUTH2_EMBED = "OAuth2 Embed"),
+    (i.GLOBAL_DISCOVERY_BUTTON = "Global Discovery Button"),
+    (i.GLOBAL_DISCOVERY_SIDEBAR = "Global Discovery Sidebar"),
+    i);
+let h = (0, s.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
 function p() {
     let {
+        location: { state: e },
+    } = (0, o.JK)();
+    return e?.previousView;
+}
+function m() {
+    let {
         location: { pathname: e, search: t },
-    } = (0, a.JK)();
-    if (null != (0, i.B)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS, exact: !0 })) return { type: "home" };
-    if (null != (0, i.B)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, exact: !0 })) {
+    } = (0, o.JK)();
+    if (null != (0, a.B)(e, { path: c.BVt.GLOBAL_DISCOVERY_APPS, exact: !0 })) return { type: "home" };
+    if (null != (0, a.B)(e, { path: c.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, exact: !0 })) {
         let e = new URLSearchParams(t),
             n = { type: "search" },
             r = e.get("q");
         null != r && "" !== r && (n.query = r);
         let i = Number(e.get("category_id"));
-        Number.isInteger(i) && i !== o.lj && (n.categoryId = i.toString());
-        let a = Number(e.get("page"));
-        return null != a && a > 1 && (n.page = a), n;
+        Number.isInteger(i) && i !== u.lj && (n.categoryId = i.toString());
+        let s = Number(e.get("page"));
+        return null != s && s > 1 && (n.page = s), n;
     }
-    let n = (0, i.B)(e, { path: [u.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
+    let n = (0, a.B)(e, { path: [c.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
         { categoryId: r } = n?.params ?? {};
     if (null != n && null != r) return { type: "category", categoryId: r };
-    let c = (0, i.B)(e, {
+    let i = (0, a.B)(e, {
             path: [
-                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
-                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),
-                u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
+                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
+                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),
+                c.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(":applicationId", ":skuId"),
             ],
             exact: !0,
         }),
-        { applicationId: d, section: _, skuId: f } = c?.params ?? {};
-    if (null != c && null != d) {
-        let e = s.A.getApplication(d)?.name;
+        { applicationId: s, section: _, skuId: f } = i?.params ?? {};
+    if (null != i && null != s) {
+        let e = l.A.getApplication(s)?.name;
         return {
             type: "application",
-            applicationId: d,
+            applicationId: s,
             applicationName: e,
-            section: _ ?? (null != f ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT),
+            section: _ ?? (null != f ? d.GlobalDiscoveryAppsSections.STORE : d.GlobalDiscoveryAppsSections.ABOUT),
         };
     }
 }

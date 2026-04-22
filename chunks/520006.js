@@ -1,36 +1,39 @@
-n.d(t, { A: () => x, X: () => f });
+n.d(t, { A: () => C, X: () => I });
 var i = n(627968);
 n(64700);
 var l = n(284009),
     s = n.n(l),
     a = n(311907),
-    r = n(397927),
-    o = n(298990),
-    c = n(688810),
-    d = n(384059),
-    u = n(267102),
-    h = n(71393),
-    A = n(375492),
-    _ = n(576705),
-    m = n(709562),
-    g = n(652215),
-    p = n(985018);
-function f(e) {
+    r = n(192308),
+    o = n(231723),
+    d = n(768451),
+    c = n(241541),
+    u = n(298990),
+    h = n(688810),
+    A = n(384059),
+    _ = n(267102),
+    m = n(71393),
+    g = n(375492),
+    p = n(576705),
+    f = n(709562),
+    E = n(652215),
+    x = n(985018);
+function I(e) {
     let {
         guild: t,
         channel: l,
         streamUserId: s,
         applicationId: a,
-        appContext: o,
+        appContext: d,
         exitFullScreen: c,
-        analyticsLocation: d,
-        guildScheduledEvent: u,
-        source: h,
+        analyticsLocation: u,
+        guildScheduledEvent: h,
+        source: A,
     } = e;
     c?.(),
-        (0, r.mMO)(
+        (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("89886")]).then(
+                let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) =>
@@ -40,80 +43,80 @@ function f(e) {
                         channel: l,
                         streamUserId: s,
                         applicationId: a,
-                        analyticsLocation: d,
-                        source: h,
-                        guildScheduledEvent: u,
+                        analyticsLocation: u,
+                        source: A,
+                        guildScheduledEvent: h,
                     });
             },
-            { modalKey: "stream-invite-modal", contextKey: o === g.BRT.POPOUT ? r.KX8 : r.SYi },
+            { modalKey: "stream-invite-modal", contextKey: d === E.BRT.POPOUT ? o.KX : o.SY },
         );
 }
-function x(e) {
+function C(e) {
     let {
             applicationId: t,
             stream: n,
             channel: l,
-            exitFullScreen: x,
-            appContext: E,
-            analyticsLocation: I,
-            guildScheduledEvent: C,
+            exitFullScreen: r,
+            appContext: o,
+            analyticsLocation: C,
+            guildScheduledEvent: b,
             shouldPrioritizeGroupPlusIcon: N = !1,
-            isRichPresenceInvite: T = !1,
-            iconClassName: S,
-            look: b,
+            isRichPresenceInvite: S = !1,
+            iconClassName: v,
+            look: T,
             size: y,
-            buttonText: v,
+            buttonText: R,
             color: j,
-            ...R
+            ...L
         } = e,
-        O = (0, u.Us)(),
-        { parentAnalyticsLocation: L } = (0, c.Ay)(),
-        M = l?.getGuildId(),
-        D = (0, a.bG)([h.A], () => (null != M ? h.A.getGuild(M) : null), [M]),
-        U = (0, a.bG)([A.A], () => (null != t ? A.A.getApplicationActivity(t) : void 0)),
-        G = null == t || N ? r.DpX : r.dCJ,
-        P = p.intl.string(p.t["6F9ivu"]);
-    return (null != t && (P = p.intl.string(p.t["OzOM/q"])),
-    null != n && (P = p.intl.string(p.t["6VQaqd"])),
-    null != U && T)
-        ? (0, i.jsx)(m.A, {
+        O = (0, _.Us)(),
+        { parentAnalyticsLocation: G } = (0, h.Ay)(),
+        D = l?.getGuildId(),
+        M = (0, a.bG)([m.A], () => (null != D ? m.A.getGuild(D) : null), [D]),
+        U = (0, a.bG)([g.A], () => (null != t ? g.A.getApplicationActivity(t) : void 0)),
+        P = null == t || N ? c.D : d.d,
+        w = x.intl.string(x.t["6F9ivu"]);
+    return (null != t && (w = x.intl.string(x.t["OzOM/q"])),
+    null != n && (w = x.intl.string(x.t["6VQaqd"])),
+    null != U && S)
+        ? (0, i.jsx)(f.A, {
               onClick: () => {
-                  null != L && (0, d.X)(L, d.O.INVITE), o.qf(U, !1, O);
+                  null != G && (0, A.X)(G, A.O.INVITE), u.qf(U, !1, O);
               },
-              iconComponent: G,
-              label: P,
-              iconClassName: S,
-              look: b,
+              iconComponent: P,
+              label: w,
+              iconClassName: v,
+              look: T,
               size: y,
-              buttonText: v,
+              buttonText: R,
               color: j ?? void 0,
           })
-        : null != D && null != l && _.A.can(g.xBc.CREATE_INSTANT_INVITE, l)
-          ? (0, i.jsx)(m.A, {
+        : null != M && null != l && p.A.can(E.xBc.CREATE_INSTANT_INVITE, l)
+          ? (0, i.jsx)(f.A, {
                 onClick: () => {
-                    s()(null != D, "guild cannot be null"),
+                    s()(null != M, "guild cannot be null"),
                         s()(null != l, "channel cannot be null"),
-                        null != L && (0, d.X)(L, d.O.INVITE),
-                        f({
-                            guild: D,
+                        null != G && (0, A.X)(G, A.O.INVITE),
+                        I({
+                            guild: M,
                             channel: l,
                             streamUserId: n?.ownerId,
                             applicationId: t,
-                            appContext: E ?? O,
-                            exitFullScreen: x,
-                            analyticsLocation: I,
-                            guildScheduledEvent: C,
-                            source: l.isGuildStageVoice() ? g.PE1.STAGE_CHANNEL : g.PE1.STREAM_INVITE,
+                            appContext: o ?? O,
+                            exitFullScreen: r,
+                            analyticsLocation: C,
+                            guildScheduledEvent: b,
+                            source: l.isGuildStageVoice() ? E.PE1.STAGE_CHANNEL : E.PE1.STREAM_INVITE,
                         });
                 },
-                iconComponent: G,
-                label: P,
-                iconClassName: S,
-                look: b,
+                iconComponent: P,
+                label: w,
+                iconClassName: v,
+                look: T,
                 size: y,
                 color: j,
-                buttonText: v,
-                ...R,
+                buttonText: R,
+                ...L,
             })
           : null;
 }

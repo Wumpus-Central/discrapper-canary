@@ -1,99 +1,94 @@
 "use strict";
-n.d(t, { A: () => A, L: () => m });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+n.d(t, { A: () => A, L: () => _ });
+var i,
+    l = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
     o = n(837381),
-    l = n(397927),
+    c = n(187322),
     u = n(608299),
-    c = n(101555),
-    d = n(203982),
-    _ = n(844992),
-    f = n(652215),
-    p = n(985018),
-    h = n(735314),
-    m = (function (e) {
-        return (
-            (e[(e.SMALL = 0)] = "SMALL"),
-            (e[(e.MEDIUM = 1)] = "MEDIUM"),
-            (e[(e.CLIP = 2)] = "CLIP"),
-            (e[(e.XXSMALL = 3)] = "XXSMALL"),
-            (e[(e.XSMALL = 4)] = "XSMALL"),
-            e
-        );
-    })({});
-function g(e) {
+    d = n(101555),
+    h = n(203982),
+    m = n(844992),
+    p = n(652215),
+    f = n(985018),
+    g = n(248201),
+    _ =
+        (((i = {})[(i.SMALL = 0)] = "SMALL"),
+        (i[(i.MEDIUM = 1)] = "MEDIUM"),
+        (i[(i.CLIP = 2)] = "CLIP"),
+        (i[(i.XXSMALL = 3)] = "XXSMALL"),
+        (i[(i.XSMALL = 4)] = "XSMALL"),
+        i);
+function x(e) {
     e.stopPropagation();
 }
-function E(e, t) {
+let A = s.forwardRef(function (e, t) {
     let {
             id: n,
-            channelId: a,
-            className: m,
-            children: E,
+            channelId: i,
+            className: r,
+            children: _,
             actions: A,
-            handleEditModal: I,
-            keyboardModeEnabled: T,
-            onKeyDown: y,
-            draftType: S,
-            size: v = 1,
+            handleEditModal: C,
+            keyboardModeEnabled: E,
+            onKeyDown: I,
+            draftType: v,
+            size: y = 1,
         } = e,
-        C = i.useRef(null),
+        S = s.useRef(null),
         { onFocus: b, ...N } = (0, o.rm)(n),
-        { handleFocus: R, handleBlur: O } = (0, _.G)(b),
-        D = 0 === v,
-        L = null != A,
-        w = (e) => {
-            if (0 === e.detail && null != C.current) {
-                let e = C.current.querySelector('[role="button"], button');
-                e?.click();
-            }
-        },
-        x = (e) => {
-            if (T) {
-                switch (e.which) {
-                    case f.Ks6.D:
-                        e.preventDefault(), u.A.remove(a, n, S);
-                        return;
-                    case f.Ks6.E:
-                        null != I && (e.preventDefault(), I(e));
-                        return;
-                    case f.Ks6.BACKSPACE:
-                        e.ctrlKey
-                            ? (e.preventDefault(), u.A.clearAll(a, S))
-                            : (e.preventDefault(), u.A.remove(a, n, S));
-                        return;
-                    case f.Ks6.ARROW_UP:
-                        let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
-                        if (t) return;
-                        e.preventDefault(), d._.dispatchToLastSubscribed(f.jej.FOCUS_MESSAGES, { atEnd: !0 });
-                }
-                y?.(e);
-            }
-        };
-    return (0, r.jsx)(l.vN3, {
-        children: (0, r.jsx)("li", {
+        { handleFocus: T, handleBlur: j } = (0, m.G)(b),
+        R = 0 === y,
+        w = null != A;
+    return (0, l.jsx)(c.vN, {
+        children: (0, l.jsx)("li", {
             ...N,
-            onFocus: R,
-            onBlur: O,
-            onClick: w,
-            onKeyDown: x,
-            className: s()(h.Se, m, { [h.oi]: 2 === v }),
+            onFocus: T,
+            onBlur: j,
+            onClick: (e) => {
+                if (0 === e.detail && null != S.current) {
+                    let e = S.current.querySelector('[role="button"], button');
+                    e?.click();
+                }
+            },
+            onKeyDown: (e) => {
+                if (E) {
+                    switch (e.which) {
+                        case p.Ks6.D:
+                            e.preventDefault(), u.A.remove(i, n, v);
+                            return;
+                        case p.Ks6.E:
+                            null != C && (e.preventDefault(), C(e));
+                            return;
+                        case p.Ks6.BACKSPACE:
+                            e.ctrlKey
+                                ? (e.preventDefault(), u.A.clearAll(i, v))
+                                : (e.preventDefault(), u.A.remove(i, n, v));
+                            return;
+                        case p.Ks6.ARROW_UP:
+                            if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
+                            e.preventDefault(), h._.dispatchToLastSubscribed(p.jej.FOCUS_MESSAGES, { atEnd: !0 });
+                    }
+                    I?.(e);
+                }
+            },
+            className: a()(g.Se, r, { [g.oi]: 2 === y }),
             ref: t,
-            children: (0, r.jsxs)("div", {
-                className: h.PO,
-                ref: C,
+            children: (0, l.jsxs)("div", {
+                className: g.PO,
+                ref: S,
                 children: [
-                    E,
-                    L
-                        ? (0, r.jsx)("div", {
-                              className: h.TC,
-                              children: (0, r.jsx)("div", {
-                                  className: s()(h.KY, { [h.BN]: D }),
-                                  onContextMenu: g,
-                                  "aria-label": p.intl.string(p.t["8Lu3Du"]),
-                                  children: (0, r.jsx)(c.Ay, { className: s()({ [h.BX]: D }), children: A }),
+                    _,
+                    w
+                        ? (0, l.jsx)("div", {
+                              className: g.TC,
+                              children: (0, l.jsx)("div", {
+                                  className: a()(g.KY, { [g.BN]: R }),
+                                  onContextMenu: x,
+                                  "aria-label": f.intl.string(f.t["8Lu3Du"]),
+                                  children: (0, l.jsx)(d.Ay, { className: a()({ [g.BX]: R }), children: A }),
                               }),
                           })
                         : null,
@@ -101,5 +96,4 @@ function E(e, t) {
             }),
         }),
     });
-}
-let A = i.forwardRef(E);
+});

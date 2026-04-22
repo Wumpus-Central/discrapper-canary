@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { N: () => m });
 var i = n(627968);
 n(64700);
-var s = n(660496),
-    l = n(40160),
+var l = n(660496),
+    s = n(40160),
     r = n(324898),
     a = n(294363),
     o = n(400934),
@@ -38,7 +37,7 @@ let m = (e) => {
         { renderComponent: () => (0, i.jsx)(o.A, { title: u.intl.string(u.t["7cAQmj"]) }, "delete-spam"), enabled: !0 },
     ].filter((e) => null != e);
     return {
-        [s.C.CAPTCHA_AND_RAID_PROTECTION]: [
+        [l.C.CAPTCHA_AND_RAID_PROTECTION]: [
             {
                 renderComponent: () => (0, i.jsx)(a.A, { guild: e }, "raid-alerts"),
                 enabled: !e.features.has(c.GuildFeatures.RAID_ALERTS_DISABLED),
@@ -53,10 +52,10 @@ let m = (e) => {
                 enabled: !0,
             },
         ],
-        [s.C.DM_AND_SPAM_PROTECTION]: t,
-        [s.C.PERMISSIONS]: [
+        [l.C.DM_AND_SPAM_PROTECTION]: t,
+        [l.C.PERMISSIONS]: [
             {
-                renderComponent: () => (0, i.jsx)(l.A, { guild: e }, "guild-mfa"),
+                renderComponent: () => (0, i.jsx)(s.A, { guild: e }, "guild-mfa"),
                 enabled: e.mfaLevel === c.EkJ.ELEVATED,
             },
             {

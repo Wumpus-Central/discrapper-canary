@@ -1,119 +1,120 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     r = n(311907),
-    l = n(397927),
-    a = n(890698),
-    o = n(198982),
-    c = n(201505);
+    l = n(292666),
+    a = n(123292),
+    o = n(890698),
+    c = n(198982),
+    d = n(201505);
 n(829926);
-var d = n(153488),
-    u = n(954571),
+var u = n(153488),
+    _ = n(954571),
     h = n(203982),
-    _ = n(15552),
+    m = n(15552),
     p = n(906564),
     g = n(854378),
-    m = n(359438),
-    A = n(383302),
-    f = n(362707),
+    A = n(359438),
+    f = n(383302),
+    x = n(362707),
     E = n(782021),
-    x = n(341826),
-    I = n(991101),
+    I = n(341826),
+    v = n(991101),
     N = n(652215);
 n(436317);
-var v = n(985018),
-    T = n(731286),
-    j = n(818050);
-function C(e) {
+var j = n(985018),
+    C = n(731286),
+    T = n(818050);
+function b(e) {
     let t,
-        { invite: n, authBoxClassName: C, onApiErrors: S, onGotoLogin: y, onRegister: b } = e,
-        R = (0, r.bG)([d.A], () => d.A.getAuthenticationConsentRequired()),
+        { invite: n, authBoxClassName: b, onApiErrors: S, onGotoLogin: y, onRegister: R } = e,
+        w = (0, r.bG)([u.A], () => u.A.getAuthenticationConsentRequired()),
         O = n?.guild_scheduled_event != null,
         L = s.useRef(null);
     t =
         n?.guild_scheduled_event != null
-            ? (0, i.jsx)(m.X, { channel: n.channel, guildScheduledEvent: n.guild_scheduled_event })
-            : (0, i.jsx)("div", { className: j.S3, children: (0, i.jsx)(a.A, { invite: n, inUnclaimedFlow: !0 }) });
-    let [w, k] = s.useState(""),
-        [D, U] = s.useState(null),
-        [P, B] = (0, f.S9)(R),
-        [G, M] = s.useState(!1),
-        [F, V] = s.useState({}),
-        { username: W, global_name: H, date_of_birth: K } = F,
-        [z, Q] = (0, f.ic)();
+            ? (0, i.jsx)(A.X, { channel: n.channel, guildScheduledEvent: n.guild_scheduled_event })
+            : (0, i.jsx)("div", { className: T.S3, children: (0, i.jsx)(o.A, { invite: n, inUnclaimedFlow: !0 }) });
+    let [k, G] = s.useState(""),
+        [U, D] = s.useState(null),
+        [P, B] = (0, x.S9)(w),
+        [M, V] = s.useState(!1),
+        [F, W] = s.useState({}),
+        { username: H, global_name: z, date_of_birth: K } = F,
+        [Q, q] = (0, x.ic)();
     s.useEffect(() => {
-        null == D && L.current?.focus();
-    }, [D, L]);
-    let [q, Y] = s.useState(null),
-        [X, J] = s.useState(null),
-        $ = s.useCallback(async () => {
-            h._.dispatch(N.jej.WAVE_EMPHASIZE), M(!0), V({});
+        null == U && L.current?.focus();
+    }, [U, L]);
+    let [Y, X] = s.useState(null),
+        [$, Z] = s.useState(null),
+        J = s.useCallback(async () => {
+            h._.dispatch(N.jej.WAVE_EMPHASIZE), V(!0), W({});
             try {
-                await (0, p.Ay)({ consent: P, invite: n.code, globalName: w, birthday: D }), b?.();
+                await (0, p.Ay)({ consent: P, invite: n.code, globalName: k, birthday: U }), R?.();
             } catch (t) {
-                if ((M(!1), !(t instanceof o.LG))) return;
-                let e = (0, _.W)(t);
-                V(e), S?.(e), "number" == typeof e.retry_after && Q(e.retry_after);
+                if ((V(!1), !(t instanceof c.LG))) return;
+                let e = (0, m.W)(t);
+                W(e), S?.(e), "number" == typeof e.retry_after && q(e.retry_after);
             }
-        }, [n, w, D, P, S, b, Q, V, M]),
-        Z = s.useCallback(
+        }, [n, k, U, P, S, R, q, W, V]),
+        ee = s.useCallback(
             (e) => {
-                if ((e?.preventDefault(), null === R)) return;
+                if ((e?.preventDefault(), null === w)) return;
                 let t = !1;
-                0 === w.length && (Y(v.intl.string(v.t.EkokLy)), (t = !0)),
-                    null == D && (J(v.intl.string(v.t.EkokLy)), (t = !0)),
-                    t || $();
+                0 === k.length && (X(j.intl.string(j.t.EkokLy)), (t = !0)),
+                    null == U && (Z(j.intl.string(j.t.EkokLy)), (t = !0)),
+                    t || J();
             },
-            [w, D, R, $, Y, J],
+            [k, U, w, J, X, Z],
         );
     return n.state === N.elq.RESOLVING
-        ? (0, i.jsx)(x.A, { authBoxClassName: C, name: w, onNameChange: k })
+        ? (0, i.jsx)(I.A, { authBoxClassName: b, name: k, onNameChange: G })
         : (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)(g.Ay, {
                       tag: "section",
-                      className: C,
+                      className: b,
                       children: (0, i.jsxs)("form", {
-                          onSubmit: Z,
+                          onSubmit: ee,
                           children: [
                               t,
-                              O ? (0, i.jsx)("div", { className: T.yF }) : null,
+                              O ? (0, i.jsx)("div", { className: C.yF }) : null,
                               (0, i.jsxs)(g.eB, {
-                                  className: O ? void 0 : T.y0,
+                                  className: O ? void 0 : C.y0,
                                   children: [
-                                      (0, i.jsx)(l.ksK, {
-                                          helperText: v.intl.string(v.t["330TCc"]),
-                                          label: v.intl.string(v.t["9AjdkD"]),
-                                          error: q ?? (0, f.yX)(H ?? W),
+                                      (0, i.jsx)(l.k, {
+                                          helperText: j.intl.string(j.t["330TCc"]),
+                                          label: j.intl.string(j.t["9AjdkD"]),
+                                          error: Y ?? (0, x.yX)(z ?? H),
                                           autoFocus: !0,
                                           name: "global_name",
-                                          value: w,
-                                          placeholder: v.intl.string(v.t["09Q8yp"]),
-                                          onChange: k,
+                                          value: k,
+                                          placeholder: j.intl.string(j.t["09Q8yp"]),
+                                          onChange: G,
                                           onFocus: () => {
-                                              u.default.track(N.HAw.REGISTER_INPUT_FOCUS, { field: "global_name" });
+                                              _.default.track(N.HAw.REGISTER_INPUT_FOCUS, { field: "global_name" });
                                           },
                                           onBlur: () => {
-                                              u.default.track(N.HAw.REGISTER_INPUT_BLUR, { field: "global_name" });
+                                              _.default.track(N.HAw.REGISTER_INPUT_BLUR, { field: "global_name" });
                                           },
                                       }),
-                                      (0, i.jsx)(c.A, {
-                                          label: v.intl.string(v.t.rhBeKe),
-                                          wrapperClassName: T.DC,
+                                      (0, i.jsx)(d.A, {
+                                          label: j.intl.string(j.t.rhBeKe),
+                                          wrapperClassName: C.DC,
                                           name: "date_of_birth",
                                           onChange: (e) => {
-                                              U(e), null != e && J(null);
+                                              D(e), null != e && Z(null);
                                           },
-                                          error: X ?? (0, f.yX)(K),
-                                          value: D,
+                                          error: $ ?? (0, x.yX)(K),
+                                          value: U,
                                       }),
-                                      (0, i.jsx)(E.A, { consent: P, consentRequired: R, onConsentChange: B }),
-                                      (0, i.jsx)(I.A, { consentRequired: R, consent: P, registering: G }),
+                                      (0, i.jsx)(E.A, { consent: P, consentRequired: w, onConsentChange: B }),
+                                      (0, i.jsx)(v.A, { consentRequired: w, consent: P, registering: M }),
                                       (0, i.jsx)("div", {
-                                          className: j.QX,
-                                          children: (0, i.jsx)(l.QWc, {
-                                              text: v.intl.string(v.t["1lWxux"]),
+                                          className: T.QX,
+                                          children: (0, i.jsx)(a.Q, {
+                                              text: j.intl.string(j.t["1lWxux"]),
                                               textVariant: "text-sm/normal",
                                               onClick: y,
                                           }),
@@ -125,8 +126,8 @@ function C(e) {
                   }),
                   null != n && O
                       ? (0, i.jsx)(g.Ay, {
-                            className: j.QX,
-                            children: (0, i.jsx)(A.N, { guild: n.guild, onlineCount: n.approximate_presence_count }),
+                            className: T.QX,
+                            children: (0, i.jsx)(f.N, { guild: n.guild, onlineCount: n.approximate_presence_count }),
                         })
                       : null,
               ],

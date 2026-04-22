@@ -1,45 +1,44 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
+n.d(t, { A: () => x });
+var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(43990),
-    l = n(311907),
-    u = n(544028),
-    c = n(746002),
+    r = n(503698),
+    a = n.n(r),
+    s = n(43990),
+    o = n(311907),
+    c = n(544028),
+    u = n(746002),
     d = n(219220),
-    _ = n(325409);
+    m = n(325409);
 function f(e) {
     let { skuId: t, layer: n, data: i } = e,
-        s = i?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
-    if (null == s) return null;
+        r = i?.src ?? (0, u.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
+    if (null == r) return null;
     if ("border" === n.type) {
-        let e = { "--custom-profile-frame-layer-src": `url(${s})` };
-        return (0, r.jsx)("div", {
+        let e = { "--custom-profile-frame-layer-src": `url(${r})` };
+        return (0, l.jsx)("div", {
             role: "img",
-            className: a()(_.S_, _.PQ, { [_.Wm]: "front" === n.order, [_.aX]: "back" === n.order }),
+            className: a()(m.S_, m.PQ, { [m.Wm]: "front" === n.order, [m.aX]: "back" === n.order }),
             style: e,
         });
     }
-    return (0, r.jsx)("div", {
-        className: a()(_.S_, {
-            [_.im]: "staple" === n.type,
-            [_.H$]: "rail" === n.type,
-            [_.Wm]: "front" === n.order,
-            [_.aX]: "back" === n.order,
-            [_.Mn]: "top" === n.anchor,
-            [_.sQ]: "bottom" === n.anchor,
-            [_.gX]: "center" === n.anchor,
-            [_.no]: !0 === n.responsive,
+    return (0, l.jsx)("div", {
+        className: a()(m.S_, {
+            [m.im]: "staple" === n.type,
+            [m.H$]: "rail" === n.type,
+            [m.Wm]: "front" === n.order,
+            [m.aX]: "back" === n.order,
+            [m.Mn]: "top" === n.anchor,
+            [m.sQ]: "bottom" === n.anchor,
+            [m.gX]: "center" === n.anchor,
+            [m.no]: !0 === n.responsive,
         }),
-        children: (0, r.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }),
+        children: (0, l.jsx)("img", { src: r, alt: "", "aria-hidden": !0 }),
     });
 }
-function p(e) {
+function x(e) {
     let { frame: t, layout: n } = e,
-        s = (0, l.bG)([u.A], () => u.A.theme),
-        c = i.useMemo(
+        r = (0, o.bG)([c.A], () => c.A.theme),
+        u = i.useMemo(
             () =>
                 "MODAL_V2" === n
                     ? t.layers.filter((e) => "bottom" !== e.anchor)
@@ -48,17 +47,17 @@ function p(e) {
                       : t.layers,
             [n, t.layers],
         ),
-        { layerData: p } = (0, d.A)({ skuId: t.skuId, layers: c });
-    return 0 === c.length
+        { layerData: x } = (0, d.A)({ skuId: t.skuId, layers: u });
+    return 0 === u.length
         ? null
-        : (0, r.jsx)(o.N, {
-              theme: s,
+        : (0, l.jsx)(s.N, {
+              theme: r,
               children: (e) =>
-                  (0, r.jsx)("div", {
-                      className: a()(_.hH, e),
+                  (0, l.jsx)("div", {
+                      className: a()(m.hH, e),
                       "aria-label": t.label,
                       role: "img",
-                      children: c.map((e) => (0, r.jsx)(f, { skuId: t.skuId, layer: e, data: p[e.id] }, e.id)),
+                      children: u.map((e) => (0, l.jsx)(f, { skuId: t.skuId, layer: e, data: x[e.id] }, e.id)),
                   }),
           });
 }

@@ -1,108 +1,112 @@
-"use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(827734),
-    r = n(397927),
-    a = n(591552),
-    o = n(961973),
-    d = n(863694),
-    c = n(259866),
-    u = n(539916),
-    m = n(985018),
-    g = n(821683);
-function x(e) {
+var l = n(311907),
+    s = n(827734),
+    r = n(628284),
+    a = n(285796),
+    o = n(349288),
+    d = n(834730),
+    c = n(248530),
+    u = n(885574),
+    m = n(591552),
+    g = n(961973),
+    h = n(863694),
+    x = n(259866),
+    _ = n(539916),
+    p = n(985018),
+    A = n(276609);
+function E(e) {
     let { guildId: t, scrollToQuestions: n } = e,
-        x = (0, s.bG)([a.A], () => a.A.isAdvancedMode(t)),
-        h = (0, s.bG)([d.A], () => d.A.editedDefaultChannelIds),
-        [_, A] = (0, o.tb)(t, h),
-        [p, f] = (0, c.tB)(t, [...h]),
-        j = x ? f.length : A.length,
-        N = x ? p.length : _.length,
-        E = N >= u.Kd,
-        b = f.length - A.length,
-        T = (0, i.jsx)(r.yr3, {
+        E = (0, l.bG)([m.A], () => m.A.isAdvancedMode(t)),
+        f = (0, l.bG)([h.A], () => h.A.editedDefaultChannelIds),
+        [j, N] = (0, g.tb)(t, f),
+        [I, C] = (0, x.tB)(t, [...f]),
+        b = E ? C.length : N.length,
+        v = E ? I.length : j.length,
+        S = v >= _.Kd,
+        T = C.length - N.length,
+        y = (0, i.jsx)(r.y, {
             size: "sm",
-            color: l.A.unsafe_rawColors.BRAND_500.css,
-            secondaryColor: l.A.unsafe_rawColors.WHITE.css,
-            className: g.Kk,
+            color: s.A.unsafe_rawColors.BRAND_500.css,
+            secondaryColor: s.A.unsafe_rawColors.WHITE.css,
+            className: A.Kk,
         }),
-        C = (0, i.jsx)(r.aXh, {
+        R = (0, i.jsx)(a.a, {
             size: "sm",
-            className: g.Kk,
-            color: l.A.colors.WHITE.css,
-            secondaryColor: l.A.colors.BACKGROUND_MOD_MUTED.css,
+            className: A.Kk,
+            color: s.A.colors.WHITE.css,
+            secondaryColor: s.A.colors.BACKGROUND_MOD_MUTED.css,
         }),
-        I = [(Math.min(u.Kd, N) / u.Kd) * 100],
-        v = E ? [l.A.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.A.colors.TEXT_BRAND.css];
+        L = [(Math.min(_.Kd, v) / _.Kd) * 100],
+        D = S ? [s.A.colors.TEXT_FEEDBACK_POSITIVE.css] : [s.A.colors.TEXT_BRAND.css];
     return (0, i.jsxs)("div", {
-        className: g.kL,
+        className: A.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: g.wx,
+                className: A.wx,
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(d.E, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: m.intl.format(m.t.kvroKO, { count: N }),
+                        children: p.intl.format(p.t.kvroKO, { count: v }),
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(d.E, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: m.intl.format(m.t["0MjxJ5"], { count: j }),
+                        children: p.intl.format(p.t["0MjxJ5"], { count: b }),
                     }),
                 ],
             }),
-            (0, i.jsx)(r.LvI, { foregroundColors: v, percents: I, size: r.LvI.Sizes.XSMALL }),
+            (0, i.jsx)(c.L, { foregroundColors: D, percents: L, size: c.L.Sizes.XSMALL }),
             (0, i.jsxs)("div", {
-                className: g.n,
+                className: A.n,
                 children: [
-                    E ? T : C,
-                    (0, i.jsx)(r.Text, {
+                    S ? y : R,
+                    (0, i.jsx)(d.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: m.intl.format(m.t.PwXgSy, { count: u.Kd }),
+                        children: p.intl.format(p.t.PwXgSy, { count: _.Kd }),
                     }),
                 ],
             }),
-            x &&
+            E &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: g.n,
+                            className: A.n,
                             children: [
-                                (0, i.jsx)(r.mir, {
+                                (0, i.jsx)(u.m, {
                                     size: "sm",
-                                    color: l.A.colors.WHITE.css,
-                                    secondaryColor: l.A.colors.BACKGROUND_MOD_MUTED.css,
-                                    className: g.Kk,
+                                    color: s.A.colors.WHITE.css,
+                                    secondaryColor: s.A.colors.BACKGROUND_MOD_MUTED.css,
+                                    className: A.Kk,
                                 }),
-                                (0, i.jsx)(r.Text, {
+                                (0, i.jsx)(d.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: m.intl.string(m.t.AyvkOK),
+                                    children: p.intl.string(p.t.AyvkOK),
                                 }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: g.n,
+                            className: A.n,
                             children: [
-                                (0, i.jsx)(r.mir, {
+                                (0, i.jsx)(u.m, {
                                     size: "sm",
-                                    color: l.A.colors.WHITE.css,
-                                    secondaryColor: l.A.colors.BACKGROUND_MOD_MUTED.css,
-                                    className: g.Kk,
+                                    color: s.A.colors.WHITE.css,
+                                    secondaryColor: s.A.colors.BACKGROUND_MOD_MUTED.css,
+                                    className: A.Kk,
                                 }),
-                                (0, i.jsx)(r.Text, {
+                                (0, i.jsx)(d.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: m.intl.format(m.t["8Geut3"], {
-                                        count: b,
+                                    children: p.intl.format(p.t["8Geut3"], {
+                                        count: T,
                                         prejoinHook: (e) =>
-                                            (0, i.jsx)(r.MzZ, {
+                                            (0, i.jsx)(o.Anchor, {
                                                 onClick: n,
-                                                children: (0, i.jsx)(r.Text, {
+                                                children: (0, i.jsx)(d.E, {
                                                     tag: "span",
                                                     variant: "text-xs/normal",
                                                     color: "text-link",

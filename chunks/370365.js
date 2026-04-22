@@ -1,55 +1,55 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
+    a = n(243721),
     r = n(587895),
     o = n(15285),
     d = n(769015),
-    c = n(663677),
-    u = n(760751),
-    m = n(189081),
-    _ = n(686533),
-    g = n(502040);
-function x(e) {
+    u = n(663677),
+    c = n(760751),
+    g = n(189081),
+    m = n(686533),
+    _ = n(481384);
+function A(e) {
     let { game: t, gameApplication: n } = e,
         a = s.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, l.bG)([r.A], () => (null != n ? n : r.A.getApplication(t?.id)), [n, t]);
     return (0, i.jsx)(d.A, { game: o, pid: a, size: d.M.SMALL });
 }
-function A(e) {
+function h(e) {
     let {
             rawGame: t,
             gameApplication: n,
             supportDisabled: r,
             getEnabledFromStatus: d,
-            onChange: A,
-            clientSettingType: h,
-            ariaLabel: p,
+            onChange: h,
+            clientSettingType: p,
+            ariaLabel: x,
         } = e,
-        f = (0, l.cf)([o.Ay, u.A, m.A], () => (0, o.xU)(t, o.Ay, u.A, m.A)),
-        T = (0, l.cf)([u.A, m.A], () => (0, o.hw)(t, !1, [u.A, m.A]), [t]),
+        E = (0, l.cf)([o.Ay, c.A, g.A], () => (0, o.xU)(t, o.Ay, c.A, g.A)),
+        T = (0, l.cf)([c.A, g.A], () => (0, o.hw)(t, !1, [c.A, g.A]), [t]),
         S = d(T),
-        [E, b] = s.useState(S);
+        [f, b] = s.useState(S);
     return (
         s.useEffect(() => {
             b(S);
         }, [S]),
-        (0, i.jsx)(_.A, {
+        (0, i.jsx)(m.A, {
             title: t.name,
-            icon: (0, i.jsx)(x, { game: f, gameApplication: n }),
-            "aria-label": p,
+            icon: (0, i.jsx)(A, { game: E, gameApplication: n }),
+            "aria-label": x,
             action: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.dOG, {
-                        checked: E,
+                    (0, i.jsx)(a.d, {
+                        checked: f,
                         disabled: r,
                         onChange: (e) => {
                             let n;
-                            return (n = !e && E), void (b(e), A(e, f, T), n && (0, c.L)(h, f.id ?? t?.id ?? null));
+                            return (n = !e && f), void (b(e), h(e, E, T), n && (0, u.L)(p, E.id ?? t?.id ?? null));
                         },
                     }),
-                    (0, i.jsx)("div", { className: g.Kz }),
+                    (0, i.jsx)("div", { className: _.Kz }),
                 ],
             }),
         })

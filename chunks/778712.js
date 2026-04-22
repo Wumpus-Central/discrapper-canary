@@ -1,33 +1,29 @@
 "use strict";
-n.d(t, { FT: () => l, F_: () => i, Iq: () => a, Kj: () => o, _3: () => r, vC: () => s });
-var r = (function (e) {
-        return (
-            (e.SIZE_16 = "SIZE_16"),
-            (e.SIZE_20 = "SIZE_20"),
-            (e.SIZE_24 = "SIZE_24"),
-            (e.SIZE_32 = "SIZE_32"),
-            (e.SIZE_40 = "SIZE_40"),
-            (e.SIZE_44 = "SIZE_44"),
-            (e.SIZE_48 = "SIZE_48"),
-            (e.SIZE_56 = "SIZE_56"),
-            (e.SIZE_72 = "SIZE_72"),
-            (e.SIZE_80 = "SIZE_80"),
-            (e.SIZE_96 = "SIZE_96"),
-            (e.SIZE_120 = "SIZE_120"),
-            (e.SIZE_152 = "SIZE_152"),
-            (e.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30"),
-            (e.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60"),
-            (e.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.BLACK = "black"), (e.WHITE = "white"), e;
-    })({}),
-    a = (function (e) {
-        return (e[(e.HIGH = 0.7)] = "HIGH"), (e[(e.LOW = 0.45)] = "LOW"), e;
-    })({});
-let s = Object.freeze({
+n.d(t, { FT: () => c, F_: () => o, Iq: () => l, Kj: () => d, _3: () => a, vC: () => u });
+var r,
+    i,
+    s,
+    a =
+        (((r = {}).SIZE_16 = "SIZE_16"),
+        (r.SIZE_20 = "SIZE_20"),
+        (r.SIZE_24 = "SIZE_24"),
+        (r.SIZE_32 = "SIZE_32"),
+        (r.SIZE_40 = "SIZE_40"),
+        (r.SIZE_44 = "SIZE_44"),
+        (r.SIZE_48 = "SIZE_48"),
+        (r.SIZE_56 = "SIZE_56"),
+        (r.SIZE_72 = "SIZE_72"),
+        (r.SIZE_80 = "SIZE_80"),
+        (r.SIZE_96 = "SIZE_96"),
+        (r.SIZE_120 = "SIZE_120"),
+        (r.SIZE_152 = "SIZE_152"),
+        (r.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30"),
+        (r.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60"),
+        (r.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100"),
+        r),
+    o = (((i = {}).BLACK = "black"), (i.WHITE = "white"), i),
+    l = (((s = {})[(s.HIGH = 0.7)] = "HIGH"), (s[(s.LOW = 0.45)] = "LOW"), s);
+let u = Object.freeze({
     SIZE_16: Object.freeze({ size: 16, status: 6, stroke: 2, offset: 0 }),
     SIZE_20: Object.freeze({ size: 20, status: 6, stroke: 2, offset: 0 }),
     SIZE_24: Object.freeze({ size: 24, status: 8, stroke: 3, offset: 0 }),
@@ -45,9 +41,9 @@ let s = Object.freeze({
     DEPRECATED_SIZE_60: Object.freeze({ size: 60, status: 0, stroke: 0, offset: 0 }),
     DEPRECATED_SIZE_100: Object.freeze({ size: 100, status: 0, stroke: 0, offset: 0 }),
 });
-function o(e) {
-    return s[e];
+function d(e) {
+    return u[e];
 }
-function l(e) {
-    return "number" != typeof e ? o(e).size : e;
+function c(e) {
+    return "number" != typeof e ? u[e].size : e;
 }

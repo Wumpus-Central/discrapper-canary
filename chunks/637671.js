@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Th: "spacingContainer_eaaeee",
     e4: "formFieldContainer_eaaeee",

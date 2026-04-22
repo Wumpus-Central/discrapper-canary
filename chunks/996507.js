@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(64700),
-    s = n(985018);
-function l(e) {
-    let [t, n] = i.useState(s.intl.string(s.t.jBSYCD));
+    l = n(985018);
+function s(e) {
+    let [t, n] = i.useState(l.intl.string(l.t.jBSYCD));
     return {
-        imageCTA: null == e ? s.intl.string(s.t.Z37oSo) : s.intl.string(s.t["9P8djr"]),
-        imageAriaLabel: null == e ? s.intl.string(s.t.Z37oSo) : s.intl.formatToPlainString(s.t.W2YSXc, { filename: t }),
+        imageCTA: null == e ? l.intl.string(l.t.Z37oSo) : l.intl.string(l.t["9P8djr"]),
+        imageAriaLabel: null == e ? l.intl.string(l.t.Z37oSo) : l.intl.formatToPlainString(l.t.W2YSXc, { filename: t }),
         setFilename: n,
     };
 }

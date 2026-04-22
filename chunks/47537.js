@@ -8,9 +8,10 @@ function r(e, t) {
               e.badge === t.badge;
 }
 function i(e) {
-    if (null == e) return null;
-    if ("identityGuildId" in e) return e;
-    let t = e;
-    return { identityGuildId: t.identity_guild_id, identityEnabled: t.identity_enabled, tag: t.tag, badge: t.badge };
+    return null == e
+        ? null
+        : "identityGuildId" in e
+          ? e
+          : { identityGuildId: e.identity_guild_id, identityEnabled: e.identity_enabled, tag: e.tag, badge: e.badge };
 }
 n.d(t, { D: () => r, j: () => i });

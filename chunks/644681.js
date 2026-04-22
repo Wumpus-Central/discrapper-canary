@@ -1,27 +1,21 @@
-"use strict";
-n.d(t, { A: () => T });
-var r = n(627968),
+n.d(t, { A: () => N });
+var l = n(627968),
     i = n(64700),
     a = n(310784),
     s = n.n(a),
-    o = n(735438),
-    l = n(582754),
-    u = n(397927),
-    c = n(736653),
-    d = n(654107),
+    r = n(735438),
+    o = n(462887),
+    c = n(602853),
+    d = n(827734),
+    u = n(534514),
+    m = n(736653),
+    p = n(654107),
     _ = n(998304),
-    f = n(735991),
-    p = n(278597),
-    h = n(645725),
-    m = n(541781);
-let g = 20;
-function E(e, t, n) {
-    return t === n ? 1 : (0, o.clamp)((e - t) / (n - t), 0, 1);
-}
-function A(e, t, n) {
-    return e + (t - e) * n;
-}
-function I(e) {
+    A = n(735991),
+    h = n(278597),
+    f = n(645725),
+    x = n(379106);
+function C(e) {
     let [t, n] = i.useState(void 0);
     return (
         i.useEffect(() => {
@@ -30,56 +24,57 @@ function I(e) {
         t
     );
 }
-function T(e) {
-    let { application: t, context: n, name: a, iconURL: T, scrollerRef: y, sectionName: S } = e,
-        v = (0, l.qB)((0, c.Ay)()),
-        C = i.useRef(null),
+function N(e) {
+    let { application: t, context: n, name: a, iconURL: N, scrollerRef: g, sectionName: E } = e,
+        v = (0, o.q)((0, m.Ay)()),
         b = i.useRef(null),
-        N = i.useRef(null),
-        R = i.useRef(null),
-        O = (0, u.rdh)(u.LU0.colors.BACKGROUND_BASE_LOW).hex(),
-        D = (0, d.Ay)("number" == typeof T ? "" : T, O ?? ""),
+        I = i.useRef(null),
+        y = i.useRef(null),
+        j = i.useRef(null),
+        P = (0, c.r)(d.A.colors.BACKGROUND_BASE_LOW).hex(),
+        T = (0, p.Ay)("number" == typeof N ? "" : N, P ?? ""),
         L = i.useMemo(
             () =>
                 (0, _.lZ)({
-                    foreground: s()(D),
+                    foreground: s()(T),
                     background: s()(v ? "#000000" : "#ffffff"),
                     ratio: 5,
                     saturationFactor: 0.6,
-                })?.hex() ?? D,
-            [D, v],
+                })?.hex() ?? T,
+            [T, v],
         ),
-        w = I(C),
-        x = I(b),
-        P = i.useCallback(() => {
-            let e = y.current,
-                t = C.current,
-                n = N.current,
-                r = R?.current,
-                i = parseInt(w?.height ?? ""),
-                a = parseInt(x?.height ?? "");
+        S = C(b),
+        R = C(I),
+        O = i.useCallback(() => {
+            let e = g.current,
+                t = b.current,
+                n = y.current,
+                l = j?.current,
+                i = parseInt(S?.height ?? ""),
+                a = parseInt(R?.height ?? "");
             if (null != e && null != t && null != n && !isNaN(i) && !isNaN(a)) {
-                let s = e.scrollTop ?? 0,
-                    l = 0 !== e.scrollHeight ? e.scrollHeight : a + g,
-                    u = 0 !== e.clientHeight ? e.clientHeight : a + g,
-                    c = a - i,
-                    d = (0, o.clamp)(l - u, c + 1, a + g),
-                    _ = E(s, c, d);
-                (t.style.filter = `brightness(${A(1, v ? 1.4 : 0.6, _)})`),
-                    (t.style.backgroundColor = `color-mix(in oklab,${D} ${(1 - _) * 100}%, ${L})`),
-                    (n.style.opacity = `${A(0, 1, _)}`),
-                    (n.style.transform = `translateY(${A(i / 4, 0, _)}px)`),
-                    null != r && (r.style.opacity = `${A(1, 0, _)}`);
+                var s;
+                let o = e.scrollTop ?? 0,
+                    c = 0 !== e.scrollHeight ? e.scrollHeight : a + 20,
+                    d = 0 !== e.clientHeight ? e.clientHeight : a + 20,
+                    u = a - i,
+                    m = (0, r.clamp)(c - d, u + 1, a + 20),
+                    p = u === m ? 1 : (0, r.clamp)((o - u) / (m - u), 0, 1);
+                (t.style.filter = `brightness(${1 + ((v ? 1.4 : 0.6) - 1) * p})`),
+                    (t.style.backgroundColor = `color-mix(in oklab,${T} ${(1 - p) * 100}%, ${L})`),
+                    (n.style.opacity = `${0 + +p}`),
+                    (n.style.transform = `translateY(${(s = i / 4) + (0 - s) * p}px)`),
+                    null != l && (l.style.opacity = `${1 + -1 * p}`);
             }
-        }, [L, D, x?.height, v, y, w?.height]);
+        }, [L, T, R?.height, v, g, S?.height]);
     return (
         i.useEffect(() => {
-            P();
-        }, [P, v]),
+            O();
+        }, [O, v]),
         i.useEffect(() => {
-            let e = y.current,
+            let e = g.current,
                 t = () => {
-                    P();
+                    O();
                 };
             return (
                 e?.addEventListener("scroll", t),
@@ -87,36 +82,36 @@ function T(e) {
                     e?.removeEventListener("scroll", t);
                 }
             );
-        }, [y, P]),
-        (0, r.jsxs)(r.Fragment, {
+        }, [g, O]),
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: m.Xp,
+                (0, l.jsxs)("div", {
+                    className: x.Xp,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: m.LO,
-                            children: (0, r.jsx)("div", { className: m.If, ref: C }),
+                        (0, l.jsx)("div", {
+                            className: x.LO,
+                            children: (0, l.jsx)("div", { className: x.If, ref: b }),
                         }),
-                        (0, r.jsx)("div", { className: m.FY, children: (0, r.jsx)(p.A, { className: m.aY }) }),
-                        (0, r.jsx)("div", {
-                            className: m.VW,
-                            children: (0, r.jsx)(u.Heading, {
-                                ref: N,
-                                className: m.n,
+                        (0, l.jsx)("div", { className: x.FY, children: (0, l.jsx)(h.A, { className: x.aY }) }),
+                        (0, l.jsx)("div", {
+                            className: x.VW,
+                            children: (0, l.jsx)(u.D, {
+                                ref: y,
+                                className: x.n,
                                 variant: "heading-lg/extrabold",
                                 children: a,
                             }),
                         }),
                     ],
                 }),
-                (0, f.$B)(t)
-                    ? (0, r.jsx)("div", {
-                          ref: R,
-                          className: m.Ch,
-                          children: (0, r.jsx)(h.A, { application: t, context: n, className: m.aY, sectionName: S }),
+                (0, A.$B)(t)
+                    ? (0, l.jsx)("div", {
+                          ref: j,
+                          className: x.Ch,
+                          children: (0, l.jsx)(f.A, { application: t, context: n, className: x.aY, sectionName: E }),
                       })
                     : null,
-                (0, r.jsx)("div", { ref: b, className: m.b8, style: { backgroundColor: D } }),
+                (0, l.jsx)("div", { ref: I, className: x.b8, style: { backgroundColor: T } }),
             ],
         })
     );

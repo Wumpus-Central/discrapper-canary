@@ -1,66 +1,66 @@
 "use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(397927),
-    l = n(486020),
-    u = n(101928),
-    c = n(195898),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    r = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    s = n(86182),
+    o = n(486020),
+    c = n(101928),
+    u = n(195898),
     d = n(939496),
-    _ = n(20927);
-let f = Object.assign(
-    i.forwardRef(function (e, t) {
+    h = n(41551);
+let _ = Object.assign(
+    r.forwardRef(function (e, t) {
         let {
                 user: n,
-                displayProfile: i,
-                themeType: s,
-                className: f,
+                displayProfile: r,
+                themeType: l,
+                className: _,
                 pendingThemeColors: p,
-                themeOverride: h,
-                children: m,
-                privateBanner: E,
+                themeOverride: A,
+                children: f,
+                privateBanner: m,
                 forceShowPremium: g = !1,
-                forceUserTheme: A = !1,
+                forceUserTheme: E = !1,
             } = e,
             {
                 theme: I,
-                primaryColor: T,
-                secondaryColor: S,
-            } = (0, u.A)({ user: n, displayProfile: i, pendingThemeColors: p, isPreview: g, forceUserTheme: A }),
-            { profileThemeStyle: y, profileThemeClassName: v } = (0, c.A)({
-                theme: h ?? I,
-                themeType: s,
-                primaryColor: T,
-                secondaryColor: S,
-                forceUserTheme: A,
+                primaryColor: v,
+                secondaryColor: b,
+            } = (0, c.A)({ user: n, displayProfile: r, pendingThemeColors: p, isPreview: g, forceUserTheme: E }),
+            { profileThemeStyle: S, profileThemeClassName: T } = (0, u.A)({
+                theme: A ?? I,
+                themeType: l,
+                primaryColor: v,
+                secondaryColor: b,
+                forceUserTheme: E,
             }),
-            N = (0, l.VI)(i?.banner);
-        return (0, r.jsx)("div", {
-            className: a()(_.A7, v, f, null != E && _.Gw, N && "has-animated-banner"),
-            style: y,
+            y = (0, o.VI)(r?.banner);
+        return (0, i.jsx)("div", {
+            className: a()(h.A7, T, _, null != m && h.Gw, y && "has-animated-banner"),
+            style: S,
             ref: t,
-            children: (0, r.jsx)("div", {
-                className: _.vW,
-                children: (0, r.jsx)(o.wXn, {
-                    theme: h ?? I,
-                    children: (0, r.jsxs)(d.U, {
-                        themeType: s,
-                        theme: h ?? I,
-                        primaryColor: T,
-                        secondaryColor: S,
+            children: (0, i.jsx)("div", {
+                className: h.vW,
+                children: (0, i.jsx)(s.w, {
+                    theme: A ?? I,
+                    children: (0, i.jsxs)(d.U, {
+                        themeType: l,
+                        theme: A ?? I,
+                        primaryColor: v,
+                        secondaryColor: b,
                         userId: n.id,
-                        children: [E, m],
+                        children: [m, f],
                     }),
                 }),
             }),
         });
     }),
     {
-        Overlay: i.forwardRef(function (e, t) {
-            let { children: n, className: i } = e;
-            return (0, r.jsx)("div", { ref: t, className: a()(_.Lw, i), children: n });
+        Overlay: r.forwardRef(function (e, t) {
+            let { children: n, className: r } = e;
+            return (0, i.jsx)("div", { ref: t, className: a()(h.Lw, r), children: n });
         }),
     },
 );

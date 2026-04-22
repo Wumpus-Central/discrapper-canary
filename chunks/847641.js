@@ -3,16 +3,16 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     a = n.n(l),
-    r = n(582754),
-    s = n(397927),
+    s = n(462887),
+    r = n(834730),
     o = n(736653),
     d = n(985018),
-    c = n(541849);
+    c = n(754912);
 let u = function (e) {
     let { className: t, color: n = "text-strong", textOpacity: l = 0.9 } = e,
         u = (0, o.DP)(),
-        m = (0, r.Mw)(u);
-    return (0, i.jsxs)(s.Text, {
+        m = (0, s.M)(u);
+    return (0, i.jsxs)(r.E, {
         variant: "text-xxs/medium",
         color: n,
         className: a()(c.P, t),

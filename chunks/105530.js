@@ -1,17 +1,15 @@
 "use strict";
-n.d(t, { Ay: () => o, eY: () => s, zF: () => a });
-var r = n(311907),
-    i = n(977997),
-    a = (function (e) {
-        return (
-            (e[(e.NONE = 0)] = "NONE"),
-            (e[(e.REQUESTED_TO_SPEAK = 1)] = "REQUESTED_TO_SPEAK"),
-            (e[(e.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2)] = "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK"),
-            (e[(e.ON_STAGE = 3)] = "ON_STAGE"),
-            e
-        );
-    })({});
-function s(e) {
+n.d(t, { Ay: () => l, eY: () => o, zF: () => a });
+var r,
+    i = n(311907),
+    s = n(977997),
+    a =
+        (((r = {})[(r.NONE = 0)] = "NONE"),
+        (r[(r.REQUESTED_TO_SPEAK = 1)] = "REQUESTED_TO_SPEAK"),
+        (r[(r.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2)] = "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK"),
+        (r[(r.ON_STAGE = 3)] = "ON_STAGE"),
+        r);
+function o(e) {
     return null == e
         ? 0
         : e.suppress && null != e.requestToSpeakTimestamp
@@ -20,6 +18,6 @@ function s(e) {
             ? 3 * (!e.suppress && null == e.requestToSpeakTimestamp)
             : 2;
 }
-function o(e, t) {
-    return (0, r.bG)([i.A], () => (null == e || null == t ? 0 : s(i.A.getVoiceStateForChannel(t, e))), [e, t]);
+function l(e, t) {
+    return (0, i.bG)([s.A], () => (null == e || null == t ? 0 : o(s.A.getVoiceStateForChannel(t, e))), [e, t]);
 }

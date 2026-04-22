@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n) {
         var r = e + " ";
@@ -27,7 +25,7 @@
                 return 1 === e ? (r += "godina") : 2 === e || 3 === e || 4 === e ? (r += "godine") : (r += "godina"), r;
         }
     }
-    return e.defineLocale("bs", {
+    e.defineLocale("bs", {
         months: "januar_februar_mart_april_maj_juni_juli_august_septembar_oktobar_novembar_decembar".split("_"),
         monthsShort: "jan._feb._mar._apr._maj._jun._jul._aug._sep._okt._nov._dec.".split("_"),
         monthsParseExact: !0,
@@ -98,4 +96,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

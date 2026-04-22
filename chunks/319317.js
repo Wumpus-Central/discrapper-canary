@@ -2,13 +2,12 @@
 n.d(t, { A: () => d }), n(938796);
 var r = n(989349),
     i = n.n(r),
-    a = n(665260),
-    s = n(315069),
+    s = n(665260),
+    a = n(315069),
     o = n(587895),
     l = n(557009),
     u = n(652215);
-let c = "master";
-class d extends s.A {
+class d extends a.A {
     id;
     branchId;
     flags;
@@ -62,7 +61,7 @@ class d extends s.A {
         return this.flags;
     }
     hasFlag(e) {
-        return a.Lt(this.flags, e);
+        return s.Lt(this.flags, e);
     }
     isHidden() {
         return this.hasFlag(u.hM6.HIDDEN);
@@ -92,7 +91,7 @@ class d extends s.A {
         return u.d3x.DISCORD;
     }
     getBranchName() {
-        return null != this.branch ? this.branch.name : c;
+        return null != this.branch ? this.branch.name : "master";
     }
     getBranchedName(e) {
         return this.isMasterBranch() || null == this.branch ? e.name : `${e.name} (${this.branch.name})`;

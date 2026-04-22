@@ -1,25 +1,26 @@
-i.d(t, { A: () => A });
-var n = i(627968);
-i(64700);
-var l = i(311907),
-    s = i(397927),
-    r = i(71393),
-    a = i(287809),
-    d = i(234053),
-    o = i(395504),
-    c = i(652215),
-    u = i(985018);
+t.d(n, { A: () => A });
+var l = t(627968);
+t(64700);
+var i = t(311907),
+    a = t(477782),
+    r = t(39623),
+    s = t(71393),
+    o = t(287809),
+    d = t(234053),
+    c = t(395504),
+    u = t(652215),
+    v = t(985018);
 function A(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        i = (0, o.jN)(e),
-        A = (0, l.bG)([r.A], () => r.A.getGuild(e)),
-        g = (0, l.bG)([a.default], () => a.default.getCurrentUser());
-    return null != g && null != A && (A.features.has(c.GuildFeatures.COMMUNITY) || g.isStaff())
-        ? (0, n.jsx)(s.sLh, {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        t = (0, c.jN)(e),
+        A = (0, i.bG)([s.A], () => s.A.getGuild(e)),
+        g = (0, i.bG)([o.default], () => o.default.getCurrentUser());
+    return null != g && null != A && (A.features.has(u.GuildFeatures.COMMUNITY) || g.isStaff())
+        ? (0, l.jsx)(a.sL, {
               id: "opt-in",
-              label: u.intl.string(u.t.FB2ZZV),
-              leadingAccessory: t ? { type: "icon", icon: s.bMW } : void 0,
-              checked: !i,
+              label: v.intl.string(v.t.FB2ZZV),
+              leadingAccessory: n ? { type: "icon", icon: r.b } : void 0,
+              checked: !t,
               action: () => {
                   (0, d.Lu)(e);
               },

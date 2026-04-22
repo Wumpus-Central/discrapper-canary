@@ -1,14 +1,12 @@
-"use strict";
-n.d(t, { cf: () => o });
-var r = n(626584);
-n(585211);
-var i = n(824606);
-let a = new r.A("GifProviderConfig"),
-    s = "tenor";
-function o() {
+r.d(t, { cf: () => i });
+var s = r(626584);
+r(585211);
+var l = r(824606);
+let n = new s.A("GifProviderConfig");
+function i() {
     try {
-        return i.q.getConfig({ location: "gif_picker" }).provider;
+        return l.q.getConfig({ location: "gif_picker" }).provider;
     } catch (e) {
-        return a.warn("Error getting provider for API request:", e), s;
+        return n.warn("Error getting provider for API request:", e), "tenor";
     }
 }

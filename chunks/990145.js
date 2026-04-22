@@ -1,42 +1,39 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = "vas\xe1rnap h\xe9tfőn kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
     function n(e, t, n, r) {
-        var i = e;
         switch (n) {
             case "s":
                 return r || t ? "n\xe9h\xe1ny m\xe1sodperc" : "n\xe9h\xe1ny m\xe1sodperce";
             case "ss":
-                return i + (r || t) ? " m\xe1sodperc" : " m\xe1sodperce";
+                return e + (r || t) ? " m\xe1sodperc" : " m\xe1sodperce";
             case "m":
                 return "egy" + (r || t ? " perc" : " perce");
             case "mm":
-                return i + (r || t ? " perc" : " perce");
+                return e + (r || t ? " perc" : " perce");
             case "h":
                 return "egy" + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "hh":
-                return i + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
+                return e + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "d":
                 return "egy" + (r || t ? " nap" : " napja");
             case "dd":
-                return i + (r || t ? " nap" : " napja");
+                return e + (r || t ? " nap" : " napja");
             case "M":
                 return "egy" + (r || t ? " h\xf3nap" : " h\xf3napja");
             case "MM":
-                return i + (r || t ? " h\xf3nap" : " h\xf3napja");
+                return e + (r || t ? " h\xf3nap" : " h\xf3napja");
             case "y":
                 return "egy" + (r || t ? " \xe9v" : " \xe9ve");
             case "yy":
-                return i + (r || t ? " \xe9v" : " \xe9ve");
+                return e + (r || t ? " \xe9v" : " \xe9ve");
         }
         return "";
     }
     function r(e) {
         return (e ? "" : "[m\xfalt] ") + "[" + t[this.day()] + "] LT[-kor]";
     }
-    return e.defineLocale("hu", {
+    e.defineLocale("hu", {
         months: "janu\xe1r_febru\xe1r_m\xe1rcius_\xe1prilis_m\xe1jus_j\xfanius_j\xfalius_augusztus_szeptember_okt\xf3ber_november_december".split(
             "_",
         ),
@@ -91,4 +88,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

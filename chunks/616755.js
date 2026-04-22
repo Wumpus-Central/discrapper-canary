@@ -1,184 +1,147 @@
-i.d(t, { A: () => S, H: () => b });
-var l = i(627968),
-    n = i(64700),
-    a = i(503698),
-    s = i.n(a),
-    r = i(110259),
-    d = i(158954),
-    o = i(397927),
-    c = i(241524),
-    u = i(260451),
-    m = i(444316),
-    x = i(460760),
-    g = i(115703),
-    h = i(63342),
-    _ = i(438842),
-    p = i(879472),
-    A = i(649640),
-    j = i(954571),
-    E = i(54959),
-    v = i(473644),
-    I = i(57930),
-    f = i(450382),
-    T = i(652215),
-    C = i(492171);
-function N(e) {
-    let { className: t, splashURL: i, backgroundColor: n, expanded: a } = e,
-        r = (0, A.b2)();
-    return null == i
-        ? (0, l.jsx)("div", { className: s()(t, C.D7), style: { background: (0, A.n6)(n ?? r.hex()) } })
+t.d(i, { A: () => S, H: () => w });
+var l = t(627968),
+    s = t(64700),
+    a = t(503698),
+    n = t.n(a),
+    r = t(110259),
+    d = t(20742),
+    o = t(331322),
+    c = t(778712),
+    u = t(224640),
+    h = t(834730),
+    m = t(241524),
+    _ = t(260451),
+    x = t(444316),
+    g = t(460760),
+    A = t(115703),
+    p = t(63342),
+    v = t(438842),
+    E = t(879472),
+    j = t(649640),
+    I = t(954571),
+    f = t(54959),
+    C = t(473644),
+    N = t(57930),
+    y = t(450382),
+    T = t(652215),
+    D = t(963120);
+function b(e) {
+    let { className: i, splashURL: t, backgroundColor: s, expanded: a } = e,
+        r = (0, j.b2)();
+    return null == t
+        ? (0, l.jsx)("div", { className: n()(i, D.D7), style: { background: (0, j.n6)(s ?? r.hex()) } })
         : (0, l.jsx)("div", {
-              className: t,
-              style: { backgroundImage: `url(${i})` },
+              className: i,
+              style: { backgroundImage: `url(${t})` },
               "aria-hidden": !0,
               "data-expanded": a,
           });
 }
-function y(e) {
-    let { invite: t, guild: i, splashURL: a, friendMemberIds: r, discoveryGuild: d } = e,
-        c = null != r && r.length > 0,
-        [u, x] = n.useState(!1),
-        g = n.useCallback(
+function L(e) {
+    let { invite: i, guild: t, splashURL: a, friendMemberIds: r, discoveryGuild: d } = e,
+        u = null != r && r.length > 0,
+        [h, m] = s.useState(!1),
+        _ = s.useCallback(
             (e) => {
-                x(e),
-                    j.default.track(T.HAw.INVITE_ACCEPT_DETAILS_VIEWED, {
-                        guild_id: i.id,
-                        invite_code: t.code,
+                m(e),
+                    I.default.track(T.HAw.INVITE_ACCEPT_DETAILS_VIEWED, {
+                        guild_id: t.id,
+                        invite_code: i.code,
                         action: e ? "expanded" : "collapsed",
                     });
             },
-            [i.id, t.code],
+            [t.id, i.code],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)("div", {
-                className: C.g3,
+                className: D.g3,
                 id: "invite-details",
                 children: [
-                    (0, l.jsx)(N, { className: C.se, splashURL: a, expanded: u }),
+                    (0, l.jsx)(b, { className: D.se, splashURL: a, expanded: h }),
                     (0, l.jsxs)("div", {
-                        className: s()(C.qm, { [C.rd]: u }),
+                        className: n()(D.qm, { [D.rd]: h }),
                         children: [
-                            (0, l.jsx)(I.A, { guild: i, outline: !0 }),
-                            (0, l.jsxs)(o.BJc, {
+                            (0, l.jsx)(N.A, { guild: t, outline: !0 }),
+                            (0, l.jsxs)(o.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 children: [
-                                    (0, l.jsx)(v.A, { guild: i, invite: t, discoveryGuild: d }),
-                                    c &&
-                                        (0, l.jsx)(m.A, {
+                                    (0, l.jsx)(C.A, { guild: t, invite: i, discoveryGuild: d }),
+                                    u &&
+                                        (0, l.jsx)(x.A, {
                                             friendMemberIds: r,
-                                            className: C.QS,
-                                            avatarSize: o._3J.SIZE_24,
+                                            className: D.QS,
+                                            avatarSize: c._3.SIZE_24,
                                         }),
                                 ],
                             }),
-                            (0, l.jsx)(f.A, {
-                                invite: t,
-                                guild: i,
+                            (0, l.jsx)(y.A, {
+                                invite: i,
+                                guild: t,
                                 discoveryGuild: d,
-                                expanded: u,
-                                setExpanded: g,
-                                scrollableSectionClassName: C.kw,
+                                expanded: h,
+                                setExpanded: _,
+                                scrollableSectionClassName: D.kw,
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)(E.A, { invite: t, guild: i, className: C.i }),
+            (0, l.jsx)(f.A, { invite: i, guild: t, className: D.i }),
         ],
     });
 }
-function D(e) {
-    let { invite: t, guild: i, splashURL: n, friendMemberIds: a, discoveryGuild: s } = e,
+function R(e) {
+    let { invite: i, guild: t, splashURL: s, friendMemberIds: a, discoveryGuild: n } = e,
         r = null != a && a.length > 0;
     return (0, l.jsxs)("div", {
-        className: C.$5,
+        className: D.$5,
         id: "invite-details",
         children: [
-            (0, l.jsx)(N, { className: C.je, splashURL: n }),
+            (0, l.jsx)(b, { className: D.je, splashURL: s }),
             (0, l.jsxs)("div", {
-                className: C.x6,
+                className: D.x6,
                 children: [
-                    (0, l.jsx)(I.A, { guild: i }),
-                    (0, l.jsxs)(o.BJc, {
+                    (0, l.jsx)(N.A, { guild: t }),
+                    (0, l.jsxs)(o.B, {
                         direction: "vertical",
                         gap: 16,
                         children: [
-                            (0, l.jsx)(v.A, { guild: i, invite: t, discoveryGuild: s }),
-                            r && (0, l.jsx)(m.A, { friendMemberIds: a, className: C.QS, avatarSize: o._3J.SIZE_24 }),
+                            (0, l.jsx)(C.A, { guild: t, invite: i, discoveryGuild: n }),
+                            r && (0, l.jsx)(x.A, { friendMemberIds: a, className: D.QS, avatarSize: c._3.SIZE_24 }),
                         ],
                     }),
                     (0, l.jsx)("div", {
-                        className: C.Sd,
-                        children: (0, l.jsx)(f.A, {
-                            invite: t,
-                            guild: i,
-                            discoveryGuild: s,
-                            scrollableSectionClassName: C.r_,
+                        className: D.Sd,
+                        children: (0, l.jsx)(y.A, {
+                            invite: i,
+                            guild: t,
+                            discoveryGuild: n,
+                            scrollableSectionClassName: D.r_,
                         }),
                     }),
-                    (0, l.jsx)(E.A, { invite: t, guild: i, className: C.pU }),
+                    (0, l.jsx)(f.A, { invite: i, guild: t, className: D.pU }),
                 ],
             }),
         ],
     });
 }
 function S(e) {
-    let { guild: t, invite: i, discoveryGuild: a, transitionState: s, headerId: m, channel: g, onClose: h } = e;
-    n.useEffect(() => {
-        (0, x.Mu)();
+    let { guild: i, invite: t, discoveryGuild: a, transitionState: n, headerId: o, channel: c, onClose: h } = e;
+    s.useEffect(() => {
+        (0, g.Mu)();
     }, []);
-    let { treatment: _ } = u.zQ.useConfig({ location: "AcceptInviteModalRedesign" }),
-        p = (0, c.A)("(max-width: 600px)"),
-        A = "v1" === _ || p,
-        j = n.useMemo(() => (A ? y : D), [A]);
-    return (0, l.jsxs)(o.dWK, {
-        size: A ? "md" : "xxl",
-        "aria-labelledby": m,
-        "aria-label": t?.name ?? g?.name ?? "",
-        transitionState: s,
+    let { treatment: x } = _.zQ.useConfig({ location: "AcceptInviteModalRedesign" }),
+        A = (0, m.A)("(max-width: 600px)"),
+        p = "v1" === x || A,
+        v = s.useMemo(() => (p ? L : R), [p]);
+    return (0, l.jsxs)(u.d, {
+        size: p ? "md" : "xxl",
+        "aria-labelledby": o,
+        "aria-label": i?.name ?? c?.name ?? "",
+        transitionState: n,
         onClose: () => (h(), Promise.resolve()),
-        trackingProps: {
-            impression: {
-                impressionName: r.ImpressionNames.INVITE_ACCEPT,
-                impressionProperties: { guild_id: t?.id, invite_code: i.code },
-            },
-        },
-        children: [
-            (0, l.jsx)("div", { className: C.cG, children: (0, l.jsx)(d.s_y, { shouldColorMix: !0 }) }),
-            (0, l.jsx)(j, { ...e, discoveryGuild: a }),
-        ],
-    });
-}
-function b(e) {
-    let {
-            invite: t,
-            guild: i,
-            splashURL: a,
-            friendMemberIds: s,
-            profile: c,
-            transitionState: x,
-            headerId: f,
-            channel: y,
-            onClose: D,
-        } = e,
-        { treatment: S } = u.SH.useConfig({ location: "AcceptInviteModalRedesign" }),
-        b = null != s && s.length > 0,
-        { gamesToDisplay: L, lastGameToDisplay: R, remainingGames: U } = (0, g.A)(c),
-        O = n.useMemo(
-            () => c.traits.map((e, t) => ({ key: `trait-${t}`, ...e })).filter((e) => e.label.length > 0),
-            [c],
-        ),
-        G = (0, A.b2)(),
-        k = (0, A.aG)({ profile: c, defaultColor: G.hex(), forceDefaultColor: null != c.brandColorPrimary }),
-        M = c.brandColorPrimary ?? k;
-    return (0, l.jsxs)(o.dWK, {
-        size: "md",
-        "aria-labelledby": f,
-        "aria-label": i?.name ?? y?.name ?? "",
-        transitionState: x,
-        onClose: () => (D(), Promise.resolve()),
         trackingProps: {
             impression: {
                 impressionName: r.ImpressionNames.INVITE_ACCEPT,
@@ -186,70 +149,110 @@ function b(e) {
             },
         },
         children: [
-            (0, l.jsx)("div", { className: C.cG, children: (0, l.jsx)(d.s_y, { shouldColorMix: !0 }) }),
+            (0, l.jsx)("div", { className: D.cG, children: (0, l.jsx)(d.s_, { shouldColorMix: !0 }) }),
+            (0, l.jsx)(v, { ...e, discoveryGuild: a }),
+        ],
+    });
+}
+function w(e) {
+    let {
+            invite: i,
+            guild: t,
+            splashURL: a,
+            friendMemberIds: n,
+            profile: m,
+            transitionState: g,
+            headerId: y,
+            channel: L,
+            onClose: R,
+        } = e,
+        { treatment: S } = _.SH.useConfig({ location: "AcceptInviteModalRedesign" }),
+        w = null != n && n.length > 0,
+        { gamesToDisplay: U, lastGameToDisplay: O, remainingGames: G } = (0, A.A)(m),
+        M = s.useMemo(
+            () => m.traits.map((e, i) => ({ key: `trait-${i}`, ...e })).filter((e) => e.label.length > 0),
+            [m],
+        ),
+        V = (0, j.b2)(),
+        k = (0, j.aG)({ profile: m, defaultColor: V.hex(), forceDefaultColor: null != m.brandColorPrimary }),
+        P = m.brandColorPrimary ?? k;
+    return (0, l.jsxs)(u.d, {
+        size: "md",
+        "aria-labelledby": y,
+        "aria-label": t?.name ?? L?.name ?? "",
+        transitionState: g,
+        onClose: () => (R(), Promise.resolve()),
+        trackingProps: {
+            impression: {
+                impressionName: r.ImpressionNames.INVITE_ACCEPT,
+                impressionProperties: { guild_id: t?.id, invite_code: i.code },
+            },
+        },
+        children: [
+            (0, l.jsx)("div", { className: D.cG, children: (0, l.jsx)(d.s_, { shouldColorMix: !0 }) }),
             (0, l.jsxs)("div", {
-                className: C.g3,
+                className: D.g3,
                 id: "invite-details",
                 children: [
-                    (0, l.jsx)(N, { className: C.se, splashURL: a, backgroundColor: M }),
+                    (0, l.jsx)(b, { className: D.se, splashURL: a, backgroundColor: P }),
                     (0, l.jsxs)("div", {
-                        className: C.qm,
+                        className: D.qm,
                         children: [
-                            (0, l.jsx)(I.A, { guild: i, outline: !0 }),
-                            (0, l.jsxs)(o.BJc, {
+                            (0, l.jsx)(N.A, { guild: t, outline: !0 }),
+                            (0, l.jsxs)(o.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 children: [
-                                    (0, l.jsx)(v.A, { guild: i, invite: t, showGuildTag: !0 }),
-                                    b &&
-                                        (0, l.jsx)(m.A, {
-                                            friendMemberIds: s,
-                                            className: C.QS,
-                                            avatarSize: o._3J.SIZE_24,
+                                    (0, l.jsx)(C.A, { guild: t, invite: i, showGuildTag: !0 }),
+                                    w &&
+                                        (0, l.jsx)(x.A, {
+                                            friendMemberIds: n,
+                                            className: D.QS,
+                                            avatarSize: c._3.SIZE_24,
                                         }),
-                                    null != i.description &&
-                                        "" !== i.description &&
-                                        (0, l.jsx)(o.Text, {
+                                    null != t.description &&
+                                        "" !== t.description &&
+                                        (0, l.jsx)(h.E, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            children: i.description,
+                                            children: t.description,
                                         }),
-                                    0 === L.length
+                                    0 === U.length
                                         ? null
                                         : "v1" === S
-                                          ? (0, l.jsx)(_.A, {
-                                                gamesToDisplay: L,
-                                                lastGameToDisplay: R,
-                                                remainingGames: U,
-                                                activity: c.gameActivity,
+                                          ? (0, l.jsx)(v.A, {
+                                                gamesToDisplay: U,
+                                                lastGameToDisplay: O,
+                                                remainingGames: G,
+                                                activity: m.gameActivity,
                                             })
                                           : "v2" === S
-                                            ? (0, l.jsx)(o.BJc, {
+                                            ? (0, l.jsx)(o.B, {
                                                   direction: "vertical",
                                                   gap: 8,
-                                                  children: (0, l.jsx)(h.A, {
-                                                      gamesToDisplay: L,
-                                                      lastGameToDisplay: R,
-                                                      remainingGames: U,
-                                                      activity: c.gameActivity,
+                                                  children: (0, l.jsx)(p.A, {
+                                                      gamesToDisplay: U,
+                                                      lastGameToDisplay: O,
+                                                      remainingGames: G,
+                                                      activity: m.gameActivity,
                                                       onExpandClick: () => {
-                                                          j.default.track(T.HAw.INVITE_ACCEPT_DETAILS_VIEWED, {
-                                                              guild_id: i.id,
-                                                              invite_code: t.code,
+                                                          I.default.track(T.HAw.INVITE_ACCEPT_DETAILS_VIEWED, {
+                                                              guild_id: t.id,
+                                                              invite_code: i.code,
                                                               action: "games_expanded",
                                                           });
                                                       },
                                                   }),
                                               })
                                             : null,
-                                    (0, l.jsx)(p.w, { items: O, traitColor: "text-subtle" }),
+                                    (0, l.jsx)(E.w, { items: M, traitColor: "text-subtle" }),
                                 ],
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsx)(E.A, { invite: t, guild: i, className: C.i }),
+            (0, l.jsx)(f.A, { invite: i, guild: t, className: D.i }),
         ],
     });
 }

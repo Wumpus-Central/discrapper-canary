@@ -1,48 +1,50 @@
-n.d(t, { A: () => x });
-var a = n(627968),
+n.d(t, { A: () => A });
+var i = n(627968),
     s = n(64700),
-    i = n(311907),
-    l = n(990078),
-    r = n(397927),
-    o = n(775602),
-    d = n(832248),
-    c = n(323970),
-    u = n(985018),
-    m = n(876402);
-let h = s.lazy(() => n.e("24832").then(n.bind(n, 748579)));
-function x() {
-    let e = (0, i.bG)([o.A], () => o.A.useReducedMotion),
-        t = (0, d.A)((e) => e.shouldRenderTenureLevelUp),
-        n = (0, c.A)();
-    return e || !t || null == n ? null : (0, a.jsx)(p, { levelUpData: n });
+    l = n(311907),
+    a = n(990078),
+    r = n(315710),
+    o = n(408278),
+    d = n(789645),
+    c = n(775602),
+    u = n(832248),
+    p = n(323970),
+    h = n(985018),
+    m = n(682165);
+let _ = s.lazy(() => n.e("24832").then(n.bind(n, 748579)));
+function A() {
+    let e = (0, l.bG)([c.A], () => c.A.useReducedMotion),
+        t = (0, u.A)((e) => e.shouldRenderTenureLevelUp),
+        n = (0, p.A)();
+    return e || !t || null == n ? null : (0, i.jsx)(f, { levelUpData: n });
 }
-function p(e) {
+function f(e) {
     let { levelUpData: t } = e,
         n = s.useRef(null),
-        i = s.useCallback(() => {
-            d.A.setState({ shouldRenderTenureLevelUp: !1 });
+        l = s.useCallback(() => {
+            u.A.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        s.useEffect(() => i, [i]),
-        (0, a.jsx)(r.Oky, {
+        s.useEffect(() => l, [l]),
+        (0, i.jsx)(r.O, {
             containerRef: n,
-            children: (0, a.jsxs)("div", {
+            children: (0, i.jsxs)("div", {
                 className: m.i,
                 children: [
-                    (0, a.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: m.b,
-                        children: (0, a.jsx)(l.m, {
-                            text: u.intl.string(u.t.cpT0Cq),
-                            children: (0, a.jsx)(r.K0, {
-                                icon: r.PGe,
+                        children: (0, i.jsx)(a.m, {
+                            text: h.intl.string(h.t.cpT0Cq),
+                            children: (0, i.jsx)(o.K, {
+                                icon: d.P,
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: i,
-                                "aria-label": u.intl.string(u.t.cpT0Cq),
+                                onClick: l,
+                                "aria-label": h.intl.string(h.t.cpT0Cq),
                             }),
                         }),
                     }),
-                    (0, a.jsx)(s.Suspense, { fallback: null, children: (0, a.jsx)(h, { levelUpData: t }) }),
+                    (0, i.jsx)(s.Suspense, { fallback: null, children: (0, i.jsx)(_, { levelUpData: t }) }),
                 ],
             }),
         })

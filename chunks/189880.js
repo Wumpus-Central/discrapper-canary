@@ -1,113 +1,110 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     s = n(665260),
-    a = n(158954),
-    o = n(97808),
-    l = n(571356),
-    u = n(709066),
+    a = n(534514),
+    o = n(939249),
+    l = n(97808),
+    u = n(834730),
+    d = n(709066),
     c = n(486020),
-    d = n(716965),
-    _ = n(647053),
-    f = n(566615),
-    p = n(652215),
-    h = n(778712),
+    _ = n(716965),
+    f = n(647053),
+    E = n(566615),
+    h = n(652215),
+    p = n(778712),
     m = n(985018),
-    E = n(377099);
-function g(e) {
-    let { user: t, application: n, bot: g, accountScopes: A, showLogout: I, location: T, scopes: S } = e,
-        y = (0, f.i)(),
-        v = c.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
-        N = c.Ay.getUserAvatarURL(t),
-        C = i.useMemo(
+    g = n(510523);
+function A(e) {
+    let { user: t, application: n, bot: A, accountScopes: I, showLogout: T, location: S, scopes: y } = e,
+        N = (0, E.i)(),
+        O = c.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
+        R = c.Ay.getUserAvatarURL(t),
+        v = i.useMemo(
             () =>
-                S.some((e) => (0, _.RM)(e))
+                y.some((e) => (0, f.RM)(e))
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(l.E, {
+                              (0, r.jsx)(u.E, {
                                   variant: "text-lg/normal",
                                   color: "text-default",
                                   children: m.intl.string(m.t.uT1CPa),
                               }),
-                              (0, r.jsx)(a.DZT, {
-                                  variant: "heading-xxl/bold",
-                                  color: "text-strong",
-                                  children: n.name,
-                              }),
+                              (0, r.jsx)(a.D, { variant: "heading-xxl/bold", color: "text-strong", children: n.name }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsxs)(l.E, {
+                              (0, r.jsxs)(u.E, {
                                   variant: "text-lg/bold",
                                   color: "text-strong",
                                   children: [
                                       n.name,
-                                      null != g
-                                          ? (0, r.jsx)(u.A, {
-                                                className: E.AO,
+                                      null != A
+                                          ? (0, r.jsx)(d.A, {
+                                                className: g.AO,
                                                 verified:
-                                                    null != g.public_flags &&
-                                                    (0, s.Lt)(g.public_flags, p.nhx.VERIFIED_BOT),
+                                                    null != A.public_flags &&
+                                                    (0, s.Lt)(A.public_flags, h.nhx.VERIFIED_BOT),
                                             })
                                           : null,
                                   ],
                               }),
-                              A.length > 0
-                                  ? (0, r.jsx)(l.E, {
+                              I.length > 0
+                                  ? (0, r.jsx)(u.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         children: m.intl.string(m.t.jFbDnJ),
                                     })
-                                  : (0, r.jsx)(l.E, {
+                                  : (0, r.jsx)(u.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         children: m.intl.string(m.t["X+Fdpo"]),
                                     }),
                           ],
                       }),
-            [A.length, n, g, S],
+            [I.length, n, A, y],
         );
     return (0, r.jsxs)("header", {
-        id: y,
-        className: E.wx,
+        id: N,
+        className: g.wx,
         children: [
             (0, r.jsxs)("div", {
-                className: E.Y,
+                className: g.Y,
                 children: [
-                    (0, r.jsx)(o.eu, { className: E.my, src: v, size: h._3.SIZE_80, "aria-label": n.name }),
+                    (0, r.jsx)(l.eu, { className: g.my, src: O, size: p._3.SIZE_80, "aria-label": n.name }),
                     (0, r.jsxs)("div", {
-                        className: E.I5,
+                        className: g.I5,
                         children: [
-                            (0, r.jsx)("div", { className: E.pw }),
-                            (0, r.jsx)("div", { className: E.pw }),
-                            (0, r.jsx)("div", { className: E.pw }),
+                            (0, r.jsx)("div", { className: g.pw }),
+                            (0, r.jsx)("div", { className: g.pw }),
+                            (0, r.jsx)("div", { className: g.pw }),
                         ],
                     }),
-                    (0, r.jsx)(o.eu, { className: E.my, src: N, size: h._3.SIZE_80, "aria-label": t.username }),
+                    (0, r.jsx)(l.eu, { className: g.my, src: R, size: p._3.SIZE_80, "aria-label": t.username }),
                 ],
             }),
-            C,
-            I
+            v,
+            T
                 ? (0, r.jsx)("div", {
-                      className: E.Ny,
-                      children: (0, r.jsxs)(l.E, {
+                      className: g.Ny,
+                      children: (0, r.jsxs)(u.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
                               m.intl.format(m.t.qRvpYU, {
                                   userHook: () =>
                                       (0, r.jsxs)(
-                                          l.E,
+                                          u.E,
                                           {
-                                              className: E.ZD,
+                                              className: g.ZD,
                                               variant: "text-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
-                                                      (0, r.jsx)(l.E, {
-                                                          className: E.Jb,
+                                                      (0, r.jsx)(u.E, {
+                                                          className: g.Jb,
                                                           variant: "text-sm/normal",
                                                           children: `#${t.discriminator}`,
                                                       }),
@@ -116,10 +113,10 @@ function g(e) {
                                           t.id,
                                       ),
                               }),
-                              (0, r.jsx)(a.DUT, {
+                              (0, r.jsx)(o.D, {
                                   tag: "a",
-                                  className: E.Pg,
-                                  onClick: () => (0, d.Vh)(T, "oauth2_logout"),
+                                  className: g.Pg,
+                                  onClick: () => (0, _.Vh)(S, "oauth2_logout"),
                                   children: m.intl.string(m.t["yV/hjC"]),
                               }),
                           ],

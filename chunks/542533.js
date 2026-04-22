@@ -1,7 +1,7 @@
-t.d(l, { a: () => h });
+t.d(l, { a: () => I });
 var n = t(627968),
     s = t(64700),
-    a = t(158954),
+    a = t(599319),
     i = t(765671),
     r = t(688810),
     o = t(954571),
@@ -10,20 +10,20 @@ var n = t(627968),
     u = t(183802),
     _ = t(748959),
     g = t(793885),
-    x = t(896447),
-    p = t(65356),
-    f = t(652215),
-    A = t(368523);
-function h(e) {
+    p = t(896447),
+    x = t(65356),
+    A = t(652215),
+    f = t(384274);
+function I(e) {
     let { applicationId: l, page: t } = e,
-        { ref: h, width: I } = (0, i.Ay)(),
+        { ref: I, width: h } = (0, i.Ay)(),
         m = (0, d.jM)(),
         { analyticsLocations: E } = (0, r.Ay)(),
-        j = s.useRef(null),
-        { handleScroll: S } = (0, p.b)(j, m, E),
+        S = s.useRef(null),
+        { handleScroll: j } = (0, x.b)(S, m, E),
         [k, b] = s.useMemo(() => {
             if (t?.skuIds == null || 0 === t.skuIds.length) return [[], []];
-            let e = Math.round(I ?? 0);
+            let e = Math.round(h ?? 0);
             return t?.leaderboard == null || null == e || e < 564
                 ? [[], t.skuIds]
                 : e < 1104
@@ -31,11 +31,11 @@ function h(e) {
                       ? [[], t.skuIds]
                       : [t.skuIds.slice(0, 1), t.skuIds.slice(1)]
                   : [t.skuIds.slice(0, 2), t.skuIds.slice(2)];
-        }, [t, I]),
-        R = 1 === k.length && null != I && I >= 834;
+        }, [t, h]),
+        R = 1 === k.length && null != h && h >= 834;
     return (s.useEffect(() => {
         let { sessionId: e, guildId: l, pageIndex: t, pageTitle: n, isUserGuildMember: s, pageHasLeaderboard: a } = m;
-        o.default.track(f.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
+        o.default.track(A.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
             slayer_storefront_session_id: e,
             guild_id: l,
             page_index: t,
@@ -47,14 +47,14 @@ function h(e) {
     }, [m, E]),
     null == t)
         ? null
-        : (0, n.jsxs)(a.ChK, {
-              ref: j,
-              onScroll: S,
+        : (0, n.jsxs)(a.Ch, {
+              ref: S,
+              onScroll: j,
               children: [
                   (0, n.jsx)(c.A, { location: "social_layer_storefront_page" }),
                   (0, n.jsxs)("section", {
-                      ref: h,
-                      className: A.k,
+                      ref: I,
+                      className: f.k,
                       children: [
                           (0, n.jsx)(g.m, {
                               applicationId: l,
@@ -66,15 +66,15 @@ function h(e) {
                               skuId: R ? k[0] : void 0,
                               analyticsLocations: E,
                           }),
-                          (0, n.jsx)(x.A, {
+                          (0, n.jsx)(p.A, {
                               analyticsSectionId: "featured-top-section",
                               skuIds: R ? void 0 : k,
                               variant: u.s.MEDIUM,
                           }),
-                          (0, n.jsx)(x.A, { analyticsSectionId: "non-featured-top-section", skuIds: b }),
+                          (0, n.jsx)(p.A, { analyticsSectionId: "non-featured-top-section", skuIds: b }),
                           t.sections?.map((e, l) =>
                               (0, n.jsx)(
-                                  x.A,
+                                  p.A,
                                   {
                                       analyticsSectionId: `index:${l}`,
                                       sectionTitle: e.title ?? void 0,

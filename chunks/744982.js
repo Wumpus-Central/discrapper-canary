@@ -1,62 +1,61 @@
-"use strict";
-n.d(t, { A: () => E });
-var r = n(155718),
-    i = n(842209),
-    a = n(210978),
+n.d(t, { A: () => M });
+var l = n(155718),
+    r = n(842209),
+    i = n(210978),
     s = n(392054),
     o = n(664929),
-    l = n(580424),
-    u = n(253932),
-    c = n(287809),
-    d = n(562153),
-    _ = n(362562),
-    f = n(634788),
-    p = n(374803),
-    h = n(114323),
-    m = n(985018);
+    u = n(580424),
+    a = n(253932),
+    m = n(287809),
+    c = n(562153),
+    d = n(362562),
+    p = n(634788),
+    y = n(374803),
+    A = n(114323),
+    h = n(985018);
 function g(e) {
-    let t = _.z.exec(e);
+    let t = d.z.exec(e);
     if (null != t) {
         let n = t[1],
-            r = c.default.getUser(n);
-        return null != r && r.bot ? { type: "mention", cleanedQuery: e.substring(t[0].length).trim(), user: r } : null;
+            l = m.default.getUser(n);
+        return null != l && l.bot ? { type: "mention", cleanedQuery: e.substring(t[0].length).trim(), user: l } : null;
     }
     return null;
 }
-let E = {
-    ...h.A,
+let M = {
+    ...A.A,
     sentinel: void 0,
-    focusMode: p.e.MANUAL,
-    matches(e, t, n, r, i) {
-        if (i.commands === p.Ze.DISABLED || i.commands === p.Ze.OLD_BUILT_INS || n.length < 2 || !u._3.getSetting())
+    focusMode: y.e.MANUAL,
+    matches(e, t, n, l, r) {
+        if (r.commands === y.Ze.DISABLED || r.commands === y.Ze.OLD_BUILT_INS || n.length < 2 || !a._3.getSetting())
             return !1;
-        let a = g(n);
-        return null != a && a.cleanedQuery.length > 0;
+        let i = g(n);
+        return null != i && i.cleanedQuery.length > 0;
     },
-    queryResults(e, t, n, s, l) {
-        if (!u._3.getSetting()) return h.f;
-        let c = g(n);
-        if (null == c) return h.f;
-        let d = (0, o.Yn)(e, c.cleanedQuery),
-            { commands: _, sections: f } = i.eW(
+    queryResults(e, t, n, s, u) {
+        if (!a._3.getSetting()) return A.f;
+        let m = g(n);
+        if (null == m) return A.f;
+        let c = (0, o.Yn)(e, m.cleanedQuery),
+            { commands: d, sections: p } = r.eW(
                 { channel: e, type: "channel" },
-                { commandTypes: [r.kc.CHAT], text: d.text },
-                { limit: 20, placeholderCount: 3, scoreMethod: a.M.COMMAND_OR_APPLICATION, allowFetch: l },
+                { commandTypes: [l.kc.CHAT], text: c.text },
+                { limit: 20, placeholderCount: 3, scoreMethod: i.M.COMMAND_OR_APPLICATION, allowFetch: u },
             );
-        if (null == _) return h.f;
-        let p = _.filter((e) => e.section.botId === c.user.id);
-        if (d.hasSpaceTerminator) {
-            let e = d.text.trim(),
+        if (null == d) return A.f;
+        let y = d.filter((e) => e.section.botId === m.user.id);
+        if (c.hasSpaceTerminator) {
+            let e = c.text.trim(),
                 t = e + " ";
-            p = p.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
+            y = y.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
-        return 0 === p.length
-            ? h.f
+        return 0 === y.length
+            ? A.f
             : {
                   results: {
-                      entries: p
+                      entries: y
                           .slice(0, 20)
-                          .map((e) => ({ command: e, section: f?.find((t) => t.id === e.applicationId) })),
+                          .map((e) => ({ command: e, section: p?.find((t) => t.id === e.applicationId) })),
                   },
               };
     },
@@ -64,46 +63,46 @@ let E = {
         let {
             results: { entries: t },
             selectedIndex: n,
-            guild: r,
-            channel: i,
-            query: a,
+            guild: l,
+            channel: r,
+            query: i,
             options: s,
             onHover: o,
-            onClick: u,
+            onClick: a,
         } = e;
-        return (0, f.GM)({
-            query: a,
+        return (0, p.GM)({
+            query: i,
             selectedIndex: n,
             autocompletes: t,
             onHover: o,
-            onClick: u,
-            titleWithQuery: m.t.HFRoZR,
-            titleWithoutQuery: m.intl.string(m.t["0hKkS+"]),
-            Component: s.commands === p.Ze.OLD_BUILT_INS ? l.Ay.Command : l.Ay.NewCommand,
+            onClick: a,
+            titleWithQuery: h.t.HFRoZR,
+            titleWithoutQuery: h.intl.string(h.t["0hKkS+"]),
+            Component: s.commands === y.Ze.OLD_BUILT_INS ? u.Ay.Command : u.Ay.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
-                return { key: t.id, command: t, channel: i, guildId: i.guild_id, showImage: !0, section: n };
+                return { key: t.id, command: t, channel: r, guildId: r.guild_id, showImage: !0, section: n };
             },
             getQuery: (e) => {
                 let t = g(e);
                 if ("mention" !== t.type) return e;
-                let n = d.Ay.getName(r?.id, i.id, t.user);
-                return e.replace(_.z, `@${n}`);
+                let n = c.Ay.getName(l?.id, r.id, t.user);
+                return e.replace(d.z, `@${n}`);
             },
             key: "commands",
         });
     },
     onSelect(e) {
-        let { results: t, index: n, type: r, options: i, channel: a, guild: o } = e,
-            l = h.A.onSelect({
+        let { results: t, index: n, type: l, options: r, channel: i, guild: o } = e,
+            u = A.A.onSelect({
                 results: t,
                 index: n,
-                type: r,
-                options: i,
-                channel: a,
+                type: l,
+                options: r,
+                channel: i,
                 guild: o,
                 location: s.Oh.SUGGESTION,
             });
-        return null == l ? null : { ...l, type: p.kc.COMMAND_SUGGESTION };
+        return null == u ? null : { ...u, type: y.kc.COMMAND_SUGGESTION };
     },
 };

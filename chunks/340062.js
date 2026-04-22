@@ -1,76 +1,80 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(397927),
-    a = n(50268),
-    o = n(928658),
-    l = n(239211),
-    u = n(985018),
-    c = n(390472);
-let d = (e) => {
-        let { appRecord: t, closePopout: n, selectedGuildId: i, selectedChannelId: l, children: c = null } = e,
-            d = (0, a.A)({ id: t.id, label: u.intl.string(u.t["+NP/b2"]) });
-        return (0, r.jsxs)(s.W1t, {
+l.d(t, { A: () => j });
+var n = l(627968),
+    s = l(64700),
+    i = l(265872),
+    r = l(939249),
+    a = l(365199),
+    o = l(827734),
+    c = l(861672),
+    d = l(477782),
+    u = l(50268),
+    m = l(928658),
+    p = l(239211),
+    h = l(985018),
+    x = l(540507);
+let A = (e) => {
+        let { appRecord: t, closePopout: l, selectedGuildId: s, selectedChannelId: i, children: r = null } = e,
+            a = (0, u.A)({ id: t.id, label: h.intl.string(h.t["+NP/b2"]) });
+        return (0, n.jsxs)(c.W, {
             "data-menu-migrated": !0,
             navId: "authorized-app-action-menu",
-            onClose: n,
-            "aria-label": u.intl.string(u.t.tKobzb),
+            onClose: l,
+            "aria-label": h.intl.string(h.t.tKobzb),
             onSelect: void 0,
             children: [
-                c,
-                (0, r.jsx)(s.Drp, {
+                r,
+                (0, n.jsx)(d.Dr, {
                     id: "report",
-                    label: u.intl.string(u.t["+78Pfm"]),
+                    label: h.intl.string(h.t["+78Pfm"]),
                     color: "danger",
                     action: () =>
-                        (0, o.r3)({
+                        (0, m.r3)({
                             application: t,
                             entrypoint: "authorized_apps_settings",
-                            contextualGuildId: i,
-                            contextualChannelId: l,
+                            contextualGuildId: s,
+                            contextualChannelId: i,
                         }),
                 }),
-                d,
+                a,
             ],
         });
     },
-    _ = (e) => {
-        let { appRecord: t, botUser: n, closePopout: i, selectedGuildId: s, selectedChannelId: a } = e;
-        return (0, r.jsx)(d, {
+    N = (e) => {
+        let { appRecord: t, botUser: l, closePopout: s, selectedGuildId: i, selectedChannelId: r } = e;
+        return (0, n.jsx)(A, {
             appRecord: t,
-            closePopout: i,
-            selectedGuildId: s,
-            selectedChannelId: a,
-            children: (0, l.A)({ user: n, location: "UserSettingsAuthedApps" }),
+            closePopout: s,
+            selectedGuildId: i,
+            selectedChannelId: r,
+            children: (0, p.A)({ user: l, location: "UserSettingsAuthedApps" }),
         });
     },
-    f = (e) => {
-        let { appRecord: t, selectedGuildId: n, selectedChannelId: a } = e,
-            o = i.useRef(null);
-        return (0, r.jsx)(s.YNO, {
-            targetElementRef: o,
+    j = (e) => {
+        let { appRecord: t, selectedGuildId: l, selectedChannelId: c } = e,
+            d = s.useRef(null);
+        return (0, n.jsx)(i.Y, {
+            targetElementRef: d,
             renderPopout: (e) => {
-                let { closePopout: i } = e;
+                let { closePopout: s } = e;
                 return null == t.bot
-                    ? (0, r.jsx)(d, { appRecord: t, closePopout: i, selectedGuildId: n, selectedChannelId: a })
-                    : (0, r.jsx)(_, {
+                    ? (0, n.jsx)(A, { appRecord: t, closePopout: s, selectedGuildId: l, selectedChannelId: c })
+                    : (0, n.jsx)(N, {
                           appRecord: t,
                           botUser: t.bot,
-                          closePopout: i,
-                          selectedGuildId: n,
-                          selectedChannelId: a,
+                          closePopout: s,
+                          selectedGuildId: l,
+                          selectedChannelId: c,
                       });
             },
             align: "right",
             position: "bottom",
             children: (e) =>
-                (0, r.jsx)(s.DUT, {
-                    innerRef: o,
-                    className: c.a,
-                    "aria-label": u.intl.string(u.t["UKOtz+"]),
+                (0, n.jsx)(r.D, {
+                    innerRef: d,
+                    className: x.a,
+                    "aria-label": h.intl.string(h.t["UKOtz+"]),
                     ...e,
-                    children: (0, r.jsx)(s.jNK, { size: "xs", color: s.LU0.colors.INTERACTIVE_TEXT_DEFAULT }),
+                    children: (0, n.jsx)(a.j, { size: "xs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
                 }),
         });
     };

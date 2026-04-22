@@ -1,63 +1,62 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => N });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(928348),
-    a = n(53594),
-    o = n(979816),
-    d = n(403362),
-    c = n(203498),
-    u = n(660496),
-    m = n(512122),
-    g = n(939662),
-    x = n(5558),
-    h = n(985018),
-    _ = n(696284);
-function A(e) {
-    let { title: t, subtitle: n, icon: s, page: r } = e;
+    l = n(64700),
+    s = n(97808),
+    r = n(778712),
+    a = n(534514),
+    o = n(834730),
+    d = n(821609),
+    c = n(928348),
+    u = n(53594),
+    m = n(979816),
+    g = n(403362),
+    h = n(203498),
+    x = n(660496),
+    _ = n(512122),
+    p = n(939662),
+    A = n(5558),
+    E = n(985018),
+    f = n(644780);
+function j(e) {
+    let { title: t, subtitle: n, icon: l, page: c } = e;
     return (0, i.jsxs)("div", {
-        className: _.Pu,
+        className: f.Pu,
         children: [
             (0, i.jsxs)("div", {
-                className: _.mh,
+                className: f.mh,
                 children: [
-                    (0, i.jsx)(l.euF, { src: s, size: l._3J.SIZE_40, "aria-label": t }),
+                    (0, i.jsx)(s.eu, { src: l, size: r._3.SIZE_40, "aria-label": t }),
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(l.Heading, {
-                                variant: "heading-md/semibold",
-                                color: "text-strong",
-                                children: t,
-                            }),
-                            (0, i.jsx)(l.Text, { variant: "text-xs/medium", color: "text-default", children: n }),
+                            (0, i.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+                            (0, i.jsx)(o.E, { variant: "text-xs/medium", color: "text-default", children: n }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(l.Button, {
+            (0, i.jsx)(d.$, {
                 size: "sm",
                 variant: "secondary",
-                onClick: () => (0, c.K)(r),
-                text: h.intl.string(h.t.bt75uw),
+                onClick: () => (0, h.K)(c),
+                text: E.intl.string(E.t.bt75uw),
             }),
         ],
     });
 }
-function p(e) {
+function N(e) {
     let { guild: t } = e;
-    (0, r.qv)(t.id);
-    let c = (0, a.ws)(t.id),
-        { rulesByTriggerType: p } = (0, r.wP)(t.id),
-        { numEnabledRules: f, numRules: j } = s.useMemo(() => {
+    (0, c.qv)(t.id);
+    let s = (0, u.ws)(t.id),
+        { rulesByTriggerType: r } = (0, c.wP)(t.id),
+        { numEnabledRules: o, numRules: d } = l.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
-                null == p ||
-                    Object.values(c)
+                null == r ||
+                    Object.values(s)
                         .flat()
                         .forEach((n) => {
-                            let i = p[n]?.filter(d.Vq);
+                            let i = r[n]?.filter(g.Vq);
                             null == i || 0 === i.length
                                 ? t++
                                 : i.forEach((n) => {
@@ -66,68 +65,68 @@ function p(e) {
                         }),
                 { numEnabledRules: e, numRules: t }
             );
-        }, [c, p]),
-        N = (0, x.N)(t),
-        E = N[u.C.CAPTCHA_AND_RAID_PROTECTION],
-        C = N[u.C.DM_AND_SPAM_PROTECTION],
-        T = N[u.C.PERMISSIONS],
-        I = (0, o.iI)(t.id);
+        }, [s, r]),
+        h = (0, A.N)(t),
+        N = h[x.C.CAPTCHA_AND_RAID_PROTECTION],
+        I = h[x.C.DM_AND_SPAM_PROTECTION],
+        C = h[x.C.PERMISSIONS],
+        b = (0, m.iI)(t.id);
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(a.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: _.wx,
-                children: h.intl.string(h.t["0A+VSA"]),
+                className: f.wx,
+                children: E.intl.string(E.t["0A+VSA"]),
             }),
-            (0, i.jsx)(m.p, { guild: t }),
+            (0, i.jsx)(_.p, { guild: t }),
             (0, i.jsxs)("div", {
-                className: _.Xf,
+                className: f.Xf,
                 children: [
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(j, {
                         icon: n(818774),
-                        title: h.intl.string(h.t["53eF5o"]),
-                        subtitle: h.intl.formatToPlainString(h.t.TG7NYK, {
-                            enabled: E.filter((e) => e.enabled).length,
-                            total: E.length,
+                        title: E.intl.string(E.t["53eF5o"]),
+                        subtitle: E.intl.formatToPlainString(E.t.TG7NYK, {
+                            enabled: N.filter((e) => e.enabled).length,
+                            total: N.length,
                         }),
-                        page: u.C.CAPTCHA_AND_RAID_PROTECTION,
+                        page: x.C.CAPTCHA_AND_RAID_PROTECTION,
                     }),
-                    (0, i.jsx)("div", { className: _.yF }),
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)("div", { className: f.yF }),
+                    (0, i.jsx)(j, {
                         icon: n(134635),
-                        title: h.intl.string(h.t.O0SfFy),
-                        subtitle: h.intl.formatToPlainString(h.t.TG7NYK, {
+                        title: E.intl.string(E.t.O0SfFy),
+                        subtitle: E.intl.formatToPlainString(E.t.TG7NYK, {
+                            enabled: I.filter((e) => e.enabled).length,
+                            total: I.length,
+                        }),
+                        page: x.C.DM_AND_SPAM_PROTECTION,
+                    }),
+                    (0, i.jsx)("div", { className: f.yF }),
+                    b &&
+                        (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                (0, i.jsx)(j, {
+                                    icon: n(34853),
+                                    title: E.intl.string(E.t.uRelgx),
+                                    subtitle: E.intl.formatToPlainString(E.t.TG7NYK, { enabled: o, total: d }),
+                                    page: x.C.AUTOMOD,
+                                }),
+                                (0, i.jsx)("div", { className: f.yF }),
+                            ],
+                        }),
+                    (0, i.jsx)(j, {
+                        icon: n(638154),
+                        title: E.intl.string(E.t.xrmhRX),
+                        subtitle: E.intl.formatToPlainString(E.t.TG7NYK, {
                             enabled: C.filter((e) => e.enabled).length,
                             total: C.length,
                         }),
-                        page: u.C.DM_AND_SPAM_PROTECTION,
-                    }),
-                    (0, i.jsx)("div", { className: _.yF }),
-                    I &&
-                        (0, i.jsxs)(i.Fragment, {
-                            children: [
-                                (0, i.jsx)(A, {
-                                    icon: n(34853),
-                                    title: h.intl.string(h.t.uRelgx),
-                                    subtitle: h.intl.formatToPlainString(h.t.TG7NYK, { enabled: f, total: j }),
-                                    page: u.C.AUTOMOD,
-                                }),
-                                (0, i.jsx)("div", { className: _.yF }),
-                            ],
-                        }),
-                    (0, i.jsx)(A, {
-                        icon: n(638154),
-                        title: h.intl.string(h.t.xrmhRX),
-                        subtitle: h.intl.formatToPlainString(h.t.TG7NYK, {
-                            enabled: T.filter((e) => e.enabled).length,
-                            total: T.length,
-                        }),
-                        page: u.C.PERMISSIONS,
+                        page: x.C.PERMISSIONS,
                     }),
                 ],
             }),
-            (0, i.jsx)(g.A, { guild: t, location: "guild_settings_safety_overview" }),
+            (0, i.jsx)(p.A, { guild: t, location: "guild_settings_safety_overview" }),
         ],
     });
 }

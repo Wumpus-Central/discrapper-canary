@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { U: () => l });
-var r = n(627968);
-n(64700);
-var i = n(103989),
-    a = n(786558),
-    s = n(799226);
-let o = {
+o.d(e, { U: () => s });
+var t = o(627968);
+o(64700);
+var a = o(103989),
+    i = o(786558),
+    n = o(799226);
+let l = {
     Preview: { reducedMotion: "boolean", iconColor: "color" },
     Friends: { reducedMotion: "boolean", iconColor: "color" },
     Globe: { reducedMotion: "boolean", iconColor: "color" },
@@ -21,19 +20,19 @@ let o = {
     Messages: { reducedMotion: "boolean", iconColor: "color" },
     Servers: { reducedMotion: "boolean", iconColor: "color" },
 };
-function l(e) {
-    let { artboard: t = "Preview", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, s.CE)(i.A),
-        d = (0, s.m2)(i.A);
-    return u === s.BW.Loading
+function s(r) {
+    let { artboard: e = "Preview", stateMachine: o, ...s } = r,
+        { status: d, buffer: c } = (0, n.CE)(a.A),
+        b = (0, n.m2)(a.A);
+    return d === n.BW.Loading
         ? null
-        : (0, r.jsx)(a.w, {
-              ...(d ? { key: "override" } : {}),
+        : (0, t.jsx)(i.w, {
+              ...(b ? { key: "override" } : {}),
               buffer: c,
-              artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+              artboard: e,
+              stateMachine: o,
+              artboardProperties: l,
+              ...s,
           });
 }
-l.riveSrc = i.A;
+s.riveSrc = a.A;

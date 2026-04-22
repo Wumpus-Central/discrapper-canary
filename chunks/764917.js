@@ -1,40 +1,24 @@
-"use strict";
 n.d(t, { V: () => x });
-var r = n(627968),
-    i = n(64700),
-    a = n(106778),
-    s = n(397927),
-    o = n(21161),
-    l = n(531301),
+var i = n(627968),
+    s = n(64700),
+    r = n(106778),
+    a = n(544048),
+    l = n(21161),
+    o = n(531301),
     u = n(513609),
-    c = n(267102),
-    d = n(129185),
-    _ = n(652215),
-    f = n(851110),
-    p = n(409221);
-let h = [],
-    m = -5,
-    g = -40,
-    E = -40,
-    A = -100,
-    I = 11,
-    T = 125,
-    y = 20,
-    S = 12,
-    v = 48,
-    C = 0.01,
-    b = new Set(["jack_o_lantern", "nose"]),
-    N = {
-        jack_o_lantern: { sprites: (0, l.A)(["chocolate_bar", "lollipop", "candy"]) },
-        nose: { sprites: (0, l.A)(["foot"]) },
-    };
-function R(e) {
-    if (null == e) return null;
-    for (let t of b) if (null != e.match(RegExp(`:${t}(_tone[1-9])?`))) return t;
-    return null;
-}
-let O = { enter: { BEG: 0, END: 22 }, confetti: { BEG: 23, END: 119 }, exit: { BEG: 164, END: 200 } };
-function D() {
+    d = n(267102),
+    c = n(129185),
+    m = n(652215),
+    h = n(851110),
+    p = n(490114);
+let f = [],
+    g = new Set(["jack_o_lantern", "nose"]),
+    C = {
+        jack_o_lantern: { sprites: (0, o.A)(["chocolate_bar", "lollipop", "candy"]) },
+        nose: { sprites: (0, o.A)(["foot"]) },
+    },
+    y = { enter: { BEG: 0, END: 22 }, confetti: { BEG: 23, END: 119 }, exit: { BEG: 164, END: 200 } };
+function b() {
     return n
         .e("98150")
         .then(n.t.bind(n, 633343, 19))
@@ -43,92 +27,99 @@ function D() {
             return t;
         });
 }
-function L(e) {
-    if (null == e) return "enter";
-    switch (e) {
-        case "enter":
-            return "confetti";
-        case "confetti":
-            return "exit";
-        case "exit":
-            return "enter";
-    }
-}
-let w = i.forwardRef(function (e, t) {
+let v = s.forwardRef(function (e, t) {
     let { sprites: n } = e,
-        [s, l] = i.useState(null),
-        { confettiCanvas: u } = i.useContext(o.x),
-        c = (0, a.f9)(u, s);
+        [a, o] = s.useState(null),
+        { confettiCanvas: u } = s.useContext(l.x),
+        d = (0, r.f9)(u, a);
     return (
-        i.useImperativeHandle(
+        s.useImperativeHandle(
             t,
             () => ({
                 fireConfetti: (e, t) => {
-                    c.createMultipleConfetti(
+                    d.createMultipleConfetti(
                         {
-                            ...f.Mw,
+                            ...h.Mw,
                             position: { type: "static", value: { x: e, y: t } },
-                            velocity: { type: "static-random", minValue: { x: m, y: E }, maxValue: { x: g, y: A } },
-                            size: { type: "static-random", minValue: S, maxValue: v },
-                            dragCoefficient: { type: "static", value: C },
+                            velocity: {
+                                type: "static-random",
+                                minValue: { x: -5, y: -40 },
+                                maxValue: { x: -40, y: -100 },
+                            },
+                            size: { type: "static-random", minValue: 12, maxValue: 48 },
+                            dragCoefficient: { type: "static", value: 0.01 },
                         },
-                        y,
+                        20,
                     );
                 },
             }),
-            [c],
+            [d],
         ),
-        (0, r.jsx)(a.K_, { ref: l, colors: h, sprites: n, spriteWidth: v, spriteHeight: v })
+        (0, i.jsx)(r.K_, { ref: o, colors: f, sprites: n, spriteWidth: 48, spriteHeight: 48 })
     );
 });
 function x(e) {
     let { children: t } = e,
-        n = i.useRef({}),
-        [a, o] = i.useState(null),
-        l = L(a),
-        f = i.useRef(null),
-        [h, m] = i.useState(!1),
-        g = i.useRef("jack_o_lantern"),
-        E = (0, c.Us)(),
-        A = i.useCallback(
+        n = s.useRef({}),
+        [r, l] = s.useState(null),
+        o = (function (e) {
+            if (null == e) return "enter";
+            switch (e) {
+                case "enter":
+                    return "confetti";
+                case "confetti":
+                    return "exit";
+                case "exit":
+                    return "enter";
+            }
+        })(r),
+        h = s.useRef(null),
+        [f, x] = s.useState(!1),
+        A = s.useRef("jack_o_lantern"),
+        S = (0, d.Us)(),
+        j = s.useCallback(
             (e) => {
-                if (!h) {
-                    let t = R(e);
-                    null != t && ((g.current = t), m(!0), o(null));
+                if (!f) {
+                    let t = (function (e) {
+                        if (null == e) return null;
+                        for (let t of g) if (null != e.match(RegExp(`:${t}(_tone[1-9])?`))) return t;
+                        return null;
+                    })(e);
+                    null != t && ((A.current = t), x(!0), l(null));
                 }
             },
-            [h],
+            [f],
         ),
-        y = i.useMemo(() => ({ triggerAnimation: A, untriggerAnimation: () => {} }), [A]),
-        S = i.useCallback((e) => {
-            o(e);
+        E = s.useMemo(() => ({ triggerAnimation: j, untriggerAnimation: () => {} }), [j]),
+        N = s.useCallback((e) => {
+            l(e);
         }, []),
-        v = i.useCallback((e) => {
-            "exit" === e && m(!1);
+        R = s.useCallback((e) => {
+            "exit" === e && x(!1);
         }, []),
-        C = i.useCallback((e) => {
-            f.current = e;
+        w = s.useCallback((e) => {
+            h.current = e;
         }, []);
-    return (i.useEffect(() => {
-        if ("confetti" === a) {
-            if (null == f.current) return;
-            let e = f.current.getBoundingClientRect(),
-                t = e.left - I,
-                r = e.top + T,
-                i = n.current[g.current];
-            i?.fireConfetti(t, r);
+    return (s.useEffect(() => {
+        if ("confetti" === r) {
+            if (null == h.current) return;
+            let e = h.current.getBoundingClientRect(),
+                t = e.left - 11,
+                i = e.top + 125,
+                s = n.current[A.current];
+            s?.fireConfetti(t, i);
         }
-    }, [a]),
-    E !== _.BRT.APP)
+    }, [r]),
+    S !== m.BRT.APP)
         ? t
-        : (0, r.jsxs)(d.wE.Provider, {
-              value: y,
+        : (0, i.jsxs)(c.wE.Provider, {
+              value: E,
               children: [
                   t,
-                  Object.keys(N).map((e) => {
-                      let t = N[e];
-                      return (0, r.jsx)(
-                          w,
+                  Object.keys(C).map((e) => {
+                      let t = C[e];
+                      return (0, i.jsx)(
+                          v,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -138,18 +129,18 @@ function x(e) {
                           e,
                       );
                   }),
-                  h
-                      ? (0, r.jsx)(u.Ay, {
-                            children: (0, r.jsx)("div", {
+                  f
+                      ? (0, i.jsx)(u.Ay, {
+                            children: (0, i.jsx)("div", {
                                 className: p.k,
-                                children: (0, r.jsx)(s.tvC, {
-                                    animationRef: C,
+                                children: (0, i.jsx)(a.t, {
+                                    animationRef: w,
                                     className: p.I,
-                                    nextScene: l,
-                                    sceneSegments: O,
-                                    onScenePlay: S,
-                                    onSceneComplete: v,
-                                    importData: D,
+                                    nextScene: o,
+                                    sceneSegments: y,
+                                    onScenePlay: N,
+                                    onSceneComplete: R,
+                                    importData: b,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),

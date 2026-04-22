@@ -1,58 +1,58 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(600812),
-    a = n(791498),
-    o = n(244242);
-function d(e) {
-    let { node: t } = e,
+t.d(n, { A: () => c });
+var l = t(627968),
+    r = t(64700),
+    i = t(691885),
+    s = t(600812),
+    a = t(791498),
+    o = t(244242);
+function c(e) {
+    let { node: n } = e,
         {
-            useTitle: n,
-            useSubtitle: d,
-            useValue: c,
+            useTitle: t,
+            useSubtitle: c,
+            useValue: d,
             setValue: u,
-            useOptions: m,
-            clearable: g,
-            closeOnSelect: _,
-            wrapTags: x,
-            selectionMode: h,
-            usePersistentBadge: A,
-            getDismissibleBadges: p,
-        } = t,
-        T = n(),
-        f = d?.(),
-        S = c(),
-        E = m(),
-        b = A?.(),
-        C = p?.(),
-        v = (0, r.A)({ persistentBadge: b, dismissibleBadges: C }),
-        N = (0, a.q)(t),
-        I = s.useMemo(() => {
-            var e, t;
+            useOptions: x,
+            clearable: j,
+            closeOnSelect: h,
+            wrapTags: m,
+            selectionMode: f,
+            usePersistentBadge: p,
+            getDismissibleBadges: y,
+        } = n,
+        g = t(),
+        v = c?.(),
+        A = d(),
+        N = x(),
+        b = p?.(),
+        k = y?.(),
+        E = (0, s.A)({ persistentBadge: b, dismissibleBadges: k }),
+        T = (0, a.q)(n),
+        S = r.useMemo(() => {
+            var e, n;
             return {
-                selectionMode: h,
-                value: S,
+                selectionMode: f,
+                value: A,
                 onSelectionChange:
                     ((e = u),
-                    (t = N),
-                    (n) => {
-                        t(), e(n);
+                    (n = T),
+                    (t) => {
+                        n(), e(t);
                     }),
             };
-        }, [h, S, u, N]);
-    return (0, i.jsx)(o.L, {
-        children: (0, i.jsx)(l.l6P, {
-            ...I,
-            label: T,
-            description: f,
-            options: E,
-            wrapTags: x,
-            closeOnSelect: _,
-            clearable: g,
+        }, [f, A, u, T]);
+    return (0, l.jsx)(o.L, {
+        children: (0, l.jsx)(i.l, {
+            ...S,
+            label: g,
+            description: v,
+            options: N,
+            wrapTags: m,
+            closeOnSelect: h,
+            clearable: j,
             layout: "horizontal-responsive",
             fullWidth: !0,
-            badge: v,
+            badge: E,
         }),
     });
 }

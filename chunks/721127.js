@@ -1,29 +1,25 @@
-a.d(t, { A: () => _ });
-var n = a(627968);
-a(64700);
-var i = a(503698),
-    o = a.n(i),
-    r = a(397927),
-    s = a(404374),
-    l = a(468099);
-function _(e) {
-    let { text: t, className: a, button: i, reducedRightPadding: _ = !1 } = e;
-    return (0, n.jsxs)("div", {
-        className: o()(_ ? l.wp : l.Ug, a),
+i.d(t, { A: () => d });
+var r = i(627968);
+i(64700);
+var n = i(503698),
+    s = i.n(n),
+    o = i(403581),
+    l = i(834730),
+    a = i(404374),
+    c = i(291590);
+function d(e) {
+    let { text: t, className: i, button: n, reducedRightPadding: d = !1 } = e;
+    return (0, r.jsxs)("div", {
+        className: s()(d ? c.wp : c.Ug, i),
         children: [
-            (0, n.jsxs)("div", {
-                className: l.g9,
+            (0, r.jsxs)("div", {
+                className: c.g9,
                 children: [
-                    (0, n.jsx)(r.tvc, { size: "md", className: l.Kk, color: s.k0.PREMIUM_TIER_2 }),
-                    (0, n.jsx)(r.Text, {
-                        className: l.Qq,
-                        variant: "text-md/normal",
-                        color: "text-strong",
-                        children: t,
-                    }),
+                    (0, r.jsx)(o.t, { size: "md", className: c.Kk, color: a.k0.PREMIUM_TIER_2 }),
+                    (0, r.jsx)(l.E, { className: c.Qq, variant: "text-md/normal", color: "text-strong", children: t }),
                 ],
             }),
-            i,
+            n,
         ],
     });
 }

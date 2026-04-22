@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { L: () => s });
+n.d(t, { L: () => l });
 let i = (0, n(600975).C)({
     kind: "guild",
     id: "2026-04_guild_verification_role",
@@ -7,7 +6,7 @@ let i = (0, n(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable verification role setting", config: { enabled: !0 } }],
 });
-function s(e) {
+function l(e) {
     let { guildId: t, location: n } = e;
     return i.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }

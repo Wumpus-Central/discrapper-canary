@@ -1,27 +1,29 @@
-a.d(t, { AZ: () => v });
+a.d(t, { AZ: () => x });
 var n = a(627968),
-    o = a(64700),
-    r = a(825638),
-    i = a(397927),
-    l = a(664111),
-    s = a(831056),
-    d = a(784018);
-let c = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
-function u(e) {
-    let { orientation: t, thumbnailUrl: a, onReplay: o } = e;
+    r = a(64700),
+    i = a(517738),
+    l = a(231723),
+    o = a(717421),
+    s = a(834730),
+    d = a(664111),
+    c = a(831056),
+    u = a(784018);
+let p = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
+function m(e) {
+    let { orientation: t, thumbnailUrl: a, onReplay: r } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(s.nY, { url: a }),
-            (0, n.jsx)(s.KP, {}),
-            (0, n.jsxs)(s.zj, {
+            (0, n.jsx)(c.nY, { url: a }),
+            (0, n.jsx)(c.KP, {}),
+            (0, n.jsxs)(c.zj, {
                 orientation: t,
                 children: [
-                    (0, n.jsx)(s.Kb, { url: a, orientation: t }),
-                    (0, n.jsx)(s.lx, {
+                    (0, n.jsx)(c.Kb, { url: a, orientation: t }),
+                    (0, n.jsx)(c.lx, {
                         title: "Watch Again",
                         subtitle: "Replay this video",
                         ctaBtnLabel: "Replay",
-                        onCTAClick: o,
+                        onCTAClick: r,
                         orientation: t,
                     }),
                 ],
@@ -29,30 +31,30 @@ function u(e) {
         ],
     });
 }
-function p(e) {
+function h(e) {
     let {
             orientation: t,
             autoplay: a,
-            maxSeekableTimeSec: r,
-            videoUrl: s,
-            poster: p,
-            showEndScreen: b,
-            active: m,
-            autoHideVolumeSlider: _,
-            sizing: g,
-            persistPlayhead: h,
+            maxSeekableTimeSec: i,
+            videoUrl: o,
+            poster: s,
+            showEndScreen: c,
+            active: h,
+            autoHideVolumeSlider: v,
+            sizing: _,
+            persistPlayhead: g,
         } = e,
-        [v, x] = o.useState(0),
-        y = o.useMemo(() => {
-            if (null == s || "" === s) return s;
-            let e = s.includes("?") ? "&" : "?";
-            return 0 === v ? s : `${s}${e}_cb=${v}`;
-        }, [s, v]);
+        [f, b] = r.useState(0),
+        x = r.useMemo(() => {
+            if (null == o || "" === o) return o;
+            let e = o.includes("?") ? "&" : "?";
+            return 0 === f ? o : `${o}${e}_cb=${f}`;
+        }, [o, f]);
     return (0, n.jsxs)("div", {
         style: { display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" },
         children: [
             (0, n.jsx)("button", {
-                onClick: () => x((e) => e + 1),
+                onClick: () => b((e) => e + 1),
                 style: {
                     padding: "6px 14px",
                     cursor: "pointer",
@@ -66,7 +68,7 @@ function p(e) {
             }),
             (0, n.jsx)("div", {
                 style:
-                    "video" === g
+                    "video" === _
                         ? {
                               width: "landscape" === t ? "640px" : "360px",
                               height: "landscape" === t ? "360px" : "640px",
@@ -83,36 +85,36 @@ function p(e) {
                               overflow: "hidden",
                           },
                 children: (0, n.jsx)(
-                    l.A,
+                    d.default,
                     {
-                        src: y,
-                        poster: p,
-                        active: m,
-                        autoFocus: !m,
+                        src: x,
+                        poster: s,
+                        active: h,
+                        autoFocus: !h,
                         autoplay: a,
                         orientation: t,
-                        maxSeekableTimeSec: r > 0 ? r : void 0,
-                        autoHideVolumeSlider: _,
-                        persistPlayhead: h,
-                        parentTransitionState: i.ip4.ENTERED,
+                        maxSeekableTimeSec: i > 0 ? i : void 0,
+                        autoHideVolumeSlider: v,
+                        persistPlayhead: g,
+                        parentTransitionState: l.ip.ENTERED,
                         onProgressUpdate: () => {},
                         onEnded: () => {},
                         onError: () => {},
-                        transcriptText: s === d.Im ? d.LI : d.pQ,
-                        renderEndScreen: b
+                        transcriptText: o === u.Im ? u.LI : u.pQ,
+                        renderEndScreen: c
                             ? (e) => {
                                   let { replay: a } = e;
-                                  return (0, n.jsx)(u, { orientation: t, thumbnailUrl: c, onReplay: a });
+                                  return (0, n.jsx)(m, { orientation: t, thumbnailUrl: p, onReplay: a });
                               }
                             : void 0,
                     },
-                    `${String(m)}-${v}`,
+                    `${String(h)}-${f}`,
                 ),
             }),
         ],
     });
 }
-let b = {
+let v = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -124,8 +126,8 @@ let b = {
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         maxSeekableTimeSec: { label: "Max Seekable Time (sec, 0 = unrestricted)", type: "number", defaultValue: 0 },
-        videoUrl: { label: "Video URL", type: "text", defaultValue: d.kz },
-        poster: { label: "Poster URL", type: "text", defaultValue: c },
+        videoUrl: { label: "Video URL", type: "text", defaultValue: u.kz },
+        poster: { label: "Poster URL", type: "text", defaultValue: p },
         showEndScreen: { label: "Show End Screen", type: "boolean", defaultValue: !0 },
         active: { label: "Active", type: "boolean", defaultValue: !0 },
         autoHideVolumeSlider: { label: "Auto-hide Volume Slider", type: "boolean", defaultValue: !1 },
@@ -140,76 +142,76 @@ let b = {
             defaultValue: "modal",
         },
     },
-    m = {
+    _ = {
         name: "Landscape",
         id: "landscape-video-generic",
-        component: p,
-        controls: { ...b, orientation: { ...b.orientation, defaultValue: "landscape" } },
-    },
-    _ = {
-        name: "Portrait",
-        id: "portrait-video-generic",
-        component: p,
-        controls: { ...b, orientation: { ...b.orientation, defaultValue: "portrait" } },
+        component: h,
+        controls: { ...v, orientation: { ...v.orientation, defaultValue: "landscape" } },
     },
     g = {
+        name: "Portrait",
+        id: "portrait-video-generic",
+        component: h,
+        controls: { ...v, orientation: { ...v.orientation, defaultValue: "portrait" } },
+    },
+    f = {
         name: "HLS",
         id: "hls-video-generic",
-        component: p,
+        component: h,
         controls: {
-            ...b,
-            orientation: { ...b.orientation, defaultValue: "landscape" },
-            videoUrl: { ...b.videoUrl, defaultValue: d.Im },
+            ...v,
+            orientation: { ...v.orientation, defaultValue: "landscape" },
+            videoUrl: { ...v.videoUrl, defaultValue: u.Im },
         },
     },
-    h = { tension: 500, friction: 30, clamp: !0 },
-    v = {
+    b = { tension: 500, friction: 30, clamp: !0 },
+    x = {
         title: "Discord Video Player (Generic)",
         stories: [
-            m,
             _,
             g,
+            f,
             {
                 name: "Timeline Indicators",
                 id: "timeline-indicators-generic",
                 component: function (e) {
-                    let { orientation: t, autoplay: a, maxSeekableTimeSec: s, videoUrl: d, indicatorTimeSec: c } = e,
-                        u = (function (e) {
-                            let [t, a] = o.useState(null),
-                                [l, s] = o.useState(null),
-                                d = o.useRef(null),
-                                [{ expansion: c }, u] = (0, i.zhh)(() => ({
+                    let { orientation: t, autoplay: a, maxSeekableTimeSec: c, videoUrl: u, indicatorTimeSec: p } = e,
+                        m = (function (e) {
+                            let [t, a] = r.useState(null),
+                                [l, d] = r.useState(null),
+                                c = r.useRef(null),
+                                [{ expansion: u }, p] = (0, o.z)(() => ({
                                     expansion: 0,
-                                    config: h,
+                                    config: b,
                                     onRest: () => {
-                                        null == d.current && s(null);
+                                        null == c.current && d(null);
                                     },
                                 })),
-                                p = o.useCallback(
+                                m = r.useCallback(
                                     (e) => {
-                                        (d.current = e),
-                                            null != e ? (s(e), u({ expansion: 4 })) : u({ expansion: 0 }),
+                                        (c.current = e),
+                                            null != e ? (d(e), p({ expansion: 4 })) : p({ expansion: 0 }),
                                             a(e);
                                     },
-                                    [u],
+                                    [p],
                                 ),
-                                b = o.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
-                                m = o.useCallback(
+                                h = r.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
+                                v = r.useCallback(
                                     (e, t) => {
                                         let a = l === e.index;
                                         return (0, n.jsx)(
-                                            r.animated.div,
+                                            i.animated.div,
                                             {
                                                 "data-testid": "timeline-indicator",
-                                                onMouseEnter: () => p(e.index),
-                                                onMouseLeave: () => p(null),
+                                                onMouseEnter: () => m(e.index),
+                                                onMouseLeave: () => m(null),
                                                 style: {
                                                     position: "absolute",
-                                                    left: a ? c.to((t) => e.leftPx - t) : e.leftPx,
+                                                    left: a ? u.to((t) => e.leftPx - t) : e.leftPx,
                                                     top: "50%",
                                                     transform: "translateY(-50%)",
-                                                    width: a ? c.to((e) => `${32 + 2 * e}px`) : 32,
-                                                    height: a ? c.to((e) => `${32 + 2 * e}px`) : 32,
+                                                    width: a ? u.to((e) => `${32 + 2 * e}px`) : 32,
+                                                    height: a ? u.to((e) => `${32 + 2 * e}px`) : 32,
                                                     boxSizing: "border-box",
                                                     borderRadius: "50%",
                                                     backgroundColor: "#3ba55c",
@@ -220,7 +222,7 @@ let b = {
                                                     cursor: "pointer",
                                                     zIndex: 1,
                                                 },
-                                                children: (0, n.jsx)(i.Text, {
+                                                children: (0, n.jsx)(s.E, {
                                                     variant: "text-xs/semibold",
                                                     color: "always-white",
                                                     children: "R",
@@ -229,37 +231,37 @@ let b = {
                                             `indicator-${e.index}`,
                                         );
                                     },
-                                    [p, l, c],
+                                    [m, l, u],
                                 );
                             return {
-                                indicators: b,
+                                indicators: h,
                                 animatingIndex: l,
-                                expansionSpring: c,
+                                expansionSpring: u,
                                 hoverExpansionPx: 4,
-                                renderIndicator: m,
+                                renderIndicator: v,
                             };
-                        })(c);
+                        })(p);
                     return (0, n.jsx)("div", {
                         style: {
                             width: "landscape" === t ? "640px" : "360px",
                             height: "landscape" === t ? "360px" : "640px",
                             margin: "0 auto",
                         },
-                        children: (0, n.jsx)(l.A, {
-                            src: d,
+                        children: (0, n.jsx)(d.default, {
+                            src: u,
                             autoplay: a,
                             orientation: t,
-                            maxSeekableTimeSec: s > 0 ? s : void 0,
-                            parentTransitionState: i.ip4.ENTERED,
-                            timelineIndicatorConfig: u,
+                            maxSeekableTimeSec: c > 0 ? c : void 0,
+                            parentTransitionState: l.ip.ENTERED,
+                            timelineIndicatorConfig: m,
                         }),
                     });
                 },
                 controls: {
-                    orientation: b.orientation,
-                    autoplay: b.autoplay,
-                    maxSeekableTimeSec: b.maxSeekableTimeSec,
-                    videoUrl: b.videoUrl,
+                    orientation: v.orientation,
+                    autoplay: v.autoplay,
+                    maxSeekableTimeSec: v.maxSeekableTimeSec,
+                    videoUrl: v.videoUrl,
                     indicatorTimeSec: { label: "Indicator Time (sec)", type: "number", defaultValue: 15 },
                 },
             },

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Vg: "grid_ec9088",
     DB: "itemContainer_ec9088",

@@ -1,63 +1,66 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
-    r = n(311907),
+    l = n(311907),
     a = n(827734),
-    l = n(397927),
-    o = n(532197),
-    c = n(403362),
-    d = n(874486),
-    u = n(927018),
-    _ = n(508971),
-    m = n(985018),
-    A = n(872722);
-function g(e) {
+    r = n(939249),
+    o = n(834730),
+    d = n(534514),
+    u = n(369606),
+    c = n(532197),
+    g = n(403362),
+    m = n(874486),
+    _ = n(927018),
+    A = n(508971),
+    h = n(985018),
+    p = n(885959);
+function x(e) {
     let { onBackClick: t } = e,
-        n = (0, r.bG)([d.A], () => d.A.getAllUnlockedAchievements()),
-        g = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
+        n = (0, l.bG)([m.A], () => m.A.getAllUnlockedAchievements()),
+        x = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
         E = s.useMemo(
             () =>
-                Object.values(u.l0)
-                    .filter(c.Vq)
+                Object.values(_.l0)
+                    .filter(g.Vq)
                     .filter((e) => null == n[e.id])
                     .sort((e, t) => e.rarity - t.rarity),
             [n],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(l.DUT, {
+            (0, i.jsxs)(r.D, {
                 onClick: t,
-                className: A.vv,
+                className: p.vv,
                 children: [
-                    (0, i.jsx)(o.A, { direction: o.A.Directions.LEFT, className: A.Kk }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(c.A, { direction: c.A.Directions.LEFT, className: p.Kk }),
+                    (0, i.jsx)(o.E, {
                         variant: "text-lg/normal",
                         color: "text-default",
-                        children: m.intl.string(m.t["13/7kX"]),
+                        children: h.intl.string(h.t["13/7kX"]),
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: A.N1,
+                className: p.N1,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: A.if,
+                        className: p.if,
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(d.D, {
                                 variant: "heading-lg/extrabold",
                                 color: "text-strong",
-                                children: m.intl.string(m.t["6jI0hd"]),
+                                children: h.intl.string(h.t["6jI0hd"]),
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(o.E, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: m.intl.string(m.t.GuUItX),
+                                children: h.intl.string(h.t.GuUItX),
                             }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: A.nr,
-                        children: (0, i.jsx)(l.OR, {
+                        className: p.nr,
+                        children: (0, i.jsx)(u.O, {
                             size: "custom",
                             color: a.A.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
@@ -66,36 +69,36 @@ function g(e) {
                     }),
                 ],
             }),
-            g.length > 0 &&
+            x.length > 0 &&
                 (0, i.jsx)("div", {
-                    className: A.yF,
+                    className: p.yF,
                     children: (0, i.jsx)("div", {
-                        className: A.Eh,
-                        children: g.map((e) => {
+                        className: p.Eh,
+                        children: x.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
-                            return (0, i.jsx)(_.A, { achievementId: t, dateUnlocked: n }, t);
+                            return (0, i.jsx)(A.A, { achievementId: t, dateUnlocked: n }, t);
                         }),
                     }),
                 }),
             E.length > 0 &&
                 (0, i.jsxs)("div", {
-                    className: A.yF,
+                    className: p.yF,
                     children: [
                         (0, i.jsx)("div", {
-                            className: A.if,
-                            children: (0, i.jsx)(l.Text, {
+                            className: p.if,
+                            children: (0, i.jsx)(o.E, {
                                 variant: "text-md/bold",
                                 color: "text-default",
-                                children: m.intl.string(m.t.GFyMg1),
+                                children: h.intl.string(h.t.GFyMg1),
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: A.Eh,
-                            children: E.map((e) => (0, i.jsx)(_.A, { achievementId: e.id }, e.id)),
+                            className: p.Eh,
+                            children: E.map((e) => (0, i.jsx)(A.A, { achievementId: e.id }, e.id)),
                         }),
                     ],
                 }),
-            (0, i.jsx)("div", { className: A.yF, children: (0, i.jsx)("div", { className: A.F3 }) }),
+            (0, i.jsx)("div", { className: p.yF, children: (0, i.jsx)("div", { className: p.F3 }) }),
         ],
     });
 }

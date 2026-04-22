@@ -1,93 +1,96 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(732955),
-    o = n(397927),
-    d = n(688810),
-    c = n(893598),
-    u = n(136708),
-    _ = n(985018),
-    m = n(636405),
-    g = n(519636);
-function A(e) {
+    r = n(408278),
+    o = n(192308),
+    d = n(939249),
+    u = n(834730),
+    c = n(789645),
+    g = n(688810),
+    m = n(893598),
+    _ = n(853513),
+    A = n(985018),
+    h = n(437326),
+    p = n(519636);
+function x(e) {
     let {
             guildId: t,
             variant: l = "admin",
-            className: A,
-            analyticsLocation: x,
-            videoPlacement: h = "sidebar",
-            onDismiss: p,
+            className: x,
+            analyticsLocation: E,
+            videoPlacement: T = "sidebar",
+            onDismiss: S,
         } = e,
-        { analyticsLocations: T } = (0, d.Ay)(),
-        E = s.useCallback(() => {
-            (0, o.mMO)(async () => {
+        { analyticsLocations: f } = (0, g.Ay)(),
+        b = s.useCallback(() => {
+            (0, o.openModalLazy)(async () => {
                 let { default: e } = await n.e("64251").then(n.bind(n, 430326));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
                         guildId: t,
-                        analyticsLocation: x,
-                        videoPlacement: h,
-                        sourceAnalyticsLocations: T,
+                        analyticsLocation: E,
+                        videoPlacement: T,
+                        sourceAnalyticsLocations: f,
                     });
             });
-        }, [x, T, t, h]);
+        }, [E, f, t, T]);
     return "member" === l
-        ? (0, i.jsxs)(o.DUT, {
-              className: a()(m.iR, A),
-              onClick: E,
-              "aria-label": _.intl.string(u.default["103aY+"]),
+        ? (0, i.jsxs)(d.D, {
+              className: a()(h.iR, x),
+              onClick: b,
+              "aria-label": A.intl.string(_.default["103aY+"]),
               children: [
-                  (0, i.jsx)("img", { alt: "", className: m.xn, src: g.A }),
-                  (0, i.jsx)("div", { className: m.b1 }),
+                  (0, i.jsx)("img", { alt: "", className: h.xn, src: p.A }),
+                  (0, i.jsx)("div", { className: h.b1 }),
                   (0, i.jsx)("div", {
-                      className: m.i5,
-                      children: (0, i.jsx)(o.Text, {
+                      className: h.i5,
+                      children: (0, i.jsx)(u.E, {
                           variant: "text-xs/semibold",
                           color: "always-white",
-                          children: _.intl.string(u.default.diMhWc),
+                          children: A.intl.string(_.default.diMhWc),
                       }),
                   }),
-                  (0, i.jsx)(c.A, { className: m.Rr, inactive: !0, renderLinkComponent: () => null }),
+                  (0, i.jsx)(m.A, { className: h.Rr, inactive: !0, renderLinkComponent: () => null }),
               ],
           })
         : (0, i.jsxs)("div", {
-              className: m.kL,
+              className: h.kL,
               children: [
                   (0, i.jsx)("div", {
-                      className: a()(m.X8, "theme-dark"),
-                      children: (0, i.jsx)(r.K0, {
+                      className: a()(h.X8, "theme-dark"),
+                      children: (0, i.jsx)(r.K, {
                           variant: "icon-only",
                           size: "md",
-                          "aria-label": _.intl.string(_.t.WAI6xu),
-                          onClick: p,
-                          icon: o.PGe,
+                          "aria-label": A.intl.string(A.t.WAI6xu),
+                          onClick: S,
+                          icon: c.P,
                       }),
                   }),
-                  (0, i.jsxs)(o.DUT, {
-                      className: m.iT,
-                      onClick: E,
-                      "aria-label": _.intl.string(u.default["103aY+"]),
+                  (0, i.jsxs)(d.D, {
+                      className: h.iT,
+                      onClick: b,
+                      "aria-label": A.intl.string(_.default["103aY+"]),
                       children: [
-                          (0, i.jsx)("img", { alt: "", className: m.xn, src: g.A }),
-                          (0, i.jsx)("div", { className: m.TQ }),
-                          (0, i.jsx)(c.A, { className: m.Rr, inactive: !0, renderLinkComponent: () => null }),
+                          (0, i.jsx)("img", { alt: "", className: h.xn, src: p.A }),
+                          (0, i.jsx)("div", { className: h.TQ }),
+                          (0, i.jsx)(m.A, { className: h.Rr, inactive: !0, renderLinkComponent: () => null }),
                       ],
                   }),
                   (0, i.jsxs)("div", {
-                      className: m.FS,
+                      className: h.FS,
                       children: [
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(u.E, {
                               variant: "text-md/semibold",
                               color: "text-strong",
-                              children: _.intl.string(u.default.diMhWc),
+                              children: A.intl.string(_.default.diMhWc),
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(u.E, {
                               variant: "text-sm/medium",
                               color: "text-muted",
-                              children: _.intl.string(u.default.pycxTr),
+                              children: A.intl.string(_.default.pycxTr),
                           }),
                       ],
                   }),

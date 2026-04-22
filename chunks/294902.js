@@ -1,69 +1,69 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(685073),
-    a = n(31432),
-    o = n(810396),
-    l = n(442228),
-    u = n(192867),
-    c = n(696451),
-    d = n(351906),
-    _ = n(385612),
-    f = n(996988),
-    p = n(886308);
-function h(e) {
+a.d(i, { A: () => v });
+var r = a(627968);
+a(64700);
+var n = a(311907),
+    l = a(685073),
+    s = a(31432),
+    t = a(810396),
+    d = a(442228),
+    o = a(192867),
+    u = a(696451),
+    c = a(351906),
+    m = a(385612),
+    g = a(996988),
+    p = a(656884);
+function v(e) {
     let {
-            user: t,
-            displayProfile: n,
-            guild: h,
-            pendingAvatar: m,
-            pendingNickname: E,
-            pendingGlobalName: g,
-            pendingBio: A,
-            pendingPronouns: I,
-            pendingLegacyUsernameDisabled: T,
-            pendingBadges: S,
-            pendingDisplayNameStyles: y,
-            pendingPrimaryGuildId: v,
-            hideBioSection: N,
-            shouldOpenBadgeTooltip: C,
+            user: i,
+            displayProfile: a,
+            guild: v,
+            pendingAvatar: h,
+            pendingNickname: A,
+            pendingGlobalName: y,
+            pendingBio: x,
+            pendingPronouns: P,
+            pendingLegacyUsernameDisabled: f,
+            pendingBadges: j,
+            pendingDisplayNameStyles: b,
+            pendingPrimaryGuildId: C,
+            hideBioSection: I,
+            shouldOpenBadgeTooltip: w,
         } = e,
-        R = (0, i.bG)([c.Ay], () => (null == h ? null : c.Ay.getMember(h.id, t.id))),
-        O = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
-        b = n?.getPreviewBio(A),
-        D = I ?? n?.pronouns,
-        L = (0, _.eh)({ pendingNickname: E, pendingGlobalName: g, user: t, guildMember: R }),
-        w = (0, s.gS)(v),
-        M = () => {
-            if (null != R && null !== m && (null != R.avatar || null != m))
-                return (0, r.jsx)(u.A, { user: t, nickname: L });
-        };
+        T = (0, n.bG)([u.Ay], () => (null == v ? null : u.Ay.getMember(v.id, i.id))),
+        D = (0, n.bG)([c.A], () => c.A.hidePersonalInformation),
+        N = a?.getPreviewBio(x),
+        k = P ?? a?.pronouns,
+        S = (0, m.eh)({ pendingNickname: A, pendingGlobalName: y, user: i, guildMember: T }),
+        O = (0, l.gS)(C);
     return (0, r.jsxs)("div", {
         className: p.rf,
         inert: !0,
         children: [
-            (0, r.jsx)(o.A, {
-                user: t,
-                guildId: h?.id,
-                usernameIcon: M(),
-                nickname: L,
-                pendingDisplayNameStyles: y,
-                pronouns: D,
-                primaryGuild: w,
-                tags: (0, r.jsx)(a.A, {
-                    displayProfile: n,
-                    themeType: f.d.POPOUT,
-                    pendingLegacyUsernameDisabled: T,
-                    pendingBadges: S,
-                    shouldOpenBadgeTooltip: C,
+            (0, r.jsx)(t.A, {
+                user: i,
+                guildId: v?.id,
+                usernameIcon: (() => {
+                    if (null != T) {
+                        if (null !== h && (null != T.avatar || null != h))
+                            return (0, r.jsx)(o.A, { user: i, nickname: S });
+                    }
+                })(),
+                nickname: S,
+                pendingDisplayNameStyles: b,
+                pronouns: k,
+                primaryGuild: O,
+                tags: (0, r.jsx)(s.A, {
+                    displayProfile: a,
+                    themeType: g.d.POPOUT,
+                    pendingLegacyUsernameDisabled: f,
+                    pendingBadges: j,
+                    shouldOpenBadgeTooltip: w,
                 }),
             }),
-            !N &&
-                null != b &&
-                "" !== b &&
-                (0, r.jsx)(l.A, { user: t, bio: b, hidePersonalInformation: O, viewFullBioDisabled: !0 }),
+            !I &&
+                null != N &&
+                "" !== N &&
+                (0, r.jsx)(d.A, { user: i, bio: N, hidePersonalInformation: D, viewFullBioDisabled: !0 }),
         ],
     });
 }

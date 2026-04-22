@@ -1,64 +1,65 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => j });
 var i = n(627968);
 n(64700);
-var s = n(503698),
-    l = n.n(s),
+var l = n(503698),
+    s = n.n(l),
     r = n(311907),
-    a = n(397927),
-    o = n(291661),
-    d = n(685073),
-    c = n(534400),
-    u = n(514661),
-    m = n(71393),
-    g = n(287809),
-    x = n(562153),
-    h = n(29086),
-    _ = n(583970),
-    A = n(985018),
-    p = n(908742);
-function f(e) {
+    a = n(834730),
+    o = n(778712),
+    d = n(821609),
+    c = n(162232),
+    u = n(685073),
+    m = n(534400),
+    g = n(514661),
+    h = n(71393),
+    x = n(287809),
+    _ = n(562153),
+    p = n(29086),
+    A = n(661023),
+    E = n(985018),
+    f = n(878485);
+function j(e) {
     let { guildId: t } = e,
-        n = (0, r.bG)([m.A], () => m.A.getGuild(t)),
-        s = (0, r.bG)([g.default], () => g.default.getCurrentUser()),
-        { onAdoptTag: f, isAdopting: j } = (0, u.A)(t),
-        N = s?.primaryGuild?.identityGuildId === t && s?.primaryGuild?.identityEnabled === !0;
-    if (null != s && null != n && (0, d.q0)(n))
+        n = (0, r.bG)([h.A], () => h.A.getGuild(t)),
+        l = (0, r.bG)([x.default], () => x.default.getCurrentUser()),
+        { onAdoptTag: j, isAdopting: N } = (0, g.A)(t),
+        I = l?.primaryGuild?.identityGuildId === t && l?.primaryGuild?.identityEnabled === !0;
+    if (null != l && null != n && (0, u.q0)(n))
         return (0, i.jsxs)("div", {
-            className: p.kL,
+            className: f.kL,
             children: [
-                (0, i.jsx)(a.Text, {
-                    className: p.uW,
+                (0, i.jsx)(a.E, {
+                    className: f.uW,
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: N ? A.intl.string(_.default["6xBCpG"]) : A.intl.string(_.default.eSRKez),
+                    children: I ? E.intl.string(A.default["6xBCpG"]) : E.intl.string(A.default.eSRKez),
                 }),
-                (0, i.jsx)("div", { className: p.yF }),
+                (0, i.jsx)("div", { className: f.yF }),
                 (0, i.jsxs)("div", {
-                    className: l()(p.uW, p.rf),
+                    className: s()(f.uW, f.rf),
                     children: [
-                        (0, i.jsx)(h.V, {
-                            avatar: (0, i.jsx)(o.A, {
-                                user: s,
+                        (0, i.jsx)(p.V, {
+                            avatar: (0, i.jsx)(c.A, {
+                                user: l,
                                 guildId: t,
-                                avatarSize: a._3J.SIZE_40,
+                                avatarSize: o._3.SIZE_40,
                                 "aria-hidden": !0,
                             }),
-                            decorations: (0, i.jsx)(c.o9, {
+                            decorations: (0, i.jsx)(m.o9, {
                                 guildId: n.id,
                                 guildBadge: n.profile.badge,
                                 guildTag: n.profile.tag,
                                 inline: !1,
                             }),
-                            username: x.Ay.getName(t, null, s),
-                            message: A.intl.string(A.t["6OSasb"]),
+                            username: _.Ay.getName(t, null, l),
+                            message: E.intl.string(E.t["6OSasb"]),
                         }),
-                        (0, i.jsx)(a.Button, {
+                        (0, i.jsx)(d.$, {
                             variant: "primary",
-                            text: A.intl.string(A.t.cQDYRu),
-                            onClick: f,
-                            loading: j,
-                            disabled: N,
+                            text: E.intl.string(E.t.cQDYRu),
+                            onClick: j,
+                            loading: N,
+                            disabled: I,
                             fullWidth: !0,
                         }),
                     ],

@@ -1,20 +1,21 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(576705),
-    r = n(519222),
-    s = n(652215),
-    o = n(985018);
-function d(e, t) {
+var l = n(477782),
+    a = n(290136),
+    r = n(576705),
+    s = n(519222),
+    o = n(652215),
+    d = n(985018);
+function c(e, t) {
     let n = t.getGuildId();
-    return null != n && e.type === s.lAJ.USER_JOIN && a.A.canWithPartialContext(s.xBc.MANAGE_GUILD, { guildId: n })
-        ? (0, i.jsx)(l.Drp, {
+    return null != n && e.type === o.lAJ.USER_JOIN && r.A.canWithPartialContext(o.xBc.MANAGE_GUILD, { guildId: n })
+        ? (0, i.jsx)(l.Dr, {
               id: "configure",
-              label: o.intl.string(o.t.NpHUi1),
-              leadingAccessory: { type: "icon", icon: l.cBN },
-              icon: l.cBN,
-              action: () => (0, r.vc)(t),
+              label: d.intl.string(d.t.NpHUi1),
+              leadingAccessory: { type: "icon", icon: a.c },
+              icon: a.c,
+              action: () => (0, s.vc)(t),
           })
         : null;
 }

@@ -1,34 +1,36 @@
-s.r(t), s.d(t, { default: () => u });
+s.r(t), s.d(t, { default: () => p });
 var i = s(627968),
     r = s(64700),
     l = s(827734),
-    n = s(397927),
-    a = s(538064),
-    c = s(348639),
-    o = s(972049),
-    d = s(772958);
-function u() {
+    a = s(834730),
+    n = s(825484),
+    c = s(821609),
+    o = s(538064),
+    d = s(348639),
+    u = s(972049),
+    h = s(772958);
+function p() {
     let [e, t] = r.useState(!1),
-        s = (0, d.vX)(),
-        { reporting: u } = c.A.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
+        s = (0, h.vX)(),
+        { reporting: p } = d.A.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
     return (r.useEffect(() => {
-        if (u && e && null != s)
+        if (p && e && null != s)
             return (
                 s.forEach((e) => {
                     e.elements.forEach((e) => {
-                        e.setAttribute(o.nY, "");
+                        e.setAttribute(u.nY, "");
                     });
                 }),
                 () => {
                     s.forEach((e) => {
                         e.elements.forEach((e) => {
-                            e.removeAttribute(o.nY);
+                            e.removeAttribute(u.nY);
                         });
                     });
                 }
             );
-    }, [s, u, e]),
-    u && null != s && 0 !== s.length)
+    }, [s, p, e]),
+    p && null != s && 0 !== s.length)
         ? (0, i.jsxs)("div", {
               style: {
                   backgroundColor: l.A.colors.BACKGROUND_FEEDBACK_CRITICAL.css,
@@ -39,17 +41,17 @@ function u() {
                   padding: "8px 12px",
               },
               children: [
-                  (0, i.jsx)(n.Text, {
+                  (0, i.jsx)(a.E, {
                       variant: "text-sm/semibold",
                       color: "text-feedback-critical",
                       children: "Accessibility compliance issue(s) detected, check in-app DevTools",
                   }),
-                  (0, i.jsxs)(n.ButtonGroup, {
+                  (0, i.jsxs)(n.e, {
                       direction: "horizontal",
                       size: "sm",
                       children: [
-                          (0, i.jsx)(n.Button, { text: "Open DevTools", onClick: a.pf, variant: "critical-secondary" }),
-                          (0, i.jsx)(n.Button, {
+                          (0, i.jsx)(c.$, { text: "Open DevTools", onClick: o.pf, variant: "critical-secondary" }),
+                          (0, i.jsx)(c.$, {
                               onClick: () => t(!e),
                               text: `${e ? "Hide" : "Show"} Overlays`,
                               variant: "critical-primary",

@@ -1,13 +1,11 @@
 "use strict";
-n.d(t, { k: () => r });
-var r = (function (e) {
-    return (
-        (e.FATAL = "fatal"),
-        (e.ERROR = "error"),
-        (e.WARNING = "warning"),
-        (e.LOG = "log"),
-        (e.INFO = "info"),
-        (e.DEBUG = "debug"),
-        e
-    );
-})({});
+n.d(t, { k: () => i });
+var r,
+    i =
+        (((r = {}).FATAL = "fatal"),
+        (r.ERROR = "error"),
+        (r.WARNING = "warning"),
+        (r.LOG = "log"),
+        (r.INFO = "info"),
+        (r.DEBUG = "debug"),
+        r);

@@ -1,129 +1,132 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var l = n(627968),
-    i = n(64700),
+    a = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(382222),
+    i = n.n(s),
+    r = n(517738),
     o = n(942381),
-    d = n(397927),
-    c = n(435183),
-    u = n(46054),
-    m = n(435470),
-    h = n(218152),
-    x = n(652215),
-    g = n(985018),
-    f = n(428576),
-    _ = n(782691);
-let p = i.memo(function (e) {
+    d = n(717421),
+    c = n(192308),
+    u = n(534514),
+    m = n(622629),
+    h = n(939249),
+    g = n(22231),
+    x = n(789645),
+    f = n(834730),
+    _ = n(26430),
+    p = n(435183),
+    j = n(46054),
+    b = n(435470),
+    v = n(218152),
+    C = n(652215),
+    A = n(985018),
+    N = n(101136),
+    S = n(992595);
+let E = a.memo(function (e) {
     let { channel: t, onChange: s } = e,
-        p = (0, h.ST)(),
-        { guidelinesOpen: j } = (0, h.kU)((e) => {
+        E = (0, v.ST)(),
+        { guidelinesOpen: T } = (0, v.kU)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }, o.x),
-        b = (0, m.S4)(t),
-        [v, A] = i.useState(!1),
-        C = i.useCallback(
+        y = (0, b.S4)(t),
+        [I, w] = a.useState(!1),
+        R = a.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== v && A(t);
+                t !== I && w(t);
             },
-            [v],
+            [I],
         );
-    i.useLayoutEffect(() => {
+    a.useLayoutEffect(() => {
         setTimeout(s, 350);
-    }, [j, s]);
-    let [T, N] = i.useState(!j),
-        S = (0, d.zhh)({ opacity: +!!j, maxHeight: 500 * !!j, config: { duration: 300 }, onRest: () => N(!j) });
+    }, [T, s]);
+    let [k, M] = a.useState(!T),
+        L = (0, d.z)({ opacity: +!!T, maxHeight: 500 * !!T, config: { duration: 300 }, onRest: () => M(!T) });
     return null != t.topic && t.topic.length > 0
         ? (0, l.jsx)(r.animated.div, {
-              style: S,
-              className: T ? f.kK : void 0,
+              style: L,
+              className: k ? N.kK : void 0,
               children: (0, l.jsxs)("div", {
-                  className: f.kL,
+                  className: N.kL,
                   children: [
                       (0, l.jsxs)("div", {
-                          className: f.N1,
+                          className: N.N1,
                           children: [
-                              (0, l.jsxs)(d.Heading, {
+                              (0, l.jsxs)(u.D, {
                                   variant: "heading-lg/semibold",
-                                  className: f.$4,
+                                  className: N.$4,
                                   children: [
-                                      (0, l.jsx)(d.B8Q, {
-                                          size: "custom",
-                                          color: "currentColor",
-                                          width: 20,
-                                          height: 20,
-                                      }),
-                                      g.intl.string(g.t["4d4T4l"]),
-                                      b &&
-                                          (0, l.jsx)(d.DUT, {
+                                      (0, l.jsx)(m.B, { size: "custom", color: "currentColor", width: 20, height: 20 }),
+                                      A.intl.string(A.t["4d4T4l"]),
+                                      y &&
+                                          (0, l.jsx)(h.D, {
                                               onClick: () => {
-                                                  c.Ay.open(t.id, void 0, x.b7d.TOPIC);
+                                                  p.Ay.open(t.id, void 0, C.b7d.TOPIC);
                                               },
                                               tag: "span",
-                                              className: f.vk,
-                                              children: (0, l.jsx)(d.R2l, { size: "xs", color: "currentColor" }),
+                                              className: N.vk,
+                                              children: (0, l.jsx)(g.R, { size: "xs", color: "currentColor" }),
                                           }),
                                   ],
                               }),
-                              (0, l.jsx)(d.DUT, {
-                                  "aria-label": g.intl.string(g.t.cpT0Cq),
-                                  className: f.vk,
+                              (0, l.jsx)(h.D, {
+                                  "aria-label": A.intl.string(A.t.cpT0Cq),
+                                  className: N.vk,
                                   onClick: () => {
-                                      p.getState().setGuidelinesOpen(!1);
+                                      E.getState().setGuidelinesOpen(!1);
                                   },
-                                  children: (0, l.jsx)(d.PGe, { size: "xs", color: "currentColor" }),
+                                  children: (0, l.jsx)(x.P, { size: "xs", color: "currentColor" }),
                               }),
                           ],
                       }),
                       (0, l.jsxs)("div", {
-                          className: f.iQ,
+                          className: N.iQ,
                           children: [
-                              (0, l.jsx)(d.Text, {
+                              (0, l.jsx)(f.E, {
                                   selectable: !0,
                                   variant: "text-sm/normal",
                                   color: "text-default",
                                   style: { maxHeight: 220 },
-                                  className: a()(f.I4, _.PT),
+                                  className: i()(N.I4, S.PT),
                                   children: (0, l.jsx)("div", {
-                                      ref: C,
-                                      children: u.A.parseForumPostGuidelines(t.topic, !0, {
+                                      ref: R,
+                                      children: j.A.parseForumPostGuidelines(t.topic, !0, {
                                           channelId: t.id,
                                           allowHeading: !0,
                                           allowList: !0,
                                       }),
                                   }),
                               }),
-                              v &&
+                              I &&
                                   (0, l.jsxs)("div", {
-                                      className: f.jP,
+                                      className: N.jP,
                                       children: [
-                                          (0, l.jsx)("div", { className: f.D7 }),
+                                          (0, l.jsx)("div", { className: N.D7 }),
                                           (0, l.jsx)("div", {
-                                              className: f.kx,
-                                              children: (0, l.jsx)(d.DUT, {
-                                                  className: f.DD,
+                                              className: N.kx,
+                                              children: (0, l.jsx)(h.D, {
+                                                  className: N.DD,
                                                   onClick: () => {
-                                                      (0, d.mMO)(async () => {
+                                                      (0, c.openModalLazy)(async () => {
                                                           let { default: e } = await n
                                                               .e("45457")
                                                               .then(n.bind(n, 494664));
                                                           return (n) => (0, l.jsx)(e, { ...n, channel: t });
                                                       });
                                                   },
-                                                  children: (0, l.jsxs)(d.Text, {
+                                                  children: (0, l.jsxs)(f.E, {
                                                       variant: "text-sm/semibold",
                                                       color: "text-brand",
-                                                      className: f.ur,
+                                                      className: N.ur,
                                                       children: [
-                                                          g.intl.string(g.t.Vu7odK),
-                                                          (0, l.jsx)(d._Xm, {
+                                                          A.intl.string(A.t.Vu7odK),
+                                                          (0, l.jsx)(_._, {
                                                               size: "xs",
                                                               color: "currentColor",
-                                                              className: f.yS,
+                                                              className: N.yS,
                                                           }),
                                                       ],
                                                   }),

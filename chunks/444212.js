@@ -1,10 +1,8 @@
 "use strict";
-n.d(t, { E: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.NORMAL = 1)] = "NORMAL"),
-        (e[(e.PREMIUM_EXTENSION = 2)] = "PREMIUM_EXTENSION"),
-        (e[(e.PREMIUM_PERMANENT = 3)] = "PREMIUM_PERMANENT"),
-        e
-    );
-})({});
+n.d(t, { E: () => i });
+var r,
+    i =
+        (((r = {})[(r.NORMAL = 1)] = "NORMAL"),
+        (r[(r.PREMIUM_EXTENSION = 2)] = "PREMIUM_EXTENSION"),
+        (r[(r.PREMIUM_PERMANENT = 3)] = "PREMIUM_PERMANENT"),
+        r);

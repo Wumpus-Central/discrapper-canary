@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+l.d(t, { A: () => n });
+var n = {};
+n = {
     ascending: "croissant",
     ascendingSort: (e) => `tri\xe9 en fonction de la colonne\xa0${e.columnName} par ordre croissant`,
     columnSize: (e) => `${e.value}\xa0pixels`,

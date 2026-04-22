@@ -1,92 +1,97 @@
-e.d(i, { default: () => x });
+e.d(i, { default: () => k });
 var n = e(627968),
     l = e(64700),
-    r = e(158954),
-    a = e(311907),
-    s = e(964486),
-    c = e(67480),
-    o = e(954571),
-    u = e(733391),
-    d = e(832163),
-    _ = e(652215),
-    p = e(985018),
-    g = e(884743);
-function x(t) {
-    let { transitionState: i, onClose: e, onContinue: x, guildId: E, skuId: h, analyticsLocations: b } = t,
-        f = (0, a.bG)([d.A], () => d.A.getSKUEligibilityEntry(h)),
-        k = f?.state,
-        j = (0, a.bG)([c.A], () => c.A.get(h)),
-        A = l.useRef(0),
-        I = l.useRef(!1);
-    (0, s.Ay)(() => {
-        (A.current = Date.now()),
-            o.default.track(_.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
-                sku_id: h,
-                guild_id: E,
-                application_id: j?.applicationId ?? null,
-                eligibility_state: f?.state ?? "none",
-                location_stack: b,
+    r = e(224640),
+    a = e(20742),
+    s = e(430993),
+    c = e(834730),
+    o = e(696208),
+    d = e(289873),
+    u = e(311907),
+    _ = e(964486),
+    p = e(67480),
+    g = e(954571),
+    x = e(733391),
+    E = e(832163),
+    h = e(652215),
+    b = e(985018),
+    f = e(495630);
+function k(t) {
+    let { transitionState: i, onClose: e, onContinue: k, guildId: A, skuId: I, analyticsLocations: R } = t,
+        j = (0, u.bG)([E.A], () => E.A.getSKUEligibilityEntry(I)),
+        m = j?.state,
+        S = (0, u.bG)([p.A], () => p.A.get(I)),
+        T = l.useRef(0),
+        C = l.useRef(!1);
+    (0, _.Ay)(() => {
+        (T.current = Date.now()),
+            g.default.track(h.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
+                sku_id: I,
+                guild_id: A,
+                application_id: S?.applicationId ?? null,
+                eligibility_state: j?.state ?? "none",
+                location_stack: R,
             });
     });
-    let R = l.useCallback(
+    let L = l.useCallback(
         (t) => {
-            if (I.current) return;
-            I.current = !0;
-            let i = f?.state === "error" ? f : void 0;
-            o.default.track(_.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED, {
-                sku_id: h,
-                guild_id: E,
-                application_id: j?.applicationId ?? null,
+            if (C.current) return;
+            C.current = !0;
+            let i = j?.state === "error" ? j : void 0;
+            g.default.track(h.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED, {
+                sku_id: I,
+                guild_id: A,
+                application_id: S?.applicationId ?? null,
                 result: t,
-                duration_ms: Date.now() - A.current,
+                duration_ms: Date.now() - T.current,
                 error_reason: i?.reason ?? null,
                 error_http_status: i?.httpStatus ?? null,
-                location_stack: b,
+                location_stack: R,
             });
         },
-        [h, E, j?.applicationId, f, b],
+        [I, A, S?.applicationId, j, R],
     );
     return (
         l.useEffect(() => {
-            null == k && (0, u.iR)(E, h);
-        }, [E, h, k]),
+            null == m && (0, x.iR)(A, I);
+        }, [A, I, m]),
         l.useEffect(() => {
-            if (null != k && "checking" !== k) {
-                if ("ineligible" === k) return void R("ineligible");
-                R(k), x();
+            if (null != m && "checking" !== m) {
+                if ("ineligible" === m) return void L("ineligible");
+                L(m), k();
             }
-        }, [k, x, R]),
-        (0, n.jsx)(r.dWK, {
+        }, [m, k, L]),
+        (0, n.jsx)(r.d, {
             transitionState: i,
             onClose: e,
-            size: "ineligible" === k ? "md" : "sm",
+            size: "ineligible" === m ? "md" : "sm",
             children:
-                "ineligible" === k
+                "ineligible" === m
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(r.rQ0, { title: p.intl.string(p.t.cg0M2H) }),
-                              (0, n.jsx)(r.cwr, {
-                                  children: (0, n.jsx)(r.EYj, {
+                              (0, n.jsx)(a.rQ, { title: b.intl.string(b.t.cg0M2H) }),
+                              (0, n.jsx)(s.c, {
+                                  children: (0, n.jsx)(c.E, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: p.intl.string(p.t.IqlPbQ),
+                                      children: b.intl.string(b.t.IqlPbQ),
                                   }),
                               }),
-                              (0, n.jsx)(r.H7u, {
+                              (0, n.jsx)(o.H, {
                                   actionsFullWidth: !0,
-                                  actions: [{ variant: "primary", text: p.intl.string(p.t.cpT0Cq), onClick: e }],
+                                  actions: [{ variant: "primary", text: b.intl.string(b.t.cpT0Cq), onClick: e }],
                               }),
                           ],
                       })
-                    : (0, n.jsx)(r.cwr, {
+                    : (0, n.jsx)(s.c, {
                           children: (0, n.jsxs)("div", {
-                              className: g.Q,
+                              className: f.Q,
                               children: [
-                                  (0, n.jsx)(r.y$y, {}),
-                                  (0, n.jsx)(r.EYj, {
+                                  (0, n.jsx)(d.y, {}),
+                                  (0, n.jsx)(c.E, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: p.intl.string(p.t.pWxiLd),
+                                      children: b.intl.string(b.t.pWxiLd),
                                   }),
                               ],
                           }),

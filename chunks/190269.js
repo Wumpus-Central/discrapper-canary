@@ -1,40 +1,41 @@
-r.d(t, { B: () => m });
+r.d(t, { B: () => b });
 var o = r(627968);
 r(64700);
-var n = r(397927),
-    a = r(763795),
-    i = r(659746),
-    _ = r(4471),
-    s = r(380083),
-    l = r(788868),
-    c = r(985018),
-    d = r(20374);
-function p(e) {
+var n = r(834730),
+    a = r(935462),
+    i = r(763795),
+    _ = r(659746),
+    s = r(4471),
+    l = r(380083),
+    c = r(788868),
+    d = r(985018),
+    p = r(20374);
+function u(e) {
     let { onClose: t } = e,
-        r = (0, o.jsx)(n.Text, { className: d.h, variant: "text-md/normal", children: c.intl.string(c.t.FCsTCk) });
-    return (0, o.jsx)(_.A, {
-        type: i.Ay.Types.PREMIUM_ACTIVATED,
+        r = (0, o.jsx)(n.E, { className: p.h, variant: "text-md/normal", children: d.intl.string(d.t.FCsTCk) });
+    return (0, o.jsx)(s.A, {
+        type: _.Ay.Types.PREMIUM_ACTIVATED,
         text: r,
-        buttonText: c.intl.string(c.t.TkTvBz),
+        buttonText: d.intl.string(d.t.TkTvBz),
         hideClose: !1,
         onClose: t,
     });
 }
-function u(e) {
+function m(e) {
     let { onClose: t } = e;
-    return (0, o.jsx)(s.Ay, { planId: l.gD.PREMIUM_MONTH_TIER_0, onClose: t });
+    return (0, o.jsx)(l.Ay, { planId: c.gD.PREMIUM_MONTH_TIER_0, onClose: t });
 }
-let m = (e) => {
-    let { transitionState: t, onClose: r, premiumType: i } = e,
-        _ = i === l.PremiumTypes.TIER_0;
-    return (0, o.jsxs)(n.EOs, {
+let b = (e) => {
+    let { transitionState: t, onClose: r, premiumType: n } = e,
+        _ = n === c.PremiumTypes.TIER_0;
+    return (0, o.jsxs)(a.EO, {
         "data-migration-pending": !0,
-        className: d.z,
+        className: p.z,
         transitionState: t,
         parentComponent: "ResubscribeSuccessStep",
         children: [
-            (0, o.jsx)(a.A, { onClose: r, upgradeToPremiumType: i }),
-            (0, o.jsx)(n.$mQ, { "data-migration-pending": !0, children: (0, o.jsx)(_ ? u : p, { onClose: r }) }),
+            (0, o.jsx)(i.A, { onClose: r, upgradeToPremiumType: n }),
+            (0, o.jsx)(a.$m, { "data-migration-pending": !0, children: (0, o.jsx)(_ ? m : u, { onClose: r }) }),
         ],
     });
 };

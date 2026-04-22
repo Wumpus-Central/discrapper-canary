@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { A: () => a });
 var i = n(64700),
-    s = n(735438),
-    l = n.n(s),
+    l = n(735438),
+    s = n.n(l),
     r = n(269576);
 let a = (e, t) => {
-    let { groupType: n, teamId: s } = t,
+    let { groupType: n, teamId: l } = t,
         [a, o] = i.useState(!0),
         [d, c] = i.useState([]),
         u = i.useCallback(async () => {
@@ -33,12 +32,12 @@ let a = (e, t) => {
                                 i = new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), 1)).toISOString();
                             null == t[i] &&
                                 (t[i] = { key: i, periodStartingAt: i, ppgs: {}, paymentsCount: 0, amount: 0 });
-                            let s = t[i];
-                            (s.amount += n.amount), (s.paymentsCount += n.payments_count), (s.ppgs[n.grouping_id] = n);
+                            let l = t[i];
+                            (l.amount += n.amount), (l.paymentsCount += n.payments_count), (l.ppgs[n.grouping_id] = n);
                         }
-                        return l().orderBy(Object.values(t), ["periodStartingAt"], ["desc"]);
-                    })(null != s ? d.filter((e) => e.user_id === s) : d),
-                [d, s],
+                        return s().orderBy(Object.values(t), ["periodStartingAt"], ["desc"]);
+                    })(null != l ? d.filter((e) => e.user_id === l) : d),
+                [d, l],
             ),
             loading: a,
         }

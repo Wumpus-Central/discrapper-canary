@@ -1,6 +1,5 @@
 var r = n(189577),
-    i = n(422750),
-    a = "[object Map]";
+    i = n(422750);
 e.exports = function (e) {
-    return i(e) && r(e) == a;
+    return i(e) && "[object Map]" == r(e);
 };

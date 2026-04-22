@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { BB: () => r, X1: () => i, iw: () => a });
-var r = (function (e) {
-    return (e[(e.NORMAL = 0)] = "NORMAL"), (e[(e.LOADING = 1)] = "LOADING"), (e[(e.DISABLED = 2)] = "DISABLED"), e;
-})({});
-function i(e) {
+n.d(t, { BB: () => s, X1: () => a, iw: () => o });
+var r,
+    i,
+    s =
+        (((r = {})[(r.NORMAL = 0)] = "NORMAL"),
+        (r[(r.LOADING = 1)] = "LOADING"),
+        (r[(r.DISABLED = 2)] = "DISABLED"),
+        r);
+function a(e) {
     return e;
 }
-var a = (function (e) {
-    return (
-        (e[(e.STRING = 1)] = "STRING"),
-        (e[(e.USER = 2)] = "USER"),
-        (e[(e.ROLE = 3)] = "ROLE"),
-        (e[(e.CHANNEL = 4)] = "CHANNEL"),
-        (e[(e.GUILD = 5)] = "GUILD"),
-        e
-    );
-})({});
+var o =
+    (((i = {})[(i.STRING = 1)] = "STRING"),
+    (i[(i.USER = 2)] = "USER"),
+    (i[(i.ROLE = 3)] = "ROLE"),
+    (i[(i.CHANNEL = 4)] = "CHANNEL"),
+    (i[(i.GUILD = 5)] = "GUILD"),
+    i);

@@ -1,23 +1,23 @@
-n.d(t, { A: () => _ });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    r = n(502060),
-    a = n(983806),
-    l = n(218359),
-    o = n(445343),
-    c = n(696616),
-    d = n(564752),
-    u = n(985018);
-let _ = () =>
-    (0, i.jsxs)(s.BJc, {
+l.d(t, { A: () => x });
+var n = l(627968);
+l(64700);
+var i = l(331322),
+    s = l(983806),
+    a = l(804643),
+    r = l(218359),
+    d = l(445343),
+    c = l(696616),
+    u = l(564752),
+    o = l(985018);
+let x = () =>
+    (0, n.jsxs)(i.B, {
         gap: 32,
         children: [
-            (0, i.jsx)(a.b, {}),
-            (0, i.jsx)("div", {
-                children: (0, i.jsxs)(r.G, {
-                    title: u.intl.string(u.t.SRZyHg),
-                    children: [(0, i.jsx)(d.A, {}), (0, i.jsx)(c.A, {}), (0, i.jsx)(o.A, {}), (0, i.jsx)(l.A, {})],
+            (0, n.jsx)(s.b, {}),
+            (0, n.jsx)("div", {
+                children: (0, n.jsxs)(a.A, {
+                    title: o.intl.string(o.t.SRZyHg),
+                    children: [(0, n.jsx)(u.A, {}), (0, n.jsx)(c.A, {}), (0, n.jsx)(d.A, {}), (0, n.jsx)(r.A, {})],
                 }),
             }),
         ],

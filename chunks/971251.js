@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, { A: () => d });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(650583),
     o = n(816054);
-class d extends s.Component {
-    inputRef = s.createRef();
+class d extends l.Component {
+    inputRef = l.createRef();
     state = { focused: !1, lastGoodValue: this.props.value, value: this.props.value };
     componentDidUpdate(e, t) {
         t.focused !== this.state.focused && this.state.focused && this.inputRef.current?.focus(),
@@ -41,7 +40,7 @@ class d extends s.Component {
     };
     render() {
         let e,
-            { className: t, name: n, autoComplete: s, maxLen: l, disabled: a } = this.props,
+            { className: t, name: n, autoComplete: l, maxLen: s, disabled: a } = this.props,
             d = { position: "absolute", left: 0, width: "100%", opacity: 1 };
         return (
             this.state.focused ? (e = { visibility: "hidden", pointerEvents: "none" }) : (d.opacity = 0),
@@ -57,8 +56,8 @@ class d extends s.Component {
                             style: d,
                             value: this.state.value,
                             name: n,
-                            maxLength: l,
-                            autoComplete: s,
+                            maxLength: s,
+                            autoComplete: l,
                             onKeyPress: this.handleKeyPress,
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,

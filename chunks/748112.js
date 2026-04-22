@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => u }), n(321073);
 var i = n(64700),
-    s = n(975807),
-    l = n(258328),
+    l = n(975807),
+    s = n(258328),
     r = n(975571),
     a = n(354390),
     o = n(192701),
@@ -15,10 +14,10 @@ function u(e) {
             sortedByIneligible: u,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isUserMFAEnabled: m, isModerationMFAEnabled: g } = (0, o.f)(),
-        x = i.useCallback(async () => {
+        h = i.useCallback(async () => {
             m ? g || (await n?.onRequireModeratorMFAClick?.()) : await n?.onEnableMFAClick?.(), t?.();
         }, [m, g, t, n]),
-        h = (0, a.S)({ onEnableMFAClick: x });
+        x = (0, a.S)({ onEnableMFAClick: h });
     return i.useMemo(() => {
         if (null == e) return null;
         let { minimumOwnerAgeInYears: t, minimumSize: i } = e,
@@ -33,7 +32,7 @@ function u(e) {
                     }),
                     checked: e.noRecentViolations,
                     actionLabel: a ? c.intl.string(c.t["xU2fl+"]) : void 0,
-                    actionHandler: a ? () => (0, s.A)(r.A.getSubmitRequestURL()) : void 0,
+                    actionHandler: a ? () => (0, l.A)(r.A.getSubmitRequestURL()) : void 0,
                 },
             ];
         if (
@@ -61,7 +60,7 @@ function u(e) {
                     key: "server_age_requirement",
                     checkedLabel: c.intl.string(c.t.mjbvWw),
                     uncheckedLabel: c.intl.string(c.t["9BV6L6"]),
-                    description: c.intl.formatToPlainString(c.t.Zwv84O, { minimumAge: (0, l.A)(e.minimumAgeInDays) }),
+                    description: c.intl.formatToPlainString(c.t.Zwv84O, { minimumAge: (0, s.A)(e.minimumAgeInDays) }),
                     checked: e.meetsServerAgeRequirement,
                 }),
             null != e.weeklyCommunicators &&
@@ -91,17 +90,17 @@ function u(e) {
         ) {
             let t = !e.hasEnabled2FA && !m && n?.onEnableMFAClick != null,
                 i = !e.hasEnabled2FA && !g && n?.onRequireModeratorMFAClick != null,
-                s = t || i;
+                l = t || i;
             o.push({
                 key: "2fa_requirement",
                 checkedLabel: c.intl.string(c.t.NqVyFk),
                 uncheckedLabel: c.intl.string(c.t.VcDNIV),
-                description: c.intl.format(c.t["7NzkfV"], { enableMFAHook: h }),
+                description: c.intl.format(c.t["7NzkfV"], { enableMFAHook: x }),
                 checked: e.hasEnabled2FA,
-                actionLabel: s ? c.intl.string(c.t.BU4Diu) : void 0,
-                actionHandler: s ? x : void 0,
+                actionLabel: l ? c.intl.string(c.t.BU4Diu) : void 0,
+                actionHandler: l ? h : void 0,
             });
         }
         return !0 === u && o.sort((e) => (e.checked ? 0 : -1)), o;
-    }, [e, u, m, n, g, h, x]);
+    }, [e, u, m, n, g, x, h]);
 }

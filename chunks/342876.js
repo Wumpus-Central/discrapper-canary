@@ -1,64 +1,63 @@
-"use strict";
-n.d(t, { b: () => o });
-var r = n(371926),
-    i = n(36310),
-    a = n(74733),
-    s = n(64700);
-function o(e) {
-    let { collection: t, focusMode: n } = e,
-        o = e.UNSAFE_selectionState || (0, i.R)(e),
-        l = (0, s.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        u = o.setFocusedKey;
-    o.setFocusedKey = (e, i) => {
-        if ("cell" === n && null != e) {
-            let n = t.getItem(e);
-            if ((null == n ? void 0 : n.type) === "item") {
-                var a, s, o, l;
-                let u = (0, r.iQ)(n, t);
+l.d(t, { b: () => s });
+var n = l(371926),
+    o = l(36310),
+    r = l(74733),
+    i = l(64700);
+function s(e) {
+    let { collection: t, focusMode: l } = e,
+        s = e.UNSAFE_selectionState || (0, o.R)(e),
+        u = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        a = s.setFocusedKey;
+    s.setFocusedKey = (e, o) => {
+        if ("cell" === l && null != e) {
+            let l = t.getItem(e);
+            if ((null == l ? void 0 : l.type) === "item") {
+                var r, i, s, u;
+                let a = (0, n.iQ)(l, t);
                 e =
-                    "last" === i
-                        ? null != (o = null == (a = (0, r.W)(u)) ? void 0 : a.key)
-                            ? o
+                    "last" === o
+                        ? null != (s = null == (r = (0, n.W)(a)) ? void 0 : r.key)
+                            ? s
                             : null
-                        : null != (l = null == (s = (0, r.ue)(u)) ? void 0 : s.key)
-                          ? l
+                        : null != (u = null == (i = (0, n.ue)(a)) ? void 0 : i.key)
+                          ? u
                           : null;
             }
         }
-        u(e, i);
+        a(e, o);
     };
-    let c = (0, s.useMemo)(() => new (0, a.Y)(t, o), [t, o]),
-        d = (0, s.useRef)(null);
+    let c = (0, i.useMemo)(() => new (0, r.Y)(t, s), [t, s]),
+        d = (0, i.useRef)(null);
     return (
-        (0, s.useEffect)(() => {
-            if (null != o.focusedKey && d.current && !t.getItem(o.focusedKey)) {
-                let e = d.current.getItem(o.focusedKey),
-                    n =
+        (0, i.useEffect)(() => {
+            if (null != s.focusedKey && d.current && !t.getItem(s.focusedKey)) {
+                let e = d.current.getItem(s.focusedKey),
+                    l =
                         (null == e ? void 0 : e.parentKey) != null &&
                         ("cell" === e.type || "rowheader" === e.type || "column" === e.type)
                             ? d.current.getItem(e.parentKey)
                             : e;
-                if (!n) return void o.setFocusedKey(null);
-                let i = d.current.rows,
-                    a = t.rows,
-                    s = i.length - a.length,
-                    l = Math.min(s > 1 ? Math.max(n.index - s + 1, 0) : n.index, a.length - 1),
-                    u = null;
-                for (; l >= 0; ) {
-                    if (!c.isDisabled(a[l].key) && "headerrow" !== a[l].type) {
-                        u = a[l];
+                if (!l) return void s.setFocusedKey(null);
+                let o = d.current.rows,
+                    r = t.rows,
+                    i = o.length - r.length,
+                    u = Math.min(i > 1 ? Math.max(l.index - i + 1, 0) : l.index, r.length - 1),
+                    a = null;
+                for (; u >= 0; ) {
+                    if (!c.isDisabled(r[u].key) && "headerrow" !== r[u].type) {
+                        a = r[u];
                         break;
                     }
-                    l < a.length - 1 ? l++ : (l > n.index && (l = n.index), l--);
+                    u < r.length - 1 ? u++ : (u > l.index && (u = l.index), u--);
                 }
-                if (u) {
-                    let i = u.hasChildNodes ? [...(0, r.iQ)(u, t)] : [],
-                        a = u.hasChildNodes && n !== e && e && e.index < i.length ? i[e.index].key : u.key;
-                    o.setFocusedKey(a);
-                } else o.setFocusedKey(null);
+                if (a) {
+                    let o = a.hasChildNodes ? [...(0, n.iQ)(a, t)] : [],
+                        r = a.hasChildNodes && l !== e && e && e.index < o.length ? o[e.index].key : a.key;
+                    s.setFocusedKey(r);
+                } else s.setFocusedKey(null);
             }
             d.current = t;
-        }, [t, c, o, o.focusedKey]),
-        { collection: t, disabledKeys: l, isKeyboardNavigationDisabled: !1, selectionManager: c }
+        }, [t, c, s, s.focusedKey]),
+        { collection: t, disabledKeys: u, isKeyboardNavigationDisabled: !1, selectionManager: c }
     );
 }

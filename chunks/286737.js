@@ -1,69 +1,72 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var a = n(627968),
     l = n(64700),
     i = n(311907),
-    r = n(397927),
-    s = n(289363),
-    c = n(287809),
-    o = n(486020),
-    d = n(409626),
-    u = n(305080),
-    m = n(985018),
-    x = n(282639);
-function h(e) {
+    r = n(534514),
+    s = n(834730),
+    o = n(821609),
+    d = n(141628),
+    c = n(289363),
+    u = n(287809),
+    m = n(486020),
+    _ = n(409626),
+    h = n(305080),
+    f = n(985018),
+    g = n(448682);
+function p(e) {
     let { trackAction: t, analyticsLocations: n } = e,
         {
-            fetchedAuthorization: h,
-            hasAlreadyLinked: g,
-            canStartAuthorization: f,
-            startAuthorization: _,
-            connectionApp: p,
-            officialInvite: v,
-        } = (0, u.c)(),
-        A = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
-        j = l.useCallback(() => {
-            t(d.Ws.LinkAccount), _({ analyticsLocations: n });
-        }, [t, _, n]);
-    if (!h || null == p || !f || g || null == A) return null;
-    let E = v?.guild != null ? o.Ay.getGuildSplashURL({ id: v.guild.id, splash: v.guild.splash }) : null;
+            fetchedAuthorization: p,
+            hasAlreadyLinked: x,
+            canStartAuthorization: b,
+            startAuthorization: A,
+            connectionApp: v,
+            officialInvite: E,
+        } = (0, h.c)(),
+        I = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
+        C = l.useCallback(() => {
+            t(_.Ws.LinkAccount), A({ analyticsLocations: n });
+        }, [t, A, n]);
+    if (!p || null == v || !b || x || null == I) return null;
+    let N = E?.guild != null ? m.Ay.getGuildSplashURL({ id: E.guild.id, splash: E.guild.splash }) : null;
     return (0, a.jsxs)("div", {
-        className: x.uW,
+        className: g.uW,
         children: [
-            (0, a.jsx)(r.Heading, {
-                className: x.Gf,
+            (0, a.jsx)(r.D, {
+                className: g.Gf,
                 variant: "heading-sm/semibold",
                 color: "text-strong",
-                children: m.intl.string(m.t["VDAhr+"]),
+                children: f.intl.string(f.t["VDAhr+"]),
             }),
             (0, a.jsxs)("div", {
-                className: x.kL,
+                className: g.kL,
                 children: [
-                    null != E
-                        ? (0, a.jsx)("img", { className: x.ll, src: E, alt: "", draggable: !1 })
-                        : (0, a.jsx)("div", { className: x.sB, children: (0, a.jsx)(s.default, { application: p }) }),
+                    null != N
+                        ? (0, a.jsx)("img", { className: g.ll, src: N, alt: "", draggable: !1 })
+                        : (0, a.jsx)("div", { className: g.sB, children: (0, a.jsx)(c.default, { application: v }) }),
                     (0, a.jsxs)("div", {
-                        className: x.hQ,
+                        className: g.hQ,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: x.FS,
+                                className: g.FS,
                                 children: [
-                                    (0, a.jsx)(r.Heading, {
+                                    (0, a.jsx)(r.D, {
                                         variant: "heading-md/semibold",
                                         color: "text-default",
-                                        children: m.intl.formatToPlainString(m.t.hUbQT2, { gameName: p.name }),
+                                        children: f.intl.formatToPlainString(f.t.hUbQT2, { gameName: v.name }),
                                     }),
-                                    (0, a.jsx)(r.Text, {
+                                    (0, a.jsx)(s.E, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: m.intl.string(m.t["JKqu+4"]),
+                                        children: f.intl.string(f.t["JKqu+4"]),
                                     }),
                                 ],
                             }),
-                            (0, a.jsx)(r.Button, {
+                            (0, a.jsx)(o.$, {
                                 variant: "secondary",
-                                icon: r.A5T,
-                                text: m.intl.string(m.t.jynBQ5),
-                                onClick: j,
+                                icon: d.A,
+                                text: f.intl.string(f.t.jynBQ5),
+                                onClick: C,
                                 fullWidth: !0,
                             }),
                         ],

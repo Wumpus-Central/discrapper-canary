@@ -1,67 +1,65 @@
-"use strict";
-n.d(t, { Nz: () => _ });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(359778),
-    o = n(235986),
-    l = n(244367),
-    u = n(742158),
-    c = n(512240);
-s.Z.Types;
-let d = "right";
-function _(e) {
-    let t,
-        n,
+a.d(l, { Nz: () => c });
+var t = a(627968);
+a(64700);
+var n = a(503698),
+    o = a.n(n),
+    i = a(359778),
+    r = a(235986),
+    s = a(244367),
+    d = a(742158),
+    u = a(743513);
+i.Z.Types;
+function c(e) {
+    let l,
+        a,
         {
-            type: i = s.Z.Types.DANGER,
-            imageData: _,
-            button: f,
+            type: n = i.Z.Types.DANGER,
+            imageData: c,
+            button: b,
             className: p,
-            iconClassName: h,
-            title: m,
-            body: g,
-            style: E,
-            align: A = o.A.Align.START,
+            iconClassName: m,
+            title: h,
+            body: x,
+            style: g,
+            align: f = r.A.Align.START,
         } = e,
-        I = o.A.Direction.HORIZONTAL;
-    if (null != _) {
-        let { position: e, ...n } = _;
-        (t = (0, r.jsx)(o.A.Child, {
+        v = r.A.Direction.HORIZONTAL;
+    if (null != c) {
+        let { position: e, ...a } = c;
+        (l = (0, t.jsx)(r.A.Child, {
             grow: 0,
             shrink: 0,
-            children: (0, r.jsx)("img", { alt: "", className: a()(c.Kk, h), ...n }),
+            children: (0, t.jsx)("img", { alt: "", className: o()(u.Kk, m), ...a }),
         })),
-            e === d && (I = o.A.Direction.HORIZONTAL_REVERSE);
-    } else null != f && (n = f);
-    let T = !0;
+            "right" === e && (v = r.A.Direction.HORIZONTAL_REVERSE);
+    } else null != b && (a = b);
+    let y = !0;
     return (
-        i === s.Z.Types.PRIMARY && (T = !1),
-        (0, r.jsx)(s.Z, {
-            className: a()(c.RJ, p),
-            type: i,
-            style: E,
-            children: (0, r.jsxs)(o.A, {
-                direction: I,
-                align: A,
+        n === i.Z.Types.PRIMARY && (y = !1),
+        (0, t.jsx)(i.Z, {
+            className: o()(u.RJ, p),
+            type: n,
+            style: g,
+            children: (0, t.jsxs)(r.A, {
+                direction: v,
+                align: f,
                 children: [
-                    t,
-                    (0, r.jsxs)(o.A.Child, {
+                    l,
+                    (0, t.jsxs)(r.A.Child, {
                         children: [
-                            null != m && "" !== m
-                                ? (0, r.jsx)(u.z, {
+                            null != h && "" !== h
+                                ? (0, t.jsx)(d.z, {
                                       "data-migration-pending": !0,
-                                      className: a()(c.$G, { [c.vV]: T }),
-                                      children: m,
+                                      className: o()(u.$G, { [u.vV]: y }),
+                                      children: h,
                                   })
                                 : null,
-                            (0, r.jsx)(l.a, {
+                            (0, t.jsx)(s.a, {
                                 "data-migration-pending": !0,
-                                className: a()(c.Vz, { [c.vV]: T }),
-                                children: g,
+                                className: o()(u.Vz, { [u.vV]: y }),
+                                children: x,
                             }),
-                            n,
+                            a,
                         ],
                     }),
                 ],
@@ -69,4 +67,4 @@ function _(e) {
         })
     );
 }
-_.Types = s.Z.Types;
+c.Types = i.Z.Types;

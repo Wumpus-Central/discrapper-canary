@@ -1,26 +1,26 @@
-n.d(t, { EmojiStudioModal: () => s });
-var l = n(627968);
-n(64700);
-var i = n(397927),
-    r = n(534225),
-    a = n(473280);
+l.d(t, { EmojiStudioModal: () => s });
+var n = l(627968);
+l(64700);
+var i = l(935462),
+    a = l(534225),
+    r = l(250747);
 let s = (e) => {
-    let { transitionState: t, guildId: n } = e,
+    let { transitionState: t, guildId: l } = e,
         s = "userImage" in e ? e.userImage : void 0,
-        u = "emoji" in e ? e.emoji : void 0,
-        o = { guildId: n, ...(null != u ? { emoji: u } : null != s ? { userImage: s } : {}) };
-    return (0, l.jsx)(i.EOs, {
+        o = "emoji" in e ? e.emoji : void 0,
+        u = { guildId: l, ...(null != o ? { emoji: o } : null != s ? { userImage: s } : {}) };
+    return (0, n.jsx)(i.EO, {
         "data-migration-pending": !0,
         transitionState: t,
-        size: i.rIJ.DYNAMIC,
+        size: i.rI.DYNAMIC,
         fullscreenOnMobile: !1,
-        className: a.CR,
+        className: r.CR,
         parentComponent: "Modal",
-        children: (0, l.jsx)(i.$mQ, {
+        children: (0, n.jsx)(i.$m, {
             "data-migration-pending": !0,
             scrollbarType: "none",
-            className: a.jE,
-            children: (0, l.jsx)(r.l, { ...o }),
+            className: r.jE,
+            children: (0, n.jsx)(a.l, { ...u }),
         }),
     });
 };

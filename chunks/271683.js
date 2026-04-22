@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(397927),
-    a = n(136523);
-function s(e) {
-    let { channel: t, sourceAnalyticsLocations: s } = e;
-    (0, i.mMO)(
+i.d(t, { A: () => a });
+var l = i(627968),
+    n = i(192308),
+    s = i(136523);
+function a(e) {
+    let { channel: t, sourceAnalyticsLocations: a } = e;
+    (0, n.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 136523));
-            return (n) => (0, r.jsx)(e, { channel: t, sourceAnalyticsLocations: s, ...n });
+            let { default: e } = await Promise.resolve().then(i.bind(i, 136523));
+            return (i) => (0, l.jsx)(e, { channel: t, sourceAnalyticsLocations: a, ...i });
         },
-        { modalKey: a.m },
+        { modalKey: s.m },
     );
 }

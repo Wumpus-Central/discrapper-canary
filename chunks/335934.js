@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { HF: () => u, c: () => l, f8: () => c, zF: () => _ });
+n.d(t, { HF: () => u, c: () => l, f8: () => d, zF: () => _ });
 var r = n(945810),
-    i = n(303622),
+    i = n(81241),
     s = n(735729);
 let a = "hide_icymi_tab",
     o = (0, r.mj)({
@@ -13,24 +13,24 @@ let a = "hide_icymi_tab",
 function l(e) {
     let t = (0, s.A)(a),
         { enabled: n } = o.useConfig({ location: e }),
-        r = d.useConfig({ location: e });
+        r = c.useConfig({ location: e });
     return !t && n && r.icymiDesktopEnabled;
 }
 function u(e) {
     let t = i.A.get(a),
         { enabled: n } = o.getConfig({ location: e });
     {
-        let { icymiDesktopEnabled: r } = d.getConfig({ location: e });
+        let { icymiDesktopEnabled: r } = c.getConfig({ location: e });
         return !t && n && r;
     }
 }
-let c = (0, r.mj)({
+let d = (0, r.mj)({
         name: "2026-03-icymi-staff-debugging-utility",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    d = (0, r.mj)({
+    c = (0, r.mj)({
         name: "2026-03-icymi-desktop",
         kind: "user",
         defaultConfig: { icymiDesktopEnabled: !1 },

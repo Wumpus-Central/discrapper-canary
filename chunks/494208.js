@@ -1,49 +1,51 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(64700),
-    s = n(397927),
-    a = n(323073),
-    r = n(58736),
-    o = n(707539),
-    d = n(617011),
-    c = n(985018),
-    u = n(614879);
-function h(e) {
+    s = n(305866),
+    a = n(265872),
+    r = n(163328),
+    o = n(323073),
+    d = n(58736),
+    c = n(707539),
+    u = n(617011),
+    h = n(985018),
+    A = n(614879);
+function _(e) {
     let { channel: t } = e,
-        [n, h] = l.useState(!1),
-        A = l.useRef(null),
-        _ = (0, a.ni)(t),
-        m = l.useCallback(() => {
-            h(!1);
-        }, []),
+        [n, _] = l.useState(!1),
+        m = l.useRef(null),
+        g = (0, o.ni)(t),
         p = l.useCallback(() => {
-            n || (0, o.D3)("Popout"), h(!n);
+            _(!1);
+        }, []),
+        f = l.useCallback(() => {
+            n || (0, c.D3)("Popout"), _(!n);
         }, [n]);
-    return (0, i.jsx)(s.YNO, {
-        targetElementRef: A,
-        animation: s.YNO.Animation.NONE,
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: m,
+        animation: a.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: m,
+        onRequestClose: p,
         renderPopout: function () {
-            return (0, i.jsx)(s.lGe, {
-                children: (0, i.jsx)(d.A, { className: u.T, channel: t, onClose: m, context: "popout" }),
+            return (0, i.jsx)(s.l, {
+                children: (0, i.jsx)(u.A, { className: A.T, channel: t, onClose: p, context: "popout" }),
             });
         },
         clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(r.In, {
+            return (0, i.jsx)(d.In, {
                 ...e,
-                ref: A,
-                className: u.Kk,
-                onClick: p,
-                icon: s.ysw,
-                "aria-label": c.intl.string(c.t.B2panI),
-                tooltip: n ? null : c.intl.string(c.t.B2panI),
-                disabled: _,
+                ref: m,
+                className: A.Kk,
+                onClick: f,
+                icon: r.y,
+                "aria-label": h.intl.string(h.t.B2panI),
+                tooltip: n ? null : h.intl.string(h.t.B2panI),
+                disabled: g,
                 selected: n,
             });
         },

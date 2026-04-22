@@ -1,75 +1,75 @@
 "use strict";
-n.d(t, { Y: () => c, p: () => p });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { Y: () => h, p: () => m });
+var r,
+    i = n(627968),
+    s = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(934551),
-    l = n(834730),
-    u = n(154624),
-    c = (function (e) {
-        return (
-            (e.WARNING = "warn"),
-            (e.INFO = "info"),
-            (e.ERROR = "danger"),
-            (e.POSITIVE = "positive"),
-            (e.PREVIEW = "preview"),
-            e
-        );
-    })({});
-function d(e, t) {
-    if (null != t) return t;
-    switch (e) {
-        case "warn":
-            return o.WarningIcon;
-        case "info":
-            return o.CircleInformationIcon;
-        case "danger":
-            return o.CircleErrorIcon;
-        case "positive":
-            return o.CircleCheckIcon;
-        case "preview":
-            return o.ScienceIcon;
-    }
-}
-function _(e) {
-    switch (e) {
-        case "warn":
-            return u.$e;
-        case "info":
-            return u.pq;
-        case "danger":
-            return u.z3;
-        case "positive":
-        case "preview":
-            return u.yj;
-    }
-}
-let f = (e) => {
+    o = n.n(a),
+    l = n(738188),
+    u = n(885574),
+    d = n(695366),
+    c = n(628284),
+    _ = n(776078),
+    f = n(834730),
+    E = n(292705),
+    h =
+        (((r = {}).WARNING = "warn"),
+        (r.INFO = "info"),
+        (r.ERROR = "danger"),
+        (r.POSITIVE = "positive"),
+        (r.PREVIEW = "preview"),
+        r);
+let p = (e) => {
     let { messageType: t, icon: n } = e,
-        r = d(t, n);
-    return i.createElement(r, { className: u.Kk, color: "currentColor" });
+        r = (function (e, t) {
+            if (null != t) return t;
+            switch (e) {
+                case "warn":
+                    return l.i;
+                case "info":
+                    return u.m;
+                case "danger":
+                    return d.E;
+                case "positive":
+                    return c.y;
+                case "preview":
+                    return _.g;
+            }
+        })(t, n);
+    return s.createElement(r, { className: E.Kk, color: "currentColor" });
 };
-function p(e) {
+function m(e) {
     let {
             children: t,
             messageType: n,
-            action: i,
-            className: a,
-            textColor: o = "text-default",
-            textVariant: c = "text-sm/medium",
-            icon: d,
-            hidden: p = !1,
+            action: r,
+            className: s,
+            textColor: a = "text-default",
+            textVariant: l = "text-sm/medium",
+            icon: u,
+            hidden: d = !1,
         } = e,
-        h = _(n);
-    return (0, r.jsx)("div", {
-        className: s()(u.kL, h, a, { [u.R]: p }),
-        children: (0, r.jsxs)("div", {
-            className: u.WH,
+        c = (function (e) {
+            switch (e) {
+                case "warn":
+                    return E.$e;
+                case "info":
+                    return E.pq;
+                case "danger":
+                    return E.z3;
+                case "positive":
+                case "preview":
+                    return E.yj;
+            }
+        })(n);
+    return (0, i.jsx)("div", {
+        className: o()(E.kL, c, s, { [E.R]: d }),
+        children: (0, i.jsxs)("div", {
+            className: E.WH,
             children: [
-                (0, r.jsx)("div", { className: u.XG, children: (0, r.jsx)(f, { messageType: n, icon: d }) }),
-                (0, r.jsx)(l.E, { className: u.Qq, color: o, variant: c, children: t }),
-                null != i ? (0, r.jsx)("div", { className: u.Ik, children: i }) : null,
+                (0, i.jsx)("div", { className: E.XG, children: (0, i.jsx)(p, { messageType: n, icon: u }) }),
+                (0, i.jsx)(f.E, { className: E.Qq, color: a, variant: l, children: t }),
+                null != r ? (0, i.jsx)("div", { className: E.Ik, children: r }) : null,
             ],
         }),
     });

@@ -1,15 +1,16 @@
-n.d(e, { default: () => c });
+n.d(e, { default: () => u });
 var a = n(627968),
     i = n(64700),
-    r = n(732955),
-    o = n(397927),
+    r = n(189213),
+    o = n(292666),
+    l = n(834730),
     s = n(985018),
-    l = n(945280);
-function c(t) {
-    let { onConfirm: e, onClose: n, guildName: c, transitionState: u } = t,
+    c = n(622211);
+function u(t) {
+    let { onConfirm: e, onClose: n, guildName: u, transitionState: d } = t,
         [m, p] = i.useState(""),
-        [d, x] = i.useState(null),
-        f = i.useMemo(
+        [x, f] = i.useState(null),
+        C = i.useMemo(
             () => [
                 { text: s.intl.string(s.t["ETE/oC"]), onClick: n, variant: "secondary" },
                 { text: s.intl.string(s.t.l3hWP6), variant: "critical-primary", type: "submit" },
@@ -18,16 +19,16 @@ function c(t) {
         );
     return (0, a.jsx)("form", {
         onSubmit: function (t) {
-            (t.preventDefault(), m.toLowerCase() !== c.toLowerCase()) ? x(s.intl.string(s.t["c2/DS/"])) : (e?.(), n());
+            (t.preventDefault(), m.toLowerCase() !== u.toLowerCase()) ? f(s.intl.string(s.t["c2/DS/"])) : (e?.(), n());
         },
-        children: (0, a.jsxs)(r.aFV, {
-            title: s.intl.formatToPlainString(s.t.us7mC1, { name: c }),
-            subtitle: s.intl.format(s.t["Zuo+Vd"], { name: c }),
-            actions: f,
+        children: (0, a.jsxs)(r.Modal, {
+            title: s.intl.formatToPlainString(s.t.us7mC1, { name: u }),
+            subtitle: s.intl.format(s.t["Zuo+Vd"], { name: u }),
+            actions: C,
             onClose: n,
-            transitionState: u,
+            transitionState: d,
             children: [
-                (0, a.jsx)(o.ksK, {
+                (0, a.jsx)(o.k, {
                     id: "text-entry-confirm",
                     type: "text",
                     label: s.intl.string(s.t.abprOC),
@@ -36,12 +37,12 @@ function c(t) {
                     onChange: p,
                     autoFocus: !0,
                 }),
-                null != d && "" !== d
-                    ? (0, a.jsx)(o.Text, {
+                null != x && "" !== x
+                    ? (0, a.jsx)(l.E, {
                           color: "text-feedback-critical",
                           variant: "text-xs/normal",
-                          className: l.z,
-                          children: d,
+                          className: c.z,
+                          children: x,
                       })
                     : null,
             ],

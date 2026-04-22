@@ -1,8 +1,8 @@
-n.d(t, { L: () => r });
-var i = n(627968),
-    s = n(397927);
-function r(e) {
-    let { children: t } = e;
-    return (0, i.jsx)(s.BJc, { gap: 0, padding: { left: "sm", right: "sm", top: "xs", bottom: "xs" }, children: t });
+t.d(n, { L: () => i });
+var l = t(627968),
+    r = t(331322);
+function i(e) {
+    let { children: n } = e;
+    return (0, l.jsx)(r.B, { gap: 0, padding: { left: "sm", right: "sm", top: "xs", bottom: "xs" }, children: n });
 }
-n(465133);
+t(465133);

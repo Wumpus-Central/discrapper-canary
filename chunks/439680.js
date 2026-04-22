@@ -1,66 +1,68 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    r = n(473644),
-    l = n(57930),
-    a = n(115703),
-    o = n(438842),
-    c = n(652215),
-    d = n(985018),
-    u = n(888849);
-function _(e) {
-    let { invite: t, guild: n, profile: _, onAcceptInvite: h } = e,
-        { gamesToDisplay: p, lastGameToDisplay: g, remainingGames: m } = (0, a.A)(_),
-        A = (function (e) {
+var s = n(331322),
+    r = n(834730),
+    l = n(821609),
+    a = n(473644),
+    o = n(57930),
+    c = n(115703),
+    d = n(438842),
+    u = n(652215),
+    _ = n(985018),
+    h = n(888849);
+function m(e) {
+    let { invite: t, guild: n, profile: m, onAcceptInvite: p } = e,
+        { gamesToDisplay: g, lastGameToDisplay: A, remainingGames: f } = (0, c.A)(m),
+        x = (function (e) {
             let { state: t } = e;
             switch (t) {
-                case c.elq.ACCEPTING:
-                case c.elq.APP_OPENING:
+                case u.elq.ACCEPTING:
+                case u.elq.APP_OPENING:
                     return !0;
                 default:
                     return !1;
             }
         })(t),
-        f = _.description ?? n.description;
+        E = m.description ?? n.description;
     return (0, i.jsxs)("div", {
-        className: u.f_,
+        className: h.f_,
         children: [
             (0, i.jsxs)("div", {
-                className: u.qQ,
+                className: h.qQ,
                 children: [
                     (0, i.jsx)("div", {
-                        className: u.WT,
-                        children: (0, i.jsx)("div", { className: u.g_, "aria-hidden": !0 }),
+                        className: h.WT,
+                        children: (0, i.jsx)("div", { className: h.g_, "aria-hidden": !0 }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: u.TS,
+                        className: h.TS,
                         children: [
-                            (0, i.jsx)(l.A, { guild: n, outline: !0 }),
-                            (0, i.jsxs)(s.BJc, {
+                            (0, i.jsx)(o.A, { guild: n, outline: !0 }),
+                            (0, i.jsxs)(s.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 children: [
-                                    (0, i.jsx)(r.A, {
+                                    (0, i.jsx)(a.A, {
                                         guild: n,
                                         invite: t,
                                         showGuildTag: !0,
                                         highContrast: !0,
                                         hideEnglish: !0,
                                     }),
-                                    null != f &&
-                                        "" !== f &&
-                                        (0, i.jsx)(s.Text, {
+                                    null != E &&
+                                        "" !== E &&
+                                        (0, i.jsx)(r.E, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            children: f,
+                                            children: E,
                                         }),
-                                    (0, i.jsx)(o.A, {
-                                        gamesToDisplay: p,
-                                        lastGameToDisplay: g,
-                                        remainingGames: m,
-                                        activity: _.gameActivity,
+                                    (0, i.jsx)(d.A, {
+                                        gamesToDisplay: g,
+                                        lastGameToDisplay: A,
+                                        remainingGames: f,
+                                        activity: m.gameActivity,
                                     }),
                                 ],
                             }),
@@ -69,13 +71,13 @@ function _(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                className: u.Fx,
-                children: (0, i.jsx)(s.Button, {
+                className: h.Fx,
+                children: (0, i.jsx)(l.$, {
                     variant: "primary",
                     size: "md",
-                    text: d.intl.string(d.t.ohMvm1),
-                    onClick: h,
-                    loading: A,
+                    text: _.intl.string(_.t.ohMvm1),
+                    onClick: p,
+                    loading: x,
                     fullWidth: !0,
                 }),
             }),

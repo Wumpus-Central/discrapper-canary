@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => eE });
+n.r(t), n.d(t, { default: () => F });
 var r = n(311907),
     i = n(506774),
     s = n(73153),
@@ -7,14 +7,14 @@ var r = n(311907),
     o = n(996308),
     l = n(211753),
     u = n(850524),
-    c = n(761821),
-    d = n(95701),
+    d = n(761821),
+    c = n(95701),
     _ = n(961350),
     f = n(734057),
-    p = n(808728),
+    E = n(808728),
     h = n(555528),
-    m = n(967198),
-    E = n(9302),
+    p = n(967198),
+    m = n(9302),
     g = n(531685),
     A = n(652215),
     I = n(672396);
@@ -35,20 +35,20 @@ let T = Object.freeze({
     }),
     S = null,
     y = {},
-    v = null,
-    N = new Set(),
-    C = !1,
-    b = !1,
-    R = !1,
+    N = null,
     O = new Set(),
+    R = !1,
+    v = !1,
+    C = !1,
+    b = new Set(),
     D = !1;
 function L(e) {
     let t = y[e];
     return null == t && (t = y[e] = { ...T }), t;
 }
-__OVERLAY__ && (0, u.u)((0, E.getRPCAuthToken)());
+__OVERLAY__ && (0, u.u)((0, m.getRPCAuthToken)());
 let w = { ...T },
-    x = new Set([
+    M = new Set([
         "AUDIO_SET_INPUT_DEVICE",
         "AUDIO_SET_INPUT_VOLUME",
         "AUDIO_SET_LOCAL_VIDEO_DISABLED",
@@ -124,8 +124,8 @@ let w = { ...T },
         "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
         "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
     ]),
-    M = new Set([
-        ...x.values(),
+    P = new Set([
+        ...M.values(),
         "ACTIVITY_INVITE_MODAL_CLOSE",
         "CALL_DELETE",
         "CHANNEL_COLLAPSE",
@@ -141,232 +141,98 @@ let w = { ...T },
         "SOUNDBOARD_SET_OVERLAY_ENABLED",
         "STREAM_STOP",
     ]);
-function P(e) {
-    return (
-        (null == e.version && 1 === E.OVERLAY_VERSION) ||
-        e.version === E.OVERLAY_VERSION ||
-        (s.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, o.Zf)(), !1)
-    );
-}
-function k(e) {
-    if (("OVERLAY_INITIALIZE" === e.type && P(e) && (R = !0), R))
-        switch (e.type) {
-            case "CHANNEL_CREATE":
-            case "THREAD_CREATE":
-            case "THREAD_UPDATE":
-            case "CHANNEL_DELETE":
-            case "THREAD_DELETE":
-                let t = (0, d.createChannelRecord)(e.channel);
-                if (!d.A_.has(t.type)) break;
-                s.h.dispatch({ type: e.type, channel: t });
-                break;
-            case "CHANNEL_UPDATES":
-                s.h.dispatch({ type: e.type, channels: e.channels.map((e) => (0, d.createChannelRecord)(e)) });
-                break;
-            case "CONNECTION_OPEN_SUPPLEMENTAL":
-                (e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) => (0, d.createChannelRecord)(e))),
-                    s.h.dispatch(e);
-                break;
-            case "THREAD_LIST_SYNC":
-                s.h.dispatch({ ...e, threads: e.threads.map((e) => (0, d.createChannelRecord)(e)) });
-                break;
-            case "GUILD_CREATE":
-                let n = (e) => (0, d.createChannelRecord)(e),
-                    r = e.guild;
-                switch (((r.threads = r.threads?.map(n)), r.channels.op)) {
-                    case "full_sync":
-                        r.channels.items = r.channels.items.map(n);
-                        break;
-                    case "update":
-                        r.channels.writes = r.channels.writes.map(n);
-                        break;
-                    default:
-                        r.channels;
-                }
-                s.h.dispatch({ type: "GUILD_CREATE", guild: r });
-                break;
-            case "USER_SETTINGS_PROTO_UPDATE":
-                s.h.dispatch({
-                    ...e,
-                    settings: { proto: (0, c.Y5)(e.settings.type, e.settings.proto), type: e.settings.type },
-                });
-                break;
-            default:
-                s.h.dispatch(e);
-        }
-}
-function U(e) {
-    e.isSwitchingAccount || (y = {});
-}
-function G(e) {
-    e.userId in y && delete y[e.userId];
-}
-function F() {
-    N.clear();
-}
-function V(e) {
-    let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
-    (S = t),
-        __OVERLAY__ &&
-            (n.forEach((e) => {
-                e_.set(e.pid, e);
-            }),
-            l.x.update({ legacyEnabled: r.legacyEnabled, oopEnabled: r.oopEnabled }));
-}
-function B() {
-    let e = w.selectedGuildId,
-        t = w.selectedChannelId;
-    if (
-        (null == e ||
-            (p.Ay.hasChannels(e) && (null == t || p.Ay.hasSelectableChannel(e, t))) ||
-            ((e = null), (t = null)),
-        null != t && null == f.A.getChannel(t) && ((e = null), (t = null)),
-        null == e && null == t && (e = m.A.getGuildId()),
-        null != e && null == t)
-    ) {
-        let n = p.Ay.getDefaultChannel(e);
-        null != n && (t = n.id);
-    }
-    (w.selectedGuildId = e), (w.selectedChannelId = t);
-}
-function H() {
+function U() {
     if (!__OVERLAY__) return !1;
-    let e = S === (0, E.getPID)(),
-        t = N.has((0, E.getPID)()) || O.size > 0;
+    let e = S === (0, m.getPID)(),
+        t = O.has((0, m.getPID)()) || b.size > 0;
     e && t ? (0, a.XC)(window, !0) : (0, a.XC)(window, !1);
 }
-function j() {}
-function Y(e) {
-    let { locked: t, pid: n } = e;
-    t ? N.delete(n) : N.add(n), K(), H(), (D = !1);
+function k() {
+    if (S !== (0, m.getPID)()) return !1;
+    b.clear();
 }
-function W(e) {
-    let { region: t } = e;
-    if (S !== (0, E.getPID)() || O.has(t)) return !1;
-    O.add(t);
-}
-function K() {
-    if (S !== (0, E.getPID)()) return !1;
-    O.clear();
-}
-function z(e) {
-    let { pid: t } = e;
-    (S = t), H();
-}
-function $(e) {
-    let { guildId: t, channelId: n } = e;
-    (w.selectedGuildId = t), (w.selectedChannelId = n);
-}
-function q(e) {
-    let { callId: t } = e;
-    v = t;
-}
-function Z() {
-    v = null;
-}
-function X() {
-    if (__OVERLAY__) {
-        let e = g.A.windowSize();
-        (0, E.validResolution)(e) || (D = !1);
-    }
-}
-function Q(e) {
-    D = e.isPreviewingInGame;
-}
-function J(e) {
-    let { mode: t } = e;
-    w.displayNameMode = t;
-}
-function ee(e) {
-    let { mode: t } = e;
-    w.displayUserMode = t;
-}
-function et(e) {
-    let { mode: t } = e;
-    w.avatarSizeMode = t;
-}
-function en(e) {
-    let { mode: t } = e;
-    w.notificationPositionMode = t;
-}
-function er(e) {
-    let { disable: t } = e;
-    w.disableClickableRegions = t;
-}
-function ei(e) {
-    let { message: t } = e,
-        n = w.customInviteMessage !== t;
-    return (w.customInviteMessage = t), n;
-}
-function es(e) {
-    let { opacity: t } = e,
-        n = w.textWidgetOpacity !== t;
-    return (w.textWidgetOpacity = t), n;
-}
-function ea(e) {
-    let { shouldShow: t } = e,
-        n = w.showGameInviteNotification !== t;
-    return (w.showGameInviteNotification = t), n;
-}
-function eo() {
-    w.disableExternalLinkAlert = !0;
-}
-function el() {
-    C = !0;
-}
-function eu() {
-    s.h.addInterceptor((e) => {
-        if (b || !M.has(e.type)) return !1;
-        if ("CHANNEL_SELECT" === e.type) {
-            let { guildId: t, channelId: n } = e;
-            return (
-                null != n &&
-                ((0, o.tN)({
-                    type: A.kGV.DISPATCH,
-                    pid: (0, E.getPID)(),
-                    token: (0, E.getRPCAuthToken)(),
-                    payloads: [
-                        { type: "CHANNEL_PRELOAD", guildId: t === A.ME ? null : t, channelId: n, context: A.QCW },
-                        { type: "OVERLAY_SELECT_CHANNEL", guildId: t, channelId: n },
-                    ],
-                }),
-                !1)
-            );
-        }
-        return (
-            (0, o.tN)({ type: A.kGV.DISPATCH, pid: (0, E.getPID)(), token: (0, E.getRPCAuthToken)(), payloads: [e] }),
-            !x.has(e.type)
-        );
-    });
-}
-function ec(e) {
-    let t = (0, E.getPID)();
+function x(e) {
+    let t = (0, m.getPID)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
             case A.kGV.STORAGE_SYNC:
                 r.Ay.PersistedStore.initializeAll(e.states);
                 break;
             case A.kGV.DISPATCH:
-                null != e.payloads && ((b = !0), e.payloads.forEach((e) => k(e)), (b = !1));
+                null != e.payloads &&
+                    ((v = !0),
+                    e.payloads.forEach((e) =>
+                        (function (e) {
+                            if (
+                                ("OVERLAY_INITIALIZE" === e.type &&
+                                    ((null == e.version && 1 === m.OVERLAY_VERSION) ||
+                                        e.version === m.OVERLAY_VERSION ||
+                                        (s.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, o.Zf)(), 0)) &&
+                                    (C = !0),
+                                C)
+                            )
+                                switch (e.type) {
+                                    case "CHANNEL_CREATE":
+                                    case "THREAD_CREATE":
+                                    case "THREAD_UPDATE":
+                                    case "CHANNEL_DELETE":
+                                    case "THREAD_DELETE":
+                                        let t = (0, c.createChannelRecord)(e.channel);
+                                        if (!c.A_.has(t.type)) break;
+                                        s.h.dispatch({ type: e.type, channel: t });
+                                        break;
+                                    case "CHANNEL_UPDATES":
+                                        s.h.dispatch({
+                                            type: e.type,
+                                            channels: e.channels.map((e) => (0, c.createChannelRecord)(e)),
+                                        });
+                                        break;
+                                    case "CONNECTION_OPEN_SUPPLEMENTAL":
+                                        (e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) =>
+                                            (0, c.createChannelRecord)(e),
+                                        )),
+                                            s.h.dispatch(e);
+                                        break;
+                                    case "THREAD_LIST_SYNC":
+                                        s.h.dispatch({
+                                            ...e,
+                                            threads: e.threads.map((e) => (0, c.createChannelRecord)(e)),
+                                        });
+                                        break;
+                                    case "GUILD_CREATE":
+                                        let n = (e) => (0, c.createChannelRecord)(e),
+                                            r = e.guild;
+                                        switch (((r.threads = r.threads?.map(n)), r.channels.op)) {
+                                            case "full_sync":
+                                                r.channels.items = r.channels.items.map(n);
+                                                break;
+                                            case "update":
+                                                r.channels.writes = r.channels.writes.map(n);
+                                                break;
+                                            default:
+                                                r.channels;
+                                        }
+                                        s.h.dispatch({ type: "GUILD_CREATE", guild: r });
+                                        break;
+                                    case "USER_SETTINGS_PROTO_UPDATE":
+                                        s.h.dispatch({
+                                            ...e,
+                                            settings: {
+                                                proto: (0, d.Y5)(e.settings.type, e.settings.proto),
+                                                type: e.settings.type,
+                                            },
+                                        });
+                                        break;
+                                    default:
+                                        s.h.dispatch(e);
+                                }
+                        })(e),
+                    ),
+                    (v = !1));
         }
 }
-function ed() {
-    eu(),
-        (0, o.QZ)(ec, (0, E.getRPCAuthToken)()),
-        (0, o.Ng)(),
-        (0, o.tN)({ type: A.kGV.CONNECT, pid: (0, E.getPID)(), token: (0, E.getRPCAuthToken)() });
-}
-let e_ = new Map();
-function ef(e) {
-    __OVERLAY__ && (null != e.trackedGame ? e_.set(e.pid, e.trackedGame) : e_.delete(e.pid));
-}
-function ep(e) {
-    __OVERLAY__ && l.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
-}
-function eh(e) {
-    N.delete(e.previousAssociatedGamePID);
-}
-class em extends r.Ay.PersistedStore {
+let G = new Map();
+class V extends r.Ay.PersistedStore {
     static displayName = "OverlayStore";
     static persistKey = "OverlayStoreV2";
     static migrations = [
@@ -381,12 +247,12 @@ class em extends r.Ay.PersistedStore {
     ];
     initialize(e) {
         if (
-            (this.waitFor(_.default, f.A, p.Ay, h.A, m.A, g.A),
+            (this.waitFor(_.default, f.A, E.Ay, h.A, p.A, g.A),
             this.syncWith([_.default], () => {
                 let e = _.default.getId();
                 w = null != e ? L(e) : { ...T };
             }),
-            __OVERLAY__ && N.delete((0, E.getPID)()),
+            __OVERLAY__ && O.delete((0, m.getPID)()),
             null != e)
         ) {
             y = e;
@@ -401,19 +267,19 @@ class em extends r.Ay.PersistedStore {
         return y;
     }
     isLocked(e) {
-        return !N.has(e);
+        return !O.has(e);
     }
     isInstanceLocked() {
-        return !N.has((0, E.getPID)());
+        return !O.has((0, m.getPID)());
     }
     isInstanceFocused() {
-        return S === (0, E.getPID)();
+        return S === (0, m.getPID)();
     }
     isFocused(e) {
         return S === e;
     }
     isPinned(e) {
-        let t = h.A.getLayout(E.OVERLAY_LAYOUT_ID);
+        let t = h.A.getLayout(m.OVERLAY_LAYOUT_ID);
         return (
             null != t &&
             null !=
@@ -430,7 +296,7 @@ class em extends r.Ay.PersistedStore {
         return w.selectedChannelId;
     }
     getSelectedCallId() {
-        return v;
+        return N;
     }
     getDisplayUserMode() {
         return w.displayUserMode;
@@ -460,13 +326,13 @@ class em extends r.Ay.PersistedStore {
         return S;
     }
     get initialized() {
-        return R;
-    }
-    get incompatibleApp() {
         return C;
     }
+    get incompatibleApp() {
+        return R;
+    }
     getActiveRegions() {
-        return O;
+        return b;
     }
     getTextWidgetOpacity() {
         return w.textWidgetOpacity;
@@ -475,37 +341,160 @@ class em extends r.Ay.PersistedStore {
         return D;
     }
     getTrackedGame(e) {
-        return e_.get(e) ?? null;
+        return G.get(e) ?? null;
     }
 }
-let eE = new em(s.h, {
-    LOGOUT: U,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: G,
-    CONNECTION_CLOSED: F,
-    OVERLAY_START_SESSION: ed,
-    OVERLAY_INITIALIZE: V,
-    OVERLAY_READY: B,
-    OVERLAY_FOCUSED: z,
-    OVERLAY_SELECT_CHANNEL: $,
-    OVERLAY_SELECT_CALL: q,
-    CALL_DELETE: Z,
-    LAYOUT_CREATE: j,
-    OVERLAY_SET_ENABLED: ep,
-    OVERLAY_SET_DISPLAY_NAME_MODE: J,
-    OVERLAY_SET_DISPLAY_USER_MODE: ee,
-    OVERLAY_SET_AVATAR_SIZE_MODE: et,
-    OVERLAY_SET_NOTIFICATION_POSITION_MODE: en,
-    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: er,
-    OVERLAY_SET_INVITE_MESSAGE: ei,
-    OVERLAY_SET_GAME_INVITE_NOTIFICATION: ea,
-    OVERLAY_SET_TEXT_WIDGET_OPACITY: es,
-    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: eo,
-    OVERLAY_INCOMPATIBLE_APP: el,
-    OVERLAY_SET_INPUT_LOCKED: Y,
-    OVERLAY_ACTIVATE_REGION: W,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: K,
-    OVERLAY_SET_PREVIEW_IN_GAME_MODE: Q,
-    WINDOW_RESIZED: X,
-    OVERLAY_SET_ASSOCIATED_GAME: eh,
-    OVERLAY_TRACKED_GAME_UPDATE: ef,
+let F = new V(s.h, {
+    LOGOUT: function (e) {
+        e.isSwitchingAccount || (y = {});
+    },
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
+        e.userId in y && delete y[e.userId];
+    },
+    CONNECTION_CLOSED: function () {
+        O.clear();
+    },
+    OVERLAY_START_SESSION: function () {
+        s.h.addInterceptor((e) => {
+            if (v || !P.has(e.type)) return !1;
+            if ("CHANNEL_SELECT" === e.type) {
+                let { guildId: t, channelId: n } = e;
+                return (
+                    null != n &&
+                    ((0, o.tN)({
+                        type: A.kGV.DISPATCH,
+                        pid: (0, m.getPID)(),
+                        token: (0, m.getRPCAuthToken)(),
+                        payloads: [
+                            { type: "CHANNEL_PRELOAD", guildId: t === A.ME ? null : t, channelId: n, context: A.QCW },
+                            { type: "OVERLAY_SELECT_CHANNEL", guildId: t, channelId: n },
+                        ],
+                    }),
+                    !1)
+                );
+            }
+            return (
+                (0, o.tN)({
+                    type: A.kGV.DISPATCH,
+                    pid: (0, m.getPID)(),
+                    token: (0, m.getRPCAuthToken)(),
+                    payloads: [e],
+                }),
+                !M.has(e.type)
+            );
+        }),
+            (0, o.QZ)(x, (0, m.getRPCAuthToken)()),
+            (0, o.Ng)(),
+            (0, o.tN)({ type: A.kGV.CONNECT, pid: (0, m.getPID)(), token: (0, m.getRPCAuthToken)() });
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
+        (S = t),
+            __OVERLAY__ &&
+                (n.forEach((e) => {
+                    G.set(e.pid, e);
+                }),
+                l.x.update({ legacyEnabled: r.legacyEnabled, oopEnabled: r.oopEnabled }));
+    },
+    OVERLAY_READY: function () {
+        let e = w.selectedGuildId,
+            t = w.selectedChannelId;
+        if (
+            (null == e ||
+                (E.Ay.hasChannels(e) && (null == t || E.Ay.hasSelectableChannel(e, t))) ||
+                ((e = null), (t = null)),
+            null != t && null == f.A.getChannel(t) && ((e = null), (t = null)),
+            null == e && null == t && (e = p.A.getGuildId()),
+            null != e && null == t)
+        ) {
+            let n = E.Ay.getDefaultChannel(e);
+            null != n && (t = n.id);
+        }
+        (w.selectedGuildId = e), (w.selectedChannelId = t);
+    },
+    OVERLAY_FOCUSED: function (e) {
+        let { pid: t } = e;
+        (S = t), U();
+    },
+    OVERLAY_SELECT_CHANNEL: function (e) {
+        let { guildId: t, channelId: n } = e;
+        (w.selectedGuildId = t), (w.selectedChannelId = n);
+    },
+    OVERLAY_SELECT_CALL: function (e) {
+        let { callId: t } = e;
+        N = t;
+    },
+    CALL_DELETE: function () {
+        N = null;
+    },
+    LAYOUT_CREATE: function () {},
+    OVERLAY_SET_ENABLED: function (e) {
+        __OVERLAY__ && l.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
+    },
+    OVERLAY_SET_DISPLAY_NAME_MODE: function (e) {
+        let { mode: t } = e;
+        w.displayNameMode = t;
+    },
+    OVERLAY_SET_DISPLAY_USER_MODE: function (e) {
+        let { mode: t } = e;
+        w.displayUserMode = t;
+    },
+    OVERLAY_SET_AVATAR_SIZE_MODE: function (e) {
+        let { mode: t } = e;
+        w.avatarSizeMode = t;
+    },
+    OVERLAY_SET_NOTIFICATION_POSITION_MODE: function (e) {
+        let { mode: t } = e;
+        w.notificationPositionMode = t;
+    },
+    OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: function (e) {
+        let { disable: t } = e;
+        w.disableClickableRegions = t;
+    },
+    OVERLAY_SET_INVITE_MESSAGE: function (e) {
+        let { message: t } = e,
+            n = w.customInviteMessage !== t;
+        return (w.customInviteMessage = t), n;
+    },
+    OVERLAY_SET_GAME_INVITE_NOTIFICATION: function (e) {
+        let { shouldShow: t } = e,
+            n = w.showGameInviteNotification !== t;
+        return (w.showGameInviteNotification = t), n;
+    },
+    OVERLAY_SET_TEXT_WIDGET_OPACITY: function (e) {
+        let { opacity: t } = e,
+            n = w.textWidgetOpacity !== t;
+        return (w.textWidgetOpacity = t), n;
+    },
+    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: function () {
+        w.disableExternalLinkAlert = !0;
+    },
+    OVERLAY_INCOMPATIBLE_APP: function () {
+        R = !0;
+    },
+    OVERLAY_SET_INPUT_LOCKED: function (e) {
+        let { locked: t, pid: n } = e;
+        t ? O.delete(n) : O.add(n), k(), U(), (D = !1);
+    },
+    OVERLAY_ACTIVATE_REGION: function (e) {
+        let { region: t } = e;
+        if (S !== (0, m.getPID)() || b.has(t)) return !1;
+        b.add(t);
+    },
+    OVERLAY_DEACTIVATE_ALL_REGIONS: k,
+    OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
+        D = e.isPreviewingInGame;
+    },
+    WINDOW_RESIZED: function () {
+        if (__OVERLAY__) {
+            let e = g.A.windowSize();
+            (0, m.validResolution)(e) || (D = !1);
+        }
+    },
+    OVERLAY_SET_ASSOCIATED_GAME: function (e) {
+        O.delete(e.previousAssociatedGamePID);
+    },
+    OVERLAY_TRACKED_GAME_UPDATE: function (e) {
+        __OVERLAY__ && (null != e.trackedGame ? G.set(e.pid, e.trackedGame) : G.delete(e.pid));
+    },
 });

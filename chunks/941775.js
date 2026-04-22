@@ -1,8 +1,8 @@
 n.d(t, { A: () => d });
 var i = n(627968),
     l = n(311907),
-    s = n(397927),
-    a = n(859703),
+    a = n(821609),
+    s = n(859703),
     r = n(201805),
     o = n(985018);
 let d = function (e) {
@@ -12,13 +12,13 @@ let d = function (e) {
             analyticsCtxSourceQuestContent: d,
             analyticsCtxQuestContentPosition: c,
             analyticsCtxQuestContentRowIndex: u,
-            size: _,
+            size: m,
         } = e,
-        m = t.id,
+        _ = t.id,
         { isClaiming: h } = (0, l.cf)(
-            [a.A],
-            () => ({ isClaiming: a.A.isClaimingReward(m) || a.A.isFetchingRewardCode(m) }),
-            [m],
+            [s.A],
+            () => ({ isClaiming: s.A.isClaimingReward(_) || s.A.isFetchingRewardCode(_) }),
+            [_],
         ),
         p = (0, r.ix)({
             quest: t,
@@ -27,10 +27,10 @@ let d = function (e) {
             questContentRowIndex: u,
             sourceQuestContent: d,
         });
-    return (0, i.jsx)(s.Button, {
+    return (0, i.jsx)(a.$, {
         variant: "primary",
         fullWidth: !0,
-        size: _,
+        size: m,
         loading: h,
         onClick: p,
         text: o.intl.string(o.t.cfY4PE),

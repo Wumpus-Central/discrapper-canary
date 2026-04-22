@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(147426),
-    i = n(374372),
-    a = n(355418);
-let s = `(?:(?:приблизно|орієнтовно)\\s*(?:~\\s*)?)?(${r.Pl})${r.pW.rightBoundary}`;
+r.d(t, { A: () => o });
+var n = r(147426),
+    s = r(374372),
+    a = r(355418);
+let i = `(?:(?:приблизно|орієнтовно)\\s*(?:~\\s*)?)?(${n.Pl})${n.pW.rightBoundary}`;
 class o extends a.c {
     patternLeftBoundary() {
-        return r.pW.leftBoundary;
+        return n.pW.leftBoundary;
     }
     innerPattern(e) {
         return e.option.forwardDate
-            ? RegExp(s, "i")
-            : RegExp(`(?:протягом|на протязі|протягом|упродовж|впродовж)\\s*${s}`, r.pW.flags);
+            ? RegExp(i, "i")
+            : RegExp(`(?:протягом|на протязі|протягом|упродовж|впродовж)\\s*${i}`, n.pW.flags);
     }
     innerExtract(e, t) {
-        let n = (0, r.E9)(t[1]);
-        return i.BP.createRelativeFromReference(e.reference, n);
+        let r = (0, n.E9)(t[1]);
+        return s.BP.createRelativeFromReference(e.reference, r);
     }
 }

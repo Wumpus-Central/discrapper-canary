@@ -1,7 +1,7 @@
 s.d(t, { default: () => h });
 var i = s(627968),
     r = s(64700),
-    a = s(397927),
+    a = s(935462),
     l = s(793574),
     n = s(688810),
     C = s(954571),
@@ -35,7 +35,7 @@ let h = (e) => {
         default:
             h();
     }
-    return (0, i.jsx)(a.EOs, {
+    return (0, i.jsx)(a.EO, {
         "data-migration-pending": !0,
         transitionState: s,
         parentComponent: "ReferralProgramShareModal",

@@ -1,42 +1,39 @@
 "use strict";
-n.d(t, { AZ: () => T, Ay: () => N, Qn: () => S, cR: () => v }), n(321073);
-var r = n(284009),
-    i = n.n(r),
+n.d(t, { AZ: () => S, Ay: () => v, Qn: () => y, cR: () => N }), n(321073);
+var r,
+    i = n(284009),
+    s = n.n(i),
     a = n(562465),
-    s = n(155718),
-    o = n(58149),
-    l = n(626584),
-    u = n(865116),
+    o = n(155718),
+    l = n(58149),
+    u = n(626584),
+    d = n(865116),
     c = n(322683),
-    d = n(794691),
-    _ = n(961350),
-    f = n(544180),
-    p = n(927813),
-    h = n(453771),
+    _ = n(794691),
+    f = n(961350),
+    E = n(544180),
+    h = n(927813),
+    p = n(453771),
     m = n(513391),
     g = n(292348),
-    E = n(743445),
-    A = n(652215),
-    I = n(381941),
-    T = (function (e) {
-        return (
-            (e[(e.SEND = 0)] = "SEND"),
-            (e[(e.EDIT = 1)] = "EDIT"),
-            (e[(e.COMMAND = 2)] = "COMMAND"),
-            (e[(e.SEND_ANNOUNCEMENT = 3)] = "SEND_ANNOUNCEMENT"),
-            e
-        );
-    })({});
-let y = (e) => 0 === e.type || 3 === e.type,
-    S = (e) => 1 === e.type,
-    v = (e) => (y(e) ? e.message.nonce : S(e) ? e.message.messageId : e.message.data.id),
-    C = [+p.A.Millis.MINUTE, 5 * p.A.Millis.MINUTE];
-class b extends m.A {
+    A = n(743445),
+    I = n(652215),
+    T = n(381941),
+    S =
+        (((r = {})[(r.SEND = 0)] = "SEND"),
+        (r[(r.EDIT = 1)] = "EDIT"),
+        (r[(r.COMMAND = 2)] = "COMMAND"),
+        (r[(r.SEND_ANNOUNCEMENT = 3)] = "SEND_ANNOUNCEMENT"),
+        r);
+let y = (e) => 1 === e.type,
+    N = (e) => (0 === e.type || 3 === e.type ? e.message.nonce : y(e) ? e.message.messageId : e.message.data.id),
+    O = [+h.A.Millis.MINUTE, 5 * h.A.Millis.MINUTE];
+class R extends m.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
     constructor(e = 5) {
-        super(new l.A("MessageQueue")), (this.maxSize = e);
+        super(new u.A("MessageQueue")), (this.maxSize = e);
     }
     isFull() {
         return this.queue.length >= this.maxSize;
@@ -73,9 +70,9 @@ class b extends m.A {
         return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = C.map((e) =>
+        let t = O.map((e) =>
             setTimeout(() => {
-                (0, o.zV)(A.HAw.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, l.zV)(I.HAw.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e),
         );
         this.analyticsTimeouts.set(e, t);
@@ -88,74 +85,72 @@ class b extends m.A {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
             if (
                 null != n.body &&
-                (n.body.code === A.t02.SLOWMODE_RATE_LIMITED ||
-                    n.body.code === A.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
+                (n.body.code === I.t02.SLOWMODE_RATE_LIMITED ||
+                    n.body.code === I.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
             )
                 t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers["retry-after"]);
-                isNaN(e) ? t(null, n) : t({ retryAfter: e * p.A.Millis.SECOND });
+                isNaN(e) ? t(null, n) : t({ retryAfter: e * h.A.Millis.SECOND });
             } else t(null, n);
         };
     }
     handleSend(e, t) {
         let { channelId: n, analyticsLocation: r, ...i } = e,
-            s = (0, d.A)() ?? r,
-            o = null != s ? { location: s } : void 0,
-            l = (0, c.O)(),
-            _ = { mobile_network_type: f.A.getType(), ...i, ...(null != l && { signal_strength: l }) };
-        if (u.Ay.get("send_fail_100")) {
+            s = (0, _.A)() ?? r,
+            o = (0, c.O)(),
+            l = { mobile_network_type: E.A.getType(), ...i, ...(null != o && { signal_strength: o }) };
+        if (d.Ay.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" });
             return;
         }
-        let p = this.createResponseHandler(e.nonce, t),
-            h = new AbortController();
+        let u = this.createResponseHandler(e.nonce, t),
+            f = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.Bo.post(
                 {
-                    url: A.Rsh.MESSAGES(n),
-                    body: _,
-                    context: o,
+                    url: I.Rsh.MESSAGES(n),
+                    body: l,
+                    context: null != s ? { location: s } : void 0,
                     oldFormErrors: !0,
-                    ...I.ZG,
-                    signal: h.signal,
+                    ...T.ZG,
+                    signal: f.signal,
                     rejectWithError: !0,
                     onRequestCreated: () => {
-                        null != e.nonce && this.requests.set(e.nonce, h);
+                        null != e.nonce && this.requests.set(e.nonce, f);
                     },
                 },
-                p,
+                u,
             );
     }
     handleSendAnnouncement(e, t) {
         let { channelId: n, analyticsLocation: r, ...i } = e,
-            s = (0, d.A)() ?? r,
-            o = null != s ? { location: s } : void 0,
-            l = (0, c.O)(),
-            _ = { mobile_network_type: f.A.getType(), ...i, ...(null != l && { signal_strength: l }) };
-        if (u.Ay.get("send_fail_100")) {
+            s = (0, _.A)() ?? r,
+            o = (0, c.O)(),
+            l = { mobile_network_type: E.A.getType(), ...i, ...(null != o && { signal_strength: o }) };
+        if (d.Ay.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" });
             return;
         }
-        let p = this.createResponseHandler(e.nonce, t),
-            h = new AbortController();
+        let u = this.createResponseHandler(e.nonce, t),
+            f = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.Bo.post(
                 {
-                    url: A.Rsh.MESSAGES_ANNOUNCEMENT(n),
-                    body: _,
-                    context: o,
+                    url: I.Rsh.MESSAGES_ANNOUNCEMENT(n),
+                    body: l,
+                    context: null != s ? { location: s } : void 0,
                     oldFormErrors: !0,
-                    ...I.ZG,
-                    signal: h.signal,
+                    ...T.ZG,
+                    signal: f.signal,
                     rejectWithError: !0,
                     onRequestCreated: () => {
-                        null != e.nonce && this.requests.set(e.nonce, h);
+                        null != e.nonce && this.requests.set(e.nonce, f);
                     },
                 },
-                p,
+                u,
             );
     }
     handleEdit = (e, t) => {
@@ -163,7 +158,7 @@ class b extends m.A {
             o = new AbortController(),
             l = this.createResponseHandler(r, t),
             u = {
-                url: A.Rsh.MESSAGE(n, r),
+                url: I.Rsh.MESSAGE(n, r),
                 body: s,
                 retries: 1,
                 oldFormErrors: !0,
@@ -179,47 +174,47 @@ class b extends m.A {
         let {
                 applicationId: n,
                 guildId: r,
-                channelId: o,
+                channelId: i,
                 data: l,
                 nonce: u,
-                attachments: c,
-                maxSizeCallback: d,
-                analytics_location: f,
-                sectionName: p,
-                source: m,
+                attachments: d,
+                maxSizeCallback: c,
+                analytics_location: _,
+                sectionName: E,
+                source: h,
             } = e,
-            I = {
-                type: s.G4.APPLICATION_COMMAND,
+            m = {
+                type: o.G4.APPLICATION_COMMAND,
                 application_id: n,
                 guild_id: r,
-                channel_id: o,
-                session_id: _.default.getSessionId(),
+                channel_id: i,
+                session_id: f.default.getSessionId(),
                 data: l,
                 nonce: u,
-                analytics_location: f,
-                section_name: p,
-                source: m,
+                analytics_location: _,
+                section_name: E,
+                source: h,
             };
-        null != c &&
-            (I.data.attachments = c.map(
+        null != d &&
+            (m.data.attachments = d.map(
                 (e, t) => (
-                    i()(e.status === E.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
+                    s()(e.status === A.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
                     (0, g.OW)(e, t)
                 ),
             ));
         let T = new AbortController();
         a.Bo.post(
             {
-                url: A.Rsh.INTERACTIONS,
-                body: I,
+                url: I.Rsh.INTERACTIONS,
+                body: m,
                 signal: T.signal,
                 rejectWithError: !0,
                 onRequestCreated: (e) => {
                     this.requests.set(u, T),
                         e.on("progress", (e) => {
                             let { total: t } = e,
-                                n = (0, h.o2)(r);
-                            null != t && t > n && (this.cancelRequest(u), d?.(n));
+                                n = (0, p.o2)(r);
+                            null != t && t > n && (this.cancelRequest(u), c?.(n));
                         });
                 },
             },
@@ -227,4 +222,4 @@ class b extends m.A {
         );
     }
 }
-let N = new b();
+let v = new R();

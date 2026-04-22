@@ -1,152 +1,157 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => w });
 var i = n(627968),
     l = n(64700),
     s = n(111956),
     a = n.n(s),
-    r = n(397927),
-    o = n(163126),
-    d = n(182061),
-    c = n(886393),
-    u = n(307623),
-    h = n(660273),
-    A = n(707792),
-    _ = n(41402),
-    m = n(271456),
-    p = n(200273),
-    g = n(565846),
-    f = n(57907),
-    E = n(375500),
-    x = n(707653),
-    I = n(50268),
-    C = n(584682),
-    N = n(58736),
-    T = n(378570),
-    S = n(203982),
-    b = n(170428),
-    y = n(933057),
-    v = n(747926),
-    R = n(652215),
-    j = n(985018);
-function O(e) {
+    r = n(265872),
+    o = n(365199),
+    d = n(861672),
+    c = n(477782),
+    u = n(811893),
+    h = n(789645),
+    A = n(163126),
+    _ = n(182061),
+    m = n(886393),
+    g = n(307623),
+    p = n(660273),
+    f = n(707792),
+    E = n(41402),
+    x = n(271456),
+    I = n(200273),
+    C = n(565846),
+    b = n(57907),
+    N = n(375500),
+    S = n(707653),
+    v = n(50268),
+    T = n(584682),
+    y = n(58736),
+    R = n(378570),
+    j = n(203982),
+    L = n(170428),
+    O = n(933057),
+    G = n(747926),
+    D = n(652215),
+    M = n(985018);
+function U(e) {
     let { channel: t } = e,
         [n, s] = l.useState(!1),
         a = l.useRef(null);
-    function o() {
+    function d() {
         s((e) => !e);
     }
-    let d = j.intl.string(j.t["UKOtz+"]);
-    return (0, i.jsx)(r.YNO, {
+    let c = M.intl.string(M.t["UKOtz+"]);
+    return (0, i.jsx)(r.Y, {
         targetElementRef: a,
         shouldShow: n,
-        animation: r.YNO.Animation.NONE,
+        animation: r.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
         onRequestClose: () => s(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(L, { ...e, channel: t });
+            return (0, i.jsx)(P, { ...e, channel: t });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(N.Ay.Icon, {
+            return (0, i.jsx)(y.Ay.Icon, {
                 ...e,
                 ref: a,
-                onClick: o,
-                tooltip: n ? null : d,
-                icon: r.jNK,
-                "aria-label": d,
+                onClick: d,
+                tooltip: n ? null : c,
+                icon: o.j,
+                "aria-label": c,
                 selected: n,
             });
         },
     });
 }
-function L(e) {
+function P(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
-        s = (0, h.A)(t, "Sidebar Overflow"),
-        C = (0, _.A)(t),
-        N = (0, f.A)(t),
-        b = (0, E.A)(t),
-        y = (0, d.A)(t),
-        v = (0, A.A)(t),
-        O = (0, g.A)(t.id),
-        L = (0, p.A)(t),
-        M = (0, u.A)(t),
-        D = (0, c.A)(t),
-        U = (0, I.A)({ id: t.id, label: j.intl.string(j.t.DQ797g) }),
-        G = (0, x.A)(t),
-        P = (0, m.A)(t),
-        k = (0, o.$)(1e3);
-    function w() {
-        (0, T.iN)(t.id);
+        s = (0, p.A)(t, "Sidebar Overflow"),
+        r = (0, E.A)(t),
+        o = (0, b.A)(t),
+        h = (0, N.A)(t),
+        T = (0, _.A)(t),
+        y = (0, f.A)(t),
+        L = (0, C.A)(t.id),
+        O = (0, I.A)(t),
+        G = (0, g.A)(t),
+        U = (0, m.A)(t),
+        P = (0, v.A)({ id: t.id, label: M.intl.string(M.t.DQ797g) }),
+        w = (0, S.A)(t),
+        k = (0, x.A)(t),
+        V = (0, A.$)(1e3);
+    function B() {
+        (0, R.iN)(t.id);
     }
-    function B(e) {
+    function H(e) {
         let n = a()(() => {
-                S._.unsubscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i), e();
+                j._.unsubscribe(D.jej.CHANNEL_TEXT_AREA_FOCUSED, i), e();
             }, 250),
             i = (e) => {
                 e.channelId === t.id && n();
             };
-        S._.subscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i),
-            k.addEventListener("abort", () => {
-                S._.unsubscribe(R.jej.CHANNEL_TEXT_AREA_FOCUSED, i);
+        j._.subscribe(D.jej.CHANNEL_TEXT_AREA_FOCUSED, i),
+            V.addEventListener("abort", () => {
+                j._.unsubscribe(D.jej.CHANNEL_TEXT_AREA_FOCUSED, i);
             });
     }
-    return (0, i.jsxs)(r.W1t, {
+    return (0, i.jsxs)(d.W, {
         "data-menu-migrated": !0,
         navId: "thread-context",
         onClose: n,
-        "aria-label": j.intl.string(j.t["1NBjqb"]),
+        "aria-label": M.intl.string(M.t["1NBjqb"]),
         onSelect: l,
         children: [
-            (0, i.jsxs)(r.rXV, {
-                children: [s, (0, i.jsx)(r.Drp, { id: "open", label: j.intl.string(j.t.IxVmZi), action: w })],
+            (0, i.jsxs)(c.rX, {
+                children: [s, (0, i.jsx)(c.Dr, { id: "open", label: M.intl.string(M.t.IxVmZi), action: B })],
             }),
-            (0, i.jsxs)(r.rXV, { children: [N, b] }),
-            (0, i.jsxs)(r.rXV, { children: [L, C, O, P] }),
-            (0, i.jsxs)(r.rXV, {
+            (0, i.jsxs)(c.rX, { children: [o, h] }),
+            (0, i.jsxs)(c.rX, { children: [O, r, L, k] }),
+            (0, i.jsxs)(c.rX, {
                 children: [
-                    (0, i.jsx)(r.Drp, {
+                    (0, i.jsx)(c.Dr, {
                         id: "search",
-                        label: j.intl.string(j.t["5h0QOP"]),
-                        icon: r.tfB,
-                        trailingIndicator: { type: "icon", icon: r.tfB },
+                        label: M.intl.string(M.t["5h0QOP"]),
+                        icon: u.t,
+                        trailingIndicator: { type: "icon", icon: u.t },
                         action: function () {
-                            B(() => {
-                                S._.dispatch(R.jej.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                            H(() => {
+                                j._.dispatch(D.jej.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                             }),
-                                w();
+                                B();
                         },
                     }),
-                    (0, i.jsx)(r.Drp, {
+                    (0, i.jsx)(c.Dr, {
                         id: "pins",
-                        label: j.intl.string(j.t["2BSH7n"]),
-                        icon: r.tfB,
-                        trailingIndicator: { type: "icon", icon: r.tfB },
+                        label: M.intl.string(M.t["2BSH7n"]),
+                        icon: u.t,
+                        trailingIndicator: { type: "icon", icon: u.t },
                         action: function () {
-                            B(() => {
-                                S._.dispatch(R.jej.TOGGLE_CHANNEL_PINS);
+                            H(() => {
+                                j._.dispatch(D.jej.TOGGLE_CHANNEL_PINS);
                             }),
-                                w();
+                                B();
                         },
                     }),
                 ],
             }),
-            (0, i.jsxs)(r.rXV, { children: [G, y, v, M] }),
-            (0, i.jsxs)(r.rXV, { children: [D, U] }),
+            (0, i.jsxs)(c.rX, { children: [w, T, y, G] }),
+            (0, i.jsxs)(c.rX, { children: [U, P] }),
         ],
     });
 }
-function M(e) {
+function w(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, i.jsx)(y.A, { channel: t }),
-            t.isModeratorReportChannel() ? (0, i.jsx)(b.A, { channel: t }) : null,
-            (0, i.jsx)(O, { channel: t }),
-            (0, i.jsx)(N.Ay.Icon, {
-                icon: r.PGe,
-                tooltip: j.intl.string(j.t.cpT0Cq),
-                onClick: () => (0, v.xu)((0, C.j)(t), n ?? t.parent_id),
+            t.isForumPost() ? null : (0, i.jsx)(O.A, { channel: t }),
+            t.isModeratorReportChannel() ? (0, i.jsx)(L.A, { channel: t }) : null,
+            (0, i.jsx)(U, { channel: t }),
+            (0, i.jsx)(y.Ay.Icon, {
+                icon: h.P,
+                tooltip: M.intl.string(M.t.cpT0Cq),
+                onClick: () => (0, G.xu)((0, T.j)(t), n ?? t.parent_id),
             }),
         ],
     });

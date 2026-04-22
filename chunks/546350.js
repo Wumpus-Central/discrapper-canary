@@ -1,32 +1,32 @@
 n.d(t, { w: () => o });
-var a = n(64700),
-    i = n(311907),
-    l = n(397927),
-    s = n(775602),
+var i = n(64700),
+    s = n(311907),
+    l = n(717421),
+    a = n(775602),
     r = n(654487);
 function o(e) {
     let { isQuestAccepted: t, isQuestCompleted: n, isQuestBarVisible: o } = e,
-        d = (0, i.bG)([s.A], () => s.A.useReducedMotion),
-        [c, u] = a.useState(!1),
-        [m, h] = a.useState(!0),
-        [x, p] = a.useState(!0),
-        g = a.useRef(o),
-        _ = a.useCallback(
+        d = (0, s.bG)([a.A], () => a.A.useReducedMotion),
+        [c, u] = i.useState(!1),
+        [p, h] = i.useState(!0),
+        [m, _] = i.useState(!0),
+        A = i.useRef(o),
+        f = i.useCallback(
             (e) => {
                 n || (h(!1), u(e));
             },
             [n],
         ),
-        f = a.useCallback(() => {
-            _(!0);
-        }, [_]),
-        v = a.useCallback(() => {
-            _(!1);
-        }, [_]),
-        b = t ? r.ZV : r.Ko,
-        [{ expansionSpring: j }, A] = (0, l.zhh)(() => ({
+        g = i.useCallback(() => {
+            f(!0);
+        }, [f]),
+        x = i.useCallback(() => {
+            f(!1);
+        }, [f]),
+        E = t ? r.ZV : r.Ko,
+        [{ expansionSpring: C }, T] = (0, l.z)(() => ({
             from: { expansionSpring: 0 },
-            config: b,
+            config: E,
             onRest: () => {
                 h(!0);
             },
@@ -34,34 +34,34 @@ function o(e) {
                 h(!1);
             },
         }));
-    a.useEffect(() => {
-        A({ expansionSpring: +!!c, immediate: d });
-    }, [c, A, d]);
-    let { visibilitySpring: C } = (0, l.zhh)({
+    i.useEffect(() => {
+        T({ expansionSpring: +!!c, immediate: d });
+    }, [c, T, d]);
+    let { visibilitySpring: v } = (0, l.z)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!o },
         config: { tension: 250, friction: 10, clamp: !0 },
         onRest: () => {
-            p(!0);
+            _(!0);
         },
         onStart: () => {
-            p(!1);
+            _(!1);
         },
     });
     return (
-        a.useLayoutEffect(() => {
-            o !== g.current && p(!1), (g.current = o);
+        i.useLayoutEffect(() => {
+            o !== A.current && _(!1), (A.current = o);
         }, [o]),
         {
             isExpanded: c,
-            setIsExpanded: _,
-            expandQuestBar: f,
-            collapseQuestBar: v,
-            isExpansionAnimationComplete: m,
-            isVisibilityAnimationAtRest: x,
-            expansionSpring: j,
-            visibilitySpring: C,
-            springConfig: b,
+            setIsExpanded: f,
+            expandQuestBar: g,
+            collapseQuestBar: x,
+            isExpansionAnimationComplete: p,
+            isVisibilityAnimationAtRest: m,
+            expansionSpring: C,
+            visibilitySpring: v,
+            springConfig: E,
         }
     );
 }

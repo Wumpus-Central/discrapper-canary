@@ -1,52 +1,53 @@
-n.d(t, { A: () => h });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(835245),
-    o = n(397927),
-    c = n(315502),
-    d = n(450979);
-function u(e) {
-    let { width: t = 24, height: n = 24, isBadged: s = !1, isTyping: a = !1 } = e,
-        [c] = l.useState(() => (0, r.A)());
-    return (0, i.jsxs)("svg", {
-        width: t,
-        height: n,
+t.d(n, { A: () => h });
+var l = t(627968),
+    i = t(64700),
+    a = t(503698),
+    s = t.n(a),
+    r = t(835245),
+    o = t(863610),
+    c = t(534890),
+    u = t(315502),
+    d = t(589203);
+function A(e) {
+    let { width: n = 24, height: t = 24, isBadged: a = !1, isTyping: s = !1 } = e,
+        [u] = i.useState(() => (0, r.A)());
+    return (0, l.jsxs)("svg", {
+        width: n,
+        height: t,
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("defs", {
-                children: (0, i.jsxs)("mask", {
-                    id: c,
+            (0, l.jsx)("defs", {
+                children: (0, l.jsxs)("mask", {
+                    id: u,
                     children: [
-                        (0, i.jsx)("rect", { fill: "white", width: "100%", height: "100%" }),
-                        a &&
-                            (0, i.jsx)("g", {
+                        (0, l.jsx)("rect", { fill: "white", width: "100%", height: "100%" }),
+                        s &&
+                            (0, l.jsx)("g", {
                                 fill: "black",
                                 transform: `translate(5.5, 10.5) scale(${11 / 24})`,
-                                children: (0, i.jsx)(o.UBN, { dotRadius: 3.5, spacing: 3, fill: "black" }),
+                                children: (0, l.jsx)(o.U, { dotRadius: 3.5, spacing: 3, fill: "black" }),
                             }),
-                        s && (0, i.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "red" }),
+                        a && (0, l.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "red" }),
                     ],
                 }),
             }),
-            (0, i.jsx)("g", {
-                mask: `url(#${c})`,
-                children: (0, i.jsx)(o.oyn, { size: "custom", width: t, height: n, color: "currentColor" }),
+            (0, l.jsx)("g", {
+                mask: `url(#${u})`,
+                children: (0, l.jsx)(c.o, { size: "custom", width: n, height: t, color: "currentColor" }),
             }),
         ],
     });
 }
 function h(e) {
-    let { className: t, unreadCount: n, mentionCount: l, isTyping: s, canBadge: r } = e,
-        o = null != l && l > 0,
-        h = (o ? l : n) ?? 0,
-        A = r && null != n && n > 0;
-    return (0, i.jsxs)("div", {
-        className: a()(d.Or, t),
+    let { className: n, unreadCount: t, mentionCount: i, isTyping: a, canBadge: r } = e,
+        o = null != i && i > 0,
+        c = (o ? i : t) ?? 0,
+        h = r && null != t && t > 0;
+    return (0, l.jsxs)("div", {
+        className: s()(d.Or, n),
         children: [
-            (0, i.jsx)(u, { isBadged: A, isTyping: s }),
-            A && (0, i.jsx)(c.A, { hasMentions: o, truncatedCount: h > 99 ? "99+" : h, className: d.qS }),
+            (0, l.jsx)(A, { isBadged: h, isTyping: a }),
+            h && (0, l.jsx)(u.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: d.qS }),
         ],
     });
 }

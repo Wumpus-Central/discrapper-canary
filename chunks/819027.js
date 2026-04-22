@@ -1,23 +1,24 @@
-n.d(t, { A: () => d });
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var a = n(397927),
-    l = n(688810),
-    i = n(474397),
-    s = n(780964),
-    u = n(840065),
-    o = n(652215),
-    c = n(985018);
-function d(e) {
-    let { analyticsLocations: t } = (0, l.Ay)();
-    return (0, r.jsx)(a.Drp, {
+var l = n(477782),
+    s = n(625903),
+    r = n(688810),
+    a = n(474397),
+    o = n(780964),
+    u = n(858897),
+    c = n(652215),
+    d = n(985018);
+function m(e) {
+    let { analyticsLocations: t } = (0, r.Ay)();
+    return (0, i.jsx)(l.Dr, {
         id: "voice-settings",
-        label: c.intl.string(c.t.NiTd0e),
+        label: d.intl.string(d.t.NiTd0e),
         action: () => {
-            (0, u.openUserSettings)(s.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
-                (0, i.A)(e, e === o.BRT.POPOUT);
+            (0, u.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
+                (0, a.A)(e, e === c.BRT.POPOUT);
         },
-        icon: a.Zes,
-        leadingAccessory: { type: "icon", icon: a.Zes },
+        icon: s.Z,
+        leadingAccessory: { type: "icon", icon: s.Z },
     });
 }

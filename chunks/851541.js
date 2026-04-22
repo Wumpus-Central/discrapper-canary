@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => o });
-var r = n(284009),
-    i = n.n(r);
+n.d(t, { A: () => a });
+var i = n(284009),
+    l = n.n(i);
 n(273946);
-var a = n(583954);
-class s {
+var s = n(583954);
+class r {
     color = "black";
-    font = { style: "normal", weight: 300, size: 24, family: ["serif"], truncate: a.Kq.None };
+    font = { style: "normal", weight: 300, size: 24, family: ["serif"], truncate: s.Kq.None };
     filter = {
         blur: 0,
         brightness: 1,
@@ -48,15 +48,16 @@ class s {
             (this.filter.sepia = e.sepia ?? this.filter.sepia);
     }
     getFilterString() {
-        let e = ["brightness", "contrast", "grayscale", "invert", "opacity", "saturate", "sepia"];
         return [
             `blur(${this.filter.blur}px)`,
             `hue-rotate(${this.filter.hueRotation}deg)`,
-            ...e.map((e) => `${e}(${this.filter[e]})`),
+            ...["brightness", "contrast", "grayscale", "invert", "opacity", "saturate", "sepia"].map(
+                (e) => `${e}(${this.filter[e]})`,
+            ),
         ].join(" ");
     }
     getLoadedImage(e) {
-        i()(null != this.assetMap, "DiscordCanvas: An AssetStore has not been initialized.");
+        l()(null != this.assetMap, "DiscordCanvas: An AssetStore has not been initialized.");
         let t = this.assetMap.get(e);
         return void 0 === t
             ? void console.error(
@@ -64,12 +65,12 @@ class s {
               )
             : t;
     }
-    drawRoundedImageWithFallbacks(e, t, n, r, i) {
-        for (let s of e) {
-            let e = this.drawRoundedImage(s, t, n, r, i);
-            if (e !== a.uS.Failure) return e;
+    drawRoundedImageWithFallbacks(e, t, n, i, l) {
+        for (let r of e) {
+            let e = this.drawRoundedImage(r, t, n, i, l);
+            if (e !== s.uS.Failure) return e;
         }
-        return a.uS.Failure;
+        return s.uS.Failure;
     }
 }
-let o = s;
+let a = r;

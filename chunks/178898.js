@@ -1,77 +1,81 @@
 "use strict";
-n.d(t, { A: () => y });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => N });
+var i = n(627968),
+    l = n(64700),
     s = n(989349),
-    a = n.n(s),
-    o = n(311907),
-    l = n(506774),
-    u = n(397927),
-    c = n(384904),
-    d = n(404374),
-    _ = n(780964),
-    f = n(840065),
-    p = n(166403),
-    h = n(927578),
-    m = n(822123),
+    r = n.n(s),
+    a = n(311907),
+    o = n(506774),
+    c = n(403581),
+    u = n(834730),
+    d = n(349288),
+    h = n(939249),
+    m = n(789645),
+    p = n(323082),
+    f = n(404374),
+    g = n(780964),
+    _ = n(858897),
+    x = n(166403),
+    A = n(927578),
+    C = n(822123),
     E = n(652215),
-    g = n(788868),
-    A = n(985018),
-    I = n(617536);
-let T = "premiumRetentionEmojiPickerNotice",
-    S = l.w.get(T),
-    y = (e) => {
+    I = n(788868),
+    v = n(985018),
+    y = n(542863);
+let S = "premiumRetentionEmojiPickerNotice",
+    b = o.w.get(S),
+    N = (e) => {
         let { closePopout: t, channel: n } = e,
-            [s, y] = i.useState(!1),
-            { subscription: v, hasFetchedSubscriptions: N } = (0, o.cf)([p.A], () => ({
-                subscription: p.A.getPremiumSubscription(),
-                hasFetchedSubscriptions: p.A.hasFetchedSubscriptions(),
+            [s, N] = l.useState(!1),
+            { subscription: T, hasFetchedSubscriptions: j } = (0, a.cf)([x.A], () => ({
+                subscription: x.A.getPremiumSubscription(),
+                hasFetchedSubscriptions: x.A.hasFetchedSubscriptions(),
             }));
         if (
-            (i.useEffect(() => {
-                N || (0, c.hP)();
-            }, [N]),
-            null == v || !(0, h.PK)(v.status) || s)
+            (l.useEffect(() => {
+                j || (0, p.hP)();
+            }, [j]),
+            null == T || !(0, A.PK)(T.status) || s)
         )
             return null;
-        let C = v.status === E.Dmq.PAST_DUE ? (0, h.ji)(v).expiresDate : a()(v.currentPeriodStart).add(g.ph),
-            R = `${v.id}:${C.toISOString()}`;
-        if (S === R) return null;
-        let O =
-            h.Ay.getPremiumType(v.planId) === g.PremiumTypes.TIER_0
-                ? d.k0.PREMIUM_TIER_0
-                : h.Ay.getPremiumType(v.planId) === g.PremiumTypes.TIER_1
-                  ? d.k0.PREMIUM_TIER_1
-                  : d.k0.PREMIUM_TIER_2;
-        return (0, r.jsxs)("div", {
-            className: I.g$,
+        let R = T.status === E.Dmq.PAST_DUE ? (0, A.ji)(T).expiresDate : r()(T.currentPeriodStart).add(I.ph),
+            w = `${T.id}:${R.toISOString()}`;
+        if (b === w) return null;
+        let L =
+            A.Ay.getPremiumType(T.planId) === I.PremiumTypes.TIER_0
+                ? f.k0.PREMIUM_TIER_0
+                : A.Ay.getPremiumType(T.planId) === I.PremiumTypes.TIER_1
+                  ? f.k0.PREMIUM_TIER_1
+                  : f.k0.PREMIUM_TIER_2;
+        return (0, i.jsxs)("div", {
+            className: y.g$,
             children: [
-                (0, r.jsx)(u.tvc, { size: "md", className: I.lu, color: O }),
-                (0, r.jsxs)("div", {
-                    className: I.Xn,
+                (0, i.jsx)(c.t, { size: "md", className: y.lu, color: L }),
+                (0, i.jsxs)("div", {
+                    className: y.Xn,
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, i.jsx)(u.E, {
                             variant: "text-xs/normal",
-                            children: A.intl.format(A.t.bTMjiO, {
-                                planName: h.Ay.getTierDisplayNameByPlanId(v.planId),
-                                endsAt: C.toDate(),
+                            children: v.intl.format(v.t.bTMjiO, {
+                                planName: A.Ay.getTierDisplayNameByPlanId(T.planId),
+                                endsAt: R.toDate(),
                             }),
                         }),
-                        (0, r.jsx)("div", {
-                            children: (0, r.jsx)(u.MzZ, {
+                        (0, i.jsx)("div", {
+                            children: (0, i.jsx)(d.Anchor, {
                                 onClick: () => {
-                                    (0, m.xf)(n), t(), (0, f.openUserSettings)(_.X.NITRO_PANEL);
+                                    (0, C.xf)(n), t(), (0, _.openUserSettings)(g.X.NITRO_PANEL);
                                 },
-                                children: A.intl.string(A.t.W3aavh),
+                                children: v.intl.string(v.t.W3aavh),
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(u.DUT, {
+                (0, i.jsx)(h.D, {
                     onClick: () => {
-                        l.w.set(T, R), (S = R), y(!0);
+                        o.w.set(S, w), (b = w), N(!0);
                     },
-                    children: (0, r.jsx)(u.PGe, { size: "md", color: "currentColor", className: I.YF }),
+                    children: (0, i.jsx)(m.P, { size: "md", color: "currentColor", className: y.YF }),
                 }),
             ],
         });

@@ -1,50 +1,53 @@
 "use strict";
 n.d(t, {
-    $W: () => o,
-    AM: () => m,
-    CS: () => y,
-    D4: () => l,
-    DY: () => g,
-    Gl: () => O,
-    H5: () => L,
-    I4: () => p,
-    Ig: () => a,
-    M1: () => x,
+    $W: () => f,
+    AM: () => A,
+    CS: () => O,
+    D4: () => E,
+    DY: () => I,
+    Gl: () => w,
+    H5: () => P,
+    I4: () => m,
+    Ig: () => c,
+    M1: () => k,
     N7: () => C,
-    W9: () => S,
+    W9: () => R,
     _J: () => b,
-    bN: () => N,
-    dm: () => P,
-    eK: () => h,
-    gq: () => f,
-    i6: () => w,
-    iu: () => E,
-    lk: () => D,
-    mO: () => T,
-    qA: () => u,
-    qG: () => A,
+    bN: () => D,
+    dm: () => x,
+    eK: () => g,
+    gq: () => p,
+    i6: () => U,
+    iu: () => T,
+    lk: () => M,
+    mO: () => N,
+    qA: () => h,
+    qG: () => S,
     vu: () => v,
-    xW: () => I,
-    yz: () => s,
+    xW: () => y,
+    yz: () => _,
 });
-var r = n(155718),
-    i = n(652215);
-let a = 160,
-    s = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    o = "438122941302046720",
-    l = "1417273808645259344",
-    u = "773336526917861400",
-    c = "755600276941176913",
-    d = "880218832743055411",
-    _ = "1050941315912835122",
-    f = "880218394199220334",
-    p = "755827207812677713",
-    h = "1234546995360694434",
-    m = "1214629548377768066",
-    g = "https://discord.com/blog/server-activities-games-voice-watch-together",
-    E = { SMALL: 64, LARGE: 160 },
-    A = ["in_development", "activities_team", "employee_release"],
-    I = [
+var r,
+    i,
+    s,
+    a,
+    o,
+    l,
+    u = n(155718),
+    d = n(652215);
+let c = 160,
+    _ = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    f = "438122941302046720",
+    E = "1417273808645259344",
+    h = "773336526917861400",
+    p = "880218394199220334",
+    m = "755827207812677713",
+    g = "1234546995360694434",
+    A = "1214629548377768066",
+    I = "https://discord.com/blog/server-activities-games-voice-watch-together",
+    T = { SMALL: 64, LARGE: 160 },
+    S = ["in_development", "activities_team", "employee_release"],
+    y = [
         "1037680572660727838",
         "235088799074484224",
         "1007373802981822582",
@@ -57,54 +60,40 @@ let a = 160,
         "1235205910863806484",
         "1227719606223765687",
     ],
-    T = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-var y = (function (e) {
-        return (
-            (e.ADS = "ADS"),
-            (e.FAILED_LOAD = "FAILED_LOAD"),
-            (e.LAGGING = "LAGGING"),
-            (e.CONFUSING = "CONFUSING"),
-            (e.NOT_FUN = "NOT_FUN"),
-            (e.OTHER = "OTHER"),
-            e
-        );
-    })({}),
-    S = (function (e) {
-        return (e[(e.PLAY = 0)] = "PLAY"), (e[(e.SPECTATE = 1)] = "SPECTATE"), e;
-    })({}),
-    v = (function (e) {
-        return (e.DESKTOP = "desktop"), (e.MOBILE = "mobile"), e;
-    })({}),
-    C = (function (e) {
-        return (
-            (e[(e.UNLOCKED = 1)] = "UNLOCKED"),
-            (e[(e.PORTRAIT = 2)] = "PORTRAIT"),
-            (e[(e.LANDSCAPE = 3)] = "LANDSCAPE"),
-            e
-        );
-    })({});
-let b = new Set([c, d, _, f]);
-var N = (function (e) {
-    return (e[(e.FOCUSED = 0)] = "FOCUSED"), (e[(e.PIP = 1)] = "PIP"), (e[(e.GRID = 2)] = "GRID"), e;
-})({});
-let R = { label_type: r.Hr.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] },
-    O = {
+    N = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
+var O =
+        (((r = {}).ADS = "ADS"),
+        (r.FAILED_LOAD = "FAILED_LOAD"),
+        (r.LAGGING = "LAGGING"),
+        (r.CONFUSING = "CONFUSING"),
+        (r.NOT_FUN = "NOT_FUN"),
+        (r.OTHER = "OTHER"),
+        r),
+    R = (((i = {})[(i.PLAY = 0)] = "PLAY"), (i[(i.SPECTATE = 1)] = "SPECTATE"), i),
+    v = (((s = {}).DESKTOP = "desktop"), (s.MOBILE = "mobile"), s),
+    C =
+        (((a = {})[(a.UNLOCKED = 1)] = "UNLOCKED"),
+        (a[(a.PORTRAIT = 2)] = "PORTRAIT"),
+        (a[(a.LANDSCAPE = 3)] = "LANDSCAPE"),
+        a);
+let b = new Set(["755600276941176913", "880218832743055411", "1050941315912835122", p]);
+var D = (((o = {})[(o.FOCUSED = 0)] = "FOCUSED"), (o[(o.PIP = 1)] = "PIP"), (o[(o.GRID = 2)] = "GRID"), o);
+let L = { label_type: u.Hr.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] },
+    w = {
         application_id: "",
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [r.Yl.WEB],
-        client_platform_config: { [r.Yl.WEB]: R, [r.Yl.IOS]: R, [r.Yl.ANDROID]: R },
+        supported_platforms: [u.Yl.WEB],
+        client_platform_config: { [u.Yl.WEB]: L, [u.Yl.IOS]: L, [u.Yl.ANDROID]: L },
         has_csp_exception: !1,
         displays_advertisements: !1,
         blocked_locales: [],
         supported_locales: [],
     },
-    D = [i.rbe.GUILD_TEXT, i.rbe.DM, i.rbe.GROUP_DM],
-    L = [...D, i.rbe.GUILD_VOICE],
-    w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var x = (function (e) {
-    return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
-})({});
-let P = 216e5;
+    M = [d.rbe.GUILD_TEXT, d.rbe.DM, d.rbe.GROUP_DM],
+    P = [...M, d.rbe.GUILD_VOICE],
+    U = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+var k = (((l = {}).NORMAL = "normal"), (l.FULL_SCREEN = "full-screen"), l);
+let x = 216e5;

@@ -1,45 +1,45 @@
 n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    r = n(73153),
-    a = n(272355);
+var r = n(192308),
+    a = n(73153),
+    l = n(272355);
 let s = "CONNECTIONS_GRID_MODAL_KEY";
-class o extends a.A {
+class o extends l.A {
     _initialize() {
-        r.h.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow),
-            r.h.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide);
+        a.h.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow),
+            a.h.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide);
     }
     _terminate() {
-        r.h.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow),
-            r.h.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide);
+        a.h.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow),
+            a.h.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide);
     }
     handleShow(e) {
         let {
             onComplete: t,
-            excludedPlatformTypes: r,
-            includedPlatformTypes: a,
+            excludedPlatformTypes: a,
+            includedPlatformTypes: l,
             integrations: o,
             onCompleteApplication: d,
-            includeApplicationConnections: c,
+            includeApplicationConnections: u,
         } = e;
-        (0, l.kBI)(s) ||
-            (0, l.mMO)(async () => {
+        (0, r.hasModalOpen)(s) ||
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e("95198").then(n.bind(n, 58829));
                 return (n) =>
                     (0, i.jsx)(e, {
                         onComplete: t,
-                        excludedPlatformTypes: r,
-                        includedPlatformTypes: a,
+                        excludedPlatformTypes: a,
+                        includedPlatformTypes: l,
                         integrations: o,
                         onCompleteApplication: d,
-                        includeApplicationConnections: c,
+                        includeApplicationConnections: u,
                         ...n,
                     });
             });
     }
     handleHide() {
-        (0, l.OoC)(s);
+        (0, r.closeModal)(s);
     }
 }
 let d = new o();

@@ -1,155 +1,158 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => j });
 var i = n(627968);
 n(64700);
 var s = n(503698),
     r = n.n(s),
     l = n(311907),
-    a = n(397927),
-    o = n(161928),
-    c = n(890698),
-    d = n(344961),
-    u = n(235986),
-    _ = n(274303),
-    h = n(146571),
-    g = n(723702),
-    p = n(854378),
-    m = n(652215),
-    A = n(985018),
-    f = n(379154),
-    E = n(818050);
-function x(e, t) {
+    a = n(821609),
+    o = n(921853),
+    c = n(707554),
+    d = n(123292),
+    u = n(161928),
+    _ = n(890698),
+    h = n(344961),
+    m = n(235986),
+    p = n(274303),
+    g = n(146571),
+    A = n(723702),
+    f = n(854378),
+    x = n(652215),
+    E = n(985018),
+    I = n(379154),
+    v = n(818050);
+function N(e, t) {
     if (null == t[e]) return null;
     {
         let n = t[e];
         return Array.isArray(n) ? n[0] : n;
     }
 }
-function I(e) {
+function j(e) {
     let t,
         {
             invite: n,
             giftCode: s,
-            loginStatus: I,
-            country: N,
-            showMobileWebHandoff: v,
-            disableAutofocusOnDefaultForm: T,
-            withQR: j,
-            dismissedChooseAccount: C,
-            login: S,
-            password: y,
-            errors: b,
-            conditionalMediationAbortController: R,
-            onLoginChange: O,
-            onPasswordChange: L,
-            setLoginRef: w,
-            setPasswordRef: k,
-            onReturnToChooseAccount: D,
-            handleForgotPassword: U,
-            handleGotoRegister: P,
-            handleAuthSuccess: B,
+            loginStatus: j,
+            country: C,
+            showMobileWebHandoff: T,
+            disableAutofocusOnDefaultForm: b,
+            withQR: S,
+            dismissedChooseAccount: y,
+            login: R,
+            password: w,
+            errors: O,
+            conditionalMediationAbortController: L,
+            onLoginChange: k,
+            onPasswordChange: G,
+            setLoginRef: U,
+            setPasswordRef: D,
+            onReturnToChooseAccount: P,
+            handleForgotPassword: B,
+            handleGotoRegister: M,
+            handleAuthSuccess: V,
         } = e,
-        G = (0, l.bG)([_.A], () => _.A.getHasLoggedInAccounts()),
-        M = null == b.email && null != b.password;
+        F = (0, l.bG)([p.A], () => p.A.getHasLoggedInAccounts()),
+        W = null == O.email && null != O.password;
     return (
         (t =
             null != n
-                ? (0, i.jsx)("div", { className: E.S3, children: (0, i.jsx)(c.A, { invite: n }) })
+                ? (0, i.jsx)("div", { className: v.S3, children: (0, i.jsx)(_.A, { invite: n }) })
                 : null != s
-                  ? (0, i.jsx)(o.A, { giftCode: s })
+                  ? (0, i.jsx)(u.A, { giftCode: s })
                   : (0, i.jsxs)("div", {
-                        className: f.wx,
+                        className: I.wx,
                         children: [
-                            (0, i.jsx)(p.hE, { className: E.QB, children: A.intl.string(A.t["7fNJgA"]) }, "title"),
-                            !1 === (0, g.isAndroidWeb)()
-                                ? (0, i.jsx)(p.tK, { children: A.intl.string(A.t.euS7r4) }, "subtitle")
+                            (0, i.jsx)(f.hE, { className: v.QB, children: E.intl.string(E.t["7fNJgA"]) }, "title"),
+                            !1 === (0, A.isAndroidWeb)()
+                                ? (0, i.jsx)(f.tK, { children: E.intl.string(E.t.euS7r4) }, "subtitle")
                                 : null,
                         ],
                     })),
         (0, i.jsxs)(
-            u.A,
+            m.A,
             {
-                direction: u.A.Direction.HORIZONTAL,
-                align: u.A.Align.CENTER,
+                direction: m.A.Direction.HORIZONTAL,
+                align: m.A.Align.CENTER,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: f.Eh,
+                        className: I.Eh,
                         children: [
-                            G &&
-                                C &&
+                            F &&
+                                y &&
                                 (0, i.jsx)("div", {
-                                    className: f.AX,
-                                    children: (0, i.jsx)(a.Button, {
-                                        onClick: D,
+                                    className: I.AX,
+                                    children: (0, i.jsx)(a.$, {
+                                        onClick: P,
                                         variant: "secondary",
-                                        text: A.intl.string(A.t["1MrpWO"]),
-                                        icon: a.n2b,
+                                        text: E.intl.string(E.t["1MrpWO"]),
+                                        icon: o.n,
                                     }),
                                 }),
                             t,
-                            (0, i.jsx)(a.Fmo, {
-                                children: (0, i.jsxs)(p.eB, {
-                                    className: E.QX,
+                            (0, i.jsx)(c.F, {
+                                children: (0, i.jsxs)(f.eB, {
+                                    className: v.QX,
                                     children: [
-                                        (0, i.jsx)(h.A, {
-                                            alpha2: N.alpha2,
-                                            countryCode: N.code.split(" ")[0],
-                                            className: E.SX,
-                                            label: A.intl.string(A.t.tUjnxr),
-                                            error: x("login", b) ?? x("email", b),
-                                            onChange: O,
-                                            setRef: w,
+                                        (0, i.jsx)(g.A, {
+                                            alpha2: C.alpha2,
+                                            countryCode: C.code.split(" ")[0],
+                                            className: v.SX,
+                                            label: E.intl.string(E.t.tUjnxr),
+                                            error: N("login", O) ?? N("email", O),
+                                            onChange: k,
+                                            setRef: U,
                                             autoCapitalize: "none",
                                             autoComplete: "username webauthn",
                                             autoCorrect: "off",
                                             spellCheck: "false",
-                                            value: S,
-                                            autoFocus: !M && !v && !T,
+                                            value: R,
+                                            autoFocus: !W && !T && !b,
                                             required: !0,
                                         }),
-                                        (0, i.jsx)(p.pd, {
-                                            label: A.intl.string(A.t["CIGa+7"]),
-                                            error: x("password", b),
-                                            onChange: L,
+                                        (0, i.jsx)(f.pd, {
+                                            label: E.intl.string(E.t["CIGa+7"]),
+                                            error: N("password", O),
+                                            onChange: G,
                                             name: "password",
                                             type: "password",
-                                            setRef: k,
+                                            setRef: D,
                                             autoComplete: "current-password",
                                             spellCheck: "false",
-                                            autoFocus: M && !v && !T,
-                                            value: y,
+                                            autoFocus: W && !T && !b,
+                                            value: w,
                                             required: !0,
                                         }),
                                         (0, i.jsx)("div", {
-                                            className: r()(E.SX, E.a5),
-                                            children: (0, i.jsx)(a.QWc, {
-                                                text: A.intl.string(A.t.wWIufs),
+                                            className: r()(v.SX, v.a5),
+                                            children: (0, i.jsx)(d.Q, {
+                                                text: E.intl.string(E.t.wWIufs),
                                                 textVariant: "text-sm/normal",
-                                                onClick: U,
+                                                onClick: B,
                                             }),
                                         }),
                                         (0, i.jsx)("div", {
-                                            className: E.QB,
-                                            children: (0, i.jsx)(a.Button, {
-                                                text: A.intl.string(A.t.dKhVQN),
+                                            className: v.QB,
+                                            children: (0, i.jsx)(a.$, {
+                                                text: E.intl.string(E.t.dKhVQN),
                                                 fullWidth: !0,
                                                 type: "submit",
-                                                loading: I === m.aUe.LOGGING_IN,
+                                                loading: j === x.aUe.LOGGING_IN,
                                             }),
                                         }),
                                         (0, i.jsxs)("div", {
-                                            className: E.a5,
+                                            className: v.a5,
                                             children: [
                                                 (0, i.jsx)("span", {
-                                                    className: f.Qt,
-                                                    children: A.intl.string(A.t.tmE73r),
+                                                    className: I.Qt,
+                                                    children: E.intl.string(E.t.tmE73r),
                                                 }),
                                                 (0, i.jsx)("span", {
-                                                    className: f.Z8,
-                                                    children: (0, i.jsx)(a.QWc, {
-                                                        text: A.intl.string(A.t.pV8xeR),
+                                                    className: I.Z8,
+                                                    children: (0, i.jsx)(d.Q, {
+                                                        text: E.intl.string(E.t.pV8xeR),
                                                         textVariant: "text-sm/normal",
-                                                        onClick: P,
+                                                        onClick: M,
                                                     }),
                                                 }),
                                             ],
@@ -159,9 +162,9 @@ function I(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(a.Fmo, {
-                        children: j
-                            ? (0, i.jsx)(d.A, { onAuthenticateSuccess: B, conditionalMediationAbortController: R })
+                    (0, i.jsx)(c.F, {
+                        children: S
+                            ? (0, i.jsx)(h.A, { onAuthenticateSuccess: V, conditionalMediationAbortController: L })
                             : null,
                     }),
                 ],

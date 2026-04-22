@@ -1,77 +1,78 @@
-n.d(t, { A: () => v, h: () => _ });
+n.d(t, { A: () => A, h: () => b });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
     r = n.n(i),
-    s = n(934551),
-    o = n(158954),
+    s = n(566679),
+    o = n(834730),
+    d = n(123292),
     c = n(827734),
-    d = n(397927),
-    u = n(981355),
-    m = n(409626),
-    f = n(305080),
-    x = n(936636),
-    h = n(985018),
-    g = n(141535),
-    p = n(242021);
-function _(e) {
+    u = n(939249),
+    m = n(981355),
+    _ = n(409626),
+    h = n(305080),
+    f = n(936636),
+    g = n(985018),
+    p = n(141535),
+    x = n(242021);
+function b(e) {
     let { game: t, trackAction: n } = e,
-        [i, f] = l.useState(t?.summaryLocalized != null),
-        [_, v] = l.useState(!0),
-        [A, b] = l.useState(!1),
+        [i, d] = l.useState(t?.summaryLocalized != null),
+        [h, b] = l.useState(!0),
+        [A, v] = l.useState(!1),
         E = l.useRef(null),
-        { width: j, height: I } = (0, u.A)();
+        { width: I, height: C } = (0, m.A)();
     return (l.useEffect(() => {
         let e = E.current;
-        null != e && b(e.scrollHeight - e.clientHeight > 1 || !_);
-    }, [E, j, I, _]),
+        null != e && v(e.scrollHeight - e.clientHeight > 1 || !h);
+    }, [E, I, C, h]),
     null == t.description)
         ? null
         : (0, a.jsxs)("div", {
-              className: r()(g.fi, g.mX),
+              className: r()(p.fi, p.mX),
               children: [
                   null != t.summaryLocalized &&
                       (0, a.jsxs)("div", {
-                          className: r()(g.nM, g.Lc),
+                          className: r()(p.nM, p.Lc),
                           children: [
-                              (0, a.jsx)(s.PencilSparkleIcon, { color: c.A.colors.TEXT_DEFAULT, size: "xs" }),
-                              (0, a.jsx)(o.EYj, {
+                              (0, a.jsx)(s.Z, { color: c.A.colors.TEXT_DEFAULT, size: "xs" }),
+                              (0, a.jsx)(o.E, {
                                   variant: "text-xs/medium",
                                   color: "text-default",
                                   children: i
-                                      ? h.intl.format(h.t.aZ2iIp, { onShowOriginal: () => f(!1) })
-                                      : h.intl.format(h.t["/2ylF4"], { onShowTranslated: () => f(!0) }),
+                                      ? g.intl.format(g.t.aZ2iIp, { onShowOriginal: () => d(!1) })
+                                      : g.intl.format(g.t["/2ylF4"], { onShowTranslated: () => d(!0) }),
                               }),
                           ],
                       }),
-                  (0, a.jsx)(o.EYj, {
+                  (0, a.jsx)(o.E, {
                       ref: E,
-                      lineClamp: _ ? 8 : void 0,
+                      lineClamp: h ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: i ? t.summaryLocalized : t.description,
                   }),
                   A &&
-                      (0, a.jsx)(d.DUT, {
-                          className: g.vk,
+                      (0, a.jsx)(u.D, {
+                          className: p.vk,
                           onClick: () => {
-                              n(_ ? m.Ws.ShowMore : m.Ws.ShowLess), v(!_);
+                              n(h ? _.Ws.ShowMore : _.Ws.ShowLess), b(!h);
                           },
-                          children: (0, a.jsx)(o.EYj, {
+                          children: (0, a.jsx)(o.E, {
                               variant: "text-sm/semibold",
-                              children: _ ? h.intl.string(h.t.lBeKY2) : h.intl.string(h.t["6MwJo/"]),
+                              children: h ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
                           }),
                       }),
-                  (0, a.jsx)(x.A, { className: p.B, game: t }),
+                  (0, a.jsx)(f.A, { className: x.B, game: t }),
               ],
           });
 }
-function v(e) {
+function A(e) {
     let { game: t, trackAction: n } = e,
         i = l.useRef(null),
         {
             isExpanded: s,
             showToggle: c,
-            handleToggleExpanded: d,
+            handleToggleExpanded: u,
         } = (function (e, t) {
             let [n, a] = l.useState("full");
             l.useEffect(() => {
@@ -86,8 +87,8 @@ function v(e) {
             }, [e]);
             let i = l.useCallback(() => {
                 "expanded" === n
-                    ? (t(m.Ws.ShowLess), a("collapsed"))
-                    : "collapsed" === n && (t(m.Ws.ShowMore), a("expanded"));
+                    ? (t(_.Ws.ShowLess), a("collapsed"))
+                    : "collapsed" === n && (t(_.Ws.ShowMore), a("expanded"));
             }, [t, n]);
             return {
                 isExpanded: "expanded" === n,
@@ -95,20 +96,15 @@ function v(e) {
                 handleToggleExpanded: i,
             };
         })(i, n),
-        { isTwoColumn: u } = (0, f.c)(),
-        x = l.useMemo(() => (u ? 8 : 5), [u]);
+        { isTwoColumn: m } = (0, h.c)(),
+        f = l.useMemo(() => (m ? 8 : 5), [m]);
     if (null == t.description) return null;
-    let p = s ? h.intl.string(h.t["6MwJo/"]) : h.intl.string(h.t.lBeKY2);
+    let x = s ? g.intl.string(g.t["6MwJo/"]) : g.intl.string(g.t.lBeKY2);
     return (0, a.jsxs)("div", {
-        className: r()(g.fi, g.mX),
+        className: r()(p.fi, p.mX),
         children: [
-            (0, a.jsx)(o.EYj, {
-                ref: i,
-                lineClamp: s ? void 0 : x,
-                variant: "text-md/medium",
-                children: t.description,
-            }),
-            c && (0, a.jsx)(o.QWc, { onClick: d, text: p }),
+            (0, a.jsx)(o.E, { ref: i, lineClamp: s ? void 0 : f, variant: "text-md/medium", children: t.description }),
+            c && (0, a.jsx)(d.Q, { onClick: u, text: x }),
         ],
     });
 }

@@ -1,26 +1,27 @@
-n.d(t, { d: () => u });
+"use strict";
+n.d(t, { d: () => d });
 var i = n(627968),
-    l = n(877624),
-    s = n(311907),
-    a = n(554146),
-    r = n(412260),
+    r = n(877624),
+    l = n(311907),
+    s = n(554146),
+    a = n(412260),
     o = n(932001),
-    d = n(46282),
-    c = n(49999);
-let u = (e) => {
+    c = n(823901),
+    u = n(49999);
+let d = (e) => {
     let t,
         n,
-        { dismissibleContent: u } = e,
-        { snowflakeId: h, couldShow: A } =
-            ((t = (0, s.bG)([r.A], () => r.A.getGiftPromotion()?.id)),
-            (n = (0, s.bG)([r.A], () => null != r.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR))),
-            u === a.M.GIFTING_PROMOTION_REMINDER
+        { dismissibleContent: d } = e,
+        { snowflakeId: _, couldShow: E } =
+            ((t = (0, l.bG)([a.A], () => a.A.getGiftPromotion()?.id)),
+            (n = (0, l.bG)([a.A], () => null != a.A.getMarketingComponentByType(r.C.GIFT_REMINDER_NAGBAR))),
+            d === s.M.GIFTING_PROMOTION_REMINDER
                 ? { snowflakeId: t, couldShow: n && null != t }
                 : { snowflakeId: void 0, couldShow: !1 }),
-        [_, m] = (0, o.Cc)(A ? u : null, h ?? "", c.m.NOTICE_BAR, !0);
-    return null == _
+        [A, m] = (0, o.Cc)(E ? d : null, _ ?? "", u.m.NOTICE_BAR, !0);
+    return null == A
         ? null
-        : _ === a.M.GIFTING_PROMOTION_REMINDER
-          ? (0, i.jsx)(d.y, { markAsDismissed: (e) => m(e) })
+        : A === s.M.GIFTING_PROMOTION_REMINDER
+          ? (0, i.jsx)(c.y, { markAsDismissed: (e) => m(e) })
           : void 0;
 };

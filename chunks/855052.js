@@ -1,52 +1,51 @@
-"use strict";
-n.d(t, { Ay: () => c, C3: () => _, Lh: () => d, y9: () => f });
-var r = n(315069),
-    i = n(611010),
-    s = n(520606),
-    a = n(872472),
-    o = n(394300),
-    l = n(721932),
-    u = n(652215);
-class c extends r.A {
+i.d(e, { Ay: () => d, C3: () => p, Lh: () => c, y9: () => S });
+var r = i(315069),
+    s = i(611010),
+    n = i(520606),
+    l = i(872472),
+    a = i(394300),
+    o = i(721932),
+    u = i(652215);
+class d extends r.A {
     id;
     userId;
     items;
     applications;
-    constructor(e) {
+    constructor(t) {
         super(),
-            (this.id = e.id),
-            (this.userId = e.userId),
-            (this.items = e.items),
-            (this.applications = e.applications ?? void 0);
+            (this.id = t.id),
+            (this.userId = t.userId),
+            (this.items = t.items),
+            (this.applications = t.applications ?? void 0);
     }
-    static fromServer(e) {
-        let { user_id: t, wishlist_items: n, ...r } = e,
-            d = n.map((e) => {
-                switch (e.sku_product_line) {
+    static fromServer(t) {
+        let { user_id: e, wishlist_items: i, ...r } = t,
+            c = i.map((t) => {
+                switch (t.sku_product_line) {
                     case u.EZt.COLLECTIBLES:
-                        return a.A.fromServer(e);
+                        return l.A.fromServer(t);
                     case u.EZt.SOCIAL_LAYER_GAME_ITEM:
-                        return l.A.fromServer(e);
+                        return o.A.fromServer(t);
                     case u.EZt.PREMIUM:
-                        return o.A.fromServer(e);
+                        return a.A.fromServer(t);
                     default:
-                        return s.A.fromServer(e);
+                        return n.A.fromServer(t);
                 }
             });
-        return new c({
+        return new d({
             ...r,
-            userId: t,
-            items: d,
-            applications: r.applications?.map((e) => i.Ay.createFromServer(e)) ?? void 0,
+            userId: e,
+            items: c,
+            applications: r.applications?.map((t) => s.Ay.createFromServer(t)) ?? void 0,
         });
     }
 }
-function d(e) {
-    return e.items.map((e) => e.skuId);
+function c(t) {
+    return t.items.map((t) => t.skuId);
 }
-function _(e, t) {
-    return e.items.some((e) => e.skuId === t);
+function p(t, e) {
+    return t.items.some((t) => t.skuId === e);
 }
-function f(e) {
-    return new Set(e.items.map((e) => e.skuProductLine));
+function S(t) {
+    return new Set(t.items.map((t) => t.skuProductLine));
 }

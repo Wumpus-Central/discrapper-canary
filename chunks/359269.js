@@ -1,31 +1,27 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(528352),
-    i = n(476858),
-    a = n(355418),
-    s = n(1673);
+r.d(t, { A: () => l });
+var n = r(528352),
+    s = r(476858),
+    a = r(355418),
+    i = r(1673);
 let o = RegExp(
-        `(?:(?:\\,|\\(|\\（)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(${(0, i.uJ)(r.CV)})(?=\\W|$)`,
-        "i",
-    ),
-    l = 1,
-    u = 2,
-    c = 3;
-class d extends a.c {
+    `(?:(?:\\,|\\(|\\（)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(${(0, s.uJ)(n.CV)})(?=\\W|$)`,
+    "i",
+);
+class l extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[u].toLowerCase(),
-            i = r.CV[n],
-            a = t[l],
-            o = t[c],
-            d = a || o;
-        d = (d = d || "").toLowerCase();
-        let _ = null;
+        let r = t[2].toLowerCase(),
+            s = n.CV[r],
+            a = t[1],
+            o = t[3],
+            l = a || o;
+        l = (l = l || "").toLowerCase();
+        let u = null;
         return (
-            "vorige" == d ? (_ = "last") : "volgende" == d ? (_ = "next") : "deze" == d && (_ = "this"),
-            (0, s.Y5)(e.reference, i, _)
+            "vorige" == l ? (u = "last") : "volgende" == l ? (u = "next") : "deze" == l && (u = "this"),
+            (0, i.Y5)(e.reference, s, u)
         );
     }
 }

@@ -1,29 +1,28 @@
 "use strict";
-n.d(t, { KU: () => a, Zr: () => o, eh: () => i });
-let r = new Map(),
-    i = (e) => (t, n, r) => {
-        let i = r.subscribe;
-        return (
-            (r.subscribe = (e, t, n) => {
-                let a = e;
-                if (t) {
-                    let i = (null == n ? void 0 : n.equalityFn) || Object.is,
-                        s = e(r.getState());
-                    (a = (n) => {
-                        let r = e(n);
-                        if (!i(s, r)) {
-                            let e = s;
-                            t((s = r), e);
-                        }
-                    }),
-                        (null == n ? void 0 : n.fireImmediately) && t(s, s);
-                }
-                return i(a);
-            }),
-            e(t, n, r)
-        );
-    };
-function a(e, t) {
+n.d(t, { KU: () => i, Zr: () => a, eh: () => r });
+let r = (e) => (t, n, r) => {
+    let i = r.subscribe;
+    return (
+        (r.subscribe = (e, t, n) => {
+            let s = e;
+            if (t) {
+                let i = (null == n ? void 0 : n.equalityFn) || Object.is,
+                    a = e(r.getState());
+                (s = (n) => {
+                    let r = e(n);
+                    if (!i(a, r)) {
+                        let e = a;
+                        t((a = r), e);
+                    }
+                }),
+                    (null == n ? void 0 : n.fireImmediately) && t(a, a);
+            }
+            return i(s);
+        }),
+        e(t, n, r)
+    );
+};
+function i(e, t) {
     let n;
     try {
         n = e();
@@ -34,8 +33,8 @@ function a(e, t) {
         getItem: (e) => {
             var r;
             let i = (e) => (null === e ? null : JSON.parse(e, null == t ? void 0 : t.reviver)),
-                a = null != (r = n.getItem(e)) ? r : null;
-            return a instanceof Promise ? a.then(i) : i(a);
+                s = null != (r = n.getItem(e)) ? r : null;
+            return s instanceof Promise ? s.then(i) : i(s);
         },
         setItem: (e, r) => n.setItem(e, JSON.stringify(r, null == t ? void 0 : t.replacer)),
         removeItem: (e) => n.removeItem(e),
@@ -60,18 +59,18 @@ let s = (e) => (t) => {
             };
         }
     },
-    o = (e, t) => (n, r, i) => {
+    a = (e, t) => (n, r, a) => {
         let o,
             l = {
-                storage: a(() => localStorage),
+                storage: i(() => localStorage),
                 partialize: (e) => e,
                 version: 0,
                 merge: (e, t) => ({ ...t, ...e }),
                 ...t,
             },
             u = !1,
-            c = new Set(),
             d = new Set(),
+            c = new Set(),
             _ = l.storage;
         if (!_)
             return e(
@@ -82,21 +81,21 @@ let s = (e) => (t) => {
                         n(...e);
                 },
                 r,
-                i,
+                a,
             );
         let f = () => {
                 let e = l.partialize({ ...r() });
                 return _.setItem(l.name, { state: e, version: l.version });
             },
-            p = i.setState;
-        i.setState = (e, t) => (p(e, t), f());
-        let h = e((...e) => (n(...e), f()), r, i);
-        i.getInitialState = () => h;
-        let m = () => {
+            E = a.setState;
+        a.setState = (e, t) => (E(e, t), f());
+        let h = e((...e) => (n(...e), f()), r, a);
+        a.getInitialState = () => h;
+        let p = () => {
             var e, t;
             if (!_) return;
             (u = !1),
-                c.forEach((e) => {
+                d.forEach((e) => {
                     var t;
                     return e(null != (t = r()) ? t : h);
                 });
@@ -118,18 +117,18 @@ let s = (e) => (t) => {
                 })
                 .then((e) => {
                     var t;
-                    let [i, a] = e;
-                    if ((n((o = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return f();
+                    let [i, s] = e;
+                    if ((n((o = l.merge(s, null != (t = r()) ? t : h)), !0), i)) return f();
                 })
                 .then(() => {
-                    null == i || i(o, void 0), (o = r()), (u = !0), d.forEach((e) => e(o));
+                    null == i || i(o, void 0), (o = r()), (u = !0), c.forEach((e) => e(o));
                 })
                 .catch((e) => {
                     null == i || i(void 0, e);
                 });
         };
         return (
-            (i.persist = {
+            (a.persist = {
                 setOptions: (e) => {
                     (l = { ...l, ...e }), e.storage && (_ = e.storage);
                 },
@@ -137,22 +136,22 @@ let s = (e) => (t) => {
                     null == _ || _.removeItem(l.name);
                 },
                 getOptions: () => l,
-                rehydrate: () => m(),
+                rehydrate: () => p(),
                 hasHydrated: () => u,
                 onHydrate: (e) => (
-                    c.add(e),
-                    () => {
-                        c.delete(e);
-                    }
-                ),
-                onFinishHydration: (e) => (
                     d.add(e),
                     () => {
                         d.delete(e);
                     }
                 ),
+                onFinishHydration: (e) => (
+                    c.add(e),
+                    () => {
+                        c.delete(e);
+                    }
+                ),
             }),
-            l.skipHydration || m(),
+            l.skipHydration || p(),
             o || h
         );
     };

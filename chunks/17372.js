@@ -1,53 +1,43 @@
-"use strict";
-n.d(t, { TS: () => s, Wb: () => o, Yw: () => i, t0: () => r, tY: () => a });
-var r = (function (e) {
-        return (
-            (e.GUILD = "guild"),
-            (e.GUILD_DISCOVERY = "guild_discovery"),
-            (e.GUILD_DIRECTORY_ENTRY = "guild_directory_entry"),
-            (e.MESSAGE = "message"),
-            (e.STAGE_CHANNEL = "stage_channel"),
-            (e.GUILD_SCHEDULED_EVENT = "guild_scheduled_event"),
-            (e.FIRST_DM = "first_dm"),
-            (e.USER = "user"),
-            (e.APPLICATION = "application"),
-            (e.WIDGET = "widget"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.MESSAGE = "report_to_mod_message"), e;
-    })({}),
-    a = (function (e) {
-        return (
-            (e.MESSAGE = "message_urf"),
-            (e.USER = "user_urf"),
-            (e.GUILD = "guild_urf"),
-            (e.MEDIA_TAKEDOWN = "media_takedown"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (
-            (e.SUB_SPAM = "sub_spam"),
-            (e.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
-            (e.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
-            (e.SUB_NCP = "sub_ncp"),
-            (e.SUB_LOLI = "sub_loli"),
-            (e.SUB_CSAM = "sub_csam"),
-            (e.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
-            (e.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
-            (e.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
-            (e.SUB_GORE = "sub_gore"),
-            (e.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (
-            (e.SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
-            (e.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
-            (e.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
-            e
-        );
-    })({});
+n.d(t, { TS: () => s, Wb: () => E, Yw: () => o, t0: () => l, tY: () => u });
+var i,
+    a,
+    _,
+    r,
+    d,
+    l =
+        (((i = {}).GUILD = "guild"),
+        (i.GUILD_DISCOVERY = "guild_discovery"),
+        (i.GUILD_DIRECTORY_ENTRY = "guild_directory_entry"),
+        (i.MESSAGE = "message"),
+        (i.STAGE_CHANNEL = "stage_channel"),
+        (i.GUILD_SCHEDULED_EVENT = "guild_scheduled_event"),
+        (i.FIRST_DM = "first_dm"),
+        (i.USER = "user"),
+        (i.APPLICATION = "application"),
+        (i.WIDGET = "widget"),
+        i),
+    o = (((a = {}).MESSAGE = "report_to_mod_message"), a),
+    u =
+        (((_ = {}).MESSAGE = "message_urf"),
+        (_.USER = "user_urf"),
+        (_.GUILD = "guild_urf"),
+        (_.MEDIA_TAKEDOWN = "media_takedown"),
+        _),
+    s =
+        (((r = {}).SUB_SPAM = "sub_spam"),
+        (r.SUB_UNSOLICITED_PORN = "sub_unsolicited_porn"),
+        (r.SUB_SEXUALLY_DEGRADING_CONTENT = "sub_sexually_degrading_content"),
+        (r.SUB_NCP = "sub_ncp"),
+        (r.SUB_LOLI = "sub_loli"),
+        (r.SUB_CSAM = "sub_csam"),
+        (r.SUB_GENERAL_HARASSMENT = "sub_general_harassment"),
+        (r.SUB_VULGAR_LANGUAGE = "sub_vulgar_language"),
+        (r.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY = "sub_racist_or_discriminatory_language_or_imagery"),
+        (r.SUB_GORE = "sub_gore"),
+        (r.SUB_GLORIFYING_VIOLENCE = "sub_glorifying_violence"),
+        r),
+    E =
+        (((d = {}).SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
+        (d.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
+        (d.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
+        d);

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     E7: "paymentInfoGroup_c0544c",
     Zs: "metricsContainer_c0544c",

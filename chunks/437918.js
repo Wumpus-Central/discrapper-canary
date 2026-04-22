@@ -1,6 +1,5 @@
-"use strict";
 n.d(t, { _: () => i });
-var r = n(985018);
+var l = n(985018);
 function i(e) {
     switch (e.length) {
         case 0:
@@ -8,7 +7,7 @@ function i(e) {
         case 1:
             return e[0].name;
         case 2:
-            return r.intl.formatToPlainString(r.t["G/lpQU"], { item1: e[0].name, item2: e[1].name });
+            return l.intl.formatToPlainString(l.t["G/lpQU"], { item1: e[0].name, item2: e[1].name });
         default:
             let t = e
                     .slice(0, -1)
@@ -18,6 +17,6 @@ function i(e) {
                     })
                     .join(", "),
                 n = e[e.length - 1];
-            return r.intl.formatToPlainString(r.t.PIMweg, { items: t, last: n.name });
+            return l.intl.formatToPlainString(l.t.PIMweg, { items: t, last: n.name });
     }
 }

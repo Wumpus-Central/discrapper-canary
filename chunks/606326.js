@@ -4,19 +4,19 @@ var n = l(627968),
     i = l(311907),
     a = l(793574),
     r = l(688810),
-    d = l(547015),
-    c = l(138298),
-    o = l(761640),
+    o = l(547015),
+    d = l(138298),
+    c = l(761640),
     u = l(71393),
     x = l(652215),
-    m = l(947256);
+    m = l(256177);
 function h(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([u.A], () => u.A.getGuild(t)),
         { analyticsLocations: h } = (0, r.Ay)(a.A.MEMBER_SAFETY_PAGE),
-        j = (0, i.bG)([o.Ay], () => o.Ay.getGuildSidebarState(t), [t]),
+        j = (0, i.bG)([c.Ay], () => c.Ay.getGuildSidebarState(t), [t]),
         _ = s.useCallback(() => {
-            c.A.closeGuildSidebar(t);
+            d.A.closeGuildSidebar(t);
         }, [t]),
         A = null != j;
     return null != l && A && null != j
@@ -25,7 +25,7 @@ function h(e) {
               children: (0, n.jsx)("div", {
                   className: m.__invalid_sidebarContainer,
                   style: { width: x.da6 },
-                  children: (0, n.jsx)(d.A, { userId: j.details.userId, guildId: j.details.guildId, onClose: _ }),
+                  children: (0, n.jsx)(o.default, { userId: j.details.userId, guildId: j.details.guildId, onClose: _ }),
               }),
           })
         : null;

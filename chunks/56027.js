@@ -1,110 +1,107 @@
 "use strict";
 n.d(t, {
-    B1: () => P,
-    C0: () => h,
-    DD: () => a,
-    Dz: () => T,
-    Jx: () => c,
-    LI: () => l,
-    PG: () => g,
-    RI: () => u,
-    Sg: () => m,
-    T9: () => o,
-    TV: () => I,
+    B1: () => L,
+    C0: () => E,
+    DD: () => i,
+    Dz: () => I,
+    Jx: () => u,
+    LI: () => o,
+    PG: () => p,
+    RI: () => l,
+    Sg: () => h,
+    T9: () => a,
+    TV: () => A,
     WJ: () => S,
-    _3: () => p,
-    aD: () => v,
-    bV: () => L,
+    _3: () => f,
+    aD: () => y,
+    bV: () => b,
     jk: () => s,
-    lP: () => D,
-    nI: () => x,
-    qE: () => f,
+    lP: () => C,
+    nI: () => D,
+    qE: () => _,
     r_: () => r,
-    sq: () => E,
-    w7: () => y,
+    sq: () => m,
+    w7: () => T,
 });
 let r = ["top", "right", "bottom", "left"],
-    i = ["start", "end"],
-    a = r.reduce((e, t) => e.concat(t, t + "-" + i[0], t + "-" + i[1]), []),
+    i = r.reduce((e, t) => e.concat(t, t + "-start", t + "-end"), []),
     s = Math.min,
-    o = Math.max,
-    l = Math.round,
-    u = Math.floor,
-    c = (e) => ({ x: e, y: e }),
+    a = Math.max,
+    o = Math.round,
+    l = Math.floor,
+    u = (e) => ({ x: e, y: e }),
     d = { left: "right", right: "left", bottom: "top", top: "bottom" },
-    _ = { start: "end", end: "start" };
-function f(e, t, n) {
-    return o(e, s(t, n));
+    c = { start: "end", end: "start" };
+function _(e, t, n) {
+    return a(e, s(t, n));
 }
-function p(e, t) {
+function f(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function h(e) {
+function E(e) {
     return e.split("-")[0];
 }
-function m(e) {
+function h(e) {
     return e.split("-")[1];
 }
-function g(e) {
+function p(e) {
     return "x" === e ? "y" : "x";
 }
-function E(e) {
+function m(e) {
     return "y" === e ? "height" : "width";
 }
-let A = new Set(["top", "bottom"]);
+let g = new Set(["top", "bottom"]);
+function A(e) {
+    return g.has(E(e)) ? "y" : "x";
+}
 function I(e) {
-    return A.has(h(e)) ? "y" : "x";
+    return p(A(e));
 }
-function T(e) {
-    return g(I(e));
-}
-function y(e, t, n) {
+function T(e, t, n) {
     void 0 === n && (n = !1);
-    let r = m(e),
-        i = T(e),
-        a = E(i),
-        s = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
-    return t.reference[a] > t.floating[a] && (s = L(s)), [s, L(s)];
+    let r = h(e),
+        i = I(e),
+        s = m(i),
+        a = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
+    return t.reference[s] > t.floating[s] && (a = b(a)), [a, b(a)];
 }
 function S(e) {
-    let t = L(e);
-    return [v(e), t, v(t)];
+    let t = b(e);
+    return [y(e), t, y(t)];
 }
-function v(e) {
-    return e.replace(/start|end/g, (e) => _[e]);
+function y(e) {
+    return e.replace(/start|end/g, (e) => c[e]);
 }
-let C = ["left", "right"],
-    b = ["right", "left"],
-    N = ["top", "bottom"],
-    R = ["bottom", "top"];
-function O(e, t, n) {
-    switch (e) {
-        case "top":
-        case "bottom":
-            if (n) return t ? b : C;
-            return t ? C : b;
-        case "left":
-        case "right":
-            return t ? N : R;
-        default:
-            return [];
-    }
+let N = ["left", "right"],
+    O = ["right", "left"],
+    R = ["top", "bottom"],
+    v = ["bottom", "top"];
+function C(e, t, n, r) {
+    let i = h(e),
+        s = (function (e, t, n) {
+            switch (e) {
+                case "top":
+                case "bottom":
+                    if (n) return t ? O : N;
+                    return t ? N : O;
+                case "left":
+                case "right":
+                    return t ? R : v;
+                default:
+                    return [];
+            }
+        })(E(e), "start" === n, r);
+    return i && ((s = s.map((e) => e + "-" + i)), t && (s = s.concat(s.map(y)))), s;
 }
-function D(e, t, n, r) {
-    let i = m(e),
-        a = O(h(e), "start" === n, r);
-    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(v)))), a;
-}
-function L(e) {
+function b(e) {
     return e.replace(/left|right|bottom|top/g, (e) => d[e]);
 }
-function w(e) {
-    return { top: 0, right: 0, bottom: 0, left: 0, ...e };
+function D(e) {
+    return "number" != typeof e
+        ? { top: 0, right: 0, bottom: 0, left: 0, ...e }
+        : { top: e, right: e, bottom: e, left: e };
 }
-function x(e) {
-    return "number" != typeof e ? w(e) : { top: e, right: e, bottom: e, left: e };
-}
-function P(e) {
+function L(e) {
     let { x: t, y: n, width: r, height: i } = e;
     return { width: r, height: i, top: n, left: t, right: t + r, bottom: n + i, x: t, y: n };
 }

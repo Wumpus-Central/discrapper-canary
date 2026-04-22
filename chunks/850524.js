@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { u: () => g }), n(321073);
+n.d(t, { u: () => p }), n(321073);
 var r = n(118356),
     i = n(996308),
     s = n(92277),
@@ -7,8 +7,8 @@ var r = n(118356),
     o = n(996283),
     l = n(652215);
 let u = new r.Vy("LegacyOverlayLogger"),
-    c = null,
-    d = !1,
+    d = null,
+    c = !1,
     _ = null,
     f = {
         log: console.log.bind(console),
@@ -16,113 +16,108 @@ let u = new r.Vy("LegacyOverlayLogger"),
         warn: console.warn.bind(console),
         error: console.error.bind(console),
     },
-    p = 0,
-    h = 3;
-async function m(e, t) {
+    E = 0;
+async function h(e, t) {
     if (!__OVERLAY__) return void u.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
-    if (p > 10) return;
+    if (E > 10) return;
     let { level: n, message: r, context: o } = e,
-        c = null;
+        d = null;
     if (null != o)
         try {
-            c = (0, s.g)(o);
+            d = (0, s.g)(o);
         } catch (e) {
             try {
-                c = { _error: "Failed to serialize context", _type: Object.prototype.toString.call(o) };
+                d = { _error: "Failed to serialize context", _type: Object.prototype.toString.call(o) };
             } catch (e) {
-                c = { _error: "Context not serializable" };
+                d = { _error: "Context not serializable" };
             }
         }
-    let d = {
+    let c = {
         type: l.kGV.LOG_MESSAGES,
         token: t,
         pid: (0, a.getPID)(),
-        payload: { level: n, message: r, timestamp: Date.now(), context: c },
+        payload: { level: n, message: r, timestamp: Date.now(), context: d },
     };
     try {
-        await i.tN(d), (p = 0);
+        await i.tN(c), (E = 0);
     } catch (e) {
-        ++p <= h &&
-            (u.error(`Failed to send log to main app (failure ${p}):`, e),
-            p === h && u.error("Too many RPC send failures, suppressing further error logs"));
+        ++E <= 3 &&
+            (u.error(`Failed to send log to main app (failure ${E}):`, e),
+            3 === E && u.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function E(e) {
-    return {
-        log: (t, n) => m({ level: "log", message: t, context: n }, e),
-        info: (t, n) => m({ level: "info", message: t, context: n }, e),
-        warn: (t, n) => m({ level: "warn", message: t, context: n }, e),
-        error: (t, n) => m({ level: "error", message: t, context: n }, e),
-        crash: (t, n) => m({ level: "crash", message: t, context: n }, e),
-    };
-}
-function g(e) {
+function p(e) {
     if (__OVERLAY__) {
-        if (d) return void f.warn("Overlay logger already set up, skipping duplicate setup");
-        (c = E(e)),
-            (d = !0),
-            c.info("Overlay logger initialized"),
+        if (c) return void f.warn("Overlay logger already set up, skipping duplicate setup");
+        (c = !0),
+            (d = {
+                log: (t, n) => h({ level: "log", message: t, context: n }, e),
+                info: (t, n) => h({ level: "info", message: t, context: n }, e),
+                warn: (t, n) => h({ level: "warn", message: t, context: n }, e),
+                error: (t, n) => h({ level: "error", message: t, context: n }, e),
+                crash: (t, n) => h({ level: "crash", message: t, context: n }, e),
+            }).info("Overlay logger initialized"),
             (console.log = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((f.log(...t), null != c))
+                if ((f.log(...t), null != d))
                     try {
-                        let e = A(t)
-                            .map((e) => I(e))
+                        let e = m(t)
+                            .map((e) => g(e))
                             .join(" ");
-                        c.log(e);
+                        d.log(e);
                     } catch (e) {
                         f.error("[Logger Error]", e);
                     }
             }),
             (console.info = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((f.info(...t), null != c))
+                if ((f.info(...t), null != d))
                     try {
-                        let e = A(t)
-                            .map((e) => I(e))
+                        let e = m(t)
+                            .map((e) => g(e))
                             .join(" ");
-                        c.info(e);
+                        d.info(e);
                     } catch (e) {
                         f.error("[Logger Error]", e);
                     }
             }),
             (console.warn = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((f.warn(...t), null != c))
+                if ((f.warn(...t), null != d))
                     try {
-                        let e = A(t)
-                            .map((e) => I(e))
+                        let e = m(t)
+                            .map((e) => g(e))
                             .join(" ");
-                        c.warn(e);
+                        d.warn(e);
                     } catch (e) {
                         f.error("[Logger Error]", e);
                     }
             }),
             (console.error = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((f.error(...t), null != c))
+                if ((f.error(...t), null != d))
                     try {
-                        let e = A(t)
-                            .map((e) => I(e))
+                        let e = m(t)
+                            .map((e) => g(e))
                             .join(" ");
-                        c.error(e);
+                        d.error(e);
                     } catch (e) {}
             }),
             window.addEventListener(
                 "error",
                 (e) => {
-                    if (null != c)
+                    if (null != d)
                         try {
                             if (null != e.target && e.target !== window) {
                                 let t = e.target;
-                                c.error(`Resource failed to load: ${t.src || t.href || "unknown"}`, {
+                                d.error(`Resource failed to load: ${t.src || t.href || "unknown"}`, {
                                     type: "resource_error",
                                     tagName: t.tagName,
                                     src: t.src,
                                     href: t.href,
                                 });
                             } else
-                                c.crash(`Uncaught error: ${e.message}`, {
+                                d.crash(`Uncaught error: ${e.message}`, {
                                     message: e.message,
                                     filename: e.filename,
                                     lineno: e.lineno,
@@ -138,7 +133,7 @@ function g(e) {
                 !0,
             ),
             window.addEventListener("unhandledrejection", (e) => {
-                if (null != c)
+                if (null != d)
                     try {
                         let t = "Unhandled promise rejection",
                             n = {};
@@ -147,15 +142,15 @@ function g(e) {
                               (n = { name: e.reason.name, message: e.reason.message, stack: e.reason.stack }))
                             : ("string" == typeof e.reason && (t = `Unhandled promise rejection: ${e.reason}`),
                               (n = { reason: e.reason })),
-                            c.crash(t, n);
+                            d.crash(t, n);
                     } catch (t) {
                         f.error("[Failed to log rejection]", t, e);
                     }
             }),
             window.addEventListener("securitypolicyviolation", (e) => {
-                if (null != c)
+                if (null != d)
                     try {
-                        c.error("Security policy violation", {
+                        d.error("Security policy violation", {
                             violatedDirective: e.violatedDirective,
                             effectiveDirective: e.effectiveDirective,
                             blockedURI: e.blockedURI,
@@ -168,12 +163,12 @@ function g(e) {
                     }
             }),
             window.addEventListener("beforeunload", () => {
-                null != c && c.info("Overlay unloading"), null != _ && clearInterval(_);
+                null != d && d.info("Overlay unloading"), null != _ && clearInterval(_);
             }),
             (_ = window.setInterval(() => {
-                if (null != c)
+                if (null != d)
                     try {
-                        c.log(o.VD, {
+                        d.log(o.VD, {
                             timestamp: Date.now(),
                             memory: performance.memory
                                 ? {
@@ -189,7 +184,7 @@ function g(e) {
             f.log("Overlay error handlers and console interception set up");
     }
 }
-function A(e) {
+function m(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -203,7 +198,7 @@ function A(e) {
     }
     return t;
 }
-function I(e) {
+function g(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;

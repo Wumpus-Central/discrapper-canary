@@ -1,6 +1,5 @@
-"use strict";
-function r(e) {
+function n(e) {
     (this.name = "MetadataMissingError"), (this.message = e || "No Exif data"), (this.stack = Error().stack);
 }
-n.d(t, { A: () => i }), (r.prototype = Error());
-let i = { MetadataMissingError: r };
+i.d(t, { A: () => r }), (n.prototype = Error());
+let r = { MetadataMissingError: n };

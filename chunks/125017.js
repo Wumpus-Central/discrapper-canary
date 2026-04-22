@@ -1,8 +1,7 @@
-"use strict";
-function r(e) {
-    if (null == e || null == e.party || null == e.party.size || e.party.size.length < 2)
+i.d(e, { _: () => l });
+function l(t) {
+    if (null == t || null == t.party || null == t.party.size || t.party.size.length < 2)
         return { partySize: -1, maxPartySize: -1 };
-    let [t, n] = e.party.size;
-    return { partySize: t, maxPartySize: n };
+    let [e, i] = t.party.size;
+    return { partySize: e, maxPartySize: i };
 }
-n.d(t, { _: () => r });

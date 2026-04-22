@@ -1,69 +1,71 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
-    a = n(302959),
-    r = n(765379),
-    o = n(592182),
-    d = n(506326),
-    c = n(409626),
-    u = n(692969),
-    h = n(78871),
-    A = n(287809),
-    _ = n(804630),
-    m = n(812810);
-function g(e) {
+    s = n(534514),
+    a = n(939249),
+    r = n(834730),
+    o = n(302959),
+    d = n(765379),
+    c = n(592182),
+    u = n(506326),
+    h = n(409626),
+    A = n(692969),
+    _ = n(78871),
+    m = n(287809),
+    g = n(804630),
+    p = n(145225);
+function f(e) {
     let { resolvedActivity: t, presenceActivity: n, showHeader: l = !0 } = e,
-        a = (0, u.A)({
+        o = (0, A.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: c.Ob.UserProfile,
+            source: h.Ob.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),
-        o = null != n && !(0, r.A)(n) && null != n.party,
-        A = null != t.state && t.state.length > 0 && !o;
+        c = null != n && !(0, d.A)(n) && null != n.party,
+        m = null != t.state && t.state.length > 0 && !c;
     return (0, i.jsxs)("div", {
-        className: m.ec,
+        className: p.ec,
         children: [
             l
                 ? (0, i.jsx)("div", {
-                      className: m.N1,
-                      children: (0, i.jsx)(s.Heading, {
+                      className: p.N1,
+                      children: (0, i.jsx)(s.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
-                          children: (0, _._Q)(t.type),
+                          children: (0, g._Q)(t.type),
                       }),
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: m.Wh,
+                className: p.Wh,
                 children: [
-                    (0, i.jsx)(_.Tf, { resolvedActivity: t }),
+                    (0, i.jsx)(g.Tf, { resolvedActivity: t }),
                     (0, i.jsx)("div", {
-                        className: m.wt,
-                        children: (0, i.jsxs)(s.DUT, {
-                            className: null != a ? m.wv : void 0,
-                            onClick: a,
+                        className: p.wt,
+                        children: (0, i.jsxs)(a.D, {
+                            className: null != o ? p.wv : void 0,
+                            onClick: o,
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(s.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
-                                    className: m.DD,
+                                    className: p.DD,
                                     lineClamp: 1,
                                     children: t.name,
                                 }),
                                 null != t.details
-                                    ? (0, i.jsx)(s.Text, {
+                                    ? (0, i.jsx)(r.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
                                           children: t.details,
                                       })
                                     : null,
-                                A
-                                    ? (0, i.jsx)(s.Text, {
+                                m
+                                    ? (0, i.jsx)(r.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
@@ -71,12 +73,12 @@ function g(e) {
                                       })
                                     : null,
                                 null != n
-                                    ? (0, i.jsxs)(d.mG, {
-                                          location: d.N5.VOICE_USER_POPOUT,
+                                    ? (0, i.jsxs)(u.mG, {
+                                          location: u.N5.VOICE_USER_POPOUT,
                                           children: [
-                                              (0, i.jsx)(h.QA, { activity: n }),
-                                              (0, i.jsx)(h.cy, { activity: n }),
-                                              (0, i.jsx)(h.Rq, { activity: n }),
+                                              (0, i.jsx)(_.QA, { activity: n }),
+                                              (0, i.jsx)(_.cy, { activity: n }),
+                                              (0, i.jsx)(_.Rq, { activity: n }),
                                           ],
                                       })
                                     : null,
@@ -88,34 +90,34 @@ function g(e) {
         ],
     });
 }
-let p = function (e) {
+let E = function (e) {
     let {
             channel: t,
             presenceActivity: n,
             userId: s,
-            embeddedApp: r,
-            applicationStream: d,
-            onAction: c,
+            embeddedApp: a,
+            applicationStream: r,
+            onAction: d,
             showHeader: u = !0,
         } = e,
-        h = (0, l.bG)([A.default], () => (null != s ? A.default.getUser(s) : null), [s]);
+        h = (0, l.bG)([m.default], () => (null != s ? m.default.getUser(s) : null), [s]);
     if (null == h) return null;
-    let m = (0, _.Gf)(h.id, n, r);
+    let A = (0, g.Gf)(h.id, n, a);
     return (0, i.jsxs)("div", {
         children: [
-            m.isSpotify
-                ? (0, i.jsx)(_.vP, { resolvedActivity: m, showHeader: u })
-                : (0, i.jsx)(g, { resolvedActivity: m, presenceActivity: n, showHeader: u }),
-            (0, i.jsx)(o.A, {
-                type: null != d ? a.M.STREAM_PREVIEW : a.M.VOICE_CHANNEL,
+            A.isSpotify
+                ? (0, i.jsx)(g.vP, { resolvedActivity: A, showHeader: u })
+                : (0, i.jsx)(f, { resolvedActivity: A, presenceActivity: n, showHeader: u }),
+            (0, i.jsx)(c.A, {
+                type: null != r ? o.M.STREAM_PREVIEW : o.M.VOICE_CHANNEL,
                 activity: n,
-                embeddedActivity: r?.embeddedActivity,
-                applicationStream: d,
+                embeddedActivity: a?.embeddedActivity,
+                applicationStream: r,
                 user: h,
                 guildId: t.guild_id,
                 channelId: t.id,
                 buttonVariant: "primary",
-                onAction: c,
+                onAction: d,
             }),
         ],
     });

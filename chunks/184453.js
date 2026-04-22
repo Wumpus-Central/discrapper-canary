@@ -1,98 +1,100 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => D });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
     l = n.n(a),
     s = n(696292),
-    o = n(397927),
-    d = n(881615),
-    c = n(416730),
-    u = n(310419),
-    A = n(282026),
-    h = n(601193),
-    _ = n(631001),
-    m = n(954571),
-    p = n(726845),
-    g = n(285395),
-    E = n(837057),
-    f = n(488995),
-    I = n(652215),
-    C = n(654487),
-    N = n(985018),
-    T = n(169653);
-function S(e) {
+    o = n(664121),
+    d = n(323384),
+    u = n(577473),
+    c = n(939249),
+    A = n(834730),
+    h = n(534514),
+    _ = n(881615),
+    E = n(416730),
+    p = n(310419),
+    m = n(282026),
+    g = n(601193),
+    I = n(631001),
+    C = n(954571),
+    f = n(726845),
+    T = n(285395),
+    S = n(837057),
+    N = n(488995),
+    O = n(652215),
+    L = n(654487),
+    y = n(985018),
+    v = n(525748);
+function b(e) {
     let { tab: t } = e,
-        n = p.A.useField("selectedTab"),
+        n = f.A.useField("selectedTab"),
         a = r.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
-                        case f.GlobalDiscoveryTab.SERVERS:
-                            return (0, i.jsx)(o.RR9, { color: "currentColor" });
-                        case f.GlobalDiscoveryTab.APPS:
-                            return (0, i.jsx)(o.k9F, { color: "currentColor" });
-                        case f.GlobalDiscoveryTab.QUESTS:
-                            return (0, i.jsx)(o.r2v, { color: "currentColor" });
+                        case N.GlobalDiscoveryTab.SERVERS:
+                            return (0, i.jsx)(o.R, { color: "currentColor" });
+                        case N.GlobalDiscoveryTab.APPS:
+                            return (0, i.jsx)(d.k, { color: "currentColor" });
+                        case N.GlobalDiscoveryTab.QUESTS:
+                            return (0, i.jsx)(u.r, { color: "currentColor" });
                     }
                 })(t),
             [t],
         ),
-        N = r.useMemo(() => (0, g.t)(t), [t]),
-        S = n === t,
-        x = r.useCallback(() => {
+        h = r.useMemo(() => (0, T.t)(t), [t]),
+        y = n === t,
+        b = r.useCallback(() => {
             switch (t) {
-                case f.GlobalDiscoveryTab.QUESTS:
+                case N.GlobalDiscoveryTab.QUESTS:
                     return (
-                        S && _.A.resetState(),
-                        m.default.track(I.HAw.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, d.sN)().uuid }),
-                        (0, E.transitionToGlobalDiscovery)({
-                            tab: f.GlobalDiscoveryTab.QUESTS,
-                            location: C.rE.DISCOVERY_SIDEBAR,
+                        y && I.A.resetState(),
+                        C.default.track(O.HAw.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, _.sN)().uuid }),
+                        (0, S.transitionToGlobalDiscovery)({
+                            tab: N.GlobalDiscoveryTab.QUESTS,
+                            location: L.rE.DISCOVERY_SIDEBAR,
                             questContent: s.u.DISCOVERY_SIDEBAR,
                         })
                     );
-                case f.GlobalDiscoveryTab.APPS:
-                    if (!S)
-                        return (0, E.transitionToGlobalDiscovery)({
+                case N.GlobalDiscoveryTab.APPS:
+                    if (!y)
+                        return (0, S.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
-                                entrypoint: { name: u.sW.GLOBAL_DISCOVERY_SIDEBAR },
+                                entrypoint: { name: p.sW.GLOBAL_DISCOVERY_SIDEBAR },
                                 restorePreviousView: !0,
                             },
                         });
-                    c.A.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    E.A.resetState(), (0, S.transitionToGlobalDiscovery)({ tab: t });
                     return;
-                case f.GlobalDiscoveryTab.SERVERS:
-                    if (!S) return (0, E.transitionToGlobalDiscovery)({ tab: t });
-                    A.A.resetState(), h.A.resetState();
+                case N.GlobalDiscoveryTab.SERVERS:
+                    if (!y) return (0, S.transitionToGlobalDiscovery)({ tab: t });
+                    m.A.resetState(), g.A.resetState();
                     return;
                 default:
-                    return (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, S.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, S]);
-    return (0, i.jsxs)(o.DUT, {
-        onClick: x,
-        className: l()(T.pc, { [T.wH]: S }),
+        }, [t, y]);
+    return (0, i.jsxs)(c.D, {
+        onClick: b,
+        className: l()(v.pc, { [v.wH]: y }),
         children: [
-            (0, i.jsx)("div", { className: T.wz, children: a }),
-            (0, i.jsx)(o.Text, { variant: "text-md/medium", color: "none", children: N }),
+            (0, i.jsx)("div", { className: v.wz, children: a }),
+            (0, i.jsx)(A.E, { variant: "text-md/medium", color: "none", children: h }),
         ],
     });
 }
-let x = function () {
+let D = function () {
     return (0, i.jsxs)("div", {
-        className: T.kL,
+        className: v.kL,
         children: [
             (0, i.jsx)("div", {
-                className: T.wx,
-                children: (0, i.jsx)(o.Heading, {
-                    variant: "text-lg/semibold",
-                    children: N.intl.string(N.t["1KqYnl"]),
-                }),
+                className: v.wx,
+                children: (0, i.jsx)(h.D, { variant: "text-lg/semibold", children: y.intl.string(y.t["1KqYnl"]) }),
             }),
             (0, i.jsx)("nav", {
-                className: T.C$,
-                children: f.GLOBAL_DISCOVERY_TABS.map((e) => (0, i.jsx)(S, { tab: e }, e)),
+                className: v.C$,
+                children: N.GLOBAL_DISCOVERY_TABS.map((e) => (0, i.jsx)(b, { tab: e }, e)),
             }),
         ],
     });

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+l.d(t, { A: () => n });
+var n = {};
+n = {
     ascending: "stigande",
     ascendingSort: (e) => `sorterat p\xe5 kolumn ${e.columnName} i stigande ordning`,
     columnSize: (e) => `${e.value} pixlar`,

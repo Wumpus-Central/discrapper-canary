@@ -1,112 +1,117 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => R });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(311907),
-    o = n(397927),
-    d = n(793574),
-    c = n(652793),
-    u = n(361158),
-    h = n(186111),
-    A = n(942975),
-    _ = n(379229),
-    m = n(489306),
-    g = n(828162),
-    p = n(249584),
-    f = n(49999),
-    x = n(333354),
-    E = n(985018),
-    I = n(384055);
-function C(e) {
+    o = n(695366),
+    d = n(827734),
+    c = n(777666),
+    u = n(192308),
+    h = n(104510),
+    A = n(544048),
+    _ = n(793574),
+    m = n(652793),
+    g = n(361158),
+    p = n(186111),
+    f = n(942975),
+    E = n(379229),
+    x = n(489306),
+    I = n(828162),
+    C = n(249584),
+    b = n(49999),
+    N = n(853513),
+    S = n(985018),
+    v = n(738247);
+function T(e) {
     let { indicator: t } = e;
     if (null == t) return null;
     switch (t.type) {
-        case _.cD.WARNING:
-            return (0, i.jsx)(o.EpV, { color: o.LU0.colors.STATUS_WARNING, size: "sm" });
-        case _.cD.UNREAD:
-            return (0, i.jsx)(o.hVq, { count: t.count, color: o.LU0.colors.BACKGROUND_MOD_STRONG.css });
+        case E.cD.WARNING:
+            return (0, i.jsx)(o.E, { color: d.A.colors.STATUS_WARNING, size: "sm" });
+        case E.cD.UNREAD:
+            return (0, i.jsx)(c.hV, { count: t.count, color: d.A.colors.BACKGROUND_MOD_STRONG.css });
         default:
             return null;
     }
 }
-let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
-    T = l.memo(function (e) {
+let y = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
+    R = l.memo(function (e) {
         let { guildId: t, selected: s } = e,
-            T = (0, m.Ay)(t),
-            S = l.useCallback(() => {
-                (0, A.Zm)(t),
-                    (0, g.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    T?.popout?.markAsDismissed(f.i.INDIRECT_ACTION);
-            }, [t, T]),
-            b = l.useRef(null),
-            y = (0, o.red)(o.DXt),
-            v = (0, r.bG)([h.A], () => h.A.hasLayers()),
-            j = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
-            R = y || v || j,
-            O = l.useCallback(() => {
-                if (T?.popout == null || R) return null;
-                switch (T?.popout?.type) {
-                    case _.o.LEVEL_REACHED:
-                        return (0, i.jsx)(p.HW, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.PERKS_AVAILABLE:
-                        return (0, i.jsx)(p.UB, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.PERKS_PURCHASABLE:
-                        return (0, i.jsx)(p.lw, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.NEW_PERK_AVAILABLE:
-                        return (0, i.jsx)(p.bo, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.BOOST_TO_UNLOCK:
-                        return (0, i.jsx)(p.Gw, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.EXPIRING_PERK:
-                        return (0, i.jsx)(p.Mr, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.GAME_SERVER_HOSTING_AVAILABLE:
-                    case _.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
-                        return (0, i.jsx)(p.jz, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.GAME_SERVER_NEW_GAMES:
-                        return (0, i.jsx)(p.YX, { guildId: t, channelRowRef: b, ...T.popout });
-                    case _.o.GAME_SERVER_PRICING_CHANGE:
-                        return (0, i.jsx)(p.Ns, { guildId: t, channelRowRef: b, ...T.popout });
+            o = (0, x.Ay)(t),
+            d = l.useCallback(() => {
+                (0, f.Zm)(t),
+                    (0, I.A)(t, _.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    o?.popout?.markAsDismissed(b.i.INDIRECT_ACTION);
+            }, [t, o]),
+            c = l.useRef(null),
+            R = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
+            j = (0, r.bG)([p.A], () => p.A.hasLayers()),
+            L = (0, g.xr)((e) => e.fullScreenLayers.length > 0),
+            O = R || j || L,
+            G = l.useCallback(() => {
+                if (o?.popout == null || O) return null;
+                switch (o?.popout?.type) {
+                    case E.o.LEVEL_REACHED:
+                        return (0, i.jsx)(C.HW, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.PERKS_AVAILABLE:
+                        return (0, i.jsx)(C.UB, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.PERKS_PURCHASABLE:
+                        return (0, i.jsx)(C.lw, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.NEW_PERK_AVAILABLE:
+                        return (0, i.jsx)(C.bo, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.BOOST_TO_UNLOCK:
+                        return (0, i.jsx)(C.Gw, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.EXPIRING_PERK:
+                        return (0, i.jsx)(C.Mr, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.GAME_SERVER_HOSTING_AVAILABLE:
+                    case E.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                        return (0, i.jsx)(C.jz, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.GAME_SERVER_NEW_GAMES:
+                        return (0, i.jsx)(C.YX, { guildId: t, channelRowRef: c, ...o.popout });
+                    case E.o.GAME_SERVER_PRICING_CHANGE:
+                        return (0, i.jsx)(C.Ns, { guildId: t, channelRowRef: c, ...o.popout });
                     default:
                         return (0, i.jsx)("div", {});
                 }
-            }, [t, T?.popout, b, R]),
-            [L, M] = l.useState(null);
+            }, [t, o?.popout, c, O]),
+            [D, M] = l.useState(null);
         l.useEffect(() => {
-            T?.popout == null && M(null);
-        }, [T?.popout]);
-        let D = l.useCallback((e) => {
+            o?.popout == null && M(null);
+        }, [o?.popout]);
+        let U = l.useCallback((e) => {
             M(e);
         }, []);
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(c.G, {
-                    ref: b,
-                    className: I.kL,
+                (0, i.jsx)(m.G, {
+                    ref: c,
+                    className: v.kL,
                     id: `skill-trees-${t}`,
-                    renderIcon: (e) => (0, i.jsx)(o._Jp, { size: "md", className: e, color: "currentColor" }),
+                    renderIcon: (e) => (0, i.jsx)(h._, { size: "md", className: e, color: "currentColor" }),
                     background:
-                        T?.popout != null &&
+                        o?.popout != null &&
                         (0, i.jsx)("div", {
-                            className: I.Fi,
-                            children: (0, i.jsx)(o.tvC, {
-                                nextScene: null == L ? "animation" : "LOOP",
-                                className: I.UU,
-                                sceneSegments: N,
+                            className: v.Fi,
+                            children: (0, i.jsx)(A.t, {
+                                nextScene: null == D ? "animation" : "LOOP",
+                                className: v.UU,
+                                sceneSegments: y,
                                 importData: () => n.e("67807").then(n.t.bind(n, 217762, 19)),
-                                onScenePlay: D,
+                                onScenePlay: U,
                                 rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
                             }),
                         }),
                     text: (0, i.jsx)("span", {
-                        className: a()({ [I.A7]: T?.showUnread === !0 }),
-                        children: E.intl.string(x.default.yv3DJJ),
+                        className: a()({ [v.A7]: o?.showUnread === !0 }),
+                        children: S.intl.string(N.default.yv3DJJ),
                     }),
                     selected: s,
-                    onClick: S,
-                    showUnread: T?.showUnread === !0,
-                    trailing: (0, i.jsx)(C, { indicator: T?.indicator }),
+                    onClick: d,
+                    showUnread: o?.showUnread === !0,
+                    trailing: (0, i.jsx)(T, { indicator: o?.indicator }),
                 }),
-                O(),
+                G(),
             ],
         });
     });

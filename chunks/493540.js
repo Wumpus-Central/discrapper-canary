@@ -1,18 +1,17 @@
-"use strict";
 n.d(t, {
     Bo: () => u,
     DP: () => c,
-    KW: () => x,
+    KW: () => h,
     P: () => m,
-    Y7: () => h,
+    Y7: () => x,
     gO: () => o,
     im: () => g,
     jh: () => d,
     ms: () => p,
 });
 var i = n(562465),
-    s = n(73153),
-    l = n(627363),
+    l = n(73153),
+    s = n(627363),
     r = n(652215),
     a = n(705751);
 async function o(e) {
@@ -38,17 +37,17 @@ async function g(e, t) {
             rejectWithError: !1,
         })
     ).body;
-    return null != n.application && s.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: n.application }), n;
-}
-function x(e) {
-    return i.Bo.post({ url: r.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e), rejectWithError: !1 });
+    return null != n.application && l.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: n.application }), n;
 }
 function h(e) {
+    return i.Bo.post({ url: r.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e), rejectWithError: !1 });
+}
+function x(e) {
     return i.Bo.post({ url: r.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e), rejectWithError: !1 });
 }
 async function _(e) {
     await i.Bo.post({ url: r.Rsh.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e), body: {}, rejectWithError: !1 });
 }
 async function p(e) {
-    return await _(e), await l.Ay.getApplicationsForGuild(e, { type: a.S7.GUILD_ROLE_SUBSCRIPTIONS, includeTeam: !0 });
+    return await _(e), await s.Ay.getApplicationsForGuild(e, { type: a.S7.GUILD_ROLE_SUBSCRIPTIONS, includeTeam: !0 });
 }

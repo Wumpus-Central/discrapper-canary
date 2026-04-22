@@ -1,108 +1,101 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(643479),
-    i = n(177487),
-    a = n(234291),
-    s = n(664741),
-    o = n(525012),
-    l = n(761799);
-let u = { read: E },
+i.d(t, { A: () => u });
+var n = i(643479),
+    r = i(177487),
+    o = i(234291),
+    a = i(664741),
+    s = i(525012),
+    l = i(761799);
+let u = {
+        read: function (e, t, i, r) {
+            let u = {},
+                T = [];
+            for (let b = 0; b < t.length; b++) {
+                let { offset: P, length: S, type: F } = t[b],
+                    I = (function (e, t, i, r, a) {
+                        var s;
+                        let l,
+                            u = [],
+                            y = [],
+                            A = [],
+                            v = c,
+                            T = n.Gl;
+                        for (let a = 0; a < i && t + a < e.byteLength; a++) {
+                            if (v === d) {
+                                (T = (function ({ type: e, dataView: t, offset: i }) {
+                                    if (e === o.Xo) {
+                                        if (1 === t.getUint8(i)) return t.getUint8(i + 1);
+                                    } else if (e === o.aA) return t.getUint8(i);
+                                    return n.Gl;
+                                })({ type: r, dataView: e, offset: t + a })),
+                                    r === o.Xo && (a += 1),
+                                    (v = g(r, v));
+                                continue;
+                            }
+                            if (v === m) {
+                                l = new DataView(e.buffer.slice(t + a, t + i));
+                                break;
+                            }
+                            let s = e.getUint8(t + a);
+                            0 === s ? (v = g(r, v)) : v === c ? u.push(s) : v === f ? y.push(s) : v === p && A.push(s);
+                        }
+                        if (T !== n.Gl && !a) return {};
+                        let b = (0, n.mF)(l, T, (s = r) === o.HL || s === o.aA ? "latin1" : "utf-8");
+                        return b instanceof Promise
+                            ? b
+                                  .then((e) => h(e, r, y, u))
+                                  .catch(() => h("<text using unknown compression>".split(""), r, y, u))
+                            : h(b, r, y, u);
+                    })(e, P, S, F, i);
+                if (I instanceof Promise)
+                    T.push(
+                        I.then(({ name: e, value: t, description: i }) => {
+                            try {
+                                if (l.A.USE_EXIF && y(e, t)) return { __exif: a.A.read(v(t), 6, r).tags };
+                                if (l.A.USE_IPTC && A(e, t)) return { __iptc: s.A.read(v(t), 0, r) };
+                                if (e && !y(e, t) && !A(e, t)) return { [e]: { value: t, description: i } };
+                            } catch (e) {}
+                            return {};
+                        }),
+                    );
+                else {
+                    let { name: e, value: t, description: i } = I;
+                    e && (u[e] = { value: t, description: i });
+                }
+            }
+            return { readTags: u, readTagsPromise: T.length > 0 ? Promise.all(T) : void 0 };
+        },
+    },
     c = "STATE_KEYWORD",
     d = "STATE_COMPRESSION",
-    _ = "STATE_LANG",
-    f = "STATE_TRANSLATED_KEYWORD",
-    p = "STATE_TEXT",
-    h = 1,
-    m = 1,
-    g = 6;
-function E(e, t, n, r) {
-    let i = {},
-        a = [];
-    for (let u = 0; u < t.length; u++) {
-        let { offset: c, length: d, type: _ } = t[u],
-            f = A(e, c, d, _, n);
-        if (f instanceof Promise)
-            a.push(
-                f.then(({ name: e, value: t, description: n }) => {
-                    try {
-                        if (l.A.USE_EXIF && N(e, t)) return { __exif: s.A.read(O(t), g, r).tags };
-                        if (l.A.USE_IPTC && R(e, t)) return { __iptc: o.A.read(O(t), 0, r) };
-                        if (e && !N(e, t) && !R(e, t)) return { [e]: { value: t, description: n } };
-                    } catch (e) {}
-                    return {};
-                }),
-            );
-        else {
-            let { name: e, value: t, description: n } = f;
-            e && (i[e] = { value: t, description: n });
-        }
-    }
-    return { readTags: i, readTagsPromise: a.length > 0 ? Promise.all(a) : void 0 };
+    f = "STATE_LANG",
+    p = "STATE_TRANSLATED_KEYWORD",
+    m = "STATE_TEXT";
+function g(e, t) {
+    return t === c && [o.Xo, o.aA].includes(e) ? d : t === d ? (e === o.Xo ? f : m) : t === f ? p : m;
 }
-function A(e, t, n, i, s) {
-    let o,
-        l = [],
-        u = [],
-        m = [],
-        g = c,
-        E = r.Gl;
-    for (let r = 0; r < n && t + r < e.byteLength; r++) {
-        if (g === d) {
-            (E = I({ type: i, dataView: e, offset: t + r })), i === a.Xo && (r += h), (g = T(i, g));
-            continue;
-        }
-        if (g === p) {
-            o = new DataView(e.buffer.slice(t + r, t + n));
-            break;
-        }
-        let s = e.getUint8(t + r);
-        0 === s ? (g = T(i, g)) : g === c ? l.push(s) : g === _ ? u.push(s) : g === f && m.push(s);
-    }
-    if (E !== r.Gl && !s) return {};
-    let A = (0, r.mF)(o, E, y(i));
-    return A instanceof Promise
-        ? A.then((e) => S(e, i, u, l)).catch(() => S("<text using unknown compression>".split(""), i, u, l))
-        : S(A, i, u, l);
+function h(e, t, i, a) {
+    var s, l;
+    let u = (s = e) instanceof DataView ? (0, n.hT)(s, 0, s.byteLength) : s;
+    return {
+        name: (function (e, t, i) {
+            let r = (0, n.YF)(i);
+            if (e === o.HL || 0 === t.length) return r;
+            let a = (0, n.YF)(t);
+            return `${r} (${a})`;
+        })(t, i, a),
+        value: u,
+        description: t === o.Xo ? ((l = e), r.A.decode("UTF-8", l)) : u,
+    };
 }
-function I({ type: e, dataView: t, offset: n }) {
-    if (e === a.Xo) {
-        if (t.getUint8(n) === m) return t.getUint8(n + 1);
-    } else if (e === a.aA) return t.getUint8(n);
-    return r.Gl;
-}
-function T(e, t) {
-    return t === c && [a.Xo, a.aA].includes(e) ? d : t === d ? (e === a.Xo ? _ : p) : t === _ ? f : p;
-}
-function y(e) {
-    return e === a.HL || e === a.aA ? "latin1" : "utf-8";
-}
-function S(e, t, n, r) {
-    let i = C(e);
-    return { name: v(t, n, r), value: i, description: t === a.Xo ? b(e) : i };
-}
-function v(e, t, n) {
-    let i = (0, r.YF)(n);
-    if (e === a.HL || 0 === t.length) return i;
-    let s = (0, r.YF)(t);
-    return `${i} (${s})`;
-}
-function C(e) {
-    return e instanceof DataView ? (0, r.hT)(e, 0, e.byteLength) : e;
-}
-function b(e) {
-    return i.A.decode("UTF-8", e);
-}
-function N(e, t) {
+function y(e, t) {
     return "raw profile type exif" === e.toLowerCase() && "exif" === t.substring(1, 5);
 }
-function R(e, t) {
+function A(e, t) {
     return "raw profile type iptc" === e.toLowerCase() && "iptc" === t.substring(1, 5);
 }
-function O(e) {
-    return D(e.match(/\n(exif|iptc)\n\s*\d+\n([\s\S]*)$/)[2].replace(/\n/g, ""));
-}
-function D(e) {
-    let t = new DataView(new ArrayBuffer(e.length / 2));
-    for (let n = 0; n < e.length; n += 2) t.setUint8(n / 2, parseInt(e.substring(n, n + 2), 16));
-    return t;
+function v(e) {
+    var t = e.match(/\n(exif|iptc)\n\s*\d+\n([\s\S]*)$/)[2].replace(/\n/g, "");
+    let i = new DataView(new ArrayBuffer(t.length / 2));
+    for (let e = 0; e < t.length; e += 2) i.setUint8(e / 2, parseInt(t.substring(e, e + 2), 16));
+    return i;
 }

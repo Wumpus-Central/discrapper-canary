@@ -1,49 +1,54 @@
-n.d(t, { e: () => d });
-var i = n(627968),
-    l = n(64700),
-    s = n(990078),
-    a = n(397927),
-    r = n(245205),
-    o = n(985018);
-let c = (e) => {
+n.d(t, { e: () => m });
+var s = n(627968),
+    a = n(64700),
+    l = n(990078),
+    i = n(861672),
+    r = n(477782),
+    o = n(241326),
+    d = n(265872),
+    c = n(408278),
+    u = n(365199),
+    h = n(245205),
+    _ = n(985018);
+let A = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, i.jsx)(a.W1t, {
+        return (0, s.jsx)(i.W, {
             "data-menu-migrated": !0,
             navId: "notification-actions",
             onClose: n,
             onSelect: n,
-            "aria-label": o.intl.string(o.t.ljs3Oe),
-            children: (0, i.jsx)(a.Drp, {
+            "aria-label": _.intl.string(_.t.ljs3Oe),
+            children: (0, s.jsx)(r.Dr, {
                 id: "delete",
-                label: o.intl.string(o.t.oyYWHE),
-                icon: a.ucK,
-                leadingAccessory: { type: "icon", icon: a.ucK },
+                label: _.intl.string(_.t.oyYWHE),
+                icon: o.u,
+                leadingAccessory: { type: "icon", icon: o.u },
                 action: async () => {
-                    await (0, r.VP)(t);
+                    await (0, h.VP)(t);
                 },
             }),
         });
     },
-    d = l.memo(function (e) {
+    m = a.memo(function (e) {
         let { item: t } = e,
-            n = l.useRef(null);
-        return (0, i.jsx)(a.YNO, {
+            n = a.useRef(null);
+        return (0, s.jsx)(d.Y, {
             targetElementRef: n,
-            renderPopout: (e) => (0, i.jsx)(c, { ...e, item: t }),
+            renderPopout: (e) => (0, s.jsx)(A, { ...e, item: t }),
             position: "bottom",
             align: "right",
-            animation: a.YNO.Animation.NONE,
+            animation: d.Y.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, i.jsx)(s.m, {
-                    text: o.intl.string(o.t["UKOtz+"]),
+                return (0, s.jsx)(l.m, {
+                    text: _.intl.string(_.t["UKOtz+"]),
                     asContainer: !0,
-                    children: (0, i.jsx)(a.K0, {
+                    children: (0, s.jsx)(c.K, {
                         buttonRef: n,
                         size: "sm",
-                        icon: a.jNK,
+                        icon: u.j,
                         variant: "icon-only",
-                        "aria-label": o.intl.string(o.t["UKOtz+"]),
+                        "aria-label": _.intl.string(_.t["UKOtz+"]),
                         "aria-haspopup": "menu",
                         onClick: (e) => {
                             e.stopPropagation(), t(e);

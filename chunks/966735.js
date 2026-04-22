@@ -1,34 +1,36 @@
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    r = n.n(s),
-    a = n(397927),
-    l = n(896498),
-    o = n(714979);
-let c = (e) => {
-    let { icon: t, iconClassName: n, header: s, description: c } = e;
-    return (0, i.jsxs)("div", {
-        className: r()(o.kL, l.a),
+l.d(t, { A: () => o });
+var n = l(627968);
+l(64700);
+var i = l(503698),
+    s = l.n(i),
+    a = l(534514),
+    r = l(707554),
+    d = l(834730),
+    c = l(453287),
+    u = l(445220);
+let o = (e) => {
+    let { icon: t, iconClassName: l, header: i, description: o } = e;
+    return (0, n.jsxs)("div", {
+        className: s()(u.kL, c.a),
         children: [
-            (0, i.jsx)("div", {
-                className: o.n1,
-                children: (0, i.jsx)(t, {
-                    className: r()(o.Kk, n),
+            (0, n.jsx)("div", {
+                className: u.n1,
+                children: (0, n.jsx)(t, {
+                    className: s()(u.Kk, l),
                     size: "custom",
                     width: 20,
                     height: 20,
                     color: "currentColor",
                 }),
             }),
-            (0, i.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, n.jsx)(a.D, {
                         variant: "heading-md/bold",
-                        className: o.wx,
-                        children: (0, i.jsx)(a.Fmo, { children: s }),
+                        className: u.wx,
+                        children: (0, n.jsx)(r.F, { children: i }),
                     }),
-                    (0, i.jsx)(a.Text, { variant: "text-sm/medium", color: "text-muted", children: c }),
+                    (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-muted", children: o }),
                 ],
             }),
         ],

@@ -1,23 +1,24 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968),
-    l = n(158954),
-    s = n(587933);
-function a(e) {
-    let { title: t, description: n, onClick: a } = e;
+    l = n(939249),
+    s = n(834730),
+    a = n(369005);
+function r(e) {
+    let { title: t, description: n, onClick: r } = e;
     return (0, i.jsxs)("div", {
-        className: s.S,
+        className: a.S,
         children: [
-            (0, i.jsx)(l.DUT, {
-                onClick: a,
-                className: s.H,
-                children: (0, i.jsx)(l.EYj, {
+            (0, i.jsx)(l.D, {
+                onClick: r,
+                className: a.H,
+                children: (0, i.jsx)(s.E, {
                     variant: "text-sm/semibold",
                     color: "text-default",
                     lineClamp: 2,
                     children: t,
                 }),
             }),
-            (0, i.jsx)(l.EYj, { variant: "text-xs/medium", color: "text-default", children: n }),
+            (0, i.jsx)(s.E, { variant: "text-xs/medium", color: "text-default", children: n }),
         ],
     });
 }

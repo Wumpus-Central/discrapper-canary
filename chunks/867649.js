@@ -1,53 +1,51 @@
 "use strict";
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    s = n(865116),
-    o = n(750506),
-    l = n(885576),
-    u = n(287809),
+    s = n(935154),
+    a = n(834730),
+    o = n(865116),
+    l = n(750506),
+    u = n(885576),
+    d = n(287809),
     c = n(818348),
-    d = n(987101);
-function _() {
-    let e = (0, i.bG)([s.Ay], () => s.Ay.get("idle_status_indicator")),
-        t = (0, i.bG)([u.default], () => u.default.getCurrentUser()?.isStaff() ?? !1),
-        [n, _] = (0, i.yK)([l.A], () => [l.A.isIdle(), l.A.isAFK()]),
-        f = [];
+    _ = n(801964);
+function f() {
+    let e = (0, i.bG)([o.Ay], () => o.Ay.get("idle_status_indicator")),
+        t = (0, i.bG)([d.default], () => d.default.getCurrentUser()?.isStaff() ?? !1),
+        [n, f] = (0, i.yK)([u.A], () => [u.A.isIdle(), u.A.isAFK()]),
+        E = [];
     return (
-        n || _ || f.push("ACTIVE"),
-        n && f.push("IDLE"),
-        _ && f.push("AFK"),
+        n || f || E.push("ACTIVE"),
+        n && E.push("IDLE"),
+        f && E.push("AFK"),
         t && e
-            ? (0, r.jsx)(o.Ay, {
+            ? (0, r.jsx)(l.Ay, {
                   children: (0, r.jsxs)("div", {
-                      className: d.kL,
+                      className: _.kL,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: d.h5,
+                              className: _.h5,
                               children: [
-                                  (0, r.jsx)(a.nW6, {
-                                      status: f.includes("ACTIVE") ? c.cl.ONLINE : c.cl.IDLE,
-                                      className: d.UX,
+                                  (0, r.jsx)(s.nW, {
+                                      status: E.includes("ACTIVE") ? c.cl.ONLINE : c.cl.IDLE,
+                                      className: _.UX,
                                   }),
-                                  (0, r.jsx)(a.Text, { variant: "text-md/normal", children: "IDLE STATUS:" }),
+                                  (0, r.jsx)(a.E, { variant: "text-md/normal", children: "IDLE STATUS:" }),
                                   (0, r.jsx)("div", {
-                                      className: d.qS,
-                                      children: (0, r.jsx)(a.Text, {
-                                          variant: "text-md/bold",
-                                          children: f.join(" + "),
-                                      }),
+                                      className: _.qS,
+                                      children: (0, r.jsx)(a.E, { variant: "text-md/bold", children: E.join(" + ") }),
                                   }),
                               ],
                           }),
                           n &&
-                              (0, r.jsxs)(a.Text, {
+                              (0, r.jsxs)(a.E, {
                                   variant: "text-md/normal",
                                   children: [
                                       "Idle since:",
                                       " ",
-                                      new Date(l.A.getIdleSince() ?? 0).toLocaleDateString(void 0, {
+                                      new Date(u.A.getIdleSince() ?? 0).toLocaleDateString(void 0, {
                                           year: "numeric",
                                           day: "numeric",
                                           month: "numeric",

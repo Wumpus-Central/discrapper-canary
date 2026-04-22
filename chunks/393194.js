@@ -1,36 +1,37 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
-    a = n(47167),
-    r = n(713654),
-    o = n(435470),
-    c = n(969043),
-    d = n(576967),
-    u = n(314307),
-    h = n(985018),
-    m = n(724898);
-function A(e) {
+    a = n(534890),
+    s = n(834730),
+    r = n(47167),
+    o = n(713654),
+    c = n(435470),
+    d = n(969043),
+    u = n(576967),
+    h = n(314307),
+    m = n(985018),
+    A = n(873185);
+function g(e) {
     let { channel: t } = e,
-        n = (0, o.kt)(t),
-        { firstMessage: A } = (0, l.cf)([c.A], () => c.A.getMessage(t.id)),
-        g = new Set((0, o.zt)(t, n)),
-        p = (0, r.gU)(t) ?? s.oyn,
-        f = (0, a.Ay)(t);
-    return (0, i.jsxs)(u.Ay, {
+        n = (0, c.kt)(t),
+        { firstMessage: g } = (0, l.cf)([d.A], () => d.A.getMessage(t.id)),
+        p = new Set((0, c.zt)(t, n)),
+        _ = (0, o.gU)(t) ?? a.o,
+        f = (0, r.Ay)(t);
+    return (0, i.jsxs)(h.Ay, {
         channelId: t.id,
-        className: m.kL,
+        className: A.kL,
         children: [
-            (0, i.jsx)("div", { className: m.P0, children: (0, i.jsx)(p, { className: m.Kk, strokeWidth: 1.75 }) }),
-            (0, i.jsx)(u.cr, { className: m.wx, children: f }),
-            null == A &&
-                (0, i.jsx)(s.Text, {
+            (0, i.jsx)("div", { className: A.P0, children: (0, i.jsx)(_, { className: A.Kk, strokeWidth: 1.75 }) }),
+            (0, i.jsx)(h.cr, { className: A.wx, children: f }),
+            null == g &&
+                (0, i.jsx)(s.E, {
                     variant: "text-md/normal",
                     color: "text-default",
-                    children: h.intl.string(h.t.mE3KJN),
+                    children: m.intl.string(m.t.mE3KJN),
                 }),
-            (0, i.jsx)(d.A, { appliedTags: g, wrap: t.isModeratorReportChannel() }),
+            (0, i.jsx)(u.A, { appliedTags: p, wrap: t.isModeratorReportChannel() }),
         ],
     });
 }

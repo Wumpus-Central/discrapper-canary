@@ -1,36 +1,39 @@
 "use strict";
-n.d(t, { Ay: () => d, CB: () => u, c0: () => c });
+n.d(t, { Ay: () => h, CB: () => m, c0: () => g });
 var l = n(627968);
 n(64700);
-var s = n(311907),
-    i = n(397927),
-    r = n(317525),
-    a = n(370480),
-    o = n(985018);
-let u = "guild-connection-roles";
-function c(e) {
-    (0, i.mMO)(
+var a = n(311907),
+    s = n(231723),
+    i = n(192308);
+if (21552 == n.j) var r = n(477782);
+if (21552 == n.j) var o = n(173936);
+var c = n(317525),
+    u = n(370480),
+    d = n(985018);
+let m = "guild-connection-roles";
+function g(e) {
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("92837").then(n.bind(n, 480900));
             return (n) => (0, l.jsx)(t, { ...n, guildId: e });
         },
         {
-            modalKey: u,
-            contextKey: i.SYi,
+            modalKey: m,
+            contextKey: s.SY,
             onCloseRequest: () => {
-                (0, i.OoC)(u, i.SYi);
+                (0, i.closeModal)(m, s.SY);
             },
         },
     );
 }
-function d(e) {
-    return (0, s.bG)([r.A], () => (0, a.N8)(r.A.getSortedRoles(e.id)), [e])
-        ? (0, l.jsx)(i.Drp, {
+function h(e) {
+    return (0, a.bG)([c.A], () => (0, u.N8)(c.A.getSortedRoles(e.id)), [e])
+        ? (0, l.jsx)(r.Dr, {
               id: "guild-connection-roles",
-              label: o.intl.string(o.t.ghtnss),
-              icon: i.qYV,
-              leadingAccessory: { type: "icon", icon: i.qYV },
-              action: () => c(e.id),
+              label: d.intl.string(d.t.ghtnss),
+              icon: o.q,
+              leadingAccessory: { type: "icon", icon: o.q },
+              action: () => g(e.id),
           })
         : null;
 }

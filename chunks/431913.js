@@ -1,41 +1,41 @@
-i.d(r, { default: () => s });
-var e = i(627968),
-    n = i(64700),
-    a = i(158954),
-    o = i(421380),
+i.d(r, { default: () => T });
+var n = i(627968),
+    a = i(64700),
+    e = i(189213),
+    o = i(27192),
     E = i(493540),
-    T = i(980406),
-    c = i(985018);
-function s(t) {
-    let { guildId: r, transitionState: i, onClose: s } = t,
-        [l, R] = n.useState(!1),
-        [_, O] = n.useState(!1),
-        u = async () => {
-            R(!0);
+    c = i(980406),
+    s = i(985018);
+function T(t) {
+    let { guildId: r, transitionState: i, onClose: T } = t,
+        [R, l] = a.useState(!1),
+        [O, u] = a.useState(!1),
+        _ = async () => {
+            l(!0);
             try {
-                await (0, E.Bo)(r), s();
+                await (0, E.Bo)(r), T();
             } finally {
-                R(!1);
+                l(!1);
             }
         },
-        A = c.intl.string(c.t["22itmo"]);
-    return (0, e.jsx)(a.Modal, {
+        A = s.intl.string(s.t["22itmo"]);
+    return (0, n.jsx)(e.Modal, {
         size: "md",
         transitionState: i,
-        onClose: s,
+        onClose: T,
         "aria-label": A,
         title: A,
-        subtitle: c.intl.string(c.t.kdbm9C),
+        subtitle: s.intl.string(s.t.kdbm9C),
         actions: [
-            { variant: "secondary", onClick: s, text: c.intl.string(c.t["ETE/oC"]) },
-            { variant: "primary", text: c.intl.string(c.t["cY+Oob"]), disabled: !_, onClick: u, loading: l },
+            { variant: "secondary", onClick: T, text: s.intl.string(s.t["ETE/oC"]) },
+            { variant: "primary", text: s.intl.string(s.t["cY+Oob"]), disabled: !O, onClick: _, loading: R },
         ],
-        children: (0, e.jsx)(o.Kj, {
+        children: (0, n.jsx)(o.Kj, {
             onChange: () => {
-                O((t) => !t);
+                u((t) => !t);
             },
-            value: _,
-            children: (0, T.r)(),
+            value: O,
+            children: (0, c.r)(),
         }),
     });
 }

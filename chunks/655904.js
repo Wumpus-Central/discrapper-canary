@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     eZ: "openPageButton__3c9fa",
     xu: "accentColorContainer__3c9fa",

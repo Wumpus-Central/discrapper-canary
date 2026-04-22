@@ -1,12 +1,12 @@
-"use strict";
-n.d(t, { _: () => s }), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
-var r = n(627968),
-    i = n(64700),
-    a = n(158954);
-function s(e) {
-    let { src: t, dynamicDataBinding: n, ...s } = e,
-        { status: o, buffer: l } = (0, a.CEU)(t),
-        u = i.useMemo(
+a.d(t, { _: () => r }), a(393431), a(532706), a(42231), a(232424), a(949626), a(767709), a(65162);
+var n = a(627968),
+    l = a(64700),
+    i = a(799226),
+    s = a(786558);
+function r(e) {
+    let { src: t, dynamicDataBinding: a, ...r } = e,
+        { status: o, buffer: d } = (0, i.CE)(t),
+        c = l.useMemo(
             () =>
                 "string" == typeof t
                     ? t
@@ -17,7 +17,7 @@ function s(e) {
                           .join(""),
             [t],
         );
-    return o === a.BWP.Loading
+    return o === i.BW.Loading
         ? null
-        : (0, r.jsx)(a.wbv, { buffer: l, artboardProperties: {}, dynamicDataBinding: n, ...s }, u);
+        : (0, n.jsx)(s.w, { buffer: d, artboardProperties: {}, dynamicDataBinding: a, ...r }, c);
 }

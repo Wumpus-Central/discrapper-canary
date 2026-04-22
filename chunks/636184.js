@@ -1,101 +1,107 @@
-s.d(t, { h: () => j });
-var i = s(627968),
-    a = s(64700),
-    n = s(503698),
-    l = s.n(n),
-    r = s(158954),
-    c = s(311907),
-    o = s(582754),
-    d = s(397927),
-    u = s(308528),
-    A = s(854627),
-    m = s(779733),
-    h = s(954571),
-    R = s(975571),
-    f = s(427262),
-    g = s(326084),
-    x = s(851746),
-    E = s(652215),
-    p = s(985018),
-    _ = s(471449),
-    S = s(299148);
-let T = (e) => {
-        let { recipient: t, status: s, onClose: a } = e,
-            { avatarSrc: n, eventHandlers: r } = (0, A.A)({ userId: t?.id, size: d._3J.SIZE_56 }),
-            c = f.Ay.getName(t),
-            o = s === g.o.FAIL;
-        return (0, i.jsxs)("div", {
-            className: _.w4,
+n.d(t, { h: () => S });
+var r = n(627968),
+    a = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    l = n(772707),
+    c = n(311907),
+    o = n(844222),
+    d = n(778712),
+    u = n(97808),
+    _ = n(834730),
+    m = n(821609),
+    p = n(534890),
+    f = n(289873),
+    A = n(498101),
+    g = n(308528),
+    h = n(854627),
+    b = n(779733),
+    x = n(954571),
+    C = n(975571),
+    v = n(427262),
+    R = n(326084),
+    N = n(851746),
+    E = n(652215),
+    j = n(985018),
+    T = n(494025),
+    y = n(299148);
+let I = (e) => {
+        let { recipient: t, status: n, onClose: a } = e,
+            { avatarSrc: i, eventHandlers: l } = (0, h.A)({ userId: t?.id, size: d._3.SIZE_56 }),
+            c = v.Ay.getName(t),
+            o = n === R.o.FAIL;
+        return (0, r.jsxs)("div", {
+            className: T.w4,
             children: [
-                (0, i.jsx)(d.euF, {
-                    imageClassName: l()({ [_.jN]: o }),
-                    src: n,
+                (0, r.jsx)(u.eu, {
+                    imageClassName: s()({ [T.jN]: o }),
+                    src: i,
                     "aria-label": c,
-                    size: d._3J.SIZE_32,
-                    ...r,
+                    size: d._3.SIZE_32,
+                    ...l,
                 }),
                 o
-                    ? (0, i.jsxs)(i.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(d.Text, {
-                                  className: _.E0,
+                              (0, r.jsx)(_.E, {
+                                  className: T.E0,
                                   variant: "text-md/medium",
                                   color: "text-strong",
                                   children: c,
                               }),
-                              (0, i.jsx)(d.Text, {
+                              (0, r.jsx)(_.E, {
                                   variant: "text-md/medium",
-                                  className: _.nT,
+                                  className: T.nT,
                                   color: "text-strong",
-                                  children: p.intl.format(p.t.RO3T4B, { userName: c }),
+                                  children: j.intl.format(j.t.RO3T4B, { userName: c }),
                               }),
                           ],
                       })
-                    : (0, i.jsx)(d.Text, {
+                    : (0, r.jsx)(_.E, {
                           variant: "text-md/medium",
-                          className: _.Pm,
+                          className: T.Pm,
                           color: "text-strong",
                           children: c,
                       }),
-                (0, i.jsx)(d.Button, {
+                (0, r.jsx)(m.$, {
                     variant: "secondary",
                     size: "sm",
-                    text: p.intl.string(p.t["g33r/P"]),
-                    icon: d.oyn,
+                    text: j.intl.string(j.t["g33r/P"]),
+                    icon: p.o,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, m.default)(), u.A.openPrivateChannel({ recipientIds: e }), a());
+                        return (e = t.id), void ((0, b.default)(), g.A.openPrivateChannel({ recipientIds: e }), a());
                     },
                 }),
             ],
         });
     },
-    j = (e) => {
-        let { transitionState: t, results: s, onClose: n, isReminderConfirmation: l } = e,
-            u = (0, c.bG)([x.A], () => x.A.getReferralsRemaining());
-        h.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-        let { reducedMotion: A } = a.useContext(o.CZ);
-        return null === u
-            ? (0, i.jsx)(d.y$y, {})
-            : (0, i.jsx)(r.ExpressiveModal, {
-                  graphic: A.enabled ? { src: S.A, type: "image" } : { rive: d.lBW, type: "rive" },
+    S = (e) => {
+        let { transitionState: t, results: n, onClose: i, isReminderConfirmation: s } = e,
+            d = (0, c.bG)([N.A], () => N.A.getReferralsRemaining());
+        x.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        let { reducedMotion: u } = a.useContext(o.C);
+        return null === d
+            ? (0, r.jsx)(f.y, {})
+            : (0, r.jsx)(l.k, {
+                  graphic: u.enabled ? { src: y.A, type: "image" } : { rive: A.l, type: "rive" },
                   gradientColor: "nitro-pink",
                   title:
-                      0 === s.filter((e) => e.status === g.o.SUCCESS).length
-                          ? p.intl.string(p.t["7VBEue"])
-                          : !0 === l
-                            ? p.intl.string(p.t.GP5lbq)
-                            : p.intl.string(p.t.tKCltd),
+                      0 === n.filter((e) => e.status === R.o.SUCCESS).length
+                          ? j.intl.string(j.t["7VBEue"])
+                          : !0 === s
+                            ? j.intl.string(j.t.GP5lbq)
+                            : j.intl.string(j.t.tKCltd),
                   subtitle:
-                      !0 === l
-                          ? p.intl.format(p.t["4gJJfD"], { helpdeskArticle: R.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) })
-                          : p.intl.format(p.t.AwGSWl, { helpdeskArticle: R.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) }),
-                  onClose: n,
+                      !0 === s
+                          ? j.intl.format(j.t["4gJJfD"], { helpdeskArticle: C.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) })
+                          : j.intl.format(j.t.AwGSWl, { helpdeskArticle: C.A.getArticleURL(E.MVz.REFERRAL_PROGRAM) }),
+                  onClose: i,
                   transitionState: t,
-                  children: (0, i.jsx)("div", {
-                      className: _.Hz,
-                      children: s.map((e) =>
-                          (0, i.jsx)(T, { recipient: e.recipient, status: e.status, onClose: n }, e.recipient.id),
+                  children: (0, r.jsx)("div", {
+                      className: T.Hz,
+                      children: n.map((e) =>
+                          (0, r.jsx)(I, { recipient: e.recipient, status: e.status, onClose: i }, e.recipient.id),
                       ),
                   }),
               });

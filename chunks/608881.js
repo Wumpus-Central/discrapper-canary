@@ -1,55 +1,56 @@
 n.d(t, { A: () => I });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    l = n(311907),
-    s = n(554146),
-    o = n(397927),
+var s = n(503698),
+    l = n.n(s),
+    a = n(311907),
+    r = n(554146),
+    o = n(573613),
+    c = n(534514),
     d = n(820284),
-    c = n(793574),
-    u = n(688810),
+    u = n(793574),
+    m = n(688810),
     A = n(915089),
     h = n(379848),
-    _ = n(193699),
-    m = n(153488),
-    p = n(426389),
-    g = n(652215),
-    E = n(985018),
-    f = n(181485);
+    x = n(193699),
+    p = n(153488),
+    g = n(426389),
+    N = n(652215),
+    f = n(985018),
+    _ = n(678428);
 function I() {
-    let { analyticsLocations: e } = (0, u.Ay)(c.A.ACTIVE_NOW_COLUMN),
-        t = (0, l.bG)([m.A], () => m.A.hasConsented(g.YAq.PERSONALIZATION)) ? [] : [s.M.NOW_PLAYING_CONSENT_CARD],
+    let { analyticsLocations: e } = (0, m.Ay)(u.A.ACTIVE_NOW_COLUMN),
+        t = (0, a.bG)([p.A], () => p.A.hasConsented(N.YAq.PERSONALIZATION)) ? [] : [r.M.NOW_PLAYING_CONSENT_CARD],
         n = (0, A.GV)();
-    return (0, i.jsx)(u.f5, {
+    return (0, i.jsx)(m.f5, {
         value: e,
         children: (0, i.jsx)(d.A, {
-            section: g.JJy.ACTIVE_NOW_COLUMN,
+            section: N.JJy.ACTIVE_NOW_COLUMN,
             children: (0, i.jsx)("aside", {
-                className: a()(f.kL, "refresh-active-now"),
+                className: l()(_.kL, "refresh-active-now"),
                 "aria-labelledby": n,
-                children: (0, i.jsx)(o.HOs, {
-                    className: f.XG,
+                children: (0, i.jsx)(o.Ip, {
+                    className: _.XG,
                     children: (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, i.jsx)(c.D, {
                                 variant: "heading-lg/semibold",
-                                className: f.wx,
+                                className: _.wx,
                                 id: n,
-                                children: E.intl.string(E.t.F4Zggw),
+                                children: f.intl.string(f.t.F4Zggw),
                             }),
                             (0, i.jsx)(h.Ay, {
                                 contentTypes: t,
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
-                                    if (t === s.M.NOW_PLAYING_CONSENT_CARD)
-                                        return (0, i.jsx)(_.A, {
-                                            className: f.__invalid_consentCard,
+                                    if (t === r.M.NOW_PLAYING_CONSENT_CARD)
+                                        return (0, i.jsx)(x.A, {
+                                            className: _.__invalid_consentCard,
                                             markAsDismissed: n,
                                         });
                                 },
                             }),
-                            (0, i.jsx)(p.A, {}),
+                            (0, i.jsx)(g.A, {}),
                         ],
                     }),
                 }),

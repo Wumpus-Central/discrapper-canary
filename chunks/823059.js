@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     BK: "helpText_db0ee9",
     MT: "searchContainer_db0ee9",

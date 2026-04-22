@@ -2,16 +2,11 @@
 n.d(t, { A: () => d });
 var r = n(709943),
     i = n(559751),
-    a = n(482786),
-    s = n(528346),
+    s = n(482786),
+    a = n(528346),
     o = n(683834),
     l = n(140851),
     u = n(499702);
-function c(e) {
-    if ((0, i.A)(e) === l.qZ) return [];
-    var t = (0, r.A)(e);
-    return [(0, a.A)(e), t, (0, a.A)(t)];
-}
 let d = {
     name: "flip",
     enabled: !0,
@@ -19,88 +14,95 @@ let d = {
     fn: function (e) {
         var t = e.state,
             n = e.options,
-            a = e.name;
-        if (!t.modifiersData[a]._skip) {
+            d = e.name;
+        if (!t.modifiersData[d]._skip) {
             for (
-                var d = n.mainAxis,
-                    _ = void 0 === d || d,
+                var c = n.mainAxis,
+                    _ = void 0 === c || c,
                     f = n.altAxis,
-                    p = void 0 === f || f,
+                    E = void 0 === f || f,
                     h = n.fallbackPlacements,
-                    m = n.padding,
-                    g = n.boundary,
-                    E = n.rootBoundary,
+                    p = n.padding,
+                    m = n.boundary,
+                    g = n.rootBoundary,
                     A = n.altBoundary,
                     I = n.flipVariations,
                     T = void 0 === I || I,
-                    y = n.allowedAutoPlacements,
-                    S = t.options.placement,
-                    v = (0, i.A)(S),
-                    C = v === S,
-                    b = h || (C || !T ? [(0, r.A)(S)] : c(S)),
-                    N = [S].concat(b).reduce(function (e, n) {
+                    S = n.allowedAutoPlacements,
+                    y = t.options.placement,
+                    N = (0, i.A)(y) === y,
+                    O =
+                        h ||
+                        (N || !T
+                            ? [(0, r.A)(y)]
+                            : (function (e) {
+                                  if ((0, i.A)(e) === l.qZ) return [];
+                                  var t = (0, r.A)(e);
+                                  return [(0, s.A)(e), t, (0, s.A)(t)];
+                              })(y)),
+                    R = [y].concat(O).reduce(function (e, n) {
                         return e.concat(
                             (0, i.A)(n) === l.qZ
                                 ? (0, o.A)(t, {
                                       placement: n,
-                                      boundary: g,
-                                      rootBoundary: E,
-                                      padding: m,
+                                      boundary: m,
+                                      rootBoundary: g,
+                                      padding: p,
                                       flipVariations: T,
-                                      allowedAutoPlacements: y,
+                                      allowedAutoPlacements: S,
                                   })
                                 : n,
                         );
                     }, []),
-                    R = t.rects.reference,
-                    O = t.rects.popper,
-                    D = new Map(),
-                    L = !0,
-                    w = N[0],
-                    x = 0;
-                x < N.length;
-                x++
+                    v = t.rects.reference,
+                    C = t.rects.popper,
+                    b = new Map(),
+                    D = !0,
+                    L = R[0],
+                    w = 0;
+                w < R.length;
+                w++
             ) {
-                var P = N[x],
-                    M = (0, i.A)(P),
-                    k = (0, u.A)(P) === l.ni,
-                    U = [l.Mn, l.sQ].indexOf(M) >= 0,
-                    G = U ? "width" : "height",
-                    V = (0, s.A)(t, { placement: P, boundary: g, rootBoundary: E, altBoundary: A, padding: m }),
-                    F = U ? (k ? l.pG : l.kb) : k ? l.sQ : l.Mn;
-                R[G] > O[G] && (F = (0, r.A)(F));
-                var B = (0, r.A)(F),
-                    j = [];
+                var M = R[w],
+                    P = (0, i.A)(M),
+                    U = (0, u.A)(M) === l.ni,
+                    k = [l.Mn, l.sQ].indexOf(P) >= 0,
+                    x = k ? "width" : "height",
+                    G = (0, a.A)(t, { placement: M, boundary: m, rootBoundary: g, altBoundary: A, padding: p }),
+                    V = k ? (U ? l.pG : l.kb) : U ? l.sQ : l.Mn;
+                v[x] > C[x] && (V = (0, r.A)(V));
+                var F = (0, r.A)(V),
+                    B = [];
                 if (
-                    (_ && j.push(V[M] <= 0),
-                    p && j.push(V[F] <= 0, V[B] <= 0),
-                    j.every(function (e) {
+                    (_ && B.push(G[P] <= 0),
+                    E && B.push(G[V] <= 0, G[F] <= 0),
+                    B.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (w = P), (L = !1);
+                    (L = M), (D = !1);
                     break;
                 }
-                D.set(P, j);
+                b.set(M, B);
             }
-            if (L)
+            if (D)
                 for (
                     var H = T ? 3 : 1,
                         Y = function (e) {
-                            var t = N.find(function (t) {
-                                var n = D.get(t);
+                            var t = R.find(function (t) {
+                                var n = b.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;
                                     });
                             });
-                            if (t) return (w = t), "break";
+                            if (t) return (L = t), "break";
                         },
                         W = H;
                     W > 0 && "break" !== Y(W);
                     W--
                 );
-            t.placement !== w && ((t.modifiersData[a]._skip = !0), (t.placement = w), (t.reset = !0));
+            t.placement !== L && ((t.modifiersData[d]._skip = !0), (t.placement = L), (t.reset = !0));
         }
     },
     requiresIfExists: ["offset"],

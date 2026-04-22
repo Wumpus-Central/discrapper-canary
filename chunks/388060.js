@@ -1,63 +1,66 @@
-n.d(t, { A: () => d });
-var i = n(627968);
+n.d(t, { A: () => m });
+var r = n(627968);
 n(64700);
-var r = n(892227),
-    a = n(397927),
-    s = n(320118),
-    l = n(490285),
-    o = n(985018),
-    c = n(875679);
-let d = () => {
-    let { passesGeneralUIInvariant: e, programReward: t } = (0, s.F)({ location: "NitroOrbsWhatsNewCardFooter" });
+var a = n(892227),
+    i = n(81466),
+    s = n(827734),
+    l = n(834730),
+    c = n(318254),
+    o = n(320118),
+    d = n(490285),
+    u = n(985018),
+    _ = n(875679);
+let m = () => {
+    let { passesGeneralUIInvariant: e, programReward: t } = (0, o.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
     let n =
         null != t.next_reward_date && "" !== t.next_reward_date
-            ? Math.max(1, (0, r.default)(new Date(t.next_reward_date), new Date()))
+            ? Math.max(1, (0, a.default)(new Date(t.next_reward_date), new Date()))
             : null;
-    return (0, i.jsxs)("div", {
-        className: c.kL,
+    return (0, r.jsxs)("div", {
+        className: _.kL,
         children: [
             null != n &&
-                (0, i.jsxs)("div", {
-                    className: c.nM,
+                (0, r.jsxs)("div", {
+                    className: _.nM,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: c.Pf,
+                        (0, r.jsxs)("div", {
+                            className: _.Pf,
                             children: [
-                                (0, i.jsx)(a.CTc, { size: "sm", color: a.LU0.colors.TEXT_DEFAULT }),
-                                (0, i.jsx)(a.Text, {
+                                (0, r.jsx)(i.C, { size: "sm", color: s.A.colors.TEXT_DEFAULT }),
+                                (0, r.jsx)(l.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
-                                    children: o.intl.string(l.default.H2M13c),
+                                    children: u.intl.string(d.default.H2M13c),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, r.jsx)(l.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: o.intl.format(l.default.xedPIb, { days: n }),
+                            children: u.intl.format(d.default.xedPIb, { days: n }),
                         }),
                     ],
                 }),
-            null != n && (0, i.jsx)("div", { className: c.yF }),
-            (0, i.jsxs)("div", {
-                className: c.nM,
+            null != n && (0, r.jsx)("div", { className: _.yF }),
+            (0, r.jsxs)("div", {
+                className: _.nM,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: c.Pf,
+                    (0, r.jsxs)("div", {
+                        className: _.Pf,
                         children: [
-                            (0, i.jsx)(a.Cp8, { size: "sm", color: a.LU0.colors.TEXT_DEFAULT }),
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(c.C, { size: "sm", color: s.A.colors.TEXT_DEFAULT }),
+                            (0, r.jsx)(l.E, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: o.intl.string(l.default.F7Bhsg),
+                                children: u.intl.string(d.default.F7Bhsg),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(l.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: o.intl.format(l.default.UDwsvL, { orbsCount: t.total_rewarded_from_program }),
+                        children: u.intl.format(d.default.UDwsvL, { orbsCount: t.total_rewarded_from_program }),
                     }),
                 ],
             }),

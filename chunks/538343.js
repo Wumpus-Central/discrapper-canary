@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A }), n(321073), n(667532);
+n.d(t, { A: () => m }), n(321073), n(667532);
 var r = n(311907),
     i = n(626584),
     s = n(877166),
@@ -7,11 +7,11 @@ var r = n(311907),
     o = n(878374),
     l = n(932170),
     u = n(936674),
-    c = n(354382);
-let d = new i.A("GatewaySocket"),
+    d = n(354382);
+let c = new i.A("GatewaySocket"),
     _ = new Set(["INITIAL_GUILD", "READY"]),
     f = new Set(["READY", "INITIAL_GUILD"]),
-    p = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
+    E = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
     h = new Set([
         "READY",
         "INITIAL_GUILD",
@@ -32,23 +32,8 @@ let d = new i.A("GatewaySocket"),
         "STREAM_DELETE",
         "STREAM_UPDATE",
     ]),
-    m = {};
-function E(e, t) {
-    let [n, r] = m[e] ?? [0, 0];
-    m[e] = [(n * r + t) / (r + 1), r + 1];
-}
-function g(e, t, n) {
-    if (null == n) return !1;
-    let r = e[t],
-        i = e.length - 1,
-        s = t < i ? e[t + 1] : null,
-        a = n?.timeRemaining() ?? 0,
-        o = null != n && a <= 0,
-        l = r.type === s?.type,
-        u = t === i;
-    return !!o && !l && !u;
-}
-class A {
+    p = {};
+class m {
     socket;
     scheduler = (0, o.a)();
     queue = [];
@@ -109,10 +94,10 @@ class A {
             i = this.dispatchMultiple(r, e);
         i && this.scheduler.telemetry.timeEnd(u.YE.TIME_TO_QUEUE_EMPTY);
         let s = performance.now() - t;
-        return s > c.zO && !i && d.log(`Dispatched ${r.length} messages in ${s}ms`), i;
+        return s > d.zO && !i && c.log(`Dispatched ${r.length} messages in ${s}ms`), i;
     };
     getDispatchTimings() {
-        return m;
+        return p;
     }
     getSchedulerTelemetry() {
         return this.scheduler.telemetry;
@@ -139,9 +124,26 @@ class A {
                 (r.Ay.Emitter.batched(() => {
                     for (let r = 0; r < e.length; r++) {
                         let s = e[r];
-                        (n = s.type), (i = i || p.has(s.type));
+                        (n = s.type), (i = i || E.has(s.type));
                         let a = performance.now();
-                        if ((this.dispatchOne(s), (l = performance.now() - a), E(s.type, l), g(e, r, t))) {
+                        if (
+                            (this.dispatchOne(s),
+                            (l = performance.now() - a),
+                            !(function (e, t) {
+                                let [n, r] = p[e] ?? [0, 0];
+                                p[e] = [(n * r + t) / (r + 1), r + 1];
+                            })(s.type, l),
+                            (function (e, t, n) {
+                                if (null == n) return !1;
+                                let r = e[t],
+                                    i = e.length - 1,
+                                    s = t < i ? e[t + 1] : null,
+                                    a = n?.timeRemaining() ?? 0,
+                                    o = null != n && a <= 0,
+                                    l = r.type === s?.type;
+                                return !!o && !l && t !== i;
+                            })(e, r, t))
+                        ) {
                             (o = e.slice(r + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&

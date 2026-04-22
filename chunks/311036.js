@@ -1,56 +1,38 @@
-"use strict";
-n.d(t, { Ay: () => E });
-var r = n(627968),
-    i = n(64700),
-    s = n(580424),
-    a = n(696451),
+n.d(t, { Ay: () => d });
+var l = n(627968),
+    r = n(64700),
+    i = n(580424),
+    s = n(696451),
     o = n(248465),
-    l = n(427262),
-    u = n(634788),
-    c = n(374803);
+    u = n(427262),
+    a = n(634788),
+    m = n(374803);
 n(827669);
-var d = n(985018);
-function _(e, t, n) {
-    return o.Ay.hasSameRoleAsUsername(t, e)
-        ? `@${e.tag}`
-        : `@${l.Ay.getUserTag(e, { identifiable: n ? "never" : "always" })}`;
-}
-function f(e) {
-    return `<@${e.id}>`;
-}
-function p(e) {
-    return e.text;
-}
-function h(e) {
-    return `@${e.name}`;
-}
-function m(e) {
-    return `<@&${e.id}>`;
-}
-let E = {
+var c = n(985018);
+let d = {
     sentinel: "@",
-    stores: [a.Ay],
-    matches: (e, t, n, r, i) =>
-        i.mentions.user !== c.Vf.DENY || i.mentions.role !== c.eP.DENY || i.mentions.global !== c.VN.DENY,
-    queryResults(e, t, n, r, i) {
-        let s = r.mentions.global === c.VN.ALLOW_EVERYONE || r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
-            a = r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
-            l = r.mentions.user !== c.Vf.DENY,
-            u = r.mentions.role !== c.eP.DENY,
-            d = r.mentions.user === c.Vf.ALLOW_GUILD,
-            _ = r.mentions.role === c.eP.ALLOW_ALL;
+    stores: [s.Ay],
+    matches: (e, t, n, l, r) =>
+        r.mentions.user !== m.Vf.DENY || r.mentions.role !== m.eP.DENY || r.mentions.global !== m.VN.DENY,
+    queryResults(e, t, n, l, r) {
+        let i = l.mentions.global === m.VN.ALLOW_EVERYONE || l.mentions.global === m.VN.ALLOW_EVERYONE_OR_HERE,
+            s = l.mentions.global === m.VN.ALLOW_EVERYONE_OR_HERE,
+            u = l.mentions.user !== m.Vf.DENY,
+            a = l.mentions.role !== m.eP.DENY,
+            c = l.mentions.user === m.Vf.ALLOW_GUILD,
+            d = l.mentions.role === m.eP.ALLOW_ALL;
         return {
             results: o.Ay.queryMentionResults({
                 query: n,
                 channel: e,
-                canMentionEveryone: s,
-                canMentionHere: a,
-                canMentionUsers: l,
-                canMentionRoles: u,
-                canMentionOtherGlobals: r.mentions.otherGlobals,
-                includeAllGuildUsers: d,
-                includeNonMentionableRoles: _,
-                request: i,
+                canMentionEveryone: i,
+                canMentionHere: s,
+                canMentionUsers: u,
+                canMentionRoles: a,
+                canMentionOtherGlobals: l.mentions.otherGlobals,
+                includeAllGuildUsers: c,
+                includeNonMentionableRoles: d,
+                request: r,
             }),
         };
     },
@@ -58,77 +40,77 @@ let E = {
         let t,
             n,
             {
-                results: { users: a, globals: o, roles: l },
-                selectedIndex: _,
-                channel: f,
-                query: p,
-                options: h,
-                onHover: m,
-                onClick: E,
+                results: { users: s, globals: o, roles: u },
+                selectedIndex: d,
+                channel: p,
+                query: y,
+                options: A,
+                onHover: h,
+                onClick: g,
             } = e,
-            g = a.map((e, t) =>
-                (0, r.jsx)(
-                    s.Ay.User,
+            M = s.map((e, t) =>
+                (0, l.jsx)(
+                    i.Ay.User,
                     {
-                        guildId: f.guild_id,
-                        onClick: E,
-                        onHover: m,
-                        selected: _ === t,
+                        guildId: p.guild_id,
+                        onClick: g,
+                        onHover: h,
+                        selected: d === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
                         status: e.status,
-                        hidePersonalInformation: h.hidePersonalInformation,
+                        hidePersonalInformation: A.hidePersonalInformation,
                     },
                     e.user.id,
                 ),
             ),
-            A = o.map((e, t) =>
-                (0, r.jsx)(
-                    s.Ay.Generic,
+            I = o.map((e, t) =>
+                (0, l.jsx)(
+                    i.Ay.Generic,
                     {
-                        onClick: E,
-                        onHover: m,
-                        selected: _ === t + a.length,
-                        index: a.length + t,
+                        onClick: g,
+                        onHover: h,
+                        selected: d === t + s.length,
+                        index: s.length + t,
                         text: e.text,
-                        description: h.hideMentionDescription ? null : e.description,
+                        description: A.hideMentionDescription ? null : e.description,
                         "aria-label": e.text,
                     },
                     e.text,
                 ),
             ),
-            I = l.map((e, t) =>
-                (0, r.jsx)(
-                    s.Ay.Role,
+            N = u.map((e, t) =>
+                (0, l.jsx)(
+                    i.Ay.Role,
                     {
-                        onClick: E,
-                        onHover: m,
-                        selected: _ === t + a.length + o.length,
-                        index: a.length + o.length + t,
+                        onClick: g,
+                        onHover: h,
+                        selected: d === t + s.length + o.length,
+                        index: s.length + o.length + t,
                         role: e,
-                        hideDescription: h.hideMentionDescription,
-                        guildId: f.guild_id,
+                        hideDescription: A.hideMentionDescription,
+                        guildId: p.guild_id,
                     },
                     e.id,
                 ),
             );
         return (
-            h.mentions.user === c.Vf.DENY
-                ? ((t = d.t.MLiD1e), (n = d.intl.string(d.t["LPJmL/"])))
-                : ((t = d.t.rPNimn), (n = d.intl.string(d.t["9Oq93m"]))),
-            (0, r.jsxs)(
-                i.Fragment,
+            A.mentions.user === m.Vf.DENY
+                ? ((t = c.t.MLiD1e), (n = c.intl.string(c.t["LPJmL/"])))
+                : ((t = c.t.rPNimn), (n = c.intl.string(c.t["9Oq93m"]))),
+            (0, l.jsxs)(
+                r.Fragment,
                 {
                     children: [
-                        (0, u.wZ)({ titleWithQuery: t, titleWithoutQuery: n, query: p, getQuery: (e) => `@${e}` }),
-                        g,
-                        a.length > 0 && o.length > 0 ? (0, r.jsx)(s.Ay.Divider, {}) : null,
-                        A,
-                        (a.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0)
-                            ? (0, r.jsx)(s.Ay.Divider, {})
-                            : null,
+                        (0, a.wZ)({ titleWithQuery: t, titleWithoutQuery: n, query: y, getQuery: (e) => `@${e}` }),
+                        M,
+                        s.length > 0 && o.length > 0 ? (0, l.jsx)(i.Ay.Divider, {}) : null,
                         I,
+                        (s.length > 0 && u.length > 0) || (o.length > 0 && u.length > 0)
+                            ? (0, l.jsx)(i.Ay.Divider, {})
+                            : null,
+                        N,
                     ],
                 },
                 "mentions",
@@ -136,26 +118,35 @@ let E = {
         );
     },
     onSelect(e) {
+        var t, n, l, r, i, s;
         let {
-                results: { users: t, globals: n, roles: r },
-                index: i,
-                options: s,
-                channel: a,
+                results: { users: a, globals: c, roles: d },
+                index: p,
+                options: y,
+                channel: A,
             } = e,
-            o = t[i],
-            l = n[i - t.length],
-            u = r[i - t.length - n.length],
-            d = c.kc.MENTION;
+            h = a[p],
+            g = c[p - a.length],
+            M = d[p - a.length - c.length],
+            I = m.kc.MENTION;
         return (
-            null != o
-                ? s.insertText(_(o.user, a, s.hidePersonalInformation), f(o.user))
-                : null != l
-                  ? null != l.inlineAutocompleteType
-                      ? (s.insertAutocompleteInput(l.inlineAutocompleteType),
-                        "timestampMentionInput" === l.inlineAutocompleteType && (d = c.kc.TIMESTAMP))
-                      : s.insertText(p(l))
-                  : null != u && s.insertText(h(u), m(u)),
-            { type: d }
+            null != h
+                ? y.insertText(
+                      ((t = h.user),
+                      (n = A),
+                      (l = y.hidePersonalInformation),
+                      o.Ay.hasSameRoleAsUsername(n, t)
+                          ? `@${t.tag}`
+                          : `@${u.Ay.getUserTag(t, { identifiable: l ? "never" : "always" })}`),
+                      ((r = h.user), `<@${r.id}>`),
+                  )
+                : null != g
+                  ? null != g.inlineAutocompleteType
+                      ? (y.insertAutocompleteInput(g.inlineAutocompleteType),
+                        "timestampMentionInput" === g.inlineAutocompleteType && (I = m.kc.TIMESTAMP))
+                      : y.insertText(g.text)
+                  : null != M && y.insertText(((i = M), `@${i.name}`), ((s = M), `<@&${s.id}>`)),
+            { type: I }
         );
     },
 };

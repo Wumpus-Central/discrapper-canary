@@ -1,4 +1,4 @@
-l.d(t, { A: () => r });
-var a = l(627968),
-    n = l(435371);
-let r = (e) => (0, a.jsx)(n.un, { ...e, assetSize: 80, padding: "lg", position: "right" });
+a.d(l, { A: () => i });
+var t = a(627968),
+    s = a(459192);
+let i = (e) => (0, t.jsx)(s.u, { ...e, assetSize: 80, padding: "lg", position: "right" });

@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.UNDERSCORE_IDENT_RE,
-        n = {
+        a = {
             keyword: [
                 "abstract",
                 "as",
@@ -123,19 +123,11 @@ e.exports = function (e) {
                 "var",
             ],
             literal: ["default", "false", "null", "true"],
-        },
-        r = {
-            variants: [
-                { match: [/(class|interface)\s+/, t, /\s+(extends|implements)\s+/, t] },
-                { match: [/class\s+/, t] },
-            ],
-            scope: { 2: "title.class", 4: "title.class.inherited" },
-            keywords: n,
         };
     return {
         name: "X++",
         aliases: ["x++"],
-        keywords: n,
+        keywords: a,
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -143,7 +135,14 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             { className: "meta", begin: "#", end: "$" },
-            r,
+            {
+                variants: [
+                    { match: [/(class|interface)\s+/, t, /\s+(extends|implements)\s+/, t] },
+                    { match: [/class\s+/, t] },
+                ],
+                scope: { 2: "title.class", 4: "title.class.inherited" },
+                keywords: a,
+            },
         ],
     };
 };

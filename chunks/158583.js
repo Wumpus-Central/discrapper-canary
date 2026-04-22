@@ -1,76 +1,75 @@
-n.d(t, { T: () => N });
+n.d(t, { T: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(793574),
-    o = n(688810),
-    d = n(792656),
-    c = n(976860),
-    u = n(779733),
-    m = n(287809),
-    g = n(975571),
-    _ = n(474090),
+    a = n(452027),
+    r = n(331322),
+    o = n(821609),
+    d = n(243721),
+    u = n(793574),
+    c = n(688810),
+    g = n(792656),
+    m = n(976860),
+    _ = n(779733),
+    A = n(287809),
+    h = n(975571),
+    p = n(474090),
     x = n(181079),
-    A = n(422258),
-    h = n(668267),
-    p = n(93055),
-    T = n(652215),
-    f = n(788868),
-    S = n(525736),
-    E = n(985018);
-let b = g.A.getArticleURL(T.MVz.FAVORITES_GUILD);
-function C() {
-    let { analyticsLocations: e } = (0, o.Ay)(r.A.USER_SETTINGS_FAVORITES),
+    E = n(422258),
+    T = n(668267),
+    S = n(93055),
+    f = n(652215),
+    b = n(788868),
+    C = n(335993),
+    v = n(985018);
+let N = h.A.getArticleURL(f.MVz.FAVORITES_GUILD);
+function I() {
+    let { analyticsLocations: e } = (0, c.Ay)(u.A.USER_SETTINGS_FAVORITES),
         t = s.useCallback(() => {
-            (0, h.mv)("settings_page"), (0, c.uh)(T.YYv), (0, u.default)();
+            (0, T.mv)("settings_page"), (0, m.uh)(f.YYv), (0, _.default)();
         }, []);
-    return (0, i.jsx)(o.f5, {
+    return (0, i.jsx)(c.f5, {
         value: e,
-        children: (0, i.jsx)(a.D0$, {
-            label: E.intl.string(S.default.OT1NK5),
-            description: E.intl.format(S.default.GR2KOG, { helpCenterLink: b }),
+        children: (0, i.jsx)(a.D, {
+            label: v.intl.string(C.default.OT1NK5),
+            description: v.intl.format(C.default.GR2KOG, { helpCenterLink: N }),
             layout: "horizontal-responsive",
             badge: "beta",
-            children: (0, i.jsxs)(a.BJc, {
+            children: (0, i.jsxs)(r.B, {
                 direction: "horizontal",
                 gap: 8,
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        variant: "secondary",
-                        text: E.intl.string(S.default["7WwLnr"]),
-                        onClick: t,
-                    }),
-                    (0, i.jsx)(d.A, {
-                        subscriptionTier: f.pe.TIER_2,
-                        defaultTextOverride: E.intl.string(S.default["20sYUU"]),
+                    (0, i.jsx)(o.$, { variant: "secondary", text: v.intl.string(C.default["7WwLnr"]), onClick: t }),
+                    (0, i.jsx)(g.A, {
+                        subscriptionTier: b.pe.TIER_2,
+                        defaultTextOverride: v.intl.string(C.default["20sYUU"]),
                     }),
                 ],
             }),
         }),
     });
 }
-function N() {
+function y() {
     let e = (0, l.bG)([x.A], () => x.A.favoriteGuildEnabled),
-        t = (0, l.bG)([m.default], () => {
-            let e = m.default.getCurrentUser();
-            return null != e && _.Ay.isPremiumExactly(e, f.PremiumTypes.TIER_2);
+        t = (0, l.bG)([A.default], () => {
+            let e = A.default.getCurrentUser();
+            return null != e && p.Ay.isPremiumExactly(e, b.PremiumTypes.TIER_2);
         }),
-        n = (0, p.DZ)(),
-        r = s.useCallback(
+        n = (0, S.DZ)(),
+        a = s.useCallback(
             (e) => {
-                (0, A.tV)(e, "settings_page"), !e && n && (0, c.pX)(T.BVt.ME);
+                (0, E.tV)(e, "settings_page"), !e && n && (0, m.pX)(f.BVt.ME);
             },
             [n],
         );
     return t
-        ? (0, i.jsx)(a.dOG, {
+        ? (0, i.jsx)(d.d, {
               checked: e,
-              description: E.intl.format(S.default.GR2KOG, { helpCenterLink: b }),
-              onChange: r,
-              label: E.intl.string(S.default.OT1NK5),
+              description: v.intl.format(C.default.GR2KOG, { helpCenterLink: N }),
+              onChange: a,
+              label: v.intl.string(C.default.OT1NK5),
               badge: "beta",
           })
-        : (0, i.jsx)(C, {});
+        : (0, i.jsx)(I, {});
 }

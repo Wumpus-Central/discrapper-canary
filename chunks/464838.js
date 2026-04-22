@@ -1,43 +1,43 @@
-n.d(e, { A: () => A });
-var i = n(627968);
+n.d(e, { A: () => _ });
+var a = n(627968);
 n(64700);
-var s = n(492917),
-    r = n(397927),
-    a = n(311907),
+var r = n(247770),
+    s = n(821609),
+    i = n(311907),
     l = n(287809),
     o = n(427262),
     c = n(665909),
     d = n(237170),
-    E = n(12105),
-    _ = n(985018),
-    u = n(286965);
-function A(t) {
-    let { senderId: e, trackAnalyticsEvent: n, onNavigate: A } = t,
-        h = (0, a.bG)([l.default], () => {
+    u = n(12105),
+    E = n(985018),
+    h = n(230780);
+function _(t) {
+    let { senderId: e, trackAnalyticsEvent: n, onNavigate: _ } = t,
+        A = (0, i.bG)([l.default], () => {
             let t = l.default.getUser(e);
             return o.Ay.getName(t);
         });
-    return (0, i.jsx)(E.A, {
-        header: _.intl.string(_.t.sSMgC6),
-        description: _.intl.formatToPlainString(_.t.q2QrTY, { username: h }),
-        heroImage: (0, i.jsx)(s.$wK, { alt: _.intl.string(_.t["3QhxXJ"]) }),
-        children: (0, i.jsxs)("div", {
-            className: u.UD,
+    return (0, a.jsx)(u.A, {
+        header: E.intl.string(E.t.sSMgC6),
+        description: E.intl.formatToPlainString(E.t.q2QrTY, { username: A }),
+        heroImage: (0, a.jsx)(r.$, { alt: E.intl.string(E.t["3QhxXJ"]) }),
+        children: (0, a.jsxs)("div", {
+            className: h.UD,
             children: [
-                (0, i.jsx)(r.Button, {
-                    text: _.intl.string(_.t["+o4Q7e"]),
+                (0, a.jsx)(s.$, {
+                    text: E.intl.string(E.t["+o4Q7e"]),
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        A(d.G.TAKE_ACTION), n(c.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        _(d.G.TAKE_ACTION), n(c.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
                 }),
-                (0, i.jsx)(r.Button, {
-                    text: _.intl.string(_.t.xLkGzP),
+                (0, a.jsx)(s.$, {
+                    text: E.intl.string(E.t.xLkGzP),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        A(d.G.SAFETY_TIPS), n(c.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        _(d.G.SAFETY_TIPS), n(c.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS);
                     },
                 }),
             ],

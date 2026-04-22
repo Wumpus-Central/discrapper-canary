@@ -1,11 +1,7 @@
 "use strict";
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, { A: () => u }), n(321073);
 var r = n(752163);
-let i = 1e3;
-function s(e) {
-    return e / 32768;
-}
-function a(e) {
+function i(e) {
     let t = (e?.headerBytes ?? 0) + (e?.payloadBytes ?? 0) + (e?.paddingBytes ?? 0);
     return (
         (e?.fec?.headerBytes ?? 0) +
@@ -20,30 +16,33 @@ function a(e) {
         t
     );
 }
-function o(e) {
+function s(e) {
     let t = e?.packets ?? 0;
     return (e?.fec?.packets ?? 0) + (e?.retransmitted?.packets ?? 0) + (e?.transmitted?.packets ?? 0) + t;
 }
-function l(e) {
-    return {
-        last: Math.round(e.last * i),
-        mean: Math.round(e.mean * i),
-        p75: Math.round(e.p75 * i),
-        p95: Math.round(e.p95 * i),
-        p99: Math.round(e.p99 * i),
-        max: Math.round(e.max * i),
-    };
-}
-function u(e) {
+function a(e) {
     let t = {};
-    for (let n in e) Array.isArray(e[n]) ? (t[n] = e[n].map((e) => e * i)) : null != e[n] && (t[n] = l(e[n]));
+    for (let r in e)
+        if (Array.isArray(e[r])) t[r] = e[r].map((e) => 1e3 * e);
+        else {
+            var n;
+            null != e[r] &&
+                (t[r] = {
+                    last: Math.round(1e3 * (n = e[r]).last),
+                    mean: Math.round(1e3 * n.mean),
+                    p75: Math.round(1e3 * n.p75),
+                    p95: Math.round(1e3 * n.p95),
+                    p99: Math.round(1e3 * n.p99),
+                    max: Math.round(1e3 * n.max),
+                });
+        }
     return t;
 }
-function c(e, t) {
+function o(e, t) {
     let n = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == n) return;
-    let i = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0),
-        s = e.substreams.reduce((e, t) => e + o(t.rtpStats), 0);
+    let a = e.substreams.reduce((e, t) => e + i(t.rtpStats), 0),
+        o = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0);
     return {
         type: "video",
         ssrc: n.ssrc,
@@ -51,8 +50,8 @@ function c(e, t) {
         sinkWantAsInt: (0, r.q)(t, n.ssrc),
         codec: { id: e.codecPayloadType, name: e.codecName },
         keyFrameInterval: e.keyFrameInterval,
-        bytesSent: i,
-        packetsSent: s,
+        bytesSent: a,
+        packetsSent: o,
         packetsLost: n.rtcpStats?.packetsLost ?? 0,
         fractionLost: n.rtcpStats?.fractionLost ?? 0,
         bitrate: e.mediaBitrate,
@@ -103,9 +102,9 @@ function c(e, t) {
         minResolutionHeight: n.encoderQualityStats?.minResolutionHeight,
     };
 }
-function d(e, t, n, i) {
-    let s = a(e.rtpStats),
-        l = o(e.rtpStats);
+function l(e, t, n, o) {
+    let l = i(e.rtpStats),
+        u = s(e.rtpStats);
     return {
         type: "video",
         ssrc: e.ssrc,
@@ -114,8 +113,8 @@ function d(e, t, n, i) {
         sinkWantLocal: (0, r.D)(n, e.ssrc, !0),
         sinkWantLocalAsInt: (0, r.q)(n, e.ssrc),
         codec: { id: e.codecPayloadType, name: e.codecName },
-        bytesReceived: s,
-        packetsReceived: l,
+        bytesReceived: l,
+        packetsReceived: u,
         packetsLost: e.rtpStats.packetsLost ?? e.rtcpStats.packetsLost,
         fractionLost: e.rtcpStats.fractionLost,
         bitrate: e.totalBitrate,
@@ -155,26 +154,26 @@ function d(e, t, n, i) {
         decryptInvalidNonceCount: e.decryptInvalidNonceCount,
         minResolutionWidth: e.minResolutionWidth,
         minResolutionHeight: e.minResolutionHeight,
-        ...(null != i
-            ? u({
-                  videoJitterBuffer: i.videoJitterBuffer,
-                  videoJitterDelay: i.videoJitterDelay,
-                  videoJitterTarget: i.videoJitterTarget,
+        ...(null != o
+            ? a({
+                  videoJitterBuffer: o.videoJitterBuffer,
+                  videoJitterDelay: o.videoJitterDelay,
+                  videoJitterTarget: o.videoJitterTarget,
               })
             : {}),
     };
 }
-function _(e, t, n, i) {
-    let o = null,
-        l = null,
-        _ = "string" == typeof t ? JSON.parse(t) : t,
-        f = [];
-    if (null != _.outbound) {
-        let { audio: e, video: t, videos: i } = _.outbound;
+function u(e, t, n, s) {
+    let u = null,
+        d = null,
+        c = "string" == typeof t ? JSON.parse(t) : t,
+        _ = [];
+    if (null != c.outbound) {
+        let { audio: e, video: t, videos: i } = c.outbound;
         if (
             (null != e &&
-                ((l = (l ?? 0) + e.bytesSent),
-                f.push({
+                ((d = (d ?? 0) + e.bytesSent),
+                _.push({
                     type: "audio",
                     ssrc: e.ssrc,
                     sinkWant: (0, r.D)(n, e.ssrc, !1),
@@ -184,7 +183,7 @@ function _(e, t, n, i) {
                     packetsSent: e.packetsSent,
                     packetsLost: Math.max(0, e.packetsLost),
                     fractionLost: 100 * e.fractionLost,
-                    audioLevel: s(e.audioLevel),
+                    audioLevel: e.audioLevel / 32768,
                     bitrate: e.mediaBitrate,
                     bitrateTarget: e.targetMediaBitrate,
                     audioDetected: e.speaking,
@@ -207,132 +206,132 @@ function _(e, t, n, i) {
             null != i)
         )
             i.forEach((e) => {
-                let t = c(e, n);
-                null != t && ((l = (l ?? 0) + t.bytesSent), f.push(t));
+                let t = o(e, n);
+                null != t && ((d = (d ?? 0) + t.bytesSent), _.push(t));
             });
         else if (null != t) {
-            let e = c(t, n);
-            null != e && ((l = (l ?? 0) + e.bytesSent), f.push(e));
+            let e = o(t, n);
+            null != e && ((d = (d ?? 0) + e.bytesSent), _.push(e));
         }
     }
-    let p = {};
-    null != _.inbound &&
-        _.inbound.forEach((e) => {
-            let { id: t, audio: l, video: c, videos: _, playout: f } = e;
+    let f = {};
+    null != c.inbound &&
+        c.inbound.forEach((e) => {
+            let { id: t, audio: o, video: d, videos: c, playout: _ } = e;
             if (
-                ((p[t] = []),
-                null != l &&
-                    ((o = (o ?? 0) + l.bytesReceived),
-                    p[t].push({
+                ((f[t] = []),
+                null != o &&
+                    ((u = (u ?? 0) + o.bytesReceived),
+                    f[t].push({
                         type: "audio",
-                        ssrc: l.ssrc,
-                        sinkWant: (0, r.D)(n, l.ssrc, !1),
-                        sinkWantAsInt: (0, r.q)(n, l.ssrc),
-                        codec: { id: l.codecPayloadType, name: l.codecName },
-                        bytesReceived: l.bytesReceived,
-                        packetsReceived: l.packetsReceived,
-                        packetsLost: l.packetsLost,
-                        fractionLost: 100 * l.fractionLost,
-                        fecPacketsReceived: l.fecPacketsReceived,
-                        fecPacketsDiscarded: l.fecPacketsDiscarded,
-                        audioLevel: s(l.audioLevel),
-                        audioDetected: l.speaking,
-                        currentSampleRate: l.currentSampleRate,
-                        jitter: l.jitter,
-                        jitterBuffer: l.jitterBuffer,
-                        jitterBufferPreferred: l.jitterBufferPreferred,
-                        decodingCNG: l.decodingCNG,
-                        decodingMutedOutput: l.decodingMutedOutput,
-                        decodingNormal: l.decodingNormal,
-                        decodingPLC: l.decodingPLC,
-                        decodingPLCCNG: l.decodingPLCCNG,
-                        nackCount: l.nackCount,
-                        accelerateRate: 100 * l.accelerateRate,
-                        expandRate: 100 * l.expandRate,
-                        preemptiveExpandRate: 100 * l.preemptiveExpandRate,
-                        speechExpandRate: 100 * l.speechExpandRate,
-                        secondaryDecodedRate: 100 * l.secondaryDecodedRate,
-                        opSilence: l.opSilence,
-                        opNormal: l.opNormal,
-                        opMerge: l.opMerge,
-                        opExpand: l.opExpand,
-                        opAccelerate: l.opAccelerate,
-                        opPreemptiveExpand: l.opPreemptiveExpand,
-                        opCNG: l.opCNG,
-                        delayEstimate: l.delayEstimate,
-                        passthroughCount: l.passthroughCount,
-                        decryptSuccessCount: l.decryptSuccessCount,
-                        decryptFailureCount: l.decryptFailureCount,
-                        decryptDuration: l.decryptDuration,
-                        decryptAttempts: l.decryptAttempts,
-                        decryptMissingKeyCount: l.decryptMissingKeyCount,
-                        decryptInvalidNonceCount: l.decryptInvalidNonceCount,
-                        ...(null != f
-                            ? u({
-                                  audioJitterBuffer: f.audioJitterBuffer,
-                                  audioJitterBufferSamples: f.audioJitterBufferSamples,
-                                  audioJitterDelay: f.audioJitterDelay,
-                                  audioJitterDelaySamples: f.audioJitterDelaySamples,
-                                  audioJitterTarget: f.audioJitterTarget,
-                                  audioJitterTargetSamples: f.audioJitterTargetSamples,
-                                  audioPlayoutUnderruns: f.audioPlayoutUnderruns,
-                                  relativeReceptionDelay: f.relativeReceptionDelay,
-                                  relativePlayoutDelay: f.relativePlayoutDelay,
+                        ssrc: o.ssrc,
+                        sinkWant: (0, r.D)(n, o.ssrc, !1),
+                        sinkWantAsInt: (0, r.q)(n, o.ssrc),
+                        codec: { id: o.codecPayloadType, name: o.codecName },
+                        bytesReceived: o.bytesReceived,
+                        packetsReceived: o.packetsReceived,
+                        packetsLost: o.packetsLost,
+                        fractionLost: 100 * o.fractionLost,
+                        fecPacketsReceived: o.fecPacketsReceived,
+                        fecPacketsDiscarded: o.fecPacketsDiscarded,
+                        audioLevel: o.audioLevel / 32768,
+                        audioDetected: o.speaking,
+                        currentSampleRate: o.currentSampleRate,
+                        jitter: o.jitter,
+                        jitterBuffer: o.jitterBuffer,
+                        jitterBufferPreferred: o.jitterBufferPreferred,
+                        decodingCNG: o.decodingCNG,
+                        decodingMutedOutput: o.decodingMutedOutput,
+                        decodingNormal: o.decodingNormal,
+                        decodingPLC: o.decodingPLC,
+                        decodingPLCCNG: o.decodingPLCCNG,
+                        nackCount: o.nackCount,
+                        accelerateRate: 100 * o.accelerateRate,
+                        expandRate: 100 * o.expandRate,
+                        preemptiveExpandRate: 100 * o.preemptiveExpandRate,
+                        speechExpandRate: 100 * o.speechExpandRate,
+                        secondaryDecodedRate: 100 * o.secondaryDecodedRate,
+                        opSilence: o.opSilence,
+                        opNormal: o.opNormal,
+                        opMerge: o.opMerge,
+                        opExpand: o.opExpand,
+                        opAccelerate: o.opAccelerate,
+                        opPreemptiveExpand: o.opPreemptiveExpand,
+                        opCNG: o.opCNG,
+                        delayEstimate: o.delayEstimate,
+                        passthroughCount: o.passthroughCount,
+                        decryptSuccessCount: o.decryptSuccessCount,
+                        decryptFailureCount: o.decryptFailureCount,
+                        decryptDuration: o.decryptDuration,
+                        decryptAttempts: o.decryptAttempts,
+                        decryptMissingKeyCount: o.decryptMissingKeyCount,
+                        decryptInvalidNonceCount: o.decryptInvalidNonceCount,
+                        ...(null != _
+                            ? a({
+                                  audioJitterBuffer: _.audioJitterBuffer,
+                                  audioJitterBufferSamples: _.audioJitterBufferSamples,
+                                  audioJitterDelay: _.audioJitterDelay,
+                                  audioJitterDelaySamples: _.audioJitterDelaySamples,
+                                  audioJitterTarget: _.audioJitterTarget,
+                                  audioJitterTargetSamples: _.audioJitterTargetSamples,
+                                  audioPlayoutUnderruns: _.audioPlayoutUnderruns,
+                                  relativeReceptionDelay: _.relativeReceptionDelay,
+                                  relativePlayoutDelay: _.relativePlayoutDelay,
                               })
                             : {}),
                     })),
-                null != _)
+                null != c)
             )
-                _.forEach((e) => {
-                    let r = d(e, n, i, f);
+                c.forEach((e) => {
+                    let r = l(e, n, s, _);
                     if (null != r) {
-                        let n = a(e.rtpStats);
-                        (o = (o ?? 0) + n), p[t].push(r);
+                        let n = i(e.rtpStats);
+                        (u = (u ?? 0) + n), f[t].push(r);
                     }
                 });
-            else if (null != c) {
-                let e = d(c, n, i, f);
+            else if (null != d) {
+                let e = l(d, n, s, _);
                 if (null != e) {
-                    let n = a(c.rtpStats);
-                    (o = (o ?? 0) + n), p[t].push(e);
+                    let n = i(d.rtpStats);
+                    (u = (u ?? 0) + n), f[t].push(e);
                 }
             }
         });
-    let { transport: h, clips: m } = _,
-        E = {};
-    null != h &&
-        ((E.availableOutgoingBitrate = h.sendBandwidth),
-        (E.ping = h.rtt),
-        (E.decryptionFailures = h.decryptionFailures),
-        null != h.routingFailures && (E.routingFailures = h.routingFailures),
-        (E.localAddress = h.localAddress),
-        (E.pacerDelay = h.pacerDelay),
-        null != h.receiverReports && (E.receiverReports = h.receiverReports),
-        (E.receiverBitrateEstimate = h.receiverBitrateEstimate),
-        (E.outboundBitrateEstimate = h.outboundBitrateEstimate),
-        (E.inboundBitrateEstimate = h.inboundBitrateEstimate ?? 0),
-        (E.packetsReceived = h.packetsReceived),
-        (E.packetsSent = h.packetsSent),
-        null != h.secureFramesProtocolVersion && (E.secureFramesProtocolVersion = h.secureFramesProtocolVersion)),
-        (h?.bytesReceived == null && (null == o || Number.isNaN(o))) ||
-            (E.bytesReceived = h?.bytesReceived ?? o ?? void 0),
-        (h?.bytesSent == null && (null == l || Number.isNaN(l))) || (E.bytesSent = h?.bytesSent ?? l ?? void 0);
-    let { screenshare: g, camera: A, audioDevice: I } = _;
+    let { transport: E, clips: h } = c,
+        p = {};
+    null != E &&
+        ((p.availableOutgoingBitrate = E.sendBandwidth),
+        (p.ping = E.rtt),
+        (p.decryptionFailures = E.decryptionFailures),
+        null != E.routingFailures && (p.routingFailures = E.routingFailures),
+        (p.localAddress = E.localAddress),
+        (p.pacerDelay = E.pacerDelay),
+        null != E.receiverReports && (p.receiverReports = E.receiverReports),
+        (p.receiverBitrateEstimate = E.receiverBitrateEstimate),
+        (p.outboundBitrateEstimate = E.outboundBitrateEstimate),
+        (p.inboundBitrateEstimate = E.inboundBitrateEstimate ?? 0),
+        (p.packetsReceived = E.packetsReceived),
+        (p.packetsSent = E.packetsSent),
+        null != E.secureFramesProtocolVersion && (p.secureFramesProtocolVersion = E.secureFramesProtocolVersion)),
+        (E?.bytesReceived == null && (null == u || Number.isNaN(u))) ||
+            (p.bytesReceived = E?.bytesReceived ?? u ?? void 0),
+        (E?.bytesSent == null && (null == d || Number.isNaN(d))) || (p.bytesSent = E?.bytesSent ?? d ?? void 0);
+    let { screenshare: m, camera: g, audioDevice: A } = c;
     return {
         mediaEngineConnectionId: e,
-        transport: E,
-        screenshare: g,
+        transport: p,
+        screenshare: m,
         camera:
-            null != A
+            null != g
                 ? {
-                      capturedFramesDropped: A.capturedFramesDropped,
-                      capturedFramesCount: A.capturedFramesCount,
-                      capturedFramesMean: A.capturedFramesMean,
-                      capturedFramesStdev: A.capturedFramesStdev,
+                      capturedFramesDropped: g.capturedFramesDropped,
+                      capturedFramesCount: g.capturedFramesCount,
+                      capturedFramesMean: g.capturedFramesMean,
+                      capturedFramesStdev: g.capturedFramesStdev,
                   }
                 : null,
-        clips: m,
-        audioDevice: I,
-        rtp: { inbound: p, outbound: f },
+        clips: h,
+        audioDevice: A,
+        rtp: { inbound: f, outbound: _ },
     };
 }

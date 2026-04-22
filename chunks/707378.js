@@ -1,21 +1,21 @@
-t.d(n, { A: () => g });
-var l = t(627968),
-    i = t(311907),
-    r = t(397927),
-    a = t(690990),
-    d = t(961350),
-    s = t(734057),
-    u = t(994500),
-    o = t(309010),
-    c = t(652215),
-    A = t(985018);
+n.d(t, { A: () => g });
+var i = n(627968),
+    l = n(311907),
+    a = n(477782),
+    r = n(690990),
+    d = n(961350),
+    o = n(734057),
+    s = n(994500),
+    u = n(309010),
+    c = n(652215),
+    A = n(985018);
 function g(e) {
-    let { user: n, context: t } = e,
-        g = (0, i.bG)([d.default], () => d.default.getId() === n.id),
-        m = (0, i.bG)([u.A], () => u.A.isBlocked(n.id)),
-        x = (0, i.bG)([o.A, s.A], () => o.A.getVoiceChannelId() === s.A.getDMFromUserId(n.id)),
-        { runVoiceCallAction: b } = (0, a.b)({ userId: n.id });
-    return g || t === c.BRT.POPOUT || x || n.bot || n.isProvisional
+    let { user: t, context: n } = e,
+        g = (0, l.bG)([d.default], () => d.default.getId() === t.id),
+        f = (0, l.bG)([s.A], () => s.A.isBlocked(t.id)),
+        E = (0, l.bG)([u.A, o.A], () => u.A.getVoiceChannelId() === o.A.getDMFromUserId(t.id)),
+        { runVoiceCallAction: b } = (0, r.b)({ userId: t.id });
+    return g || n === c.BRT.POPOUT || E || t.bot || t.isProvisional
         ? null
-        : (0, l.jsx)(r.Drp, { id: "call", label: A.intl.string(A.t["ZeP+kK"]), action: b, disabled: m });
+        : (0, i.jsx)(a.Dr, { id: "call", label: A.intl.string(A.t["ZeP+kK"]), action: b, disabled: f });
 }

@@ -1,102 +1,101 @@
-"use strict";
-n.d(t, { A: () => N });
-var r = n(627968),
-    i = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    o = n(311907),
-    l = n(52133),
-    u = n(793574),
-    c = n(688810),
-    d = n(661492),
-    _ = n(594832),
-    f = n(146423),
-    p = n(121700),
-    h = n(662349),
-    m = n(754804),
-    E = n(287809),
-    g = n(403362),
-    A = n(317560),
-    I = n(533406),
-    T = n(788868),
-    S = n(699976),
-    y = n(985018);
-let v = S.Z.SIZE_90;
-function N(e) {
+a.d(t, { A: () => C });
+var n = a(627968),
+    r = a(64700),
+    i = a(735438),
+    l = a.n(i),
+    o = a(311907),
+    s = a(52133),
+    c = a(793574),
+    d = a(688810),
+    u = a(661492),
+    _ = a(594832),
+    p = a(146423),
+    f = a(121700),
+    h = a(662349),
+    m = a(754804),
+    v = a(287809),
+    g = a(403362),
+    A = a(317560),
+    I = a(533406),
+    S = a(788868),
+    b = a(699976),
+    E = a(985018);
+let x = b.Z.SIZE_90;
+function C(e) {
     let {
             sku: t,
-            source: n,
-            application: s,
-            guildId: S,
-            showIcons: N,
-            channelId: C,
-            userIdsForGifting: R,
-            userIdsForRecommendation: O,
-            spec: b = v,
+            source: a,
+            application: i,
+            guildId: b,
+            showIcons: C,
+            channelId: T,
+            userIdsForGifting: O,
+            userIdsForRecommendation: R,
+            spec: y = x,
         } = e,
-        [D, L] = i.useState(a().uniq(R)),
-        [w, M] = i.useState(!1),
-        [P, x] = i.useState(a().uniq(O)),
-        { analyticsLocations: k } = (0, c.Ay)(
-            u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
-            u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+        [w, N] = r.useState(l().uniq(O)),
+        [k, L] = r.useState(!1),
+        [P, U] = r.useState(l().uniq(R)),
+        { analyticsLocations: F } = (0, d.Ay)(
+            c.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
+            c.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
-    i.useEffect(() => {
-        x((e) => {
-            let t = a().uniq(O);
-            return (0, l.v)(e, t) ? e : t;
+    r.useEffect(() => {
+        U((e) => {
+            let t = l().uniq(R);
+            return (0, s.v)(e, t) ? e : t;
         });
-    }, [O]),
-        i.useEffect(() => {
-            L((e) => {
-                let t = a().uniq(R);
-                return (0, l.v)(e, t) ? e : t;
+    }, [R]),
+        r.useEffect(() => {
+            N((e) => {
+                let t = l().uniq(O);
+                return (0, s.v)(e, t) ? e : t;
             });
-        }, [R]);
-    let U = (0, o.bG)([E.default], () => (1 === D.length ? E.default.getUser(D[0]) : void 0), [D]),
-        G = (0, o.yK)([E.default], () => P.map((e) => E.default.getUser(e)).filter(g.Vq), [P]),
-        F = i.useCallback(() => {
-            null != s &&
-                null != s.guildId &&
+        }, [O]);
+    let M = (0, o.bG)([v.default], () => (1 === w.length ? v.default.getUser(w[0]) : void 0), [w]),
+        H = (0, o.yK)([v.default], () => P.map((e) => v.default.getUser(e)).filter(g.Vq), [P]),
+        j = r.useCallback(() => {
+            null != i &&
+                null != i.guildId &&
                 (0, A.R)({
                     skuId: t.id,
                     applicationId: t.applicationId,
                     isStorefront: !1,
-                    giftRecipient: U,
-                    giftingOrigin: T.vQ.SHOP_PAGE,
-                    analyticsLocations: k,
+                    giftRecipient: M,
+                    giftingOrigin: S.vQ.SHOP_PAGE,
+                    analyticsLocations: F,
                 });
-        }, [s, t.id, t.applicationId, U, k]),
-        V = i.useCallback(() => {
+        }, [i, t.id, t.applicationId, M, F]),
+        B = r.useCallback(() => {
             (0, I.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: U,
-                    additionalUserIds: D.length > 1 ? D : void 0,
-                    giftingOrigin: T.vQ.SHOP_PAGE,
+                    giftRecipient: M,
+                    additionalUserIds: w.length > 1 ? w : void 0,
+                    giftingOrigin: S.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: k },
+                { analyticsLocations: F },
             );
-        }, [t, U, D, k]),
-        { label: B, icon: H } = (0, h.h)({ wishlistOwner: U, isOwned: !1, shortText: !0 });
-    return (0, r.jsxs)(f.A, {
+        }, [t, M, w, F]),
+        { label: W, icon: D } = (0, h.h)({ wishlistOwner: M, isOwned: !1, shortText: !0 });
+    return (0, n.jsxs)(p.A, {
         sku: t,
-        user: U,
-        spec: b,
-        onClick: F,
-        "aria-label": y.intl.formatToPlainString(y.t.ZBB4Ty, { productName: (0, d.TC)(t) }),
-        onHoverOrFocusChange: M,
+        user: M,
+        spec: y,
+        onClick: j,
+        "aria-label": E.intl.formatToPlainString(E.t.ZBB4Ty, { productName: (0, u.TC)(t) }),
+        onHoverOrFocusChange: L,
         children: [
-            (0, r.jsx)(h.A, { spec: b, onClick: V, isHoveringOrFocusing: w, label: B, icon: H }),
-            (0, r.jsx)(p.A, {
-                spec: b,
+            (0, n.jsx)(h.A, { spec: y, onClick: B, isHoveringOrFocusing: k, label: W, icon: D }),
+            (0, n.jsx)(f.A, {
+                spec: y,
                 sku: t,
-                isCardHovered: w,
+                isCardHovered: k,
                 location: "ContextualSocialLayerSkuItemCard",
                 replacedElement:
-                    N && n === _.uS.WISHLIST && G.length > 0
-                        ? (0, r.jsx)(m.X, { spec: b, users: G, guildId: S ?? void 0, channelId: C ?? void 0 })
+                    C && a === _.uS.WISHLIST && H.length > 0
+                        ? (0, n.jsx)(m.X, { spec: y, users: H, guildId: b ?? void 0, channelId: T ?? void 0 })
                         : null,
             }),
         ],

@@ -1,20 +1,20 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(985018);
-let s = (e) => {
-    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: s } = e;
-    return (0, r.jsxs)(i.W1t, {
+a.d(i, { A: () => t });
+var r = a(627968);
+a(64700);
+var n = a(861672),
+    l = a(477782),
+    s = a(985018);
+let t = (e) => {
+    let { onChangeAvatar: i, onChangeAvatarDecoration: a, onClose: t } = e;
+    return (0, r.jsxs)(n.W, {
         "data-menu-migrated": !0,
-        onClose: s,
+        onClose: t,
         onSelect: void 0,
         navId: "user-settings-change-avatar",
-        "aria-label": a.intl.string(a.t.ldIeAd),
+        "aria-label": s.intl.string(s.t.ldIeAd),
         children: [
-            (0, r.jsx)(i.Drp, { id: "change-avatar", action: t, label: a.intl.string(a.t["4OynCD"]) }),
-            (0, r.jsx)(i.Drp, { id: "change-avatar-decoration", action: n, label: a.intl.string(a.t.BVcYCx) }),
+            (0, r.jsx)(l.Dr, { id: "change-avatar", action: i, label: s.intl.string(s.t["4OynCD"]) }),
+            (0, r.jsx)(l.Dr, { id: "change-avatar-decoration", action: a, label: s.intl.string(s.t.BVcYCx) }),
         ],
     });
 };

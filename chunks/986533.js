@@ -3,26 +3,26 @@ n.d(t, { A: () => I });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    l = n(397927),
+    l = n.n(r),
+    s = n(834730),
     a = n(709066),
-    c = n(763754),
-    o = n(643204),
+    o = n(763754),
+    c = n(643204),
     u = n(809115),
     d = n(888675),
     _ = n(652215),
     E = n(705751),
     A = n(985018),
-    m = n(240775);
+    m = n(393239);
 function I(e) {
     let { message: t, compact: n, usernameHook: r } = e,
-        I = (0, c.Ay)(t),
+        I = (0, o.Ay)(t),
         T = r(I),
         {
-            avatarSrc: g,
-            eventHandlers: { onMouseEnter: N, onMouseLeave: f },
+            avatarSrc: N,
+            eventHandlers: { onMouseEnter: g, onMouseLeave: p },
         } = (0, u.a)(!0),
-        p =
+        C =
             "" !== t.content
                 ? new Date(t.content).toLocaleString(A.intl.currentLocale, {
                       hour: "numeric",
@@ -33,24 +33,24 @@ function I(e) {
                   })
                 : "";
     return (0, i.jsx)("div", {
-        onMouseEnter: N,
-        onMouseLeave: f,
+        onMouseEnter: g,
+        onMouseLeave: p,
         children: (0, i.jsx)(d.A, {
-            className: s()(m.rs, { [m.oE]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.l, { src: g }),
+            className: l()(m.rs, { [m.oE]: n }),
+            iconNode: n ? null : (0, i.jsx)(u.l, { src: N }),
             iconContainerClassName: m.zc,
             compact: n,
             children: (0, i.jsxs)("div", {
-                className: s()(m.Qs, { [m.oE]: n }),
+                className: l()(m.Qs, { [m.oE]: n }),
                 children: [
-                    (0, i.jsx)(o.ix, {
+                    (0, i.jsx)(c.ix, {
                         message: t,
                         messageClassname: m.he,
-                        className: s()(m.QV, m.he, { [m.oE]: n }),
+                        className: l()(m.QV, m.he, { [m.oE]: n }),
                         username: (0, i.jsxs)("div", {
                             className: m.he,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(s.E, {
                                     variant: "text-md/normal",
                                     color: "text-brand",
                                     tag: "span",
@@ -64,10 +64,10 @@ function I(e) {
                         showTimestamp: !0,
                     }),
                     (0, i.jsx)("div", {
-                        className: s()(m.__invalid_messageContent, { [m.oE]: n }),
+                        className: l()(m.__invalid_messageContent, { [m.oE]: n }),
                         children:
                             t.type === _.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? A.intl.format(A.t["+m8eD7"], { username: I.nick, usernameHook: T, time: p })
+                                ? A.intl.format(A.t["+m8eD7"], { username: I.nick, usernameHook: T, time: C })
                                 : A.intl.format(A.t["BHeke+"], { username: I.nick, usernameHook: T }),
                     }),
                 ],

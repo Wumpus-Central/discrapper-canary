@@ -1,52 +1,54 @@
-"use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => x });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(239705),
-    r = n(870758),
-    a = n(741207),
-    o = n(437242),
-    d = n(411335),
-    c = n(524190);
-function u(e) {
-    let { action: t, triggerType: n, toggled: r, onToggleAction: a } = e,
-        o = (0, l.x)(t.type, t, n);
-    if (null == o) return null;
-    let { headerText: d, descriptionText: u, icon: m } = o;
+var l = n(534514),
+    s = n(834730),
+    r = n(939249),
+    a = n(658675),
+    o = n(239705),
+    d = n(870758),
+    c = n(741207),
+    u = n(437242),
+    m = n(411335),
+    g = n(411374);
+function h(e) {
+    let { action: t, triggerType: n, toggled: d, onToggleAction: c } = e,
+        u = (0, o.x)(t.type, t, n);
+    if (null == u) return null;
+    let { headerText: m, descriptionText: h, icon: x } = u;
     return (0, i.jsxs)("div", {
-        className: c.Ik,
+        className: g.Ik,
         children: [
             (0, i.jsx)("div", {
-                className: c.TV,
-                children: (0, i.jsx)(m, { size: "md", color: "currentColor", className: c.gE }),
+                className: g.TV,
+                children: (0, i.jsx)(x, { size: "md", color: "currentColor", className: g.gE }),
             }),
             (0, i.jsxs)("div", {
-                className: c.xj,
+                className: g.xj,
                 children: [
-                    (0, i.jsx)(s.Heading, { variant: "heading-sm/semibold", children: d }),
-                    (0, i.jsx)(s.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: u }),
+                    (0, i.jsx)(l.D, { variant: "heading-sm/semibold", children: m }),
+                    (0, i.jsx)(s.E, { color: "interactive-text-default", variant: "text-xs/medium", children: h }),
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(s.DUT, {
-                    onClick: o.isEditable ? () => a(!1) : void 0,
-                    children: (0, i.jsx)(s.P7L, { checked: r, disabled: !o.isEditable }),
+                children: (0, i.jsx)(r.D, {
+                    onClick: u.isEditable ? () => c(!1) : void 0,
+                    children: (0, i.jsx)(a.P, { checked: d, disabled: !u.isEditable }),
                 }),
             }),
         ],
     });
 }
-function m(e) {
-    let { action: t, guildId: n, triggerType: s, toggled: l, onToggleAction: c } = e;
+function x(e) {
+    let { action: t, guildId: n, triggerType: l, toggled: s, onToggleAction: r } = e;
     switch (t.type) {
-        case d.AH.FLAG_TO_CHANNEL:
-            return (0, i.jsx)(o.A, { action: t, triggerType: s, toggled: l, onToggleAction: c });
-        case d.AH.USER_COMMUNICATION_DISABLED:
-            return (0, i.jsx)(a.A, { action: t, guildId: n, triggerType: s, toggled: l, onToggleAction: c });
-        case d.AH.BLOCK_MESSAGE:
-            return (0, i.jsx)(r.A, { action: t, triggerType: s, toggled: l, onToggleAction: c });
+        case m.AH.FLAG_TO_CHANNEL:
+            return (0, i.jsx)(u.A, { action: t, triggerType: l, toggled: s, onToggleAction: r });
+        case m.AH.USER_COMMUNICATION_DISABLED:
+            return (0, i.jsx)(c.A, { action: t, guildId: n, triggerType: l, toggled: s, onToggleAction: r });
+        case m.AH.BLOCK_MESSAGE:
+            return (0, i.jsx)(d.A, { action: t, triggerType: l, toggled: s, onToggleAction: r });
         default:
-            return (0, i.jsx)(u, { action: t, guildId: n, toggled: l, triggerType: s, onToggleAction: c });
+            return (0, i.jsx)(h, { action: t, guildId: n, toggled: s, triggerType: l, onToggleAction: r });
     }
 }

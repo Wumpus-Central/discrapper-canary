@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+l.d(t, { A: () => n });
+var n = {};
+n = {
     ascending: "artan sırada",
     ascendingSort: (e) => `${e.columnName} s\xfctuna g\xf6re artan d\xfczende s\u{131}rala`,
     columnSize: (e) => `${e.value} piksel`,

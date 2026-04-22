@@ -1,25 +1,26 @@
-n.d(t, { Z: () => v, default: () => I }), n(321073);
+n.d(t, { Z: () => S, default: () => I }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
-    a = n(397927),
-    r = n(846293),
-    o = n(49229),
-    c = n(631670),
-    d = n(754487),
-    u = n(837057),
+    a = n(32880),
+    r = n(347704),
+    o = n(846293),
+    c = n(49229),
+    d = n(631670),
+    u = n(754487),
+    p = n(837057),
     m = n(207803),
-    p = n(287809),
-    x = n(53505),
-    g = n(723702),
-    h = n(625950),
-    C = n(488995),
-    N = n(324580),
-    S = n(985018),
-    j = n(139763),
+    x = n(287809),
+    g = n(53505),
+    h = n(723702),
+    C = n(625950),
+    N = n(488995),
+    b = n(324580),
+    j = n(985018),
+    E = n(139763),
     A = n(555672),
-    b = n(938822),
-    v =
+    v = n(977544),
+    S =
         (((i = {}).WELCOME = "welcome"),
         (i.APPEARANCE = "appearance"),
         (i.DOWNLOAD_DESKTOP = "download-desktop"),
@@ -30,39 +31,39 @@ var i,
         i);
 function I(e) {
     let { onClose: t, ...n } = e,
-        [i, v] = s.useState("welcome"),
-        [I, T] = s.useState(null),
-        [E, D] = s.useState(() => p.default.getCurrentUser()?.globalName ?? ""),
-        [f, L] = s.useState(""),
-        [k, _] = s.useState(""),
-        [U, y] = s.useState(""),
+        [i, S] = s.useState("welcome"),
+        [I, f] = s.useState(null),
+        [y, D] = s.useState(() => x.default.getCurrentUser()?.globalName ?? ""),
+        [T, k] = s.useState(""),
+        [L, _] = s.useState(""),
+        [U, w] = s.useState(""),
         O = s.useCallback((e) => {
-            T(e), v(e);
+            f(e), S(e);
         }, []),
-        G = s.useCallback(
+        P = s.useCallback(
             (e, t) => {
-                "next-steps" === e && null != I && T(null), v(e);
+                "next-steps" === e && null != I && f(null), S(e);
             },
             [I],
         ),
-        w = s.useCallback(async () => {
-            let e = E.trim(),
-                t = p.default.getCurrentUser()?.globalName ?? "";
+        G = s.useCallback(async () => {
+            let e = y.trim(),
+                t = x.default.getCurrentUser()?.globalName ?? "";
             if (e.length > 0 && e !== t)
                 try {
-                    await (0, c._L)({ globalName: e });
+                    await (0, d._L)({ globalName: e });
                 } catch {}
-            if (f.trim().length > 0)
+            if (T.trim().length > 0)
                 try {
-                    await (0, m.gi)({ bio: f.trim() });
+                    await (0, m.gi)({ bio: T.trim() });
                 } catch {}
-        }, [E, f]),
-        P = s.useCallback(async () => (await w(), !0), [w]),
+        }, [y, T]),
+        M = s.useCallback(async () => (await G(), !0), [G]),
         R = s.useCallback(async () => {
-            let e = k.trim().replace(/^(https?:\/\/)?(discord\.gg\/|discord\.com\/invite\/)/, "");
+            let e = L.trim().replace(/^(https?:\/\/)?(discord\.gg\/|discord\.com\/invite\/)/, "");
             if (0 === e.length) return !1;
             try {
-                await r.Ay.acceptInviteAndTransitionToInviteChannel({
+                await o.Ay.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: e,
                     context: { location: "New User Onboarding" },
                 });
@@ -70,126 +71,126 @@ function I(e) {
                 return !1;
             }
             return !0;
-        }, [k]),
-        M = s.useCallback(async () => {
-            await w(),
-                await t(),
-                (0, u.transitionToGlobalDiscovery)({ tab: C.GlobalDiscoveryTab.SERVERS, entrypoint: N.J8.UNKNOWN });
-        }, [w, t]),
+        }, [L]),
         B = s.useCallback(async () => {
+            await G(),
+                await t(),
+                (0, p.transitionToGlobalDiscovery)({ tab: N.GlobalDiscoveryTab.SERVERS, entrypoint: b.J8.UNKNOWN });
+        }, [G, t]),
+        K = s.useCallback(async () => {
             let e = U.trim();
             if (0 === e.length) return !1;
             try {
-                await o.A.sendRequest({ discordTag: e, context: { location: "New User Onboarding" } });
+                await c.A.sendRequest({ discordTag: e, context: { location: "New User Onboarding" } });
             } catch {
                 return !1;
             }
             return !0;
         }, [U]),
-        K = s.useCallback(async () => {
-            await w(), await t(), (0, d.openCreateGuildModal)({ location: "New User Onboarding" });
-        }, [w, t]),
-        J = s.useCallback(() => {
-            window.open((0, x.SU)());
+        q = s.useCallback(async () => {
+            await G(), await t(), (0, u.openCreateGuildModal)({ location: "New User Onboarding" });
+        }, [G, t]),
+        V = s.useCallback(() => {
+            window.open((0, g.SU)());
         }, []),
-        q = s.useMemo(() => {
+        J = s.useMemo(() => {
             let e = [
                 {
                     stepKey: "welcome",
                     modalProps: {
-                        graphic: { type: "image", src: j.A },
+                        graphic: { type: "image", src: E.A },
                         gradientColor: "purple",
-                        title: S.intl.string(S.t.A1Q7a8),
-                        subtitle: S.intl.string(S.t.jJZohU),
+                        title: j.intl.string(j.t.A1Q7a8),
+                        subtitle: j.intl.string(j.t.jJZohU),
                     },
-                    body: (0, l.jsx)(h.Q7, {}),
-                    nextButtonProps: { text: S.intl.string(S.t.LhlgY9) },
+                    body: (0, l.jsx)(C.Q7, {}),
+                    nextButtonProps: { text: j.intl.string(j.t.LhlgY9) },
                 },
                 {
                     stepKey: "appearance",
-                    modalProps: { title: S.intl.string(S.t.mTkQFn), subtitle: S.intl.string(S.t["2b+0N6"]) },
-                    body: (0, l.jsx)(h.CE, {}),
+                    modalProps: { title: j.intl.string(j.t.mTkQFn), subtitle: j.intl.string(j.t["2b+0N6"]) },
+                    body: (0, l.jsx)(C.CE, {}),
                 },
             ];
             return (
-                g.isPlatformEmbedded ||
+                h.isPlatformEmbedded ||
                     e.push({
                         stepKey: "download-desktop",
                         modalProps: {
                             graphic: { type: "image", src: A.A },
-                            title: S.intl.string(S.t.qDbCbw),
-                            subtitle: S.intl.string(S.t["5Di7f2"]),
+                            title: j.intl.string(j.t.qDbCbw),
+                            subtitle: j.intl.string(j.t["5Di7f2"]),
                         },
                         secondaryActionButtonProps: {
-                            text: S.intl.format(S.t.JoS1i3, { platform: (0, x.Vf)() }),
-                            icon: a.s3U,
-                            onClick: J,
+                            text: j.intl.format(j.t.JoS1i3, { platform: (0, g.Vf)() }),
+                            icon: a.s,
+                            onClick: V,
                         },
-                        nextButtonProps: { text: S.intl.string(S.t.L5eIZ2) },
+                        nextButtonProps: { text: j.intl.string(j.t.L5eIZ2) },
                     }),
                 e.push(
                     {
                         stepKey: "profile",
-                        modalProps: { title: S.intl.string(S.t["6A8F1a"]), subtitle: S.intl.string(S.t.sqjmbr) },
-                        body: (0, l.jsx)(h.LU, {
-                            pendingGlobalName: E,
+                        modalProps: { title: j.intl.string(j.t["6A8F1a"]), subtitle: j.intl.string(j.t.sqjmbr) },
+                        body: (0, l.jsx)(C.LU, {
+                            pendingGlobalName: y,
                             onGlobalNameChange: D,
-                            pendingBio: f,
-                            onBioChange: L,
+                            pendingBio: T,
+                            onBioChange: k,
                         }),
-                        onNext: P,
+                        onNext: M,
                     },
                     {
                         stepKey: "next-steps",
                         modalProps: {
-                            graphic: { type: "image", src: b.A },
+                            graphic: { type: "image", src: v.A },
                             gradientColor: "blue",
-                            title: S.intl.string(S.t["++F+ha"]),
-                            subtitle: S.intl.string(S.t.yMX0GO),
+                            title: j.intl.string(j.t["++F+ha"]),
+                            subtitle: j.intl.string(j.t.yMX0GO),
                         },
-                        body: (0, l.jsx)(h.kx, { onSelectOption: O, onExplore: M, onCreateServer: K }),
-                        nextButtonProps: { text: S.intl.string(S.t.zcmBTS) },
+                        body: (0, l.jsx)(C.kx, { onSelectOption: O, onExplore: B, onCreateServer: q }),
+                        nextButtonProps: { text: j.intl.string(j.t.zcmBTS) },
                     },
                 ),
                 e
             );
-        }, [E, f, P, O, M, K, J]),
-        V = s.useMemo(
+        }, [y, T, M, O, B, q, V]),
+        Z = s.useMemo(
             () =>
-                g.isPlatformEmbedded
+                h.isPlatformEmbedded
                     ? ["welcome", "appearance", "profile", "next-steps"]
                     : ["welcome", "appearance", "download-desktop", "profile", "next-steps"],
             [],
         ),
-        H = s.useMemo(
+        $ = s.useMemo(
             () => ({
                 "join-server": {
                     stepKey: "join-server",
-                    modalProps: { title: S.intl.string(S.t.riOUtB), subtitle: S.intl.string(S.t.cs48bs) },
-                    body: (0, l.jsx)(h.Xu, { inviteLink: k, onInviteLinkChange: _ }),
-                    nextButtonProps: { text: S.intl.string(S.t["Ts/9Ac"]) },
-                    nextEnabled: k.trim().length > 0,
+                    modalProps: { title: j.intl.string(j.t.riOUtB), subtitle: j.intl.string(j.t.cs48bs) },
+                    body: (0, l.jsx)(C.Xu, { inviteLink: L, onInviteLinkChange: _ }),
+                    nextButtonProps: { text: j.intl.string(j.t["Ts/9Ac"]) },
+                    nextEnabled: L.trim().length > 0,
                     onNext: R,
                 },
                 "add-friend": {
                     stepKey: "add-friend",
-                    modalProps: { title: S.intl.string(S.t.w5uwoI), subtitle: S.intl.string(S.t.jy1kln) },
-                    body: (0, l.jsx)(h.VU, { friendUsername: U, onFriendUsernameChange: y }),
-                    nextButtonProps: { text: S.intl.string(S.t["PMsq/b"]) },
+                    modalProps: { title: j.intl.string(j.t.w5uwoI), subtitle: j.intl.string(j.t.jy1kln) },
+                    body: (0, l.jsx)(C.VU, { friendUsername: U, onFriendUsernameChange: w }),
+                    nextButtonProps: { text: j.intl.string(j.t["PMsq/b"]) },
                     nextEnabled: U.trim().length > 0,
-                    onNext: B,
+                    onNext: K,
                 },
             }),
-            [k, U, R, B],
+            [L, U, R, K],
         ),
-        Z = s.useMemo(() => (null != I && null != H[I] ? [...q, H[I]] : q), [q, I, H]);
-    return (0, l.jsx)(a.t04, {
+        z = s.useMemo(() => (null != I && null != $[I] ? [...J, $[I]] : J), [J, I, $]);
+    return (0, l.jsx)(r.t, {
         ...n,
         onClose: t,
-        steps: Z,
-        numberedSteps: V,
+        steps: z,
+        numberedSteps: Z,
         currentStepKey: i,
-        onStepChange: G,
-        onComplete: w,
+        onStepChange: P,
+        onComplete: G,
     });
 }

@@ -1,44 +1,45 @@
-a.d(t, { A: () => c });
+a.d(t, { A: () => d });
 var n = a(627968),
-    i = a(64700),
-    s = a(397927),
-    l = a(168186);
+    l = a(64700),
+    i = a(534514),
+    s = a(834730),
+    r = a(168186);
 a(827669);
-var r = a(985018),
-    o = a(380964);
-function c(e) {
+var o = a(985018),
+    c = a(733975);
+function d(e) {
     let { application: t } = e,
-        a = i.useMemo(() => {
+        a = l.useMemo(() => {
             let e = t.directory_entry?.popular_application_commands;
             return null != e
-                ? e.map((e) => (0, l.Oe)({ rootCommand: e, command: e, applicationId: e.application_id }))
+                ? e.map((e) => (0, r.Oe)({ rootCommand: e, command: e, applicationId: e.application_id }))
                 : [];
         }, [t]);
     return 0 === a.length
         ? null
         : (0, n.jsxs)("div", {
-              className: o.hd,
+              className: c.hd,
               children: [
-                  (0, n.jsx)(s.Heading, {
+                  (0, n.jsx)(i.D, {
                       variant: "heading-lg/semibold",
                       color: "text-strong",
-                      children: r.intl.string(r.t.swIgTL),
+                      children: o.intl.string(o.t.swIgTL),
                   }),
                   (0, n.jsx)("div", {
-                      className: o.hQ,
+                      className: c.hQ,
                       children: a.map((e) =>
                           (0, n.jsxs)(
                               "div",
                               {
-                                  className: o.dO,
+                                  className: c.dO,
                                   children: [
-                                      (0, n.jsxs)(s.Text, {
-                                          className: o.p6,
+                                      (0, n.jsxs)(s.E, {
+                                          className: c.p6,
                                           variant: "code",
                                           color: "text-strong",
                                           children: ["/", e.displayName],
                                       }),
-                                      (0, n.jsx)(s.Text, {
+                                      (0, n.jsx)(s.E, {
                                           variant: "text-md/normal",
                                           color: "text-default",
                                           children: e.displayDescription,

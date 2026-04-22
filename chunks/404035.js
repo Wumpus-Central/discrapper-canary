@@ -1,77 +1,79 @@
 "use strict";
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, { A: () => p }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(179771),
-    a = n(571356),
-    s = n(397927),
-    o = n(62447),
-    l = n(975571),
-    u = n(652215),
-    c = n(985018),
-    d = n(968363);
-function _(e) {
+    s = n(834730),
+    a = n(214947),
+    o = n(845798),
+    l = n(687966),
+    u = n(625903),
+    d = n(534514),
+    c = n(62447),
+    _ = n(975571),
+    f = n(652215),
+    E = n(985018),
+    h = n(645650);
+function p(e) {
     let t,
-        { application: n, accountScopes: a } = e,
-        _ = [],
-        p = (0, o.A)(n);
-    return (a.includes(i.F.SDK_SOCIAL_LAYER)
-        ? ((t = p
-              ? c.intl.format(c.t.GxjwZM, {
+        { application: n, accountScopes: s } = e,
+        p = [],
+        g = (0, c.A)(n);
+    return (s.includes(i.F.SDK_SOCIAL_LAYER)
+        ? ((t = g
+              ? E.intl.format(E.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: l.A.getArticleURL(u.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: _.A.getArticleURL(f.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : c.intl.format(c.t.DfBeUq, { learnMoreURL: l.A.getArticleURL(u.MVz.SOCIAL_LAYER_CONNECTIONS) })),
-          _.push(
+              : E.intl.format(E.t.DfBeUq, { learnMoreURL: _.A.getArticleURL(f.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+          p.push(
               {
-                  icon: s.$yI,
-                  text: p
-                      ? c.intl.formatToPlainString(c.t.z9peav, { maxFriends: u.$4X })
-                      : c.intl.formatToPlainString(c.t.WNKzo9, { maxFriends: u.$4X }),
+                  icon: a.$,
+                  text: g
+                      ? E.intl.formatToPlainString(E.t.z9peav, { maxFriends: f.$4X })
+                      : E.intl.formatToPlainString(E.t.WNKzo9, { maxFriends: f.$4X }),
               },
-              { icon: s.SYr, text: p ? c.intl.string(c.t.daY6xj) : c.intl.string(c.t.j7peBh) },
-              { icon: s._xR, text: p ? c.intl.string(c.t["/bdaNN"]) : c.intl.string(c.t["feD3+i"]) },
-              { icon: s.Zes, text: p ? c.intl.string(c.t.mSqazC) : c.intl.string(c.t.YFFVM1) },
+              { icon: o.S, text: g ? E.intl.string(E.t.daY6xj) : E.intl.string(E.t.j7peBh) },
+              { icon: l._, text: g ? E.intl.string(E.t["/bdaNN"]) : E.intl.string(E.t["feD3+i"]) },
+              { icon: u.Z, text: g ? E.intl.string(E.t.mSqazC) : E.intl.string(E.t.YFFVM1) },
           ))
-        : a.includes(i.F.SDK_SOCIAL_LAYER_PRESENCE) &&
-          ((t = p
-              ? c.intl.format(c.t.GxjwZM, {
+        : s.includes(i.F.SDK_SOCIAL_LAYER_PRESENCE) &&
+          ((t = g
+              ? E.intl.format(E.t.GxjwZM, {
                     applicationName: n.name,
-                    learnMoreURL: l.A.getArticleURL(u.MVz.SOCIAL_LAYER_CONNECTIONS),
+                    learnMoreURL: _.A.getArticleURL(f.MVz.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : c.intl.format(c.t.DfBeUq, { learnMoreURL: l.A.getArticleURL(u.MVz.SOCIAL_LAYER_CONNECTIONS) })),
-          _.push(
+              : E.intl.format(E.t.DfBeUq, { learnMoreURL: _.A.getArticleURL(f.MVz.SOCIAL_LAYER_CONNECTIONS) })),
+          p.push(
               {
-                  icon: s.$yI,
-                  text: p
-                      ? c.intl.formatToPlainString(c.t.z9peav, { maxFriends: u.$4X })
-                      : c.intl.formatToPlainString(c.t.WNKzo9, { maxFriends: u.$4X }),
+                  icon: a.$,
+                  text: g
+                      ? E.intl.formatToPlainString(E.t.z9peav, { maxFriends: f.$4X })
+                      : E.intl.formatToPlainString(E.t.WNKzo9, { maxFriends: f.$4X }),
               },
-              { icon: s._xR, text: p ? c.intl.string(c.t["/bdaNN"]) : c.intl.string(c.t["feD3+i"]) },
-              { icon: s.Zes, text: p ? c.intl.string(c.t.mSqazC) : c.intl.string(c.t.YFFVM1) },
+              { icon: l._, text: g ? E.intl.string(E.t["/bdaNN"]) : E.intl.string(E.t["feD3+i"]) },
+              { icon: u.Z, text: g ? E.intl.string(E.t.mSqazC) : E.intl.string(E.t.YFFVM1) },
           )),
-    0 === _.length)
+    0 === p.length)
         ? null
         : (0, r.jsxs)("div", {
-              className: d.b9,
+              className: h.b9,
               children: [
-                  null != t
-                      ? (0, r.jsx)(s.Heading, { variant: "heading-sm/normal", className: d.a9, children: t })
-                      : null,
-                  _.map((e, t) => {
+                  null != t ? (0, r.jsx)(d.D, { variant: "heading-sm/normal", className: h.a9, children: t }) : null,
+                  p.map((e, t) => {
                       let { icon: n, text: i } = e;
-                      return (0, r.jsx)(f, { icon: n, text: i }, t);
+                      return (0, r.jsx)(m, { icon: n, text: i }, t);
                   }),
               ],
           });
 }
-function f(e) {
+function m(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {
-        className: d.f_,
+        className: h.f_,
         children: [
-            (0, r.jsx)(t, { className: d.u7, color: "currentColor" }),
-            (0, r.jsx)(a.E, { variant: "text-md/normal", className: d.u0, children: n }),
+            (0, r.jsx)(t, { className: h.u7, color: "currentColor" }),
+            (0, r.jsx)(s.E, { variant: "text-md/normal", className: h.u0, children: n }),
         ],
     });
 }

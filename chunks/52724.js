@@ -1,48 +1,46 @@
 "use strict";
 function r(e) {
     let { getFocusableElements: t, getActiveElement: n, scrollToStart: r, scrollToEnd: i } = e;
-    function a(e) {
-        return (
-            t().find(
-                (t) =>
-                    !!(
-                        e.compareDocumentPosition(t) &
-                        (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)
-                    ),
-            ) ?? null
-        );
-    }
-    function s(e) {
-        let n = t();
-        for (let t = n.length - 1; t >= 0; t--) {
-            let r = n[t];
-            if (e.compareDocumentPosition(r) & (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY))
-                return r;
-        }
-        return null;
-    }
-    function o() {
+    function s() {
         return t()[0] ?? null;
     }
-    function l() {
+    function a() {
         let e = t();
         return e[e.length - 1] ?? null;
     }
     return {
-        getNextFocusableElement: async function (e) {
-            let t = e?.from || n();
-            if (null == t) return null;
-            let i = a(t);
-            return null == i && e?.wrap ? (await r?.(), o()) : i;
+        getNextFocusableElement: async function e(e) {
+            let i = e?.from || n();
+            if (null == i) return null;
+            let a =
+                t().find(
+                    (e) =>
+                        !!(
+                            i.compareDocumentPosition(e) &
+                            (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)
+                        ),
+                ) ?? null;
+            return null == a && e?.wrap ? (await r?.(), s()) : a;
         },
         getPreviousFocusableElement: async function (e) {
-            let t = e?.from || n();
-            if (null == t) return null;
-            let r = s(t);
-            return null == r && e?.wrap ? (await i?.(), l()) : r;
+            let r = e?.from || n();
+            if (null == r) return null;
+            let s = (function (e) {
+                let n = t();
+                for (let t = n.length - 1; t >= 0; t--) {
+                    let r = n[t];
+                    if (
+                        e.compareDocumentPosition(r) &
+                        (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY)
+                    )
+                        return r;
+                }
+                return null;
+            })(r);
+            return null == s && e?.wrap ? (await i?.(), a()) : s;
         },
-        getFirstFocusableElement: o,
-        getLastFocusableElement: l,
+        getFirstFocusableElement: s,
+        getLastFocusableElement: a,
     };
 }
 n.d(t, { C: () => r });

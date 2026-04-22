@@ -1,13 +1,12 @@
 var r = n(634622),
     i = n(585022),
-    a = n(581006),
-    s = 200;
+    s = n(581006);
 e.exports = function (e, t) {
     var n = this.__data__;
     if (n instanceof r) {
-        var o = n.__data__;
-        if (!i || o.length < s - 1) return o.push([e, t]), (this.size = ++n.size), this;
-        n = this.__data__ = new a(o);
+        var a = n.__data__;
+        if (!i || a.length < 199) return a.push([e, t]), (this.size = ++n.size), this;
+        n = this.__data__ = new s(a);
     }
     return n.set(e, t), (this.size = n.size), this;
 };

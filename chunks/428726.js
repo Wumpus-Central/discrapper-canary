@@ -1,55 +1,56 @@
-n.d(e, { default: () => o });
+n.d(e, { default: () => c });
 var i = n(627968),
     a = n(64700),
-    s = n(189213),
-    r = n(397927),
-    l = n(917136),
-    u = n(985018);
-function o(t) {
-    let { transitionState: e, onClose: n, credential: o } = t,
-        [c, d] = a.useState(!1),
-        [g, h] = a.useState(""),
-        [p, f] = a.useState(void 0),
-        E = a.useRef(null);
-    async function y() {
-        d(!0);
+    r = n(189213),
+    s = n(231723),
+    l = n(292666),
+    u = n(917136),
+    o = n(985018);
+function c(t) {
+    let { transitionState: e, onClose: n, credential: c } = t,
+        [d, g] = a.useState(!1),
+        [h, p] = a.useState(""),
+        [f, E] = a.useState(void 0),
+        y = a.useRef(null);
+    async function k() {
+        g(!0);
         try {
-            await (0, l.c6)(o.id, g), n();
+            await (0, u.c6)(c.id, h), n();
         } catch (t) {
-            f(t.message);
+            E(t.message);
         } finally {
-            d(!1);
+            g(!1);
         }
     }
     return (
         a.useEffect(() => {
-            e === r.ip4.ENTERED && E.current?.focus();
+            e === s.ip.ENTERED && y.current?.focus();
         }, [e]),
-        (0, i.jsx)(s.Modal, {
+        (0, i.jsx)(r.Modal, {
             transitionState: e,
-            title: u.intl.string(u.t.YjuMsf),
+            title: o.intl.string(o.t.YjuMsf),
             onClose: n,
-            input: (0, i.jsx)(r.ksK, {
-                label: u.intl.string(u.t["7yEgJY"]),
-                inputRef: E,
-                "aria-label": u.intl.string(u.t["7yEgJY"]),
-                placeholder: o.name,
-                value: g,
+            input: (0, i.jsx)(l.k, {
+                label: o.intl.string(o.t["7yEgJY"]),
+                inputRef: y,
+                "aria-label": o.intl.string(o.t["7yEgJY"]),
+                placeholder: c.name,
+                value: h,
                 minLength: 1,
                 maxLength: 32,
-                onChange: h,
+                onChange: p,
                 autoFocus: !0,
                 required: !0,
-                error: p,
+                error: f,
             }),
             actions: [
-                { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: n },
+                { variant: "secondary", text: o.intl.string(o.t["ETE/oC"]), onClick: n },
                 {
                     variant: "primary",
-                    text: u.intl.string(u.t.i4jeWR),
-                    disabled: 0 === g.length || g.length > 32,
-                    loading: c,
-                    onClick: y,
+                    text: o.intl.string(o.t.i4jeWR),
+                    disabled: 0 === h.length || h.length > 32,
+                    loading: d,
+                    onClick: k,
                 },
             ],
         })

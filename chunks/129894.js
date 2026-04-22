@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(573648),
-    i = n(541806),
-    a = n(90644),
-    s = n(788733),
-    o = n(765902),
-    l = n(141639),
-    u = n(61330),
-    c = n(652215);
-let d = new Set([c.fg2.LEAGUE_OF_LEGENDS, c.fg2.ROBLOX, c.fg2.TWITCH, c.fg2.YOUTUBE]);
-function _(e) {
-    if ((0, a.A)(e)) return r.A.get(c.fg2.SPOTIFY);
-    if ((0, i.A)(e)) return r.A.get(c.fg2.CRUNCHYROLL);
-    if ((0, u.A)(e)) return r.A.get(c.fg2.XBOX);
-    if ((0, l.A)(e)) return r.A.get(c.fg2.PLAYSTATION);
-    if ((0, o.A)(e) || (0, s.A)(e)) return r.A.get(c.fg2.META_QUEST_OR_HORIZON);
-    let t = r.A.find((t) => {
-        let { name: n } = t;
-        return n === e.name;
+e.d(n, { A: () => A });
+var i = e(573648),
+    l = e(541806),
+    r = e(90644),
+    a = e(788733),
+    s = e(765902),
+    o = e(141639),
+    c = e(61330),
+    u = e(652215);
+let d = new Set([u.fg2.LEAGUE_OF_LEGENDS, u.fg2.ROBLOX, u.fg2.TWITCH, u.fg2.YOUTUBE]);
+function A(t) {
+    if ((0, r.A)(t)) return i.A.get(u.fg2.SPOTIFY);
+    if ((0, l.A)(t)) return i.A.get(u.fg2.CRUNCHYROLL);
+    if ((0, c.A)(t)) return i.A.get(u.fg2.XBOX);
+    if ((0, o.A)(t)) return i.A.get(u.fg2.PLAYSTATION);
+    if ((0, s.A)(t) || (0, a.A)(t)) return i.A.get(u.fg2.META_QUEST_OR_HORIZON);
+    let n = i.A.find((n) => {
+        let { name: e } = n;
+        return e === t.name;
     });
-    return null != t && d.has(t.type) ? t : null;
+    return null != n && d.has(n.type) ? n : null;
 }

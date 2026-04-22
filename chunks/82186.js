@@ -1,31 +1,33 @@
 "use strict";
-n.d(t, { E: () => c });
+n.d(t, { E: () => _ });
 var r = n(627968);
 n(64700);
-var i = n(158954),
-    a = n(272053),
-    s = n(215566),
-    l = n(985018),
-    o = n(508891);
-function u(e) {
+var i = n(331322),
+    a = n(834730),
+    l = n(939249),
+    s = n(272053),
+    o = n(215566),
+    c = n(985018),
+    u = n(508891);
+function d(e) {
     let { node: t, isLast: n } = e,
-        l = t.useTitle(),
-        u = t.usePersistentBadge?.(),
-        c = (0, r.jsxs)(i.BJc, {
+        c = t.useTitle(),
+        d = t.usePersistentBadge?.(),
+        _ = (0, r.jsxs)(i.B, {
             direction: "horizontal",
             align: "center",
             gap: "xs",
-            className: o.Ze,
+            className: u.Ze,
             children: [
-                (0, r.jsx)(i.EYj, {
+                (0, r.jsx)(a.E, {
                     variant: n ? "text-md/medium" : "text-md/normal",
                     color: n ? "text-default" : void 0,
-                    className: o.b,
-                    children: l,
+                    className: u.b,
+                    children: c,
                 }),
-                n && null != u && (0, r.jsx)(s.A, { badge: u }),
+                n && null != d && (0, r.jsx)(o.A, { badge: d }),
                 !n &&
-                    (0, r.jsx)(i.EYj, {
+                    (0, r.jsx)(a.E, {
                         variant: "text-md/normal",
                         color: "interactive-text-default",
                         "aria-hidden": !0,
@@ -35,28 +37,28 @@ function u(e) {
         });
     return (0, r.jsx)("li", {
         "aria-current": n ? "page" : void 0,
-        className: o.QF,
+        className: u.QF,
         children: n
-            ? c
-            : (0, r.jsx)(i.DUT, {
+            ? _
+            : (0, r.jsx)(l.D, {
                   onClick: () => {
-                      a.A.navigate(t.key);
+                      s.A.navigate(t.key);
                   },
-                  className: o.vk,
-                  children: c,
+                  className: u.vk,
+                  children: _,
               }),
     });
 }
-function c(e) {
+function _(e) {
     let { path: t } = e;
     return (0, r.jsx)("nav", {
-        "aria-label": l.intl.string(l.t["bM+M/m"]),
-        className: o.m7,
-        children: (0, r.jsx)(i.BJc, {
+        "aria-label": c.intl.string(c.t["bM+M/m"]),
+        className: u.m7,
+        children: (0, r.jsx)(i.B, {
             direction: "horizontal",
             role: "list",
-            className: o.jD,
-            children: t.map((e, n) => (0, r.jsx)(u, { node: e, isLast: n === t.length - 1 }, e.key)),
+            className: u.jD,
+            children: t.map((e, n) => (0, r.jsx)(d, { node: e, isLast: n === t.length - 1 }, e.key)),
         }),
     });
 }

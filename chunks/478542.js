@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { p: () => u });
-var r = n(627968),
-    i = n(64700),
-    s = n(158954),
-    a = n(732955),
-    o = n(985018),
-    l = n(96867);
-function u(e) {
-    let { onClick: t, "aria-label": n = o.intl.string(o.t.cpT0Cq) } = e,
-        { firstFocusableItemProps: u } = i.useContext(s.MVj);
-    return (0, r.jsx)("div", {
-        className: l.b,
-        children: (0, r.jsx)(a.JnF, { size: "xs", "aria-label": n, onClick: t, variant: "overlay-secondary", ...u }),
+a.d(t, { p: () => c });
+var n = a(627968),
+    r = a(64700),
+    l = a(113325),
+    i = a(815021),
+    s = a(985018),
+    o = a(96867);
+function c(e) {
+    let { onClick: t, "aria-label": a = s.intl.string(s.t.cpT0Cq) } = e,
+        { firstFocusableItemProps: c } = r.useContext(l.M);
+    return (0, n.jsx)("div", {
+        className: o.b,
+        children: (0, n.jsx)(i.J, { size: "xs", "aria-label": a, onClick: t, variant: "overlay-secondary", ...c }),
     });
 }

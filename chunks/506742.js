@@ -1,25 +1,26 @@
-n.d(t, { a: () => d });
-var r = n(627968);
+n.d(t, { a: () => u });
+var i = n(627968);
 n(64700);
-var a = n(503698),
-    i = n.n(a),
-    s = n(397927),
-    l = n(580630),
-    o = n(985018),
-    c = n(394379);
-let d = (e) => {
+var r = n(503698),
+    a = n.n(r),
+    l = n(834730),
+    s = n(140735),
+    o = n(580630),
+    c = n(985018),
+    d = n(252955);
+let u = (e) => {
     let {
             price: { amount: t, currency: n },
-            className: a,
-            variant: d = "heading-md/semibold",
+            className: r,
+            variant: u = "heading-md/semibold",
         } = e,
-        u = (0, l.RS)(t, n);
-    return (0, r.jsxs)(s.Text, {
-        variant: d,
-        className: i()(c.v, a),
+        _ = (0, o.RS)(t, n);
+    return (0, i.jsxs)(l.E, {
+        variant: u,
+        className: a()(d.v, r),
         children: [
-            (0, r.jsx)(s.AC4, { children: o.intl.format(o.t["2CEGln"], { price: u }) }),
-            (0, r.jsx)("span", { "aria-hidden": !0, children: u }),
+            (0, i.jsx)(s.A, { children: c.intl.format(c.t["2CEGln"], { price: _ }) }),
+            (0, i.jsx)("span", { "aria-hidden": !0, children: _ }),
         ],
     });
 };

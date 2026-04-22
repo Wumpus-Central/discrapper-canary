@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { f: () => s });
-var r = n(64700),
-    i = n(166532),
-    a = n(566980);
-function s(e) {
-    let { purchaseState: t, currentStep: n, initialScene: s, purchaseScene: o, errorScene: l, successScene: u } = e,
-        [c, d] = (0, r.useState)(s);
+n.d(t, { f: () => i });
+var a = n(64700),
+    r = n(166532),
+    l = n(566980);
+function i(e) {
+    let { purchaseState: t, currentStep: n, initialScene: i, purchaseScene: s, errorScene: o, successScene: u } = e,
+        [c, d] = (0, a.useState)(i);
     return (
-        (0, r.useEffect)(() => {
-            t === a.h.PURCHASING ? d(o) : t === a.h.FAIL && d(l);
-        }, [t, o, l]),
-        (0, r.useEffect)(() => {
-            n === i.pn.CONFIRM && d(u);
+        (0, a.useEffect)(() => {
+            t === l.h.PURCHASING ? d(s) : t === l.h.FAIL && d(o);
+        }, [t, s, o]),
+        (0, a.useEffect)(() => {
+            n === r.pn.CONFIRM && d(u);
         }, [n, u]),
         [c, d]
     );

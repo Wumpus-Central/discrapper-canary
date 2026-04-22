@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { D: () => l });
-var r = n(627968);
-n(64700);
-var i = n(409150),
-    s = n(786558),
-    a = n(799226);
-let o = {
+a.d(l, { D: () => s });
+var t = a(627968);
+a(64700);
+var n = a(409150),
+    o = a(786558),
+    i = a(799226);
+let r = {
     "Boost Server": { reducedMotion: "boolean" },
     "Boost Crystal": { reducedMotion: "boolean" },
     "Crystal Side B": {},
     "Crystal Side A": {},
     "Boost Saved": { reducedMotion: "boolean" },
 };
-function l(e) {
-    let { artboard: t = "Boost Server", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, a.CE)(i.A),
-        d = (0, a.m2)(i.A);
-    return u === a.BW.Loading
+function s(e) {
+    let { artboard: l = "Boost Server", stateMachine: a, ...s } = e,
+        { status: d, buffer: u } = (0, i.CE)(n.A),
+        c = (0, i.m2)(n.A);
+    return d === i.BW.Loading
         ? null
-        : (0, r.jsx)(s.w, {
-              ...(d ? { key: "override" } : {}),
-              buffer: c,
-              artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+        : (0, t.jsx)(o.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: u,
+              artboard: l,
+              stateMachine: a,
+              artboardProperties: r,
+              ...s,
           });
 }
-l.riveSrc = i.A;
+s.riveSrc = n.A;

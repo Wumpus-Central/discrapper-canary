@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(322811),
-    i = n(355418);
-class a extends i.c {
+r.d(t, { A: () => a });
+var n = r(322811),
+    s = r(355418);
+class a extends s.c {
     innerPattern(e) {
         return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
     }
     innerExtract(e, t) {
-        let n = t[2].toLowerCase(),
-            i = e.createParsingComponents();
-        switch (n) {
+        let r = t[2].toLowerCase(),
+            s = e.createParsingComponents();
+        switch (r) {
             case "apr\xe8s-midi":
             case "aprem":
-                i.imply("hour", 14), i.imply("minute", 0), i.imply("meridiem", r.FF.PM);
+                s.imply("hour", 14), s.imply("minute", 0), s.imply("meridiem", n.FF.PM);
                 break;
             case "soir":
-                i.imply("hour", 18), i.imply("minute", 0), i.imply("meridiem", r.FF.PM);
+                s.imply("hour", 18), s.imply("minute", 0), s.imply("meridiem", n.FF.PM);
                 break;
             case "matin":
-                i.imply("hour", 8), i.imply("minute", 0), i.imply("meridiem", r.FF.AM);
+                s.imply("hour", 8), s.imply("minute", 0), s.imply("meridiem", n.FF.AM);
                 break;
             case "a midi":
-                i.imply("hour", 12), i.imply("minute", 0), i.imply("meridiem", r.FF.AM);
+                s.imply("hour", 12), s.imply("minute", 0), s.imply("meridiem", n.FF.AM);
                 break;
             case "\xe0 minuit":
-                i.imply("hour", 0), i.imply("meridiem", r.FF.AM);
+                s.imply("hour", 0), s.imply("meridiem", n.FF.AM);
         }
-        return i;
+        return s;
     }
 }

@@ -1,6 +1,5 @@
 "use strict";
-n.d(t, { A: () => i });
-let r = 32;
-function i(e, t) {
-    return `${e.toLowerCase().padEnd(r, "!")}${t.id}`;
+function r(e, t) {
+    return `${e.toLowerCase().padEnd(32, "!")}${t.id}`;
 }
+n.d(t, { A: () => r });

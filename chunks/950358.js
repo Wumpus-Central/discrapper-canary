@@ -1,168 +1,176 @@
-"use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => R }), n(321073);
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(3026),
     o = n(990078),
-    d = n(397927),
-    c = n(442433),
-    u = n(47167),
-    m = n(112389),
-    g = n(166444),
-    x = n(637248),
-    h = n(418448),
-    _ = n(561321),
-    A = n(82566),
-    p = n(652215),
-    f = n(985018),
-    j = n(650005);
-function N(e) {
-    let { guild: t, channel: s } = e,
-        l = (0, u.Ay)(s),
-        a = (0, _.Rg)(s.id);
-    return "null" === s.id
+    d = n(192308),
+    c = n(834730),
+    u = n(939249),
+    m = n(658675),
+    g = n(821609),
+    h = n(194261),
+    x = n(442433),
+    _ = n(47167),
+    p = n(112389),
+    A = n(166444),
+    E = n(637248),
+    f = n(418448),
+    j = n(561321),
+    N = n(82566),
+    I = n(652215),
+    C = n(985018),
+    b = n(650005);
+function v(e) {
+    let { guild: t, channel: l } = e,
+        s = (0, _.Ay)(l),
+        a = (0, j.Rg)(l.id);
+    return "null" === l.id
         ? (0, i.jsx)("div", {
-              className: r()(j.Fv, j.d0),
-              children: (0, i.jsx)(d.Text, {
-                  className: j.O1,
+              className: r()(b.Fv, b.d0),
+              children: (0, i.jsx)(c.E, {
+                  className: b.O1,
                   color: "text-muted",
                   variant: "text-xs/semibold",
                   lineClamp: 1,
-                  children: l,
+                  children: s,
               }),
           })
-        : (0, i.jsxs)(d.DUT, {
-              className: r()(j.Fv, { [j.d0]: "null" === s.id }),
+        : (0, i.jsxs)(u.D, {
+              className: r()(b.Fv, { [b.d0]: "null" === l.id }),
               onContextMenu: (e) => {
-                  (0, c.L3)(e, async () => {
+                  (0, x.L3)(e, async () => {
                       let { default: e } = await Promise.all([
                           n.e("95834"),
+                          n.e("99011"),
                           n.e("21420"),
                           n.e("75149"),
-                          n.e("40959"),
+                          n.e("15920"),
                       ]).then(n.bind(n, 725756));
-                      return (n) => (0, i.jsx)(e, { ...n, channel: s, guild: t });
+                      return (n) => (0, i.jsx)(e, { ...n, channel: l, guild: t });
                   });
               },
               onClick: (e) => (
                   e.stopPropagation(),
-                  (0, m.S)(t.id, s.id)
-                      ? (0, h.bN)(s.id)
-                      : (0, d.mMO)(async () => {
+                  (0, p.S)(t.id, l.id)
+                      ? (0, f.bN)(l.id)
+                      : (0, d.openModalLazy)(async () => {
                             let { default: e } = await n.e("54857").then(n.bind(n, 147696));
-                            return (n) => (0, i.jsx)(e, { ...n, guildId: t.id, startingChannelId: s.id });
+                            return (n) => (0, i.jsx)(e, { ...n, guildId: t.id, startingChannelId: l.id });
                         }),
                   !0
               ),
               children: [
-                  (0, i.jsx)(d.Text, {
-                      className: j.O1,
+                  (0, i.jsx)(c.E, {
+                      className: b.O1,
                       color: "text-muted",
                       variant: "text-xs/semibold",
                       lineClamp: 1,
-                      children: l,
+                      children: s,
                   }),
-                  (0, i.jsx)(d.P7L, { checked: a }),
+                  (0, i.jsx)(m.P, { checked: a }),
               ],
           });
 }
-let E = s.memo(function () {
-        return (0, i.jsx)("div", { className: j.me });
+let S = l.memo(function () {
+        return (0, i.jsx)("div", { className: b.me });
     }),
-    C = s.memo(function (e) {
+    T = l.memo(function (e) {
         let { index: t } = e;
-        return (0, i.jsx)(d.Text, { variant: "text-xs/normal", className: j.Ks, children: "\xb7" }, `separator-${t}`);
+        return (0, i.jsx)(c.E, { variant: "text-xs/normal", className: b.Ks, children: "\xb7" }, `separator-${t}`);
     }),
-    T = s.memo(function (e) {
+    y = l.memo(function (e) {
         let {
                 channel: t,
-                category: s,
-                guild: l,
-                isFirstChannel: x,
-                isLastChannel: N,
-                tooltipDirection: T = "right",
+                category: l,
+                guild: s,
+                isFirstChannel: E,
+                isLastChannel: v,
+                tooltipDirection: y = "right",
             } = e,
-            I = (0, u.Ay)(t),
-            b = (0, _.Rg)(t.id, s.id),
-            v = (0, _.eK)(t.id, s.id),
-            S = (0, _.v)(t.id, s.id),
-            y = (0, _.fS)(l.id, s.id),
-            R = null != (0, A.A)(l).find((e) => e.id === t.id);
+            R = (0, _.Ay)(t),
+            L = (0, j.Rg)(t.id, l.id),
+            D = (0, j.eK)(t.id, l.id),
+            O = (0, j.v)(t.id, l.id),
+            G = (0, j.fS)(s.id, l.id),
+            M = null != (0, N.A)(s).find((e) => e.id === t.id);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.m, {
                     asContainer: !0,
-                    __unsupportedReactNodeAsText: S ?? y,
+                    __unsupportedReactNodeAsText: O ?? G,
                     delay: 500,
-                    position: T,
-                    children: (0, i.jsxs)(d.DUT, {
-                        className: r()(j.WG, { [j.Qn]: x, [j.wp]: N, [j.r9]: v }),
+                    position: y,
+                    children: (0, i.jsxs)(u.D, {
+                        className: r()(b.WG, { [b.Qn]: E, [b.wp]: v, [b.r9]: D }),
                         onClick: (e) => {
-                            if (!v)
+                            if (!D)
                                 return (
                                     e.stopPropagation(),
-                                    (0, m.S)(l.id, t.id)
-                                        ? (0, h.bN)(t.id)
-                                        : (0, d.mMO)(async () => {
+                                    (0, p.S)(s.id, t.id)
+                                        ? (0, f.bN)(t.id)
+                                        : (0, d.openModalLazy)(async () => {
                                               let { default: e } = await n.e("54857").then(n.bind(n, 147696));
                                               return (n) =>
-                                                  (0, i.jsx)(e, { ...n, guildId: l.id, startingChannelId: t.id });
+                                                  (0, i.jsx)(e, { ...n, guildId: s.id, startingChannelId: t.id });
                                           }),
                                     !0
                                 );
                         },
                         onContextMenu: (e) => {
                             t.isGuildVocal()
-                                ? (0, c.L3)(e, async () => {
+                                ? (0, x.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
+                                          n.e("93103"),
                                           n.e("95834"),
+                                          n.e("99011"),
                                           n.e("21420"),
                                           n.e("2381"),
                                           n.e("40394"),
-                                          n.e("63313"),
+                                          n.e("10046"),
                                       ]).then(n.bind(n, 698193));
-                                      return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
+                                      return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: s });
                                   })
-                                : (0, c.L3)(e, async () => {
+                                : (0, x.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
                                           n.e("95834"),
+                                          n.e("99011"),
                                           n.e("21420"),
                                           n.e("2381"),
-                                          n.e("75781"),
+                                          n.e("84317"),
                                       ]).then(n.bind(n, 370372));
-                                      return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
+                                      return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: s });
                                   });
                         },
                         children: [
                             (0, i.jsx)("div", {
-                                className: j.yW,
+                                className: b.yW,
                                 children: (0, i.jsxs)("div", {
-                                    className: j.HA,
+                                    className: b.HA,
                                     children: [
-                                        (0, i.jsx)(g.gm, { channel: t, guild: l }),
+                                        (0, i.jsx)(A.gm, { channel: t, guild: s }),
                                         (0, i.jsx)(a.A, {
-                                            className: j.__invalid_name,
-                                            children: (0, i.jsx)(d.Text, {
-                                                className: j.be,
+                                            className: b.__invalid_name,
+                                            children: (0, i.jsx)(c.E, {
+                                                className: b.be,
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                color: v ? "text-muted" : "text-default",
-                                                children: I,
+                                                color: D ? "text-muted" : "text-default",
+                                                children: R,
                                             }),
                                         }),
-                                        R
+                                        M
                                             ? (0, i.jsxs)(i.Fragment, {
                                                   children: [
-                                                      (0, i.jsx)(C, { index: 0 }),
-                                                      (0, i.jsx)(d.Text, {
+                                                      (0, i.jsx)(T, { index: 0 }),
+                                                      (0, i.jsx)(c.E, {
                                                           variant: "text-xs/medium",
-                                                          className: j.qy,
+                                                          className: b.qy,
                                                           color: "text-brand",
-                                                          children: f.intl.string(f.t.mPxmeE),
+                                                          children: C.intl.string(C.t.mPxmeE),
                                                       }),
                                                   ],
                                               })
@@ -171,47 +179,47 @@ let E = s.memo(function () {
                                 }),
                             }),
                             (0, i.jsx)("div", {
-                                className: j.tN,
-                                children: (0, m.S)(t.guild_id, t.id)
-                                    ? (0, i.jsx)(d.P7L, { checked: b, disabled: v })
-                                    : (0, i.jsx)(d.Button, {
+                                className: b.tN,
+                                children: (0, p.S)(t.guild_id, t.id)
+                                    ? (0, i.jsx)(m.P, { checked: L, disabled: D })
+                                    : (0, i.jsx)(g.$, {
                                           size: "sm",
                                           variant: "secondary",
-                                          text: f.intl.string(f.t.zA9d1J),
-                                          icon: d.XAi,
-                                          onClick: p.tEg,
+                                          text: C.intl.string(C.t.zA9d1J),
+                                          icon: h.X,
+                                          onClick: I.tEg,
                                       }),
                             }),
                         ],
                     }),
                 }),
-                !N && (0, i.jsx)(E, {}),
+                !v && (0, i.jsx)(S, {}),
             ],
         });
     });
-function I(e) {
-    let { categories: t, guild: n, className: l, hasSidebar: r } = e,
-        a = s.useCallback(
+function R(e) {
+    let { categories: t, guild: n, className: s, hasSidebar: r } = e,
+        a = l.useCallback(
             (e) => {
-                let s = t._categories[e];
-                return (0, i.jsx)(N, { channel: s.channel, guild: n }, s.channel.id);
+                let l = t._categories[e];
+                return (0, i.jsx)(v, { channel: l.channel, guild: n }, l.channel.id);
             },
             [t, n],
         ),
-        o = s.useCallback(
-            (e, s) => {
-                let l = t._categories[e],
-                    a = t[l.channel.id][s];
+        o = l.useCallback(
+            (e, l) => {
+                let s = t._categories[e],
+                    a = t[s.channel.id][l];
                 return null == a
                     ? null
                     : (0, i.jsx)(
-                          T,
+                          y,
                           {
-                              category: l.channel,
+                              category: s.channel,
                               channel: a.channel,
                               guild: n,
-                              isFirstChannel: 0 === s,
-                              isLastChannel: t[l.channel.id].length - 1 === s,
+                              isFirstChannel: 0 === l,
+                              isLastChannel: t[s.channel.id].length - 1 === l,
                               tooltipDirection: r ? "right" : "top",
                           },
                           a.channel.id,
@@ -219,16 +227,16 @@ function I(e) {
             },
             [t, n, r],
         ),
-        d = (0, x.zH)(n.id, t, 64);
+        d = (0, E.zH)(n.id, t, 64);
     return (0, i.jsx)("div", {
-        className: l,
+        className: s,
         children: d.map((e, t) => {
             let n = a(t),
-                s = [],
-                l = e.rowCount;
-            if (0 === l) return null;
-            for (let e = 0; e < l; e++) s.push(o(t, e));
-            return (0, i.jsxs)(i.Fragment, { children: [n, s] });
+                l = [],
+                s = e.rowCount;
+            if (0 === s) return null;
+            for (let e = 0; e < s; e++) l.push(o(t, e));
+            return (0, i.jsxs)(i.Fragment, { children: [n, l] });
         }),
     });
 }

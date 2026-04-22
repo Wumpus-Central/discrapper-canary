@@ -1,30 +1,31 @@
-e.d(i, { default: () => s });
+e.d(i, { default: () => c });
 var n = e(627968);
 e(64700);
-var a = e(397927),
-    l = e(442433),
-    o = e(272613),
-    d = e(819638),
-    r = e(985018);
-function s(t) {
+var a = e(861672),
+    l = e(477782),
+    o = e(442433),
+    d = e(272613),
+    r = e(819638),
+    s = e(985018);
+function c(t) {
     let { onSelect: i } = t;
-    return (0, n.jsxs)(a.W1t, {
+    return (0, n.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: "guild-context",
-        "aria-label": r.intl.string(r.t.HpQykc),
-        onClose: l.Z_,
+        "aria-label": s.intl.string(s.t.HpQykc),
+        onClose: o.Z_,
         onSelect: i,
         children: [
-            (0, n.jsx)(a.Drp, {
+            (0, n.jsx)(l.Dr, {
                 id: "join",
-                label: r.intl.string(r.t.yRjK4p),
+                label: s.intl.string(s.t.yRjK4p),
                 action: () =>
-                    o.A.openCreateGuildModal({ initialSlide: d.oS.JOIN_GUILD, location: "Guild List - ContextMenu" }),
+                    d.A.openCreateGuildModal({ initialSlide: r.oS.JOIN_GUILD, location: "Guild List - ContextMenu" }),
             }),
-            (0, n.jsx)(a.Drp, {
+            (0, n.jsx)(l.Dr, {
                 id: "create",
-                label: r.intl.string(r.t.B44MTm),
-                action: () => o.A.openCreateGuildModal({ location: "Guild List - ContextMenu" }),
+                label: s.intl.string(s.t.B44MTm),
+                action: () => d.A.openCreateGuildModal({ location: "Guild List - ContextMenu" }),
             }),
         ],
     });

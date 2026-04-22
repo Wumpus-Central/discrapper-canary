@@ -1,115 +1,116 @@
-n.d(t, { J3: () => I, sB: () => L });
+n.d(t, { J3: () => y, sB: () => D });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    r = n(554146),
-    a = n(397927),
-    o = n(793574),
-    d = n(688810),
+    a = n(554146),
+    r = n(821609),
+    o = n(331322),
+    d = n(793574),
+    u = n(688810),
     c = n(47671),
-    u = n(692798),
+    g = n(692798),
     m = n(793943),
-    g = n(826673),
-    _ = n(422936),
-    x = n(234419),
-    h = n(792656),
-    A = n(511484),
-    p = n(811611),
+    _ = n(826673),
+    A = n(422936),
+    h = n(234419),
+    p = n(792656),
+    x = n(511484),
+    E = n(811611),
     T = n(954571),
-    f = n(779733),
-    S = n(652215),
-    E = n(385803),
-    b = n(49999),
-    C = n(788868),
-    v = n(985018),
-    N = n(254604);
-let I = () => {
-    (0, g.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: b.i.PRIMARY, forceTrack: !0 }),
+    S = n(779733),
+    f = n(652215),
+    b = n(385803),
+    C = n(49999),
+    v = n(788868),
+    N = n(985018),
+    I = n(254604);
+let y = () => {
+    (0, _.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: C.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
-        (0, f.default)();
+        (0, S.default)();
 };
 function j() {
-    let e = (0, _.O)(),
-        t = (0, A.U9)(e, C.pe.TIER_2)
-            ? v.intl.formatToPlainString(v.t.bkQ4bH, { percent: e?.discount.amount })
-            : v.intl.string(v.t.mr4K7D);
-    return (0, i.jsx)(h.A, {
-        subscriptionTier: C.pe.TIER_2,
+    let e = (0, A.O)(),
+        t = (0, x.U9)(e, v.pe.TIER_2)
+            ? N.intl.formatToPlainString(N.t.bkQ4bH, { percent: e?.discount.amount })
+            : N.intl.string(N.t.mr4K7D);
+    return (0, i.jsx)(p.A, {
+        subscriptionTier: v.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: S.ZSU.BUTTON_CTA, objectType: S.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: f.ZSU.BUTTON_CTA, objectType: f.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
-function y() {
+function O() {
     let e = (0, l.bG)([c.A], () => c.A.isPreview),
-        t = (0, x.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
+        t = (0, h.V)()?.subscription_trial?.sku_id === v.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: N.gY,
+              className: I.gY,
               children: [
-                  (0, i.jsx)(a.Button, { variant: "secondary", text: v.intl.string(v.t["E+COuA"]), onClick: I }),
+                  (0, i.jsx)(r.$, { variant: "secondary", text: N.intl.string(N.t["E+COuA"]), onClick: y }),
                   (0, i.jsx)(j, {}),
               ],
           });
 }
-function O(e) {
+function R(e) {
     let { children: t } = e,
         n = (0, l.bG)([c.A], () => c.A.isPreview),
-        { analyticsLocations: r } = (0, d.Ay)(o.A.USER_SETTINGS);
+        { analyticsLocations: a } = (0, u.Ay)(d.A.USER_SETTINGS);
     return (s.useEffect(() => {
         n &&
-            T.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: C.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                location_stack: r,
+            T.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: v.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                location_stack: a,
             });
-    }, [n, r]),
+    }, [n, a]),
     n)
-        ? (0, i.jsx)("div", { className: N._$, children: t })
+        ? (0, i.jsx)("div", { className: I._$, children: t })
         : t;
 }
-function R() {
+function L() {
     let e = (0, l.bG)([c.A], () => c.A.isPreview),
-        t = (0, x.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
+        t = (0, h.V)()?.subscription_trial?.sku_id === v.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: N.c7,
-                      children: (0, i.jsx)(a.Button, {
+                      className: I.c7,
+                      children: (0, i.jsx)(r.$, {
                           variant: "secondary",
                           fullWidth: !0,
-                          text: v.intl.string(v.t["E+COuA"]),
-                          onClick: () => I(),
+                          text: N.intl.string(N.t["E+COuA"]),
+                          onClick: () => y(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: N.BU }),
-                  (0, i.jsx)(p.Ay, { type: C.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: C.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: I.BU }),
+                  (0, i.jsx)(E.Ay, { type: v.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: v.pe.TIER_2 }),
               ],
           })
         : null;
 }
-function L() {
-    return (0, i.jsx)(u.Ay, {
-        type: u.v0.SETTINGS,
-        children: (0, i.jsxs)(O, {
+function D() {
+    return (0, i.jsx)(g.Ay, {
+        type: g.v0.SETTINGS,
+        children: (0, i.jsxs)(R, {
             children: [
-                (0, i.jsx)(u.ew, {
+                (0, i.jsx)(g.ew, {
                     isCoachmark: !1,
-                    renderCTAButtons: () => (0, i.jsx)(y, {}),
-                    headingClassName: N.EK,
+                    renderCTAButtons: () => (0, i.jsx)(O, {}),
+                    headingClassName: I.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: N.cI,
-                    titleIconClassName: N.Hq,
+                    titleClassName: I.cI,
+                    titleIconClassName: I.Hq,
                 }),
-                (0, i.jsx)(a.BJc, {
+                (0, i.jsx)(o.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     padding: { top: 24 },
-                    children: (0, i.jsx)(u.Zg, { disabled: !1, size: E.ni.SIZE_48 }),
+                    children: (0, i.jsx)(g.Zg, { disabled: !1, size: b.ni.SIZE_48 }),
                 }),
-                (0, i.jsx)(R, {}),
+                (0, i.jsx)(L, {}),
             ],
         }),
     });

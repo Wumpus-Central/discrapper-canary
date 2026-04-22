@@ -1,47 +1,47 @@
-e.d(n, { default: () => f });
-var a = e(627968),
-    i = e(64700),
-    l = e(158954),
-    r = e(397927),
-    s = e(997509),
-    c = e(976860),
-    o = e(465105),
-    u = e(652215),
-    x = e(746080),
-    d = e(985018),
-    h = e(442146);
-let f = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: f, transitionState: k, onConfirm: m } = t,
-        { submitting: p, errorMessage: C, onSubmit: b } = (0, o.A)({ onSubmit: m, onClose: f }),
-        T = i.useCallback(() => {
-            f(), s.A.close(), (0, c.pX)(u.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS));
-        }, [n, f]);
-    return (0, a.jsxs)(l.Modal, {
-        transitionState: k,
-        onClose: f,
-        title: d.intl.formatToPlainString(d.t.chV4Jb, { count: e }),
+a.d(n, { default: () => k });
+var i = a(627968),
+    e = a(64700),
+    l = a(189213),
+    r = a(834730),
+    s = a(939249),
+    c = a(997509),
+    o = a(976860),
+    u = a(465105),
+    d = a(652215),
+    x = a(746080),
+    h = a(985018),
+    f = a(428127);
+let k = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: a, onClose: k, transitionState: m, onConfirm: p } = t,
+        { submitting: C, errorMessage: b, onSubmit: E } = (0, u.A)({ onSubmit: p, onClose: k }),
+        g = e.useCallback(() => {
+            k(), c.A.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS));
+        }, [n, k]);
+    return (0, i.jsxs)(l.Modal, {
+        transitionState: m,
+        onClose: k,
+        title: h.intl.formatToPlainString(h.t.chV4Jb, { count: a }),
         actions: [
-            { text: d.intl.string(d.t["ETE/oC"]), onClick: f, variant: "secondary" },
-            { text: d.intl.string(d.t.LW0aUP), onClick: b, variant: "primary", loading: p },
+            { text: h.intl.string(h.t["ETE/oC"]), onClick: k, variant: "secondary" },
+            { text: h.intl.string(h.t.LW0aUP), onClick: E, variant: "primary", loading: C },
         ],
         children: [
-            (0, a.jsx)(r.Text, {
-                className: h.ij,
+            (0, i.jsx)(r.E, {
+                className: f.ij,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: d.intl.string(d.t.uNQItz),
+                children: h.intl.string(h.t.uNQItz),
             }),
-            (0, a.jsx)(r.DUT, {
-                className: h.K2,
-                onClick: T,
-                children: (0, a.jsx)(r.Text, {
+            (0, i.jsx)(s.D, {
+                className: f.K2,
+                onClick: g,
+                children: (0, i.jsx)(r.E, {
                     variant: "text-sm/normal",
                     color: "text-link",
-                    children: d.intl.string(d.t.szESVF),
+                    children: h.intl.string(h.t.szESVF),
                 }),
             }),
-            null != C &&
-                (0, a.jsx)(r.Text, { variant: "text-xs/normal", color: "text-feedback-critical", children: C }),
+            null != b && (0, i.jsx)(r.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: b }),
         ],
     });
 };

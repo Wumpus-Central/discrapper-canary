@@ -1,9 +1,9 @@
 n.d(t, { A: () => c });
 var i = n(627968),
     l = n(64700),
-    r = n(397927),
-    a = n(935649),
-    s = n(847599),
+    a = n(821609),
+    s = n(935649),
+    r = n(847599),
     o = n(36149),
     d = n(985018);
 function c(e) {
@@ -11,10 +11,10 @@ function c(e) {
         n = (0, o.b8)(),
         c = (0, o.i2)(),
         u = d.intl.string(d.t["9KiIz6"]),
-        _ = d.intl.string(d.t["/nicWo"]),
-        m = l.useCallback(() => {
-            a.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.SYSTEM_DM_RETRY_BUTTON }),
-                (0, s.UT)(s.Im.RETRY, t);
+        m = d.intl.string(d.t["/nicWo"]),
+        _ = l.useCallback(() => {
+            s.A.showAgeVerificationGetStartedModal({ entryPoint: r.q1.SYSTEM_DM_RETRY_BUTTON }),
+                (0, r.UT)(r.Im.RETRY, t);
         }, [t]);
-    return (0, i.jsx)(r.Button, { variant: "primary", text: n ? u : _, onClick: m, disabled: !c });
+    return (0, i.jsx)(a.$, { variant: "primary", text: n ? u : m, onClick: _, disabled: !c });
 }

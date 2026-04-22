@@ -1,12 +1,11 @@
 "use strict";
 function r() {
-    let e;
     return (
-        (e =
-            (Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
+        ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
             navigator.browserLanguage ||
-            navigator.userLanguage) ?? ""
+            navigator.userLanguage) ??
+        ""
     );
 }
 n.d(t, { c: () => r });

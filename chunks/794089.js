@@ -1,38 +1,38 @@
-n.d(t, { p: () => f });
+n.d(t, { p: () => T });
 var i = n(627968),
     s = n(64700),
-    l = n(158954),
+    l = n(331322),
     a = n(74848),
     r = n(419954),
     o = n(933297),
     d = n(843401),
-    c = n(723702),
-    u = n(780964),
-    m = n(208039),
-    g = n(801565),
+    u = n(723702),
+    c = n(780964),
+    g = n(208039),
+    m = n(801565),
     _ = n(89253),
-    x = n(860787),
-    A = n(731854),
-    h = n(985018);
-let p = c.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
-function T(e) {
+    A = n(860787),
+    h = n(731854),
+    p = n(985018);
+let x = u.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
+function E(e) {
     let { inputAndOutputAreBluetooth: t, canPromptSystemServiceInstallForVoice: n } = e;
-    return (0, i.jsxs)(l.BJc, {
+    return (0, i.jsxs)(l.B, {
         children: [
             n && (0, i.jsx)(d.A, { sourcePage: "voice" }),
-            t && (0, i.jsx)(m.A, { look: m.k.WARNING, children: h.intl.string(h.t.Ioz3gx) }),
+            t && (0, i.jsx)(g.A, { look: g.k.WARNING, children: p.intl.string(p.t.Ioz3gx) }),
         ],
     });
 }
-let f = (0, r.zZ)(u.X.VOICE_CATEGORY, {
-    useTitle: () => h.intl.string(h.t.K3lovD),
+let T = (0, r.zZ)(c.X.VOICE_CATEGORY, {
+    useTitle: () => p.intl.string(p.t.K3lovD),
     useInlineNotice: function () {
         let e = (0, d.I)("voice"),
-            t = (0, a.x5)(A.oh.AUDIO_INPUT),
-            n = (0, a.x5)(A.oh.AUDIO_OUTPUT),
+            t = (0, a.x5)(h.oh.AUDIO_INPUT),
+            n = (0, a.x5)(h.oh.AUDIO_OUTPUT),
             l = s.useMemo(() => {
-                let e = p.some((e) => t?.hardwareId?.startsWith(e)),
-                    i = p.some((e) => n?.hardwareId?.startsWith(e));
+                let e = x.some((e) => t?.hardwareId?.startsWith(e)),
+                    i = x.some((e) => n?.hardwareId?.startsWith(e));
                 return e && i && t?.containerId != null && t.containerId === n?.containerId;
             }, [t, n]);
         return s.useMemo(
@@ -41,7 +41,7 @@ let f = (0, r.zZ)(u.X.VOICE_CATEGORY, {
                     ? {
                           type: o.lT.STRONGLY_DISCOURAGED_CUSTOM,
                           notice: () =>
-                              (0, i.jsx)(T, {
+                              (0, i.jsx)(E, {
                                   inputAndOutputAreBluetooth: l,
                                   canPromptSystemServiceInstallForVoice: e.canPrompt,
                               }),
@@ -50,5 +50,5 @@ let f = (0, r.zZ)(u.X.VOICE_CATEGORY, {
             [e.canPrompt, l],
         );
     },
-    buildLayout: () => [g.a, _.d, x.L],
+    buildLayout: () => [m.a, _.d, A.L],
 });

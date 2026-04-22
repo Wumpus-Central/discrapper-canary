@@ -1,96 +1,97 @@
-"use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => f });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(928108),
-    a = n(99787),
-    o = n(255354),
-    d = n(957300),
-    c = n(378427),
-    u = n(411335),
-    m = n(985018),
-    g = n(10696);
-function x(e) {
+    l = n(64700),
+    s = n(935063),
+    r = n(534514),
+    a = n(834730),
+    o = n(663803),
+    d = n(626900),
+    c = n(939249),
+    u = n(658675),
+    m = n(928108),
+    g = n(99787),
+    h = n(255354),
+    x = n(957300),
+    _ = n(378427),
+    p = n(411335),
+    A = n(985018),
+    E = n(10696);
+function f(e) {
     let { rule: t, onChangeRule: n } = e,
-        [x, h] = s.useState(t.triggerMetadata?.mentionTotalLimit),
-        _ = (0, r._)(t.guildId, !1);
+        [f, j] = l.useState(t.triggerMetadata?.mentionTotalLimit),
+        N = (0, m._)(t.guildId, !1);
     return (0, i.jsxs)("div", {
-        className: g.sp,
+        className: E.sp,
         children: [
-            (0, i.jsxs)(d.A, {
+            (0, i.jsxs)(x.A, {
                 step: 1,
-                header: m.intl.string(m.t.IGfuTa),
+                header: A.intl.string(A.t.IGfuTa),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: g.$I,
+                        className: E.$I,
                         children: [
                             (0, i.jsx)("div", {
-                                className: g.U$,
-                                children: (0, i.jsx)(l.XxR, { size: "md", color: "currentColor", className: g.B_ }),
+                                className: E.U$,
+                                children: (0, i.jsx)(s.X, { size: "md", color: "currentColor", className: E.B_ }),
                             }),
                             (0, i.jsxs)("div", {
-                                className: g.ej,
+                                className: E.ej,
                                 children: [
-                                    (0, i.jsx)(l.Heading, {
+                                    (0, i.jsx)(r.D, {
                                         variant: "heading-sm/semibold",
-                                        children: m.intl.string(m.t["s/26oQ"]),
+                                        children: A.intl.string(A.t["s/26oQ"]),
                                     }),
-                                    (0, i.jsx)(l.Text, {
+                                    (0, i.jsx)(a.E, {
                                         color: "interactive-text-default",
                                         variant: "text-xs/medium",
-                                        className: g.mu,
-                                        children: m.intl.string(m.t["8uW4/N"]),
+                                        className: E.mu,
+                                        children: A.intl.string(A.t["8uW4/N"]),
                                     }),
                                 ],
                             }),
                             (0, i.jsx)("div", {
-                                className: g.Ld,
-                                children: (0, i.jsx)(l.lw3, {
-                                    value: x,
+                                className: E.Ld,
+                                children: (0, i.jsx)(o.l, {
+                                    value: f,
                                     onChange: (e) => {
-                                        h(e),
+                                        j(e),
                                             n({
                                                 ...t,
                                                 triggerMetadata: { ...t.triggerMetadata, mentionTotalLimit: e },
                                             });
                                     },
-                                    minValue: u.Us,
-                                    maxValue: u.M3,
-                                    className: g.Im,
+                                    minValue: p.Us,
+                                    maxValue: p.M3,
+                                    className: E.Im,
                                 }),
                             }),
                         ],
                     }),
-                    _
+                    N
                         ? (0, i.jsxs)("div", {
-                              className: g.$I,
+                              className: E.$I,
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: g.U$,
-                                      children: (0, i.jsx)(l.ERh, {
-                                          size: "md",
-                                          color: "currentColor",
-                                          className: g.B_,
-                                      }),
+                                      className: E.U$,
+                                      children: (0, i.jsx)(d.E, { size: "md", color: "currentColor", className: E.B_ }),
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: g.ej,
+                                      className: E.ej,
                                       children: [
-                                          (0, i.jsx)(l.Heading, {
+                                          (0, i.jsx)(r.D, {
                                               variant: "heading-sm/semibold",
-                                              children: m.intl.string(m.t.XnuC9g),
+                                              children: A.intl.string(A.t.XnuC9g),
                                           }),
-                                          (0, i.jsx)(l.Text, {
+                                          (0, i.jsx)(a.E, {
                                               color: "interactive-text-default",
                                               variant: "text-xs/medium",
-                                              className: g.mu,
-                                              children: m.intl.string(m.t.EDBe5m),
+                                              className: E.mu,
+                                              children: A.intl.string(A.t.EDBe5m),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsx)("div", {
-                                      children: (0, i.jsx)(l.DUT, {
+                                      children: (0, i.jsx)(c.D, {
                                           onClick: () => {
                                               var e;
                                               return (
@@ -104,9 +105,9 @@ function x(e) {
                                                   })
                                               );
                                           },
-                                          children: (0, i.jsx)(l.P7L, {
+                                          children: (0, i.jsx)(u.P, {
                                               checked: t.triggerMetadata?.mentionRaidProtectionEnabled,
-                                              disabled: !_,
+                                              disabled: !N,
                                           }),
                                       }),
                                   }),
@@ -115,17 +116,17 @@ function x(e) {
                         : null,
                 ],
             }),
-            (0, i.jsx)(c.A, { type: c.A.Type.ARROW_DOWN }),
-            (0, i.jsx)(d.A, {
+            (0, i.jsx)(_.A, { type: _.A.Type.ARROW_DOWN }),
+            (0, i.jsx)(x.A, {
                 step: 2,
-                header: m.intl.string(m.t["18TOiQ"]),
-                children: (0, i.jsx)(a.A, { rule: t, onChangeRule: n }),
+                header: A.intl.string(A.t["18TOiQ"]),
+                children: (0, i.jsx)(g.A, { rule: t, onChangeRule: n }),
             }),
-            (0, i.jsx)(c.A, { type: c.A.Type.CROSS }),
-            (0, i.jsx)(d.A, {
+            (0, i.jsx)(_.A, { type: _.A.Type.CROSS }),
+            (0, i.jsx)(x.A, {
                 step: 3,
-                header: m.intl.string(m.t.eq3gjh),
-                children: (0, i.jsx)(o.A, { rule: t, onChangeRule: n }),
+                header: A.intl.string(A.t.eq3gjh),
+                children: (0, i.jsx)(h.A, { rule: t, onChangeRule: n }),
             }),
         ],
     });

@@ -1,5 +1,9 @@
 "use strict";
-n.d(t, { P: () => r });
-var r = (function (e) {
-    return (e.UNKNOWN = "unknown"), (e.BLUETOOTH = "bluetooth"), (e.SPEAKER = "speaker"), (e.RECEIVER = "receiver"), e;
-})({});
+n.d(t, { P: () => i });
+var r,
+    i =
+        (((r = {}).UNKNOWN = "unknown"),
+        (r.BLUETOOTH = "bluetooth"),
+        (r.SPEAKER = "speaker"),
+        (r.RECEIVER = "receiver"),
+        r);

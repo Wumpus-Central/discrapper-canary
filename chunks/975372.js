@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         words: {
@@ -21,7 +19,7 @@
             return 1 === r.length ? (n ? i[0] : i[1]) : e + " " + t.correctGrammaticalCase(e, i);
         },
     };
-    return e.defineLocale("me", {
+    e.defineLocale("me", {
         months: "januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar".split("_"),
         monthsShort: "jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.".split("_"),
         monthsParseExact: !0,
@@ -89,4 +87,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { XJ: () => r, dK: () => i, td: () => s, vq: () => a });
+n.d(t, { XJ: () => r, dK: () => i, td: () => o, vq: () => a });
 var r = function (e) {
         return e instanceof SVGElement && "getBBox" in e;
     },
@@ -10,10 +10,9 @@ var r = function (e) {
                 i = t.height;
             return !n && !i;
         }
-        var a = e,
-            s = a.offsetWidth,
-            o = a.offsetHeight;
-        return !(s || o || e.getClientRects().length);
+        var a = e.offsetWidth,
+            o = e.offsetHeight;
+        return !(a || o || e.getClientRects().length);
     },
     a = function (e) {
         if (e instanceof Element) return !0;
@@ -21,7 +20,7 @@ var r = function (e) {
             n = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(n && e instanceof n.Element);
     },
-    s = function (e) {
+    o = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;

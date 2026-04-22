@@ -1,202 +1,187 @@
 "use strict";
 let r;
-n.d(t, { A: () => z });
+n.d(t, { A: () => w });
 var i = n(735438),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(73153),
     l = n(432703),
     u = n(49463),
-    c = n(655116),
-    d = n(961350),
+    d = n(655116),
+    c = n(961350),
     _ = n(963307),
     f = n(761640),
-    p = n(734057),
+    E = n(734057),
     h = n(919638),
-    m = n(696451),
-    g = n(71393),
-    E = n(383501),
+    p = n(696451),
+    m = n(71393),
+    g = n(383501),
     A = n(994500),
     I = n(309010),
     T = n(967198),
-    y = n(652215);
-let S = new l.Ay((e) => {
-    for (let t in e) null != g.A.getGuild(t) || h.A.isUnavailable(t) || delete e[t];
+    S = n(652215);
+let y = new l.Ay((e) => {
+    for (let t in e) null != m.A.getGuild(t) || h.A.isUnavailable(t) || delete e[t];
     o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
 });
-function v(e, t) {
+function N(e, t) {
     let n = {};
-    S.forEach((i) => {
+    y.forEach((i) => {
         i !== T.A.getGuildId() &&
-            i !== E.A.getGuildId() &&
-            i !== p.A.getChannel(I.A.getChannelId())?.getGuildId() &&
+            i !== g.A.getGuildId() &&
+            i !== E.A.getChannel(I.A.getChannelId())?.getGuildId() &&
             (null == r || r.guildId !== i) &&
-            (S.clearWithoutFlushing(i, e), t && (n[i] = S.get(i)));
+            (y.clearWithoutFlushing(i, e), t && (n[i] = y.get(i)));
     }),
-        a().isEmpty(n) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
+        s().isEmpty(n) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
 }
-function C(e, t) {
-    return S.subscribeToGuild(e), null != t && f.Ay.getSection(t) === y.YvQ.MEMBERS && b(e, t, l.LD);
+function O(e, t) {
+    return y.subscribeToGuild(e), null != t && f.Ay.getSection(t) === S.YvQ.MEMBERS && R(e, t, l.LD);
 }
-function b(e, t, n) {
-    if (t === _.sN) return S.subscribeChannel(e, t, n);
-    let r = p.A.getChannel(t);
+function R(e, t, n) {
+    if (t === _.sN) return y.subscribeChannel(e, t, n);
+    let r = E.A.getChannel(t);
     if (null == r) return !1;
     let i = r.getGuildId();
-    return (i !== e && e === y.YYv && S.subscribeToGuild(i), r?.isThread())
-        ? r.type === y.rbe.ANNOUNCEMENT_THREAD
-            ? S.subscribeChannel(i, r.parent_id, n)
-            : !!r.isActiveThread() && S.subscribeThreadMemberList(i, t, I.A.getChannelId())
-        : S.subscribeChannel(i, t, n);
+    return (i !== e && e === S.YYv && y.subscribeToGuild(i), r?.isThread())
+        ? r.type === S.rbe.ANNOUNCEMENT_THREAD
+            ? y.subscribeChannel(i, r.parent_id, n)
+            : !!r.isActiveThread() && y.subscribeThreadMemberList(i, t, I.A.getChannelId())
+        : y.subscribeChannel(i, t, n);
 }
-function N(e) {
+function v(e) {
     let { type: t } = e;
-    "CONNECTION_OPEN" === t && v(!0, !1);
+    "CONNECTION_OPEN" === t && N(!0, !1);
     let n = T.A.getGuildId();
-    null != n && C(n, I.A.getChannelId(n));
+    null != n && O(n, I.A.getChannelId(n));
     let r = {};
-    S.forEach((e) => {
-        null == g.A.getGuild(e) ? S.clearWithoutFlushing(e, !0) : (r[e] = S.get(e));
+    y.forEach((e) => {
+        null == m.A.getGuild(e) ? y.clearWithoutFlushing(e, !0) : (r[e] = y.get(e));
     }),
-        a().isEmpty(r) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: r });
+        s().isEmpty(r) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: r });
 }
-function R() {
-    v(!1, !1);
+function C(e) {
+    let { guildId: t, channelId: n } = e;
+    return !h.A.isUnavailable(t) && O(t, n);
 }
-function O(e) {
-    let { idle: t } = e;
-    if (!t) return !1;
-    v(!1, !0);
+function b() {
+    return O(T.A.getGuildId(), I.A.getChannelId());
 }
 function D() {
-    S.reset();
-}
-function L(e) {
-    let { guild: t } = e;
-    t.id === T.A.getGuildId() && B();
-}
-function w(e) {
-    let { guild: t } = e;
-    S.clearWithoutFlushing(t.id, !0);
-}
-function x(e) {
-    let { guildId: t, userIds: n } = e;
-    return (
-        n.forEach((e) => {
-            e !== d.default.getId() && S.subscribeUser(t, e);
-        }),
-        !1
-    );
-}
-function P(e) {
-    let { guildId: t, userIds: n } = e;
-    return (
-        n.forEach((e) => {
-            S.unsubscribeUser(t, e);
-        }),
-        !1
-    );
-}
-function M(e) {
-    let { guildId: t } = e;
-    S.subscribeToMemberUpdates(t);
-}
-function k(e) {
-    let { guildId: t } = e;
-    S.unsubscribeFromMemberUpdates(t);
-}
-function U(e) {
-    let { guildId: t } = e;
-    return S.subscribeToGuild(t);
-}
-function G(e) {
-    let { guildId: t, channelId: n, ranges: r } = e;
-    return b(t, n, r);
-}
-function V(e) {
-    let { guildId: t, channelId: n } = e;
-    return C(t, n);
-}
-function F(e) {
-    let { guildId: t, channelId: n } = e;
-    return !h.A.isUnavailable(t) && C(t, n);
-}
-function B() {
-    return C(T.A.getGuildId(), I.A.getChannelId());
-}
-function j(e) {
-    let { channel: t } = e;
-    return t.isArchivedThread()
-        ? S.unsubscribeThreadMemberList(t.guild_id, t.id)
-        : !!t.isActiveThread() &&
-              I.A.getChannelId() === t.id &&
-              void S.subscribeThreadMemberList(t.guild_id, t.id, I.A.getChannelId());
-}
-function H(e) {
-    let { channel: t } = e;
-    return S.unsubscribeThreadMemberList(t.guild_id, t.id);
-}
-function Y() {
-    let e = c.A.getSyncingWith();
-    if (null == e) null != r && (S.unsubscribeUser(r.guildId, r.userId), (r = null));
+    let e = d.A.getSyncingWith();
+    if (null == e) null != r && (y.unsubscribeUser(r.guildId, r.userId), (r = null));
     else {
         let { userId: t } = e;
         if ((null != r && r.userId === t) || A.A.isFriend(t)) return !1;
-        let n = m.Ay.memberOf(t);
+        let n = p.Ay.memberOf(t);
         if (0 === n.length) return !1;
         let [i] = n;
-        (r = { guildId: i, userId: t }), S.subscribeUser(i, t);
+        (r = { guildId: i, userId: t }), y.subscribeUser(i, t);
     }
     return !1;
 }
-function W(e) {
-    let { guildIds: t } = e;
-    for (let e of t) null != e && S.subscribeToGuild(e);
-    return !1;
-}
-class K extends s.Ay.Store {
+class L extends a.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        this.waitFor(d.default, f.Ay, p.A, u.A, h.A, m.Ay, g.A, E.A, A.A, I.A, T.A, c.A),
-            this.syncWith([c.A], Y),
-            this.syncWith([f.Ay], B);
+        this.waitFor(c.default, f.Ay, E.A, u.A, h.A, p.Ay, m.A, g.A, A.A, I.A, T.A, d.A),
+            this.syncWith([d.A], D),
+            this.syncWith([f.Ay], b);
     }
     getSubscribedThreadIds() {
-        return S.getSubscribedThreadIds();
+        return y.getSubscribedThreadIds();
     }
     isSubscribedToThreads(e) {
-        return S.isSubscribedToThreads(e);
+        return y.isSubscribedToThreads(e);
     }
     isSubscribedToAnyMember(e) {
-        return S.isSubscribedToAnyMember(e);
+        return y.isSubscribedToAnyMember(e);
     }
     isSubscribedToMemberUpdates(e) {
-        return S.isSubscribedToMemberUpdates(e);
+        return y.isSubscribedToMemberUpdates(e);
     }
     isSubscribedToAnyGuildChannel(e) {
-        let t = S.get(e).channels;
+        let t = y.get(e).channels;
         return null != t && Object.keys(t).length > 0;
     }
 }
-let z = new K(o.h, {
-    CONNECTION_OPEN: N,
-    CONNECTION_RESUMED: N,
-    CONNECTION_CLOSED: R,
-    IDLE: O,
-    LOGOUT: D,
-    VOICE_CHANNEL_SELECT: F,
-    CHANNEL_SELECT: F,
-    GUILD_CREATE: L,
-    GUILD_DELETE: w,
-    GUILD_SUBSCRIPTIONS_MEMBERS_ADD: x,
-    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: P,
-    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: M,
-    GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: k,
-    GUILD_SUBSCRIPTIONS_CHANNEL: G,
-    GUILD_SUBSCRIPTIONS: U,
-    CHANNEL_PRELOAD: V,
-    INBOX_OPEN: W,
-    THREAD_UPDATE: j,
-    THREAD_DELETE: H,
-    THREAD_LIST_SYNC: B,
+let w = new L(o.h, {
+    CONNECTION_OPEN: v,
+    CONNECTION_RESUMED: v,
+    CONNECTION_CLOSED: function () {
+        N(!1, !1);
+    },
+    IDLE: function (e) {
+        let { idle: t } = e;
+        if (!t) return !1;
+        N(!1, !0);
+    },
+    LOGOUT: function () {
+        y.reset();
+    },
+    VOICE_CHANNEL_SELECT: C,
+    CHANNEL_SELECT: C,
+    GUILD_CREATE: function (e) {
+        let { guild: t } = e;
+        t.id === T.A.getGuildId() && b();
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        y.clearWithoutFlushing(t.id, !0);
+    },
+    GUILD_SUBSCRIPTIONS_MEMBERS_ADD: function (e) {
+        let { guildId: t, userIds: n } = e;
+        return (
+            n.forEach((e) => {
+                e !== c.default.getId() && y.subscribeUser(t, e);
+            }),
+            !1
+        );
+    },
+    GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: function (e) {
+        let { guildId: t, userIds: n } = e;
+        return (
+            n.forEach((e) => {
+                y.unsubscribeUser(t, e);
+            }),
+            !1
+        );
+    },
+    GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: function (e) {
+        let { guildId: t } = e;
+        y.subscribeToMemberUpdates(t);
+    },
+    GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: function (e) {
+        let { guildId: t } = e;
+        y.unsubscribeFromMemberUpdates(t);
+    },
+    GUILD_SUBSCRIPTIONS_CHANNEL: function (e) {
+        let { guildId: t, channelId: n, ranges: r } = e;
+        return R(t, n, r);
+    },
+    GUILD_SUBSCRIPTIONS: function (e) {
+        let { guildId: t } = e;
+        return y.subscribeToGuild(t);
+    },
+    CHANNEL_PRELOAD: function (e) {
+        let { guildId: t, channelId: n } = e;
+        return O(t, n);
+    },
+    INBOX_OPEN: function (e) {
+        let { guildIds: t } = e;
+        for (let e of t) null != e && y.subscribeToGuild(e);
+        return !1;
+    },
+    THREAD_UPDATE: function (e) {
+        let { channel: t } = e;
+        return t.isArchivedThread()
+            ? y.unsubscribeThreadMemberList(t.guild_id, t.id)
+            : !!t.isActiveThread() &&
+                  I.A.getChannelId() === t.id &&
+                  void y.subscribeThreadMemberList(t.guild_id, t.id, I.A.getChannelId());
+    },
+    THREAD_DELETE: function (e) {
+        let { channel: t } = e;
+        return y.unsubscribeThreadMemberList(t.guild_id, t.id);
+    },
+    THREAD_LIST_SYNC: b,
 });

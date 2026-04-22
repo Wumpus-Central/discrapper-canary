@@ -1,28 +1,29 @@
-i.d(e, { A: () => c });
-var t = i(627968);
-i(64700);
-var l = i(311907),
-    r = i(397927),
-    a = i(967198),
-    d = i(652215),
-    u = i(985018);
-function c(n) {
-    let e = (0, l.bG)([a.A], () => a.A.getGuildId()),
-        c = n.type === d.rbe.GUILD_CATEGORY;
-    return __OVERLAY__ || e !== d.YYv
+t.d(e, { A: () => u });
+var i = t(627968);
+t(64700);
+var l = t(311907),
+    r = t(192308),
+    a = t(477782),
+    d = t(967198),
+    s = t(652215),
+    o = t(985018);
+function u(n) {
+    let e = (0, l.bG)([d.A], () => d.A.getGuildId()),
+        u = n.type === s.rbe.GUILD_CATEGORY;
+    return __OVERLAY__ || e !== s.YYv
         ? null
-        : (0, t.jsx)(r.Drp, {
+        : (0, i.jsx)(a.Dr, {
               id: "set-channel-nickname",
-              label: c ? u.intl.string(u.t.xXYKiP) : u.intl.string(u.t.dilOF6),
+              label: u ? o.intl.string(o.t.xXYKiP) : o.intl.string(o.t.dilOF6),
               action: function () {
-                  (0, r.mMO)(async () => {
-                      let { default: e } = await i.e("83504").then(i.bind(i, 872243));
-                      return (i) =>
-                          (0, t.jsx)(e, {
-                              ...i,
+                  (0, r.openModalLazy)(async () => {
+                      let { default: e } = await t.e("83504").then(t.bind(t, 872243));
+                      return (t) =>
+                          (0, i.jsx)(e, {
+                              ...t,
                               channelId: n.id,
-                              heading: c ? u.intl.string(u.t.xXYKiP) : u.intl.string(u.t.dilOF6),
-                              formTitle: c ? u.intl.string(u.t.OCAkGP) : u.intl.string(u.t["621LJD"]),
+                              heading: u ? o.intl.string(o.t.xXYKiP) : o.intl.string(o.t.dilOF6),
+                              formTitle: u ? o.intl.string(o.t.OCAkGP) : o.intl.string(o.t["621LJD"]),
                           });
                   });
               },

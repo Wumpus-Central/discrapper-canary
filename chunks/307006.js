@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => _ });
 var r = n(735438),
     i = n.n(r),
     s = n(311907),
@@ -7,26 +7,8 @@ var r = n(735438),
     o = n(160745);
 let l = null,
     u = !1,
-    c = null;
-function d(e) {
-    let { connected: t } = e;
-    u = t;
-}
-function _() {
-    u = !1;
-}
-function f() {
-    u = !1;
-}
-function p(e) {
-    let { products: t, storeFront: n } = e;
-    (l = t), (c = n);
-}
-function h(e) {
-    let { storeFront: t } = e;
-    c = t;
-}
-class m extends s.Ay.Store {
+    d = null;
+class c extends s.Ay.Store {
     static displayName = "GenericIAPStore";
     isGenericIapConnected() {
         return u;
@@ -38,13 +20,26 @@ class m extends s.Ay.Store {
         return l;
     }
     getStoreFront() {
-        return c;
+        return d;
     }
 }
-let E = new m(a.h, {
-    IAP_LOAD_GENERIC_PRODUCTS: p,
-    GENERIC_IAP_INIT_CONNECTION: d,
-    GENERIC_IAP_INIT_CONNECTION_FAILED: _,
-    GENERIC_IAP_END_CONNECTION: f,
-    GENERIC_IAP_SET_STORE_FRONT: h,
+let _ = new c(a.h, {
+    IAP_LOAD_GENERIC_PRODUCTS: function (e) {
+        let { products: t, storeFront: n } = e;
+        (l = t), (d = n);
+    },
+    GENERIC_IAP_INIT_CONNECTION: function (e) {
+        let { connected: t } = e;
+        u = t;
+    },
+    GENERIC_IAP_INIT_CONNECTION_FAILED: function () {
+        u = !1;
+    },
+    GENERIC_IAP_END_CONNECTION: function () {
+        u = !1;
+    },
+    GENERIC_IAP_SET_STORE_FRONT: function (e) {
+        let { storeFront: t } = e;
+        d = t;
+    },
 });

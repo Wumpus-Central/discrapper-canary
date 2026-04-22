@@ -1,237 +1,46 @@
 "use strict";
-n.d(t, { Js: () => U, Rb: () => C, d9: () => L, eu: () => w });
+n.d(t, { Js: () => L, Rb: () => N, d9: () => C, eu: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(382222),
-    l = n(158954),
-    u = n(863610),
+    o = n(517738),
+    l = n(939249),
+    u = n(717421),
+    d = n(863610),
     c = n(935154),
-    d = n(435371),
-    _ = n(659974),
-    f = n(573435),
-    p = n(427262),
-    h = n(652215),
+    _ = n(990078),
+    f = n(556525),
+    E = n(573435),
+    h = n(427262),
+    p = n(652215),
     m = n(190460),
-    E = n(778712),
-    g = n(985018),
-    A = n(774659);
-let I = { tension: 1200, friction: 70 };
-function T() {
+    g = n(778712),
+    A = n(985018),
+    I = n(282291);
+let T = { tension: 1200, friction: 70 };
+function S() {
     return document.hasFocus();
 }
-function S(e) {
+function y(e) {
     let { size: t, isMobile: n, isTyping: i, ...s } = e,
-        a = (0, E.Kj)(t),
+        a = (0, g.Kj)(t),
         o = a.status * (n && !i ? 1.5 : 1),
         l = a.status * (i ? 2.5 : 1),
         u = i ? (2.5 * a.status - a.status) / 2 : 0,
-        c = a.size - a.status - u - a.offset,
-        d = a.size - o - a.offset;
-    return (0, r.jsx)("rect", { x: c, y: d, width: l, height: o, fill: "transparent", "aria-hidden": !0, ...s });
+        d = a.size - a.status - u - a.offset,
+        c = a.size - o - a.offset;
+    return (0, r.jsx)("rect", { x: d, y: c, width: l, height: o, fill: "transparent", "aria-hidden": !0, ...s });
 }
-function y(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return null != t
-        ? g.intl.formatToPlainString(g.t["/6mw10"], { label: e, status: (0, p.MU)(t, { isMobile: n, isVR: r }) })
-        : e;
-}
-function v(e, t, n, r) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    if (null == e) return null;
-    if (r)
-        switch (t) {
-            case E._3.SIZE_16:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_16;
-            case E._3.SIZE_20:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_20;
-            case E._3.SIZE_24:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_24;
-            case E._3.SIZE_32:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_32;
-            case E._3.SIZE_40:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_40;
-            case E._3.SIZE_44:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_44;
-            case E._3.SIZE_48:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_48;
-            case E._3.SIZE_56:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_56;
-            case E._3.SIZE_72:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_72;
-            case E._3.SIZE_80:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_80;
-            case E._3.SIZE_96:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_96;
-            case E._3.SIZE_120:
-                return f.hW.AVATAR_DECORATION_STATUS_TYPING_120;
-        }
-    if (n && !i)
-        switch (t) {
-            case E._3.SIZE_16:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_16;
-            case E._3.SIZE_20:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_20;
-            case E._3.SIZE_24:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_24;
-            case E._3.SIZE_32:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_32;
-            case E._3.SIZE_40:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_40;
-            case E._3.SIZE_44:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_44;
-            case E._3.SIZE_48:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_48;
-            case E._3.SIZE_56:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_56;
-            case E._3.SIZE_72:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_72;
-            case E._3.SIZE_80:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_80;
-            case E._3.SIZE_96:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_96;
-            case E._3.SIZE_120:
-                return f.hW.AVATAR_DECORATION_STATUS_MOBILE_120;
-        }
-    switch (t) {
-        case E._3.SIZE_16:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_16;
-        case E._3.SIZE_20:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_20;
-        case E._3.SIZE_24:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_24;
-        case E._3.SIZE_32:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_32;
-        case E._3.SIZE_40:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_40;
-        case E._3.SIZE_44:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_44;
-        case E._3.SIZE_48:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_48;
-        case E._3.SIZE_56:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_56;
-        case E._3.SIZE_72:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_72;
-        case E._3.SIZE_80:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_80;
-        case E._3.SIZE_96:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_96;
-        case E._3.SIZE_120:
-            return f.hW.AVATAR_DECORATION_STATUS_ROUND_120;
-    }
-    return null;
-}
-function N(e, t, n, r) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-    if (null == e) return f.hW.AVATAR_DEFAULT;
-    if (r)
-        switch (t) {
-            case E._3.SIZE_16:
-                return f.hW.AVATAR_STATUS_TYPING_16;
-            case E._3.SIZE_20:
-                return f.hW.AVATAR_STATUS_TYPING_20;
-            case E._3.SIZE_24:
-                return f.hW.AVATAR_STATUS_TYPING_24;
-            case E._3.SIZE_32:
-                return f.hW.AVATAR_STATUS_TYPING_32;
-            case E._3.SIZE_40:
-                return f.hW.AVATAR_STATUS_TYPING_40;
-            case E._3.SIZE_44:
-                return f.hW.AVATAR_STATUS_TYPING_44;
-            case E._3.SIZE_48:
-                return f.hW.AVATAR_STATUS_TYPING_48;
-            case E._3.SIZE_56:
-                return f.hW.AVATAR_STATUS_TYPING_56;
-            case E._3.SIZE_72:
-                return f.hW.AVATAR_STATUS_TYPING_72;
-            case E._3.SIZE_80:
-                return f.hW.AVATAR_STATUS_TYPING_80;
-            case E._3.SIZE_96:
-                return f.hW.AVATAR_STATUS_TYPING_96;
-            case E._3.SIZE_120:
-                return f.hW.AVATAR_STATUS_TYPING_120;
-        }
-    if (e === h.clD.ONLINE && n && !i)
-        switch (t) {
-            case E._3.SIZE_16:
-                return f.hW.AVATAR_STATUS_MOBILE_16;
-            case E._3.SIZE_20:
-                return f.hW.AVATAR_STATUS_MOBILE_20;
-            case E._3.SIZE_24:
-                return f.hW.AVATAR_STATUS_MOBILE_24;
-            case E._3.SIZE_32:
-                return f.hW.AVATAR_STATUS_MOBILE_32;
-            case E._3.SIZE_40:
-                return f.hW.AVATAR_STATUS_MOBILE_40;
-            case E._3.SIZE_44:
-                return f.hW.AVATAR_STATUS_MOBILE_44;
-            case E._3.SIZE_48:
-                return f.hW.AVATAR_STATUS_MOBILE_48;
-            case E._3.SIZE_56:
-                return f.hW.AVATAR_STATUS_MOBILE_56;
-            case E._3.SIZE_72:
-                return f.hW.AVATAR_STATUS_MOBILE_72;
-            case E._3.SIZE_80:
-                return f.hW.AVATAR_STATUS_MOBILE_80;
-            case E._3.SIZE_96:
-                return f.hW.AVATAR_STATUS_MOBILE_96;
-            case E._3.SIZE_120:
-                return f.hW.AVATAR_STATUS_MOBILE_120;
-        }
-    switch (t) {
-        case E._3.SIZE_16:
-            return f.hW.AVATAR_STATUS_ROUND_16;
-        case E._3.SIZE_20:
-            return f.hW.AVATAR_STATUS_ROUND_20;
-        case E._3.SIZE_24:
-            return f.hW.AVATAR_STATUS_ROUND_24;
-        case E._3.SIZE_32:
-            return f.hW.AVATAR_STATUS_ROUND_32;
-        case E._3.SIZE_40:
-            return f.hW.AVATAR_STATUS_ROUND_40;
-        case E._3.SIZE_44:
-            return f.hW.AVATAR_STATUS_ROUND_44;
-        case E._3.SIZE_48:
-            return f.hW.AVATAR_STATUS_ROUND_48;
-        case E._3.SIZE_56:
-            return f.hW.AVATAR_STATUS_ROUND_56;
-        case E._3.SIZE_72:
-            return f.hW.AVATAR_STATUS_ROUND_72;
-        case E._3.SIZE_80:
-            return f.hW.AVATAR_STATUS_ROUND_80;
-        case E._3.SIZE_96:
-            return f.hW.AVATAR_STATUS_ROUND_96;
-        case E._3.SIZE_120:
-            return f.hW.AVATAR_STATUS_ROUND_120;
-    }
-    throw Error(`getMaskId(): Unsupported type, size: ${t}, status: ${e}, isMobile: ${n ? "true" : "false"}`);
-}
-function C(e, t, n) {
+function N(e, t, n) {
     let { isTyping: r, isMobile: i, isVR: s } = n,
         a = (0, c.i0)(e.status, t, { isTyping: r, isMobile: i, isVR: s }),
         o = (r ? e.size - (a.width / 2 + e.status / 2) : e.size - a.width) - e.offset;
     return { ...a, x: o, y: e.size - a.height - e.offset };
 }
-function R(e, t) {
-    let { size: n, status: r, stroke: i, offset: s } = e,
-        { isTyping: a, isMobile: o, isVR: l } = t,
-        u = a ? 2.5 * r : r,
-        c = (u - r) / 2,
-        d = o && !l,
-        _ = d ? 1.5 * r : r;
-    return {
-        avatarCutoutX: n - u + c - i - s,
-        avatarCutoutY: n - _ - i - s,
-        avatarCutoutWidth: u + 2 * i,
-        avatarCutoutHeight: _ + 2 * i,
-        avatarCutoutRadius: d ? (_ + 2 * i) * 0.2 : (r + 2 * i) / 2,
-    };
-}
 function O(e, t, n, i) {
     let { isMobile: s, isTyping: a, isVR: o } = i,
-        l = C(t, n, { isMobile: s, isTyping: a, isVR: o }),
+        l = N(t, n, { isMobile: s, isTyping: a, isVR: o }),
         u = (0, c.yi)(n, e);
     if (!(s && !o)) {
         let n = l.height / 2 + t.stroke,
@@ -241,19 +50,32 @@ function O(e, t, n, i) {
     let d = l.height + 2 * t.stroke,
         _ = l.width + 2 * t.stroke,
         f = l.x - t.stroke,
-        p = l.y - t.stroke;
-    return (0, r.jsx)("rect", { fill: e, height: d, width: _, style: { opacity: u }, x: f, y: p, rx: t.stroke });
+        E = l.y - t.stroke;
+    return (0, r.jsx)("rect", { fill: e, height: d, width: _, style: { opacity: u }, x: f, y: E, rx: t.stroke });
 }
-function b(e) {
+function R(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
-        s = n && !r && t === h.clD.ONLINE,
-        a = (0, E.Kj)(i);
+        s = n && !r && t === p.clD.ONLINE,
+        a = (0, g.Kj)(i);
     return {
-        ...R(a, { isMobile: s, isTyping: r, isVR: !1 }),
+        ...(function (e, t) {
+            let { size: n, status: r, stroke: i, offset: s } = e,
+                { isTyping: a, isMobile: o, isVR: l } = t,
+                u = a ? 2.5 * r : r,
+                d = o && !l,
+                c = d ? 1.5 * r : r;
+            return {
+                avatarCutoutX: n - u + (u - r) / 2 - i - s,
+                avatarCutoutY: n - c - i - s,
+                avatarCutoutWidth: u + 2 * i,
+                avatarCutoutHeight: c + 2 * i,
+                avatarCutoutRadius: d ? (c + 2 * i) * 0.2 : (r + 2 * i) / 2,
+            };
+        })(a, { isMobile: s, isTyping: r, isVR: !1 }),
         ...(0, c.v)({ status: t, size: a.status, isMobile: s, isTyping: r, topOffset: 2, leftOffset: 6 }),
     };
 }
-function D(e) {
+function v(e) {
     let {
             children: t,
             size: n,
@@ -261,85 +83,181 @@ function D(e) {
             onMouseDown: s,
             onKeyDown: o,
             onContextMenu: u,
-            onMouseEnter: c,
-            onMouseLeave: d,
+            onMouseEnter: d,
+            onMouseLeave: c,
             className: _,
             tabIndex: f,
             ariaLabel: p,
-            ariaHidden: h,
-            status: g,
-            isMobile: I = !1,
-            isVR: T = !1,
-            isTyping: S = !1,
-            avatarDecoration: N,
-            typingOffset: C,
-            specs: R,
+            ariaHidden: T,
+            status: S,
+            isMobile: y = !1,
+            isVR: N = !1,
+            isTyping: O = !1,
+            avatarDecoration: R,
+            typingOffset: v,
+            specs: C,
         } = e,
-        O = { width: (0, E.FT)(n), height: (0, E.FT)(n) },
-        b = null == p || h ? void 0 : y(p, g, I, T),
-        D = R.size * m.Xq,
-        L = v(g, n, I, S, T),
-        w =
-            null != N &&
+        b = { width: (0, g.FT)(n), height: (0, g.FT)(n) },
+        D =
+            null == p || T
+                ? void 0
+                : (function (e, t) {
+                      let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                          r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                      return null != t
+                          ? A.intl.formatToPlainString(A.t["/6mw10"], {
+                                label: e,
+                                status: (0, h.MU)(t, { isMobile: n, isVR: r }),
+                            })
+                          : e;
+                  })(p, S, y, N),
+        L = C.size * m.Xq,
+        w = (function (e, t, n, r) {
+            let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            if (null == e) return null;
+            if (r)
+                switch (t) {
+                    case g._3.SIZE_16:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_16;
+                    case g._3.SIZE_20:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_20;
+                    case g._3.SIZE_24:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_24;
+                    case g._3.SIZE_32:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_32;
+                    case g._3.SIZE_40:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_40;
+                    case g._3.SIZE_44:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_44;
+                    case g._3.SIZE_48:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_48;
+                    case g._3.SIZE_56:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_56;
+                    case g._3.SIZE_72:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_72;
+                    case g._3.SIZE_80:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_80;
+                    case g._3.SIZE_96:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_96;
+                    case g._3.SIZE_120:
+                        return E.hW.AVATAR_DECORATION_STATUS_TYPING_120;
+                }
+            if (n && !i)
+                switch (t) {
+                    case g._3.SIZE_16:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_16;
+                    case g._3.SIZE_20:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_20;
+                    case g._3.SIZE_24:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_24;
+                    case g._3.SIZE_32:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_32;
+                    case g._3.SIZE_40:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_40;
+                    case g._3.SIZE_44:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_44;
+                    case g._3.SIZE_48:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_48;
+                    case g._3.SIZE_56:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_56;
+                    case g._3.SIZE_72:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_72;
+                    case g._3.SIZE_80:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_80;
+                    case g._3.SIZE_96:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_96;
+                    case g._3.SIZE_120:
+                        return E.hW.AVATAR_DECORATION_STATUS_MOBILE_120;
+                }
+            switch (t) {
+                case g._3.SIZE_16:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_16;
+                case g._3.SIZE_20:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_20;
+                case g._3.SIZE_24:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_24;
+                case g._3.SIZE_32:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_32;
+                case g._3.SIZE_40:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_40;
+                case g._3.SIZE_44:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_44;
+                case g._3.SIZE_48:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_48;
+                case g._3.SIZE_56:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_56;
+                case g._3.SIZE_72:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_72;
+                case g._3.SIZE_80:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_80;
+                case g._3.SIZE_96:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_96;
+                case g._3.SIZE_120:
+                    return E.hW.AVATAR_DECORATION_STATUS_ROUND_120;
+            }
+            return null;
+        })(S, n, y, O, N),
+        M =
+            null != R &&
             (0, r.jsx)("svg", {
-                width: D + C,
-                height: D,
-                viewBox: `0 0 ${D + C} ${D}`,
-                className: A.DX,
+                width: L + v,
+                height: L,
+                viewBox: `0 0 ${L + v} ${L}`,
+                className: I.DX,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: D,
-                    height: D,
-                    mask: null != L ? `url(#${L})` : void 0,
-                    children: (0, r.jsx)("img", { className: A.M, src: N, alt: " ", "aria-hidden": !0 }),
+                    width: L,
+                    height: L,
+                    mask: null != w ? `url(#${w})` : void 0,
+                    children: (0, r.jsx)("img", { className: I.M, src: R, alt: " ", "aria-hidden": !0 }),
                 }),
             });
     return null != i || null != s
-        ? (0, r.jsxs)(l.DUT, {
-              className: a()(A.iE, A.Wn, _),
-              style: O,
+        ? (0, r.jsxs)(l.D, {
+              className: a()(I.iE, I.Wn, _),
+              style: b,
               onClick: i,
               tabIndex: f,
               onContextMenu: u,
               onMouseDown: s,
               onKeyDown: o,
-              onMouseEnter: c ?? void 0,
-              onMouseLeave: d ?? void 0,
-              "aria-label": b,
-              "aria-hidden": h,
-              children: [t, w],
+              onMouseEnter: d ?? void 0,
+              onMouseLeave: c ?? void 0,
+              "aria-label": D,
+              "aria-hidden": T,
+              children: [t, M],
           })
         : (0, r.jsxs)("div", {
-              className: a()(A.iE, _),
-              style: O,
+              className: a()(I.iE, _),
+              style: b,
               onContextMenu: u ?? void 0,
-              onMouseEnter: c ?? void 0,
-              onMouseLeave: d ?? void 0,
+              onMouseEnter: d ?? void 0,
+              onMouseLeave: c ?? void 0,
               role: "img",
-              "aria-label": b,
-              "aria-hidden": h,
-              children: [t, w],
+              "aria-label": D,
+              "aria-hidden": T,
+              children: [t, M],
           });
 }
-let L = i.forwardRef((e, t) => {
+let C = i.forwardRef((e, t) => {
     let { src: n, isSpeaking: i, className: s, voiceDb: o = -1 / 0, speakingStylesConfig: l } = e,
-        u = (0, _.v)({ isSpeaking: i, voiceDb: o, spreadDirection: _.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...l });
+        u = (0, f.v)({ isSpeaking: i, voiceDb: o, spreadDirection: f.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...l });
     return (0, r.jsxs)(
         "div",
         {
             ref: t,
-            className: a()(A.yA, s),
+            className: a()(I.yA, s),
             children: [
-                (0, r.jsx)("img", { src: n ?? void 0, alt: " ", className: A.my, "aria-hidden": !0 }),
-                i && (0, r.jsx)("div", { className: A.uh, style: u }),
+                (0, r.jsx)("img", { src: n ?? void 0, alt: " ", className: I.my, "aria-hidden": !0 }),
+                i && (0, r.jsx)("div", { className: I.uh, style: u }),
             ],
         },
         n,
     );
 });
-function w(e) {
+function b(e) {
     let {
             src: t,
             status: n,
@@ -347,77 +265,163 @@ function w(e) {
             statusColor: s,
             isMobile: o = !1,
             isVR: l = !1,
-            isTyping: _ = !1,
+            isTyping: u = !1,
             typingIndicatorRef: f,
             avatarContentRef: m,
-            isSpeaking: g = !1,
-            voiceDb: I,
-            speakingStylesConfig: T,
-            statusTooltip: S = !1,
-            statusTooltipDelay: y,
-            statusBackdropColor: v,
-            "aria-hidden": R = !1,
-            "aria-label": b,
+            isSpeaking: A = !1,
+            voiceDb: T,
+            speakingStylesConfig: S,
+            statusTooltip: y = !1,
+            statusTooltipDelay: R,
+            statusBackdropColor: b,
+            "aria-hidden": D = !1,
+            "aria-label": L,
             imageClassName: w,
             ref: M,
         } = e,
-        P = n !== h.clD.UNKNOWN ? n : null,
-        x = (0, E.Kj)(i),
-        k = null != P ? Math.ceil((2.5 * x.status - x.status) / 2) : 0,
-        U = x.size + k,
+        P = n !== p.clD.UNKNOWN ? n : null,
+        U = (0, g.Kj)(i),
+        k = null != P ? Math.ceil((2.5 * U.status - U.status) / 2) : 0,
+        x = U.size + k,
         G = (0, c.S3)(P, s);
-    return (0, r.jsx)(D, {
+    return (0, r.jsx)(v, {
         ...e,
-        ariaLabel: b,
-        ariaHidden: R,
+        ariaLabel: L,
+        ariaHidden: D,
         status: P,
-        specs: x,
+        specs: U,
         typingOffset: k,
         children: (0, r.jsxs)("svg", {
             ref: M,
-            width: U,
-            height: U,
-            viewBox: `0 0 ${U} ${U}`,
-            className: a()(A.dK, A.JW),
+            width: x,
+            height: x,
+            viewBox: `0 0 ${x} ${x}`,
+            className: a()(I.dK, I.JW),
             "aria-hidden": !0,
             children: [
                 (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: x.size,
-                    height: x.size,
-                    mask: `url(#${N(P, i, o, _, l)})`,
-                    children: (0, r.jsx)(L, {
+                    width: U.size,
+                    height: U.size,
+                    mask: `url(#${(function (e, t, n, r) {
+                        let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+                        if (null == e) return E.hW.AVATAR_DEFAULT;
+                        if (r)
+                            switch (t) {
+                                case g._3.SIZE_16:
+                                    return E.hW.AVATAR_STATUS_TYPING_16;
+                                case g._3.SIZE_20:
+                                    return E.hW.AVATAR_STATUS_TYPING_20;
+                                case g._3.SIZE_24:
+                                    return E.hW.AVATAR_STATUS_TYPING_24;
+                                case g._3.SIZE_32:
+                                    return E.hW.AVATAR_STATUS_TYPING_32;
+                                case g._3.SIZE_40:
+                                    return E.hW.AVATAR_STATUS_TYPING_40;
+                                case g._3.SIZE_44:
+                                    return E.hW.AVATAR_STATUS_TYPING_44;
+                                case g._3.SIZE_48:
+                                    return E.hW.AVATAR_STATUS_TYPING_48;
+                                case g._3.SIZE_56:
+                                    return E.hW.AVATAR_STATUS_TYPING_56;
+                                case g._3.SIZE_72:
+                                    return E.hW.AVATAR_STATUS_TYPING_72;
+                                case g._3.SIZE_80:
+                                    return E.hW.AVATAR_STATUS_TYPING_80;
+                                case g._3.SIZE_96:
+                                    return E.hW.AVATAR_STATUS_TYPING_96;
+                                case g._3.SIZE_120:
+                                    return E.hW.AVATAR_STATUS_TYPING_120;
+                            }
+                        if (e === p.clD.ONLINE && n && !i)
+                            switch (t) {
+                                case g._3.SIZE_16:
+                                    return E.hW.AVATAR_STATUS_MOBILE_16;
+                                case g._3.SIZE_20:
+                                    return E.hW.AVATAR_STATUS_MOBILE_20;
+                                case g._3.SIZE_24:
+                                    return E.hW.AVATAR_STATUS_MOBILE_24;
+                                case g._3.SIZE_32:
+                                    return E.hW.AVATAR_STATUS_MOBILE_32;
+                                case g._3.SIZE_40:
+                                    return E.hW.AVATAR_STATUS_MOBILE_40;
+                                case g._3.SIZE_44:
+                                    return E.hW.AVATAR_STATUS_MOBILE_44;
+                                case g._3.SIZE_48:
+                                    return E.hW.AVATAR_STATUS_MOBILE_48;
+                                case g._3.SIZE_56:
+                                    return E.hW.AVATAR_STATUS_MOBILE_56;
+                                case g._3.SIZE_72:
+                                    return E.hW.AVATAR_STATUS_MOBILE_72;
+                                case g._3.SIZE_80:
+                                    return E.hW.AVATAR_STATUS_MOBILE_80;
+                                case g._3.SIZE_96:
+                                    return E.hW.AVATAR_STATUS_MOBILE_96;
+                                case g._3.SIZE_120:
+                                    return E.hW.AVATAR_STATUS_MOBILE_120;
+                            }
+                        switch (t) {
+                            case g._3.SIZE_16:
+                                return E.hW.AVATAR_STATUS_ROUND_16;
+                            case g._3.SIZE_20:
+                                return E.hW.AVATAR_STATUS_ROUND_20;
+                            case g._3.SIZE_24:
+                                return E.hW.AVATAR_STATUS_ROUND_24;
+                            case g._3.SIZE_32:
+                                return E.hW.AVATAR_STATUS_ROUND_32;
+                            case g._3.SIZE_40:
+                                return E.hW.AVATAR_STATUS_ROUND_40;
+                            case g._3.SIZE_44:
+                                return E.hW.AVATAR_STATUS_ROUND_44;
+                            case g._3.SIZE_48:
+                                return E.hW.AVATAR_STATUS_ROUND_48;
+                            case g._3.SIZE_56:
+                                return E.hW.AVATAR_STATUS_ROUND_56;
+                            case g._3.SIZE_72:
+                                return E.hW.AVATAR_STATUS_ROUND_72;
+                            case g._3.SIZE_80:
+                                return E.hW.AVATAR_STATUS_ROUND_80;
+                            case g._3.SIZE_96:
+                                return E.hW.AVATAR_STATUS_ROUND_96;
+                            case g._3.SIZE_120:
+                                return E.hW.AVATAR_STATUS_ROUND_120;
+                        }
+                        throw Error(
+                            `getMaskId(): Unsupported type, size: ${t}, status: ${e}, isMobile: ${n ? "true" : "false"}`,
+                        );
+                    })(P, i, o, u, l)})`,
+                    children: (0, r.jsx)(C, {
                         ref: m,
                         src: t,
-                        isSpeaking: g,
-                        voiceDb: I,
-                        speakingStylesConfig: T,
+                        isSpeaking: A,
+                        voiceDb: T,
+                        speakingStylesConfig: S,
                         className: w,
                     }),
                 }),
-                null != P && null != v ? O(v, x, P, { isMobile: o, isTyping: _, isVR: l }) : null,
+                null != P && null != b ? O(b, U, P, { isMobile: o, isTyping: u, isVR: l }) : null,
                 null != P
-                    ? (0, r.jsx)(d.m_, {
-                          text: S ? (0, p.MU)(P) : null,
+                    ? (0, r.jsx)(_.m, {
+                          text: y ? (0, h.MU)(P) : null,
                           ariaHidden: !0,
                           position: "top",
-                          spacing: 5 + 1.5 * x.stroke,
-                          delay: y,
+                          spacing: 5 + 1.5 * U.stroke,
+                          delay: R,
                           children: (0, r.jsxs)("g", {
                               children: [
                                   (0, r.jsx)("rect", {
-                                      ...C(x, P, { isMobile: o, isTyping: _, isVR: l }),
+                                      ...N(U, P, { isMobile: o, isTyping: u, isVR: l }),
                                       fill: G,
-                                      mask: `url(#${(0, c.p8)(P, { isMobile: o, isTyping: _, isVR: l })})`,
-                                      className: A.Hs,
+                                      mask: `url(#${(0, c.p8)(P, { isMobile: o, isTyping: u, isVR: l })})`,
+                                      className: I.Hs,
                                   }),
-                                  _
-                                      ? (0, r.jsx)(u.n, {
+                                  u
+                                      ? (0, r.jsx)(d.n, {
                                             ref: f,
-                                            dotRadius: x.status / 4,
-                                            x: x.size - 1.375 * x.status - x.offset,
-                                            y: x.size - x.status / 1.333 - x.offset,
+                                            dotRadius: U.status / 4,
+                                            x: U.size - 1.375 * U.status - U.offset,
+                                            y: U.size - U.status / 1.333 - U.offset,
                                         })
                                       : null,
                               ],
@@ -428,137 +432,129 @@ function w(e) {
         }),
     });
 }
-function M(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
-}
-function P(e, t, n) {
-    let r = e.status * t,
-        i = null != n ? (2.5 * r - r) / 2 : 0,
-        s = (e.status - r) / 2,
-        a = e.size - r - i - e.offset - s,
-        o = e.size - 1.5 * r - e.offset - s,
-        l = Math.round((a / t) * 100) / 100,
-        u = Math.round((o / t) * 100) / 100;
-    return `translate(${l}, ${u})`;
-}
-function x(e) {
+function D(e) {
     let {
             fromIsMobile: t = !0,
             fromStatus: n,
             fromColor: s,
-            isMobile: _ = !1,
+            isMobile: l = !1,
             isTyping: f = !1,
-            typingIndicatorRef: h,
-            isSpeaking: m = !1,
-            voiceDb: g,
-            speakingStylesConfig: y,
-            size: v,
-            src: N,
-            status: C,
-            statusColor: R,
+            typingIndicatorRef: E,
+            isSpeaking: p = !1,
+            voiceDb: m,
+            speakingStylesConfig: A,
+            size: N,
+            src: b,
+            status: D,
+            statusColor: L,
             statusTooltip: w = !1,
-            statusTooltipDelay: x,
-            statusBackdropColor: k,
+            statusTooltipDelay: M,
+            statusBackdropColor: P,
             "aria-hidden": U = !1,
-            "aria-label": G,
-            imageClassName: F,
-            pulseStatusIcon: V,
+            "aria-label": k,
+            imageClassName: x,
+            pulseStatusIcon: G,
         } = e,
-        B = (0, c.S3)(C, R),
-        H = i.useId(),
-        j = i.useId(),
-        [Y] = i.useState(() => ({ fill: s, ...b({ size: v, status: n, isMobile: t, isTyping: !1 }) })),
-        W = i.useMemo(() => ({ fill: B, ...b({ size: v, status: C, isMobile: _, isTyping: f }) }), [B, v, C, _, f]),
+        V = (0, c.S3)(D, L),
+        F = i.useId(),
+        B = i.useId(),
+        [H] = i.useState(() => ({ fill: s, ...R({ size: N, status: n, isMobile: t, isTyping: !1 }) })),
+        Y = i.useMemo(() => ({ fill: V, ...R({ size: N, status: D, isMobile: l, isTyping: f }) }), [V, N, D, l, f]),
         {
-            avatarCutoutX: K,
-            avatarCutoutY: $,
-            avatarCutoutWidth: z,
-            avatarCutoutHeight: q,
-            avatarCutoutRadius: Z,
-            fill: X,
-            ...Q
-        } = (0, l.zhh)({ config: I, from: Y, to: W }, T() ? "animate-always" : "animate-never"),
-        J = (0, E.FT)(v),
-        ee = (0, E.Kj)(v),
-        et = 2.5 * ee.status,
-        en = 1.5 * ee.status,
-        er = null != C ? (2.5 * ee.status - ee.status) / 2 : 0,
-        ei = ee.size + Math.ceil(er),
-        [es, ea, eo] = (0, l.zhh)(
+            avatarCutoutX: W,
+            avatarCutoutY: j,
+            avatarCutoutWidth: K,
+            avatarCutoutHeight: $,
+            avatarCutoutRadius: z,
+            fill: q,
+            ...X
+        } = (0, u.z)({ config: T, from: H, to: Y }, S() ? "animate-always" : "animate-never"),
+        Q = (0, g.FT)(N),
+        J = (0, g.Kj)(N),
+        Z = 2.5 * J.status,
+        ee = 1.5 * J.status,
+        et = null != D ? (2.5 * J.status - J.status) / 2 : 0,
+        en = J.size + Math.ceil(et),
+        [er, ei, es] = (0, u.z)(
             {
                 config: { tension: 450, friction: 20, clamp: !0 },
                 from: { scale: 1 },
-                to: V ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
+                to: G ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
             },
-            T() ? "animate-always" : "animate-never",
-            [V, C],
+            S() ? "animate-always" : "animate-never",
+            [G, D],
         );
-    return (0, r.jsx)(D, {
+    return (0, r.jsx)(v, {
         ...e,
-        ariaLabel: G,
+        ariaLabel: k,
         ariaHidden: U,
-        typingOffset: er,
-        specs: ee,
+        typingOffset: et,
+        specs: J,
         children: (0, r.jsxs)("svg", {
-            width: ei,
-            height: ei,
-            viewBox: `0 0 ${ei} ${ei}`,
-            className: a()(A.dK, A.JW),
+            width: en,
+            height: en,
+            viewBox: `0 0 ${en} ${en}`,
+            className: a()(I.dK, I.JW),
             "aria-hidden": !0,
             children: [
                 (0, r.jsxs)("mask", {
-                    id: H,
-                    width: J,
-                    height: J,
+                    id: F,
+                    width: Q,
+                    height: Q,
                     children: [
-                        (0, r.jsx)("circle", { cx: J / 2, cy: J / 2, r: J / 2, fill: "white" }),
-                        (0, r.jsx)(o.animated.rect, { color: "black", x: K, y: $, width: z, height: q, rx: Z, ry: Z }),
+                        (0, r.jsx)("circle", { cx: Q / 2, cy: Q / 2, r: Q / 2, fill: "white" }),
+                        (0, r.jsx)(o.animated.rect, { color: "black", x: W, y: j, width: K, height: $, rx: z, ry: z }),
                     ],
                 }),
                 (0, r.jsx)("foreignObject", {
-                    className: A.__invalid_foreignObject,
+                    className: I.__invalid_foreignObject,
                     x: 0,
                     y: 0,
-                    width: J,
-                    height: J,
-                    mask: `url(#${H})`,
-                    children: (0, r.jsx)(L, {
-                        src: N,
-                        isSpeaking: m,
-                        voiceDb: g,
-                        className: F,
-                        speakingStylesConfig: y,
+                    width: Q,
+                    height: Q,
+                    mask: `url(#${F})`,
+                    children: (0, r.jsx)(C, {
+                        src: b,
+                        isSpeaking: p,
+                        voiceDb: m,
+                        className: x,
+                        speakingStylesConfig: A,
                     }),
                 }),
-                null != k && O(k, ee, C, { isMobile: _, isTyping: f, isVR: !1 }),
-                (0, r.jsx)(d.m_, {
-                    text: w ? (0, p.MU)(C) : null,
+                null != P && O(P, J, D, { isMobile: l, isTyping: f, isVR: !1 }),
+                (0, r.jsx)(_.m, {
+                    text: w ? (0, h.MU)(D) : null,
                     ariaHidden: !0,
                     position: "top",
-                    spacing: M(ee.status, ee.stroke, _, f),
-                    delay: x,
+                    spacing: (function (e, t, n) {
+                        let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                        return 5 - (n && !r ? 0 : 0.5 * e) + 1.5 * t;
+                    })(J.status, J.stroke, l, f),
+                    delay: M,
                     children: (0, r.jsxs)(o.animated.g, {
-                        transform: es.scale.to((e) => `scale(${e}) ${P(ee, e, C)}`),
+                        transform: er.scale.to((e) => {
+                            let t, n, r, i, s, a;
+                            return `scale(${e}) ${((t = J.status * e), (n = (J.status - t) / 2), (r = J.size - t - (null != D ? (2.5 * t - t) / 2 : 0) - J.offset - n), (i = J.size - 1.5 * t - J.offset - n), (s = Math.round((r / e) * 100) / 100), (a = Math.round((i / e) * 100) / 100), `translate(${s}, ${a})`)}`;
+                        }),
                         children: [
                             (0, r.jsxs)("svg", {
-                                width: et,
-                                height: en,
-                                viewBox: `0 0 ${et} ${en}`,
-                                className: w ? A.Oi : void 0,
+                                width: Z,
+                                height: ee,
+                                viewBox: `0 0 ${Z} ${ee}`,
+                                className: w ? I.Oi : void 0,
                                 children: [
-                                    (0, c.pF)(Q, ee.status, j),
-                                    (0, r.jsx)(o.animated.rect, { fill: X, width: et, height: en, mask: `url(#${j})` }),
-                                    (0, r.jsx)(u.n, {
-                                        ref: h,
-                                        dotRadius: ee.status / 4,
-                                        x: 0.15 * et,
-                                        y: 0.5 * en,
+                                    (0, c.pF)(X, J.status, B),
+                                    (0, r.jsx)(o.animated.rect, { fill: q, width: Z, height: ee, mask: `url(#${B})` }),
+                                    (0, r.jsx)(d.n, {
+                                        ref: E,
+                                        dotRadius: J.status / 4,
+                                        x: 0.15 * Z,
+                                        y: 0.5 * ee,
                                         hide: !f,
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(S, { size: v, isMobile: _, isTyping: f, className: A.Hs }),
+                            (0, r.jsx)(y, { size: N, isMobile: l, isTyping: f, className: I.Hs }),
                         ],
                     }),
                 }),
@@ -566,32 +562,34 @@ function x(e) {
         }),
     });
 }
-function k(e, t, n, r, i) {
-    return null != n && null != t && (!!e || t !== n || (t === h.clD.ONLINE && r !== i));
-}
-L.displayName = "AvatarImg";
-let U = i.memo(function (e) {
-    let { statusColor: t, status: n, ...s } = e,
-        { isMobile: a = !1, isTyping: o = !1, isVR: l = !1 } = s,
-        u = i.useRef(n),
-        d = i.useRef(a),
-        _ = (0, c.S3)(n, t),
-        f = i.useRef(_),
-        p = i.useRef(!1),
-        h = p.current || k(o, n, u.current, a, d.current);
+C.displayName = "AvatarImg";
+let L = i.memo(function (e) {
+    var t, n;
+    let { statusColor: s, status: a, ...o } = e,
+        { isMobile: l = !1, isTyping: u = !1, isVR: d = !1 } = o,
+        _ = i.useRef(a),
+        f = i.useRef(l),
+        E = (0, c.S3)(a, s),
+        h = i.useRef(E),
+        m = i.useRef(!1),
+        g =
+            m.current ||
+            ((t = _.current),
+            (n = f.current),
+            null != t && null != a && (!!u || a !== t || (a === p.clD.ONLINE && l !== n)));
     return (
         i.useLayoutEffect(() => {
-            (p.current = h), (u.current = n), (d.current = a), (f.current = _);
-        }, [n, a, _, h]),
-        !l && null != n && null != u.current && h
-            ? (0, r.jsx)(x, {
-                  ...s,
-                  status: n,
-                  statusColor: _,
-                  fromStatus: u.current,
-                  fromIsMobile: d.current,
-                  fromColor: f.current,
+            (m.current = g), (_.current = a), (f.current = l), (h.current = E);
+        }, [a, l, E, g]),
+        !d && null != a && null != _.current && g
+            ? (0, r.jsx)(D, {
+                  ...o,
+                  status: a,
+                  statusColor: E,
+                  fromStatus: _.current,
+                  fromIsMobile: f.current,
+                  fromColor: h.current,
               })
-            : (0, r.jsx)(w, { ...s, status: n, statusColor: _ })
+            : (0, r.jsx)(b, { ...o, status: a, statusColor: E })
     );
 });

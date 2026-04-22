@@ -1,127 +1,130 @@
-n.d(t, { A: () => j, v: () => O }), n(938796);
+n.d(t, { A: () => R, v: () => L }), n(938796);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     r = n.n(s),
     a = n(665260),
     d = n(311907),
-    o = n(397927),
-    c = n(47167),
-    u = n(713654),
-    m = n(734057),
-    N = n(696451),
-    h = n(71393),
-    I = n(576705),
-    g = n(44234),
-    A = n(486020),
-    E = n(225142),
-    S = n(701785),
-    x = n(65995),
-    _ = n(111487),
-    T = n(652215),
-    f = n(340837),
-    p = n(985018),
-    D = n(658938);
-function O(e) {
-    let { title: t, emojiId: n, emojiName: l, icon: s, completed: a, Icon: d, onClick: c, ...u } = e,
-        m = "channel" === u.variant ? u.channelId : null,
-        N = "static" === u.variant ? u.subtitle : u.channelName,
-        h = null != m ? A.Ay.getNewMemberActionIconURL({ channelId: m, icon: s }) : null;
-    return (0, i.jsxs)(o.ZpM, {
-        className: r()(D.XI, { [D.xU]: null != c }),
-        onClick: c,
+    o = n(359778),
+    c = n(834730),
+    u = n(628284);
+if (21552 == n.j) var m = n(276293);
+if (21552 == n.j) var N = n(534514);
+if (21552 == n.j) var h = n(622629);
+var I = n(47167),
+    E = n(713654),
+    g = n(734057),
+    A = n(696451),
+    S = n(71393),
+    _ = n(576705),
+    f = n(44234),
+    x = n(486020),
+    T = n(225142),
+    D = n(701785),
+    j = n(65995),
+    p = n(111487),
+    O = n(652215),
+    G = n(340837),
+    v = n(985018),
+    C = n(664019);
+function L(e) {
+    let { title: t, emojiId: n, emojiName: l, icon: s, completed: a, Icon: d, onClick: m, ...N } = e,
+        h = "channel" === N.variant ? N.channelId : null,
+        I = "static" === N.variant ? N.subtitle : N.channelName,
+        E = null != h ? x.Ay.getNewMemberActionIconURL({ channelId: h, icon: s }) : null;
+    return (0, i.jsxs)(o.Z, {
+        className: r()(C.XI, { [C.xU]: null != m }),
+        onClick: m,
         children: [
-            null != h
-                ? (0, i.jsx)("img", { src: h, className: D.Kk, width: 32, height: 32, alt: "", "aria-hidden": !0 })
-                : (0, i.jsx)(_.A, {
+            null != E
+                ? (0, i.jsx)("img", { src: E, className: C.Kk, width: 32, height: 32, alt: "", "aria-hidden": !0 })
+                : (0, i.jsx)(p.A, {
                       emojiId: n,
                       emojiName: l,
-                      size: _.g.LARGE,
+                      size: p.g.LARGE,
                       defaultComponent: (0, i.jsx)("div", {
-                          className: D.uM,
-                          children: (0, i.jsx)(d, { className: D.p, color: "currentColor" }),
+                          className: C.uM,
+                          children: (0, i.jsx)(d, { className: C.p, color: "currentColor" }),
                       }),
                   }),
             (0, i.jsxs)("div", {
-                className: D.$I,
+                className: C.$I,
                 children: [
-                    (0, i.jsx)(o.Text, { variant: "text-md/semibold", color: "text-strong", children: t }),
-                    null != N
-                        ? (0, i.jsx)(o.Text, { variant: "text-xs/normal", color: "text-muted", children: N })
-                        : null,
+                    (0, i.jsx)(c.E, { variant: "text-md/semibold", color: "text-strong", children: t }),
+                    null != I ? (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: I }) : null,
                 ],
             }),
             a
-                ? (0, i.jsx)(o.yr3, { size: "md", color: "currentColor", secondaryColor: "#fff", className: D.Yb })
-                : (0, i.jsx)(g.A, { className: D.t3, width: 24, height: 24 }),
+                ? (0, i.jsx)(u.y, { size: "md", color: "currentColor", secondaryColor: "#fff", className: C.Yb })
+                : (0, i.jsx)(f.A, { className: C.t3, width: 24, height: 24 }),
         ],
     });
 }
-function G(e) {
+function b(e) {
     let { action: t, completed: n } = e,
-        { channelId: s, title: r, emoji: a, icon: N } = t,
-        { id: h, name: g } = a ?? {},
-        A = (0, d.bG)([m.A], () => m.A.getChannel(s)),
-        S = (0, c.Ay)(A, !0),
-        x = (0, d.bG)([I.A], () => I.A.can(T.xBc.VIEW_CHANNEL, A)),
-        _ = l.useMemo(() => {
-            if (null != A) return () => (0, E.qo)(A.guild_id, A.id);
-        }, [A]);
-    if (null == A || !x) return null;
-    let f = (0, u.gU)(A) ?? o.N$i;
-    return (0, i.jsx)(O, {
+        { channelId: s, title: r, emoji: a, icon: o } = t,
+        { id: c, name: u } = a ?? {},
+        N = (0, d.bG)([g.A], () => g.A.getChannel(s)),
+        h = (0, I.Ay)(N, !0),
+        A = (0, d.bG)([_.A], () => _.A.can(O.xBc.VIEW_CHANNEL, N)),
+        S = l.useMemo(() => {
+            if (null != N) return () => (0, T.qo)(N.guild_id, N.id);
+        }, [N]);
+    if (null == N || !A) return null;
+    let f = (0, E.gU)(N) ?? m.N;
+    return (0, i.jsx)(L, {
         variant: "channel",
         channelId: s,
         title: r,
-        channelName: S,
-        emojiId: h,
-        emojiName: g,
-        icon: N,
+        channelName: h,
+        emojiId: c,
+        emojiName: u,
+        icon: o,
         completed: n,
         Icon: f,
-        onClick: _,
+        onClick: S,
     });
 }
-function j(e) {
+function R(e) {
     let { guildId: t } = e,
-        n = (0, d.bG)([S.h], () => S.h.getNewMemberActions(t), [t]),
-        s = (0, d.bG)([x.A], () => x.A.getCompletedActions(t)),
-        c = (0, d.bG)([N.Ay], () => N.Ay.getSelfMember(t)),
-        u = (0, d.bG)([h.A], () => h.A.getGuild(t));
+        n = (0, d.bG)([D.h], () => D.h.getNewMemberActions(t), [t]),
+        s = (0, d.bG)([j.A], () => j.A.getCompletedActions(t)),
+        u = (0, d.bG)([A.Ay], () => A.Ay.getSelfMember(t)),
+        m = (0, d.bG)([S.A], () => S.A.getGuild(t));
     l.useEffect(() => {
-        null == s && c?.flags != null && (0, a.Lt)(c.flags ?? 0, f.D.STARTED_HOME_ACTIONS) && (0, E.aW)(t);
-    }, [s, t, c?.flags]);
-    let m = l.useCallback(() => {
-        null != u && null != u.rulesChannelId && (0, E.qo)(u.id, u.rulesChannelId);
-    }, [u]);
-    return null == c || null == n || 0 === n.length
+        null == s && u?.flags != null && (0, a.Lt)(u.flags ?? 0, G.D.STARTED_HOME_ACTIONS) && (0, T.aW)(t);
+    }, [s, t, u?.flags]);
+    let I = l.useCallback(() => {
+        null != m && null != m.rulesChannelId && (0, T.qo)(m.id, m.rulesChannelId);
+    }, [m]);
+    return null == u || null == n || 0 === n.length
         ? null
         : (0, i.jsxs)("div", {
-              className: D.kL,
+              className: C.kL,
               children: [
-                  (0, i.jsx)(o.Heading, {
+                  (0, i.jsx)(N.D, {
                       variant: "heading-lg/bold",
                       color: "text-strong",
-                      children: p.intl.string(p.t.LhlgY9),
+                      children: v.intl.string(v.t.LhlgY9),
                   }),
                   n.map((e) =>
-                      (0, i.jsx)(G, { action: e, completed: s?.[e.channelId] === !0, guildId: t }, e.channelId),
+                      (0, i.jsx)(b, { action: e, completed: s?.[e.channelId] === !0, guildId: t }, e.channelId),
                   ),
-                  u?.rulesChannelId != null &&
-                      (0, i.jsxs)(o.ZpM, {
-                          className: r()(D.XI, D.xU),
-                          onClick: m,
+                  m?.rulesChannelId != null &&
+                      (0, i.jsxs)(o.Z, {
+                          className: r()(C.XI, C.xU),
+                          onClick: I,
                           children: [
                               (0, i.jsx)("div", {
-                                  className: D.KK,
-                                  children: (0, i.jsx)(o.B8Q, { size: "xs", color: "currentColor", className: D.ZO }),
+                                  className: C.KK,
+                                  children: (0, i.jsx)(h.B, { size: "xs", color: "currentColor", className: C.ZO }),
                               }),
                               (0, i.jsx)("div", {
-                                  className: D.$I,
-                                  children: (0, i.jsx)(o.Text, {
+                                  className: C.$I,
+                                  children: (0, i.jsx)(c.E, {
                                       variant: "text-md/semibold",
                                       color: "text-strong",
-                                      children: p.intl.string(p.t["K/i3iQ"]),
+                                      children: v.intl.string(v.t["K/i3iQ"]),
                                   }),
                               }),
                           ],

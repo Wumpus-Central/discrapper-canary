@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { b: () => c });
-var r = n(627968),
-    i = n(64700),
-    s = n(397927),
-    a = n(308528),
-    o = n(267102),
-    l = n(964404),
-    u = n(652215);
-function c(e) {
-    let { userId: t, onClose: c } = e,
-        d = (0, o.aL)(),
-        _ = i.useCallback(() => {
-            a.A.openPrivateChannel({ recipientIds: t, joinCall: !0 }),
-                c?.(),
-                d.dispatch(u.jej.POPOUT_CLOSE),
-                (0, s.s7G)();
-        }, [t, d, c]),
-        f = i.useCallback(() => {
-            (0, s.mMO)(async () => {
-                let { default: e } = await n.e("19106").then(n.bind(n, 279673));
-                return (t) => (0, r.jsx)(e, { onSubmit: _, ...t });
+i.d(t, { b: () => d });
+var n = i(627968),
+    r = i(64700),
+    a = i(192308),
+    l = i(308528),
+    s = i(267102),
+    o = i(964404),
+    c = i(652215);
+function d(e) {
+    let { userId: t, onClose: d } = e,
+        u = (0, s.aL)(),
+        _ = r.useCallback(() => {
+            l.A.openPrivateChannel({ recipientIds: t, joinCall: !0 }),
+                d?.(),
+                u.dispatch(c.jej.POPOUT_CLOSE),
+                (0, a.closeAllModals)();
+        }, [t, u, d]),
+        p = r.useCallback(() => {
+            (0, a.openModalLazy)(async () => {
+                let { default: e } = await i.e("19106").then(i.bind(i, 279673));
+                return (t) => (0, n.jsx)(e, { onSubmit: _, ...t });
             });
         }, [_]),
-        p = i.useCallback(() => {
-            l.Ay.disableCallUserConfirmationPrompt ? _() : f();
-        }, [f, _]);
-    return { startCall: _, runVoiceCallAction: p };
+        h = r.useCallback(() => {
+            o.Ay.disableCallUserConfirmationPrompt ? _() : p();
+        }, [p, _]);
+    return { startCall: _, runVoiceCallAction: h };
 }

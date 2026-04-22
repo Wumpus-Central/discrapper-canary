@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { v: () => u }), n(321073);
+n.d(t, { v: () => o }), n(321073);
 var r = n(118356),
-    i = n(689234),
-    a = n(72290);
-let s = 1e6,
-    o = "1" === a.env.KV_STORAGE_LOGGING,
-    l = new r.Vy("Runtime");
-class u {
+    i = n(689234);
+let s = "1" === n(72290).env.KV_STORAGE_LOGGING,
+    a = new r.Vy("Runtime");
+class o {
     static counter = 0;
     static pending = new Map();
     static initialized = !1;
@@ -59,10 +57,10 @@ class u {
                 ok: t.ok,
                 value: t.data,
                 timings: {
-                    queue: t.timings.queueTimeNanoseconds / s,
-                    execution: t.timings.executionTimeNanoseconds / s,
-                    materialization: t.timings.materializationTimeNanoseconds / s,
-                    ccTotal: t.timings.totalTimeNanoseconds / s,
+                    queue: t.timings.queueTimeNanoseconds / 1e6,
+                    execution: t.timings.executionTimeNanoseconds / 1e6,
+                    materialization: t.timings.materializationTimeNanoseconds / 1e6,
+                    ccTotal: t.timings.totalTimeNanoseconds / 1e6,
                     jsTotal: n - e.started,
                 },
             };
@@ -72,13 +70,13 @@ class u {
     static initialize() {
         this.initialized ||
             (i.T.setCallbacks({ status: (e) => this.onStatus(e), response: (e, t) => this.onResponse(e, t) }),
-            o &&
+            s &&
                 (this.addCompletionCallback((e) => {
                     let t = e.ok ? "completed" : "failed",
                         n = `${e.timings.execution.toFixed(3)}ms execution, ${e.timings.materialization.toFixed(3)}ms js materialization, ${e.timings.ccTotal.toFixed(3)}ms cc completion, ${e.timings.jsTotal.toFixed(3)}ms js reception`;
-                    l.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
+                    a.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
                 }),
-                this.addDatabaseStateCallback((e, t) => l.info(`${e} (state: ${t})`))),
+                this.addDatabaseStateCallback((e, t) => a.info(`${e} (state: ${t})`))),
             (this.initialized = !0));
     }
 }

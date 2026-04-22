@@ -1,16 +1,24 @@
-n.d(t, { A: () => c });
-var a = n(627968),
-    i = n(64700),
-    s = n(311907),
-    l = n(397927),
-    r = n(274372),
-    o = n(372684),
-    d = n(399925);
-function c() {
-    let { mlPipelinesEnabled: e } = (0, s.cf)([r.A], () => ({
-            mlPipelinesEnabled: r.A.getSettings().mlPipelinesEnabled,
+a.d(t, { A: () => b });
+var n = a(627968),
+    l = a(64700),
+    i = a(311907),
+    s = a(573613),
+    r = a(611677),
+    o = a(270003),
+    d = a(532446),
+    c = a(821609),
+    u = a(691885),
+    m = a(292666),
+    h = a(404778),
+    p = a(243721),
+    x = a(274372),
+    g = a(372684),
+    v = a(399925);
+function b() {
+    let { mlPipelinesEnabled: e } = (0, i.cf)([x.A], () => ({
+            mlPipelinesEnabled: x.A.getSettings().mlPipelinesEnabled,
         })),
-        [t, n] = i.useState(
+        [t, a] = l.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = { emotion: !1, yell: !1, wakeWord: !1, whisper: !1 }),
@@ -22,84 +30,84 @@ function c() {
                 }
             ),
         ),
-        [c, u] = i.useState(o.rb.KILL),
-        [m, h] = i.useState(1),
-        [x, p] = i.useState(""),
-        [g, _] = i.useState(""),
-        f = i.useCallback(
+        [b, _] = l.useState(g.rb.KILL),
+        [f, j] = l.useState(1),
+        [A, y] = l.useState(""),
+        [C, E] = l.useState(""),
+        S = l.useCallback(
             (e) => {
-                let a = !t[e];
+                let n = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = { emotion: !1, yell: !1, wakeWord: !1, whisper: !1 }),
-                    (window.__CLIPS_DEBUG__[e] = a),
-                    n((t) => ({ ...t, [e]: a }));
+                    (window.__CLIPS_DEBUG__[e] = n),
+                    a((t) => ({ ...t, [e]: n }));
             },
             [t],
         );
-    return (0, a.jsx)(l.HOs, {
-        children: (0, a.jsxs)(l.lVW, {
+    return (0, n.jsx)(s.Ip, {
+        children: (0, n.jsxs)(r.l, {
             children: [
-                (0, a.jsx)(l.nVY, {
+                (0, n.jsx)(o.n, {
                     label: "Send Test Signals",
-                    children: (0, a.jsxs)(l.M_l, {
+                    children: (0, n.jsxs)(d.M, {
                         children: [
-                            (0, a.jsx)(l.Button, { text: "Manual", onClick: () => d.Ts({ type: o.Gy.MANUAL }) }),
-                            (0, a.jsx)(l.Button, {
+                            (0, n.jsx)(c.$, { text: "Manual", onClick: () => v.Ts({ type: g.Gy.MANUAL }) }),
+                            (0, n.jsx)(c.$, {
                                 text: "Distributed",
                                 onClick: () =>
-                                    d.Ts({
-                                        type: o.Gy.DISTRIBUTED,
+                                    v.Ts({
+                                        type: g.Gy.DISTRIBUTED,
                                         remoteTriggerUserId: "123",
                                         remoteTriggerClipId: "456",
                                     }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, n.jsx)(c.$, {
                                 text: "Phrase: Clip",
-                                onClick: () => d.Ts({ type: o.Gy.PHRASE, text: "clip" }),
+                                onClick: () => v.Ts({ type: g.Gy.PHRASE, text: "clip" }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, n.jsx)(c.$, {
                                 text: "Yelling",
-                                onClick: () => d.Ts({ type: o.Gy.YELLING, userId: "123" }),
+                                onClick: () => v.Ts({ type: g.Gy.YELLING, userId: "123" }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, n.jsx)(c.$, {
                                 text: "Laughter",
-                                onClick: () => d.Ts({ type: o.Gy.LAUGHTER, label: "laughter", confidence: 1 }),
+                                onClick: () => v.Ts({ type: g.Gy.LAUGHTER, label: "laughter", confidence: 1 }),
                             }),
-                            (0, a.jsx)(l.Button, {
+                            (0, n.jsx)(c.$, {
                                 text: "Shouting",
-                                onClick: () => d.Ts({ type: o.Gy.LAUGHTER, label: "shouting", confidence: 1 }),
+                                onClick: () => v.Ts({ type: g.Gy.LAUGHTER, label: "shouting", confidence: 1 }),
                             }),
                         ],
                     }),
                 }),
-                (0, a.jsxs)(l.nVY, {
+                (0, n.jsxs)(o.n, {
                     label: "Game Event Creator",
                     children: [
-                        (0, a.jsxs)(l.M_l, {
+                        (0, n.jsxs)(d.M, {
                             children: [
-                                (0, a.jsx)(l.l6P, {
+                                (0, n.jsx)(u.l, {
                                     label: "Event Type",
-                                    value: c,
-                                    onSelectionChange: (e) => u(e),
+                                    value: b,
+                                    onSelectionChange: (e) => _(e),
                                     options: [
-                                        { id: "kill", label: "Kill", value: o.rb.KILL },
-                                        { id: "multikill", label: "Multikill", value: o.rb.MULTIKILL },
-                                        { id: "death", label: "Death", value: o.rb.DEATH },
-                                        { id: "assist", label: "Assist", value: o.rb.ASSIST },
-                                        { id: "item", label: "Item", value: o.rb.ITEM },
-                                        { id: "victory", label: "Victory", value: o.rb.VICTORY },
-                                        { id: "defeat", label: "Defeat", value: o.rb.DEFEAT },
-                                        { id: "level_up", label: "Level Up", value: o.rb.LEVEL_UP },
-                                        { id: "treasure", label: "Treasure", value: o.rb.TREASURE },
-                                        { id: "objective_kill", label: "Objective Kill", value: o.rb.OBJECTIVE_KILL },
+                                        { id: "kill", label: "Kill", value: g.rb.KILL },
+                                        { id: "multikill", label: "Multikill", value: g.rb.MULTIKILL },
+                                        { id: "death", label: "Death", value: g.rb.DEATH },
+                                        { id: "assist", label: "Assist", value: g.rb.ASSIST },
+                                        { id: "item", label: "Item", value: g.rb.ITEM },
+                                        { id: "victory", label: "Victory", value: g.rb.VICTORY },
+                                        { id: "defeat", label: "Defeat", value: g.rb.DEFEAT },
+                                        { id: "level_up", label: "Level Up", value: g.rb.LEVEL_UP },
+                                        { id: "treasure", label: "Treasure", value: g.rb.TREASURE },
+                                        { id: "objective_kill", label: "Objective Kill", value: g.rb.OBJECTIVE_KILL },
                                     ],
                                     selectionMode: "single",
                                     fullWidth: !0,
                                 }),
-                                (0, a.jsx)(l.l6P, {
+                                (0, n.jsx)(u.l, {
                                     label: "Importance",
-                                    value: m,
-                                    onSelectionChange: h,
+                                    value: f,
+                                    onSelectionChange: j,
                                     options: [
                                         { id: "low", label: "Low", value: 0 },
                                         { id: "medium", label: "Medium", value: 0.5 },
@@ -110,83 +118,83 @@ function c() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(l.ksK, {
+                        (0, n.jsx)(m.k, {
                             label: "Title (optional)",
-                            value: x,
-                            onChange: p,
+                            value: A,
+                            onChange: y,
                             placeholder: "e.g., First Blood",
                         }),
-                        (0, a.jsx)(l.ksK, {
+                        (0, n.jsx)(m.k, {
                             label: "Description (optional)",
-                            value: g,
-                            onChange: _,
+                            value: C,
+                            onChange: E,
                             placeholder: "e.g., Killed enemy ADC in bot lane",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, n.jsx)(c.$, {
                             text: "Create Game Event",
                             onClick: () => {
-                                d.Ts({ type: o.Gy.GAME_EVENT, eventType: c, importance: m, title: x, description: g });
+                                v.Ts({ type: g.Gy.GAME_EVENT, eventType: b, importance: f, title: A, description: C });
                             },
                         }),
                     ],
                 }),
-                (0, a.jsx)(l.cGx, {}),
-                (0, a.jsxs)(l.nVY, {
+                (0, n.jsx)(h.c, {}),
+                (0, n.jsxs)(o.n, {
                     label: "ML Pipelines Enabled",
                     children: [
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Emotion Classifier",
                             checked: e.emotionClassifier,
-                            onChange: (t) => d.dR({ ...e, emotionClassifier: t }),
+                            onChange: (t) => v.dR({ ...e, emotionClassifier: t }),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Wake Word Detector",
                             checked: e.wakeWordDetector,
-                            onChange: (t) => d.dR({ ...e, wakeWordDetector: t }),
+                            onChange: (t) => v.dR({ ...e, wakeWordDetector: t }),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Yell Detector",
                             checked: e.yellDetector,
-                            onChange: (t) => d.dR({ ...e, yellDetector: t }),
+                            onChange: (t) => v.dR({ ...e, yellDetector: t }),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
-                            onChange: (t) => d.dR({ ...e, whisperTranscription: t }),
+                            onChange: (t) => v.dR({ ...e, whisperTranscription: t }),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Laughter / Shouting Detector (V3)",
                             checked: e.laughterDetector,
-                            onChange: (t) => d.dR({ ...e, laughterDetector: t }),
+                            onChange: (t) => v.dR({ ...e, laughterDetector: t }),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(l.nVY, {
+                (0, n.jsxs)(o.n, {
                     label: "ML Debug Logging (window.__CLIPS_DEBUG__)",
                     children: [
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Wake Word Debug",
                             description: "Log wake word detection events to console",
                             checked: t.wakeWord,
-                            onChange: () => f("wakeWord"),
+                            onChange: () => S("wakeWord"),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Emotion Debug",
                             description: "Log emotion classification events to console",
                             checked: t.emotion,
-                            onChange: () => f("emotion"),
+                            onChange: () => S("emotion"),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Yell Debug",
                             description: "Show yell classification events to console",
                             checked: t.yell,
-                            onChange: () => f("yell"),
+                            onChange: () => S("yell"),
                         }),
-                        (0, a.jsx)(l.dOG, {
+                        (0, n.jsx)(p.d, {
                             label: "Whisper Debug",
                             description: "Log whisper transcription events to console",
                             checked: t.whisper,
-                            onChange: () => f("whisper"),
+                            onChange: () => S("whisper"),
                         }),
                     ],
                 }),

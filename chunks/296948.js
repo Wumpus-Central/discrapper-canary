@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { r: () => i });
-var r = n(705751);
-function i(e) {
-    let t;
-    return e.isSystemUser() ? (t = r.nu.SYSTEM_DM) : e.bot && (t = r.nu.BOT), t;
+t.d(n, { r: () => r });
+var l = t(705751);
+function r(e) {
+    let n;
+    return e.isSystemUser() ? (n = l.nu.SYSTEM_DM) : e.bot && (n = l.nu.BOT), n;
 }

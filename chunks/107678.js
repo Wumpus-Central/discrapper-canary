@@ -1,11 +1,10 @@
 "use strict";
-n.r(t), n.d(t, { default: () => o });
+n.r(t), n.d(t, { default: () => a });
 var r = n(998280),
     i = n(531651),
-    a = n(618027),
-    s = 6e4;
-function o(e, t) {
-    (0, a.A)(2, arguments);
+    s = n(618027);
+function a(e, t) {
+    (0, s.A)(2, arguments);
     var n = (0, r.A)(t);
-    return (0, i.A)(e, n * s);
+    return (0, i.A)(e, 6e4 * n);
 }

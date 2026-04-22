@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nv: "tier2Animation__387d4",
     I5: "panningAnimation__387d4",

@@ -1,38 +1,36 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     s = n(136722),
-    a = n(571356),
-    o = n(397927),
-    l = n(376092),
-    u = n(985018),
+    a = n(834730),
+    o = n(150934),
+    l = n(789645),
+    u = n(376092),
+    d = n(985018),
     c = n(751645);
-function d(e) {
-    let { application: t, permissions: n, deniedPermissions: d, onPermissionsChange: _, guild: f } = e,
-        p = i.useMemo(() => s.B8(f.permissions), [f.permissions]);
+function _(e) {
+    let { application: t, permissions: n, deniedPermissions: _, onPermissionsChange: f, guild: E } = e,
+        h = i.useMemo(() => s.B8(E.permissions), [E.permissions]);
     i.useEffect(() => {
-        _(!1, s.pb(n, p));
-    }, [p, _, n]);
-    let h = l.Q.filter((e) => s.zy(n, e)),
-        m = h
-            .filter((e) => !s.zy(p, e))
+        f(!1, s.pb(n, h));
+    }, [h, f, n]);
+    let p = u.Q.filter((e) => s.zy(n, e)),
+        m = p
+            .filter((e) => !s.zy(h, e))
             .map((e) => {
-                let t = (0, l.hx)(e),
-                    n = !s.zy(d, e);
+                let t = (0, u.hx)(e),
+                    n = !s.zy(_, e);
                 return (0, r.jsx)(
                     "li",
-                    {
-                        className: c.EK,
-                        children: (0, r.jsx)(o.Checkbox, { checked: n, onChange: (t) => _(t, e), label: t }),
-                    },
+                    { className: c.EK, children: (0, r.jsx)(o.S, { checked: n, onChange: (t) => f(t, e), label: t }) },
                     String(e),
                 );
             }),
-        E = h
-            .filter((e) => s.zy(p, e))
+        g = p
+            .filter((e) => s.zy(h, e))
             .map((e) => {
-                let t = (0, l.hx)(e);
+                let t = (0, u.hx)(e);
                 return (0, r.jsxs)(
                     "li",
                     {
@@ -40,7 +38,7 @@ function d(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: c.nW,
-                                children: (0, r.jsx)(o.PGe, { size: "md", color: "currentColor", className: c.Kk }),
+                                children: (0, r.jsx)(l.P, { size: "md", color: "currentColor", className: c.Kk }),
                             }),
                             (0, r.jsx)(a.E, { variant: "text-md/normal", children: t }),
                         ],
@@ -57,21 +55,21 @@ function d(e) {
                           (0, r.jsx)(a.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: u.intl.format(u.t.sOaT2j, { applicationName: t.name, guildName: f.name }),
+                              children: d.intl.format(d.t.sOaT2j, { applicationName: t.name, guildName: E.name }),
                           }),
                           (0, r.jsx)("ul", { className: c.RH, children: m }),
                       ],
                   })
                 : null,
-            E.length > 0
+            g.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(a.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: u.intl.format(u.t.fsOkF4, { applicationName: t.name }),
+                              children: d.intl.format(d.t.fsOkF4, { applicationName: t.name }),
                           }),
-                          (0, r.jsx)("ul", { className: c.RH, children: E }),
+                          (0, r.jsx)("ul", { className: c.RH, children: g }),
                       ],
                   })
                 : null,

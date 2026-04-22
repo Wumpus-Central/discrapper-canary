@@ -1,22 +1,22 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => o });
 var i,
-    s = n(627968);
+    l = n(627968);
 n(64700);
-var l = n(397927),
-    r = n(780266);
-function a(e) {
+var s = n(708988),
+    r = n(789645),
+    a = n(975642);
+function o(e) {
     let { type: t } = e;
-    return (0, s.jsx)("div", {
-        className: r.fF,
-        children: (0, s.jsx)("div", {
-            className: r.Cf,
+    return (0, l.jsx)("div", {
+        className: a.fF,
+        children: (0, l.jsx)("div", {
+            className: a.Cf,
             children: (function (e) {
                 switch (e) {
                     case "arrow_down":
-                        return (0, s.jsx)(l.MFz, { size: "md", color: "currentColor", className: r.Gr });
+                        return (0, l.jsx)(s.M, { size: "md", color: "currentColor", className: a.Gr });
                     case "cross":
-                        return (0, s.jsx)(l.PGe, { size: "md", color: "currentColor", className: r.Gr });
+                        return (0, l.jsx)(r.P, { size: "md", color: "currentColor", className: a.Gr });
                     default:
                         return null;
                 }
@@ -24,4 +24,4 @@ function a(e) {
         }),
     });
 }
-a.Type = (((i = {}).ARROW_DOWN = "arrow_down"), (i.CROSS = "cross"), i);
+o.Type = (((i = {}).ARROW_DOWN = "arrow_down"), (i.CROSS = "cross"), i);

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(322811),
-    i = n(985971);
-class a extends i.B {
+r.d(t, { A: () => a });
+var n = r(322811),
+    s = r(208352);
+class a extends s.B {
     constructor(e) {
         super(e);
     }
@@ -16,27 +15,27 @@ class a extends i.B {
         return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
     }
     extractPrimaryTimeComponents(e, t) {
-        let n = super.extractPrimaryTimeComponents(e, t);
-        if (!n) return n;
+        let r = super.extractPrimaryTimeComponents(e, t);
+        if (!r) return r;
         if (t[0].endsWith("night")) {
-            let e = n.get("hour");
+            let e = r.get("hour");
             e >= 6 && e < 12
-                ? (n.assign("hour", n.get("hour") + 12), n.assign("meridiem", r.FF.PM))
-                : e < 6 && n.assign("meridiem", r.FF.AM);
+                ? (r.assign("hour", r.get("hour") + 12), r.assign("meridiem", n.FF.PM))
+                : e < 6 && r.assign("meridiem", n.FF.AM);
         }
         if (t[0].endsWith("afternoon")) {
-            n.assign("meridiem", r.FF.PM);
-            let e = n.get("hour");
-            e >= 0 && e <= 6 && n.assign("hour", n.get("hour") + 12);
+            r.assign("meridiem", n.FF.PM);
+            let e = r.get("hour");
+            e >= 0 && e <= 6 && r.assign("hour", r.get("hour") + 12);
         }
         return (
             t[0].endsWith("morning") &&
-                (n.assign("meridiem", r.FF.AM), 12 > n.get("hour") && n.assign("hour", n.get("hour"))),
-            n.addTag("parser/ENTimeExpressionParser")
+                (r.assign("meridiem", n.FF.AM), 12 > r.get("hour") && r.assign("hour", r.get("hour"))),
+            r.addTag("parser/ENTimeExpressionParser")
         );
     }
-    extractFollowingTimeComponents(e, t, n) {
-        let r = super.extractFollowingTimeComponents(e, t, n);
-        return r && r.addTag("parser/ENTimeExpressionParser"), r;
+    extractFollowingTimeComponents(e, t, r) {
+        let n = super.extractFollowingTimeComponents(e, t, r);
+        return n && n.addTag("parser/ENTimeExpressionParser"), n;
     }
 }

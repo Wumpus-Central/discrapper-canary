@@ -1,59 +1,61 @@
-n.d(t, { A: () => A });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(158954),
-    o = n(827734),
-    d = n(348858),
-    c = n(397927),
-    u = n(793574),
+n.d(t, { A: () => S });
+var i = n(627968),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(615675),
+    o = n(900797),
+    d = n(847374),
+    c = n(827734),
+    u = n(348858),
+    p = n(265872),
+    h = n(793574),
     m = n(688810),
-    h = n(617354),
-    x = n(206018),
-    p = n(480890),
+    _ = n(617354),
+    A = n(206018),
+    f = n(480890),
     g = n(74848),
-    f = n(42473),
-    v = n(731854),
-    _ = n(985018),
-    b = n(490704),
-    j = n(967194);
-function A(e) {
+    x = n(42473),
+    E = n(731854),
+    C = n(985018),
+    T = n(490704),
+    v = n(967194);
+function S(e) {
     let {
             selfDeaf: t,
             serverDeaf: n,
-            awaitingRemote: s,
-            onClick: A,
-            iconForeground: C,
-            nameplate: y,
-            shouldShowOutputDeviceChangedTooltip: S,
-            dismissTooltips: E,
+            awaitingRemote: l,
+            onClick: S,
+            iconForeground: b,
+            nameplate: j,
+            shouldShowOutputDeviceChangedTooltip: I,
+            dismissTooltips: R,
         } = e,
-        T = t || n,
+        N = t || n,
         {
-            Component: N,
-            play: I,
-            events: { onMouseEnter: k, onMouseLeave: O },
-        } = (0, d.I)(T ? "undeafen" : "deafen"),
-        R = n ? r.TJE : N,
-        { name: w } = (0, g.x5)(v.oh.AUDIO_OUTPUT),
-        D = (0, h.A)(t, n, s),
-        { analyticsLocations: M } = (0, m.Ay)(u.A.AUDIO_OUTPUT_BUTTON),
-        P = i.useRef(null);
+            Component: y,
+            play: O,
+            events: { onMouseEnter: M, onMouseLeave: U },
+        } = (0, u.I)(N ? "undeafen" : "deafen"),
+        k = n ? r.T : y,
+        { name: P } = (0, g.x5)(E.oh.AUDIO_OUTPUT),
+        w = (0, _.A)(t, n, l),
+        { analyticsLocations: L } = (0, m.Ay)(h.A.AUDIO_OUTPUT_BUTTON),
+        D = s.useRef(null);
     return (
-        i.useEffect(() => () => I(), [T, I]),
-        (0, a.jsx)(m.f5, {
-            value: M,
-            children: (0, a.jsx)(c.YNO, {
-                targetElementRef: P,
+        s.useEffect(() => () => O(), [N, O]),
+        (0, i.jsx)(m.f5, {
+            value: L,
+            children: (0, i.jsx)(p.Y, {
+                targetElementRef: D,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
-                        E(),
-                        (0, a.jsx)(m.f5, {
-                            value: M,
-                            children: (0, a.jsx)(x.A, {
-                                onInteraction: (0, p.s)("AudioDeviceMenu", u.A.ACCOUNT),
+                        R(),
+                        (0, i.jsx)(m.f5, {
+                            value: L,
+                            children: (0, i.jsx)(A.A, {
+                                onInteraction: (0, f.s)("AudioDeviceMenu", h.A.ACCOUNT),
                                 onClose: t,
                                 renderOutputDevices: !0,
                                 renderOutputVolume: !0,
@@ -64,65 +66,65 @@ function A(e) {
                 },
                 position: "top",
                 align: "left",
-                animation: c.YNO.Animation.FADE,
+                animation: p.Y.Animation.FADE,
                 spacing: 4,
                 children: (e, t) => {
-                    let { onClick: i } = e,
-                        { isShown: d } = t,
-                        c = d ? r.tN5 : r.abt;
-                    return (0, a.jsxs)("div", {
-                        ref: P,
-                        className: l()(b.Lh, { [b.v8]: T, [b.q6]: d }),
+                    let { onClick: s } = e,
+                        { isShown: r } = t,
+                        u = r ? o.t : d.a;
+                    return (0, i.jsxs)("div", {
+                        ref: D,
+                        className: a()(T.Lh, { [T.v8]: N, [T.q6]: r }),
                         children: [
-                            (0, a.jsx)(f.A, {
-                                "aria-checked": T,
-                                "aria-label": _.intl.string(_.t.wjcRFX),
-                                className: b.eT,
-                                disabled: s,
-                                icon: (0, a.jsx)(R, {
+                            (0, i.jsx)(x.A, {
+                                "aria-checked": N,
+                                "aria-label": C.intl.string(C.t.wjcRFX),
+                                className: T.eT,
+                                disabled: l,
+                                icon: (0, i.jsx)(k, {
                                     size: "custom",
                                     width: 20,
                                     height: 20,
-                                    color: T ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
-                                    className: C,
+                                    color: N ? c.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    className: b,
                                 }),
-                                iconForeground: T ? j.o : void 0,
-                                innerClassName: l()({ [j.T]: n }),
-                                onClick: A,
-                                onContextMenu: i,
-                                onMouseEnter: k,
-                                onMouseLeave: O,
-                                plated: null != y,
-                                redGlow: T,
+                                iconForeground: N ? v.o : void 0,
+                                innerClassName: a()({ [v.T]: n }),
+                                onClick: S,
+                                onContextMenu: s,
+                                onMouseEnter: M,
+                                onMouseLeave: U,
+                                plated: null != j,
+                                redGlow: N,
                                 role: "switch",
-                                tooltipText: D,
+                                tooltipText: w,
                             }),
-                            (0, a.jsx)(f.A, {
-                                className: l()(b.UT, { [b.q6]: d }),
-                                disabled: s,
-                                icon: (0, a.jsx)(c, {
-                                    className: b.$$,
+                            (0, i.jsx)(x.A, {
+                                className: a()(T.UT, { [T.q6]: r }),
+                                disabled: l,
+                                icon: (0, i.jsx)(u, {
+                                    className: T.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
-                                    color: T ? o.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    color: N ? c.A.colors.ICON_VOICE_MUTED : "currentColor",
                                 }),
-                                onClick: i,
-                                onContextMenu: i,
-                                plated: null != y,
-                                redGlow: T,
-                                tooltipType: S ? "green_void_do_not_use" : void 0,
-                                tooltipForceOpen: S,
-                                tooltipPositionKey: S
-                                    ? _.intl.formatToPlainString(_.t["f+DDY/"], { outputDeviceName: w })
+                                onClick: s,
+                                onContextMenu: s,
+                                plated: null != j,
+                                redGlow: N,
+                                tooltipType: I ? "green_void_do_not_use" : void 0,
+                                tooltipForceOpen: I,
+                                tooltipPositionKey: I
+                                    ? C.intl.formatToPlainString(C.t["f+DDY/"], { outputDeviceName: P })
                                     : void 0,
-                                tooltipShouldShow: !d,
-                                tooltipText: S
-                                    ? _.intl.format(_.t["f+DDY/"], { outputDeviceName: w })
-                                    : _.intl.string(_.t.aA4Vce),
-                                "aria-label": S
-                                    ? _.intl.formatToPlainString(_.t["f+DDY/"], { outputDeviceName: w })
-                                    : _.intl.string(_.t.aA4Vce),
+                                tooltipShouldShow: !r,
+                                tooltipText: I
+                                    ? C.intl.format(C.t["f+DDY/"], { outputDeviceName: P })
+                                    : C.intl.string(C.t.aA4Vce),
+                                "aria-label": I
+                                    ? C.intl.formatToPlainString(C.t["f+DDY/"], { outputDeviceName: P })
+                                    : C.intl.string(C.t.aA4Vce),
                             }),
                         ],
                     });

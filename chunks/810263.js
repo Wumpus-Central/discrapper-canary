@@ -1,62 +1,65 @@
-i.d(t, { A: () => p });
-var n = i(627968),
-    l = i(64700),
-    s = i(284009),
-    r = i.n(s),
-    a = i(397927),
-    d = i(50268),
-    c = i(253932),
-    o = i(260509),
-    u = i(486020),
-    g = i(957565),
-    A = i(486503),
-    E = i(652215),
-    h = i(985018);
-function p(e) {
-    let { showIcons: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        i = c.Q_.useSetting(),
-        { tidaWebformEnabled: s } = A.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
-        p = (0, d.A)({ id: e.id, label: h.intl.string(h.t["94lLD7"]) }),
-        _ = l.useCallback(() => {
-            let t = (0, o.Iv)(e, E.XAf, !0);
-            r()(null != t, "cannot copy null icon URL"), (0, g.C)(t);
+t.d(n, { A: () => f });
+var l = t(627968),
+    i = t(64700),
+    a = t(284009),
+    r = t.n(a),
+    s = t(477782),
+    o = t(885574),
+    d = t(473935),
+    c = t(173936),
+    u = t(50268),
+    v = t(253932),
+    A = t(260509),
+    g = t(486020),
+    h = t(957565),
+    p = t(486503),
+    y = t(652215),
+    E = t(985018);
+function f(e) {
+    let { showIcons: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        t = v.Q_.useSetting(),
+        { tidaWebformEnabled: a } = p.A.useExperiment({ location: "useCopyServerInfoItem" }, { autoTrackExposure: !1 }),
+        f = (0, u.A)({ id: e.id, label: E.intl.string(E.t["94lLD7"]) }),
+        b = i.useCallback(() => {
+            let n = (0, A.Iv)(e, y.XAf, !0);
+            r()(null != n, "cannot copy null icon URL"), (0, h.C)(n);
         }, [e]),
-        S = l.useCallback(() => {
-            let t = u.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
-            r()(null != t, "cannot copy null banner URL"), (0, g.C)(t);
+        C = i.useCallback(() => {
+            let n = g.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
+            r()(null != n, "cannot copy null banner URL"), (0, h.C)(n);
         }, [e]),
-        b = l.useCallback(() => {
-            (0, g.C)(e.id);
+        L = i.useCallback(() => {
+            (0, h.C)(e.id);
         }, [e.id]);
-    return !__OVERLAY__ && i && g.p5 && null != e.id
-        ? s
-            ? (0, n.jsxs)(a.Drp, {
+    return !__OVERLAY__ && t && h.p5 && null != e.id
+        ? a
+            ? (0, l.jsxs)(s.Dr, {
                   id: "copy-server-info",
-                  label: h.intl.string(h.t["rka/KS"]),
-                  leadingAccessory: t ? { type: "icon", icon: a.mir } : void 0,
+                  label: E.intl.string(E.t["rka/KS"]),
+                  leadingAccessory: n ? { type: "icon", icon: o.m } : void 0,
                   children: [
-                      (0, n.jsx)(a.Drp, {
+                      (0, l.jsx)(s.Dr, {
                           id: "copy-server-id",
-                          label: h.intl.string(h.t["94lLD7"]),
-                          action: b,
-                          leadingAccessory: t ? { type: "icon", icon: a.L9S } : void 0,
+                          label: E.intl.string(E.t["94lLD7"]),
+                          action: L,
+                          leadingAccessory: n ? { type: "icon", icon: d.L } : void 0,
                       }),
                       null != e.icon &&
-                          (0, n.jsx)(a.Drp, {
+                          (0, l.jsx)(s.Dr, {
                               id: "copy-server-icon-link",
-                              label: h.intl.string(h.t["7H30wR"]),
-                              action: _,
-                              leadingAccessory: t ? { type: "icon", icon: a.qYV } : void 0,
+                              label: E.intl.string(E.t["7H30wR"]),
+                              action: b,
+                              leadingAccessory: n ? { type: "icon", icon: c.q } : void 0,
                           }),
                       null != e.banner &&
-                          (0, n.jsx)(a.Drp, {
+                          (0, l.jsx)(s.Dr, {
                               id: "copy-server-banner-link",
-                              label: h.intl.string(h.t["2FoUnk"]),
-                              action: S,
-                              leadingAccessory: t ? { type: "icon", icon: a.qYV } : void 0,
+                              label: E.intl.string(E.t["2FoUnk"]),
+                              action: C,
+                              leadingAccessory: n ? { type: "icon", icon: c.q } : void 0,
                           }),
                   ],
               })
-            : p
+            : f
         : null;
 }

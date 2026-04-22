@@ -1,39 +1,40 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(417597),
-    o = n(397927),
-    d = n(287809),
-    c = n(427262),
-    u = n(283900),
-    m = n(180998);
-let g = s.memo((e) => {
-    let { userId: t, subText: n, className: s } = e,
-        l = (0, r.bG)([d.default], () => d.default.getUser(t));
-    return void 0 === l
+l.d(t, { A: () => g });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(417597),
+    d = l(778712),
+    c = l(834730),
+    u = l(287809),
+    o = l(427262),
+    x = l(283900),
+    h = l(914518);
+let m = i.memo((e) => {
+    let { userId: t, subText: l, className: i } = e,
+        s = (0, r.bG)([u.default], () => u.default.getUser(t));
+    return void 0 === s
         ? null
-        : (0, i.jsxs)("div", {
-              className: a()(m.k, s),
+        : (0, n.jsxs)("div", {
+              className: a()(h.k, i),
               children: [
-                  (0, i.jsx)(u.H, { user: l, avatarSize: o._3J.SIZE_40 }),
-                  (0, i.jsx)("div", {
-                      children: (0, i.jsxs)("div", {
-                          className: m.$,
+                  (0, n.jsx)(x.H, { user: s, avatarSize: d._3.SIZE_40 }),
+                  (0, n.jsx)("div", {
+                      children: (0, n.jsxs)("div", {
+                          className: h.$,
                           children: [
-                              (0, i.jsx)(o.Text, {
+                              (0, n.jsx)(c.E, {
                                   variant: "text-md/semibold",
                                   color: "interactive-text-active",
-                                  children: c.Ay.getName(l),
+                                  children: o.Ay.getName(s),
                               }),
-                              null != n &&
-                                  (0, i.jsx)(o.Text, { variant: "text-sm/medium", color: "text-subtle", children: n }),
+                              null != l &&
+                                  (0, n.jsx)(c.E, { variant: "text-sm/medium", color: "text-subtle", children: l }),
                           ],
                       }),
                   }),
               ],
           });
 });
-g.displayName = "FamilyCenterActivityUserRow";
-let _ = g;
+m.displayName = "FamilyCenterActivityUserRow";
+let g = m;

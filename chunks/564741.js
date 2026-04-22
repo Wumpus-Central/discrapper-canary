@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+t.exports = {
     nE: "debugToolsPanel__50163",
     wx: "header__50163",
     if: "headerTextContainer__50163",

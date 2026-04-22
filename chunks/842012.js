@@ -1,36 +1,37 @@
-n.d(t, { A: () => h });
-var l = n(627968),
-    a = n(64700),
-    i = n(311907),
-    r = n(832712),
+"use strict";
+n.d(t, { A: () => g });
+var a = n(627968),
+    i = n(64700),
+    r = n(311907),
+    l = n(832712),
     s = n(58149),
     d = n(662502),
     o = n(632738),
-    u = n(734057),
-    c = n(543465),
-    m = n(562153),
-    _ = n(477427),
-    x = n(652215),
-    g = n(985018);
-let h = (e) => {
-    let { user: t, channelId: n, reportId: h } = e,
-        p = u.A.getDMFromUserId(t.id),
-        A = (0, i.bG)([u.A], () => u.A.getChannel(n), [n]),
-        b = a.useMemo(() => m.Ay.getName(A?.guild_id, A?.id, t), [A, t]),
-        v = (0, i.bG)([c.Ay], () => (null == p ? null : c.Ay.isChannelMuted(null, p))),
-        [f, j] = a.useState(v ?? !1),
-        T = a.useCallback(() => {
-            null != p &&
-                (j(!0),
-                s.Ay.trackWithMetadata(x.HAw.IAR_MUTE_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: h }),
-                r.A.updateChannelOverrideSettings(null, p, { muted: !0 }, _.fd.Muted),
+    c = n(734057),
+    u = n(543465),
+    _ = n(562153),
+    m = n(477427),
+    p = n(652215),
+    h = n(985018);
+let g = (e) => {
+    let { user: t, channelId: n, reportId: g } = e,
+        f = c.A.getDMFromUserId(t.id),
+        b = (0, r.bG)([c.A], () => c.A.getChannel(n), [n]),
+        A = i.useMemo(() => _.Ay.getName(b?.guild_id, b?.id, t), [b, t]),
+        x = (0, r.bG)([u.Ay], () => (null == f ? null : u.Ay.isChannelMuted(null, f))),
+        [v, E] = i.useState(x ?? !1),
+        I = i.useCallback(() => {
+            null != f &&
+                (E(!0),
+                s.Ay.trackWithMetadata(p.HAw.IAR_MUTE_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: g }),
+                l.A.updateChannelOverrideSettings(null, f, { muted: !0 }, m.fd.Muted),
                 d.A.showMuteSuccessToast(t.id, n));
-        }, [p, n, t, h]);
-    return (0, l.jsx)(o.PQ, {
-        title: g.intl.formatToPlainString(g.t.TRp5wR, { username: b }),
-        description: g.intl.string(g.t["yM/+AJ"]),
-        buttonText: f ? g.intl.string(g.t.E8x4Nj) : g.intl.string(g.t.HITUcR),
-        buttonDisabled: f,
-        onButtonPress: T,
+        }, [f, n, t, g]);
+    return (0, a.jsx)(o.PQ, {
+        title: h.intl.formatToPlainString(h.t.TRp5wR, { username: A }),
+        description: h.intl.string(h.t["yM/+AJ"]),
+        buttonText: v ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcR),
+        buttonDisabled: v,
+        onButtonPress: I,
     });
 };

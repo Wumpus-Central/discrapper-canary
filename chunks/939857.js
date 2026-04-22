@@ -1,17 +1,17 @@
 "use strict";
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927),
-    l = n(900729);
+    s = n(503698),
+    a = n.n(s),
+    o = n(935462),
+    l = n(243926);
 let u = { SMALL: l.PG, MEDIUM: l.$g, LARGE: l.Pu };
-class c extends i.PureComponent {
-    static Header = o.rQ0;
-    static Footer = o.jlY;
-    static Content = o.$mQ;
-    static ListContent = o.Dck;
-    static CloseButton = o.s_y;
+class d extends i.PureComponent {
+    static Header = o.rQ;
+    static Footer = o.jl;
+    static Content = o.$m;
+    static ListContent = o.Dc;
+    static CloseButton = o.s_;
     static Sizes = u;
     static defaultProps = { fullscreenOnMobile: !0, size: u.SMALL, tag: "div" };
     _scroller = null;
@@ -40,20 +40,20 @@ class c extends i.PureComponent {
         let { hideSeparator: e } = this.state;
         return i.Children.map(this.props.children, (t) =>
             i.isValidElement(t)
-                ? t.type === o.$mQ || t.type === o.Dck
+                ? t.type === o.$m || t.type === o.Dc
                     ? i.cloneElement(t, {
                           scrollerRef: this.setRef,
                           onScroll: this.handleScroll,
                           onResize: this.handleScroll,
                       })
-                    : t.type === o.rQ0 && e
+                    : t.type === o.rQ && e
                       ? i.cloneElement(t, { separator: !1 })
                       : t
                 : t,
         );
     }
     render() {
-        let { className: e, children: t, tag: n, size: i, fullscreenOnMobile: a, ...o } = this.props;
-        return (0, r.jsx)(n, { className: s()(l.yl, e, i, { [l.z]: a }), ...o, children: this.renderChildren() });
+        let { className: e, children: t, tag: n, size: i, fullscreenOnMobile: s, ...o } = this.props;
+        return (0, r.jsx)(n, { className: a()(l.yl, e, i, { [l.z]: s }), ...o, children: this.renderChildren() });
     }
 }

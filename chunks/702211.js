@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { b: () => o });
-var r = n(311907),
-    i = n(287809),
-    a = n(474090),
-    s = n(788868);
-function o() {
+r.d(t, { b: () => i });
+var a = r(311907),
+    n = r(287809),
+    l = r(474090),
+    s = r(788868);
+function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return !(0, r.bG)([i.default], () => a.Ay.isPremium(i.default.getCurrentUser(), s.PremiumTypes.TIER_2)) && !e;
+    return !(0, a.bG)([n.default], () => l.Ay.isPremium(n.default.getCurrentUser(), s.PremiumTypes.TIER_2)) && !e;
 }

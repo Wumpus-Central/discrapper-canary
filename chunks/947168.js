@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     G1: "chipletFlexContainer__3b3ff",
     _q: "blinkAsEdited__3b3ff",

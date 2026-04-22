@@ -1,60 +1,60 @@
-s.d(t, { A: () => u });
-var a = s(627968),
-    r = s(64700),
-    i = s(503698),
-    n = s.n(i),
-    c = s(990078),
-    l = s(397927),
-    _ = s(854627),
-    d = s(3161);
-function u(e) {
-    let { user: t, checked: s, onChange: i, disabled: u, tooltipConfig: E } = e,
-        m = r.useRef(null),
-        { avatarSrc: o, eventHandlers: h } = (0, _.A)({ userId: t?.id, size: l._3J.SIZE_32 }),
-        R = t.globalName ?? t.username;
-    return (0, a.jsx)(c.m, {
-        text: E?.isActive(t, u) ? E.text(t) : null,
+n.d(t, { A: () => f });
+var r = n(627968),
+    a = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    l = n(990078),
+    c = n(778712),
+    o = n(939249),
+    d = n(97808),
+    u = n(834730),
+    _ = n(658675),
+    m = n(854627),
+    p = n(3161);
+function f(e) {
+    let { user: t, checked: n, onChange: i, disabled: f, tooltipConfig: A } = e,
+        g = a.useRef(null),
+        { avatarSrc: h, eventHandlers: b } = (0, m.A)({ userId: t?.id, size: c._3.SIZE_32 }),
+        x = t.globalName ?? t.username;
+    return (0, r.jsx)(l.m, {
+        text: A?.isActive(t, f) ? A.text(t) : null,
         position: "top",
-        anchorRef: m,
+        anchorRef: g,
         asContainer: !0,
-        children: (0, a.jsxs)(l.DUT, {
-            className: n()(d.kL, { [d.vk]: !u }),
+        children: (0, r.jsxs)(o.D, {
+            className: s()(p.kL, { [p.vk]: !f }),
             onClick: () => {
-                u || i(t, !s);
+                f || i(t, !n);
             },
             children: [
-                (0, a.jsx)("div", {
-                    className: d.dj,
-                    children: (0, a.jsx)(l.euF, {
-                        className: n()({ [d.SU]: u }),
-                        src: o,
-                        "aria-label": R,
-                        size: l._3J.SIZE_32,
-                        ...h,
+                (0, r.jsx)("div", {
+                    className: p.dj,
+                    children: (0, r.jsx)(d.eu, {
+                        className: s()({ [p.SU]: f }),
+                        src: h,
+                        "aria-label": x,
+                        size: c._3.SIZE_32,
+                        ...b,
                     }),
                 }),
-                (0, a.jsxs)("div", {
-                    className: d.QV,
+                (0, r.jsxs)("div", {
+                    className: p.QV,
                     children: [
-                        (0, a.jsx)(l.Text, {
-                            className: d.nT,
-                            color: u ? "text-muted" : "text-default",
+                        (0, r.jsx)(u.E, {
+                            className: p.nT,
+                            color: f ? "text-muted" : "text-default",
                             variant: "text-md/semibold",
-                            children: R,
+                            children: x,
                         }),
-                        (0, a.jsx)(l.Text, {
-                            className: d.nT,
-                            color: u ? "text-muted" : "text-subtle",
+                        (0, r.jsx)(u.E, {
+                            className: p.nT,
+                            color: f ? "text-muted" : "text-subtle",
                             variant: "text-xs/normal",
                             children: t.username,
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", {
-                    ref: m,
-                    className: d.kv,
-                    children: (0, a.jsx)(l.P7L, { checked: s, disabled: u }),
-                }),
+                (0, r.jsx)("div", { ref: g, className: p.kv, children: (0, r.jsx)(_.P, { checked: n, disabled: f }) }),
             ],
         }),
     });

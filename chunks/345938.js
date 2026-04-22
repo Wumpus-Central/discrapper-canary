@@ -1,15 +1,15 @@
-n.d(t, { d: () => r });
-var a = n(627968),
-    l = n(397927),
-    s = n(294454);
-let r = (e) => {
-    let { sku: t, guildId: r, source: i, analyticsLocations: o, analyticsContext: d } = e;
-    (0, l.mMO)(
+l.d(t, { d: () => s });
+var n = l(627968),
+    a = l(192308),
+    i = l(294454);
+let s = (e) => {
+    let { sku: t, guildId: s, source: r, analyticsLocations: o, analyticsContext: d } = e;
+    (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("90969")]).then(n.bind(n, 763375));
-            return (n) =>
-                (0, a.jsx)(e, { ...n, sku: t, guildId: r, source: i, analyticsLocations: o, analyticsContext: d });
+            let { default: e } = await Promise.all([l.e("96758"), l.e("79133"), l.e("17530")]).then(l.bind(l, 763375));
+            return (l) =>
+                (0, n.jsx)(e, { ...l, sku: t, guildId: s, source: r, analyticsLocations: o, analyticsContext: d });
         },
-        { stackingBehavior: "stack", modalKey: s.aU },
+        { stackingBehavior: "stack", modalKey: i.aU },
     );
 };

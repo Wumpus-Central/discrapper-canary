@@ -1,96 +1,98 @@
-"use strict";
-n.d(t, { A: () => g }), n(667532);
-var r = n(478437),
-    i = n(629357),
-    s = n(580424),
-    a = n(47167),
+n.d(t, { A: () => h }), n(667532);
+var l = n(478437),
+    r = n(629357),
+    i = n(580424),
+    s = n(47167),
     o = n(734057),
-    l = n(808728),
-    u = n(994500),
-    c = n(287809),
-    d = n(248465),
-    _ = n(634788),
-    f = n(374803);
+    u = n(808728),
+    a = n(994500),
+    m = n(287809),
+    c = n(248465),
+    d = n(634788),
+    p = n(374803);
 n(827669);
-var p = n(746080),
-    h = n(985018);
-function m(e) {
-    switch (e.type) {
-        case r.r.PUBLIC_THREAD:
-        case r.r.PRIVATE_THREAD:
-        case r.r.ANNOUNCEMENT_THREAD:
-        case r.r.GUILD_VOICE:
-        case r.r.GUILD_STAGE_VOICE:
-        case r.r.GUILD_CATEGORY:
-            return `#"${(0, a.Eq)((0, a.m1)(e, c.default, u.A))}"`;
-        default:
-            let t = l.Ay.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-            return `#${null != t ? t.name : ((0, a.m1))(e, c.default, u.A)}`;
-    }
-}
-function E(e) {
-    return p.aQ.has(e.id) ? `<id:${e.id}>` : `<#${e.id}>`;
-}
-let g = {
+var y = n(746080),
+    A = n(985018);
+let h = {
     sentinel: "#",
-    matches: (e, t, n, r, i) => i.mentions.channel !== f.xS.DENY && !e.isPrivate(),
-    queryResults(e, t, n, r, s) {
-        let a,
+    matches: (e, t, n, l, r) => r.mentions.channel !== p.xS.DENY && !e.isPrivate(),
+    queryResults(e, t, n, l, i) {
+        let s,
             o,
-            u = l.I6;
+            a = u.I6;
         return (
-            n.charAt(0) === i.AT.VOICE_CHANNEL && ((u = l.vM), (n = n.substring(1))),
-            r.forNonStringCommandOption
-                ? (a = d.Ay.queryApplicationCommandChannelResults({
+            n.charAt(0) === r.AT.VOICE_CHANNEL && ((a = u.vM), (n = n.substring(1))),
+            l.forNonStringCommandOption
+                ? (s = c.Ay.queryApplicationCommandChannelResults({
                       query: n,
                       channel: e,
-                      channelTypes: r.allowedChannelTypes,
+                      channelTypes: l.allowedChannelTypes,
                   }))
-                : ((a = d.Ay.queryChannelResults({ query: n, channel: e, type: u })),
-                  null != t && ((o = d.Ay.queryStaticRouteChannels({ query: n, guild: t })), a.channels.unshift(...o))),
-            { results: a, staticRouteChannels: o }
+                : ((s = c.Ay.queryChannelResults({ query: n, channel: e, type: a })),
+                  null != t && ((o = c.Ay.queryStaticRouteChannels({ query: n, guild: t })), s.channels.unshift(...o))),
+            { results: s, staticRouteChannels: o }
         );
     },
     renderResults(e) {
         let t,
             n,
             {
-                results: { channels: r },
-                selectedIndex: a,
-                query: l,
-                options: u,
-                onHover: c,
-                onClick: d,
+                results: { channels: l },
+                selectedIndex: s,
+                query: u,
+                options: a,
+                onHover: m,
+                onClick: c,
             } = e,
-            f = l.charAt(0) === i.AT.VOICE_CHANNEL;
+            p = u.charAt(0) === r.AT.VOICE_CHANNEL;
         return (
-            f
-                ? ((t = h.t["rMUL3+"]), (n = h.intl.string(h.t.CYnO4s)), (l = l.substring(1)))
-                : u.forNonStringCommandOption
-                  ? ((t = h.t.upNFT5), (n = h.intl.string(h.t.OGiMXJ)))
-                  : ((t = h.t.UhnmJD), (n = h.intl.string(h.t.nIfr0Y))),
-            (0, _.GM)({
-                query: l,
-                selectedIndex: a,
-                autocompletes: r,
-                onHover: c,
-                onClick: d,
+            p
+                ? ((t = A.t["rMUL3+"]), (n = A.intl.string(A.t.CYnO4s)), (u = u.substring(1)))
+                : a.forNonStringCommandOption
+                  ? ((t = A.t.upNFT5), (n = A.intl.string(A.t.OGiMXJ)))
+                  : ((t = A.t.UhnmJD), (n = A.intl.string(A.t.nIfr0Y))),
+            (0, d.GM)({
+                query: u,
+                selectedIndex: s,
+                autocompletes: l,
+                onHover: m,
+                onClick: c,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
-                Component: s.Ay.Channel,
+                Component: i.Ay.Channel,
                 getProps: (e) => ({ channel: e, key: e.id, category: o.A.getChannel(e.parent_id) }),
-                getQuery: (e) => (f ? `#${i.AT.VOICE_CHANNEL}${e}` : `#${e}`),
+                getQuery: (e) => (p ? `#${r.AT.VOICE_CHANNEL}${e}` : `#${e}`),
                 key: "channels",
             })
         );
     },
     onSelect(e) {
+        var t;
         let {
-                results: { channels: t },
-                index: n,
-                options: r,
+                results: { channels: n },
+                index: r,
+                options: i,
             } = e,
-            i = t[n];
-        return r.insertText(m(i), E(i)), { type: f.kc.CHANNEL };
+            o = n[r];
+        return (
+            i.insertText(
+                (function (e) {
+                    switch (e.type) {
+                        case l.r.PUBLIC_THREAD:
+                        case l.r.PRIVATE_THREAD:
+                        case l.r.ANNOUNCEMENT_THREAD:
+                        case l.r.GUILD_VOICE:
+                        case l.r.GUILD_STAGE_VOICE:
+                        case l.r.GUILD_CATEGORY:
+                            return `#"${(0, s.Eq)((0, s.m1)(e, m.default, a.A))}"`;
+                        default:
+                            let t = u.Ay.getTextChannelNameDisambiguations(e.guild_id)[e.id];
+                            return `#${null != t ? t.name : ((0, s.m1))(e, m.default, a.A)}`;
+                    }
+                })(o),
+                ((t = o), y.aQ.has(t.id) ? `<id:${t.id}>` : `<#${t.id}>`),
+            ),
+            { type: p.kc.CHANNEL }
+        );
     },
 };

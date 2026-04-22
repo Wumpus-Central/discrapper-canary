@@ -1,190 +1,196 @@
-"use strict";
-n.d(t, { A: () => G });
+n.d(t, { A: () => B });
 var i = n(627968),
-    s = n(64700),
-    l = n(687498),
+    l = n(64700),
+    s = n(517738),
     r = n(311907),
     a = n(827734),
     o = n(73939),
-    d = n(582754),
-    c = n(397927),
-    u = n(736653),
-    m = n(58149),
-    g = n(954571),
-    x = n(203982),
-    h = n(555337),
-    _ = n(418448),
-    p = n(527678),
-    A = n(199940),
-    f = n(132514),
-    j = n(107795),
-    N = n(655943),
-    E = n(287479),
-    b = n(400812),
-    C = n(72533),
-    T = n(23901),
-    I = n(729984),
-    v = n(692453),
-    S = n(360827),
-    y = n(133154),
-    R = n(652215),
-    O = n(985018),
-    L = n(444412);
-function G() {
-    let e = (0, r.bG)([h.A], () => h.A.getGuild());
-    return null == e ? null : (0, i.jsx)(D, { guild: e });
+    d = n(462887),
+    c = n(717421),
+    u = n(602853),
+    m = n(821609),
+    g = n(477155),
+    h = n(935286),
+    x = n(871682),
+    _ = n(187322),
+    p = n(834730),
+    A = n(736653),
+    E = n(58149),
+    f = n(954571),
+    j = n(203982),
+    N = n(555337),
+    I = n(418448),
+    C = n(527678),
+    b = n(199940),
+    v = n(132514),
+    S = n(107795),
+    T = n(655943),
+    y = n(287479),
+    R = n(400812),
+    L = n(72533),
+    D = n(23901),
+    O = n(729984),
+    G = n(692453),
+    M = n(360827),
+    k = n(133154),
+    U = n(652215),
+    w = n(985018),
+    P = n(132140);
+function B() {
+    let e = (0, r.bG)([N.A], () => N.A.getGuild());
+    return null == e ? null : (0, i.jsx)(F, { guild: e });
 }
-function D(e) {
+function F(e) {
     let { guild: t } = e,
-        h = t.id,
-        G = (0, r.bG)([E.A], () => E.A.getCurrentPage()),
-        D = (0, C.A)(h),
+        N = t.id,
+        B = (0, r.bG)([y.A], () => y.A.getCurrentPage()),
+        F = (0, L.A)(N),
         {
-            hasChanges: M,
-            hasConfiguredAnythingForCurrentStep: k,
-            hasErrors: U,
-        } = (0, r.cf)([E.A], () => ({
-            hasChanges: E.A.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: E.A.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: E.A.hasErrors(),
+            hasChanges: H,
+            hasConfiguredAnythingForCurrentStep: V,
+            hasErrors: z,
+        } = (0, r.cf)([y.A], () => ({
+            hasChanges: y.A.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: y.A.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: y.A.hasErrors(),
         })),
-        P = (0, r.bG)([E.A], () => {
-            let e = (0, b.ql)(G);
-            return null != e && !E.A.isEducationUpsellDismissed(e);
+        W = (0, r.bG)([y.A], () => {
+            let e = (0, R.ql)(B);
+            return null != e && !y.A.isEducationUpsellDismissed(e);
         }),
-        w = (0, u.Ay)(),
-        B = s.useRef(null),
-        [{ spring: F }, H] = (0, c.zhh)(() => ({ spring: 0 }), "animate-always");
-    s.useEffect(() => {
+        Y = (0, A.Ay)(),
+        K = l.useRef(null),
+        [{ spring: X }, Z] = (0, c.z)(() => ({ spring: 0 }), "animate-always");
+    l.useEffect(() => {
         function e() {
-            H({ spring: 1, config: l.config.gentle }), H({ spring: 0, config: l.config.gentle, delay: 1e3 });
+            Z({ spring: 1, config: s.config.gentle }), Z({ spring: 0, config: s.config.gentle, delay: 1e3 });
         }
         return (
-            x._.subscribe(R.jej.EMPHASIZE_NOTICE, e),
+            j._.subscribe(U.jej.EMPHASIZE_NOTICE, e),
             () => {
-                x._.unsubscribe(R.jej.EMPHASIZE_NOTICE, e);
+                j._.unsubscribe(U.jej.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [H]);
-    let V = (0, c.rdh)(a.A.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        z = (0, c.rdh)(a.A.unsafe_rawColors.PRIMARY_160).hex(),
-        W = (0, d.Mw)(w) ? V : z,
-        K = F.to({ range: [0, 1], output: [W, (0, c.rdh)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
-    if (D) {
-        if (G === b.Hy.DEFAULT_CHANNELS) return (0, i.jsx)(I.G, {});
-        else if (G === b.Hy.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(S.fO, {});
-        else if (G === b.Hy.HOME_SETTINGS) return (0, i.jsx)(y.A, {});
-        else if (G === b.Hy.CONNECTIONS) return (0, i.jsx)(v.R, {});
-        else if ((G === b.Hy.LANDING || G === b.Hy.REVIEW) && f.A.hasChanges()) return (0, i.jsx)(y.A, {});
+    }, [Z]);
+    let J = (0, u.r)(a.A.colors.BACKGROUND_SURFACE_HIGH).hex(),
+        q = (0, u.r)(a.A.unsafe_rawColors.PRIMARY_160).hex(),
+        Q = (0, d.M)(Y) ? J : q,
+        $ = X.to({ range: [0, 1], output: [Q, (0, u.r)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
+    if (F) {
+        if (B === R.Hy.DEFAULT_CHANNELS) return (0, i.jsx)(O.G, {});
+        else if (B === R.Hy.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(M.fO, {});
+        else if (B === R.Hy.HOME_SETTINGS) return (0, i.jsx)(k.A, {});
+        else if (B === R.Hy.CONNECTIONS) return (0, i.jsx)(G.R, {});
+        else if ((B === R.Hy.LANDING || B === R.Hy.REVIEW) && v.A.hasChanges()) return (0, i.jsx)(k.A, {});
     }
-    let Y = G === b.kd[b.kd.length - 1],
-        X = async () => {
-            let e = N.A.advancedMode;
-            if (M)
+    let ee = B === R.kd[R.kd.length - 1],
+        et = async () => {
+            let e = T.A.advancedMode;
+            if (H)
                 try {
-                    if (G === b.Hy.DEFAULT_CHANNELS)
-                        await (0, _.jr)(t).then(() =>
-                            e ? (0, j.dm)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                    if (B === R.Hy.DEFAULT_CHANNELS)
+                        await (0, I.jr)(t).then(() =>
+                            e ? (0, S.dm)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (G === b.Hy.CUSTOMIZATION_QUESTIONS) await (0, j.dm)(t, { ignoreDefaultPrompt: !0 });
-                    else if (G === b.Hy.HOME_SETTINGS) {
-                        let e = f.A.getSettings();
-                        await (0, A.W5)(t.id, e);
+                    else if (B === R.Hy.CUSTOMIZATION_QUESTIONS) await (0, S.dm)(t, { ignoreDefaultPrompt: !0 });
+                    else if (B === R.Hy.HOME_SETTINGS) {
+                        let e = v.A.getSettings();
+                        await (0, b.W5)(t.id, e);
                     }
                 } catch {
                     return !1;
                 }
             return !0;
         },
-        J = async () => {
-            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, m.H$)(h),
-                step: b.Hy[G],
+        en = async () => {
+            f.default.track(U.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, E.H$)(N),
+                step: R.Hy[B],
                 back: !1,
-                skip: !M,
+                skip: !H,
             }),
-                (0, p.Ay)((0, b.ql)(G)),
-                (await X()) && (0, p._k)(h, G);
+                (0, C.Ay)((0, R.ql)(B)),
+                (await et()) && (0, C._k)(N, B);
         },
-        Z = async () => {
-            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, m.H$)(h),
-                step: b.Hy[G],
+        ei = async () => {
+            f.default.track(U.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, E.H$)(N),
+                step: R.Hy[B],
                 back: !0,
                 skip: !1,
             }),
-                (await X()) && (0, p.kP)(h, G);
+                (await et()) && (0, C.kP)(N, B);
         },
-        q = null;
-    P &&
-        (G === b.Hy.SAFETY_CHECK
-            ? (q = (0, i.jsx)(T.Et, {}))
-            : G === b.Hy.DEFAULT_CHANNELS
-              ? (q = (0, i.jsx)(T.hz, {}))
-              : G === b.Hy.CUSTOMIZATION_QUESTIONS
-                ? (q = (0, i.jsx)(T.yP, {}))
-                : G === b.Hy.HOME_SETTINGS && (q = (0, i.jsx)(T.QS, {})));
-    let Q = (0, i.jsx)("div", {
-            className: P ? L.R : void 0,
-            children: (0, i.jsx)(c.Button, {
+        el = null;
+    W &&
+        (B === R.Hy.SAFETY_CHECK
+            ? (el = (0, i.jsx)(D.Et, {}))
+            : B === R.Hy.DEFAULT_CHANNELS
+              ? (el = (0, i.jsx)(D.hz, {}))
+              : B === R.Hy.CUSTOMIZATION_QUESTIONS
+                ? (el = (0, i.jsx)(D.yP, {}))
+                : B === R.Hy.HOME_SETTINGS && (el = (0, i.jsx)(D.QS, {})));
+    let es = (0, i.jsx)("div", {
+            className: W ? P.R : void 0,
+            children: (0, i.jsx)(m.$, {
                 size: "sm",
                 variant: "secondary",
-                text: O.intl.string(O.t["13/7kX"]),
-                icon: c.rJJ,
+                text: w.intl.string(w.t["13/7kX"]),
+                icon: g.r,
                 iconPosition: "start",
-                onClick: Z,
-                disabled: P || U,
+                onClick: ei,
+                disabled: W || z,
             }),
         }),
-        $ = (0, i.jsx)(c.Button, {
+        er = (0, i.jsx)(m.$, {
             size: "sm",
-            variant: k ? "primary" : "secondary",
-            text: k ? O.intl.string(O.t.PDTjLN) : O.intl.string(O.t["5Wxrcd"]),
-            icon: c.EdP,
+            variant: V ? "primary" : "secondary",
+            text: V ? w.intl.string(w.t.PDTjLN) : w.intl.string(w.t["5Wxrcd"]),
+            icon: h.E,
             iconPosition: "end",
-            onClick: J,
-            disabled: P || U,
+            onClick: en,
+            disabled: W || z,
         });
     return (0, i.jsx)(o.F, {
         component: "div",
-        children: (0, i.jsx)(c.FQk, {
-            className: L.hE,
-            children: (0, i.jsx)(l.animated.div, {
-                className: L.kL,
-                style: { backgroundColor: K },
+        children: (0, i.jsx)(x.F, {
+            className: P.hE,
+            children: (0, i.jsx)(s.animated.div, {
+                className: P.kL,
+                style: { backgroundColor: $ },
                 children: (0, i.jsxs)("div", {
-                    className: L.nP,
-                    ref: B,
+                    className: P.nP,
+                    ref: K,
                     children: [
-                        P
+                        W
                             ? (0, i.jsxs)("div", {
-                                  className: L.cZ,
+                                  className: P.cZ,
                                   children: [
-                                      (0, i.jsx)("img", { className: L.kX, src: n(903702), alt: "wumpus" }),
+                                      (0, i.jsx)("img", { className: P.kX, src: n(903702), alt: "wumpus" }),
                                       (0, i.jsxs)("div", {
-                                          className: L.C0,
-                                          children: [q, (0, i.jsx)("div", { className: L.JM })],
+                                          className: P.C0,
+                                          children: [el, (0, i.jsx)("div", { className: P.JM })],
                                       }),
                                   ],
                               })
                             : null,
-                        (0, i.jsx)(c.xpW, {
-                            containerRef: B,
+                        (0, i.jsx)(_.xp, {
+                            containerRef: K,
                             children: (0, i.jsxs)("div", {
-                                className: L.o1,
+                                className: P.o1,
                                 children: [
-                                    Q,
+                                    es,
                                     (0, i.jsxs)("div", {
-                                        className: L.K2,
+                                        className: P.K2,
                                         children: [
-                                            U
-                                                ? (0, i.jsx)(c.Text, {
+                                            z
+                                                ? (0, i.jsx)(p.E, {
                                                       variant: "text-sm/normal",
                                                       color: "status-warning",
-                                                      children: O.intl.string(O.t.DhYsPL),
+                                                      children: w.intl.string(w.t.DhYsPL),
                                                   })
                                                 : null,
-                                            Y ? null : $,
+                                            ee ? null : er,
                                         ],
                                     }),
                                 ],

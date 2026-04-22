@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Wk: "categoryContainer__3a0cf",
     Km: "categoryHeader__3a0cf",

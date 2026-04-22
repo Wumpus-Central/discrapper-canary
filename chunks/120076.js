@@ -1,96 +1,103 @@
-n.d(t, { e: () => c });
+n.d(t, { e: () => g });
 var i = n(627968),
     l = n(64700);
 n(503698);
-var s = n(407045),
-    r = n(397927),
-    a = n(985018),
-    d = n(926081);
-function o(e) {
+var s = n(517738),
+    r = n(834730),
+    a = n(97808),
+    d = n(778712),
+    o = n(518009),
+    c = n(408278),
+    u = n(477155),
+    m = n(935286),
+    N = n(717421),
+    h = n(985018),
+    I = n(926081);
+function E(e) {
     let { testimonial: t, className: n } = e,
         { message: l, profilePic: s, adminTitle: o, emphasisColor: c = "interactive-text-default" } = t;
     return (0, i.jsxs)("div", {
         className: n,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(r.E, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: a.intl.format(l, {
+                children: h.intl.format(l, {
                     testimonialHook: (e, t) =>
-                        (0, i.jsx)(r.Text, { tag: "span", variant: "text-sm/bold", color: c, children: e }, t),
+                        (0, i.jsx)(r.E, { tag: "span", variant: "text-sm/bold", color: c, children: e }, t),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: d.f1,
+                className: I.f1,
                 children: [
-                    (0, i.jsx)(r.euF, { src: s, size: r._3J.SIZE_16, "aria-hidden": !0 }),
-                    (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-default", children: o }),
+                    (0, i.jsx)(a.eu, { src: s, size: d._3.SIZE_16, "aria-hidden": !0 }),
+                    (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-default", children: o }),
                 ],
             }),
         ],
     });
 }
-function c(e) {
+function g(e) {
     let { testimonials: t } = e,
-        [[n, s], o] = l.useState([0, "right"]),
-        c = l.useCallback(() => {
-            o((e) => {
+        [[n, s], a] = l.useState([0, "right"]),
+        d = l.useCallback(() => {
+            a((e) => {
                 let [n] = e;
                 return 0 === n ? [t.length - 1, "left"] : [n - 1, "left"];
             });
-        }, [o, t.length]),
-        m = l.useCallback(() => {
-            o((e) => {
+        }, [a, t.length]),
+        N = l.useCallback(() => {
+            a((e) => {
                 let [n] = e;
                 return [(n + 1) % t.length, "right"];
             });
-        }, [o, t.length]),
-        N = t[n],
-        h = l.useCallback((e, t, n, l) => (0, i.jsx)(u, { item: t, state: n, cleanup: l, direction: s }, e), [s]);
+        }, [a, t.length]),
+        E = t[n],
+        g = l.useCallback((e, t, n, l) => (0, i.jsx)(A, { item: t, state: n, cleanup: l, direction: s }, e), [s]);
     return (0, i.jsxs)("div", {
-        className: d.FD,
+        className: I.FD,
         children: [
             (0, i.jsx)("div", {
-                className: d.nI,
-                children: (0, i.jsx)(r.Fai, { items: [N], renderItem: h, getItemKey: (e) => e.adminTitle }),
+                className: I.nI,
+                children: (0, i.jsx)(o.F, { items: [E], renderItem: g, getItemKey: (e) => e.adminTitle }),
             }),
-            (0, i.jsx)(r.Text, { variant: "text-lg/bold", className: d.wV, children: "“" }),
+            (0, i.jsx)(r.E, { variant: "text-lg/bold", className: I.wV, children: "“" }),
             (0, i.jsxs)("div", {
-                className: d.Jv,
+                className: I.Jv,
                 children: [
-                    (0, i.jsx)(r.K0, {
+                    (0, i.jsx)(c.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: r.rJJ,
-                        onClick: c,
-                        "aria-label": a.intl.string(a.t["13/7kX"]),
+                        icon: u.r,
+                        onClick: d,
+                        "aria-label": h.intl.string(h.t["13/7kX"]),
                     }),
-                    (0, i.jsx)(r.K0, {
+                    (0, i.jsx)(c.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: r.EdP,
-                        onClick: m,
-                        "aria-label": a.intl.string(a.t.PDTjLN),
+                        icon: m.E,
+                        onClick: N,
+                        "aria-label": h.intl.string(h.t.PDTjLN),
                     }),
                 ],
             }),
         ],
     });
 }
-function u(e) {
-    let { item: t, state: n, cleanup: l, direction: a } = e,
-        [c] = (0, r.zhh)(
+function A(e) {
+    let { item: t, state: n, cleanup: l, direction: r } = e,
+        [a] = (0, N.z)(
             () => {
                 switch (n) {
-                    case r.wLy.ENTERED:
+                    case o.wL.ENTERED:
                         return {
-                            from: { transform: "right" === a ? "translateX(150%)" : "translate(-150%)" },
+                            from: { transform: "right" === r ? "translateX(150%)" : "translate(-150%)" },
                             to: { transform: "translateX(0%)" },
                         };
-                    case r.wLy.YEETED:
+                    case o.wL.YEETED:
                         return {
                             from: { transform: "translateX(0%)" },
-                            to: { transform: "right" === a ? "translateX(-150%)" : "translate(150%)" },
+                            to: { transform: "right" === r ? "translateX(-150%)" : "translate(150%)" },
                             onRest: l,
                         };
                     default:
@@ -100,5 +107,5 @@ function u(e) {
             "respect-motion-settings",
             [n],
         );
-    return (0, i.jsx)(s.animated.div, { style: c, children: (0, i.jsx)(o, { className: d.EV, testimonial: t }) });
+    return (0, i.jsx)(s.animated.div, { style: a, children: (0, i.jsx)(E, { className: I.EV, testimonial: t }) });
 }

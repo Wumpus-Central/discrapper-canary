@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968),
+n.d(t, { A: () => d });
+var l = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(486020),
-    l = n(985018),
-    u = n(921010);
-function c(e) {
+    r = n(486020),
+    o = n(985018),
+    c = n(340791);
+function d(e) {
     let {
             application: t,
             src: n,
             className: a,
-            size: c,
-            botIconFirst: d,
-            fallbackAvatar: _,
-            rendersPlaceholder: f = !1,
+            size: d,
+            botIconFirst: u,
+            fallbackAvatar: m,
+            rendersPlaceholder: p = !1,
         } = e,
-        p = i.useMemo(
+        _ = i.useMemo(
             () =>
                 null != t
-                    ? o.Ay.getApplicationIconURL({
+                    ? r.Ay.getApplicationIconURL({
                           id: t.id,
                           icon: t.icon,
                           bot: t.bot,
-                          size: c,
-                          botIconFirst: d,
-                          fallbackAvatar: _,
+                          size: d,
+                          botIconFirst: u,
+                          fallbackAvatar: m,
                       })
                     : n,
-            [t, n, c, d, _],
+            [t, n, d, u, m],
         );
-    return null == p
-        ? f
-            ? (0, r.jsx)("div", { className: s()(u.K, u.q, a) })
+    return null == _
+        ? p
+            ? (0, l.jsx)("div", { className: s()(c.K, c.q, a) })
             : null
-        : (0, r.jsx)("img", {
-              className: s()(u.K, a),
-              alt: l.intl.string(l.t.X4IxWL),
-              src: p,
+        : (0, l.jsx)("img", {
+              className: s()(c.K, a),
+              alt: o.intl.string(o.t.X4IxWL),
+              src: _,
               "aria-hidden": !0,
               draggable: !1,
           });

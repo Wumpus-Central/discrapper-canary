@@ -1,154 +1,157 @@
-n.d(t, { q: () => w });
+n.d(t, { q: () => D });
 var l = n(627968),
     a = n(64700),
-    s = n(503698),
-    i = n.n(s),
+    i = n(503698),
+    s = n.n(i),
     r = n(735438),
-    o = n(397927),
-    u = n(155718),
-    c = n(222713),
-    d = n(57882),
-    h = n(573435),
-    m = n(619517),
-    g = n(448381),
+    u = n(602853),
+    o = n(477262),
+    c = n(65154),
+    A = n(191023),
+    d = n(588975),
+    h = n(834730),
+    _ = n(827734),
+    I = n(155718),
+    E = n(222713),
+    C = n(57882),
+    m = n(573435),
+    g = n(619517),
+    L = n(448381),
     f = n(465364),
-    x = n(291812),
-    C = n(253932),
-    p = n(53228),
-    A = n(985018),
-    v = n(582068),
-    b = n(28289);
-function w(e) {
-    let { message: t, forwardOptions: n, channel: s } = e,
-        w = C.hH.useSetting(),
+    N = n(291812),
+    x = n(253932),
+    P = n(53228),
+    p = n(985018),
+    b = n(582068),
+    S = n(28289);
+function D(e) {
+    let { message: t, forwardOptions: n, channel: i } = e,
+        D = x.hH.useSetting(),
         {
-            attachments: j,
-            embeds: T,
-            hasContent: k,
-            contentMessage: y,
-        } = (0, p.A)({ message: t, channel: s, forwardOptions: n }),
-        R =
-            y.components.length > 0 && y.components[0].type === u.I5.CHECKPOINT_CARD
-                ? y.components[0].checkpointData
+            attachments: F,
+            embeds: G,
+            hasContent: y,
+            contentMessage: O,
+        } = (0, P.A)({ message: t, channel: i, forwardOptions: n }),
+        T =
+            O.components.length > 0 && O.components[0].type === I.I5.CHECKPOINT_CARD
+                ? O.components[0].checkpointData
                 : null,
-        S = c.f[R?.cardId ?? 0],
-        M = (0, o.rdh)(S.primaryColor).hex(),
-        N = a.useMemo(
+        k = E.f[T?.cardId ?? 0],
+        v = (0, u.r)(k.primaryColor).hex(),
+        j = a.useMemo(
             () =>
-                k
+                y
                     ? (0, f.Ay)(t, {
                           formatInline: !0,
                           allowLinks: !0,
                           allowHeading: !0,
                           allowList: !0,
                           hideSimpleEmbedContent: !1,
-                          contentMessage: y,
+                          contentMessage: O,
                       }).content
                     : null,
-            [y, k, t],
+            [O, y, t],
         ),
-        P = j.length,
-        _ = null,
-        D = null,
-        I = null;
-    if (P > 0 || T.length > 0) {
-        let e = (0, r.countBy)(j, (e) => (0, g.NI)(e, !0)),
+        W = F.length,
+        w = null,
+        R = null,
+        M = null;
+    if (W > 0 || G.length > 0) {
+        let e = (0, r.countBy)(F, (e) => (0, L.NI)(e, !0)),
             t = e.IMAGE ?? 0,
             n = e.VIDEO ?? 0;
         t > 0 && n > 0
-            ? ((_ = A.intl.formatToPlainString(A.t.Lr0Top, { image_count: t, video_count: n })), (D = o.sYc))
+            ? ((w = p.intl.formatToPlainString(p.t.Lr0Top, { image_count: t, video_count: n })), (R = o.s))
             : n > 0
-              ? ((_ = A.intl.formatToPlainString(A.t.SJ6pPX, { count: n })), (D = o.SfG))
+              ? ((w = p.intl.formatToPlainString(p.t.SJ6pPX, { count: n })), (R = c.S))
               : t > 0
-                ? ((_ = A.intl.formatToPlainString(A.t.h4pFfU, { count: t })), (D = 1 === t ? o.xfq : o.sYc))
-                : ((_ = A.intl.formatToPlainString(A.t["89ihS8"], { count: P })), (D = o.PtA)),
-            n > 0 && P === n
-                ? (I = (0, l.jsxs)("div", {
-                      className: i()(b.cR, b.JZ),
+                ? ((w = p.intl.formatToPlainString(p.t.h4pFfU, { count: t })), (R = 1 === t ? A.x : o.s))
+                : ((w = p.intl.formatToPlainString(p.t["89ihS8"], { count: W })), (R = d.P)),
+            n > 0 && W === n
+                ? (M = (0, l.jsxs)("div", {
+                      className: s()(S.cR, S.JZ),
                       children: [
-                          (0, l.jsx)(m.Ay, { className: b.xn, src: j[0].proxy_url, width: 56, height: 56 }),
-                          (0, l.jsx)(o.SfG, { className: b.uZ, size: "md", color: "white" }),
+                          (0, l.jsx)(g.Ay, { className: S.xn, src: F[0].proxy_url, width: 56, height: 56 }),
+                          (0, l.jsx)(c.S, { className: S.uZ, size: "md", color: "white" }),
                       ],
                   }))
-                : P > 0
-                  ? (I = (0, l.jsx)("div", {
-                        className: b.cR,
-                        children: (0, l.jsx)(m.Ay, { src: j[0].proxy_url, width: 56, height: 56 }),
+                : W > 0
+                  ? (M = (0, l.jsx)("div", {
+                        className: S.cR,
+                        children: (0, l.jsx)(g.Ay, { src: F[0].proxy_url, width: 56, height: 56 }),
                     }))
-                  : T[0]?.thumbnail?.proxyURL != null &&
-                    (I = (0, l.jsx)("div", {
-                        className: b.cR,
-                        children: (0, l.jsx)(m.Ay, { src: T[0].thumbnail.proxyURL, width: 56, height: 56 }),
+                  : G[0]?.thumbnail?.proxyURL != null &&
+                    (M = (0, l.jsx)("div", {
+                        className: S.cR,
+                        children: (0, l.jsx)(g.Ay, { src: G[0].thumbnail.proxyURL, width: 56, height: 56 }),
                     }));
     }
     return (
-        P > 1 &&
-            null != I &&
-            (I = (0, l.jsxs)("div", {
-                className: b.EW,
+        W > 1 &&
+            null != M &&
+            (M = (0, l.jsxs)("div", {
+                className: S.EW,
                 children: [
-                    (0, l.jsx)(h.Ay, {
-                        mask: h.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                    (0, l.jsx)(m.Ay, {
+                        mask: m.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: I,
+                        children: M,
                     }),
-                    (0, l.jsxs)(o.Text, {
-                        className: b.mB,
+                    (0, l.jsxs)(h.E, {
+                        className: S.mB,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: ["+", P - 1],
+                        children: ["+", W - 1],
                     }),
                 ],
             })),
         (0, l.jsxs)("div", {
-            className: b.sq,
+            className: S.sq,
             children: [
                 (0, l.jsxs)("div", {
-                    className: b.FG,
+                    className: S.FG,
                     children: [
-                        null != R &&
-                            (0, l.jsx)(o.Text, {
-                                variant: "text-md/medium",
-                                children: A.intl.string(v.default.goiR2u),
-                            }),
-                        k &&
-                            (0, l.jsx)(x.Ay, {
-                                className: i()(b.vp, P > 0 && b.NL),
+                        null != T &&
+                            (0, l.jsx)(h.E, { variant: "text-md/medium", children: p.intl.string(b.default.goiR2u) }),
+                        y &&
+                            (0, l.jsx)(N.Ay, {
+                                className: s()(S.vp, W > 0 && S.NL),
                                 message: t,
-                                content: N,
-                                compact: w,
+                                content: j,
+                                compact: D,
                             }),
-                        P > 0 &&
+                        W > 0 &&
                             (0, l.jsxs)("div", {
-                                className: b.kp,
+                                className: S.kp,
                                 children: [
-                                    null != D &&
-                                        (0, l.jsx)(D, {
+                                    null != R &&
+                                        (0, l.jsx)(R, {
                                             size: "custom",
-                                            width: k ? 18 : 20,
-                                            color: o.LU0.colors.TEXT_MUTED,
+                                            width: y ? 18 : 20,
+                                            color: _.A.colors.TEXT_MUTED,
                                         }),
-                                    null != _ &&
-                                        (0, l.jsx)(o.Text, {
-                                            variant: k ? "text-sm/medium" : "text-md/medium",
+                                    null != w &&
+                                        (0, l.jsx)(h.E, {
+                                            variant: y ? "text-sm/medium" : "text-md/medium",
                                             color: "text-muted",
-                                            children: _,
+                                            children: w,
                                         }),
                                 ],
                             }),
                     ],
                 }),
-                I,
-                null != R &&
+                M,
+                null != T &&
                     (0, l.jsx)("div", {
-                        className: b.cR,
+                        className: S.cR,
                         children: (0, l.jsx)("img", {
                             alt: "",
-                            style: { backgroundColor: M },
+                            style: { backgroundColor: v },
                             width: 56,
                             height: 56,
-                            src: (0, d.OW)(R.cardId ?? 0),
+                            src: (0, C.OW)(T.cardId ?? 0),
                         }),
                     }),
             ],

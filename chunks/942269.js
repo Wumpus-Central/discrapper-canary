@@ -1,15 +1,14 @@
 "use strict";
-n.d(t, { yW: () => h }), n(321073);
+n.d(t, { yW: () => E }), n(321073);
 var r = n(311907),
     i = n(73153),
     s = n(626584),
     a = n(747465);
 let o = Symbol("version"),
     l = Object.freeze({}),
-    u = "0",
-    c = new s.A("LibdiscoreStore"),
+    u = new s.A("LibdiscoreStore"),
     d = (e) => e;
-class _ {
+class c {
     type;
     kkvDatabase;
     k1key;
@@ -19,14 +18,14 @@ class _ {
         (this.type = e), (this.kkvDatabase = t), (this.k1key = n), (this.k2key = r), (this.shouldIndex = i);
     }
     getK1Key(e) {
-        return "kv" === this.type ? u : "string" == typeof this.k1key ? e[this.k1key] : this.k1key(e);
+        return "kv" === this.type ? "0" : "string" == typeof this.k1key ? e[this.k1key] : this.k1key(e);
     }
     getK2Key(e) {
         let t = "kv" === this.type ? this.k1key : this.k2key;
         if ((null == this.shouldIndex || this.shouldIndex(e)) && null != t) return "string" == typeof t ? e[t] : t(e);
     }
 }
-class f {
+class _ {
     kkvDatabase;
     partition;
     constructor(e, t) {
@@ -60,7 +59,7 @@ class f {
         return this.kkvDatabase.memoizedSinglePartition(this.partition, e, t);
     }
 }
-class p {
+class f {
     nextVersion;
     state;
     secondaryIndexes = [];
@@ -68,17 +67,17 @@ class p {
         (this.nextVersion = e), (this.state = this.emptyState());
     }
     addSecondaryKVIndex(e, t) {
-        let n = new p(this.nextVersion),
-            r = new _("kv", n, e, void 0, t);
+        let n = new f(this.nextVersion),
+            r = new c("kv", n, e, void 0, t);
         return this.secondaryIndexes.push(r), n.intoKV();
     }
     addSecondaryKKVIndex(e, t, n) {
-        let r = new p(this.nextVersion),
-            i = new _("kkv", r, e, t, n);
+        let r = new f(this.nextVersion),
+            i = new c("kkv", r, e, t, n);
         return this.secondaryIndexes.push(i), r;
     }
     intoKV(e) {
-        return new f(this, e ?? u);
+        return new _(this, e ?? "0");
     }
     version() {
         return this.state.version;
@@ -271,7 +270,7 @@ class p {
         }
     }
 }
-class h extends r.il {
+class E extends r.il {
     mode;
     state;
     _nextVersion = 0;
@@ -324,7 +323,7 @@ class h extends r.il {
                     let i = this.state.databases[r],
                         s = n[r];
                     if (null == s) {
-                        c.warn(`Shadow database ${r} not found for dual-read validation`);
+                        u.warn(`Shadow database ${r} not found for dual-read validation`);
                         continue;
                     }
                     let o = i.getAllPartitions(),
@@ -343,8 +342,8 @@ class h extends r.il {
                                 u = s.derived.memoized[e];
                             if (null != a && a === u) continue;
                             n(r, s);
-                            let c = {};
-                            (r.derived.memoized[e] = c), (s.derived.memoized[e] = c);
+                            let d = {};
+                            (r.derived.memoized[e] = d), (s.derived.memoized[e] = d);
                         }
                         for (let e of i) Object.prototype.hasOwnProperty.call(o, e) || n(t, l[e]);
                     });
@@ -352,18 +351,18 @@ class h extends r.il {
         });
     }
     addKKVDatabase(e, t) {
-        let n = new p(this.nextVersion.bind(this));
+        let n = new f(this.nextVersion.bind(this));
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? d), null != this.shadowDatabases)) {
-            let n = new p(this.nextVersion.bind(this));
+            let n = new f(this.nextVersion.bind(this));
             (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? d);
         }
         return n;
     }
     addKVDatabase(e, t) {
-        let n = new p(this.nextVersion.bind(this)),
+        let n = new f(this.nextVersion.bind(this)),
             r = n.intoKV();
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? d), null != this.shadowDatabases)) {
-            let n = new p(this.nextVersion.bind(this));
+            let n = new f(this.nextVersion.bind(this));
             (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? d);
         }
         return r;

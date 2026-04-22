@@ -1,50 +1,54 @@
-i.d(n, { default: () => p });
-var a = i(627968);
-i(64700);
-var t = i(311907),
-    c = i(397927),
-    r = i(442433),
-    s = i(576705),
-    d = i(957565),
-    l = i(652215),
-    o = i(985018);
-let p = function (e) {
-    let { guild: n, user: p, onSelect: u } = e,
-        b = n?.id ?? l.dJq,
-        g = (0, t.bG)([s.A], () => null != n && s.A.canManageUser(l.xBc.BAN_MEMBERS, p, n), [n, p]);
-    return (0, a.jsx)(c.W1t, {
+a.d(n, { default: () => g });
+var i = a(627968);
+a(64700);
+var t = a(311907),
+    c = a(861672),
+    r = a(477782),
+    d = a(215026),
+    l = a(192308),
+    s = a(473935),
+    o = a(442433),
+    p = a(576705),
+    u = a(957565),
+    b = a(652215),
+    y = a(985018);
+let g = function (e) {
+    let { guild: n, user: g, onSelect: h } = e,
+        x = n?.id ?? b.dJq,
+        m = (0, t.bG)([p.A], () => null != n && p.A.canManageUser(b.xBc.BAN_MEMBERS, g, n), [n, g]);
+    return (0, i.jsx)(c.W, {
         "data-menu-migrated": !0,
         navId: "member-application-context-menu",
-        onClose: r.Z_,
-        "aria-label": o.intl.string(o.t.liqwPJ),
-        onSelect: u,
-        children: (0, a.jsxs)(c.rXV, {
+        onClose: o.Z_,
+        "aria-label": y.intl.string(y.t.liqwPJ),
+        onSelect: h,
+        children: (0, i.jsxs)(r.rX, {
             children: [
-                g &&
-                    (0, a.jsx)(
-                        c.Drp,
+                m &&
+                    (0, i.jsx)(
+                        r.Dr,
                         {
                             id: "ban",
-                            label: o.intl.string(o.t["I+Cbum"]),
-                            icon: c.wI0,
-                            leadingAccessory: { type: "icon", icon: c.wI0 },
+                            label: y.intl.string(y.t["I+Cbum"]),
+                            icon: d.w,
+                            leadingAccessory: { type: "icon", icon: d.w },
                             color: "danger",
                             action: () =>
-                                (0, c.mMO)(async () => {
-                                    let { default: e } = await i.e("80123").then(i.bind(i, 333179));
-                                    return (n) => (0, a.jsx)(e, { ...n, guildId: b, user: p });
+                                (0, l.openModalLazy)(async () => {
+                                    let { default: e } = await a.e("57742").then(a.bind(a, 333179));
+                                    return (n) => (0, i.jsx)(e, { ...n, guildId: x, user: g });
                                 }),
                         },
                         "ban",
                     ),
-                (0, a.jsx)(
-                    c.Drp,
+                (0, i.jsx)(
+                    r.Dr,
                     {
                         id: "copyUserId",
                         label: "Copy User ID",
-                        icon: c.L9S,
-                        leadingAccessory: { type: "icon", icon: c.L9S },
-                        action: () => (0, d.C)(p.id),
+                        icon: s.L,
+                        leadingAccessory: { type: "icon", icon: s.L },
+                        action: () => (0, u.C)(g.id),
                     },
                     "copyUserId",
                 ),

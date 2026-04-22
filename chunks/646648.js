@@ -1,77 +1,76 @@
-"use strict";
-n.d(t, { A: () => m });
-var r = n(627968);
-n(64700);
-var i = n(990078),
-    a = n(397927),
-    s = n(833349),
-    o = n(90644),
-    l = n(353411),
-    u = n(879945),
-    c = n(939496),
-    d = n(993401),
-    _ = n(652215),
-    f = n(996988),
-    p = n(985018),
-    h = n(380297);
+i.d(t, { A: () => m });
+var l = i(627968);
+i(64700);
+var n = i(990078),
+    s = i(835723),
+    a = i(833349),
+    d = i(90644),
+    r = i(353411),
+    o = i(879945),
+    c = i(939496),
+    u = i(993401),
+    A = i(652215),
+    h = i(996988),
+    g = i(985018),
+    x = i(514566);
 function m(e) {
-    let { user: t, activity: n, onAction: m } = e,
-        { themeType: g } = (0, c.E)(),
-        E = (0, l._B)(n, t),
-        A = (0, l.J$)(n, t);
-    if (!(0, o.A)(n) || (!(0, s.A)(n, _.jUm.PLAY) && !(0, s.A)(n, _.jUm.SYNC))) return null;
-    let I = (e) => {
-            e?.stopPropagation(), m?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), E.onClick();
+    let { user: t, activity: i, onAction: m } = e,
+        { themeType: C } = (0, c.E)(),
+        _ = (0, r._B)(i, t),
+        p = (0, r.J$)(i, t);
+    if (!(0, d.A)(i) || (!(0, a.A)(i, A.jUm.PLAY) && !(0, a.A)(i, A.jUm.SYNC))) return null;
+    let N = (e) => {
+            e?.stopPropagation(), m?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), _.onClick();
         },
-        T = (e) => {
-            e.stopPropagation(), m?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), A.onClick();
+        f = (e) => {
+            e.stopPropagation(), m?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), p.onClick();
         };
-    return g === f.d.MODAL_V2
-        ? (0, r.jsxs)(r.Fragment, {
+    return C === h.d.MODAL_V2
+        ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, r.jsx)(i.m, {
-                      text: A.tooltip,
-                      children: (0, r.jsx)(d.FD, {
-                          text: A.label ?? p.intl.string(p.t.eU3inB),
-                          onClick: T,
-                          disabled: A.disabled,
-                          loading: A.loading,
+                  (0, l.jsx)(n.m, {
+                      text: p.tooltip,
+                      children: (0, l.jsx)(u.FD, {
+                          text: p.label ?? g.intl.string(g.t.eU3inB),
+                          onClick: f,
+                          disabled: p.disabled,
+                          loading: p.loading,
                       }),
                   }),
-                  (0, r.jsx)(i.m, {
-                      text: E.tooltip,
-                      children: (0, r.jsx)(d.FD, {
-                          text: E.label ?? p.intl.string(p.t.rRffNz),
-                          onClick: I,
-                          disabled: E.disabled,
-                          loading: E.loading,
+                  (0, l.jsx)(n.m, {
+                      text: _.tooltip,
+                      children: (0, l.jsx)(u.FD, {
+                          text: _.label ?? g.intl.string(g.t.rRffNz),
+                          onClick: N,
+                          disabled: _.disabled,
+                          loading: _.loading,
                       }),
                   }),
               ],
           })
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, r.jsx)("div", {
-                      className: h.FS,
-                      children: (0, r.jsx)(i.m, {
-                          text: E.tooltip,
-                          children: (0, r.jsx)(d.FD, {
-                              icon: () => (0, r.jsx)(u.A, {}),
-                              text: E.label ?? p.intl.string(p.t.rRffNz),
-                              onClick: I,
-                              disabled: E.disabled,
-                              loading: E.loading,
+                  (0, l.jsx)("div", {
+                      className: x.FS,
+                      children: (0, l.jsx)(n.m, {
+                          text: _.tooltip,
+                          children: (0, l.jsx)(u.FD, {
+                              icon: () => (0, l.jsx)(o.A, {}),
+                              text: _.label ?? g.intl.string(g.t.rRffNz),
+                              onClick: N,
+                              disabled: _.disabled,
+                              loading: _.loading,
                               fullWidth: !0,
                           }),
                       }),
                   }),
-                  (0, r.jsx)(d.q3, {
-                      icon: a.J2m,
-                      tooltipText: A.tooltip ?? p.intl.string(p.t.eU3inB),
-                      "aria-label": A.label ?? p.intl.string(p.t.eU3inB),
-                      disabled: A.disabled,
-                      loading: A.loading,
-                      onClick: T,
+                  (0, l.jsx)(u.q3, {
+                      icon: s.J,
+                      tooltipText: p.tooltip ?? g.intl.string(g.t.eU3inB),
+                      "aria-label": p.label ?? g.intl.string(g.t.eU3inB),
+                      disabled: p.disabled,
+                      loading: p.loading,
+                      onClick: f,
                   }),
               ],
           });

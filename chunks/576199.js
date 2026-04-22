@@ -1,42 +1,46 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => v });
 var r = n(627968),
     s = n(64700),
-    i = n(435371),
-    a = n(397927),
-    l = n(341915),
-    u = n(590202),
-    o = n(971649),
-    c = n(651892),
-    d = n(814793),
-    E = n(795068),
-    m = n(985018);
-function _(e) {
+    a = n(990078),
+    l = n(691540),
+    i = n(857250),
+    u = n(97483),
+    o = n(408278),
+    c = n(173936),
+    d = n(341915),
+    E = n(590202),
+    m = n(971649),
+    f = n(651892),
+    _ = n(814793),
+    S = n(795068),
+    p = n(985018);
+function v(e) {
     let { floatRight: t } = e,
-        { quest: n, sourceQuestContent: _ } = s.useContext(E.a),
-        f = (0, o.go)(),
-        p = (0, d.E0)(n.config),
-        S = s.useCallback(() => {
-            p &&
-                ((0, c.Xm)(n.id, {
-                    content: l.uF.VIDEO_MODAL,
-                    ctaContent: u.Cy.COPY_QUEST_URL,
-                    impressionId: f,
-                    sourceQuestContent: _,
+        { quest: n, sourceQuestContent: v } = s.useContext(S.a),
+        g = (0, m.go)(),
+        h = (0, _.E0)(n.config),
+        A = s.useCallback(() => {
+            h &&
+                ((0, f.Xm)(n.id, {
+                    content: d.uF.VIDEO_MODAL,
+                    ctaContent: E.Cy.COPY_QUEST_URL,
+                    impressionId: g,
+                    sourceQuestContent: v,
                 }),
-                (0, a.showToast)((0, a.createToast)(m.intl.string(m.t["+5kSoW"]), a.ToastType.SUCCESS)));
-        }, [f, p, n.id, _]);
-    return p
+                (0, l.P0)((0, i.o)(p.intl.string(p.t["+5kSoW"]), u.Ck.SUCCESS)));
+        }, [g, h, n.id, v]);
+    return h
         ? (0, r.jsx)("div", {
               "data-testid": "video-quest-share-btn",
               "data-quest-id": n.id,
               style: { marginLeft: t ? "auto" : void 0, pointerEvents: "auto" },
-              children: (0, r.jsx)(i.m_, {
-                  text: m.intl.string(m.t.WmfZHZ),
-                  children: (0, r.jsx)(a.K0, {
+              children: (0, r.jsx)(a.m, {
+                  text: p.intl.string(p.t.WmfZHZ),
+                  children: (0, r.jsx)(o.K, {
                       variant: "overlay-secondary",
-                      icon: a.qYV,
-                      "aria-label": m.intl.string(m.t.RDE0Sc),
-                      onClick: S,
+                      icon: c.q,
+                      "aria-label": p.intl.string(p.t.RDE0Sc),
+                      onClick: A,
                   }),
               }),
           })

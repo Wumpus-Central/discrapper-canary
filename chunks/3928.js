@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(574381),
     i = n(626584),
     s = n(464477),
@@ -7,16 +7,13 @@ var r = n(574381),
 let o = new i.A("SignalHelpers.web"),
     l = window.GLOBAL_ENV.WEBAUTHN_ORIGIN,
     u = window.PublicKeyCredential;
-function c(e) {
-    return r.Av && (0, r.cX)() && window.DiscordNative?.webAuthn?.[e] != null;
-}
 async function d(e, t, n) {
     if (!s.d4) return null;
-    if (c(e)) return t;
-    let r = await PublicKeyCredential.getClientCapabilities?.();
-    return void 0 !== r && r[e] ? n : null;
+    if (r.Av && (0, r.cX)() && window.DiscordNative?.webAuthn?.[e] != null) return t;
+    let i = await PublicKeyCredential.getClientCapabilities?.();
+    return void 0 !== i && i[e] ? n : null;
 }
-class _ {
+let c = class {
     static async signalAllAcceptedCredentials(e, t) {
         let n = await d(
             "signalAllAcceptedCredentials",
@@ -52,5 +49,4 @@ class _ {
         let n = "string" == typeof e ? JSON.parse(e).id : e.cred_id;
         o.info("signalUnknownCredential", { rpId: l, credentialId: n }), await t(l, n).catch(o.warn);
     }
-}
-let f = _;
+};

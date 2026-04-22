@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n) {
         var r = " ";
@@ -9,7 +7,7 @@
             e + r + { ss: "secunde", mm: "minute", hh: "ore", dd: "zile", MM: "luni", yy: "ani" }[n]
         );
     }
-    return e.defineLocale("ro", {
+    e.defineLocale("ro", {
         months: "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split(
             "_",
         ),
@@ -52,4 +50,4 @@
         },
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

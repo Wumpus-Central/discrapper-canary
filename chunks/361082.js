@@ -3,7 +3,7 @@ n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(873298),
-    s = n(397927),
+    s = n(477782),
     a = n(955572),
     o = n(253932),
     l = n(985018);
@@ -12,11 +12,11 @@ function u() {
         t = o.Xi.useSetting();
     return [
         (0, r.jsxs)(
-            s.rXV,
+            s.rX,
             {
                 label: l.intl.string(l.t["C/5V0A"]),
                 children: [
-                    (0, r.jsx)(s.iDA, {
+                    (0, r.jsx)(s.iD, {
                         id: "compact-ui",
                         group: "list-density",
                         label: l.intl.string(l.t["7iegX4"]),
@@ -25,7 +25,7 @@ function u() {
                             o.Xi.updateSetting(i.NS.COMPACT);
                         },
                     }),
-                    (0, r.jsx)(s.iDA, {
+                    (0, r.jsx)(s.iD, {
                         id: "default-ui",
                         group: "list-density",
                         label: l.intl.string(l.t.bBvAEH),
@@ -34,7 +34,7 @@ function u() {
                             o.Xi.updateSetting(i.NS.DEFAULT);
                         },
                     }),
-                    (0, r.jsx)(s.iDA, {
+                    (0, r.jsx)(s.iD, {
                         id: "cozy-ui",
                         group: "list-density",
                         label: l.intl.string(l.t["4cuYHx"]),
@@ -48,11 +48,11 @@ function u() {
             "list-density",
         ),
         (0, r.jsxs)(
-            s.rXV,
+            s.rX,
             {
                 label: l.intl.string(l.t.nKRoPv),
                 children: [
-                    (0, r.jsx)(s.iDA, {
+                    (0, r.jsx)(s.iD, {
                         id: "cozy-chat",
                         group: "chat-density",
                         label: l.intl.string(l.t.Jqj4cZ),
@@ -61,7 +61,7 @@ function u() {
                             o.hH.updateSetting(!1), (0, a.AC)();
                         },
                     }),
-                    (0, r.jsx)(s.iDA, {
+                    (0, r.jsx)(s.iD, {
                         id: "compact-chat",
                         group: "chat-density",
                         label: l.intl.string(l.t["1JNcPS"]),

@@ -1,50 +1,48 @@
-a.d(t, { default: () => _ });
+a.d(t, { default: () => g });
 var n = a(627968),
-    r = a(397927),
-    i = a(976860),
-    s = a(43594),
-    l = a(523084),
-    c = a(225180),
-    o = a(285286),
-    d = a(652215),
-    u = a(746080),
-    m = a(294726),
-    f = a(985018),
-    p = a(944053),
-    x = a(223655);
-function _(e) {
-    let { gameServerGame: t, guildId: a, status: _, ...g } = e,
-        v = (0, c.A)(t.gameId, "cover"),
-        h = (0, s.D)("GameServerSuccessModal"),
-        b = f.intl.string("created" === _ ? m.default["4lLdBM"] : m.default.VPDgHa),
-        C = f.intl.formatToPlainString(m.default.yL6BiH, { provider: (0, o.A)(t.provider) }),
-        j = () => {
-            (0, i.pX)(d.BVt.CHANNEL(a, u.VV.GAME_SERVERS)), g.onClose();
+    r = a(772707),
+    i = a(834730),
+    s = a(821609),
+    l = a(976860),
+    c = a(43594),
+    o = a(523084),
+    d = a(225180),
+    u = a(285286),
+    m = a(652215),
+    f = a(746080),
+    p = a(576709),
+    _ = a(985018),
+    v = a(372165),
+    x = a(276791);
+function g(e) {
+    let { gameServerGame: t, guildId: a, status: g, ...h } = e,
+        b = (0, d.A)(t.gameId, "cover"),
+        C = (0, c.D)("GameServerSuccessModal"),
+        j = _.intl.string("created" === g ? p.default["4lLdBM"] : p.default.VPDgHa),
+        N = _.intl.formatToPlainString(p.default.yL6BiH, { provider: (0, u.A)(t.provider) }),
+        k = () => {
+            (0, l.pX)(m.BVt.CHANNEL(a, f.VV.GAME_SERVERS)), h.onClose();
         };
-    return "control" !== h
-        ? (0, n.jsx)(r.kpP, {
-              ...g,
-              graphic: { type: "image", src: v ?? "", aspectRatio: "16/9" },
-              title: b,
-              actions: [{ variant: "primary", text: f.intl.string(m.default.VkItSr), onClick: j }],
-              children: (0, n.jsx)(r.Text, { variant: "text-md/normal", children: C }),
+    return "control" !== C
+        ? (0, n.jsx)(r.k, {
+              ...h,
+              graphic: { type: "image", src: b ?? "", aspectRatio: "16/9" },
+              title: j,
+              actions: [{ variant: "primary", text: _.intl.string(p.default.VkItSr), onClick: k }],
+              children: (0, n.jsx)(i.E, { variant: "text-md/normal", children: N }),
           })
-        : (0, n.jsx)(l.A, {
-              title: b,
-              description: C,
+        : (0, n.jsx)(o.A, {
+              title: j,
+              description: N,
               image: (0, n.jsx)("div", {
                   className: x.Z,
-                  children: (0, n.jsx)("img", { className: x.S, alt: "", src: v ?? "" }),
+                  children: (0, n.jsx)("img", { className: x.S, alt: "", src: b ?? "" }),
               }),
               button: (0, n.jsx)("div", {
                   "data-button-hoisted-classname-wrapper": !0,
-                  className: p.x6,
-                  children: (0, n.jsx)(r.Button, {
-                      variant: "primary",
-                      text: f.intl.string(m.default.VkItSr),
-                      onClick: j,
-                  }),
+                  className: v.x6,
+                  children: (0, n.jsx)(s.$, { variant: "primary", text: _.intl.string(p.default.VkItSr), onClick: k }),
               }),
-              ...g,
+              ...h,
           });
 }

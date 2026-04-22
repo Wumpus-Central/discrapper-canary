@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XV: "topBar__6088c",
     cy: "author__6088c",

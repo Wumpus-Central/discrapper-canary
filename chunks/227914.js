@@ -128,32 +128,20 @@ e.exports = function (e) {
             "unaligned",
             "varargs",
         ],
-        n = [
+        a = [
             e.C_LINE_COMMENT_MODE,
             e.COMMENT(/\{/, /\}/, { relevance: 0 }),
             e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
         ],
-        r = {
+        n = {
             className: "meta",
             variants: [
                 { begin: /\{\$/, end: /\}/ },
                 { begin: /\(\*\$/, end: /\*\)/ },
             ],
         },
-        i = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
-        s = {
-            className: "number",
-            relevance: 0,
-            variants: [
-                { match: /\b\d[\d_]*(\.\d[\d_]*)?/ },
-                { match: /\$[\dA-Fa-f_]+/ },
-                { match: /\$/, relevance: 0 },
-                { match: /&[0-7][0-7_]*/ },
-                { match: /%[01_]+/ },
-                { match: /%/, relevance: 0 },
-            ],
-        },
-        a = {
+        r = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
+        i = {
             className: "string",
             variants: [
                 { match: /#\d[\d_]*/ },
@@ -163,16 +151,16 @@ e.exports = function (e) {
             ],
         },
         o = { begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(", returnBegin: !0, contains: [e.TITLE_MODE] },
-        l = {
+        s = {
             className: "function",
             beginKeywords: "function constructor destructor procedure",
             end: /[:;]/,
             keywords: "function constructor|10 destructor|10 procedure|10",
             contains: [
                 e.TITLE_MODE,
-                { className: "params", begin: /\(/, end: /\)/, keywords: t, contains: [i, a, r].concat(n) },
-                r,
-            ].concat(n),
+                { className: "params", begin: /\(/, end: /\)/, keywords: t, contains: [r, i, n].concat(a) },
+                n,
+            ].concat(a),
         };
     return {
         name: "Delphi",
@@ -180,6 +168,24 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: t,
         illegal: /"|\$[G-Zg-z]|\/\*|<\/|\|/,
-        contains: [i, a, s, o, l, r].concat(n),
+        contains: [
+            r,
+            i,
+            {
+                className: "number",
+                relevance: 0,
+                variants: [
+                    { match: /\b\d[\d_]*(\.\d[\d_]*)?/ },
+                    { match: /\$[\dA-Fa-f_]+/ },
+                    { match: /\$/, relevance: 0 },
+                    { match: /&[0-7][0-7_]*/ },
+                    { match: /%[01_]+/ },
+                    { match: /%/, relevance: 0 },
+                ],
+            },
+            o,
+            s,
+            n,
+        ].concat(a),
     };
 };

@@ -1,25 +1,25 @@
-e.d(n, { default: () => C });
-var i = e(627968);
-e(64700);
-var a = e(158954),
-    s = e(397927),
-    o = e(253932),
-    r = e(780964),
-    c = e(840065),
-    l = e(954571),
-    p = e(652215),
-    d = e(985018),
-    u = e(575621);
+i.d(n, { default: () => C });
+var e = i(627968);
+i(64700);
+var a = i(772707),
+    s = i(349288),
+    o = i(253932),
+    r = i(780964),
+    c = i(858897),
+    l = i(954571),
+    p = i(652215),
+    d = i(985018),
+    u = i(575621);
 function C(t) {
-    let { onClose: n, transitionState: e } = t;
+    let { onClose: n, transitionState: i } = t;
     function C() {
         n(), (0, c.openUserSettings)(r.X.ENABLE_LEGACY_CHAT_INPUT);
     }
-    return (0, i.jsx)(a.ExpressiveModal, {
-        transitionState: e,
+    return (0, e.jsx)(a.k, {
+        transitionState: i,
         title: d.intl.string(d.t.G9HG5O),
         subtitle: d.intl.format(d.t.ZtUieE, {
-            openSettingsHook: (t, n) => (0, i.jsx)(s.MzZ, { onClick: C, children: t }, n),
+            openSettingsHook: (t, n) => (0, e.jsx)(s.Anchor, { onClick: C, children: t }, n),
         }),
         onClose: n,
         graphic: { type: "image", src: u },

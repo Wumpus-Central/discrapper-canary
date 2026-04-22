@@ -1,9 +1,8 @@
 var r = n(34524),
     i = n(191803),
-    a = n(762760),
-    s = 1 / 0;
+    s = n(762760);
 e.exports =
-    r && 1 / a(new r([, -0]))[1] == s
+    r && 1 / s(new r([, -0]))[1] == 1 / 0
         ? function (e) {
               return new r(e);
           }

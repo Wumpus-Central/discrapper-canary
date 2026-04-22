@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+l.d(t, { A: () => n });
+var n = {};
+n = {
     ascending: "t\xf5usev j\xe4rjestus",
     ascendingSort: (e) => `sorditud veeru j\xe4rgi ${e.columnName} t\xf5usvas j\xe4rjestuses`,
     columnSize: (e) => `${e.value} pikslit`,

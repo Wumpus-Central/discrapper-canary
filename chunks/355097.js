@@ -1,74 +1,65 @@
 "use strict";
 n.d(t, {
-    Eq: () => l,
-    O9: () => f,
-    PZ: () => o,
-    Sb: () => _,
-    W: () => g,
-    Xx: () => r,
-    YP: () => s,
-    _A: () => i,
-    _F: () => u,
-    bf: () => d,
-    ko: () => h,
-    n3: () => E,
-    nR: () => a,
-    oD: () => c,
-    od: () => p,
-    vv: () => m,
+    Eq: () => A,
+    O9: () => N,
+    PZ: () => g,
+    Sb: () => y,
+    W: () => b,
+    Xx: () => E,
+    YP: () => p,
+    _A: () => h,
+    _F: () => I,
+    bf: () => S,
+    ko: () => R,
+    n3: () => C,
+    nR: () => m,
+    oD: () => T,
+    od: () => O,
+    vv: () => v,
 });
-var r = (function (e) {
-        return (
-            (e[(e.MINUTES_15 = 900)] = "MINUTES_15"),
-            (e[(e.HOURS_1 = 3600)] = "HOURS_1"),
-            (e[(e.HOURS_3 = 10800)] = "HOURS_3"),
-            (e[(e.HOURS_8 = 28800)] = "HOURS_8"),
-            (e[(e.HOURS_24 = 86400)] = "HOURS_24"),
-            (e[(e.ALWAYS = -1)] = "ALWAYS"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.REDUCED_MOTION = "REDUCED_MOTION"), (e.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"), e;
-    })({}),
-    s = (function (e) {
-        return (e.AUTO = "auto"), (e.COMPACT = "compact"), (e.COZY = "cozy"), e;
-    })({});
-let a = "ROLE_SUBSCRIPTIONS",
-    o = "APPLICATION_SUBSCRIPTION_SUBSECTION";
-var l = (function (e) {
-        return (e.USER_PROFILE = "user_profile"), (e.GUILD = "guild"), e;
-    })({}),
-    u = (function (e) {
-        return (e.TRY_IT_OUT = "try_it_out"), (e.GUILD_TAG = "guild_tag"), e;
-    })({}),
-    c = (function (e) {
-        return (
-            (e[(e.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
-            (e[(e.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
-            (e[(e.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),
-            e
-        );
-    })({}),
-    d = (function (e) {
-        return (
-            (e.USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
-            (e.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
-            (e.SERVER_PRIVACY_MODAL = "server_privacy_modal"),
-            e
-        );
-    })({}),
-    _ = (function (e) {
-        return (
-            (e[(e.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
-            (e[(e.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
-            (e[(e.SLOW_USER_ACTION = 20)] = "SLOW_USER_ACTION"),
-            (e[(e.AUTOMATED = 30)] = "AUTOMATED"),
-            (e[(e.DAILY = 86400)] = "DAILY"),
-            e
-        );
-    })({});
-function f() {
+var r,
+    i,
+    s,
+    a,
+    o,
+    l,
+    u,
+    d,
+    c,
+    _,
+    f,
+    E =
+        (((r = {})[(r.MINUTES_15 = 900)] = "MINUTES_15"),
+        (r[(r.HOURS_1 = 3600)] = "HOURS_1"),
+        (r[(r.HOURS_3 = 10800)] = "HOURS_3"),
+        (r[(r.HOURS_8 = 28800)] = "HOURS_8"),
+        (r[(r.HOURS_24 = 86400)] = "HOURS_24"),
+        (r[(r.ALWAYS = -1)] = "ALWAYS"),
+        r),
+    h = (((i = {}).REDUCED_MOTION = "REDUCED_MOTION"), (i.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"), i),
+    p = (((s = {}).AUTO = "auto"), (s.COMPACT = "compact"), (s.COZY = "cozy"), s);
+let m = "ROLE_SUBSCRIPTIONS",
+    g = "APPLICATION_SUBSCRIPTION_SUBSECTION";
+var A = (((a = {}).USER_PROFILE = "user_profile"), (a.GUILD = "guild"), a),
+    I = (((o = {}).TRY_IT_OUT = "try_it_out"), (o.GUILD_TAG = "guild_tag"), o),
+    T =
+        (((l = {})[(l.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
+        (l[(l.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
+        (l[(l.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),
+        l),
+    S =
+        (((u = {}).USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
+        (u.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
+        (u.SERVER_PRIVACY_MODAL = "server_privacy_modal"),
+        u),
+    y =
+        (((d = {})[(d.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
+        (d[(d.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
+        (d[(d.SLOW_USER_ACTION = 20)] = "SLOW_USER_ACTION"),
+        (d[(d.AUTOMATED = 30)] = "AUTOMATED"),
+        (d[(d.DAILY = 86400)] = "DAILY"),
+        d);
+function N() {
     return {
         protoToSave: void 0,
         timeout: void 0,
@@ -82,62 +73,56 @@ function f() {
         offlineEditDataVersion: void 0,
     };
 }
-var p = (function (e) {
-        return (
-            (e.ACCOUNT = "account"),
-            (e.ACCOUNT_STANDING = "account-standing"),
-            (e.ACCOUNT_ACCOUNT_STANDING = "account/account-standing"),
-            (e.PROFILE_CUSTOMIZATION = "profile-customization"),
-            (e.CONTENT_AND_SOCIAL = "content-and-social"),
-            (e.CONNECTED_GAMES = "connected-games"),
-            (e.CONTENT_AND_SOCIAL_CONNECTED_GAMES = "content-and-social/connected-games"),
-            (e.DATA_AND_PRIVACY = "data-and-privacy"),
-            (e.PRIVACY_AND_SAFETY = "privacy-and-safety"),
-            (e.FAMILY_CENTER = "family-center"),
-            (e.SESSIONS = "sessions"),
-            (e.AUTHORIZED_APPS = "authorized-apps"),
-            (e.CONNECTIONS = "connections"),
-            (e.CLIPS = "clips"),
-            (e.PREMIUM = "premium"),
-            (e.GUILD_BOOSTING = "guild-boosting"),
-            (e.SUBSCRIPTIONS = "subscriptions"),
-            (e.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS = "subscriptions/role-subscriptions"),
-            (e.INVENTORY = "inventory"),
-            (e.BILLING = "billing"),
-            (e.APPEARANCE = "appearance"),
-            (e.ACCESSIBILITY = "accessibility"),
-            (e.VOICE = "voice"),
-            (e.POGGERMODE = "poggermode"),
-            (e.TEXT = "text"),
-            (e.NOTIFICATIONS = "notifications"),
-            (e.EMAILS = "emails"),
-            (e.NOTIFICATIONS_EMAILS = "notifications/emails"),
-            (e.KEYBINDS = "keybinds"),
-            (e.LANGUAGE = "language"),
-            (e.WINDOWS = "windows"),
-            (e.LINUX = "linux"),
-            (e.STREAMER_MODE = "streamer-mode"),
-            (e.ADVANCED = "advanced"),
-            (e.ACTIVITY_PRIVACY = "activity-privacy"),
-            (e.REGISTERED_GAMES = "registered-games"),
-            (e.OVERLAY = "overlay"),
-            (e.EXPERIMENTS = "experiments"),
-            (e.DEVELOPER_OPTIONS = "developer-options"),
-            e
-        );
-    })({}),
-    h = (function (e) {
-        return (
-            (e[(e.CONFIRM_START = 0)] = "CONFIRM_START"),
-            (e[(e.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
-            (e[(e.CHANGE_EMAIL_REASONS = 2)] = "CHANGE_EMAIL_REASONS"),
-            (e[(e.CHANGE_EMAIL_WARNING = 3)] = "CHANGE_EMAIL_WARNING"),
-            (e[(e.EMAIL_AND_PASSWORD = 4)] = "EMAIL_AND_PASSWORD"),
-            (e[(e.COMPLETE = 5)] = "COMPLETE"),
-            e
-        );
-    })({});
-let m = {
+var O =
+        (((c = {}).ACCOUNT = "account"),
+        (c.ACCOUNT_STANDING = "account-standing"),
+        (c.ACCOUNT_ACCOUNT_STANDING = "account/account-standing"),
+        (c.PROFILE_CUSTOMIZATION = "profile-customization"),
+        (c.CONTENT_AND_SOCIAL = "content-and-social"),
+        (c.CONNECTED_GAMES = "connected-games"),
+        (c.CONTENT_AND_SOCIAL_CONNECTED_GAMES = "content-and-social/connected-games"),
+        (c.DATA_AND_PRIVACY = "data-and-privacy"),
+        (c.PRIVACY_AND_SAFETY = "privacy-and-safety"),
+        (c.FAMILY_CENTER = "family-center"),
+        (c.SESSIONS = "sessions"),
+        (c.AUTHORIZED_APPS = "authorized-apps"),
+        (c.CONNECTIONS = "connections"),
+        (c.CLIPS = "clips"),
+        (c.PREMIUM = "premium"),
+        (c.GUILD_BOOSTING = "guild-boosting"),
+        (c.SUBSCRIPTIONS = "subscriptions"),
+        (c.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS = "subscriptions/role-subscriptions"),
+        (c.INVENTORY = "inventory"),
+        (c.BILLING = "billing"),
+        (c.APPEARANCE = "appearance"),
+        (c.ACCESSIBILITY = "accessibility"),
+        (c.VOICE = "voice"),
+        (c.POGGERMODE = "poggermode"),
+        (c.TEXT = "text"),
+        (c.NOTIFICATIONS = "notifications"),
+        (c.EMAILS = "emails"),
+        (c.NOTIFICATIONS_EMAILS = "notifications/emails"),
+        (c.KEYBINDS = "keybinds"),
+        (c.LANGUAGE = "language"),
+        (c.WINDOWS = "windows"),
+        (c.LINUX = "linux"),
+        (c.STREAMER_MODE = "streamer-mode"),
+        (c.ADVANCED = "advanced"),
+        (c.ACTIVITY_PRIVACY = "activity-privacy"),
+        (c.REGISTERED_GAMES = "registered-games"),
+        (c.OVERLAY = "overlay"),
+        (c.EXPERIMENTS = "experiments"),
+        (c.DEVELOPER_OPTIONS = "developer-options"),
+        c),
+    R =
+        (((_ = {})[(_.CONFIRM_START = 0)] = "CONFIRM_START"),
+        (_[(_.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
+        (_[(_.CHANGE_EMAIL_REASONS = 2)] = "CHANGE_EMAIL_REASONS"),
+        (_[(_.CHANGE_EMAIL_WARNING = 3)] = "CHANGE_EMAIL_WARNING"),
+        (_[(_.EMAIL_AND_PASSWORD = 4)] = "EMAIL_AND_PASSWORD"),
+        (_[(_.COMPLETE = 5)] = "COMPLETE"),
+        _);
+let v = {
         NEW_FORUM_THREADS_ON: 16384,
         NEW_FORUM_THREADS_OFF: 8192,
         OPT_IN_ENABLED: 4096,
@@ -145,12 +130,10 @@ let m = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512,
     },
-    E = {
+    C = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048,
     };
-var g = (function (e) {
-    return (e.USER = "user"), (e.STREAM = "stream"), e;
-})({});
+var b = (((f = {}).USER = "user"), (f.STREAM = "stream"), f);

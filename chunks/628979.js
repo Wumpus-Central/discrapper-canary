@@ -1,92 +1,95 @@
-s.d(t, { A: () => A });
-var r = s(627968),
-    l = s(64700),
-    a = s(503698),
-    n = s.n(a),
-    o = s(311907),
-    i = s(397927),
-    c = s(773669),
-    u = s(954571),
-    d = s(440938),
-    b = s(365491),
-    p = s(758836),
-    E = s(652215),
-    S = s(985018),
-    f = s(450331);
-function A(e) {
-    let { handleTransition: t, selectedTab: s, isNarrow: a, hasText: A } = e,
-        { searchQuery: h, onSetSearchQuery: m } = (0, b.v)(),
-        [C, T] = l.useState(""),
-        g = (0, d.uM)(),
-        y = (0, o.bG)([c.default], () => c.default.locale),
-        O = l.useRef(null),
-        [L, x] = l.useState(!1);
-    l.useEffect(() => {
+r.d(t, { A: () => S });
+var n = r(627968),
+    s = r(64700),
+    l = r(503698),
+    a = r.n(l),
+    o = r(311907),
+    i = r(939249),
+    c = r(7689),
+    d = r(827734),
+    u = r(892547),
+    _ = r(773669),
+    b = r(954571),
+    p = r(440938),
+    m = r(365491),
+    f = r(758836),
+    C = r(652215),
+    g = r(985018),
+    h = r(113960);
+function S(e) {
+    let { handleTransition: t, selectedTab: r, isNarrow: l, hasText: S } = e,
+        { searchQuery: A, onSetSearchQuery: E } = (0, m.v)(),
+        [x, y] = s.useState(""),
+        I = (0, p.uM)(),
+        T = (0, o.bG)([_.default], () => _.default.locale),
+        v = s.useRef(null),
+        [O, L] = s.useState(!1);
+    s.useEffect(() => {
         let e = setTimeout(() => {
-            m(C);
+            E(x);
         }, 250);
         return () => clearTimeout(e);
-    }, [C, m]),
-        l.useEffect(() => {
-            T(h);
-        }, [h]),
-        l.useEffect(() => {
-            x(a && A);
-        }, [a, A]);
-    let R = l.useCallback(
+    }, [x, E]),
+        s.useEffect(() => {
+            y(A);
+        }, [A]),
+        s.useEffect(() => {
+            L(l && S);
+        }, [l, S]);
+    let R = s.useCallback(
             (e) => {
-                "Enter" === e.key && m(C);
+                "Enter" === e.key && E(x);
             },
-            [C, m],
+            [x, E],
         ),
-        N = l.useCallback(
+        w = s.useCallback(
             (e) => {
-                u.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: g?.sessionId,
-                    page_section: g?.pageSection,
-                    page_category: g?.pageCategory,
-                    page_index: g?.pageIndex,
-                    page_size: g?.pageSize,
+                b.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: I?.sessionId,
+                    page_section: I?.pageSection,
+                    page_category: I?.pageCategory,
+                    page_index: I?.pageIndex,
+                    page_size: I?.pageSize,
                     cta_name: e,
-                    page_type: s,
+                    page_type: r,
                 });
             },
-            [s, g],
+            [r, I],
         ),
-        v = l.useCallback(() => {
-            s !== p.G2.CATALOG && t(p.G2.CATALOG), N(p.uY.SEARCH_ICON), x(!0), setTimeout(() => O.current?.focus());
-        }, [s, t, N]),
-        G = l.useCallback(() => {
-            s !== p.G2.CATALOG && t(p.G2.CATALOG), N(p.uY.SEARCH_BAR);
-        }, [s, t, N]),
-        I = l.useCallback(() => {
-            T(""), m(""), N(p.uY.SEARCH_BAR_CLEAR), a && x(!1);
-        }, [m, N, a]),
-        _ = l.useCallback(() => {
-            a && "" === C && x(!1);
-        }, [a, C]),
-        j = a && !L,
-        F = (0, r.jsx)(i.DUT, {
-            className: f.qc,
-            onClick: v,
-            children: (0, r.jsx)(i.$p$, { size: "sm", color: i.LU0.colors.INTERACTIVE_ICON_DEFAULT }),
+        k = s.useCallback(() => {
+            r !== f.G2.CATALOG && t(f.G2.CATALOG), w(f.uY.SEARCH_ICON), L(!0), setTimeout(() => v.current?.focus());
+        }, [r, t, w]),
+        j = s.useCallback(() => {
+            r !== f.G2.CATALOG && t(f.G2.CATALOG), w(f.uY.SEARCH_BAR);
+        }, [r, t, w]),
+        G = s.useCallback(() => {
+            y(""), E(""), w(f.uY.SEARCH_BAR_CLEAR), l && L(!1);
+        }, [E, w, l]),
+        N = s.useCallback(() => {
+            l && "" === x && L(!1);
+        }, [l, x]),
+        P = l && !O,
+        F = (0, n.jsx)(i.D, {
+            className: h.qc,
+            onClick: k,
+            children: (0, n.jsx)(c.$, { size: "sm", color: d.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        P = (0, r.jsx)(i.IWV, {
+        M = (0, n.jsx)(u.I, {
             size: "sm",
-            ref: O,
+            ref: v,
             onKeyDown: R,
-            query: C,
-            onChange: T,
-            onClear: I,
-            onBlur: _,
-            placeholder: "en-US" === y ? S.intl.string(S.t.arz34K) : S.intl.string(S.t["hIt/Nm"]),
+            query: x,
+            onChange: y,
+            onClear: G,
+            onBlur: N,
+            placeholder: "en-US" === T ? g.intl.string(g.t.arz34K) : g.intl.string(g.t["hIt/Nm"]),
         }),
-        k = { "--custom-search-bar-width": `${p.rr}px`, "--custom-search-bar-icon-width": `${p.Dy}px` };
-    return j
-        ? (0, r.jsx)("div", { style: k, children: F })
-        : (0, r.jsx)("div", {
-              className: n()(f.ON, { [f.Nz]: L }),
-              style: k,
-              children: (0, r.jsx)(i.DUT, { ignoreKeyPress: !0, onClick: G, children: P }),
+        B = { "--custom-search-bar-width": `${f.rr}px`, "--custom-search-bar-icon-width": `${f.Dy}px` };
+    return P
+        ? (0, n.jsx)("div", { style: B, children: F })
+        : (0, n.jsx)("div", {
+              className: a()(h.ON, { [h.Nz]: O }),
+              style: B,
+              children: (0, n.jsx)(i.D, { ignoreKeyPress: !0, onClick: j, children: M }),
           });
 }

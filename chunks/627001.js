@@ -1,37 +1,34 @@
-"use strict";
-n.d(t, { P: () => h });
-var r = n(627968),
-    i = n(503698),
-    s = n.n(i),
-    a = n(435371),
-    o = n(240248),
-    l = n(594832),
-    u = n(360469),
+n.d(t, { P: () => A });
+var i = n(627968),
+    l = n(503698),
+    s = n.n(l),
+    a = n(990078),
+    r = n(240248),
+    o = n(594832),
+    d = n(360469),
     c = n(985018),
-    d = n(569261);
-function _(e) {
-    return { top: e.iconInset, insetInlineStart: e.iconInset };
-}
-function f(e) {
-    return { width: e.iconSize, height: e.iconSize };
-}
-function p(e) {
-    let { spec: t, icon: n, tooltipText: i } = e,
-        u = !(0, o.uJ)(i),
-        c = (0, r.jsx)("div", { className: s()(d.Fx, { [d.Y_]: u }), style: _(t), children: n });
-    return u ? (0, r.jsx)(a.m_, { text: i, position: "top", delay: l.Zh, children: c }) : c;
-}
+    u = n(831350);
 function h(e) {
+    let { spec: t, icon: n, tooltipText: l } = e,
+        d = !(0, r.uJ)(l),
+        c = (0, i.jsx)("div", {
+            className: s()(u.Fx, { [u.Y_]: d }),
+            style: { top: t.iconInset, insetInlineStart: t.iconInset },
+            children: n,
+        });
+    return d ? (0, i.jsx)(a.m, { text: l, position: "top", delay: o.Zh, children: c }) : c;
+}
+function A(e) {
     let { spec: t, application: n } = e,
-        i = null != n ? n.getIconURL(u.iu.SMALL) : void 0;
-    return null == i
+        l = null != n ? n.getIconURL(d.iu.SMALL) : void 0;
+    return null == l
         ? null
-        : (0, r.jsx)(p, {
+        : (0, i.jsx)(h, {
               spec: t,
-              icon: (0, r.jsx)("div", {
-                  className: d.In,
-                  style: f(t),
-                  children: (0, r.jsx)("img", { src: i, alt: n?.name }),
+              icon: (0, i.jsx)("div", {
+                  className: u.In,
+                  style: { width: t.iconSize, height: t.iconSize },
+                  children: (0, i.jsx)("img", { src: l, alt: n?.name }),
               }),
               tooltipText: c.intl.string(c.t["4yiU7x"]),
           });

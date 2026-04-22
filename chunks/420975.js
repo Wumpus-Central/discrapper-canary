@@ -1,37 +1,38 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    a = n(397927),
-    r = n(157559),
-    s = n(969632),
-    o = n(649963),
-    d = n(406704),
-    c = n(576705),
-    u = n(652215),
-    g = n(985018);
-function A(e, t) {
-    let n = (0, d.Id)(t);
-    return !(0, l.bG)([c.A], () => c.A.can(u.xBc.MANAGE_MESSAGES, t) && n, [t, n]) ||
+    a = n(477782),
+    r = n(997571),
+    s = n(157559),
+    o = n(969632),
+    d = n(649963),
+    c = n(406704),
+    u = n(576705),
+    g = n(652215),
+    A = n(985018);
+function h(e, t) {
+    let n = (0, c.Id)(t);
+    return !(0, l.bG)([u.A], () => u.A.can(g.xBc.MANAGE_MESSAGES, t) && n, [t, n]) ||
         null == e.reactions ||
         0 === e.reactions.length ||
-        (e.isPoll() && !(0, s.Gh)(e))
+        (e.isPoll() && !(0, o.Gh)(e))
         ? null
-        : (0, i.jsx)(a.Drp, {
+        : (0, i.jsx)(a.Dr, {
               id: "remove-reactions",
-              label: g.intl.string(g.t.ZbtGBm),
-              leadingAccessory: { type: "icon", icon: a.tjR },
+              label: A.intl.string(A.t.ZbtGBm),
+              leadingAccessory: { type: "icon", icon: r.t },
               action: function (n) {
                   n.shiftKey
-                      ? (0, o.Go)(t.id, e.id)
-                      : r.A.show({
-                            title: g.intl.string(g.t.iz3vYX),
-                            body: g.intl.string(g.t.VpjOCo),
-                            confirmText: g.intl.string(g.t.p89ACt),
+                      ? (0, d.Go)(t.id, e.id)
+                      : s.A.show({
+                            title: A.intl.string(A.t.iz3vYX),
+                            body: A.intl.string(A.t.VpjOCo),
+                            confirmText: A.intl.string(A.t.p89ACt),
                             confirmVariant: "critical-primary",
-                            cancelText: g.intl.string(g.t.gm1Vej),
+                            cancelText: A.intl.string(A.t.gm1Vej),
                             onConfirm: () => {
-                                (0, o.Go)(t.id, e.id);
+                                (0, d.Go)(t.id, e.id);
                             },
                         });
               },

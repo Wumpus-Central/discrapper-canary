@@ -1,74 +1,72 @@
-n.d(e, { A: () => T });
-var s = n(627968),
-    a = n(64700),
-    i = n(503698),
-    c = n.n(i),
-    r = n(397927),
-    l = n(340833),
-    o = n(913642),
-    d = n(544231),
-    _ = n(349435),
-    u = n(665909),
-    x = n(985018),
-    m = n(669492),
-    p = n(886981);
-function g() {
-    return (0, s.jsxs)("div", {
-        className: c()(p.oR, m.oR),
+n.d(e, { A: () => y });
+var a = n(627968),
+    s = n(64700),
+    c = n(503698),
+    i = n.n(c),
+    r = n(231483),
+    l = n(827734),
+    o = n(834730),
+    d = n(691540),
+    _ = n(857250),
+    u = n(97483),
+    p = n(939249),
+    x = n(340833),
+    b = n(913642),
+    f = n(544231),
+    g = n(349435),
+    m = n(665909),
+    h = n(985018),
+    A = n(543972),
+    E = n(861173);
+function j() {
+    return (0, a.jsxs)("div", {
+        className: i()(E.oR, A.oR),
         children: [
-            (0, s.jsx)(r.lmn, { color: r.LU0.colors.TEXT_BRAND }),
-            (0, s.jsx)(r.Text, {
-                className: p.__invalid_content,
+            (0, a.jsx)(r.l, { color: l.A.colors.TEXT_BRAND }),
+            (0, a.jsx)(o.E, {
+                className: E.__invalid_content,
                 color: "text-strong",
                 variant: "text-md/normal",
-                children: x.intl.string(x.t["gd/Yqs"]),
+                children: h.intl.string(h.t["gd/Yqs"]),
             }),
         ],
     });
 }
-function T(t) {
-    let { channelId: e, warningId: n, senderId: i, safetyWarning: p } = t,
-        T = a.useMemo(() => p?.feedback_type === _.fy.UPVOTE, [p]),
-        h = a.useMemo(() => p?.feedback_type === _.fy.DOWNVOTE, [p]),
-        b = a.useCallback(
-            (t, a) => {
-                p?.feedback_type !== t &&
-                    ((0, d.v2)(e, n, t),
-                    (0, r.showToast)(
-                        (0, r.createToast)(x.intl.string(x.t["gd/Yqs"]), r.ToastType.CUSTOM, {
-                            component: (0, s.jsx)(g, {}),
-                        }),
-                    ),
-                    (0, u._$)({ channelId: e, warningId: n, senderId: i, warningType: p?.type, cta: a }));
+function y(t) {
+    let { channelId: e, warningId: n, senderId: c, safetyWarning: r } = t,
+        l = s.useMemo(() => r?.feedback_type === g.fy.UPVOTE, [r]),
+        E = s.useMemo(() => r?.feedback_type === g.fy.DOWNVOTE, [r]),
+        y = s.useCallback(
+            (t, s) => {
+                r?.feedback_type !== t &&
+                    ((0, f.v2)(e, n, t),
+                    (0, d.P0)((0, _.o)(h.intl.string(h.t["gd/Yqs"]), u.Ck.CUSTOM, { component: (0, a.jsx)(j, {}) })),
+                    (0, m._$)({ channelId: e, warningId: n, senderId: c, warningType: r?.type, cta: s }));
             },
-            [p, e, n, i],
+            [r, e, n, c],
         );
-    return (0, s.jsxs)("div", {
-        className: m.mp,
+    return (0, a.jsxs)("div", {
+        className: A.mp,
         children: [
-            (0, s.jsx)(r.Text, {
-                variant: "text-sm/medium",
-                color: "text-default",
-                children: x.intl.string(x.t.L84yVm),
-            }),
-            (0, s.jsxs)("div", {
-                className: m.NC,
+            (0, a.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: h.intl.string(h.t.L84yVm) }),
+            (0, a.jsxs)("div", {
+                className: A.NC,
                 children: [
-                    (0, s.jsx)(r.DUT, {
-                        className: c()([m.eH, T ? m.QT : m.LM, { [m.r9]: T }]),
-                        onClick: () => b(_.fy.UPVOTE, u.Wm.FEEDBACK_UPVOTE),
-                        "aria-label": x.intl.string(x.t["2GrOCN"]),
-                        children: (0, s.jsx)(o.A, {
-                            className: m.__invalid_buttonIcon,
+                    (0, a.jsx)(p.D, {
+                        className: i()([A.eH, l ? A.QT : A.LM, { [A.r9]: l }]),
+                        onClick: () => y(g.fy.UPVOTE, m.Wm.FEEDBACK_UPVOTE),
+                        "aria-label": h.intl.string(h.t["2GrOCN"]),
+                        children: (0, a.jsx)(b.A, {
+                            className: A.__invalid_buttonIcon,
                             color: "interactive-text-default",
                         }),
                     }),
-                    (0, s.jsx)(r.DUT, {
-                        className: c()([m.eH, h ? m.QT : m.LM, { [m.r9]: h }]),
-                        onClick: () => b(_.fy.DOWNVOTE, u.Wm.FEEDBACK_DOWNVOTE),
-                        "aria-label": x.intl.string(x.t.COp9BO),
-                        children: (0, s.jsx)(l.A, {
-                            className: m.__invalid_buttonIcon,
+                    (0, a.jsx)(p.D, {
+                        className: i()([A.eH, E ? A.QT : A.LM, { [A.r9]: E }]),
+                        onClick: () => y(g.fy.DOWNVOTE, m.Wm.FEEDBACK_DOWNVOTE),
+                        "aria-label": h.intl.string(h.t.COp9BO),
+                        children: (0, a.jsx)(x.A, {
+                            className: A.__invalid_buttonIcon,
                             color: "interactive-text-default",
                         }),
                     }),

@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { G: () => l, b: () => o });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(700744);
-function o(e) {
-    let { keybind: t, className: n } = e;
-    return (0, r.jsx)(r.Fragment, {
-        children: t.map((e, t) => (0, r.jsx)("span", { className: s()(a.Eb, a.UT, n), children: e }, t)),
+i.d(e, { G: () => o, b: () => s });
+var n = i(627968);
+i(64700);
+var l = i(503698),
+    a = i.n(l),
+    r = i(457751);
+function s(t) {
+    let { keybind: e, className: i } = t;
+    return (0, n.jsx)(n.Fragment, {
+        children: e.map((t, e) => (0, n.jsx)("span", { className: a()(r.Eb, r.UT, i), children: t }, e)),
     });
 }
-function l(e) {
-    let { keybind: t, className: n } = e;
-    return (0, r.jsx)(r.Fragment, {
-        children: t.map((e, t) => (0, r.jsx)("div", { className: s()(a.Eb, a.RJ, n), children: e }, `${e}-${t}`)),
+function o(t) {
+    let { keybind: e, className: i } = t;
+    return (0, n.jsx)(n.Fragment, {
+        children: e.map((t, e) => (0, n.jsx)("div", { className: a()(r.Eb, r.RJ, i), children: t }, `${t}-${e}`)),
     });
 }

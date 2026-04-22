@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { x: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+a.d(l, { x: () => c });
+var t = a(627968);
+a(64700);
+var s = a(827734),
+    i = a(996682),
+    n = a(27989);
+let c = (e) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
+            size: l = "md",
+            width: a,
+            height: c,
+            color: h = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
+            ...o
         } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+        d = (0, n.J)(l),
+        v = d?.width ?? a,
+        g = d?.height ?? c;
+    return (0, t.jsx)("svg", {
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: v,
+        height: g,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof h ? h : h.css,
             d: "M19 14a1 1 0 0 1 .1 0l.05.01h.04l.01.01.07.02h.01l.06.02h.02A1 1 0 0 1 20 15v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 0 1-.96-.72l-.01-.05A1 1 0 0 1 14 19a1.01 1.01 0 0 1 .35-.76l.02-.02a.95.95 0 0 1 .05-.04c.01 0 .02 0 .03-.02a.96.96 0 0 1 .06-.03l.02-.01.05-.03.04-.02a.98.98 0 0 1 .07-.02h.01a1 1 0 0 1 .2-.05H18v-3a1 1 0 0 1 1-1ZM10.67 1.33a9.33 9.33 0 0 1 9.12 11.3c-.17-.06-.35-.1-.53-.12L19 12.5a2.5 2.5 0 0 0-2.5 2.5v1.5H15a2.5 2.5 0 0 0-2.49 2.24l-.01.26.01.26c.02.18.06.36.12.53a9.33 9.33 0 1 1-1.96-18.46Zm3.64 11.18a.85.85 0 0 0-1.17.23 2.97 2.97 0 0 1-4.94 0 .85.85 0 1 0-1.41.94 4.66 4.66 0 0 0 7.76 0 .85.85 0 0 0-.24-1.17ZM6 8.97a1.27 1.27 0 1 0 0 2.54 1.27 1.27 0 0 0 0-2.54Zm9.33 0a1.27 1.27 0 1 0 0 2.55 1.27 1.27 0 0 0 0-2.55Z",
-            className: u,
+            className: r,
         }),
     });
 };

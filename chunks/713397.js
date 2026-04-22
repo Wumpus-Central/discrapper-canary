@@ -1,31 +1,32 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968),
-    l = n(397927),
+    a = n(534514),
+    l = n(821609),
     s = n(367513),
-    a = n(715989),
-    r = n(985018),
-    o = n(616124);
-function c(e) {
+    r = n(715989),
+    o = n(985018),
+    c = n(376460);
+function d(e) {
     let { channelId: t, allPoppedOut: n = !1 } = e;
     return (0, i.jsxs)("div", {
-        className: o.kL,
+        className: c.kL,
         children: [
-            (0, i.jsx)(a.A, {}),
+            (0, i.jsx)(r.A, {}),
             (0, i.jsxs)("div", {
-                className: o.Qs,
+                className: c.Qs,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(a.D, {
                         variant: "heading-lg/normal",
-                        children: n ? r.intl.string(r.t.KIConm) : r.intl.format(r.t.ilLVLr, {}),
+                        children: n ? o.intl.string(o.t.KIConm) : o.intl.format(o.t.ilLVLr, {}),
                     }),
                     !n &&
-                        (0, i.jsx)(l.Button, {
+                        (0, i.jsx)(l.$, {
                             variant: "secondary",
                             size: "md",
                             onClick: (e) => {
                                 e.stopPropagation(), s.A.toggleVoiceParticipantsHidden(t, !1);
                             },
-                            text: r.intl.string(r.t.kLQySL),
+                            text: o.intl.string(o.t.kLQySL),
                         }),
                 ],
             }),

@@ -1,72 +1,75 @@
-n.d(t, { A: () => f });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+n.d(t, { A: () => E });
+var i = n(627968),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
     r = n(607399),
-    o = n(397927),
-    d = n(354949),
-    c = n(975571),
-    u = n(446868),
-    m = n(652215),
-    h = n(985018),
-    x = n(72828);
-let p = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
-class g extends i.PureComponent {
-    static defaultProps = { types: [m.Fz7.CAPTCHA], onCaptchaVerify: m.tEg, onLogout: m.tEg };
+    o = n(821609),
+    d = n(331322),
+    c = n(534514),
+    u = n(834730),
+    p = n(354949),
+    h = n(975571),
+    m = n(446868),
+    _ = n(652215),
+    A = n(985018),
+    f = n(72828);
+let g = h.A.getArticleURL(_.MVz.VERIFICATION_FAQ);
+class x extends s.PureComponent {
+    static defaultProps = { types: [_.Fz7.CAPTCHA], onCaptchaVerify: _.tEg, onLogout: _.tEg };
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
-        return (0, a.jsx)(a.Fragment, {
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: s } = this.props;
+        return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === m.Fz7.CAPTCHA
-                    ? (0, a.jsx)(d.A, { onVerify: i, theme: n }, t)
-                    : (0, a.jsx)(o.Button, { onClick: () => this.handleClick(e), text: u.A.getButtonTitle(e) }, e),
+                e === _.Fz7.CAPTCHA
+                    ? (0, i.jsx)(p.A, { onVerify: s, theme: n }, t)
+                    : (0, i.jsx)(o.$, { onClick: () => this.handleClick(e), text: m.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, a.jsxs)(o.BJc, {
+        return (0, i.jsxs)(d.B, {
             gap: 16,
-            className: x.Ot,
+            className: f.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, a.jsxs)(o.BJc, {
+                (0, i.jsxs)(d.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: l()(x.kL, { [x.Fr]: r.Fr }),
+                    className: a()(f.kL, { [f.Fr]: r.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, a.jsxs)(o.BJc, {
+                        (0, i.jsxs)(d.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, a.jsx)("div", { className: x.Sl }),
-                                (0, a.jsxs)(o.BJc, {
-                                    className: x.FS,
+                                (0, i.jsx)("div", { className: f.Sl }),
+                                (0, i.jsxs)(d.B, {
+                                    className: f.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, a.jsx)(o.Heading, {
+                                        (0, i.jsx)(c.D, {
                                             variant: "heading-xl/normal",
-                                            children: h.intl.string(h.t.Iz0kDg),
+                                            children: A.intl.string(A.t.Iz0kDg),
                                         }),
-                                        (0, a.jsx)(o.Text, {
+                                        (0, i.jsx)(u.E, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: p }),
+                                            children: A.intl.format(A.t["0rqMV5"], { helpCenterURL: g }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(o.BJc, {
+                        (0, i.jsx)(d.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -75,33 +78,33 @@ class g extends i.PureComponent {
                         }),
                     ],
                 }),
-                (0, a.jsxs)(o.BJc, {
+                (0, i.jsxs)(d.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, a.jsx)(o.Text, {
+                        (0, i.jsx)(u.E, {
                             variant: "text-sm/normal",
-                            className: x.qr,
-                            children: h.intl.string(h.t.qqYun3),
+                            className: f.qr,
+                            children: A.intl.string(A.t.qqYun3),
                         }),
-                        (0, a.jsxs)(o.BJc, {
+                        (0, i.jsxs)(d.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, a.jsx)(o.Text, {
+                                (0, i.jsx)(u.E, {
                                     variant: "text-sm/semibold",
-                                    className: x.qr,
-                                    children: h.intl.format(h.t.WL51ZR, { supportURL: c.A.getSubmitRequestURL() }),
+                                    className: f.qr,
+                                    children: A.intl.format(A.t.WL51ZR, { supportURL: h.A.getSubmitRequestURL() }),
                                 }),
-                                (0, a.jsx)("div", { className: l()(x.qr, x.mf), children: "•" }),
-                                (0, a.jsx)(o.Text, {
+                                (0, i.jsx)("div", { className: a()(f.qr, f.mf), children: "•" }),
+                                (0, i.jsx)(u.E, {
                                     variant: "text-sm/semibold",
-                                    className: x.qr,
-                                    children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                    className: f.qr,
+                                    children: A.intl.format(A.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -115,4 +118,4 @@ class g extends i.PureComponent {
         t?.(e);
     };
 }
-let f = g;
+let E = x;

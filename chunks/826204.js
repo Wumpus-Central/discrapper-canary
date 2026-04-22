@@ -1,162 +1,169 @@
-n.d(t, { default: () => I });
+n.d(t, { default: () => y });
 var l = n(627968),
     i = n(64700),
     s = n(735438),
     a = n.n(s),
-    r = n(158954),
-    o = n(311907),
-    c = n(397927),
-    d = n(508595),
-    u = n(57222),
-    m = n(808728),
-    x = n(317525),
-    h = n(957545),
-    j = n(107795),
-    g = n(655943),
-    p = n(76596),
-    v = n(539916),
-    C = n(985018),
-    f = n(588383);
-function I(e) {
-    let { transitionState: t, onClose: n, onSave: s, onDelete: x, option: h, guild: I, prompt: k, index: b } = e,
-        E = (0, o.bG)([m.Ay], () => m.Ay.getDefaultChannel(I.id)),
-        [N, S] = i.useState(() => h?.emoji ?? null),
-        [y, P] = i.useState(() => h?.title ?? ""),
-        [T, _] = i.useState(() => h?.description ?? ""),
-        [R, M] = i.useState(() => new Set(h?.channelIds ?? [])),
-        [B, w] = i.useState(() => new Set(h?.roleIds ?? [])),
-        [D, L] = i.useState({}),
-        O = i.useRef(null);
-    i.useLayoutEffect(() => O.current?.focus(), []);
-    let z = i.useCallback(() => {
+    r = n(189213),
+    o = n(452027),
+    c = n(311907),
+    d = n(123292),
+    u = n(331322),
+    m = n(292666),
+    h = n(404778),
+    j = n(511274),
+    x = n(695366),
+    g = n(834730),
+    p = n(508595),
+    v = n(57222),
+    C = n(808728),
+    f = n(317525),
+    I = n(957545),
+    A = n(107795),
+    k = n(655943),
+    E = n(76596),
+    b = n(539916),
+    S = n(985018),
+    N = n(588383);
+function y(e) {
+    let { transitionState: t, onClose: n, onSave: s, onDelete: x, option: g, guild: f, prompt: I, index: y } = e,
+        _ = (0, c.bG)([C.Ay], () => C.Ay.getDefaultChannel(f.id)),
+        [R, T] = i.useState(() => g?.emoji ?? null),
+        [M, B] = i.useState(() => g?.title ?? ""),
+        [w, D] = i.useState(() => g?.description ?? ""),
+        [L, O] = i.useState(() => new Set(g?.channelIds ?? [])),
+        [z, Q] = i.useState(() => new Set(g?.roleIds ?? [])),
+        [U, Y] = i.useState({}),
+        F = i.useRef(null);
+    i.useLayoutEffect(() => F.current?.focus(), []);
+    let G = i.useCallback(() => {
             var e, t, l, i;
             let r,
                 o,
                 c = {
-                    id: h?.id ?? `${Date.now()}`,
-                    title: y,
-                    description: T,
-                    channelIds: Array.from(R).sort(),
-                    roleIds: Array.from(B).sort(),
-                    emoji: null == N ? void 0 : N,
+                    id: g?.id ?? `${Date.now()}`,
+                    title: M,
+                    description: w,
+                    channelIds: Array.from(L).sort(),
+                    roleIds: Array.from(z).sort(),
+                    emoji: null == R ? void 0 : R,
                 },
                 d =
-                    ((e = I),
-                    (t = g.A.editedOnboardingPrompts),
-                    (l = k),
+                    ((e = f),
+                    (t = k.A.editedOnboardingPrompts),
+                    (l = I),
                     (r = {}),
-                    (i = c).title.length <= 0 && (r.title = C.intl.string(C.t.p3PKzA)),
-                    null != (o = (0, j.fO)(e, t, l, i)) && (r.roles = o),
+                    (i = c).title.length <= 0 && (r.title = S.intl.string(S.t.p3PKzA)),
+                    null != (o = (0, A.fO)(e, t, l, i)) && (r.roles = o),
                     r);
-            L(d), a().isEmpty(d) && (s(c), n());
-        }, [R, T, N, I, n, s, h?.id, k, B, y]),
-        G = i.useMemo(
+            Y(d), a().isEmpty(d) && (s(c), n());
+        }, [L, w, R, f, n, s, g?.id, I, z, M]),
+        J = i.useMemo(
             () => [
-                { text: C.intl.string(C.t["ETE/oC"]), onClick: n, variant: "secondary" },
-                { text: C.intl.string(C.t["R3BPH+"]), onClick: z, variant: "primary" },
+                { text: S.intl.string(S.t["ETE/oC"]), onClick: n, variant: "secondary" },
+                { text: S.intl.string(S.t["R3BPH+"]), onClick: G, variant: "primary" },
             ],
-            [z, n],
+            [G, n],
         );
     return (0, l.jsx)(r.Modal, {
-        title: C.intl.formatToPlainString(C.t.yjS3zs, { index: b + 1 }),
-        subtitle: null != k.title && k.title.length > 0 ? k.title : C.intl.string(C.t.vY91C9),
+        title: S.intl.formatToPlainString(S.t.yjS3zs, { index: y + 1 }),
+        subtitle: null != I.title && I.title.length > 0 ? I.title : S.intl.string(S.t.vY91C9),
         transitionState: t,
         onClose: n,
-        actions: G,
-        actionBarInput: (0, l.jsx)(c.QWc, {
-            text: C.intl.string(C.t.N86XcP),
+        actions: J,
+        actionBarInput: (0, l.jsx)(d.Q, {
+            text: S.intl.string(S.t.N86XcP),
             onClick: () => {
                 x(), n();
             },
             variant: "critical",
         }),
         children: (0, l.jsxs)("div", {
-            className: f.kL,
+            className: N.kL,
             children: [
-                (0, l.jsxs)(c.BJc, {
+                (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
-                        (0, l.jsx)(c.ksK, {
-                            label: C.intl.string(C.t.VWdcBp),
+                        (0, l.jsx)(m.k, {
+                            label: S.intl.string(S.t.VWdcBp),
                             required: !0,
-                            inputRef: O,
-                            placeholder: C.intl.string(C.t.EHe6gZ),
-                            value: y,
-                            onChange: (e) => P(e),
-                            maxLength: v.Q_,
+                            inputRef: F,
+                            placeholder: S.intl.string(S.t.EHe6gZ),
+                            value: M,
+                            onChange: (e) => B(e),
+                            maxLength: b.Q_,
                             autoFocus: !0,
-                            error: D.title,
+                            error: U.title,
                         }),
-                        (0, l.jsx)(c.ksK, {
-                            placeholder: C.intl.string(C.t.mIjgJK),
-                            value: T,
-                            onChange: (e) => _(e),
-                            maxLength: v.QY,
+                        (0, l.jsx)(m.k, {
+                            placeholder: S.intl.string(S.t.mIjgJK),
+                            value: w,
+                            onChange: (e) => D(e),
+                            maxLength: b.QY,
                         }),
                     ],
                 }),
-                (0, l.jsx)(c.cGx, {}),
-                (0, l.jsxs)(r.D0$, {
-                    label: C.intl.string(C.t.TtIbPA),
+                (0, l.jsx)(h.c, {}),
+                (0, l.jsxs)(o.D, {
+                    label: S.intl.string(S.t.TtIbPA),
                     children: [
-                        (0, l.jsxs)(c.BJc, {
+                        (0, l.jsxs)(u.B, {
                             gap: 8,
                             children: [
-                                (0, l.jsx)(d.A, {
-                                    guildId: I.id,
-                                    selectedChannelIds: R,
-                                    placeholder: C.intl.string(C.t.vephiL),
-                                    onChange: M,
-                                    helperText: C.intl.string(C.t.SoT6we),
+                                (0, l.jsx)(p.A, {
+                                    guildId: f.id,
+                                    selectedChannelIds: L,
+                                    placeholder: S.intl.string(S.t.vephiL),
+                                    onChange: O,
+                                    helperText: S.intl.string(S.t.SoT6we),
                                 }),
-                                (0, l.jsx)(u.A, {
-                                    guildId: I.id,
-                                    selectedRoleIds: B,
+                                (0, l.jsx)(v.A, {
+                                    guildId: f.id,
+                                    selectedRoleIds: z,
                                     disableEveryoneRole: !0,
-                                    placeholder: C.intl.string(C.t.aFO1I6),
-                                    onChange: w,
-                                    helperText: C.intl.string(C.t.Mbvpv8),
+                                    placeholder: S.intl.string(S.t.aFO1I6),
+                                    onChange: Q,
+                                    helperText: S.intl.string(S.t.Mbvpv8),
                                     selectableRoleFilter: (e) => !e.managed,
                                 }),
                             ],
                         }),
-                        null == D.roles ? null : (0, l.jsx)(c.dzK, { error: D.roles }),
-                        (0, l.jsx)(A, { guild: I, roleIds: B }),
+                        null == U.roles ? null : (0, l.jsx)(j.U, { error: U.roles }),
+                        (0, l.jsx)(P, { guild: f, roleIds: z }),
                     ],
                 }),
-                (0, l.jsx)(c.cGx, {}),
+                (0, l.jsx)(h.c, {}),
                 (0, l.jsx)("div", {
-                    className: f.C2,
-                    children: (0, l.jsx)(r.D0$, {
-                        label: C.intl.string(C.t["4ahTBl"]),
-                        description: C.intl.string(C.t.Iv9RGg),
-                        children: (0, l.jsx)(p.A, { emoji: N, setEmoji: S, channel: E }),
+                    className: N.C2,
+                    children: (0, l.jsx)(o.D, {
+                        label: S.intl.string(S.t["4ahTBl"]),
+                        description: S.intl.string(S.t.Iv9RGg),
+                        children: (0, l.jsx)(E.A, { emoji: R, setEmoji: T, channel: _ }),
                     }),
                 }),
             ],
         }),
     });
 }
-function A(e) {
+function P(e) {
     let { guild: t, roleIds: n } = e,
-        i = (0, o.bG)([x.A], () => x.A.getManyRoles(t.id, n).find(h.J));
+        i = (0, c.bG)([f.A], () => f.A.getManyRoles(t.id, n).find(I.J));
     return null == i
         ? null
         : (0, l.jsx)("div", {
-              className: f.lm,
+              className: N.lm,
               children: (0, l.jsxs)("div", {
-                  className: f.Ux,
+                  className: N.Ux,
                   children: [
-                      (0, l.jsx)(c.EpV, {
+                      (0, l.jsx)(x.E, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: "currentColor",
-                          className: f.EP,
+                          className: N.EP,
                       }),
-                      (0, l.jsx)(c.Text, {
+                      (0, l.jsx)(g.E, {
                           variant: "text-sm/normal",
-                          children: C.intl.format(C.t["5zPJEZ"], { permissions: (0, h.P)(t, i).join(", ") }),
+                          children: S.intl.format(S.t["5zPJEZ"], { permissions: (0, I.P)(t, i).join(", ") }),
                       }),
                   ],
               }),

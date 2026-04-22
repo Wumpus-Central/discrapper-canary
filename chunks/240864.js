@@ -1,31 +1,30 @@
 "use strict";
-function r(e) {
+function i(e) {
     let {
         listRef: t,
         searchQuery: n,
-        nitroLockedSectionStates: r,
-        scrollTop: i,
+        nitroLockedSectionStates: i,
+        scrollTop: l,
         sectionHeaderHeight: s = 0,
-        sectionFooterHeight: a = 0,
+        sectionFooterHeight: r = 0,
     } = e;
     if ("" !== n) return { isNitroLockedSectionVisible: !1, areOnlyNitroLockedSectionsVisible: !1 };
-    let o = t?.current?.getSectionDescriptors(),
-        l = t.current?.getListDimensions()?.height;
-    if (null == o || o.length !== r.length || null == l || l <= 0)
+    let a = t?.current?.getSectionDescriptors(),
+        o = t.current?.getListDimensions()?.height;
+    if (null == a || a.length !== i.length || null == o || o <= 0)
         return { isNitroLockedSectionVisible: !1, areOnlyNitroLockedSectionsVisible: !1 };
-    let u = i,
-        c = i + l,
+    let c = l + o,
+        u = !1,
         d = !1,
-        _ = !1,
-        f = "function" == typeof s ? s : () => s,
-        p = "function" == typeof a ? a : () => a;
+        h = "function" == typeof s ? s : () => s,
+        m = "function" == typeof r ? r : () => r;
     return (
-        r.forEach((e, t) => {
-            let n = o[t],
-                r = n.offset.top + f(t);
-            Math.min(n.offset.bottom - p(t), c) - Math.max(r, u) >= 20 && (e.isNitroLocked ? (d = !0) : (_ = !0));
+        i.forEach((e, t) => {
+            let n = a[t],
+                i = n.offset.top + h(t);
+            Math.min(n.offset.bottom - m(t), c) - Math.max(i, l) >= 20 && (e.isNitroLocked ? (u = !0) : (d = !0));
         }),
-        { isNitroLockedSectionVisible: d, areOnlyNitroLockedSectionsVisible: d && !_ }
+        { isNitroLockedSectionVisible: u, areOnlyNitroLockedSectionsVisible: u && !d }
     );
 }
-n.d(t, { s: () => r }), n(64700);
+n.d(t, { s: () => i }), n(64700);

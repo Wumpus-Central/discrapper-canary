@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     O4: "sideNavContent_dc2e0e",
     kL: "container_dc2e0e",

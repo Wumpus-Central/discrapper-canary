@@ -1,129 +1,131 @@
-n.d(t, { default: () => S }), n(321073);
+n.d(t, { default: () => N }), n(321073);
 var i = n(627968),
     l = n(64700),
-    s = n(158954),
-    a = n(311907),
-    r = n(397927),
-    o = n(702805),
-    c = n(198982),
-    d = n(47167),
-    u = n(95701),
-    h = n(734057),
-    m = n(71393),
-    A = n(954571),
-    g = n(147036),
-    p = n(845202),
-    f = n(86944),
-    _ = n(737045),
-    E = n(652215),
-    x = n(985018),
-    C = n(959214);
-function S(e) {
+    a = n(189213),
+    s = n(311907),
+    r = n(770880),
+    o = n(146151),
+    c = n(834730),
+    d = n(702805),
+    u = n(198982),
+    h = n(47167),
+    m = n(95701),
+    A = n(734057),
+    g = n(71393),
+    p = n(954571),
+    _ = n(147036),
+    f = n(845202),
+    E = n(86944),
+    C = n(737045),
+    x = n(652215),
+    S = n(985018),
+    I = n(142483);
+function N(e) {
     let { channelId: t, ...n } = e,
-        s = (0, a.bG)([h.A], () => h.A.getChannel(t), [t]),
-        r = (0, a.bG)([m.A], () => m.A.getGuild(s?.getGuildId()));
+        a = (0, s.bG)([A.A], () => A.A.getChannel(t), [t]),
+        r = (0, s.bG)([g.A], () => g.A.getGuild(a?.getGuildId()));
     return (l.useEffect(() => {
-        A.default.track(E.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
+        p.default.track(x.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
-    null == s || null == r)
+    null == a || null == r)
         ? null
-        : (0, i.jsx)(T, { guild: r, channel: s, ...n });
+        : (0, i.jsx)(v, { guild: r, channel: a, ...n });
 }
-function T(e) {
-    let { guild: t, channel: n, onClose: a, newChannel: h, inSettings: m, ...A } = e,
-        [E, S] = l.useState(""),
-        [T, N] = l.useState({}),
-        [I, v] = l.useState(!1),
-        [y, b] = l.useState(null),
-        j = l.useRef(null),
-        R = (0, d.Ay)(n),
-        { roles: M, members: D, getRichTag: O } = (0, f.K)(t, n, n.accessPermissions, E),
-        L = p.A.useSections({ roles: M, members: D }),
-        P = h && 0 === Object.keys(T).length;
+function v(e) {
+    let { guild: t, channel: n, onClose: s, newChannel: A, inSettings: g, ...p } = e,
+        [x, N] = l.useState(""),
+        [v, T] = l.useState({}),
+        [y, b] = l.useState(!1),
+        [j, R] = l.useState(null),
+        M = l.useRef(null),
+        L = (0, h.Ay)(n),
+        { roles: D, members: P, getRichTag: O } = (0, E.K)(t, n, n.accessPermissions, x),
+        w = f.A.useSections({ roles: D, members: P }),
+        U = A && 0 === Object.keys(v).length;
     async function k() {
-        if (null == n || 0 === Object.keys(T).length) return void a();
-        v(!0);
+        if (null == n || 0 === Object.keys(v).length) return void s();
+        b(!0);
         try {
             var e, t, i;
             let l;
             await ((e = n),
-            (t = T),
-            (i = m),
+            (t = v),
+            (i = g),
             (l = []),
             Object.values(t).forEach((t) => {
                 let { row: n } = t;
                 null != n.id &&
                     "" !== n.id &&
-                    (n.rowType === _.T6.ROLE
-                        ? l.push((0, g.we)(n.id, e.type))
-                        : n.rowType === _.T6.MEMBER && l.push((0, g.n3)(n.id, e.type)));
+                    (n.rowType === C.T6.ROLE
+                        ? l.push((0, _.we)(n.id, e.type))
+                        : n.rowType === C.T6.MEMBER && l.push((0, _.n3)(n.id, e.type)));
             }),
-            (0, o.R$)(e.id, l, i)),
-                a(),
-                v(!1);
+            (0, d.R$)(e.id, l, i)),
+                s(),
+                b(!1);
         } catch (t) {
-            let e = new c.LG(t);
-            v(!1), b(e);
+            let e = new u.LG(t);
+            b(!1), R(e);
         }
     }
-    let w = (0, u.ke)(n.type) ? r.I$d : r.trU;
-    return (0, i.jsx)(p.A.Provider, {
-        listRef: j,
-        query: E,
-        setQuery: S,
-        pendingAdditions: T,
-        setPendingAdditions: N,
-        roles: M,
-        members: D,
+    let G = (0, m.ke)(n.type) ? r.I : o.t;
+    return (0, i.jsx)(f.A.Provider, {
+        listRef: M,
+        query: x,
+        setQuery: N,
+        pendingAdditions: v,
+        setPendingAdditions: T,
+        roles: D,
+        members: P,
         getRichTag: O,
-        children: (0, i.jsx)(s.Modal, {
-            ...A,
-            title: x.intl.string(x.t.dMJ3Y6),
-            onClose: a,
+        children: (0, i.jsx)(a.Modal, {
+            ...p,
+            title: S.intl.string(S.t.dMJ3Y6),
+            onClose: s,
             input: (0, i.jsxs)("div", {
                 children: [
-                    (0, i.jsxs)(r.Text, {
-                        className: C.HA,
+                    (0, i.jsxs)(c.E, {
+                        className: I.HA,
                         variant: "text-lg/normal",
                         color: "text-default",
-                        children: [(0, i.jsx)(w, { className: C.p, size: "sm", color: "currentColor" }), R],
+                        children: [(0, i.jsx)(G, { className: I.p, size: "sm", color: "currentColor" }), L],
                     }),
                     n.isGuildStageVoice() &&
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(c.E, {
                             color: "text-default",
-                            className: C.h_,
+                            className: I.h_,
                             variant: "text-sm/normal",
-                            children: x.intl.string(x.t.f7VbhF),
+                            children: S.intl.string(S.t.f7VbhF),
                         }),
-                    (0, i.jsx)(p.A.SearchBox, { placeholderText: x.intl.string(x.t.iezLLn) }),
-                    (0, i.jsx)(r.Text, {
-                        className: C.W$,
+                    (0, i.jsx)(f.A.SearchBox, { placeholderText: S.intl.string(S.t.iezLLn) }),
+                    (0, i.jsx)(c.E, {
+                        className: I.W$,
                         variant: "text-xs/normal",
-                        children: x.intl.string(x.t.rwFx85),
+                        children: S.intl.string(S.t.rwFx85),
                     }),
-                    null != y
-                        ? (0, i.jsx)(r.Text, {
-                              className: C.W$,
+                    null != j
+                        ? (0, i.jsx)(c.E, {
+                              className: I.W$,
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
-                              children: y.getAnyErrorMessage(),
+                              children: j.getAnyErrorMessage(),
                           })
                         : null,
                 ],
             }),
             listProps: {
-                ref: j,
-                sectionHeight: p.A.SECTION_HEIGHT,
-                renderSection: p.A.renderSection,
-                rowHeight: p.A.ROW_HEIGHT,
-                renderRow: p.A.renderRow,
-                sections: L,
+                ref: M,
+                sectionHeight: f.A.SECTION_HEIGHT,
+                renderSection: f.A.renderSection,
+                rowHeight: f.A.ROW_HEIGHT,
+                renderRow: f.A.renderRow,
+                sections: w,
             },
-            actions: P
-                ? [{ variant: "secondary", text: x.intl.string(x.t.u46sxe), onClick: a }]
+            actions: U
+                ? [{ variant: "secondary", text: S.intl.string(S.t.u46sxe), onClick: s }]
                 : [
-                      { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: a },
-                      { variant: "primary", text: x.intl.string(x.t.i4jeWR), onClick: k, loading: I },
+                      { variant: "secondary", text: S.intl.string(S.t["ETE/oC"]), onClick: s },
+                      { variant: "primary", text: S.intl.string(S.t.i4jeWR), onClick: k, loading: y },
                   ],
         }),
     });

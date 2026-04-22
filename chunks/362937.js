@@ -1,73 +1,84 @@
-n.d(t, { ImportBenefitsFromRoleModal: () => W, ImportBenefitsFromSubscriptionListingModal: () => K });
+n.d(t, { ImportBenefitsFromRoleModal: () => el, ImportBenefitsFromSubscriptionListingModal: () => X });
 var i = n(627968),
     l = n(64700),
     r = n(503698),
     s = n.n(r),
-    a = n(158954),
+    a = n(189213),
     o = n(311907),
     d = n(52133),
     c = n(319060),
-    m = n(397927),
-    x = n(565645),
-    h = n(444927),
-    u = n(47167),
-    g = n(713654),
-    j = n(915089),
-    f = n(508675),
-    _ = n(201275),
-    p = n(657048),
-    v = n(95701),
-    N = n(34457),
-    C = n(769765),
-    b = n(317525),
-    A = n(71393),
-    T = n(994500),
-    I = n(287809),
-    S = n(147925),
-    k = n(240248),
-    w = n(500345),
-    y = n(361588),
-    B = n(417360),
-    E = n(898612),
-    M = n(652215),
-    L = n(985018),
-    z = n(605559);
-let D = (0, j.Ld)(),
-    O = (0, j.Ld)(),
-    R = (0, k.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function F(e) {
+    m = n(187322),
+    h = n(933832),
+    x = n(534514),
+    u = n(194117),
+    g = n(834730),
+    j = n(939249),
+    f = n(179866),
+    _ = n(935462),
+    p = n(276293),
+    v = n(825484),
+    N = n(821609),
+    b = n(430690),
+    C = n(565645),
+    A = n(444927),
+    E = n(47167),
+    I = n(713654),
+    S = n(915089),
+    k = n(508675),
+    w = n(201275),
+    y = n(657048),
+    M = n(95701),
+    T = n(34457),
+    B = n(769765),
+    D = n(317525),
+    L = n(71393),
+    z = n(994500),
+    O = n(287809),
+    R = n(147925),
+    F = n(240248),
+    G = n(500345),
+    K = n(361588),
+    q = n(417360),
+    J = n(898612),
+    P = n(652215),
+    Q = n(985018),
+    W = n(251148);
+let $ = (0, S.Ld)(),
+    H = (0, S.Ld)(),
+    V = (0, F.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+function Z(e) {
     let { emojiId: t, emojiName: n, className: l } = e,
-        r = (0, o.bG)([f.Ay], () => (null != t ? f.Ay.getCustomEmojiById(t) : void 0));
-    return (0, i.jsx)(x.A, { emojiId: t, emojiName: n, animated: r?.animated ?? !1, className: l });
+        r = (0, o.bG)([k.Ay], () => (null != t ? k.Ay.getCustomEmojiById(t) : void 0));
+    return (0, i.jsx)(C.A, { emojiId: t, emojiName: n, animated: r?.animated ?? !1, className: l });
 }
-function G(e) {
+function U(e) {
     let { icon: t, children: n, checked: l, disabled: r = !1, onChange: a } = e,
         o = l || r;
     return (0, i.jsxs)("label", {
-        className: s()(z.nM, { [z.KD]: o, [z.r9]: r }),
+        className: s()(W.nM, { [W.KD]: o, [W.r9]: r }),
         children: [
-            (0, i.jsx)("div", { className: z.N, children: t }),
-            (0, i.jsx)("div", { className: z.qg, children: n }),
+            (0, i.jsx)("div", { className: W.N, children: t }),
+            (0, i.jsx)("div", { className: W.qg, children: n }),
             (0, i.jsxs)("div", {
-                className: z.eF,
+                className: W.eF,
                 children: [
-                    (0, i.jsx)(m.vN3, {
+                    (0, i.jsx)(m.vN, {
                         children: (0, i.jsx)("input", {
                             type: "checkbox",
                             checked: o,
                             disabled: r,
-                            className: z.m8,
+                            className: W.m8,
                             onChange: function (e) {
                                 a(e.target.checked);
                             },
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: z.Ew,
-                        children: (0, i.jsx)(m.A9s, {
+                        className: W.Ew,
+                        children: (0, i.jsx)(h.A, {
                             size: "md",
                             color: "currentColor",
-                            className: z.pc,
+                            className: W.pc,
                             "aria-hidden": !0,
                         }),
                     }),
@@ -76,24 +87,24 @@ function G(e) {
         ],
     });
 }
-function H(e) {
+function Y(e) {
     let { title: t, selectAllText: n, benefits: l, dupeBenefits: r, selectedBenefits: s, onToggleBenefit: a } = e,
         o = l.every((e) => s.has(e));
     return l.length > 0
         ? (0, i.jsxs)("div", {
-              className: z.uW,
+              className: W.uW,
               children: [
-                  (0, i.jsx)(m.Heading, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+                  (0, i.jsx)(x.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
                   l.length - r.size > 1 &&
                       (0, i.jsx)("div", {
-                          className: z.p_,
-                          children: (0, i.jsx)(G, {
-                              icon: (0, i.jsx)(m.fdC, { size: "md", color: "currentColor", className: z.aL }),
+                          className: W.p_,
+                          children: (0, i.jsx)(U, {
+                              icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor", className: W.aL }),
                               checked: o,
                               onChange: function (e) {
                                   for (let t of l) r.has(t) || a(t, e);
                               },
-                              children: (0, i.jsx)(m.Text, {
+                              children: (0, i.jsx)(g.E, {
                                   color: "text-strong",
                                   variant: "text-md/normal",
                                   children: n,
@@ -101,33 +112,33 @@ function H(e) {
                           }),
                       }),
                   (0, i.jsx)("div", {
-                      className: z.p_,
+                      className: W.p_,
                       children: l.map((e) =>
                           (0, i.jsxs)(
-                              G,
+                              U,
                               {
-                                  icon: (0, i.jsx)(F, {
+                                  icon: (0, i.jsx)(Z, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
-                                      className: z.aL,
+                                      className: W.aL,
                                   }),
                                   checked: s.has(e),
                                   disabled: r.has(e),
                                   onChange: (t) => a(e, t),
                                   children: [
-                                      (0, i.jsx)(m.Text, {
+                                      (0, i.jsx)(g.E, {
                                           color: "text-strong",
                                           variant: "text-md/semibold",
-                                          children: (0, E.A)(e),
+                                          children: (0, J.A)(e),
                                       }),
-                                      (0, i.jsx)(m.Text, {
+                                      (0, i.jsx)(g.E, {
                                           color: "interactive-text-default",
                                           variant: "text-sm/normal",
                                           children: e.description,
                                       }),
                                   ],
                               },
-                              (0, w.nh)(e),
+                              (0, G.nh)(e),
                           ),
                       ),
                   }),
@@ -135,7 +146,7 @@ function H(e) {
           })
         : null;
 }
-function K(e) {
+function X(e) {
     let {
             transitionState: t,
             fromSubscriptionListing: n,
@@ -144,25 +155,25 @@ function K(e) {
             onSubmit: o,
             onClose: c,
         } = e,
-        x = n.role_benefits.benefits,
-        [h, u] = l.useState(() => new Set(x)),
-        g = l.useMemo(() => x.filter(w.B1), [x]),
-        j = (0, B.A)(g),
-        f = l.useMemo(() => x.filter(w.b1), [x]),
+        m = n.role_benefits.benefits,
+        [h, x] = l.useState(() => new Set(m)),
+        u = l.useMemo(() => m.filter(G.B1), [m]),
+        j = (0, q.A)(u),
+        f = l.useMemo(() => m.filter(G.b1), [m]),
         _ = l.useMemo(() => new Set(j.filter((e) => r.some((t) => t.ref_id === e.ref_id))), [j, r]),
         p = l.useMemo(() => new Set(f.filter((e) => s.some((t) => (0, d.A)(e, t)))), [s, f]);
     function v(e, t) {
-        u((n) => {
+        x((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
         });
     }
     function N(e) {
         e.preventDefault();
-        let t = x.filter((e) => h.has(e));
+        let t = m.filter((e) => h.has(e));
         o(
-            t.filter(w.B1).filter((e) => !_.has(e)),
-            t.filter(w.b1).filter((e) => !p.has(e)),
+            t.filter(G.B1).filter((e) => !_.has(e)),
+            t.filter(G.b1).filter((e) => !p.has(e)),
         ),
             c();
     }
@@ -171,26 +182,26 @@ function K(e) {
         children: (0, i.jsxs)(a.Modal, {
             transitionState: t,
             onClose: c,
-            title: L.intl.format(L.t["7zpiYL"], { tierName: n.name }).toString(),
+            title: Q.intl.format(Q.t["7zpiYL"], { tierName: n.name }).toString(),
             actions: [
-                { variant: "secondary", text: L.intl.string(L.t["ETE/oC"]), onClick: c },
-                { variant: "primary", text: L.intl.string(L.t["27a21y"]), disabled: 0 === h.size, onClick: N },
+                { variant: "secondary", text: Q.intl.string(Q.t["ETE/oC"]), onClick: c },
+                { variant: "primary", text: Q.intl.string(Q.t["27a21y"]), disabled: 0 === h.size, onClick: N },
             ],
             children: [
                 0 === j.length &&
                     0 === f.length &&
-                    (0, i.jsx)(m.Text, { variant: "text-md/normal", children: L.intl.string(L.t["I+16xv"]) }),
-                (0, i.jsx)(H, {
-                    title: L.intl.string(L.t.S2kKzP),
-                    selectAllText: L.intl.string(L.t["5Q/fLO"]),
+                    (0, i.jsx)(g.E, { variant: "text-md/normal", children: Q.intl.string(Q.t["I+16xv"]) }),
+                (0, i.jsx)(Y, {
+                    title: Q.intl.string(Q.t.S2kKzP),
+                    selectAllText: Q.intl.string(Q.t["5Q/fLO"]),
                     benefits: j,
                     dupeBenefits: _,
                     selectedBenefits: h,
                     onToggleBenefit: v,
                 }),
-                (0, i.jsx)(H, {
-                    title: L.intl.string(L.t.RdwKw7),
-                    selectAllText: L.intl.string(L.t.aJPLVE),
+                (0, i.jsx)(Y, {
+                    title: Q.intl.string(Q.t.RdwKw7),
+                    selectAllText: Q.intl.string(Q.t.aJPLVE),
                     benefits: f,
                     dupeBenefits: p,
                     selectedBenefits: h,
@@ -200,57 +211,57 @@ function K(e) {
         }),
     });
 }
-function Q(e) {
+function ee(e) {
     let { guildId: t, role: n, channelCount: l, onSelect: r } = e,
-        s = (0, _.$7)({ guildId: t, roleId: n.id, size: R });
-    return (0, i.jsxs)(m.DUT, {
-        className: z.xf,
+        s = (0, w.$7)({ guildId: t, roleId: n.id, size: V });
+    return (0, i.jsxs)(j.D, {
+        className: W.xf,
         onClick: r,
         children: [
             (0, i.jsx)("div", {
-                className: z.N,
+                className: W.N,
                 children:
                     null != s
-                        ? (0, i.jsx)(p.A, { ...s })
-                        : (0, i.jsx)(m.iTF, {
+                        ? (0, i.jsx)(y.A, { ...s })
+                        : (0, i.jsx)(f.i, {
                               size: "custom",
                               width: 23,
                               height: 23,
-                              color: n.colorString ?? M.TpD,
-                              className: z.bO,
+                              color: n.colorString ?? P.TpD,
+                              className: W.bO,
                           }),
             }),
             (0, i.jsxs)("div", {
-                className: z.qg,
+                className: W.qg,
                 children: [
-                    (0, i.jsx)(m.Text, {
+                    (0, i.jsx)(g.E, {
                         color: "text-strong",
                         variant: "text-md/normal",
-                        className: z.__invalid_benefitTitle,
+                        className: W.__invalid_benefitTitle,
                         children: n.name,
                     }),
-                    (0, i.jsx)(m.Text, {
+                    (0, i.jsx)(g.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: L.intl.format(L.t["2KzH89"], { num: l }),
+                        children: Q.intl.format(Q.t["2KzH89"], { num: l }),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: z.eF, children: (0, i.jsx)(S.A, { direction: S.A.Directions.RIGHT }) }),
+            (0, i.jsx)("div", { className: W.eF, children: (0, i.jsx)(R.A, { direction: R.A.Directions.RIGHT }) }),
         ],
     });
 }
-function q(e) {
+function et(e) {
     let { guild: t, onSelect: n } = e,
-        r = (0, o.bG)([b.A], () => b.A.getSortedRoles(t.id)),
-        s = (0, o.bG)([C.A], () => C.A.getCategories(t.id)),
+        r = (0, o.bG)([D.A], () => D.A.getSortedRoles(t.id)),
+        s = (0, o.bG)([B.A], () => B.A.getCategories(t.id)),
         a = l.useMemo(
             () =>
                 s._categories.flatMap((e) =>
                     s[e.channel.id]
                         .filter((e) => {
                             let { channel: t } = e;
-                            return v.JT.has(t.type);
+                            return M.JT.has(t.type);
                         })
                         .map((e) => {
                             let { channel: t } = e;
@@ -262,63 +273,63 @@ function q(e) {
         d = l.useMemo(
             () =>
                 r.flatMap((e) => {
-                    if ((0, N.Oy)(e) || e.tags?.subscription_listing_id != null || (0, N.sx)(e, M.Lti)) return [];
-                    let t = (0, y.A)(a, e).length;
+                    if ((0, T.Oy)(e) || e.tags?.subscription_listing_id != null || (0, T.sx)(e, P.Lti)) return [];
+                    let t = (0, K.A)(a, e).length;
                     return t > 0 ? { role: e, channelCount: t } : [];
                 }),
             [r, a],
         );
     return d.length > 0
         ? (0, i.jsx)("div", {
-              className: z.p_,
+              className: W.p_,
               children: d.map((e) =>
                   (0, i.jsx)(
-                      Q,
+                      ee,
                       { guildId: t.id, role: e.role, channelCount: e.channelCount, onSelect: () => n(e.role) },
                       e.role.id,
                   ),
               ),
           })
-        : (0, i.jsx)(m.Text, { variant: "text-md/normal", children: L.intl.string(L.t.u09gKk) });
+        : (0, i.jsx)(g.E, { variant: "text-md/normal", children: Q.intl.string(Q.t.u09gKk) });
 }
-function J(e) {
+function en(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
-        r = (0, o.bG)([A.A], () => A.A.getGuild(n));
+        r = (0, o.bG)([L.A], () => L.A.getGuild(n));
     return null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsxs)(m.rQ0, {
+                  (0, i.jsxs)(_.rQ, {
                       "data-migration-pending": !0,
                       children: [
-                          (0, i.jsx)(m.Heading, {
-                              id: D,
+                          (0, i.jsx)(x.D, {
+                              id: $,
                               variant: "heading-md/semibold",
-                              children: L.intl.string(L.t["3JrZ/P"]),
+                              children: Q.intl.string(Q.t["3JrZ/P"]),
                           }),
-                          (0, i.jsx)(m.s_y, { "data-migration-pending": !0, className: z.iT, onClick: t }),
+                          (0, i.jsx)(_.s_, { "data-migration-pending": !0, className: W.iT, onClick: t }),
                       ],
                   }),
-                  (0, i.jsx)(m.$mQ, {
+                  (0, i.jsx)(_.$m, {
                       "data-migration-pending": !0,
-                      className: z.jE,
-                      children: (0, i.jsx)(q, { guild: r, onSelect: l }),
+                      className: W.jE,
+                      children: (0, i.jsx)(et, { guild: r, onSelect: l }),
                   }),
               ],
           });
 }
-function P(e) {
+function ei(e) {
     let { onClose: t, guildId: n, role: r, onCancel: s, onImport: a } = e,
         o = l.useRef(r);
     null != r && (o.current = r);
     let d = r ?? o.current,
-        c = (0, h.A)(() => {
-            let e = C.A.getCategories(n);
+        c = (0, A.A)(() => {
+            let e = B.A.getCategories(n);
             return e._categories.flatMap((t) =>
                 e[t.channel.id]
                     .filter((e) => {
                         let { channel: t } = e;
-                        return v.JT.has(t.type);
+                        return M.JT.has(t.type);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -326,60 +337,60 @@ function P(e) {
                     }),
             );
         }),
-        x = l.useMemo(() => (0, y.A)(c, d), [c, d]),
-        [j, f] = l.useState(() => new Set(x.map((e) => e.id)));
-    function _(e, t) {
-        f((n) => {
+        m = l.useMemo(() => (0, K.A)(c, d), [c, d]),
+        [h, j] = l.useState(() => new Set(m.map((e) => e.id)));
+    function f(e, t) {
+        j((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
         });
     }
     return (0, i.jsxs)("form", {
         onSubmit: function (e) {
-            e.preventDefault(), a(x.map((e) => e.id).filter((e) => j.has(e))), t();
+            e.preventDefault(), a(m.map((e) => e.id).filter((e) => h.has(e))), t();
         },
-        className: z.ID,
+        className: W.ID,
         children: [
-            (0, i.jsxs)(m.rQ0, {
+            (0, i.jsxs)(_.rQ, {
                 "data-migration-pending": !0,
                 children: [
-                    (0, i.jsx)(m.Heading, {
-                        id: O,
+                    (0, i.jsx)(x.D, {
+                        id: H,
                         variant: "heading-md/semibold",
-                        children: L.intl.format(L.t.iuPodG, { roleName: d.name }),
+                        children: Q.intl.format(Q.t.iuPodG, { roleName: d.name }),
                     }),
-                    (0, i.jsx)(m.s_y, { "data-migration-pending": !0, className: z.iT, onClick: t }),
+                    (0, i.jsx)(_.s_, { "data-migration-pending": !0, className: W.iT, onClick: t }),
                 ],
             }),
-            (0, i.jsxs)(m.$mQ, {
+            (0, i.jsxs)(_.$m, {
                 "data-migration-pending": !0,
-                className: z.jE,
+                className: W.jE,
                 children: [
-                    x.length > 1 &&
+                    m.length > 1 &&
                         (0, i.jsx)("div", {
-                            className: z.p_,
-                            children: (0, i.jsx)(G, {
-                                icon: (0, i.jsx)(m.fdC, { size: "md", color: "currentColor" }),
-                                checked: j.size === x.length,
+                            className: W.p_,
+                            children: (0, i.jsx)(U, {
+                                icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor" }),
+                                checked: h.size === m.length,
                                 onChange: function (e) {
-                                    for (let t of x) _(t.id, e);
+                                    for (let t of m) f(t.id, e);
                                 },
-                                children: (0, i.jsx)(m.Text, {
+                                children: (0, i.jsx)(g.E, {
                                     color: "text-strong",
                                     variant: "text-md/normal",
-                                    children: L.intl.string(L.t["5Q/fLO"]),
+                                    children: Q.intl.string(Q.t["5Q/fLO"]),
                                 }),
                             }),
                         }),
                     (0, i.jsx)("div", {
-                        className: z.p_,
-                        children: x.map((e) => {
-                            let t = (0, g._U)(e.type) ?? m.N$i;
+                        className: W.p_,
+                        children: m.map((e) => {
+                            let t = (0, I._U)(e.type) ?? p.N;
                             return (0, i.jsx)(
-                                G,
+                                U,
                                 {
                                     icon: (0, i.jsx)("div", {
-                                        className: z.aL,
+                                        className: W.aL,
                                         children: (0, i.jsx)(t, {
                                             size: "custom",
                                             color: "currentColor",
@@ -387,13 +398,13 @@ function P(e) {
                                             height: "100%",
                                         }),
                                     }),
-                                    checked: j.has(e.id),
-                                    onChange: (t) => _(e.id, t),
-                                    children: (0, i.jsx)(m.Text, {
+                                    checked: h.has(e.id),
+                                    onChange: (t) => f(e.id, t),
+                                    children: (0, i.jsx)(g.E, {
                                         color: "text-strong",
                                         variant: "text-md/normal",
-                                        className: z.__invalid_benefitTitle,
-                                        children: (0, u.m1)(e, I.default, T.A),
+                                        className: W.__invalid_benefitTitle,
+                                        children: (0, E.m1)(e, O.default, z.A),
                                     }),
                                 },
                                 e.id,
@@ -402,40 +413,36 @@ function P(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(m.jlY, {
+            (0, i.jsx)(_.jl, {
                 "data-migration-pending": !0,
-                children: (0, i.jsxs)(m.ButtonGroup, {
+                children: (0, i.jsxs)(v.e, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, i.jsx)(m.Button, {
-                            variant: "primary",
-                            text: L.intl.string(L.t["1j8Sow"]),
-                            type: "submit",
-                        }),
-                        (0, i.jsx)(m.Button, { variant: "secondary", text: L.intl.string(L.t["ETE/oC"]), onClick: s }),
+                        (0, i.jsx)(N.$, { variant: "primary", text: Q.intl.string(Q.t["1j8Sow"]), type: "submit" }),
+                        (0, i.jsx)(N.$, { variant: "secondary", text: Q.intl.string(Q.t["ETE/oC"]), onClick: s }),
                     ],
                 }),
             }),
         ],
     });
 }
-function W(e) {
+function el(e) {
     let { transitionState: t, guildId: n, onClose: r, onImport: s } = e,
         [a, o] = l.useState();
-    return (0, i.jsx)(m.EOs, {
+    return (0, i.jsx)(_.EO, {
         "data-migration-pending": !0,
         transitionState: t,
-        "aria-labelledby": null == a ? D : O,
+        "aria-labelledby": null == a ? $ : H,
         parentComponent: "ImportBenefitsModal",
-        children: (0, i.jsxs)(m.tN_, {
+        children: (0, i.jsxs)(b.t, {
             contentDisplay: "flex",
             activeSlide: +(null != a),
             width: 440,
             children: [
-                (0, i.jsx)(m.q7S, { id: 0, children: (0, i.jsx)(J, { onClose: r, guildId: n, onSelect: o }) }),
-                (0, i.jsx)(m.q7S, {
+                (0, i.jsx)(b.q, { id: 0, children: (0, i.jsx)(en, { onClose: r, guildId: n, onSelect: o }) }),
+                (0, i.jsx)(b.q, {
                     id: 1,
-                    children: (0, i.jsx)(P, {
+                    children: (0, i.jsx)(ei, {
                         onClose: r,
                         guildId: n,
                         role: a,

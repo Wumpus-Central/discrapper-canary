@@ -1,32 +1,30 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(976860),
-    r = n(779733),
-    a = n(652215),
-    o = n(985018),
-    d = n(10478),
-    c = n(148514);
-function u() {
+var s = n(534514),
+    l = n(834730),
+    a = n(821609),
+    r = n(976860),
+    o = n(779733),
+    d = n(652215),
+    u = n(985018),
+    c = n(10478),
+    g = n(148514);
+function m() {
     return (0, i.jsxs)("div", {
-        className: d.p$,
+        className: c.p$,
         children: [
-            (0, i.jsx)("img", { src: c, alt: "", className: d.Sl }),
-            (0, i.jsx)(s.Heading, {
-                className: d.h8,
-                variant: "heading-lg/extrabold",
-                children: o.intl.string(o.t.Z1OZCV),
-            }),
-            (0, i.jsx)(s.Text, { className: d.h8, variant: "text-md/normal", children: o.intl.string(o.t.ZSt4Tt) }),
+            (0, i.jsx)("img", { src: g, alt: "", className: c.Sl }),
+            (0, i.jsx)(s.D, { className: c.h8, variant: "heading-lg/extrabold", children: u.intl.string(u.t.Z1OZCV) }),
+            (0, i.jsx)(l.E, { className: c.h8, variant: "text-md/normal", children: u.intl.string(u.t.ZSt4Tt) }),
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: d.h8,
-                children: (0, i.jsx)(s.Button, {
+                className: c.h8,
+                children: (0, i.jsx)(a.$, {
                     variant: "primary",
-                    text: o.intl.string(o.t.jQ3pqt),
+                    text: u.intl.string(u.t.jQ3pqt),
                     onClick: () => {
-                        (0, l.pX)(a.BVt.GUILD_DISCOVERY), (0, r.default)();
+                        (0, r.pX)(d.BVt.GUILD_DISCOVERY), (0, o.default)();
                     },
                 }),
             }),

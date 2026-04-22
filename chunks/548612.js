@@ -1,56 +1,58 @@
-l.d(t, { A: () => u });
-var n = l(627968),
+l.d(n, { A: () => A });
+var t = l(627968),
     i = l(64700),
-    s = l(317097),
-    a = l(397927),
-    r = l(930349),
-    o = l(985018),
-    d = l(881091);
-function c(e) {
-    let { color: t, suggestedColors: l, disabled: r, ariaLabel: o, onSelect: c } = e,
-        u = i.useRef(null),
-        m = (0, s.Hl)(t);
-    return (0, n.jsx)(a.YNO, {
-        targetElementRef: u,
-        renderPopout: (e) => (0, n.jsx)(a.VNw, { ...e, value: t, onChange: c, suggestedColors: l, showEyeDropper: !0 }),
+    r = l(317097),
+    s = l(265872),
+    a = l(508274),
+    o = l(939249),
+    d = l(930349),
+    c = l(985018),
+    u = l(298387);
+function g(e) {
+    let { color: n, suggestedColors: l, disabled: d, ariaLabel: c, onSelect: g } = e,
+        A = i.useRef(null),
+        m = (0, r.Hl)(n);
+    return (0, t.jsx)(s.Y, {
+        targetElementRef: A,
+        renderPopout: (e) => (0, t.jsx)(a.VN, { ...e, value: n, onChange: g, suggestedColors: l, showEyeDropper: !0 }),
         children: (e) => {
-            let { onClick: t, ...l } = e;
-            return (0, n.jsx)(a.DUT, {
+            let { onClick: n, ...l } = e;
+            return (0, t.jsx)(o.D, {
                 ...l,
-                innerRef: u,
-                className: d.Dh,
-                onClick: r ? void 0 : t,
-                "aria-label": o,
-                "aria-disabled": r,
-                tabIndex: r ? -1 : 0,
-                children: (0, n.jsx)("div", { className: d.Hy, style: { backgroundColor: m } }),
+                innerRef: A,
+                className: u.Dh,
+                onClick: d ? void 0 : n,
+                "aria-label": c,
+                "aria-disabled": d,
+                tabIndex: d ? -1 : 0,
+                children: (0, t.jsx)("div", { className: u.Hy, style: { backgroundColor: m } }),
             });
         },
     });
 }
-function u(e) {
+function A(e) {
     let {
-            primaryColor: t,
+            primaryColor: n,
             secondaryColor: l,
             onSelectPrimaryColor: i,
-            onSelectSecondaryColor: a,
-            suggestedColors: u,
-            disabled: m = !1,
+            onSelectSecondaryColor: s,
+            suggestedColors: a,
+            disabled: o = !1,
         } = e,
-        p = (0, s.Hl)(t),
-        x = (0, s.Hl)(l),
-        A = `linear-gradient(to bottom, ${p}, ${x})`,
-        g = o.intl.formatToPlainString(o.t.FquTfm, { colorLabel: p }),
-        f = o.intl.formatToPlainString(o.t.xOnm4z, { colorLabel: x });
-    return (0, n.jsx)(r.Yt, {
+        A = (0, r.Hl)(n),
+        m = (0, r.Hl)(l),
+        f = `linear-gradient(to bottom, ${A}, ${m})`,
+        p = c.intl.formatToPlainString(c.t.FquTfm, { colorLabel: A }),
+        x = c.intl.formatToPlainString(c.t.xOnm4z, { colorLabel: m });
+    return (0, t.jsx)(d.Yt, {
         variant: "square",
-        disabled: m,
-        children: (0, n.jsxs)("div", {
-            className: d.D7,
-            style: { background: A },
+        disabled: o,
+        children: (0, t.jsxs)("div", {
+            className: u.D7,
+            style: { background: f },
             children: [
-                (0, n.jsx)(c, { color: t, suggestedColors: u, ariaLabel: g, onSelect: i, disabled: m }),
-                (0, n.jsx)(c, { color: l, suggestedColors: u, ariaLabel: f, onSelect: a, disabled: m }),
+                (0, t.jsx)(g, { color: n, suggestedColors: a, ariaLabel: p, onSelect: i, disabled: o }),
+                (0, t.jsx)(g, { color: l, suggestedColors: a, ariaLabel: x, onSelect: s, disabled: o }),
             ],
         }),
     });

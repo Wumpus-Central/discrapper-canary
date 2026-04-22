@@ -1,125 +1,126 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     r = n(417597),
-    l = n(397927),
-    a = n(830215),
-    o = n(730134),
-    d = n(598047),
-    c = n(854378),
-    u = n(414121),
-    h = n(525711),
-    _ = n(787610),
-    p = n(293731),
-    g = n(961350),
-    m = n(723702),
-    A = n(427262),
-    f = n(837921),
-    E = n(652215),
-    x = n(818348),
-    I = n(985018),
-    N = n(947089),
-    v = n(473169);
-let j = n(906118);
-function S(e) {
+    l = n(765178),
+    a = n(289873),
+    o = n(834730),
+    c = n(331322),
+    d = n(123292),
+    u = n(778712),
+    _ = n(685094),
+    h = n(830215),
+    m = n(730134),
+    p = n(598047),
+    g = n(854378),
+    A = n(414121),
+    f = n(525711),
+    x = n(787610),
+    E = n(293731),
+    I = n(961350),
+    v = n(723702),
+    N = n(427262),
+    j = n(837921),
+    C = n(652215),
+    T = n(818348),
+    b = n(985018),
+    S = n(611008),
+    y = n(818050);
+let R = n(906118);
+function w(e) {
     let { text: t = "" } = e,
         [n, r] = s.useState(!1);
     return (
         s.useEffect(() => {
             let e = new Image();
-            (e.src = j), (e.onload = () => r(!0)), (e.onerror = () => r(!0));
-        }, [j]),
+            (e.src = R), (e.onload = () => r(!0)), (e.onerror = () => r(!0));
+        }, [R]),
         s.useEffect(() => {
-            n && l.ORC.announce(I.intl.string(I.t.j2p125));
+            n && l.O.announce(b.intl.string(b.t.j2p125));
         }, [n]),
         (0, i.jsx)("div", {
-            className: N.Ac,
+            className: S.Ac,
             children:
                 "" !== t && n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(u.Ay, { className: N.JB, size: 160, text: t }),
-                              (0, i.jsx)("div", { className: N.R6, children: (0, i.jsx)("img", { src: j, alt: "" }) }),
+                              (0, i.jsx)(A.Ay, { className: S.JB, size: 160, text: t }),
+                              (0, i.jsx)("div", { className: S.R6, children: (0, i.jsx)("img", { src: R, alt: "" }) }),
                           ],
                       })
                     : (0, i.jsx)("div", {
-                          className: N.R6,
-                          "aria-label": I.intl.string(I.t.BUGkVF),
+                          className: S.R6,
+                          "aria-label": b.intl.string(b.t.BUGkVF),
                           "aria-busy": !0,
-                          children: (0, i.jsx)(l.y$y, {
-                              className: N.JB,
-                              type: l.y$y.Type.WANDERING_CUBES,
+                          children: (0, i.jsx)(a.y, {
+                              className: S.JB,
+                              type: a.y.Type.WANDERING_CUBES,
                               "aria-hidden": !0,
                           }),
                       }),
         })
     );
 }
-let T = (e) => {
+let O = (e) => {
     let { className: t, children: n } = e;
-    return (0, i.jsx)(l.Text, {
-        variant: "text-md/normal",
-        color: "text-feedback-critical",
-        className: t,
-        children: n,
-    });
+    return (0, i.jsx)(o.E, { variant: "text-md/normal", color: "text-feedback-critical", className: t, children: n });
 };
-function C(e) {
-    let { state: t, cancel: n, errorMessage: s, conditionalMediationAbortController: r, isPasswordlessActive: d } = e;
+function L(e) {
+    let { state: t, cancel: n, errorMessage: s, conditionalMediationAbortController: r, isPasswordlessActive: l } = e;
     switch (t.step) {
-        case h.b.INITIALIZING:
-        case h.b.PENDING_REMOTE_INIT:
+        case f.b.INITIALIZING:
+        case f.b.PENDING_REMOTE_INIT:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(S, {
-                        text: t.step === h.b.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
+                    (0, i.jsx)(w, {
+                        text: t.step === f.b.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                     }),
-                    (0, i.jsx)(c.hE, { className: v.QB, children: I.intl.string(I.t.UPiHaL) }),
+                    (0, i.jsx)(g.hE, { className: y.QB, children: b.intl.string(b.t.UPiHaL) }),
                     null != s
-                        ? (0, i.jsx)(T, { children: s })
-                        : (0, i.jsx)(c.tK, { children: I.intl.format(I.t["Qq+A6i"], {}) }),
-                    (0, i.jsx)(l.BJc, {
+                        ? (0, i.jsx)(O, { children: s })
+                        : (0, i.jsx)(g.tK, { children: b.intl.format(b.t["Qq+A6i"], {}) }),
+                    (0, i.jsx)(c.B, {
                         padding: 8,
                         align: "center",
-                        children: (0, i.jsx)(l.QWc, {
-                            text: I.intl.string(I.t["/kpMDt"]),
+                        children: (0, i.jsx)(d.Q, {
+                            text: b.intl.string(b.t["/kpMDt"]),
                             textVariant: "text-sm/normal",
                             onClick: () => {
                                 let e;
                                 return (
                                     (e =
-                                        m.isPlatformEmbedded && f.Ay.supportsFeature(E.BYE.WEBAUTHN)
-                                            ? f.Ay.webAuthnAuthenticate
-                                            : p.J),
-                                    void a.A.authenticatePasswordless({
+                                        v.isPlatformEmbedded && j.Ay.supportsFeature(C.BYE.WEBAUTHN)
+                                            ? j.Ay.webAuthnAuthenticate
+                                            : E.J),
+                                    void h.A.authenticatePasswordless({
                                         authenticateFunc: e,
                                         conditionalMediationAbortController: r,
                                     }).catch(() => {})
                                 );
                             },
-                            disabled: d,
+                            disabled: l,
                         }),
                     }),
                 ],
             });
-        case h.b.PENDING_TICKET: {
+        case f.b.PENDING_TICKET: {
             let { user: e } = t;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(o.A, {
-                        className: N.b4,
+                    (0, i.jsx)(m.A, {
+                        className: S.b4,
                         user: e,
-                        size: l._3J.SIZE_120,
+                        size: u._3.SIZE_120,
                         isMobile: !0,
-                        status: x.cl.ONLINE,
+                        status: T.cl.ONLINE,
                     }),
-                    (0, i.jsx)(c.hE, { className: v.QB, children: I.intl.string(I.t.apGCUT) }),
-                    (0, i.jsx)(c.tK, { children: I.intl.format(I.t.Cbl5JK, { username: `${A.Ay.getUserTag(e)}` }) }),
+                    (0, i.jsx)(g.hE, { className: y.QB, children: b.intl.string(b.t.apGCUT) }),
+                    (0, i.jsx)(g.tK, { children: b.intl.format(b.t.Cbl5JK, { username: `${N.Ay.getUserTag(e)}` }) }),
                     (0, i.jsx)("div", {
-                        className: N.Z,
-                        children: (0, i.jsx)(l.QWc, {
-                            text: I.intl.string(I.t.nOOhwo),
+                        className: S.Z,
+                        children: (0, i.jsx)(d.Q, {
+                            text: b.intl.string(b.t.nOOhwo),
                             textVariant: "text-sm/normal",
                             onClick: n,
                         }),
@@ -127,40 +128,40 @@ function C(e) {
                 ],
             });
         }
-        case h.b.PENDING_LOGIN:
-        case h.b.FINISH:
-            return (0, i.jsx)(l.y$y, { type: l.y$y.Type.WANDERING_CUBES });
+        case f.b.PENDING_LOGIN:
+        case f.b.FINISH:
+            return (0, i.jsx)(a.y, { type: a.y.Type.WANDERING_CUBES });
     }
 }
-function y(e) {
+function k(e) {
     let { onAuthenticateSuccess: t, conditionalMediationAbortController: n } = e,
-        s = (0, r.bG)([g.default], () => g.default.getIsPasswordlessActive()),
-        a = (0, d.A)(),
-        { state: o, cancel: c } = (0, _.H)(t, a),
-        u = (function (e) {
+        s = (0, r.bG)([I.default], () => I.default.getIsPasswordlessActive()),
+        l = (0, p.A)(),
+        { state: a, cancel: o } = (0, x.H)(t, l),
+        c = (function (e) {
             switch (e) {
-                case h.b.INITIALIZING:
-                case h.b.PENDING_REMOTE_INIT:
+                case f.b.INITIALIZING:
+                case f.b.PENDING_REMOTE_INIT:
                     return 0;
-                case h.b.PENDING_TICKET:
-                case h.b.PENDING_LOGIN:
-                case h.b.FINISH:
+                case f.b.PENDING_TICKET:
+                case f.b.PENDING_LOGIN:
+                case f.b.FINISH:
                     return 1;
             }
-        })(o.step);
+        })(a.step);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: N.AC }),
-            (0, i.jsx)(l.YC2, {
+            (0, i.jsx)("div", { className: S.AC }),
+            (0, i.jsx)(_.Y, {
                 fillParent: !0,
-                className: N.ZF,
-                step: u,
+                className: S.ZF,
+                step: c,
                 steps: [0, 1],
                 children: (0, i.jsx)("div", {
-                    className: N.vP,
-                    children: (0, i.jsx)(C, {
-                        state: o,
-                        cancel: c,
+                    className: S.vP,
+                    children: (0, i.jsx)(L, {
+                        state: a,
+                        cancel: o,
                         conditionalMediationAbortController: n,
                         isPasswordlessActive: s,
                     }),

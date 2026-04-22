@@ -1,18 +1,18 @@
-t.d(n, { A: () => o });
-var l = t(627968);
-t(64700);
-var i = t(311907),
-    a = t(397927),
-    s = t(55619),
-    r = t(351906),
-    c = t(985018);
-function o() {
-    let e = (0, i.bG)([r.A], () => r.A.enabled, []);
-    return (0, l.jsx)(a.sLh, {
+n.d(t, { A: () => d });
+var i = n(627968);
+n(64700);
+var s = n(311907),
+    l = n(477782),
+    a = n(55619),
+    r = n(351906),
+    o = n(985018);
+function d() {
+    let e = (0, s.bG)([r.A], () => r.A.enabled, []);
+    return (0, i.jsx)(l.sL, {
         id: "streamer-mode-toggle",
-        label: c.intl.string(c.t.p9ZAJZ),
+        label: o.intl.string(o.t.p9ZAJZ),
         action: () => {
-            s.A.setEnabled(!e);
+            a.A.setEnabled(!e);
         },
         checked: e,
     });

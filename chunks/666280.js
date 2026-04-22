@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     aL: "rowIcon_cb32c7",
     Ne: "appDetailsRowContainer_cb32c7",

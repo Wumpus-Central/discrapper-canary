@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Xp: "stickyContainer__57d3f",
     LO: "stickyBannerContainer__57d3f",

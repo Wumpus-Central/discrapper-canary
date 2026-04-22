@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split(
             "_",
@@ -30,7 +28,7 @@
                 return i + (r(e) ? "lata" : "lat");
         }
     }
-    return e.defineLocale("pl", {
+    e.defineLocale("pl", {
         months: function (e, r) {
             return e
                 ? "" === r
@@ -104,4 +102,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

@@ -1,53 +1,54 @@
-i.d(e, { default: () => k });
+i.d(e, { default: () => _ });
 var n = i(627968),
     a = i(64700),
     l = i(110259),
-    s = i(158954),
-    r = i(397927),
+    s = i(189213),
+    r = i(331322),
+    o = i(192308),
     c = i(632738),
-    o = i(975571),
-    d = i(935649),
-    u = i(847599),
-    p = i(652215),
-    A = i(536242),
-    f = i(985018);
-function k(t) {
-    let { transitionState: e, onClose: k } = t,
-        _ = a.useCallback(() => {
-            k(), d.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.ACCOUNT_AGE_GROUP });
-        }, [k]),
+    d = i(975571),
+    u = i(935649),
+    p = i(847599),
+    A = i(652215),
+    f = i(516761),
+    k = i(985018);
+function _(t) {
+    let { transitionState: e, onClose: _ } = t,
         b = a.useCallback(() => {
-            k(),
-                (0, r.mMO)(async () => {
+            _(), u.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.ACCOUNT_AGE_GROUP });
+        }, [_]),
+        h = a.useCallback(() => {
+            _(),
+                (0, o.openModalLazy)(async () => {
                     let { default: t } = await i.e("956").then(i.bind(i, 253463));
                     return (e) => (0, n.jsx)(t, { ...e });
                 });
-        }, [k]),
-        h = a.useCallback(() => {
-            d.A.openUrl(o.A.getArticleURL(p.MVz.TIGGER_PAWTECT_LEARN_MORE));
+        }, [_]),
+        C = a.useCallback(() => {
+            u.A.openUrl(d.A.getArticleURL(A.MVz.TIGGER_PAWTECT_LEARN_MORE));
         }, []);
     return (0, n.jsx)(s.Modal, {
         transitionState: e,
-        onClose: k,
-        title: f.intl.string(A.default.PY4MA0),
-        subtitle: f.intl.format(A.default["1DN29p"], { handleOnHelpUrlHook: h }),
+        onClose: _,
+        title: k.intl.string(f.default.PY4MA0),
+        subtitle: k.intl.format(f.default["1DN29p"], { handleOnHelpUrlHook: C }),
         actions: [],
         trackingProps: { impression: { impressionName: l.ImpressionNames.USER_AGE_VERIFICATION_RESET_OPTIONS } },
-        children: (0, n.jsxs)(s.BJc, {
+        children: (0, n.jsxs)(r.B, {
             direction: "vertical",
             gap: 8,
             children: [
                 (0, n.jsx)(c.PQ, {
                     variant: "clickable",
-                    title: f.intl.string(A.default.SH6Tcv),
-                    description: f.intl.string(A.default.rJiO86),
-                    onButtonPress: _,
+                    title: k.intl.string(f.default.SH6Tcv),
+                    description: k.intl.string(f.default.rJiO86),
+                    onButtonPress: b,
                 }),
                 (0, n.jsx)(c.PQ, {
                     variant: "clickable",
-                    title: f.intl.string(A.default["bD//cU"]),
-                    description: f.intl.string(A.default.Gn0SAj),
-                    onButtonPress: b,
+                    title: k.intl.string(f.default["bD//cU"]),
+                    description: k.intl.string(f.default.Gn0SAj),
+                    onButtonPress: h,
                 }),
             ],
         }),

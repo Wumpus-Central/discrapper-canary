@@ -1,95 +1,102 @@
-n.d(t, { A: () => u });
-var i = n(627968),
-    l = n(64700),
-    a = n(397927),
-    s = n(429913),
-    r = n(486020),
-    o = n(403362),
-    c = n(985018),
-    d = n(688369);
-function u(e) {
+i.d(t, { A: () => j });
+var n = i(627968),
+    l = i(64700),
+    s = i(34188),
+    a = i(477782),
+    r = i(403581),
+    d = i(265872),
+    o = i(861672),
+    c = i(821609),
+    u = i(789645),
+    g = i(847374),
+    m = i(429913),
+    h = i(486020),
+    x = i(403362),
+    p = i(985018),
+    A = i(420641);
+function j(e) {
     let {
             title: t,
-            variant: n = "secondary",
-            handleOpenCollectiblesShop: u,
-            handleOpenGameShop: g,
-            handleAddNitroToWishlist: m,
-            socialLayerStorefrontApplicationIds: x,
+            variant: i = "secondary",
+            handleOpenCollectiblesShop: j,
+            handleOpenGameShop: f,
+            handleAddNitroToWishlist: I,
+            socialLayerStorefrontApplicationIds: v,
         } = e,
-        p = l.useRef(null),
-        [f, h] = l.useState(!1),
-        _ = (function (e) {
-            let { applications: t, handleOpenGameShop: n } = e;
+        S = l.useRef(null),
+        [E, y] = l.useState(!1),
+        b = (function (e) {
+            let { applications: t, handleOpenGameShop: i } = e;
             return l.useMemo(
                 () =>
-                    t.filter(o.Vq).map((e) => {
-                        let t = r.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 20 });
+                    t.filter(x.Vq).map((e) => {
+                        let t = h.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 20 });
                         return {
                             id: `browse-social-layer-storefront-${e.id}`,
-                            label: c.intl.formatToPlainString(c.t["HDT/rg"], { applicationName: e.name }),
-                            iconLeft: null != t ? () => (0, i.jsx)("img", { className: d.I, src: t, alt: "" }) : a.U1X,
-                            leadingAccessory: null != t ? { type: "image", src: t } : { type: "icon", icon: a.U1X },
-                            action: () => n?.(e.id),
+                            label: p.intl.formatToPlainString(p.t["HDT/rg"], { applicationName: e.name }),
+                            iconLeft: null != t ? () => (0, n.jsx)("img", { className: A.I, src: t, alt: "" }) : s.U,
+                            leadingAccessory: null != t ? { type: "image", src: t } : { type: "icon", icon: s.U },
+                            action: () => i?.(e.id),
                         };
                     }),
-                [t, n],
+                [t, i],
             );
-        })({ applications: (0, s.A)(x), handleOpenGameShop: g }),
-        A = l.useMemo(
+        })({ applications: (0, m.A)(v), handleOpenGameShop: f }),
+        w = l.useMemo(
             () =>
-                (0, i.jsxs)(a.rXV, {
+                (0, n.jsxs)(a.rX, {
                     children: [
-                        null != u &&
-                            (0, i.jsx)(a.Drp, {
+                        null != j &&
+                            (0, n.jsx)(a.Dr, {
                                 id: "browse-collectibles-shop",
-                                label: c.intl.string(c.t["5upuqx"]),
-                                iconLeft: a.U1X,
-                                leadingAccessory: { type: "icon", icon: a.U1X },
-                                action: u,
+                                label: p.intl.string(p.t["5upuqx"]),
+                                iconLeft: s.U,
+                                leadingAccessory: { type: "icon", icon: s.U },
+                                action: j,
                             }),
-                        null != m &&
-                            (0, i.jsx)(a.Drp, {
+                        null != I &&
+                            (0, n.jsx)(a.Dr, {
                                 id: "add-nitro-to-wishlist",
-                                label: c.intl.string(c.t.lG6a5x),
-                                iconLeft: a.tvc,
-                                leadingAccessory: { type: "icon", icon: a.tvc },
-                                action: m,
+                                label: p.intl.string(p.t.lG6a5x),
+                                iconLeft: r.t,
+                                leadingAccessory: { type: "icon", icon: r.t },
+                                action: I,
                             }),
-                        null != g &&
-                            _.map((e) => {
-                                let { id: t, label: n, iconLeft: l, leadingAccessory: s, action: r } = e;
-                                return (0, i.jsx)(
-                                    a.Drp,
-                                    { id: t, label: n, iconLeft: l, leadingAccessory: s, action: r },
+                        null != f &&
+                            b.map((e) => {
+                                let { id: t, label: i, iconLeft: l, leadingAccessory: s, action: r } = e;
+                                return (0, n.jsx)(
+                                    a.Dr,
+                                    { id: t, label: i, iconLeft: l, leadingAccessory: s, action: r },
                                     t,
                                 );
                             }),
                     ],
                 }),
-            [u, g, m, _],
+            [j, f, I, b],
         );
-    return (0, i.jsx)(a.YNO, {
-        targetElementRef: p,
+    return (0, n.jsx)(d.Y, {
+        targetElementRef: S,
         position: "bottom",
-        onRequestOpen: () => h(!0),
-        onRequestClose: () => h(!1),
+        onRequestOpen: () => y(!0),
+        onRequestClose: () => y(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(a.W1t, {
+            return (0, n.jsx)(o.W, {
                 "data-menu-migrated": !0,
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
-                "aria-label": c.intl.string(c.t.GdNkvG),
-                children: A,
+                "aria-label": p.intl.string(p.t.GdNkvG),
+                children: w,
             });
         },
         children: (e) =>
-            (0, i.jsx)(a.Button, {
-                buttonRef: p,
-                variant: n,
+            (0, n.jsx)(c.$, {
+                buttonRef: S,
+                variant: i,
                 size: "sm",
-                icon: f ? a.PGe : a.abt,
+                icon: E ? u.P : g.a,
                 iconPosition: "end",
                 text: t,
                 ...e,

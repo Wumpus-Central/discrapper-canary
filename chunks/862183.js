@@ -1,76 +1,68 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(627968),
+n.d(t, { A: () => x });
+var l = n(627968),
     i = n(64700),
-    a = n(397927),
-    s = n(442433),
-    o = n(611010),
-    l = n(735991),
-    u = n(297486),
-    c = n(346446),
-    d = n(717048),
-    _ = n(448137),
-    f = n(262547),
-    p = n(291071);
-function h(e) {
-    let { command: t, application: n, onClick: h, query: m, searchResultsPosition: g } = e,
-        E = i.useCallback(
+    a = n(939249),
+    s = n(247928),
+    r = n(534514),
+    o = n(834730),
+    c = n(442433),
+    d = n(611010),
+    u = n(735991),
+    m = n(297486),
+    p = n(346446),
+    _ = n(717048),
+    A = n(448137),
+    h = n(967612),
+    f = n(291071);
+function x(e) {
+    let { command: t, application: n, onClick: x, query: C, searchResultsPosition: N } = e,
+        g = i.useCallback(
             (e) => {
-                if ((0, l.$B)(n)) {
-                    let t = n instanceof o.Ay ? n : o.Ay.createFromServer(n);
-                    (0, s.jA)(e, (e) => (0, r.jsx)(c.A, { application: t, ...e }));
+                if ((0, u.$B)(n)) {
+                    let t = n instanceof d.Ay ? n : d.Ay.createFromServer(n);
+                    (0, c.jA)(e, (e) => (0, l.jsx)(p.A, { application: t, ...e }));
                 }
             },
             [n],
         ),
-        { iconURL: A, name: I, description: T } = i.useMemo(() => (0, l.X2)(n, { fakeAppIconURL: p }), [n]),
-        y = i.useMemo(() => {
-            let e = t?.displayDescription ?? T;
-            return null == e ? null : (0, u.SD)(e, void 0);
-        }, [T, t?.displayDescription]),
-        { trackSearchResultsItemImpressionRef: S } = (0, _.A)({
+        { iconURL: E, name: v, description: b } = i.useMemo(() => (0, u.X2)(n, { fakeAppIconURL: f }), [n]),
+        I = i.useMemo(() => {
+            let e = t?.displayDescription ?? b;
+            return null == e ? null : (0, m.SD)(e, void 0);
+        }, [b, t?.displayDescription]),
+        { trackSearchResultsItemImpressionRef: y } = (0, A.A)({
             applicationId: n.id,
             commandId: t?.id,
-            query: m,
-            searchResultsPosition: g,
+            query: C,
+            searchResultsPosition: N,
         });
-    return (0, r.jsx)(a.DUT, {
-        className: f.vk,
+    return (0, l.jsx)(a.D, {
+        className: h.vk,
         innerRef: (e) => {
-            S.current = e;
+            y.current = e;
         },
-        onClick: h,
-        onContextMenu: E,
-        children: (0, r.jsxs)(a.M1G, {
-            className: f.ao,
+        onClick: x,
+        onContextMenu: g,
+        children: (0, l.jsxs)(s.M, {
+            className: h.ao,
             children: [
-                (0, r.jsx)(d.A, { src: A, className: f.Kk, "aria-hidden": !0, rendersPlaceholder: !0 }),
-                (0, r.jsxs)("div", {
-                    className: f.Jn,
+                (0, l.jsx)(_.A, { src: E, className: h.Kk, "aria-hidden": !0, rendersPlaceholder: !0 }),
+                (0, l.jsxs)("div", {
+                    className: h.Jn,
                     children: [
-                        (0, r.jsx)(a.Heading, {
+                        (0, l.jsx)(r.D, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
                             lineClamp: 1,
-                            children: t?.displayName ?? I,
+                            children: t?.displayName ?? v,
                         }),
-                        (0, r.jsx)(a.Text, {
-                            variant: "text-sm/normal",
-                            color: "text-subtle",
-                            lineClamp: 1,
-                            children: y,
-                        }),
+                        (0, l.jsx)(o.E, { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: I }),
                     ],
                 }),
                 null != t
-                    ? (0, r.jsx)(a.Text, {
-                          className: f.Pn,
-                          variant: "text-sm/normal",
-                          color: "text-subtle",
-                          children: I,
-                      })
+                    ? (0, l.jsx)(o.E, { className: h.Pn, variant: "text-sm/normal", color: "text-subtle", children: v })
                     : null,
-                (0, r.jsx)("div", { className: f.V1 }),
+                (0, l.jsx)("div", { className: h.V1 }),
             ],
         }),
     });

@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(627968),
+n.d(t, { A: () => r });
+var l = n(627968),
     i = n(64700),
-    s = n(891694),
-    a = n(795560);
-function o(e) {
-    let { imageBackground: t, applicationName: n, imageClassName: o, imageNotFoundClassName: l } = e,
-        [u, c] = i.useState(!1);
-    return "not-found" === t.state || u
-        ? (0, r.jsx)("div", { className: l, children: (0, r.jsx)(s.A, { className: a.i }) })
+    a = n(891694),
+    s = n(609848);
+function r(e) {
+    let { imageBackground: t, applicationName: n, imageClassName: r, imageNotFoundClassName: o } = e,
+        [c, d] = i.useState(!1);
+    return "not-found" === t.state || c
+        ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)(a.A, { className: s.i }) })
         : "loading" === t.state
           ? null
-          : (0, r.jsx)("img", { alt: n, className: o, src: t.url, onError: () => c(!0) });
+          : (0, l.jsx)("img", { alt: n, className: r, src: t.url, onError: () => d(!0) });
 }

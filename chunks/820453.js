@@ -1,23 +1,31 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => D });
 var l = n(627968),
     a = n(64700),
     i = n(503698),
     r = n.n(i),
     o = n(311907),
-    s = n(397927),
-    c = n(565645),
-    u = n(937773),
-    m = n(770335),
-    d = n(734057),
-    f = n(723702),
-    g = n(969632),
-    b = n(287618),
-    p = n(412136),
-    h = n(307731),
-    A = n(698279),
-    C = n(985018),
-    R = n(851124);
-function j(e) {
+    s = n(861672),
+    c = n(477782),
+    u = n(289873),
+    m = n(460905),
+    d = n(265872),
+    f = n(939249),
+    g = n(22231),
+    b = n(292666),
+    p = n(241326),
+    h = n(565645),
+    A = n(937773),
+    C = n(770335),
+    R = n(734057),
+    j = n(723702),
+    k = n(969632),
+    x = n(287618),
+    _ = n(412136),
+    w = n(307731),
+    E = n(698279),
+    P = n(985018),
+    I = n(231876);
+function S(e) {
     let {
         hasUpload: t,
         mediaUrl: n,
@@ -30,30 +38,30 @@ function j(e) {
     return t
         ? (0, l.jsx)("img", { src: n, alt: a, className: i })
         : null != r
-          ? (0, l.jsx)(c.A, {
+          ? (0, l.jsx)(h.A, {
                 className: o,
                 emojiId: r.id,
-                emojiName: r.type === m.i.UNICODE ? r.optionallyDiverseSequence : r.name,
+                emojiName: r.type === C.i.UNICODE ? r.optionallyDiverseSequence : r.name,
                 animated: r.animated,
             })
           : s;
 }
-function k(e) {
+function N(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: i } = e;
     return (0, l.jsx)("div", {
-        className: R.li,
-        children: (0, l.jsx)(s.W1t, {
+        className: I.li,
+        children: (0, l.jsx)(s.W, {
             "data-menu-migrated-auto": !0,
             navId: "poll-media-edit-menu",
             onClose: i,
-            "aria-label": C.intl.string(C.t["cV+h7B"]),
+            "aria-label": P.intl.string(P.t["cV+h7B"]),
             onSelect: t,
-            children: (0, l.jsxs)(s.rXV, {
+            children: (0, l.jsxs)(c.rX, {
                 children: [
-                    (0, l.jsx)(s.Drp, { id: "poll-media-replace", label: C.intl.string(C.t.CZeRhU), action: n }),
-                    (0, l.jsx)(s.Drp, {
+                    (0, l.jsx)(c.Dr, { id: "poll-media-replace", label: P.intl.string(P.t.CZeRhU), action: n }),
+                    (0, l.jsx)(c.Dr, {
                         id: "poll-media-delete",
-                        label: C.intl.string(C.t.IhMxgu),
+                        label: P.intl.string(P.t.IhMxgu),
                         action: a,
                         color: "danger",
                     }),
@@ -62,110 +70,110 @@ function k(e) {
         }),
     });
 }
-function x(e) {
+function v(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
             buttonImage: i,
-            onEmojiSelect: c,
-            onEmojiRemove: m,
-            answerIndex: f,
+            onEmojiSelect: s,
+            onEmojiRemove: c,
+            answerIndex: b,
             shouldShowEmojiPicker: p,
-            toggleEmojiPicker: x,
-            containerRef: _,
+            toggleEmojiPicker: h,
+            containerRef: C,
         } = e,
-        w = a.useRef(null),
-        E = (0, o.bG)([d.A], () => d.A.getChannel(t)),
+        j = a.useRef(null),
+        _ = (0, o.bG)([R.A], () => R.A.getChannel(t)),
         {
-            emoji: P,
-            isLoadingMedia: I,
-            hasUpload: N,
-            mediaUrl: S,
-            mediaFilename: v,
-        } = (0, b.A)({ channelId: t, localCreationAnswerId: n, image: i }),
-        D = N || null != P,
-        O = a.useCallback(() => {
-            m(f);
-        }, [m, f]),
-        y = a.useMemo(
+            emoji: v,
+            isLoadingMedia: D,
+            hasUpload: y,
+            mediaUrl: O,
+            mediaFilename: T,
+        } = (0, x.A)({ channelId: t, localCreationAnswerId: n, image: i }),
+        L = y || null != v,
+        U = a.useCallback(() => {
+            c(b);
+        }, [c, b]),
+        K = a.useMemo(
             () =>
-                N
-                    ? C.intl.formatToPlainString(C.t.vcC7Qn, { imageName: (0, g.Kj)(v), answerNumber: f + 1 })
-                    : null != P
-                      ? C.intl.formatToPlainString(C.t.ncOAha, { emojiName: P.name, answerNumber: f + 1 })
-                      : C.intl.formatToPlainString(C.t.emdpNo, { answerNumber: f + 1 }),
-            [N, P, f, v],
+                y
+                    ? P.intl.formatToPlainString(P.t.vcC7Qn, { imageName: (0, k.Kj)(T), answerNumber: b + 1 })
+                    : null != v
+                      ? P.intl.formatToPlainString(P.t.ncOAha, { emojiName: v.name, answerNumber: b + 1 })
+                      : P.intl.formatToPlainString(P.t.emdpNo, { answerNumber: b + 1 }),
+            [y, v, b, T],
         ),
-        T = a.useCallback(
+        Y = a.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, l.jsx)("div", {
-                    className: R.Fb,
-                    children: (0, l.jsx)(u.A, {
-                        channel: E,
-                        pickerIntention: h.EmojiIntention.POLLS,
+                    className: I.Fb,
+                    children: (0, l.jsx)(A.A, {
+                        channel: _,
+                        pickerIntention: w.EmojiIntention.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: l } = e;
-                            null != n && c(n, f), l && t();
+                            null != n && s(n, b), l && t();
                         },
                     }),
                 });
             },
-            [E, c, f],
+            [_, s, b],
         ),
-        U = a.useCallback(
+        B = a.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(k, { onSelect: t, onEditMedia: x, onDeleteMedia: O, closePopout: t });
+                return (0, l.jsx)(N, { onSelect: t, onEditMedia: h, onDeleteMedia: U, closePopout: t });
             },
-            [O, x],
+            [U, h],
         ),
-        L = I
-            ? (0, l.jsx)(s.y$y, { className: R.EC })
-            : (0, l.jsx)(j, {
-                  hasUpload: N,
-                  mediaUrl: S,
-                  mediaFilename: v,
-                  imageClassName: r()(R.$_, R.qX),
-                  emoji: P,
-                  emojiClassName: r()(R.$_, R.qZ),
-                  fallback: (0, l.jsx)(s.nm2, { size: "sm", color: "currentColor", className: R.vr }),
+        W = D
+            ? (0, l.jsx)(u.y, { className: I.EC })
+            : (0, l.jsx)(S, {
+                  hasUpload: y,
+                  mediaUrl: O,
+                  mediaFilename: T,
+                  imageClassName: r()(I.$_, I.qX),
+                  emoji: v,
+                  emojiClassName: r()(I.$_, I.qZ),
+                  fallback: (0, l.jsx)(m.n, { size: "sm", color: "currentColor", className: I.vr }),
               }),
-        K = r()(A.VQ, R.GB, { [R.ZV]: D });
-    return (0, l.jsx)(s.YNO, {
-        targetElementRef: _,
-        renderPopout: T,
+        q = r()(E.VQ, I.GB, { [I.ZV]: L });
+    return (0, l.jsx)(d.Y, {
+        targetElementRef: C,
+        renderPopout: Y,
         shouldShow: p,
-        onRequestClose: x,
-        animation: s.YNO.Animation.NONE,
+        onRequestClose: h,
+        animation: d.Y.Animation.NONE,
         position: "bottom",
         spacing: 2,
         children: (e) => {
             let { "aria-controls": t, "aria-expanded": n, ...a } = e;
-            return (0, l.jsx)(s.YNO, {
-                targetElementRef: w,
-                animation: s.YNO.Animation.NONE,
+            return (0, l.jsx)(d.Y, {
+                targetElementRef: j,
+                animation: d.Y.Animation.NONE,
                 position: "bottom",
-                renderPopout: U,
+                renderPopout: B,
                 children: (e) => {
                     let { onClick: a, "aria-controls": i, "aria-expanded": r, ...o } = e;
-                    return (0, l.jsxs)(s.DUT, {
-                        innerRef: w,
+                    return (0, l.jsxs)(f.D, {
+                        innerRef: j,
                         ...o,
-                        className: K,
-                        onClick: D && !p ? a : x,
-                        "aria-label": y,
+                        className: q,
+                        onClick: L && !p ? a : h,
+                        "aria-label": K,
                         "aria-controls": t ?? i,
                         "aria-expanded": n || r,
                         children: [
-                            L,
-                            D &&
-                                (0, l.jsx)(s.R2l, {
+                            W,
+                            L &&
+                                (0, l.jsx)(g.R, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: R.IZ,
+                                    className: I.IZ,
                                     "aria-hidden": !0,
                                 }),
                         ],
@@ -175,35 +183,35 @@ function x(e) {
         },
     });
 }
-function _(e) {
+function D(e) {
     let {
             channelId: t,
             answer: n,
             index: i,
             isLastAnswer: r,
             onAnswerTextChange: o,
-            onEmojiSelect: c,
-            onEmojiRemove: u,
-            canRemoveAnswer: m,
-            onRemoveAnswer: d,
-            addAnswer: b,
-            submitPoll: h,
-            error: A,
-            ref: R,
-            answerRowRefs: j,
+            onEmojiSelect: s,
+            onEmojiRemove: c,
+            canRemoveAnswer: u,
+            onRemoveAnswer: m,
+            addAnswer: d,
+            submitPoll: f,
+            error: g,
+            ref: h,
+            answerRowRefs: A,
         } = e,
-        k = a.useRef(null),
-        _ = a.useRef(null),
-        w = a.useRef(null);
-    a.useImperativeHandle(R, () => ({
-        focusDeleteButton: () => _.current?.focus(),
-        focusInput: () => w.current?.focus(),
+        C = a.useRef(null),
+        R = a.useRef(null),
+        x = a.useRef(null);
+    a.useImperativeHandle(h, () => ({
+        focusDeleteButton: () => R.current?.focus(),
+        focusInput: () => x.current?.focus(),
     }));
-    let [E, P] = a.useState(!1),
+    let [w, E] = a.useState(!1),
         I = a.useCallback(() => {
-            P((e) => !e);
+            E((e) => !e);
         }, []),
-        N = a.useCallback(
+        S = a.useCallback(
             (e) => {
                 let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                     l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
@@ -211,46 +219,46 @@ function _(e) {
                     case "enter":
                         r &&
                             (e.preventDefault(),
-                            ((0, g.ND)(n) || "macos" !== (0, f.getOS)() ? t : l) ? (e.stopPropagation(), h()) : b()),
-                            j.current[i + 1]?.focusInput();
+                            ((0, k.ND)(n) || "macos" !== (0, j.getOS)() ? t : l) ? (e.stopPropagation(), f()) : d()),
+                            A.current[i + 1]?.focusInput();
                         break;
                     case "e":
-                        ("macos" === (0, f.getOS)() ? l : t) && (e.preventDefault(), e.stopPropagation(), I());
+                        ("macos" === (0, j.getOS)() ? l : t) && (e.preventDefault(), e.stopPropagation(), I());
                 }
             },
-            [b, n, j, i, r, h, I],
+            [d, n, A, i, r, f, I],
         ),
-        S = (0, l.jsx)(x, {
-            containerRef: k,
+        N = (0, l.jsx)(v, {
+            containerRef: C,
             channelId: t,
             buttonImage: n.image,
-            onEmojiSelect: c,
-            onEmojiRemove: u,
+            onEmojiSelect: s,
+            onEmojiRemove: c,
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: i,
-            shouldShowEmojiPicker: E,
+            shouldShowEmojiPicker: w,
             toggleEmojiPicker: I,
         });
     return (0, l.jsx)("div", {
-        ref: k,
-        children: (0, l.jsx)(s.ksK, {
-            error: A,
-            leading: { type: "emoji", button: S },
-            trailing: m
+        ref: C,
+        children: (0, l.jsx)(b.k, {
+            error: g,
+            leading: { type: "emoji", button: N },
+            trailing: u
                 ? {
-                      "aria-label": C.intl.formatToPlainString(C.t["22fjEc"], { answerNumber: i + 1 }),
-                      icon: s.ucK,
-                      onClick: () => d(i),
-                      buttonRef: _,
+                      "aria-label": P.intl.formatToPlainString(P.t["22fjEc"], { answerNumber: i + 1 }),
+                      icon: p.u,
+                      onClick: () => m(i),
+                      buttonRef: R,
                   }
                 : void 0,
-            "aria-label": C.intl.formatToPlainString(C.t["3+V8G9"], { answerNumber: i + 1 }),
-            placeholder: C.intl.string(C.t.NNHVlv),
+            "aria-label": P.intl.formatToPlainString(P.t["3+V8G9"], { answerNumber: i + 1 }),
+            placeholder: P.intl.string(P.t.NNHVlv),
             value: n.text,
             onChange: (e) => o({ text: e, index: i, localCreationAnswerId: n.localCreationAnswerId }),
-            onKeyDown: N,
-            maxLength: p.dv,
-            inputRef: w,
+            onKeyDown: S,
+            maxLength: _.dv,
+            inputRef: x,
         }),
     });
 }

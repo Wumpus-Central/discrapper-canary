@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
     JM: () => l,
-    Js: () => c,
-    Jx: () => p,
-    Xm: () => h,
+    Js: () => d,
+    Jx: () => f,
+    Xm: () => E,
     YT: () => o,
     fx: () => _,
-    up: () => d,
+    up: () => c,
     wr: () => u,
-    xv: () => m,
+    xv: () => h,
 });
 var r = n(957565),
     i = n(561844),
@@ -54,7 +54,7 @@ function l(e) {
 function u(e) {
     return e.config.ctaConfig.buttonLabel;
 }
-function c(e) {
+function d(e) {
     switch (e) {
         case s.kL.SUGGESTED:
             return a.intl.string(a.t.gBfXPZ);
@@ -66,7 +66,7 @@ function c(e) {
             return a.intl.string(a.t["BB+2tX"]);
     }
 }
-function d(e) {
+function c(e) {
     switch (e) {
         case s.BQ.VIRTUAL_CURRENCY:
             return a.intl.string(a.t.ElYQFS);
@@ -88,11 +88,10 @@ function _(e) {
             return a.intl.string(a.t.Hufmss);
     }
 }
-let f = (e) => `${location.protocol}//${location.host}/quests/${e}`;
-function p(e) {
+function f(e) {
     return e.ctaConfig.link;
 }
-let h = (e, t) => {
+let E = (e, t) => {
     (0, i.Y5)({
         questId: e,
         questContent: t.content,
@@ -101,9 +100,9 @@ let h = (e, t) => {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, r.C)(f(e));
+        (0, r.C)(`${location.protocol}//${location.host}/quests/${e}`);
 };
-function m(e) {
+function h(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }

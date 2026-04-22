@@ -1,85 +1,89 @@
-n.d(e, { A: () => f });
+n.d(e, { A: () => p });
 var i = n(627968),
     s = n(64700),
-    a = n(158954),
-    r = n(397927),
-    l = n(341915),
-    d = n(73473),
-    o = n(545986),
-    c = n(240710),
-    u = n(654487),
-    m = n(985018),
-    h = n(63639);
-function x(t) {
+    a = n(189213),
+    l = n(834730),
+    r = n(192308),
+    d = n(289873),
+    o = n(935462),
+    c = n(231723),
+    u = n(341915),
+    h = n(73473),
+    m = n(545986),
+    b = n(240710),
+    f = n(654487),
+    g = n(985018),
+    x = n(63639);
+function C(t) {
     let { onClose: e, transitionState: n } = t;
     return (0, i.jsx)(a.Modal, {
         size: "md",
-        title: m.intl.string(m.t.Hd3D8W),
-        actions: [{ variant: "primary", text: m.intl.string(m.t.cpT0Cq), onClick: e }],
+        title: g.intl.string(g.t.Hd3D8W),
+        actions: [{ variant: "primary", text: g.intl.string(g.t.cpT0Cq), onClick: e }],
         onClose: e,
         transitionState: n,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, i.jsx)(l.E, {
             variant: "text-md/medium",
             color: "text-subtle",
-            children: m.intl.string(m.t.Ij97SL),
+            children: g.intl.string(g.t.Ij97SL),
         }),
     });
 }
-function f(t) {
+function p(t) {
     let {
             quest: e,
             sourceQuestContent: n,
             transitionState: a,
-            onClose: m,
-            rewardContent: f,
-            isRewardContentLoading: g,
-            rewardContentHasError: C,
-            location: b,
+            onClose: l,
+            rewardContent: g,
+            isRewardContentLoading: p,
+            rewardContentHasError: I,
+            location: N,
         } = t,
-        N = l.uF.REWARD_MODAL,
-        [p, A] = s.useState(!0),
-        j = e.config.features.some((t) => u.Tz.has(t)),
-        I = s.useCallback(async () => {
-            j ? m() : (await (0, o.f7)(e.config.ctaConfig?.link)) && (m(), (0, r.s7G)());
-        }, [e.config.ctaConfig?.link, m, j]);
-    if (C) return (0, i.jsx)(x, { onClose: m, transitionState: a });
-    let v = g || p;
-    return (0, i.jsx)(d.R, {
+        A = u.uF.REWARD_MODAL,
+        [v, j] = s.useState(!0),
+        E = e.config.features.some((t) => f.Tz.has(t)),
+        T = s.useCallback(async () => {
+            E ? l() : (await (0, m.f7)(e.config.ctaConfig?.link)) && (l(), (0, r.closeAllModals)());
+        }, [e.config.ctaConfig?.link, l, E]);
+    if (I) return (0, i.jsx)(C, { onClose: l, transitionState: a });
+    let _ = p || v;
+    return (0, i.jsx)(h.R, {
         questOrQuests: e,
-        questContent: N,
+        questContent: A,
         sourceQuestContent: n,
         children: (t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    v ? (0, i.jsx)(r.y$y, { className: h.u1, type: r.y$y.Type.WANDERING_CUBES }) : null,
+                    _ ? (0, i.jsx)(d.y, { className: x.u1, type: d.y.Type.WANDERING_CUBES }) : null,
                     (0, i.jsx)("div", {
                         ref: t,
-                        style: { visibility: v ? "hidden" : "visible" },
-                        children: (0, i.jsxs)(r.EOs, {
+                        style: { visibility: _ ? "hidden" : "visible" },
+                        children: (0, i.jsxs)(o.EO, {
                             "data-migration-pending": !0,
-                            transitionState: v ? r.ip4.HIDDEN : a,
-                            size: r.rIJ.DYNAMIC,
-                            className: h.yl,
+                            transitionState: _ ? c.ip.HIDDEN : a,
+                            size: o.rI.DYNAMIC,
+                            className: x.yl,
                             parentComponent: "QuestRewardModalBase",
                             children: [
-                                (0, i.jsx)(r.s_y, {
+                                (0, i.jsx)(o.s_, {
                                     "data-migration-pending": !0,
-                                    className: h.b,
-                                    onClick: m,
+                                    className: x.b,
+                                    onClick: l,
                                     withCircleBackground: !0,
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: h.jE,
+                                    className: x.jE,
                                     children: [
-                                        (0, i.jsx)("div", { className: h._H, children: f }),
+                                        (0, i.jsx)("div", { className: x._H, children: g }),
                                         (0, i.jsx)("div", {
-                                            className: h.xK,
-                                            children: (0, i.jsx)(c.A, {
+                                            className: x.xK,
+                                            children: (0, i.jsx)(b.A, {
                                                 quest: e,
                                                 sourceQuestContent: n,
-                                                onLoadComplete: () => A(!1),
-                                                preCtaClick: I,
-                                                location: b,
+                                                onLoadComplete: () => j(!1),
+                                                preCtaClick: T,
+                                                location: N,
                                             }),
                                         }),
                                     ],

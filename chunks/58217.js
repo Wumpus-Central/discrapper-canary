@@ -1,51 +1,29 @@
-"use strict";
-n.d(t, { A: () => A }), n(938796);
-var r = n(665260),
-    i = n(439372),
-    a = n(976860),
-    s = n(696451),
-    o = n(71393),
-    l = n(967198),
-    u = n(927813),
-    c = n(817818),
-    d = n(591552),
-    _ = n(967305),
-    f = n(652215),
-    p = n(746080),
-    h = n(340837);
-let m = null,
-    g = null;
-class E extends i.A {
-    actions = {
-        GUILD_DELETE: (e) => this.handleGuildDelete(e),
-        CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
-        POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
-    };
-    handleConnectionOpen = (e) => {
-        null != (m = m ?? l.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(m);
-    };
-    handleChannelSelect = (e) => {
-        let { guildId: t, channelId: n } = e;
-        if ((m === t && g === n) || ((m = t ?? null), (g = n ?? null), null == m || null == g)) return;
-        let r = o.A.getGuild(t);
-        null != r &&
-            r.features.has(f.GuildFeatures.COMMUNITY) &&
-            d.A.shouldFetchPrompts(m, 8 * u.A.Millis.HOUR) &&
-            (0, c.Tg)(m),
-            this._openOnboardingIfIncomplete(m, n);
-    };
-    handleGuildDelete = (e) => {
-        let { guild: t } = e;
-        (0, _.Jg)(t.id);
-    };
-    _openOnboardingIfIncomplete = async (e, t) => {
-        if ((0, _.Ih)(e)) return void (0, a.pX)(f.BVt.CHANNEL(e, p.VV.GUILD_ONBOARDING));
-        let n = o.A.getGuild(e);
-        if (null == n || !n.features.has(f.GuildFeatures.GUILD_ONBOARDING)) return;
-        let i = s.Ay.getSelfMember(e);
-        !(null == i || (0, r.Lt)(i.flags ?? 0, h.D.COMPLETED_ONBOARDING)) &&
-            (0, r.Lt)(i.flags ?? 0, h.D.STARTED_ONBOARDING) &&
-            (await (0, _.default)({ guildId: e }), (0, a.pX)(f.BVt.CHANNEL(e, t)));
-    };
+r.d(t, { A: () => a });
+var n = r(996483),
+    s = r(241738);
+class a extends s.w {
+    innerPatternString(e) {
+        return "(?:с|со)?\\s*(сегодня|вчера|завтра|послезавтра|послепослезавтра|позапозавчера|позавчера)";
+    }
+    innerExtract(e, t) {
+        let r = t[1].toLowerCase(),
+            s = e.createParsingComponents();
+        switch (r) {
+            case "сегодня":
+                return n.Ec(e.reference);
+            case "вчера":
+                return n.jI(e.reference);
+            case "завтра":
+                return n.uf(e.reference);
+            case "послезавтра":
+                return n.AV(e.reference, 2);
+            case "послепослезавтра":
+                return n.AV(e.reference, 3);
+            case "позавчера":
+                return n.ti(e.reference, 2);
+            case "позапозавчера":
+                return n.ti(e.reference, 3);
+        }
+        return s;
+    }
 }
-let A = new E();

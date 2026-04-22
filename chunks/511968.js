@@ -1,43 +1,45 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(273166),
+    l = n(503698),
+    a = n.n(l),
+    r = n(273166),
     o = n(885996),
-    c = n(397927),
-    d = n(963342),
-    u = n(3432),
+    d = n(673698),
+    u = n(534514),
+    c = n(834730),
+    g = n(963342),
+    m = n(3432),
     _ = n(580630),
-    m = n(240248),
-    A = n(237218),
-    g = n(689296),
-    E = n(542858);
-function h(e) {
-    let { cta: t, storeListing: n, className: r } = e,
-        { applicationId: h, benefits: p, description: C } = n,
-        x = s.useMemo(() => (null == n.thumbnail ? null : (0, A.t)(h, n.thumbnail, 256)), [h, n.thumbnail]),
-        { data: T } = (0, d.j)(n.skuId),
-        I = s.useMemo(() => {
-            if (null == T || 0 === T.length) return null;
-            let e = T[0];
+    A = n(240248),
+    h = n(237218),
+    p = n(689296),
+    x = n(827991);
+function E(e) {
+    let { cta: t, storeListing: n, className: l } = e,
+        { applicationId: E, benefits: T, description: S } = n,
+        f = s.useMemo(() => (null == n.thumbnail ? null : (0, h.t)(E, n.thumbnail, 256)), [E, n.thumbnail]),
+        { data: b } = (0, g.j)(n.skuId),
+        C = s.useMemo(() => {
+            if (null == b || 0 === b.length) return null;
+            let e = b[0];
             return (0, _._J)(e);
-        }, [T]);
-    return null == I
+        }, [b]);
+    return null == C
         ? null
-        : (0, i.jsxs)(l.q, {
-              className: a()(E.iE, r),
+        : (0, i.jsxs)(r.q, {
+              className: a()(x.iE, l),
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: E.qd,
+                          className: x.qd,
                           children: [
-                              null != x &&
-                                  (0, i.jsx)(c._V3, { src: x.href, imageClassName: E.rW, width: 48, height: 48 }),
+                              null != f &&
+                                  (0, i.jsx)(d._, { src: f.href, imageClassName: x.rW, width: 48, height: 48 }),
                               (0, i.jsxs)("div", {
                                   children: [
-                                      (0, i.jsx)(c.Heading, { variant: "heading-md/bold", children: n.summary }),
-                                      (0, i.jsx)(c.Text, { variant: "text-md/medium", children: I }),
+                                      (0, i.jsx)(u.D, { variant: "heading-md/bold", children: n.summary }),
+                                      (0, i.jsx)(c.E, { variant: "text-md/medium", children: C }),
                                   ],
                               }),
                           ],
@@ -46,18 +48,18 @@ function h(e) {
                   ],
               }),
               children: [
-                  !(0, m.uJ)(C) &&
+                  !(0, A.uJ)(S) &&
                       (0, i.jsx)("div", {
-                          className: E.h_,
-                          children: (0, i.jsx)(g.A, { variant: "text-sm/medium", children: C }),
+                          className: x.h_,
+                          children: (0, i.jsx)(p.A, { variant: "text-sm/medium", children: S }),
                       }),
-                  null != p &&
-                      p.length > 0 &&
+                  null != T &&
+                      T.length > 0 &&
                       (0, i.jsx)("div", {
-                          className: E.PX,
-                          children: p.map((e) => {
-                              let { id: t, name: n, description: s, icon: r } = e;
-                              return (0, i.jsx)(o.FY, { header: n, icon: (0, u.N)(h, r), description: s }, t);
+                          className: x.PX,
+                          children: T.map((e) => {
+                              let { id: t, name: n, description: s, icon: l } = e;
+                              return (0, i.jsx)(o.FY, { header: n, icon: (0, m.N)(E, l), description: s }, t);
                           }),
                       }),
               ],

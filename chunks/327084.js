@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     MY: "page_d2b0e4",
     Cd: "leftColumn_d2b0e4",

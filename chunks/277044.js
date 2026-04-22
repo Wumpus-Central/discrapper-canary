@@ -1,128 +1,129 @@
 "use strict";
-n.d(t, { A: () => b });
-var r = n(627968),
-    i = n(64700),
-    a = n(158954),
-    s = n(311907),
-    o = n(827734),
-    l = n(421380),
-    u = n(397927),
-    c = n(686956),
-    d = n(624793),
-    _ = n(767143),
-    f = n(652176),
-    p = n(796774),
-    h = n(807348),
-    m = n(69217),
-    g = n(71393),
-    E = n(465794),
-    A = n(704591),
-    I = n(586652),
-    T = n(788868),
-    y = n(652215);
+n.d(t, { A: () => N });
+var i = n(627968),
+    l = n(64700),
+    s = n(834730),
+    r = n(311907),
+    a = n(827734),
+    o = n(862482),
+    c = n(821609),
+    u = n(777666),
+    d = n(686956),
+    h = n(624793),
+    m = n(767143),
+    p = n(652176),
+    f = n(796774),
+    g = n(807348),
+    _ = n(69217),
+    x = n(71393),
+    A = n(725807),
+    C = n(704591),
+    E = n(586652),
+    I = n(788868),
+    v = n(652215);
 n(980504);
-var S = n(985018),
-    v = n(331129);
-function C(e) {
-    let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
-        s = i.useCallback(async () => {
+var y = n(985018),
+    S = n(532340);
+function b(e) {
+    let { discoverableGuildId: t, closePopout: n, buttonType: s } = e,
+        r = l.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await c.A.joinGuild(t), c.A.transitionToGuildSync(t);
+                    await d.A.joinGuild(t), d.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
-    return a === I.E.GET_NITRO
-        ? (0, r.jsx)(E.A, {
+    return s === E.E.GET_NITRO
+        ? (0, i.jsx)(A.A, {
               fullWidth: !0,
               showGradient: !0,
-              premiumModalAnalyticsLocation: { section: y.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
-              subscriptionTier: T.pe.TIER_2,
-              size: l.$n.Sizes.SMALL,
-              color: l.$n.Colors.CUSTOM,
+              premiumModalAnalyticsLocation: { section: v.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              subscriptionTier: I.pe.TIER_2,
+              size: o.$n.Sizes.SMALL,
+              color: o.$n.Colors.CUSTOM,
               onClick: n,
-              textOptions: { textOverride: S.intl.string(S.t.pj0XBN) },
+              textOptions: { textOverride: y.intl.string(y.t.pj0XBN) },
           })
-        : a === I.E.JOIN_GUILD
-          ? (0, r.jsx)(u.Button, {
+        : s === E.E.JOIN_GUILD
+          ? (0, i.jsx)(c.$, {
                 variant: "primary",
                 size: "sm",
-                text: S.intl.string(S.t.riu2R5),
+                text: y.intl.string(y.t.riu2R5),
                 fullWidth: !0,
-                onClick: s,
+                onClick: r,
             })
           : null;
 }
-function b(e) {
-    let { sound: t, channel: n, closePopout: l, refreshPosition: c } = e,
-        E = "0" === t.guildId,
-        T = (0, s.bG)([g.A], () => g.A.getGuild(t.guildId)),
-        y = !E && null != T,
-        [b, N] = i.useState(),
-        R = (0, A.tj)({ location: "SoundmojiGuildInfo" }),
-        O = E || y || null != b || !R,
-        [D, L] = i.useState(!O);
-    i.useEffect(() => {
-        O ||
-            (L(!0),
-            (0, p.nh)(t.soundId, t.guildId)
+function N(e) {
+    let { sound: t, channel: n, closePopout: o, refreshPosition: c } = e,
+        d = "0" === t.guildId,
+        A = (0, r.bG)([x.A], () => x.A.getGuild(t.guildId)),
+        I = !d && null != A,
+        [v, N] = l.useState(),
+        T = (0, C.tj)({ location: "SoundmojiGuildInfo" }),
+        j = d || I || null != v || !T,
+        [R, w] = l.useState(!j);
+    l.useEffect(() => {
+        j ||
+            (w(!0),
+            (0, f.nh)(t.soundId, t.guildId)
                 .then((e) => {
                     N(e);
                 })
                 .finally(() => {
-                    L(!1), c();
+                    w(!1), c();
                 }));
-    }, [c, O, t.guildId, t.soundId]);
-    let { buttonType: w, description: x } = (0, I.A)(t, n, y, b),
-        P = w === I.E.JOIN_GUILD,
-        M = !E && D,
-        k = i.useMemo(
-            () => (y ? d.GO.createFromGuildRecord(T) : null != b ? d.GO.createFromDiscoverableGuild(b) : void 0),
-            [T, y, b],
+    }, [c, j, t.guildId, t.soundId]);
+    let { buttonType: L, description: M } = (0, E.A)(t, n, I, v),
+        k = L === E.E.JOIN_GUILD,
+        O = !d && R,
+        P = l.useMemo(
+            () => (I ? h.GO.createFromGuildRecord(A) : null != v ? h.GO.createFromDiscoverableGuild(v) : void 0),
+            [A, I, v],
         );
-    return M
-        ? (0, r.jsx)(f.Y0, {})
-        : (0, r.jsxs)("div", {
-              className: v.op,
+    return O
+        ? (0, i.jsx)(p.Y0, {})
+        : (0, i.jsxs)("div", {
+              className: S.op,
               children: [
-                  (0, r.jsxs)(f.Uq, {
+                  (0, i.jsxs)(p.Uq, {
                       children: [
-                          (0, r.jsxs)("div", {
-                              className: v.g4,
+                          (0, i.jsxs)("div", {
+                              className: S.g4,
                               children: [
-                                  (0, r.jsx)(m.Ay, {
-                                      buttonOverlay: h.If.NONE,
+                                  (0, i.jsx)(_.Ay, {
+                                      buttonOverlay: g.If.NONE,
                                       sound: t,
                                       channel: void 0,
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, r.jsx)(a.EYj, { variant: "text-sm/normal", children: x }),
+                                  (0, i.jsx)(s.E, { variant: "text-sm/normal", children: M }),
                               ],
                           }),
-                          null != k &&
-                              (0, r.jsxs)("div", {
-                                  className: v.Qe,
+                          null != P &&
+                              (0, i.jsxs)("div", {
+                                  className: S.Qe,
                                   children: [
-                                      (0, r.jsx)(a.EYj, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "eyebrow",
                                           color: "text-muted",
-                                          className: v.x$,
-                                          children: y ? S.intl.string(S.t.tGDabk) : S.intl.string(S.t.rnOmOa),
+                                          className: S.x$,
+                                          children: I ? y.intl.string(y.t.tGDabk) : y.intl.string(y.t.rnOmOa),
                                       }),
-                                      (0, r.jsx)("div", {
-                                          className: v.Ff,
-                                          children: (0, r.jsx)(_.G7, {
-                                              expressionSourceGuild: k,
-                                              hasJoinedExpressionSourceGuild: y,
-                                              isDisplayingJoinGuildButtonInPopout: P,
+                                      (0, i.jsx)("div", {
+                                          className: S.Ff,
+                                          children: (0, i.jsx)(m.G7, {
+                                              expressionSourceGuild: P,
+                                              hasJoinedExpressionSourceGuild: I,
+                                              isDisplayingJoinGuildButtonInPopout: k,
                                           }),
                                       }),
-                                      (0, r.jsx)(C, { buttonType: w, discoverableGuildId: b?.id, closePopout: l }),
+                                      (0, i.jsx)(b, { buttonType: L, discoverableGuildId: v?.id, closePopout: o }),
                                   ],
                               }),
                       ],
                   }),
-                  (0, r.jsx)(u.LpS, { text: "BETA", color: o.A.colors.BACKGROUND_BRAND.css, className: v.aZ }),
+                  (0, i.jsx)(u.Lp, { text: "BETA", color: a.A.colors.BACKGROUND_BRAND.css, className: S.aZ }),
               ],
           });
 }

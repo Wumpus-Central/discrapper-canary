@@ -1,54 +1,54 @@
-"use strict";
-n.d(t, { A: () => m });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(397927),
-    u = n(497685),
-    c = n(996566),
-    d = n(203982),
-    _ = n(652215),
-    f = n(650583),
-    p = n(985018),
-    h = n(623665);
-let m = i.memo(function (e) {
-    let { width: t, height: n, src: s, gifSrc: m, url: E, format: g, className: A } = e,
-        [I, T] = i.useState(!1),
-        S = (0, c.km)((0, u.xo)(E)),
-        y = S ? p.intl.string(p.t["5/NS74"]) : p.intl.string(p.t.nIH0v8),
-        v = S ? l.Gg5 : l.yA2;
-    i.useEffect(() => {
-        if (!I) return;
+r.d(t, { A: () => _ });
+var s = r(627968),
+    l = r(64700),
+    n = r(503698),
+    i = r.n(n),
+    o = r(990078),
+    a = r(27232),
+    c = r(505930),
+    u = r(939249),
+    d = r(497685),
+    h = r(996566),
+    m = r(203982),
+    f = r(652215),
+    p = r(650583),
+    g = r(985018),
+    E = r(280312);
+let _ = l.memo(function (e) {
+    let { width: t, height: r, src: n, gifSrc: _, url: R, format: I, className: A } = e,
+        [C, v] = l.useState(!1),
+        w = (0, h.km)((0, d.xo)(R)),
+        S = w ? g.intl.string(g.t["5/NS74"]) : g.intl.string(g.t.nIH0v8),
+        y = w ? a.G : c.y;
+    l.useEffect(() => {
+        if (!C) return;
         let e = setTimeout(() => {
-            T(!1);
+            v(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [I]);
-    let N = (e) => {
-            e.preventDefault(),
-                e.stopPropagation(),
-                T(!0),
-                S
-                    ? (0, u.Tr)(E)
-                    : ((0, u.wg)({ url: E, src: s, gifSrc: m, width: t, height: n, format: g }),
-                      d._.dispatch(_.jej.FAVORITE_GIF));
-        },
-        C = (e) => {
-            (e.key === f.dh.ENTER || e.key === f.dh.SPACE) && N(e);
-        };
-    return (0, r.jsx)(o.m, {
-        text: y,
-        children: (0, r.jsx)(l.DUT, {
-            "aria-label": y,
+    }, [C]);
+    let x = (e) => {
+        e.preventDefault(),
+            e.stopPropagation(),
+            v(!0),
+            w
+                ? (0, d.Tr)(R)
+                : ((0, d.wg)({ url: R, src: n, gifSrc: _, width: t, height: r, format: I }),
+                  m._.dispatch(f.jej.FAVORITE_GIF));
+    };
+    return (0, s.jsx)(o.m, {
+        text: S,
+        children: (0, s.jsx)(u.D, {
+            "aria-label": S,
             ignoreKeyPress: !0,
-            className: a()(A, h.jj, { [h.wH]: S, [h.TV]: I }),
+            className: i()(A, E.jj, { [E.wH]: w, [E.TV]: C }),
             onMouseDown: (e) => e.preventDefault(),
-            onClick: N,
-            onKeyDown: C,
+            onClick: x,
+            onKeyDown: (e) => {
+                (e.key === p.dh.ENTER || e.key === p.dh.SPACE) && x(e);
+            },
             onDoubleClick: (e) => e.preventDefault(),
-            children: (0, r.jsx)(v, { color: "currentColor", className: h.Kk, size: "custom", width: 20, height: 20 }),
+            children: (0, s.jsx)(y, { color: "currentColor", className: E.Kk, size: "custom", width: 20, height: 20 }),
         }),
     });
 });

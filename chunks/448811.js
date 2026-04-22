@@ -1,39 +1,41 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
+n.d(t, { A: () => E });
+var l = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(398590),
-    a = n(793574),
-    o = n(688810),
-    l = n(509536),
-    u = n(361158),
-    c = n(976860),
-    d = n(979286),
-    _ = n(652215),
-    f = n(985018),
-    p = n(104236);
-let h = (e) => {
+var i = n(34188),
+    a = n(827734),
+    r = n(834730),
+    s = n(939249),
+    o = n(398590),
+    u = n(793574),
+    c = n(688810),
+    d = n(509536),
+    p = n(361158),
+    m = n(976860),
+    h = n(979286),
+    A = n(652215),
+    _ = n(985018),
+    C = n(456508);
+let E = (e) => {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, o.Ay)(),
-        h = () => {
+        { analyticsLocations: n } = (0, c.Ay)(),
+        E = () => {
             t(),
-                (0, c.pX)(_.BVt.COLLECTIBLES_SHOP),
-                (0, d.Cz)({ analyticsSource: a.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
-                (0, s.jH)(),
-                (0, u.dF)(l.Zt);
+                (0, m.pX)(A.BVt.COLLECTIBLES_SHOP),
+                (0, h.Cz)({ analyticsSource: u.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+                (0, o.jH)(),
+                (0, p.dF)(d.Zt);
         };
-    return (0, r.jsxs)("div", {
-        className: p.kL,
+    return (0, l.jsxs)("div", {
+        className: C.kL,
         children: [
-            (0, r.jsx)("div", {
-                className: p.Wk,
-                children: (0, r.jsx)(i.U1X, { size: "custom", width: 20, height: 20, color: i.LU0.colors.WHITE }),
+            (0, l.jsx)("div", {
+                className: C.Wk,
+                children: (0, l.jsx)(i.U, { size: "custom", width: 20, height: 20, color: a.A.colors.WHITE }),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, l.jsx)(r.E, {
                 variant: "text-sm/normal",
-                children: f.intl.format(f.t.twSHte, {
-                    checkItOut: (e) => (0, r.jsx)(i.DUT, { className: p.nf, onClick: h, children: e }),
+                children: _.intl.format(_.t.twSHte, {
+                    checkItOut: (e) => (0, l.jsx)(s.D, { className: C.nf, onClick: E, children: e }),
                 }),
             }),
         ],

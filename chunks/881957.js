@@ -1,11 +1,9 @@
 "use strict";
-n.d(t, { X: () => r });
-var r = (function (e) {
-    return (
-        (e.DEBUG = "DEBUG"),
-        (e.REQUIRED = "REQUIRED"),
-        (e.OPTIONAL = "OPTIONAL"),
-        (e.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
-        e
-    );
-})({});
+n.d(t, { X: () => i });
+var r,
+    i =
+        (((r = {}).DEBUG = "DEBUG"),
+        (r.REQUIRED = "REQUIRED"),
+        (r.OPTIONAL = "OPTIONAL"),
+        (r.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
+        r);

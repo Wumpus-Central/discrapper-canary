@@ -1,46 +1,48 @@
-n.d(t, { z: () => u });
+n.d(t, { z: () => _ });
 var i = n(627968),
     l = n(64700),
-    a = n(397927),
-    r = n(475743),
-    s = n(362490),
-    o = n(271469),
-    d = n(985018);
-let c = "in-game-auth-check-modal";
-function u(e, t) {
-    let { showInGameModal: u = !0, showToastOnSuccess: m = !0 } =
+    a = n(192308),
+    s = n(691540),
+    r = n(97483),
+    o = n(475743),
+    d = n(362490),
+    c = n(311350),
+    u = n(985018);
+let m = "in-game-auth-check-modal";
+function _(e, t) {
+    let { showInGameModal: _ = !0, showToastOnSuccess: h = !0 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        [_, h] = l.useState(!1),
-        p = l.useCallback(
+        [p, g] = l.useState(!1),
+        A = l.useCallback(
             function () {
-                for (var t = arguments.length, l = Array(t), r = 0; r < t; r++) l[r] = arguments[r];
-                h(!0);
-                let o = e(...l);
+                for (var t = arguments.length, l = Array(t), s = 0; s < t; s++) l[s] = arguments[s];
+                g(!0);
+                let r = e(...l);
                 return (
-                    o === s._M.RPC &&
-                        u &&
-                        (0, a.mMO)(
+                    r === d._M.RPC &&
+                        _ &&
+                        (0, a.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e("30724").then(n.bind(n, 272047));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             },
-                            { modalKey: c },
+                            { modalKey: m },
                         ),
-                    o
+                    r
                 );
             },
-            [e, h, u],
+            [e, g, _],
         ),
-        g = (0, r.A)(t);
+        f = (0, o.A)(t);
     return (
         l.useEffect(() => {
-            if (_ && !1 === g && !0 === t) {
-                if (((0, a.OoC)(c), h(!1), !m)) return;
+            if (p && !1 === f && !0 === t) {
+                if (((0, a.closeModal)(m), g(!1), !h)) return;
                 let e = () => {
-                    (0, a.showToast)({
+                    (0, s.P0)({
                         id: "account-linked-toast",
-                        message: d.intl.string(o.default.uG6teD),
-                        type: a.ToastType.SUCCESS,
+                        message: u.intl.string(c.default.uG6teD),
+                        type: r.Ck.SUCCESS,
                     });
                 };
                 if ("visible" === document.visibilityState) e();
@@ -52,7 +54,7 @@ function u(e, t) {
                     document.addEventListener("visibilitychange", t);
                 }
             }
-        }, [_, t, g, m]),
-        p
+        }, [p, t, f, h]),
+        A
     );
 }

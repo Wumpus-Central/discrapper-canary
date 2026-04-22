@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "emptyRoles__5f97b",
     Gm: "emptyRolesText__5f97b",

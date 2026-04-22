@@ -1,48 +1,52 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
-    a = n(397927),
-    l = n(51271),
-    s = n(985018),
-    o = n(400783);
-let d = function (e) {
+    a = n(339350),
+    l = n(827734),
+    s = n(534514),
+    o = n(834730),
+    d = n(821609),
+    u = n(51271),
+    c = n(985018),
+    A = n(146983);
+let h = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        d = n?.id;
+        h = n?.id;
     return (
         r.useEffect(() => {
-            null != d && (0, l.NC)(d);
-        }, [d]),
+            null != h && (0, u.NC)(h);
+        }, [h]),
         (0, i.jsxs)("div", {
-            className: o.EL,
+            className: A.EL,
             children: [
                 (0, i.jsx)("div", {
-                    className: o.P0,
-                    children: (0, i.jsx)(a.Qfk, { size: "md", color: a.LU0.colors.INTERACTIVE_TEXT_ACTIVE }),
+                    className: A.P0,
+                    children: (0, i.jsx)(a.Q, { size: "md", color: l.A.colors.INTERACTIVE_TEXT_ACTIVE }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: o.bc,
+                    className: A.bc,
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(s.D, {
                             variant: "heading-lg/semibold",
                             color: "text-strong",
                             children:
                                 n?.name != null
-                                    ? s.intl.formatToPlainString(s.t["0Qlu/6"], { guildName: n.name })
-                                    : s.intl.string(s.t["5iLvSx"]),
+                                    ? c.intl.formatToPlainString(c.t["0Qlu/6"], { guildName: n.name })
+                                    : c.intl.string(c.t["5iLvSx"]),
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(o.E, {
                             variant: "text-md/medium",
                             color: "text-default",
-                            children: s.intl.string(s.t.FdsK4h),
+                            children: c.intl.string(c.t.FdsK4h),
                         }),
                     ],
                 }),
-                (0, i.jsx)(a.Button, {
+                (0, i.jsx)(d.$, {
                     fullWidth: !0,
                     onClick: t,
                     variant: "critical-primary",
                     size: "md",
-                    text: s.intl.string(s.t.g9tK0o),
+                    text: c.intl.string(c.t.g9tK0o),
                 }),
             ],
         })

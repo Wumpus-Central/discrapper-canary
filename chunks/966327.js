@@ -1,20 +1,18 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
+n.d(t, { A: () => o });
+var a = n(627968),
+    r = n(64700),
+    l = n(778712),
+    i = n(97808),
     s = n(386467);
-function o(e, t, n, r) {
-    return e.getAvatarURL(r, t, n);
-}
-let l = i.memo(function (e) {
-    let { user: t, guildId: n, size: l = a._3J.SIZE_32, animate: u = !1, "aria-hidden": c = !1, ...d } = e,
-        _ = i.useContext(s.A);
-    return (0, r.jsx)(a.euF, {
-        src: o(t, (0, a.FT9)(l), u, n ?? _),
-        size: l,
-        "aria-label": c ? void 0 : t.username,
-        "aria-hidden": c,
-        ...d,
+let o = r.memo(function (e) {
+    var t, n;
+    let { user: o, guildId: u, size: c = l._3.SIZE_32, animate: d = !1, "aria-hidden": m = !1, ...p } = e,
+        _ = r.useContext(s.A);
+    return (0, a.jsx)(i.eu, {
+        src: ((t = (0, l.FT)(c)), (n = u ?? _), o.getAvatarURL(n, t, d)),
+        size: c,
+        "aria-label": m ? void 0 : o.username,
+        "aria-hidden": m,
+        ...p,
     });
 });

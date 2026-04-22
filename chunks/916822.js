@@ -1,3 +1,2 @@
 "use strict";
-var t = function () {};
-e.exports = t;
+e.exports = function () {};

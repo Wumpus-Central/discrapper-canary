@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Pz: "iconPlaceholder__1729d",
     V1: "underline__1729d",

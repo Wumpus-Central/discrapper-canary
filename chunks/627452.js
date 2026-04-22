@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     MT: "searchContainer__6ae25",
     M6: "searchBox__6ae25",

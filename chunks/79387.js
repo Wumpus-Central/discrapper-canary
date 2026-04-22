@@ -1,113 +1,51 @@
 "use strict";
 let r, i;
-n.d(t, { A: () => V, B: () => l });
-var a = n(311907),
-    s = n(73153),
+n.d(t, { A: () => R, B: () => l });
+var s = n(311907),
+    a = n(73153),
     o = n(652215);
 let l = "no_payment_source",
     u = null,
-    c = null,
     d = null,
+    c = null,
     _ = null,
     f = null,
-    p = {},
+    E = {},
     h = null,
-    m = !1,
-    g = null,
-    E = !1,
+    p = !1,
+    m = null,
+    g = !1,
     A = !1,
     I = !1,
     T = !1,
-    y = null,
-    S = new Set();
-function v(e) {
+    S = null,
+    y = new Set();
+function N(e) {
     null != r && null != h ? r(h) : null != i && i(e), (r = null), (i = null);
 }
-function C(e) {
-    v(),
-        (u = e.skuId),
-        (d = e.applicationId),
-        (A = e.isIAP),
-        (_ = e.analyticsLocation),
-        (y = e.context),
-        (T = e.isGift),
-        (I = !0),
-        (E = !1),
-        (r = e.resolve),
-        (i = e.reject),
-        (g = null),
-        (h = null),
-        (f = e.promotionId);
-}
-function b(e) {
-    let { error: t } = e;
-    (I = !1), (y = null), v(t);
-}
-function N(e) {
-    let { skuId: t } = e;
-    S.add(t);
-}
-function R(e) {
-    let { skuId: t, paymentSourceId: n, price: r } = e;
-    (p = { ...p, [t]: { ...p[t], [null != n ? n : l]: r } }), S.delete(t);
-}
-function O(e) {
-    let { skuId: t } = e;
-    S.delete(t);
-}
-function D() {
-    m = !0;
-}
-function L(e) {
-    let { entitlements: t, giftCode: n } = e;
-    (m = !1), (h = t), (c = n);
-}
-function w(e) {
-    let { giftCode: t } = e;
-    if (0 !== t.uses || t.sku_id !== u) return !1;
-    c = t.code;
-}
-function x(e) {
-    let { error: t } = e;
-    (m = !1), (g = t);
-}
-function P() {
-    E = !0;
-}
-function M() {
-    g = null;
-}
-function k(e) {
-    T = e.isGift;
-}
-function U(e) {
-    let { locked: t } = e;
-    if (!t || null == y) return !1;
-    (I = !1), (y = null), v();
-}
-class G extends a.Ay.Store {
+class O extends s.Ay.Store {
     static displayName = "SKUPaymentModalStore";
     getPricesForSku(e) {
-        return p[e];
+        return E[e];
     }
     isOpen() {
         let e = __OVERLAY__ ? o.BRT.OVERLAY : o.BRT.APP;
-        return y === e && I;
+        return S === e && I;
     }
     get isPurchasingSKU() {
-        return m;
+        return p;
     }
     get forceConfirmationStepOnMount() {
-        return E;
+        return g;
     }
     get error() {
-        return g;
+        return m;
     }
     get skuId() {
         return u;
     }
     get applicationId() {
-        return d;
+        return c;
     }
     get analyticsLocation() {
         return _;
@@ -119,27 +57,76 @@ class G extends a.Ay.Store {
         return A;
     }
     get giftCode() {
-        return c;
+        return d;
     }
     get isGift() {
         return T;
     }
     isFetchingSKU(e) {
-        return S.has(e);
+        return y.has(e);
     }
 }
-let V = new G(s.h, {
-    SKU_PURCHASE_MODAL_OPEN: C,
-    SKU_PURCHASE_MODAL_CLOSE: b,
-    SKU_PURCHASE_PREVIEW_FETCH: N,
-    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: R,
-    SKU_PURCHASE_PREVIEW_FETCH_FAILURE: O,
-    SKU_PURCHASE_START: D,
-    SKU_PURCHASE_SUCCESS: L,
-    SKU_PURCHASE_FAIL: x,
-    SKU_PURCHASE_SHOW_CONFIRMATION_STEP: P,
-    SKU_PURCHASE_CLEAR_ERROR: M,
-    SKU_PURCHASE_UPDATE_IS_GIFT: k,
-    OVERLAY_SET_INPUT_LOCKED: U,
-    GIFT_CODE_CREATE: w,
+let R = new O(a.h, {
+    SKU_PURCHASE_MODAL_OPEN: function (e) {
+        N(),
+            (u = e.skuId),
+            (c = e.applicationId),
+            (A = e.isIAP),
+            (_ = e.analyticsLocation),
+            (S = e.context),
+            (T = e.isGift),
+            (I = !0),
+            (g = !1),
+            (r = e.resolve),
+            (i = e.reject),
+            (m = null),
+            (h = null),
+            (f = e.promotionId);
+    },
+    SKU_PURCHASE_MODAL_CLOSE: function (e) {
+        let { error: t } = e;
+        (I = !1), (S = null), N(t);
+    },
+    SKU_PURCHASE_PREVIEW_FETCH: function (e) {
+        let { skuId: t } = e;
+        y.add(t);
+    },
+    SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: function (e) {
+        let { skuId: t, paymentSourceId: n, price: r } = e;
+        (E = { ...E, [t]: { ...E[t], [null != n ? n : l]: r } }), y.delete(t);
+    },
+    SKU_PURCHASE_PREVIEW_FETCH_FAILURE: function (e) {
+        let { skuId: t } = e;
+        y.delete(t);
+    },
+    SKU_PURCHASE_START: function () {
+        p = !0;
+    },
+    SKU_PURCHASE_SUCCESS: function (e) {
+        let { entitlements: t, giftCode: n } = e;
+        (p = !1), (h = t), (d = n);
+    },
+    SKU_PURCHASE_FAIL: function (e) {
+        let { error: t } = e;
+        (p = !1), (m = t);
+    },
+    SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function () {
+        g = !0;
+    },
+    SKU_PURCHASE_CLEAR_ERROR: function () {
+        m = null;
+    },
+    SKU_PURCHASE_UPDATE_IS_GIFT: function (e) {
+        T = e.isGift;
+    },
+    OVERLAY_SET_INPUT_LOCKED: function (e) {
+        let { locked: t } = e;
+        if (!t || null == S) return !1;
+        (I = !1), (S = null), N();
+    },
+    GIFT_CODE_CREATE: function (e) {
+        let { giftCode: t } = e;
+        if (0 !== t.uses || t.sku_id !== u) return !1;
+        d = t.code;
+    },
 });

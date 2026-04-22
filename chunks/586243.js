@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => r });
 var i = n(64700),
-    s = n(181658),
-    l = n(493540);
+    l = n(181658),
+    s = n(493540);
 function r(e) {
     let [t, n] = i.useState(),
         [r, a] = i.useState(!1),
@@ -14,9 +13,9 @@ function r(e) {
             if (null != e) {
                 a(!0), n(void 0), d(!1);
                 try {
-                    await l.gO(e), d(!0);
+                    await s.gO(e), d(!0);
                 } catch (e) {
-                    n(new s.A(e));
+                    n(new l.A(e));
                 } finally {
                     a(!1);
                 }

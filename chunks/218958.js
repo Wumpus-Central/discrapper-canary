@@ -1,25 +1,25 @@
-n.d(t, { F: () => g });
+n.d(t, { F: () => m });
 var i = n(627968),
-    s = n(158954),
+    s = n(939249),
     l = n(311907),
-    r = n(817281),
-    a = n(419954),
+    a = n(817281),
+    r = n(419954),
     o = n(964404),
     d = n(253932),
-    c = n(780964),
-    u = n(858897),
-    m = n(985018);
-let g = (0, a.zD)(c.X.APPEARANCE_DISPLAY_COMPACT_AVATARS, {
-    useTitle: () => m.intl.string(m.t.JgjNG3),
+    u = n(780964),
+    c = n(858897),
+    g = n(985018);
+let m = (0, r.zD)(u.X.APPEARANCE_DISPLAY_COMPACT_AVATARS, {
+    useTitle: () => g.intl.string(g.t.JgjNG3),
     useSubtitle: () => {
         if (!d.hH.useSetting())
-            return m.intl.format(m.t["31PRaj"], {
+            return g.intl.format(g.t["31PRaj"], {
                 a11yHook: (e, t) =>
                     (0, i.jsx)(
-                        s.DUT,
+                        s.D,
                         {
                             tag: "a",
-                            onClick: () => (0, u.openUserSettings)(c.X.APPEARANCE_MESSAGE_DISPLAY_MODE),
+                            onClick: () => (0, c.openUserSettings)(u.X.APPEARANCE_MESSAGE_DISPLAY_MODE),
                             children: e,
                         },
                         t,
@@ -32,6 +32,6 @@ let g = (0, a.zD)(c.X.APPEARANCE_DISPLAY_COMPACT_AVATARS, {
         return !d.hH.useSetting() || e;
     },
     setValue: (e) => {
-        r.Ay.updatedUnsyncedSettings({ displayCompactAvatars: e });
+        a.Ay.updatedUnsyncedSettings({ displayCompactAvatars: e });
     },
 });

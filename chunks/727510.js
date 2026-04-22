@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__95856",
     fP: "monetizationDisclosureContainerStyle__95856",

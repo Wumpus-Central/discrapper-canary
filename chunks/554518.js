@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Y4: "paymentRestrictionBannerContainer__52623",
     u: "paymentRestrictionBannerBackgroundImage__52623",

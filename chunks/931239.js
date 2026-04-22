@@ -1,19 +1,18 @@
 "use strict";
-n.d(t, { v: () => l });
+n.d(t, { v: () => a });
 var r = n(64700),
     i = n(93023);
-let a = (e) => e;
-function s(e, t = a) {
-    let n = r.useSyncExternalStore(
-        e.subscribe,
-        () => t(e.getState()),
-        () => t(e.getInitialState()),
-    );
-    return r.useDebugValue(n), n;
-}
-let o = (e) => {
+let s = (e) => {
         let t = (0, i.y)(e),
-            n = (e) => s(t, e);
+            n = (e) =>
+                (function (e, t = (e) => e) {
+                    let n = r.useSyncExternalStore(
+                        e.subscribe,
+                        () => t(e.getState()),
+                        () => t(e.getInitialState()),
+                    );
+                    return r.useDebugValue(n), n;
+                })(t, e);
         return Object.assign(n, t), n;
     },
-    l = (e) => (e ? o(e) : o);
+    a = (e) => (e ? s(e) : s);

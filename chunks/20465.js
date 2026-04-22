@@ -1,196 +1,198 @@
-n.d(t, { A: () => O, R: () => R });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(735438),
-    o = n(407045),
-    d = n(311907),
-    c = n(397927),
-    u = n(73153),
-    h = n(367513),
-    A = n(843472),
-    _ = n(386467),
-    m = n(465364),
-    p = n(763754),
-    g = n(448368),
-    f = n(516287),
-    E = n(378058),
-    x = n(148355),
-    I = n(320501),
-    C = n(994500),
-    N = n(486020),
-    T = n(927813),
-    S = n(403362),
-    b = n(652215),
-    y = n(838541),
-    v = n(424366);
-let R = 10 * T.A.Millis.SECOND;
-function j(e) {
-    let { message: t } = e,
-        { isBlocked: n, isIgnored: s } = (0, d.cf)(
-            [C.A],
-            () => ({ isBlocked: C.A.isBlockedForMessage(t), isIgnored: C.A.isIgnoredForMessage(t) }),
-            [t],
+t.d(n, { A: () => M, R: () => L });
+var l = t(627968),
+    i = t(64700),
+    a = t(503698),
+    s = t.n(a),
+    r = t(735438),
+    o = t(517738),
+    c = t(311907),
+    u = t(939249),
+    d = t(866323),
+    A = t(43990),
+    h = t(73153),
+    p = t(367513),
+    m = t(843472),
+    g = t(386467),
+    f = t(465364),
+    C = t(763754),
+    E = t(448368),
+    v = t(516287),
+    I = t(378058),
+    x = t(148355),
+    T = t(320501),
+    _ = t(994500),
+    j = t(486020),
+    N = t(927813),
+    b = t(403362),
+    y = t(652215),
+    S = t(838541),
+    O = t(561886);
+let L = 10 * N.A.Millis.SECOND;
+function R(e) {
+    let { message: n } = e,
+        { isBlocked: t, isIgnored: a } = (0, c.cf)(
+            [_.A],
+            () => ({ isBlocked: _.A.isBlockedForMessage(n), isIgnored: _.A.isIgnoredForMessage(n) }),
+            [n],
         ),
-        r = (0, p.X4)(t),
-        o = l.useContext(_.A),
-        [u, I] = l.useState(!1),
-        T = l.useCallback(
+        r = (0, C.X4)(n),
+        o = i.useContext(g.A),
+        [d, A] = i.useState(!1),
+        h = i.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
-                    (h.A.updateChatOpen(t.channel_id, !0),
-                    A.A.jumpToMessage({ channelId: t.channel_id, messageId: t.id, flash: !0 }));
+                    (p.A.updateChatOpen(n.channel_id, !0),
+                    m.A.jumpToMessage({ channelId: n.channel_id, messageId: n.id, flash: !0 }));
             },
-            [t.channel_id, t.id],
+            [n.channel_id, n.id],
         ),
-        S = null != t.content && "" !== t.content ? (0, m.Ay)(t).content : null,
+        T = null != n.content && "" !== n.content ? (0, f.Ay)(n).content : null,
         {
-            contentPlaceholder: b,
-            renderedContent: R,
-            trailingIcon: j,
-            leadingIcon: O,
-        } = (0, g.o)(t, S, n, s, v.BK, { trailingIconClass: v.sl, leadingIconClass: v.aG, iconSize: y.eJ }),
-        L = (0, E.o6)(t),
+            contentPlaceholder: N,
+            renderedContent: b,
+            trailingIcon: y,
+            leadingIcon: L,
+        } = (0, E.o)(n, T, t, a, O.BK, { trailingIconClass: O.sl, leadingIconClass: O.aG, iconSize: S.eJ }),
+        R = (0, I.o6)(n),
         M =
-            L.length > 0
-                ? L.map((e) => (0, i.jsx)(x.A, { className: v.yI, size: 128, sticker: e, isInteracting: u }, e.id))
+            R.length > 0
+                ? R.map((e) => (0, l.jsx)(x.A, { className: O.yI, size: 128, sticker: e, isInteracting: d }, e.id))
                 : null;
-    return (0, i.jsx)(f.x, {
-        value: u,
-        children: (0, i.jsxs)(c.DUT, {
-            className: v.oR,
+    return (0, l.jsx)(v.x, {
+        value: d,
+        children: (0, l.jsxs)(u.D, {
+            className: O.oR,
             onMouseEnter: () => {
-                I(!0);
+                A(!0);
             },
             onMouseLeave: () => {
-                I(!1);
+                A(!1);
             },
-            onClick: T,
+            onClick: h,
             children: [
-                (0, i.jsxs)("div", {
-                    className: a()(v.kn, { [v.mK]: t.mentioned }),
+                (0, l.jsxs)("div", {
+                    className: s()(O.kn, { [O.mK]: n.mentioned }),
                     children: [
-                        null != M ? null : O,
-                        R ?? M ?? (0, i.jsx)("span", { children: b }),
-                        null != M ? null : j,
+                        null != M ? null : L,
+                        b ?? M ?? (0, l.jsx)("span", { children: N }),
+                        null != M ? null : y,
                     ],
                 }),
-                (0, i.jsx)("img", {
+                (0, l.jsx)("img", {
                     alt: "",
                     src:
                         r?.guildMemberAvatar != null && null != o
-                            ? (0, N.s7)({ guildId: o, userId: t.author.id, avatar: r.guildMemberAvatar })
-                            : t.author.getAvatarURL(o, 32),
-                    className: v.my,
+                            ? (0, j.s7)({ guildId: o, userId: n.author.id, avatar: r.guildMemberAvatar })
+                            : n.author.getAvatarURL(o, 32),
+                    className: O.my,
                 }),
             ],
         }),
     });
 }
-function O(e) {
-    let { channelId: t, className: n } = e,
-        [s, h] = l.useState(!1),
-        { toastsHidden: A, toastMessages: _ } = (function (e) {
-            let { channelId: t, isFrozen: n, count: i, lingerMs: s } = e,
-                [a, r] = l.useState([]),
-                [o, c] = l.useState(!1),
-                h = l.useRef(null),
-                A = l.useRef(void 0),
-                _ = l.useCallback(() => {
-                    r([]), c(!0);
+function M(e) {
+    let { channelId: n, className: t } = e,
+        [a, u] = i.useState(!1),
+        { toastsHidden: p, toastMessages: m } = (function (e) {
+            let { channelId: n, isFrozen: t, count: l, lingerMs: a } = e,
+                [s, r] = i.useState([]),
+                [o, u] = i.useState(!1),
+                d = i.useRef(null),
+                A = i.useRef(void 0),
+                p = i.useCallback(() => {
+                    r([]), u(!0);
                 }, []);
-            l.useEffect(() => {
+            i.useEffect(() => {
                 function e(e) {
-                    let { channelId: n, message: i, optimistic: l } = e;
-                    n !== t ||
-                        i.type === b.lAJ.STAGE_START ||
-                        i.type === b.lAJ.STAGE_END ||
-                        i.type === b.lAJ.STAGE_TOPIC ||
-                        i.type === b.lAJ.STAGE_SPEAKER ||
-                        i.type === b.lAJ.STAGE_RAISE_HAND ||
-                        l ||
-                        (clearTimeout(A.current), (A.current = setTimeout(_, s)), r((e) => [...e, i.id]));
+                    let { channelId: t, message: l, optimistic: i } = e;
+                    t !== n ||
+                        l.type === y.lAJ.STAGE_START ||
+                        l.type === y.lAJ.STAGE_END ||
+                        l.type === y.lAJ.STAGE_TOPIC ||
+                        l.type === y.lAJ.STAGE_SPEAKER ||
+                        l.type === y.lAJ.STAGE_RAISE_HAND ||
+                        i ||
+                        (clearTimeout(A.current), (A.current = setTimeout(p, a)), r((e) => [...e, l.id]));
                 }
                 return (
-                    u.h.subscribe("MESSAGE_CREATE", e),
+                    h.h.subscribe("MESSAGE_CREATE", e),
                     () => {
-                        u.h.unsubscribe("MESSAGE_CREATE", e);
+                        h.h.unsubscribe("MESSAGE_CREATE", e);
                     }
                 );
-            }, [t, _, i, s]),
-                l.useEffect(
+            }, [n, p, l, a]),
+                i.useEffect(
                     () => () => {
                         clearTimeout(A.current);
                     },
                     [],
                 ),
-                l.useEffect(() => {
-                    a.length > 3 &&
+                i.useEffect(() => {
+                    s.length > 3 &&
                         r((e) => {
-                            let t = e.length - 3;
-                            return [...e.slice(t)];
+                            let n = e.length - 3;
+                            return [...e.slice(n)];
                         });
-                }, [a]),
-                n && null == h.current ? (h.current = a) : n || null == h.current || (h.current = null);
-            let m = h.current ?? a;
+                }, [s]),
+                t && null == d.current ? (d.current = s) : t || null == d.current || (d.current = null);
+            let m = d.current ?? s;
             return {
                 toastsHidden: o,
-                toastMessages: (0, d.yK)([I.A], () => m.map((e) => I.A.getMessage(t, e)), [t, m]).filter(S.Vq),
+                toastMessages: (0, c.yK)([T.A], () => m.map((e) => T.A.getMessage(n, e)), [n, m]).filter(b.Vq),
             };
-        })({ channelId: t, isFrozen: s, count: 3, lingerMs: R }),
-        m = l.useRef({}),
-        [p, g] = l.useState({}),
-        f = l.useCallback((e, t) => {
-            null == t ? delete m.current[e] : (m.current[e] = t);
+        })({ channelId: n, isFrozen: a, count: 3, lingerMs: L }),
+        g = i.useRef({}),
+        [f, C] = i.useState({}),
+        E = i.useCallback((e, n) => {
+            null == n ? delete g.current[e] : (g.current[e] = n);
         }, []),
-        E = l.useRef(p);
-    l.useLayoutEffect(() => {
-        E.current = p;
+        v = i.useRef(f);
+    i.useLayoutEffect(() => {
+        v.current = f;
     }),
-        l.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             let e = {},
-                t = 0;
-            for (let n of _) {
-                let i = m.current[n.id] ?? 0;
-                (e[n.id] = t), (t += i + 8);
+                n = 0;
+            for (let t of m) {
+                let l = g.current[t.id] ?? 0;
+                (e[t.id] = n), (n += l + 8);
             }
-            (0, r.isEqual)(e, E.current) || g(e);
-        }, [_]);
-    let x = _.map((e) => ({ message: e, height: m.current[e.id], y: p[e.id] })),
-        C = (0, c.pnh)(x, {
+            (0, r.isEqual)(e, v.current) || C(e);
+        }, [m]);
+    let I = m.map((e) => ({ message: e, height: g.current[e.id], y: f[e.id] })),
+        x = (0, d.p)(I, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
-                let { y: t } = e;
-                return { opacity: 1, translateY: t };
+                let { y: n } = e;
+                return { opacity: 1, translateY: n };
             },
             update: (e) => {
-                let { y: t } = e;
-                return { translateY: t };
+                let { y: n } = e;
+                return { translateY: n };
             },
             leave: (e) => {
-                let { height: t, y: n } = e;
-                return { opacity: 0, translateY: A ? n : -(t ?? 0) - 8, pointerEvents: "none" };
+                let { height: n, y: t } = e;
+                return { opacity: 0, translateY: p ? t : -(n ?? 0) - 8, pointerEvents: "none" };
             },
         });
-    return (0, i.jsx)(c.NPJ, {
-        theme: b.NJ8.DARK,
+    return (0, l.jsx)(A.N, {
+        theme: y.NJ8.DARK,
         children: (e) =>
-            (0, i.jsx)("div", {
-                className: a()(n, e),
+            (0, l.jsx)("div", {
+                className: s()(t, e),
                 onMouseEnter: () => {
-                    h(!0);
+                    u(!0);
                 },
                 onMouseLeave: () => {
-                    h(!1);
+                    u(!1);
                 },
-                children: C((e, t) =>
-                    (0, i.jsx)(o.animated.div, {
-                        ref: (e) => f(t.message.id, null != e ? e.offsetHeight : null),
-                        className: v.T_,
+                children: x((e, n) =>
+                    (0, l.jsx)(o.animated.div, {
+                        ref: (e) => E(n.message.id, null != e ? e.offsetHeight : null),
+                        className: O.T_,
                         style: e,
-                        children: (0, i.jsx)(j, { message: t.message }),
+                        children: (0, l.jsx)(R, { message: n.message }),
                     }),
                 ),
             }),

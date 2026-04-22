@@ -1,33 +1,33 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(627968);
+n.d(t, { A: () => d });
+var l = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(966327),
-    s = n(937008),
+var r = n(783878),
+    i = n(778712),
+    s = n(966327),
+    a = n(937008),
     o = n(427262),
-    l = n(985018);
-let u = (e) => {
-    let { selectedSkuId: t, validateSelectedGift: n, className: u, recipients: c } = e,
-        { giftRecipient: d, setGiftRecipient: _ } = (0, s.Pv)();
-    if (null == t) return null;
-    let f = (e) => {
-        n(e, t), _(e);
-    };
-    return (0, r.jsx)("div", {
-        className: u,
-        children: (0, r.jsx)(i.ZiE, {
-            selectionMode: "single",
-            label: l.intl.string(l.t.xFn72s),
-            placeholder: l.intl.string(l.t.R0vK0N),
-            value: d,
-            onSelectionChange: f,
-            options: c.map((e) => ({
-                id: e.id,
-                value: e,
-                label: `${o.Ay.getUserTag(e)}`,
-                leading: (0, r.jsx)(a.A, { user: e, size: i._3J.SIZE_20 }),
-            })),
-        }),
-    });
+    u = n(985018);
+let d = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: d, recipients: c } = e,
+        { giftRecipient: C, setGiftRecipient: p } = (0, a.Pv)();
+    return null == t
+        ? null
+        : (0, l.jsx)("div", {
+              className: d,
+              children: (0, l.jsx)(r.Z, {
+                  selectionMode: "single",
+                  label: u.intl.string(u.t.xFn72s),
+                  placeholder: u.intl.string(u.t.R0vK0N),
+                  value: C,
+                  onSelectionChange: (e) => {
+                      n(e, t), p(e);
+                  },
+                  options: c.map((e) => ({
+                      id: e.id,
+                      value: e,
+                      label: `${o.Ay.getUserTag(e)}`,
+                      leading: (0, l.jsx)(s.A, { user: e, size: i._3.SIZE_20 }),
+                  })),
+              }),
+          });
 };

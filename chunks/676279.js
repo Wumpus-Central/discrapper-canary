@@ -1,42 +1,33 @@
 "use strict";
-n.d(t, { EL: () => d, TM: () => A, Z5: () => o, cy: () => m, gm: () => E, nr: () => g });
+n.d(t, { EL: () => d, TM: () => p, Z5: () => o, cy: () => f, gm: () => h, nr: () => E });
 var r = n(481613),
     i = n.n(r);
-let a = (i().name ?? "unknown").toLowerCase(),
-    s = "chrome" === a.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
+let s = (i().name ?? "unknown").toLowerCase(),
+    a = "chrome" === s.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
 function o() {
-    return s;
+    return a;
 }
-let l = "electron" === a.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
-function u() {
-    return l;
-}
-let c = "firefox" === a.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
+let l = "electron" === s.toLowerCase() ? parseInt(i().version ?? "", 10) : -1,
+    u = "firefox" === s.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
 function d() {
-    return c;
+    return u;
 }
-let _ = "edge" === a.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
+let c = "edge" === s.toLowerCase() ? parseInt(i().version ?? "", 10) : -1,
+    _ = "safari" === s.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
 function f() {
-    return _;
+    return -1 !== a || -1 !== l || -1 !== u || -1 !== c || _ >= 14;
 }
-let p = "safari" === a.toLowerCase() ? parseInt(i().version ?? "", 10) : -1;
-function h() {
-    return p;
-}
-function m() {
-    return -1 !== o() || -1 !== u() || -1 !== d() || -1 !== f() || h() >= 14;
-}
-function g() {
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent,
         t = e.toLowerCase();
     return -1 !== t.indexOf("safari") && -1 === t.indexOf("chrome") && -1 !== t.indexOf("version/");
 }
-function E() {
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent;
     return -1 !== e.toLowerCase().indexOf("firefox");
 }
-function A() {
+function p() {
     let e = window.navigator,
         t = e.mediaCapabilities?.decodingInfo != null;
-    return g(e.userAgent) && t;
+    return E(e.userAgent) && t;
 }

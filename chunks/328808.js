@@ -1,93 +1,96 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => R });
 var i = n(627968),
     l = n(64700),
     s = n(735438),
     a = n.n(s),
     r = n(311907),
-    o = n(397927),
-    c = n(182061),
-    d = n(886393),
-    u = n(307623),
-    h = n(660273),
-    A = n(40389),
-    _ = n(707792),
-    m = n(41402),
-    g = n(271456),
-    p = n(200273),
-    f = n(565846),
-    x = n(707653),
-    E = n(50268),
-    I = n(58736),
-    C = n(253932),
-    N = n(977997),
+    o = n(265872),
+    d = n(365199),
+    c = n(861672),
+    u = n(477782),
+    h = n(182061),
+    A = n(886393),
+    _ = n(307623),
+    m = n(660273),
+    g = n(40389),
+    p = n(707792),
+    f = n(41402),
+    E = n(271456),
+    x = n(200273),
+    I = n(565846),
+    C = n(707653),
+    b = n(50268),
+    N = n(58736),
+    S = n(253932),
+    v = n(977997),
     T = n(747926),
-    S = n(985018);
-function b(e) {
+    y = n(985018);
+function R(e) {
     let { channel: t } = e,
         [n, s] = l.useState(!1),
         a = l.useRef(null);
     function r() {
         s((e) => !e);
     }
-    let c = S.intl.string(S.t["UKOtz+"]);
-    return (0, i.jsx)(o.YNO, {
+    let c = y.intl.string(y.t["UKOtz+"]);
+    return (0, i.jsx)(o.Y, {
         targetElementRef: a,
         shouldShow: n,
-        animation: o.YNO.Animation.NONE,
+        animation: o.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
         onRequestClose: () => s(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(y, { ...e, channel: t });
+            return (0, i.jsx)(j, { ...e, channel: t });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(I.Ay.Icon, {
+            return (0, i.jsx)(N.Ay.Icon, {
                 ...e,
                 ref: a,
                 onClick: r,
                 tooltip: n ? null : c,
-                icon: o.jNK,
+                icon: d.j,
                 "aria-label": c,
                 selected: n,
             });
         },
     });
 }
-function y(e) {
+function j(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
-        s = (0, c.A)(t),
-        I = (0, _.A)(t),
-        b = (0, f.A)(t.id),
-        y = (0, p.A)(t),
-        v = (0, E.A)({ id: t.id, label: S.intl.string(S.t.DQ797g) }),
-        j = (0, d.A)(t),
-        R = (0, u.A)(t),
-        O = (0, h.A)(t, "Toolbar Overflow"),
-        L = (0, m.A)(t),
-        M = (0, A.A)(t),
-        D = (0, x.A)(t),
-        U = (0, g.A)(t),
-        G = C.SY.useSetting(),
-        P = (0, r.bG)([N.A], () => !a().isEmpty(N.A.getVoiceStatesForChannel(t.id)));
-    return (0, i.jsxs)(o.W1t, {
+        s = (0, h.A)(t),
+        o = (0, p.A)(t),
+        d = (0, I.A)(t.id),
+        N = (0, x.A)(t),
+        R = (0, b.A)({ id: t.id, label: y.intl.string(y.t.DQ797g) }),
+        j = (0, A.A)(t),
+        L = (0, _.A)(t),
+        O = (0, m.A)(t, "Toolbar Overflow"),
+        G = (0, f.A)(t),
+        D = (0, g.A)(t),
+        M = (0, C.A)(t),
+        U = (0, E.A)(t),
+        P = S.SY.useSetting(),
+        w = (0, r.bG)([v.A], () => !a().isEmpty(v.A.getVoiceStatesForChannel(t.id)));
+    return (0, i.jsxs)(c.W, {
         "data-menu-migrated": !0,
         navId: "thread-context",
         onClose: n,
-        "aria-label": S.intl.string(S.t["1NBjqb"]),
+        "aria-label": y.intl.string(y.t["1NBjqb"]),
         onSelect: l,
         children: [
-            (0, i.jsxs)(o.rXV, { children: [O, M] }),
-            (0, i.jsxs)(o.rXV, {
+            (0, i.jsxs)(u.rX, { children: [O, D] }),
+            (0, i.jsxs)(u.rX, {
                 children: [
-                    y,
-                    L,
-                    b,
-                    G && !P
-                        ? (0, i.jsx)(o.Drp, {
+                    N,
+                    G,
+                    d,
+                    P && !w
+                        ? (0, i.jsx)(u.Dr, {
                               id: "open",
-                              label: S.intl.string(S.t.bX7EaG),
+                              label: y.intl.string(y.t.bX7EaG),
                               action: function () {
                                   (0, T.JA)(t);
                               },
@@ -96,8 +99,8 @@ function y(e) {
                     U,
                 ],
             }),
-            (0, i.jsxs)(o.rXV, { children: [D, s, I, R] }),
-            (0, i.jsxs)(o.rXV, { children: [j, v] }),
+            (0, i.jsxs)(u.rX, { children: [M, s, o, L] }),
+            (0, i.jsxs)(u.rX, { children: [j, R] }),
         ],
     });
 }

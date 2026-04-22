@@ -1,29 +1,21 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(311907),
     i = n(73153),
-    a = n(572009),
-    s = n(788868);
+    s = n(572009),
+    a = n(788868);
 let o = "OverridePremiumTypeStore",
-    l = { premiumTypeOverride: s.$I, premiumTypeActual: s.$I, createdAtOverride: s.lk };
+    l = { premiumTypeOverride: a.$I, premiumTypeActual: a.$I, createdAtOverride: a.lk };
 function u(e) {
-    let { premiumType: t } = e;
-    l.premiumTypeOverride = t;
-}
-function c(e) {
-    let { createdAt: t } = e;
-    l.createdAtOverride = t;
-}
-function d(e) {
     let { user: t } = e;
-    l.premiumTypeActual = (0, a.nq)(t.premium_type);
+    l.premiumTypeActual = (0, s.nq)(t.premium_type);
 }
-class _ extends r.Ay.PersistedStore {
+class d extends r.Ay.PersistedStore {
     static displayName = o;
     static persistKey = o;
     static migrations = [
         (e) => {
-            if (e?.createdAtOverride == null) return { ...e, createdAtOverride: s.lk };
+            if (e?.createdAtOverride == null) return { ...e, createdAtOverride: a.lk };
         },
     ];
     initialize(e) {
@@ -32,10 +24,10 @@ class _ extends r.Ay.PersistedStore {
                 (l.premiumTypeOverride = e?.premiumTypeOverride),
                 null != e.createdAtOverride
                     ? (l.createdAtOverride = new Date(e.createdAtOverride))
-                    : (l.createdAtOverride = s.lk);
+                    : (l.createdAtOverride = a.lk);
             return;
         }
-        (l.premiumTypeOverride = s.$I), (l.createdAtOverride = s.lk);
+        (l.premiumTypeOverride = a.$I), (l.createdAtOverride = a.lk);
     }
     getPremiumTypeOverride() {
         return l.premiumTypeOverride;
@@ -53,9 +45,15 @@ class _ extends r.Ay.PersistedStore {
         return l.premiumTypeOverride;
     }
 }
-let f = new _(i.h, {
-    SET_PREMIUM_TYPE_OVERRIDE: u,
-    SET_CREATED_AT_OVERRIDE: c,
-    CURRENT_USER_UPDATE: d,
-    CONNECTION_OPEN: d,
+let c = new d(i.h, {
+    SET_PREMIUM_TYPE_OVERRIDE: function (e) {
+        let { premiumType: t } = e;
+        l.premiumTypeOverride = t;
+    },
+    SET_CREATED_AT_OVERRIDE: function (e) {
+        let { createdAt: t } = e;
+        l.createdAtOverride = t;
+    },
+    CURRENT_USER_UPDATE: u,
+    CONNECTION_OPEN: u,
 });

@@ -1,66 +1,72 @@
-"use strict";
 n.d(t, { A: () => _ });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(732955),
-    a = n(397927),
-    s = n(928658),
-    o = n(632738),
-    l = n(627363),
+var l = n(189213),
+    s = n(477782),
+    a = n(192308),
+    r = n(331322),
+    o = n(928658),
+    d = n(632738),
+    c = n(627363),
     u = n(587895),
-    c = n(985018);
-let d = "useReportAppItemModal";
+    h = n(985018);
+let A = "useReportAppItemModal";
 function _(e) {
     let { applicationId: t, ...n } = e;
     return null == t
         ? null
-        : (0, r.jsx)(a.Drp, {
+        : (0, i.jsx)(s.Dr, {
               id: "report-app",
               color: n.color,
-              label: c.intl.string(c.t.NgA5vp),
-              action: () => f(t, n),
+              label: h.intl.string(h.t.NgA5vp),
+              action: () => {
+                  var e, s;
+                  let _;
+                  return (
+                      (e = t),
+                      (s = n),
+                      (_ = () => {
+                          (0, a.closeModal)(A), s.onSubmit?.();
+                      }),
+                      void (0, a.openModalLazy)(
+                          async () => {
+                              await c.Ay.fetchApplication(e);
+                              let t = u.A.getApplication(e);
+                              return (e) =>
+                                  (0, i.jsx)(l.Modal, {
+                                      title: h.intl.string(h.t.Bd10bR),
+                                      actions: [],
+                                      ...e,
+                                      children: (0, i.jsxs)(r.B, {
+                                          children: [
+                                              (0, i.jsx)(d.PQ, {
+                                                  variant: "clickable",
+                                                  title: h.intl.string(h.t.eyEkG1),
+                                                  description: h.intl.string(h.t.ptItsj),
+                                                  onButtonPress: () => (0, o.NW)(s.user, s.guildId, _, s.appContext),
+                                              }),
+                                              (0, i.jsx)(d.PQ, {
+                                                  variant: "clickable",
+                                                  title: h.intl.string(h.t.atP0yX),
+                                                  description: h.intl.string(h.t.UGg603),
+                                                  onButtonPress: () => {
+                                                      (0, o.r3)({
+                                                          application: t,
+                                                          entrypoint: s.entrypoint ?? "user_profile",
+                                                          contextualGuildId: s.guildId,
+                                                          contextualChannelId: s.channelId,
+                                                          onSubmit: _,
+                                                          appContext: s.appContext,
+                                                      });
+                                                  },
+                                              }),
+                                          ],
+                                      }),
+                                  });
+                          },
+                          { modalKey: A },
+                      )
+                  );
+              },
           });
-}
-function f(e, t) {
-    let n = () => {
-        (0, a.OoC)(d), t.onSubmit?.();
-    };
-    (0, a.mMO)(
-        async () => {
-            await l.Ay.fetchApplication(e);
-            let d = u.A.getApplication(e);
-            return (e) =>
-                (0, r.jsx)(i.aFV, {
-                    title: c.intl.string(c.t.Bd10bR),
-                    actions: [],
-                    ...e,
-                    children: (0, r.jsxs)(a.BJc, {
-                        children: [
-                            (0, r.jsx)(o.PQ, {
-                                variant: "clickable",
-                                title: c.intl.string(c.t.eyEkG1),
-                                description: c.intl.string(c.t.ptItsj),
-                                onButtonPress: () => (0, s.NW)(t.user, t.guildId, n, t.appContext),
-                            }),
-                            (0, r.jsx)(o.PQ, {
-                                variant: "clickable",
-                                title: c.intl.string(c.t.atP0yX),
-                                description: c.intl.string(c.t.UGg603),
-                                onButtonPress: () => {
-                                    (0, s.r3)({
-                                        application: d,
-                                        entrypoint: t.entrypoint ?? "user_profile",
-                                        contextualGuildId: t.guildId,
-                                        contextualChannelId: t.channelId,
-                                        onSubmit: n,
-                                        appContext: t.appContext,
-                                    });
-                                },
-                            }),
-                        ],
-                    }),
-                });
-        },
-        { modalKey: d },
-    );
 }

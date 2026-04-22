@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(311907),
     i = n(73153),
     s = n(518977),
@@ -10,14 +10,7 @@ function u(e) {
     if (null == e) return !1;
     l = (0, s.XF)(e) ?? (0, s.rE)();
 }
-function c(e) {
-    u(e.countryCode), (o = null != e.regionalFeatureConfig ? a.wN.fromConnectionOpen(e.regionalFeatureConfig) : null);
-}
-function d(e) {
-    let { countryCode: t } = e;
-    return u(t);
-}
-class _ extends r.Ay.Store {
+class d extends r.Ay.Store {
     static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
         return o;
@@ -38,4 +31,13 @@ class _ extends r.Ay.Store {
         return l;
     }
 }
-let f = new _(i.h, { CONNECTION_OPEN: c, SET_LOCATION_METADATA: d });
+let c = new d(i.h, {
+    CONNECTION_OPEN: function (e) {
+        u(e.countryCode),
+            (o = null != e.regionalFeatureConfig ? a.wN.fromConnectionOpen(e.regionalFeatureConfig) : null);
+    },
+    SET_LOCATION_METADATA: function (e) {
+        let { countryCode: t } = e;
+        return u(t);
+    },
+});

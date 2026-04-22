@@ -1,33 +1,35 @@
-a.d(t, { default: () => i });
-var l = a(627968),
-    r = a(64700),
-    u = a(397927),
-    n = a(442433),
-    o = a(545059),
-    d = a(810412),
-    s = a(652215);
-function i(e) {
-    let { groupId: t, onSelect: i } = e,
-        p = r.useCallback(() => {
-            (0, u.mMO)(async () => {
-                let { default: e } = await a.e("51080").then(a.bind(a, 519528));
-                return (a) => (0, l.jsx)(e, { ...a, groupId: t });
+t.d(a, { default: () => p });
+var l = t(627968),
+    n = t(64700),
+    o = t(192308),
+    r = t(861672),
+    u = t(477782),
+    d = t(442433),
+    s = t(545059),
+    i = t(810412),
+    c = t(652215);
+function p(e) {
+    let { groupId: a, onSelect: p } = e,
+        b = n.useCallback(() => {
+            (0, o.openModalLazy)(async () => {
+                let { default: e } = await t.e("51080").then(t.bind(t, 297147));
+                return (t) => (0, l.jsx)(e, { ...t, groupId: a });
             }),
-                (0, n.Z_)();
-        }, [t]),
-        c = r.useCallback(() => {
-            o.A.deleteGroup(t),
-                (0, n.Z_)(),
-                (0, d.YX)(s.uss.FRIENDS, { type: d.Z5.GROUP_MANAGED, value: d.IP.REMOVED_FROM_FAVORITES });
-        }, [t]);
-    return (0, l.jsxs)(u.W1t, {
+                (0, d.Z_)();
+        }, [a]),
+        _ = n.useCallback(() => {
+            s.A.deleteGroup(a),
+                (0, d.Z_)(),
+                (0, i.YX)(c.uss.FRIENDS, { type: i.Z5.GROUP_MANAGED, value: i.IP.REMOVED_FROM_FAVORITES });
+        }, [a]);
+    return (0, l.jsxs)(r.W, {
         "aria-label": "Group Context Menu",
         navId: "overlay-group-context-menu",
-        onClose: n.Z_,
-        onSelect: i,
+        onClose: d.Z_,
+        onSelect: p,
         children: [
-            (0, l.jsx)(u.Drp, { id: "edit", label: "Edit Group", action: p }),
-            (0, l.jsx)(u.Drp, { id: "delete", label: "Delete Group", action: c, color: "danger" }),
+            (0, l.jsx)(u.Dr, { id: "edit", label: "Edit Group", action: b }),
+            (0, l.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: _, color: "danger" }),
         ],
     });
 }

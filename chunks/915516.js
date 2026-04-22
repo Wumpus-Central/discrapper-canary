@@ -1,20 +1,21 @@
-n.d(t, { Fu: () => E, GZ: () => _, __: () => u, rn: () => d });
+"use strict";
+n.d(t, { Fu: () => d, GZ: () => u, __: () => E, rn: () => _ });
 var i = n(496431),
-    l = n(773669),
-    r = n(975571),
-    a = n(927578),
-    s = n(788868),
+    r = n(773669),
+    l = n(975571),
+    s = n(927578),
+    a = n(788868),
     o = n(652215),
     c = n(985018);
-function _(e, t, n, i) {
+function u(e, t, n, i) {
     switch (e) {
-        case s.pe.TIER_0:
+        case a.pe.TIER_0:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.sP5OqC, { days: t.days })
                 : t.hours > 0
                   ? c.intl.formatToPlainString(c.t["7Lhfu7"], { hours: t.hours })
                   : c.intl.formatToPlainString(c.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-        case s.pe.TIER_2:
+        case a.pe.TIER_2:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.GPqVWT, { days: t.days, trialPeriod: n, termsUrl: i })
                 : t.hours > 0
@@ -28,24 +29,24 @@ function _(e, t, n, i) {
             throw Error(`Unsupported subscription tier: ${e}`);
     }
 }
-let E = (e) => {
+let d = (e) => {
     let t = e.expires_at,
         n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3),
-        l = e?.subscription_trial?.sku_id;
-    return null == t || null == l
+        r = e?.subscription_trial?.sku_id;
+    return null == t || null == r
         ? null
-        : _(
-              l,
+        : u(
+              r,
               n,
-              (0, a.re)({
+              (0, s.re)({
                   intervalType: e.subscription_trial?.interval,
                   intervalCount: e.subscription_trial?.interval_count,
               }),
-              r.A.getArticleURL(e.trial_id === s.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
+              l.A.getArticleURL(e.trial_id === a.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
           );
 };
-function d(e, t) {
-    let n = new Intl.NumberFormat(l.default.locale, {
+function _(e, t) {
+    let n = new Intl.NumberFormat(r.default.locale, {
         style: "percent",
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
@@ -56,8 +57,8 @@ function d(e, t) {
           ? c.intl.formatToPlainString(c.t["0hYT6o"], { hours: e.hours, discountPercentage: n })
           : c.intl.formatToPlainString(c.t["2rh7rw"], { minutes: Math.max(e.minutes, 1), discountPercentage: n });
 }
-let u = (e) => {
+let E = (e) => {
     let t = e.expires_at,
         n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3);
-    return null == t ? null : d(n, Number(e.discount.amount));
+    return null == t ? null : _(n, Number(e.discount.amount));
 };

@@ -1,56 +1,58 @@
 "use strict";
-s.d(t, { A: () => j });
+s.d(t, { A: () => T });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
     i = s(572944),
     o = s(311907),
-    c = s(397927),
-    d = s(564322),
-    u = s(154323),
+    c = s(599319),
+    d = s(534514),
+    u = s(821609),
+    g = s(564322),
+    h = s(154323),
     _ = s(785330),
-    g = s(954571),
-    m = s(979286),
-    h = s(440938),
-    p = s(590180),
-    f = s(295811),
-    x = s(870216),
-    E = s(166489),
-    C = s(613258),
+    m = s(954571),
+    p = s(979286),
+    f = s(440938),
+    E = s(590180),
+    x = s(295811),
+    A = s(870216),
+    C = s(166489),
+    S = s(613258),
     b = s(758836),
-    A = s(652215),
-    S = s(985018),
-    v = s(941734);
-let I = (e) => {
+    v = s(652215),
+    L = s(985018),
+    I = s(941734);
+let j = (e) => {
         let { tab: t } = e,
-            [s, l, a] = (0, o.yK)([x.A], () => [x.A.getLayout(t), x.A.isFetchingLayout(t), x.A.getLayoutFetchError(t)]),
-            c = (0, o.bG)([u.A], () => u.A.get("shop_include_unpublished")),
-            d = (0, o.bG)([p.A], () => p.A.skipNumCategories),
-            g = r.useMemo(() => ({ include_unpublished: c ?? !1, skip_num_categories: d ?? 0 }), [c, d]),
-            h = null == s && !l && a?.status !== 404 && a?.status !== 429;
-        return (r.useEffect(() => {
-            h && (0, m.T2)({ tab: t });
-        }, [h, t]),
+            [s, r, a] = (0, o.yK)([A.A], () => [A.A.getLayout(t), A.A.isFetchingLayout(t), A.A.getLayoutFetchError(t)]),
+            c = (0, o.bG)([h.A], () => h.A.get("shop_include_unpublished")),
+            d = (0, o.bG)([E.A], () => E.A.skipNumCategories),
+            u = l.useMemo(() => ({ include_unpublished: c ?? !1, skip_num_categories: d ?? 0 }), [c, d]),
+            g = null == s && !r && a?.status !== 404 && a?.status !== 429;
+        return (l.useEffect(() => {
+            g && (0, p.T2)({ tab: t });
+        }, [g, t]),
         null == s)
-            ? t !== i.g.HOME || h || l
+            ? t !== i.g.HOME || g || r
                 ? null
-                : (0, n.jsx)(_.Z_, { tenantId: A.FYj, templateId: "shop-home", requestParams: g })
+                : (0, n.jsx)(_.Z_, { tenantId: v.FYj, templateId: "shop-home", requestParams: u })
             : (0, n.jsxs)(n.Fragment, {
-                  children: [t === i.g.ORBS && (0, n.jsx)(E.A, {}), (0, n.jsx)(_.Qs, { tenantId: A.FYj, layoutId: s })],
+                  children: [t === i.g.ORBS && (0, n.jsx)(C.A, {}), (0, n.jsx)(_.Qs, { tenantId: v.FYj, layoutId: s })],
               });
     },
-    L = (e) => {
+    N = (e) => {
         let { url: t } = e,
-            [s, l] = r.useState(null);
-        return (r.useEffect(() => {
+            [s, r] = l.useState(null);
+        return (l.useEffect(() => {
             (async () => {
                 try {
                     let e = await fetch(t),
                         s = await e.json();
-                    l(s);
+                    r(s);
                 } catch (e) {
-                    l(null);
+                    r(null);
                 }
             })();
         }, [t]),
@@ -58,23 +60,23 @@ let I = (e) => {
             ? null
             : (0, n.jsx)(_.Ay, { layout: s });
     },
-    j = (e) => {
-        let { handleTransition: t, tab: s, transitionState: l } = e,
-            u = (0, h.uM)(),
-            _ = (0, o.bG)([f.A], () => f.A.getShopLayoutUrlOverride()),
-            m = r.useRef(null),
-            { handleScroll: p } = (0, d.X)(m, s),
-            [x, E] = r.useState(b.md),
-            [j, O] = r.useState(!1);
+    T = (e) => {
+        let { handleTransition: t, tab: s, transitionState: r } = e,
+            h = (0, f.uM)(),
+            _ = (0, o.bG)([x.A], () => x.A.getShopLayoutUrlOverride()),
+            p = l.useRef(null),
+            { handleScroll: E } = (0, g.X)(p, s),
+            [A, C] = l.useState(b.md),
+            [T, O] = l.useState(!1);
         return (
-            r.useEffect(() => {
-                if (null != m.current) {
+            l.useEffect(() => {
+                if (null != p.current) {
                     let e = () => {
-                            if (null == m.current) return;
-                            let e = m.current.getDistanceFromBottom();
-                            x >= 36 ? O(e < 20) : e <= 200 && E((e) => e + b.md);
+                            if (null == p.current) return;
+                            let e = p.current.getDistanceFromBottom();
+                            A >= 36 ? O(e < 20) : e <= 200 && C((e) => e + b.md);
                         },
-                        t = m.current.getScrollerNode();
+                        t = p.current.getScrollerNode();
                     return (
                         t?.addEventListener("scroll", e),
                         () => {
@@ -82,36 +84,36 @@ let I = (e) => {
                         }
                     );
                 }
-            }, [m, x, E, O]),
-            (0, n.jsx)(c.T7Y, {
-                className: v.OW,
-                ref: m,
-                onScroll: p,
+            }, [p, A, C, O]),
+            (0, n.jsx)(c.Ch, {
+                className: I.OW,
+                ref: p,
+                onScroll: E,
                 children: (0, n.jsxs)("div", {
-                    className: v.bx,
+                    className: I.bx,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: a()(v.rb, v.GS),
+                            className: a()(I.rb, I.GS),
                             children: [
-                                null != _ && "" !== _ ? (0, n.jsx)(L, { url: _ }) : (0, n.jsx)(I, { tab: s }),
+                                null != _ && "" !== _ ? (0, n.jsx)(N, { url: _ }) : (0, n.jsx)(j, { tab: s }),
                                 s !== i.g.CATALOG &&
-                                    x >= 36 &&
+                                    A >= 36 &&
                                     (0, n.jsxs)("div", {
-                                        className: v.R$,
+                                        className: I.R$,
                                         children: [
-                                            (0, n.jsx)(c.Heading, {
+                                            (0, n.jsx)(d.D, {
                                                 variant: "heading-md/semibold",
-                                                children: S.intl.string(S.t.Yr70c4),
+                                                children: L.intl.string(L.t.Yr70c4),
                                             }),
-                                            (0, n.jsx)(c.Button, {
+                                            (0, n.jsx)(u.$, {
                                                 variant: "primary",
-                                                text: S.intl.string(S.t.AfrvRD),
+                                                text: L.intl.string(L.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        g.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                            collectibles_shop_session_id: u?.sessionId,
+                                                        m.default.track(v.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                            collectibles_shop_session_id: h?.sessionId,
                                                             page_type: s,
-                                                            page_category: s === i.g.HOME ? void 0 : u?.pageCategory,
+                                                            page_category: s === i.g.HOME ? void 0 : h?.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -121,7 +123,7 @@ let I = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(C.A, { peaking: j, transitioning: l === b.Pf.OUT }),
+                        (0, n.jsx)(S.A, { peaking: T, transitioning: r === b.Pf.OUT }),
                     ],
                 }),
             })

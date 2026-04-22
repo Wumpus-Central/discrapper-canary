@@ -1,10 +1,10 @@
 n.d(t, { default: () => u, f: () => d });
 var i = n(627968),
     l = n(64700),
-    a = n(158954),
+    a = n(189213),
     s = n(506774),
-    r = n(397927),
-    o = n(641131),
+    r = n(150934),
+    o = n(221314),
     c = n(985018);
 let d = "report_to_mod_dont_show_resolve_confirm";
 function u(e) {
@@ -23,7 +23,7 @@ function u(e) {
                 },
             },
         ],
-        actionBarInput: (0, i.jsx)(r.Checkbox, {
+        actionBarInput: (0, i.jsx)(r.S, {
             checked: h,
             onChange: (e) => m(e),
             label: c.intl.string(o.default["3puq5c"]),

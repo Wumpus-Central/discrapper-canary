@@ -1,61 +1,62 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var a = n(503698),
-    r = n.n(a),
-    l = n(397927),
-    s = n(207963),
-    o = n(953756),
-    d = n(520586),
-    c = n(564107),
-    u = n(985018),
-    _ = n(810644),
-    m = n(725325);
-function h(e) {
+var l = n(503698),
+    a = n.n(l),
+    s = n(939249),
+    r = n(789645),
+    o = n(207963),
+    d = n(953756),
+    c = n(520586),
+    u = n(564107),
+    m = n(985018),
+    _ = n(503556),
+    h = n(143517);
+function p(e) {
     let {
             components: t,
             message: n,
-            gifAutoPlay: a,
-            getGifFavButton: h,
-            getOnMediaItemContextMenu: p,
-            shouldHideMediaOptions: g,
-            enabledContentHarmTypeFlags: A,
+            gifAutoPlay: l,
+            getGifFavButton: p,
+            getOnMediaItemContextMenu: g,
+            shouldHideMediaOptions: A,
+            enabledContentHarmTypeFlags: f,
             onSuppressEmbed: x,
-            hiddenSpoiler: f = !1,
+            hiddenSpoiler: C = !1,
         } = e,
-        [C, I] = (0, o.zn)();
+        [E, I] = (0, d.zn)();
     return 0 === t.length
         ? null
-        : (0, i.jsx)(c.N, {
-              gifAutoPlay: a,
-              getGifFavButton: h,
-              getOnMediaItemContextMenu: p,
-              shouldHideMediaOptions: g,
-              enabledContentHarmTypeFlags: A,
-              children: (0, i.jsx)(s.f5, {
+        : (0, i.jsx)(u.N, {
+              gifAutoPlay: l,
+              getGifFavButton: p,
+              getOnMediaItemContextMenu: g,
+              shouldHideMediaOptions: A,
+              enabledContentHarmTypeFlags: f,
+              children: (0, i.jsx)(o.f5, {
                   message: n,
                   shouldDisableInteractiveComponents: !0,
-                  children: (0, i.jsx)(o.O7.Root, {
+                  children: (0, i.jsx)(d.O7.Root, {
                       containerInnerWidth: I,
                       children: (0, i.jsx)("div", {
                           style: { width: "100%" },
-                          ref: C,
-                          children: (0, i.jsx)(o.O7.AutoMeasuredNestedContainer, {
+                          ref: E,
+                          children: (0, i.jsx)(d.O7.AutoMeasuredNestedContainer, {
                               children: (e) =>
                                   (0, i.jsxs)("div", {
                                       ref: e,
-                                      "aria-hidden": f,
-                                      className: r()(_.O0, m.k, m.z, { [_.dK]: f }),
+                                      "aria-hidden": C,
+                                      className: a()(_.O0, h.k, h.z, { [_.dK]: C }),
                                       children: [
                                           null != x &&
-                                              (0, i.jsx)(l.DUT, {
+                                              (0, i.jsx)(s.D, {
                                                   focusProps: { offset: { bottom: 4 } },
                                                   className: _.PP,
                                                   onClick: x,
-                                                  "aria-label": u.intl.string(u.t.GT3fNz),
-                                                  children: (0, i.jsx)(l.PGe, { size: "xs", color: "currentColor" }),
+                                                  "aria-label": m.intl.string(m.t.GT3fNz),
+                                                  children: (0, i.jsx)(r.P, { size: "xs", color: "currentColor" }),
                                               }),
-                                          (0, d.fD)(t),
+                                          (0, c.fD)(t),
                                       ],
                                   }),
                           }),

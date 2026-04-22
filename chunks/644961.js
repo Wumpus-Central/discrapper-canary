@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     dc: "spinnerContainer_a84c50",
     kL: "container_a84c50",

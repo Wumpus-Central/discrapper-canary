@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { QU: () => d, kX: () => c });
+n.d(t, { QU: () => d, kX: () => u });
 var r = n(988506),
     i = n(315069);
 let s = Object.freeze({
@@ -24,10 +24,7 @@ let s = Object.freeze({
 function o(e) {
     return 60 * e.hours + e.minutes;
 }
-function l(e) {
-    return e === r.ob.MONDAY ? r.ob.SUNDAY : e - 1;
-}
-class u extends i.A {
+class l extends i.A {
     ruleId;
     label;
     startTime;
@@ -35,7 +32,7 @@ class u extends i.A {
     days;
     enabled;
     static fromServer(e) {
-        return new u({
+        return new l({
             ruleId: e.rule_id,
             label: e.label,
             startTime: e.start_time ?? void 0,
@@ -45,7 +42,7 @@ class u extends i.A {
         });
     }
     static fromCache(e) {
-        return new u(e);
+        return new l(e);
     }
     constructor(e) {
         super(),
@@ -59,16 +56,16 @@ class u extends i.A {
     isActiveAt(e, t) {
         if (null == this.startTime || null == this.endTime || 0 === this.days.length || !this.enabled) return !1;
         let n = o(this.startTime),
-            r = o(this.endTime),
-            i = n > r;
+            i = o(this.endTime),
+            s = n > i;
         if (this.days.includes(e)) {
-            if (i) {
+            if (s) {
                 if (t >= n) return !0;
-            } else if (t >= n && t < r) return !0;
+            } else if (t >= n && t < i) return !0;
         }
-        if (i) {
-            let n = l(e);
-            if (this.days.includes(n) && t < r) return !0;
+        if (s) {
+            let n = e === r.ob.MONDAY ? r.ob.SUNDAY : e - 1;
+            if (this.days.includes(n) && t < i) return !0;
         }
         return !1;
     }
@@ -79,13 +76,13 @@ class u extends i.A {
         return null == this.startTime ? null : o(this.startTime);
     }
 }
-class c extends i.A {
+class u extends i.A {
     rules;
     static fromServer(e) {
-        return null == e ? null : new c({ rules: e.rules.map(u.fromServer) });
+        return null == e ? null : new u({ rules: e.rules.map(l.fromServer) });
     }
     static fromCache(e) {
-        return null == e ? null : new c({ rules: e.rules.map(u.fromCache) });
+        return null == e ? null : new u({ rules: e.rules.map(l.fromCache) });
     }
     constructor(e) {
         super(), (this.rules = e.rules);
@@ -136,11 +133,11 @@ class c extends i.A {
 function d(e) {
     return null == e
         ? null
-        : e instanceof c
+        : e instanceof u
           ? e
           : 0 === e.rules.length
-            ? new c({ rules: [] })
+            ? new u({ rules: [] })
             : "ruleId" in e.rules[0]
-              ? c.fromCache(e)
-              : c.fromServer(e);
+              ? u.fromCache(e)
+              : u.fromServer(e);
 }

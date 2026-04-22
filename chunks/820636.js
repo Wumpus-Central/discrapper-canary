@@ -1,64 +1,64 @@
-n.d(t, { y: () => c });
+n.d(t, { y: () => _ });
 var r = n(627968),
-    l = n(64700),
-    i = n(397927),
-    s = n(829219),
-    a = n(405670),
-    o = n(579473),
-    u = n(681636);
-function c(e) {
+    s = n(64700),
+    a = n(534514),
+    l = n(939249),
+    i = n(789645),
+    u = n(187322),
+    o = n(573613),
+    c = n(289873),
+    d = n(829219),
+    E = n(405670),
+    m = n(579473),
+    f = n(834926);
+function _(e) {
     let { quest: t, onClose: n } = e,
-        c = (0, a.Kr)((e) => e.transcript);
-    l.useEffect(() => {
-        let e = (0, o.tW)(t, o.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, !1);
-        (null == c ||
-            c.questId !== t.id ||
-            c.fetchStatus === a.Lx.NONE ||
-            (c.fetchStatus === a.Lx.SUCCESS && e?.url !== c.url)) &&
-            (0, s.qY)(t);
-    }, [c, t]);
-    let d = c?.questId === t.id && c?.fetchStatus === a.Lx.SUCCESS ? (c.text ?? "") : "",
-        m = l.useMemo(
+        _ = (0, E.Kr)((e) => e.transcript);
+    s.useEffect(() => {
+        let e = (0, m.tW)(t, m.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, !1);
+        (null == _ ||
+            _.questId !== t.id ||
+            _.fetchStatus === E.Lx.NONE ||
+            (_.fetchStatus === E.Lx.SUCCESS && e?.url !== _.url)) &&
+            (0, d.qY)(t);
+    }, [_, t]);
+    let S = _?.questId === t.id && _?.fetchStatus === E.Lx.SUCCESS ? (_.text ?? "") : "",
+        p = s.useMemo(
             () =>
-                d
-                    .split("\n")
+                S.split("\n")
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0),
-            [d],
+            [S],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: u.Mm,
+                className: f.Mm,
                 children: [
-                    (0, r.jsx)(i.Heading, {
-                        variant: "heading-md/semibold",
-                        color: "currentColor",
-                        children: "Transcript",
-                    }),
-                    (0, r.jsx)(i.DUT, {
+                    (0, r.jsx)(a.D, { variant: "heading-md/semibold", color: "currentColor", children: "Transcript" }),
+                    (0, r.jsx)(l.D, {
                         onClick: n,
-                        className: u.GI,
-                        children: (0, r.jsx)(i.PGe, { color: "currentColor" }),
+                        className: f.GI,
+                        children: (0, r.jsx)(i.P, { color: "currentColor" }),
                     }),
                 ],
             }),
-            (0, r.jsx)(i.vN3, {
-                children: (0, r.jsx)(i.ArX, {
-                    className: u.j5,
+            (0, r.jsx)(u.vN, {
+                children: (0, r.jsx)(o.Ar, {
+                    className: f.j5,
                     fade: !0,
                     children: (0, r.jsx)("div", {
-                        className: u.FN,
+                        className: f.FN,
                         children:
-                            c?.fetchStatus === a.Lx.FETCHING
+                            _?.fetchStatus === E.Lx.FETCHING
                                 ? (0, r.jsx)("div", {
-                                      className: u.Cw,
-                                      children: (0, r.jsx)(i.y$y, { type: i.y$y.Type.WANDERING_CUBES }),
+                                      className: f.Cw,
+                                      children: (0, r.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES }),
                                   })
-                                : (0, r.jsx)(i.Heading, {
+                                : (0, r.jsx)(a.D, {
                                       variant: "heading-md/normal",
                                       color: "text-muted",
-                                      children: m.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
+                                      children: p.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
                                   }),
                     }),
                 }),

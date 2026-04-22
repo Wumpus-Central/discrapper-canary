@@ -1,10 +1,7 @@
-"use strict";
-n.d(t, { j: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.APPLICATION = 1)] = "APPLICATION"),
-        (e[(e.ACTIVITY_APPLICATION = 2)] = "ACTIVITY_APPLICATION"),
-        (e[(e.CONNECTION = 3)] = "CONNECTION"),
-        e
-    );
-})({});
+a.d(t, { j: () => l });
+var n,
+    l =
+        (((n = {})[(n.APPLICATION = 1)] = "APPLICATION"),
+        (n[(n.ACTIVITY_APPLICATION = 2)] = "ACTIVITY_APPLICATION"),
+        (n[(n.CONNECTION = 3)] = "CONNECTION"),
+        n);

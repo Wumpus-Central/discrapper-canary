@@ -1,93 +1,84 @@
 "use strict";
-n.d(t, { CI: () => A, UP: () => E, eN: () => T, uY: () => g, v8: () => I, vk: () => S }), n(321073);
-var r = n(562465),
-    i = n(582754),
+n.d(t, { CI: () => m, UP: () => p, eN: () => A, uY: () => h, v8: () => g, vk: () => T }), n(321073);
+var r,
+    i = n(562465),
+    s = n(462887),
     a = n(736653),
-    s = n(573648),
-    o = n(681819),
-    l = n(652215),
-    u = n(985018);
+    o = n(573648),
+    l = n(681819),
+    u = n(652215),
+    d = n(985018);
 let c = {};
-function d(e, t) {
-    return e + t;
-}
 function _(e, t) {
-    return t.map((t) => d(e, t));
+    return t.map((t) => e + t);
 }
 function f(e) {
     return e.split("-")[1];
 }
-function p(e) {
-    return e.filter((e) => c[e] <= 1).map(f);
-}
-function h(e, t) {
+function E(e, t) {
     e.forEach((e) => {
         c[e] = t;
     });
 }
-function m(e, t, n) {
-    c[d(e, t)] = n;
+function h(e, t) {
+    t.forEach((t) => {
+        c[e + t] = 3;
+    });
 }
-function g(e, t) {
-    t.forEach((t) => m(e, t, 3));
-}
-var E = (function (e) {
-    return (
-        (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (e[(e.BOT = 1)] = "BOT"),
-        (e[(e.INTEGRATION = 2)] = "INTEGRATION"),
-        (e[(e.DISCOVERY = 3)] = "DISCOVERY"),
-        (e[(e.HUB = 4)] = "HUB"),
-        (e[(e.INVITE = 5)] = "INVITE"),
-        (e[(e.VANITY_URL = 6)] = "VANITY_URL"),
-        (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
-        (e[(e.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
-        e
-    );
-})({});
-let A = function (e) {
+var p =
+    (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+    (r[(r.BOT = 1)] = "BOT"),
+    (r[(r.INTEGRATION = 2)] = "INTEGRATION"),
+    (r[(r.DISCOVERY = 3)] = "DISCOVERY"),
+    (r[(r.HUB = 4)] = "HUB"),
+    (r[(r.INVITE = 5)] = "INVITE"),
+    (r[(r.VANITY_URL = 6)] = "VANITY_URL"),
+    (r[(r.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
+    (r[(r.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
+    r);
+let m = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         switch (e) {
             case 1:
-                return u.intl.string(u.t.HumZAi);
+                return d.intl.string(d.t.HumZAi);
             case 2:
-                return u.intl.string(u.t.gmCUFw);
+                return d.intl.string(d.t.gmCUFw);
             case 3:
-                return u.intl.string(u.t["Ql/e9Y"]);
+                return d.intl.string(d.t["Ql/e9Y"]);
             case 4:
-                return u.intl.string(u.t.Op8B3O);
+                return d.intl.string(d.t.Op8B3O);
             case 5:
-                return u.intl.string(u.t["/3vIRd"]);
+                return d.intl.string(d.t["/3vIRd"]);
             case 6:
-                if (null != t && !n) return u.intl.formatToPlainString(u.t.EIUjRy, { vanityUrl: t });
-                return u.intl.string(u.t.dGiD1O);
+                if (null != t && !n) return d.intl.formatToPlainString(d.t.EIUjRy, { vanityUrl: t });
+                return d.intl.string(d.t.dGiD1O);
             case 7:
-                return u.intl.string(u.t.vdu7oS);
+                return d.intl.string(d.t.vdu7oS);
             case 8:
-                return u.intl.string(u.t["9/ZreX"]);
+                return d.intl.string(d.t["9/ZreX"]);
             default:
-                return u.intl.string(u.t.DvMBkS);
+                return d.intl.string(d.t.DvMBkS);
         }
     },
-    I = (e) => {
+    g = (e) => {
         switch (e) {
             case "twitch":
-                return u.intl.string(u.t.AVGAkw);
+                return d.intl.string(d.t.AVGAkw);
             case "youtube":
-                return u.intl.string(u.t.PHSAsn);
+                return d.intl.string(d.t.PHSAsn);
             default:
-                return u.intl.string(u.t.gmCUFw);
+                return d.intl.string(d.t.gmCUFw);
         }
     },
-    T = (e) => {
-        let t = s.A.get((0, o.ML)(e)),
+    A = (e) => {
+        let t = o.A.get((0, l.ML)(e)),
             n = (0, a.Ay)();
         return null != t && ["twitch", "youtube"].includes(e)
-            ? `url('${((0, i.Mw))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
+            ? `url('${((0, s.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
             : null;
     };
-function y(e) {
+function I(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -96,30 +87,30 @@ function y(e) {
         integrationType: e.integration_type,
     };
 }
-async function S(e, t) {
+async function T(e, t) {
     let n = _(e, t),
-        i = p(n);
-    if (0 === i.length) return [];
-    h(n, 2);
+        r = n.filter((e) => c[e] <= 1).map(f);
+    if (0 === r.length) return [];
+    E(n, 2);
     try {
-        let t = await r.Bo.post({
-            url: l.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: i },
+        let t = await i.Bo.post({
+            url: u.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            body: { user_ids: r },
             rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return h(n, 0), [];
-        let a = t.body.map(y),
-            s = [];
-        a.forEach((e) => {
+        if (!Array.isArray(t.body)) return E(n, 0), [];
+        let s = t.body.map(I),
+            a = [];
+        s.forEach((e) => {
             let { userId: t } = e;
-            return s.push(t);
+            return a.push(t);
         });
-        let o = _(e, s),
-            u = i.filter((e) => !s.includes(e)),
-            c = _(e, u);
-        return h(o, 3), h(c, 0), a;
+        let o = _(e, a),
+            l = r.filter((e) => !a.includes(e)),
+            d = _(e, l);
+        return E(o, 3), E(d, 0), s;
     } catch (e) {
-        h(n, 0);
+        E(n, 0);
     }
     return [];
 }

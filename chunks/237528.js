@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { v: () => u });
-var r = n(627968),
-    i = n(503698),
-    a = n.n(i),
-    s = n(834730),
-    o = n(293994);
-let l = {
+a.d(l, { v: () => d });
+var t = a(627968),
+    n = a(503698),
+    o = a.n(n),
+    i = a(834730),
+    r = a(489215);
+let s = {
     blurpleLight: "blurple-light",
     blurpleMedium: "blurple-medium",
     blurpleDark: "blurple-dark",
@@ -31,8 +30,8 @@ let l = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
-function u(e) {
-    let { text: t, variant: n = "grayLight" } = e,
-        i = l[n];
-    return (0, r.jsx)(s.E, { variant: "eyebrow", className: a()(o.chip, o[i]), children: t });
+function d(e) {
+    let { text: l, variant: a = "grayLight" } = e,
+        n = s[a];
+    return (0, t.jsx)(i.E, { variant: "eyebrow", className: o()(r.chip, r[n]), children: l });
 }

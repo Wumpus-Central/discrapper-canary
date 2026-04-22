@@ -1,45 +1,56 @@
-t.d(e, { Ay: () => C, Jn: () => p, id: () => m });
-var n = t(627968);
+t.d(e, { Ay: () => K, Jn: () => N, id: () => T });
+var a = t(627968);
 t(64700);
-var a = t(284009),
-    r = t.n(a),
-    i = t(317097),
-    l = t(417597),
-    s = t(732955),
-    o = t(397927),
-    d = t(317525),
-    u = t(137766),
-    c = t(652215),
-    g = t(985018),
-    q = t(463091);
-function p() {
-    return { name: "", color: c.TGz };
+var n = t(284009),
+    r = t.n(n),
+    l = t(317097),
+    i = t(417597),
+    s = t(821609),
+    o = t(866711),
+    d = t(289873),
+    c = t(695366),
+    u = t(834730),
+    g = t(534514),
+    h = t(905499),
+    p = t(696986),
+    f = t(241326),
+    m = t(192308),
+    q = t(452027),
+    v = t(532446),
+    C = t(744898),
+    x = t(317525),
+    U = t(137766),
+    V = t(652215),
+    b = t(985018),
+    j = t(955894);
+function N() {
+    return { name: "", color: V.TGz };
 }
-function f(A) {
+function I(A) {
     let e,
-        { onRemove: t, role: a } = A;
-    return null != a
-        ? (0, n.jsx)(o.CR_, {
-              items: [{ id: a.id, label: a.name, icon: { type: "role", color: (0, i.Hl)(a.color) } }],
+        { onRemove: t, role: n } = A;
+    return null != n
+        ? (0, a.jsx)(o.C, {
+              items: [{ id: n.id, label: n.name, icon: { type: "role", color: (0, l.Hl)(n.color) } }],
               onRemove: t,
           })
-        : ((e = (0, n.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS })),
-          (0, n.jsx)("div", { className: q.qo, children: e }));
+        : ((e = (0, a.jsx)(d.y, { type: d.y.Type.PULSING_ELLIPSIS })),
+          (0, a.jsx)("div", { className: j.qo, children: e }));
 }
-function m() {
-    return (0, n.jsx)(o.EpV, { size: "xs", color: "currentColor", className: q.QW });
+function T() {
+    return (0, a.jsx)(c.E, { size: "xs", color: "currentColor", className: j.QW });
 }
-function h(A) {
+function F(A) {
     let { roleName: e } = A;
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, a.jsx)(u.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: g.intl.format(g.t.i2x5aY, {
+                children: b.intl.format(b.t.i2x5aY, {
                     roleName: e,
                     emphasisHook: (A) =>
-                        (0, n.jsx)(o.Text, {
+                        (0, a.jsx)(u.E, {
                             tag: "span",
                             variant: "text-md/semibold",
                             color: "text-default",
@@ -47,90 +58,86 @@ function h(A) {
                         }),
                 }),
             }),
-            (0, n.jsxs)(o.Heading, {
-                className: q.wV,
+            (0, a.jsxs)(g.D, {
+                className: j.wV,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
-                    (0, n.jsx)(o.Nxw, { size: "sm", color: "currentColor" }),
-                    (0, n.jsx)(o.hKd, { horizontal: !0, size: 8 }),
-                    g.intl.string(g.t.KWx4HY),
+                    (0, a.jsx)(h.N, { size: "sm", color: "currentColor" }),
+                    (0, a.jsx)(p.h, { horizontal: !0, size: 8 }),
+                    b.intl.string(b.t.KWx4HY),
                 ],
             }),
-            (0, n.jsx)(o.Text, { variant: "text-md/normal", color: "text-muted", children: g.intl.string(g.t.hNHNph) }),
-            (0, n.jsxs)(o.Heading, {
-                className: q.wV,
+            (0, a.jsx)(u.E, { variant: "text-md/normal", color: "text-muted", children: b.intl.string(b.t.hNHNph) }),
+            (0, a.jsxs)(g.D, {
+                className: j.wV,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
-                    (0, n.jsx)(o.ucK, { size: "sm", color: "currentColor" }),
-                    (0, n.jsx)(o.hKd, { horizontal: !0, size: 8 }),
-                    g.intl.string(g.t.WIPKAb),
+                    (0, a.jsx)(f.u, { size: "sm", color: "currentColor" }),
+                    (0, a.jsx)(p.h, { horizontal: !0, size: 8 }),
+                    b.intl.string(b.t.WIPKAb),
                 ],
             }),
-            (0, n.jsx)(o.Text, {
-                variant: "text-md/normal",
-                color: "text-muted",
-                children: g.intl.string(g.t["40shJX"]),
-            }),
+            (0, a.jsx)(u.E, { variant: "text-md/normal", color: "text-muted", children: b.intl.string(b.t["40shJX"]) }),
         ],
     });
 }
-function C(A) {
-    let { newRoleParams: e, setNewRoleParams: a, guildId: i, productId: c, listingRoleId: q, error: p } = A,
-        m = (0, l.bG)([d.A], () => (null != q ? d.A.getRole(i, q) : void 0));
+function K(A) {
+    let { newRoleParams: e, setNewRoleParams: n, guildId: l, productId: o, listingRoleId: d, error: c } = A,
+        u = (0, i.bG)([x.A], () => (null != d ? x.A.getRole(l, d) : void 0));
     return null === e
-        ? (0, n.jsx)(o.D0$, {
-              label: g.intl.string(g.t.ovXIrP),
-              description: g.intl.string(g.t["H7coX+"]),
-              children: (0, n.jsxs)(o.M_l, {
+        ? (0, a.jsx)(q.D, {
+              label: b.intl.string(b.t.ovXIrP),
+              description: b.intl.string(b.t["H7coX+"]),
+              children: (0, a.jsxs)(v.M, {
                   children: [
-                      (0, n.jsx)(f, { role: m, onRemove: void 0 }),
-                      (0, n.jsx)(s.$nd, {
-                          text: g.intl.string(g.t.KkRpFi),
-                          icon: o.ejX,
+                      (0, a.jsx)(I, { role: u, onRemove: void 0 }),
+                      (0, a.jsx)(s.$, {
+                          text: b.intl.string(b.t.KkRpFi),
+                          icon: C.e,
                           iconPosition: "end",
                           variant: "secondary",
                           onClick: () => {
-                              a(void 0);
+                              n(void 0);
                           },
                       }),
                   ],
               }),
           })
-        : null != q
-          ? (0, n.jsx)(o.D0$, {
-                label: g.intl.string(g.t.zIg9tw),
-                description: g.intl.string(g.t.OfuEkP),
-                errorMessage: p,
-                children: (0, n.jsx)(f, {
-                    role: m,
+        : null != d
+          ? (0, a.jsx)(q.D, {
+                label: b.intl.string(b.t.zIg9tw),
+                description: b.intl.string(b.t.OfuEkP),
+                errorMessage: c,
+                children: (0, a.jsx)(I, {
+                    role: u,
                     onRemove: () => {
-                        r()(null != c, "productId cannot be null"),
-                            r()(null != m, "no role attached"),
+                        r()(null != o, "productId cannot be null"),
+                            r()(null != u, "no role attached"),
                             (function (A) {
-                                let { onConfirm: e, roleName: a } = A;
-                                (0, o.mMO)(async () => {
+                                let { onConfirm: e, roleName: n } = A;
+                                (0, m.openModalLazy)(async () => {
                                     let { default: A } = await t.e("44252").then(t.bind(t, 790743));
                                     return (t) =>
-                                        (0, n.jsx)(A, {
-                                            title: g.intl.string(g.t.Y3Hi3R),
-                                            body: (0, n.jsx)(h, { roleName: a }),
-                                            cta: g.intl.string(g.t.VawZVx),
-                                            closeLabel: g.intl.string(g.t["6y+3Bw"]),
+                                        (0, a.jsx)(A, {
+                                            title: b.intl.string(b.t.Y3Hi3R),
+                                            body: (0, a.jsx)(F, { roleName: n }),
+                                            cta: b.intl.string(b.t.VawZVx),
+                                            closeLabel: b.intl.string(b.t["6y+3Bw"]),
                                             onConfirm: e,
                                             ...t,
                                         });
                                 });
-                            })({ roleName: m.name, onConfirm: () => a(null) });
+                            })({ roleName: u.name, onConfirm: () => n(null) });
                     },
                 }),
             })
           : (r()(null != e, "newRoleParams cannot be null at this point"),
-            (0, n.jsx)(o.D0$, {
+            (0, a.jsx)(q.D, {
                 required: !0,
-                label: g.intl.string(g.t.xZvFpA),
-                errorMessage: p,
-                children: (0, n.jsx)(u.A, { newRoleParams: e, setNewRoleParams: a }),
+                label: b.intl.string(b.t.xZvFpA),
+                errorMessage: c,
+                children: (0, a.jsx)(U.A, { newRoleParams: e, setNewRoleParams: n }),
             }));
 }

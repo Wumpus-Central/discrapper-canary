@@ -1,98 +1,102 @@
-a.d(i, { m: () => d });
-var n = a(627968);
-a(64700);
-var e = a(158954),
-    l = a(397927),
-    s = a(665711),
-    r = a(41032),
-    c = a(985018),
-    o = a(806288);
-function d(t) {
+i.d(e, { m: () => m });
+var n = i(627968);
+i(64700);
+var a = i(224640),
+    s = i(430993),
+    l = i(696208),
+    r = i(683071),
+    c = i(478016),
+    o = i(834730),
+    d = i(665711),
+    u = i(41032),
+    _ = i(985018),
+    x = i(376960);
+function m(t) {
     let {
-        sku: i,
-        application: a,
-        primaryCTAButtonProps: s,
-        transitionState: d,
-        onClose: _,
-        hasAlreadyLinked: x,
-        canStartAuthorization: p,
-        bodyText: m,
+        sku: e,
+        application: i,
+        primaryCTAButtonProps: r,
+        transitionState: c,
+        onClose: d,
+        hasAlreadyLinked: m,
+        canStartAuthorization: f,
+        bodyText: g,
         title: A,
     } = t;
-    return (0, n.jsxs)(e.dWK, {
-        transitionState: d,
-        onClose: _,
+    return (0, n.jsxs)(a.d, {
+        transitionState: c,
+        onClose: d,
         children: [
-            (0, n.jsx)(r.z, { sku: i, title: A }),
-            (0, n.jsxs)(e.cwr, {
+            (0, n.jsx)(u.z, { sku: e, title: A }),
+            (0, n.jsxs)(s.c, {
                 children: [
                     (0, n.jsxs)("div", {
-                        className: o.S3,
+                        className: x.S3,
                         children: [
-                            (0, n.jsx)(l.Text, {
+                            (0, n.jsx)(o.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
-                                className: o.jJ,
-                                children: m,
+                                className: x.jJ,
+                                children: g,
                             }),
-                            (0, n.jsx)(u, { isConnected: x, application: a }),
+                            (0, n.jsx)(p, { isConnected: m, application: i }),
                         ],
                     }),
-                    !p &&
-                        !x &&
-                        (0, n.jsx)(l.Text, {
+                    !f &&
+                        !m &&
+                        (0, n.jsx)(o.E, {
                             variant: "text-md/normal",
-                            className: o.tl,
+                            className: x.tl,
                             color: "text-feedback-warning",
-                            children: c.intl.string(c.t.GDL8wb),
+                            children: _.intl.string(_.t.GDL8wb),
                         }),
-                    !x &&
+                    !m &&
                         (0, n.jsx)("div", {
-                            className: o.ZT,
-                            children: (0, n.jsx)(l.Text, {
+                            className: x.ZT,
+                            children: (0, n.jsx)(o.E, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
-                                children: c.intl.formatToPlainString(c.t.TTj7ME, { numDays: 14 }),
+                                children: _.intl.formatToPlainString(_.t.TTj7ME, { numDays: 14 }),
                             }),
                         }),
                 ],
             }),
-            (0, n.jsx)(e.H7u, { actions: [s], actionsFullWidth: !0 }),
+            (0, n.jsx)(l.H, { actions: [r], actionsFullWidth: !0 }),
         ],
     });
 }
-function u(t) {
-    let { isConnected: i, application: a } = t;
-    return i
+function p(t) {
+    let { isConnected: e, application: i } = t;
+    return e
         ? (0, n.jsx)("div", {
-              className: o.II,
+              className: x.II,
               children: (0, n.jsxs)("div", {
-                  className: o.jf,
+                  className: x.jf,
                   children: [
                       (0, n.jsxs)("div", {
-                          className: o.iN,
+                          className: x.iN,
                           children: [
                               (0, n.jsx)("div", {
-                                  className: o.I8,
-                                  children: (0, n.jsx)(e.Uzd, { size: "xs", color: "currentColor" }),
+                                  className: x.I8,
+                                  children: (0, n.jsx)(c.U, { size: "xs", color: "currentColor" }),
                               }),
-                              (0, n.jsx)(l.Text, {
+                              (0, n.jsx)(o.E, {
                                   variant: "text-md/normal",
-                                  className: o.qS,
+                                  className: x.qS,
                                   color: "text-subtle",
-                                  children: c.intl.string(c.t["LV+CXH"]),
+                                  children: _.intl.string(_.t["LV+CXH"]),
                               }),
                           ],
                       }),
                       (0, n.jsx)("div", {
-                          className: o.vA,
-                          children: (0, n.jsx)(s.W, { application: a, iconSize: 20 }),
+                          className: x.vA,
+                          children: (0, n.jsx)(d.W, { application: i, iconSize: 20 }),
                       }),
                   ],
               }),
           })
-        : (0, n.jsx)(e.wx6, {
+        : (0, n.jsx)(r.w, {
               type: "warning",
-              children: (0, n.jsx)(l.Text, { variant: "text-sm/medium", children: c.intl.string(c.t.Plv1Xk) }),
+              children: (0, n.jsx)(o.E, { variant: "text-sm/medium", children: _.intl.string(_.t.Plv1Xk) }),
           });
 }

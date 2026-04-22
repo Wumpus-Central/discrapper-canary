@@ -1,79 +1,80 @@
 n.d(t, { A: () => x });
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    a = n(503698),
+    s = n.n(a),
     r = n(311907),
-    o = n(397927),
-    c = n(793574),
-    d = n(573435),
-    u = n(622543),
-    h = n(576622),
-    m = n(657331),
-    A = n(287809),
-    g = n(486020),
-    p = n(403362),
+    o = n(834730),
+    c = n(939249),
+    d = n(793574),
+    u = n(573435),
+    h = n(622543),
+    m = n(576622),
+    A = n(657331),
+    g = n(287809),
+    p = n(486020),
+    _ = n(403362),
     f = n(518477),
-    _ = n(985018),
-    E = n(604545);
+    E = n(985018),
+    C = n(864401);
 function x(e) {
-    let { userId: t, channelId: n, showDivider: s = !1 } = e,
-        x = (0, r.bG)([u.A], () => u.A.getMutualGuilds(t), [t]),
-        C = A.default.getUser(t);
+    let { userId: t, channelId: n, showDivider: a = !1 } = e,
+        x = (0, r.bG)([h.A], () => h.A.getMutualGuilds(t), [t]),
+        S = g.default.getUser(t);
     l.useEffect(() => {
-        null == x && null != C && (0, h.A)(t, C.getAvatarURL(null, 80), { withMutualGuilds: !0 });
-    }, [x, t, C]);
-    let S = l.useMemo(() => {
+        null == x && null != S && (0, m.A)(t, S.getAvatarURL(null, 80), { withMutualGuilds: !0 });
+    }, [x, t, S]);
+    let I = l.useMemo(() => {
         if (null == x) return [];
         let e = x.slice(0, 3),
             t = e.length - 1;
         return e
             .map((e, n) => {
                 let { guild: l } = e,
-                    s = g.Ay.getGuildIconURL({ id: l.id, icon: l.icon, size: 24 });
-                if (null == s) return null;
-                let a = (0, i.jsx)("img", { src: s, alt: "", className: E.my }, l.id);
+                    a = p.Ay.getGuildIconURL({ id: l.id, icon: l.icon, size: 24 });
+                if (null == a) return null;
+                let s = (0, i.jsx)("img", { src: a, alt: "", className: C.my }, l.id);
                 return n === t
-                    ? a
+                    ? s
                     : (0, i.jsx)(
-                          d.Ay,
+                          u.Ay,
                           {
-                              className: E.cp,
-                              mask: d.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
+                              className: C.cp,
+                              mask: u.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
                               width: 24,
                               height: 24,
-                              children: a,
+                              children: s,
                           },
                           l.id,
                       );
             })
-            .filter(p.Vq);
+            .filter(_.Vq);
     }, [x]);
     return null == x || 0 === x.length
         ? (0, i.jsx)("div", {
-              className: a()(E.kL, s ? E.yF : null),
-              children: (0, i.jsx)(o.Text, {
+              className: s()(C.kL, a ? C.yF : null),
+              children: (0, i.jsx)(o.E, {
                   color: "text-default",
                   variant: "text-sm/normal",
-                  children: _.intl.string(_.t.zjVh8h),
+                  children: E.intl.string(E.t.zjVh8h),
               }),
           })
-        : (0, i.jsxs)(o.DUT, {
-              className: a()(E.kL, E.vk, { [E.yF]: s }),
+        : (0, i.jsxs)(c.D, {
+              className: s()(C.kL, C.vk, { [C.yF]: a }),
               onClick: () => {
-                  (0, m.openUserProfileModal)({
+                  (0, A.openUserProfileModal)({
                       userId: t,
                       channelId: n,
                       tabSection: f.RP.MUTUAL_GUILDS,
-                      sourceAnalyticsLocations: [c.A.DM_CHANNEL],
+                      sourceAnalyticsLocations: [d.A.DM_CHANNEL],
                   });
               },
               children: [
-                  (0, i.jsx)("div", { className: E.H, children: S }),
-                  (0, i.jsx)(o.Text, {
-                      className: E.NI,
+                  (0, i.jsx)("div", { className: C.H, children: I }),
+                  (0, i.jsx)(o.E, {
+                      className: C.NI,
                       variant: "text-sm/normal",
-                      children: _.intl.format(_.t.eE3oep, { count: x.length }),
+                      children: E.intl.format(E.t.eE3oep, { count: x.length }),
                   }),
               ],
           });

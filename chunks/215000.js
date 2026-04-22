@@ -1,28 +1,29 @@
-n.d(t, { A: () => d });
-var a = n(627968);
-n(64700);
-var i = n(397927),
-    s = n(976860),
-    l = n(829219),
-    r = n(652215),
-    o = n(490602);
-let d = function () {
-    return (0, a.jsxs)("div", {
-        className: o.k,
+a.d(t, { A: () => c });
+var n = a(627968);
+a(64700);
+var l = a(834730),
+    i = a(821609),
+    s = a(976860),
+    r = a(829219),
+    o = a(652215),
+    d = a(988483);
+let c = function () {
+    return (0, n.jsxs)("div", {
+        className: d.k,
         children: [
-            (0, a.jsx)(i.Text, {
+            (0, n.jsx)(l.E, {
                 variant: "text-md/normal",
                 color: "text-feedback-info",
                 style: { marginBottom: "8px" },
                 children: "Click the button below to clear your Minor Reward Capping History.",
             }),
-            (0, a.jsx)(i.Button, {
+            (0, n.jsx)(i.$, {
                 onClick: () => {
-                    (0, l.Ov)(), (0, s.pX)(r.BVt.QUEST_HOME);
+                    (0, r.Ov)(), (0, s.pX)(o.BVt.QUEST_HOME);
                 },
                 text: "Clear History",
             }),
-            (0, a.jsx)(i.Text, {
+            (0, n.jsx)(l.E, {
                 variant: "text-md/normal",
                 color: "text-feedback-info",
                 children:

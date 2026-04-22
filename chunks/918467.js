@@ -1,51 +1,46 @@
-"use strict";
-n(321073);
-var r = n(311907),
-    i = n(73153);
-let s = {};
-function a(e) {
-    let { applicationIds: t } = e;
-    for (let e of t) {
-        let t = s[e];
-        s[e] = { state: "loading", promotions: t?.state === "success" ? [...t.promotions] : void 0 };
-    }
-}
-function o(e) {
-    let { applicationIds: t, promotions: n } = e,
-        r = Date.now(),
-        i = { ...s };
-    for (let e of t) i[e] = { state: "success", promotions: [], fetchedAt: r };
-    for (let e of n) {
-        let t = e.applicationId;
-        i[t]?.state === "success" && i[t].promotions.push(e);
-    }
-    s = i;
-}
-function l(e) {
-    let { applicationIds: t } = e,
-        n = Date.now();
-    for (let e of t) s[e] = { state: "error", fetchedAt: n };
-}
-function u() {
-    s = {};
-}
-class c extends r.Ay.Store {
+i(321073);
+var r = i(311907),
+    s = i(73153);
+let n = {};
+class l extends r.Ay.Store {
     static displayName = "StorefrontPromotionStore";
-    getFetchState(e) {
-        return s[e]?.state;
+    getFetchState(t) {
+        return n[t]?.state;
     }
-    getFetchedAt(e) {
-        let t = s[e];
-        if (t?.state === "success" || t?.state === "error") return t.fetchedAt;
+    getFetchedAt(t) {
+        let e = n[t];
+        if (e?.state === "success" || e?.state === "error") return e.fetchedAt;
     }
-    getPromotionsForApplication(e) {
-        let t = s[e];
-        return t?.state === "success" || t?.state === "loading" ? (t.promotions ?? null) : null;
+    getPromotionsForApplication(t) {
+        let e = n[t];
+        return e?.state === "success" || e?.state === "loading" ? (e.promotions ?? null) : null;
     }
 }
-new c(i.h, {
-    LOGOUT: u,
-    STOREFRONT_PROMOTIONS_FETCH_START: a,
-    STOREFRONT_PROMOTIONS_FETCH_SUCCESS: o,
-    STOREFRONT_PROMOTIONS_FETCH_FAIL: l,
+new l(s.h, {
+    LOGOUT: function () {
+        n = {};
+    },
+    STOREFRONT_PROMOTIONS_FETCH_START: function (t) {
+        let { applicationIds: e } = t;
+        for (let t of e) {
+            let e = n[t];
+            n[t] = { state: "loading", promotions: e?.state === "success" ? [...e.promotions] : void 0 };
+        }
+    },
+    STOREFRONT_PROMOTIONS_FETCH_SUCCESS: function (t) {
+        let { applicationIds: e, promotions: i } = t,
+            r = Date.now(),
+            s = { ...n };
+        for (let t of e) s[t] = { state: "success", promotions: [], fetchedAt: r };
+        for (let t of i) {
+            let e = t.applicationId;
+            s[e]?.state === "success" && s[e].promotions.push(t);
+        }
+        n = s;
+    },
+    STOREFRONT_PROMOTIONS_FETCH_FAIL: function (t) {
+        let { applicationIds: e } = t,
+            i = Date.now();
+        for (let t of e) n[t] = { state: "error", fetchedAt: i };
+    },
 });

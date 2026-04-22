@@ -2,23 +2,23 @@
 n.d(t, { A: () => u }), n(667532), n(321073);
 var l = n(627968),
     i = n(64700),
-    s = n(397927),
+    s = n(783878),
     a = n(927813),
     r = n(879631),
     o = n(652215),
     d = n(985018),
-    c = n(473169);
+    c = n(818050);
 function u(e) {
     let { label: t, helperText: n, hideLabel: u, channel: h, onChange: g } = e,
         [m, x] = i.useState(null),
-        A = h.rateLimitPerUser,
-        f = i.useMemo(() => {
+        p = h.rateLimitPerUser,
+        A = i.useMemo(() => {
             let e = [...(m ?? o.s_7)];
             return (
-                e.includes(A) || e.unshift(A), e.map((e) => ({ id: e.toString(), label: (0, r.$)(e, !1), value: e }))
+                e.includes(p) || e.unshift(p), e.map((e) => ({ id: e.toString(), label: (0, r.$)(e, !1), value: e }))
             );
-        }, [m, A]),
-        p = i.useCallback(
+        }, [m, p]),
+        f = i.useCallback(
             (e) => {
                 g(e), x(null);
             },
@@ -35,21 +35,21 @@ function u(e) {
             let i = n * a.A.Seconds.HOUR;
             i <= o.WA1 && t.push(i), x(t);
         }, []),
-        C = i.useCallback(() => {
+        _ = i.useCallback(() => {
             x(null);
         }, []);
     return (0, l.jsx)("div", {
         className: c.QB,
-        children: (0, l.jsx)(s.ZiE, {
+        children: (0, l.jsx)(s.Z, {
             selectionMode: "single",
             label: t,
             hideLabel: u,
             helperText: n,
-            value: A,
-            onSelectionChange: p,
+            value: p,
+            onSelectionChange: f,
             onQueryChange: (e) => b(e.target.value),
-            options: f,
-            onBlur: C,
+            options: A,
+            onBlur: _,
             placeholder: d.intl.string(d.t.dBqQu4),
         }),
     });

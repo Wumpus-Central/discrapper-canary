@@ -1,28 +1,29 @@
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    l = n(854627),
-    r = n(778712),
-    a = n(985018),
-    o = n(45861);
+s.d(t, { A: () => d });
+var r = s(627968);
+s(64700);
+var a = s(97808),
+    i = s(534514),
+    n = s(854627),
+    l = s(778712),
+    o = s(985018),
+    c = s(45861);
 function d(e) {
     let { referrer: t } = e,
-        { avatarSrc: n, eventHandlers: d } = (0, l.A)({ userId: t?.id, size: r._3.SIZE_24, animateOnHover: !0 });
-    return (0, i.jsx)("div", {
-        className: o.$6,
-        children: (0, i.jsxs)("div", {
-            className: o.sc,
+        { avatarSrc: s, eventHandlers: d } = (0, n.A)({ userId: t?.id, size: l._3.SIZE_24, animateOnHover: !0 });
+    return (0, r.jsx)("div", {
+        className: c.$6,
+        children: (0, r.jsxs)("div", {
+            className: c.sc,
             children: [
-                (0, i.jsx)("div", {
-                    className: o.kR,
-                    children: (0, i.jsx)(s.euF, { src: n, "aria-label": t.username, size: r._3.SIZE_32, ...d }),
+                (0, r.jsx)("div", {
+                    className: c.kR,
+                    children: (0, r.jsx)(a.eu, { src: s, "aria-label": t.username, size: l._3.SIZE_32, ...d }),
                 }),
-                (0, i.jsx)(s.Heading, {
+                (0, r.jsx)(i.D, {
                     variant: "heading-sm/normal",
-                    className: o.FS,
+                    className: c.FS,
                     color: "text-strong",
-                    children: a.intl.format(a.t.IqxblS, { username: null != t.globalName ? t.globalName : t.username }),
+                    children: o.intl.format(o.t.IqxblS, { username: null != t.globalName ? t.globalName : t.username }),
                 }),
             ],
         }),

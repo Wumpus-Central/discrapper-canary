@@ -1,9 +1,9 @@
 n.d(e, { default: () => c });
-var s = n(627968),
-    i = n(64700),
+var i = n(627968),
+    s = n(64700),
     r = n(110259),
-    a = n(158954),
-    l = n(397927),
+    a = n(189213),
+    l = n(292666),
     u = n(181658),
     o = n(985018);
 let p = RegExp(
@@ -21,10 +21,10 @@ function c(t) {
             confirmButtonVariant: A = "primary",
             subtitle: f,
         } = t,
-        [y, g] = i.useState(!1),
-        [b, k] = i.useState(""),
-        [v, C] = i.useState(null),
-        E = i.useRef(null),
+        [y, g] = s.useState(!1),
+        [b, k] = s.useState(""),
+        [v, C] = s.useState(null),
+        E = s.useRef(null),
         x = async (t) => {
             if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
                 C(o.intl.string(o.t.hML7Gw)), g(!1);
@@ -39,9 +39,9 @@ function c(t) {
                 g(!1);
             }
         };
-    return (0, s.jsx)("form", {
+    return (0, i.jsx)("form", {
         onSubmit: x,
-        children: (0, s.jsx)(a.Modal, {
+        children: (0, i.jsx)(a.Modal, {
             transitionState: e,
             trackingProps: {
                 impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },
@@ -54,7 +54,7 @@ function c(t) {
                 { text: h, variant: A, loading: y, type: "submit" },
             ],
             onClose: d,
-            children: (0, s.jsx)(l.ksK, {
+            children: (0, i.jsx)(l.k, {
                 label: o.intl.string(o.t.hvOfmC),
                 error: v,
                 value: b,

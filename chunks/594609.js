@@ -1,34 +1,36 @@
-n.d(t, { h: () => _ });
+"use strict";
+n.d(t, { h: () => d });
 var i = n(627968),
-    l = n(64700),
-    r = n(158954),
-    a = n(397927),
-    s = n(827343),
-    o = n(985018);
-function c(e) {
-    let [t, n] = l.useState(!1);
-    return (0, i.jsx)(r.Modal, {
+    r = n(64700);
+if (21552 == n.j) var l = n(189213);
+if (21552 == n.j) var s = n(150934);
+if (21552 == n.j) var a = n(192308);
+var o = n(827343),
+    c = n(985018);
+function u(e) {
+    let [t, n] = r.useState(!1);
+    return (0, i.jsx)(l.Modal, {
         size: "md",
-        title: o.intl.string(o.t["zQ1+Jw"]),
-        subtitle: o.intl.string(o.t.K1gWXn),
+        title: c.intl.string(c.t["zQ1+Jw"]),
+        subtitle: c.intl.string(c.t.K1gWXn),
         actions: [
             {
-                text: o.intl.string(o.t.BddRzS),
+                text: c.intl.string(c.t.BddRzS),
                 onClick: () => {
-                    t && s.A.setSilenceWarning(!1), e.onClose();
+                    t && o.A.setSilenceWarning(!1), e.onClose();
                 },
                 variant: "primary",
             },
         ],
-        actionBarInput: (0, i.jsx)(r.Sc0, {
+        actionBarInput: (0, i.jsx)(s.S, {
             checked: t,
             onChange: (e) => n(e),
-            label: o.intl.string(o.t.XAiAgD),
+            label: c.intl.string(c.t.XAiAgD),
             labelType: "secondary",
         }),
         ...e,
     });
 }
-function _() {
-    (0, a.qfG)((e) => (0, i.jsx)(c, { ...e }));
+function d() {
+    (0, a.openModal)((e) => (0, i.jsx)(u, { ...e }));
 }

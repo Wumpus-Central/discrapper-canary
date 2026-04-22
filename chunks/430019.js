@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { T: () => r });
-var r = (function (e) {
-    return (e[(e.ALL = 1)] = "ALL"), (e[(e.TIERED = 2)] = "TIERED"), e;
-})({});
+n.d(t, { T: () => i });
+var r,
+    i = (((r = {})[(r.ALL = 1)] = "ALL"), (r[(r.TIERED = 2)] = "TIERED"), r);

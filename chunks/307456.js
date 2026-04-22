@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     W0: "settings__17efa",
     cL: "twoColumns__17efa",

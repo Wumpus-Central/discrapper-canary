@@ -1,48 +1,49 @@
 "use strict";
 n.d(t, { A: () => p });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     s = n(311907),
-    a = n(397927),
+    r = n(939249),
+    a = n(285796),
     o = n(813516),
-    l = n(931664),
+    c = n(931664),
     u = n(631576),
-    c = n(148355),
-    d = n(985018),
-    _ = n(74995);
-function f(e) {
+    d = n(148355),
+    h = n(985018),
+    m = n(74995);
+let p = l.memo(function (e) {
     let { channelId: t, chatInputType: n } = e,
-        [f, p] = i.useState(null),
-        h = (0, s.bG)([l.A], () => l.A.getStickerPreview(t, n.drafts.type));
-    return n.stickers?.allowSending && null != h && 0 !== h.length
-        ? (0, r.jsxs)(r.Fragment, {
+        [p, f] = l.useState(null),
+        g = (0, s.bG)([c.A], () => c.A.getStickerPreview(t, n.drafts.type));
+    return n.stickers?.allowSending && null != g && 0 !== g.length
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)("div", {
-                      className: _.Tz,
-                      children: h.map((e) =>
-                          (0, r.jsxs)(
+                  (0, i.jsx)("div", {
+                      className: m.Tz,
+                      children: g.map((e) =>
+                          (0, i.jsxs)(
                               "div",
                               {
-                                  className: _.dp,
+                                  className: m.dp,
                                   children: [
-                                      (0, r.jsx)(a.DUT, {
-                                          onFocus: () => p(e.id),
-                                          onBlur: () => p(null),
-                                          className: _.b,
-                                          "aria-label": d.intl.formatToPlainString(d.t.BGAQRd, { name: e.name }),
+                                      (0, i.jsx)(r.D, {
+                                          onFocus: () => f(e.id),
+                                          onBlur: () => f(null),
+                                          className: m.b,
+                                          "aria-label": h.intl.formatToPlainString(h.t.BGAQRd, { name: e.name }),
                                           onClick: () => (0, u.x5)(t, n.drafts.type),
-                                          children: (0, r.jsx)("div", {
-                                              className: _.Nk,
-                                              children: (0, r.jsx)(a.aXh, {
+                                          children: (0, i.jsx)("div", {
+                                              className: m.Nk,
+                                              children: (0, i.jsx)(a.a, {
                                                   size: "md",
                                                   color: "currentColor",
-                                                  className: _.ut,
+                                                  className: m.ut,
                                               }),
                                           }),
                                       }),
-                                      (0, r.jsx)(c.A, {
-                                          isInteracting: f === e.id,
-                                          className: _.UV,
+                                      (0, i.jsx)(d.A, {
+                                          isInteracting: p === e.id,
+                                          className: m.UV,
                                           size: 48,
                                           sticker: e,
                                       }),
@@ -52,9 +53,8 @@ function f(e) {
                           ),
                       ),
                   }),
-                  (0, r.jsx)(o.A, { className: _.R }),
+                  (0, i.jsx)(o.A, { className: m.R }),
               ],
           })
         : null;
-}
-let p = i.memo(f);
+});

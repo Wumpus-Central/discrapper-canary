@@ -1,83 +1,80 @@
 "use strict";
-n.d(t, { A: () => E, o: () => m });
-var r = n(723702),
-    i = n(170148),
-    s = n(454292),
-    a = n(550151),
-    o = n(206589),
-    l = n(125017),
-    u = n(833349),
-    c = n(287613),
-    d = n(874546),
-    _ = n(702631),
-    f = n(652215);
-function p(e, t, n) {
-    let r = (0, s.A)(e, t, n?.application_id);
-    return null != r && (0, o.w)(r, n);
-}
-function h(e, t) {
-    let n = e.getCurrentEmbeddedActivity();
-    return null != n && n.applicationId === t?.application_id;
-}
-var m = (function (e) {
-    return (e.CAN_JOIN = "can_join"), (e.CANNOT_JOIN = "cannot_join"), (e.JOINED = "joined"), e;
-})({});
-function E(e) {
-    let {
-        user: t,
-        activity: n,
-        application: s,
-        channelId: o,
-        currentUser: m,
-        isEmbedded: E,
-        ChannelStore: g,
-        GuildStore: A,
-        GuildMemberCountStore: I,
-        RelationshipStore: T,
-        SelectedChannelStore: S,
-        VoiceStateStore: y,
-        PermissionStore: v,
-        LocalActivityStore: N,
-        SelfPresenceStore: C,
-        EmbeddedActivitiesStore: R,
-    } = e;
-    if ((!E && p(N, C, n)) || (E && h(R, n))) return "joined";
-    if (null == t) return "cannot_join";
-    if (E && null != o)
-        return (0, a.Ay)({
-            userId: t.id,
-            activity: n,
-            channelId: o,
-            currentUser: m,
-            application: s,
-            isActivitiesEnabledForCurrentPlatform: (0, i.A)(),
-            ChannelStore: g,
-            VoiceStateStore: y,
-            PermissionStore: v,
+a.d(t, { A: () => b, o: () => m });
+var r,
+    l = a(723702),
+    n = a(170148),
+    i = a(454292),
+    s = a(550151),
+    o = a(206589),
+    d = a(125017),
+    c = a(833349),
+    u = a(287613),
+    h = a(874546),
+    p = a(702631),
+    _ = a(652215),
+    m = (((r = {}).CAN_JOIN = "can_join"), (r.CANNOT_JOIN = "cannot_join"), (r.JOINED = "joined"), r);
+function b(e) {
+    let t,
+        a,
+        {
+            user: r,
+            activity: m,
+            application: b,
+            channelId: g,
+            currentUser: f,
+            isEmbedded: x,
+            ChannelStore: v,
             GuildStore: A,
-        }) === a.Gy.CAN_JOIN
+            GuildMemberCountStore: E,
+            RelationshipStore: y,
+            SelectedChannelStore: j,
+            VoiceStateStore: I,
+            PermissionStore: S,
+            LocalActivityStore: C,
+            SelfPresenceStore: T,
+            EmbeddedActivitiesStore: w,
+        } = e;
+    if (
+        (!x && null != (t = (0, i.A)(C, T, m?.application_id)) && (0, o.w)(t, m)) ||
+        (x && null != (a = w.getCurrentEmbeddedActivity()) && a.applicationId === m?.application_id)
+    )
+        return "joined";
+    if (null == r) return "cannot_join";
+    if (x && null != g)
+        return (0, s.Ay)({
+            userId: r.id,
+            activity: m,
+            channelId: g,
+            currentUser: f,
+            application: b,
+            isActivitiesEnabledForCurrentPlatform: (0, n.A)(),
+            ChannelStore: v,
+            VoiceStateStore: I,
+            PermissionStore: S,
+            GuildStore: A,
+        }) === s.Gy.CAN_JOIN
             ? "can_join"
             : "cannot_join";
     if (
-        (E && null == o && !(0, u.A)(n, f.jUm.CONTEXTLESS)) ||
-        (!E && (!(0, d.Ay)(n) || !(0, r.platformSupportsActivityJoin)()))
+        (x && null == g && !(0, c.A)(m, _.jUm.CONTEXTLESS)) ||
+        (!x && (!(0, h.Ay)(m) || !(0, l.platformSupportsActivityJoin)()))
     )
         return "cannot_join";
-    let O = (0, l._)(n);
-    if (!(0, c.A)(O) || (0, _.U)(O)) return "cannot_join";
-    if ((0, u.A)(n, f.jUm.PARTY_PRIVACY_FRIENDS) && T.isFriend(t.id)) return "can_join";
-    if ((0, u.A)(n, f.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
-        let e = g.getChannel(S.getVoiceChannelId());
-        if (null == e || !y.isInChannel(e.id, t.id)) return "cannot_join";
+    let R = (0, d._)(m);
+    if (!(0, u.A)(R) || (0, p.U)(R)) return "cannot_join";
+    if ((0, c.A)(m, _.jUm.PARTY_PRIVACY_FRIENDS) && y.isFriend(r.id)) return "can_join";
+    if ((0, c.A)(m, _.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
+        let e = v.getChannel(j.getVoiceChannelId());
+        if (null == e || !I.isInChannel(e.id, r.id)) return "cannot_join";
         switch (e.type) {
-            case f.rbe.DM:
-            case f.rbe.GROUP_DM:
+            case _.rbe.DM:
+            case _.rbe.GROUP_DM:
                 return "can_join";
         }
-        let n = A.getGuild(e.getGuildId());
-        if (null == n || n.features.has(f.GuildFeatures.COMMUNITY)) return "cannot_join";
-        let r = I.getMemberCount(n.id);
-        if (null != r && r < 100) return "can_join";
+        let t = A.getGuild(e.getGuildId());
+        if (null == t || t.features.has(_.GuildFeatures.COMMUNITY)) return "cannot_join";
+        let a = E.getMemberCount(t.id);
+        if (null != a && a < 100) return "can_join";
     }
     return "cannot_join";
 }

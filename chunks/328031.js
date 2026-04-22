@@ -1,69 +1,76 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => I });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(208798),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(517738),
     o = n(827734),
-    d = n(397927),
-    c = n(147925),
-    u = n(2242),
-    m = n(985018),
-    g = n(562742);
-function x(e) {
+    d = n(834730),
+    c = n(628284),
+    u = n(717421),
+    m = n(270003),
+    g = n(404778),
+    h = n(452027),
+    x = n(331322),
+    _ = n(939249),
+    p = n(534514),
+    A = n(147925),
+    E = n(2242),
+    f = n(985018),
+    j = n(562742);
+function N(e) {
     let { checked: t, children: n } = e;
     return (0, i.jsxs)("div", {
-        className: g.nM,
+        className: j.nM,
         children: [
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(d.E, {
                 variant: "text-md/normal",
                 color: "interactive-text-active",
-                className: g.qg,
+                className: j.qg,
                 children: n,
             }),
             t
-                ? (0, i.jsx)(d.yr3, {
+                ? (0, i.jsx)(c.y, {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.A.unsafe_rawColors.WHITE.css,
-                      className: r()(g.aL, g.xp),
+                      className: r()(j.aL, j.xp),
                   })
-                : (0, i.jsx)("div", { className: r()(g.aL, g.VL) }),
+                : (0, i.jsx)("div", { className: r()(j.aL, j.VL) }),
         ],
     });
 }
-function h(e) {
+function I(e) {
     let { children: t } = e,
-        [n, l] = s.useState(!1),
+        [n, s] = l.useState(!1),
         r = t.flatMap((e) => e.items.map((e) => e.completed)),
         o = r.filter((e) => e).length / r.length,
-        h = 1 === o,
-        _ = (0, d.zhh)({ width: `${100 * o}%` }),
-        A = [
-            m.intl.format(m.t["CgyVP+"], { mustReadArticlesUrl: u.P7.MUST_READ_ARTICLES }),
-            m.intl.format(m.t.wfTzye, { creatorToAdmin101Url: u.P7.CREATOR_TO_ADMIN_101 }),
-            m.intl.format(m.t["IpGL+4"], { creatorToAdmin201Url: u.P7.CREATOR_TO_ADMIN_201 }),
+        c = 1 === o,
+        I = (0, u.z)({ width: `${100 * o}%` }),
+        C = [
+            f.intl.format(f.t["CgyVP+"], { mustReadArticlesUrl: E.P7.MUST_READ_ARTICLES }),
+            f.intl.format(f.t.wfTzye, { creatorToAdmin101Url: E.P7.CREATOR_TO_ADMIN_101 }),
+            f.intl.format(f.t["IpGL+4"], { creatorToAdmin201Url: E.P7.CREATOR_TO_ADMIN_201 }),
         ],
-        p = n
+        b = n
             ? null
-            : (0, i.jsxs)(d.nVY, {
+            : (0, i.jsxs)(m.n, {
                   children: [
-                      !h &&
+                      !c &&
                           t.map((e, t) => {
-                              let { title: n, items: l } = e;
+                              let { title: n, items: s } = e;
                               return (0, i.jsxs)(
-                                  s.Fragment,
+                                  l.Fragment,
                                   {
                                       children: [
-                                          t > 0 && (0, i.jsx)(d.cGx, {}),
-                                          (0, i.jsx)(d.D0$, {
+                                          t > 0 && (0, i.jsx)(g.c, {}),
+                                          (0, i.jsx)(h.D, {
                                               label: n,
-                                              children: (0, i.jsx)(d.BJc, {
+                                              children: (0, i.jsx)(x.B, {
                                                   gap: 8,
-                                                  children: l.map((e, t) =>
+                                                  children: s.map((e, t) =>
                                                       (0, i.jsx)(
-                                                          x,
+                                                          N,
                                                           { children: e.description, checked: e.completed },
                                                           t,
                                                       ),
@@ -75,17 +82,17 @@ function h(e) {
                                   t,
                               );
                           }),
-                      (0, i.jsx)(d.cGx, {}),
-                      (0, i.jsx)(d.D0$, {
-                          label: m.intl.string(m.t.FO0AIS),
-                          children: (0, i.jsx)(d.BJc, {
+                      (0, i.jsx)(g.c, {}),
+                      (0, i.jsx)(h.D, {
+                          label: f.intl.string(f.t.FO0AIS),
+                          children: (0, i.jsx)(x.B, {
                               gap: 8,
-                              children: A.map((e, t) =>
+                              children: C.map((e, t) =>
                                   (0, i.jsx)(
                                       "div",
                                       {
-                                          className: g.nM,
-                                          children: (0, i.jsx)(d.Text, { variant: "text-md/normal", children: e }),
+                                          className: j.nM,
+                                          children: (0, i.jsx)(d.E, { variant: "text-md/normal", children: e }),
                                       },
                                       t,
                                   ),
@@ -95,30 +102,30 @@ function h(e) {
                   ],
               });
     return (0, i.jsx)("div", {
-        className: g.D4,
+        className: j.D4,
         children: (0, i.jsx)("div", {
-            className: g.kL,
-            children: (0, i.jsxs)(d.BJc, {
+            className: j.kL,
+            children: (0, i.jsxs)(x.B, {
                 gap: 16,
                 children: [
-                    (0, i.jsxs)(d.DUT, {
-                        className: g.jr,
-                        onClick: () => l((e) => !e),
+                    (0, i.jsxs)(_.D, {
+                        className: j.jr,
+                        onClick: () => s((e) => !e),
                         children: [
-                            (0, i.jsx)(d.Heading, {
+                            (0, i.jsx)(p.D, {
                                 variant: "heading-md/semibold",
-                                className: g.TK,
-                                children: m.intl.string(m.t["2Xbd/G"]),
+                                className: j.TK,
+                                children: f.intl.string(f.t["2Xbd/G"]),
                             }),
-                            (0, i.jsx)(c.A, { direction: n ? c.A.Directions.DOWN : c.A.Directions.UP, className: g.D }),
+                            (0, i.jsx)(A.A, { direction: n ? A.A.Directions.DOWN : A.A.Directions.UP, className: j.D }),
                         ],
                     }),
-                    !h &&
+                    !c &&
                         (0, i.jsx)("div", {
-                            className: g.ux,
-                            children: (0, i.jsx)(a.animated.div, { className: g.zZ, style: _ }),
+                            className: j.ux,
+                            children: (0, i.jsx)(a.animated.div, { className: j.zZ, style: I }),
                         }),
-                    p,
+                    b,
                 ],
             }),
         }),

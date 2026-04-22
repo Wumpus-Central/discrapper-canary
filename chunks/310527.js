@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { Je: () => s, OH: () => l, fx: () => o, zf: () => u });
-var r = n(562465),
-    i = n(73153),
-    a = n(652215);
-function s(e) {
-    return r.Bo.get({ url: a.Rsh.GUILD_VANITY_URL(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+r.d(t, { Je: () => o, OH: () => s, fx: () => E, zf: () => a });
+var n = r(562465),
+    l = r(73153),
+    i = r(652215);
+function o(e) {
+    return n.Bo.get({ url: i.Rsh.GUILD_VANITY_URL(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
         let {
-            body: { code: t, uses: n, error: r },
+            body: { code: t, uses: r, error: n },
         } = e;
-        i.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: n, error: r });
+        l.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: r, error: n });
     });
 }
-function o() {
-    i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
+function E() {
+    l.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 }
-function l(e) {
-    i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code: e });
+function s(e) {
+    l.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code: e });
 }
-function u(e, t, n) {
-    return r.Bo.patch({
-        url: a.Rsh.GUILD_VANITY_URL(e),
+function a(e, t, r) {
+    return n.Bo.patch({
+        url: i.Rsh.GUILD_VANITY_URL(e),
         body: { code: t },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(
         (e) => {
             let {
-                body: { code: t, uses: n },
+                body: { code: t, uses: r },
             } = e;
-            i.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: n });
+            l.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: r });
         },
         (e) => {
-            if ((i.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: e.body }), n?.throwErr)) throw e;
+            if ((l.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: e.body }), r?.throwErr)) throw e;
             return e;
         },
     );

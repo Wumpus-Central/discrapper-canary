@@ -1,49 +1,50 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
+    l = n.n(s),
     a = n(989349),
-    l = n.n(a),
-    o = n(397927),
-    c = n(405269),
-    d = n(927018),
-    u = n(906688),
-    _ = n(869295);
-function m(e) {
+    r = n.n(a),
+    o = n(939249),
+    d = n(834730),
+    u = n(405269),
+    c = n(927018),
+    g = n(906688),
+    m = n(523896);
+function _(e) {
     let { achievementId: t, dateUnlocked: n } = e,
-        s = (0, d.vM)(t);
+        s = (0, c.vM)(t);
     if (null == s) return null;
     let a = null != n,
-        { name: m, description: A, hideDescriptionUntilUnlock: g, onAction: E } = s,
-        h = g && !a,
-        p = a ? "text-strong" : "text-muted",
-        C = a ? "text-default" : "text-muted",
-        x = l()(n),
-        T = null != E && a,
-        I = T ? o.DUT : "div";
-    return (0, i.jsxs)(I, {
-        className: r()(_.kL, T && _.b),
+        { name: _, description: A, hideDescriptionUntilUnlock: h, onAction: p } = s,
+        x = h && !a,
+        E = a ? "text-strong" : "text-muted",
+        T = a ? "text-default" : "text-muted",
+        S = r()(n),
+        f = null != p && a,
+        b = f ? o.D : "div";
+    return (0, i.jsxs)(b, {
+        className: l()(m.kL, f && m.b),
         onClick: () => {
-            T && E();
+            f && p();
         },
         children: [
             (0, i.jsx)("div", {
-                className: _.zc,
-                children: (0, i.jsx)(u.A, { achievementId: t, size: u.A.Sizes.SIZE_40, unlocked: a }),
+                className: m.zc,
+                children: (0, i.jsx)(g.A, { achievementId: t, size: g.A.Sizes.SIZE_40, unlocked: a }),
             }),
             (0, i.jsxs)("div", {
-                className: _.VW,
+                className: m.VW,
                 children: [
                     null != n &&
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(d.E, {
                             variant: "text-xxs/semibold",
                             color: "text-muted",
-                            className: _.YR,
-                            children: (0, c.mk)(x),
+                            className: m.YR,
+                            children: (0, u.mk)(S),
                         }),
-                    (0, i.jsx)(o.Text, { variant: "text-md/medium", color: p, children: m() }),
-                    (0, i.jsx)(o.Text, { variant: "text-xs/normal", color: C, children: h ? "?????" : A() }),
+                    (0, i.jsx)(d.E, { variant: "text-md/medium", color: E, children: _() }),
+                    (0, i.jsx)(d.E, { variant: "text-xs/normal", color: T, children: x ? "?????" : A() }),
                 ],
             }),
         ],

@@ -1,9 +1,9 @@
 i.r(t), i.d(t, { default: () => G });
 var n = i(627968),
     a = i(64700),
-    o = i(960488),
+    o = i(873263),
     r = i(311907),
-    s = i(397927),
+    s = i(289873),
     l = i(544199),
     d = i(448564),
     u = i(997509),
@@ -31,7 +31,7 @@ function G(e) {
     null == i || G)
         ? (0, n.jsx)("div", {
               style: { display: "flex", justifyContent: "center", width: "100%" },
-              children: (0, n.jsx)(s.y$y, {}),
+              children: (0, n.jsx)(s.y, {}),
           })
         : (0, n.jsx)(o.rd, { to: E.BVt.CHANNEL(t) });
 }

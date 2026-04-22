@@ -1,30 +1,28 @@
 "use strict";
-n.d(t, { A: () => o, T: () => s });
-var r = n(972347),
-    i = n(647457),
+n.d(t, { A: () => l, T: () => o });
+var r,
+    i = n(972347),
+    s = n(647457),
     a = n(247692),
-    s = (function (e) {
-        return (
-            (e.Stream = "stream"),
-            (e.Video = "video"),
-            (e.Mute = "mute"),
-            (e.VoiceActivity = "voiceactivity"),
-            (e.DesktopSourceEnd = "desktopsourceend"),
-            (e.Speaking = "speaking"),
-            (e.AudioPermission = "audio-permission"),
-            (e.VideoPermission = "video-permission"),
-            (e.AddVideoTrack = "add-video-track"),
-            e
-        );
-    })({});
-class o extends r.A {
+    o =
+        (((r = {}).Stream = "stream"),
+        (r.Video = "video"),
+        (r.Mute = "mute"),
+        (r.VoiceActivity = "voiceactivity"),
+        (r.DesktopSourceEnd = "desktopsourceend"),
+        (r.Speaking = "speaking"),
+        (r.AudioPermission = "audio-permission"),
+        (r.VideoPermission = "video-permission"),
+        (r.AddVideoTrack = "add-video-track"),
+        r);
+class l extends i.A {
     audio;
     video = new a.A();
     desktop = null;
     stream;
     constructor(e) {
         super(),
-            (this.audio = new i.A(e)),
+            (this.audio = new s.A(e)),
             this.audio.addListener("voiceactivity", this.handleVoiceActivity),
             this.audio.addListener("speaking", this.handleSpeaking),
             this.audio.addListener("stream", this.mergeStreams),

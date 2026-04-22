@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(198982),
-    s = n(324580);
+    s = n(198982),
+    a = n(324580);
 let o = new Map(),
     l = new Map();
 function u(e) {
-    return [s.I9, e.query, s.OR, e.categoryId, s.O3, e.languageCode].join("-");
+    return [a.I9, e.query, a.OR, e.categoryId, a.O3, e.languageCode].join("-");
 }
-class c {
+class d {
     guildIds = [];
     error = null;
     offset = null;
@@ -25,7 +25,7 @@ class c {
         (this.error = null), (this.isFetching = !0);
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new a.LG(e));
+        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new s.LG(e));
     }
     handleSearchSuccess(e) {
         let { total: t, guilds: n } = e;
@@ -38,9 +38,9 @@ class c {
         n.forEach((e) => r.push(e.id)), (this.guildIds = r), (this.offset = r.length);
     }
 }
-function d(e) {
+function c(e) {
     let t = u(e),
-        n = o.get(t) ?? new c({ query: e.query });
+        n = o.get(t) ?? new d({ query: e.query });
     return o.set(t, n), n;
 }
 function _(e, t) {
@@ -48,39 +48,7 @@ function _(e, t) {
         r = o.get(n);
     return null != r ? t(r) : null;
 }
-function f() {
-    o.clear(), l.clear();
-}
-function p(e) {
-    let { query: t, categoryId: n, languageCode: r, reset: i } = e,
-        a = u({ query: t, categoryId: n, languageCode: r });
-    i && o.delete(a), d({ query: t, categoryId: n, languageCode: r }).handleSearchStart();
-}
-function h(e) {
-    let { query: t, categoryId: n, languageCode: r, total: i, guilds: a } = e;
-    d({ query: t, categoryId: n, languageCode: r }).handleSearchSuccess({ total: i, guilds: a }),
-        a.forEach((e) => {
-            l.set(e.id, e);
-        });
-}
-function m(e) {
-    let { query: t, categoryId: n, languageCode: r, error: i } = e;
-    d({ query: t, categoryId: n, languageCode: r }).handleSearchFailure(i);
-}
-function g(e) {
-    let { ignoreQueries: t } = e,
-        n = new Set(t);
-    o.forEach((e, t) => {
-        null == e.query || n.has(e.query) || o.delete(t);
-    });
-}
-function E(e) {
-    let { guildId: t, profile: n } = e,
-        r = l.get(t);
-    if (null == r) return !1;
-    l.set(t, { ...r, memberCount: n.memberCount ?? r.memberCount, presenceCount: n.onlineCount ?? r.presenceCount });
-}
-class A extends r.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "GlobalDiscoveryServersSearchResultsStore";
     getGuild(e) {
         return l.get(e);
@@ -110,11 +78,41 @@ class A extends r.Ay.Store {
         return _(e, (e) => e.error?.getAnyErrorMessage());
     }
 }
-let I = new A(i.h, {
-    CONNECTION_OPEN: f,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_START: p,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: h,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: m,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: g,
-    GUILD_PROFILE_FETCH_SUCCESS: E,
+let E = new f(i.h, {
+    CONNECTION_OPEN: function () {
+        o.clear(), l.clear();
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
+        let { query: t, categoryId: n, languageCode: r, reset: i } = e,
+            s = u({ query: t, categoryId: n, languageCode: r });
+        i && o.delete(s), c({ query: t, categoryId: n, languageCode: r }).handleSearchStart();
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
+        let { query: t, categoryId: n, languageCode: r, total: i, guilds: s } = e;
+        c({ query: t, categoryId: n, languageCode: r }).handleSearchSuccess({ total: i, guilds: s }),
+            s.forEach((e) => {
+                l.set(e.id, e);
+            });
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function (e) {
+        let { query: t, categoryId: n, languageCode: r, error: i } = e;
+        c({ query: t, categoryId: n, languageCode: r }).handleSearchFailure(i);
+    },
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
+        let { ignoreQueries: t } = e,
+            n = new Set(t);
+        o.forEach((e, t) => {
+            null == e.query || n.has(e.query) || o.delete(t);
+        });
+    },
+    GUILD_PROFILE_FETCH_SUCCESS: function (e) {
+        let { guildId: t, profile: n } = e,
+            r = l.get(t);
+        if (null == r) return !1;
+        l.set(t, {
+            ...r,
+            memberCount: n.memberCount ?? r.memberCount,
+            presenceCount: n.onlineCount ?? r.presenceCount,
+        });
+    },
 });

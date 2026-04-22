@@ -1,44 +1,45 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var r = n(397927),
+var s = n(861672),
+    l = n(477782),
     a = n(964486),
-    l = n(954571),
-    s = n(217549),
-    o = n(70856),
+    r = n(954571),
+    o = n(217549),
+    c = n(70856),
     d = n(875922),
-    c = n(163518),
-    u = n(294132),
+    u = n(163518),
+    m = n(294132),
     A = n(971203),
     h = n(652215),
-    _ = n(985018);
-function m(e) {
-    let { party: t, close: n, onSelect: m } = e,
-        p = (0, d.A)(t),
-        g = (0, A.A)(t),
-        E = (0, u.A)(t),
-        f = (0, c.A)(t),
-        I = (0, s.A)(t),
-        C = (0, o.A)(t);
+    x = n(985018);
+function p(e) {
+    let { party: t, close: n, onSelect: p } = e,
+        g = (0, d.A)(t),
+        N = (0, A.A)(t),
+        f = (0, m.A)(t),
+        _ = (0, u.A)(t),
+        I = (0, o.A)(t),
+        v = (0, c.A)(t);
     return (
         (0, a.Ay)(() => {
             let e = t.currentActivities
-                .filter((e) => e.game?.name != null && (0, l.isGameApplicationType)(e.game?.type))
+                .filter((e) => e.game?.name != null && (0, r.isGameApplicationType)(e.game?.type))
                 .map((e) => e.game.name);
-            l.default.track(h.HAw.OPEN_POPOUT, { type: "Now Playing Card Popout", games_detected: e });
+            r.default.track(h.HAw.OPEN_POPOUT, { type: "Now Playing Card Popout", games_detected: e });
         }),
-        (0, i.jsxs)(r.W1t, {
+        (0, i.jsxs)(s.W, {
             "data-menu-migrated": !0,
             navId: "now-playing-menu",
             onClose: n,
-            "aria-label": _.intl.string(_.t.ogxXGq),
-            onSelect: m,
+            "aria-label": x.intl.string(x.t.ogxXGq),
+            onSelect: p,
             children: [
-                p,
-                (0, i.jsxs)(r.rXV, { children: [g, E] }),
-                (0, i.jsx)(r.rXV, { children: f }),
-                (0, i.jsx)(r.rXV, { children: I }),
-                C,
+                g,
+                (0, i.jsxs)(l.rX, { children: [N, f] }),
+                (0, i.jsx)(l.rX, { children: _ }),
+                (0, i.jsx)(l.rX, { children: I }),
+                v,
             ],
         })
     );

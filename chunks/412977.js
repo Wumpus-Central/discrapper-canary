@@ -1,67 +1,61 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => A });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(118001),
-    d = n(147925),
-    c = n(652215),
-    u = n(985018),
-    m = n(690450);
-function g(e) {
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(192308),
+    o = n(939249),
+    d = n(534514),
+    c = n(834730),
+    u = n(646270),
+    m = n(849516),
+    g = n(118001),
+    h = n(147925),
+    x = n(652215),
+    _ = n(985018),
+    p = n(101839);
+function A(e) {
     let { guild: t } = e,
-        l = t.verificationLevel,
-        g = s.useMemo(() => (0, o.RU)(l), [l]);
-    return (0, i.jsxs)(a.DUT, {
+        s = t.verificationLevel,
+        A = l.useMemo(() => (0, g.RU)(s), [s]);
+    return (0, i.jsxs)(o.D, {
         onClick: () =>
-            (0, a.mMO)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e("70232").then(n.bind(n, 313003));
                 return (n) => (0, i.jsx)(e, { ...n, guild: t, hideColors: !0 });
             }),
-        className: r()(m.ph, m.vk),
+        className: r()(p.ph, p.vk),
         children: [
             (0, i.jsxs)("div", {
-                className: m.Ly,
+                className: p.Ly,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(d.D, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: u.intl.string(u.t.DpRdYK),
+                        children: _.intl.string(_.t.DpRdYK),
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(c.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: u.intl.string(u.t.mA17eD),
+                        children: _.intl.string(_.t.mA17eD),
                     }),
                     (0, i.jsx)("div", {
-                        className: m.__invalid_pillRow,
-                        children: (0, i.jsxs)(a.Text, {
+                        className: p.__invalid_pillRow,
+                        children: (0, i.jsxs)(c.E, {
                             variant: "text-xs/medium",
                             color: "interactive-text-default",
-                            className: m.Lp,
+                            className: p.Lp,
                             children: [
-                                l === c.PvD.VERY_HIGH
-                                    ? (0, i.jsx)(a.u6o, {
-                                          size: "custom",
-                                          color: "currentColor",
-                                          width: 16,
-                                          height: 16,
-                                      })
-                                    : (0, i.jsx)(a.u6c, {
-                                          size: "custom",
-                                          color: "currentColor",
-                                          width: 16,
-                                          height: 16,
-                                      }),
-                                g,
+                                s === x.PvD.VERY_HIGH
+                                    ? (0, i.jsx)(u.u, { size: "custom", color: "currentColor", width: 16, height: 16 })
+                                    : (0, i.jsx)(m.u, { size: "custom", color: "currentColor", width: 16, height: 16 }),
+                                A,
                             ],
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(d.A, { height: 24, width: 24, direction: d.A.Directions.RIGHT, className: m.OW }),
+            (0, i.jsx)(h.A, { height: 24, width: 24, direction: h.A.Directions.RIGHT, className: p.OW }),
         ],
     });
 }

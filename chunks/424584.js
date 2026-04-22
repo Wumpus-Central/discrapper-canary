@@ -1,61 +1,63 @@
-l.d(t, { default: () => c });
+l.d(t, { default: () => C });
 var a = l(627968),
     i = l(64700),
-    n = l(732955),
-    o = l(397927),
-    s = l(943357),
-    A = l(72817);
-let c = function (e) {
+    n = l(189213),
+    o = l(691885),
+    s = l(150934),
+    A = l(511274),
+    c = l(943357),
+    r = l(72817);
+let C = function (e) {
     let { onClose: t, transitionState: l } = e,
-        [c, r] = i.useState(null),
         [C, u] = i.useState(null),
         [T, d] = i.useState(null),
-        [h, p] = i.useState(""),
-        R = i.useCallback(async () => {
-            if (null != c) {
-                p("");
+        [h, p] = i.useState(null),
+        [R, E] = i.useState(""),
+        S = i.useCallback(async () => {
+            if (null != C) {
+                E("");
                 try {
-                    await (0, s.v$)(c, { difficulty: C ?? void 0, should_serve_invisible: T ?? void 0 });
+                    await (0, c.v$)(C, { difficulty: T ?? void 0, should_serve_invisible: h ?? void 0 });
                 } catch (e) {
-                    p(e.message);
+                    E(e.message);
                 }
             }
-        }, [c, C, T]);
-    return (0, a.jsxs)(n.aFV, {
+        }, [C, T, h]);
+    return (0, a.jsxs)(n.Modal, {
         title: "Captcha Test Tool",
-        actions: [{ text: "Trigger Captcha", onClick: R, disabled: null == c }],
+        actions: [{ text: "Trigger Captcha", onClick: S, disabled: null == C }],
         onClose: t,
         transitionState: l,
         children: [
-            (0, a.jsx)(o.l6P, {
+            (0, a.jsx)(o.l, {
                 label: "Captcha Decider Type",
                 hideLabel: !0,
-                value: c,
-                options: A.m,
+                value: C,
+                options: r.m,
                 onSelectionChange: (e) => {
-                    e !== s.Fo.HCAPTCHA_RQDATA && e !== s.Fo.SMITE_RQDATA && d(null),
-                        e !== s.Fo.HCAPTCHA_RQDATA && u(null),
-                        r(e),
-                        p("");
+                    e !== c.Fo.HCAPTCHA_RQDATA && e !== c.Fo.SMITE_RQDATA && p(null),
+                        e !== c.Fo.HCAPTCHA_RQDATA && d(null),
+                        u(e),
+                        E("");
                 },
                 selectionMode: "single",
                 fullWidth: !0,
             }),
-            c === s.Fo.HCAPTCHA_RQDATA &&
-                (0, a.jsx)(o.l6P, {
+            C === c.Fo.HCAPTCHA_RQDATA &&
+                (0, a.jsx)(o.l, {
                     label: "HCaptcha Difficulty",
                     hideLabel: !0,
-                    value: C,
-                    options: A.K,
+                    value: T,
+                    options: r.K,
                     onSelectionChange: (e) => {
-                        c === s.Fo.HCAPTCHA_RQDATA && u(e);
+                        C === c.Fo.HCAPTCHA_RQDATA && d(e);
                     },
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
-            (c === s.Fo.HCAPTCHA_RQDATA || c === s.Fo.SMITE_RQDATA) &&
-                (0, a.jsx)(o.Checkbox, { checked: T ?? !1, onChange: (e) => d(e), label: "Should serve invisible?" }),
-            "" !== h && (0, a.jsx)(o.dzK, { error: h }),
+            (C === c.Fo.HCAPTCHA_RQDATA || C === c.Fo.SMITE_RQDATA) &&
+                (0, a.jsx)(s.S, { checked: h ?? !1, onChange: (e) => p(e), label: "Should serve invisible?" }),
+            "" !== R && (0, a.jsx)(A.U, { error: R }),
         ],
     });
 };

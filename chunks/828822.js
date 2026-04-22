@@ -1,31 +1,33 @@
-n.d(l, { A: () => p });
-var t = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
-    r = n(837921),
-    o = n(718019),
-    d = n(985018),
-    c = n(321386),
-    u = n(968965);
-let m = r.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
-function p(e) {
-    let { avatarProps: l, eventHandlers: n } = (0, o.V)(e),
+l.d(n, { A: () => f });
+var t = l(627968);
+l(64700);
+var i = l(503698),
+    r = l.n(i),
+    s = l(97808),
+    a = l(408278),
+    o = l(22231),
+    d = l(837921),
+    c = l(718019),
+    u = l(985018),
+    g = l(106106),
+    A = l(338165);
+let m = d.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu;
+function f(e) {
+    let { avatarProps: n, eventHandlers: l } = (0, c.V)(e),
         i = () => {};
     return (0, t.jsxs)("div", {
         onClick: i,
-        className: s()(c.my, c.vk, u.kL),
-        ...n,
+        className: r()(g.my, g.vk, A.kL),
+        ...l,
         children: [
-            (0, t.jsx)(m, { ...l, imageClassName: s()(c.Lw, u.HU) }),
+            (0, t.jsx)(m, { ...n, imageClassName: r()(g.Lw, A.HU) }),
             (0, t.jsx)("div", {
-                className: u.r9,
-                children: (0, t.jsx)(a.K0, {
+                className: A.r9,
+                children: (0, t.jsx)(a.K, {
                     variant: "overlay-secondary",
                     size: "sm",
-                    icon: a.R2l,
-                    "aria-label": d.intl.string(d.t["Z19/zE"]),
+                    icon: o.R,
+                    "aria-label": u.intl.string(u.t["Z19/zE"]),
                     onClick: (e) => {
                         e.stopPropagation(), i();
                     },

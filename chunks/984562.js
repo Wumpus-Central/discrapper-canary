@@ -1,156 +1,157 @@
-"use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => L });
 var i = n(627968),
-    s = n(64700),
-    l = n(280513),
+    l = n(64700),
+    s = n(280513),
     r = n(311907),
-    a = n(397927),
-    o = n(793574),
-    d = n(837011),
-    c = n(90084),
-    u = n(685073),
-    g = n(828162),
-    m = n(801264),
-    x = n(997509),
-    h = n(555337),
-    _ = n(342490),
-    A = n(694878),
-    p = n(989556),
-    f = n(712150),
-    j = n(190695),
-    N = n(29086),
-    E = n(652215),
-    b = n(743981),
-    T = n(583970),
-    C = n(985018),
-    I = n(175820);
-let v = function () {
-    (0, C.useSyncMessages)(T.messagesLoader);
-    let e = (0, r.bG)([h.A], () => h.A.getGuild()),
-        t = (0, r.bG)([h.A], () => h.A.getGuildProfile()),
-        { fetchGuildProfile: n, fetchStatus: v } = (0, c.u)(e?.id);
+    a = n(289873),
+    o = n(534514),
+    d = n(834730),
+    c = n(243721),
+    u = n(531142),
+    m = n(793574),
+    g = n(837011),
+    h = n(90084),
+    x = n(685073),
+    _ = n(828162),
+    p = n(208039),
+    A = n(997509),
+    E = n(555337),
+    f = n(342490),
+    j = n(694878),
+    N = n(989556),
+    I = n(712150),
+    C = n(190695),
+    b = n(29086),
+    v = n(652215),
+    S = n(743981),
+    T = n(661023),
+    y = n(985018),
+    R = n(644961);
+let L = function () {
+    (0, y.useSyncMessages)(T.messagesLoader);
+    let e = (0, r.bG)([E.A], () => E.A.getGuild()),
+        t = (0, r.bG)([E.A], () => E.A.getGuildProfile()),
+        { fetchGuildProfile: n, fetchStatus: L } = (0, h.u)(e?.id);
     if (
-        (s.useEffect(() => {
-            v === d.X.NOT_FETCHED && n();
-        }, [n, v]),
-        v !== d.X.FETCHED)
+        (l.useEffect(() => {
+            L === g.X.NOT_FETCHED && n();
+        }, [n, L]),
+        L !== g.X.FETCHED)
     )
-        return (0, i.jsx)("div", { className: I.dc, children: (0, i.jsx)(a.y$y, {}) });
+        return (0, i.jsx)("div", { className: R.dc, children: (0, i.jsx)(a.y, {}) });
     if (null == e || null == t) return null;
-    let S = l.i.VISIBLE.has(t.visibility),
-        y = (0, u.Rg)(e),
-        R = !y || t?.tag == null,
-        O = t.badge ?? b.hc["0"],
-        G = t.badgeColorPrimary ?? null,
-        L = t.badgeColorSecondary ?? null,
-        D = (0, i.jsxs)(i.Fragment, {
+    let D = s.i.VISIBLE.has(t.visibility),
+        O = (0, x.Rg)(e),
+        G = !O || t?.tag == null,
+        M = t.badge ?? S.hc["0"],
+        k = t.badgeColorPrimary ?? null,
+        U = t.badgeColorSecondary ?? null,
+        w = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(p.A, {
-                    className: I.uW,
+                (0, i.jsx)(N.A, {
+                    className: R.uW,
                     guildId: e.id,
-                    isDisabled: R,
+                    isDisabled: G,
                     tag: t.tag ?? "",
-                    badge: O,
-                    primaryColor: G,
-                    secondaryColor: L,
+                    badge: M,
+                    primaryColor: k,
+                    secondaryColor: U,
                 }),
-                (0, i.jsx)(A.A, { className: I.uW, selectedBadge: O, guildId: e.id }),
-                (0, i.jsx)(f.A, { className: I.uW, guildId: e.id, badge: O, primaryColor: G, secondaryColor: L }),
+                (0, i.jsx)(j.A, { className: R.uW, selectedBadge: M, guildId: e.id }),
+                (0, i.jsx)(I.A, { className: R.uW, guildId: e.id, badge: M, primaryColor: k, secondaryColor: U }),
             ],
         });
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(a.Heading, {
-                className: I.DD,
+            (0, i.jsx)(o.D, {
+                className: R.DD,
                 variant: "heading-lg/semibold",
-                children: C.intl.string(T.default.mf2OwH),
+                children: y.intl.string(T.default.mf2OwH),
             }),
             (0, i.jsxs)("div", {
-                className: I.kL,
+                className: R.kL,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: I.hu,
+                        className: R.hu,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: I.iQ,
+                                className: R.iQ,
                                 children: [
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(d.E, {
                                         variant: "text-sm/medium",
                                         color: "text-subtle",
-                                        children: C.intl.format(T.default["655Uny"], {
+                                        children: y.intl.format(T.default["655Uny"], {
                                             onClickServerProfile: () => {
-                                                x.A.setSection(E.BEX.PROFILE);
+                                                A.A.setSection(v.BEX.PROFILE);
                                             },
                                             onClickApplyToJoin: () => {
-                                                x.A.setSection(E.BEX.ACCESS);
+                                                A.A.setSection(v.BEX.ACCESS);
                                             },
                                         }),
                                     }),
-                                    !S &&
-                                        (0, i.jsx)(m.A, {
-                                            className: I.pB,
-                                            children: (0, i.jsx)(a.Text, {
+                                    !D &&
+                                        (0, i.jsx)(p.A, {
+                                            className: R.pB,
+                                            children: (0, i.jsx)(d.E, {
                                                 variant: "text-xs/medium",
-                                                children: C.intl.format(T.default.CRbkIz, {
+                                                children: y.intl.format(T.default.CRbkIz, {
                                                     onClickEditSetting: () =>
-                                                        x.A.setSection(E.BEX.PROFILE, E.nd0.PROFILE_VISIBILITY),
+                                                        A.A.setSection(v.BEX.PROFILE, v.nd0.PROFILE_VISIBILITY),
                                                 }),
                                             }),
                                         }),
                                 ],
                             }),
-                            y
+                            O
                                 ? (0, i.jsxs)("div", {
-                                      className: I.DZ,
+                                      className: R.DZ,
                                       children: [
                                           (0, i.jsx)("label", {
                                               htmlFor: "enable-server-tag",
-                                              children: (0, i.jsx)(a.Text, {
+                                              children: (0, i.jsx)(d.E, {
                                                   variant: "text-md/semibold",
                                                   color: "text-strong",
-                                                  children: C.intl.string(T.default["1zams8"]),
+                                                  children: y.intl.string(T.default["1zams8"]),
                                               }),
                                           }),
-                                          (0, i.jsx)(a.dOG, {
+                                          (0, i.jsx)(c.d, {
                                               id: "enable-server-tag",
-                                              checked: !R,
+                                              checked: !G,
                                               onChange: () => {
-                                                  R
-                                                      ? x.A.updateGuildProfile(e.id, {
+                                                  G
+                                                      ? A.A.updateGuildProfile(e.id, {
                                                             tag: t.tag ?? "",
-                                                            badge: O,
-                                                            badgeColorPrimary: G,
-                                                            badgeColorSecondary: L,
+                                                            badge: M,
+                                                            badgeColorPrimary: k,
+                                                            badgeColorSecondary: U,
                                                         })
-                                                      : x.A.updateGuildProfile(e.id, { tag: null });
+                                                      : A.A.updateGuildProfile(e.id, { tag: null });
                                               },
                                           }),
                                       ],
                                   })
                                 : (0, i.jsx)("div", {
-                                      className: I.vw,
-                                      children: (0, i.jsx)(_.u, {
+                                      className: R.vw,
+                                      children: (0, i.jsx)(f.u, {
                                           onClick: () => {
-                                              (0, g.A)(e.id, o.A.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), x.A.close();
+                                              (0, _.A)(e.id, m.A.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), A.A.close();
                                           },
                                       }),
                                   }),
-                            R
-                                ? (0, i.jsx)(a.RDc, { children: (0, i.jsx)("div", { className: I.n8, children: D }) })
-                                : D,
+                            G ? (0, i.jsx)(u.R, { children: (0, i.jsx)("div", { className: R.n8, children: w }) }) : w,
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: I.so,
+                        className: R.so,
                         children: [
-                            (0, i.jsx)(N.A, {
+                            (0, i.jsx)(b.A, {
                                 guildId: e.id,
                                 tag: t.tag,
-                                badge: O,
-                                primaryColor: G,
-                                secondaryColor: L,
+                                badge: M,
+                                primaryColor: k,
+                                secondaryColor: U,
                             }),
-                            !R && (0, i.jsx)(j.A, { guildId: e.id }),
+                            !G && (0, i.jsx)(C.A, { guildId: e.id }),
                         ],
                     }),
                 ],

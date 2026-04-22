@@ -1,51 +1,47 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(506774),
+    s = n(311907),
+    a = n(506774),
     o = n(73153),
     l = n(731854);
 let u = "CertifiedDeviceStore",
-    c = {},
     d = {},
+    c = {},
     _ = 0;
 function f(e, t, n) {
-    let r = d[e];
+    let r = c[e];
     return null != r ? n(r) : t;
 }
-function p(e, t) {
-    let n = c[e];
-    null != n && n.forEach((e) => delete d[e.id]), (c[e] = t), t.forEach((e) => (d[e.id] = e));
+function E(e, t) {
+    let n = d[e];
+    null != n && n.forEach((e) => delete c[e.id]), (d[e] = t), t.forEach((e) => (c[e.id] = e));
 }
-function h(e) {
-    let { applicationId: t, devices: n } = e;
-    p(t, n), s.w.set(u, c), _++;
-}
-class m extends a.Ay.Store {
+class h extends s.Ay.Store {
     static displayName = "CertifiedDeviceStore";
     initialize() {
-        let e = s.w.get(u);
+        let e = a.w.get(u);
         null != e &&
             i().forEach(e, (e, t) => {
                 e.forEach((e) => {
                     "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1);
                 }),
-                    p(t, e);
+                    E(t, e);
             });
     }
     isCertified(e) {
-        return null != d[e];
+        return null != c[e];
     }
     getCertifiedDevice(e) {
-        return d[e];
+        return c[e];
     }
     getCertifiedDeviceName(e, t) {
         let n = this.getCertifiedDevice(e);
         return null != n ? `${n.vendor.name} ${n.model.name}` : t;
     }
     getCertifiedDeviceByType(e) {
-        return i().find(d, (t) => t.type === e);
+        return i().find(c, (t) => t.type === e);
     }
     isHardwareMute(e) {
         return f(e, !1, (e) => e.type === l.oh.AUDIO_INPUT && e.hardwareMute);
@@ -69,4 +65,9 @@ class m extends a.Ay.Store {
         return _;
     }
 }
-let g = new m(o.h, { CERTIFIED_DEVICES_SET: h });
+let p = new h(o.h, {
+    CERTIFIED_DEVICES_SET: function (e) {
+        let { applicationId: t, devices: n } = e;
+        E(t, n), a.w.set(u, d), _++;
+    },
+});

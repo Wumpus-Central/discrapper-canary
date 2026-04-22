@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(985018);
-function a(e) {
+var l = n(452027),
+    s = n(292666),
+    a = n(985018);
+function r(e) {
     let { friendUsername: t, onFriendUsernameChange: n } = e;
-    return (0, i.jsx)(l.D0$, {
-        label: s.intl.string(s.t.w5uwoI),
-        children: (0, i.jsx)(l.ksK, { value: t, onChange: n, placeholder: s.intl.string(s.t.qRaqel), autoFocus: !0 }),
+    return (0, i.jsx)(l.D, {
+        label: a.intl.string(a.t.w5uwoI),
+        children: (0, i.jsx)(s.k, { value: t, onChange: n, placeholder: a.intl.string(a.t.qRaqel), autoFocus: !0 }),
     });
 }

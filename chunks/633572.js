@@ -1,38 +1,38 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968),
-    i = n(64700),
-    s = n(397927),
-    a = n(979474),
-    o = n(4103),
-    l = n(652215),
+n.d(t, { A: () => d });
+var a = n(627968),
+    r = n(64700),
+    l = n(408278),
+    i = n(597770),
+    o = n(233971),
+    s = n(4103),
+    c = n(652215),
     u = n(985018);
-function c(e) {
-    let { user: t, analyticsLocations: n, confettiEnabled: c = !0, onClose: d } = e,
-        { giftButtonRef: _, handleMouseEnter: f } = (0, o.A)({ enabled: c }),
-        { openGiftModal: p } = (0, a.$)({
+function d(e) {
+    let { user: t, analyticsLocations: n, confettiEnabled: d = !0, onClose: f } = e,
+        { giftButtonRef: _, handleMouseEnter: h } = (0, s.A)({ enabled: d }),
+        { openGiftModal: A } = (0, o.$)({
             giftRecipient: t,
             analyticsLocations: n,
             analyticsObject: {
-                page: l.liQ.USER_PROFILE,
-                section: l.JJy.USER_PROFILE,
-                object: l.ZSU.BUTTON_ICON,
-                objectType: l.AnalyticsObjectTypes.GIFT,
+                page: c.liQ.USER_PROFILE,
+                section: c.JJy.USER_PROFILE,
+                object: c.ZSU.BUTTON_ICON,
+                objectType: c.AnalyticsObjectTypes.GIFT,
             },
             location: "gift-button-with-confetti",
         }),
-        h = i.useCallback(() => {
-            p(), d?.();
-        }, [p, d]);
-    return (0, r.jsx)("div", {
+        p = r.useCallback(() => {
+            A(), f?.();
+        }, [A, f]);
+    return (0, a.jsx)("div", {
         ref: _,
-        onMouseEnter: f,
-        children: (0, r.jsx)(s.K0, {
+        onMouseEnter: h,
+        children: (0, a.jsx)(l.K, {
             size: "sm",
             variant: "icon-only",
-            icon: s.okO,
+            icon: i.o,
             "aria-label": u.intl.string(u.t.PEjaCx),
-            onClick: h,
+            onClick: p,
         }),
     });
 }

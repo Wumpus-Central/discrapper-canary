@@ -1,43 +1,43 @@
-"use strict";
-n.d(t, { A: () => m, T: () => h });
-var r = n(627968),
+n.d(t, { A: () => E, T: () => g });
+var l = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    r = n(311907),
+    a = n(265872),
+    s = n(861672),
     o = n(803664),
-    l = n(509302),
+    c = n(509302),
     u = n(460597),
-    c = n(994500),
-    d = n(403362),
-    _ = n(183555),
-    f = n(652215),
-    p = n(985018);
-function h(e) {
+    d = n(994500),
+    m = n(403362),
+    f = n(183555),
+    x = n(652215),
+    A = n(985018);
+function g(e) {
     let { user: t, analyticsLocation: n } = e,
-        r = (0, a.bG)([c.A], () => c.A.getRelationshipType(t.id) === f.eA$.PENDING_OUTGOING),
-        { trackUserProfileAction: s } = (0, _.NJ)(),
-        p = (0, o.A)({
+        l = (0, r.bG)([d.A], () => d.A.getRelationshipType(t.id) === x.eA$.PENDING_OUTGOING),
+        { trackUserProfileAction: a } = (0, f.NJ)(),
+        s = (0, o.A)({
             user: t,
             location: n,
-            onFriendRemove: () => s({ action: "REMOVE_FRIEND" }),
-            onFriendRequestSent: () => s({ action: "SEND_FRIEND_REQUEST" }),
+            onFriendRemove: () => a({ action: "REMOVE_FRIEND" }),
+            onFriendRequestSent: () => a({ action: "SEND_FRIEND_REQUEST" }),
         }),
-        h = (0, l.A)({ user: t }),
-        m = (0, u.A)({ user: t });
-    return i.useMemo(() => [r ? null : p, h, m].filter(d.Vq), [h, p, r, m]);
+        A = (0, c.A)({ user: t }),
+        g = (0, u.A)({ user: t });
+    return i.useMemo(() => [l ? null : s, A, g].filter(m.Vq), [A, s, l, g]);
 }
-function m(e) {
+function E(e) {
     let { menuItems: t, children: n, targetElementRef: i } = e;
-    return (0, r.jsx)(s.YNO, {
+    return (0, l.jsx)(a.Y, {
         targetElementRef: i,
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(s.W1t, {
+            return (0, l.jsx)(s.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "user-profile-friend-request-buttons",
                 onSelect: void 0,
                 onClose: n,
-                "aria-label": p.intl.string(p.t.Jszi3G),
+                "aria-label": A.intl.string(A.t.Jszi3G),
                 children: t,
             });
         },

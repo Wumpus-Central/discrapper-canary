@@ -1,7 +1,10 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = /^[a-zA-Z][a-zA-Z0-9-]*/,
-        r = [
+        a = e.COMMENT(/;/, /$/);
+    return {
+        name: "Augmented Backus-Naur Form",
+        illegal: /[!@#$^&',?+~`|:]/,
+        keywords: [
             "ALPHA",
             "BIT",
             "CHAR",
@@ -19,23 +22,14 @@ e.exports = function (e) {
             "VCHAR",
             "WSP",
         ],
-        i = e.COMMENT(/;/, /$/),
-        s = { scope: "symbol", match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/ },
-        a = { scope: "symbol", match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/ },
-        o = { scope: "symbol", match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/ },
-        l = { scope: "symbol", match: /%[si](?=".*")/ };
-    return {
-        name: "Augmented Backus-Naur Form",
-        illegal: /[!@#$^&',?+~`|:]/,
-        keywords: r,
         contains: [
             { scope: "operator", match: /=\/?/ },
-            { scope: "attribute", match: t.concat(n, /(?=\s*=)/) },
-            i,
-            s,
+            { scope: "attribute", match: t.concat(/^[a-zA-Z][a-zA-Z0-9-]*/, /(?=\s*=)/) },
             a,
-            o,
-            l,
+            { scope: "symbol", match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/ },
+            { scope: "symbol", match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/ },
+            { scope: "symbol", match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/ },
+            { scope: "symbol", match: /%[si](?=".*")/ },
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE,
         ],

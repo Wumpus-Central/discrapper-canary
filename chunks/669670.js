@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(723727);
-let i = {
+i.d(t, { A: () => r });
+var n = i(723727);
+let r = {
     0: {
         name: "GPSVersionID",
         description: (e) => (2 === e[0] && 2 === e[1] && 0 === e[2] && 0 === e[3] ? "Version 2.2" : "Unknown"),
@@ -13,7 +12,7 @@ let i = {
             return "N" === t ? "North latitude" : "S" === t ? "South latitude" : "Unknown";
         },
     },
-    2: { name: "GPSLatitude", description: r.e7 },
+    2: { name: "GPSLatitude", description: n.e7 },
     3: {
         name: "GPSLongitudeRef",
         description: (e) => {
@@ -21,7 +20,7 @@ let i = {
             return "E" === t ? "East longitude" : "W" === t ? "West longitude" : "Unknown";
         },
     },
-    4: { name: "GPSLongitude", description: r.e7 },
+    4: { name: "GPSLongitude", description: n.e7 },
     5: {
         name: "GPSAltitudeRef",
         description: (e) => (0 === e ? "Sea level" : 1 === e ? "Sea level reference (negative value)" : "Unknown"),
@@ -32,8 +31,8 @@ let i = {
         description: (e) =>
             e
                 .map(([e, t]) => {
-                    let n = e / t;
-                    return /^\d(\.|$)/.test(`${n}`) ? `0${n}` : n;
+                    let i = e / t;
+                    return /^\d(\.|$)/.test(`${i}`) ? `0${i}` : i;
                 })
                 .join(":"),
     },
@@ -116,8 +115,8 @@ let i = {
         },
     },
     26: "GPSDestDistance",
-    27: { name: "GPSProcessingMethod", description: r.Cn },
-    28: { name: "GPSAreaInformation", description: r.Cn },
+    27: { name: "GPSProcessingMethod", description: n.Cn },
+    28: { name: "GPSAreaInformation", description: n.Cn },
     29: "GPSDateStamp",
     30: {
         name: "GPSDifferential",

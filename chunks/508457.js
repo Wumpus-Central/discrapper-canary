@@ -1,64 +1,66 @@
-i.d(a, { default: () => p });
-var t = i(627968),
-    r = i(64700),
+i.d(a, { default: () => d });
+var r = i(627968),
+    t = i(64700),
     l = i(942381),
-    n = i(397927),
-    u = i(442433),
-    s = i(259788),
-    o = i(985018);
-function p(e) {
+    n = i(477782),
+    u = i(964355),
+    s = i(861672),
+    o = i(442433),
+    p = i(259788),
+    c = i(985018);
+function d(e) {
     let a,
         i,
-        { onSelect: p, onClose: c } = e,
-        d =
-            ((a = s.Ay.useState((e) => e.timeToLiveMs, l.x)),
-            (0, t.jsx)(n.aK1, {
+        { onSelect: d, onClose: m } = e,
+        f =
+            ((a = p.Ay.useState((e) => e.timeToLiveMs, l.x)),
+            (0, r.jsx)(n.aK, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Live",
                 control: (e, i) =>
-                    (0, t.jsx)(n.i42, {
+                    (0, r.jsx)(u.i, {
                         ...e,
                         ref: i,
                         value: a,
-                        maxValue: s.nl,
-                        minValue: s.jc,
+                        maxValue: p.nl,
+                        minValue: p.jc,
                         renderValue: (e) => `${e}ms`,
-                        onChange: (e) => (0, s.nj)(e),
+                        onChange: (e) => (0, p.nj)(e),
                         "aria-label": "Time To Live",
                     }),
             })),
-        m =
-            ((i = s.Ay.useState((e) => e.reappearTimeMs, l.x)),
-            (0, t.jsx)(n.aK1, {
+        h =
+            ((i = p.Ay.useState((e) => e.reappearTimeMs, l.x)),
+            (0, r.jsx)(n.aK, {
                 id: "opacity",
                 "aria-haspopup": !0,
                 label: "Time To Reappear",
                 control: (e, a) =>
-                    (0, t.jsx)(n.i42, {
+                    (0, r.jsx)(u.i, {
                         ...e,
                         ref: a,
                         value: i,
-                        maxValue: s.J5,
-                        minValue: s.GI,
+                        maxValue: p.J5,
+                        minValue: p.GI,
                         renderValue: (e) => `${e}ms`,
-                        onChange: (e) => (0, s.g_)(e),
+                        onChange: (e) => (0, p.g_)(e),
                         "aria-label": "Time To Reappear",
                     }),
             })),
-        f = r.useRef(c);
+        x = t.useRef(m);
     return (
-        r.useEffect(() => {
-            f.current = c;
+        t.useEffect(() => {
+            x.current = m;
         }),
-        r.useEffect(() => () => f.current?.(), []),
-        (0, t.jsxs)(n.W1t, {
+        t.useEffect(() => () => x.current?.(), []),
+        (0, r.jsxs)(s.W, {
             "data-menu-migrated-auto": !0,
             navId: "overlay-click-zone-debug-context-menu",
-            onClose: u.Z_,
-            "aria-label": o.intl.string(o.t.tPfVWi),
-            onSelect: p,
-            children: [d, m],
+            onClose: o.Z_,
+            "aria-label": c.intl.string(c.t.tPfVWi),
+            onSelect: d,
+            children: [f, h],
         })
     );
 }

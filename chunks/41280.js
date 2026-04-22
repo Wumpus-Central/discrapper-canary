@@ -1,36 +1,36 @@
-n.d(t, { A: () => p });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
+n.d(t, { A: () => _ });
+var i = n(627968),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
     r = n(735438),
     o = n.n(r),
-    d = n(382222),
+    d = n(517738),
     c = n(311907),
-    u = n(397927),
-    m = n(775602),
-    h = n(573411);
-let x = { mass: 10, tension: 550, friction: 140 };
-function p(e) {
+    u = n(717421),
+    p = n(775602),
+    h = n(993843);
+let m = { mass: 10, tension: 550, friction: 140 };
+function _(e) {
     let { className: t, pageMultiplier: n } = e,
-        s = (0, c.bG)([m.A], () => m.A.useReducedMotion),
-        [r, p] = i.useState({ x: 0, y: 0 }),
-        g = i.useMemo(
+        l = (0, c.bG)([p.A], () => p.A.useReducedMotion),
+        [r, _] = s.useState({ x: 0, y: 0 }),
+        A = s.useMemo(
             () =>
                 o().throttle((e) => {
-                    s || p({ x: (window.innerWidth - e.pageX * n) / 90, y: (window.innerHeight - e.pageY * n) / 90 });
+                    l || _({ x: (window.innerWidth - e.pageX * n) / 90, y: (window.innerHeight - e.pageY * n) / 90 });
                 }, 20),
-            [n, s],
+            [n, l],
         );
-    i.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
-    let [_, f] = (0, u.zhh)(() => ({ x: 0, y: 0, config: x }));
+    s.useEffect(() => (window.addEventListener("mousemove", A), () => window.removeEventListener("mousemove", A)), [A]);
+    let [f, g] = (0, u.z)(() => ({ x: 0, y: 0, config: m }));
     return (
-        i.useEffect(() => {
-            f({ x: r.x, y: r.y });
-        }, [r.x, r.y, f]),
-        (0, a.jsx)(d.animated.div, {
-            style: { transform: (0, d.to)([_.x, _.y], (e, t) => `translate3d(${e}px, ${t}px, 0)`) },
-            className: l()(h.T, t),
+        s.useEffect(() => {
+            g({ x: r.x, y: r.y });
+        }, [r.x, r.y, g]),
+        (0, i.jsx)(d.animated.div, {
+            style: { transform: (0, d.to)([f.x, f.y], (e, t) => `translate3d(${e}px, ${t}px, 0)`) },
+            className: a()(h.T, t),
         })
     );
 }

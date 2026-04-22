@@ -1,23 +1,19 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(530560),
-    i = n(374372),
-    a = n(360345),
-    s = n(632434);
+r.d(t, { A: () => l });
+var n = r(530560),
+    s = r(374372),
+    a = r(360345),
+    i = r(632434);
 function o(e) {
-    return null != e.text.match(/^[+-]/i);
-}
-function l(e) {
     return null != e.text.match(/^-/i);
 }
-class u extends r.X {
-    shouldMergeResults(e, t, n) {
-        return !!e.match(/^\s*$/i) && (o(n) || l(n));
+class l extends n.X {
+    shouldMergeResults(e, t, r) {
+        return !!e.match(/^\s*$/i) && (null != r.text.match(/^[+-]/i) || o(r));
     }
-    mergeResults(e, t, n, r) {
-        let o = (0, a.E9)(n.text);
-        l(n) && (o = (0, s.x4)(o));
-        let u = i.BP.createRelativeFromReference(i.b5.fromDate(t.start.date()), o);
-        return new i.s4(t.reference, t.index, `${t.text}${e}${n.text}`, u);
+    mergeResults(e, t, r, n) {
+        let l = (0, a.E9)(r.text);
+        o(r) && (l = (0, i.x4)(l));
+        let u = s.BP.createRelativeFromReference(s.b5.fromDate(t.start.date()), l);
+        return new s.s4(t.reference, t.index, `${t.text}${e}${r.text}`, u);
     }
 }

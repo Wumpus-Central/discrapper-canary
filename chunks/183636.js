@@ -1,16 +1,14 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => i });
 var r = n(531685);
-function i() {
-    return !0;
-}
-function a() {
-    return i();
-}
-let s = {
-    canUIRequestGatewaySocket: i,
+let i = {
+    canUIRequestGatewaySocket: function () {
+        return !0;
+    },
     getState: function () {
         return r.A.isAppFocused() ? "focused" : "unfocused";
     },
-    useCanUIRequestGatewaySocket: a,
+    useCanUIRequestGatewaySocket: function () {
+        return !0;
+    },
 };

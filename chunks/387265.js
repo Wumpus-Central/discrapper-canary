@@ -1,66 +1,71 @@
-n.d(t, { A: () => c }), n(321073);
-var a = n(627968),
-    s = n(64700),
-    i = n(554146),
-    l = n(397927),
-    r = n(617617),
-    o = n(256787),
-    d = n(20439);
-let c = s.memo(function (e) {
-    let { className: t, content: n, onChange: c } = e,
-        u = i.M[n],
-        { isDismissed: m, handleToggleDismissState: h } = (0, d.A)(u),
-        [x, p] = s.useState(!1),
-        g = s.useCallback(() => {
-            c?.(n), h();
-        }, [c, h, n]),
-        _ = s.useCallback(
+a.d(t, { A: () => x }), a(321073);
+var n = a(627968),
+    l = a(64700),
+    i = a(554146),
+    s = a(331322),
+    r = a(408278),
+    o = a(662546),
+    d = a(420897),
+    c = a(243721),
+    u = a(404778),
+    m = a(617617),
+    h = a(256787),
+    p = a(20439);
+let x = l.memo(function (e) {
+    let { className: t, content: a, onChange: x } = e,
+        g = i.M[a],
+        { isDismissed: v, handleToggleDismissState: b } = (0, p.A)(g),
+        [_, f] = l.useState(!1),
+        j = l.useCallback(() => {
+            x?.(a), b();
+        }, [x, b, a]),
+        A = l.useCallback(
             (e) => {
-                e.preventDefault(), p(!0), navigator.clipboard.writeText(n.toLowerCase());
+                e.preventDefault(), f(!0), navigator.clipboard.writeText(a.toLowerCase());
             },
-            [n],
+            [a],
         );
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, a.jsxs)(l.BJc, {
+            (0, n.jsxs)(s.B, {
                 className: t,
                 direction: "horizontal",
                 align: "center",
                 children: [
-                    (0, a.jsx)(l.K0, {
+                    (0, n.jsx)(r.K, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: x ? l.ODX : l.sjE,
-                        onClick: _,
-                        "aria-label": x ? "Copied" : "Copy",
+                        icon: _ ? o.O : d.s,
+                        onClick: A,
+                        "aria-label": _ ? "Copied" : "Copy",
                     }),
-                    (0, a.jsx)(l.dOG, {
-                        label: `${n.toLowerCase()} (${i.M[n]})`,
-                        description: (0, o.Zm)(u)
+                    (0, n.jsx)(c.d, {
+                        label: `${a.toLowerCase()} (${i.M[a]})`,
+                        description: (0, h.Zm)(g)
                             ? (function (e) {
-                                  let t = r.A.settings.userContent?.recurringDismissibleContentStates?.[e];
+                                  let t = m.A.settings.userContent?.recurringDismissibleContentStates?.[e];
                                   if (null == t) return null;
-                                  let n = [],
-                                      { lastDismissedVersion: a, lastDismissedAtMs: s, lastDismissedObjectId: i } = t;
+                                  let a = [],
+                                      { lastDismissedVersion: n, lastDismissedAtMs: l, lastDismissedObjectId: i } = t;
                                   if (
-                                      (void 0 !== a && 0 !== a && n.push(`last_dismissed_version: ${a}`), void 0 !== s)
+                                      (void 0 !== n && 0 !== n && a.push(`last_dismissed_version: ${n}`), void 0 !== l)
                                   ) {
-                                      let e = Number(s),
+                                      let e = Number(l),
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
-                                      n.push(`last_dismissed_at: ${t}`);
+                                      a.push(`last_dismissed_at: ${t}`);
                                   }
-                                  return (void 0 !== i && "0" !== i && n.push(`last_dismissed_object_id: ${i}`),
-                                  0 === n.length)
+                                  return (void 0 !== i && "0" !== i && a.push(`last_dismissed_object_id: ${i}`),
+                                  0 === a.length)
                                       ? null
-                                      : n.join(", ");
-                              })(u)
+                                      : a.join(", ");
+                              })(g)
                             : null,
-                        checked: m,
-                        onChange: g,
+                        checked: v,
+                        onChange: j,
                     }),
                 ],
             }),
-            (0, a.jsx)(l.cGx, {}),
+            (0, n.jsx)(u.c, {}),
         ],
     });
 });

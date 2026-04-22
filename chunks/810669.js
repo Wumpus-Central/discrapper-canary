@@ -1,126 +1,127 @@
 "use strict";
-a.d(t, { e: () => _ });
-var s = a(627968),
-    r = a(64700),
-    n = a(397927),
-    i = a(414121),
-    l = a(981355),
-    o = a(652215),
-    c = a(985018),
-    d = a(403404);
-let u = a(196390),
-    h = a(906118),
-    p = `${window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]}${o.BVt.ACTIVATE}`,
-    x = `${location.protocol}//${p}`;
-function f(e) {
+s.d(t, { e: () => m });
+var a = s(627968),
+    r = s(64700),
+    n = s(289873),
+    i = s(534514),
+    l = s(414121),
+    o = s(981355),
+    c = s(652215),
+    d = s(985018),
+    u = s(403404);
+let h = s(196390),
+    p = s(906118),
+    x = `${window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]}${c.BVt.ACTIVATE}`,
+    f = `${location.protocol}//${x}`;
+function _(e) {
     let { text: t = "" } = e,
-        [a, l] = r.useState(!1);
+        [s, i] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e = new Image();
-            (e.src = h), (e.onload = () => l(!0)), (e.onerror = () => l(!0));
-        }, [h]),
-        "" !== t && a
-            ? (0, s.jsxs)(s.Fragment, {
+            (e.src = p), (e.onload = () => i(!0)), (e.onerror = () => i(!0));
+        }, [p]),
+        "" !== t && s
+            ? (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, s.jsx)(i.Ay, { size: 288, text: t }),
-                      (0, s.jsx)("div", { className: d.xi, children: (0, s.jsx)("img", { src: h, alt: "" }) }),
+                      (0, a.jsx)(l.Ay, { size: 288, text: t }),
+                      (0, a.jsx)("div", { className: u.xi, children: (0, a.jsx)("img", { src: p, alt: "" }) }),
                   ],
               })
-            : (0, s.jsx)("div", { className: d.Yp, children: (0, s.jsx)(n.y$y, { type: n.y$y.Type.WANDERING_CUBES }) })
+            : (0, a.jsx)("div", { className: u.Yp, children: (0, a.jsx)(n.y, { type: n.y.Type.WANDERING_CUBES }) })
     );
 }
-let _ = (e) => {
+let m = (e) => {
     let { code: t } = e,
-        { width: a, height: r } = (0, l.A)();
+        { width: s, height: r } = (0, o.A)();
     return null == t || 0 === t.length
         ? null
-        : (0, s.jsxs)("div", {
-              className: d.nd,
-              style: { zoom: Math.min(a / 1460, r / 1080, 1) },
+        : (0, a.jsxs)("div", {
+              className: u.nd,
+              style: { zoom: Math.min(s / 1460, r / 1080, 1) },
               children: [
-                  (0, s.jsx)("div", { className: d.Iv, children: (0, s.jsx)("div", { className: d.wm }) }),
-                  (0, s.jsxs)("div", {
-                      className: d.SV,
+                  (0, a.jsx)("div", { className: u.Iv, children: (0, a.jsx)("div", { className: u.wm }) }),
+                  (0, a.jsxs)("div", {
+                      className: u.SV,
                       children: [
-                          (0, s.jsxs)("div", {
-                              className: d._c,
+                          (0, a.jsxs)("div", {
+                              className: u._c,
                               children: [
-                                  (0, s.jsx)("div", {
-                                      className: d.fn,
-                                      children: (0, s.jsx)(f, { text: `${x}?user_code=${encodeURIComponent(t)}` }),
+                                  (0, a.jsx)("div", {
+                                      className: u.fn,
+                                      children: (0, a.jsx)(_, { text: `${f}?user_code=${encodeURIComponent(t)}` }),
                                   }),
-                                  (0, s.jsxs)("div", {
-                                      className: d.E7,
+                                  (0, a.jsxs)("div", {
+                                      className: u.E7,
                                       children: [
-                                          (0, s.jsx)(n.Heading, {
+                                          (0, a.jsx)(i.D, {
                                               variant: "heading-xxl/semibold",
                                               color: "text-strong",
-                                              className: d.MM,
-                                              children: c.intl.string(c.t.llDCid),
+                                              className: u.MM,
+                                              children: d.intl.string(d.t.llDCid),
                                           }),
-                                          (0, s.jsx)(n.Heading, {
+                                          (0, a.jsx)(i.D, {
                                               variant: "heading-xxl/normal",
                                               color: "text-default",
-                                              children: c.intl.string(c.t.JfHzXG),
+                                              children: d.intl.string(d.t.JfHzXG),
                                           }),
                                       ],
                                   }),
                               ],
                           }),
-                          (0, s.jsxs)("div", {
-                              className: d.$G,
+                          (0, a.jsxs)("div", {
+                              className: u.$G,
                               children: [
-                                  (0, s.jsx)("div", { className: d.yF }),
-                                  (0, s.jsx)(n.Heading, {
+                                  (0, a.jsx)("div", { className: u.yF }),
+                                  (0, a.jsx)(i.D, {
                                       variant: "heading-lg/semibold",
                                       color: "text-strong",
-                                      className: d.Bw,
-                                      children: c.intl.string(c.t.arEHn4),
+                                      className: u.Bw,
+                                      children: d.intl.string(d.t.arEHn4),
                                   }),
-                                  (0, s.jsx)("div", { className: d.yF }),
+                                  (0, a.jsx)("div", { className: u.yF }),
                               ],
                           }),
-                          (0, s.jsxs)("div", {
-                              className: d.Y7,
+                          (0, a.jsxs)("div", {
+                              className: u.Y7,
                               children: [
-                                  (0, s.jsxs)("div", {
-                                      className: d.WX,
+                                  (0, a.jsxs)("div", {
+                                      className: u.WX,
                                       children: [
-                                          (0, s.jsx)(n.Heading, {
+                                          (0, a.jsx)(i.D, {
                                               variant: "heading-xxl/semibold",
                                               color: "text-strong",
-                                              className: d.GP,
-                                              children: c.intl.string(c.t["Eu8rJ/"]),
+                                              className: u.GP,
+                                              children: d.intl.string(d.t["Eu8rJ/"]),
                                           }),
-                                          (0, s.jsx)(n.Heading, {
+                                          (0, a.jsx)(i.D, {
                                               variant: "heading-xxl/normal",
                                               color: "text-default",
-                                              children: c.intl.string(c.t.BkEMJ1),
+                                              children: d.intl.string(d.t.BkEMJ1),
                                           }),
                                       ],
                                   }),
-                                  (0, s.jsxs)("div", {
-                                      className: d.u5,
+                                  (0, a.jsxs)("div", {
+                                      className: u.u5,
                                       children: [
-                                          (0, s.jsx)(n.Heading, {
+                                          (0, a.jsx)(i.D, {
                                               variant: "heading-xxl/semibold",
                                               color: "text-strong",
-                                              className: d.GP,
-                                              children: p,
+                                              className: u.GP,
+                                              children: x,
                                           }),
-                                          (0, s.jsxs)("div", {
-                                              className: d.WX,
+                                          (0, a.jsxs)("div", {
+                                              className: u.WX,
                                               children: [
-                                                  (0, s.jsx)(n.Heading, {
+                                                  (0, a.jsx)(i.D, {
                                                       variant: "heading-xxl/normal",
                                                       color: "text-default",
-                                                      children: c.intl.string(c.t.RyDxBX),
+                                                      children: d.intl.string(d.t.RyDxBX),
                                                   }),
-                                                  (0, s.jsx)(n.Heading, {
+                                                  (0, a.jsx)(i.D, {
                                                       variant: "heading-xxl/bold",
                                                       color: "text-strong",
-                                                      className: d.H$,
+                                                      className: u.H$,
                                                       children: t.match(/.{1,4}/g)?.join(" "),
                                                   }),
                                               ],
@@ -129,7 +130,7 @@ let _ = (e) => {
                                   }),
                               ],
                           }),
-                          (0, s.jsx)("img", { className: d.kX, src: u, alt: "" }),
+                          (0, a.jsx)("img", { className: u.kX, src: h, alt: "" }),
                       ],
                   }),
               ],

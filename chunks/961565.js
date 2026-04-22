@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { T: () => _ });
+n.d(t, { T: () => c });
 var r = n(54304),
     i = n(607490),
-    a = n(970585),
-    s = n(780439),
+    s = n(970585),
+    a = n(780439),
     o = n(8041),
     l = n(988440);
 function u(e, t) {
@@ -18,12 +18,18 @@ function u(e, t) {
     }
     return n;
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? u(Object(n), !0).forEach(function (t) {
-                  d(e, t, n[t]);
+                  var r, i, s;
+                  (r = e),
+                      (i = t),
+                      (s = n[t]),
+                      i in r
+                          ? Object.defineProperty(r, i, { value: s, enumerable: !0, configurable: !0, writable: !0 })
+                          : (r[i] = s);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -33,22 +39,16 @@ function c(e) {
     }
     return e;
 }
-function d(e, t, n) {
-    return (
-        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
-        e
-    );
-}
-function _() {
+function c() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = arguments.length > 1 ? arguments[1] : void 0;
     return {
-        dirtyHandlerIds: (0, s.T)(e.dirtyHandlerIds, {
+        dirtyHandlerIds: (0, a.T)(e.dirtyHandlerIds, {
             type: t.type,
-            payload: c(c({}, t.payload), {}, { prevTargetIds: (0, l.Jt)(e, "dragOperation.targetIds", []) }),
+            payload: d(d({}, t.payload), {}, { prevTargetIds: (0, l.Jt)(e, "dragOperation.targetIds", []) }),
         }),
         dragOffset: (0, r.T)(e.dragOffset, t),
-        refCount: (0, a.T)(e.refCount, t),
+        refCount: (0, s.T)(e.refCount, t),
         dragOperation: (0, i.T)(e.dragOperation, t),
         stateId: (0, o.T)(e.stateId),
     };

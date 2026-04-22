@@ -2,7 +2,7 @@
 n.d(t, { i: () => d });
 var i = n(627968),
     s = n(110259),
-    r = n(397927),
+    r = n(192308),
     l = n(17372),
     a = n(928658),
     o = n(369053),
@@ -12,16 +12,16 @@ function d(e, t) {
         u = () => {
             d || t?.();
         },
-        h = (h) => {
+        _ = (_) => {
             (d = !0),
                 setTimeout(() => {
                     d = !1;
                 }, 0);
-            let _ = async () => {
-                    await (0, o.TP)(e, h);
+            let h = async () => {
+                    await (0, o.TP)(e, _);
                 },
-                p = async (t) => await (0, o.G_)(e, h, t),
-                g = (n) => {
+                m = async (t) => await (0, o.G_)(e, _, t),
+                p = (n) => {
                     (d = !0),
                         setTimeout(() => {
                             d = !1;
@@ -35,16 +35,16 @@ function d(e, t) {
                             ? (0, a.V3)(i, t)
                             : e === l.tY.MEDIA_TAKEDOWN && (0, a._Y)(i, t);
                 };
-            _(),
-                (0, r.mMO)(
+            h(),
+                (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await n.e("19840").then(n.bind(n, 79779));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                onFormSubmit: p,
-                                onResend: _,
-                                onSuccess: g,
+                                onFormSubmit: m,
+                                onResend: h,
+                                onSuccess: p,
                                 headerText: c.intl.string(c.t.H3Q7U8),
                                 confirmButtonText: c.intl.string(c.t["13ofGu"]),
                                 impression: { impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -54,14 +54,14 @@ function d(e, t) {
                 );
         };
     return () => {
-        (0, r.s7G)(),
-            (0, r.mMO)(
+        (0, r.closeAllModals)(),
+            (0, r.openModalLazy)(
                 async () => {
                     let { default: t } = await n.e("29232").then(n.bind(n, 180275));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
-                            onSuccess: h,
+                            onSuccess: _,
                             headerText: c.intl.string(c.t.ZLRYGU),
                             confirmButtonText: c.intl.string(c.t.PDTjLN),
                             subtitle: e === l.tY.MEDIA_TAKEDOWN ? c.intl.string(c.t.jt3z8f) : void 0,

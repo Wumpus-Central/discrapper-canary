@@ -2,12 +2,15 @@
 n.d(t, { Q: () => s });
 var r = n(39304),
     i = n(73153);
-function a() {
-    return {
-        ...(null != i.h._currentDispatchActionType ? { currentAction: i.h._currentDispatchActionType } : {}),
-        lastFewActions: (0, r.lK)(),
-    };
-}
 function s(e) {
-    return { ...e, extra: { ...e?.extra, ...a() } };
+    return {
+        ...e,
+        extra: {
+            ...e?.extra,
+            ...{
+                ...(null != i.h._currentDispatchActionType ? { currentAction: i.h._currentDispatchActionType } : {}),
+                lastFewActions: (0, r.lK)(),
+            },
+        },
+    };
 }

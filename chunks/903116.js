@@ -1,25 +1,4 @@
-let t = (e) => ({
-        IMPORTANT: { scope: "meta", begin: "!important" },
-        BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
-        HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
-        FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]{1,149}(?=\()/ },
-        ATTRIBUTE_SELECTOR_MODE: {
-            scope: "selector-attr",
-            begin: /\[/,
-            end: /\]/,
-            illegal: "$",
-            contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
-        },
-        CSS_NUMBER_MODE: {
-            scope: "number",
-            begin:
-                e.NUMBER_RE +
-                "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
-            relevance: 0,
-        },
-        CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
-    }),
-    n = [
+let t = [
         "a",
         "abbr",
         "address",
@@ -139,7 +118,7 @@ let t = (e) => ({
         "foreignObject",
         "clipPath",
     ],
-    r = [
+    a = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -176,7 +155,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    i = [
+    n = [
         "active",
         "any-link",
         "blank",
@@ -239,7 +218,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    s = [
+    r = [
         "after",
         "backdrop",
         "before",
@@ -257,7 +236,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    a = [
+    i = [
         "accent-color",
         "align-content",
         "align-items",
@@ -776,26 +755,29 @@ let t = (e) => ({
         .sort()
         .reverse();
 e.exports = function (e) {
-    let o = t(e),
-        l = "and or not only",
-        u = { className: "variable", begin: "\\$" + e.IDENT_RE },
-        c = [
-            "charset",
-            "css",
-            "debug",
-            "extend",
-            "font-face",
-            "for",
-            "import",
-            "include",
-            "keyframes",
-            "media",
-            "mixin",
-            "page",
-            "warn",
-            "while",
-        ],
-        d = "(?=[.\\s\\n[:,(])";
+    let o = {
+            IMPORTANT: { scope: "meta", begin: "!important" },
+            BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
+            HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
+            FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]{1,149}(?=\()/ },
+            ATTRIBUTE_SELECTOR_MODE: {
+                scope: "selector-attr",
+                begin: /\[/,
+                end: /\]/,
+                illegal: "$",
+                contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
+            },
+            CSS_NUMBER_MODE: {
+                scope: "number",
+                begin:
+                    e.NUMBER_RE +
+                    "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
+                relevance: 0,
+            },
+            CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
+        },
+        s = { className: "variable", begin: "\\$" + e.IDENT_RE },
+        l = "(?=[.\\s\\n[:,(])";
     return {
         name: "Stylus",
         aliases: ["styl"],
@@ -808,23 +790,26 @@ e.exports = function (e) {
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             o.HEXCOLOR,
-            { begin: "\\.[a-zA-Z][a-zA-Z0-9_-]*" + d, className: "selector-class" },
-            { begin: "#[a-zA-Z][a-zA-Z0-9_-]*" + d, className: "selector-id" },
-            { begin: "\\b(" + n.join("|") + ")" + d, className: "selector-tag" },
-            { className: "selector-pseudo", begin: "&?:(" + i.join("|") + ")" + d },
-            { className: "selector-pseudo", begin: "&?:(:)?(" + s.join("|") + ")" + d },
+            { begin: "\\.[a-zA-Z][a-zA-Z0-9_-]*" + l, className: "selector-class" },
+            { begin: "#[a-zA-Z][a-zA-Z0-9_-]*" + l, className: "selector-id" },
+            { begin: "\\b(" + t.join("|") + ")" + l, className: "selector-tag" },
+            { className: "selector-pseudo", begin: "&?:(" + n.join("|") + ")" + l },
+            { className: "selector-pseudo", begin: "&?:(:)?(" + r.join("|") + ")" + l },
             o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "keyword",
                 begin: /@media/,
                 starts: {
                     end: /[{;}]/,
-                    keywords: { $pattern: /[a-z-]+/, keyword: l, attribute: r.join(" ") },
+                    keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") },
                     contains: [o.CSS_NUMBER_MODE],
                 },
             },
-            { className: "keyword", begin: "@((-(o|moz|ms|webkit)-)?(" + c.join("|") + "))\\b" },
-            u,
+            {
+                className: "keyword",
+                begin: "@((-(o|moz|ms|webkit)-)?(charset|css|debug|extend|font-face|for|import|include|keyframes|media|mixin|page|warn|while))\\b",
+            },
+            s,
             o.CSS_NUMBER_MODE,
             {
                 className: "function",
@@ -837,19 +822,19 @@ e.exports = function (e) {
                         className: "params",
                         begin: /\(/,
                         end: /\)/,
-                        contains: [o.HEXCOLOR, u, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
+                        contains: [o.HEXCOLOR, s, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
                     },
                 ],
             },
             o.CSS_VARIABLE,
             {
                 className: "attribute",
-                begin: "\\b(" + a.join("|") + ")\\b",
+                begin: "\\b(" + i.join("|") + ")\\b",
                 starts: {
                     end: /;|$/,
                     contains: [
                         o.HEXCOLOR,
-                        u,
+                        s,
                         e.APOS_STRING_MODE,
                         e.QUOTE_STRING_MODE,
                         o.CSS_NUMBER_MODE,

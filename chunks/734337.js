@@ -1,26 +1,27 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var l = n(311907),
-    s = n(397927),
-    a = n(964404),
-    r = n(121046),
-    o = n(513963),
-    c = n(951829),
-    d = n(731854),
-    u = n(985018);
+t.d(n, { A: () => h });
+var l = t(627968);
+t(64700);
+var i = t(311907),
+    a = t(192308),
+    s = t(477782),
+    r = t(964404),
+    o = t(121046),
+    c = t(513963),
+    u = t(951829),
+    d = t(731854),
+    A = t(985018);
 function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.x.DEFAULT,
-        [n, h, A] = (0, r.A)(e, t),
-        _ = (0, l.bG)([a.Ay], () => a.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
-    return n
-        ? (0, i.jsx)(s.sLh, {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.x.DEFAULT,
+        [t, h, p] = (0, o.A)(e, n),
+        m = (0, i.bG)([r.Ay], () => r.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
+    return t
+        ? (0, l.jsx)(s.sL, {
               id: "self-video-hide",
-              label: u.intl.string(u.t.MH8ESU),
+              label: A.intl.string(A.t.MH8ESU),
               checked: !h,
               action: () => {
-                  if (_ || h) return A(!h);
-                  (0, s.qfG)((e) => (0, i.jsx)(o.A, { ...e, type: c.f.VIDEO, onConfirm: () => A(!h) }));
+                  if (m || h) return p(!h);
+                  (0, a.openModal)((e) => (0, l.jsx)(c.A, { ...e, type: u.f.VIDEO, onConfirm: () => p(!h) }));
               },
           })
         : null;

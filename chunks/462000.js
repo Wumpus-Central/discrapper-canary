@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table_e7d73e",
     qd: "tableHeader_e7d73e",

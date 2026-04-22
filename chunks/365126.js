@@ -1,51 +1,51 @@
-n.d(t, { A: () => f });
-var l = n(627968),
-    s = n(64700),
-    r = n(562465),
-    i = n(397927),
-    a = n(3928),
+n.d(t, { A: () => p });
+var a = n(627968),
+    r = n(64700),
+    i = n(562465),
+    s = n(821609),
+    l = n(3928),
     o = n(293731),
     d = n(464477),
-    u = n(723702),
-    c = n(837921),
+    c = n(723702),
+    u = n(837921),
     h = n(398450),
     g = n(652215),
     m = n(985018);
-function f(e) {
-    let { mfaChallenge: t, finish: n, setSlide: f, onClose: x, headerAlignStart: S } = e,
-        [p, j] = s.useState(!1),
-        [b, A] = s.useState(null),
+function p(e) {
+    let { mfaChallenge: t, finish: n, setSlide: p, onClose: f, headerAlignStart: x } = e,
+        [S, b] = r.useState(!1),
+        [A, j] = r.useState(null),
         { challenge: y } = t.methods.find((e) => "webauthn" === e.type),
-        C = s.useCallback(async () => {
-            j(!0), A(null);
-            let e = u.isPlatformEmbedded && c.Ay.supportsFeature(g.BYE.WEBAUTHN) ? c.Ay.webAuthnAuthenticate : o.J;
+        C = r.useCallback(async () => {
+            b(!0), j(null);
+            let e = c.isPlatformEmbedded && u.Ay.supportsFeature(g.BYE.WEBAUTHN) ? u.Ay.webAuthnAuthenticate : o.J;
             try {
                 let t = await e(y);
                 try {
                     await n({ mfaType: "webauthn", data: t });
                 } catch (e) {
-                    e instanceof r.oh
-                        ? (e.status >= 400 && e.status < 500 && (await a.A.signalUnknownCredential(t)),
-                          A(m.intl.string(m.t.xSCvBf)))
-                        : ((0, d.Os)(e, {}), A(e.message));
+                    e instanceof i.oh
+                        ? (e.status >= 400 && e.status < 500 && (await l.A.signalUnknownCredential(t)),
+                          j(m.intl.string(m.t.xSCvBf)))
+                        : ((0, d.Os)(e, {}), j(e.message));
                 }
             } catch (e) {
-                (0, d.Os)(e, { extra: { error_type: "webauthn_api_error" } }), A(m.intl.string(m.t.xSCvBf));
+                (0, d.Os)(e, { extra: { error_type: "webauthn_api_error" } }), j(m.intl.string(m.t.xSCvBf));
             } finally {
-                j(!1);
+                b(!1);
             }
         }, [y, n]);
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, l.jsx)(h.A.SlideHeader, { onClose: x, headerAlignStart: S }),
-            null != b && (0, l.jsx)(h.A.SlideContent, { children: (0, l.jsx)(h.A.SlideError, { error: b }) }),
-            (0, l.jsx)(h.A.SlideFooter, {
+            (0, a.jsx)(h.A.SlideHeader, { onClose: f, headerAlignStart: x }),
+            null != A && (0, a.jsx)(h.A.SlideContent, { children: (0, a.jsx)(h.A.SlideError, { error: A }) }),
+            (0, a.jsx)(h.A.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: f,
-                trailingButton: (0, l.jsx)(i.Button, {
+                setSlide: p,
+                trailingButton: (0, a.jsx)(s.$, {
                     variant: "primary",
                     text: m.intl.string(m.t.Xr3Eks),
-                    loading: p,
+                    loading: S,
                     onClick: C,
                     fullWidth: !0,
                 }),

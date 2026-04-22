@@ -1,8 +1,9 @@
-n.d(t, { A: () => a });
-var i = n(417597),
-    s = n(590180),
-    r = n(4227);
+"use strict";
+r.d(t, { A: () => a });
+var i = r(417597),
+    n = r(590180),
+    s = r(4227);
 let a = (e) => {
-    let [t, n] = (0, i.yK)([s.A], () => [s.A.getCategoryForProduct(e), s.A.getProduct(e)]);
-    return { category: t, product: n, purchase: (0, i.bG)([r.A], () => r.A.getPurchase(e)) };
+    let [t, r] = (0, i.yK)([n.A], () => [n.A.getCategoryForProduct(e), n.A.getProduct(e)]);
+    return { category: t, product: r, purchase: (0, i.bG)([s.A], () => s.A.getPurchase(e)) };
 };

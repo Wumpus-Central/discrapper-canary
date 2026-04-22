@@ -1,48 +1,52 @@
-s.d(i, { default: () => d });
+s.d(i, { default: () => j });
 var a = s(627968);
 s(64700);
-var n = s(397927),
-    e = s(975807),
-    r = s(915089),
-    l = s(985018),
-    c = s(942002);
-function d(t) {
-    let { href: i, onClose: d, transitionState: o } = t,
-        b = (0, r.GV)();
-    return (0, a.jsxs)(n.EOs, {
+var e = s(935462),
+    n = s(534514),
+    r = s(834730),
+    l = s(825484),
+    c = s(821609),
+    d = s(975807),
+    o = s(915089),
+    b = s(985018),
+    x = s(311618);
+function j(t) {
+    let { href: i, onClose: j, transitionState: p } = t,
+        h = (0, o.GV)();
+    return (0, a.jsxs)(e.EO, {
         "data-migration-pending": !0,
-        transitionState: o,
-        "aria-labelledby": b,
+        transitionState: p,
+        "aria-labelledby": h,
         parentComponent: "SuspiciousDownloadModal",
         children: [
-            (0, a.jsx)("img", { className: c.Qw, src: s(151660), alt: "" }),
-            (0, a.jsx)(n.$mQ, {
+            (0, a.jsx)("img", { className: x.Qw, src: s(151660), alt: "" }),
+            (0, a.jsx)(e.$m, {
                 children: (0, a.jsxs)("div", {
-                    className: c.jE,
+                    className: x.jE,
                     children: [
-                        (0, a.jsx)(n.Heading, {
-                            id: b,
+                        (0, a.jsx)(n.D, {
+                            id: h,
                             variant: "heading-lg/semibold",
-                            className: c.DD,
-                            children: l.intl.string(l.t.XtDo9Z),
+                            className: x.DD,
+                            children: b.intl.string(b.t.XtDo9Z),
                         }),
-                        (0, a.jsx)(n.Text, {
+                        (0, a.jsx)(r.E, {
                             variant: "text-md/normal",
-                            className: c.rf,
-                            children: l.intl.string(l.t.L9yFko),
+                            className: x.rf,
+                            children: b.intl.string(b.t.L9yFko),
                         }),
                     ],
                 }),
             }),
-            (0, a.jsx)(n.jlY, {
-                children: (0, a.jsxs)(n.ButtonGroup, {
+            (0, a.jsx)(e.jl, {
+                children: (0, a.jsxs)(l.e, {
                     children: [
-                        (0, a.jsx)(n.Button, { variant: "primary", text: l.intl.string(l.t.j7Vi2i), onClick: d }),
-                        (0, a.jsx)(n.Button, {
-                            text: l.intl.string(l.t["/bHu89"]),
+                        (0, a.jsx)(c.$, { variant: "primary", text: b.intl.string(b.t.j7Vi2i), onClick: j }),
+                        (0, a.jsx)(c.$, {
+                            text: b.intl.string(b.t["/bHu89"]),
                             variant: "secondary",
                             onClick: () => {
-                                d(), (0, e.A)(i, !0);
+                                j(), (0, d.A)(i, !0);
                             },
                         }),
                     ],

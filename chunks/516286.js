@@ -1,48 +1,49 @@
-n.d(t, { A: () => c });
-var a = n(627968);
-n(64700);
-var i = n(397927),
-    s = n(669550),
-    l = n(963935),
-    r = n(921854),
-    o = n(522958);
-function d(e) {
-    let { setting: t, depth: n, inheritedHighlightMode: i } = e,
-        s = (function (e, t) {
+a.d(t, { A: () => u });
+var n = a(627968);
+a(64700);
+var l = a(270003),
+    i = a(243721),
+    s = a(669550),
+    r = a(963935),
+    o = a(921854),
+    d = a(522958);
+function c(e) {
+    let { setting: t, depth: a, inheritedHighlightMode: l } = e,
+        i = (function (e, t) {
             if ("migrated" === t) return "migrated";
             switch (e.type) {
-                case l.Z6.ROOT:
+                case r.Z6.ROOT:
                     return "migrated-root";
-                case l.Z6.SECTION:
-                case l.Z6.PANEL:
-                case l.Z6.SIDEBAR_ITEM:
+                case r.Z6.SECTION:
+                case r.Z6.PANEL:
+                case r.Z6.SIDEBAR_ITEM:
                     return "migrated";
                 default:
                     return t ?? "migrated";
             }
-        })(t, i),
-        r = "migrated" === s ? "migrated" : void 0,
-        c = null;
+        })(t, l),
+        s = "migrated" === i ? "migrated" : void 0,
+        o = null;
     return (
-        (0, l.nW)(t) &&
+        (0, r.nW)(t) &&
             t.layout.length > 0 &&
-            (c = t.layout.map((e) => (0, a.jsx)(d, { setting: e, depth: n + 1, inheritedHighlightMode: r }, e.key))),
-        (0, a.jsx)(o.n, { title: t.key, initExpanded: n <= 2, highlightMode: s, children: c })
+            (o = t.layout.map((e) => (0, n.jsx)(c, { setting: e, depth: a + 1, inheritedHighlightMode: s }, e.key))),
+        (0, n.jsx)(d.n, { title: t.key, initExpanded: a <= 2, highlightMode: i, children: o })
     );
 }
-function c() {
-    let { node: e } = (0, s.Ay)(r.D, ""),
+function u() {
+    let { node: e } = (0, s.Ay)(o.D, ""),
         t = (0, s.KA)();
-    return (0, a.jsxs)(i.nVY, {
+    return (0, n.jsxs)(l.n, {
         label: "Settings Tree",
         children: [
-            (0, a.jsx)(i.dOG, {
+            (0, n.jsx)(i.d, {
                 label: "Bypass Predicates",
                 description: "Forces all migrated settings to be visible.",
                 checked: t,
                 onChange: s.jL,
             }),
-            (0, a.jsx)(d, { setting: e, depth: 1 }, e.key),
+            (0, n.jsx)(c, { setting: e, depth: 1 }, e.key),
         ],
     });
 }

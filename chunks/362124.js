@@ -1,70 +1,71 @@
-a.d(l, { h: () => d });
+a.d(l, { h: () => u });
 var t = a(627968),
-    o = a(64700),
-    n = a(934551),
-    i = a(158954),
-    s = a(732955),
-    r = a(397927);
-let d = {
+    n = a(64700),
+    o = a(885574),
+    i = a(331322),
+    r = a(834730),
+    s = a(821609),
+    d = a(150934);
+let u = {
     title: "Checkbox",
     stories: [
         {
             id: "checkbox",
             name: "Checkbox",
             component: function (e) {
-                let { label: l, description: a, disabled: d, labelType: u, showIcons: c } = e,
-                    [b, p] = o.useState(!1),
-                    m = o.useCallback(() => {
-                        p(!0);
+                let { label: l, description: a, disabled: u, labelType: c, showIcons: b } = e,
+                    [p, m] = n.useState(!1),
+                    h = n.useCallback(() => {
+                        m(!0);
                     }, []),
-                    x = o.useCallback(() => {
-                        p(!1);
+                    x = n.useCallback(() => {
+                        m(!1);
                     }, []),
-                    v = o.useCallback(() => {
-                        p((e) => !e);
+                    g = n.useCallback(() => {
+                        m((e) => !e);
                     }, []);
-                return (0, t.jsxs)(i.BJc, {
+                return (0, t.jsxs)(i.B, {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, t.jsx)(r.Checkbox, {
-                            checked: b,
-                            onChange: (e) => p(e),
-                            disabled: d,
+                        (0, t.jsx)(d.S, {
+                            checked: p,
+                            onChange: (e) => m(e),
+                            disabled: u,
                             label: l,
                             description: null != a || "" === a ? a : void 0,
                             value: "checkbox-value",
-                            labelType: u,
-                            leadingIcon: c ? n.CircleInformationIcon : void 0,
+                            labelType: c,
+                            leadingIcon: b ? o.m : void 0,
                         }),
-                        (0, t.jsxs)(i.EYj, {
+                        (0, t.jsxs)(r.E, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", b ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", p ? "Checked" : "Unchecked"],
                         }),
-                        (0, t.jsxs)(i.BJc, {
+                        (0, t.jsxs)(i.B, {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, t.jsx)(s.$nd, {
+                                (0, t.jsx)(s.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: m,
-                                    disabled: d,
+                                    onClick: h,
+                                    disabled: u,
                                 }),
-                                (0, t.jsx)(s.$nd, {
+                                (0, t.jsx)(s.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
                                     onClick: x,
-                                    disabled: d,
+                                    disabled: u,
                                 }),
-                                (0, t.jsx)(s.$nd, {
+                                (0, t.jsx)(s.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: v,
-                                    disabled: d,
+                                    onClick: g,
+                                    disabled: u,
                                 }),
                             ],
                         }),

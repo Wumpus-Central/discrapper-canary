@@ -1,24 +1,28 @@
-n.d(t, { T: () => T }), n(321073);
+n.d(t, { T: () => b }), n(321073);
 var i = n(627968),
     s = n(64700);
 n(873298);
 var l = n(990078),
-    a = n(397927),
-    r = n(486020),
-    o = n(975571),
-    d = n(661191);
+    a = n(834730),
+    r = n(939249),
+    o = n(320448),
+    d = n(827734),
+    u = n(289873),
+    c = n(486020),
+    g = n(975571),
+    m = n(661191);
 n(253932);
-var c = n(780964),
-    u = n(978304),
-    m = n(840065);
+var _ = n(780964),
+    A = n(978304),
+    h = n(858897);
 n(505653), n(106148), n(650832);
-var _ = n(652215),
-    g = n(985018),
-    A = n(799391);
-function x(e) {
+var p = n(652215),
+    x = n(985018),
+    E = n(628736);
+function T(e) {
     let { applications: t } = e,
-        n = s.useMemo(() => t.sort((e, t) => d.default.compare(t.id, e.id)), [t]),
-        o = s.useMemo(() => {
+        n = s.useMemo(() => t.sort((e, t) => m.default.compare(t.id, e.id)), [t]),
+        u = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < 3; t++) {
                 let i = n[t];
@@ -28,37 +32,37 @@ function x(e) {
             let t = e.join(", "),
                 s = n.length - 3;
             return s > 0
-                ? g.intl.format(g.t.sHFdTg, {
+                ? x.intl.format(x.t.sHFdTg, {
                       gameList: t,
                       plusMoreHook: (e, t) =>
                           (0, i.jsx)(
-                              a.Text,
+                              a.E,
                               {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: g.intl.format(g.t["EADv+4"], { count: s }),
+                                  children: x.intl.format(x.t["EADv+4"], { count: s }),
                               },
                               t,
                           ),
                   })
                 : e.join(", ");
         }, [n]),
-        u = s.useMemo(() => {
+        g = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < 3; t++) {
                 let s = n[t];
                 if (null == s) break;
-                let { icon: a, name: o, id: d } = s,
-                    c = r.Ay.getApplicationIconURL({ id: d, icon: a });
+                let { icon: a, name: r, id: o } = s,
+                    d = c.Ay.getApplicationIconURL({ id: o, icon: a });
                 e.push(
                     (0, i.jsx)(
                         l.m,
                         {
-                            __unsupportedReactNodeAsText: o,
-                            children: (0, i.jsx)("img", { src: c, "aria-label": o, className: A.Kk }),
+                            __unsupportedReactNodeAsText: r,
+                            children: (0, i.jsx)("img", { src: d, "aria-label": r, className: E.Kk }),
                         },
-                        d,
+                        o,
                     ),
                 );
             }
@@ -69,8 +73,8 @@ function x(e) {
                         (0, i.jsx)(
                             "div",
                             {
-                                className: A.lK,
-                                children: (0, i.jsx)(a.Text, {
+                                className: E.lK,
+                                children: (0, i.jsx)(a.E, {
                                     variant: "text-xs/medium",
                                     color: "text-default",
                                     children: `+${t}`,
@@ -83,62 +87,62 @@ function x(e) {
             );
         }, [n]);
     return (0, i.jsxs)("div", {
-        className: A.wx,
+        className: E.wx,
         children: [
             (0, i.jsxs)("div", {
-                className: A.kX,
+                className: E.kX,
                 children: [
-                    (0, i.jsx)(a.Text, { variant: "text-md/normal", color: "text-strong", children: o }),
-                    (0, i.jsxs)(a.DUT, {
+                    (0, i.jsx)(a.E, { variant: "text-md/normal", color: "text-strong", children: u }),
+                    (0, i.jsxs)(r.D, {
                         onClick: () => {
-                            (0, m.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL);
+                            (0, h.openUserSettings)(_.X.AUTHORIZED_APPS_PANEL);
                         },
-                        className: A.bJ,
+                        className: E.bJ,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(a.E, {
                                 variant: "text-xs/normal",
                                 color: "interactive-text-default",
-                                children: g.intl.format(g.t.oYaYOe, {}),
+                                children: x.intl.format(x.t.oYaYOe, {}),
                             }),
-                            (0, i.jsx)(a._BQ, {
+                            (0, i.jsx)(o._, {
                                 size: "xxs",
-                                color: a.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
-                                className: A.g7,
+                                color: d.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                className: E.g7,
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: A.yF }),
-            (0, i.jsx)("div", { className: A.lJ, children: u }),
+            (0, i.jsx)("div", { className: E.yF }),
+            (0, i.jsx)("div", { className: E.lJ, children: g }),
         ],
     });
 }
-function p() {
+function S() {
     return (0, i.jsxs)("div", {
-        className: A.do,
+        className: E.do,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(a.E, {
                 variant: "text-md/medium",
                 color: "text-strong",
-                className: A.xV,
-                children: g.intl.string(g.t["+0U77d"]),
+                className: E.xV,
+                children: x.intl.string(x.t["+0U77d"]),
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(a.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: g.intl.format(g.t.V8wClM, {
-                    helpdeskArticle: o.A.getArticleURL(_.MVz.SOCIAL_LAYER_CONNECTIONS),
+                children: x.intl.format(x.t.V8wClM, {
+                    helpdeskArticle: g.A.getArticleURL(p.MVz.SOCIAL_LAYER_CONNECTIONS),
                 }),
             }),
         ],
     });
 }
-function h(e) {
+function f(e) {
     let { applications: t } = e;
-    return t.length > 0 ? (0, i.jsx)(x, { applications: t }) : (0, i.jsx)(p, {});
+    return t.length > 0 ? (0, i.jsx)(T, { applications: t }) : (0, i.jsx)(S, {});
 }
-function T() {
-    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, u.A)(!0);
-    return e ? (0, i.jsx)(a.y$y, {}) : (0, i.jsx)(h, { applications: t });
+function b() {
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, A.A)(!0);
+    return e ? (0, i.jsx)(u.y, {}) : (0, i.jsx)(f, { applications: t });
 }

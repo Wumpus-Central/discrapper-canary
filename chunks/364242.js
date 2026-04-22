@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { D: () => i, Y: () => a });
-var r = n(632434);
-function i(e) {
+r.d(t, { D: () => s, Y: () => a });
+var n = r(632434);
+function s(e) {
     return e < 100 && (e > 50 ? (e += 1900) : (e += 2e3)), e;
 }
-function a(e, t, n) {
-    let i = new Date(e);
-    i.setMonth(n - 1), i.setDate(t);
-    let a = (0, r.Gw)(i, { year: 1 }),
-        s = (0, r.Gw)(i, { year: -1 });
+function a(e, t, r) {
+    let s = new Date(e);
+    s.setMonth(r - 1), s.setDate(t);
+    let a = (0, n.Gw)(s, { year: 1 }),
+        i = (0, n.Gw)(s, { year: -1 });
     return (
-        Math.abs(a.getTime() - e.getTime()) < Math.abs(i.getTime() - e.getTime())
-            ? (i = a)
-            : Math.abs(s.getTime() - e.getTime()) < Math.abs(i.getTime() - e.getTime()) && (i = s),
-        i.getFullYear()
+        Math.abs(a.getTime() - e.getTime()) < Math.abs(s.getTime() - e.getTime())
+            ? (s = a)
+            : Math.abs(i.getTime() - e.getTime()) < Math.abs(s.getTime() - e.getTime()) && (s = i),
+        s.getFullYear()
     );
 }

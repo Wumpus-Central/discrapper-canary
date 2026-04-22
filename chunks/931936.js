@@ -1,62 +1,62 @@
 n.d(t, { A: () => E });
 var r = n(627968),
-    i = n(158954),
+    i = n(834730),
     l = n(554146),
     s = n(932001),
-    o = n(630117),
-    a = n(613943),
-    u = n(71478),
-    d = n(182859),
+    a = n(630117),
+    o = n(613943),
+    d = n(71478),
+    u = n(182859),
     c = n(636086),
-    p = n(180185),
-    _ = n(629721),
-    m = n(269032),
-    f = n(652215),
-    A = n(49999),
-    g = n(333354),
-    x = n(985018),
-    v = n(319733);
-function h(e) {
+    _ = n(180185),
+    m = n(629721),
+    p = n(269032),
+    A = n(652215),
+    x = n(49999),
+    g = n(853513),
+    f = n(985018),
+    h = n(472485);
+function v(e) {
     let { text: t } = e;
     return (0, r.jsx)("div", {
-        className: v.ac,
-        children: (0, r.jsx)(i.EYj, { variant: "text-sm/medium", children: t }),
+        className: h.ac,
+        children: (0, r.jsx)(i.E, { variant: "text-sm/medium", children: t }),
     });
 }
 function E(e) {
     let { guildId: t } = e,
-        n = (0, u.A)(t),
-        E = (0, o.A)(t),
-        I = (0, a.A)(t),
-        b = [l.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
-        [j, S] = (0, s.kn)(b),
-        C = j === l.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD,
-        w = (0, m.A)(E.shouldShow || I.shouldShow || C);
-    return n.shouldShow || E.shouldShow || I.shouldShow || w.shouldShow || C
+        n = (0, d.A)(t),
+        E = (0, a.A)(t),
+        S = (0, o.A)(t),
+        I = [l.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
+        [b, j] = (0, s.kn)(I),
+        C = b === l.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD,
+        w = (0, p.A)(E.shouldShow || S.shouldShow || C);
+    return n.shouldShow || E.shouldShow || S.shouldShow || w.shouldShow || C
         ? (0, r.jsxs)("div", {
-              className: v.kL,
+              className: h.kL,
               children: [
-                  (0, r.jsx)(i.EYj, {
+                  (0, r.jsx)(i.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
-                      children: x.intl.string(g.default["3FRirU"]),
+                      children: f.intl.string(g.default["3FRirU"]),
                   }),
-                  n.shouldShow && (0, r.jsx)(h, { text: n.text }),
+                  n.shouldShow && (0, r.jsx)(v, { text: n.text }),
                   E.shouldShow &&
-                      (0, r.jsx)(_.A, { guildId: t, powerupNames: E.expiringPowerupNames, warnings: E.warnings }),
-                  I.shouldShow &&
-                      null != I.notificationConfig &&
-                      (0, r.jsx)(p.A, { notificationConfig: I.notificationConfig, markAsDismissed: I.markAsDismissed }),
+                      (0, r.jsx)(m.A, { guildId: t, powerupNames: E.expiringPowerupNames, warnings: E.warnings }),
+                  S.shouldShow &&
+                      null != S.notificationConfig &&
+                      (0, r.jsx)(_.A, { notificationConfig: S.notificationConfig, markAsDismissed: S.markAsDismissed }),
                   w.shouldShow && (0, r.jsx)(c.A, { markAsDismissed: w.markAsDismissed }),
                   C &&
-                      (0, r.jsx)(d.A, {
+                      (0, r.jsx)(u.A, {
                           guildId: t,
                           analyticsLocation: {
-                              page: f.liQ.GUILD_POWERUPS_OVERVIEW,
-                              section: f.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                              object: f.ZSU.CARD,
+                              page: A.liQ.GUILD_POWERUPS_OVERVIEW,
+                              section: A.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                              object: A.ZSU.CARD,
                           },
-                          onDismiss: () => S(A.i.USER_DISMISS),
+                          onDismiss: () => j(x.i.USER_DISMISS),
                       }),
               ],
           })

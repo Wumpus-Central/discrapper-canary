@@ -1,52 +1,56 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => C });
 var i = n(627968),
     l = n(64700),
     s = n(990078),
-    a = n(397927),
-    r = n(743674),
-    o = n(888697),
-    d = n(581007),
-    c = n(522435),
-    u = n(493819),
-    h = n(722884),
-    A = n(844045),
-    _ = n(985018),
-    m = n(31950);
-function p(e) {
+    a = n(939249),
+    r = n(22231),
+    o = n(241326),
+    d = n(750943),
+    c = n(834730),
+    u = n(743674),
+    h = n(888697),
+    A = n(581007),
+    _ = n(522435),
+    m = n(493819),
+    g = n(722884),
+    p = n(844045),
+    f = n(985018),
+    E = n(31950);
+function x(e) {
     let { channel: t, imageUrl: n, animatedUrl: d, canModifyHangout: c } = e,
-        p = (0, r.S)(n),
-        g = l.useCallback(() => {
-            (0, h.A)({ channel: t });
+        A = (0, u.S)(n),
+        _ = l.useCallback(() => {
+            (0, g.A)({ channel: t });
         }, [t]),
-        f = l.useCallback(() => {
-            (0, o.e2)(t.id);
+        x = l.useCallback(() => {
+            (0, h.e2)(t.id);
         }, [t.id]);
     return (0, i.jsxs)("div", {
-        className: m.rs,
+        className: E.rs,
         children: [
             (0, i.jsx)("div", {
-                className: m.ZS,
-                style: null != p ? { backgroundColor: p } : void 0,
-                children: (0, i.jsx)(u.A, { imageUrl: n, animatedUrl: d, className: m.Sl }),
+                className: E.ZS,
+                style: null != A ? { backgroundColor: A } : void 0,
+                children: (0, i.jsx)(m.A, { imageUrl: n, animatedUrl: d, className: E.Sl }),
             }),
             c
                 ? (0, i.jsxs)("div", {
-                      className: m.n_,
+                      className: E.n_,
                       children: [
                           (0, i.jsx)(s.m, {
-                              text: _.intl.string(A.default.XJ4UpB),
-                              children: (0, i.jsx)(a.DUT, {
-                                  className: m.HF,
-                                  onClick: g,
-                                  children: (0, i.jsx)(a.R2l, { size: "xs", color: "currentColor" }),
+                              text: f.intl.string(p.default.XJ4UpB),
+                              children: (0, i.jsx)(a.D, {
+                                  className: E.HF,
+                                  onClick: _,
+                                  children: (0, i.jsx)(r.R, { size: "xs", color: "currentColor" }),
                               }),
                           }),
                           (0, i.jsx)(s.m, {
-                              text: _.intl.string(A.default.XV4qT6),
-                              children: (0, i.jsx)(a.DUT, {
-                                  className: m.HF,
-                                  onClick: f,
-                                  children: (0, i.jsx)(a.ucK, { size: "xs", color: "currentColor" }),
+                              text: f.intl.string(p.default.XV4qT6),
+                              children: (0, i.jsx)(a.D, {
+                                  className: E.HF,
+                                  onClick: x,
+                                  children: (0, i.jsx)(o.u, { size: "xs", color: "currentColor" }),
                               }),
                           }),
                       ],
@@ -55,43 +59,43 @@ function p(e) {
         ],
     });
 }
-function g(e) {
+function I(e) {
     let { channel: t } = e,
         n = l.useCallback(() => {
-            (0, h.A)({ channel: t });
+            (0, g.A)({ channel: t });
         }, [t]);
     return (0, i.jsx)("div", {
-        className: m._o,
-        children: (0, i.jsxs)(a.DUT, {
-            className: m.hH,
+        className: E._o,
+        children: (0, i.jsxs)(a.D, {
+            className: E.hH,
             onClick: n,
             children: [
-                (0, i.jsx)(a.XGR, { size: "xs", color: "currentColor" }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(d.X, { size: "xs", color: "currentColor" }),
+                (0, i.jsx)(c.E, {
                     variant: "text-sm/medium",
                     color: "currentColor",
-                    children: _.intl.string(A.default.NGcIOF),
+                    children: f.intl.string(p.default.NGcIOF),
                 }),
             ],
         }),
     });
 }
-function f(e) {
+function C(e) {
     let { channel: t, isConnected: n } = e,
-        { enableHangoutWindow: s } = (0, d.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
-        a = (0, c.W6)(t),
+        { enableHangoutWindow: s } = (0, A.Dm)({ guildId: t.guild_id, location: "HangoutWindow" }),
+        a = (0, _.W6)(t),
         r = n && a,
         o = t.voiceHangout,
-        u = o?.banner_hash,
-        h = l.useMemo(
-            () => (null == u || null == t.guild_id ? null : (0, c.Sq)({ guildId: t.guild_id, bannerHash: u })),
-            [t.guild_id, u],
+        d = o?.banner_hash,
+        c = l.useMemo(
+            () => (null == d || null == t.guild_id ? null : (0, _.Sq)({ guildId: t.guild_id, bannerHash: d })),
+            [t.guild_id, d],
         );
     return s
-        ? null != h
-            ? (0, i.jsx)(p, { channel: t, imageUrl: h.imageUrl, animatedUrl: h.animatedUrl, canModifyHangout: r })
+        ? null != c
+            ? (0, i.jsx)(x, { channel: t, imageUrl: c.imageUrl, animatedUrl: c.animatedUrl, canModifyHangout: r })
             : r
-              ? (0, i.jsx)(g, { channel: t })
+              ? (0, i.jsx)(I, { channel: t })
               : null
         : null;
 }

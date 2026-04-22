@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var r = n(29583),
     i = n(618027);
-function a(e) {
+function s(e) {
     (0, i.A)(1, arguments);
-    var t = 1,
-        n = (0, r.default)(e),
-        a = n.getUTCDay(),
-        s = 7 * (a < t) + a - t;
-    return n.setUTCDate(n.getUTCDate() - s), n.setUTCHours(0, 0, 0, 0), n;
+    var t = (0, r.default)(e),
+        n = t.getUTCDay();
+    return t.setUTCDate(t.getUTCDate() - (7 * (n < 1) + n - 1)), t.setUTCHours(0, 0, 0, 0), t;
 }

@@ -1,27 +1,32 @@
-n.d(t, { A: () => h });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(407045),
-    o = n(397927),
-    d = n(915089),
-    c = n(49999),
-    u = n(985018),
-    m = n(13808);
-function h(e) {
+n.d(t, { A: () => g });
+var i = n(627968),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(517738),
+    o = n(717421),
+    d = n(939249),
+    c = n(789645),
+    u = n(534514),
+    p = n(834730),
+    h = n(573613),
+    m = n(915089),
+    _ = n(49999),
+    A = n(985018),
+    f = n(13808);
+function g(e) {
     let {
             markAsDismissed: t,
             heading: n,
-            subheading: s,
-            children: h,
+            subheading: l,
+            children: g,
             height: x,
-            className: p,
-            contentClassName: g,
+            className: E,
+            contentClassName: C,
         } = e,
-        f = (0, d.GV)(),
-        v = i.useRef(null),
-        _ = (0, o.zhh)({
+        T = (0, m.GV)(),
+        v = s.useRef(null),
+        S = (0, o.z)({
             from: { transform: "translate3d(-110%, 0, 0)", height: x },
             to: { transform: "translate3d(0, 0, 0)", height: x },
             config: { mass: 1, stiffness: 100, damping: 15 },
@@ -29,33 +34,33 @@ function h(e) {
                 null != v.current && v.current.focus();
             },
         });
-    return (0, a.jsx)(r.animated.div, {
-        className: l()(m.kL, p),
-        style: _,
-        children: (0, a.jsxs)("aside", {
-            "aria-labelledby": f,
-            className: m.Qs,
+    return (0, i.jsx)(r.animated.div, {
+        className: a()(f.kL, E),
+        style: S,
+        children: (0, i.jsxs)("aside", {
+            "aria-labelledby": T,
+            className: f.Qs,
             children: [
-                (0, a.jsxs)("div", {
-                    className: m.U1,
+                (0, i.jsxs)("div", {
+                    className: f.U1,
                     children: [
-                        (0, a.jsx)(o.DUT, {
+                        (0, i.jsx)(d.D, {
                             innerRef: v,
-                            "aria-label": u.intl.string(u.t.WAI6xu),
-                            className: m.b,
+                            "aria-label": A.intl.string(A.t.WAI6xu),
+                            className: f.b,
                             onClick: () => {
-                                t(c.i.USER_DISMISS);
+                                t(_.i.USER_DISMISS);
                             },
-                            children: (0, a.jsx)(o.PGe, { color: "currentColor" }),
+                            children: (0, i.jsx)(c.P, { color: "currentColor" }),
                         }),
-                        (0, a.jsx)(o.Heading, { id: f, variant: "heading-lg/semibold", children: n }),
+                        (0, i.jsx)(u.D, { id: T, variant: "heading-lg/semibold", children: n }),
                     ],
                 }),
-                null != s && (0, a.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: s }),
-                (0, a.jsx)(o.HOs, {
-                    className: m.XG,
+                null != l && (0, i.jsx)(p.E, { variant: "text-md/normal", color: "text-subtle", children: l }),
+                (0, i.jsx)(h.Ip, {
+                    className: f.XG,
                     fade: !0,
-                    children: (0, a.jsx)("div", { className: l()(m.gT, g), children: h }),
+                    children: (0, i.jsx)("div", { className: a()(f.gT, C), children: g }),
                 }),
             ],
         }),

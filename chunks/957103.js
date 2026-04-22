@@ -1,21 +1,22 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => m });
 var i = n(627968),
     l = n(64700),
     s = n(990078),
-    a = n(397927),
-    r = n(442433),
-    o = n(950072),
-    d = n(985018),
-    c = n(560927);
-function u(e) {
-    let { roles: t, guildId: u } = e,
-        m = t[0] ?? null,
-        g = t.length - 1,
-        x = l.useMemo(() => new Intl.NumberFormat(d.intl.currentLocale).format(g), [g]),
-        h = l.useCallback(
+    a = n(939249),
+    r = n(834730),
+    o = n(442433),
+    d = n(950072),
+    c = n(985018),
+    u = n(576642);
+function m(e) {
+    let { roles: t, guildId: m } = e,
+        g = t[0] ?? null,
+        h = t.length - 1,
+        x = l.useMemo(() => new Intl.NumberFormat(c.intl.currentLocale).format(h), [h]),
+        p = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    (0, r.L3)(e, async () => {
+                    (0, o.L3)(e, async () => {
                         let { default: e } = await n.e("54526").then(n.bind(n, 551309));
                         return () => (0, i.jsx)(e, { roles: t });
                     });
@@ -25,16 +26,16 @@ function u(e) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)("div", {
-              className: c.yk,
+              className: u.yk,
               children: [
-                  null != m && (0, i.jsx)(o.A, { className: c.Bc, role: m, guildId: u }),
-                  g > 0 &&
-                      (0, i.jsx)(a.DUT, {
-                          className: c.yt,
-                          onClick: h,
+                  null != g && (0, i.jsx)(d.A, { className: u.Bc, role: g, guildId: m }),
+                  h > 0 &&
+                      (0, i.jsx)(a.D, {
+                          className: u.yt,
+                          onClick: p,
                           children: (0, i.jsx)(s.m, {
-                              text: d.intl.string(d.t.DY6n4q),
-                              children: (0, i.jsxs)(a.Text, {
+                              text: c.intl.string(c.t.DY6n4q),
+                              children: (0, i.jsxs)(r.E, {
                                   variant: "text-xs/medium",
                                   color: "text-strong",
                                   children: ["+", x],

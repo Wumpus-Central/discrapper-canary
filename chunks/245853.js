@@ -1,90 +1,86 @@
 "use strict";
 n.d(t, {
-    Dl: () => I,
-    Ig: () => f,
-    Iq: () => o,
-    YX: () => c,
-    Ym: () => u,
-    ev: () => y,
-    fV: () => T,
-    jS: () => l,
-    m8: () => d,
-    n6: () => S,
-    r4: () => E,
-    rE: () => h,
+    Dl: () => T,
+    Ig: () => h,
+    Iq: () => u,
+    YX: () => _,
+    Ym: () => c,
+    ev: () => N,
+    fV: () => S,
+    jS: () => d,
+    m8: () => f,
+    n6: () => y,
+    r4: () => A,
+    rE: () => m,
     rI: () => p,
-    sy: () => _,
-    uK: () => a,
+    sy: () => E,
+    uK: () => l,
 });
-var r = n(311907),
-    i = n(945810),
-    s = n(287809);
+var r,
+    i,
+    s = n(311907),
+    a = n(945810),
+    o = n(287809);
 n(654487);
-let a = (0, i.mj)({
+let l = (0, a.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    o = (0, i.mj)({
+    u = (0, a.mj)({
         name: "2026-02-fetch-quest-home-takeover-on-connection-open",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    l = (0, i.mj)({
+    d = (0, a.mj)({
         name: "2026-02-new-video-quest-progress-bar-styling",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    u = (0, i.mj)({
+    c = (0, a.mj)({
         name: "2026-03-desktop-activity-quest-header",
         kind: "user",
         defaultConfig: { enabled: !1, showSkipButton: !1 },
         variations: { 1: { enabled: !0, showSkipButton: !0 }, 2: { enabled: !0, showSkipButton: !1 } },
     }),
-    c = (0, i.mj)({
+    _ = (0, a.mj)({
         name: "2026-02-app-store-bottom-sheet-overlay",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    d = (0, i.mj)({
+    f = (0, a.mj)({
         name: "2026-03-quest-reload-video-on-obscured",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var _ = (function (e) {
-    return (
-        (e[(e.DEFAULT = 0)] = "DEFAULT"),
-        (e[(e.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
-        (e[(e.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
-        e
-    );
-})({});
-let f = (0, i.mj)({
+var E =
+    (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
+    (r[(r.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
+    (r[(r.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
+    r);
+let h = (0, a.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    p = (0, i.mj)({
+    p = (0, a.mj)({
         name: "2026-03-get-decision-hero-ads",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var h = (function (e) {
-    return (
-        (e[(e.RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES = 0)] = "RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES"),
-        (e[(e.REMOVE_NON_VIDEO_QUESTS = 1)] = "REMOVE_NON_VIDEO_QUESTS"),
-        (e[(e.RANK_BASED_ON_QUEST_TYPE = 2)] = "RANK_BASED_ON_QUEST_TYPE"),
-        e
-    );
-})({});
-let m = (0, i.mj)({
+var m =
+    (((i = {})[(i.RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES = 0)] = "RANK_DOWN_ALL_QUESTS_AFTER_30_MINUTES"),
+    (i[(i.REMOVE_NON_VIDEO_QUESTS = 1)] = "REMOVE_NON_VIDEO_QUESTS"),
+    (i[(i.RANK_BASED_ON_QUEST_TYPE = 2)] = "RANK_BASED_ON_QUEST_TYPE"),
+    i);
+let g = (0, a.mj)({
         name: "2026-03-mobile-quest-home-ranking-availability",
         kind: "user",
         defaultConfig: { enabled: !1, variant: null },
@@ -95,62 +91,61 @@ let m = (0, i.mj)({
             3: { enabled: !0, variant: 2 },
         },
     }),
-    E = (0, i.mj)({
+    A = (0, a.mj)({
         name: "2025-03-quests-premium-rewards-holdout",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    I = (0, a.mj)({
+        name: "2026-04-quests-premium-orb-multiplier-marketing",
+        kind: "user",
+        defaultConfig: { enabled: !1, multiplier: 1 },
+        variations: { 0: { enabled: !1, multiplier: 1 }, 1: { enabled: !0, multiplier: 1.2 } },
     });
-function g(e) {
-    let { location: t } = e,
-        n = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        i = null != n && n.isStaff(),
-        a = E.useConfig({ location: t });
-    return !i && !1 === a.enabled;
-}
-let A = (0, i.mj)({
-    name: "2026-04-quests-premium-orb-multiplier-marketing",
-    kind: "user",
-    defaultConfig: { enabled: !1, multiplier: 1 },
-    variations: { 0: { enabled: !1, multiplier: 1 }, 1: { enabled: !0, multiplier: 1.2 } },
-});
-function I(e) {
-    let t = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        n = A.useConfig({ location: e }),
-        i = g({ location: e });
+function T(e) {
+    let t = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
+        n = I.useConfig({ location: e }),
+        r = (function (e) {
+            let { location: t } = e,
+                n = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
+                r = null != n && n.isStaff(),
+                i = A.useConfig({ location: t });
+            return !r && !1 === i.enabled;
+        })({ location: e });
     return {
-        shouldShowBonusOrbsUX: n.enabled && !i && !t?.isPremiumWithFractionalPremiumOnly(),
+        shouldShowBonusOrbsUX: n.enabled && !r && !t?.isPremiumWithFractionalPremiumOnly(),
         multiplier: n.multiplier,
     };
 }
-function T() {
-    return m.definition.defaultConfig.variant;
+function S() {
+    return g.definition.defaultConfig.variant;
 }
-(0, i.mj)({
+(0, a.mj)({
     name: "2026-03-video-quest-player-refactor",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let S = (0, i.mj)({
+let y = (0, a.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-(0, i.mj)({
+(0, a.mj)({
     name: "2026-04-mobile-quest-orb-reward-modal-cta-priority",
     kind: "user",
     defaultConfig: { enabled: !1, variant: 0 },
     variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
 }),
-    (0, i.mj)({
+    (0, a.mj)({
         name: "2026-03-mobile-quest-home-red-dot-notification",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-let y = (0, i.mj)({
+let N = (0, a.mj)({
     name: "2026-04-quest-heartbeat-executable-fingerprint",
     kind: "user",
     defaultConfig: { enabled: !1 },

@@ -1,52 +1,47 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(322811);
-let i = RegExp(
+r.d(t, { A: () => i });
+var n = r(322811);
+let s = RegExp(
         "(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
         "i",
     ),
     a = RegExp(
         "^\\s*(\\-|\\–|\\~|\\〜|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
         "i",
-    ),
-    s = 2,
-    o = 3,
-    l = 4,
-    u = 5;
-class c {
+    );
+class i {
     pattern(e) {
-        return i;
+        return s;
     }
     extract(e, t) {
-        let n = e.createParsingResult(t.index + t[1].length, t[0].substring(t[1].length));
-        if (n.text.match(/^\d{4}$/) || ((n.start = c.extractTimeComponent(n.start.clone(), t)), !n.start))
+        let r = e.createParsingResult(t.index + t[1].length, t[0].substring(t[1].length));
+        if (r.text.match(/^\d{4}$/) || ((r.start = i.extractTimeComponent(r.start.clone(), t)), !r.start))
             return (t.index += t[0].length), null;
-        let r = e.text.substring(t.index + t[0].length),
-            i = a.exec(r);
-        return i && ((n.end = c.extractTimeComponent(n.start.clone(), i)), n.end && (n.text += i[0])), n;
+        let n = e.text.substring(t.index + t[0].length),
+            s = a.exec(n);
+        return s && ((r.end = i.extractTimeComponent(r.start.clone(), s)), r.end && (r.text += s[0])), r;
     }
     static extractTimeComponent(e, t) {
-        let n = 0,
-            i = 0,
+        let r = 0,
+            s = 0,
             a = null;
-        if (((n = parseInt(t[s])), null != t[o] && (i = parseInt(t[o])), i >= 60 || n > 24)) return null;
-        if ((n >= 12 && (a = r.FF.PM), null != t[u])) {
-            if (n > 12) return null;
-            let e = t[u].toLowerCase();
-            e.match(/morgen|vormittag/) && ((a = r.FF.AM), 12 == n && (n = 0)),
-                e.match(/nachmittag|abend/) && ((a = r.FF.PM), 12 != n && (n += 12)),
+        if (((r = parseInt(t[2])), null != t[3] && (s = parseInt(t[3])), s >= 60 || r > 24)) return null;
+        if ((r >= 12 && (a = n.FF.PM), null != t[5])) {
+            if (r > 12) return null;
+            let e = t[5].toLowerCase();
+            e.match(/morgen|vormittag/) && ((a = n.FF.AM), 12 == r && (r = 0)),
+                e.match(/nachmittag|abend/) && ((a = n.FF.PM), 12 != r && (r += 12)),
                 e.match(/nacht/) &&
-                    (12 == n ? ((a = r.FF.AM), (n = 0)) : n < 6 ? (a = r.FF.AM) : ((a = r.FF.PM), (n += 12)));
+                    (12 == r ? ((a = n.FF.AM), (r = 0)) : r < 6 ? (a = n.FF.AM) : ((a = n.FF.PM), (r += 12)));
         }
         if (
-            (e.assign("hour", n),
-            e.assign("minute", i),
-            null !== a ? e.assign("meridiem", a) : n < 12 ? e.imply("meridiem", r.FF.AM) : e.imply("meridiem", r.FF.PM),
-            null != t[l])
+            (e.assign("hour", r),
+            e.assign("minute", s),
+            null !== a ? e.assign("meridiem", a) : r < 12 ? e.imply("meridiem", n.FF.AM) : e.imply("meridiem", n.FF.PM),
+            null != t[4])
         ) {
-            let n = parseInt(t[l]);
-            if (n >= 60) return null;
-            e.assign("second", n);
+            let r = parseInt(t[4]);
+            if (r >= 60) return null;
+            e.assign("second", r);
         }
         return e;
     }

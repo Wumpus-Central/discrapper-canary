@@ -1,13 +1,8 @@
 "use strict";
-n.d(t, { E: () => a });
+n.d(t, { E: () => i });
 var r = n(217222);
-function i(e, t, n) {
-    t.forEach((e) => {
-        e.trackExposure(n);
-    });
-}
 n(688151);
-class a {
+class i {
     experiments;
     triggerPoint;
     params;
@@ -18,9 +13,15 @@ class a {
         return this.experiments.map((e) => e.definition.id);
     }
     trigger() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        var e, t;
+        let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         r.A.trackCommonTriggerPointExposures(this.params.location),
-            i(this.triggerPoint, this.experiments, { ...this.params, ...e });
+            this.triggerPoint,
+            (e = this.experiments),
+            (t = { ...this.params, ...n }),
+            e.forEach((e) => {
+                e.trackExposure(t);
+            });
     }
     getExperiments() {
         return this.experiments;

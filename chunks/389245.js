@@ -1,21 +1,18 @@
-e.d(i, { A: () => a });
-var n = e(627968),
-    s = e(397927),
-    r = e(754302),
-    l = e(985018);
-function a() {
-    return (0, n.jsxs)(r.q, {
+n.d(e, { A: () => c });
+var i = n(627968),
+    l = n(628284),
+    s = n(738188),
+    r = n(754302),
+    a = n(985018);
+function c() {
+    return (0, i.jsxs)(r.q, {
         children: [
-            (0, n.jsx)(r.B, {
-                title: l.intl.string(l.t.fjFJFV),
-                description: l.intl.string(l.t["8SIMPz"]),
-                icon: s.yr3,
-            }),
-            (0, n.jsx)(r.B, { title: l.intl.string(l.t.QCrmqS), description: l.intl.string(l.t.TKDMoN), icon: s.yr3 }),
-            (0, n.jsx)(r.B, {
-                title: l.intl.string(l.t["lkm/a8"]),
-                description: l.intl.string(l.t["8j3qaC"]),
-                icon: s.id,
+            (0, i.jsx)(r.B, { title: a.intl.string(a.t.fjFJFV), description: a.intl.string(a.t["8SIMPz"]), icon: l.y }),
+            (0, i.jsx)(r.B, { title: a.intl.string(a.t.QCrmqS), description: a.intl.string(a.t.TKDMoN), icon: l.y }),
+            (0, i.jsx)(r.B, {
+                title: a.intl.string(a.t["lkm/a8"]),
+                description: a.intl.string(a.t["8j3qaC"]),
+                icon: s.i,
             }),
         ],
     });

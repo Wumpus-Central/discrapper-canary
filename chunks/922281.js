@@ -1,9 +1,9 @@
 n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var r = n(606096),
     a = n(189252),
-    r = n(851580),
+    l = n(851580),
     s = n(44022),
     o = n(985018);
 function d(e) {
@@ -20,12 +20,12 @@ function d(e) {
                         ...n,
                         ref: d,
                         onClick: e,
-                        icon: l.cFy,
+                        icon: r.c,
                         tooltip: o.intl.string(o.t["2pAkDA"]),
                         selected: t,
                         showBadge: s,
                     }),
-                    (0, i.jsx)(r.v, { location: "bookmarks-button", targetElementRef: d }),
+                    (0, i.jsx)(l.v, { location: "bookmarks-button", targetElementRef: d }),
                 ],
             }),
     });

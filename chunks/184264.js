@@ -1,67 +1,68 @@
 "use strict";
-n.d(t, { A: () => I });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => A });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(942381),
-    l = n(311907),
-    u = n(3203),
-    c = n(990078),
+    r = n.n(s),
+    a = n(942381),
+    o = n(311907),
+    c = n(3203),
+    u = n(990078),
     d = n(151271),
-    _ = n(617617),
-    f = n(234320),
+    h = n(617617),
+    m = n(234320),
     p = n(545428),
-    h = n(652215),
-    m = n(698279),
-    E = n(985018),
-    g = n(266599);
-function A(e, t) {
-    let { disabled: n, type: s, channel: A } = e,
-        [I, T] = i.useState(!1),
-        S = (0, l.bG)(
-            [_.A],
-            () => I && Object.values(_.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
-        ),
-        [y, v, N, C] = (0, d.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], o.x),
-        R = i.useRef(0),
-        O = i.useCallback(() => {
-            T(!0),
-                clearTimeout(R.current),
-                (R.current = setTimeout(() => {
-                    T(!1), (R.current = 0);
-                }, 2e3));
-        }, []);
-    (0, f.Vo)({ event: h.jej.FAVORITE_GIF, handler: O });
-    let b = i.useCallback(() => {
-            (0, d.r$)(m.kx.GIF, s, A.id);
-        }, [s, A.id]),
-        { Component: D, events: L, play: w } = (0, u.V)();
-    if (n) return null;
-    let M = y === m.kx.GIF && v === s && C === A.id;
-    return (0, r.jsx)(c.m, {
-        text: E.intl.string(S ? E.t.mE2e8A : E.t.nffuyb),
-        shouldShow: S,
-        forceOpen: S,
-        children: (0, r.jsx)("div", {
-            ref: t,
-            className: a()(m.VQ, g.UD),
-            children: (0, r.jsx)(p.A, {
-                className: g.x6,
-                onMouseEnter: L.onMouseEnter,
-                onMouseLeave: L.onMouseLeave,
-                onClick: () => {
-                    b(), w();
-                },
-                isActive: M,
-                pulse: I,
-                "aria-label": E.intl.string(E.t.PtVpk2),
-                "aria-expanded": M,
-                "aria-haspopup": "dialog",
-                "aria-controls": N,
-                children: (0, r.jsx)(D, { size: "refresh_sm", color: "currentColor" }),
+    f = n(652215),
+    g = n(698279),
+    _ = n(985018),
+    x = n(266599);
+let A = l.memo(
+    l.forwardRef(function (e, t) {
+        let { disabled: n, type: s, channel: A } = e,
+            [C, E] = l.useState(!1),
+            I = (0, o.bG)(
+                [h.A],
+                () => C && Object.values(h.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
+            ),
+            [v, y, S, b] = (0, d.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], a.x),
+            N = l.useRef(0),
+            T = l.useCallback(() => {
+                E(!0),
+                    clearTimeout(N.current),
+                    (N.current = setTimeout(() => {
+                        E(!1), (N.current = 0);
+                    }, 2e3));
+            }, []);
+        (0, m.Vo)({ event: f.jej.FAVORITE_GIF, handler: T });
+        let j = l.useCallback(() => {
+                (0, d.r$)(g.kx.GIF, s, A.id);
+            }, [s, A.id]),
+            { Component: R, events: w, play: L } = (0, c.V)();
+        if (n) return null;
+        let M = v === g.kx.GIF && y === s && b === A.id;
+        return (0, i.jsx)(u.m, {
+            text: _.intl.string(I ? _.t.mE2e8A : _.t.nffuyb),
+            shouldShow: I,
+            forceOpen: I,
+            children: (0, i.jsx)("div", {
+                ref: t,
+                className: r()(g.VQ, x.UD),
+                children: (0, i.jsx)(p.A, {
+                    className: x.x6,
+                    onMouseEnter: w.onMouseEnter,
+                    onMouseLeave: w.onMouseLeave,
+                    onClick: () => {
+                        j(), L();
+                    },
+                    isActive: M,
+                    pulse: C,
+                    "aria-label": _.intl.string(_.t.PtVpk2),
+                    "aria-expanded": M,
+                    "aria-haspopup": "dialog",
+                    "aria-controls": S,
+                    children: (0, i.jsx)(R, { size: "refresh_sm", color: "currentColor" }),
+                }),
             }),
-        }),
-    });
-}
-let I = i.memo(i.forwardRef(A));
+        });
+    }),
+);

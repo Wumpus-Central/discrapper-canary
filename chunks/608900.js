@@ -1,16 +1,17 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    a = n(503698),
+    s = n.n(a),
     r = n(835245),
-    o = n(397927),
-    c = n(709562),
-    d = n(985018),
-    u = n(152475);
-function h(e) {
-    let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
-        [a] = l.useState(() => (0, r.A)());
+    o = n(280056),
+    c = n(834730),
+    d = n(709562),
+    u = n(985018),
+    _ = n(489643);
+function A(e) {
+    let { width: t = 24, height: n = 24, isBadged: a = !1 } = e,
+        [s] = l.useState(() => (0, r.A)());
     return (0, i.jsxs)("svg", {
         width: t,
         height: n,
@@ -18,47 +19,45 @@ function h(e) {
         children: [
             (0, i.jsx)("defs", {
                 children: (0, i.jsxs)("mask", {
-                    id: a,
+                    id: s,
                     children: [
                         (0, i.jsx)("rect", { fill: "white", width: "100%", height: "100%" }),
-                        s && (0, i.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "black" }),
+                        a && (0, i.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "black" }),
                     ],
                 }),
             }),
-            (0, i.jsx)("g", { mask: `url(#${a})`, children: (0, i.jsx)(o.cJi, {}) }),
+            (0, i.jsx)("g", { mask: `url(#${s})`, children: (0, i.jsx)(o.c, {}) }),
         ],
     });
 }
-function A(e) {
+function p(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
-        className: a()(u.v, t),
+        className: s()(_.v, t),
         children: [
-            (0, i.jsx)(h, { isBadged: l }),
-            l
-                ? (0, i.jsx)(o.Text, { className: u.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n })
-                : null,
+            (0, i.jsx)(A, { isBadged: l }),
+            l ? (0, i.jsx)(c.E, { className: _.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
 }
-function _(e) {
+function h(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
-            className: s,
-            numRequestToSpeak: a,
+            className: a,
+            numRequestToSpeak: s,
             onClick: r,
             ...o
         } = e,
-        u = l.useCallback(() => {
+        c = l.useCallback(() => {
             r?.(), t();
         }, [r, t]);
-    return (0, i.jsx)(c.A, {
-        onClick: u,
-        label: n ? d.intl.string(d.t.gKGz7A) : d.intl.string(d.t.ImQ4dW),
-        className: s,
-        iconComponent: () => (0, i.jsx)(A, { numRequestToSpeak: a, className: s }),
+    return (0, i.jsx)(d.A, {
+        onClick: c,
+        label: n ? u.intl.string(u.t.gKGz7A) : u.intl.string(u.t.ImQ4dW),
+        className: a,
+        iconComponent: () => (0, i.jsx)(p, { numRequestToSpeak: s, className: a }),
         ...o,
     });
 }

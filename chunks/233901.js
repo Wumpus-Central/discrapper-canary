@@ -1,125 +1,128 @@
-t.d(l, { A: () => p });
+t.d(l, { A: () => A });
 var s = t(627968),
     n = t(64700),
     r = t(503698),
     a = t.n(r),
     i = t(311907),
-    c = t(397927),
-    u = t(497685),
-    o = t(291147),
-    d = t(380544),
-    g = t(247683),
-    m = t(821102),
-    h = t(970449),
-    f = t(652215),
-    x = t(650583),
-    b = t(844045),
-    C = t(985018),
-    _ = t(573436);
-let j = (e) => e.stopPropagation();
-function p(e) {
+    c = t(890856),
+    u = t(939249),
+    o = t(477155),
+    d = t(892547),
+    g = t(497685),
+    m = t(291147),
+    h = t(380544),
+    f = t(247683),
+    x = t(821102),
+    b = t(970449),
+    C = t(652215),
+    _ = t(650583),
+    j = t(844045),
+    p = t(985018),
+    y = t(573436);
+let k = (e) => e.stopPropagation();
+function A(e) {
     let { className: l, onSelectGIF: t } = e,
         {
             query: r,
-            resultQuery: p,
-            resultItems: y,
-            suggestions: k,
-        } = (0, i.cf)([m.A], () => ({
-            query: m.A.getQuery(),
-            resultQuery: m.A.getResultQuery(),
-            resultItems: m.A.getResultItems(),
-            suggestions: m.A.getSuggestions(),
+            resultQuery: A,
+            resultItems: v,
+            suggestions: I,
+        } = (0, i.cf)([x.A], () => ({
+            query: x.A.getQuery(),
+            resultQuery: x.A.getResultQuery(),
+            resultItems: x.A.getResultItems(),
+            suggestions: x.A.getSuggestions(),
         })),
-        [A, v] = n.useState(null),
-        I = n.useRef(null),
-        N = n.useCallback((e, l, t) => {
-            u.$P(e, l, t), v("" === e ? null : l);
+        [N, E] = n.useState(null),
+        S = n.useRef(null),
+        G = n.useCallback((e, l, t) => {
+            g.$P(e, l, t), E("" === e ? null : l);
         }, []),
-        S = n.useCallback(() => {
-            u.Se(), v(null), I.current?.focus();
+        R = n.useCallback(() => {
+            g.Se(), E(null), S.current?.focus();
         }, []);
     n.useEffect(
         () => (
-            u.V$(),
+            g.V$(),
             () => {
-                u.Se();
+                g.Se();
             }
         ),
         [],
     ),
         n.useEffect(() => {
-            if (null == A) return;
+            if (null == N) return;
             let e = (e) => {
-                e.key === x.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), S());
+                e.key === _.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), R());
             };
             return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
-        }, [A, S]);
-    let E = n.useCallback(
+        }, [N, R]);
+    let w = n.useCallback(
             (e) => {
-                N(e, f.dD.SEARCH);
+                G(e, C.dD.SEARCH);
             },
-            [N],
+            [G],
+        ),
+        H = n.useCallback(
+            (e) => {
+                g.Se(), G(e, C.dD.SEARCH_SUGGESTION, !0);
+            },
+            [G],
         ),
         U = n.useCallback(
             (e) => {
-                u.Se(), N(e, f.dD.SEARCH_SUGGESTION, !0);
+                G(e, C.dD.TRENDING_CATEGORY, !0), S.current?.focus();
             },
-            [N],
+            [G],
         ),
-        T = n.useCallback(
-            (e) => {
-                N(e, f.dD.TRENDING_CATEGORY, !0), I.current?.focus();
-            },
-            [N],
-        ),
-        G = (0, o.w)((0, d.cf)()),
-        R = null != A;
-    return (0, s.jsxs)(c.sqX, {
-        className: a()(_.kL, l),
-        onClick: j,
-        "aria-label": C.intl.string(b.default.yP0hhq),
+        D = (0, m.w)((0, h.cf)()),
+        L = null != N;
+    return (0, s.jsxs)(c.s, {
+        className: a()(y.kL, l),
+        onClick: k,
+        "aria-label": p.intl.string(j.default.yP0hhq),
         children: [
             (0, s.jsx)("div", {
-                className: _.wx,
+                className: y.wx,
                 children: (0, s.jsxs)("div", {
-                    className: _.U1,
+                    className: y.U1,
                     children: [
-                        R
-                            ? (0, s.jsx)(c.DUT, {
-                                  onClick: S,
-                                  className: _.Gv,
-                                  "aria-label": C.intl.string(C.t["13/7kX"]),
-                                  children: (0, s.jsx)(c.rJJ, { size: "md", color: "currentColor" }),
+                        L
+                            ? (0, s.jsx)(u.D, {
+                                  onClick: R,
+                                  className: y.Gv,
+                                  "aria-label": p.intl.string(p.t["13/7kX"]),
+                                  children: (0, s.jsx)(o.r, { size: "md", color: "currentColor" }),
                               })
                             : null,
-                        (0, s.jsx)(c.IWV, {
+                        (0, s.jsx)(d.I, {
                             query: r,
-                            onChange: E,
-                            onClear: S,
-                            placeholder: G,
-                            "aria-label": G,
-                            ref: I,
+                            onChange: w,
+                            onClear: R,
+                            placeholder: D,
+                            "aria-label": D,
+                            ref: S,
                             autoFocus: !0,
                         }),
                     ],
                 }),
             }),
             (0, s.jsx)("div", {
-                className: _.Qs,
+                className: y.Qs,
                 children:
-                    null == A
-                        ? (0, s.jsx)(h.A, { onSelectCategory: T })
-                        : (0, s.jsx)(g.Ay, {
-                              data: y,
+                    null == N
+                        ? (0, s.jsx)(b.A, { onSelectCategory: U })
+                        : (0, s.jsx)(f.Ay, {
+                              data: v,
                               onSelectGIF: t,
-                              resultType: A,
-                              resultQuery: p,
+                              resultType: N,
+                              resultQuery: A,
                               query: r,
                               searchOffset: 0,
                               searchLimit: null,
-                              searchTotalResults: y.length,
-                              suggestions: k,
-                              onSelectSuggestion: U,
+                              searchTotalResults: v.length,
+                              suggestions: I,
+                              onSelectSuggestion: H,
                           }),
             }),
         ],

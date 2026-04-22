@@ -1,31 +1,27 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(311907),
+n.d(t, { A: () => o });
+var l = n(311907),
     i = n(73153);
 let a = null,
-    s = null;
-function o(e) {
-    let { client: t } = e;
-    a = t;
-}
-function l() {
-    a = null;
-}
-function u(e) {
-    let { component: t } = e;
-    s = t;
-}
-class c extends r.Ay.Store {
+    r = null;
+class s extends l.Ay.Store {
     static displayName = "AdyenStore";
     get client() {
         return a;
     }
     get cashAppPayComponent() {
-        return s;
+        return r;
     }
 }
-let d = new c(i.h, {
-    ADYEN_CREATE_CLIENT_SUCCESS: o,
-    ADYEN_TEARDOWN_CLIENT: l,
-    ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: u,
+let o = new s(i.h, {
+    ADYEN_CREATE_CLIENT_SUCCESS: function (e) {
+        let { client: t } = e;
+        a = t;
+    },
+    ADYEN_TEARDOWN_CLIENT: function () {
+        a = null;
+    },
+    ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: function (e) {
+        let { component: t } = e;
+        r = t;
+    },
 });

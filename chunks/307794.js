@@ -1,52 +1,53 @@
-a.d(n, { default: () => m });
-var o = a(627968);
-a(64700);
-var e = a(827734),
-    s = a(397927),
-    r = a(688810),
-    d = a(87719),
-    i = a(244975),
-    l = a(788868),
-    c = a(652215),
-    p = a(985018),
-    f = a(167520),
-    u = a(790344),
-    A = a(929103);
-function C(t, n) {
-    return (0, o.jsx)(s.LpS, { text: t, className: u.Ad, color: e.A.unsafe_rawColors.BRAND_500.css }, n);
+t.d(n, { default: () => L });
+var a = t(627968);
+t(64700);
+var s = t(827734),
+    i = t(939249),
+    l = t(777666),
+    r = t(688810),
+    c = t(87719),
+    o = t(244975),
+    d = t(788868),
+    _ = t(652215),
+    u = t(985018),
+    m = t(881808),
+    A = t(535192),
+    p = t(929103);
+function x(e, n) {
+    return (0, a.jsx)(l.Lp, { text: e, className: A.Ad, color: s.A.unsafe_rawColors.BRAND_500.css }, n);
 }
-function m(t) {
-    let { guildCount: n, onClose: a, analyticsLocations: e, ...u } = t,
-        m = function (t, n) {
-            return (0, o.jsx)(
-                s.DUT,
+function L(e) {
+    let { guildCount: n, onClose: t, analyticsLocations: s, ...l } = e,
+        A = function (e, n) {
+            return (0, a.jsx)(
+                i.D,
                 {
-                    className: f.C,
+                    className: m.C,
                     tag: "span",
                     onClick: () => {
-                        a(), (0, d.e)();
+                        t(), (0, c.e)();
                     },
-                    children: t,
+                    children: e,
                 },
                 n,
             );
         },
-        { analyticsLocations: L } = (0, r.Ay)(e);
-    return (0, o.jsx)(r.f5, {
+        { analyticsLocations: L } = (0, r.Ay)(s);
+    return (0, a.jsx)(r.f5, {
         value: L,
-        children: (0, o.jsx)(i.A, {
-            artURL: A.A,
-            onClose: a,
-            type: l.e.GUILD_CAP_MODAL_UPSELL,
-            title: p.intl.string(p.t["CoNXB+"]),
+        children: (0, a.jsx)(o.A, {
+            artURL: p.A,
+            onClose: t,
+            type: d.e.GUILD_CAP_MODAL_UPSELL,
+            title: u.intl.string(u.t["CoNXB+"]),
             body:
-                n < c.qlD
-                    ? p.intl.format(p.t["5qLH7B"], { guildCount: n, onAndMore: m, newBadgeHook: C })
-                    : p.intl.format(p.t.mk9CS6, { onAndMore: m, newBadgeHook: C }),
+                n < _.qlD
+                    ? u.intl.format(u.t["5qLH7B"], { guildCount: n, onAndMore: A, newBadgeHook: x })
+                    : u.intl.format(u.t.mk9CS6, { onAndMore: A, newBadgeHook: x }),
             context:
-                n < c.qlD ? p.intl.formatToPlainString(p.t["C+Hqzs"], { guildCount: n }) : p.intl.string(p.t.m0xavd),
-            glowUp: p.intl.format(p.t["6Dl5X1"], { onAndMore: m }),
-            ...u,
+                n < _.qlD ? u.intl.formatToPlainString(u.t["C+Hqzs"], { guildCount: n }) : u.intl.string(u.t.m0xavd),
+            glowUp: u.intl.format(u.t["6Dl5X1"], { onAndMore: A }),
+            ...l,
         }),
     });
 }

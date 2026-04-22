@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { T: () => i });
-class r {
+n.d(t, { T: () => r });
+let r = new (class {
     callback = null;
     raise(e) {
         throw e;
@@ -24,8 +24,7 @@ class r {
     }
     reply(e) {
         if (e.synchronous) return e.data;
-        if (null != e.requestId) {
-            let t = 0;
+        null != e.requestId &&
             this.callback?.(
                 {
                     id: e.requestId,
@@ -38,9 +37,7 @@ class r {
                         totalTimeNanoseconds: 0,
                     },
                 },
-                t,
+                0,
             );
-        }
     }
-}
-let i = new r();
+})();

@@ -1,105 +1,108 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
-    l = n(397927),
-    a = n(780964),
-    r = n(840065),
-    o = n(473145),
-    d = n(652215),
-    c = n(788868),
-    u = n(985018);
-function _(e) {
+    l = n(192308),
+    a = n(477782),
+    r = n(443865),
+    o = n(861672),
+    d = n(780964),
+    u = n(858897),
+    c = n(473145),
+    g = n(652215),
+    m = n(788868),
+    _ = n(985018);
+function A(e) {
     let {
             guildBoostSlot: t,
-            onClose: _,
-            hasCancelableGuildBoostSlot: m,
-            premiumSubscription: g,
-            onSelect: A,
-            fractionalState: h,
+            onClose: A,
+            hasCancelableGuildBoostSlot: h,
+            premiumSubscription: p,
+            onSelect: x,
+            fractionalState: E,
         } = e,
-        x = {
+        T = {
             transfer: {
-                label: null != t.premiumGuildSubscription ? u.intl.string(u.t["PR0n//"]) : u.intl.string(u.t["+fmEYG"]),
-                subtext: t.isOnCooldown() ? u.intl.string(u.t.XnB8M0) : null,
+                label: null != t.premiumGuildSubscription ? _.intl.string(_.t["PR0n//"]) : _.intl.string(_.t["+fmEYG"]),
+                subtext: t.isOnCooldown() ? _.intl.string(_.t.XnB8M0) : null,
                 disabled: t.isOnCooldown(),
             },
-            cancel: { label: u.intl.string(u.t.twFU3R), subtext: m ? null : u.intl.string(u.t.oQ9lOh), disabled: !m },
-            uncancel: { label: u.intl.string(u.t["2glQNp"]), subtext: null, disabled: !1 },
+            cancel: { label: _.intl.string(_.t.twFU3R), subtext: h ? null : _.intl.string(_.t.oQ9lOh), disabled: !h },
+            uncancel: { label: _.intl.string(_.t["2glQNp"]), subtext: null, disabled: !1 },
         };
-    switch (g.status) {
-        case d.Dmq.PAST_DUE:
-            (x.cancel.disabled = !0), (x.cancel.subtext = u.intl.string(u.t.WnL6DV)), (x.uncancel.disabled = !0);
+    switch (p.status) {
+        case g.Dmq.PAST_DUE:
+            (T.cancel.disabled = !0), (T.cancel.subtext = _.intl.string(_.t.WnL6DV)), (T.uncancel.disabled = !0);
             break;
-        case d.Dmq.PAUSE_PENDING:
-        case d.Dmq.PAUSED:
-            h === c.xc.NONE &&
-                ((x.transfer.disabled = !0),
-                (x.transfer.subtext = u.intl.string(u.t.LiLRRT)),
-                (x.cancel.subtext = u.intl.string(u.t["1ywaWL"])),
-                (x.cancel.disabled = !0),
-                (x.uncancel.disabled = !0));
+        case g.Dmq.PAUSE_PENDING:
+        case g.Dmq.PAUSED:
+            E === m.xc.NONE &&
+                ((T.transfer.disabled = !0),
+                (T.transfer.subtext = _.intl.string(_.t.LiLRRT)),
+                (T.cancel.subtext = _.intl.string(_.t["1ywaWL"])),
+                (T.cancel.disabled = !0),
+                (T.uncancel.disabled = !0));
     }
-    let p = s.useMemo(
+    let S = s.useMemo(
         () =>
-            g.isPausedOrPausePending && h === c.xc.NONE
-                ? (0, i.jsx)(l.Drp, {
+            p.isPausedOrPausePending && E === m.xc.NONE
+                ? (0, i.jsx)(a.Dr, {
                       id: "manage-subscription",
-                      label: u.intl.string(u.t.obRG6Y),
-                      action: () => (0, r.openUserSettings)(a.X.SUBSCRIPTIONS_PANEL),
-                      iconLeft: l.xmO,
-                      leadingAccessory: { type: "icon", icon: l.xmO },
+                      label: _.intl.string(_.t.obRG6Y),
+                      action: () => (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL),
+                      iconLeft: r.x,
+                      leadingAccessory: { type: "icon", icon: r.x },
                   })
                 : null,
-        [h, g],
+        [E, p],
     );
-    return (0, i.jsxs)(l.W1t, {
+    return (0, i.jsxs)(o.W, {
         "data-menu-migrated-auto": !0,
-        onSelect: A,
+        onSelect: x,
         navId: "subscription-context",
         variant: "fixed",
-        "aria-label": u.intl.string(u.t.ogxXGq),
-        onClose: _,
+        "aria-label": _.intl.string(_.t.ogxXGq),
+        onClose: A,
         children: [
-            (0, i.jsx)(l.Drp, {
+            (0, i.jsx)(a.Dr, {
                 id: "apply",
-                label: x.transfer.label,
-                subtext: x.transfer.subtext,
+                label: T.transfer.label,
+                subtext: T.transfer.subtext,
                 action: function () {
-                    (0, l.mMO)(async () => {
+                    (0, l.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 657516));
                         return (n) =>
-                            (0, i.jsx)(e, { ...n, guildBoostSlots: [t], locationSection: d.JJy.SETTINGS_PREMIUM });
+                            (0, i.jsx)(e, { ...n, guildBoostSlots: [t], locationSection: g.JJy.SETTINGS_PREMIUM });
                     });
                 },
-                disabled: x.transfer.disabled,
+                disabled: T.transfer.disabled,
             }),
-            (0, o.I5)(t)
-                ? (0, i.jsx)(l.Drp, {
+            (0, c.I5)(t)
+                ? (0, i.jsx)(a.Dr, {
                       id: "uncancel",
-                      label: x.uncancel.label,
-                      subtext: x.uncancel.subtext,
+                      label: T.uncancel.label,
+                      subtext: T.uncancel.subtext,
                       action: function () {
-                          (0, l.mMO)(async () => {
+                          (0, l.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 342744));
                               return (n) => (0, i.jsx)(e, { ...n, guildBoostSlotId: t.id });
                           });
                       },
-                      disabled: x.uncancel.disabled,
+                      disabled: T.uncancel.disabled,
                   })
-                : (0, i.jsx)(l.Drp, {
+                : (0, i.jsx)(a.Dr, {
                       id: "cancel",
-                      label: x.cancel.label,
-                      subtext: x.cancel.subtext,
+                      label: T.cancel.label,
+                      subtext: T.cancel.subtext,
                       action: function () {
-                          (0, l.mMO)(async () => {
+                          (0, l.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 983511));
                               return (n) => (0, i.jsx)(e, { ...n, guildBoostSlot: t });
                           });
                       },
-                      disabled: x.cancel.disabled,
+                      disabled: T.cancel.disabled,
                       color: "danger",
                   }),
-            p,
+            S,
         ],
     });
 }

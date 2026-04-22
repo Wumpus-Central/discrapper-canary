@@ -1,51 +1,49 @@
 n.d(t, { A: () => m });
 var i = n(627968),
-    s = n(397927),
-    l = n(975571),
-    a = n(68925),
-    r = n(137770),
-    o = n(652215),
-    d = n(788868),
+    s = n(534514),
+    l = n(834730),
+    a = n(975571),
+    r = n(68925),
+    o = n(137770),
+    d = n(652215),
+    u = n(788868),
     c = n(985018),
-    u = n(485707);
+    g = n(800955);
 function m(e) {
     let {
             guildBoostSlots: t,
             guildBoostSlotsByGuildId: n,
             premiumSubscription: m,
-            pausedAppliedGuildBoosts: g,
-            fractionalPremiumState: _,
+            pausedAppliedGuildBoosts: _,
+            fractionalPremiumState: A,
         } = e,
-        x = l.A.getArticleURL(o.MVz.GUILD_BOOSTING_FAQ),
-        A = m?.isPaused === !0 && _ !== d.xc.FP_SUB_PAUSED,
-        h = t.some((e) => null == e.premiumGuildSubscription),
-        p = A && g.length > 0,
-        T = A ? p : t.some((e) => null != e.premiumGuildSubscription);
-    return h || T
+        h = a.A.getArticleURL(d.MVz.GUILD_BOOSTING_FAQ),
+        p = m?.isPaused === !0 && A !== u.xc.FP_SUB_PAUSED,
+        x = t.some((e) => null == e.premiumGuildSubscription),
+        E = p && _.length > 0,
+        T = p ? E : t.some((e) => null != e.premiumGuildSubscription);
+    return x || T
         ? (0, i.jsxs)("div", {
-              className: u.i,
+              className: g.i,
               children: [
                   (0, i.jsxs)("div", {
-                      className: u.b,
+                      className: g.b,
                       children: [
-                          (0, i.jsx)(s.Heading, {
-                              variant: "heading-md/semibold",
-                              children: c.intl.string(c.t.W5rDjW),
-                          }),
-                          (0, i.jsx)(s.Text, {
+                          (0, i.jsx)(s.D, { variant: "heading-md/semibold", children: c.intl.string(c.t.W5rDjW) }),
+                          (0, i.jsx)(l.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              children: c.intl.format(c.t.SpDz1x, { helpdeskArticle: x }),
+                              children: c.intl.format(c.t.SpDz1x, { helpdeskArticle: h }),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(a.A, {
+                  (0, i.jsx)(r.A, {
                       guildBoostSlots: n,
                       premiumSubscription: m,
-                      pausedAppliedGuildBoosts: g,
-                      isPaused: A,
+                      pausedAppliedGuildBoosts: _,
+                      isPaused: p,
                   }),
-                  (0, i.jsx)(r.A, { guildBoostSlots: t, fractionalPremiumState: _ }),
+                  (0, i.jsx)(o.A, { guildBoostSlots: t, fractionalPremiumState: A }),
               ],
           })
         : null;

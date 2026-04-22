@@ -1,4 +1,4 @@
-h.d(l, { Ay: () => p, Or: () => L });
+h.d(l, { Ay: () => T, Or: () => H });
 var e,
     t = h(627968),
     s = h(64700),
@@ -6,40 +6,41 @@ var e,
     i = h.n(r),
     c = h(615300),
     n = h(827734),
-    d = h(582754),
-    A = h(397927),
-    m = h(404374),
-    M = h(998304),
-    o = h(788868),
-    E = h(47775);
-let C = Object.freeze({
-    DURATION: { [o.PremiumTypes.TIER_0]: 1e3, [o.PremiumTypes.TIER_1]: 1e3, [o.PremiumTypes.TIER_2]: 1500 },
-    DELAY: { [o.PremiumTypes.TIER_0]: 400, [o.PremiumTypes.TIER_1]: 400, [o.PremiumTypes.TIER_2]: 2200 },
+    d = h(462887),
+    A = h(930861),
+    m = h(602853),
+    M = h(404374),
+    o = h(998304),
+    E = h(788868),
+    C = h(47775);
+let L = Object.freeze({
+    DURATION: { [E.PremiumTypes.TIER_0]: 1e3, [E.PremiumTypes.TIER_1]: 1e3, [E.PremiumTypes.TIER_2]: 1500 },
+    DELAY: { [E.PremiumTypes.TIER_0]: 400, [E.PremiumTypes.TIER_1]: 400, [E.PremiumTypes.TIER_2]: 2200 },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
 });
-var L =
+var H =
     (((e = {}).PREMIUM_ACTIVATED = "PREMIUM_ACTIVATED"),
     (e.PREMIUM_UPDATED = "PREMIUM_UPDATED"),
     (e.PREMIUM_UPGRADED = "PREMIUM_UPGRADED"),
     (e.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (e.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     e);
-class H extends s.PureComponent {
+class p extends s.PureComponent {
     animation = new c.A.Value(0);
-    static Types = L;
+    static Types = H;
     componentDidMount() {
         this.animate();
     }
     animate() {
         let { premiumType: a } = this.props;
-        c.A.timing(this.animation, { toValue: 1, delay: C.DELAY[a], duration: C.DURATION[a] }).start();
+        c.A.timing(this.animation, { toValue: 1, delay: L.DELAY[a], duration: L.DURATION[a] }).start();
     }
     getContainerStyle() {
         let { flashColor: a } = this.props,
-            l = C.FLASH_TIME_PERCENT,
-            h = C.FLASH_DURATION_PERCENT,
-            e = (0, M.tp)(a, 0);
+            l = L.FLASH_TIME_PERCENT,
+            h = L.FLASH_DURATION_PERCENT,
+            e = (0, o.tp)(a, 0);
         return {
             backgroundColor: this.animation.interpolate({
                 inputRange: [0, l, l, l + h, 1],
@@ -58,14 +59,14 @@ class H extends s.PureComponent {
         let { premiumType: a, type: l } = this.props;
         switch (l) {
             case "GUILD_BOOST_APPLIED":
-                return m.gi.PREMIUM_GUILD;
+                return M.gi.PREMIUM_GUILD;
             case "PREMIUM_ACTIVATED":
             case "PREMIUM_PAYMENT_STARTED":
             case "PREMIUM_UPGRADED":
             case "PREMIUM_UPDATED":
-                if (a === o.PremiumTypes.TIER_0) return m.gi.PREMIUM_TIER_0;
-                if (a === o.PremiumTypes.TIER_1) return m.gi.PREMIUM_TIER_1;
-                return m.gi.PREMIUM_TIER_2;
+                if (a === E.PremiumTypes.TIER_0) return M.gi.PREMIUM_TIER_0;
+                if (a === E.PremiumTypes.TIER_1) return M.gi.PREMIUM_TIER_1;
+                return M.gi.PREMIUM_TIER_2;
             default:
                 throw Error("Unsupported ShineAnimation type specified");
         }
@@ -75,7 +76,7 @@ class H extends s.PureComponent {
         switch (a) {
             case "GUILD_BOOST_APPLIED":
                 return (0, t.jsx)("svg", {
-                    className: E.bG,
+                    className: C.bG,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -92,7 +93,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, t.jsx)("svg", {
-                    className: E.bG,
+                    className: C.bG,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -110,7 +111,7 @@ class H extends s.PureComponent {
             case "PREMIUM_ACTIVATED":
             case "PREMIUM_UPGRADED":
                 return (0, t.jsx)("svg", {
-                    className: E.bG,
+                    className: C.bG,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -127,7 +128,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_UPDATED":
                 return (0, t.jsx)("svg", {
-                    className: E.bG,
+                    className: C.bG,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -151,7 +152,7 @@ class H extends s.PureComponent {
         switch (a) {
             case "GUILD_BOOST_APPLIED":
                 return (0, t.jsx)("svg", {
-                    className: E.gd,
+                    className: C.gd,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -205,7 +206,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, t.jsx)("svg", {
-                    className: E.gd,
+                    className: C.gd,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -232,7 +233,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_ACTIVATED":
                 return (0, t.jsx)("svg", {
-                    className: E.gd,
+                    className: C.gd,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -243,7 +244,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_UPGRADED":
                 return (0, t.jsx)("svg", {
-                    className: E.gd,
+                    className: C.gd,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -254,7 +255,7 @@ class H extends s.PureComponent {
                 });
             case "PREMIUM_UPDATED":
                 return (0, t.jsx)("svg", {
-                    className: E.gd,
+                    className: C.gd,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -270,16 +271,16 @@ class H extends s.PureComponent {
     render() {
         let { className: a } = this.props;
         return (0, t.jsxs)("div", {
-            className: i()(E.kL, a),
+            className: i()(C.kL, a),
             children: [
                 this.renderSvgBorder(),
                 (0, t.jsxs)(c.A.div, {
-                    className: E.Mp,
+                    className: C.Mp,
                     style: this.getContainerStyle(),
                     children: [
-                        (0, t.jsx)(A.kFQ, {
+                        (0, t.jsx)(A.kF, {
                             "data-migration-pending": !0,
-                            className: E.q2,
+                            className: C.q2,
                             style: this.getShineStyle(),
                         }),
                         this.renderSvgCopy(),
@@ -289,11 +290,11 @@ class H extends s.PureComponent {
         });
     }
 }
-function p(a) {
+function T(a) {
     let { theme: l, ...h } = a,
-        e = (0, A.rdh)(n.A.unsafe_rawColors.WHITE).hex(),
-        s = (0, A.rdh)(n.A.unsafe_rawColors.BRAND_500).hex(),
-        r = (0, d.Mw)(l) ? e : s;
-    return (0, t.jsx)(H, { ...h, theme: l, flashColor: r });
+        e = (0, m.r)(n.A.unsafe_rawColors.WHITE).hex(),
+        s = (0, m.r)(n.A.unsafe_rawColors.BRAND_500).hex(),
+        r = (0, d.M)(l) ? e : s;
+    return (0, t.jsx)(p, { ...h, theme: l, flashColor: r });
 }
-p.Types = L;
+T.Types = H;

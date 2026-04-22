@@ -1,27 +1,36 @@
 "use strict";
-n.d(t, { A: () => c });
-var r = n(627968),
-    i = n(110259),
-    a = n(397927),
-    s = n(688810),
+n.d(t, { A: () => d });
+var i = n(627968),
+    l = n(110259),
+    s = n(821609),
+    r = n(414499),
+    a = n(688810),
     o = n(139286),
-    l = n(359549),
+    c = n(359549),
     u = n(985018);
-function c(e) {
+function d(e) {
     let { application: t, analyticsLocation: n } = e,
-        { analyticsLocations: c } = (0, s.Ay)(n),
-        d = (0, l.A)({ application: t, analyticsLocations: c });
-    (0, o.A)({
-        name: i.ImpressionNames.CLOUD_PLAY_CTA,
-        type: i.ImpressionTypes.VIEW,
-        properties: { location_stack: c },
-    });
-    let _ = () => {
-        d?.();
-    };
-    return (0, r.jsx)(
-        a.Button,
-        { variant: "primary", size: "md", icon: a.hpF, text: u.intl.string(u.t["jaYS/h"]), onClick: _, fullWidth: !0 },
-        "cloud-play",
+        { analyticsLocations: d } = (0, a.Ay)(n),
+        h = (0, c.A)({ application: t, analyticsLocations: d });
+    return (
+        (0, o.A)({
+            name: l.ImpressionNames.CLOUD_PLAY_CTA,
+            type: l.ImpressionTypes.VIEW,
+            properties: { location_stack: d },
+        }),
+        (0, i.jsx)(
+            s.$,
+            {
+                variant: "primary",
+                size: "md",
+                icon: r.h,
+                text: u.intl.string(u.t["jaYS/h"]),
+                onClick: () => {
+                    h?.();
+                },
+                fullWidth: !0,
+            },
+            "cloud-play",
+        )
     );
 }

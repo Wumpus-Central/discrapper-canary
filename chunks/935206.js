@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(131346),
-    s = n(522437);
-function l(e, t, n, l) {
+    l = n(744818);
+function s(e, t, n, s) {
     let [{ isDragging: r }, a, o] = (0, i.i)({
             type: t,
             item: () => ({ index: n }),
             collect: (e) => ({ isDragging: e.isDragging() }),
         }),
-        [, d] = (0, s.H)({
+        [, d] = (0, l.H)({
             accept: t,
             hover(t, i) {
                 if (null == e.current) return;
-                let s = t.index;
-                if (s === n) return;
+                let l = t.index;
+                if (l === n) return;
                 let r = e.current.getBoundingClientRect(),
                     a = (r.bottom - r.top) / 2,
                     o = i.getClientOffset().y - r.top;
-                (s < n && o < a) || (s > n && o > a) || (l(s, n), (t.index = n));
+                (l < n && o < a) || (l > n && o > a) || (s(l, n), (t.index = n));
             },
         });
     return { drag: a, dragPreview: o, drop: d, isDragging: r };

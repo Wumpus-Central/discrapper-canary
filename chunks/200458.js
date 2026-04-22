@@ -91,8 +91,7 @@ class o {
         s.filter((e) => !this.timesUntilSpeakingDurationMilestonesMs.has(e))
             .filter((e) => r >= e)
             .forEach((r) => {
-                let i = t - e + r - n;
-                this.timesUntilSpeakingDurationMilestonesMs.set(r, i);
+                this.timesUntilSpeakingDurationMilestonesMs.set(r, t - e + r - n);
             });
     }
     addSpeechChunk() {

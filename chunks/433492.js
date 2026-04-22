@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { K: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+h.d(l, { K: () => v });
+var e = h(627968);
+h(64700);
+var s = h(827734),
+    t = h(996682),
+    i = h(27989);
+let v = (a) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+            size: l = "md",
+            width: h,
+            height: v,
+            color: d = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: c = "",
+            ...r
+        } = a,
+        n = (0, i.J)(l),
+        o = n?.width ?? h,
+        w = n?.height ?? v;
+    return (0, e.jsx)("svg", {
+        ...(0, t.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: o,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, e.jsx)("path", {
+            fill: "string" == typeof d ? d : d.css,
             d: "M13.76 4.97a1 1 0 0 1-.73-1.21l.5-2a1 1 0 1 1 1.94.48l-.5 2a1 1 0 0 1-1.21.73ZM19.2 3.8a1 1 0 0 1 0 1.4l-1.5 1.5a1 1 0 1 1-1.4-1.4l1.5-1.5a1 1 0 0 1 1.4 0ZM7.46 11.05 9.6 8.2a3 3 0 0 1 4.8 0l2.14 2.85-.83.83a1 1 0 0 1-1.42 0l-.17-.17a3 3 0 0 0-4.24 0l-.17.17a1 1 0 0 1-1.42 0l-.83-.83ZM6.25 12.67 2.4 17.8A2 2 0 0 0 4 21h16a2 2 0 0 0 1.6-3.2l-3.85-5.13-.63.62a3 3 0 0 1-4.24 0l-.17-.17a1 1 0 0 0-1.42 0l-.17.17a3 3 0 0 1-4.24 0l-.63-.62ZM4.8 5.2a1 1 0 0 1 1.4-1.4l1.5 1.5a1 1 0 0 1-1.4 1.4L4.8 5.2ZM21.97 8.26a1 1 0 0 1-.73 1.21l-2 .5a1 1 0 1 1-.48-1.94l2-.5a1 1 0 0 1 1.21.73ZM2.76 9.47a1 1 0 1 1 .48-1.94l2 .5a1 1 0 1 1-.48 1.94l-2-.5ZM10.97 3.76a1 1 0 0 1-1.94.48l-.5-2a1 1 0 1 1 1.94-.48l.5 2Z",
-            className: u,
+            className: c,
         }),
     });
 };

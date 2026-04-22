@@ -1,33 +1,34 @@
-"use strict";
-n.d(t, { $: () => u, A: () => c });
-var r = n(627968),
+n.d(t, { $: () => d, A: () => p });
+var l = n(627968),
     i = n(64700),
-    s = n(158954),
-    a = n(397927),
-    o = n(985018),
-    l = n(94204);
-let u = (e) => {
+    a = n(696208),
+    r = n(534514),
+    s = n(834730),
+    o = n(349288),
+    u = n(985018),
+    c = n(94204);
+let d = (e) => {
         let { className: t, isEmailResent: n, resendEmail: i } = e;
-        return (0, r.jsx)("div", {
+        return (0, l.jsx)("div", {
             className: t,
-            children: (0, r.jsxs)("div", {
-                className: l.a,
+            children: (0, l.jsxs)("div", {
+                className: c.a,
                 children: [
-                    (0, r.jsx)(a.Heading, { variant: "heading-xl/bold", children: o.intl.string(o.t.Q03WWV) }),
-                    (0, r.jsxs)("p", {
+                    (0, l.jsx)(r.D, { variant: "heading-xl/bold", children: u.intl.string(u.t.Q03WWV) }),
+                    (0, l.jsxs)("p", {
                         children: [
-                            (0, r.jsx)(a.Text, { variant: "text-md/normal", children: o.intl.string(o.t.BxPxhI) }),
-                            (0, r.jsx)("br", {}),
-                            (0, r.jsx)(a.Text, { variant: "text-md/normal", children: o.intl.string(o.t.Y3fdOp) }),
-                            (0, r.jsx)("br", {}),
-                            (0, r.jsxs)(a.Text, {
+                            (0, l.jsx)(s.E, { variant: "text-md/normal", children: u.intl.string(u.t.BxPxhI) }),
+                            (0, l.jsx)("br", {}),
+                            (0, l.jsx)(s.E, { variant: "text-md/normal", children: u.intl.string(u.t.Y3fdOp) }),
+                            (0, l.jsx)("br", {}),
+                            (0, l.jsxs)(s.E, {
                                 variant: "text-md/normal",
                                 children: [
-                                    o.intl.string(o.t.Paa4v4),
+                                    u.intl.string(u.t.Paa4v4),
                                     "\xa0",
                                     n
-                                        ? o.intl.string(o.t.StGVvC)
-                                        : (0, r.jsx)(a.MzZ, { onClick: i, children: o.intl.string(o.t.Ex7sk9) }),
+                                        ? u.intl.string(u.t.StGVvC)
+                                        : (0, l.jsx)(o.Anchor, { onClick: i, children: u.intl.string(u.t.Ex7sk9) }),
                                 ],
                             }),
                         ],
@@ -36,7 +37,7 @@ let u = (e) => {
             }),
         });
     },
-    c = () => {
-        let e = i.useMemo(() => [{ variant: "primary", text: o.intl.string(o.t.g8vPzy), disabled: !0 }], []);
-        return (0, r.jsx)(s.H7u, { actions: e });
+    p = () => {
+        let e = i.useMemo(() => [{ variant: "primary", text: u.intl.string(u.t.g8vPzy), disabled: !0 }], []);
+        return (0, l.jsx)(a.H, { actions: e });
     };

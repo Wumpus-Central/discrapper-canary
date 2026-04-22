@@ -1,17 +1,17 @@
-n.d(t, { d: () => c });
+n.d(t, { d: () => u });
 var i = n(627968),
-    s = n(397927),
+    s = n(683071),
     l = n(285058),
-    r = n(253932),
-    a = n(985018),
-    o = n(634411),
-    d = n(439695);
-function c() {
-    let e = r.tz.useSetting()
+    a = n(253932),
+    r = n(985018),
+    o = n(395277),
+    d = n(780479);
+function u() {
+    let e = a.tz.useSetting()
         ? null
         : (0, i.jsx)("div", {
               className: d.l,
-              children: (0, i.jsx)(s.wx6, { type: "warning", children: a.intl.string(o.default["xxI0/W"]) }),
+              children: (0, i.jsx)(s.w, { type: "warning", children: r.intl.string(o.default["xxI0/W"]) }),
           });
     return (0, i.jsx)(l.A, { notice: e });
 }

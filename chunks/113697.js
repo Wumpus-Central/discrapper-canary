@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Pf: "label__27da5",
     fp: "createLabel__27da5",

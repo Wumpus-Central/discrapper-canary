@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(311907),
-    i = n(429913),
-    a = n(800828);
-function s(e) {
-    let t = (0, r.bG)([a.A], () => {
-        let t = a.A.getGameRelationshipsForUser(e);
+    l = n(429913),
+    i = n(800828);
+function a(e) {
+    let t = (0, r.bG)([i.A], () => {
+        let t = i.A.getGameRelationshipsForUser(e);
         if (0 !== t.length) return t[0].applicationId;
     });
-    return (0, i.h)(t);
+    return (0, l.h)(t);
 }

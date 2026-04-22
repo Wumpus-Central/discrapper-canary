@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Zj: "upsellContainer__5997d",
     xw: "upsellContent__5997d",

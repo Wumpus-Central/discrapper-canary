@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         words: {
@@ -21,7 +19,7 @@
             return 1 === r.length ? (n ? i[0] : i[1]) : e + " " + t.correctGrammaticalCase(e, i);
         },
     };
-    return e.defineLocale("sr-cyrl", {
+    e.defineLocale("sr-cyrl", {
         months: "јануар_фебруар_март_април_мај_јун_јул_август_септембар_октобар_новембар_децембар".split("_"),
         monthsShort: "јан._феб._мар._апр._мај_јун_јул_авг._сеп._окт._нов._дец.".split("_"),
         monthsParseExact: !0,
@@ -89,4 +87,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

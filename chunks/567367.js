@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { A: () => I });
-var r = n(627968),
+n.d(t, { A: () => N });
+var l = n(627968),
     i = n(64700),
     a = n(990078),
-    s = n(397927),
-    o = n(849269),
-    l = n(392054),
-    u = n(207371),
-    c = n(954571),
-    d = n(211401),
-    _ = n(989837),
-    f = n(500049),
-    p = n(228965),
-    h = n(735991),
-    m = n(698141),
-    g = n(297486),
-    E = n(652215),
-    A = n(985018);
-function I(e) {
-    let { context: t, application: n, sectionName: I, primaryEntryPointCommand: T } = e,
-        y = i.useId(),
-        S = i.useCallback(() => {
-            d.k(f.Se.ACTIVITY);
-        }, []),
+    s = n(821609),
+    r = n(849269),
+    o = n(392054),
+    c = n(207371),
+    d = n(954571),
+    u = n(211401),
+    m = n(989837),
+    p = n(500049),
+    _ = n(228965),
+    A = n(735991),
+    h = n(698141),
+    f = n(297486),
+    x = n(652215),
+    C = n(985018);
+function N(e) {
+    let { context: t, application: n, sectionName: N, primaryEntryPointCommand: g } = e,
+        E = i.useId(),
         v = i.useCallback(() => {
-            _.A.shouldShowModal() && S();
-        }, [S]),
-        { submitting: C, wasSubmitting: b } = (0, m.A)({
+            u.k(p.Se.ACTIVITY);
+        }, []),
+        b = i.useCallback(() => {
+            m.A.shouldShowModal() && v();
+        }, [v]),
+        { submitting: I, wasSubmitting: y } = (0, h.A)({
             applicationId: n.id,
             context: t,
-            launchingComponentId: y,
-            onSubmissionComplete: S,
+            launchingComponentId: E,
+            onSubmissionComplete: v,
         }),
-        [N, R] = i.useState(!1),
-        O = (0, o.Hq)({ applicationId: n.id, context: t }),
-        D = i.useMemo(() => (0, h.kF)(T.displayName), [T.displayName]),
+        [j, P] = i.useState(!1),
+        T = (0, r.Hq)({ applicationId: n.id, context: t }),
+        L = i.useMemo(() => (0, A.kF)(g.displayName), [g.displayName]),
         {
-            onActivityItemSelected: L,
-            buttonVariant: w,
-            buttonText: x,
-        } = (0, g.dn)({
+            onActivityItemSelected: S,
+            buttonVariant: R,
+            buttonText: O,
+        } = (0, f.dn)({
             context: t,
             application: n,
-            location: l.Oh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: I,
-            commandName: D,
-            autoDismissOnClick: O === o.o6.LEAVE || (0, u.x)(n),
-            launchingComponentId: y,
-            submitting: b ?? C,
-            onConfirmActivityLaunchChecksAlertOpen: v,
+            location: o.Oh.APP_LAUNCHER_APPLICATION_VIEW,
+            sectionName: N,
+            commandName: L,
+            autoDismissOnClick: T === r.o6.LEAVE || (0, c.x)(n),
+            launchingComponentId: E,
+            submitting: y ?? I,
+            onConfirmActivityLaunchChecksAlertOpen: b,
         }),
-        { disabled: P, reason: M } = (0, p.A)({ context: t, application: n, activityAction: O });
-    return (0, r.jsx)(a.m, {
+        { disabled: k, reason: M } = (0, _.A)({ context: t, application: n, activityAction: T });
+    return (0, l.jsx)(a.m, {
         shouldShow: null != M,
         __unsupportedReactNodeAsText: M,
-        children: (0, r.jsx)(s.Button, {
+        children: (0, l.jsx)(s.$, {
             type: "submit",
             size: "md",
-            variant: w,
-            disabled: P,
-            loading: N,
+            variant: R,
+            disabled: k,
+            loading: j,
             onClick: () => {
-                R(!0),
-                    L(),
-                    c.default.track(E.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                P(!0),
+                    S(),
+                    d.default.track(x.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                         application_id: n.id,
-                        button_action: f.F5.USE_APP_COMMAND,
+                        button_action: p.F5.USE_APP_COMMAND,
                     });
             },
-            "aria-label": A.intl.formatToPlainString(A.t["XjP/R+"], { buttonText: x, applicationName: n.name }),
-            text: x,
+            "aria-label": C.intl.formatToPlainString(C.t["XjP/R+"], { buttonText: O, applicationName: n.name }),
+            text: O,
         }),
     });
 }

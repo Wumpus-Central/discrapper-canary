@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(315069),
-    s = n(427157);
-class l extends i.A {
+    l = n(427157);
+class s extends i.A {
     id;
     name;
     managed;
@@ -18,7 +17,7 @@ class l extends i.A {
             (this.managed = e.managed),
             (this.roles = e.roles),
             (this.requiredColons = e.requiredColons),
-            (this.user = new s.A(e.user)),
+            (this.user = new l.A(e.user)),
             (this.animated = e.animated),
             (this.available = e.available);
     }

@@ -1,60 +1,60 @@
 "use strict";
 n.d(t, { A: () => p });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     s = n(942381),
-    a = n(602034),
-    o = n(397927),
-    l = n(850992),
-    u = n(151271),
-    c = n(256449),
+    r = n(602034),
+    a = n(892547),
+    o = n(850992),
+    c = n(151271),
+    u = n(256449),
     d = n(823894),
-    _ = n(985018),
-    f = n(337485);
-let p = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: p, channel: h } = e,
-        m = (0, c.ZO)(h),
-        E = i.useRef(null),
-        { searchQuery: g, isSearchSuggestion: A } = (0, u.RQ)(
+    h = n(985018),
+    m = n(337485);
+let p = l.forwardRef(function (e, t) {
+    let { onKeyDown: n, stickersListRef: p, channel: f } = e,
+        g = (0, u.ZO)(f),
+        _ = l.useRef(null),
+        { searchQuery: x, isSearchSuggestion: A } = (0, c.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
             s.x,
         ),
-        I = l.bM.useStore((e) => e.searchPlaceholder),
-        [T, S] = l.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], s.x),
-        y = i.useCallback(
+        C = o.bM.useStore((e) => e.searchPlaceholder),
+        [E, I] = o.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], s.x),
+        v = l.useCallback(
             (e) => {
-                l.bM.setActiveCategoryIndex("" === e ? 0 : -1),
-                    l.bM.setInspectedExpressionPosition(0, 0),
-                    l.bM.setSearchPlaceholder(null),
-                    (0, u.Ri)(e),
+                o.bM.setActiveCategoryIndex("" === e ? 0 : -1),
+                    o.bM.setInspectedExpressionPosition(0, 0),
+                    o.bM.setSearchPlaceholder(null),
+                    (0, c.Ri)(e),
                     p.current?.scrollTo(0);
             },
             [p],
         ),
-        v = i.useCallback(() => {
-            y("");
-        }, [y]);
+        y = l.useCallback(() => {
+            v("");
+        }, [v]);
     return (
-        i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
-        i.useLayoutEffect(() => {
-            A && E.current?.focus();
+        l.useImperativeHandle(t, () => ({ focus: () => _.current?.focus() })),
+        l.useLayoutEffect(() => {
+            A && _.current?.focus();
         }, [A]),
-        (0, r.jsx)("div", {
-            className: f.i,
-            children: (0, r.jsx)(o.IWV, {
-                autoFocus: m,
-                disabled: !m,
-                query: g,
-                ref: E,
-                placeholder: I ?? (m ? _.intl.string(_.t.dt5h1C) : _.intl.string(_.t["Pck/4U"])),
-                onClear: v,
+        (0, i.jsx)("div", {
+            className: m.i,
+            children: (0, i.jsx)(a.I, {
+                autoFocus: g,
+                disabled: !g,
+                query: x,
+                ref: _,
+                placeholder: C ?? (g ? h.intl.string(h.t.dt5h1C) : h.intl.string(h.t["Pck/4U"])),
+                onClear: y,
                 onKeyDown: n,
-                onChange: y,
+                onChange: v,
                 inputProps: {
                     "aria-haspopup": "grid",
                     "aria-controls": d.lq,
                     "aria-expanded": !0,
-                    ...(S ? { "aria-activedescendant": (0, a.Aq)(d.lq, T.columnIndex, T.rowIndex) } : void 0),
+                    ...(I ? { "aria-activedescendant": (0, r.Aq)(d.lq, E.columnIndex, E.rowIndex) } : void 0),
                 },
             }),
         })

@@ -1,15 +1,16 @@
-a.d(t, { Ay: () => p, Oj: () => h, Q8: () => m });
+a.d(t, { Ay: () => _, Oj: () => p, Q8: () => m });
 var n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
-    r = a(397927),
-    o = a(532197),
-    c = a(594439);
-let d = { CENTER: c.Hu, LEFT: c.Vl };
-class u extends i.PureComponent {
-    static Align = d;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: d.CENTER };
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(599319),
+    o = a(939249),
+    c = a(532197),
+    d = a(937751);
+let u = { CENTER: d.Hu, LEFT: d.Vl };
+class h extends l.PureComponent {
+    static Align = u;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: u.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -30,14 +31,14 @@ class u extends i.PureComponent {
         t(e);
     };
     render() {
-        let { renderItem: e, items: t, vertical: a, paginationContainerClass: l, align: o } = this.props,
-            d = a ? c.XA : c.BU;
-        return (0, n.jsx)(r.GtU, {
+        let { renderItem: e, items: t, vertical: a, paginationContainerClass: i, align: o } = this.props,
+            c = a ? d.XA : d.BU;
+        return (0, n.jsx)(r.Gt, {
             orientation: a ? "vertical" : "horizontal",
-            className: s()(d, l, o),
+            className: s()(c, i, o),
             ref: this.handleSetScrollerRef,
             children: t.map((t, a) =>
-                i.cloneElement(e(t, a), {
+                l.cloneElement(e(t, a), {
                     onClick: () => this.handlePageClick(a),
                     key: a,
                     ref: (e) => {
@@ -48,7 +49,7 @@ class u extends i.PureComponent {
         });
     }
 }
-class m extends i.PureComponent {
+class m extends l.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -56,14 +57,14 @@ class m extends i.PureComponent {
     };
     render() {
         let { className: e } = this.props;
-        return (0, n.jsx)(r.DUT, {
-            className: s()(c.t1, e),
+        return (0, n.jsx)(o.D, {
+            className: s()(d.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, n.jsx)(o.A, { className: c.UE, direction: o.A.Directions.LEFT }),
+            children: (0, n.jsx)(c.A, { className: d.UE, direction: c.A.Directions.LEFT }),
         });
     }
 }
-class h extends i.PureComponent {
+class p extends l.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -71,11 +72,11 @@ class h extends i.PureComponent {
     };
     render() {
         let { className: e } = this.props;
-        return (0, n.jsx)(r.DUT, {
-            className: s()(c.XS, e),
+        return (0, n.jsx)(o.D, {
+            className: s()(d.XS, e),
             onClick: this.handleNextClick,
-            children: (0, n.jsx)(o.A, { className: c.UE, direction: o.A.Directions.RIGHT }),
+            children: (0, n.jsx)(c.A, { className: d.UE, direction: c.A.Directions.RIGHT }),
         });
     }
 }
-let p = u;
+let _ = h;

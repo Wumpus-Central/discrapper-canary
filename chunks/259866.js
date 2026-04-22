@@ -1,54 +1,54 @@
-"use strict";
-n.d(t, { Mj: () => h, mU: () => _, tB: () => x });
+n.d(t, { Mj: () => _, mU: () => p, tB: () => x });
 var i = n(627968),
-    s = n(64700),
-    l = n(417597),
+    l = n(64700),
+    s = n(417597),
     r = n(314116),
-    a = n(397927),
-    o = n(591552),
-    d = n(961973),
-    c = n(527678),
-    u = n(655943),
-    m = n(539916),
-    g = n(985018);
+    a = n(349288),
+    o = n(834730),
+    d = n(591552),
+    c = n(961973),
+    u = n(527678),
+    m = n(655943),
+    g = n(539916),
+    h = n(985018);
 function x(e, t) {
-    let n = (0, l.yK)([u.A], () => (0, d.G4)(e, t, u.A.editedOnboardingPrompts));
-    return [(0, l.yK)([u.A], () => (0, d.G4)(e, t, u.A.editedOnboardingPrompts, d.VU)), n];
-}
-function h(e) {
-    let t = (0, l.bG)([o.A], () => o.A.isAdvancedMode(e)),
-        [n] = [(0, l.yK)([o.A], () => (0, d.G4)(e, o.A.getDefaultChannelIds(e), o.A.getOnboardingPrompts(e), d.VU))];
-    return !!t && n.length >= m.Kd;
+    let n = (0, s.yK)([m.A], () => (0, c.G4)(e, t, m.A.editedOnboardingPrompts));
+    return [(0, s.yK)([m.A], () => (0, c.G4)(e, t, m.A.editedOnboardingPrompts, c.VU)), n];
 }
 function _(e) {
+    let t = (0, s.bG)([d.A], () => d.A.isAdvancedMode(e)),
+        [n] = [(0, s.yK)([d.A], () => (0, c.G4)(e, d.A.getDefaultChannelIds(e), d.A.getOnboardingPrompts(e), c.VU))];
+    return !!t && n.length >= g.Kd;
+}
+function p(e) {
     let { guildId: t, className: n } = e,
-        d = (0, l.bG)([o.A], () => o.A.isAdvancedMode(t)),
-        u = s.useCallback(() => {
-            let e = d ? m.SD.ONBOARDING_DEFAULT : m.SD.ONBOARDING_ADVANCED;
-            d
+        c = (0, s.bG)([d.A], () => d.A.isAdvancedMode(t)),
+        m = l.useCallback(() => {
+            let e = c ? g.SD.ONBOARDING_DEFAULT : g.SD.ONBOARDING_ADVANCED;
+            c
                 ? (0, r.A)({
-                      title: g.intl.string(g.t["49+ONj"]),
-                      subtitle: g.intl.string(g.t.TLkoOt),
+                      title: h.intl.string(h.t["49+ONj"]),
+                      subtitle: h.intl.string(h.t.TLkoOt),
                       variant: "primary",
-                      confirmText: g.intl.string(g.t.R9GHya),
-                      onConfirm: () => (0, c.CP)(t, e),
+                      confirmText: h.intl.string(h.t.R9GHya),
+                      onConfirm: () => (0, u.CP)(t, e),
                   })
                 : (0, r.A)({
-                      title: g.intl.string(g.t.YB9xUF),
-                      subtitle: g.intl.string(g.t.BcGGVn),
+                      title: h.intl.string(h.t.YB9xUF),
+                      subtitle: h.intl.string(h.t.BcGGVn),
                       variant: "primary",
-                      confirmText: g.intl.string(g.t.ts6u6r),
-                      onConfirm: () => (0, c.CP)(t, e),
+                      confirmText: h.intl.string(h.t.ts6u6r),
+                      onConfirm: () => (0, u.CP)(t, e),
                   });
-        }, [t, d]);
+        }, [t, c]);
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(a.MzZ, {
-            onClick: u,
-            children: (0, i.jsx)(a.Text, {
+        children: (0, i.jsx)(a.Anchor, {
+            onClick: m,
+            children: (0, i.jsx)(o.E, {
                 variant: "text-sm/medium",
                 color: "text-link",
-                children: d ? g.intl.string(g.t.OmpxWy) : g.intl.string(g.t.ozsQBC),
+                children: c ? h.intl.string(h.t.OmpxWy) : h.intl.string(h.t.ozsQBC),
             }),
         }),
     });

@@ -1,8 +1,8 @@
 l.d(t, { l: () => d });
 var a = l(627968),
-    n = l(934551),
-    r = l(732955),
-    i = l(397927),
+    n = l(624479),
+    r = l(408278),
+    i = l(834730),
     o = l(957565),
     s = l(534472);
 let d = (e) => {
@@ -10,13 +10,13 @@ let d = (e) => {
     return (0, a.jsxs)("div", {
         className: s.I,
         children: [
-            (0, a.jsxs)(i.Text, { variant: "text-sm/medium", children: [t, ":"] }),
-            (0, a.jsx)(i.Text, { variant: "text-sm/normal", children: l }),
-            (0, a.jsx)(r.K0, {
+            (0, a.jsxs)(i.E, { variant: "text-sm/medium", children: [t, ":"] }),
+            (0, a.jsx)(i.E, { variant: "text-sm/normal", children: l }),
+            (0, a.jsx)(r.K, {
                 size: "sm",
                 "aria-label": "Copy Link",
                 variant: "icon-only",
-                icon: n.CopyIcon,
+                icon: n.T,
                 onClick: () => (0, o.C)(l),
             }),
         ],

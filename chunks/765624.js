@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     r = n(111956),
     l = n.n(r),
     a = n(615300),
     o = n(607399),
-    d = n(319060),
-    c = n(397927),
+    c = n(319060),
+    d = n(844222),
     u = n(240248),
-    h = n(299198);
-let _ = (0, u.xI)(d.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    p = { friction: 10, tension: 130 },
-    g = function (e) {
+    _ = n(115617);
+let h = (0, u.xI)(c.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    m = { friction: 10, tension: 130 },
+    p = function (e) {
         return class extends s.Component {
             timeout;
             anim = new a.A.Value(0);
@@ -21,7 +21,7 @@ let _ = (0, u.xI)(d.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 o.Fr || (window.addEventListener("resize", this.handleResizeDebounced), this.handleResize());
             }
             handleResize = () => {
-                let e = window.innerWidth > _;
+                let e = window.innerWidth > h;
                 !this.state.shouldAnimate && e && this.anim.setValue(1), this.setState({ shouldAnimate: e });
             };
             handleResizeDebounced = l()(this.handleResize, 60);
@@ -40,7 +40,7 @@ let _ = (0, u.xI)(d.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 this.state.shouldAnimate ? this.animateTo(0, e) : e();
             }
             animateTo(e, t) {
-                a.A.spring(this.anim, { toValue: e, ...p }).start(t);
+                a.A.spring(this.anim, { toValue: e, ...m }).start(t);
             }
             getAnimatedStyle(e) {
                 return this.state.shouldAnimate
@@ -63,12 +63,12 @@ let _ = (0, u.xI)(d.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             }
             render() {
                 return (0, i.jsx)("div", {
-                    className: h.i,
-                    children: (0, i.jsx)(c.CZY.Consumer, {
+                    className: _.i,
+                    children: (0, i.jsx)(d.C.Consumer, {
                         children: (t) => {
                             let { reducedMotion: n } = t;
                             return (0, i.jsx)(a.A.div, {
-                                className: h.l,
+                                className: _.l,
                                 style: this.getAnimatedStyle(n.enabled),
                                 children: (0, i.jsx)(e, { ...this.props }),
                             });

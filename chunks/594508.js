@@ -1,35 +1,36 @@
-n.d(t, { E: () => d, v: () => c });
+n.d(e, { E: () => u, v: () => d });
 var i = n(627968);
 n(64700);
-var l = n(732955),
-    r = n(397927),
-    a = n(701273),
-    s = n(985018),
-    o = n(425013);
-let d = (e) => {
-    let { onConfirm: t, onCancel: n, title: d, subtitle: c, confirmCta: u, showOpenDiscord: m = !0 } = e;
+var l = n(821609),
+    r = n(534514),
+    a = n(834730),
+    s = n(701273),
+    o = n(985018),
+    c = n(425013);
+let u = (t) => {
+    let { onConfirm: e, onCancel: n, title: u, subtitle: d, confirmCta: p, showOpenDiscord: m = !0 } = t;
     return (0, i.jsxs)("div", {
-        className: o.RP,
+        className: c.RP,
         children: [
-            (0, i.jsx)(r.Heading, { className: o.RS, variant: "heading-lg/extrabold", children: d }),
-            null != c
-                ? (0, i.jsx)(r.Text, { className: o.sT, variant: "text-sm/normal", color: "text-default", children: c })
+            (0, i.jsx)(r.D, { className: c.RS, variant: "heading-lg/extrabold", children: u }),
+            null != d
+                ? (0, i.jsx)(a.E, { className: c.sT, variant: "text-sm/normal", color: "text-default", children: d })
                 : null,
             (0, i.jsxs)("div", {
-                className: o.UD,
+                className: c.UD,
                 children: [
                     m &&
-                        (0, i.jsx)(l.$nd, {
+                        (0, i.jsx)(l.$, {
                             variant: "primary",
-                            text: s.intl.string(s.t["8L5bZG"]),
+                            text: o.intl.string(o.t["8L5bZG"]),
                             fullWidth: !0,
-                            onClick: () => (0, a.A)("application_sub_mweb_success_modal"),
+                            onClick: () => (0, s.A)("application_sub_mweb_success_modal"),
                         }),
-                    (0, i.jsx)(l.$nd, { variant: "secondary", text: u, fullWidth: !0, onClick: t }),
+                    (0, i.jsx)(l.$, { variant: "secondary", text: p, fullWidth: !0, onClick: e }),
                     null != n &&
-                        (0, i.jsx)(l.$nd, {
+                        (0, i.jsx)(l.$, {
                             variant: "secondary",
-                            text: s.intl.string(s.t.iAfxo3),
+                            text: o.intl.string(o.t.iAfxo3),
                             fullWidth: !0,
                             onClick: n,
                         }),
@@ -38,35 +39,35 @@ let d = (e) => {
         ],
     });
 };
-function c(e) {
-    let { onConfirm: t, tierName: n, subscription: d } = e;
+function d(t) {
+    let { onConfirm: e, tierName: n, subscription: u } = t;
     return (0, i.jsxs)("div", {
-        className: o.RP,
+        className: c.RP,
         children: [
-            (0, i.jsx)(r.Heading, {
-                className: o.RS,
+            (0, i.jsx)(r.D, {
+                className: c.RS,
                 variant: "heading-lg/extrabold",
-                children: s.intl.format(s.t.wLFT6z, { tier: n }),
+                children: o.intl.format(o.t.wLFT6z, { tier: n }),
             }),
-            (0, i.jsx)(r.Text, {
-                className: o.sT,
+            (0, i.jsx)(a.E, {
+                className: c.sT,
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: s.intl.format(s.t.OsAK9h, { timestamp: d?.currentPeriodEnd }),
+                children: o.intl.format(o.t.OsAK9h, { timestamp: u?.currentPeriodEnd }),
             }),
             (0, i.jsxs)("div", {
-                className: o.UD,
+                className: c.UD,
                 children: [
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: o.__invalid_openDiscordButton,
-                        children: (0, i.jsx)(l.$nd, {
+                        className: c.__invalid_openDiscordButton,
+                        children: (0, i.jsx)(l.$, {
                             variant: "primary",
-                            text: s.intl.string(s.t["8L5bZG"]),
-                            onClick: () => (0, a.A)("application_sub_mweb_success_modal"),
+                            text: o.intl.string(o.t["8L5bZG"]),
+                            onClick: () => (0, s.A)("application_sub_mweb_success_modal"),
                         }),
                     }),
-                    (0, i.jsx)(l.$nd, { variant: "secondary", text: s.intl.string(s.t.nlkywz), onClick: t }),
+                    (0, i.jsx)(l.$, { variant: "secondary", text: o.intl.string(o.t.nlkywz), onClick: e }),
                 ],
             }),
         ],

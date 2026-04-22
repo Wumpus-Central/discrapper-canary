@@ -1,160 +1,163 @@
-t.d(n, { default: () => w });
-var i = t(627968),
-    l = t(64700),
-    d = t(158954),
-    r = t(311907),
-    s = t(397927),
-    a = t(442433),
-    c = t(793574),
-    o = t(688810),
-    u = t(915089),
-    _ = t(857071),
-    g = t(734057),
-    f = t(71393),
-    h = t(954571),
-    x = t(645034),
-    m = t(285059),
-    v = t(698441),
-    p = t(485394),
-    A = t(826383),
-    I = t(163382),
-    j = t(530209),
-    b = t(974930),
-    N = t(691012),
-    C = t(428978),
-    y = t(850183),
-    k = t(315960),
-    E = t(659242),
-    S = t(834991),
-    T = t(482857),
-    L = t(988794),
-    D = t(652215),
-    R = t(381199);
-function G(e) {
-    let { guildEvent: n, guild: t, channel: l, onActionTaken: s, recurrenceId: a } = e,
-        c = (0, v.Fd)(n),
-        o = (0, r.bG)([v.Ay], () => v.Ay.isInterestedInEventRecurrence(n.id, a), [a, n]),
-        u = (0, p.Ay)(n),
-        g = (0, r.bG)([_.A], () => _.A.isLurking(t.id), [t.id]),
-        f = (0, j.e)(l?.id, n.id),
-        h = (0, T.A)({ guild: t, channel: l, guildScheduledEvent: n, isActive: c, recurrenceId: a, onActionTaken: s }),
-        x = (0, C.Zq)({
+n.d(t, { default: () => G });
+var l = n(627968),
+    i = n(64700),
+    r = n(696208),
+    s = n(224640),
+    a = n(20742),
+    c = n(430993),
+    o = n(311907),
+    d = n(430690),
+    u = n(442433),
+    _ = n(793574),
+    h = n(688810),
+    g = n(915089),
+    A = n(857071),
+    f = n(734057),
+    p = n(71393),
+    E = n(954571),
+    m = n(645034),
+    x = n(285059),
+    v = n(698441),
+    I = n(485394),
+    C = n(826383),
+    T = n(163382),
+    S = n(530209),
+    R = n(974930),
+    N = n(691012),
+    y = n(428978),
+    b = n(850183),
+    L = n(315960),
+    j = n(659242),
+    w = n(834991),
+    P = n(482857),
+    M = n(988794),
+    D = n(652215),
+    U = n(832223);
+function O(e) {
+    let { guildEvent: t, guild: n, channel: i, onActionTaken: s, recurrenceId: a } = e,
+        c = (0, v.Fd)(t),
+        d = (0, o.bG)([v.Ay], () => v.Ay.isInterestedInEventRecurrence(t.id, a), [a, t]),
+        u = (0, I.Ay)(t),
+        _ = (0, o.bG)([A.A], () => A.A.isLurking(n.id), [n.id]),
+        h = (0, S.e)(i?.id, t.id),
+        g = (0, P.A)({ guild: n, channel: i, guildScheduledEvent: t, isActive: c, recurrenceId: a, onActionTaken: s }),
+        f = (0, y.Zq)({
             isActive: c,
-            isUserLurking: g,
-            rsvped: o,
-            isChannelPublic: f,
+            isUserLurking: _,
+            rsvped: d,
+            isChannelPublic: h,
             canInvite: u,
-            entityType: n.entity_type,
-            ...h,
+            entityType: t.entity_type,
+            ...g,
         }),
-        m =
-            null != h.onContextMenu
-                ? (0, i.jsx)("div", { className: R.Zv, children: (0, i.jsx)(C.jD, { onClick: h.onContextMenu }) })
+        p =
+            null != g.onContextMenu
+                ? (0, l.jsx)("div", { className: U.Zv, children: (0, l.jsx)(y.jD, { onClick: g.onContextMenu }) })
                 : void 0;
-    return (0, i.jsx)(d.H7u, { leading: m, actions: x });
+    return (0, l.jsx)(r.H, { leading: p, actions: f });
 }
-let w = (e) => {
-    let { guildScheduledEventId: n, transitionState: _, initialRecurrenceId: p, onClose: j } = e,
-        { analyticsLocations: C } = (0, o.Ay)(c.A.GUILD_EVENT_MODAL),
-        [T, w] = l.useState(p),
-        P = (0, r.bG)([v.Ay], () => v.Ay.getGuildScheduledEvent(n), [n]),
-        U = P?.id,
-        B = P?.guild_id,
-        M = (0, r.bG)([f.A], () => f.A.getGuild(B), [B]),
-        O = P?.channel_id,
-        V = (0, r.bG)([g.A], () => g.A.getChannel(O), [O]),
-        F = (0, u.GV)(),
-        [K, H] = l.useState(L.al.EVENT_INFO),
-        J = (0, I.A)(U, T),
-        z = null != P ? (0, N.A)(P) : null,
-        W = l.useCallback(
+let G = (e) => {
+    let { guildScheduledEventId: t, transitionState: r, initialRecurrenceId: A, onClose: I } = e,
+        { analyticsLocations: S } = (0, h.Ay)(_.A.GUILD_EVENT_MODAL),
+        [y, P] = i.useState(A),
+        G = (0, o.bG)([v.Ay], () => v.Ay.getGuildScheduledEvent(t), [t]),
+        k = G?.id,
+        F = G?.guild_id,
+        B = (0, o.bG)([p.A], () => p.A.getGuild(F), [F]),
+        V = G?.channel_id,
+        H = (0, o.bG)([f.A], () => f.A.getChannel(V), [V]),
+        Z = (0, g.GV)(),
+        [K, Y] = i.useState(M.al.EVENT_INFO),
+        W = (0, T.A)(k, y),
+        z = null != G ? (0, N.A)(G) : null,
+        X = i.useCallback(
             (e) => {
                 null != z &&
-                    (0, a.L3)(e, async () => {
-                        let { default: e } = await t.e("31658").then(t.bind(t, 928625));
-                        return (n) => (0, i.jsx)(e, { ...n, imageUrl: z });
+                    (0, u.L3)(e, async () => {
+                        let { default: e } = await n.e("31658").then(n.bind(n, 928625));
+                        return (t) => (0, l.jsx)(e, { ...t, imageUrl: z });
                     });
             },
             [z],
         ),
-        Q = (0, A.A)(B, U, T),
-        [Y, { loading: X, error: Z }] = (0, x.A)(() => m.A.getGuildEventUsers(P?.id, T, B));
-    l.useEffect(() => {
-        null == P ? j() : h.default.track(D.HAw.OPEN_MODAL, { type: L.BV, guild_id: P.guild_id });
-    }, [P, j]);
-    let q = l.useRef(null),
-        [$, ee] = l.useState(680);
-    l.useLayoutEffect(() => {
+        J = (0, C.A)(F, k, y),
+        [$, { loading: Q, error: q }] = (0, m.A)(() => x.A.getGuildEventUsers(G?.id, y, F));
+    i.useEffect(() => {
+        null == G ? I() : E.default.track(D.HAw.OPEN_MODAL, { type: M.BV, guild_id: G.guild_id });
+    }, [G, I]);
+    let ee = i.useRef(null),
+        [et, en] = i.useState(680);
+    i.useLayoutEffect(() => {
         let e = new ResizeObserver((e) => {
-            e.length > 0 && ee(e[0].contentRect.width);
+            e.length > 0 && en(e[0].contentRect.width);
         });
-        return null != q.current && e.observe(q.current), () => e.disconnect();
-    }, [q]);
-    let en = l.useRef(null),
-        [et, ei] = l.useState(0);
+        return null != ee.current && e.observe(ee.current), () => e.disconnect();
+    }, [ee]);
+    let el = i.useRef(null),
+        [ei, er] = i.useState(0);
     if (
-        (l.useLayoutEffect(() => {
-            let e = 16 * (P?.recurrence_rule != null);
-            ei((en?.current?.offsetHeight ?? 0) + e);
-        }, [en, P?.recurrence_rule]),
-        null == P || null == M)
+        (i.useLayoutEffect(() => {
+            let e = 16 * (G?.recurrence_rule != null);
+            er((el?.current?.offsetHeight ?? 0) + e);
+        }, [el, G?.recurrence_rule]),
+        null == G || null == B)
     )
         return null;
-    let el = (e) => {
-            e !== K && (e === L.al.RSVP_LIST && Y(), H(e));
+    let es = (e) => {
+            e !== K && (e === M.al.RSVP_LIST && $(), Y(e));
         },
-        ed = T ?? (0, b.G3)(P);
-    return (0, i.jsx)(o.f5, {
-        value: C,
-        children: (0, i.jsxs)(d.dWK, {
-            transitionState: _,
+        ea = y ?? (0, R.G3)(G);
+    return (0, l.jsx)(h.f5, {
+        value: S,
+        children: (0, l.jsxs)(s.d, {
+            transitionState: r,
             size: "lg",
-            onClose: j,
+            onClose: I,
             children: [
-                (0, i.jsx)(d.rQ0, { title: P.name }),
-                P?.image != null &&
+                (0, l.jsx)(a.rQ, { title: G.name }),
+                G?.image != null &&
                     null != z &&
-                    (0, i.jsx)("div", { onContextMenu: W, children: (0, i.jsx)(y.A, { source: z, className: R.vK }) }),
-                (0, i.jsx)(d.cwr, {
-                    controls: (0, i.jsx)(k.A, { selectedTab: K, onTabSelected: el, userCount: Q }),
-                    children: (0, i.jsx)("div", {
-                        className: R.kL,
-                        ref: q,
-                        children: (0, i.jsxs)(s.tN_, {
+                    (0, l.jsx)("div", { onContextMenu: X, children: (0, l.jsx)(b.A, { source: z, className: U.vK }) }),
+                (0, l.jsx)(c.c, {
+                    controls: (0, l.jsx)(L.A, { selectedTab: K, onTabSelected: es, userCount: J }),
+                    children: (0, l.jsx)("div", {
+                        className: U.kL,
+                        ref: ee,
+                        children: (0, l.jsxs)(d.t, {
                             activeSlide: K,
-                            width: $,
+                            width: et,
                             centered: !1,
                             children: [
-                                (0, i.jsx)(s.q7S, {
-                                    id: L.al.EVENT_INFO,
-                                    children: (0, i.jsx)(E.A, {
-                                        guildEvent: P,
-                                        guild: M,
-                                        channel: V,
-                                        headerId: F,
-                                        onClose: j,
-                                        onClickInterestedCount: () => el(L.al.RSVP_LIST),
-                                        containerRef: en,
-                                        recurrenceId: ed,
-                                        setRecurrenceId: w,
+                                (0, l.jsx)(d.q, {
+                                    id: M.al.EVENT_INFO,
+                                    children: (0, l.jsx)(j.A, {
+                                        guildEvent: G,
+                                        guild: B,
+                                        channel: H,
+                                        headerId: Z,
+                                        onClose: I,
+                                        onClickInterestedCount: () => es(M.al.RSVP_LIST),
+                                        containerRef: el,
+                                        recurrenceId: ea,
+                                        setRecurrenceId: P,
                                     }),
                                 }),
-                                (0, i.jsx)(s.q7S, {
-                                    id: L.al.RSVP_LIST,
-                                    children: (0, i.jsx)(S.A, {
-                                        guildEvent: P,
-                                        recurrenceId: ed,
-                                        eventUsers: J,
-                                        loading: X,
-                                        containerHeight: et,
-                                        error: Z,
+                                (0, l.jsx)(d.q, {
+                                    id: M.al.RSVP_LIST,
+                                    children: (0, l.jsx)(w.A, {
+                                        guildEvent: G,
+                                        recurrenceId: ea,
+                                        eventUsers: W,
+                                        loading: Q,
+                                        containerHeight: ei,
+                                        error: q,
                                     }),
                                 }),
                             ],
                         }),
                     }),
                 }),
-                (0, i.jsx)(G, { guildEvent: P, guild: M, channel: V, onActionTaken: j, recurrenceId: ed }),
+                (0, l.jsx)(O, { guildEvent: G, guild: B, channel: H, onActionTaken: I, recurrenceId: ea }),
             ],
         }),
     });

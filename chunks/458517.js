@@ -1,70 +1,67 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
-    o = n(342952),
-    l = n(397927),
-    u = n(429913),
-    c = n(287809),
-    d = n(405269),
-    _ = n(403362),
+var l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    a = n(342952),
+    o = n(31300),
+    c = n(834730),
+    u = n(778712),
+    d = n(429913),
+    h = n(287809),
+    m = n(405269),
+    p = n(403362),
     f = n(985018),
-    p = n(21274);
-let h = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: h, guildId: m, className: E } = e,
-        g = (0, u.h)(i),
-        A = (0, a.yK)([c.default], () => n.map((e) => c.default.getUser(e)).filter(_.Vq) ?? []),
-        I = g?.name,
-        T = null != t ? (0, d.Fe)(new Date(t)) : null,
-        S = g?.getIconURL(32);
+    g = n(21274);
+let _ = function (e) {
+    let { createdAt: t, participantIds: n, applicationId: l, title: _, guildId: x, className: A } = e,
+        C = (0, d.h)(l),
+        E = (0, r.yK)([h.default], () => n.map((e) => h.default.getUser(e)).filter(p.Vq) ?? []),
+        I = C?.name,
+        v = null != t ? (0, m.Fe)(new Date(t)) : null,
+        y = C?.getIconURL(32);
     if (null == t) return null;
-    let y = null == h || "" === h;
-    return (0, r.jsxs)("div", {
-        className: s()(E, p.kL),
+    let S = null == _ || "" === _;
+    return (0, i.jsxs)("div", {
+        className: s()(A, g.kL),
         children: [
-            (0, r.jsx)("div", {
-                className: p.gS,
+            (0, i.jsx)("div", {
+                className: g.gS,
                 "aria-hidden": "true",
                 children:
-                    null != S
-                        ? (0, r.jsx)("img", { src: S, alt: "", className: p.NH })
-                        : (0, r.jsx)(l.kN9, { size: "sm", color: "currentColor" }),
+                    null != y
+                        ? (0, i.jsx)("img", { src: y, alt: "", className: g.NH })
+                        : (0, i.jsx)(o.k, { size: "sm", color: "currentColor" }),
             }),
-            (0, r.jsxs)("div", {
-                className: p.i0,
+            (0, i.jsxs)("div", {
+                className: g.i0,
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        className: p.NV,
+                    (0, i.jsx)(c.E, {
+                        className: g.NV,
                         variant: "text-md/normal",
-                        color: y ? "text-subtle" : "text-default",
-                        children: y ? f.intl.string(f.t.Cyxddp) : h,
+                        color: S ? "text-subtle" : "text-default",
+                        children: S ? f.intl.string(f.t.Cyxddp) : _,
                     }),
                     null != I &&
                         "" !== I &&
-                        (0, r.jsx)(l.Text, {
-                            className: p.xD,
+                        (0, i.jsx)(c.E, {
+                            className: g.xD,
                             color: "text-subtle",
                             variant: "text-sm/medium",
                             children: I,
                         }),
-                    (0, r.jsx)(l.Text, {
-                        className: p.xD,
-                        color: "text-subtle",
-                        variant: "text-sm/normal",
-                        children: T,
-                    }),
+                    (0, i.jsx)(c.E, { className: g.xD, color: "text-subtle", variant: "text-sm/normal", children: v }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: p.jW,
-                children: (0, r.jsx)(o.A, {
+            (0, i.jsx)("div", {
+                className: g.jW,
+                children: (0, i.jsx)(a.A, {
                     maxUsers: 4,
-                    users: A,
-                    guildId: m,
-                    size: l._3J.SIZE_24,
+                    users: E,
+                    guildId: x,
+                    size: u._3.SIZE_24,
                     "aria-label": f.intl.string(f.t.WTozwe),
                 }),
             }),

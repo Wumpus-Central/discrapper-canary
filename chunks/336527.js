@@ -1,15 +1,11 @@
 "use strict";
-n.d(t, { L: () => f, c: () => _ });
+n.d(t, { L: () => c, c: () => d });
 var r = n(947399),
     i = n(687567),
-    a = n(756055),
-    s = 0,
-    o = function () {
-        return !!s;
-    },
-    l = 12,
-    u = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    c = [
+    s = n(756055),
+    a = 0,
+    o = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    l = [
         "resize",
         "load",
         "transitionend",
@@ -25,8 +21,8 @@ var r = n(947399),
         "blur",
         "focus",
     ],
-    d = !1,
-    _ = new ((function () {
+    u = !1,
+    d = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -37,25 +33,25 @@ var r = n(947399),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                d ||
-                    ((d = !0),
-                    (0, a.Y)(function () {
+                u ||
+                    ((u = !0),
+                    (0, s.Y)(function () {
                         var n = !1;
                         try {
                             n = (0, r.e)();
                         } finally {
-                            if (((d = !1), !o())) return;
+                            if (((u = !1), !a)) return;
                             n ? t.run(60) : e ? t.run(e - 1) : t.start();
                         }
                     }));
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run(l);
+                this.stop(), this.run(12);
             }),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, u);
+                        return e.observer && e.observer.observe(document.body, o);
                     };
                 document.body ? t() : i.S.addEventListener("DOMContentLoaded", t);
             }),
@@ -65,7 +61,7 @@ var r = n(947399),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    c.forEach(function (t) {
+                    l.forEach(function (t) {
                         return i.S.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -73,7 +69,7 @@ var r = n(947399),
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    c.forEach(function (t) {
+                    l.forEach(function (t) {
                         return i.S.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -81,6 +77,6 @@ var r = n(947399),
             e
         );
     })())(),
-    f = function (e) {
-        !s && e > 0 && _.start(), (s += e) || _.stop();
+    c = function (e) {
+        !a && e > 0 && d.start(), (a += e) || d.stop();
     };

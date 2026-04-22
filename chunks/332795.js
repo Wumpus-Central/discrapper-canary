@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Jp: "onboardingContainer_c3ab2b",
     Q3: "upsellOnTop_c3ab2b",

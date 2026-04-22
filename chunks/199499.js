@@ -1,8 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(985018);
-function a() {
-    return (0, i.jsx)(s.po8, { icon: s.XAi, messageType: s.YCn.POSITIVE, children: l.intl.string(l.t.FsmBy4) });
+var s = n(512950),
+    l = n(194261),
+    a = n(985018);
+function r() {
+    return (0, i.jsx)(s.p, { icon: l.X, messageType: s.Y.POSITIVE, children: a.intl.string(a.t.FsmBy4) });
 }

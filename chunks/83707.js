@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => r });
-class r {
+r.d(t, { A: () => n });
+class n {
     refine(e, t) {
         if (t.length < 2) return t;
-        let n = [],
-            r = t[0];
-        for (let i = 1; i < t.length; i++) {
-            let a = t[i];
-            if (a.index >= r.index + r.text.length) {
-                n.push(r), (r = a);
+        let r = [],
+            n = t[0];
+        for (let s = 1; s < t.length; s++) {
+            let a = t[s];
+            if (a.index >= n.index + n.text.length) {
+                r.push(n), (n = a);
                 continue;
             }
-            let s = null,
+            let i = null,
                 o = null;
-            a.text.length > r.text.length ? ((s = a), (o = r)) : ((s = r), (o = a)),
+            a.text.length > n.text.length ? ((i = a), (o = n)) : ((i = n), (o = a)),
                 e.debug(() => {
-                    console.log(`${this.constructor.name} remove ${o} by ${s}`);
+                    console.log(`${this.constructor.name} remove ${o} by ${i}`);
                 }),
-                (r = s);
+                (n = i);
         }
-        return null != r && n.push(r), n;
+        return null != n && r.push(n), r;
     }
 }

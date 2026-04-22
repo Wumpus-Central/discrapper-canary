@@ -1,215 +1,217 @@
-r.d(t, { A: () => w }), r(321073), r(667532);
+r.d(t, { A: () => T }), r(321073), r(667532);
 var n = r(627968),
-    a = r(64700),
-    i = r(735438),
-    s = r.n(i),
+    i = r(64700),
+    a = r(735438),
+    o = r.n(a),
     l = r(311907),
-    o = r(397927),
-    d = r(233545),
-    u = r(83257),
-    c = r(361739),
-    m = r(47167),
-    p = r(235986),
-    h = r(97469),
-    y = r(544028),
+    s = r(97808),
+    d = r(778712),
+    c = r(534514),
+    u = r(233545),
+    m = r(83257),
+    p = r(361739),
+    h = r(47167),
+    y = r(235986),
+    b = r(97469),
+    g = r(544028),
     f = r(734057),
     A = r(696451),
-    g = r(383501),
-    F = r(412780),
-    v = r(994500),
-    C = r(287809),
-    b = r(427262),
+    C = r(383501),
+    v = r(412780),
+    F = r(994500),
+    x = r(287809),
+    D = r(427262),
     E = r(817006),
-    x = r(121614),
-    D = r(663272),
-    R = r(820931),
-    S = r(307414),
-    j = r(244920),
-    N = r(652215),
-    I = r(731854),
-    P = r(985018),
-    k = r(41604);
-function B(e, t, r, a, i) {
+    S = r(121614),
+    R = r(663272),
+    _ = r(820931),
+    j = r(307414),
+    I = r(244920),
+    B = r(652215),
+    k = r(731854),
+    N = r(985018),
+    P = r(41604);
+function w(e, t, r, i, a) {
     let l = [];
     if (null == t) return l;
     let {
-        transport: u,
+        transport: c,
         rtp: { inbound: m, outbound: h },
-        camera: y,
+        camera: b,
     } = t;
     if (
-        (l.push({ section: c.Fq.HEADER, label: P.intl.formatToPlainString(P.t.PK5fOC, { context: e }) }),
-        null != u &&
+        (l.push({ section: p.Fq.HEADER, label: N.intl.formatToPlainString(N.t.PK5fOC, { context: e }) }),
+        null != c &&
             l.push({
-                section: (0, F.Xi)(e, N.zWA.TRANSPORT, r),
-                label: P.intl.string(P.t.wU9IN2),
-                element: j.A,
+                section: (0, v.Xi)(e, B.zWA.TRANSPORT, r),
+                label: N.intl.string(N.t.wU9IN2),
+                element: I.A,
                 elementProps: { context: e, index: r },
             }),
         null == h ||
-            s().isEmpty(h) ||
+            o().isEmpty(h) ||
             l.push({
-                section: (0, F.Xi)(e, N.zWA.OUTBOUND, r),
-                label: P.intl.string(P.t["3u0gII"]),
-                element: R.A,
+                section: (0, v.Xi)(e, B.zWA.OUTBOUND, r),
+                label: N.intl.string(N.t["3u0gII"]),
+                element: _.A,
                 elementProps: { context: e, index: r },
             }),
-        null != y &&
+        null != b &&
             l.push({
-                section: (0, F.Xi)(e, N.zWA.CAMERA, r),
-                label: P.intl.string(P.t["2AGBWH"]),
+                section: (0, v.Xi)(e, B.zWA.CAMERA, r),
+                label: N.intl.string(N.t["2AGBWH"]),
                 element: E.A,
-                elementProps: { context: e, index: r, camera: y },
+                elementProps: { context: e, index: r, camera: b },
             }),
-        null != m && !s().isEmpty(m))
+        null != m && !o().isEmpty(m))
     ) {
         let t = [];
-        Object.keys(m).forEach((s) => {
+        Object.keys(m).forEach((o) => {
             let l,
-                u = C.default.getUser(s),
-                c = A.Ay.getNick(i, s),
-                h = (0, F.Xi)(e, s, r);
-            null != m[s] &&
-                m[s].length > 0 &&
+                c = x.default.getUser(o),
+                p = A.Ay.getNick(a, o),
+                h = (0, v.Xi)(e, o, r);
+            null != m[o] &&
+                m[o].length > 0 &&
                 t.push({
                     section: h,
                     label:
-                        null != u
-                            ? (0, n.jsx)(p.A, {
-                                  align: p.A.Align.CENTER,
-                                  children: (0, n.jsx)(p.A.Child, {
-                                      children: (0, n.jsxs)(p.A, {
-                                          align: p.A.Align.CENTER,
+                        null != c
+                            ? (0, n.jsx)(y.A, {
+                                  align: y.A.Align.CENTER,
+                                  children: (0, n.jsx)(y.A.Child, {
+                                      children: (0, n.jsxs)(y.A, {
+                                          align: y.A.Align.CENTER,
                                           children: [
-                                              (0, n.jsx)(o.euF, {
-                                                  size: o._3J.SIZE_24,
-                                                  src: u.getAvatarURL(i, 24),
-                                                  "aria-label": u.username,
-                                                  className: k.my,
+                                              (0, n.jsx)(s.eu, {
+                                                  size: d._3.SIZE_24,
+                                                  src: c.getAvatarURL(a, 24),
+                                                  "aria-label": c.username,
+                                                  className: P.my,
                                               }),
-                                              (0, n.jsx)("span", { className: k.Xh, children: c ?? b.Ay.getName(u) }),
+                                              (0, n.jsx)("span", { className: P.Xh, children: p ?? D.Ay.getName(c) }),
                                           ],
                                       }),
                                   }),
                               })
-                            : ((l = c ?? s),
-                              (0, n.jsx)(p.A, {
-                                  align: p.A.Align.CENTER,
-                                  children: (0, n.jsx)(p.A.Child, {
-                                      children: (0, n.jsx)(p.A, {
-                                          align: p.A.Align.CENTER,
-                                          children: (0, n.jsx)("span", { className: k.Xh, children: l }),
+                            : ((l = p ?? o),
+                              (0, n.jsx)(y.A, {
+                                  align: y.A.Align.CENTER,
+                                  children: (0, n.jsx)(y.A.Child, {
+                                      children: (0, n.jsx)(y.A, {
+                                          align: y.A.Align.CENTER,
+                                          children: (0, n.jsx)("span", { className: P.Xh, children: l }),
                                       }),
                                   }),
                               })),
-                    ariaLabel: null != u ? u.tag : s,
+                    ariaLabel: null != c ? c.tag : o,
                     onClick: () => {
-                        d.c4(h);
+                        u.c4(h);
                     },
-                    element: D.A,
-                    elementProps: { context: e, index: r, videoStreams: a },
+                    element: R.A,
+                    elementProps: { context: e, index: r, videoStreams: i },
                 });
         }),
-            t.length > 0 && (l.push({ section: c.Fq.HEADER, label: P.intl.string(P.t.SJmZaq) }), l.push(...t));
+            t.length > 0 && (l.push({ section: p.Fq.HEADER, label: N.intl.string(N.t.SJmZaq) }), l.push(...t));
     }
     return l;
 }
-function w() {
+function T() {
     let { defaultStats: e, streamStats: t } = (0, l.bG)(
-            [F.Ay],
-            () => ({ defaultStats: F.Ay.getAllStats(I.x.DEFAULT), streamStats: F.Ay.getAllStats(I.x.STREAM) }),
+            [v.Ay],
+            () => ({ defaultStats: v.Ay.getAllStats(k.x.DEFAULT), streamStats: v.Ay.getAllStats(k.x.STREAM) }),
             [],
             l.My,
         ),
-        r = (0, l.bG)([g.A, f.A], () => f.A.getChannel(g.A.getChannelId())),
-        i = e.concat(t).find((e) => null != e.screenshare)?.screenshare,
-        s = t.find((e) => null != e.clips)?.clips,
-        p = (0, l.bG)([y.A], () => y.A.theme),
-        A = (0, h.NC)(),
-        b = (0, l.bG)([F.Ay], () => F.Ay.getSection()),
-        E = (function (e) {
+        r = (0, l.bG)([C.A, f.A], () => f.A.getChannel(C.A.getChannelId())),
+        a = e.concat(t).find((e) => null != e.screenshare)?.screenshare,
+        o = t.find((e) => null != e.clips)?.clips,
+        s = (0, l.bG)([g.A], () => g.A.theme),
+        d = (0, b.NC)(),
+        y = (0, l.bG)([v.Ay], () => v.Ay.getSection()),
+        A = (function (e) {
             let {
                     defaultStats: t,
                     streamStats: r,
-                    videoStreams: a,
-                    screenshare: i,
-                    clips: s,
+                    videoStreams: i,
+                    screenshare: a,
+                    clips: o,
                     channel: l,
-                    connectionState: d,
+                    connectionState: s,
                 } = e,
-                u = t.flatMap((e, t) => B(I.x.DEFAULT, e, t, a, l?.getGuildId())),
-                p = r.flatMap((e, t) => B(I.x.STREAM, e, t, a, l?.getGuildId())),
-                h = [],
+                d = t.flatMap((e, t) => w(k.x.DEFAULT, e, t, i, l?.getGuildId())),
+                u = r.flatMap((e, t) => w(k.x.STREAM, e, t, i, l?.getGuildId())),
+                m = [],
                 y = [],
-                f = { section: c.Fq.DIVIDER };
+                b = { section: p.Fq.DIVIDER };
             return (
-                null != i &&
-                    (h.push(f),
-                    h.push({
-                        section: N.zWA.SCREENSHARE,
-                        label: P.intl.string(P.t["gWbr/U"]),
-                        element: S.A,
-                        elementProps: { screenshare: i },
+                null != a &&
+                    (m.push(b),
+                    m.push({
+                        section: B.zWA.SCREENSHARE,
+                        label: N.intl.string(N.t["gWbr/U"]),
+                        element: j.A,
+                        elementProps: { screenshare: a },
                     })),
-                null != s &&
-                    (y.push(f),
+                null != o &&
+                    (y.push(b),
                     y.push({
-                        section: N.zWA.CLIPS,
-                        label: P.intl.string(P.t.MKrFKE),
-                        element: x.A,
-                        elementProps: { clips: s },
+                        section: B.zWA.CLIPS,
+                        label: N.intl.string(N.t.MKrFKE),
+                        element: S.A,
+                        elementProps: { clips: o },
                     })),
-                p.length > 0 && p.unshift(f),
+                u.length > 0 && u.unshift(b),
                 [
                     ...(null != l
                         ? [
                               {
-                                  section: c.Fq.CUSTOM,
+                                  section: p.Fq.CUSTOM,
                                   label: "Channel Name",
                                   element: () =>
-                                      (0, n.jsx)(o.Heading, {
-                                          className: k.HA,
+                                      (0, n.jsx)(c.D, {
+                                          className: P.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, m.m1)(l, C.default, v.A),
+                                          children: (0, h.m1)(l, x.default, F.A),
                                       }),
                               },
                           ]
                         : []),
                     {
-                        section: c.Fq.CUSTOM,
+                        section: p.Fq.CUSTOM,
                         label: "Connection State",
                         element: () =>
-                            (0, n.jsx)(o.Heading, {
-                                className: k.HA,
+                            (0, n.jsx)(c.D, {
+                                className: P.HA,
                                 variant: "heading-md/normal",
-                                children: d === N.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
+                                children: s === B.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
                     },
+                    ...d,
                     ...u,
-                    ...p,
-                    ...h,
+                    ...m,
                     ...y,
                 ]
             );
         })({
             defaultStats: e,
             streamStats: t,
-            videoStreams: (0, l.bG)([F.Ay], () => F.Ay.getVideoStreams()),
-            screenshare: i,
-            clips: s,
+            videoStreams: (0, l.bG)([v.Ay], () => v.Ay.getVideoStreams()),
+            screenshare: a,
+            clips: o,
             channel: r,
-            connectionState: (0, l.bG)([g.A], () => g.A.getState()),
+            connectionState: (0, l.bG)([C.A], () => C.A.getState()),
         });
     return (
-        a.useEffect(
+        i.useEffect(
             () => () => {
-                d.VN();
+                u.VN();
             },
             [],
         ),
-        a.useEffect(() => {
-            E.some((e) => e.section === b) || b === F.EM || d.c4(F.EM);
-        }, [E, b]),
-        (0, n.jsx)(u.Ay, { theme: p, sidebarTheme: A, section: b, onSetSection: d.c4, sections: E })
+        i.useEffect(() => {
+            A.some((e) => e.section === y) || y === v.EM || u.c4(v.EM);
+        }, [A, y]),
+        (0, n.jsx)(m.Ay, { theme: s, sidebarTheme: d, section: y, onSetSection: u.c4, sections: A })
     );
 }

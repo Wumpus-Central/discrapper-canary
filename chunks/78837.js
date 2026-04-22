@@ -1,58 +1,59 @@
-n.d(t, { f: () => _ });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(386181),
-    o = n(650682),
-    d = n(934551),
-    c = n(827734),
-    u = n(397927),
-    m = n(590089),
-    g = n(523880);
-function _(e) {
+t.d(n, { f: () => m });
+var l = t(627968),
+    r = t(64700),
+    i = t(503698),
+    s = t.n(i),
+    a = t(386181),
+    o = t(650682),
+    c = t(138017),
+    d = t(827734),
+    u = t(187322),
+    x = t(331322),
+    j = t(590089),
+    h = t(523880);
+function m(e) {
     let {
-            ref: t,
-            title: n,
-            collapsedSubtitle: l,
-            isExpanded: _,
-            onExpandedChange: x,
-            children: h,
-            animate: A = !0,
+            ref: n,
+            title: t,
+            collapsedSubtitle: i,
+            isExpanded: m,
+            onExpandedChange: f,
+            children: p,
+            animate: y = !0,
         } = e,
-        p = s.useRef(null),
-        [T, f] = s.useState(null),
-        S = _ && null != T;
+        g = r.useRef(null),
+        [v, A] = r.useState(null),
+        N = m && null != v;
     return (
-        s.useLayoutEffect(() => {
-            null != p.current && null == T && f(p.current.clientHeight);
-        }, [T]),
-        (0, i.jsxs)(a.EN, {
-            ref: t,
-            isExpanded: _,
-            onExpandedChange: x,
+        r.useLayoutEffect(() => {
+            null != g.current && null == v && A(g.current.clientHeight);
+        }, [v]),
+        (0, l.jsxs)(a.EN, {
+            ref: n,
+            isExpanded: m,
+            onExpandedChange: f,
             children: [
-                (0, i.jsx)(m.U, {
-                    ref: p,
-                    style: null != T ? { minHeight: T } : void 0,
-                    title: n,
-                    "aria-label": n,
-                    description: S ? void 0 : l,
-                    trailingElement: (0, i.jsx)(u.vN3, {
-                        children: (0, i.jsx)(o.$, {
+                (0, l.jsx)(j.U, {
+                    ref: g,
+                    style: null != v ? { minHeight: v } : void 0,
+                    title: t,
+                    "aria-label": t,
+                    description: N ? void 0 : i,
+                    trailingElement: (0, l.jsx)(u.vN, {
+                        children: (0, l.jsx)(o.$, {
                             slot: "trigger",
-                            className: g.bW,
-                            children: (0, i.jsx)(d.ChevronLargeUpIcon, {
-                                className: r()(g.Kk, { [g.kX]: !_ }),
-                                color: c.A.colors.ICON_STRONG,
+                            className: h.bW,
+                            children: (0, l.jsx)(c.j, {
+                                className: s()(h.Kk, { [h.kX]: !m }),
+                                color: d.A.colors.ICON_STRONG,
                             }),
                         }),
                     }),
-                    onClick: () => x(!_),
+                    onClick: () => f(!m),
                 }),
-                (0, i.jsx)(a.kS, {
-                    className: r()(g.nd, { [g.t5]: !A }),
-                    children: (0, i.jsx)(u.BJc, { gap: 16, padding: { top: 16 }, children: h }),
+                (0, l.jsx)(a.kS, {
+                    className: s()(h.nd, { [h.t5]: !y }),
+                    children: (0, l.jsx)(x.B, { gap: 16, padding: { top: 16 }, children: p }),
                 }),
             ],
         })

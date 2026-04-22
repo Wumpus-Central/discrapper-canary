@@ -1,36 +1,37 @@
-a.d(n, { default: () => u });
+a.d(n, { default: () => g });
 var i = a(627968);
 a(64700);
 var e = a(311907),
-    r = a(397927),
-    s = a(442433),
-    l = a(50268),
-    d = a(147036),
-    o = a(957565),
-    c = a(832163),
-    p = a(746080),
-    h = a(985018);
-function u(t) {
+    r = a(861672),
+    s = a(477782),
+    l = a(442433),
+    d = a(50268),
+    o = a(147036),
+    c = a(957565),
+    p = a(832163),
+    h = a(746080),
+    u = a(985018);
+function g(t) {
     let { guild: n, onSelect: a } = t,
-        u = (0, e.bG)([c.A], () => c.A.getStorefrontData(n.id)?.storefront?.applicationId),
-        g = (0, l.A)({ id: u, label: h.intl.string(h.t["FfCL+6"]) });
-    return (0, i.jsxs)(r.W1t, {
+        g = (0, e.bG)([p.A], () => p.A.getStorefrontData(n.id)?.storefront?.applicationId),
+        b = (0, d.A)({ id: g, label: u.intl.string(u.t["FfCL+6"]) });
+    return (0, i.jsxs)(r.W, {
         "data-menu-migrated-auto": !0,
         navId: "game-shop-context",
-        "aria-label": h.intl.string(h.t.vyaWs7),
-        onClose: s.Z_,
+        "aria-label": u.intl.string(u.t.vyaWs7),
+        onClose: l.Z_,
         onSelect: a,
         children: [
-            (0, i.jsx)(r.rXV, {
-                children: (0, i.jsx)(r.Drp, {
+            (0, i.jsx)(s.rX, {
+                children: (0, i.jsx)(s.Dr, {
                     id: "game-shop-copy-link",
-                    label: h.intl.string(h.t.WqhZss),
+                    label: u.intl.string(u.t.WqhZss),
                     action: () => {
-                        (0, o.C)((0, d.n)(n.id, p.VV.GAME_SHOP));
+                        (0, c.C)((0, o.n)(n.id, h.VV.GAME_SHOP));
                     },
                 }),
             }),
-            null != g && (0, i.jsx)(r.rXV, { children: g }),
+            null != b && (0, i.jsx)(s.rX, { children: b }),
         ],
     });
 }

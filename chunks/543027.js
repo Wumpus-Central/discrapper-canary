@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => d });
 var r = n(64700),
     i = n(311907),
     s = n(158317),
@@ -7,53 +7,55 @@ var r = n(64700),
     o = n(624210),
     l = n(573582),
     u = n(818348);
-function c(e) {
-    return !d(e);
-}
-function d(e) {
-    return e?.billing_facet?.payment_gateway === u.kM.VIRTUAL_CURRENCY;
-}
-function _(e) {
-    return null != e.paymentSourceId || null != e.paymentGateway;
-}
-function f(e, t) {
+function d(e, t) {
     let n = (0, i.bG)([a.A], () => a.A.currentOrder),
         d = (0, i.bG)([a.A], () => a.A.currentOrderId),
-        f = (0, i.bG)([a.A], () => a.A.isCreatingOrder),
-        p = l.A.useConfig({ location: "payment_modal" }).enabled,
-        h = (0, r.useRef)(null),
-        m = (0, r.useRef)(""),
-        E = (0, r.useRef)(!1),
-        g = (0, r.useRef)(!1),
-        A = (0, r.useRef)(null);
+        c = (0, i.bG)([a.A], () => a.A.isCreatingOrder),
+        _ = l.A.useConfig({ location: "payment_modal" }).enabled,
+        f = (0, r.useRef)(null),
+        E = (0, r.useRef)(""),
+        h = (0, r.useRef)(!1),
+        p = (0, r.useRef)(!1),
+        m = (0, r.useRef)(null);
     (0, r.useEffect)(() => {
-        if (!p || null == d || null == t.paymentSourceId) return;
+        if (!_ || null == d || null == t.paymentSourceId) return;
         let e = t.paymentSourceId;
         async function r() {
-            let r = n ?? (await (0, s.r)(d)),
-                i = r?.billing_facet;
-            if (i?.payment_source_id === t.paymentSourceId) {
-                (h.current = d), (m.current = e);
+            var r;
+            let i = n ?? (await (0, s.r)(d)),
+                a = i?.billing_facet;
+            if (a?.payment_source_id === t.paymentSourceId) {
+                (f.current = d), (E.current = e);
                 return;
             }
-            c(r) && (await (0, o.iY)({ orderId: d, updates: t }), (h.current = d), (m.current = e));
+            (r = i),
+                r?.billing_facet?.payment_gateway !== u.kM.VIRTUAL_CURRENCY &&
+                    (await (0, o.iY)({ orderId: d, updates: t }), (f.current = d), (E.current = e));
         }
-        (h.current !== d || m.current !== e) && r();
-    }, [d, n, t.paymentSourceId, p]),
+        (f.current !== d || E.current !== e) && r();
+    }, [d, n, t.paymentSourceId, _]),
         (0, r.useEffect)(() => {
-            let e = A.current;
-            (A.current = d),
+            let e = m.current;
+            (m.current = d),
                 null == d && null != e
-                    ? ((g.current = !0), (h.current = null), (m.current = ""), (E.current = !1))
-                    : null != d && (g.current = !1);
+                    ? ((p.current = !0), (f.current = null), (E.current = ""), (h.current = !1))
+                    : null != d && (p.current = !1);
         }, [d]),
         (0, r.useEffect)(() => {
             if (null != d) {
-                (E.current = !1), (g.current = !1);
+                (h.current = !1), (p.current = !1);
                 return;
             }
-            if (g.current || !p || f || E.current || null == e || !_(t)) return;
-            E.current = !0;
+            if (
+                p.current ||
+                !_ ||
+                c ||
+                h.current ||
+                null == e ||
+                (null == t.paymentSourceId && null == t.paymentGateway)
+            )
+                return;
+            h.current = !0;
             let n = t.paymentGateway === u.kM.VIRTUAL_CURRENCY;
             (0, o.fS)({
                 skuId: e,
@@ -61,5 +63,5 @@ function f(e, t) {
                 paymentGateway: t.paymentGateway,
                 loadId: t.loadId,
             });
-        }, [d, f, e, t, p]);
+        }, [d, c, e, t, _]);
 }

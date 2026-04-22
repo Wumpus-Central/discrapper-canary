@@ -1,28 +1,25 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968),
-    a = n(64700),
-    l = n(397927),
-    s = n(123791),
-    r = n(627363),
-    o = n(985018);
-function d(e) {
+    l = n(64700),
+    a = n(192308),
+    s = n(821609),
+    r = n(503002),
+    o = n(123791),
+    d = n(627363),
+    c = n(985018);
+function u(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: a } = (0, r.YY)(t);
-    return null == a ? null : (0, i.jsx)(c, { app: a, guildId: n });
+        { data: l } = (0, d.YY)(t);
+    return null == l ? null : (0, i.jsx)(m, { app: l, guildId: n });
 }
-function c(e) {
-    let { app: t, guildId: r } = e;
-    (0, s.C)(t.id);
-    let d = a.useCallback(() => {
-        (0, l.mMO)(async () => {
+function m(e) {
+    let { app: t, guildId: d } = e;
+    (0, o.C)(t.id);
+    let u = l.useCallback(() => {
+        (0, a.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("33563"), n.e("17754")]).then(n.bind(n, 719847));
-            return (n) => (0, i.jsx)(e, { appId: t.id, guildId: r, ...n });
+            return (n) => (0, i.jsx)(e, { appId: t.id, guildId: d, ...n });
         });
-    }, [t, r]);
-    return (0, i.jsx)(l.Button, {
-        size: "sm",
-        onClick: d,
-        icon: l.Uzv,
-        text: o.intl.format(o.t.XDRjs5, { appName: t.name }),
-    });
+    }, [t, d]);
+    return (0, i.jsx)(s.$, { size: "sm", onClick: u, icon: r.U, text: c.intl.format(c.t.XDRjs5, { appName: t.name }) });
 }

@@ -1,42 +1,12 @@
 "use strict";
-n.d(t, { MU: () => p, oO: () => h, ow: () => f, wr: () => _ }), n(516773);
+n.d(t, { MU: () => d, oO: () => c, ow: () => u, wr: () => l }), n(516773);
 var r = n(508675),
     i = n(7584),
-    a = n(403362),
-    s = n(348943);
-function o(e) {
-    let { guildId: t, emojiId: n, emojiName: a } = e,
-        s = r.o2.get(t);
-    if (null == n && null == a) return null;
-    if (null != n)
-        if (null != s) return s.getById(n);
-        else return null;
-    return null != a ? i.Ay.getByName(a) : null;
-}
-let l = { label: "" };
-function u(e, t) {
-    let n = [, , , , ,].fill(l);
-    for (let r of t)
-        r.position < 0 ||
-            r.position >= 5 ||
-            (n[r.position] = {
-                label: r.label,
-                emoji: o({ guildId: e, emojiId: r.emoji_id, emojiName: r.emoji_name }) ?? void 0,
-            });
-    return n;
-}
-function c(e) {
-    return null == e
-        ? {}
-        : Object.entries(e).reduce((e, t) => {
-              let [n, r] = t;
-              return (e[n.toString()] = { level: r.activity_level, score: r.activity_score }), e;
-          }, {});
-}
-function d(e) {
-    return null == e || "" === e ? null : e;
-}
-function _(e) {
+    s = n(403362),
+    a = n(348943);
+let o = { label: "" };
+function l(e) {
+    var t, n;
     return {
         id: e.id,
         name: e.name,
@@ -45,11 +15,36 @@ function _(e) {
         customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
         memberCount: e.member_count,
-        brandColorPrimary: d(e.brand_color_primary),
+        brandColorPrimary: null == (t = e.brand_color_primary) || "" === t ? null : t,
         visibility: e.visibility,
-        traits: u(e.id, e.traits ?? []),
+        traits: (function (e, t) {
+            let n = [, , , , ,].fill(o);
+            for (let s of t)
+                s.position < 0 ||
+                    s.position >= 5 ||
+                    (n[s.position] = {
+                        label: s.label,
+                        emoji:
+                            (function (e) {
+                                let { guildId: t, emojiId: n, emojiName: s } = e,
+                                    a = r.o2.get(t);
+                                if (null == n && null == s) return null;
+                                if (null != n)
+                                    if (null != a) return a.getById(n);
+                                    else return null;
+                                return null != s ? i.Ay.getByName(s) : null;
+                            })({ guildId: e, emojiId: s.emoji_id, emojiName: s.emoji_name }) ?? void 0,
+                    });
+            return n;
+        })(e.id, e.traits ?? []),
         gameApplicationIds: e.game_application_ids ?? [],
-        gameActivity: c(e.game_activity),
+        gameActivity:
+            null == (n = e.game_activity)
+                ? {}
+                : Object.entries(n).reduce((e, t) => {
+                      let [n, r] = t;
+                      return (e[n.toString()] = { level: r.activity_level, score: r.activity_score }), e;
+                  }, {}),
         features: e.features ?? [],
         tag: e.tag,
         badge: e.badge,
@@ -60,7 +55,7 @@ function _(e) {
         premiumTier: e.premium_tier,
     };
 }
-function f(e) {
+function u(e) {
     let t = {};
     return (
         null != e.name && (t.name = e.name),
@@ -82,7 +77,7 @@ function f(e) {
                               emoji_animated: e.emoji?.animated,
                           },
                 )
-                .filter(a.Vq)),
+                .filter(s.Vq)),
         null != e.gameApplicationIds && (t.game_application_ids = e.gameApplicationIds),
         void 0 !== e.tag && (t.tag = e.tag),
         void 0 !== e.badge && (t.badge = e.badge),
@@ -91,15 +86,15 @@ function f(e) {
         t
     );
 }
-function p(e) {
+function d(e) {
     return e.reduce(
         (e, t) => ((e[t.game_application_id] = { level: t.activity_level, score: t.activity_score }), e),
         {},
     );
 }
-function h(e) {
+function c(e) {
     let { guild: t, profile: n } = e,
-        r = null != n ? _(n) : null;
+        r = null != n ? l(n) : null;
     return null != r
         ? r
         : null == t
@@ -112,7 +107,7 @@ function h(e) {
                 customBanner: t.banner,
                 onlineCount: t.approximate_presence_count ?? e.approximate_presence_count ?? 0,
                 memberCount: t.approximate_member_count ?? e.approximate_member_count ?? 0,
-                visibility: s.n.NOT_SPECIFIED,
+                visibility: a.n.NOT_SPECIFIED,
                 traits: [],
                 gameApplicationIds: [],
                 gameActivity: {},

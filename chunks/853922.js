@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { h: () => l, u: () => r });
+n.d(t, { h: () => s, u: () => r });
 var i,
-    s,
-    l =
+    l,
+    s =
         (((i = {}).OPEN = "OPEN"),
         (i.REJECTED = "REJECTED"),
         (i.APPROVED = "APPROVED"),
         (i.ACTION_REQUIRED = "ACTION_REQUIRED"),
         i),
-    r = (((s = {}).HOW_IT_WORKS = "HOW_IT_WORKS"), (s.BENEFITS = "BENEFITS"), (s.OTHER_CREATORS = "OTHER_CREATORS"), s);
+    r = (((l = {}).HOW_IT_WORKS = "HOW_IT_WORKS"), (l.BENEFITS = "BENEFITS"), (l.OTHER_CREATORS = "OTHER_CREATORS"), l);

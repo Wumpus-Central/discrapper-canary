@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, {
+r.d(t, {
     CV: () => a,
-    E9: () => v,
-    EB: () => d,
-    Pl: () => y,
-    Wp: () => s,
-    d2: () => S,
+    E9: () => C,
+    EB: () => m,
+    Pl: () => D,
+    Wp: () => i,
+    d2: () => P,
     eB: () => o,
-    fp: () => m,
+    fp: () => f,
     k8: () => h,
-    lT: () => p,
-    zL: () => g,
+    lT: () => g,
+    zL: () => p,
 });
-var r = n(476858),
-    i = n(364242);
+var n = r(476858),
+    s = r(364242);
 let a = {
         sunday: 0,
         sun: 0,
@@ -41,7 +40,7 @@ let a = {
         sat: 6,
         "sat.": 6,
     },
-    s = {
+    i = {
         january: 1,
         february: 2,
         march: 3,
@@ -56,7 +55,7 @@ let a = {
         december: 12,
     },
     o = {
-        ...s,
+        ...i,
         jan: 1,
         "jan.": 1,
         feb: 2,
@@ -139,7 +138,7 @@ let a = {
         "thirty first": 31,
         "thirty-first": 31,
     },
-    c = {
+    d = {
         second: "second",
         seconds: "second",
         minute: "minute",
@@ -157,7 +156,7 @@ let a = {
         year: "year",
         years: "year",
     },
-    d = {
+    m = {
         s: "second",
         sec: "second",
         second: "second",
@@ -190,47 +189,48 @@ let a = {
         yr: "year",
         year: "year",
         years: "year",
-        ...c,
+        ...d,
     },
-    _ = `(?:${(0, r.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`;
-function f(e) {
-    let t = e.toLowerCase();
-    if (void 0 !== l[t]) return l[t];
-    if ("a" === t || "an" === t || "the" == t) return 1;
-    if (t.match(/few/)) return 3;
-    if (t.match(/half/)) return 0.5;
-    if (t.match(/couple/)) return 2;
-    else if (t.match(/several/)) return 7;
-    return parseFloat(t);
-}
-let p = `(?:${(0, r.uJ)(u)}|[0-9]{1,2}(?:st|nd|rd|th)?)`;
+    c = `(?:${(0, n.uJ)(l)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`,
+    g = `(?:${(0, n.uJ)(u)}|[0-9]{1,2}(?:st|nd|rd|th)?)`;
 function h(e) {
     let t = e.toLowerCase();
     return void 0 !== u[t] ? u[t] : parseInt((t = t.replace(/(?:st|nd|rd|th)$/i, "")));
 }
-let m = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])";
-function g(e) {
+let f = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])";
+function p(e) {
     if (/BE/i.test(e)) return parseInt((e = e.replace(/BE/i, ""))) - 543;
     if (/BCE?/i.test(e)) return -parseInt((e = e.replace(/BCE?/i, "")));
     if (/(AD|CE)/i.test(e)) return parseInt((e = e.replace(/(AD|CE)/i, "")));
     let t = parseInt(e);
-    return (0, i.D)(t);
+    return (0, s.D)(t);
 }
-let E = `(${_})\\s{0,3}(${(0, r.uJ)(d)})`,
-    A = RegExp(E, "i"),
-    I = `(${_})\\s{0,3}(${(0, r.uJ)(c)})`,
-    T = "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
-    y = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", E, T),
-    S = (0, r.mb)("(?:(?:about|around)\\s{0,3})?", I, T);
-function v(e) {
+let y = `(${c})\\s{0,3}(${(0, n.uJ)(m)})`,
+    x = RegExp(y, "i"),
+    w = `(${c})\\s{0,3}(${(0, n.uJ)(d)})`,
+    A = "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
+    D = (0, n.mb)("(?:(?:about|around)\\s{0,3})?", y, A),
+    P = (0, n.mb)("(?:(?:about|around)\\s{0,3})?", w, A);
+function C(e) {
     let t = {},
-        n = e,
-        r = A.exec(n);
-    for (; r; ) C(t, r), (n = n.substring(r[0].length).trim()), (r = A.exec(n));
+        r = e,
+        n = x.exec(r);
+    for (; n; )
+        (function (e, t) {
+            if (t[0].match(/^[a-zA-Z]+$/)) return;
+            let r = (function (e) {
+                let t = e.toLowerCase();
+                if (void 0 !== l[t]) return l[t];
+                if ("a" === t || "an" === t || "the" == t) return 1;
+                if (t.match(/few/)) return 3;
+                if (t.match(/half/)) return 0.5;
+                if (t.match(/couple/)) return 2;
+                else if (t.match(/several/)) return 7;
+                return parseFloat(t);
+            })(t[1]);
+            e[m[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length).trim()),
+            (n = x.exec(r));
     return 0 == Object.keys(t).length ? null : t;
-}
-function C(e, t) {
-    if (t[0].match(/^[a-zA-Z]+$/)) return;
-    let n = f(t[1]);
-    e[d[t[2].toLowerCase()]] = n;
 }

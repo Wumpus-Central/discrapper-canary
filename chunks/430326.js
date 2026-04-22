@@ -1,130 +1,134 @@
-n.d(e, { default: () => y }), n(323874), n(14289), n(35956);
+n.d(e, { default: () => R }), n(323874), n(14289), n(35956);
 var i = n(627968),
-    c = n(64700),
-    a = n(158954),
-    s = n(311907),
-    o = n(397927),
-    l = n(793574),
-    r = n(688810),
-    u = n(607470),
-    d = n(987144),
-    _ = n(773669),
-    p = n(71393),
-    b = n(954571),
-    A = n(652215),
-    U = n(985018),
-    f = n(33759),
-    L = n(773055),
-    O = n(519636);
-function y(t) {
+    a = n(64700),
+    c = n(224640),
+    s = n(20742),
+    o = n(430993),
+    l = n(696208),
+    r = n(311907),
+    u = n(192308),
+    d = n(104510),
+    _ = n(793574),
+    p = n(688810),
+    b = n(607470),
+    A = n(987144),
+    U = n(773669),
+    f = n(71393),
+    L = n(954571),
+    y = n(652215),
+    E = n(985018),
+    M = n(33759),
+    O = n(773055),
+    T = n(519636);
+function R(t) {
     let {
             guildId: e,
-            transitionState: y,
-            onClose: E,
-            analyticsLocation: M,
-            sourceAnalyticsLocations: T,
-            videoPlacement: R,
+            transitionState: R,
+            onClose: g,
+            analyticsLocation: I,
+            sourceAnalyticsLocations: k,
+            videoPlacement: j,
         } = t,
-        g = (0, s.bG)([p.A], () => (null != e ? p.A.getGuild(e) : null)),
-        I = (0, s.bG)([_.default], () => _.default.locale),
-        k = (function (t) {
-            let [e, n] = c.useState(void 0);
+        D = (0, r.bG)([f.A], () => (null != e ? f.A.getGuild(e) : null)),
+        G = (0, r.bG)([U.default], () => U.default.locale),
+        h = (function (t) {
+            let [e, n] = a.useState(void 0);
             return (
-                c.useEffect(() => {
+                a.useEffect(() => {
                     let e;
                     if (t.startsWith("en")) return;
                     let i = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${t}.vtt`,
-                        c = !1;
+                        a = !1;
                     return (
                         fetch(i)
                             .then((t) => {
                                 if (t.ok) return t.text();
                             })
                             .then((t) => {
-                                c || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
+                                a || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
                             })
                             .catch(() => {}),
                         () => {
-                            (c = !0), null != e && URL.revokeObjectURL(e), n(void 0);
+                            (a = !0), null != e && URL.revokeObjectURL(e), n(void 0);
                         }
                     );
                 }, [t]),
                 e
             );
-        })(I),
-        { analyticsLocations: j } = (0, r.Ay)(T, l.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [D, m] = c.useState(!1),
-        G = c.useRef(!1),
-        h = c.useRef(null),
-        x = c.useMemo(
+        })(G),
+        { analyticsLocations: m } = (0, p.Ay)(k, _.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [x, C] = a.useState(!1),
+        S = a.useRef(!1),
+        v = a.useRef(null),
+        N = a.useMemo(
             () => ({
                 ...(null != e ? { guild_id: e } : {}),
-                type: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                location_stack: j,
-                location_section: M.section,
-                location_object: M.object,
-                video_placement: R,
+                type: y.liQ.PREMIUM_GUILD_USER_MODAL,
+                location_stack: m,
+                location_section: I.section,
+                location_object: I.object,
+                video_placement: j,
             }),
-            [M.object, M.section, j, e, R],
+            [I.object, I.section, m, e, j],
         ),
-        C = c.useCallback(
+        P = a.useCallback(
             (t) => {
                 let e = t.currentTarget.duration;
-                G.current ||
-                    ((G.current = !0),
-                    b.default.track(A.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
-                        ...x,
+                S.current ||
+                    ((S.current = !0),
+                    L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
+                        ...N,
                         ...(Number.isFinite(e) ? { video_duration_sec: e } : {}),
                     }));
             },
-            [x],
+            [N],
         ),
-        S = c.useCallback(
+        w = a.useCallback(
             (t) => {
                 let e = t.currentTarget.currentTime,
                     n = t.currentTarget.duration;
-                b.default.track(A.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
-                    ...x,
+                L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
+                    ...N,
                     ...(Number.isFinite(e) ? { seconds_played: e } : {}),
                     ...(Number.isFinite(n) ? { video_duration_sec: n } : {}),
                 });
             },
-            [x],
+            [N],
         );
-    async function v() {
-        null != g &&
-            (h.current?.pause(),
-            m(!0),
-            await (0, d.g)({
-                analyticsLocations: j,
+    async function B() {
+        null != D &&
+            (v.current?.pause(),
+            C(!0),
+            await (0, A.g)({
+                analyticsLocations: m,
                 analyticsLocation: {
-                    page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: A.ZSU.BUTTON_CTA,
-                    objectType: A.AnalyticsObjectTypes.BUY,
+                    page: y.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: y.ZSU.BUTTON_CTA,
+                    objectType: y.AnalyticsObjectTypes.BUY,
                 },
-                guild: g,
-                onClose: E,
+                guild: D,
+                onClose: g,
             }),
-            m(!1));
+            C(!1));
     }
-    async function N() {
-        h.current?.pause(),
-            await (0, o.mMO)(async () => {
+    async function K() {
+        v.current?.pause(),
+            await (0, u.openModalLazy)(async () => {
                 let { default: t } = await n.e("18710").then(n.bind(n, 770101));
                 return (e) =>
                     (0, i.jsx)(t, {
                         ...e,
                         onSelectGuild: (t) => {
                             e.onClose(),
-                                E(),
-                                (0, d.g)({
-                                    analyticsLocations: j,
+                                g(),
+                                (0, A.g)({
+                                    analyticsLocations: m,
                                     analyticsLocation: {
-                                        page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                                        section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                        object: A.ZSU.BUTTON_CTA,
-                                        objectType: A.AnalyticsObjectTypes.BUY,
+                                        page: y.liQ.PREMIUM_GUILD_USER_MODAL,
+                                        section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                        object: y.ZSU.BUTTON_CTA,
+                                        objectType: y.AnalyticsObjectTypes.BUY,
                                     },
                                     guild: t,
                                 });
@@ -132,39 +136,39 @@ function y(t) {
                     });
             });
     }
-    return (0, i.jsxs)(a.dWK, {
+    return (0, i.jsxs)(c.d, {
         size: "xxl",
-        transitionState: y,
-        onClose: E,
+        transitionState: R,
+        onClose: g,
         children: [
-            (0, i.jsx)(a.rQ0, { title: U.intl.string(U.t["0f1VCH"]) }),
-            (0, i.jsx)(a.cwr, {
-                children: (0, i.jsx)(u.A, {
-                    ref: h,
-                    className: f.K,
-                    src: L.A,
-                    poster: O.A,
+            (0, i.jsx)(s.rQ, { title: E.intl.string(E.t["0f1VCH"]) }),
+            (0, i.jsx)(o.c, {
+                children: (0, i.jsx)(b.A, {
+                    ref: v,
+                    className: M.K,
+                    src: O.A,
+                    poster: T.A,
                     controls: !0,
                     autoPlay: !0,
                     controlsList: "nodownload noremoteplayback noplaybackrate",
-                    onPlay: C,
-                    onEnded: S,
+                    onPlay: P,
+                    onEnded: w,
                     disablePictureInPicture: !0,
-                    children: null != k && (0, i.jsx)("track", { src: k, kind: "captions", srcLang: I, default: !0 }),
+                    children: null != h && (0, i.jsx)("track", { src: h, kind: "captions", srcLang: G, default: !0 }),
                 }),
             }),
-            (0, i.jsx)(a.H7u, {
+            (0, i.jsx)(l.H, {
                 actions: [
-                    null != g
+                    null != D
                         ? {
                               variant: "expressive",
                               size: "md",
-                              icon: o._Jp,
-                              text: U.intl.string(U.t.gKmQ1G),
-                              onClick: v,
-                              loading: D,
+                              icon: d._,
+                              text: E.intl.string(E.t.gKmQ1G),
+                              onClick: B,
+                              loading: x,
                           }
-                        : { variant: "primary", size: "md", text: U.intl.string(U.t.BMx1iy), onClick: N },
+                        : { variant: "primary", size: "md", text: E.intl.string(E.t.BMx1iy), onClick: K },
                 ],
             }),
         ],

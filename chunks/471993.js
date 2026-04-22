@@ -2,19 +2,21 @@
 n.d(t, { A: () => f });
 var r = n(627968);
 n(64700);
-var i = n(397927),
+var i = n(192308),
     s = n(401843),
     a = n(874124),
     o = n(734057),
     l = n(71393),
     u = n(430452),
-    c = n(287809),
-    d = n(723702),
+    d = n(287809),
+    c = n(723702),
     _ = n(753070);
 function f(e, t, f) {
-    if (d.isPlatformEmbedded)
-        (0, i.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("96811"), n.e("48697")]).then(n.bind(n, 648230));
+    if (c.isPlatformEmbedded)
+        (0, i.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([n.e("11250"), n.e("17239"), n.e("96811"), n.e("42171")]).then(
+                n.bind(n, 648230),
+            );
             return (t) => (0, r.jsx)(e, { ...t, analyticsLocations: f });
         });
     else {
@@ -23,7 +25,7 @@ function f(e, t, f) {
                 _.jQ.PRESET_CUSTOM,
                 _.on.RESOLUTION_1080,
                 _.kn.FPS_30,
-                c.default.getCurrentUser(),
+                d.default.getCurrentUser(),
                 l.A.getGuild(e)?.premiumTier,
                 n,
             )

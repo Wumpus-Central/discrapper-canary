@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(501459),
-    i = n(1673);
-let a = RegExp("(?:\\(|\\（)(?<weekday>" + Object.keys(r.tS).join("|") + ")(?:\\)|\\）)", "i");
-class s {
+r.d(t, { A: () => i });
+var n = r(501459),
+    s = r(1673);
+let a = RegExp("(?:\\(|\\（)(?<weekday>" + Object.keys(n.tS).join("|") + ")(?:\\)|\\）)", "i");
+class i {
     pattern() {
         return a;
     }
     extract(e, t) {
-        let n = t.groups.weekday,
-            a = r.tS[n];
-        return void 0 === a ? null : (0, i.Y5)(e.reference, a);
+        let r = t.groups.weekday,
+            a = n.tS[r];
+        return void 0 === a ? null : (0, s.Y5)(e.reference, a);
     }
 }

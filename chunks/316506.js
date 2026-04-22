@@ -1,22 +1,26 @@
-"use strict";
-n.d(t, { A: () => f, u: () => p });
+n.d(t, { A: () => C, u: () => I });
 var i = n(627968),
-    s = n(64700),
-    l = n(311907),
-    r = n(397927),
-    a = n(442433),
-    o = n(145643),
-    d = n(665013),
-    c = n(34457),
-    u = n(642133),
-    m = n(458334),
-    g = n(927573),
-    x = n(652215),
-    h = n(985018),
-    _ = n(873494),
-    A = n(146583);
-function p() {
-    let [e, t] = s.useState(!0);
+    l = n(64700),
+    s = n(311907),
+    r = n(834730),
+    a = n(939249),
+    o = n(365199),
+    d = n(512950),
+    c = n(696986),
+    u = n(761508),
+    m = n(442433),
+    g = n(145643),
+    h = n(665013),
+    x = n(34457),
+    _ = n(642133),
+    p = n(458334),
+    A = n(927573),
+    E = n(652215),
+    f = n(985018),
+    j = n(452832),
+    N = n(602535);
+function I() {
+    let [e, t] = l.useState(!0);
     return {
         scrolledToTop: e,
         handleScroll: function (e) {
@@ -24,103 +28,100 @@ function p() {
         },
     };
 }
-function f(e) {
-    let { guild: t, role: p, selectedSection: f, setSelectedSection: j } = e,
-        N = s.useCallback(
+function C(e) {
+    let { guild: t, role: I, selectedSection: C, setSelectedSection: b } = e,
+        v = l.useCallback(
             (e) => {
-                j(e);
+                b(e);
             },
-            [j],
+            [b],
         ),
-        E = (0, l.bG)([u.A], () => u.A.getRoleMemberCount(t.id)?.[p.id], [p.id, t.id]),
-        T = (0, c.Oy)(p),
-        C = (0, m.A)(t.id, p),
-        I = (0, l.bG)([o.A], () => {
-            let e = o.A.getGuildRoleConnectionsConfiguration(p.id);
+        S = (0, s.bG)([_.A], () => _.A.getRoleMemberCount(t.id)?.[I.id], [I.id, t.id]),
+        T = (0, x.Oy)(I),
+        y = (0, p.A)(t.id, I),
+        R = (0, s.bG)([g.A], () => {
+            let e = g.A.getGuildRoleConnectionsConfiguration(I.id);
             return (
                 null != e &&
                 e.some((e) =>
                     e.some(
-                        (e) => e.connectionType === x.fg2.RIOT_GAMES || e.connectionType === x.fg2.LEAGUE_OF_LEGENDS,
+                        (e) => e.connectionType === E.fg2.RIOT_GAMES || e.connectionType === E.fg2.LEAGUE_OF_LEGENDS,
                     ),
                 )
             );
         });
-    s.useEffect(() => {
-        T && j(g.T$.PERMISSIONS);
-    }, [T, j]);
-    let b = (0, d.x)(t, p);
+    l.useEffect(() => {
+        T && b(A.T$.PERMISSIONS);
+    }, [T, b]);
+    let L = (0, h.x)(t, I);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: A.gn,
+                className: N.gn,
                 children: [
-                    (0, i.jsx)(r.Text, {
-                        className: A.Qw,
+                    (0, i.jsx)(r.E, {
+                        className: N.Qw,
                         color: "text-strong",
                         variant: "text-md/semibold",
-                        children: h.intl.format(h.t.BUdGkE, { roleName: p.name }),
+                        children: f.intl.format(f.t.BUdGkE, { roleName: I.name }),
                     }),
-                    b
-                        ? (0, i.jsx)(r.DUT, {
-                              className: A.MK,
+                    L
+                        ? (0, i.jsx)(a.D, {
+                              className: N.MK,
                               onClick: function (e) {
-                                  (0, a.L3)(e, async () => {
+                                  (0, m.L3)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 665013));
-                                      return (n) => (0, i.jsx)(e, { ...n, guild: t, role: p });
+                                      return (n) => (0, i.jsx)(e, { ...n, guild: t, role: I });
                                   });
                               },
-                              "aria-label": h.intl.string(h.t.PdRCRg),
-                              children: (0, i.jsx)(r.jNK, { size: "md", color: "currentColor" }),
+                              "aria-label": f.intl.string(f.t.PdRCRg),
+                              children: (0, i.jsx)(o.j, { size: "md", color: "currentColor" }),
                           })
                         : null,
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: A.QR,
+                className: N.QR,
                 children: [
-                    null != C ? (0, i.jsx)(r.po8, { messageType: r.YCn.WARNING, children: C }) : null,
-                    I
-                        ? (0, i.jsx)(r.po8, {
-                              messageType: r.YCn.WARNING,
-                              children: h.intl.format(_.default.sbMMtk, {}),
-                          })
+                    null != y ? (0, i.jsx)(d.p, { messageType: d.Y.WARNING, children: y }) : null,
+                    R
+                        ? (0, i.jsx)(d.p, { messageType: d.Y.WARNING, children: f.intl.format(j.default.sbMMtk, {}) })
                         : null,
                 ],
             }),
-            (0, i.jsx)(r.hKd, { size: 6 }),
-            (0, i.jsxs)(r.VQ0, {
-                className: A.$H,
-                "aria-label": h.intl.string(h.t["+1H47t"]),
-                selectedItem: f,
+            (0, i.jsx)(c.h, { size: 6 }),
+            (0, i.jsxs)(u.V, {
+                className: N.$H,
+                "aria-label": f.intl.string(f.t["+1H47t"]),
+                selectedItem: C,
                 type: "top",
                 look: "brand",
-                onItemSelect: N,
+                onItemSelect: v,
                 children: [
-                    (0, i.jsx)(r.VQ0.Item, {
-                        className: A.YU,
-                        id: g.T$.DISPLAY,
+                    (0, i.jsx)(u.V.Item, {
+                        className: N.YU,
+                        id: A.T$.DISPLAY,
                         disabled: T,
-                        children: h.intl.string(h.t.hmdomw),
+                        children: f.intl.string(f.t.hmdomw),
                     }),
-                    (0, i.jsx)(r.VQ0.Item, {
-                        className: A.YU,
-                        id: g.T$.PERMISSIONS,
-                        children: h.intl.string(h.t.WIDE1L),
+                    (0, i.jsx)(u.V.Item, {
+                        className: N.YU,
+                        id: A.T$.PERMISSIONS,
+                        children: f.intl.string(f.t.WIDE1L),
                     }),
-                    (0, i.jsx)(r.VQ0.Item, {
-                        className: A.YU,
-                        id: g.T$.VERIFICATIONS,
+                    (0, i.jsx)(u.V.Item, {
+                        className: N.YU,
+                        id: A.T$.VERIFICATIONS,
                         disabled: T,
-                        children: h.intl.string(h.t["5//Muu"]),
+                        children: f.intl.string(f.t["5//Muu"]),
                     }),
-                    (0, i.jsx)(r.VQ0.Item, {
-                        className: A.YU,
-                        id: g.T$.MEMBERS,
+                    (0, i.jsx)(u.V.Item, {
+                        className: N.YU,
+                        id: A.T$.MEMBERS,
                         disabled: T,
                         children: T
-                            ? h.intl.string(h.t["kg//+7"])
-                            : h.intl.formatToPlainString(h.t.bHnZWW, { numMembers: String(E) }),
+                            ? f.intl.string(f.t["kg//+7"])
+                            : f.intl.formatToPlainString(f.t.bHnZWW, { numMembers: String(S) }),
                     }),
                 ],
             }),

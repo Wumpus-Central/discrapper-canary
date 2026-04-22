@@ -1,14 +1,14 @@
-n.d(t, { A: () => m }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
+    a = n(534514),
     r = n(197305),
     o = n(711014),
     d = n(827693),
-    c = n(985018),
-    u = n(602572);
-function m() {
+    u = n(985018),
+    c = n(942300);
+function g() {
     let e = (0, l.bG)([r.A], () => r.A.affinities),
         t = (0, l.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
         n = s.useMemo(() => {
@@ -22,10 +22,10 @@ function m() {
     return 0 === n.length
         ? null
         : (0, i.jsxs)("div", {
-              className: u.i,
+              className: c.i,
               children: [
-                  (0, i.jsx)(a.Heading, { variant: "heading-md/semibold", children: c.intl.string(c.t.r90Wgo) }),
-                  (0, i.jsx)("div", { className: u.k, children: n.map((e) => (0, i.jsx)(d.A, { guildId: e }, e)) }),
+                  (0, i.jsx)(a.D, { variant: "heading-md/semibold", children: u.intl.string(u.t.r90Wgo) }),
+                  (0, i.jsx)("div", { className: c.k, children: n.map((e) => (0, i.jsx)(d.A, { guildId: e }, e)) }),
               ],
           });
 }

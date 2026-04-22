@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = "[A-Za-z_\\u00A1-\\uFFFF][A-Za-z_0-9\\u00A1-\\uFFFF]*",
-        n = {
+        a = {
             $pattern: t,
             keyword: [
                 "baremodule",
@@ -266,46 +266,42 @@ e.exports = function (e) {
                 "WeakRef",
             ],
         },
-        r = { keywords: n, illegal: /<\// },
-        i = {
-            className: "number",
-            begin: /(\b0x[\d_]*(\.[\d_]*)?|0x\.\d[\d_]*)p[-+]?\d+|\b0[box][a-fA-F0-9][a-fA-F0-9_]*|(\b\d[\d_]*(\.[\d_]*)?|\.\d[\d_]*)([eEfF][-+]?\d+)?/,
-            relevance: 0,
-        },
-        s = { className: "string", begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/ },
-        a = { className: "subst", begin: /\$\(/, end: /\)/, keywords: n },
-        o = { className: "variable", begin: "\\$" + t },
-        l = {
+        n = { keywords: a, illegal: /<\// },
+        r = { className: "subst", begin: /\$\(/, end: /\)/, keywords: a },
+        i = { className: "variable", begin: "\\$" + t },
+        o = {
             className: "string",
-            contains: [e.BACKSLASH_ESCAPE, a, o],
+            contains: [e.BACKSLASH_ESCAPE, r, i],
             variants: [
                 { begin: /\w{0,149}"""/, end: /"""\w*/, relevance: 10 },
                 { begin: /\w{0,149}"/, end: /"\w*/ },
             ],
         },
-        u = { className: "string", contains: [e.BACKSLASH_ESCAPE, a, o], begin: "`", end: "`" },
-        c = { className: "meta", begin: "@" + t },
-        d = {
-            className: "comment",
-            variants: [
-                { begin: "#=", end: "=#", relevance: 10 },
-                { begin: "#", end: "$" },
-            ],
-        };
+        s = { className: "string", contains: [e.BACKSLASH_ESCAPE, r, i], begin: "`", end: "`" };
     return (
-        (r.name = "Julia"),
-        (r.contains = [
-            i,
+        (n.name = "Julia"),
+        (n.contains = [
+            {
+                className: "number",
+                begin: /(\b0x[\d_]*(\.[\d_]*)?|0x\.\d[\d_]*)p[-+]?\d+|\b0[box][a-fA-F0-9][a-fA-F0-9_]*|(\b\d[\d_]*(\.[\d_]*)?|\.\d[\d_]*)([eEfF][-+]?\d+)?/,
+                relevance: 0,
+            },
+            { className: "string", begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/ },
+            o,
             s,
-            l,
-            u,
-            c,
-            d,
+            { className: "meta", begin: "@" + t },
+            {
+                className: "comment",
+                variants: [
+                    { begin: "#=", end: "=#", relevance: 10 },
+                    { begin: "#", end: "$" },
+                ],
+            },
             e.HASH_COMMENT_MODE,
             { className: "keyword", begin: "\\b(((abstract|primitive)\\s+)type|(mutable\\s+)?struct)\\b" },
             { begin: /<:/ },
         ]),
-        (a.contains = r.contains),
-        r
+        (r.contains = n.contains),
+        n
     );
 };

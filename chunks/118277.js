@@ -4,9 +4,9 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(317097),
-    o = n(397927),
-    c = n(573435),
-    d = n(673664);
+    o = n(428689),
+    d = n(573435),
+    c = n(840432);
 let u = [1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f];
 function h(e) {
     return (0, r.Hl)(
@@ -28,22 +28,22 @@ function A(e) {
             u(h(t));
         }, [t]),
         (0, i.jsxs)("div", {
-            className: a()(d.iE, n),
+            className: a()(c.iE, n),
             children: [
-                (0, i.jsx)(c.Ay, {
-                    mask: c.Ay.Masks.STATUS_SCREENSHARE,
+                (0, i.jsx)(d.Ay, {
+                    mask: d.Ay.Masks.STATUS_SCREENSHARE,
                     width: 32,
                     height: 32,
                     children:
                         null == s || 0 === s.length
                             ? (0, i.jsx)("div", {
-                                  className: d.Kk,
+                                  className: c.Kk,
                                   style: { backgroundColor: r },
                                   children: t[0] ?? "?",
                               })
-                            : (0, i.jsx)("img", { alt: "", src: s, className: d.Kk }),
+                            : (0, i.jsx)("img", { alt: "", src: s, className: c.Kk }),
                 }),
-                (0, i.jsx)(o.npA, { size: "md", color: "currentColor", className: d.qS }),
+                (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: c.qS }),
             ],
         })
     );

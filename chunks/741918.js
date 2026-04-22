@@ -1,45 +1,40 @@
 "use strict";
-n.d(t, { D$: () => i, Gl: () => a, X2: () => r });
-var r = (function (e) {
-        return (
-            (e.NAVIGATE_UP = "NAVIGATE_UP"),
-            (e.NAVIGATE_DOWN = "NAVIGATE_DOWN"),
-            (e.NAVIGATE_LEFT = "NAVIGATE_LEFT"),
-            (e.NAVIGATE_RIGHT = "NAVIGATE_RIGHT"),
-            (e.NAVIGATE_START = "NAVIGATE_START"),
-            (e.NAVIGATE_END = "NAVIGATE_END"),
-            (e.NAVIGATE_INLINE_START = "NAVIGATE_INLINE_START"),
-            (e.NAVIGATE_INLINE_END = "NAVIGATE_INLINE_END"),
-            (e.NAVIGATE_CROSSLINE_START = "NAVIGATE_CROSSLINE_START"),
-            (e.NAVIGATE_CROSSLINE_END = "NAVIGATE_CROSSLINE_END"),
-            (e.NAVIGATE_NEXT_INTERACTABLE = "NAVIGATE_NEXT_INTERACTABLE"),
-            (e.NAVIGATE_PREV_INTERACTABLE = "NAVIGATE_PREV_INTERACTABLE"),
-            (e.NAVIGATE_IN = "NAVIGATE_IN"),
-            (e.NAVIGATE_OUT = "NAVIGATE_OUT"),
-            (e.SELECT_FOCUSED_ITEM = "SELECT_FOCUSED_ITEM"),
-            (e.QUERY_START = "QUERY_START"),
-            (e.QUERY_CLEAR = "QUERY_CLEAR"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (
-            (e.ENTER = "Enter"),
-            (e.SPACE = " "),
-            (e.ESCAPE = "Escape"),
-            (e.TAB = "Tab"),
-            (e.F10 = "F10"),
-            (e.HOME = "Home"),
-            (e.END = "End"),
-            (e.UP = "ArrowUp"),
-            (e.DOWN = "ArrowDown"),
-            (e.LEFT = "ArrowLeft"),
-            (e.RIGHT = "ArrowRight"),
-            (e.PAGE_UP = "PageUp"),
-            (e.PAGE_DOWN = "PageDown"),
-            e
-        );
-    })({}),
-    a = (function (e) {
-        return (e.HORIZONTAL = "horizontal"), (e.VERTICAL = "vertical"), e;
-    })({});
+n.d(t, { D$: () => o, Gl: () => l, X2: () => a });
+var r,
+    i,
+    s,
+    a =
+        (((r = {}).NAVIGATE_UP = "NAVIGATE_UP"),
+        (r.NAVIGATE_DOWN = "NAVIGATE_DOWN"),
+        (r.NAVIGATE_LEFT = "NAVIGATE_LEFT"),
+        (r.NAVIGATE_RIGHT = "NAVIGATE_RIGHT"),
+        (r.NAVIGATE_START = "NAVIGATE_START"),
+        (r.NAVIGATE_END = "NAVIGATE_END"),
+        (r.NAVIGATE_INLINE_START = "NAVIGATE_INLINE_START"),
+        (r.NAVIGATE_INLINE_END = "NAVIGATE_INLINE_END"),
+        (r.NAVIGATE_CROSSLINE_START = "NAVIGATE_CROSSLINE_START"),
+        (r.NAVIGATE_CROSSLINE_END = "NAVIGATE_CROSSLINE_END"),
+        (r.NAVIGATE_NEXT_INTERACTABLE = "NAVIGATE_NEXT_INTERACTABLE"),
+        (r.NAVIGATE_PREV_INTERACTABLE = "NAVIGATE_PREV_INTERACTABLE"),
+        (r.NAVIGATE_IN = "NAVIGATE_IN"),
+        (r.NAVIGATE_OUT = "NAVIGATE_OUT"),
+        (r.SELECT_FOCUSED_ITEM = "SELECT_FOCUSED_ITEM"),
+        (r.QUERY_START = "QUERY_START"),
+        (r.QUERY_CLEAR = "QUERY_CLEAR"),
+        r),
+    o =
+        (((i = {}).ENTER = "Enter"),
+        (i.SPACE = " "),
+        (i.ESCAPE = "Escape"),
+        (i.TAB = "Tab"),
+        (i.F10 = "F10"),
+        (i.HOME = "Home"),
+        (i.END = "End"),
+        (i.UP = "ArrowUp"),
+        (i.DOWN = "ArrowDown"),
+        (i.LEFT = "ArrowLeft"),
+        (i.RIGHT = "ArrowRight"),
+        (i.PAGE_UP = "PageUp"),
+        (i.PAGE_DOWN = "PageDown"),
+        i),
+    l = (((s = {}).HORIZONTAL = "horizontal"), (s.VERTICAL = "vertical"), s);

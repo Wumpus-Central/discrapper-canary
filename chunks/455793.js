@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { t: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+a.d(l, { t: () => c });
+var t = a(627968);
+a(64700);
+var s = a(827734),
+    i = a(996682),
+    n = a(27989);
+let c = (e) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
+            size: l = "md",
+            width: a,
+            height: c,
+            color: h = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
+            ...o
         } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+        d = (0, n.J)(l),
+        v = d?.width ?? a,
+        g = d?.height ?? c;
+    return (0, t.jsx)("svg", {
+        ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: v,
+        height: g,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof h ? h : h.css,
             fillRule: "evenodd",
             d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm2.03 13.7c.5.3 1.1.45 1.75.45.64 0 1.19-.13 1.66-.4.47-.25.85-.63 1.11-1.13l-1.14-.89a1.83 1.83 0 0 1-1.63 1.03 1.7 1.7 0 0 1-1.6-1.08 3.2 3.2 0 0 1-.25-1.3c0-.5.08-.94.24-1.3.16-.36.38-.63.67-.81a1.75 1.75 0 0 1 1.9 0c.28.18.5.43.67.75l1.14-.89c-.54-1.01-1.46-1.52-2.77-1.52-.66 0-1.24.15-1.75.46-.51.3-.91.73-1.2 1.3a4.39 4.39 0 0 0-.43 2c0 .78.14 1.45.43 2.01.29.57.69 1 1.2 1.32Zm6.74 0c.51.3 1.1.45 1.76.45.63 0 1.19-.13 1.66-.4.47-.25.84-.63 1.1-1.13l-1.14-.89a1.83 1.83 0 0 1-1.62 1.03 1.7 1.7 0 0 1-1.6-1.08 3.2 3.2 0 0 1-.25-1.3c0-.5.08-.94.24-1.3a1.7 1.7 0 0 1 1.6-1.1 1.86 1.86 0 0 1 1.63 1.03l1.15-.88c-.54-1.01-1.46-1.52-2.77-1.52-.66 0-1.25.15-1.76.46-.5.3-.9.73-1.2 1.3a4.39 4.39 0 0 0-.42 2c0 .78.14 1.45.43 2.01.28.57.68 1 1.2 1.32Z",
             clipRule: "evenodd",
-            className: u,
+            className: r,
         }),
     });
 };

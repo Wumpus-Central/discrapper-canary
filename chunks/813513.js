@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    a = n(397927),
+    a = n(573613),
     r = n(685399),
     o = n(667936),
     d = n(879349),
@@ -15,7 +15,7 @@ function h(e) {
         h = Array.from((0, r.Rz)(l).values());
     return 0 === h.length
         ? null
-        : (0, i.jsxs)(a.HOs, {
+        : (0, i.jsxs)(a.Ip, {
               className: s()(u.popover, c.kL),
               children: [
                   (0, i.jsx)("div", { className: c.oT, children: (0, i.jsx)(d.A, { channel: t }) }),

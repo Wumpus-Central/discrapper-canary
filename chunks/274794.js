@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g }), n(667532), n(321073);
+n.d(t, { A: () => p }), n(667532), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(735438),
@@ -7,19 +7,13 @@ var r = n(284009),
     o = n(954571),
     l = n(927813),
     u = n(636401),
-    c = n(639621),
-    d = n(722306),
+    d = n(639621),
+    c = n(722306),
     _ = n(613057),
     f = n(652215);
-let p = "RPC_STORE_WAIT",
+let E = "RPC_STORE_WAIT",
     h = [];
-function m(e, t) {
-    return a().isEqual(e, a().pick(t, Object.keys(e)));
-}
-function E(e) {
-    return !!h.includes(e) || (h.unshift(e), h.splice(50), !1);
-}
-class g {
+class p {
     getCurrentUser = () => null;
     onConnect = () => {};
     onDisconnect = () => {};
@@ -49,7 +43,7 @@ class g {
         if (e.transport === _.z4.IPC) {
             let n = this.getCurrentUser();
             if (null == n) return void e.close(f.YI$.CLOSE_NORMAL, "User logged out");
-            t.user = (0, c.A)(n);
+            t.user = (0, d.A)(n);
         }
         this.dispatch(e, null, f.e$_.DISPATCH, f.ZE4.READY, t);
     }
@@ -66,7 +60,7 @@ class g {
             let r = t.cmd,
                 i = this.commands[r];
             if (null == i) throw new u.A({ errorCode: f.Lw6.INVALID_COMMAND }, `Invalid command: ${t.cmd}`);
-            if (!(0, d.A)(e.authorization.scopes, i.scope))
+            if (!(0, c.A)(e.authorization.scopes, i.scope))
                 throw new u.A({ errorCode: f.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
             o.default.track(f.HAw.RPC_COMMAND_SENT, {
                 command: r,
@@ -172,13 +166,13 @@ class g {
         a().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate();
     }
     dispatchToSubscriptions(e, t, n, r) {
-        (null != r && "" !== r && E(r)) ||
+        (null != r && "" !== r && (h.includes(r) || (h.unshift(r), h.splice(50), 0))) ||
             this.subscriptions.forEach((r) => {
-                r.evt !== e ||
-                    (("function" != typeof t || t(r)) &&
-                        ("object" != typeof t || m(t, r.args ?? {})) &&
-                        ("function" == typeof n && (n = n(r)),
-                        this.dispatch(r.socket, null, f.e$_.DISPATCH, r.evt, n)));
+                var i;
+                r.evt === e &&
+                    ("function" != typeof t || t(r)) &&
+                    ("object" != typeof t || ((i = r.args ?? {}), a().isEqual(t, a().pick(i, Object.keys(t))))) &&
+                    ("function" == typeof n && (n = n(r)), this.dispatch(r.socket, null, f.e$_.DISPATCH, r.evt, n));
             });
     }
     updateSubscriptions() {
@@ -190,12 +184,12 @@ class g {
         let r = t();
         if (r || 0 === n) return Promise.resolve(r);
         let i = a().uniqueId(),
-            s = () => this.removeSubscription(e, p, { uniqueId: i });
+            s = () => this.removeSubscription(e, E, { uniqueId: i });
         return new Promise((r, a) => {
             let o = setTimeout(() => {
                 s(), a(Error("timeout"));
             }, n * l.A.Millis.SECOND);
-            this.addSubscription(e, p, { uniqueId: i }, () => {
+            this.addSubscription(e, E, { uniqueId: i }, () => {
                 let e = t();
                 e && (clearTimeout(o), r(e));
             });

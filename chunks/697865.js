@@ -1,63 +1,67 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => k });
 var r = n(627968),
     i = n(503698),
     l = n.n(i),
-    s = n(158954),
-    o = n(311907),
-    a = n(421380),
-    u = n(397927),
-    d = n(730134),
-    c = n(775602),
-    p = n(509536),
-    _ = n(721923),
-    m = n(29086),
-    A = n(854627),
-    f = n(696451),
-    g = n(317525),
-    x = n(71393),
-    v = n(287809),
-    h = n(562153),
-    E = n(837921),
-    I = n(652215),
-    j = n(853513),
-    b = n(985018),
-    S = n(32746);
-let C = E.Ay.getEnableHardwareAcceleration() ? u.JsQ : d.A;
-function w(e) {
+    s = n(834730),
+    a = n(311907),
+    o = n(862482),
+    d = n(97808),
+    u = n(778712),
+    c = n(463930),
+    _ = n(104510),
+    m = n(827734),
+    p = n(730134),
+    A = n(775602),
+    x = n(509536),
+    g = n(721923),
+    f = n(29086),
+    h = n(854627),
+    v = n(696451),
+    E = n(317525),
+    S = n(71393),
+    I = n(287809),
+    b = n(562153),
+    j = n(837921),
+    C = n(652215),
+    w = n(853513),
+    L = n(985018),
+    N = n(32746);
+let y = j.Ay.getEnableHardwareAcceleration() ? d.Js : p.A;
+function k(e) {
     let { guildId: t } = e,
-        n = (0, o.bG)([x.A], () => x.A.getGuild(t)),
-        i = (0, o.bG)([g.A], () => g.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        d = (0, o.bG)([v.default], () => v.default.getCurrentUser()),
-        E = d?.id,
-        w = (0, o.bG)([f.Ay], () => (null != E ? f.Ay.getMember(t, E) : void 0), [E, t]),
-        y = w?.premiumSince != null,
-        L = (0, o.bG)([c.A], () => c.A.useReducedMotion),
+        n = (0, a.bG)([S.A], () => S.A.getGuild(t)),
+        i = (0, a.bG)([E.A], () => E.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        d = (0, a.bG)([I.default], () => I.default.getCurrentUser()),
+        p = d?.id,
+        j = (0, a.bG)([v.Ay], () => (null != p ? v.Ay.getMember(t, p) : void 0), [p, t]),
+        k = j?.premiumSince != null,
+        R = (0, a.bG)([A.A], () => A.A.useReducedMotion),
         {
-            avatarDecorationSrc: k,
-            avatarSrc: N,
-            eventHandlers: R,
-        } = (0, A.A)({ userId: d?.id, guildId: t, size: u._3J.SIZE_40, animateOnHover: !L });
-    return null == n || null == w || null == d
+            avatarDecorationSrc: T,
+            avatarSrc: P,
+            eventHandlers: O,
+        } = (0, h.A)({ userId: d?.id, guildId: t, size: u._3.SIZE_40, animateOnHover: !R });
+    return null == n || null == j || null == d
         ? null
         : (0, r.jsxs)("div", {
-              className: S.ft,
+              className: N.ft,
               children: [
                   (0, r.jsxs)("div", {
-                      className: S.FS,
+                      className: N.FS,
                       children: [
-                          (0, r.jsx)(s.EYj, {
+                          (0, r.jsx)(s.E, {
                               variant: "text-md/semibold",
-                              children: b.intl.string(y ? j.default.KSWK1U : j.default.XXXX5l),
+                              children: L.intl.string(k ? w.default.KSWK1U : w.default.XXXX5l),
                           }),
-                          (0, r.jsx)(s.EYj, {
+                          (0, r.jsx)(s.E, {
                               variant: "text-sm/medium",
-                              children: b.intl.format(y ? j.default["7fWTg4"] : j.default["7PXeeQ"], {
+                              children: L.intl.format(k ? w.default["7fWTg4"] : w.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, p.K4)({
+                                      (0, x.K4)({
                                           guildId: t,
                                           location: {
-                                              section: I.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: I.ZSU.LEARN_MORE,
+                                              section: C.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: C.ZSU.LEARN_MORE,
                                           },
                                       });
                                   },
@@ -66,41 +70,41 @@ function w(e) {
                       ],
                   }),
                   null != i &&
-                      !y &&
-                      (0, r.jsx)(m.V, {
-                          avatar: (0, r.jsx)(C, {
-                              ...R,
+                      !k &&
+                      (0, r.jsx)(f.V, {
+                          avatar: (0, r.jsx)(y, {
+                              ...O,
                               user: d,
-                              src: N,
-                              avatarDecoration: k,
-                              size: u._3J.SIZE_40,
+                              src: P,
+                              avatarDecoration: T,
+                              size: u._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, r.jsx)(u.gyj, {
+                          username: (0, r.jsx)(c.g, {
                               variant: "text-md/semibold",
-                              name: h.Ay.getName(t, null, d),
+                              name: b.Ay.getName(t, null, d),
                               colorString: i.colorString,
                               colorStrings: i.colorStrings,
                           }),
-                          className: l()(S.Qs, S.cX),
-                          message: b.intl.string(b.t["6OSasb"]),
-                          decorations: (0, r.jsx)(u._Jp, {
-                              color: u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: S.$J,
+                          className: l()(N.Qs, N.cX),
+                          message: L.intl.string(L.t["6OSasb"]),
+                          decorations: (0, r.jsx)(_._, {
+                              color: m.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                              className: N.$J,
                           }),
                       }),
-                  (0, r.jsx)(_.A, {
+                  (0, r.jsx)(g.A, {
                       guild: n,
-                      className: S.Qs,
+                      className: N.Qs,
                       analyticsLocation: {
-                          page: I.liQ.GUILD_POWERUPS_OVERVIEW,
-                          section: I.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                          page: C.liQ.GUILD_POWERUPS_OVERVIEW,
+                          section: C.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: a.XD.BRAND,
-                      size: a.lO.MEDIUM,
+                      color: o.XD.BRAND,
+                      size: o.lO.MEDIUM,
                       fullWidth: !0,
-                      icon: (0, r.jsx)(u._Jp, { color: "currentColor", size: "sm" }),
+                      icon: (0, r.jsx)(_._, { color: "currentColor", size: "sm" }),
                   }),
               ],
           });

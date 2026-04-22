@@ -1,41 +1,43 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => N });
 var l = n(627968);
 n(64700);
-var i = n(311907),
+var a = n(311907),
     s = n(342952),
-    r = n(397927),
-    a = n(693879),
-    o = n(607407),
-    u = n(652176),
-    c = n(323443),
-    d = n(575731),
-    m = n(10862),
-    h = n(616356),
-    g = n(977997),
-    A = n(47167),
+    i = n(834730),
+    r = n(778712),
+    o = n(821609),
+    c = n(693879),
+    u = n(607407),
+    d = n(652176),
+    m = n(323443),
+    g = n(575731),
+    h = n(10862),
+    p = n(616356),
+    A = n(977997),
+    _ = n(47167),
     f = n(475889),
-    p = n(262763),
+    v = n(262763),
     x = n(402216),
     C = n(985018),
-    N = n(417068);
-let v = function (e) {
+    I = n(255201);
+let N = function (e) {
     let { channel: t } = e,
-        n = (0, i.bG)([g.A], () => g.A.isInChannel(t.id)),
-        v = (0, d.A)(t),
-        E = (0, A.Ay)(t),
-        T = (0, f.H)(t),
-        b = (0, i.bG)([h.A], () => h.A.getAllApplicationStreamsForChannel(t.id)[0]);
-    return (0, l.jsxs)(u.Uq, {
-        className: N.jC,
+        n = (0, a.bG)([A.A], () => A.A.isInChannel(t.id)),
+        N = (0, g.A)(t),
+        E = (0, _.Ay)(t),
+        b = (0, f.H)(t),
+        T = (0, a.bG)([p.A], () => p.A.getAllApplicationStreamsForChannel(t.id)[0]);
+    return (0, l.jsxs)(d.Uq, {
+        className: I.jC,
         children: [
             (0, l.jsxs)("div", {
-                className: N.hY,
+                className: I.hY,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: N.HA,
+                        className: I.HA,
                         children: [
-                            (0, l.jsx)(m.A, {
+                            (0, l.jsx)(h.A, {
                                 size: "custom",
                                 height: 20,
                                 width: 20,
@@ -44,51 +46,51 @@ let v = function (e) {
                                 style: { flexShrink: 0 },
                             }),
                             (0, l.jsx)("div", {
-                                className: N.Mw,
-                                children: (0, l.jsx)(r.Text, {
+                                className: I.Mw,
+                                children: (0, l.jsx)(i.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
-                                    className: N.Kw,
+                                    className: I.Kw,
                                     children: E,
                                 }),
                             }),
                         ],
                     }),
-                    null != T &&
+                    null != b &&
                         (0, l.jsx)("span", {
-                            className: N.j2,
-                            children: (0, l.jsx)(a.z, { entry: { start: T }, textColor: "text-feedback-positive" }),
+                            className: I.j2,
+                            children: (0, l.jsx)(c.z, { entry: { start: b }, textColor: "text-feedback-positive" }),
                         }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: N.Bm,
+                className: I.Bm,
                 children: [
-                    null != b &&
+                    null != T &&
                         (0, l.jsxs)("div", {
-                            className: N.yt,
+                            className: I.yt,
                             children: [
-                                (0, l.jsx)(o.A, { stream: b, className: N.Rh, noText: !0 }),
-                                (0, l.jsx)(x.Ay, { size: x.Ay.Sizes.SMALL, className: N.wI }),
+                                (0, l.jsx)(u.A, { stream: T, className: I.Rh, noText: !0 }),
+                                (0, l.jsx)(x.Ay, { size: x.Ay.Sizes.SMALL, className: I.wI }),
                             ],
                         }),
                     (0, l.jsx)(s.A, {
-                        users: v,
+                        users: N,
                         guildId: t.guild_id,
                         channelId: t.id,
-                        size: r._3J.SIZE_24,
+                        size: r._3.SIZE_24,
                         maxUsers: 8,
                         "aria-label": C.intl.string(C.t["jNqDh/"]),
                     }),
-                    (0, l.jsx)(r.Button, {
+                    (0, l.jsx)(o.$, {
                         variant: n ? "secondary" : "active",
                         size: "sm",
                         text: n ? C.intl.string(C.t["3xjX0U"]) : C.intl.string(C.t.VJlc0S),
                         fullWidth: !0,
                         onClick: () => {
                             t.isGuildStageVoice()
-                                ? (0, c.av)(t)
-                                : p.A.handleVoiceConnect({
+                                ? (0, m.av)(t)
+                                : v.A.handleVoiceConnect({
                                       channel: t,
                                       connected: n,
                                       needSubscriptionToAccess: !1,

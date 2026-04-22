@@ -12,15 +12,13 @@ class l extends s.D {
     }
     setupReportingTimer() {
         let e = r.A?.processUtils?.setMemoryInformation;
-        if (null == e) return void o.log("setMemoryInformation not available.");
-        function t(e) {
-            return Math.ceil(e / 1024);
-        }
-        performance.memory?.usedJSHeapSize == null && o.error("usedJSHeapSize is not available."),
-            setInterval(() => {
-                let n = performance.memory?.usedJSHeapSize ?? 0;
-                e({ memoryUsageKB: this.lastMemoryUsageKB ?? 0, usedJSHeapSizeKB: t(n) });
-            }, 1e4);
+        null == e
+            ? o.log("setMemoryInformation not available.")
+            : (performance.memory?.usedJSHeapSize == null && o.error("usedJSHeapSize is not available."),
+              setInterval(() => {
+                  let t = performance.memory?.usedJSHeapSize ?? 0;
+                  e({ memoryUsageKB: this.lastMemoryUsageKB ?? 0, usedJSHeapSizeKB: Math.ceil(t / 1024) });
+              }, 1e4));
     }
     getProcessUptime() {
         return r.A?.processUtils?.getProcessUptime?.();

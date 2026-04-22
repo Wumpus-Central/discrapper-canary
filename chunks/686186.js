@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__62dd3",
     vn: "dragHandleButton__62dd3",

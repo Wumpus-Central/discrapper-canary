@@ -1,12 +1,12 @@
-n.d(t, { A: () => i });
-var l = n(627968),
-    a = n(397927),
+n.d(t, { A: () => s });
+var a = n(627968),
+    l = n(834730),
     r = n(985018),
-    s = n(420255);
-function i() {
-    return (0, l.jsx)("div", {
-        className: s.k,
-        children: (0, l.jsx)(a.Text, {
+    i = n(901252);
+function s() {
+    return (0, a.jsx)("div", {
+        className: i.k,
+        children: (0, a.jsx)(l.E, {
             variant: "text-sm/medium",
             color: "text-subtle",
             children: r.intl.string(r.t.zksHZO),

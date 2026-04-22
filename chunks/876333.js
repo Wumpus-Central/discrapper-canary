@@ -1,7 +1,8 @@
-a.d(t, { F: () => d });
-var l = a(585026),
-    r = a(580766),
+"use strict";
+a.d(t, { F: () => o });
+var r = a(585026),
+    l = a(580766),
     n = a(950966),
-    o = a(86962),
+    i = a(86962),
     s = a(300056);
-let d = { title: "Mana", stories: [l.r, r.r, n.Z, o.O, s.a] };
+let o = { title: "Mana", stories: [r.r, l.r, n.Z, i.O, s.a] };

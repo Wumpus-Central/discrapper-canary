@@ -1,71 +1,72 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    r = n(890698),
-    l = n(146571),
-    a = n(854378),
-    o = n(985018),
-    c = n(818050);
-function d(e) {
+var s = n(821609),
+    r = n(123292),
+    l = n(890698),
+    a = n(146571),
+    o = n(854378),
+    c = n(985018),
+    d = n(818050);
+function u(e) {
     let {
         authBoxClassName: t,
         country: n,
-        login: d,
-        password: u,
-        onLoginChange: _,
-        onPasswordChange: h,
-        setLoginRef: g,
-        setPasswordRef: p,
+        login: u,
+        password: _,
+        onLoginChange: h,
+        onPasswordChange: m,
+        setLoginRef: p,
+        setPasswordRef: g,
     } = e;
-    return (0, i.jsxs)(a.Ay, {
+    return (0, i.jsxs)(o.Ay, {
         className: t,
         children: [
-            (0, i.jsx)(r.M, {}),
-            (0, i.jsxs)(a.eB, {
-                className: c.QX,
+            (0, i.jsx)(l.M, {}),
+            (0, i.jsxs)(o.eB, {
+                className: d.QX,
                 children: [
-                    (0, i.jsx)(l.A, {
-                        className: c.SX,
+                    (0, i.jsx)(a.A, {
+                        className: d.SX,
                         alpha2: n.alpha2,
                         countryCode: n.code.split(" ")[0],
-                        label: o.intl.string(o.t.tUjnxr),
-                        onChange: _,
-                        setRef: g,
+                        label: c.intl.string(c.t.tUjnxr),
+                        onChange: h,
+                        setRef: p,
                         autoCapitalize: "none",
                         autoComplete: "username webauthn",
                         autoCorrect: "off",
                         spellCheck: "false",
-                        value: d,
+                        value: u,
                         autoFocus: !0,
                         required: !0,
                     }),
-                    (0, i.jsx)(a.pd, {
-                        className: c.SX,
-                        label: o.intl.string(o.t["CIGa+7"]),
-                        onChange: h,
+                    (0, i.jsx)(o.pd, {
+                        className: d.SX,
+                        label: c.intl.string(c.t["CIGa+7"]),
+                        onChange: m,
                         type: "password",
-                        setRef: p,
+                        setRef: g,
                         autoComplete: "current-password",
                         spellCheck: "false",
-                        value: u,
+                        value: _,
                         required: !0,
                     }),
                     (0, i.jsx)("div", {
-                        className: c.QB,
-                        children: (0, i.jsx)(s.Button, {
-                            text: o.intl.string(o.t.dKhVQN),
+                        className: d.QB,
+                        children: (0, i.jsx)(s.$, {
+                            text: c.intl.string(c.t.dKhVQN),
                             fullWidth: !0,
                             type: "submit",
                             disabled: !0,
                         }),
                     }),
-                    (0, i.jsx)(s.QWc, { text: o.intl.string(o.t.wWIufs), textVariant: "text-sm/normal", disabled: !0 }),
+                    (0, i.jsx)(r.Q, { text: c.intl.string(c.t.wWIufs), textVariant: "text-sm/normal", disabled: !0 }),
                     (0, i.jsx)("div", {
-                        className: c.a5,
-                        children: (0, i.jsx)(s.QWc, {
-                            text: o.intl.string(o.t.tmE73r),
+                        className: d.a5,
+                        children: (0, i.jsx)(r.Q, {
+                            text: c.intl.string(c.t.tmE73r),
                             textVariant: "text-sm/normal",
                             disabled: !0,
                         }),

@@ -2,15 +2,25 @@ var t,
     n,
     r,
     i = (e.exports = {});
-function a() {
+function s() {
     throw Error("setTimeout has not been defined");
 }
-function s() {
+function a() {
     throw Error("clearTimeout has not been defined");
+}
+try {
+    t = "function" == typeof setTimeout ? setTimeout : s;
+} catch (e) {
+    t = s;
+}
+try {
+    n = "function" == typeof clearTimeout ? clearTimeout : a;
+} catch (e) {
+    n = a;
 }
 function o(e) {
     if (t === setTimeout) return setTimeout(e, 0);
-    if ((t === a || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
+    if ((t === s || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
     try {
         return t(e, 0);
     } catch (n) {
@@ -21,58 +31,47 @@ function o(e) {
         }
     }
 }
-function l(e) {
-    if (n === clearTimeout) return clearTimeout(e);
-    if ((n === s || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
-    try {
-        return n(e);
-    } catch (t) {
-        try {
-            return n.call(null, e);
-        } catch (t) {
-            return n.call(this, e);
-        }
-    }
-}
-!(function () {
-    try {
-        t = "function" == typeof setTimeout ? setTimeout : a;
-    } catch (e) {
-        t = a;
-    }
-    try {
-        n = "function" == typeof clearTimeout ? clearTimeout : s;
-    } catch (e) {
-        n = s;
-    }
-})();
-var u = [],
-    c = !1,
+var l = [],
+    u = !1,
     d = -1;
-function _() {
-    c && r && ((c = !1), r.length ? (u = r.concat(u)) : (d = -1), u.length && f());
+function c() {
+    u && r && ((u = !1), r.length ? (l = r.concat(l)) : (d = -1), l.length && _());
 }
-function f() {
-    if (!c) {
-        var e = o(_);
-        c = !0;
-        for (var t = u.length; t; ) {
-            for (r = u, u = []; ++d < t; ) r && r[d].run();
-            (d = -1), (t = u.length);
+function _() {
+    if (!u) {
+        var e = o(c);
+        u = !0;
+        for (var t = l.length; t; ) {
+            for (r = l, l = []; ++d < t; ) r && r[d].run();
+            (d = -1), (t = l.length);
         }
-        (r = null), (c = !1), l(e);
+        (r = null),
+            (u = !1),
+            (function (e) {
+                if (n === clearTimeout) return clearTimeout(e);
+                if ((n === a || !n) && clearTimeout) return (n = clearTimeout), clearTimeout(e);
+                try {
+                    n(e);
+                } catch (t) {
+                    try {
+                        return n.call(null, e);
+                    } catch (t) {
+                        return n.call(this, e);
+                    }
+                }
+            })(e);
     }
 }
-function p(e, t) {
+function f(e, t) {
     (this.fun = e), (this.array = t);
 }
-function h() {}
+function E() {}
 (i.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-    u.push(new p(e, t)), 1 !== u.length || c || o(f);
+    l.push(new f(e, t)), 1 !== l.length || u || o(_);
 }),
-    (p.prototype.run = function () {
+    (f.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
     (i.title = "browser"),
@@ -81,15 +80,15 @@ function h() {}
     (i.argv = []),
     (i.version = ""),
     (i.versions = {}),
-    (i.on = h),
-    (i.addListener = h),
-    (i.once = h),
-    (i.off = h),
-    (i.removeListener = h),
-    (i.removeAllListeners = h),
-    (i.emit = h),
-    (i.prependListener = h),
-    (i.prependOnceListener = h),
+    (i.on = E),
+    (i.addListener = E),
+    (i.once = E),
+    (i.off = E),
+    (i.removeListener = E),
+    (i.removeAllListeners = E),
+    (i.emit = E),
+    (i.prependListener = E),
+    (i.prependOnceListener = E),
     (i.listeners = function (e) {
         return [];
     }),

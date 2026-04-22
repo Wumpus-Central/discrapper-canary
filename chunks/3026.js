@@ -1,40 +1,39 @@
 "use strict";
 n.d(t, { A: () => c });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(397927),
-    l = n(281258);
-let u = 500;
+    r = n.n(s),
+    a = n(781696),
+    o = n(596333);
 function c(e) {
-    let { children: t, "aria-label": n, className: s, position: c, delay: d, lineClamp: _ = 1, ...f } = e,
-        p = i.useRef(null),
-        h = n ?? ("string" == typeof t && t),
-        m = {};
+    let { children: t, "aria-label": n, className: s, position: c, delay: u, lineClamp: d = 1, ...h } = e,
+        m = l.useRef(null),
+        p = n ?? ("string" == typeof t && t),
+        f = {};
     return (
-        null != _ && _ > 1 && (m = { lineClamp: _, WebkitLineClamp: _ }),
-        (0, r.jsx)(o.STz, {
-            ...f,
+        null != d && d > 1 && (f = { lineClamp: d, WebkitLineClamp: d }),
+        (0, i.jsx)(a.ST, {
+            ...h,
             position: c ?? "top",
-            delay: d ?? u,
+            delay: u ?? 500,
             text: t,
-            "aria-label": h,
+            "aria-label": p,
             children: (n) => {
-                let { onMouseEnter: i, onMouseLeave: o } = n;
-                return (0, r.jsx)("div", {
-                    className: a()(s, { [l.j]: 1 === _, [l.E]: _ > 1 }),
-                    ref: p,
+                let { onMouseEnter: l, onMouseLeave: a } = n;
+                return (0, i.jsx)("div", {
+                    className: r()(s, { [o.j]: 1 === d, [o.E]: d > 1 }),
+                    ref: m,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
-                        let { current: e } = p;
+                        let { current: e } = m;
                         null == e ||
-                            (_ > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
-                            (1 === _ && e.offsetWidth >= e.scrollWidth) ||
-                            i?.();
+                            (d > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
+                            (1 === d && e.offsetWidth >= e.scrollWidth) ||
+                            l?.();
                     },
-                    onMouseLeave: o,
-                    style: m,
+                    onMouseLeave: a,
+                    style: f,
                     children: t,
                 });
             },

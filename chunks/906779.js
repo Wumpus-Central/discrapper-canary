@@ -1,25 +1,25 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(11351),
-    r = n(495063),
-    a = n(652215),
-    o = n(985018);
-function d(e) {
+var l = n(834730),
+    s = n(696986),
+    r = n(11351),
+    a = n(495063),
+    o = n(652215),
+    d = n(985018);
+function c(e) {
     let { team: t, ...n } = e,
-        d =
-            (0, l.gN)() || null == t
+        c =
+            (0, r.gN)() || null == t
                 ? null
-                : o.intl.format(o.t.d1sCiW, { url: a.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+                : d.intl.format(d.t.d1sCiW, { url: o.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
     return 0 === n.payoutsByPeriod.length
-        ? (0, i.jsxs)(s.Text, { variant: "text-sm/medium", children: [o.intl.string(o.t.RrtXuy), " ", d] })
+        ? (0, i.jsxs)(l.E, { variant: "text-sm/medium", children: [d.intl.string(d.t.RrtXuy), " ", c] })
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsxs)(s.Text, { variant: "text-sm/medium", children: [o.intl.string(o.t["9Ub4KY"]), " ", d] }),
-                  (0, i.jsx)(s.hKd, { size: 16 }),
-                  (0, i.jsx)(r.A, { ...n }),
+                  (0, i.jsxs)(l.E, { variant: "text-sm/medium", children: [d.intl.string(d.t["9Ub4KY"]), " ", c] }),
+                  (0, i.jsx)(s.h, { size: 16 }),
+                  (0, i.jsx)(a.A, { ...n }),
               ],
           });
 }

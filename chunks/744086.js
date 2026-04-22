@@ -1,88 +1,91 @@
-s.d(t, { Ay: () => T });
-var r = s(627968);
+s.d(t, { Ay: () => D });
+var i = s(627968);
 s(64700);
-var i = s(141931),
+var r = s(141931),
     n = s(311907),
-    l = s(397927),
-    a = s(793574),
-    o = s(48435),
-    c = s(734057),
-    d = s(498642),
-    u = s(309010),
-    f = s(287809),
-    h = s(258585),
-    x = s(874124),
-    p = s(688465),
-    m = s(461430),
-    _ = s(56439),
-    g = s(997248),
-    j = s(213279),
-    v = s(420659),
-    A = s(502075),
-    S = s(753070),
-    C = s(731854),
-    y = s(191850),
-    b = s(985018),
-    w = s(269608);
-let I = [
+    l = s(403581),
+    a = s(827734),
+    o = s(861672),
+    c = s(477782),
+    d = s(793574),
+    u = s(270816),
+    f = s(734057),
+    h = s(498642),
+    x = s(309010),
+    p = s(287809),
+    _ = s(258585),
+    m = s(874124),
+    g = s(688465),
+    j = s(461430),
+    v = s(56439),
+    A = s(997248),
+    C = s(213279),
+    S = s(420659),
+    y = s(502075),
+    b = s(753070),
+    w = s(731854),
+    E = s(710787),
+    I = s(985018),
+    N = s(396989);
+let O = [
         {
-            value: S.jQ.PRESET_AUTO,
-            canUse: (e) => e !== i.fS.CAMERA && (0, h.eO)({ location: "StreamOptionsMenu" }).allowAutoQuality,
+            value: b.jQ.PRESET_AUTO,
+            canUse: (e) => e !== r.fS.CAMERA && (0, _.eO)({ location: "StreamOptionsMenu" }).allowAutoQuality,
         },
-        { value: S.jQ.PRESET_VIDEO, canUse: (e) => !0 },
-        { value: S.jQ.PRESET_DOCUMENTS, canUse: (e) => e !== i.fS.CAMERA },
-        { value: S.jQ.PRESET_CUSTOM, canUse: (e) => !0 },
+        { value: b.jQ.PRESET_VIDEO, canUse: (e) => !0 },
+        { value: b.jQ.PRESET_DOCUMENTS, canUse: (e) => e !== r.fS.CAMERA },
+        { value: b.jQ.PRESET_CUSTOM, canUse: (e) => !0 },
     ],
-    E = [
-        { value: S.on.RESOLUTION_720, canUse: (e) => !0 },
-        { value: S.on.RESOLUTION_1080, canUse: (e) => !0 },
-        { value: S.on.RESOLUTION_1440, canUse: (e) => !0 },
-        { value: S.on.RESOLUTION_SOURCE, canUse: (e) => e !== i.fS.CAMERA },
+    R = [
+        { value: b.on.RESOLUTION_720, canUse: (e) => !0 },
+        { value: b.on.RESOLUTION_1080, canUse: (e) => !0 },
+        { value: b.on.RESOLUTION_1440, canUse: (e) => !0 },
+        { value: b.on.RESOLUTION_SOURCE, canUse: (e) => e !== r.fS.CAMERA },
     ],
-    N = [S.kn.FPS_15, S.kn.FPS_30, S.kn.FPS_60];
-function O(e) {
+    T = [b.kn.FPS_15, b.kn.FPS_30, b.kn.FPS_60];
+function M(e) {
     let { label: t } = e;
-    return (0, r.jsxs)("div", {
-        className: w.g,
-        children: [t, (0, r.jsx)(l.tvc, { size: "xs", color: l.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK })],
+    return (0, i.jsxs)("div", {
+        className: N.g,
+        children: [t, (0, i.jsx)(l.t, { size: "xs", color: a.A.unsafe_rawColors.GUILD_BOOSTING_PINK })],
     });
 }
-function T(e) {
+function D(e) {
     let { onClose: t, onSelect: s } = e,
         [
             {
-                audioSourceId: h,
-                notifyFriends: w,
-                hidePreview: T,
-                muteStreamAudio: R,
-                preset: M,
-                resolution: U,
-                fps: G,
+                audioSourceId: l,
+                notifyFriends: a,
+                hidePreview: _,
+                muteStreamAudio: N,
+                preset: D,
+                resolution: G,
+                fps: U,
                 sourceType: L,
             },
-            D,
-        ] = (0, p.tS)(),
-        P = (0, n.bG)([u.A], () => u.A.getVoiceChannelId()),
-        F = (0, n.bG)([c.A, d.A], () => {
-            if (null == P) return !0;
-            let e = c.A.getChannel(P),
+            P,
+        ] = (0, g.tS)(),
+        k = (0, n.bG)([x.A], () => x.A.getVoiceChannelId()),
+        F = (0, n.bG)([f.A, h.A], () => {
+            if (null == k) return !0;
+            let e = f.A.getChannel(k),
                 t = e?.guild_id;
             if (null == t) return !0;
-            let s = d.A.getMemberCount(t);
-            return null == s || (s > A.oe && s <= A.G1);
-        }, [P]),
-        k = (0, g.A)(),
-        [H, B] = (0, v.A)(S.jQ.PRESET_VIDEO) ?? [S.on.RESOLUTION_720, S.kn.FPS_30],
-        [W, Z] = (0, v.A)(S.jQ.PRESET_DOCUMENTS) ?? [S.on.RESOLUTION_SOURCE, S.kn.FPS_15],
-        V = (0, o.H)({
-            deviceType: C.oh.AUDIO_INPUT,
-            selectedDeviceId: h,
-            analyticsLocations: [a.A.GO_LIVE_MODAL_SETTINGS_SELECTION],
+            let s = h.A.getMemberCount(t);
+            return null == s || (s > y.oe && s <= y.G1);
+        }, [k]),
+        H = (0, A.A)(),
+        [B, W] = (0, S.A)(b.jQ.PRESET_VIDEO) ?? [b.on.RESOLUTION_720, b.kn.FPS_30],
+        [Z, V] = (0, S.A)(b.jQ.PRESET_DOCUMENTS) ?? [b.on.RESOLUTION_SOURCE, b.kn.FPS_15],
+        z = (0, u.H)({
+            deviceType: w.oh.AUDIO_INPUT,
+            selectedDeviceId: l,
+            analyticsLocations: [d.A.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
-            onDeviceSelect: (e) => (D({ type: "set_audio_source", audioSourceId: e }), !1),
+            onDeviceSelect: (e) => (P({ type: "set_audio_source", audioSourceId: e }), !1),
             menuItemOverrideProps: {
                 id: "device-audio-input",
-                label: b.intl.string(y.default.YSdHVw),
+                label: I.intl.string(E.default.YSdHVw),
                 subtextLineClamp: 1,
             },
             computeMenuRadioItemOverrideProps: (e) => ({
@@ -90,112 +93,112 @@ function T(e) {
                 id: `device-audio-input-${e}`,
             }),
         });
-    return (0, r.jsxs)(l.W1t, {
+    return (0, i.jsxs)(o.W, {
         "data-menu-needs-migration": !0,
-        "aria-label": b.intl.string(b.t["+1H47t"]),
+        "aria-label": I.intl.string(I.t["+1H47t"]),
         navId: "stream-options",
         onClose: t,
         onSelect: s,
         children: [
-            (0, r.jsx)(l.rXV, {
-                label: b.intl.string(y.default.P2pjmy),
-                children: I.filter((e) => {
+            (0, i.jsx)(c.rX, {
+                label: I.intl.string(E.default.P2pjmy),
+                children: O.filter((e) => {
                     let { canUse: t } = e;
                     return t(L);
                 }).map((e) => {
                     let { value: t } = e;
-                    return (0, r.jsx)(
-                        l.iDA,
+                    return (0, i.jsx)(
+                        c.iD,
                         {
                             group: "preset",
                             id: `stream-preset-${t}`,
-                            checked: M === t,
-                            label: (0, m.K)(t),
+                            checked: D === t,
+                            label: (0, j.K)(t),
                             subtext: (function (e) {
                                 switch (e) {
-                                    case S.jQ.PRESET_VIDEO:
-                                        return b.intl.format(y.default.G5O1Mz, {
-                                            resolution: (0, _.b)(H),
-                                            frameRate: B,
+                                    case b.jQ.PRESET_VIDEO:
+                                        return I.intl.format(E.default.G5O1Mz, {
+                                            resolution: (0, v.b)(B),
+                                            frameRate: W,
                                         });
-                                    case S.jQ.PRESET_DOCUMENTS:
-                                        return b.intl.format(y.default["8tcFL5"], {
-                                            resolution: (0, _.b)(W),
-                                            frameRate: Z,
+                                    case b.jQ.PRESET_DOCUMENTS:
+                                        return I.intl.format(E.default["8tcFL5"], {
+                                            resolution: (0, v.b)(Z),
+                                            frameRate: V,
                                         });
-                                    case S.jQ.PRESET_AUTO:
-                                        return b.intl.string(y.default.m4jtlc);
-                                    case S.jQ.PRESET_CUSTOM:
+                                    case b.jQ.PRESET_AUTO:
+                                        return I.intl.string(E.default.m4jtlc);
+                                    case b.jQ.PRESET_CUSTOM:
                                         return;
                                     default:
                                         throw Error(`No case implemented for ${e}`);
                                 }
                             })(t),
-                            action: () => D({ type: "set_preset", preset: t }),
+                            action: () => P({ type: "set_preset", preset: t }),
                         },
                         t,
                     );
                 }),
             }),
-            M === S.jQ.PRESET_CUSTOM &&
-                (0, r.jsxs)(r.Fragment, {
+            D === b.jQ.PRESET_CUSTOM &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, r.jsx)(l.bXX, {}),
-                        (0, r.jsx)(l.Drp, {
+                        (0, i.jsx)(c.bX, {}),
+                        (0, i.jsx)(c.Dr, {
                             id: "resolution",
-                            label: b.intl.string(y.default.IG5n0X),
-                            children: E.filter((e) => {
+                            label: I.intl.string(E.default.IG5n0X),
+                            children: R.filter((e) => {
                                 let { canUse: t } = e;
                                 return t(L);
                             }).map((e) => {
                                 let { value: s } = e;
-                                return (0, r.jsx)(
-                                    l.iDA,
+                                return (0, i.jsx)(
+                                    c.iD,
                                     {
                                         group: "resolution",
                                         id: `stream-option-resolution-${s}`,
-                                        checked: U === s,
+                                        checked: G === s,
                                         void_label:
-                                            s !== S.on.RESOLUTION_720
-                                                ? (0, r.jsx)(O, { label: (0, _.b)(s) })
-                                                : (0, _.b)(s),
+                                            s !== b.on.RESOLUTION_720
+                                                ? (0, i.jsx)(M, { label: (0, v.b)(s) })
+                                                : (0, v.b)(s),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, x.A)(M, e, G, f.default.getCurrentUser(), k))
+                                                if (!(0, m.A)(D, e, U, p.default.getCurrentUser(), H))
                                                     return (
                                                         t(),
-                                                        (0, j.p)({
-                                                            analyticsLocation: a.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                        (0, C.p)({
+                                                            analyticsLocation: d.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                         })
                                                     );
-                                                D({ type: "set_resolution", resolution: e });
+                                                P({ type: "set_resolution", resolution: e });
                                             })(s),
                                     },
                                     s,
                                 );
                             }),
                         }),
-                        (0, r.jsx)(l.Drp, {
+                        (0, i.jsx)(c.Dr, {
                             id: "frame-rate",
-                            label: b.intl.string(b.t.SkkeIt),
-                            children: N.map((e) =>
-                                (0, r.jsx)(
-                                    l.iDA,
+                            label: I.intl.string(I.t.SkkeIt),
+                            children: T.map((e) =>
+                                (0, i.jsx)(
+                                    c.iD,
                                     {
                                         group: "frame-rate",
                                         id: `stream-option-frame-rate-${e}`,
-                                        checked: G === e,
-                                        void_label: e === S.kn.FPS_60 ? (0, r.jsx)(O, { label: `${e}fps` }) : `${e}fps`,
+                                        checked: U === e,
+                                        void_label: e === b.kn.FPS_60 ? (0, i.jsx)(M, { label: `${e}fps` }) : `${e}fps`,
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, x.A)(M, U, e, f.default.getCurrentUser(), k))
+                                                if (!(0, m.A)(D, G, e, p.default.getCurrentUser(), H))
                                                     return (
                                                         t(),
-                                                        (0, j.p)({
-                                                            analyticsLocation: a.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                        (0, C.p)({
+                                                            analyticsLocation: d.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                         })
                                                     );
-                                                D({ type: "set_fps", fps: e });
+                                                P({ type: "set_fps", fps: e });
                                             })(e),
                                     },
                                     e,
@@ -204,30 +207,30 @@ function T(e) {
                         }),
                     ],
                 }),
-            (0, r.jsx)(l.bXX, {}),
-            (0, r.jsx)(l.sLh, {
+            (0, i.jsx)(c.bX, {}),
+            (0, i.jsx)(c.sL, {
                 id: "stream-option-mute",
-                checked: R,
-                label: b.intl.string(y.default["b0+Irf"]),
-                action: () => D({ type: "set_mute_audio", value: !R }),
+                checked: N,
+                label: I.intl.string(E.default["b0+Irf"]),
+                action: () => P({ type: "set_mute_audio", value: !N }),
             }),
-            L === i.fS.CAMERA && V,
-            (0, r.jsxs)(l.Drp, {
+            L === r.fS.CAMERA && z,
+            (0, i.jsxs)(c.Dr, {
                 id: "advanced-items",
-                label: b.intl.string(y.default.eYyK1v),
+                label: I.intl.string(E.default.eYyK1v),
                 children: [
-                    (0, r.jsx)(l.sLh, {
+                    (0, i.jsx)(c.sL, {
                         id: "stream-option-share-preview",
-                        checked: T,
-                        label: b.intl.string(y.default.H3QjqX),
-                        action: () => D({ type: "set_hide_preview", hidePreview: !T }),
+                        checked: _,
+                        label: I.intl.string(E.default.H3QjqX),
+                        action: () => P({ type: "set_hide_preview", hidePreview: !_ }),
                     }),
                     F &&
-                        (0, r.jsx)(l.sLh, {
+                        (0, i.jsx)(c.sL, {
                             id: "stream-option-notify",
-                            checked: w,
-                            label: b.intl.string(y.default.SiHtXy),
-                            action: () => D({ type: "set_notify_friends", value: !w }),
+                            checked: a,
+                            label: I.intl.string(E.default.SiHtXy),
+                            action: () => P({ type: "set_notify_friends", value: !a }),
                         }),
                 ],
             }),

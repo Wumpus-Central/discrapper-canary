@@ -1,91 +1,84 @@
 "use strict";
-n.d(t, { $: () => c, A: () => T });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { $: () => c, A: () => h });
+var r,
+    i = n(311907),
+    s = n(73153),
     a = n(20015),
-    s = n(253932),
-    o = n(652215);
-function l() {
+    o = n(253932),
+    l = n(652215);
+function u() {
     return { lastUsedObject: {}, useActivityUrlOverride: !1, activityUrlOverride: null, filter: "" };
 }
-let u = l();
-var c = (function (e) {
-    return (e.INITIALIZED = "INITIALIZED"), (e.LOADING = "LOADING"), (e.LOADED = "LOADED"), (e.ERROR = "ERROR"), e;
-})({});
-let d = "INITIALIZED",
-    _ = [];
-function f() {
-    (u = l()), (d = "INITIALIZED"), (_ = []);
-}
-function p() {
-    u.useActivityUrlOverride = !u.useActivityUrlOverride;
-}
-function h(e) {
-    let { activityUrlOverride: t } = e;
-    u.activityUrlOverride = t;
-}
-function m(e) {
-    let { applicationId: t, timestamp: n } = e;
-    if (null == _.find((e) => e.id === t)) return !1;
-    u.lastUsedObject[t] = n;
-}
-function g(e) {
-    let { applications: t } = e;
-    (d = "LOADED"), (_ = t.filter((e) => (0, a.n)(e, o.gfo.EMBEDDED)));
-}
-function E(e) {
-    let { type: t } = e;
-    d = "ERROR";
-}
-function A(e) {
-    let { filter: t } = e;
-    u.filter = t;
-}
-class I extends r.Ay.PersistedStore {
+let d = u();
+var c =
+    (((r = {}).INITIALIZED = "INITIALIZED"), (r.LOADING = "LOADING"), (r.LOADED = "LOADED"), (r.ERROR = "ERROR"), r);
+let _ = "INITIALIZED",
+    f = [];
+class E extends i.Ay.PersistedStore {
     static displayName = "DeveloperActivityShelfStore";
     static persistKey = "DeveloperActivityShelfStore";
     initialize(e) {
-        u = { ...l(), ...(e ?? {}) };
+        d = { ...u(), ...(e ?? {}) };
     }
     static migrations = [(e) => (delete e.isEnabled, { ...e })];
     getState() {
-        return u;
-    }
-    getIsEnabled() {
-        return s.Q_.getSetting() && _.length > 0;
-    }
-    getLastUsedObject() {
-        return u.lastUsedObject;
-    }
-    getUseActivityUrlOverride() {
-        return this.getIsEnabled() && u.useActivityUrlOverride;
-    }
-    getActivityUrlOverride() {
-        return this.getIsEnabled() ? u.activityUrlOverride : null;
-    }
-    getFetchState() {
         return d;
     }
+    getIsEnabled() {
+        return o.Q_.getSetting() && f.length > 0;
+    }
+    getLastUsedObject() {
+        return d.lastUsedObject;
+    }
+    getUseActivityUrlOverride() {
+        return this.getIsEnabled() && d.useActivityUrlOverride;
+    }
+    getActivityUrlOverride() {
+        return this.getIsEnabled() ? d.activityUrlOverride : null;
+    }
+    getFetchState() {
+        return _;
+    }
     getFilter() {
-        return this.getIsEnabled() ? u.filter : "";
+        return this.getIsEnabled() ? d.filter : "";
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? _ : [];
+        return this.getIsEnabled() ? f : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != _.find((t) => t.id === e);
+        return this.getIsEnabled() && null != f.find((t) => t.id === e);
     }
 }
-let T = new I(i.h, {
-    LOGOUT: f,
-    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: p,
-    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: h,
-    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: m,
-    DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-        d = "LOADING";
+let h = new E(s.h, {
+    LOGOUT: function () {
+        (d = u()), (_ = "INITIALIZED"), (f = []);
     },
-    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: g,
-    DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: E,
-    DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: A,
+    DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
+        d.useActivityUrlOverride = !d.useActivityUrlOverride;
+    },
+    DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: function (e) {
+        let { activityUrlOverride: t } = e;
+        d.activityUrlOverride = t;
+    },
+    DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function (e) {
+        let { applicationId: t, timestamp: n } = e;
+        if (null == f.find((e) => e.id === t)) return !1;
+        d.lastUsedObject[t] = n;
+    },
+    DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
+        _ = "LOADING";
+    },
+    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
+        let { applications: t } = e;
+        (_ = "LOADED"), (f = t.filter((e) => (0, a.n)(e, l.gfo.EMBEDDED)));
+    },
+    DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
+        let { type: t } = e;
+        _ = "ERROR";
+    },
+    DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function (e) {
+        let { filter: t } = e;
+        d.filter = t;
+    },
     USER_SETTINGS_PROTO_UPDATE() {},
 });

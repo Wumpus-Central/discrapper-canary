@@ -1,9 +1,8 @@
 "use strict";
 for (
-    var n = { value: !0 },
-        r = "u" > typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
-        i = { alt: "altKey", control: "ctrlKey", meta: "metaKey", shift: "shiftKey" },
-        a = {
+    var n = "u" > typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
+        r = { alt: "altKey", control: "ctrlKey", meta: "metaKey", shift: "shiftKey" },
+        i = {
             add: "+",
             break: "pause",
             cmd: "meta",
@@ -15,7 +14,7 @@ for (
             esc: "escape",
             ins: "insert",
             left: "arrowleft",
-            mod: r ? "meta" : "control",
+            mod: n ? "meta" : "control",
             opt: "alt",
             option: "alt",
             return: "enter",
@@ -26,7 +25,7 @@ for (
             win: "meta",
             windows: "meta",
         },
-        s = {
+        a = {
             backspace: 8,
             tab: 9,
             enter: 13,
@@ -66,80 +65,81 @@ for (
     o < 20;
     o++
 )
-    s["f" + o] = 111 + o;
-function l(e, t, n) {
-    !t || "byKey" in t || ((n = t), (t = null)), Array.isArray(e) || (e = [e]);
-    var r = e.map(function (e) {
-            return d(e, t);
-        }),
-        i = function (e) {
-            return r.some(function (t) {
-                return _(t, e);
+    a["f" + o] = 111 + o;
+function u(e) {
+    return i[(e = e.toLowerCase())] || e;
+}
+t.isKeyHotkey = function (e, t) {
+    var n, i, o, s, l;
+    return (
+        (n = e),
+        (i = { byKey: !0 }),
+        (o = t),
+        !i || "byKey" in i || ((o = i), (i = null)),
+        Array.isArray(n) || (n = [n]),
+        (s = n.map(function (e) {
+            return (function (e, t) {
+                var n = t && t.byKey,
+                    i = {},
+                    o = (e = e.replace("++", "+add")).split("+"),
+                    s = o.length;
+                for (var l in r) i[r[l]] = !1;
+                var d = !0,
+                    c = !1,
+                    f = void 0;
+                try {
+                    for (var h, p = o[Symbol.iterator](); !(d = (h = p.next()).done); d = !0) {
+                        var m = h.value,
+                            v = m.endsWith("?") && m.length > 1;
+                        v && (m = m.slice(0, -1));
+                        var _ = u(m),
+                            g = r[_];
+                        (1 !== s && g) ||
+                            (n
+                                ? (i.key = _)
+                                : (i.which = (function (e) {
+                                      return a[(e = u(e))] || e.toUpperCase().charCodeAt(0);
+                                  })(m))),
+                            g && (i[g] = !v || null);
+                    }
+                } catch (e) {
+                    (c = !0), (f = e);
+                } finally {
+                    try {
+                        !d && p.return && p.return();
+                    } finally {
+                        if (c) throw f;
+                    }
+                }
+                return i;
+            })(e, i);
+        })),
+        (l = function (e) {
+            return s.some(function (t) {
+                return (function (e, t) {
+                    for (var n in e) {
+                        var r = e[n],
+                            i = void 0;
+                        if (
+                            null != r &&
+                            (null !=
+                                (i =
+                                    "key" === n && null != t.key
+                                        ? t.key.toLowerCase()
+                                        : "which" === n
+                                          ? 91 === r && 93 === t.which
+                                              ? 91
+                                              : t.which
+                                          : t[n]) ||
+                                !1 !== r) &&
+                            i !== r
+                        )
+                            return !1;
+                    }
+                    return !0;
+                })(t, e);
             });
-        };
-    return null == n ? i : i(n);
-}
-function u(e, t) {
-    return l(e, t);
-}
-function c(e, t) {
-    return l(e, { byKey: !0 }, t);
-}
-function d(e, t) {
-    var n = t && t.byKey,
-        r = {},
-        a = (e = e.replace("++", "+add")).split("+"),
-        s = a.length;
-    for (var o in i) r[i[o]] = !1;
-    var l = !0,
-        u = !1,
-        c = void 0;
-    try {
-        for (var d, _ = a[Symbol.iterator](); !(l = (d = _.next()).done); l = !0) {
-            var h = d.value,
-                m = h.endsWith("?") && h.length > 1;
-            m && (h = h.slice(0, -1));
-            var g = p(h),
-                E = i[g];
-            (1 !== s && E) || (n ? (r.key = g) : (r.which = f(h))), E && (r[E] = !m || null);
-        }
-    } catch (e) {
-        (u = !0), (c = e);
-    } finally {
-        try {
-            !l && _.return && _.return();
-        } finally {
-            if (u) throw c;
-        }
-    }
-    return r;
-}
-function _(e, t) {
-    for (var n in e) {
-        var r = e[n],
-            i = void 0;
-        if (
-            null != r &&
-            (null !=
-                (i =
-                    "key" === n && null != t.key
-                        ? t.key.toLowerCase()
-                        : "which" === n
-                          ? 91 === r && 93 === t.which
-                              ? 91
-                              : t.which
-                          : t[n]) ||
-                !1 !== r) &&
-            i !== r
-        )
-            return !1;
-    }
-    return !0;
-}
-function f(e) {
-    return s[(e = p(e))] || e.toUpperCase().charCodeAt(0);
-}
-function p(e) {
-    return a[(e = e.toLowerCase())] || e;
-}
-(n = l), (n = l), (n = u), (t.isKeyHotkey = c);
+        }),
+        null == o ? l : l(o)
+    );
+};

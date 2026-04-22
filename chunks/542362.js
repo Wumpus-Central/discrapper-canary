@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { E: () => c });
+n.d(t, { E: () => d });
 var r = n(64700),
     i = n(340287),
-    a = n(669507),
-    s = n(412700),
-    o = n.n(s),
+    s = n(669507),
+    a = n(412700),
+    o = n.n(a),
     l = n(418034),
     u = [],
-    c = function (e, t, n) {
+    d = function (e, t, n) {
         void 0 === n && (n = {});
-        var s = r.useRef(null),
-            c = {
+        var a = r.useRef(null),
+            d = {
                 onFirstUpdate: n.onFirstUpdate,
                 placement: n.placement || "bottom",
                 strategy: n.strategy || "absolute",
                 modifiers: n.modifiers || u,
             },
-            d = r.useState({
-                styles: { popper: { position: c.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
+            c = r.useState({
+                styles: { popper: { position: d.strategy, left: "0", top: "0" }, arrow: { position: "absolute" } },
                 attributes: {},
             }),
-            _ = d[0],
-            f = d[1],
-            p = r.useMemo(function () {
+            _ = c[0],
+            f = c[1],
+            E = r.useMemo(function () {
                 return {
                     name: "updateState",
                     enabled: !0,
@@ -51,32 +51,31 @@ var r = n(64700),
             h = r.useMemo(
                 function () {
                     var e = {
-                        onFirstUpdate: c.onFirstUpdate,
-                        placement: c.placement,
-                        strategy: c.strategy,
-                        modifiers: [].concat(c.modifiers, [p, { name: "applyStyles", enabled: !1 }]),
+                        onFirstUpdate: d.onFirstUpdate,
+                        placement: d.placement,
+                        strategy: d.strategy,
+                        modifiers: [].concat(d.modifiers, [E, { name: "applyStyles", enabled: !1 }]),
                     };
-                    return o()(s.current, e) ? s.current || e : ((s.current = e), e);
+                    return o()(a.current, e) ? a.current || e : ((a.current = e), e);
                 },
-                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, p],
+                [d.onFirstUpdate, d.placement, d.strategy, d.modifiers, E],
             ),
-            m = r.useRef();
+            p = r.useRef();
         return (
             (0, l.Es)(
                 function () {
-                    m.current && m.current.setOptions(h);
+                    p.current && p.current.setOptions(h);
                 },
                 [h],
             ),
             (0, l.Es)(
                 function () {
                     if (null != e && null != t) {
-                        var r = n.createPopper || a.n,
-                            i = r(e, t, h);
+                        var r = (n.createPopper || s.n)(e, t, h);
                         return (
-                            (m.current = i),
+                            (p.current = r),
                             function () {
-                                i.destroy(), (m.current = null);
+                                r.destroy(), (p.current = null);
                             }
                         );
                     }
@@ -84,11 +83,11 @@ var r = n(64700),
                 [e, t, n.createPopper],
             ),
             {
-                state: m.current ? m.current.state : null,
+                state: p.current ? p.current.state : null,
                 styles: _.styles,
                 attributes: _.attributes,
-                update: m.current ? m.current.update : null,
-                forceUpdate: m.current ? m.current.forceUpdate : null,
+                update: p.current ? p.current.update : null,
+                forceUpdate: p.current ? p.current.forceUpdate : null,
             }
         );
     };

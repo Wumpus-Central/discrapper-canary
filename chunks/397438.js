@@ -1,46 +1,23 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var r = n(311907),
     i = n(506774),
-    a = n(73153),
-    s = n(617617);
+    s = n(73153),
+    a = n(617617);
 let o = {},
     l = {};
 function u() {
-    let e = s.A.settings;
+    let e = a.A.settings;
     return {
         gifAutoPlay: e.textAndImages?.gifAutoPlay?.value,
         animateEmoji: e.textAndImages?.animateEmoji?.value,
         animateStickers: e.textAndImages?.animateStickers?.value,
     };
 }
-function c() {
+function d() {
     return (l = u()), !1;
 }
-function d() {
-    o = {};
-}
-function _() {
-    o = {};
-}
-function f(e) {
-    let { settings: t } = e;
-    o = { ...o, ...t };
-}
-function p(e) {
-    let { settings: t } = e;
-    for (let e of t) delete o[e];
-}
-function h() {
-    let e = u(),
-        t = !1;
-    for (let n in e) {
-        let r = n;
-        e[r] !== l[r] && (delete o[r], (t = !0));
-    }
-    return t;
-}
-class m extends r.Ay.PersistedStore {
+class c extends r.Ay.PersistedStore {
     static displayName = "UserSettingsOverridesStore";
     static persistKey = "UserSettingsOverridesStore";
     static migrations = [
@@ -50,7 +27,7 @@ class m extends r.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        (o = e ?? {}), this.syncWith([s.A], c);
+        (o = e ?? {}), this.syncWith([a.A], d);
     }
     getState() {
         return o;
@@ -62,10 +39,25 @@ class m extends r.Ay.PersistedStore {
         return o[e];
     }
 }
-let g = new m(a.h, {
-    USER_SETTINGS_PROTO_UPDATE: h,
-    USER_SETTINGS_OVERRIDE_APPLY: f,
-    USER_SETTINGS_OVERRIDE_CLEAR: p,
-    LOGOUT: d,
-    LOGIN_SUCCESS: _,
+let _ = new c(s.h, {
+    USER_SETTINGS_PROTO_UPDATE: function () {
+        let e = u(),
+            t = !1;
+        for (let n in e) e[n] !== l[n] && (delete o[n], (t = !0));
+        return t;
+    },
+    USER_SETTINGS_OVERRIDE_APPLY: function (e) {
+        let { settings: t } = e;
+        o = { ...o, ...t };
+    },
+    USER_SETTINGS_OVERRIDE_CLEAR: function (e) {
+        let { settings: t } = e;
+        for (let e of t) delete o[e];
+    },
+    LOGOUT: function () {
+        o = {};
+    },
+    LOGIN_SUCCESS: function () {
+        o = {};
+    },
 });

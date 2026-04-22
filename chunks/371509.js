@@ -1,33 +1,35 @@
-n.d(t, { A: () => c });
-var i = n(627968),
-    s = n(64700),
-    l = n(934551),
-    r = n(873298),
-    a = n(397927),
-    o = n(26692);
-function d(e) {
-    let { redactionType: t, label: n } = e,
-        d = s.useMemo(() => {
+l.d(t, { A: () => x });
+var n = l(627968),
+    i = l(64700),
+    s = l(191023),
+    a = l(428678),
+    r = l(39623),
+    d = l(873298),
+    c = l(834730),
+    u = l(26692);
+function o(e) {
+    let { redactionType: t, label: l } = e,
+        o = i.useMemo(() => {
             switch (t) {
-                case r.TO.BLUR:
-                    return l.ImageIcon;
-                case r.TO.BLOCK:
-                    return l.DenyIcon;
-                case r.TO.SHOW:
-                    return l.EyeIcon;
+                case d.TO.BLUR:
+                    return s.x;
+                case d.TO.BLOCK:
+                    return a.K;
+                case d.TO.SHOW:
+                    return r.b;
                 default:
                     return null;
             }
         }, [t]);
-    return (0, i.jsxs)("div", {
-        className: o.q,
+    return (0, n.jsxs)("div", {
+        className: u.q,
         children: [
-            null != d && (0, i.jsx)(d, { size: "xs", color: "currentColor" }),
-            (0, i.jsx)(a.Text, { variant: "text-md/normal", color: "text-default", children: n }),
+            null != o && (0, n.jsx)(o, { size: "xs", color: "currentColor" }),
+            (0, n.jsx)(c.E, { variant: "text-md/normal", color: "text-default", children: l }),
         ],
     });
 }
-let c = s.memo(function (e) {
+let x = i.memo(function (e) {
     let { option: t } = e;
-    return (0, i.jsx)(d, { redactionType: t.value, label: t.label });
+    return (0, n.jsx)(o, { redactionType: t.value, label: t.label });
 });

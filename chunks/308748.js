@@ -1,56 +1,61 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => T });
 var i = n(627968),
     s = n(503698),
     l = n.n(s),
-    r = n(502572),
-    a = n(397927),
-    o = n(987144),
-    d = n(975571),
-    c = n(652215),
-    u = n(788868),
-    m = n(985018),
-    g = n(901851),
-    _ = n(410229);
-function x(e) {
+    a = n(502572),
+    r = n(315629),
+    o = n(834730),
+    d = n(403581),
+    u = n(821609),
+    c = n(104510),
+    g = n(192308),
+    m = n(987144),
+    _ = n(975571),
+    A = n(652215),
+    h = n(788868),
+    p = n(985018),
+    x = n(901851),
+    E = n(410229);
+function T(e) {
     let { count: t, disabledReason: s } = e,
-        x = d.A.getArticleURL(c.MVz.GUILD_BOOSTING_FAQ);
-    return (0, i.jsxs)(a.hLv, {
+        T = _.A.getArticleURL(A.MVz.GUILD_BOOSTING_FAQ);
+    return (0, i.jsxs)(r.h, {
         color: "nitro-pink",
-        className: g.vK,
+        className: x.vK,
         children: [
             (0, i.jsxs)("div", {
-                className: g.nw,
+                className: x.nw,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: g.MD,
+                        className: x.MD,
                         children: [
-                            (0, i.jsx)("img", { alt: "", className: g.F8, src: _.A }),
+                            (0, i.jsx)("img", { alt: "", className: x.F8, src: E.A }),
                             (0, i.jsx)("div", {
-                                className: l()(g.qS, "theme-dark"),
-                                children: (0, i.jsx)("span", { className: g.Vv, children: t }),
+                                className: l()(x.qS, "theme-dark"),
+                                children: (0, i.jsx)("span", { className: x.Vv, children: t }),
                             }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: g.Tm,
+                        className: x.Tm,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(o.E, {
                                 variant: "heading-md/semibold",
                                 color: "text-default",
                                 tag: "span",
-                                children: m.intl.format(m.t.KewnLu, { count: t, boostCount: t }),
+                                children: p.intl.format(p.t.KewnLu, { count: t, boostCount: t }),
                             }),
                             (0, i.jsxs)("div", {
-                                className: g.xv,
+                                className: x.xv,
                                 children: [
-                                    (0, i.jsx)(a.tvc, { className: g.nE }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(d.t, { className: x.nE }),
+                                    (0, i.jsx)(o.E, {
                                         variant: "text-xs/semibold",
                                         color: "text-subtle",
-                                        children: m.intl.format(m.t["6UAu+f"], {
-                                            count: u.M4,
-                                            boostCount: u.M4,
-                                            helpdeskArticle: x,
+                                        children: p.intl.format(p.t["6UAu+f"], {
+                                            count: h.M4,
+                                            boostCount: h.M4,
+                                            helpdeskArticle: T,
                                         }),
                                     }),
                                 ],
@@ -59,33 +64,33 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(r.A, {
+            (0, i.jsx)(a.A, {
                 shouldShow: null != s,
                 text: s ?? "",
                 "aria-label": s,
                 children: (e) =>
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(u.$, {
                         ...e,
                         variant: "primary",
                         size: "sm",
-                        icon: a._Jp,
-                        text: m.intl.string(m.t.BMx1iy),
+                        icon: c._,
+                        text: p.intl.string(p.t.BMx1iy),
                         disabled: null != s,
                         onClick: () => {
-                            (0, a.mMO)(async () => {
+                            (0, g.openModalLazy)(async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 770101));
                                 return (t) =>
                                     (0, i.jsx)(e, {
                                         ...t,
                                         onSelectGuild: (e) => {
                                             t.onClose(),
-                                                (0, o.g)({
+                                                (0, m.g)({
                                                     analyticsLocations: [],
                                                     analyticsLocation: {
-                                                        page: c.liQ.GUILD_BOOSTING_USER_SETTINGS,
-                                                        section: c.JJy.SETTINGS_PREMIUM,
-                                                        object: c.ZSU.BUTTON_CTA,
-                                                        objectType: c.AnalyticsObjectTypes.BUY,
+                                                        page: A.liQ.GUILD_BOOSTING_USER_SETTINGS,
+                                                        section: A.JJy.SETTINGS_PREMIUM,
+                                                        object: A.ZSU.BUTTON_CTA,
+                                                        objectType: A.AnalyticsObjectTypes.BUY,
                                                     },
                                                     guild: e,
                                                 });

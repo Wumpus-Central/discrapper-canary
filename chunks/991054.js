@@ -1,86 +1,93 @@
 "use strict";
-n.d(t, { A: () => g });
-var r = n(627968),
-    i = n(64700),
-    a = n(485845),
-    s = n(397927),
-    o = n(735991),
-    l = n(717048),
-    u = n(396533),
-    c = n(611371),
-    d = n(566615),
-    _ = n(985018),
-    f = n(358412),
-    p = n(206314),
-    h = n(291071);
-let m = 84;
-function g(e) {
-    let { application: t, onSelect: n } = e,
-        u = (0, d.i)(),
-        { iconURL: p } = i.useMemo(() => (0, o.X2)(t, { fakeAppIconURL: h, size: m }), [t]),
-        g = i.useMemo(
+i.r(t), i.d(t, { default: () => T });
+var r = i(627968),
+    l = i(64700),
+    n = i(485845),
+    a = i(283973),
+    s = i(664121),
+    o = i(939249),
+    c = i(834730),
+    u = i(320448),
+    d = i(534514),
+    _ = i(900797),
+    h = i(827734),
+    p = i(847374),
+    f = i(735991),
+    g = i(717048),
+    m = i(396533),
+    A = i(611371),
+    v = i(566615),
+    b = i(985018),
+    E = i(442793),
+    I = i(992595),
+    x = i(291071);
+function T(e) {
+    let { application: t, onSelect: i } = e,
+        d = (0, v.i)(),
+        { iconURL: _ } = l.useMemo(() => (0, f.X2)(t, { fakeAppIconURL: x, size: 84 }), [t]),
+        h = l.useMemo(
             () =>
                 [
                     {
-                        type: a.b.USER_INSTALL,
-                        icon: s.Rvf,
-                        title: _.intl.string(_.t.aCg60P),
-                        subtitle: _.intl.string(_.t.YeiIUZ),
+                        type: n.b.USER_INSTALL,
+                        icon: a.R,
+                        title: b.intl.string(b.t.aCg60P),
+                        subtitle: b.intl.string(b.t.YeiIUZ),
                         beta: !1,
                     },
                     {
-                        type: a.b.GUILD_INSTALL,
-                        icon: s.RR9,
-                        title: _.intl.string(_.t.E64YCz),
-                        subtitle: _.intl.string(_.t.bbtoKm),
+                        type: n.b.GUILD_INSTALL,
+                        icon: s.R,
+                        title: b.intl.string(b.t.E64YCz),
+                        subtitle: b.intl.string(b.t.bbtoKm),
                         beta: !1,
                     },
                 ].filter((e) => t.integrationTypesConfig?.[e.type]?.oauth2InstallParams != null),
             [t.integrationTypesConfig],
         );
     return (0, r.jsxs)("div", {
-        className: f.kL,
+        className: E.kL,
         children: [
             (0, r.jsxs)("header", {
-                id: u,
-                className: f.wx,
+                id: d,
+                className: E.wx,
                 children: [
-                    (0, r.jsx)(l.A, { src: p, className: f.Z2, rendersPlaceholder: !0 }),
-                    (0, r.jsx)(A, { application: t }),
-                    (0, r.jsx)(E, { application: t }),
+                    (0, r.jsx)(g.A, { src: _, className: E.Z2, rendersPlaceholder: !0 }),
+                    (0, r.jsx)(y, { application: t }),
+                    (0, r.jsx)(C, { application: t }),
                 ],
             }),
             (0, r.jsx)("ul", {
-                className: f.Ge,
-                children: g.map((e) =>
+                className: E.Ge,
+                children: h.map((e) =>
                     (0, r.jsxs)(
-                        s.DUT,
+                        o.D,
                         {
                             tag: "li",
-                            className: f.nM,
-                            onClick: () => n(e.type),
+                            className: E.nM,
+                            onClick: () => i(e.type),
                             children: [
-                                (0, r.jsx)(e.icon, { size: "md", color: "currentColor", className: f.hc }),
+                                (0, r.jsx)(e.icon, { size: "md", color: "currentColor", className: E.hc }),
                                 (0, r.jsxs)("div", {
-                                    className: f.bL,
+                                    className: E.bL,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: f.pt,
+                                            className: E.pt,
                                             children: [
-                                                (0, r.jsx)(s.Text, {
+                                                (0, r.jsx)(c.E, {
                                                     variant: "text-md/medium",
                                                     color: "interactive-text-active",
                                                     children: e.title,
                                                 }),
-                                                (0, r.jsx)(s.Text, {
+                                                (0, r.jsx)(c.E, {
                                                     variant: "text-xs/medium",
                                                     color: "text-muted",
                                                     children: e.subtitle,
                                                 }),
                                             ],
                                         }),
-                                        e.beta && (0, r.jsx)(c.A, {}),
-                                        (0, r.jsx)(s._BQ, { size: "md", color: "currentColor", className: f.gN }),
+                                        e.beta && (0, r.jsx)(A.A, {}),
+                                        (0, r.jsx)(u._, { size: "md", color: "currentColor", className: E.gN }),
                                     ],
                                 }),
                             ],
@@ -92,103 +99,105 @@ function g(e) {
         ],
     });
 }
-function E(e) {
+function C(e) {
     let { application: t } = e,
-        n = t.description;
-    return null == n || 0 === n.length
+        i = t.description;
+    return null == i || 0 === i.length
         ? null
         : (0, r.jsx)("div", {
-              className: f.wt,
+              className: E.wt,
               children: (0, r.jsx)("div", {
-                  className: f.bH,
-                  children: null != n && n.length > 0 ? (0, r.jsx)(T, { description: n }) : null,
+                  className: E.bH,
+                  children: null != i && i.length > 0 ? (0, r.jsx)(S, { description: i }) : null,
               }),
           });
 }
-function A(e) {
+function y(e) {
     let { application: t } = e,
-        n = t.name,
-        i = (0, o.b7)(t);
+        i = t.name,
+        l = (0, f.b7)(t);
     return (0, r.jsxs)("div", {
-        className: f.gn,
+        className: E.gn,
         children: [
-            (0, r.jsx)(s.Heading, { variant: "heading-xl/extrabold", lineClamp: 1, children: n }),
-            i
+            (0, r.jsx)(d.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: i }),
+            l
                 ? (0, r.jsx)("div", {
-                      className: f.s3,
-                      children: (0, r.jsx)(s.Text, {
+                      className: E.s3,
+                      children: (0, r.jsx)(c.E, {
                           variant: "text-xs/medium",
                           color: "text-default",
-                          children: _.intl.string(_.t.LO4f0P),
+                          children: b.intl.string(b.t.LO4f0P),
                       }),
                   })
                 : null,
         ],
     });
 }
-let I = 3;
-function T(e) {
+function S(e) {
     let { description: t } = e,
-        [a, o] = i.useState(!0);
-    i.useLayoutEffect(() => o(!1), []);
-    let l = i.useMemo(() => {
-            let { parseBioReact: e } = n(713804);
+        [n, a] = l.useState(!0);
+    l.useLayoutEffect(() => a(!1), []);
+    let s = l.useMemo(() => {
+            let { parseBioReact: e } = i(713804);
             return e(t);
         }, [t]),
-        { ref: c, lineHeight: d, lineCount: h } = y(),
-        m = i.useMemo(() => {
-            if (null == d || null == h) return { key: 0 };
-            let e = d * h;
-            return { key: 1, minHeightOverride: Math.min(e, I * d), maxHeightOverride: e };
-        }, [h, d]),
-        { ref: g, isTransitioning: E, onTransitionEnd: A } = (0, u.A)({ isExpanded: a, ...m }),
-        T = a || E;
+        {
+            ref: u,
+            lineHeight: d,
+            lineCount: f,
+        } = (function () {
+            let e = l.useRef(null),
+                [t, i] = l.useState(null),
+                [r, n] = l.useState(null);
+            return (
+                l.useLayoutEffect(() => {
+                    let t = e.current;
+                    if (null === t || 0 === t.clientHeight) return;
+                    let r = parseInt(getComputedStyle(t).lineHeight);
+                    isNaN(r) || (i(r), n(Math.floor(t.clientHeight / r)));
+                }, []),
+                { ref: e, lineHeight: t, lineCount: r }
+            );
+        })(),
+        g = l.useMemo(() => {
+            if (null == d || null == f) return { key: 0 };
+            let e = d * f;
+            return { key: 1, minHeightOverride: Math.min(e, 3 * d), maxHeightOverride: e };
+        }, [f, d]),
+        { ref: A, isTransitioning: v, onTransitionEnd: x } = (0, m.A)({ isExpanded: n, ...g }),
+        T = n || v;
     return (0, r.jsxs)("div", {
-        className: f.iQ,
+        className: E.iQ,
         children: [
             (0, r.jsx)("div", {
-                ref: g,
-                className: f.ZT,
-                onTransitionEnd: A,
-                children: (0, r.jsx)(s.Text, {
-                    ref: c,
-                    className: p.PT,
+                ref: A,
+                className: E.ZT,
+                onTransitionEnd: x,
+                children: (0, r.jsx)(c.E, {
+                    ref: u,
+                    className: I.PT,
                     variant: "text-sm/medium",
-                    lineClamp: T ? void 0 : I,
-                    style: { maxHeight: T ? void 0 : m.minHeightOverride },
-                    children: l,
+                    lineClamp: T ? void 0 : 3,
+                    style: { maxHeight: T ? void 0 : g.minHeightOverride },
+                    children: s,
                 }),
             }),
-            null != h && h > I
-                ? (0, r.jsxs)(s.DUT, {
-                      className: f.lP,
-                      onClick: () => o((e) => !e),
+            null != f && f > 3
+                ? (0, r.jsxs)(o.D, {
+                      className: E.lP,
+                      onClick: () => a((e) => !e),
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(c.E, {
                               variant: "text-sm/semibold",
                               color: "text-brand",
-                              children: T ? _.intl.string(_.t.u4YJ8g) : _.intl.string(_.t["N/tajD"]),
+                              children: T ? b.intl.string(b.t.u4YJ8g) : b.intl.string(b.t["N/tajD"]),
                           }),
                           T
-                              ? (0, r.jsx)(s.tN5, { size: "sm", color: s.LU0.colors.TEXT_BRAND })
-                              : (0, r.jsx)(s.abt, { size: "sm", color: s.LU0.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(_.t, { size: "sm", color: h.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(p.a, { size: "sm", color: h.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
         ],
     });
-}
-function y() {
-    let e = i.useRef(null),
-        [t, n] = i.useState(null),
-        [r, a] = i.useState(null);
-    return (
-        i.useLayoutEffect(() => {
-            let t = e.current;
-            if (null === t || 0 === t.clientHeight) return;
-            let r = parseInt(getComputedStyle(t).lineHeight);
-            isNaN(r) || (n(r), a(Math.floor(t.clientHeight / r)));
-        }, []),
-        { ref: e, lineHeight: t, lineCount: r }
-    );
 }

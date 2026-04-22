@@ -2,7 +2,6 @@
 n.d(t, { A: () => s });
 var r = n(635377),
     i = n.n(r);
-let a = 3;
 class s {
     _subscriptions = {};
     _onChange;
@@ -21,7 +20,7 @@ class s {
         return e;
     }
     _get(e) {
-        return this._subscriptions[e] ?? new (i())({ max: a, updateAgeOnGet: !0 });
+        return this._subscriptions[e] ?? new (i())({ max: 3, updateAgeOnGet: !0 });
     }
     clear(e) {
         e in this._subscriptions && (delete this._subscriptions[e], this._onChange(e, []));

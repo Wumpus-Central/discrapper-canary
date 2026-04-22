@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         0: "-ум",
@@ -26,7 +24,7 @@
         90: "-ум",
         100: "-ум",
     };
-    return e.defineLocale("tg", {
+    e.defineLocale("tg", {
         months: "январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр".split("_"),
         monthsShort: "янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек".split("_"),
         weekdays: "якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе".split("_"),
@@ -84,10 +82,8 @@
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
         ordinal: function (e) {
-            var n = e % 10,
-                r = e >= 100 ? 100 : null;
-            return e + (t[e] || t[n] || t[r]);
+            return e + (t[e] || t[e % 10] || t[e >= 100 ? 100 : null]);
         },
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

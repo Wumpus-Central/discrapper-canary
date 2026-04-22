@@ -1,51 +1,48 @@
 "use strict";
-n.d(t, { A: () => h, C: () => o });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => h, C: () => l });
+var r,
+    i = n(311907),
+    s = n(73153),
     a = n(136857),
-    s = n(142120),
-    o = (function (e) {
-        return (
-            (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
-            (e[(e.PENDING = 1)] = "PENDING"),
-            (e[(e.SUCCESS = 2)] = "SUCCESS"),
-            (e[(e.ERROR = 3)] = "ERROR"),
-            e
-        );
-    })({});
-let l = 0,
-    u = null,
+    o = n(142120),
+    l =
+        (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
+        (r[(r.PENDING = 1)] = "PENDING"),
+        (r[(r.SUCCESS = 2)] = "SUCCESS"),
+        (r[(r.ERROR = 3)] = "ERROR"),
+        r);
+let u = 0,
+    d = null,
     c = null;
-function d(e) {
+function _(e) {
     let { error: t } = e,
         n = t instanceof a.Ay ? t : new a.Ay(t);
-    s.A.isConnected() && n.code === a.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (l = 1);
-}
-function _(e) {
-    (l = 2), (u = e.purchaseTokenHash), (c = e.expiresAt);
+    o.A.isConnected() && n.code === a.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
 function f() {
-    (l = 0), (u = null), (c = null);
+    (u = 0), (d = null), (c = null);
 }
-class p extends r.Ay.Store {
+class E extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(o.A);
     }
     static displayName = "PurchaseTokenAuthStore";
     get purchaseTokenAuthState() {
-        return l;
+        return u;
     }
     get purchaseTokenHash() {
-        return u;
+        return d;
     }
     get expiresAt() {
         return c;
     }
 }
-let h = new p(i.h, {
-    SKU_PURCHASE_FAIL: d,
-    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
-    USER_PAYMENT_CLIENT_ADD: _,
+let h = new E(s.h, {
+    SKU_PURCHASE_FAIL: _,
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
+    USER_PAYMENT_CLIENT_ADD: function (e) {
+        (u = 2), (d = e.purchaseTokenHash), (c = e.expiresAt);
+    },
     BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: f,
     BILLING_SUBSCRIPTION_UPDATE_START: f,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: f,

@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         1: "'inci",
@@ -22,7 +20,7 @@
         60: "'ıncı",
         90: "'ıncı",
     };
-    return e.defineLocale("tr", {
+    e.defineLocale("tr", {
         months: "Ocak_Şubat_Mart_Nisan_Mayıs_Haziran_Temmuz_Ağustos_Eyl\xfcl_Ekim_Kasım_Aralık".split("_"),
         monthsShort: "Oca_Şub_Mar_Nis_May_Haz_Tem_Ağu_Eyl_Eki_Kas_Ara".split("_"),
         weekdays: "Pazar_Pazartesi_Salı_\xc7arşamba_Perşembe_Cuma_Cumartesi".split("_"),
@@ -69,12 +67,10 @@
                     return e;
                 default:
                     if (0 === e) return e + "'ıncı";
-                    var r = e % 10,
-                        i = (e % 100) - r,
-                        s = e >= 100 ? 100 : null;
-                    return e + (t[r] || t[i] || t[s]);
+                    var r = e % 10;
+                    return e + (t[r] || t[(e % 100) - r] || t[e >= 100 ? 100 : null]);
             }
         },
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

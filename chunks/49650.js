@@ -44,24 +44,7 @@ e.exports = function (e) {
             "exists",
             "nonempty",
         ],
-        n = [
-            "shared",
-            "abstract",
-            "formal",
-            "default",
-            "actual",
-            "variable",
-            "late",
-            "native",
-            "deprecated",
-            "final",
-            "sealed",
-            "annotation",
-            "suppressWarnings",
-            "small",
-        ],
-        r = ["doc", "by", "license", "see", "throws", "tagged"],
-        i = {
+        a = {
             className: "subst",
             excludeBegin: !0,
             excludeEnd: !0,
@@ -70,9 +53,9 @@ e.exports = function (e) {
             keywords: t,
             relevance: 10,
         },
-        s = [
+        n = [
             { className: "string", begin: '"""', end: '"""', relevance: 10 },
-            { className: "string", begin: '"', end: '"', contains: [i] },
+            { className: "string", begin: '"', end: '"', contains: [a] },
             { className: "string", begin: "'", end: "'" },
             {
                 className: "number",
@@ -81,16 +64,34 @@ e.exports = function (e) {
             },
         ];
     return (
-        (i.contains = s),
+        (a.contains = n),
         {
             name: "Ceylon",
-            keywords: { keyword: t.concat(n), meta: r },
+            keywords: {
+                keyword: t.concat([
+                    "shared",
+                    "abstract",
+                    "formal",
+                    "default",
+                    "actual",
+                    "variable",
+                    "late",
+                    "native",
+                    "deprecated",
+                    "final",
+                    "sealed",
+                    "annotation",
+                    "suppressWarnings",
+                    "small",
+                ]),
+                meta: ["doc", "by", "license", "see", "throws", "tagged"],
+            },
             illegal: "\\$[^01]|#[^0-9a-fA-F]",
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
                 { className: "meta", begin: '@[a-z]\\w*(?::"[^"]*")?' },
-            ].concat(s),
+            ].concat(n),
         }
     );
 };

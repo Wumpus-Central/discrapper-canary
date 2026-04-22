@@ -1,28 +1,25 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(528352),
-    i = n(364242),
-    a = n(476858),
-    s = n(355418);
-let o = RegExp(`(${(0, a.uJ)(r.eB)})\\s*(?:[,-]?\\s*(${r.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`, "i"),
-    l = 1,
-    u = 2;
-class c extends s.c {
+r.d(t, { A: () => l });
+var n = r(528352),
+    s = r(364242),
+    a = r(476858),
+    i = r(355418);
+let o = RegExp(`(${(0, a.uJ)(n.eB)})\\s*(?:[,-]?\\s*(${n.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`, "i");
+class l extends i.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = e.createParsingComponents();
-        n.imply("day", 1);
-        let a = t[l],
-            s = r.eB[a.toLowerCase()];
-        if ((n.assign("month", s), t[u])) {
-            let e = (0, r.zL)(t[u]);
-            n.assign("year", e);
+        let r = e.createParsingComponents();
+        r.imply("day", 1);
+        let a = t[1],
+            i = n.eB[a.toLowerCase()];
+        if ((r.assign("month", i), t[2])) {
+            let e = (0, n.zL)(t[2]);
+            r.assign("year", e);
         } else {
-            let t = (0, i.Y)(e.refDate, 1, s);
-            n.imply("year", t);
+            let t = (0, s.Y)(e.refDate, 1, i);
+            r.imply("year", t);
         }
-        return n;
+        return r;
     }
 }

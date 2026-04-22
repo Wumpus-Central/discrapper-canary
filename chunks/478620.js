@@ -5,17 +5,17 @@ var s = t(503698),
     n = t.n(s),
     i = t(567243),
     a = t(311907),
-    o = t(582754),
+    o = t(462887),
     d = t(544028),
     u = t(684290),
     h = t(278727),
-    c = t(802571);
+    c = t(472840);
 function m(e) {
     let {
             className: l,
             embed: { url: t },
         } = e,
-        s = (0, a.bG)([d.A], () => (0, o.Mw)(d.A.theme));
+        s = (0, a.bG)([d.A], () => (0, o.M)(d.A.theme));
     if (null == t) return null;
     let m = null,
         p = null,

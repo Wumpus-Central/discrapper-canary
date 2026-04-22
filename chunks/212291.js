@@ -1,32 +1,32 @@
-a.d(l, { s: () => r });
+a.d(l, { s: () => s });
 var t = a(627968),
-    o = a(359778),
-    n = a(397927),
+    n = a(359778),
+    o = a(821609),
     i = a(465430),
-    s = a(742158);
-let r = {
+    r = a(742158);
+let s = {
     title: "Form Components",
     stories: [
         {
             id: "formnotice",
             name: "FormNotice",
             component: function (e) {
-                let { type: l, title: a, body: o, hasButton: s } = e,
-                    r = s ? (0, t.jsx)(n.Button, { text: "Action" }) : void 0;
-                return (0, t.jsx)(i.Nz, { "data-migration-pending": !0, type: l, title: a, body: o, button: r });
+                let { type: l, title: a, body: n, hasButton: r } = e,
+                    s = r ? (0, t.jsx)(o.$, { text: "Action" }) : void 0;
+                return (0, t.jsx)(i.Nz, { "data-migration-pending": !0, type: l, title: a, body: n, button: s });
             },
             controls: {
                 type: {
                     type: "select",
                     label: "Type",
-                    defaultValue: o.Z.Types.DANGER,
+                    defaultValue: n.Z.Types.DANGER,
                     options: [
-                        { label: "Primary", value: o.Z.Types.PRIMARY },
-                        { label: "Danger", value: o.Z.Types.DANGER },
-                        { label: "Warning", value: o.Z.Types.WARNING },
-                        { label: "Success", value: o.Z.Types.SUCCESS },
-                        { label: "Brand", value: o.Z.Types.BRAND },
-                        { label: "Custom", value: o.Z.Types.CUSTOM },
+                        { label: "Primary", value: n.Z.Types.PRIMARY },
+                        { label: "Danger", value: n.Z.Types.DANGER },
+                        { label: "Warning", value: n.Z.Types.WARNING },
+                        { label: "Success", value: n.Z.Types.SUCCESS },
+                        { label: "Brand", value: n.Z.Types.BRAND },
+                        { label: "Custom", value: n.Z.Types.CUSTOM },
                     ],
                 },
                 title: { type: "text", label: "Title", defaultValue: "Important Notice" },
@@ -42,8 +42,8 @@ let r = {
             id: "formtitle",
             name: "FormTitle",
             component: function (e) {
-                let { children: l, disabled: a, required: o, errorMessage: n } = e,
-                    i = n?.trim() === "" ? void 0 : n;
+                let { children: l, disabled: a, required: n, errorMessage: o } = e,
+                    i = o?.trim() === "" ? void 0 : o;
                 return (0, t.jsx)("div", {
                     style: { display: "flex", flexDirection: "column", gap: "16px" },
                     children: ["h1", "h2", "h3", "h4", "h5", "legend"].map((e) =>
@@ -56,11 +56,11 @@ let r = {
                                         style: { minWidth: "60px", fontSize: "12px", color: "#666" },
                                         children: [e, ":"],
                                     }),
-                                    (0, t.jsx)(s.z, {
+                                    (0, t.jsx)(r.z, {
                                         "data-migration-pending": !0,
                                         tag: e,
                                         disabled: a,
-                                        required: o,
+                                        required: n,
                                         error: i,
                                         errorId: null != i ? `error-id-${e}` : void 0,
                                         children: l,

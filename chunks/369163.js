@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { v: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+i.d(t, { v: () => s });
+var n = i(627968);
+i(64700);
+var l = i(827734),
+    r = i(996682),
+    a = i(27989);
+let s = (e) => {
     let {
             size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
+            width: i,
+            height: s,
+            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
             ...c
         } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+        _ = (0, a.J)(t),
+        u = _?.width ?? i,
+        p = _?.height ?? s;
+    return (0, n.jsx)("svg", {
+        ...(0, r.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: u,
+        height: p,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, n.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
             d: "M10.95 1.4a1.59 1.59 0 0 1 2.1 0l4.9 4A3.37 3.37 0 0 1 19 8v8c0 1.07-.4 2.06-1.05 2.6l-4.9 4c-.65.53-1.45.53-2.1 0l-4.9-4A3.37 3.37 0 0 1 5 16V8c0-1.07.4-2.06 1.05-2.6l4.9-4Z",
-            className: u,
+            className: d,
         }),
     });
 };

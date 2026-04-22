@@ -7,21 +7,20 @@ var r = n(136722),
     o = n(260509),
     l = n(34457),
     u = n(9865),
-    c = n(7864);
-function d(e) {
-    let t = e;
-    return (0, i.yE)(l.xh, { ...t, permissions: r.iu(t.permissions) });
+    d = n(7864);
+function c(e) {
+    return (0, i.yE)(l.xh, { ...e, permissions: r.iu(e.permissions) });
 }
 class _ extends a.yW {
     static displayName = "GuildRoleStore";
-    database = this.addKKVDatabase("guild_roles", d);
+    database = this.addKKVDatabase("guild_roles", c);
     stateWrapper() {
         return this.database;
     }
     serializeAllGuildRoles() {
         return this.database.mapPartitions(u.cH);
     }
-    getSortedRoles = this.database.memoizedPartition((e, t) => c.gE(Object.values(t)));
+    getSortedRoles = this.database.memoizedPartition((e, t) => d.gE(Object.values(t)));
     getRolesSnapshot = this.database.memoizedPartition((e, t) => ({ ...t }));
     getUnsafeMutableRoles(e) {
         return this.database.getPartition(e);
@@ -49,7 +48,7 @@ function f(e, t, n) {
     ("update" !== t.op || 0 !== t.writes.length || 0 !== t.deletes.length) &&
         n.setPartition(e, u.j_(e, t, n.getPartition(e)));
 }
-function p(e, t, n) {
+function E(e, t, n) {
     if (0 === n.partitionLength(t))
         throw Error(`Guild data was missing from store for guild ${t}: missing roles. (phase: ${e})`);
 }
@@ -64,7 +63,7 @@ let h = new _(
                     t.setPartition(
                         e.id,
                         "partial" === e.data_mode
-                            ? c.ly(e.id, n, e.partial_updates.roles, e.partial_updates.deleted_role_ids)
+                            ? d.ly(e.id, n, e.partial_updates.roles, e.partial_updates.deleted_role_ids)
                             : u.hd(e.id, e.roles),
                     );
             }
@@ -84,22 +83,22 @@ let h = new _(
                 i = new Set(n.map((e) => e.id));
             for (let e of r) i.add(e);
             for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
-            for (let { id: e, roles: r } of n) f(e, r, t), p("connection_open", e, t);
+            for (let { id: e, roles: r } of n) f(e, r, t), E("connection_open", e, t);
         },
         CACHE_LOADED: (e, t) => {
             let { guilds: n } = e;
-            for (let { id: e, roles: r } of (t.clear(), n)) t.setPartition(e, u.lj(e, r)), p("cache_loaded", e, t);
+            for (let { id: e, roles: r } of (t.clear(), n)) t.setPartition(e, u.lj(e, r)), E("cache_loaded", e, t);
         },
         CACHE_LOADED_LAZY: (e, t) => {
             if (0 !== e.guilds.length)
                 for (let { id: n, roles: r } of (t.clear(), e.guilds))
-                    t.setPartition(n, u.lj(n, r)), p("cache_loaded_lazy", n, t);
+                    t.setPartition(n, u.lj(n, r)), E("cache_loaded_lazy", n, t);
         },
         GUILD_CREATE: (e, t) => {
             let {
                 guild: { id: n, roles: r },
             } = e;
-            f(n, r, t), p("guild_create", n, t);
+            f(n, r, t), E("guild_create", n, t);
         },
         GUILD_UPDATE: (e, t) => {
             let {

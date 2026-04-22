@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(l, { A: () => p });
 var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927),
-    l = n(235986),
-    u = n(147925),
-    c = n(317128);
-class d extends i.PureComponent {
+    s = n(64700),
+    t = n(503698),
+    i = n.n(t),
+    a = n(939249),
+    d = n(235986),
+    c = n(147925),
+    o = n(562573);
+class u extends s.PureComponent {
     handleClick(e) {
-        let { onBreadcrumbClick: t } = this.props;
-        null != t && t(e);
+        let { onBreadcrumbClick: l } = this.props;
+        null != l && l(e);
     }
-    renderBreadcrumb = (e, t) => {
+    renderBreadcrumb = (e, l) => {
         let {
                 activeId: n,
-                onBreadcrumbClick: i,
-                breadcrumbs: a,
-                renderCustomBreadcrumb: l,
-                separatorClassName: d,
+                onBreadcrumbClick: s,
+                breadcrumbs: t,
+                renderCustomBreadcrumb: d,
+                separatorClassName: u,
             } = this.props,
-            _ = e.id === n,
-            f = () => this.handleClick(e),
-            p = t === a.length - 1,
-            h =
-                null != l
-                    ? l(e, _)
-                    : (0, r.jsx)("span", { className: s()(c.QF, { [c.aj]: _, [c._j]: null != i }), children: e.label });
+            p = e.id === n,
+            m = () => this.handleClick(e),
+            N = l === t.length - 1,
+            A =
+                null != d
+                    ? d(e, p)
+                    : (0, r.jsx)("span", { className: i()(o.QF, { [o.aj]: p, [o._j]: null != s }), children: e.label });
         return (0, r.jsxs)(
             "div",
             {
-                className: s()(c.hj, { [c.jQ]: p }),
+                className: i()(o.hj, { [o.jQ]: N }),
                 children: [
-                    null != i ? (0, r.jsx)(o.DUT, { tag: "span", onClick: f, className: c.$O, children: h }) : h,
-                    p ? null : (0, r.jsx)(u.A, { className: s()(c.LJ, d), direction: u.A.Directions.RIGHT }),
+                    null != s ? (0, r.jsx)(a.D, { tag: "span", onClick: m, className: o.$O, children: A }) : A,
+                    N ? null : (0, r.jsx)(c.A, { className: i()(o.LJ, u), direction: c.A.Directions.RIGHT }),
                 ],
             },
             e.id,
         );
     };
     render() {
-        let { breadcrumbs: e, className: t } = this.props,
+        let { breadcrumbs: e, className: l } = this.props,
             n = e.map(this.renderBreadcrumb);
-        return (0, r.jsx)(l.A, { justify: l.A.Justify.START, className: s()(c.jD, t), children: n });
+        return (0, r.jsx)(d.A, { justify: d.A.Justify.START, className: i()(o.jD, l), children: n });
     }
 }
-let _ = d;
+let p = u;

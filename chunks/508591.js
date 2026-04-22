@@ -1,67 +1,66 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(116833),
-    a = n(704640),
-    o = n(149757),
-    l = n(642481),
-    u = n(301679),
-    c = n(788868),
-    d = n(49999),
-    _ = n(985018);
-let f = (e) => {
+t.d(n, { A: () => p });
+var l = t(627968),
+    r = t(64700),
+    i = t(116833),
+    a = t(704640),
+    s = t(149757),
+    o = t(642481),
+    d = t(301679),
+    u = t(788868),
+    c = t(49999),
+    m = t(985018);
+let p = (e) => {
     let {
-            badgeId: t = c.Ac.PREMIUM_TENURE_1_MONTH,
-            markAsDismissed: n,
-            children: f,
-            mode: p = "popover",
-            tooltipDelay: h = 300,
-            targetElementRef: m,
-            body: E,
-            progressCircleText: g,
-            progressCirclePercent: A,
-            progressCircleUrgency: I,
-            actions: T,
-            onShow: S,
-            estimatedTooltipHeight: y = 300,
+            badgeId: n = u.Ac.PREMIUM_TENURE_1_MONTH,
+            markAsDismissed: t,
+            children: p,
+            mode: f = "popover",
+            tooltipDelay: g = 300,
+            targetElementRef: h,
+            body: x,
+            progressCircleText: A,
+            progressCirclePercent: E,
+            progressCircleUrgency: j,
+            actions: v,
+            onShow: C,
+            estimatedTooltipHeight: b = 300,
         } = e,
-        v = c.VD[t].nameUnformattedNitro,
-        N = _.intl.string(v).toLocaleUpperCase(),
-        C = (0, a.A)(t),
-        b = (0, o.I)(t).standard;
-    (0, i.useEffect)(() => {
-        s.m[s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = b);
-    }, [b]);
-    let R = (0, i.useCallback)(() => {
-            n?.(d.i.USER_DISMISS);
-        }, [n]),
-        O = {
-            gradientColor: C,
+        R = u.VD[n].nameUnformattedNitro,
+        _ = m.intl.string(R).toLocaleUpperCase(),
+        y = (0, a.A)(n),
+        k = (0, s.I)(n).standard;
+    (0, r.useEffect)(() => {
+        i.m[i.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = k);
+    }, [k]);
+    let N = (0, r.useCallback)(() => {
+            t?.(c.i.USER_DISMISS);
+        }, [t]),
+        I = {
+            gradientColor: y,
             size: "lg",
             graphic: {
                 type: "dynamic",
-                component: s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+                component: i.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                 aspectRatio: "6/4",
-                props: { src: b, alt: N, progressCircleText: g, progressCirclePercent: A, progressCircleUrgency: I },
+                props: { src: k, alt: _, progressCircleText: A, progressCirclePercent: E, progressCircleUrgency: j },
             },
-            title: N,
-            body: E,
-            actions: T,
+            title: _,
+            body: x,
+            actions: v,
         };
-    return "tooltip" === p
-        ? (0, r.jsx)(u.A, { targetElementRef: m, estimatedTooltipHeight: y, delay: h, onShow: S, ...O, children: f })
-        : (0, r.jsxs)(r.Fragment, {
+    return "tooltip" === f
+        ? (0, l.jsx)(d.A, { targetElementRef: h, estimatedTooltipHeight: b, delay: g, onShow: C, ...I, children: p })
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  f,
-                  (0, r.jsx)(l.A, {
-                      targetElementRef: m,
+                  p,
+                  (0, l.jsx)(o.A, {
+                      targetElementRef: h,
                       shouldShow: !0,
-                      onRequestClose: R,
+                      onRequestClose: N,
                       align: "right",
                       position: "top",
                       caretConfig: { align: "center" },
-                      ...O,
+                      ...I,
                   }),
               ],
           });

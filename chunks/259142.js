@@ -1,48 +1,41 @@
 e.d(a, { default: () => x });
-var n = e(627968);
+var s = e(627968);
 e(64700);
-var i = e(284009),
-    s = e.n(i),
-    l = e(158954),
-    o = e(311907),
-    d = e(397927),
+var l = e(284009),
+    n = e.n(l),
+    i = e(189213),
+    c = e(311907),
+    o = e(32880),
     r = e(871109),
-    c = e(59375),
-    u = e(94733),
-    m = e(985018),
+    d = e(59375),
+    h = e(94733),
+    u = e(985018),
     f = e(94517);
-function h(t) {
-    let { attachment: a, guildId: e, productId: i } = t;
-    return (0, n.jsxs)("li", {
+function m(t) {
+    let { attachment: a, guildId: e, productId: l } = t;
+    return (0, s.jsxs)("li", {
         className: f.k,
         children: [
-            (0, n.jsx)(c.A, { attachment: a }),
-            (0, n.jsx)(u.A, {
-                className: f.i,
-                icon: d.s3U,
-                text: void 0,
-                guildId: e,
-                productId: i,
-                attachmentId: a.id,
-            }),
+            (0, s.jsx)(d.A, { attachment: a }),
+            (0, s.jsx)(h.A, { className: f.i, icon: o.s, text: void 0, guildId: e, productId: l, attachmentId: a.id }),
         ],
     });
 }
 function x(t) {
-    let { guildId: a, productId: e, onClose: i, transitionState: d } = t,
-        c = (0, o.bG)([r.A], () => r.A.getGuildProduct(e));
-    s()(null != c, "guildProductListing cannot be null");
-    let u = c.attachments ?? [];
-    return (0, n.jsx)(l.Modal, {
+    let { guildId: a, productId: e, onClose: l, transitionState: o } = t,
+        d = (0, c.bG)([r.A], () => r.A.getGuildProduct(e));
+    n()(null != d, "guildProductListing cannot be null");
+    let h = d.attachments ?? [];
+    return (0, s.jsx)(i.Modal, {
         size: "md",
-        transitionState: d,
-        "aria-label": m.intl.string(m.t["3jaCac"]),
-        title: c.name,
-        subtitle: m.intl.format(m.t["6dOuaP"], { count: c.attachments_count }),
+        transitionState: o,
+        "aria-label": u.intl.string(u.t["3jaCac"]),
+        title: d.name,
+        subtitle: u.intl.format(u.t["6dOuaP"], { count: d.attachments_count }),
         actions: [],
-        onClose: i,
-        children: (0, n.jsx)("ul", {
-            children: u.map((t) => (0, n.jsx)(h, { guildId: a, productId: c.id, attachment: t }, t.id)),
+        onClose: l,
+        children: (0, s.jsx)("ul", {
+            children: h.map((t) => (0, s.jsx)(m, { guildId: a, productId: d.id, attachment: t }, t.id)),
         }),
     });
 }

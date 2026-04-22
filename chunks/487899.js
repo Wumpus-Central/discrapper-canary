@@ -1,10 +1,8 @@
 "use strict";
-n.d(t, { L: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.APPLICATION = 1)] = "APPLICATION"),
-        (e[(e.LINK = 2)] = "LINK"),
-        (e[(e.APPLICATION_BANNER = 3)] = "APPLICATION_BANNER"),
-        e
-    );
-})({});
+n.d(t, { L: () => i });
+var r,
+    i =
+        (((r = {})[(r.APPLICATION = 1)] = "APPLICATION"),
+        (r[(r.LINK = 2)] = "LINK"),
+        (r[(r.APPLICATION_BANNER = 3)] = "APPLICATION_BANNER"),
+        r);

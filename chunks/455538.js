@@ -1,33 +1,35 @@
-t.d(n, { default: () => d });
+t.d(n, { default: () => p });
 var i = t(627968),
-    o = t(64700),
-    a = t(397927),
-    c = t(442433),
-    l = t(486503),
-    r = t(253932),
-    s = t(957565),
-    u = t(985018);
-function d(e) {
+    a = t(64700),
+    l = t(861672),
+    o = t(477782),
+    d = t(173936),
+    r = t(442433),
+    c = t(486503),
+    s = t(253932),
+    u = t(957565),
+    b = t(985018);
+function p(e) {
     let { imageUrl: n, onSelect: t } = e,
-        d = r.Q_.useSetting(),
-        { tidaWebformEnabled: p } = l.A.useExperiment({ location: "RoleIconContextMenu" }, { autoTrackExposure: !1 }),
-        x = o.useCallback(() => {
-            (0, s.C)(n);
+        p = s.Q_.useSetting(),
+        { tidaWebformEnabled: m } = c.A.useExperiment({ location: "RoleIconContextMenu" }, { autoTrackExposure: !1 }),
+        f = a.useCallback(() => {
+            (0, u.C)(n);
         }, [n]);
-    return s.p5 && d && p
-        ? (0, i.jsx)(a.W1t, {
+    return u.p5 && p && m
+        ? (0, i.jsx)(l.W, {
               "data-menu-migrated": !0,
               navId: "role-icon-context",
-              onClose: c.Z_,
+              onClose: r.Z_,
               onSelect: t,
-              "aria-label": u.intl.string(u.t.Zow2V5),
-              children: (0, i.jsx)(a.rXV, {
-                  children: (0, i.jsx)(a.Drp, {
+              "aria-label": b.intl.string(b.t.Zow2V5),
+              children: (0, i.jsx)(o.rX, {
+                  children: (0, i.jsx)(o.Dr, {
                       id: "copy-image-link",
-                      label: u.intl.string(u.t["8xHmxo"]),
-                      action: x,
-                      icon: a.qYV,
-                      leadingAccessory: { type: "icon", icon: a.qYV },
+                      label: b.intl.string(b.t["8xHmxo"]),
+                      action: f,
+                      icon: d.q,
+                      leadingAccessory: { type: "icon", icon: d.q },
                   }),
               }),
           })

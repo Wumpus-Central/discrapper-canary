@@ -1,40 +1,45 @@
-"use strict";
-n.d(t, { aP: () => T, oJ: () => C }), n(321073);
+n.d(t, { aP: () => R, oJ: () => y }), n(321073);
 var i = n(627968),
-    s = n(64700),
-    l = n(284009),
-    r = n.n(l),
-    a = n(158954),
-    o = n(311907),
-    d = n(397927),
-    c = n(565645),
-    u = n(915089),
-    m = n(375499),
-    g = n(937773),
-    x = n(508675),
-    h = n(7584),
-    _ = n(808728),
-    A = n(841650),
-    p = n(307731),
-    f = n(985018),
-    j = n(339884);
-function N(e) {
-    let { guildId: t, emojiData: n, onSelectEmoji: l } = e,
-        r = s.useRef(null),
-        a = (0, o.bG)([x.Ay], () => (null != n.id ? x.Ay.getCustomEmojiById(n.id) : void 0)),
-        u = (0, o.bG)([_.Ay], () => _.Ay.getDefaultChannel(t)),
-        A = s.useCallback(
+    l = n(64700),
+    s = n(284009),
+    r = n.n(s),
+    a = n(189213),
+    o = n(452027),
+    d = n(311907),
+    c = n(265872),
+    u = n(834730),
+    m = n(241326),
+    g = n(331322),
+    h = n(260598),
+    x = n(512950),
+    _ = n(565645),
+    p = n(915089),
+    A = n(375499),
+    E = n(937773),
+    f = n(508675),
+    j = n(7584),
+    N = n(808728),
+    I = n(841650),
+    C = n(307731),
+    b = n(985018),
+    v = n(831452);
+function S(e) {
+    let { guildId: t, emojiData: n, onSelectEmoji: s } = e,
+        r = l.useRef(null),
+        a = (0, d.bG)([f.Ay], () => (null != n.id ? f.Ay.getCustomEmojiById(n.id) : void 0)),
+        o = (0, d.bG)([N.Ay], () => N.Ay.getDefaultChannel(t)),
+        m = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, i.jsx)(g.A, {
-                    pickerIntention: p.EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI,
-                    channel: u,
+                return (0, i.jsx)(E.A, {
+                    pickerIntention: C.EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI,
+                    channel: o,
                     closePopout: t,
                     onNavigateAway: t,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
                         null != n &&
-                            l(
+                            s(
                                 null != n.id
                                     ? { id: n.id, name: void 0 }
                                     : { id: void 0, name: n.optionallyDiverseSequence },
@@ -43,15 +48,15 @@ function N(e) {
                     },
                 });
             },
-            [l, u],
+            [s, o],
         ),
-        f = s.useMemo(
+        g = l.useMemo(
             () =>
                 null == a && null == n.name
                     ? null
                     : function () {
-                          return (0, i.jsx)(c.A, {
-                              className: j.Zg,
+                          return (0, i.jsx)(_.A, {
+                              className: v.Zg,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: a?.animated,
@@ -59,88 +64,88 @@ function N(e) {
                       },
             [n, a],
         ),
-        N = "";
+        h = "";
     return (
-        null != a ? (N = `:${a.name}:`) : null != n.name && (N = h.Ay.convertSurrogateToName(n.name)),
-        (0, i.jsx)(d.YNO, {
+        null != a ? (h = `:${a.name}:`) : null != n.name && (h = j.Ay.convertSurrogateToName(n.name)),
+        (0, i.jsx)(c.Y, {
             targetElementRef: r,
-            animation: d.YNO.Animation.NONE,
+            animation: c.Y.Animation.NONE,
             position: "top",
-            renderPopout: A,
+            renderPopout: m,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsxs)("div", {
                     ref: r,
-                    className: j.oc,
+                    className: v.oc,
                     ...e,
                     children: [
-                        (0, i.jsx)(m.A, { className: j.Z8, active: n, tabIndex: 0, renderButtonContents: f }),
-                        (0, i.jsx)(d.Text, { variant: "text-md/normal", className: j.at, children: N }),
+                        (0, i.jsx)(A.A, { className: v.Z8, active: n, tabIndex: 0, renderButtonContents: g }),
+                        (0, i.jsx)(u.E, { variant: "text-md/normal", className: v.at, children: h }),
                     ],
                 });
             },
         })
     );
 }
-function E(e) {
+function T(e) {
     let {
             guildId: t,
             initialData: n,
-            benefitTypeInput: l,
+            benefitTypeInput: s,
             descriptionPlaceholder: r,
-            canSubmit: o,
+            canSubmit: d,
             onSave: c,
-            onDelete: m,
-            transitionState: g,
-            onClose: x,
+            onDelete: u,
+            transitionState: x,
+            onClose: _,
         } = e,
-        h = (0, u.GV)(),
-        [_, A] = s.useState(n?.description ?? ""),
-        [p, j] = s.useState(() => ({ id: n?.emoji_id, name: n?.emoji_name })),
-        E = o && "" !== _ && (null != p.id || null != p.name);
+        A = (0, p.GV)(),
+        [E, f] = l.useState(n?.description ?? ""),
+        [j, N] = l.useState(() => ({ id: n?.emoji_id, name: n?.emoji_name })),
+        I = d && "" !== E && (null != j.id || null != j.name);
     function C(e) {
-        e.preventDefault(), E && (c({ description: _, emojiId: p.id, emojiName: p.name }), x());
+        e.preventDefault(), I && (c({ description: E, emojiId: j.id, emojiName: j.name }), _());
     }
-    let T = [{ text: f.intl.string(f.t["ETE/oC"]), variant: "secondary", onClick: x }];
+    let v = [{ text: b.intl.string(b.t["ETE/oC"]), variant: "secondary", onClick: _ }];
     return (
-        null != m &&
-            T.push({
-                text: f.intl.string(f.t.oyYWHE),
+        null != u &&
+            v.push({
+                text: b.intl.string(b.t.oyYWHE),
                 variant: "critical-secondary",
                 onClick: () => {
-                    m(), x();
+                    u(), _();
                 },
-                icon: d.ucK,
+                icon: m.u,
             }),
-        T.push({
-            text: null == n ? f.intl.string(f.t.OYkgVk) : f.intl.string(f.t["R3BPH+"]),
+        v.push({
+            text: null == n ? b.intl.string(b.t.OYkgVk) : b.intl.string(b.t["R3BPH+"]),
             variant: "primary",
             onClick: C,
-            disabled: !E,
+            disabled: !I,
         }),
         (0, i.jsx)("form", {
             onSubmit: C,
             children: (0, i.jsx)(a.Modal, {
-                transitionState: g,
-                onClose: x,
-                title: f.intl.string(f.t["2qf9EI"]),
-                actions: T,
-                children: (0, i.jsxs)(d.BJc, {
+                transitionState: x,
+                onClose: _,
+                title: b.intl.string(b.t["2qf9EI"]),
+                actions: v,
+                children: (0, i.jsxs)(g.B, {
                     gap: "md",
                     children: [
-                        l,
-                        (0, i.jsx)(d.fs1, {
-                            label: f.intl.string(f.t["1Ts7QP"]),
+                        s,
+                        (0, i.jsx)(h.f, {
+                            label: b.intl.string(b.t["1Ts7QP"]),
                             placeholder: r,
-                            value: _,
+                            value: E,
                             rows: 1,
                             autosize: !0,
-                            onChange: A,
-                            "aria-labelledby": h,
+                            onChange: f,
+                            "aria-labelledby": A,
                         }),
-                        (0, i.jsx)(a.D0$, {
-                            label: f.intl.string(f.t.sMOuuS),
-                            children: (0, i.jsx)(N, { guildId: t, emojiData: p, onSelectEmoji: j }),
+                        (0, i.jsx)(o.D, {
+                            label: b.intl.string(b.t.sMOuuS),
+                            children: (0, i.jsx)(S, { guildId: t, emojiData: j, onSelectEmoji: N }),
                         }),
                     ],
                 }),
@@ -148,65 +153,65 @@ function E(e) {
         })
     );
 }
-function C(e) {
-    let { guildId: t, omitChannelIds: n, initialData: l, onSave: a, onDelete: o, transitionState: c, onClose: m } = e,
-        [g, x] = s.useState(l?.ref_id),
-        h = (0, u.GV)(),
-        _ = (0, i.jsxs)(d.BJc, {
+function y(e) {
+    let { guildId: t, omitChannelIds: n, initialData: s, onSave: a, onDelete: o, transitionState: d, onClose: c } = e,
+        [u, m] = l.useState(s?.ref_id),
+        h = (0, p.GV)(),
+        _ = (0, i.jsxs)(g.B, {
             gap: 16,
             children: [
-                (0, i.jsx)(d.po8, { messageType: d.YCn.WARNING, children: f.intl.string(f.t.xunxCo) }),
-                (0, i.jsx)(A.A, {
-                    label: f.intl.string(f.t.GK18KJ),
+                (0, i.jsx)(x.p, { messageType: x.Y.WARNING, children: b.intl.string(b.t.xunxCo) }),
+                (0, i.jsx)(I.A, {
+                    label: b.intl.string(b.t.GK18KJ),
                     guildId: t,
-                    value: g,
-                    initialChannelId: l?.ref_id,
+                    value: u,
+                    initialChannelId: s?.ref_id,
                     omitChannelIds: n,
                     onChange: function (e) {
-                        x(e);
+                        m(e);
                     },
                     "aria-labelledby": h,
                 }),
             ],
         });
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(T, {
         guildId: t,
-        initialData: l,
+        initialData: s,
         benefitTypeInput: _,
-        descriptionPlaceholder: f.intl.string(f.t.J8O1Lp),
-        canSubmit: null != g,
+        descriptionPlaceholder: b.intl.string(b.t.J8O1Lp),
+        canSubmit: null != u,
         onSave: function (e) {
-            r()(null != g, "Cannot submit null channel"), a({ ...e, channelId: g });
+            r()(null != u, "Cannot submit null channel"), a({ ...e, channelId: u });
         },
-        transitionState: c,
-        onClose: m,
+        transitionState: d,
+        onClose: c,
         onDelete: o,
     });
 }
-function T(e) {
-    let { initialData: t, onSave: n, transitionState: l, onClose: a, onDelete: o, guildId: c } = e,
-        [m, g] = s.useState(t?.name ?? ""),
-        x = (0, u.GV)(),
-        h = (0, i.jsx)(d.fs1, {
-            label: f.intl.string(f.t.NPOJrU),
-            placeholder: f.intl.string(f.t.NPOJrU),
-            value: m,
+function R(e) {
+    let { initialData: t, onSave: n, transitionState: s, onClose: a, onDelete: o, guildId: d } = e,
+        [c, u] = l.useState(t?.name ?? ""),
+        m = (0, p.GV)(),
+        g = (0, i.jsx)(h.f, {
+            label: b.intl.string(b.t.NPOJrU),
+            placeholder: b.intl.string(b.t.NPOJrU),
+            value: c,
             rows: 1,
             onChange: function (e) {
-                g(e);
+                u(e);
             },
-            "aria-labelledby": x,
+            "aria-labelledby": m,
         });
-    return (0, i.jsx)(E, {
-        guildId: c,
+    return (0, i.jsx)(T, {
+        guildId: d,
         initialData: t,
-        benefitTypeInput: h,
-        descriptionPlaceholder: f.intl.string(f.t.ucP4Tt),
-        canSubmit: "" !== m,
+        benefitTypeInput: g,
+        descriptionPlaceholder: b.intl.string(b.t.ucP4Tt),
+        canSubmit: "" !== c,
         onSave: function (e) {
-            r()("" !== m, "Cannot submit empty name"), n({ ...e, name: m });
+            r()("" !== c, "Cannot submit empty name"), n({ ...e, name: c });
         },
-        transitionState: l,
+        transitionState: s,
         onClose: a,
         onDelete: o,
     });

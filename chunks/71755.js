@@ -1,66 +1,69 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
+    a = n(192308),
+    s = n(821609),
     r = n(529200),
-    a = n(635491),
-    o = n(122906),
-    d = n(401755),
-    c = n(985018),
-    u = n(157484),
-    m = n(366228);
-function _(e) {
+    o = n(635491),
+    d = n(122906),
+    c = n(401755),
+    u = n(985018),
+    m = n(195580),
+    _ = n(344900);
+function h(e) {
     let { code: t } = e,
-        _ = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
-    if (null == _ || _.state === d.QB.RESOLVING)
+        h = (0, l.bG)([d.A], () => d.A.getGuildTemplate(t));
+    if (null == h || h.state === c.QB.RESOLVING)
         return (0, i.jsxs)(r.A, {
             children: [
-                (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.Xj87Yf) }),
+                (0, i.jsx)(r.A.Header, { text: u.intl.string(u.t.Xj87Yf) }),
                 (0, i.jsx)(r.A.Body, { resolving: !0 }),
             ],
         });
-    if (_.state === d.QB.EXPIRED)
+    if (h.state === c.QB.EXPIRED)
         return (0, i.jsxs)(r.A, {
             children: [
-                (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.C7ZRNw) }),
+                (0, i.jsx)(r.A.Header, { text: u.intl.string(u.t.C7ZRNw) }),
                 (0, i.jsxs)(r.A.Body, {
                     children: [
                         (0, i.jsx)(r.A.Icon, { expired: !0 }),
-                        (0, i.jsx)(r.A.Info, { expired: !0, title: c.intl.string(c.t.A6MwXE) }),
+                        (0, i.jsx)(r.A.Info, { expired: !0, title: u.intl.string(u.t.A6MwXE) }),
                     ],
                 }),
             ],
         });
-    let h = __OVERLAY__
-        ? (0, i.jsx)(s.Button, { disabled: !0, variant: "secondary", text: c.intl.string(c.t.W7NTWm) })
-        : (0, i.jsx)(s.Button, {
+    let p = __OVERLAY__
+        ? (0, i.jsx)(s.$, { disabled: !0, variant: "secondary", text: u.intl.string(u.t.W7NTWm) })
+        : (0, i.jsx)(s.$, {
               onClick: () => {
-                  (0, s.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("7726"), n.e("49040")]).then(n.bind(n, 72715));
-                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: _ });
+                  (0, a.openModalLazy)(async () => {
+                      let { default: e } = await Promise.all([n.e("82486"), n.e("7726"), n.e("20883")]).then(
+                          n.bind(n, 72715),
+                      );
+                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: h });
                   });
               },
-              loading: _.state === d.QB.ACCEPTING,
+              loading: h.state === c.QB.ACCEPTING,
               variant: "active",
-              text: c.intl.string(c.t["a3Gl+e"]),
+              text: u.intl.string(u.t["a3Gl+e"]),
           });
     return (0, i.jsxs)(r.A, {
         children: [
-            (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.kAvFkO) }),
+            (0, i.jsx)(r.A.Header, { text: u.intl.string(u.t.kAvFkO) }),
             (0, i.jsxs)(r.A.Body, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: m.iH,
+                        className: _.iH,
                         children: [
-                            (0, i.jsx)(a.A, { className: u.K }),
+                            (0, i.jsx)(o.A, { className: m.K }),
                             (0, i.jsx)(r.A.Info, {
-                                title: _.name,
-                                children: c.intl.format(c.t.cGXXHL, { usageCount: String(_.usageCount ?? 0) }),
+                                title: h.name,
+                                children: u.intl.format(u.t.cGXXHL, { usageCount: String(h.usageCount ?? 0) }),
                             }),
                         ],
                     }),
-                    h,
+                    p,
                 ],
             }),
         ],

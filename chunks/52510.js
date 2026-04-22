@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(116657);
-let i = {
+i.d(t, { A: () => r });
+var n = i(116657);
+let r = {
     11: "ProcessingSoftware",
     254: {
         name: "SubfileType",
@@ -70,8 +69,8 @@ let i = {
     279: "StripByteCounts",
     280: "MinSampleValue",
     281: "MaxSampleValue",
-    282: { name: "XResolution", description: r.A.XResolution },
-    283: { name: "YResolution", description: r.A.YResolution },
+    282: { name: "XResolution", description: n.A.XResolution },
+    283: { name: "YResolution", description: n.A.YResolution },
     284: "PlanarConfiguration",
     285: "PageName",
     286: { name: "XPosition", description: (e) => "" + Math.round(e[0] / e[1]) },
@@ -80,7 +79,7 @@ let i = {
         name: "GrayResponseUnit",
         description: (e) => ({ 1: "0.1", 2: "0.001", 3: "0.0001", 4: "1e-05", 5: "1e-06" })[e] || "Unknown",
     },
-    296: { name: "ResolutionUnit", description: r.A.ResolutionUnit },
+    296: { name: "ResolutionUnit", description: n.A.ResolutionUnit },
     297: "PageNumber",
     301: "TransferFunction",
     305: "Software",
@@ -133,11 +132,11 @@ let i = {
     34736: "GeoTiffDoubleParams",
     34737: "GeoTiffAsciiParams",
     34853: "GPS Info IFD Pointer",
-    40091: { name: "XPTitle", description: a },
-    40092: { name: "XPComment", description: a },
-    40093: { name: "XPAuthor", description: a },
-    40094: { name: "XPKeywords", description: a },
-    40095: { name: "XPSubject", description: a },
+    40091: { name: "XPTitle", description: o },
+    40092: { name: "XPComment", description: o },
+    40093: { name: "XPAuthor", description: o },
+    40094: { name: "XPKeywords", description: o },
+    40095: { name: "XPSubject", description: o },
     42112: "GDALMetadata",
     42113: "GDALNoData",
     50341: "PrintIM",
@@ -161,8 +160,8 @@ let i = {
     50736: "DNGLensInfo",
     50739: "ShadowScale",
     50741: { name: "MakerNoteSafety", description: (e) => ({ 0: "Unsafe", 1: "Safe" })[e] || "Unknown" },
-    50778: { name: "CalibrationIlluminant1", description: r.A.LightSource },
-    50779: { name: "CalibrationIlluminant2", description: r.A.LightSource },
+    50778: { name: "CalibrationIlluminant1", description: n.A.LightSource },
+    50779: { name: "CalibrationIlluminant2", description: n.A.LightSource },
     50781: "RawDataUniqueID",
     50827: "OriginalRawFileName",
     50828: "OriginalRawFileData",
@@ -219,6 +218,6 @@ let i = {
     51111: "NewRawImageDigest",
     51112: "RawToPreviewGain",
 };
-function a(e) {
+function o(e) {
     return new TextDecoder("utf-16").decode(new Uint8Array(e)).replace(/\u0000+$/, "");
 }

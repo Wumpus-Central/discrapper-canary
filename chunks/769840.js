@@ -1,81 +1,85 @@
-n.d(t, { A: () => C });
-var l = n(627968),
-    a = n(64700),
+n.d(t, { A: () => E });
+var a = n(627968),
+    l = n(64700),
     r = n(503698),
-    s = n.n(r),
-    i = n(342952),
-    o = n(397927),
-    c = n(562153),
-    d = n(576757),
-    u = n(291594),
-    m = n(22869),
-    p = n(959),
-    A = n(985018),
-    h = n(811597);
-function C(e) {
+    i = n.n(r),
+    s = n(342952),
+    o = n(939249),
+    d = n(778712),
+    c = n(696986),
+    u = n(534514),
+    m = n(834730),
+    _ = n(562153),
+    p = n(576757),
+    h = n(291594),
+    A = n(22869),
+    C = n(959),
+    x = n(985018),
+    f = n(811597);
+function E(e) {
     let { entry: t, channel: n, className: r } = e,
-        C = a.useRef(null),
-        E = a.useRef(null),
+        E = l.useRef(null),
+        I = l.useRef(null),
         {
-            displayParticipants: x,
-            participant1: N,
-            participant2: I,
-            numOtherParticipants: _,
-            orderedParticipants: f,
-        } = (0, d.A)(t),
-        g = [N, I];
-    return (0, l.jsxs)("div", {
-        className: s()(h.kL, r),
+            displayParticipants: N,
+            participant1: g,
+            participant2: v,
+            numOtherParticipants: T,
+            orderedParticipants: b,
+        } = (0, p.A)(t),
+        S = [g, v];
+    return (0, a.jsxs)("div", {
+        className: i()(f.kL, r),
         children: [
-            x.length > 0
-                ? (0, l.jsxs)(l.Fragment, {
+            N.length > 0
+                ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, l.jsx)(p.A, {
-                              targetElementRef: C,
-                              participants: f,
+                          (0, a.jsx)(C.A, {
+                              targetElementRef: E,
+                              participants: b,
                               channel: n,
                               children: (e) =>
-                                  (0, l.jsx)(o.DUT, {
-                                      innerRef: C,
-                                      className: h.vk,
+                                  (0, a.jsx)(o.D, {
+                                      innerRef: E,
+                                      className: f.vk,
                                       ...e,
-                                      children: (0, l.jsx)(i.A, {
+                                      children: (0, a.jsx)(s.A, {
                                           maxUsers: 3,
-                                          users: x,
-                                          size: o._3J.SIZE_20,
+                                          users: N,
+                                          size: d._3.SIZE_20,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0,
                                       }),
                                   }),
                           }),
-                          (0, l.jsx)(o.hKd, { size: 6, horizontal: !0 }),
+                          (0, a.jsx)(c.h, { size: 6, horizontal: !0 }),
                       ],
                   })
                 : null,
-            (0, l.jsx)(o.Heading, {
+            (0, a.jsx)(u.D, {
                 variant: "text-sm/semibold",
                 color: "text-subtle",
-                className: s()(h.IY, h.Io),
+                className: i()(f.IY, f.Io),
                 scaleFontToUserSetting: !0,
-                children: A.intl.format(A.t.rH95Gu, {
-                    user0: c.Ay.getName(n.guild_id, n.id, g[0]),
-                    user1: c.Ay.getName(n.guild_id, n.id, g[1]),
-                    countOthers: _,
-                    name0Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[0], channel: n }, t),
-                    name1Hook: (e, t) => (0, l.jsx)(m.A, { text: e, user: g[1], channel: n }, t),
+                children: x.intl.format(x.t.rH95Gu, {
+                    user0: _.Ay.getName(n.guild_id, n.id, S[0]),
+                    user1: _.Ay.getName(n.guild_id, n.id, S[1]),
+                    countOthers: T,
+                    name0Hook: (e, t) => (0, a.jsx)(A.A, { text: e, user: S[0], channel: n }, t),
+                    name1Hook: (e, t) => (0, a.jsx)(A.A, { text: e, user: S[1], channel: n }, t),
                     countOthersHook: (e, t) =>
-                        (0, l.jsx)(
-                            p.A,
+                        (0, a.jsx)(
+                            C.A,
                             {
-                                targetElementRef: E,
-                                participants: f,
+                                targetElementRef: I,
+                                participants: b,
                                 channel: n,
                                 children: (t) =>
-                                    (0, l.jsx)(u.A, {
+                                    (0, a.jsx)(h.A, {
                                         ...t,
                                         tag: "span",
-                                        children: (0, l.jsx)(o.Text, {
-                                            ref: E,
+                                        children: (0, a.jsx)(m.E, {
+                                            ref: I,
                                             variant: "text-sm/semibold",
                                             color: "text-strong",
                                             lineClamp: 1,

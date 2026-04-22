@@ -1,22 +1,60 @@
 "use strict";
-(t.createDateTimeFormat = d), (t.createDateTimeFormats = _);
+(t.createDateTimeFormat = u),
+    (t.createDateTimeFormats = function (e) {
+        var t,
+            n,
+            r,
+            i,
+            s,
+            a = e.availableFormats,
+            d = e.timeFormats,
+            c = e.dateFormats,
+            _ = e.medium,
+            f = [],
+            E = [],
+            h = [];
+        function p(e, t) {
+            var n = Array((e.match(/M/g) || []).length + 1),
+                r = Array((e.match(/E/g) || []).length + 1);
+            return (
+                n.length > 2 && (t = t.replace(/(M|L)+/, n.join("$1"))),
+                r.length > 2 && (t = t.replace(/([Eec])+/, r.join("$1"))),
+                t
+            );
+        }
+        for (t in a)
+            a.hasOwnProperty(t) &&
+                (r = u((n = p(t, a[t])))) &&
+                (f.push(r),
+                (function (e) {
+                    for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
+                    return !0;
+                })(r)
+                    ? h.push(n)
+                    : (function (e) {
+                          for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
+                          return !0;
+                      })(r) && E.push(n));
+        for (i = 0; i < E.length; i += 1)
+            for (s = 0; s < h.length; s += 1)
+                (r = u(
+                    (n = _.replace("{0}", E[i])
+                        .replace("{1}", h[s])
+                        .replace(/^[,\s]+|[,\s]+$/gi, "")),
+                )) && f.push(r);
+        for (t in d) d.hasOwnProperty(t) && (r = u((n = p(t, d[t])))) && f.push(r);
+        for (t in c) c.hasOwnProperty(t) && (r = u((n = p(t, c[t])))) && f.push(r);
+        return f;
+    });
 var n =
         /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
     r = /[QxXVOvZASjgFDwWIQqH]/,
     i = ["numeric", "2-digit", "short", "long", "narrow"],
-    a = ["short", "short", "short", "long", "narrow"],
     s = ["short", "short", "short", "long", "narrow"],
+    a = ["short", "short", "short", "long", "narrow"],
     o = ["weekday", "era", "year", "month", "day"],
     l = ["hour", "minute", "second", "timeZoneName"];
 function u(e) {
-    for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
-    return !0;
-}
-function c(e) {
-    for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
-    return !0;
-}
-function d(e) {
     if (!r.test(e)) {
         var t = {};
         return (
@@ -25,9 +63,9 @@ function d(e) {
                     case "E":
                     case "e":
                     case "c":
-                        return (t.weekday = a[e.length - 1]), "{weekday}";
+                        return (t.weekday = s[e.length - 1]), "{weekday}";
                     case "G":
-                        return (t.era = s[e.length - 1]), "{era}";
+                        return (t.era = a[e.length - 1]), "{era}";
                     case "y":
                     case "Y":
                     case "u":
@@ -63,38 +101,4 @@ function d(e) {
             t
         );
     }
-}
-function _(e) {
-    var t,
-        n,
-        r,
-        i,
-        a,
-        s = e.availableFormats,
-        o = e.timeFormats,
-        l = e.dateFormats,
-        _ = e.medium,
-        f = [],
-        p = [],
-        h = [];
-    function m(e, t) {
-        var n = Array((e.match(/M/g) || []).length + 1),
-            r = Array((e.match(/E/g) || []).length + 1);
-        return (
-            n.length > 2 && (t = t.replace(/(M|L)+/, n.join("$1"))),
-            r.length > 2 && (t = t.replace(/([Eec])+/, r.join("$1"))),
-            t
-        );
-    }
-    for (t in s) s.hasOwnProperty(t) && (r = d((n = m(t, s[t])))) && (f.push(r), u(r) ? h.push(n) : c(r) && p.push(n));
-    for (i = 0; i < p.length; i += 1)
-        for (a = 0; a < h.length; a += 1)
-            (r = d(
-                (n = _.replace("{0}", p[i])
-                    .replace("{1}", h[a])
-                    .replace(/^[,\s]+|[,\s]+$/gi, "")),
-            )) && f.push(r);
-    for (t in o) o.hasOwnProperty(t) && (r = d((n = m(t, o[t])))) && f.push(r);
-    for (t in l) l.hasOwnProperty(t) && (r = d((n = m(t, l[t])))) && f.push(r);
-    return f;
 }

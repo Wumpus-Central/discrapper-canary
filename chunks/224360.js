@@ -1,77 +1,81 @@
-i.d(t, { A: () => p });
+i.d(t, { A: () => v });
 var n = i(627968);
 i(64700);
 var l = i(503698),
     s = i.n(l),
     a = i(311907),
     r = i(990078),
-    d = i(397927),
-    o = i(915089),
-    c = i(201438),
-    u = i(61881),
-    g = i(788593),
-    m = i(985018),
-    h = i(442356),
-    x = i(5477);
-function A(e) {
+    d = i(939249),
+    o = i(663341),
+    c = i(827734),
+    u = i(789645),
+    g = i(534514),
+    m = i(915089),
+    h = i(201438),
+    x = i(61881),
+    p = i(788593),
+    A = i(985018),
+    j = i(442356),
+    f = i(5477);
+function I(e) {
     let { applicationId: t, userId: i, onClick: l } = e,
-        { coverImageUrl: s, gameName: o, isLoading: A } = (0, c.A)(t),
-        p = (0, a.bG)([u.A], () => u.A.suggestedFetchIsLoading),
-        f = m.intl.formatToPlainString(m.t["3mb1s5"], { game: o });
-    return A || p
-        ? (0, n.jsx)("div", { className: h.mD })
+        { coverImageUrl: s, gameName: u, isLoading: g } = (0, h.A)(t),
+        m = (0, a.bG)([x.A], () => x.A.suggestedFetchIsLoading),
+        I = A.intl.formatToPlainString(A.t["3mb1s5"], { game: u });
+    return g || m
+        ? (0, n.jsx)("div", { className: j.mD })
         : (0, n.jsx)(r.m, {
-              text: f,
+              text: I,
               ariaHidden: !0,
-              children: (0, n.jsxs)(d.DUT, {
-                  className: x.c9,
+              children: (0, n.jsxs)(d.D, {
+                  className: f.c9,
                   onClick: l,
-                  "aria-label": f,
+                  "aria-label": I,
                   children: [
-                      (0, n.jsx)(g.A, {
-                          className: x.Iv,
+                      (0, n.jsx)(p.A, {
+                          className: f.Iv,
                           imageSrc: s,
-                          gameName: o,
+                          gameName: u,
                           applicationId: t,
                           userId: i,
                           disableInteraction: !0,
                       }),
-                      (0, n.jsx)(d.pa$, { size: "md", className: x.Xv, color: d.LU0.colors.WHITE }),
+                      (0, n.jsx)(o.p, { size: "md", className: f.Xv, color: c.A.colors.WHITE }),
                   ],
               }),
           });
 }
-function p(e) {
+function v(e) {
     let { userId: t, games: i, onDismiss: l, onClick: a, className: r } = e,
-        c = (0, o.GV)();
+        o = (0, m.GV)();
     return (0, n.jsxs)("aside", {
-        className: s()(x.kL, r),
-        "aria-labelledby": c,
+        className: s()(f.kL, r),
+        "aria-labelledby": o,
         children: [
             (0, n.jsxs)("div", {
-                className: x.wx,
+                className: f.wx,
                 children: [
-                    (0, n.jsx)(d.DUT, {
-                        className: x.r,
-                        "aria-label": m.intl.string(m.t["pUR+3g"]),
+                    (0, n.jsx)(d.D, {
+                        className: f.r,
+                        "aria-label": A.intl.string(A.t["pUR+3g"]),
                         onClick: l,
-                        children: (0, n.jsx)(d.PGe, { size: "sm", color: "currentColor" }),
+                        children: (0, n.jsx)(u.P, { size: "sm", color: "currentColor" }),
                     }),
-                    (0, n.jsx)(d.Heading, {
-                        id: c,
+                    (0, n.jsx)(g.D, {
+                        id: o,
                         variant: "text-xs/medium",
                         color: "text-subtle",
-                        children: m.intl.string(m.t.zMUr6Z),
+                        children: A.intl.string(A.t.zMUr6Z),
                     }),
                 ],
             }),
             (0, n.jsx)("ul", {
-                className: x.Vg,
+                className: f.Vg,
                 children: i.map((e) => {
                     let { applicationId: i } = e;
                     return (0, n.jsx)(
                         "li",
-                        { children: (0, n.jsx)(A, { onClick: () => a(i), userId: t, applicationId: i }) },
+                        { children: (0, n.jsx)(I, { onClick: () => a(i), userId: t, applicationId: i }) },
                         i,
                     );
                 }),

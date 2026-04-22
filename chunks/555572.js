@@ -1,23 +1,23 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    s = n(688810),
-    a = n(474397),
-    o = n(780964),
-    l = n(840065),
-    u = n(652215),
-    c = n(985018);
-function d(e) {
-    let { analyticsLocations: t } = (0, s.Ay)();
-    return (0, r.jsx)(i.Drp, {
+l.d(t, { A: () => h });
+var n = l(627968);
+l(64700);
+var i = l(477782),
+    s = l(625903),
+    a = l(688810),
+    r = l(474397),
+    o = l(780964),
+    c = l(858897),
+    d = l(652215),
+    u = l(985018);
+function h(e) {
+    let { analyticsLocations: t } = (0, a.Ay)();
+    return (0, n.jsx)(i.Dr, {
         id: "video-settings",
-        label: c.intl.string(c.t.LKzQSF),
+        label: u.intl.string(u.t.LKzQSF),
         action: () => {
-            (0, l.openUserSettings)(o.X.CAMERA_CATEGORY, { analyticsLocations: t }), (0, a.A)(e, e === u.BRT.POPOUT);
+            (0, c.openUserSettings)(o.X.CAMERA_CATEGORY, { analyticsLocations: t }), (0, r.A)(e, e === d.BRT.POPOUT);
         },
-        icon: i.Zes,
-        leadingAccessory: { type: "icon", icon: i.Zes },
+        icon: s.Z,
+        leadingAccessory: { type: "icon", icon: s.Z },
     });
 }

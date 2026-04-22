@@ -1,8 +1,8 @@
-i.d(n, { A: () => h });
+i.d(t, { A: () => h });
 var l = i(627968);
 i(64700);
 var a = i(311907),
-    e = i(397927),
+    e = i(477782),
     r = i(15285),
     d = i(134861),
     c = i(189081),
@@ -11,8 +11,8 @@ var a = i(311907),
     u = i(715671),
     o = i(651743),
     b = i(985018);
-function h(t, n) {
-    let i = (0, a.bG)([r.Ay], () => r.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+function h(n, t) {
+    let i = (0, a.bG)([r.Ay], () => r.Ay.getRunningVerifiedApplicationIds().includes(n.id), [n.id]),
         h = (0, a.bG)(
             [c.A, o.A, A.A, d.A],
             () =>
@@ -21,16 +21,16 @@ function h(t, n) {
                     LaunchableGameStore: o.A,
                     DispatchApplicationStore: A.A,
                     ConnectedAppsStore: d.A,
-                    applicationId: t.id,
-                    branchId: t.branchId,
+                    applicationId: n.id,
+                    branchId: n.branchId,
                 }),
-            [t.branchId, t.id],
+            [n.branchId, n.id],
         );
     return i || !h
         ? null
-        : (0, l.jsx)(e.Drp, {
+        : (0, l.jsx)(e.Dr, {
               id: "launch",
               label: b.intl.string(b.t.XKUw8m),
-              action: () => u.playApplication(t.id, t, { analyticsParams: { location: n } }),
+              action: () => u.playApplication(n.id, n, { analyticsParams: { location: t } }),
           });
 }

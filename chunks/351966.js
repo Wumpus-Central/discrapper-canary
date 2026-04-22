@@ -1,177 +1,176 @@
-"use strict";
-n.d(t, { A: () => T, p: () => A });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(854284),
-    l = n(311907),
-    u = n(775602),
-    c = n(218394),
-    d = n(203632),
-    _ = n(219220),
-    f = n(940622);
-n(881106);
-var p = n(90368),
-    h = n(942426),
-    m = n(679606),
-    E = n(672311),
-    g = n(182787);
-let A = (e) => {
+t.d(r, { A: () => y, p: () => p });
+var n = t(627968),
+    a = t(64700),
+    u = t(503698),
+    l = t.n(u),
+    s = t(854284),
+    c = t(311907),
+    o = t(775602),
+    i = t(218394),
+    f = t(203632),
+    d = t(219220),
+    A = t(940622);
+t(881106);
+var T = t(90368),
+    m = t(942426),
+    E = t(679606),
+    I = t(672311),
+    h = t(839827);
+let p = (e) => {
         let {
-                bannerAdjustment: t = 0,
-                maxLoops: n,
-                resetOnHover: s = !1,
-                isHovering: l = !1,
-                useOpacityOnHover: u = !0,
-                autoPlay: c = !0,
-                restartMethod: _,
-                profileEffect: f,
-                delayIntro: h = !0,
-                layerData: A,
+                bannerAdjustment: r = 0,
+                maxLoops: t,
+                resetOnHover: u = !1,
+                isHovering: c = !1,
+                useOpacityOnHover: o = !0,
+                autoPlay: i = !0,
+                restartMethod: d,
+                profileEffect: A,
+                delayIntro: m = !0,
+                layerData: p,
             } = e,
-            I = i.useRef(null),
-            [T, S] = i.useState([]),
-            [y, v] = i.useState(0),
-            [N, C] = i.useState(0),
-            { accessibilityLabel: R } = f,
-            O = h ? 500 : 0.1,
-            [b, D] = i.useState(-O),
+            N = a.useRef(null),
+            [y, R] = a.useState([]),
+            [b, v] = a.useState(0),
+            [g, S] = a.useState(0),
+            { accessibilityLabel: P } = A,
+            M = m ? 500 : 0.1,
+            [_, O] = a.useState(-M),
             {
-                stop: L,
+                stop: j,
                 reset: w,
-                ticking: M,
-            } = (0, p.A)((e) => {
-                D((t) => t + e);
+                ticking: k,
+            } = (0, T.A)((e) => {
+                O((r) => r + e);
             }),
-            x = i.useRef(O);
-        i.useEffect(() => {
-            x.current = O;
+            C = a.useRef(M);
+        a.useEffect(() => {
+            C.current = M;
         }),
-            i.useEffect(() => {
-                D(-x.current), S((0, m.u)(f.effects));
-            }, [f]),
-            i.useEffect(() => {
+            a.useEffect(() => {
+                O(-C.current), R((0, E.u)(A.effects));
+            }, [A]),
+            a.useEffect(() => {
                 let e = 0,
-                    t = 1 / 0;
-                T.forEach((n) => {
-                    let r = n.start + n.duration;
-                    r > e && (e = r), n.loop && n.start < t && (t = n.start);
+                    r = 1 / 0;
+                y.forEach((t) => {
+                    let n = t.start + t.duration;
+                    n > e && (e = n), t.loop && t.start < r && (r = t.start);
                 }),
-                    v(t),
-                    C(e);
-            }, [C, T]);
-        let [P, k] = i.useState(!1);
+                    v(r),
+                    S(e);
+            }, [S, y]);
+        let [x, U] = a.useState(!1);
         return (
-            i.useEffect(() => {
-                !0 === c || l || (L(), D(0)),
-                    !l && P && M.current && (L(), D(0)),
-                    s &&
-                        l &&
-                        !M.current &&
+            a.useEffect(() => {
+                !0 === i || c || (j(), O(0)),
+                    !c && x && k.current && (j(), O(0)),
+                    u &&
+                        c &&
+                        !k.current &&
                         (w(),
-                        f.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? D(_ === d.HL.FromStart ? 0 : y) : D(0));
-            }, [l, P, y, s, L, w, M, f.animationType, c, _]),
-            (0, r.jsx)("div", {
-                ref: I,
-                className: a()(g.yC, { [g.yo]: l && u }),
-                "aria-label": R,
+                        A.animationType === s.l.ANIMATION_TYPE_PERSISTENT ? O(d === f.HL.FromStart ? 0 : b) : O(0));
+            }, [c, x, b, u, j, w, k, A.animationType, i, d]),
+            (0, n.jsx)("div", {
+                ref: N,
+                className: l()(h.yC, { [h.yo]: c && o }),
+                "aria-label": P,
                 role: "img",
-                children: (0, r.jsx)("div", {
-                    className: g.vW,
-                    children: T.map((e, i) => {
+                children: (0, n.jsx)("div", {
+                    className: h.vW,
+                    children: y.map((e, a) => {
                         if (
-                            !M.current &&
-                            f.animationType === o.l.ANIMATION_TYPE_PERSISTENT &&
-                            null != f.staticFrameSrc &&
-                            0 === i &&
-                            !0 === c
+                            !k.current &&
+                            A.animationType === s.l.ANIMATION_TYPE_PERSISTENT &&
+                            null != A.staticFrameSrc &&
+                            0 === a &&
+                            !0 === i
                         ) {
-                            let { staticFrameSrc: n } = f;
-                            return (0, r.jsx)(
+                            let { staticFrameSrc: t } = A;
+                            return (0, n.jsx)(
                                 "img",
                                 {
-                                    className: g.QZ,
-                                    style: { top: e.position?.y ?? 0 - t, left: e.position?.x ?? 0 },
-                                    src: n,
+                                    className: h.QZ,
+                                    style: { top: e.position?.y ?? 0 - r, left: e.position?.x ?? 0 },
+                                    src: t,
                                     alt: "",
                                     "aria-hidden": !0,
                                 },
-                                e.src + i,
+                                e.src + a,
                             );
                         }
-                        return (0, r.jsx)(
-                            E.A,
+                        return (0, n.jsx)(
+                            I.A,
                             {
                                 layerConfig: e,
-                                animationType: f.animationType,
-                                ticking: M.current,
-                                time: b,
-                                hasPlayedThrough: P,
-                                setHasPlayedThrough: k,
-                                maxLoops: n,
-                                loopEnd: N,
-                                bannerAdjustment: t,
-                                imageData: A?.[e.src],
+                                animationType: A.animationType,
+                                ticking: k.current,
+                                time: _,
+                                hasPlayedThrough: x,
+                                setHasPlayedThrough: U,
+                                maxLoops: t,
+                                loopEnd: g,
+                                bannerAdjustment: r,
+                                imageData: p?.[e.src],
                             },
-                            e.src + i,
+                            e.src + a,
                         );
                     }),
                 }),
             })
         );
     },
-    I = (e) => {
+    N = (e) => {
         let {
-                profileEffect: t,
-                useThumbnail: n,
-                bannerAdjustment: i = 0,
-                isHovering: s = !1,
-                useOpacityOnHover: o = !0,
+                profileEffect: r,
+                useThumbnail: t,
+                bannerAdjustment: a = 0,
+                isHovering: u = !1,
+                useOpacityOnHover: s = !0,
             } = e,
-            { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: c } = t;
-        return (0, r.jsx)("div", {
-            className: a()(g.yC, { [g.yo]: s && o }),
-            "aria-label": c,
+            { reducedMotionSrc: c, thumbnailPreviewSrc: o, accessibilityLabel: i } = r;
+        return (0, n.jsx)("div", {
+            className: l()(h.yC, { [h.yo]: u && s }),
+            "aria-label": i,
             role: "img",
-            children: (0, r.jsx)("div", {
-                className: g.vW,
-                children: (0, r.jsx)("img", {
-                    src: n && !s ? u : l,
-                    className: g.QZ,
-                    style: { top: 0 - i },
+            children: (0, n.jsx)("div", {
+                className: h.vW,
+                children: (0, n.jsx)("img", {
+                    src: t && !u ? o : c,
+                    className: h.QZ,
+                    style: { top: 0 - a },
                     alt: "",
                     "aria-hidden": !0,
                 }),
             }),
         });
     },
-    T = (e) => {
-        let t = (0, c.j)(),
-            n = (0, l.bG)([u.A], () => u.A.useReducedMotion),
-            i = (0, h.A)(e.skuId),
-            s = (0, f.C)(i),
-            a = (0, m.o)(i),
-            d = s ?? a,
-            { autoPlay: p = !0, isHovering: E } = e,
-            g = !!(
-                (!t && e.shopPreview) ||
-                (!t && i?.animationType === o.l.ANIMATION_TYPE_PERSISTENT) ||
-                n ||
-                (!1 === p && !1 === E)
+    y = (e) => {
+        let r = (0, i.j)(),
+            t = (0, c.bG)([o.A], () => o.A.useReducedMotion),
+            a = (0, m.A)(e.skuId),
+            u = (0, A.C)(a),
+            l = (0, E.o)(a),
+            f = u ?? l,
+            { autoPlay: T = !0, isHovering: I } = e,
+            h = !!(
+                (!r && e.shopPreview) ||
+                (!r && a?.animationType === s.l.ANIMATION_TYPE_PERSISTENT) ||
+                t ||
+                (!1 === T && !1 === I)
             ),
-            { loaded: T, layerData: S } = (0, _.A)({ skuId: i?.skuId, layers: i?.effects, playing: !1 === g });
-        return null != i && null != d && (t || e.shopPreview || i.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
-            ? g
-                ? (0, r.jsx)(I, {
+            { loaded: y, layerData: R } = (0, d.A)({ skuId: a?.skuId, layers: a?.effects, playing: !1 === h });
+        return null != a && null != f && (r || e.shopPreview || a.animationType !== s.l.ANIMATION_TYPE_INTERMITTENT)
+            ? h
+                ? (0, n.jsx)(N, {
                       useThumbnail: e.useThumbnail,
-                      profileEffect: d,
+                      profileEffect: f,
                       bannerAdjustment: e.bannerAdjustment,
                       isHovering: e.isHovering,
                       useOpacityOnHover: e.useOpacityOnHover,
                   })
-                : T
-                  ? (0, r.jsx)(A, { profileEffect: d, layerData: S, ...e })
+                : y
+                  ? (0, n.jsx)(p, { profileEffect: f, layerData: R, ...e })
                   : null
             : null;
     };

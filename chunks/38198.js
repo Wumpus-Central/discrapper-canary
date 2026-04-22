@@ -1,136 +1,140 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => R });
 var i = n(627968),
     l = n(64700),
-    s = n(311907),
-    a = n(554146),
-    r = n(397927),
-    o = n(308368),
-    c = n(688810),
-    d = n(826673),
-    u = n(970244),
-    h = n(867455),
-    m = n(780057),
-    A = n(747926),
-    g = n(954571),
-    p = n(203982),
-    f = n(453771),
-    _ = n(518960),
-    E = n(408018),
-    x = n(447155),
-    C = n(652215),
-    S = n(49999),
-    I = n(412136),
-    T = n(985018);
-let N = /(.*)```(\w+)\n(.*)```(.*)/s;
-function y(e) {
+    a = n(311907),
+    s = n(554146),
+    r = n(192308),
+    o = n(477782),
+    c = n(177953),
+    d = n(950305),
+    u = n(861672),
+    h = n(308368),
+    m = n(688810),
+    A = n(826673),
+    g = n(970244),
+    p = n(867455),
+    _ = n(780057),
+    f = n(747926),
+    E = n(954571),
+    C = n(203982),
+    x = n(453771),
+    S = n(518960),
+    I = n(408018),
+    N = n(447155),
+    v = n(652215),
+    T = n(49999),
+    y = n(412136),
+    b = n(985018);
+let j = /(.*)```(\w+)\n(.*)```(.*)/s;
+function R(e) {
     let {
             channel: t,
-            options: y,
-            onFileUpload: b,
-            onClose: v,
-            onSelect: j,
-            draftType: R,
-            editorTextContent: M,
-            setValue: D,
-            openClips: O,
+            options: R,
+            onFileUpload: M,
+            onClose: L,
+            onSelect: D,
+            draftType: P,
+            editorTextContent: O,
+            setValue: w,
+            openClips: U,
         } = e,
-        { analyticsLocations: L } = (0, c.Ay)(),
-        P = (0, u.s)({ channel: t }),
-        k = (0, s.bG)([m.A], () => m.A.isInProgress());
-    function w() {
-        (0, A.Tv)(t, void 0, "Plus Button");
+        { analyticsLocations: k } = (0, m.Ay)(),
+        G = (0, g.s)({ channel: t }),
+        F = (0, a.bG)([_.A], () => _.A.isInProgress());
+    function H() {
+        (0, f.Tv)(t, void 0, "Plus Button");
     }
-    function U() {
-        g.default.track(C.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, E.x7)("/"));
+    function B() {
+        E.default.track(v.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), w("/", (0, I.x7)("/"));
     }
-    function G() {
-        O();
+    function V() {
+        U();
     }
-    function F() {
-        (0, d.Dr)(a.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.i.TAKE_ACTION }),
-            (0, r.mMO)(
+    function z() {
+        (0, A.Dr)(s.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.i.TAKE_ACTION }),
+            (0, r.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e("52786").then(n.bind(n, 489449));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
-                { modalKey: I.sm },
+                { modalKey: y.sm },
             );
     }
-    function H() {
-        let e = M,
+    function K() {
+        let e = O,
             n = "txt",
             i = "",
-            l = M.match(N);
+            l = O.match(j);
         null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])),
-            (0, _.R)([(0, f.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, R),
-            p._.dispatchToLastSubscribed(C.jej.CLEAR_TEXT),
-            "" !== i && p._.dispatchToLastSubscribed(C.jej.INSERT_TEXT, { plainText: i });
+            (0, S.R)([(0, x.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, P),
+            C._.dispatchToLastSubscribed(v.jej.CLEAR_TEXT),
+            "" !== i && C._.dispatchToLastSubscribed(v.jej.INSERT_TEXT, { plainText: i });
     }
     return (
         l.useEffect(() => {
-            g.default.track(C.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
+            E.default.track(v.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
         }, [t.guild_id, t.id]),
-        (0, i.jsx)(r.W1t, {
+        (0, i.jsx)(u.W, {
             "data-menu-migrated": !0,
-            onSelect: j,
+            onSelect: D,
             navId: "channel-attach",
-            onClose: v,
-            "aria-label": T.intl.string(T.t.Xm41aV),
-            children: y.map(function (e) {
+            onClose: L,
+            "aria-label": b.intl.string(b.t.Xm41aV),
+            children: R.map(function (e) {
                 switch (e.type) {
-                    case x.v.UPLOAD_A_FILE:
+                    case N.v.UPLOAD_A_FILE:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "upload-file",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: b,
+                                action: M,
                             },
                             "upload-file",
                         );
-                    case x.v.UPLOAD_TEXT_AS_FILE:
-                        if ("" === M) return null;
+                    case N.v.UPLOAD_TEXT_AS_FILE:
+                        if ("" === O) return null;
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "upload-text-as-file",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: H,
+                                action: K,
                             },
                             "upload-text-as-file",
                         );
-                    case x.v.CLIPS:
+                    case N.v.CLIPS:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "clips",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
                                 badge: null != e.badgeVal && e.badgeVal > 0 ? { text: e.badgeVal.toString() } : void 0,
-                                action: G,
+                                action: V,
                             },
                             "clips",
                         );
-                    case x.v.POLL:
+                    case N.v.POLL:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "poll",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: F,
+                                action: z,
                             },
                             "poll",
                         );
-                    case x.v.INVITE_TO_PLAY_GAME:
+                    case N.v.INVITE_TO_PLAY_GAME:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "play",
                                 label: e.display,
@@ -140,20 +144,20 @@ function y(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void o.A.sendActivityInvite({
+                                        void h.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: C.xL.JOIN,
+                                            type: v.xL.JOIN,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
                             },
                             "play",
                         );
-                    case x.v.INVITE_TO_LISTEN:
+                    case N.v.INVITE_TO_LISTEN:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "listen",
                                 label: e.display,
@@ -163,20 +167,20 @@ function y(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void o.A.sendActivityInvite({
+                                        void h.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: C.xL.LISTEN,
+                                            type: v.xL.LISTEN,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
                             },
                             "listen",
                         );
-                    case x.v.INVITE_TO_WATCH:
+                    case N.v.INVITE_TO_WATCH:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "watch",
                                 label: e.display,
@@ -186,88 +190,88 @@ function y(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void o.A.sendActivityInvite({
+                                        void h.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: C.xL.WATCH,
+                                            type: v.xL.WATCH,
                                             activity: n,
-                                            location: L[L.length - 1],
+                                            location: k[k.length - 1],
                                         })
                                     );
                                 },
                             },
                             "watch",
                         );
-                    case x.v.CREATE_THREAD:
+                    case N.v.CREATE_THREAD:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "THREAD",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: w,
+                                action: H,
                             },
                             "THREAD",
                         );
-                    case x.v.SLASH_COMMAND:
+                    case N.v.SLASH_COMMAND:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "SLASH_COMMAND",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: U,
+                                action: B,
                             },
                             "SLASH_COMMAND",
                         );
-                    case x.v.SCHEDULED_MESSAGE:
+                    case N.v.SCHEDULED_MESSAGE:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "scheduled_message",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: () => (0, u.e0)({ channel: t }),
-                                children: P,
+                                action: () => (0, g.e0)({ channel: t }),
+                                children: G,
                             },
                             "scheduled_message",
                         );
-                    case x.v.SUMMARIZE_THREAD:
+                    case N.v.SUMMARIZE_THREAD:
                         return (0, i.jsx)(
-                            r.Drp,
+                            o.Dr,
                             {
                                 id: "summarize_thread",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: () => h.A.summarizeThread(t),
-                                loading: k,
-                                disabled: k,
-                                children: k
+                                action: () => p.A.summarizeThread(t),
+                                loading: F,
+                                disabled: F,
+                                children: F
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(
-                                                  r.Drp,
+                                                  o.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: T.intl.string(T.t.eCzSdd),
-                                                      iconLeft: r.nFg,
-                                                      leadingAccessory: { type: "icon", icon: r.nFg },
-                                                      action: () => h.A.summarizeThread(t, !1),
+                                                      label: b.intl.string(b.t.eCzSdd),
+                                                      iconLeft: c.n,
+                                                      leadingAccessory: { type: "icon", icon: c.n },
+                                                      action: () => p.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
                                               (0, i.jsx)(
-                                                  r.Drp,
+                                                  o.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: T.intl.string(T.t["HOe+Hq"]),
-                                                      iconLeft: r.nys,
-                                                      leadingAccessory: { type: "icon", icon: r.nys },
-                                                      action: () => h.A.summarizeThread(t),
+                                                      label: b.intl.string(b.t["HOe+Hq"]),
+                                                      iconLeft: d.n,
+                                                      leadingAccessory: { type: "icon", icon: d.n },
+                                                      action: () => p.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),

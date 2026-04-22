@@ -3,28 +3,28 @@ n.d(t, { A: () => I });
 var i = n(627968);
 n(64700);
 var r = n(417597),
-    s = n(397927),
-    l = n(775602),
+    l = n(834730),
+    s = n(775602),
     a = n(763754),
-    c = n(447215),
-    o = n(888675),
+    o = n(447215),
+    c = n(888675),
     u = n(976860),
     d = n(141593),
     _ = n(652215),
     E = n(985018),
-    A = n(367537);
+    A = n(310145);
 function m(e) {
     let { guildId: t, user: n, username: a } = e,
-        c = (0, r.bG)([l.A], () => !l.A.useReducedMotion),
-        o = n.getAvatarURL(t, 56, c),
-        u = (0, i.jsx)("img", { src: o, className: A.dj, alt: "" });
+        o = (0, r.bG)([s.A], () => !s.A.useReducedMotion),
+        c = n.getAvatarURL(t, 56, o),
+        u = (0, i.jsx)("img", { src: c, className: A.dj, alt: "" });
     return (0, i.jsxs)("div", {
         className: A.uE,
         role: "img",
         "aria-label": E.intl.formatToPlainString(E.t["utf8+W"], { username: a }),
         children: [
             (0, i.jsx)(d.A, { avatar: u }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.E, {
                 className: A.Bi,
                 tag: "p",
                 color: "status-positive-text",
@@ -33,7 +33,7 @@ function m(e) {
                     username: a,
                     usernameHook: (e, t) =>
                         (0, i.jsx)(
-                            s.Text,
+                            l.E,
                             {
                                 tag: "span",
                                 color: "status-positive-text",
@@ -49,11 +49,11 @@ function m(e) {
     });
 }
 function I(e) {
-    let { channel: t, message: r, compact: s } = e,
-        l = (0, a.Ay)(r),
-        d = (0, c.P)({ user: r.author, channelId: t.id, guildId: t.guild_id, messageId: r.id })(l),
+    let { channel: t, message: r, compact: l } = e,
+        s = (0, a.Ay)(r),
+        d = (0, o.P)({ user: r.author, channelId: t.id, guildId: t.guild_id, messageId: r.id })(s),
         A = E.intl.format(E.t.TQs67g, {
-            username: l.nick,
+            username: s.nick,
             usernameHook: d,
             productName: r.purchaseNotification?.guild_product_purchase?.product_name ?? "",
             handleProductListingClick: () => {
@@ -64,8 +64,8 @@ function I(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(o.A, { icon: n(617184), timestamp: r.timestamp, compact: s, children: A }),
-            (0, i.jsx)(m, { username: l.nick, guildId: t.guild_id, user: r.author }),
+            (0, i.jsx)(c.A, { icon: n(617184), timestamp: r.timestamp, compact: l, children: A }),
+            (0, i.jsx)(m, { username: s.nick, guildId: t.guild_id, user: r.author }),
         ],
     });
 }

@@ -1,35 +1,35 @@
-n.d(t, { A: () => c });
-var a = n(627968),
-    s = n(311907),
-    i = n(397927),
-    l = n(576470),
-    r = n(99753),
-    o = n(693879),
-    d = n(424994);
+a.d(t, { A: () => c });
+var n = a(627968),
+    l = a(311907),
+    i = a(834730),
+    s = a(576470),
+    r = a(99753),
+    o = a(693879),
+    d = a(424994);
 function c() {
-    let e = (0, s.bG)([r.A], () => r.A.getFeed(d.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
-        { loading: t, nextFetchDate: n } = (0, s.cf)(
+    let e = (0, l.bG)([r.A], () => r.A.getFeed(d.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
+        { loading: t, nextFetchDate: a } = (0, l.cf)(
             [r.A],
             () => r.A.getFeedState(d.X1.GLOBAL_FEED) ?? { loading: !1 },
         ),
-        c = (0, s.bG)([r.A], () => r.A.getLastFeedFetchDate(d.X1.GLOBAL_FEED));
-    return (0, a.jsxs)("div", {
+        c = (0, l.bG)([r.A], () => r.A.getLastFeedFetchDate(d.X1.GLOBAL_FEED));
+    return (0, n.jsxs)("div", {
         children: [
             t
-                ? (0, a.jsx)(i.Text, { variant: "text-md/normal", children: "(fetching)" })
-                : (0, a.jsxs)(i.Text, {
+                ? (0, n.jsx)(i.E, { variant: "text-md/normal", children: "(fetching)" })
+                : (0, n.jsxs)(i.E, {
                       variant: "text-md/normal",
                       children: [
                           "Next fetch: ",
-                          null != n ? (0, a.jsx)(l.A, { deadline: n }) : e ? "(awaiting push)" : "(unscheduled)",
+                          null != a ? (0, n.jsx)(s.A, { deadline: a }) : e ? "(awaiting push)" : "(unscheduled)",
                       ],
                   }),
-            (0, a.jsxs)(i.Text, {
+            (0, n.jsxs)(i.E, {
                 variant: "text-md/normal",
                 children: [
                     "Last fetch:",
                     " ",
-                    null != c ? (0, a.jsx)(o.z, { inline: !0, entry: { start: c.getTime() } }) : "(never)",
+                    null != c ? (0, n.jsx)(o.z, { inline: !0, entry: { start: c.getTime() } }) : "(never)",
                 ],
             }),
         ],

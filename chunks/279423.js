@@ -1,66 +1,69 @@
-n.d(t, { A: () => g });
-var i = n(627968),
-    s = n(64700),
-    l = n(158954),
-    r = n(964486),
-    a = n(933297),
-    o = n(562248);
-function d(e) {
-    let { button: t } = e,
-        [n, r] = s.useState(!1),
-        a = t.useText(),
+t.d(n, { A: () => f });
+var l = t(627968),
+    r = t(64700),
+    i = t(821609),
+    s = t(331322),
+    a = t(534514),
+    o = t(683071),
+    c = t(964486),
+    d = t(933297),
+    u = t(562248);
+function x(e) {
+    let { button: n } = e,
+        [t, s] = r.useState(!1),
+        a = n.useText(),
         o = async () => {
-            r(!0);
+            s(!0);
             try {
-                await t.onClick();
+                await n.onClick();
             } finally {
-                r(!1);
+                s(!1);
             }
         };
-    return (0, i.jsx)(l.$nd, { variant: "secondary", text: a, onClick: o, loading: n, disabled: n });
+    return (0, l.jsx)(i.$, { variant: "secondary", text: a, onClick: o, loading: t, disabled: t });
 }
-function c(e) {
-    let { notice: t } = e,
-        { noticeType: n, useTitle: s, useText: a, button: o } = t,
-        c = s?.(),
-        u = a();
-    (0, r.Ay)(() => {
-        t.trackView?.();
+function j(e) {
+    let { notice: n } = e,
+        { noticeType: t, useTitle: r, useText: i, button: d } = n,
+        u = r?.(),
+        j = i();
+    (0, c.Ay)(() => {
+        n.trackView?.();
     });
-    let m = (0, i.jsxs)(l.BJc, {
+    let h = (0, l.jsxs)(s.B, {
         direction: "vertical",
         gap: "xs",
         children: [
-            null != c && (0, i.jsx)(l.DZT, { variant: "heading-md/medium", children: c }),
-            (0, i.jsx)("span", { children: u }),
+            null != u && (0, l.jsx)(a.D, { variant: "heading-md/medium", children: u }),
+            (0, l.jsx)("span", { children: j }),
         ],
     });
-    return (0, i.jsx)(l.wx6, {
-        type: n,
-        children: (0, i.jsxs)(l.BJc, {
+    return (0, l.jsx)(o.w, {
+        type: t,
+        children: (0, l.jsxs)(s.B, {
             direction: "horizontal",
             align: "center",
             justify: "space-between",
             gap: "xs",
-            children: [m, null != o && (0, i.jsx)(d, { button: o })],
+            children: [h, null != d && (0, l.jsx)(x, { button: d })],
         }),
     });
 }
-function u(e) {
-    let { notice: t } = e,
-        { notice: n } = t;
-    return (0, i.jsx)(n, {});
+function h(e) {
+    let { notice: n } = e,
+        { notice: t } = n;
+    return (0, l.jsx)(t, {});
 }
 function m(e) {
-    let { notice: t } = e;
-    switch (t.type) {
-        case a.lT.INLINE_NOTICE:
-            return (0, i.jsx)(c, { notice: t });
-        case a.lT.STRONGLY_DISCOURAGED_CUSTOM:
-            return (0, i.jsx)(u, { notice: t });
+    let { notice: n } = e;
+    switch (n.type) {
+        case d.lT.INLINE_NOTICE:
+            return (0, l.jsx)(j, { notice: n });
+        case d.lT.STRONGLY_DISCOURAGED_CUSTOM:
+            return (0, l.jsx)(h, { notice: n });
     }
 }
-function g(e) {
-    let { notice: t } = e;
-    return (0, i.jsx)("div", { className: o.l, children: (0, i.jsx)(m, { notice: t }) });
+function f(e) {
+    let { notice: n } = e;
+    return (0, l.jsx)("div", { className: u.l, children: (0, l.jsx)(m, { notice: n }) });
 }

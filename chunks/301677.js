@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { A: () => r });
-var r = (function (e) {
-    return (e[(e.STORE_ASSET = 1)] = "STORE_ASSET"), (e[(e.EMOJI = 2)] = "EMOJI"), e;
-})({});
+a.d(t, { A: () => l });
+var r,
+    l = (((r = {})[(r.STORE_ASSET = 1)] = "STORE_ASSET"), (r[(r.EMOJI = 2)] = "EMOJI"), r);

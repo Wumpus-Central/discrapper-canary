@@ -1,35 +1,35 @@
-n.d(t, { A: () => r }), n(323874), n(14289), n(35956);
-var a = n(627968),
-    s = n(64700),
-    i = n(397927),
-    l = n(643374);
+a.d(t, { A: () => r }), a(323874), a(14289), a(35956);
+var n = a(627968),
+    l = a(64700),
+    i = a(452027),
+    s = a(643374);
 let r = function (e) {
-    let { assetKey: t, filters: n, initialValue: r, onFileChange: o, title: d } = e,
-        [c, u] = s.useState(null),
-        m = s.useRef(null);
+    let { assetKey: t, filters: a, initialValue: r, onFileChange: o, title: d } = e,
+        [c, u] = l.useState(null),
+        m = l.useRef(null);
     return (
-        s.useEffect(
+        l.useEffect(
             () => () => {
                 null != m.current && URL.revokeObjectURL(m.current);
             },
             [],
         ),
-        (0, a.jsx)(i.D0$, {
+        (0, n.jsx)(i.D, {
             label: d,
-            description: `Supported asset formats: ${n.join(", ")}`,
-            children: (0, a.jsx)(l.A, {
+            description: `Supported asset formats: ${a.join(", ")}`,
+            children: (0, n.jsx)(s.A, {
                 filename: c?.name ?? r ?? "",
-                filters: [{ name: d, extensions: n }],
+                filters: [{ name: d, extensions: a }],
                 buttonText: "Browse",
                 placeholder: "Select an asset",
                 onFileSelect: function (e) {
                     if ((u(e ?? null), null == e)) return;
-                    let n = URL.createObjectURL(e);
-                    m.current = n;
-                    let a = new URL(n);
-                    a.searchParams.append("mimetype", e.type),
-                        a.searchParams.append("name", e.name),
-                        o(t, a.toString());
+                    let a = URL.createObjectURL(e);
+                    m.current = a;
+                    let n = new URL(a);
+                    n.searchParams.append("mimetype", e.type),
+                        n.searchParams.append("name", e.name),
+                        o(t, n.toString());
                 },
             }),
         })

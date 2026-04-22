@@ -1,17 +1,17 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(821609),
     l = n(793574),
     a = n(237984),
     r = n(686533),
     o = n(652215),
     d = n(985018);
-function c() {
+function u() {
     return (0, i.jsx)(r.A, {
         title: d.intl.string(d.t["z4/l+V"]),
         description: d.intl.string(d.t["3aZq/0"]),
-        action: (0, i.jsx)(s.Button, {
+        action: (0, i.jsx)(s.$, {
             variant: "primary",
             text: d.intl.string(d.t.s2nVhG),
             onClick: () => {

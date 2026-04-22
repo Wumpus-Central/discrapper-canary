@@ -1,7 +1,7 @@
 n.d(t, { A: () => c });
 var r = n(64700),
     l = n(621466),
-    a = n(158954),
+    a = n(460890),
     i = n(61491),
     s = n(770178),
     u = n(765548),
@@ -17,14 +17,14 @@ function c(e) {
             percent: h,
             onDragStateChange: p,
         } = e,
-        [x, E] = r.useState(null),
-        [b, v] = r.useState(null),
+        [E, v] = r.useState(null),
+        [x, b] = r.useState(null),
         [g, y] = r.useState(!1),
-        [S, C] = r.useState(!1),
-        [A, N] = r.useState(null),
-        [R, w] = r.useState(!1),
-        { i18n: T } = (0, a.G98)(),
-        L = r.useMemo(() => {
+        [A, C] = r.useState(!1),
+        [S, N] = r.useState(null),
+        [R, L] = r.useState(!1),
+        { i18n: w } = (0, a.G9)(),
+        T = r.useMemo(() => {
             let e = { role: "progressbar", "aria-label": "Progress Bar" };
             return (
                 null != h &&
@@ -32,21 +32,21 @@ function c(e) {
                     ((e["aria-valuenow"] = h),
                     (e["aria-valuemin"] = 0),
                     (e["aria-valuemax"] = 100),
-                    (e["aria-label"] = T.PERCENT_COMPLETE(Math.round(h)))),
+                    (e["aria-label"] = w.PERCENT_COMPLETE(Math.round(h)))),
                 e
             );
-        }, [h, T]),
-        j = r.useMemo(() => (null == x || null == c ? null : (0, i.DX)(c, m, x)), [x, c, m]),
-        P = (0, u.A)((e) => {
-            E(e.contentRect);
+        }, [h, w]),
+        P = r.useMemo(() => (null == E || null == c ? null : (0, i.DX)(c, m, E)), [E, c, m]),
+        D = (0, u.A)((e) => {
+            v(e.contentRect);
         }),
-        D = (0, s.w)(P),
-        M = (e) => {
-            if (null != D.current) {
-                let t = D.current.getBoundingClientRect(),
+        M = (0, s.w)(D),
+        j = (e) => {
+            if (null != M.current) {
+                let t = M.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
                     r = null != c ? (c / m) * t.width : null;
-                w(null != r && n > r), v(n);
+                L(null != r && n > r), b(n);
             }
         },
         k = r.useRef(!1),
@@ -57,7 +57,7 @@ function c(e) {
                 r = (0, i.hc)(n, t, m);
             (null != c && r > c) || f(r);
         }),
-        U = r.useCallback(
+        F = r.useCallback(
             (e) => {
                 let { key: r } = e;
                 r === o.N$.ArrowLeft && null != t
@@ -74,16 +74,16 @@ function c(e) {
             [],
         ),
         {
-            contRef: D,
-            boundingRect: x,
+            contRef: M,
+            boundingRect: E,
             handleMouseEnter: (e) => {
-                d && (y(!0), M(e));
+                d && (y(!0), j(e));
             },
             handleMouseLeave: (e) => {
-                d && !k.current && (y(!1), v(null), w(!1));
+                d && !k.current && (y(!1), b(null), L(!1));
             },
             handleMouseMove: (e) => {
-                d && g && M(e);
+                d && g && j(e);
             },
             handleMouseDown: (e) => {
                 if (!d || null == f || 0 !== e.button) return;
@@ -97,12 +97,12 @@ function c(e) {
                     N(Math.max(0, Math.min(e.clientX - t.left, t.width))),
                     B(e.clientX, t);
                 let r = (e) => {
-                        if (null != D.current) {
-                            let t = D.current.getBoundingClientRect(),
+                        if (null != M.current) {
+                            let t = M.current.getBoundingClientRect(),
                                 n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
                                 r = null != c ? (c / m) * t.width : null,
                                 l = null != r ? Math.min(n, r) : n;
-                            w(null != r && n > r), v(n), N(l), B(e.clientX, t);
+                            L(null != r && n > r), b(n), N(l), B(e.clientX, t);
                         } else B(e.clientX, t);
                     },
                     a = (e) => {
@@ -111,9 +111,9 @@ function c(e) {
                             C(!1),
                             N(null),
                             p?.(!1),
-                            w(!1),
-                            null != D.current &&
-                                (((0, l.vq)(e.target, Node) && D.current.contains(e.target)) || (y(!1), v(null))),
+                            L(!1),
+                            null != M.current &&
+                                (((0, l.vq)(e.target, Node) && M.current.contains(e.target)) || (y(!1), b(null))),
                             window.removeEventListener("mousemove", r),
                             window.removeEventListener("mouseup", a);
                     };
@@ -123,15 +123,15 @@ function c(e) {
                         window.removeEventListener("mousemove", r), window.removeEventListener("mouseup", a);
                     });
             },
-            handleKeyDown: U,
-            hoveredAtX: b,
-            maxSeekableX: j,
+            handleKeyDown: F,
+            hoveredAtX: x,
+            maxSeekableX: P,
             isHovering: g,
-            isDragging: S,
-            dragX: A,
+            isDragging: A,
+            dragX: S,
             isHoverBeyondMax: R,
             handleClick: () => {},
-            ariaProps: L,
+            ariaProps: T,
         }
     );
 }

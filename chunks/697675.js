@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
+n.d(t, { A: () => c });
+var l = n(627968),
     i = n(64700),
-    s = n(397927),
-    a = n(155718),
-    o = n(985018),
-    l = n(41614);
-function u(e) {
+    a = n(777666),
+    s = n(155718),
+    r = n(985018),
+    o = n(41614);
+function c(e) {
     let { labelType: t, collapsed: n = !1 } = e,
-        u = t === a.Hr.NEW ? o.intl.string(o.t.y2b7CA) : o.intl.string(o.t["/qdhkk"]),
-        c = t === a.Hr.NEW ? l.Ph : l.O5,
-        [d, _] = i.useState(n ? "" : u);
+        c = t === s.Hr.NEW ? r.intl.string(r.t.y2b7CA) : r.intl.string(r.t["/qdhkk"]),
+        d = t === s.Hr.NEW ? o.Ph : o.O5,
+        [u, m] = i.useState(n ? "" : c);
     return (i.useEffect(() => {
         n
-            ? _("")
-            : t === a.Hr.NEW
-              ? _(o.intl.string(o.t.y2b7CA))
-              : t === a.Hr.UPDATED && _(o.intl.string(o.t["/qdhkk"]));
+            ? m("")
+            : t === s.Hr.NEW
+              ? m(r.intl.string(r.t.y2b7CA))
+              : t === s.Hr.UPDATED && m(r.intl.string(r.t["/qdhkk"]));
     }, [n, t]),
-    t === a.Hr.NONE)
+    t === s.Hr.NONE)
         ? null
-        : (0, r.jsx)(s.LpS, { className: c, disableColor: !0, text: (0, r.jsx)("span", { children: d }) });
+        : (0, l.jsx)(a.Lp, { className: d, disableColor: !0, text: (0, l.jsx)("span", { children: u }) });
 }

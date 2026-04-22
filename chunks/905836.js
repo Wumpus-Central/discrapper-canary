@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { s: () => A });
+n.d(t, { s: () => _ });
 var r = n(12543),
     i = n(384623),
-    a = n(564804),
-    s = n(327922);
+    s = n(564804),
+    a = n(327922);
 function o(e) {
     return (o =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -17,84 +17,68 @@ function o(e) {
               })(e);
 }
 function l(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function u(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function c(e, t, n) {
-    return t && u(e.prototype, t), n && u(e, n), e;
-}
-function d(e, t) {
-    if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
-        t && _(e, t);
-}
-function _(e, t) {
-    return (_ =
+    return (l =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function f(e) {
-    var t = m();
-    return function () {
-        var n,
-            r = g(e);
-        return (n = t ? Reflect.construct(r, arguments, g(this).constructor) : r.apply(this, arguments)), p(this, n);
-    };
-}
-function p(e, t) {
-    return t && ("object" === o(t) || "function" == typeof t) ? t : h(e);
-}
-function h(e) {
+function u(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function m() {
-    if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-    if ("function" == typeof Proxy) return !0;
-    try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
-    } catch (e) {
-        return !1;
-    }
-}
-function g(e) {
-    return (g = Object.setPrototypeOf
+function d(e) {
+    return (d = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function E(e, t, n) {
+function c(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var A = (function (e) {
-    d(n, e);
-    var t = f(n);
-    function n() {
+var _ = (function (e) {
+    if ("function" != typeof e && null !== e) throw TypeError("Super expression must either be null or a function");
+    (_.prototype = Object.create(e && e.prototype, { constructor: { value: _, writable: !0, configurable: !0 } })),
+        e && l(_, e);
+    var t,
+        n,
+        r =
+            ((t = (function () {
+                if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+                if ("function" == typeof Proxy) return !0;
+                try {
+                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                } catch (e) {
+                    return !1;
+                }
+            })()),
+            function () {
+                var e,
+                    n,
+                    r,
+                    i = d(_);
+                return (
+                    (r = t ? Reflect.construct(i, arguments, d(this).constructor) : i.apply(this, arguments)),
+                    (e = this),
+                    (n = r) && ("object" === o(n) || "function" == typeof n) ? n : u(e)
+                );
+            });
+    function _() {
         var e;
-        l(this, n);
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+        if (!(this instanceof _)) throw TypeError("Cannot call a class as a function");
+        for (var t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
         return (
-            E(h((e = t.call.apply(t, [this].concat(i)))), "priority", 130),
-            E(h(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]),
+            c(u((e = r.call.apply(r, [this].concat(n)))), "priority", 130),
+            c(u(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]),
             e
         );
     }
     return (
-        c(n, [
+        (n = [
             {
                 key: "parse",
                 value: function (e, t, n) {
@@ -120,18 +104,27 @@ var A = (function (e) {
             {
                 key: "set",
                 value: function (e, t, n, r) {
-                    var o = (0, a.A)(e, r);
+                    var o = (0, s.A)(e, r);
                     if (n.isTwoDigitYear) {
                         var l = (0, i.qB)(n.year, o);
                         return (
-                            e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, s.A)(e, r)
+                            e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, a.A)(e, r)
                         );
                     }
                     var u = "era" in t && 1 !== t.era ? 1 - n.year : n.year;
-                    return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, s.A)(e, r);
+                    return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, a.A)(e, r);
                 },
             },
         ]),
-        n
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(_.prototype, n),
+        _
     );
 })(r.i);

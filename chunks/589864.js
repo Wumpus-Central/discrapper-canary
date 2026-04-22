@@ -1,6 +1,4 @@
 e.exports = function (e) {
-    let t = { className: "string", begin: '(~)?"', end: '"', illegal: "\\n" },
-        n = { className: "symbol", begin: "#[a-zA-Z_]\\w*\\$?" };
     return {
         name: "PureBASIC",
         aliases: ["pb", "pbi"],
@@ -20,8 +18,8 @@ e.exports = function (e) {
                     e.UNDERSCORE_TITLE_MODE,
                 ],
             },
-            t,
-            n,
+            { className: "string", begin: '(~)?"', end: '"', illegal: "\\n" },
+            { className: "symbol", begin: "#[a-zA-Z_]\\w*\\$?" },
         ],
     };
 };

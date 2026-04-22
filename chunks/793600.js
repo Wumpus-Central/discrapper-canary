@@ -1,36 +1,32 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(643479),
-    i = n(761799);
-let a = { isWebpFile: s, findOffsets: o };
-function s(e) {
-    let t = 0,
-        n = "RIFF",
-        i = 8,
-        a = "WEBP";
-    return !!e && (0, r.hT)(e, t, n.length) === n && (0, r.hT)(e, i, a.length) === a;
-}
-function o(e) {
-    let t,
-        n,
-        a,
-        s,
-        o = 4,
-        l = "Exif\0\0",
-        u = 8,
-        c = 12,
-        d = !1;
-    for (; c + u < e.byteLength; ) {
-        let _ = (0, r.hT)(e, c, 4),
-            f = e.getUint32(c + o, !0);
-        i.A.USE_EXIF && "EXIF" === _
-            ? ((d = !0), (t = (0, r.hT)(e, c + u, l.length) === l ? c + u + l.length : c + u))
-            : i.A.USE_XMP && "XMP " === _
-              ? ((d = !0), (n = [{ dataOffset: c + u, length: f }]))
-              : i.A.USE_ICC && "ICCP" === _
-                ? ((d = !0), (a = [{ offset: c + u, length: f, chunkNumber: 1, chunksTotal: 1 }]))
-                : "VP8X" === _ && ((d = !0), (s = c + u)),
-            (c += u + (f % 2 == 0 ? f : f + 1));
-    }
-    return { hasAppMarkers: d, tiffHeaderOffset: t, xmpChunks: n, iccChunks: a, vp8xChunkOffset: s };
-}
+i.d(t, { A: () => o });
+var n = i(643479),
+    r = i(761799);
+let o = {
+    isWebpFile: function (e) {
+        let t = "RIFF",
+            i = "WEBP";
+        return !!e && (0, n.hT)(e, 0, t.length) === t && (0, n.hT)(e, 8, i.length) === i;
+    },
+    findOffsets: function (e) {
+        let t,
+            i,
+            o,
+            a,
+            s = "Exif\0\0",
+            l = 12,
+            u = !1;
+        for (; l + 8 < e.byteLength; ) {
+            let c = (0, n.hT)(e, l, 4),
+                d = e.getUint32(l + 4, !0);
+            r.A.USE_EXIF && "EXIF" === c
+                ? ((u = !0), (t = (0, n.hT)(e, l + 8, s.length) === s ? l + 8 + s.length : l + 8))
+                : r.A.USE_XMP && "XMP " === c
+                  ? ((u = !0), (i = [{ dataOffset: l + 8, length: d }]))
+                  : r.A.USE_ICC && "ICCP" === c
+                    ? ((u = !0), (o = [{ offset: l + 8, length: d, chunkNumber: 1, chunksTotal: 1 }]))
+                    : "VP8X" === c && ((u = !0), (a = l + 8)),
+                (l += 8 + (d % 2 == 0 ? d : d + 1));
+        }
+        return { hasAppMarkers: u, tiffHeaderOffset: t, xmpChunks: i, iccChunks: o, vp8xChunkOffset: a };
+    },
+};

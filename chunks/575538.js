@@ -1,39 +1,40 @@
-l.d(i, { default: () => g });
+l.d(i, { default: () => h });
 var n = l(627968);
 l(64700);
 var e = l(311907),
-    a = l(397927),
-    r = l(442433),
-    s = l(780964),
-    o = l(840065),
-    c = l(274372),
-    u = l(692329),
-    d = l(399925),
-    p = l(985018);
-function g(t) {
+    a = l(861672),
+    r = l(477782),
+    s = l(442433),
+    o = l(780964),
+    c = l(858897),
+    u = l(274372),
+    d = l(692329),
+    p = l(399925),
+    g = l(985018);
+function h(t) {
     let { onSelect: i } = t,
-        { clipsLength: l } = (0, e.cf)([c.A], () => c.A.getSettings()),
-        g = (0, u.A)();
-    return (0, n.jsxs)(a.W1t, {
+        { clipsLength: l } = (0, e.cf)([u.A], () => u.A.getSettings()),
+        h = (0, d.A)();
+    return (0, n.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: "clips-context",
-        "aria-label": p.intl.string(p.t.J1hsY2),
-        onClose: r.Z_,
+        "aria-label": g.intl.string(g.t.J1hsY2),
+        onClose: s.Z_,
         onSelect: i,
         children: [
-            (0, n.jsx)(a.rXV, {
-                children: (0, n.jsx)(a.Drp, {
+            (0, n.jsx)(r.rX, {
+                children: (0, n.jsx)(r.Dr, {
                     id: "clips-duration",
-                    label: p.intl.string(p.t.OgfUio),
-                    children: g.map((t) => {
+                    label: g.intl.string(g.t.OgfUio),
+                    children: h.map((t) => {
                         let { value: i, label: e } = t;
                         return (0, n.jsx)(
-                            a.iDA,
+                            r.iD,
                             {
                                 id: `clips-duration-${i}`,
                                 group: "clips-duration",
                                 label: e,
-                                action: () => (0, d.h$)(i),
+                                action: () => (0, p.h$)(i),
                                 checked: i === l,
                             },
                             i,
@@ -41,11 +42,11 @@ function g(t) {
                     }),
                 }),
             }),
-            (0, n.jsx)(a.rXV, {
-                children: (0, n.jsx)(a.Drp, {
+            (0, n.jsx)(r.rX, {
+                children: (0, n.jsx)(r.Dr, {
                     id: "clips-settings",
-                    label: p.intl.string(p.t.J1hsY2),
-                    action: () => (0, o.openUserSettings)(s.X.CLIPS_PANEL),
+                    label: g.intl.string(g.t.J1hsY2),
+                    action: () => (0, c.openUserSettings)(o.X.CLIPS_PANEL),
                 }),
             }),
         ],

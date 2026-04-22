@@ -1,37 +1,39 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(503698),
-    s = n.n(i),
-    a = n(158954),
-    o = n(262427),
-    l = n(697359),
-    u = n(985018),
-    c = n(745263);
-function d(e) {
-    let { location: t, onDismiss: n, className: i } = e,
-        { shouldRender: d, limitedOfferTimeLeft: _ } = (0, l.A)({ location: t });
-    return d
-        ? (0, r.jsxs)(o.A, {
-              Icon: a.Cp8,
-              className: s()(c.U, i),
+n.d(t, { A: () => A });
+var i = n(627968),
+    l = n(503698),
+    a = n.n(l),
+    s = n(318254),
+    r = n(834730),
+    o = n(657718),
+    c = n(807072),
+    d = n(262427),
+    u = n(945942),
+    h = n(985018),
+    m = n(931048);
+function A(e) {
+    let { location: t, onDismiss: n, className: l } = e,
+        { shouldRender: A, limitedOfferTimeLeft: g } = (0, u.A)({ location: t });
+    return A
+        ? (0, i.jsxs)(d.A, {
+              Icon: s.C,
+              className: a()(m.U, l),
               children: [
-                  (0, r.jsx)(a.EYj, {
+                  (0, i.jsx)(r.E, {
                       variant: "text-xs/medium",
                       color: "currentColor",
-                      children: u.intl.format(u.t["/bHQ84"], {
-                          numDays: Math.max(_, 1),
-                          applicationName: u.intl.string(u.t.Uu8hke),
+                      children: h.intl.format(h.t["/bHQ84"], {
+                          numDays: Math.max(g, 1),
+                          applicationName: h.intl.string(h.t.Uu8hke),
                       }),
                   }),
                   null != n &&
-                      (0, r.jsx)("div", {
-                          className: c.c,
-                          children: (0, r.jsx)(a.SCx, {
+                      (0, i.jsx)("div", {
+                          className: m.c,
+                          children: (0, i.jsx)(o.S, {
                               size: "xs",
                               variant: "icon-only",
-                              icon: a.UlM,
-                              "aria-label": u.intl.string(u.t.cpT0Cq),
+                              icon: c.U,
+                              "aria-label": h.intl.string(h.t.cpT0Cq),
                               onClick: n,
                           }),
                       }),

@@ -1,17 +1,16 @@
 "use strict";
-n.d(t, { A: () => o }), n(321073);
+n.d(t, { A: () => a }), n(321073);
 var r = n(439372),
     i = n(635731);
-let a = 1e3;
 class s extends r.A {
-    _recentActions = new i.A(a);
+    _recentActions = new i.A(1e3);
     trackAction = (e) => {
         let { type: t } = e;
         this._recentActions.push(t);
     };
     getRecentActions = (e) => this._recentActions.slice(-e).reverse();
     handlePostConnectionOpen = () => {
-        this._recentActions = new i.A(a);
+        this._recentActions = new i.A(1e3);
     };
     handleTrackAction = (e) => {
         this.trackAction(e);
@@ -46,4 +45,4 @@ class s extends r.A {
         OVERLAY_SET_INPUT_LOCKED: this.handleTrackAction,
     };
 }
-let o = new s();
+let a = new s();

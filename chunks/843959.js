@@ -1,16 +1,13 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(355418);
-let i = RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i"),
-    a = 1,
-    s = 2;
-class o extends r.c {
+r.d(t, { A: () => a });
+var n = r(355418);
+let s = RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
+class a extends n.c {
     innerPattern() {
-        return i;
+        return s;
     }
     innerExtract(e, t) {
-        let n = parseInt(t[s]),
-            r = parseInt(t[a]);
-        return e.createParsingComponents().imply("day", 1).assign("month", r).assign("year", n);
+        let r = parseInt(t[2]),
+            n = parseInt(t[1]);
+        return e.createParsingComponents().imply("day", 1).assign("month", n).assign("year", r);
     }
 }

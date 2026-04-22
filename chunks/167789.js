@@ -1,30 +1,27 @@
 "use strict";
-n.d(t, { O: () => a });
-var r = n(613345);
-let i = 1e3,
-    s = (0, r.V)();
-function a(e, t) {
-    let n = s;
-    if (void 0 !== n && null != n.requestIdleCallback && null != n.cancelIdleCallback) {
-        let r = !1,
-            s = null,
-            a = () => {
-                r || ((r = !0), null != s && (n.clearTimeout(s), (s = null)), e());
+n.d(t, { O: () => i });
+let r = (0, n(613345).V)();
+function i(e, t) {
+    if (void 0 !== r && null != r.requestIdleCallback && null != r.cancelIdleCallback) {
+        let n = !1,
+            i = null,
+            s = () => {
+                n || ((n = !0), null != i && (r.clearTimeout(i), (i = null)), e());
             },
-            o = n.requestIdleCallback(a, t);
+            a = r.requestIdleCallback(s, t);
         return (
-            (s = n.setTimeout(() => {
-                r || n.cancelIdleCallback(o), a();
-            }, t?.timeout ?? i)),
+            (i = r.setTimeout(() => {
+                n || r.cancelIdleCallback(a), s();
+            }, t?.timeout ?? 1e3)),
             () => {
-                n.cancelIdleCallback(o), null != s && (n.clearTimeout(s), (s = null));
+                r.cancelIdleCallback(a), null != i && (r.clearTimeout(i), (i = null));
             }
         );
     }
     {
-        let t = n.setTimeout(e, 0);
+        let t = r.setTimeout(e, 0);
         return () => {
-            n.clearTimeout(t);
+            r.clearTimeout(t);
         };
     }
 }

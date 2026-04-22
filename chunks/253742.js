@@ -1,118 +1,126 @@
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => j }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(503698),
-    a = n.n(r),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(990078),
-    d = n(397927),
-    c = n(442433),
-    u = n(717558),
-    A = n(770178),
-    h = n(765548),
-    _ = n(793574),
-    m = n(688810),
-    g = n(384059),
-    p = n(480890),
-    E = n(556525),
-    I = n(551826),
-    f = n(342296),
-    C = n(961350),
-    T = n(430452),
-    S = n(485296),
-    N = n(427262),
-    x = n(31408),
-    v = n(985018),
-    b = n(391987);
-let y = { offset: 2 },
-    O = {
-        serverDeaf: { icon: d.TJE, colorize: !0, getStatus: () => v.intl.string(v.t.btxSdB) },
-        serverMute: { icon: d.O1p, colorize: !0, getStatus: () => v.intl.string(v.t.uLddbQ) },
-        deaf: { icon: d.cQT, colorize: !1, getStatus: () => v.intl.string(v.t.NjmiOL) },
-        mute: { icon: d.z0P, colorize: !1, getStatus: () => v.intl.string(v.t.tjtv3P) },
-        localMute: { icon: d.O1p, colorize: !1, getStatus: () => v.intl.string(v.t["9F+xJU"]) },
+    d = n(615675),
+    u = n(666654),
+    c = n(990836),
+    A = n(83107),
+    h = n(939249),
+    _ = n(834040),
+    E = n(307301),
+    p = n(408278),
+    m = n(573613),
+    g = n(442433),
+    I = n(717558),
+    C = n(770178),
+    f = n(765548),
+    T = n(793574),
+    S = n(688810),
+    N = n(384059),
+    O = n(480890),
+    L = n(556525),
+    y = n(551826),
+    v = n(342296),
+    b = n(961350),
+    D = n(430452),
+    R = n(485296),
+    P = n(427262),
+    w = n(31408),
+    M = n(985018),
+    U = n(595811);
+let x = { offset: 2 },
+    G = {
+        serverDeaf: { icon: d.T, colorize: !0, getStatus: () => M.intl.string(M.t.btxSdB) },
+        serverMute: { icon: u.O, colorize: !0, getStatus: () => M.intl.string(M.t.uLddbQ) },
+        deaf: { icon: c.c, colorize: !1, getStatus: () => M.intl.string(M.t.NjmiOL) },
+        mute: { icon: A.z, colorize: !1, getStatus: () => M.intl.string(M.t.tjtv3P) },
+        localMute: { icon: u.O, colorize: !1, getStatus: () => M.intl.string(M.t["9F+xJU"]) },
     };
-function L(e) {
-    let t = l.useRef(null),
-        { parentAnalyticsLocation: r } = (0, m.Ay)(),
-        { channel: A, user: h, nick: C, mute: L, deaf: R, serverMute: P, serverDeaf: D } = e,
-        j = (0, s.bG)([T.Ay], () => T.Ay.isLocalMute(h.id)),
-        M = (0, u.A)({ userId: h.id, checkSoundSharing: !0 }),
-        w = A.getGuildId() ?? void 0,
-        U = h.getAvatarURL(A.guild_id, 24),
-        G = C ?? N.Ay.getName(h),
+function k(e) {
+    let t = r.useRef(null),
+        { parentAnalyticsLocation: a } = (0, S.Ay)(),
+        { channel: d, user: u, nick: c, mute: A, deaf: _, serverMute: E, serverDeaf: p } = e,
+        m = (0, s.bG)([D.Ay], () => D.Ay.isLocalMute(u.id)),
+        C = (0, I.A)({ userId: u.id, checkSoundSharing: !0 }),
+        f = d.getGuildId() ?? void 0,
+        b = u.getAvatarURL(d.guild_id, 24),
+        k = c ?? P.Ay.getName(u),
         {
-            icon: k,
+            icon: j,
             colorize: V,
-            getStatus: B,
+            getStatus: H,
         } = (function (e) {
-            let { serverDeaf: t, deaf: n, serverMute: i, mute: l, localMute: r } = e;
-            if (t) return O.serverDeaf;
-            if (n) return O.deaf;
-            if (i) return O.serverMute;
-            if (r) return O.localMute;
-            if (l) return O.mute;
-        })({ serverDeaf: D, deaf: R, serverMute: P, mute: L, localMute: j }) ?? {},
-        H = null != B ? v.intl.formatToPlainString(v.t["1+MVBP"], { userName: G, status: B() }) : G;
+            let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: a } = e;
+            if (t) return G.serverDeaf;
+            if (n) return G.deaf;
+            if (i) return G.serverMute;
+            if (a) return G.localMute;
+            if (r) return G.mute;
+        })({ serverDeaf: p, deaf: _, serverMute: E, mute: A, localMute: m }) ?? {},
+        B = null != H ? M.intl.formatToPlainString(M.t["1+MVBP"], { userName: k, status: H() }) : k;
     function F(e) {
-        null != w
-            ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("50970")]).then(
+        null != f
+            ? (0, g.L3)(e, async () => {
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("52463")]).then(
                       n.bind(n, 107632),
                   );
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
-                          guildId: w,
-                          channel: A,
+                          user: u,
+                          guildId: f,
+                          channel: d,
                           showMediaItems: !0,
-                          onInteraction: (0, p.s)("GuildChannelUserContextMenu", _.A.RTC_PANEL, { targetUserId: h.id }),
+                          onInteraction: (0, O.s)("GuildChannelUserContextMenu", T.A.RTC_PANEL, { targetUserId: u.id }),
                       });
               })
-            : (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("77012")]).then(
+            : (0, g.L3)(e, async () => {
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22880")]).then(
                       n.bind(n, 668569),
                   );
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
+                          user: u,
                           showMediaItems: !0,
-                          onInteraction: (0, p.s)("UserGenericContextMenu", _.A.RTC_PANEL, { targetUserId: h.id }),
+                          onInteraction: (0, O.s)("UserGenericContextMenu", T.A.RTC_PANEL, { targetUserId: u.id }),
                       });
               });
     }
-    let Y = (0, s.bG)([S.A], () => S.A.getVoiceVolume(h.id)),
-        W = (0, E.v)({ isSpeaking: M, voiceDb: Y, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
-    return (0, i.jsx)(f.A, {
+    let Y = (0, s.bG)([R.A], () => R.A.getVoiceVolume(u.id)),
+        K = (0, L.v)({ isSpeaking: C, voiceDb: Y, spreadDirection: L.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
+    return (0, i.jsx)(v.A, {
         targetElementRef: t,
-        user: h,
-        guildId: w,
-        channelId: A.id,
+        user: u,
+        guildId: f,
+        channelId: d.id,
         position: "top",
         clickTrap: !0,
         children: (e) =>
             (0, i.jsx)(o.m, {
-                text: H,
-                children: (0, i.jsx)(d.DUT, {
+                text: B,
+                children: (0, i.jsx)(h.D, {
                     innerRef: t,
                     onClick: (t) => {
-                        e.onClick(t), (0, g.X)(r, g.O.VOICE_USER);
+                        e.onClick(t), (0, N.X)(a, N.O.VOICE_USER);
                     },
-                    className: b.H,
+                    className: U.H,
                     onContextMenu: F,
-                    focusProps: y,
-                    children: (0, i.jsx)(I.A, {
-                        shakeLocation: x.uD.VOICE_USER,
-                        isShaking: M,
+                    focusProps: x,
+                    children: (0, i.jsx)(y.A, {
+                        shakeLocation: w.uD.VOICE_USER,
+                        isShaking: C,
                         children: (0, i.jsx)("div", {
-                            className: b.my,
-                            style: { backgroundImage: `url(${U})`, ...W },
+                            className: U.my,
+                            style: { backgroundImage: `url(${b})`, ...K },
                             children:
-                                null != k
-                                    ? (0, i.jsx)(k, {
-                                          className: a()(b.tr, { [b.qE]: V }),
+                                null != j
+                                    ? (0, i.jsx)(j, {
+                                          className: l()(U.tr, { [U.qE]: V }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -123,75 +131,75 @@ function L(e) {
             }),
     });
 }
-function R(e) {
-    let { voiceStates: t, channel: n, className: r } = e,
-        [c, u] = l.useState(!1),
-        _ = (0, s.bG)([C.default], () => C.default.getId()),
-        { containerRef: m, maxVisibleAvatars: g } = (function (e) {
-            let [t, n] = l.useState(7),
-                i = (0, h.A)(() => {
-                    let t = r?.current;
+function j(e) {
+    let { voiceStates: t, channel: n, className: a } = e,
+        [d, u] = r.useState(!1),
+        c = (0, s.bG)([b.default], () => b.default.getId()),
+        { containerRef: A, maxVisibleAvatars: h } = (function (e) {
+            let [t, n] = r.useState(7),
+                i = (0, f.A)(() => {
+                    let t = a?.current;
                     if (null == t) return;
                     let i = Math.floor((t.offsetWidth + 4) / 28);
                     n(Math.max(1, e > i ? i - 1 : i));
                 }),
-                r = (0, A.w)(i, [e], { fireOnMount: !0, fireOnDepsChange: !0 });
-            return { containerRef: r, maxVisibleAvatars: t };
+                a = (0, C.w)(i, [e], { fireOnMount: !0, fireOnDepsChange: !0 });
+            return { containerRef: a, maxVisibleAvatars: t };
         })(t.length - 1),
-        [p, E] = (function (e, t, n) {
+        [g, I] = (function (e, t, n) {
             let i = [];
-            for (let l of e)
-                if (l.user.id !== t && !i.some((e) => e.user.id === l.user.id)) {
+            for (let r of e)
+                if (r.user.id !== t && !i.some((e) => e.user.id === r.user.id)) {
                     if (i.length >= n) return [i, !0];
-                    i.push(l);
+                    i.push(r);
                 }
             return [i, !1];
-        })(t, _, g),
-        I = c ? d.QGg : d.j96,
-        f = c ? v.intl.string(v.t["Z/Tya5"]) : v.intl.string(v.t.XR5BAc),
-        T = (0, i.jsx)(o.m, {
-            text: f,
+        })(t, c, h),
+        T = d ? _.Q : E.j,
+        S = d ? M.intl.string(M.t["Z/Tya5"]) : M.intl.string(M.t.XR5BAc),
+        N = (0, i.jsx)(o.m, {
+            text: S,
             ariaHidden: !0,
-            children: (0, i.jsx)(d.K0, {
-                "aria-label": f,
-                onClick: () => u(!c),
-                icon: () => (0, i.jsx)(I, { size: "md" }),
+            children: (0, i.jsx)(p.K, {
+                "aria-label": S,
+                onClick: () => u(!d),
+                icon: () => (0, i.jsx)(T, { size: "md" }),
                 variant: "icon-only",
                 size: "sm",
             }),
         }),
-        S = E && c ? t : p;
-    return S.length <= 0
+        O = I && d ? t : g;
+    return O.length <= 0
         ? null
-        : (0, i.jsx)(d.IpV, {
-              className: a()(b.XG, r),
+        : (0, i.jsx)(m.Ip, {
+              className: l()(U.XG, a),
               fade: !0,
               children: (0, i.jsxs)("div", {
-                  ref: m,
-                  className: a()(b.Xk, !c && b.yZ),
+                  ref: A,
+                  className: l()(U.Xk, !d && U.yZ),
                   role: "group",
-                  "aria-label": v.intl.string(v.t["/ZgaVU"]),
+                  "aria-label": M.intl.string(M.t["/ZgaVU"]),
                   children: [
-                      S.map((e) => {
-                          let { user: t, nick: l, voiceState: r } = e;
-                          return t.id !== _
+                      O.map((e) => {
+                          let { user: t, nick: r, voiceState: a } = e;
+                          return t.id !== c
                               ? (0, i.jsx)(
-                                    L,
+                                    k,
                                     {
                                         channel: n,
                                         user: t,
-                                        nick: l,
-                                        mute: r.isVoiceMuted(),
-                                        deaf: r.isVoiceDeafened(),
-                                        video: r.selfVideo,
-                                        serverMute: r.mute,
-                                        serverDeaf: r.deaf,
+                                        nick: r,
+                                        mute: a.isVoiceMuted(),
+                                        deaf: a.isVoiceDeafened(),
+                                        video: a.selfVideo,
+                                        serverMute: a.mute,
+                                        serverDeaf: a.deaf,
                                     },
                                     t.id,
                                 )
                               : null;
                       }),
-                      E ? T : null,
+                      I ? N : null,
                   ],
               }),
           });

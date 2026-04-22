@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { D: () => l });
-var r = n(311907),
-    i = n(994500),
-    a = n(800828),
-    s = n(652215),
-    o = n(985018);
-function l(e) {
-    return (0, r.bG)(
-        [a.A, i.A],
+a.d(t, { D: () => o });
+var n = a(311907),
+    i = a(994500),
+    l = a(800828),
+    r = a(652215),
+    d = a(985018);
+function o(e) {
+    return (0, n.bG)(
+        [l.A, i.A],
         () =>
-            i.A.getRelationshipType(e) === s.eA$.PENDING_INCOMING
-                ? o.intl.string(o.t.wPI56w)
-                : a.A.getGameRelationshipsForUser(e).length > 0
-                  ? o.intl.string(o.t.LAcY7m)
-                  : o.intl.string(o.t.w5uwoI),
+            i.A.getRelationshipType(e) === r.eA$.PENDING_INCOMING
+                ? d.intl.string(d.t.wPI56w)
+                : l.A.getGameRelationshipsForUser(e).length > 0
+                  ? d.intl.string(d.t.LAcY7m)
+                  : d.intl.string(d.t.w5uwoI),
         [e],
     );
 }

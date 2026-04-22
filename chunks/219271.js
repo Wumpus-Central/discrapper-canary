@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { u: () => l });
-var r = n(562465),
+n.d(t, { u: () => o });
+var l = n(562465),
     i = n(73153),
     a = n(153488),
-    s = n(21119),
-    o = n(652215);
-function l() {
+    r = n(21119),
+    s = n(652215);
+function o() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return s.A.shouldFetch() && a.A.hasConsented(o.YAq.PERSONALIZATION)
+    return r.A.shouldFetch() && a.A.hasConsented(s.YAq.PERSONALIZATION)
         ? (i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
-          r.Bo.get({ url: o.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
+          l.Bo.get({ url: s.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
               (e) => {
                   let { body: t } = e;
                   i.h.dispatch({

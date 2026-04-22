@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(397927),
-    a = n(20805),
-    o = n(261020),
-    l = n(83971),
-    u = n(655116),
-    c = n(780964),
-    d = n(840065),
-    _ = n(287809),
-    f = n(272984),
-    p = n(985018);
-function h(e) {
-    let { user: t, entry: n, display: h, onAction: m, onClose: E } = e,
-        g = (0, i.bG)([_.default], () => _.default.getCurrentUser()?.id === t.id),
-        A = (0, i.bG)([u.A], () => u.A.hasConnectedAccount());
-    if ("recent" !== h || !(0, l.F3)(n)) return null;
-    if (!A)
-        return (0, r.jsx)(s.Drp, {
+e.d(n, { A: () => f });
+var i = e(627968);
+e(64700);
+var l = e(311907),
+    r = e(477782),
+    a = e(20805),
+    s = e(261020),
+    o = e(83971),
+    c = e(655116),
+    u = e(780964),
+    d = e(858897),
+    A = e(287809),
+    x = e(272984),
+    p = e(985018);
+function f(t) {
+    let { user: n, entry: e, display: f, onAction: _, onClose: m } = t,
+        E = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.id === n.id),
+        T = (0, l.bG)([c.A], () => c.A.hasConnectedAccount());
+    if ("recent" !== f || !(0, o.F3)(e)) return null;
+    if (!T)
+        return (0, i.jsx)(r.Dr, {
             id: "connect-spotify",
-            label: p.intl.formatToPlainString(p.t.XWSHTb, { platform: f.HD }),
+            label: p.intl.formatToPlainString(p.t.XWSHTb, { platform: x.HD }),
             action: () => {
-                m?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                    (0, d.openUserSettings)(c.X.CONNECTIONS_PANEL),
-                    E?.();
+                _?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
+                    (0, d.openUserSettings)(u.X.CONNECTIONS_PANEL),
+                    m?.();
             },
         });
-    if (g) return null;
-    let I = (0, a.Tq)(n) ? n.extra.entries[0]?.media : n.extra.media;
-    return null == I
+    if (E) return null;
+    let g = (0, a.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
+    return null == g
         ? null
-        : (0, r.jsx)(s.Drp, {
+        : (0, i.jsx)(r.Dr, {
               id: "play-on-spotify",
               label: p.intl.string(p.t.rRffNz),
               action: () => {
-                  m?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }), (0, o.n)(f.M0.TRACK, I.external_id);
+                  _?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }), (0, s.n)(x.M0.TRACK, g.external_id);
               },
           });
 }

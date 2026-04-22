@@ -1,46 +1,46 @@
-i.d(e, { A: () => _ });
+i.d(e, { A: () => E });
 var l = i(627968),
-    a = i(64700),
-    n = i(158954),
-    r = i(397927),
+    n = i(64700),
+    a = i(189213),
+    r = i(292666),
     s = i(154672),
     o = i(198982),
-    c = i(330936),
-    d = i(650583),
+    d = i(330936),
+    c = i(650583),
     u = i(985018);
-let _ = (t) => {
-    let { email: e, setStep: i, onBack: _, school: I, setSchool: E, ...A } = t,
-        [g, h] = a.useState(null),
-        [m, S] = a.useState(!1),
+let E = (t) => {
+    let { email: e, setStep: i, onBack: E, school: I, setSchool: A, ..._ } = t,
+        [h, g] = n.useState(null),
+        [m, S] = n.useState(!1),
         y = async () => {
-            h(null), S(!0);
+            g(null), S(!0);
             try {
-                await s.A.signup(e, I), i(c.Di.EMAIL_WAITLIST);
+                await s.A.signup(e, I), i(d.Di.EMAIL_WAITLIST);
             } catch (t) {
-                h(new o.LG(t));
+                g(new o.LG(t));
             } finally {
                 S(!1);
             }
         },
-        x = async (t) => {
-            null != I && "" !== I && t.key === d.dh.ENTER && (await y());
+        L = async (t) => {
+            null != I && "" !== I && t.key === c.dh.ENTER && (await y());
         };
-    return (0, l.jsx)(n.Modal, {
-        ...A,
+    return (0, l.jsx)(a.Modal, {
+        ..._,
         title: u.intl.string(u.t["2FNWBG"]),
         subtitle: u.intl.string(u.t["/4y6ox"]),
         actions: [
-            { variant: "secondary", onClick: _, text: u.intl.string(u.t["13/7kX"]) },
+            { variant: "secondary", onClick: E, text: u.intl.string(u.t["13/7kX"]) },
             { variant: "primary", text: u.intl.string(u.t.PDsYAo), onClick: y, loading: m },
         ],
-        children: (0, l.jsx)(r.ksK, {
+        children: (0, l.jsx)(r.k, {
             label: u.intl.string(u.t["L+AfJr"]),
-            onKeyPress: x,
+            onKeyPress: L,
             placeholder: u.intl.string(u.t.Y1btJd),
             onChange: (t) => {
-                E(t);
+                A(t);
             },
-            error: g?.getAnyErrorMessage(),
+            error: h?.getAnyErrorMessage(),
         }),
     });
 };

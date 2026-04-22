@@ -1,34 +1,29 @@
 "use strict";
-n.d(t, { w: () => l });
-let r = null,
-    i = null,
-    s = null;
-function a(e, t, n) {
-    return (
-        t.beginPath(),
-        t.arc(n / 2, n / 2, n / 2, 0, 2 * Math.PI),
-        t.closePath(),
-        t.clip(),
-        t.drawImage(e, 0, 0, n, n, 0, 0, n, n),
-        t
-    );
-}
-function o(e) {
-    let t = document.createElement("canvas"),
-        n = t.getContext("2d"),
-        r = Math.min(e.width, e.height);
-    (t.width = r), (t.height = r), null != n && (n = a(e, n, r));
-    let i = t.toDataURL();
-    return t.remove(), i;
-}
-function l(e) {
+function r(e) {
     let t = new Image();
     return (
         (t.src = e),
         (t.crossOrigin = "anonymous"),
         new Promise((e) => {
             (t.onload = () => {
-                "" === t.src || e(o(t));
+                var n;
+                let r, i, s, a;
+                "" !== t.src &&
+                    e(
+                        ((i = (r = document.createElement("canvas")).getContext("2d")),
+                        (r.width = s = Math.min(t.width, t.height)),
+                        (r.height = s),
+                        null != i &&
+                            ((n = i).beginPath(),
+                            n.arc(s / 2, s / 2, s / 2, 0, 2 * Math.PI),
+                            n.closePath(),
+                            n.clip(),
+                            n.drawImage(t, 0, 0, s, s, 0, 0, s, s),
+                            (i = n)),
+                        (a = r.toDataURL()),
+                        r.remove(),
+                        a),
+                    );
             }),
                 (t.onerror = () => {
                     e(t.src);
@@ -36,3 +31,4 @@ function l(e) {
         })
     );
 }
+n.d(t, { w: () => r });

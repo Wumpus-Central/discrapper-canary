@@ -1,92 +1,97 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(311907),
-    o = n(397927),
-    d = n(87664),
-    c = n(287809),
-    u = n(427262),
-    A = n(198525),
-    h = n(652215),
-    _ = n(985018),
-    m = n(332544),
-    g = n(66176);
-let p = function (e) {
+s.d(t, { A: () => C });
+var n = s(627968),
+    l = s(64700),
+    a = s(503698),
+    r = s.n(a),
+    i = s(311907),
+    o = s(534514),
+    c = s(265872),
+    u = s(939249),
+    d = s(97808),
+    m = s(778712),
+    _ = s(834730),
+    h = s(87664),
+    x = s(287809),
+    f = s(427262),
+    b = s(198525),
+    p = s(652215),
+    A = s(985018),
+    g = s(332544),
+    E = s(66176);
+let C = function (e) {
     let { quest: t } = e,
-        [n, a] = l.useState(!1),
-        p = l.useRef(null),
-        E = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-        I = u.Ay.useName(E),
-        f = (0, d.A)(E?.id),
-        C = l.useCallback(
+        [s, a] = l.useState(!1),
+        C = l.useRef(null),
+        j = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
+        v = f.Ay.useName(j),
+        N = (0, h.A)(j?.id),
+        T = l.useCallback(
             (e) =>
-                (0, i.jsx)(A.A, {
-                    name: I,
+                (0, n.jsx)(b.A, {
+                    name: v,
                     quest: t,
-                    memberListItemRef: p,
-                    applicationStream: f,
+                    memberListItemRef: C,
+                    applicationStream: N,
                     ...e,
                     closePopout: () => {
                         a(!1);
                     },
                 }),
-            [t, f, I],
+            [t, N, v],
         );
-    return (0, i.jsx)("div", {
-        className: m.x3,
-        children: (0, i.jsxs)("div", {
-            className: m.B0,
+    return (0, n.jsx)("div", {
+        className: g.x3,
+        children: (0, n.jsxs)("div", {
+            className: g.B0,
             children: [
-                (0, i.jsx)(o.Heading, {
-                    className: g.R_,
+                (0, n.jsx)(o.D, {
+                    className: E.R_,
                     variant: "heading-md/semibold",
-                    children: _.intl.string(_.t.jY7Zxg),
+                    children: A.intl.string(A.t.jY7Zxg),
                 }),
-                (0, i.jsx)("div", { className: g.$Q, children: _.intl.string(_.t.q3hbne) }),
-                (0, i.jsx)("div", {
-                    className: g.k0,
-                    children: (0, i.jsx)(o.YNO, {
-                        targetElementRef: p,
-                        renderPopout: C,
+                (0, n.jsx)("div", { className: E.$Q, children: A.intl.string(A.t.q3hbne) }),
+                (0, n.jsx)("div", {
+                    className: E.k0,
+                    children: (0, n.jsx)(c.Y, {
+                        targetElementRef: C,
+                        renderPopout: T,
                         position: "bottom",
-                        shouldShow: n,
+                        shouldShow: s,
                         onRequestClose: () => a(!1),
                         nudgeAlignIntoViewport: !1,
                         useRawTargetDimensions: !0,
-                        animation: o.YNO.Animation.NONE,
+                        animation: c.Y.Animation.NONE,
                         spacing: -3,
                         fixed: !0,
                         scrollBehavior: "close",
                         children: () =>
-                            (0, i.jsx)("div", {
-                                ref: p,
-                                className: r()(g.Tn, { [g.wH]: n }),
-                                children: (0, i.jsx)(o.DUT, {
-                                    onClick: () => a(!n),
+                            (0, n.jsx)("div", {
+                                ref: C,
+                                className: r()(E.Tn, { [E.wH]: s }),
+                                children: (0, n.jsx)(u.D, {
+                                    onClick: () => a(!s),
                                     tabIndex: 0,
-                                    children: (0, i.jsxs)("div", {
-                                        className: g.lm,
+                                    children: (0, n.jsxs)("div", {
+                                        className: E.lm,
                                         children: [
-                                            (0, i.jsx)(o.euF, {
-                                                size: o._3J.SIZE_32,
-                                                src: E?.getAvatarURL(void 0, 32),
-                                                status: h.clD.ONLINE,
-                                                "aria-label": E?.username,
+                                            (0, n.jsx)(d.eu, {
+                                                size: m._3.SIZE_32,
+                                                src: j?.getAvatarURL(void 0, 32),
+                                                status: p.clD.ONLINE,
+                                                "aria-label": j?.username,
                                             }),
-                                            (0, i.jsxs)("div", {
-                                                className: g.Fj,
+                                            (0, n.jsxs)("div", {
+                                                className: E.Fj,
                                                 children: [
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, n.jsx)(_.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
-                                                        children: I,
+                                                        children: v,
                                                     }),
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, n.jsx)(_.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: _.intl.string(_.t.b9w3bO),
+                                                        children: A.intl.string(A.t.b9w3bO),
                                                     }),
                                                 ],
                                             }),

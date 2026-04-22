@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = "leden_\xfanor_březen_duben_květen_červen_červenec_srpen_z\xe1ř\xed_ř\xedjen_listopad_prosinec".split("_"),
         n = "led_\xfano_bře_dub_kvě_čvn_čvc_srp_z\xe1ř_ř\xedj_lis_pro".split("_");
@@ -42,7 +40,7 @@
                 return s + "lety";
         }
     }
-    return e.defineLocale("cs", {
+    e.defineLocale("cs", {
         months: t,
         monthsShort: n,
         monthsParse: (function (e, t) {
@@ -134,4 +132,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

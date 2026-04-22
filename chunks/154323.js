@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153);
 let s = {
@@ -20,10 +20,7 @@ let s = {
         ss04: "Italic - alternate figures (3,4,5,6,7,8,9)",
     },
     a = {};
-function o(e) {
-    !1 === e.value ? delete a[e.toggle] : (a[e.toggle] = e.value);
-}
-class l extends r.Ay.DeviceSettingsStore {
+class o extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDesignTogglesStore";
     static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
@@ -48,4 +45,8 @@ class l extends r.Ay.DeviceSettingsStore {
         });
     }
 }
-let u = new l(i.h, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: o });
+let l = new o(i.h, {
+    DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
+        !1 === e.value ? delete a[e.toggle] : (a[e.toggle] = e.value);
+    },
+});

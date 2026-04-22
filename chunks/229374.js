@@ -1,133 +1,136 @@
-n.d(t, { A: () => v }), n(321073);
-var l = n(627968),
+n.d(t, { A: () => $ }), n(321073);
+var a = n(627968),
     r = n(64700),
-    a = n(503698),
-    i = n.n(a),
-    s = n(416681),
-    o = n(435371),
-    E = n(397927),
-    u = n(843472),
-    c = n(570209),
-    _ = n(775602),
-    d = n(47167),
-    A = n(713654),
-    g = n(863439),
-    T = n(465364),
-    I = n(81437),
+    l = n(503698),
+    s = n.n(l),
+    i = n(416681),
+    u = n(990078),
+    o = n(312138),
+    c = n(939249),
+    d = n(834730),
+    h = n(276293),
+    g = n(843472),
+    f = n(570209),
+    p = n(775602),
+    m = n(47167),
+    x = n(713654),
+    E = n(863439),
+    A = n(465364),
+    C = n(81437),
     N = n(976860),
-    h = n(378570),
-    m = n(302031),
-    S = n(288254),
-    G = n(253932),
-    O = n(95701),
-    R = n(734057),
-    C = n(576705),
-    L = n(994500),
+    P = n(378570),
+    T = n(302031),
+    v = n(288254),
+    y = n(253932),
+    k = n(95701),
+    j = n(734057),
+    _ = n(576705),
+    b = n(994500),
     D = n(309010),
-    f = n(287809),
-    x = n(822382),
+    I = n(287809),
+    S = n(822382),
     M = n(876689),
-    p = n(712838),
+    R = n(712838),
     U = n(652215),
-    k = n(985018),
-    b = n(405587);
-function F(e) {
+    w = n(985018),
+    G = n(494339);
+function L(e) {
     let { parentChannel: t, onSelectChannel: n } = e,
-        r = (0, d.Ay)(t);
+        r = (0, m.Ay)(t);
     if (null == r) return null;
-    let a = null != t ? (0, A.gU)(t) : null;
-    if (null == a) return null;
-    let s = (0, l.jsxs)(l.Fragment, {
+    let l = null != t ? (0, x.gU)(t) : null;
+    if (null == l) return null;
+    let i = (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, l.jsx)(a, { className: b.gQ, size: "xxs", color: "currentColor" }),
-            (0, l.jsx)(E.Text, { className: b.yK, variant: "text-xs/medium", color: "text-default", children: r }),
+            (0, a.jsx)(l, { className: G.gQ, size: "xxs", color: "currentColor" }),
+            (0, a.jsx)(d.E, { className: G.yK, variant: "text-xs/medium", color: "text-default", children: r }),
         ],
     });
-    return null != t && (0, O.Z_)(t.type)
-        ? (0, l.jsx)(E.DUT, {
-              className: i()(b.rg, b.fj),
+    return null != t && (0, k.Z_)(t.type)
+        ? (0, a.jsx)(c.D, {
+              className: s()(G.rg, G.fj),
               onClick: (e) => {
                   e.stopPropagation(), n(t.id);
               },
-              children: s,
+              children: i,
           })
-        : (0, l.jsx)("div", { className: b.rg, children: s });
+        : (0, a.jsx)("div", { className: G.rg, children: i });
 }
-function j(e) {
+function X(e) {
     let {
             channel: t,
             messages: n,
-            highlighter: a,
-            startIndex: i,
-            resultRefs: s,
-            totalResults: u,
-            scrollTo: c,
-            renderEmbeds: _,
-            offset: I,
-            jumpToMessage: N,
-            listNavigator: O,
+            highlighter: l,
+            startIndex: s,
+            resultRefs: i,
+            totalResults: o,
+            scrollTo: d,
+            renderEmbeds: g,
+            offset: f,
+            jumpToMessage: p,
+            listNavigator: C,
         } = e,
-        x = G.gs.useSetting(),
-        M = (0, S.IL)(t),
-        k = r.useCallback((e) => {
+        N = y.gs.useSetting(),
+        k = (0, v.IL)(t),
+        S = r.useCallback((e) => {
             if (e === D.A.getChannelId()) return;
-            let t = R.A.getChannel(e);
-            null == t || ((C.A.can(U.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.iN)(t.id));
+            let t = j.A.getChannel(e);
+            null == t || ((_.A.can(U.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, P.iN)(t.id));
         }, []),
-        j = null != t ? (0, d.m1)(t, f.default, L.A, !1) : "???",
-        v = t?.parent_id != null ? R.A.getChannel(t.parent_id) : null,
-        P = null != v ? (0, d.m1)(v, f.default, L.A) : null,
-        y = (0, A.gU)(t) ?? E.N$i,
-        X = C.A.can(U.xBc.MANAGE_MESSAGES, t),
-        { content: B } = (0, T.Ay)({ content: j, embeds: [] }, { postProcessor: a }),
-        V = r.useRef(null),
-        [H, w] = r.useState(!1);
+        M = null != t ? (0, m.m1)(t, I.default, b.A, !1) : "???",
+        w = t?.parent_id != null ? j.A.getChannel(t.parent_id) : null,
+        X = null != w ? (0, m.m1)(w, I.default, b.A) : null,
+        $ = (0, x.gU)(t) ?? h.N,
+        B = _.A.can(U.xBc.MANAGE_MESSAGES, t),
+        { content: F } = (0, A.Ay)({ content: M, embeds: [] }, { postProcessor: l }),
+        O = r.useRef(null),
+        [V, J] = r.useState(!1);
     r.useEffect(() => {
-        let e = V.current;
-        null != e && null != e.offsetWidth && null != e.scrollWidth && w(e.offsetWidth < e.scrollWidth);
+        let e = O.current;
+        null != e && null != e.offsetWidth && null != e.scrollWidth && J(e.offsetWidth < e.scrollWidth);
     }, []);
-    let W = [j, P].filter((e) => null != e).join(", ");
-    return (0, l.jsx)(m.Bs.Provider, {
-        value: (0, g.A)(x, X),
-        children: (0, l.jsxs)("ul", {
+    let K = [M, X].filter((e) => null != e).join(", ");
+    return (0, a.jsx)(T.Bs.Provider, {
+        value: (0, E.A)(N, B),
+        children: (0, a.jsxs)("ul", {
             role: "group",
-            className: b.JT,
-            "aria-label": W,
+            className: G.JT,
+            "aria-label": K,
             children: [
-                (0, l.jsx)(E.DUT, {
-                    onClick: () => k(t.id),
-                    children: (0, l.jsxs)("div", {
-                        className: b.aT,
+                (0, a.jsx)(c.D, {
+                    onClick: () => S(t.id),
+                    children: (0, a.jsxs)("div", {
+                        className: G.aT,
                         children: [
-                            (0, l.jsx)(y, { className: b.er, size: "xs", color: "currentColor" }),
-                            (0, l.jsx)(o.m_, {
+                            (0, a.jsx)($, { className: G.er, size: "xs", color: "currentColor" }),
+                            (0, a.jsx)(u.m, {
                                 asContainer: !0,
-                                text: j,
-                                shouldShow: H,
-                                children: (0, l.jsx)("span", { ref: V, className: b.Kw, children: B }),
+                                text: M,
+                                shouldShow: V,
+                                children: (0, a.jsx)("span", { ref: O, className: G.Kw, children: F }),
                             }),
-                            (0, l.jsx)(F, { parentChannel: v, onSelectChannel: k }),
+                            (0, a.jsx)(L, { parentChannel: w, onSelectChannel: S }),
                         ],
                     }),
                 }),
                 n.map((e, t) => {
-                    let r = i + t;
-                    return (0, l.jsx)(
-                        p.A,
+                    let r = s + t;
+                    return (0, a.jsx)(
+                        R.A,
                         {
                             ref: (e) => {
-                                s.current[r] = e;
+                                i.current[r] = e;
                             },
-                            totalResults: u,
-                            scrollTo: c,
-                            renderEmbeds: _,
-                            searchOffset: I,
+                            totalResults: o,
+                            scrollTo: d,
+                            renderEmbeds: g,
+                            searchOffset: f,
                             pageResultsLength: n.length,
                             message: e,
                             index: r,
-                            onJump: N,
-                            listItemProps: O.getItemProps({ index: r }),
-                            isSpoilerHidden: M,
+                            onJump: p,
+                            listItemProps: C.getItemProps({ index: r }),
+                            isSpoilerHidden: k,
                         },
                         `search-result-${r}`,
                     );
@@ -136,134 +139,134 @@ function j(e) {
         }),
     });
 }
-let v = r.memo(function (e) {
+let $ = r.memo(function (e) {
     let {
             search: t,
             renderEmbeds: n,
-            scrollTo: a,
-            messages: i,
-            blockCount: o,
+            scrollTo: l,
+            messages: s,
+            blockCount: u,
             ignoreCount: d,
-            onPageChange: A,
-            onClick: g,
-            paginationTotalCount: T,
-            renderPageWrapper: h,
-            onBlockedResultsClick: m,
-            searchRequestAnalyticsId: S,
-            searchResultsQuery: G,
+            onPageChange: h,
+            onClick: m,
+            paginationTotalCount: x,
+            renderPageWrapper: E,
+            onBlockedResultsClick: A,
+            searchRequestAnalyticsId: P,
+            searchResultsQuery: T,
         } = e,
-        { offset: O, totalResults: C, isSearching: D, showBlockedResults: f } = t,
-        p = r.useCallback(
+        { offset: v, totalResults: y, isSearching: k, showBlockedResults: _ } = t,
+        D = r.useCallback(
             (e, t) => {
-                g?.(e, t);
+                m?.(e, t);
                 let n = () => {
-                    let t = R.A.getChannel(e.channel_id),
+                    let t = j.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: S }),
+                    g.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: P }),
                         (0, N.pX)(U.BVt.CHANNEL(n, e.channel_id, e.id));
                 };
-                (0, I.A)(e, n) && n();
+                (0, C.A)(e, n) && n();
             },
-            [g, S],
+            [m, P],
         ),
-        F = r.useMemo(() => {
+        I = r.useMemo(() => {
             let e,
                 t = 0;
-            return i.reduce((n, l) => {
-                if (!f && (L.A.isBlockedForMessage(l) || L.A.isIgnoredForMessage(l))) return n;
-                let r = R.A.getChannel(l.channel_id);
+            return s.reduce((n, a) => {
+                if (!_ && (b.A.isBlockedForMessage(a) || b.A.isIgnoredForMessage(a))) return n;
+                let r = j.A.getChannel(a.channel_id);
                 return (
                     null == r ||
                         ((null == e || e !== r.id) && n.push({ channel: r, messages: [], startIndex: t }),
                         (t += 1),
-                        n[n.length - 1].messages.push(l),
+                        n[n.length - 1].messages.push(a),
                         (e = r?.id)),
                     n
                 );
             }, []);
-        }, [i, f]),
-        v = r.useRef([]),
-        P = F.reduce((e, t) => e + 1 + t.messages.length, 0),
-        y = r.useCallback(
+        }, [s, _]),
+        R = r.useRef([]),
+        L = I.reduce((e, t) => e + 1 + t.messages.length, 0),
+        $ = r.useCallback(
             (e, t) => {
-                if (!_.A.keyboardModeEnabled) return;
-                let n = v.current,
-                    l = null != t ? n[t] : void 0;
-                if (null == l || null == l.hitRef.current) return;
-                let r = l.hitRef.current.getClientRects()[0];
-                a(r.top - 0.5 * r.height, !1, () => {
+                if (!p.A.keyboardModeEnabled) return;
+                let n = R.current,
+                    a = null != t ? n[t] : void 0;
+                if (null == a || null == a.hitRef.current) return;
+                let r = a.hitRef.current.getClientRects()[0];
+                l(r.top - 0.5 * r.height, !1, () => {
                     document.getElementById(e)?.focus();
                 });
             },
-            [a],
+            [l],
         ),
-        X = r.useCallback((e) => {
-            let t = v.current[e];
+        B = r.useCallback((e) => {
+            let t = R.current[e];
             t?.jumpTo();
         }, []),
-        B = (0, s.Ay)({ navId: "search-results", itemCount: P, focusedIndex: 0, setFocus: y, onSelect: X }),
-        V = (0, c.wG)((0, x.dX)(G) ?? ""),
-        H = F.map((e) => {
-            let { channel: t, messages: r, startIndex: i } = e;
-            return (0, l.jsx)(
-                j,
+        F = (0, i.Ay)({ navId: "search-results", itemCount: L, focusedIndex: 0, setFocus: $, onSelect: B }),
+        O = (0, f.wG)((0, S.dX)(T) ?? ""),
+        V = I.map((e) => {
+            let { channel: t, messages: r, startIndex: s } = e;
+            return (0, a.jsx)(
+                X,
                 {
                     channel: t,
                     messages: r,
-                    highlighter: V,
-                    startIndex: i,
-                    resultRefs: v,
-                    totalResults: C,
-                    scrollTo: a,
+                    highlighter: O,
+                    startIndex: s,
+                    resultRefs: R,
+                    totalResults: y,
+                    scrollTo: l,
                     renderEmbeds: n,
-                    offset: O,
-                    jumpToMessage: p,
-                    listNavigator: B,
+                    offset: v,
+                    jumpToMessage: D,
+                    listNavigator: F,
                 },
-                `${t.id}-${i}`,
+                `${t.id}-${s}`,
             );
         });
-    H.push();
-    let w = r.useRef(null);
+    V.push();
+    let J = r.useRef(null);
     r.useLayoutEffect(() => {
-        w.current?.focus();
-    }, [i]);
-    let W = (0, E.R7z)();
-    return (0, l.jsxs)(l.Fragment, {
+        J.current?.focus();
+    }, [s]);
+    let K = (0, o.R7)();
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, l.jsx)("div", { ref: w, ...B.getContainerProps(), ...W, "aria-busy": D, children: H }),
-            o > 0 || d > 0
-                ? (0, l.jsxs)(E.DUT, {
+            (0, a.jsx)("div", { ref: J, ...F.getContainerProps(), ...K, "aria-busy": k, children: V }),
+            u > 0 || d > 0
+                ? (0, a.jsxs)(c.D, {
                       tag: "div",
-                      className: b.P,
+                      className: G.P,
                       onClick: () => {
-                          m?.(!f);
+                          A?.(!_);
                       },
                       children: [
-                          (0, l.jsx)("div", { className: b.y }),
-                          (0, l.jsx)("div", {
-                              className: b.__invalid_resultsBlockedText,
-                              children: f
-                                  ? o > 0 && d > 0
-                                      ? k.intl.formatToPlainString(k.t.OvJs9w, { count: o + d })
-                                      : o > 0
-                                        ? k.intl.formatToPlainString(k.t["n/1QFS"], { count: o })
-                                        : k.intl.formatToPlainString(k.t.ypezTA, { count: d })
-                                  : o > 0 && d > 0
-                                    ? k.intl.formatToPlainString(k.t.EJHRcV, { count: o + d })
-                                    : o > 0
-                                      ? k.intl.formatToPlainString(k.t.HTE8JP, { count: o })
-                                      : k.intl.formatToPlainString(k.t.e7f8r9, { count: d }),
+                          (0, a.jsx)("div", { className: G.y }),
+                          (0, a.jsx)("div", {
+                              className: G.__invalid_resultsBlockedText,
+                              children: _
+                                  ? u > 0 && d > 0
+                                      ? w.intl.formatToPlainString(w.t.OvJs9w, { count: u + d })
+                                      : u > 0
+                                        ? w.intl.formatToPlainString(w.t["n/1QFS"], { count: u })
+                                        : w.intl.formatToPlainString(w.t.ypezTA, { count: d })
+                                  : u > 0 && d > 0
+                                    ? w.intl.formatToPlainString(w.t.EJHRcV, { count: u + d })
+                                    : u > 0
+                                      ? w.intl.formatToPlainString(w.t.HTE8JP, { count: u })
+                                      : w.intl.formatToPlainString(w.t.e7f8r9, { count: d }),
                           }),
                       ],
                   })
                 : null,
-            !D &&
-                (0, l.jsx)(M.A, {
-                    renderPageWrapper: h,
-                    onPageChange: A,
-                    offset: O,
-                    totalCount: T ?? C,
+            !k &&
+                (0, a.jsx)(M.A, {
+                    renderPageWrapper: E,
+                    onPageChange: h,
+                    offset: v,
+                    totalCount: x ?? y,
                     pageSize: U.T_y,
                 }),
         ],

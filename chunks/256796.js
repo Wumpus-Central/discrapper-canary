@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var r = n(735438),
     i = n.n(r),
     s = n(73153),
@@ -7,13 +7,8 @@ var r = n(735438),
     o = n(594061),
     l = n(822382),
     u = n(23667),
-    c = n(956467);
-function d(e) {
-    if (!Array.isArray(e.pinned)) return;
-    let t = e.pinned.some((e) => !0 === e);
-    e.pinned = t;
-}
-let _ = {
+    d = n(956467);
+let c = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
@@ -21,42 +16,46 @@ let _ = {
                 searchQueryString: r,
                 pagination: o,
                 trackExactTotalHits: u,
-                getId: _,
-                getLimit: f,
-                onFetchStart: p,
-                onFetchSuccess: h,
-                searchMode: m,
+                getId: c,
+                getLimit: _,
+                onFetchStart: f,
+                onFetchSuccess: E,
+                searchMode: h,
             } = e,
-            E = (0, l._o)(r),
-            g = (0, l.Zf)(E);
-        d(g);
-        let A = (0, l.nm)(m),
-            I = { ...g, ...A },
-            T = (0, l.mt)(t);
-        null != T && (0, l.L5)(I, T);
-        let S = c.A.create({
+            p = (0, l._o)(r),
+            m = (0, l.Zf)(p);
+        !(function (e) {
+            if (!Array.isArray(e.pinned)) return;
+            let t = e.pinned.some((e) => !0 === e);
+            e.pinned = t;
+        })(m);
+        let g = (0, l.nm)(h),
+            A = { ...m, ...g },
+            I = (0, l.mt)(t);
+        null != I && (0, l.L5)(A, I);
+        let T = d.A.create({
             id: (0, l.bS)(t),
             searchContext: t,
-            searchQuery: I,
+            searchQuery: A,
             searchTabs: n,
-            getLimit: f,
+            getLimit: _,
             pagination: o,
             trackExactTotalHits: u,
         });
-        p?.({ searchContext: t, searchQueryString: r, searchQuery: I });
-        let y = n.map((e) => _(e));
+        f?.({ searchContext: t, searchQueryString: r, searchQuery: A });
+        let S = n.map((e) => c(e));
         return (
-            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: y }),
-            S.fetch(
+            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: S }),
+            T.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
                     s.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: T,
+                        guildId: I,
                         data: r.map((e) => {
                             let [t, r] = e,
-                                s = _(t),
+                                s = c(t),
                                 o = r.cursor;
                             return {
                                 id: s,
@@ -72,13 +71,13 @@ let _ = {
                             };
                         }),
                     }),
-                        h?.({ searchContext: t, tabEntries: r });
+                        E?.({ searchContext: t, tabEntries: r });
                 },
                 () => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: y });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: S });
                 },
                 (e) => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: y, error: e });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: S, error: e });
                 },
             ),
             !0
@@ -91,26 +90,26 @@ let _ = {
                 pagination: r,
                 searchMode: i,
                 searchEverywhere: o,
-                onFetchStart: c,
+                onFetchStart: d,
             } = e,
-            d = (0, l._o)(n),
-            _ = (0, l.Zf)(d),
+            c = (0, l._o)(n),
+            _ = (0, l.Zf)(c),
             f = (0, l.nm)(i),
-            p = { ..._, ...f, offset: r.offset },
+            E = { ..._, ...f, offset: r.offset },
             h = (0, l.mt)(t);
-        null != h && (0, l.L5)(p, h), o && (p.search_everywhere = !0);
-        let m = (0, l.bS)(t),
-            E = u.A.create({ id: m, searchType: t.type, searchQuery: p });
-        c?.({ searchContext: t, searchQueryString: n, searchQuery: p }),
-            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [m] }),
-            E.fetch(
+        null != h && (0, l.L5)(E, h), o && (E.search_everywhere = !0);
+        let p = (0, l.bS)(t),
+            m = u.A.create({ id: p, searchType: t.type, searchQuery: E });
+        d?.({ searchContext: t, searchQueryString: n, searchQuery: E }),
+            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [p] }),
+            m.fetch(
                 (e) => {
                     s.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
                         guildId: h,
                         data: [
                             {
-                                id: m,
+                                id: p,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
@@ -125,10 +124,10 @@ let _ = {
                     });
                 },
                 () => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [m] });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [p] });
                 },
                 (e) => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [m], error: e });
+                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [p], error: e });
                 },
             );
     },

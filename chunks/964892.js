@@ -1,167 +1,163 @@
-"use strict";
-n.d(t, { e: () => E, x: () => N });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(382222),
-    l = n(158954),
-    u = n(311907),
-    c = n(453903),
-    d = n(765671),
-    _ = n(186111),
-    f = n(795127),
-    p = n(283024),
-    h = n(818348),
-    m = n(442078);
-let E = i.createContext(null),
-    g = 20,
-    A = 22,
-    I = 240,
-    T = 10,
-    S = 4,
-    y = h.FX;
-function v() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-    if ("center" === e || "custom" === e) return 0;
-    let i = "left" === t || "right" === t,
-        s = i ? r : (n ?? I),
-        a = i ? A : g;
-    if (0 === s) return 0;
-    let o = s / 2 - a;
-    switch (e) {
-        case "start":
-            return o;
-        case "end":
-            return -o;
-        default:
-            return 0;
-    }
-}
-function N(e) {
+a.d(t, { e: () => v, x: () => E });
+var n = a(627968),
+    r = a(64700),
+    l = a(503698),
+    i = a.n(l),
+    s = a(517738),
+    o = a(113325),
+    c = a(315629),
+    d = a(311907),
+    u = a(453903),
+    h = a(765671),
+    m = a(186111),
+    p = a(795127),
+    g = a(283024),
+    _ = a(818348),
+    f = a(824078);
+let v = r.createContext(null),
+    x = _.FX;
+function E(e) {
     let {
             children: t,
-            targetElementRef: n,
-            shouldShow: s = !0,
-            onRequestClose: h,
-            position: N = "top",
-            align: C,
-            alignmentStrategy: R = "trigger-center",
-            caretConfig: O,
-            hasVideo: b = !1,
-            gradientColor: D,
-            gradientOffsetBottom: L = 0.4,
-            onPositionChange: w,
-            onNudgeChange: M,
-            scrollBehavior: P = "sticky",
-            modal: x = !1,
-            returnRef: k,
-            experimental_ignoreModalClicks: U = !0,
-            closeOnClickOutside: G = !1,
+            targetElementRef: a,
+            shouldShow: l = !0,
+            onRequestClose: _,
+            position: E = "top",
+            align: w,
+            alignmentStrategy: A = "trigger-center",
+            caretConfig: b,
+            hasVideo: I = !1,
+            gradientColor: C,
+            gradientOffsetBottom: y = 0.4,
+            onPositionChange: S,
+            onNudgeChange: j,
+            scrollBehavior: M = "sticky",
+            modal: k = !1,
+            returnRef: N,
+            experimental_ignoreModalClicks: T = !0,
+            closeOnClickOutside: O = !1,
         } = e,
-        [F, V] = i.useState(s),
-        [B, H] = i.useState(N),
-        j = i.useRef(N),
-        Y = i.useRef(0),
-        { ref: W, width: K, height: $ } = (0, d.Ay)(),
-        z = (0, u.bG)([_.A], () => _.A.getLayers()),
-        q = z[z.length - 1] ?? "base",
-        Z = i.useRef(w);
-    i.useEffect(() => {
-        Z.current = w;
-    }, [w]);
-    let X = i.useCallback((e) => {
-            null != e && e !== j.current && ((j.current = e), H(e), Z.current?.(e));
+        [R, D] = r.useState(l),
+        [L, P] = r.useState(E),
+        V = r.useRef(E),
+        B = r.useRef(0),
+        { ref: U, width: Z, height: H } = (0, h.Ay)(),
+        W = (0, d.bG)([m.A], () => m.A.getLayers()),
+        G = W[W.length - 1] ?? "base",
+        F = r.useRef(S);
+    r.useEffect(() => {
+        F.current = S;
+    }, [S]);
+    let z = r.useCallback((e) => {
+            null != e && e !== V.current && ((V.current = e), P(e), F.current?.(e));
         }, []),
-        Q = i.useMemo(
-            () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === q,
-            [n, q],
+        J = r.useMemo(
+            () => null == a.current || (a.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === G,
+            [a, G],
         );
-    i.useEffect(() => {
-        Q && s ? V(!0) : Q || V(!1);
-    }, [Q, s]),
-        i.useEffect(() => {
-            X(N);
-        }, [N, X]);
-    let J = () => {
-            V(!1);
-        },
-        ee = (0, p.L)({ shouldShow: s, caretPosition: (0, f.g)(B), onExitComplete: J }),
-        et = i.useMemo(() => {
-            if ("edge" === R && null != C) {
-                let e = "top" === B || "bottom" === B,
-                    t = "left" === B || "right" === B;
+    r.useEffect(() => {
+        J && l ? D(!0) : J || D(!1);
+    }, [J, l]),
+        r.useEffect(() => {
+            z(E);
+        }, [E, z]);
+    let $ = (0, g.L)({
+            shouldShow: l,
+            caretPosition: (0, p.g)(L),
+            onExitComplete: () => {
+                D(!1);
+            },
+        }),
+        K = r.useMemo(() => {
+            if ("edge" === A && null != w) {
+                let e = "top" === L || "bottom" === L,
+                    t = "left" === L || "right" === L;
                 if (e) {
-                    if ("left" === C || "center" === C || "right" === C) return C;
-                } else if (t && ("top" === C || "center" === C || "bottom" === C)) return C;
+                    if ("left" === w || "center" === w || "right" === w) return w;
+                } else if (t && ("top" === w || "center" === w || "bottom" === w)) return w;
             }
             return "center";
-        }, [R, C, B]),
-        en = i.useMemo(() => {
-            if ("edge" !== R) return v(O?.align ?? "center", B, K, $);
-        }, [R, O, B, K, $]),
-        er = i.useMemo(() => ({ position: B, caretConfig: O ?? { align: "center" } }), [B, O]),
-        ei = (e) => {
-            let { setPopoutRef: n, position: i, nudge: s, ...u } = e;
-            return (
-                X(i),
-                s !== Y.current && ((Y.current = s), M?.(s)),
-                ee((e, i) => {
-                    if (!i) return null;
-                    let c = (0, r.jsx)(l.lGe, {
-                        ...u,
-                        setDialogRef: n,
-                        modal: x,
-                        className: a()(null != D ? m.popoverContentWithGradient : m.popover, {
-                            [m["popover--video"]]: b,
-                        }),
-                        returnRef: k,
-                        children: (0, r.jsx)(E.Provider, { value: er, children: t }),
-                    });
-                    return (0, r.jsx)(o.animated.div, {
-                        ref: W,
-                        "data-mana-component": "popover",
-                        style: {
-                            ...e,
-                            "--custom-caret-edge-offset-horizontal": `${g}px`,
-                            "--custom-caret-edge-offset-vertical": `${A}px`,
-                            "--custom-caret-edge-offset-horizontal-nudge": `${s}px`,
-                            "--custom-popover-width": `${I}px`,
-                        },
-                        children:
-                            null != D
-                                ? (0, r.jsx)(l.hLv, {
-                                      offsetBottom: L,
-                                      color: D,
-                                      className: m.popoverGradientWrapper,
-                                      children: c,
-                                  })
-                                : c,
-                    });
-                })
-            );
-        };
-    return (0, r.jsx)(c.$, {
-        targetElementRef: n,
-        shouldShow: F,
-        onRequestClose: h,
-        position: B,
-        align: et,
-        spacing: T + S,
-        offset: en,
+        }, [A, w, L]),
+        Q = r.useMemo(() => {
+            if ("edge" !== A)
+                return (function () {
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
+                        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
+                        a = arguments.length > 2 ? arguments[2] : void 0,
+                        n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+                    if ("center" === e || "custom" === e) return 0;
+                    let r = "left" === t || "right" === t,
+                        l = r ? n : (a ?? 240);
+                    if (0 === l) return 0;
+                    let i = l / 2 - (r ? 22 : 20);
+                    switch (e) {
+                        case "start":
+                            return i;
+                        case "end":
+                            return -i;
+                        default:
+                            return 0;
+                    }
+                })(b?.align ?? "center", L, Z, H);
+        }, [A, b, L, Z, H]),
+        q = r.useMemo(() => ({ position: L, caretConfig: b ?? { align: "center" } }), [L, b]);
+    return (0, n.jsx)(u.$, {
+        targetElementRef: a,
+        shouldShow: R,
+        onRequestClose: _,
+        position: L,
+        align: K,
+        spacing: 14,
+        offset: Q,
         layerContext: void 0,
-        positionKey: null != en ? `${B}-${en}` : void 0,
+        positionKey: null != Q ? `${L}-${Q}` : void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === B || "bottom" === B,
-        closeOnClickOutside: G,
-        ignoreModalClicks: U,
-        scrollBehavior: P,
-        renderPopout: ei,
-        children: y,
+        nudgeAlignIntoViewport: "top" === L || "bottom" === L,
+        closeOnClickOutside: O,
+        ignoreModalClicks: T,
+        scrollBehavior: M,
+        renderPopout: (e) => {
+            let { setPopoutRef: a, position: r, nudge: l, ...d } = e;
+            return (
+                z(r),
+                l !== B.current && ((B.current = l), j?.(l)),
+                $((e, r) => {
+                    if (!r) return null;
+                    let u = (0, n.jsx)(o.l, {
+                        ...d,
+                        setDialogRef: a,
+                        modal: k,
+                        className: i()(null != C ? f.popoverContentWithGradient : f.popover, {
+                            [f["popover--video"]]: I,
+                        }),
+                        returnRef: N,
+                        children: (0, n.jsx)(v.Provider, { value: q, children: t }),
+                    });
+                    return (0, n.jsx)(s.animated.div, {
+                        ref: U,
+                        "data-mana-component": "popover",
+                        style: {
+                            ...e,
+                            "--custom-caret-edge-offset-horizontal": "20px",
+                            "--custom-caret-edge-offset-vertical": "22px",
+                            "--custom-caret-edge-offset-horizontal-nudge": `${l}px`,
+                            "--custom-popover-width": "240px",
+                        },
+                        children:
+                            null != C
+                                ? (0, n.jsx)(c.h, {
+                                      offsetBottom: y,
+                                      color: C,
+                                      className: f.popoverGradientWrapper,
+                                      children: u,
+                                  })
+                                : u,
+                    });
+                })
+            );
+        },
+        children: x,
     });
 }

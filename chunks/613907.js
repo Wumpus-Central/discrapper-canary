@@ -1,93 +1,95 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => v });
 var i = n(627968),
     l = n(64700),
-    s = n(735438),
-    a = n.n(s),
+    a = n(735438),
+    s = n.n(a),
     r = n(311907),
-    o = n(397927),
-    c = n(843472),
-    d = n(631576),
-    u = n(679382),
-    h = n(148355),
-    m = n(961350),
-    A = n(320501),
-    g = n(287809),
-    p = n(954571),
-    f = n(427262),
-    _ = n(143413),
-    E = n(652215),
-    x = n(985018),
-    C = n(455683);
-let S = "749054660769218631";
-function I(e) {
+    o = n(834730),
+    c = n(939249),
+    d = n(821609),
+    u = n(843472),
+    h = n(631576),
+    m = n(679382),
+    A = n(148355),
+    g = n(961350),
+    p = n(320501),
+    _ = n(287809),
+    f = n(954571),
+    E = n(427262),
+    C = n(143413),
+    x = n(652215),
+    S = n(985018),
+    I = n(310876);
+let N = "749054660769218631";
+function v(e) {
     let { channel: t } = e,
-        [n, s] = l.useState("");
+        [n, a] = l.useState("");
     l.useEffect(() => {
-        (0, d.zk)("847199849233514549", !0);
+        (0, h.zk)("847199849233514549", !0);
     }, []);
-    let I = (0, r.bG)(
-            [A.A, m.default],
+    let v = (0, r.bG)(
+            [p.A, g.default],
             () =>
-                !!a()(A.A.getMessages(t.id).toArray())
+                !!s()(p.A.getMessages(t.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== m.default.getId() && e.state === E.cmJ.SENT && !(0, _.A)(e)),
+                    .find((e) => e.author.id !== g.default.getId() && e.state === x.cmJ.SENT && !(0, C.A)(e)),
         ),
-        T = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
-        N = f.Ay.useName(T) ?? x.intl.string(x.t.y1Wu2f),
-        y = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
-        b = l.useCallback(async () => {
+        T = (0, r.bG)([_.default], () => _.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
+        y = E.Ay.useName(T) ?? S.intl.string(S.t.y1Wu2f),
+        b = (0, r.bG)([m.A], () => m.A.getStickerById(N)),
+        j = l.useCallback(async () => {
             if (null == n || "" === n)
                 try {
-                    await c.A.sendGreetMessage(t.id, S),
-                        p.default.track(E.HAw.DM_EMPTY_ACTION, {
+                    await u.A.sendGreetMessage(t.id, N),
+                        f.default.track(x.HAw.DM_EMPTY_ACTION, {
                             channel_id: t.id,
                             channel_type: t.type,
                             source: "Wave",
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || s(x.intl.string(x.t.Whhv4w));
+                    e.ok || 429 !== e.status || a(S.intl.string(S.t.Whhv4w));
                 }
         }, [t.id, t.type, n]),
-        v = x.intl.formatToPlainString(x.t.m0zYbV, { username: N }),
-        j =
+        R = S.intl.formatToPlainString(S.t.m0zYbV, { username: y }),
+        M =
             null != n && "" !== n
-                ? (0, i.jsx)(o.Text, {
-                      className: C.z3,
+                ? (0, i.jsx)(o.E, {
+                      className: I.z3,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: n,
                   })
                 : null;
-    return I
+    return v
         ? (0, i.jsxs)("div", {
-              className: C.ft,
+              className: I.ft,
               children: [
-                  (0, i.jsxs)(o.DUT, {
-                      className: null != n && "" !== n ? C.AO : C.Iq,
-                      "aria-label": x.intl.string(x.t.pJObYI),
-                      onClick: b,
+                  (0, i.jsxs)(c.D, {
+                      className: null != n && "" !== n ? I.AO : I.Iq,
+                      "aria-label": S.intl.string(S.t.pJObYI),
+                      onClick: j,
                       children: [
-                          (0, i.jsx)(h.A, { sticker: y, size: 24 }),
-                          (0, i.jsx)(o.Text, { className: C.Qq, variant: "text-md/medium", children: v }),
+                          (0, i.jsx)(A.A, { sticker: b, size: 24 }),
+                          (0, i.jsx)(o.E, { className: I.Qq, variant: "text-md/medium", children: R }),
                       ],
                   }),
-                  j,
+                  M,
               ],
           })
         : (0, i.jsxs)("div", {
-              className: C.nj,
+              className: I.nj,
               children: [
-                  (0, i.jsx)(h.A, { sticker: y, size: 160, className: C.Xr }),
-                  (0, i.jsx)(o.Button, {
+                  (0, i.jsx)(A.A, { sticker: b, size: 160, className: I.Xr }),
+                  (0, i.jsx)(d.$, {
                       fullWidth: !0,
                       variant: "primary",
                       size: "md",
-                      onClick: b,
+                      onClick: j,
                       disabled: !!n,
-                      text: v,
+                      text: R,
                   }),
-                  j,
+                  M,
               ],
           });
 }

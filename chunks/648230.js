@@ -1,6 +1,6 @@
-s.d(t, { default: () => Q });
-var r = s(627968),
-    i = s(64700),
+s.d(t, { default: () => X });
+var i = s(627968),
+    r = s(64700),
     n = s(503698),
     l = s.n(n),
     a = s(299855),
@@ -8,105 +8,110 @@ var r = s(627968),
     c = s(110259),
     d = s(141931),
     u = s(311907),
-    f = s(732955),
-    h = s(397927),
-    x = s(157559),
-    p = s(444927),
-    m = s(77729),
-    _ = s(90804),
-    g = s(793574),
-    j = s(688810),
-    v = s(15285),
-    A = s(253932),
-    S = s(430452),
-    y = s(383501),
-    C = s(287809),
-    b = s(157257),
-    w = s(723702),
-    I = s(927578),
-    E = s(997630),
-    N = s(571044),
-    O = s(905552),
-    T = s(72432),
-    R = s(264540),
-    M = s(255481),
-    U = s(688465),
-    G = s(864057),
-    L = s(354062),
-    D = s(715587),
-    P = s(280481),
-    F = s(517753),
-    k = s(598032),
-    H = s(997248),
-    B = s(652681),
-    W = s(502075),
-    Z = s(191850),
-    V = s(985018),
-    z = s(560953);
-function Q(e) {
-    let { onClose: t, transitionState: s, sourcePID: n, analyticsLocations: a = [], selectSource: Q = !0 } = e,
-        q = (0, u.bG)([v.Ay], () => (null != n ? (v.Ay.getGameForPID(n) ?? void 0) : void 0)),
-        K = i.useRef(performance.now()),
-        Y = (0, u.bG)(
-            [S.Ay],
+    f = s(573613),
+    h = s(93688),
+    x = s(428689),
+    p = s(31300),
+    _ = s(224640),
+    m = s(629584),
+    g = s(821609),
+    j = s(157559),
+    v = s(444927),
+    A = s(77729),
+    C = s(90804),
+    S = s(793574),
+    y = s(688810),
+    b = s(15285),
+    w = s(253932),
+    E = s(430452),
+    I = s(383501),
+    N = s(287809),
+    O = s(157257),
+    R = s(723702),
+    T = s(927578),
+    M = s(997630),
+    D = s(571044),
+    G = s(905552),
+    U = s(72432),
+    L = s(264540),
+    P = s(255481),
+    k = s(688465),
+    F = s(864057),
+    H = s(354062),
+    B = s(715587),
+    W = s(280481),
+    Z = s(517753),
+    V = s(598032),
+    z = s(997248),
+    Q = s(652681),
+    q = s(502075),
+    K = s(710787),
+    $ = s(985018),
+    Y = s(456713);
+function X(e) {
+    let { onClose: t, transitionState: s, sourcePID: n, analyticsLocations: a = [], selectSource: X = !0 } = e,
+        J = (0, u.bG)([b.Ay], () => (null != n ? (b.Ay.getGameForPID(n) ?? void 0) : void 0)),
+        ee = r.useRef(performance.now()),
+        et = (0, u.bG)(
+            [E.Ay],
             () =>
-                (S.Ay.getUseSystemScreensharePicker() || S.Ay.getUseGamescopeCapture()) &&
-                ((0, w.isLinux)() || ((0, w.isMac)() && o().satisfies(m.A?.os.release, W.WZ))),
+                (E.Ay.getUseSystemScreensharePicker() || E.Ay.getUseGamescopeCapture()) &&
+                ((0, R.isLinux)() || ((0, R.isMac)() && o().satisfies(A.A?.os.release, q.WZ))),
         ),
-        { analyticsLocations: $ } = (0, j.Ay)(a, g.A.GO_LIVE_MODAL_V2),
-        X = (0, u.bG)([C.default], () => C.default.getCurrentUser()),
-        J = (0, H.A)(),
-        { state: ee, dispatch: et } = (0, U.yB)(q, X, J),
-        es = (0, p.A)((0, w.isWindows)() && null != q && Q ? "confirm" : "source_select");
-    (0, B.A)(Y, et, "confirm" === es);
-    let er = !I.Ay.canStreamQuality(I.Ay.StreamQuality.HIGH, X),
-        ei = !(0, w.isLinux)(),
-        en = "confirm" === es,
-        el = !Q && null != q && !en,
-        ea = en || ee.sourceType === d.fS.CAMERA,
-        eo = Y && ee.sourceType !== d.fS.CAMERA,
-        ec = i.useMemo(() => {
+        { analyticsLocations: es } = (0, y.Ay)(a, S.A.GO_LIVE_MODAL_V2),
+        ei = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
+        er = (0, z.A)(),
+        { state: en, dispatch: el } = (0, k.yB)(J, ei, er),
+        ea = (0, v.A)((0, R.isWindows)() && null != J && X ? "confirm" : "source_select");
+    (0, Q.A)(et, el, "confirm" === ea);
+    let eo = !T.Ay.canStreamQuality(T.Ay.StreamQuality.HIGH, ei),
+        ec = !(0, R.isLinux)(),
+        ed = "confirm" === ea,
+        eu = !X && null != J && !ed,
+        ef = ed || en.sourceType === d.fS.CAMERA,
+        eh = et && en.sourceType !== d.fS.CAMERA,
+        ex = r.useMemo(() => {
             let e = [
-                { name: V.intl.string(V.t.tHoi7u), value: d.fS.WINDOW, icon: h.WxK },
-                { name: V.intl.string(V.t.MhJ43A), value: d.fS.CAMERA, icon: h.npA },
+                { name: $.intl.string($.t.tHoi7u), value: d.fS.WINDOW, icon: h.W },
+                { name: $.intl.string($.t.MhJ43A), value: d.fS.CAMERA, icon: x.n },
             ];
-            return Y || e.splice(1, 0, { name: V.intl.string(V.t.slM8rG), value: d.fS.SCREEN, icon: h.kN9 }), e;
-        }, [Y]),
-        { sourceType: ed } = ee,
-        eu = i.useCallback(
+            return et || e.splice(1, 0, { name: $.intl.string($.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e;
+        }, [et]),
+        { sourceType: ep } = en,
+        e_ = r.useCallback(
             async (e) => {
-                A.wv.updateSetting(ee.notifyFriends), A.uh.updateSetting(ee.hidePreview);
-                let [s, r] = await (0, T.A)(e.hasOwnProperty("pid") ? e.pid : e, {
-                    preset: ee.preset,
-                    fps: ee.fps,
-                    resolution: ee.resolution,
-                    soundshareEnabled: !ee.muteStreamAudio,
-                    previewDisabled: ee.hidePreview,
-                    goLiveModalDurationMs: performance.now() - K.current,
-                    audioSourceId: ee.audioSourceId,
-                    analyticsLocations: $,
+                w.wv.updateSetting(en.notifyFriends), w.uh.updateSetting(en.hidePreview);
+                let [s, i] = await (0, U.A)(e.hasOwnProperty("pid") ? e.pid : e, {
+                    preset: en.preset,
+                    fps: en.fps,
+                    resolution: en.resolution,
+                    soundshareEnabled: !en.muteStreamAudio,
+                    previewDisabled: en.hidePreview,
+                    goLiveModalDurationMs: performance.now() - ee.current,
+                    audioSourceId: en.audioSourceId,
+                    analyticsLocations: es,
                 });
                 if (s) return t();
-                "no permission" === r &&
-                    x.A.show({ title: V.intl.string(V.t["X+mXeq"]), body: V.intl.string(V.t.MIJCzr) }),
+                "no permission" === i &&
+                    j.A.show({ title: $.intl.string($.t["X+mXeq"]), body: $.intl.string($.t.MIJCzr) }),
                     t();
             },
-            [t, ee, $],
+            [t, en, es],
         );
-    async function ef(e) {
-        (await (0, _.A)({ channelId: e })) && null != q && eu(q);
+    async function em(e) {
+        (await (0, C.A)({ channelId: e })) && null != J && e_(J);
     }
-    let eh = i.useCallback(() => {
-        eu({
-            id: ("gamescope" === ee.nativeSourceType ? "screen:" : "prepicked:") + ee.nativeSourceType,
-            name: N.Ay.getLastPickedContentTitle() ?? V.intl.string(V.t.KKcy95),
+    let eg = r.useCallback(() => {
+        e_({
+            id: ("gamescope" === en.nativeSourceType ? "screen:" : "prepicked:") + en.nativeSourceType,
+            name: D.Ay.getLastPickedContentTitle() ?? $.intl.string($.t.KKcy95),
             url: "",
         });
-    }, [eu, ee.nativeSourceType]);
-    return (0, r.jsx)(U.KL, {
-        state: ee,
-        dispatch: et,
-        children: (0, r.jsx)(h.dWK, {
+    }, [e_, en.nativeSourceType]);
+    return (0, i.jsx)(k.KL, {
+        state: en,
+        dispatch: el,
+        children: (0, i.jsx)(_.d, {
             transitionState: s,
             onClose: t,
             size: "xl",
@@ -114,89 +119,89 @@ function Q(e) {
                 impression: {
                     impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                     impressionProperties: {
-                        location_stack: $,
-                        application_id: (0, w.isWindows)() ? (0, O.A)(v.Ay, b.A)?.id : void 0,
-                        parent_media_session_id: y.A.getMediaSessionId(),
+                        location_stack: es,
+                        application_id: (0, R.isWindows)() ? (0, G.A)(b.Ay, O.A)?.id : void 0,
+                        parent_media_session_id: I.A.getMediaSessionId(),
                     },
                 },
             },
-            children: (0, r.jsxs)("div", {
-                className: l()(z.zr, { [z._g]: Y && null == q, [z.Tb]: el, [z.Fe]: en }),
+            children: (0, i.jsxs)("div", {
+                className: l()(Y.zr, { [Y._g]: et && null == J, [Y.Tb]: eu, [Y.Fe]: ed }),
                 children: [
-                    el
-                        ? (0, r.jsx)(R.A, { className: l()(z.or, z.Ym), onSelectChannel: ef })
-                        : en
-                          ? (0, r.jsx)(M.A, {})
-                          : (0, r.jsxs)(r.Fragment, {
+                    eu
+                        ? (0, i.jsx)(L.A, { className: l()(Y.or, Y.Ym), onSelectChannel: em })
+                        : ed
+                          ? (0, i.jsx)(P.A, {})
+                          : (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: z.wx,
-                                        children: (0, r.jsx)(h.IzF, {
-                                            className: z.q0,
-                                            value: ed,
+                                    (0, i.jsx)("div", {
+                                        className: Y.wx,
+                                        children: (0, i.jsx)(m.I, {
+                                            className: Y.q0,
+                                            value: ep,
                                             look: "pill",
-                                            optionClassName: z.LD,
+                                            optionClassName: Y.LD,
                                             onChange: (e) => {
                                                 let { value: t } = e;
-                                                return et({ type: "set_source_type", sourceType: t });
+                                                return el({ type: "set_source_type", sourceType: t });
                                             },
-                                            options: ec,
+                                            options: ex,
                                         }),
                                     }),
-                                    (0, r.jsx)(f.ArX, {
-                                        className: z.Qs,
+                                    (0, i.jsx)(f.Ar, {
+                                        className: Y.Qs,
                                         children:
-                                            Y && ed !== d.fS.CAMERA
-                                                ? (0, r.jsx)(G.A, { onSourceSelect: eh })
-                                                : (0, r.jsx)(L.A, {
+                                            et && ep !== d.fS.CAMERA
+                                                ? (0, i.jsx)(F.A, { onSourceSelect: eg })
+                                                : (0, i.jsx)(H.A, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
-                                                              ? et({ type: "set_selected_source", source: e })
-                                                              : eu(e);
+                                                              ? el({ type: "set_selected_source", source: e })
+                                                              : e_(e);
                                                       },
                                                   }),
                                     }),
                                 ],
                             }),
-                    (0, r.jsxs)("div", {
-                        className: z.qr,
+                    (0, i.jsxs)("div", {
+                        className: Y.qr,
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: z.z8,
+                            (0, i.jsxs)("div", {
+                                className: Y.z8,
                                 children: [
-                                    (0, r.jsx)(k.A, {}),
-                                    (0, r.jsxs)("div", {
-                                        className: z.gt,
+                                    (0, i.jsx)(V.A, {}),
+                                    (0, i.jsxs)("div", {
+                                        className: Y.gt,
                                         children: [
-                                            er && (0, r.jsx)(P.A, { onClose: t }),
-                                            (eo || ea) &&
-                                                (0, r.jsx)(h.Button, {
+                                            eo && (0, i.jsx)(W.A, { onClose: t }),
+                                            (eh || ef) &&
+                                                (0, i.jsx)(g.$, {
                                                     variant: "primary",
                                                     size: "md",
-                                                    text: V.intl.string(
-                                                        eo && "gamescope" !== ee.nativeSourceType
-                                                            ? V.t.FiBjwU
-                                                            : Z.default["5AyH/p"],
+                                                    text: $.intl.string(
+                                                        eh && "gamescope" !== en.nativeSourceType
+                                                            ? $.t.FiBjwU
+                                                            : K.default["5AyH/p"],
                                                     ),
                                                     onClick: () => {
-                                                        eo
-                                                            ? "gamescope" === ee.nativeSourceType
-                                                                ? eh()
-                                                                : ((0, E.E)(), (0, E.a)(ee.nativeSourceType))
-                                                            : null != ee.selectedChannel
-                                                              ? ef(ee.selectedChannel)
-                                                              : null != ee.selectedSource && eu(ee.selectedSource);
+                                                        eh
+                                                            ? "gamescope" === en.nativeSourceType
+                                                                ? eg()
+                                                                : ((0, M.E)(), (0, M.a)(en.nativeSourceType))
+                                                            : null != en.selectedChannel
+                                                              ? em(en.selectedChannel)
+                                                              : null != en.selectedSource && e_(en.selectedSource);
                                                     },
                                                     disabled:
-                                                        (eo && !ei && "" === ee.nativeSourceType) ||
-                                                        (ea && null == ee.selectedSource),
+                                                        (eh && !ec && "" === en.nativeSourceType) ||
+                                                        (ef && null == en.selectedSource),
                                                 }),
-                                            (0, r.jsx)(D.A, { align: "right" }),
+                                            (0, i.jsx)(B.A, { align: "right" }),
                                         ],
                                     }),
                                 ],
                             }),
-                            er && (0, r.jsx)("div", { className: z.rO, children: (0, r.jsx)(F.A, { onClose: t }) }),
+                            eo && (0, i.jsx)("div", { className: Y.rO, children: (0, i.jsx)(Z.A, { onClose: t }) }),
                         ],
                     }),
                 ],

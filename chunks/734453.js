@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { $: () => a });
-var r = n(627968);
-n(64700);
-var i = n(996682),
-    s = n(27989);
-let a = (e) => {
-    let { size: t = "md", width: n, height: a, color: o = "#000", colorClass: l = "", ...u } = e,
-        c = (0, s.J)(t),
-        d = c?.width ?? n,
-        _ = c?.height ?? a;
-    return (0, r.jsx)("svg", {
-        ...(0, i.A)(u),
+a.d(l, { $: () => n });
+var t = a(627968);
+a(64700);
+var s = a(996682),
+    i = a(27989);
+let n = (e) => {
+    let { size: l = "md", width: a, height: n, color: c = "#000", colorClass: h = "", ...r } = e,
+        o = (0, i.J)(l),
+        d = o?.width ?? a,
+        v = o?.height ?? n;
+    return (0, t.jsx)("svg", {
+        ...(0, s.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
         width: d,
-        height: _,
+        height: v,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof c ? c : c.css,
             d: "M6.23 2 2 17.77 17.77 22 22 6.23 6.23 2Zm7.38 12.8-4.4-1.19 1.18-4.4 4.4 1.18-1.18 4.4Z",
-            className: l,
+            className: h,
         }),
     });
 };

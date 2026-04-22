@@ -1,32 +1,32 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => m });
 var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(308528),
-    s = n(58149),
+    s = n(64700),
+    l = n(477782),
+    a = n(308528),
+    r = n(58149),
     o = n(231608),
-    d = n(954571),
-    c = n(652215),
+    c = n(954571),
+    d = n(652215),
     u = n(985018);
-function A(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { priorityMembers: n, partiedMembers: A } = e,
-        h = r.useContext(d.AnalyticsContext),
-        _ = n.map((e) => {
+        { priorityMembers: n, partiedMembers: m } = e,
+        A = s.useContext(c.AnalyticsContext),
+        h = n.map((e) => {
             let { user: t } = e;
             return t.id;
         }),
-        m = 1 === A.length && 1 === n.length,
-        p = n.length - A.length > 0;
-    return (m || t) && !p && 0 !== _.length
-        ? (0, i.jsx)(a.Drp, {
+        x = 1 === m.length && 1 === n.length,
+        p = n.length - m.length > 0;
+    return (x || t) && !p && 0 !== h.length
+        ? (0, i.jsx)(l.Dr, {
               id: "message",
               action: function () {
-                  l.A.openPrivateChannel({ recipientIds: _ }).then((t) =>
-                      s.Ay.trackWithMetadata(c.HAw.ACTIVITY_FEED_DM_VISITED, {
-                          source: { ...h.location, object: c.ZSU.LIST_ITEM },
+                  a.A.openPrivateChannel({ recipientIds: h }).then((t) =>
+                      r.Ay.trackWithMetadata(d.HAw.ACTIVITY_FEED_DM_VISITED, {
+                          source: { ...A.location, object: d.ZSU.LIST_ITEM },
                           channel_id: t,
-                          recipient_id: "string" == typeof _ ? _ : _[0],
+                          recipient_id: "string" == typeof h ? h : h[0],
                           af_recently_played: !1,
                           ...(0, o.o)(e),
                       }),

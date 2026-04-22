@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => h }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var r = n(810531),
     i = n(942269),
-    a = n(927813),
-    s = n(842086);
+    s = n(927813),
+    a = n(842086);
 let o = !1,
     l = null,
-    u = a.A.Millis.HOUR;
-function c(e) {
+    u = s.A.Millis.HOUR;
+function d(e) {
     return {
         id: e.id,
         tags: e.tags,
@@ -19,20 +19,7 @@ function c(e) {
         [r.L]: "PackSticker",
     };
 }
-function d(e) {
-    let t = {};
-    for (let n of e) t[n.id] = c(n);
-    return t;
-}
-function _(e, t) {
-    let n = [];
-    return (
-        n.push({ type: s.cG.STICKER_NAME, value: e.name.trim().toLocaleLowerCase() }),
-        null != t && n.push({ type: s.cG.PACK_NAME, value: t.name }),
-        n
-    );
-}
-class f extends i.yW {
+class c extends i.yW {
     static displayName = "StickersPackStore";
     packsDatabase = this.addKVDatabase("stickerPacks");
     packStickersDatabase = this.addKKVDatabase("packStickers");
@@ -54,13 +41,21 @@ class f extends i.yW {
     });
     getStickerMetadataMap = this.packStickersDatabase.memoized((e) => {
         let t = new Map();
-        for (let n in e) {
-            let r = n;
-            for (let [n, i] of Object.entries(e[r].root)) {
-                let e = this.packsDatabase.get(r);
-                t.set(n, _(i, e));
+        for (let n in e)
+            for (let [r, i] of Object.entries(e[n].root)) {
+                let e = this.packsDatabase.get(n);
+                t.set(
+                    r,
+                    (function (e, t) {
+                        let n = [];
+                        return (
+                            n.push({ type: a.cG.STICKER_NAME, value: e.name.trim().toLocaleLowerCase() }),
+                            null != t && n.push({ type: a.cG.PACK_NAME, value: t.name }),
+                            n
+                        );
+                    })(i, e),
+                );
             }
-        }
         return t;
     });
     get isFetchingStickerPacks() {
@@ -80,18 +75,27 @@ class f extends i.yW {
     }
     getPremiumPacks = this.premiumPacksDatabase.memoized((e) => Object.values(e));
 }
-function p(e, t, n, r, i) {
-    n.set(e.id, e), i && r.set(e.id, e), t.setPartition(e.id, d(e.stickers));
+function _(e, t, n, r, i) {
+    n.set(e.id, e),
+        i && r.set(e.id, e),
+        t.setPartition(
+            e.id,
+            (function (e) {
+                let t = {};
+                for (let n of e) t[n.id] = d(n);
+                return t;
+            })(e.stickers),
+        );
 }
-let h = new f({
+let f = new c({
     LOGOUT: (e, t) => {
         let { clearAllDBs: n } = t;
         n();
     },
     STICKER_PACK_FETCH_SUCCESS: (e, t) => {
         let { pack: n } = e,
-            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: a } = t;
-        p(n, r, i, a, !1);
+            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: s } = t;
+        _(n, r, i, s, !1);
     },
     STICKER_PACKS_FETCH_START: (e, t) => {
         let { markDirty: n } = t;
@@ -99,12 +103,12 @@ let h = new f({
     },
     STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
         let { packs: n } = e,
-            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: a, markDirty: s } = t;
-        for (let e of ((o = !1), s(), (l = performance.now()), n)) p(e, r, i, a, !0);
+            { packStickersDatabase: r, packsDatabase: i, premiumPacksDatabase: s, markDirty: a } = t;
+        for (let e of ((o = !1), a(), (l = performance.now()), n)) _(e, r, i, s, !0);
     },
     PACK_STICKER_FETCH_SUCCESS: (e, t) => {
         let { sticker: n } = e,
             { packStickersDatabase: r } = t;
-        r.setRecord(n.pack_id, n.id, c(n));
+        r.setRecord(n.pack_id, n.id, d(n));
     },
 });

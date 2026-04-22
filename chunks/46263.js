@@ -22,8 +22,8 @@ class r {
     }
     static getCalculatorOrCreate(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-            a = e[t.ssrc];
-        return null == a && ((a = new s(n, r, i)), (e[t.ssrc] = a)), a;
+            s = e[t.ssrc];
+        return null == s && ((s = new o(n, r, i)), (e[t.ssrc] = s)), s;
     }
     getInboundBytesRecevierCalculator(e) {
         return r.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
@@ -38,28 +38,26 @@ class r {
         return r.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5);
     }
 }
-var i = (function (e) {
-    return (
-        (e[(e.NONE = 0)] = "NONE"),
-        (e[(e.MILLISECONDS_FROM_SECONDS = 1)] = "MILLISECONDS_FROM_SECONDS"),
-        (e[(e.BYTES_TO_BITS = 2)] = "BYTES_TO_BITS"),
-        (e[(e.ROUND = 4)] = "ROUND"),
-        e
-    );
-})(i || {});
+var i,
+    s =
+        (((i = s || {})[(i.NONE = 0)] = "NONE"),
+        (i[(i.MILLISECONDS_FROM_SECONDS = 1)] = "MILLISECONDS_FROM_SECONDS"),
+        (i[(i.BYTES_TO_BITS = 2)] = "BYTES_TO_BITS"),
+        (i[(i.ROUND = 4)] = "ROUND"),
+        i);
 let a = {
     0: { multiplier: 1 },
     1: { postfix: "_in_ms", multiplier: 1e3 },
     2: { bitrate: !0, postfix: "", multiplier: 8 },
 };
-class s {
+class o {
     accumulativeMetricKey;
     samplesMetricKey;
     previous;
     multiplier = 1;
     round = !1;
     constructor(e, t, n = 0) {
-        for (const r in ((this.accumulativeMetricKey = e), (this.samplesMetricKey = t), i)) {
+        for (const r in ((this.accumulativeMetricKey = e), (this.samplesMetricKey = t), s)) {
             const e = Number(r);
             !isNaN(e) && (n & e) != 0 && r in a && (this.multiplier *= a[r]?.multiplier ?? 1);
         }
@@ -73,10 +71,10 @@ class s {
         let r = t[this.accumulativeMetricKey],
             i = e[this.accumulativeMetricKey];
         if ("number" != typeof r || "number" != typeof i) return;
-        let a = t[this.samplesMetricKey],
-            s = e[this.samplesMetricKey];
-        if ("number" != typeof a || "number" != typeof s) return;
-        let o = ((i - r) / (s - a)) * this.multiplier;
+        let s = t[this.samplesMetricKey],
+            a = e[this.samplesMetricKey];
+        if ("number" != typeof s || "number" != typeof a) return;
+        let o = ((i - r) / (a - s)) * this.multiplier;
         return this.round ? Math.round(o) : o;
     }
 }

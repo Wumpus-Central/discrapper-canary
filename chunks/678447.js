@@ -1,61 +1,63 @@
-n.d(t, { n: () => h });
+n.d(t, { n: () => x });
 var i = n(627968);
 n(64700);
 var s = n(311907),
-    l = n(397927),
-    r = n(557722),
-    a = n(419954),
-    o = n(933297),
-    d = n(287809),
-    c = n(780964),
-    u = n(980429),
-    m = n(982363),
-    g = n(53516),
-    _ = n(985018);
-function x() {
-    let e = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+    l = n(192308),
+    a = n(834730),
+    r = n(331322),
+    o = n(557722),
+    d = n(419954),
+    u = n(933297),
+    c = n(287809),
+    g = n(780964),
+    m = n(980429),
+    _ = n(982363),
+    A = n(53516),
+    h = n(985018);
+function p() {
+    let e = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         t = e?.phone ?? null;
     return null == e || null == t
-        ? (0, i.jsx)(l.Text, { variant: "text-md/medium", children: _.intl.string(_.t.I5kDqj) })
-        : (0, i.jsx)(l.BJc, {
+        ? (0, i.jsx)(a.E, { variant: "text-md/medium", children: h.intl.string(h.t.I5kDqj) })
+        : (0, i.jsx)(r.B, {
               direction: "horizontal",
               align: "center",
               justify: "end",
               gap: "md",
-              children: (0, i.jsx)(m.q, {
+              children: (0, i.jsx)(_.q, {
                   text: t,
-                  censor: u.D,
-                  revealLabel: _.intl.string(_.t.eY3xlT),
-                  hideLabel: _.intl.string(_.t["jllbv+"]),
+                  censor: m.D,
+                  revealLabel: h.intl.string(h.t.eY3xlT),
+                  hideLabel: h.intl.string(h.t["jllbv+"]),
                   redesign: !0,
               }),
           });
 }
-let h = (0, a.Tf)(c.X.ACCOUNT_INFO_PHONE_SETTING, {
-    usePredicate: () => (0, s.bG)([d.default], () => d.default.getCurrentUser()?.isClaimed()) ?? !1,
-    useTitle: () => _.intl.string(_.t.kerONq),
+let x = (0, d.Tf)(g.X.ACCOUNT_INFO_PHONE_SETTING, {
+    usePredicate: () => (0, s.bG)([c.default], () => c.default.getCurrentUser()?.isClaimed()) ?? !1,
+    useTitle: () => h.intl.string(h.t.kerONq),
     useAriaLabel: function () {
-        return null == (0, s.bG)([d.default], () => d.default.getCurrentUser()?.phone)
-            ? _.intl.string(_.t["SfUuE+"])
-            : _.intl.string(_.t.YDabSe);
+        return null == (0, s.bG)([c.default], () => c.default.getCurrentUser()?.phone)
+            ? h.intl.string(h.t["SfUuE+"])
+            : h.intl.string(h.t.YDabSe);
     },
     useVariant: () => "secondary",
-    useTrailingContent: () => ({ type: o._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: x }),
+    useTrailingContent: () => ({ type: u._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: p }),
     useLabel: function () {
-        return null == (0, s.bG)([d.default], () => d.default.getCurrentUser()?.phone)
-            ? _.intl.string(_.t.OYkgVk)
-            : _.intl.string(_.t.bt75uw);
+        return null == (0, s.bG)([c.default], () => c.default.getCurrentUser()?.phone)
+            ? h.intl.string(h.t.OYkgVk)
+            : h.intl.string(h.t.bt75uw);
     },
     onClick: function () {
-        null == d.default.getCurrentUser()?.phone
-            ? (0, l.mMO)(
+        null == c.default.getCurrentUser()?.phone
+            ? (0, l.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
-                      return (t) => (0, i.jsx)(e, { reason: r.d.USER_SETTINGS_UPDATE, ...t });
+                      return (t) => (0, i.jsx)(e, { reason: o.d.USER_SETTINGS_UPDATE, ...t });
                   },
-                  { modalKey: g.V },
+                  { modalKey: A.V },
               )
-            : (0, l.mMO)(async () => {
+            : (0, l.openModalLazy)(async () => {
                   let { default: e } = await n.e("89061").then(n.bind(n, 359012));
                   return (t) => (0, i.jsx)(e, { ...t });
               });

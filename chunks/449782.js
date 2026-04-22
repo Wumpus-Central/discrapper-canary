@@ -1,29 +1,30 @@
 var t = "[0-9](_*[0-9])*",
-    n = `\\.(${t})`,
-    r = "[0-9a-fA-F](_*[0-9a-fA-F])*",
-    i = {
+    a = `\\.(${t})`,
+    n = "[0-9a-fA-F](_*[0-9a-fA-F])*",
+    r = {
         className: "number",
         variants: [
-            { begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
-            { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
-            { begin: `(${n})[fFdD]?\\b` },
+            { begin: `(\\b(${t})((${a})|\\.)?|(${a}))[eE][+-]?(${t})[fFdD]?\\b` },
+            { begin: `\\b(${t})((${a})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
+            { begin: `(${a})[fFdD]?\\b` },
             { begin: `\\b(${t})[fFdD]\\b` },
-            { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
+            { begin: `\\b0[xX]((${n})\\.?|(${n})?\\.(${n}))[pP][+-]?(${t})[fFdD]?\\b` },
             { begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b" },
-            { begin: `\\b0[xX](${r})[lL]?\\b` },
+            { begin: `\\b0[xX](${n})[lL]?\\b` },
             { begin: "\\b0(_*[0-7])*[lL]?\\b" },
             { begin: "\\b0[bB][01](_*[01])*[lL]?\\b" },
         ],
         relevance: 0,
     };
-function s(e, t, n) {
-    return -1 === n ? "" : e.replace(t, (r) => s(e, t, n - 1));
-}
 e.exports = function (e) {
     let t = e.regex,
-        n = "[\xc0-ʸa-zA-Z_$][\xc0-ʸa-zA-Z_$0-9]{0,149}",
-        r = n + s("(?:<" + n + "~~~(?:\\s*,\\s*" + n + "~~~)*>)?", /~~~/g, 2),
-        a = {
+        a = "[\xc0-ʸa-zA-Z_$][\xc0-ʸa-zA-Z_$0-9]{0,149}",
+        n =
+            a +
+            (function e(t, a, n) {
+                return -1 === n ? "" : t.replace(a, (r) => e(t, a, n - 1));
+            })("(?:<" + a + "~~~(?:\\s*,\\s*" + a + "~~~)*>)?", /~~~/g, 2),
+        i = {
             keyword: [
                 "synchronized",
                 "abstract",
@@ -74,12 +75,12 @@ e.exports = function (e) {
             type: ["char", "boolean", "long", "float", "int", "byte", "short", "double"],
             built_in: ["super", "this"],
         },
-        o = { className: "meta", begin: "@" + n, contains: [{ begin: /\(/, end: /\)/, contains: ["self"] }] },
-        l = {
+        o = { className: "meta", begin: "@" + a, contains: [{ begin: /\(/, end: /\)/, contains: ["self"] }] },
+        s = {
             className: "params",
             begin: /\(/,
             end: /\)/,
-            keywords: a,
+            keywords: i,
             relevance: 0,
             contains: [e.C_BLOCK_COMMENT_MODE],
             endsParent: !0,
@@ -87,7 +88,7 @@ e.exports = function (e) {
     return {
         name: "Java",
         aliases: ["jsp"],
-        keywords: a,
+        keywords: i,
         illegal: /<\/|#/,
         contains: [
             e.COMMENT("/\\*\\*", "\\*/", {
@@ -104,38 +105,38 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             {
-                match: [/\b(?:class|interface|enum|extends|implements|new)/, /\s+/, n],
+                match: [/\b(?:class|interface|enum|extends|implements|new)/, /\s+/, a],
                 className: { 1: "keyword", 3: "title.class" },
             },
             { match: /non-sealed/, scope: "keyword" },
             {
-                begin: [t.concat(/(?!else)/, n), /\s+/, n, /\s+/, /=(?!=)/],
+                begin: [t.concat(/(?!else)/, a), /\s+/, a, /\s+/, /=(?!=)/],
                 className: { 1: "type", 3: "variable", 5: "operator" },
             },
             {
-                begin: [/record/, /\s+/, n],
+                begin: [/record/, /\s+/, a],
                 className: { 1: "keyword", 3: "title.class" },
-                contains: [l, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             { beginKeywords: "new throw return else", relevance: 0 },
             {
-                begin: ["(?:" + r + "\\s+)", e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
+                begin: ["(?:" + n + "\\s+)", e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
                 className: { 2: "title.function" },
-                keywords: a,
+                keywords: i,
                 contains: [
                     {
                         className: "params",
                         begin: /\(/,
                         end: /\)/,
-                        keywords: a,
+                        keywords: i,
                         relevance: 0,
-                        contains: [o, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, i, e.C_BLOCK_COMMENT_MODE],
+                        contains: [o, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, r, e.C_BLOCK_COMMENT_MODE],
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                 ],
             },
-            i,
+            r,
             o,
         ],
     };

@@ -1,44 +1,46 @@
-s.d(t, { A: () => u, d: () => c });
-var r = s(627968);
-s(64700);
-var l = s(503698),
-    n = s.n(l),
-    a = s(397927),
-    o = s(938191),
-    i = s(985018);
-function c(e) {
-    let { shops: t, onClose: s } = e;
+r.d(t, { A: () => _, d: () => u });
+var n = r(627968);
+r(64700);
+var s = r(503698),
+    l = r.n(s),
+    a = r(477782),
+    o = r(509434),
+    i = r(861672),
+    c = r(938191),
+    d = r(985018);
+function u(e) {
+    let { shops: t, onClose: r } = e;
     return t.map((e) =>
-        (0, r.jsx)(
-            a.Drp,
+        (0, n.jsx)(
+            a.Dr,
             {
                 id: e.id,
                 label: e.label,
-                trailingIndicator: { type: "icon", icon: a.I9m },
+                trailingIndicator: { type: "icon", icon: o.I },
                 action: () => {
-                    e.onSelect(), s();
+                    e.onSelect(), r();
                 },
             },
             e.id,
         ),
     );
 }
-function u(e) {
-    let { shops: t, onClose: s } = e,
-        l = (0, o.yB)("CollectiblesGameShopsContextMenu");
-    return (0, r.jsx)("div", {
-        className: n()({ [o.jP]: l }),
-        children: (0, r.jsx)(a.W1t, {
+function _(e) {
+    let { shops: t, onClose: r } = e,
+        s = (0, c.yB)("CollectiblesGameShopsContextMenu");
+    return (0, n.jsx)("div", {
+        className: l()({ [c.jP]: s }),
+        children: (0, n.jsx)(i.W, {
             "data-menu-migrated": !0,
             navId: "collectibles-game-shops-menu",
-            className: n()({ [o.jP]: l }),
-            onClose: s,
-            "aria-label": i.intl.string(i.t.FkjcWY),
+            className: l()({ [c.jP]: s }),
+            onClose: r,
+            "aria-label": d.intl.string(d.t.FkjcWY),
             onSelect: () => {},
             children: t.map((e) =>
-                (0, r.jsx)(
-                    a.Drp,
-                    { id: e.id, label: e.label, trailingIndicator: { type: "icon", icon: a.I9m }, action: e.onSelect },
+                (0, n.jsx)(
+                    a.Dr,
+                    { id: e.id, label: e.label, trailingIndicator: { type: "icon", icon: o.I }, action: e.onSelect },
                     e.id,
                 ),
             ),

@@ -1,117 +1,122 @@
-r.r(t), r.d(t, { default: () => h });
+r.r(t), r.d(t, { default: () => b });
 var n = r(627968),
     l = r(64700),
-    u = r(158954),
-    s = r(311907),
-    i = r(397927),
-    a = r(734057),
-    c = r(287809),
-    o = r(562153),
-    d = r(798286),
-    E = r(814278),
-    f = r(636153),
-    A = r(204459),
-    _ = r(665691),
-    S = r(998759),
-    g = r(50299),
-    T = r(82821),
-    C = r(75811),
-    R = r(930840);
+    s = r(189213),
+    u = r(311907),
+    i = r(777666),
+    a = r(827734),
+    c = r(512950),
+    o = r(534514),
+    d = r(289873),
+    E = r(834730),
+    f = r(734057),
+    A = r(287809),
+    _ = r(562153),
+    S = r(798286),
+    R = r(814278),
+    g = r(636153),
+    T = r(204459),
+    m = r(665691),
+    C = r(998759),
+    y = r(50299),
+    N = r(82821),
+    I = r(75811),
+    h = r(930840);
 r(603266);
-var y = r(652215),
-    m = r(985018),
-    N = r(963565);
-function I(e) {
+var x = r(652215),
+    F = r(985018),
+    p = r(751005);
+function U(e) {
     let { badgeText: t, badgeColor: r } = e,
-        u = l.useRef(t),
-        s = l.useRef(r);
-    return (0, n.jsx)(i.LpS, { text: u.current, color: s.current });
+        s = l.useRef(t),
+        u = l.useRef(r);
+    return (0, n.jsx)(i.Lp, { text: s.current, color: u.current });
 }
-function h(e) {
-    let { transitionState: t, userId: r, channelId: h, onClose: U } = e,
-        x = (0, s.bG)([c.default], () => c.default.getUser(r)),
-        F = (0, s.bG)([a.A], () => a.A.getChannel(h)?.getGuildId()),
-        p = o.Ay.useName(F, null, x),
-        { fingerprint: b, userKey: k } = (0, g.R)({ userId: r }),
-        v = (0, S.z)({ fingerprintBase64: b, chunkSize: 5, desiredLength: 45 }),
-        w = l.useCallback(() => {
-            (0, d.Hb)({ userId: r, channelId: h });
-        }, [h, r]),
-        M = (0, _.UF)({ userId: r, channelId: h });
-    (0, A.w)({ channelId: h, userId: r, nickname: p, onAlertOpen: U });
-    let { isCurrentUserKeyPersistent: D, isOtherUserKeyPersistent: O, loading: V } = (0, f.q)({ userId: r }),
-        K = l.useCallback(() => {
-            null != k && ((0, E.bk)(r, k, O, h, y.ThZ.E2EE_USER_VERIFY_MODAL), U());
-        }, [k, r, O, h, U]),
+function b(e) {
+    let { transitionState: t, userId: r, channelId: i, onClose: b } = e,
+        k = (0, u.bG)([A.default], () => A.default.getUser(r)),
+        w = (0, u.bG)([f.A], () => f.A.getChannel(i)?.getGuildId()),
+        v = _.Ay.useName(w, null, k),
+        { fingerprint: D, userKey: M } = (0, y.R)({ userId: r }),
+        O = (0, C.z)({ fingerprintBase64: D, chunkSize: 5, desiredLength: 45 }),
         j = l.useCallback(() => {
-            null != k && ((0, E.Dh)(r, k, O), U());
-        }, [k, r, O, U]),
-        [L, G] = l.useMemo(
+            (0, S.Hb)({ userId: r, channelId: i });
+        }, [i, r]),
+        K = (0, m.UF)({ userId: r, channelId: i });
+    (0, T.w)({ channelId: i, userId: r, nickname: v, onAlertOpen: b });
+    let { isCurrentUserKeyPersistent: V, isOtherUserKeyPersistent: G, loading: L } = (0, g.q)({ userId: r }),
+        Y = l.useCallback(() => {
+            null != M && ((0, R.bk)(r, M, G, i, x.ThZ.E2EE_USER_VERIFY_MODAL), b());
+        }, [M, r, G, i, b]),
+        P = l.useCallback(() => {
+            null != M && ((0, R.Dh)(r, M, G), b());
+        }, [M, r, G, b]),
+        [z, B] = l.useMemo(
             () =>
-                M
-                    ? [m.intl.string(m.t.UNUuem), i.LU0.colors.BACKGROUND_BRAND.css]
-                    : [m.intl.string(m.t.y2b7CA), i.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
-            [M],
+                K
+                    ? [F.intl.string(F.t.UNUuem), a.A.colors.BACKGROUND_BRAND.css]
+                    : [F.intl.string(F.t.y2b7CA), a.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
+            [K],
         ),
-        Y = l.useMemo(
-            () => (0, E.Z1)({ isCurrentUserKeyPersistent: D, isOtherUserKeyPersistent: O, otherUserNickname: p }),
-            [D, O, p],
+        H = l.useMemo(
+            () => (0, R.Z1)({ isCurrentUserKeyPersistent: V, isOtherUserKeyPersistent: G, otherUserNickname: v }),
+            [V, G, v],
         ),
-        P = (0, T.H)({ userId: r, keyToOmit: k });
+        q = (0, N.H)({ userId: r, keyToOmit: M });
     l.useEffect(() => {
-        (0, d.HJ)({ userId: r, channelId: h });
-    }, [h, r]);
-    let z = {
+        (0, S.HJ)({ userId: r, channelId: i });
+    }, [i, r]);
+    let Z = {
             transitionState: t,
-            title: m.intl.string(m.t["/WPGnF"]),
-            subtitle: m.intl.format(m.t.oc2kce, { username: p }),
+            title: F.intl.string(F.t["/WPGnF"]),
+            subtitle: F.intl.format(F.t.oc2kce, { username: v }),
         },
-        B = (0, n.jsxs)(n.Fragment, {
+        J = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
-                    className: N.Ot,
+                    className: p.Ot,
                     children: [
-                        P > 0 &&
-                            (0, n.jsx)(i.po8, {
-                                messageType: i.YCn.INFO,
-                                className: N.Ht,
-                                children: m.intl.format(m.t.uZDkz0, { count: P }),
+                        q > 0 &&
+                            (0, n.jsx)(c.p, {
+                                messageType: c.Y.INFO,
+                                className: p.Ht,
+                                children: F.intl.format(F.t.uZDkz0, { count: q }),
                             }),
                         (0, n.jsxs)("div", {
-                            className: N.wx,
+                            className: p.wx,
                             children: [
-                                (0, n.jsx)(i.Heading, {
+                                (0, n.jsx)(o.D, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
-                                    children: m.intl.string(m.t["/WPGnF"]),
+                                    children: F.intl.string(F.t["/WPGnF"]),
                                 }),
-                                null != v &&
-                                    (0, n.jsx)(R.c, {
-                                        className: N.nJ,
-                                        chunks: v,
-                                        color: i.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
-                                        onCopy: w,
+                                null != O &&
+                                    (0, n.jsx)(h.c, {
+                                        className: p.nJ,
+                                        chunks: O,
+                                        color: a.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                        onCopy: j,
                                     }),
                                 (0, n.jsx)("div", {
-                                    className: N.ub,
+                                    className: p.ub,
                                     children:
-                                        null == v
-                                            ? (0, n.jsx)(i.y$y, { className: N.u1, type: i.tVU.SPINNING_CIRCLE })
-                                            : (0, n.jsx)(I, { badgeText: L, badgeColor: G }),
+                                        null == O
+                                            ? (0, n.jsx)(d.y, { className: p.u1, type: d.t.SPINNING_CIRCLE })
+                                            : (0, n.jsx)(U, { badgeText: z, badgeColor: B }),
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(C.j, { className: N.aY, chunks: v, columns: 3 }),
+                        (0, n.jsx)(I.j, { className: p.aY, chunks: O, columns: 3 }),
                     ],
                 }),
-                (0, n.jsx)(i.Text, { className: N.qr, variant: "text-sm/normal", color: "text-muted", children: Y }),
+                (0, n.jsx)(E.E, { className: p.qr, variant: "text-sm/normal", color: "text-muted", children: H }),
             ],
         }),
-        H = {
-            text: M ? m.intl.string(m.t["Osb+/n"]) : m.intl.string(m.t["0tvNAn"]),
-            disabled: null == v || V,
-            onClick: M ? j : K,
+        W = {
+            text: K ? F.intl.string(F.t["Osb+/n"]) : F.intl.string(F.t["0tvNAn"]),
+            disabled: null == O || L,
+            onClick: K ? P : Y,
         },
-        q = { text: m.intl.string(m.t["ETE/oC"]), onClick: U, variant: "secondary" };
-    return (0, n.jsx)(u.Modal, { onClose: U, ...z, actions: [q, H], children: B });
+        X = { text: F.intl.string(F.t["ETE/oC"]), onClick: b, variant: "secondary" };
+    return (0, n.jsx)(s.Modal, { onClose: b, ...Z, actions: [X, W], children: J });
 }

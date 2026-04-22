@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(172609);
-class i extends r.A {
+r.d(t, { A: () => s });
+var n = r(172609);
+class s extends n.A {
     patternBetween() {
         return /^\s*(から|－|ー|-|～|~)\s*$/i;
     }

@@ -1,70 +1,73 @@
-n.d(t, { A: () => S });
+"use strict";
+n.d(t, { A: () => C });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    s = n(935649),
-    o = n(847599),
-    c = n(734057),
+var r = n(503698),
+    l = n.n(r);
+if (21552 == n.j) var s = n(417098);
+if (21552 == n.j) var a = n(825484);
+if (21552 == n.j) var o = n(821609);
+var c = n(935649),
+    u = n(847599),
+    d = n(734057),
     _ = n(309010),
     E = n(849736),
-    d = n(354583),
-    u = n(366098),
-    A = n(418208),
+    A = n(354583),
+    m = n(366098),
+    I = n(418208),
     T = n(985018),
-    I = n(496447);
-function N(e) {
-    if (!e && (0, A.Cf)())
-        return void s.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND });
+    N = n(992262);
+function g(e) {
+    if (!e && (0, I.Cf)())
+        return void c.A.showAgeVerificationGetStartedModal({ entryPoint: u.q1.STAGE_CHANNEL_RAISE_HAND });
     let t = _.A.getVoiceChannelId();
     if (null == t) return;
-    let n = c.A.getChannel(t);
+    let n = d.A.getChannel(t);
     null != n && (0, E.e7)(n, e);
 }
-function R(e) {
+function p(e) {
     let { channelId: t } = e,
-        n = (0, u.D3)(t) ?? 0,
-        l = (0, u.Xk)(t) ?? 0;
-    return n > 0 && l > 0
+        n = (0, m.D3)(t) ?? 0,
+        r = (0, m.Xk)(t) ?? 0;
+    return n > 0 && r > 0
         ? (0, i.jsx)("div", {
-              className: I.Z5,
-              children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.xlJRfv) }),
+              className: N.Z5,
+              children: (0, i.jsx)("div", { className: l()(N.qQ, N.lN), children: T.intl.string(T.t.xlJRfv) }),
           })
         : n > 0
           ? (0, i.jsx)("div", {
-                className: I.Z5,
-                children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.WYad9Z) }),
+                className: N.Z5,
+                children: (0, i.jsx)("div", { className: l()(N.qQ, N.lN), children: T.intl.string(T.t.WYad9Z) }),
             })
-          : l > 0
+          : r > 0
             ? (0, i.jsx)("div", {
-                  className: I.Z5,
-                  children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.eHq2OF) }),
+                  className: N.Z5,
+                  children: (0, i.jsx)("div", { className: l()(N.qQ, N.lN), children: T.intl.string(T.t.eHq2OF) }),
               })
             : null;
 }
-function S() {
-    let e = (0, d.A)();
+function C() {
+    let e = (0, A.A)();
     return null == e
         ? null
-        : (0, i.jsxs)(a.$Td, {
-              className: I.kL,
-              color: a.Hv$.DEFAULT,
+        : (0, i.jsxs)(s.$T, {
+              className: N.kL,
+              color: s.Hv.DEFAULT,
               children: [
                   T.intl.string(T.t.Ul1RJQ),
-                  (0, i.jsx)(R, { channelId: e.id }),
-                  (0, i.jsxs)(a.ButtonGroup, {
+                  (0, i.jsx)(p, { channelId: e.id }),
+                  (0, i.jsxs)(a.e, {
                       size: "sm",
-                      className: I.GC,
+                      className: N.GC,
                       children: [
-                          (0, i.jsx)(a.Button, {
+                          (0, i.jsx)(o.$, {
                               variant: "overlay-primary",
                               text: T.intl.string(T.t.MpO0px),
-                              onClick: () => N(!1),
+                              onClick: () => g(!1),
                           }),
-                          (0, i.jsx)(a.Button, {
+                          (0, i.jsx)(o.$, {
                               variant: "secondary",
-                              onClick: () => N(!0),
+                              onClick: () => g(!0),
                               text: T.intl.string(T.t["1YDv7a"]),
                           }),
                       ],

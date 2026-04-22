@@ -1,25 +1,25 @@
-"use strict";
-n.d(t, { A: () => p, h: () => b });
+n.d(t, { A: () => A, h: () => C });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(382222),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(517738),
     o = n(835245),
-    d = n(435371),
+    d = n(459192),
     c = n(319060),
-    u = n(397927),
-    m = n(240248),
-    g = n(652215),
-    x = n(333354),
-    h = n(985018),
-    _ = n(342321);
-let p = -1,
-    A = (0, m.xI)(c.A.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    f = (0, m.xI)(c.A.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    u = n(805901),
+    m = n(933832),
+    g = n(240248),
+    h = n(652215),
+    x = n(853513),
+    _ = n(985018),
+    p = n(351406);
+let A = -1,
+    E = (0, g.xI)(c.A.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    f = (0, g.xI)(c.A.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     j = { tension: 140, friction: 30 },
     N = { tension: 800, friction: 20 };
-class E extends s.Component {
+class I extends l.Component {
     state = { tierMarkerActive: 0, finishedInitialAnimation: !1 };
     tierMarkerMaskId = (0, o.A)();
     static defaultProps = { initialAnimationDelay: 0 };
@@ -30,7 +30,7 @@ class E extends s.Component {
     getProgressHeight(e) {
         let t,
             { tiers: n, progress: i } = this.props,
-            s = n[e];
+            l = n[e];
         for (let e = n.length - 1; e > 0; e--) {
             if (i === n[e].numRequired) return n[e].y;
             if (i > n[e].numRequired) {
@@ -38,11 +38,11 @@ class E extends s.Component {
                 break;
             }
         }
-        if (null == t) return s.y;
-        let l = t.y - s.y,
-            r = t.numRequired - s.numRequired,
-            a = i - s.numRequired;
-        return s.y + (a / r) * l;
+        if (null == t) return l.y;
+        let s = t.y - l.y,
+            r = t.numRequired - l.numRequired,
+            a = i - l.numRequired;
+        return l.y + (a / r) * s;
     }
     getCurrentTierIndex() {
         let { currentTier: e, tiers: t } = this.props;
@@ -55,13 +55,13 @@ class E extends s.Component {
     }
     handleForegroundFrame = (e) => {
         let { height: t } = e,
-            { tiers: n, progress: i, onAnimatedTierMaker: s } = this.props,
-            { tierMarkerActive: l } = this.state;
+            { tiers: n, progress: i, onAnimatedTierMaker: l } = this.props,
+            { tierMarkerActive: s } = this.state;
         for (let e = n.length - 1; e > 0; e--) {
             let r = n[e],
-                a = l === e;
+                a = s === e;
             if (t + 20 >= r.y && i >= r.numRequired) {
-                a || (this.setState({ tierMarkerActive: e }), null != s && s(r));
+                a || (this.setState({ tierMarkerActive: e }), null != l && l(r));
                 return;
             }
         }
@@ -71,42 +71,42 @@ class E extends s.Component {
     };
     getTierMarkerTooltipText(e) {
         let { progress: t } = this.props;
-        if (null == e.name || e.key === g.TVA.NONE) return null;
+        if (null == e.name || e.key === h.TVA.NONE) return null;
         let n = Math.min(t, e.numRequired);
         return this.getTierDisabled(e)
-            ? { title: null, body: h.intl.formatToPlainString(x.default["9CtPjt"], { perk: e.name }) }
-            : { title: e.name, body: h.intl.format(h.t.AkLa6n, { subscribers: n, numRequired: e.numRequired }) };
+            ? { title: null, body: _.intl.formatToPlainString(x.default["9CtPjt"], { perk: e.name }) }
+            : { title: e.name, body: _.intl.format(_.t.AkLa6n, { subscribers: n, numRequired: e.numRequired }) };
     }
     renderTierMarker(e, t, n) {
-        let s,
-            { progress: l, tiers: r } = this.props,
+        let l,
+            { progress: s, tiers: r } = this.props,
             o = r[n],
-            c = l >= e.numRequired,
-            m = null != o && e.key === o.key,
-            g = e.key === r[0].key,
+            c = s >= e.numRequired,
+            g = null != o && e.key === o.key,
+            h = e.key === r[0].key,
             x = this.getTierDisabled(e);
-        s = g ? _.LR : x ? _.B2 : m ? _.E2 : c ? _.lZ : _.B2;
-        let h = e.y - (g ? 0 : f / 2),
-            p = this.state.tierMarkerActive >= t,
-            A = !g && m && p,
+        l = h ? p.LR : x ? p.B2 : g ? p.E2 : c ? p.lZ : p.B2;
+        let _ = e.y - (h ? 0 : f / 2),
+            A = this.state.tierMarkerActive >= t,
+            E = !h && g && A,
             j = this.getTierMarkerTooltipText(e);
         return (0, i.jsx)(
-            u.c7X,
+            u.c,
             {
                 from: { scale: 1 },
-                to: { scale: A ? 1.625 : 1 },
+                to: { scale: E ? 1.625 : 1 },
                 config: N,
                 children: (t) =>
-                    (0, i.jsx)(d.un, {
+                    (0, i.jsx)(d.u, {
                         body: j?.body ?? "",
                         title: j?.title ?? void 0,
                         shouldShow: null != j,
                         position: "right",
                         "aria-label": e.name ?? "",
                         children: (0, i.jsx)(a.animated.div, {
-                            className: s,
-                            style: { top: h, transform: t.scale.interpolate((e) => `scale(${e})`) },
-                            children: A && (0, i.jsx)(u.A9s, { size: "md", color: "currentColor", className: _.zw }),
+                            className: l,
+                            style: { top: _, transform: t.scale.interpolate((e) => `scale(${e})`) },
+                            children: E && (0, i.jsx)(m.A, { size: "md", color: "currentColor", className: p.zw }),
                         }),
                     }),
             },
@@ -118,28 +118,28 @@ class E extends s.Component {
         return (0, i.jsxs)("mask", {
             id: `${this.tierMarkerMaskId}`,
             children: [
-                (0, i.jsx)("rect", { x: "0", y: "0", width: A, height: e, fill: "white" }),
-                t.map((e) => (0, i.jsx)("circle", { cx: A / 2, cy: e.y, r: A / 2, fill: "black" }, e.key)),
+                (0, i.jsx)("rect", { x: "0", y: "0", width: E, height: e, fill: "white" }),
+                t.map((e) => (0, i.jsx)("circle", { cx: E / 2, cy: e.y, r: E / 2, fill: "black" }, e.key)),
             ],
         });
     }
     renderProgressBar(e, t) {
         let n = this.getProgressHeight(t),
-            { finishedInitialAnimation: s } = this.state;
+            { finishedInitialAnimation: l } = this.state;
         return (0, i.jsxs)("g", {
             mask: `url(#${this.tierMarkerMaskId})`,
             children: [
-                (0, i.jsx)("rect", { className: _.Tp, height: e, fill: "currentColor" }),
-                (0, i.jsx)(u.c7X, {
+                (0, i.jsx)("rect", { className: p.Tp, height: e, fill: "currentColor" }),
+                (0, i.jsx)(u.c, {
                     from: { height: 0 },
                     to: { height: n },
                     config: j,
-                    delay: s ? 0 : this.props.initialAnimationDelay,
+                    delay: l ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
-                    onRest: s ? void 0 : this.handleFinishedInitialAnimation,
+                    onRest: l ? void 0 : this.handleFinishedInitialAnimation,
                     children: (e) =>
                         (0, i.jsx)(a.animated.rect, {
-                            className: _.CU,
+                            className: p.CU,
                             height: e.height.interpolate((e) => Math.max(0, e)),
                             fill: "currentColor",
                         }),
@@ -150,20 +150,20 @@ class E extends s.Component {
     render() {
         let { className: e, tiers: t } = this.props,
             n = this.getCurrentTierIndex(),
-            s = this.getTotalHeight();
+            l = this.getTotalHeight();
         return (0, i.jsxs)("div", {
-            className: r()(e, _.hr),
-            style: { height: s },
+            className: r()(e, p.hr),
+            style: { height: l },
             children: [
                 (0, i.jsxs)("svg", {
-                    viewBox: `0 0 ${A} ${s}`,
-                    width: A,
-                    height: s,
-                    children: [this.renderProgressMask(s), this.renderProgressBar(s, n)],
+                    viewBox: `0 0 ${E} ${l}`,
+                    width: E,
+                    height: l,
+                    children: [this.renderProgressMask(l), this.renderProgressBar(l, n)],
                 }),
                 t.map((e, t) => this.renderTierMarker(e, t, n)),
             ],
         });
     }
 }
-let b = E;
+let C = I;

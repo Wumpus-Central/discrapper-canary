@@ -2,7 +2,7 @@ n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    r = n(397927),
+    r = n(691885),
     a = n(781763),
     o = n(65204),
     d = n(985018);
@@ -24,7 +24,7 @@ class h extends l.Component {
         let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: l, hide: s, label: a } = this.props;
         if (0 === e.length || s) return null;
         let o = l ? e : e.filter((e) => e.id !== n);
-        return (0, i.jsx)(r.l6P, {
+        return (0, i.jsx)(r.l, {
             label: a,
             options: o.map((e) => ({ id: e.id, label: e.getName(n), value: e.id })),
             placeholder: d.intl.string(d.t.Sw7pHF),

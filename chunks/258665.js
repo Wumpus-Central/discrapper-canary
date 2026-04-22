@@ -1,182 +1,184 @@
-"use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(837381),
     o = n(311907),
-    d = n(582754),
-    c = n(397927),
-    u = n(573648),
-    m = n(793574),
-    g = n(47167),
-    x = n(342296),
-    h = n(544028),
-    _ = n(427157),
-    A = n(994500),
-    p = n(287809),
-    f = n(147925),
-    j = n(860689),
-    N = n(427262),
-    E = n(820883),
-    C = n(276373),
-    T = n(438407),
-    I = n(652215),
-    b = n(985018),
-    v = n(214876);
-class S extends s.PureComponent {
+    d = n(462887),
+    c = n(834730),
+    u = n(97808),
+    m = n(778712),
+    g = n(939249),
+    h = n(573648),
+    x = n(793574),
+    _ = n(47167),
+    p = n(342296),
+    A = n(544028),
+    E = n(427157),
+    f = n(994500),
+    j = n(287809),
+    N = n(147925),
+    I = n(860689),
+    C = n(427262),
+    b = n(820883),
+    v = n(276373),
+    S = n(438407),
+    T = n(652215),
+    y = n(985018),
+    R = n(214876);
+class L extends l.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
         return (0, i.jsxs)("span", {
             onContextMenu: t,
-            className: v.userHook,
+            className: R.userHook,
             children: [
-                (0, i.jsx)(c.Text, { variant: "text-md/normal", children: N.Ay.getUserTag(e, { mode: "username" }) }),
+                (0, i.jsx)(c.E, { variant: "text-md/normal", children: C.Ay.getUserTag(e, { mode: "username" }) }),
                 "0" !== e.discriminator &&
-                    (0, i.jsxs)(c.Text, {
+                    (0, i.jsxs)(c.E, {
                         variant: "text-xs/normal",
-                        className: v.discrim,
+                        className: R.discrim,
                         children: ["#", e.discriminator],
                     }),
             ],
         });
     }
 }
-let y = s.forwardRef((e, t) => {
+let D = l.forwardRef((e, t) => {
     let n,
         {
-            log: l,
+            log: s,
             className: o,
-            expanded: h,
-            guildId: N,
-            guild: y,
-            onChannelContextMenu: R,
-            onContentClick: O,
-            onHeaderClick: G,
-            onTargetContextMenu: L,
-            onUserContextMenu: D,
-            theme: M,
+            expanded: A,
+            guildId: C,
+            guild: D,
+            onChannelContextMenu: O,
+            onContentClick: G,
+            onHeaderClick: M,
+            onTargetContextMenu: k,
+            onUserContextMenu: U,
+            theme: w,
         } = e,
-        k = s.useRef(null),
-        U = C.checkChangesToRender(l),
-        P = v.headerDefault;
-    h ? (P = v.headerExpanded) : U && (P = v.headerClickable);
-    let w = l.timestampStart.calendar(),
-        B = l.timestampEnd.calendar();
+        P = l.useRef(null),
+        B = v.checkChangesToRender(s),
+        F = R.headerDefault;
+    A ? (F = R.headerExpanded) : B && (F = R.headerClickable);
+    let H = s.timestampStart.calendar(),
+        V = s.timestampEnd.calendar();
     n =
-        w === B
-            ? (0, i.jsx)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: w })
-            : (0, i.jsxs)(c.Text, { className: v.timestamp, variant: "text-sm/normal", children: [w, "—", B] });
-    let F = U ? G : I.tEg;
+        H === V
+            ? (0, i.jsx)(c.E, { className: R.timestamp, variant: "text-sm/normal", children: H })
+            : (0, i.jsxs)(c.E, { className: R.timestamp, variant: "text-sm/normal", children: [H, "—", V] });
+    let z = B ? M : T.tEg;
     return (0, i.jsx)(a.tG, {
-        id: l.id,
+        id: s.id,
         children: (e) =>
             (0, i.jsxs)("div", {
                 ref: t,
-                className: r()(v.auditLog, o),
+                className: r()(R.auditLog, o),
                 children: [
-                    (0, i.jsxs)(c.DUT, {
-                        className: P,
-                        "aria-expanded": h,
-                        onClick: F,
+                    (0, i.jsxs)(g.D, {
+                        className: F,
+                        "aria-expanded": A,
+                        onClick: z,
                         ...e,
                         children: [
-                            (0, i.jsx)(T.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
+                            (0, i.jsx)(S.H, { action: s.action, actionType: s.actionType, targetType: s.targetType }),
                             (function () {
                                 let {
                                     user: e,
                                     userId: t,
                                     options: { integration_type: n },
-                                } = l;
+                                } = s;
                                 if (null != e && null != t)
-                                    return (0, i.jsx)(x.A, {
-                                        targetElementRef: k,
+                                    return (0, i.jsx)(p.A, {
+                                        targetElementRef: P,
                                         user: e,
-                                        guildId: N,
-                                        newAnalyticsLocations: [m.A.AVATAR],
+                                        guildId: C,
+                                        newAnalyticsLocations: [x.A.AVATAR],
                                         children: (e) =>
-                                            (0, i.jsx)(c.euF, {
+                                            (0, i.jsx)(u.eu, {
                                                 ...e,
-                                                ref: k,
+                                                ref: P,
                                                 onClick: (t) => {
                                                     t.stopPropagation(), e.onClick(t);
                                                 },
-                                                className: v.avatar,
+                                                className: R.avatar,
                                                 src:
-                                                    l.action === I.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                    l.action === I.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
-                                                    l.action === I.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                    l.action === I.F_X.AUTO_MODERATION_QUARANTINE_USER
-                                                        ? (0, E.q)()
-                                                        : l.user?.getAvatarURL(N, 40),
+                                                    s.action === T.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                    s.action === T.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                    s.action === T.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                    s.action === T.F_X.AUTO_MODERATION_QUARANTINE_USER
+                                                        ? (0, b.q)()
+                                                        : s.user?.getAvatarURL(C, 40),
                                                 "aria-hidden": !0,
-                                                size: c._3J.SIZE_40,
+                                                size: m._3.SIZE_40,
                                             }),
                                     });
                                 if (null != n) {
-                                    let e = u.A.get(n);
+                                    let e = h.A.get(n);
                                     if (null != e) {
-                                        let t = (0, d.Mw)(M) ? e.icon.darkSVG : e.icon.lightSVG;
-                                        return (0, i.jsx)(c.euF, {
-                                            className: v.avatar,
+                                        let t = (0, d.M)(w) ? e.icon.darkSVG : e.icon.lightSVG;
+                                        return (0, i.jsx)(u.eu, {
+                                            className: R.avatar,
                                             src: t,
                                             "aria-hidden": !0,
-                                            size: c._3J.SIZE_40,
+                                            size: m._3.SIZE_40,
                                         });
                                     }
                                 }
                                 return null;
                             })(),
                             (0, i.jsxs)("div", {
-                                className: v.timeWrap,
+                                className: R.timeWrap,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: v.title,
+                                        className: R.title,
                                         children: (function () {
                                             let e,
-                                                { user: t, target: n, options: s } = l;
-                                            e = (0, j.fh)(n) ? n.name : n.toString();
-                                            let r = C.getChangeTitle(l);
+                                                { user: t, target: n, options: l } = s;
+                                            e = (0, I.fh)(n) ? n.name : n.toString();
+                                            let r = v.getChangeTitle(s);
                                             return null != r
                                                 ? (0, i.jsx)("div", {
-                                                      className: v.overflowEllipsis,
-                                                      children: b.intl.format(r, {
+                                                      className: R.overflowEllipsis,
+                                                      children: y.intl.format(r, {
                                                           user: t,
                                                           target: e,
                                                           userHook: (e, t) => {
-                                                              if (null != l.user)
+                                                              if (null != s.user)
                                                                   return (0, i.jsx)(
-                                                                      S,
-                                                                      { user: l.user, onContextMenu: D },
+                                                                      L,
+                                                                      { user: s.user, onContextMenu: U },
                                                                       t,
                                                                   );
-                                                              if (null != l.options.integration_type) {
-                                                                  let e = u.A.get(l.options.integration_type);
-                                                                  return e?.name ?? b.intl.string(b.t["n+olu7"]);
+                                                              if (null != s.options.integration_type) {
+                                                                  let e = h.A.get(s.options.integration_type);
+                                                                  return e?.name ?? y.intl.string(y.t["n+olu7"]);
                                                               }
-                                                              return b.intl.string(b.t["30mdIx"]);
+                                                              return y.intl.string(y.t["30mdIx"]);
                                                           },
                                                           targetHook: (e, t) =>
-                                                              l.targetType === I.GaG.USER && l.target instanceof _.A
+                                                              s.targetType === T.GaG.USER && s.target instanceof E.A
                                                                   ? (0, i.jsx)(
-                                                                        S,
-                                                                        { user: l.target, onContextMenu: L },
+                                                                        L,
+                                                                        { user: s.target, onContextMenu: k },
                                                                         t,
                                                                     )
                                                                   : (0, i.jsx)(
                                                                         "span",
-                                                                        { onContextMenu: L, children: e },
+                                                                        { onContextMenu: k, children: e },
                                                                         t,
                                                                     ),
-                                                          count: s.count ?? "",
+                                                          count: l.count ?? "",
                                                           channel:
-                                                              null == s.channel || "string" == typeof s.channel
-                                                                  ? s.channel
-                                                                  : (0, g.m1)(s.channel, p.default, A.A, !0),
+                                                              null == l.channel || "string" == typeof l.channel
+                                                                  ? l.channel
+                                                                  : (0, _.m1)(l.channel, j.default, f.A, !0),
                                                           channelHook: (e, t) =>
-                                                              (0, i.jsx)("span", { onContextMenu: R, children: e }, t),
-                                                          subtarget: s.subtarget,
+                                                              (0, i.jsx)("span", { onContextMenu: O, children: e }, t),
+                                                          subtarget: l.subtarget,
                                                       }),
                                                   })
                                                 : null;
@@ -185,21 +187,21 @@ let y = s.forwardRef((e, t) => {
                                     n,
                                 ],
                             }),
-                            U
-                                ? (0, i.jsx)(f.A, {
-                                      className: v.expand,
-                                      foreground: v.expandForeground,
-                                      expanded: h,
+                            B
+                                ? (0, i.jsx)(N.A, {
+                                      className: R.expand,
+                                      foreground: R.expandForeground,
+                                      expanded: A,
                                       "aria-hidden": !0,
                                   })
                                 : null,
                         ],
                     }),
-                    h ? (0, i.jsx)("div", { className: v.divider }) : null,
-                    h && null != y ? (0, i.jsx)(T.r, { log: l, guild: y, onContentClick: O }) : null,
+                    A ? (0, i.jsx)("div", { className: R.divider }) : null,
+                    A && null != D ? (0, i.jsx)(S.r, { log: s, guild: D, onContentClick: G }) : null,
                 ],
             }),
     });
 });
-y.displayName = "GuildSettingsAuditLogEntry";
-let R = o.Ay.connectStores([h.A], () => ({ theme: h.A.theme }), { forwardRef: !0 })(y);
+D.displayName = "GuildSettingsAuditLogEntry";
+let O = o.Ay.connectStores([A.A], () => ({ theme: A.A.theme }), { forwardRef: !0 })(D);

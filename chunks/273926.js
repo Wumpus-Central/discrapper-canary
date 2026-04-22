@@ -1,28 +1,31 @@
-n.d(t, { LK: () => h, Ot: () => m });
-var r = n(627968);
-n(64700);
-var s = n(503698),
-    i = n.n(s),
-    l = n(397927),
-    a = n(46054),
-    o = n(31457),
-    d = n(985018),
-    c = n(397251);
-function u(e) {
-    let { terms: t, channelId: n, className: s } = e;
-    return (0, r.jsx)("div", {
-        className: i()(c.qE, s),
+"use strict";
+r.d(t, { LK: () => h, Ot: () => g });
+var i = r(627968);
+r(64700);
+var a = r(503698),
+    n = r.n(a),
+    s = r(834730),
+    l = r(150934);
+if (21552 == r.j) var o = r(622629);
+var c = r(46054),
+    d = r(31457),
+    _ = r(985018),
+    u = r(397251);
+function p(e) {
+    let { terms: t, channelId: r, className: a } = e;
+    return (0, i.jsx)("div", {
+        className: n()(u.qE, a),
         children: t.map((e, t) =>
-            (0, r.jsxs)(
+            (0, i.jsxs)(
                 "div",
                 {
-                    className: c.gJ,
+                    className: u.gJ,
                     children: [
-                        (0, r.jsx)(l.Text, { variant: "text-md/normal", color: "text-muted", children: `${t + 1}.` }),
-                        (0, r.jsx)(l.Text, {
+                        (0, i.jsx)(s.E, { variant: "text-md/normal", color: "text-muted", children: `${t + 1}.` }),
+                        (0, i.jsx)(s.E, {
                             variant: "text-md/normal",
-                            className: c.RQ,
-                            children: a.A.parseGuildVerificationFormRule(e, !0, { channelId: n }),
+                            className: u.RQ,
+                            children: c.A.parseGuildVerificationFormRule(e, !0, { channelId: r }),
                         }),
                     ],
                 },
@@ -31,29 +34,24 @@ function u(e) {
         ),
     });
 }
-function _(e) {
-    let { onChange: t, checked: n, disabled: s } = e;
-    return (0, r.jsx)("div", {
-        className: c.kv,
-        children: (0, r.jsx)(l.Checkbox, {
-            checked: !!n,
-            onChange: t,
-            disabled: s,
-            label: d.intl.string(d.t["2EXfGJ"]),
-        }),
+function m(e) {
+    let { onChange: t, checked: r, disabled: a } = e;
+    return (0, i.jsx)("div", {
+        className: u.kv,
+        children: (0, i.jsx)(l.S, { checked: !!r, onChange: t, disabled: a, label: _.intl.string(_.t["2EXfGJ"]) }),
     });
 }
 function h(e) {
     let { formField: t } = e;
-    return (0, r.jsx)(o.fu, { icon: l.B8Q, text: d.intl.string(d.t["2xbmoG"]), meetsRequirement: !!t.response });
+    return (0, i.jsx)(d.fu, { icon: o.B, text: _.intl.string(_.t["2xbmoG"]), meetsRequirement: !!t.response });
 }
-let m = (e) => {
-    let { channelId: t, formField: n, onChange: s } = e;
-    return (0, r.jsxs)(o.cS, {
-        title: d.intl.string(d.t["Q8OFN+"]),
+let g = (e) => {
+    let { channelId: t, formField: r, onChange: a } = e;
+    return (0, i.jsxs)(d.cS, {
+        title: _.intl.string(_.t["Q8OFN+"]),
         children: [
-            (0, r.jsx)(u, { className: c.n_, terms: n.values, channelId: t }),
-            (0, r.jsx)(_, { onChange: s, checked: n.response }),
+            (0, i.jsx)(p, { className: u.n_, terms: r.values, channelId: t }),
+            (0, i.jsx)(m, { onChange: a, checked: r.response }),
         ],
     });
 };

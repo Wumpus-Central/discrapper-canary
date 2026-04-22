@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { Ay: () => a });
-let r = -1,
-    i = (e) => new Promise((e) => e(r)),
-    a = {
-        backgroundTaskIdentifierInvalid: r,
-        backgroundify: function (e, t) {
-            return e;
-        },
-        startBackgroundTask: i,
-        endBackgroundTask: (e) => {},
-    };
+n.d(t, { Ay: () => r });
+let r = {
+    backgroundTaskIdentifierInvalid: -1,
+    backgroundify: function (e, t) {
+        return e;
+    },
+    startBackgroundTask: (e) => new Promise((e) => e(-1)),
+    endBackgroundTask: (e) => {},
+};

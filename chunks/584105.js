@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     IG: "streamerModeEnabled_aa3ffd",
     ch: "userSettingsStreamerModeEnabled_aa3ffd",

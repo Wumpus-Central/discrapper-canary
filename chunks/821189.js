@@ -1,26 +1,24 @@
-"use strict";
-n.d(t, { A: () => o, f: () => a });
-var r = n(627968);
+n.d(t, { A: () => s, f: () => i });
+var a = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(976114);
-function a(e) {
-    let { currencies: t, className: n, children: i } = e;
-    return t.length < 2 ? null : (0, r.jsx)("div", { className: n, children: i });
+var r = n(691885),
+    l = n(976114);
+function i(e) {
+    let { currencies: t, className: n, children: r } = e;
+    return t.length < 2 ? null : (0, a.jsx)("div", { className: n, children: r });
 }
-let o = function (e) {
-    let { label: t, currencies: n, onChange: a, selectedCurrency: o, disabled: l = !1 } = e;
-    if (n.length < 2 || null == o) return null;
-    let u = n.map((e, t) => ({ id: t.toString(), value: e, label: `${e.toUpperCase()} - ${(0, s.Q)(e)}` })),
-        c = (e) => {
-            null != e && a(e);
-        };
-    return (0, r.jsx)(i.l6P, {
+let s = function (e) {
+    let { label: t, currencies: n, onChange: i, selectedCurrency: s, disabled: o = !1 } = e;
+    if (n.length < 2 || null == s) return null;
+    let u = n.map((e, t) => ({ id: t.toString(), value: e, label: `${e.toUpperCase()} - ${(0, l.Q)(e)}` }));
+    return (0, a.jsx)(r.l, {
         selectionMode: "single",
         label: t,
-        value: o,
+        value: s,
         options: u,
-        onSelectionChange: c,
-        disabled: l,
+        onSelectionChange: (e) => {
+            null != e && i(e);
+        },
+        disabled: o,
     });
 };

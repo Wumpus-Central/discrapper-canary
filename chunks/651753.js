@@ -1,15 +1,13 @@
 "use strict";
-n.d(t, { A: () => g, e: () => u });
-var r = n(635377),
-    i = n.n(r),
+n.d(t, { A: () => E, e: () => u });
+var r,
+    i = n(635377),
+    s = n.n(i),
     a = n(994369),
-    s = n(311907),
-    o = n(73153);
-let l = 20;
-var u = (function (e) {
-    return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
-})({});
-function c(e) {
+    o = n(311907),
+    l = n(73153),
+    u = (((r = {})[(r.FETCHING = 0)] = "FETCHING"), (r[(r.FETCHED = 1)] = "FETCHED"), (r[(r.ERROR = 2)] = "ERROR"), r);
+function d(e) {
     let {
         query: t,
         guildId: n,
@@ -19,103 +17,15 @@ function c(e) {
         integrationType: o,
         minUserInstallCommandCount: l,
         excludeAppsWithCustomInstallUrl: u,
-        excludeNonEmbeddedApps: c,
-        excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
+        excludeNonEmbeddedApps: d,
+        excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
         source: _ = a.V.APP_DIRECTORY,
     } = e;
-    return `query:'${t}' guildId:${n} page:${r} pageSize:${i} categoryId:${s} integrationType:${o} minUserInstallCommandCount:${l} excludeAppsWithCustomInstallUrl:${u} excludeNonEmbeddedApps:${c} excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:${d} source:${_}`;
+    return `query:'${t}' guildId:${n} page:${r} pageSize:${i} categoryId:${s} integrationType:${o} minUserInstallCommandCount:${l} excludeAppsWithCustomInstallUrl:${u} excludeNonEmbeddedApps:${d} excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:${c} source:${_}`;
 }
-let d = new (i())({ max: l }),
+let c = new (s())({ max: 20 }),
     _ = {};
-function f(e) {
-    let {
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            integrationType: s,
-            minUserInstallCommandCount: o,
-            excludeAppsWithCustomInstallUrl: l,
-            excludeNonEmbeddedApps: u,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: f,
-        } = e,
-        p = c({
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            integrationType: s,
-            minUserInstallCommandCount: o,
-            excludeAppsWithCustomInstallUrl: l,
-            excludeNonEmbeddedApps: u,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: f,
-        });
-    _ = { ..._, [p]: 0 };
-}
-function p(e) {
-    let {
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            result: s,
-            integrationType: o,
-            minUserInstallCommandCount: l,
-            excludeAppsWithCustomInstallUrl: u,
-            excludeNonEmbeddedApps: f,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: p,
-            source: h,
-        } = e,
-        m = c({
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            integrationType: o,
-            minUserInstallCommandCount: l,
-            excludeAppsWithCustomInstallUrl: u,
-            excludeNonEmbeddedApps: f,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: p,
-            source: h,
-        });
-    d.set(m, { lastFetchTimeMs: Date.now(), ...s }), (_ = { ..._, [m]: 1 });
-}
-function h(e) {
-    let {
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            integrationType: s,
-            minUserInstallCommandCount: o,
-            excludeAppsWithCustomInstallUrl: l,
-            excludeNonEmbeddedApps: u,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: f,
-        } = e,
-        p = c({
-            query: t,
-            guildId: n,
-            page: r,
-            pageSize: i,
-            categoryId: a,
-            integrationType: s,
-            minUserInstallCommandCount: o,
-            excludeAppsWithCustomInstallUrl: l,
-            excludeNonEmbeddedApps: u,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: f,
-        });
-    _ = { ..._, [p]: 2 };
-}
-class m extends s.Ay.Store {
+class f extends o.Ay.Store {
     static displayName = "ApplicationDirectorySearchStore";
     getSearchResults(e) {
         let {
@@ -123,28 +33,28 @@ class m extends s.Ay.Store {
                 guildId: n,
                 page: r,
                 pageSize: i,
-                categoryId: a,
-                integrationType: s,
+                categoryId: s,
+                integrationType: a,
                 minUserInstallCommandCount: o,
                 excludeAppsWithCustomInstallUrl: l,
                 excludeNonEmbeddedApps: u,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: _,
                 source: f,
             } = e,
-            p = c({
+            E = d({
                 query: t,
                 guildId: n,
                 page: r,
                 pageSize: i,
-                categoryId: a,
-                integrationType: s,
+                categoryId: s,
+                integrationType: a,
                 minUserInstallCommandCount: o,
                 excludeAppsWithCustomInstallUrl: l,
                 excludeNonEmbeddedApps: u,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: _,
                 source: f,
             });
-        return d.get(p);
+        return c.get(E);
     }
     getFetchState(e) {
         let {
@@ -152,33 +62,118 @@ class m extends s.Ay.Store {
             guildId: n,
             page: r,
             pageSize: i,
-            categoryId: a,
-            integrationType: s,
+            categoryId: s,
+            integrationType: a,
             minUserInstallCommandCount: o,
             excludeAppsWithCustomInstallUrl: l,
             excludeNonEmbeddedApps: u,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
             source: f,
         } = e;
         return _[
-            c({
+            d({
                 query: t,
                 guildId: n,
                 page: r,
                 pageSize: i,
-                categoryId: a,
-                integrationType: s,
+                categoryId: s,
+                integrationType: a,
                 minUserInstallCommandCount: o,
                 excludeAppsWithCustomInstallUrl: l,
                 excludeNonEmbeddedApps: u,
-                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
                 source: f,
             })
         ];
     }
 }
-let g = new m(o.h, {
-    APPLICATION_DIRECTORY_FETCH_SEARCH: f,
-    APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: p,
-    APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: h,
+let E = new f(l.h, {
+    APPLICATION_DIRECTORY_FETCH_SEARCH: function (e) {
+        let {
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                integrationType: a,
+                minUserInstallCommandCount: o,
+                excludeAppsWithCustomInstallUrl: l,
+                excludeNonEmbeddedApps: u,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+                source: f,
+            } = e,
+            E = d({
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                integrationType: a,
+                minUserInstallCommandCount: o,
+                excludeAppsWithCustomInstallUrl: l,
+                excludeNonEmbeddedApps: u,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+                source: f,
+            });
+        _ = { ..._, [E]: 0 };
+    },
+    APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function (e) {
+        let {
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                result: a,
+                integrationType: o,
+                minUserInstallCommandCount: l,
+                excludeAppsWithCustomInstallUrl: u,
+                excludeNonEmbeddedApps: f,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
+                source: h,
+            } = e,
+            p = d({
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                integrationType: o,
+                minUserInstallCommandCount: l,
+                excludeAppsWithCustomInstallUrl: u,
+                excludeNonEmbeddedApps: f,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
+                source: h,
+            });
+        c.set(p, { lastFetchTimeMs: Date.now(), ...a }), (_ = { ..._, [p]: 1 });
+    },
+    APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function (e) {
+        let {
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                integrationType: a,
+                minUserInstallCommandCount: o,
+                excludeAppsWithCustomInstallUrl: l,
+                excludeNonEmbeddedApps: u,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+                source: f,
+            } = e,
+            E = d({
+                query: t,
+                guildId: n,
+                page: r,
+                pageSize: i,
+                categoryId: s,
+                integrationType: a,
+                minUserInstallCommandCount: o,
+                excludeAppsWithCustomInstallUrl: l,
+                excludeNonEmbeddedApps: u,
+                excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+                source: f,
+            });
+        _ = { ..._, [E]: 2 };
+    },
 });

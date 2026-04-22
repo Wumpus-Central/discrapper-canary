@@ -1,12 +1,11 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153),
-    a = n(626584),
-    s = n(184989);
-let o = new a.A("BasicChannelCacheStore"),
-    l = !1;
-class u extends r.Ay.Store {
+    s = n(626584),
+    a = n(184989);
+new s.A("BasicChannelCacheStore");
+class o extends r.Ay.Store {
     channels = new Map();
     guilds = new Map();
     hasChannel(e) {
@@ -16,16 +15,10 @@ class u extends r.Ay.Store {
         return this.guilds.has(e);
     }
     getBasicChannel(e) {
-        return (
-            l && o.verbose(`getting basic_channel (channel: ${e}, exists: ${this.channels.has(e)})`),
-            this.channels.get(e) ?? null
-        );
+        return this.channels.get(e) ?? null;
     }
     getGuildBasicChannels(e) {
-        return (
-            l && o.verbose(`getting guild_basic_channels (guild: ${e}, exists: ${this.guilds.has(e)})`),
-            this.guilds.get(e) ?? null
-        );
+        return this.guilds.get(e) ?? null;
     }
     invalidate(e) {
         this.delete(e);
@@ -42,7 +35,7 @@ class u extends r.Ay.Store {
         });
     }
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(a.A);
     }
     handleCacheLoadedLazy(e) {
         for (let [t, n] of ((this.guilds = new Map()), (this.channels = new Map()), e.basicGuildChannels))
@@ -53,17 +46,15 @@ class u extends r.Ay.Store {
         this.guilds.clear(), this.channels.clear();
     }
     handleConnectionOpen(e) {
-        let t = s.A.allGuildIds();
+        let t = a.A.allGuildIds();
         for (let e of this.guilds.keys()) t.has(e) || this.delete(e);
     }
     handleLogout(e) {
         this.guilds.clear(), this.channels.clear();
     }
     delete(e) {
-        for (let t in (l && o.verbose(`deleting basic_channels (guild: ${e}, exists: ${this.guilds.has(e)})`),
-        this.guilds.get(e) ?? {}))
-            this.channels.delete(t);
+        for (let t in this.guilds.get(e) ?? {}) this.channels.delete(t);
         this.guilds.delete(e);
     }
 }
-let c = new u();
+let l = new o();

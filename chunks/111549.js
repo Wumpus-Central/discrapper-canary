@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => et }), n(938796);
+n.d(t, { A: () => ei }), n(938796);
 var i = n(627968),
     s = n(64700),
     r = n(503698),
@@ -9,106 +9,108 @@ var i = n(627968),
     c = n(80703),
     d = n(311907),
     u = n(362474),
-    h = n(397927),
-    _ = n(73153),
-    p = n(846293),
-    g = n(198982),
-    m = n(964486),
-    A = n(475743),
-    f = n(17841),
-    E = n(829691),
-    x = n(854378),
-    I = n(359438),
-    N = n(383302),
-    v = n(10088),
+    _ = n(821609),
+    h = n(331322),
+    m = n(123292),
+    p = n(73153),
+    g = n(846293),
+    A = n(198982),
+    f = n(964486),
+    x = n(475743),
+    E = n(17841),
+    I = n(829691),
+    v = n(854378),
+    N = n(359438),
+    j = n(383302),
+    C = n(10088),
     T = n(921037),
-    j = n(21599),
-    C = n(942614),
-    S = n(976860),
-    y = n(210714),
-    b = n(961350),
-    R = n(650048),
-    O = n(71393),
-    L = n(299091),
-    w = n(954571),
-    k = n(975571),
+    b = n(21599),
+    S = n(942614),
+    y = n(976860),
+    R = n(210714),
+    w = n(961350),
+    O = n(650048),
+    L = n(71393),
+    k = n(299091),
+    G = n(954571),
+    U = n(975571),
     D = n(4274),
-    B = n(877062),
-    P = n(890698),
-    U = n(129851),
-    G = n(229),
+    P = n(877062),
+    B = n(890698),
+    M = n(129851),
+    V = n(229),
     F = n(652215);
 n(436317);
-var M = n(172799),
-    V = n(771016),
-    W = n(396574),
-    H = n(985018),
-    K = n(153335);
+var W = n(172799),
+    H = n(771016),
+    z = n(396574),
+    K = n(985018),
+    Q = n(818050);
 d.Ay.initialize();
-let z = "register",
-    Q = "login";
-function q(e) {
+let q = "register",
+    Y = "login";
+function X(e) {
     let { message: t, onClick: n, invite: s } = e,
         r = s?.guild_scheduled_event != null;
-    return W.VP
+    return z.VP
         ? (0, i.jsx)("div", {
-              className: r ? K.QX : K.eT,
-              children: (0, i.jsx)(h.Button, { text: t, onClick: n, variant: r ? "active" : "primary", fullWidth: !0 }),
+              className: r ? Q.QX : Q.eT,
+              children: (0, i.jsx)(_.$, { text: t, onClick: n, variant: r ? "active" : "primary", fullWidth: !0 }),
           })
-        : (0, i.jsx)(x.KE, { className: K.eT });
+        : (0, i.jsx)(v.KE, { className: Q.eT });
 }
-function Y(e) {
+function $(e) {
     let { invite: t, handleAccept: n } = e,
         s =
             null != t.guild_scheduled_event
-                ? (0, i.jsx)(I.X, { channel: t.channel, guildScheduledEvent: t.guild_scheduled_event })
-                : (0, i.jsx)("div", { className: K.S3, children: (0, i.jsx)(P.A, { invite: t }) }),
+                ? (0, i.jsx)(N.X, { channel: t.channel, guildScheduledEvent: t.guild_scheduled_event })
+                : (0, i.jsx)("div", { className: Q.S3, children: (0, i.jsx)(B.A, { invite: t }) }),
         r =
             null != t.guild_scheduled_event && null != t.guild
-                ? (0, i.jsx)(x.Ay, {
-                      className: K.QX,
-                      children: (0, i.jsx)(N.N, { guild: t.guild, onlineCount: t.approximate_presence_count }),
+                ? (0, i.jsx)(v.Ay, {
+                      className: Q.QX,
+                      children: (0, i.jsx)(j.N, { guild: t.guild, onlineCount: t.approximate_presence_count }),
                   })
                 : null;
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsxs)(x.Ay, {
-                children: [s, (0, i.jsx)(q, { message: H.intl.string(H.t.ohMvm1), onClick: n, invite: t })],
+            (0, i.jsxs)(v.Ay, {
+                children: [s, (0, i.jsx)(X, { message: K.intl.string(K.t.ohMvm1), onClick: n, invite: t })],
             }),
             r,
         ],
     });
 }
-function X(e) {
+function Z(e) {
     let { invite: t, onContinue: n } = e;
-    return (0, i.jsxs)(x.Ay, {
+    return (0, i.jsxs)(v.Ay, {
         children: [
-            (0, i.jsx)(P.A, { invite: t }),
-            W.VP
+            (0, i.jsx)(B.A, { invite: t }),
+            z.VP
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", {
-                              className: K.QX,
-                              children: (0, i.jsx)(h.Button, {
-                                  text: H.intl.string(H.t.UQvCf7),
+                              className: Q.QX,
+                              children: (0, i.jsx)(_.$, {
+                                  text: K.intl.string(K.t.UQvCf7),
                                   onClick: () => {
-                                      w.default.track(F.HAw.INVITE_CTA_CLICKED, {
+                                      G.default.track(F.HAw.INVITE_CTA_CLICKED, {
                                           action: "open_app",
                                           invite_code: t.code,
                                           guild_id: t.guild?.id,
                                       }),
-                                          p.Ay.openNativeAppModal(t.code);
+                                          g.Ay.openNativeAppModal(t.code);
                                   },
                                   variant: "primary",
                                   fullWidth: !0,
                               }),
                           }),
                           (0, i.jsx)("div", {
-                              className: K.Ot,
-                              children: (0, i.jsx)(h.Button, {
-                                  text: H.intl.string(H.t["2ixEBi"]),
+                              className: Q.Ot,
+                              children: (0, i.jsx)(_.$, {
+                                  text: K.intl.string(K.t["2ixEBi"]),
                                   onClick: () => {
-                                      w.default.track(F.HAw.INVITE_CTA_CLICKED, {
+                                      G.default.track(F.HAw.INVITE_CTA_CLICKED, {
                                           action: "continue_in_browser",
                                           invite_code: t.code,
                                           guild_id: t.guild?.id,
@@ -121,119 +123,119 @@ function X(e) {
                           }),
                       ],
                   })
-                : (0, i.jsx)(x.KE, { className: K.eT }),
+                : (0, i.jsx)(v.KE, { className: Q.eT }),
         ],
     });
 }
 function J(e) {
     let { title: t } = e;
-    return (0, i.jsxs)(x.Ay, { children: [(0, i.jsx)(x.hE, { children: t }), (0, i.jsx)(x.CK, {})] });
+    return (0, i.jsxs)(v.Ay, { children: [(0, i.jsx)(v.hE, { children: t }), (0, i.jsx)(v.CK, {})] });
 }
-function $(e) {
+function ee(e) {
     let { invite: t, error: n, handleAccept: s, handleDefaultTransition: r } = e;
-    return (0, i.jsx)(x.Ay, {
-        children: (0, i.jsxs)(h.BJc, {
+    return (0, i.jsx)(v.Ay, {
+        children: (0, i.jsxs)(h.B, {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, i.jsx)(P.A, { invite: t, error: n?.message }),
+                (0, i.jsx)(B.A, { invite: t, error: n?.message }),
                 n?.code === F.t02.INVALID_CANNOT_FRIEND_SELF
-                    ? (0, i.jsx)(q, { invite: t, message: H.intl.string(H.t.fIv16B), onClick: r })
-                    : (0, i.jsx)(q, { invite: t, message: H.intl.string(H.t.ohMvm1), onClick: s }),
+                    ? (0, i.jsx)(X, { invite: t, message: K.intl.string(K.t.fIv16B), onClick: r })
+                    : (0, i.jsx)(X, { invite: t, message: K.intl.string(K.t.ohMvm1), onClick: s }),
             ],
         }),
     });
 }
-function Z(e) {
+function et(e) {
     let { banned: t, handleDefaultTransition: n } = e;
-    return (0, i.jsxs)(x.Ay, {
+    return (0, i.jsxs)(v.Ay, {
         children: [
-            (0, i.jsx)(x.hE, { className: l()(K.Ot, K.QB), children: H.intl.string(H.t.kux01N) }),
-            (0, i.jsx)(x.tK, { children: t ? H.intl.string(H.t["5AkWAd"]) : H.intl.string(H.t["+qUJAj"]) }),
-            (0, i.jsx)(q, { message: H.intl.string(H.t.fIv16B), onClick: n }),
+            (0, i.jsx)(v.hE, { className: l()(Q.Ot, Q.QB), children: K.intl.string(K.t.kux01N) }),
+            (0, i.jsx)(v.tK, { children: t ? K.intl.string(K.t["5AkWAd"]) : K.intl.string(K.t["+qUJAj"]) }),
+            (0, i.jsx)(X, { message: K.intl.string(K.t.fIv16B), onClick: n }),
             (0, i.jsx)("div", {
-                className: K.Ot,
+                className: Q.Ot,
                 style: { textAlign: "left" },
-                children: (0, i.jsx)(h.QWc, {
+                children: (0, i.jsx)(m.Q, {
                     size: "sm",
                     textVariant: "text-sm/medium",
-                    text: H.intl.string(H.t.urIwn4),
-                    onClick: () => window.open(k.A.getArticleURL(F.MVz.INVALID_INVITES), "_blank"),
+                    text: K.intl.string(K.t.urIwn4),
+                    onClick: () => window.open(U.A.getArticleURL(F.MVz.INVALID_INVITES), "_blank"),
                 }),
             }),
         ],
     });
 }
-function ee(e) {
+function en(e) {
     let { handleDefaultTransition: t } = e;
-    return (0, i.jsxs)(x.Ay, {
+    return (0, i.jsxs)(v.Ay, {
         children: [
-            (0, i.jsx)(x.hE, { children: H.intl.string(H.t.fOc4gn) }),
-            (0, i.jsx)(q, { message: H.intl.string(H.t.fIv16B), onClick: t }),
+            (0, i.jsx)(v.hE, { children: K.intl.string(K.t.fOc4gn) }),
+            (0, i.jsx)(X, { message: K.intl.string(K.t.fIv16B), onClick: t }),
         ],
     });
 }
-function et(e) {
+function ei(e) {
     let { inviteKey: t, location: n, transitionTo: r, login: l } = e,
-        h = (0, d.bG)([L.A], () => L.A.getInvite(t)),
-        x = (0, d.bG)([v.A], () => v.A.getState(t)),
-        I = (0, d.bG)([b.default], () => b.default.isAuthenticated()),
-        N = (0, d.bG)([R.A], () => R.A.defaultRoute),
-        k = (0, d.bG)([f.A], () => f.A.isUnderageAnonymous()),
-        [P, K] = s.useState(null),
-        [q, et] = s.useState(!1);
+        _ = (0, d.bG)([k.A], () => k.A.getInvite(t)),
+        h = (0, d.bG)([C.A], () => C.A.getState(t)),
+        m = (0, d.bG)([w.default], () => w.default.isAuthenticated()),
+        v = (0, d.bG)([O.A], () => O.A.defaultRoute),
+        N = (0, d.bG)([E.A], () => E.A.isUnderageAnonymous()),
+        [j, U] = s.useState(null),
+        [B, Q] = s.useState(!1);
     s.useLayoutEffect(() => {
-        (x === F.fAW.OPEN || h?.state === F.elq.APP_OPENED) && et(!0);
-    }, [h?.state, x]);
-    let en = l ? Q : z,
-        ei = s.useCallback((e) => p.Ay.getInviteContext(e, h), [h]),
+        (h === F.fAW.OPEN || _?.state === F.elq.APP_OPENED) && Q(!0);
+    }, [_?.state, h]);
+    let X = l ? Y : q,
+        ei = s.useCallback((e) => g.Ay.getInviteContext(e, _), [_]),
         es = s.useCallback(
             (e) => {
-                null != h &&
-                    (null != h.channel || e?.channel != null) &&
-                    (h.guild?.id != null
-                        ? r(F.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(h.code))
-                        : p.Ay.transitionToInvite(e ?? h, r));
+                null != _ &&
+                    (null != _.channel || e?.channel != null) &&
+                    (_.guild?.id != null
+                        ? r(F.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(_.code))
+                        : g.Ay.transitionToInvite(e ?? _, r));
             },
-            [h, r],
+            [_, r],
         ),
         er = s.useCallback(() => {
-            K(null),
-                p.Ay.acceptInvite({
+            U(null),
+                g.Ay.acceptInvite({
                     inviteKey: t,
                     context: ei(F.S3d.INVITE),
                     skipOnboarding: !0,
                     callback: (e) => {
-                        (0, E.v)(e), null != e.channel && p.Ay.openApp(t, e.channel.id);
+                        (0, I.v)(e), null != e.channel && g.Ay.openApp(t, e.channel.id);
                     },
                 }).catch((e) => {
-                    if (e instanceof g.Wl || e instanceof g.LG) {
+                    if (e instanceof A.Wl || e instanceof A.LG) {
                         let t = (0, D.s)(e.code);
-                        K({ code: e.code, message: t });
-                    } else K({ code: e.code, message: H.intl.string(H.t.dDZRdy) });
+                        U({ code: e.code, message: t });
+                    } else U({ code: e.code, message: K.intl.string(K.t.dDZRdy) });
                 });
         }, [t, ei]),
         el = s.useCallback(() => {
-            r(N);
-        }, [N, r]);
+            r(v);
+        }, [v, r]);
     if (
-        ((0, m.Ay)(() => {
-            let e = b.default.getAnalyticsToken();
+        ((0, f.Ay)(() => {
+            let e = w.default.getAnalyticsToken();
             if (
                 (null != e &&
-                    _.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: b.default.getId() }),
-                w.default.track(F.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
-                (0, y.d)("invite"),
-                W.VP || B.A.launch("discord://" + F.BVt.INVITE(t), () => void 0),
-                !l && k)
+                    p.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: w.default.getId() }),
+                G.default.track(F.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
+                (0, R.d)("invite"),
+                z.VP || P.A.launch("discord://" + F.BVt.INVITE(t), () => void 0),
+                !l && N)
             ) {
-                let { baseCode: e } = (0, j.y$)(t);
-                (0, S.bG)(F.BVt.INVITE_LOGIN(e));
+                let { baseCode: e } = (0, b.y$)(t);
+                (0, y.bG)(F.BVt.INVITE_LOGIN(e));
             }
         }),
         s.useEffect(() => {
-            h?.state === F.elq.APP_NOT_OPENED && es();
-        }, [h?.state, es]),
+            _?.state === F.elq.APP_NOT_OPENED && es();
+        }, [_?.state, es]),
         (function (e) {
             let {
                     invite: t,
@@ -243,98 +245,98 @@ function et(e) {
                     mode: l,
                     getAcceptInviteContext: d,
                     handleContinue: u,
-                    transitionTo: h,
+                    transitionTo: _,
                 } = e,
-                _ = (0, A.A)(i),
-                g = (0, A.A)(r);
+                h = (0, x.A)(i),
+                m = (0, x.A)(r);
             s.useEffect(() => {
-                if (l === Q && i && !1 === _) {
-                    let e = b.default.getFingerprint();
+                if (l === Y && i && !1 === h) {
+                    let e = w.default.getFingerprint();
                     if (null != e) {
                         let i = (0, c.d)(e);
-                        w.default.track(F.HAw.INVITE_LOGIN_SUCCESSFUL, {
-                            invite_code: (0, j.m0)(n),
+                        G.default.track(F.HAw.INVITE_LOGIN_SUCCESSFUL, {
+                            invite_code: (0, b.m0)(n),
                             guild_id: t?.guild?.id,
                             channel_id: t?.channel?.id,
                             inviter_id: t?.inviter?.id,
                             prev_user_id: i,
                         });
                     }
-                    p.Ay.acceptInvite({ inviteKey: n, context: d(F.S3d.INVITE), skipOnboarding: !0, callback: u });
+                    g.Ay.acceptInvite({ inviteKey: n, context: d(F.S3d.INVITE), skipOnboarding: !0, callback: u });
                 }
-            }, [i, _, l, d, u, t, n]),
+            }, [i, h, l, d, u, t, n]),
                 s.useEffect(() => {
-                    if (null != t && l === z && i && !1 === _) {
+                    if (null != t && l === q && i && !1 === h) {
                         let { channel: e } = t;
                         if (null != e)
-                            if (((0, C.C)(V.zY.INVITE_UNCLAIMED), null != t.guild)) {
+                            if (((0, S.C)(H.zY.INVITE_UNCLAIMED), null != t.guild)) {
                                 let e = (0, o.Lt)(t.flags ?? 0, a.Q.IS_APPLICATION_BYPASS),
                                     n =
                                         t.guild.features?.includes(F.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
                                         t.guild.features?.includes(F.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
                                 !e && n
-                                    ? h(F.BVt.GUILD_MEMBER_VERIFICATION(t.guild.id))
-                                    : h(F.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code));
-                            } else p.Ay.transitionToInvite(t, h);
+                                    ? _(F.BVt.GUILD_MEMBER_VERIFICATION(t.guild.id))
+                                    : _(F.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code));
+                            } else g.Ay.transitionToInvite(t, _);
                     }
-                }, [t, i, _, h, l]),
+                }, [t, i, h, _, l]),
                 s.useEffect(() => {
                     null != t &&
-                        r !== g &&
+                        r !== m &&
                         r === F.fAW.OPEN &&
-                        w.default.track(F.HAw.INVITE_APP_INVOKED, {
-                            invite_code: (0, j.m0)(n),
+                        G.default.track(F.HAw.INVITE_APP_INVOKED, {
+                            invite_code: (0, b.m0)(n),
                             guild_id: t.guild?.id,
                             channel_id: t.channel?.id,
                             inviter_id: t.inviter?.id,
-                            user_is_member: null != t.guild && null != O.A.getGuild(t.guild.id),
+                            user_is_member: null != t.guild && null != L.A.getGuild(t.guild.id),
                             size_total: t.approximate_member_count,
-                            invite_type: null != t.type ? M.Xd[t.type] : void 0,
+                            invite_type: null != t.type ? W.Xd[t.type] : void 0,
                         });
-                }, [t, r, g, n]);
+                }, [t, r, m, n]);
         })({
-            invite: h,
+            invite: _,
             inviteKey: t,
-            authenticated: I,
-            nativeAppState: x,
-            mode: en,
+            authenticated: m,
+            nativeAppState: h,
+            mode: X,
             getAcceptInviteContext: ei,
             handleContinue: es,
             transitionTo: r,
         }),
-        null == h)
+        null == _)
     )
         return null;
-    if (q || x === F.fAW.OPEN || h.state === F.elq.APP_OPENED) return (0, i.jsx)(X, { invite: h, onContinue: es });
-    let { state: ea } = h;
-    if (ea === F.elq.APP_NOT_OPENED) return (0, i.jsx)(ee, { handleDefaultTransition: el });
+    if (B || h === F.fAW.OPEN || _.state === F.elq.APP_OPENED) return (0, i.jsx)(Z, { invite: _, onContinue: es });
+    let { state: ea } = _;
+    if (ea === F.elq.APP_NOT_OPENED) return (0, i.jsx)(en, { handleDefaultTransition: el });
     if ([F.elq.RESOLVING, F.elq.ACCEPTING, F.elq.APP_OPENING].includes(ea)) {
-        let e = ea === F.elq.ACCEPTING ? H.intl.string(H.t["6wsY16"]) : (F.elq.RESOLVING, H.intl.string(H.t["Z+hCVU"]));
+        let e = ea === F.elq.ACCEPTING ? K.intl.string(K.t["6wsY16"]) : (F.elq.RESOLVING, K.intl.string(K.t["Z+hCVU"]));
         return (0, i.jsx)(J, { title: e });
     }
     return ea === F.elq.EXPIRED
-        ? (0, i.jsx)(Z, { banned: !1, handleDefaultTransition: el })
+        ? (0, i.jsx)(et, { banned: !1, handleDefaultTransition: el })
         : ea === F.elq.BANNED
-          ? (0, i.jsx)(Z, { banned: !0, handleDefaultTransition: el })
+          ? (0, i.jsx)(et, { banned: !0, handleDefaultTransition: el })
           : ea === F.elq.ERROR
-            ? (0, i.jsx)($, { invite: h, error: P, handleAccept: er, handleDefaultTransition: el })
+            ? (0, i.jsx)(ee, { invite: _, error: j, handleAccept: er, handleDefaultTransition: el })
             : ea === F.elq.RESOLVED
-              ? I && (0, o.Lt)(h.flags ?? 0, a.Q.IS_GUEST_INVITE)
-                  ? (p.Ay.openApp(h.code),
-                    u.u.set(T.B, h.code),
-                    (0, i.jsx)(X, { invite: h, onContinue: () => r(F.BVt.APP) }))
-                  : I || !W.VP
-                    ? (0, i.jsx)(Y, { invite: h, handleAccept: er })
-                    : en === Q
-                      ? (0, i.jsx)(U.A, { invite: h, transitionTo: r, location: n })
-                      : (0, i.jsx)(G.A, {
-                            invite: h,
+              ? m && (0, o.Lt)(_.flags ?? 0, a.Q.IS_GUEST_INVITE)
+                  ? (g.Ay.openApp(_.code),
+                    u.u.set(T.B, _.code),
+                    (0, i.jsx)(Z, { invite: _, onContinue: () => r(F.BVt.APP) }))
+                  : m || !z.VP
+                    ? (0, i.jsx)($, { invite: _, handleAccept: er })
+                    : X === Y
+                      ? (0, i.jsx)(M.A, { invite: _, transitionTo: r, location: n })
+                      : (0, i.jsx)(V.A, {
+                            invite: _,
                             onLoginStart: () => {
-                                w.default.track(F.HAw.INVITE_LOGIN, {
-                                    invite_code: h?.code,
-                                    guild_id: h?.guild?.id,
-                                    channel_id: h?.channel?.id,
-                                    inviter_id: h?.inviter?.id,
+                                G.default.track(F.HAw.INVITE_LOGIN, {
+                                    invite_code: _?.code,
+                                    guild_id: _?.guild?.id,
+                                    channel_id: _?.channel?.id,
+                                    inviter_id: _?.inviter?.id,
                                 });
                             },
                             location: n,

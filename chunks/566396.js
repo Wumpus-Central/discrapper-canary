@@ -1,8 +1,8 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => x });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    l = n(397927),
+    l = n(477782),
     a = n(956793),
     d = n(47167),
     s = n(713654),
@@ -14,22 +14,22 @@ var i = n(311907),
     f = n(287809),
     h = n(977997),
     E = n(652215),
-    I = n(895867),
-    p = n(985018);
-let v = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
-function _(e) {
+    I = n(499214),
+    v = n(985018);
+let _ = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
+function x(e) {
     let {
         channelId: t,
         channelName: n,
-        channel: _,
-        guild: x,
-        canJoin: b,
+        channel: x,
+        guild: b,
+        canJoin: y,
         isAlreadyConnected: S,
     } = (0, i.cf)([h.A, u.A, g.A, f.default, A.A, o.A, c.A], () => {
         let t = h.A.getDiscoverableVoiceStateForUser(e);
-        if (null == t) return v;
+        if (null == t) return _;
         let n = u.A.getChannel(t.channelId);
-        if (null == n || !n.isVocal()) return v;
+        if (null == n || !n.isVocal()) return _;
         let r = n.getGuildId?.() ?? null,
             i = null != r ? o.A.getGuild(r) : null,
             l = g.A.getVoiceChannelId() === n.id,
@@ -43,13 +43,13 @@ function _(e) {
             isAlreadyConnected: l,
         };
     }, [e]);
-    if (null == t || !b || S) return null;
-    let y = (0, s.gU)(_, x ?? void 0);
-    return (0, r.jsx)(l.Drp, {
+    if (null == t || !y || S) return null;
+    let p = (0, s.gU)(x, b ?? void 0);
+    return (0, r.jsx)(l.Dr, {
         id: "join-user-voice-channel",
-        void_label: p.intl.format(I.default["4l56iz"], {
+        void_label: v.intl.format(I.default["4l56iz"], {
             channelName: n ?? t,
-            channelIcon: () => (null != y ? (0, r.jsx)(y, { size: "xxs", color: "currentColor" }) : null),
+            channelIcon: () => (null != p ? (0, r.jsx)(p, { size: "xxs", color: "currentColor" }) : null),
         }),
         action: () => {
             a.default.selectVoiceChannel(t);

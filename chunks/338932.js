@@ -1,32 +1,29 @@
-"use strict";
-n.d(t, { T: () => l });
-var r = n(64700),
-    i = n(311907),
-    a = n(775602),
-    s = n(531685);
-let o = 1e3,
-    l = (e, t) => {
-        let n = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-            l = (0, i.bG)([s.A], () => s.A.isFocused()),
-            [u, c] = r.useState(!1),
-            d = r.useRef(null);
-        return (
-            r.useEffect(() => {
-                null !== d.current && (clearTimeout(d.current), (d.current = null));
-                let r = !n && !t,
-                    i = l && (e || r);
-                i && n
-                    ? (d.current = window.setTimeout(() => {
-                          c(!0);
-                      }, o))
-                    : c(i);
-            }, [l, e, n, t]),
-            r.useEffect(
-                () => () => {
-                    null !== d.current && (clearTimeout(d.current), (d.current = null));
-                },
-                [],
-            ),
-            { canAnimate: u }
-        );
-    };
+n.d(t, { T: () => o });
+var a = n(64700),
+    r = n(311907),
+    l = n(775602),
+    i = n(531685);
+let o = (e, t) => {
+    let n = (0, r.bG)([l.A], () => l.A.useReducedMotion),
+        o = (0, r.bG)([i.A], () => i.A.isFocused()),
+        [s, c] = a.useState(!1),
+        u = a.useRef(null);
+    return (
+        a.useEffect(() => {
+            null !== u.current && (clearTimeout(u.current), (u.current = null));
+            let a = o && (e || (!n && !t));
+            a && n
+                ? (u.current = window.setTimeout(() => {
+                      c(!0);
+                  }, 1e3))
+                : c(a);
+        }, [o, e, n, t]),
+        a.useEffect(
+            () => () => {
+                null !== u.current && (clearTimeout(u.current), (u.current = null));
+            },
+            [],
+        ),
+        { canAnimate: s }
+    );
+};

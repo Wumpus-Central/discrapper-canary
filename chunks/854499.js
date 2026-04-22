@@ -2,48 +2,47 @@
 n.d(t, { H: () => d });
 var r = n(8321),
     i = n(114099),
-    a = n(297987),
-    s = n(401705),
+    s = n(297987),
+    a = n(401705),
     o = n(807177),
     l = n(803082),
     u = n(64700);
-let c = 500;
 function d(e) {
     let {
             isDisabled: t,
             onLongPressStart: n,
             onLongPressEnd: d,
-            onLongPress: _,
-            threshold: f = c,
-            accessibilityDescription: p,
+            onLongPress: c,
+            threshold: _ = 500,
+            accessibilityDescription: f,
         } = e,
-        h = (0, u.useRef)(void 0),
-        { addGlobalListener: m, removeGlobalListener: g } = (0, i.A)(),
-        { pressProps: E } = (0, r.d)({
+        E = (0, u.useRef)(void 0),
+        { addGlobalListener: h, removeGlobalListener: p } = (0, i.A)(),
+        { pressProps: m } = (0, r.d)({
             isDisabled: t,
             onPressStart(e) {
                 if (
                     (e.continuePropagation(),
                     ("mouse" === e.pointerType || "touch" === e.pointerType) &&
                         (n && n({ ...e, type: "longpressstart" }),
-                        (h.current = setTimeout(() => {
+                        (E.current = setTimeout(() => {
                             e.target.dispatchEvent(new PointerEvent("pointercancel", { bubbles: !0 })),
-                                (0, a.TW)(e.target).activeElement !== e.target && (0, s.e)(e.target),
-                                _ && _({ ...e, type: "longpress" }),
-                                (h.current = void 0);
-                        }, f)),
+                                (0, s.TW)(e.target).activeElement !== e.target && (0, a.e)(e.target),
+                                c && c({ ...e, type: "longpress" }),
+                                (E.current = void 0);
+                        }, _)),
                         "touch" === e.pointerType))
                 ) {
                     let t = (e) => {
                         e.preventDefault();
                     };
-                    m(e.target, "contextmenu", t, { once: !0 }),
-                        m(
+                    h(e.target, "contextmenu", t, { once: !0 }),
+                        h(
                             window,
                             "pointerup",
                             () => {
                                 setTimeout(() => {
-                                    g(e.target, "contextmenu", t);
+                                    p(e.target, "contextmenu", t);
                                 }, 30);
                             },
                             { once: !0 },
@@ -51,10 +50,10 @@ function d(e) {
                 }
             },
             onPressEnd(e) {
-                h.current && clearTimeout(h.current),
+                E.current && clearTimeout(E.current),
                     d && ("mouse" === e.pointerType || "touch" === e.pointerType) && d({ ...e, type: "longpressend" });
             },
         }),
-        A = (0, o.I)(_ && !t ? p : void 0);
-    return { longPressProps: (0, l.v)(E, A) };
+        g = (0, o.I)(c && !t ? f : void 0);
+    return { longPressProps: (0, l.v)(m, g) };
 }

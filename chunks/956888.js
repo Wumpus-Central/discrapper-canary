@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header_a9b452",
     m_: "subheader_a9b452",

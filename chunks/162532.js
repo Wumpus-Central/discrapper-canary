@@ -2,8 +2,8 @@
 n.d(t, { Y: () => d }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(113144),
-    s = n.n(a),
+    s = n(113144),
+    a = n.n(s),
     o = n(776231);
 let l = /url\(['"](.*)['"]\)/,
     u = (e) => {
@@ -11,9 +11,6 @@ let l = /url\(['"](.*)['"]\)/,
         let t = e.match(l);
         return null != t ? t[1] : e;
     };
-function c(e) {
-    return null == e || "" === e || "none" === e ? "none" : `url(${e})`;
-}
 function d(e) {
     class t extends i.Component {
         cachedURLs = [];
@@ -28,10 +25,10 @@ function d(e) {
             if (t === this.state) return;
             let { cached: n, loaded: r } = this.state,
                 { style: i } = this.props,
-                a = null != i ? u(i.backgroundImage) : null;
-            (null == a && a !== n) || this.cachedURLs.indexOf(a) >= 0
-                ? this.setState({ loaded: !0, cached: a })
-                : null != a && a !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(a));
+                s = null != i ? u(i.backgroundImage) : null;
+            (null == s && s !== n) || this.cachedURLs.indexOf(s) >= 0
+                ? this.setState({ loaded: !0, cached: s })
+                : null != s && s !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(s));
         }
         preloadURL(e) {
             this.canceller?.(),
@@ -44,9 +41,14 @@ function d(e) {
         }
         render() {
             let { style: t, ...n } = this.props,
-                { loaded: i, cached: a } = this.state;
-            return i || null == t || (t = { ...t, backgroundImage: c(a) }), (0, r.jsx)(e, { style: t, ...n });
+                { loaded: i, cached: s } = this.state;
+            return (
+                i ||
+                    null == t ||
+                    (t = { ...t, backgroundImage: null == s || "" === s || "none" === s ? "none" : `url(${s})` }),
+                (0, r.jsx)(e, { style: t, ...n })
+            );
         }
     }
-    return s()(t, e), t;
+    return a()(t, e), t;
 }

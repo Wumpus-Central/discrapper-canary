@@ -1,15 +1,14 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var r = n(499979),
     i = n(451988),
-    a = n(929921),
-    s = n(652215);
-let o = 1e3;
-function l(e) {
+    s = n(929921),
+    a = n(652215);
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class u {
+class l {
     _statInterval;
     _isSender;
     _streamEnd;
@@ -25,10 +24,10 @@ class u {
         (this._isSender = t), (this._statInterval = new i.IX()), (this._lastLayout = e), (this._layoutBuckets = {});
     }
     start() {
-        let { resolution: e, fps: t } = a.A.getState();
+        let { resolution: e, fps: t } = s.A.getState();
         (this._targetResolution = e),
             (this._targetFPS = t),
-            this._statInterval.start(o, this._sampleStats),
+            this._statInterval.start(1e3, this._sampleStats),
             (this._lastLayoutChanged = (0, r.tB)());
     }
     stop() {
@@ -56,13 +55,13 @@ class u {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: l(this._layoutBuckets[s.SO9.FULL_SCREEN]),
-            duration_layout_theatre: l(this._layoutBuckets[s.SO9.THEATRE]),
-            duration_layout_pip: l(this._layoutBuckets[s.SO9.PIP]),
-            duration_layout_popout: l(this._layoutBuckets[s.SO9.POPOUT]),
-            duration_layout_portrait: l(this._layoutBuckets[s.SO9.PORTRAIT]),
-            duration_layout_landscape: l(this._layoutBuckets[s.SO9.LANDSCAPE]),
-            duration_layout_minimized: l(this._layoutBuckets[s.SO9.MINIMIZED]),
+            duration_layout_fullscreen: o(this._layoutBuckets[a.SO9.FULL_SCREEN]),
+            duration_layout_theatre: o(this._layoutBuckets[a.SO9.THEATRE]),
+            duration_layout_pip: o(this._layoutBuckets[a.SO9.PIP]),
+            duration_layout_popout: o(this._layoutBuckets[a.SO9.POPOUT]),
+            duration_layout_portrait: o(this._layoutBuckets[a.SO9.PORTRAIT]),
+            duration_layout_landscape: o(this._layoutBuckets[a.SO9.LANDSCAPE]),
+            duration_layout_minimized: o(this._layoutBuckets[a.SO9.MINIMIZED]),
         };
         return this._isSender
             ? {
@@ -75,7 +74,7 @@ class u {
             : e;
     }
     _sampleStats = () => {
-        let { resolution: e, fps: t } = a.A.getState();
+        let { resolution: e, fps: t } = s.A.getState();
         this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS;
     };
 }

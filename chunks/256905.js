@@ -1,35 +1,61 @@
-"use strict";
-n.d(t, { K: () => a, R: () => o });
-var r = n(627968),
-    i = n(397927),
-    s = n(700331);
-let a = "Media Viewer Modal";
+a.d(t, { K: () => s, R: () => o });
+var n = a(627968),
+    r = a(192308),
+    l = a(892491),
+    i = a(700331);
+let s = "Media Viewer Modal";
 function o(e, t) {
-    let { location: o, contextKey: l, onClose: u, ...c } = e,
-        d = c.items[c.startingIndex ?? 0]?.sourceMetadata?.message;
-    s.l.markSessionStarted({
-        channelId: d?.channel_id,
-        numMediaItems: c.items.length,
+    let { location: o, contextKey: c, onClose: d, ...u } = e,
+        h = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
+    i.l.markSessionStarted({
+        channelId: h?.channel_id,
+        numMediaItems: u.items.length,
         source: o,
-        hasMediaOptions: !c.shouldHideMediaOptions,
+        hasMediaOptions: !u.shouldHideMediaOptions,
     }),
-        (0, i.mMO)(
+        (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("57174"), n.e("91652"), n.e("37457"), n.e("23942")]).then(
-                    n.bind(n, 321565),
-                );
+                let { default: e } = await Promise.all([
+                    a.e("24199"),
+                    a.e("57036"),
+                    a.e("70474"),
+                    a.e("76640"),
+                    a.e("7175"),
+                    a.e("55202"),
+                    a.e("23353"),
+                    a.e("73667"),
+                    a.e("11250"),
+                    a.e("14138"),
+                    a.e("3442"),
+                    a.e("85071"),
+                    a.e("88017"),
+                    a.e("70994"),
+                    a.e("17239"),
+                    a.e("24267"),
+                    a.e("51793"),
+                    a.e("58164"),
+                    a.e("36682"),
+                    a.e("63070"),
+                    a.e("25370"),
+                    a.e("96313"),
+                    a.e("37457"),
+                    a.e("47397"),
+                ]).then(a.bind(a, 321565));
                 return function (t) {
-                    let n = () => {
-                        u?.(), t.onClose();
-                    };
-                    return (0, r.jsx)(e, { ...t, ...c, onClose: n });
+                    return (0, n.jsx)(e, {
+                        ...t,
+                        ...u,
+                        onClose: () => {
+                            d?.(), t.onClose();
+                        },
+                    });
                 };
             },
             {
-                modalKey: a,
-                contextKey: l,
-                onCloseCallback: s.l.markSessionCompleted,
-                backdropStyle: i.F2Z.LIGHTBOX,
+                modalKey: s,
+                contextKey: c,
+                onCloseCallback: i.l.markSessionCompleted,
+                backdropStyle: l.F.LIGHTBOX,
                 stackingBehavior: t,
             },
         );

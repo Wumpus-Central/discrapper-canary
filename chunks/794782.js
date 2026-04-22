@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { RX: () => l, Sn: () => u, UZ: () => p, hQ: () => f, lc: () => o });
+n.d(t, { RX: () => l, Sn: () => u, UZ: () => c, hQ: () => d, lc: () => o });
 var r = n(961350),
     i = n(9448),
-    a = n(974930),
-    s = n(988794);
+    s = n(974930),
+    a = n(988794);
 function o(e) {
     return !!e?.id;
 }
@@ -39,77 +39,68 @@ function u(e) {
               count: e.count,
           };
 }
-function c(e) {
-    return e.map((e) => ({
-        event_exception_id: e.eventExceptionId,
-        event_id: e.eventId,
-        guild_id: e.guildId,
-        scheduled_start_time: e.scheduledStartTime,
-        scheduled_end_time: e.scheduledEndTime,
-        is_canceled: e.isCanceled,
-    }));
-}
-function d(e) {
-    return e.map((e) => ({
-        eventExceptionId: e.event_exception_id,
-        eventId: e.event_id,
-        guildId: e.guild_id,
-        scheduledStartTime: e.scheduled_start_time,
-        scheduledEndTime: e.scheduled_end_time,
-        isCanceled: e.is_canceled,
-    }));
-}
-function _(e) {
-    return null != e && "id" in e;
-}
-function f(e, t, n) {
+function d(e, t, n) {
     let {
         name: i,
-        description: a,
+        description: s,
         privacyLevel: o,
         channelId: u,
         scheduledStartTime: d,
-        scheduledEndTime: _,
-        entityType: f,
-        entityMetadata: p,
-        image: h,
-        recurrenceRule: m,
-        eventExceptions: g,
+        scheduledEndTime: c,
+        entityType: _,
+        entityMetadata: f,
+        image: E,
+        recurrenceRule: h,
+        eventExceptions: p,
     } = e;
     return {
-        id: n ?? s.tq,
+        id: n ?? a.tq,
         name: i,
-        description: a ?? null,
+        description: s ?? null,
         privacy_level: o,
         scheduled_start_time: d,
-        scheduled_end_time: _,
-        entity_type: f,
-        entity_metadata: p ?? null,
-        image: h ?? void 0,
+        scheduled_end_time: c,
+        entity_type: _,
+        entity_metadata: f ?? null,
+        image: E ?? void 0,
         channel_id: u,
         guild_id: t,
         creator_id: r.default.getId(),
-        status: s.XG.SCHEDULED,
-        recurrence_rule: l(m),
-        guild_scheduled_event_exceptions: c(g),
+        status: a.XG.SCHEDULED,
+        recurrence_rule: l(h),
+        guild_scheduled_event_exceptions: p.map((e) => ({
+            event_exception_id: e.eventExceptionId,
+            event_id: e.eventId,
+            guild_id: e.guildId,
+            scheduled_start_time: e.scheduledStartTime,
+            scheduled_end_time: e.scheduledEndTime,
+            is_canceled: e.isCanceled,
+        })),
     };
 }
-function p(e, t) {
+function c(e, t) {
     let n = {
         name: e?.name ?? "",
-        privacyLevel: e?.privacy_level ?? s.dD.GUILD_ONLY,
+        privacyLevel: e?.privacy_level ?? a.dD.GUILD_ONLY,
         description: e?.description ?? "",
-        scheduledStartTime: e?.scheduled_start_time ?? (0, a.jd)().toISOString(),
-        entityType: e?.entity_type ?? s.Ps.NONE,
+        scheduledStartTime: e?.scheduled_start_time ?? (0, s.jd)().toISOString(),
+        entityType: e?.entity_type ?? a.Ps.NONE,
         entityMetadata: e?.entity_metadata ?? void 0,
         channelId: e?.channel_id,
         creatorId: e?.creator_id,
         image: e?.image,
         scheduledEndTime: e?.scheduled_end_time,
         recurrenceRule: u(e?.recurrence_rule),
-        eventExceptions: d(e?.guild_scheduled_event_exceptions ?? []),
+        eventExceptions: (e?.guild_scheduled_event_exceptions ?? []).map((e) => ({
+            eventExceptionId: e.event_exception_id,
+            eventId: e.event_id,
+            guildId: e.guild_id,
+            scheduledStartTime: e.scheduled_start_time,
+            scheduledEndTime: e.scheduled_end_time,
+            isCanceled: e.is_canceled,
+        })),
     };
-    if (_(e) && e?.entity_type === s.Ps.EXTERNAL) {
+    if (null != e && "id" in e && e?.entity_type === a.Ps.EXTERNAL) {
         let t = (0, i.oF)(e);
         null != t && (n.entityMetadata = { location: t });
     } else
@@ -117,7 +108,7 @@ function p(e, t) {
             null != t &&
             ((n.channelId = t.id),
             t.isGuildStageVoice()
-                ? (n.entityType = s.Ps.STAGE_INSTANCE)
-                : t.isGuildVoice() && (n.entityType = s.Ps.VOICE));
+                ? (n.entityType = a.Ps.STAGE_INSTANCE)
+                : t.isGuildVoice() && (n.entityType = a.Ps.VOICE));
     return n;
 }

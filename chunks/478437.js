@@ -1,28 +1,26 @@
 "use strict";
-n.d(t, { k: () => i, r: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.DM = 1)] = "DM"),
-        (e[(e.GROUP_DM = 3)] = "GROUP_DM"),
-        (e[(e.GUILD_TEXT = 0)] = "GUILD_TEXT"),
-        (e[(e.GUILD_VOICE = 2)] = "GUILD_VOICE"),
-        (e[(e.GUILD_CATEGORY = 4)] = "GUILD_CATEGORY"),
-        (e[(e.GUILD_ANNOUNCEMENT = 5)] = "GUILD_ANNOUNCEMENT"),
-        (e[(e.GUILD_STORE = 6)] = "GUILD_STORE"),
-        (e[(e.ANNOUNCEMENT_THREAD = 10)] = "ANNOUNCEMENT_THREAD"),
-        (e[(e.PUBLIC_THREAD = 11)] = "PUBLIC_THREAD"),
-        (e[(e.PRIVATE_THREAD = 12)] = "PRIVATE_THREAD"),
-        (e[(e.GUILD_STAGE_VOICE = 13)] = "GUILD_STAGE_VOICE"),
-        (e[(e.GUILD_DIRECTORY = 14)] = "GUILD_DIRECTORY"),
-        (e[(e.GUILD_FORUM = 15)] = "GUILD_FORUM"),
-        (e[(e.GUILD_MEDIA = 16)] = "GUILD_MEDIA"),
-        (e[(e.LOBBY = 17)] = "LOBBY"),
-        (e[(e.DM_SDK = 18)] = "DM_SDK"),
-        (e[(e.UNKNOWN = 1e4)] = "UNKNOWN"),
-        e
-    );
-})({});
-let i = {
+n.d(t, { k: () => s, r: () => i });
+var r,
+    i =
+        (((r = {})[(r.DM = 1)] = "DM"),
+        (r[(r.GROUP_DM = 3)] = "GROUP_DM"),
+        (r[(r.GUILD_TEXT = 0)] = "GUILD_TEXT"),
+        (r[(r.GUILD_VOICE = 2)] = "GUILD_VOICE"),
+        (r[(r.GUILD_CATEGORY = 4)] = "GUILD_CATEGORY"),
+        (r[(r.GUILD_ANNOUNCEMENT = 5)] = "GUILD_ANNOUNCEMENT"),
+        (r[(r.GUILD_STORE = 6)] = "GUILD_STORE"),
+        (r[(r.ANNOUNCEMENT_THREAD = 10)] = "ANNOUNCEMENT_THREAD"),
+        (r[(r.PUBLIC_THREAD = 11)] = "PUBLIC_THREAD"),
+        (r[(r.PRIVATE_THREAD = 12)] = "PRIVATE_THREAD"),
+        (r[(r.GUILD_STAGE_VOICE = 13)] = "GUILD_STAGE_VOICE"),
+        (r[(r.GUILD_DIRECTORY = 14)] = "GUILD_DIRECTORY"),
+        (r[(r.GUILD_FORUM = 15)] = "GUILD_FORUM"),
+        (r[(r.GUILD_MEDIA = 16)] = "GUILD_MEDIA"),
+        (r[(r.LOBBY = 17)] = "LOBBY"),
+        (r[(r.DM_SDK = 18)] = "DM_SDK"),
+        (r[(r.UNKNOWN = 1e4)] = "UNKNOWN"),
+        r);
+let s = {
     CALLABLE: new Set([1, 3]),
     TEXTUAL: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18]),
     GUILD_THREADS_ONLY: new Set([15, 16]),

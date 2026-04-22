@@ -1,30 +1,32 @@
-a.d(t, { default: () => o });
-var l = a(627968),
-    n = a(64700),
-    r = a(397927),
-    d = a(442433),
-    u = a(545059);
-function o(e) {
-    let { groupId: t, onSelect: o } = e,
-        i = n.useCallback(() => {
-            (0, r.mMO)(async () => {
-                let { default: e } = await a.e("51080").then(a.bind(a, 519528));
-                return (a) => (0, l.jsx)(e, { ...a, groupId: t });
+t.d(a, { default: () => s });
+var l = t(627968),
+    n = t(64700),
+    d = t(192308),
+    r = t(861672),
+    o = t(477782),
+    u = t(442433),
+    i = t(545059);
+function s(e) {
+    let { groupId: a, onSelect: s } = e,
+        c = n.useCallback(() => {
+            (0, d.openModalLazy)(async () => {
+                let { default: e } = await t.e("51080").then(t.bind(t, 297147));
+                return (t) => (0, l.jsx)(e, { ...t, groupId: a });
             }),
-                (0, d.Z_)();
-        }, [t]),
-        s = n.useCallback(() => {
-            u.A.deleteGroup(t), (0, d.Z_)();
-        }, [t]);
-    return (0, l.jsxs)(r.W1t, {
+                (0, u.Z_)();
+        }, [a]),
+        p = n.useCallback(() => {
+            i.A.deleteGroup(a), (0, u.Z_)();
+        }, [a]);
+    return (0, l.jsxs)(r.W, {
         "data-menu-migrated": !0,
         "aria-label": "Group Context Menu",
         navId: "group-context-menu",
-        onClose: d.Z_,
-        onSelect: o,
+        onClose: u.Z_,
+        onSelect: s,
         children: [
-            (0, l.jsx)(r.Drp, { id: "edit", label: "Edit Group", action: i }),
-            (0, l.jsx)(r.Drp, { id: "delete", label: "Delete Group", action: s, color: "danger" }),
+            (0, l.jsx)(o.Dr, { id: "edit", label: "Edit Group", action: c }),
+            (0, l.jsx)(o.Dr, { id: "delete", label: "Delete Group", action: p, color: "danger" }),
         ],
     });
 }

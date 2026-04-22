@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { Nn: () => u, fI: () => g, p_: () => m });
 var i = n(627968),
-    s = n(397927),
-    l = n(58149),
+    l = n(192308),
+    s = n(58149),
     r = n(503566),
     a = n(631305),
     o = n(473145),
@@ -11,17 +10,17 @@ var i = n(627968),
 function u(e) {
     let {
         uploadType: t,
-        maxFileSizeBytes: l,
+        maxFileSizeBytes: s,
         onComplete: r,
         showUpsellHeader: a = !0,
         analyticsLocation: o,
         analyticsLocations: d,
     } = e;
-    (0, s.mMO)(async () => {
-        let { default: e } = await Promise.all([n.e("79149"), n.e("53653"), n.e("18153")]).then(n.bind(n, 551028));
+    (0, l.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([n.e("79149"), n.e("53653"), n.e("85663")]).then(n.bind(n, 551028));
         return (n) =>
             (0, i.jsx)(e, {
-                maxFileSizeBytes: l,
+                maxFileSizeBytes: s,
                 onComplete: r,
                 uploadType: t,
                 showUpsellHeader: a,
@@ -36,35 +35,35 @@ function m(e) {
         guild: t,
         analyticsLocations: n,
         analyticsSection: i,
-        analyticsObject: s,
+        analyticsObject: l,
         perks: r,
         targetPremiumGuildTier: d,
     } = e;
-    (0, l.zV)(c.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
+    (0, s.zV)(c.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: { section: i, object: c.ZSU.LEARN_MORE, objectType: null != d ? (0, o.k1)(d) : void 0 },
         guild_id: t.id,
         location_stack: n,
     }),
         (0, a.A)({
             analyticsLocations: n,
-            analyticsSourceLocation: { section: i, object: s, page: c.liQ.GUILD_SETTINGS },
+            analyticsSourceLocation: { section: i, object: l, page: c.liQ.GUILD_SETTINGS },
             guild: t,
             perks: r,
         });
 }
 function g(e, t, n, i) {
-    let s = i?.type,
-        l = { page: c.liQ.GUILD_SETTINGS, section: c.JJy.ANIMATED_GUILD_BANNER_UPSELL, object: "temp" };
-    if (null != s && null != n)
-        if ("image/gif" !== s || e.features.has(c.GuildFeatures.ANIMATED_BANNER)) {
+    let l = i?.type,
+        s = { page: c.liQ.GUILD_SETTINGS, section: c.JJy.ANIMATED_GUILD_BANNER_UPSELL, object: "temp" };
+    if (null != l && null != n)
+        if ("image/gif" !== l || e.features.has(c.GuildFeatures.ANIMATED_BANNER)) {
             if (!e.features.has(c.GuildFeatures.BANNER)) {
-                (l.object = c.ZSU.IMAGE_CROPPING_MODAL),
-                    (0, r._)({ guild: e, analyticsLocations: t, analyticsLocation: l, banner: n, isGIF: !1 });
+                (s.object = c.ZSU.IMAGE_CROPPING_MODAL),
+                    (0, r._)({ guild: e, analyticsLocations: t, analyticsLocation: s, banner: n, isGIF: !1 });
                 return;
             }
         } else {
-            (l.object = c.ZSU.GIF_CROPPING_MODAL),
-                (0, r._)({ guild: e, analyticsLocations: t, analyticsLocation: l, banner: n, isGIF: !0 });
+            (s.object = c.ZSU.GIF_CROPPING_MODAL),
+                (0, r._)({ guild: e, analyticsLocations: t, analyticsLocation: s, banner: n, isGIF: !0 });
             return;
         }
     d.A.updateGuild({ banner: n });

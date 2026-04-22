@@ -1,48 +1,50 @@
 "use strict";
 n.d(t, { A: () => I });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
-    o = n(397927),
-    l = n(775602),
-    u = n(607470),
-    c = n(422936),
-    d = n(234419),
-    _ = n(725807),
-    f = n(811611),
-    p = n(652215),
-    h = n(788868),
-    m = n(985018),
-    E = n(380875);
-let g = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
-    A = 32;
+var l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    a = n(939249),
+    o = n(789645),
+    c = n(403581),
+    u = n(534514),
+    d = n(834730),
+    h = n(775602),
+    m = n(607470),
+    p = n(422936),
+    f = n(234419),
+    g = n(725807),
+    _ = n(811611),
+    x = n(652215),
+    A = n(788868),
+    C = n(985018),
+    E = n(151867);
 function I(e) {
     let { onDismiss: t } = e,
-        n = (0, a.bG)([l.A], () => l.A.useReducedMotion),
-        i = m.intl.string(m.t.eikz43),
-        I = (0, d.V)(),
-        T = (0, c.O)(),
-        S = I?.subscription_trial != null || null != T,
-        y = { object: p.ZSU.BUTTON_CTA, section: p.JJy.SUPER_REACTION_PICKER };
-    return (0, r.jsxs)("div", {
+        n = (0, r.bG)([h.A], () => h.A.useReducedMotion),
+        l = C.intl.string(C.t.eikz43),
+        I = (0, f.V)(),
+        v = (0, p.O)(),
+        y = I?.subscription_trial != null || null != v,
+        S = { object: x.ZSU.BUTTON_CTA, section: x.JJy.SUPER_REACTION_PICKER };
+    return (0, i.jsxs)("div", {
         className: E.iE,
         children: [
-            (0, r.jsx)(o.DUT, {
+            (0, i.jsx)(a.D, {
                 onClick: t,
                 className: E.b,
-                "aria-label": m.intl.string(m.t.WAI6xu),
-                children: (0, r.jsx)(o.PGe, { size: "md", color: "currentColor" }),
+                "aria-label": C.intl.string(C.t.WAI6xu),
+                children: (0, i.jsx)(o.P, { size: "md", color: "currentColor" }),
             }),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: E.Qs,
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: E.jo,
-                        children: (0, r.jsx)(u.A, {
-                            className: s()(E.vK, { [E.Vk]: S }),
-                            src: g,
+                        children: (0, i.jsx)(m.A, {
+                            className: s()(E.vK, { [E.Vk]: y }),
+                            src: "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
                             loop: !0,
                             autoPlay: !n,
                             muted: !0,
@@ -50,41 +52,41 @@ function I(e) {
                             disablePictureInPicture: !0,
                         }),
                     }),
-                    S
-                        ? (0, r.jsx)(f.Ay, {
-                              type: h.e.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: I?.subscription_trial?.sku_id ?? h.pe.TIER_2,
-                              headingText: m.intl.string(m.t.Wfl5zp),
-                              analyticsLocationObject: y,
-                              discountOffer: T,
+                    y
+                        ? (0, i.jsx)(_.Ay, {
+                              type: A.e.BURST_REACTION_QUICK_ACTION_UPSELL,
+                              subscriptionTier: I?.subscription_trial?.sku_id ?? A.pe.TIER_2,
+                              headingText: C.intl.string(C.t.Wfl5zp),
+                              analyticsLocationObject: S,
+                              discountOffer: v,
                               trialOffer: I,
-                              children: i,
+                              children: l,
                           })
-                        : (0, r.jsxs)(r.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsxs)("div", {
+                                  (0, i.jsxs)("div", {
                                       className: E.wx,
                                       children: [
-                                          (0, r.jsx)(o.tvc, {
+                                          (0, i.jsx)(c.t, {
                                               size: "custom",
                                               color: "currentColor",
                                               className: E.ax,
-                                              width: A,
-                                              height: A,
+                                              width: 32,
+                                              height: 32,
                                           }),
-                                          (0, r.jsx)(o.Heading, {
+                                          (0, i.jsx)(u.D, {
                                               className: E.TK,
                                               variant: "heading-xl/bold",
-                                              children: m.intl.string(m.t.Wfl5zp),
+                                              children: C.intl.string(C.t.Wfl5zp),
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(o.Text, { className: E.Fb, variant: "text-md/normal", children: i }),
-                                  (0, r.jsx)("div", {
+                                  (0, i.jsx)(d.E, { className: E.Fb, variant: "text-md/normal", children: l }),
+                                  (0, i.jsx)("div", {
                                       className: E.sk,
-                                      children: (0, r.jsx)(_.A, {
-                                          subscriptionTier: h.pe.TIER_2,
-                                          textOptions: { textOverride: m.intl.string(m.t.sEAnVH) },
+                                      children: (0, i.jsx)(g.A, {
+                                          subscriptionTier: A.pe.TIER_2,
+                                          textOptions: { textOverride: C.intl.string(C.t.sEAnVH) },
                                       }),
                                   }),
                               ],

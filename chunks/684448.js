@@ -1,44 +1,47 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
+var l = n(503698),
+    i = n.n(l),
     a = n(3026),
-    o = n(397927),
-    l = n(51183);
+    s = n(834730),
+    o = n(51183);
 n(851883);
-var u = n(496496);
-let c = 30;
-function d(e) {
-    let {
-        customStatusActivity: t,
-        textClassName: n,
-        iconClassName: i,
-        tooltipClassName: d,
-        textSize: _ = "xs",
-        animateEmoji: f = !0,
-        hideEmoji: p = !1,
-        hideTooltip: h = !1,
-    } = e;
-    if (null == t) return null;
-    let m = t?.emoji,
-        E = t?.state,
-        g = null != E && "" !== E,
-        A = null;
-    null == m || p || (A = (0, r.jsx)(l.A, { emoji: m, animate: f, className: i, hideTooltip: h || g }));
-    let I = g && (null != A ? ` ${E}` : E),
-        T = () => {
-            let e = null != m && !p && !g,
-                t = null != E && E.length > c;
-            return h || e
-                ? (0, r.jsxs)(r.Fragment, { children: [A, I] })
+var u = n(124704);
+function c(e) {
+    let t,
+        n,
+        {
+            customStatusActivity: l,
+            textClassName: c,
+            iconClassName: d,
+            tooltipClassName: _,
+            textSize: p = "xs",
+            animateEmoji: h = !0,
+            hideEmoji: m = !1,
+            hideTooltip: A = !1,
+        } = e;
+    if (null == l) return null;
+    let f = l?.emoji,
+        g = l?.state,
+        E = null != g && "" !== g,
+        C = null;
+    null == f || m || (C = (0, r.jsx)(o.A, { emoji: f, animate: h, className: d, hideTooltip: A || E }));
+    let I = E && (null != C ? ` ${g}` : g);
+    return (0, r.jsx)(s.E, {
+        variant: `text-${p}/medium`,
+        color: "none",
+        className: i()(u.ps, c),
+        children:
+            ((t = null != f && !m && !E),
+            (n = null != g && g.length > 30),
+            A || t
+                ? (0, r.jsxs)(r.Fragment, { children: [C, I] })
                 : (0, r.jsxs)(a.A, {
                       delay: 150,
-                      tooltipClassName: d,
-                      className: s()({ [u.D7]: !t }),
-                      children: [A, I],
-                  });
-        };
-    return (0, r.jsx)(o.Text, { variant: `text-${_}/medium`, color: "none", className: s()(u.ps, n), children: T() });
+                      tooltipClassName: _,
+                      className: i()({ [u.D7]: !n }),
+                      children: [C, I],
+                  })),
+    });
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__3a1f6",
     WQ: "heroDisplayContainer__3a1f6",

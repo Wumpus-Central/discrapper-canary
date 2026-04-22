@@ -1,57 +1,54 @@
 "use strict";
-n.r(t), n.d(t, { WebAudioSound: () => A, playGiftSound: () => g, voiceSinkId: () => h });
+n.r(t), n.d(t, { WebAudioSound: () => p, playGiftSound: () => E, voiceSinkId: () => f });
 var r = n(735438),
     i = n.n(r),
-    a = n(72978),
-    s = n(102597),
+    s = n(72978),
+    a = n(102597),
     o = n(904054),
     l = n(430452),
     u = n(723702),
-    c = n(257645);
-let d = "default",
-    _ = 0.6,
-    f = /^( Device)?( \([^()]+\))+$/,
-    h = d;
-function p(e, t) {
-    return !!t.startsWith(e) && null != t.substring(e.length).match(f);
-}
-function g(e, t) {
-    let n = new Audio((0, s.A)(e));
+    d = n(257645);
+let c = "default",
+    _ = /^( Device)?( \([^()]+\))+$/,
+    f = c;
+function E(e, t) {
+    let n = new Audio((0, a.A)(e));
     (n.volume = (0, o.A)(t)), n.play();
 }
-async function E() {
+async function h() {
     if (null != window.navigator.mediaDevices)
         try {
-            let e = await window.navigator.mediaDevices.enumerateDevices(),
-                t = l.Ay.getOutputDevices(),
-                n = i()(t)
+            var e, t;
+            let n = await window.navigator.mediaDevices.enumerateDevices(),
+                r = l.Ay.getOutputDevices(),
+                a = i()(r)
                     .sortBy((e) => e.index)
                     .findIndex((e) => e.id === l.Ay.getOutputDeviceId()),
-                r = t[l.Ay.getOutputDeviceId()];
-            if (null == r) {
-                h = d;
+                o = r[l.Ay.getOutputDeviceId()];
+            if (null == o) {
+                f = c;
                 return;
             }
-            let s = e.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
-                o = s[n];
-            if (p(r.name, o?.label ?? "")) {
-                h = o.deviceId;
+            let u = n.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
+                d = u[a];
+            if (((e = o.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(_))) {
+                f = d.deviceId;
                 return;
             }
             if (
-                ((o = i()(s).maxBy((e) => (0, a.stringSimilarity)(e.label, r.name))),
-                null == o || (0, a.stringSimilarity)(o.label, r.name) < _)
+                ((d = i()(u).maxBy((e) => (0, s.stringSimilarity)(e.label, o.name))),
+                null == d || 0.6 > (0, s.stringSimilarity)(d.label, o.name))
             ) {
-                h = d;
+                f = c;
                 return;
             }
-            h = o.deviceId;
+            f = d.deviceId;
         } catch {
-            h = d;
+            f = c;
         }
 }
-u.isPlatformEmbedded && (l.Ay.addChangeListener(E), E());
-let A = class {
+u.isPlatformEmbedded && (l.Ay.addChangeListener(h), h());
+let p = class {
     name;
     _volume;
     _audio;
@@ -108,7 +105,7 @@ let A = class {
                     (r.src = n(696354)(`./${this.name}.mp3`)),
                         (r.onloadeddata = () => {
                             (r.volume = Math.min((l.Ay.getOutputVolume() / 100) * this._volume, 1)),
-                                u.isPlatformEmbedded && r.setSinkId(this.outputChannel === c.a.DEFAULT ? d : h),
+                                u.isPlatformEmbedded && r.setSinkId(this.outputChannel === d.a.DEFAULT ? c : f),
                                 e(r);
                         }),
                         (r.onerror = () => t(Error("could not play audio"))),

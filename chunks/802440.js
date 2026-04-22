@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { v: () => a });
+n.d(t, { v: () => s });
 var r = n(627968);
 n(64700);
-var i = n(827734),
-    s = n(996682);
-function a(e) {
+var a = n(827734),
+    i = n(996682);
+function s(e) {
     let {
-        color: t = i.A.colors.ICON_STRONG,
+        color: t = a.A.colors.ICON_STRONG,
         "aria-label": n,
-        "aria-hidden": a,
-        role: o,
-        width: l = 100,
-        height: u = 80,
+        "aria-hidden": s,
+        role: l,
+        width: c = 100,
+        height: o = 80,
     } = e;
     return (0, r.jsxs)("svg", {
-        ...(0, s.A)({ "aria-label": n, "aria-hidden": a, role: o }),
-        width: l,
-        height: u,
+        ...(0, i.A)({ "aria-label": n, "aria-hidden": s, role: l }),
+        width: c,
+        height: o,
         viewBox: "0 0 100 80",
         fill: t.css,
         children: [

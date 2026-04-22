@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { R: () => l });
-var r = n(627968);
+n.d(t, { R: () => o });
+var a = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
-    o = n(83580);
-function l(e) {
+var r = n(503698),
+    l = n.n(r),
+    i = n(834730),
+    s = n(67468);
+function o(e) {
     let { text: t, className: n } = e;
-    return (0, r.jsx)("div", {
-        className: s()(o.Io, o.SP, n),
-        children: (0, r.jsx)(a.Text, { variant: "text-xxs/bold", color: "text-strong", className: o.dK, children: t }),
+    return (0, a.jsx)("div", {
+        className: l()(s.Io, s.SP, n),
+        children: (0, a.jsx)(i.E, { variant: "text-xxs/bold", color: "text-strong", className: s.dK, children: t }),
     });
 }

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { a: () => h });
+n.d(t, { a: () => x });
 var i = n(627968),
-    s = n(64700),
-    l = n(158954),
+    l = n(64700),
+    s = n(534514),
     r = n(513461),
     a = n(786180),
     o = n(892921),
@@ -11,85 +10,85 @@ var i = n(627968),
     u = n(564864),
     m = n(260197),
     g = n(985018),
-    x = n(395074);
-function h(e) {
+    h = n(395074);
+function x(e) {
     let { guild: t, formFields: n } = e,
-        [d, h] = s.useState(n);
-    s.useEffect(() => h(n), [n]);
-    let A = (0, a.H)({ guildId: t.id }) ?? 0,
-        [p, f] = s.useState(null),
-        j = s.useMemo(() => d?.some((e) => (0, r.i7)(e)), [d]),
-        N = s.useMemo(() => d.length === m.OK, [d]),
-        E = s.useCallback(
+        [d, x] = l.useState(n);
+    l.useEffect(() => x(n), [n]);
+    let p = (0, a.H)({ guildId: t.id }) ?? 0,
+        [A, E] = l.useState(null),
+        f = l.useMemo(() => d?.some((e) => (0, r.i7)(e)), [d]),
+        j = l.useMemo(() => d.length === m.OK, [d]),
+        N = l.useCallback(
             (e) => {
-                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != p && f(null);
+                u.A.setPendingMemberVerificationRules(t.id, e), x(e), null != A && E(null);
             },
-            [p, t.id],
+            [A, t.id],
         ),
-        T = s.useCallback(
+        I = l.useCallback(
             (e) => {
-                E([...d, e]);
+                N([...d, e]);
             },
-            [d, E],
+            [d, N],
         ),
-        C = s.useCallback(
+        C = l.useCallback(
             (e) => {
-                E([...d.slice(0, e), ...d.slice(e + 1)]);
+                N([...d.slice(0, e), ...d.slice(e + 1)]);
             },
-            [d, E],
+            [d, N],
         ),
-        I = s.useCallback(
+        b = l.useCallback(
             (e, t) => {
                 if (d[e] === t) return;
                 let n = [...d];
-                (n[e] = t), E(n);
+                (n[e] = t), N(n);
             },
-            [d, E],
+            [d, N],
         ),
-        b = s.useCallback(
+        v = l.useCallback(
             (e, t, n) => {
                 let i = d.indexOf(e),
-                    s = [...d];
-                null != t && t !== i && (s.splice(i, 1), s.splice(t, 0, e), h(s)),
-                    n ? (E(s), null !== p && f(null)) : p !== t && f(t);
+                    l = [...d];
+                null != t && t !== i && (l.splice(i, 1), l.splice(t, 0, e), x(l)),
+                    n ? (N(l), null !== A && E(null)) : A !== t && E(t);
             },
-            [p, d, E],
+            [A, d, N],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.DZT, {
+            (0, i.jsx)(s.D, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: x.DD,
+                className: h.DD,
                 children: g.intl.format(g.t["sm+75n"], { currentCount: d.length, maxCount: m.OK }),
             }),
             d.map((e) =>
                 (0, c.Td)({
-                    dropHoveredIndex: p,
+                    dropHoveredIndex: A,
                     formField: e,
                     guild: t,
                     index: d.indexOf(e),
                     isDragEnabled: d.length > 1,
-                    submittedGuildJoinRequestsCount: A,
+                    submittedGuildJoinRequestsCount: p,
                     removeFormField: C,
-                    updateFormField: I,
-                    updateFormFieldOrder: b,
+                    updateFormField: b,
+                    updateFormFieldOrder: v,
                     canRemove: d.length > 1,
                     actionsLocation: "side",
                 }),
             ),
-            !N &&
+            !j &&
                 (0, i.jsx)("div", {
-                    className: x.At,
-                    children: (0, i.jsx)(o.A, { addFormField: T, guild: t, allowTerms: !j }),
+                    className: h.At,
+                    children: (0, i.jsx)(o.A, { addFormField: I, guild: t, allowTerms: !f }),
                 }),
-            !N && (0, i.jsx)(_, { addFormField: T }),
+            !j && (0, i.jsx)(_, { addFormField: I }),
         ],
     });
 }
 function _(e) {
     let { addFormField: t } = e,
-        n = s.useMemo(
+        n = l.useMemo(
             () => [
                 {
                     text: g.intl.string(g.t.EOwiEk),
@@ -114,10 +113,10 @@ function _(e) {
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.DZT, {
+            (0, i.jsx)(s.D, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: x.hD,
+                className: h.hD,
                 children: g.intl.string(g.t.ID04cA),
             }),
             (0, i.jsx)(d.z, { pills: n }),

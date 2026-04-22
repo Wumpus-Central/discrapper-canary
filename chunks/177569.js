@@ -1,19 +1,19 @@
-i.d(t, { A: () => l });
-var a = i(627968),
-    s = i(158954),
-    n = i(262427),
-    r = i(697359),
-    o = i(985018);
-function l(e) {
-    let { location: t } = e,
-        { shouldRender: i, limitedOfferTimeLeft: l } = (0, r.A)({ location: t });
-    return i
-        ? (0, a.jsx)(n.J, {
+e.d(i, { A: () => r });
+var s = e(627968),
+    n = e(318254),
+    l = e(262427),
+    a = e(945942),
+    o = e(985018);
+function r(t) {
+    let { location: i } = t,
+        { shouldRender: e, limitedOfferTimeLeft: r } = (0, a.A)({ location: i });
+    return e
+        ? (0, s.jsx)(l.J, {
               text: o.intl.format(o.t["/bHQ84"], {
-                  numDays: Math.max(l, 1),
+                  numDays: Math.max(r, 1),
                   applicationName: o.intl.string(o.t.Uu8hke),
               }),
-              Icon: s.Cp8,
+              Icon: n.C,
           })
         : null;
 }

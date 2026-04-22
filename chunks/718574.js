@@ -1,21 +1,22 @@
-r.d(e, { A: () => s });
+r.d(e, { A: () => l });
 var i = r(627968);
 r(64700);
-var n = r(397927),
-    E = r(985018);
-let c = (t, e) =>
+var n = r(834730),
+    E = r(695366),
+    c = r(985018);
+let s = (t, e) =>
         (0, i.jsxs)(
-            n.Text,
+            n.E,
             {
                 color: "text-feedback-critical",
                 style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
                 variant: "text-sm/normal",
-                children: [(0, i.jsx)(n.EpV, { size: "custom", color: "currentColor", width: 14, height: 14 }), t],
+                children: [(0, i.jsx)(E.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), t],
             },
             e,
         ),
-    s = {
+    l = {
         getForumChannelPermissionText: function () {
-            return E.intl.format(E.t.zlXUVY, { warningHook: c });
+            return c.intl.format(c.t.zlXUVY, { warningHook: s });
         },
     };

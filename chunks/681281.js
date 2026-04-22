@@ -1,142 +1,148 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => W });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(311907),
+var a = n(503698),
+    l = n.n(a),
+    s = n(311907),
     r = n(990078),
-    o = n(397927),
-    d = n(730134),
-    c = n(440594),
-    u = n(429913),
-    h = n(47167),
-    A = n(882840),
-    _ = n(713654),
-    m = n(769015),
-    p = n(508654),
-    g = n(974930),
-    f = n(961314),
-    E = n(58736),
-    x = n(742589),
-    I = n(376352),
-    C = n(353428),
-    N = n(46054),
-    T = n(164203),
-    S = n(665691),
-    b = n(724759),
-    y = n(241756),
-    v = n(313961),
-    R = n(532622),
-    j = n(546871),
-    O = n(416528),
-    L = n(136523),
-    M = n(806931),
-    D = n(985018),
-    U = n(82644),
-    G = n(992595);
-function P(e) {
-    let { user: t, channel: n, stream: l, color: s } = e,
-        a = (0, y.A)(n, t, l);
-    return null == t || null == l
+    o = n(778712),
+    c = n(834730),
+    d = n(939249),
+    u = n(22231),
+    p = n(192308),
+    h = n(254138),
+    _ = n(827734),
+    m = n(730134),
+    A = n(440594),
+    x = n(429913),
+    f = n(47167),
+    g = n(882840),
+    C = n(713654),
+    y = n(769015),
+    v = n(508654),
+    E = n(974930),
+    N = n(961314),
+    I = n(58736),
+    j = n(742589),
+    T = n(376352),
+    b = n(353428),
+    S = n(46054),
+    R = n(164203),
+    P = n(665691),
+    O = n(724759),
+    w = n(241756),
+    L = n(313961),
+    D = n(532622),
+    M = n(546871),
+    U = n(416528),
+    V = n(136523),
+    k = n(806931),
+    B = n(985018),
+    H = n(82644),
+    F = n(992595);
+function G(e) {
+    let { user: t, channel: n, stream: a, color: l } = e,
+        s = (0, w.A)(n, t, a);
+    return null == t || null == a
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(d.A, { className: U.my, size: o._3J.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(o.Text, { variant: "text-md/medium", color: s, lineClamp: 1, children: a }),
+                  (0, i.jsx)(m.A, { className: H.my, size: o._3.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(c.E, { variant: "text-md/medium", color: l, lineClamp: 1, children: s }),
               ],
           });
 }
-function k(e) {
+function z(e) {
     let t,
         {
             focusedApplication: n,
-            focusedParticipant: l,
-            channel: s,
-            shouldShowHeaderParticipants: a = !0,
+            focusedParticipant: a,
+            channel: l,
+            shouldShowHeaderParticipants: s = !0,
             shouldShowCommerceStreamHeader: r = !1,
         } = e,
-        d = (0, p.Qs)(s.id),
-        u = null != d ? (0, g.G3)(d) : null,
-        h = null != d;
-    if (l?.type === M.lp.ACTIVITY)
+        o = (0, v.Qs)(l.id),
+        d = null != o ? (0, E.G3)(o) : null,
+        u = null != o;
+    if (a?.type === k.lp.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(E.Ay.Divider, { className: U.yF }),
-                    (0, i.jsx)(m.A, { game: n, className: U.RI }),
-                    (0, i.jsx)(o.Text, {
-                        className: U.W$,
+                    (0, i.jsx)(I.Ay.Divider, { className: H.yF }),
+                    (0, i.jsx)(y.A, { game: n, className: H.RI }),
+                    (0, i.jsx)(c.E, {
+                        className: H.W$,
                         variant: "text-md/normal",
                         color: "none",
-                        children: (0, c.A)(n.name),
+                        children: (0, A.A)(n.name),
                     }),
-                    a && (0, i.jsx)(j.A, { channel: s, focusedParticipant: l }),
+                    s && (0, i.jsx)(M.A, { channel: l, focusedParticipant: a }),
                 ],
             }));
-    else if (l?.type === M.lp.STREAM) {
-        let e = l.user,
-            n = l.stream;
+    else if (a?.type === k.lp.STREAM) {
+        let e = a.user,
+            n = a.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(E.Ay.Divider, { className: U.yF }),
-                (0, i.jsx)(P, { user: e, channel: s, stream: n, color: "text-strong" }),
-                a && (0, i.jsx)(j.A, { channel: s, focusedParticipant: l }),
-                r && (0, i.jsx)(I.F, { user: e, stream: n, channel: s }),
+                (0, i.jsx)(I.Ay.Divider, { className: H.yF }),
+                (0, i.jsx)(G, { user: e, channel: l, stream: n, color: "text-strong" }),
+                s && (0, i.jsx)(M.A, { channel: l, focusedParticipant: a }),
+                r && (0, i.jsx)(T.F, { user: e, stream: n, channel: l }),
             ],
         });
-    } else h && (t = (0, i.jsx)(f.A, { guildEvent: d, recurrenceId: u }));
-    return (0, i.jsx)("div", { className: U.kL, children: t });
+    } else u && (t = (0, i.jsx)(N.A, { guildEvent: o, recurrenceId: d }));
+    return (0, i.jsx)("div", { className: H.kL, children: t });
 }
-function w(e) {
-    let { channel: t, guild: l, appContext: d, inCall: c, isChatOpen: m, exitFullScreen: p } = e,
-        g = (0, b.B)({ location: "channel_call_header_toolbar" }),
-        { focusedParticipant: f } = (0, a.cf)(
-            [v.A],
+function W(e) {
+    let { channel: t, guild: a, appContext: o, inCall: m, isChatOpen: A, exitFullScreen: y } = e,
+        v = (0, O.B)({ location: "channel_call_header_toolbar" }),
+        { focusedParticipant: E } = (0, s.cf)(
+            [L.A],
             () => ({
-                focusedParticipant: v.A.getSelectedParticipant(t.id),
-                participantsOpen: v.A.getParticipantsOpen(t.id),
+                focusedParticipant: L.A.getSelectedParticipant(t.id),
+                participantsOpen: L.A.getParticipantsOpen(t.id),
             }),
             [t.id],
         ),
-        I = (0, h.Ay)(t),
-        y = (0, _.gU)(t),
-        [j] = (0, u.A)(f?.type === M.lp.ACTIVITY ? [f.applicationId] : []),
-        P = D.intl.string(D.t.BVZqJl);
-    t.isDM() ? (P = D.intl.string(D.t.jN2DfZ)) : t.isGroupDM() && (P = D.intl.string(D.t["e5y+gm"]));
-    let w = (0, A.l)(t),
-        B = t.isGuildVoice() && c && null != w && w.length > 0,
-        V = (0, R.Ay)(t),
-        H = B
+        N = (0, f.Ay)(t),
+        T = (0, C.gU)(t),
+        [w] = (0, x.A)(E?.type === k.lp.ACTIVITY ? [E.applicationId] : []),
+        M = B.intl.string(B.t.BVZqJl);
+    t.isDM() ? (M = B.intl.string(B.t.jN2DfZ)) : t.isGroupDM() && (M = B.intl.string(B.t["e5y+gm"]));
+    let G = (0, g.l)(t),
+        W = t.isGuildVoice() && m && null != G && G.length > 0,
+        Y = (0, D.Ay)(t),
+        K = W
             ? (0, i.jsx)(r.m, {
                   asContainer: !0,
-                  text: D.intl.string(D.t.Mgpxiw),
+                  text: B.intl.string(B.t.Mgpxiw),
                   delay: 500,
                   position: "bottom",
-                  shouldShow: V,
-                  children: (0, i.jsxs)(o.DUT, {
-                      className: s()(U.WH, { [U.BI]: V }),
-                      onClick: V
+                  shouldShow: Y,
+                  children: (0, i.jsxs)(d.D, {
+                      className: l()(H.WH, { [H.BI]: Y }),
+                      onClick: Y
                           ? function () {
-                                (0, o.mMO)(
+                                (0, p.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 136523));
                                         return (n) => (0, i.jsx)(e, { channel: t, ...n });
                                     },
-                                    { modalKey: L.m },
+                                    { modalKey: V.m },
                                 );
                             }
                           : void 0,
                       children: [
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(c.E, {
                               variant: "text-xs/normal",
-                              className: s()(U.Gh, G.PT, { [U.BI]: V }),
-                              children: N.A.parseVoiceChannelStatus(w, !0, { channelId: t.id }),
+                              className: l()(H.Gh, F.PT, { [H.BI]: Y }),
+                              children: S.A.parseVoiceChannelStatus(G, !0, { channelId: t.id }),
                           }),
-                          V &&
-                              (0, i.jsx)(o.R2l, {
+                          Y &&
+                              (0, i.jsx)(u.R, {
                                   size: "custom",
                                   color: "currentColor",
-                                  className: s()(U.rD, U.BI),
+                                  className: l()(H.rD, H.BI),
                                   width: 14,
                                   height: 14,
                               }),
@@ -144,57 +150,57 @@ function w(e) {
                   }),
               })
             : null,
-        F = (0, S.bG)({ channelId: t.id });
+        X = (0, P.bG)({ channelId: t.id });
     return (0, i.jsxs)("div", {
-        className: U.SC,
+        className: H.SC,
         children: [
-            (0, i.jsxs)(E.Ay, {
-                onDoubleClick: x.I,
+            (0, i.jsxs)(I.Ay, {
+                onDoubleClick: j.I,
                 transparent: !0,
-                className: U.jr,
-                innerClassName: U.gi,
-                toolbarClassName: U.KE,
-                childrenBottom: H,
-                toolbar: (0, i.jsx)(O.A, {
+                className: H.jr,
+                innerClassName: H.gi,
+                toolbarClassName: H.KE,
+                childrenBottom: K,
+                toolbar: (0, i.jsx)(U.A, {
                     channel: t,
-                    appContext: d,
-                    inCall: c,
-                    isChatOpen: m,
-                    exitFullScreen: p,
-                    focusedApplication: j,
-                    shouldShowHeaderParticipants: g,
+                    appContext: o,
+                    inCall: m,
+                    isChatOpen: A,
+                    exitFullScreen: y,
+                    focusedApplication: w,
+                    shouldShowHeaderParticipants: v,
                 }),
                 children: [
-                    (0, i.jsx)(E.Ay.Title, {
-                        wrapperClassName: U.DD,
+                    (0, i.jsx)(I.Ay.Title, {
+                        wrapperClassName: H.DD,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                null != y ? (0, i.jsx)(E.Ay.ChannelIcon, { icon: y, "aria-label": P }) : null,
-                                I,
-                                F &&
+                                null != T ? (0, i.jsx)(I.Ay.ChannelIcon, { icon: T, "aria-label": M }) : null,
+                                N,
+                                X &&
                                     (0, i.jsx)(r.m, {
-                                        text: D.intl.string(D.t.QyZ4Td),
-                                        children: (0, i.jsx)(o.m5V, {
+                                        text: B.intl.string(B.t.QyZ4Td),
+                                        children: (0, i.jsx)(h.m, {
                                             size: "xs",
-                                            "aria-label": D.intl.string(D.t.VHXh8a),
-                                            color: o.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
-                                            className: U.vW,
+                                            "aria-label": B.intl.string(B.t.VHXh8a),
+                                            color: _.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                            className: H.vW,
                                         }),
                                     }),
                             ],
                         }),
                     }),
-                    (0, i.jsx)(C.i$, { channel: t, guild: l }),
-                    (0, i.jsx)(k, {
-                        focusedApplication: j,
-                        focusedParticipant: f,
+                    (0, i.jsx)(b.i$, { channel: t, guild: a }),
+                    (0, i.jsx)(z, {
+                        focusedApplication: w,
+                        focusedParticipant: E,
                         channel: t,
-                        shouldShowHeaderParticipants: !g,
-                        shouldShowCommerceStreamHeader: g,
+                        shouldShowHeaderParticipants: !v,
+                        shouldShowCommerceStreamHeader: v,
                     }),
                 ],
             }),
-            (0, i.jsx)(T.A, { channelId: t.id }),
+            (0, i.jsx)(R.A, { channelId: t.id }),
         ],
     });
 }

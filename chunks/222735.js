@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Fm: () => o, R3: () => u, oC: () => c }), n(321073);
+n.d(t, { Fm: () => o, R3: () => l, oC: () => u }), n(321073);
 var r = n(294845),
     i = n.n(r);
-let a = /^(\d{4}-\d{1,2})/;
-function s(e) {
-    let t = a.exec(e);
+let s = /^(\d{4}-\d{1,2})/;
+function a(e) {
+    let t = s.exec(e);
     return null != t ? t[1] : null;
 }
 function o(e) {
@@ -14,19 +14,11 @@ function o(e) {
     });
 }
 function l(e, t) {
-    if (Array.isArray(e)) {
-        for (let n of e) if (l(n, t)) return !0;
-    } else if ("object" == typeof e && null !== e) {
-        for (let n of Object.values(e)) if (l(n, t)) return !0;
-    } else if ("string" == typeof e && e.toLowerCase().includes(t.toLowerCase())) return !0;
-    return !1;
-}
-function u(e, t) {
     return e.slice().sort((e, n) => {
         if (null != t[e?.id] && null == t[n?.id]) return -1;
         if (null == t[e?.id] && null != t[n?.id]) return 1;
-        let r = s(e.id),
-            i = s(n.id);
+        let r = a(e.id),
+            i = a(n.id);
         if (null != r && null != i) {
             let e = i.localeCompare(r);
             if (0 !== e) return e;
@@ -34,13 +26,21 @@ function u(e, t) {
         return e.experiment.title.localeCompare(n.experiment.title);
     });
 }
-function c(e, t) {
+function u(e, t) {
     let n = t.split(/\s+/g).filter((e) => "" !== e);
     if (0 === n.length) return e;
     let r = [];
     for (let t of e) {
         let e = 0;
-        for (let r of n) l(t, r) && (e += 1);
+        for (let r of n)
+            (function e(t, n) {
+                if (Array.isArray(t)) {
+                    for (let r of t) if (e(r, n)) return !0;
+                } else if ("object" == typeof t && null !== t) {
+                    for (let r of Object.values(t)) if (e(r, n)) return !0;
+                } else if ("string" == typeof t && t.toLowerCase().includes(n.toLowerCase())) return !0;
+                return !1;
+            })(t, r) && (e += 1);
         0 !== e && (null == r[e] && (r[e] = []), r[e].push(t));
     }
     return i()(r.filter((e) => void 0 !== e).reverse());

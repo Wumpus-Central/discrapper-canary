@@ -1,10 +1,10 @@
-i.d(t, { A: () => k }), i(938796);
+i.d(t, { A: () => O }), i(938796);
 var n = i(627968),
     a = i(64700),
     l = i(735438),
     s = i(665260),
     o = i(311907),
-    r = i(397927),
+    r = i(289873),
     d = i(922667),
     c = i(77350),
     m = i(294520),
@@ -12,23 +12,23 @@ var n = i(627968),
     u = i(448381),
     p = i(963852),
     A = i(763754),
-    x = i(491182),
+    E = i(491182),
     _ = i(266620),
     g = i(652176),
-    E = i(394839),
+    x = i(394839),
     f = i(538355),
-    T = i(715628),
-    v = i(752636),
-    j = i(287809),
-    y = i(515718),
+    v = i(715628),
+    j = i(752636),
+    y = i(287809),
+    T = i(515718),
     L = i(661191),
     N = i(207913),
     C = i(393033),
     U = i(239093),
     I = i(652215),
     S = i(838541),
-    w = i(316939);
-let O = (e) => {
+    w = i(483899);
+let k = (e) => {
     let { message: t } = e,
         { attachments: i } = t;
     if (0 === i.length) return null;
@@ -38,7 +38,7 @@ let O = (e) => {
     }
     return (0, n.jsx)("div", {
         className: w.Y,
-        children: (0, n.jsx)(E.A, {
+        children: (0, n.jsx)(x.A, {
             items: i.map((e) => ({
                 item: {
                     uniqueId: e.id,
@@ -62,7 +62,7 @@ let O = (e) => {
                         let a = U.V5,
                             s = U.M8;
                         if (null != t.width && null != t.height) {
-                            let e = (0, y.U8)({ width: t.width, height: t.height, maxWidth: U.V5, maxHeight: U.M8 });
+                            let e = (0, T.U8)({ width: t.width, height: t.height, maxWidth: U.V5, maxHeight: U.M8 });
                             (a = (0, l.clamp)(Math.round(t.width * e), 0, U.V5)),
                                 (s = (0, l.clamp)(Math.round(t.height * e), 0, U.M8));
                         }
@@ -105,15 +105,15 @@ let O = (e) => {
         }),
     });
 };
-function k(e) {
+function O(e) {
     let t,
         { flaggedContent: i } = e,
-        l = (0, o.bG)([j.default], () => j.default.getCurrentUser()),
+        l = (0, o.bG)([y.default], () => y.default.getCurrentUser()),
         [s, d] = a.useState({}),
         [m, u] = a.useState(!0),
         _ = (0, o.bG)([N.A], () => N.A.getUsername()),
         g = i[0],
-        E =
+        x =
             ((t = g.attachments.map((e) => {
                 let t = { ...e, filename: (0, C.tF)(e), size: 0, proxy_url: e.url };
                 return (0, c.u)(e.filename) || (0, c.AE)(e.filename)
@@ -132,8 +132,8 @@ function k(e) {
                 attachments: t,
                 state: I.cmJ.SENT,
             })),
-        y = (0, A.Ay)(E),
-        S = (0, f.A)(E, {
+        T = (0, A.Ay)(x),
+        S = (0, f.A)(x, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
@@ -172,17 +172,17 @@ function k(e) {
                 ),
         ).finally(() => u(!1));
     }, [g.attachments]),
-    "" === E.content && 0 === E.attachments.length)
+    "" === x.content && 0 === x.attachments.length)
         ? null
         : (0, n.jsx)("div", {
               className: w.O,
               children: m
-                  ? (0, n.jsx)(r.y$y, {})
-                  : (0, n.jsx)(x.A, {
+                  ? (0, n.jsx)(r.y, {})
+                  : (0, n.jsx)(E.A, {
                         compact: !1,
-                        childrenHeader: (0, v.A)({
+                        childrenHeader: (0, j.A)({
                             author: { ...l, colorString: "", colorStrings: null, nick: l?.username ?? _ },
-                            message: E,
+                            message: x,
                             channel: void 0,
                             guildId: void 0,
                             compact: !1,
@@ -191,11 +191,11 @@ function k(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1,
                         }),
-                        childrenAccessories: (0, n.jsx)(O, { message: E }),
-                        childrenMessageContent: (0, T.A)({ message: E }, S.content),
+                        childrenAccessories: (0, n.jsx)(k, { message: x }),
+                        childrenMessageContent: (0, v.A)({ message: x }, S.content),
                         hasThread: !1,
                         hasReply: !1,
-                        author: y,
+                        author: T,
                     }),
           });
 }

@@ -1,47 +1,47 @@
 "use strict";
-n.d(t, { F: () => _ });
-var r = n(627968);
+n.d(t, { F: () => h });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    s = n(397927),
-    a = n(71393),
-    o = n(967198),
-    l = n(985018),
-    u = n(724509);
-let c = () =>
-        (0, r.jsx)(r.Fragment, {
-            children: l.intl.format(l.t.ymkBti, {
-                shareIcon: l.intl.string(l.t.VINpSK),
-                shareIconHook: () => (0, r.jsx)(s.DpX, { className: u.Kk }, "icon"),
+var l = n(311907),
+    s = n(241541),
+    r = n(71393),
+    a = n(967198),
+    o = n(985018),
+    c = n(724509);
+let u = () =>
+        (0, i.jsx)(i.Fragment, {
+            children: o.intl.format(o.t.ymkBti, {
+                shareIcon: o.intl.string(o.t.VINpSK),
+                shareIconHook: () => (0, i.jsx)(s.D, { className: c.Kk }, "icon"),
             }),
         }),
     d = () => {
-        let e = (0, i.bG)([a.A, o.A], () => a.A.getGuild(o.A.getGuildId()), []),
+        let e = (0, l.bG)([r.A, a.A], () => r.A.getGuild(a.A.getGuildId()), []),
             t = e?.name;
-        return (0, r.jsx)(r.Fragment, { children: l.intl.format(l.t.oQuG3K, { serverName: t }) });
+        return (0, i.jsx)(i.Fragment, { children: o.intl.format(o.t.oQuG3K, { serverName: t }) });
     },
-    _ = (e) => {
+    h = (e) => {
         let t =
             {
                 VOICE_CONVERSATIONS: {
-                    title: (0, r.jsx)("div", { className: u.lU, children: l.intl.string(l.t.w5HAll) }),
-                    body: l.intl.string(l.t.Ww4hhq),
+                    title: (0, i.jsx)("div", { className: c.lU, children: o.intl.string(o.t.w5HAll) }),
+                    body: o.intl.string(o.t.Ww4hhq),
                 },
                 WRITING_MESSAGES: {
-                    title: (0, r.jsx)("div", { className: u.nG, children: l.intl.string(l.t.nkP0ly) }),
-                    body: (0, r.jsx)(d, {}),
+                    title: (0, i.jsx)("div", { className: c.nG, children: o.intl.string(o.t.nkP0ly) }),
+                    body: (0, i.jsx)(d, {}),
                 },
                 ORGANIZE_BY_TOPIC: {
-                    title: (0, r.jsx)("div", { className: u.vX, children: l.intl.string(l.t["j/5+IX"]) }),
-                    body: l.intl.string(l.t.mufH2P),
+                    title: (0, i.jsx)("div", { className: c.vX, children: o.intl.string(o.t["j/5+IX"]) }),
+                    body: o.intl.string(o.t.mufH2P),
                 },
-                WHOS_ONLINE: { title: l.intl.string(l.t.l2nSoI), body: l.intl.format(l.t.y6tbBB, {}) },
-                INSTANT_INVITE: { title: l.intl.string(l.t.XcehY3), body: (0, r.jsx)(c, {}) },
-                SERVER_SETTINGS: { title: l.intl.string(l.t.wc8wi5), body: l.intl.format(l.t.mIfDhc, {}) },
-                DIRECT_MESSAGES: { title: l.intl.string(l.t.V07x5y), body: l.intl.format(l.t.GEBBey, {}) },
-                CREATE_MORE_SERVERS: { title: l.intl.string(l.t["50FORo"]), body: l.intl.format(l.t.zVL4qa, {}) },
-                CREATE_FIRST_SERVER: { title: l.intl.string(l.t.CtOX9T), body: l.intl.format(l.t.TflqTe, {}) },
-                FRIENDS_LIST: { title: l.intl.string(l.t.Fnk9L4), body: l.intl.format(l.t.NTq0AZ, {}) },
+                WHOS_ONLINE: { title: o.intl.string(o.t.l2nSoI), body: o.intl.format(o.t.y6tbBB, {}) },
+                INSTANT_INVITE: { title: o.intl.string(o.t.XcehY3), body: (0, i.jsx)(u, {}) },
+                SERVER_SETTINGS: { title: o.intl.string(o.t.wc8wi5), body: o.intl.format(o.t.mIfDhc, {}) },
+                DIRECT_MESSAGES: { title: o.intl.string(o.t.V07x5y), body: o.intl.format(o.t.GEBBey, {}) },
+                CREATE_MORE_SERVERS: { title: o.intl.string(o.t["50FORo"]), body: o.intl.format(o.t.zVL4qa, {}) },
+                CREATE_FIRST_SERVER: { title: o.intl.string(o.t.CtOX9T), body: o.intl.format(o.t.TflqTe, {}) },
+                FRIENDS_LIST: { title: o.intl.string(o.t.Fnk9L4), body: o.intl.format(o.t.NTq0AZ, {}) },
             }[e.replace(/-/g, "_").toUpperCase()] ?? {};
         return { title: t.title, body: t.body, isLongText: t.isLongText ?? !1 };
     };

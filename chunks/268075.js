@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { k: () => m });
 var i = n(627968),
-    s = n(64700),
-    l = n(835245),
+    l = n(64700),
+    s = n(835245),
     r = n(311907),
     a = n(508675),
     o = n(624793),
@@ -12,13 +11,13 @@ var i = n(627968),
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = t?.id,
-        { memberCount: g, onlineCount: x } = (0, r.cf)(
+        { memberCount: g, onlineCount: h } = (0, r.cf)(
             [c.A],
             () => ({ memberCount: c.A.getMemberCount(m) ?? 1234, onlineCount: c.A.getOnlineCount(m) ?? 1234 }),
             [m],
         ),
-        h = s.useRef((0, l.A)()),
-        _ = s.useMemo(() => {
+        x = l.useRef((0, s.A)()),
+        _ = l.useMemo(() => {
             if (null != n) return o.GO.createFromDiscoverableGuild(n);
             if (null == t) return null;
             let e = a.Ay.getGuildEmoji(t.id);
@@ -27,11 +26,11 @@ function m(e) {
                 premiumSubscriptionCount: t?.premiumSubscriberCount,
                 emojis: e,
                 emojiCount: e.length,
-                presenceCount: x,
+                presenceCount: h,
                 memberCount: g,
             });
-        }, [n, t, g, x]),
-        A = s.useMemo(() => {
+        }, [n, t, g, h]),
+        p = l.useMemo(() => {
             let e = _?.emojis?.[0];
             return null != e
                 ? {
@@ -47,9 +46,9 @@ function m(e) {
               sourceType: o.rV.GUILD,
               expressionSourceApplication: null,
               expressionSourceGuild: _,
-              node: A,
+              node: p,
               closePopout: u.tE,
-              nonce: h.current,
+              nonce: x.current,
               demoMode: !0,
           })
         : null;

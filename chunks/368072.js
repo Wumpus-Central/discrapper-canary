@@ -1,47 +1,44 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(989479),
-    i = n(374372),
-    a = n(476858),
-    s = n(241738);
-let o = 1,
-    l = 2;
-class u extends s.w {
+r.d(t, { A: () => o });
+var n = r(989479),
+    s = r(374372),
+    a = r(476858),
+    i = r(241738);
+class o extends i.w {
     innerPatternString(e) {
-        return `(в прошлом|на прошлой|на следующей|в следующем|на этой|в этом)\\s*(${(0, a.uJ)(r.EB)})`;
+        return `(в прошлом|на прошлой|на следующей|в следующем|на этой|в этом)\\s*(${(0, a.uJ)(n.EB)})`;
     }
     innerExtract(e, t) {
-        let n = t[o].toLowerCase(),
-            a = t[l].toLowerCase(),
-            s = r.EB[a];
-        if ("на следующей" == n || "в следующем" == n) {
+        let r = t[1].toLowerCase(),
+            a = t[2].toLowerCase(),
+            i = n.EB[a];
+        if ("на следующей" == r || "в следующем" == r) {
             let t = {};
-            return (t[s] = 1), i.BP.createRelativeFromReference(e.reference, t);
+            return (t[i] = 1), s.BP.createRelativeFromReference(e.reference, t);
         }
-        if ("в прошлом" == n || "на прошлой" == n) {
+        if ("в прошлом" == r || "на прошлой" == r) {
             let t = {};
-            return (t[s] = -1), i.BP.createRelativeFromReference(e.reference, t);
+            return (t[i] = -1), s.BP.createRelativeFromReference(e.reference, t);
         }
-        let u = e.createParsingComponents(),
-            c = new Date(e.reference.instant.getTime());
+        let o = e.createParsingComponents(),
+            l = new Date(e.reference.instant.getTime());
         return (
-            s.match(/week/i)
-                ? (c.setDate(c.getDate() - c.getDay()),
-                  u.imply("day", c.getDate()),
-                  u.imply("month", c.getMonth() + 1),
-                  u.imply("year", c.getFullYear()))
-                : s.match(/month/i)
-                  ? (c.setDate(1),
-                    u.imply("day", c.getDate()),
-                    u.assign("year", c.getFullYear()),
-                    u.assign("month", c.getMonth() + 1))
-                  : s.match(/year/i) &&
-                    (c.setDate(1),
-                    c.setMonth(0),
-                    u.imply("day", c.getDate()),
-                    u.imply("month", c.getMonth() + 1),
-                    u.assign("year", c.getFullYear())),
-            u
+            i.match(/week/i)
+                ? (l.setDate(l.getDate() - l.getDay()),
+                  o.imply("day", l.getDate()),
+                  o.imply("month", l.getMonth() + 1),
+                  o.imply("year", l.getFullYear()))
+                : i.match(/month/i)
+                  ? (l.setDate(1),
+                    o.imply("day", l.getDate()),
+                    o.assign("year", l.getFullYear()),
+                    o.assign("month", l.getMonth() + 1))
+                  : i.match(/year/i) &&
+                    (l.setDate(1),
+                    l.setMonth(0),
+                    o.imply("day", l.getDate()),
+                    o.imply("month", l.getMonth() + 1),
+                    o.assign("year", l.getFullYear())),
+            o
         );
     }
 }

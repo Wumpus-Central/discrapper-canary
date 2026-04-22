@@ -121,6 +121,8 @@ class l extends r.A {
     setAecDump(e) {}
     startRecordingRawSamples(e) {}
     stopRecordingRawSamples() {}
+    processBatchAudioFiles(e, t, n, r) {}
+    cancelBatchAudioProcessing() {}
     createReplayConnection(e, t) {
         throw Error("Connection replay is not supported.");
     }

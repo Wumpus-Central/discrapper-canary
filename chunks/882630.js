@@ -1,9 +1,9 @@
 function t(e) {
-    if (e) return n(e);
-}
-function n(e) {
-    for (var n in t.prototype) e[n] = t.prototype[n];
-    return e;
+    if (e) {
+        var n = e;
+        for (var r in t.prototype) n[r] = t.prototype[r];
+        return n;
+    }
 }
 (e.exports = t),
     (t.prototype.on = t.prototype.addEventListener =

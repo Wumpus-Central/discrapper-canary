@@ -1,22 +1,22 @@
-t.d(i, { A: () => A });
-var e = t(627968);
-t(64700);
-var l = t(311907),
-    r = t(397927),
-    a = t(394953),
-    d = t(976860),
-    c = t(967198),
-    u = t(652215),
-    o = t(665606),
-    s = t(985018);
+i.d(e, { A: () => A });
+var t = i(627968);
+i(64700);
+var l = i(311907),
+    r = i(477782),
+    a = i(394953),
+    d = i(976860),
+    o = i(967198),
+    u = i(652215),
+    c = i(335993),
+    s = i(985018);
 function A(n) {
-    let i = (0, l.bG)([c.A], () => c.A.getGuildId()),
-        t = (0, a.lI)();
-    return __OVERLAY__ || (i !== u.YYv && !t)
+    let e = (0, l.bG)([o.A], () => o.A.getGuildId()),
+        i = (0, a.lI)();
+    return __OVERLAY__ || (e !== u.YYv && !i)
         ? null
-        : (0, e.jsx)(r.Drp, {
+        : (0, t.jsx)(r.Dr, {
               id: "go-to-original-guild",
-              label: s.intl.string(o.default["3KruG3"]),
+              label: s.intl.string(c.default["3KruG3"]),
               action: function () {
                   (0, d.uh)(n.guild_id, n.id);
               },

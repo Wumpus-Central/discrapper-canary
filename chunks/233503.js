@@ -1,64 +1,65 @@
-n.d(i, { default: () => b });
-var e = n(627968),
-    l = n(64700),
-    a = n(477782),
-    r = n(397927),
-    o = n(442433),
-    s = n(50268),
-    u = n(253925),
-    c = n(378058),
-    d = n(253932),
-    g = n(957565),
-    p = n(690521),
-    y = n(60587),
-    A = n(985018);
-function b(t) {
-    let { target: i, onSelect: n } = t,
-        b = i.getAttribute("data-type"),
-        E = i.getAttribute("data-id"),
-        I = i.getAttribute("data-name"),
-        f = i.getAttribute("data-surrogates"),
-        C = "true" === i.getAttribute("data-animated"),
-        m = i.getAttribute("data-format-type"),
-        S = b === y.g.EMOJI,
-        x = b === y.g.STICKER,
-        j = d.Q_.useSetting(),
-        v = (0, u.A)({ type: b, id: E, name: I, isInExpressionPicker: !0 }),
-        k =
-            null != f
-                ? (0, e.jsx)(a.Dr, { id: "copy", label: A.intl.string(A.t.ad58UB), action: () => (0, g.C)(f) })
+l.d(e, { default: () => C });
+var i = l(627968),
+    n = l(64700),
+    a = l(477782),
+    r = l(173936),
+    s = l(861672),
+    u = l(442433),
+    d = l(50268),
+    c = l(253925),
+    o = l(378058),
+    g = l(253932),
+    p = l(957565),
+    b = l(690521),
+    m = l(60587),
+    A = l(985018);
+function C(t) {
+    let { target: e, onSelect: l } = t,
+        C = e.getAttribute("data-type"),
+        f = e.getAttribute("data-id"),
+        h = e.getAttribute("data-name"),
+        k = e.getAttribute("data-surrogates"),
+        x = "true" === e.getAttribute("data-animated"),
+        y = e.getAttribute("data-format-type"),
+        I = C === m.g.EMOJI,
+        E = C === m.g.STICKER,
+        S = g.Q_.useSetting(),
+        _ = (0, c.A)({ type: C, id: f, name: h, isInExpressionPicker: !0 }),
+        j =
+            null != k
+                ? (0, i.jsx)(a.Dr, { id: "copy", label: A.intl.string(A.t.ad58UB), action: () => (0, p.C)(k) })
                 : null,
-        J = (0, s.A)({
-            id: E,
-            shiftId: b === y.g.EMOJI ? `<${C ? "a" : ""}:${I?.split("~")[0]}:${E}>` : void 0,
-            label: b === y.g.STICKER ? A.intl.string(A.t.SJ3249) : A.intl.string(A.t.Ap2oVy),
+        v = (0, d.A)({
+            id: f,
+            shiftId: C === m.g.EMOJI ? `<${x ? "a" : ""}:${h?.split("~")[0]}:${f}>` : void 0,
+            label: C === m.g.STICKER ? A.intl.string(A.t.SJ3249) : A.intl.string(A.t.Ap2oVy),
         }),
-        h = l.useCallback(() => {
-            if (null != E && null != I) {
-                if (S) (0, g.C)((0, p.Ez)({ id: E, name: I, animated: C }));
-                else if (x && null != m) {
-                    let t = (0, c.zg)({ id: E, name: I, format_type: Number(m) });
-                    null != t && (0, g.C)(t);
+        J = n.useCallback(() => {
+            if (null != f && null != h) {
+                if (I) (0, p.C)((0, b.Ez)({ id: f, name: h, animated: x }));
+                else if (E && null != y) {
+                    let t = (0, o.zg)({ id: f, name: h, format_type: Number(y) });
+                    null != t && (0, p.C)(t);
                 }
             }
-        }, [E, I, C, S, x, m]),
-        K =
-            null != E && null != I && ((S && null == f) || (x && null != m))
-                ? (0, e.jsx)(a.Dr, {
+        }, [f, h, x, I, E, y]),
+        $ =
+            null != f && null != h && ((I && null == k) || (E && null != y))
+                ? (0, i.jsx)(a.Dr, {
                       id: "copy-image-link",
-                      label: A.intl.string(x ? A.t.B1ubHx : A.t.cIoudn),
-                      action: h,
-                      icon: r.qYV,
-                      leadingAccessory: { type: "icon", icon: r.qYV },
+                      label: A.intl.string(E ? A.t.B1ubHx : A.t.cIoudn),
+                      action: J,
+                      icon: r.q,
+                      leadingAccessory: { type: "icon", icon: r.q },
                   })
                 : null;
-    return (0, e.jsx)(r.W1t, {
+    return (0, i.jsx)(s.W, {
         "data-menu-migrated": !0,
         navId: "expression-picker",
-        onClose: o.Z_,
+        onClose: u.Z_,
         "aria-label": A.intl.string(A.t.XoasSC),
-        onSelect: n,
+        onSelect: l,
         className: "context-menu",
-        children: (0, e.jsxs)(r.rXV, { children: [v, g.p5 && j ? (k ?? J) : null, g.p5 && j ? K : null] }),
+        children: (0, i.jsxs)(a.rX, { children: [_, p.p5 && S ? (j ?? v) : null, p.p5 && S ? $ : null] }),
     });
 }

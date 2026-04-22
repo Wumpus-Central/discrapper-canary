@@ -1,63 +1,66 @@
-n.d(t, { A: () => o });
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(235986),
-    s = n(985018),
-    d = n(641131);
-let o = (e) => {
+"use strict";
+n.d(t, { A: () => u });
+var a = n(627968),
+    i = n(64700),
+    r = n(935462),
+    l = n(825484),
+    s = n(821609),
+    d = n(235986),
+    o = n(985018),
+    c = n(221314);
+let u = (e) => {
     let t,
         {
             button: n,
-            submitting: o,
-            disableNext: c,
-            onClick: u,
-            canNavigateBack: _,
-            onBackClicked: m,
-            isModeratorReport: x,
-            className: p,
+            submitting: u,
+            disableNext: _,
+            onClick: m,
+            canNavigateBack: p,
+            onBackClicked: h,
+            isModeratorReport: g,
+            className: f,
         } = e,
-        h = a.useRef(null),
-        g = null != n && "cancel" !== n.type,
-        A = _ && n?.type !== "done",
-        v = g || A;
+        b = i.useRef(null),
+        A = null != n && "cancel" !== n.type,
+        x = p && n?.type !== "done",
+        v = A || x;
     if (
-        (a.useEffect(() => {
-            (n?.type === "submit" || n?.type === "done") && h.current?.focus();
+        (i.useEffect(() => {
+            (n?.type === "submit" || n?.type === "done") && b.current?.focus();
         }, [n?.type]),
         !v)
     )
         return null;
-    let f = s.intl.string(s.t.i4jeWR);
+    let E = o.intl.string(o.t.i4jeWR);
     return (
         n?.type === "submit"
-            ? ((t = "critical-primary"), (f = x ? s.intl.string(d.default.ZUyreS) : s.intl.string(s.t["G+vU89"])))
+            ? ((t = "critical-primary"), (E = g ? o.intl.string(c.default.ZUyreS) : o.intl.string(o.t["G+vU89"])))
             : n?.type === "next"
-              ? (f = s.intl.string(s.t.PDTjLN))
-              : n?.type === "cancel" && ((f = s.intl.string(s.t["ETE/oC"])), (t = "secondary")),
-        (0, l.jsx)(r.jlY, {
+              ? (E = o.intl.string(o.t.PDTjLN))
+              : n?.type === "cancel" && ((E = o.intl.string(o.t["ETE/oC"])), (t = "secondary")),
+        (0, a.jsx)(r.jl, {
             "data-migration-pending": !0,
-            direction: i.A.Direction.HORIZONTAL,
-            className: p,
-            children: (0, l.jsxs)(r.ButtonGroup, {
+            direction: d.A.Direction.HORIZONTAL,
+            className: f,
+            children: (0, a.jsxs)(l.e, {
                 fullWidth: !0,
                 children: [
-                    A &&
-                        (0, l.jsx)(r.Button, {
-                            onClick: m,
+                    x &&
+                        (0, a.jsx)(s.$, {
+                            onClick: h,
                             variant: "secondary",
-                            disabled: o,
-                            text: s.intl.string(s.t["13/7kX"]),
+                            disabled: u,
+                            text: o.intl.string(o.t["13/7kX"]),
                         }),
-                    g &&
-                        (0, l.jsx)(r.Button, {
+                    A &&
+                        (0, a.jsx)(s.$, {
                             onClick: () => {
-                                null != n && u(n);
+                                null != n && m(n);
                             },
                             variant: t,
-                            disabled: o || c,
-                            buttonRef: h,
-                            text: f,
+                            disabled: u || _,
+                            buttonRef: b,
+                            text: E,
                         }),
                 ],
             }),

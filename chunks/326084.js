@@ -1,30 +1,25 @@
 "use strict";
-n.d(t, { P7: () => p, aK: () => c, kZ: () => E, o: () => d, xM: () => h, xm: () => m }), n(321073);
-var r = n(562465),
-    i = n(73153);
+n.d(t, { P7: () => f, aK: () => d, kZ: () => p, o: () => c, xM: () => E, xm: () => h }), n(321073);
+var r,
+    i,
+    s = n(562465),
+    a = n(73153);
 n(843472);
-var s = n(427157);
+var o = n(427157);
 n(309010);
-var a = n(728458),
-    o = n(652215);
-let l = 10,
-    u = 6e5;
-var c = (function (e) {
-        return (
-            (e[(e.REDEEMED = 1)] = "REDEEMED"),
-            (e[(e.PENDING = 2)] = "PENDING"),
-            (e[(e.CONVERTED = 3)] = "CONVERTED"),
-            e
-        );
-    })({}),
-    d = (function (e) {
-        return (e[(e.SUCCESS = 1)] = "SUCCESS"), (e[(e.FAIL = 2)] = "FAIL"), e;
-    })({});
-class _ {
+var l = n(728458),
+    u = n(652215),
+    d =
+        (((r = {})[(r.REDEEMED = 1)] = "REDEEMED"),
+        (r[(r.PENDING = 2)] = "PENDING"),
+        (r[(r.CONVERTED = 3)] = "CONVERTED"),
+        r),
+    c = (((i = {})[(i.SUCCESS = 1)] = "SUCCESS"), (i[(i.FAIL = 2)] = "FAIL"), i);
+let _ = new (class {
     cache;
     expiration;
     constructor() {
-        (this.cache = new Map()), (this.expiration = Date.now() + u);
+        (this.cache = new Map()), (this.expiration = Date.now() + 6e5);
     }
     set(e, t) {
         this.cache.set(e, t);
@@ -38,25 +33,24 @@ class _ {
     _checkExpiration() {
         this.expiration < Date.now() && this.cache.clear();
     }
-}
-let f = new _();
-async function p(e, t, n) {
-    let i = JSON.stringify({ index: e, searchQuery: t });
-    if (f.has(i)) return f.get(i);
-    let { users: a, next_index: u } = (
-            await r.Bo.post({
-                url: o.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
-                body: { index: e, limit: n ?? l, search_query: t },
+})();
+async function f(e, t, n) {
+    let r = JSON.stringify({ index: e, searchQuery: t });
+    if (_.has(r)) return _.get(r);
+    let { users: i, next_index: a } = (
+            await s.Bo.post({
+                url: u.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
+                body: { index: e, limit: n ?? 10, search_query: t },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
         ).body,
-        c = { users: a.map((e) => new s.A(e)), nextIndex: u };
-    return f.set(i, c), c;
+        l = { users: i.map((e) => new o.A(e)), nextIndex: a };
+    return _.set(r, l), l;
 }
-let h = () => (
-    i.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
-    r.Bo.get({ url: o.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
+let E = () => (
+    a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
+    s.Bo.get({ url: u.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
         (e) => {
             let t = new Map();
             if (null != e.body && null != e.body.recipient_status)
@@ -64,7 +58,7 @@ let h = () => (
                     let r = e.body.recipient_status[n];
                     t.set(n, r);
                 }
-            i.h.dispatch({
+            a.h.dispatch({
                 type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
                 referrals_remaining:
                     null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
@@ -76,31 +70,31 @@ let h = () => (
             });
         },
         (e) => {
-            e?.status !== 404 && i.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+            e?.status !== 404 && a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
         },
     )
 );
-async function m(e) {
+async function h(e) {
     let t = [],
         n = new Map();
-    for (let i of e)
+    for (let r of e)
         try {
             let e =
-                (await r.Bo.post({ url: o.Rsh.CREATE_REFERRAL(i), oldFormErrors: !0, rejectWithError: !0 })).body ??
+                (await s.Bo.post({ url: u.Rsh.CREATE_REFERRAL(r), oldFormErrors: !0, rejectWithError: !0 })).body ??
                 null;
-            null != e && t.push(e), n.set(i, 1);
+            null != e && t.push(e), n.set(r, 1);
         } catch (e) {
-            a.A.captureException(e), n.set(i, 2);
+            l.A.captureException(e), n.set(r, 2);
         }
-    return i.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
+    return a.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
 }
-async function E(e) {
+async function p(e) {
     try {
         let t =
-            (await r.Bo.get({ url: o.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }))
+            (await s.Bo.get({ url: u.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }))
                 .body ?? null;
-        return i.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: t }), { userTrialOffer: t };
+        return a.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_SUCCESS", userTrialOffer: t }), { userTrialOffer: t };
     } catch (t) {
-        i.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: e });
+        a.h.dispatch({ type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: e });
     }
 }

@@ -1,14 +1,12 @@
 "use strict";
-n.d(t, { JC: () => i, Kf: () => a, au: () => s });
-var r = n(945810),
-    i = (function (e) {
-        return (
-            (e[(e.WITH_REWARD_DURATION = 1)] = "WITH_REWARD_DURATION"),
-            (e[(e.WITH_REWARD_DURATION_NO_GAME_TITLE = 2)] = "WITH_REWARD_DURATION_NO_GAME_TITLE"),
-            e
-        );
-    })({});
-let s = (0, r.mj)({
+n.d(t, { JC: () => s, Kf: () => a, au: () => r });
+var i,
+    l = n(945810),
+    s =
+        (((i = {})[(i.WITH_REWARD_DURATION = 1)] = "WITH_REWARD_DURATION"),
+        (i[(i.WITH_REWARD_DURATION_NO_GAME_TITLE = 2)] = "WITH_REWARD_DURATION_NO_GAME_TITLE"),
+        i);
+let r = (0, l.mj)({
     name: "2026-02-quest-card-description",
     kind: "user",
     defaultConfig: { enabled: !1, variant: null },

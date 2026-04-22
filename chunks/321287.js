@@ -1,26 +1,22 @@
-"use strict";
-n.d(t, { A: () => o });
-let r = RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i"),
-    i = 1,
-    a = 2,
-    s = 3;
-class o {
+r.d(t, { A: () => s });
+let n = RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class s {
     refine(e, t) {
         return (
             t.forEach(function (t) {
                 if (t.start.isCertain("timezoneOffset")) return;
-                let n = e.text.substring(t.index + t.text.length),
-                    o = r.exec(n);
-                if (!o) return;
+                let r = e.text.substring(t.index + t.text.length),
+                    s = n.exec(r);
+                if (!s) return;
                 e.debug(() => {
-                    console.log(`Extracting timezone: '${o[0]}' into : ${t}`);
+                    console.log(`Extracting timezone: '${s[0]}' into : ${t}`);
                 });
-                let l = 60 * parseInt(o[a]) + parseInt(o[s] || "0");
-                l > 840 ||
-                    ("-" === o[i] && (l = -l),
-                    null != t.end && t.end.assign("timezoneOffset", l),
-                    t.start.assign("timezoneOffset", l),
-                    (t.text += o[0]));
+                let a = 60 * parseInt(s[2]) + parseInt(s[3] || "0");
+                a > 840 ||
+                    ("-" === s[1] && (a = -a),
+                    null != t.end && t.end.assign("timezoneOffset", a),
+                    t.start.assign("timezoneOffset", a),
+                    (t.text += s[0]));
             }),
             t
         );

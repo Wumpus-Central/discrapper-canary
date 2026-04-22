@@ -1,7 +1,7 @@
 "use strict";
 var i = n(627968),
     s = n(136722),
-    l = n(397927),
+    l = n(192308),
     a = n(73153),
     r = n(488926);
 __OVERLAY__ &&
@@ -19,7 +19,7 @@ __OVERLAY__ &&
         try {
             p = s.iu(d ?? 0);
         } catch (e) {}
-        (0, l.mMO)(
+        (0, l.openModalLazy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 200330));
                 return (t) => (0, i.jsx)(e, { ...t, ...c, authorizations: new Map(o), permissions: p, callback: h });
@@ -27,7 +27,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, l.OoC)(u), h({});
+                    (0, l.closeModal)(u), h({});
                 },
             },
         );

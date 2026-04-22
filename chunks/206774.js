@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => S });
 var i = n(627968),
-    s = n(64700),
-    l = n(284009),
-    r = n.n(l),
+    l = n(64700),
+    s = n(284009),
+    r = n.n(s),
     a = n(311907),
-    o = n(397927),
+    o = n(187322),
     d = n(58149),
     c = n(495273),
     u = n(619006),
     m = n(576705),
     g = n(954571),
-    x = n(403362),
-    h = n(642133),
+    h = n(403362),
+    x = n(642133),
     _ = n(555337),
-    A = n(396816),
-    p = n(856644),
-    f = n(614164),
-    j = n(28495),
-    N = n(869568),
-    E = n(541285),
-    b = n(728713),
-    T = n(927573),
-    C = n(652215),
-    I = n(326028);
-function v(e) {
+    p = n(396816),
+    A = n(856644),
+    E = n(614164),
+    f = n(28495),
+    j = n(647187),
+    N = n(541285),
+    I = n(728713),
+    C = n(927573),
+    b = n(652215),
+    v = n(230997);
+function S(e) {
     let t,
-        { editRoleId: n, setEditRoleId: l, selectedSection: v, setSelectedSection: S } = e,
-        y = (0, a.bG)([A.A], () => A.A.guild, []);
+        { editRoleId: n, setEditRoleId: s, selectedSection: S, setSelectedSection: T } = e,
+        y = (0, a.bG)([p.A], () => p.A.guild, []);
     r()(null != y, "guildId cannot be null here");
-    let { role: R, permissionSearchQuery: O } = (0, a.cf)(
-        [A.A],
-        () => ({ role: A.A.getRole(n), permissionSearchQuery: A.A.getPermissionSearchQuery() }),
+    let { role: R, permissionSearchQuery: L } = (0, a.cf)(
+        [p.A],
+        () => ({ role: p.A.getRole(n), permissionSearchQuery: p.A.getPermissionSearchQuery() }),
         [n],
     );
-    s.useEffect(() => {
-        null == R && l(null);
-    }, [R, l]);
-    let G = (0, a.bG)([m.A], () => m.A.getHighestRole(y), [y]),
-        L = (0, a.bG)([m.A], () => !m.A.isRoleHigher(y, G, R)),
-        D = s.useRef(null),
+    l.useEffect(() => {
+        null == R && s(null);
+    }, [R, s]);
+    let D = (0, a.bG)([m.A], () => m.A.getHighestRole(y), [y]),
+        O = (0, a.bG)([m.A], () => !m.A.isRoleHigher(y, D, R)),
+        G = l.useRef(null),
         M = (0, a.bG)([_.A], () => _.A.getProps().integrations),
         k = { role: R, editRoleId: n },
-        U = s.useRef(k);
+        U = l.useRef(k);
     if (
-        (s.useEffect(() => {
+        (l.useEffect(() => {
             U.current = k;
         }),
-        s.useEffect(() => {
+        l.useEffect(() => {
             let { role: e, editRoleId: t } = U.current,
-                n = (0, p.L9)(v),
-                i = h.A.getRoleMemberCount(y.id)?.[t] ?? 0;
-            g.default.track(C.HAw.ROLE_PAGE_VIEWED, {
+                n = (0, A.L9)(S),
+                i = x.A.getRoleMemberCount(y.id)?.[t] ?? 0;
+            g.default.track(b.HAw.ROLE_PAGE_VIEWED, {
                 tab_opened: n,
                 is_everyone: (0, c.N8)(y.id, t),
                 role_id: t,
@@ -61,37 +60,37 @@ function v(e) {
                 role_num_members: i,
                 ...(0, d.H$)(y.id),
             });
-        }, [v, y.id, R?.id]),
-        s.useEffect(() => {
+        }, [S, y.id, R?.id]),
+        l.useEffect(() => {
             R?.id != null && (0, u.os)(y.id, R.id);
         }, [y.id, R?.id]),
         null == R)
     )
         return null;
-    switch (v) {
-        case T.T$.DISPLAY:
-            t = (0, i.jsx)(j.Ay, { guild: y, role: R, locked: L, highestRole: G, setSelectedSection: S });
+    switch (S) {
+        case C.T$.DISPLAY:
+            t = (0, i.jsx)(f.Ay, { guild: y, role: R, locked: O, highestRole: D, setSelectedSection: T });
             break;
-        case T.T$.PERMISSIONS:
-            t = (0, i.jsx)(E.Ay, { guild: y, role: R, locked: L, setSelectedSection: S, initialSearchQuery: O });
+        case C.T$.PERMISSIONS:
+            t = (0, i.jsx)(N.Ay, { guild: y, role: R, locked: O, setSelectedSection: T, initialSearchQuery: L });
             break;
-        case T.T$.VERIFICATIONS:
-            t = (0, i.jsx)(f.A, { guild: y, role: R, locked: L, setSelectedSection: S, integrations: M ?? void 0 });
+        case C.T$.VERIFICATIONS:
+            t = (0, i.jsx)(E.A, { guild: y, role: R, locked: O, setSelectedSection: T, integrations: M ?? void 0 });
             break;
-        case T.T$.MEMBERS:
-            t = (0, i.jsx)(N.Ay, { guild: y, role: R, locked: L, setSelectedSection: S });
+        case C.T$.MEMBERS:
+            t = (0, i.jsx)(j.Ay, { guild: y, role: R, locked: O, setSelectedSection: T });
             break;
         default:
-            (0, x.xb)(v);
+            (0, h.xb)(S);
     }
     return (0, i.jsxs)("div", {
-        className: I.MY,
+        className: v.MY,
         children: [
-            (0, i.jsx)(b.A, { guild: y, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: S }),
+            (0, i.jsx)(I.A, { guild: y, currentRoleId: n, setCurrentRoleId: s, setSelectedSection: T }),
             (0, i.jsx)("div", {
-                className: I.hQ,
-                ref: D,
-                children: (0, i.jsx)(o.xpW, { containerRef: D, children: t }),
+                className: v.hQ,
+                ref: G,
+                children: (0, i.jsx)(o.xp, { containerRef: G, children: t }),
             }),
         ],
     });

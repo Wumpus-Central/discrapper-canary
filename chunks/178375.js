@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { OJ: () => s, Pt: () => r, Wk: () => u, _B: () => o, ru: () => i });
+n.d(t, { OJ: () => s, Pt: () => r, Wk: () => o, _B: () => a, ru: () => i });
 class r {
     get childNodes() {
         throw Error("childNodes is not supported");
@@ -52,16 +52,14 @@ class r {
 }
 class i extends r {
     filter(e, t, n) {
-        let [r, i] = c(e, t, this.firstChildKey, n),
-            a = this.clone();
-        return (a.firstChildKey = r), (a.lastChildKey = i), a;
+        let [r, i] = l(e, t, this.firstChildKey, n),
+            s = this.clone();
+        return (s.firstChildKey = r), (s.lastChildKey = i), s;
     }
 }
-class a extends r {}
-a.type = "header";
 class s extends r {}
 s.type = "loader";
-class o extends i {
+class a extends i {
     filter(e, t, n) {
         if (n(this.textValue, this)) {
             let n = this.clone();
@@ -70,19 +68,8 @@ class o extends i {
         return null;
     }
 }
-o.type = "item";
-class l extends i {
-    filter(e, t, n) {
-        let r = super.filter(e, t, n);
-        if (r && null !== r.lastChildKey) {
-            let t = e.getItem(r.lastChildKey);
-            if (t && "header" !== t.type) return r;
-        }
-        return null;
-    }
-}
-l.type = "section";
-class u {
+a.type = "item";
+class o {
     get size() {
         return this.itemCount;
     }
@@ -169,7 +156,7 @@ class u {
     }
     filter(e) {
         let t = new this.constructor(),
-            [n, r] = c(this, t, this.firstKey, e);
+            [n, r] = l(this, t, this.firstKey, e);
         return null == t || t.commit(n, r), t;
     }
     constructor() {
@@ -180,10 +167,10 @@ class u {
             (this.itemCount = 0);
     }
 }
-function c(e, t, n, r) {
-    var i, a;
+function l(e, t, n, r) {
+    var i, s;
     if (null == n) return [null, null];
-    let s = null,
+    let a = null,
         o = null,
         l = e.getItem(n);
     for (; null != l; ) {
@@ -191,7 +178,7 @@ function c(e, t, n, r) {
         null != n &&
             ((n.nextKey = null),
             o && ((n.prevKey = o.key), (o.nextKey = n.key)),
-            null == s && (s = n),
+            null == a && (a = n),
             t.addNode(n),
             (o = n)),
             (l = l.nextKey ? e.getItem(l.nextKey) : null);
@@ -200,5 +187,5 @@ function c(e, t, n, r) {
         let e = o.prevKey;
         t.removeNode(o.key), e ? ((o = t.getItem(e)).nextKey = null) : (o = null);
     }
-    return [null != (i = null == s ? void 0 : s.key) ? i : null, null != (a = null == o ? void 0 : o.key) ? a : null];
+    return [null != (i = null == a ? void 0 : a.key) ? i : null, null != (s = null == o ? void 0 : o.key) ? s : null];
 }

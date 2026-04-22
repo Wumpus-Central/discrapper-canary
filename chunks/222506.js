@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => O });
 var r = n(311907),
     i = n(73153),
     s = n(684013),
@@ -7,99 +7,90 @@ var r = n(311907),
     o = n(206885),
     l = n(395011),
     u = n(682763),
-    c = n(680243),
-    d = n(652215);
+    d = n(680243),
+    c = n(652215);
 let _ = new Set(),
     f = null,
-    p = null,
+    E = null,
     h = null;
-function m(e) {
+function p(e) {
     if (o.e) return !0;
-    if (null == p) return !1;
-    let t = p?.isCrashedDisabled ?? !1;
+    if (null == E) return !1;
+    let t = E?.isCrashedDisabled ?? !1;
     return !!e || !t;
 }
-function E(e) {
+function m(e, t) {
     if (e && null != h) {
         let e = Date.now() - h;
-        s.A.track(d.HAw.OVERLAY_LOCKED, { unlocked_duration: e }), (h = null);
-    } else e || null != h || ((h = Date.now()), s.A.track(d.HAw.OVERLAY_UNLOCKED));
+        s.A.track(c.HAw.OVERLAY_LOCKED, { unlocked_duration: e }), (h = null);
+    } else e || null != h || ((h = Date.now()), s.A.track(c.HAw.OVERLAY_UNLOCKED));
+    e ? _.delete(t) : _.add(t), (_ = new Set(_));
 }
 function g(e, t) {
-    E(e), e ? _.delete(t) : _.add(t), (_ = new Set(_));
+    return !!p(e) && (m(e, t), E?.setInteractionEnabled(!e), N.emitChange(), !0);
 }
 function A(e, t) {
-    return !!m(e) && (g(e, t), p?.setInteractionEnabled(!e), w.emitChange(), !0);
-}
-function I(e, t) {
     return (
-        !!m(e) &&
-        (g(e, t), null == f || (clearTimeout(f), (f = null), !e)) &&
+        !!p(e) &&
+        (m(e, t), null == f || (clearTimeout(f), (f = null), !e)) &&
         (e
-            ? A(e, t)
+            ? g(e, t)
             : (f = setTimeout(() => {
-                  A(e, t), T();
+                  g(e, t), I();
               }, 100)),
         !0)
     );
 }
-function T() {
+function I() {
     null != f && (clearTimeout(f), (f = null));
 }
-function S() {
-    T(), _.clear(), (_ = new Set()), (h = null);
+function T() {
+    I(), _.clear(), (_ = new Set()), (h = null);
 }
-function y() {
-    return (p = c.A.getNativeModule()), S(), !0;
-}
-function v() {
-    return (p = null), S(), !0;
-}
-function N(e) {
+function S(e) {
     let { locked: t, pid: n } = e;
-    return (0, u.dK)(n, "setInputLocked called", { locked: t }), I(t, n), !0;
+    return (0, u.dK)(n, "setInputLocked called", { locked: t }), A(t, n), !0;
 }
-function C(e) {
-    let { region: t } = e,
-        n = l.A.getFocusedPID();
-    return (0, u.dK)(n ?? null, "activate_region", { region: t }), null != n && I(!1, n), !0;
-}
-function b() {
-    let e = l.A.getFocusedPID();
-    return (0, u.dK)(e ?? null, "deactivate_all_regions"), null != e && A(!0, e), !0;
-}
-function R() {
-    return S(), !0;
-}
-function O(e) {
-    let { lastAssociatedPID: t } = e;
-    return null != t && A(!0, t), !0;
-}
-function D() {
-    S(), p?.setInteractionEnabled(!1);
-}
-class L extends r.Ay.Store {
+class y extends r.Ay.Store {
     static displayName = "Overlay-v3-Native-Input-Lock-Store";
     initialize() {
-        this.waitFor(c.A);
+        this.waitFor(d.A);
     }
     isInputLocked(e) {
         return null == e || e === a.UNSET_PID || !1 === _.has(e);
     }
 }
-let w = new L(
+let N = new y(
         i.h,
         __OVERLAY__ || !o.O
-            ? { OVERLAY_SET_INPUT_LOCKED: N }
+            ? { OVERLAY_SET_INPUT_LOCKED: S }
             : {
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: y,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: v,
-                  OVERLAY_SET_INPUT_LOCKED: N,
-                  OVERLAY_ACTIVATE_REGION: C,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: b,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: D,
-                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: R,
-                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: O,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
+                      return (E = d.A.getNativeModule()), T(), !0;
+                  },
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
+                      return (E = null), T(), !0;
+                  },
+                  OVERLAY_SET_INPUT_LOCKED: S,
+                  OVERLAY_ACTIVATE_REGION: function (e) {
+                      let { region: t } = e,
+                          n = l.A.getFocusedPID();
+                      return (0, u.dK)(n ?? null, "activate_region", { region: t }), null != n && A(!1, n), !0;
+                  },
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
+                      let e = l.A.getFocusedPID();
+                      return (0, u.dK)(e ?? null, "deactivate_all_regions"), null != e && g(!0, e), !0;
+                  },
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: function () {
+                      T(), E?.setInteractionEnabled(!1);
+                  },
+                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
+                      return T(), !0;
+                  },
+                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: function (e) {
+                      let { lastAssociatedPID: t } = e;
+                      return null != t && g(!0, t), !0;
+                  },
               },
     ),
-    x = w;
+    O = N;

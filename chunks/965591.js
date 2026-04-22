@@ -1,69 +1,100 @@
-n.d(t, { A: () => g });
-var i = n(627968);
+n.d(t, { A: () => x });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(407045),
-    l = n(397927),
-    o = n(793574),
-    c = n(688810),
-    d = n(927578),
-    u = n(473702),
-    _ = n(985018),
-    m = n(98812),
-    p = n(67423);
-let g = function (e) {
-    let { isVisible: t, premiumSubscription: r, churnDiscountOffer: g, discountedPrice: A } = e,
-        { analyticsLocations: f } = (0, c.Ay)(o.A.CHURN_DISCOUNT_PERSISTENT_CTA),
-        h = (0, l.zhh)({
+var a = n(503698),
+    i = n.n(a),
+    s = n(517738),
+    l = n(717421),
+    c = n(192308),
+    o = n(534514),
+    d = n(834730),
+    u = n(821609),
+    _ = n(403581),
+    m = n(793574),
+    p = n(688810),
+    f = n(927578),
+    A = n(473702),
+    g = n(985018),
+    h = n(98812),
+    b = n(67423);
+let x = function (e) {
+    let { isVisible: t, premiumSubscription: a, churnDiscountOffer: x, discountedPrice: C } = e,
+        { analyticsLocations: v } = (0, p.Ay)(m.A.CHURN_DISCOUNT_PERSISTENT_CTA),
+        R = (0, l.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         });
-    return (0, i.jsx)(s.animated.div, {
-        className: a()(m.iE, { [m.q4]: !t }),
-        style: h,
-        children: (0, i.jsxs)("div", {
-            className: m.iJ,
+    return (0, r.jsx)(s.animated.div, {
+        className: i()(h.iE, { [h.q4]: !t }),
+        style: R,
+        children: (0, r.jsxs)("div", {
+            className: h.iJ,
             children: [
-                (0, i.jsx)("img", { alt: "", src: p, className: m.oU }),
-                (0, i.jsxs)("div", {
-                    className: m.iQ,
+                (0, r.jsx)("img", { alt: "", src: b, className: h.oU }),
+                (0, r.jsxs)("div", {
+                    className: h.iQ,
                     children: [
-                        (0, i.jsx)(l.Heading, {
+                        (0, r.jsx)(o.D, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: _.intl.format(_.t["3yZP0G"], { percent: g.discount.amount }),
+                            children: g.intl.format(g.t["3yZP0G"], { percent: x.discount.amount }),
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(d.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: _.intl.format(_.t["3Q4wCy"], {
-                                numMonths: g.discount.user_usage_limit,
-                                discountedPrice: A,
-                                billingPeriod: (0, d.Ke)(g.discount.user_usage_limit_interval),
+                            children: g.intl.format(g.t["3Q4wCy"], {
+                                numMonths: x.discount.user_usage_limit,
+                                discountedPrice: C,
+                                billingPeriod: (0, f.Ke)(x.discount.user_usage_limit_interval),
                             }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(l.Button, {
+                (0, r.jsx)(u.$, {
                     variant: "expressive",
-                    icon: l.tvc,
+                    icon: _.t,
                     size: "md",
-                    text: _.intl.string(_.t.zrCzVB),
+                    text: g.intl.string(g.t.zrCzVB),
                     onClick: () =>
-                        void (0, l.mMO)(async () => {
+                        void (0, c.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
+                                n.e("57036"),
+                                n.e("70474"),
+                                n.e("61943"),
+                                n.e("7175"),
+                                n.e("55202"),
+                                n.e("23353"),
+                                n.e("73667"),
+                                n.e("11250"),
+                                n.e("14138"),
+                                n.e("3442"),
+                                n.e("85071"),
+                                n.e("88017"),
+                                n.e("70994"),
+                                n.e("17239"),
+                                n.e("24267"),
+                                n.e("51793"),
+                                n.e("58164"),
+                                n.e("81645"),
+                                n.e("36682"),
+                                n.e("63070"),
+                                n.e("28367"),
+                                n.e("96313"),
+                                n.e("49318"),
+                                n.e("12721"),
+                                n.e("58283"),
+                                n.e("67876"),
                                 n.e("41353"),
                                 n.e("35432"),
-                                n.e("72946"),
+                                n.e("26786"),
                             ]).then(n.bind(n, 281439));
                             return (t) =>
-                                (0, i.jsx)(e, {
+                                (0, r.jsx)(e, {
                                     ...t,
-                                    premiumSubscription: r,
-                                    analyticsLocations: f,
-                                    initialStep: u.g.CONFIRM_DISCOUNT,
+                                    premiumSubscription: a,
+                                    analyticsLocations: v,
+                                    initialStep: A.g.CONFIRM_DISCOUNT,
                                 });
                         }),
                 }),

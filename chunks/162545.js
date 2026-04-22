@@ -1,20 +1,21 @@
 "use strict";
-var r = {
-    dotIn: "dotIn__64e61",
-    fillIn: "fillIn__64e61",
-    dotOut: "dotOut__64e61",
-    fillOut: "fillOut__64e61",
-    radioIndicator: "radioIndicator__64e61",
-    innerDotRadio: "innerDotRadio__64e61",
-    outerRadioBase: "outerRadioBase__64e61",
-    outerRadioFill: "outerRadioFill__64e61",
-    radioGroupOption: "radioGroupOption__64e61",
-    standaloneRadioIndicator: "standaloneRadioIndicator__64e61",
-    animateIn: "animateIn__64e61",
-    animateOut: "animateOut__64e61",
-    group: "group__64e61",
-    radioItemIcon: "radioItemIcon__64e61",
-    label: "label__64e61",
-    outerRadioBorderStroke: "outerRadioBorderStroke__64e61",
-};
-n.r((e.exports = r));
+n.r(
+    (e.exports = {
+        dotIn: "dotIn__64e61",
+        fillIn: "fillIn__64e61",
+        dotOut: "dotOut__64e61",
+        fillOut: "fillOut__64e61",
+        radioIndicator: "radioIndicator__64e61",
+        innerDotRadio: "innerDotRadio__64e61",
+        outerRadioBase: "outerRadioBase__64e61",
+        outerRadioFill: "outerRadioFill__64e61",
+        radioGroupOption: "radioGroupOption__64e61",
+        standaloneRadioIndicator: "standaloneRadioIndicator__64e61",
+        animateIn: "animateIn__64e61",
+        animateOut: "animateOut__64e61",
+        group: "group__64e61",
+        radioItemIcon: "radioItemIcon__64e61",
+        label: "label__64e61",
+        outerRadioBorderStroke: "outerRadioBorderStroke__64e61",
+    }),
+);

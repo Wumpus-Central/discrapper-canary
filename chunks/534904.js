@@ -1,10 +1,10 @@
 s.d(a, { default: () => l });
 var t = s(627968),
-    i = s(158954),
-    r = s(397927),
+    i = s(189213),
+    r = s(834730),
     n = s(363487),
     d = s(539085),
-    o = s(239483);
+    o = s(422699);
 function l(e) {
     let {
             guildId: a,
@@ -22,7 +22,7 @@ function l(e) {
             null != m && m.length > 0
                 ? (0, t.jsx)("div", {
                       className: o.x,
-                      children: (0, t.jsx)(r.Text, {
+                      children: (0, t.jsx)(r.E, {
                           variant: "text-sm/semibold",
                           color: "text-feedback-warning",
                           children: m,

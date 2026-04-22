@@ -1,37 +1,36 @@
 var r = n(765405),
-    i = 1,
-    a = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, s, o, l) {
-    var c = n & i,
+    i = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, s, a, o) {
+    var l = 1 & n,
         u = r(e),
         d = u.length;
-    if (d != r(t).length && !c) return !1;
-    for (var f = d; f--; ) {
-        var p = u[f];
-        if (!(c ? p in t : a.call(t, p))) return !1;
+    if (d != r(t).length && !l) return !1;
+    for (var c = d; c--; ) {
+        var _ = u[c];
+        if (!(l ? _ in t : i.call(t, _))) return !1;
     }
-    var _ = l.get(e);
-    if (_ && l.get(t)) return _ == t;
-    var h = !0;
-    l.set(e, t), l.set(t, e);
-    for (var m = c; ++f < d; ) {
-        var g = e[(p = u[f])],
-            E = t[p];
-        if (s) var b = c ? s(E, g, p, t, e, l) : s(g, E, p, e, t, l);
-        if (!(void 0 === b ? g === E || o(g, E, n, s, l) : b)) {
-            h = !1;
+    var f = o.get(e);
+    if (f && o.get(t)) return f == t;
+    var E = !0;
+    o.set(e, t), o.set(t, e);
+    for (var h = l; ++c < d; ) {
+        var p = e[(_ = u[c])],
+            m = t[_];
+        if (s) var g = l ? s(m, p, _, t, e, o) : s(p, m, _, e, t, o);
+        if (!(void 0 === g ? p === m || a(p, m, n, s, o) : g)) {
+            E = !1;
             break;
         }
-        m || (m = "constructor" == p);
+        h || (h = "constructor" == _);
     }
-    if (h && !m) {
-        var y = e.constructor,
-            O = t.constructor;
-        y != O &&
+    if (E && !h) {
+        var A = e.constructor,
+            I = t.constructor;
+        A != I &&
             "constructor" in e &&
             "constructor" in t &&
-            !("function" == typeof y && y instanceof y && "function" == typeof O && O instanceof O) &&
-            (h = !1);
+            !("function" == typeof A && A instanceof A && "function" == typeof I && I instanceof I) &&
+            (E = !1);
     }
-    return l.delete(e), l.delete(t), h;
+    return o.delete(e), o.delete(t), E;
 };

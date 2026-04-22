@@ -23,14 +23,16 @@ var r = function (e, t) {
             default:
                 return t.time({ width: "full" });
         }
-    },
-    a = function (e, t) {
+    };
+let s = {
+    p: i,
+    P: function (e, t) {
         var n,
-            a = e.match(/(P+)(p+)?/) || [],
-            s = a[1],
-            o = a[2];
+            s = e.match(/(P+)(p+)?/) || [],
+            a = s[1],
+            o = s[2];
         if (!o) return r(e, t);
-        switch (s) {
+        switch (a) {
             case "P":
                 n = t.dateTime({ width: "short" });
                 break;
@@ -43,6 +45,6 @@ var r = function (e, t) {
             default:
                 n = t.dateTime({ width: "full" });
         }
-        return n.replace("{{date}}", r(s, t)).replace("{{time}}", i(o, t));
-    };
-let s = { p: i, P: a };
+        return n.replace("{{date}}", r(a, t)).replace("{{time}}", i(o, t));
+    },
+};

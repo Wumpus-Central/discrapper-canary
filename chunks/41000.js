@@ -1,35 +1,37 @@
-n.d(e, { default: () => s });
-var a = n(627968);
-n(64700);
-var i = n(397927),
-    r = n(442433),
-    d = n(917136),
-    l = n(985018);
-function s(t) {
-    let { onSelect: e, credential: s } = t;
-    return (0, a.jsxs)(i.W1t, {
+a.d(t, { default: () => u });
+var n = a(627968);
+a(64700);
+var i = a(861672),
+    d = a(477782),
+    r = a(192308),
+    l = a(442433),
+    s = a(917136),
+    c = a(985018);
+function u(e) {
+    let { onSelect: t, credential: u } = e;
+    return (0, n.jsxs)(i.W, {
         "data-menu-migrated": !0,
         navId: "webauthn-credential-actions",
-        onClose: r.Z_,
-        "aria-label": l.intl.string(l.t["+nrTbK"]),
-        onSelect: e,
+        onClose: l.Z_,
+        "aria-label": c.intl.string(c.t["+nrTbK"]),
+        onSelect: t,
         children: [
-            (0, a.jsx)(i.Drp, {
-                id: `webauthn-edit-credential-${s.id}`,
-                label: l.intl.string(l.t.bt75uw),
+            (0, n.jsx)(d.Dr, {
+                id: `webauthn-edit-credential-${u.id}`,
+                label: c.intl.string(c.t.bt75uw),
                 action: () => {
-                    (0, i.mMO)(async () => {
-                        let { default: t } = await n.e("50267").then(n.bind(n, 428726));
-                        return (e) => (0, a.jsx)(t, { credential: s, ...e });
+                    (0, r.openModalLazy)(async () => {
+                        let { default: e } = await a.e("50267").then(a.bind(a, 428726));
+                        return (t) => (0, n.jsx)(e, { credential: u, ...t });
                     });
                 },
             }),
-            (0, a.jsx)(i.Drp, {
-                id: `webauthn-delete-credential-${s.id}`,
-                label: l.intl.string(l.t["+xgS+L"]),
+            (0, n.jsx)(d.Dr, {
+                id: `webauthn-delete-credential-${u.id}`,
+                label: c.intl.string(c.t["+xgS+L"]),
                 color: "danger",
                 action: () => {
-                    d.fR(s);
+                    s.fR(u);
                 },
             }),
         ],

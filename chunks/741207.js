@@ -1,69 +1,71 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(990078),
-    r = n(397927),
-    a = n(71393),
-    o = n(576705),
-    d = n(239705),
-    c = n(411335),
-    u = n(652215),
-    m = n(200700),
-    g = n(985018),
-    x = n(524190);
-function h(e) {
-    let { action: t, triggerType: n, guildId: h, toggled: _, onToggleAction: p } = e,
-        A = (e) => () => p(e),
-        f = (0, d.x)(t.type, t, n),
-        j = t.metadata?.durationSeconds,
-        N = null != j ? (0, m.getFriendlyDurationString)(j) : null,
-        E = (0, s.bG)([o.A, a.A], () => o.A.can(u.xBc.MODERATE_MEMBERS, a.A.getGuild(h)), [h]);
-    if (null == f) return null;
-    let { headerText: b, descriptionText: C, icon: T } = f;
+var l = n(311907),
+    s = n(990078),
+    r = n(534514),
+    a = n(834730),
+    o = n(939249),
+    d = n(658675),
+    c = n(71393),
+    u = n(576705),
+    m = n(239705),
+    g = n(411335),
+    h = n(652215),
+    x = n(200700),
+    _ = n(985018),
+    p = n(411374);
+function A(e) {
+    let { action: t, triggerType: n, guildId: A, toggled: E, onToggleAction: f } = e,
+        j = (e) => () => f(e),
+        N = (0, m.x)(t.type, t, n),
+        I = t.metadata?.durationSeconds,
+        C = null != I ? (0, x.getFriendlyDurationString)(I) : null,
+        b = (0, l.bG)([u.A, c.A], () => u.A.can(h.xBc.MODERATE_MEMBERS, c.A.getGuild(A)), [A]);
+    if (null == N) return null;
+    let { headerText: v, descriptionText: S, icon: T } = N;
     return (0, i.jsxs)("div", {
-        className: x.Ik,
+        className: p.Ik,
         children: [
             (0, i.jsx)("div", {
-                className: x.TV,
-                children: (0, i.jsx)(T, { size: "md", color: "currentColor", className: x.gE }),
+                className: p.TV,
+                children: (0, i.jsx)(T, { size: "md", color: "currentColor", className: p.gE }),
             }),
             (0, i.jsxs)("div", {
-                className: x.xj,
+                className: p.xj,
                 children: [
-                    (0, i.jsx)(r.Heading, { variant: "heading-sm/semibold", children: b }),
-                    (0, i.jsx)(r.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: C }),
-                    _ &&
-                        (0, i.jsxs)(r.Text, {
+                    (0, i.jsx)(r.D, { variant: "heading-sm/semibold", children: v }),
+                    (0, i.jsx)(a.E, { color: "interactive-text-default", variant: "text-xs/medium", children: S }),
+                    E &&
+                        (0, i.jsxs)(a.E, {
                             color: "interactive-text-default",
                             variant: "text-xs/medium",
                             children: [
-                                null === N
+                                null === C
                                     ? null
-                                    : n === c.uh.MENTION_SPAM
-                                      ? g.intl.format(g.t.i3lsKD, { friendlyDurationString: N })
-                                      : g.intl.format(g.t.mvHxze, { friendlyDurationString: N }),
-                                E &&
-                                    (0, i.jsx)(r.DUT, {
-                                        onClick: A(!0),
-                                        className: x._2,
+                                    : n === g.uh.MENTION_SPAM
+                                      ? _.intl.format(_.t.i3lsKD, { friendlyDurationString: C })
+                                      : _.intl.format(_.t.mvHxze, { friendlyDurationString: C }),
+                                b &&
+                                    (0, i.jsx)(o.D, {
+                                        onClick: j(!0),
+                                        className: p._2,
                                         tag: "span",
                                         role: "link",
-                                        children: g.intl.string(g.t["0B95RJ"]),
+                                        children: _.intl.string(_.t["0B95RJ"]),
                                     }),
                             ],
                         }),
                 ],
             }),
-            (0, i.jsx)(l.m, {
-                text: g.intl.format(g.t.wx6Vb9, {}),
-                "aria-label": g.intl.formatToMarkdownString(g.t.wx6Vb9, {}),
-                shouldShow: !E,
+            (0, i.jsx)(s.m, {
+                text: _.intl.format(_.t.wx6Vb9, {}),
+                "aria-label": _.intl.formatToMarkdownString(_.t.wx6Vb9, {}),
+                shouldShow: !b,
                 children: (0, i.jsx)("div", {
-                    children: (0, i.jsx)(r.DUT, {
-                        onClick: E ? A(!1) : void 0,
-                        children: (0, i.jsx)(r.P7L, { checked: _, disabled: !E }),
+                    children: (0, i.jsx)(o.D, {
+                        onClick: b ? j(!1) : void 0,
+                        children: (0, i.jsx)(d.P, { checked: E, disabled: !b }),
                     }),
                 }),
             }),

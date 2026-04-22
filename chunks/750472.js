@@ -1,25 +1,26 @@
-a.d(t, { D: () => d });
-var l = a(627968),
-    r = a(397927),
+"use strict";
+a.d(t, { D: () => s });
+var r = a(627968),
+    l = a(834730),
     n = a(673277),
-    s = a(190503);
-let d = {
+    i = a(190503);
+let s = {
     name: "Image",
     id: "cms-image",
     component: (e) => {
         let { imageSrc: t, videoSrc: a } = e;
-        return (0, l.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             children: [
-                (0, l.jsxs)(n.A, {
+                (0, r.jsxs)(n.A, {
                     children: [
-                        (0, l.jsx)(r.Text, { variant: "text-lg/semibold", children: "Static image" }),
-                        (0, l.jsx)("div", { style: { height: 200 }, children: (0, l.jsx)(s.A, { src: { src: t } }) }),
+                        (0, r.jsx)(l.E, { variant: "text-lg/semibold", children: "Static image" }),
+                        (0, r.jsx)("div", { style: { height: 200 }, children: (0, r.jsx)(i.A, { src: { src: t } }) }),
                     ],
                 }),
-                (0, l.jsxs)(n.A, {
+                (0, r.jsxs)(n.A, {
                     children: [
-                        (0, l.jsx)(r.Text, { variant: "text-lg/semibold", children: "Video asset" }),
-                        (0, l.jsx)("div", { style: { height: 200 }, children: (0, l.jsx)(s.A, { src: { src: a } }) }),
+                        (0, r.jsx)(l.E, { variant: "text-lg/semibold", children: "Video asset" }),
+                        (0, r.jsx)("div", { style: { height: 200 }, children: (0, r.jsx)(i.A, { src: { src: a } }) }),
                     ],
                 }),
             ],

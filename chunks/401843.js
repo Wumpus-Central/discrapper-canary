@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, {
-    A9: () => D,
-    Ho: () => L,
-    Nl: () => w,
-    TZ: () => O,
+    A9: () => b,
+    Ho: () => D,
+    Nl: () => L,
+    TZ: () => v,
     Tp: () => P,
     XI: () => R,
-    Xd: () => U,
+    Xd: () => k,
     Xi: () => M,
-    a8: () => k,
-    dA: () => G,
-    nO: () => F,
-    vN: () => x,
+    a8: () => U,
+    dA: () => x,
+    nO: () => G,
+    vN: () => w,
 });
 var r = n(284009),
     i = n.n(r),
@@ -20,14 +20,14 @@ var r = n(284009),
     o = n(73153),
     l = n(643501),
     u = n(652896),
-    c = n(346846),
-    d = n(87001),
+    d = n(346846),
+    c = n(87001),
     _ = n(384200),
     f = n(616356),
-    p = n(961350),
+    E = n(961350),
     h = n(734057),
-    m = n(71393),
-    E = n(309010),
+    p = n(71393),
+    m = n(309010),
     g = n(977997),
     A = n(147036),
     I = n(927813),
@@ -36,57 +36,56 @@ var r = n(284009),
 n(387755), n(308528);
 var y = n(367513);
 n(956793);
-var v = n(652215),
-    N = n(502075);
-let C = 2;
+var N = n(652215),
+    O = n(502075);
 function R(e, t, n) {
     o.h.dispatch({
         type: "STREAM_START",
-        streamType: null != e ? N.U4.GUILD : N.U4.CALL,
+        streamType: null != e ? O.U4.GUILD : O.U4.CALL,
         guildId: e,
         channelId: t,
-        appContext: __OVERLAY__ ? v.BRT.OVERLAY : v.BRT.APP,
+        appContext: __OVERLAY__ ? N.BRT.OVERLAY : N.BRT.APP,
         ...n,
     });
 }
-function O(e, t) {
+function v(e, t) {
     let n = (0, u._z)(e);
     o.h.dispatch({ type: "STREAM_SET_PAUSED", streamKey: n, paused: t });
 }
-function b(e, t) {
+function C(e, t) {
     let n = h.A.getChannel(t);
-    return i()(null != n, "Cannot join a null voice channel"), !g.A.isInChannel(t) && (0, A.Pd)(n, g.A, m.A);
+    return i()(null != n, "Cannot join a null voice channel"), !g.A.isInChannel(t) && (0, A.Pd)(n, g.A, p.A);
 }
-function D(e, t) {
+function b(e, t) {
     if (null != l.default.getRemoteSessionId()) return;
     let { guildId: n, channelId: r } = e;
-    if (null != n && b(n, r)) return;
+    if (null != n && C(n, r)) return;
     let i = (0, u._z)(e),
         s =
             t?.forceMultiple ||
             f.A.getAllActiveStreamsForChannel(r).filter((e) => {
                 let { ownerId: t } = e;
-                return t !== p.default.getId();
-            }).length >= C;
+                return t !== E.default.getId();
+            }).length >= 2;
     o.h.dispatch({ type: "STREAM_WATCH", streamKey: i, allowMultiple: s }),
         (t?.forceFocus !== !0 && (s || t?.noFocus)) || y.A.selectParticipant(e.channelId, i);
 }
-function L(e, t) {
+function D(e, t) {
     o.h.dispatch({ type: "STREAM_UPDATE_SELF_HIDDEN", channelId: e, selfStreamHidden: t });
 }
-function w(e, t) {
+function L(e, t) {
     let { guildId: n, channelId: r } = e;
-    if (null != n && b(n, r)) return;
-    D(e, t);
-    let i = d.A.getWindowOpen(v.MLl.CHANNEL_CALL_POPOUT),
-        s = E.A.getVoiceChannelId();
-    (i && s === r) || (0, c.A)(e);
+    if (null != n && C(n, r)) return;
+    b(e, t);
+    let i = c.A.getWindowOpen(N.MLl.CHANNEL_CALL_POPOUT),
+        s = m.A.getVoiceChannelId();
+    (i && s === r) || (0, d.A)(e);
 }
-function x(e) {
+function w(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     n && M(e, t),
-        o.h.dispatch({ type: "STREAM_STOP", streamKey: e, appContext: __OVERLAY__ ? v.BRT.OVERLAY : v.BRT.APP });
+        o.h.dispatch({ type: "STREAM_STOP", streamKey: e, appContext: __OVERLAY__ ? N.BRT.OVERLAY : N.BRT.APP });
 }
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -94,11 +93,11 @@ function M(e) {
 }
 async function P(e, t, n) {
     if (!_.A.shouldFetchPreview(e, t, n)) return;
-    let r = (0, u._z)({ streamType: null != e ? N.U4.GUILD : N.U4.CALL, guildId: e, channelId: t, ownerId: n });
+    let r = (0, u._z)({ streamType: null != e ? O.U4.GUILD : O.U4.CALL, guildId: e, channelId: t, ownerId: n });
     o.h.dispatch({ type: "STREAM_PREVIEW_FETCH_START", streamKey: r });
     try {
         let e = await a.Bo.get({
-            url: v.Rsh.STREAM_PREVIEW(r),
+            url: N.Rsh.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -110,25 +109,25 @@ async function P(e, t, n) {
             o.h.dispatch({ type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: r, retryAfter: e });
     }
 }
-async function k(e) {
+async function U(e) {
     try {
         await S.A.post({
-            url: v.Rsh.STREAM_NOTIFY(e),
+            url: N.Rsh.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: s.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0,
         });
     } catch (e) {}
 }
-function U(e) {
+function k(e) {
     !0 !== e.noTrack && (0, T.K2)(e.preset, e.resolution, e.frameRate),
         o.h.dispatch({ type: "STREAM_UPDATE_SETTINGS", ...e });
 }
-function G(e, t) {
-    a.Bo.patch({ url: v.Rsh.STREAM(e), body: { region: t }, oldFormErrors: !0, rejectWithError: !0 });
+function x(e, t) {
+    a.Bo.patch({ url: N.Rsh.STREAM(e), body: { region: t }, oldFormErrors: !0, rejectWithError: !0 });
 }
-function F() {
+function G() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = f.A.getCurrentUserActiveStream();
-    null != t && x((0, u._z)(t), e);
+    null != t && w((0, u._z)(t), e);
 }

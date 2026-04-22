@@ -1,6 +1,5 @@
 e.exports = function (e) {
-    let t = e.regex,
-        n = /[_A-Za-z][_0-9A-Za-z]{0,149}/;
+    let t = e.regex;
     return {
         name: "GraphQL",
         aliases: ["gql"],
@@ -32,7 +31,7 @@ e.exports = function (e) {
             { scope: "punctuation", begin: /[\!\(\)\:\=\[\]\{\|\}]{1}/, relevance: 0 },
             { scope: "variable", begin: /\$/, end: /\W/, excludeEnd: !0, relevance: 0 },
             { scope: "meta", match: /@\w+/, excludeEnd: !0 },
-            { scope: "symbol", begin: t.concat(n, t.lookahead(/\s*:/)), relevance: 0 },
+            { scope: "symbol", begin: t.concat(/[_A-Za-z][_0-9A-Za-z]{0,149}/, t.lookahead(/\s*:/)), relevance: 0 },
         ],
         illegal: [/[;<']/, /BEGIN/],
     };

@@ -1,209 +1,216 @@
-"use strict";
-n.d(t, { A: () => L }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    a = n(59892),
+n.d(t, { A: () => O }), n(321073);
+var l = n(627968),
+    r = n(64700),
+    i = n(59892),
     s = n(114088),
     o = n(743923),
-    l = n(864642),
-    u = n(274361),
-    c = n(816694),
-    d = n(418522),
-    _ = n(150239),
-    f = n(464602),
-    p = n(623819),
-    h = n(342470),
-    m = n(554067),
+    u = n(864642),
+    a = n(274361),
+    m = n(816694),
+    c = n(418522),
+    d = n(150239),
+    p = n(464602),
+    y = n(623819),
+    A = n(342470),
+    h = n(554067),
     g = n(471767),
-    E = n(989349),
-    A = n.n(E),
-    I = n(580424),
-    T = n(379418),
-    y = n(773669),
-    S = n(634788),
-    v = n(374803),
-    C = n(985018);
-let b = [
-        "YYYYMMDD",
-        "YYYY-MM-DD",
-        "LL",
-        "L",
-        "MMMM Do YYYY",
-        "MMMM Do YY",
-        "MMMM Do, YYYY",
-        "MMMM Do, YY",
-        "MMMM D YYYY",
-        "MMMM D YY",
-        "MMMM D, YYYY",
-        "MMMM D, YY",
-        "MMMM Do YYYY",
-        "MMMM Do YY",
-        "MMMM Do, YYYY",
-        "MMMM Do, YY",
-        "MMM D YYYY",
-        "MMM D YY",
-        "MMM D, YYYY",
-        "MMM D, YY",
-        "MMM Do YYYY",
-        "MMM Do YY",
-        "MMM Do, YYYY",
-        "MMM Do, YY",
-        "MMMM D",
-        "MMMM Do",
-        "MMM D",
-        "MMM Do",
-        "D MMMM",
-        "Do MMMM",
-        "D MMM",
-        "Do MMM",
-        "dddd",
-        "ddd",
+    M = n(989349),
+    I = n.n(M),
+    N = n(580424),
+    E = n(379418),
+    S = n(773669),
+    C = n(634788),
+    f = n(374803),
+    _ = n(985018);
+let T = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
+    D = [
+        I().ISO_8601,
+        ...[
+            "YYYYMMDD",
+            "YYYY-MM-DD",
+            "LL",
+            "L",
+            "MMMM Do YYYY",
+            "MMMM Do YY",
+            "MMMM Do, YYYY",
+            "MMMM Do, YY",
+            "MMMM D YYYY",
+            "MMMM D YY",
+            "MMMM D, YYYY",
+            "MMMM D, YY",
+            "MMMM Do YYYY",
+            "MMMM Do YY",
+            "MMMM Do, YYYY",
+            "MMMM Do, YY",
+            "MMM D YYYY",
+            "MMM D YY",
+            "MMM D, YYYY",
+            "MMM D, YY",
+            "MMM Do YYYY",
+            "MMM Do YY",
+            "MMM Do, YYYY",
+            "MMM Do, YY",
+            "MMMM D",
+            "MMMM Do",
+            "MMM D",
+            "MMM Do",
+            "D MMMM",
+            "Do MMMM",
+            "D MMM",
+            "Do MMM",
+            "dddd",
+            "ddd",
+        ].flatMap((e) => [...T.map((t) => `${e} ${t}`), ...T]),
     ],
-    N = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
-    R = [A().ISO_8601, ...b.flatMap((e) => [...N.map((t) => `${e} ${t}`), ...N])];
-function O() {
-    let e = y.default.locale;
-    if ("en-US" === e) return a;
-    if ("en-GB" === e) return a.GB;
-    if ("de" === e) return s;
-    if ("fr" === e) return o;
-    if ("ja" === e) return l;
-    else if ("nl" === e) return u;
-    else if ("ru" === e) return c;
-    else if ("it" === e) return d;
-    else if ("uk" === e) return _;
-    else if ("zh-CN" === e) return f;
-    else if ("zh-TW" === e) return p;
-    else if (e.startsWith("sv-")) return h;
-    else if (e.startsWith("pt-")) return m;
-    else if (e.startsWith("es-")) return g;
-    else return null;
-}
-function D(e, t, n) {
-    let r, i, a;
-    if (null == n) return {};
-    let s = e.clone();
-    s.subtract(1, n.periodType);
-    let o = t.clone();
-    return (
-        o.add(1, n.periodType),
-        t.isSame(e, n.periodType)
-            ? ((a = C.intl.string(n.currentName)), t.isSameOrBefore(e) && (i = C.intl.string(n.nextName)))
-            : t.isSame(s, n.periodType) && ((a = C.intl.string(n.previousName)), (i = C.intl.string(n.currentName))),
-        null != i && (r = o.unix().toString()),
-        { adjustedTimestamp: r, adjustedDescription: i, unadjustedDescription: a }
-    );
-}
-let L = {
-    autocompleteInputElementType: "timestampMentionInput",
-    matches: (e, t, n, r, i) => n.length > 1,
-    queryResults(e, t, n) {
-        let r = A()(),
-            i = O(),
-            [a] = i?.parse(n, r.toDate()) ?? [void 0],
-            s = a?.start != null && a?.end == null && a.text === n,
-            o = s ? A()(a.start.date()) : A()(n, R, !0),
-            l = [],
-            { format: u } = o.creationData();
-        if (
-            ("string" != typeof u && (u = void 0),
-            "" !== n || o.isValid() || ((o = r), (u = "YYYYMMDDHHmmss")),
-            o.isValid() && (s || null != u))
-        ) {
-            let e;
-            if (s && !a.start.isCertain("hour")) {
-                let e = 9e5,
-                    t = Math.round(o.valueOf() / e) * e;
-                o = A()(t);
-            }
-            let t = s ? a.start.isCertain("weekday") : u?.includes("d"),
-                n = s
-                    ? a.start.isCertain("day") || a.start.isCertain("month") || a.start.isCertain("year")
-                    : u?.includes("D"),
-                i = s ? a.start.isCertain("year") : u?.includes("Y"),
-                c = s ? a.start.isCertain("second") : u?.includes("s"),
-                d = o.unix().toString(),
-                _ = c ? "S" : "s";
-            n || t
-                ? t && !n
-                    ? (e = {
-                          periodType: "week",
-                          previousName: C.t["4uTwgO"],
-                          currentName: C.t["6YiNaP"],
-                          nextName: C.t.HE4jqH,
-                      })
-                    : i ||
+    O = {
+        autocompleteInputElementType: "timestampMentionInput",
+        matches: (e, t, n, l, r) => n.length > 1,
+        queryResults(e, t, n) {
+            let l = I()(),
+                r = (function () {
+                    let e = S.default.locale;
+                    if ("en-US" === e) return i;
+                    if ("en-GB" === e) return i.GB;
+                    if ("de" === e) return s;
+                    if ("fr" === e) return o;
+                    if ("ja" === e) return u;
+                    else if ("nl" === e) return a;
+                    else if ("ru" === e) return m;
+                    else if ("it" === e) return c;
+                    else if ("uk" === e) return d;
+                    else if ("zh-CN" === e) return p;
+                    else if ("zh-TW" === e) return y;
+                    else if (e.startsWith("sv-")) return A;
+                    else if (e.startsWith("pt-")) return h;
+                    else if (e.startsWith("es-")) return g;
+                    else return null;
+                })(),
+                [M] = r?.parse(n, l.toDate()) ?? [void 0],
+                N = M?.start != null && M?.end == null && M.text === n,
+                E = N ? I()(M.start.date()) : I()(n, D, !0),
+                C = [],
+                { format: f } = E.creationData();
+            if (
+                ("string" != typeof f && (f = void 0),
+                "" !== n || E.isValid() || ((E = l), (f = "YYYYMMDDHHmmss")),
+                E.isValid() && (N || null != f))
+            ) {
+                let e;
+                if (N && !M.start.isCertain("hour")) {
+                    let e = 9e5 * Math.round(E.valueOf() / 9e5);
+                    E = I()(e);
+                }
+                let t = N ? M.start.isCertain("weekday") : f?.includes("d"),
+                    n = N
+                        ? M.start.isCertain("day") || M.start.isCertain("month") || M.start.isCertain("year")
+                        : f?.includes("D"),
+                    r = N ? M.start.isCertain("year") : f?.includes("Y"),
+                    i = N ? M.start.isCertain("second") : f?.includes("s"),
+                    s = E.unix().toString(),
+                    o = i ? "S" : "s";
+                n || t
+                    ? t && !n
+                        ? (e = {
+                              periodType: "week",
+                              previousName: _.t["4uTwgO"],
+                              currentName: _.t["6YiNaP"],
+                              nextName: _.t.HE4jqH,
+                          })
+                        : r ||
+                          (e = {
+                              periodType: "year",
+                              previousName: _.t.R7VMEE,
+                              currentName: _.t["U8lK/J"],
+                              nextName: _.t.OppVVE,
+                          })
+                    : (C.push({
+                          mention: { timestamp: s, format: i ? "T" : "t" },
+                          description: _.intl.string(_.t.yHv4oJ),
+                      }),
+                      C.push({}),
                       (e = {
-                          periodType: "year",
-                          previousName: C.t.R7VMEE,
-                          currentName: C.t["U8lK/J"],
-                          nextName: C.t.OppVVE,
-                      })
-                : (l.push({ mention: { timestamp: d, format: c ? "T" : "t" }, description: C.intl.string(C.t.yHv4oJ) }),
-                  l.push({}),
-                  (e = {
-                      periodType: "day",
-                      previousName: C.t.ZdDLO0,
-                      currentName: C.t.mbs4NX,
-                      nextName: C.t["EqnX/z"],
-                  }));
-            let { adjustedTimestamp: f, adjustedDescription: p, unadjustedDescription: h } = D(r, o, e);
-            null != f &&
-                (l.push({ mention: { timestamp: f, format: _ }, description: p }),
-                l.push({ mention: { timestamp: f, format: "f" } }),
-                l.push({ mention: { timestamp: f, format: "F" } }),
-                l.push({ mention: { timestamp: f, format: "R" } }),
-                l.push({})),
-                l.push({ mention: { timestamp: d, format: _ }, description: h }),
-                l.push({ mention: { timestamp: d, format: "f" } }),
-                l.push({ mention: { timestamp: d, format: "F" } }),
-                l.push({ mention: { timestamp: d, format: "R" } });
-        }
-        return { results: { mentions: l } };
-    },
-    renderResults(e) {
-        let {
-                results: { mentions: t },
-                selectedIndex: n,
-                query: a,
-                onHover: s,
-                onClick: o,
-            } = e,
-            l = t.map((e, t) => {
-                let { mention: i, description: a } = e;
-                if (void 0 === i) return (0, r.jsx)(I.Ay.Divider, {}, `divider-${t}`);
-                let l = (0, T.WA)(i);
-                return null == l
-                    ? null
-                    : (0, r.jsx)(
-                          I.Ay.Timestamp,
-                          { onClick: o, onHover: s, selected: n === t, index: t, timestamp: l, description: a },
-                          `timestamp-${t}`,
-                      );
-            }),
-            u = C.t.I4nJDb,
-            c = C.intl.string(C.t.pUP8UM);
-        return (0, r.jsxs)(
-            i.Fragment,
-            {
-                children: [
-                    (0, S.wZ)({ titleWithQuery: u, titleWithoutQuery: c, query: a, getQuery: (e) => `${e}` }),
-                    l,
-                ],
-            },
-            "timestamp_formats",
-        );
-    },
-    onSelect(e) {
-        let {
-                results: { mentions: t },
-                index: n,
-                options: r,
-            } = e,
-            { mention: i } = t[n] ?? {};
-        if (null == i) return null;
-        let a = (0, T.tf)(i.timestamp, i.format),
-            s = (0, T.WA)(i)?.formatted;
-        return null == s ? null : (r.replaceInlineInput("timestampMentionInput", s, a), { type: v.kc.TIMESTAMP });
-    },
-};
+                          periodType: "day",
+                          previousName: _.t.ZdDLO0,
+                          currentName: _.t.mbs4NX,
+                          nextName: _.t["EqnX/z"],
+                      }));
+                let {
+                    adjustedTimestamp: u,
+                    adjustedDescription: a,
+                    unadjustedDescription: m,
+                } = (function (e, t, n) {
+                    let l, r, i;
+                    if (null == n) return {};
+                    let s = e.clone();
+                    s.subtract(1, n.periodType);
+                    let o = t.clone();
+                    return (
+                        o.add(1, n.periodType),
+                        t.isSame(e, n.periodType)
+                            ? ((i = _.intl.string(n.currentName)),
+                              t.isSameOrBefore(e) && (r = _.intl.string(n.nextName)))
+                            : t.isSame(s, n.periodType) &&
+                              ((i = _.intl.string(n.previousName)), (r = _.intl.string(n.currentName))),
+                        null != r && (l = o.unix().toString()),
+                        { adjustedTimestamp: l, adjustedDescription: r, unadjustedDescription: i }
+                    );
+                })(l, E, e);
+                null != u &&
+                    (C.push({ mention: { timestamp: u, format: o }, description: a }),
+                    C.push({ mention: { timestamp: u, format: "f" } }),
+                    C.push({ mention: { timestamp: u, format: "F" } }),
+                    C.push({ mention: { timestamp: u, format: "R" } }),
+                    C.push({})),
+                    C.push({ mention: { timestamp: s, format: o }, description: m }),
+                    C.push({ mention: { timestamp: s, format: "f" } }),
+                    C.push({ mention: { timestamp: s, format: "F" } }),
+                    C.push({ mention: { timestamp: s, format: "R" } });
+            }
+            return { results: { mentions: C } };
+        },
+        renderResults(e) {
+            let {
+                    results: { mentions: t },
+                    selectedIndex: n,
+                    query: i,
+                    onHover: s,
+                    onClick: o,
+                } = e,
+                u = t.map((e, t) => {
+                    let { mention: r, description: i } = e;
+                    if (void 0 === r) return (0, l.jsx)(N.Ay.Divider, {}, `divider-${t}`);
+                    let u = (0, E.WA)(r);
+                    return null == u
+                        ? null
+                        : (0, l.jsx)(
+                              N.Ay.Timestamp,
+                              { onClick: o, onHover: s, selected: n === t, index: t, timestamp: u, description: i },
+                              `timestamp-${t}`,
+                          );
+                }),
+                a = _.t.I4nJDb,
+                m = _.intl.string(_.t.pUP8UM);
+            return (0, l.jsxs)(
+                r.Fragment,
+                {
+                    children: [
+                        (0, C.wZ)({ titleWithQuery: a, titleWithoutQuery: m, query: i, getQuery: (e) => `${e}` }),
+                        u,
+                    ],
+                },
+                "timestamp_formats",
+            );
+        },
+        onSelect(e) {
+            let {
+                    results: { mentions: t },
+                    index: n,
+                    options: l,
+                } = e,
+                { mention: r } = t[n] ?? {};
+            if (null == r) return null;
+            let i = (0, E.tf)(r.timestamp, r.format),
+                s = (0, E.WA)(r)?.formatted;
+            return null == s ? null : (l.replaceInlineInput("timestampMentionInput", s, i), { type: f.kc.TIMESTAMP });
+        },
+    };

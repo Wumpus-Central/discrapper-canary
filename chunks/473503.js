@@ -1,19 +1,17 @@
 "use strict";
-n.d(t, { OA: () => I, kB: () => y });
+n.d(t, { OA: () => p, kB: () => g });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(562465),
+    s = n(311907),
+    a = n(562465),
     o = n(73153),
     l = n(734057),
     u = n(661191),
-    c = n(207777),
-    d = n(969043);
+    d = n(207777),
+    c = n(969043);
 n(246943);
 var _ = n(652215);
-let f = 10,
-    p = 5;
-class h {
+class f {
     _set;
     _defaultValueFunc;
     constructor(e) {
@@ -32,84 +30,85 @@ class h {
         return u.default.keys(this._set)[0];
     }
 }
-class m {
-    requested;
-    constructor() {
-        this.requested = new h(() => new Set());
-    }
-    request(e, t) {
-        this.requested.get(e).add(t);
-    }
-    hasRequested(e, t) {
-        return this.requested.get(e).has(t);
-    }
-    finishRequesting(e, t) {
-        let n = this.requested.get(e);
-        t.forEach((e) => n.delete(e)), g.compact(e);
-    }
-    getRequested(e) {
-        return this.requested.get(e);
-    }
-    getNextBatch(e, t) {
-        return Array.from(this.requested.get(e)).slice(0, t);
-    }
-    hasNext() {
-        return this.requested.hasNext();
-    }
-    next() {
-        return this.requested.next();
-    }
-    compact(e) {
-        0 === this.requested.get(e).size && this.requested.delete(e);
-    }
+let E = new (class {
+        requested;
+        constructor() {
+            this.requested = new f(() => new Set());
+        }
+        request(e, t) {
+            this.requested.get(e).add(t);
+        }
+        hasRequested(e, t) {
+            return this.requested.get(e).has(t);
+        }
+        finishRequesting(e, t) {
+            let n = this.requested.get(e);
+            t.forEach((e) => n.delete(e)), E.compact(e);
+        }
+        getRequested(e) {
+            return this.requested.get(e);
+        }
+        getNextBatch(e, t) {
+            return Array.from(this.requested.get(e)).slice(0, t);
+        }
+        hasNext() {
+            return this.requested.hasNext();
+        }
+        next() {
+            return this.requested.next();
+        }
+        compact(e) {
+            0 === this.requested.get(e).size && this.requested.delete(e);
+        }
+    })(),
+    h = null;
+function p(e) {
+    let { loaded: t, firstMessage: n } = (0, s.cf)([c.A], () => c.A.getMessage(e.id)),
+        r = (0, s.bG)([l.A], () => l.A.getChannel(e.parent_id));
+    return (
+        null == r ||
+            t ||
+            null != n ||
+            (function (e, t) {
+                if (E.hasRequested(e.id, t)) return;
+                let n = (0, d.S)(e.id),
+                    r = n.findIndex((e) => e === t),
+                    i = n.slice(r, r + 5).filter((t) => !E.hasRequested(e.id, t));
+                m(e, i);
+            })(r, e.id),
+        { loaded: t, firstMessage: n }
+    );
 }
-let g = new m(),
-    E = null;
-function A(e, t) {
-    return !e && null == t;
-}
-function I(e) {
-    let { loaded: t, firstMessage: n } = (0, a.cf)([d.A], () => d.A.getMessage(e.id)),
-        r = (0, a.bG)([l.A], () => l.A.getChannel(e.parent_id));
-    return null != r && A(t, n) && S(r, e.id), { loaded: t, firstMessage: n };
-}
-function T(e, t) {
+function m(e, t) {
     let n = !1;
     t.forEach((t) => {
-        let { loaded: r, firstMessage: i } = d.A.getMessage(t);
-        A(r, i) && (g.request(e.id, t), (n = !0));
+        let { loaded: r, firstMessage: i } = c.A.getMessage(t);
+        r || null != i || (E.request(e.id, t), (n = !0));
     }),
-        n && null == E && (E = setTimeout(v, 0));
+        n && null == h && (h = setTimeout(A, 0));
 }
-function y(e) {
-    T(e, (0, c.S)(e.id).slice(0, f));
+function g(e) {
+    m(e, (0, d.S)(e.id).slice(0, 10));
 }
-function S(e, t) {
-    if (g.hasRequested(e.id, t)) return;
-    let n = (0, c.S)(e.id),
-        r = n.findIndex((e) => e === t),
-        i = n.slice(r, r + p).filter((t) => !g.hasRequested(e.id, t));
-    T(e, i);
-}
-async function v() {
+async function A() {
     try {
-        for (; g.hasNext(); ) await C(g.next());
+        for (; E.hasNext(); ) await I(E.next());
     } finally {
-        E = null;
+        h = null;
     }
 }
-async function C(e) {
-    let t = g.getNextBatch(e, f);
+async function I(e) {
+    let t = E.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;
         let n = l.A.getChannel(e)?.guild_id;
         if (null == n) return;
         let {
             body: { threads: r },
-        } = await s.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
+        } = await a.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
         o.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: r });
     } catch (e) {
     } finally {
-        g.finishRequesting(e, t);
+        E.finishRequesting(e, t);
     }
 }

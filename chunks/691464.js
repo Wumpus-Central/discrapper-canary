@@ -1,7 +1,7 @@
 n.d(i, { default: () => r });
 var s = n(627968),
     e = n(64700),
-    a = n(732955),
+    a = n(189213),
     l = n(985018);
 function r(t) {
     let { transitionState: i, onConfirm: n, onClose: r } = t,
@@ -25,7 +25,7 @@ function r(t) {
             ],
             [u, c, r],
         );
-    return (0, s.jsx)(a.aFV, {
+    return (0, s.jsx)(a.Modal, {
         title: l.intl.string(l.t.eJzSDT),
         subtitle: l.intl.string(l.t.GB4jUw),
         actions: d,

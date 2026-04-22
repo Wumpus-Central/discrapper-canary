@@ -1,8 +1,8 @@
 a.d(t, { A: () => g });
 var n = a(627968),
-    i = a(64700),
-    s = a(158954),
-    l = a(403362),
+    l = a(64700),
+    i = a(534514),
+    s = a(403362),
     r = a(767599),
     o = a(372694),
     c = a(455542),
@@ -11,10 +11,10 @@ var n = a(627968),
     h = a(198625),
     m = a(125862),
     p = a(985018),
-    _ = a(100669);
+    _ = a(534740);
 function g(e) {
     let { application: t } = e,
-        a = i.useMemo(() => (t.directory_entry?.carousel_items ?? []).map(r.xb).filter(l.Vq) ?? [], [t]);
+        a = l.useMemo(() => (t.directory_entry?.carousel_items ?? []).map(r.xb).filter(s.Vq) ?? [], [t]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
@@ -31,7 +31,7 @@ function g(e) {
                 className: _.Q9,
                 children: [
                     (0, n.jsx)("div", { className: _.yF }),
-                    (0, n.jsx)(s.DZT, {
+                    (0, n.jsx)(i.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
                         children: p.intl.string(p.t["mD+J/i"]),

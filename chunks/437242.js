@@ -1,60 +1,62 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var s = n(311907),
-    l = n(397927),
-    r = n(47167),
-    a = n(734057),
-    o = n(994500),
-    d = n(287809),
-    c = n(239705),
-    u = n(985018),
-    m = n(524190);
-function g(e) {
-    let { action: t, triggerType: n, toggled: g, onToggleAction: x } = e,
-        h = (e) => () => x(e),
-        _ = (0, c.x)(t.type, t, n),
-        p = t.metadata?.channelId,
-        A = (0, s.bG)([d.default, o.A, a.A], () => {
-            let e = a.A.getChannel(p);
-            return null == e ? null : (0, r.m1)(e, d.default, o.A);
-        }, [p]);
-    if (null == _) return null;
-    let { headerText: f, descriptionText: j, icon: N } = _;
+var l = n(311907),
+    s = n(534514),
+    r = n(834730),
+    a = n(939249),
+    o = n(658675),
+    d = n(47167),
+    c = n(734057),
+    u = n(994500),
+    m = n(287809),
+    g = n(239705),
+    h = n(985018),
+    x = n(411374);
+function _(e) {
+    let { action: t, triggerType: n, toggled: _, onToggleAction: p } = e,
+        A = (e) => () => p(e),
+        E = (0, g.x)(t.type, t, n),
+        f = t.metadata?.channelId,
+        j = (0, l.bG)([m.default, u.A, c.A], () => {
+            let e = c.A.getChannel(f);
+            return null == e ? null : (0, d.m1)(e, m.default, u.A);
+        }, [f]);
+    if (null == E) return null;
+    let { headerText: N, descriptionText: I, icon: C } = E;
     return (0, i.jsxs)("div", {
-        className: m.Ik,
+        className: x.Ik,
         children: [
             (0, i.jsx)("div", {
-                className: m.TV,
-                children: (0, i.jsx)(N, { size: "md", color: "currentColor", className: m.gE }),
+                className: x.TV,
+                children: (0, i.jsx)(C, { size: "md", color: "currentColor", className: x.gE }),
             }),
             (0, i.jsxs)("div", {
-                className: m.xj,
+                className: x.xj,
                 children: [
-                    (0, i.jsx)(l.Heading, { variant: "heading-sm/semibold", children: f }),
-                    (0, i.jsx)(l.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: j }),
-                    g &&
-                        (0, i.jsxs)(l.Text, {
+                    (0, i.jsx)(s.D, { variant: "heading-sm/semibold", children: N }),
+                    (0, i.jsx)(r.E, { color: "interactive-text-default", variant: "text-xs/medium", children: I }),
+                    _ &&
+                        (0, i.jsxs)(r.E, {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != A && u.intl.format(u.t["8Sr/ar"], { channelName: A }),
-                                (0, i.jsx)(l.DUT, {
-                                    onClick: h(!0),
-                                    className: m._2,
+                                null != j && h.intl.format(h.t["8Sr/ar"], { channelName: j }),
+                                (0, i.jsx)(a.D, {
+                                    onClick: A(!0),
+                                    className: x._2,
                                     tag: "span",
                                     role: "link",
-                                    children: u.intl.string(u.t["3gUsJb"]),
+                                    children: h.intl.string(h.t["3gUsJb"]),
                                 }),
                             ],
                         }),
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(l.DUT, {
-                    onClick: _.isEditable ? h(!1) : void 0,
-                    children: (0, i.jsx)(l.P7L, { checked: g, disabled: !_.isEditable }),
+                children: (0, i.jsx)(a.D, {
+                    onClick: E.isEditable ? A(!1) : void 0,
+                    children: (0, i.jsx)(o.P, { checked: _, disabled: !E.isEditable }),
                 }),
             }),
         ],

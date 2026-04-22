@@ -1,86 +1,91 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => v });
 var l = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
-    r = n(853742),
-    o = n(835369),
-    d = n(253913),
-    c = n(49999),
-    u = n(985018),
-    m = n(985757),
-    h = n(559419),
-    x = n(423494),
-    g = n(827469);
-function f(e) {
+var a = n(503698),
+    s = n.n(a),
+    i = n(939249),
+    r = n(111159),
+    o = n(834730),
+    d = n(885574),
+    c = n(789645),
+    u = n(534514),
+    m = n(853742),
+    h = n(835369),
+    g = n(253913),
+    x = n(49999),
+    f = n(985018),
+    _ = n(419949),
+    p = n(478699),
+    j = n(330070),
+    b = n(827469);
+function v(e) {
     let { onDismiss: t } = e;
-    return (0, l.jsxs)(a.DUT, {
+    return (0, l.jsxs)(i.D, {
         onClick: () => {
-            open(d.X_), (0, r.Md)({ readGuideCta: !0 });
+            open(g.X_), (0, m.Md)({ readGuideCta: !0 });
         },
-        className: s()(x.kL, h.kL, m.mainCard),
+        className: s()(j.kL, p.kL, _.mainCard),
         children: [
             (0, l.jsxs)("div", {
-                className: h.mG,
+                className: p.mG,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: h.cy,
+                        className: p.cy,
                         children: [
-                            (0, l.jsx)(a.pVd, {
+                            (0, l.jsx)(r.p, {
                                 size: "custom",
                                 width: 28,
                                 height: 28,
                                 color: "currentColor",
-                                className: h.Mg,
+                                className: p.Mg,
                             }),
-                            (0, l.jsx)(a.Text, {
+                            (0, l.jsx)(o.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-strong",
-                                children: u.intl.string(u.t.uvGmCx),
+                                children: f.intl.string(f.t.uvGmCx),
                             }),
                             (0, l.jsxs)("div", {
-                                className: h.lm,
+                                className: p.lm,
                                 children: [
-                                    (0, l.jsx)(a.mir, { size: "md", color: "currentColor", className: h.G }),
-                                    (0, l.jsx)(a.Text, {
+                                    (0, l.jsx)(d.m, { size: "md", color: "currentColor", className: p.G }),
+                                    (0, l.jsx)(o.E, {
                                         variant: "text-sm/normal",
                                         color: "text-default",
-                                        children: u.intl.string(u.t.t2GkVR),
+                                        children: f.intl.string(f.t.t2GkVR),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, l.jsx)(a.DUT, {
+                    (0, l.jsx)(i.D, {
                         onClick: (e) => {
-                            e.stopPropagation(), t(c.i.DISMISS), (0, r.Md)({ readGuideCta: !1 });
+                            e.stopPropagation(), t(x.i.DISMISS), (0, m.Md)({ readGuideCta: !1 });
                         },
-                        children: (0, l.jsx)(a.PGe, { size: "xs", color: "currentColor", className: h.ut }),
+                        children: (0, l.jsx)(c.P, { size: "xs", color: "currentColor", className: p.ut }),
                     }),
                 ],
             }),
-            (0, l.jsx)("hr", { className: h.me }),
+            (0, l.jsx)("hr", { className: p.me }),
             (0, l.jsxs)("div", {
-                className: h.mG,
+                className: p.mG,
                 children: [
                     (0, l.jsxs)("div", {
                         children: [
-                            (0, l.jsx)(a.Heading, {
-                                className: s()(x.__invalid_channelName, h.DD),
+                            (0, l.jsx)(u.D, {
+                                className: s()(j.__invalid_channelName, p.DD),
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
-                                children: u.intl.string(u.t.JtSpD0),
+                                children: f.intl.string(f.t.JtSpD0),
                             }),
-                            (0, l.jsx)(a.Text, {
+                            (0, l.jsx)(o.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: u.intl.string(u.t.Ajhp03),
+                                children: f.intl.string(f.t.Ajhp03),
                             }),
                         ],
                     }),
-                    (0, l.jsx)("img", { src: g, alt: u.intl.string(u.t.gAlJzV), width: o.T5, height: o.T5 }),
+                    (0, l.jsx)("img", { src: b, alt: f.intl.string(f.t.gAlJzV), width: h.T5, height: h.T5 }),
                 ],
             }),
         ],

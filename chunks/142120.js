@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eA });
+n.d(t, { A: () => H });
 var r = n(735438),
     i = n.n(r),
     s = n(311907),
@@ -7,50 +7,35 @@ var r = n(735438),
     o = n(73153),
     l = n(956793),
     u = n(626584),
-    c = n(652896),
-    d = n(796774),
+    d = n(652896),
+    c = n(796774),
     _ = n(617617),
     f = n(961350),
-    p = n(470710),
+    E = n(470710),
     h = n(734057),
-    m = n(430452),
-    E = n(383501),
+    p = n(430452),
+    m = n(383501),
     g = n(873985),
     A = n(309010),
     I = n(461213),
     T = n(162605),
     S = n(723702),
     y = n(175306),
-    v = n(531013),
-    N = n(33282),
-    C = n(448515),
-    R = n(652215),
-    O = n(355097);
+    N = n(531013),
+    O = n(33282),
+    R = n(448515),
+    v = n(652215),
+    C = n(355097);
 let b = window.DiscordNative;
-v.sZ.dispatcher.getDispatchHandler = C.A;
+N.sZ.dispatcher.getDispatchHandler = R.A;
 let D = new u.A("ConnectionStore"),
-    L = 100,
-    w = 0,
-    M = null,
-    x = !0,
+    L = 0,
+    w = null,
+    M = !0,
     P = null,
-    k = null;
-function U() {
-    return v.sZ.isClosed()
-        ? (D.verbose("Socket is reconnecting because of starting new session"), v.sZ.connect())
-        : (D.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
-}
-function G(e) {
-    e.isSwitchingAccount && v.OV.handleAccountSwitch(), D.verbose("Closing socket because of logout"), v.sZ.close();
-}
-function F() {
-    return (
-        D.verbose("session refresh dispatched", { isEstablished: v.sZ.isSessionEstablished() }),
-        !!v.sZ.isSessionEstablished() && (v.sZ.close(), v.sZ.connect())
-    );
-}
-async function V(e) {
-    (w = Date.now()), (M = e.sessionId), v.OV.handleConnectionOpen();
+    U = null;
+async function k(e) {
+    (L = Date.now()), (w = e.sessionId), N.OV.handleConnectionOpen();
     let t = {},
         n = A.A.getVoiceChannelId();
     if (null != n) {
@@ -61,234 +46,227 @@ async function V(e) {
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 r ||
                 (await b?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
-                !x)
+                !M)
         ) {
             let e = h.A.getChannel(n);
-            null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, d.CX)(n));
-        } else E.A.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
+            null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, c.CX)(n));
+        } else m.A.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
     }
-    v.Xo.update(t, !0), (x = !1), (k = null);
+    N.Xo.update(t, !0), (M = !1), (U = null);
 }
-function B() {
-    D.verbose("connection closed dispatched"), (w = Date.now());
+function x() {
+    N.Xo.update();
 }
-function H() {
-    k = null;
+function G() {
+    return N.Xo.update(), !1;
 }
-function j(e) {
-    return e.resetSocket && (v.sZ.close(), v.sZ.dispatcher.clear(), v.sZ.connect()), !1;
+function V() {
+    return N.OV.update(), !1;
 }
-function Y(e) {
-    return (
-        v.Xo.update({ guildId: e.guildId, channelId: e.channelId }),
-        (k = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
-        (0, S.isIOS)() &&
-            P === R.g6G.BACKGROUND &&
-            (null == e.channelId ? v.sZ.close(!0) : v.sZ.isClosed() && (N.V(!1), v.sZ.connect())),
-        !1
-    );
+function F(e) {
+    N.sZ.isSessionEstablished() && N.sZ.streamDelete(e);
 }
-function W() {
-    v.Xo.update();
-}
-function K(e) {
-    e.settings.type === O.oD.PRELOADED_USER_SETTINGS && e.settings.proto.clips?.allowVoiceRecording != null && W();
-}
-function $(e) {
-    let { voiceStates: t } = e;
-    return t.reduce((e, t) => {
-        if (f.default.getId() !== t.userId) return e;
-        if (t.sessionId === M) {
-            if (null != k) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
-            v.Xo.setState({ guildId: t.guildId, channelId: t.channelId });
-        } else {
-            if (t.guildId !== v.Xo.guildId) return e;
-            v.Xo.setState({ guildId: null, channelId: null });
-        }
-        return !0;
-    }, !1);
-}
-function z(e) {
-    e.guild.id === v.Xo.guildId && v.Xo.setState({ guildId: null, channelId: null });
-}
-function q(e) {
-    let { channelId: t } = e;
-    if (t === v.Xo.channelId) {
-        if (k === t) return !1;
-        v.Xo.setState({ guildId: null, channelId: null });
-    }
-}
-function Z(e) {
-    let { channel: t } = e;
-    t.id === v.Xo.channelId && v.Xo.setState({ guildId: null, channelId: null });
-}
-function X(e) {
-    if (e.state !== R.S7L.DISCONNECTED) return !1;
-    e.willReconnect && (null != e.streamKey ? v.sZ.streamPing(e.streamKey) : v.sZ.voiceServerPing());
-}
-function Q(e) {
-    return (
-        (0, S.isIOS)()
-            ? (f.default.isAuthenticated() &&
-                  (P === R.g6G.INACTIVE && e.state === R.g6G.BACKGROUND && null == v.Xo.channelId
-                      ? v.sZ.close(!0)
-                      : P === R.g6G.BACKGROUND &&
-                        e.state === R.g6G.ACTIVE &&
-                        v.sZ.isClosed() &&
-                        (N.V(!1), v.sZ.connect())),
-              (P = e.state))
-            : e.state === R.g6G.ACTIVE &&
-              (N.V(!1), f.default.isAuthenticated() && v.sZ.resetBackoff("App state is active")),
-        !1
-    );
-}
-function J() {
-    return v.Xo.update(), !1;
-}
-function ee() {
-    return v.OV.update(), !1;
-}
-function et(e) {
-    return (
-        v.sZ.isSessionEstablished() &&
-            ("userIds" in e
-                ? i()(e.userIds)
-                      .chunk(L)
-                      .forEach((t) => {
-                          v.sZ.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
-                      })
-                : v.sZ.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
-        !1
-    );
-}
-function en(e) {
-    let { guildId: t, query: n, continuationToken: r } = e;
-    v.sZ.isSessionEstablished() && v.sZ.searchRecentMembers(t, { query: n, continuationToken: r });
-}
-function er(e) {
-    let { subscriptions: t } = e;
-    return v.sZ.isSessionEstablished() && v.sZ.updateGuildSubscriptions(t), !1;
-}
-function ei(e) {
-    let { channelId: t } = e;
-    return v.sZ.isSessionEstablished() && v.sZ.callConnect(t), !1;
-}
-function es(e) {
-    let { channelIds: t } = e;
-    return (
-        v.sZ.isSessionEstablished() &&
-            t.forEach((e) => {
-                v.sZ.callConnect(e);
-            }),
-        !1
-    );
-}
-function ea(e) {
-    let { sessionId: t, payload: n } = e;
-    return v.sZ.isSessionEstablished() && v.sZ.remoteCommand(t, n), !1;
-}
-function eo(e) {
-    v.sZ.isSessionEstablished() && v.sZ.streamDelete(e);
-}
-function el() {
-    let e = eu();
-    T.A.getAllActiveStreamKeys()
-        .filter((t) => t !== e)
-        .forEach((e) => eo(e));
-}
-function eu() {
-    return T.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === f.default.getId());
-}
-function ec(e) {
-    let { streamType: t, guildId: n, channelId: r } = e;
-    if (v.sZ.isSessionEstablished()) {
-        let e = null != n ? h.A.getChannel(r)?.rtcRegion : p.A.getCall(r)?.region;
-        v.sZ.streamCreate(t, n, r, e ?? g.A.getPreferredRegion());
-    }
-    return !1;
-}
-function ed(e) {
-    let { streamKey: t, paused: n } = e;
-    v.sZ.isSessionEstablished() && v.sZ.streamSetPaused(t, n);
-}
-function e_(e) {
-    let { streamKey: t, allowMultiple: n } = e;
-    return v.sZ.isSessionEstablished() && (n || el(), v.sZ.streamWatch(t)), !1;
-}
-function ef(e) {
-    let { streamKey: t } = e;
-    return eo(t), W(), !1;
-}
-function ep() {
-    return v.sZ.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
-}
-function eh(e) {
-    let { guildId: t, channelId: n, threads: r } = e;
-    v.sZ.requestForumUnreads(t, n, r);
-}
-function em(e) {
-    v.sZ.connectionState !== y.A.WILL_RECONNECT && v.sZ.resetSocketAndClearCacheOnError(e.args);
-}
-function eE(e) {
-    let { guildIds: t } = e;
-    v.sZ.requestSoundboardSounds(t);
-}
-class eg extends s.Ay.Store {
+class B extends s.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(f.default, p.A, h.A, m.Ay, E.A, g.A, A.A, I.A, T.A, _.A),
-            this.syncWith([m.Ay], J),
-            this.syncWith([I.A], ee);
+        this.waitFor(f.default, E.A, h.A, p.Ay, m.A, g.A, A.A, I.A, T.A, _.A),
+            this.syncWith([p.Ay], G),
+            this.syncWith([I.A], V);
     }
     getSocket() {
-        return v.sZ;
+        return N.sZ;
     }
     isTryingToConnect() {
-        return !v.sZ.isClosed();
+        return !N.sZ.isClosed();
     }
     isConnected() {
-        return v.sZ.isSessionEstablished();
+        return N.sZ.isSessionEstablished();
     }
     isConnectedOrOverlay() {
-        return v.sZ.isSessionEstablished() || __OVERLAY__;
+        return N.sZ.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return w;
+        return L;
     }
 }
-let eA = new eg(o.h, {
-    START_SESSION: U,
-    LOGIN_SUCCESS: F,
-    LOGOUT: G,
-    CLEAR_CACHES: j,
-    CONNECTION_OPEN: (e) => {
-        V(e);
+let H = new B(o.h, {
+    START_SESSION: function () {
+        return N.sZ.isClosed()
+            ? (D.verbose("Socket is reconnecting because of starting new session"), N.sZ.connect())
+            : (D.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
-    CONNECTION_RESUMED: H,
-    CONNECTION_CLOSED: B,
-    RTC_CONNECTION_STATE: X,
-    VOICE_CHANNEL_SELECT: Y,
-    VOICE_STATE_UPDATES: $,
-    GUILD_DELETE: z,
-    CHANNEL_DELETE: Z,
-    CALL_DELETE: q,
-    APP_STATE_UPDATE: Q,
-    GUILD_MEMBERS_REQUEST: et,
-    GUILD_SEARCH_RECENT_MEMBERS: en,
-    GUILD_SUBSCRIPTIONS_FLUSH: er,
-    CALL_CONNECT: ei,
-    CALL_CONNECT_MULTIPLE: es,
-    STREAM_CREATE: W,
-    STREAM_START: ec,
-    STREAM_WATCH: e_,
-    STREAM_STOP: ef,
-    STREAM_SET_PAUSED: ed,
-    PUSH_NOTIFICATION_CLICK: ep,
-    REQUEST_FORUM_UNREADS: eh,
-    REQUEST_SOUNDBOARD_SOUNDS: eE,
-    REMOTE_COMMAND: ea,
-    RESET_SOCKET: em,
-    CLIPS_SETTINGS_UPDATE: W,
-    RUNNING_GAMES_CHANGE: W,
-    USER_SETTINGS_PROTO_UPDATE: K,
+    LOGIN_SUCCESS: function () {
+        return (
+            D.verbose("session refresh dispatched", { isEstablished: N.sZ.isSessionEstablished() }),
+            !!N.sZ.isSessionEstablished() && (N.sZ.close(), N.sZ.connect())
+        );
+    },
+    LOGOUT: function (e) {
+        e.isSwitchingAccount && N.OV.handleAccountSwitch(), D.verbose("Closing socket because of logout"), N.sZ.close();
+    },
+    CLEAR_CACHES: function (e) {
+        return e.resetSocket && (N.sZ.close(), N.sZ.dispatcher.clear(), N.sZ.connect()), !1;
+    },
+    CONNECTION_OPEN: (e) => {
+        k(e);
+    },
+    CONNECTION_RESUMED: function () {
+        U = null;
+    },
+    CONNECTION_CLOSED: function () {
+        D.verbose("connection closed dispatched"), (L = Date.now());
+    },
+    RTC_CONNECTION_STATE: function (e) {
+        if (e.state !== v.S7L.DISCONNECTED) return !1;
+        e.willReconnect && (null != e.streamKey ? N.sZ.streamPing(e.streamKey) : N.sZ.voiceServerPing());
+    },
+    VOICE_CHANNEL_SELECT: function (e) {
+        return (
+            N.Xo.update({ guildId: e.guildId, channelId: e.channelId }),
+            (U = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (0, S.isIOS)() &&
+                P === v.g6G.BACKGROUND &&
+                (null == e.channelId ? N.sZ.close(!0) : N.sZ.isClosed() && (O.V(!1), N.sZ.connect())),
+            !1
+        );
+    },
+    VOICE_STATE_UPDATES: function (e) {
+        let { voiceStates: t } = e;
+        return t.reduce((e, t) => {
+            if (f.default.getId() !== t.userId) return e;
+            if (t.sessionId === w) {
+                if (null != U)
+                    return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", U), e;
+                N.Xo.setState({ guildId: t.guildId, channelId: t.channelId });
+            } else {
+                if (t.guildId !== N.Xo.guildId) return e;
+                N.Xo.setState({ guildId: null, channelId: null });
+            }
+            return !0;
+        }, !1);
+    },
+    GUILD_DELETE: function (e) {
+        e.guild.id === N.Xo.guildId && N.Xo.setState({ guildId: null, channelId: null });
+    },
+    CHANNEL_DELETE: function (e) {
+        let { channel: t } = e;
+        t.id === N.Xo.channelId && N.Xo.setState({ guildId: null, channelId: null });
+    },
+    CALL_DELETE: function (e) {
+        let { channelId: t } = e;
+        if (t === N.Xo.channelId) {
+            if (U === t) return !1;
+            N.Xo.setState({ guildId: null, channelId: null });
+        }
+    },
+    APP_STATE_UPDATE: function (e) {
+        return (
+            (0, S.isIOS)()
+                ? (f.default.isAuthenticated() &&
+                      (P === v.g6G.INACTIVE && e.state === v.g6G.BACKGROUND && null == N.Xo.channelId
+                          ? N.sZ.close(!0)
+                          : P === v.g6G.BACKGROUND &&
+                            e.state === v.g6G.ACTIVE &&
+                            N.sZ.isClosed() &&
+                            (O.V(!1), N.sZ.connect())),
+                  (P = e.state))
+                : e.state === v.g6G.ACTIVE &&
+                  (O.V(!1), f.default.isAuthenticated() && N.sZ.resetBackoff("App state is active")),
+            !1
+        );
+    },
+    GUILD_MEMBERS_REQUEST: function (e) {
+        return (
+            N.sZ.isSessionEstablished() &&
+                ("userIds" in e
+                    ? i()(e.userIds)
+                          .chunk(100)
+                          .forEach((t) => {
+                              N.sZ.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
+                          })
+                    : N.sZ.requestGuildMembers(e.guildIds, {
+                          query: e.query,
+                          limit: e.limit,
+                          presences: !!e.presences,
+                      })),
+            !1
+        );
+    },
+    GUILD_SEARCH_RECENT_MEMBERS: function (e) {
+        let { guildId: t, query: n, continuationToken: r } = e;
+        N.sZ.isSessionEstablished() && N.sZ.searchRecentMembers(t, { query: n, continuationToken: r });
+    },
+    GUILD_SUBSCRIPTIONS_FLUSH: function (e) {
+        let { subscriptions: t } = e;
+        return N.sZ.isSessionEstablished() && N.sZ.updateGuildSubscriptions(t), !1;
+    },
+    CALL_CONNECT: function (e) {
+        let { channelId: t } = e;
+        return N.sZ.isSessionEstablished() && N.sZ.callConnect(t), !1;
+    },
+    CALL_CONNECT_MULTIPLE: function (e) {
+        let { channelIds: t } = e;
+        return (
+            N.sZ.isSessionEstablished() &&
+                t.forEach((e) => {
+                    N.sZ.callConnect(e);
+                }),
+            !1
+        );
+    },
+    STREAM_CREATE: x,
+    STREAM_START: function (e) {
+        let { streamType: t, guildId: n, channelId: r } = e;
+        if (N.sZ.isSessionEstablished()) {
+            let e = null != n ? h.A.getChannel(r)?.rtcRegion : E.A.getCall(r)?.region;
+            N.sZ.streamCreate(t, n, r, e ?? g.A.getPreferredRegion());
+        }
+        return !1;
+    },
+    STREAM_WATCH: function (e) {
+        let { streamKey: t, allowMultiple: n } = e;
+        if (N.sZ.isSessionEstablished()) {
+            if (n);
+            else {
+                let e;
+                (e = T.A.getAllActiveStreamKeys().find((e) => (0, d.Iy)(e).ownerId === f.default.getId())),
+                    T.A.getAllActiveStreamKeys()
+                        .filter((t) => t !== e)
+                        .forEach((e) => F(e));
+            }
+            N.sZ.streamWatch(t);
+        }
+        return !1;
+    },
+    STREAM_STOP: function (e) {
+        let { streamKey: t } = e;
+        return F(t), x(), !1;
+    },
+    STREAM_SET_PAUSED: function (e) {
+        let { streamKey: t, paused: n } = e;
+        N.sZ.isSessionEstablished() && N.sZ.streamSetPaused(t, n);
+    },
+    PUSH_NOTIFICATION_CLICK: function () {
+        return N.sZ.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
+    },
+    REQUEST_FORUM_UNREADS: function (e) {
+        let { guildId: t, channelId: n, threads: r } = e;
+        N.sZ.requestForumUnreads(t, n, r);
+    },
+    REQUEST_SOUNDBOARD_SOUNDS: function (e) {
+        let { guildIds: t } = e;
+        N.sZ.requestSoundboardSounds(t);
+    },
+    REMOTE_COMMAND: function (e) {
+        let { sessionId: t, payload: n } = e;
+        return N.sZ.isSessionEstablished() && N.sZ.remoteCommand(t, n), !1;
+    },
+    RESET_SOCKET: function (e) {
+        N.sZ.connectionState !== y.A.WILL_RECONNECT && N.sZ.resetSocketAndClearCacheOnError(e.args);
+    },
+    CLIPS_SETTINGS_UPDATE: x,
+    RUNNING_GAMES_CHANGE: x,
+    USER_SETTINGS_PROTO_UPDATE: function (e) {
+        e.settings.type === C.oD.PRELOADED_USER_SETTINGS && e.settings.proto.clips?.allowVoiceRecording != null && x();
+    },
 });

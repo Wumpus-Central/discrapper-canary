@@ -1,243 +1,238 @@
 "use strict";
-n.d(t, { A: () => N });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => b });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(582754),
-    l = n(397927),
+    r = n.n(s),
+    a = n(462887),
+    o = n(187322),
+    c = n(834730),
     u = n(304072),
-    c = n(736653),
-    d = n(189551),
-    _ = n(770335),
-    f = n(598770),
-    p = n(850992),
-    h = n(860371),
-    m = n(594061),
-    E = n(771104),
-    g = n(954571),
-    A = n(484333),
-    I = n(189628),
-    T = n(732139),
-    S = n(652215),
+    d = n(736653),
+    h = n(189551),
+    m = n(770335),
+    p = n(598770),
+    f = n(850992),
+    g = n(860371),
+    _ = n(594061),
+    x = n(771104),
+    A = n(954571),
+    C = n(484333),
+    E = n(189628),
+    I = n(732139),
+    v = n(652215),
     y = n(985018),
-    v = n(6376);
-let N = (e) => {
+    S = n(6376);
+let b = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: s,
-            onSelect: N,
-            onSelectSoundmoji: C,
-            onInspect: R,
-            surrogateCodePoint: O,
-            getEmojiItemProps: b,
-            getEmojiRowProps: D,
+            onSelect: b,
+            onSelectSoundmoji: N,
+            onInspect: T,
+            surrogateCodePoint: j,
+            getEmojiItemProps: R,
+            getEmojiRowProps: w,
             isScrolling: L,
-            isUsingKeyboardNavigation: w,
-            rowIndex: M,
-            allowAnimatedEmoji: P,
-            showEmojiFavoriteTooltip: x,
-            channelGuildId: k,
+            isUsingKeyboardNavigation: M,
+            rowIndex: k,
+            allowAnimatedEmoji: O,
+            showEmojiFavoriteTooltip: P,
+            channelGuildId: D,
             category: U,
-            selectedItemClassName: G,
-            channelId: F,
-            messageId: V,
+            selectedItemClassName: V,
+            channelId: G,
+            messageId: F,
             isBurstReaction: B,
             inNitroLockedSection: H,
-            handleScrollUpOnSectionCollapse: j,
+            handleScrollUpOnSectionCollapse: W,
         } = e,
-        Y = n(619508),
-        W = n(404828),
-        K = n(600003),
-        $ = n(318121),
-        z = n(443336),
-        q = n(258901),
-        Z = n(135974),
+        K = n(619508),
+        z = n(404828),
+        Z = n(600003),
+        q = n(318121),
+        Y = n(443336),
+        J = n(258901),
+        $ = n(135974),
         X = n(8013),
-        Q = (0, c.Ay)(),
-        J = p.Om.getState(),
-        [ee, et] = i.useState(J.inspectedExpressionPosition),
-        [en, er] = (0, u.A)(null, 300),
-        ei = i.useRef(null);
-    i.useEffect(
+        Q = (0, d.Ay)(),
+        ee = f.Om.getState(),
+        [et, en] = l.useState(ee.inspectedExpressionPosition),
+        [ei, el] = (0, u.A)(null, 300),
+        es = l.useRef(null);
+    l.useEffect(
         () =>
-            p.Om.subscribe(
+            f.Om.subscribe(
                 (e) => e.inspectedExpressionPosition,
-                (e) => et(e),
+                (e) => en(e),
             ),
         [],
     ),
-        i.useEffect(() => {
-            m.bW.loadIfNecessary();
+        l.useEffect(() => {
+            _.bW.loadIfNecessary();
         }, []);
-    let es = s === T.as.LARGE,
-        ea = s === T.as.MEDIUM,
+    let er = s === I.as.LARGE,
+        ea = s === I.as.MEDIUM,
         eo = (e) => {
-            let t = `${e.rowIndex}c${e.columnIndex}`,
-                n = function () {
-                    let {
-                            onMouseEnter: n,
-                            onMouseLeave: s,
-                            handleSelect: o,
-                            icon: u,
-                            ariaLabel: c,
-                            shouldShowRoundHighlight: d,
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                        { visibleRowIndex: _, columnIndex: f } = e,
-                        { ref: p, tabIndex: h, onFocus: m, ...E } = b(f, M) ?? {},
-                        g = ee.rowIndex === _ && ee.columnIndex === f,
-                        A = () => {
-                            L.current || w.current || R(e);
-                        };
-                    return (0, i.createElement)(
-                        "li",
-                        { ...E, key: t },
-                        (0, r.jsx)(l.vN3, {
-                            children: (0, r.jsx)("button", {
-                                "aria-label": c,
-                                ref: p,
-                                className: a()(v._X, {
-                                    [v.lG]: es,
-                                    [v.Lh]: ea,
-                                    [v.Bx]: g && !d,
-                                    [G ?? ""]: g,
-                                    [v.TV]: en === t,
-                                }),
-                                onFocus: m ?? A,
-                                onMouseOver: A,
+            let t = `${e.rowIndex}c${e.columnIndex}`;
+            switch (e.type) {
+                case C.bm.EXPAND_OR_COLLAPSE_EMOJIS: {
+                    let { visibleRowIndex: n, columnIndex: s } = e,
+                        c = et.rowIndex === n && et.columnIndex === s,
+                        u = e.sectionCollapsedToThreeRows
+                            ? c
+                                ? (0, a.M)(Q)
+                                    ? J
+                                    : X
+                                : (0, a.M)(Q)
+                                  ? K
+                                  : z
+                            : c
+                              ? (0, a.M)(Q)
+                                  ? Y
+                                  : $
+                              : (0, a.M)(Q)
+                                ? Z
+                                : q,
+                        d = y.intl.string(e.sectionCollapsedToThreeRows ? y.t.NZI2Zk : y.t["/K2RDH"]);
+                    return (function () {
+                        let {
                                 onMouseEnter: n,
                                 onMouseLeave: s,
-                                onClick: o,
-                                tabIndex: h,
-                                children: u,
+                                handleSelect: a,
+                                icon: c,
+                                ariaLabel: u,
+                                shouldShowRoundHighlight: d,
+                            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                            { visibleRowIndex: h, columnIndex: m } = e,
+                            { ref: p, tabIndex: f, onFocus: g, ..._ } = R(m, k) ?? {},
+                            x = et.rowIndex === h && et.columnIndex === m,
+                            A = () => {
+                                L.current || M.current || T(e);
+                            };
+                        return (0, l.createElement)(
+                            "li",
+                            { ..._, key: t },
+                            (0, i.jsx)(o.vN, {
+                                children: (0, i.jsx)("button", {
+                                    "aria-label": u,
+                                    ref: p,
+                                    className: r()(S._X, {
+                                        [S.lG]: er,
+                                        [S.Lh]: ea,
+                                        [S.Bx]: x && !d,
+                                        [V ?? ""]: x,
+                                        [S.TV]: ei === t,
+                                    }),
+                                    onFocus: g ?? A,
+                                    onMouseOver: A,
+                                    onMouseEnter: n,
+                                    onMouseLeave: s,
+                                    onClick: a,
+                                    tabIndex: f,
+                                    children: c,
+                                }),
                             }),
-                        }),
-                    );
-                };
-            switch (e.type) {
-                case A.bm.EXPAND_OR_COLLAPSE_EMOJIS: {
-                    let { visibleRowIndex: t, columnIndex: i } = e,
-                        s = ee.rowIndex === t && ee.columnIndex === i,
-                        a = (t) => {
+                        );
+                    })({
+                        handleSelect: (t) => {
                             t.stopPropagation(),
                                 L.current ||
-                                    w.current ||
-                                    (N(e, { isFinalSelection: !0, toggleFavorite: !1 }),
-                                    (0, d.G)(e.guildId),
-                                    e.sectionCollapsedToThreeRows || j(),
-                                    g.default.track(S.HAw.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
+                                    M.current ||
+                                    (b(e, { isFinalSelection: !0, toggleFavorite: !1 }),
+                                    (0, h.G)(e.guildId),
+                                    e.sectionCollapsedToThreeRows || W(),
+                                    A.default.track(v.HAw.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
                                         collapsed: e.sectionCollapsedToThreeRows,
                                         guild_id: e.guildId,
                                     }));
                         },
-                        l = e.sectionCollapsedToThreeRows
-                            ? s
-                                ? (0, o.Mw)(Q)
-                                    ? q
-                                    : X
-                                : (0, o.Mw)(Q)
-                                  ? Y
-                                  : W
-                            : s
-                              ? (0, o.Mw)(Q)
-                                  ? z
-                                  : Z
-                              : (0, o.Mw)(Q)
-                                ? K
-                                : $,
-                        u = y.intl.string(e.sectionCollapsedToThreeRows ? y.t.NZI2Zk : y.t["/K2RDH"]);
-                    return n({
-                        handleSelect: a,
-                        icon: (0, r.jsx)("img", { className: v.Kk, src: l, alt: "" }),
-                        ariaLabel: u,
+                        icon: (0, i.jsx)("img", { className: S.Kk, src: u, alt: "" }),
+                        ariaLabel: d,
                         shouldShowRoundHighlight: !0,
                     });
                 }
-                case A.bm.EMOJI: {
-                    let { columnIndex: n, visibleRowIndex: i } = e,
-                        s = ee.rowIndex === i && ee.columnIndex === n;
-                    return (0, r.jsx)(
-                        I.A,
+                case C.bm.EMOJI: {
+                    let { columnIndex: n, visibleRowIndex: l } = e,
+                        s = et.rowIndex === l && et.columnIndex === n;
+                    return (0, i.jsx)(
+                        E.A,
                         {
-                            rowIndex: M,
+                            rowIndex: k,
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: s,
                             isScrolling: L,
-                            isUsingKeyboardNavigation: w,
-                            surrogateCodePoint: O,
-                            allowAnimatedEmoji: P,
-                            selectedItemClassName: G,
-                            onSelect: N,
-                            onInspect: R,
-                            channelGuildId: k,
-                            getEmojiItemProps: b,
+                            isUsingKeyboardNavigation: M,
+                            surrogateCodePoint: j,
+                            allowAnimatedEmoji: O,
+                            selectedItemClassName: V,
+                            onSelect: b,
+                            onInspect: T,
+                            channelGuildId: D,
+                            getEmojiItemProps: R,
                             isMediumSize: ea,
-                            isLargeSize: es,
-                            pulseItemKey: en,
-                            setPulseItemKey: er,
-                            showEmojiFavoriteTooltip: x,
-                            messageId: V,
+                            isLargeSize: er,
+                            pulseItemKey: ei,
+                            setPulseItemKey: el,
+                            showEmojiFavoriteTooltip: P,
+                            messageId: F,
                             isBurstReaction: B,
-                            rowPosition: ei?.current?.getBoundingClientRect(),
+                            rowPosition: es?.current?.getBoundingClientRect(),
                             inNitroLockedSection: H,
                         },
                         t,
                     );
                 }
-                case A.bm.SOUNDMOJI:
+                case C.bm.SOUNDMOJI:
                     return;
             }
         },
-        el = (e) =>
-            (0, r.jsx)("ul", {
-                ...D(M),
-                className: a()(v.ND, { [v.HO]: es, [v.X$]: ea }),
-                ref: ei,
+        ec = (e) =>
+            (0, i.jsx)("ul", {
+                ...w(k),
+                className: r()(S.ND, { [S.HO]: er, [S.X$]: ea }),
+                ref: es,
                 children: e.map(eo),
             });
-    if (U === T.R2.SOUNDMOJI)
-        return (0, r.jsx)("ul", {
-            className: v.ND,
-            ref: ei,
-            children: (0, r.jsx)(h.A, { channelId: F, onSelectSoundmoji: C }),
+    if (U === I.R2.SOUNDMOJI)
+        return (0, i.jsx)("ul", {
+            className: S.ND,
+            ref: es,
+            children: (0, i.jsx)(g.A, { channelId: G, onSelectSoundmoji: N }),
         });
-    if (U !== T.s.TOP_GUILD_EMOJI) return el(t);
-    let eu = t.filter((e) => {
-            let t = e;
-            return (
-                t.subCategory === T.tm.TOP_GUILD_EMOJI ||
-                (t.subCategory === T.tm.NEWLY_ADDED_EMOJI &&
-                    t.emoji.type === _.i.GUILD &&
-                    !f.A.isNewerThanLastSeen(t.emoji.guildId, t.emoji.id))
-            );
-        }),
-        ec = t.filter((e) => {
-            let t = e;
-            return (
-                t.subCategory === T.tm.NEWLY_ADDED_EMOJI &&
-                t.emoji.type === _.i.GUILD &&
-                f.A.isNewerThanLastSeen(t.emoji.guildId, t.emoji.id)
-            );
-        });
-    return 0 === ec.length
-        ? el(t)
-        : (0, r.jsxs)("div", {
-              className: v.Ng,
+    if (U !== I.s.TOP_GUILD_EMOJI) return ec(t);
+    let eu = t.filter(
+            (e) =>
+                e.subCategory === I.tm.TOP_GUILD_EMOJI ||
+                (e.subCategory === I.tm.NEWLY_ADDED_EMOJI &&
+                    e.emoji.type === m.i.GUILD &&
+                    !p.A.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+        ),
+        ed = t.filter(
+            (e) =>
+                e.subCategory === I.tm.NEWLY_ADDED_EMOJI &&
+                e.emoji.type === m.i.GUILD &&
+                p.A.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id),
+        );
+    return 0 === ed.length
+        ? ec(t)
+        : (0, i.jsxs)("div", {
+              className: S.Ng,
               children: [
-                  (0, r.jsx)("div", { className: a()(v.V6, { [v.$3]: 0 === eu.length }), children: el(eu) }),
-                  (0, r.jsxs)("div", {
-                      className: v.bc,
+                  (0, i.jsx)("div", { className: r()(S.V6, { [S.$3]: 0 === eu.length }), children: ec(eu) }),
+                  (0, i.jsxs)("div", {
+                      className: S.bc,
                       children: [
-                          (0, r.jsx)("div", {
-                              className: a()(v.eE, { [v.eM]: 1 === ec.length, [v.Wk]: eu.length > 0 }),
-                              children: el(ec),
+                          (0, i.jsx)("div", {
+                              className: r()(S.eE, { [S.eM]: 1 === ed.length, [S.Wk]: eu.length > 0 }),
+                              children: ec(ed),
                           }),
-                          (0, r.jsxs)("div", {
-                              className: a()(v.lD, { [v.EI]: es, [v.qU]: ea, [v.Wk]: eu.length > 0 }),
+                          (0, i.jsxs)("div", {
+                              className: r()(S.lD, { [S.EI]: er, [S.qU]: ea, [S.Wk]: eu.length > 0 }),
                               children: [
-                                  (0, r.jsx)(E.A, { foreground: v.rI }),
-                                  (0, r.jsx)(l.Text, {
+                                  (0, i.jsx)(x.A, { foreground: S.rI }),
+                                  (0, i.jsx)(c.E, {
                                       variant: "text-xs/semibold",
                                       color: "always-white",
                                       children: y.intl.string(y.t.y2b7CA),

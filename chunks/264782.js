@@ -1,24 +1,12 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => c });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153);
+    s = n(311907),
+    a = n(73153);
 let o = {},
     l = {};
 function u(e) {
-    let { applicationId: t } = e;
-    o = { ...o, [t]: 1 };
-}
-function c(e) {
-    let { applicationId: t } = e;
-    o = { ...o, [t]: 2 };
-}
-function d(e) {
-    let { applicationId: t, assets: n } = e;
-    null != n ? (l[t] = { assets: i().keyBy(n, "name") ?? {}, lastUpdated: Date.now() }) : delete l[t];
-}
-function _(e) {
     let { assets: t } = e,
         n = { ...o };
     for (let e in t) {
@@ -27,7 +15,7 @@ function _(e) {
     }
     o = n;
 }
-class f extends a.Ay.Store {
+class d extends s.Ay.Store {
     static displayName = "ApplicationAssetsStore";
     getApplicationAssetFetchState(e) {
         return o[e] ?? 0;
@@ -49,10 +37,19 @@ class f extends a.Ay.Store {
         return l[e];
     }
 }
-let p = new f(s.h, {
-    APPLICATION_ASSETS_FETCH: u,
-    APPLICATION_ASSETS_FETCH_SUCCESS: c,
-    APPLICATION_ASSETS_UPDATE: d,
-    EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: _,
-    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: _,
+let c = new d(a.h, {
+    APPLICATION_ASSETS_FETCH: function (e) {
+        let { applicationId: t } = e;
+        o = { ...o, [t]: 1 };
+    },
+    APPLICATION_ASSETS_FETCH_SUCCESS: function (e) {
+        let { applicationId: t } = e;
+        o = { ...o, [t]: 2 };
+    },
+    APPLICATION_ASSETS_UPDATE: function (e) {
+        let { applicationId: t, assets: n } = e;
+        null != n ? (l[t] = { assets: i().keyBy(n, "name") ?? {}, lastUpdated: Date.now() }) : delete l[t];
+    },
+    EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: u,
+    DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: u,
 });

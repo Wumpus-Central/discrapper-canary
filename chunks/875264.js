@@ -1,97 +1,98 @@
-n.d(t, { A: () => y }), n(321073);
+n.d(t, { A: () => w }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(735438),
     a = n.n(s),
     r = n(311907),
-    o = n(397927),
-    d = n(282956),
-    c = n(83257),
-    u = n(882997),
-    m = n(235986),
-    g = n(143582),
+    o = n(534514),
+    d = n(40474),
+    c = n(282956),
+    u = n(83257),
+    m = n(882997),
+    g = n(235986),
+    h = n(143582),
     x = n(607940),
-    h = n(808728),
-    p = n(576705),
-    A = n(203982),
-    b = n(975571),
-    f = n(971157),
-    _ = n(790613),
+    p = n(808728),
+    A = n(576705),
+    b = n(203982),
+    f = n(975571),
+    _ = n(971157),
+    j = n(790613),
     N = n(460641),
-    j = n(969756),
-    T = n(930238),
-    v = n(761437),
-    C = n(652215),
-    I = n(985018),
-    E = n(858539);
-function S(e, t) {
+    v = n(969756),
+    E = n(930238),
+    C = n(761437),
+    I = n(652215),
+    T = n(985018),
+    S = n(458203);
+function y(e, t) {
     switch (e) {
-        case C.wLn.APPLICATION:
+        case I.wLn.APPLICATION:
             return t?.application.name ?? "";
-        case C.wLn.OVERVIEW:
-            return I.intl.string(I.t.s69NLF);
-        case C.wLn.CHANNEL_FOLLOWING:
-            return I.intl.string(I.t.OrV60r);
-        case C.wLn.TWITCH:
-            return I.intl.string(I.t.q4pBG3);
-        case C.wLn.WEBHOOKS:
-            return I.intl.string(I.t.xOg4SP);
-        case C.wLn.YOUTUBE:
-            return I.intl.string(I.t.aS6cK4);
-        case C.wLn.LOBBIES_LINKED:
-            return I.intl.string(I.t.tqtDXC);
+        case I.wLn.OVERVIEW:
+            return T.intl.string(T.t.s69NLF);
+        case I.wLn.CHANNEL_FOLLOWING:
+            return T.intl.string(T.t.OrV60r);
+        case I.wLn.TWITCH:
+            return T.intl.string(T.t.q4pBG3);
+        case I.wLn.WEBHOOKS:
+            return T.intl.string(T.t.xOg4SP);
+        case I.wLn.YOUTUBE:
+            return T.intl.string(T.t.aS6cK4);
+        case I.wLn.LOBBIES_LINKED:
+            return T.intl.string(T.t.tqtDXC);
         default:
             return "";
     }
 }
-let y = l.memo(function (e) {
+let w = l.memo(function (e) {
     let {
             section: t,
             sectionId: n,
             guild: s,
-            channel: y,
+            channel: w,
             integrations: O,
-            editedIntegration: w,
-            webhooks: R,
-            editedWebhook: k,
-            isFetchingWebhooks: L,
-            refToScroller: M,
-            errors: G,
-            hasChanges: U,
+            editedIntegration: k,
+            webhooks: L,
+            editedWebhook: R,
+            isFetchingWebhooks: M,
+            refToScroller: D,
+            errors: P,
+            hasChanges: G,
         } = e,
-        D = (0, r.bG)([h.Ay], () => (null != s ? h.Ay.getDefaultChannel(s.id) : null)),
-        P = (0, r.cf)([h.Ay], () => h.Ay.getChannels(s?.id)),
-        B = (0, r.cf)([p.A], () =>
+        U = (0, r.bG)([p.Ay], () => (null != s ? p.Ay.getDefaultChannel(s.id) : null)),
+        W = (0, r.cf)([p.Ay], () => p.Ay.getChannels(s?.id)),
+        B = (0, r.cf)([A.A], () =>
             a().keyBy(
-                P.SELECTABLE.map((e) => e.channel).filter((e) => p.A.can(C.xBc.MANAGE_WEBHOOKS, e)),
+                W.SELECTABLE.map((e) => e.channel).filter((e) => A.A.can(I.xBc.MANAGE_WEBHOOKS, e)),
                 "id",
             ),
         ),
-        W = (0, r.cf)([p.A], () =>
+        H = (0, r.cf)([A.A], () =>
             a().keyBy(
-                P.VOCAL.map((e) => e.channel).filter((e) => e.isGuildVocal() && p.A.can(C.xBc.MANAGE_WEBHOOKS, e)),
+                W.VOCAL.map((e) => e.channel).filter((e) => e.isGuildVocal() && A.A.can(I.xBc.MANAGE_WEBHOOKS, e)),
                 "id",
             ),
         ),
-        H = y ?? D,
-        V = t === C.wLn.APPLICATION ? n : null,
-        [z, F] = l.useState(c.n3),
-        K = l.useCallback(
+        z = w ?? U,
+        V = t === I.wLn.APPLICATION ? n : null,
+        [F, K] = l.useState(u.n3),
+        Y = l.useCallback(
             () =>
-                U()
-                    ? (A._.dispatch(C.jej.SHAKE_APP, { duration: 300, intensity: z }),
-                      F(Math.min(z + c.pe, c.OZ)),
-                      A._.dispatch(C.jej.EMPHASIZE_NOTICE),
+                G()
+                    ? (b._.dispatch(I.jej.SHAKE_APP, { duration: 300, intensity: F }),
+                      K(Math.min(F + u.pe, u.OZ)),
+                      b._.dispatch(I.jej.EMPHASIZE_NOTICE),
                       !1)
-                    : (F(c.n3), !0),
-            [U, z],
+                    : (K(u.n3), !0),
+            [G, F],
         ),
-        Y = l.useCallback((e) => !!K() && (d.A.setSection(e), !0), [K]),
+        q = l.useCallback((e) => !!Y() && (c.A.setSection(e), !0), [Y]),
         {
-            applicationIntegrations: q,
-            applicationBotIds: J,
-            builtInIntegrations: Q,
-            customWebhooks: Z,
+            applicationIntegrations: Q,
+            applicationBotIds: Z,
+            builtInIntegrations: J,
+            customWebhooks: $,
             followedChannelWebhooks: X,
         } = l.useMemo(() => {
             let e = {},
@@ -106,11 +107,11 @@ let y = l.memo(function (e) {
                           ((e[i.application.id] = { application: i.application, integration: i, webhooks: [] }),
                           i.application.bot?.id !== void 0 && (t[i.application.bot.id] = i.application.id))
                         : (i.type in n || (n[i.type] = []), n[i.type].push(i));
-            for (let t of R)
-                (t.channel_id in B || t.channel_id in W) &&
+            for (let t of L)
+                (t.channel_id in B || t.channel_id in H) &&
                     (null != t.application_id && t.application_id in e
                         ? e[t.application_id].webhooks.push(t)
-                        : t.type === C.NH1.CHANNEL_FOLLOWER
+                        : t.type === I.NH1.CHANNEL_FOLLOWER
                           ? l.push(t)
                           : i.push(t));
             return {
@@ -120,157 +121,157 @@ let y = l.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: l,
             };
-        }, [O, B, W, R]);
+        }, [O, B, H, L]);
     l.useEffect(() => {
-        if (!L)
+        if (!M)
             switch (t) {
-                case C.wLn.TWITCH:
-                    null == Q[C.fg2.TWITCH] && d.A.setSection(C.wLn.OVERVIEW);
+                case I.wLn.TWITCH:
+                    null == J[I.fg2.TWITCH] && c.A.setSection(I.wLn.OVERVIEW);
                     break;
-                case C.wLn.YOUTUBE:
-                    null == Q[C.fg2.YOUTUBE] && d.A.setSection(C.wLn.OVERVIEW);
+                case I.wLn.YOUTUBE:
+                    null == J[I.fg2.YOUTUBE] && c.A.setSection(I.wLn.OVERVIEW);
                     break;
-                case C.wLn.APPLICATION:
-                    (null != V && (V in J || V in q)) || d.A.setSection(C.wLn.OVERVIEW);
+                case I.wLn.APPLICATION:
+                    (null != V && (V in Z || V in Q)) || c.A.setSection(I.wLn.OVERVIEW);
             }
-    }, [q, J, Q, V, t, L]),
+    }, [Q, Z, J, V, t, M]),
         l.useEffect(() => {
-            s?.id == null || (x.A.getEntitlementsForGuildFetchState(s.id) === x.e.NOT_FETCHED && g.f5(s.id));
+            s?.id == null || (x.A.getEntitlementsForGuildFetchState(s.id) === x.e.NOT_FETCHED && h.f5(s.id));
         }, [s?.id]),
         l.useEffect(
             () => () => {
-                d.A.setSection(C.wLn.OVERVIEW, null);
+                c.A.setSection(I.wLn.OVERVIEW, null);
             },
             [],
         );
-    let $ = null;
+    let ee = null;
     switch (t) {
-        case C.wLn.TWITCH:
-            null != Q[C.fg2.TWITCH] &&
-                ($ = (0, i.jsx)(_.A, {
+        case I.wLn.TWITCH:
+            null != J[I.fg2.TWITCH] &&
+                (ee = (0, i.jsx)(j.A, {
                     guild: s,
-                    integrations: Q[C.fg2.TWITCH],
-                    editedIntegration: w,
-                    labelText: I.intl.string(I.t.q4pBG3),
-                    platformType: C.fg2.TWITCH,
-                    descriptionText: I.intl.string(I.t.V9kNqt),
-                    helpText: I.intl.format(I.t.ro1jEN, {
-                        connectAction: () => (0, u.A)({ platformType: C.fg2.TWITCH, location: "Integration Settings" }),
-                        helpdeskArticle: b.A.getArticleURL(C.MVz.TWITCH_INTEGRATION),
+                    integrations: J[I.fg2.TWITCH],
+                    editedIntegration: k,
+                    labelText: T.intl.string(T.t.q4pBG3),
+                    platformType: I.fg2.TWITCH,
+                    descriptionText: T.intl.string(T.t.V9kNqt),
+                    helpText: T.intl.format(T.t.ro1jEN, {
+                        connectAction: () => (0, m.A)({ platformType: I.fg2.TWITCH, location: "Integration Settings" }),
+                        helpdeskArticle: f.A.getArticleURL(I.MVz.TWITCH_INTEGRATION),
                     }),
-                    errors: G,
-                    canNavigate: K,
+                    errors: P,
+                    canNavigate: Y,
                 }));
             break;
-        case C.wLn.YOUTUBE:
-            null != Q[C.fg2.YOUTUBE] &&
-                ($ = (0, i.jsx)(_.A, {
+        case I.wLn.YOUTUBE:
+            null != J[I.fg2.YOUTUBE] &&
+                (ee = (0, i.jsx)(j.A, {
                     guild: s,
-                    integrations: Q[C.fg2.YOUTUBE],
-                    editedIntegration: w,
-                    labelText: I.intl.string(I.t.aS6cK4),
-                    platformType: C.fg2.YOUTUBE,
-                    descriptionText: I.intl.string(I.t["7Tv7JK"]),
-                    helpText: I.intl.format(I.t["4OSAQ9"], {
-                        connectAction: () => (0, u.A)({ platformType: C.fg2.YOUTUBE }),
-                        helpdeskArticle: b.A.getArticleURL(C.MVz.YOUTUBE_INTEGRATION),
+                    integrations: J[I.fg2.YOUTUBE],
+                    editedIntegration: k,
+                    labelText: T.intl.string(T.t.aS6cK4),
+                    platformType: I.fg2.YOUTUBE,
+                    descriptionText: T.intl.string(T.t["7Tv7JK"]),
+                    helpText: T.intl.format(T.t["4OSAQ9"], {
+                        connectAction: () => (0, m.A)({ platformType: I.fg2.YOUTUBE }),
+                        helpdeskArticle: f.A.getArticleURL(I.MVz.YOUTUBE_INTEGRATION),
                     }),
-                    errors: G,
-                    canNavigate: K,
+                    errors: P,
+                    canNavigate: Y,
                 }));
             break;
-        case C.wLn.APPLICATION:
-            let ee = null != V ? (q[J[V]] ?? q[V]) : null;
-            null != ee &&
-                ($ = (0, i.jsx)(f.A, {
+        case I.wLn.APPLICATION:
+            let et = null != V ? (Q[Z[V]] ?? Q[V]) : null;
+            null != et &&
+                (ee = (0, i.jsx)(_.A, {
                     guild: s,
-                    applicationIntegration: ee,
-                    editedWebhook: k,
+                    applicationIntegration: et,
+                    editedWebhook: R,
                     selectableWebhookChannels: B,
-                    errors: G,
-                    canNavigate: K,
+                    errors: P,
+                    canNavigate: Y,
                 }));
             break;
-        case C.wLn.CHANNEL_FOLLOWING:
-            $ = (0, i.jsx)(N.A, {
+        case I.wLn.CHANNEL_FOLLOWING:
+            ee = (0, i.jsx)(N.A, {
                 followedChannelWebhooks: X,
-                editedWebhook: k,
+                editedWebhook: R,
                 selectableWebhookChannels: B,
-                canNavigate: K,
-                errors: G,
+                canNavigate: Y,
+                errors: P,
             });
             break;
-        case C.wLn.WEBHOOKS:
-            $ = (0, i.jsx)(v.A, {
+        case I.wLn.WEBHOOKS:
+            ee = (0, i.jsx)(C.A, {
                 guild: s,
-                channel: y,
-                customWebhooks: Z,
-                editedWebhook: k,
-                selectableWebhookChannels: { ...B, ...W },
-                canNavigate: K,
-                refToScroller: M,
-                errors: G,
+                channel: w,
+                customWebhooks: $,
+                editedWebhook: R,
+                selectableWebhookChannels: { ...B, ...H },
+                canNavigate: Y,
+                refToScroller: D,
+                errors: P,
             });
             break;
-        case C.wLn.LOBBIES_LINKED:
-            $ = (0, i.jsx)(j.A, { guild: s });
+        case I.wLn.LOBBIES_LINKED:
+            ee = (0, i.jsx)(v.A, { guild: s });
             break;
         default:
-            $ = (0, i.jsx)(T.A, {
+            ee = (0, i.jsx)(E.A, {
                 guild: s,
-                channel: y,
-                applicationIntegrations: q,
-                builtInIntegrations: Q,
-                customWebhooks: Z,
+                channel: w,
+                applicationIntegrations: Q,
+                builtInIntegrations: J,
+                customWebhooks: $,
                 followedChannelWebhooks: X,
-                isLoadingWebhooks: L || null == s,
-                canCreateWebhook: null != H,
+                isLoadingWebhooks: M || null == s,
+                canCreateWebhook: null != z,
                 onManageCustomWebhooks: () => {
-                    d.A.setSection(C.wLn.WEBHOOKS);
+                    c.A.setSection(I.wLn.WEBHOOKS);
                 },
                 onManageFollowedChannels: () => {
-                    d.A.setSection(C.wLn.CHANNEL_FOLLOWING);
+                    c.A.setSection(I.wLn.CHANNEL_FOLLOWING);
                 },
                 onManageApplication: (e) => {
-                    d.A.setSection(C.wLn.APPLICATION, e);
+                    c.A.setSection(I.wLn.APPLICATION, e);
                 },
                 onManageBuiltIn: (e) => {
                     switch (e) {
-                        case C.fg2.TWITCH:
-                            d.A.setSection(C.wLn.TWITCH);
+                        case I.fg2.TWITCH:
+                            c.A.setSection(I.wLn.TWITCH);
                             break;
-                        case C.fg2.YOUTUBE:
-                            d.A.setSection(C.wLn.YOUTUBE);
+                        case I.fg2.YOUTUBE:
+                            c.A.setSection(I.wLn.YOUTUBE);
                     }
                 },
                 onManageLobbiesLinked: () => {
-                    d.A.setSection(C.wLn.LOBBIES_LINKED);
+                    c.A.setSection(I.wLn.LOBBIES_LINKED);
                 },
             });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(m.A, {
-                align: m.A.Align.CENTER,
-                className: E.jD,
+            (0, i.jsx)(g.A, {
+                align: g.A.Align.CENTER,
+                className: S.jD,
                 children:
-                    t === C.wLn.OVERVIEW
-                        ? (0, i.jsx)(o.Heading, { variant: "heading-lg/semibold", children: S(C.wLn.OVERVIEW) })
-                        : (0, i.jsx)(o.BIu, {
+                    t === I.wLn.OVERVIEW
+                        ? (0, i.jsx)(o.D, { variant: "heading-lg/semibold", children: y(I.wLn.OVERVIEW) })
+                        : (0, i.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [C.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: S(e, q[V]) })),
+                              breadcrumbs: [I.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: y(e, Q[V]) })),
                               onBreadcrumbClick: (e) => {
-                                  t !== parseInt(e.id) && Y(parseInt(e.id));
+                                  t !== parseInt(e.id) && q(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
-                                  (0, i.jsx)(o.Heading, {
+                                  (0, i.jsx)(o.D, {
                                       variant: "heading-lg/semibold",
-                                      className: t ? E.q3 : E.fd,
+                                      className: t ? S.q3 : S.fd,
                                       children: e.label,
                                   }),
                           }),
             }),
-            $,
+            ee,
         ],
     });
 });

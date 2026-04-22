@@ -1,39 +1,15 @@
 "use strict";
 let r;
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(311907),
     s = n(73153);
 let a = [],
     o = a,
     l = null,
     u = {},
-    c = new Set(),
-    d = {},
-    _ = (e) => {
-        (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (r = e.initialProductSkuId);
-    },
-    f = (e) => {
-        (o = a), (l = null), (r = void 0);
-    },
-    p = (e) => {
-        e.skuId === r && (r = void 0);
-    },
-    h = (e) => {
-        let { tab: t } = e;
-        c.add(t);
-    },
-    m = (e) => {
-        let { tab: t, layoutId: n } = e;
-        (u[t] = n), delete d[t], c.delete(t);
-    },
-    E = (e) => {
-        let { tab: t, apiError: n } = e;
-        (d[t] = n), c.delete(t);
-    },
-    g = (e) => {
-        (o = a), (l = null), (r = void 0), (u = {}), (c = new Set()), (d = {});
-    };
-class A extends i.Ay.Store {
+    d = new Set(),
+    c = {};
+class _ extends i.Ay.Store {
     static displayName = "CollectiblesShopStore";
     get analyticsLocations() {
         return o;
@@ -51,18 +27,35 @@ class A extends i.Ay.Store {
         return null == e ? null : (u[e] ?? null);
     }
     isFetchingLayout(e) {
-        return null != e && c.has(e);
+        return null != e && d.has(e);
     }
     getLayoutFetchError(e) {
-        return null == e ? null : (d[e] ?? null);
+        return null == e ? null : (c[e] ?? null);
     }
 }
-let I = new A(s.h, {
-    COLLECTIBLES_SHOP_OPEN: _,
-    COLLECTIBLES_SHOP_CLOSE: f,
-    COLLECTIBLES_PRODUCT_DETAILS_OPEN: p,
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH: h,
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: m,
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: E,
-    LOGOUT: g,
+let f = new _(s.h, {
+    COLLECTIBLES_SHOP_OPEN: (e) => {
+        (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (r = e.initialProductSkuId);
+    },
+    COLLECTIBLES_SHOP_CLOSE: (e) => {
+        (o = a), (l = null), (r = void 0);
+    },
+    COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
+        e.skuId === r && (r = void 0);
+    },
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH: (e) => {
+        let { tab: t } = e;
+        d.add(t);
+    },
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: (e) => {
+        let { tab: t, layoutId: n } = e;
+        (u[t] = n), delete c[t], d.delete(t);
+    },
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: (e) => {
+        let { tab: t, apiError: n } = e;
+        (c[t] = n), d.delete(t);
+    },
+    LOGOUT: (e) => {
+        (o = a), (l = null), (r = void 0), (u = {}), (d = new Set()), (c = {});
+    },
 });

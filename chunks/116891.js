@@ -1,17 +1,12 @@
-"use strict";
-n.d(t, { eT: () => l, fj: () => i });
-var r = n(250105);
-let i = "1080p",
-    s = "1440p",
-    a = (0, r.Ay)({
+i.d(t, { eT: () => n, fj: () => l });
+var s = i(250105);
+let l = "1080p",
+    a = (0, s.Ay)({
         name: "2026-04-server-boost-copy-1440p",
         kind: "user",
-        defaultConfig: { streamQualityMarketingResolution: i },
-        variations: { 1: { streamQualityMarketingResolution: s } },
+        defaultConfig: { streamQualityMarketingResolution: l },
+        variations: { 1: { streamQualityMarketingResolution: "1440p" } },
     });
-function o(e) {
-    return a.getConfig({ location: e });
-}
-function l(e) {
-    return o(e).streamQualityMarketingResolution;
+function n(e) {
+    return a.getConfig({ location: e }).streamQualityMarketingResolution;
 }

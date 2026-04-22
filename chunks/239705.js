@@ -1,40 +1,43 @@
 "use strict";
-n.d(t, { x: () => _ });
-var i = n(397927),
-    r = n(47167),
-    s = n(734057),
-    l = n(994500),
-    a = n(287809),
-    c = n(411335),
-    o = n(200700),
-    u = n(985018);
-let d = function (e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.uh.KEYWORD;
+n.d(t, { x: () => m });
+var i = n(285796),
+    r = n(276293),
+    l = n(60270),
+    s = n(353182),
+    a = n(47167),
+    o = n(734057),
+    c = n(994500),
+    u = n(287809),
+    d = n(411335),
+    _ = n(200700),
+    E = n(985018);
+let A = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uh.KEYWORD;
     switch (e) {
-        case c.AH.BLOCK_MESSAGE:
+        case d.AH.BLOCK_MESSAGE:
             switch (t) {
-                case c.uh.MENTION_SPAM:
-                    return u.intl.string(u.t["8hdId3"]);
-                case c.uh.ML_SPAM:
-                    return u.intl.string(u.t.tLQYs5);
+                case d.uh.MENTION_SPAM:
+                    return E.intl.string(E.t["8hdId3"]);
+                case d.uh.ML_SPAM:
+                    return E.intl.string(E.t.tLQYs5);
                 default:
-                    return u.intl.string(u.t.xAAoci);
+                    return E.intl.string(E.t.xAAoci);
             }
-        case c.AH.FLAG_TO_CHANNEL:
-            return u.intl.string(u.t.BHAXfa);
-        case c.AH.USER_COMMUNICATION_DISABLED:
-            return u.intl.string(u.t["bNK+gI"]);
-        case c.AH.QUARANTINE_USER:
-            return u.intl.string(u.t["/7nL5R"]);
+        case d.AH.FLAG_TO_CHANNEL:
+            return E.intl.string(E.t.BHAXfa);
+        case d.AH.USER_COMMUNICATION_DISABLED:
+            return E.intl.string(E.t["bNK+gI"]);
+        case d.AH.QUARANTINE_USER:
+            return E.intl.string(E.t["/7nL5R"]);
     }
 };
-function _(e, t, n) {
+function m(e, t, n) {
     return ((e) => {
         switch (e) {
-            case c.AH.BLOCK_MESSAGE:
-            case c.AH.FLAG_TO_CHANNEL:
-            case c.AH.USER_COMMUNICATION_DISABLED:
-            case c.AH.QUARANTINE_USER:
+            case d.AH.BLOCK_MESSAGE:
+            case d.AH.FLAG_TO_CHANNEL:
+            case d.AH.USER_COMMUNICATION_DISABLED:
+            case d.AH.QUARANTINE_USER:
                 return !0;
             default:
                 return !1;
@@ -44,53 +47,53 @@ function _(e, t, n) {
               headerText:
                   ((e) => {
                       switch (e) {
-                          case c.AH.BLOCK_MESSAGE:
-                              return u.intl.string(u.t.d1ab8n);
-                          case c.AH.FLAG_TO_CHANNEL:
-                              return u.intl.string(u.t["Y+VmvU"]);
-                          case c.AH.USER_COMMUNICATION_DISABLED:
-                              return u.intl.string(u.t.Xz2njA);
-                          case c.AH.QUARANTINE_USER:
-                              return u.intl.string(u.t.NPO8ee);
+                          case d.AH.BLOCK_MESSAGE:
+                              return E.intl.string(E.t.d1ab8n);
+                          case d.AH.FLAG_TO_CHANNEL:
+                              return E.intl.string(E.t["Y+VmvU"]);
+                          case d.AH.USER_COMMUNICATION_DISABLED:
+                              return E.intl.string(E.t.Xz2njA);
+                          case d.AH.QUARANTINE_USER:
+                              return E.intl.string(E.t.NPO8ee);
                       }
                   })(e) ?? "",
-              descriptionText: d(e, n) ?? "",
+              descriptionText: A(e, n) ?? "",
               helperText:
                   ((e, t) => {
                       switch (e) {
-                          case c.AH.QUARANTINE_USER:
-                          case c.AH.BLOCK_MESSAGE:
+                          case d.AH.QUARANTINE_USER:
+                          case d.AH.BLOCK_MESSAGE:
                               return null;
-                          case c.AH.FLAG_TO_CHANNEL: {
+                          case d.AH.FLAG_TO_CHANNEL: {
                               let e = t?.metadata?.channelId;
                               if (null == e) return null;
-                              let n = s.A.getChannel(e);
+                              let n = o.A.getChannel(e);
                               if (null == n) return null;
-                              let i = (0, r.m1)(n, a.default, l.A);
-                              return u.intl.format(u.t.xQXnkK, { channelName: i });
+                              let i = (0, a.m1)(n, u.default, c.A);
+                              return E.intl.format(E.t.xQXnkK, { channelName: i });
                           }
-                          case c.AH.USER_COMMUNICATION_DISABLED: {
+                          case d.AH.USER_COMMUNICATION_DISABLED: {
                               let e = t?.metadata?.durationSeconds ?? 0,
-                                  n = (0, o.getFriendlyDurationString)(e);
+                                  n = (0, _.getFriendlyDurationString)(e);
                               if (null == n) return null;
-                              return u.intl.format(u.t.AFmbfS, { duration: n });
+                              return E.intl.format(E.t.AFmbfS, { duration: n });
                           }
                       }
                   })(e, t) ?? null,
               icon:
                   ((e) => {
                       switch (e) {
-                          case c.AH.BLOCK_MESSAGE:
-                              return i.aXh;
-                          case c.AH.FLAG_TO_CHANNEL:
-                              return i.N$i;
-                          case c.AH.USER_COMMUNICATION_DISABLED:
-                              return i.gQi;
-                          case c.AH.QUARANTINE_USER:
-                              return i._mZ;
+                          case d.AH.BLOCK_MESSAGE:
+                              return i.a;
+                          case d.AH.FLAG_TO_CHANNEL:
+                              return r.N;
+                          case d.AH.USER_COMMUNICATION_DISABLED:
+                              return l.g;
+                          case d.AH.QUARANTINE_USER:
+                              return s._;
                       }
-                  })(e) ?? i.aXh,
-              isEditable: e !== c.AH.QUARANTINE_USER,
+                  })(e) ?? i.a,
+              isEditable: e !== d.AH.QUARANTINE_USER,
           }
         : null;
 }

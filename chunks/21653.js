@@ -1,46 +1,51 @@
-n.d(t, { default: () => w });
+n.d(t, { default: () => H });
 var l,
     i = n(627968),
     s = n(64700),
-    a = n(735438),
-    r = n(311907),
-    d = n(397927),
-    c = n(846293),
-    o = n(775602),
-    u = n(21161),
-    x = n(520467),
-    h = n(915089),
-    m = n(808728),
-    g = n(71393),
-    v = n(735547),
-    j = n(645034),
-    A = n(698441),
-    N = n(496092),
-    f = n(485394),
-    E = n(761836),
-    p = n(794782),
-    C = n(9448),
-    T = n(974930),
-    y = n(70456),
-    b = n(105253),
-    I = n(692026),
-    S = n(816647),
-    G = n(300153),
-    k = n(505966),
-    _ = n(988794),
-    R = n(652215),
-    D = n(985018),
-    M = n(643637);
-let { INVITE_OPTIONS_7_DAYS: P, INVITE_OPTIONS_UNLIMITED: L } = v.Ay;
-var z =
-    (((l = z || {})[(l.ENTITY = 0)] = "ENTITY"),
+    r = n(735438),
+    a = n(311907),
+    d = n(935462),
+    o = n(430690),
+    c = n(821609),
+    u = n(123292),
+    x = n(192308),
+    h = n(834730),
+    m = n(846293),
+    g = n(775602),
+    v = n(21161),
+    j = n(520467),
+    A = n(915089),
+    E = n(808728),
+    p = n(71393),
+    N = n(735547),
+    C = n(645034),
+    f = n(698441),
+    y = n(496092),
+    b = n(485394),
+    S = n(761836),
+    I = n(794782),
+    T = n(9448),
+    R = n(974930),
+    _ = n(70456),
+    k = n(105253),
+    D = n(692026),
+    G = n(816647),
+    L = n(300153),
+    M = n(505966),
+    P = n(988794),
+    U = n(652215),
+    z = n(985018),
+    V = n(486536);
+let { INVITE_OPTIONS_7_DAYS: F, INVITE_OPTIONS_UNLIMITED: w } = N.Ay;
+var B =
+    (((l = B || {})[(l.ENTITY = 0)] = "ENTITY"),
     (l[(l.SETTINGS = 1)] = "SETTINGS"),
     (l[(l.PREVIEW = 2)] = "PREVIEW"),
     (l[(l.SUCCESS = 3)] = "SUCCESS"),
     l);
-function U(e) {
+function X(e) {
     let { modal: t } = e,
-        { createMultipleConfetti: n } = s.useContext(u.x);
+        { createMultipleConfetti: n } = s.useContext(v.x);
     return (
         s.useEffect(() => {
             let e = t?.getScrollerNode();
@@ -72,172 +77,171 @@ function U(e) {
         null
     );
 }
-function V(e) {
+function O(e) {
     let {
             guildId: t,
             guildEvent: n,
             guildEventId: l,
-            isEdit: c,
-            formErrors: u,
+            isEdit: x,
+            formErrors: h,
             transitionState: m,
-            loading: g,
-            error: v,
-            onChange: j,
+            loading: v,
+            error: E,
+            onChange: p,
             onSave: N,
-            onClose: f,
-            createdEvent: E,
+            onClose: C,
+            createdEvent: y,
         } = e,
-        p = (0, h.GV)(),
-        C = s.useRef(n),
-        T = !(0, a.isEqual)(C.current, n),
-        k = s.useMemo(
+        b = (0, A.GV)(),
+        S = s.useRef(n),
+        I = !(0, r.isEqual)(S.current, n),
+        T = s.useMemo(
             () => [
                 {
                     slideId: 0,
-                    label: D.intl.string(D.t["56QlKS"]),
-                    valid: null == u.entity,
-                    userErrorMessage: u.entity,
+                    label: z.intl.string(z.t["56QlKS"]),
+                    valid: null == h.entity,
+                    userErrorMessage: h.entity,
                 },
                 {
                     slideId: 1,
-                    label: D.intl.string(D.t["w5/ntT"]),
-                    valid: null == u.schedule && null == u.topic && (!c || T),
-                    userErrorMessage: u.schedule,
+                    label: z.intl.string(z.t["w5/ntT"]),
+                    valid: null == h.schedule && null == h.topic && (!x || I),
+                    userErrorMessage: h.schedule,
                 },
-                { slideId: 2, label: D.intl.string(D.t["8aJzT4"]), valid: !0 },
+                { slideId: 2, label: z.intl.string(z.t["8aJzT4"]), valid: !0 },
             ],
-            [u, c, T],
+            [h, x, I],
         ),
-        _ = Object.keys(z).length,
-        R = (0, A.Fd)(n),
-        P = (e) => Math.max(0, Math.min(e, _ - 1)),
-        [L, V] = s.useState(+!!R),
-        [w, F] = s.useState(!1),
-        B = s.useMemo(
+        R = Object.keys(B).length,
+        M = (0, f.Fd)(n),
+        P = (e) => Math.max(0, Math.min(e, R - 1)),
+        [U, F] = s.useState(+!!M),
+        [w, O] = s.useState(!1),
+        H = s.useMemo(
             () =>
-                k
-                    .slice(0, L + 1)
+                T.slice(0, U + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
-            [k, L],
+            [T, U],
         ),
-        O = L >= k.length ? 3 : k[P(L)].slideId,
-        H = 3 === O;
-    (0, y.N)((e) => e.onUpdateCanCloseModal)(H);
-    let X = (0, r.bG)([o.A], () => o.A.useReducedMotion),
-        Y = s.useRef(null),
-        q = (e) => {
-            F(!1), V(P(e));
+        Y = U >= T.length ? 3 : T[P(U)].slideId,
+        q = 3 === Y;
+    (0, _.N)((e) => e.onUpdateCanCloseModal)(q);
+    let Q = (0, a.bG)([g.A], () => g.A.useReducedMotion),
+        W = s.useRef(null),
+        Z = (e) => {
+            O(!1), F(P(e));
         },
-        J = s.useRef(q);
+        J = s.useRef(Z);
     s.useEffect(() => {
-        J.current = q;
+        J.current = Z;
     }),
         s.useEffect(() => {
-            E?.id != null && J.current(3);
-        }, [E?.id]);
-    let W = () => {
-            B && (2 === O ? N() : H ? f() : q(L + 1));
+            y?.id != null && J.current(3);
+        }, [y?.id]);
+    let $ = () => {
+            H && (2 === Y ? N() : q ? C() : Z(U + 1));
         },
-        Q = () => {
-            q(L - 1);
+        K = () => {
+            Z(U - 1);
         },
-        K = D.intl.string(D.t.PDTjLN);
+        ee = z.intl.string(z.t.PDTjLN);
     return (
-        2 === O && (K = c ? D.intl.string(D.t.e5VEcE) : D.intl.string(D.t["60lJ0C"])),
-        (0, i.jsxs)(d.EOs, {
+        2 === Y && (ee = x ? z.intl.string(z.t.e5VEcE) : z.intl.string(z.t["60lJ0C"])),
+        (0, i.jsxs)(d.EO, {
             transitionState: m,
-            "aria-labelledby": p,
-            size: d.rIJ.DYNAMIC,
+            "aria-labelledby": b,
+            size: d.rI.DYNAMIC,
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !X && H ? (0, i.jsx)(U, { modal: Y.current }) : null,
-                (0, i.jsxs)(d.$mQ, {
-                    className: M.Qs,
-                    scrollerRef: Y,
+                !Q && q ? (0, i.jsx)(X, { modal: W.current }) : null,
+                (0, i.jsxs)(d.$m, {
+                    className: V.Qs,
+                    scrollerRef: W,
                     "data-migration-pending": !0,
                     children: [
-                        !H &&
-                            (0, i.jsx)(x.A, {
-                                steps: k.map((e) => e.label),
-                                stepIndex: L,
+                        !q &&
+                            (0, i.jsx)(j.A, {
+                                steps: T.map((e) => e.label),
+                                stepIndex: U,
                                 onClick: (e) => {
-                                    e < L ? Q() : e > L && W();
+                                    e < U ? K() : e > U && $();
                                 },
                             }),
-                        (0, i.jsxs)(d.tN_, {
-                            activeSlide: O,
+                        (0, i.jsxs)(o.t, {
+                            activeSlide: Y,
                             width: 440,
                             onSlideReady: (e) => {
-                                F(e === O);
+                                O(e === Y);
                             },
                             children: [
-                                (0, i.jsx)(d.q7S, {
+                                (0, i.jsx)(o.q, {
                                     id: 0,
-                                    children: (0, i.jsx)(b.A, {
+                                    children: (0, i.jsx)(k.A, {
                                         guildId: t,
                                         guildEvent: n,
-                                        validationErrorMessage: u.entity,
+                                        validationErrorMessage: h.entity,
                                         isSlideReady: w,
-                                        onChange: j,
+                                        onChange: p,
                                     }),
                                 }),
-                                (0, i.jsx)(d.q7S, {
+                                (0, i.jsx)(o.q, {
                                     id: 1,
-                                    children: (0, i.jsx)(S.A, {
+                                    children: (0, i.jsx)(G.A, {
                                         guildEvent: n,
                                         guildEventId: l,
                                         guildId: t,
-                                        onChange: j,
-                                        error: v,
-                                        validationErrorMessage: u.schedule,
+                                        onChange: p,
+                                        error: E,
+                                        validationErrorMessage: h.schedule,
                                         isSlideReady: w,
                                     }),
                                 }),
-                                (0, i.jsx)(d.q7S, {
+                                (0, i.jsx)(o.q, {
                                     id: 2,
-                                    children: (0, i.jsx)(I.A, { guildId: t, guildEvent: n, guildEventId: l, error: v }),
+                                    children: (0, i.jsx)(D.A, { guildId: t, guildEvent: n, guildEventId: l, error: E }),
                                 }),
-                                (0, i.jsx)(d.q7S, { id: 3, children: (0, i.jsx)(G.A, { onClose: f, event: E }) }),
+                                (0, i.jsx)(o.q, { id: 3, children: (0, i.jsx)(L.A, { onClose: C, event: y }) }),
                             ],
                         }),
                     ],
                 }),
-                !H &&
-                    (0, i.jsxs)(d.jlY, {
-                        className: M.qr,
+                !q &&
+                    (0, i.jsxs)(d.jl, {
+                        className: V.qr,
                         "data-migration-pending": !0,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: M.mG,
+                                className: V.mG,
                                 children: [
-                                    (0, i.jsx)(d.Button, {
+                                    (0, i.jsx)(c.$, {
                                         variant: "secondary",
-                                        text: D.intl.string(D.t["ETE/oC"]),
-                                        onClick: f,
+                                        text: z.intl.string(z.t["ETE/oC"]),
+                                        onClick: C,
                                     }),
                                     (0, i.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
-                                        className: M.x6,
-                                        children: (0, i.jsx)(d.Button, {
+                                        className: V.x6,
+                                        children: (0, i.jsx)(c.$, {
                                             variant: "primary",
-                                            text: K,
-                                            onClick: W,
-                                            disabled: !B,
-                                            loading: g,
+                                            text: ee,
+                                            onClick: $,
+                                            disabled: !H,
+                                            loading: v,
                                         }),
                                     }),
                                 ],
                             }),
-                            0 !== O &&
+                            0 !== Y &&
                                 (0, i.jsx)("div", {
-                                    className: M.zt,
-                                    children: (0, i.jsx)(d.QWc, {
+                                    className: V.zt,
+                                    children: (0, i.jsx)(u.Q, {
                                         variant: "secondary",
                                         size: "sm",
-                                        onClick: Q,
-                                        text: D.intl.string(D.t["13/7kX"]),
+                                        onClick: K,
+                                        text: z.intl.string(z.t["13/7kX"]),
                                     }),
                                 }),
                         ],
@@ -246,70 +250,70 @@ function V(e) {
         })
     );
 }
-function w(e) {
-    let { guildId: t, guildScheduledEventId: l, transitionState: a, onClose: o } = e;
-    (0, r.bG)([g.A], () => g.A.getGuild(t));
-    let u = (0, r.bG)([A.Ay], () => A.Ay.getGuildScheduledEvent(l), [l]),
-        x = (0, r.bG)([m.Ay], () => m.Ay.getDefaultChannel(t), [t]),
-        h = (0, p.UZ)(u, x),
-        [v, y] = s.useState(h),
-        [b] = s.useState((0, p.lc)(u)),
-        [I, S] = s.useState(null),
-        [G, { loading: M, error: z }] = (0, j.A)(async () => {
+function H(e) {
+    let { guildId: t, guildScheduledEventId: l, transitionState: r, onClose: d } = e;
+    (0, a.bG)([p.A], () => p.A.getGuild(t));
+    let o = (0, a.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(l), [l]),
+        c = (0, a.bG)([E.Ay], () => E.Ay.getDefaultChannel(t), [t]),
+        u = (0, I.UZ)(o, c),
+        [g, v] = s.useState(u),
+        [j] = s.useState((0, I.lc)(o)),
+        [A, N] = s.useState(null),
+        [_, { loading: k, error: D }] = (0, C.A)(async () => {
             var e;
             let n, i;
-            if (null != I) return;
-            if (b && null != l) return await N.A.saveEvent(l, v, t), o();
-            let s = await N.A.createGuildEvent(v, t);
+            if (null != A) return;
+            if (j && null != l) return await y.A.saveEvent(l, g, t), d();
+            let s = await y.A.createGuildEvent(g, t);
             return (
                 (e = s.body),
-                (n = (0, f.K7)(e)),
-                null != (i = e.channel_id ?? x?.id) &&
-                    c.Ay.createInvite(i, { max_age: P.value, max_uses: L.value }, R.PE1.GUILD_EVENTS),
-                n ? S(e) : o(),
+                (n = (0, b.K7)(e)),
+                null != (i = e.channel_id ?? c?.id) &&
+                    m.Ay.createInvite(i, { max_age: F.value, max_uses: w.value }, U.PE1.GUILD_EVENTS),
+                n ? N(e) : d(),
                 s
             );
         }),
-        U = s.useMemo(() => (0, k.A)(v, b), [v, b]);
-    return (0, i.jsx)(V, {
+        G = s.useMemo(() => (0, M.A)(g, j), [g, j]);
+    return (0, i.jsx)(O, {
         guildId: t,
-        guildEvent: v,
+        guildEvent: g,
         guildEventId: l,
-        isEdit: b,
-        formErrors: U,
-        transitionState: a,
-        loading: M,
-        error: z,
+        isEdit: j,
+        formErrors: G,
+        transitionState: r,
+        loading: k,
+        error: D,
         onChange: (e) => {
             if (null != e.entityType) {
-                let n = (0, C.dy)(e.entityType),
-                    [l] = (0, E.kh)(t, n);
+                let n = (0, T.dy)(e.entityType),
+                    [l] = (0, S.kh)(t, n);
                 (e.channelId = l?.id ?? null),
-                    e.entityType !== _.Ps.EXTERNAL && v.entityType === _.Ps.EXTERNAL && (e.entityMetadata = null);
+                    e.entityType !== P.Ps.EXTERNAL && g.entityType === P.Ps.EXTERNAL && (e.entityMetadata = null);
             }
-            y((t) => ({ ...t, ...e }));
+            v((t) => ({ ...t, ...e }));
         },
         onSave: () => {
-            null != v.recurrenceRule && b && (0, T.DS)(u, v)
-                ? (0, d.mMO)(async () => {
-                      let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 158954));
+            null != g.recurrenceRule && j && (0, R.DS)(o, g)
+                ? (0, x.openModalLazy)(async () => {
+                      let { ConfirmModal: e } = await n.e("4823").then(n.bind(n, 158954));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,
-                              title: D.intl.string(D.t.BW1Qoh),
-                              subtitle: D.intl.string(D.t.aNCYas),
-                              confirmText: D.intl.string(D.t.e5VEcE),
-                              cancelText: D.intl.string(D.t.oEAioF),
-                              onConfirm: G,
-                              children: (0, i.jsx)(d.Text, {
+                              title: z.intl.string(z.t.BW1Qoh),
+                              subtitle: z.intl.string(z.t.aNCYas),
+                              confirmText: z.intl.string(z.t.e5VEcE),
+                              cancelText: z.intl.string(z.t.oEAioF),
+                              onConfirm: _,
+                              children: (0, i.jsx)(h.E, {
                                   variant: "text-md/normal",
-                                  children: D.intl.format(D.t.RWBa5X, {}),
+                                  children: z.intl.format(z.t.RWBa5X, {}),
                               }),
                           });
                   })
-                : G();
+                : _();
         },
-        onClose: o,
-        createdEvent: I,
+        onClose: d,
+        createdEvent: A,
     });
 }

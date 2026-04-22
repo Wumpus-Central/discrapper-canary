@@ -1,74 +1,75 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => f });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
-    r = n(421380),
-    o = n(397927),
-    d = n(688810),
-    c = n(309635),
-    u = n(84540),
+    r = n(862482),
+    o = n(930861),
+    d = n(821609),
+    u = n(688810),
+    c = n(617061),
+    g = n(84540),
     m = n(954571),
     _ = n(927578),
-    g = n(919395),
-    x = n(128450),
-    A = n(212168),
-    h = n(652215),
-    p = n(788868),
-    f = n(985018),
-    T = n(545286);
-function S(e) {
+    A = n(919395),
+    h = n(128450),
+    p = n(212168),
+    x = n(652215),
+    E = n(788868),
+    T = n(985018),
+    S = n(872246);
+function f(e) {
     let {
             user: t,
             guild: n,
             initialSelectedEffect: l,
-            className: S,
-            sectionTitle: E,
-            forcedDivider: b = !1,
-            withTutorial: C = !1,
-            showBorder: v = !1,
+            className: f,
+            sectionTitle: b,
+            forcedDivider: C = !1,
+            withTutorial: v = !1,
+            showBorder: N = !1,
         } = e,
-        { analyticsLocations: N } = (0, d.Ay)(),
-        I = _.Ay.canUsePremiumProfileCustomization(t),
-        j = (0, g.N2)({ user: t, guildId: n?.id }),
-        { pendingProfileEffect: y, errors: O } = (0, g.nZ)(n?.id);
+        { analyticsLocations: I } = (0, u.Ay)(),
+        y = _.Ay.canUsePremiumProfileCustomization(t),
+        j = (0, A.N2)({ user: t, guildId: n?.id }),
+        { pendingProfileEffect: O, errors: R } = (0, A.nZ)(n?.id);
     s.useEffect(() => {
-        I &&
-            m.default.track(h.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: p.e.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: N,
+        y &&
+            m.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: E.e.PROFILE_EFFECTS_INLINE_SETTINGS,
+                location_stack: I,
             });
-    }, [I, N]);
-    let R = C ? o.wLn : r.$n;
-    return (0, i.jsx)(x.A, {
-        forcedDivider: b,
-        borderType: A.i.PREMIUM,
+    }, [y, I]);
+    let L = v ? o.wL : r.$n;
+    return (0, i.jsx)(h.A, {
+        forcedDivider: C,
+        borderType: p.i.PREMIUM,
         hasBackground: !0,
-        title: E,
-        showBorder: v,
-        errors: O,
-        className: S,
+        title: b,
+        showBorder: N,
+        errors: R,
+        className: f,
         children: (0, i.jsxs)("div", {
-            className: T.NC,
+            className: S.NC,
             children: [
-                (0, i.jsx)(R, {
+                (0, i.jsx)(L, {
                     size: r.$n.Sizes.SMALL,
                     onClick: () => {
-                        (0, c.W)({ analyticsLocations: N, guild: n, initialSelectedEffect: l });
+                        (0, c.W)({ analyticsLocations: I, guild: n, initialSelectedEffect: l });
                     },
-                    className: a()({ [T.yj]: C }),
-                    children: f.intl.string(f.t["/dRfCf"]),
+                    className: a()({ [S.yj]: v }),
+                    children: T.intl.string(T.t["/dRfCf"]),
                 }),
-                (void 0 === y ? null != j : null != y) &&
+                (void 0 === O ? null != j : null != O) &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: T.DT,
-                        children: (0, i.jsx)(o.Button, {
+                        className: S.DT,
+                        children: (0, i.jsx)(d.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != n ? f.intl.string(f.t.CHf9iJ) : f.intl.string(f.t.uMuafO),
+                            text: null != n ? T.intl.string(T.t.CHf9iJ) : T.intl.string(T.t.uMuafO),
                             onClick: () => {
-                                (0, u.p)({ guildId: n?.id, profileEffect: null });
+                                (0, g.p)({ guildId: n?.id, profileEffect: null });
                             },
                         }),
                     }),

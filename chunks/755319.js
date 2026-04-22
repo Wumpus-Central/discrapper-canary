@@ -1,36 +1,38 @@
-i.d(e, { default: () => u });
+i.d(e, { default: () => g });
 var t = i(627968),
     a = i(64700),
-    l = i(397927),
-    o = i(442433),
-    s = i(486503),
-    c = i(253932),
-    r = i(957565),
-    d = i(985018);
-function u(n) {
+    l = i(861672),
+    o = i(477782),
+    s = i(173936),
+    c = i(442433),
+    r = i(486503),
+    d = i(253932),
+    u = i(957565),
+    p = i(985018);
+function g(n) {
     let { splashUrl: e, onSelect: i } = n,
-        u = c.Q_.useSetting(),
-        { tidaWebformEnabled: p } = s.A.useExperiment(
+        g = d.Q_.useSetting(),
+        { tidaWebformEnabled: h } = r.A.useExperiment(
             { location: "GuildOnboardingSplashContextMenu" },
             { autoTrackExposure: !1 },
         ),
-        g = a.useCallback(() => {
-            (0, r.C)(e);
+        x = a.useCallback(() => {
+            (0, u.C)(e);
         }, [e]);
-    return r.p5 && u && p
-        ? (0, t.jsx)(l.W1t, {
+    return u.p5 && g && h
+        ? (0, t.jsx)(l.W, {
               "data-menu-migrated": !0,
               navId: "guild-onboarding-splash-context",
-              onClose: o.Z_,
+              onClose: c.Z_,
               onSelect: i,
-              "aria-label": d.intl.string(d.t.Zow2V5),
-              children: (0, t.jsx)(l.rXV, {
-                  children: (0, t.jsx)(l.Drp, {
+              "aria-label": p.intl.string(p.t.Zow2V5),
+              children: (0, t.jsx)(o.rX, {
+                  children: (0, t.jsx)(o.Dr, {
                       id: "copy-image-link",
-                      label: d.intl.string(d.t["8xHmxo"]),
-                      action: g,
-                      icon: l.qYV,
-                      leadingAccessory: { type: "icon", icon: l.qYV },
+                      label: p.intl.string(p.t["8xHmxo"]),
+                      action: x,
+                      icon: s.q,
+                      leadingAccessory: { type: "icon", icon: s.q },
                   }),
               }),
           })

@@ -1,54 +1,53 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(64700),
-    a = n(342494),
-    s = n(807098),
-    o = n(49999),
-    l = n(985018);
-function u(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: u, coachmarkConfig: c, children: d } = e,
-        _ = (0, s.T)(c?.asset),
-        f = i.useRef(null),
-        p = i.useRef(null),
-        [h, m] = i.useState(0);
-    i.useEffect(() => {
+n.d(t, { A: () => c });
+var i = n(627968),
+    l = n(64700),
+    s = n(206248),
+    r = n(807098),
+    a = n(49999),
+    o = n(985018);
+function c(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: c, coachmarkConfig: u, children: d } = e,
+        h = (0, r.T)(u?.asset),
+        m = l.useRef(null),
+        p = l.useRef(null),
+        [f, g] = l.useState(0);
+    l.useEffect(() => {
         let e = () => {
-                let e = f.current,
+                let e = m.current,
                     t = p.current;
                 if (null == e || null == t) return;
                 let n = e.getBoundingClientRect(),
-                    r = t.getBoundingClientRect();
-                m(n.left + n.width / 2 - (r.left + r.width / 2));
+                    i = t.getBoundingClientRect();
+                g(n.left + n.width / 2 - (i.left + i.width / 2));
             },
             t = new ResizeObserver(e),
-            n = f.current,
-            r = p.current;
-        return null != n && t.observe(n), null != r && (t.observe(r), e()), () => t.disconnect();
+            n = m.current,
+            i = p.current;
+        return null != n && t.observe(n), null != i && (t.observe(i), e()), () => t.disconnect();
     }, []);
-    let g = {
-            text: l.intl.string(l.t.RzWDqY),
-            onClick: () => {
-                n(), t(), u(o.i.TAKE_ACTION);
-            },
+    let _ = {
+        text: o.intl.string(o.t.RzWDqY),
+        onClick: () => {
+            n(), t(), c(a.i.TAKE_ACTION);
         },
-        E = () => {
-            t(), u(o.i.USER_DISMISS);
-        };
-    return (0, r.jsxs)(r.Fragment, {
+    };
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("div", { ref: f, children: d }),
-            (0, r.jsx)(a.HZ, {
-                targetElementRef: f,
+            (0, i.jsx)("div", { ref: m, children: d }),
+            (0, i.jsx)(s.H, {
+                targetElementRef: m,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                title: c?.header ?? "",
-                body: c?.body ?? "",
-                assetUrl: _ ?? "",
-                action: g,
-                caretConfig: { align: "custom", customOffset: h },
-                onRequestClose: E,
+                title: u?.header ?? "",
+                body: u?.body ?? "",
+                assetUrl: h ?? "",
+                action: _,
+                caretConfig: { align: "custom", customOffset: f },
+                onRequestClose: () => {
+                    t(), c(a.i.USER_DISMISS);
+                },
                 popoverRef: p,
             }),
         ],

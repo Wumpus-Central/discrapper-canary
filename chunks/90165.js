@@ -1,34 +1,11 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => u });
 var r = n(311907),
     i = n(73153),
     s = n(652215);
 let a = {},
-    o = null,
-    l = 864e5,
-    u = 36e5;
-function c() {
-    (a = {}), (o = null);
-}
-function d(e) {
-    let { statistics: t } = e;
-    t.forEach((e) => {
-        a[e.application_id] = e;
-    }),
-        (o = Date.now());
-}
-function _(e) {
-    let { duration: t, applicationId: n, distributor: r } = e,
-        i = a[n],
-        o = new Date().toISOString(),
-        l = 0,
-        u = 0;
-    null != i && ((l = i.total_duration), (u = i.total_discord_sku_duration ?? 0)),
-        (l += t),
-        r === s.d3x.DISCORD && (u += t),
-        (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
-}
-class f extends r.Ay.Store {
+    o = null;
+class l extends r.Ay.Store {
     static displayName = "LibraryApplicationStatisticsStore";
     get applicationStatistics() {
         return a;
@@ -54,8 +31,8 @@ class f extends r.Ay.Store {
         let t = a[e],
             n = 0;
         if (null != t) {
-            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / l),
-                r = Math.floor((1e3 * t.total_duration) / u);
+            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / 864e5),
+                r = Math.floor((1e3 * t.total_duration) / 36e5);
             0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2
@@ -78,4 +55,26 @@ class f extends r.Ay.Store {
         return n;
     }
 }
-let p = new f(i.h, { USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: d, ACTIVITY_UPDATE_START: _, LOGOUT: c });
+let u = new l(i.h, {
+    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
+        let { statistics: t } = e;
+        t.forEach((e) => {
+            a[e.application_id] = e;
+        }),
+            (o = Date.now());
+    },
+    ACTIVITY_UPDATE_START: function (e) {
+        let { duration: t, applicationId: n, distributor: r } = e,
+            i = a[n],
+            o = new Date().toISOString(),
+            l = 0,
+            u = 0;
+        null != i && ((l = i.total_duration), (u = i.total_discord_sku_duration ?? 0)),
+            (l += t),
+            r === s.d3x.DISCORD && (u += t),
+            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
+    },
+    LOGOUT: function () {
+        (a = {}), (o = null);
+    },
+});

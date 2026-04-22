@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card__09fdc",
     BU: "dragHandle__09fdc",

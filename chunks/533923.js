@@ -1,50 +1,49 @@
-"use strict";
-n.d(t, { A: () => E });
-var r = n(684013),
-    i = n(334738),
-    s = n(258585),
-    a = n(72432),
-    o = n(929921),
-    l = n(616356),
-    u = n(592598),
-    c = n(395011),
-    d = n(581730),
-    _ = n(672396),
-    f = n(652215),
-    p = n(753070),
-    h = n(985018),
-    m = n(426127);
-function E(e, t, n, E) {
-    if (u.A.isNotificationDisabled(_.KS.RequestToStream) || null != l.A.getCurrentUserActiveStream()) return null;
-    let g = t.username,
-        A = h.intl.format(m.default.jTbTAF, { username: "", game: n.name }),
-        I = t.getAvatarURL(e.guild_id, 80),
-        { trackView: T, trackClick: S } = (0, d.Y9)(_.KS.RequestToStream, {
-            notif_type: _.KS.RequestToStream,
-            notif_user_id: t.id,
+i.d(e, { A: () => I });
+var n = i(684013),
+    l = i(334738),
+    a = i(258585),
+    r = i(72432),
+    s = i(929921),
+    o = i(616356),
+    u = i(592598),
+    c = i(395011),
+    d = i(581730),
+    A = i(672396),
+    f = i(652215),
+    y = i(753070),
+    p = i(985018),
+    m = i(783198);
+function I(t, e, i, I) {
+    if (u.A.isNotificationDisabled(A.KS.RequestToStream) || null != o.A.getCurrentUserActiveStream()) return null;
+    let g = e.username,
+        E = p.intl.format(m.default.jTbTAF, { username: "", game: i.name }),
+        N = e.getAvatarURL(t.guild_id, 80),
+        { trackView: _, trackClick: T } = (0, d.Y9)(A.KS.RequestToStream, {
+            notif_type: A.KS.RequestToStream,
+            notif_user_id: e.id,
             activity_type: f.xL.STREAM_REQUEST,
-            activity_name: E.name,
+            activity_name: I.name,
         });
     return {
-        icon: I,
+        icon: N,
         title: g,
-        body: A,
-        confirmText: h.intl.string(m.default.UGbmBp),
-        cancelText: h.intl.string(h.t["tpXzJ+"]),
+        body: E,
+        confirmText: p.intl.string(m.default.UGbmBp),
+        cancelText: p.intl.string(p.t["tpXzJ+"]),
         onNotificationShow: () => {
-            T();
+            _();
         },
-        onConfirmClick: (e, t) => {
-            let n = o.A.getState().preset;
-            if (n === p.jQ.PRESET_DOCUMENTS) {
-                let { allowAutoQuality: e } = (0, s.eO)({ location: "requestToStreamNotification" });
-                n = e ? p.jQ.PRESET_AUTO : p.jQ.PRESET_VIDEO;
+        onConfirmClick: (t, e) => {
+            let i = s.A.getState().preset;
+            if (i === y.jQ.PRESET_DOCUMENTS) {
+                let { allowAutoQuality: t } = (0, a.eO)({ location: "requestToStreamNotification" });
+                i = t ? y.jQ.PRESET_AUTO : y.jQ.PRESET_VIDEO;
             }
-            (0, a.A)(c.A.getTargetPID(), { preset: n }), S("request-to-stream"), r.A.updateNotificationStatus(t);
+            (0, r.A)(c.A.getTargetPID(), { preset: i }), T("request-to-stream"), n.A.updateNotificationStatus(e);
         },
-        onCancelClick: (t, n) => {
-            (0, i.ack)(
-                e.id,
+        onCancelClick: (e, i) => {
+            (0, l.ack)(
+                t.id,
                 {
                     section: f.JJy.OVERLAY,
                     object: f.ZSU.ACK_DECLINE_REQUEST_TO_STREAM,
@@ -53,11 +52,11 @@ function E(e, t, n, E) {
                 !0,
                 !0,
             ),
-                r.A.updateNotificationStatus(n),
-                S("decline");
+                n.A.updateNotificationStatus(i),
+                T("decline");
         },
         onDismissClick: () => {
-            S("dismiss");
+            T("dismiss");
         },
     };
 }

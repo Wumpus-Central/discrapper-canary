@@ -1,81 +1,80 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var r = n(311907),
     i = n(73153),
-    a = n(500049);
-let s = {
+    s = n(500049);
+let a = {
     show: !1,
-    entrypoint: a.s4.NONE,
-    lastShownEntrypoint: a.s4.NONE,
+    entrypoint: s.s4.NONE,
+    lastShownEntrypoint: s.s4.NONE,
     activeViewType: null,
     activeChannelId: null,
-    closeReason: a.Se.DISMISSED,
+    closeReason: s.Se.DISMISSED,
     initialState: void 0,
 };
 function o(e) {
-    let { entrypoint: t, activeViewType: n, initialState: r, activeChannelId: i } = e;
+    let { closeReason: t = s.Se.DISMISSED } = e;
     return (
-        (s.show = !0),
-        (s.entrypoint = t),
-        (s.lastShownEntrypoint = t),
-        (s.closeReason = a.Se.DISMISSED),
-        (s.activeViewType = n),
-        (s.activeChannelId = i),
-        (s.initialState = r),
+        (a.show = !1),
+        (a.entrypoint = s.s4.NONE),
+        (a.closeReason = t),
+        (a.initialState = void 0),
+        (a.activeChannelId = null),
         !0
     );
 }
-function l(e) {
-    let { closeReason: t = a.Se.DISMISSED } = e;
-    return (
-        (s.show = !1),
-        (s.entrypoint = a.s4.NONE),
-        (s.closeReason = t),
-        (s.initialState = void 0),
-        (s.activeChannelId = null),
-        !0
-    );
-}
-class u extends r.Ay.Store {
+class l extends r.Ay.Store {
     static displayName = "AppLauncherStore";
     initialize() {}
     shouldShowPopup() {
-        return s.show && s.entrypoint === a.s4.TEXT;
+        return a.show && a.entrypoint === s.s4.TEXT;
     }
     shouldShowModal() {
-        return s.show && s.entrypoint === a.s4.VOICE;
+        return a.show && a.entrypoint === s.s4.VOICE;
     }
     entrypoint() {
-        return s.entrypoint;
+        return a.entrypoint;
     }
     lastShownEntrypoint() {
-        return s.lastShownEntrypoint;
+        return a.lastShownEntrypoint;
     }
     activeViewType() {
-        return s.activeViewType;
+        return a.activeViewType;
     }
     activeChannelId() {
-        return s.activeChannelId ?? null;
+        return a.activeChannelId ?? null;
     }
     closeReason() {
-        return s.closeReason;
+        return a.closeReason;
     }
     initialState() {
-        return s.initialState;
+        return a.initialState;
     }
 }
-function c() {
-    l({ closeReason: a.Se.DISMISSED });
+function u() {
+    o({ closeReason: s.Se.DISMISSED });
 }
 function d() {
-    l({ closeReason: a.Se.COMMAND });
+    o({ closeReason: s.Se.COMMAND });
 }
-let _ = new u(i.h, {
-    APP_LAUNCHER_SHOW: o,
-    APP_LAUNCHER_DISMISS: l,
-    CONNECTION_OPEN: c,
-    LOGOUT: c,
-    CHANNEL_SELECT: c,
+let c = new l(i.h, {
+    APP_LAUNCHER_SHOW: function (e) {
+        let { entrypoint: t, activeViewType: n, initialState: r, activeChannelId: i } = e;
+        return (
+            (a.show = !0),
+            (a.entrypoint = t),
+            (a.lastShownEntrypoint = t),
+            (a.closeReason = s.Se.DISMISSED),
+            (a.activeViewType = n),
+            (a.activeChannelId = i),
+            (a.initialState = r),
+            !0
+        );
+    },
+    APP_LAUNCHER_DISMISS: o,
+    CONNECTION_OPEN: u,
+    LOGOUT: u,
+    CHANNEL_SELECT: u,
     APPLICATION_COMMAND_SET_ACTIVE_COMMAND: d,
     APP_LAUNCHER_SET_ACTIVE_COMMAND: d,
 });

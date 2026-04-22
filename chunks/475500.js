@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(998493),
-    i = n(374372),
-    a = n(355418);
-class s extends a.c {
+r.d(t, { A: () => i });
+var n = r(998493),
+    s = r(374372),
+    a = r(355418);
+class i extends a.c {
     innerPattern() {
-        return RegExp(`(?:in|f\xfcr|w\xe4hrend)\\s*(${r.Pl})(?=\\W|$)`, "i");
+        return RegExp(`(?:in|f\xfcr|w\xe4hrend)\\s*(${n.Pl})(?=\\W|$)`, "i");
     }
     innerExtract(e, t) {
-        let n = (0, r.E9)(t[1]);
-        return i.BP.createRelativeFromReference(e.reference, n);
+        let r = (0, n.E9)(t[1]);
+        return s.BP.createRelativeFromReference(e.reference, r);
     }
 }

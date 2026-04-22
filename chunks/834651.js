@@ -1,36 +1,37 @@
-n.d(t, { j: () => g });
+n.d(t, { j: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    a = n(397927),
-    s = n(576470),
-    r = n(989985),
-    o = n(961350),
-    c = n(696451),
-    d = n(723508),
-    u = n(264388),
-    h = n(914662),
-    m = n(200700),
-    A = n(985018),
-    p = n(719931);
-function g(e) {
+    a = n(60270),
+    s = n(834730),
+    r = n(576470),
+    o = n(989985),
+    c = n(961350),
+    d = n(696451),
+    u = n(723508),
+    h = n(264388),
+    m = n(914662),
+    A = n(200700),
+    g = n(985018),
+    p = n(989924);
+function _(e) {
     let { guild: t, disabledUntil: n } = e,
-        [g, f] = (0, u.n)(t.id),
-        _ = (0, l.bG)([c.Ay, o.default], () => c.Ay.getMember(t.id, o.default.getId()), [t.id]);
+        [_, f] = (0, h.n)(t.id),
+        E = (0, l.bG)([d.Ay, c.default], () => d.Ay.getMember(t.id, c.default.getId()), [t.id]);
     return (
-        (0, d.X)(_),
+        (0, u.X)(E),
         (0, i.jsxs)("div", {
             children: [
-                g ? (0, i.jsx)(h.A, { onClose: () => f(t.id), guildName: t.name }) : null,
-                (0, i.jsx)(r._, {
-                    bannerIcon: (0, i.jsx)(a.gQi, { size: "md", color: "currentColor", className: p.q3 }),
-                    bannerHeader: A.intl.string(A.t["9UoK6Y"]),
-                    bannerSubtext: A.intl.format(A.t["4ZwD5G"], { link: m.MO }),
+                _ ? (0, i.jsx)(m.A, { onClose: () => f(t.id), guildName: t.name }) : null,
+                (0, i.jsx)(o._, {
+                    bannerIcon: (0, i.jsx)(a.g, { size: "md", color: "currentColor", className: p.q3 }),
+                    bannerHeader: g.intl.string(g.t["9UoK6Y"]),
+                    bannerSubtext: g.intl.format(g.t["4ZwD5G"], { link: A.MO }),
                     textStyles: p.cI,
                     headerStyles: p.U_,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(s.E, {
                         variant: "text-sm/semibold",
-                        children: (0, i.jsx)(s.A, { deadline: new Date(n), showUnits: !0, stopAtOneSec: !0 }),
+                        children: (0, i.jsx)(r.A, { deadline: new Date(n), showUnits: !0, stopAtOneSec: !0 }),
                     }),
                 }),
             ],

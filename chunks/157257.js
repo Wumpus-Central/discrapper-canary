@@ -1,17 +1,11 @@
 "use strict";
 let r;
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(311907),
     s = n(73153),
     a = n(15285),
     o = n(760751);
-function l(e) {
-    r = e.currentGame;
-}
-function u(e) {
-    r = e.associatedGame;
-}
-class c extends i.Ay.Store {
+class l extends i.Ay.Store {
     initialize() {
         this.waitFor(o.A, a.Ay);
     }
@@ -25,4 +19,11 @@ class c extends i.Ay.Store {
         return r;
     }
 }
-let d = new c(s.h, { OVERLAY_INITIALIZE: l, OVERLAY_SET_ASSOCIATED_GAME: u });
+let u = new l(s.h, {
+    OVERLAY_INITIALIZE: function (e) {
+        r = e.currentGame;
+    },
+    OVERLAY_SET_ASSOCIATED_GAME: function (e) {
+        r = e.associatedGame;
+    },
+});

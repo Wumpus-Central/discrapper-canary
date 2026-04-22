@@ -1,24 +1,19 @@
 "use strict";
-n.d(t, { LU: () => a, PE: () => r, QV: () => i });
-var r = (function (e) {
-        return (
-            (e[(e.CREATE_THREAD = 0)] = "CREATE_THREAD"),
-            (e[(e.VIEW_THREAD = 1)] = "VIEW_THREAD"),
-            (e[(e.VIEW_CHANNEL = 2)] = "VIEW_CHANNEL"),
-            (e[(e.VIEW_MESSAGE_REQUEST = 3)] = "VIEW_MESSAGE_REQUEST"),
-            (e[(e.VIEW_MOD_REPORT = 4)] = "VIEW_MOD_REPORT"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e[(e.GUILD_MEMBER_MOD_VIEW = 4)] = "GUILD_MEMBER_MOD_VIEW"), e;
-    })({}),
-    a = (function (e) {
-        return (
-            (e.THREAD = "thread"),
-            (e.MESSAGE_REQUEST = "message-request"),
-            (e.HOME = "home"),
-            (e.GUILD_MEMBER_MOD_VIEW = "guild-member-mod-view"),
-            e
-        );
-    })({});
+n.d(t, { LU: () => l, PE: () => a, QV: () => o });
+var r,
+    i,
+    s,
+    a =
+        (((r = {})[(r.CREATE_THREAD = 0)] = "CREATE_THREAD"),
+        (r[(r.VIEW_THREAD = 1)] = "VIEW_THREAD"),
+        (r[(r.VIEW_CHANNEL = 2)] = "VIEW_CHANNEL"),
+        (r[(r.VIEW_MESSAGE_REQUEST = 3)] = "VIEW_MESSAGE_REQUEST"),
+        (r[(r.VIEW_MOD_REPORT = 4)] = "VIEW_MOD_REPORT"),
+        r),
+    o = (((i = {})[(i.GUILD_MEMBER_MOD_VIEW = 4)] = "GUILD_MEMBER_MOD_VIEW"), i),
+    l =
+        (((s = {}).THREAD = "thread"),
+        (s.MESSAGE_REQUEST = "message-request"),
+        (s.HOME = "home"),
+        (s.GUILD_MEMBER_MOD_VIEW = "guild-member-mod-view"),
+        s);

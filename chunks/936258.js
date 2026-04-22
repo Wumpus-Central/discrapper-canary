@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     $Z: "override_fa2640",
     ed: "settingsColumn_fa2640",

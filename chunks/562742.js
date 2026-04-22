@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     D4: "checklist__42e04",
     kL: "container__42e04",

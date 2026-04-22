@@ -1,39 +1,35 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(360345),
-    i = n(476858),
-    a = n(355418),
-    s = n(1673),
-    o = n(322811);
+r.d(t, { A: () => u });
+var n = r(360345),
+    s = r(476858),
+    a = r(355418),
+    i = r(1673),
+    o = r(322811);
 let l = RegExp(
-        `(?:(?:\\,|\\(|\\（)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(${(0, i.uJ)(r.CV)}|weekend|weekday)(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)`,
-        "i",
-    ),
-    u = 1,
-    c = 2,
-    d = 3;
-class _ extends a.c {
+    `(?:(?:\\,|\\(|\\（)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(${(0, s.uJ)(n.CV)}|weekend|weekday)(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)`,
+    "i",
+);
+class u extends a.c {
     innerPattern() {
         return l;
     }
     innerExtract(e, t) {
-        let n,
-            i = t[u],
-            a = t[d],
-            l = i || a;
+        let r,
+            s = t[1],
+            a = t[3],
+            l = s || a;
         l = (l = l || "").toLowerCase();
-        let _ = null;
-        "last" == l || "past" == l ? (_ = "last") : "next" == l ? (_ = "next") : "this" == l && (_ = "this");
-        let f = t[c].toLowerCase();
-        if (void 0 !== r.CV[f]) n = r.CV[f];
-        else if ("weekend" == f) n = "last" == _ ? o.Bw.SUNDAY : o.Bw.SATURDAY;
+        let u = null;
+        "last" == l || "past" == l ? (u = "last") : "next" == l ? (u = "next") : "this" == l && (u = "this");
+        let d = t[2].toLowerCase();
+        if (void 0 !== n.CV[d]) r = n.CV[d];
+        else if ("weekend" == d) r = "last" == u ? o.Bw.SUNDAY : o.Bw.SATURDAY;
         else {
-            if ("weekday" != f) return null;
+            if ("weekday" != d) return null;
             let t = e.reference.getDateWithAdjustedTimezone().getDay();
             t == o.Bw.SUNDAY || t == o.Bw.SATURDAY
-                ? (n = "last" == _ ? o.Bw.FRIDAY : o.Bw.MONDAY)
-                : ((n = t - 1), (n = ((n = "last" == _ ? n - 1 : n + 1) % 5) + 1));
+                ? (r = "last" == u ? o.Bw.FRIDAY : o.Bw.MONDAY)
+                : ((r = t - 1), (r = ((r = "last" == u ? r - 1 : r + 1) % 5) + 1));
         }
-        return (0, s.Y5)(e.reference, n, _);
+        return (0, i.Y5)(e.reference, r, u);
     }
 }

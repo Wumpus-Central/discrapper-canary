@@ -1,17 +1,15 @@
 "use strict";
-n.d(t, { CP: () => l, KX: () => o, SY: () => s, ip: () => i, xt: () => a });
-var r = n(64700),
-    i = (function (e) {
-        return (
-            (e[(e.ENTERING = 0)] = "ENTERING"),
-            (e[(e.ENTERED = 1)] = "ENTERED"),
-            (e[(e.EXITING = 2)] = "EXITING"),
-            (e[(e.EXITED = 3)] = "EXITED"),
-            (e[(e.HIDDEN = 4)] = "HIDDEN"),
-            e
-        );
-    })({});
+n.d(t, { CP: () => u, KX: () => l, SY: () => o, ip: () => s, xt: () => a });
+var r,
+    i = n(64700),
+    s =
+        (((r = {})[(r.ENTERING = 0)] = "ENTERING"),
+        (r[(r.ENTERED = 1)] = "ENTERED"),
+        (r[(r.EXITING = 2)] = "EXITING"),
+        (r[(r.EXITED = 3)] = "EXITED"),
+        (r[(r.HIDDEN = 4)] = "HIDDEN"),
+        r);
 let a = 300,
-    s = "default",
-    o = "popout",
-    l = r.createContext({ headerId: void 0, headerIdIsManaged: !1 });
+    o = "default",
+    l = "popout",
+    u = i.createContext({ headerId: void 0, headerIdIsManaged: !1 });

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     g9: "creatorGuildCarousel__2485e",
     w_: "guildCard__2485e " + n(356028).Nr,

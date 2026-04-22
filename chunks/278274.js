@@ -1,31 +1,26 @@
-n.d(t, { q: () => l });
-var a = n(627968);
-n(64700);
-var s = n(397927),
-    i = n(520657);
-function l(e) {
-    let { isUploading: t, isSuccess: n, errorMessage: l, onClick: r, title: o } = e;
-    return (0, a.jsxs)(a.Fragment, {
+a.d(t, { q: () => r });
+var n = a(627968);
+a(64700);
+var l = a(821609),
+    i = a(834730),
+    s = a(929948);
+function r(e) {
+    let { isUploading: t, isSuccess: a, errorMessage: r, onClick: o, title: d } = e;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, a.jsx)(s.Button, {
-                variant: "primary",
-                onClick: r,
-                loading: t,
-                disabled: t,
-                text: t ? "Uploading…" : o,
-            }),
-            null != l &&
-                (0, a.jsx)(s.Text, {
+            (0, n.jsx)(l.$, { variant: "primary", onClick: o, loading: t, disabled: t, text: t ? "Uploading…" : d }),
+            null != r &&
+                (0, n.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-feedback-critical",
-                    className: i.qS,
-                    children: l,
+                    className: s.qS,
+                    children: r,
                 }),
-            n &&
-                (0, a.jsx)(s.Text, {
+            a &&
+                (0, n.jsx)(i.E, {
                     variant: "text-sm/normal",
                     color: "text-feedback-positive",
-                    className: i.qS,
+                    className: s.qS,
                     children: "Logs uploaded successfully",
                 }),
         ],

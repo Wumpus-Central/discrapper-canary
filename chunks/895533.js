@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     em: "gradientButtonContainer__488d9",
     tj: "colorSelectorPopoutContainer__488d9",

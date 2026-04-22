@@ -1,51 +1,52 @@
-"use strict";
-n.d(t, { A: () => m });
-var r = n(627968);
-n(64700);
-var i = n(990078),
-    s = n(397927),
-    a = n(544420),
-    o = n(765379),
-    l = n(928550),
-    u = n(594262),
-    c = n(939496),
-    d = n(993401),
-    _ = n(695311),
-    f = n(996988),
-    p = n(985018),
-    h = n(844630);
-function m(e) {
-    let { user: t, activity: n, onAction: m, onClose: E } = e,
-        { themeType: g } = (0, c.E)(),
-        A = (0, _.A)({ applicationId: n?.application_id, onClose: E }),
-        I = (0, u.l)({ activity: n ?? void 0, embeddedActivity: void 0, user: t, onClose: E }),
-        T = (0, l.d)(n?.application_id);
-    if (null == I && null != n && (0, o.A)(n))
-        return (0, r.jsx)(d.FD, {
-            icon: s.k9F,
-            text: p.intl.string(p.t.RscU7I),
+e.d(n, { A: () => E });
+var i = e(627968);
+e(64700);
+var l = e(990078),
+    r = e(323384),
+    a = e(808666),
+    s = e(687966),
+    o = e(544420),
+    c = e(765379),
+    u = e(928550),
+    d = e(594262),
+    A = e(939496),
+    x = e(993401),
+    p = e(695311),
+    f = e(996988),
+    _ = e(985018),
+    m = e(514566);
+function E(t) {
+    let { user: n, activity: e, onAction: E, onClose: T } = t,
+        { themeType: g } = (0, A.E)(),
+        N = (0, p.A)({ applicationId: e?.application_id, onClose: T }),
+        C = (0, d.l)({ activity: e ?? void 0, embeddedActivity: void 0, user: n, onClose: T }),
+        I = (0, u.d)(e?.application_id);
+    if (null == C && null != e && (0, c.A)(e))
+        return (0, i.jsx)(x.FD, {
+            icon: r.k,
+            text: _.intl.string(_.t.RscU7I),
             fullWidth: g !== f.d.MODAL_V2,
-            onClick: (e) => {
-                e.stopPropagation(),
-                    null != T ? a.Ay.launch({ applicationId: T }) : (m?.({ action: "PRESS_PLAY_BUTTON" }), A());
+            onClick: (t) => {
+                t.stopPropagation(),
+                    null != I ? o.Ay.launch({ applicationId: I }) : (E?.({ action: "PRESS_PLAY_BUTTON" }), N());
             },
         });
-    if (null == I) return null;
-    let { isJoining: S, handleJoinRequest: y, buttonCTA: v, tooltip: N, isEnabled: C, isEmbedded: R } = I,
-        O = g !== f.d.MODAL_V2;
-    return (0, r.jsx)("div", {
-        className: O ? h.Ij : void 0,
-        children: (0, r.jsx)(i.m, {
-            text: N,
-            asContainer: !C,
-            children: (0, r.jsx)(d.FD, {
-                icon: R ? s.Ihz : s._xR,
-                text: v,
-                disabled: !C,
-                loading: S,
-                fullWidth: O,
-                onClick: (e) => {
-                    e.stopPropagation(), m?.({ action: R ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }), y();
+    if (null == C) return null;
+    let { isJoining: O, handleJoinRequest: S, buttonCTA: y, tooltip: h, isEnabled: j, isEmbedded: v } = C,
+        P = g !== f.d.MODAL_V2;
+    return (0, i.jsx)("div", {
+        className: P ? m.Ij : void 0,
+        children: (0, i.jsx)(l.m, {
+            text: h,
+            asContainer: !j,
+            children: (0, i.jsx)(x.FD, {
+                icon: v ? a.I : s._,
+                text: y,
+                disabled: !j,
+                loading: O,
+                fullWidth: P,
+                onClick: (t) => {
+                    t.stopPropagation(), E?.({ action: v ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }), S();
                 },
             }),
         }),

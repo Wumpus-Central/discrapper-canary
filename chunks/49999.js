@@ -1,39 +1,35 @@
 "use strict";
-n.d(t, { i: () => r, m: () => i });
-var r = (function (e) {
-        return (
-            (e.PRIMARY = "primary"),
-            (e.SECONDARY = "secondary"),
-            (e.DISMISS = "dismiss"),
-            (e.AUTO = "auto"),
-            (e.AUTO_DISMISS = "auto_dismiss"),
-            (e.TAKE_ACTION = "take_action"),
-            (e.USER_DISMISS = "user_dismiss"),
-            (e.USER_DISMISS_ALL = "user_dismiss_all"),
-            (e.INDIRECT_ACTION = "indirect_action"),
-            (e.UNKNOWN = "unknown"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (
-            (e.GUILD_HEADER_TOOLTIPS = "GUILD_HEADER_TOOLTIPS"),
-            (e.CHANNEL_NOTICES = "CHANNEL_NOTICES"),
-            (e.CALL_CHAT_BUTTON = "CALL_CHAT_BUTTON"),
-            (e.GUILD_FEED_TOP = "GUILD_FEED_TOP"),
-            (e.MAIN_VIEW_TOOLTIPS = "MAIN_VIEW_TOOLTIPS"),
-            (e.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS = "CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS"),
-            (e.YOU_TAB_ONBOARDING = "YOU_TAB_ONBOARDING"),
-            (e.SUPER_REACTIONS_SPARKLES = "SUPER_REACTIONS_SPARKLES"),
-            (e.NOTICE_BAR = "NOTICE_BAR"),
-            (e.PROFILE_DRAWER_HEADER = "PROFILE_DRAWER_HEADER"),
-            (e.SIDEBAR = "SIDEBAR"),
-            (e.MEMBER_LIST_HEADER = "MEMBER_LIST_HEADER"),
-            (e.APP_LAUNCHER_ONBOARDING = "APP_LAUNCHER_ONBOARDING"),
-            (e.VIRTUAL_CURRENCY_ONBOARDING = "VIRTUAL_CURRENCY_ONBOARDING"),
-            (e.ACCOUNT_NAME_ZONE = "ACCOUNT_NAME_ZONE"),
-            (e.VIRTUAL_CURRENCY_MOBILE_ONBOARDING = "VIRTUAL_CURRENCY_MOBILE_ONBOARDING"),
-            (e.PRIVATE_CHANNELS_LIST = "PRIVATE_CHANNELS_LIST"),
-            e
-        );
-    })({});
+n.d(t, { i: () => s, m: () => a });
+var r,
+    i,
+    s =
+        (((r = {}).PRIMARY = "primary"),
+        (r.SECONDARY = "secondary"),
+        (r.DISMISS = "dismiss"),
+        (r.AUTO = "auto"),
+        (r.AUTO_DISMISS = "auto_dismiss"),
+        (r.TAKE_ACTION = "take_action"),
+        (r.USER_DISMISS = "user_dismiss"),
+        (r.USER_DISMISS_ALL = "user_dismiss_all"),
+        (r.INDIRECT_ACTION = "indirect_action"),
+        (r.UNKNOWN = "unknown"),
+        r),
+    a =
+        (((i = {}).GUILD_HEADER_TOOLTIPS = "GUILD_HEADER_TOOLTIPS"),
+        (i.CHANNEL_NOTICES = "CHANNEL_NOTICES"),
+        (i.CALL_CHAT_BUTTON = "CALL_CHAT_BUTTON"),
+        (i.GUILD_FEED_TOP = "GUILD_FEED_TOP"),
+        (i.MAIN_VIEW_TOOLTIPS = "MAIN_VIEW_TOOLTIPS"),
+        (i.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS = "CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS"),
+        (i.YOU_TAB_ONBOARDING = "YOU_TAB_ONBOARDING"),
+        (i.SUPER_REACTIONS_SPARKLES = "SUPER_REACTIONS_SPARKLES"),
+        (i.NOTICE_BAR = "NOTICE_BAR"),
+        (i.PROFILE_DRAWER_HEADER = "PROFILE_DRAWER_HEADER"),
+        (i.SIDEBAR = "SIDEBAR"),
+        (i.MEMBER_LIST_HEADER = "MEMBER_LIST_HEADER"),
+        (i.APP_LAUNCHER_ONBOARDING = "APP_LAUNCHER_ONBOARDING"),
+        (i.VIRTUAL_CURRENCY_ONBOARDING = "VIRTUAL_CURRENCY_ONBOARDING"),
+        (i.ACCOUNT_NAME_ZONE = "ACCOUNT_NAME_ZONE"),
+        (i.VIRTUAL_CURRENCY_MOBILE_ONBOARDING = "VIRTUAL_CURRENCY_MOBILE_ONBOARDING"),
+        (i.PRIVATE_CHANNELS_LIST = "PRIVATE_CHANNELS_LIST"),
+        i);

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { J: () => I });
+n.d(t, { J: () => f });
 var r = n(12543),
     i = n(438767),
-    a = n(384623),
-    s = n(539385),
+    s = n(384623),
+    a = n(539385),
     o = n(327922);
 function l(e) {
     return (l =
@@ -18,94 +18,78 @@ function l(e) {
               })(e);
 }
 function u(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function c(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function d(e, t, n) {
-    return t && c(e.prototype, t), n && c(e, n), e;
-}
-function _(e, t) {
-    if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
-    (e.prototype = Object.create(t && t.prototype, { constructor: { value: e, writable: !0, configurable: !0 } })),
-        t && f(e, t);
-}
-function f(e, t) {
-    return (f =
+    return (u =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function p(e) {
-    var t = g();
-    return function () {
-        var n,
-            r = E(e);
-        return (n = t ? Reflect.construct(r, arguments, E(this).constructor) : r.apply(this, arguments)), h(this, n);
-    };
-}
-function h(e, t) {
-    return t && ("object" === l(t) || "function" == typeof t) ? t : m(e);
-}
-function m(e) {
+function d(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function g() {
-    if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-    if ("function" == typeof Proxy) return !0;
-    try {
-        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
-    } catch (e) {
-        return !1;
-    }
-}
-function E(e) {
-    return (E = Object.setPrototypeOf
+function c(e) {
+    return (c = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function A(e, t, n) {
+function _(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var I = (function (e) {
-    _(n, e);
-    var t = p(n);
-    function n() {
+var f = (function (e) {
+    if ("function" != typeof e && null !== e) throw TypeError("Super expression must either be null or a function");
+    (f.prototype = Object.create(e && e.prototype, { constructor: { value: f, writable: !0, configurable: !0 } })),
+        e && u(f, e);
+    var t,
+        n,
+        r =
+            ((t = (function () {
+                if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+                if ("function" == typeof Proxy) return !0;
+                try {
+                    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                } catch (e) {
+                    return !1;
+                }
+            })()),
+            function () {
+                var e,
+                    n,
+                    r,
+                    i = c(f);
+                return (
+                    (r = t ? Reflect.construct(i, arguments, c(this).constructor) : i.apply(this, arguments)),
+                    (e = this),
+                    (n = r) && ("object" === l(n) || "function" == typeof n) ? n : d(e)
+                );
+            });
+    function f() {
         var e;
-        u(this, n);
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+        if (!(this instanceof f)) throw TypeError("Cannot call a class as a function");
+        for (var t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
         return (
-            A(m((e = t.call.apply(t, [this].concat(i)))), "priority", 100),
-            A(m(e), "incompatibleTokens", ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"]),
+            _(d((e = r.call.apply(r, [this].concat(n)))), "priority", 100),
+            _(d(e), "incompatibleTokens", ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"]),
             e
         );
     }
     return (
-        d(n, [
+        (n = [
             {
                 key: "parse",
                 value: function (e, t, n) {
                     switch (t) {
                         case "w":
-                            return (0, a.P2)(i.h.week, e);
+                            return (0, s.P2)(i.h.week, e);
                         case "wo":
                             return n.ordinalNumber(e, { unit: "week" });
                         default:
-                            return (0, a.ym)(t.length, e);
+                            return (0, s.ym)(t.length, e);
                     }
                 },
             },
@@ -118,10 +102,19 @@ var I = (function (e) {
             {
                 key: "set",
                 value: function (e, t, n, r) {
-                    return (0, o.A)((0, s.A)(e, n, r), r);
+                    return (0, o.A)((0, a.A)(e, n, r), r);
                 },
             },
         ]),
-        n
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(f.prototype, n),
+        f
     );
 })(r.i);

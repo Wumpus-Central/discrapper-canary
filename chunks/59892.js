@@ -1,29 +1,28 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        Chrono: () => r.u,
+r.r(t),
+    r.d(t, {
+        Chrono: () => n.u,
         GB: () => u,
         Meridiem: () => a.FF,
-        ParsingComponents: () => i.BP,
-        ParsingResult: () => i.s4,
-        ReferenceWithTimezone: () => i.b5,
+        ParsingComponents: () => s.BP,
+        ParsingResult: () => s.s4,
+        ReferenceWithTimezone: () => s.b5,
         Weekday: () => a.Bw,
         casual: () => o,
-        configuration: () => s,
-        parse: () => c,
-        parseDate: () => d,
+        configuration: () => i,
+        parse: () => d,
+        parseDate: () => m,
         strict: () => l,
     });
-var r = n(880683),
-    i = n(374372),
-    a = n(322811);
-let s = new (n(579926).A)(),
-    o = new r.u(s.createCasualConfiguration(!1)),
-    l = new r.u(s.createConfiguration(!0, !1)),
-    u = new r.u(s.createCasualConfiguration(!0));
-function c(e, t, n) {
-    return o.parse(e, t, n);
+var n = r(880683),
+    s = r(374372),
+    a = r(322811);
+let i = new (r(579926).A)(),
+    o = new n.u(i.createCasualConfiguration(!1)),
+    l = new n.u(i.createConfiguration(!0, !1)),
+    u = new n.u(i.createCasualConfiguration(!0));
+function d(e, t, r) {
+    return o.parse(e, t, r);
 }
-function d(e, t, n) {
-    return o.parseDate(e, t, n);
+function m(e, t, r) {
+    return o.parseDate(e, t, r);
 }

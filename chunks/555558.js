@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { h: () => a });
-var r = n(322811),
-    i = n(658809);
+r.d(t, { h: () => a });
+var n = r(322811),
+    s = r(881190);
 function a(e, t) {
-    let n = e.clone();
-    if (((n.start = s(e.start, t.start)), null != e.end || null != t.end)) {
-        let r = s(null == e.end ? e.start : e.end, null == t.end ? t.start : t.end);
-        if (null == e.end && r.date().getTime() < n.start.date().getTime()) {
-            let e = new Date(r.date().getTime());
-            e.setDate(e.getDate() + 1), r.isCertain("day") ? (0, i.Pl)(r, e) : (0, i.Hq)(r, e);
+    let r = e.clone();
+    if (((r.start = i(e.start, t.start)), null != e.end || null != t.end)) {
+        let n = i(null == e.end ? e.start : e.end, null == t.end ? t.start : t.end);
+        if (null == e.end && n.date().getTime() < r.start.date().getTime()) {
+            let e = new Date(n.date().getTime());
+            e.setDate(e.getDate() + 1), n.isCertain("day") ? (0, s.Pl)(n, e) : (0, s.Hq)(n, e);
         }
-        n.end = r;
+        r.end = n;
     }
-    return n;
+    return r;
 }
-function s(e, t) {
-    let n = e.clone();
+function i(e, t) {
+    let r = e.clone();
     return (
         t.isCertain("hour")
-            ? (n.assign("hour", t.get("hour")),
-              n.assign("minute", t.get("minute")),
+            ? (r.assign("hour", t.get("hour")),
+              r.assign("minute", t.get("minute")),
               t.isCertain("second")
-                  ? (n.assign("second", t.get("second")),
+                  ? (r.assign("second", t.get("second")),
                     t.isCertain("millisecond")
-                        ? n.assign("millisecond", t.get("millisecond"))
-                        : n.imply("millisecond", t.get("millisecond")))
-                  : (n.imply("second", t.get("second")), n.imply("millisecond", t.get("millisecond"))))
-            : (n.imply("hour", t.get("hour")),
-              n.imply("minute", t.get("minute")),
-              n.imply("second", t.get("second")),
-              n.imply("millisecond", t.get("millisecond"))),
-        t.isCertain("timezoneOffset") && n.assign("timezoneOffset", t.get("timezoneOffset")),
+                        ? r.assign("millisecond", t.get("millisecond"))
+                        : r.imply("millisecond", t.get("millisecond")))
+                  : (r.imply("second", t.get("second")), r.imply("millisecond", t.get("millisecond"))))
+            : (r.imply("hour", t.get("hour")),
+              r.imply("minute", t.get("minute")),
+              r.imply("second", t.get("second")),
+              r.imply("millisecond", t.get("millisecond"))),
+        t.isCertain("timezoneOffset") && r.assign("timezoneOffset", t.get("timezoneOffset")),
         t.isCertain("meridiem")
-            ? n.assign("meridiem", t.get("meridiem"))
-            : null != t.get("meridiem") && null == n.get("meridiem") && n.imply("meridiem", t.get("meridiem")),
-        n.get("meridiem") == r.FF.PM &&
-            12 > n.get("hour") &&
-            (t.isCertain("hour") ? n.assign("hour", n.get("hour") + 12) : n.imply("hour", n.get("hour") + 12)),
-        n.addTags(e.tags()),
-        n.addTags(t.tags()),
-        n
+            ? r.assign("meridiem", t.get("meridiem"))
+            : null != t.get("meridiem") && null == r.get("meridiem") && r.imply("meridiem", t.get("meridiem")),
+        r.get("meridiem") == n.FF.PM &&
+            12 > r.get("hour") &&
+            (t.isCertain("hour") ? r.assign("hour", r.get("hour") + 12) : r.imply("hour", r.get("hour") + 12)),
+        r.addTags(e.tags()),
+        r.addTags(t.tags()),
+        r
     );
 }

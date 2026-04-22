@@ -1,118 +1,121 @@
-"use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => v });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(311907),
     o = n(990078),
-    d = n(397927),
-    c = n(649640),
-    u = n(946274),
-    m = n(71393),
-    g = n(486020),
-    x = n(835517),
-    h = n(997509),
-    _ = n(652215),
-    A = n(282435),
-    p = n(985018),
-    f = n(168938);
-function j(e) {
-    let { profile: t, canManageGuild: n, handleClick: s, hasCustomBanner: l } = e,
-        a = (0, c.b2)(),
-        u = (0, c.aG)({ profile: t, defaultColor: a.hex(), forceDefaultColor: !1 });
+    d = n(939249),
+    c = n(626034),
+    u = n(187322),
+    m = n(22231),
+    g = n(452027),
+    h = n(649640),
+    x = n(946274),
+    _ = n(71393),
+    p = n(486020),
+    A = n(835517),
+    E = n(997509),
+    f = n(652215),
+    j = n(282435),
+    N = n(985018),
+    I = n(159457);
+function C(e) {
+    let { profile: t, canManageGuild: n, handleClick: l, hasCustomBanner: s } = e,
+        a = (0, h.b2)(),
+        c = (0, h.aG)({ profile: t, defaultColor: a.hex(), forceDefaultColor: !1 });
     return (0, i.jsx)(o.m, {
         asContainer: !0,
-        text: p.intl.string(p.t.W4Nd7Q),
-        children: (0, i.jsx)(d.DUT, {
+        text: N.intl.string(N.t.W4Nd7Q),
+        children: (0, i.jsx)(d.D, {
             "aria-disabled": !n,
             tabIndex: n ? 0 : -1,
-            "aria-label": p.intl.string(p.t.W4Nd7Q),
-            onClick: n ? s : void 0,
-            style: { background: (0, c.n6)(u) },
-            className: r()(f.DB, { [f.r9]: !n }),
-            children: (0, i.jsx)("div", { className: r()({ [f.z2]: !l && null == t.brandColorPrimary }) }),
+            "aria-label": N.intl.string(N.t.W4Nd7Q),
+            onClick: n ? l : void 0,
+            style: { background: (0, h.n6)(c) },
+            className: r()(I.DB, { [I.r9]: !n }),
+            children: (0, i.jsx)("div", { className: r()({ [I.z2]: !s && null == t.brandColorPrimary }) }),
         }),
     });
 }
-function N(e) {
-    let { isDiscoverable: t, profile: n, onCustomBannerChange: l, canManageGuild: a } = e,
+function b(e) {
+    let { isDiscoverable: t, profile: n, onCustomBannerChange: s, canManageGuild: a } = e,
         o = null != n.customBanner,
-        c = s.useMemo(() => {
+        d = l.useMemo(() => {
             if (null == n.customBanner) return null;
             let e = n.customBanner;
-            return g.aq.test(e)
+            return p.aq.test(e)
                 ? e
-                : g.Ay.getGuildDiscoverySplashURL({ id: n.id, splash: n.customBanner, size: 300 * (0, x.A)() });
+                : p.Ay.getGuildDiscoverySplashURL({ id: n.id, splash: n.customBanner, size: 300 * (0, A.A)() });
         }, [n]);
     if (!t) return null;
-    let m =
-        null != c
-            ? (0, i.jsx)("img", { className: f.qX, src: c, alt: "", "aria-hidden": !0 })
-            : (0, i.jsx)(d.kpT, { size: "md" });
+    let g =
+        null != d
+            ? (0, i.jsx)("img", { className: I.qX, src: d, alt: "", "aria-hidden": !0 })
+            : (0, i.jsx)(c.k, { size: "md" });
     return (0, i.jsx)("div", {
-        className: f.sK,
-        children: (0, i.jsx)(d.vN3, {
+        className: I.sK,
+        children: (0, i.jsx)(u.vN, {
             within: !0,
             children: (0, i.jsx)("div", {
-                className: r()(f.K7, { [f.e7]: o }),
+                className: r()(I.K7, { [I.e7]: o }),
                 children: (0, i.jsxs)("div", {
-                    className: r()(f.vw, { [f.r9]: !a }),
+                    className: r()(I.vw, { [I.r9]: !a }),
                     children: [
-                        m,
-                        (0, i.jsx)("div", { className: f.Lw }),
-                        (0, i.jsx)(d.R2l, { size: "custom", className: f.QY, width: 20, height: 20, color: "white" }),
-                        (0, i.jsx)(u.Ay, { multiple: !1, tabIndex: 0, onChange: l, disabled: !a }),
+                        g,
+                        (0, i.jsx)("div", { className: I.Lw }),
+                        (0, i.jsx)(m.R, { size: "custom", className: I.QY, width: 20, height: 20, color: "white" }),
+                        (0, i.jsx)(x.Ay, { multiple: !1, tabIndex: 0, onChange: s, disabled: !a }),
                     ],
                 }),
             }),
         }),
     });
 }
-function E(e) {
-    let { profile: t, onCustomBannerChange: n, canManageGuild: l } = e,
-        u = (0, a.bG)([m.A], () => m.A.getGuild(t.id)),
-        g = u?.features.has(_.GuildFeatures.DISCOVERABLE) ?? !1,
-        x = t.id,
-        E = s.useCallback(
+function v(e) {
+    let { profile: t, onCustomBannerChange: n, canManageGuild: s } = e,
+        c = (0, a.bG)([_.A], () => _.A.getGuild(t.id)),
+        u = c?.features.has(f.GuildFeatures.DISCOVERABLE) ?? !1,
+        m = t.id,
+        x = l.useCallback(
             (e) => () => {
-                h.A.updateGuildProfile(x, { brandColorPrimary: e, customBanner: null });
+                E.A.updateGuildProfile(m, { brandColorPrimary: e, customBanner: null });
             },
-            [x],
+            [m],
         ),
-        b = s.useCallback((e) => (!g || null == t.customBanner) && e === t.brandColorPrimary, [t, g]);
-    return (0, i.jsx)(d.D0$, {
-        label: p.intl.string(p.t.BSVog8),
+        p = l.useCallback((e) => (!u || null == t.customBanner) && e === t.brandColorPrimary, [t, u]);
+    return (0, i.jsx)(g.D, {
+        label: N.intl.string(N.t.BSVog8),
         children: (0, i.jsxs)("div", {
-            className: f.Vg,
+            className: I.Vg,
             children: [
-                (0, i.jsx)(j, {
+                (0, i.jsx)(C, {
                     profile: t,
-                    canManageGuild: l,
-                    handleClick: E(null),
-                    hasCustomBanner: g && null != t.customBanner,
+                    canManageGuild: s,
+                    handleClick: x(null),
+                    hasCustomBanner: u && null != t.customBanner,
                 }),
-                A.aA.map((e) => {
+                j.aA.map((e) => {
                     let { name: t, color: n } = e;
                     return (0, i.jsx)(
                         o.m,
                         {
                             asContainer: !0,
                             __unsupportedReactNodeAsText: t,
-                            children: (0, i.jsx)(d.DUT, {
-                                "aria-disabled": !l,
-                                tabIndex: l ? 0 : -1,
+                            children: (0, i.jsx)(d.D, {
+                                "aria-disabled": !s,
+                                tabIndex: s ? 0 : -1,
                                 "aria-label": t,
-                                onClick: l ? E(n) : void 0,
-                                style: { background: (0, c.n6)(n) },
-                                className: r()(f.DB, { [f.r9]: !l }),
-                                children: (0, i.jsx)("div", { className: r()({ [f.z2]: b(n) }) }),
+                                onClick: s ? x(n) : void 0,
+                                style: { background: (0, h.n6)(n) },
+                                className: r()(I.DB, { [I.r9]: !s }),
+                                children: (0, i.jsx)("div", { className: r()({ [I.z2]: p(n) }) }),
                             }),
                         },
                         t,
                     );
                 }),
-                (0, i.jsx)(N, { canManageGuild: l, isDiscoverable: g, profile: t, onCustomBannerChange: n }),
+                (0, i.jsx)(b, { canManageGuild: s, isDiscoverable: u, profile: t, onCustomBannerChange: n }),
             ],
         }),
     });

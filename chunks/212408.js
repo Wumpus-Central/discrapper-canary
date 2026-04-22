@@ -1,46 +1,47 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var r = n(990078),
-    a = n(985018),
-    l = n(359774);
-let s = Math.ceil(2 * Math.PI * 20),
+var s = n(990078),
+    l = n(985018),
+    r = n(834911);
+let a = Math.ceil(2 * Math.PI * 20),
     o = (e) => {
         let t,
             n,
             o,
-            d,
-            { total: c, used: u } = e,
-            A = Math.max(0, Math.min(1, u / c)),
-            h = `${Math.floor(100 * A)}%`;
-        return (0, i.jsx)(r.m, {
-            text: a.intl.formatToPlainString(a.t["2eoRMh"], { used: h }),
+            c,
+            { total: d, used: h } = e,
+            p = Math.max(0, Math.min(1, h / d)),
+            u = `${Math.floor(100 * p)}%`;
+        return (0, i.jsx)(s.m, {
+            text: l.intl.formatToPlainString(l.t["2eoRMh"], { used: u }),
             children: (0, i.jsxs)("div", {
-                className: l.iE,
+                className: r.iE,
                 role: "progressbar",
-                "aria-label": a.intl.formatToPlainString(a.t["2eoRMh"], { used: h }),
+                "aria-label": l.intl.formatToPlainString(l.t["2eoRMh"], { used: u }),
                 children: [
                     (0, i.jsxs)("svg", {
                         viewBox: "25 25 50 50",
-                        className: l.JW,
+                        className: r.JW,
                         "aria-hidden": !0,
                         children: [
-                            (0, i.jsx)("circle", { className: l.Tp, cx: "50", cy: "50", r: 20 }),
+                            (0, i.jsx)("circle", { className: r.Tp, cx: "50", cy: "50", r: 20 }),
                             (0, i.jsx)("circle", {
-                                className: l.CU,
+                                className: r.CU,
                                 cx: "50",
                                 cy: "50",
                                 r: 20,
                                 stroke:
-                                    ((t = Math.round(-85 * A + 199)),
-                                    (n = Math.round(-71 * A + 208)),
-                                    (o = Math.round(-22 * A + 240)),
+                                    ((t = Math.round(-85 * p + 199)),
+                                    (n = Math.round(-71 * p + 208)),
+                                    (o = Math.round(-22 * p + 240)),
                                     `rgb(${t}, ${n}, ${o})`),
-                                strokeDasharray: ((d = Math.floor(s * A)), `${d}, ${s}`),
+                                strokeDasharray: ((c = Math.floor(a * p)), `${c}, ${a}`),
                             }),
                         ],
                     }),
-                    (0, i.jsx)("aside", { className: l.Y3, "aria-hidden": !0, children: h }),
+                    (0, i.jsx)("aside", { className: r.Y3, "aria-hidden": !0, children: u }),
                 ],
             }),
         });

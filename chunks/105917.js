@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { El: () => l, Rs: () => i, dc: () => s });
+n.d(t, { El: () => s, Rs: () => i, dc: () => l });
 let i = (e) => {
     let t = Object.values(e?.ppgs ?? {})[0],
         n = t?.status,
@@ -11,21 +10,21 @@ let i = (e) => {
         periodEndDate: t?.period_ending_at,
     };
 };
-function s(e) {
+function l(e) {
     let t,
         n,
         i = new Date(),
-        s = new Date(Date.UTC(i.getUTCFullYear(), i.getUTCMonth(), 1)).toISOString(),
-        l = e.findIndex((e) => e.periodStartingAt === s);
-    return -1 !== l ? ((t = e[l]), (n = e.slice(l + 1))) : (n = e), { currentPeriod: t, previousPeriods: n };
+        l = new Date(Date.UTC(i.getUTCFullYear(), i.getUTCMonth(), 1)).toISOString(),
+        s = e.findIndex((e) => e.periodStartingAt === l);
+    return -1 !== s ? ((t = e[s]), (n = e.slice(s + 1))) : (n = e), { currentPeriod: t, previousPeriods: n };
 }
-function l(e, t) {
-    let n, i, s, l;
+function s(e, t) {
+    let n, i, l, s;
     return (
         null != e &&
             ((n = e.amount),
-            (s = e.paymentsCount),
-            null != t && (t.amount > 0 && (i = e.amount / t.amount - 1), (l = e.paymentsCount - t.paymentsCount))),
-        { revenue: n, revenuePctChange: i, paymentsCount: s, paymentsCountChange: l }
+            (l = e.paymentsCount),
+            null != t && (t.amount > 0 && (i = e.amount / t.amount - 1), (s = e.paymentsCount - t.paymentsCount))),
+        { revenue: n, revenuePctChange: i, paymentsCount: l, paymentsCountChange: s }
     );
 }

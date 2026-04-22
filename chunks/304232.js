@@ -1,30 +1,31 @@
-t.d(a, { default: () => o });
-var d = t(627968);
-t(64700);
-var n = t(397927),
-    i = t(442433),
-    r = t(734057),
-    s = t(954571),
-    l = t(863922),
-    c = t(652215),
-    u = t(985018);
-function o(e) {
-    let { summary: a, onSelect: t } = e;
-    return (0, d.jsx)(n.W1t, {
+d.d(a, { default: () => _ });
+var t = d(627968);
+d(64700);
+var n = d(861672),
+    i = d(477782),
+    r = d(442433),
+    s = d(734057),
+    l = d(954571),
+    c = d(863922),
+    u = d(652215),
+    o = d(985018);
+function _(e) {
+    let { summary: a, onSelect: d } = e;
+    return (0, t.jsx)(n.W, {
         "data-menu-migrated-auto": !0,
-        onSelect: t,
+        onSelect: d,
         navId: "channel-summaries-context-menu",
-        "aria-label": u.intl.string(u.t.ogxXGq),
-        onClose: i.Z_,
-        children: (0, d.jsx)(n.rXV, {
-            children: (0, d.jsx)(n.Drp, {
+        "aria-label": o.intl.string(o.t.ogxXGq),
+        onClose: r.Z_,
+        children: (0, t.jsx)(i.rX, {
+            children: (0, t.jsx)(i.Dr, {
                 id: "delete-summary",
                 color: "danger",
-                label: u.intl.string(u.t["5AwUIg"]),
+                label: o.intl.string(o.t["5AwUIg"]),
                 action: () => {
-                    (0, l.O$)(a);
-                    let e = r.A.getChannel(a.channelId);
-                    s.default.track(c.HAw.SUMMARY_DELETED, {
+                    (0, c.O$)(a);
+                    let e = s.A.getChannel(a.channelId);
+                    l.default.track(u.HAw.SUMMARY_DELETED, {
                         guild_id: e?.guild_id,
                         channel_id: e?.id,
                         summary_id: a.id,

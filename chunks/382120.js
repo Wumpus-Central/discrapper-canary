@@ -1,61 +1,55 @@
-n.d(t, { A: () => A });
-var i = n(627968);
-n(64700);
-var s = n(158954),
-    l = n(311907),
-    a = n(397927),
-    r = n(973925),
-    d = n(622543),
-    o = n(985018),
-    c = n(437102);
-function u(e) {
-    let { icon: t, title: n, description: s } = e;
-    return (0, i.jsxs)("div", {
-        className: c.nM,
+a.d(t, { A: () => b });
+var n = a(627968);
+a(64700);
+var i = a(573613),
+    l = a(311907),
+    r = a(534514),
+    d = a(834730),
+    o = a(534890),
+    s = a(687966),
+    c = a(177953),
+    _ = a(973925),
+    u = a(622543),
+    m = a(985018),
+    p = a(935059);
+function g(e) {
+    let { icon: t, title: a, description: i } = e;
+    return (0, n.jsxs)("div", {
+        className: p.nM,
         children: [
-            (0, i.jsx)("div", {
-                className: c.aL,
-                children: (0, i.jsx)(t, { size: "custom", width: 20, height: 20, color: "currentColor" }),
+            (0, n.jsx)("div", {
+                className: p.aL,
+                children: (0, n.jsx)(t, { size: "custom", width: 20, height: 20, color: "currentColor" }),
             }),
-            (0, i.jsxs)("div", {
-                className: c.qg,
+            (0, n.jsxs)("div", {
+                className: p.qg,
                 children: [
-                    (0, i.jsx)(a.Heading, { variant: "text-xs/semibold", children: n }),
-                    (0, i.jsx)(a.Text, { variant: "text-sm/normal", children: s }),
+                    (0, n.jsx)(r.D, { variant: "text-xs/semibold", children: a }),
+                    (0, n.jsx)(d.E, { variant: "text-sm/normal", children: i }),
                 ],
             }),
         ],
     });
 }
-function A(e) {
+function b(e) {
     let { user: t } = e,
-        n = (0, l.bG)([d.A], () => d.A.getUserProfile(t.id)?.application),
-        { hasMessageContent: A, hasGuildPresences: x, hasGuildMembers: m } = (0, r.Z)(n);
-    return (0, i.jsxs)(s.IpV, {
+        a = (0, l.bG)([u.A], () => u.A.getUserProfile(t.id)?.application),
+        { hasMessageContent: r, hasGuildPresences: b, hasGuildMembers: f } = (0, _.Z)(a);
+    return (0, n.jsxs)(i.Ip, {
         fade: !0,
-        className: c.XG,
+        className: p.XG,
         children: [
-            A &&
-                (0, i.jsx)(u, {
-                    icon: a.oyn,
-                    title: o.intl.string(o.t["7Tmhfu"]),
-                    description: o.intl.string(o.t.eu5x7z),
+            r &&
+                (0, n.jsx)(g, {
+                    icon: o.o,
+                    title: m.intl.string(m.t["7Tmhfu"]),
+                    description: m.intl.string(m.t.eu5x7z),
                 }),
-            x &&
-                (0, i.jsx)(u, {
-                    icon: a._xR,
-                    title: o.intl.string(o.t.awYSsM),
-                    description: o.intl.string(o.t.TpsXoC),
-                }),
-            m &&
-                (0, i.jsx)(u, {
-                    icon: a.nFg,
-                    title: o.intl.string(o.t.WuKeSJ),
-                    description: o.intl.string(o.t.wOBmtV),
-                }),
-            (0, i.jsx)(a.Text, {
+            b && (0, n.jsx)(g, { icon: s._, title: m.intl.string(m.t.awYSsM), description: m.intl.string(m.t.TpsXoC) }),
+            f && (0, n.jsx)(g, { icon: c.n, title: m.intl.string(m.t.WuKeSJ), description: m.intl.string(m.t.wOBmtV) }),
+            (0, n.jsx)(d.E, {
                 variant: "text-xs/normal",
-                children: o.intl.format(o.t.b6nqk0, {
+                children: m.intl.format(m.t.b6nqk0, {
                     helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975",
                 }),
             }),

@@ -1,30 +1,12 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => d });
 var r = n(311907),
     i = n(73153);
-let a = !1,
-    s = !1,
+let s = !1,
+    a = !1,
     o = {},
     l = null;
-function u(e) {
-    let { consents: t } = e;
-    null != t && ((o = { ...o, ...t }), (s = !0));
-}
-function c(e) {
-    let { consents: t } = e;
-    (o = { ...t }), (a = !0);
-}
-function d(e) {
-    let { consents: t } = e;
-    (o = { ...t }), (a = !0);
-}
-function _(e) {
-    l = e.consentRequired;
-}
-function f() {
-    l = null;
-}
-class p extends r.Ay.Store {
+class u extends r.Ay.Store {
     static displayName = "ConsentStore";
     hasConsented(e) {
         return null != o[e] && o[e].consented;
@@ -33,19 +15,32 @@ class p extends r.Ay.Store {
         return o;
     }
     get fetchedConsents() {
-        return a;
+        return s;
     }
     get receivedConsentsInConnectionOpen() {
-        return s;
+        return a;
     }
     getAuthenticationConsentRequired() {
         return l;
     }
 }
-let h = new p(i.h, {
-    CONNECTION_OPEN: u,
-    OVERLAY_INITIALIZE: c,
-    UPDATE_CONSENTS: d,
-    SET_CONSENT_REQUIRED: _,
-    LOGOUT: f,
+let d = new u(i.h, {
+    CONNECTION_OPEN: function (e) {
+        let { consents: t } = e;
+        null != t && ((o = { ...o, ...t }), (a = !0));
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        let { consents: t } = e;
+        (o = { ...t }), (s = !0);
+    },
+    UPDATE_CONSENTS: function (e) {
+        let { consents: t } = e;
+        (o = { ...t }), (s = !0);
+    },
+    SET_CONSENT_REQUIRED: function (e) {
+        l = e.consentRequired;
+    },
+    LOGOUT: function () {
+        l = null;
+    },
 });

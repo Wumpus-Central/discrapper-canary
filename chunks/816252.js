@@ -2,12 +2,12 @@ i.d(e, { _: () => f, b: () => m });
 var n,
     r = i(627968);
 i(64700);
-var l = i(158954),
+var l = i(834730),
     a = i(927578),
     s = i(916974),
     u = i(652215),
     o = i(985018),
-    c = i(803758),
+    c = i(575083),
     d = i(67423),
     m = (((n = {}).NONE = "none"), (n.CONFIRMING = "confirming"), (n.APPLIED = "applied"), n);
 let f = (t) => {
@@ -20,7 +20,7 @@ let f = (t) => {
                 (0, r.jsxs)("div", {
                     className: c.br,
                     children: [
-                        (0, r.jsx)(l.EYj, {
+                        (0, r.jsx)(l.E, {
                             variant: "text-md/semibold",
                             children:
                                 a.status === u.Dmq.CANCELED
@@ -30,19 +30,19 @@ let f = (t) => {
                                       })
                                     : o.intl.format(o.t.tQvNll, { numMonths: e.discount.user_usage_limit }),
                         }),
-                        (0, r.jsx)(g, { userDiscountOffer: e, offerState: i }),
+                        (0, r.jsx)(p, { userDiscountOffer: e, offerState: i }),
                     ],
                 }),
             ],
         });
     },
-    g = (t) => {
+    p = (t) => {
         let { userDiscountOffer: e, offerState: i } = t,
             { discountedPrice: n, fullPrice: c, premiumSubscription: d } = (0, s.X)();
         switch (i) {
             case "applied":
                 if (d.status === u.Dmq.CANCELED)
-                    return (0, r.jsx)(l.EYj, {
+                    return (0, r.jsx)(l.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: o.intl.formatToPlainString(o.t.h2g1Ia, {
@@ -51,7 +51,7 @@ let f = (t) => {
                             fullPrice: c,
                         }),
                     });
-                return (0, r.jsx)(l.EYj, {
+                return (0, r.jsx)(l.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     children: o.intl.formatToPlainString(o.t.gPzMHa, {
@@ -62,7 +62,7 @@ let f = (t) => {
                 });
             case "confirming":
                 if (d.status === u.Dmq.CANCELED)
-                    return (0, r.jsx)(l.EYj, {
+                    return (0, r.jsx)(l.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: o.intl.formatToPlainString(o.t.iDFk3v, {
@@ -71,7 +71,7 @@ let f = (t) => {
                             fullPrice: c,
                         }),
                     });
-                return (0, r.jsx)(l.EYj, {
+                return (0, r.jsx)(l.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     children: o.intl.formatToPlainString(o.t.Eq1RHL, {
@@ -81,7 +81,7 @@ let f = (t) => {
                     }),
                 });
             default:
-                return (0, r.jsx)(l.EYj, {
+                return (0, r.jsx)(l.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
                     children: o.intl.formatToPlainString(o.t["2gem05"], {

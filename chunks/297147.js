@@ -1,23 +1,23 @@
 n.d(e, { default: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
+    a = n(189213),
     l = n(311907),
-    u = n(397927),
-    s = n(545059),
-    o = n(870391),
+    u = n(292666),
+    o = n(545059),
+    s = n(870391),
     d = n(985018);
 function p(t) {
     let { onClose: e, transitionState: n, groupId: p, initialUserIds: c } = t,
-        m = (0, l.bG)([o.A], () => (null == p ? null : o.A.getGroup(p))),
+        m = (0, l.bG)([s.A], () => (null == p ? null : s.A.getGroup(p))),
         [C, h] = i.useState(m?.name ?? ""),
         k = null != p,
         G = i.useCallback(() => {
             if ("" !== C.trim()) {
-                if (k && null != p) s.A.updateGroup(p, C.trim());
+                if (k && null != p) o.A.updateGroup(p, C.trim());
                 else {
-                    let t = s.A.createGroup(C.trim());
-                    null != c && c.length > 0 && s.A.addUsersToGroup(t, c);
+                    let t = o.A.createGroup(C.trim());
+                    null != c && c.length > 0 && o.A.addUsersToGroup(t, c);
                 }
                 e();
             }
@@ -42,7 +42,7 @@ function p(t) {
                 disabled: "" === C.trim(),
             },
         ],
-        children: (0, r.jsx)(u.ksK, {
+        children: (0, r.jsx)(u.k, {
             value: C,
             onChange: h,
             placeholder: "Group Name",

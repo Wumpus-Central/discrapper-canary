@@ -1,74 +1,76 @@
 "use strict";
-n.d(t, { A: () => A });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(91871),
-    l = n.n(o),
-    u = n(735438),
-    c = n.n(u),
-    d = n(158954),
-    _ = n(311907),
-    f = n(397927),
-    p = n(676608),
-    h = n(317525),
-    m = n(652215),
-    g = n(985018),
-    E = n(836836);
-let A = function (e) {
-    let { className: t, guild: n, roleStyle: a, roleFilter: o, onSelect: u, onClose: A } = e,
-        I = (0, _.bG)([h.A], () => h.A.getSortedRoles(n.id)),
-        T = (0, p.Ay)(n.id, null),
-        y = i.useMemo(
+i.d(t, { A: () => v });
+var n = i(627968),
+    r = i(64700),
+    a = i(503698),
+    l = i.n(a),
+    s = i(91871),
+    o = i.n(s),
+    c = i(735438),
+    d = i.n(c),
+    u = i(44482),
+    _ = i(311907),
+    p = i(545442),
+    h = i(305866),
+    f = i(389723),
+    A = i(676608),
+    g = i(317525),
+    m = i(652215),
+    E = i(985018),
+    b = i(673753);
+let v = function (e) {
+    let { className: t, guild: i, roleStyle: a, roleFilter: s, onSelect: c, onClose: v } = e,
+        I = (0, _.bG)([g.A], () => g.A.getSortedRoles(i.id)),
+        T = (0, A.Ay)(i.id, null),
+        C = r.useMemo(
             () =>
-                c()(I)
-                    .filter(o)
+                d()(I)
+                    .filter(s)
                     .map((e) => ({
                         id: e.id,
                         value: e.id,
                         label: e.name,
                         leading:
                             "dot" === a
-                                ? (0, r.jsx)(f.WYI, {
-                                      className: E.b8,
+                                ? (0, n.jsx)(p.W, {
+                                      className: b.b8,
                                       color: e.colorString ?? m.TpD,
                                       colors: T ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1,
                                   })
-                                : (0, r.jsx)(f.RYH, {
-                                      className: E.kb,
+                                : (0, n.jsx)(p.R, {
+                                      className: b.kb,
                                       color: e.colorString ?? m.TpD,
                                       colors: T ? e.colorStrings : null,
                                   }),
                     }))
                     .value(),
-            [I, o, a, T],
+            [I, s, a, T],
         ),
-        S = i.useCallback(
-            (e, t) => ("" === t.trim() ? e : e.filter((e) => l()(t.toLowerCase(), e.label.toLowerCase()))),
+        S = r.useCallback(
+            (e, t) => ("" === t.trim() ? e : e.filter((e) => o()(t.toLowerCase(), e.label.toLowerCase()))),
             [],
         );
-    return (0, r.jsx)(f.lGe, {
-        className: s()(E.kL, t),
-        "aria-label": g.intl.string(g.t.ljnBlo),
-        children: (0, r.jsxs)(f.iS7, {
+    return (0, n.jsx)(h.l, {
+        className: l()(b.kL, t),
+        "aria-label": E.intl.string(E.t.ljnBlo),
+        children: (0, n.jsxs)(f.iS, {
             selectionMode: "single",
             value: void 0,
             onSelectionChange: (e) => {
-                null != e && (u(e), A());
+                null != e && (c(e), v());
             },
-            options: y,
+            options: C,
             customMatchSorter: S,
             children: [
-                (0, r.jsx)(f.a32, {
-                    label: g.intl.string(g.t.ljnBlo),
+                (0, n.jsx)(f.a3, {
+                    label: E.intl.string(E.t.ljnBlo),
                     hideLabel: !0,
-                    placeholder: g.intl.string(g.t.XPGZXP),
+                    placeholder: E.intl.string(E.t.XPGZXP),
                     autoFocus: !0,
                 }),
-                (0, r.jsx)(f.X2W, { renderListItem: (e) => (0, r.jsx)(d.c$x, { ...e }) }),
+                (0, n.jsx)(f.X2, { renderListItem: (e) => (0, n.jsx)(u.c, { ...e }) }),
             ],
         }),
     });

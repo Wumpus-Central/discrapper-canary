@@ -2,14 +2,6 @@
 n.d(t, { A: () => s });
 var r = n(559751),
     i = n(140851);
-function a(e, t, n) {
-    var a = (0, r.A)(e),
-        s = [i.kb, i.Mn].indexOf(a) >= 0 ? -1 : 1,
-        o = "function" == typeof n ? n(Object.assign({}, t, { placement: e })) : n,
-        l = o[0],
-        u = o[1];
-    return (l = l || 0), (u = (u || 0) * s), [i.kb, i.pG].indexOf(a) >= 0 ? { x: u, y: l } : { x: l, y: u };
-}
 let s = {
     name: "offset",
     enabled: !0,
@@ -18,17 +10,29 @@ let s = {
     fn: function (e) {
         var t = e.state,
             n = e.options,
-            r = e.name,
-            s = n.offset,
-            o = void 0 === s ? [0, 0] : s,
+            s = e.name,
+            a = n.offset,
+            o = void 0 === a ? [0, 0] : a,
             l = i.DD.reduce(function (e, n) {
-                return (e[n] = a(n, t.rects, o)), e;
+                var s, a, l, u, d, c;
+                return (
+                    (e[n] =
+                        ((s = t.rects),
+                        (a = (0, r.A)(n)),
+                        (l = [i.kb, i.Mn].indexOf(a) >= 0 ? -1 : 1),
+                        (d = (u = "function" == typeof o ? o(Object.assign({}, s, { placement: n })) : o)[0]),
+                        (c = u[1]),
+                        (d = d || 0),
+                        (c = (c || 0) * l),
+                        [i.kb, i.pG].indexOf(a) >= 0 ? { x: c, y: d } : { x: d, y: c })),
+                    e
+                );
             }, {}),
             u = l[t.placement],
-            c = u.x,
-            d = u.y;
+            d = u.x,
+            c = u.y;
         null != t.modifiersData.popperOffsets &&
-            ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)),
-            (t.modifiersData[r] = l);
+            ((t.modifiersData.popperOffsets.x += d), (t.modifiersData.popperOffsets.y += c)),
+            (t.modifiersData[s] = l);
     },
 };

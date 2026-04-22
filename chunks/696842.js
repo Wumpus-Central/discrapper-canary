@@ -1,54 +1,54 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var l = n(284009),
-    s = n.n(l),
-    a = n(311907),
-    r = n(397927),
+    a = n.n(l),
+    s = n(311907),
+    r = n(821609),
     o = n(698441),
     c = n(520006),
     d = n(71393),
     u = n(576705),
-    h = n(652215),
+    _ = n(652215),
     A = n(985018);
-function _(e) {
+function p(e) {
     let {
             stream: t,
             applicationId: n,
             channel: l,
-            exitFullScreen: _,
-            appContext: m,
+            exitFullScreen: p,
+            appContext: h,
             analyticsLocation: g,
-            className: p,
-            size: f = "sm",
+            className: m,
+            size: x = "sm",
         } = e,
-        x = l?.getGuildId(),
-        E = l?.id,
-        I = (0, a.bG)([d.A], () => (null != x ? d.A.getGuild(x) : null), [x]),
-        C = (0, a.bG)([o.Ay], () => o.Ay.getActiveEventByChannel(E), [E]);
-    if (!(null != I && null != l && u.A.can(h.xBc.CREATE_INSTANT_INVITE, l))) return null;
-    let N = A.intl.string(A.t.VINpSK);
+        f = l?.getGuildId(),
+        C = l?.id,
+        E = (0, s.bG)([d.A], () => (null != f ? d.A.getGuild(f) : null), [f]),
+        j = (0, s.bG)([o.Ay], () => o.Ay.getActiveEventByChannel(C), [C]);
+    if (!(null != E && null != l && u.A.can(_.xBc.CREATE_INSTANT_INVITE, l))) return null;
+    let b = A.intl.string(A.t.VINpSK);
     return (
-        null != t ? (N = A.intl.string(A.t["6VQaqd"])) : null != n && (N = A.intl.string(A.t["OzOM/q"])),
+        null != t ? (b = A.intl.string(A.t["6VQaqd"])) : null != n && (b = A.intl.string(A.t["OzOM/q"])),
         (0, i.jsx)("div", {
-            className: p,
-            children: (0, i.jsx)(r.Button, {
-                size: f,
+            className: m,
+            children: (0, i.jsx)(r.$, {
+                size: x,
                 variant: "secondary",
-                text: N,
+                text: b,
                 onClick: () => {
-                    s()(null != I, "guild cannot be null"),
-                        s()(null != l, "channel cannot be null"),
+                    a()(null != E, "guild cannot be null"),
+                        a()(null != l, "channel cannot be null"),
                         (0, c.X)({
-                            guild: I,
+                            guild: E,
                             channel: l,
                             streamUserId: t?.ownerId,
                             applicationId: n,
-                            appContext: m,
-                            exitFullScreen: _,
+                            appContext: h,
+                            exitFullScreen: p,
                             analyticsLocation: g,
-                            guildScheduledEvent: C,
-                            source: h.PE1.STAGE_CHANNEL,
+                            guildScheduledEvent: j,
+                            source: _.PE1.STAGE_CHANNEL,
                         });
                 },
             }),

@@ -1,34 +1,41 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(709055),
-    s = n(222823),
-    o = n(954571),
-    l = n(211401),
-    u = n(500049),
-    c = n(60809),
-    d = n(652215);
-function _(e) {
-    let { context: t, openInPopout: _, analyticsLocation: f = "open-activity-shelf", initialState: p } = e;
-    _ && (0, a.A)(d.MLl.CHANNEL_CALL_POPOUT);
-    let h = _ ? i.KX8 : i.SYi;
-    (0, l.k)(u.Se.DISMISSED), (0, l.R)(u.s4.VOICE, void 0, p, "channel" === t.type ? t.channel.id : void 0);
-    let m = "contextless" !== t.type && (s.Ay.hasUnread(t.channel.id) || s.Ay.getMentionCount(t.channel.id) > 0);
+a.d(t, { A: () => h });
+var n = a(627968);
+a(64700);
+var r = a(231723),
+    i = a(192308),
+    s = a(709055),
+    l = a(222823),
+    o = a(954571),
+    d = a(211401),
+    c = a(500049),
+    _ = a(60809),
+    u = a(652215);
+function h(e) {
+    let { context: t, openInPopout: h, analyticsLocation: p = "open-activity-shelf", initialState: b } = e;
+    h && (0, s.A)(u.MLl.CHANNEL_CALL_POPOUT);
+    let g = h ? r.KX : r.SY;
+    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, b, "channel" === t.type ? t.channel.id : void 0);
+    let f = "contextless" !== t.type && (l.Ay.hasUnread(t.channel.id) || l.Ay.getMentionCount(t.channel.id) > 0);
     return (
-        o.default.track(d.HAw.VOICE_PANEL_TAB_OPENED, {
+        o.default.track(u.HAw.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: f,
-            source: u.s4.VOICE,
-            is_chat_badged: m,
+            location: p,
+            source: c.s4.VOICE,
+            is_chat_badged: f,
         }),
-        (0, i.mMO)(
+        (0, i.openModalLazy)(
             async () => {
-                let { default: e } = await n.e("12313").then(n.bind(n, 126784));
-                return (n) => (0, r.jsx)(e, { context: t, ...n });
+                let { default: e } = await Promise.all([
+                    a.e("93103"),
+                    a.e("97278"),
+                    a.e("35313"),
+                    a.e("71561"),
+                    a.e("12313"),
+                ]).then(a.bind(a, 126784));
+                return (a) => (0, n.jsx)(e, { context: t, ...a });
             },
-            { modalKey: c.gS, contextKey: h },
+            { modalKey: _.gS, contextKey: g },
         )
     );
 }

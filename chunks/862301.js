@@ -3,8 +3,8 @@ n.d(t, { F: () => o });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(534205);
+    s = n.n(i),
+    a = n(676344);
 function o(e) {
     let {
             as: t,
@@ -13,21 +13,20 @@ function o(e) {
             fullWidth: o = !1,
             children: l,
             validation: u,
-            className: c,
-            ref: d,
+            className: d,
+            ref: c,
             containerClassName: _,
             ...f
         } = e,
-        p = t ?? "div",
-        h = u?.hasError;
-    return (0, r.jsx)(p, {
-        ref: d,
-        className: a()(s.kL, _),
+        E = u?.hasError;
+    return (0, r.jsx)(t ?? "div", {
+        ref: c,
+        className: s()(a.kL, _),
         "data-full-width": o,
         ...f,
         children: (0, r.jsx)("div", {
-            className: a()(s.iE, c),
-            "data-error": h,
+            className: s()(a.iE, d),
+            "data-error": E,
             "data-read-only": n,
             "data-disabled": i,
             children: l,

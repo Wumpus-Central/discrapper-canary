@@ -1,43 +1,45 @@
-n.d(t, { A: () => _ });
-var i = n(627968);
+n.d(t, { A: () => p });
+var r = n(627968);
 n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(397927),
-    r = n(688810),
-    o = n(65470),
-    d = n(985018),
-    c = n(571816),
-    u = n(182645);
-let _ = (e) => {
-    let { className: t, location: n, analyticsLocation: s } = e,
-        { analyticsLocations: _ } = (0, r.Ay)(n);
-    return (0, i.jsx)(r.f5, {
-        value: _,
-        children: (0, i.jsxs)(a.hLv, {
-            className: l()(c.kL, c.pm, t),
+var a = n(503698),
+    i = n.n(a),
+    s = n(315629),
+    l = n(534514),
+    c = n(834730),
+    o = n(688810),
+    d = n(65470),
+    u = n(985018),
+    _ = n(797221),
+    m = n(182645);
+let p = (e) => {
+    let { className: t, location: n, analyticsLocation: a } = e,
+        { analyticsLocations: p } = (0, o.Ay)(n);
+    return (0, r.jsx)(o.f5, {
+        value: p,
+        children: (0, r.jsxs)(s.h, {
+            className: i()(_.kL, _.pm, t),
             color: "purple",
             children: [
-                (0, i.jsxs)("div", {
-                    className: c.FS,
+                (0, r.jsxs)("div", {
+                    className: _.FS,
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, r.jsx)(l.D, {
                             variant: "heading-xxl/bold",
-                            className: c.R_,
-                            children: d.intl.string(d.t.Ve9Ge6),
+                            className: _.R_,
+                            children: u.intl.string(u.t.Ve9Ge6),
                         }),
-                        (0, i.jsx)(a.Text, { variant: "text-md/medium", children: d.intl.string(d.t.yQ06u1) }),
-                        (0, i.jsx)("div", {
-                            className: c.SB,
-                            children: (0, i.jsx)(o.A, {
-                                buttonTextOverride: d.intl.string(d.t.Ve9Ge6),
-                                premiumModalAnalyticsLocation: s,
+                        (0, r.jsx)(c.E, { variant: "text-md/medium", children: u.intl.string(u.t.yQ06u1) }),
+                        (0, r.jsx)("div", {
+                            className: _.SB,
+                            children: (0, r.jsx)(d.A, {
+                                buttonTextOverride: u.intl.string(u.t.Ve9Ge6),
+                                premiumModalAnalyticsLocation: a,
                                 variant: "secondary",
                             }),
                         }),
                     ],
                 }),
-                (0, i.jsx)("img", { src: u.A, className: c._e, alt: "gift nitro banner" }),
+                (0, r.jsx)("img", { src: m.A, className: _._e, alt: "gift nitro banner" }),
             ],
         }),
     });

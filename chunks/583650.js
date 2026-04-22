@@ -2,39 +2,39 @@
 n.d(t, { V: () => l });
 var r = n(627968),
     i = n(64700),
-    a = n(900283),
-    s = n(397927),
+    s = n(900283),
+    a = n(892547),
     o = n(985018);
 let l = i.forwardRef(function (e, t) {
     let {
             query: n,
             onChange: l,
             disabled: u = !1,
-            placeholder: c = o.intl.string(o.t["5h0QOP"]),
-            "aria-label": d,
+            placeholder: d = o.intl.string(o.t["5h0QOP"]),
+            "aria-label": c,
             onInteraction: _,
         } = e,
         f = i.useRef(null);
-    i.useImperativeHandle(
-        t,
-        () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
-        [],
+    return (
+        i.useImperativeHandle(
+            t,
+            () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
+            [],
+        ),
+        (0, r.jsx)(a.I, {
+            size: "sm",
+            disabled: u,
+            onChange: (e) => {
+                l(e), _?.(s.Q.SEARCH);
+            },
+            onClear: () => {
+                l(""), _?.(s.Q.SEARCH);
+            },
+            query: n,
+            placeholder: d,
+            autoFocus: !1,
+            "aria-label": c,
+            ref: f,
+        })
     );
-    let p = (e) => {
-            l(e), _?.(a.Q.SEARCH);
-        },
-        h = () => {
-            l(""), _?.(a.Q.SEARCH);
-        };
-    return (0, r.jsx)(s.IWV, {
-        size: "sm",
-        disabled: u,
-        onChange: p,
-        onClear: h,
-        query: n,
-        placeholder: c,
-        autoFocus: !1,
-        "aria-label": d,
-        ref: f,
-    });
 });

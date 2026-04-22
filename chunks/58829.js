@@ -1,95 +1,97 @@
-t.d(e, { default: () => C });
-var l = t(627968);
+t.d(n, { default: () => C });
+var i = t(627968);
 t(64700);
-var i = t(284009),
-    a = t.n(i),
-    s = t(158954),
-    o = t(397927),
-    c = t(730134),
-    r = t(289498),
-    p = t(342169),
-    d = t(429913),
-    u = t(672130),
-    m = t(681819),
-    x = t(534952),
-    h = t(985018),
-    _ = t(269482);
-function j(n) {
+var l = t(284009),
+    a = t.n(l),
+    s = t(189213),
+    c = t(834730),
+    r = t(939249),
+    o = t(534514),
+    p = t(730134),
+    d = t(289498),
+    u = t(941314),
+    m = t(429913),
+    _ = t(672130),
+    x = t(681819),
+    h = t(534952),
+    N = t(985018),
+    j = t(977498);
+function v(e) {
     let {
-            onComplete: e,
+            onComplete: n,
             excludedPlatformTypes: t,
-            includedPlatformTypes: i,
+            includedPlatformTypes: l,
             includeApplicationConnections: a = !0,
-        } = n,
-        s = p.A.useConfig({ location: "User Settings Connections" }),
-        o = (0, d.A)(a && s.enabled ? x.tX.filter((n) => !t?.has(n) && (null == i || i.has(n))) : []),
-        c = (0, m.gn)();
-    return (0, l.jsxs)("div", {
-        className: _.lA,
+        } = e,
+        s = u.A.useConfig({ location: "User Settings Connections" }),
+        c = (0, m.A)(a && s.enabled ? h.tX.filter((e) => !t?.has(e) && (null == l || l.has(e))) : []),
+        r = (0, x.gn)();
+    return (0, i.jsxs)("div", {
+        className: j.lA,
         children: [
-            o.map((n) => null != n && (0, l.jsx)(u.A, { application: n, className: _.W2, innerClassName: _.Uz }, n.id)),
-            c
-                .filter((n) => !t?.has(n.type) && (null == i || i.has(n.type)))
-                .map((n) =>
-                    (0, l.jsx)(
-                        r.A,
-                        { type: n.type, className: _.W2, innerClassName: _.Uz, onConnect: () => e(n.type) },
-                        n.type,
+            c.map((e) => null != e && (0, i.jsx)(_.A, { application: e, className: j.W2, innerClassName: j.Uz }, e.id)),
+            r
+                .filter((e) => !t?.has(e.type) && (null == l || l.has(e.type)))
+                .map((e) =>
+                    (0, i.jsx)(
+                        d.A,
+                        { type: e.type, className: j.W2, innerClassName: j.Uz, onConnect: () => n(e.type) },
+                        e.type,
                     ),
                 ),
         ],
     });
 }
-function f(n) {
-    let { integrations: e, onCompleteApplication: t } = n;
-    if (null == e || null == t) return null;
-    let i = e.filter((n) => n.application?.roleConnectionsVerificationUrl != null);
-    return 0 === i.length
+function f(e) {
+    let { integrations: n, onCompleteApplication: t } = e;
+    if (null == n || null == t) return null;
+    let l = n.filter((e) => e.application?.roleConnectionsVerificationUrl != null);
+    return 0 === l.length
         ? null
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, l.jsx)(o.Text, {
+                  (0, i.jsx)(c.E, {
                       variant: "text-sm/medium",
                       color: "interactive-text-default",
-                      className: _.jS,
-                      children: h.intl.string(h.t.PHjkRE),
+                      className: j.jS,
+                      children: N.intl.string(N.t.PHjkRE),
                   }),
-                  (0, l.jsx)("div", {
-                      className: _.$v,
-                      children: i.map((n) => {
-                          let e = n.application;
-                          a()(null != e, "application is null");
-                          let i = e?.bot;
+                  (0, i.jsx)("div", {
+                      className: j.$v,
+                      children: l.map((e) => {
+                          let n = e.application;
+                          a()(null != n, "application is null");
+                          let l = n?.bot;
                           return (
-                              a()(null != i, "bot is null"),
-                              (0, l.jsxs)(
-                                  o.DUT,
+                              a()(null != l, "bot is null"),
+                              (0, i.jsxs)(
+                                  r.D,
                                   {
-                                      onClick: () => t(e.id),
-                                      className: _.pW,
+                                      onClick: () => t(n.id),
+                                      className: j.pW,
                                       children: [
-                                          (0, l.jsx)(c.A, { user: i, className: _.In }),
-                                          (0, l.jsxs)("div", {
-                                              className: _.RM,
+                                          (0, i.jsx)(p.A, { user: l, className: j.In }),
+                                          (0, i.jsxs)("div", {
+                                              className: j.RM,
                                               children: [
-                                                  (0, l.jsx)(o.Heading, {
+                                                  (0, i.jsx)(o.D, {
                                                       variant: "heading-sm/semibold",
-                                                      className: _.p4,
-                                                      children: e.name,
+                                                      className: j.p4,
+                                                      children: n.name,
                                                   }),
-                                                  null != e.description && e.description.length > 0
-                                                      ? (0, l.jsx)(o.Text, {
+                                                  null != n.description && n.description.length > 0
+                                                      ? (0, i.jsx)(c.E, {
                                                             variant: "text-xs/normal",
                                                             color: "text-default",
-                                                            className: _.p4,
-                                                            children: e.description,
+                                                            className: j.p4,
+                                                            children: n.description,
                                                         })
                                                       : null,
                                               ],
                                           }),
                                       ],
                                   },
-                                  n.id,
+                                  e.id,
                               )
                           );
                       }),
@@ -97,37 +99,37 @@ function f(n) {
               ],
           });
 }
-function C(n) {
+function C(e) {
     let {
-        transitionState: e,
+        transitionState: n,
         onComplete: t,
-        onClose: i,
+        onClose: l,
         excludedPlatformTypes: a,
-        includedPlatformTypes: o,
-        integrations: c,
-        onCompleteApplication: r,
+        includedPlatformTypes: c,
+        integrations: r,
+        onCompleteApplication: o,
         includeApplicationConnections: p,
-    } = n;
-    return (0, l.jsxs)(s.Modal, {
-        title: h.intl.string(h.t.syl6HS),
-        transitionState: e,
-        onClose: i,
+    } = e;
+    return (0, i.jsxs)(s.Modal, {
+        title: N.intl.string(N.t.syl6HS),
+        transitionState: n,
+        onClose: l,
         actions: [],
         children: [
-            (0, l.jsx)(j, {
-                onComplete: function (n) {
-                    t(n), i();
+            (0, i.jsx)(v, {
+                onComplete: function (e) {
+                    t(e), l();
                 },
                 excludedPlatformTypes: a,
-                includedPlatformTypes: o,
+                includedPlatformTypes: c,
                 includeApplicationConnections: p,
             }),
-            (0, l.jsx)(f, {
-                integrations: c,
+            (0, i.jsx)(f, {
+                integrations: r,
                 onCompleteApplication:
-                    null != r
-                        ? function (n) {
-                              r?.(n), i();
+                    null != o
+                        ? function (e) {
+                              o?.(e), l();
                           }
                         : void 0,
             }),

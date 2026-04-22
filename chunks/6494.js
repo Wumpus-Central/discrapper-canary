@@ -1,27 +1,24 @@
 "use strict";
-n.d(t, { n: () => o });
-var r = n(150047),
-    i = n(959462),
-    a = n(3388),
-    s = n(64700);
-function o(e, t) {
-    let { collection: n, onLoadMore: o, scrollOffset: l = 1 } = e,
-        u = (0, s.useRef)(null),
-        c = (0, i.J)((e) => {
-            for (let t of e) t.isIntersecting && o && o();
-        });
-    (0, a.N)(
-        () => (
-            t.current &&
-                ((u.current = new IntersectionObserver(c, {
-                    root: (0, r.m)(null == t ? void 0 : t.current),
-                    rootMargin: `0px ${100 * l}% ${100 * l}% ${100 * l}%`,
-                })),
-                u.current.observe(t.current)),
-            () => {
-                u.current && u.current.disconnect();
-            }
-        ),
-        [n, c, t, l],
-    );
-}
+n.d(t, { A: () => r });
+let r = new (class {
+    setActive(e) {
+        return Promise.resolve();
+    }
+    setEnabled(e) {}
+    setSelectedStream(e) {}
+    setFocusedStream(e) {}
+    setMirrored(e) {}
+    setPipAspectRatio(e, t) {}
+    updateSourceTrackingView() {}
+    addOnPipModeChangedListener(e) {}
+    addOnPipModeWillChangeListener(e) {}
+    isEnabled() {
+        return !1;
+    }
+    isSupported() {
+        return !1;
+    }
+    isInPipMode() {
+        return !1;
+    }
+})();

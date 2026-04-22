@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { A: () => p, M: () => h });
-var r = n(627968);
+n.d(t, { A: () => x, M: () => A });
+var l = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    s = n(793574),
-    o = n(865116),
-    l = n(928658),
-    u = n(447872),
-    c = n(961350),
+    r = n(477782),
+    a = n(793574),
+    s = n(865116),
+    o = n(928658),
+    c = n(447872),
+    u = n(961350),
     d = n(287809),
-    _ = n(652215),
+    m = n(652215),
     f = n(985018);
-function p(e) {
-    let { user: t, guildId: n, color: o, onAction: d, location: p = s.A.CONTEXT_MENU, appContext: h } = e,
-        m = (0, u.So)(p),
-        g = (0, i.bG)([c.default], () => c.default.getId() === t.id);
-    return !m || g || t.isNonUserBot()
+function x(e) {
+    let { user: t, guildId: n, color: s, onAction: d, location: x = a.A.CONTEXT_MENU, appContext: A } = e,
+        g = (0, c.So)(x),
+        E = (0, i.bG)([u.default], () => u.default.getId() === t.id);
+    return !g || E || t.isNonUserBot()
         ? null
-        : (0, r.jsx)(a.Drp, {
+        : (0, l.jsx)(r.Dr, {
               id: "report-user",
-              color: o,
+              color: s,
               label: f.intl.string(f.t.A1MM3D),
-              action: () => (0, l.NW)(t, n === _.ME ? void 0 : n, d, h),
+              action: () => (0, o.NW)(t, n === m.ME ? void 0 : n, d, A),
           });
 }
-function h(e) {
-    let { user: t, guildId: n, color: s, onAction: u, appContext: c } = e,
-        f = (0, i.bG)([o.Ay], () => o.Ay.get("iar_testing")),
-        p = (0, i.bG)([d.default], () => d.default.getCurrentUser());
-    return null != p && (t.id === p.id || t.isNonUserBot() || !p.isStaff() || !f)
+function A(e) {
+    let { user: t, guildId: n, color: a, onAction: c, appContext: u } = e,
+        f = (0, i.bG)([s.Ay], () => s.Ay.get("iar_testing")),
+        x = (0, i.bG)([d.default], () => d.default.getCurrentUser());
+    return null != x && (t.id === x.id || t.isNonUserBot() || !x.isStaff() || !f)
         ? null
-        : (0, r.jsx)(a.Drp, {
+        : (0, l.jsx)(r.Dr, {
               id: "staff-test-report-user",
-              color: s,
+              color: a,
               label: "[STAFF] Test Profile Report",
-              action: () => (0, l.RR)(t, n === _.ME ? void 0 : n, u, c),
+              action: () => (0, o.RR)(t, n === m.ME ? void 0 : n, c, u),
           });
 }

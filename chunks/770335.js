@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { i: () => r });
-var r = (function (e) {
-    return (e[(e.UNICODE = 0)] = "UNICODE"), (e[(e.GUILD = 1)] = "GUILD"), e;
-})({});
+n.d(t, { i: () => i });
+var r,
+    i = (((r = {})[(r.UNICODE = 0)] = "UNICODE"), (r[(r.GUILD = 1)] = "GUILD"), r);

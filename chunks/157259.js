@@ -1,48 +1,50 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(397927),
-    o = n(58149),
-    c = n(954571),
-    d = n(816662),
-    u = n(652215),
-    h = n(985018),
-    m = n(930399);
-function A(e) {
+    r = n(834730),
+    o = n(821609),
+    c = n(307301),
+    d = n(58149),
+    u = n(954571),
+    h = n(816662),
+    m = n(652215),
+    A = n(985018),
+    g = n(540044);
+function p(e) {
     let { channel: t, narrow: n } = e;
     return (
         l.useEffect(() => {
-            c.default.track(u.HAw.CHANNEL_BANNER_VIEWED, {
-                ...(0, o.H$)(t.getGuildId()),
-                ...(0, o.dI)(t),
+            u.default.track(m.HAw.CHANNEL_BANNER_VIEWED, {
+                ...(0, d.H$)(t.getGuildId()),
+                ...(0, d.dI)(t),
                 banner_type: "channel_opt_in",
             });
         }, [t]),
         (0, i.jsxs)("div", {
-            className: s()(m.JD, { [m.sc]: n }),
+            className: s()(g.JD, { [g.sc]: n }),
             children: [
-                (0, i.jsx)(r.Text, {
-                    className: m.E5,
+                (0, i.jsx)(r.E, {
+                    className: g.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: h.intl.string(h.t.iOWmmB),
+                    children: A.intl.string(A.t.iOWmmB),
                 }),
-                (0, i.jsx)(r.Button, {
+                (0, i.jsx)(o.$, {
                     size: "sm",
                     variant: "primary",
                     onClick: () => {
-                        c.default.track(u.HAw.CHANNEL_BANNER_CTA_CLICKED, {
-                            ...(0, o.H$)(t.getGuildId()),
-                            ...(0, o.dI)(t),
+                        u.default.track(m.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                            ...(0, d.H$)(t.getGuildId()),
+                            ...(0, d.dI)(t),
                             banner_type: "channel_opt_in",
                             cta_type: "add channel",
                         }),
-                            (0, d.AC)(t.guild_id, t.id, !0, { section: u.JJy.CHANNEL });
+                            (0, h.AC)(t.guild_id, t.id, !0, { section: m.JJy.CHANNEL });
                     },
-                    text: h.intl.string(h.t.ZtIlQo),
-                    icon: r.j96,
+                    text: A.intl.string(A.t.ZtIlQo),
+                    icon: c.j,
                 }),
             ],
         })

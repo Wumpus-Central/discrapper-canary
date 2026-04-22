@@ -1,43 +1,39 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => u });
 var r = n(311907),
     i = n(73153),
-    a = n(961350);
-let s = new Set(),
+    s = n(961350);
+let a = new Set(),
     o = new Set();
-function l(e) {
-    s.add(e.guildId);
-}
-function u(e) {
-    if (!s.has(e.guildId)) {
-        let t = a.default.getId();
-        return o.add(`${e.guildId}:${t}`), !1;
-    }
-    s.delete(e.guildId);
-}
-function c(e) {
-    if (!s.has(e.guildId)) return !1;
-    s.delete(e.guildId);
-}
-function d() {
-    s.clear(), o.clear();
-}
-class _ extends r.Ay.Store {
+class l extends r.Ay.Store {
     static displayName = "BulkBanStore";
     initialize() {
-        this.waitFor(a.default);
+        this.waitFor(s.default);
     }
     hasPendingBulkBan(e) {
-        return s.has(e);
+        return a.has(e);
     }
     consumeCompletedBeforeStarted(e, t) {
         let n = `${e}:${t}`;
         return o.delete(n);
     }
 }
-let f = new _(i.h, {
-    GUILD_BULK_BAN_STARTED: l,
-    GUILD_BULK_BAN_FAILED: c,
-    GUILD_BULK_BAN_UPDATE: u,
-    CONNECTION_OPEN: d,
+let u = new l(i.h, {
+    GUILD_BULK_BAN_STARTED: function (e) {
+        a.add(e.guildId);
+    },
+    GUILD_BULK_BAN_FAILED: function (e) {
+        if (!a.has(e.guildId)) return !1;
+        a.delete(e.guildId);
+    },
+    GUILD_BULK_BAN_UPDATE: function (e) {
+        if (!a.has(e.guildId)) {
+            let t = s.default.getId();
+            return o.add(`${e.guildId}:${t}`), !1;
+        }
+        a.delete(e.guildId);
+    },
+    CONNECTION_OPEN: function () {
+        a.clear(), o.clear();
+    },
 });

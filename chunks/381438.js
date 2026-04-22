@@ -1,6 +1,5 @@
 "use strict";
-n.d(t, { R: () => i, Y: () => r });
-var r = (function (e) {
-    return (e[(e.EVERYONE = 0)] = "EVERYONE"), (e[(e.ADULT = 1)] = "ADULT"), e;
-})({});
-let i = [0, 1];
+n.d(t, { R: () => s, Y: () => i });
+var r,
+    i = (((r = {})[(r.EVERYONE = 0)] = "EVERYONE"), (r[(r.ADULT = 1)] = "ADULT"), r);
+let s = [0, 1];

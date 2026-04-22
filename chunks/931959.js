@@ -1,57 +1,41 @@
 "use strict";
-n.d(t, { A: () => T }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(283047),
     l = n(617617),
     u = n(927813),
-    c = n(679382),
-    d = n(355097);
+    d = n(679382),
+    c = n(355097);
 let _ = { pendingUsages: [] };
 u.A.Millis.DAY;
-let f = 20,
-    p = new o.A({
+let f = new o.A({
         computeBonus: () => 100,
-        lookupKey: (e) => c.A.getStickerById(e),
+        lookupKey: (e) => d.A.getStickerById(e),
         afterCompute: () => {},
-        numFrequentlyItems: f,
+        numFrequentlyItems: 20,
     }),
+    E = () => {
+        d.A.isLoaded && f.compute();
+    },
     h = () => {
-        c.A.isLoaded && p.compute();
-    },
-    m = (e) => {
-        let { stickerIds: t } = e;
-        t?.forEach((e) => {
-            p.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() });
-        }),
-            h();
-    },
-    g = () => {
-        h();
+        E();
     };
-function E() {
+function p() {
     let e = l.A.frecencyWithoutFetchingLatest.stickerFrecency?.stickers;
     if (null == e) return !1;
-    p.overwriteHistory(
+    f.overwriteHistory(
         i().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         _.pendingUsages,
     );
 }
-function A(e) {
-    let {
-        settings: { type: t },
-        wasSaved: n,
-    } = e;
-    if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    _.pendingUsages = [];
-}
-class I extends a.Ay.PersistedStore {
+class m extends s.Ay.PersistedStore {
     static displayName = "StickersPersistedStore";
     static persistKey = "StickersPersistedStoreV2";
     initialize(e) {
-        this.waitFor(c.A, l.A), null != e && (_ = e), this.syncWith([c.A], g), this.syncWith([l.A], E);
+        this.waitFor(d.A, l.A), null != e && (_ = e), this.syncWith([d.A], h), this.syncWith([l.A], p);
     }
     getState() {
         return _;
@@ -60,7 +44,23 @@ class I extends a.Ay.PersistedStore {
         return _.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return p;
+        return f;
     }
 }
-let T = new I(s.h, { STICKER_TRACK_USAGE: m, USER_SETTINGS_PROTO_UPDATE: A });
+let g = new m(a.h, {
+    STICKER_TRACK_USAGE: (e) => {
+        let { stickerIds: t } = e;
+        t?.forEach((e) => {
+            f.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() });
+        }),
+            E();
+    },
+    USER_SETTINGS_PROTO_UPDATE: function (e) {
+        let {
+            settings: { type: t },
+            wasSaved: n,
+        } = e;
+        if (t !== c.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+        _.pendingUsages = [];
+    },
+});

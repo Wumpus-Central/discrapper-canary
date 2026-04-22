@@ -1,14 +1,15 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => s });
 var i = n(627968);
 n(64700);
-var s = n(397927);
-function r(e) {
-    let { source: t, onClose: r } = e;
-    (0, s.mMO)(
+var l = n(192308),
+    r = n(892491);
+function s(e) {
+    let { source: t, onClose: s } = e;
+    (0, l.openModalLazy)(
         async () => {
             let { default: e } = await n.e("61376").then(n.bind(n, 999235));
             return (n) => (0, i.jsx)(e, { ...n, source: t });
         },
-        { onCloseCallback: r, backdropStyle: s.F2Z.BLUR },
+        { onCloseCallback: s, backdropStyle: r.F.BLUR },
     );
 }

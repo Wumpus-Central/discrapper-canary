@@ -1,8 +1,22 @@
-"use strict";
-n.d(t, { A: () => r });
-class r {
+i.d(t, { A: () => n });
+class n {
     constructor(e) {
-        if (i(e)) throw Error("DataView: Passed buffer type is unsupported.");
+        if (
+            (function (e) {
+                return (
+                    "object" != typeof e ||
+                    void 0 === e.length ||
+                    void 0 === e.readUInt8 ||
+                    void 0 === e.readUInt16LE ||
+                    void 0 === e.readUInt16BE ||
+                    void 0 === e.readUInt32LE ||
+                    void 0 === e.readUInt32BE ||
+                    void 0 === e.readInt32LE ||
+                    void 0 === e.readInt32BE
+                );
+            })(e)
+        )
+            throw Error("DataView: Passed buffer type is unsupported.");
         (this.buffer = e), (this.byteLength = this.buffer.length);
     }
     getUint8(e) {
@@ -17,17 +31,4 @@ class r {
     getInt32(e, t) {
         return t ? this.buffer.readInt32LE(e) : this.buffer.readInt32BE(e);
     }
-}
-function i(e) {
-    return (
-        "object" != typeof e ||
-        void 0 === e.length ||
-        void 0 === e.readUInt8 ||
-        void 0 === e.readUInt16LE ||
-        void 0 === e.readUInt16BE ||
-        void 0 === e.readUInt32LE ||
-        void 0 === e.readUInt32BE ||
-        void 0 === e.readInt32LE ||
-        void 0 === e.readInt32BE
-    );
 }

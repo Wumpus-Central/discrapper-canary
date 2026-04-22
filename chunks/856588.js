@@ -1,7 +1,7 @@
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var r = n(397927),
+var r = n(192308),
     a = n(73153);
 let l = !1,
     s = null,
@@ -15,7 +15,7 @@ let l = !1,
                     (a = s),
                         l ||
                             ((l = !0),
-                            (0, r.mMO)(async () => {
+                            (0, r.openModalLazy)(async () => {
                                 let { default: e } = await n.e("56999").then(n.bind(n, 302810));
                                 return (t) => {
                                     let { transitionState: n, onClose: r } = t;

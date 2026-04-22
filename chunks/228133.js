@@ -7,12 +7,12 @@ e.exports = function (e) {
                 { begin: "'\\\\?.", end: "'", illegal: "." },
             ],
         },
-        n = {
+        a = {
             className: "number",
             variants: [{ begin: "\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)" }, { begin: e.C_NUMBER_RE }],
             relevance: 0,
         },
-        r = {
+        n = {
             className: "meta",
             begin: "#",
             end: "$",
@@ -33,26 +33,24 @@ e.exports = function (e) {
                 e.C_BLOCK_COMMENT_MODE,
             ],
         },
-        i = { className: "variable", begin: /&[a-z\d_]*\b/ },
-        s = { className: "params", relevance: 0, begin: "<", end: ">", contains: [n, i] },
-        a = { scope: "punctuation", relevance: 0, match: /\};|[;{}]/ };
+        r = { className: "variable", begin: /&[a-z\d_]*\b/ };
     return {
         name: "Device Tree",
         contains: [
             { className: "title.class", begin: /^\/(?=\s*\{)/, relevance: 10 },
-            i,
+            r,
             { className: "keyword", begin: "/[a-z][a-z\\d-]*/" },
             { className: "symbol", begin: "^\\s*[a-zA-Z_][a-zA-Z\\d_]*:" },
             { className: "title.class", begin: /[a-zA-Z_][a-zA-Z\d_@-]{0,149}(?=\s\{)/, relevance: 0.2 },
             { relevance: 0, match: [/[a-z][a-z-,]+/, /\s*/, /=/], scope: { 1: "attr", 3: "operator" } },
             { match: /[a-z][a-z-,]{1,149}(?=;)/, relevance: 0, scope: "attr" },
-            s,
+            { className: "params", relevance: 0, begin: "<", end: ">", contains: [a, r] },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            n,
-            t,
-            r,
             a,
+            t,
+            n,
+            { scope: "punctuation", relevance: 0, match: /\};|[;{}]/ },
             { begin: e.IDENT_RE + "::", keywords: "" },
         ],
     };

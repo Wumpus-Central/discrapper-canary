@@ -1,4 +1,2 @@
 "use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = { removeDescription: "Press Delete to remove tag.", removeButtonLabel: "Remove" };
+e.exports = n.p + "worklet.8d84a64a97f8451a.js";

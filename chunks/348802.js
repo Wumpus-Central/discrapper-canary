@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { Ay: () => m });
+n.d(t, { Ay: () => E });
 var r = n(35033),
     i = n(626584),
-    a = n(142120),
-    s = n(734057),
+    s = n(142120),
+    a = n(734057),
     o = n(723176),
     l = n(176015),
     u = n(240525),
-    c = n(552618),
-    d = n(640631);
+    d = n(552618),
+    c = n(640631);
 let _ = new i.A("Messages");
 class f {
     connectionId = null;
@@ -26,7 +26,7 @@ class f {
         }
     }
     static computeUsersAndMembers(e) {
-        (0, d.D)(e);
+        (0, c.D)(e);
         let t = new Map(),
             n = new Map();
         for (let r of e) this.addIntoMap(t, r.users, (e) => e.id), this.addIntoMap(n, r.members, (e) => e.userId);
@@ -40,14 +40,14 @@ class f {
         }
     }
 }
-class p {
+let E = new (class {
     async startupLoad(e, t, n, r) {
         let i = o.A.messages(e);
         return new f(await i.getLatest(t, n, r));
     }
     async load(e, t, n) {
-        let r = s.A.getBasicChannel(t);
-        if (null == t || null == r || !(0, c.c)(r)) return new f([]);
+        let r = a.A.getBasicChannel(t);
+        if (null == t || null == r || !(0, d.c)(r)) return new f([]);
         {
             let i = o.A.messages(e);
             return new f(await i.getLatest(r.guild_id, t, n));
@@ -67,23 +67,24 @@ class p {
         e.optimistic ||
             e.isPushNotification ||
             null != e.sendMessageOptions ||
-            ((0, c.J)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t));
+            ((0, d.J)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t));
     }
     handleMessageUpdate(e, t) {
+        var n;
         null == e.message.id ||
             null == e.message.channel_id ||
-            ((0, c.J)(e.message.channel_id) &&
-                (h(e.message)
+            ((0, d.J)(e.message.channel_id) &&
+                (null != (n = e.message).author && null != n.content && null != n.mentions && null != n.timestamp
                     ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t)
                     : this.updateOne(e.guildId, e.message.channel_id, e.message, t)));
     }
     handleMessagePreviewsLoaded(e, t) {
-        for (let n of e.messages) (0, c.J)(n.channel_id) && this.insertStale(e.guildId, n.channel_id, n, t);
+        for (let n of e.messages) (0, d.J)(n.channel_id) && this.insertStale(e.guildId, n.channel_id, n, t);
     }
     handleLoadMessagesSuccess(e, t) {
-        let n = s.A.getBasicChannel(e.channelId);
+        let n = a.A.getBasicChannel(e.channelId);
         null != n &&
-            (0, c.J)(e.channelId) &&
+            (0, d.J)(e.channelId) &&
             (e.isAfter || e.isBefore || e.hasMoreAfter || !(e.limit > 5)
                 ? this.upsertMany(n.guild_id, e.channelId, e.messages, t)
                 : this.replaceChannel(n.guild_id, e.channelId, e.messages, t));
@@ -102,35 +103,35 @@ class p {
     }
     resetInMemoryState() {}
     insertStale(e, t, n, i) {
-        let s = o.A.messagesTransaction(i),
-            u = a.A.lastTimeConnectedChanged();
-        s.put(e, t, l.B.fromMessage(e, t, n, u), r.hh.Skip);
+        let a = o.A.messagesTransaction(i),
+            u = s.A.lastTimeConnectedChanged();
+        a.put(e, t, l.B.fromMessage(e, t, n, u), r.hh.Skip);
     }
     upsertOne(e, t, n, i) {
-        let s = o.A.messagesTransaction(i),
-            c = a.A.lastTimeConnectedChanged();
-        s.put(e, t, l.B.fromMessage(e, t, n, c), r.hh.Replace), s.trimChannel(e, t, u.Ay.saveLimit(t));
+        let a = o.A.messagesTransaction(i),
+            d = s.A.lastTimeConnectedChanged();
+        a.put(e, t, l.B.fromMessage(e, t, n, d), r.hh.Replace), a.trimChannel(e, t, u.Ay.saveLimit(t));
     }
     upsertMany(e, t, n, r) {
         let i = o.A.messagesTransaction(r),
-            s = a.A.lastTimeConnectedChanged();
-        for (let r of n) i.put(e, t, l.B.fromMessage(e, t, r, s));
+            a = s.A.lastTimeConnectedChanged();
+        for (let r of n) i.put(e, t, l.B.fromMessage(e, t, r, a));
         i.trimChannel(e, t, u.Ay.saveLimit(t));
     }
     replaceChannel(e, t, n, r) {
         let i = o.A.messagesTransaction(r),
-            s = a.A.lastTimeConnectedChanged(),
-            c = u.Ay.saveLimit(t),
-            d = (n.length > c ? n.slice(n.length - c) : n).map((n) => l.B.fromMessage(e, t, n, s));
-        i.replaceChannel(e, t, d), i.trimChannel(e, t, u.Ay.saveLimit(t));
+            a = s.A.lastTimeConnectedChanged(),
+            d = u.Ay.saveLimit(t),
+            c = (n.length > d ? n.slice(n.length - d) : n).map((n) => l.B.fromMessage(e, t, n, a));
+        i.replaceChannel(e, t, c), i.trimChannel(e, t, u.Ay.saveLimit(t));
     }
     async updateOne(e, t, n, r) {
         if (null == n.id)
             return void _.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
         let i = o.A.messages(r.database),
-            s = await i.get(e, t, n.id),
-            u = a.A.lastTimeConnectedChanged();
-        null != s && i.put(e, t, l.B.fromMessage(e, t, { ...s.message, ...n }, u));
+            a = await i.get(e, t, n.id),
+            u = s.A.lastTimeConnectedChanged();
+        null != a && i.put(e, t, l.B.fromMessage(e, t, { ...a.message, ...n }, u));
     }
     deleteOne(e, t, n, r) {
         o.A.messagesTransaction(r).deleteMessage(e, t, n);
@@ -141,8 +142,4 @@ class p {
     deleteGuild(e, t) {
         o.A.messagesTransaction(t).deleteGuild(e);
     }
-}
-function h(e) {
-    return null != e.author && null != e.content && null != e.mentions && null != e.timestamp;
-}
-let m = new p();
+})();

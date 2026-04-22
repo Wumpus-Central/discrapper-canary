@@ -1,50 +1,46 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(559751),
     i = n(726402),
-    a = n(865645),
-    s = n(821085),
+    s = n(865645),
+    a = n(821085),
     o = n(264816),
     l = n(461464),
     u = n(125685),
-    c = n(658614),
-    d = n(140851),
-    _ = function (e, t) {
-        return (
-            (e = "function" == typeof e ? e(Object.assign({}, t.rects, { placement: t.placement })) : e),
-            (0, u.A)("number" != typeof e ? e : (0, c.A)(e, d.OM))
-        );
-    };
-let f = {
+    d = n(658614),
+    c = n(140851);
+let _ = {
     name: "arrow",
     enabled: !0,
     phase: "main",
     fn: function (e) {
         var t,
             n = e.state,
-            a = e.name,
-            u = e.options,
-            c = n.elements.arrow,
-            f = n.modifiersData.popperOffsets,
-            p = (0, r.A)(n.placement),
-            h = (0, o.A)(p),
-            m = [d.kb, d.pG].indexOf(p) >= 0 ? "height" : "width";
-        if (c && f) {
-            var g = _(u.padding, n),
-                E = (0, i.A)(c),
-                A = "y" === h ? d.Mn : d.kb,
-                I = "y" === h ? d.sQ : d.pG,
-                T = n.rects.reference[m] + n.rects.reference[h] - f[h] - n.rects.popper[m],
-                y = f[h] - n.rects.reference[h],
-                S = (0, s.A)(c),
-                v = S ? ("y" === h ? S.clientHeight || 0 : S.clientWidth || 0) : 0,
-                C = T / 2 - y / 2,
-                b = g[A],
-                N = v - E[m] - g[I],
-                R = v / 2 - E[m] / 2 + C,
-                O = (0, l.u)(b, R, N),
-                D = h;
-            n.modifiersData[a] = ((t = {}), (t[D] = O), (t.centerOffset = O - R), t);
+            s = e.name,
+            _ = e.options,
+            f = n.elements.arrow,
+            E = n.modifiersData.popperOffsets,
+            h = (0, r.A)(n.placement),
+            p = (0, o.A)(h),
+            m = [c.kb, c.pG].indexOf(h) >= 0 ? "height" : "width";
+        if (f && E) {
+            var g,
+                A =
+                    ((g = _.padding),
+                    (g = "function" == typeof g ? g(Object.assign({}, n.rects, { placement: n.placement })) : g),
+                    (0, u.A)("number" != typeof g ? g : (0, d.A)(g, c.OM))),
+                I = (0, i.A)(f),
+                T = "y" === p ? c.Mn : c.kb,
+                S = "y" === p ? c.sQ : c.pG,
+                y = n.rects.reference[m] + n.rects.reference[p] - E[p] - n.rects.popper[m],
+                N = E[p] - n.rects.reference[p],
+                O = (0, a.A)(f),
+                R = O ? ("y" === p ? O.clientHeight || 0 : O.clientWidth || 0) : 0,
+                v = A[T],
+                C = R - I[m] - A[S],
+                b = R / 2 - I[m] / 2 + (y / 2 - N / 2),
+                D = (0, l.u)(v, b, C);
+            n.modifiersData[s] = (((t = {})[p] = D), (t.centerOffset = D - b), t);
         }
     },
     effect: function (e) {
@@ -53,7 +49,7 @@ let f = {
             r = void 0 === n ? "[data-popper-arrow]" : n;
         null == r ||
             (("string" != typeof r || (r = t.elements.popper.querySelector(r))) &&
-                (0, a.A)(t.elements.popper, r) &&
+                (0, s.A)(t.elements.popper, r) &&
                 (t.elements.arrow = r));
     },
     requires: ["popperOffsets"],

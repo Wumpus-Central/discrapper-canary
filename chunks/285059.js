@@ -1,22 +1,21 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(439372),
     i = n(967198),
-    a = n(698441),
-    s = n(496092);
+    s = n(698441),
+    a = n(496092);
 let o = {},
     l = new Set(),
     u = new Set(),
-    c = 18e5,
     d = async (e) => {
-        if (!(0 === a.Ay.getGuildScheduledEventsForGuild(e).length || l.has(e)) && !u.has(e))
+        if (!(0 === s.Ay.getGuildScheduledEventsForGuild(e).length || l.has(e)) && !u.has(e))
             try {
-                l.add(e), await s.A.getGuildEventsForCurrentUser(e), u.add(e);
+                l.add(e), await a.A.getGuildEventsForCurrentUser(e), u.add(e);
             } catch (t) {
                 l.delete(e);
             }
     };
-class _ extends r.A {
+class c extends r.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),
         GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -25,16 +24,16 @@ class _ extends r.A {
         CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
     };
     async getGuildEventUserCounts(e, t, n) {
-        let r = n.filter((n) => null == o[`${e}-${t}-${n}`] || Date.now() - o[`${e}-${t}-${n}`] > c);
-        if (!(Date.now() - o[`${e}-${t}`] < c) || 0 !== r.length) {
+        let r = n.filter((n) => null == o[`${e}-${t}-${n}`] || Date.now() - o[`${e}-${t}-${n}`] > 18e5);
+        if (!(Date.now() - o[`${e}-${t}`] < 18e5) || 0 !== r.length) {
             (o[`${e}-${t}`] = Date.now()), r.forEach((n) => (o[`${e}-${t}-${n}`] = Date.now()));
             try {
-                await s.A.fetchGuildEventUserCounts(e, t, r);
+                await a.A.fetchGuildEventUserCounts(e, t, r);
             } catch (e) {}
         }
     }
     getGuildEventUsers(e, t, n) {
-        return s.A.fetchUsersForGuildEvent(e, t, n);
+        return a.A.fetchUsersForGuildEvent(e, t, n);
     }
     getGuildEventsForCurrentUser(e) {
         return d(e);
@@ -60,7 +59,7 @@ class _ extends r.A {
     async handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null != t)
-            for (let e of a.Ay.getGuildScheduledEventsForGuild(t))
+            for (let e of s.Ay.getGuildScheduledEventsForGuild(t))
                 try {
                     await this.getGuildEventUserCounts(t, e.id, []);
                 } finally {
@@ -68,4 +67,4 @@ class _ extends r.A {
                 }
     }
 }
-let f = new _();
+let _ = new c();

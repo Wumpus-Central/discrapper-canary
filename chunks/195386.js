@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(643479);
-let i = { isGifFile: o, findOffsets: l },
-    a = 6,
-    s = ["GIF87a", "GIF89a"];
-function o(e) {
-    return !!e && s.includes((0, r.hT)(e, 0, a));
-}
-function l() {
-    return { gifHeaderOffset: 0 };
-}
+i.d(t, { A: () => r });
+var n = i(643479);
+let r = {
+        isGifFile: function (e) {
+            return !!e && o.includes((0, n.hT)(e, 0, 6));
+        },
+        findOffsets: function () {
+            return { gifHeaderOffset: 0 };
+        },
+    },
+    o = ["GIF87a", "GIF89a"];

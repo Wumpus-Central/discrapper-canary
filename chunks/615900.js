@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { h: () => l });
+n.d(t, { h: () => s });
 var i = n(627968);
 n(64700);
-var s = n(192308);
-function l(e) {
+var l = n(192308);
+function s(e) {
     let { demonetized: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (0, s.openModalLazy)(
+    (0, l.openModalLazy)(
         async () => {
-            let { default: s } = await n.e("46529").then(n.bind(n, 633400));
-            return (n) => (0, i.jsx)(s, { guildId: e, demonetized: t, ...n });
+            let { default: l } = await n.e("46529").then(n.bind(n, 633400));
+            return (n) => (0, i.jsx)(l, { guildId: e, demonetized: t, ...n });
         },
         { onCloseRequest: () => {} },
     );

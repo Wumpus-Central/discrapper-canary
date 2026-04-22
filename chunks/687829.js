@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => p }), n(321073);
 var r = n(439372),
-    i = n(851581),
-    a = n(954571),
-    s = n(927813),
+    i = n(967347),
+    s = n(954571),
+    a = n(927813),
     o = n(723702),
     l = n(321034),
     u = n(837921),
-    c = n(652215);
-let d = 5 * s.A.Millis.MINUTE;
+    d = n(652215);
+let c = 5 * a.A.Millis.MINUTE;
 function _() {
     return o.isPlatformEmbedded;
 }
@@ -49,25 +49,7 @@ async function f() {
         t
     );
 }
-function p() {
-    let e = l.A.getMemoryHeapStats(),
-        t = l.A.getBlinkMemoryInfo(),
-        n = null;
-    null != e &&
-        (n = [
-            e.totalHeapSize,
-            e.totalHeapSizeExecutable,
-            e.totalPhysicalSize,
-            e.totalAvailableSize,
-            e.usedHeapSize,
-            e.heapSizeLimit,
-            e.mallocedMemory,
-            e.peakMallocedMemory,
-        ]);
-    let r = null;
-    return null != t && (r = [t.allocated, t.total]), { v8_heap_stats: n, blink_memory_stats: r };
-}
-async function h() {
+async function E() {
     let e,
         t = { gpu_dedicated_memory: [], gpu_renderer_used_memory: [] };
     if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return t;
@@ -84,17 +66,17 @@ async function h() {
     let n = [],
         r = [],
         i = await e.getMemoryUsageBlob(),
-        a = new Set();
+        s = new Set();
     for (let e of i?.[0]?.data?.gpus ?? [])
-        if (!(!e.luid || 0 === e.luid || a.has(e.luid)))
-            if ((a.add(e.luid), null != e.memory ? n.push(e.memory / 1024) : n.push(-1), null != e.memory_usage)) {
+        if (!(!e.luid || 0 === e.luid || s.has(e.luid)))
+            if ((s.add(e.luid), null != e.memory ? n.push(e.memory / 1024) : n.push(-1), null != e.memory_usage)) {
                 let t = 0;
                 for (let n of e.memory_usage) n.memory_usage && (t += n.memory_usage / 1024);
                 r.push(t);
             } else r.push(-1);
     return { gpu_dedicated_memory: n, gpu_renderer_used_memory: r };
 }
-class m extends r.A {
+class h extends r.A {
     _heartbeatAnalyticsInterval = null;
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     _initialize() {}
@@ -106,15 +88,36 @@ class m extends r.A {
             (clearInterval(this._heartbeatAnalyticsInterval),
             (this._heartbeatAnalyticsInterval = setInterval(async () => {
                 await this.trackPerfAnalytics();
-            }, d)));
+            }, c)));
     }
     async trackPerfAnalytics() {
-        let e = await f();
-        if (null == e) return;
-        let t = p(),
-            n = await h(),
-            r = { ...e, ...t, ...n };
-        a.default.track(c.HAw.DESKTOP_PERF_HEARTBEAT, r);
+        let e,
+            t,
+            n,
+            r,
+            i = await f();
+        if (null == i) return;
+        let a =
+                ((e = l.A.getMemoryHeapStats()),
+                (t = l.A.getBlinkMemoryInfo()),
+                (n = null),
+                null != e &&
+                    (n = [
+                        e.totalHeapSize,
+                        e.totalHeapSizeExecutable,
+                        e.totalPhysicalSize,
+                        e.totalAvailableSize,
+                        e.usedHeapSize,
+                        e.heapSizeLimit,
+                        e.mallocedMemory,
+                        e.peakMallocedMemory,
+                    ]),
+                (r = null),
+                null != t && (r = [t.allocated, t.total]),
+                { v8_heap_stats: n, blink_memory_stats: r }),
+            o = await E(),
+            u = { ...i, ...a, ...o };
+        s.default.track(d.HAw.DESKTOP_PERF_HEARTBEAT, u);
     }
 }
-let g = new m();
+let p = new h();

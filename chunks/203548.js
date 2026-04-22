@@ -1,12 +1,12 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
-    s = n(382222),
-    a = n(397927),
+    s = n(517738),
+    a = n(717421),
     r = n(770178),
-    o = n(637707);
-let c = Math.ceil(Math.sqrt(115200)),
-    d = (c - 240) / 2,
+    o = n(206939);
+let d = Math.ceil(Math.sqrt(115200)),
+    c = (d - 240) / 2,
     u = l.forwardRef(function (e, t) {
         let { children: n } = e,
             [u, h] = l.useState(-1),
@@ -14,7 +14,7 @@ let c = Math.ceil(Math.sqrt(115200)),
                 h(e.contentRect.width);
             }, []),
             _ = (0, r.w)(A, [], { fireOnMount: !0 }),
-            [{ shineSpring: m }, g] = (0, a.zhh)(() => ({
+            [{ shineSpring: m }, g] = (0, a.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
@@ -27,12 +27,12 @@ let c = Math.ceil(Math.sqrt(115200)),
             f = l.useCallback(() => {
                 g({ shineSpring: 0, immediate: !0 });
             }, [g]),
-            x = l.useMemo(() => {
+            E = l.useMemo(() => {
                 let e = (0, i.jsx)(s.animated.div, {
                     className: o.q2,
                     style: {
                         transform: m.to(
-                            (e) => `translateX(calc(${e * u}px + ${e * c}px)) translateY(-50%) rotate(45deg)`,
+                            (e) => `translateX(calc(${e * u}px + ${e * d}px)) translateY(-50%) rotate(45deg)`,
                         ),
                     },
                 });
@@ -47,8 +47,8 @@ let c = Math.ceil(Math.sqrt(115200)),
                 onFocus: p,
                 onBlur: f,
                 ref: _,
-                style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${d}px` },
-                children: x,
+                style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${c}px` },
+                children: E,
             })
         );
     });

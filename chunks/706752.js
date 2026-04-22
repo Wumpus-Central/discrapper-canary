@@ -1,45 +1,43 @@
-"use strict";
 n.d(t, { z: () => g });
-var r = n(323073),
-    i = n(793574),
-    a = n(376708),
-    s = n(976860),
+var i = n(323073),
+    l = n(793574),
+    r = n(376708),
+    a = n(976860),
     o = n(138298),
-    l = n(940382),
+    d = n(940382),
     u = n(734057),
-    c = n(808728),
-    d = n(309010),
+    s = n(808728),
+    c = n(309010),
     _ = n(167866),
-    f = n(985925),
-    p = n(486974),
-    h = n(652215),
-    m = n(746080);
+    A = n(985925),
+    f = n(486974),
+    E = n(652215),
+    h = n(746080);
 function g(e, t, n) {
     let g,
-        E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: p.g.INFO };
-    if (!(0, f.r)(e)) return Promise.resolve();
-    let A = E.modViewPanel ?? p.g.INFO,
-        I = E.sourceLocation ?? i.A.MEMBER_SAFETY_PAGE,
-        T = d.A.getCurrentlySelectedChannelId(),
-        y = null != T ? u.A.getChannel(T) : null;
-    if (n !== m.VV.MEMBER_SAFETY && (null == y || y.getGuildId() !== e)) {
-        let t = c.Ay.getDefaultChannel(e);
-        null == t || (0, r.qR)(t) || (0, s.pX)(h.BVt.CHANNEL(e, t.id));
+        b = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: f.g.INFO };
+    if (!(0, A.r)(e)) return Promise.resolve();
+    let p = b.modViewPanel ?? f.g.INFO,
+        v = b.sourceLocation ?? l.A.MEMBER_SAFETY_PAGE,
+        S = c.A.getCurrentlySelectedChannelId(),
+        I = null != S ? u.A.getChannel(S) : null;
+    if (n !== h.VV.MEMBER_SAFETY && (null == I || I.getGuildId() !== e)) {
+        let t = s.Ay.getDefaultChannel(e);
+        null == t || (0, i.qR)(t) || (0, a.pX)(E.BVt.CHANNEL(e, t.id));
     }
-    let S = n;
     return (
-        (0, a.G9)(S, t) && (g = S),
-        (0, _.e)(e, t, A, I),
+        (0, r.G9)(n, t) && (g = n),
+        (0, _.e)(e, t, p, v),
         o.A.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
-            sidebarType: l.QV.GUILD_MEMBER_MOD_VIEW,
+            sidebarType: d.QV.GUILD_MEMBER_MOD_VIEW,
             details: {
-                type: l.LU.GUILD_MEMBER_MOD_VIEW,
+                type: d.LU.GUILD_MEMBER_MOD_VIEW,
                 userId: t,
                 guildId: e,
-                ...E,
-                modViewPanel: E.modViewPanel ?? p.g.INFO,
+                ...b,
+                modViewPanel: b.modViewPanel ?? f.g.INFO,
                 moderatorReportId: g,
             },
         })

@@ -1,13 +1,13 @@
-n.d(t, { J: () => g });
-var i = n(934551),
+n.d(t, { J: () => m });
+var i = n(323384),
     s = n(824552),
     l = n(974544),
-    r = n(419954),
-    a = n(780964),
+    a = n(419954),
+    r = n(780964),
     o = n(630457),
     d = n(122462),
-    c = n(985018);
-let u = (0, r.zZ)(a.X.AUTHORIZED_APPS_CATEGORY, {
+    u = n(985018);
+let c = (0, a.zZ)(r.X.AUTHORIZED_APPS_CATEGORY, {
         buildLayout: () => [d._],
         initialize: () => (
             s.A.fetch(),
@@ -16,13 +16,13 @@ let u = (0, r.zZ)(a.X.AUTHORIZED_APPS_CATEGORY, {
             }
         ),
     }),
-    m = (0, r.t_)(a.X.AUTHORIZED_APPS_PANEL, {
-        useTitle: () => c.intl.string(c.t["f6kk+r"]),
+    g = (0, a.t_)(r.X.AUTHORIZED_APPS_PANEL, {
+        useTitle: () => u.intl.string(u.t["f6kk+r"]),
         useObscuredNotice: l.L,
-        buildLayout: () => [u],
+        buildLayout: () => [c],
     }),
-    g = (0, r.i4)(a.X.AUTHORIZED_APPS_SIDEBAR_ITEM, {
-        useTitle: () => c.intl.string(c.t["f6kk+r"]),
-        icon: i.AppsIcon,
-        buildLayout: () => [m],
+    m = (0, a.i4)(r.X.AUTHORIZED_APPS_SIDEBAR_ITEM, {
+        useTitle: () => u.intl.string(u.t["f6kk+r"]),
+        icon: i.k,
+        buildLayout: () => [g],
     });

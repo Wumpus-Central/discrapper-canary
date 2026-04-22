@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(627968),
+n.d(t, { A: () => o });
+var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(55428);
-let l = i.forwardRef(function (e, t) {
+    a = n(503698),
+    r = n.n(a),
+    s = n(55428);
+let o = i.forwardRef(function (e, t) {
     let { isActive: n, children: i } = e;
-    return (0, r.jsx)("div", { className: a()(o.i, { [o.a]: n }), ref: t, children: i });
+    return (0, l.jsx)("div", { className: r()(s.i, { [s.a]: n }), ref: t, children: i });
 });

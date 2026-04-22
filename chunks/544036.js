@@ -2,7 +2,7 @@ e.d(i, { default: () => k });
 var s = e(627968),
     r = e(64700),
     a = e(311907),
-    n = e(397927),
+    n = e(772707),
     l = e(793574),
     c = e(688810),
     o = e(979286),
@@ -10,25 +10,25 @@ var s = e(627968),
     d = e(976860),
     u = e(779733),
     C = e(166403),
-    p = e(954571),
-    E = e(580630),
+    E = e(954571),
+    p = e(580630),
     f = e(652215),
     A = e(985018),
     D = e(808205),
     g = e(495995);
 function k(t) {
     let { transitionState: i, onClose: e, amountRedeemed: k, currencyCode: T, loadId: I } = t,
-        R = (0, E.$g)(k, T),
+        R = (0, p.$g)(k, T),
         S = null != (0, a.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
         { analyticsLocations: M } = (0, c.Ay)(),
         O = r.useRef(!1);
     r.useEffect(() => {
         O.current ||
             ((O.current = !0),
-            p.default.track(f.HAw.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL, { is_nitro_user: S, load_id: I }));
+            E.default.track(f.HAw.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL, { is_nitro_user: S, load_id: I }));
     }, [S, I]);
     let h = r.useCallback(() => {
-            p.default.track(f.HAw.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED, { is_nitro_user: S, load_id: I }),
+            E.default.track(f.HAw.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED, { is_nitro_user: S, load_id: I }),
                 S
                     ? (0, o.Cz)({ analyticsLocations: M, analyticsSource: l.A.GIFT_CARD_REDEMPTION_SUCCESS_MODAL })
                     : ((0, u.default)(), (0, _.default)(), (0, d.pX)(f.BVt.NITRO_HOME)),
@@ -45,7 +45,7 @@ function k(t) {
         ];
     return (0, s.jsx)("div", {
         className: D.A,
-        children: (0, s.jsx)(n.kpP, {
+        children: (0, s.jsx)(n.k, {
             transitionState: i,
             onClose: e,
             title: A.intl.string(A.t.D5lKY1),

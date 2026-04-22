@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => m, B: () => o }), n(321073);
 var i = n(64700),
-    s = n(735438),
-    l = n(198982),
+    l = n(735438),
+    s = n(198982),
     r = n(137207),
     a = n(985018);
 let o = "_errors",
@@ -11,9 +10,9 @@ async function c(e, t) {
     if (null == e.triggerMetadata.regexPatterns || 0 === e.triggerMetadata.regexPatterns.length) return void t([]);
     try {
         await (0, r.s6)(e), t([]);
-    } catch (s) {
+    } catch (l) {
         let e,
-            n = new l.LG(s).errors;
+            n = new s.LG(l).errors;
         if ("object" != typeof n || n?.trigger_metadata?.regex_patterns == null) return;
         let i =
             null == (e = n?.trigger_metadata?.regex_patterns)
@@ -23,11 +22,11 @@ async function c(e, t) {
                           i = Object.entries(n).map((e) => {
                               let [t, n] = e,
                                   i = n[o],
-                                  { code: s, message: l } = i?.[0] ?? { code: d, message: a.intl.string(a.t.hDPEu1) };
+                                  { code: l, message: s } = i?.[0] ?? { code: d, message: a.intl.string(a.t.hDPEu1) };
                               return {
                                   pattern: t,
-                                  message: l,
-                                  code: s,
+                                  message: s,
+                                  code: l,
                                   description: n?.description,
                                   erroringCharacterLength: n?.erroring_character_length,
                                   erroringCharacterOffset: n?.erroring_character_offset,
@@ -47,9 +46,9 @@ async function c(e, t) {
         i.length > 0 && t(i);
     }
 }
-let u = (0, s.throttle)(c, 1e3, { leading: !1 });
+let u = (0, l.throttle)(c, 1e3, { leading: !1 });
 function m(e, t) {
-    let [n, l] = i.useState([]),
+    let [n, s] = i.useState([]),
         [r, a] = i.useState(null),
         [o, d] = i.useState(e?.triggerMetadata?.regexPatterns ?? []),
         m = i.useCallback(
@@ -65,10 +64,10 @@ function m(e, t) {
         valueError: r,
         validatePatternsChanged: i.useCallback(
             (n, i) => {
-                (0, s.isEqual)(n, i) ||
+                (0, l.isEqual)(n, i) ||
                     (u.cancel(),
                     c({ ...e, triggerMetadata: { ...e.triggerMetadata, regexPatterns: n } }, (e) => {
-                        l(e), 0 === e.length && a(null);
+                        s(e), 0 === e.length && a(null);
                     }),
                     d(n),
                     t?.(n));

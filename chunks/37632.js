@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(627968);
+n.d(t, { A: () => r });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(866086);
-let s = function () {
-    return (0, r.jsx)(i._BQ, { size: "md", color: "currentColor", className: a.K });
+var l = n(320448),
+    s = n(247651);
+let r = function () {
+    return (0, i.jsx)(l._, { size: "md", color: "currentColor", className: s.K });
 };

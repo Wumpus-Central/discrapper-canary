@@ -1,38 +1,39 @@
+"use strict";
 n.d(t, { A: () => s });
-var l = n(873298),
-    a = n(632119),
-    i = n(17372),
-    r = n(985018);
+var a = n(873298),
+    i = n(632119),
+    r = n(17372),
+    l = n(985018);
 let s = {
-    getTitle: () => r.intl.string(r.t["Gtck/t"]),
-    getDisabledTitle: () => r.intl.string(r.t.E6UmXa),
-    getDescription: () => r.intl.string(r.t.jcRSp6),
+    getTitle: () => l.intl.string(l.t["Gtck/t"]),
+    getDisabledTitle: () => l.intl.string(l.t.E6UmXa),
+    getDescription: () => l.intl.string(l.t.jcRSp6),
     eligibleReportSubtypes: [
-        i.TS.SUB_CSAM,
-        i.TS.SUB_LOLI,
-        i.TS.SUB_NCP,
-        i.TS.SUB_SEXUALLY_DEGRADING_CONTENT,
-        i.TS.SUB_UNSOLICITED_PORN,
+        r.TS.SUB_CSAM,
+        r.TS.SUB_LOLI,
+        r.TS.SUB_NCP,
+        r.TS.SUB_SEXUALLY_DEGRADING_CONTENT,
+        r.TS.SUB_UNSOLICITED_PORN,
     ],
     onApply: () =>
-        (0, a.Jz)(
+        (0, i.Jz)(
             (function () {
                 let {
                         explicitContentGuilds: e,
                         explicitContentFriendDm: t,
                         explicitContentNonFriendDm: n,
-                    } = (0, a.C$)(),
-                    i = {};
+                    } = (0, i.C$)(),
+                    r = {};
                 return (
-                    e === l.TO.SHOW && (i.explicitContentGuilds = l.TO.BLUR),
-                    t === l.TO.SHOW && (i.explicitContentFriendDm = l.TO.BLUR),
-                    n === l.TO.SHOW && (i.explicitContentNonFriendDm = l.TO.BLUR),
-                    i
+                    e === a.TO.SHOW && (r.explicitContentGuilds = a.TO.BLUR),
+                    t === a.TO.SHOW && (r.explicitContentFriendDm = a.TO.BLUR),
+                    n === a.TO.SHOW && (r.explicitContentNonFriendDm = a.TO.BLUR),
+                    r
                 );
             })(),
         ),
     predicate: () => {
-        let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, a.C$)();
-        return e === l.TO.SHOW || t === l.TO.SHOW || n === l.TO.SHOW;
+        let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: n } = (0, i.C$)();
+        return e === a.TO.SHOW || t === a.TO.SHOW || n === a.TO.SHOW;
     },
 };

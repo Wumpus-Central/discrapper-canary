@@ -1,103 +1,103 @@
 "use strict";
 n.d(t, { A: () => y });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
-    o = n(876230),
-    l = n(990078),
-    u = n(397927),
-    c = n(429913),
-    d = n(409626),
-    _ = n(692969),
+var l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    a = n(876230),
+    o = n(990078),
+    c = n(176781),
+    u = n(834730),
+    d = n(939249),
+    h = n(429913),
+    m = n(409626),
+    p = n(692969),
     f = n(454908),
-    p = n(287809),
-    h = n(405269),
-    m = n(403362),
-    E = n(963135),
-    g = n(331446),
-    A = n(985018),
+    g = n(287809),
+    _ = n(405269),
+    x = n(403362),
+    A = n(963135),
+    C = n(331446),
+    E = n(985018),
     I = n(895054);
-let T = 4;
-function S(e) {
+function v(e) {
     let { applicationId: t, separator: n } = e,
-        i = (0, c.h)(t),
+        l = (0, h.h)(t),
         { data: s } = (0, f.I)(t),
-        a = (0, _.A)({ applicationId: t, location: "ClipEmbed", source: d.Ob.ClipEmbed }),
-        o = s?.name ?? i?.name;
-    return null == o
+        r = (0, p.A)({ applicationId: t, location: "ClipEmbed", source: m.Ob.ClipEmbed }),
+        a = s?.name ?? l?.name;
+    return null == a
         ? null
-        : null != a
-          ? (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(u.DUT, { tag: "span", className: I.On, onClick: a, children: o }), n],
+        : null != r
+          ? (0, i.jsxs)(i.Fragment, {
+                children: [(0, i.jsx)(d.D, { tag: "span", className: I.On, onClick: r, children: a }), n],
             })
-          : (0, r.jsxs)(r.Fragment, { children: [o, n] });
+          : (0, i.jsxs)(i.Fragment, { children: [a, n] });
 }
 let y = function (e) {
     let {
             createdAt: t,
             participantIds: n,
-            applicationId: i,
-            title: c,
-            guildId: d,
-            playerState: _ = o.Q6.PAUSED,
-            isControlBarExpanded: f = !0,
-            isFullScreen: y = !1,
-            showTextContent: v = !0,
+            applicationId: l,
+            title: d,
+            guildId: h,
+            playerState: m = a.Q6.PAUSED,
+            isControlBarExpanded: p = !0,
+            isFullScreen: f = !1,
+            showTextContent: y = !0,
         } = e,
-        N = (0, a.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
-        C = null != t ? (0, h.Fe)(new Date(t)) : null,
-        R = null != i || null != C;
-    return (0, r.jsxs)("div", {
-        className: s()(I.oK, { [I.pd]: _ === o.Q6.PLAYING && !f, [I.aS]: y }),
+        S = (0, r.yK)([g.default], () => n.map((e) => g.default.getUser(e)).filter(x.Vq) ?? []),
+        b = null != t ? (0, _.Fe)(new Date(t)) : null;
+    return (0, i.jsxs)("div", {
+        className: s()(I.oK, { [I.pd]: m === a.Q6.PLAYING && !p, [I.aS]: f }),
         children: [
-            (0, r.jsx)("div", { className: I.Lu }),
-            (0, r.jsxs)("div", {
+            (0, i.jsx)("div", { className: I.Lu }),
+            (0, i.jsxs)("div", {
                 className: I.s$,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: I.yR,
                         children: [
-                            (0, r.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 className: I.$,
                                 children: [
-                                    (0, r.jsx)(l.m, {
+                                    (0, i.jsx)(o.m, {
                                         asContainer: !0,
-                                        text: A.intl.string(A.t["/fgfWh"]),
-                                        children: (0, r.jsx)(u.xgA, { className: I.gr, size: "xs", color: "white" }),
+                                        text: E.intl.string(E.t["/fgfWh"]),
+                                        children: (0, i.jsx)(c.x, { className: I.gr, size: "xs", color: "white" }),
                                     }),
-                                    v &&
-                                        (0, r.jsx)(u.Text, {
+                                    y &&
+                                        (0, i.jsx)(u.E, {
                                             className: I.DD,
                                             variant: "text-md/semibold",
                                             color: "always-white",
-                                            children: null != c && c.length > 0 ? c : A.intl.string(A.t.Cyxddp),
+                                            children: null != d && d.length > 0 ? d : E.intl.string(E.t.Cyxddp),
                                         }),
                                 ],
                             }),
-                            v &&
-                                R &&
-                                (0, r.jsxs)(u.Text, {
+                            y &&
+                                (null != l || null != b) &&
+                                (0, i.jsxs)(u.E, {
                                     className: I.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
-                                        (0, r.jsx)(S, { applicationId: i, separator: null != C ? " \xb7 " : void 0 }),
-                                        C,
+                                        (0, i.jsx)(v, { applicationId: l, separator: null != b ? " \xb7 " : void 0 }),
+                                        b,
                                     ],
                                 }),
                         ],
                     }),
-                    N.length > 0 &&
-                        (0, r.jsxs)("div", {
+                    S.length > 0 &&
+                        (0, i.jsxs)("div", {
                             className: I.HD,
                             role: "group",
-                            "aria-label": A.intl.string(A.t.WTozwe),
+                            "aria-label": E.intl.string(E.t.WTozwe),
                             children: [
-                                N.slice(0, T).map((e) => (0, r.jsx)(E.A, { user: e, guildId: d }, e.id)),
-                                N.length > T &&
-                                    (0, r.jsx)(g.w, { participants: N, maxVisibleParticipants: T, guildId: d }),
+                                S.slice(0, 4).map((e) => (0, i.jsx)(A.A, { user: e, guildId: h }, e.id)),
+                                S.length > 4 &&
+                                    (0, i.jsx)(C.w, { participants: S, maxVisibleParticipants: 4, guildId: h }),
                             ],
                         }),
                 ],

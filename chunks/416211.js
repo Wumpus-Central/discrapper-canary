@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__29506",
     rb: "mainContent__29506",

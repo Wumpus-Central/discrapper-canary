@@ -1,10 +1,11 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(627968);
 n(64700);
 var a = n(763754),
-    s = n(635071),
+    r = n(635071),
     l = n(812299);
-function r(e) {
+function s(e) {
     let t = (0, a.Ay)(e.message),
         n = (0, l.y)({
             message: e.message,
@@ -13,6 +14,6 @@ function r(e) {
             compact: !!e.compact,
             isRepliedMessage: !!e.isRepliedMessage,
         }),
-        r = {};
-    return null != n && (r[s.w.SYSTEM_TAG] = n), (0, i.jsx)(s.A, { ...e, author: t, decorations: r });
+        s = {};
+    return null != n && (s[r.w.SYSTEM_TAG] = n), (0, i.jsx)(r.A, { ...e, author: t, decorations: s });
 }

@@ -1,14 +1,10 @@
-"use strict";
-n.d(t, { Mz: () => s, jP: () => o });
-var r = n(64700),
+n.d(t, { Mz: () => r, jP: () => s });
+var l = n(64700),
     i = n(786300);
 n(285871);
 let a = (() => {
         let [e] = (0, i.A)();
         return e;
     })(),
-    s = () => a,
-    o = () => {
-        let e = a;
-        return (0, r.useContext)(e);
-    };
+    r = () => a,
+    s = () => (0, l.useContext)(a);

@@ -1,22 +1,25 @@
-"use strict";
-n.d(t, { g: () => j });
+n.d(t, { g: () => C });
 var i = n(627968),
-    s = n(64700),
-    l = n(280513),
-    r = n(158954),
-    a = n(311907),
-    o = n(397927),
-    d = n(60175),
-    c = n(90084),
-    u = n(42780),
-    m = n(997509),
-    g = n(555337),
-    x = n(583047),
-    h = n(501381),
-    _ = n(652215),
-    p = n(985018),
-    A = n(875776);
-let f = {
+    l = n(64700),
+    s = n(280513),
+    r = n(534514),
+    a = n(834730),
+    o = n(821609),
+    d = n(311907),
+    c = n(289873),
+    u = n(243721),
+    m = n(349288),
+    g = n(60175),
+    h = n(90084),
+    x = n(42780),
+    _ = n(997509),
+    p = n(555337),
+    A = n(583047),
+    E = n(501381),
+    f = n(652215),
+    j = n(985018),
+    N = n(883984);
+let I = {
     id: "0",
     name: "",
     description: "",
@@ -27,7 +30,7 @@ let f = {
     traits: [],
     gameApplicationIds: [],
     gameActivity: {},
-    visibility: l.n.RESTRICTED,
+    visibility: s.n.RESTRICTED,
     brandColorPrimary: null,
     tag: null,
     badge: null,
@@ -35,92 +38,92 @@ let f = {
     badgeColorPrimary: null,
     badgeColorSecondary: null,
 };
-function j(e) {
+function C(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: j } = (0, a.cf)([g.A], () => ({
-            guild: g.A.getGuild(),
-            guildProfile: g.A.getGuildProfile(),
+        { guild: n, guildProfile: C } = (0, d.cf)([p.A], () => ({
+            guild: p.A.getGuild(),
+            guildProfile: p.A.getGuildProfile(),
         })),
-        N = n?.id,
-        E = (0, a.bG)([d.A], () => d.A.get(N)),
-        { fetchGuildProfile: b } = (0, c.u)(N),
-        C = j?.visibility == null || !l.i.VISIBLE.has(j?.visibility),
-        T = j?.visibility === l.n.PUBLIC_WITH_RECRUITMENT;
-    s.useEffect(() => {
-        null != N && b();
-    }, [N, b]);
-    let I = s.useMemo(() => (null == n || null == j ? f : j), [n, j]),
-        v = s.useCallback(() => {
+        b = n?.id,
+        v = (0, d.bG)([g.A], () => g.A.get(b)),
+        { fetchGuildProfile: S } = (0, h.u)(b),
+        T = C?.visibility == null || !s.i.VISIBLE.has(C?.visibility),
+        y = C?.visibility === s.n.PUBLIC_WITH_RECRUITMENT;
+    l.useEffect(() => {
+        null != b && S();
+    }, [b, S]);
+    let R = l.useMemo(() => (null == n || null == C ? I : C), [n, C]),
+        L = l.useCallback(() => {
             n?.id != null &&
-                (T
-                    ? m.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC })
-                    : m.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC_WITH_RECRUITMENT }));
-        }, [n?.id, T]),
-        S = s.useCallback(() => {
-            m.A.setSection(_.BEX.PROFILE);
+                (y
+                    ? _.A.updateGuildProfile(n.id, { visibility: s.n.PUBLIC })
+                    : _.A.updateGuildProfile(n.id, { visibility: s.n.PUBLIC_WITH_RECRUITMENT }));
+        }, [n?.id, y]),
+        D = l.useCallback(() => {
+            _.A.setSection(f.BEX.PROFILE);
         }, []);
     if (null == n) return null;
-    let y = t ?? E?.formFields;
+    let O = t ?? v?.formFields;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.DZT, {
+            (0, i.jsx)(r.D, {
                 variant: "heading-md/semibold",
                 color: "text-strong",
-                children: p.intl.string(p.t.AHJddL),
+                children: j.intl.string(j.t.AHJddL),
             }),
-            (0, i.jsx)(r.EYj, {
+            (0, i.jsx)(a.E, {
                 tag: "p",
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                className: A.nB,
-                children: p.intl.string(p.t.Z7TCtd),
+                className: N.nB,
+                children: j.intl.string(j.t.Z7TCtd),
             }),
-            (0, i.jsx)(h.o, { guildId: n.id }),
+            (0, i.jsx)(E.o, { guildId: n.id }),
             (0, i.jsx)("div", {
-                className: A.Zd,
-                children: null != y ? (0, i.jsx)(x.a, { guild: n, formFields: y }) : (0, i.jsx)(o.y$y, {}),
+                className: N.Zd,
+                children: null != O ? (0, i.jsx)(A.a, { guild: n, formFields: O }) : (0, i.jsx)(c.y, {}),
             }),
-            (0, i.jsx)("div", { className: A.yF }),
+            (0, i.jsx)("div", { className: N.yF }),
             (0, i.jsxs)("div", {
-                className: A.Im,
+                className: N.Im,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: A.fi,
+                        className: N.fi,
                         children: [
-                            (0, i.jsx)(o.dOG, {
-                                label: p.intl.string(p.t["N/0232"]),
-                                checked: T,
-                                onChange: v,
-                                disabled: C,
+                            (0, i.jsx)(u.d, {
+                                label: j.intl.string(j.t["N/0232"]),
+                                checked: y,
+                                onChange: L,
+                                disabled: T,
                             }),
-                            (0, i.jsx)(r.EYj, {
+                            (0, i.jsx)(a.E, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: p.intl.string(p.t["3TSZYK"]),
+                                children: j.intl.string(j.t["3TSZYK"]),
                             }),
-                            C &&
-                                (0, i.jsx)(r.EYj, {
+                            T &&
+                                (0, i.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: p.intl.format(p.t.Bk0VOi, {
-                                        profileLink: (e, t) => (0, i.jsx)(o.MzZ, { onClick: S, children: e }, t),
+                                    children: j.intl.format(j.t.Bk0VOi, {
+                                        profileLink: (e, t) => (0, i.jsx)(m.Anchor, { onClick: D, children: e }, t),
                                     }),
                                 }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: A.fi,
+                        className: N.fi,
                         children: (0, i.jsxs)("div", {
-                            className: A.cK,
+                            className: N.cK,
                             children: [
-                                (0, i.jsx)("div", { className: A.D7 }),
-                                (0, i.jsx)(u.Ay, {
-                                    className: A.VH,
-                                    profile: I,
-                                    CTAOverride: (0, i.jsx)(r.$nd, {
+                                (0, i.jsx)("div", { className: N.D7 }),
+                                (0, i.jsx)(x.Ay, {
+                                    className: N.VH,
+                                    profile: R,
+                                    CTAOverride: (0, i.jsx)(o.$, {
                                         variant: "active",
                                         size: "sm",
-                                        text: p.intl.string(p.t["7XdMW2"]),
+                                        text: j.intl.string(j.t["7XdMW2"]),
                                         fullWidth: !0,
                                     }),
                                     disableGuildNameClick: !0,

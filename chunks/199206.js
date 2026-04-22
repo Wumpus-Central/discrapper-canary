@@ -1,18 +1,17 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = { className: "meta", begin: "@[A-Za-z]+" },
-        r = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }, { begin: /\$\{/, end: /\}/ }] },
-        i = {
+        a = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }, { begin: /\$\{/, end: /\}/ }] },
+        n = {
             className: "string",
             variants: [
                 { begin: '"""', end: '"""' },
                 { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
-                { begin: '[a-z]{1,50}"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, r] },
-                { className: "string", begin: '[a-z]{1,50}"""', end: '"""', contains: [r], relevance: 10 },
+                { begin: '[a-z]{1,50}"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, a] },
+                { className: "string", begin: '[a-z]{1,50}"""', end: '"""', contains: [a], relevance: 10 },
             ],
         },
-        s = { className: "type", begin: "\\b[A-Z][A-Za-z0-9_]*", relevance: 0 },
-        a = {
+        r = { className: "type", begin: "\\b[A-Z][A-Za-z0-9_]*", relevance: 0 },
+        i = {
             className: "title",
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0,
@@ -32,7 +31,7 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                    contains: [r, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
                 },
                 {
                     className: "params",
@@ -41,16 +40,12 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                    contains: [r, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
                 },
-                a,
+                i,
             ],
         },
-        l = { className: "function", beginKeywords: "def", end: t.lookahead(/[:={\[(\n;]/), contains: [a] },
-        u = { begin: [/^\s*/, "extension", /\s+(?=[[(])/], beginScope: { 2: "keyword" } },
-        c = { begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/], beginScope: { 2: "keyword", 4: "keyword" } },
-        d = [{ match: /\.inline\b/ }, { begin: /\binline(?=\s)/, keywords: "inline" }],
-        _ = { begin: [/\(\s*/, /using/, /\s+(?!\))/], beginScope: { 2: "keyword" } };
+        s = { className: "function", beginKeywords: "def", end: t.lookahead(/[:={\[(\n;]/), contains: [i] };
     return {
         name: "Scala",
         keywords: {
@@ -67,16 +62,17 @@ e.exports = function (e) {
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            i,
+            n,
+            r,
             s,
-            l,
             o,
             e.C_NUMBER_MODE,
-            u,
-            c,
-            ...d,
-            _,
-            n,
+            { begin: [/^\s*/, "extension", /\s+(?=[[(])/], beginScope: { 2: "keyword" } },
+            { begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/], beginScope: { 2: "keyword", 4: "keyword" } },
+            { match: /\.inline\b/ },
+            { begin: /\binline(?=\s)/, keywords: "inline" },
+            { begin: [/\(\s*/, /using/, /\s+(?!\))/], beginScope: { 2: "keyword" } },
+            { className: "meta", begin: "@[A-Za-z]+" },
         ],
     };
 };

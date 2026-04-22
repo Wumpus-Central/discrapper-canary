@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root__5b8f4",
     av: "lockedPickerItem__5b8f4",

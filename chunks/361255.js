@@ -3,7 +3,7 @@ var n = i(627968),
     a = i(64700),
     r = i(317097),
     l = i(311907),
-    o = i(397927),
+    o = i(783878),
     d = i(198982),
     c = i(997509),
     s = i(34457),
@@ -58,7 +58,7 @@ function p(t) {
         errorText: h,
         onConfirm: I,
         onCancel: i,
-        children: (0, n.jsx)(o.ZiE, {
+        children: (0, n.jsx)(o.Z, {
             selectionMode: "single",
             options: x,
             value: f,

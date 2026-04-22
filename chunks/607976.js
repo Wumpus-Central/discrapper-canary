@@ -1,37 +1,38 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(886217),
-    s = n(985018),
-    o = n(104574);
-function d(e) {
-    let { children: t, selectedSections: n = [], onSectionSelect: d, controls: c } = e,
-        u = (0, l._B)(),
-        A = 0 === n.length || n.length === u.length,
-        h = r.useMemo(() => (A ? "all" : 1 === n.length ? n[0] : "all"), [n, A]);
-    return (0, i.jsxs)("div", {
-        className: o.kL,
+s.d(t, { A: () => u });
+var n = s(627968),
+    l = s(64700),
+    a = s(534514),
+    r = s(761508),
+    i = s(886217),
+    o = s(985018),
+    c = s(497275);
+function u(e) {
+    let { children: t, selectedSections: s = [], onSectionSelect: u, controls: d } = e,
+        m = (0, i._B)(),
+        _ = 0 === s.length || s.length === m.length,
+        h = l.useMemo(() => (_ ? "all" : 1 === s.length ? s[0] : "all"), [s, _]);
+    return (0, n.jsxs)("div", {
+        className: c.kL,
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, n.jsx)(a.D, {
                 variant: "heading-xl/semibold",
                 color: "text-strong",
-                children: s.intl.string(s.t.BDUDau),
+                children: o.intl.string(o.t.BDUDau),
             }),
-            (0, i.jsx)("div", { className: o.pf, children: c }),
-            (0, i.jsxs)(a.VQ0, {
+            (0, n.jsx)("div", { className: c.pf, children: d }),
+            (0, n.jsxs)(r.V, {
                 type: "top",
                 look: "brand",
                 selectedItem: h,
                 onItemSelect: (e) => {
-                    d?.(e);
+                    u?.(e);
                 },
                 children: [
-                    (0, i.jsx)(a.VQ0.Item, { id: "all", children: s.intl.string(s.t.Y9DnPa) }),
-                    u.map((e) => (0, i.jsx)(a.VQ0.Item, { id: e.value, children: e.label }, e.value)),
+                    (0, n.jsx)(r.V.Item, { id: "all", children: o.intl.string(o.t.Y9DnPa) }),
+                    m.map((e) => (0, n.jsx)(r.V.Item, { id: e.value, children: e.label }, e.value)),
                 ],
             }),
-            (0, i.jsx)("div", { className: o.tZ, children: (0, i.jsx)("div", { className: o.Qs, children: t }) }),
+            (0, n.jsx)("div", { className: c.tZ, children: (0, n.jsx)("div", { className: c.Qs, children: t }) }),
         ],
     });
 }

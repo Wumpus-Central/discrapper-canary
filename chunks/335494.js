@@ -10,97 +10,97 @@ l.d(t, { A: () => f }),
     l(767709),
     l(65162),
     l(321073);
-var a = l(627968),
-    n = l(64700),
-    s = l(503698),
-    i = l.n(s),
+var n = l(627968),
+    a = l(64700),
+    i = l(503698),
+    s = l.n(i),
     r = l(827734),
-    o = l(397927),
-    u = l(765671),
+    d = l(602853),
+    o = l(765671),
     c = l(602674),
-    d = l(696016),
+    u = l(696016),
     m = l(335416),
-    h = l(665083);
+    h = l(664875);
 let p = new Map(),
-    f = n.memo(function (e) {
-        let { clipId: t, voiceAudioTracks: s, onMouseDown: f, className: g } = e,
-            v = n.useRef(null),
-            { ref: x, width: b, height: j } = (0, u.Ay)(),
-            [C, N] = n.useState(null),
-            k = (0, o.rdh)(r.A.colors.BACKGROUND_MOD_STRONG).hex();
-        return (n.useEffect(
+    f = a.memo(function (e) {
+        let { clipId: t, voiceAudioTracks: i, onMouseDown: f, className: v } = e,
+            g = a.useRef(null),
+            { ref: x, width: j, height: b } = (0, o.Ay)(),
+            [C, y] = a.useState(null),
+            A = (0, d.r)(r.A.colors.BACKGROUND_MOD_STRONG).hex();
+        return (a.useEffect(
             () => (
-                (v.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
+                (g.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
                 () => {
-                    v.current?.terminate();
+                    g.current?.terminate();
                 }
             ),
             [],
         ),
-        n.useEffect(() => {
-            if (0 === b || 0 === s.length || null == v.current) return;
-            let e = `${t}-${s.map((e) => e.trackName).join(",")}-${b}`,
+        a.useEffect(() => {
+            if (0 === j || 0 === i.length || null == g.current) return;
+            let e = `${t}-${i.map((e) => e.trackName).join(",")}-${j}`,
                 l = p.get(e);
-            if (null != l) return void N(l.waveform);
-            let a = v.current,
-                n = !1,
-                i = (t) => {
-                    if (n) return;
-                    let { waveform: l, error: a } = t.data;
-                    null != a ? d.nx.error("Failed to load waveform:", a) : (p.set(e, { waveform: l }), N(l));
+            if (null != l) return void y(l.waveform);
+            let n = g.current,
+                a = !1,
+                s = (t) => {
+                    if (a) return;
+                    let { waveform: l, error: n } = t.data;
+                    null != n ? u.nx.error("Failed to load waveform:", n) : (p.set(e, { waveform: l }), y(l));
                 };
             return (
-                a.addEventListener("message", i),
+                n.addEventListener("message", s),
                 (async () => {
                     try {
                         let e = (0, c.v)();
                         if (null == e) throw Error("Failed to create audio context");
-                        let t = await Promise.all(s.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
-                        if (n) return;
+                        let t = await Promise.all(i.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
+                        if (a) return;
                         let l = [],
-                            i = [];
+                            s = [];
                         for (let e of t) {
                             let t = [];
                             for (let l = 0; l < e.numberOfChannels; l++) {
-                                let a = new Float32Array(e.getChannelData(l));
-                                t.push(a), i.push(a.buffer);
+                                let n = new Float32Array(e.getChannelData(l));
+                                t.push(n), s.push(n.buffer);
                             }
                             l.push(t);
                         }
-                        a.postMessage({ trackChannels: l, width: b }, i);
+                        n.postMessage({ trackChannels: l, width: j }, s);
                     } catch (e) {
-                        n || d.nx.error("Failed to decode audio:", e);
+                        a || u.nx.error("Failed to decode audio:", e);
                     }
                 })(),
                 () => {
-                    (n = !0), a.removeEventListener("message", i);
+                    (a = !0), n.removeEventListener("message", s);
                 }
             );
-        }, [s, t, b]),
-        n.useEffect(() => {
-            if (null == x.current || null == C || (b ?? 0) === 0 || (j ?? 0) === 0) return;
+        }, [i, t, j]),
+        a.useEffect(() => {
+            if (null == x.current || null == C || (j ?? 0) === 0 || (b ?? 0) === 0) return;
             let e = x.current,
                 t = e.getContext("2d");
             if (null == t) return;
-            let { width: l, height: a } = e,
-                n = l / C.length,
-                s = -(n * (m.Jh.waveformBarWidth - 1));
-            t.clearRect(0, 0, l, a), (t.fillStyle = k);
+            let { width: l, height: n } = e,
+                a = l / C.length,
+                i = -(a * (m.Jh.waveformBarWidth - 1));
+            t.clearRect(0, 0, l, n), (t.fillStyle = A);
             for (let e = 0; e < C.length; e++) {
-                let l = C[e] * a,
-                    i = e * n + s;
-                t.fillRect(i, a, n - s, -l);
+                let l = C[e] * n,
+                    s = e * a + i;
+                t.fillRect(s, n, a - i, -l);
             }
-        }, [k, b, x, j, C]),
-        0 === s.length)
+        }, [A, j, x, b, C]),
+        0 === i.length)
             ? null
-            : (0, a.jsx)("div", {
-                  className: i()(h.k, g),
-                  children: (0, a.jsx)("canvas", {
+            : (0, n.jsx)("div", {
+                  className: s()(h.k, v),
+                  children: (0, n.jsx)("canvas", {
                       className: h.s,
                       ref: x,
-                      width: (b ?? 0) * 2,
-                      height: (j ?? 0) * 2,
+                      width: (j ?? 0) * 2,
+                      height: (b ?? 0) * 2,
                       onMouseDown: f,
                   }),
               });

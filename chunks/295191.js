@@ -1,70 +1,71 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var l = n(627968),
-    r = n(64700),
-    a = n(407045),
+    a = n(64700),
+    r = n(517738),
     i = n(66455),
     s = n(311907),
-    o = n(397927),
-    E = n(475743),
-    u = n(775121),
+    E = n(844222),
+    _ = n(866323),
+    u = n(475743),
+    o = n(775121),
     c = n(761640),
-    _ = n(706752),
-    d = n(290294),
-    A = n(420775),
-    g = n(684968),
-    T = n(486974),
-    I = n(652215);
-function N(e, t) {
+    d = n(706752),
+    A = n(290294),
+    g = n(420775),
+    T = n(684968),
+    I = n(486974),
+    N = n(652215);
+function G(e, t) {
     return (n) => {
         if (0 === n) return "auto";
         let l = "forwards" === t.current,
-            r = n > 0,
-            a = !1;
+            a = n > 0,
+            r = !1;
         return (
-            r && l && "left" === e && (a = !0),
-            r && !l && "right" === e && (a = !0),
-            !r && l && "right" === e && (a = !0),
-            r || l || "left" !== e || (a = !0),
-            a ? `calc(${100 * Math.abs(n)}% + ${Math.round(12 * Math.abs(n))}px)` : "auto"
+            a && l && "left" === e && (r = !0),
+            a && !l && "right" === e && (r = !0),
+            !a && l && "right" === e && (r = !0),
+            a || l || "left" !== e || (r = !0),
+            r ? `calc(${100 * Math.abs(n)}% + ${Math.round(12 * Math.abs(n))}px)` : "auto"
         );
     };
 }
-function h(e) {
-    let { userId: t, guildId: n, onClose: h, analyticsLocation: m, className: S } = e,
-        G = (0, s.bG)([c.Ay], () => c.Ay.getGuildSidebarState(n), [n]),
-        O = G?.details.modViewPanel ?? T.g.INFO,
-        R = (0, E.A)(t),
-        C = null == O ? null : O === T.g.INFO ? "backwards" : "forwards",
-        L = (0, i.A)(C),
-        { reducedMotion: D } = r.useContext(o.CZY),
-        f = r.useCallback(
+function m(e) {
+    let { userId: t, guildId: n, onClose: m, analyticsLocation: O, className: S } = e,
+        R = (0, s.bG)([c.Ay], () => c.Ay.getGuildSidebarState(n), [n]),
+        D = R?.details.modViewPanel ?? I.g.INFO,
+        h = (0, u.A)(t),
+        L = null == D ? null : D === I.g.INFO ? "backwards" : "forwards",
+        C = (0, i.A)(L),
+        { reducedMotion: M } = a.useContext(E.C),
+        f = a.useCallback(
             (e) => {
-                null != G && (0, _.z)(n, t, G.baseChannelId, { modViewPanel: e });
+                null != R && (0, d.z)(n, t, R.baseChannelId, { modViewPanel: e });
             },
-            [G, n, t],
+            [R, n, t],
         ),
-        x = r.useMemo(
+        x = a.useMemo(
             () => ({
-                [I.IWg.CLOSE_MODAL]: {
+                [N.IWg.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (O === T.g.INFO ? h() : f(T.g.INFO)),
+                    action: () => (D === I.g.INFO ? m() : f(I.g.INFO)),
                 },
             }),
-            [h, O, f],
+            [m, D, f],
         );
-    r.useEffect(() => (u.A.enable(), u.A.enableTemp(x), () => u.A.disableTemp()), [x]);
-    let M = (0, o.pnh)(
-        O,
+    a.useEffect(() => (o.A.enable(), o.A.enableTemp(x), () => o.A.disableTemp()), [x]);
+    let U = (0, _.p)(
+        D,
         { value: 0, from: { value: 1 }, enter: { value: 0 }, leave: { value: -1 } },
-        R !== t ? "animate-never" : "animate-always",
+        h !== t ? "animate-never" : "animate-always",
     );
-    return (0, l.jsx)(a.animated.div, {
+    return (0, l.jsx)(r.animated.div, {
         style: { position: "relative", height: "100%", flex: 1, overflow: "hidden" },
-        children: M((e, r, i) => {
+        children: U((e, a, i) => {
             let { key: s } = i;
             return (0, l.jsx)(
-                a.animated.div,
+                r.animated.div,
                 {
                     style: {
                         position: "absolute",
@@ -73,38 +74,38 @@ function h(e) {
                         backfaceVisibility: "hidden",
                         width: "100%",
                         height: "100%",
-                        ...(D.enabled
+                        ...(M.enabled
                             ? { opacity: e.value?.to((e) => 1 - Math.abs(e)) }
-                            : { left: e.value?.to(N("left", L)), right: e.value?.to(N("right", L)) }),
+                            : { left: e.value?.to(G("left", C)), right: e.value?.to(G("right", C)) }),
                     },
                     children: (function (e) {
                         switch (e) {
-                            case T.g.INFO:
-                                return (0, l.jsx)(d.A, {
-                                    userId: t,
-                                    guildId: n,
-                                    onClose: h,
-                                    onNavigate: f,
-                                    className: S,
-                                });
-                            case T.g.MESSAGE_HISTORY:
+                            case I.g.INFO:
                                 return (0, l.jsx)(A.A, {
                                     userId: t,
                                     guildId: n,
-                                    onNavigate: () => f(T.g.INFO),
+                                    onClose: m,
+                                    onNavigate: f,
                                     className: S,
                                 });
-                            case T.g.PERMISSIONS:
+                            case I.g.MESSAGE_HISTORY:
                                 return (0, l.jsx)(g.A, {
                                     userId: t,
                                     guildId: n,
-                                    onNavigate: () => f(T.g.INFO),
+                                    onNavigate: () => f(I.g.INFO),
+                                    className: S,
+                                });
+                            case I.g.PERMISSIONS:
+                                return (0, l.jsx)(T.A, {
+                                    userId: t,
+                                    guildId: n,
+                                    onNavigate: () => f(I.g.INFO),
                                     className: S,
                                 });
                             default:
                                 return null;
                         }
-                    })(r),
+                    })(a),
                 },
                 s,
             );

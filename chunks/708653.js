@@ -1,8 +1,8 @@
-n.d(t, { $X: () => S, As: () => b, Ay: () => y });
+n.d(t, { $X: () => y, As: () => S, Ay: () => p });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    l = n(397927),
+    l = n(477782),
     a = n(95701),
     d = n(961350),
     s = n(576705),
@@ -12,24 +12,24 @@ var i = n(311907),
     A = n(914853),
     g = n(589051),
     f = n(509295),
-    E = n(406595),
-    h = n(652215),
-    I = n(895867),
-    p = n(985018);
+    h = n(406595),
+    E = n(652215),
+    I = n(499214),
+    v = n(985018);
 function _(e) {
-    return e ? p.intl.string(p.t.Bou7lT) : p.intl.string(p.t["4wcdE/"]);
+    return e ? v.intl.string(v.t.Bou7lT) : v.intl.string(v.t["4wcdE/"]);
 }
-function v(e) {
-    return e ? p.intl.string(I.default.Xr8XHk) : p.intl.string(I.default.w1MU8Y);
+function x(e) {
+    return e ? v.intl.string(I.default.Xr8XHk) : v.intl.string(I.default.w1MU8Y);
 }
-function x(e, t, n) {
+function b(e, t, n) {
     let { hasFriendList: I } = (0, g.M8)("useOverlayFavoritesToggleMenuItems"),
-        p = "CHANNEL" === t.kind ? t.channel.id : t.userId,
-        x = (function (e, t) {
-            let [n] = (0, i.bG)([E.A], () => E.A.isFavorite(e, t), [e, t], o.D);
+        v = "CHANNEL" === t.kind ? t.channel.id : t.userId,
+        b = (function (e, t) {
+            let [n] = (0, i.bG)([h.A], () => h.A.isFavorite(e, t), [e, t], o.D);
             return n;
-        })(e, p),
-        S = (0, i.bG)([s.A, u.A, d.default], () => {
+        })(e, v),
+        y = (0, i.bG)([s.A, u.A, d.default], () => {
             switch (t.kind) {
                 case "CHANNEL": {
                     let { channel: n } = t,
@@ -38,9 +38,9 @@ function x(e, t, n) {
                         case e === A.x.MESSAGES && r:
                             return !0;
                         case e === A.x.MESSAGES && (0, a.ke)(n.type):
-                            return s.A.can(h.xBc.READ_MESSAGE_HISTORY, n);
+                            return s.A.can(E.xBc.READ_MESSAGE_HISTORY, n);
                         case e === A.x.VOICE && (0, a.ay)(n.type):
-                            return (0, a.ay)(n.type) && s.A.can(h.xBc.VIEW_CHANNEL, n);
+                            return (0, a.ay)(n.type) && s.A.can(E.xBc.VIEW_CHANNEL, n);
                         case e === A.x.FRIENDS:
                         default:
                             return !1;
@@ -55,45 +55,45 @@ function x(e, t, n) {
                     throw Error(`Unhandled overlay favorite target: ${String(t)}`);
             }
         });
-    if (!I || !S) return { isFavorite: x, toggleFavoriteItem: null, addFavoriteItem: null, removeFavoriteItem: null };
-    let b = "CHANNEL" === t.kind ? _ : v,
-        y = "CHANNEL" === t.kind ? "overlay-favorite-channel" : "overlay-favorite-user",
+    if (!I || !y) return { isFavorite: b, toggleFavoriteItem: null, addFavoriteItem: null, removeFavoriteItem: null };
+    let S = "CHANNEL" === t.kind ? _ : x,
+        p = "CHANNEL" === t.kind ? "overlay-favorite-channel" : "overlay-favorite-user",
         D = "CHANNEL" === t.kind ? "overlay-unfavorite-channel" : "overlay-unfavorite-user",
-        N = (0, r.jsx)(l.Drp, {
-            id: y,
-            label: b(!1),
+        N = (0, r.jsx)(l.Dr, {
+            id: p,
+            label: S(!1),
             action: () => {
-                (0, f.k)({ tab: e, targetId: p, isFavorite: !0 }),
+                (0, f.k)({ tab: e, targetId: v, isFavorite: !0 }),
                     (0, c.YX)(n, {
                         type: c.Z5.FAVORITE,
                         value: c.IP.ADDED_TO_FAVORITES,
                         secondaryValue: e,
-                        userId: e === A.x.FRIENDS ? p : void 0,
+                        userId: e === A.x.FRIENDS ? v : void 0,
                     });
             },
         }),
-        M = (0, r.jsx)(l.Drp, {
+        j = (0, r.jsx)(l.Dr, {
             id: D,
-            label: b(!0),
+            label: S(!0),
             color: "danger",
             action: () => {
-                (0, f.k)({ tab: e, targetId: p, isFavorite: !1 }),
+                (0, f.k)({ tab: e, targetId: v, isFavorite: !1 }),
                     (0, c.YX)(n, {
                         type: c.Z5.FAVORITE,
                         value: c.IP.REMOVED_FROM_FAVORITES,
                         secondaryValue: e,
-                        userId: e === A.x.FRIENDS ? p : void 0,
+                        userId: e === A.x.FRIENDS ? v : void 0,
                     });
             },
         });
-    return { isFavorite: x, toggleFavoriteItem: x ? M : N, addFavoriteItem: N, removeFavoriteItem: M };
-}
-function S(e, t, n) {
-    return x(e, { kind: "CHANNEL", channel: t }, n);
-}
-function b(e, t) {
-    return x(A.x.FRIENDS, { kind: "USER", userId: e }, t);
+    return { isFavorite: b, toggleFavoriteItem: b ? j : N, addFavoriteItem: N, removeFavoriteItem: j };
 }
 function y(e, t, n) {
-    return S(e, t, n);
+    return b(e, { kind: "CHANNEL", channel: t }, n);
+}
+function S(e, t) {
+    return b(A.x.FRIENDS, { kind: "USER", userId: e }, t);
+}
+function p(e, t, n) {
+    return y(e, t, n);
 }

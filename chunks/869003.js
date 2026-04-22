@@ -1,73 +1,76 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => R });
 var r = n(627968);
 n(64700);
-var i = n(158954),
-    a = n(397927),
-    s = n(73153),
-    o = n(87001),
-    l = n(574172),
-    u = n(378570),
-    c = n(646865),
-    d = n(795816),
-    _ = n(458664),
-    f = n(933958),
-    p = n(969151),
-    h = n(315206),
-    m = n(594007),
-    g = n(5867),
-    E = n(652215),
-    A = n(985018);
-let I = !1,
-    T = !1;
-class y extends _.A {
+var i = n(189213),
+    s = n(192308),
+    a = n(691540),
+    o = n(857250),
+    l = n(97483),
+    u = n(73153),
+    d = n(87001),
+    c = n(574172),
+    _ = n(378570),
+    f = n(646865),
+    E = n(795816),
+    h = n(458664),
+    p = n(933958),
+    m = n(969151),
+    g = n(315206),
+    A = n(594007),
+    I = n(5867),
+    T = n(652215),
+    S = n(985018);
+let y = !1,
+    N = !1;
+class O extends h.A {
     _initialize() {
         super._initialize(),
-            o.A.addChangeListener(this.handlePopoutWindowUpdate),
-            s.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            d.A.addChangeListener(this.handlePopoutWindowUpdate),
+            u.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     _terminate() {
         super._terminate(),
-            o.A.removeChangeListener(this.handlePopoutWindowUpdate),
-            s.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            d.A.removeChangeListener(this.handlePopoutWindowUpdate),
+            u.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     showErrorModal(e) {
         let { code: t, message: n } = e;
-        (0, a.mMO)(
+        (0, s.openModalLazy)(
             async () => (e) =>
                 (0, r.jsx)(i.Modal, {
-                    title: A.intl.formatToPlainString(A.t.hbiAO6, { code: t }),
+                    title: S.intl.formatToPlainString(S.t.hbiAO6, { code: t }),
                     subtitle: n,
-                    actions: [{ text: A.intl.string(A.t.BddRzS), onClick: e.onClose, variant: "primary" }],
+                    actions: [{ text: S.intl.string(S.t.BddRzS), onClick: e.onClose, variant: "primary" }],
                     ...e,
                 }),
         );
     }
     showLaunchErrorModal(e) {
-        (0, a.mMO)(
+        (0, s.openModalLazy)(
             async () => (t) =>
                 (0, r.jsx)(i.Modal, {
-                    title: A.intl.string(A.t.PtobXW),
+                    title: S.intl.string(S.t.PtobXW),
                     subtitle: e,
-                    actions: [{ text: A.intl.string(A.t.BddRzS), onClick: t.onClose, variant: "primary" }],
+                    actions: [{ text: S.intl.string(S.t.BddRzS), onClick: t.onClose, variant: "primary" }],
                     ...t,
                 }),
         );
     }
     showDevShelfOverrideEnabled() {
-        (0, a.showToast)((0, a.createToast)(A.intl.string(A.t.JfA7IK), a.ToastType.SUCCESS));
+        (0, a.P0)((0, o.o)(S.intl.string(S.t.JfA7IK), l.Ck.SUCCESS));
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: i = !0 } = e;
-        s.h.wait(() => {
-            (0, d._H)({ location: t, applicationId: n, showFeedback: r });
+        u.h.wait(() => {
+            (0, E._H)({ location: t, applicationId: n, showFeedback: r });
         }),
-            (0, c.f)() && i && (0, l.close)(E.MLl.ACTIVITY_POPOUT);
+            (0, f.f)() && i && (0, c.close)(T.MLl.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
-            r = (0, m.A)(t.id, n);
-        (0, h.bK)(r);
+            r = (0, A.A)(t.id, n);
+        (0, g.bK)(r);
     }
     handleRPCDisconnect = (e) => {
         let { reason: t, application: n } = e;
@@ -76,24 +79,24 @@ class y extends _.A {
     releaseWebView() {}
     handlePopoutWindowOpen = (e) => {
         let { key: t } = e;
-        t === E.MLl.ACTIVITY_POPOUT && (T = !1);
+        t === T.MLl.ACTIVITY_POPOUT && (N = !1);
     };
     popInActivity = () => {
-        (T = !0), l.close(E.MLl.ACTIVITY_POPOUT);
-        let e = f.Ay.getCurrentEmbeddedActivity();
+        (N = !0), c.close(T.MLl.ACTIVITY_POPOUT);
+        let e = p.Ay.getCurrentEmbeddedActivity();
         if (null != e) {
-            let t = (0, p.H)(e.location);
-            null != t && (0, u.iN)(t), (0, d.gk)(g.Gd.PANEL);
+            let t = (0, m.H)(e.location);
+            null != t && (0, _.iN)(t), (0, E.gk)(I.Gd.PANEL);
         }
     };
     handlePopoutWindowUpdate = () => {
-        let e = I,
-            t = o.A.getWindowOpen(E.MLl.ACTIVITY_POPOUT);
-        if (e && !t && !T) {
-            let e = f.Ay.getCurrentEmbeddedActivity();
+        let e = y,
+            t = d.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT);
+        if (e && !t && !N) {
+            let e = p.Ay.getCurrentEmbeddedActivity();
             null != e && this.leaveActivity({ location: e.location, applicationId: e.applicationId });
         }
-        I = t;
+        y = t;
     };
 }
-let S = new y();
+let R = new O();

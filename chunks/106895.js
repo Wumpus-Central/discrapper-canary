@@ -1,63 +1,64 @@
-a.d(e, { default: () => m });
+a.d(e, { default: () => h });
 var i = a(627968),
     n = a(64700),
-    s = a(158954),
-    l = a(397927),
-    r = a(47167),
-    d = a(769015),
-    c = a(514810),
-    o = a(985018),
-    x = a(869527);
-let m = (t) => {
-    let { channel: e, application: m, onClose: h, transitionState: u } = t,
-        p = (0, c.N)(e),
-        j = n.useCallback(
+    s = a(189213),
+    l = a(192308),
+    r = a(834730),
+    d = a(47167),
+    c = a(769015),
+    o = a(514810),
+    x = a(985018),
+    m = a(748386);
+let h = (t) => {
+    let { channel: e, application: h, onClose: p, transitionState: u } = t,
+        j = (0, o.N)(e),
+        v = n.useCallback(
             () => (
-                h(),
-                (0, l.mMO)(async () => {
+                p(),
+                (0, l.openModalLazy)(async () => {
                     let { default: t } = await a.e("93154").then(a.bind(a, 428185));
-                    return (a) => (0, i.jsx)(t, { ...a, channelId: e.id, application: m });
+                    return (a) => (0, i.jsx)(t, { ...a, channelId: e.id, application: h });
                 })
             ),
-            [m, e.id, h],
+            [h, e.id, p],
         ),
-        v = (0, r.Ay)(e, !0);
+        y = (0, d.Ay)(e, !0);
     return (0, i.jsx)(s.Modal, {
         transitionState: u,
-        "aria-label": o.intl.string(o.t.OJknhi),
-        onClose: h,
-        title: o.intl.string(o.t.OJknhi),
+        "aria-label": x.intl.string(x.t.OJknhi),
+        onClose: p,
+        title: x.intl.string(x.t.OJknhi),
         actions: [
-            { text: o.intl.string(o.t["ETE/oC"]), onClick: h, variant: "secondary" },
-            { text: o.intl.string(o.t.LLWaxQ), onClick: j, variant: "critical-primary" },
+            { text: x.intl.string(x.t["ETE/oC"]), onClick: p, variant: "secondary" },
+            { text: x.intl.string(x.t.LLWaxQ), onClick: v, variant: "critical-primary" },
         ],
         children: (0, i.jsxs)("div", {
-            className: x.Qs,
+            className: m.Qs,
             children: [
-                (0, i.jsx)(d.A, { game: m, size: d.M.XLARGE }),
+                (0, i.jsx)(c.A, { game: h, size: c.M.XLARGE }),
                 (0, i.jsxs)("div", {
-                    className: x.yu,
+                    className: m.yu,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: x.py,
+                            className: m.py,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.E, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
-                                    children: m.name,
+                                    children: h.name,
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: o.intl.format(o.t["0NJZAU"], { channelName: v }),
+                                    children: x.intl.format(x.t["0NJZAU"], { channelName: y }),
                                 }),
                             ],
                         }),
-                        null != p &&
+                        null != j &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: x.yF }),
-                                    (0, i.jsx)(l.Text, { variant: "text-xs/normal", color: "text-muted", children: p }),
+                                    (0, i.jsx)("div", { className: m.yF }),
+                                    (0, i.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", children: j }),
                                 ],
                             }),
                     ],

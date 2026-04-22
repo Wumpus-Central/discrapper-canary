@@ -1,18 +1,12 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(340287),
-    s = n(615300),
+    s = n(340287),
+    a = n(615300),
     o = n(621466),
     l = n(652215);
-let u = (e, t) => {
-        let { x: n, y: r } = e,
-            { x: i, y: a } = t;
-        return Math.pow(n - i, 2) + Math.pow(r - a, 2);
-    },
-    c = 9;
-class d extends i.PureComponent {
+class u extends i.PureComponent {
     _ref = i.createRef();
     _height = 0;
     _width = 0;
@@ -23,9 +17,9 @@ class d extends i.PureComponent {
     static defaultProps = { maxX: 0, maxY: 0, initialX: 0, initialY: 0, disabled: !1, dragAnywhere: !1 };
     constructor(e) {
         super(e);
-        const t = new s.A.Value(e.initialX),
-            n = new s.A.Value(e.initialY);
-        this.state = { dragging: !1, position: new s.A.ValueXY({ x: t, y: n }) };
+        const t = new a.A.Value(e.initialX),
+            n = new a.A.Value(e.initialY);
+        this.state = { dragging: !1, position: new a.A.ValueXY({ x: t, y: n }) };
     }
     componentDidMount() {
         let { initialX: e, initialY: t } = this.props;
@@ -39,8 +33,8 @@ class d extends i.PureComponent {
             r = arguments.length > 3 ? arguments[3] : void 0,
             i = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
         i && this.grabDimensions();
-        let a = this.translate(e, t);
-        s.A.spring(this.state.position, { toValue: { x: a.x, y: a.y }, ...n }).start(r);
+        let s = this.translate(e, t);
+        a.A.spring(this.state.position, { toValue: { x: s.x, y: s.y }, ...n }).start(r);
     }
     setPosition(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -63,18 +57,18 @@ class d extends i.PureComponent {
     render() {
         let { dragging: e, position: t } = this.state,
             { className: n, children: i } = this.props,
-            a = [0, 1],
+            s = [0, 1],
             o = ["0px", "1px"],
-            l = s.A.accelerate({
+            l = a.A.accelerate({
                 pointerEvents: e ? "none" : "auto",
                 cursor: e ? "grabbing" : "grab",
                 transform: [
-                    { translateX: t.x.interpolate({ inputRange: a, outputRange: o }) },
-                    { translateY: t.y.interpolate({ inputRange: a, outputRange: o }) },
+                    { translateX: t.x.interpolate({ inputRange: s, outputRange: o }) },
+                    { translateY: t.y.interpolate({ inputRange: s, outputRange: o }) },
                 ],
                 ...this.props.style,
             });
-        return (0, r.jsx)(s.A.div, {
+        return (0, r.jsx)(a.A.div, {
             ref: this._ref,
             className: n,
             onMouseDown: this.handleMouseDown,
@@ -90,8 +84,8 @@ class d extends i.PureComponent {
         let { dragAnywhere: t, disabled: n, selector: r } = this.props;
         if (n) return;
         let { position: i } = this.state,
-            a = e.target;
-        if (e.button === l.hE4.PRIMARY && (t || (null != r && a.matches(r)))) {
+            s = e.target;
+        if (e.button === l.hE4.PRIMARY && (t || (null != r && s.matches(r)))) {
             this.grabDimensions(),
                 (this._dragStart = { x: e.clientX, y: e.clientY }),
                 (this._offsetX = e.clientX - i.x._value),
@@ -110,9 +104,15 @@ class d extends i.PureComponent {
         e.preventDefault();
         let { onDragStart: t, onDrag: n, disabled: r } = this.props;
         if (r) return;
-        let { dragging: i, dragging: s } = this.state,
+        let { dragging: i, dragging: a } = this.state,
             o = i;
-        !i && u(this._dragStart, { x: e.clientX, y: e.clientY }) > c && (o = !0),
+        !i &&
+            ((e, t) => {
+                let { x: n, y: r } = e,
+                    { x: i, y: s } = t;
+                return Math.pow(n - i, 2) + Math.pow(r - s, 2);
+            })(this._dragStart, { x: e.clientX, y: e.clientY }) > 9 &&
+            (o = !0),
             o &&
                 (this.animateToPosition(
                     e.clientX - this._offsetX,
@@ -121,18 +121,18 @@ class d extends i.PureComponent {
                     null,
                     !1,
                 ),
-                (0, a.flushSync)(() => {
-                    this.setState({ dragging: o }), s || t?.(e.clientX, e.clientY), n?.(e.clientX, e.clientY);
+                (0, s.flushSync)(() => {
+                    this.setState({ dragging: o }), a || t?.(e.clientX, e.clientY), n?.(e.clientX, e.clientY);
                 }));
     };
     handleMouseUp = (e) => {
         this._removeListeners(),
             this.state.dragging &&
-                (0, a.flushSync)(() => {
+                (0, s.flushSync)(() => {
                     this.setState({ dragging: !1 });
                     let { onDragEnd: t } = this.props;
                     t?.(e.clientX, e.clientY);
                 });
     };
 }
-let _ = d;
+let d = u;

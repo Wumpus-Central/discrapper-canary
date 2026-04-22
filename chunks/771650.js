@@ -1,102 +1,90 @@
 "use strict";
-n.d(t, {
-    Ay: () => ec,
-    G0: () => eo,
-    If: () => el,
-    WL: () => eu,
-    Yd: () => W,
-    gU: () => ea,
-    sC: () => B,
-    v1: () => er,
-}),
+n.d(t, { Ay: () => et, G0: () => J, If: () => Z, WL: () => ee, Yd: () => F, gU: () => Q, sC: () => G, v1: () => z }),
     n(321073),
     n(667532);
-var r = n(91871),
-    i = n.n(r),
-    s = n(735438),
-    a = n.n(s),
-    o = n(989349),
-    l = n.n(o),
-    u = n(629357),
+var r,
+    i = n(91871),
+    s = n.n(i),
+    a = n(735438),
+    o = n.n(a),
+    l = n(989349),
+    u = n.n(l),
+    d = n(629357),
     c = n(47167),
-    d = n(734057),
-    _ = n(808728),
-    f = n(994500),
-    p = n(309010),
-    h = n(351906),
+    _ = n(734057),
+    f = n(808728),
+    E = n(994500),
+    h = n(309010),
+    p = n(351906),
     m = n(287809),
-    E = n(248465),
-    g = n(427262),
-    A = n(692986),
-    I = n(268988),
-    T = n(822382),
-    S = n(5990),
-    y = n(163179),
-    v = n(652215),
-    N = n(985018);
-function C() {
+    g = n(248465),
+    A = n(427262),
+    I = n(692986),
+    T = n(268988),
+    S = n(822382),
+    y = n(5990),
+    N = n(163179),
+    O = n(652215),
+    R = n(985018);
+function v() {
     return new Set(
-        l()
+        u()
             .months()
             .map((e) => e.toLowerCase()),
     );
 }
-function R() {
+function C() {
     return new Set(
-        l()
+        u()
             .weekdays()
             .map((e) => e.toLowerCase()),
     );
 }
-function O() {
+function b() {
     let e = new Date().getFullYear();
     return new Set(
-        a()
+        o()
             .range(2015, e + 1)
             .map((e) => e.toString()),
     );
 }
-function b(e, t) {
+function D(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function D(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return b(l()().startOf(e).add(t, e), e);
+    return D(u()().startOf(e).add(t, e), e);
 }
-function L(e, t, n) {
-    return b(l()(e, t).local(), n);
+function w(e, t, n) {
+    return D(u()(e, t).local(), n);
 }
-function w() {
+function M() {
     return {
-        [N.intl.string(N.t.HYiVEQ)]: () => D("day"),
-        [N.intl.string(N.t.cu86KC)]: () => D("day", -1),
-        [N.intl.string(N.t["FvBj/6"])]: () => D("week"),
-        [N.intl.string(N.t["20uWCw"])]: () => D("month"),
-        [N.intl.string(N.t["dXC/hn"])]: () => D("year"),
+        [R.intl.string(R.t.HYiVEQ)]: () => L("day"),
+        [R.intl.string(R.t.cu86KC)]: () => L("day", -1),
+        [R.intl.string(R.t["FvBj/6"])]: () => L("week"),
+        [R.intl.string(R.t["20uWCw"])]: () => L("month"),
+        [R.intl.string(R.t["dXC/hn"])]: () => L("year"),
     };
 }
-let M = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
-    x = "\\d{4}",
-    P = "([0-9]{4})-([0-9]{1,2})",
-    k = "([^\\d\\s]+)",
-    U = RegExp(`(?:\\s*(${M}|${P}|${x}|${k}))`, "i"),
-    G = RegExp("\\s*(true|false)", "i");
-function F(e) {
+let P = RegExp("(?:\\s*(([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})|([0-9]{4})-([0-9]{1,2})|\\d{4}|([^\\d\\s]+)))", "i"),
+    U = RegExp("\\s*(true|false)", "i");
+function k(e) {
     return `${e}:`;
 }
-function V(e) {
-    return RegExp(F(e), "i");
+function x(e) {
+    return RegExp(k(e), "i");
 }
-function B(e) {
+function G(e) {
     let t,
         n = e.getMatch(1),
         r = (e) => (null != e ? e?.id : null);
     return (
         null !=
-            (t = v.Ut1.test(n)
+            (t = O.Ut1.test(n)
                 ? n
                 : r(
-                      n === v.ME
+                      n === O.ME
                           ? m.default.getCurrentUser()
                           : null != e.getMatch(4)
                             ? m.default.findByTag(e.getMatch(4))
@@ -104,21 +92,21 @@ function B(e) {
                   )) && (e.setData("userId", t), !0)
     );
 }
-function H(e, t) {
+function V(e, t) {
     let n,
         r,
         i = e.getFullMatch().trim().toLowerCase(),
-        s = w()[i];
+        s = M()[i];
     return (
         null != s
             ? ([n, r] = s())
-            : C().has(i)
-              ? ([n, r] = L(i, "MMMM", "month"))
-              : R().has(i)
-                ? ([n, r] = L(i, "dddd", "day"))
-                : O().has(i)
-                  ? ([n, r] = L(i, "YYYY", "year"))
-                  : ([n, r] = L(i, v.ump, "day")),
+            : v().has(i)
+              ? ([n, r] = w(i, "MMMM", "month"))
+              : C().has(i)
+                ? ([n, r] = w(i, "dddd", "day"))
+                : b().has(i)
+                  ? ([n, r] = w(i, "YYYY", "year"))
+                  : ([n, r] = w(i, O.ump, "day")),
         !!(n.isValid() && r.isValid()) &&
             ("before" === t ? ((r = n), (n = null)) : "after" === t && ((n = r), (r = null)),
             e.setData("start", n),
@@ -126,489 +114,490 @@ function H(e, t) {
             !0)
     );
 }
-function j(e, t, n) {
-    let r = _.Ay.getChannels(n)[_.I6].concat(_.Ay.getChannels(n)[_.vM]),
-        i = _.Ay.getTextChannelNameDisambiguations(n),
-        s = a()
-            .chain(r)
-            .map((e) => {
-                let { channel: t } = e;
-                return t;
-            })
-            .concat(null != n ? d.A.getAllThreadsForGuild(n) : [])
-            .filter((e) => t === (i[e.id]?.name ?? (0, c.m1)(e, m.default, f.A)))
-            .value();
-    return (
-        s?.length > 0 &&
-        (e.setData(
-            "channelIds",
-            s.map((e) => e.id),
-        ),
-        !0)
-    );
+function F(e, t) {
+    var n, r, i;
+    let s = e.getMatch(1);
+    if (O.Ut1.test(s)) return e.setData("channelIds", [s]), !0;
+    if (
+        (s.startsWith('"') && s.endsWith('"') && (s = s.substring(1, s.length - 1).replaceAll(/\\(.)/g, (e, t) => t)),
+        (0, S._B)(t))
+    ) {
+        let i, a, l;
+        return (
+            (n = s),
+            (r = t.guildId),
+            (i = f.Ay.getChannels(r)[f.I6].concat(f.Ay.getChannels(r)[f.vM])),
+            (a = f.Ay.getTextChannelNameDisambiguations(r)),
+            (l = o()
+                .chain(i)
+                .map((e) => {
+                    let { channel: t } = e;
+                    return t;
+                })
+                .concat(null != r ? _.A.getAllThreadsForGuild(r) : [])
+                .filter((e) => n === (a[e.id]?.name ?? (0, c.m1)(e, m.default, E.A)))
+                .value()),
+            l?.length > 0 &&
+                (e.setData(
+                    "channelIds",
+                    l.map((e) => e.id),
+                ),
+                !0)
+        );
+    }
+    if (t.type === O.I4_.DMS && !p.A.hidePersonalInformation) {
+        let t;
+        return (
+            (i = s),
+            (t = Object.values(_.A.getMutablePrivateChannels()).filter((e) => {
+                if (e.isGroupDM() && i === (0, c.m1)(e, m.default, E.A)) return !0;
+                if (e.isDM()) {
+                    let t = e.getRecipientId(),
+                        n = m.default.getUser(t);
+                    return null != n && i === A.Ay.getUserTag(n);
+                }
+                return !1;
+            })),
+            t?.length > 0 &&
+                (e.setData(
+                    "channelIds",
+                    t.map((e) => e.id),
+                ),
+                !0)
+        );
+    }
+    return !1;
 }
-function Y(e, t) {
-    let n = Object.values(d.A.getMutablePrivateChannels()).filter((e) => {
-        if (e.isGroupDM() && t === (0, c.m1)(e, m.default, f.A)) return !0;
-        if (e.isDM()) {
-            let n = e.getRecipientId(),
-                r = m.default.getUser(n);
-            return null != r && t === g.Ay.getUserTag(r);
-        }
-        return !1;
-    });
-    return (
-        n?.length > 0 &&
-        (e.setData(
-            "channelIds",
-            n.map((e) => e.id),
-        ),
-        !0)
-    );
-}
-function W(e, t) {
-    let n = e.getMatch(1);
-    return v.Ut1.test(n)
-        ? (e.setData("channelIds", [n]), !0)
-        : (n.startsWith('"') && n.endsWith('"') && (n = n.substring(1, n.length - 1).replaceAll(/\\(.)/g, (e, t) => t)),
-            (0, T._B)(t))
-          ? j(e, n, t.guildId)
-          : t.type === v.I4_.DMS && !h.A.hidePersonalInformation && Y(e, n);
-}
-function K(e) {
+function B(e) {
     let t = {
-        [N.intl.string(N.t.ZNR2fi)]: "link",
-        [N.intl.string(N.t["20uQR3"])]: "embed",
-        [N.intl.string(N.t.L4lxyE)]: "poll",
-        [N.intl.string(N.t.nrpA5E)]: "snapshot",
-        [N.intl.string(N.t["AV/v6i"])]: "file",
-        [N.intl.string(N.t.XM9XGP)]: "video",
-        [N.intl.string(N.t.TNLcpx)]: "image",
-        [N.intl.string(N.t.F8Wf0e)]: "sound",
-        [N.intl.string(N.t.PJgX2h)]: "sticker",
+        [R.intl.string(R.t.ZNR2fi)]: "link",
+        [R.intl.string(R.t["20uQR3"])]: "embed",
+        [R.intl.string(R.t.L4lxyE)]: "poll",
+        [R.intl.string(R.t.nrpA5E)]: "snapshot",
+        [R.intl.string(R.t["AV/v6i"])]: "file",
+        [R.intl.string(R.t.XM9XGP)]: "video",
+        [R.intl.string(R.t.TNLcpx)]: "image",
+        [R.intl.string(R.t.F8Wf0e)]: "sound",
+        [R.intl.string(R.t.PJgX2h)]: "sticker",
     };
-    return (0, y.d3)("has", t, e);
+    return (0, N.d3)("has", t, e);
 }
-function $(e) {
+function H(e) {
     let t = {
-        [N.intl.string(N.t.tPZo4p)]: "user",
-        [N.intl.string(N.t.JL7sRS)]: "bot",
-        [N.intl.string(N.t.WjkIKU)]: "webhook",
+        [R.intl.string(R.t.tPZo4p)]: "user",
+        [R.intl.string(R.t.JL7sRS)]: "bot",
+        [R.intl.string(R.t.WjkIKU)]: "webhook",
     };
-    return (0, y.d3)("author_type", t, e);
+    return (0, N.d3)("author_type", t, e);
 }
-function z() {
-    return [...Array.from(C()), ...Array.from(R()), ...Array.from(O()), ...Object.keys(w())];
+function Y(e, t, n) {
+    return W(e, t, [...Array.from(v()), ...Array.from(C()), ...Array.from(b()), ...Object.keys(M())]).map((e) => ({
+        ...e,
+        group: n,
+        key: `${n}-${e.text}`,
+    }));
 }
-function q(e, t, n) {
-    return Z(e, t, z()).map((e) => ({ ...e, group: n, key: `${n}-${e.text}` }));
-}
-function Z(e, t, n) {
+function W(e, t, n) {
     let r = e.toLocaleLowerCase();
-    return a()(n)
-        .filter((e) => i()(r, e.toLocaleLowerCase()))
+    return o()(n)
+        .filter((e) => s()(r, e.toLocaleLowerCase()))
         .take(t)
         .map((e) => ({ text: e }))
         .value();
 }
-function X(e) {
-    if (null == e) return [];
-    let t = new Set(),
-        n = [];
-    e.forEach((e) => {
-        let t = e.getData("channelIds");
-        null != t && t.forEach((e) => n.push(e));
-    });
-    let r = (e) => {
-            null == e || t.has(e.id) || (i.push(e), t.add(e.id));
-        },
-        i = [];
-    return (
-        n.forEach((e) => {
-            let t = d.A.getChannel(e);
-            if (null != t)
-                if (t.isDM()) {
-                    let e = t.getRecipientId();
-                    r(m.default.getUser(e));
-                } else
-                    t.isGroupDM() &&
-                        t.recipients.forEach((e) => {
-                            r(m.default.getUser(e));
-                        });
-        }),
-        i
-    );
-}
-function Q(e) {
+function j(e) {
     let { query: t, searchContext: n, maxResults: r = 10, tokens: i } = e,
-        s = { query: (t = t.trim().split("#")[0]), limit: r, request: !1, boosters: (0, E.X3)(u.rD.USER) },
+        s = { query: (t = t.trim().split("#")[0]), limit: r, request: !1, boosters: (0, g.X3)(d.rD.USER) },
         a = [];
     switch (n.type) {
-        case v.I4_.GUILD:
-        case v.I4_.GUILD_CHANNEL:
-        case v.I4_.THREAD:
+        case O.I4_.GUILD:
+        case O.I4_.GUILD_CHANNEL:
+        case O.I4_.THREAD:
             if (0 === t.length) {
                 let e = [],
                     t = new Set(),
                     i = (n) => {
                         null == n ||
                             t.has(n.id) ||
-                            f.A.isBlockedOrIgnored(n.id) ||
-                            (e.push({ user: n, text: g.Ay.getUserTag(n) }), t.add(n.id));
+                            E.A.isBlockedOrIgnored(n.id) ||
+                            (e.push({ user: n, text: A.Ay.getUserTag(n) }), t.add(n.id));
                     },
-                    s = p.A.getCurrentlySelectedChannelId(n.guildId);
+                    s = h.A.getCurrentlySelectedChannelId(n.guildId);
                 return (
-                    E.Ay.getRecentlyTalked(s, r).forEach((e) => {
+                    g.Ay.getRecentlyTalked(s, r).forEach((e) => {
                         let { record: t } = e;
                         return i(t);
                     }),
-                    I.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => i(m.default.getUser(e))),
+                    T.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => i(m.default.getUser(e))),
                     e.slice(0, r)
                 );
             }
-            a = E.Ay.queryGuildUsers({ ...s, guildId: n.guildId });
+            a = g.Ay.queryGuildUsers({ ...s, guildId: n.guildId });
             break;
-        case v.I4_.CHANNEL:
-            a = E.Ay.queryChannelUsers({ ...s, channelId: n.channelId });
+        case O.I4_.CHANNEL:
+            a = g.Ay.queryChannelUsers({ ...s, channelId: n.channelId });
             break;
-        case v.I4_.DMS:
-            let o = X(i ?? []);
+        case O.I4_.DMS:
+            let o = (function (e) {
+                if (null == e) return [];
+                let t = new Set(),
+                    n = [];
+                e.forEach((e) => {
+                    let t = e.getData("channelIds");
+                    null != t && t.forEach((e) => n.push(e));
+                });
+                let r = (e) => {
+                        null == e || t.has(e.id) || (i.push(e), t.add(e.id));
+                    },
+                    i = [];
+                return (
+                    n.forEach((e) => {
+                        let t = _.A.getChannel(e);
+                        if (null != t)
+                            if (t.isDM()) {
+                                let e = t.getRecipientId();
+                                r(m.default.getUser(e));
+                            } else
+                                t.isGroupDM() &&
+                                    t.recipients.forEach((e) => {
+                                        r(m.default.getUser(e));
+                                    });
+                    }),
+                    i
+                );
+            })(i ?? []);
             if (null != o && o.length > 0) {
                 let e = m.default.getCurrentUser();
-                null != e && o.push(e), (a = E.Ay.queryUsers({ ...s, users: o }));
-            } else a = E.Ay.queryAllUsers({ ...s });
+                null != e && o.push(e), (a = g.Ay.queryUsers({ ...s, users: o }));
+            } else a = g.Ay.queryAllUsers({ ...s });
             break;
         default:
             return [];
     }
     let l = m.default.getCurrentUser(),
-        c = t.toLowerCase().replace(/^@/, ""),
-        d = null != l && t.length > 0 && (N.intl.string(N.t.Qf3ptv).startsWith(c) || v.ME.substr(1).startsWith(c)),
-        _ = a
+        u = t.toLowerCase().replace(/^@/, ""),
+        c = null != l && t.length > 0 && (R.intl.string(R.t.Qf3ptv).startsWith(u) || O.ME.substr(1).startsWith(u)),
+        f = a
             .filter((e) => {
                 let { record: t } = e;
-                return !f.A.isBlockedOrIgnored(t.id) && (!d || t.id !== l?.id);
+                return !E.A.isBlockedOrIgnored(t.id) && (!c || t.id !== l?.id);
             })
             .map((e) => {
                 let { record: t } = e;
-                return { text: g.Ay.getUserTag(t), user: t };
+                return { text: A.Ay.getUserTag(t), user: t };
             });
-    return d && _.unshift({ text: v.ME, user: l }), _;
+    return c && f.unshift({ text: O.ME, user: l }), f;
 }
-function J(e, t, n) {
-    let r = E.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, boosters: (0, E.X3)(u.rD.GROUP_DM) }),
-        i = E.Ay.queryDMChannels({ query: e, limit: t, boosters: (0, E.X3)(u.rD.USER) }),
-        s = a()(r.concat(i))
-            .sort(u.vH)
-            .map((e) => {
-                let { record: t, comparator: n } = e;
-                return { text: n, channel: t, key: t?.id };
-            })
-            .filter((e) => null != e.text && null != e.channel && null != e.key)
-            .value();
-    if (0 === e.length && n) {
-        let e = p.A.getChannelId(),
-            t = d.A.getChannel(e);
-        if (null != t && t.isPrivate()) {
-            let n = s.findIndex((t) => {
-                let { channel: n } = t;
-                return n.id === e;
-            });
-            if (-1 !== n) {
-                let e = s[n];
-                s.splice(n, 1), s.unshift(e);
-            } else if (t.isGroupDM()) {
-                let e = (0, c.m1)(t, m.default, f.A);
-                s.unshift({ text: e, channel: t, key: t.id });
-            } else if (t.isDM()) {
-                let e = t.getRecipientId(),
-                    n = m.default.getUser(e);
-                if (null != n) {
-                    let e = g.Ay.getUserTag(n);
-                    s.unshift({ text: e, channel: t, key: t.id });
-                }
-            }
-        }
-    }
-    return s.slice(0, t);
-}
-function ee(e, t, n) {
-    let r = E.Ay.queryChannels({
-        query: e,
-        type: _.I6,
-        guildId: t,
-        limit: 1 / 0,
-        allowEmptyQueries: !0,
-        allowSnowflake: !0,
-        includeAllThreads: !0,
-        boosters: (0, E.X3)(u.rD.TEXT_CHANNEL),
-    })
-        .concat(
-            E.Ay.queryChannels({
-                query: e,
-                type: _.vM,
-                guildId: t,
-                limit: 1 / 0,
-                allowEmptyQueries: !0,
-                allowSnowflake: !0,
-                boosters: (0, E.X3)(u.rD.VOICE_CHANNEL),
-            }),
-        )
-        .map((e) => {
-            let { record: t } = e;
-            return t;
-        });
-    if (0 === e.length) {
-        let e = p.A.getChannelId(t),
-            n = r.find((t) => t.id === e);
-        null != n && (r.splice(r.indexOf(n), 1), r.unshift(n));
-    }
-    let i = _.Ay.getTextChannelNameDisambiguations(t);
-    return a()(r)
-        .take(n)
-        .map((e) => ({ text: `${i[e.id]?.name ?? ((0, c.m1))(e, m.default, f.A)}`, channel: e, key: e.id }))
-        .value();
-}
-function et(e) {
+function K(e) {
     let { query: t, searchContext: n, maxResults: r } = e;
     return ((t = t.trim()).startsWith('"') && t.endsWith('"')
         ? (t = t.substring(1, t.length - 1).replaceAll(/\\(.)/g, (e, t) => t))
         : t.startsWith('"') && (t = t.substring(1).replaceAll(/\\(.)/g, (e, t) => t)),
     "#" === t[0] && (t = t.substring(1)),
-    (0, T._B)(n))
-        ? ee(t, n.guildId, r)
-        : n.type !== v.I4_.DMS || h.A.hidePersonalInformation
+    (0, S._B)(n))
+        ? (function (e, t, n) {
+              let r = g.Ay.queryChannels({
+                  query: e,
+                  type: f.I6,
+                  guildId: t,
+                  limit: 1 / 0,
+                  allowEmptyQueries: !0,
+                  allowSnowflake: !0,
+                  includeAllThreads: !0,
+                  boosters: (0, g.X3)(d.rD.TEXT_CHANNEL),
+              })
+                  .concat(
+                      g.Ay.queryChannels({
+                          query: e,
+                          type: f.vM,
+                          guildId: t,
+                          limit: 1 / 0,
+                          allowEmptyQueries: !0,
+                          allowSnowflake: !0,
+                          boosters: (0, g.X3)(d.rD.VOICE_CHANNEL),
+                      }),
+                  )
+                  .map((e) => {
+                      let { record: t } = e;
+                      return t;
+                  });
+              if (0 === e.length) {
+                  let e = h.A.getChannelId(t),
+                      n = r.find((t) => t.id === e);
+                  null != n && (r.splice(r.indexOf(n), 1), r.unshift(n));
+              }
+              let i = f.Ay.getTextChannelNameDisambiguations(t);
+              return o()(r)
+                  .take(n)
+                  .map((e) => ({ text: `${i[e.id]?.name ?? ((0, c.m1))(e, m.default, E.A)}`, channel: e, key: e.id }))
+                  .value();
+          })(t, n.guildId, r)
+        : n.type !== O.I4_.DMS || p.A.hidePersonalInformation
           ? []
-          : J(t, r, !0);
+          : (function (e, t, n) {
+                let r = g.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, boosters: (0, g.X3)(d.rD.GROUP_DM) }),
+                    i = g.Ay.queryDMChannels({ query: e, limit: t, boosters: (0, g.X3)(d.rD.USER) }),
+                    s = o()(r.concat(i))
+                        .sort(d.vH)
+                        .map((e) => {
+                            let { record: t, comparator: n } = e;
+                            return { text: n, channel: t, key: t?.id };
+                        })
+                        .filter((e) => null != e.text && null != e.channel && null != e.key)
+                        .value();
+                if (0 === e.length && n) {
+                    let e = h.A.getChannelId(),
+                        t = _.A.getChannel(e);
+                    if (null != t && t.isPrivate()) {
+                        let n = s.findIndex((t) => {
+                            let { channel: n } = t;
+                            return n.id === e;
+                        });
+                        if (-1 !== n) {
+                            let e = s[n];
+                            s.splice(n, 1), s.unshift(e);
+                        } else if (t.isGroupDM()) {
+                            let e = (0, c.m1)(t, m.default, E.A);
+                            s.unshift({ text: e, channel: t, key: t.id });
+                        } else if (t.isDM()) {
+                            let e = t.getRecipientId(),
+                                n = m.default.getUser(e);
+                            if (null != n) {
+                                let e = A.Ay.getUserTag(n);
+                                s.unshift({ text: e, channel: t, key: t.id });
+                            }
+                        }
+                    }
+                }
+                return s.slice(0, t);
+            })(t, r, !0);
 }
-let en = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
-var er = (function (e) {
-    return (e.FILTER = "FILTER"), (e.ANSWER = "ANSWER"), e;
-})({});
-function ei(e) {
-    let t = [N.intl.string(N.t.tPZo4p), N.intl.string(N.t.JL7sRS), N.intl.string(N.t.WjkIKU)],
+let $ = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
+var z = (((r = {}).FILTER = "FILTER"), (r.ANSWER = "ANSWER"), r);
+function q(e) {
+    let t = [R.intl.string(R.t.tPZo4p), R.intl.string(R.t.JL7sRS), R.intl.string(R.t.WjkIKU)],
         n = [
-            N.intl.string(N.t.TNLcpx),
-            N.intl.string(N.t.XM9XGP),
-            N.intl.string(N.t.ZNR2fi),
-            N.intl.string(N.t["AV/v6i"]),
-            N.intl.string(N.t["20uQR3"]),
-            N.intl.string(N.t.F8Wf0e),
-            N.intl.string(N.t.L4lxyE),
-            N.intl.string(N.t.PJgX2h),
-            N.intl.string(N.t.nrpA5E),
+            R.intl.string(R.t.TNLcpx),
+            R.intl.string(R.t.XM9XGP),
+            R.intl.string(R.t.ZNR2fi),
+            R.intl.string(R.t["AV/v6i"]),
+            R.intl.string(R.t["20uQR3"]),
+            R.intl.string(R.t.F8Wf0e),
+            R.intl.string(R.t.L4lxyE),
+            R.intl.string(R.t.PJgX2h),
+            R.intl.string(R.t.nrpA5E),
         ];
     return {
-        [v.LWr.FILTER_FROM]: {
-            regex: V(N.intl.string(N.t["1TUdFo"])),
+        [O.LWr.FILTER_FROM]: {
+            regex: x(R.intl.string(R.t["1TUdFo"])),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t["1TUdFo"])),
-            plainText: N.intl.string(N.t["1TUdFo"]),
-            validator: () => (0, S.Q6)(),
-            getAutocompletions: Q,
+            key: k(R.intl.string(R.t["1TUdFo"])),
+            plainText: R.intl.string(R.t["1TUdFo"]),
+            validator: () => (0, y.Q6)(),
+            getAutocompletions: j,
         },
-        [v.LWr.ANSWER_USERNAME_FROM]: {
-            follows: [v.LWr.FILTER_FROM],
-            regex: en,
-            validator: B,
+        [O.LWr.ANSWER_USERNAME_FROM]: {
+            follows: [O.LWr.FILTER_FROM],
+            regex: $,
+            validator: G,
             mutable: !0,
             componentType: "ANSWER",
             queryKey: "author_id",
         },
-        [v.LWr.FILTER_MENTIONS]: {
-            regex: V(N.intl.string(N.t["i96lO+"])),
+        [O.LWr.FILTER_MENTIONS]: {
+            regex: x(R.intl.string(R.t["i96lO+"])),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t["i96lO+"])),
-            plainText: N.intl.string(N.t["i96lO+"]),
-            validator: () => (0, S.tH)(),
-            getAutocompletions: Q,
+            key: k(R.intl.string(R.t["i96lO+"])),
+            plainText: R.intl.string(R.t["i96lO+"]),
+            validator: () => (0, y.tH)(),
+            getAutocompletions: j,
         },
-        [v.LWr.ANSWER_USERNAME_MENTIONS]: {
-            follows: [v.LWr.FILTER_MENTIONS],
-            regex: en,
-            validator: B,
+        [O.LWr.ANSWER_USERNAME_MENTIONS]: {
+            follows: [O.LWr.FILTER_MENTIONS],
+            regex: $,
+            validator: G,
             mutable: !0,
             componentType: "ANSWER",
             queryKey: "mentions",
         },
-        [v.LWr.FILTER_HAS]: {
-            regex: V(N.intl.string(N.t.CqCvir)),
+        [O.LWr.FILTER_HAS]: {
+            regex: x(R.intl.string(R.t.CqCvir)),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t.CqCvir)),
-            plainText: N.intl.string(N.t.CqCvir),
+            key: k(R.intl.string(R.t.CqCvir)),
+            plainText: R.intl.string(R.t.CqCvir),
             getAutocompletions(e) {
                 let { query: t, maxResults: r } = e;
-                return Z(t, r, n);
+                return W(t, r, n);
             },
         },
-        [v.LWr.ANSWER_HAS]: {
-            regex: (0, y.er)(n),
-            follows: [v.LWr.FILTER_HAS],
-            validator: K,
+        [O.LWr.ANSWER_HAS]: {
+            regex: (0, N.er)(n),
+            follows: [O.LWr.FILTER_HAS],
+            validator: B,
             componentType: "ANSWER",
             queryKey: "has",
         },
-        [v.LWr.FILTER_LINK_FROM]: {
-            regex: V(N.intl.string(N.t.RpRAZD)),
-            key: F(N.intl.string(N.t.RpRAZD)),
-            plainText: N.intl.string(N.t.RpRAZD),
+        [O.LWr.FILTER_LINK_FROM]: {
+            regex: x(R.intl.string(R.t.RpRAZD)),
+            key: k(R.intl.string(R.t.RpRAZD)),
+            plainText: R.intl.string(R.t.RpRAZD),
             componentType: "FILTER",
         },
-        [v.LWr.ANSWER_LINK_FROM]: {
-            regex: y.GV,
-            follows: [v.LWr.FILTER_LINK_FROM],
+        [O.LWr.ANSWER_LINK_FROM]: {
+            regex: N.GV,
+            follows: [O.LWr.FILTER_LINK_FROM],
             mutable: !0,
             componentType: "ANSWER",
             queryKey: "link_hostname",
         },
-        [v.LWr.FILTER_FILE_TYPE]: {
-            regex: V(N.intl.string(N.t.TMNjFm)),
-            key: F(N.intl.string(N.t.TMNjFm)),
-            plainText: N.intl.string(N.t.TMNjFm),
+        [O.LWr.FILTER_FILE_TYPE]: {
+            regex: x(R.intl.string(R.t.TMNjFm)),
+            key: k(R.intl.string(R.t.TMNjFm)),
+            plainText: R.intl.string(R.t.TMNjFm),
             componentType: "FILTER",
         },
-        [v.LWr.ANSWER_FILE_TYPE]: {
-            regex: y.GV,
-            follows: [v.LWr.FILTER_FILE_TYPE],
+        [O.LWr.ANSWER_FILE_TYPE]: {
+            regex: N.GV,
+            follows: [O.LWr.FILTER_FILE_TYPE],
             mutable: !0,
             componentType: "ANSWER",
             queryKey: "attachment_extension",
         },
-        [v.LWr.FILTER_FILE_NAME]: {
-            regex: V(N.intl.string(N.t["5xtLRC"])),
-            key: F(N.intl.string(N.t["5xtLRC"])),
-            plainText: N.intl.string(N.t["5xtLRC"]),
+        [O.LWr.FILTER_FILE_NAME]: {
+            regex: x(R.intl.string(R.t["5xtLRC"])),
+            key: k(R.intl.string(R.t["5xtLRC"])),
+            plainText: R.intl.string(R.t["5xtLRC"]),
             componentType: "FILTER",
         },
-        [v.LWr.ANSWER_FILE_NAME]: {
-            regex: y.GV,
-            follows: [v.LWr.FILTER_FILE_NAME],
+        [O.LWr.ANSWER_FILE_NAME]: {
+            regex: N.GV,
+            follows: [O.LWr.FILTER_FILE_NAME],
             mutable: !0,
             componentType: "ANSWER",
             queryKey: "attachment_filename",
         },
-        [v.LWr.FILTER_BEFORE]: {
-            regex: V(N.intl.string(N.t["qZ+7BA"])),
+        [O.LWr.FILTER_BEFORE]: {
+            regex: x(R.intl.string(R.t["qZ+7BA"])),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t["qZ+7BA"])),
-            plainText: N.intl.string(N.t["qZ+7BA"]),
+            key: k(R.intl.string(R.t["qZ+7BA"])),
+            plainText: R.intl.string(R.t["qZ+7BA"]),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return q(t, n, v.LWr.FILTER_BEFORE);
+                return Y(t, n, O.LWr.FILTER_BEFORE);
             },
         },
-        [v.LWr.FILTER_ON]: {
-            regex: V(`(${N.intl.string(N.t.tIxkOo)}|${N.intl.string(N.t.h2NzSd)})`),
+        [O.LWr.FILTER_ON]: {
+            regex: x(`(${R.intl.string(R.t.tIxkOo)}|${R.intl.string(R.t.h2NzSd)})`),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t.h2NzSd)),
-            plainText: N.intl.string(N.t.h2NzSd),
+            key: k(R.intl.string(R.t.h2NzSd)),
+            plainText: R.intl.string(R.t.h2NzSd),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return q(t, n, v.LWr.FILTER_ON);
+                return Y(t, n, O.LWr.FILTER_ON);
             },
         },
-        [v.LWr.FILTER_AFTER]: {
-            regex: V(N.intl.string(N.t.KSDx7M)),
+        [O.LWr.FILTER_AFTER]: {
+            regex: x(R.intl.string(R.t.KSDx7M)),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t.KSDx7M)),
-            plainText: N.intl.string(N.t.KSDx7M),
+            key: k(R.intl.string(R.t.KSDx7M)),
+            plainText: R.intl.string(R.t.KSDx7M),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return q(t, n, v.LWr.FILTER_AFTER);
+                return Y(t, n, O.LWr.FILTER_AFTER);
             },
         },
-        [v.LWr.ANSWER_BEFORE]: {
-            regex: U,
-            follows: [v.LWr.FILTER_BEFORE],
+        [O.LWr.ANSWER_BEFORE]: {
+            regex: P,
+            follows: [O.LWr.FILTER_BEFORE],
             componentType: "ANSWER",
             mutable: !0,
-            validator: (e) => H(e, "before"),
+            validator: (e) => V(e, "before"),
         },
-        [v.LWr.ANSWER_ON]: {
-            regex: U,
-            follows: [v.LWr.FILTER_ON],
+        [O.LWr.ANSWER_ON]: {
+            regex: P,
+            follows: [O.LWr.FILTER_ON],
             componentType: "ANSWER",
             mutable: !0,
-            validator: (e) => H(e, "on"),
+            validator: (e) => V(e, "on"),
         },
-        [v.LWr.ANSWER_AFTER]: {
-            regex: U,
-            follows: [v.LWr.FILTER_AFTER],
+        [O.LWr.ANSWER_AFTER]: {
+            regex: P,
+            follows: [O.LWr.FILTER_AFTER],
             componentType: "ANSWER",
             mutable: !0,
-            validator: (e) => H(e, "after"),
+            validator: (e) => V(e, "after"),
         },
-        [v.LWr.FILTER_IN]: {
-            regex: V(N.intl.string(N.t.WNpFHa)),
+        [O.LWr.FILTER_IN]: {
+            regex: x(R.intl.string(R.t.WNpFHa)),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t.WNpFHa)),
-            plainText: N.intl.string(N.t.WNpFHa),
+            key: k(R.intl.string(R.t.WNpFHa)),
+            plainText: R.intl.string(R.t.WNpFHa),
             validator: () => {
-                let t = e ?? A.A.getSelectedSearchContext();
-                return null != t && (0, S.HM)(t);
+                let t = e ?? I.A.getSelectedSearchContext();
+                return null != t && (0, y.HM)(t);
             },
-            getAutocompletions: et,
+            getAutocompletions: K,
         },
-        [v.LWr.ANSWER_IN]: {
-            regex: y.rI,
+        [O.LWr.ANSWER_IN]: {
+            regex: N.rI,
             mutable: !0,
-            follows: [v.LWr.FILTER_IN],
+            follows: [O.LWr.FILTER_IN],
             componentType: "ANSWER",
             validator: (t) => {
-                let n = e ?? A.A.getSelectedSearchContext();
-                return null != n && W(t, n);
+                let n = e ?? I.A.getSelectedSearchContext();
+                return null != n && F(t, n);
             },
             queryKey: "channel_id",
         },
-        [v.LWr.FILTER_PINNED]: {
-            regex: V(N.intl.string(N.t["0B74eY"])),
+        [O.LWr.FILTER_PINNED]: {
+            regex: x(R.intl.string(R.t["0B74eY"])),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t["0B74eY"])),
-            plainText: N.intl.string(N.t["0B74eY"]),
+            key: k(R.intl.string(R.t["0B74eY"])),
+            plainText: R.intl.string(R.t["0B74eY"]),
             getAutocompletions: () => [{ text: "true" }, { text: "false" }],
         },
-        [v.LWr.ANSWER_PINNED]: {
-            regex: G,
+        [O.LWr.ANSWER_PINNED]: {
+            regex: U,
             componentType: "ANSWER",
-            follows: [v.LWr.FILTER_PINNED],
+            follows: [O.LWr.FILTER_PINNED],
             queryKey: "pinned",
             validator: (e) => {
                 let t = e.getMatch(1);
                 return "true" === t ? (e.setData("pinned", !0), !0) : "false" === t && (e.setData("pinned", !1), !0);
             },
         },
-        [v.LWr.FILTER_AUTHOR_TYPE]: {
-            regex: V(N.intl.string(N.t.us8IQi)),
+        [O.LWr.FILTER_AUTHOR_TYPE]: {
+            regex: x(R.intl.string(R.t.us8IQi)),
             componentType: "FILTER",
-            key: F(N.intl.string(N.t.us8IQi)),
-            plainText: N.intl.string(N.t.us8IQi),
+            key: k(R.intl.string(R.t.us8IQi)),
+            plainText: R.intl.string(R.t.us8IQi),
             getAutocompletions(e) {
                 let { query: n, maxResults: r } = e;
-                return Z(n, r, t);
+                return W(n, r, t);
             },
         },
-        [v.LWr.ANSWER_AUTHOR_TYPE]: {
-            regex: (0, y.er)(t),
-            follows: [v.LWr.FILTER_AUTHOR_TYPE],
-            validator: $,
+        [O.LWr.ANSWER_AUTHOR_TYPE]: {
+            regex: (0, N.er)(t),
+            follows: [O.LWr.FILTER_AUTHOR_TYPE],
+            validator: H,
             componentType: "ANSWER",
             queryKey: "author_type",
         },
     };
 }
-let es = {};
-function ea() {
-    return ei({ type: v.I4_.DMS });
+let X = {};
+function Q() {
+    return q({ type: O.I4_.DMS });
 }
-function eo() {
-    Object.assign(es, ei());
+function J() {
+    Object.assign(X, q());
 }
-function el(e) {
-    return v.l90.test(e);
+function Z(e) {
+    return O.l90.test(e);
 }
-function eu(e) {
+function ee(e) {
     if (0 === e.length) return !1;
     let t = e.toLowerCase().replace(/^@/, "");
-    return N.intl.string(N.t.Qf3ptv).startsWith(t) || v.ME.substring(1).startsWith(t);
+    return R.intl.string(R.t.Qf3ptv).startsWith(t) || O.ME.substring(1).startsWith(t);
 }
-let ec = es;
+let et = X;

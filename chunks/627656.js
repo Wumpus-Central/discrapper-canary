@@ -1,23 +1,21 @@
 e.exports = function (e) {
     let t = "\\d(_|\\d)*",
-        n = "[eE][-+]?" + t,
-        r = t + "(\\." + t + ")?(" + n + ")?",
-        i = "\\w+",
-        s = "\\b(" + (t + "#" + i + "(\\." + i + ")?#(" + n) + ")?|" + r + ")",
-        a = "[A-Za-z](_?[A-Za-z0-9.])*",
-        o = "[]\\{\\}%#'\"",
-        l = e.COMMENT("--", "$"),
-        u = {
+        a = "[eE][-+]?" + t,
+        n = "\\b(" + (t + "#\\w+(\\.\\w+)?#(" + a) + ")?|" + (t + "(\\." + t + ")?(") + a + ")?)",
+        r = "[A-Za-z](_?[A-Za-z0-9.])*",
+        i = "[]\\{\\}%#'\"",
+        o = e.COMMENT("--", "$"),
+        s = {
             begin: "\\s+:\\s+",
             end: "\\s*(:=|;|\\)|=>|$)",
-            illegal: o,
+            illegal: i,
             contains: [
                 { beginKeywords: "loop for declare others", endsParent: !0 },
                 {
                     className: "keyword",
                     beginKeywords: "not null constant access function procedure in out aliased exception",
                 },
-                { className: "type", begin: a, endsParent: !0, relevance: 0 },
+                { className: "type", begin: r, endsParent: !0, relevance: 0 },
             ],
         };
     return {
@@ -100,11 +98,11 @@ e.exports = function (e) {
             literal: ["True", "False"],
         },
         contains: [
-            l,
+            o,
             { className: "string", begin: /"/, end: /"/, contains: [{ begin: /""/, relevance: 0 }] },
             { className: "string", begin: /'.'/ },
-            { className: "number", begin: s, relevance: 0 },
-            { className: "symbol", begin: "'" + a },
+            { className: "number", begin: n, relevance: 0 },
+            { className: "symbol", begin: "'" + r },
             {
                 className: "title",
                 begin: "(\\bwith\\s+)?(\\bprivate\\s+)?\\bpackage\\s+(\\bbody\\s+)?",
@@ -112,7 +110,7 @@ e.exports = function (e) {
                 keywords: "package body",
                 excludeBegin: !0,
                 excludeEnd: !0,
-                illegal: o,
+                illegal: i,
             },
             {
                 begin: "(\\b(with|overriding)\\s+)?\\b(function|procedure)\\s+",
@@ -120,16 +118,16 @@ e.exports = function (e) {
                 keywords: "overriding function procedure with is renames return",
                 returnBegin: !0,
                 contains: [
-                    l,
+                    o,
                     {
                         className: "title",
                         begin: "(\\bwith\\s+)?\\b(function|procedure)\\s+",
                         end: "(\\(|\\s+|$)",
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        illegal: o,
+                        illegal: i,
                     },
-                    u,
+                    s,
                     {
                         className: "type",
                         begin: "\\breturn\\s+",
@@ -138,7 +136,7 @@ e.exports = function (e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         endsParent: !0,
-                        illegal: o,
+                        illegal: i,
                     },
                 ],
             },
@@ -148,9 +146,9 @@ e.exports = function (e) {
                 end: "\\s+",
                 keywords: "type",
                 excludeBegin: !0,
-                illegal: o,
+                illegal: i,
             },
-            u,
+            s,
         ],
     };
 };

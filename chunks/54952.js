@@ -1,31 +1,32 @@
-n.d(e, { A: () => c });
-var r = n(627968);
-n(64700);
-var a = n(397927),
-    i = n(503852),
-    l = n(689906),
-    s = n(743569),
-    o = n(568065),
-    d = n(333354),
-    u = n(985018);
-function c(t) {
-    let { guildId: e, powerup: n, onClose: c, ...p } = t,
-        f = o.HO.has(n.skuId),
-        _ = (0, l.A)(e, n);
-    (0, i.Z)(e, n, i.q.DETAIL);
-    let m =
-            n.type === o.o9.LEVEL
-                ? { type: "rive", rive: s.T[n.skuId], aspectRatio: "16/9" }
-                : { type: "image", src: n.animatedImageUrl ?? n.staticImageUrl ?? "", aspectRatio: "16/9" },
-        v = u.intl.formatToPlainString(d.default.lFuOFF, { perkName: n.title }),
-        x = f
+a.d(t, { A: () => p });
+var n = a(627968);
+a(64700);
+var r = a(772707),
+    i = a(834730),
+    s = a(503852),
+    o = a(689906),
+    l = a(743569),
+    d = a(568065),
+    c = a(853513),
+    u = a(985018);
+function p(e) {
+    let { guildId: t, powerup: a, onClose: p, ...m } = e,
+        _ = d.HO.has(a.skuId),
+        f = (0, o.A)(t, a);
+    (0, s.Z)(t, a, s.q.DETAIL);
+    let x =
+            a.type === d.o9.LEVEL
+                ? { type: "rive", rive: l.T[a.skuId], aspectRatio: "16/9" }
+                : { type: "image", src: a.animatedImageUrl ?? a.staticImageUrl ?? "", aspectRatio: "16/9" },
+        v = u.intl.formatToPlainString(c.default.lFuOFF, { perkName: a.title }),
+        g = _
             ? [
                   {
-                      text: u.intl.string(d.default.g5Ds69),
+                      text: u.intl.string(c.default.g5Ds69),
                       variant: "primary",
                       size: "md",
-                      onClick: (t) => {
-                          _?.(t), c();
+                      onClick: (e) => {
+                          f?.(e), p();
                       },
                   },
               ]
@@ -35,21 +36,21 @@ function c(t) {
                       variant: "primary",
                       size: "md",
                       onClick: () => {
-                          c();
+                          p();
                       },
                   },
               ];
-    return (0, r.jsx)(a.kpP, {
-        graphic: m,
+    return (0, n.jsx)(r.k, {
+        graphic: x,
         title: v,
-        actions: x,
-        onClose: c,
-        ...p,
+        actions: g,
+        onClose: p,
+        ...m,
         children:
-            f &&
-            (0, r.jsx)(a.Text, {
+            _ &&
+            (0, n.jsx)(i.E, {
                 variant: "text-md/normal",
-                children: u.intl.formatToPlainString(d.default.y3wHot, { perkName: n.title }),
+                children: u.intl.formatToPlainString(c.default.y3wHot, { perkName: a.title }),
             }),
     });
 }

@@ -1,28 +1,27 @@
 var r = n(168110),
-    i = 4294967294,
-    a = Math.floor,
+    i = Math.floor,
     s = Math.min;
-e.exports = function (e, t, n, o) {
-    var l = 0,
-        c = null == e ? 0 : e.length;
-    if (0 === c) return 0;
-    for (var u = (t = n(t)) != t, d = null === t, f = r(t), p = void 0 === t; l < c; ) {
-        var _ = a((l + c) / 2),
-            h = n(e[_]),
-            m = void 0 !== h,
-            g = null === h,
-            E = h == h,
-            b = r(h);
-        if (u) var y = o || E;
+e.exports = function (e, t, n, a) {
+    var o = 0,
+        l = null == e ? 0 : e.length;
+    if (0 === l) return 0;
+    for (var u = (t = n(t)) != t, d = null === t, c = r(t), _ = void 0 === t; o < l; ) {
+        var f = i((o + l) / 2),
+            E = n(e[f]),
+            h = void 0 !== E,
+            p = null === E,
+            m = E == E,
+            g = r(E);
+        if (u) var A = a || m;
         else
-            y = p
-                ? E && (o || m)
+            A = _
+                ? m && (a || h)
                 : d
-                  ? E && m && (o || !g)
-                  : f
-                    ? E && m && !g && (o || !b)
-                    : !g && !b && (o ? h <= t : h < t);
-        y ? (l = _ + 1) : (c = _);
+                  ? m && h && (a || !p)
+                  : c
+                    ? m && h && !p && (a || !g)
+                    : !p && !g && (a ? E <= t : E < t);
+        A ? (o = f + 1) : (l = f);
     }
-    return s(c, i);
+    return s(l, 0xfffffffe);
 };

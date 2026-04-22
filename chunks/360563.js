@@ -1,77 +1,80 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
-n(64700);
-var i = n(342952),
-    s = n(692617),
-    a = n(397927),
-    o = n(263063),
-    l = n(913453),
-    u = n(837531),
-    c = n(186272),
-    d = n(518477),
-    _ = n(778712),
-    f = n(232205);
-let p = 3;
-function h(e) {
-    let { user: t, onOpenProfile: n } = e,
-        { mutualFriends: h, mutualGuilds: m } = (0, l.A)(t),
-        E = null != h && h.length > 0,
-        g = null != m && m.length > 0,
-        A = E && g ? "text-xs/normal" : "text-sm/normal";
-    if (!E && !g) return null;
-    let I = () =>
-            E
-                ? (0, r.jsxs)(a.DUT, {
-                      className: f.uW,
-                      onClick: () => n?.(d.RP.MUTUAL_FRIENDS),
-                      children: [
-                          (0, r.jsx)(i.A, {
-                              maxUsers: p,
-                              users: h.map((e) => {
-                                  let { user: t } = e;
-                                  return t;
-                              }),
-                              size: _._3.SIZE_16,
-                              hideOverflowCount: !0,
-                              disableUsernameTooltip: !0,
-                              "aria-hidden": !0,
-                          }),
-                          (0, r.jsx)(a.Text, {
-                              className: f.Qq,
-                              variant: A,
-                              color: "interactive-text-default",
-                              children: (0, u.A)(h.length),
-                          }),
-                      ],
-                  })
-                : null,
-        T = () => (E && g ? (0, r.jsx)("div", { "aria-hidden": "true", className: f.jH }) : null),
-        S = () =>
-            g
-                ? (0, r.jsxs)(a.DUT, {
-                      className: f.uW,
-                      onClick: () => n?.(d.RP.MUTUAL_GUILDS),
-                      children: [
-                          !E &&
-                              (0, r.jsx)(s.A, {
-                                  maxGuilds: p,
-                                  guilds: m.map((e) => {
-                                      let { guild: t } = e;
-                                      return t;
-                                  }),
-                                  size: o.Ay.Sizes.SMOL,
-                                  hideOverflowCount: !0,
-                                  disableGuildNameTooltip: !0,
-                              }),
-                          (0, r.jsx)(a.Text, {
-                              className: f.Qq,
-                              variant: A,
-                              color: "interactive-text-default",
-                              children: (0, c.A)(m.length),
-                          }),
-                      ],
-                  })
-                : null;
-    return (0, r.jsxs)("div", { className: f.I0, children: [I(), T(), S()] });
+i.d(t, { A: () => f });
+var n = i(627968);
+i(64700);
+var r = i(342952),
+    a = i(692617),
+    l = i(939249),
+    s = i(834730),
+    o = i(263063),
+    c = i(913453),
+    d = i(837531),
+    u = i(186272),
+    _ = i(518477),
+    p = i(778712),
+    h = i(403592);
+function f(e) {
+    let { user: t, onOpenProfile: i } = e,
+        { mutualFriends: f, mutualGuilds: A } = (0, c.A)(t),
+        g = null != f && f.length > 0,
+        m = null != A && A.length > 0,
+        E = g && m ? "text-xs/normal" : "text-sm/normal";
+    return g || m
+        ? (0, n.jsxs)("div", {
+              className: h.I0,
+              children: [
+                  g
+                      ? (0, n.jsxs)(l.D, {
+                            className: h.uW,
+                            onClick: () => i?.(_.RP.MUTUAL_FRIENDS),
+                            children: [
+                                (0, n.jsx)(r.A, {
+                                    maxUsers: 3,
+                                    users: f.map((e) => {
+                                        let { user: t } = e;
+                                        return t;
+                                    }),
+                                    size: p._3.SIZE_16,
+                                    hideOverflowCount: !0,
+                                    disableUsernameTooltip: !0,
+                                    "aria-hidden": !0,
+                                }),
+                                (0, n.jsx)(s.E, {
+                                    className: h.Qq,
+                                    variant: E,
+                                    color: "interactive-text-default",
+                                    children: (0, d.A)(f.length),
+                                }),
+                            ],
+                        })
+                      : null,
+                  g && m ? (0, n.jsx)("div", { "aria-hidden": "true", className: h.jH }) : null,
+                  m
+                      ? (0, n.jsxs)(l.D, {
+                            className: h.uW,
+                            onClick: () => i?.(_.RP.MUTUAL_GUILDS),
+                            children: [
+                                !g &&
+                                    (0, n.jsx)(a.A, {
+                                        maxGuilds: 3,
+                                        guilds: A.map((e) => {
+                                            let { guild: t } = e;
+                                            return t;
+                                        }),
+                                        size: o.Ay.Sizes.SMOL,
+                                        hideOverflowCount: !0,
+                                        disableGuildNameTooltip: !0,
+                                    }),
+                                (0, n.jsx)(s.E, {
+                                    className: h.Qq,
+                                    variant: E,
+                                    color: "interactive-text-default",
+                                    children: (0, u.A)(A.length),
+                                }),
+                            ],
+                        })
+                      : null,
+              ],
+          })
+        : null;
 }

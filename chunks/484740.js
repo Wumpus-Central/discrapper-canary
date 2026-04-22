@@ -1,37 +1,39 @@
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => p }), n(321073);
 var i = n(627968);
 n(64700);
 var l = n(311907),
     s = n(314116),
-    a = n(397927),
-    r = n(686956),
-    o = n(619006),
-    d = n(50268),
-    c = n(34457),
-    u = n(576705),
-    m = n(292024),
+    a = n(192308),
+    r = n(477782),
+    o = n(241326),
+    d = n(686956),
+    c = n(619006),
+    u = n(50268),
+    m = n(34457),
+    g = n(576705),
+    h = n(292024),
     x = n(985018);
-function g(e, t) {
-    let g = (0, l.bG)([u.A], () => {
-            let n = u.A.getHighestRole(e);
-            return !u.A.isRoleHigher(e, n, t);
+function p(e, t) {
+    let p = (0, l.bG)([g.A], () => {
+            let n = g.A.getHighestRole(e);
+            return !g.A.isRoleHigher(e, n, t);
         }),
-        h = [],
-        p = (0, m.A)(e, t);
-    null != p && h.push(p);
-    let A = (0, d.A)({ id: t.id, label: x.intl.string(x.t.sMsaLg) });
-    null != A && h.push(A);
-    let b = t.tags?.guild_connections === null,
-        f = e.verificationRoleId === t.id,
-        _ = t.managed && !b,
-        j = null != t && (0, c.Oy)(t);
-    if (!g && !_ && !j) {
+        A = [],
+        b = (0, h.A)(e, t);
+    null != b && A.push(b);
+    let f = (0, u.A)({ id: t.id, label: x.intl.string(x.t.sMsaLg) });
+    null != f && A.push(f);
+    let _ = t.tags?.guild_connections === null,
+        j = e.verificationRoleId === t.id,
+        N = t.managed && !_,
+        v = null != t && (0, m.Oy)(t);
+    if (!p && !N && !v) {
         let l = async () => {
-                b && (await (0, o.qK)(e.id, t.id, [])), r.A.deleteRole(e.id, t.id);
+                _ && (await (0, c.qK)(e.id, t.id, [])), d.A.deleteRole(e.id, t.id);
             },
-            d = f
+            u = j
                 ? () => {
-                      (0, a.mMO)(async () => {
+                      (0, a.openModalLazy)(async () => {
                           let { default: e } = await n.e("54915").then(n.bind(n, 360494));
                           return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: l });
                       });
@@ -45,22 +47,22 @@ function g(e, t) {
                           onConfirm: l,
                       });
                   };
-        h.push(
+        A.push(
             (0, i.jsx)(
-                a.rXV,
+                r.rX,
                 {
-                    children: (0, i.jsx)(a.Drp, {
+                    children: (0, i.jsx)(r.Dr, {
                         id: "delete-role",
                         label: x.intl.string(x.t.oyYWHE),
                         color: "danger",
-                        icon: a.ucK,
-                        leadingAccessory: { type: "icon", icon: a.ucK },
-                        action: d,
+                        icon: o.u,
+                        leadingAccessory: { type: "icon", icon: o.u },
+                        action: u,
                     }),
                 },
                 "delete-role",
             ),
         );
     }
-    return h;
+    return A;
 }

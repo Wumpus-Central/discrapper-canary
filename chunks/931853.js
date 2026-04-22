@@ -1,13 +1,13 @@
 n.d(t, { A: () => f, u: () => m });
 var r = n(627968),
-    l = n(349941),
-    a = n(158954),
+    l = n(366010),
+    a = n(834730),
     i = n(311907),
     s = n(876230),
     u = n(544028),
-    o = n(354361),
+    o = n(445563),
     c = n(985018),
-    d = n(246878);
+    d = n(834926);
 function m(e) {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t
@@ -28,8 +28,8 @@ let f = function (e) {
                   n && (0, r.jsx)("div", { className: d.MM }),
                   (0, r.jsx)("div", {
                       className: d.zG,
-                      style: { background: (0, l.Mw)(s) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
-                      children: (0, r.jsx)(a.EYj, { variant: "text-sm/normal", color: "text-default", children: t }),
+                      style: { background: (0, l.M)(s) ? "rgba(0, 0, 0, 0.65)" : "rgba(255, 255, 255, 0.65)" },
+                      children: (0, r.jsx)(a.E, { variant: "text-sm/normal", color: "text-default", children: t }),
                   }),
               ],
           });

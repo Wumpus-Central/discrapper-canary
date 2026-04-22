@@ -1,61 +1,64 @@
 "use strict";
-n.d(t, { A: () => T });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => v });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(382222),
-    l = n(311907),
-    u = n(554146),
-    c = n(459192),
-    d = n(397927),
-    _ = n(775602),
-    f = n(932001),
-    p = n(287809),
-    h = n(927578),
-    m = n(49999),
-    E = n(985018),
-    g = n(488849);
-let A = { tension: 750, mass: 2.5, friction: 70 },
-    I = 20;
-function T(e) {
+    r = n.n(s),
+    a = n(517738),
+    o = n(311907),
+    c = n(554146),
+    u = n(459192),
+    d = n(717421),
+    h = n(343032),
+    m = n(403581),
+    p = n(939249),
+    f = n(775602),
+    g = n(932001),
+    _ = n(287809),
+    x = n(927578),
+    A = n(49999),
+    C = n(985018),
+    E = n(337889);
+let I = { tension: 750, mass: 2.5, friction: 70 };
+function v(e) {
     let { checked: t, onClick: n } = e,
-        s = (0, l.bG)([_.A], () => _.A.useReducedMotion),
-        T = p.default.getCurrentUser(),
-        S = null == T || (0, h.TW)(T) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [y, v] = (0, f.kn)(S),
-        [N, C] = i.useState(!1),
-        [R, O] = (0, d.zhh)(() => ({})),
-        b = (0, o.animated)(d.it9);
-    function D() {
-        O({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: A }), n?.(), C(!1);
-    }
-    i.useEffect(() => {
-        let e = y === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (v(m.i.DISMISS), setTimeout(() => C(e), 200));
-    }, [y, v]);
-    let L = N ? E.intl.string(E.t["Osi/uy"]) : t ? E.intl.string(E.t["5cRA/b"]) : E.intl.string(E.t.buV4av),
-        w = N ? E.intl.string(E.t.ORK94p) : void 0;
-    return (0, r.jsx)(c.u, {
+        s = (0, o.bG)([f.A], () => f.A.useReducedMotion),
+        v = _.default.getCurrentUser(),
+        y = null == v || (0, x.TW)(v) ? [c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [S, b] = (0, g.kn)(y),
+        [N, T] = l.useState(!1),
+        [j, R] = (0, d.z)(() => ({})),
+        w = (0, a.animated)(h.i);
+    l.useEffect(() => {
+        let e = S === c.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (b(A.i.DISMISS), setTimeout(() => T(e), 200));
+    }, [S, b]);
+    let L = N ? C.intl.string(C.t["Osi/uy"]) : t ? C.intl.string(C.t["5cRA/b"]) : C.intl.string(C.t.buV4av),
+        M = N ? C.intl.string(C.t.ORK94p) : void 0;
+    return (0, i.jsx)(u.u, {
         position: "top",
-        title: w,
+        title: M,
         body: L,
-        asset: (0, r.jsx)(d.tvc, { size: "md", color: "currentColor" }),
+        asset: (0, i.jsx)(m.t, { size: "md", color: "currentColor" }),
         assetSize: 20,
         forceOpen: N,
-        children: (0, r.jsx)(d.DUT, {
+        children: (0, i.jsx)(p.D, {
             "aria-label": L,
             "aria-pressed": t,
-            onClick: D,
+            onClick: function () {
+                R({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: I }),
+                    n?.(),
+                    T(!1);
+            },
             focusProps: { enabled: !1 },
-            className: a()(g.Pf, { [g.wM]: t }),
-            children: (0, r.jsx)(b, {
-                style: s ? void 0 : R,
+            className: r()(E.Pf, { [E.wM]: t }),
+            children: (0, i.jsx)(w, {
+                style: s ? void 0 : j,
                 size: "custom",
-                width: I,
-                height: I,
+                width: 20,
+                height: 20,
                 color: t ? "white" : "currentColor",
-                className: g.Kk,
+                className: E.Kk,
             }),
         }),
     });

@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, {
+r.d(t, {
     CV: () => a,
-    E9: () => A,
+    E9: () => x,
     EB: () => u,
-    Pl: () => E,
-    eB: () => s,
-    fp: () => p,
-    k8: () => f,
-    lT: () => _,
+    Pl: () => y,
+    eB: () => i,
+    fp: () => g,
+    k8: () => c,
+    lT: () => m,
     zL: () => h,
 });
-var r = n(476858),
-    i = n(364242);
+var n = r(476858),
+    s = r(364242);
 let a = {
         zondag: 0,
         zon: 0,
@@ -47,7 +46,7 @@ let a = {
         za: 6,
         "za.": 6,
     },
-    s = {
+    i = {
         januari: 1,
         jan: 1,
         "jan.": 1,
@@ -160,40 +159,41 @@ let a = {
         jr: "year",
         jaren: "year",
     },
-    c = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`;
-function d(e) {
-    let t = e.toLowerCase();
-    return void 0 !== o[t]
-        ? o[t]
-        : "paar" === t
-          ? 2
-          : "half" === t || t.match(/halve?/)
-            ? 0.5
-            : parseFloat(t.replace(",", "."));
-}
-let _ = `(?:${(0, r.uJ)(l)}|[0-9]{1,2}(?:ste|de)?)`;
-function f(e) {
+    d = `(?:${(0, n.uJ)(o)}|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)`,
+    m = `(?:${(0, n.uJ)(l)}|[0-9]{1,2}(?:ste|de)?)`;
+function c(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt((t = t.replace(/(?:ste|de)$/i, "")));
 }
-let p = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
+let g = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
 function h(e) {
     if (/voor Christus/i.test(e)) return -parseInt((e = e.replace(/voor Christus/i, "")));
     if (/na Christus/i.test(e)) return parseInt((e = e.replace(/na Christus/i, "")));
     let t = parseInt(e);
-    return (0, i.D)(t);
+    return (0, s.D)(t);
 }
-let m = `(${c})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
-    g = RegExp(m, "i"),
-    E = (0, r.mb)("(?:(?:binnen|in)\\s*)?", m);
-function A(e) {
+let f = `(${d})\\s{0,5}(${(0, n.uJ)(u)})\\s{0,5}`,
+    p = RegExp(f, "i"),
+    y = (0, n.mb)("(?:(?:binnen|in)\\s*)?", f);
+function x(e) {
     let t = {},
-        n = e,
-        r = g.exec(n);
-    for (; r; ) I(t, r), (n = n.substring(r[0].length)), (r = g.exec(n));
+        r = e,
+        n = p.exec(r);
+    for (; n; )
+        (function (e, t) {
+            let r = (function (e) {
+                let t = e.toLowerCase();
+                return void 0 !== o[t]
+                    ? o[t]
+                    : "paar" === t
+                      ? 2
+                      : "half" === t || t.match(/halve?/)
+                        ? 0.5
+                        : parseFloat(t.replace(",", "."));
+            })(t[1]);
+            e[u[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length)),
+            (n = p.exec(r));
     return t;
-}
-function I(e, t) {
-    let n = d(t[1]);
-    e[u[t[2].toLowerCase()]] = n;
 }

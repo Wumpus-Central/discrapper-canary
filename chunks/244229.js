@@ -1,28 +1,29 @@
-n.d(t, { A: () => o });
-var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(517905),
-    s = n(480601);
+a.d(t, { A: () => o });
+var s = a(627968),
+    l = a(64700),
+    r = a(939249),
+    i = a(26430),
+    n = a(517905),
+    c = a(889452);
 let o = function (e) {
-    let { className: t, guildId: n } = e,
-        o = r.useRef(null),
-        d = r.useCallback((e, t) => {
+    let { className: t, guildId: a } = e,
+        o = l.useRef(null),
+        d = l.useCallback((e, t) => {
             e.stopPropagation(), t.onClick(e);
         }, []);
-    return (0, i.jsx)(l.A, {
-        guildId: n,
+    return (0, s.jsx)(n.A, {
+        guildId: a,
         position: "left",
         targetElementRef: o,
         children: (e) =>
-            (0, i.jsx)(a.DUT, {
+            (0, s.jsx)(r.D, {
                 ...e,
                 innerRef: o,
                 className: t,
                 onClick: (t) => d(t, e),
-                children: (0, i.jsx)("div", {
-                    className: s.K,
-                    children: (0, i.jsx)(a._Xm, { size: "xs", color: "currentColor" }),
+                children: (0, s.jsx)("div", {
+                    className: c.K,
+                    children: (0, s.jsx)(i._, { size: "xs", color: "currentColor" }),
                 }),
             }),
     });

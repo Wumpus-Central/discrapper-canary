@@ -1,12 +1,13 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(627968),
-    i = n(503698),
-    s = n.n(i),
-    a = n(397927),
-    o = n(120371);
-function l(e) {
-    let { className: t, onClick: n, ...i } = e,
-        l = (0, r.jsx)(a.DUT, { ...i, className: s()(null != n && o.v, t), onClick: n });
-    return null == n ? (0, r.jsx)(a.RDc, { children: l }) : l;
+n.d(t, { A: () => c });
+var i = n(627968),
+    l = n(503698),
+    s = n.n(l),
+    r = n(939249),
+    a = n(531142),
+    o = n(392419);
+function c(e) {
+    let { className: t, onClick: n, ...l } = e,
+        c = (0, i.jsx)(r.D, { ...l, className: s()(null != n && o.v, t), onClick: n });
+    return null == n ? (0, i.jsx)(a.R, { children: c }) : c;
 }

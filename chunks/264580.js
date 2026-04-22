@@ -1,29 +1,25 @@
-n.d(t, { A: () => d, q: () => o });
-var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(915089),
-    s = n(850474);
-function o(e) {
-    let { children: t, id: n } = e;
-    return (0, i.jsx)(a.Text, {
-        className: s.g,
-        color: "text-subtle",
-        id: n,
-        variant: "text-sm/semibold",
-        children: t,
-    });
+s.d(t, { A: () => d, q: () => u });
+var n = s(627968),
+    l = s(64700),
+    a = s(834730),
+    r = s(265872),
+    i = s(305866),
+    o = s(915089),
+    c = s(332733);
+function u(e) {
+    let { children: t, id: s } = e;
+    return (0, n.jsx)(a.E, { className: c.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
 }
 let d = function (e) {
-    let { children: t, renderPopout: n } = e,
-        o = (0, l.GV)(),
-        d = r.useRef(null);
-    return (0, i.jsx)(a.YNO, {
+    let { children: t, renderPopout: s } = e,
+        a = (0, o.GV)(),
+        u = l.useRef(null);
+    return (0, n.jsx)(r.Y, {
         align: "right",
         position: "bottom",
-        renderPopout: (e) => (0, i.jsx)(a.lGe, { className: s.S, "aria-labelledby": o, children: n(e, o) }),
+        renderPopout: (e) => (0, n.jsx)(i.l, { className: c.S, "aria-labelledby": a, children: s(e, a) }),
         scrollBehavior: "close",
-        targetElementRef: d,
-        children: (e) => t(e, d),
+        targetElementRef: u,
+        children: (e) => t(e, u),
     });
 };

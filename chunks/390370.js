@@ -1,38 +1,40 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    r = n(854627),
-    a = n(837921),
-    l = n(834981),
-    o = n(475833),
-    c = n(694164);
-let d = a.Ay.getEnableHardwareAcceleration() ? s.JsQ : s.euF;
-function u(e) {
-    let { otherUser: t, status: n } = e,
-        a = (0, l.XC)(t.id, n),
+l.d(t, { A: () => h });
+var n = l(627968);
+l(64700);
+var i = l(97808),
+    s = l(778712),
+    a = l(834730),
+    r = l(854627),
+    d = l(837921),
+    c = l(834981),
+    u = l(475833),
+    o = l(486241);
+let x = d.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu;
+function h(e) {
+    let { otherUser: t, status: l } = e,
+        i = (0, c.XC)(t.id, l),
         {
-            avatarSrc: u,
-            avatarDecorationSrc: _,
+            avatarSrc: d,
+            avatarDecorationSrc: h,
             eventHandlers: m,
-        } = (0, r.A)({ userId: t.id, size: s._3J.SIZE_40, animateOnHover: !0 });
-    return (0, i.jsxs)(i.Fragment, {
+        } = (0, r.A)({ userId: t.id, size: s._3.SIZE_40, animateOnHover: !0 });
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, i.jsx)("div", {
+            (0, n.jsx)("div", {
                 ...m,
-                children: (0, i.jsx)(d, {
-                    className: c.my,
-                    src: u,
-                    avatarDecoration: _,
-                    size: s._3J.SIZE_40,
+                children: (0, n.jsx)(x, {
+                    className: o.my,
+                    src: d,
+                    avatarDecoration: h,
+                    size: s._3.SIZE_40,
                     "aria-label": t.username,
                 }),
             }),
-            (0, i.jsxs)("div", {
-                className: c.yt,
+            (0, n.jsxs)("div", {
+                className: o.yt,
                 children: [
-                    (0, i.jsx)("div", { className: c.Vx, children: (0, i.jsx)(o.A, { user: t }) }),
-                    (0, i.jsx)(s.Text, { color: "text-muted", variant: "text-xs/normal", children: a }),
+                    (0, n.jsx)("div", { className: o.Vx, children: (0, n.jsx)(u.A, { user: t }) }),
+                    (0, n.jsx)(a.E, { color: "text-muted", variant: "text-xs/normal", children: i }),
                 ],
             }),
         ],

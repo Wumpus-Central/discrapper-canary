@@ -1,4 +1,4 @@
-n.d(t, { A: () => f, X: () => p });
+n.d(t, { A: () => f, X: () => g });
 var i,
     l = n(627968),
     s = n(64700),
@@ -6,20 +6,20 @@ var i,
     r = n.n(a),
     o = n(735438),
     d = n(827734),
-    c = n(397927),
+    c = n(602853),
     u = n(817281),
     h = n(761929),
     A = n(964404),
     _ = n(743898),
     m = n(318974),
-    p =
+    g =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
         (i[(i.CallChatSidebar = 2)] = "CallChatSidebar"),
         (i[(i.MessageRequestSidebar = 3)] = "MessageRequestSidebar"),
         (i[(i.HomeSidebar = 4)] = "HomeSidebar"),
         i);
-function g(e) {
+function p(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s, minWidth: a } = e,
         r = (0, h.A)({
             minDimension: a,
@@ -34,7 +34,7 @@ function g(e) {
 }
 function f(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: h } = e,
-        p = s.useRef(null),
+        g = s.useRef(null),
         f = (function (e) {
             switch (e) {
                 case 0:
@@ -57,33 +57,33 @@ function f(e) {
             [f],
         ),
         C = (0, _.P)({ maxWidth: n, minWidth: 450 }),
-        N = (0, c.rdh)(d.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        T = (0, o.clamp)(E, 450, n),
-        S = C ? T : T + N;
+        b = (0, c.r)(d.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        N = (0, o.clamp)(E, 450, n),
+        S = C ? N : N + b;
     s.useEffect(() => {
-        i?.(T, C);
-    }, [T, i, C]);
-    let b = h ?? s.Fragment;
+        i?.(N, C);
+    }, [N, i, C]);
+    let v = h ?? s.Fragment;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             !C && (0, l.jsx)("div", { style: { minWidth: S } }),
-            (0, l.jsx)(b, {
+            (0, l.jsx)(v, {
                 children: (0, l.jsxs)("div", {
                     className: r()(m.PA, { [m.R]: !1 }),
                     children: [
                         (0, l.jsx)("div", { className: r()(m.Uc, { [m.DU]: C, [m.iK]: !C }), style: { width: S } }),
                         !C &&
-                            (0, l.jsx)(g, {
+                            (0, l.jsx)(p, {
                                 minWidth: 450,
                                 maxWidth: n,
-                                resizableNode: p,
+                                resizableNode: g,
                                 onResize: x,
                                 onResizeEnd: I,
                             }),
                         (0, l.jsx)("div", {
-                            ref: p,
+                            ref: g,
                             className: r()(m.kL, { [m.DU]: C }),
-                            style: { width: T },
+                            style: { width: N },
                             children: a,
                         }),
                     ],

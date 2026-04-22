@@ -1,59 +1,66 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => S });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(442433),
-    o = n(297413),
-    d = n(714114),
-    c = n(729551),
-    u = n(178418),
-    h = n(87664),
-    p = n(290863),
-    A = n(939496),
-    f = n(652215),
-    g = n(996988),
-    m = n(816223);
-let _ = a._3J.SIZE_40,
-    x = (0, a.FT9)(_);
-function E(e) {
-    let { user: t, status: E, guildId: y, channelId: v, onSelect: S } = e,
-        { theme: C, themeType: I } = (0, A.E)(),
-        N = s.useMemo(() => t.isNonUserBot() || (0, u.c)(t, v), [t, v]),
-        { activities: T, isMobileOnline: O } = (0, l.cf)([p.A], () => ({
-            activities: p.A.getActivities(t.id),
-            isMobileOnline: p.A.isMobileOnline(t.id),
+    a = n(778712),
+    r = n(939249),
+    o = n(97808),
+    d = n(935154),
+    c = n(442433),
+    u = n(297413),
+    h = n(714114),
+    p = n(729551),
+    f = n(178418),
+    A = n(87664),
+    _ = n(290863),
+    g = n(939496),
+    m = n(652215),
+    x = n(996988),
+    E = n(921519);
+let y = a._3.SIZE_40,
+    v = (0, a.FT)(y);
+function S(e) {
+    let { user: t, status: a, guildId: S, channelId: C, onSelect: I } = e,
+        { theme: N, themeType: T } = (0, g.E)(),
+        b = s.useMemo(() => t.isNonUserBot() || (0, f.c)(t, C), [t, C]),
+        { activities: O, isMobileOnline: j } = (0, l.cf)([_.A], () => ({
+            activities: _.A.getActivities(t.id),
+            isMobileOnline: _.A.isMobileOnline(t.id),
         })),
-        b = (0, h.A)(t.id),
-        { voiceChannel: j } = (0, d.A)({ userId: t.id, guildId: y });
-    return (0, i.jsxs)(a.DUT, {
-        focusProps: I === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-        className: m.nM,
-        onClick: S,
+        D = (0, A.A)(t.id),
+        { voiceChannel: R } = (0, h.A)({ userId: t.id, guildId: S });
+    return (0, i.jsxs)(r.D, {
+        focusProps: T === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        className: E.nM,
+        onClick: I,
         onContextMenu: (e) => {
-            (0, r.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("73417")]).then(
-                    n.bind(n, 668569),
-                );
+            (0, c.L3)(e, async () => {
+                let { default: e } = await Promise.all([
+                    n.e("97262"),
+                    n.e("92493"),
+                    n.e("53635"),
+                    n.e("32418"),
+                    n.e("13171"),
+                ]).then(n.bind(n, 668569));
                 return (n) => (0, i.jsx)(e, { ...n, user: t });
             });
         },
         children: [
-            (0, i.jsx)(a.euF, {
-                src: t.getAvatarURL(y, x),
+            (0, i.jsx)(o.eu, {
+                src: t.getAvatarURL(S, v),
                 "aria-label": t.username,
-                size: _,
-                status: N ? f.clD.UNKNOWN : E,
-                statusBackdropColor: N ? void 0 : (0, a.C$5)(C),
-                isMobile: O,
-                className: m.my,
+                size: y,
+                status: b ? m.clD.UNKNOWN : a,
+                statusBackdropColor: b ? void 0 : (0, d.C$)(N),
+                isMobile: j,
+                className: E.my,
             }),
             (0, i.jsxs)("div", {
-                className: m.zH,
+                className: E.zH,
                 children: [
-                    (0, i.jsx)(o.A, { user: t, className: m.Tc, discriminatorClass: m.D2 }),
-                    (0, i.jsx)(c.A, { user: t, activities: T, applicationStream: b, voiceChannel: j }),
+                    (0, i.jsx)(u.A, { user: t, className: E.Tc, discriminatorClass: E.D2 }),
+                    (0, i.jsx)(p.A, { user: t, activities: O, applicationStream: D, voiceChannel: R }),
                 ],
             }),
         ],

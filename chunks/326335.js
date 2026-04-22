@@ -1,60 +1,61 @@
-l.d(t, { X: () => o });
-var a = l(627968);
-l(64700);
-var r = l(951707),
-    n = l(618473);
-let s = () => (0, a.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
-    o = {
+"use strict";
+a.d(t, { X: () => s });
+var r = a(627968);
+a(64700);
+var l = a(951707),
+    n = a(618473);
+let i = () => (0, r.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
+    s = {
         name: "ContainedHero",
         id: "contained-hero",
         component: (e) => {
             let {
                     containerHeight: t,
-                    showChildren: l,
-                    bannerSrc: o,
-                    animatedBannerSrc: i,
+                    showChildren: a,
+                    bannerSrc: s,
+                    animatedBannerSrc: o,
                     logoSrc: d,
                     href: c,
                     backgroundColor: u,
                 } = e,
-                x = () =>
-                    l
-                        ? (0, a.jsxs)(r.A, {
+                h = () =>
+                    a
+                        ? (0, r.jsxs)(l.A, {
                               children: [
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
-                                  (0, a.jsx)(s, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
+                                  (0, r.jsx)(i, {}),
                               ],
                           })
                         : null;
-            return (0, a.jsxs)(a.Fragment, {
+            return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, a.jsx)("div", {
-                        style: { height: l ? void 0 : t },
-                        children: (0, a.jsx)(n.A, {
+                    (0, r.jsx)("div", {
+                        style: { height: a ? void 0 : t },
+                        children: (0, r.jsx)(n.A, {
+                            bannerSrc: { src: s },
+                            logoSrc: { src: d },
+                            href: c,
+                            backgroundColor: u,
+                            children: h(),
+                        }),
+                    }),
+                    (0, r.jsx)("br", {}),
+                    (0, r.jsx)("div", {
+                        style: { height: a ? void 0 : t },
+                        children: (0, r.jsx)(n.A, {
                             bannerSrc: { src: o },
                             logoSrc: { src: d },
                             href: c,
                             backgroundColor: u,
-                            children: x(),
-                        }),
-                    }),
-                    (0, a.jsx)("br", {}),
-                    (0, a.jsx)("div", {
-                        style: { height: l ? void 0 : t },
-                        children: (0, a.jsx)(n.A, {
-                            bannerSrc: { src: i },
-                            logoSrc: { src: d },
-                            href: c,
-                            backgroundColor: u,
-                            children: x(),
+                            children: h(),
                         }),
                     }),
                 ],

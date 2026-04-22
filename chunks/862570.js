@@ -1,30 +1,29 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var r = n(735438),
     i = n.n(r),
-    a = n(954571),
-    s = n(31408),
+    s = n(954571),
+    a = n(31408),
     o = n(652215);
-let l = 5e3;
-function u(e) {
+function l(e) {
     switch (e) {
-        case s.uD.CHAT_INPUT:
+        case a.uD.CHAT_INPUT:
             return "chat_input";
-        case s.uD.MENTION:
+        case a.uD.MENTION:
             return "mention";
-        case s.uD.VOICE_USER:
+        case a.uD.VOICE_USER:
             return "voice_user";
     }
 }
-function c(e) {
+function u(e) {
     switch (e) {
-        case s.k.CHAT_INPUT:
+        case a.k.CHAT_INPUT:
             return "chat_input";
-        case s.k.MEMBER_USER:
+        case a.k.MEMBER_USER:
             return "member_user";
-        case s.k.REACTION:
+        case a.k.REACTION:
             return "reaction";
-        case s.k.CALL_TILE:
+        case a.k.CALL_TILE:
             return "call_tile";
     }
 }
@@ -39,29 +38,29 @@ function d(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let _ = i().throttle((e) => {
+let c = i().throttle((e) => {
     let {
         enabled: t,
         combosEnabled: n,
         combosRequiredCount: r,
         screenshakeEnabled: i,
-        shakeIntensity: s,
-        screenshakeEnabledLocations: l,
+        shakeIntensity: a,
+        screenshakeEnabledLocations: c,
         confettiEnabled: _,
         confettiSize: f,
-        confettiCount: p,
+        confettiCount: E,
         confettiEnabledLocations: h,
     } = e;
-    a.default.track(o.HAw.POGGERMODE_SETTINGS_UPDATED, {
+    s.default.track(o.HAw.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
         combos_required_count: r,
         screenshake_enabled: i,
-        shake_intensity: s,
-        screenshake_enabled_locations: d(l, u),
+        shake_intensity: a,
+        screenshake_enabled_locations: d(c, l),
         confetti_enabled: _,
         confetti_size: f,
-        confetti_count: p,
-        confetti_enabled_locations: d(h, c),
+        confetti_count: E,
+        confetti_enabled_locations: d(h, u),
     });
-}, l);
+}, 5e3);

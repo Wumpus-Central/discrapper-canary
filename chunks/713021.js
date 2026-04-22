@@ -1,30 +1,20 @@
 "use strict";
-n.d(t, { Ay: () => h, dx: () => l, k0: () => o });
-var r = n(635377),
-    i = n.n(r),
-    a = n(311907),
-    s = n(73153),
-    o = (function (e) {
-        return (e.VOICE_MESSAGE = "voice_message"), e;
-    })({});
-let l = (e, t) => `${e}-${t}`,
-    u = 25,
-    c = { rates: { voice_message: 1 }, positions: new (i())({ max: u }) },
-    d = { ...c };
-function _(e) {
-    let { rate: t, playbackType: n } = e;
-    d = { ...d, rates: { ...d.rates, [n]: t } };
-}
-function f(e) {
-    let { cacheKey: t, position: n, duration: r } = e;
-    n > 0.5 && n < 0.95 * r ? d.positions.set(t, n) : d.positions.del(t);
-}
-class p extends a.Ay.DeviceSettingsStore {
+n.d(t, { Ay: () => m, dx: () => c, k0: () => o });
+var i,
+    l = n(635377),
+    s = n.n(l),
+    r = n(311907),
+    a = n(73153),
+    o = (((i = {}).VOICE_MESSAGE = "voice_message"), i);
+let c = (e, t) => `${e}-${t}`,
+    u = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
+    d = { ...u };
+class h extends r.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
         let { positions: t, ...n } = e ?? {};
-        (d = { ...c, ...n }), null != t && d.positions.load(t);
+        (d = { ...u, ...n }), null != t && d.positions.load(t);
     }
     getUserAgnosticState() {
         return { rates: d.rates, positions: d.positions.dump() };
@@ -36,4 +26,13 @@ class p extends a.Ay.DeviceSettingsStore {
         return d.positions.get(e) ?? 0;
     }
 }
-let h = new p(s.h, { MEDIA_PLAYBACK_RATE_UPDATE: _, MEDIA_PLAYBACK_POSITION_UPDATE: f });
+let m = new h(a.h, {
+    MEDIA_PLAYBACK_RATE_UPDATE: function (e) {
+        let { rate: t, playbackType: n } = e;
+        d = { ...d, rates: { ...d.rates, [n]: t } };
+    },
+    MEDIA_PLAYBACK_POSITION_UPDATE: function (e) {
+        let { cacheKey: t, position: n, duration: i } = e;
+        n > 0.5 && n < 0.95 * i ? d.positions.set(t, n) : d.positions.del(t);
+    },
+});

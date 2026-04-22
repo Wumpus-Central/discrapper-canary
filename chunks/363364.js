@@ -1,25 +1,22 @@
 "use strict";
 var r = n(315646),
     i = n(741623),
-    a = function (e, t, n) {
+    s = function (e, t, n) {
         for (var r, i = e; null != (r = i.next); i = r)
             if (r.key === t) return (i.next = r.next), n || ((r.next = e.next), (e.next = r)), r;
     },
-    s = function (e, t) {
+    a = function (e, t) {
         if (e) {
-            var n = a(e, t);
+            var n = s(e, t);
             return n && n.value;
         }
     },
     o = function (e, t, n) {
-        var r = a(e, t);
+        var r = s(e, t);
         r ? (r.value = n) : (e.next = { key: t, next: e.next, value: n });
     },
     l = function (e, t) {
-        return !!e && !!a(e, t);
-    },
-    u = function (e, t) {
-        if (e) return a(e, t, !0);
+        if (e) return s(e, t, !0);
     };
 e.exports = function () {
     var e,
@@ -29,14 +26,15 @@ e.exports = function () {
             },
             delete: function (t) {
                 var n = e && e.next,
-                    r = u(e, t);
+                    r = l(e, t);
                 return r && n && n === r && (e = void 0), !!r;
             },
             get: function (t) {
-                return s(e, t);
+                return a(e, t);
             },
             has: function (t) {
-                return l(e, t);
+                var n;
+                return !!(n = e) && !!s(n, t);
             },
             set: function (t, n) {
                 e || (e = { next: void 0 }), o(e, t, n);

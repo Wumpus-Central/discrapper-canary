@@ -1,10 +1,18 @@
-a.d(l, { $: () => r });
+a.d(l, { $: () => x });
 var t = a(627968),
-    o = a(64700),
-    n = a(732955),
-    i = a(397927),
-    s = a(728690);
-let r = {
+    n = a(64700),
+    o = a(821609),
+    i = a(861672),
+    r = a(477782),
+    s = a(22231),
+    d = a(366605),
+    u = a(624479),
+    c = a(625903),
+    b = a(509434),
+    p = a(241326),
+    m = a(265872),
+    h = a(159402);
+let x = {
     title: "Menu",
     stories: [
         {
@@ -14,126 +22,126 @@ let r = {
                 let {
                         variant: l,
                         hideScroller: a,
-                        showGroups: r,
-                        showCheckboxItems: d,
-                        showRadioItems: u,
-                        showSwitchItems: c,
-                        showSubmenus: b,
-                        showIcons: p,
-                        showShortcuts: m,
-                        showSubtext: x,
-                        showDisabledItems: v,
-                        showColoredItems: h,
-                        showLoading: y,
-                        showTrailingIndicator: f,
-                        dangerItemColor: g,
+                        showGroups: x,
+                        showCheckboxItems: g,
+                        showRadioItems: f,
+                        showSwitchItems: v,
+                        showSubmenus: y,
+                        showIcons: _,
+                        showShortcuts: C,
+                        showSubtext: j,
+                        showDisabledItems: V,
+                        showColoredItems: k,
+                        showLoading: S,
+                        showTrailingIndicator: w,
+                        dangerItemColor: M,
                     } = e,
-                    [V, C] = o.useState(!0),
-                    [S, j] = o.useState(!1),
-                    [k, w] = o.useState("text"),
-                    [T, M] = o.useState("cozy"),
-                    [D, I] = o.useState(!0),
-                    A = o.useRef(null);
+                    [T, A] = n.useState(!0),
+                    [N, E] = n.useState(!1),
+                    [D, I] = n.useState("text"),
+                    [L, R] = n.useState("cozy"),
+                    [P, O] = n.useState(!0),
+                    B = n.useRef(null);
                 return (0, t.jsxs)("div", {
-                    className: s.k,
+                    className: h.k,
                     children: [
-                        !D && (0, t.jsx)(n.$nd, { text: "Open Menu", onClick: () => I(!0) }),
-                        (0, t.jsx)(i.YNO, {
+                        !P && (0, t.jsx)(o.$, { text: "Open Menu", onClick: () => O(!0) }),
+                        (0, t.jsx)(m.Y, {
                             renderPopout: (e) => {
-                                let { closePopout: o } = e;
-                                return (0, t.jsxs)(i.W1t, {
+                                let { closePopout: n } = e;
+                                return (0, t.jsxs)(i.W, {
                                     "data-menu-migrated": !0,
                                     navId: "menu-story",
                                     "aria-label": "Story Menu",
                                     variant: l,
                                     hideScroller: a,
-                                    onClose: o,
+                                    onClose: n,
                                     onSelect: () => {},
                                     children: [
-                                        (0, t.jsx)(i.Drp, {
+                                        (0, t.jsx)(r.Dr, {
                                             id: "edit",
                                             label: "Edit Message",
-                                            icon: p ? i.R2l : void 0,
-                                            leadingAccessory: p ? { type: "icon", icon: i.R2l } : void 0,
-                                            shortcut: m ? "⌘E" : void 0,
+                                            icon: _ ? s.R : void 0,
+                                            leadingAccessory: _ ? { type: "icon", icon: s.R } : void 0,
+                                            shortcut: C ? "⌘E" : void 0,
                                             action: () => {},
                                         }),
-                                        (0, t.jsx)(i.Drp, {
+                                        (0, t.jsx)(r.Dr, {
                                             id: "pin",
                                             label: "Pin Message",
-                                            icon: p ? i.tsw : void 0,
-                                            leadingAccessory: p ? { type: "icon", icon: i.tsw } : void 0,
-                                            subtext: x ? "Pin this message to the channel" : void 0,
+                                            icon: _ ? d.t : void 0,
+                                            leadingAccessory: _ ? { type: "icon", icon: d.t } : void 0,
+                                            subtext: j ? "Pin this message to the channel" : void 0,
                                             badge: "beta",
-                                            loading: y,
+                                            loading: S,
                                             action: () => {},
                                         }),
-                                        (0, t.jsx)(i.Drp, {
+                                        (0, t.jsx)(r.Dr, {
                                             id: "copy",
                                             label: "Copy Message Link",
-                                            icon: p ? i.TdU : void 0,
-                                            leadingAccessory: p ? { type: "icon", icon: i.TdU } : void 0,
+                                            icon: _ ? u.T : void 0,
+                                            leadingAccessory: _ ? { type: "icon", icon: u.T } : void 0,
                                             badge: "new",
                                             action: () => {},
                                         }),
-                                        v &&
-                                            (0, t.jsx)(i.Drp, {
+                                        V &&
+                                            (0, t.jsx)(r.Dr, {
                                                 id: "disabled",
                                                 label: "Disabled Item",
-                                                icon: p ? i.Zes : void 0,
-                                                leadingAccessory: p ? { type: "icon", icon: i.Zes } : void 0,
+                                                icon: _ ? c.Z : void 0,
+                                                leadingAccessory: _ ? { type: "icon", icon: c.Z } : void 0,
                                                 disabled: !0,
                                                 action: () => {},
                                             }),
-                                        h &&
+                                        k &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsx)(i.Drp, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsx)(r.Dr, {
                                                         id: "brand-item",
                                                         label: "Brand Item",
                                                         color: "brand",
-                                                        trailingIndicator: f ? { type: "icon", icon: i.I9m } : void 0,
+                                                        trailingIndicator: w ? { type: "icon", icon: b.I } : void 0,
                                                         action: () => {},
                                                     }),
-                                                    (0, t.jsx)(i.Drp, {
+                                                    (0, t.jsx)(r.Dr, {
                                                         id: "premium-item",
                                                         label: "Premium Item",
                                                         color: "premium",
-                                                        icon: p ? i.Zes : void 0,
-                                                        leadingAccessory: p ? { type: "icon", icon: i.Zes } : void 0,
+                                                        icon: _ ? c.Z : void 0,
+                                                        leadingAccessory: _ ? { type: "icon", icon: c.Z } : void 0,
                                                         action: () => {},
                                                     }),
-                                                    (0, t.jsx)(i.Drp, {
+                                                    (0, t.jsx)(r.Dr, {
                                                         id: "success-item",
                                                         label: "Success Item",
                                                         color: "success",
-                                                        icon: p ? i.Zes : void 0,
-                                                        leadingAccessory: p ? { type: "icon", icon: i.Zes } : void 0,
+                                                        icon: _ ? c.Z : void 0,
+                                                        leadingAccessory: _ ? { type: "icon", icon: c.Z } : void 0,
                                                         action: () => {},
                                                     }),
                                                 ],
                                             }),
-                                        b &&
+                                        y &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsxs)(i.Drp, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsxs)(r.Dr, {
                                                         id: "submenu",
                                                         label: "More Options",
-                                                        icon: p ? i.Zes : void 0,
+                                                        icon: _ ? c.Z : void 0,
                                                         children: [
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "submenu-1",
                                                                 label: "Submenu Item 1",
                                                                 action: () => {},
                                                             }),
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "submenu-2",
                                                                 label: "Submenu Item 2",
                                                                 action: () => {},
                                                             }),
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "submenu-3",
                                                                 label: "Submenu Item 3",
                                                                 action: () => {},
@@ -142,99 +150,99 @@ let r = {
                                                     }),
                                                 ],
                                             }),
-                                        d &&
+                                        g &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsx)(i.sLh, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsx)(r.sL, {
                                                         id: "notifications",
                                                         label: "Enable Notifications Enable Notifications Enable Notifications",
-                                                        checked: V,
-                                                        action: () => C(!V),
+                                                        checked: T,
+                                                        action: () => A(!T),
                                                     }),
-                                                    (0, t.jsx)(i.sLh, {
+                                                    (0, t.jsx)(r.sL, {
                                                         id: "mute",
                                                         label: "Mute Channel",
-                                                        checked: S,
-                                                        action: () => j(!S),
+                                                        checked: N,
+                                                        action: () => E(!N),
                                                     }),
                                                 ],
                                             }),
-                                        c &&
+                                        v &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsx)(i.fPC, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsx)(r.fP, {
                                                         id: "switch-notifications",
                                                         label: "Push Notifications",
-                                                        checked: V,
-                                                        action: () => C(!V),
+                                                        checked: T,
+                                                        action: () => A(!T),
                                                     }),
                                                 ],
                                             }),
-                                        u &&
+                                        f &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsxs)(i.rXV, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsxs)(r.rX, {
                                                         label: "Channel Type",
                                                         children: [
-                                                            (0, t.jsx)(i.iDA, {
+                                                            (0, t.jsx)(r.iD, {
                                                                 id: "radio-text",
                                                                 group: "channel-type",
                                                                 label: "Text Channel Text Channel Text Channel Text Channel Text Channel Text Channel ",
-                                                                checked: "text" === k,
-                                                                action: () => w("text"),
+                                                                checked: "text" === D,
+                                                                action: () => I("text"),
                                                             }),
-                                                            (0, t.jsx)(i.iDA, {
+                                                            (0, t.jsx)(r.iD, {
                                                                 id: "radio-voice",
                                                                 group: "channel-type",
                                                                 label: "Voice Channel",
-                                                                checked: "voice" === k,
-                                                                action: () => w("voice"),
+                                                                checked: "voice" === D,
+                                                                action: () => I("voice"),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsxs)(i.rXV, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsxs)(r.rX, {
                                                         label: "View Mode",
                                                         children: [
-                                                            (0, t.jsx)(i.iDA, {
+                                                            (0, t.jsx)(r.iD, {
                                                                 id: "radio-cozy",
                                                                 group: "view-mode",
                                                                 label: "Cozy",
-                                                                checked: "cozy" === T,
-                                                                action: () => M("cozy"),
+                                                                checked: "cozy" === L,
+                                                                action: () => R("cozy"),
                                                             }),
-                                                            (0, t.jsx)(i.iDA, {
+                                                            (0, t.jsx)(r.iD, {
                                                                 id: "radio-compact",
                                                                 group: "view-mode",
                                                                 label: "Compact",
-                                                                checked: "compact" === T,
-                                                                action: () => M("compact"),
+                                                                checked: "compact" === L,
+                                                                action: () => R("compact"),
                                                             }),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                        r &&
+                                        x &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
-                                                    (0, t.jsx)(i.bXX, {}),
-                                                    (0, t.jsxs)(i.rXV, {
+                                                    (0, t.jsx)(r.bX, {}),
+                                                    (0, t.jsxs)(r.rX, {
                                                         label: "Grouped Items",
                                                         children: [
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "group-1",
                                                                 label: "Group Item 1",
                                                                 action: () => {},
                                                             }),
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "group-2",
                                                                 label: "Group Item 2",
                                                                 action: () => {},
                                                             }),
-                                                            (0, t.jsx)(i.Drp, {
+                                                            (0, t.jsx)(r.Dr, {
                                                                 id: "group-3",
                                                                 label: "Group Item 3",
                                                                 action: () => {},
@@ -243,12 +251,12 @@ let r = {
                                                     }),
                                                 ],
                                             }),
-                                        (0, t.jsx)(i.bXX, {}),
-                                        (0, t.jsx)(i.Drp, {
+                                        (0, t.jsx)(r.bX, {}),
+                                        (0, t.jsx)(r.Dr, {
                                             id: "delete",
                                             label: "Delete Message",
-                                            color: g,
-                                            icon: p ? i.ucK : void 0,
+                                            color: M,
+                                            icon: _ ? p.u : void 0,
                                             action: () => {},
                                         }),
                                     ],
@@ -257,11 +265,11 @@ let r = {
                             position: "bottom",
                             align: "center",
                             shouldShow: !0,
-                            targetElementRef: A,
-                            onRequestClose: () => I(!1),
+                            targetElementRef: B,
+                            onRequestClose: () => O(!1),
                             children: () =>
                                 (0, t.jsx)("div", {
-                                    ref: A,
+                                    ref: B,
                                     style: { width: 1, height: 1, opacity: 0, pointerEvents: "none" },
                                 }),
                         }),

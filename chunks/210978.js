@@ -1,14 +1,11 @@
 "use strict";
-n.d(t, { M: () => r, n: () => i });
-var r = (function (e) {
-        return (
-            (e.NONE = "none"),
-            (e.APPLICATION_ONLY = "application_only"),
-            (e.COMMAND_ONLY = "command_only"),
-            (e.COMMAND_OR_APPLICATION = "command_or_application"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.ALLOW = "allow"), (e.ONLY_TEXT = "only_text"), (e.DENY = "deny"), e;
-    })({});
+n.d(t, { M: () => s, n: () => a });
+var r,
+    i,
+    s =
+        (((r = {}).NONE = "none"),
+        (r.APPLICATION_ONLY = "application_only"),
+        (r.COMMAND_ONLY = "command_only"),
+        (r.COMMAND_OR_APPLICATION = "command_or_application"),
+        r),
+    a = (((i = {}).ALLOW = "allow"), (i.ONLY_TEXT = "only_text"), (i.DENY = "deny"), i);

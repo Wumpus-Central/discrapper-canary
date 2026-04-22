@@ -1,48 +1,50 @@
 "use strict";
-n.d(t, { W: () => f });
+n.d(t, { W: () => x });
 var i = n(627968);
 n(64700);
 var s = n(607399),
     r = n(49485),
     l = n(80703),
-    a = n(492917),
-    o = n(397927),
-    c = n(976860),
-    d = n(961350),
-    u = n(954571),
-    h = n(877062),
-    _ = n(652215),
-    p = n(985018),
-    g = n(886083),
-    m = n(604880);
-function f(e) {
-    let { token: t, hasError: n, errorReason: f } = e;
+    a = n(495822),
+    o = n(534514),
+    c = n(834730),
+    d = n(821609),
+    u = n(976860),
+    _ = n(961350),
+    h = n(954571),
+    m = n(877062),
+    p = n(652215),
+    g = n(985018),
+    A = n(611346),
+    f = n(604880);
+function x(e) {
+    let { token: t, hasError: n, errorReason: x } = e;
     return n
         ? (0, i.jsxs)("div", {
-              className: g.MY,
+              className: A.MY,
               children: [
-                  (0, i.jsx)("div", { className: g.r$, children: (0, i.jsx)("img", { src: m, alt: "" }) }),
+                  (0, i.jsx)("div", { className: A.r$, children: (0, i.jsx)("img", { src: f, alt: "" }) }),
                   (0, i.jsxs)("div", {
-                      className: g.Qs,
+                      className: A.Qs,
                       children: [
-                          (0, i.jsx)(a.DeQ, { alt: "" }),
-                          (0, i.jsx)(o.Heading, {
+                          (0, i.jsx)(a.D, { alt: "" }),
+                          (0, i.jsx)(o.D, {
                               variant: "heading-lg/semibold",
-                              className: g.ky,
-                              children: p.intl.string(p.t.RtCSr1),
+                              className: A.ky,
+                              children: g.intl.string(g.t.RtCSr1),
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(c.E, {
                               variant: "text-md/normal",
-                              className: g.G3,
-                              children: p.intl.string(p.t["S+YjYJ"]),
+                              className: A.G3,
+                              children: g.intl.string(g.t["S+YjYJ"]),
                           }),
-                          (0, i.jsx)(o.Button, {
+                          (0, i.jsx)(d.$, {
                               variant: "primary",
-                              text: p.intl.string(p.t.j3cG2p),
+                              text: g.intl.string(g.t.j3cG2p),
                               fullWidth: !0,
                               onClick: () => {
-                                  u.default.track(_.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: f }),
-                                      (0, c.pX)(_.BVt.LOGIN);
+                                  h.default.track(p.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: x }),
+                                      (0, u.pX)(p.BVt.LOGIN);
                               },
                           }),
                       ],
@@ -50,33 +52,33 @@ function f(e) {
               ],
           })
         : (0, i.jsxs)("div", {
-              className: g.MY,
+              className: A.MY,
               children: [
-                  (0, i.jsx)("div", { className: g.r$, children: (0, i.jsx)("img", { src: m, alt: "" }) }),
+                  (0, i.jsx)("div", { className: A.r$, children: (0, i.jsx)("img", { src: f, alt: "" }) }),
                   (0, i.jsxs)("div", {
-                      className: g.Qs,
+                      className: A.Qs,
                       children: [
-                          (0, i.jsx)(a.DeQ, { alt: "" }),
-                          (0, i.jsx)(o.Heading, {
+                          (0, i.jsx)(a.D, { alt: "" }),
+                          (0, i.jsx)(o.D, {
                               variant: "heading-lg/semibold",
-                              className: g.ky,
-                              children: p.intl.string(p.t["9h/0Rl"]),
+                              className: A.ky,
+                              children: g.intl.string(g.t["9h/0Rl"]),
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(c.E, {
                               variant: "text-md/normal",
-                              className: g.G3,
-                              children: p.intl.string(p.t.Wgm7Om),
+                              className: A.G3,
+                              children: g.intl.string(g.t.Wgm7Om),
                           }),
-                          (0, i.jsx)(o.Button, {
+                          (0, i.jsx)(d.$, {
                               variant: "primary",
-                              text: p.intl.string(p.t.NydsTd),
+                              text: g.intl.string(g.t.NydsTd),
                               fullWidth: !0,
                               onClick: () => {
                                   let e, n;
                                   (e = (function (e) {
                                       let t = platform.os?.family;
                                       if ("Android" === t || "iOS" === t) {
-                                          let t = d.default.getFingerprint(),
+                                          let t = _.default.getFingerprint(),
                                               n = (0, r.I_)(),
                                               i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/login/one-time?token=${e}`;
                                           return (0, r.Ay)(i, {
@@ -88,19 +90,19 @@ function f(e) {
                                       return "discord://";
                                   })(t)),
                                       (n = (0, r.X7)(e)),
-                                      u.default.track(_.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
+                                      h.default.track(p.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
                                           detection_type: "mobile_button_clicked",
                                           device_type: s.Fr ? "mobile" : "tablet",
-                                          platform: u.default.getSuperProperties()?.os,
+                                          platform: h.default.getSuperProperties()?.os,
                                       }),
                                       null != n &&
-                                          u.default.track(_.HAw.DEEP_LINK_CLICKED, {
+                                          h.default.track(p.HAw.DEEP_LINK_CLICKED, {
                                               fingerprint: (0, l.v)(n.fingerprint),
                                               attempt_id: n.attemptId,
                                               source: n.utmSource,
                                           }),
-                                      h.A.launch(e, (e) => {
-                                          e || (0, c.bG)({ pathname: _.BVt.LOGIN });
+                                      m.A.launch(e, (e) => {
+                                          e || (0, u.bG)({ pathname: p.BVt.LOGIN });
                                       });
                               },
                           }),

@@ -1,7 +1,7 @@
 t.d(e, { A: () => i });
 var n = t(627968);
 t(64700);
-var r = t(397927),
+var r = t(834730),
     s = t(974651);
 let i = function (a) {
     let { label: e, subLabel: t, icon: i } = a;
@@ -12,8 +12,8 @@ let i = function (a) {
             (0, n.jsxs)("div", {
                 className: s.ET,
                 children: [
-                    (0, n.jsx)(r.Text, { variant: "text-sm/medium", color: "text-default", children: e }),
-                    null != t && (0, n.jsx)(r.Text, { variant: "text-xs/normal", color: "text-subtle", children: t }),
+                    (0, n.jsx)(r.E, { variant: "text-sm/medium", color: "text-default", children: e }),
+                    null != t && (0, n.jsx)(r.E, { variant: "text-xs/normal", color: "text-subtle", children: t }),
                 ],
             }),
         ],

@@ -1,50 +1,52 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(793574),
-    o = n(688810),
-    l = n(50268),
-    u = n(183555),
-    c = n(993401),
-    d = n(985018);
-function _(e) {
+n.d(t, { A: () => m });
+var i = n(627968),
+    l = n(64700),
+    s = n(265872),
+    a = n(861672),
+    r = n(477782),
+    o = n(365199),
+    d = n(793574),
+    c = n(688810),
+    u = n(50268),
+    h = n(183555),
+    A = n(993401),
+    _ = n(985018);
+function m(e) {
     let { user: t, viewProfileItem: n } = e,
-        _ = i.useRef(null),
-        { trackUserProfileAction: f } = (0, u.NJ)(),
-        { analyticsLocations: p } = (0, o.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
-        h = [
+        m = l.useRef(null),
+        { trackUserProfileAction: g } = (0, h.NJ)(),
+        { analyticsLocations: p } = (0, c.Ay)(d.A.USER_PROFILE_OVERFLOW_MENU),
+        f = [
             [n],
             [
-                (0, l.A)({
+                (0, u.A)({
                     id: t.id,
-                    label: d.intl.string(d.t["/AXYnE"]),
-                    onSuccess: () => f({ action: "COPY_USER_ID", analyticsLocations: p }),
+                    label: _.intl.string(_.t["/AXYnE"]),
+                    onSuccess: () => g({ action: "COPY_USER_ID", analyticsLocations: p }),
                 }),
             ],
         ];
-    return h.every((e) => e.every((e) => null == e))
+    return f.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(a.YNO, {
-              targetElementRef: _,
+        : (0, i.jsx)(s.Y, {
+              targetElementRef: m,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(a.W1t, {
+                  return (0, i.jsx)(a.W, {
                       "data-menu-migrated-auto": !0,
                       navId: "non-user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
-                      "aria-label": d.intl.string(d.t.AXIHpV),
-                      children: h.map((e, t) => (0, r.jsx)(a.rXV, { children: e.map((e) => e) }, t)),
+                      "aria-label": _.intl.string(_.t.AXIHpV),
+                      children: f.map((e, t) => (0, i.jsx)(r.rX, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(c.br, {
-                      buttonRef: _,
+                  (0, i.jsx)(A.br, {
+                      buttonRef: m,
                       action: "PRESS_OPTIONS",
-                      icon: a.jNK,
-                      tooltipText: d.intl.string(d.t["UKOtz+"]),
+                      icon: o.j,
+                      tooltipText: _.intl.string(_.t["UKOtz+"]),
                       ...e,
                   }),
           });

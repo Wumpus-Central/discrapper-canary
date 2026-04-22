@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     sH: "recentMentionsPopout__95796",
     qC: "widerInbox__95796",

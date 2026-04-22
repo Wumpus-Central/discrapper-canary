@@ -1,95 +1,98 @@
-l.d(t, { A: () => v });
+l.d(t, { A: () => N });
 var n = l(627968),
     a = l(64700),
     i = l(311907),
-    s = l(397927),
-    r = l(565645),
-    u = l(414079),
-    o = l(713517),
-    d = l(375499),
-    c = l(937773),
-    m = l(808728),
-    f = l(730906),
-    h = l(307731),
-    g = l(985018),
-    x = l(906796);
-function v(e) {
+    s = l(452027),
+    r = l(265872),
+    u = l(862301),
+    o = l(834730),
+    d = l(565645),
+    c = l(414079),
+    m = l(713517),
+    f = l(375499),
+    h = l(937773),
+    g = l(808728),
+    x = l(730906),
+    v = l(307731),
+    j = l(985018),
+    p = l(809052);
+function N(e) {
     let {
             className: t,
             guildId: l,
-            error: v,
-            emojiId: j,
-            emojiName: p,
-            isRequiredField: N = !0,
-            shouldUpdateBothEmojiFields: b = !1,
-            setEmojiId: y,
-            setEmojiName: C,
+            error: N,
+            emojiId: A,
+            emojiName: C,
+            isRequiredField: b = !0,
+            shouldUpdateBothEmojiFields: y = !1,
+            setEmojiId: w,
+            setEmojiName: E,
         } = e,
-        A = (0, f.A)({ emojiId: j, emojiName: p }),
-        w = (0, i.bG)([m.Ay], () => (null != l ? m.Ay.getDefaultChannel(l) : null)),
-        S = a.useRef(null),
-        { isHoveringOrFocusing: E } = (0, o.A)(S),
-        M = () => {
-            C(void 0), y(void 0);
+        S = (0, x.A)({ emojiId: A, emojiName: C }),
+        M = (0, i.bG)([g.Ay], () => (null != l ? g.Ay.getDefaultChannel(l) : null)),
+        k = a.useRef(null),
+        { isHoveringOrFocusing: P } = (0, m.A)(k),
+        T = () => {
+            E(void 0), w(void 0);
         },
-        T = (e) => {
-            e.stopPropagation(), M();
+        I = (e) => {
+            e.stopPropagation(), T();
         },
-        k = a.useMemo(() => {
-            let e = null != j && "" !== j,
-                t = null != p && "" !== p,
-                l = null != A && "" !== A,
-                n = t && !Number.isNaN(parseInt(p)) && !l && !e;
+        D = a.useMemo(() => {
+            let e = null != A && "" !== A,
+                t = null != C && "" !== C,
+                l = null != S && "" !== S,
+                n = t && !Number.isNaN(parseInt(C)) && !l && !e;
             return { hasEmojiId: e, hasEmojiName: t, hasEmojiDisplayName: l, isDeletedCustomEmoji: n };
-        }, [j, p, A]),
-        P = !k.isDeletedCustomEmoji && k.hasEmojiDisplayName;
+        }, [A, C, S]),
+        F = !D.isDeletedCustomEmoji && D.hasEmojiDisplayName;
     return (0, n.jsx)("div", {
         className: t,
-        children: (0, n.jsx)(s.D0$, {
-            required: N,
-            label: g.intl.string(g.t["3BQmiC"]),
-            errorMessage: v ?? void 0,
-            children: (0, n.jsx)(s.YNO, {
-                targetElementRef: S,
-                animation: s.YNO.Animation.NONE,
+        children: (0, n.jsx)(s.D, {
+            required: b,
+            label: j.intl.string(j.t["3BQmiC"]),
+            errorMessage: N ?? void 0,
+            children: (0, n.jsx)(r.Y, {
+                targetElementRef: k,
+                animation: r.Y.Animation.NONE,
                 position: "top",
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, n.jsx)(c.A, {
+                    return (0, n.jsx)(h.A, {
                         closePopout: t,
-                        pickerIntention: h.EmojiIntention.SOUNDBOARD,
+                        pickerIntention: v.EmojiIntention.SOUNDBOARD,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
                             let { emoji: l, willClose: n } = e,
                                 a = l?.id == null;
-                            M(), a ? C(l?.optionallyDiverseSequence) : (b && C(l?.name), y(l?.id)), n && t();
+                            T(), a ? E(l?.optionallyDiverseSequence) : (y && E(l?.name), w(l?.id)), n && t();
                         },
                         guildId: l,
-                        channel: w,
+                        channel: M,
                     });
                 },
                 children: (e, t) => {
                     let { isShown: l } = t;
-                    return (0, n.jsxs)(s.FON, {
+                    return (0, n.jsxs)(u.F, {
                         ...e,
-                        className: x.LM,
-                        ref: S,
+                        className: p.LM,
+                        ref: k,
                         children: [
-                            (0, n.jsx)(d.A, {
+                            (0, n.jsx)(f.A, {
                                 active: l,
                                 tabIndex: 0,
                                 renderButtonContents:
-                                    !k.isDeletedCustomEmoji && (k.hasEmojiId || k.hasEmojiName)
-                                        ? () => (0, n.jsx)(r.A, { emojiName: p, emojiId: j })
+                                    !D.isDeletedCustomEmoji && (D.hasEmojiId || D.hasEmojiName)
+                                        ? () => (0, n.jsx)(d.A, { emojiName: C, emojiId: A })
                                         : null,
                             }),
-                            (0, n.jsx)(s.Text, {
+                            (0, n.jsx)(o.E, {
                                 variant: "text-md/normal",
                                 lineClamp: 1,
-                                color: P ? "text-default" : "text-muted",
-                                children: P ? `:${A}:` : g.intl.string(g.t.QTK0TJ),
+                                color: F ? "text-default" : "text-muted",
+                                children: F ? `:${S}:` : j.intl.string(j.t.QTK0TJ),
                             }),
-                            P && E && (0, n.jsx)(u.A, { ...e, onClick: T }),
+                            F && P && (0, n.jsx)(c.A, { ...e, onClick: I }),
                         ],
                     });
                 },

@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { P: () => l });
+n.d(t, { P: () => u });
 var r = n(64700),
-    i = n(975571),
-    a = n(633057),
-    s = n(652215),
+    l = n(975571),
+    i = n(633057),
+    a = n(652215),
     o = n(985018);
-function l(e) {
+function u(e) {
     let { userId: t, renderApplicationName: n } = e,
-        l = (0, a.A)(t);
+        u = (0, i.A)(t);
     return r.useMemo(
         () =>
-            null != l
+            null != u
                 ? o.intl.format(o.t.rSUACb, {
-                      helpdeskArticle: i.A.getArticleURL(s.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
-                      applicationName: () => n(l),
+                      helpdeskArticle: l.A.getArticleURL(a.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                      applicationName: () => n(u),
                   })
                 : o.intl.format(o.t["q+N8L6"], {
-                      helpdeskArticle: i.A.getArticleURL(s.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                      helpdeskArticle: l.A.getArticleURL(a.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
                   }),
-        [l, n],
+        [u, n],
     );
 }

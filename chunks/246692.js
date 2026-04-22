@@ -1,100 +1,100 @@
-"use strict";
-n.d(t, { p: () => h });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(158954),
-    l = n(732955),
-    u = n(964892),
-    c = n(135564),
-    d = n(916845),
-    _ = n(627330),
-    f = n(985018),
-    p = n(248789);
-function h(e) {
+a.d(l, { p: () => x });
+var t = a(627968),
+    n = a(64700),
+    o = a(503698),
+    i = a.n(o),
+    r = a(608250),
+    s = a(834730),
+    d = a(821609),
+    u = a(964892),
+    c = a(135564),
+    b = a(916845),
+    p = a(627330),
+    m = a(985018),
+    h = a(824078);
+function x(e) {
     let {
-            steps: t,
-            caretConfig: n = { align: "center" },
-            size: a = "md",
-            onStepChange: h,
-            onRequestClose: m,
-            popoverRef: g,
-            shouldShow: E,
-            position: A,
-            ...I
+            steps: l,
+            caretConfig: a = { align: "center" },
+            size: o = "md",
+            onStepChange: x,
+            onRequestClose: g,
+            popoverRef: f,
+            shouldShow: v,
+            position: y,
+            ..._
         } = e,
-        [T, y] = i.useState(0);
-    i.useEffect(() => {
-        E && y(0);
-    }, [E]),
-        i.useEffect(() => {
-            h?.(T);
-        }, [T, h]);
-    let S = t[T],
-        v = T + 1 === t.length,
-        C = i.useCallback(() => {
-            S?.onCta?.(), v ? m?.() : y((e) => e + 1);
-        }, [S, v, m]),
-        b = i.useCallback(() => {
-            m?.();
-        }, [m]),
-        N = i.useCallback(() => {
-            m?.();
-        }, [m]);
-    if (!E || null == S) return null;
-    let R = {
-            text: S.action?.text ?? (v ? f.intl.string(f.t.i4jeWR) : f.intl.string(f.t.PDTjLN)),
-            variant: S.action?.variant ?? "primary",
-            onClick: C,
-            ...S.action,
+        [C, j] = n.useState(0);
+    n.useEffect(() => {
+        v && j(0);
+    }, [v]),
+        n.useEffect(() => {
+            x?.(C);
+        }, [C, x]);
+    let V = l[C],
+        k = C + 1 === l.length,
+        S = n.useCallback(() => {
+            V?.onCta?.(), k ? g?.() : j((e) => e + 1);
+        }, [V, k, g]),
+        w = n.useCallback(() => {
+            g?.();
+        }, [g]),
+        M = n.useCallback(() => {
+            g?.();
+        }, [g]);
+    if (!v || null == V) return null;
+    let T = {
+            text: V.action?.text ?? (k ? m.intl.string(m.t.i4jeWR) : m.intl.string(m.t.PDTjLN)),
+            variant: V.action?.variant ?? "primary",
+            onClick: S,
+            ...V.action,
         },
-        O = {
-            targetElementRef: I.targetElementRef,
-            hasVideo: I.hasVideo,
-            scrollBehavior: I.scrollBehavior,
-            position: A,
-            shouldShow: E,
-            onRequestClose: b,
-            gradientColor: S.gradientColor,
-            caretConfig: n,
-            ...("edge" === I.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: I.align }
+        A = {
+            targetElementRef: _.targetElementRef,
+            hasVideo: _.hasVideo,
+            scrollBehavior: _.scrollBehavior,
+            position: y,
+            shouldShow: v,
+            onRequestClose: w,
+            gradientColor: V.gradientColor,
+            caretConfig: a,
+            ...("edge" === _.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: _.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, r.jsx)(u.x, {
-        ...O,
-        children: (0, r.jsxs)("div", {
-            ref: g,
+    return (0, t.jsx)(u.x, {
+        ...A,
+        children: (0, t.jsxs)("div", {
+            ref: f,
             children: [
-                (0, r.jsx)(d.q, { onClick: N, variant: null != S.gradientColor ? "color-mix" : void 0 }),
-                null != S.graphic &&
-                    (0, r.jsx)("div", {
-                        className: s()(p.graphic, { [p[`graphic--${a}`]]: null != a }),
-                        children: (0, r.jsx)(o.vYh, {
-                            ...S.graphic,
-                            aspectRatio: S.graphic.aspectRatio ?? ("sm" === a ? "2/1" : "16/9"),
+                (0, t.jsx)(b.q, { onClick: M, variant: null != V.gradientColor ? "color-mix" : void 0 }),
+                null != V.graphic &&
+                    (0, t.jsx)("div", {
+                        className: i()(h.graphic, { [h[`graphic--${o}`]]: null != o }),
+                        children: (0, t.jsx)(r.v, {
+                            ...V.graphic,
+                            aspectRatio: V.graphic.aspectRatio ?? ("sm" === o ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, r.jsx)(_.D, { title: S.title, body: S.body, badge: S.badge, textLink: S.textLink }),
-                (0, r.jsx)("div", {
-                    className: p.actionBar,
-                    children: (0, r.jsxs)("div", {
-                        className: p.multistepActionLayout,
+                (0, t.jsx)(p.D, { title: V.title, body: V.body, badge: V.badge, textLink: V.textLink }),
+                (0, t.jsx)("div", {
+                    className: h.actionBar,
+                    children: (0, t.jsxs)("div", {
+                        className: h.multistepActionLayout,
                         children: [
-                            (0, r.jsx)(o.EYj, {
+                            (0, t.jsx)(s.E, {
                                 variant: "text-xs/normal",
-                                className: p.multistepIndicator,
-                                children: f.intl.formatToPlainString(f.t.rO31eY, {
-                                    count: T + 1,
-                                    totalSteps: t.length,
+                                className: h.multistepIndicator,
+                                children: m.intl.formatToPlainString(m.t.rO31eY, {
+                                    count: C + 1,
+                                    totalSteps: l.length,
                                 }),
                             }),
-                            (0, r.jsx)(l.$nd, { size: "sm", ...R }),
+                            (0, t.jsx)(d.$, { size: "sm", ...T }),
                         ],
                     }),
                 }),
-                (0, r.jsx)(c.F, {}),
+                (0, t.jsx)(c.F, {}),
             ],
         }),
     });

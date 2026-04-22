@@ -1,33 +1,33 @@
 t.d(e, { A: () => m });
-var n = t(627968),
-    a = t(64700),
+var a = t(627968),
+    n = t(64700),
     r = t(503698),
-    i = t.n(r),
-    l = t(397927),
+    l = t.n(r),
+    i = t(192308),
     s = t(626584),
     o = t(961895),
     d = t(23658),
-    u = t(985018),
-    c = t(893221),
-    g = t(162253);
-let q = new s.A("UploadArea");
+    c = t(985018),
+    u = t(910162),
+    g = t(571876);
+let h = new s.A("UploadArea");
 function p() {
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         children: [
-            (0, n.jsx)("div", { className: i()(g.sG, c.sparkleOne) }),
-            (0, n.jsx)("div", { className: i()(g.sG, c.sparkleTwo) }),
-            (0, n.jsx)("div", { className: i()(g.GK, c.lightOne) }),
-            (0, n.jsx)("div", { className: i()(g.GK, c.lightTwo) }),
-            (0, n.jsx)("div", { className: i()(g.cp, c.crossOne) }),
-            (0, n.jsx)("div", { className: i()(g.cp, c.crossTwo) }),
-            (0, n.jsx)("div", { className: i()(g.Tp, c.popOne) }),
+            (0, a.jsx)("div", { className: l()(g.sG, u.sparkleOne) }),
+            (0, a.jsx)("div", { className: l()(g.sG, u.sparkleTwo) }),
+            (0, a.jsx)("div", { className: l()(g.GK, u.lightOne) }),
+            (0, a.jsx)("div", { className: l()(g.GK, u.lightTwo) }),
+            (0, a.jsx)("div", { className: l()(g.cp, u.crossOne) }),
+            (0, a.jsx)("div", { className: l()(g.cp, u.crossTwo) }),
+            (0, a.jsx)("div", { className: l()(g.Tp, u.popOne) }),
         ],
     });
 }
-class f extends a.Component {
+class f extends n.Component {
     state = { isDragging: !1, isOverZone: !1 };
     dragOverTimeout = null;
-    elementDOMRef = a.createRef();
+    elementDOMRef = n.createRef();
     componentDidMount() {
         let A = this.elementDOMRef.current;
         null != A &&
@@ -51,7 +51,7 @@ class f extends a.Component {
         for (let e = 0; e < A.length; e++)
             try {
                 let t = A[e].webkitGetAsEntry() ?? A[e].getAsEntry();
-                if (null == t) return q.warn("Dropped item is null or undefined"), !1;
+                if (null == t) return h.warn("Dropped item is null or undefined"), !1;
                 if (!t.isFile) return !1;
             } catch (A) {}
         return !0;
@@ -60,22 +60,22 @@ class f extends a.Component {
         var A = this;
         return function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = e.dataTransfer;
-            if (null == n) return !0;
-            let a =
-                    Array.isArray(n.types) &&
-                    -1 !== n.types.indexOf("text/uri-list") &&
-                    -1 === n.types.indexOf("application/json"),
-                r = null != n.items && !A.isAllDropFiles(n.items);
+                a = e.dataTransfer;
+            if (null == a) return !0;
+            let n =
+                    Array.isArray(a.types) &&
+                    -1 !== a.types.indexOf("text/uri-list") &&
+                    -1 === a.types.indexOf("application/json"),
+                r = null != a.items && !A.isAllDropFiles(a.items);
             return (
-                (!a && !r) ||
+                (!n && !r) ||
                 (e.stopPropagation(),
                 e.preventDefault(),
-                (n.effectAllowed = "none"),
-                (n.dropEffect = "none"),
+                (a.effectAllowed = "none"),
+                (a.dropEffect = "none"),
                 t &&
                     (A.setState({ isDragging: !1 }),
-                    (0, d.openUploadError)({ title: u.intl.string(u.t.azO1Pe), help: u.intl.string(u.t["Koklr/"]) })),
+                    (0, d.openUploadError)({ title: c.intl.string(c.t.azO1Pe), help: c.intl.string(c.t["Koklr/"]) })),
                 !1)
             );
         };
@@ -86,7 +86,7 @@ class f extends a.Component {
         if (null != e) {
             if (
                 ("move" === e.effectAllowed ? (e.dropEffect = "move") : (e.dropEffect = "copy"),
-                (0, l.kBI)(d.D) && (0, l.OoC)(d.D),
+                (0, i.hasModalOpen)(d.D) && (0, i.closeModal)(d.D),
                 A.stopPropagation(),
                 A.preventDefault(),
                 this.props.onDragOver?.(A),
@@ -123,27 +123,27 @@ class f extends a.Component {
             (A.preventDefault(), A.stopPropagation(), this.props.onDrop(e.files), this.clearDragging());
     };
     render() {
-        let { title: A, description: e, icons: t, style: a, className: r } = this.props;
-        return (0, n.jsx)("div", {
+        let { title: A, description: e, icons: t, style: n, className: r } = this.props;
+        return (0, a.jsx)("div", {
             ref: this.elementDOMRef,
-            className: i()(r, c.uploadArea, {
-                [c.droppable]: this.state.isDragging,
-                [c.uploadModalIn]: this.state.isOverZone,
+            className: l()(r, u.uploadArea, {
+                [u.droppable]: this.state.isDragging,
+                [u.uploadModalIn]: this.state.isOverZone,
             }),
-            style: a,
-            children: (0, n.jsxs)("div", {
-                className: c.uploadDropModal,
+            style: n,
+            children: (0, a.jsxs)("div", {
+                className: u.uploadDropModal,
                 children: [
-                    this.state.isDragging && (0, n.jsx)(p, {}),
-                    (0, n.jsx)("div", { className: c.bgScale }),
-                    (0, n.jsxs)("div", {
-                        className: c.inner,
+                    this.state.isDragging && (0, a.jsx)(p, {}),
+                    (0, a.jsx)("div", { className: u.bgScale }),
+                    (0, a.jsxs)("div", {
+                        className: u.inner,
                         children: [
-                            (0, n.jsx)(o.A, { icons: t }),
-                            (0, n.jsx)("div", { className: c.title, children: A }),
-                            (0, n.jsx)("div", {
-                                className: c.instructions,
-                                children: (0, n.jsx)("pre", { children: e }),
+                            (0, a.jsx)(o.A, { icons: t }),
+                            (0, a.jsx)("div", { className: u.title, children: A }),
+                            (0, a.jsx)("div", {
+                                className: u.instructions,
+                                children: (0, a.jsx)("pre", { children: e }),
                             }),
                         ],
                     }),

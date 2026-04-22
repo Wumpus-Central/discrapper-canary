@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(996483),
-    i = n(972409);
-class a extends i.w {
+r.d(t, { A: () => a });
+var n = r(996483),
+    s = r(972409);
+class a extends s.w {
     innerPatternString(e) {
         return "(?:з|із|від)?\\s*(сьогодні|вчора|завтра|післязавтра|післяпіслязавтра|позапозавчора|позавчора)";
     }
     innerExtract(e, t) {
-        let n = t[1].toLowerCase(),
-            i = e.createParsingComponents();
-        switch (n) {
+        let r = t[1].toLowerCase(),
+            s = e.createParsingComponents();
+        switch (r) {
             case "сьогодні":
-                return r.Ec(e.reference);
+                return n.Ec(e.reference);
             case "вчора":
-                return r.jI(e.reference);
+                return n.jI(e.reference);
             case "завтра":
-                return r.uf(e.reference);
+                return n.uf(e.reference);
             case "післязавтра":
-                return r.AV(e.reference, 2);
+                return n.AV(e.reference, 2);
             case "післяпіслязавтра":
-                return r.AV(e.reference, 3);
+                return n.AV(e.reference, 3);
             case "позавчора":
-                return r.ti(e.reference, 2);
+                return n.ti(e.reference, 2);
             case "позапозавчора":
-                return r.ti(e.reference, 3);
+                return n.ti(e.reference, 3);
         }
-        return i;
+        return s;
     }
 }

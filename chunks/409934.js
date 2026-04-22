@@ -1,19 +1,20 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
     r = n(492462),
     l = n(311907),
     a = n(562465),
-    o = n(397927),
-    c = n(210714),
-    d = n(650048),
-    u = n(860689),
+    o = n(821609),
+    c = n(123292),
+    d = n(210714),
+    u = n(650048),
+    _ = n(860689),
     h = n(396681),
-    _ = n(854378),
+    m = n(854378),
     p = n(652215),
     g = n(985018),
-    m = n(473169);
+    A = n(818050);
 l.Ay.initialize();
 class f extends s.PureComponent {
     static defaultProps = { transitionTo: (e) => n.g.location.assign(e) };
@@ -31,34 +32,30 @@ class f extends s.PureComponent {
                 let {
                         body: { guild: t },
                     } = e,
-                    n = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)(t);
+                    n = (0, _.dangerouslyConstructGuildRecordFromUntypedObject)(t);
                 this.setState({ success: !0, busy: !1, guild: n });
             },
             () => this.setState({ success: !1, busy: !1 }),
         ),
-            (0, c.d)("disable_server_highlight_notifications");
+            (0, d.d)("disable_server_highlight_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(_.Ay, { children: (0, i.jsx)(_.CK, {}) });
+        return (0, i.jsx)(m.Ay, { children: (0, i.jsx)(m.CK, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, i.jsxs)(_.Ay, {
+        return (0, i.jsxs)(m.Ay, {
             children: [
-                (0, i.jsx)(_.hE, { className: m.QB, children: g.intl.string(g.t.Z33eiP) }),
-                (0, i.jsx)(_.tK, { children: g.intl.format(g.t.NRWtfC, { guildName: n.name }) }),
+                (0, i.jsx)(m.hE, { className: A.QB, children: g.intl.string(g.t.Z33eiP) }),
+                (0, i.jsx)(m.tK, { children: g.intl.format(g.t.NRWtfC, { guildName: n.name }) }),
                 (0, i.jsx)("div", {
-                    className: m.eT,
-                    children: (0, i.jsx)(o.Button, {
-                        text: g.intl.string(g.t.fIv16B),
-                        fullWidth: !0,
-                        onClick: () => t(e),
-                    }),
+                    className: A.eT,
+                    children: (0, i.jsx)(o.$, { text: g.intl.string(g.t.fIv16B), fullWidth: !0, onClick: () => t(e) }),
                 }),
                 (0, i.jsx)("div", {
-                    className: m.Ot,
-                    children: (0, i.jsx)(o.QWc, {
+                    className: A.Ot,
+                    children: (0, i.jsx)(c.Q, {
                         text: g.intl.string(g.t["cGmT/J"]),
                         onClick: () => {
                             t(p.BVt.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
@@ -70,18 +67,14 @@ class f extends s.PureComponent {
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, i.jsxs)(_.Ay, {
+        return (0, i.jsxs)(m.Ay, {
             children: [
-                (0, i.jsx)(_._V, { src: n(37772), className: m.SX }),
-                (0, i.jsx)(_.hE, { className: m.QB, children: g.intl.string(g.t.ox9hIS) }),
-                (0, i.jsx)(_.tK, { children: g.intl.string(g.t["/dcuR5"]) }),
+                (0, i.jsx)(m._V, { src: n(37772), className: A.SX }),
+                (0, i.jsx)(m.hE, { className: A.QB, children: g.intl.string(g.t.ox9hIS) }),
+                (0, i.jsx)(m.tK, { children: g.intl.string(g.t["/dcuR5"]) }),
                 (0, i.jsx)("div", {
-                    className: m.eT,
-                    children: (0, i.jsx)(o.Button, {
-                        text: g.intl.string(g.t.fIv16B),
-                        fullWidth: !0,
-                        onClick: () => t(e),
-                    }),
+                    className: A.eT,
+                    children: (0, i.jsx)(o.$, { text: g.intl.string(g.t.fIv16B), fullWidth: !0, onClick: () => t(e) }),
                 }),
             ],
         });
@@ -91,4 +84,4 @@ class f extends s.PureComponent {
         return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError();
     }
 }
-let A = l.Ay.connectStores([d.A], () => ({ defaultRoute: d.A.defaultRoute }))(f);
+let x = l.Ay.connectStores([u.A], () => ({ defaultRoute: u.A.defaultRoute }))(f);

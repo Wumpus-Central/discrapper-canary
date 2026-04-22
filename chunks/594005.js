@@ -1,30 +1,31 @@
-t.d(s, { default: () => x });
-var i = t(627968),
-    n = t(397927),
-    a = t(442433),
-    r = t(995102),
-    d = t(288104),
-    o = t(661504),
-    c = t(57907),
-    h = t(375500),
-    l = t(769591),
-    u = t(95701),
-    p = t(985018);
-function x(e) {
-    let { channel: s, onSelect: t } = e,
-        x = (0, d.b)(s),
-        b = (0, o.A0)(s),
-        f = (0, h.A)(s),
-        g = (0, r.A)(s),
-        j = (0, c.A)(s),
-        k = (0, l.os)("NotificationsInboxMessageContextMenu") && u.B4.has(s.type),
-        m = s.isThread() ? (0, i.jsx)(n.rXV, { children: f }) : k ? b : (0, i.jsx)(n.rXV, { children: x });
-    return (0, i.jsxs)(n.W1t, {
+i.d(s, { default: () => b });
+var n = i(627968),
+    t = i(477782),
+    a = i(861672),
+    r = i(442433),
+    d = i(995102),
+    o = i(288104),
+    c = i(661504),
+    h = i(57907),
+    l = i(375500),
+    u = i(769591),
+    p = i(95701),
+    x = i(985018);
+function b(e) {
+    let { channel: s, onSelect: i } = e,
+        b = (0, o.b)(s),
+        f = (0, c.A0)(s),
+        g = (0, l.A)(s),
+        j = (0, d.A)(s),
+        k = (0, h.A)(s),
+        m = (0, u.os)("NotificationsInboxMessageContextMenu") && p.B4.has(s.type),
+        A = s.isThread() ? (0, n.jsx)(t.rX, { children: g }) : m ? f : (0, n.jsx)(t.rX, { children: b });
+    return (0, n.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: "notifications-inbox-message-context",
-        onClose: a.Z_,
-        "aria-label": p.intl.string(p.t.Xm41aV),
-        onSelect: t,
-        children: [(0, i.jsx)(n.rXV, { children: s.isThread() ? j : g }), m],
+        onClose: r.Z_,
+        "aria-label": x.intl.string(x.t.Xm41aV),
+        onSelect: i,
+        children: [(0, n.jsx)(t.rX, { children: s.isThread() ? k : j }), A],
     });
 }

@@ -1,29 +1,27 @@
 "use strict";
-n.d(t, { V: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.OFFICIAL = 1)] = "OFFICIAL"),
-        (e[(e.WIKIA = 2)] = "WIKIA"),
-        (e[(e.WIKIPEDIA = 3)] = "WIKIPEDIA"),
-        (e[(e.FACEBOOK = 4)] = "FACEBOOK"),
-        (e[(e.TWITTER = 5)] = "TWITTER"),
-        (e[(e.TWITCH = 6)] = "TWITCH"),
-        (e[(e.INSTAGRAM = 8)] = "INSTAGRAM"),
-        (e[(e.YOUTUBE = 9)] = "YOUTUBE"),
-        (e[(e.IPHONE = 10)] = "IPHONE"),
-        (e[(e.IPAD = 11)] = "IPAD"),
-        (e[(e.ANDROID = 12)] = "ANDROID"),
-        (e[(e.STEAM = 13)] = "STEAM"),
-        (e[(e.REDDIT = 14)] = "REDDIT"),
-        (e[(e.ITCH = 15)] = "ITCH"),
-        (e[(e.EPICGAMES = 16)] = "EPICGAMES"),
-        (e[(e.GOG = 17)] = "GOG"),
-        (e[(e.DISCORD = 18)] = "DISCORD"),
-        (e[(e.BLUESKY = 19)] = "BLUESKY"),
-        (e[(e.BATTLENET = 20)] = "BATTLENET"),
-        (e[(e.RIOT = 21)] = "RIOT"),
-        (e[(e.ROBLOX = 22)] = "ROBLOX"),
-        (e[(e.MINECRAFT = 23)] = "MINECRAFT"),
-        e
-    );
-})({});
+n.d(t, { V: () => l });
+var i,
+    l =
+        (((i = {})[(i.OFFICIAL = 1)] = "OFFICIAL"),
+        (i[(i.WIKIA = 2)] = "WIKIA"),
+        (i[(i.WIKIPEDIA = 3)] = "WIKIPEDIA"),
+        (i[(i.FACEBOOK = 4)] = "FACEBOOK"),
+        (i[(i.TWITTER = 5)] = "TWITTER"),
+        (i[(i.TWITCH = 6)] = "TWITCH"),
+        (i[(i.INSTAGRAM = 8)] = "INSTAGRAM"),
+        (i[(i.YOUTUBE = 9)] = "YOUTUBE"),
+        (i[(i.IPHONE = 10)] = "IPHONE"),
+        (i[(i.IPAD = 11)] = "IPAD"),
+        (i[(i.ANDROID = 12)] = "ANDROID"),
+        (i[(i.STEAM = 13)] = "STEAM"),
+        (i[(i.REDDIT = 14)] = "REDDIT"),
+        (i[(i.ITCH = 15)] = "ITCH"),
+        (i[(i.EPICGAMES = 16)] = "EPICGAMES"),
+        (i[(i.GOG = 17)] = "GOG"),
+        (i[(i.DISCORD = 18)] = "DISCORD"),
+        (i[(i.BLUESKY = 19)] = "BLUESKY"),
+        (i[(i.BATTLENET = 20)] = "BATTLENET"),
+        (i[(i.RIOT = 21)] = "RIOT"),
+        (i[(i.ROBLOX = 22)] = "ROBLOX"),
+        (i[(i.MINECRAFT = 23)] = "MINECRAFT"),
+        i);

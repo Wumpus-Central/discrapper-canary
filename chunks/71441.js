@@ -1,46 +1,46 @@
-i.d(e, { A: () => A });
+i.d(e, { A: () => _ });
 var l = i(627968),
-    a = i(64700),
-    n = i(735438),
-    r = i.n(n),
-    s = i(158954),
-    o = i(397927),
-    c = i(154672),
-    d = i(198982),
+    n = i(64700),
+    a = i(735438),
+    r = i.n(a),
+    s = i(189213),
+    o = i(292666),
+    d = i(154672),
+    c = i(198982),
     u = i(976860),
-    _ = i(652215),
+    E = i(652215),
     I = i(650583),
-    E = i(985018);
-let A = (t) => {
-    let { email: e, guildId: i, transitionState: n, onClose: A } = t,
-        [g, h] = a.useState(""),
-        [m, S] = a.useState(null),
-        y = a.useCallback(async () => {
+    A = i(985018);
+let _ = (t) => {
+    let { email: e, guildId: i, transitionState: a, onClose: _ } = t,
+        [h, g] = n.useState(""),
+        [m, S] = n.useState(null),
+        y = n.useCallback(async () => {
             if (null != i)
                 try {
-                    let t = await c.A.verifyCode(g, i, e);
-                    t.guild && (A(), (0, u.pX)(_.BVt.CHANNEL(t.guild.id)));
+                    let t = await d.A.verifyCode(h, i, e);
+                    t.guild && (_(), (0, u.pX)(E.BVt.CHANNEL(t.guild.id)));
                 } catch (t) {
-                    S(new d.LG(t));
+                    S(new c.LG(t));
                 }
-        }, [g, e, i, A]),
-        x = r().throttle(() => {
-            c.A.sendVerificationEmail(e, !0, i);
+        }, [h, e, i, _]),
+        L = r().throttle(() => {
+            d.A.sendVerificationEmail(e, !0, i);
         }, 1e3),
-        f = async (t) => {
-            null != g && "" !== g && t.key === I.dh.ENTER && (await y());
+        x = async (t) => {
+            null != h && "" !== h && t.key === I.dh.ENTER && (await y());
         };
     return (0, l.jsx)(s.Modal, {
-        transitionState: n,
-        onClose: A,
-        title: E.intl.string(E.t.SJ3Lxc),
-        subtitle: E.intl.format(E.t["b+W0oq"], { email: e, onClick: x }),
-        actions: [{ variant: "primary", text: E.intl.string(E.t.geKm7t), onClick: y }],
-        children: (0, l.jsx)(o.ksK, {
-            label: E.intl.string(E.t.rpWT1s),
-            onKeyPress: f,
+        transitionState: a,
+        onClose: _,
+        title: A.intl.string(A.t.SJ3Lxc),
+        subtitle: A.intl.format(A.t["b+W0oq"], { email: e, onClick: L }),
+        actions: [{ variant: "primary", text: A.intl.string(A.t.geKm7t), onClick: y }],
+        children: (0, l.jsx)(o.k, {
+            label: A.intl.string(A.t.rpWT1s),
+            onKeyPress: x,
             onChange: (t) => {
-                null != t && "" !== t && h(t);
+                null != t && "" !== t && g(t);
             },
             error: m?.getAnyErrorMessage(),
         }),

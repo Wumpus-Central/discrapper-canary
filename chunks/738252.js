@@ -1,77 +1,77 @@
 l.d(t, { A: () => v });
-var n = l(627968),
-    s = l(64700),
-    i = l(503698),
-    r = l.n(i),
-    a = l(735438),
+var r = l(627968),
+    a = l(64700),
+    s = l(503698),
+    n = l.n(s),
+    i = l(735438),
     c = l(311907),
-    o = l(397927),
-    d = l(836602),
-    u = l(773669),
+    o = l(834730),
+    u = l(836602),
+    d = l(773669),
     m = l(405269),
-    p = l(927578),
-    x = l(993408),
-    A = l(821701),
-    g = l(536572),
-    h = l(130147),
-    _ = l(512213),
-    j = l(985018),
-    y = l(177890);
-let C = (e) => {
-        let { purchase: t, product: l, user: i } = e,
-            d = (0, c.bG)([u.default], () => u.default.locale),
-            A = (0, g.Sw)(t),
-            h = (0, g.VG)(l),
-            _ = p.Ay.canUseCollectibles(i),
-            C = (0, x.gA)(t),
-            v = (0, x.G0)(l),
-            E = !_ && C,
-            [f, I] = s.useState(null);
-        s.useEffect(() => {
-            I(t?.expiresAt != null ? (0, m.Tf)(Date.now(), t.expiresAt) : null);
+    A = l(927578),
+    p = l(993408),
+    _ = l(821701),
+    h = l(536572),
+    g = l(130147),
+    f = l(512213),
+    x = l(985018),
+    E = l(383171);
+let I = (e) => {
+        let { purchase: t, product: l, user: s } = e,
+            u = (0, c.bG)([d.default], () => d.default.locale),
+            _ = (0, h.Sw)(t),
+            g = (0, h.VG)(l),
+            f = A.Ay.canUseCollectibles(s),
+            I = (0, p.gA)(t),
+            v = (0, p.G0)(l),
+            C = !f && I,
+            [b, N] = a.useState(null);
+        a.useEffect(() => {
+            N(t?.expiresAt != null ? (0, m.Tf)(Date.now(), t.expiresAt) : null);
         }, [t?.expiresAt]);
-        let T = null == t || E;
-        return (0, n.jsxs)("div", {
-            className: r()(y.ip, { [y.w6]: T }),
+        let y = null == t || C;
+        return (0, r.jsxs)("div", {
+            className: n()(E.ip, { [E.w6]: y }),
             children: [
-                (0, n.jsx)(o.Text, {
+                (0, r.jsx)(o.E, {
                     color: "text-strong",
                     variant: "text-sm/semibold",
-                    children: (0, a.isEmpty)(A) ? h : A,
+                    children: (0, i.isEmpty)(_) ? g : _,
                 }),
-                T
-                    ? (0, n.jsx)(o.Text, {
+                y
+                    ? (0, r.jsx)(o.E, {
                           color: "text-default",
                           variant: "text-sm/normal",
-                          children: E
-                              ? j.intl.string(j.t.nD78oa)
-                              : v && _
-                                ? j.intl.string(j.t.hmyYK8)
+                          children: C
+                              ? x.intl.string(x.t.nD78oa)
+                              : v && f
+                                ? x.intl.string(x.t.hmyYK8)
                                 : v
-                                  ? j.intl.string(j.t.JY1i0u)
-                                  : j.intl.string(j.t.fEGjVQ),
+                                  ? x.intl.string(x.t.JY1i0u)
+                                  : x.intl.string(x.t.fEGjVQ),
                       })
-                    : (0, n.jsxs)(n.Fragment, {
+                    : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              null != f &&
-                                  (0, n.jsx)(o.Text, {
+                              null != b &&
+                                  (0, r.jsx)(o.E, {
                                       variant: "text-xxs/normal",
                                       color: "text-muted",
-                                      children: j.intl.format(j.t.Io7ozn, { days: f.days.toString() }),
+                                      children: x.intl.format(x.t.Io7ozn, { days: b.days.toString() }),
                                   }),
-                              (0, n.jsxs)(o.Text, {
+                              (0, r.jsxs)(o.E, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
                                   children: [
-                                      j.intl.format(j.t.gW9R4B, {
-                                          date: t.purchasedAt.toLocaleDateString(d, { month: "long", year: "numeric" }),
+                                      x.intl.format(x.t.gW9R4B, {
+                                          date: t.purchasedAt.toLocaleDateString(u, { month: "long", year: "numeric" }),
                                       }),
                                       null != t.expiresAt &&
-                                          (0, n.jsxs)(n.Fragment, {
+                                          (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  (0, n.jsx)("br", {}),
-                                                  j.intl.format(j.t.eZSTa5, {
-                                                      date: t.expiresAt.toLocaleDateString(d, {
+                                                  (0, r.jsx)("br", {}),
+                                                  x.intl.format(x.t.eZSTa5, {
+                                                      date: t.expiresAt.toLocaleDateString(u, {
                                                           minute: "numeric",
                                                           hour: "numeric",
                                                           day: "numeric",
@@ -83,11 +83,11 @@ let C = (e) => {
                                           }),
                                   ],
                               }),
-                              C &&
-                                  (0, n.jsx)(o.Text, {
+                              I &&
+                                  (0, r.jsx)(o.E, {
                                       variant: "text-xxs/normal",
                                       color: "text-muted",
-                                      children: j.intl.string(j.t.nKdAlO),
+                                      children: x.intl.string(x.t.nKdAlO),
                                   }),
                           ],
                       }),
@@ -95,32 +95,32 @@ let C = (e) => {
         });
     },
     v = (e) => {
-        let { user: t, guildId: l, nameplate: s } = e,
-            i = (0, c.cf)([d.A], () => d.A.getPendingChanges(l)),
-            { product: a, purchase: o } = (0, A.A)(s?.skuId),
-            u = p.Ay.canUseCollectibles(t),
-            m = (0, x.gA)(o),
-            g = null == o || (!u && m);
-        return (0, n.jsxs)("div", {
-            className: r()(y.i1, { [y.Zj]: null != s && g }),
+        let { user: t, guildId: l, nameplate: a } = e,
+            s = (0, c.cf)([u.A], () => u.A.getPendingChanges(l)),
+            { product: i, purchase: o } = (0, _.A)(a?.skuId),
+            d = A.Ay.canUseCollectibles(t),
+            m = (0, p.gA)(o),
+            h = null == o || (!d && m);
+        return (0, r.jsxs)("div", {
+            className: n()(E.i1, { [E.Zj]: null != a && h }),
             children: [
-                (0, n.jsx)("div", {
-                    className: y.u_,
+                (0, r.jsx)("div", {
+                    className: E.u_,
                     role: "img",
-                    "aria-label": j.intl.string(j.t.SZeUdR),
-                    children: (0, n.jsxs)("div", {
-                        className: y.Xp,
+                    "aria-label": x.intl.string(x.t.SZeUdR),
+                    children: (0, r.jsxs)("div", {
+                        className: E.Xp,
                         "aria-hidden": !0,
                         children: [
-                            (0, n.jsx)(h._, { width: 124, opacity: 0.9 }),
-                            (0, n.jsx)(h._, { width: 124, opacity: 0.9 }),
-                            (0, n.jsx)(_.A, { ...i, user: t, guildId: l, nameplate: s, isHighlighted: !0 }),
-                            (0, n.jsx)(h._, { width: 124, opacity: 0.9 }),
-                            (0, n.jsx)(h._, { width: 124, opacity: 0.9 }),
+                            (0, r.jsx)(g._, { width: 124, opacity: 0.9 }),
+                            (0, r.jsx)(g._, { width: 124, opacity: 0.9 }),
+                            (0, r.jsx)(f.A, { ...s, user: t, guildId: l, nameplate: a, isHighlighted: !0 }),
+                            (0, r.jsx)(g._, { width: 124, opacity: 0.9 }),
+                            (0, r.jsx)(g._, { width: 124, opacity: 0.9 }),
                         ],
                     }),
                 }),
-                null != s && (0, n.jsx)(C, { purchase: o, product: a, user: t }),
+                null != a && (0, r.jsx)(I, { purchase: o, product: i, user: t }),
             ],
         });
     };

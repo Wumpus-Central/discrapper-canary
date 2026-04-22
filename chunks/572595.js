@@ -1,10 +1,11 @@
-n.d(t, { M: () => c, t: () => d });
-var i = n(627968);
-n(64700);
-var l = n(397927),
-    s = n(440938),
-    a = n(4227),
-    r = n(466459);
+"use strict";
+a.d(t, { M: () => c, t: () => d });
+var r = a(627968);
+a(64700);
+var l = a(192308),
+    n = a(440938),
+    i = a(4227),
+    s = a(466459);
 let o = "collectibles shop product details modal",
     d = (e) => {
         let {
@@ -13,56 +14,56 @@ let o = "collectibles shop product details modal",
             shouldCheckoutWithOrbs: c,
             analyticsSource: u,
             analyticsLocations: h,
-            returnRef: A,
+            returnRef: p,
             tab: _,
             giftRecipient: m,
-            giftingOrigin: p,
+            giftingOrigin: b,
             cardId: g,
             sessionId: f,
-            tilePosition: E,
+            tilePosition: x,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, r.o)(a.A, t);
+            let { isPurchased: e } = (0, s.o)(i.A, t);
             if (!e) return;
         }
-        (0, l.mMO)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("57174"),
-                    n.e("91652"),
-                    n.e("37457"),
-                    n.e("8555"),
-                    n.e("57875"),
-                    n.e("90365"),
-                    n.e("28936"),
-                    n.e("68859"),
-                    n.e("48330"),
-                    n.e("92414"),
-                    n.e("94857"),
-                    n.e("48840"),
-                    n.e("49559"),
-                    n.e("18976"),
-                    n.e("37372"),
-                    n.e("98141"),
-                    n.e("41595"),
-                    n.e("21957"),
-                    n.e("52506"),
-                    n.e("22424"),
-                ]).then(n.bind(n, 929400));
-                return (n) =>
-                    (0, i.jsx)(s.R9, {
-                        newValue: { cardId: g, sessionId: f, tilePosition: E },
-                        children: (0, i.jsx)(e, {
-                            ...n,
+                    a.e("37457"),
+                    a.e("374"),
+                    a.e("8555"),
+                    a.e("40396"),
+                    a.e("28936"),
+                    a.e("64243"),
+                    a.e("97386"),
+                    a.e("47742"),
+                    a.e("48330"),
+                    a.e("92414"),
+                    a.e("94857"),
+                    a.e("16419"),
+                    a.e("7034"),
+                    a.e("14504"),
+                    a.e("37372"),
+                    a.e("95752"),
+                    a.e("9648"),
+                    a.e("89"),
+                    a.e("17535"),
+                    a.e("61571"),
+                ]).then(a.bind(a, 929400));
+                return (a) =>
+                    (0, r.jsx)(n.R9, {
+                        newValue: { cardId: g, sessionId: f, tilePosition: x },
+                        children: (0, r.jsx)(e, {
+                            ...a,
                             product: t,
                             category: d,
                             shouldCheckoutWithOrbs: c,
                             analyticsSource: u,
                             analyticsLocations: h,
-                            returnRef: A,
+                            returnRef: p,
                             tab: _,
                             giftRecipient: m,
-                            giftingOrigin: p,
+                            giftingOrigin: b,
                         }),
                     });
             },
@@ -70,5 +71,5 @@ let o = "collectibles shop product details modal",
         );
     },
     c = () => {
-        (0, l.OoC)(o);
+        (0, l.closeModal)(o);
     };

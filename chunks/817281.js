@@ -2,16 +2,16 @@
 n.d(t, { Ay: () => A, u_: () => g, um: () => h });
 var r = n(873298),
     i = n(406935),
-    s = n(582754),
+    s = n(462887),
     a = n(73153),
     o = n(47671),
     l = n(284016),
     u = n(973654),
-    c = n(544028),
-    d = n(253932),
+    d = n(544028),
+    c = n(253932),
     _ = n(594061),
     f = n(652215),
-    p = n(185928);
+    E = n(185928);
 function h(e) {
     return _.wc.updateAsync(
         "guildFolders",
@@ -31,7 +31,7 @@ function h(e) {
         _.Sb.FREQUENT_USER_ACTION,
     );
 }
-function m(e) {
+function p(e) {
     switch (e) {
         case f.NJ8.DARK:
             return r.Sx.DARK;
@@ -45,7 +45,7 @@ function m(e) {
             return r.Sx.DARK;
     }
 }
-function E(e) {
+function m(e) {
     return {
         backgroundGradientPresetId:
             null != e.backgroundGradientPresetId ? i.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
@@ -63,11 +63,10 @@ function E(e) {
 function g(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
         o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION,
-        c = "system" === r ? p.Q_.ON : p.Q_.OFF,
-        d = null != i ? i : c;
+        d = "system" === r ? E.Q_.ON : E.Q_.OFF;
     if (
-        (a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: d } }),
-        null == t && "system" !== r && (0, s.Mw)(r) && (0, u.NA)({ [p.Fc.DARK]: r }),
+        (a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != i ? i : d } }),
+        null == t && "system" !== r && (0, s.M)(r) && (0, u.NA)({ [E.Fc.DARK]: r }),
         a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -84,8 +83,8 @@ function g(e) {
         return _.wc.updateAsync(
             "appearance",
             (e) => {
-                (e.theme = m(r)),
-                    (e.clientThemeSettings = E({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
+                (e.theme = p(r)),
+                    (e.clientThemeSettings = m({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
             },
             o,
         );
@@ -106,13 +105,13 @@ let A = {
                     settings: e
                         ? {}
                         : {
-                              inlineAttachmentMedia: d.X6.getSetting(),
-                              inlineEmbedMedia: d.hD.getSetting(),
-                              renderEmbeds: d.rs.getSetting(),
-                              renderReactions: d.jW.getSetting(),
-                              animateEmoji: d.Sf.getSetting(),
-                              animateStickers: d.S0.getSetting(),
-                              gifAutoPlay: d.kt.getSetting(),
+                              inlineAttachmentMedia: c.X6.getSetting(),
+                              inlineEmbedMedia: c.hD.getSetting(),
+                              renderEmbeds: c.rs.getSetting(),
+                              renderReactions: c.jW.getSetting(),
+                              animateEmoji: c.Sf.getSetting(),
+                              animateStickers: c.S0.getSetting(),
+                              gifAutoPlay: c.kt.getSetting(),
                           },
                 },
             },
@@ -124,10 +123,10 @@ let A = {
                 await _.wc.updateAsync(
                     "appearance",
                     (e) => {
-                        (e.theme = m(c.A.theme)),
-                            (e.clientThemeSettings = E({
+                        (e.theme = p(d.A.theme)),
+                            (e.clientThemeSettings = m({
                                 backgroundGradientPresetId: o.A.gradientPreset?.id,
-                                customUserThemeSettings: d.eh.getSetting()?.customUserThemeSettings,
+                                customUserThemeSettings: c.eh.getSetting()?.customUserThemeSettings,
                             }));
                     },
                     _.Sb.INFREQUENT_USER_ACTION,
@@ -143,9 +142,9 @@ let A = {
                     settings: e
                         ? {}
                         : {
-                              theme: c.A.theme,
+                              theme: d.A.theme,
                               clientThemeSettings: { backgroundGradientPresetId: o.A.gradientPreset?.id },
-                              developerMode: d.Q_.getSetting(),
+                              developerMode: c.Q_.getSetting(),
                           },
                 },
             },
@@ -175,7 +174,7 @@ let A = {
                 _.wc.updateAsync(
                     "appearance",
                     (t) => {
-                        t.theme = m(e);
+                        t.theme = p(e);
                     },
                     _.Sb.INFREQUENT_USER_ACTION,
                 );

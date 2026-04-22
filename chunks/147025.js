@@ -1,76 +1,77 @@
 "use strict";
-n.d(t, { A: () => b }), n(321073);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => N }), n(321073);
+var i = n(627968),
+    l = n(64700),
     s = n(607399),
-    a = n(311907),
-    o = n(155718),
-    l = n(775602),
-    u = n(33659),
-    c = n(861382),
+    r = n(311907),
+    a = n(155718),
+    o = n(775602),
+    c = n(33659),
+    u = n(861382),
     d = n(86379),
-    _ = n(670655),
-    f = n(412260),
+    h = n(670655),
+    m = n(412260),
     p = n(852218),
-    h = n(931664),
-    m = n(522602),
-    E = n(287809),
-    g = n(927578),
+    f = n(931664),
+    g = n(522602),
+    _ = n(287809),
+    x = n(927578),
     A = n(838324),
-    I = n(184264),
-    T = n(743477),
-    S = n(336618),
-    y = n(437839),
-    v = n(559775),
-    N = n(111314);
-function C(e) {
+    C = n(184264),
+    E = n(743477),
+    I = n(336618),
+    v = n(437839),
+    y = n(559775),
+    S = n(266599);
+function b(e) {
     let { disabled: t, channel: n } = e;
-    return (0, a.bG)([f.A], () => Object.keys(f.A.promotionsByType[p.pt.GIFT_PROMOTION]).length > 0)
-        ? (0, r.jsx)(S.A, { disabled: t, channel: n })
-        : (0, r.jsx)(T.A, { disabled: t, channel: n });
+    return (0, r.bG)([m.A], () => Object.keys(m.A.promotionsByType[p.pt.GIFT_PROMOTION]).length > 0)
+        ? (0, i.jsx)(I.A, { disabled: t, channel: n })
+        : (0, i.jsx)(E.A, { disabled: t, channel: n });
 }
-function R(e) {
-    let { type: t, disabled: n, channel: i, handleSubmit: f, isEmpty: p, showAllButtons: h } = e,
-        m = (0, a.bG)([l.A], () => l.A.isSubmitButtonEnabled),
-        T = O(i.id, t, p),
-        { activeCommand: S, activeCommandOption: R } = (0, a.cf)([c.A], () => ({
-            activeCommand: c.A.getActiveCommand(i.id),
-            activeCommandOption: c.A.getActiveOption(i.id),
+let N = l.memo(function (e) {
+    var t, n, l;
+    let { type: m, disabled: p, channel: E, handleSubmit: I, isEmpty: N, showAllButtons: T } = e,
+        j = (0, r.bG)([o.A], () => o.A.isSubmitButtonEnabled),
+        R =
+            ((t = E.id),
+            (n = m),
+            (l = N),
+            (0, r.bG)([f.A, g.A], () => {
+                let e = f.A.getStickerPreview(t, n.drafts.type),
+                    i = null != e && e.length > 0;
+                return 0 === g.A.getUploads(t, n.drafts.type).length && l && !i;
+            })),
+        { activeCommand: w, activeCommandOption: L } = (0, r.cf)([u.A], () => ({
+            activeCommand: u.A.getActiveCommand(E.id),
+            activeCommandOption: u.A.getActiveOption(E.id),
         })),
-        b = (0, d.dw)(),
-        D = [],
-        L = !i.isDM() || void 0 === i.recipients || i.recipients.length > 1,
-        w = (0, a.bG)([E.default], () => (L ? null : E.default.getUser(i.recipients[0]))),
-        M = (0, u.H)({ channel: i, chatInputType: t }),
-        x = t.submit?.button != null && (t.submit?.ignorePreference || m);
+        M = (0, d.dw)(),
+        k = [],
+        O = !E.isDM() || void 0 === E.recipients || E.recipients.length > 1,
+        P = (0, r.bG)([_.default], () => (O ? null : _.default.getUser(E.recipients[0]))),
+        D = (0, c.H)({ channel: E, chatInputType: m }),
+        U = m.submit?.button != null && (m.submit?.ignorePreference || j);
     return (!s.Fr &&
-        (t.gifts?.button != null &&
-            null == S &&
-            !b &&
-            (null == w || g.Ay.isPremiumEligible(w)) &&
-            D.push((0, r.jsx)(C, { disabled: n, channel: i }, "gift")),
-        t.gifs?.button != null &&
-            null == S &&
-            h &&
-            D.push((0, r.jsx)(I.A, { disabled: n, type: t, channel: i }, "gif")),
-        t.stickers?.button != null &&
-            null == S &&
-            h &&
-            D.push((0, r.jsx)(v.A, { disabled: n, type: t, channel: i }, "sticker"))),
-    t.emojis?.button != null &&
-        (null == S || (null != R && R.type !== o.n4.ATTACHMENT)) &&
-        D.push((0, r.jsx)(A.A, { disabled: n, type: t, channelId: i.id }, "emoji")),
-    M && D.push((0, r.jsx)(_.A, { channelId: i.id, type: t }, "appLauncher")),
-    x && D.push((0, r.jsx)(y.A, { onClick: f, disabled: n || T }, "submit")),
-    0 === D.length)
+        (m.gifts?.button != null &&
+            null == w &&
+            !M &&
+            (null == P || x.Ay.isPremiumEligible(P)) &&
+            k.push((0, i.jsx)(b, { disabled: p, channel: E }, "gift")),
+        m.gifs?.button != null &&
+            null == w &&
+            T &&
+            k.push((0, i.jsx)(C.A, { disabled: p, type: m, channel: E }, "gif")),
+        m.stickers?.button != null &&
+            null == w &&
+            T &&
+            k.push((0, i.jsx)(y.A, { disabled: p, type: m, channel: E }, "sticker"))),
+    m.emojis?.button != null &&
+        (null == w || (null != L && L.type !== a.n4.ATTACHMENT)) &&
+        k.push((0, i.jsx)(A.A, { disabled: p, type: m, channelId: E.id }, "emoji")),
+    D && k.push((0, i.jsx)(h.A, { channelId: E.id, type: m }, "appLauncher")),
+    U && k.push((0, i.jsx)(v.A, { onClick: I, disabled: p || R }, "submit")),
+    0 === k.length)
         ? null
-        : (0, r.jsx)("div", { className: N.Uo, children: D });
-}
-function O(e, t, n) {
-    return (0, a.bG)([h.A, m.A], () => {
-        let r = h.A.getStickerPreview(e, t.drafts.type),
-            i = null != r && r.length > 0;
-        return 0 === m.A.getUploads(e, t.drafts.type).length && n && !i;
-    });
-}
-let b = i.memo(R);
+        : (0, i.jsx)("div", { className: S.Uo, children: k });
+});

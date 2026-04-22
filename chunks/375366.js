@@ -3,7 +3,7 @@ var n = l(627968),
     r = l(64700),
     a = l(735438),
     s = l.n(a),
-    i = l(397927),
+    i = l(939249),
     u = l(25911),
     c = l(985018),
     o = l(740371);
@@ -187,7 +187,7 @@ let y = r.memo(function (e) {
                 }),
             [S, N, t, y, l, p, E.length, k],
         );
-    return (0, n.jsx)(i.DUT, {
+    return (0, n.jsx)(i.D, {
         className: o.Pw,
         onMouseMove: V,
         onWheel: Y,
@@ -269,7 +269,7 @@ let y = r.memo(function (e) {
                     className: o.gx,
                     children: [
                         g &&
-                            (0, n.jsx)(i.DUT, {
+                            (0, n.jsx)(i.D, {
                                 className: o.$2,
                                 onClick: v,
                                 children: (0, n.jsx)(d, { className: o.$2 }),

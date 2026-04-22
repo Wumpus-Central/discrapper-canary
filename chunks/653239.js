@@ -1,57 +1,58 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(732955),
-    o = n(397927),
-    l = n(386406),
-    u = n(48686),
+    s = n(311907),
+    a = n(189213),
+    o = n(150934),
+    l = n(192308),
+    u = n(386406),
+    d = n(48686),
     c = n(737613),
-    d = n(985018);
-function _(e) {
+    _ = n(985018);
+function f(e) {
     let t,
         n,
-        { afk: a, ...o } = e,
-        [u, c] = i.useState(!1);
+        { afk: s, ...l } = e,
+        [d, c] = i.useState(!1);
     return (
-        a
-            ? ((t = d.intl.string(d.t.Y40Jke)), (n = d.intl.string(d.t["5J4yGc"])))
-            : ((t = d.intl.string(d.t.FJSZVM)), (n = d.intl.string(d.t.etJjgW))),
-        (0, r.jsx)(s.aFV, {
+        s
+            ? ((t = _.intl.string(_.t.Y40Jke)), (n = _.intl.string(_.t["5J4yGc"])))
+            : ((t = _.intl.string(_.t.FJSZVM)), (n = _.intl.string(_.t.etJjgW))),
+        (0, r.jsx)(a.Modal, {
             size: "md",
             title: t,
             subtitle: n,
             actions: [
                 {
-                    text: d.intl.string(d.t.BddRzS),
+                    text: _.intl.string(_.t.BddRzS),
                     onClick: () => {
-                        o.onClose(), l.A.clearSuppressWarning(u);
+                        l.onClose(), u.A.clearSuppressWarning(d);
                     },
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, r.jsx)(s.Sc0, {
-                checked: u,
+            actionBarInput: (0, r.jsx)(o.S, {
+                checked: d,
                 onChange: (e) => c(e),
-                label: d.intl.string(d.t["5E9SB9"]),
+                label: _.intl.string(_.t["5E9SB9"]),
                 labelType: "secondary",
             }),
-            ...o,
+            ...l,
         })
     );
 }
-let f = () => {
+let E = () => {
     let e = i.useRef(null);
     function t() {
-        null !== e.current && ((0, o.OoC)(e.current), (e.current = null));
+        null !== e.current && ((0, l.closeModal)(e.current), (e.current = null));
     }
-    let [s, l] = (0, a.yK)([c.A], () => [c.A.shouldShowWarning(), c.A.isAFKChannel()], []),
-        d = i.useCallback(() => {
-            e.current = (0, o.qfG)((e) => (0, r.jsx)(_, { afk: l, ...e }));
-        }, [l]),
-        f = i.useCallback(() => {
-            (0, o.mMO)(async () => {
+    let [a, o] = (0, s.yK)([c.A], () => [c.A.shouldShowWarning(), c.A.isAFKChannel()], []),
+        u = i.useCallback(() => {
+            e.current = (0, l.openModal)((e) => (0, r.jsx)(f, { afk: o, ...e }));
+        }, [o]),
+        _ = i.useCallback(() => {
+            (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e("9586").then(n.bind(n, 742089));
                 return (t) => (0, r.jsx)(e, { ...t, showHideSuppressWarning: !0 });
             }).then((t) => {
@@ -61,12 +62,12 @@ let f = () => {
     return (
         i.useEffect(
             () => (
-                s && (0, u.t)() ? f() : s ? d() : t(),
+                a && (0, d.t)() ? _() : a ? u() : t(),
                 () => {
                     t();
                 }
             ),
-            [s, d, f],
+            [a, u, _],
         ),
         null
     );

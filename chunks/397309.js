@@ -1,77 +1,79 @@
-s.d(t, { A: () => m, Y: () => S });
-var r = s(627968),
-    l = s(64700),
-    n = s(503698),
-    a = s.n(n),
-    o = s(641150),
-    i = s(397927),
-    c = s(938191),
-    u = s(758836),
-    d = s(985018);
-let b = [
-        { tab: u.G2.AVATAR_DECORATIONS, labelKey: d.t.dRZYNE },
-        { tab: u.G2.PROFILE_EFFECTS, labelKey: d.t["1cNjtx"] },
-        { tab: u.G2.NAMEPLATES, labelKey: d.t.V68Fqz },
-        { tab: u.G2.BUNDLES, labelKey: d.t.FYFpps },
-        { tab: u.G2.CATALOG, labelKey: d.t.xFcotU },
+r.d(t, { A: () => C, Y: () => f });
+var n = r(627968),
+    s = r(64700),
+    l = r(503698),
+    a = r.n(l),
+    o = r(641150),
+    i = r(477782),
+    c = r(628284),
+    d = r(861672),
+    u = r(938191),
+    _ = r(758836),
+    b = r(985018);
+let p = [
+        { tab: _.G2.AVATAR_DECORATIONS, labelKey: b.t.dRZYNE },
+        { tab: _.G2.PROFILE_EFFECTS, labelKey: b.t["1cNjtx"] },
+        { tab: _.G2.NAMEPLATES, labelKey: b.t.V68Fqz },
+        { tab: _.G2.BUNDLES, labelKey: b.t.FYFpps },
+        { tab: _.G2.CATALOG, labelKey: b.t.xFcotU },
     ],
-    p = {
-        [o.q.ALL]: u.G2.CATALOG,
-        [o.q.AVATAR_DECORATION]: u.G2.AVATAR_DECORATIONS,
-        [o.q.PROFILE_EFFECT]: u.G2.PROFILE_EFFECTS,
-        [o.q.NAMEPLATE]: u.G2.NAMEPLATES,
-        [o.q.BUNDLE]: u.G2.BUNDLES,
+    m = {
+        [o.q.ALL]: _.G2.CATALOG,
+        [o.q.AVATAR_DECORATION]: _.G2.AVATAR_DECORATIONS,
+        [o.q.PROFILE_EFFECT]: _.G2.PROFILE_EFFECTS,
+        [o.q.NAMEPLATE]: _.G2.NAMEPLATES,
+        [o.q.BUNDLE]: _.G2.BUNDLES,
     };
-function S(e) {
-    let { selectedTab: t, itemTypeFilters: s, onTabSelect: l, onClose: n } = e,
+function f(e) {
+    let { selectedTab: t, itemTypeFilters: r, onTabSelect: s, onClose: l } = e,
         a = t;
-    if (t === u.G2.CATALOG && s.size > 0) {
-        let e = p[Array.from(s)[0]];
+    if (t === _.G2.CATALOG && r.size > 0) {
+        let e = m[Array.from(r)[0]];
         null != e && (a = e);
     }
-    return b.map((e) => {
-        let { tab: t, labelKey: s } = e,
+    return p.map((e) => {
+        let { tab: t, labelKey: r } = e,
             o = t === a;
-        return (0, r.jsx)(
-            i.Drp,
+        return (0, n.jsx)(
+            i.Dr,
             {
                 id: t,
-                label: d.intl.string(s),
-                icon: o ? i.yr3 : void 0,
-                leadingAccessory: o ? { type: "icon", icon: i.yr3 } : void 0,
+                label: b.intl.string(r),
+                icon: o ? c.y : void 0,
+                leadingAccessory: o ? { type: "icon", icon: c.y } : void 0,
                 action: () => {
-                    l(t), n();
+                    s(t), l();
                 },
             },
             t,
         );
     });
 }
-function m(e) {
-    let { handleTransition: t, onClose: s } = e,
-        n = (0, c.yB)("CollectiblesIndexPageContextMenu"),
-        o = l.useMemo(
+function C(e) {
+    let { handleTransition: t, onClose: r } = e,
+        l = (0, u.yB)("CollectiblesIndexPageContextMenu"),
+        o = s.useMemo(
             () => [
-                { label: d.intl.string(d.t.dRZYNE), value: u.G2.AVATAR_DECORATIONS },
-                { label: d.intl.string(d.t["1cNjtx"]), value: u.G2.PROFILE_EFFECTS },
-                { label: d.intl.string(d.t.V68Fqz), value: u.G2.NAMEPLATES },
-                { label: d.intl.string(d.t.FYFpps), value: u.G2.BUNDLES },
-                { label: d.intl.string(d.t.xFcotU), value: u.G2.CATALOG },
+                { label: b.intl.string(b.t.dRZYNE), value: _.G2.AVATAR_DECORATIONS },
+                { label: b.intl.string(b.t["1cNjtx"]), value: _.G2.PROFILE_EFFECTS },
+                { label: b.intl.string(b.t.V68Fqz), value: _.G2.NAMEPLATES },
+                { label: b.intl.string(b.t.FYFpps), value: _.G2.BUNDLES },
+                { label: b.intl.string(b.t.xFcotU), value: _.G2.CATALOG },
             ],
             [],
         );
-    return (0, r.jsx)("div", {
-        className: a()({ [c.jP]: n }),
-        children: (0, r.jsx)(i.W1t, {
+    return (0, n.jsx)("div", {
+        className: a()({ [u.jP]: l }),
+        children: (0, n.jsx)(d.W, {
             "data-menu-migrated": !0,
             navId: "collectibles-index-page-menu",
-            className: a()({ [c.jP]: n }),
-            onClose: s,
-            "aria-label": d.intl.string(d.t.xFcotU),
+            className: a()({ [u.jP]: l }),
+            onClose: r,
+            "aria-label": b.intl.string(b.t.xFcotU),
             onSelect: () => {},
             children: o.map((e) =>
-                (0, r.jsx)(
-                    i.Drp,
+                (0, n.jsx)(
+                    i.Dr,
                     {
                         id: e.value,
                         label: e.label,

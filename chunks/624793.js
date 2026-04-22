@@ -1,27 +1,26 @@
 "use strict";
-n.d(t, { GO: () => d, g_: () => c, rV: () => u });
-var r = n(357758),
-    i = n(562465),
+n.d(t, { GO: () => _, g_: () => c, rV: () => d });
+var r,
+    i = n(357758),
+    s = n(562465),
     a = n(315069),
-    s = n(486020),
-    o = n(860689),
-    l = n(652215),
-    u = (function (e) {
-        return (e.GUILD = "GUILD"), (e.APPLICATION = "APPLICATION"), e;
-    })({});
+    o = n(486020),
+    l = n(860689),
+    u = n(652215),
+    d = (((r = {}).GUILD = "GUILD"), (r.APPLICATION = "APPLICATION"), r);
 let c = async (e) => {
     let t = null;
     try {
         let n = (
-            await i.Bo.get({ url: l.Rsh.EMOJI_SOURCE_DATA(e), oldFormErrors: !0, timeout: 5e3, rejectWithError: !0 })
+            await s.Bo.get({ url: u.Rsh.EMOJI_SOURCE_DATA(e), oldFormErrors: !0, timeout: 5e3, rejectWithError: !0 })
         ).body;
         n?.type === "GUILD"
-            ? (t = { guild: d.createFromServer(n.guild), type: n.type })
-            : n?.type === "APPLICATION" && (t = { application: _.createFromServer(n.application), type: n.type });
+            ? (t = { guild: _.createFromServer(n.guild), type: n.type })
+            : n?.type === "APPLICATION" && (t = { application: f.createFromServer(n.application), type: n.type });
     } catch {}
     return t;
 };
-class d extends a.A {
+class _ extends a.A {
     id;
     name;
     icon;
@@ -47,30 +46,30 @@ class d extends a.A {
     }
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return s.Ay.getGuildIconURL({ id: this.id, size: e, icon: this.icon, canAnimate: t });
+        return o.Ay.getGuildIconURL({ id: this.id, size: e, icon: this.icon, canAnimate: t });
     }
     getIconSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return s.Ay.getAnimatableSourceWithFallback(t, (t) =>
-            s.Ay.getGuildIconSource({ id: this.id, size: e, icon: this.icon, canAnimate: t }),
+        return o.Ay.getAnimatableSourceWithFallback(t, (t) =>
+            o.Ay.getGuildIconSource({ id: this.id, size: e, icon: this.icon, canAnimate: t }),
         );
     }
     hasFeature(e) {
         return this.features.has(e);
     }
     isDiscoverable() {
-        return this.hasFeature(l.GuildFeatures.DISCOVERABLE);
+        return this.hasFeature(u.GuildFeatures.DISCOVERABLE);
     }
     static async getGuildFromEmojiId(e) {
         let t = await c(e);
         return null != t && t?.type === "GUILD" ? t.guild : null;
     }
     static _mapCommon(e) {
-        return { id: e.id, name: e.name, icon: e.icon, description: e.description, features: (0, r.y)(e.features) };
+        return { id: e.id, name: e.name, icon: e.icon, description: e.description, features: (0, i.y)(e.features) };
     }
     static createFromGuildRecord(e) {
-        return new d({
-            ...d._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: e.premiumTier,
             premiumSubscriberCount: e.premiumSubscriberCount,
             presenceCount: null,
@@ -79,8 +78,8 @@ class d extends a.A {
         });
     }
     static createFromDiscoverableGuild(e) {
-        return new d({
-            ...d._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: null,
             premiumSubscriberCount: e.premiumSubscriptionCount,
             presenceCount: e.presenceCount,
@@ -89,8 +88,8 @@ class d extends a.A {
         });
     }
     static createFromServer(e) {
-        return new d({
-            ...d._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: e.premium_tier,
             premiumSubscriberCount: e.premium_subscription_count,
             presenceCount: e.approximate_presence_count,
@@ -99,16 +98,16 @@ class d extends a.A {
         });
     }
     static createFromGuildType(e) {
-        return e instanceof d ? e : (0, o.fh)(e) ? d.createFromGuildRecord(e) : d.createFromDiscoverableGuild(e);
+        return e instanceof _ ? e : (0, l.fh)(e) ? _.createFromGuildRecord(e) : _.createFromDiscoverableGuild(e);
     }
 }
-class _ extends a.A {
+class f extends a.A {
     id;
     name;
     constructor(e) {
         super(), (this.id = e.id), (this.name = e.name);
     }
     static createFromServer(e) {
-        return new _({ id: e.id, name: e.name });
+        return new f({ id: e.id, name: e.name });
     }
 }

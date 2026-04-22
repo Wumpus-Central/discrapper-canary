@@ -1,15 +1,8 @@
 "use strict";
-n.d(t, { c: () => a }), n(321073);
+n.d(t, { c: () => s }), n(321073);
 var r = n(52724);
 let i = "dndOriginalRole";
-function s(e) {
-    if (null == e) return { x: 0, y: 0 };
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    if (null == t) return { x: 0, y: 0 };
-    let { top: n, left: r } = t.getBoundingClientRect();
-    return { x: r, y: n };
-}
-class a {
+class s {
     targetNodes;
     manager;
     previewer;
@@ -70,7 +63,15 @@ class a {
         })?.[0];
         null != t &&
             (this.restoreRoleOfHoveredNode(),
-            this.actions.hover([t], { clientOffset: s(e) }),
+            this.actions.hover([t], {
+                clientOffset: (function (e) {
+                    if (null == e) return { x: 0, y: 0 };
+                    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+                    if (null == t) return { x: 0, y: 0 };
+                    let { top: n, left: r } = t.getBoundingClientRect();
+                    return { x: r, y: n };
+                })(e),
+            }),
             (this.currentHoveredNode = e),
             this.overrideRoleToApplicationForHoveredNode(),
             this.previewer.render(this.monitor),

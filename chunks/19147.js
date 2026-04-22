@@ -1,10 +1,10 @@
 a.d(l, { S: () => p });
 var t = a(627968),
-    o = a(64700),
-    n = a(540637),
-    i = a(978617),
-    s = a(158954),
-    r = a(389723),
+    n = a(64700),
+    o = a(540637),
+    i = a(691885),
+    r = a(276293),
+    s = a(389723),
     d = a(783878),
     u = a(379649);
 let c = [
@@ -20,15 +20,15 @@ let c = [
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: s.N$i,
+            leading: r.N,
             trailing: { type: "badge", badgeType: "new" },
             description: "This is an aardvark",
         },
-        { label: "Cat", value: "cat", id: "cat", leading: s.N$i, trailing: "20m", description: "This is a cat" },
-        { label: "Dog", value: "dog", id: "dog", leading: s.N$i },
+        { label: "Cat", value: "cat", id: "cat", leading: r.N, trailing: "20m", description: "This is a cat" },
+        { label: "Dog", value: "dog", id: "dog", leading: r.N },
         { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: u } },
         { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: u } },
-        { label: "Snake", value: "snake", id: "snake", leading: s.N$i, disabled: !0 },
+        { label: "Snake", value: "snake", id: "snake", leading: r.N, disabled: !0 },
     ],
     p = {
         title: "Select",
@@ -37,13 +37,13 @@ let c = [
                 id: "select",
                 name: "Select",
                 component: function (e) {
-                    let { selectionMode: l, withLeadingAndTrailing: a, ...n } = e,
-                        [s, r] = o.useState(void 0),
-                        [d, u] = o.useState([]),
-                        c = m(a, n.asyncOptions);
+                    let { selectionMode: l, withLeadingAndTrailing: a, ...o } = e,
+                        [r, s] = n.useState(void 0),
+                        [d, u] = n.useState([]),
+                        c = m(a, o.asyncOptions);
                     return "single" === l
-                        ? (0, t.jsx)(i.l6, { ...n, selectionMode: l, options: c, onSelectionChange: r, value: s })
-                        : (0, t.jsx)(i.l6, { ...n, selectionMode: l, options: c, onSelectionChange: u, value: d });
+                        ? (0, t.jsx)(i.l, { ...o, selectionMode: l, options: c, onSelectionChange: s, value: r })
+                        : (0, t.jsx)(i.l, { ...o, selectionMode: l, options: c, onSelectionChange: u, value: d });
                 },
                 controls: {
                     selectionMode: {
@@ -92,12 +92,12 @@ let c = [
                 id: "searchable-select",
                 name: "SearchableSelect",
                 component: function (e) {
-                    let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: n, ...i } = e,
-                        [s, r] = o.useState(void 0),
-                        [u, c] = o.useState([]),
-                        b = m(a, n);
+                    let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: o, ...i } = e,
+                        [r, s] = n.useState(void 0),
+                        [u, c] = n.useState([]),
+                        b = m(a, o);
                     return "single" === l
-                        ? (0, t.jsx)(d.Z, { ...i, selectionMode: l, onSelectionChange: r, value: s, options: b })
+                        ? (0, t.jsx)(d.Z, { ...i, selectionMode: l, onSelectionChange: s, value: r, options: b })
                         : (0, t.jsx)(d.Z, { ...i, selectionMode: l, onSelectionChange: c, value: u, options: b });
                 },
                 controls: {
@@ -144,39 +144,39 @@ let c = [
                     let {
                             selectionMode: l,
                             label: a,
-                            hideLabel: n,
+                            hideLabel: o,
                             description: i,
-                            helperText: s,
+                            helperText: r,
                             errorMessage: d,
                             successMessage: u,
                             wrapTags: c,
                             withLeadingAndTrailing: b,
                             placeholder: p,
-                            ...x
+                            ...h
                         } = e,
-                        { required: h, disabled: v } = x,
-                        y = m(b, x.asyncOptions),
-                        [f, g] = o.useState(null);
-                    return (0, t.jsxs)(r.iS, {
+                        { required: x, disabled: g } = h,
+                        f = m(b, h.asyncOptions),
+                        [v, y] = n.useState(null);
+                    return (0, t.jsxs)(s.iS, {
                         selectionMode: l,
-                        onSelectionChange: g,
-                        options: y,
-                        value: f,
-                        ...x,
+                        onSelectionChange: y,
+                        options: f,
+                        value: v,
+                        ...h,
                         children: [
-                            (0, t.jsx)(r.a3, {
+                            (0, t.jsx)(s.a3, {
                                 label: a,
-                                hideLabel: n,
+                                hideLabel: o,
                                 placeholder: p,
-                                required: h,
-                                disabled: v,
+                                required: x,
+                                disabled: g,
                                 description: i,
-                                helperText: s,
+                                helperText: r,
                                 errorMessage: d,
                                 successMessage: u,
                                 wrapTags: c,
                             }),
-                            (0, t.jsx)(r.X2, {}),
+                            (0, t.jsx)(s.X2, {}),
                         ],
                     });
                 },
@@ -220,15 +220,15 @@ let c = [
                 id: "listbox",
                 name: "ListBox",
                 component: function (e) {
-                    let { selectionMode: l, required: a, shouldFocusWrap: i, withLeadingAndTrailing: s } = e,
-                        [r, d] = o.useState(null);
-                    return (0, t.jsx)(n.q, {
+                    let { selectionMode: l, required: a, shouldFocusWrap: i, withLeadingAndTrailing: r } = e,
+                        [s, d] = n.useState(null);
+                    return (0, t.jsx)(o.q, {
                         selectionMode: l,
                         required: a,
                         shouldFocusWrap: i,
-                        items: s ? b : c,
+                        items: r ? b : c,
                         onSelectionChange: d,
-                        selectedItems: r,
+                        selectedItems: s,
                     });
                 },
                 controls: {
@@ -253,8 +253,8 @@ let c = [
         ],
     };
 function m(e, l) {
-    let a = o.useRef(null);
-    return o.useMemo(() => {
+    let a = n.useRef(null);
+    return n.useMemo(() => {
         let t = e ? b : c;
         return l
             ? (e) =>

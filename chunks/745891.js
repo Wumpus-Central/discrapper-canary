@@ -3,7 +3,7 @@ n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
+    a = n(106236),
     r = n(684013),
     o = n(915089),
     d = n(256415),
@@ -11,10 +11,10 @@ var i = n(627968),
     u = n(672396),
     h = n(652215),
     p = n(985018),
-    A = n(877911);
-let f = Object.values(u.Li).map((e) => 100 * e),
-    g = (0, o.Ld)();
-class _ extends s.PureComponent {
+    f = n(956998);
+let A = Object.values(u.Li).map((e) => 100 * e),
+    _ = (0, o.Ld)();
+class g extends s.PureComponent {
     initialValue = 100 * this.props.opacity;
     handleUpdateBackgroundOpacity(e) {
         r.A.setTextWidgetOpacity((0, c.A)(e / 100)),
@@ -25,27 +25,27 @@ class _ extends s.PureComponent {
     }
     render() {
         return (0, i.jsx)("div", {
-            className: A.kL,
+            className: f.kL,
             children: (0, i.jsx)("div", {
-                className: A.xJ,
-                children: (0, i.jsx)(a.Apm, {
+                className: f.xJ,
+                children: (0, i.jsx)(a.A, {
                     label: p.intl.string(p.t.OVovCb),
                     mini: !0,
                     initialValue: this.initialValue,
                     defaultValue: this.initialValue,
-                    minValue: f[0],
-                    maxValue: f[f.length - 1],
+                    minValue: A[0],
+                    maxValue: A[A.length - 1],
                     handleSize: 10,
                     onValueChange: this.handleUpdateBackgroundOpacity,
                     asValueChanges: this.handlePreviewBackgroundOpacity,
-                    markers: f,
+                    markers: A,
                     onMarkerRender: h.tEg,
                     equidistant: !0,
                     stickToMarkers: !0,
-                    "aria-labelledby": g,
+                    "aria-labelledby": _,
                 }),
             }),
         });
     }
 }
-let m = l.Ay.connectStores([d.default], () => ({ opacity: d.default.getTextWidgetOpacity() }))(_);
+let m = l.Ay.connectStores([d.default], () => ({ opacity: d.default.getTextWidgetOpacity() }))(g);

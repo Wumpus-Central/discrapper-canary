@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
+        a = {
             keyword: ["assert", "else", "if", "in", "inherit", "let", "or", "rec", "then", "with"],
             literal: ["true", "false", "null"],
             built_in: [
@@ -25,7 +25,7 @@ e.exports = function (e) {
                 "toString",
             ],
         },
-        r = {
+        n = {
             scope: "built_in",
             match: t.either(
                 ...[
@@ -151,10 +151,10 @@ e.exports = function (e) {
             ),
             relevance: 10,
         },
-        i = "[A-Za-z_][A-Za-z0-9_'-]*",
-        s = { scope: "symbol", match: RegExp(`<${i}(/${i})*>`) },
-        a = "[A-Za-z0-9_\\+\\.-]+",
-        o = { scope: "symbol", match: RegExp(`(\\.\\.|\\.|~)?/(${a})?(/${a})*(?=[\\s;])`) },
+        r = "[A-Za-z_][A-Za-z0-9_'-]*",
+        i = { scope: "symbol", match: RegExp(`<${r}(/${r})*>`) },
+        o = "[A-Za-z0-9_\\+\\.-]+",
+        s = { scope: "symbol", match: RegExp(`(\\.\\.|\\.|~)?/(${o})?(/${o})*(?=[\\s;])`) },
         l = t.either(
             "==",
             "=",
@@ -176,8 +176,8 @@ e.exports = function (e) {
             "\\*",
             "&&",
         ),
-        u = { scope: "operator", match: t.concat(l, /(?!-)/), relevance: 0 },
-        c = { scope: "number", match: RegExp(`${e.NUMBER_RE}(?!-)`), relevance: 0 },
+        c = { scope: "operator", match: t.concat(l, /(?!-)/), relevance: 0 },
+        _ = { scope: "number", match: RegExp(`${e.NUMBER_RE}(?!-)`), relevance: 0 },
         d = {
             variants: [
                 { scope: "operator", beforeMatch: /\s/, begin: /-(?!>)/ },
@@ -186,47 +186,51 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        _ = {
+        m = {
             beforeMatch: /(^|\{|;)\s*/,
-            begin: RegExp(`${i}(\\.${i})*\\s*=(?!=)`),
+            begin: RegExp(`${r}(\\.${r})*\\s*=(?!=)`),
             returnBegin: !0,
             relevance: 0,
-            contains: [{ scope: "attr", match: RegExp(`${i}(\\.${i})*(?=\\s*=)`), relevance: 0.2 }],
+            contains: [{ scope: "attr", match: RegExp(`${r}(\\.${r})*(?=\\s*=)`), relevance: 0.2 }],
         },
-        f = { scope: "subst", begin: /\$\{/, end: /\}/, keywords: n },
-        p = { scope: "char.escape", match: /\\(?!\$)./ },
-        h = {
-            scope: "string",
-            variants: [
-                {
-                    begin: "''",
-                    end: "''",
-                    contains: [{ scope: "char.escape", match: /''\$/ }, f, { scope: "char.escape", match: /'''/ }, p],
-                },
-                { begin: '"', end: '"', contains: [{ scope: "char.escape", match: /\\\$/ }, f, p] },
-            ],
-        },
-        m = { scope: "params", match: RegExp(`${i}\\s*:(?=\\s)`) },
+        p = { scope: "subst", begin: /\$\{/, end: /\}/, keywords: a },
+        u = { scope: "char.escape", match: /\\(?!\$)./ },
+        g = { scope: "params", match: RegExp(`${r}\\s*:(?=\\s)`) },
         E = [
-            c,
+            _,
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT(/\/\*\*(?!\/)/, /\*\//, { subLanguage: "markdown", relevance: 0 }),
-            r,
-            h,
+            n,
+            {
+                scope: "string",
+                variants: [
+                    {
+                        begin: "''",
+                        end: "''",
+                        contains: [
+                            { scope: "char.escape", match: /''\$/ },
+                            p,
+                            { scope: "char.escape", match: /'''/ },
+                            u,
+                        ],
+                    },
+                    { begin: '"', end: '"', contains: [{ scope: "char.escape", match: /\\\$/ }, p, u] },
+                ],
+            },
+            i,
             s,
-            o,
+            g,
             m,
-            _,
             d,
-            u,
+            c,
         ];
     return (
-        (f.contains = E),
+        (p.contains = E),
         {
             name: "Nix",
             aliases: ["nixos"],
-            keywords: n,
+            keywords: a,
             contains: E.concat([
                 { scope: "meta.prompt", match: /^nix-repl>(?=\s)/, relevance: 10 },
                 { scope: "meta", beforeMatch: /\s+/, begin: /:([a-z]+|\?)/ },

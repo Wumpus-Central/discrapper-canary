@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header_b963df",
     CS: "lineItemsContainer_b963df",

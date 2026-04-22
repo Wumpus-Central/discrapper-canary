@@ -1,68 +1,71 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(267102),
-    o = n(931991),
-    c = n(246356),
-    d = n(404355),
-    u = n(734057),
-    h = n(707592),
-    A = n(496092),
-    _ = n(132860),
-    m = n(508654),
-    g = n(985018);
-function p(e) {
-    let { channelId: t, onClick: n } = e,
-        p = (0, r.Us)(),
-        f = (0, m.Qs)(t),
-        x = (0, s.bG)([u.A], () => u.A.getChannel(t), [t]),
-        { canManageGuildEvent: E } = (0, o.nr)(x),
-        I = E(f),
-        C = l.useRef(null);
-    if (null == f) return null;
+t.d(n, { A: () => v });
+var l = t(627968),
+    i = t(64700),
+    a = t(311907),
+    s = t(265872),
+    r = t(861672),
+    o = t(477782),
+    c = t(285796),
+    u = t(267102),
+    d = t(931991),
+    A = t(246356),
+    h = t(404355),
+    p = t(734057),
+    m = t(707592),
+    g = t(496092),
+    f = t(132860),
+    C = t(508654),
+    E = t(985018);
+function v(e) {
+    let { channelId: n, onClick: t } = e,
+        v = (0, u.Us)(),
+        I = (0, C.Qs)(n),
+        x = (0, a.bG)([p.A], () => p.A.getChannel(n), [n]),
+        { canManageGuildEvent: T } = (0, d.nr)(x),
+        _ = T(I),
+        j = i.useRef(null);
+    if (null == I) return null;
     let N = () => {
-            null != x && (0, _.A)(x) ? (0, h.Py)(x, p) : n();
+            null != x && (0, f.A)(x) ? (0, m.Py)(x, v) : t();
         },
-        T = () => {
-            A.A.endEvent(f.id, f.guild_id);
+        b = () => {
+            g.A.endEvent(I.id, I.guild_id);
         };
-    return I
-        ? (0, i.jsx)(a.YNO, {
-              targetElementRef: C,
+    return _
+        ? (0, l.jsx)(s.Y, {
+              targetElementRef: j,
               renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, i.jsx)(c.A, {
-                      children: (0, i.jsx)(a.W1t, {
+                  let { closePopout: n } = e;
+                  return (0, l.jsx)(A.A, {
+                      children: (0, l.jsx)(r.W, {
                           "data-menu-migrated": !0,
                           navId: "exit-options",
                           onSelect: () => {},
-                          "aria-label": g.intl.string(g.t["K6/mk3"]),
-                          onClose: t,
-                          children: (0, i.jsx)(a.Drp, {
+                          "aria-label": E.intl.string(E.t["K6/mk3"]),
+                          onClose: n,
+                          children: (0, l.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: T,
-                              label: g.intl.string(g.t.qaYzPA),
-                              leadingAccessory: { type: "icon", icon: a.aXh },
-                              icon: a.aXh,
+                              action: b,
+                              label: E.intl.string(E.t.qaYzPA),
+                              leadingAccessory: { type: "icon", icon: c.a },
+                              icon: c.a,
                           }),
                       }),
                   });
               },
               align: "center",
               position: "top",
-              animation: a.YNO.Animation.FADE,
+              animation: s.Y.Animation.FADE,
               children: (e) => {
-                  let { onClick: t } = e;
-                  return (0, i.jsx)(d.A, {
-                      buttonRef: C,
-                      label: g.intl.string(g.t["6vrfgt"]),
+                  let { onClick: n } = e;
+                  return (0, l.jsx)(h.A, {
+                      buttonRef: j,
+                      label: E.intl.string(E.t["6vrfgt"]),
                       onClick: N,
-                      onPopoutClick: t,
+                      onPopoutClick: n,
                   });
               },
           })
-        : (0, i.jsx)(d.A, { label: g.intl.string(g.t["6vrfgt"]), onClick: n });
+        : (0, l.jsx)(h.A, { label: E.intl.string(E.t["6vrfgt"]), onClick: t });
 }

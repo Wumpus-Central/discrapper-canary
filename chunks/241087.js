@@ -1,21 +1,19 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(528352),
-    i = n(374372),
-    a = n(355418);
-let s = RegExp("(" + r.Pl + ")(later|na|vanaf nu|voortaan|vooruit|uit)(?=(?:\\W|$))", "i"),
-    o = RegExp("(" + r.Pl + ")(later|vanaf nu)(?=(?:\\W|$))", "i"),
-    l = 1;
-class u extends a.c {
+r.d(t, { A: () => l });
+var n = r(528352),
+    s = r(374372),
+    a = r(355418);
+let i = RegExp("(" + n.Pl + ")(later|na|vanaf nu|voortaan|vooruit|uit)(?=(?:\\W|$))", "i"),
+    o = RegExp("(" + n.Pl + ")(later|vanaf nu)(?=(?:\\W|$))", "i");
+class l extends a.c {
     strictMode;
     constructor(e) {
         super(), (this.strictMode = e);
     }
     innerPattern() {
-        return this.strictMode ? o : s;
+        return this.strictMode ? o : i;
     }
     innerExtract(e, t) {
-        let n = (0, r.E9)(t[l]);
-        return i.BP.createRelativeFromReference(e.reference, n);
+        let r = (0, n.E9)(t[1]);
+        return s.BP.createRelativeFromReference(e.reference, r);
     }
 }

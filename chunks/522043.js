@@ -1,36 +1,36 @@
-n.d(t, { A: () => A });
-var i = n(627968),
-    l = n(397927),
-    a = n(241124),
-    r = n(947926),
-    s = n(717695),
-    o = n(985018),
-    d = n(332544),
-    c = n(763578),
-    u = n(111113);
-let A = function (e) {
+s.d(t, { A: () => m });
+var n = s(627968),
+    l = s(534514),
+    a = s(241124),
+    r = s(947926),
+    i = s(717695),
+    o = s(985018),
+    c = s(332544),
+    u = s(763578),
+    d = s(111113);
+let m = function (e) {
     let { quest: t } = e;
-    return (0, i.jsx)("div", {
-        className: d.x3,
-        children: (0, i.jsxs)("div", {
-            className: c.wp,
+    return (0, n.jsx)("div", {
+        className: c.x3,
+        children: (0, n.jsxs)("div", {
+            className: u.wp,
             children: [
-                (0, i.jsx)(l.Heading, {
-                    className: c.Oo,
+                (0, n.jsx)(l.D, {
+                    className: u.Oo,
                     variant: "heading-md/semibold",
                     children: o.intl.string(o.t.rjVPdM),
                 }),
-                (0, i.jsx)("div", {
-                    className: c.RE,
-                    children: (0, i.jsx)("div", {
-                        className: c.Z,
-                        children: (0, i.jsx)("div", {
-                            className: u.C3,
-                            children: (0, i.jsx)(s.A, {
-                                children: (0, i.jsx)(a.jY, {
+                (0, n.jsx)("div", {
+                    className: u.RE,
+                    children: (0, n.jsx)("div", {
+                        className: u.Z,
+                        children: (0, n.jsx)("div", {
+                            className: d.C3,
+                            children: (0, n.jsx)(i.A, {
+                                children: (0, n.jsx)(a.jY, {
                                     source: "preview",
                                     questId: t.id,
-                                    children: (0, i.jsx)(r.Y, { quest: t }),
+                                    children: (0, n.jsx)(r.Y, { quest: t }),
                                 }),
                             }),
                         }),

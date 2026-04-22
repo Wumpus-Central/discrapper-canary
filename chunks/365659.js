@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { W: () => i });
-var r = n(382222);
-let i = new (n(332670).A)();
-r.Globals.assign({ frameLoop: i });
+n.d(t, { W: () => r });
+var i = n(517738);
+let r = new (n(332670).A)();
+i.Globals.assign({ frameLoop: r });

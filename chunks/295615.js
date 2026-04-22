@@ -1,57 +1,58 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => g });
 var r = n(627968),
     i = n(64700),
     s = n(624368),
-    a = n(158954),
-    o = n(311907),
-    l = n(397927),
-    u = n(830215),
+    a = n(331322),
+    o = n(834730),
+    l = n(311907),
+    u = n(349288),
+    d = n(830215),
     c = n(287809),
-    d = n(683105),
-    _ = n(89050),
-    f = n(602339),
-    p = n(985018),
-    h = n(88438);
+    _ = n(683105),
+    f = n(89050),
+    E = n(602339),
+    h = n(985018),
+    p = n(88438);
 function m() {
-    u.A.logout("restricted_hours");
+    d.A.logout("restricted_hours");
 }
-function E(e) {
+function g(e) {
     let { onClose: t } = e,
-        n = (0, _.A)(),
-        u = (0, d.A)(),
-        E = (0, o.bG)([c.default], () => c.default.getCurrentUser()?.username ?? "");
+        n = (0, f.A)(),
+        d = (0, _.A)(),
+        g = (0, l.bG)([c.default], () => c.default.getCurrentUser()?.username ?? "");
     i.useEffect(() => {
         n || t();
     }, [n, t]);
-    let g = null != u ? p.intl.format(f.default.VfqJvY, { endTime: u }) : p.intl.string(f.default.abikhN);
+    let A = null != d ? h.intl.format(E.default.VfqJvY, { endTime: d }) : h.intl.string(E.default.abikhN);
     return (0, r.jsxs)("div", {
-        className: h.Tp,
+        className: p.Tp,
         children: [
-            (0, r.jsx)("div", { className: h.cU }),
-            (0, r.jsx)(s.w, { artboard: "Gradient Horizontal", className: h.DL }),
-            (0, r.jsxs)(a.BJc, {
+            (0, r.jsx)("div", { className: p.cU }),
+            (0, r.jsx)(s.w, { artboard: "Gradient Horizontal", className: p.DL }),
+            (0, r.jsxs)(a.B, {
                 direction: "vertical",
                 align: "center",
                 gap: 16,
-                className: `${h.kL} ${h.vx}`,
+                className: `${p.kL} ${p.vx}`,
                 children: [
                     (0, r.jsx)(s.w, {
                         artboard: "Teen Screen Time Illo",
                         stateMachine: "State Machine 1",
-                        className: h.jw,
+                        className: p.jw,
                     }),
-                    (0, r.jsx)(a.EYj, { variant: "text-lg/medium", color: "text-muted", className: h.h_, children: g }),
+                    (0, r.jsx)(o.E, { variant: "text-lg/medium", color: "text-muted", className: p.h_, children: A }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: `${h.qr} ${h.vx}`,
-                children: (0, r.jsx)(a.EYj, {
+                className: `${p.qr} ${p.vx}`,
+                children: (0, r.jsx)(o.E, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: p.intl.format(f.default.iqeKDz, {
-                        username: E,
-                        loginHook: (e, t) => (0, r.jsx)(l.MzZ, { onClick: m, children: e }, t),
+                    children: h.intl.format(E.default.iqeKDz, {
+                        username: g,
+                        loginHook: (e, t) => (0, r.jsx)(u.Anchor, { onClick: m, children: e }, t),
                     }),
                 }),
             }),

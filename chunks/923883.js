@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Zo: "premiumCards__91402",
     Nr: "card__91402",

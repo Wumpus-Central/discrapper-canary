@@ -1,39 +1,49 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(397927),
-    o = n(817281),
-    l = n(964404),
-    u = n(985018);
-function c(e) {
-    let { onConfirm: t, onCancel: n, ...l } = e,
-        [c, d] = i.useState(!1);
-    i.useEffect(() => {
-        o.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: c });
-    }, [c]);
-    let _ = () => {
-            n?.(), l.onClose();
-        },
-        f = () => {
-            t(), l.onClose();
-        };
-    return (0, r.jsx)(a.Modal, {
-        ...l,
-        size: "md",
-        title: u.intl.string(u.t.ye21jI),
-        subtitle: u.intl.string(u.t.hbagWD),
-        actions: [
-            { text: u.intl.string(u.t.B8pz37), onClick: _, variant: "secondary" },
-            { text: u.intl.string(u.t.makWn9), onClick: f, variant: "primary" },
-        ],
-        actionBarInput: (0, r.jsx)(s.Checkbox, { checked: c, onChange: (e) => d(e), label: u.intl.string(u.t.wGAwOS) }),
-    });
+    s = n(189213),
+    a = n(150934),
+    o = n(192308),
+    l = n(231723),
+    u = n(817281),
+    d = n(964404),
+    c = n(985018);
+function _(e) {
+    let { onConfirm: t, onCancel: n, ...o } = e,
+        [l, d] = i.useState(!1);
+    return (
+        i.useEffect(() => {
+            u.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: l });
+        }, [l]),
+        (0, r.jsx)(s.Modal, {
+            ...o,
+            size: "md",
+            title: c.intl.string(c.t.ye21jI),
+            subtitle: c.intl.string(c.t.hbagWD),
+            actions: [
+                {
+                    text: c.intl.string(c.t.B8pz37),
+                    onClick: () => {
+                        n?.(), o.onClose();
+                    },
+                    variant: "secondary",
+                },
+                {
+                    text: c.intl.string(c.t.makWn9),
+                    onClick: () => {
+                        t(), o.onClose();
+                    },
+                    variant: "primary",
+                },
+            ],
+            actionBarInput: (0, r.jsx)(a.S, { checked: l, onChange: (e) => d(e), label: c.intl.string(c.t.wGAwOS) }),
+        })
+    );
 }
-function d(e) {
+function f(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: i = !1 } = e;
-    l.Ay.disableEmbeddedActivityPopOutAlert
+    d.Ay.disableEmbeddedActivityPopOutAlert
         ? t()
-        : (0, s.qfG)((e) => (0, r.jsx)(c, { ...e, onConfirm: t, onCancel: n }), {}, i ? s.KX8 : void 0);
+        : (0, o.openModal)((e) => (0, r.jsx)(_, { ...e, onConfirm: t, onCancel: n }), {}, i ? l.KX : void 0);
 }

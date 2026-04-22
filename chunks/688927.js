@@ -1,35 +1,32 @@
-n.d(t, { A: () => c });
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(46054),
-    s = n(861662),
-    d = n(985018),
-    o = n(991764);
-let c = (e) => {
+"use strict";
+n.d(t, { A: () => u });
+var a = n(627968),
+    i = n(64700),
+    r = n(534514),
+    l = n(834730),
+    s = n(46054),
+    d = n(861662),
+    o = n(985018),
+    c = n(900772);
+let u = (e) => {
     let {
-            node: { header: t, subheader: n, button: c },
-            isModeratorReport: u,
-            isTidaReport: _ = !1,
-            hideTitle: m = !1,
+            node: { header: t, subheader: n, button: u },
+            isModeratorReport: _,
+            isTidaReport: m = !1,
+            hideTitle: p = !1,
         } = e,
-        x = c?.type === "submit",
-        p = a.useMemo(() => i.A.reactParserFor({ ...i.A.defaultRules, link: s.B }), []);
-    return (0, l.jsxs)("div", {
-        className: o.N,
+        h = u?.type === "submit",
+        g = i.useMemo(() => s.A.reactParserFor({ ...s.A.defaultRules, link: d.B }), []);
+    return (0, a.jsxs)("div", {
+        className: c.N,
         children: [
-            m || null == t || "" === t
+            p || null == t || "" === t
                 ? null
-                : (0, l.jsx)(r.Heading, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                : (0, a.jsx)(r.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
             null != n && "" !== t
-                ? (0, l.jsx)(r.Text, {
-                      variant: "text-md/normal",
-                      color: "text-subtle",
-                      className: o.m,
-                      children: p(n),
-                  })
+                ? (0, a.jsx)(l.E, { variant: "text-md/normal", color: "text-subtle", className: c.m, children: g(n) })
                 : null,
-            x && !u && !_ && (0, l.jsx)(r.Text, { variant: "text-sm/normal", children: d.intl.format(d.t.Q0tSKT, {}) }),
+            h && !_ && !m && (0, a.jsx)(l.E, { variant: "text-sm/normal", children: o.intl.format(o.t.Q0tSKT, {}) }),
         ],
     });
 };

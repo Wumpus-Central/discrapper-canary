@@ -1,134 +1,133 @@
-n.r(t), n.d(t, { default: () => w });
-var l = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
-    d = n(554146),
-    c = n(827734),
-    o = n(397927),
-    u = n(726249),
-    _ = n(826673),
-    h = n(742589),
-    x = n(637248),
-    m = n(760207),
-    A = n(454058),
-    g = n(761640),
-    C = n(71393),
-    f = n(202776),
-    p = n(659069),
-    N = n(539916),
-    j = n(746080),
-    v = n(49999),
-    b = n(985018),
-    I = n(682628),
-    E = n(638990);
-function S(e) {
-    let { guild: t } = e,
-        n = (0, f.A)(t);
+t.r(n), t.d(n, { default: () => D });
+var l = t(627968),
+    i = t(64700),
+    s = t(503698),
+    a = t.n(s),
+    r = t(311907),
+    d = t(554146),
+    c = t(827734),
+    o = t(740426),
+    u = t(761508),
+    _ = t(777666),
+    h = t(726249),
+    m = t(826673),
+    x = t(742589),
+    A = t(637248),
+    C = t(760207),
+    g = t(454058),
+    f = t(761640),
+    p = t(71393),
+    N = t(202776),
+    j = t(659069),
+    v = t(539916),
+    b = t(746080),
+    E = t(49999),
+    I = t(985018),
+    w = t(397882),
+    S = t(964623);
+function y(e) {
+    let { guild: n } = e,
+        t = (0, N.A)(n);
     i.useEffect(() => {
-        (0, _.Dr)(d.M.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: v.i.DISMISS });
+        (0, m.Dr)(d.M.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: E.i.DISMISS });
     });
-    let s = n
-            ? b.intl.formatToPlainString(b.t.uqZgYe, { guildName: t.name })
-            : b.intl.formatToPlainString(b.t.velJea, { guildName: t.name }),
-        a = n ? b.intl.string(b.t.h9mGOP) : b.intl.string(b.t.et6wav);
+    let s = t
+            ? I.intl.formatToPlainString(I.t.uqZgYe, { guildName: n.name })
+            : I.intl.formatToPlainString(I.t.velJea, { guildName: n.name }),
+        a = t ? I.intl.string(I.t.h9mGOP) : I.intl.string(I.t.et6wav);
     return (
-        (0, u.HU)({ location: s }),
-        (0, l.jsxs)(h.A, {
-            className: I.wx,
-            innerClassname: I.MU,
+        (0, h.HU)({ location: s }),
+        (0, l.jsxs)(x.A, {
+            className: w.wx,
+            innerClassname: w.MU,
             hideSearch: !0,
-            channelId: j.VV.CUSTOMIZE_COMMUNITY,
-            guildId: t.id,
-            children: [
-                (0, l.jsx)(h.A.Icon, { icon: o.kiI, "aria-hidden": !0 }),
-                (0, l.jsx)(h.A.Title, { children: a }),
-            ],
+            channelId: b.VV.CUSTOMIZE_COMMUNITY,
+            guildId: n.id,
+            children: [(0, l.jsx)(x.A.Icon, { icon: o.k, "aria-hidden": !0 }), (0, l.jsx)(x.A.Title, { children: a })],
         })
     );
 }
-function w(e) {
-    let { guildId: t, selectedSection: n } = e,
-        s = (0, r.bG)([C.A], () => C.A.getGuild(t)),
-        d = (0, f.A)(s),
-        [u, _] = i.useState(n ?? N.qC.CUSTOMIZE);
+function D(e) {
+    let { guildId: n, selectedSection: t } = e,
+        s = (0, r.bG)([p.A], () => p.A.getGuild(n)),
+        d = (0, N.A)(s),
+        [o, h] = i.useState(t ?? v.qC.CUSTOMIZE);
     i.useEffect(() => {
-        null != n && _(n);
-    }, [n]),
+        null != t && h(t);
+    }, [t]),
         i.useEffect(() => {
-            d || u !== N.qC.CUSTOMIZE || _(N.qC.BROWSE);
-        }, [d, u]);
-    let h = (0, r.bG)([g.Ay], () => g.Ay.getCurrentSidebarChannelId(j.VV.CHANNEL_BROWSER)),
-        v = null != h && u === N.qC.BROWSE,
-        w = (0, r.bG)([A.A], () => A.A.getNewChannelIds(t).size > 0),
-        y = (0, x.RD)(t);
+            d || o !== v.qC.CUSTOMIZE || h(v.qC.BROWSE);
+        }, [d, o]);
+    let m = (0, r.bG)([f.Ay], () => f.Ay.getCurrentSidebarChannelId(b.VV.CHANNEL_BROWSER)),
+        x = null != m && o === v.qC.BROWSE,
+        E = (0, r.bG)([g.A], () => g.A.getNewChannelIds(n).size > 0),
+        D = (0, A.RD)(n);
     return null == s
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(E.TE, { [E.js]: v }),
+                      className: a()(S.TE, { [S.js]: x }),
                       children: [
-                          (0, l.jsx)(S, { guild: s }),
+                          (0, l.jsx)(y, { guild: s }),
                           (0, l.jsxs)("div", {
-                              className: a()(E.Qs, I.kL),
+                              className: a()(S.Qs, w.kL),
                               children: [
                                   d &&
-                                      (0, l.jsxs)(o.VQ0, {
-                                          className: I.$H,
+                                      (0, l.jsxs)(u.V, {
+                                          className: w.$H,
                                           type: "top",
                                           look: "brand",
-                                          selectedItem: u,
-                                          onItemSelect: (e) => _(e),
+                                          selectedItem: o,
+                                          onItemSelect: (e) => h(e),
                                           children: [
                                               (0, l.jsx)(
-                                                  o.VQ0.Item,
+                                                  u.V.Item,
                                                   {
-                                                      className: I.YU,
-                                                      id: N.qC.CUSTOMIZE,
-                                                      children: b.intl.string(b.t.H2cICW),
+                                                      className: w.YU,
+                                                      id: v.qC.CUSTOMIZE,
+                                                      children: I.intl.string(I.t.H2cICW),
                                                   },
-                                                  N.qC.CUSTOMIZE,
+                                                  v.qC.CUSTOMIZE,
                                               ),
                                               (0, l.jsxs)(
-                                                  o.VQ0.Item,
+                                                  u.V.Item,
                                                   {
-                                                      className: I.YU,
-                                                      id: N.qC.BROWSE,
-                                                      "aria-label": b.intl.string(b.t.et6wav),
+                                                      className: w.YU,
+                                                      id: v.qC.BROWSE,
+                                                      "aria-label": I.intl.string(I.t.et6wav),
                                                       children: [
-                                                          b.intl.string(b.t.et6wav),
-                                                          (0, l.jsx)(o.LpS, {
-                                                              text: w ? b.intl.string(b.t.psHMa6) : y,
-                                                              color: w
+                                                          I.intl.string(I.t.et6wav),
+                                                          (0, l.jsx)(_.Lp, {
+                                                              text: E ? I.intl.string(I.t.psHMa6) : D,
+                                                              color: E
                                                                   ? c.A.unsafe_rawColors.BRAND_260.css
                                                                   : c.A.colors.BACKGROUND_MOD_STRONG.css,
-                                                              className: a()({ [I.Ad]: w }),
+                                                              className: a()({ [w.Ad]: E }),
                                                           }),
                                                       ],
                                                   },
-                                                  N.qC.BROWSE,
+                                                  v.qC.BROWSE,
                                               ),
                                           ],
                                       }),
                                   (() => {
-                                      switch (u) {
-                                          case N.qC.CUSTOMIZE:
-                                              return (0, l.jsx)(p.A, {
-                                                  guildId: t,
-                                                  onBrowseChannels: () => _(N.qC.BROWSE),
+                                      switch (o) {
+                                          case v.qC.CUSTOMIZE:
+                                              return (0, l.jsx)(j.A, {
+                                                  guildId: n,
+                                                  onBrowseChannels: () => h(v.qC.BROWSE),
                                               });
-                                          case N.qC.BROWSE:
+                                          case v.qC.BROWSE:
                                           default:
-                                              return (0, l.jsx)(m.A, { guildId: t });
+                                              return (0, l.jsx)(C.A, { guildId: n });
                                       }
                                   })(),
                               ],
                           }),
                       ],
                   }),
-                  v && (0, l.jsx)(m.W, { channelId: h }),
+                  x && (0, l.jsx)(C.W, { channelId: m }),
               ],
           });
 }

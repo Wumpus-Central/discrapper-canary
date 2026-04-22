@@ -1,25 +1,26 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968),
-    r = n(64700),
-    a = n(735438),
-    l = n.n(a),
-    s = n(998304),
-    o = n(542692);
-class d extends r.PureComponent {
+    s = n(64700),
+    l = n(735438),
+    r = n.n(l),
+    a = n(998304),
+    o = n(936593);
+class c extends s.PureComponent {
     dataChangedAt;
     fillColor;
     maxValue;
-    canvas = r.createRef();
+    canvas = s.createRef();
     animationFrameRequestId;
     static defaultProps = { animate: !0 };
     onDataUpdate(e, t) {
-        let { maxValue: n, data: i, animate: r } = this.props,
-            a = null == e || (e.data !== t.data && !l().isEqual(e.data, t.data));
+        let { maxValue: n, data: i, animate: s } = this.props,
+            l = null == e || (e.data !== t.data && !r().isEqual(e.data, t.data));
         if (
-            (a && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))),
-            a || null == e || (!e.animate && r) || e.color !== this.props.color)
+            (l && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))),
+            l || null == e || (!e.animate && s) || e.color !== this.props.color)
         ) {
-            let e = s.E2(this.props.color);
+            let e = a.E2(this.props.color);
             (this.fillColor = `rgba(${e.r}, ${e.g}, ${e.b}, 0.5)`),
                 window.cancelAnimationFrame(this.animationFrameRequestId),
                 (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
@@ -40,46 +41,46 @@ class d extends r.PureComponent {
             i = this.canvas.current;
         if (null == i) return;
         let {
-            data: r,
-            updateInterval: a,
-            color: l,
+            data: s,
+            updateInterval: l,
+            color: r,
             numUpdatesToShow: o,
-            lineWidth: d,
-            animate: c,
-            gradientStopColor: u,
+            lineWidth: c,
+            animate: d,
+            gradientStopColor: h,
         } = this.props;
-        if (r.length < 2) return;
-        let A = Math.max(Math.min((e - this.dataChangedAt) / a, 1), 0),
-            h = i.getContext("2d"),
-            _ = this.maxValue;
-        (h.strokeStyle = l), (h.lineWidth = d);
-        let m = i.height - h.lineWidth,
-            p = h.createLinearGradient(0, 0, 0, m);
-        if (null != u) p.addColorStop(0, u);
+        if (s.length < 2) return;
+        let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
+            u = i.getContext("2d"),
+            A = this.maxValue;
+        (u.strokeStyle = r), (u.lineWidth = c);
+        let m = i.height - u.lineWidth,
+            g = u.createLinearGradient(0, 0, 0, m);
+        if (null != h) g.addColorStop(0, h);
         else {
-            let { r: e, g: t, b: n } = s.E2(l);
-            p.addColorStop(0, `rgba(${e}, ${t}, ${n}, 0)`);
+            let { r: e, g: t, b: n } = a.E2(r);
+            g.addColorStop(0, `rgba(${e}, ${t}, ${n}, 0)`);
         }
-        p.addColorStop(1, this.fillColor), (h.fillStyle = p);
-        let g = r.length >= o ? o : r.length;
-        h.setTransform(1, 0, 0, -1, 0, i.height),
-            h.clearRect(0, 0, i.width, i.height),
-            h.translate(0, 0.5 * h.lineWidth);
-        let E = Math.floor(i.width / (g - 3)),
-            f = 0.5 * E;
-        h.translate(E - E * A, 0), h.beginPath();
-        let I = -E;
-        r.forEach((e, i) => {
-            (t = { x: I, y: (m * e) / _ }),
-                0 === i ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + f, n.y, t.x - f, t.y, t.x, t.y),
+        g.addColorStop(1, this.fillColor), (u.fillStyle = g);
+        let f = s.length >= o ? o : s.length;
+        u.setTransform(1, 0, 0, -1, 0, i.height),
+            u.clearRect(0, 0, i.width, i.height),
+            u.translate(0, 0.5 * u.lineWidth);
+        let _ = Math.floor(i.width / (f - 3)),
+            x = 0.5 * _;
+        u.translate(_ - _ * p, 0), u.beginPath();
+        let y = -_;
+        s.forEach((e, i) => {
+            (t = { x: y, y: (m * e) / A }),
+                0 === i ? u.moveTo(t.x, t.y) : u.bezierCurveTo(n.x + x, n.y, t.x - x, t.y, t.x, t.y),
                 (n = t),
-                (I += E);
+                (y += _);
         }),
-            h.stroke(),
-            h.lineTo(I - E, 0),
-            h.lineTo(0, 0),
-            h.fill(),
-            c && A < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+            u.stroke(),
+            u.lineTo(y - _, 0),
+            u.lineTo(0, 0),
+            u.fill(),
+            d && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
     };
     render() {
         let { className: e, pixelWidth: t, pixelHeight: n } = this.props;
@@ -89,4 +90,4 @@ class d extends r.PureComponent {
         });
     }
 }
-let c = d;
+let d = c;

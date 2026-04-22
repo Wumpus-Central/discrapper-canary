@@ -1,62 +1,62 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => S });
 var i = n(627968),
     l = n(64700),
     a = n(417597),
-    s = n(397927),
-    r = n(58149),
-    o = n(734057),
-    c = n(147036),
-    d = n(957565),
-    u = n(975571),
-    h = n(36491),
-    m = n(209100),
-    A = n(652215),
-    p = n(985018),
-    g = n(179783);
-function f(e) {
+    s = n(834730),
+    r = n(696986),
+    o = n(821609),
+    c = n(173936),
+    d = n(939249),
+    u = n(789645),
+    h = n(58149),
+    m = n(734057),
+    A = n(147036),
+    g = n(957565),
+    p = n(975571),
+    _ = n(36491),
+    f = n(209100),
+    E = n(652215),
+    C = n(985018),
+    x = n(788780);
+function S(e) {
     let { threadId: t } = e,
-        n = (0, a.bG)([o.A], () => o.A.getChannel(t)),
-        f = (0, a.bG)([o.A], () => o.A.getChannel(n?.parent_id)),
-        _ = l.useCallback(() => {
+        n = (0, a.bG)([m.A], () => m.A.getChannel(t)),
+        S = (0, a.bG)([m.A], () => m.A.getChannel(n?.parent_id)),
+        I = l.useCallback(() => {
             null != n &&
-                null != f &&
-                ((0, r.zV)(A.HAw.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, d.C)((0, c.af)(n, f)));
-        }, [n, f]);
+                null != S &&
+                ((0, h.zV)(E.HAw.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, g.C)((0, A.af)(n, S)));
+        }, [n, S]);
     return (0, i.jsxs)("div", {
-        className: g.BQ,
+        className: x.BQ,
         children: [
-            (0, i.jsx)(m.A, {}),
+            (0, i.jsx)(f.A, {}),
             (0, i.jsxs)("div", {
-                className: g.BB,
+                className: x.BB,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(s.E, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: p.intl.string(p.t["5uAO7d"]),
+                        children: C.intl.string(C.t["5uAO7d"]),
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(s.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: p.intl.format(p.t.WnfPV3, {
-                            helpArticleUrl: u.A.getCreatorSupportArticleURL(A.MVz.MEDIA_CHANNEL),
+                        children: C.intl.format(C.t.WnfPV3, {
+                            helpArticleUrl: p.A.getCreatorSupportArticleURL(E.MVz.MEDIA_CHANNEL),
                         }),
                     }),
-                    (0, i.jsx)(s.hKd, { size: 4 }),
-                    (0, i.jsx)(s.Button, {
-                        text: p.intl.string(p.t.C5UQC9),
-                        variant: "primary",
-                        icon: s.qYV,
-                        onClick: _,
-                    }),
+                    (0, i.jsx)(r.h, { size: 4 }),
+                    (0, i.jsx)(o.$, { text: C.intl.string(C.t.C5UQC9), variant: "primary", icon: c.q, onClick: I }),
                 ],
             }),
-            (0, i.jsx)(s.DUT, {
-                className: g.b,
+            (0, i.jsx)(d.D, {
+                className: x.b,
                 onClick: () => {
-                    (0, h.sF)(t);
+                    (0, _.sF)(t);
                 },
-                "aria-label": p.intl.string(p.t["0+xZH0"]),
-                children: (0, i.jsx)(s.PGe, { color: "currentColor", size: "xs" }),
+                "aria-label": C.intl.string(C.t["0+xZH0"]),
+                children: (0, i.jsx)(u.P, { color: "currentColor", size: "xs" }),
             }),
         ],
     });

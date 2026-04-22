@@ -1,6 +1,5 @@
-"use strict";
 n.d(t, { cL: () => i });
-var r = n(985018);
+var l = n(985018);
 function i(e) {
-    return e > 0 ? `1-${e}` : r.intl.string(r.t.zMNEiF);
+    return e > 0 ? `1-${e}` : l.intl.string(l.t.zMNEiF);
 }

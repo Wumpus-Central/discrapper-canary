@@ -1,47 +1,44 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(360345),
-    i = n(374372),
-    a = n(355418),
-    s = n(476858);
-let o = RegExp(`(this|last|past|next|after\\s*this)\\s*(${(0, s.uJ)(r.EB)})(?=\\s*)(?=\\W|$)`, "i"),
-    l = 1,
-    u = 2;
-class c extends a.c {
+r.d(t, { A: () => l });
+var n = r(360345),
+    s = r(374372),
+    a = r(355418),
+    i = r(476858);
+let o = RegExp(`(this|last|past|next|after\\s*this)\\s*(${(0, i.uJ)(n.EB)})(?=\\s*)(?=\\W|$)`, "i");
+class l extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[l].toLowerCase(),
-            a = t[u].toLowerCase(),
-            s = r.EB[a];
-        if ("next" == n || n.startsWith("after")) {
+        let r = t[1].toLowerCase(),
+            a = t[2].toLowerCase(),
+            i = n.EB[a];
+        if ("next" == r || r.startsWith("after")) {
             let t = {};
-            return (t[s] = 1), i.BP.createRelativeFromReference(e.reference, t);
+            return (t[i] = 1), s.BP.createRelativeFromReference(e.reference, t);
         }
-        if ("last" == n || "past" == n) {
+        if ("last" == r || "past" == r) {
             let t = {};
-            return (t[s] = -1), i.BP.createRelativeFromReference(e.reference, t);
+            return (t[i] = -1), s.BP.createRelativeFromReference(e.reference, t);
         }
         let o = e.createParsingComponents(),
-            c = new Date(e.reference.instant.getTime());
+            l = new Date(e.reference.instant.getTime());
         return (
             a.match(/week/i)
-                ? (c.setDate(c.getDate() - c.getDay()),
-                  o.imply("day", c.getDate()),
-                  o.imply("month", c.getMonth() + 1),
-                  o.imply("year", c.getFullYear()))
+                ? (l.setDate(l.getDate() - l.getDay()),
+                  o.imply("day", l.getDate()),
+                  o.imply("month", l.getMonth() + 1),
+                  o.imply("year", l.getFullYear()))
                 : a.match(/month/i)
-                  ? (c.setDate(1),
-                    o.imply("day", c.getDate()),
-                    o.assign("year", c.getFullYear()),
-                    o.assign("month", c.getMonth() + 1))
+                  ? (l.setDate(1),
+                    o.imply("day", l.getDate()),
+                    o.assign("year", l.getFullYear()),
+                    o.assign("month", l.getMonth() + 1))
                   : a.match(/year/i) &&
-                    (c.setDate(1),
-                    c.setMonth(0),
-                    o.imply("day", c.getDate()),
-                    o.imply("month", c.getMonth() + 1),
-                    o.assign("year", c.getFullYear())),
+                    (l.setDate(1),
+                    l.setMonth(0),
+                    o.imply("day", l.getDate()),
+                    o.imply("month", l.getMonth() + 1),
+                    o.assign("year", l.getFullYear())),
             o
         );
     }

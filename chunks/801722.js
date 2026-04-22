@@ -1,6 +1,4 @@
 e.exports = function (e) {
-    let t = "[a-zA-Z_$][a-zA-Z0-9_$]*",
-        n = /(-?)(\b0[xX][a-fA-F0-9_]+|(\b\d+(\.[\d_]*)?|\.[\d_]+)(([eE][-+]?\d+)|i32|u32|i64|f64)?)/;
     return {
         name: "Haxe",
         aliases: ["hx"],
@@ -24,8 +22,12 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            { className: "number", begin: n, relevance: 0 },
-            { className: "variable", begin: "\\$" + t },
+            {
+                className: "number",
+                begin: /(-?)(\b0[xX][a-fA-F0-9_]+|(\b\d+(\.[\d_]*)?|\.[\d_]+)(([eE][-+]?\d+)|i32|u32|i64|f64)?)/,
+                relevance: 0,
+            },
+            { className: "variable", begin: "\\$[a-zA-Z_$][a-zA-Z0-9_$]*" },
             { className: "meta", begin: /@:?/, end: /\(|$/, excludeEnd: !0 },
             { className: "meta", begin: "#", end: "$", keywords: { keyword: "if else elseif end error" } },
             {

@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
+        a = {
             $pattern: /[\w.\/]+/,
             built_in: [
                 "action",
@@ -34,34 +34,40 @@ e.exports = function (e) {
                 "yield",
             ],
         },
-        r = { $pattern: /[\w.\/]+/, literal: ["true", "false", "undefined", "null"] },
-        i = /""|"[^"]+"/,
-        s = /''|'[^']+'/,
-        a = /\[\]|\[[^\]]+\]/,
-        o = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
-        l = /(\.|\/)/,
-        u = t.either(i, s, a, o),
-        c = t.concat(t.optional(/\.|\.\/|\//), u, t.anyNumberOfTimes(t.concat(l, u))),
-        d = t.concat("(", a, "|", o, ")(?==)"),
-        _ = { begin: c },
-        f = e.inherit(_, { keywords: r }),
-        p = { begin: /\(/, end: /\)/ },
-        h = {
+        n = /\[\]|\[[^\]]+\]/,
+        r = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
+        i = t.either(/""|"[^"]+"/, /''|'[^']+'/, n, r),
+        o = t.concat(t.optional(/\.|\.\/|\//), i, t.anyNumberOfTimes(t.concat(/(\.|\/)/, i))),
+        s = t.concat("(", n, "|", r, ")(?==)"),
+        l = { begin: o },
+        c = e.inherit(l, { keywords: { $pattern: /[\w.\/]+/, literal: ["true", "false", "undefined", "null"] } }),
+        _ = { begin: /\(/, end: /\)/ },
+        d = {
             className: "attr",
-            begin: d,
+            begin: s,
             relevance: 0,
             starts: {
                 begin: /=/,
                 end: /=/,
-                starts: { contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, f, p] },
+                starts: { contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, c, _] },
             },
         },
-        m = { begin: /as\s+\|/, keywords: { keyword: "as" }, end: /\|/, contains: [{ begin: /\w+/ }] },
-        E = { contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, f, p], returnEnd: !0 };
-    p.contains = [e.inherit(_, { className: "name", keywords: n, starts: e.inherit(E, { end: /\)/ }) })];
-    let g = e.inherit(_, { keywords: n, className: "name", starts: e.inherit(E, { end: /\}\}/ }) }),
-        A = e.inherit(_, { keywords: n, className: "name" }),
-        I = e.inherit(_, { className: "name", keywords: n, starts: e.inherit(E, { end: /\}\}/ }) });
+        m = {
+            contains: [
+                e.NUMBER_MODE,
+                e.QUOTE_STRING_MODE,
+                e.APOS_STRING_MODE,
+                { begin: /as\s+\|/, keywords: { keyword: "as" }, end: /\|/, contains: [{ begin: /\w+/ }] },
+                d,
+                c,
+                _,
+            ],
+            returnEnd: !0,
+        };
+    _.contains = [e.inherit(l, { className: "name", keywords: a, starts: e.inherit(m, { end: /\)/ }) })];
+    let p = e.inherit(l, { keywords: a, className: "name", starts: e.inherit(m, { end: /\}\}/ }) }),
+        u = e.inherit(l, { keywords: a, className: "name" }),
+        g = e.inherit(l, { className: "name", keywords: a, starts: e.inherit(m, { end: /\}\}/ }) });
     return {
         name: "Handlebars",
         aliases: ["hbs", "html.hbs", "html.handlebars", "htmlbars"],
@@ -76,16 +82,16 @@ e.exports = function (e) {
                 className: "template-tag",
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [g],
+                contains: [p],
                 starts: { end: /\{\{\{\{\//, returnEnd: !0, subLanguage: "xml" },
             },
-            { className: "template-tag", begin: /\{\{\{\{\//, end: /\}\}\}\}/, contains: [A] },
-            { className: "template-tag", begin: /\{\{#/, end: /\}\}/, contains: [g] },
+            { className: "template-tag", begin: /\{\{\{\{\//, end: /\}\}\}\}/, contains: [u] },
+            { className: "template-tag", begin: /\{\{#/, end: /\}\}/, contains: [p] },
             { className: "template-tag", begin: /\{\{(?=else\}\})/, end: /\}\}/, keywords: "else" },
             { className: "template-tag", begin: /\{\{(?=else if)/, end: /\}\}/, keywords: "else if" },
-            { className: "template-tag", begin: /\{\{\//, end: /\}\}/, contains: [A] },
-            { className: "template-variable", begin: /\{\{\{/, end: /\}\}\}/, contains: [I] },
-            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: [I] },
+            { className: "template-tag", begin: /\{\{\//, end: /\}\}/, contains: [u] },
+            { className: "template-variable", begin: /\{\{\{/, end: /\}\}\}/, contains: [g] },
+            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: [g] },
         ],
     };
 };

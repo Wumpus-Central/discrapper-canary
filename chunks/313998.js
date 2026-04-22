@@ -1,103 +1,105 @@
-t.d(n, { A: () => j, g: () => v }), t(321073);
-var l = t(627968);
-t(64700);
-var i = t(503698),
-    r = t.n(i),
-    a = t(110259),
-    d = t(311907),
-    s = t(554146),
-    u = t(397927),
-    o = t(387755),
-    c = t(688810),
-    A = t(139286),
-    g = t(313961),
-    m = t(325909),
-    x = t(47167),
-    f = t(932001),
-    b = t(378570),
-    p = t(164891),
-    h = t(734057),
-    E = t(309010),
-    _ = t(806931),
-    C = t(49999),
-    N = t(985018),
-    T = t(951808);
-function v(e, n) {
-    let t = (0, d.bG)([E.A], () => E.A.getVoiceChannelId()),
-        l = (0, d.bG)([h.A], () => h.A.getChannel(t)?.getGuildId() ?? void 0),
-        { enabled: i } = p.A.useExperiment({ guildId: l, location: n });
-    return i ? t : e;
+l.d(n, { A: () => y, g: () => I }), l(321073);
+var t = l(627968);
+l(64700);
+var i = l(503698),
+    r = l.n(i),
+    a = l(110259),
+    d = l(311907),
+    s = l(554146),
+    o = l(477782),
+    u = l(834730),
+    c = l(983851),
+    A = l(387755),
+    g = l(688810),
+    b = l(139286),
+    m = l(313961),
+    x = l(325909),
+    f = l(47167),
+    h = l(932001),
+    E = l(378570),
+    C = l(164891),
+    p = l(734057),
+    _ = l(309010),
+    v = l(806931),
+    N = l(49999),
+    j = l(985018),
+    T = l(295573);
+function I(e, n) {
+    let l = (0, d.bG)([_.A], () => _.A.getVoiceChannelId()),
+        t = (0, d.bG)([p.A], () => p.A.getChannel(l)?.getGuildId() ?? void 0),
+        { enabled: i } = C.A.useExperiment({ guildId: t, location: n });
+    return i ? l : e;
 }
-function j(e, n) {
-    let [t, i] = (0, d.yK)(
-            [g.A],
-            () => [null != n ? g.A.getParticipants(n) : null, null != n ? g.A.getParticipant(n, e.id) : null],
+function y(e, n) {
+    let [l, i] = (0, d.yK)(
+            [m.A],
+            () => [null != n ? m.A.getParticipants(n) : null, null != n ? m.A.getParticipant(n, e.id) : null],
             [n, e.id],
         ),
-        x = (0, d.bG)([h.A], () => h.A.getChannel(n)),
-        E = (0, m.oP)(e, "context_menu", n),
-        { enabled: v } = p.A.useExperiment({ guildId: x?.guild_id, location: "useRingHangupItem" }),
-        j = !E || t?.length === 0 || null == n,
-        I = x?.guild_id != null,
-        O = v && I,
-        M = null == i,
-        y = null != i && i.type === _.lp.USER && i.ringing,
-        U = [];
-    O && !j && (M || y) && U.push(s.M.RING_USER_TO_VC_NEW_BADGE);
-    let [S, P] = (0, f.kn)(U),
-        R = S === s.M.RING_USER_TO_VC_NEW_BADGE,
-        { analyticsLocations: D } = (0, c.Ay)();
+        c = (0, d.bG)([p.A], () => p.A.getChannel(n)),
+        f = (0, x.oP)(e, "context_menu", n),
+        { enabled: _ } = C.A.useExperiment({ guildId: c?.guild_id, location: "useRingHangupItem" }),
+        I = !f || l?.length === 0 || null == n,
+        y = c?.guild_id != null,
+        M = _ && y,
+        O = null == i,
+        U = null != i && i.type === v.lp.USER && i.ringing,
+        S = [];
+    M && !I && (O || U) && S.push(s.M.RING_USER_TO_VC_NEW_BADGE);
+    let [P, R] = (0, h.kn)(S),
+        D = P === s.M.RING_USER_TO_VC_NEW_BADGE,
+        { analyticsLocations: k } = (0, g.Ay)();
     if (
-        ((0, A.A)(
+        ((0, b.A)(
             {
                 type: a.ImpressionTypes.MENU,
                 name: a.ImpressionNames.RING_TO_GUILD_VC_MENU_ITEM_SHOWN,
-                properties: { voice_channel_id: n, voice_guild_id: x?.guild_id, location_stack: D },
+                properties: { voice_channel_id: n, voice_guild_id: c?.guild_id, location_stack: k },
             },
-            { disableTrack: j || !O },
+            { disableTrack: I || !M },
             [e.id],
         ),
-        j)
+        I)
     )
         return null;
-    if (M) {
-        let t = I ? N.intl.string(N.t["3Hv9qQ"]) : N.intl.string(N.t.RDheZm);
-        return (0, l.jsx)(u.Drp, {
+    if (O) {
+        let l = y ? j.intl.string(j.t["3Hv9qQ"]) : j.intl.string(j.t.RDheZm);
+        return (0, t.jsx)(o.Dr, {
             id: "ring",
-            label: t,
-            badge: R ? "new" : void 0,
-            subtext: O ? (0, l.jsx)(G, { channel: x }) : null,
+            label: l,
+            badge: D ? "new" : void 0,
+            subtext: M ? (0, t.jsx)(G, { channel: c }) : null,
             action: () => {
-                R && P(C.i.TAKE_ACTION), o.A.ring(n, [e.id], "user_context_menu"), O && null != n && (0, b.iN)(n);
+                D && R(N.i.TAKE_ACTION), A.A.ring(n, [e.id], "user_context_menu"), M && null != n && (0, E.iN)(n);
             },
         });
     }
-    return y
-        ? (0, l.jsx)(u.Drp, {
+    return U
+        ? (0, t.jsx)(o.Dr, {
               id: "stop-ringing",
-              label: N.intl.string(N.t.ygslb0),
-              badge: R ? "new" : void 0,
-              subtext: O
-                  ? (0, l.jsx)(u.Text, {
+              label: j.intl.string(j.t.ygslb0),
+              badge: D ? "new" : void 0,
+              subtext: M
+                  ? (0, t.jsx)(u.E, {
                         variant: "text-xs/medium",
                         className: r()(T.W$, T.DF),
-                        children: N.intl.format(N.t.dwfzZi, { channelName: (0, l.jsx)(G, { channel: x }) }),
+                        children: j.intl.format(j.t.dwfzZi, { channelName: (0, t.jsx)(G, { channel: c }) }),
                     })
                   : null,
               action: () => {
-                  R && P(C.i.TAKE_ACTION), o.A.stopRinging(n, [e.id]);
+                  D && R(N.i.TAKE_ACTION), A.A.stopRinging(n, [e.id]);
               },
           })
         : null;
 }
 let G = (e) => {
     let { channel: n } = e,
-        t = (0, x.Ay)(n);
-    return (0, l.jsxs)("div", {
+        l = (0, f.Ay)(n);
+    return (0, t.jsxs)("div", {
         className: T.W$,
         children: [
-            (0, l.jsx)(u.HKD, { size: "xs" }),
-            (0, l.jsx)(u.Text, { variant: "text-xs/medium", className: T.HA, children: t }),
+            (0, t.jsx)(c.H, { size: "xs" }),
+            (0, t.jsx)(u.E, { variant: "text-xs/medium", className: T.HA, children: l }),
         ],
     });
 };

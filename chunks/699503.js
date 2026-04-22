@@ -1,25 +1,4 @@
-let t = (e) => ({
-        IMPORTANT: { scope: "meta", begin: "!important" },
-        BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
-        HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
-        FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]{1,149}(?=\()/ },
-        ATTRIBUTE_SELECTOR_MODE: {
-            scope: "selector-attr",
-            begin: /\[/,
-            end: /\]/,
-            illegal: "$",
-            contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
-        },
-        CSS_NUMBER_MODE: {
-            scope: "number",
-            begin:
-                e.NUMBER_RE +
-                "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
-            relevance: 0,
-        },
-        CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
-    }),
-    n = [
+let t = [
         "a",
         "abbr",
         "address",
@@ -139,7 +118,7 @@ let t = (e) => ({
         "foreignObject",
         "clipPath",
     ],
-    r = [
+    a = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -176,7 +155,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    i = [
+    n = [
         "active",
         "any-link",
         "blank",
@@ -239,7 +218,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    s = [
+    r = [
         "after",
         "backdrop",
         "before",
@@ -257,7 +236,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    a = [
+    i = [
         "accent-color",
         "align-content",
         "align-items",
@@ -777,12 +756,28 @@ let t = (e) => ({
         .reverse();
 e.exports = function (e) {
     let o = e.regex,
-        l = t(e),
-        u = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
-        c = "and or not only",
-        d = /@-?\w[\w]*(-\w+)*/,
-        _ = "[a-zA-Z-][a-zA-Z0-9_-]*",
-        f = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        s = {
+            IMPORTANT: { scope: "meta", begin: "!important" },
+            BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
+            HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
+            FUNCTION_DISPATCH: { className: "built_in", begin: /[\w-]{1,149}(?=\()/ },
+            ATTRIBUTE_SELECTOR_MODE: {
+                scope: "selector-attr",
+                begin: /\[/,
+                end: /\]/,
+                illegal: "$",
+                contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE],
+            },
+            CSS_NUMBER_MODE: {
+                scope: "number",
+                begin:
+                    e.NUMBER_RE +
+                    "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
+                relevance: 0,
+            },
+            CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
+        },
+        l = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: "CSS",
         case_insensitive: !0,
@@ -790,35 +785,35 @@ e.exports = function (e) {
         keywords: { keyframePosition: "from to" },
         classNameAliases: { keyframePosition: "selector-tag" },
         contains: [
-            l.BLOCK_COMMENT,
-            u,
-            l.CSS_NUMBER_MODE,
+            s.BLOCK_COMMENT,
+            { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
+            s.CSS_NUMBER_MODE,
             { className: "selector-id", begin: /#[A-Za-z0-9_-]+/, relevance: 0 },
-            { className: "selector-class", begin: "\\." + _, relevance: 0 },
-            l.ATTRIBUTE_SELECTOR_MODE,
+            { className: "selector-class", begin: "\\.[a-zA-Z-][a-zA-Z0-9_-]*", relevance: 0 },
+            s.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "selector-pseudo",
-                variants: [{ begin: ":(" + i.join("|") + ")" }, { begin: ":(:)?(" + s.join("|") + ")" }],
+                variants: [{ begin: ":(" + n.join("|") + ")" }, { begin: ":(:)?(" + r.join("|") + ")" }],
             },
-            l.CSS_VARIABLE,
-            { className: "attribute", begin: "\\b(" + a.join("|") + ")\\b" },
+            s.CSS_VARIABLE,
+            { className: "attribute", begin: "\\b(" + i.join("|") + ")\\b" },
             {
                 begin: /:/,
                 end: /[;}{]/,
                 contains: [
-                    l.BLOCK_COMMENT,
-                    l.HEXCOLOR,
-                    l.IMPORTANT,
-                    l.CSS_NUMBER_MODE,
-                    ...f,
+                    s.BLOCK_COMMENT,
+                    s.HEXCOLOR,
+                    s.IMPORTANT,
+                    s.CSS_NUMBER_MODE,
+                    ...l,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: "url data-uri" },
-                        contains: [...f, { className: "string", begin: /[^)]/, endsWithParent: !0, excludeEnd: !0 }],
+                        contains: [...l, { className: "string", begin: /[^)]/, endsWithParent: !0, excludeEnd: !0 }],
                     },
-                    l.FUNCTION_DISPATCH,
+                    s.FUNCTION_DISPATCH,
                 ],
             },
             {
@@ -827,18 +822,18 @@ e.exports = function (e) {
                 relevance: 0,
                 illegal: /:/,
                 contains: [
-                    { className: "keyword", begin: d },
+                    { className: "keyword", begin: /@-?\w[\w]*(-\w+)*/ },
                     {
                         begin: /\s/,
                         endsWithParent: !0,
                         excludeEnd: !0,
                         relevance: 0,
-                        keywords: { $pattern: /[a-z-]+/, keyword: c, attribute: r.join(" ") },
-                        contains: [{ begin: /[a-z-]+(?=:)/, className: "attribute" }, ...f, l.CSS_NUMBER_MODE],
+                        keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") },
+                        contains: [{ begin: /[a-z-]+(?=:)/, className: "attribute" }, ...l, s.CSS_NUMBER_MODE],
                     },
                 ],
             },
-            { className: "selector-tag", begin: "\\b(" + n.join("|") + ")\\b" },
+            { className: "selector-tag", begin: "\\b(" + t.join("|") + ")\\b" },
         ],
     };
 };

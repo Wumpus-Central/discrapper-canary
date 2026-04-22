@@ -3,18 +3,18 @@ n.d(t, {
     $O: () => S,
     DY: () => h,
     Me: () => _,
-    Wj: () => d,
-    Y1: () => p,
+    Wj: () => c,
+    Y1: () => E,
     Yh: () => g,
-    b9: () => m,
+    b9: () => p,
     dangerouslyConstructGuildRecordFromUntypedObject: () => I,
     fh: () => u,
     kI: () => f,
     tJ: () => y,
-    xi: () => E,
+    xi: () => m,
     yF: () => A,
     yN: () => T,
-    zT: () => c,
+    zT: () => d,
 });
 var r = n(284009),
     i = n.n(r),
@@ -25,7 +25,8 @@ var r = n(284009),
 function u(e) {
     return (0, a.Wj)(o.vI, e);
 }
-function c(e, t, n) {
+function d(e, t, n) {
+    var r, i;
     return (0, a.e)(o.vI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -67,20 +68,34 @@ function c(e, t, n) {
         hubType: e.hub_type ?? null,
         latestOnboardingQuestionId: e.latest_onboarding_question_id ?? null,
         profile: e.profile ?? null,
-        premiumFeatures: null != e.premium_features ? N(e.premium_features) : null,
-        moderatorReporting: null != e.moderator_reporting ? R(e.moderator_reporting) : null,
+        premiumFeatures:
+            null != e.premium_features
+                ? {
+                      features: (r = e.premium_features).features,
+                      additionalEmojiSlots: r.additional_emoji_slots,
+                      additionalStickerSlots: r.additional_sticker_slots,
+                      additionalSoundSlots: r.additional_sound_slots,
+                  }
+                : null,
+        moderatorReporting:
+            null != e.moderator_reporting
+                ? {
+                      moderatorReportingEnabled: (i = e.moderator_reporting).moderator_reporting_enabled,
+                      moderatorReportChannelId: i.moderator_report_channel_id,
+                  }
+                : null,
         verificationRoleId: e.verification_role_id ?? null,
         gameApplicationIds: e.game_application_ids ?? null,
         officialMessageColor: e.official_message_color ?? null,
     });
 }
-function d(e, t) {
+function c(e, t) {
     let n = null != e.joined_at ? new Date(e.joined_at) : (t?.joinedAt ?? null),
         r = e.premium_subscription_count ?? 0;
     return null == e.properties
         ? (i()(null != t, "If guild.properties is null, existingGuild must be passed in"),
           (0, a.h1)(t, { joinedAt: n, premiumSubscriberCount: r }))
-        : c(e.properties, { joinedAt: n, premiumSubscriberCount: r }, t);
+        : d(e.properties, { joinedAt: n, premiumSubscriberCount: r }, t);
 }
 function _(e, t, n) {
     return {
@@ -98,10 +113,10 @@ function _(e, t, n) {
 function f(e, t) {
     return null == e.properties
         ? t
-        : c(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
+        : d(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
 }
-function p(e, t) {
-    return c(
+function E(e, t) {
+    return d(
         e,
         {
             joinedAt: null != e.joined_at ? new Date(e.joined_at) : (t?.joinedAt ?? null),
@@ -127,7 +142,7 @@ function h(e) {
         homeHeader: e.home_header,
     });
 }
-function m(e) {
+function p(e) {
     return y({
         id: e.id,
         name: e.name,
@@ -138,7 +153,7 @@ function m(e) {
         features: (0, s.y)(e.features),
     });
 }
-function E(e) {
+function m(e) {
     return y({
         id: e.guildId,
         name: e.name ?? "",
@@ -171,7 +186,7 @@ function A(e) {
     });
 }
 function I(e) {
-    return v({
+    return N({
         id: e.id,
         name: e.name || "",
         description: e.description || null,
@@ -222,6 +237,7 @@ function I(e) {
     });
 }
 function T(e) {
+    var t, n;
     return {
         id: e.id,
         name: e.name,
@@ -245,7 +261,15 @@ function T(e) {
         premium_tier: e.premiumTier,
         premium_progress_bar_enabled: e.premiumProgressBarEnabled,
         premium_progress_bar_enabled_user_updated_at: e.premiumProgressBarEnabledUserUpdatedAt?.toISOString() ?? null,
-        premium_features: null != e.premiumFeatures ? C(e.premiumFeatures) : null,
+        premium_features:
+            null != e.premiumFeatures
+                ? {
+                      features: (t = e.premiumFeatures).features,
+                      additional_emoji_slots: t.additionalEmojiSlots,
+                      additional_sticker_slots: t.additionalStickerSlots,
+                      additional_sound_slots: t.additionalSoundSlots,
+                  }
+                : null,
         system_channel_flags: e.systemChannelFlags,
         discovery_splash: e.discoverySplash,
         rules_channel_id: e.rulesChannelId,
@@ -260,7 +284,13 @@ function T(e) {
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
-        moderator_reporting: null != e.moderatorReporting ? O(e.moderatorReporting) : null,
+        moderator_reporting:
+            null != e.moderatorReporting
+                ? {
+                      moderator_reporting_enabled: (n = e.moderatorReporting).moderatorReportingEnabled,
+                      moderator_report_channel_id: n.moderatorReportChannelId,
+                  }
+                : null,
         official_message_color: e.officialMessageColor,
         incidents_data: null,
         game_application_ids: e.gameApplicationIds,
@@ -277,39 +307,11 @@ function S(e) {
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, v(t);
+    return delete t.roles, delete t.member, N(t);
 }
 function y(e) {
-    return v({ ...o.do, ...e });
-}
-function v(e) {
-    return (0, a.yE)(o.vI, e);
+    return N({ ...o.do, ...e });
 }
 function N(e) {
-    return {
-        features: e.features,
-        additionalEmojiSlots: e.additional_emoji_slots,
-        additionalStickerSlots: e.additional_sticker_slots,
-        additionalSoundSlots: e.additional_sound_slots,
-    };
-}
-function C(e) {
-    return {
-        features: e.features,
-        additional_emoji_slots: e.additionalEmojiSlots,
-        additional_sticker_slots: e.additionalStickerSlots,
-        additional_sound_slots: e.additionalSoundSlots,
-    };
-}
-function R(e) {
-    return {
-        moderatorReportingEnabled: e.moderator_reporting_enabled,
-        moderatorReportChannelId: e.moderator_report_channel_id,
-    };
-}
-function O(e) {
-    return {
-        moderator_reporting_enabled: e.moderatorReportingEnabled,
-        moderator_report_channel_id: e.moderatorReportChannelId,
-    };
+    return (0, a.yE)(o.vI, e);
 }

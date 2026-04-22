@@ -1,68 +1,65 @@
 "use strict";
 n.d(t, { k: () => d });
-var r = n(627968),
-    i = n(894279),
-    s = n(158954),
-    a = n(612185),
-    o = n(177754),
-    l = n(620632),
-    u = n(552283),
-    c = n(759169);
+var i = n(627968),
+    l = n(894279),
+    s = n(834730),
+    r = n(612185),
+    a = n(177754),
+    o = n(620632),
+    c = n(552283),
+    u = n(702769);
 function d(e) {
-    let { component: t, required: n = !1 } = e,
-        { resolveFieldValue: d, numberFormat: _, durationFormat: f } = (0, a.Q)();
-    if (null == t)
-        return n
-            ? (0, r.jsxs)("div", {
+    let t,
+        { component: n, required: d = !1 } = e,
+        { resolveFieldValue: h, numberFormat: m, durationFormat: p } = (0, r.Q)();
+    if (null == n)
+        return d
+            ? (0, i.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(u.A, { variant: "text-sm/medium", width: "8ch" }),
-                      (0, r.jsx)(u.A, { variant: "text-xs/normal", width: "6ch" }),
+                      (0, i.jsx)(c.A, { variant: "text-sm/medium", width: "8ch" }),
+                      (0, i.jsx)(c.A, { variant: "text-xs/normal", width: "6ch" }),
                   ],
               })
             : null;
-    let p = d(t.fields.value, [l.o.STRING, l.o.NUMBER]),
-        h = d(t.fields.label, [l.o.STRING]),
-        m = d(t.fields.icon, [l.o.MEDIA]),
-        E = () => {
-            if (null == p) return null;
-            if (p.type === l.o.STRING) return p.value;
-            if (p.type === l.o.NUMBER) {
-                if (p.presentationType === i.P.NUMBER) return _.format(p.value);
-                if (p.presentationType === i.P.DURATION) return f.format((0, o.p)(p.value));
-            }
-            return null;
-        },
-        g = () => {
-            let e = E();
-            return null == e
-                ? (0, r.jsx)(u.A, { variant: "text-sm/medium", width: "8ch" })
-                : (0, r.jsxs)(s.EYj, {
+    let f = h(n.fields.value, [o.o.STRING, o.o.NUMBER]),
+        g = h(n.fields.label, [o.o.STRING]),
+        _ = h(n.fields.icon, [o.o.MEDIA]);
+    return (0, i.jsxs)("div", {
+        children: [
+            null ==
+            (t = (() => {
+                if (null == f) return null;
+                if (f.type === o.o.STRING) return f.value;
+                if (f.type === o.o.NUMBER) {
+                    if (f.presentationType === l.P.NUMBER) return m.format(f.value);
+                    if (f.presentationType === l.P.DURATION) return p.format((0, a.p)(f.value));
+                }
+                return null;
+            })())
+                ? (0, i.jsx)(c.A, { variant: "text-sm/medium", width: "8ch" })
+                : (0, i.jsxs)(s.E, {
                       variant: "text-sm/medium",
-                      className: c.U,
+                      className: u.U,
                       children: [
-                          e,
-                          null != m &&
-                              (0, r.jsxs)(r.Fragment, {
+                          t,
+                          null != _ &&
+                              (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       " ",
-                                      (0, r.jsx)("img", {
+                                      (0, i.jsx)("img", {
                                           alt: "",
-                                          src: m.media.url,
+                                          src: _.media.url,
                                           width: 18,
                                           height: 18,
-                                          className: c.K,
+                                          className: u.K,
                                       }),
                                   ],
                               }),
                       ],
-                  });
-        };
-    return (0, r.jsxs)("div", {
-        children: [
-            g(),
-            null != h
-                ? (0, r.jsx)(s.EYj, { variant: "text-xs/normal", color: "text-subtle", children: h.value })
-                : (0, r.jsx)(u.A, { variant: "text-xs/normal", width: "6ch" }),
+                  }),
+            null != g
+                ? (0, i.jsx)(s.E, { variant: "text-xs/normal", color: "text-subtle", children: g.value })
+                : (0, i.jsx)(c.A, { variant: "text-xs/normal", width: "6ch" }),
         ],
     });
 }

@@ -1,13 +1,13 @@
-n.d(t, { V: () => r });
-var a = n(627968);
-n(64700);
-var l = n(397927),
-    s = n(985018),
-    i = n(39855);
+l.d(t, { V: () => r });
+var n = l(627968);
+l(64700);
+var a = l(834730),
+    i = l(985018),
+    s = l(39855);
 function r(e) {
     let { textColor: t = "text-muted" } = e;
-    return (0, a.jsx)("div", {
-        className: i.k,
-        children: (0, a.jsx)(l.Text, { variant: "text-sm/medium", color: t, children: s.intl.string(s.t.V91tvy) }),
+    return (0, n.jsx)("div", {
+        className: s.k,
+        children: (0, n.jsx)(a.E, { variant: "text-sm/medium", color: t, children: i.intl.string(i.t.V91tvy) }),
     });
 }

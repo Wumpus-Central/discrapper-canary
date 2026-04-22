@@ -1,31 +1,31 @@
-n.d(e, { default: () => _ });
-var r = n(627968);
-n(64700);
-var a = n(397927),
-    i = n(43594),
-    l = n(523084),
-    s = n(722523),
-    o = n(490557),
-    d = n(54952),
-    u = n(568065),
-    c = n(333354),
-    p = n(985018),
-    f = n(944053);
-function _(t) {
-    let { guildId: e, powerup: n, ..._ } = t;
+a.d(t, { default: () => _ });
+var n = a(627968);
+a(64700);
+var r = a(821609),
+    i = a(43594),
+    s = a(523084),
+    o = a(722523),
+    l = a(490557),
+    d = a(54952),
+    c = a(568065),
+    u = a(853513),
+    p = a(985018),
+    m = a(372165);
+function _(e) {
+    let { guildId: t, powerup: a, ..._ } = e;
     if ("control" === (0, i.D)("GuildPowerupActivateModalExperimentWrapper")) {
-        let t = u.HO.has(n.skuId),
-            i = t ? p.intl.formatToPlainString(c.default.y3wHot, { perkName: n.title }) : void 0;
-        return (0, r.jsx)(l.A, {
-            title: p.intl.formatToPlainString(c.default.lFuOFF, { perkName: n.title }),
+        let e = c.HO.has(a.skuId),
+            i = e ? p.intl.formatToPlainString(u.default.y3wHot, { perkName: a.title }) : void 0;
+        return (0, n.jsx)(s.A, {
+            title: p.intl.formatToPlainString(u.default.lFuOFF, { perkName: a.title }),
             description: i,
-            image: (0, r.jsx)(o.l, { className: f.Sl, powerup: n }),
-            button: t
-                ? (0, r.jsx)(s.GU, { className: f.x6, guildId: e, powerup: n, onClick: _.onClose })
-                : (0, r.jsx)("div", {
+            image: (0, n.jsx)(l.l, { className: m.Sl, powerup: a }),
+            button: e
+                ? (0, n.jsx)(o.GU, { className: m.x6, guildId: t, powerup: a, onClick: _.onClose })
+                : (0, n.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
-                      className: f.x6,
-                      children: (0, r.jsx)(a.Button, {
+                      className: m.x6,
+                      children: (0, n.jsx)(r.$, {
                           variant: "primary",
                           text: p.intl.string(p.t.cpT0Cq),
                           onClick: _.onClose,
@@ -34,5 +34,5 @@ function _(t) {
             ..._,
         });
     }
-    return (0, r.jsx)(d.A, { guildId: e, powerup: n, ..._ });
+    return (0, n.jsx)(d.A, { guildId: t, powerup: a, ..._ });
 }

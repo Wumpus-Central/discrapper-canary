@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     b: "closeButton__23c09",
     yl: "modal__23c09",

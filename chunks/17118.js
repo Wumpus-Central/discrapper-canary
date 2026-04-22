@@ -1,39 +1,37 @@
 "use strict";
-n.d(t, { v: () => o });
+n.d(t, { v: () => a });
 let r = new Map(),
     i = new Set();
-function a() {
+function s() {
     if ("u" < typeof window) return;
     function e(e) {
         return "propertyName" in e;
     }
-    let t = (t) => {
-            if (!e(t) || !t.target) return;
-            let i = r.get(t.target);
-            i || ((i = new Set()), r.set(t.target, i), t.target.addEventListener("transitioncancel", n, { once: !0 })),
-                i.add(t.propertyName);
-        },
-        n = (t) => {
-            if (!e(t) || !t.target) return;
-            let a = r.get(t.target);
-            if (
-                a &&
-                (a.delete(t.propertyName),
-                0 === a.size && (t.target.removeEventListener("transitioncancel", n), r.delete(t.target)),
-                0 === r.size)
-            ) {
-                for (let e of i) e();
-                i.clear();
-            }
-        };
-    document.body.addEventListener("transitionrun", t), document.body.addEventListener("transitionend", n);
+    let t = (n) => {
+        if (!e(n) || !n.target) return;
+        let s = r.get(n.target);
+        if (
+            s &&
+            (s.delete(n.propertyName),
+            0 === s.size && (n.target.removeEventListener("transitioncancel", t), r.delete(n.target)),
+            0 === r.size)
+        ) {
+            for (let e of i) e();
+            i.clear();
+        }
+    };
+    document.body.addEventListener("transitionrun", (n) => {
+        if (!e(n) || !n.target) return;
+        let i = r.get(n.target);
+        i || ((i = new Set()), r.set(n.target, i), n.target.addEventListener("transitioncancel", t, { once: !0 })),
+            i.add(n.propertyName);
+    }),
+        document.body.addEventListener("transitionend", t);
 }
-function s() {
-    for (let [e] of r) "isConnected" in e && !e.isConnected && r.delete(e);
-}
-function o(e) {
+function a(e) {
     requestAnimationFrame(() => {
-        s(), 0 === r.size ? e() : i.add(e);
+        for (let [e] of r) "isConnected" in e && !e.isConnected && r.delete(e);
+        0 === r.size ? e() : i.add(e);
     });
 }
-"u" > typeof document && ("loading" !== document.readyState ? a() : document.addEventListener("DOMContentLoaded", a));
+"u" > typeof document && ("loading" !== document.readyState ? s() : document.addEventListener("DOMContentLoaded", s));

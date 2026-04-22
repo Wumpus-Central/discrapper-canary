@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { f: () => p });
+n.d(t, { f: () => c });
 var r = n(269605),
     i = n(796598),
     s = n(198420),
@@ -22,7 +22,7 @@ function u(e) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? l(Object(n), !0).forEach(function (t) {
-                  f(e, t, n[t]);
+                  d(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -32,75 +32,61 @@ function u(e) {
     }
     return e;
 }
-function c(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function d(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function _(e, t, n) {
-    return t && d(e.prototype, t), n && d(e, n), e;
-}
-function f(e, t, n) {
+function d(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var p = (function () {
-    function e(t, n, a) {
+var c = (function () {
+    var e;
+    function t(e, n, a) {
         var l = this;
-        c(this, e),
-            f(this, "options", void 0),
-            f(this, "actions", void 0),
-            f(this, "monitor", void 0),
-            f(this, "registry", void 0),
-            f(this, "enterLeaveCounter", void 0),
-            f(this, "sourcePreviewNodes", new Map()),
-            f(this, "sourcePreviewNodeOptions", new Map()),
-            f(this, "sourceNodes", new Map()),
-            f(this, "sourceNodeOptions", new Map()),
-            f(this, "dragStartSourceIds", null),
-            f(this, "dropTargetIds", []),
-            f(this, "dragEnterTargetIds", []),
-            f(this, "currentNativeSource", null),
-            f(this, "currentNativeHandle", null),
-            f(this, "currentDragSourceNode", null),
-            f(this, "altKeyPressed", !1),
-            f(this, "mouseMoveTimeoutTimer", null),
-            f(this, "asyncEndDragFrameId", null),
-            f(this, "dragOverTargetIds", null),
-            f(this, "getSourceClientOffset", function (e) {
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        d(this, "options", void 0),
+            d(this, "actions", void 0),
+            d(this, "monitor", void 0),
+            d(this, "registry", void 0),
+            d(this, "enterLeaveCounter", void 0),
+            d(this, "sourcePreviewNodes", new Map()),
+            d(this, "sourcePreviewNodeOptions", new Map()),
+            d(this, "sourceNodes", new Map()),
+            d(this, "sourceNodeOptions", new Map()),
+            d(this, "dragStartSourceIds", null),
+            d(this, "dropTargetIds", []),
+            d(this, "dragEnterTargetIds", []),
+            d(this, "currentNativeSource", null),
+            d(this, "currentNativeHandle", null),
+            d(this, "currentDragSourceNode", null),
+            d(this, "altKeyPressed", !1),
+            d(this, "mouseMoveTimeoutTimer", null),
+            d(this, "asyncEndDragFrameId", null),
+            d(this, "dragOverTargetIds", null),
+            d(this, "getSourceClientOffset", function (e) {
                 var t = l.sourceNodes.get(e);
                 return (t && (0, i.Dg)(t)) || null;
             }),
-            f(this, "endDragNativeItem", function () {
+            d(this, "endDragNativeItem", function () {
                 l.isDraggingNativeItem() &&
                     (l.actions.endDrag(),
                     l.currentNativeHandle && l.registry.removeSource(l.currentNativeHandle),
                     (l.currentNativeHandle = null),
                     (l.currentNativeSource = null));
             }),
-            f(this, "isNodeInDocument", function (e) {
+            d(this, "isNodeInDocument", function (e) {
                 return !!(e && l.document && l.document.body && l.document.body.contains(e));
             }),
-            f(this, "endDragIfSourceWasRemovedFromDOM", function () {
+            d(this, "endDragIfSourceWasRemovedFromDOM", function () {
                 var e = l.currentDragSourceNode;
                 !(null == e || l.isNodeInDocument(e)) &&
                     l.clearCurrentDragSourceNode() &&
                     l.monitor.isDragging() &&
                     l.actions.endDrag();
             }),
-            f(this, "handleTopDragStartCapture", function () {
+            d(this, "handleTopDragStartCapture", function () {
                 l.clearCurrentDragSourceNode(), (l.dragStartSourceIds = []);
             }),
-            f(this, "handleTopDragStart", function (e) {
+            d(this, "handleTopDragStart", function (e) {
                 if (!e.defaultPrevented) {
                     var t = l.dragStartSourceIds;
                     l.dragStartSourceIds = null;
@@ -117,17 +103,15 @@ var p = (function () {
                         if (r && "function" == typeof r.setDragImage) {
                             var o = l.monitor.getSourceId(),
                                 u = l.sourceNodes.get(o),
-                                c = l.sourcePreviewNodes.get(o) || u;
-                            if (c) {
-                                var d = l.getCurrentSourcePreviewNodeOptions(),
-                                    _ = d.anchorX,
-                                    f = d.anchorY,
-                                    p = d.offsetX,
-                                    h = d.offsetY,
-                                    m = { anchorX: _, anchorY: f },
-                                    E = { offsetX: p, offsetY: h },
-                                    g = (0, i.yA)(u, c, n, m, E);
-                                r.setDragImage(c, g.x, g.y);
+                                d = l.sourcePreviewNodes.get(o) || u;
+                            if (d) {
+                                var c = l.getCurrentSourcePreviewNodeOptions(),
+                                    _ = c.anchorX,
+                                    f = c.anchorY,
+                                    E = c.offsetX,
+                                    h = c.offsetY,
+                                    p = (0, i.yA)(u, d, n, { anchorX: _, anchorY: f }, { offsetX: E, offsetY: h });
+                                r.setDragImage(d, p.x, p.y);
                             }
                         }
                         try {
@@ -151,30 +135,32 @@ var p = (function () {
                     }
                 }
             }),
-            f(this, "handleTopDragEndCapture", function () {
+            d(this, "handleTopDragEndCapture", function () {
                 l.clearCurrentDragSourceNode() && l.monitor.isDragging() && l.actions.endDrag();
             }),
-            f(this, "handleTopDragEnterCapture", function (e) {
+            d(this, "handleTopDragEnterCapture", function (e) {
                 if (((l.dragEnterTargetIds = []), !(!l.enterLeaveCounter.enter(e.target) || l.monitor.isDragging()))) {
                     var t = e.dataTransfer,
                         n = (0, s.c)(t);
                     n && l.beginDragNativeItem(n, t);
                 }
             }),
-            f(this, "handleTopDragEnter", function (e) {
+            d(this, "handleTopDragEnter", function (e) {
                 var t = l.dragEnterTargetIds;
-                if (((l.dragEnterTargetIds = []), l.monitor.isDragging())) {
-                    (l.altKeyPressed = e.altKey), t.length > 0 && l.actions.hover(t, { clientOffset: (0, i.b$)(e) });
-                    var n = t.some(function (e) {
-                        return l.monitor.canDropOnTarget(e);
-                    });
-                    n && (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = l.getCurrentDropEffect()));
-                }
+                (l.dragEnterTargetIds = []),
+                    l.monitor.isDragging() &&
+                        ((l.altKeyPressed = e.altKey),
+                        t.length > 0 && l.actions.hover(t, { clientOffset: (0, i.b$)(e) }),
+                        t.some(function (e) {
+                            return l.monitor.canDropOnTarget(e);
+                        }) &&
+                            (e.preventDefault(),
+                            e.dataTransfer && (e.dataTransfer.dropEffect = l.getCurrentDropEffect())));
             }),
-            f(this, "handleTopDragOverCapture", function () {
+            d(this, "handleTopDragOverCapture", function () {
                 l.dragOverTargetIds = [];
             }),
-            f(this, "handleTopDragOver", function (e) {
+            d(this, "handleTopDragOver", function (e) {
                 var t = l.dragOverTargetIds;
                 if (((l.dragOverTargetIds = []), !l.monitor.isDragging())) {
                     e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = "none");
@@ -190,7 +176,7 @@ var p = (function () {
                           ? e.preventDefault()
                           : (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = "none"));
             }),
-            f(this, "handleTopDragLeaveCapture", function (e) {
+            d(this, "handleTopDragLeaveCapture", function (e) {
                 l.isDraggingNativeItem() && e.preventDefault(),
                     l.enterLeaveCounter.leave(e.target) &&
                         l.isDraggingNativeItem() &&
@@ -198,21 +184,21 @@ var p = (function () {
                             return l.endDragNativeItem();
                         }, 0);
             }),
-            f(this, "handleTopDropCapture", function (e) {
+            d(this, "handleTopDropCapture", function (e) {
                 if (((l.dropTargetIds = []), l.isDraggingNativeItem())) {
                     var t;
                     e.preventDefault(), null == (t = l.currentNativeSource) || t.loadDataTransfer(e.dataTransfer);
                 } else (0, s.c)(e.dataTransfer) && e.preventDefault();
                 l.enterLeaveCounter.reset();
             }),
-            f(this, "handleTopDrop", function (e) {
+            d(this, "handleTopDrop", function (e) {
                 var t = l.dropTargetIds;
                 (l.dropTargetIds = []),
                     l.actions.hover(t, { clientOffset: (0, i.b$)(e) }),
                     l.actions.drop({ dropEffect: l.getCurrentDropEffect() }),
                     l.isDraggingNativeItem() ? l.endDragNativeItem() : l.monitor.isDragging() && l.actions.endDrag();
             }),
-            f(this, "handleSelectStart", function (e) {
+            d(this, "handleSelectStart", function (e) {
                 var t = e.target;
                 "function" != typeof t.dragDrop ||
                     "INPUT" === t.tagName ||
@@ -222,13 +208,13 @@ var p = (function () {
                     (e.preventDefault(), t.dragDrop());
             }),
             (this.options = new o.s(n, a)),
-            (this.actions = t.getActions()),
-            (this.monitor = t.getMonitor()),
-            (this.registry = t.getRegistry()),
+            (this.actions = e.getActions()),
+            (this.monitor = e.getMonitor()),
+            (this.registry = e.getRegistry()),
             (this.enterLeaveCounter = new r.C(this.isNodeInDocument));
     }
     return (
-        _(e, [
+        (e = [
             {
                 key: "profile",
                 value: function () {
@@ -427,14 +413,14 @@ var p = (function () {
                 key: "setCurrentDragSourceNode",
                 value: function (e) {
                     var t = this;
-                    this.clearCurrentDragSourceNode(), (this.currentDragSourceNode = e);
-                    var n = 1e3;
-                    this.mouseMoveTimeoutTimer = setTimeout(function () {
-                        var e;
-                        return null == (e = t.rootElement)
-                            ? void 0
-                            : e.addEventListener("mousemove", t.endDragIfSourceWasRemovedFromDOM, !0);
-                    }, n);
+                    this.clearCurrentDragSourceNode(),
+                        (this.currentDragSourceNode = e),
+                        (this.mouseMoveTimeoutTimer = setTimeout(function () {
+                            var e;
+                            return null == (e = t.rootElement)
+                                ? void 0
+                                : e.addEventListener("mousemove", t.endDragIfSourceWasRemovedFromDOM, !0);
+                        }, 1e3));
                 },
             },
             {
@@ -481,6 +467,15 @@ var p = (function () {
                 },
             },
         ]),
-        e
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

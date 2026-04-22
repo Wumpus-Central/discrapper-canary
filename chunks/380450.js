@@ -3,112 +3,110 @@ n.d(t, { A: () => m }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    s = n(397927),
-    a = n(955572),
-    o = n(775602),
-    l = n(406360),
-    u = n(614738),
+    s = n(477782),
+    a = n(964355),
+    o = n(955572),
+    l = n(775602),
+    u = n(406360),
+    d = n(614738),
     c = n(954571),
-    d = n(964404),
-    _ = n(361082),
-    f = n(652215),
-    p = n(985018),
-    h = n(864386);
+    _ = n(964404),
+    f = n(361082),
+    E = n(652215),
+    h = n(985018),
+    p = n(864386);
 function m() {
-    let e = (0, _.A)(),
+    let e = (0, f.A)(),
         {
             saturation: t,
             useReducedMotion: n,
             roleStyle: m,
-            highContrastMode: E,
-            switchIconsEnabled: g,
-        } = (0, i.cf)([o.A], () => ({
-            saturation: o.A.saturation,
-            useReducedMotion: o.A.useReducedMotion,
-            roleStyle: o.A.roleStyle,
-            highContrastMode: o.A.isHighContrastModeEnabled,
-            switchIconsEnabled: o.A.isSwitchIconsEnabled,
+            highContrastMode: g,
+            switchIconsEnabled: A,
+        } = (0, i.cf)([l.A], () => ({
+            saturation: l.A.saturation,
+            useReducedMotion: l.A.useReducedMotion,
+            roleStyle: l.A.roleStyle,
+            highContrastMode: l.A.isHighContrastModeEnabled,
+            switchIconsEnabled: l.A.isSwitchIconsEnabled,
         })),
-        A = (0, i.bG)([o.A], () => o.A.displayNameStylesEnabled),
-        I = (0, u.y)("useAccessibilityItems"),
-        T = (0, i.bG)([d.Ay], () => d.Ay.hdrDynamicRange),
-        S = (0, l.i)("useAccessibilityItems"),
-        y = [
-            { name: p.intl.string(p.t.D5Fma9), value: "no-limit" },
-            { name: p.intl.string(p.t.ldcGIH), value: "standard" },
+        I = (0, i.bG)([l.A], () => l.A.displayNameStylesEnabled),
+        T = (0, d.y)("useAccessibilityItems"),
+        S = (0, i.bG)([_.Ay], () => _.Ay.hdrDynamicRange),
+        y = (0, u.i)("useAccessibilityItems"),
+        N = [
+            { name: h.intl.string(h.t.D5Fma9), value: "no-limit" },
+            { name: h.intl.string(h.t.ldcGIH), value: "standard" },
         ],
-        v = [
-            { name: p.intl.string(p.t.YEOEi6), value: "username" },
-            { name: p.intl.string(p.t.mQaro3), value: "dot" },
-            { name: p.intl.string(p.t.Ji2EVJ), value: "hidden" },
+        O = [
+            { name: h.intl.string(h.t.YEOEi6), value: "username" },
+            { name: h.intl.string(h.t.mQaro3), value: "dot" },
+            { name: h.intl.string(h.t.Ji2EVJ), value: "hidden" },
+        ],
+        R = [
+            (0, r.jsx)(
+                s.rX,
+                {
+                    children: (0, r.jsx)(s.sL, {
+                        id: "reduced-motion",
+                        label: h.intl.string(h.t.b3XBzg),
+                        checked: n,
+                        action: () => (0, o.qz)(n ? "no-preference" : "reduce"),
+                    }),
+                },
+                "reduced-motion",
+            ),
+            (0, r.jsx)(
+                s.rX,
+                {
+                    children: (0, r.jsx)(s.sL, {
+                        id: "high-contrast",
+                        label: h.intl.string(h.t.aZlePv),
+                        checked: g,
+                        action: () => (0, o.uh)(g ? l._.DEFAULT : l._.HIGH),
+                    }),
+                },
+                "high-contrast",
+            ),
+            (0, r.jsx)(
+                s.rX,
+                {
+                    children: (0, r.jsx)(s.aK, {
+                        id: "input",
+                        label: h.intl.string(h.t["5PWWCY"]),
+                        control: (e, n) =>
+                            (0, r.jsx)(a.i, {
+                                ...e,
+                                ref: n,
+                                value: 100 * t,
+                                onChange: (e) => (0, o.HU)(e / 100),
+                                "aria-label": h.intl.string(h.t["5PWWCY"]),
+                            }),
+                    }),
+                },
+                "input",
+            ),
         ];
-    function N() {
-        c.default.track(f.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !A }), (0, a.Dm)(!A);
-    }
-    let C = [
-        (0, r.jsx)(
-            s.rXV,
-            {
-                children: (0, r.jsx)(s.sLh, {
-                    id: "reduced-motion",
-                    label: p.intl.string(p.t.b3XBzg),
-                    checked: n,
-                    action: () => (0, a.qz)(n ? "no-preference" : "reduce"),
-                }),
-            },
-            "reduced-motion",
-        ),
-        (0, r.jsx)(
-            s.rXV,
-            {
-                children: (0, r.jsx)(s.sLh, {
-                    id: "high-contrast",
-                    label: p.intl.string(p.t.aZlePv),
-                    checked: E,
-                    action: () => (0, a.uh)(E ? o._.DEFAULT : o._.HIGH),
-                }),
-            },
-            "high-contrast",
-        ),
-        (0, r.jsx)(
-            s.rXV,
-            {
-                children: (0, r.jsx)(s.aK1, {
-                    id: "input",
-                    label: p.intl.string(p.t["5PWWCY"]),
-                    control: (e, n) =>
-                        (0, r.jsx)(s.i42, {
-                            ...e,
-                            ref: n,
-                            value: 100 * t,
-                            onChange: (e) => (0, a.HU)(e / 100),
-                            "aria-label": p.intl.string(p.t["5PWWCY"]),
-                        }),
-                }),
-            },
-            "input",
-        ),
-    ];
     return (
-        C.push(...e),
-        S &&
-            C.push(
+        R.push(...e),
+        y &&
+            R.push(
                 (0, r.jsx)(
-                    s.rXV,
+                    s.rX,
                     {
-                        children: (0, r.jsx)(s.Drp, {
+                        children: (0, r.jsx)(s.Dr, {
                             id: "hdr-dynamic-range",
-                            label: p.intl.string(p.t.nemtgW),
-                            children: y.map((e) => {
+                            label: h.intl.string(h.t.nemtgW),
+                            children: N.map((e) => {
                                 let { name: t, value: n } = e;
                                 return (0, r.jsx)(
-                                    s.iDA,
+                                    s.iD,
                                     {
                                         id: n,
                                         group: "hdr-dynamic-range",
-                                        checked: n === T,
+                                        checked: n === S,
                                         label: t,
-                                        action: () => (0, a.FU)(n),
+                                        action: () => (0, o.FU)(n),
                                     },
                                     n,
                                 );
@@ -118,18 +116,18 @@ function m() {
                     "hdr-dynamic-range",
                 ),
             ),
-        C.push(
+        R.push(
             (0, r.jsx)(
-                s.rXV,
+                s.rX,
                 {
-                    children: (0, r.jsx)(s.Drp, {
+                    children: (0, r.jsx)(s.Dr, {
                         id: "role-colors",
-                        label: p.intl.string(p.t.uSOPWm),
-                        children: v.map((e) => {
+                        label: h.intl.string(h.t.uSOPWm),
+                        children: O.map((e) => {
                             let { name: t, value: n } = e;
                             return (0, r.jsx)(
-                                s.iDA,
-                                { id: n, group: "role-colors", checked: n === m, label: t, action: () => (0, a.IX)(n) },
+                                s.iD,
+                                { id: n, group: "role-colors", checked: n === m, label: t, action: () => (0, o.IX)(n) },
                                 n,
                             );
                         }),
@@ -138,33 +136,36 @@ function m() {
                 "role-colors",
             ),
             (0, r.jsx)(
-                s.rXV,
+                s.rX,
                 {
-                    children: (0, r.jsx)(s.sLh, {
+                    children: (0, r.jsx)(s.sL, {
                         id: "display-name-styles",
-                        label: p.intl.string(h.default["2gFUEw"]),
-                        checked: A,
-                        action: N,
+                        label: h.intl.string(p.default["2gFUEw"]),
+                        checked: I,
+                        action: function () {
+                            c.default.track(E.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !I }),
+                                (0, o.Dm)(!I);
+                        },
                     }),
                 },
                 "display-name-styles",
             ),
         ),
-        I &&
-            C.push(
+        T &&
+            R.push(
                 (0, r.jsx)(
-                    s.rXV,
+                    s.rX,
                     {
-                        children: (0, r.jsx)(s.sLh, {
+                        children: (0, r.jsx)(s.sL, {
                             id: "switch-icons",
-                            label: p.intl.string(p.t["S3z+pV"]),
-                            checked: g,
-                            action: () => (0, a.Gm)(!g),
+                            label: h.intl.string(h.t["S3z+pV"]),
+                            checked: A,
+                            action: () => (0, o.Gm)(!A),
                         }),
                     },
                     "switch-icons",
                 ),
             ),
-        C
+        R
     );
 }

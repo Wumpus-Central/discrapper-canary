@@ -7,16 +7,15 @@ var r = n(627968),
     o = n(98115),
     l = n(767246);
 function u(e) {
-    let { children: t, size: n = 16, className: s, flowerStarClassName: u, ...c } = e,
-        d = i.Children.only(t),
-        _ = { width: n, height: n },
-        f = !e.allowFullSizedIcon;
+    let { children: t, size: n = 16, className: s, flowerStarClassName: u, ...d } = e,
+        c = i.Children.only(t),
+        _ = !e.allowFullSizedIcon;
     return (0, r.jsxs)("div", {
         className: a()(l.jH, s),
-        style: _,
+        style: { width: n, height: n },
         children: [
-            (0, r.jsx)(o.A, { ...c, className: a()(u, l.mP) }),
-            (0, r.jsx)("div", { className: a()(l.sn, { [l.Qu]: f }), children: d }),
+            (0, r.jsx)(o.A, { ...d, className: a()(u, l.mP) }),
+            (0, r.jsx)("div", { className: a()(l.sn, { [l.Qu]: _ }), children: c }),
         ],
     });
 }

@@ -1,40 +1,41 @@
-n.d(t, { a: () => s });
+n.d(t, { a: () => o });
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    a = n(587895),
-    l = n(851907);
-function s(e) {
-    let { applicationId: t, customId: s, linkId: o, message: d, onShare: c } = e,
-        u = a.A.getApplication(t);
-    if (null == u) return void c(!1, !1);
-    let A = null != (0, l.LU)({ applicationId: u.id }) ? r.KX8 : r.SYi,
-        h = !1;
-    function _(e) {
-        c(e, h);
+var r = n(231723),
+    a = n(192308),
+    l = n(587895),
+    s = n(851907);
+function o(e) {
+    let { applicationId: t, customId: o, linkId: d, message: u, onShare: c } = e,
+        A = l.A.getApplication(t);
+    if (null == A) return void c(!1, !1);
+    let h = null != (0, s.LU)({ applicationId: A.id }) ? r.KX : r.SY,
+        _ = !1;
+    function E(e) {
+        c(e, _);
     }
-    function m() {
-        h = !0;
+    function p() {
+        _ = !0;
     }
-    (0, r.mMO)(
+    (0, a.openModalLazy)(
         async () => {
             let { default: e } = await n.e("48587").then(n.bind(n, 824774));
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    customId: s,
-                    linkId: o,
-                    message: d,
-                    onCopyLink: m,
-                    onShare: _,
+                    customId: o,
+                    linkId: d,
+                    message: u,
+                    onCopyLink: p,
+                    onShare: E,
                     ...n,
                 });
         },
         {
             modalKey: "activity-share-moment-modal",
-            contextKey: A,
+            contextKey: h,
             onCloseCallback: () => {
-                c(!1, h);
+                c(!1, _);
             },
         },
     );

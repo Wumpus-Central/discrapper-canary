@@ -1,32 +1,35 @@
-"use strict";
-n.d(t, { R: () => f });
-var r = n(64700),
-    i = n(172218),
-    a = n(323889),
-    s = n(311907),
-    o = n(475743),
-    l = n(531685),
-    u = n(266569),
-    c = n(971649);
-n(23766);
-let d = (e) => {
-        let [t, n] = r.useState(!1),
-            a = e ?? t,
-            s = a !== (0, o.A)(a);
-        return { visible: a, visibleChanged: s, reference: (0, i.K)((e) => n(e), 0.5) };
-    },
-    _ = () => {
-        let e = (0, s.bG)([l.A], () => l.A.isFocused()),
-            t = (0, o.A)(e),
-            n = e !== t;
-        return { focused: e, focusedChanged: n };
-    },
-    f = r.memo(function (e) {
-        let { focused: t, focusedChanged: n } = _(),
-            { visible: i, visibleChanged: s, reference: o } = d(e.overrideVisibility),
-            { key: l, adContentIds: f } = (0, c.RC)(e),
-            p = { ...e, focused: t, focusedChanged: n, visible: i, visibleChanged: s, reference: o };
-        return "questOrQuests" in e
-            ? (0, r.createElement)(u.xs, { ...p, key: l, adContentIds: f, adCreativeType: a.p.QUEST })
-            : (0, r.createElement)(u.xs, { ...p, key: l, adContentIds: f, adCreativeType: e.adCreativeType });
-    });
+a.d(t, { R: () => u });
+var n = a(64700),
+    r = a(172218),
+    i = a(323889),
+    l = a(311907),
+    o = a(475743),
+    s = a(531685),
+    d = a(266569),
+    c = a(971649);
+a(23766);
+let u = n.memo(function (e) {
+    let t,
+        a,
+        u,
+        { focused: p, focusedChanged: m } =
+            ((t = (0, l.bG)([s.A], () => s.A.isFocused())),
+            (a = (0, o.A)(t)),
+            (u = t !== a),
+            { focused: t, focusedChanged: u }),
+        {
+            visible: h,
+            visibleChanged: v,
+            reference: _,
+        } = ((e) => {
+            let [t, a] = n.useState(!1),
+                i = e ?? t,
+                l = i !== (0, o.A)(i);
+            return { visible: i, visibleChanged: l, reference: (0, r.K)((e) => a(e), 0.5) };
+        })(e.overrideVisibility),
+        { key: g, adContentIds: f } = (0, c.RC)(e),
+        b = { ...e, focused: p, focusedChanged: m, visible: h, visibleChanged: v, reference: _ };
+    return "questOrQuests" in e
+        ? (0, n.createElement)(d.xs, { ...b, key: g, adContentIds: f, adCreativeType: i.p.QUEST })
+        : (0, n.createElement)(d.xs, { ...b, key: g, adContentIds: f, adCreativeType: e.adCreativeType });
+});

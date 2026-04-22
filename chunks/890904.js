@@ -1,8 +1,8 @@
 l.d(t, { default: () => o });
 var s = l(627968),
     i = l(64700),
-    n = l(158954),
-    c = l(397927),
+    n = l(189213),
+    c = l(167417),
     a = l(975571),
     r = l(652215),
     d = l(985018);
@@ -44,7 +44,7 @@ function o(e) {
                 variant: "primary",
             },
         ],
-        children: (0, s.jsx)(c.$QX, {
+        children: (0, s.jsx)(c.$, {
             selectedValues: Object.keys(o).filter((e) => o[e].checked),
             options: Object.keys(o).map((e) => {
                 let { label: t } = o[e];

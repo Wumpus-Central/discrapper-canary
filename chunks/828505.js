@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { $: () => r });
-var r = (function (e) {
-    return (e[(e.StreamNotificationsGuildMaxSize = 50)] = "StreamNotificationsGuildMaxSize"), e;
-})({});
+n.d(t, { $: () => i });
+var r,
+    i = (((r = {})[(r.StreamNotificationsGuildMaxSize = 50)] = "StreamNotificationsGuildMaxSize"), r);

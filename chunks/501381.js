@@ -1,28 +1,28 @@
-"use strict";
-n.d(t, { o: () => c });
+n.d(t, { o: () => u });
 var i = n(627968),
-    s = n(64700),
-    l = n(158954),
-    r = n(397927),
-    a = n(415951),
-    o = n(985018),
-    d = n(48620);
-function c(e) {
+    l = n(64700),
+    s = n(834730),
+    r = n(939249),
+    a = n(811893),
+    o = n(415951),
+    d = n(985018),
+    c = n(48620);
+function u(e) {
     let { guildId: t } = e,
-        n = s.useCallback(() => {
-            a.A.openMemberVerificationPreviewModal(t);
+        n = l.useCallback(() => {
+            o.A.openMemberVerificationPreviewModal(t);
         }, [t]);
-    return (0, i.jsxs)(r.DUT, {
+    return (0, i.jsxs)(r.D, {
         onClick: n,
-        className: d.j,
+        className: c.j,
         children: [
-            (0, i.jsx)(l.EYj, {
+            (0, i.jsx)(s.E, {
                 tag: "span",
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                children: o.intl.string(o.t.SKNnqq),
+                children: d.intl.string(d.t.SKNnqq),
             }),
-            (0, i.jsx)(r.tfB, { size: "xs", color: "currentColor" }),
+            (0, i.jsx)(a.t, { size: "xs", color: "currentColor" }),
         ],
     });
 }

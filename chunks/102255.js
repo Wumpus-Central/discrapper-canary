@@ -1,67 +1,75 @@
-n.d(t, { AF: () => E, Im: () => S, jH: () => f });
+n.d(t, { AF: () => R, Im: () => j, jH: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
     r = n(311907),
-    o = n(397927),
-    d = n(793574),
-    c = n(200921),
-    u = n(754333),
-    m = n(287809),
-    g = n(791606),
-    _ = n(403362),
-    x = n(780964),
-    A = n(858897),
-    h = n(336926),
-    p = n(985018),
-    T = n(237350);
-function f() {
-    return (0, i.jsx)(o.Text, { variant: "text-sm/normal", className: T.h_, children: p.intl.string(p.t.zZp618) });
+    o = n(834730),
+    d = n(289873),
+    u = n(270003),
+    c = n(452027),
+    g = n(821609),
+    m = n(568385),
+    _ = n(939249),
+    A = n(789645),
+    h = n(404778),
+    p = n(793574),
+    x = n(200921),
+    E = n(754333),
+    T = n(287809),
+    S = n(791606),
+    f = n(403362),
+    b = n(780964),
+    C = n(858897),
+    v = n(336926),
+    N = n(985018),
+    I = n(405814);
+function y() {
+    return (0, i.jsx)(o.E, { variant: "text-sm/normal", className: I.h_, children: N.intl.string(N.t.zZp618) });
 }
-function S() {
-    let { currentSession: e } = (0, u.r)();
+function j() {
+    let { currentSession: e } = (0, E.r)();
     return null == e
-        ? (0, i.jsx)("div", { className: T.Lq, children: (0, i.jsx)(o.y$y, {}) })
-        : (0, i.jsx)(o.nVY, { label: p.intl.string(p.t.LLS19o), children: (0, i.jsx)(C, { session: e, current: !0 }) });
+        ? (0, i.jsx)("div", { className: I.Lq, children: (0, i.jsx)(d.y, {}) })
+        : (0, i.jsx)(u.n, { label: N.intl.string(N.t.LLS19o), children: (0, i.jsx)(L, { session: e, current: !0 }) });
 }
-function b(e) {
+function O(e) {
     let { checked: t, otherSessions: n } = e;
-    return (0, i.jsx)(o.D0$, {
-        label: t.size > 0 ? p.intl.string(p.t.mMEmRO) : p.intl.string(p.t.Vij32M),
-        description: p.intl.string(p.t.OTXyaf),
+    return (0, i.jsx)(c.D, {
+        label: t.size > 0 ? N.intl.string(N.t.mMEmRO) : N.intl.string(N.t.Vij32M),
+        description: N.intl.string(N.t.OTXyaf),
         children: (0, i.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
-            className: T.Cn,
-            children: (0, i.jsx)(o.Button, {
+            className: I.Cn,
+            children: (0, i.jsx)(g.$, {
                 variant: "critical-secondary",
                 size: "sm",
                 text:
                     t.size > 0
-                        ? p.intl.formatToPlainString(p.t["83CPLj"], { count: t.size })
-                        : p.intl.string(p.t.cLmmeY),
+                        ? N.intl.formatToPlainString(N.t["83CPLj"], { count: t.size })
+                        : N.intl.string(N.t.cLmmeY),
                 onClick: () => {
-                    t.size > 0 ? (0, c.U0)(Array.from(t)) : (0, c.U0)(n.map((e) => e.id_hash));
+                    t.size > 0 ? (0, x.U0)(Array.from(t)) : (0, x.U0)(n.map((e) => e.id_hash));
                 },
             }),
         }),
     });
 }
-function E() {
-    let { currentSession: e, otherSessions: t } = (0, u.r)(),
-        n = (0, r.bG)([m.default], () => m.default.getCurrentUser()),
+function R() {
+    let { currentSession: e, otherSessions: t } = (0, E.r)(),
+        n = (0, r.bG)([T.default], () => T.default.getCurrentUser()),
         [l, a] = s.useState(new Set());
     return (null == e && 0 === t.length) || (0 === t.length && n?.mfaEnabled)
         ? null
         : t.length > 0 || !n?.mfaEnabled
           ? (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsxs)(o.nVY, {
-                        label: p.intl.string(p.t.xx1MWc),
+                    (0, i.jsxs)(u.n, {
+                        label: N.intl.string(N.t.xx1MWc),
                         children: [
                             t.map((e) =>
                                 (0, i.jsx)(
-                                    C,
+                                    L,
                                     {
                                         session: e,
                                         useChecks: l.size > 0,
@@ -74,62 +82,62 @@ function E() {
                                     e.id_hash,
                                 ),
                             ),
-                            n?.mfaEnabled ? null : (0, i.jsx)(N, {}),
+                            n?.mfaEnabled ? null : (0, i.jsx)(D, {}),
                         ],
                     }),
                     t.length > 0 &&
                         (0, i.jsx)("div", {
-                            className: T.wq,
-                            children: (0, i.jsx)(b, { checked: l, otherSessions: t }),
+                            className: I.wq,
+                            children: (0, i.jsx)(O, { checked: l, otherSessions: t }),
                         }),
                 ],
             })
           : null;
 }
-function C(e) {
+function L(e) {
     let { session: t, current: n, setChecked: s, checked: l, useChecks: r } = e,
-        { location: d, platform: u, os: m, Icon: g, lastActive: x } = (0, h.T)(t, n),
-        A = [m, u].filter(_.Vq),
-        f = [d, x].filter(_.Vq);
+        { location: d, platform: u, os: c, Icon: g, lastActive: p } = (0, v.T)(t, n),
+        E = [c, u].filter(f.Vq),
+        T = [d, p].filter(f.Vq);
     return (0, i.jsxs)(
         "div",
         {
-            className: a()(T.dZ, { [T.gg]: n }),
+            className: a()(I.dZ, { [I.gg]: n }),
             children: [
                 (0, i.jsxs)("div", {
-                    className: T.OC,
+                    className: I.OC,
                     children: [
                         (0, i.jsx)("div", {
-                            className: T.km,
+                            className: I.km,
                             children: (0, i.jsx)(g, { size: "md", color: "currentColor" }),
                         }),
                         (0, i.jsxs)("div", {
-                            className: T.F3,
+                            className: I.F3,
                             children: [
-                                (0, i.jsxs)(o.Text, {
+                                (0, i.jsxs)(o.E, {
                                     variant: "eyebrow",
-                                    className: T.nT,
+                                    className: I.nT,
                                     children: [
-                                        (0, i.jsx)("span", { children: A[0] }),
-                                        A.length > 1 &&
+                                        (0, i.jsx)("span", { children: E[0] }),
+                                        E.length > 1 &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("span", { children: "\xb7" }),
-                                                    (0, i.jsx)("span", { children: A[1] }),
+                                                    (0, i.jsx)("span", { children: E[1] }),
                                                 ],
                                             }),
                                     ],
                                 }),
-                                (0, i.jsxs)(o.Text, {
+                                (0, i.jsxs)(o.E, {
                                     variant: "text-sm/medium",
-                                    className: T.nT,
+                                    className: I.nT,
                                     children: [
-                                        (0, i.jsx)("span", { children: f[0] }),
-                                        f.length > 1 &&
+                                        (0, i.jsx)("span", { children: T[0] }),
+                                        T.length > 1 &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("span", { children: "\xb7" }),
-                                                    (0, i.jsx)("span", { children: f[1] }),
+                                                    (0, i.jsx)("span", { children: T[1] }),
                                                 ],
                                             }),
                                     ],
@@ -140,56 +148,56 @@ function C(e) {
                             ? null
                             : r
                               ? (0, i.jsx)("div", {
-                                    className: T.GR,
-                                    children: (0, i.jsx)(o.JuY, {
+                                    className: I.GR,
+                                    children: (0, i.jsx)(m.J, {
                                         onChange: (e) => {
                                             s?.(e);
                                         },
                                         checked: l,
                                     }),
                                 })
-                              : (0, i.jsx)(o.DUT, {
-                                    className: T.ux,
+                              : (0, i.jsx)(_.D, {
+                                    className: I.ux,
                                     onClick: (e) => {
-                                        e.shiftKey ? s?.(!0) : (0, c.U0)(t.id_hash);
+                                        e.shiftKey ? s?.(!0) : (0, x.U0)(t.id_hash);
                                     },
-                                    "aria-label": p.intl.string(p.t.E4MJNt),
-                                    children: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor" }),
+                                    "aria-label": N.intl.string(N.t.E4MJNt),
+                                    children: (0, i.jsx)(A.P, { size: "md", color: "currentColor" }),
                                 }),
                     ],
                 }),
-                !n && (0, i.jsx)(o.cGx, { className: T.O9 }),
+                !n && (0, i.jsx)(h.c, { className: I.O9 }),
             ],
         },
         t.id_hash,
     );
 }
-function N() {
+function D() {
     return (0, i.jsxs)("div", {
-        className: a()(T.dZ, T.EC),
+        className: a()(I.dZ, I.EC),
         children: [
             (0, i.jsxs)("div", {
-                className: T.OC,
+                className: I.OC,
                 children: [
-                    (0, i.jsx)("div", { className: T.km, children: (0, i.jsx)(g.A, { width: "32", height: "32" }) }),
+                    (0, i.jsx)("div", { className: I.km, children: (0, i.jsx)(S.A, { width: "32", height: "32" }) }),
                     (0, i.jsxs)("div", {
-                        className: T.F3,
+                        className: I.F3,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(o.E, {
                                 variant: "eyebrow",
-                                className: T.nT,
+                                className: I.nT,
                                 color: "text-muted",
-                                children: (0, i.jsx)("span", { children: p.intl.string(p.t.iUa0sn) }),
+                                children: (0, i.jsx)("span", { children: N.intl.string(N.t.iUa0sn) }),
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(o.E, {
                                 variant: "text-sm/medium",
-                                className: T.nT,
+                                className: I.nT,
                                 color: "text-muted",
                                 children: (0, i.jsx)("span", {
-                                    children: p.intl.format(p.t["044+8i"], {
+                                    children: N.intl.format(N.t["044+8i"], {
                                         onClick: () =>
-                                            (0, A.openUserSettings)(x.X.ACCOUNT_PANEL, {
-                                                analyticsLocations: [d.A.USER_SETTINGS_SESSIONS],
+                                            (0, C.openUserSettings)(b.X.ACCOUNT_PANEL, {
+                                                analyticsLocations: [p.A.USER_SETTINGS_SESSIONS],
                                             }),
                                     }),
                                 }),
@@ -198,7 +206,7 @@ function N() {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: T.O9 }),
+            (0, i.jsx)("div", { className: I.O9 }),
         ],
     });
 }

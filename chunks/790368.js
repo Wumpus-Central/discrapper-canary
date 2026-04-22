@@ -1,33 +1,35 @@
-n.d(t, { A: () => _ });
-var i = n(627968);
+n.d(t, { A: () => g });
+var s = n(627968);
 n(64700);
-var l = n(827734),
-    s = n(990078),
-    a = n(397927),
-    r = n(711950),
-    o = n(322387),
-    c = n(912309),
-    d = n(954571),
-    u = n(652215),
-    h = n(985018),
-    A = n(857741);
-function _(e) {
+var a = n(827734),
+    l = n(990078),
+    i = n(939249),
+    r = n(214947),
+    o = n(777666),
+    d = n(711950),
+    c = n(322387),
+    u = n(912309),
+    h = n(954571),
+    _ = n(652215),
+    A = n(985018),
+    m = n(911933);
+function g(e) {
     let { closePopout: t } = e,
-        n = (0, c.kX)();
-    return (0, i.jsx)(s.m, {
+        n = (0, u.kX)();
+    return (0, s.jsx)(l.m, {
         asContainer: !0,
-        text: h.intl.string(h.t["lMR96+"]),
-        children: (0, i.jsxs)(a.DUT, {
-            "aria-label": `${h.intl.string(h.t["lMR96+"])}, ${n}`,
-            className: A.b,
+        text: A.intl.string(A.t["lMR96+"]),
+        children: (0, s.jsxs)(i.D, {
+            "aria-label": `${A.intl.string(A.t["lMR96+"])}, ${n}`,
+            className: m.b,
             onClick: () => {
-                d.default.track(u.HAw.NOTIFICATION_CENTER_ACTION, { action_type: o.e1.FRIEND_REQUESTS_BUTTON_CLICK }),
-                    r.A.transitionToSection(u.m3P.PENDING, { explicit: !0 }),
+                h.default.track(_.HAw.NOTIFICATION_CENTER_ACTION, { action_type: c.e1.FRIEND_REQUESTS_BUTTON_CLICK }),
+                    d.A.transitionToSection(_.m3P.PENDING, { explicit: !0 }),
                     t();
             },
             children: [
-                (0, i.jsx)(a.$yI, { size: "xs", color: "currentColor" }),
-                (0, i.jsx)(a.hVq, { count: n, color: l.A.colors.BACKGROUND_MOD_STRONG.css }),
+                (0, s.jsx)(r.$, { size: "xs", color: "currentColor" }),
+                (0, s.jsx)(o.hV, { count: n, color: a.A.colors.BACKGROUND_MOD_STRONG.css }),
             ],
         }),
     });

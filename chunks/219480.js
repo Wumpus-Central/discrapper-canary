@@ -1,49 +1,51 @@
-l.d(t, { A: () => b }), l(321073);
+l.d(t, { A: () => y }), l(321073);
 var n = l(627968),
     a = l(64700),
     i = l(110259),
     s = l(311907),
-    r = l(397927),
-    d = l(139286),
-    o = l(962125),
-    c = l(274372),
-    u = l(399925),
-    m = l(555957),
-    h = l(714973),
-    p = l(985018),
-    x = l(352528);
-let g = 16 / 9,
-    f = [0, 16, 0, 16],
-    v = f[1] + f[3];
-function j(e, t) {
+    r = l(534514),
+    d = l(834730),
+    o = l(289873),
+    c = l(139286),
+    u = l(962125),
+    m = l(274372),
+    h = l(399925),
+    p = l(555957),
+    f = l(714973),
+    v = l(985018),
+    g = l(352528);
+let x = 16 / 9,
+    j = [0, 16, 0, 16],
+    b = j[1] + j[3];
+function C(e, t) {
     return Math.ceil(t / e);
 }
-function b(e) {
-    let { filteredClips: t, totalClipCount: l, onClipClick: b, onEdit: C } = e,
-        [y, A] = a.useState(!0),
-        [N, E] = a.useState({ width: 0, height: 0 }),
-        k = (0, s.bG)([c.A], () => c.A.getSettings().storageLocation),
-        I = (0, s.yK)([c.A], () => c.A.getNewClipIds()),
-        S = (0, s.bG)([c.A], () => c.A.getExportingClipIds().length > 0);
-    (0, d.A)(
+function y(e) {
+    let { filteredClips: t, totalClipCount: l, onClipClick: y, onEdit: A } = e,
+        [N, E] = a.useState(!0),
+        [w, k] = a.useState({ width: 0, height: 0 }),
+        I = (0, s.bG)([m.A], () => m.A.getSettings().storageLocation),
+        S = (0, s.yK)([m.A], () => m.A.getNewClipIds()),
+        L = (0, s.bG)([m.A], () => m.A.getExportingClipIds().length > 0);
+    (0, c.A)(
         {
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.CLIP_GALLERY_VIEWED,
             properties: { number_of_clips_loaded: t.length },
         },
-        { disableTrack: y },
-        [t.length, y],
+        { disableTrack: N },
+        [t.length, N],
     ),
         a.useEffect(
             () => (
-                (0, u.jA)(),
+                (0, h.jA)(),
                 () => {
-                    (0, u.jA)(), (0, u.Su)();
+                    (0, h.jA)(), (0, h.Su)();
                 }
             ),
             [],
         );
-    let w = a.useMemo(() => {
+    let M = a.useMemo(() => {
             let e = [],
                 l = new Map(),
                 n = [],
@@ -66,8 +68,8 @@ function b(e) {
                 let t = n.some((e) => e.isTemporary);
                 e.push({
                     type: "today",
-                    title: p.intl.string(p.t["kB2R/0"]),
-                    description: t ? p.intl.string(p.t["6AXirz"]) : void 0,
+                    title: v.intl.string(v.t["kB2R/0"]),
+                    description: t ? v.intl.string(v.t["6AXirz"]) : void 0,
                     clips: n,
                 });
             }
@@ -79,52 +81,52 @@ function b(e) {
                 e
             );
         }, [t]),
-        { width: L } = N,
-        { tileWidth: M, columns: T } = a.useMemo(() => {
+        { width: R } = w,
+        { tileWidth: T, columns: D } = a.useMemo(() => {
             var e;
             let l, n, a, i, s;
             return (
                 (e = t.length),
-                (a = 16 * ((n = Math.max(1, Math.floor(((l = L - v) + 16) / 336))) - 1)),
+                (a = 16 * ((n = Math.max(1, Math.floor(((l = R - b) + 16) / 336))) - 1)),
                 (i = Math.max(320, (l - a) / n)),
-                (s = j(n, e)),
+                (s = C(n, e)),
                 { tileWidth: i, columns: n, rows: s }
             );
-        }, [t.length, L]);
+        }, [t.length, R]);
     a.useEffect(() => {
         !(async function () {
-            A(!0);
+            E(!0);
             try {
-                await u.Fb(k);
+                await h.Fb(I);
             } finally {
-                A(!1);
+                E(!1);
             }
         })();
-    }, [k]);
-    let R = a.useMemo(() => w.map((e) => j(T, e.clips.length)), [w, T]),
-        D = a.useMemo(() => R.reduce((e, t) => e + t, 0), [R]),
-        O = Math.floor(M / g),
-        P = a.useCallback(
+    }, [I]);
+    let O = a.useMemo(() => M.map((e) => C(D, e.clips.length)), [M, D]),
+        P = a.useMemo(() => O.reduce((e, t) => e + t, 0), [O]),
+        U = Math.floor(T / x),
+        G = a.useCallback(
             (e, t) => {
                 let { sectionIndex: l, sectionRowIndex: a } = t,
-                    i = w[l];
+                    i = M[l];
                 if (null == i) return null;
-                let s = a * T,
-                    r = i.clips.slice(s, s + T);
+                let s = a * D,
+                    r = i.clips.slice(s, s + D);
                 return (0, n.jsx)(
                     "div",
                     {
-                        className: x.UX,
+                        className: g.UX,
                         children: r.map((e) =>
                             (0, n.jsx)(
                                 "div",
                                 {
-                                    style: { width: M },
-                                    children: (0, n.jsx)(m.A, {
-                                        actionsDisabled: S,
-                                        isNew: I.includes(e.id),
-                                        onClick: b ?? C,
-                                        onEdit: C,
+                                    style: { width: T },
+                                    children: (0, n.jsx)(p.A, {
+                                        actionsDisabled: L,
+                                        isNew: S.includes(e.id),
+                                        onClick: y ?? A,
+                                        onEdit: A,
                                         clip: e,
                                     }),
                                 },
@@ -135,35 +137,35 @@ function b(e) {
                     `row-${l}-${a}`,
                 );
             },
-            [w, T, M, S, I, b, C],
+            [M, D, T, L, S, y, A],
         ),
-        U = a.useCallback(
+        z = a.useCallback(
             (e) => {
-                let t = w[e];
+                let t = M[e];
                 return t?.description != null ? 66 : 44;
             },
-            [w],
+            [M],
         ),
-        G = a.useCallback(
+        V = a.useCallback(
             (e) => {
-                let t = w[e];
+                let t = M[e];
                 return null == t
                     ? null
                     : (0, n.jsxs)(
                           "div",
                           {
-                              className: x.aE,
+                              className: g.aE,
                               children: [
-                                  (0, n.jsx)(r.Heading, {
+                                  (0, n.jsx)(r.D, {
                                       variant: "text-md/semibold",
                                       color: "text-default",
                                       children: t.title,
                                   }),
                                   null != t.description &&
-                                      (0, n.jsx)(r.Text, {
+                                      (0, n.jsx)(d.E, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          className: x.yV,
+                                          className: g.yV,
                                           children: t.description,
                                       }),
                               ],
@@ -171,20 +173,20 @@ function b(e) {
                           `header-${e}`,
                       );
             },
-            [w],
+            [M],
         );
-    return y || 0 !== w.length
-        ? y
-            ? (0, n.jsx)("div", { className: x.dc, children: (0, n.jsx)(r.y$y, {}) })
-            : (0, n.jsx)(o.A, {
-                  listPadding: f,
-                  renderRow: P,
-                  renderSectionHeader: G,
-                  rowCount: D,
-                  rowCountBySection: R,
-                  rowHeight: O + 68 + 16,
-                  sectionHeaderHeight: U,
-                  onResize: E,
+    return N || 0 !== M.length
+        ? N
+            ? (0, n.jsx)("div", { className: g.dc, children: (0, n.jsx)(o.y, {}) })
+            : (0, n.jsx)(u.A, {
+                  listPadding: j,
+                  renderRow: G,
+                  renderSectionHeader: V,
+                  rowCount: P,
+                  rowCountBySection: O,
+                  rowHeight: U + 68 + 16,
+                  sectionHeaderHeight: z,
+                  onResize: k,
               })
-        : (0, n.jsx)(h.A, { isEmptyBecauseQuery: l > 0 });
+        : (0, n.jsx)(f.A, { isEmptyBecauseQuery: l > 0 });
 }

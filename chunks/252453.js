@@ -3,23 +3,23 @@ n.d(t, { W: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(708418),
-    a = n(747243),
-    s = n(582754),
+    s = n(747243),
+    a = n(765178),
     o = n(425763),
     l = n(647245);
-let u = (0, a.eV)("keydown", (e) => !!(0, l.fR)(e) && (e.preventDefault(), !0)),
-    c = (0, a.eV)(
+let u = (0, s.eV)("keydown", (e) => !!(0, l.fR)(e) && (e.preventDefault(), !0)),
+    d = (0, s.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
-    d = {
+    c = {
         backends: [
-            { id: "html5", backend: i.t, transition: c },
+            { id: "html5", backend: i.t, transition: d },
             {
                 id: "keyboard",
                 backend: l.Ay,
                 context: { window, document },
-                options: { onDndModeChanged: o.ef, announcer: s.OR },
+                options: { onDndModeChanged: o.ef, announcer: a.O },
                 preview: !0,
                 transition: u,
             },
@@ -27,5 +27,5 @@ let u = (0, a.eV)("keydown", (e) => !!(0, l.fR)(e) && (e.preventDefault(), !0)),
     };
 function _(e) {
     let { children: t } = e;
-    return (0, r.jsx)(a.QP, { options: d, children: t });
+    return (0, r.jsx)(s.QP, { options: c, children: t });
 }

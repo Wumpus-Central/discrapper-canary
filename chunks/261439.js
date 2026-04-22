@@ -1,8 +1,9 @@
-a.d(l, { a: () => i });
+a.d(l, { a: () => r });
 var t = a(627968),
-    o = a(158954),
-    n = a(67098);
-let i = {
+    n = a(331322),
+    o = a(452027),
+    i = a(512950);
+let r = {
     title: "HelpMessage",
     stories: [
         {
@@ -10,14 +11,10 @@ let i = {
             id: "help-message",
             component: function (e) {
                 let { text: l } = e;
-                return (0, t.jsx)(o.BJc, {
+                return (0, t.jsx)(n.B, {
                     gap: 16,
-                    children: Object.values(n.Y).map((e) =>
-                        (0, t.jsx)(
-                            o.D0$,
-                            { label: e, children: (0, t.jsx)(n.p, { messageType: e, children: l }, e) },
-                            e,
-                        ),
+                    children: Object.values(i.Y).map((e) =>
+                        (0, t.jsx)(o.D, { label: e, children: (0, t.jsx)(i.p, { messageType: e, children: l }, e) }, e),
                     ),
                 });
             },

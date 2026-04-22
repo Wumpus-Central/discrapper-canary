@@ -1,70 +1,70 @@
-n.d(t, { A: () => b });
-var a = n(627968),
-    i = n(64700),
-    s = n(311907),
-    l = n(554146),
-    r = n(43105),
+n.d(t, { A: () => E });
+var i = n(627968),
+    s = n(64700),
+    l = n(311907),
+    a = n(554146),
+    r = n(265486),
     o = n(775602),
     d = n(379848),
     c = n(832248),
     u = n(904481),
-    m = n(203982),
+    p = n(203982),
     h = n(764231),
-    x = n(881141),
-    p = n(149757),
-    g = n(788868),
+    m = n(881141),
+    _ = n(149757),
+    A = n(788868),
     f = n(652215),
-    v = n(49999),
-    _ = n(985018);
-function b(e) {
+    g = n(49999),
+    x = n(985018);
+function E(e) {
     let { groupName: t, targetElementRef: n } = e,
-        i = (0, x.A)(),
-        r = (0, s.bG)([o.A], () => o.A.useReducedMotion),
-        m = (0, c.A)((e) => e.isOpen),
+        s = (0, m.A)(),
+        r = (0, l.bG)([o.A], () => o.A.useReducedMotion),
+        p = (0, c.A)((e) => e.isOpen),
         h = (0, u.G)();
-    return r || null == i || m || h
+    return r || null == s || p || h
         ? null
-        : (0, a.jsx)(d.zJ, {
-              contentType: l.M.NITRO_TENURE_BADGE_LEVEL_UP,
+        : (0, i.jsx)(d.zJ, {
+              contentType: a.M.NITRO_TENURE_BADGE_LEVEL_UP,
               timeRecurringConfig: { cooldownDurationMs: 12096e5 },
               groupName: t,
               children: (e) => {
-                  let { visibleContent: t, markAsDismissed: s } = e;
-                  return (0, a.jsx)(j, {
-                      recentlyLeveledTenureBadge: i,
-                      markAsDismissed: s,
+                  let { visibleContent: t, markAsDismissed: l } = e;
+                  return (0, i.jsx)(C, {
+                      recentlyLeveledTenureBadge: s,
+                      markAsDismissed: l,
                       targetElementRef: n,
-                      shouldShow: t === l.M.NITRO_TENURE_BADGE_LEVEL_UP,
+                      shouldShow: t === a.M.NITRO_TENURE_BADGE_LEVEL_UP,
                   });
               },
           });
 }
-function j(e) {
-    let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: s, shouldShow: l } = e,
-        o = g.sp.indexOf(t),
-        d = (0, p.I)(g.sp[o > 0 ? o - 1 : o]).ambient,
-        u = (0, i.useCallback)(() => {
-            n(v.i.TAKE_ACTION),
+function C(e) {
+    let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: l, shouldShow: a } = e,
+        o = A.sp.indexOf(t),
+        d = (0, _.I)(A.sp[o > 0 ? o - 1 : o]).ambient,
+        u = (0, s.useCallback)(() => {
+            n(g.i.TAKE_ACTION),
                 c.A.setState({ shouldRenderTenureLevelUp: !0 }),
-                m._.dispatch(f.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                p._.dispatch(f.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [n]),
-        x = (0, i.useCallback)(() => {
-            n(v.i.USER_DISMISS);
+        m = (0, s.useCallback)(() => {
+            n(g.i.USER_DISMISS);
         }, [n]),
-        b = g.VD[t],
-        j = _.intl.formatToPlainString(_.t.ewkaVR, {
-            timeMilestone: (0, h.T)(b.id, b.tenureReqNumMonths)?.toLocaleLowerCase(),
+        E = A.VD[t],
+        C = x.intl.formatToPlainString(x.t.ewkaVR, {
+            timeMilestone: (0, h.T)(E.id, E.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
-        A = [{ text: _.intl.string(_.t.RzWDqY), variant: "primary", onClick: u }];
-    return (0, a.jsx)(r.A, {
-        targetElementRef: s,
-        onRequestClose: x,
-        shouldShow: l,
+        T = [{ text: x.intl.string(x.t.RzWDqY), variant: "primary", onClick: u }];
+    return (0, i.jsx)(r.A, {
+        targetElementRef: l,
+        onRequestClose: m,
+        shouldShow: a,
         caretConfig: { align: "center" },
         graphic: null != d ? { type: "image", src: d, aspectRatio: "6/4" } : void 0,
         size: "lg",
-        title: _.intl.string(_.t.VoDxsV),
-        body: j,
-        actions: A,
+        title: x.intl.string(x.t.VoDxsV),
+        body: C,
+        actions: T,
     });
 }

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => m });
 var r = n(64700),
     i = n(311907),
     a = n(488803),
-    s = n(522055),
-    o = n(204017),
-    l = n(568065),
-    u = n(800007),
-    c = n(294726),
-    d = n(985018),
-    _ = n(390175);
-function f(e) {
+    l = n(522055),
+    s = n(881756),
+    d = n(568065),
+    o = n(800007),
+    c = n(576709),
+    u = n(985018),
+    h = n(390175);
+function m(e) {
     let t = (0, a.C$)(e, "useGameServerPerk"),
-        n = (0, i.bG)([s.A], () => s.A.getLowestGameCostForGuild(e)),
-        { gameName: f, gameName2: p } = (0, o.A)();
+        n = (0, i.bG)([l.A], () => l.A.getLowestGameCostForGuild(e)),
+        { gameName: m, gameName2: p } = (0, s.A)();
     return r.useMemo(
         () =>
             t && null != n
                 ? {
-                      skuId: u.W5,
-                      title: d.intl.string(c.default["B3OfL/"]),
-                      description: d.intl.format(c.default["+UqyGU"], { gameName: f, gameName2: p }),
+                      skuId: o.W5,
+                      title: u.intl.string(c.default["B3OfL/"]),
+                      description: u.intl.format(c.default["+UqyGU"], { gameName: m, gameName2: p }),
                       cost: n,
                       dependencies: [],
-                      type: l.o9.PERK,
-                      animatedImageUrl: _.A,
-                      staticImageUrl: _.A,
+                      type: d.o9.PERK,
+                      animatedImageUrl: h.A,
+                      staticImageUrl: h.A,
                   }
                 : null,
-        [t, n, f, p],
+        [t, n, m, p],
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => ed });
+n.d(t, { A: () => ey });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -7,58 +7,75 @@ var i = n(627968),
     o = n.n(r),
     c = n(311283),
     d = n(311907),
-    u = n(397927),
-    h = n(843472),
-    m = n(565645),
-    A = n(775602),
-    g = n(812930),
-    _ = n(822123),
-    p = n(7584),
-    f = n(635222),
-    E = n(969043),
-    C = n(843626),
-    x = n(427209),
-    S = n(93474),
-    I = n(296043),
-    T = n(857071),
-    v = n(649963),
-    N = n(815807),
-    y = n(429433),
-    b = n(517997),
-    j = n(966597),
-    R = n(85109),
-    M = n(406704),
-    L = n(253932),
-    O = n(961350),
-    D = n(580745),
-    P = n(71393),
-    k = n(834942),
-    w = n(576705),
-    U = n(954571),
-    G = n(957565),
-    F = n(690521),
-    H = n(403362),
-    B = n(628691),
-    V = n(521427),
-    W = n(697470),
-    K = n(492841),
-    z = n(143413),
-    Y = n(707985),
-    J = n(194085),
-    q = n(519222),
-    $ = n(427868),
-    Z = n(547983),
-    X = n(652215),
-    Q = n(307731),
-    ee = n(985018),
-    et = n(15393);
-let en = [p.Ay.getByName("100"), p.Ay.getByName("laughing"), p.Ay.getByName("sparkling_heart")].filter(H.Vq);
-function ei(e) {
+    u = n(834730),
+    h = n(473935),
+    m = n(173936),
+    A = n(290136),
+    g = n(666492),
+    p = n(606096),
+    _ = n(997146),
+    f = n(366605),
+    E = n(163328),
+    C = n(110384),
+    x = n(22231),
+    S = n(563119),
+    I = n(581925),
+    N = n(778492),
+    v = n(241326),
+    T = n(265872),
+    y = n(365199),
+    b = n(417270),
+    j = n(843472),
+    R = n(565645),
+    M = n(775602),
+    L = n(812930),
+    D = n(822123),
+    P = n(7584),
+    O = n(635222),
+    w = n(969043),
+    U = n(843626),
+    k = n(427209),
+    G = n(93474),
+    F = n(296043),
+    H = n(857071),
+    B = n(649963),
+    V = n(815807),
+    z = n(429433),
+    K = n(517997),
+    W = n(966597),
+    Y = n(85109),
+    J = n(406704),
+    q = n(253932),
+    $ = n(961350),
+    Z = n(580745),
+    X = n(71393),
+    Q = n(834942),
+    ee = n(576705),
+    et = n(954571),
+    en = n(957565),
+    ei = n(690521),
+    el = n(403362),
+    ea = n(628691),
+    es = n(521427),
+    er = n(697470),
+    eo = n(492841),
+    ec = n(143413),
+    ed = n(707985),
+    eu = n(194085),
+    eh = n(519222),
+    em = n(427868),
+    eA = n(547983),
+    eg = n(652215),
+    ep = n(307731),
+    e_ = n(985018),
+    ef = n(15393);
+let eE = [P.Ay.getByName("100"), P.Ay.getByName("laughing"), P.Ay.getByName("sparkling_heart")].filter(el.Vq);
+function eC(e) {
     e.stopPropagation();
 }
-function el(e) {
+function ex(e) {
     let { message: t, channel: n, canReport: i, onClose: l, updatePosition: a } = e;
-    return (0, Z.c)({
+    return (0, eA.c)({
         message: t,
         channel: n,
         textSelection: "",
@@ -73,66 +90,66 @@ function el(e) {
         onHeightUpdate: a,
         onClose: l,
         navId: "message-actions",
-        ariaLabel: ee.intl.string(ee.t.Lv7LxN),
+        ariaLabel: e_.intl.string(e_.t.Lv7LxN),
     });
 }
-let ea = l.memo(function (e) {
+let eS = l.memo(function (e) {
     let { channel: t, message: n } = e,
-        l = (0, _.QZ)(t.guild_id).filter(
+        l = (0, D.QZ)(t.guild_id).filter(
             (e) =>
-                !F.Ay.isEmojiFilteredOrLocked({
+                !ei.Ay.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
-                    intention: Q.EmojiIntention.REACTION,
+                    intention: ep.EmojiIntention.REACTION,
                     guildId: t.guild_id,
                 }),
         ),
-        a = (l.length >= 3 ? l : [...(0, f.A)(l.concat(en)).values()]).slice(0, 3),
+        a = (l.length >= 3 ? l : [...(0, O.A)(l.concat(eE)).values()]).slice(0, 3),
         s = n.reactions.filter((e) => e.me);
     return (0, i.jsx)(i.Fragment, {
         children: a.map((e) => {
-            let l = s.find((t) => (0, N.i6)(t.emoji, (0, N.jq)(e))),
-                a = null != l ? ee.intl.string(ee.t.wunKKA) : ee.intl.string(ee.t.XVx5BN),
+            let l = s.find((t) => (0, V.i6)(t.emoji, (0, V.jq)(e))),
+                a = null != l ? e_.intl.string(e_.t.wunKKA) : e_.intl.string(e_.t.XVx5BN),
                 r = null == e.id ? e.uniqueName : e.name,
                 o =
                     null != l
-                        ? ee.intl.formatToPlainString(ee.t.vjeruO, { emojiName: r })
-                        : ee.intl.formatToPlainString(ee.t.L1JQwE, { emojiName: r });
+                        ? e_.intl.formatToPlainString(e_.t.vjeruO, { emojiName: r })
+                        : e_.intl.formatToPlainString(e_.t.L1JQwE, { emojiName: r });
             return (0, i.jsx)(
-                J.qv,
+                eu.qv,
                 {
                     tooltipText: (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-strong",
-                                className: et.zM,
+                                className: ef.zM,
                                 children: `:${e.name}:`,
                             }),
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(u.E, {
                                 variant: "text-xs/normal",
                                 color: "text-default",
-                                className: et.zM,
+                                className: ef.zM,
                                 children: a,
                             }),
                         ],
                     }),
                     label: o,
                     onClick: () =>
-                        eo({
+                        ev({
                             type: null != l ? "remove" : "add",
                             emoji: e,
                             channel: t,
                             message: n,
-                            location: v.qN.MESSAGE_HOVER_BAR,
+                            location: B.qN.MESSAGE_HOVER_BAR,
                         }),
-                    children: (0, i.jsx)(m.A, {
+                    children: (0, i.jsx)(R.A, {
                         emojiId: e.id,
                         emojiName: null == e.id ? e.surrogates : e.name,
                         animated: e.animated,
                         size: "reaction",
                         alt: "",
-                        className: et.Zg,
+                        className: ef.Zg,
                         canSelect: !1,
                     }),
                 },
@@ -141,7 +158,7 @@ let ea = l.memo(function (e) {
         }),
     });
 });
-function es(e) {
+function eI(e) {
     let {
             channel: t,
             message: n,
@@ -149,24 +166,24 @@ function es(e) {
             canPin: s,
             canDelete: r,
             canReport: o,
-            canEdit: m,
-            canPublish: _,
-            canReact: p,
-            canConfigureJoin: f,
-            canReply: S,
-            canStartThread: I,
-            canViewThread: v,
-            canForward: N,
-            canManageOfficialMessages: y,
-            isGuildOfficial: D,
-            isExpanded: F,
-            showMoreUtilities: H,
-            showEmojiPicker: Z,
-            showMessageBookmarksActions: Q,
-            isMessageBookmark: et,
-            setPopout: en,
-            hasDeveloperMode: ei,
-            isFocused: es,
+            canEdit: u,
+            canPublish: b,
+            canReact: R,
+            canConfigureJoin: D,
+            canReply: P,
+            canStartThread: O,
+            canViewThread: G,
+            canForward: F,
+            canManageOfficialMessages: B,
+            isGuildOfficial: V,
+            isExpanded: z,
+            showMoreUtilities: Z,
+            showEmojiPicker: ei,
+            showMessageBookmarksActions: el,
+            isMessageBookmark: eA,
+            setPopout: ep,
+            hasDeveloperMode: ef,
+            isFocused: eE,
         } = (function (e) {
             let {
                     channel: t,
@@ -179,175 +196,175 @@ function es(e) {
                     isFocused: o,
                 } = e,
                 { author: u } = n,
-                h = (0, d.bG)([P.A], () => P.A.getGuild(t.guild_id), [t.guild_id]),
-                m = (0, d.bG)([O.default], () => O.default.getId()),
-                _ = (0, M.Id)(t),
-                p = (0, M.s5)(t),
-                { firstMessage: f } = (0, d.bG)([E.A], () => E.A.getMessage(t.id), [t.id]),
-                x = L.jW.useSetting(),
-                S = L.Q_.useSetting(),
-                I = (0, d.bG)([k.A], () => null == t.guild_id || k.A.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: v, canAddNewReactions: N } = (0, d.cf)(
-                    [w.A],
+                h = (0, d.bG)([X.A], () => X.A.getGuild(t.guild_id), [t.guild_id]),
+                m = (0, d.bG)([$.default], () => $.default.getId()),
+                A = (0, J.Id)(t),
+                g = (0, J.s5)(t),
+                { firstMessage: p } = (0, d.bG)([w.A], () => w.A.getMessage(t.id), [t.id]),
+                _ = q.jW.useSetting(),
+                f = q.Q_.useSetting(),
+                E = (0, d.bG)([Q.A], () => null == t.guild_id || Q.A.canChatInGuild(t.guild_id), [t]),
+                { canManageMessages: C, canAddNewReactions: x } = (0, d.cf)(
+                    [ee.A],
                     () => ({
-                        canAddNewReactions: I && w.A.can(X.xBc.ADD_REACTIONS, t),
-                        canManageMessages: w.A.can(X.xBc.MANAGE_MESSAGES, t),
+                        canAddNewReactions: E && ee.A.can(eg.xBc.ADD_REACTIONS, t),
+                        canManageMessages: ee.A.can(eg.xBc.MANAGE_MESSAGES, t),
                     }),
-                    [t, I],
+                    [t, E],
                 ),
-                y = (0, b.u)(t, n),
-                D = (0, M.n)(t, n),
-                U = (0, M.R)(n),
-                F = (0, d.bG)([T.A], () => null != t.guild_id && T.A.isLurking(t.guild_id), [t]),
-                H = u.id === m,
-                J = (v || n.canDeleteOwnMessage(m)) && _ && !X.MRS.UNDELETABLE.has(n.type);
-            n.type === X.lAJ.AUTO_MODERATION_ACTION && (J = J && v),
-                t.isModeratorReportChannel() && (J = J && n.id !== f?.id && !(0, z.A)(n));
-            let q = (0, B.ul)(n),
-                $ = (0, K.A)(n, t),
-                Z = !t.isSystemDM() && (0, W.A)(n, m) && _ && !p,
-                { disableReactionCreates: Q } = (0, Y.A)({
+                S = (0, K.u)(t, n),
+                I = (0, J.n)(t, n),
+                N = (0, J.R)(n),
+                v = (0, d.bG)([H.A], () => null != t.guild_id && H.A.isLurking(t.guild_id), [t]),
+                T = u.id === m,
+                y = (C || n.canDeleteOwnMessage(m)) && A && !eg.MRS.UNDELETABLE.has(n.type);
+            n.type === eg.lAJ.AUTO_MODERATION_ACTION && (y = y && C),
+                t.isModeratorReportChannel() && (y = y && n.id !== p?.id && !(0, ec.A)(n));
+            let b = (0, ea.ul)(n),
+                j = (0, eo.A)(n, t),
+                R = !t.isSystemDM() && (0, er.A)(n, m) && A && !g,
+                { disableReactionCreates: D } = (0, ed.A)({
                     channel: t,
-                    canChat: I,
-                    renderReactions: x,
-                    canAddNewReactions: N,
-                    isLurking: F,
-                    isActiveChannelOrUnarchivableThread: _,
+                    canChat: E,
+                    renderReactions: _,
+                    canAddNewReactions: x,
+                    isLurking: v,
+                    isActiveChannelOrUnarchivableThread: A,
                 }),
-                ee =
-                    t.type === X.rbe.GUILD_ANNOUNCEMENT &&
+                P =
+                    t.type === eg.rbe.GUILD_ANNOUNCEMENT &&
                     null != h &&
-                    h.features.has(X.GuildFeatures.NEWS) &&
-                    (H || v) &&
-                    (0, g.A)(n),
-                et = t.getGuildId(),
-                en =
-                    null != et &&
-                    n.type === X.lAJ.USER_JOIN &&
-                    w.A.canWithPartialContext(X.xBc.MANAGE_GUILD, { guildId: et }),
-                ei = (0, C.m)(n),
-                el = (0, V.Vc)(t.guild_id, t, "MessageHoverBar"),
-                ea = n.hasFlag(X.pr7.IS_GUILD_OFFICIAL),
-                { enabled: es } = j.A.useConfig({ location: "message_utilities" }),
-                er = (0, d.bG)([R.A], () => null != R.A.getSavedMessage(t.id, n.id)),
-                eo = (0, c.A)(s),
-                ec = (0, d.bG)([A.A], () => A.A.keyboardModeEnabled);
+                    h.features.has(eg.GuildFeatures.NEWS) &&
+                    (T || C) &&
+                    (0, L.A)(n),
+                O = t.getGuildId(),
+                k =
+                    null != O &&
+                    n.type === eg.lAJ.USER_JOIN &&
+                    ee.A.canWithPartialContext(eg.xBc.MANAGE_GUILD, { guildId: O }),
+                G = (0, U.m)(n),
+                F = (0, es.Vc)(t.guild_id, t, "MessageHoverBar"),
+                B = n.hasFlag(eg.pr7.IS_GUILD_OFFICIAL),
+                { enabled: V } = W.A.useConfig({ location: "message_utilities" }),
+                z = (0, d.bG)([Y.A], () => null != Y.A.getSavedMessage(t.id, n.id)),
+                Z = (0, c.A)(s),
+                et = (0, d.bG)([M.A], () => M.A.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
-                canPin: $,
-                canEdit: Z,
-                canDelete: J,
-                canReport: q,
-                canReply: y,
-                canStartThread: D,
-                canViewThread: U,
-                canForward: ei,
-                canManageOfficialMessages: el,
-                isGuildOfficial: ea,
-                canCopy: G.p5,
-                hasDeveloperMode: S,
-                canReact: !Q && x,
-                canPublish: ee,
-                canConfigureJoin: en,
-                isExpanded: eo && !ec && !i && !l && !a,
+                canPin: j,
+                canEdit: R,
+                canDelete: y,
+                canReport: b,
+                canReply: S,
+                canStartThread: I,
+                canViewThread: N,
+                canForward: G,
+                canManageOfficialMessages: F,
+                isGuildOfficial: B,
+                canCopy: en.p5,
+                hasDeveloperMode: f,
+                canReact: !D && _,
+                canPublish: P,
+                canConfigureJoin: k,
+                isExpanded: Z && !et && !i && !l && !a,
                 showEmojiPicker: i,
                 showEmojiBurstPicker: l,
                 showMoreUtilities: a,
-                showMessageBookmarksActions: es,
-                isMessageBookmark: er,
+                showMessageBookmarksActions: V,
+                isMessageBookmark: z,
                 setPopout: r,
                 isFocused: o,
             };
         })(e),
-        er = l.useRef(null),
-        eo = l.useCallback(() => {
-            H ||
-                U.default.track(X.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+        eC = l.useRef(null),
+        eI = l.useCallback(() => {
+            Z ||
+                et.default.track(eg.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                     location: "expanding_buttons",
                 }),
-                en({ moreUtilities: !H });
-        }, [H, en, n]),
-        ed = l.useCallback(() => {
-            en({ emojiPicker: !Z });
-        }, [Z, en]),
-        eu = (0, M.Id)(t),
-        eh = n.hasFlag(X.pr7.CROSSPOSTED);
+                ep({ moreUtilities: !Z });
+        }, [Z, ep, n]),
+        eN = l.useCallback(() => {
+            ep({ emojiPicker: !ei });
+        }, [ei, ep]),
+        ev = (0, J.Id)(t),
+        ey = n.hasFlag(eg.pr7.CROSSPOSTED);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            F
+            z
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          a && ei
+                          a && ef
                               ? (0, i.jsx)(
-                                    J.qv,
+                                    eu.qv,
                                     {
-                                        label: ee.intl.string(ee.t.zBoHlf),
-                                        icon: u.L9S,
-                                        onClick: (e) => (0, q.DT)(t, n, e),
+                                        label: e_.intl.string(e_.t.zBoHlf),
+                                        icon: h.L,
+                                        onClick: (e) => (0, eh.DT)(t, n, e),
                                     },
                                     "copy-id",
                                 )
                               : null,
                           a
                               ? (0, i.jsx)(
-                                    J.qv,
-                                    { label: ee.intl.string(ee.t.WqhZss), icon: u.qYV, onClick: () => (0, q.S)(t, n) },
+                                    eu.qv,
+                                    { label: e_.intl.string(e_.t.WqhZss), icon: m.q, onClick: () => (0, eh.S)(t, n) },
                                     "copy-link",
                                 )
                               : null,
-                          f
+                          D
                               ? (0, i.jsx)(
-                                    J.qv,
-                                    { label: ee.intl.string(ee.t.NpHUi1), icon: u.cBN, onClick: () => (0, q.vc)(t) },
+                                    eu.qv,
+                                    { label: e_.intl.string(e_.t.NpHUi1), icon: A.c, onClick: () => (0, eh.vc)(t) },
                                     "configure",
                                 )
                               : null,
-                          eu
+                          ev
                               ? (0, i.jsx)(
-                                    J.qv,
-                                    { label: ee.intl.string(ee.t.RpE9k7), icon: u.QTh, onClick: () => (0, q.cl)(t, n) },
+                                    eu.qv,
+                                    { label: e_.intl.string(e_.t.RpE9k7), icon: g.Q, onClick: () => (0, eh.cl)(t, n) },
                                     "mark-unread",
                                 )
                               : null,
-                          Q
+                          el
                               ? (0, i.jsx)(
-                                    J.qv,
+                                    eu.qv,
                                     {
-                                        label: et ? ee.intl.string(ee.t.LHUP9D) : ee.intl.string(ee.t["9p3D9p"]),
-                                        icon: et ? u.cFy : u.c$8,
-                                        onClick: () => (et ? (0, q.r7)(t, n) : (0, q.wF)(t, n)),
+                                        label: eA ? e_.intl.string(e_.t.LHUP9D) : e_.intl.string(e_.t["9p3D9p"]),
+                                        icon: eA ? p.c : _.c,
+                                        onClick: () => (eA ? (0, eh.r7)(t, n) : (0, eh.wF)(t, n)),
                                     },
                                     "bookmark",
                                 )
                               : null,
                           s
                               ? (0, i.jsx)(
-                                    J.qv,
+                                    eu.qv,
                                     {
-                                        label: n.pinned ? ee.intl.string(ee.t["Bse+F/"]) : ee.intl.string(ee.t.CvQ18w),
-                                        icon: u.tsw,
-                                        onClick: (e) => (0, q.rS)(t, n, e),
+                                        label: n.pinned ? e_.intl.string(e_.t["Bse+F/"]) : e_.intl.string(e_.t.CvQ18w),
+                                        icon: f.t,
+                                        onClick: (e) => (0, eh.rS)(t, n, e),
                                     },
                                     "pin",
                                 )
                               : null,
-                          I && N
+                          O && F
                               ? (0, i.jsx)(
-                                    J.qv,
-                                    { label: ee.intl.string(ee.t.rBIGBL), icon: u.ysw, onClick: () => (0, q.Nw)(t, n) },
+                                    eu.qv,
+                                    { label: e_.intl.string(e_.t.rBIGBL), icon: E.y, onClick: () => (0, eh.Nw)(t, n) },
                                     "thread",
                                 )
                               : null,
-                          S && m
+                          P && u
                               ? (0, i.jsx)(
-                                    J.qv,
+                                    eu.qv,
                                     {
-                                        label: ee.intl.string(ee.t["5IEsGx"]),
-                                        icon: u.W4J,
-                                        onClick: (e) => (0, q.$b)(t, n, e),
+                                        label: e_.intl.string(e_.t["5IEsGx"]),
+                                        icon: C.W,
+                                        onClick: (e) => (0, eh.$b)(t, n, e),
                                     },
                                     "reply-self",
                                 )
@@ -355,103 +372,103 @@ function es(e) {
                       ],
                   })
                 : null,
-            p
+            R
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          F
+                          z
                               ? null
                               : (0, i.jsxs)(i.Fragment, {
-                                    children: [(0, i.jsx)(ea, { channel: t, message: n }), (0, i.jsx)(J.$$, {})],
+                                    children: [(0, i.jsx)(eS, { channel: t, message: n }), (0, i.jsx)(eu.$$, {})],
                                 }),
-                          (0, i.jsx)($.A, {
-                              togglePopout: ed,
-                              renderEmojiPicker: ec,
-                              shouldShow: Z,
-                              isFocused: es,
+                          (0, i.jsx)(em.A, {
+                              togglePopout: eN,
+                              renderEmojiPicker: eT,
+                              shouldShow: ei,
+                              isFocused: eE,
                               channel: t,
                               message: n,
                           }),
                       ],
                   })
                 : null,
-            S && !m
+            P && !u
                 ? (0, i.jsx)(
-                      J.qv,
-                      { label: ee.intl.string(ee.t["5IEsGx"]), icon: u.W4J, onClick: (e) => (0, q.$b)(t, n, e) },
+                      eu.qv,
+                      { label: e_.intl.string(e_.t["5IEsGx"]), icon: C.W, onClick: (e) => (0, eh.$b)(t, n, e) },
                       "reply-other",
                   )
                 : null,
-            m
+            u
                 ? (0, i.jsx)(
-                      J.qv,
-                      { label: ee.intl.string(ee.t.bt75uw), icon: u.R2l, onClick: () => (0, q.u_)(t, n) },
+                      eu.qv,
+                      { label: e_.intl.string(e_.t.bt75uw), icon: x.R, onClick: () => (0, eh.u_)(t, n) },
                       "edit",
                   )
                 : null,
-            N
+            F
                 ? (0, i.jsx)(
-                      J.qv,
-                      { label: ee.intl.string(ee.t.I3ltXO), icon: x.A, onClick: () => (0, q.Z4)(t, n) },
+                      eu.qv,
+                      { label: e_.intl.string(e_.t.I3ltXO), icon: k.A, onClick: () => (0, eh.Z4)(t, n) },
                       "forward",
                   )
                 : null,
-            I && !N
+            O && !F
                 ? (0, i.jsx)(
-                      J.qv,
-                      { label: ee.intl.string(ee.t.rBIGBL), icon: u.ysw, onClick: () => (0, q.Nw)(t, n) },
+                      eu.qv,
+                      { label: e_.intl.string(e_.t.rBIGBL), icon: E.y, onClick: () => (0, eh.Nw)(t, n) },
                       "thread",
                   )
                 : null,
-            !I && v
+            !O && G
                 ? (0, i.jsx)(
-                      J.qv,
-                      { label: ee.intl.string(ee.t["39d0Wj"]), icon: u.ysw, onClick: () => (0, q.mF)(t, n) },
+                      eu.qv,
+                      { label: e_.intl.string(e_.t["39d0Wj"]), icon: E.y, onClick: () => (0, eh.mF)(t, n) },
                       "view-thread",
                   )
                 : null,
-            y
+            B
                 ? (0, i.jsx)(
-                      J.qv,
+                      eu.qv,
                       {
-                          label: D ? ee.intl.string(ee.t["2km5Gf"]) : ee.intl.string(ee.t["lE/PG3"]),
-                          icon: D ? u.$pZ : u.LV2,
-                          onClick: () => h.A.patchMessageGuildOfficial(t.id, n.id, !D),
+                          label: V ? e_.intl.string(e_.t["2km5Gf"]) : e_.intl.string(e_.t["lE/PG3"]),
+                          icon: V ? S.$ : I.L,
+                          onClick: () => j.A.patchMessageGuildOfficial(t.id, n.id, !V),
                       },
                       "guild-official",
                   )
                 : null,
-            _
+            b
                 ? (0, i.jsx)(
-                      J.qv,
+                      eu.qv,
                       {
-                          label: eh ? ee.intl.string(ee.t["1kWJAr"]) : ee.intl.string(ee.t.MFGE51),
-                          icon: u.koX,
-                          onClick: () => (0, q.Le)(t, n),
-                          disabled: eh,
+                          label: ey ? e_.intl.string(e_.t["1kWJAr"]) : e_.intl.string(e_.t.MFGE51),
+                          icon: N.k,
+                          onClick: () => (0, eh.Le)(t, n),
+                          disabled: ey,
                       },
                       "publish",
                   )
                 : null,
-            r && F
+            r && z
                 ? (0, i.jsx)(
-                      J.qv,
+                      eu.qv,
                       {
-                          label: ee.intl.string(ee.t.oyYWHE),
-                          icon: u.ucK,
-                          onClick: (e) => (0, q.RC)(t, n, e),
+                          label: e_.intl.string(e_.t.oyYWHE),
+                          icon: v.u,
+                          onClick: (e) => (0, eh.RC)(t, n, e),
                           dangerous: !0,
-                          separator: !F,
+                          separator: !z,
                       },
                       "delete",
                   )
                 : null,
-            F && r
+            z && r
                 ? null
-                : (0, i.jsx)(u.YNO, {
-                      targetElementRef: er,
+                : (0, i.jsx)(T.Y, {
+                      targetElementRef: eC,
                       renderPopout: (e) => {
                           let { updatePosition: l, closePopout: a } = e;
-                          return (0, i.jsx)(el, {
+                          return (0, i.jsx)(ex, {
                               channel: t,
                               message: n,
                               canReport: o,
@@ -459,22 +476,22 @@ function es(e) {
                               updatePosition: l,
                           });
                       },
-                      shouldShow: H,
-                      onRequestClose: eo,
+                      shouldShow: Z,
+                      onRequestClose: eI,
                       position: "left",
                       align: "top",
-                      animation: u.YNO.Animation.NONE,
+                      animation: T.Y.Animation.NONE,
                       children: (e, t) => {
                           let { onClick: n, ...l } = e,
                               { isShown: a } = t;
                           return (0, i.jsx)(
-                              J.qv,
+                              eu.qv,
                               {
-                                  ref: er,
-                                  label: ee.intl.string(ee.t["UKOtz+"]),
-                                  icon: u.jNK,
+                                  ref: eC,
+                                  label: e_.intl.string(e_.t["UKOtz+"]),
+                                  icon: y.j,
                                   selected: a,
-                                  onClick: eo,
+                                  onClick: eI,
                                   ...l,
                               },
                               "more",
@@ -484,77 +501,77 @@ function es(e) {
         ],
     });
 }
-function er(e) {
+function eN(e) {
     let { channel: t, message: n } = e,
-        l = (0, d.bG)([S.A], () => null != S.A.getMessage(n.id), [n.id]),
-        a = null == n.interaction || (null != n.interactionData && (0, I.Bl)(n.interactionData));
+        l = (0, d.bG)([G.A], () => null != G.A.getMessage(n.id), [n.id]),
+        a = null == n.interaction || (null != n.interactionData && (0, F.Bl)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !l &&
                 a &&
                 (0, i.jsx)(
-                    J.qv,
-                    { label: ee.intl.string(ee.t["5911Lb"]), icon: u.mqY, onClick: () => (0, q.Io)(t, n) },
+                    eu.qv,
+                    { label: e_.intl.string(e_.t["5911Lb"]), icon: b.m, onClick: () => (0, eh.Io)(t, n) },
                     "retry",
                 ),
             (0, i.jsx)(
-                J.qv,
-                { label: ee.intl.string(ee.t.oyYWHE), icon: u.ucK, onClick: (e) => (0, q.RC)(t, n, e) },
+                eu.qv,
+                { label: e_.intl.string(e_.t.oyYWHE), icon: v.u, onClick: (e) => (0, eh.RC)(t, n, e) },
                 "delete-usent",
             ),
         ],
     });
 }
-function eo(e) {
+function ev(e) {
     let { type: t, emoji: n, channel: i, message: l, location: a, isBurst: s = !1 } = e;
     if (null == n) return;
-    let r = (0, N.jq)(n);
+    let r = (0, V.jq)(n);
     "add" === t
-        ? (0, v.BB)(i.id, l.id, r, a, { burst: s })
-        : (0, v.et)({ channelId: i.id, messageId: l.id, emoji: r, location: a, options: { burst: s } });
+        ? (0, B.BB)(i.id, l.id, r, a, { burst: s })
+        : (0, B.et)({ channelId: i.id, messageId: l.id, emoji: r, location: a, options: { burst: s } });
 }
-function ec(e, t, n) {
+function eT(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = {
             openPopoutType: "message_reaction_emoji_picker",
             ...(l && {
                 openPopoutType: "message_super_reaction_emoji_picker",
-                page: null != e.getGuildId() ? X.liQ.GUILD_CHANNEL : X.liQ.DM_CHANNEL,
-                section: (0, N.sn)(e),
-                object: X.ZSU.EMOJI_REACTION_PICKER_POPOUT,
+                page: null != e.getGuildId() ? eg.liQ.GUILD_CHANNEL : eg.liQ.DM_CHANNEL,
+                section: (0, V.sn)(e),
+                object: eg.ZSU.EMOJI_REACTION_PICKER_POPOUT,
             }),
         };
-    return (0, i.jsx)(y.C, {
+    return (0, i.jsx)(z.C, {
         channel: e,
         closePopout: n,
         onSelectEmoji: (i) => {
             let { emoji: l, willClose: a, isBurst: s } = i;
-            eo({ type: "add", emoji: l, channel: e, message: t, location: v.qN.MESSAGE_REACTION_PICKER, isBurst: s }),
+            ev({ type: "add", emoji: l, channel: e, message: t, location: B.qN.MESSAGE_REACTION_PICKER, isBurst: s }),
                 a && (s ? o()(n, 150)() : n());
         },
         analyticsOverride: a,
         messageId: t.id,
     });
 }
-let ed = l.memo(function (e) {
+let ey = l.memo(function (e) {
     let { channel: t, message: n, isHeader: l, isReply: a } = e,
-        r = (0, d.bG)([D.A], () => D.A.isEditing(t.id, n.id), [t.id, n.id]),
+        r = (0, d.bG)([Z.A], () => Z.A.isEditing(t.id, n.id), [t.id, n.id]),
         o = (function (e) {
             let { channel: t, message: n } = e;
-            return n.state === X.cmJ.SEND_FAILED ? (0, i.jsx)(er, { channel: t, message: n }) : null;
+            return n.state === eg.cmJ.SEND_FAILED ? (0, i.jsx)(eN, { channel: t, message: n }) : null;
         })(e),
         c = (function (e) {
             let { message: t } = e;
-            return t.state !== X.cmJ.SEND_FAILED ? (0, i.jsx)(es, { ...e }) : null;
+            return t.state !== eg.cmJ.SEND_FAILED ? (0, i.jsx)(eI, { ...e }) : null;
         })(e);
     return r || (null == o && null == c)
         ? null
         : (0, i.jsx)("div", {
-              className: s()(e.className, { [et.kL]: !0, [et.gN]: l, [et.nK]: a }),
-              onClick: ei,
-              onContextMenu: ei,
+              className: s()(e.className, { [ef.kL]: !0, [ef.gN]: l, [ef.nK]: a }),
+              onClick: eC,
+              onContextMenu: eC,
               role: "group",
-              "aria-label": ee.intl.string(ee.t.Lv7LxN),
-              children: (0, i.jsxs)(J.Ay, { className: e.innerClassName, children: [o, c] }),
+              "aria-label": e_.intl.string(e_.t.Lv7LxN),
+              children: (0, i.jsxs)(eu.Ay, { className: e.innerClassName, children: [o, c] }),
           });
 });

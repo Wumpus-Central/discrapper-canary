@@ -1,6 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-let r = { get: i };
-function i() {
-    if ("u" > typeof TextDecoder) return TextDecoder;
-}
+i.d(t, { A: () => n });
+let n = {
+    get: function () {
+        if ("u" > typeof TextDecoder) return TextDecoder;
+    },
+};

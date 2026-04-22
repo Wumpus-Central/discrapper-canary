@@ -1,63 +1,64 @@
-"use strict";
-n.d(t, { t: () => g });
+n.d(t, { t: () => x });
 var i = n(627968),
-    s = n(64700),
-    l = n(311907),
-    r = n(397927),
-    a = n(555337),
-    o = n(658446),
-    d = n(946171),
-    c = n(716610),
-    u = n(985018),
-    m = n(840966);
-function g(e) {
-    let { fetchDiscoveryData: t, settingsView: n, requireTerms: g, rules: x } = e,
-        h = (0, l.bG)([a.A], () => a.A.getProps().guild);
+    l = n(64700),
+    s = n(311907),
+    r = n(534514),
+    a = n(834730),
+    o = n(289873),
+    d = n(555337),
+    c = n(658446),
+    u = n(946171),
+    m = n(716610),
+    g = n(985018),
+    h = n(710021);
+function x(e) {
+    let { fetchDiscoveryData: t, settingsView: n, requireTerms: x, rules: _ } = e,
+        p = (0, s.bG)([d.A], () => d.A.getProps().guild);
     if (
-        (s.useEffect(() => {
-            null != h && t(h.id);
-        }, [t, h]),
-        null == h)
+        (l.useEffect(() => {
+            null != p && t(p.id);
+        }, [t, p]),
+        null == p)
     )
         return null;
     switch (n) {
-        case c.v.DISQUALIFIED:
-            return (0, i.jsx)(o.A, {
-                guild: h,
-                guildId: h.id,
+        case m.v.DISQUALIFIED:
+            return (0, i.jsx)(c.A, {
+                guild: p,
+                guildId: p.id,
                 headerContent: (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(r.D, {
                             variant: "text-md/semibold",
                             color: "text-strong",
-                            className: m.w,
-                            children: u.intl.format(u.t.n1LDQM, {
-                                removedHook: (e, t) => (0, i.jsx)("strong", { className: m.O, children: e }, t),
+                            className: h.w,
+                            children: g.intl.format(g.t.n1LDQM, {
+                                removedHook: (e, t) => (0, i.jsx)("strong", { className: h.O, children: e }, t),
                             }),
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(a.E, {
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: u.intl.string(u.t.Qgaw3d),
+                            children: g.intl.string(g.t.Qgaw3d),
                         }),
                     ],
                 }),
             });
-        case c.v.ELIGIBLE_DISABLED:
-        case c.v.ELIGIBLE_ENABLED:
-            return (0, i.jsx)(d.s, { requireTerms: g, rules: x, settingsView: n });
-        case c.v.INELIGIBLE:
-            return (0, i.jsx)(o.A, {
-                guild: h,
-                guildId: h.id,
-                headerContent: (0, i.jsx)(r.Heading, {
+        case m.v.ELIGIBLE_DISABLED:
+        case m.v.ELIGIBLE_ENABLED:
+            return (0, i.jsx)(u.s, { requireTerms: x, rules: _, settingsView: n });
+        case m.v.INELIGIBLE:
+            return (0, i.jsx)(c.A, {
+                guild: p,
+                guildId: p.id,
+                headerContent: (0, i.jsx)(r.D, {
                     variant: "heading-md/semibold",
-                    children: u.intl.format(u.t["+6Hylv"], {
-                        doesNotHook: (e, t) => (0, i.jsx)("strong", { className: m.O, children: e }, t),
+                    children: g.intl.format(g.t["+6Hylv"], {
+                        doesNotHook: (e, t) => (0, i.jsx)("strong", { className: h.O, children: e }, t),
                     }),
                 }),
             });
         default:
-            return (0, i.jsx)(r.y$y, {});
+            return (0, i.jsx)(o.y, {});
     }
 }

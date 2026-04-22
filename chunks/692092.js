@@ -1,68 +1,72 @@
 "use strict";
 n.d(t, { A: () => A });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(735438),
-    l = n.n(o),
-    u = n(397927),
-    c = n(7584),
-    d = n(336615),
-    _ = n(486020),
-    f = n(690521),
-    p = n(307731),
-    h = n(795144);
-let m = l().memoize(
+    r = n.n(s),
+    a = n(735438),
+    o = n.n(a),
+    c = n(140735),
+    u = n(194261),
+    d = n(7584),
+    h = n(336615),
+    m = n(486020),
+    p = n(690521),
+    f = n(307731),
+    g = n(297547);
+let _ = o().memoize(
         (e) =>
-            `${e * p.EmojiSprites.NonDiversityPerRow}px ${e * Math.ceil(c.Ay.numNonDiversitySprites / p.EmojiSprites.NonDiversityPerRow)}px`,
+            `${e * f.EmojiSprites.NonDiversityPerRow}px ${e * Math.ceil(d.Ay.numNonDiversitySprites / f.EmojiSprites.NonDiversityPerRow)}px`,
     ),
-    E = l().memoize(
+    x = o().memoize(
         (e) =>
-            `${e * p.EmojiSprites.DiversityPerRow}px ${e * Math.ceil(c.Ay.numDiversitySprites / p.EmojiSprites.DiversityPerRow)}px`,
+            `${e * f.EmojiSprites.DiversityPerRow}px ${e * Math.ceil(d.Ay.numDiversitySprites / f.EmojiSprites.DiversityPerRow)}px`,
     ),
-    g = (e, t, r) => {
-        let i, s, a;
-        if (!e.useSpriteSheet) return;
-        let o = null != e.index ? e.index : 0;
-        e.hasDiversity
-            ? ((i = n(983660)(`./spritesheet-${t}-${r}.png`)), (s = E(r)), (a = p.EmojiSprites.DiversityPerRow))
-            : ((i = n(883740)(`./spritesheet-emoji-${r}.png`)), (s = m(r)), (a = p.EmojiSprites.NonDiversityPerRow));
-        let l = (-o % a) * r,
-            u = -Math.floor(o / a) * r;
-        return {
-            backgroundImage: `url('${i}')`,
-            backgroundPosition: `${l}px ${u}px`,
-            backgroundSize: s,
-            height: r,
-            width: r,
-        };
-    },
-    A = i.memo(function (e) {
-        let { emoji: t, size: n, surrogateCodePoint: s, allowAnimatedEmoji: o, "aria-label": l, isLocked: c } = e,
-            m = (() => {
+    A = l.memo(function (e) {
+        let { emoji: t, size: s, surrogateCodePoint: a, allowAnimatedEmoji: o, "aria-label": d, isLocked: A } = e,
+            C = (() => {
                 if (!t.useSpriteSheet) {
                     let e =
                         null == t.id
                             ? t.url
-                            : _.Ay.getEmojiURL({ id: t.id, animated: o && t.animated, size: p.EMOJI_URL_BASE_SIZE });
+                            : m.Ay.getEmojiURL({ id: t.id, animated: o && t.animated, size: f.EMOJI_URL_BASE_SIZE });
                     return null != e
-                        ? (0, r.jsx)(d.A, { className: h.N1, "aria-label": l, src: e, size: n, alt: (0, f.N)(t) ?? "" })
+                        ? (0, i.jsx)(h.A, { className: g.N1, "aria-label": d, src: e, size: s, alt: (0, p.N)(t) ?? "" })
                         : null;
                 }
-                return (0, r.jsx)("div", {
-                    className: a()(h.xA, { [h.N1]: c }),
-                    style: g(t, s, n),
-                    children: (0, r.jsx)(u.AC4, { children: l }),
+                return (0, i.jsx)("div", {
+                    className: r()(g.xA, { [g.N1]: A }),
+                    style: ((e, t, i) => {
+                        let l, s, r;
+                        if (!e.useSpriteSheet) return;
+                        let a = null != e.index ? e.index : 0;
+                        e.hasDiversity
+                            ? ((l = n(983660)(`./spritesheet-${t}-${i}.png`)),
+                              (s = x(i)),
+                              (r = f.EmojiSprites.DiversityPerRow))
+                            : ((l = n(883740)(`./spritesheet-emoji-${i}.png`)),
+                              (s = _(i)),
+                              (r = f.EmojiSprites.NonDiversityPerRow));
+                        let o = (-a % r) * i,
+                            c = -Math.floor(a / r) * i;
+                        return {
+                            backgroundImage: `url('${l}')`,
+                            backgroundPosition: `${o}px ${c}px`,
+                            backgroundSize: s,
+                            height: i,
+                            width: i,
+                        };
+                    })(t, a, s),
+                    children: (0, i.jsx)(c.A, { children: d }),
                 });
             })();
-        return (0, r.jsxs)(i.Fragment, {
+        return (0, i.jsxs)(l.Fragment, {
             children: [
-                m,
-                c
-                    ? (0, r.jsx)("div", {
-                          className: h.iD,
-                          children: (0, r.jsx)(u.XAi, { size: "xs", color: "currentColor", className: h.fi }),
+                C,
+                A
+                    ? (0, i.jsx)("div", {
+                          className: g.iD,
+                          children: (0, i.jsx)(u.X, { size: "xs", color: "currentColor", className: g.fi }),
                       })
                     : null,
             ],

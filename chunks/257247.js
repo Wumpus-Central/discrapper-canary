@@ -1,31 +1,32 @@
-l.d(t, { V: () => o });
-var a = l(627968);
-l(64700);
-var r = l(951707),
-    n = l(260779);
-let s = () => (0, a.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
-    o = {
+"use strict";
+a.d(t, { V: () => s });
+var r = a(627968);
+a(64700);
+var l = a(951707),
+    n = a(260779);
+let i = () => (0, r.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
+    s = {
         name: "FullHero",
         id: "full-hero",
         component: (e) => {
-            let { bannerSrc: t, animatedBannerSrc: l, logoSrc: o, backgroundColor: i, href: d } = e;
-            return (0, a.jsx)(n.A, {
-                bannerSrc: "" !== l ? [{ src: l }, { src: t }] : { src: t },
-                logoSrc: "" !== o ? { src: o } : void 0,
-                backgroundColor: i,
+            let { bannerSrc: t, animatedBannerSrc: a, logoSrc: s, backgroundColor: o, href: d } = e;
+            return (0, r.jsx)(n.A, {
+                bannerSrc: "" !== a ? [{ src: a }, { src: t }] : { src: t },
+                logoSrc: "" !== s ? { src: s } : void 0,
+                backgroundColor: o,
                 href: "" !== d ? d : void 0,
-                children: (0, a.jsxs)(r.A, {
+                children: (0, r.jsxs)(l.A, {
                     children: [
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
-                        (0, a.jsx)(s, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
+                        (0, r.jsx)(i, {}),
                     ],
                 }),
             });

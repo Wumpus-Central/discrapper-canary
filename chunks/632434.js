@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { Gw: () => i, ks: () => r, x4: () => a });
-let r = { day: 0, second: 0, millisecond: 0 };
-function i(e, t) {
-    let n = new Date(e);
+r.d(t, { Gw: () => s, ks: () => n, x4: () => a });
+let n = { day: 0, second: 0, millisecond: 0 };
+function s(e, t) {
+    let r = new Date(e);
     if (
         (t.y && ((t.year = t.y), delete t.y),
         t.mo && ((t.month = t.mo), delete t.mo),
@@ -16,58 +15,58 @@ function i(e, t) {
         "year" in t)
     ) {
         let e = Math.floor(t.year);
-        n.setFullYear(n.getFullYear() + e);
-        let r = t.year - e;
-        r > 0 && ((t.month = t?.month ?? 0), (t.month += 12 * r));
+        r.setFullYear(r.getFullYear() + e);
+        let n = t.year - e;
+        n > 0 && ((t.month = t?.month ?? 0), (t.month += 12 * n));
     }
     if ("quarter" in t) {
         let e = Math.floor(t.quarter);
-        n.setMonth(n.getMonth() + 3 * e);
+        r.setMonth(r.getMonth() + 3 * e);
     }
     if ("month" in t) {
         let e = Math.floor(t.month);
-        n.setMonth(n.getMonth() + e);
-        let r = t.month - e;
-        r > 0 && ((t.week = t?.week ?? 0), (t.week += 4 * r));
+        r.setMonth(r.getMonth() + e);
+        let n = t.month - e;
+        n > 0 && ((t.week = t?.week ?? 0), (t.week += 4 * n));
     }
     if ("week" in t) {
         let e = Math.floor(t.week);
-        n.setDate(n.getDate() + 7 * e);
-        let r = t.week - e;
-        r > 0 && ((t.day = t?.day ?? 0), (t.day += Math.round(7 * r)));
+        r.setDate(r.getDate() + 7 * e);
+        let n = t.week - e;
+        n > 0 && ((t.day = t?.day ?? 0), (t.day += Math.round(7 * n)));
     }
     if ("day" in t) {
         let e = Math.floor(t.day);
-        n.setDate(n.getDate() + e);
-        let r = t.day - e;
-        r > 0 && ((t.hour = t?.hour ?? 0), (t.hour += Math.round(24 * r)));
+        r.setDate(r.getDate() + e);
+        let n = t.day - e;
+        n > 0 && ((t.hour = t?.hour ?? 0), (t.hour += Math.round(24 * n)));
     }
     if ("hour" in t) {
         let e = Math.floor(t.hour);
-        n.setHours(n.getHours() + e);
-        let r = t.hour - e;
-        r > 0 && ((t.minute = t?.minute ?? 0), (t.minute += Math.round(60 * r)));
+        r.setHours(r.getHours() + e);
+        let n = t.hour - e;
+        n > 0 && ((t.minute = t?.minute ?? 0), (t.minute += Math.round(60 * n)));
     }
     if ("minute" in t) {
         let e = Math.floor(t.minute);
-        n.setMinutes(n.getMinutes() + e);
-        let r = t.minute - e;
-        r > 0 && ((t.second = t?.second ?? 0), (t.second += Math.round(60 * r)));
+        r.setMinutes(r.getMinutes() + e);
+        let n = t.minute - e;
+        n > 0 && ((t.second = t?.second ?? 0), (t.second += Math.round(60 * n)));
     }
     if ("second" in t) {
         let e = Math.floor(t.second);
-        n.setSeconds(n.getSeconds() + e);
-        let r = t.second - e;
-        r > 0 && ((t.millisecond = t?.millisecond ?? 0), (t.millisecond += Math.round(1e3 * r)));
+        r.setSeconds(r.getSeconds() + e);
+        let n = t.second - e;
+        n > 0 && ((t.millisecond = t?.millisecond ?? 0), (t.millisecond += Math.round(1e3 * n)));
     }
     if ("millisecond" in t) {
         let e = Math.floor(t.millisecond);
-        n.setMilliseconds(n.getMilliseconds() + e);
+        r.setMilliseconds(r.getMilliseconds() + e);
     }
-    return n;
+    return r;
 }
 function a(e) {
     let t = {};
-    for (let n in e) t[n] = -e[n];
+    for (let r in e) t[r] = -e[r];
     return t;
 }

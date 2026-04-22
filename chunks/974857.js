@@ -1,14 +1,14 @@
-n.d(t, { A: () => i });
-var a = n(627968);
-n(64700);
-var s = n(397927);
+a.d(t, { A: () => i });
+var n = a(627968);
+a(64700);
+var l = a(834730);
 function i() {
-    return (0, a.jsxs)(s.Text, {
+    return (0, n.jsxs)(l.E, {
         variant: "text-lg/normal",
         children: [
             "Under Construction",
             " ",
-            (0, a.jsx)("span", { role: "img", "aria-label": "Construction", children: "\uD83D\uDEA7" }),
+            (0, n.jsx)("span", { role: "img", "aria-label": "Construction", children: "\uD83D\uDEA7" }),
         ],
     });
 }

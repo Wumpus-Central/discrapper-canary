@@ -1,21 +1,13 @@
-"use strict";
-n.d(t, { A: () => f, k: () => a });
-var r = n(311907),
-    i = n(73153),
-    a = (function (e) {
-        return (e[(e.UNKNOWN = 0)] = "UNKNOWN"), (e[(e.PENDING = 1)] = "PENDING"), (e[(e.DONE = 2)] = "DONE"), e;
-    })({});
+n.d(t, { A: () => p, k: () => r });
+var l,
+    i = n(311907),
+    a = n(73153),
+    r = (((l = {})[(l.UNKNOWN = 0)] = "UNKNOWN"), (l[(l.PENDING = 1)] = "PENDING"), (l[(l.DONE = 2)] = "DONE"), l);
 let s = 0,
     o = null,
-    l = null,
-    u = null;
-function c(e) {
-    (s = 1), (o = e.loadId);
-}
-function d(e) {
-    o === e.loadId && ((l = e.skuId ?? null), (u = e.skuSubscriptionPlanId ?? null), (s = 2));
-}
-class _ extends r.Ay.Store {
+    u = null,
+    c = null;
+class d extends i.Ay.Store {
     static displayName = "BrowserCheckoutStateStore";
     get browserCheckoutState() {
         return s;
@@ -24,10 +16,17 @@ class _ extends r.Ay.Store {
         return o;
     }
     get skuId() {
-        return l;
-    }
-    get planId() {
         return u;
     }
+    get planId() {
+        return c;
+    }
 }
-let f = new _(i.h, { USER_PAYMENT_BROWSER_CHECKOUT_STARTED: c, USER_PAYMENT_BROWSER_CHECKOUT_DONE: d });
+let p = new d(a.h, {
+    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (e) {
+        (s = 1), (o = e.loadId);
+    },
+    USER_PAYMENT_BROWSER_CHECKOUT_DONE: function (e) {
+        o === e.loadId && ((u = e.skuId ?? null), (c = e.skuSubscriptionPlanId ?? null), (s = 2));
+    },
+});

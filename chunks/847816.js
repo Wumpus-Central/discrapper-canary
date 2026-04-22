@@ -1,43 +1,46 @@
-a.d(t, { A: () => S });
-var n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
-    r = a(311907),
-    o = a(397927),
-    c = a(966327),
-    d = a(386467),
-    u = a(449859),
-    m = a(943220),
-    _ = a(734057),
-    p = a(572855),
-    A = a(358731),
-    h = a(597351),
-    g = a(985018),
-    E = a(197083);
-let T = i.memo(function (e) {
+"use strict";
+n.d(t, { A: () => T });
+var i = n(627968),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(311907),
+    o = n(778712),
+    c = n(247928),
+    u = n(789645),
+    d = n(966327),
+    _ = n(386467),
+    p = n(449859),
+    m = n(943220),
+    A = n(734057),
+    h = n(572855),
+    f = n(358731),
+    g = n(597351),
+    E = n(985018),
+    I = n(897003);
+let v = a.memo(function (e) {
     let { message: t } = e,
-        a = (0, r.bG)([_.A], () => _.A.getChannel(t.channel_id));
-    return null == a
+        n = (0, s.bG)([A.A], () => A.A.getChannel(t.channel_id));
+    return null == n
         ? null
-        : (0, n.jsx)(A.Ay, {
+        : (0, i.jsx)(f.Ay, {
               children: (e) =>
-                  (0, n.jsxs)(d.A.Provider, {
-                      value: a.guild_id,
+                  (0, i.jsxs)(_.A.Provider, {
+                      value: n.guild_id,
                       children: [
-                          (0, n.jsx)(c.A, { user: t.author, size: o._3J.SIZE_40, className: s()(E.Du, e) }),
-                          (0, n.jsxs)("div", {
-                              className: s()(E.cy, e),
+                          (0, i.jsx)(d.A, { user: t.author, size: o._3.SIZE_40, className: l()(I.Du, e) }),
+                          (0, i.jsxs)("div", {
+                              className: l()(I.cy, e),
                               children: [
-                                  (0, n.jsx)(o.M1G, {
-                                      children: (0, n.jsx)("div", {
-                                          className: E.mG,
-                                          children: (0, n.jsx)(m.A, { className: E.fh, message: t, channel: a }),
+                                  (0, i.jsx)(c.M, {
+                                      children: (0, i.jsx)("div", {
+                                          className: I.mG,
+                                          children: (0, i.jsx)(m.A, { className: I.fh, message: t, channel: n }),
                                       }),
                                   }),
-                                  (0, n.jsx)(u.A, {
+                                  (0, i.jsx)(p.A, {
                                       timestamp: t.timestamp,
-                                      className: E.vE,
+                                      className: I.vE,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -46,22 +49,22 @@ let T = i.memo(function (e) {
                   }),
           });
 });
-function S(e) {
-    let { item: t, hideMediaOptions: a, onClose: i } = e,
-        l = t.sourceMetadata?.message;
-    return (0, n.jsxs)("div", {
-        className: E.XV,
+function T(e) {
+    let { item: t, hideMediaOptions: n, onClose: a } = e,
+        r = t.sourceMetadata?.message;
+    return (0, i.jsxs)("div", {
+        className: I.XV,
         children: [
-            null != l && (0, n.jsx)(T, { message: l }),
-            (0, n.jsx)(p.A, { item: t, hideMediaOptions: a }),
-            (0, n.jsx)(A.Ay, {
-                mode: A.nY.PINNED,
+            null != r && (0, i.jsx)(v, { message: r }),
+            (0, i.jsx)(h.A, { item: t, hideMediaOptions: n }),
+            (0, i.jsx)(f.Ay, {
+                mode: f.nY.PINNED,
                 children: (e) =>
-                    (0, n.jsx)(h.A, {
-                        onClick: i,
-                        icon: o.PGe,
-                        tooltip: g.intl.string(g.t.cpT0Cq),
-                        className: s()(E.b, e),
+                    (0, i.jsx)(g.A, {
+                        onClick: a,
+                        icon: u.P,
+                        tooltip: E.intl.string(E.t.cpT0Cq),
+                        className: l()(I.b, e),
                     }),
             }),
         ],

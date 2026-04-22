@@ -1,17 +1,18 @@
-n.d(e, { w: () => l });
+n.d(e, { w: () => c });
 var a = n(627968),
-    r = n(397927),
-    i = n(60888),
-    s = n(117013);
-function l(t) {
+    l = n(573613),
+    r = n(834730),
+    s = n(60888),
+    i = n(750662);
+function c(t) {
     let { url: e } = t,
-        { protocol: n, hostname: l, theRestOfTheUrl: o } = (0, i.L)(e);
-    return (0, a.jsxs)(r.HOs, {
-        className: s.u,
+        { protocol: n, hostname: c, theRestOfTheUrl: d } = (0, s.L)(e);
+    return (0, a.jsxs)(l.Ip, {
+        className: i.u,
         children: [
-            (0, a.jsxs)(r.Text, { tag: "span", variant: "text-md/normal", color: "text-muted", children: [n, "//"] }),
-            (0, a.jsx)(r.Text, { tag: "span", variant: "text-md/semibold", color: "text-default", children: l }),
-            (0, a.jsx)(r.Text, { tag: "span", variant: "text-md/normal", color: "text-muted", children: o }),
+            (0, a.jsxs)(r.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: [n, "//"] }),
+            (0, a.jsx)(r.E, { tag: "span", variant: "text-md/semibold", color: "text-default", children: c }),
+            (0, a.jsx)(r.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: d }),
         ],
     });
 }

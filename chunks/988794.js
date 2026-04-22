@@ -1,74 +1,65 @@
 "use strict";
 n.d(t, {
-    BV: () => l,
-    C1: () => I,
-    GW: () => E,
-    IJ: () => s,
-    Oz: () => y,
-    Ps: () => _,
-    Qi: () => C,
-    Tn: () => h,
-    XG: () => c,
-    aj: () => T,
-    al: () => A,
-    b8: () => f,
-    dD: () => p,
-    lV: () => d,
-    nN: () => S,
-    o_: () => g,
-    om: () => m,
-    t_: () => a,
-    tq: () => u,
-    vj: () => o,
-    w0: () => v,
+    BV: () => h,
+    C1: () => v,
+    GW: () => O,
+    IJ: () => f,
+    Oz: () => b,
+    Ps: () => A,
+    Qi: () => w,
+    Tn: () => S,
+    XG: () => m,
+    aj: () => C,
+    al: () => R,
+    b8: () => I,
+    dD: () => T,
+    lV: () => g,
+    nN: () => D,
+    o_: () => N,
+    om: () => y,
+    t_: () => _,
+    tq: () => p,
+    vj: () => E,
+    w0: () => L,
 });
-var r = n(927813),
-    i = n(652215);
-let a = 100,
-    s = 1e3,
-    o = 100,
-    l = "Guild Events Modal",
-    u = "-1";
-var c = (function (e) {
-    return (
-        (e[(e.SCHEDULED = 1)] = "SCHEDULED"),
-        (e[(e.ACTIVE = 2)] = "ACTIVE"),
-        (e[(e.COMPLETED = 3)] = "COMPLETED"),
-        (e[(e.CANCELED = 4)] = "CANCELED"),
-        e
-    );
-})({});
-let d = new Set([3, 4]);
-var _ = (function (e) {
-        return (
-            (e[(e.NONE = 0)] = "NONE"),
-            (e[(e.STAGE_INSTANCE = 1)] = "STAGE_INSTANCE"),
-            (e[(e.VOICE = 2)] = "VOICE"),
-            (e[(e.EXTERNAL = 3)] = "EXTERNAL"),
-            (e[(e.PRIME_TIME = 4)] = "PRIME_TIME"),
-            e
-        );
-    })({}),
-    f = (function (e) {
-        return (e[(e.EVENT_START = 1)] = "EVENT_START"), e;
-    })({}),
-    p = (function (e) {
-        return (e[(e.PUBLIC = 1)] = "PUBLIC"), (e[(e.GUILD_ONLY = 2)] = "GUILD_ONLY"), e;
-    })({});
-let h = new Set([1, 4]),
-    m = { 1: i.rbe.GUILD_STAGE_VOICE, 2: i.rbe.GUILD_VOICE },
-    g = new Set([3]),
-    E = new Set([1, 2]);
-var A = (function (e) {
-    return (e[(e.EVENT_INFO = 0)] = "EVENT_INFO"), (e[(e.RSVP_LIST = 1)] = "RSVP_LIST"), e;
-})({});
-let I = 100,
-    T = 2 * r.A.Millis.DAY,
-    y = 12 * r.A.Millis.HOUR,
-    S = 4;
-var v = (function (e) {
-        return (e.NEW_EVENT = "Upcoming Event Notice"), (e.EVENT_STARTING_SOON = "Event Starting Soon Notice"), e;
-    })({}),
-    C = (function (e) {
-        return (e[(e.UNINTERESTED = 0)] = "UNINTERESTED"), (e[(e.INTERESTED = 1)] = "INTERESTED"), e;
-    })({});
+var r,
+    i,
+    s,
+    a,
+    o,
+    l,
+    u,
+    d = n(927813),
+    c = n(652215);
+let _ = 100,
+    f = 1e3,
+    E = 100,
+    h = "Guild Events Modal",
+    p = "-1";
+var m =
+    (((r = {})[(r.SCHEDULED = 1)] = "SCHEDULED"),
+    (r[(r.ACTIVE = 2)] = "ACTIVE"),
+    (r[(r.COMPLETED = 3)] = "COMPLETED"),
+    (r[(r.CANCELED = 4)] = "CANCELED"),
+    r);
+let g = new Set([3, 4]);
+var A =
+        (((i = {})[(i.NONE = 0)] = "NONE"),
+        (i[(i.STAGE_INSTANCE = 1)] = "STAGE_INSTANCE"),
+        (i[(i.VOICE = 2)] = "VOICE"),
+        (i[(i.EXTERNAL = 3)] = "EXTERNAL"),
+        (i[(i.PRIME_TIME = 4)] = "PRIME_TIME"),
+        i),
+    I = (((s = {})[(s.EVENT_START = 1)] = "EVENT_START"), s),
+    T = (((a = {})[(a.PUBLIC = 1)] = "PUBLIC"), (a[(a.GUILD_ONLY = 2)] = "GUILD_ONLY"), a);
+let S = new Set([1, 4]),
+    y = { 1: c.rbe.GUILD_STAGE_VOICE, 2: c.rbe.GUILD_VOICE },
+    N = new Set([3]),
+    O = new Set([1, 2]);
+var R = (((o = {})[(o.EVENT_INFO = 0)] = "EVENT_INFO"), (o[(o.RSVP_LIST = 1)] = "RSVP_LIST"), o);
+let v = 100,
+    C = 2 * d.A.Millis.DAY,
+    b = 12 * d.A.Millis.HOUR,
+    D = 4;
+var L = (((l = {}).NEW_EVENT = "Upcoming Event Notice"), (l.EVENT_STARTING_SOON = "Event Starting Soon Notice"), l),
+    w = (((u = {})[(u.UNINTERESTED = 0)] = "UNINTERESTED"), (u[(u.INTERESTED = 1)] = "INTERESTED"), u);

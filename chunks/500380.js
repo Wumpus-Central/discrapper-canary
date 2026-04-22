@@ -1,16 +1,14 @@
-"use strict";
-n.d(t, { t: () => c });
+n.d(t, { t: () => u });
 var r = n(96337),
-    i = n(997101),
-    a = n(626584);
-let s = new Set(r.A.map((e) => e.alpha2)),
-    o = [`${i.d.AN}`, `${i.d.MI}`, `${i.d.TP}`],
-    l = "1f30e",
-    u = new a.A("GetFlagEmoji"),
-    c = (e) => {
+    l = n(997101),
+    i = n(626584);
+let a = new Set(r.A.map((e) => e.alpha2)),
+    s = [`${l.d.AN}`, `${l.d.MI}`, `${l.d.TP}`],
+    o = new i.A("GetFlagEmoji"),
+    u = (e) => {
         if (null == e) return "";
         try {
-            if (o.includes(e) || !s.has(e)) return n(256628)(`./${l}.svg`);
+            if (s.includes(e) || !a.has(e)) return n(256628)("./1f30e.svg");
             let t = e
                 .toUpperCase()
                 .split("")
@@ -18,6 +16,6 @@ let s = new Set(r.A.map((e) => e.alpha2)),
                 .join("-");
             return n(256628)(`./${t}.svg`);
         } catch (e) {
-            return u.error("Error getting flag emoji: ", e), "";
+            return o.error("Error getting flag emoji: ", e), "";
         }
     };

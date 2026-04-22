@@ -2,7 +2,7 @@ n.d(t, { A: () => en }), n(321073), n(667532);
 var i = n(627968),
     l = n(64700),
     a = n(311907),
-    s = n(397927),
+    s = n(834730),
     r = n(843472),
     o = n(432371),
     c = n(775602),
@@ -20,29 +20,29 @@ var i = n(627968),
     x = n(349435),
     S = n(452082),
     I = n(357179),
-    T = n(74114),
+    N = n(74114),
     v = n(221059),
-    N = n(513272),
+    T = n(513272),
     y = n(881020),
     b = n(637384),
     j = n(383233),
     R = n(222823),
     M = n(309010),
     L = n(287809),
-    O = n(405269),
-    D = n(927813),
-    P = n(661191),
-    k = n(326337),
-    w = n(375901),
-    U = n(857069),
+    D = n(405269),
+    P = n(927813),
+    O = n(661191),
+    w = n(326337),
+    U = n(375901),
+    k = n(857069),
     G = n(675171),
     F = n(806621),
     H = n(636922),
     B = n(371741),
     V = n(66149),
-    W = n(922529),
+    z = n(922529),
     K = n(652176),
-    z = n(540385),
+    W = n(540385),
     Y = n(613907),
     J = n(829444),
     q = n(626360),
@@ -96,8 +96,8 @@ function en(e) {
         eA = (0, F.r)(l),
         eg = m.length > 0 && m.first()?.isFirstMessageInForumPost(l),
         ep = (0, o.cI)(l),
-        e_ = (0, a.bG)([N.A], () => N.A.shouldShowTopicsBar() && !ed),
-        ef = (0, T.l)(l.id),
+        e_ = (0, a.bG)([T.A], () => T.A.shouldShowTopicsBar() && !ed),
+        ef = (0, N.l)(l.id),
         eE = (0, S.j)(l.id, X.Rx),
         eC = (0, u.E)(l.id),
         ex = (0, G.A)(),
@@ -111,10 +111,10 @@ function en(e) {
             return null;
         })(l, ef ?? eE ?? eC),
         eI = l.isForumPost() && !eg ? (0, i.jsx)(p.A, { postId: l.id }) : null,
-        eT = (0, f.A)(l.id),
+        eN = (0, f.A)(l.id),
         ev = (0, E.W1)(l);
     (0, J.A)();
-    let eN = null,
+    let eT = null,
         ey = [],
         eb = el.map((e, t) => {
             if (e.type === Z.TZK.DIVIDER) {
@@ -131,7 +131,7 @@ function en(e) {
                               isBeforeGroup: null == e.content && ee(el[t + 1]),
                           })
                         : (0, i.jsx)(
-                              W.A,
+                              z.A,
                               {
                                   isUnread: n,
                                   isBeforeGroup: null == e.content && ee(el[t + 1]),
@@ -171,9 +171,9 @@ function en(e) {
                     )
                 );
             }
-            if (null != eo && eo > e.content.timestamp.getTime() * D.A.Millis.SECOND) return;
-            e.type === Z.TZK.MESSAGE && null == eN && (eN = e);
-            let n = e.groupId === eN?.groupId ? eN.content.id : e.groupId,
+            if (null != eo && eo > e.content.timestamp.getTime() * P.A.Millis.SECOND) return;
+            e.type === Z.TZK.MESSAGE && null == eT && (eT = e);
+            let n = e.groupId === eT?.groupId ? eT.content.id : e.groupId,
                 a = ev && e.content.isFirstMessageInForumPost(l),
                 s = e.type === Z.TZK.THREAD_STARTER_MESSAGE ? B.VO : B.Ay;
             return (0, i.jsx)(
@@ -184,9 +184,9 @@ function en(e) {
                     message: e.content,
                     groupId: n,
                     flashKey: e.flashKey,
-                    id: (0, w.j)(l.id, e.content.id),
+                    id: (0, U.j)(l.id, e.content.id),
                     isLastItem: t >= el.length - 1,
-                    renderContentOnly: eT || a,
+                    renderContentOnly: eN || a,
                 },
                 e.content.id,
             );
@@ -196,7 +196,7 @@ function en(e) {
     if (
         (null != eh &&
             ea.forEach((e, t) => {
-                let n = 0 === t && (0, U.l)(l, ej, new j.Ay({ type: Z.lAJ.DEFAULT, author: eh }));
+                let n = 0 === t && (0, k.l)(l, ej, new j.Ay({ type: Z.lAJ.DEFAULT, author: eh }));
                 ey.push(
                     (0, i.jsx)(et, { file: e, channel: l, user: eh, isGroupStart: n, compact: ei }, `upload-${e.id}`),
                 );
@@ -205,20 +205,20 @@ function en(e) {
     ) {
         m.length > 0 && ey.unshift((0, i.jsx)("div", { style: { height: $.N0, flex: "0 0 auto" } }, "buffer"));
         let { useReducedMotion: e } = c.A;
-        ((e && em()) || !e) && ey.unshift((0, i.jsx)(z.Ay, { compact: ei, ...er }, "has-more"));
+        ((e && em()) || !e) && ey.unshift((0, i.jsx)(W.Ay, { compact: ei, ...er }, "has-more"));
     }
     if (
         ((m.hasMoreBefore && null == eo) ||
             ey.unshift((0, i.jsx)(g.A, { channel: l, showingBanner: ec }, "empty-message")),
-        m.hasMoreAfter && ey.push((0, i.jsx)(z.Ay, { compact: ei, ...er }, "has-more-after")),
+        m.hasMoreAfter && ey.push((0, i.jsx)(W.Ay, { compact: ei, ...er }, "has-more-after")),
         !ec && eA && em() && ey.push((0, i.jsx)(Y.A, { channel: l })),
         H > 0 && en && em())
     ) {
         let e,
             n,
             a = R.Ay.getOldestUnreadTimestamp(l.id),
-            r = 0 !== a ? a : P.default.extractTimestamp(l.id),
-            c = (0, O.ro)(new Date(), new Date(r));
+            r = 0 !== a ? a : O.default.extractTimestamp(l.id),
+            c = (0, D.ro)(new Date(), new Date(r));
         if (
             (R.Ay.isEstimated(l.id)
                 ? ((e = c ? Q.t.wvtbbG : Q.t.tHqbtg), (n = Q.t.vaPWFe))
@@ -243,7 +243,7 @@ function en(e) {
                         c > 0
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "text-sm/medium",
                                           color: "currentColor",
                                           children: Q.intl.format(n, { count: H }),
@@ -253,14 +253,14 @@ function en(e) {
                                           height: 4,
                                           width: 4,
                                       }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "text-sm/medium",
                                           color: "currentColor",
                                           children: Q.intl.format(Q.t.CBftDc, { count: c }),
                                       }),
                                   ],
                               })
-                            : (0, i.jsx)(s.Text, { variant: "text-sm/medium", color: "currentColor", children: a });
+                            : (0, i.jsx)(s.E, { variant: "text-sm/medium", color: "currentColor", children: a });
                     t = (0, i.jsx)(K.OZ, { scrollManager: es, content: e, channel: l });
                 } else {
                     let e = (0, i.jsx)("div", {
@@ -269,7 +269,7 @@ function en(e) {
                             c > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(s.Text, {
+                                          (0, i.jsx)(s.E, {
                                               variant: "text-sm/medium",
                                               color: "currentColor",
                                               children: Q.intl.format(n, { count: H }),
@@ -279,14 +279,14 @@ function en(e) {
                                               height: 4,
                                               width: 4,
                                           }),
-                                          (0, i.jsx)(s.Text, {
+                                          (0, i.jsx)(s.E, {
                                               variant: "text-sm/medium",
                                               color: "currentColor",
                                               children: Q.intl.format(Q.t.CBftDc, { count: c }),
                                           }),
                                       ],
                                   })
-                                : (0, i.jsx)(s.Text, { variant: "text-sm/medium", color: "currentColor", children: a }),
+                                : (0, i.jsx)(s.E, { variant: "text-sm/medium", color: "currentColor", children: a }),
                     });
                     t = (0, i.jsx)(K.GN, { content: e, channelId: l.id });
                 }
@@ -309,7 +309,7 @@ function en(e) {
                 var e;
                 return (
                     (e = l.id),
-                    void r.A.fetchMessages({ channelId: e, limit: (0, k.h)("renderStream.reload"), truncate: !0 })
+                    void r.A.fetchMessages({ channelId: e, limit: (0, w.h)("renderStream.reload"), truncate: !0 })
                 );
             },
             className: eu,
@@ -331,7 +331,7 @@ function en(e) {
                         onClick: () => {
                             let e;
                             return (
-                                r.A.jumpToPresent(l.id, (0, k.h)("renderStream.jumpToPresent")),
+                                r.A.jumpToPresent(l.id, (0, w.h)("renderStream.jumpToPresent")),
                                 (e = M.A.getChannelId()),
                                 void (l.id === e && (0, C.iN)(l.id))
                             );

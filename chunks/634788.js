@@ -1,64 +1,63 @@
-"use strict";
-n.d(t, { GM: () => l, wZ: () => o });
-var r = n(627968),
-    i = n(64700),
-    a = n(580424);
+n.d(t, { GM: () => u, wZ: () => o });
+var l = n(627968),
+    r = n(64700),
+    i = n(580424);
 n(148355);
 var s = n(985018);
 function o(e) {
     let {
             titleWithQuery: t,
             titleWithoutQuery: n,
-            query: i,
+            query: r,
             getQuery: o,
-            headerClassName: l,
-            headerTrailingContent: u,
+            headerClassName: u,
+            headerTrailingContent: a,
         } = e,
-        c = i.length > 0 ? s.intl.formatToPlainString(t, { prefix: o(i) }) : n;
-    return (0, r.jsx)(a.Ay.Title, { className: l, title: c, children: u }, `autocomplete-title-${c}`);
+        m = r.length > 0 ? s.intl.formatToPlainString(t, { prefix: o(r) }) : n;
+    return (0, l.jsx)(i.Ay.Title, { className: u, title: m, children: a }, `autocomplete-title-${m}`);
 }
-function l(e) {
+function u(e) {
     let {
         query: t,
         selectedIndex: n,
-        autocompletes: a,
+        autocompletes: i,
         onHover: s,
-        onClick: l,
-        titleWithQuery: u,
-        titleWithoutQuery: c,
-        Component: d,
-        getProps: _,
-        getQuery: f,
-        key: p,
-        indexOffset: h = 0,
-        headerClassName: m,
+        onClick: u,
+        titleWithQuery: a,
+        titleWithoutQuery: m,
+        Component: c,
+        getProps: d,
+        getQuery: p,
+        key: y,
+        indexOffset: A = 0,
+        headerClassName: h,
         headerTrailingContent: g,
-        footer: E,
+        footer: M,
     } = e;
-    if (null == E && (null == a || 0 === a.length)) return null;
-    let A = a?.map((e, t) => {
-        let r = t + h,
-            a = _(e, r);
-        return (0, i.createElement)(d, { onClick: l, onHover: s, selected: n === r, index: r, ...a, key: a.key });
+    if (null == M && (null == i || 0 === i.length)) return null;
+    let I = i?.map((e, t) => {
+        let l = t + A,
+            i = d(e, l);
+        return (0, r.createElement)(c, { onClick: u, onHover: s, selected: n === l, index: l, ...i, key: i.key });
     });
-    return (0, r.jsxs)(
-        i.Fragment,
+    return (0, l.jsxs)(
+        r.Fragment,
         {
             children: [
-                null != u && null != c
+                null != a && null != m
                     ? o({
-                          titleWithQuery: u,
-                          titleWithoutQuery: c,
+                          titleWithQuery: a,
+                          titleWithoutQuery: m,
                           query: t,
-                          getQuery: f,
-                          headerClassName: m,
+                          getQuery: p,
+                          headerClassName: h,
                           headerTrailingContent: g,
                       })
                     : null,
-                A,
-                E,
+                I,
+                M,
             ],
         },
-        p,
+        y,
     );
 }

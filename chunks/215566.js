@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var r = n(627968),
-    i = n(158954),
-    a = n(397927),
-    s = n(933297);
-function l(e) {
+    i = n(508770),
+    a = n(777666),
+    l = n(933297);
+function s(e) {
     let { badge: t } = e;
     return t.useCustomBadge();
 }
 function o(e) {
     let { badge: t } = e,
         n = t.useCount();
-    return n <= 0 ? null : (0, r.jsx)(a.hVq, { count: n });
+    return n <= 0 ? null : (0, r.jsx)(a.hV, { count: n });
 }
-let u = function (e) {
+let c = function (e) {
     let { badge: t } = e;
     switch (t.badgeType) {
-        case s.Xi.BETA:
-            return (0, r.jsx)(i.Exy, { type: "beta", variant: "brand" });
-        case s.Xi.COUNT:
+        case l.Xi.BETA:
+            return (0, r.jsx)(i.E, { type: "beta", variant: "brand" });
+        case l.Xi.COUNT:
             return (0, r.jsx)(o, { badge: t });
-        case s.Xi.STRONGLY_DISCOURAGED_CUSTOM:
-            return (0, r.jsx)(l, { badge: t });
+        case l.Xi.STRONGLY_DISCOURAGED_CUSTOM:
+            return (0, r.jsx)(s, { badge: t });
     }
 };

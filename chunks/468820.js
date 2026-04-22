@@ -1,85 +1,88 @@
-n.d(e, { A: () => _ });
+n.d(e, { A: () => x });
 var i = n(627968),
     a = n(64700),
     r = n(503698),
-    l = n.n(r),
-    s = n(397927),
-    d = n(235986),
-    c = n(450565),
-    o = n(878314),
-    m = n(570465),
-    p = n(985018),
-    C = n(651614);
-function g(t) {
+    s = n.n(r),
+    l = n(935462),
+    d = n(534514),
+    c = n(834730),
+    o = n(821609),
+    m = n(235986),
+    p = n(450565),
+    g = n(878314),
+    C = n(570465),
+    _ = n(985018),
+    L = n(439311);
+function u(t) {
     let { guildTemplate: e, onClick: n, autoFocus: r } = t,
-        l = a.useCallback(() => {
+        s = a.useCallback(() => {
             n(e);
         }, [e, n]);
-    return (0, i.jsx)(o.A, { icon: c.a[e.id], message: e.label, onClick: l, autoFocus: r });
+    return (0, i.jsx)(g.A, { icon: p.a[e.id], message: e.label, onClick: s, autoFocus: r });
 }
-function _(t) {
-    let { className: e, isNewUser: n, onClose: a, onChooseTemplate: r, onJoin: c } = t,
-        o = (0, m.p)();
+function x(t) {
+    let { className: e, isNewUser: n, onClose: a, onChooseTemplate: r, onJoin: p } = t,
+        g = (0, C.p)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(s.rQ0, {
+            (0, i.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: d.A.Direction.VERTICAL,
-                className: C.wx,
+                direction: m.A.Direction.VERTICAL,
+                className: L.wx,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(s.Heading, {
-                        className: C.DD,
+                    (0, i.jsx)(d.D, {
+                        className: L.DD,
                         variant: "heading-xl/semibold",
-                        children: n ? p.intl.string(p.t["9U0b1k"]) : p.intl.string(p.t["5HZu07"]),
+                        children: n ? _.intl.string(_.t["9U0b1k"]) : _.intl.string(_.t["5HZu07"]),
                     }),
-                    (0, i.jsx)(s.Text, {
-                        className: C.VA,
+                    (0, i.jsx)(c.E, {
+                        className: L.VA,
                         color: "text-default",
                         variant: "text-md/normal",
-                        children: p.intl.string(p.t["wti/H4"]),
+                        children: _.intl.string(_.t["wti/H4"]),
                     }),
-                    null != a && (0, i.jsx)(s.s_y, { "data-migration-pending": !0, className: C.b, onClick: a }),
+                    null != a && (0, i.jsx)(l.s_, { "data-migration-pending": !0, className: L.b, onClick: a }),
                 ],
             }),
-            (0, i.jsxs)(s.$mQ, {
+            (0, i.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: l()(C.KA, e),
+                className: s()(L.KA, e),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.CREATE], onClick: r, autoFocus: !0 }),
-                    (0, i.jsx)(s.Text, {
-                        className: C.l8,
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.CREATE], onClick: r, autoFocus: !0 }),
+                    (0, i.jsx)(c.E, {
+                        className: L.l8,
                         color: "text-default",
                         variant: "text-xs/bold",
-                        children: p.intl.string(p.t.JGDkfg),
+                        children: _.intl.string(_.t.JGDkfg),
                     }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.GAMING], onClick: r }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.FRIENDS], onClick: r }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.STUDY], onClick: r }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.SCHOOL_CLUB], onClick: r }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.LOCAL_COMMUNITY], onClick: r }),
-                    (0, i.jsx)(g, { guildTemplate: o[m.v.CREATORS], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.GAMING], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.FRIENDS], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.STUDY], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.SCHOOL_CLUB], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.LOCAL_COMMUNITY], onClick: r }),
+                    (0, i.jsx)(u, { guildTemplate: g[C.v.CREATORS], onClick: r }),
                 ],
             }),
-            null != c &&
-                (0, i.jsxs)(s.jlY, {
+            null != p &&
+                (0, i.jsxs)(l.jl, {
                     "data-migration-pending": !0,
-                    className: C.qr,
+                    className: L.qr,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(d.D, {
                             variant: "heading-lg/semibold",
-                            className: C.K8,
-                            children: p.intl.string(p.t["N+Mi/U"]),
+                            className: L.K8,
+                            children: _.intl.string(_.t["N+Mi/U"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: C.wC,
-                            children: (0, i.jsx)(s.Button, {
+                            className: L.wC,
+                            children: (0, i.jsx)(o.$, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: p.intl.string(p.t.riOUtB),
-                                onClick: c,
+                                text: _.intl.string(_.t.riOUtB),
+                                onClick: p,
                             }),
                         }),
                     ],

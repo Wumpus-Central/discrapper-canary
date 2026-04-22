@@ -1,55 +1,55 @@
-n.d(l, { A: () => f });
-var t = n(627968),
-    i = n(64700),
-    s = n(33851),
-    a = n.n(s),
-    r = n(311907),
-    o = n(827734),
-    d = n(397927),
-    c = n(654107),
-    u = n(101058),
-    m = n(84540),
-    x = n(836602),
-    p = n(950191),
-    A = n(101928),
-    g = n(548612);
-function f(e) {
-    let { user: l, guildId: n, disabled: s = !1 } = e,
-        f = (0, p.Ay)(l.id, n),
-        { pendingThemeColors: h, pendingAvatar: j } = (0, r.cf)([x.A], () => {
-            let e = x.A.getPendingChanges(n ?? void 0);
+l.d(n, { A: () => x });
+var t = l(627968),
+    i = l(64700),
+    r = l(33851),
+    s = l.n(r),
+    a = l(311907),
+    o = l(827734),
+    d = l(602853),
+    c = l(654107),
+    u = l(101058),
+    g = l(84540),
+    A = l(836602),
+    m = l(950191),
+    f = l(101928),
+    p = l(548612);
+function x(e) {
+    let { user: n, guildId: l, disabled: r = !1 } = e,
+        x = (0, m.Ay)(n.id, l),
+        { pendingThemeColors: h, pendingAvatar: v } = (0, a.cf)([A.A], () => {
+            let e = A.A.getPendingChanges(l ?? void 0);
             return { pendingThemeColors: e.pendingThemeColors, pendingAvatar: e.pendingAvatar };
         }),
-        v = (0, u.V7)({ userId: l.id, image: j }),
-        { primaryColor: I, secondaryColor: N } = (0, A.A)({
-            user: l,
-            displayProfile: f,
+        j = (0, u.V7)({ userId: n.id, image: v }),
+        { primaryColor: I, secondaryColor: b } = (0, f.A)({
+            user: n,
+            displayProfile: x,
             pendingThemeColors: h,
-            pendingAvatarSrc: v ?? void 0,
+            pendingAvatarSrc: j ?? void 0,
             isPreview: !0,
         }),
-        y = (0, d.rdh)(o.A.unsafe_rawColors.PRIMARY_530).hex(),
-        C = null != v ? v : l.getAvatarURL(n ?? void 0, 80),
-        E = (0, c.rh)(C, y, !1),
-        T = i.useCallback(
+        C = (0, d.r)(o.A.unsafe_rawColors.PRIMARY_530).hex(),
+        N = null != j ? j : n.getAvatarURL(l ?? void 0, 80),
+        y = (0, c.rh)(N, C, !1),
+        E = i.useCallback(
             (e) => {
-                let l = a()(e, f?.themeColors);
-                (0, m.p)({ guildId: n ?? void 0, themeColors: l ? void 0 : e });
+                let n = s()(e, x?.themeColors);
+                (0, g.p)({ guildId: l ?? void 0, themeColors: n ? void 0 : e });
             },
-            [f?.themeColors, n],
+            [x?.themeColors, l],
         );
-    return null == I || null == N
+    return null == I || null == b
         ? null
-        : (0, t.jsx)(g.A, {
+        : (0, t.jsx)(p.A, {
               primaryColor: I,
-              secondaryColor: N,
+              secondaryColor: b,
               onSelectPrimaryColor: (e) => {
-                  e !== I && T([e, N]);
+                  e !== I && E([e, b]);
               },
               onSelectSecondaryColor: (e) => {
-                  e !== N && T([I, e]);
+                  e !== b && E([I, e]);
               },
-              suggestedColors: E,
-              disabled: s,
+              suggestedColors: y,
+              disabled: r,
           });
 }

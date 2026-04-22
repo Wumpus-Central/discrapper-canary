@@ -1,125 +1,129 @@
-r.d(a, { default: () => p });
-var n = r(627968),
-    o = r(64700),
-    t = r(397927),
-    _ = r(843472),
-    s = r(9578),
-    E = r(688810),
-    C = r(429913),
-    l = r(911269),
-    d = r(451909),
-    A = r(223863),
-    c = r(734057),
-    N = r(954571),
-    i = r(957565),
-    O = r(403362),
-    R = r(871123),
-    u = r(366523),
-    I = r(995393),
-    T = r(652215),
-    P = r(381941),
-    f = r(985018),
-    S = r(588187);
+t.d(n, { default: () => w });
+var a = t(627968),
+    o = t(64700),
+    r = t(834730),
+    s = t(173936),
+    i = t(691540),
+    l = t(857250),
+    c = t(97483),
+    _ = t(843472),
+    d = t(9578),
+    u = t(688810),
+    A = t(429913),
+    C = t(911269),
+    E = t(451909),
+    m = t(223863),
+    N = t(734057),
+    p = t(954571),
+    I = t(957565),
+    O = t(403362),
+    f = t(871123),
+    T = t(366523),
+    R = t(995393),
+    h = t(652215),
+    g = t(381941),
+    S = t(985018),
+    P = t(860738);
 function b(e) {
-    let { sku: a, guildId: r } = e,
-        _ = (0, C.h)(a.applicationId),
-        E = o.useMemo(() => (0, R.OY)(r, a), [r, a]);
-    return (0, n.jsxs)("div", {
-        className: S.sq,
+    let { sku: n, guildId: t } = e,
+        i = (0, A.h)(n.applicationId),
+        l = o.useMemo(() => (0, f.OY)(t, n), [t, n]);
+    return (0, a.jsxs)("div", {
+        className: P.sq,
         children: [
-            (0, n.jsxs)("div", {
-                className: S.kx,
+            (0, a.jsxs)("div", {
+                className: P.kx,
                 children: [
-                    (0, n.jsx)(s.A, {
-                        title: a.name,
-                        href: E,
-                        children: (0, n.jsx)(t.Text, {
+                    (0, a.jsx)(d.A, {
+                        title: n.name,
+                        href: l,
+                        children: (0, a.jsx)(r.E, {
                             variant: "text-md/medium",
                             color: "text-link",
                             lineClamp: 1,
-                            children: a.name,
+                            children: n.name,
                         }),
                     }),
-                    (0, n.jsxs)("div", {
-                        className: S.Bo,
+                    (0, a.jsxs)("div", {
+                        className: P.Bo,
                         children: [
-                            (0, n.jsx)(t.qYV, { size: "xs", color: "currentColor", className: S.ds }),
-                            (0, n.jsx)(t.Text, {
+                            (0, a.jsx)(s.q, { size: "xs", color: "currentColor", className: P.ds }),
+                            (0, a.jsx)(r.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: f.intl.formatToPlainString(f.t["CqpEC+"], { applicationName: _?.name }),
+                                children: S.intl.formatToPlainString(S.t["CqpEC+"], { applicationName: i?.name }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(u.e, {
-                containerClassName: S.wP,
-                foregroundImageClassName: S.wP,
-                backgroundImageClassName: S.wP,
-                sku: a,
+            (0, a.jsx)(T.e, {
+                containerClassName: P.wP,
+                foregroundImageClassName: P.wP,
+                backgroundImageClassName: P.wP,
+                sku: n,
                 shape: "square",
             }),
         ],
     });
 }
-function p(e) {
-    let { sku: a, guildId: r, source: s, onClose: C, analyticsLocations: u, analyticsContext: S, ...p } = e,
-        { analyticsLocations: h } = (0, E.Ay)(u ?? []),
-        w = o.useCallback(
-            async (e, n, o) => {
-                let { withMessage: s, closeAfterSend: E } = n;
+function w(e) {
+    let { sku: n, guildId: t, source: r, onClose: d, analyticsLocations: A, analyticsContext: T, ...P } = e,
+        { analyticsLocations: w } = (0, u.Ay)(A ?? []),
+        y = o.useCallback(
+            async (e, a, o) => {
+                let { withMessage: r, closeAfterSend: s } = a;
                 o(!0);
                 try {
-                    let n = (await Promise.all(e.map(A.pk))).filter(O.Vq);
-                    if (0 === n.length) return void o(!1);
-                    E && C();
-                    let l = (0, R.Q6)(r, a);
-                    for (let e of n) {
-                        let a = c.A.getChannel(e);
-                        null != a &&
-                            (await _.A.sendMessage(a.id, d.Ay.parse(a, l + (s ?? "")), !1, {
-                                location: P.Hx.SOCIAL_LAYER_STOREFRONT,
+                    let a = (await Promise.all(e.map(m.pk))).filter(O.Vq);
+                    if (0 === a.length) return void o(!1);
+                    s && d();
+                    let u = (0, f.Q6)(t, n);
+                    for (let e of a) {
+                        let n = N.A.getChannel(e);
+                        null != n &&
+                            (await _.A.sendMessage(n.id, E.Ay.parse(n, u + (r ?? "")), !1, {
+                                location: g.Hx.SOCIAL_LAYER_STOREFRONT,
                             }));
                     }
-                    (0, t.showToast)((0, t.createToast)(f.intl.string(f.t.kwmYkt), t.ToastType.SUCCESS));
+                    (0, i.P0)((0, l.o)(S.intl.string(S.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (e) {
-                    (0, t.showToast)((0, t.createToast)(f.intl.string(f.t.iufib1), t.ToastType.FAILURE));
+                    (0, i.P0)((0, l.o)(S.intl.string(S.t.iufib1), c.Ck.FAILURE));
                 } finally {
                     o(!1);
                 }
             },
-            [C, r, a],
+            [d, t, n],
         ),
-        m = o.useMemo(
+        D = o.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        N.default.track(T.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
-                            slayer_storefront_session_id: S?.sessionId,
-                            guild_id: r,
-                            sku_id: a.id,
-                            cta_type: I.Ng.COPY_LINK_BUTTON,
-                            location_stack: h,
+                        p.default.track(h.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
+                            slayer_storefront_session_id: T?.sessionId,
+                            guild_id: t,
+                            sku_id: n.id,
+                            cta_type: R.Ng.COPY_LINK_BUTTON,
+                            location_stack: w,
                         }),
-                            (0, i.C)((0, R.OY)(r, a), () =>
-                                (0, t.showToast)((0, t.createToast)(f.intl.string(f.t["L/PwZf"]), t.ToastType.SUCCESS)),
+                            (0, I.C)((0, f.OY)(t, n), () =>
+                                (0, i.P0)((0, l.o)(S.intl.string(S.t["L/PwZf"]), c.Ck.SUCCESS)),
                             );
                     },
-                    icon: t.qYV,
+                    icon: s.q,
                 },
             ],
-            [r, a, S?.sessionId, h],
+            [t, n, T?.sessionId, w],
         );
-    return (0, n.jsx)(l.ForwardModal, {
-        ...p,
-        onClose: C,
-        source: s,
-        customPreview: (0, n.jsx)(b, { sku: a, guildId: r }),
-        customSubtitle: f.intl.string(f.t.yiaXeN),
-        customSendHandler: w,
-        additionalActions: m,
+    return (0, a.jsx)(C.ForwardModal, {
+        ...P,
+        onClose: d,
+        source: r,
+        customPreview: (0, a.jsx)(b, { sku: n, guildId: t }),
+        customSubtitle: S.intl.string(S.t.yiaXeN),
+        customSendHandler: y,
+        additionalActions: D,
     });
 }

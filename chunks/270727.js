@@ -1,10 +1,10 @@
-l.d(t, { h2: () => u });
+l.d(t, { h2: () => d });
 var a = l(627968),
     n = l(64700),
-    r = l(732955),
+    r = l(821609),
     i = l(448362),
-    s = l(749226);
-let o = {
+    o = l(439519);
+let s = {
         balance: { label: "Balance", type: "number", defaultValue: 150 },
         balanceWidgetMode: {
             label: "Balance Widget Mode",
@@ -19,49 +19,49 @@ let o = {
         shouldUseTabularNums: { label: "Use Tabular Nums Font Variant", type: "boolean", defaultValue: !1 },
         disabled: { label: "Disabled", type: "boolean", defaultValue: !1 },
     },
-    u = {
+    d = {
         title: "Balance Widget Pill",
         stories: [
             {
                 name: "Balance Widget Pill",
                 id: "balance-widget-pill",
                 component: (e) => {
-                    let { loading: t, shouldUseTabularNums: l, ...o } = e,
-                        [u, c] = (0, n.useState)(o.balance);
+                    let { loading: t, shouldUseTabularNums: l, ...s } = e,
+                        [d, c] = (0, n.useState)(s.balance);
                     return (
                         (0, n.useEffect)(() => {
-                            null == u && null != o.balance && c(o.balance);
-                        }, [o.balance, u]),
+                            null == d && null != s.balance && c(s.balance);
+                        }, [s.balance, d]),
                         (0, a.jsxs)("div", {
-                            className: s.YG,
+                            className: o.YG,
                             children: [
-                                (0, a.jsx)(i.Gy, { ...o, balance: t ? null : u, className: l ? s.jG : void 0 }),
-                                (0, a.jsx)(r.$nd, { onClick: () => c(o.balance), text: "Update Balance" }),
+                                (0, a.jsx)(i.Gy, { ...s, balance: t ? null : d, className: l ? o.jG : void 0 }),
+                                (0, a.jsx)(r.$, { onClick: () => c(s.balance), text: "Update Balance" }),
                             ],
                         })
                     );
                 },
-                controls: { loading: { label: "Loading", type: "boolean", defaultValue: !1 }, ...o },
+                controls: { loading: { label: "Loading", type: "boolean", defaultValue: !1 }, ...s },
             },
             {
                 name: "Balance Widget Pill Loading State",
                 id: "balance-widget-pill-loading",
                 component: (e) => {
-                    let { loadingDuration: t, shouldUseTabularNums: l, ...o } = e,
-                        [u, c] = (0, n.useState)(o.balance);
+                    let { loadingDuration: t, shouldUseTabularNums: l, ...s } = e,
+                        [d, c] = (0, n.useState)(s.balance);
                     return (
                         (0, n.useEffect)(() => {
-                            c(o.balance);
-                        }, [o.balance]),
+                            c(s.balance);
+                        }, [s.balance]),
                         (0, a.jsxs)("div", {
-                            className: s.YG,
+                            className: o.YG,
                             children: [
-                                (0, a.jsx)(i.Gy, { ...o, balance: u, className: l ? s.jG : void 0 }),
-                                (0, a.jsx)(r.$nd, {
+                                (0, a.jsx)(i.Gy, { ...s, balance: d, className: l ? o.jG : void 0 }),
+                                (0, a.jsx)(r.$, {
                                     onClick: () => {
                                         c(null),
                                             setTimeout(() => {
-                                                c(o.balance);
+                                                c(s.balance);
                                             }, t);
                                     },
                                     text: "Simulate Loading State",
@@ -72,7 +72,7 @@ let o = {
                 },
                 controls: {
                     loadingDuration: { label: "Loading Duration (ms)", type: "number", defaultValue: 500 },
-                    ...o,
+                    ...s,
                 },
             },
         ],

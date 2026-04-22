@@ -1,80 +1,81 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
     a = n(990078),
-    o = n(397927),
-    l = n(705751),
-    u = n(985018),
-    c = n(401089);
-let d = (e) => {
+    o = n(820081),
+    l = n(827734),
+    u = n(705751),
+    d = n(985018),
+    c = n(763697);
+let _ = (e) => {
     let {
             invertColor: t = !1,
-            type: n = l.nu.BOT,
+            type: n = u.nu.BOT,
             className: i,
-            verified: d,
-            hideIcon: _ = !1,
-            useRemSizes: f = !1,
-            children: p = [],
+            verified: _,
+            hideIcon: f = !1,
+            useRemSizes: E = !1,
+            children: h = [],
         } = e,
-        h = null,
-        m = u.intl.string(u.t.g76OcH),
-        E = t ? c.i$ : c.GD;
+        p = null,
+        m = d.intl.string(d.t.g76OcH),
+        g = t ? c.i$ : c.GD;
     switch (n) {
-        case l.nu.SYSTEM_DM:
-        case l.nu.OFFICIAL:
-            (d = !0), (m = u.intl.string(u.t["7s687k"])), (h = u.intl.string(u.t.lKQ7Wt));
+        case u.nu.SYSTEM_DM:
+        case u.nu.OFFICIAL:
+            (_ = !0), (m = d.intl.string(d.t["7s687k"])), (p = d.intl.string(d.t.lKQ7Wt));
             break;
-        case l.nu.SERVER:
-            h = u.intl.string(u.t.PuJGuM);
+        case u.nu.SERVER:
+            p = d.intl.string(d.t.PuJGuM);
             break;
-        case l.nu.ORIGINAL_POSTER:
-            h = u.intl.string(u.t.fyE8sH);
+        case u.nu.ORIGINAL_POSTER:
+            p = d.intl.string(d.t.fyE8sH);
             break;
-        case l.nu.STAFF_ONLY_DM:
-            h = u.intl.string(u.t.oMx98L);
+        case u.nu.STAFF_ONLY_DM:
+            p = d.intl.string(d.t.oMx98L);
             break;
-        case l.nu.NOT_STAFF_WARNING:
-            (h = u.intl.string(u.t.UWhXbK)), (E = c.Zi);
+        case u.nu.NOT_STAFF_WARNING:
+            (p = d.intl.string(d.t.UWhXbK)), (g = c.Zi);
             break;
-        case l.nu.BOT:
+        case u.nu.BOT:
         default:
-            h = u.intl.string(u.t["9RNkeF"]);
+            p = d.intl.string(d.t["9RNkeF"]);
     }
-    let g = n === l.nu.ORIGINAL_POSTER,
-        A = null;
-    d &&
-        (A = (0, r.jsx)(a.m, {
+    let A = n === u.nu.ORIGINAL_POSTER,
+        I = null;
+    _ &&
+        (I = (0, r.jsx)(a.m, {
             text: m,
             align: "center",
             position: "top",
-            children: (0, r.jsx)(o.BNr, { className: c.go, color: o.LU0.colors.WHITE }),
+            children: (0, r.jsx)(o.B, { className: c.go, color: l.A.colors.WHITE }),
         }));
-    let I = null;
-    if (d) I = m;
-    else if ("string" == typeof h)
+    let T = null;
+    if (_) T = m;
+    else if ("string" == typeof p)
         switch (n) {
-            case l.nu.BOT:
-                I = u.intl.string(u.t.qwJHjo);
+            case u.nu.BOT:
+                T = d.intl.string(d.t.qwJHjo);
                 break;
-            case l.nu.SERVER:
-                I = u.intl.string(u.t["39trQT"]);
+            case u.nu.SERVER:
+                T = d.intl.string(d.t["39trQT"]);
                 break;
             default:
-                I = h;
+                T = p;
         }
-    let T = () =>
+    let S = () =>
         (0, r.jsxs)("span", {
             role: "img",
-            "aria-label": I ?? void 0,
-            className: s()(i, E, f ? c.D0 : c.px, { [c.rV]: g }),
-            children: [_ ? null : A, p, (0, r.jsx)("span", { className: c.lc, children: h })],
+            "aria-label": T ?? void 0,
+            className: s()(i, g, E ? c.D0 : c.px, { [c.rV]: A }),
+            children: [f ? null : I, h, (0, r.jsx)("span", { className: c.lc, children: p })],
         });
-    return n === l.nu.ORIGINAL_POSTER
-        ? (0, r.jsx)(a.m, { text: u.intl.string(u.t.uN6Emt), position: "top", asContainer: !0, children: T() })
-        : T();
+    return n === u.nu.ORIGINAL_POSTER
+        ? (0, r.jsx)(a.m, { text: d.intl.string(d.t.uN6Emt), position: "top", asContainer: !0, children: S() })
+        : S();
 };
-d.Types = l.nu;
-let _ = d;
+_.Types = u.nu;
+let f = _;

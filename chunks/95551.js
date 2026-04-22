@@ -1,15 +1,18 @@
-n.d(t, { Gs: () => m, N3: () => u, eE: () => c });
-var a = n(627968),
+n.d(t, { Gs: () => _, N3: () => m, eE: () => h });
+var i = n(627968),
     s = n(64700),
-    i = n(934551),
-    l = n(397927),
-    r = n(993401),
-    o = n(985018),
-    d = n(423648);
-function c(e) {
-    return (0, a.jsx)("div", {
-        className: d.wE,
-        children: (0, a.jsx)(l.W1t, {
+    l = n(320448),
+    a = n(861672),
+    r = n(834730),
+    o = n(939249),
+    d = n(265872),
+    c = n(993401),
+    u = n(985018),
+    p = n(447349);
+function h(e) {
+    return (0, i.jsx)("div", {
+        className: p.wE,
+        children: (0, i.jsx)(a.W, {
             "data-menu-migrated": !0,
             variant: "fixed",
             hideScroller: !0,
@@ -18,112 +21,105 @@ function c(e) {
         }),
     });
 }
-function u(e) {
-    let { action: t, onClick: n, icon: c, label: u, sublabel: m, trailing: h, renderSubmenu: x, ref: p } = e,
+function m(e) {
+    let { action: t, onClick: n, icon: a, label: h, sublabel: m, trailing: _, renderSubmenu: A, ref: f } = e,
         g = null != n,
-        _ = (0, r.rE)({ action: t, onClick: n }),
-        [f, v] = s.useState(!1),
-        b = s.useRef(null),
-        j = p ?? b,
-        A = null != x,
-        C = A && g,
-        S = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
-        T = s.useCallback(() => {
-            v(!0);
+        x = (0, c.rE)({ action: t, onClick: n }),
+        [E, C] = s.useState(!1),
+        T = s.useRef(null),
+        v = f ?? T,
+        S = null != A,
+        b = S && g,
+        j = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
+        I = s.useCallback(() => {
+            C(!0);
         }, []),
-        y = s.useCallback(() => {
-            v(!1);
+        R = s.useCallback(() => {
+            C(!1);
         }, []),
         N = () =>
-            (0, a.jsxs)(a.Fragment, {
+            (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, a.jsx)("div", {
-                        className: d.iA,
-                        children: (0, a.jsx)(c, { size: "xs", color: "currentColor" }),
+                    (0, i.jsx)("div", {
+                        className: p.iA,
+                        children: (0, i.jsx)(a, { size: "xs", color: "currentColor" }),
                     }),
-                    (0, a.jsxs)("div", {
-                        className: d.$H,
+                    (0, i.jsxs)("div", {
+                        className: p.$H,
                         children: [
-                            (0, a.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(l.Text, {
+                                    (0, i.jsx)(r.E, {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
-                                        className: d.W1,
-                                        children: u,
+                                        className: p.W1,
+                                        children: h,
                                     }),
-                                    (0, a.jsx)(l.Text, {
-                                        color: "currentColor",
-                                        variant: "text-xs/medium",
-                                        children: m,
-                                    }),
+                                    (0, i.jsx)(r.E, { color: "currentColor", variant: "text-xs/medium", children: m }),
                                 ],
                             }),
-                            h,
+                            _,
                         ],
                     }),
                 ],
             }),
-        E = (e) => {
+        y = (e) => {
             let t;
             return (
-                (t = C
-                    ? (0, a.jsxs)(a.Fragment, {
+                (t = b
+                    ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, a.jsx)(l.DUT, {
-                                  className: d.ef,
-                                  onClick: _,
-                                  focusProps: { offset: { ...S.offset, right: 0 } },
+                              (0, i.jsx)(o.D, {
+                                  className: p.ef,
+                                  onClick: x,
+                                  focusProps: { offset: { ...j.offset, right: 0 } },
                                   children: N(),
                               }),
-                              (0, a.jsx)(l.DUT, {
-                                  className: d.ap,
-                                  "aria-label": o.intl.string(o.t.PdRCRg),
+                              (0, i.jsx)(o.D, {
+                                  className: p.ap,
+                                  "aria-label": u.intl.string(u.t.PdRCRg),
                                   ...e,
-                                  onClick: T,
-                                  focusProps: S,
-                                  children: (0, a.jsx)(i.ChevronSmallRightIcon, { size: "xs", color: "currentColor" }),
+                                  onClick: I,
+                                  focusProps: j,
+                                  children: (0, i.jsx)(l._, { size: "xs", color: "currentColor" }),
                               }),
                           ],
                       })
-                    : A
-                      ? (0, a.jsxs)(l.DUT, {
-                            className: d.ef,
+                    : S
+                      ? (0, i.jsxs)(o.D, {
+                            className: p.ef,
                             ...e,
-                            onClick: T,
-                            focusProps: S,
+                            onClick: I,
+                            focusProps: j,
                             children: [
                                 N(),
-                                (0, a.jsx)("div", {
-                                    className: d.ap,
-                                    children: (0, a.jsx)(i.ChevronSmallRightIcon, {
-                                        size: "xs",
-                                        color: "currentColor",
-                                    }),
+                                (0, i.jsx)("div", {
+                                    className: p.ap,
+                                    children: (0, i.jsx)(l._, { size: "xs", color: "currentColor" }),
                                 }),
                             ],
                         })
-                      : (0, a.jsx)(l.DUT, { className: d.ef, onClick: _, focusProps: S, children: N() })),
-                (0, a.jsx)("div", { ref: j, className: d.jG, children: t })
+                      : (0, i.jsx)(o.D, { className: p.ef, onClick: x, focusProps: j, children: N() })),
+                (0, i.jsx)("div", { ref: v, className: p.jG, children: t })
             );
         };
-    return A
-        ? (0, a.jsx)("li", {
-              className: d.j$,
-              onMouseEnter: T,
-              onMouseLeave: y,
-              children: (0, a.jsx)(l.YNO, {
-                  targetElementRef: j,
+    return S
+        ? (0, i.jsx)("li", {
+              className: p.j$,
+              onMouseEnter: I,
+              onMouseLeave: R,
+              children: (0, i.jsx)(d.Y, {
+                  targetElementRef: v,
                   spacing: 0,
-                  renderPopout: x,
-                  shouldShow: f,
-                  onRequestClose: y,
-                  children: E,
+                  renderPopout: A,
+                  shouldShow: E,
+                  onRequestClose: R,
+                  children: y,
               }),
           })
-        : (0, a.jsx)("li", { className: d.j$, children: E() });
+        : (0, i.jsx)("li", { className: p.j$, children: y() });
 }
-function m(e) {
+function _(e) {
     let { children: t, "aria-label": n } = e;
-    return (0, a.jsx)("ul", { "aria-label": n, children: t });
+    return (0, i.jsx)("ul", { "aria-label": n, children: t });
 }

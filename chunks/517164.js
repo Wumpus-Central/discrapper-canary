@@ -1,61 +1,25 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => f });
 var r = n(311907),
     i = n(73153),
-    a = n(83971);
-let s = new Map(),
+    s = n(83971);
+let a = new Map(),
     o = new Set(),
     l = null,
     u = !1,
-    c = !1;
-function d(e) {
-    let { userId: t } = e;
-    o.add(t);
+    d = !1;
+function c() {
+    (a = new Map()), (o = new Set()), (l = null), (u = !1);
 }
-function _(e) {
-    let { outbox: t, userId: n } = e;
-    s.set(n, { ...t, lastFetched: Date.now() }), o.delete(n);
-}
-function f(e) {
-    let { userId: t } = e;
-    o.delete(t);
-}
-function p() {
-    (l = null), (u = !0);
-}
-function h(e) {
-    let { entry: t, userId: n } = e;
-    l = null;
-    let r = s.get(n);
-    if (null == r) return !1;
-    let i = r.entries.filter((e) => e.id !== t.id);
-    s.set(n, { ...r, entries: i }), (u = !1);
-}
-function m(e) {
-    let { error: t } = e;
-    (l = t), (u = !1);
-}
-function g() {
-    (l = null), (u = !1);
-}
-function E() {
-    (s = new Map()), (o = new Set()), (l = null), (u = !1);
-}
-function A() {
-    E(), (c = !0);
-}
-function I() {
-    E();
-}
-class T extends r.Ay.Store {
+class _ extends r.Ay.Store {
     static displayName = "ContentInventoryOutboxStore";
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
-            r = s.get(n);
-        if (null != r && null != t) return (0, a.nU)(r.entries, t);
+            r = a.get(n);
+        if (null != r && null != t) return (0, s.nU)(r.entries, t);
     }
     getUserOutbox(e) {
-        return s.get(e);
+        return a.get(e);
     }
     isFetchingUserOutbox(e) {
         return o.has(e);
@@ -67,17 +31,44 @@ class T extends r.Ay.Store {
         return u;
     }
     get hasInitialized() {
-        return c;
+        return d;
     }
 }
-let y = new T(i.h, {
-    CONNECTION_OPEN: A,
-    LOGOUT: I,
-    CONTENT_INVENTORY_FETCH_OUTBOX_START: d,
-    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: _,
-    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: f,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: p,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: h,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: m,
-    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: g,
+let f = new _(i.h, {
+    CONNECTION_OPEN: function () {
+        c(), (d = !0);
+    },
+    LOGOUT: function () {
+        c();
+    },
+    CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
+        let { userId: t } = e;
+        o.add(t);
+    },
+    CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: function (e) {
+        let { outbox: t, userId: n } = e;
+        a.set(n, { ...t, lastFetched: Date.now() }), o.delete(n);
+    },
+    CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function (e) {
+        let { userId: t } = e;
+        o.delete(t);
+    },
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
+        (l = null), (u = !0);
+    },
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
+        let { entry: t, userId: n } = e;
+        l = null;
+        let r = a.get(n);
+        if (null == r) return !1;
+        let i = r.entries.filter((e) => e.id !== t.id);
+        a.set(n, { ...r, entries: i }), (u = !1);
+    },
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
+        let { error: t } = e;
+        (l = t), (u = !1);
+    },
+    CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
+        (l = null), (u = !1);
+    },
 });

@@ -1,61 +1,62 @@
-n.d(t, { D: () => M });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { D: () => S });
+var i = n(627968),
+    l = n(64700),
     a = n(311907),
-    r = n(397927),
-    d = n(714114),
+    r = n(834730),
+    d = n(477782),
+    o = n(714114),
     s = n(323073),
-    o = n(47167),
-    u = n(262763),
-    c = n(323443),
-    A = n(332789),
-    g = n(10862),
-    b = n(70963),
-    m = n(961350),
-    E = n(576705),
-    f = n(977997),
-    h = n(652215),
-    x = n(212590);
-function C(e) {
+    u = n(47167),
+    c = n(262763),
+    A = n(323443),
+    g = n(332789),
+    f = n(10862),
+    E = n(70963),
+    b = n(961350),
+    x = n(576705),
+    m = n(977997),
+    C = n(652215),
+    I = n(756699);
+function h(e) {
     let { channel: t } = e,
-        n = (0, o.Ay)(t);
-    return (0, l.jsxs)("div", {
-        className: x.W,
+        n = (0, u.Ay)(t);
+    return (0, i.jsxs)("div", {
+        className: I.W,
         children: [
-            (0, l.jsx)(g.A, { channel: t, color: "currentColor", size: "xs", className: x.p }),
-            (0, l.jsx)(r.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: n }),
+            (0, i.jsx)(f.A, { channel: t, color: "currentColor", size: "xs", className: I.p }),
+            (0, i.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: n }),
         ],
     });
 }
-function M(e) {
+function S(e) {
     let { userId: t } = e,
-        { voiceChannel: n } = (0, d.A)({ userId: t }),
-        o = (0, a.bG)([E.A], () => {
+        { voiceChannel: n } = (0, o.A)({ userId: t }),
+        r = (0, a.bG)([x.A], () => {
             if (null == n) return !1;
             let e = (0, s.r9)() && (0, s.UK)(n.id);
-            return (n.isPrivate() || E.A.can(h.xBc.CONNECT, n)) && !e;
+            return (n.isPrivate() || x.A.can(C.xBc.CONNECT, n)) && !e;
         }),
-        g = (0, a.bG)([f.A], () => f.A.isInChannel(n?.id)),
-        x = (0, a.bG)([m.default], () => m.default.getId() === t),
-        M = i.useCallback(() => {
+        u = (0, a.bG)([m.A], () => m.A.isInChannel(n?.id)),
+        f = (0, a.bG)([b.default], () => b.default.getId() === t),
+        I = l.useCallback(() => {
             null != n &&
                 (n.isGuildStageVoice()
-                    ? (0, c.av)(n)
-                    : u.A.handleVoiceConnect({
+                    ? (0, A.av)(n)
+                    : c.A.handleVoiceConnect({
                           channel: n,
-                          connected: g,
+                          connected: u,
                           needSubscriptionToAccess: !1,
                           routeDirectlyToChannel: !0,
                           bypassChangeModal: !0,
                       }));
-        }, [n, g]),
-        { enabled: p } = (0, A.j)("useJoinVoiceItem");
-    return p && o && !x && null != n
-        ? (0, l.jsx)(r.Drp, {
+        }, [n, u]),
+        { enabled: S } = (0, g.j)("useJoinVoiceItem");
+    return S && r && !f && null != n
+        ? (0, i.jsx)(d.Dr, {
               id: "join-voice",
-              label: g ? (0, b.om)(n) : (0, b.M)(n),
-              subtext: (0, l.jsx)(C, { channel: n }),
-              action: M,
+              label: u ? (0, E.om)(n) : (0, E.M)(n),
+              subtext: (0, i.jsx)(h, { channel: n }),
+              action: I,
           })
         : null;
 }

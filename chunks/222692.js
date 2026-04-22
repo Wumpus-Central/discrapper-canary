@@ -2,13 +2,13 @@
 n.d(t, { A: () => l });
 var r = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(430452),
-    s = n(731854),
+var i = n(192308),
+    s = n(430452),
+    a = n(731854),
     o = n(985018);
 function l(e) {
-    a.Ay.supports(s.O5.VIDEO)
-        ? (0, i.mMO)(async () => {
+    s.Ay.supports(a.O5.VIDEO)
+        ? (0, i.openModalLazy)(async () => {
               let { default: t } = await n.e("11487").then(n.bind(n, 792866));
               return (n) =>
                   (0, r.jsx)(t, {
@@ -19,17 +19,17 @@ function l(e) {
                       onConfirm: e,
                   });
           })
-        : (0, i.mMO)(async () => {
+        : (0, i.openModalLazy)(async () => {
               let { default: t } = await n.e("11487").then(n.bind(n, 792866));
-              return (a) =>
+              return (s) =>
                   (0, r.jsx)(t, {
-                      ...a,
+                      ...s,
                       header: o.intl.string(o.t.XLw6FF),
                       body: o.intl.string(o.t.wVjKGi),
                       confirmText: o.intl.string(o.t["BK8LK+"]),
                       onConfirm: () => {
                           e?.(),
-                              (0, i.mMO)(async () => {
+                              (0, i.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(
                                       n.bind(n, 987482),
                                   );

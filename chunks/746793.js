@@ -1,30 +1,32 @@
-n.d(t, { A: () => O }), n(321073);
+n.d(t, { A: () => R }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(503698),
-    a = n.n(r),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(735438),
     o = n.n(s),
     d = n(311907),
-    c = n(506774),
-    u = n(397927),
-    A = n(785796),
-    h = n(775602),
-    _ = n(142120),
+    u = n(506774),
+    c = n(475358),
+    A = n(349288),
+    h = n(274997),
+    _ = n(785796),
+    E = n(775602),
+    p = n(142120),
     m = n(552122),
     g = n(400492),
-    p = n(312671),
-    E = n(210714),
-    I = n(773669),
-    f = n(437959),
-    C = n(828184),
-    T = n(723702),
-    S = n(837921),
-    N = n(902811),
-    x = n(652215),
+    I = n(312671),
+    C = n(210714),
+    f = n(773669),
+    T = n(437959),
+    S = n(828184),
+    N = n(723702),
+    O = n(837921),
+    L = n(902811),
+    y = n(652215),
     v = n(985018),
-    b = n(540528);
-class y extends l.PureComponent {
+    b = n(417376);
+class D extends r.PureComponent {
     videoRef = null;
     _noProblemsTimeout = null;
     _problemsTimeout = null;
@@ -36,12 +38,12 @@ class y extends l.PureComponent {
             v.intl.string(v.t["RLx6+Y"]),
             v.intl.string(v.t.Q1PZkN),
             v.intl.string(v.t.x7sfVg),
-            v.intl.format(v.t.PHuQsQ, { tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: b.P }, t) }),
+            v.intl.format(v.t.PHuQsQ, { tabHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "tab", className: b.P }, t) }),
             v.intl.string(v.t["il/GZt"]),
             v.intl.string(v.t["5qAKlq"]),
             v.intl.format(v.t.FVVp79, {
-                F6Hook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "f6", className: b.P }, t),
-                tabHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "tab", className: b.P }, t),
+                F6Hook: (e, t) => (0, i.jsx)(c.e, { shortcut: "f6", className: b.P }, t),
+                tabHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "tab", className: b.P }, t),
             }),
             v.intl.string(v.t["7Y1hFH"]),
             v.intl.string(v.t.UcCW71),
@@ -84,30 +86,30 @@ class y extends l.PureComponent {
             v.intl.string(v.t.f8ao58),
             v.intl.format(v.t["1v1h8o"], { asterisks: "**" }),
             v.intl.format(v.t.MUlAVW, {
-                quickSwitcherHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+k", className: b.P }, t),
+                quickSwitcherHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "mod+k", className: b.P }, t),
             }),
             v.intl.format(v.t.aes5VI, {
-                markUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "alt+click", className: b.P }, t),
+                markUnreadHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "alt+click", className: b.P }, t),
             }),
             v.intl.format(v.t.md9Svv, {
-                markServerUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+esc", className: b.P }, t),
+                markServerUnreadHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "shift+esc", className: b.P }, t),
             }),
             v.intl.format(v.t["X0Tu+u"], {
-                navigateUnreadHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+alt+up", className: b.P }, t),
-                downHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "down", className: b.P }, t),
+                navigateUnreadHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "shift+alt+up", className: b.P }, t),
+                downHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "down", className: b.P }, t),
             }),
             v.intl.format(v.t.AkoeIY, {
-                keyboardShortcutsHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "mod+/", className: b.P }, t),
+                keyboardShortcutsHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "mod+/", className: b.P }, t),
             }),
             v.intl.format(v.t.P9sfAH, {
-                messageNewlineHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift+return", className: b.P }, t),
+                messageNewlineHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "shift+return", className: b.P }, t),
             }),
             v.intl.format(v.t["3Ox33f"], {
-                shiftHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "shift", className: b.P }, t),
+                shiftHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "shift", className: b.P }, t),
             }),
-            v.intl.format(v.t.enCV6b, { upHook: (e, t) => (0, i.jsx)(u.e7I, { shortcut: "up", className: b.P }, t) }),
+            v.intl.format(v.t.enCV6b, { upHook: (e, t) => (0, i.jsx)(c.e, { shortcut: "up", className: b.P }, t) }),
         ];
-        return I.default.locale.startsWith("en-") && e.push(v.intl.string(v.t.dQ9Wqk)), e[o().random(e.length - 1)];
+        return f.default.locale.startsWith("en-") && e.push(v.intl.string(v.t.dQ9Wqk)), e[o().random(e.length - 1)];
     })();
     _eventLoadingText = (function () {
         let e = m.A.getLoadingTips();
@@ -124,30 +126,30 @@ class y extends l.PureComponent {
         return (t.volume = 1), t;
     }
     componentDidMount() {
-        this.setProblemsTimeout(), this.props.connected && (0, E.D)();
+        this.setProblemsTimeout(), this.props.connected && (0, C.D)();
     }
     componentDidUpdate(e, t) {
-        let { ready: n, hide: i, problems: l } = this.state,
-            { connected: r, soundpack: a } = this.props,
-            s = r && n && !i && !l;
-        e.soundpack !== a && (this._connectedSound = this.createSound()),
-            e.connected !== r || s
-                ? (r && (0, E.D)(),
-                  r && null != this.videoRef && c.w.get(x.wqg) && this._connectedSound.play(),
-                  this.setState({ problems: !1, hide: r }))
+        let { ready: n, hide: i, problems: r } = this.state,
+            { connected: a, soundpack: l } = this.props,
+            s = a && n && !i && !r;
+        e.soundpack !== l && (this._connectedSound = this.createSound()),
+            e.connected !== a || s
+                ? (a && (0, C.D)(),
+                  a && null != this.videoRef && u.w.get(y.wqg) && this._connectedSound.play(),
+                  this.setState({ problems: !1, hide: a }))
                 : t.hide !== i
                   ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(),
                     this.setState({ shouldRender: !0 }),
                     setTimeout(() => this.setState({ shouldRender: !i }), 200))
-                  : t.problems !== l && l && A.A.checkIncidents();
+                  : t.problems !== r && r && _.A.checkIncidents();
     }
     componentWillUnmount() {
         this.clearProblemsTimeout();
     }
     handleReady = () => {
         this.setState({ ready: !0 }),
-            (0, T.isDesktop)() &&
-                (S.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), S.Ay.send("UPDATE_OPEN_ON_STARTUP"));
+            (0, N.isDesktop)() &&
+                (O.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), O.Ay.send("UPDATE_OPEN_ON_STARTUP"));
     };
     setVideoRef = (e) => {
         this.videoRef = e;
@@ -164,11 +166,11 @@ class y extends l.PureComponent {
             { hide: n } = this.state;
         if (!this.state.shouldRender) return null;
         {
-            let l = this._loadingText,
-                r = null;
+            let r = this._loadingText,
+                a = null;
             return (
-                null != this._eventLoadingText && (l = this._eventLoadingText),
-                null != t && ((l = t.name), (r = t.incident_updates[0].body)),
+                null != this._eventLoadingText && (r = this._eventLoadingText),
+                null != t && ((r = t.name), (a = t.incident_updates[0].body)),
                 (0, i.jsxs)("div", {
                     className: b.kL,
                     "data-fade": n,
@@ -180,12 +182,12 @@ class y extends l.PureComponent {
                         (0, i.jsxs)("div", {
                             className: b.Qs,
                             children: [
-                                (0, i.jsx)(N.A, {
+                                (0, i.jsx)(L.A, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(b.bE, this.state.ready ? b.Gc : ""),
+                                    className: l()(b.bE, this.state.ready ? b.Gc : ""),
                                 }),
                                 (0, i.jsxs)("div", {
                                     className: b.Qq,
@@ -196,36 +198,32 @@ class y extends l.PureComponent {
                                                   className: b.mu,
                                                   children: v.intl.string(v.t.v0R1Lh),
                                               }),
-                                        (0, i.jsx)("div", { className: null != t ? b.DD : b.uN, children: l }),
-                                        (0, i.jsx)("div", { className: b.rf, children: r }),
+                                        (0, i.jsx)("div", { className: null != t ? b.DD : b.uN, children: r }),
+                                        (0, i.jsx)("div", { className: b.rf, children: a }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: a()(b.Bk, { [b.ly]: this.state.problems }),
+                            className: l()(b.Bk, { [b.ly]: this.state.problems }),
                             children: [
                                 (0, i.jsx)("div", { className: b.u1, children: v.intl.string(v.t.AG2zPM) }),
                                 (0, i.jsxs)("div", {
                                     children: [
-                                        (0, i.jsxs)(u.MzZ, {
+                                        (0, i.jsxs)(A.Anchor, {
                                             className: b.AR,
-                                            href: x.qF7.TWITTER_SUPPORT,
+                                            href: y.qF7.TWITTER_SUPPORT,
                                             target: "_blank",
                                             children: [
-                                                (0, i.jsx)(u.p3p, {
-                                                    size: "xs",
-                                                    color: "currentColor",
-                                                    className: b.Kk,
-                                                }),
+                                                (0, i.jsx)(h.p, { size: "xs", color: "currentColor", className: b.Kk }),
                                                 v.intl.string(v.t.KlyTbj),
                                             ],
                                         }),
-                                        (0, i.jsxs)(u.MzZ, {
+                                        (0, i.jsxs)(A.Anchor, {
                                             className: b.gy,
-                                            href: x.qF7.STATUS,
+                                            href: y.qF7.STATUS,
                                             target: "_blank",
-                                            children: [(0, i.jsx)(C.A, { className: b.Kk }), v.intl.string(v.t.AgXXyy)],
+                                            children: [(0, i.jsx)(S.A, { className: b.Kk }), v.intl.string(v.t.AgXXyy)],
                                         }),
                                     ],
                                 }),
@@ -237,13 +235,13 @@ class y extends l.PureComponent {
         }
     }
 }
-let O = d.Ay.connectStores([_.A, f.A, p.A, h.A], () => ({
-    isTryingToConnect: _.A.isTryingToConnect(),
-    connected: _.A.isConnected(),
-    incident: f.A.getIncident(),
-    soundpack: p.A.getSoundpack(),
-    reducedMotion: h.A.useReducedMotion,
+let R = d.Ay.connectStores([p.A, T.A, I.A, E.A], () => ({
+    isTryingToConnect: p.A.isTryingToConnect(),
+    connected: p.A.isConnected(),
+    incident: T.A.getIncident(),
+    soundpack: I.A.getSoundpack(),
+    reducedMotion: E.A.useReducedMotion,
 }))((e) => {
-    let { isTryingToConnect: t, connected: n, incident: l, soundpack: r, reducedMotion: a } = e;
-    return t ? (0, i.jsx)(y, { reducedMotion: a, soundpack: r, connected: n, incident: l }) : null;
+    let { isTryingToConnect: t, connected: n, incident: r, soundpack: a, reducedMotion: l } = e;
+    return t ? (0, i.jsx)(D, { reducedMotion: l, soundpack: a, connected: n, incident: r }) : null;
 });

@@ -1,46 +1,41 @@
 "use strict";
-n.d(t, { i: () => o });
-var r = n(330935);
-function i(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function a(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function s(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
-}
-var o = (function () {
-    function e() {
-        i(this, e);
-    }
-    return (
-        s(e, [
-            {
-                key: "run",
-                value: function (e, t, n, i) {
-                    var a = this.parse(e, t, n, i);
-                    return a
-                        ? {
-                              setter: new r.Bc(a.value, this.validate, this.set, this.priority, this.subPriority),
-                              rest: a.rest,
-                          }
-                        : null;
+n.d(t, { i: () => i });
+var r = n(330935),
+    i = (function () {
+        var e;
+        function t() {
+            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        }
+        return (
+            (e = [
+                {
+                    key: "run",
+                    value: function (e, t, n, i) {
+                        var s = this.parse(e, t, n, i);
+                        return s
+                            ? {
+                                  setter: new r.Bc(s.value, this.validate, this.set, this.priority, this.subPriority),
+                                  rest: s.rest,
+                              }
+                            : null;
+                    },
                 },
-            },
-            {
-                key: "validate",
-                value: function (e, t, n) {
-                    return !0;
+                {
+                    key: "validate",
+                    value: function (e, t, n) {
+                        return !0;
+                    },
                 },
-            },
-        ]),
-        e
-    );
-})();
+            ]),
+            (function (e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = t[n];
+                    (r.enumerable = r.enumerable || !1),
+                        (r.configurable = !0),
+                        "value" in r && (r.writable = !0),
+                        Object.defineProperty(e, r.key, r);
+                }
+            })(t.prototype, e),
+            t
+        );
+    })();

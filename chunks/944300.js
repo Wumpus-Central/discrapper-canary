@@ -1,164 +1,165 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => I });
 var i = n(627968),
     s = n(64700),
     r = n(492462),
     l = n(511815),
-    a = n(158954),
+    a = n(189213),
     o = n(139033),
-    c = n(397927),
-    d = n(830215),
-    u = n(557722),
-    _ = n(961350),
-    h = n(954571),
+    c = n(192308),
+    d = n(834730),
+    u = n(830215),
+    _ = n(557722),
+    h = n(961350),
+    m = n(954571),
     p = n(203982),
     g = n(351671),
-    m = n(15552),
-    A = n(212640),
-    f = n(652215),
+    A = n(15552),
+    f = n(212640),
+    x = n(652215),
     E = n(985018);
-function x(e) {
+function I(e) {
     let {
             invite: t,
             guildTemplate: n,
-            giftCode: x,
-            handoffAvailable: I,
+            giftCode: I,
+            handoffAvailable: v,
             authenticated: N,
-            transitionTo: v,
-            replaceWith: T,
-            redirectTo: C,
-            location: j,
-            loginSource: y,
+            transitionTo: j,
+            replaceWith: C,
+            redirectTo: T,
+            location: b,
+            loginSource: S,
         } = e,
-        [S, b] = s.useState(() => I),
-        [R, O] = s.useState(() => N),
-        [L, w] = s.useState(""),
-        [k, D] = s.useState(() => {
-            let e = null != j ? (0, r.parse)(j.search) : {};
+        [y, R] = s.useState(() => v),
+        [w, O] = s.useState(() => N),
+        [L, k] = s.useState(""),
+        [G, U] = s.useState(() => {
+            let e = null != b ? (0, r.parse)(b.search) : {};
             return e.email ?? e.login ?? "";
         }),
-        [U, P] = s.useState(""),
-        [B, G] = s.useState(!1),
-        [M, F] = s.useState(null),
-        [V, W] = s.useState(!1),
-        [H] = s.useState(() => new AbortController()),
-        [K, z] = s.useState({}),
-        Q = s.useRef(null),
+        [D, P] = s.useState(""),
+        [B, M] = s.useState(!1),
+        [V, F] = s.useState(null),
+        [W, H] = s.useState(!1),
+        [z] = s.useState(() => new AbortController()),
+        [K, Q] = s.useState({}),
         q = s.useRef(null),
-        Y = s.useRef(null);
-    !S || I || N || b(!1);
-    let X = s.useMemo(() => {
-            if (null != y) return y;
-            if (null != x) return "gift";
+        Y = s.useRef(null),
+        X = s.useRef(null);
+    !y || v || N || R(!1);
+    let $ = s.useMemo(() => {
+            if (null != S) return S;
+            if (null != I) return "gift";
             if (null != n) return "guild_template";
             if (null != t) {
                 if (null != t.guild) return "guild_invite";
                 if (null != t.channel) return "dm_invite";
                 if (null != t.inviter) return "friend_invite";
             }
-            return null != C ? (0, g.Q)(C) : null;
-        }, [y, x, n, t, C]),
-        J = null != x ? x.skuId : null,
-        $ = s.useCallback(
+            return null != T ? (0, g.Q)(T) : null;
+        }, [S, I, n, t, T]),
+        Z = null != I ? I.skuId : null,
+        J = s.useCallback(
             (e) => {
                 let t = null != e ? (0, r.parse)(e.search) : {};
-                if ((delete t.redirect_to, null != C)) {
-                    if ((0, A.RZ)(C)) return void (0, A.NY)(C);
-                    null != T ? T(C) : v(C);
-                } else if (null == t.service) v(f.BVt.APP);
+                if ((delete t.redirect_to, null != T)) {
+                    if ((0, f.RZ)(T)) return void (0, f.NY)(T);
+                    null != C ? C(T) : j(T);
+                } else if (null == t.service) j(x.BVt.APP);
                 else {
-                    let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Rsh.SSO,
-                        n = { ...t, token: _.default.getToken() };
+                    let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + x.Rsh.SSO,
+                        n = { ...t, token: h.default.getToken() };
                     window.location = `${e}?${(0, r.stringify)(n)}`;
                 }
             },
-            [C, T, v],
-        ),
-        Z = s.useCallback(
-            function (e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                e && null != t && (O(!0), n ? d.A.verifySSOToken("login").then(() => $(t)) : $(t));
-            },
-            [$],
+            [T, C, j],
         ),
         ee = s.useCallback(
+            function (e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                e && null != t && (O(!0), n ? u.A.verifySSOToken("login").then(() => J(t)) : J(t));
+            },
+            [J],
+        ),
+        et = s.useCallback(
             (e) => {
-                z({}),
-                    h.default.track(f.HAw.LOGIN_SUCCESSFUL, {
-                        source: f.mdB.QR_CODE,
-                        login_source: X,
-                        gift_code_sku_id: J,
+                Q({}),
+                    m.default.track(x.HAw.LOGIN_SUCCESSFUL, {
+                        source: x.mdB.QR_CODE,
+                        login_source: $,
+                        gift_code_sku_id: Z,
                         is_new_user: !1,
                         login_method: "remote_auth",
                         login_instance_id: e ?? null,
                     });
             },
-            [X, J],
+            [$, Z],
         ),
-        et = s.useCallback(() => {
-            H.abort("Login state reset"), z({}), d.A.loginReset();
-        }, [H]),
-        en = s.useCallback((e) => {
-            Q.current = e ?? null;
-        }, []),
+        en = s.useCallback(() => {
+            z.abort("Login state reset"), Q({}), u.A.loginReset();
+        }, [z]),
         ei = s.useCallback((e) => {
             q.current = e ?? null;
         }, []),
-        es = s.useCallback(
+        es = s.useCallback((e) => {
+            Y.current = e ?? null;
+        }, []),
+        er = s.useCallback(
             async function (e) {
                 let { undelete: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                e?.preventDefault(), H.abort("Starting password login"), p._.dispatch(f.jej.WAVE_EMPHASIZE), z({});
+                e?.preventDefault(), z.abort("Starting password login"), p._.dispatch(x.jej.WAVE_EMPHASIZE), Q({});
                 try {
-                    await d.A.login({
-                        login: L + k,
-                        password: U,
+                    await u.A.login({
+                        login: L + G,
+                        password: D,
                         undelete: n ?? B,
-                        source: X,
-                        giftCodeSKUId: J,
+                        source: $,
+                        giftCodeSKUId: Z,
                         invite: t,
                     });
                 } catch (e) {
-                    z((0, m.p)(e));
+                    Q((0, A.p)(e));
                 }
             },
-            [H, k, L, U, B, X, J, t],
-        ),
-        er = s.useCallback(
-            async (e) => {
-                let t = L + k;
-                z({});
-                try {
-                    let { token: n } = await u.A.verifyPhone(t, e, !1);
-                    await d.A.authorizeIPAddress(n), es();
-                } catch (e) {
-                    null != e.body && null != e.body.message && F(e.body.message);
-                }
-            },
-            [L, k, es],
+            [z, G, L, D, B, $, Z, t],
         ),
         el = s.useCallback(
             async (e) => {
-                F(null);
+                let t = L + G;
+                Q({});
                 try {
-                    let { token: t } = await u.A.verifyPhone(L + k, e, !1);
-                    v(f.BVt.RESET, { search: (0, r.stringify)({ token: t, from_login: "true" }) });
+                    let { token: n } = await _.A.verifyPhone(t, e, !1);
+                    await u.A.authorizeIPAddress(n), er();
                 } catch (e) {
                     null != e.body && null != e.body.message && F(e.body.message);
                 }
             },
-            [L, k, v],
+            [L, G, er],
         ),
         ea = s.useCallback(
             async (e) => {
-                null != e && e.preventDefault(), null != Q.current && Q.current.focus();
-                let t = L + k;
-                z({});
+                F(null);
                 try {
-                    p._.dispatch(f.jej.WAVE_EMPHASIZE);
-                    let e = await d.A.forgotPassword(t);
+                    let { token: t } = await _.A.verifyPhone(L + G, e, !1);
+                    j(x.BVt.RESET, { search: (0, r.stringify)({ token: t, from_login: "true" }) });
+                } catch (e) {
+                    null != e.body && null != e.body.message && F(e.body.message);
+                }
+            },
+            [L, G, j],
+        ),
+        eo = s.useCallback(
+            async (e) => {
+                null != e && e.preventDefault(), null != q.current && q.current.focus();
+                let t = L + G;
+                Q({});
+                try {
+                    p._.dispatch(x.jej.WAVE_EMPHASIZE);
+                    let e = await u.A.forgotPassword(t);
                     if (!1 === e) return;
                     e === l.D.ONE_TIME_LOGIN
-                        ? (0, c.qfG)((e) => {
+                        ? (0, c.openModal)((e) => {
                               let t = [
                                   {
                                       variant: "primary",
@@ -171,7 +172,7 @@ function x(e) {
                                   title: E.intl.string(E.t["6Ecyts"]),
                                   actions: t,
                                   ...e,
-                                  children: (0, i.jsx)(c.Text, {
+                                  children: (0, i.jsx)(d.E, {
                                       variant: "text-md/normal",
                                       children: E.intl.string(E.t.iAcrqV),
                                   }),
@@ -182,70 +183,70 @@ function x(e) {
                               subtitle: E.intl.format(E.t["6u5hQ9"], { email: t }),
                           });
                 } catch (e) {
-                    z((0, m.p)(e));
+                    Q((0, A.p)(e));
                 }
             },
-            [L, k],
+            [L, G],
         ),
-        eo = s.useCallback(() => {
-            u.A.resendCode(L + k);
-        }, [L, k]),
-        ec = s.useCallback((e) => {
-            null != e && e.preventDefault(), d.A.loginReset(), P(""), w(""), D(""), G(!1), b(!1), O(!1), z({});
+        ec = s.useCallback(() => {
+            _.A.resendCode(L + G);
+        }, [L, G]),
+        ed = s.useCallback((e) => {
+            null != e && e.preventDefault(), u.A.loginReset(), P(""), k(""), U(""), M(!1), R(!1), O(!1), Q({});
         }, []),
-        ed = s.useCallback(() => {
-            G(!0), es(void 0, { undelete: !0 });
-        }, [es]),
         eu = s.useCallback(() => {
+            M(!0), er(void 0, { undelete: !0 });
+        }, [er]),
+        e_ = s.useCallback(() => {
             let e,
-                i = null != j ? (0, r.parse)(j.search) : {};
-            "" !== k && (i.email = k),
+                i = null != b ? (0, r.parse)(b.search) : {};
+            "" !== G && (i.email = G),
                 null != t
-                    ? ((i.mode = "register"), (e = f.BVt.INVITE(t.code)))
-                    : null != x
-                      ? ((i.mode = "register"), (e = f.BVt.GIFT_CODE(x.code)))
+                    ? ((i.mode = "register"), (e = x.BVt.INVITE(t.code)))
+                    : null != I
+                      ? ((i.mode = "register"), (e = x.BVt.GIFT_CODE(I.code)))
                       : null != n
-                        ? (e = f.BVt.GUILD_TEMPLATE(n.code))
-                        : null != C
-                          ? ((e = f.BVt.REGISTER), (i.redirect_to = C))
-                          : (e = f.BVt.REGISTER),
-                et(),
-                v(e, { search: (0, r.stringify)(i) }),
-                p._.dispatch(f.jej.WAVE_EMPHASIZE);
-        }, [k, t, x, n, C, j, et, v]);
+                        ? (e = x.BVt.GUILD_TEMPLATE(n.code))
+                        : null != T
+                          ? ((e = x.BVt.REGISTER), (i.redirect_to = T))
+                          : (e = x.BVt.REGISTER),
+                en(),
+                j(e, { search: (0, r.stringify)(i) }),
+                p._.dispatch(x.jej.WAVE_EMPHASIZE);
+        }, [G, t, I, n, T, b, en, j]);
     return {
-        checkingHandoff: S,
-        redirecting: R,
-        login: k,
-        password: U,
-        phoneVerifyError: M,
-        dismissedChooseAccount: V,
-        setDismissedChooseAccount: W,
+        checkingHandoff: y,
+        redirecting: w,
+        login: G,
+        password: D,
+        phoneVerifyError: V,
+        dismissedChooseAccount: W,
+        setDismissedChooseAccount: H,
         errors: K,
-        conditionalMediationAbortController: H,
-        loginSource: X,
-        giftCodeSKUId: J,
-        loginOrSSO: Z,
-        loginRef: Q,
-        passwordRef: q,
-        codeRef: Y,
-        handleLogin: es,
-        handleIPAuthorize: er,
-        handlePasswordReset: el,
-        handleForgotPassword: ea,
-        handleResendCode: eo,
-        handleReset: ec,
-        handleCancelAccountDeletion: ed,
-        handleGotoRegister: eu,
-        handleAuthSuccess: ee,
-        loginReset: et,
+        conditionalMediationAbortController: z,
+        loginSource: $,
+        giftCodeSKUId: Z,
+        loginOrSSO: ee,
+        loginRef: q,
+        passwordRef: Y,
+        codeRef: X,
+        handleLogin: er,
+        handleIPAuthorize: el,
+        handlePasswordReset: ea,
+        handleForgotPassword: eo,
+        handleResendCode: ec,
+        handleReset: ed,
+        handleCancelAccountDeletion: eu,
+        handleGotoRegister: e_,
+        handleAuthSuccess: et,
+        loginReset: en,
         onLoginChange: s.useCallback((e, t) => {
-            D(e), w(t);
+            U(e), k(t);
         }, []),
         onPasswordChange: s.useCallback((e) => {
             P(e);
         }, []),
-        setLoginRef: en,
-        setPasswordRef: ei,
+        setLoginRef: ei,
+        setPasswordRef: es,
     };
 }

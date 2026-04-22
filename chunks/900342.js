@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { _: () => i });
 let r = (0, n(945810).mj)({
         kind: "user",

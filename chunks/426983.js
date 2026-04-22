@@ -1,18 +1,15 @@
-"use strict";
-n.d(t, { K: () => a, _: () => i });
-var r = n(176128),
-    i = (function (e) {
-        return (
-            (e[(e.PARTNERED = 0)] = "PARTNERED"),
-            (e[(e.VERIFIED = 1)] = "VERIFIED"),
-            (e[(e.VERIFIED_AND_PARTNERED = 2)] = "VERIFIED_AND_PARTNERED"),
-            (e[(e.COMMUNITY = 3)] = "COMMUNITY"),
-            (e[(e.DISCOVERABLE = 4)] = "DISCOVERABLE"),
-            (e[(e.STAFF = 5)] = "STAFF"),
-            (e[(e.NONE = 6)] = "NONE"),
-            e
-        );
-    })({});
+i.d(t, { K: () => a, _: () => r });
+var n,
+    l = i(176128),
+    r =
+        (((n = {})[(n.PARTNERED = 0)] = "PARTNERED"),
+        (n[(n.VERIFIED = 1)] = "VERIFIED"),
+        (n[(n.VERIFIED_AND_PARTNERED = 2)] = "VERIFIED_AND_PARTNERED"),
+        (n[(n.COMMUNITY = 3)] = "COMMUNITY"),
+        (n[(n.DISCOVERABLE = 4)] = "DISCOVERABLE"),
+        (n[(n.STAFF = 5)] = "STAFF"),
+        (n[(n.NONE = 6)] = "NONE"),
+        n);
 function a(e) {
     return e.staff
         ? 5
@@ -22,7 +19,7 @@ function a(e) {
             ? 1
             : e.partnered
               ? 0
-              : e.community && e.visibility === r.qo.PUBLIC
+              : e.community && e.visibility === l.qo.PUBLIC
                 ? 4
                 : e.community
                   ? 3

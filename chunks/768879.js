@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { I: () => c }), n(321073);
-var r = n(64700),
+n.d(t, { I: () => d }), n(321073);
+var l = n(64700),
     i = n(311907),
     a = n(168186),
     s = n(594061),
-    o = n(661191),
-    l = n(630248),
-    u = n(355097);
-function c(e, t) {
-    r.useEffect(() => {
-        s.bW.loadIfUncached(u.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+    r = n(661191),
+    o = n(630248),
+    c = n(355097);
+function d(e, t) {
+    l.useEffect(() => {
+        s.bW.loadIfUncached(c.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, i.bG)([l.A], () => l.A.getApplicationFrecencyWithoutLoadingLatest()),
-        c = r.useMemo(
+    let n = (0, i.bG)([o.A], () => o.A.getApplicationFrecencyWithoutLoadingLatest()),
+        d = l.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? e
                     : e.map((e) => ({ ...e, isUserApp: t?.some((t) => t.application.id === e.id) ?? !1 })),
             [e, t],
         ),
-        d = r.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
-        _ = r.useMemo(() => {
-            d?.forEach((e) => {
-                let t = o.default.extractTimestamp(e.id);
+        u = l.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
+        m = l.useMemo(() => {
+            u?.forEach((e) => {
+                let t = r.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = d?.map((e) => (0, a.bq)(e.application, !0)) ?? [],
-                t = [...c];
+            let e = u?.map((e) => (0, a.bq)(e.application, !0)) ?? [],
+                t = [...d];
             return (
                 t.push(...e),
                 t.sort((e, t) => {
-                    let r = (n.getScore(t.id) ?? 0) - (n.getScore(e.id) ?? 0);
-                    return 0 !== r ? r : e.name.localeCompare(t.name);
+                    let l = (n.getScore(t.id) ?? 0) - (n.getScore(e.id) ?? 0);
+                    return 0 !== l ? l : e.name.localeCompare(t.name);
                 }),
                 t
             );
-        }, [c, n, d]);
-    return r.useMemo(() => {
-        let e, r;
+        }, [d, n, u]);
+    return l.useMemo(() => {
+        let e, l;
         t?.forEach((t) => {
-            let n = o.default.extractTimestamp(t.id);
-            (null == r || n > r) && ((e = t), (r = n));
+            let n = r.default.extractTimestamp(t.id);
+            (null == l || n > l) && ((e = t), (l = n));
         }),
-            c.forEach((t) => {
+            d.forEach((t) => {
                 let i = Math.max(...(n.getEntry(t.id)?.recentUses ?? []));
-                (null == r || i > r) && ((e = t), (r = i));
+                (null == l || i > l) && ((e = t), (l = i));
             });
         let i = e?.application?.id ?? "";
-        return [..._.filter((e) => e.id === i), ..._.filter((e) => e.id !== i)];
-    }, [_, c, n, t]);
+        return [...m.filter((e) => e.id === i), ...m.filter((e) => e.id !== i)];
+    }, [m, d, n, t]);
 }

@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => r });
-let r = {
+i.d(t, { A: () => n });
+let n = {
     ApertureValue: (e) => Math.pow(Math.sqrt(2), e[0] / e[1]).toFixed(2),
     ColorSpace: (e) => (1 === e ? "sRGB" : 65535 === e ? "Uncalibrated" : "Unknown"),
     ComponentsConfiguration: (e) =>

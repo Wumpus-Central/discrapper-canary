@@ -3,135 +3,137 @@ n.d(t, { V: () => y, X: () => S });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    l = n(837381),
-    o = n(397927),
-    u = n(199966),
-    c = n(963935),
-    d = n(894858),
-    h = n(272053),
-    p = n(189857),
-    _ = n(674085),
-    m = n(215566),
-    f = n(362205),
-    g = n(585635);
+    l = n.n(a),
+    s = n(837381),
+    o = n(827734),
+    c = n(939249),
+    u = n(834730),
+    d = n(199966),
+    _ = n(963935),
+    h = n(894858),
+    p = n(272053),
+    f = n(189857),
+    m = n(674085),
+    g = n(215566),
+    E = n(362205),
+    v = n(585635);
 let y = "refresh_sm";
-function v(e) {
-    let { tag: t, onClick: n, active: a, node: l, dismissibleBadge: u, panelKey: c, listItemProps: d, children: h } = e,
+function A(e) {
+    let { tag: t, onClick: n, active: a, node: s, dismissibleBadge: d, panelKey: _, listItemProps: h, children: p } = e,
         {
-            icon: p,
-            StronglyDiscouragedCustomComponent: f,
-            usePersistentBadge: v,
+            icon: f,
+            StronglyDiscouragedCustomComponent: E,
+            usePersistentBadge: A,
             useTitle: S,
-            variant: E = "default",
-        } = l,
+            variant: b = "default",
+        } = s,
         x = S?.(),
-        A = (function (e) {
+        N = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
                 case "destructive":
                     return "text-feedback-critical";
             }
-        })(E),
-        N = (function (e) {
+        })(b),
+        C = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
                 case "destructive":
-                    return o.LU0.colors.ICON_FEEDBACK_CRITICAL;
+                    return o.A.colors.ICON_FEEDBACK_CRITICAL;
             }
-        })(E),
-        b = v?.(a),
-        C = i.useMemo(
+        })(b),
+        I = A?.(a),
+        T = i.useMemo(
             () =>
-                null != u
+                null != d
                     ? a
                         ? null
-                        : (0, r.jsx)(_.A, { badge: u })
-                    : null != b
-                      ? (0, r.jsx)(m.A, { badge: b })
+                        : (0, r.jsx)(m.A, { badge: d })
+                    : null != I
+                      ? (0, r.jsx)(g.A, { badge: I })
                       : void 0,
-            [a, u, b],
+            [a, d, I],
         );
     return (0, r.jsxs)(t, {
-        "data-settings-sidebar-item": c,
-        className: g.DB,
+        "data-settings-sidebar-item": _,
+        className: v.DB,
         children: [
-            (0, r.jsxs)(o.DUT, {
-                ...d,
-                className: s()(g.AS, { [g.vu]: a, [g.RD]: "destructive" === E }),
+            (0, r.jsxs)(c.D, {
+                ...h,
+                className: l()(v.AS, { [v.vu]: a, [v.RD]: "destructive" === b }),
                 onClick: n,
                 children: [
-                    null != f
-                        ? (0, r.jsx)(f, {})
+                    null != E
+                        ? (0, r.jsx)(E, {})
                         : (0, r.jsxs)("div", {
-                              className: g.Ly,
+                              className: v.Ly,
                               children: [
-                                  (0, r.jsx)(p, { color: N, size: y, className: g.Kk }),
-                                  (0, r.jsx)(o.Text, { variant: "text-md/medium", color: A, children: x }),
+                                  (0, r.jsx)(f, { color: C, size: y, className: v.Kk }),
+                                  (0, r.jsx)(u.E, { variant: "text-md/medium", color: N, children: x }),
                               ],
                           }),
-                    C,
+                    T,
                 ],
             }),
-            h,
+            p,
         ],
     });
 }
 function S(e) {
-    let { node: t, visibleContent: n, dismissibleBadges: a, hoisted: s = !1 } = e,
+    let { node: t, visibleContent: n, dismissibleBadges: a, hoisted: l = !1 } = e,
         o = i.useMemo(() => t.layout[0], [t]),
-        _ = d.A.useField("currentPanelKey"),
-        { accessibleDirectory: m } = (0, u._)(),
-        g = o?.key === _,
-        y = i.useMemo(() => {
-            if (null == _) return !1;
-            let e = m.entry(_);
+        c = h.A.useField("currentPanelKey"),
+        { accessibleDirectory: u } = (0, d._)(),
+        m = o?.key === c,
+        g = i.useMemo(() => {
+            if (null == c) return !1;
+            let e = u.entry(c);
             return e?.parentSidebarItemKey === t.key;
-        }, [_, t.key, m]),
-        S = i.useMemo(() => {
-            if (null == o || !(0, c.Iu)(o.layout)) return null;
-            let e = o.layout.filter(c.bJ);
+        }, [c, t.key, u]),
+        v = i.useMemo(() => {
+            if (null == o || !(0, _.Iu)(o.layout)) return null;
+            let e = o.layout.filter(_.bJ);
             return e.length > 1 ? e : null;
         }, [o]),
-        E =
+        y =
             null != o
                 ? () => {
-                      let e = _ === o.key && null != S ? S[0].key : o.key;
-                      h.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
+                      let e = c === o.key && null != v ? v[0].key : o.key;
+                      p.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
                   }
                 : t.onClick,
-        x = null != _,
-        A = i.useMemo(
+        S = null != c,
+        b = i.useMemo(
             () =>
-                null != S && x
-                    ? (0, r.jsx)(f.A, {
-                          active: y,
-                          isTopLevelPanelVisible: g,
-                          visibleCategories: S,
+                null != v && S
+                    ? (0, r.jsx)(E.A, {
+                          active: g,
+                          isTopLevelPanelVisible: m,
+                          visibleCategories: v,
                           visibleContent: n,
                           dismissibleBadges: a,
                       })
                     : null,
-            [S, x, y, g, n, a],
+            [v, S, g, m, n, a],
         ),
-        N = s ? "li" : "div",
-        b = i.useMemo(() => (0, p.H)(t.key, n, a), [t.key, n, a]);
-    return s
-        ? (0, r.jsx)(v, { tag: N, panelKey: o?.key, onClick: E, active: y, node: t, dismissibleBadge: b, children: A })
-        : (0, r.jsx)(l.tG, {
+        x = l ? "li" : "div",
+        N = i.useMemo(() => (0, f.H)(t.key, n, a), [t.key, n, a]);
+    return l
+        ? (0, r.jsx)(A, { tag: x, panelKey: o?.key, onClick: y, active: g, node: t, dismissibleBadge: N, children: b })
+        : (0, r.jsx)(s.tG, {
               id: t.key,
               children: (e) =>
-                  (0, r.jsx)(v, {
-                      tag: N,
+                  (0, r.jsx)(A, {
+                      tag: x,
                       panelKey: o?.key,
-                      onClick: E,
-                      active: y,
+                      onClick: y,
+                      active: g,
                       node: t,
-                      dismissibleBadge: b,
+                      dismissibleBadge: N,
                       listItemProps: e,
-                      children: A,
+                      children: b,
                   }),
           });
 }

@@ -1,38 +1,33 @@
 "use strict";
-n.d(t, { eh: () => o, er: () => s, hf: () => a, j0: () => u, tk: () => l });
-var r = n(927813),
-    i = n(985018);
-let a = 5 * r.A.Millis.SECOND;
-var s = (function (e) {
-        return (e.TOOLBAR_BUTTON = "toolbar button"), (e.PILL = "pill"), e;
-    })({}),
-    o = (function (e) {
-        return (
-            (e.SIDEBAR = "sidebar"),
-            (e.PILL_DROPDOWN = "pill dropdown"),
-            (e.PILL_NEXT_ARROW = "pill next arrow"),
-            (e.PILL_PREVIOUS_ARROW = "pill previous arrow"),
-            e
-        );
-    })({}),
-    l = (function (e) {
-        return (
-            (e.DUPLICATED = "DUPLICATED"),
-            (e.TOO_GENERIC = "TOO_GENERIC"),
-            (e.TOO_MANY = "TOO_MANY"),
-            (e.INACCURATE = "INACCURATE"),
-            (e.NOT_USEFUL = "NOT_USEFUL"),
-            (e.OTHER = "OTHER"),
-            e
-        );
-    })({});
-function u() {
+n.d(t, { eh: () => u, er: () => c, hf: () => o, j0: () => h, tk: () => d });
+var i,
+    l,
+    s,
+    r = n(927813),
+    a = n(985018);
+let o = 5 * r.A.Millis.SECOND;
+var c = 21552 == n.j ? (((i = {}).TOOLBAR_BUTTON = "toolbar button"), (i.PILL = "pill"), i) : null,
+    u =
+        (((l = {}).SIDEBAR = "sidebar"),
+        (l.PILL_DROPDOWN = "pill dropdown"),
+        (l.PILL_NEXT_ARROW = "pill next arrow"),
+        (l.PILL_PREVIOUS_ARROW = "pill previous arrow"),
+        l),
+    d =
+        (((s = {}).DUPLICATED = "DUPLICATED"),
+        (s.TOO_GENERIC = "TOO_GENERIC"),
+        (s.TOO_MANY = "TOO_MANY"),
+        (s.INACCURATE = "INACCURATE"),
+        (s.NOT_USEFUL = "NOT_USEFUL"),
+        (s.OTHER = "OTHER"),
+        s);
+function h() {
     return [
-        { value: "DUPLICATED", label: i.intl.string(i.t.wwXl5h) },
-        { value: "TOO_GENERIC", label: i.intl.string(i.t["t+6knu"]) },
-        { value: "TOO_MANY", label: i.intl.string(i.t.xnKDnv) },
-        { value: "INACCURATE", label: i.intl.string(i.t.JW5VFj) },
-        { value: "NOT_USEFUL", label: i.intl.string(i.t.ZtCNiY) },
-        { value: "OTHER", label: i.intl.string(i.t.BufsKk) },
+        { value: "DUPLICATED", label: a.intl.string(a.t.wwXl5h) },
+        { value: "TOO_GENERIC", label: a.intl.string(a.t["t+6knu"]) },
+        { value: "TOO_MANY", label: a.intl.string(a.t.xnKDnv) },
+        { value: "INACCURATE", label: a.intl.string(a.t.JW5VFj) },
+        { value: "NOT_USEFUL", label: a.intl.string(a.t.ZtCNiY) },
+        { value: "OTHER", label: a.intl.string(a.t.BufsKk) },
     ];
 }

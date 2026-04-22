@@ -1,169 +1,172 @@
-t.d(n, { A: () => O });
-var i = t(627968);
-t(64700);
-var a = t(397927),
-    l = t(630054),
-    r = t(793574),
-    d = t(688810),
-    s = t(915089),
-    o = t(562153),
-    c = t(183555),
-    u = t(950191),
-    _ = t(722868),
-    p = t(716804),
-    A = t(718019),
-    g = t(31432),
-    f = t(915614),
-    h = t(559506),
-    m = t(946356),
-    x = t(810396),
-    I = t(570314),
-    b = t(490752),
-    v = t(571077),
-    E = t(587168),
-    j = t(982985),
-    y = t(159218),
-    T = t(240783),
-    S = t(371843),
-    N = t(518477),
-    C = t(652215),
-    R = t(996988),
-    P = t(985018),
-    L = t(669924);
-function O(e) {
+a.d(t, { A: () => D });
+var n = a(627968);
+a(64700);
+var i = a(935462),
+    l = a(707554),
+    r = a(140735),
+    d = a(231723),
+    o = a(630054),
+    s = a(793574),
+    c = a(688810),
+    _ = a(915089),
+    u = a(562153),
+    m = a(183555),
+    p = a(950191),
+    g = a(722868),
+    b = a(716804),
+    f = a(718019),
+    x = a(31432),
+    h = a(915614),
+    A = a(559506),
+    v = a(946356),
+    I = a(810396),
+    y = a(570314),
+    C = a(490752),
+    j = a(571077),
+    N = a(587168),
+    E = a(982985),
+    S = a(159218),
+    T = a(240783),
+    w = a(371843),
+    P = a(518477),
+    k = a(652215),
+    M = a(996988),
+    L = a(985018),
+    R = a(872116);
+function D(e) {
     let {
-            user: n,
-            currentUser: t,
-            guildId: O,
-            originGuildId: D,
-            channelId: k,
-            messageId: B,
+            user: t,
+            currentUser: a,
+            guildId: D,
+            originGuildId: B,
+            channelId: O,
+            messageId: G,
             roleId: U,
-            sessionId: M,
-            initialTabSection: G,
-            initialScrollTarget: F,
-            transitionState: w,
-            openedAt: V,
-            onClose: H,
-            sourceAnalyticsLocations: W = [],
+            sessionId: F,
+            initialTabSection: H,
+            initialScrollTarget: W,
+            transitionState: V,
+            openedAt: z,
+            onClose: X,
+            sourceAnalyticsLocations: Z = [],
         } = e,
-        z = O === C.ME ? void 0 : O,
-        Y = (0, u.Ay)(n.id, z),
-        X = o.Ay.getName(z, k, n),
-        K = (0, s.GV)(),
-        { analyticsLocations: q } = (0, d.Ay)([...W, r.A.USER_PROFILE_MODAL]),
-        Q = (0, c.pb)({
+        Y = D === k.ME ? void 0 : D,
+        q = (0, p.Ay)(t.id, Y),
+        Q = u.Ay.getName(Y, O, t),
+        K = (0, _.GV)(),
+        { analyticsLocations: J } = (0, c.Ay)([...Z, s.A.USER_PROFILE_MODAL]),
+        $ = (0, m.pb)({
             layout: "MODAL",
-            userId: n.id,
-            sourceSessionId: M,
-            guildId: z,
-            channelId: k,
-            messageId: B,
+            userId: t.id,
+            sourceSessionId: F,
+            guildId: Y,
+            channelId: O,
+            messageId: G,
             roleId: U,
         }),
-        J = (0, S.A)(n),
-        Z = (0, _.A)({ user: n, guildId: D, channelId: k, displayProfile: Y, onClose: H });
-    return (0, i.jsx)(d.f5, {
-        value: q,
-        children: (0, i.jsx)(c.of, {
-            value: Q,
-            openedAt: V,
-            fetchStartedAt: Y?.fetchStartedAt,
-            fetchEndedAt: Y?.fetchEndedAt,
-            isLoaded: Y?.isLoaded,
-            children: (0, i.jsx)(p.N, {
-                value: F,
-                children: (0, i.jsx)(a.EOs, {
+        ee = (0, w.A)(t),
+        et = (0, g.A)({ user: t, guildId: B, channelId: O, displayProfile: q, onClose: X });
+    return (0, n.jsx)(c.f5, {
+        value: J,
+        children: (0, n.jsx)(m.of, {
+            value: $,
+            openedAt: z,
+            fetchStartedAt: q?.fetchStartedAt,
+            fetchEndedAt: q?.fetchEndedAt,
+            isLoaded: q?.isLoaded,
+            children: (0, n.jsx)(b.N, {
+                value: W,
+                children: (0, n.jsx)(i.EO, {
                     "data-migration-pending": !0,
-                    transitionState: w,
-                    className: L.zr,
+                    transitionState: V,
+                    className: R.zr,
                     hideShadow: !0,
                     "aria-labelledby": K,
                     parentComponent: "BotUserProfileModal",
-                    children: (0, i.jsx)(a.Fmo, {
-                        component: (0, i.jsx)(a.AC4, {
-                            children: (0, i.jsx)(a.H, { id: K, children: P.intl.format(P.t.KRe1Fk, { name: X }) }),
+                    children: (0, n.jsx)(l.F, {
+                        component: (0, n.jsx)(r.A, {
+                            children: (0, n.jsx)(l.H, { id: K, children: L.intl.format(L.t.KRe1Fk, { name: Q }) }),
                         }),
-                        children: (0, i.jsxs)(m.A, {
-                            user: n,
-                            displayProfile: Y,
-                            themeType: R.d.MODAL,
+                        children: (0, n.jsxs)(v.A, {
+                            user: t,
+                            displayProfile: q,
+                            themeType: M.d.MODAL,
                             children: [
-                                (0, i.jsx)(E.A, {
-                                    children: (0, i.jsx)(b.A, { user: n, guildId: z, viewProfileItem: Z }),
+                                (0, n.jsx)(N.A, {
+                                    children: (0, n.jsx)(C.A, { user: t, guildId: Y, viewProfileItem: et }),
                                 }),
-                                (0, i.jsxs)("div", {
+                                (0, n.jsxs)("div", {
                                     children: [
-                                        (0, i.jsx)(f.A, { user: n, displayProfile: Y, themeType: R.d.MODAL }),
-                                        (0, i.jsxs)("div", {
-                                            className: L.El,
+                                        (0, n.jsx)(h.A, { user: t, displayProfile: q, themeType: M.d.MODAL }),
+                                        (0, n.jsxs)("div", {
+                                            className: R.El,
                                             children: [
-                                                (0, i.jsx)(A.A, {
-                                                    user: n,
-                                                    displayProfile: Y,
-                                                    guildId: z,
-                                                    channelId: k,
-                                                    themeType: R.d.MODAL,
+                                                (0, n.jsx)(f.A, {
+                                                    user: t,
+                                                    displayProfile: q,
+                                                    guildId: Y,
+                                                    channelId: O,
+                                                    themeType: M.d.MODAL,
                                                 }),
-                                                (0, i.jsx)(y.A, {
-                                                    user: n,
-                                                    themeType: R.d.MODAL,
-                                                    hasEntered: w === a.ip4.ENTERED,
-                                                    onCloseProfile: H,
+                                                (0, n.jsx)(S.A, {
+                                                    user: t,
+                                                    themeType: M.d.MODAL,
+                                                    hasEntered: V === d.ip.ENTERED,
+                                                    onCloseProfile: X,
                                                     disableToolbar: !0,
                                                 }),
-                                                (0, i.jsxs)("div", {
-                                                    className: L.Pz,
+                                                (0, n.jsxs)("div", {
+                                                    className: R.Pz,
                                                     children: [
-                                                        (0, i.jsx)("div", {
-                                                            className: L.jS,
-                                                            children: (0, i.jsx)(j.e, {
+                                                        (0, n.jsx)("div", {
+                                                            className: R.jS,
+                                                            children: (0, n.jsx)(E.e, {
                                                                 variant: "secondary",
-                                                                userId: n.id,
-                                                                onClose: l.A.popAll,
+                                                                userId: t.id,
+                                                                onClose: o.A.popAll,
                                                             }),
                                                         }),
-                                                        (0, i.jsx)("div", {
-                                                            className: L.pg,
-                                                            children: (0, i.jsx)(j.l, {
+                                                        (0, n.jsx)("div", {
+                                                            className: R.pg,
+                                                            children: (0, n.jsx)(E.l, {
                                                                 variant: "secondary",
-                                                                userId: n.id,
-                                                                onClose: l.A.popAll,
+                                                                userId: t.id,
+                                                                onClose: o.A.popAll,
                                                             }),
                                                         }),
-                                                        (0, i.jsx)(v.A, { user: n, guildId: z }),
-                                                        (0, i.jsx)(I.A, { user: n }),
+                                                        (0, n.jsx)(j.A, { user: t, guildId: Y }),
+                                                        (0, n.jsx)(y.A, { user: t }),
                                                     ],
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(h.A, { userId: n.id, className: L.Fd }),
-                                (0, i.jsxs)("div", {
-                                    className: L.rf,
+                                (0, n.jsx)(A.A, { userId: t.id, className: R.Fd }),
+                                (0, n.jsxs)("div", {
+                                    className: R.rf,
                                     children: [
-                                        (0, i.jsx)(x.A, {
-                                            className: L.Xh,
-                                            user: n,
-                                            guildId: z,
-                                            nickname: X,
-                                            pronouns: Y?.pronouns,
+                                        (0, n.jsx)(I.A, {
+                                            className: R.Xh,
+                                            user: t,
+                                            guildId: Y,
+                                            nickname: Q,
+                                            pronouns: q?.pronouns,
                                             nicknameVariant: "heading-xl/bold",
-                                            tags: (0, i.jsx)(g.A, {
-                                                displayProfile: Y,
-                                                themeType: R.d.MODAL,
-                                                onClose: H,
+                                            tags: (0, n.jsx)(x.A, {
+                                                displayProfile: q,
+                                                themeType: M.d.MODAL,
+                                                onClose: X,
                                             }),
                                         }),
-                                        (0, i.jsx)(T.A, {
-                                            user: n,
-                                            currentUser: t,
-                                            displayProfile: Y,
-                                            guildId: z,
-                                            items: J,
-                                            initialSection: G ?? N.RP.BOT_INFO,
-                                            onClose: H,
+                                        (0, n.jsx)(T.A, {
+                                            user: t,
+                                            currentUser: a,
+                                            displayProfile: q,
+                                            guildId: Y,
+                                            items: ee,
+                                            initialSection: H ?? P.RP.BOT_INFO,
+                                            onClose: X,
                                         }),
                                     ],
                                 }),

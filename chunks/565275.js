@@ -1,77 +1,84 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => f });
 var r = n(140851),
     i = n(821085),
-    a = n(559374),
-    s = n(688899),
+    s = n(559374),
+    a = n(688899),
     o = n(175924),
     l = n(559751),
     u = n(499702),
-    c = n(273101),
-    d = { top: "auto", right: "auto", bottom: "auto", left: "auto" };
-function _(e, t) {
-    var n = e.x,
-        r = e.y,
-        i = t.devicePixelRatio || 1;
-    return { x: (0, c.LI)(n * i) / i || 0, y: (0, c.LI)(r * i) / i || 0 };
-}
-function f(e) {
+    d = n(273101),
+    c = { top: "auto", right: "auto", bottom: "auto", left: "auto" };
+function _(e) {
     var t,
         n,
-        l = e.popper,
-        u = e.popperRect,
-        c = e.placement,
-        f = e.variation,
-        p = e.offsets,
-        h = e.position,
-        m = e.gpuAcceleration,
-        g = e.adaptive,
-        E = e.roundOffsets,
-        A = e.isFixed,
-        I = p.x,
-        T = void 0 === I ? 0 : I,
-        y = p.y,
-        S = void 0 === y ? 0 : y,
-        v = "function" == typeof E ? E({ x: T, y: S }) : { x: T, y: S };
-    (T = v.x), (S = v.y);
-    var C = p.hasOwnProperty("x"),
-        b = p.hasOwnProperty("y"),
-        N = r.kb,
-        R = r.Mn,
-        O = window;
-    if (g) {
-        var D = (0, i.A)(l),
-            L = "clientHeight",
-            w = "clientWidth";
-        D === (0, a.A)(l) &&
-            ((D = (0, s.A)(l)),
-            "static" !== (0, o.A)(D).position && "absolute" === h && ((L = "scrollHeight"), (w = "scrollWidth"))),
-            (c === r.Mn || ((c === r.kb || c === r.pG) && f === r._N)) &&
-                ((R = r.sQ),
-                (S -= (A && D === O && O.visualViewport ? O.visualViewport.height : D[L]) - u.height),
-                (S *= m ? 1 : -1)),
-            (c === r.kb || ((c === r.Mn || c === r.sQ) && f === r._N)) &&
-                ((N = r.pG),
-                (T -= (A && D === O && O.visualViewport ? O.visualViewport.width : D[w]) - u.width),
-                (T *= m ? 1 : -1));
+        l,
+        u,
+        _,
+        f,
+        E,
+        h = e.popper,
+        p = e.popperRect,
+        m = e.placement,
+        g = e.variation,
+        A = e.offsets,
+        I = e.position,
+        T = e.gpuAcceleration,
+        S = e.adaptive,
+        y = e.roundOffsets,
+        N = e.isFixed,
+        O = A.x,
+        R = void 0 === O ? 0 : O,
+        v = A.y,
+        C = void 0 === v ? 0 : v,
+        b = "function" == typeof y ? y({ x: R, y: C }) : { x: R, y: C };
+    (R = b.x), (C = b.y);
+    var D = A.hasOwnProperty("x"),
+        L = A.hasOwnProperty("y"),
+        w = r.kb,
+        M = r.Mn,
+        P = window;
+    if (S) {
+        var U = (0, i.A)(h),
+            k = "clientHeight",
+            x = "clientWidth";
+        U === (0, s.A)(h) &&
+            ((U = (0, a.A)(h)),
+            "static" !== (0, o.A)(U).position && "absolute" === I && ((k = "scrollHeight"), (x = "scrollWidth"))),
+            (m === r.Mn || ((m === r.kb || m === r.pG) && g === r._N)) &&
+                ((M = r.sQ),
+                (C -= (N && U === P && P.visualViewport ? P.visualViewport.height : U[k]) - p.height),
+                (C *= T ? 1 : -1)),
+            (m === r.kb || ((m === r.Mn || m === r.sQ) && g === r._N)) &&
+                ((w = r.pG),
+                (R -= (N && U === P && P.visualViewport ? P.visualViewport.width : U[x]) - p.width),
+                (R *= T ? 1 : -1));
     }
-    var x = Object.assign({ position: h }, g && d),
-        P = !0 === E ? _({ x: T, y: S }, (0, a.A)(l)) : { x: T, y: S };
-    return ((T = P.x), (S = P.y), m)
+    var G = Object.assign({ position: I }, S && c),
+        V =
+            !0 === y
+                ? ((t = { x: R, y: C }),
+                  (n = (0, s.A)(h)),
+                  (l = t.x),
+                  (u = t.y),
+                  (_ = n.devicePixelRatio || 1),
+                  { x: (0, d.LI)(l * _) / _ || 0, y: (0, d.LI)(u * _) / _ || 0 })
+                : { x: R, y: C };
+    return ((R = V.x), (C = V.y), T)
         ? Object.assign(
               {},
-              x,
-              (((n = {})[R] = b ? "0" : ""),
-              (n[N] = C ? "0" : ""),
-              (n.transform =
-                  1 >= (O.devicePixelRatio || 1)
-                      ? "translate(" + T + "px, " + S + "px)"
-                      : "translate3d(" + T + "px, " + S + "px, 0)"),
-              n),
+              G,
+              (((E = {})[M] = L ? "0" : ""),
+              (E[w] = D ? "0" : ""),
+              (E.transform =
+                  1 >= (P.devicePixelRatio || 1)
+                      ? "translate(" + R + "px, " + C + "px)"
+                      : "translate3d(" + R + "px, " + C + "px, 0)"),
+              E),
           )
-        : Object.assign({}, x, (((t = {})[R] = b ? S + "px" : ""), (t[N] = C ? T + "px" : ""), (t.transform = ""), t));
+        : Object.assign({}, G, (((f = {})[M] = L ? C + "px" : ""), (f[w] = D ? R + "px" : ""), (f.transform = ""), f));
 }
-let p = {
+let f = {
     name: "computeStyles",
     enabled: !0,
     phase: "beforeWrite",
@@ -79,29 +86,27 @@ let p = {
         var t = e.state,
             n = e.options,
             r = n.gpuAcceleration,
-            i = void 0 === r || r,
-            a = n.adaptive,
-            s = void 0 === a || a,
-            o = n.roundOffsets,
-            c = void 0 === o || o,
-            d = {
+            i = n.adaptive,
+            s = n.roundOffsets,
+            a = void 0 === s || s,
+            o = {
                 placement: (0, l.A)(t.placement),
                 variation: (0, u.A)(t.placement),
                 popper: t.elements.popper,
                 popperRect: t.rects.popper,
-                gpuAcceleration: i,
+                gpuAcceleration: void 0 === r || r,
                 isFixed: "fixed" === t.options.strategy,
             };
         null != t.modifiersData.popperOffsets &&
             (t.styles.popper = Object.assign(
                 {},
                 t.styles.popper,
-                f(
-                    Object.assign({}, d, {
+                _(
+                    Object.assign({}, o, {
                         offsets: t.modifiersData.popperOffsets,
                         position: t.options.strategy,
-                        adaptive: s,
-                        roundOffsets: c,
+                        adaptive: void 0 === i || i,
+                        roundOffsets: a,
                     }),
                 ),
             )),
@@ -109,12 +114,12 @@ let p = {
                 (t.styles.arrow = Object.assign(
                     {},
                     t.styles.arrow,
-                    f(
-                        Object.assign({}, d, {
+                    _(
+                        Object.assign({}, o, {
                             offsets: t.modifiersData.arrow,
                             position: "absolute",
                             adaptive: !1,
-                            roundOffsets: c,
+                            roundOffsets: a,
                         }),
                     ),
                 )),

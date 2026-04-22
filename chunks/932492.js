@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var r = n(687658),
     i = n(626584),
     s = n(723702),
@@ -7,11 +7,9 @@ var r = n(687658),
     o = n(837921),
     l = n(358203);
 let u = new i.A("RunningGameSystemMetricsMonitor"),
-    c = 1e3,
-    d = 3e4,
-    _ = [50, 95, 99];
-function f(e) {
-    let t = e.getReport(_);
+    d = [50, 95, 99];
+function c(e) {
+    let t = e.getReport(d);
     return {
         p50: t.percentiles[50] ?? 0,
         p95: t.percentiles[95] ?? 0,
@@ -21,7 +19,7 @@ function f(e) {
         min: t.min,
     };
 }
-class p {
+class _ {
     cpuHistogram = new r.d();
     memoryHistogram = new r.d();
     gpuMemoryHistogram = new r.d();
@@ -40,10 +38,10 @@ class p {
             this.initDiscordMediaModule(),
             (this.samplingInterval = setInterval(() => {
                 this.takeSample();
-            }, c)),
+            }, 1e3)),
             (this.gpuSamplingInterval = setInterval(() => {
                 this.sampleGpuMemory();
-            }, d)));
+            }, 3e4)));
     }
     disable() {
         null != this.samplingInterval && (clearInterval(this.samplingInterval), (this.samplingInterval = null)),
@@ -59,10 +57,10 @@ class p {
             )
         )
             return null;
-        let e = f(this.cpuHistogram),
-            t = f(this.memoryHistogram),
-            n = f(this.gpuMemoryHistogram),
-            r = f(this.discordMemoryHistogram);
+        let e = c(this.cpuHistogram),
+            t = c(this.memoryHistogram),
+            n = c(this.gpuMemoryHistogram),
+            r = c(this.discordMemoryHistogram);
         return (
             this.resetHistograms(),
             {
@@ -121,10 +119,7 @@ class p {
             if (null != this.lastCpuSnapshot) {
                 let t = e.cpuTotalTick - this.lastCpuSnapshot.cpuTotalTick,
                     n = e.cpuTotalIdle - this.lastCpuSnapshot.cpuTotalIdle;
-                if (t > 0) {
-                    let e = ((t - n) / t) * 100;
-                    this.cpuHistogram.addSample(e);
-                }
+                t > 0 && this.cpuHistogram.addSample(((t - n) / t) * 100);
             }
             this.lastCpuSnapshot = e;
         } catch (e) {
@@ -177,4 +172,4 @@ class p {
         }
     }
 }
-let h = new p();
+let f = new _();

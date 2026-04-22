@@ -1,39 +1,40 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(317097),
-    o = n(311907),
-    l = n(827734),
-    u = n(397927),
-    c = n(775602),
-    d = n(7250),
-    _ = n(986558);
-let f = l.A.unsafe_rawColors.PRIMARY_300,
-    p = l.A.unsafe_rawColors.WHITE,
-    h = l.A.unsafe_rawColors.PRIMARY_630;
-function m(e) {
-    let { color: t, size: n, forcedIconColor: i, className: l, iconClassName: m } = e,
-        [g, E] = (0, o.yK)([c.A], () => [c.A.desaturateUserColors, c.A.saturation]),
-        A = (0, u.rdh)(f).hex(),
-        I = t ?? A,
-        T = (0, s.$k)((0, s.LX)(I), !1, g ? E : null),
-        y = (0, u.rdh)(p).hex(),
-        S = (0, u.rdh)(h).hex(),
-        v = null != i ? i : (0, d.j)({ backgroundColor: I, colors: [y, S] }),
-        C = n / 8;
-    return (0, r.jsx)("div", {
-        style: { background: T, width: n, height: n, borderRadius: n, lineHeight: `${n}px` },
-        className: l,
-        children: (0, r.jsx)(u.qYV, {
+var s = n(503698),
+    r = n.n(s),
+    l = n(317097),
+    a = n(311907),
+    o = n(827734),
+    c = n(602853),
+    d = n(173936),
+    u = n(775602),
+    _ = n(7250),
+    h = n(394549);
+let m = o.A.unsafe_rawColors.PRIMARY_300,
+    p = o.A.unsafe_rawColors.WHITE,
+    g = o.A.unsafe_rawColors.PRIMARY_630;
+function A(e) {
+    let { color: t, size: n, forcedIconColor: s, className: o, iconClassName: A } = e,
+        [f, x] = (0, a.yK)([u.A], () => [u.A.desaturateUserColors, u.A.saturation]),
+        E = (0, c.r)(m).hex(),
+        I = t ?? E,
+        v = (0, l.$k)((0, l.LX)(I), !1, f ? x : null),
+        N = (0, c.r)(p).hex(),
+        j = (0, c.r)(g).hex(),
+        C = null != s ? s : (0, _.j)({ backgroundColor: I, colors: [N, j] }),
+        T = n / 8;
+    return (0, i.jsx)("div", {
+        style: { background: v, width: n, height: n, borderRadius: n, lineHeight: `${n}px` },
+        className: o,
+        children: (0, i.jsx)(d.q, {
             size: "custom",
-            color: v,
-            className: a()(_.w, m),
-            width: n - 2 * C,
-            height: n - 2 * C,
-            style: { margin: C },
+            color: C,
+            className: r()(h.w, A),
+            width: n - 2 * T,
+            height: n - 2 * T,
+            style: { margin: T },
         }),
     });
 }

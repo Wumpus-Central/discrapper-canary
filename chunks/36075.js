@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CR: () => h, RM: () => p, Wq: () => _, v5: () => f }), n(321073);
+n.d(t, { CR: () => h, RM: () => E, Wq: () => _, v5: () => f }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,24 +7,23 @@ var r = n(627968),
     o = n(308050),
     l = n(311907),
     u = n(775602),
-    c = n(652215),
-    d = n(979282);
+    d = n(652215),
+    c = n(979282);
 function _(e) {
     let { colorStrings: t, useReducedMotion: n, roleStyle: r, includeConvenienceGlow: i, animateGradient: s } = e,
         o = "username" === r,
-        l = "dot" === r,
-        u = o && i,
-        _ = t?.primaryColor ?? c.TpD,
-        f = {
-            "--custom-gradient-color-1": _,
-            "--custom-gradient-color-2": t?.secondaryColor ?? _,
-            "--custom-gradient-color-3": t?.tertiaryColor ?? _,
+        l = o && i,
+        u = t?.primaryColor ?? d.TpD,
+        _ = {
+            "--custom-gradient-color-1": u,
+            "--custom-gradient-color-2": t?.secondaryColor ?? u,
+            "--custom-gradient-color-3": t?.tertiaryColor ?? u,
         },
-        p = t?.tertiaryColor != null ? d.a7 : d.oD;
+        f = t?.tertiaryColor != null ? c.a7 : c.oD;
     return {
-        gradientStyle: f,
-        gradientClassname: a()(p, { [d.lC]: o, [d.FQ]: u, [d.Xy]: u && s, [d.yJ]: !n && l, [d.q]: s && o }),
-        gradientGlowClassname: a()(p, d.uk, { [d.lC]: o, [d.q]: s && o, [d.yb]: o && s }),
+        gradientStyle: _,
+        gradientClassname: a()(f, { [c.lC]: o, [c.FQ]: l, [c.Xy]: l && s, [c.yJ]: !n && "dot" === r, [c.q]: s && o }),
+        gradientGlowClassname: a()(f, c.uk, { [c.lC]: o, [c.q]: s && o, [c.yb]: o && s }),
     };
 }
 function f(e) {
@@ -35,7 +34,7 @@ function f(e) {
         [t, n, r, a, s],
     );
 }
-function p(e, t, n) {
+function E(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
             s = i.length >= 2,
@@ -59,7 +58,7 @@ function h(e, t) {
             l = 0;
         for (; null !== (n = i.exec(e)); )
             n.index > l && s.push(e.slice(l, n.index)),
-                s.push((0, r.jsx)("span", { className: a()(d.Zg, t), children: n[0] }, `emoji${n.index}`)),
+                s.push((0, r.jsx)("span", { className: a()(c.Zg, t), children: n[0] }, `emoji${n.index}`)),
                 (l = i.lastIndex);
         return l < e.length && s.push(e.slice(l)), s;
     }, [e, t]);

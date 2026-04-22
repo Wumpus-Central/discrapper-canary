@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jC: "popoutContainer_a912c3",
     Fb: "customColorsHeader_a912c3",

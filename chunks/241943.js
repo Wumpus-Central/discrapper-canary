@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i }), n(321073);
-class r {
+n.d(t, { A: () => r }), n(321073);
+let r = new (class {
     queue = [];
     enqueue(e) {
         this.queue.push(e);
@@ -8,5 +8,4 @@ class r {
     flush() {
         for (; this.queue.length > 0; ) this.queue.shift()?.();
     }
-}
-let i = new r();
+})();

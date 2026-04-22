@@ -1,80 +1,90 @@
-n.d(t, { M: () => N });
+n.d(t, { M: () => w });
 var i = n(627968);
 n(64700);
 var r = n(873263),
-    l = n(311907),
-    a = n(397927),
-    s = n(587895),
-    o = n(93055),
-    d = n(5180),
-    c = n(91242),
-    u = n(263063),
-    A = n(394953),
-    h = n(734057),
-    _ = n(71393),
-    m = n(309010),
-    g = n(967198),
-    p = n(486020),
-    E = n(652215),
-    I = n(165610),
-    f = n(985018),
-    C = n(842130),
-    T = n(878251);
-function N() {
+    a = n(311907),
+    l = n(782603),
+    s = n(27232),
+    o = n(111159),
+    d = n(768622),
+    u = n(836480),
+    c = n(403581),
+    A = n(34188),
+    h = n(214947),
+    _ = n(177953),
+    E = n(577473),
+    p = n(834730),
+    m = n(587895),
+    g = n(93055),
+    I = n(5180),
+    C = n(91242),
+    f = n(263063),
+    T = n(394953),
+    S = n(734057),
+    N = n(71393),
+    O = n(309010),
+    L = n(967198),
+    y = n(486020),
+    v = n(652215),
+    b = n(165610),
+    D = n(985018),
+    R = n(602339),
+    P = n(957896);
+function w() {
     let e,
         t = (0, r.zy)(),
-        n = (0, l.bG)([g.A], () => g.A.getGuildId()),
-        N = (0, l.bG)([m.A], () => m.A.getChannelId()),
-        S = (0, l.bG)([h.A], () => h.A.getChannel(N), [N]),
-        x = n ?? S?.guild_id,
-        v = (0, l.bG)([_.A], () => _.A.getGuild(x), [x]),
-        y = (0, o.DZ)(),
-        b = (0, A.lI)(),
-        { application: O, isFrameInFocusedMode: L } = (0, l.cf)([s.A, c.A], () => {
-            let e = c.A.getConnectedFrame();
+        n = (0, a.bG)([L.A], () => L.A.getGuildId()),
+        w = (0, a.bG)([O.A], () => O.A.getChannelId()),
+        M = (0, a.bG)([S.A], () => S.A.getChannel(w), [w]),
+        U = n ?? M?.guild_id,
+        x = (0, a.bG)([N.A], () => N.A.getGuild(U), [U]),
+        G = (0, g.DZ)(),
+        k = (0, T.lI)(),
+        { application: j, isFrameInFocusedMode: V } = (0, a.cf)([m.A, C.A], () => {
+            let e = C.A.getConnectedFrame();
             return {
-                application: s.A.getApplication(e?.applicationId),
-                isFrameInFocusedMode: c.A.getFrameLayoutMode() === I.y.FOCUSED,
+                application: m.A.getApplication(e?.applicationId),
+                isFrameInFocusedMode: C.A.getFrameLayoutMode() === b.y.FOCUSED,
             };
         }),
-        R = null != O ? p.Ay.getApplicationIconURL({ id: O.id, icon: O.icon, bot: O.bot }) : void 0,
-        P = null;
-    return (null != O && L
-        ? ((e = O.name),
-          (P = (0, i.jsx)("img", {
-              className: T.Z2,
-              alt: f.intl.string(f.t.X4IxWL),
-              src: R,
+        H = null != j ? y.Ay.getApplicationIconURL({ id: j.id, icon: j.icon, bot: j.bot }) : void 0,
+        B = null;
+    return (null != j && V
+        ? ((e = j.name),
+          (B = (0, i.jsx)("img", {
+              className: P.Z2,
+              alt: D.intl.string(D.t.X4IxWL),
+              src: H,
               "aria-hidden": !0,
               draggable: !1,
           })))
-        : b
-          ? ((e = f.intl.string(f.t.HcoRu0)), (P = (0, i.jsx)(a.XFE, { size: "sm" })))
-          : null != v
-            ? ((e = (0, d.YC)(v)),
-              (P = y
-                  ? (0, i.jsx)(a.Gg5, { size: "sm" })
-                  : (0, i.jsx)(u.Ay, { guild: v, size: u.Ay.Sizes.SMOL, active: !0, className: T.$f })))
-            : null != S && (S.isDM() || S.isGroupDM())
-              ? ((e = f.intl.string(f.t.YUU0RF)), (P = (0, i.jsx)(a.pVd, { size: "sm" })))
-              : t.pathname.startsWith(E.BVt.ICYMI)
-                ? ((e = f.intl.string(f.t["jnXV/V"])), (P = (0, i.jsx)(a.gXB, { size: "sm" })))
-                : t.pathname.startsWith(E.BVt.GLOBAL_DISCOVERY)
-                  ? ((e = f.intl.string(f.t["4nEZLk"])), (P = (0, i.jsx)(a.QGJ, { size: "sm" })))
-                  : t.pathname.startsWith(E.BVt.NITRO_HOME)
-                    ? ((e = f.intl.string(f.t.Ipxkog)), (P = (0, i.jsx)(a.tvc, { size: "sm" })))
-                    : t.pathname.startsWith(E.BVt.COLLECTIBLES_SHOP)
-                      ? ((e = f.intl.string(f.t.pWG4ze)), (P = (0, i.jsx)(a.U1X, { size: "sm" })))
-                      : t.pathname.startsWith(E.BVt.FRIENDS)
-                        ? ((e = f.intl.string(f.t.TdEu5X)), (P = (0, i.jsx)(a.$yI, { size: "sm" })))
-                        : t.pathname.startsWith(E.BVt.FAMILY_CENTER)
-                          ? ((e = f.intl.string(C.default.RZqaJn)), (P = (0, i.jsx)(a.nFg, { size: "sm" })))
-                          : t.pathname.startsWith(E.BVt.QUEST_HOME) &&
-                            ((e = f.intl.string(f.t.JALI2K)), (P = (0, i.jsx)(a.r2v, { size: "sm" }))),
+        : k
+          ? ((e = D.intl.string(D.t.HcoRu0)), (B = (0, i.jsx)(l.X, { size: "sm" })))
+          : null != x
+            ? ((e = (0, I.YC)(x)),
+              (B = G
+                  ? (0, i.jsx)(s.G, { size: "sm" })
+                  : (0, i.jsx)(f.Ay, { guild: x, size: f.Ay.Sizes.SMOL, active: !0, className: P.$f })))
+            : null != M && (M.isDM() || M.isGroupDM())
+              ? ((e = D.intl.string(D.t.YUU0RF)), (B = (0, i.jsx)(o.p, { size: "sm" })))
+              : t.pathname.startsWith(v.BVt.ICYMI)
+                ? ((e = D.intl.string(D.t["jnXV/V"])), (B = (0, i.jsx)(d.g, { size: "sm" })))
+                : t.pathname.startsWith(v.BVt.GLOBAL_DISCOVERY)
+                  ? ((e = D.intl.string(D.t["4nEZLk"])), (B = (0, i.jsx)(u.Q, { size: "sm" })))
+                  : t.pathname.startsWith(v.BVt.NITRO_HOME)
+                    ? ((e = D.intl.string(D.t.Ipxkog)), (B = (0, i.jsx)(c.t, { size: "sm" })))
+                    : t.pathname.startsWith(v.BVt.COLLECTIBLES_SHOP)
+                      ? ((e = D.intl.string(D.t.pWG4ze)), (B = (0, i.jsx)(A.U, { size: "sm" })))
+                      : t.pathname.startsWith(v.BVt.FRIENDS)
+                        ? ((e = D.intl.string(D.t.TdEu5X)), (B = (0, i.jsx)(h.$, { size: "sm" })))
+                        : t.pathname.startsWith(v.BVt.FAMILY_CENTER)
+                          ? ((e = D.intl.string(R.default.RZqaJn)), (B = (0, i.jsx)(_.n, { size: "sm" })))
+                          : t.pathname.startsWith(v.BVt.QUEST_HOME) &&
+                            ((e = D.intl.string(D.t.JALI2K)), (B = (0, i.jsx)(E.r, { size: "sm" }))),
     null == e || "" === e)
         ? null
         : (0, i.jsxs)("div", {
-              className: T.DD,
-              children: [P, (0, i.jsx)(a.Text, { variant: "text-sm/medium", lineClamp: 1, children: e })],
+              className: P.DD,
+              children: [B, (0, i.jsx)(p.E, { variant: "text-sm/medium", lineClamp: 1, children: e })],
           });
 }

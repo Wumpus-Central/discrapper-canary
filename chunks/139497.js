@@ -1,36 +1,32 @@
-"use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => g });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(47167),
-    a = n(713654),
-    o = n(199940),
-    d = n(985018),
-    c = n(574283);
-let u = function (e) {
+    l = n(64700),
+    s = n(276293),
+    r = n(834730),
+    a = n(821609),
+    o = n(47167),
+    d = n(713654),
+    c = n(199940),
+    u = n(985018),
+    m = n(327084);
+let g = function (e) {
     let { channel: t, end: n } = e,
-        u = (0, r.Ay)(t),
-        m = s.useCallback(() => {
-            (0, o.px)({ channelId: t.id, title: u ?? "", description: "", emoji: null, icon: null });
-        }, [t, u]),
-        g = (0, a.gU)(t) ?? l.N$i;
+        g = (0, o.Ay)(t),
+        h = l.useCallback(() => {
+            (0, c.px)({ channelId: t.id, title: g ?? "", description: "", emoji: null, icon: null });
+        }, [t, g]),
+        x = (0, d.gU)(t) ?? s.N;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: c.TG,
+                className: m.TG,
                 children: [
-                    (0, i.jsx)(g, { className: c.cC }),
-                    (0, i.jsx)(l.Text, { className: c.g7, variant: "text-sm/normal", children: u }),
-                    (0, i.jsx)(l.Button, {
-                        size: "sm",
-                        variant: "primary",
-                        onClick: m,
-                        text: d.intl.string(d.t.OYkgVk),
-                    }),
+                    (0, i.jsx)(x, { className: m.cC }),
+                    (0, i.jsx)(r.E, { className: m.g7, variant: "text-sm/normal", children: g }),
+                    (0, i.jsx)(a.$, { size: "sm", variant: "primary", onClick: h, text: u.intl.string(u.t.OYkgVk) }),
                 ],
             }),
-            n && (0, i.jsx)("div", { className: c.p3 }),
+            n && (0, i.jsx)("div", { className: m.p3 }),
         ],
     });
 };

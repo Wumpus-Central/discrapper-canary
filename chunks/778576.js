@@ -1,140 +1,152 @@
-a.d(t, { A: () => N });
+a.d(t, { A: () => F });
 var n = a(627968),
-    s = a(64700),
+    l = a(64700),
     r = a(503698),
-    l = a.n(r),
+    s = a.n(r),
     i = a(311907),
     c = a(990078),
-    u = a(397927),
-    o = a(287809),
-    d = a(101058),
-    A = a(989299),
-    h = a(348),
-    f = a(783173),
-    g = a(656925),
-    m = a(652215),
-    x = a(339984);
+    o = a(939249),
+    u = a(187322),
+    d = a(241326),
+    A = a(638495),
+    h = a(192308),
+    f = a(140735),
+    g = a(452027),
+    m = a(289873),
+    x = a(287809),
+    p = a(101058),
+    C = a(989299),
+    E = a(348),
+    N = a(783173),
+    j = a(656925),
+    T = a(652215),
+    R = a(339984);
 a(363385);
-var C = a(985018),
-    p = a(593335);
-function E(e) {
-    let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: l, avatarButtonRef: i } = e,
-        { id: o, storageHash: d, description: A = C.intl.string(C.t.lqaIxI) } = t,
-        { avatarSrc: h, eventHandlers: f } = (0, g.A)({ avatarId: o, storageHash: d }),
-        { onMouseEnter: m, onMouseLeave: x } = f,
-        E = s.useRef(null),
-        T = A ?? d.substring(0, 6).toUpperCase(),
-        N = C.intl.formatToPlainString(C.t.tmJ75y, { orderNumber: a + 1, description: T }),
-        R = C.intl.formatToPlainString(C.t.pBzwhc, { orderNumber: a + 1, description: T });
+var y = a(985018),
+    v = a(712839);
+function b(e) {
+    let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: s, avatarButtonRef: i } = e,
+        { id: A, storageHash: h, description: f = y.intl.string(y.t.lqaIxI) } = t,
+        { avatarSrc: g, eventHandlers: m } = (0, j.A)({ avatarId: A, storageHash: h }),
+        { onMouseEnter: x, onMouseLeave: p } = m,
+        C = l.useRef(null),
+        E = f ?? h.substring(0, 6).toUpperCase(),
+        N = y.intl.formatToPlainString(y.t.tmJ75y, { orderNumber: a + 1, description: E }),
+        T = y.intl.formatToPlainString(y.t.pBzwhc, { orderNumber: a + 1, description: E });
     return (0, n.jsxs)("div", {
-        className: p.ge,
+        className: v.ge,
         children: [
-            (0, n.jsx)(u.DUT, {
+            (0, n.jsx)(o.D, {
                 onClick: () => r(t),
-                onMouseEnter: m,
-                onMouseLeave: x,
-                className: p.Hk,
+                onMouseEnter: x,
+                onMouseLeave: p,
+                className: v.Hk,
                 "aria-label": N,
                 innerRef: i,
-                children: (0, n.jsx)("img", { src: h, alt: A, className: p.Hc }),
+                children: (0, n.jsx)("img", { src: g, alt: f, className: v.Hc }),
             }),
             (0, n.jsx)(c.m, {
-                text: C.intl.string(C.t.N86XcP),
-                anchorRef: E,
+                text: y.intl.string(y.t.N86XcP),
+                anchorRef: C,
                 asContainer: !0,
                 ariaHidden: !0,
-                children: (0, n.jsx)(u.vN3, {
+                children: (0, n.jsx)(u.vN, {
                     children: (0, n.jsx)("button", {
                         type: "button",
-                        ref: E,
-                        "aria-label": R,
-                        onClick: (e) => l(e, a, o, d, R),
-                        className: p.G5,
-                        children: (0, n.jsx)(u.ucK, { size: "xs", color: "currentColor", className: p.fy }),
+                        ref: C,
+                        "aria-label": T,
+                        onClick: (e) => s(e, a, A, h, T),
+                        className: v.G5,
+                        children: (0, n.jsx)(d.u, { size: "xs", color: "currentColor", className: v.fy }),
                     }),
                 }),
             }),
         ],
     });
 }
-function T(e) {
-    let { avatars: t, onComplete: r, setFetchError: c, className: h } = e,
-        g = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-        T = s.useRef([]),
-        N = s.useRef(null),
-        R = s.useRef(t.length),
-        j = s.useRef(null),
-        [v, b] = s.useState(!1),
-        [y, _] = s.useState(!1),
-        F = t.length,
-        S = Math.max(6 - F, 0),
-        L = (0, u.k34)(),
-        H = s.useCallback(
+function _(e) {
+    let { avatars: t, onComplete: r, setFetchError: c, className: o } = e,
+        u = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
+        d = l.useRef([]),
+        g = l.useRef(null),
+        m = l.useRef(t.length),
+        E = l.useRef(null),
+        [j, _] = l.useState(!1),
+        [F, L] = l.useState(!1),
+        S = t.length,
+        H = Math.max(6 - S, 0),
+        w = (0, A.k)(),
+        I = l.useCallback(
             async (e) => {
-                if (null == g || v) return;
-                b(!0), c(null);
-                let { id: t, storageHash: s, description: l } = e,
-                    i = (0, d.Xp)({
-                        userId: g.id,
+                if (null == u || j) return;
+                _(!0), c(null);
+                let { id: t, storageHash: l, description: s } = e,
+                    i = (0, p.Xp)({
+                        userId: u.id,
                         avatarId: t,
-                        storageHash: s,
-                        size: m.XAf,
+                        storageHash: l,
+                        size: T.XAf,
                         canAnimate: !0,
                         allowWebp: !1,
                     });
                 try {
                     let t = await fetch(i),
                         c = await t.blob(),
-                        { filename: o, type: A } = (0, d.yM)(s, l);
-                    (0, u.mMO)(
+                        { filename: o, type: u } = (0, p.yM)(l, s);
+                    (0, h.openModalLazy)(
                         async () => {
-                            let { default: t } = await Promise.all([a.e("35929"), a.e("74571"), a.e("29077")]).then(
-                                a.bind(a, 142630),
-                            );
+                            let { default: t } = await Promise.all([
+                                a.e("24199"),
+                                a.e("55202"),
+                                a.e("51793"),
+                                a.e("29259"),
+                                a.e("74571"),
+                                a.e("69752"),
+                            ]).then(a.bind(a, 142630));
                             return (a) =>
                                 (0, n.jsx)(t, {
                                     imageUri: i,
-                                    file: new File([c], o, { type: A }),
+                                    file: new File([c], o, { type: u }),
                                     originalAsset: e,
                                     onCrop: r,
-                                    uploadType: x.HL.AVATAR,
+                                    uploadType: R.HL.AVATAR,
                                     showUpsellHeader: !0,
                                     ...a,
                                 });
                         },
-                        { contextKey: L },
+                        { contextKey: w },
                     );
                 } catch (e) {
-                    c(C.intl.string(C.t.fZRH9P));
+                    c(y.intl.string(y.t.fZRH9P));
                 } finally {
-                    b(!1);
+                    _(!1);
                 }
             },
-            [L, v, r, c, g],
+            [w, j, r, c, u],
         ),
-        w = s.useCallback(
-            (e, s, r, l, i) => {
-                let c = s + 1 < t.length ? s + 1 : s - 1;
-                (j.current = c >= 0 ? T.current[c] : N.current),
+        M = l.useCallback(
+            (e, l, r, s, i) => {
+                let c = l + 1 < t.length ? l + 1 : l - 1;
+                (E.current = c >= 0 ? d.current[c] : g.current),
                     e.shiftKey
-                        ? (0, A.O)(r)
-                        : (_(!0),
-                          (0, u.mMO)(async () => {
-                              let { default: e } = await a.e("48944").then(a.bind(a, 555251));
+                        ? (0, C.O)(r)
+                        : (L(!0),
+                          (0, h.openModalLazy)(async () => {
+                              let { default: e } = await a.e("26563").then(a.bind(a, 555251));
                               return (t) => {
-                                  let { onClose: a, ...s } = t;
+                                  let { onClose: a, ...l } = t;
                                   return (0, n.jsx)(e, {
                                       avatarId: r,
-                                      storageHash: l,
+                                      storageHash: s,
                                       avatarDescription: i,
-                                      onConfirmDelete: () => (0, A.O)(r),
+                                      onConfirmDelete: () => (0, C.O)(r),
                                       onClose: async () => {
                                           await a(),
                                               requestAnimationFrame(() => {
-                                                  _(!1);
+                                                  L(!1);
                                               });
                                       },
-                                      ...s,
+                                      ...l,
                                   });
                               };
                           }));
@@ -142,35 +154,35 @@ function T(e) {
             [t],
         );
     return (
-        s.useEffect(() => {
-            y ||
-                (t.length < R.current &&
-                    null != j.current &&
+        l.useEffect(() => {
+            F ||
+                (t.length < m.current &&
+                    null != E.current &&
                     requestAnimationFrame(() => {
-                        j.current?.focus();
+                        E.current?.focus();
                     }),
-                (R.current = t.length));
-        }, [t.length, y]),
+                (m.current = t.length));
+        }, [t.length, F]),
         (0, n.jsx)("div", {
-            className: l()(p.AU, h),
+            className: s()(v.AU, o),
             children: (0, n.jsxs)("div", {
-                className: p.mE,
+                className: v.mE,
                 children: [
-                    F > 0 &&
+                    S > 0 &&
                         (0, n.jsx)("ul", {
-                            "aria-label": C.intl.string(C.t.lsU63N),
-                            className: p.xL,
+                            "aria-label": y.intl.string(y.t.lsU63N),
+                            className: v.xL,
                             children: t.map((e, t) =>
                                 (0, n.jsx)(
                                     "li",
                                     {
-                                        children: (0, n.jsx)(E, {
+                                        children: (0, n.jsx)(b, {
                                             avatar: e,
                                             index: t,
-                                            onSelectRecentAvatar: H,
-                                            onDeleteRecentAvatar: w,
+                                            onSelectRecentAvatar: I,
+                                            onDeleteRecentAvatar: M,
                                             avatarButtonRef: (e) => {
-                                                T.current[t] = e;
+                                                d.current[t] = e;
                                             },
                                         }),
                                     },
@@ -178,20 +190,20 @@ function T(e) {
                                 ),
                             ),
                         }),
-                    S > 0 &&
+                    H > 0 &&
                         (0, n.jsxs)("div", {
-                            className: p.wh,
+                            className: v.wh,
                             tabIndex: -1,
-                            ref: N,
+                            ref: g,
                             children: [
-                                (0, n.jsxs)(u.AC4, {
+                                (0, n.jsxs)(f.A, {
                                     children: [
-                                        0 === F &&
-                                            (0, n.jsxs)(n.Fragment, { children: [C.intl.string(C.t.x0DsRS), " "] }),
-                                        C.intl.format(C.t["8W2HO3"], { numberOfEmptyAvatarSlots: S }),
+                                        0 === S &&
+                                            (0, n.jsxs)(n.Fragment, { children: [y.intl.string(y.t.x0DsRS), " "] }),
+                                        y.intl.format(y.t["8W2HO3"], { numberOfEmptyAvatarSlots: H }),
                                     ],
                                 }),
-                                [...Array(S)].map((e, t) => (0, n.jsx)(f.A, { className: p.rZ }, t)),
+                                [...Array(H)].map((e, t) => (0, n.jsx)(N.A, { className: v.rZ }, t)),
                             ],
                         }),
                 ],
@@ -199,28 +211,28 @@ function T(e) {
         })
     );
 }
-function N(e) {
+function F(e) {
     let { className: t, onComplete: a } = e,
-        { avatars: r, loading: i, error: c } = (0, h.b)(),
-        [o, d] = s.useState(null),
-        f = o ?? c?.message;
+        { avatars: r, loading: i, error: c } = (0, E.b)(),
+        [o, u] = l.useState(null),
+        d = o ?? c?.message;
     return (
-        s.useEffect(() => {
-            (0, A.I)();
+        l.useEffect(() => {
+            (0, C.I)();
         }, []),
         (0, n.jsx)("div", {
-            className: l()(p.kL, t),
-            children: (0, n.jsx)(u.D0$, {
-                label: C.intl.string(C.t.Bnq9zK),
-                description: C.intl.format(C.t["+CyJu3"], { recentAvatarsLimit: 6 }),
-                errorMessage: f,
+            className: s()(v.kL, t),
+            children: (0, n.jsx)(g.D, {
+                label: y.intl.string(y.t.Bnq9zK),
+                description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: 6 }),
+                errorMessage: d,
                 children: i
-                    ? (0, n.jsx)(u.y$y, { className: p.u1 })
-                    : (0, n.jsx)(T, {
+                    ? (0, n.jsx)(m.y, { className: v.u1 })
+                    : (0, n.jsx)(_, {
                           avatars: r,
                           onComplete: a,
-                          setFetchError: d,
-                          className: null != f ? p.JD : void 0,
+                          setFetchError: u,
+                          className: null != d ? v.JD : void 0,
                       }),
             }),
         })

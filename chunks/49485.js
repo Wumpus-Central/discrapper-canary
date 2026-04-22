@@ -1,22 +1,14 @@
 "use strict";
-n.d(t, { Ay: () => _, I_: () => c, X7: () => d }), n(323874), n(14289), n(35956);
+n.d(t, { Ay: () => d, I_: () => l, X7: () => u }), n(323874), n(14289), n(35956);
 var r = n(214958),
     i = n.n(r),
-    a = n(835245),
-    s = n(383859);
-let o = "https://discordapp.onelink.me",
-    l = "Hs5r";
-function u() {
-    let e = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"],
-        t = RegExp(`(${e.join("|")})`, "ig"),
-        n = i()?.ua?.match(t) != null,
-        r = i()?.name === "Safari" && !n;
-    return i()?.os?.family !== "iOS" || r;
+    s = n(835245),
+    a = n(383859);
+let o = "https://discordapp.onelink.me";
+function l() {
+    return (0, s.A)();
 }
-function c() {
-    return (0, a.A)();
-}
-function d(e) {
+function u(e) {
     if (!e.startsWith(o)) return null;
     try {
         let t = new URL(e).searchParams,
@@ -24,26 +16,34 @@ function d(e) {
         if (null == n) return null;
         let r = decodeURIComponent(n),
             i = new URL(r).searchParams,
-            a = { utmSource: t.get("pid") ?? void 0 };
-        for (let [e, t] of i.entries()) a[e] = t;
-        return a;
+            s = { utmSource: t.get("pid") ?? void 0 };
+        for (let [e, t] of i.entries()) s[e] = t;
+        return s;
     } catch {
         return null;
     }
 }
-function _(e, t) {
-    let { utmSource: n, androidFallbackLink: r, iosFallbackLink: i, ...a } = t,
-        c = new URL(e);
-    for (let e in a) {
-        let t = a[e];
-        null != t && c.searchParams.set(e, t);
+function d(e, t) {
+    let n,
+        r,
+        s,
+        { utmSource: l, androidFallbackLink: u, iosFallbackLink: d, ...c } = t,
+        _ = new URL(e);
+    for (let e in c) {
+        let t = c[e];
+        null != t && _.searchParams.set(e, t);
     }
-    let d = encodeURIComponent(c.toString()),
-        _ = encodeURIComponent(`discord://app/open#${c.toString()}`),
-        f = encodeURIComponent((0, s.A)()),
-        p = u() ? "true" : "false",
-        h = null != r ? encodeURIComponent(r) : null,
-        m = null != i ? encodeURIComponent(i) : null,
-        g = `${o}/${l}/?deep_link_value=${d}&pid=${n}&af_force_deeplink=${p}&af_og_description=${f}&af_dp=${_}`;
-    return null != h && (g += `&af_android_url=${h}`), null != m && (g += `&af_ios_url=${m}`), g;
+    let f = encodeURIComponent(_.toString()),
+        E = encodeURIComponent(`discord://app/open#${_.toString()}`),
+        h = encodeURIComponent((0, a.A)()),
+        p = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
+        (r = i()?.ua?.match(n) != null),
+        (s = i()?.name === "Safari" && !r),
+        i()?.os?.family !== "iOS" || s)
+            ? "true"
+            : "false",
+        m = null != u ? encodeURIComponent(u) : null,
+        g = null != d ? encodeURIComponent(d) : null,
+        A = `${o}/Hs5r/?deep_link_value=${f}&pid=${l}&af_force_deeplink=${p}&af_og_description=${h}&af_dp=${E}`;
+    return null != m && (A += `&af_android_url=${m}`), null != g && (A += `&af_ios_url=${g}`), A;
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     hQ: "contentContainer__1ae3d",
     tE: "rewardTileContainer__1ae3d",

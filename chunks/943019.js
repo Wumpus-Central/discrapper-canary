@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { P: () => h, m: () => p });
+n.d(t, { P: () => h, m: () => E });
 var r = n(254033),
     i = n(996976),
-    a = n(63514),
-    s = n(353563),
+    s = n(63514),
+    a = n(353563),
     o = new WeakMap(),
     l = /auto|scroll/,
     u = /^tb|vertical/,
-    c = /msie|trident/i.test(s.S.navigator && s.S.navigator.userAgent),
-    d = function (e) {
+    d = /msie|trident/i.test(a.S.navigator && a.S.navigator.userAgent),
+    c = function (e) {
         return parseFloat(e || "0");
     },
     _ = function (e, t, n) {
@@ -25,54 +25,52 @@ var r = n(254033),
         contentBoxSize: _(),
         contentRect: new i.p(0, 0, 0, 0),
     }),
-    p = function (e, t) {
+    E = function (e, t) {
         if ((void 0 === t && (t = !1), o.has(e) && !t)) return o.get(e);
-        if ((0, a.dK)(e)) return o.set(e, f), f;
+        if ((0, s.dK)(e)) return o.set(e, f), f;
         var n = getComputedStyle(e),
-            r = (0, a.XJ)(e) && e.ownerSVGElement && e.getBBox(),
-            s = !c && "border-box" === n.boxSizing,
-            p = u.test(n.writingMode || ""),
+            r = (0, s.XJ)(e) && e.ownerSVGElement && e.getBBox(),
+            a = !d && "border-box" === n.boxSizing,
+            E = u.test(n.writingMode || ""),
             h = !r && l.test(n.overflowY || ""),
-            m = !r && l.test(n.overflowX || ""),
-            g = r ? 0 : d(n.paddingTop),
-            E = r ? 0 : d(n.paddingRight),
-            A = r ? 0 : d(n.paddingBottom),
-            I = r ? 0 : d(n.paddingLeft),
-            T = r ? 0 : d(n.borderTopWidth),
-            y = r ? 0 : d(n.borderRightWidth),
-            S = r ? 0 : d(n.borderBottomWidth),
-            v = r ? 0 : d(n.borderLeftWidth),
-            C = I + E,
-            b = g + A,
-            N = v + y,
-            R = T + S,
-            O = m ? e.offsetHeight - R - e.clientHeight : 0,
-            D = h ? e.offsetWidth - N - e.clientWidth : 0,
-            L = s ? C + N : 0,
-            w = s ? b + R : 0,
-            x = r ? r.width : d(n.width) - L - D,
-            P = r ? r.height : d(n.height) - w - O,
-            M = x + C + D + N,
-            k = P + b + O + R,
+            p = !r && l.test(n.overflowX || ""),
+            m = r ? 0 : c(n.paddingTop),
+            g = r ? 0 : c(n.paddingRight),
+            A = r ? 0 : c(n.paddingBottom),
+            I = r ? 0 : c(n.paddingLeft),
+            T = r ? 0 : c(n.borderTopWidth),
+            S = r ? 0 : c(n.borderRightWidth),
+            y = r ? 0 : c(n.borderBottomWidth),
+            N = r ? 0 : c(n.borderLeftWidth),
+            O = I + g,
+            R = m + A,
+            v = N + S,
+            C = T + y,
+            b = p ? e.offsetHeight - C - e.clientHeight : 0,
+            D = h ? e.offsetWidth - v - e.clientWidth : 0,
+            L = r ? r.width : c(n.width) - (a ? O + v : 0) - D,
+            w = r ? r.height : c(n.height) - (a ? R + C : 0) - b,
+            M = L + O + D + v,
+            P = w + R + b + C,
             U = Object.freeze({
-                devicePixelContentBoxSize: _(Math.round(x * devicePixelRatio), Math.round(P * devicePixelRatio), p),
-                borderBoxSize: _(M, k, p),
-                contentBoxSize: _(x, P, p),
-                contentRect: new i.p(I, g, x, P),
+                devicePixelContentBoxSize: _(Math.round(L * devicePixelRatio), Math.round(w * devicePixelRatio), E),
+                borderBoxSize: _(M, P, E),
+                contentBoxSize: _(L, w, E),
+                contentRect: new i.p(I, m, L, w),
             });
         return o.set(e, U), U;
     },
     h = function (e, t, n) {
-        var i = p(e, n),
-            a = i.borderBoxSize,
-            s = i.contentBoxSize,
+        var i = E(e, n),
+            s = i.borderBoxSize,
+            a = i.contentBoxSize,
             o = i.devicePixelContentBoxSize;
         switch (t) {
             case r.U.DEVICE_PIXEL_CONTENT_BOX:
                 return o;
             case r.U.BORDER_BOX:
-                return a;
-            default:
                 return s;
+            default:
+                return a;
         }
     };

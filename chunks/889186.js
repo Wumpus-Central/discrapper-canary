@@ -1,177 +1,180 @@
-l.d(t, { default: () => S }), l(321073);
+l.d(t, { default: () => I }), l(321073);
 var n = l(627968),
     s = l(64700),
-    r = l(158954),
+    r = l(189213),
     i = l(311907),
-    a = l(397927),
-    u = l(966327),
-    c = l(629357),
-    d = l(47167),
-    o = l(359378),
-    h = l(598104),
-    f = l(255266),
-    g = l(223863),
+    a = l(892547),
+    u = l(821609),
+    c = l(834730),
+    d = l(778712),
+    o = l(966327),
+    h = l(629357),
+    f = l(47167),
+    g = l(359378),
+    m = l(598104),
+    p = l(255266),
+    _ = l(223863),
     x = l(151054),
-    m = l(734057),
-    p = l(71393),
-    _ = l(576705),
-    b = l(287809),
-    A = l(181079),
-    y = l(422258),
-    C = l(668267),
-    v = l(93055),
-    j = l(5180),
-    k = l(652215),
-    D = l(665606),
+    b = l(734057),
+    A = l(71393),
+    y = l(576705),
+    C = l(287809),
+    v = l(181079),
+    j = l(422258),
+    k = l(668267),
+    D = l(93055),
+    M = l(5180),
+    S = l(652215),
+    E = l(335993),
     L = l(985018),
-    M = l(233492);
-function S(e) {
-    let { transitionState: t, onClose: l, parentId: u, source: d } = e;
+    N = l(761357);
+function I(e) {
+    let { transitionState: t, onClose: l, parentId: c, source: d } = e;
     s.useEffect(() => {
-        null != d && (0, C.tC)(d);
+        null != d && (0, k.tC)(d);
     }, [d]);
-    let [o, h] = s.useState(""),
-        [f, g] = s.useState(() => new Set()),
-        { notifyFavoriteAdded: p } = (0, v.CJ)(),
-        { hasHigherPrivileges: b } = (0, v.TW)("AddFavoriteChannelModal"),
-        S = (0, i.bG)([A.A], () => A.A.getFavoriteChannels()),
-        R = s.useMemo(() => new Set(Object.keys(S)), [S]),
-        w = s.useCallback(
+    let [o, f] = s.useState(""),
+        [g, m] = s.useState(() => new Set()),
+        { notifyFavoriteAdded: p } = (0, D.CJ)(),
+        { hasHigherPrivileges: _ } = (0, D.TW)("AddFavoriteChannelModal"),
+        A = (0, i.bG)([v.A], () => v.A.getFavoriteChannels()),
+        C = s.useMemo(() => new Set(Object.keys(A)), [A]),
+        I = s.useCallback(
             (e, t) => {
-                if (e.type === c.rD.USER) {
-                    let l = m.A.getDMChannelFromUserId(e.record.id);
-                    return (!!t || null != l) && (null == l || !R.has(l.id));
+                if (e.type === h.rD.USER) {
+                    let l = b.A.getDMChannelFromUserId(e.record.id);
+                    return (!!t || null != l) && (null == l || !C.has(l.id));
                 }
-                return e.type === c.rD.GROUP_DM
-                    ? !R.has(e.record.id)
-                    : _.A.can(k.xBc.VIEW_CHANNEL, e.record) && (0, j.IF)(e.record, b) && !R.has(e.record.id);
+                return e.type === h.rD.GROUP_DM
+                    ? !C.has(e.record.id)
+                    : y.A.can(S.xBc.VIEW_CHANNEL, e.record) && (0, M.IF)(e.record, _) && !C.has(e.record.id);
             },
-            [R, b],
+            [C, _],
         ),
-        { results: T, updateSearchText: G } = (0, x.R)({ includeMissingDMs: !0, channelFilter: w }),
-        P = s.useMemo(() => [...f].filter((e) => !R.has(e)).length, [R, f]),
-        H = P >= 20,
-        q = s.useMemo(
+        { results: P, updateSearchText: H } = (0, x.R)({ includeMissingDMs: !0, channelFilter: I }),
+        q = s.useMemo(() => [...g].filter((e) => !C.has(e)).length, [C, g]),
+        T = q >= 20,
+        W = s.useMemo(
             () =>
-                P >= 2 ? L.intl.formatToPlainString(D.default.LbCa8x, { count: P }) : L.intl.string(D.default.xKXcSu),
-            [P],
+                q >= 2 ? L.intl.formatToPlainString(E.default.LbCa8x, { count: q }) : L.intl.string(E.default.xKXcSu),
+            [q],
         ),
-        W = s.useCallback(
+        F = s.useCallback(
             (e) => {
-                h(e), G(e);
+                f(e), H(e);
             },
-            [G],
+            [H],
         ),
-        U = s.useCallback(
+        O = s.useCallback(
             (e) => {
-                R.has(e) ||
-                    g((t) => {
+                C.has(e) ||
+                    m((t) => {
                         let l = 0;
-                        for (let e of t) R.has(e) || (l += 1);
+                        for (let e of t) C.has(e) || (l += 1);
                         if (l >= 20 && !t.has(e)) return t;
                         let n = new Set(t);
                         return n.has(e) ? n.delete(e) : n.add(e), n;
                     });
             },
-            [R],
+            [C],
         ),
-        F = s.useCallback(() => {
-            let e = [...f].filter((e) => !R.has(e));
-            e.length > 0 && (p(), (0, y.S_)(e, u ?? null, "modal")), l();
-        }, [R, p, l, u, f]),
-        O = s.useMemo(() => {
+        U = s.useCallback(() => {
+            let e = [...g].filter((e) => !C.has(e));
+            e.length > 0 && (p(), (0, j.S_)(e, c ?? null, "modal")), l();
+        }, [C, p, l, c, g]),
+        z = s.useMemo(() => {
             let e = [];
-            for (let t of T) t.type !== c.rD.HEADER && null != N(t) && e.push(t);
+            for (let t of P) t.type !== h.rD.HEADER && null != w(t) && e.push(t);
             return e;
-        }, [T]),
-        z = s.useMemo(
+        }, [P]),
+        B = s.useMemo(
             () =>
-                0 === O.length
-                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(I, {}), rowHeight: 72 }
+                0 === z.length
+                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(R, {}), rowHeight: 72 }
                     : {
-                          sections: [O.length],
+                          sections: [z.length],
                           sectionHeight: 0,
                           rowHeight: 48,
                           renderRow: (e) => {
                               let { section: t, row: l } = e;
                               if (t > 0) return null;
-                              let s = O[l];
+                              let s = z[l];
                               if (null == s) return null;
-                              let r = N(s);
+                              let r = w(s);
                               return null == r
                                   ? null
                                   : (0, n.jsx)(
-                                        E,
+                                        G,
                                         {
                                             channel: r,
-                                            selected: f.has(r.id),
-                                            disabled: H && !f.has(r.id),
-                                            onToggleChannel: U,
+                                            selected: g.has(r.id),
+                                            disabled: T && !g.has(r.id),
+                                            onToggleChannel: O,
                                         },
                                         r.id,
                                     );
                           },
                       },
-            [O, U, f, H],
+            [z, O, g, T],
         );
     return (0, n.jsx)(r.Modal, {
-        title: L.intl.string(D.default.Rp35U1),
+        title: L.intl.string(E.default.Rp35U1),
         actions: [],
         transitionState: t,
         onClose: l,
-        input: (0, n.jsx)(a.IWV, {
+        input: (0, n.jsx)(a.I, {
             query: o,
-            onChange: W,
-            onClear: () => W(""),
+            onChange: F,
+            onClear: () => F(""),
             placeholder: L.intl.string(L.t["5h0QOP"]),
             "aria-label": L.intl.string(L.t["5h0QOP"]),
             autoFocus: !0,
         }),
         actionBarInput: (0, n.jsx)("div", {
-            className: M.c,
-            children: (0, n.jsx)(a.Button, {
+            className: N.c,
+            children: (0, n.jsx)(u.$, {
                 variant: "primary",
                 size: "md",
                 fullWidth: !0,
-                text: q,
-                onClick: F,
-                disabled: 0 === P,
+                text: W,
+                onClick: U,
+                disabled: 0 === q,
             }),
         }),
-        listProps: z,
+        listProps: B,
     });
 }
-function I() {
+function R() {
     return (0, n.jsx)("div", {
-        className: M.p,
-        children: (0, n.jsx)(a.Text, {
+        className: N.p,
+        children: (0, n.jsx)(c.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(D.default.kQL9be),
+            children: L.intl.string(E.default.kQL9be),
         }),
     });
 }
-function N(e) {
-    if (e.type === c.rD.USER) {
-        let t = (0, g._g)({ type: "user", id: e.record.id });
-        return null != t ? (m.A.getChannel(t) ?? null) : null;
+function w(e) {
+    if (e.type === h.rD.USER) {
+        let t = (0, _._g)({ type: "user", id: e.record.id });
+        return null != t ? (b.A.getChannel(t) ?? null) : null;
     }
-    return e.type === c.rD.TEXT_CHANNEL || e.type === c.rD.VOICE_CHANNEL || e.type === c.rD.GROUP_DM ? e.record : null;
+    return e.type === h.rD.TEXT_CHANNEL || e.type === h.rD.VOICE_CHANNEL || e.type === h.rD.GROUP_DM ? e.record : null;
 }
-function E(e) {
+function G(e) {
     let { channel: t, selected: l, disabled: s, onToggleChannel: r } = e,
-        c = (0, i.bG)([p.A], () => p.A.getGuild(t.guild_id), [t.guild_id]),
-        g = (0, d.Ay)(t),
-        x = (0, i.bG)([b.default], () => (t.isDM() ? b.default.getUser(t.recipients?.[0]) : null), [t]);
-    return (0, n.jsx)(o.A, {
+        a = (0, i.bG)([A.A], () => A.A.getGuild(t.guild_id), [t.guild_id]),
+        u = (0, f.Ay)(t),
+        c = (0, i.bG)([C.default], () => (t.isDM() ? C.default.getUser(t.recipients?.[0]) : null), [t]);
+    return (0, n.jsx)(g.A, {
         listItemId: t.id,
         icon:
-            t.isDM() && null != x
-                ? (0, n.jsx)(u.A, { "aria-hidden": !0, size: a._3J.SIZE_32, user: x })
+            t.isDM() && null != c
+                ? (0, n.jsx)(o.A, { "aria-hidden": !0, size: d._3.SIZE_32, user: c })
                 : t.isGroupDM()
-                  ? (0, n.jsx)(h.A, { "aria-hidden": !0, size: a._3J.SIZE_32, channel: t })
-                  : (0, n.jsx)(f.A, { size: f.q.SMALL_32, guild: c, channel: t }),
-        label: g,
+                  ? (0, n.jsx)(m.A, { "aria-hidden": !0, size: d._3.SIZE_32, channel: t })
+                  : (0, n.jsx)(p.A, { size: p.q.SMALL_32, guild: a, channel: t }),
+        label: u,
         selected: l,
         disabled: s,
         onPress: () => r(t.id),

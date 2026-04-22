@@ -1,21 +1,22 @@
-n.d(i, { A: () => c });
-var t = n(627968);
+n.d(e, { A: () => c });
+var l = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(837057),
-    d = n(310419),
-    r = n(488995),
-    s = n(985018);
-function c(e) {
-    return (0, t.jsx)(l.Drp, {
+var t = n(477782),
+    a = n(323384),
+    d = n(837057),
+    r = n(310419),
+    s = n(488995),
+    o = n(985018);
+function c(i) {
+    return (0, l.jsx)(t.Dr, {
         id: "application-directory",
-        label: s.intl.string(s.t.AKcFUj),
-        icon: l.k9F,
-        leadingAccessory: { type: "icon", icon: l.k9F },
+        label: o.intl.string(o.t.AKcFUj),
+        icon: a.k,
+        leadingAccessory: { type: "icon", icon: a.k },
         action: () => {
-            (0, a.transitionToGlobalDiscovery)({
-                tab: r.GlobalDiscoveryTab.APPS,
-                newSessionState: { entrypoint: { name: d.sW.GUILD_HEADER_POPOUT }, guildId: e.id },
+            (0, d.transitionToGlobalDiscovery)({
+                tab: s.GlobalDiscoveryTab.APPS,
+                newSessionState: { entrypoint: { name: r.sW.GUILD_HEADER_POPOUT }, guildId: i.id },
             });
         },
     });

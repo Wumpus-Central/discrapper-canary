@@ -1,69 +1,67 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968);
+n.d(t, { A: () => A });
+var a = n(627968);
 n(64700);
-var i = n(934551),
-    s = n(397927),
-    a = n(927578),
+var r = n(403581),
+    l = n(772707),
+    i = n(927578),
     o = n(422936),
-    l = n(234419),
-    u = n(783420),
-    c = n(511484),
+    s = n(234419),
+    c = n(783420),
+    u = n(511484),
     d = n(788868),
-    _ = n(985018);
-let f = function (e) {
+    p = n(985018);
+let A = function (e) {
     let {
             transitionState: t,
             title: n,
-            subtitle: f,
-            graphic: p,
-            guildBoostProps: h,
-            onClose: m,
-            onSecondaryClick: E,
-            secondaryCTA: g,
-            badgeType: A = null,
-            subscriptionTier: I = d.pe.TIER_2,
-            hidePremiumOfferUpsell: T,
-            children: S,
+            subtitle: A,
+            graphic: g,
+            guildBoostProps: _,
+            onClose: v,
+            onSecondaryClick: f,
+            secondaryCTA: m,
+            badgeType: E = null,
+            subscriptionTier: b = d.pe.TIER_2,
+            hidePremiumOfferUpsell: R,
+            children: h,
         } = e,
-        y = null != h,
-        v = (0, l.V)(),
-        N = (0, o.O)(),
-        C = !T && (v?.subscription_trial?.sku_id === I || (0, c.U9)(N, I)) && !y,
-        R = _.intl.string(_.t.pj0XBN);
-    C &&
-        (null != v
-            ? (R = (0, a.FY)({
-                  intervalType: v?.subscription_trial?.interval,
-                  intervalCount: v?.subscription_trial?.interval_count,
+        O = (0, s.V)(),
+        D = (0, o.O)(),
+        T = !R && (O?.subscription_trial?.sku_id === b || (0, u.U9)(D, b)) && null == _,
+        I = p.intl.string(p.t.pj0XBN);
+    T &&
+        (null != O
+            ? (I = (0, i.FY)({
+                  intervalType: O?.subscription_trial?.interval,
+                  intervalCount: O?.subscription_trial?.interval_count,
               }))
-            : null != N && (R = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: N.discount.amount })));
-    let O = null != v ? "free_trial" : A;
-    return (0, r.jsx)(u.A, {
-        subscriptionTier: I,
+            : null != D && (I = p.intl.formatToPlainString(p.t.bkQ4bH, { percent: D.discount.amount })));
+    let N = null != O ? "free_trial" : E;
+    return (0, a.jsx)(c.A, {
+        subscriptionTier: b,
         children: (e) => {
-            let { onClick: a } = e;
-            return (0, r.jsx)(s.kpP, {
+            let { onClick: i } = e;
+            return (0, a.jsx)(l.k, {
                 title: n,
-                subtitle: f,
-                graphic: p,
+                subtitle: A,
+                graphic: g,
                 gradientColor: "nitro-pink",
                 transitionState: t,
-                onClose: async () => await m(),
+                onClose: async () => await v(),
                 actions: [
-                    { text: g, variant: "secondary", size: "md", onClick: E },
+                    { text: m, variant: "secondary", size: "md", onClick: f },
                     {
-                        text: R,
+                        text: I,
                         variant: "expressive",
                         size: "md",
                         onClick: async (e) => {
-                            await m(), a(e);
+                            await v(), i(e);
                         },
-                        icon: i.NitroWheelIcon,
+                        icon: r.t,
                     },
                 ],
-                ...(null !== O && { badge: { type: O, variant: "expressive" } }),
-                children: S,
+                ...(null !== N && { badge: { type: N, variant: "expressive" } }),
+                children: h,
             });
         },
     });

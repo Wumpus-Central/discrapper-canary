@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Os: "giftMainAnimation_d54fab",
     b7: "soundEmojiContainer_d54fab",

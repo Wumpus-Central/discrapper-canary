@@ -1,15 +1,15 @@
-"use strict";
 n.d(t, { A: () => o });
-var r = n(627968),
-    i = n(397927),
-    s = n(985018),
-    a = n(403971);
+var l = n(627968),
+    i = n(194261),
+    r = n(834730),
+    a = n(985018),
+    s = n(809890);
 function o() {
-    return (0, r.jsxs)("div", {
-        className: a.v,
+    return (0, l.jsxs)("div", {
+        className: s.v,
         children: [
-            (0, r.jsx)(i.XAi, { size: "xs", color: "currentColor" }),
-            (0, r.jsx)(i.Text, { variant: "text-sm/semibold", className: a.Q, children: s.intl.string(s.t.KPnd2O) }),
+            (0, l.jsx)(i.X, { size: "xs", color: "currentColor" }),
+            (0, l.jsx)(r.E, { variant: "text-sm/semibold", className: s.Q, children: a.intl.string(a.t.KPnd2O) }),
         ],
     });
 }

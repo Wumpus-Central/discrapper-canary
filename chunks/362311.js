@@ -1,126 +1,130 @@
-n.d(e, { A: () => x, m: () => u });
+n.d(e, { A: () => G, m: () => T });
 var i = n(627968),
     a = n(64700),
     r = n(311907),
-    l = n(421380),
-    s = n(397927),
-    d = n(308528),
-    c = n(198982),
-    o = n(235986),
-    m = n(915089),
-    p = n(263063),
-    C = n(808728),
-    g = n(71393),
-    _ = n(985018),
-    L = n(940480);
-function u(t) {
-    let { createdGuildId: e, hasFooter: n = !0, onClose: u, onChannelPromptCompleted: x, isSlideReady: T } = t,
-        [E, G] = a.useState(""),
-        [I, b] = a.useState(null),
-        [D, h] = a.useState(!1),
-        A = (0, m.GV)(),
-        U = (0, r.bG)([g.A], () => g.A.getGuild(e), [e]),
-        y = a.useRef(null);
+    s = n(862482),
+    l = n(821609),
+    d = n(935462),
+    c = n(834730),
+    o = n(534514),
+    m = n(292666),
+    p = n(308528),
+    g = n(198982),
+    C = n(235986),
+    _ = n(915089),
+    L = n(263063),
+    u = n(808728),
+    x = n(71393),
+    E = n(985018),
+    b = n(940480);
+function T(t) {
+    let { createdGuildId: e, hasFooter: n = !0, onClose: T, onChannelPromptCompleted: G, isSlideReady: I } = t,
+        [D, h] = a.useState(""),
+        [A, U] = a.useState(null),
+        [y, v] = a.useState(!1),
+        N = (0, _.GV)(),
+        j = (0, r.bG)([x.A], () => x.A.getGuild(e), [e]),
+        f = a.useRef(null);
     a.useEffect(() => {
-        T && y.current?.focus();
-    }, [T]);
-    let N = a.useCallback(
+        I && f.current?.focus();
+    }, [I]);
+    let S = a.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == U)) return;
-                h(!0), b(null);
-                let e = C.Ay.getDefaultChannel(U.id);
+                if ((t.preventDefault(), null == j)) return;
+                v(!0), U(null);
+                let e = u.Ay.getDefaultChannel(j.id);
                 try {
-                    let t = _.intl.formatToPlainString(_.t.V4lepJ, { topic: E });
-                    await d.A.createTextChannel(U.id, E, e?.parent_id, t), x();
+                    let t = E.intl.formatToPlainString(E.t.V4lepJ, { topic: D });
+                    await p.A.createTextChannel(j.id, D, e?.parent_id, t), G();
                 } catch (t) {
-                    b(new c.Wl(t));
+                    U(new g.Wl(t));
                 }
-                h(!1);
+                v(!1);
             },
-            [U, E, x],
+            [j, D, G],
         ),
-        j = (0, i.jsxs)(i.Fragment, {
+        M = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(l.$, {
                     variant: "primary",
-                    text: _.intl.string(_.t.i4jeWR),
-                    onClick: N,
-                    disabled: 0 === E.length,
-                    loading: D,
+                    text: E.intl.string(E.t.i4jeWR),
+                    onClick: S,
+                    disabled: 0 === D.length,
+                    loading: y,
                 }),
-                (0, i.jsx)(l.$n, {
+                (0, i.jsx)(s.$n, {
                     "data-migration-pending": !0,
-                    className: L.SZ,
-                    look: l.$n.Looks.BLANK,
-                    size: l.$n.Sizes.MIN,
-                    onClick: x,
-                    children: _.intl.string(_.t["5Wxrcd"]),
+                    className: b.SZ,
+                    look: s.$n.Looks.BLANK,
+                    size: s.$n.Sizes.MIN,
+                    onClick: G,
+                    children: E.intl.string(E.t["5Wxrcd"]),
                 }),
             ],
         });
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(s.rQ0, {
+                (0, i.jsxs)(d.rQ, {
                     "data-migration-pending": !0,
-                    className: L.wx,
-                    direction: o.A.Direction.VERTICAL,
+                    className: b.wx,
+                    direction: C.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != U && (0, i.jsx)(p.Ay, { guild: U }),
-                        (0, i.jsx)(s.Text, {
-                            className: L.J5,
+                        null != j && (0, i.jsx)(L.Ay, { guild: j }),
+                        (0, i.jsx)(c.E, {
+                            className: b.J5,
                             color: "text-strong",
                             variant: "text-sm/semibold",
-                            children: U?.name,
+                            children: j?.name,
                         }),
-                        (0, i.jsx)(s.Heading, {
-                            className: L.DD,
+                        (0, i.jsx)(o.D, {
+                            className: b.DD,
                             variant: "heading-sm/semibold",
-                            children: _.intl.string(_.t["8VRa7d"]),
+                            children: E.intl.string(E.t["8VRa7d"]),
                         }),
-                        (0, i.jsx)(s.Text, {
-                            className: L.VA,
+                        (0, i.jsx)(c.E, {
+                            className: b.VA,
                             color: "text-default",
                             variant: "text-md/normal",
-                            children: _.intl.string(_.t["+855Pm"]),
+                            children: E.intl.string(E.t["+855Pm"]),
                         }),
-                        null != u && (0, i.jsx)(s.s_y, { "data-migration-pending": !0, className: L.b, onClick: u }),
+                        null != T && (0, i.jsx)(d.s_, { "data-migration-pending": !0, className: b.b, onClick: T }),
                     ],
                 }),
-                (0, i.jsxs)(s.$mQ, {
+                (0, i.jsxs)(d.$m, {
                     "data-migration-pending": !0,
-                    className: L.Q6,
+                    className: b.Q6,
                     children: [
                         (0, i.jsx)("form", {
-                            onSubmit: N,
-                            children: (0, i.jsx)(s.ksK, {
-                                label: _.intl.string(_.t.bY20tU),
-                                error: I?.getFieldMessage("name"),
+                            onSubmit: S,
+                            children: (0, i.jsx)(m.k, {
+                                label: E.intl.string(E.t.bY20tU),
+                                error: A?.getFieldMessage("name"),
                                 type: "text",
-                                value: E,
-                                id: A,
-                                onChange: G,
-                                placeholder: _.intl.string(_.t.xGOYA8),
-                                inputRef: y,
+                                value: D,
+                                id: N,
+                                onChange: h,
+                                placeholder: E.intl.string(E.t.xGOYA8),
+                                inputRef: f,
                             }),
                         }),
-                        null != I &&
-                            0 === Object.keys(I.fields).length &&
-                            (0, i.jsx)(s.Text, {
+                        null != A &&
+                            0 === Object.keys(A.fields).length &&
+                            (0, i.jsx)(c.E, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
-                                children: I.message,
+                                children: A.message,
                             }),
                     ],
                 }),
-                n && (0, i.jsx)(s.jlY, { "data-migration-pending": !0, children: j }),
+                n && (0, i.jsx)(d.jl, { "data-migration-pending": !0, children: M }),
             ],
         }),
-        footer: j,
+        footer: M,
     };
 }
-function x(t) {
-    let { content: e } = u(t);
+function G(t) {
+    let { content: e } = T(t);
     return e;
 }

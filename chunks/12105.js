@@ -1,31 +1,29 @@
-n.d(e, { A: () => a });
-var i = n(627968);
+n.d(e, { A: () => o });
+var a = n(627968);
 n(64700);
-var s = n(397927),
-    r = n(286965);
-function a(t) {
-    let { heroImage: e, children: n, header: a, description: l } = t;
-    return (0, i.jsxs)(i.Fragment, {
+var r = n(935462),
+    s = n(534514),
+    i = n(834730),
+    l = n(230780);
+function o(t) {
+    let { heroImage: e, children: n, header: o, description: c } = t;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            void 0 !== e && (0, i.jsx)("div", { className: r.c8, children: e }),
-            (0, i.jsxs)(s.$mQ, {
+            void 0 !== e && (0, a.jsx)("div", { className: l.c8, children: e }),
+            (0, a.jsxs)(r.$m, {
                 "data-migration-pending": !0,
-                className: r.rf,
+                className: l.rf,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: r.FS,
+                    (0, a.jsxs)("div", {
+                        className: l.FS,
                         children: [
-                            (0, i.jsx)(s.Heading, {
-                                variant: "heading-xl/semibold",
-                                color: "text-strong",
-                                children: a,
-                            }),
-                            null != l &&
-                                (0, i.jsx)(s.Text, {
+                            (0, a.jsx)(s.D, { variant: "heading-xl/semibold", color: "text-strong", children: o }),
+                            null != c &&
+                                (0, a.jsx)(i.E, {
                                     variant: "text-md/medium",
                                     color: "text-default",
-                                    className: r.h_,
-                                    children: l,
+                                    className: l.h_,
+                                    children: c,
                                 }),
                         ],
                     }),

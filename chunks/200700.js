@@ -1,29 +1,27 @@
 "use strict";
 n.d(t, {
-    DisableCommunicationDuration: () => s,
-    MO: () => u,
-    Rv: () => d,
-    aZ: () => _,
-    getFriendlyDurationString: () => o,
-    hl: () => f,
+    DisableCommunicationDuration: () => o,
+    MO: () => d,
+    Rv: () => _,
+    aZ: () => f,
+    getFriendlyDurationString: () => l,
+    hl: () => E,
     hs: () => c,
-    ny: () => l,
+    ny: () => u,
 });
-var r = n(975571),
-    i = n(652215),
+var r,
+    i = n(975571),
+    s = n(652215),
     a = n(985018),
-    s = (function (e) {
-        return (
-            (e[(e.DURATION_60_SEC = 60)] = "DURATION_60_SEC"),
-            (e[(e.DURATION_5_MIN = 300)] = "DURATION_5_MIN"),
-            (e[(e.DURATION_10_MIN = 600)] = "DURATION_10_MIN"),
-            (e[(e.DURATION_1_HOUR = 3600)] = "DURATION_1_HOUR"),
-            (e[(e.DURATION_1_DAY = 86400)] = "DURATION_1_DAY"),
-            (e[(e.DURATION_1_WEEK = 604800)] = "DURATION_1_WEEK"),
-            e
-        );
-    })({});
-function o(e) {
+    o =
+        (((r = {})[(r.DURATION_60_SEC = 60)] = "DURATION_60_SEC"),
+        (r[(r.DURATION_5_MIN = 300)] = "DURATION_5_MIN"),
+        (r[(r.DURATION_10_MIN = 600)] = "DURATION_10_MIN"),
+        (r[(r.DURATION_1_HOUR = 3600)] = "DURATION_1_HOUR"),
+        (r[(r.DURATION_1_DAY = 86400)] = "DURATION_1_DAY"),
+        (r[(r.DURATION_1_WEEK = 604800)] = "DURATION_1_WEEK"),
+        r);
+function l(e) {
     switch (e) {
         case 60:
             return a.intl.formatToPlainString(a.t["4zv/jq"], { secs: 60 });
@@ -41,15 +39,15 @@ function o(e) {
             return;
     }
 }
-let l = () =>
-        Object.keys(s)
+let u = () =>
+        Object.keys(o)
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
-                let t = o(s[e]) ?? "";
-                return { id: e, label: t, value: s[e] };
+                let t = l(o[e]) ?? "";
+                return { id: e, label: t, value: o[e] };
             }),
-    u = r.A.getArticleURL(i.MVz.DISABLE_GUILD_COMMUNICATION),
+    d = i.A.getArticleURL(s.MVz.DISABLE_GUILD_COMMUNICATION),
     c = "GuildCommunicationDisabledDismissedGuilds",
-    d = "Set Communication Disabled Modal",
-    _ = "Clear Communication Disabled Modal",
-    f = 512;
+    _ = "Set Communication Disabled Modal",
+    f = "Clear Communication Disabled Modal",
+    E = 512;

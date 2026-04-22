@@ -1,7 +1,7 @@
 n.d(i, { default: () => o });
 var e = n(627968);
 n(64700);
-var r = n(397927),
+var r = n(834730),
     a = n(886722),
     l = n(975571),
     s = n(652215),
@@ -16,7 +16,7 @@ function o(t) {
         transitionState: n,
         onClose: o,
         ...u,
-        children: (0, e.jsx)(r.Text, {
+        children: (0, e.jsx)(r.E, {
             variant: "text-md/normal",
             children: d.intl.format(d.t.jkvpmk, {
                 listingName: i.name,

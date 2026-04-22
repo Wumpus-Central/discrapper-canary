@@ -1,13 +1,13 @@
-n.d(t, { V: () => a });
-var i = n(627968),
-    s = n(158954),
-    l = n(933297);
-function r(e) {
-    let { decoration: t } = e,
-        n = t.useText();
-    return null == n ? null : (0, i.jsx)(s.EYj, { variant: "text-md/medium", children: n });
+t.d(n, { V: () => a });
+var l = t(627968),
+    r = t(834730),
+    i = t(933297);
+function s(e) {
+    let { decoration: n } = e,
+        t = n.useText();
+    return null == t ? null : (0, l.jsx)(r.E, { variant: "text-md/medium", children: t });
 }
 function a(e) {
-    let { decoration: t } = e;
-    if (t.type === l.xn.TEXT) return (0, i.jsx)(r, { decoration: t });
+    let { decoration: n } = e;
+    if (n.type === i.xn.TEXT) return (0, l.jsx)(s, { decoration: n });
 }

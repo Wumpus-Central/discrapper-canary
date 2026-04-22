@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
+n.d(t, { A: () => m });
+var l = n(627968),
     i = n(64700),
     a = n(311907),
-    s = n(397927),
-    o = n(493405),
-    l = n(812745),
+    r = n(292666),
+    s = n(493405),
+    o = n(812745),
     u = n(70142),
     c = n(825755),
     d = n(985018);
-class _ extends i.PureComponent {
+class p extends i.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && o.Rz();
+        null != this.props.paypalClient && s.Rz();
     }
     componentDidUpdate(e) {
-        null == e.paypalClient && null != this.props.paypalClient && o.Rz();
+        null == e.paypalClient && null != this.props.paypalClient && s.Rz();
     }
     componentWillUnmount() {
-        o.gm().then(() => {
-            null != u.A.getClient() && o.LR();
+        s.gm().then(() => {
+            null != u.A.getClient() && s.LR();
         });
     }
     render() {
         let { braintreeEmail: e, paypalClient: t } = this.props;
-        return (0, r.jsx)(s.ksK, {
+        return (0, l.jsx)(r.k, {
             label: d.intl.string(d.t.QQBAos),
-            leading: { type: "image", src: (0, l.Nj)(l.Ay.Types.PAYPAL) },
+            leading: { type: "image", src: (0, o.Nj)(o.Ay.Types.PAYPAL) },
             value: e,
             readOnly: !0,
             placeholder: null == t ? d.intl.string(d.t.dte2M9) : d.intl.string(d.t.hopw7X),
         });
     }
 }
-let f = a.Ay.connectStores([u.A, c.A], () => ({
+let m = a.Ay.connectStores([u.A, c.A], () => ({
     braintreeEmail: c.A.braintreeEmail,
     paypalClient: u.A.getPayPalClient(),
-}))(_);
+}))(p);

@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(148810),
-    o = n(521502),
-    l = n(380610),
-    u = n(446347),
-    c = n(390486);
-async function d(e) {
-    if (200 !== (await (0, s.oA)(e)).status) throw Error("Build override couldn't apply");
+t.d(l, { A: () => h });
+var r = t(627968),
+    n = t(64700),
+    i = t(311907),
+    a = t(148810),
+    s = t(521502),
+    d = t(380610),
+    o = t(446347),
+    u = t(390486);
+async function c(e) {
+    if (200 !== (await (0, a.oA)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function _(e) {
-    if (200 !== (await (0, s.Zk)(e)).status) throw Error("Build override couldn't apply");
+async function v(e) {
+    if (200 !== (await (0, a.Zk)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function f() {
-    await (0, s.iD)(), window.location.reload(!0);
+async function C() {
+    await (0, a.iD)(), window.location.reload(!0);
 }
-let p = i.memo(function (e) {
-    let { url: t } = e,
-        n = (0, a.cf)([o.A], () => o.A.getCurrentBuildOverride()),
-        s = (0, a.bG)([o.A], () => o.A.getBuildOverride(t)),
-        { payload: p, validatedURL: h } = s,
-        m = n.state === o.U.Resolving || s.state === o.U.Resolving,
-        g = i.useCallback(
+let h = n.memo(function (e) {
+    let { url: l } = e,
+        t = (0, i.cf)([s.A], () => s.A.getCurrentBuildOverride()),
+        a = (0, i.bG)([s.A], () => s.A.getBuildOverride(l)),
+        { payload: h, validatedURL: m } = a,
+        g = t.state === s.U.Resolving || a.state === s.U.Resolving,
+        f = n.useCallback(
             () =>
-                (0, l.h4)(s.url) && null != s.override
-                    ? _(s.override?.targetBuildOverride)
-                    : null == p
+                (0, d.h4)(a.url) && null != a.override
+                    ? v(a.override?.targetBuildOverride)
+                    : null == h
                       ? Promise.reject(Error("Invalid override payload"))
-                      : ((0, c.R)(s.override, p), d(p)),
-            [p, s],
+                      : ((0, u.R)(a.override, h), c(h)),
+            [h, a],
         );
-    return null != h
-        ? (0, r.jsx)(u.A, {
-              loading: m,
-              linkMeta: s.override,
-              currentOverrides: n.overrides,
-              applyBuildOverride: g,
-              clearBuildOverride: f,
-              url: h,
+    return null != m
+        ? (0, r.jsx)(o.A, {
+              loading: g,
+              linkMeta: a.override,
+              currentOverrides: t.overrides,
+              applyBuildOverride: f,
+              clearBuildOverride: C,
+              url: m,
           })
         : null;
 });

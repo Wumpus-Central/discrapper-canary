@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = { 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9", 0: "0" },
         n = function (e) {
@@ -35,7 +33,7 @@
             "نوفمبر",
             "ديسمبر",
         ];
-    return e.defineLocale("ar-ly", {
+    e.defineLocale("ar-ly", {
         months: s,
         monthsShort: s,
         weekdays: "الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت".split("_"),
@@ -93,4 +91,4 @@
         },
         week: { dow: 6, doy: 12 },
     });
-});
+})(n(989349));

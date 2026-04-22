@@ -1,94 +1,95 @@
-i.d(t, { A: () => N }), i(938796);
+i.d(t, { A: () => L }), i(938796);
 var n = i(627968),
-    l = i(64700),
-    s = i(311907),
-    r = i(397927),
-    a = i(832712),
-    d = i(585510),
-    o = i(610136),
-    c = i(393432),
-    u = i(910323),
+    s = i(64700),
+    l = i(311907),
+    a = i(192308),
+    r = i(477782),
+    d = i(832712),
+    o = i(585510),
+    c = i(610136),
+    u = i(393432),
+    g = i(910323),
     A = i(24873),
-    g = i(594061),
-    E = i(543465),
-    h = i(477427),
-    p = i(652215),
-    _ = i(790782),
-    S = i(355097),
+    E = i(594061),
+    h = i(543465),
+    _ = i(477427),
+    S = i(652215),
+    p = i(790782),
+    N = i(355097),
     b = i(985018);
-function N(e) {
+function L(e) {
     var t;
-    let N, f;
-    return (0, n.jsxs)(r.Drp, {
+    let L, f;
+    return (0, n.jsxs)(r.Dr, {
         id: "notification",
         label: b.intl.string(b.t.HcoRu0),
         action: () => {
-            (0, r.mMO)(async () => {
-                let { default: t } = await Promise.all([i.e("64992"), i.e("90432")]).then(i.bind(i, 401539));
+            (0, a.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([i.e("64992"), i.e("59566")]).then(i.bind(i, 401539));
                 return (i) => (0, n.jsx)(t, { ...i, guildId: e });
             });
         },
         children: [
             (function (e) {
-                let [t, i] = l.useState(!1),
-                    [N, f] = l.useState(!1),
-                    G = (0, s.bG)([E.Ay], () => E.Ay.getGuildUnreadSetting(e)),
-                    L = (0, s.bG)([E.Ay], () => E.Ay.getMessageNotifications(e)),
-                    y = N ? A.N9.CUSTOM : (0, A.jU)(G, L),
+                let [t, i] = s.useState(!1),
+                    [a, L] = s.useState(!1),
+                    f = (0, l.bG)([h.Ay], () => h.Ay.getGuildUnreadSetting(e)),
+                    y = (0, l.bG)([h.Ay], () => h.Ay.getMessageNotifications(e)),
+                    G = a ? A.N9.CUSTOM : (0, A.jU)(f, y),
                     M = (t) => {
-                        f(!1);
+                        L(!1);
                         let i = { message_notifications: t };
-                        t === p.orn.ALL_MESSAGES &&
-                            G !== _.e.ALL_MESSAGES &&
-                            (i.flags = (0, c.md)(E.Ay.getGuildFlags(e), S.n3.UNREADS_ALL_MESSAGES)),
-                            a.A.updateGuildNotificationSettings(e, i, h.G_.notifications(t));
+                        t === S.orn.ALL_MESSAGES &&
+                            f !== p.e.ALL_MESSAGES &&
+                            (i.flags = (0, u.md)(h.Ay.getGuildFlags(e), N.n3.UNREADS_ALL_MESSAGES)),
+                            d.A.updateGuildNotificationSettings(e, i, _.G_.notifications(t));
                     },
                     x = (t) => {
-                        f(!1);
-                        let i = E.Ay.getGuildFlags(e);
-                        a.A.updateGuildNotificationSettings(
+                        L(!1);
+                        let i = h.Ay.getGuildFlags(e);
+                        d.A.updateGuildNotificationSettings(
                             e,
                             {
-                                flags: (0, c.md)(
+                                flags: (0, u.md)(
                                     i,
-                                    t === _.e.ALL_MESSAGES ? S.n3.UNREADS_ALL_MESSAGES : S.n3.UNREADS_ONLY_MENTIONS,
+                                    t === p.e.ALL_MESSAGES ? N.n3.UNREADS_ALL_MESSAGES : N.n3.UNREADS_ONLY_MENTIONS,
                                 ),
                             },
-                            h.G_.unreads(t),
+                            _.G_.unreads(t),
                         );
                     },
-                    v = (function (e) {
-                        let t = (0, d._g)(e),
-                            i = (0, s.bG)([o.A], () => o.A.getGuildAlertSettings()[e]);
+                    j = (function (e) {
+                        let t = (0, o._g)(e),
+                            i = (0, l.bG)([c.A], () => c.A.getGuildAlertSettings()[e]);
                         if (t && null != i)
-                            return (0, n.jsxs)(r.Drp, {
+                            return (0, n.jsxs)(r.Dr, {
                                 id: "activity_alerts",
                                 label: b.intl.string(b.t.D9yVAH),
                                 children: [
-                                    (0, n.jsx)(r.sLh, {
+                                    (0, n.jsx)(r.sL, {
                                         id: "activity_alerts_in_app",
                                         label: b.intl.string(b.t.u6dc5B),
                                         checked: !i.disableRaidAlertNag,
                                         action: () =>
-                                            (0, g.TG)(
+                                            (0, E.TG)(
                                                 e,
                                                 (e) => {
                                                     e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                 },
-                                                S.Sb.INFREQUENT_USER_ACTION,
+                                                N.Sb.INFREQUENT_USER_ACTION,
                                             ),
                                     }),
-                                    (0, n.jsx)(r.sLh, {
+                                    (0, n.jsx)(r.sL, {
                                         id: "activity_alerts_push",
                                         label: b.intl.string(b.t.P8MG6q),
                                         checked: !i.disableRaidAlertPush,
                                         action: () =>
-                                            (0, g.TG)(
+                                            (0, E.TG)(
                                                 e,
                                                 (e) => {
                                                     e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                 },
-                                                S.Sb.INFREQUENT_USER_ACTION,
+                                                N.Sb.INFREQUENT_USER_ACTION,
                                             ),
                                     }),
                                 ],
@@ -96,63 +97,63 @@ function N(e) {
                     })(e);
                 return (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsxs)(r.rXV, {
+                        (0, n.jsxs)(r.rX, {
                             children: [
-                                (0, n.jsx)(r.iDA, {
+                                (0, n.jsx)(r.iD, {
                                     id: "everything",
                                     group: "notification-preset",
-                                    checked: y === A.N9.ALL_MESSAGES,
+                                    checked: G === A.N9.ALL_MESSAGES,
                                     label: b.intl.string(b.t.hZrr6k),
-                                    action: () => ((0, u.i)(e, A.N9.ALL_MESSAGES), f(!1)),
+                                    action: () => ((0, g.i)(e, A.N9.ALL_MESSAGES), L(!1)),
                                 }),
-                                (0, n.jsx)(r.iDA, {
+                                (0, n.jsx)(r.iD, {
                                     id: "essentials",
                                     group: "notification-preset",
-                                    checked: y === A.N9.MENTIONS,
+                                    checked: G === A.N9.MENTIONS,
                                     label: b.intl.string(b.t.y59NJm),
-                                    action: () => ((0, u.i)(e, A.N9.MENTIONS), f(!1)),
+                                    action: () => ((0, g.i)(e, A.N9.MENTIONS), L(!1)),
                                 }),
-                                (0, n.jsx)(r.iDA, {
+                                (0, n.jsx)(r.iD, {
                                     id: "nothing",
                                     group: "notification-preset",
-                                    checked: y === A.N9.NOTHING,
+                                    checked: G === A.N9.NOTHING,
                                     label: b.intl.string(b.t["pGn/bJ"]),
-                                    action: () => ((0, u.i)(e, A.N9.NOTHING), f(!1)),
+                                    action: () => ((0, g.i)(e, A.N9.NOTHING), L(!1)),
                                 }),
-                                (0, n.jsx)(r.iDA, {
+                                (0, n.jsx)(r.iD, {
                                     id: "custom",
                                     group: "notification-preset",
-                                    checked: y === A.N9.CUSTOM,
-                                    action: () => (i(!0), f(!0)),
+                                    checked: G === A.N9.CUSTOM,
+                                    action: () => (i(!0), L(!0)),
                                     label: b.intl.string(b.t["32yow9"]),
                                 }),
                             ],
                         }),
-                        (y === A.N9.CUSTOM || t) &&
-                            (0, n.jsxs)(r.rXV, {
+                        (G === A.N9.CUSTOM || t) &&
+                            (0, n.jsxs)(r.rX, {
                                 children: [
                                     (0, n.jsxs)(
-                                        r.Drp,
+                                        r.Dr,
                                         {
                                             id: "unread_setting",
                                             label: "Unread Badges",
                                             children: [
-                                                (0, n.jsx)(r.iDA, {
+                                                (0, n.jsx)(r.iD, {
                                                     id: "unread_setting_all_messages",
                                                     group: "unread_setting",
-                                                    checked: G === _.e.ALL_MESSAGES,
+                                                    checked: f === p.e.ALL_MESSAGES,
                                                     label: b.intl.string(b.t["HVah/3"]),
-                                                    action: () => x(_.e.ALL_MESSAGES),
+                                                    action: () => x(p.e.ALL_MESSAGES),
                                                 }),
-                                                (0, n.jsx)(r.iDA, {
+                                                (0, n.jsx)(r.iD, {
                                                     id: "unread_setting_mention_only",
                                                     group: "unread_setting",
-                                                    checked: G === _.e.ONLY_MENTIONS,
+                                                    checked: f === p.e.ONLY_MENTIONS,
                                                     label: b.intl.string(b.t["tu+ZWJ"]),
-                                                    action: () => x(_.e.ONLY_MENTIONS),
-                                                    disabled: G !== _.e.ONLY_MENTIONS && L === p.orn.ALL_MESSAGES,
+                                                    action: () => x(p.e.ONLY_MENTIONS),
+                                                    disabled: f !== p.e.ONLY_MENTIONS && y === S.orn.ALL_MESSAGES,
                                                     subtext:
-                                                        G !== _.e.ONLY_MENTIONS && L === p.orn.ALL_MESSAGES
+                                                        f !== p.e.ONLY_MENTIONS && y === S.orn.ALL_MESSAGES
                                                             ? b.intl.string(b.t.eP8yWU)
                                                             : void 0,
                                                 }),
@@ -161,111 +162,111 @@ function N(e) {
                                         "unread_setting",
                                     ),
                                     (0, n.jsxs)(
-                                        r.Drp,
+                                        r.Dr,
                                         {
                                             id: "push_settings",
                                             label: b.intl.string(b.t.HcoRu0),
                                             children: [
-                                                (0, n.jsx)(r.iDA, {
+                                                (0, n.jsx)(r.iD, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything",
                                                     label: b.intl.string(b.t["HVah/3"]),
-                                                    checked: L === p.orn.ALL_MESSAGES,
-                                                    action: () => M(p.orn.ALL_MESSAGES),
+                                                    checked: y === S.orn.ALL_MESSAGES,
+                                                    action: () => M(S.orn.ALL_MESSAGES),
                                                     subtext:
-                                                        G !== _.e.ALL_MESSAGES && L !== p.orn.ALL_MESSAGES
+                                                        f !== p.e.ALL_MESSAGES && y !== S.orn.ALL_MESSAGES
                                                             ? b.intl.string(b.t.idXSbI)
                                                             : void 0,
                                                 }),
-                                                (0, n.jsx)(r.iDA, {
+                                                (0, n.jsx)(r.iD, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything_mention",
-                                                    checked: L === p.orn.ONLY_MENTIONS,
+                                                    checked: y === S.orn.ONLY_MENTIONS,
                                                     label: b.intl.string(b.t["tu+ZWJ"]),
-                                                    action: () => M(p.orn.ONLY_MENTIONS),
+                                                    action: () => M(S.orn.ONLY_MENTIONS),
                                                 }),
-                                                (0, n.jsx)(r.iDA, {
+                                                (0, n.jsx)(r.iD, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything_nothing",
                                                     label: b.intl.string(b.t.X4wWUi),
-                                                    checked: L === p.orn.NO_MESSAGES,
-                                                    action: () => M(p.orn.NO_MESSAGES),
+                                                    checked: y === S.orn.NO_MESSAGES,
+                                                    action: () => M(S.orn.NO_MESSAGES),
                                                 }),
                                             ],
                                         },
                                         "push_settings",
                                     ),
-                                    v,
+                                    j,
                                 ],
                             }),
                     ],
                 });
             })(e),
             ((t = e),
-            (N = (0, s.cf)([E.Ay], () => ({
-                highligths: E.Ay.getNotifyHighlights(t),
-                mobilePush: E.Ay.isMobilePushEnabled(t),
-                suppressRoles: E.Ay.isSuppressRolesEnabled(t),
-                suppressEveryone: E.Ay.isSuppressEveryoneEnabled(t),
-                muteScheduledEvents: E.Ay.isMuteScheduledEventsEnabled(t),
+            (L = (0, l.cf)([h.Ay], () => ({
+                highligths: h.Ay.getNotifyHighlights(t),
+                mobilePush: h.Ay.isMobilePushEnabled(t),
+                suppressRoles: h.Ay.isSuppressRolesEnabled(t),
+                suppressEveryone: h.Ay.isSuppressEveryoneEnabled(t),
+                muteScheduledEvents: h.Ay.isMuteScheduledEventsEnabled(t),
             }))),
-            (f = a.A.updateGuildNotificationSettings),
+            (f = d.A.updateGuildNotificationSettings),
             (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsxs)(r.rXV, {
+                    (0, n.jsxs)(r.rX, {
                         children: [
-                            (0, n.jsx)(r.sLh, {
+                            (0, n.jsx)(r.sL, {
                                 id: "mention",
-                                checked: N.suppressEveryone,
+                                checked: L.suppressEveryone,
                                 label: b.intl.format(b.t.OWiWAp, {}),
                                 action: () =>
                                     f(
                                         t,
-                                        { suppress_everyone: !N.suppressEveryone },
-                                        h.G_.suppressEveryone(!N.suppressEveryone),
+                                        { suppress_everyone: !L.suppressEveryone },
+                                        _.G_.suppressEveryone(!L.suppressEveryone),
                                     ),
                             }),
-                            (0, n.jsx)(r.sLh, {
+                            (0, n.jsx)(r.sL, {
                                 id: "roles",
-                                checked: N.suppressRoles,
+                                checked: L.suppressRoles,
                                 label: b.intl.string(b.t["O/QdoD"]),
                                 action: () =>
-                                    f(t, { suppress_roles: !N.suppressRoles }, h.G_.suppressRoles(!N.suppressRoles)),
+                                    f(t, { suppress_roles: !L.suppressRoles }, _.G_.suppressRoles(!L.suppressRoles)),
                             }),
-                            (0, n.jsx)(r.sLh, {
+                            (0, n.jsx)(r.sL, {
                                 id: "hightlight",
                                 label: b.intl.string(b.t.gPuteJ),
-                                checked: N.highligths === p.guM.ENABLED,
+                                checked: L.highligths === S.guM.ENABLED,
                                 action: () =>
                                     f(
                                         t,
                                         {
                                             notify_highlights:
-                                                N.highligths === p.guM.ENABLED ? p.guM.DISABLED : p.guM.ENABLED,
+                                                L.highligths === S.guM.ENABLED ? S.guM.DISABLED : S.guM.ENABLED,
                                         },
-                                        h.G_.highlights(N.highligths !== p.guM.ENABLED),
+                                        _.G_.highlights(L.highligths !== S.guM.ENABLED),
                                     ),
                             }),
                         ],
                     }),
-                    (0, n.jsxs)(r.rXV, {
+                    (0, n.jsxs)(r.rX, {
                         children: [
-                            (0, n.jsx)(r.sLh, {
+                            (0, n.jsx)(r.sL, {
                                 id: "event",
-                                checked: N.muteScheduledEvents,
+                                checked: L.muteScheduledEvents,
                                 label: b.intl.string(b.t.ONG3Yz),
                                 action: () =>
                                     f(
                                         t,
-                                        { mute_scheduled_events: !N.muteScheduledEvents },
-                                        h.G_.mutedEvents(!N.muteScheduledEvents),
+                                        { mute_scheduled_events: !L.muteScheduledEvents },
+                                        _.G_.mutedEvents(!L.muteScheduledEvents),
                                     ),
                             }),
-                            (0, n.jsx)(r.sLh, {
+                            (0, n.jsx)(r.sL, {
                                 id: "mobile_push",
-                                checked: N.mobilePush,
+                                checked: L.mobilePush,
                                 label: b.intl.string(b.t.h1DL66),
-                                action: () => f(t, { mobile_push: !N.mobilePush }, h.G_.mobilePush(!N.mobilePush)),
+                                action: () => f(t, { mobile_push: !L.mobilePush }, _.G_.mobilePush(!L.mobilePush)),
                             }),
                         ],
                     }),

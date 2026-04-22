@@ -1,133 +1,138 @@
-t.d(n, { default: () => N });
+t.d(n, { default: () => y });
 var i = t(627968),
     l = t(64700),
-    a = t(158954),
+    a = t(189213),
     o = t(311907),
-    r = t(397927),
-    d = t(565645),
-    u = t(964486),
-    s = t(375499),
-    m = t(937773),
-    c = t(508675),
-    g = t(808728),
-    j = t(919577),
-    h = t(307731),
-    p = t(650583),
-    C = t(985018),
-    x = t(293752);
-function N(e) {
-    let { transitionState: n, onClose: t, channelId: N, guildId: k, tag: v } = e,
-        b = l.useRef(null),
-        f = null != v,
-        [y, A] = l.useState(v?.name ?? ""),
-        [I, _] = l.useState(null != v ? { id: v.emojiId, name: v.emojiName } : null),
-        [E, S] = l.useState(v?.moderated),
-        T = (0, o.bG)([c.Ay], () => (I?.id != null ? c.Ay.getUsableCustomEmojiById(I.id) : null)),
-        B = v?.name !== y || v?.emojiId !== I?.id || v?.emojiName !== I?.name || E !== v?.moderated,
-        R = () => {
-            if (null != y && B) {
-                if (f) {
-                    j.A.updateForumTag({ id: v.id, name: y, emojiId: I?.id, emojiName: I?.name, moderated: E }, N), t();
+    r = t(821609),
+    d = t(292666),
+    u = t(265872),
+    s = t(285796),
+    m = t(696986),
+    c = t(150934),
+    g = t(565645),
+    j = t(964486),
+    h = t(375499),
+    p = t(937773),
+    C = t(508675),
+    v = t(808728),
+    x = t(919577),
+    k = t(307731),
+    N = t(650583),
+    b = t(985018),
+    f = t(671208);
+function y(e) {
+    let { transitionState: n, onClose: t, channelId: y, guildId: A, tag: I } = e,
+        _ = l.useRef(null),
+        E = null != I,
+        [S, T] = l.useState(I?.name ?? ""),
+        [B, R] = l.useState(null != I ? { id: I.emojiId, name: I.emojiName } : null),
+        [D, F] = l.useState(I?.moderated),
+        M = (0, o.bG)([C.Ay], () => (B?.id != null ? C.Ay.getUsableCustomEmojiById(B.id) : null)),
+        Z = I?.name !== S || I?.emojiId !== B?.id || I?.emojiName !== B?.name || D !== I?.moderated,
+        w = () => {
+            if (null != S && Z) {
+                if (E) {
+                    x.A.updateForumTag({ id: I.id, name: S, emojiId: B?.id, emojiName: B?.name, moderated: D }, y), t();
                     return;
                 }
-                j.A.createForumTag({ name: y, emojiId: I?.id, emojiName: I?.name, moderated: E }, N), t();
+                x.A.createForumTag({ name: S, emojiId: B?.id, emojiName: B?.name, moderated: D }, y), t();
             }
         },
-        D = l.useCallback((e) => A(e), []),
-        F = l.useRef(null);
+        H = l.useCallback((e) => T(e), []),
+        Y = l.useRef(null);
     return (
-        (0, u.Ay)(() => {
-            null != F.current && F.current.focus();
+        (0, j.Ay)(() => {
+            null != Y.current && Y.current.focus();
         }),
         (0, i.jsxs)(a.Modal, {
-            title: f ? C.intl.string(C.t.zeVg5d) : C.intl.string(C.t["/jubeD"]),
-            subtitle: C.intl.string(C.t["3v8kZH"]),
+            title: E ? b.intl.string(b.t.zeVg5d) : b.intl.string(b.t["/jubeD"]),
+            subtitle: b.intl.string(b.t["3v8kZH"]),
             transitionState: n,
             onClose: t,
             actions: [
                 {
                     variant: "secondary",
-                    text: C.intl.string(C.t["ETE/oC"]),
+                    text: b.intl.string(b.t["ETE/oC"]),
                     onClick: () => {
                         t();
                     },
                 },
                 {
                     variant: "primary",
-                    text: C.intl.string(C.t["R3BPH+"]),
-                    onClick: R,
-                    disabled: 0 === y.length || !B,
+                    text: b.intl.string(b.t["R3BPH+"]),
+                    onClick: w,
+                    disabled: 0 === S.length || !Z,
                     autoFocus: !0,
                 },
             ],
-            actionBarInput: f
-                ? (0, i.jsx)(r.Button, {
+            actionBarInput: E
+                ? (0, i.jsx)(r.$, {
                       variant: "critical-secondary",
-                      text: C.intl.string(C.t.huYSMr),
+                      text: b.intl.string(b.t.huYSMr),
                       onClick: () => {
-                          f && (j.A.deleteForumTag(N, v.id), t());
+                          E && (x.A.deleteForumTag(y, I.id), t());
                       },
                   })
                 : void 0,
             children: [
                 (0, i.jsx)("div", {
-                    className: x.Kf,
-                    children: (0, i.jsx)(r.ksK, {
-                        inputRef: F,
+                    className: f.Kf,
+                    children: (0, i.jsx)(d.k, {
+                        inputRef: Y,
                         maxLength: 20,
-                        value: y,
-                        placeholder: C.intl.string(C.t["5vpeb4"]),
-                        onChange: D,
+                        value: S,
+                        placeholder: b.intl.string(b.t["5vpeb4"]),
+                        onChange: H,
                         autoFocus: !0,
                         leading: {
                             type: "emoji",
                             button: (0, i.jsx)("div", {
-                                className: x.S0,
-                                children: (0, i.jsx)(r.YNO, {
-                                    targetElementRef: b,
+                                className: f.S0,
+                                children: (0, i.jsx)(u.Y, {
+                                    targetElementRef: _,
                                     renderPopout: (e) => {
                                         let { closePopout: n } = e,
-                                            l = g.Ay.getDefaultChannel(k);
-                                        return (0, i.jsx)(m.A, {
-                                            guildId: k,
+                                            l = v.Ay.getDefaultChannel(A);
+                                        return (0, i.jsx)(p.A, {
+                                            guildId: A,
                                             closePopout: n,
                                             onSelectEmoji: (e) => {
                                                 let { emoji: t, willClose: i } = e;
                                                 null != t &&
-                                                    _(
+                                                    R(
                                                         null != t.id
                                                             ? { id: t.id, name: t.name }
                                                             : { id: void 0, name: t.optionallyDiverseSequence },
                                                     ),
                                                     i && n();
                                             },
-                                            pickerIntention: h.EmojiIntention.COMMUNITY_CONTENT,
+                                            pickerIntention: k.EmojiIntention.COMMUNITY_CONTENT,
                                             onNavigateAway: t,
                                             channel: l,
                                         });
                                     },
                                     position: "left",
-                                    animation: r.YNO.Animation.NONE,
+                                    animation: u.Y.Animation.NONE,
                                     align: "bottom",
                                     children: (e, n) => {
                                         let { isShown: t } = n;
-                                        return (0, i.jsx)(s.A, {
+                                        return (0, i.jsx)(h.A, {
                                             ...e,
-                                            ref: b,
+                                            ref: _,
                                             onClick: (n) => {
                                                 e.onClick?.(n);
                                             },
                                             active: t,
-                                            className: x.Z8,
+                                            className: f.Z8,
                                             tabIndex: 0,
                                             renderButtonContents:
-                                                null != I && (null != I.id || null != I.name)
+                                                null != B && (null != B.id || null != B.name)
                                                     ? () =>
-                                                          (0, i.jsx)(d.A, {
-                                                              className: x.Zg,
-                                                              emojiId: I.id,
-                                                              emojiName: I.name,
-                                                              animated: !!T?.animated,
+                                                          (0, i.jsx)(g.A, {
+                                                              className: f.Zg,
+                                                              emojiId: B.id,
+                                                              emojiName: B.name,
+                                                              animated: !!M?.animated,
                                                           })
                                                     : null,
                                         });
@@ -136,25 +141,25 @@ function N(e) {
                             }),
                         },
                         onKeyDown: (e) => {
-                            e.key === p.dh.ENTER && y.length > 0 && (y.length > 0 && R(), e.preventDefault());
+                            e.key === N.dh.ENTER && S.length > 0 && (S.length > 0 && w(), e.preventDefault());
                         },
                         trailing:
-                            y.length > 0 || null != I
+                            S.length > 0 || null != B
                                 ? {
-                                      icon: r.aXh,
+                                      icon: s.a,
                                       onClick: () => {
-                                          A(""), _(null);
+                                          T(""), R(null);
                                       },
-                                      "aria-label": C.intl.string(C.t.o8lsHe),
+                                      "aria-label": b.intl.string(b.t.o8lsHe),
                                   }
                                 : void 0,
                     }),
                 }),
-                (0, i.jsx)(r.hKd, { size: 16 }),
-                (0, i.jsx)(r.Checkbox, {
-                    checked: E ?? !1,
-                    onChange: (e) => S(e || (v?.moderated == null && void 0)),
-                    label: C.intl.string(C.t["rMH+rt"]),
+                (0, i.jsx)(m.h, { size: 16 }),
+                (0, i.jsx)(c.S, {
+                    checked: D ?? !1,
+                    onChange: (e) => F(e || (I?.moderated == null && void 0)),
+                    label: b.intl.string(b.t["rMH+rt"]),
                     labelType: "secondary",
                 }),
             ],

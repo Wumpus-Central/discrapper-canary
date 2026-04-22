@@ -1,61 +1,63 @@
 "use strict";
-s.d(t, { A: () => u });
+s.d(t, { A: () => h });
 var n = s(627968);
 s(64700);
-var r = s(172218),
-    l = s(397927),
-    i = s(854818),
-    a = s(212407),
-    o = s(815280),
-    c = s(985018),
-    d = s(397451);
-let u = (e) => {
+var l = s(172218),
+    r = s(534514),
+    a = s(834730),
+    i = s(349288),
+    o = s(854818),
+    c = s(212407),
+    d = s(815280),
+    u = s(985018),
+    g = s(537947);
+let h = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: s } = e,
-        u = (0, r.K)(
+        h = (0, l.K)(
             (e) => {
                 s?.(e);
             },
             0.33,
             null != s,
         ),
-        { bannerUrl: _, bannerAnimatedUrl: g } = (0, a.qY)(t),
-        m = null != t.textColor ? { color: t.textColor } : void 0,
-        h = null != t.body && "" !== t.body,
-        p = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        { bannerUrl: _, bannerAnimatedUrl: m } = (0, c.qY)(t),
+        p = null != t.textColor ? { color: t.textColor } : void 0,
+        f = null != t.body && "" !== t.body,
+        E = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, n.jsxs)("div", {
-        ref: u,
-        className: d.BX,
+        ref: h,
+        className: g.BX,
         children: [
             (0, n.jsx)("div", {
-                className: d.vK,
-                children: null != _ && (0, n.jsx)(o.A, { bannerStatic: _, bannerAnimated: g }),
+                className: g.vK,
+                children: null != _ && (0, n.jsx)(d.A, { bannerStatic: _, bannerAnimated: m }),
             }),
             (0, n.jsx)("div", {
-                className: d.HQ,
+                className: g.HQ,
                 children: (0, n.jsxs)("div", {
-                    className: d.Yn,
+                    className: g.Yn,
                     children: [
-                        null != t.endTime ? (0, n.jsx)(i.e, { endDate: t.endTime, size: "lg" }) : null,
-                        (0, n.jsx)(l.Heading, {
+                        null != t.endTime ? (0, n.jsx)(o.e, { endDate: t.endTime, size: "lg" }) : null,
+                        (0, n.jsx)(r.D, {
                             variant: "heading-xxl/bold",
-                            className: d.DD,
+                            className: g.DD,
                             color: "text-strong",
-                            style: { ...m },
+                            style: { ...p },
                             children: t.title,
                         }),
-                        h || p
-                            ? (0, n.jsxs)(l.Text, {
+                        f || E
+                            ? (0, n.jsxs)(a.E, {
                                   variant: "text-md/medium",
-                                  style: { ...m },
+                                  style: { ...p },
                                   children: [
-                                      h && t.body,
-                                      h && p && " ",
-                                      p &&
-                                          (0, n.jsx)(l.MzZ, {
+                                      f && t.body,
+                                      f && E && " ",
+                                      E &&
+                                          (0, n.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
-                                              className: d.CU,
-                                              style: { ...m },
-                                              children: c.intl.string(c.t.O7ADgv),
+                                              className: g.CU,
+                                              style: { ...p },
+                                              children: u.intl.string(u.t.O7ADgv),
                                           }),
                                   ],
                               })

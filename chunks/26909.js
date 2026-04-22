@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Ay: () => E, RG: () => _ }), n(321073);
+n.d(t, { Ay: () => p, RG: () => _ }), n(321073);
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(283047),
     l = n(617617);
 n(73510), n(705751);
 var u = n(355097);
-let c = { pendingUsages: [] },
-    d = new o.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
+let d = { pendingUsages: [] },
+    c = new o.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
 function _(e, t) {
     return e
         .filter((e) => {
@@ -23,47 +23,48 @@ function _(e, t) {
 function f(e, t) {
     return 0 > Number(t.id) ? t.id : e?.guild != null && null != t.guildId ? `${t.id}:${e.guild.id}` : t.id;
 }
-function p(e) {
-    let {
-        settings: { type: t },
-        wasSaved: n,
-    } = e;
-    if (t !== u.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    c.pendingUsages = [];
-}
-function h(e) {
-    let { command: t, context: n } = e,
-        r = f(n, t);
-    c.pendingUsages.push({ key: r, timestamp: Date.now() }), d.track(r), d.compute();
-}
-function m() {
+function E() {
     let e = l.A.frecencyWithoutFetchingLatest,
         t = e.applicationCommandFrecency?.applicationCommands ?? {};
-    d.overwriteHistory(
+    c.overwriteHistory(
         i().mapValues(t, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        c.pendingUsages,
+        d.pendingUsages,
     );
 }
-class g extends a.Ay.PersistedStore {
+class h extends s.Ay.PersistedStore {
     static displayName = "ApplicationCommandFrecencyStore";
     static persistKey = "ApplicationCommandFrecencyV2";
     initialize(e) {
-        null != e && (c = e), this.syncWith([l.A], m);
+        null != e && (d = e), this.syncWith([l.A], E);
     }
     getState() {
-        return c;
-    }
-    hasPendingUsage() {
-        return c.pendingUsages.length > 0;
-    }
-    getCommandFrecencyWithoutLoadingLatest() {
         return d;
     }
+    hasPendingUsage() {
+        return d.pendingUsages.length > 0;
+    }
+    getCommandFrecencyWithoutLoadingLatest() {
+        return c;
+    }
     getScoreWithoutLoadingLatest(e, t) {
-        return d.getScore(f(e, t)) ?? 0;
+        return c.getScore(f(e, t)) ?? 0;
     }
     getTopCommandsWithoutLoadingLatest() {
-        return d.frequently;
+        return c.frequently;
     }
 }
-let E = new g(s.h, { APPLICATION_COMMAND_USED: h, USER_SETTINGS_PROTO_UPDATE: p });
+let p = new h(a.h, {
+    APPLICATION_COMMAND_USED: function (e) {
+        let { command: t, context: n } = e,
+            r = f(n, t);
+        d.pendingUsages.push({ key: r, timestamp: Date.now() }), c.track(r), c.compute();
+    },
+    USER_SETTINGS_PROTO_UPDATE: function (e) {
+        let {
+            settings: { type: t },
+            wasSaved: n,
+        } = e;
+        if (t !== u.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+        d.pendingUsages = [];
+    },
+});

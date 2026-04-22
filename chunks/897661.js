@@ -1,16 +1,17 @@
-s.d(t, { b: () => r });
-var l = s(311907),
-    a = s(836602),
-    n = s(696451),
-    i = s(427262);
-function r(e, t) {
-    let s = i.Ay.useName(e);
+"use strict";
+a.d(t, { b: () => s });
+var l = a(311907),
+    i = a(836602),
+    r = a(696451),
+    n = a(427262);
+function s(e, t) {
+    let a = n.Ay.useName(e);
     return (
-        (0, l.bG)([a.A, n.Ay], () => {
-            let s = a.A.getPendingChanges(t);
-            return null != t ? (s.pendingNickname ?? n.Ay.getNick(t, e?.id)) : s.pendingGlobalName;
+        (0, l.bG)([i.A, r.Ay], () => {
+            let a = i.A.getPendingChanges(t);
+            return null != t ? (a.pendingNickname ?? r.Ay.getNick(t, e?.id)) : a.pendingGlobalName;
         }, [t, e]) ??
-        s ??
+        a ??
         ""
     );
 }

@@ -1,57 +1,58 @@
-n.r(t), n.d(t, { default: () => l });
-var s = n(627968);
-n(64700);
-var a = n(397927),
-    i = n(80556),
-    r = n(577015),
-    o = n(320028);
-let l = {
+"use strict";
+i.r(t), i.d(t, { default: () => o });
+var n = i(627968);
+i(64700);
+var r = i(192308),
+    a = i(80556),
+    l = i(577015),
+    s = i(320028);
+let o = {
     showCaptcha: function (e, t) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: l, captchaService: d, options: c } = e;
-        (0, a.mMO)(
+        let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: o, captchaService: c, options: d } = e;
+        (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await n.e("39522").then(n.bind(n, 252345));
-                return (n) =>
-                    (0, s.jsx)(e, {
-                        onCaptchaVerify: (e, n) => t({ captcha_key: e, captcha_rqtoken: n }),
-                        captchaService: d,
-                        sitekey: l,
-                        ...r,
-                        ...c,
-                        ...n,
+                let { default: e } = await i.e("39522").then(i.bind(i, 252345));
+                return (i) =>
+                    (0, n.jsx)(e, {
+                        onCaptchaVerify: (e, i) => t({ captcha_key: e, captcha_rqtoken: i }),
+                        captchaService: c,
+                        sitekey: o,
+                        ...l,
+                        ...d,
+                        ...i,
                     });
             },
-            { Layer: i.Ay, modalKey: o.f },
+            { Layer: a.Ay, modalKey: s.f },
         );
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: l, captchaService: d, captchaSessionId: c, options: u } = e;
-        return new Promise((e, m) => {
-            (0, a.mMO)(
+            { sitekey: o, captchaService: c, captchaSessionId: d, options: u } = e;
+        return new Promise((e, _) => {
+            (0, r.openModalLazy)(
                 async () => {
-                    let { default: a } = await n.e("39522").then(n.bind(n, 252345));
-                    return (n) =>
-                        (0, s.jsx)(a, {
-                            onCaptchaVerify: (t, n) => e({ captcha_key: t, captcha_rqtoken: n, captcha_session_id: c }),
-                            captchaService: d,
-                            sitekey: l,
+                    let { default: r } = await i.e("39522").then(i.bind(i, 252345));
+                    return (i) =>
+                        (0, n.jsx)(r, {
+                            onCaptchaVerify: (t, i) => e({ captcha_key: t, captcha_rqtoken: i, captcha_session_id: d }),
+                            captchaService: c,
+                            sitekey: o,
                             onReject: (e) => {
-                                e === r.CaptchaError.CANCEL
-                                    ? m(new r.CaptchaCancelError())
-                                    : m(Error("cancel captcha"));
+                                e === l.CaptchaError.CANCEL
+                                    ? _(new l.CaptchaCancelError())
+                                    : _(Error("cancel captcha"));
                             },
                             ...t,
                             ...u,
-                            ...n,
+                            ...i,
                         });
                 },
-                { Layer: i.Ay, modalKey: o.f },
+                { Layer: a.Ay, modalKey: s.f },
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, a.red)((e) => (0, a.fDT)(e, o.f));
+        return (0, r.useModalsStore)((e) => (0, r.hasModalOpenSelector)(e, s.f));
     },
 };

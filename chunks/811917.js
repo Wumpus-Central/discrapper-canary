@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => v });
 var r = n(835245),
     i = n(141931),
     s = n(451988),
@@ -7,48 +7,27 @@ var r = n(835245),
     o = n(626584),
     l = n(206885),
     u = n(41984),
-    c = n(833551),
-    d = n(680243),
+    d = n(833551),
+    c = n(680243),
     _ = n(847521),
     f = n(760751),
-    p = n(383501),
+    E = n(383501),
     h = n(531685),
-    m = n(954571),
-    E = n(927813),
+    p = n(954571),
+    m = n(927813),
     g = n(973522),
     A = n(670632),
     I = n(15285),
     T = n(932492),
     S = n(652215);
 let y = new o.A("RunningGameHeartbeatManager"),
-    v = 5 * E.A.Millis.MINUTE;
-function N(e) {
-    return e.distributor === S.d3x.ROBLOX ? (0, _.hD)(e) : null;
-}
-function C(e) {
-    let t = null != e.name ? e.name : "",
-        n = `${e.id ?? e.exePath}:${t}`,
-        r = N(e);
-    return null != r && (n += `:${r}`), n;
-}
-function R(e) {
-    if (!l.O) return null;
-    let t = c.default.getTrackedGameByPid(e);
-    return {
-        overlay_state: t?.state ?? null,
-        overlay_method: null != t ? u.Ue[t.overlayMethod] : null,
-        overlay_version: d.A.getNativeModule()?.version() ?? 0,
-    };
-}
+    N = 5 * m.A.Millis.MINUTE;
 function O() {
     let e = h.A.isFocused(),
         t = h.A.isVisible();
     return e ? "focused" : t ? "visible" : "hidden";
 }
-function b() {
-    return { discord_window_state: O() };
-}
-class D extends a.A {
+class R extends a.A {
     heartbeatInterval = new s.IX();
     gameSessions = new Map();
     windowStateDurations = { focused: 0, visible: 0, hidden: 0 };
@@ -126,7 +105,7 @@ class D extends a.A {
         }
         T.A.enable(),
             this.enableWindowTracking(),
-            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(v, this.logRunningGameHeartbeats);
+            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(N, this.logRunningGameHeartbeats);
     }
     handleRunningGamesChanged = (e) => {
         this.scheduleHeartbeatTracking();
@@ -134,11 +113,11 @@ class D extends a.A {
     logHeartbeat(e, t, n, r, s) {
         let a = e.runningGame,
             o = performance.now(),
-            l = t ? 0 : Math.round(o - e.lastHeartbeatTime),
-            u = a.id ?? f.A.findGame(a)?.id;
+            h = t ? 0 : Math.round(o - e.lastHeartbeatTime),
+            m = a.id ?? f.A.findGame(a)?.id;
         e.lastHeartbeatTime = o;
-        let c = {
-                game_id: u,
+        let T = {
+                game_id: m,
                 game_name: a.name,
                 game_distributor: a.distributor,
                 game_distributor_game_id: a.sku,
@@ -148,31 +127,39 @@ class D extends a.A {
                 initial_heartbeat: t,
                 final_heartbeat: n,
                 game_session_id: e.sessionId,
-                duration_tracked_ms: l,
-                rtc_connection_id: p.A.getRTCConnectionId(),
-                media_session_id: p.A.getMediaSessionId(),
+                duration_tracked_ms: h,
+                rtc_connection_id: E.A.getRTCConnectionId(),
+                media_session_id: E.A.getMediaSessionId(),
             },
-            d = R(a.pid),
-            h = b();
+            N = (function (e) {
+                if (!l.O) return null;
+                let t = d.default.getTrackedGameByPid(e);
+                return {
+                    overlay_state: t?.state ?? null,
+                    overlay_method: null != t ? u.Ue[t.overlayMethod] : null,
+                    overlay_version: c.A.getNativeModule()?.version() ?? 0,
+                };
+            })(a.pid),
+            R = { discord_window_state: O() };
         return A.A.getSnapshot(a.pid)
             .then((e) => {
-                m.default.track(S.HAw.RUNNING_GAME_HEARTBEAT, {
-                    ...c,
-                    ...h,
+                p.default.track(S.HAw.RUNNING_GAME_HEARTBEAT, {
+                    ...T,
+                    ...R,
                     ...(s ?? {}),
                     ...(e ?? {}),
                     ...(r ?? {}),
-                    ...(d ?? {}),
+                    ...(N ?? {}),
                 });
             })
             .catch((e) => {
                 t || e instanceof i.Fh || y.warn(`Failed to get performance snapshot for game ${a.id}`, e.message),
-                    m.default.track(S.HAw.RUNNING_GAME_HEARTBEAT, {
-                        ...c,
-                        ...h,
+                    p.default.track(S.HAw.RUNNING_GAME_HEARTBEAT, {
+                        ...T,
+                        ...R,
                         ...(s ?? {}),
                         ...(r ?? {}),
-                        ...(d ?? {}),
+                        ...(N ?? {}),
                     });
             });
     }
@@ -183,7 +170,12 @@ class D extends a.A {
             i = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;
         for (let s of e) {
             if (s.isLauncher) continue;
-            let e = C(s);
+            let e = (function (e) {
+                let t = null != e.name ? e.name : "",
+                    n = `${e.id ?? e.exePath}:${t}`,
+                    r = e.distributor === S.d3x.ROBLOX ? (0, _.hD)(e) : null;
+                return null != r && (n += `:${r}`), n;
+            })(s);
             if ((n.add(e), this.gameSessions.has(e))) {
                 let n = this.gameSessions.get(e);
                 if (n.runningGame.pid !== s.pid) {
@@ -216,4 +208,4 @@ class D extends a.A {
         for (let n of this.gameSessions.values()) this.logHeartbeat(n, !1, !1, e, t);
     };
 }
-let L = new D();
+let v = new R();

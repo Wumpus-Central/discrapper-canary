@@ -1,136 +1,138 @@
-a.d(t, { A: () => A });
+a.d(t, { A: () => C });
 var n = a(627968),
-    i = a(64700),
-    s = a(172218),
-    l = a(397927),
-    r = a(486020),
-    o = a(82293),
-    c = a(412461),
-    d = a(273423),
-    u = a(867333),
-    h = a(973172),
-    m = a(652215),
-    p = a(985018),
-    _ = a(265005);
-function g(e) {
-    let { applicationId: t, similarApplications: a, onSelectApplication: l, similarLoadId: r } = e,
+    l = a(64700),
+    i = a(172218),
+    s = a(534514),
+    r = a(939249),
+    o = a(834730),
+    c = a(486020),
+    d = a(82293),
+    u = a(412461),
+    h = a(273423),
+    m = a(867333),
+    p = a(973172),
+    _ = a(652215),
+    g = a(985018),
+    x = a(668168);
+function A(e) {
+    let { applicationId: t, similarApplications: a, onSelectApplication: s, similarLoadId: r } = e,
         o = (function (e) {
             let { applicationId: t, similarAppIds: a } = e,
-                [n, l] = i.useState(),
-                r = (0, s.K)((e) => {
-                    e && l(t);
+                [n, s] = l.useState(),
+                r = (0, i.K)((e) => {
+                    e && s(t);
                 });
             return (
-                i.useEffect(() => {
+                l.useEffect(() => {
                     n === t &&
-                        (0, c.TR)(m.HAw.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
+                        (0, u.TR)(_.HAw.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
                             suggested_application_ids: a,
                         });
                 }, [n, t, a]),
                 r
             );
-        })({ applicationId: t, similarAppIds: i.useMemo(() => a.map((e) => e.id), [a]) });
+        })({ applicationId: t, similarAppIds: l.useMemo(() => a.map((e) => e.id), [a]) });
     return (0, n.jsx)("div", {
-        className: _.hQ,
+        className: x.hQ,
         ref: o,
         children: a.map((e, a) =>
             (0, n.jsx)(
-                x,
-                { applicationId: t, similarApplication: e, onSelectApplication: l, similarLoadId: r, position: a },
+                f,
+                { applicationId: t, similarApplication: e, onSelectApplication: s, similarLoadId: r, position: a },
                 e.id,
             ),
         ),
     });
 }
-function x(e) {
-    let { applicationId: t, similarApplication: a, onSelectApplication: s, position: o, similarLoadId: u } = e,
-        p = (0, h.A)({ application: a }),
-        g = a.categories?.[0],
-        x = i.useMemo(() => r.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }), [a]),
-        A = i.useCallback(() => {
-            (0, c.TR)(m.HAw.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+function f(e) {
+    let { applicationId: t, similarApplication: a, onSelectApplication: i, position: d, similarLoadId: m } = e,
+        g = (0, p.A)({ application: a }),
+        A = a.categories?.[0],
+        f = l.useMemo(() => c.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }), [a]),
+        C = l.useCallback(() => {
+            (0, u.TR)(_.HAw.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: "product",
                 application_id: t,
                 suggested_application_id: a.id,
-                position: o,
-                load_id: u,
-                shown_mutual_guilds_count: p.length,
+                position: d,
+                load_id: m,
+                shown_mutual_guilds_count: g.length,
             }),
-                s(a.id);
-        }, [s, a.id, t, p.length, u, o]);
-    return (0, n.jsxs)(l.DUT, {
-        onClick: A,
-        className: _.vU,
+                i(a.id);
+        }, [i, a.id, t, g.length, m, d]);
+    return (0, n.jsxs)(r.D, {
+        onClick: C,
+        className: x.vU,
         children: [
             (0, n.jsxs)("div", {
-                className: _.nT,
+                className: x.nT,
                 children: [
-                    (0, n.jsx)("img", { src: x, alt: "", className: _.my, height: 48, width: 48 }),
+                    (0, n.jsx)("img", { src: f, alt: "", className: x.my, height: 48, width: 48 }),
                     (0, n.jsxs)("div", {
-                        className: _.gn,
+                        className: x.gn,
                         children: [
                             (0, n.jsx)("div", {
                                 style: { flex: 1, minWidth: 0, overflow: "hidden" },
-                                children: (0, n.jsx)(l.Heading, {
+                                children: (0, n.jsx)(s.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-strong",
-                                    className: _.JB,
+                                    className: x.JB,
                                     children: a.name,
                                 }),
                             }),
-                            null != g
-                                ? (0, n.jsx)(l.Text, {
-                                      className: _.m4,
+                            null != A
+                                ? (0, n.jsx)(o.E, {
+                                      className: x.m4,
                                       variant: "text-xs/medium",
                                       color: "text-muted",
-                                      children: g.name,
+                                      children: A.name,
                                   })
                                 : null,
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(l.Text, {
-                className: _.i3,
+            (0, n.jsx)(o.E, {
+                className: x.i3,
                 variant: "text-sm/medium",
                 color: "text-default",
                 lineClamp: 2,
                 children: a.directory_entry?.short_description ?? a.description,
             }),
-            (0, n.jsx)(d.A, {
+            (0, n.jsx)(h.A, {
                 application: a,
                 textVariant: "text-xs/medium",
-                mutualGuilds: p,
+                mutualGuilds: g,
                 mutualGuildShownMax: 3,
-                guildIconSize: d.I.SMALL,
+                guildIconSize: h.I.SMALL,
                 compact: !0,
             }),
         ],
     });
 }
-let A = function (e) {
-    let { applicationId: t, fetchState: a, similarApplications: i, onSelectApplication: s, similarLoadId: r } = e;
-    return a !== o.e.FETCHING && (null == i || 0 === i.length)
+let C = function (e) {
+    let { applicationId: t, fetchState: a, similarApplications: l, onSelectApplication: i, similarLoadId: r } = e;
+    return a !== d.e.FETCHING && (null == l || 0 === l.length)
         ? null
         : (0, n.jsxs)("div", {
-              className: _.hd,
+              className: x.hd,
               children: [
-                  (0, n.jsx)("div", { className: _.yF }),
-                  (0, n.jsx)(l.Heading, {
+                  (0, n.jsx)("div", { className: x.yF }),
+                  (0, n.jsx)(s.D, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",
-                      className: _.bV,
-                      children: p.intl.string(p.t.E8wCnk),
+                      className: x.bV,
+                      children: g.intl.string(g.t.E8wCnk),
                   }),
-                  (0, n.jsx)(u.A, {
-                      loading: a === o.e.FETCHING,
+                  (0, n.jsx)(m.A, {
+                      loading: a === d.e.FETCHING,
                       children:
-                          null != i
-                              ? (0, n.jsx)(g, {
+                          null != l
+                              ? (0, n.jsx)(A, {
                                     applicationId: t,
-                                    similarApplications: i,
-                                    onSelectApplication: s,
+                                    similarApplications: l,
+                                    onSelectApplication: i,
                                     similarLoadId: r,
                                 })
                               : null,

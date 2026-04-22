@@ -1,30 +1,31 @@
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var l = n(311907),
-    s = n(397927),
-    a = n(928658),
-    r = n(734057),
-    o = n(985018);
-function c(e, t) {
-    let n = (0, l.bG)([r.A], () => r.A.getChannel(t)),
-        c = n?.getGuildId();
+t.d(n, { A: () => u });
+var l = t(627968);
+t(64700);
+var i = t(311907),
+    a = t(477782),
+    s = t(138134),
+    r = t(928658),
+    o = t(734057),
+    c = t(985018);
+function u(e, n) {
+    let t = (0, i.bG)([o.A], () => o.A.getChannel(n)),
+        u = t?.getGuildId();
     return null == e
         ? null
-        : (0, i.jsx)(s.rXV, {
-              children: (0, i.jsx)(s.Drp, {
+        : (0, l.jsx)(a.rX, {
+              children: (0, l.jsx)(a.Dr, {
                   id: "report-app",
                   color: "danger",
-                  label: o.intl.string(o.t.NgA5vp),
+                  label: c.intl.string(c.t.NgA5vp),
                   action: () =>
-                      (0, a.r3)({
+                      (0, r.r3)({
                           application: e,
                           entrypoint: "activity_ui_channel_call",
-                          contextualGuildId: c ?? void 0,
-                          contextualChannelId: n?.id,
+                          contextualGuildId: u ?? void 0,
+                          contextualChannelId: t?.id,
                       }),
-                  icon: s.iFK,
-                  leadingAccessory: { type: "icon", icon: s.iFK },
+                  icon: s.i,
+                  leadingAccessory: { type: "icon", icon: s.i },
               }),
           });
 }

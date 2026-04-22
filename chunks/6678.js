@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, {
-    CV: () => i,
-    E9: () => g,
+r.d(t, {
+    CV: () => s,
+    E9: () => y,
     EB: () => o,
-    Pl: () => m,
+    Pl: () => p,
     eB: () => a,
-    fp: () => _,
-    k8: () => d,
-    lT: () => c,
+    fp: () => c,
+    k8: () => m,
+    lT: () => d,
     nj: () => l,
-    zL: () => f,
+    zL: () => g,
     zp: () => u,
 });
-var r = n(476858);
-let i = {
+var n = r(476858);
+let s = {
         dimanche: 0,
         dim: 0,
         lundi: 1,
@@ -70,7 +69,7 @@ let i = {
         dec: 12,
         "dec.": 12,
     },
-    s = {
+    i = {
         un: 1,
         deux: 2,
         trois: 3,
@@ -109,11 +108,11 @@ let i = {
         année: "year",
         années: "year",
     },
-    l = `(?:${(0, r.uJ)(s)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`;
+    l = `(?:${(0, n.uJ)(i)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`;
 function u(e) {
     let t = e.toLowerCase();
-    return void 0 !== s[t]
-        ? s[t]
+    return void 0 !== i[t]
+        ? i[t]
         : "une" === t || "un" === t
           ? 1
           : t.match(/quelques?/)
@@ -122,29 +121,31 @@ function u(e) {
               ? 0.5
               : parseFloat(t);
 }
-let c = "(?:[0-9]{1,2}(?:er)?)";
-function d(e) {
+let d = "(?:[0-9]{1,2}(?:er)?)";
+function m(e) {
     let t = e.toLowerCase();
     return parseInt((t = t.replace(/(?:er)$/i, "")));
 }
-let _ = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])";
-function f(e) {
+let c = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])";
+function g(e) {
     if (/AC/i.test(e)) return -parseInt((e = e.replace(/BC/i, "")));
     if (/AD/i.test(e) || /C/i.test(e)) return parseInt((e = e.replace(/[^\d]+/i, "")));
     let t = parseInt(e);
     return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
 }
-let p = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
-    h = RegExp(p, "i"),
-    m = (0, r.mb)("", p);
-function g(e) {
+let h = `(${l})\\s{0,5}(${(0, n.uJ)(o)})\\s{0,5}`,
+    f = RegExp(h, "i"),
+    p = (0, n.mb)("", h);
+function y(e) {
     let t = {},
-        n = e,
-        r = h.exec(n);
-    for (; r; ) E(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
+        r = e,
+        n = f.exec(r);
+    for (; n; )
+        (function (e, t) {
+            let r = u(t[1]);
+            e[o[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length)),
+            (n = f.exec(r));
     return t;
-}
-function E(e, t) {
-    let n = u(t[1]);
-    e[o[t[2].toLowerCase()]] = n;
 }

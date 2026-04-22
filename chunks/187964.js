@@ -1,24 +1,24 @@
 i.d(e, { default: () => c });
-var n = i(627968);
+var d = i(627968);
 i(64700);
-var r = i(397927),
-    l = i(651178),
-    s = i(985018),
+var n = i(772707),
+    s = i(651178),
+    l = i(985018),
     a = i(31008);
 function c(t) {
     let { transitionState: e, onClose: i } = t;
-    return (0, n.jsx)(r.kpP, {
+    return (0, d.jsx)(n.k, {
         transitionState: e,
         onClose: i,
         graphic: { src: a.A, type: "image" },
         gradientColor: "blue",
-        title: s.intl.string(s.t.bAhz9l),
-        subtitle: s.intl.string(s.t["7KjxW3"]),
+        title: l.intl.string(l.t.bAhz9l),
+        subtitle: l.intl.string(l.t["7KjxW3"]),
         actions: [
             {
-                text: s.intl.string(s.t.BddRzS),
+                text: l.intl.string(l.t.BddRzS),
                 onClick: () => {
-                    (0, l.A)(), i();
+                    (0, s.A)(), i();
                 },
             },
         ],

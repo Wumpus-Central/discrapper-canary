@@ -1,105 +1,108 @@
-"use strict";
-n.d(t, {
-    Ay: () => a,
+i.d(t, {
+    Ay: () => o,
     HL: () => f,
-    J$: () => g,
-    LO: () => d,
-    LV: () => l,
-    XU: () => c,
+    J$: () => h,
+    LO: () => c,
+    LV: () => s,
+    XU: () => u,
     Xo: () => p,
-    aA: () => h,
-    eZ: () => m,
-    vW: () => u,
+    aA: () => m,
+    eZ: () => g,
+    vW: () => l,
 });
-var r = n(643479),
-    i = n(761799);
-let a = { isPngFile: I, findPngOffsets: T },
-    s = "\x89PNG\r\n\x1a\n",
-    o = 4,
-    l = 4,
-    u = 0,
-    c = 4,
-    d = 8,
-    _ = "XML:com.adobe.xmp\0",
+var n = i(643479),
+    r = i(761799);
+let o = {
+        isPngFile: function (e) {
+            return !!e && (0, n.hT)(e, 0, a.length) === a;
+        },
+        findPngOffsets: function (e, t) {
+            let i = { hasAppMarkers: !1 },
+                o = a.length;
+            for (; o + 4 + s <= e.byteLength; ) {
+                var y, A, v, T, b, P, S, F, I, C;
+                if (r.A.USE_PNG_FILE && ((y = e), (A = o), "IHDR" === (0, n.hT)(y, A + u, s)))
+                    (i.hasAppMarkers = !0), (i.pngHeaderOffset = o + c);
+                else {
+                    if (
+                        r.A.USE_XMP &&
+                        ((v = e), (T = o), (0, n.hT)(v, T + u, s) === p && (0, n.hT)(v, T + c, d.length) === d)
+                    ) {
+                        let t = (function (e, t) {
+                            t += c + d.length + 1 + 1;
+                            let i = 0;
+                            for (; i < 2 && t < e.byteLength; ) 0 === e.getUint8(t) && i++, t++;
+                            if (!(i < 2)) return t;
+                        })(e, o);
+                        void 0 !== t &&
+                            ((i.hasAppMarkers = !0),
+                            (i.xmpChunks = [{ dataOffset: t, length: e.getUint32(o + l) - (t - (o + c)) }]));
+                    } else if (
+                        (function (e, t, i) {
+                            let r = (0, n.hT)(e, t + u, s);
+                            return r === f || r === p || (r === m && i);
+                        })(e, o, t)
+                    ) {
+                        i.hasAppMarkers = !0;
+                        let t = (0, n.hT)(e, o + u, s);
+                        i.pngTextChunks || (i.pngTextChunks = []),
+                            i.pngTextChunks.push({ length: e.getUint32(o + l), type: t, offset: o + c });
+                    } else {
+                        if (((b = e), (P = o), "eXIf" === (0, n.hT)(b, P + u, s)))
+                            (i.hasAppMarkers = !0), (i.tiffHeaderOffset = o + c);
+                        else {
+                            if (r.A.USE_ICC && t && ((S = e), (F = o), "iCCP" === (0, n.hT)(S, F + u, s))) {
+                                i.hasAppMarkers = !0;
+                                let t = e.getUint32(o + l),
+                                    r = o + c,
+                                    {
+                                        profileName: a,
+                                        compressionMethod: s,
+                                        compressedProfileOffset: u,
+                                    } = (function (e, t) {
+                                        let i = (0, n.BD)(e, t);
+                                        return (
+                                            (t += i.length + 1),
+                                            {
+                                                profileName: i,
+                                                compressionMethod: e.getUint8(t),
+                                                compressedProfileOffset: (t += 1),
+                                            }
+                                        );
+                                    })(e, r);
+                                i.iccChunks || (i.iccChunks = []),
+                                    i.iccChunks.push({
+                                        offset: u,
+                                        length: t - (u - r),
+                                        chunkNumber: 1,
+                                        chunksTotal: 1,
+                                        profileName: a,
+                                        compressionMethod: s,
+                                    });
+                            } else {
+                                (I = e),
+                                    (C = o),
+                                    [g, h].includes((0, n.hT)(I, C + u, s)) &&
+                                        ((i.hasAppMarkers = !0),
+                                        i.pngChunkOffsets || (i.pngChunkOffsets = []),
+                                        i.pngChunkOffsets.push(o + l));
+                            }
+                        }
+                    }
+                }
+                o += e.getUint32(o + l) + 4 + s + 4;
+            }
+            return i;
+        },
+    },
+    a = "\x89PNG\r\n\x1a\n",
+    s = 4,
+    l = 0,
+    u = 4,
+    c = 8,
+    d = "XML:com.adobe.xmp\0",
     f = "tEXt",
     p = "iTXt",
-    h = "zTXt",
-    m = "pHYs",
-    g = "tIME",
-    E = "eXIf",
-    A = "iCCP";
-function I(e) {
-    return !!e && (0, r.hT)(e, 0, s.length) === s;
-}
-function T(e, t) {
-    let n = 4,
-        a = { hasAppMarkers: !1 },
-        _ = s.length;
-    for (; _ + o + l <= e.byteLength; ) {
-        if (i.A.USE_PNG_FILE && y(e, _)) (a.hasAppMarkers = !0), (a.pngHeaderOffset = _ + d);
-        else if (i.A.USE_XMP && S(e, _)) {
-            let t = R(e, _);
-            void 0 !== t &&
-                ((a.hasAppMarkers = !0),
-                (a.xmpChunks = [{ dataOffset: t, length: e.getUint32(_ + u) - (t - (_ + d)) }]));
-        } else if (v(e, _, t)) {
-            a.hasAppMarkers = !0;
-            let t = (0, r.hT)(e, _ + c, l);
-            a.pngTextChunks || (a.pngTextChunks = []),
-                a.pngTextChunks.push({ length: e.getUint32(_ + u), type: t, offset: _ + d });
-        } else if (C(e, _)) (a.hasAppMarkers = !0), (a.tiffHeaderOffset = _ + d);
-        else if (i.A.USE_ICC && t && b(e, _)) {
-            a.hasAppMarkers = !0;
-            let t = e.getUint32(_ + u),
-                n = _ + d,
-                { profileName: r, compressionMethod: i, compressedProfileOffset: s } = O(e, n);
-            a.iccChunks || (a.iccChunks = []),
-                a.iccChunks.push({
-                    offset: s,
-                    length: t - (s - n),
-                    chunkNumber: 1,
-                    chunksTotal: 1,
-                    profileName: r,
-                    compressionMethod: i,
-                });
-        } else
-            N(e, _) &&
-                ((a.hasAppMarkers = !0), a.pngChunkOffsets || (a.pngChunkOffsets = []), a.pngChunkOffsets.push(_ + u));
-        _ += e.getUint32(_ + u) + o + l + n;
-    }
-    return a;
-}
-function y(e, t) {
-    let n = "IHDR";
-    return (0, r.hT)(e, t + c, l) === n;
-}
-function S(e, t) {
-    return (0, r.hT)(e, t + c, l) === p && (0, r.hT)(e, t + d, _.length) === _;
-}
-function v(e, t, n) {
-    let i = (0, r.hT)(e, t + c, l);
-    return i === f || i === p || (i === h && n);
-}
-function C(e, t) {
-    return (0, r.hT)(e, t + c, l) === E;
-}
-function b(e, t) {
-    return (0, r.hT)(e, t + c, l) === A;
-}
-function N(e, t) {
-    return [m, g].includes((0, r.hT)(e, t + c, l));
-}
-function R(e, t) {
-    let n = 1,
-        r = 1;
-    t += d + _.length + n + r;
-    let i = 0;
-    for (; i < 2 && t < e.byteLength; ) 0 === e.getUint8(t) && i++, t++;
-    if (!(i < 2)) return t;
-}
-function O(e, t) {
-    let n = 1,
-        i = 1,
-        a = (0, r.BD)(e, t);
-    return (t += a.length + n), { profileName: a, compressionMethod: e.getUint8(t), compressedProfileOffset: (t += i) };
-}
+    m = "zTXt",
+    g = "pHYs",
+    h = "tIME";

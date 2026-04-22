@@ -1,60 +1,60 @@
-"use strict";
-n.d(t, { A: () => g, u: () => m });
+n.d(t, { A: () => h, u: () => g });
 var i = n(627968);
 n(64700);
-var s = n(503698),
-    l = n.n(s),
+var l = n(503698),
+    s = n.n(l),
     r = n(990078),
-    a = n(397927),
-    o = n(971630),
-    d = n(694336),
-    c = n(985018),
-    u = n(591859);
-let m = (e) => {
+    a = n(834730),
+    o = n(885574),
+    d = n(971630),
+    c = n(694336),
+    u = n(985018),
+    m = n(681214);
+let g = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
-        let { formattedValue: s, isPositive: r } = (0, o.TP)(t, n);
+        let { formattedValue: l, isPositive: r } = (0, d.TP)(t, n);
         return (0, i.jsxs)("div", {
-            className: u.Rx,
+            className: m.Rx,
             children: [
-                (0, i.jsx)(d.A, { className: l()(u.gv, { [u.fk]: !r }) }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(c.A, { className: s()(m.gv, { [m.fk]: !r }) }),
+                (0, i.jsx)(a.E, {
                     variant: "text-md/normal",
-                    className: u.ck,
-                    children: c.intl.format(c.t.OTHOvZ, { value: s }),
+                    className: m.ck,
+                    children: u.intl.format(u.t.OTHOvZ, { value: l }),
                 }),
             ],
         });
     },
-    g = (e) => {
-        let { label: t, sublabel: n, value: s, additionalContent: l, tooltip: o } = e;
+    h = (e) => {
+        let { label: t, sublabel: n, value: l, additionalContent: s, tooltip: d } = e;
         return (0, i.jsxs)("div", {
-            className: u.kL,
+            className: m.kL,
             children: [
                 (0, i.jsxs)("div", {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: u._A,
+                            className: m._A,
                             children: [
-                                (0, i.jsx)(a.Text, { variant: "text-xs/medium", className: u.Pf, children: t }),
-                                null != o &&
+                                (0, i.jsx)(a.E, { variant: "text-xs/medium", className: m.Pf, children: t }),
+                                null != d &&
                                     (0, i.jsx)(r.m, {
-                                        text: o,
-                                        children: (0, i.jsx)(a.mir, {
+                                        text: d,
+                                        children: (0, i.jsx)(o.m, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: u.F6,
+                                            className: m.F6,
                                         }),
                                     }),
                                 null != n
-                                    ? (0, i.jsx)(a.Text, { variant: "text-xs/normal", className: u.$B, children: n })
+                                    ? (0, i.jsx)(a.E, { variant: "text-xs/normal", className: m.$B, children: n })
                                     : null,
                             ],
                         }),
-                        (0, i.jsx)(a.Text, { className: u.Uq, variant: "text-sm/normal", children: s }),
+                        (0, i.jsx)(a.E, { className: m.Uq, variant: "text-sm/normal", children: l }),
                     ],
                 }),
-                l,
+                s,
             ],
         });
     };

@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(735438),
-    i = n.n(r),
-    a = n(311907),
-    s = n(430452),
-    o = n(731854);
-function l() {
-    let { enabled: e, cameraUnavailable: t } = (0, a.cf)([s.Ay], () => {
-        let e = i()(s.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
-        return { enabled: s.Ay.isVideoEnabled(), cameraUnavailable: e || !s.Ay.supports(o.O5.VIDEO) };
+l.d(t, { A: () => o });
+var n = l(735438),
+    i = l.n(n),
+    s = l(311907),
+    a = l(430452),
+    r = l(731854);
+function o() {
+    let { enabled: e, cameraUnavailable: t } = (0, s.cf)([a.Ay], () => {
+        let e = i()(a.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
+        return { enabled: a.Ay.isVideoEnabled(), cameraUnavailable: e || !a.Ay.supports(r.O5.VIDEO) };
     });
     return { enabled: e, cameraUnavailable: t };
 }

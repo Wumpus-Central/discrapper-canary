@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Cg: "tierNameColumn_e431b0",
     k1: "priceColumn_e431b0",

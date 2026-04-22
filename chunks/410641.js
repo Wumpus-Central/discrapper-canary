@@ -13,36 +13,26 @@ var r = (function () {
         return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function i(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function a(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ("object" == typeof t || "function" == typeof t) ? t : e;
-}
-function s(e, t) {
-    if ("function" != typeof t && null !== t)
-        throw TypeError("Super expression must either be null or a function, not " + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
 n(313319);
-var o = n(958554),
-    l = n(698380),
-    u = n(284009),
-    c = n(972535);
+var i = n(958554),
+    s = n(698380),
+    a = n(284009),
+    o = n(972535);
 e.exports = (function (e) {
+    if ("function" != typeof e && null !== e)
+        throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
-        i(this, t);
-        var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        var n = (function (e, t) {
+                if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return t && ("object" == typeof t || "function" == typeof t) ? t : e;
+            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
             r = e || { x: 0, y: 0 };
         return (
             "number" == typeof r.x && "number" == typeof r.y
-                ? ((n.x = new o(r.x)), (n.y = new o(r.y)))
-                : (u(
-                      r.x instanceof o && r.y instanceof o,
+                ? ((n.x = new i(r.x)), (n.y = new i(r.y)))
+                : (a(
+                      r.x instanceof i && r.y instanceof i,
                       "AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.",
                   ),
                   (n.x = r.x),
@@ -52,7 +42,10 @@ e.exports = (function (e) {
         );
     }
     return (
-        s(t, e),
+        (t.prototype = Object.create(e && e.prototype, {
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
+        })),
+        e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         r(t, [
             {
                 key: "setValue",
@@ -88,7 +81,7 @@ e.exports = (function (e) {
                 key: "addListener",
                 value: function (e) {
                     var t = this,
-                        n = c(),
+                        n = o(),
                         r = function (n) {
                             n.value, e(t.__getValue());
                         };
@@ -118,4 +111,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(l);
+})(s);

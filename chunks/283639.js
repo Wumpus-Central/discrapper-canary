@@ -1,9 +1,8 @@
 "use strict";
-let r;
 n.d(t, { h9: () => s });
 var i = n(626584);
 try {
-    r = n(
+    n(
         Object(
             (function () {
                 var e = Error("Cannot find module '@shopify/react-native-skia'");
@@ -11,19 +10,17 @@ try {
             })(),
         ),
     ).Skia;
-} catch (e) {
-    r = null;
-}
-let a = new i.A("AssetMap");
+} catch (e) {}
+let l = new i.A("AssetMap");
 async function s(e) {
-    let t = new o(),
+    let t = new r(),
         n = Object.entries(e).map((e) => {
-            let [n, r] = e;
-            return t.loadRemoteImage(n, r).catch((e) => a.warn("Failed to load canvas asset", e, n, r));
+            let [n, i] = e;
+            return t.loadRemoteImage(n, i).catch((e) => l.warn("Failed to load canvas asset", e, n, i));
         });
     return await Promise.all(n), t;
 }
-class o {
+class r {
     assets = {};
     fontManager;
     loadFonts() {

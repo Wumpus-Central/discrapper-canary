@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
-var r = {};
-r = {
+l.d(t, { A: () => n });
+var n = {};
+n = {
     ascending: "crescente",
     ascendingSort: (e) => `in ordine crescente in base alla colonna ${e.columnName}`,
     columnSize: (e) => `${e.value} pixel`,

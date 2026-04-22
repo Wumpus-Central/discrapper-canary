@@ -1,40 +1,35 @@
-i.d(e, { default: () => o });
-var n = i(627968),
-    s = i(64700),
-    a = i(989349),
-    l = i.n(a),
-    r = i(158954),
-    c = i(397927),
-    u = i(985018),
-    d = i(826063);
-function o(t) {
-    let { createReminder: e, ...i } = t,
-        [a, o] = s.useState(() => l()()),
-        [p, h] = s.useState(() => l()()),
-        b = s.useCallback(() => {
-            e(a.toDate());
-        }, [e, a]),
-        m = (t) => {
-            t.isValid() && o(t);
+n.d(t, { default: () => p });
+var a = n(627968),
+    i = n(64700),
+    l = n(989349),
+    r = n.n(l),
+    s = n(732159),
+    o = n(582306),
+    u = n(335310),
+    c = n(985018),
+    d = n(218108);
+function p(e) {
+    let { createReminder: t, ...n } = e,
+        [l, p] = i.useState(() => r()()),
+        [h, m] = i.useState(() => r()()),
+        f = i.useCallback(() => {
+            t(l.toDate());
+        }, [t, l]),
+        x = (e) => {
+            e.isValid() && p(e);
         };
-    return (0, n.jsx)(r.ConfirmModal, {
-        title: u.intl.string(u.t.VKsXpY),
-        confirmText: u.intl.string(u.t["R3BPH+"]),
-        cancelText: u.intl.string(u.t["ETE/oC"]),
-        onConfirm: b,
-        ...i,
+    return (0, a.jsx)(s.ConfirmModal, {
+        title: c.intl.string(c.t.VKsXpY),
+        confirmText: c.intl.string(c.t["R3BPH+"]),
+        cancelText: c.intl.string(c.t["ETE/oC"]),
+        onConfirm: f,
+        ...n,
         variant: "primary",
-        children: (0, n.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
             className: d.U,
             children: [
-                (0, n.jsx)(c.J3s, {
-                    label: u.intl.string(u.t.pSZKvM),
-                    required: !0,
-                    value: a,
-                    onSelect: m,
-                    minDate: p,
-                }),
-                (0, n.jsx)(c.czz, { label: u.intl.string(u.t.GOmEb8), required: !0, value: a, onChange: m }),
+                (0, a.jsx)(o.J, { label: c.intl.string(c.t.pSZKvM), required: !0, value: l, onSelect: x, minDate: h }),
+                (0, a.jsx)(u.c, { label: c.intl.string(c.t.GOmEb8), required: !0, value: l, onChange: x }),
             ],
         }),
     });

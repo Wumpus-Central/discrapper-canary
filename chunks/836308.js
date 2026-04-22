@@ -1,190 +1,185 @@
-"use strict";
-n.d(t, { GJ: () => O, ZL: () => R, uv: () => v, zg: () => C });
-var r = n(627968),
+n.d(t, { GJ: () => v, ZL: () => I, uv: () => T, zg: () => g });
+var l = n(627968),
     i = n(64700),
-    s = n(391048),
-    a = n(73079),
-    o = n(323082),
-    l = n(459357),
+    a = n(391048),
+    r = n(73079),
+    s = n(323082),
+    o = n(459357),
     u = n(550238),
     c = n(93159),
     d = n(156312),
-    _ = n(166532),
-    f = n(19311),
-    p = n(869177),
-    h = n(825755),
-    m = n(723702),
-    E = n(71532),
-    g = n(218075),
-    A = n(632721),
-    I = n(818348),
-    T = n(985018),
-    S = n(963145);
-function y(e) {
-    return () => (null != h.A.error && (0, s.ET)(), e());
+    p = n(166532),
+    m = n(19311),
+    h = n(869177),
+    A = n(825755),
+    _ = n(723702),
+    C = n(71532),
+    E = n(218075),
+    y = n(632721),
+    f = n(818348),
+    P = n(985018),
+    S = n(801753);
+function x(e) {
+    return () => (null != A.A.error && (0, a.ET)(), e());
 }
-function v(e) {
+function T(e) {
     let { onPrimary: t, onBack: n, ...i } = e,
-        s = t;
-    null != t && (s = y(t));
-    let a = n;
-    return null != n && (a = y(n)), (0, r.jsx)(f.Ay, { ...i, onPrimary: s, onBack: a });
+        a = t;
+    null != t && (a = x(t));
+    let r = n;
+    return null != n && (r = x(n)), (0, l.jsx)(m.Ay, { ...i, onPrimary: a, onBack: r });
 }
 function N(e) {
     let { paymentSourceTypeRestrictions: t } = e,
-        n = null != t && t.length > 0 ? g.fU.ADD_NEW_PAYMENT_METHOD : void 0,
-        { enabled: i } = (0, l.c)({ location: "AddPaymentStep" });
-    return (0, r.jsxs)(r.Fragment, {
+        n = null != t && t.length > 0 ? E.fU.ADD_NEW_PAYMENT_METHOD : void 0,
+        { enabled: i } = (0, o.c)({ location: "AddPaymentStep" });
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsx)(g.je, { paymentRestrictionBannerType: n }),
-            (0, r.jsx)(a.A, { ...e }),
-            i && (0, r.jsx)(c.Z4, { className: S.SO }),
+            (0, l.jsx)(E.je, { paymentRestrictionBannerType: n }),
+            (0, l.jsx)(r.A, { ...e }),
+            i && (0, l.jsx)(c.Z4, { className: S.SO }),
         ],
     });
 }
-let C = () => {
+let g = () => {
         let [e, t] = i.useState(!1),
-            n = i.useRef(null),
-            r = () => {
-                null != n.current && n.current.show();
-            };
+            n = i.useRef(null);
         return {
             connectorPaymentRequestReady: e,
             setConnectorPaymentRequestReady: t,
             connectorPaymentRequestRef: n,
-            showConnectorPaymentRequest: r,
+            showConnectorPaymentRequest: () => {
+                null != n.current && n.current.show();
+            },
         };
     },
-    R = (e) => {
+    I = (e) => {
         let {
                 prependSteps: t,
                 appendSteps: n,
                 analyticsLocation: i,
-                isEligibleForTrial: a,
-                allowDesktopRedirectPurchase: l,
+                isEligibleForTrial: r,
+                allowDesktopRedirectPurchase: o,
                 onPaymentRequestSourceFailed: c,
-                paymentModalArgs: f,
-                handleStepChange: g,
+                paymentModalArgs: m,
+                handleStepChange: E,
                 setPaymentMethodSteps: S,
-                setPaymentRequestPaymentMethod: y,
-                currentStep: v,
-                setInfoNotice: C,
-                completeSteps: R,
-                paymentSourceTypeRestrictions: O,
+                setPaymentRequestPaymentMethod: x,
+                currentStep: T,
+                setInfoNotice: g,
+                completeSteps: I,
+                paymentSourceTypeRestrictions: v,
                 CREDIT_CARD_STEPS: b,
-                PAYPAL_STEPS: D,
-                VENMO_STEPS: L,
-                PAYMENT_REQUEST_STEPS: w,
-                PRZELEWY24_STEPS: M,
-                EPS_STEPS: P,
-                IDEAL_STEPS: x,
-                CASH_APP_STEPS: k,
-                setConnectorPaymentRequestReady: U,
-                connectorPaymentRequestRef: G,
+                PAYPAL_STEPS: R,
+                VENMO_STEPS: M,
+                PAYMENT_REQUEST_STEPS: j,
+                PRZELEWY24_STEPS: L,
+                EPS_STEPS: O,
+                IDEAL_STEPS: D,
+                CASH_APP_STEPS: U,
+                setConnectorPaymentRequestReady: w,
+                connectorPaymentRequestRef: k,
             } = e,
-            { contextMetadata: F, activitySessionId: V } = (0, d.P5)(),
-            { setBillingAddressState: B } = f,
-            H = (e, r) => {
+            { contextMetadata: F, activitySessionId: G } = (0, d.P5)(),
+            { setBillingAddressState: B } = m,
+            Y = (e, l) => {
                 switch (e) {
-                    case I.he.CARD:
-                        l ? g(_.pn.AWAITING_BROWSER_CHECKOUT) : (S(b), g(_.pn.CREDIT_CARD_INFORMATION));
+                    case f.he.CARD:
+                        o ? E(p.pn.AWAITING_BROWSER_CHECKOUT) : (S(b), E(p.pn.CREDIT_CARD_INFORMATION));
                         break;
-                    case I.he.PAYPAL:
-                        S(D), g(_.pn.PAYPAL_INFORMATION);
+                    case f.he.PAYPAL:
+                        S(R), E(p.pn.PAYPAL_INFORMATION);
                         break;
-                    case I.he.VENMO:
-                        S(L), g(_.pn.VENMO_INFORMATION);
+                    case f.he.VENMO:
+                        S(M), E(p.pn.VENMO_INFORMATION);
                         break;
-                    case I.he.PAYMENT_REQUEST:
-                        l && "googlePay" === r
-                            ? g(_.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY)
-                            : l && "applePay" === r
-                              ? g(_.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY)
-                              : (S(w), g(_.pn.PAYMENT_REQUEST_INFORMATION));
+                    case f.he.PAYMENT_REQUEST:
+                        o && "googlePay" === l
+                            ? E(p.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY)
+                            : o && "applePay" === l
+                              ? E(p.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY)
+                              : (S(j), E(p.pn.PAYMENT_REQUEST_INFORMATION));
                         break;
-                    case I.he.PRZELEWY24:
-                        S(M), g(_.pn.PRZELEWY24_INFORMATION);
+                    case f.he.PRZELEWY24:
+                        S(L), E(p.pn.PRZELEWY24_INFORMATION);
                         break;
-                    case I.he.EPS:
-                        S(P), g(_.pn.EPS_INFORMATION);
+                    case f.he.EPS:
+                        S(O), E(p.pn.EPS_INFORMATION);
                         break;
-                    case I.he.IDEAL:
-                        S(x), g(_.pn.IDEAL_INFORMATION);
+                    case f.he.IDEAL:
+                        S(D), E(p.pn.IDEAL_INFORMATION);
                         break;
-                    case I.he.CASH_APP:
-                        S(k), g(_.pn.CASH_APP_INFORMATION);
+                    case f.he.CASH_APP:
+                        S(U), E(p.pn.CASH_APP_INFORMATION);
                         break;
-                    case I.he.GIROPAY:
-                    case I.he.PAYSAFE_CARD:
-                    case I.he.GCASH:
-                    case I.he.GRABPAY_MY:
-                    case I.he.MOMO_WALLET:
-                    case I.he.KAKAOPAY:
-                    case I.he.GOPAY_WALLET:
-                    case I.he.BANCONTACT:
-                        S({ steps: [...t, ...A.GC, ...n], methodType: e }), g(_.pn.ADDRESS);
+                    case f.he.GIROPAY:
+                    case f.he.PAYSAFE_CARD:
+                    case f.he.GCASH:
+                    case f.he.GRABPAY_MY:
+                    case f.he.MOMO_WALLET:
+                    case f.he.KAKAOPAY:
+                    case f.he.GOPAY_WALLET:
+                    case f.he.BANCONTACT:
+                        S({ steps: [...t, ...y.GC, ...n], methodType: e }), E(p.pn.ADDRESS);
                 }
-                null != h.A.error && (0, s.ET)();
+                null != A.A.error && (0, a.ET)();
             },
-            j = (e, t) => {
-                B((e) => ({ ...e, info: t })), S(w), R(e);
-            },
-            Y = async (e, t) => {
-                if (((0, s.mf)(e), null == e)) return void c();
-                y(e);
-                let { billingAddressInfo: n } = (0, E.uK)(e),
-                    r = (0, u.Q)(n);
-                if (((null == n.name || "" === n.name) && null != t && (n.name = t), B({ isValid: r, info: n }), !r))
-                    return void g(_.pn.ADDRESS);
+            W = async (e, t) => {
+                if (((0, a.mf)(e), null == e)) return void c();
+                x(e);
+                let { billingAddressInfo: n } = (0, C.uK)(e),
+                    l = (0, u.Q)(n);
+                if (((null == n.name || "" === n.name) && null != t && (n.name = t), B({ isValid: l, info: n }), !l))
+                    return void E(p.pn.ADDRESS);
                 try {
-                    let t = await (0, o.Tv)(e, n, i);
-                    j(t, n);
+                    var r;
+                    (r = await (0, s.Tv)(e, n, i)), B((e) => ({ ...e, info: n })), S(j), I(r);
                 } catch (e) {
                     c();
                 }
             };
-        if (v === _.pn.ATTEMPT_GOOGLE_PAY || v === _.pn.ATTEMPT_APPLE_PAY) {
-            let e = T.intl.string(v === _.pn.ATTEMPT_APPLE_PAY ? T.t.czhXDv : T.t.Zj2xQ0);
-            return (0, r.jsx)(p.V, {
-                onChooseType: H,
-                paymentRequestWallet: v === _.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
-                onStripePaymentMethodReceived: Y,
+        if (T === p.pn.ATTEMPT_GOOGLE_PAY || T === p.pn.ATTEMPT_APPLE_PAY) {
+            let e = P.intl.string(T === p.pn.ATTEMPT_APPLE_PAY ? P.t.czhXDv : P.t.Zj2xQ0);
+            return (0, l.jsx)(h.V, {
+                onChooseType: Y,
+                paymentRequestWallet: T === p.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
+                onStripePaymentMethodReceived: W,
                 onPaymentRequestFailure: () => {
-                    H(I.he.CARD), C(e);
+                    Y(f.he.CARD), g(e);
                 },
-                onValidPaymentRequest: () => U(!0),
-                paymentRequestRef: G,
+                onValidPaymentRequest: () => w(!0),
+                paymentRequestRef: k,
             });
         }
-        let W = !(0, m.isDesktop)() || l ? ["googlePay", "applePay"] : [];
-        return (0, r.jsx)(N, {
-            onChooseType: H,
-            onStripePaymentMethodReceived: Y,
-            paymentRequestWallets: W,
-            isEligibleForTrial: a,
-            paymentRequestPaymentContext: { contextMetadata: F, activitySessionId: V },
-            paymentSourceTypeRestrictions: O,
+        let V = !(0, _.isDesktop)() || o;
+        return (0, l.jsx)(N, {
+            onChooseType: Y,
+            onStripePaymentMethodReceived: W,
+            paymentRequestWallets: V ? ["googlePay", "applePay"] : [],
+            isEligibleForTrial: r,
+            paymentRequestPaymentContext: { contextMetadata: F, activitySessionId: G },
+            paymentSourceTypeRestrictions: v,
         });
     },
-    O = (e) => {
+    v = (e) => {
         let {
             onReturn: t,
             shouldUseManaModal: n,
             handleStepChange: i,
-            currentStep: s,
-            connectorPaymentRequestReady: a,
-            showConnectorPaymentRequest: o,
+            currentStep: a,
+            connectorPaymentRequestReady: r,
+            showConnectorPaymentRequest: s,
         } = e;
-        if (s === _.pn.ATTEMPT_GOOGLE_PAY || s === _.pn.ATTEMPT_APPLE_PAY) {
-            let e = T.intl.string(s === _.pn.ATTEMPT_APPLE_PAY ? T.t.WoXvJL : T.t.wnVVr0);
-            return (0, r.jsx)(v, {
-                onBack: () => i(_.pn.PAYMENT_TYPE),
-                primaryCTA: f.Ay.CTAType.CONTINUE,
+        if (a === p.pn.ATTEMPT_GOOGLE_PAY || a === p.pn.ATTEMPT_APPLE_PAY) {
+            let e = P.intl.string(a === p.pn.ATTEMPT_APPLE_PAY ? P.t.WoXvJL : P.t.wnVVr0);
+            return (0, l.jsx)(T, {
+                onBack: () => i(p.pn.PAYMENT_TYPE),
+                primaryCTA: m.Ay.CTAType.CONTINUE,
                 primaryText: e,
-                onPrimary: () => o(),
-                primaryDisabled: !a,
+                onPrimary: () => s(),
+                primaryDisabled: !r,
                 shouldUseManaModal: n,
             });
         }
-        return (0, r.jsx)(v, { onBack: t, shouldUseManaModal: n });
+        return (0, l.jsx)(T, { onBack: t, shouldUseManaModal: n });
     };

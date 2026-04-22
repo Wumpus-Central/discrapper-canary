@@ -2,15 +2,15 @@ e.d(n, { default: () => p });
 var i = e(627968),
     r = e(64700),
     a = e(311907),
-    l = e(732955),
-    s = e(397927),
+    l = e(189213),
+    s = e(292666),
     o = e(198982),
     c = e(445077),
-    u = e(71393),
-    d = e(985018);
+    d = e(71393),
+    u = e(985018);
 function p(t) {
     let { guildId: n } = t,
-        e = (0, a.bG)([u.A], () => u.A.getGuild(n)),
+        e = (0, a.bG)([d.A], () => d.A.getGuild(n)),
         [p, g] = r.useState(null),
         [h, k] = r.useState(""),
         f = async (n) => {
@@ -23,20 +23,20 @@ function p(t) {
             }
         },
         { transitionState: m, onClose: C } = t;
-    return (0, i.jsx)(l.aFV, {
-        title: d.intl.formatToPlainString(d.t["d+6kzl"], { guildName: e?.name }),
+    return (0, i.jsx)(l.Modal, {
+        title: u.intl.formatToPlainString(u.t["d+6kzl"], { guildName: e?.name }),
         actions: [
-            { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: C },
-            { variant: "primary", text: d.intl.string(d.t.Np4yXU), onClick: f },
+            { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: C },
+            { variant: "primary", text: u.intl.string(u.t.Np4yXU), onClick: f },
         ],
         transitionState: m,
         onClose: C,
         children: (0, i.jsx)("form", {
             onSubmit: f,
-            children: (0, i.jsx)(s.ksK, {
-                label: d.intl.string(d.t.pt6jhx),
-                placeholder: d.intl.string(d.t.RfWvWI),
-                description: d.intl.string(d.t.VAaqfF),
+            children: (0, i.jsx)(s.k, {
+                label: u.intl.string(u.t.pt6jhx),
+                placeholder: u.intl.string(u.t.RfWvWI),
+                description: u.intl.string(u.t.VAaqfF),
                 onChange: (t) => {
                     k(t);
                 },

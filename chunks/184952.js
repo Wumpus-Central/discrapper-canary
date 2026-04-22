@@ -1,54 +1,52 @@
-n.d(t, { A: () => o });
-var l = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(985018),
-    r = n(137898);
-function o(e) {
-    let { displayName: t, description: n, icon: o, isLoading: s, isConnected: c, canConnect: u, onConnect: d } = e;
+t.d(n, { A: () => u });
+var l = t(627968);
+t(64700);
+var i = t(834730),
+    a = t(289873),
+    r = t(628284),
+    o = t(821609),
+    s = t(985018),
+    c = t(221919);
+function u(e) {
+    let { displayName: n, description: t, icon: u, isLoading: d, isConnected: m, canConnect: h, onConnect: p } = e;
     return (0, l.jsxs)("div", {
-        className: r.Nr,
+        className: c.Nr,
         children: [
             (0, l.jsxs)("div", {
-                className: r.hu,
+                className: c.hu,
                 children: [
-                    (0, l.jsx)("div", { className: r.Kk, children: o }),
+                    (0, l.jsx)("div", { className: c.Kk, children: u }),
                     (0, l.jsxs)("div", {
-                        className: r.P_,
+                        className: c.P_,
                         children: [
-                            (0, l.jsx)(i.Text, { variant: "text-md/medium", color: "text-strong", children: t }),
-                            null != n &&
-                                n.length > 0 &&
-                                (0, l.jsx)(i.Text, { variant: "text-sm/medium", color: "text-muted", children: n }),
+                            (0, l.jsx)(i.E, { variant: "text-md/medium", color: "text-strong", children: n }),
+                            null != t &&
+                                t.length > 0 &&
+                                (0, l.jsx)(i.E, { variant: "text-sm/medium", color: "text-muted", children: t }),
                         ],
                     }),
                 ],
             }),
-            s
-                ? (0, l.jsx)(i.y$y, {})
-                : c
+            d
+                ? (0, l.jsx)(a.y, {})
+                : m
                   ? (0, l.jsxs)("div", {
-                        className: r.ul,
+                        className: c.ul,
                         children: [
-                            (0, l.jsx)(i.Text, {
+                            (0, l.jsx)(i.E, {
                                 variant: "text-md/medium",
                                 color: "text-feedback-positive",
-                                children: a.intl.string(a.t["LV+CXH"]),
+                                children: s.intl.string(s.t["LV+CXH"]),
                             }),
-                            (0, l.jsx)(i.yr3, {
-                                size: "custom",
-                                width: 20,
-                                height: 20,
-                                color: "var(--status-positive)",
-                            }),
+                            (0, l.jsx)(r.y, { size: "custom", width: 20, height: 20, color: "var(--status-positive)" }),
                         ],
                     })
-                  : (0, l.jsx)(i.Button, {
+                  : (0, l.jsx)(o.$, {
                         variant: "primary",
                         size: "sm",
-                        onClick: d,
-                        text: a.intl.string(a.t.S0W8Z5),
-                        disabled: !u,
+                        onClick: p,
+                        text: s.intl.string(s.t.S0W8Z5),
+                        disabled: !h,
                     }),
         ],
     });

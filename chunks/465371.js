@@ -1,18 +1,18 @@
-e.d(t, { A: () => d });
-var i = e(627968);
-e(64700);
-var l = e(311907),
-    a = e(397927),
-    r = e(686956),
-    s = e(824492),
-    o = e(985018);
-function d(n) {
-    let t = (0, l.bG)([s.A], () => s.A.didAgree(n.id));
-    return n.isSpoilerChannel() && t
-        ? (0, i.jsx)(a.Drp, {
+n.d(t, { A: () => o });
+var l = n(627968);
+n(64700);
+var r = n(311907),
+    i = n(477782),
+    a = n(686956),
+    u = n(824492),
+    s = n(985018);
+function o(e) {
+    let t = (0, r.bG)([u.A], () => u.A.didAgree(e.id));
+    return e.isSpoilerChannel() && t
+        ? (0, l.jsx)(i.Dr, {
               id: "clear-spoiler-agree",
-              label: o.intl.string(o.t.ix2UVZ),
-              action: () => r.A.clearSpoilerAgree(n.id),
+              label: s.intl.string(s.t.ix2UVZ),
+              action: () => a.A.clearSpoilerAgree(e.id),
           })
         : null;
 }

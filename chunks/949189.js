@@ -1,8 +1,6 @@
 "use strict";
-n.d(t, { O: () => a });
-let r = 32768,
-    i = 1734653;
-function a(e) {
+n.d(t, { O: () => r });
+function r(e) {
     let { useChannelObfuscation: t } = e;
-    return t ? i | r : i;
+    return t ? 1767421 : 1734653;
 }

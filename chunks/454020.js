@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(147426),
-    i = n(374372),
-    a = n(972409),
-    s = n(632434);
+r.d(t, { A: () => o });
+var n = r(147426),
+    s = r(374372),
+    a = r(972409),
+    i = r(632434);
 class o extends a.w {
     innerPatternString(e) {
-        return `(ці|останні|минулі|майбутні|наступні|після|через|\\+|-)\\s*(${r.Pl})`;
+        return `(ці|останні|минулі|майбутні|наступні|після|через|\\+|-)\\s*(${n.Pl})`;
     }
     innerExtract(e, t) {
-        let n = t[1].toLowerCase(),
-            a = (0, r.E9)(t[3]);
-        switch (n) {
+        let r = t[1].toLowerCase(),
+            a = (0, n.E9)(t[3]);
+        switch (r) {
             case "останні":
             case "минулі":
             case "-":
-                a = (0, s.x4)(a);
+                a = (0, i.x4)(a);
         }
-        return i.BP.createRelativeFromReference(e.reference, a);
+        return s.BP.createRelativeFromReference(e.reference, a);
     }
 }

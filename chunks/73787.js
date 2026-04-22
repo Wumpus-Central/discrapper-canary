@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uW: "section__9e177",
     cI: "bannerContainer__9e177",

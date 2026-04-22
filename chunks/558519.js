@@ -1,14 +1,11 @@
 "use strict";
-n.d(t, { MA: () => i, vx: () => r });
-var r = (function (e) {
-        return (
-            (e[(e.DISCONNECTED = 0)] = "DISCONNECTED"),
-            (e[(e.CONNECTING = 1)] = "CONNECTING"),
-            (e[(e.CONNECTED = 2)] = "CONNECTED"),
-            (e[(e.ERROR = 3)] = "ERROR"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.IN_APP = "in_app"), (e.SUBSCRIPTION = "subscription"), e;
-    })({});
+n.d(t, { MA: () => a, vx: () => s });
+var r,
+    i,
+    s =
+        (((r = {})[(r.DISCONNECTED = 0)] = "DISCONNECTED"),
+        (r[(r.CONNECTING = 1)] = "CONNECTING"),
+        (r[(r.CONNECTED = 2)] = "CONNECTED"),
+        (r[(r.ERROR = 3)] = "ERROR"),
+        r),
+    a = (((i = {}).IN_APP = "in_app"), (i.SUBSCRIPTION = "subscription"), i);

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => C, DN: () => I, iu: () => T, s: () => S });
+n.d(t, { Ay: () => R, DN: () => I, iu: () => T, s: () => S });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,16 +7,16 @@ var r = n(627968),
     o = n(936504),
     l = n(311907),
     u = n(827734),
-    c = n(435371),
-    d = n(397927),
+    d = n(990078),
+    c = n(939249),
     _ = n(162532),
     f = n(624793),
-    p = n(714991),
+    E = n(714991),
     h = n(260509),
-    m = n(531685),
-    E = n(515718),
+    p = n(531685),
+    m = n(515718),
     g = n(821589),
-    A = n(435033);
+    A = n(645206);
 let I = {
         SMOL: "Smol",
         MINI: "Mini",
@@ -55,7 +55,7 @@ class y extends i.PureComponent {
     renderBadge() {
         let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: i, badgeTooltipDelay: s } = this.props;
         return e
-            ? (0, r.jsx)(p.A, {
+            ? (0, r.jsx)(E.A, {
                   className: A.guildIconBadge,
                   guild: t,
                   badgeStrokeColor: n,
@@ -74,39 +74,39 @@ class y extends i.PureComponent {
                 style: o = {},
                 textScale: l,
                 showTooltip: u,
-                tooltipPosition: c,
+                tooltipPosition: d,
                 onClick: _,
                 to: f,
-                badgeStrokeColor: p,
-                animate: m,
-                tabIndex: E,
+                badgeStrokeColor: E,
+                animate: p,
+                tabIndex: m,
                 iconSrc: I,
                 "aria-hidden": T,
                 lossless: y,
-                iconSize: v,
-                ...N
+                iconSize: N,
+                ...O
             } = this.props,
-            C = S[s],
-            b = null != _ ? d.DUT : "div",
-            R = (0, h.Rb)(e);
-        return (0, r.jsxs)(b, {
+            R = S[s],
+            v = null != _ ? c.D : "div",
+            C = (0, h.Rb)(e);
+        return (0, r.jsxs)(v, {
             className: a()(A.icon, t, (0, g.t)(A, "iconSize", s), {
                 [(0, g.t)(A, "iconActive", s) ?? ""]: i,
                 [A.iconInactive]: !i,
                 [A.noIcon]: null == e.icon,
             }),
             "aria-hidden": T,
-            style: null == e.icon ? { fontSize: (C[R.length] ?? C[C.length - 1]) * l, ...o } : o,
+            style: null == e.icon ? { fontSize: (R[C.length] ?? R[R.length - 1]) * l, ...o } : o,
             onClick: null != f || null == _ ? void 0 : _,
-            tabIndex: E,
-            ...N,
+            tabIndex: m,
+            ...O,
             children: [this.renderAcronym(), this.renderBadge()],
         });
     }
     renderTooltip() {
         let { guild: e, showTooltip: t, tooltipPosition: n } = this.props;
         return t
-            ? (0, r.jsx)(c.m_, { text: e.name, position: n, "aria-label": !1, children: this.renderIcon() })
+            ? (0, r.jsx)(d.m, { text: e.name, position: n, "aria-label": !1, children: this.renderIcon() })
             : this.renderIcon();
     }
     render() {
@@ -122,18 +122,18 @@ class y extends i.PureComponent {
             : this.renderTooltip();
     }
 }
-let v = l.Ay.connectStores([m.A], (e) => {
+let N = l.Ay.connectStores([p.A], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: s, iconSize: a, lossless: o } = e;
     return (
         null == r &&
             (r =
                 t instanceof f.GO
-                    ? t.getIconURL(a ?? T[s], n && m.A.isFocused())
-                    : (0, h.Iv)(t, a ?? T[s], n && m.A.isFocused(), o)),
-        { style: { ...i, backgroundImage: (0, E.wU)(r) } }
+                    ? t.getIconURL(a ?? T[s], n && p.A.isFocused())
+                    : (0, h.Iv)(t, a ?? T[s], n && p.A.isFocused(), o)),
+        { style: { ...i, backgroundImage: (0, m.wU)(r) } }
     );
 })((0, _.Y)((e) => (0, r.jsx)(y, { ...e })));
-class N extends i.PureComponent {
+class O extends i.PureComponent {
     static Sizes = I;
     static defaultProps = {
         size: I.LARGE,
@@ -146,7 +146,7 @@ class N extends i.PureComponent {
         animate: !1,
     };
     render() {
-        return (0, r.jsx)(v, { ...this.props });
+        return (0, r.jsx)(N, { ...this.props });
     }
 }
-let C = N;
+let R = O;

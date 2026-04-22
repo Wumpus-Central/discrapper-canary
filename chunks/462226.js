@@ -1,20 +1,20 @@
-i.d(t, { A: () => d });
-var n = i(627968);
-i(64700);
-var a = i(397927),
-    l = i(626584),
-    r = i(833349),
-    s = i(652215),
-    o = i(985018);
-function d(e) {
-    let { activity: t, user: i, variant: d = "secondary", onAction: c, ...u } = e;
-    return (0, r.A)(t, s.jUm.INSTANCE)
-        ? (0, n.jsx)(a.Button, {
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var l = n(821609),
+    a = n(626584),
+    s = n(833349),
+    r = n(652215),
+    o = n(985018);
+function c(e) {
+    let { activity: t, user: n, variant: c = "secondary", onAction: d, ...u } = e;
+    return (0, s.A)(t, r.jUm.INSTANCE)
+        ? (0, i.jsx)(l.$, {
               text: o.intl.string(o.t.vwl1PK),
-              variant: d,
+              variant: c,
               size: "sm",
               onClick: () => {
-                  c?.(), new l.A("UserActivityActions").log("notify", i.id, t);
+                  d?.(), new a.A("UserActivityActions").log("notify", n.id, t);
               },
               fullWidth: !0,
               ...u,

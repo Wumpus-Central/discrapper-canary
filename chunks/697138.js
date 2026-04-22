@@ -1,58 +1,58 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(932433),
-    s = n(621466),
+    s = n(919523),
+    a = n(621466),
     o = n(311907),
-    l = n(397927),
+    l = n(844222),
     u = n(954571),
-    c = n(775602),
-    d = n(264927),
+    d = n(775602),
+    c = n(264927),
     _ = n(652215),
     f = n(650583),
-    p = n(985018);
+    E = n(985018);
 function h(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.key !== f.dh.TAB || null == e.target) return;
     let { target: t } = e,
-        n = (0, s.BF)(e)?.activeElement;
-    (0, s.vq)(t) &&
+        n = (0, a.BF)(e)?.activeElement;
+    (0, a.vq)(t) &&
         u.default.track(_.HAw.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: "tab_navigation",
             source_class_list: null != n ? Array.from(n.classList) : [],
             location_object: t.tagName,
         });
 }
-function m(e) {
+function p(e) {
     let { children: t } = e,
-        n = (0, o.cf)([c.A], () => ({ enabled: c.A.useReducedMotion, rawValue: c.A.rawPrefersReducedMotion })),
-        s = (0, o.cf)([c.A], () => ({ enabled: c.A.useForcedColors, rawValue: c.A.systemForcedColors })),
-        u = (0, o.bG)([c.A], () => c.A.isHighContrastModeEnabled),
-        _ = (0, o.bG)([c.A], () => c.A.alwaysShowLinkDecorations),
-        f = (0, o.bG)([c.A], () => c.A.keyboardModeEnabled),
-        m = (0, o.bG)([c.A], () => c.A.isSwitchIconsEnabled),
-        g = i.useMemo(
+        n = (0, o.cf)([d.A], () => ({ enabled: d.A.useReducedMotion, rawValue: d.A.rawPrefersReducedMotion })),
+        a = (0, o.cf)([d.A], () => ({ enabled: d.A.useForcedColors, rawValue: d.A.systemForcedColors })),
+        u = (0, o.bG)([d.A], () => d.A.isHighContrastModeEnabled),
+        _ = (0, o.bG)([d.A], () => d.A.alwaysShowLinkDecorations),
+        f = (0, o.bG)([d.A], () => d.A.keyboardModeEnabled),
+        p = (0, o.bG)([d.A], () => d.A.isSwitchIconsEnabled),
+        m = i.useMemo(
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
-                forcedColors: s,
+                forcedColors: a,
                 alwaysShowLinkDecorations: _,
                 highContrastModeEnabled: u,
                 keyboardModeEnabled: f,
-                switchIconsEnabled: m,
+                switchIconsEnabled: p,
             }),
-            [n, s, _, u, f, m],
+            [n, a, _, u, f, p],
         );
     return (
         i.useEffect(
             () => (
-                (0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.Z7)()),
-                p.intl.onLocaleChange(() => (0, d.Z7)()),
+                (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, c.Z7)()),
+                E.intl.onLocaleChange(() => (0, c.Z7)()),
                 window.addEventListener("keydown", h),
                 () => window.removeEventListener("keydown", h)
             ),
             [],
         ),
-        (0, r.jsx)(l.CZY.Provider, { value: g, children: t })
+        (0, r.jsx)(l.C.Provider, { value: m, children: t })
     );
 }

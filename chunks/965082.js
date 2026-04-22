@@ -1,101 +1,99 @@
-"use strict";
-n.d(t, { A: () => D });
-var r = n(627968);
-n(64700);
-var i = n(684013),
-    s = n(334738),
-    a = n(941971),
-    o = n(465364),
-    l = n(742984),
-    u = n(976860),
-    c = n(400492),
-    d = n(845618),
-    _ = n(203982),
-    f = n(723702),
-    p = n(837921),
-    h = n(41984),
-    m = n(589051),
-    E = n(592598),
-    g = n(395011),
-    A = n(222506),
-    I = n(145567),
-    T = n(378702),
-    S = n(119191),
-    y = n(581730),
-    v = n(672396),
-    N = n(652215),
-    C = n(895867),
-    R = n(985018);
-let O = 2,
-    b = (e) => {
-        e && (0, c.Ak)(d.cH, d.pD);
-    };
-function D(e, t, n, c) {
+i.d(e, { A: () => L });
+var n = i(627968);
+i(64700);
+var l = i(684013),
+    a = i(334738),
+    r = i(941971),
+    s = i(465364),
+    o = i(742984),
+    u = i(976860),
+    c = i(400492),
+    d = i(845618),
+    A = i(203982),
+    f = i(723702),
+    y = i(837921),
+    p = i(41984),
+    m = i(589051),
+    I = i(592598),
+    g = i(395011),
+    E = i(222506),
+    N = i(145567),
+    _ = i(378702),
+    T = i(119191),
+    S = i(581730),
+    C = i(672396),
+    h = i(652215),
+    v = i(499214),
+    O = i(985018);
+let x = (t) => {
+    t && (0, c.Ak)(d.cH, d.pD);
+};
+function L(t, e, i, c) {
     let { hasChat: d } = (0, m.NI)("textChatNotification");
-    if (E.A.isNotificationDisabled(v.KS.TextChat)) return b(!0), null;
-    let { icon: D, title: L, body: w } = (0, l.TB)(e, t, n),
-        { trackView: M, trackClick: x } = (0, y.Y9)(v.KS.TextChat, {
-            notif_type: v.KS.TextChat,
-            notif_user_id: t.author?.id,
-            message_id: t.id,
-            message_type: t.type,
-            guild_id: e.guild_id,
-            channel_id: e.id,
-            channel_type: e.type,
+    if (I.A.isNotificationDisabled(C.KS.TextChat)) return x(!0), null;
+    let { icon: L, title: D, body: b } = (0, o.TB)(t, e, i),
+        { trackView: R, trackClick: k } = (0, S.Y9)(C.KS.TextChat, {
+            notif_type: C.KS.TextChat,
+            notif_user_id: e.author?.id,
+            message_id: e.id,
+            message_type: e.type,
+            guild_id: t.guild_id,
+            channel_id: t.id,
+            channel_type: t.type,
         });
     return {
-        icon: D,
-        title: L,
+        icon: L,
+        title: D,
         body:
-            t.content.length > 0
-                ? (0, o.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
-                : w,
-        unreadAccessory: (e) => (d ? (0, r.jsx)(a.A, { unread: !0, hovered: e }) : null),
-        hint: (e, t) => (e || !t ? null : (0, S.sI)((0, y.Jn)(), d ? C.default.VMcw8s : R.t.ykjOAJ)),
-        maxBodyLines: O,
-        renderFooter: (n, i, s) =>
+            e.content.length > 0
+                ? (0, s.Ay)(e, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
+                : b,
+        unreadAccessory: (t) => (d ? (0, n.jsx)(r.A, { unread: !0, hovered: t }) : null),
+        hint: (t, e) => (t || !e ? null : (0, T.sI)((0, S.Jn)(), d ? v.default.VMcw8s : O.t.ykjOAJ)),
+        maxBodyLines: 2,
+        renderFooter: (i, l, a) =>
             d
                 ? null
-                : n && !s
-                  ? (0, r.jsx)(T.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => x("send") })
+                : i && !a
+                  ? (0, n.jsx)(_.A, { id: l, replyToMessageId: e.id, channel: t, onSend: () => k("send") })
                   : null,
         onNotificationShow: () => {
-            b(c), M();
+            x(c), R();
         },
-        onNotificationClick: (n, r) => {
-            let a = g.A.getTargetPID();
+        onNotificationClick: (i, n) => {
+            let r = g.A.getTargetPID();
             if (
-                ((0, s.ack)(
-                    e.id,
+                ((0, a.ack)(
+                    t.id,
                     {
-                        section: N.JJy.OVERLAY,
-                        object: N.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
-                        objectType: N.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                        section: h.JJy.OVERLAY,
+                        object: h.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
+                        objectType: h.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     !0,
-                    t.id,
+                    e.id,
                 ),
                 d)
             ) {
-                (0, I.D$)({
-                    target: { kind: I.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
-                    source: h.B9.NOTIFICATION_CLICK,
-                    widgetType: N.uss.TEXT_CHAT_V3,
+                (0, N.D$)({
+                    target: { kind: N.bB.CHANNEL, channelId: t.id, guildId: t.guild_id ?? null, messageId: e.id },
+                    source: p.B9.NOTIFICATION_CLICK,
+                    widgetType: h.uss.TEXT_CHAT_V3,
                 }),
-                    A.A.isInputLocked(a) ? (x("unlock"), i.A.setInputLocked(!1, a)) : x("jump"),
+                    E.A.isInputLocked(r) ? (k("unlock"), l.A.setInputLocked(!1, r)) : k("jump"),
                     requestAnimationFrame(() => {
-                        _._.dispatchToLastSubscribed(N.jej.TEXTAREA_FOCUS, { channelId: e.id });
+                        A._.dispatchToLastSubscribed(h.jej.TEXTAREA_FOCUS, { channelId: t.id });
                     }),
-                    i.A.updateNotificationStatus(r, N.yFH.DISMISSED);
+                    l.A.updateNotificationStatus(n, h.yFH.DISMISSED);
                 return;
             }
-            A.A.isInputLocked(a)
-                ? (x("unlock"), i.A.setInputLocked(!1, a))
-                : (x("jump"), (0, u.pX)(N.BVt.CHANNEL(e.guild_id, e.id, t.id)), f.isPlatformEmbedded && p.Ay.focus());
+            E.A.isInputLocked(r)
+                ? (k("unlock"), l.A.setInputLocked(!1, r))
+                : (k("jump"), (0, u.pX)(h.BVt.CHANNEL(t.guild_id, t.id, e.id)), f.isPlatformEmbedded && y.Ay.focus());
         },
         onDismissClick: () => {
-            x("dismiss");
+            k("dismiss");
         },
     };
 }

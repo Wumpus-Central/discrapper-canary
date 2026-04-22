@@ -1,128 +1,103 @@
-var a = r(577033),
-    n = r(787425),
-    s = Object.hasOwnProperty,
-    o = Object.create(null);
-for (var i in a) s.call(a, i) && (o[a[i]] = i);
-var c = (e.exports = { to: {}, get: {} });
-function l(e, t, r) {
-    return Math.min(Math.max(t, e), r);
+n.d(t, { Ay: () => C, fz: () => x, tt: () => I }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(311907),
+    o = n(104171),
+    d = n(186369),
+    c = n(970812),
+    u = n(395504),
+    h = n(543465),
+    A = n(147036),
+    _ = n(32603),
+    m = n(85808),
+    g = n(600761);
+n(83766);
+var p = n(907305),
+    f = n(121880);
+let E = l.memo(function (e) {
+    let { guildChannels: t, guildChannelsVersion: n } = e,
+        s = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
+    return null == s ? null : (0, i.jsx)(g.AV, { category: s });
+});
+function x(e) {
+    let {
+        sectionIndex: t,
+        guildChannels: n,
+        voiceStates: i,
+        selectedChannelId: l,
+        selectedVoiceChannelId: s,
+        optInEnabled: a,
+        visualRefreshEnabled: r,
+        density: o,
+    } = e;
+    if (t === n.voiceChannelsSectionNumber) return 44;
+    let { hasDivider: d, canHaveVoiceSummary: c } = (0, m.B3)(n, a, t),
+        u = d ? (r ? 9 : 12) : 0;
+    if (!c || t === _.PU) return u;
+    let h = n.getNamedCategoryFromSection(t);
+    return null == h
+        ? u
+        : (0, m.Bo)({ category: h, selectedChannelId: l, selectedVoiceChannelId: s, voiceStates: i })
+          ? (r && "cozy" === o ? 42 : 34) + u
+          : u;
 }
-function u(e) {
-    var t = Math.round(e).toString(16).toUpperCase();
-    return t.length < 2 ? "0" + t : t;
+function I(e, t, n) {
+    if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
+    let { hasDivider: i, canHaveVoiceSummary: l } = (0, m.B3)(t, n, e);
+    return `section-footer-${e}${i ? "-divider" : ""}${l ? "-voice-summary" : ""}`;
 }
-(c.get = function (e) {
-    var t, r;
-    switch (e.substring(0, 3).toLowerCase()) {
-        case "hsl":
-            (t = c.get.hsl(e)), (r = "hsl");
-            break;
-        case "hwb":
-            (t = c.get.hwb(e)), (r = "hwb");
-            break;
-        default:
-            (t = c.get.rgb(e)), (r = "rgb");
-    }
-    return t ? { model: r, value: t } : null;
-}),
-    (c.get.rgb = function (e) {
-        if (!e) return null;
-        var t,
-            r,
-            n,
-            o = [0, 0, 0, 1];
-        if ((t = e.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i))) {
-            for (r = 0, n = t[2], t = t[1]; r < 3; r++) {
-                var i = 2 * r;
-                o[r] = parseInt(t.slice(i, i + 2), 16);
+let C = l.memo(function (e) {
+    let {
+            sectionIndex: t,
+            guildChannels: n,
+            guildChannelsVersion: s,
+            voiceStates: g,
+            guildId: x,
+            selectedChannelId: I,
+            selectedVoiceChannelId: C,
+            optInEnabled: b,
+        } = e,
+        { hasDivider: N, canHaveVoiceSummary: S } = l.useMemo(() => (0, m.B3)(n, b, t), [n, b, t, s]),
+        v = l.useMemo(() => (t === _.PU ? null : n.getCategoryFromSection(t)), [n, t, s]),
+        T = (0, u.jN)(x),
+        { enableWaveformIcon: y } = (0, d.b)(x, "ChannelListSectionFooter"),
+        R = (0, r.yK)([h.Ay], () => {
+            if (null == v || !v.isCollapsed || !S) return [];
+            let e = v.getChannelRecords(),
+                t = [];
+            for (let n of e) {
+                if (!n.isGuildVocal()) continue;
+                let e = h.Ay.isChannelOrParentOptedIn(x, n.id);
+                (!T || e) && t.push(n);
             }
-            n && (o[3] = parseInt(n, 16) / 255);
-        } else if ((t = e.match(/^#([a-f0-9]{3,4})$/i))) {
-            for (r = 0, n = (t = t[1])[3]; r < 3; r++) o[r] = parseInt(t[r] + t[r], 16);
-            n && (o[3] = parseInt(n + n, 16) / 255);
-        } else if (
-            (t = e.match(
-                /^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/,
-            ))
-        ) {
-            for (r = 0; r < 3; r++) o[r] = parseInt(t[r + 1], 0);
-            t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
-        } else if (
-            (t = e.match(
-                /^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/,
-            ))
-        ) {
-            for (r = 0; r < 3; r++) o[r] = Math.round(2.55 * parseFloat(t[r + 1]));
-            t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
-        } else if (!(t = e.match(/^(\w+)$/))) return null;
-        else return "transparent" === t[1] ? [0, 0, 0, 0] : s.call(a, t[1]) ? (((o = a[t[1]])[3] = 1), o) : null;
-        for (r = 0; r < 3; r++) o[r] = l(o[r], 0, 255);
-        return (o[3] = l(o[3], 0, 1)), o;
-    }),
-    (c.get.hsl = function (e) {
-        if (!e) return null;
-        var t = e.match(
-            /^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/,
+            return t;
+        }, [v, S, x, T]),
+        j = l.useMemo(
+            () => (0, A.fK)({ channels: R, selectedChannelId: I, selectedVoiceChannelId: C, voiceStates: g }),
+            [R, I, C, g],
         );
-        if (t) {
-            var r = parseFloat(t[4]);
-            return [
-                ((parseFloat(t[1]) % 360) + 360) % 360,
-                l(parseFloat(t[2]), 0, 100),
-                l(parseFloat(t[3]), 0, 100),
-                l(isNaN(r) ? 1 : r, 0, 1),
-            ];
-        }
-        return null;
-    }),
-    (c.get.hwb = function (e) {
-        if (!e) return null;
-        var t = e.match(
-            /^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/,
-        );
-        if (t) {
-            var r = parseFloat(t[4]);
-            return [
-                ((parseFloat(t[1]) % 360) + 360) % 360,
-                l(parseFloat(t[2]), 0, 100),
-                l(parseFloat(t[3]), 0, 100),
-                l(isNaN(r) ? 1 : r, 0, 1),
-            ];
-        }
-        return null;
-    }),
-    (c.to.hex = function () {
-        var e = n(arguments);
-        return "#" + u(e[0]) + u(e[1]) + u(e[2]) + (e[3] < 1 ? u(Math.round(255 * e[3])) : "");
-    }),
-    (c.to.rgb = function () {
-        var e = n(arguments);
-        return e.length < 4 || 1 === e[3]
-            ? "rgb(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ")"
-            : "rgba(" + Math.round(e[0]) + ", " + Math.round(e[1]) + ", " + Math.round(e[2]) + ", " + e[3] + ")";
-    }),
-    (c.to.rgb.percent = function () {
-        var e = n(arguments),
-            t = Math.round((e[0] / 255) * 100),
-            r = Math.round((e[1] / 255) * 100),
-            a = Math.round((e[2] / 255) * 100);
-        return e.length < 4 || 1 === e[3]
-            ? "rgb(" + t + "%, " + r + "%, " + a + "%)"
-            : "rgba(" + t + "%, " + r + "%, " + a + "%, " + e[3] + ")";
-    }),
-    (c.to.hsl = function () {
-        var e = n(arguments);
-        return e.length < 4 || 1 === e[3]
-            ? "hsl(" + e[0] + ", " + e[1] + "%, " + e[2] + "%)"
-            : "hsla(" + e[0] + ", " + e[1] + "%, " + e[2] + "%, " + e[3] + ")";
-    }),
-    (c.to.hwb = function () {
-        var e = n(arguments),
-            t = "";
-        return (
-            e.length >= 4 && 1 !== e[3] && (t = ", " + e[3]), "hwb(" + e[0] + ", " + e[1] + "%, " + e[2] + "%" + t + ")"
-        );
-    }),
-    (c.to.keyword = function (e) {
-        return o[e.slice(0, 3)];
-    });
+    if (t === n.voiceChannelsSectionNumber) return (0, i.jsx)(E, { guildChannels: n, guildChannelsVersion: s });
+    let L = N ? (0, i.jsx)("div", { className: f.ts }) : null;
+    return S && 0 !== j.length
+        ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)("div", {
+                      className: f.qz,
+                      children: (0, i.jsx)(o.Ay, {
+                          renderIcon: !0,
+                          users: j,
+                          max: 8,
+                          showUserPopout: !0,
+                          guildId: x,
+                          renderLeadingIcon: y
+                              ? (e) => (0, i.jsx)(c.A, { color: "currentColor", className: a()(e, p.Gj) })
+                              : void 0,
+                      }),
+                  }),
+                  L,
+              ],
+          })
+        : L;
+});

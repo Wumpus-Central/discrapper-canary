@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(530560);
-class i extends r.X {
-    mergeResults(e, t, n) {
-        let r = t.clone();
+r.d(t, { A: () => s });
+var n = r(530560);
+class s extends n.X {
+    mergeResults(e, t, r) {
+        let n = t.clone();
         return (
-            (r.text = t.text + e + n.text),
-            r.start.assign("weekday", n.start.get("weekday")),
-            r.end && r.end.assign("weekday", n.start.get("weekday")),
-            r
+            (n.text = t.text + e + r.text),
+            n.start.assign("weekday", r.start.get("weekday")),
+            n.end && n.end.assign("weekday", r.start.get("weekday")),
+            n
         );
     }
-    shouldMergeResults(e, t, n) {
+    shouldMergeResults(e, t, r) {
         return (
             t.start.isCertain("day") &&
-            n.start.isOnlyWeekdayComponent() &&
-            !n.start.isCertain("hour") &&
+            r.start.isOnlyWeekdayComponent() &&
+            !r.start.isCertain("hour") &&
             null !== e.match(/^[,、の]?\s*$/)
         );
     }

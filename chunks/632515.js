@@ -1,31 +1,27 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(998493),
-    i = n(476858),
-    a = n(355418),
-    s = n(1673);
+r.d(t, { A: () => l });
+var n = r(998493),
+    s = r(476858),
+    a = r(355418),
+    i = r(1673);
 let o = RegExp(
-        `(?:(?:\\,|\\(|\\（)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\xe4|ae)chste[mn])\\s*)?(${(0, i.uJ)(r.CV)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(diese|letzte|n(?:\xe4|ae)chste)\\s*woche)?(?=\\W|$)`,
-        "i",
-    ),
-    l = 1,
-    u = 3,
-    c = 2;
-class d extends a.c {
+    `(?:(?:\\,|\\(|\\（)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\xe4|ae)chste[mn])\\s*)?(${(0, s.uJ)(n.CV)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(diese|letzte|n(?:\xe4|ae)chste)\\s*woche)?(?=\\W|$)`,
+    "i",
+);
+class l extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[c].toLowerCase(),
-            i = r.CV[n],
-            a = t[l],
-            o = t[u],
-            d = a || o;
-        d = (d = d || "").toLowerCase();
-        let _ = null;
+        let r = t[2].toLowerCase(),
+            s = n.CV[r],
+            a = t[1],
+            o = t[3],
+            l = a || o;
+        l = (l = l || "").toLowerCase();
+        let u = null;
         return (
-            d.match(/letzte/) ? (_ = "last") : d.match(/chste/) ? (_ = "next") : d.match(/diese/) && (_ = "this"),
-            (0, s.Y5)(e.reference, i, _)
+            l.match(/letzte/) ? (u = "last") : l.match(/chste/) ? (u = "next") : l.match(/diese/) && (u = "this"),
+            (0, i.Y5)(e.reference, s, u)
         );
     }
 }

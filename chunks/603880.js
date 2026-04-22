@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,72 +7,75 @@ var r = n(627968),
     o = n(735438),
     l = n.n(o),
     u = n(990078),
-    c = n(397927),
-    d = n(653523),
-    _ = n(350972),
-    f = n(677056),
-    p = n(635917),
-    h = n(652215),
+    d = n(939249),
+    c = n(194261),
+    _ = n(653523),
+    f = n(350972),
+    E = n(677056),
+    h = n(635917),
+    p = n(652215),
     m = n(985018),
-    E = n(461917);
-let g = () => [
-        m.intl.string(m.t["EgWTY+"]),
-        m.intl.string(m.t.umBn5f),
-        m.intl.string(m.t.dG1wD1),
-        m.intl.string(m.t.SesI4S),
-        m.intl.string(m.t.RnMLvl),
-    ],
-    A = () => l().sample(g()) ?? m.intl.string(m.t["EgWTY+"]);
-function I(e) {
+    g = n(588525);
+function A(e) {
     let {
             id: t,
             className: n,
             style: s,
             onSelect: o,
-            isSelected: l = !1,
-            tabIndex: f,
-            children: m,
-            locked: g = !1,
+            isSelected: E = !1,
+            tabIndex: A,
+            children: I,
+            locked: T = !1,
         } = e,
-        [I, T] = i.useState((0, p.gG)(t).name),
-        S = t === _.Ic.PIRATE;
+        [S, y] = i.useState((0, h.gG)(t).name),
+        N = t === f.Ic.PIRATE;
     return (0, r.jsx)(u.m, {
-        text: I,
-        onTooltipShow: () => S && T(A()),
+        text: S,
+        onTooltipShow: () =>
+            N &&
+            y(
+                l().sample([
+                    m.intl.string(m.t["EgWTY+"]),
+                    m.intl.string(m.t.umBn5f),
+                    m.intl.string(m.t.dG1wD1),
+                    m.intl.string(m.t.SesI4S),
+                    m.intl.string(m.t.RnMLvl),
+                ]) ?? m.intl.string(m.t["EgWTY+"]),
+            ),
         children: (0, r.jsxs)("div", {
-            className: E.Co,
+            className: g.Co,
             style: s,
             children: [
-                (0, r.jsx)(c.DUT, {
+                (0, r.jsx)(d.D, {
                     role: "radio",
-                    "aria-label": I,
-                    "aria-checked": l,
-                    tabIndex: f ?? (l ? 0 : -1),
-                    className: a()(E.Ni, { [E.wH]: l }, n),
-                    onClick: l ? h.tEg : () => o?.(t),
-                    children: m,
+                    "aria-label": S,
+                    "aria-checked": E,
+                    tabIndex: A ?? (E ? 0 : -1),
+                    className: a()(g.Ni, { [g.wH]: E }, n),
+                    onClick: E ? p.tEg : () => o?.(t),
+                    children: I,
                 }),
-                l && (0, r.jsx)(d.H$, {}),
-                g &&
+                E && (0, r.jsx)(_.H$, {}),
+                T &&
                     (0, r.jsx)("div", {
-                        className: E.RK,
-                        children: (0, r.jsx)(c.XAi, { className: E.AA, color: "currentColor" }),
+                        className: g.RK,
+                        children: (0, r.jsx)(c.X, { className: g.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
-function T(e) {
-    let { size: t = p.N8.SIZE_60, icon: n, isSelected: s, disabled: a, tabIndex: o, onSelect: l, locked: u } = e,
-        c = i.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
-    return (0, r.jsx)(I, {
-        style: c,
+function I(e) {
+    let { size: t = h.N8.SIZE_60, icon: n, isSelected: s, disabled: a, tabIndex: o, onSelect: l, locked: u } = e,
+        d = i.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
+    return (0, r.jsx)(A, {
+        style: d,
         onSelect: a ? void 0 : l,
         isSelected: s,
         id: n.id,
-        className: a ? E.r9 : void 0,
+        className: a ? g.r9 : void 0,
         tabIndex: o,
         locked: u,
-        children: (0, r.jsx)(f.A, { id: n.id, size: t }),
+        children: (0, r.jsx)(E.A, { id: n.id, size: t }),
     });
 }

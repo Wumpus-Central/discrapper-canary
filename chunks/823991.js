@@ -1,32 +1,35 @@
-t.d(n, { A: () => c });
-var a = t(627968);
-t(64700);
-var i = t(503698),
-    r = t.n(i),
-    o = t(397927),
-    s = t(985018),
-    l = t(63892);
-function c(e) {
-    let { guild: n, speakers: t, speakerCount: i, className: c } = e,
-        _ = t.slice(0, 5),
-        d = _.map((e) =>
+n.d(t, { A: () => _ });
+var a = n(627968);
+n(64700);
+var l = n(503698),
+    r = n.n(l),
+    i = n(97808),
+    s = n(778712),
+    o = n(834730),
+    c = n(831544),
+    d = n(985018),
+    u = n(63892);
+function _(e) {
+    let { guild: t, speakers: n, speakerCount: l, className: _ } = e,
+        h = n.slice(0, 5),
+        p = h.map((e) =>
             (0, a.jsxs)(
                 "div",
                 {
-                    className: l.dq,
+                    className: u.dq,
                     children: [
-                        (0, a.jsx)(o.euF, {
-                            src: e?.user?.getAvatarURL(n.id, 20),
-                            size: o._3J.SIZE_20,
-                            className: l.my,
+                        (0, a.jsx)(i.eu, {
+                            src: e?.user?.getAvatarURL(t.id, 20),
+                            size: s._3.SIZE_20,
+                            className: u.my,
                             "aria-label": `${e?.userNick}-avatar`,
                         }),
                         (0, a.jsx)("div", {
-                            className: l.CU,
-                            children: (0, a.jsx)(o.Text, {
+                            className: u.CU,
+                            children: (0, a.jsx)(o.E, {
                                 color: "text-default",
                                 variant: "text-sm/normal",
-                                className: l.br,
+                                className: u.br,
                                 children: e?.userNick,
                             }),
                         }),
@@ -35,24 +38,24 @@ function c(e) {
                 e?.user?.id,
             ),
         ),
-        u = i - _.length;
+        f = l - h.length;
     return (0, a.jsxs)("div", {
-        className: r()(l.Vg, c),
+        className: r()(u.Vg, _),
         children: [
-            d,
-            u > 0 &&
+            p,
+            f > 0 &&
                 (0, a.jsxs)("div", {
-                    className: l.dq,
+                    className: u.dq,
                     children: [
                         (0, a.jsx)("div", {
-                            className: l.Ko,
-                            children: (0, a.jsx)(o.cNw, { size: "custom", color: "currentColor", height: 12 }),
+                            className: u.Ko,
+                            children: (0, a.jsx)(c.c, { size: "custom", color: "currentColor", height: 12 }),
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, a.jsx)(o.E, {
                             color: "text-default",
                             variant: "text-sm/normal",
-                            className: l.br,
-                            children: s.intl.format(s.t["185ggO"], { count: u }),
+                            className: u.br,
+                            children: d.intl.format(d.t["185ggO"], { count: f }),
                         }),
                     ],
                 }),

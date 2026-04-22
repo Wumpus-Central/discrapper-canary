@@ -1,49 +1,52 @@
-l.d(i, { default: () => v });
-var t = l(627968),
-    n = l(64700),
-    a = l(158954),
-    s = l(397927),
-    c = l(748112),
-    r = l(997509),
-    d = l(179690),
-    o = l(167084),
-    h = l(584508),
-    u = l(652215),
-    x = l(985018);
-function m(e) {
-    let { eligibility: i, eligibilityLoading: l, eligibilityError: a, guildId: x, onEligibilityBecameStale: m } = e,
-        v = n.useMemo(
+l.d(i, { default: () => b });
+var a = l(627968),
+    t = l(64700),
+    n = l(189213),
+    s = l(192308),
+    c = l(683071),
+    r = l(289873),
+    d = l(404778),
+    o = l(748112),
+    h = l(997509),
+    u = l(407186),
+    x = l(167084),
+    m = l(584508),
+    v = l(652215),
+    j = l(985018);
+function A(e) {
+    let { eligibility: i, eligibilityLoading: l, eligibilityError: n, guildId: j, onEligibilityBecameStale: A } = e,
+        b = t.useMemo(
             () => ({
-                onEligibilityBecameStale: m,
+                onEligibilityBecameStale: A,
                 sortedByIneligible: !0,
                 actions: {
-                    onEnableMFAClick: d.Ay.enableMFA,
+                    onEnableMFAClick: u.Ay.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, s.OoC)(h.m), r.A.open(x, u.BEX.SAFETY, void 0, u.nd0.SAFETY_PERMISSIONS);
+                        (0, s.closeModal)(m.m), h.A.open(j, v.BEX.SAFETY, void 0, v.nd0.SAFETY_PERMISSIONS);
                     },
                 },
             }),
-            [x, m],
+            [j, A],
         ),
-        j = (0, c.A)(i, v);
-    return null != a
-        ? (0, t.jsx)("div", { children: (0, t.jsx)(s.wx6, { type: "critical", children: a.message }) })
-        : null == j || l
-          ? (0, t.jsx)("div", { children: (0, t.jsx)(s.y$y, {}) })
-          : (0, t.jsx)("div", {
-                children: j.map((e, i) =>
-                    (0, t.jsxs)(
-                        n.Fragment,
+        g = (0, o.A)(i, b);
+    return null != n
+        ? (0, a.jsx)("div", { children: (0, a.jsx)(c.w, { type: "critical", children: n.message }) })
+        : null == g || l
+          ? (0, a.jsx)("div", { children: (0, a.jsx)(r.y, {}) })
+          : (0, a.jsx)("div", {
+                children: g.map((e, i) =>
+                    (0, a.jsxs)(
+                        t.Fragment,
                         {
                             children: [
-                                (0, t.jsx)(o.e, {
+                                (0, a.jsx)(x.e, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler,
                                 }),
-                                i < j.length - 1 ? (0, t.jsx)(s.cGx, {}) : null,
+                                i < g.length - 1 ? (0, a.jsx)(d.c, {}) : null,
                             ],
                         },
                         e.checkedLabel,
@@ -51,26 +54,26 @@ function m(e) {
                 ),
             });
 }
-function v(e) {
+function b(e) {
     let {
         eligibility: i,
         eligibilityLoading: l,
-        eligibilityError: n,
+        eligibilityError: t,
         refreshEligibility: c,
         guildId: r,
         transitionState: d,
     } = e;
-    return (0, t.jsx)(a.Modal, {
+    return (0, a.jsx)(n.Modal, {
         transitionState: d,
-        title: x.intl.string(x.t["3s47iN"]),
+        title: j.intl.string(j.t["3s47iN"]),
         actions: [],
         onClose: async () => {
-            await (0, s.OoC)(h.m);
+            await (0, s.closeModal)(m.m);
         },
-        children: (0, t.jsx)(m, {
+        children: (0, a.jsx)(A, {
             eligibility: i,
             eligibilityLoading: l,
-            eligibilityError: n,
+            eligibilityError: t,
             guildId: r,
             onEligibilityBecameStale: c,
         }),

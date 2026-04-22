@@ -1,15 +1,15 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
+n.d(t, { A: () => m });
+var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(311907),
-    l = n(397927),
-    u = n(775602),
-    c = n(68614);
-function d() {
-    let e = (0, o.bG)([u.A], () => u.A.useReducedMotion),
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
+    o = n(534514),
+    c = n(834730),
+    d = n(775602),
+    u = n(68614);
+function m() {
+    let e = (0, r.bG)([d.A], () => d.A.useReducedMotion),
         { styleLarge: t, styleSmall: n } = i.useMemo(
             () => ({
                 styleLarge: { width: `${10 + 50 * Math.random()}%` },
@@ -17,29 +17,29 @@ function d() {
             }),
             [],
         );
-    return (0, r.jsxs)("div", {
-        className: a()(c.kL, { [c.cb]: e }),
+    return (0, l.jsxs)("div", {
+        className: s()(u.kL, { [u.cb]: e }),
         children: [
-            (0, r.jsx)("div", { className: c.Pz }),
-            (0, r.jsxs)("div", {
-                className: c.FS,
+            (0, l.jsx)("div", { className: u.Pz }),
+            (0, l.jsxs)("div", {
+                className: u.FS,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: c.jC,
+                    (0, l.jsx)("div", {
+                        className: u.jC,
                         style: t,
-                        children: (0, r.jsx)(l.Heading, {
-                            className: c.R,
+                        children: (0, l.jsx)(o.D, {
+                            className: u.R,
                             variant: "heading-md/semibold",
                             color: "text-strong",
                             lineClamp: 1,
                             children: "_",
                         }),
                     }),
-                    (0, r.jsx)("div", {
-                        className: c.jC,
+                    (0, l.jsx)("div", {
+                        className: u.jC,
                         style: n,
-                        children: (0, r.jsx)(l.Text, {
-                            className: c.R,
+                        children: (0, l.jsx)(c.E, {
+                            className: u.R,
                             variant: "text-sm/normal",
                             color: "text-subtle",
                             lineClamp: 1,
@@ -48,7 +48,7 @@ function d() {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: c.V1 }),
+            (0, l.jsx)("div", { className: u.V1 }),
         ],
     });
 }

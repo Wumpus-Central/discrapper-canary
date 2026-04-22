@@ -1,78 +1,77 @@
-n.d(t, { B4: () => m, o6: () => u });
-var a = n(835245);
-n(192308);
-var r = n(397927),
-    i = n(73153),
-    s = n(589078),
-    l = n(301518),
-    c = n(373856),
-    o = n(652215);
-n(231723);
+"use strict";
+a.d(t, { B4: () => _, o6: () => u });
+var r = a(835245),
+    i = a(192308),
+    n = a(73153),
+    l = a(589078),
+    s = a(301518),
+    o = a(373856),
+    c = a(652215);
 let d = "orb-checkout-payment-modal-key",
-    u = () => (0, r.Ry6)(d),
-    m = (e) => {
+    u = () => (0, i.useHasModalOpen)(d),
+    _ = (e) => {
         let {
                 skuId: t,
-                onCheckoutSuccess: n,
-                analyticsLocations: i = [],
-                analyticsSourceLocation: s,
+                onCheckoutSuccess: a,
+                analyticsLocations: n = [],
+                analyticsSourceLocation: l,
                 discoverySessionId: u,
-                applicationId: m,
-                onCloseCallback: _,
+                applicationId: _,
+                onCloseCallback: f,
             } = e,
-            h = (0, a.A)(),
-            x = !1;
+            h = (0, r.A)(),
+            m = !1;
         return p({
             loadId: h,
             discoverySessionId: u,
             skuId: t,
             onCheckoutSuccess: (e) => {
-                x || n(e), (x = !0);
+                m || a(e), (m = !0);
             },
-            applicationId: m,
-            analyticsLocations: i,
-            analyticsSourceLocation: s,
+            applicationId: _,
+            analyticsLocations: n,
+            analyticsSourceLocation: l,
             onCloseCallback: () => {
-                (0, l.S)({ checkoutSucceeded: x }), _?.();
+                (0, s.S)({ checkoutSucceeded: m }), f?.();
             },
             onCloseRequest: () => {
-                x ||
-                    (0, c.g)(o.HAw.PAYMENT_FLOW_CANCELED, {
+                m ||
+                    (0, o.g)(c.HAw.PAYMENT_FLOW_CANCELED, {
                         loadId: h,
                         discoverySessionId: u,
                         skuId: t,
-                        analyticsLocations: i,
-                        analyticsSourceLocation: s,
+                        analyticsLocations: n,
+                        analyticsSourceLocation: l,
                     }),
-                    (0, r.OoC)(d);
+                    (0, i.closeModal)(d);
             },
         });
     },
     p = (e) => {
         let {
             loadId: t,
-            discoverySessionId: n,
-            skuId: a,
-            onCheckoutSuccess: r,
-            analyticsLocations: l = [],
-            analyticsSourceLocation: c,
-            applicationId: o,
+            discoverySessionId: a,
+            skuId: r,
+            onCheckoutSuccess: i,
+            analyticsLocations: s = [],
+            analyticsSourceLocation: o,
+            applicationId: c,
             onCloseCallback: u,
-            onCloseRequest: m,
+            onCloseRequest: _,
         } = e;
         return (
-            i.h.wait(() => {
-                i.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+            n.h.wait(() => {
+                n.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
             }),
-            (0, s.Tt)().openCheckoutModal({
+            (0, l.Tt)().openCheckoutModal({
                 loadId: t,
-                discoverySessionId: n,
-                skuId: a,
-                applicationId: o,
-                analyticsLocations: l,
-                analyticsSourceLocation: c,
-                flowSpecificOptions: { onCheckoutSuccess: r },
-                openModalOptions: { onCloseCallback: u, modalKey: d, onCloseRequest: m },
+                discoverySessionId: a,
+                skuId: r,
+                applicationId: c,
+                analyticsLocations: s,
+                analyticsSourceLocation: o,
+                flowSpecificOptions: { onCheckoutSuccess: i },
+                openModalOptions: { onCloseCallback: u, modalKey: d, onCloseRequest: _ },
             })
         );
     };

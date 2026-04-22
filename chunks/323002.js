@@ -1,28 +1,29 @@
-l.d(t, { default: () => A });
+l.d(t, { default: () => b });
 var r = l(627968);
 l(64700);
-var a = l(397927),
-    e = l(442433),
-    i = l(793574),
-    s = l(688810),
-    u = l(585171),
-    o = l(374426),
-    c = l(985018);
-function d(n) {
-    let { guildId: t, onSelect: l, onPickerClose: i, onInteraction: s } = n,
-        d = (0, o.A)(t, i),
-        A = (0, u.A)();
-    return (0, r.jsx)(a.W1t, {
+var a = l(861672),
+    e = l(477782),
+    i = l(442433),
+    s = l(793574),
+    u = l(688810),
+    o = l(585171),
+    c = l(374426),
+    d = l(985018);
+function A(n) {
+    let { guildId: t, onSelect: l, onPickerClose: s, onInteraction: u } = n,
+        A = (0, c.A)(t, s),
+        b = (0, o.A)();
+    return (0, r.jsx)(a.W, {
         "data-menu-migrated-auto": !0,
         navId: "user-context",
-        onClose: e.Z_,
-        "aria-label": c.intl.string(c.t.liqwPJ),
+        onClose: i.Z_,
+        "aria-label": d.intl.string(d.t.liqwPJ),
         onSelect: l,
-        onInteraction: s,
-        children: (0, r.jsxs)(a.rXV, { children: [A, d] }),
+        onInteraction: u,
+        children: (0, r.jsxs)(e.rX, { children: [b, A] }),
     });
 }
-function A(n) {
-    let { analyticsLocations: t } = (0, s.Ay)(n.sourceAnalyticsLocations, i.A.SOUNDBOARD_CONTEXT_MENU);
-    return (0, r.jsx)(s.f5, { value: t, children: (0, r.jsx)(d, { ...n }) });
+function b(n) {
+    let { analyticsLocations: t } = (0, u.Ay)(n.sourceAnalyticsLocations, s.A.SOUNDBOARD_CONTEXT_MENU);
+    return (0, r.jsx)(u.f5, { value: t, children: (0, r.jsx)(A, { ...n }) });
 }

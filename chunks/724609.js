@@ -1,12 +1,9 @@
 n.d(t, { k: () => o });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var l = n(397927),
-    i = n(985018),
-    a = n(727689);
+var l = n(777666),
+    a = n(827734),
+    s = n(985018),
+    r = n(158234);
 let o = () =>
-    (0, r.jsx)(l.LpS, {
-        color: l.LU0.unsafe_rawColors.YELLOW_300.css,
-        text: i.intl.string(i.t.vosPk5),
-        className: a.v,
-    });
+    (0, i.jsx)(l.Lp, { color: a.A.unsafe_rawColors.YELLOW_300.css, text: s.intl.string(s.t.vosPk5), className: r.v });

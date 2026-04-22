@@ -1,151 +1,157 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => H });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(407045),
+    r = n(517738),
     o = n(23339),
     c = n(311907),
     d = n(827734),
     u = n(990078),
     h = n(319060),
-    m = n(397927),
-    A = n(212245),
-    g = n(688810),
-    _ = n(402216),
-    p = n(287809),
-    f = n(954571),
-    E = n(927578),
-    C = n(650338),
-    x = n(821715),
-    S = n(652215),
-    I = n(788868),
-    T = n(985018),
-    v = n(18238);
-let N = (0, o.xI)(h.A.LIVE_INDICATOR_BORDER_RADIUS),
-    y = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
-    b = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
-    j = { opacity: 0 },
-    R = { opacity: 1 },
-    M = { borderRadius: `${N}px ${N}px ${N}px ${N}px` },
-    L = { borderRadius: `0px ${N}px ${N}px 0px` },
-    O = { mass: 1, tension: 500, friction: 18, clamp: !0 },
-    D = (e) => {
+    m = n(192308),
+    A = n(939249),
+    g = n(403581),
+    p = n(777666),
+    _ = n(844222),
+    f = n(866323),
+    E = n(717421),
+    C = n(212245),
+    x = n(688810),
+    S = n(402216),
+    I = n(287809),
+    N = n(954571),
+    v = n(927578),
+    T = n(650338),
+    y = n(821715),
+    b = n(652215),
+    j = n(788868),
+    R = n(985018),
+    M = n(18238);
+let L = (0, o.xI)(h.A.LIVE_INDICATOR_BORDER_RADIUS),
+    D = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
+    P = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
+    O = { opacity: 0 },
+    w = { opacity: 1 },
+    U = { borderRadius: `${L}px ${L}px ${L}px ${L}px` },
+    k = { borderRadius: `0px ${L}px ${L}px 0px` },
+    G = { mass: 1, tension: 500, friction: 18, clamp: !0 },
+    F = (e) => {
         let t,
             a,
             {
                 participant: r,
                 isUpsellEnabled: o,
                 shape: h,
-                size: N,
-                didTrackUpsellViewed: y,
-                setDidTrackUpsellViewed: b,
-                className: j,
-                premiumIndicator: R,
-                quality: M,
+                size: _,
+                didTrackUpsellViewed: f,
+                setDidTrackUpsellViewed: E,
+                className: L,
+                premiumIndicator: D,
+                quality: P,
             } = e,
-            { analyticsLocations: L } = (0, g.Ay)(),
-            O = null != (0, x.A)(r);
+            { analyticsLocations: O } = (0, x.Ay)(),
+            w = null != (0, y.A)(r);
         try {
-            t = (0, C.HB)(M);
+            t = (0, T.HB)(P);
         } catch (e) {
             t = !1;
         }
         try {
-            a = (0, C.OI)(M);
+            a = (0, T.OI)(P);
         } catch (e) {
             a = !1;
         }
-        let D = t || a,
-            { location: P } = (0, A.p)(),
-            k = (0, c.bG)([p.default], () => p.default.getCurrentUser()),
-            w = o && !E.Ay.isPremium(k, I.PremiumTypes.TIER_1) && !E.Ay.canStreamQuality(E.Ay.StreamQuality.MID, k),
-            U = l.useCallback(() => {
-                w &&
-                    D &&
-                    (0, m.mMO)(async () => {
+        let U = t || a,
+            { location: k } = (0, C.p)(),
+            G = (0, c.bG)([I.default], () => I.default.getCurrentUser()),
+            F = o && !v.Ay.isPremium(G, j.PremiumTypes.TIER_1) && !v.Ay.canStreamQuality(v.Ay.StreamQuality.MID, G),
+            H = l.useCallback(() => {
+                F &&
+                    U &&
+                    (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("18630").then(n.bind(n, 826789));
-                        return (t) => (0, i.jsx)(e, { ...t, analyticsSource: P });
+                        return (t) => (0, i.jsx)(e, { ...t, analyticsSource: k });
                     });
-            }, [w, D, P]);
+            }, [F, U, k]);
         if (
             (l.useEffect(() => {
-                !y &&
-                    D &&
-                    (f.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, {
-                        type: I.e.STREAM_QUALITY_INDICATOR,
+                !f &&
+                    U &&
+                    (N.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, {
+                        type: j.e.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
-                        location_stack: L,
+                        location_stack: O,
                     }),
-                    b(!0));
-            }, [t, a, D, y, b, L]),
-            null == M)
+                    E(!0));
+            }, [t, a, U, f, E, O]),
+            null == P)
         )
             return null;
-        let G = (0, i.jsx)(u.m, {
-            text: O ? T.intl.string(T.t.q8TiVt) : D ? T.intl.string(T.t.IHgpEn) : T.intl.string(T.t.vLb0VW),
+        let B = (0, i.jsx)(u.m, {
+            text: w ? R.intl.string(R.t.q8TiVt) : U ? R.intl.string(R.t.IHgpEn) : R.intl.string(R.t.vLb0VW),
             position: "bottom",
-            children: (0, i.jsxs)(m.DUT, {
-                onClick: U,
-                className: s()(v.t5, N, _.u1[h], O ? v.Y5 : v.Lc, { [v.vk]: w && D }),
+            children: (0, i.jsxs)(A.D, {
+                onClick: H,
+                className: s()(M.t5, _, S.u1[h], w ? M.Y5 : M.Lc, { [M.vk]: F && U }),
                 children: [
-                    D ? (0, i.jsx)(m.tvc, { size: "md", color: "currentColor", className: v.fY }) : null,
-                    (0, i.jsx)("span", { className: v.UD, children: (0, C.ME)(M.maxResolution) }),
-                    (0, i.jsx)("span", { children: (0, C.Bs)(M.maxFrameRate) }),
+                    U ? (0, i.jsx)(g.t, { size: "md", color: "currentColor", className: M.fY }) : null,
+                    (0, i.jsx)("span", { className: M.UD, children: (0, T.ME)(P.maxResolution) }),
+                    (0, i.jsx)("span", { children: (0, T.Bs)(P.maxFrameRate) }),
                 ],
             }),
         });
-        return (0, i.jsx)(m.LpS, {
-            text: G,
-            className: s()(j, v.AA, { [v.Dc]: D && R }),
+        return (0, i.jsx)(p.Lp, {
+            text: B,
+            className: s()(L, M.AA, { [M.Dc]: U && D }),
             color: d.A.unsafe_rawColors.PRIMARY_500.css,
-            shape: _.u1[h],
+            shape: S.u1[h],
         });
     },
-    P = (e) => {
+    H = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: c, premiumIndicator: d } = e,
             [u, h] = l.useState(!1),
-            A = (0, C.N5)(t),
-            { reducedMotion: g } = l.useContext(m.CZY),
-            p = n && null != A,
-            f = (0, m.pnh)(
-                p,
-                { enter: { from: g.enabled ? j : y, to: g.enabled ? R : b }, leave: g.enabled ? j : y, config: O },
+            m = (0, T.N5)(t),
+            { reducedMotion: A } = l.useContext(_.C),
+            g = n && null != m,
+            C = (0, f.p)(
+                g,
+                { enter: { from: A.enabled ? O : D, to: A.enabled ? w : P }, leave: A.enabled ? O : D, config: G },
                 "animate-always",
             ),
-            E = (0, m.zhh)({ to: p ? L : M, config: O }, "animate-always");
+            x = (0, E.z)({ to: g ? k : U, config: G }, "animate-always");
         return ((e) => {
             let { className: n, popoutProps: l } = e;
             return (0, i.jsxs)("div", {
-                className: s()(v.dr, n),
+                className: s()(M.dr, n),
                 ...l,
                 children: [
-                    f((e, n) =>
+                    C((e, n) =>
                         n
                             ? (0, i.jsx)(r.animated.div, {
                                   style: e,
-                                  children: (0, i.jsx)(D, {
-                                      className: v.LZ,
+                                  children: (0, i.jsx)(F, {
+                                      className: M.LZ,
                                       participant: t,
                                       size: o,
-                                      shape: m.EGs.ROUND_LEFT,
+                                      shape: p.EG.ROUND_LEFT,
                                       isUpsellEnabled: a,
                                       didTrackUpsellViewed: u,
                                       setDidTrackUpsellViewed: h,
                                       premiumIndicator: d,
-                                      quality: A,
+                                      quality: m,
                                   }),
                               })
                             : null,
                     ),
                     (0, i.jsx)(r.animated.div, {
-                        style: E,
-                        className: v.Ok,
-                        children: (0, i.jsx)(_.Ay, {
-                            look: _.gv.RED,
+                        style: x,
+                        className: M.Ok,
+                        children: (0, i.jsx)(S.Ay, {
+                            look: S.gv.RED,
                             size: o,
-                            shape: p ? m.EGs.ROUND_RIGHT : m.EGs.ROUND,
+                            shape: g ? p.EG.ROUND_RIGHT : p.EG.ROUND,
                         }),
                     }),
                 ],

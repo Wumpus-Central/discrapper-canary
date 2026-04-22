@@ -1,30 +1,30 @@
-"use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => m });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(727904),
-    d = n(985018),
-    c = n(973184);
-function u(e) {
-    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: m, initialValue: g } = e,
-        x = s.useMemo(() => g ?? [], [g]),
-        { value: h, onChange: _, errorMessage: A } = (0, o.A)(t, g, n);
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(826745),
+    o = n(834730),
+    d = n(727904),
+    c = n(985018),
+    u = n(155953);
+function m(e) {
+    let { onChangeText: t, maxWordCount: n, className: s, textAreaClassName: m, subtitleText: g, initialValue: h } = e,
+        x = l.useMemo(() => h ?? [], [h]),
+        { value: _, onChange: p, errorMessage: A } = (0, d.A)(t, h, n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: r()(c.Qn, l),
+                className: r()(u.Qn, s),
                 children: [
-                    (0, i.jsx)(a.d4u, {
-                        className: r()(c.To, u),
-                        value: h,
-                        onChange: _,
-                        placeholder: d.intl.string(d.t.UyaxJy),
+                    (0, i.jsx)(a.y, {
+                        className: r()(u.To, m),
+                        value: _,
+                        onChange: p,
+                        placeholder: c.intl.string(c.t.UyaxJy),
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: c.fE,
+                    (0, i.jsx)(o.E, {
+                        className: u.fE,
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: `${x.length} / ${n}`,
@@ -32,17 +32,17 @@ function u(e) {
                 ],
             }),
             null != A
-                ? (0, i.jsx)(a.Text, {
-                      className: r()(c.dG, c.kc),
+                ? (0, i.jsx)(o.E, {
+                      className: r()(u.dG, u.kc),
                       variant: "text-xs/medium",
                       color: "text-feedback-critical",
                       children: A,
                   })
-                : (0, i.jsx)(a.Text, {
-                      className: c.dG,
+                : (0, i.jsx)(o.E, {
+                      className: u.dG,
                       variant: "text-xs/normal",
                       color: "text-default",
-                      children: null != m ? m : d.intl.string(d.t.Gm6G5x),
+                      children: null != g ? g : c.intl.string(c.t.Gm6G5x),
                   }),
         ],
     });

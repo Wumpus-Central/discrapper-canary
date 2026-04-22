@@ -1,57 +1,56 @@
 "use strict";
-n.d(t, { s: () => d });
-var r = n(927578),
-    i = n(422936),
-    a = n(234419),
-    s = n(511484),
-    o = n(788868),
-    l = n(985018);
-let u = (e) => {
-        let {
-            showTrialCTA: t,
-            subscriptionTier: n,
-            trialDurationCopy: i,
-            isPersistentCTA: a,
-            shouldShowReferralTrialCopy: s,
-            subscriptionTrial: u,
-        } = e;
-        return t && s
-            ? l.intl.string(l.t.bXTClc)
-            : t && (n === o.pe.TIER_2 || a)
-              ? (0, r.FY)({ intervalType: u?.interval, intervalCount: u?.interval_count })
-              : t
-                ? l.intl.formatToPlainString(l.t.nTmm2v, { freeTrialText: i })
-                : void 0;
-    },
-    c = (e, t, n, r) =>
-        t || n
-            ? l.intl.string(l.t.fkPGat)
-            : e === o.pe.TIER_2
-              ? l.intl.formatToPlainString(l.t.bkQ4bH, { percent: r })
-              : void 0,
-    d = (e) => {
-        let { subscriptionTier: t, hasActivePromotion: n = !1, useShorterCTA: d = !1, isPersistentCTA: _ = !1 } = e,
-            f = (0, a.V)(),
-            p = f?.subscription_trial,
-            h = (0, i.O)(),
-            m = (0, s.U9)(h, o.pe.TIER_2) ? o.pe.TIER_2 : void 0,
-            g = (0, r.tS)({ intervalType: p?.interval, intervalCount: p?.interval_count }),
-            E = t ?? f?.subscription_trial?.sku_id ?? m,
-            A = null != p && E === p.sku_id,
-            I = f?.trial_id === o.Dw;
-        return {
-            buttonText: n
-                ? l.intl.string(l.t.J61px0)
-                : null != h
-                  ? c(E, d, _, h.discount.amount)
-                  : u({
-                        showTrialCTA: A,
-                        subscriptionTier: E,
-                        trialDurationCopy: g,
-                        isPersistentCTA: _,
-                        shouldShowReferralTrialCopy: I,
-                        subscriptionTrial: p,
-                    }),
-            marketingSubscriptionTierSkuId: E,
-        };
+a.d(t, { s: () => d });
+var r = a(927578),
+    l = a(422936),
+    n = a(234419),
+    i = a(511484),
+    s = a(788868),
+    o = a(985018);
+let d = (e) => {
+    var t;
+    let { subscriptionTier: a, hasActivePromotion: d = !1, useShorterCTA: c = !1, isPersistentCTA: u = !1 } = e,
+        h = (0, n.V)(),
+        p = h?.subscription_trial,
+        _ = (0, l.O)(),
+        m = (0, i.U9)(_, s.pe.TIER_2) ? s.pe.TIER_2 : void 0,
+        b = (0, r.tS)({ intervalType: p?.interval, intervalCount: p?.interval_count }),
+        g = a ?? h?.subscription_trial?.sku_id ?? m,
+        f = null != p && g === p.sku_id,
+        x = h?.trial_id === s.Dw;
+    return {
+        buttonText: d
+            ? o.intl.string(o.t.J61px0)
+            : null != _
+              ? ((t = _.discount.amount),
+                c || u
+                    ? o.intl.string(o.t.fkPGat)
+                    : g === s.pe.TIER_2
+                      ? o.intl.formatToPlainString(o.t.bkQ4bH, { percent: t })
+                      : void 0)
+              : ((e) => {
+                    let {
+                        showTrialCTA: t,
+                        subscriptionTier: a,
+                        trialDurationCopy: l,
+                        isPersistentCTA: n,
+                        shouldShowReferralTrialCopy: i,
+                        subscriptionTrial: d,
+                    } = e;
+                    return t && i
+                        ? o.intl.string(o.t.bXTClc)
+                        : t && (a === s.pe.TIER_2 || n)
+                          ? (0, r.FY)({ intervalType: d?.interval, intervalCount: d?.interval_count })
+                          : t
+                            ? o.intl.formatToPlainString(o.t.nTmm2v, { freeTrialText: l })
+                            : void 0;
+                })({
+                    showTrialCTA: f,
+                    subscriptionTier: g,
+                    trialDurationCopy: b,
+                    isPersistentCTA: u,
+                    shouldShowReferralTrialCopy: x,
+                    subscriptionTrial: p,
+                }),
+        marketingSubscriptionTierSkuId: g,
     };
+};

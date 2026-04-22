@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__8e680",
     Yr: "max-width__8e680",

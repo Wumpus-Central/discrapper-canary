@@ -1,20 +1,22 @@
-i.d(t, { A: () => r });
-var n = i(627968);
-i(64700);
-var a = i(397927),
-    s = i(147925),
-    l = i(357905);
-function r(e) {
-    let { url: t, text: i, onClick: r } = e;
-    return (0, n.jsx)(a.MzZ, {
-        href: t,
-        onClick: r,
-        className: l.jH,
-        children: (0, n.jsxs)(a.DUT, {
-            className: l.Zm,
+n.d(e, { A: () => d });
+var t = n(627968);
+n(64700);
+var a = n(349288),
+    s = n(939249),
+    l = n(834730),
+    r = n(147925),
+    c = n(797982);
+function d(i) {
+    let { url: e, text: n, onClick: d } = i;
+    return (0, t.jsx)(a.Anchor, {
+        href: e,
+        onClick: d,
+        className: c.jH,
+        children: (0, t.jsxs)(s.D, {
+            className: c.Zm,
             children: [
-                (0, n.jsx)(a.Text, { className: l.ix, variant: "text-md/semibold", children: i }),
-                (0, n.jsx)(s.A, { className: l._2, direction: s.A.Directions.RIGHT }),
+                (0, t.jsx)(l.E, { className: c.ix, variant: "text-md/semibold", children: n }),
+                (0, t.jsx)(r.A, { className: c._2, direction: r.A.Directions.RIGHT }),
             ],
         }),
     });

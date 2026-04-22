@@ -1,65 +1,65 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var i = n(627968),
     s = n(64700),
     r = n(481613),
     l = n.n(r),
     a = n(311907),
-    o = n(397927),
+    o = n(821609),
     c = n(830215),
     d = n(964486),
     u = n(396681),
-    h = n(854378),
-    _ = n(976860),
-    p = n(210714),
-    g = n(652215),
-    m = n(985018),
-    f = n(473169);
-function A(e) {
-    let { location: t, transitionTo: r = _.pX } = e,
-        [a, A] = s.useState("submitting");
-    function E() {
+    _ = n(854378),
+    h = n(976860),
+    m = n(210714),
+    p = n(652215),
+    g = n(985018),
+    A = n(818050);
+function f(e) {
+    let { location: t, transitionTo: r = h.pX } = e,
+        [a, f] = s.useState("submitting");
+    function x() {
         return "Android" === l().os.family || "iOS" === l().os.family
             ? null
-            : (0, i.jsx)(o.Button, {
-                  text: m.intl.string(m.t.dKhVQN),
+            : (0, i.jsx)(o.$, {
+                  text: g.intl.string(g.t.dKhVQN),
                   fullWidth: !0,
-                  onClick: () => r(g.BVt.LOGIN, { source: "authorizeIPAdress" }),
+                  onClick: () => r(p.BVt.LOGIN, { source: "authorizeIPAdress" }),
               });
     }
     return ((0, d.Ay)(() => {
-        (0, p.d)("authorize_ip");
+        (0, m.d)("authorize_ip");
         let e = (0, u.A)(t);
         null == e
-            ? A("failed")
+            ? f("failed")
             : (async () => {
                   try {
-                      await c.A.authorizeIPAddress(e), A("succeeded");
+                      await c.A.authorizeIPAddress(e), f("succeeded");
                   } catch (e) {
-                      A("failed");
+                      f("failed");
                   }
               })();
     }),
     "failed" === a)
-        ? (0, i.jsxs)(h.Ay, {
+        ? (0, i.jsxs)(_.Ay, {
               children: [
-                  (0, i.jsx)("img", { alt: "", src: n(792009), className: f.SX }),
-                  (0, i.jsx)(h.hE, { className: f.QB, children: m.intl.string(m.t["f/54az"]) }),
-                  (0, i.jsx)(h.tK, { className: f.C2, children: m.intl.string(m.t.i3ehMr) }),
-                  E(),
+                  (0, i.jsx)("img", { alt: "", src: n(792009), className: A.SX }),
+                  (0, i.jsx)(_.hE, { className: A.QB, children: g.intl.string(g.t["f/54az"]) }),
+                  (0, i.jsx)(_.tK, { className: A.C2, children: g.intl.string(g.t.i3ehMr) }),
+                  x(),
               ],
           })
         : "succeeded" === a
-          ? (0, i.jsxs)(h.Ay, {
+          ? (0, i.jsxs)(_.Ay, {
                 children: [
-                    (0, i.jsx)("img", { alt: "", src: n(841406), className: f.SX }),
-                    (0, i.jsx)(h.hE, { className: f.QB, children: m.intl.string(m.t.iG0SlK) }),
-                    (0, i.jsx)(h.tK, { className: f.C2, children: m.intl.string(m.t["Elv+qt"]) }),
-                    E(),
+                    (0, i.jsx)("img", { alt: "", src: n(841406), className: A.SX }),
+                    (0, i.jsx)(_.hE, { className: A.QB, children: g.intl.string(g.t.iG0SlK) }),
+                    (0, i.jsx)(_.tK, { className: A.C2, children: g.intl.string(g.t["Elv+qt"]) }),
+                    x(),
                 ],
             })
-          : (0, i.jsxs)(h.Ay, {
-                children: [(0, i.jsx)(h.CK, {}), (0, i.jsx)(h.hE, { children: m.intl.string(m.t["9exy+V"]) })],
+          : (0, i.jsxs)(_.Ay, {
+                children: [(0, i.jsx)(_.CK, {}), (0, i.jsx)(_.hE, { children: g.intl.string(g.t["9exy+V"]) })],
             });
 }
 a.Ay.initialize();

@@ -1,53 +1,53 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
     r = n(311907),
-    l = n(492917),
+    l = n(713186),
     a = n(154672),
     o = n(396681),
     c = n(317940),
     d = n(976860),
     u = n(210714),
-    h = n(341371),
-    _ = n(714505),
-    p = n(652215),
-    g = n(985018);
-function m(e) {
+    _ = n(341371),
+    h = n(714505),
+    m = n(652215),
+    p = n(985018);
+function g(e) {
     let { location: t } = e,
-        [n, m] = s.useState(!1),
-        { verifySuccess: f, verifyErrors: A, redirectGuildId: E } = (0, r.bG)([h.A], () => h.A.getState());
+        [n, g] = s.useState(!1),
+        { verifySuccess: A, verifyErrors: f, redirectGuildId: x } = (0, r.bG)([_.A], () => _.A.getState());
     s.useEffect(() => {
         let e = (0, o.A)(t);
         a.A.verify(e), (0, u.d)("verify_hub_email");
     }, [t]);
-    let x = () => {
-        (0, _.A)(E), m(!0);
+    let E = () => {
+        (0, h.A)(x), g(!0);
     };
     return n
         ? (0, i.jsx)(c.A, {
-              title: g.intl.string(g.t.csrAMJ),
-              subtitle: g.intl.string(g.t["m1+IBn"]),
-              buttonText: g.intl.string(g.t.fIv16B),
-              onButtonClick: () => (0, d.pX)(p.BVt.CHANNEL(E)),
+              title: p.intl.string(p.t.csrAMJ),
+              subtitle: p.intl.string(p.t["m1+IBn"]),
+              buttonText: p.intl.string(p.t.fIv16B),
+              onButtonClick: () => (0, d.pX)(m.BVt.CHANNEL(x)),
           })
-        : f
+        : A
           ? (0, i.jsx)(c.A, {
-                title: g.intl.string(g.t["dAfGb+"]),
-                buttonText: g.intl.string(g.t["uJWIj/"]),
-                onButtonClick: x,
-                image: (0, i.jsx)(l.bqQ, { alt: g.intl.string(g.t["dAfGb+"]) }),
+                title: p.intl.string(p.t["dAfGb+"]),
+                buttonText: p.intl.string(p.t["uJWIj/"]),
+                onButtonClick: E,
+                image: (0, i.jsx)(l.b, { alt: p.intl.string(p.t["dAfGb+"]) }),
             })
-          : null != A
+          : null != f
             ? (0, i.jsx)(c.A, {
-                  title: g.intl.string(g.t["PCgG3+"]),
-                  subtitle: g.intl.string(g.t.tQpeA3),
-                  buttonText: g.intl.string(g.t["uJWIj/"]),
-                  onButtonClick: x,
+                  title: p.intl.string(p.t["PCgG3+"]),
+                  subtitle: p.intl.string(p.t.tQpeA3),
+                  buttonText: p.intl.string(p.t["uJWIj/"]),
+                  onButtonClick: E,
               })
             : (0, i.jsx)(c.A, {
-                  title: g.intl.string(g.t["0c8+5n"]),
-                  subtitle: g.intl.string(g.t.ULTCBE),
+                  title: p.intl.string(p.t["0c8+5n"]),
+                  subtitle: p.intl.string(p.t.ULTCBE),
                   loading: !0,
               });
 }

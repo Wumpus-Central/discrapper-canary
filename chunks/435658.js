@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { j: () => a, x: () => s });
-var r = n(64700),
-    i = n(828596);
-function s(e) {
-    let { applicationId: t, location: n } = e;
+i.d(e, { j: () => l, x: () => n });
+var r = i(64700),
+    s = i(828596);
+function n(t) {
+    let { applicationId: e, location: i } = t;
     r.useEffect(() => {
-        null != t && (0, i.l9)({ applicationId: t, location: n });
-    }, [t, n]);
+        null != e && (0, s.l9)({ applicationId: e, location: i });
+    }, [e, i]);
 }
-function a(e) {
-    let { skuIds: t, location: n } = e;
+function l(t) {
+    let { skuIds: e, location: i } = t;
     r.useEffect(() => {
-        0 !== t.length && (0, i.N4)({ skuIds: t, location: n });
-    }, [t, n]);
+        0 !== e.length && (0, s.N4)({ skuIds: e, location: i });
+    }, [e, i]);
 }

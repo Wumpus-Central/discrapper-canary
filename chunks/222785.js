@@ -1,359 +1,379 @@
-n.d(i, { default: () => X });
-var t = n(627968),
-    l = n(64700),
+n.d(e, { default: () => $ });
+var l = n(627968),
+    t = n(64700),
     a = n(284009),
-    r = n.n(a),
-    d = n(311907),
-    s = n(397927),
-    c = n(686449),
-    o = n(293260),
-    u = n(649308),
-    g = n(226958),
-    A = n(82770),
-    p = n(346247),
-    y = n(810263),
-    b = n(434352),
-    f = n(664967),
-    h = n(531335),
-    v = n(957316),
-    x = n(974103),
-    E = n(509536),
-    D = n(359047),
-    j = n(997509),
-    I = n(595818),
-    G = n(685073),
-    m = n(534400),
-    L = n(647534),
-    U = n(857071),
-    C = n(36942),
-    M = n(260509),
-    O = n(696451),
-    _ = n(576705),
-    N = n(543465),
-    T = n(287809),
-    P = n(954571),
-    w = n(652215),
-    S = n(349828),
-    k = n(985018),
-    H = n(661023);
-let X = l.memo(function (e) {
-    let { guild: i, onClose: a, onSelect: X } = e,
-        V = (0, d.bG)([T.default], () => T.default.getCurrentUser());
-    r()(null != V, "GuildHeaderPopout: user cannot be undefined"),
-        l.useEffect(() => {
-            P.default.track(w.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: i.id });
+    d = n.n(a),
+    r = n(311907),
+    s = n(22231),
+    o = n(192308),
+    c = n(861672),
+    u = n(477782),
+    g = n(70688),
+    y = n(625903),
+    A = n(231483),
+    p = n(104510),
+    h = n(555704),
+    x = n(245604),
+    b = n(234020),
+    f = n(782603),
+    j = n(952270),
+    v = n(686449),
+    I = n(293260),
+    D = n(649308),
+    m = n(226958),
+    G = n(82770),
+    L = n(346247),
+    w = n(810263),
+    E = n(434352),
+    U = n(664967),
+    M = n(531335),
+    _ = n(957316),
+    T = n(974103),
+    C = n(509536),
+    H = n(359047),
+    N = n(997509),
+    P = n(595818),
+    k = n(685073),
+    O = n(534400),
+    S = n(647534),
+    X = n(857071),
+    F = n(36942),
+    B = n(260509),
+    W = n(696451),
+    R = n(576705),
+    z = n(543465),
+    J = n(287809),
+    Y = n(954571),
+    V = n(652215),
+    Z = n(349828),
+    Q = n(985018),
+    K = n(661023);
+let $ = t.memo(function (i) {
+    let { guild: e, onClose: a, onSelect: $ } = i,
+        q = (0, r.bG)([J.default], () => J.default.getCurrentUser());
+    d()(null != q, "GuildHeaderPopout: user cannot be undefined"),
+        t.useEffect(() => {
+            Y.default.track(V.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: e.id });
         });
-    let F = (0, d.bG)([N.Ay], () => N.Ay.isGuildCollapsed(i.id), [i.id]),
+    let ii = (0, r.bG)([z.Ay], () => z.Ay.isGuildCollapsed(e.id), [e.id]),
         {
-            canAccessSettings: R,
-            canManageChannels: B,
-            showGuildAnalytics: W,
-        } = (0, d.cf)(
-            [_.A],
+            canAccessSettings: ie,
+            canManageChannels: il,
+            showGuildAnalytics: it,
+        } = (0, r.cf)(
+            [R.A],
             () => ({
-                canAccessSettings: _.A.canAccessGuildSettings(i),
-                canManageChannels: _.A.can(w.xBc.MANAGE_CHANNELS, i),
-                showGuildAnalytics: _.A.can(w.xBc.VIEW_GUILD_ANALYTICS, i) && i.features.has(w.GuildFeatures.COMMUNITY),
+                canAccessSettings: R.A.canAccessGuildSettings(e),
+                canManageChannels: R.A.can(V.xBc.MANAGE_CHANNELS, e),
+                showGuildAnalytics: R.A.can(V.xBc.VIEW_GUILD_ANALYTICS, e) && e.features.has(V.GuildFeatures.COMMUNITY),
             }),
-            [i],
+            [e],
         ),
-        Y = (0, x.ic)(i),
-        J = (0, M.bM)(i, V),
-        K = (0, d.bG)([U.A], () => U.A.isLurking(i.id), [i.id]),
-        Q = (0, d.bG)([O.Ay], () => O.Ay.isCurrentUserGuest(i.id)),
-        Z = (0, D.A)(i.id, !0),
-        $ = (0, o.Ay)(i),
-        q = (0, h.A)({ source: w.PE1.GUILD_HEADER, guild: i }),
-        z = (0, p.A)({
-            guildId: i.id,
-            userId: V.id,
-            analyticsLocation: { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_DROPDOWN_MENU },
-            icon: s.R2l,
+        ia = (0, T.ic)(e),
+        id = (0, B.bM)(e, q),
+        ir = (0, r.bG)([X.A], () => X.A.isLurking(e.id), [e.id]),
+        is = (0, r.bG)([W.Ay], () => W.Ay.isCurrentUserGuest(e.id)),
+        io = (0, H.A)(e.id, !0),
+        ic = (0, I.Ay)(e),
+        iu = (0, M.A)({ source: V.PE1.GUILD_HEADER, guild: e }),
+        ig = (0, L.A)({
+            guildId: e.id,
+            userId: q.id,
+            analyticsLocation: { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_DROPDOWN_MENU },
+            icon: s.R,
         }),
-        ee = i.features.has(w.GuildFeatures.HUB),
-        ei = i.id === S.Vc,
-        en = i.id === w.gNP,
-        et = (0, C.A)(i.id, !0),
-        el = (0, g.A)(i),
-        ea = (0, A.A)(i),
-        er = (0, f.A)(i, !0),
-        ed = (0, b.A)(i),
-        es = (0, u.A)(),
-        ec = (0, y.A)(i, { showIcons: !0 }),
-        eo = (0, G.Rg)(i) && (0, G.q0)(i),
-        eu = l.useCallback(() => {
-            (0, s.mMO)(async () => {
-                let { default: e } = await n.e("53485").then(n.bind(n, 20508));
-                return (n) => (0, t.jsx)(e, { ...n, guild: i });
+        iy = e.features.has(V.GuildFeatures.HUB),
+        iA = e.id === Z.Vc,
+        ip = e.id === V.gNP,
+        ih = (0, F.A)(e.id, !0),
+        ix = (0, m.A)(e),
+        ib = (0, G.A)(e),
+        ij = (0, U.A)(e, !0),
+        iv = (0, E.A)(e),
+        iI = (0, D.A)(),
+        iD = (0, w.A)(e, { showIcons: !0 }),
+        im = (0, k.Rg)(e) && (0, k.q0)(e),
+        iG = t.useCallback(() => {
+            (0, o.openModalLazy)(async () => {
+                let { default: i } = await n.e("53485").then(n.bind(n, 20508));
+                return (n) => (0, l.jsx)(i, { ...n, guild: e });
             });
-        }, [i]);
-    return K || Q
-        ? (0, t.jsxs)(s.W1t, {
+        }, [e]);
+    return ir || is
+        ? (0, l.jsxs)(c.W, {
               "data-menu-migrated-auto": !0,
-              onSelect: X,
+              onSelect: $,
               navId: "guild-header-popout",
               variant: "fixed",
               onClose: a,
-              "aria-label": k.intl.string(k.t.HpQykc),
+              "aria-label": Q.intl.string(Q.t.HpQykc),
               children: [
-                  (0, t.jsx)(s.Drp, {
+                  (0, l.jsx)(u.Dr, {
                       id: "leave-guild",
-                      label: k.intl.string(k.t.J2TBi3),
-                      icon: s.oLl,
-                      leadingAccessory: { type: "icon", icon: s.oLl },
+                      label: Q.intl.string(Q.t.J2TBi3),
+                      icon: g.o,
+                      leadingAccessory: { type: "icon", icon: g.o },
                       action: () => {
-                          j.A.leaveGuild(i.id, !0);
+                          N.A.leaveGuild(e.id, !0);
                       },
                   }),
-                  (0, t.jsx)(s.rXV, { children: ec }),
+                  (0, l.jsx)(u.rX, { children: iD }),
               ],
           })
-        : ei
-          ? (0, t.jsx)(s.W1t, {
+        : iA
+          ? (0, l.jsx)(c.W, {
                 "data-menu-migrated-auto": !0,
-                onSelect: X,
+                onSelect: $,
                 navId: "favorites-header-popout",
                 variant: "fixed",
                 onClose: a,
-                "aria-label": k.intl.string(k.t.HpQykc),
-                children: (0, t.jsx)(s.rXV, { children: es }),
+                "aria-label": Q.intl.string(Q.t.HpQykc),
+                children: (0, l.jsx)(u.rX, { children: iI }),
             })
-          : ee
-            ? (0, t.jsxs)(s.W1t, {
+          : iy
+            ? (0, l.jsxs)(c.W, {
                   "data-menu-migrated": !0,
-                  onSelect: X,
+                  onSelect: $,
                   navId: "guild-header-popout",
                   variant: "fixed",
                   onClose: a,
-                  "aria-label": k.intl.string(k.t.HpQykc),
+                  "aria-label": Q.intl.string(Q.t.HpQykc),
                   children: [
-                      (0, t.jsxs)(s.rXV, {
+                      (0, l.jsxs)(u.rX, {
                           children: [
-                              R
-                                  ? (0, t.jsx)(s.Drp, {
+                              ie
+                                  ? (0, l.jsx)(u.Dr, {
                                         id: "settings",
-                                        label: k.intl.string(k.t["154/bL"]),
-                                        icon: s.Zes,
-                                        leadingAccessory: { type: "icon", icon: s.Zes },
+                                        label: Q.intl.string(Q.t["154/bL"]),
+                                        icon: y.Z,
+                                        leadingAccessory: { type: "icon", icon: y.Z },
                                         action: () => {
-                                            j.A.open(i.id, (0, I.x)());
+                                            N.A.open(e.id, (0, P.x)());
                                         },
                                     })
                                   : null,
-                              q,
-                              (0, t.jsx)(s.Drp, {
+                              iu,
+                              (0, l.jsx)(u.Dr, {
                                   id: "privacy",
-                                  label: k.intl.string(k.t.BayiAo),
-                                  icon: s.lmn,
-                                  leadingAccessory: { type: "icon", icon: s.lmn },
+                                  label: Q.intl.string(Q.t.BayiAo),
+                                  icon: A.l,
+                                  leadingAccessory: { type: "icon", icon: A.l },
                                   action: () =>
-                                      (0, s.mMO)(async () => {
-                                          let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                          return (n) => (0, t.jsx)(e, { ...n, guild: i });
+                                      (0, o.openModalLazy)(async () => {
+                                          let { default: i } = await Promise.all([
+                                              n.e("33098"),
+                                              n.e("62026"),
+                                              n.e("14901"),
+                                          ]).then(n.bind(n, 585265));
+                                          return (n) => (0, l.jsx)(i, { ...n, guild: e });
                                       }),
                               }),
-                              z,
+                              ig,
                           ],
                       }),
-                      J
+                      id
                           ? null
-                          : (0, t.jsx)(s.rXV, {
-                                children: (0, t.jsx)(s.Drp, {
+                          : (0, l.jsx)(u.rX, {
+                                children: (0, l.jsx)(u.Dr, {
                                     id: "leave",
-                                    label: k.intl.string(k.t.Dv8gFT),
-                                    icon: s.oLl,
-                                    leadingAccessory: { type: "icon", icon: s.oLl },
+                                    label: Q.intl.string(Q.t.Dv8gFT),
+                                    icon: g.o,
+                                    leadingAccessory: { type: "icon", icon: g.o },
                                     color: "danger",
-                                    action: eu,
+                                    action: iG,
                                 }),
                             }),
                   ],
               })
-            : en
+            : ip
               ? null
-              : (0, t.jsxs)(s.W1t, {
+              : (0, l.jsxs)(c.W, {
                     "data-menu-needs-review": !0,
-                    onSelect: X,
+                    onSelect: $,
                     navId: "guild-header-popout",
                     variant: "fixed",
                     onClose: a,
-                    "aria-label": k.intl.string(k.t.HpQykc),
+                    "aria-label": Q.intl.string(Q.t.HpQykc),
                     children: [
-                        (0, t.jsxs)(s.rXV, {
+                        (0, l.jsxs)(u.rX, {
                             children: [
-                                (0, t.jsx)(s.Drp, {
+                                (0, l.jsx)(u.Dr, {
                                     id: "premium-subscribe",
-                                    label: k.intl.string(k.t.VJEVbu),
-                                    icon: s._Jp,
-                                    leadingAccessory: { type: "icon", icon: s._Jp },
+                                    label: Q.intl.string(Q.t.VJEVbu),
+                                    icon: p._,
+                                    leadingAccessory: { type: "icon", icon: p._ },
                                     action: () => {
-                                        (0, E.K4)({ guildId: i.id, location: { section: w.JJy.GUILD_HEADER_POPOUT } });
+                                        (0, C.K4)({ guildId: e.id, location: { section: V.JJy.GUILD_HEADER_POPOUT } });
                                     },
                                 }),
-                                eo &&
-                                    (0, t.jsx)(s.Drp, {
+                                im &&
+                                    (0, l.jsx)(u.Dr, {
                                         id: "guild-tag",
-                                        label: k.intl.string(H.default.mf2OwH),
+                                        label: Q.intl.string(K.default.mf2OwH),
                                         leadingAccessory: {
                                             type: "guildTag",
-                                            element: (0, t.jsx)(m.o9, {
-                                                guildId: i.id,
-                                                guildTag: i.profile.tag,
-                                                guildBadge: i.profile.badge ?? void 0,
+                                            element: (0, l.jsx)(O.o9, {
+                                                guildId: e.id,
+                                                guildTag: e.profile.tag,
+                                                guildBadge: e.profile.badge ?? void 0,
                                                 inline: !1,
                                             }),
                                         },
-                                        icon: (0, t.jsx)(m.o9, {
-                                            guildId: i.id,
-                                            guildBadge: i.profile.badge,
-                                            guildTag: i.profile.tag,
+                                        icon: (0, l.jsx)(O.o9, {
+                                            guildId: e.id,
+                                            guildBadge: e.profile.badge,
+                                            guildTag: e.profile.tag,
                                             inline: !1,
                                         }),
-                                        action: () => (0, L.A)(i.id),
+                                        action: () => (0, S.A)(e.id),
                                     }),
                             ],
                         }),
-                        (0, t.jsxs)(s.rXV, {
+                        (0, l.jsxs)(u.rX, {
                             children: [
-                                q,
-                                R
-                                    ? (0, t.jsx)(s.Drp, {
+                                iu,
+                                ie
+                                    ? (0, l.jsx)(u.Dr, {
                                           id: "settings",
-                                          label: k.intl.string(k.t["154/bL"]),
-                                          icon: s.Zes,
-                                          leadingAccessory: { type: "icon", icon: s.Zes },
+                                          label: Q.intl.string(Q.t["154/bL"]),
+                                          icon: y.Z,
+                                          leadingAccessory: { type: "icon", icon: y.Z },
                                           action: () => {
-                                              j.A.open(i.id, (0, I.x)());
+                                              N.A.open(e.id, (0, P.x)());
                                           },
                                       })
                                     : null,
-                                W
-                                    ? (0, t.jsx)(s.Drp, {
+                                it
+                                    ? (0, l.jsx)(u.Dr, {
                                           id: "insights",
-                                          label: k.intl.string(k.t["0wWfUG"]),
-                                          icon: s.Uy2,
-                                          leadingAccessory: { type: "icon", icon: s.Uy2 },
-                                          action: () => j.A.open(i.id, w.BEX.ANALYTICS),
+                                          label: Q.intl.string(Q.t["0wWfUG"]),
+                                          icon: h.U,
+                                          leadingAccessory: { type: "icon", icon: h.U },
+                                          action: () => N.A.open(e.id, V.BEX.ANALYTICS),
                                       })
                                     : null,
-                                B
-                                    ? (0, t.jsxs)(t.Fragment, {
+                                il
+                                    ? (0, l.jsxs)(l.Fragment, {
                                           children: [
-                                              (0, t.jsx)(s.Drp, {
+                                              (0, l.jsx)(u.Dr, {
                                                   id: "create-channel",
-                                                  label: k.intl.string(k.t["fUYU+j"]),
-                                                  icon: s.U1e,
-                                                  leadingAccessory: { type: "icon", icon: s.U1e },
+                                                  label: Q.intl.string(Q.t["fUYU+j"]),
+                                                  icon: x.U,
+                                                  leadingAccessory: { type: "icon", icon: x.U },
                                                   action: () =>
-                                                      (0, s.mMO)(async () => {
-                                                          let { default: e } = await Promise.all([
+                                                      (0, o.openModalLazy)(async () => {
+                                                          let { default: i } = await Promise.all([
                                                               n.e("64233"),
-                                                              n.e("11585"),
+                                                              n.e("40988"),
                                                           ]).then(n.bind(n, 409200));
                                                           return (n) =>
-                                                              (0, t.jsx)(e, {
+                                                              (0, l.jsx)(i, {
                                                                   ...n,
-                                                                  channelType: w.rbe.GUILD_TEXT,
-                                                                  guildId: i.id,
+                                                                  channelType: V.rbe.GUILD_TEXT,
+                                                                  guildId: e.id,
                                                               });
                                                       }),
                                               }),
-                                              (0, t.jsx)(s.Drp, {
+                                              (0, l.jsx)(u.Dr, {
                                                   id: "create-category",
-                                                  label: k.intl.string(k.t["ISN+NM"]),
-                                                  icon: s.YPf,
-                                                  leadingAccessory: { type: "icon", icon: s.YPf },
+                                                  label: Q.intl.string(Q.t["ISN+NM"]),
+                                                  icon: b.Y,
+                                                  leadingAccessory: { type: "icon", icon: b.Y },
                                                   action: () =>
-                                                      (0, s.mMO)(async () => {
-                                                          let { default: e } = await Promise.all([
+                                                      (0, o.openModalLazy)(async () => {
+                                                          let { default: i } = await Promise.all([
                                                               n.e("64233"),
-                                                              n.e("11585"),
+                                                              n.e("40988"),
                                                           ]).then(n.bind(n, 409200));
                                                           return (n) =>
-                                                              (0, t.jsx)(e, {
+                                                              (0, l.jsx)(i, {
                                                                   ...n,
-                                                                  channelType: w.rbe.GUILD_CATEGORY,
-                                                                  guildId: i.id,
+                                                                  channelType: V.rbe.GUILD_CATEGORY,
+                                                                  guildId: e.id,
                                                               });
                                                       }),
                                               }),
                                           ],
                                       })
                                     : null,
-                                Z,
-                                el,
-                                ea,
-                                $,
-                                ed,
+                                io,
+                                ix,
+                                ib,
+                                ic,
+                                iv,
                             ],
                         }),
-                        (0, t.jsxs)(s.rXV, {
+                        (0, l.jsxs)(u.rX, {
                             children: [
-                                et,
-                                (0, t.jsx)(s.Drp, {
+                                ih,
+                                (0, l.jsx)(u.Dr, {
                                     id: "notifications",
-                                    label: k.intl.string(k.t.h850Ss),
-                                    icon: s.XFE,
-                                    leadingAccessory: { type: "icon", icon: s.XFE },
+                                    label: Q.intl.string(Q.t.h850Ss),
+                                    icon: f.X,
+                                    leadingAccessory: { type: "icon", icon: f.X },
                                     action: () =>
-                                        (0, s.mMO)(async () => {
-                                            let { default: e } = await Promise.all([n.e("64992"), n.e("8214")]).then(
+                                        (0, o.openModalLazy)(async () => {
+                                            let { default: i } = await Promise.all([n.e("64992"), n.e("50893")]).then(
                                                 n.bind(n, 401539),
                                             );
-                                            return (n) => (0, t.jsx)(e, { ...n, guildId: i.id });
+                                            return (n) => (0, l.jsx)(i, { ...n, guildId: e.id });
                                         }),
                                 }),
-                                (0, t.jsx)(s.Drp, {
+                                (0, l.jsx)(u.Dr, {
                                     id: "privacy",
-                                    label: k.intl.string(k.t.BayiAo),
-                                    icon: s.lmn,
-                                    leadingAccessory: { type: "icon", icon: s.lmn },
+                                    label: Q.intl.string(Q.t.BayiAo),
+                                    icon: A.l,
+                                    leadingAccessory: { type: "icon", icon: A.l },
                                     action: () =>
-                                        (0, s.mMO)(async () => {
-                                            let { default: e } = await n.e("62026").then(n.bind(n, 585265));
-                                            return (n) => (0, t.jsx)(e, { ...n, guild: i });
+                                        (0, o.openModalLazy)(async () => {
+                                            let { default: i } = await Promise.all([
+                                                n.e("33098"),
+                                                n.e("62026"),
+                                                n.e("14901"),
+                                            ]).then(n.bind(n, 585265));
+                                            return (n) => (0, l.jsx)(i, { ...n, guild: e });
                                         }),
                                 }),
                             ],
                         }),
-                        (0, t.jsxs)(s.rXV, {
+                        (0, l.jsxs)(u.rX, {
                             children: [
-                                z,
-                                (0, t.jsx)(s.sLh, {
+                                ig,
+                                (0, l.jsx)(u.sL, {
                                     id: "hide-muted-channels",
-                                    label: k.intl.string(k.t.UwOLJO),
-                                    leadingAccessory: { type: "icon", icon: s.G3N },
-                                    checked: F,
-                                    action: () => c.A.toggleCollapseGuild(i.id),
+                                    label: Q.intl.string(Q.t.UwOLJO),
+                                    leadingAccessory: { type: "icon", icon: j.G },
+                                    checked: ii,
+                                    action: () => v.A.toggleCollapseGuild(e.id),
                                 }),
                             ],
                         }),
-                        (0, t.jsxs)(s.rXV, {
+                        (0, l.jsxs)(u.rX, {
                             children: [
-                                er,
-                                Y && i.features.has(w.GuildFeatures.COMMUNITY)
-                                    ? (0, t.jsx)(s.Drp, {
+                                ij,
+                                ia && e.features.has(V.GuildFeatures.COMMUNITY)
+                                    ? (0, l.jsx)(u.Dr, {
                                           id: "report-raid",
-                                          label: k.intl.string(k.t.cswId3),
-                                          icon: s.lmn,
-                                          leadingAccessory: { type: "icon", icon: s.lmn },
+                                          label: Q.intl.string(Q.t.cswId3),
+                                          icon: A.l,
+                                          leadingAccessory: { type: "icon", icon: A.l },
                                           color: "danger",
-                                          action: () => (0, v.M)(i.id),
+                                          action: () => (0, _.M)(e.id),
                                       })
                                     : null,
-                                J
+                                id
                                     ? null
-                                    : (0, t.jsx)(s.Drp, {
+                                    : (0, l.jsx)(u.Dr, {
                                           id: "leave",
-                                          label: k.intl.string(k.t.J2TBi3),
-                                          icon: s.oLl,
-                                          leadingAccessory: { type: "icon", icon: s.oLl },
+                                          label: Q.intl.string(Q.t.J2TBi3),
+                                          icon: g.o,
+                                          leadingAccessory: { type: "icon", icon: g.o },
                                           color: "danger",
-                                          action: eu,
+                                          action: iG,
                                       }),
                             ],
                         }),
-                        (0, t.jsx)(s.rXV, { children: ec }),
+                        (0, l.jsx)(u.rX, { children: iD }),
                     ],
                 });
 });

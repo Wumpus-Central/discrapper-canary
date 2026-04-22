@@ -1,134 +1,131 @@
-"use strict";
-n.d(t, { a: () => p });
-var r = n(835245),
-    i = n(391048),
+n.d(t, {
+    a: () =>
+        function e(t, n) {
+            let { isGift: r, giftRecipient: _, giftingOrigin: m, additionalUserIds: g } = n,
+                {
+                    discoverySessionId: p,
+                    analyticsLocations: f,
+                    guildId: E,
+                    isEligibilityCheckContinuation: x,
+                    checkoutState: I,
+                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                C = c.A.getSKUEligibilityEntry(t.id),
+                b = C?.state,
+                N = !r && null != E && (null == b || "checking" === b || "ineligible" === b);
+            if (!N && !x) {
+                let e = "none";
+                r
+                    ? (e = "gift")
+                    : null == E
+                      ? (e = "no_guild")
+                      : "eligible" === b
+                        ? (e = "already_eligible")
+                        : "error" === b && (e = "prior_error"),
+                    d.default.track(h.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                        sku_id: t.id,
+                        guild_id: E ?? null,
+                        application_id: t.applicationId,
+                        is_gift: r,
+                        eligibility_state: b ?? "none",
+                        skip_reason: e,
+                        error_http_status: C?.state === "error" ? (C.httpStatus ?? null) : null,
+                        location_stack: f,
+                    });
+            }
+            let S = I ?? { hasFinished: !1 };
+            if (N)
+                return void (0, u.L)({
+                    guildId: E,
+                    skuId: t.id,
+                    analyticsLocations: f ?? [],
+                    onContinue: () => {
+                        if (!S.hasFinished)
+                            return e(
+                                t,
+                                { isGift: r, giftRecipient: _, giftingOrigin: m, additionalUserIds: g },
+                                {
+                                    discoverySessionId: p,
+                                    analyticsLocations: f,
+                                    guildId: E,
+                                    isEligibilityCheckContinuation: !0,
+                                    checkoutState: S,
+                                },
+                            );
+                    },
+                });
+            let v = !1,
+                T = (0, i.A)();
+            A({
+                loadId: T,
+                discoverySessionId: p,
+                skuId: t.id,
+                applicationId: t.applicationId,
+                analyticsLocations: f ?? [],
+                isGift: r,
+                giftRecipient: _,
+                giftingOrigin: m,
+                additionalUserIds: g,
+                onCloseCallback: () => {
+                    if (!v) {
+                        let e = (0, o.q1)({
+                            location: "SocialLayerStorefrontPaymentModal",
+                            unifiedCheckoutFlow: a.C.SLAYER_STOREFRONT_CHECKOUT,
+                        });
+                        d.default.track(h.HAw.PAYMENT_FLOW_CANCELED, {
+                            load_id: T,
+                            discovery_session_id: p,
+                            payment_type: h.frM[h.VVm.ONE_TIME],
+                            is_gift: r,
+                            sku_id: t.id,
+                            application_id: t.applicationId,
+                            location_stack: f,
+                            sku_product_line: t.productLine,
+                            checkout_design: e ? o.rS.UNIFIED : o.rS.LEGACY,
+                            checkout_flow: a.C.SLAYER_STOREFRONT_CHECKOUT,
+                        });
+                    }
+                    (0, l.ET)(), (0, s.z)(), (0, u.l)(), (S.hasFinished = !0);
+                },
+                onComplete: () => {
+                    (v = !0), (S.hasFinished = !0);
+                },
+                modalKey: "slayer-payment-modal",
+            });
+        },
+});
+var i = n(835245),
+    l = n(391048),
     s = n(636099),
     a = n(120700),
-    o = n(589078),
-    l = n(742810),
-    u = n(954571),
+    r = n(589078),
+    o = n(742810),
+    d = n(954571),
     c = n(832163),
-    d = n(556808),
-    _ = n(652215);
-let f = "slayer-payment-modal";
-function p(e, t) {
-    let { isGift: n, giftRecipient: o, giftingOrigin: m, additionalUserIds: E } = t,
-        {
-            discoverySessionId: g,
-            analyticsLocations: A,
-            guildId: I,
-            isEligibilityCheckContinuation: T,
-            checkoutState: S,
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        y = c.A.getSKUEligibilityEntry(e.id),
-        v = y?.state,
-        N = !n && null != I && (null == v || "checking" === v || "ineligible" === v);
-    if (!N && !T) {
-        let t = "none";
-        n
-            ? (t = "gift")
-            : null == I
-              ? (t = "no_guild")
-              : "eligible" === v
-                ? (t = "already_eligible")
-                : "error" === v && (t = "prior_error"),
-            u.default.track(_.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
-                sku_id: e.id,
-                guild_id: I ?? null,
-                application_id: e.applicationId,
-                is_gift: n,
-                eligibility_state: v ?? "none",
-                skip_reason: t,
-                error_http_status: y?.state === "error" ? (y.httpStatus ?? null) : null,
-                location_stack: A,
-            });
-    }
-    let C = S ?? { hasFinished: !1 };
-    if (N)
-        return void (0, d.L)({
-            guildId: I,
-            skuId: e.id,
-            analyticsLocations: A ?? [],
-            onContinue: () => {
-                if (!C.hasFinished)
-                    return p(
-                        e,
-                        { isGift: n, giftRecipient: o, giftingOrigin: m, additionalUserIds: E },
-                        {
-                            discoverySessionId: g,
-                            analyticsLocations: A,
-                            guildId: I,
-                            isEligibilityCheckContinuation: !0,
-                            checkoutState: C,
-                        },
-                    );
-            },
-        });
-    let R = !1,
-        O = (0, r.A)(),
-        b = () => {
-            if (!R) {
-                let t = (0, l.q1)({
-                    location: "SocialLayerStorefrontPaymentModal",
-                    unifiedCheckoutFlow: a.C.SLAYER_STOREFRONT_CHECKOUT,
-                });
-                u.default.track(_.HAw.PAYMENT_FLOW_CANCELED, {
-                    load_id: O,
-                    discovery_session_id: g,
-                    payment_type: _.frM[_.VVm.ONE_TIME],
-                    is_gift: n,
-                    sku_id: e.id,
-                    application_id: e.applicationId,
-                    location_stack: A,
-                    sku_product_line: e.productLine,
-                    checkout_design: t ? l.rS.UNIFIED : l.rS.LEGACY,
-                    checkout_flow: a.C.SLAYER_STOREFRONT_CHECKOUT,
-                });
-            }
-            (0, i.ET)(), (0, s.z)(), (0, d.l)(), (C.hasFinished = !0);
-        },
-        D = () => {
-            (R = !0), (C.hasFinished = !0);
-        },
-        L = {
-            loadId: O,
-            discoverySessionId: g,
-            skuId: e.id,
-            applicationId: e.applicationId,
-            analyticsLocations: A ?? [],
-            isGift: n,
-            giftRecipient: o,
-            giftingOrigin: m,
-            additionalUserIds: E,
-            onCloseCallback: b,
-            onComplete: D,
-            modalKey: f,
-        };
-    h(L);
-}
-let h = (e) => {
+    u = n(556808),
+    h = n(652215);
+let A = (e) => {
     let {
         loadId: t,
         discoverySessionId: n,
-        applicationId: r,
-        skuId: i,
+        applicationId: i,
+        skuId: l,
         analyticsLocations: s,
         isGift: a,
-        giftRecipient: l,
-        additionalUserIds: u,
+        giftRecipient: o,
+        additionalUserIds: d,
         giftingOrigin: c,
-        onCloseCallback: d,
-        onComplete: _,
-        modalKey: f,
+        onCloseCallback: u,
+        onComplete: h,
+        modalKey: A,
     } = e;
-    return (0, o.KY)().openCheckoutModal({
+    return (0, r.KY)().openCheckoutModal({
         loadId: t,
         discoverySessionId: n,
-        applicationId: r,
-        skuId: i,
+        applicationId: i,
+        skuId: l,
         analyticsLocations: s,
-        onComplete: _,
-        giftContextProps: { isGift: a, giftRecipient: l, giftingOrigin: c, additionalUserIds: u },
-        openModalOptions: { modalKey: f, onCloseCallback: d },
+        onComplete: h,
+        giftContextProps: { isGift: a, giftRecipient: o, giftingOrigin: c, additionalUserIds: d },
+        openModalOptions: { modalKey: A, onCloseCallback: u },
     });
 };

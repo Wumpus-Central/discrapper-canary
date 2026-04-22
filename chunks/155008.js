@@ -1,66 +1,66 @@
-"use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var i = n(627968),
-    s = n(64700),
-    l = n(311907),
+    l = n(64700),
+    s = n(311907),
     r = n(554146),
-    a = n(397927),
-    o = n(826673),
-    d = n(774780),
-    c = n(532197),
-    u = n(71393),
-    m = n(555337),
-    g = n(203498),
+    a = n(939249),
+    o = n(834730),
+    d = n(826673),
+    c = n(774780),
+    u = n(532197),
+    m = n(71393),
+    g = n(555337),
+    h = n(203498),
     x = n(982832),
-    h = n(660496),
-    _ = n(88613),
+    _ = n(660496),
+    p = n(88613),
     A = n(807334),
-    p = n(5558),
+    E = n(5558),
     f = n(49999),
     j = n(985018),
-    N = n(690450);
-function E() {
+    N = n(101839);
+function I() {
     let e,
-        t = (0, l.bG)([m.A], () => m.A.getGuildId()),
-        n = (0, l.bG)([u.A], () => u.A.getGuild(t)),
-        E = (0, l.bG)([x.A], () => x.A.getCurrentPage());
+        t = (0, s.bG)([g.A], () => g.A.getGuildId()),
+        n = (0, s.bG)([m.A], () => m.A.getGuild(t)),
+        I = (0, s.bG)([x.A], () => x.A.getCurrentPage());
     if (
-        (s.useEffect(() => {
-            (0, o.Dr)(r.M.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: f.i.AUTO });
+        (l.useEffect(() => {
+            (0, d.Dr)(r.M.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: f.i.AUTO });
         }, []),
         null == n)
     )
         return null;
-    let b = (0, p.N)(n);
-    switch (E) {
-        case h.C.OVERVIEW:
-            e = (0, i.jsx)(_.A, { guild: n });
+    let C = (0, E.N)(n);
+    switch (I) {
+        case _.C.OVERVIEW:
+            e = (0, i.jsx)(p.A, { guild: n });
             break;
-        case h.C.CAPTCHA_AND_RAID_PROTECTION:
-            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t["53eF5o"]), settings: b[h.C.CAPTCHA_AND_RAID_PROTECTION] });
+        case _.C.CAPTCHA_AND_RAID_PROTECTION:
+            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t["53eF5o"]), settings: C[_.C.CAPTCHA_AND_RAID_PROTECTION] });
             break;
-        case h.C.DM_AND_SPAM_PROTECTION:
-            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t.O0SfFy), settings: b[h.C.DM_AND_SPAM_PROTECTION] });
+        case _.C.DM_AND_SPAM_PROTECTION:
+            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t.O0SfFy), settings: C[_.C.DM_AND_SPAM_PROTECTION] });
             break;
-        case h.C.AUTOMOD:
-            e = (0, i.jsx)(d.A, { guildId: n.id });
+        case _.C.AUTOMOD:
+            e = (0, i.jsx)(c.A, { guildId: n.id });
             break;
-        case h.C.PERMISSIONS:
-            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t.BXoNiT), settings: b[h.C.PERMISSIONS] });
+        case _.C.PERMISSIONS:
+            e = (0, i.jsx)(A.A, { title: j.intl.string(j.t.BXoNiT), settings: C[_.C.PERMISSIONS] });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            E !== h.C.OVERVIEW &&
-                (0, i.jsx)(a.DUT, {
+            I !== _.C.OVERVIEW &&
+                (0, i.jsx)(a.D, {
                     className: N.aX,
                     onClick: () => {
-                        (0, g.K)(h.C.OVERVIEW);
+                        (0, h.K)(_.C.OVERVIEW);
                     },
                     children: (0, i.jsxs)("div", {
                         className: N.Gv,
                         children: [
-                            (0, i.jsx)(c.A, { direction: c.A.Directions.LEFT }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(u.A, { direction: u.A.Directions.LEFT }),
+                            (0, i.jsx)(o.E, {
                                 variant: "text-sm/semibold",
                                 color: "interactive-text-default",
                                 children: j.intl.string(j.t["13/7kX"]),

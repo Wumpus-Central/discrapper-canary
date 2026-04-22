@@ -1,45 +1,43 @@
 "use strict";
 n.d(t, {
-    KW: () => f,
-    M0: () => c,
-    Nl: () => h,
-    QQ: () => d,
-    UD: () => p,
-    Uk: () => _,
-    ZY: () => a,
-    gg: () => m,
-    uL: () => l,
-    z: () => u,
+    KW: () => c,
+    M0: () => l,
+    Nl: () => f,
+    QQ: () => u,
+    UD: () => _,
+    Uk: () => d,
+    ZY: () => s,
+    gg: () => E,
+    uL: () => a,
+    z: () => o,
 });
 var r = n(824120),
     i = n.n(r);
-let a = 14200704e5,
-    s = 4095,
-    o = 22;
-function l(e) {
-    return Math.floor(Number(e) / 2 ** o) + a;
+let s = 14200704e5;
+function a(e) {
+    return Math.floor(Number(e) / 4194304) + s;
 }
-function u(e) {
-    let t = e - a;
-    return t <= 0 ? "0" : i()(t).shiftLeft(o).toString();
+function o(e) {
+    let t = e - s;
+    return t <= 0 ? "0" : i()(t).shiftLeft(22).toString();
 }
-function c(e, t) {
-    let n = e - a;
+function l(e, t) {
+    let n = e - s;
     return i()(n <= 0 ? 0 : n)
-        .shiftLeft(o)
+        .shiftLeft(22)
         .add(t.next())
         .toString();
 }
+function u(e) {
+    return o(a(e) - 1);
+}
 function d(e) {
-    return u(l(e) - 1);
+    return o(a(e) + 1);
 }
-function _(e) {
-    return u(l(e) + 1);
+function c(e) {
+    return Date.now() - a(e);
 }
-function f(e) {
-    return Date.now() - l(e);
-}
-function p(e, t) {
+function _(e, t) {
     return e === t
         ? 0
         : null == t
@@ -54,25 +52,25 @@ function p(e, t) {
                   ? 1
                   : -1;
 }
-function h(e) {
+function f(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
     try {
-        return l(e) >= a;
+        return a(e) >= s;
     } catch {
         return !1;
     }
 }
-class m {
+class E {
     seq;
     constructor() {
         this.seq = 0;
     }
     next() {
-        if (this.seq > s) throw Error(`Snowflake sequence number overflow: ${this.seq}`);
+        if (this.seq > 4095) throw Error(`Snowflake sequence number overflow: ${this.seq}`);
         return this.seq++;
     }
     willOverflowNext() {
-        return this.seq > s;
+        return this.seq > 4095;
     }
     reset() {
         this.seq = 0;

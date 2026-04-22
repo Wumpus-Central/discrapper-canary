@@ -1,23 +1,25 @@
-n.d(e, { default: () => S });
-var r = n(627968),
-    i = n(64700),
-    l = n(158954),
-    a = n(311907),
-    s = n(397927),
-    A = n(47167),
-    u = n(734057),
-    c = n(808728),
-    d = n(994500),
-    E = n(287809),
-    o = n(239705),
-    N = n(985018);
-let h = (t) => {
-    let { guildId: e, channel: n, onSelectChannel: i } = t,
-        l = (0, a.yK)(
-            [c.Ay],
+l.d(e, { default: () => C });
+var n = l(627968),
+    i = l(64700),
+    r = l(189213),
+    a = l(311907),
+    s = l(783878),
+    c = l(331322),
+    A = l(834730),
+    u = l(47167),
+    d = l(734057),
+    o = l(808728),
+    h = l(994500),
+    E = l(287809),
+    N = l(239705),
+    g = l(985018);
+let _ = (t) => {
+    let { guildId: e, channel: l, onSelectChannel: i } = t,
+        r = (0, a.yK)(
+            [o.Ay],
             () =>
-                c.Ay.getChannels(e)
-                    [c.I6].filter((t) => {
+                o.Ay.getChannels(e)
+                    [o.I6].filter((t) => {
                         let { channel: e } = t;
                         return !e.isGuildVocal() && !e.isThread() && !e.isForumLikeChannel();
                     })
@@ -27,62 +29,62 @@ let h = (t) => {
                     }),
             [e],
         );
-    return (0, r.jsx)(s.ZiE, {
+    return (0, n.jsx)(s.Z, {
         required: !0,
-        value: n?.id,
-        options: l.map((t) => ({ id: t.id, value: t.id, label: (0, A.m1)(t, E.default, d.A, !0) })),
+        value: l?.id,
+        options: r.map((t) => ({ id: t.id, value: t.id, label: (0, u.m1)(t, E.default, h.A, !0) })),
         onSelectionChange: (t) => {
-            i(l.find((e) => e.id === t) ?? void 0);
+            i(r.find((e) => e.id === t) ?? void 0);
         },
-        placeholder: N.intl.string(N.t["N+T69y"]),
+        placeholder: g.intl.string(g.t["N+T69y"]),
         selectionMode: "single",
     });
 };
-function S(t) {
-    let { action: e, triggerType: n, guildId: A, isEdit: c, onEditChannel: d, onClose: E, transitionState: S } = t,
-        [_, C] = i.useState(e.metadata.channelId),
-        [g, H] = i.useState(null),
-        I = (0, a.bG)([u.A], () => u.A.getChannel(_), [_]),
-        L = (0, o.x)(e.type, e, n);
-    if (null == L) return null;
-    let { headerText: T } = L;
-    return (0, r.jsx)(l.Modal, {
-        onClose: E,
-        transitionState: S,
-        title: T,
-        subtitle: N.intl.string(N.t["z/ZF2i"]),
+function C(t) {
+    let { action: e, triggerType: l, guildId: s, isEdit: u, onEditChannel: o, onClose: h, transitionState: E } = t,
+        [C, S] = i.useState(e.metadata.channelId),
+        [I, L] = i.useState(null),
+        f = (0, a.bG)([d.A], () => d.A.getChannel(C), [C]),
+        x = (0, N.x)(e.type, e, l);
+    if (null == x) return null;
+    let { headerText: H } = x;
+    return (0, n.jsx)(r.Modal, {
+        onClose: h,
+        transitionState: E,
+        title: H,
+        subtitle: g.intl.string(g.t["z/ZF2i"]),
         actions: [
             {
-                text: N.intl.string(N.t["ETE/oC"]),
+                text: g.intl.string(g.t["ETE/oC"]),
                 onClick: () => {
-                    E();
+                    h();
                 },
                 variant: "secondary",
             },
             {
-                text: c ? N.intl.string(N.t.bt75uw) : N.intl.string(N.t["R3BPH+"]),
+                text: u ? g.intl.string(g.t.bt75uw) : g.intl.string(g.t["R3BPH+"]),
                 onClick: () => {
-                    null == _ ? H(N.intl.string(N.t.lM1NLh)) : d(_);
+                    null == C ? L(g.intl.string(g.t.lM1NLh)) : o(C);
                 },
             },
         ],
-        children: (0, r.jsxs)(s.BJc, {
+        children: (0, n.jsxs)(c.B, {
             gap: 8,
             direction: "vertical",
             children: [
-                (0, r.jsx)(h, {
-                    guildId: A,
-                    channel: I,
+                (0, n.jsx)(_, {
+                    guildId: s,
+                    channel: f,
                     onSelectChannel: (t) => {
-                        null != t && C(t.id);
+                        null != t && S(t.id);
                     },
                 }),
-                null != g
-                    ? (0, r.jsx)(s.Text, { color: "text-feedback-critical", variant: "text-sm/normal", children: g })
-                    : (0, r.jsx)(s.Text, {
+                null != I
+                    ? (0, n.jsx)(A.E, { color: "text-feedback-critical", variant: "text-sm/normal", children: I })
+                    : (0, n.jsx)(A.E, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: N.intl.string(N.t["ric+5q"]),
+                          children: g.intl.string(g.t["ric+5q"]),
                       }),
             ],
         }),

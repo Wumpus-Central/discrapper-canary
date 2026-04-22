@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ME: () => f, Z1: () => c, oS: () => u });
+n.d(t, { ME: () => c, Z1: () => d, oS: () => u });
 var r = n(311907),
     i = n(287809),
     s = n(615405),
@@ -14,18 +14,12 @@ function u() {
         return null != e && o.has(e);
     });
 }
-function c() {
+function d() {
     let e = l();
     return null != e && o.has(e);
 }
-function d(e) {
-    return null != e;
-}
-function _(e) {
-    return null != e && e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
-}
-function f(e) {
-    let t = d(e?.id),
-        n = _(e);
+function c(e) {
+    let t = null != e?.id,
+        n = null != e && e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
     return t || n;
 }

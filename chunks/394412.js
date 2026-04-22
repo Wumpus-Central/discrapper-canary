@@ -1,63 +1,64 @@
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
-var l = n(311907),
-    s = n(827734),
-    a = n(397927),
-    r = n(931991),
-    o = n(734057),
-    d = n(87401),
-    c = n(707592),
-    u = n(698441),
-    h = n(935159),
-    A = n(508654),
-    _ = n(974930),
-    m = n(47868),
-    g = n(985018),
-    p = n(275237);
-function f(e) {
-    let { channelId: t, showDismiss: f = !0 } = e,
-        x = (0, l.bG)([o.A], () => o.A.getChannel(t), [t]),
-        E = (0, A.RO)(t),
-        I = null != (0, A.Qs)(t),
-        { canManageGuildEvent: C } = (0, r.nr)(x),
-        N = (0, l.bG)([d.A], () => E.filter((e) => !d.A.isEventDismissed(e.id)), [E]),
-        T = (0, l.cf)([u.Ay], () => N.reduce((e, t) => ((e[t.id] = u.Ay.getUserCount(t.id, (0, _.G3)(t))), e), {}), [
-            N,
+t.d(n, { A: () => E });
+var l = t(627968);
+t(64700);
+var i = t(311907),
+    a = t(827734),
+    s = t(192308),
+    r = t(81466),
+    o = t(931991),
+    c = t(734057),
+    u = t(87401),
+    d = t(707592),
+    A = t(698441),
+    h = t(935159),
+    p = t(508654),
+    m = t(974930),
+    g = t(47868),
+    f = t(985018),
+    C = t(282741);
+function E(e) {
+    let { channelId: n, showDismiss: E = !0 } = e,
+        v = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
+        I = (0, p.RO)(n),
+        x = null != (0, p.Qs)(n),
+        { canManageGuildEvent: T } = (0, o.nr)(v),
+        _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
+        j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, m.G3)(n))), e), {}), [
+            _,
         ]);
-    return N.length < 1 || I
+    return _.length < 1 || x
         ? null
-        : (0, i.jsx)(i.Fragment, {
-              children: N.map((e) =>
-                  (0, i.jsx)(
-                      m.A,
+        : (0, l.jsx)(l.Fragment, {
+              children: _.map((e) =>
+                  (0, l.jsx)(
+                      g.A,
                       {
-                          icon: (0, i.jsx)(a.CTc, { size: "custom", color: "currentColor", height: 20, width: 20 }),
-                          color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: g.intl.formatToPlainString(C(e) ? g.t["1vGXqM"] : g.t.xMJyla, { eventName: e.name }),
-                          description: g.intl.formatToPlainString(g.t.PTebCR, {
-                              startTime: (0, _.CC)(e.scheduled_start_time).startDateTimeString,
+                          icon: (0, l.jsx)(r.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+                          color: a.A.unsafe_rawColors.GREEN_360.css,
+                          title: f.intl.formatToPlainString(T(e) ? f.t["1vGXqM"] : f.t.xMJyla, { eventName: e.name }),
+                          description: f.intl.formatToPlainString(f.t.PTebCR, {
+                              startTime: (0, m.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              C(e)
-                                  ? (0, a.mMO)(async () => {
-                                        let { default: t } = await Promise.all([
-                                            n.e("51354"),
-                                            n.e("77223"),
-                                            n.e("93676"),
-                                        ]).then(n.bind(n, 199226));
-                                        return (n) => (0, i.jsx)(t, { ...n, event: e });
+                              T(e)
+                                  ? (0, s.openModalLazy)(async () => {
+                                        let { default: n } = await Promise.all([
+                                            t.e("51354"),
+                                            t.e("77223"),
+                                            t.e("30020"),
+                                        ]).then(t.bind(t, 199226));
+                                        return (t) => (0, l.jsx)(n, { ...t, event: e });
                                     })
-                                  : (0, c.uR)({ eventId: e.id });
+                                  : (0, d.uR)({ eventId: e.id });
                           },
-                          onDismiss: f
+                          onDismiss: E
                               ? () => {
-                                    var t;
-                                    return (t = e.id), void (0, h.Nt)(t);
+                                    var n;
+                                    return (n = e.id), void (0, h.Nt)(n);
                                 }
                               : void 0,
-                          userCount: T[e.id],
-                          className: p.f,
+                          userCount: j[e.id],
+                          className: C.f,
                       },
                       e.id,
                   ),

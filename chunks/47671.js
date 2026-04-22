@@ -1,61 +1,35 @@
 "use strict";
 let r, i;
-n.d(t, { A: () => P });
-var a = n(311907),
-    s = n(554146),
+n.d(t, { A: () => D });
+var s = n(311907),
+    a = n(554146),
     o = n(73153),
     l = n(826673),
     u = n(284016),
-    c = n(973654),
-    d = n(544028),
+    d = n(973654),
+    c = n(544028),
     _ = n(964404),
     f = n(253932),
-    p = n(617617),
+    E = n(617617),
     h = n(95701),
-    m = n(734057),
-    g = n(287809),
-    E = n(927578),
+    p = n(734057),
+    m = n(287809),
+    g = n(927578),
     A = n(427262),
     I = n(644235),
     T = n(385803),
-    y = n(185928);
-let S = !0,
-    v = !1,
-    C = (e) => {
-        let { presetId: t } = e;
-        if (null == t) {
-            r = void 0;
-            return;
-        }
-        r = T.ag[t];
-    },
-    b = (e) => {
-        let { mobileThemesIndex: t } = e;
-        if (null == t) {
-            i = void 0;
-            return;
-        }
-        i = t;
-    },
-    N = (e) => {
-        r = void 0;
-    },
-    R = (e) => {
-        let { channelId: t, guildId: n } = e,
-            r = g.default.getCurrentUser();
-        if (null == t || null == n || (0, l.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, A.G2)(r)) return;
-        let i = m.A.getChannel(t);
-        null != i && (0, h.ke)(i.type) && (v = !0);
-    };
+    S = n(185928);
+let y = !0,
+    N = !1;
 function O() {
-    S && (r = void 0), (v = !1);
+    y && (r = void 0), (N = !1);
 }
-let D = () => {
-        let e = !E.Ay.canUseClientThemes(g.default.getCurrentUser());
-        if (e === S) return !1;
-        S = e;
+let R = () => {
+        let e = !g.Ay.canUseClientThemes(m.default.getCurrentUser());
+        if (e === y) return !1;
+        y = e;
     },
-    L = () => {
+    v = () => {
         if (!u.A.shouldSync("appearance")) return !1;
         let e = f.eh.getSetting().backgroundGradientPresetId;
         if (null == e) {
@@ -67,10 +41,10 @@ let D = () => {
             r = t;
         }
     },
-    w = () => {
+    C = () => {
         if (!u.A.shouldSync("appearance")) return !1;
         let e = f.eh.getSetting().backgroundGradientPresetId;
-        if ((_.Ay.useSystemTheme === y.Q_.ON && null != e && (0, c.k7)(y.Q_.OFF), null == e)) {
+        if ((_.Ay.useSystemTheme === S.Q_.ON && null != e && (0, d.k7)(S.Q_.OFF), null == e)) {
             null != r && (r = void 0);
             return;
         }
@@ -78,18 +52,18 @@ let D = () => {
             n = r?.id === t?.id;
         null == t || n || (r = t);
     };
-class x extends a.Ay.PersistedStore {
+class b extends s.Ay.PersistedStore {
     static displayName = "ClientThemesBackgroundStore";
     static persistKey = "ClientThemesBackgroundStore";
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
     initialize(e) {
         null != e && (r = e?.gradientPresetId != null ? T.ag[e.gradientPresetId] : void 0),
-            this.waitFor(m.A, u.A, d.A, _.Ay, p.A, g.default),
-            this.syncWith([g.default], D),
-            this.syncWith([u.A], L);
+            this.waitFor(p.A, u.A, c.A, _.Ay, E.A, m.default),
+            this.syncWith([m.default], R),
+            this.syncWith([u.A], v);
     }
     getState() {
-        return S ? {} : { gradientPresetId: r?.id };
+        return y ? {} : { gradientPresetId: r?.id };
     }
     get gradientPreset() {
         return r;
@@ -98,26 +72,48 @@ class x extends a.Ay.PersistedStore {
         return null == this.gradientPreset ? null : (0, I.FK)(this.gradientPreset);
     }
     get isPreview() {
-        return S;
+        return y;
     }
     get isCoachmark() {
-        return v;
+        return N;
     }
     get mobilePendingThemeIndex() {
         return i;
     }
 }
-let P = new x(o.h, {
-    UPDATE_BACKGROUND_GRADIENT_PRESET: C,
-    UPDATE_MOBILE_PENDING_THEME_INDEX: b,
-    RESET_PREVIEW_CLIENT_THEME: N,
+let D = new b(o.h, {
+    UPDATE_BACKGROUND_GRADIENT_PRESET: (e) => {
+        let { presetId: t } = e;
+        if (null == t) {
+            r = void 0;
+            return;
+        }
+        r = T.ag[t];
+    },
+    UPDATE_MOBILE_PENDING_THEME_INDEX: (e) => {
+        let { mobileThemesIndex: t } = e;
+        if (null == t) {
+            i = void 0;
+            return;
+        }
+        i = t;
+    },
+    RESET_PREVIEW_CLIENT_THEME: (e) => {
+        r = void 0;
+    },
     CLIENT_THEMES_EDITOR_CLOSE: O,
-    CHANNEL_SELECT: R,
+    CHANNEL_SELECT: (e) => {
+        let { channelId: t, guildId: n } = e,
+            r = m.default.getCurrentUser();
+        if (null == t || null == n || (0, l.k8)(a.M.CLIENT_THEMES_COACHMARK) || !(0, A.G2)(r)) return;
+        let i = p.A.getChannel(t);
+        null != i && (0, h.ke)(i.type) && (N = !0);
+    },
     LOGOUT: O,
-    CACHE_LOADED: w,
-    CONNECTION_OPEN: w,
-    OVERLAY_INITIALIZE: w,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: w,
-    UNSYNCED_USER_SETTINGS_UPDATE: w,
-    USER_SETTINGS_PROTO_UPDATE: w,
+    CACHE_LOADED: C,
+    CONNECTION_OPEN: C,
+    OVERLAY_INITIALIZE: C,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: C,
+    UNSYNCED_USER_SETTINGS_UPDATE: C,
+    USER_SETTINGS_PROTO_UPDATE: C,
 });

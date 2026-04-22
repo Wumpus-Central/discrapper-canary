@@ -1,246 +1,236 @@
 "use strict";
-n.d(t, { J: () => R }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    s = n(435371),
-    a = n(397927),
-    o = n(957565),
-    l = n(265486),
-    u = n(239957);
-function c(e) {
-    return isFinite(e) ? e.toFixed(1) + "s" : "Live";
-}
-function d(e) {
-    return null === e ? "N/A" : `${e} fps`;
-}
-function _(e, t) {
-    let n = [];
-    return (!0 === e && n.push("Progressive"), !0 === t && n.push("Fragmented"), 0 === n.length)
-        ? "Standard"
-        : n.join(", ");
-}
-let f = "Stats for Nerds",
-    p = "Close",
-    h = "Copy to JSON",
-    m = "Copied!",
-    E = "Resolution",
-    g = "Viewport",
-    A = "Video",
-    I = "Audio",
-    T = "Audio Channels",
-    S = "Container",
-    y = "Format",
-    v = "Buffer Health",
-    N = "Error";
-function C(e) {
-    return JSON.stringify(
-        {
-            media: {
-                video: {
-                    codec: e.codecInfo?.videoCodecDescription ?? e.codecInfo?.videoCodec,
-                    codecRaw: e.codecInfo?.videoCodec,
-                    bitRate: e.codecInfo?.videoBitrate != null ? Math.round(e.codecInfo.videoBitrate) : null,
-                    frameRate: e.frameRate,
-                    width: e.videoWidth,
-                    height: e.videoHeight,
-                },
-                audio: {
-                    codec: e.codecInfo?.audioCodecDescription ?? e.codecInfo?.audioCodec,
-                    codecRaw: e.codecInfo?.audioCodec,
-                    bitRate: e.codecInfo?.audioBitrate != null ? Math.round(e.codecInfo.audioBitrate) : null,
-                    channels: e.codecInfo?.audioChannels,
-                    sampleRate: e.codecInfo?.audioSampleRate,
-                },
-                fileSizeBytes: e.fileSizeBytes,
-                durationSeconds: e.duration,
-                containerFormat: e.codecInfo?.containerFormat,
-                isProgressive: e.codecInfo?.isProgressive,
-                isFragmented: e.codecInfo?.isFragmented,
-            },
-            playback: {
-                viewportWidth: e.viewportWidth,
-                viewportHeight: e.viewportHeight,
-                currentTimeSeconds: e.currentTime,
-                bufferedSeconds: e.bufferedSeconds,
-                droppedFrames: e.droppedFrames,
-                totalDecodedFrames: e.totalFrames,
-                droppedFramesPercent:
-                    null != e.droppedFramesPercent ? parseFloat(e.droppedFramesPercent.toFixed(2)) : null,
-                errorCode: e.errorCode,
-                errorMessage: e.errorMessage,
-            },
-        },
-        null,
-        2,
-    );
-}
-function R(e) {
-    let { stats: t, onClose: n } = e,
-        [R, O] = i.useState(!1),
-        b = i.useRef(null);
-    i.useEffect(
+n.d(t, { J: () => f }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(990078),
+    r = n(939249),
+    a = n(624479),
+    o = n(789645),
+    c = n(957565),
+    u = n(43105),
+    d = n(239957);
+let h = "Close",
+    m = "Copy to JSON",
+    p = "Copied!";
+function f(e) {
+    var t, n, f, g;
+    let _,
+        { stats: x, onClose: A } = e,
+        [C, E] = l.useState(!1),
+        I = l.useRef(null);
+    l.useEffect(
         () => () => {
-            null != b.current && clearTimeout(b.current);
+            null != I.current && clearTimeout(I.current);
         },
         [],
     );
-    let D = i.useCallback(() => {
-        let e = C(t);
-        (0, o.C)(
+    let v = l.useCallback(() => {
+        let e = JSON.stringify(
+            {
+                media: {
+                    video: {
+                        codec: x.codecInfo?.videoCodecDescription ?? x.codecInfo?.videoCodec,
+                        codecRaw: x.codecInfo?.videoCodec,
+                        bitRate: x.codecInfo?.videoBitrate != null ? Math.round(x.codecInfo.videoBitrate) : null,
+                        frameRate: x.frameRate,
+                        width: x.videoWidth,
+                        height: x.videoHeight,
+                    },
+                    audio: {
+                        codec: x.codecInfo?.audioCodecDescription ?? x.codecInfo?.audioCodec,
+                        codecRaw: x.codecInfo?.audioCodec,
+                        bitRate: x.codecInfo?.audioBitrate != null ? Math.round(x.codecInfo.audioBitrate) : null,
+                        channels: x.codecInfo?.audioChannels,
+                        sampleRate: x.codecInfo?.audioSampleRate,
+                    },
+                    fileSizeBytes: x.fileSizeBytes,
+                    durationSeconds: x.duration,
+                    containerFormat: x.codecInfo?.containerFormat,
+                    isProgressive: x.codecInfo?.isProgressive,
+                    isFragmented: x.codecInfo?.isFragmented,
+                },
+                playback: {
+                    viewportWidth: x.viewportWidth,
+                    viewportHeight: x.viewportHeight,
+                    currentTimeSeconds: x.currentTime,
+                    bufferedSeconds: x.bufferedSeconds,
+                    droppedFrames: x.droppedFrames,
+                    totalDecodedFrames: x.totalFrames,
+                    droppedFramesPercent:
+                        null != x.droppedFramesPercent ? parseFloat(x.droppedFramesPercent.toFixed(2)) : null,
+                    errorCode: x.errorCode,
+                    errorMessage: x.errorMessage,
+                },
+            },
+            null,
+            2,
+        );
+        (0, c.C)(
             e,
             () => {
-                O(!0),
-                    null != b.current && clearTimeout(b.current),
-                    (b.current = window.setTimeout(() => {
-                        O(!1), (b.current = null);
+                E(!0),
+                    null != I.current && clearTimeout(I.current),
+                    (I.current = window.setTimeout(() => {
+                        E(!1), (I.current = null);
                     }, 2e3));
             },
             () => {},
         );
-    }, [t]);
-    return (0, r.jsxs)("div", {
-        className: u.gP,
+    }, [x]);
+    return (0, i.jsxs)("div", {
+        className: d.gP,
         children: [
-            (0, r.jsxs)("div", {
-                className: u.wx,
+            (0, i.jsxs)("div", {
+                className: d.wx,
                 children: [
-                    (0, r.jsx)("div", { className: u.DD, children: f }),
-                    (0, r.jsxs)("div", {
-                        className: u.Pz,
+                    (0, i.jsx)("div", { className: d.DD, children: "Stats for Nerds" }),
+                    (0, i.jsxs)("div", {
+                        className: d.Pz,
                         children: [
-                            (0, r.jsx)(s.m_, {
-                                text: R ? m : h,
-                                children: (0, r.jsx)(a.DUT, {
-                                    className: u.cL,
-                                    onClick: D,
-                                    "aria-label": R ? m : h,
+                            (0, i.jsx)(s.m, {
+                                text: C ? p : m,
+                                children: (0, i.jsx)(r.D, {
+                                    className: d.cL,
+                                    onClick: v,
+                                    "aria-label": C ? p : m,
                                     focusProps: { offset: 2 },
-                                    children: (0, r.jsx)(a.TdU, { size: "md", color: "currentColor" }),
+                                    children: (0, i.jsx)(a.T, { size: "md", color: "currentColor" }),
                                 }),
                             }),
-                            (0, r.jsx)(s.m_, {
-                                text: p,
-                                children: (0, r.jsx)(a.DUT, {
-                                    className: u.b,
-                                    onClick: n,
-                                    "aria-label": p,
+                            (0, i.jsx)(s.m, {
+                                text: h,
+                                children: (0, i.jsx)(r.D, {
+                                    className: d.b,
+                                    onClick: A,
+                                    "aria-label": h,
                                     focusProps: { offset: 2 },
-                                    children: (0, r.jsx)(a.PGe, { size: "md", color: "currentColor" }),
+                                    children: (0, i.jsx)(o.P, { size: "md", color: "currentColor" }),
                                 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: u.Qs,
+            (0, i.jsxs)("div", {
+                className: d.Qs,
                 children: [
-                    t.codecInfo?.containerFormat != null &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    x.codecInfo?.containerFormat != null &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: S }),
-                                (0, r.jsx)("span", { className: u.cR, children: t.codecInfo.containerFormat }),
+                                (0, i.jsx)("span", { className: d.Zh, children: "Container" }),
+                                (0, i.jsx)("span", { className: d.cR, children: x.codecInfo.containerFormat }),
                             ],
                         }),
-                    (t.codecInfo?.isProgressive != null || t.codecInfo?.isFragmented != null) &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    (x.codecInfo?.isProgressive != null || x.codecInfo?.isFragmented != null) &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: y }),
-                                (0, r.jsx)("span", {
-                                    className: u.cR,
-                                    children: _(t.codecInfo.isProgressive ?? null, t.codecInfo.isFragmented ?? null),
+                                (0, i.jsx)("span", { className: d.Zh, children: "Format" }),
+                                (0, i.jsx)("span", {
+                                    className: d.cR,
+                                    children:
+                                        ((t = x.codecInfo.isProgressive ?? null),
+                                        (n = x.codecInfo.isFragmented ?? null),
+                                        (_ = []),
+                                        (!0 === t && _.push("Progressive"),
+                                        !0 === n && _.push("Fragmented"),
+                                        0 === _.length)
+                                            ? "Standard"
+                                            : _.join(", ")),
                                 }),
                             ],
                         }),
-                    null != t.codecInfo &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    null != x.codecInfo &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: E }),
-                                (0, r.jsxs)("span", {
-                                    className: u.cR,
+                                (0, i.jsx)("span", { className: d.Zh, children: "Resolution" }),
+                                (0, i.jsxs)("span", {
+                                    className: d.cR,
                                     children: [
-                                        t.resolution,
+                                        x.resolution,
                                         " @ ",
-                                        d(t.frameRate),
-                                        t.droppedFrames > 0 && ` (${t.droppedFrames} dropped)`,
+                                        null === (f = x.frameRate) ? "N/A" : `${f} fps`,
+                                        x.droppedFrames > 0 && ` (${x.droppedFrames} dropped)`,
                                     ],
                                 }),
                             ],
                         }),
-                    null != t.codecInfo &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    null != x.codecInfo &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: g }),
-                                (0, r.jsxs)("span", {
-                                    className: u.cR,
-                                    children: [t.viewportWidth, "x", t.viewportHeight],
+                                (0, i.jsx)("span", { className: d.Zh, children: "Viewport" }),
+                                (0, i.jsxs)("span", {
+                                    className: d.cR,
+                                    children: [x.viewportWidth, "x", x.viewportHeight],
                                 }),
                             ],
                         }),
-                    t.codecInfo?.videoCodec != null &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    x.codecInfo?.videoCodec != null &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: A }),
-                                (0, r.jsxs)("span", {
-                                    className: u.cR,
+                                (0, i.jsx)("span", { className: d.Zh, children: "Video" }),
+                                (0, i.jsxs)("span", {
+                                    className: d.cR,
                                     children: [
-                                        t.codecInfo.videoCodecDescription ?? t.codecInfo.videoCodec ?? "Unknown",
-                                        null != t.codecInfo.videoBitrate && ` @ ${(0, l.BZ)(t.codecInfo.videoBitrate)}`,
+                                        x.codecInfo.videoCodecDescription ?? x.codecInfo.videoCodec ?? "Unknown",
+                                        null != x.codecInfo.videoBitrate && ` @ ${(0, u.BZ)(x.codecInfo.videoBitrate)}`,
                                     ],
                                 }),
                             ],
                         }),
-                    t.codecInfo?.audioCodec != null &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    x.codecInfo?.audioCodec != null &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: I }),
-                                (0, r.jsxs)("span", {
-                                    className: u.cR,
+                                (0, i.jsx)("span", { className: d.Zh, children: "Audio" }),
+                                (0, i.jsxs)("span", {
+                                    className: d.cR,
                                     children: [
-                                        t.codecInfo.audioCodecDescription ?? t.codecInfo.audioCodec ?? "Unknown",
-                                        null != t.codecInfo.audioBitrate && ` @ ${(0, l.BZ)(t.codecInfo.audioBitrate)}`,
+                                        x.codecInfo.audioCodecDescription ?? x.codecInfo.audioCodec ?? "Unknown",
+                                        null != x.codecInfo.audioBitrate && ` @ ${(0, u.BZ)(x.codecInfo.audioBitrate)}`,
                                     ],
                                 }),
                             ],
                         }),
-                    t.codecInfo?.audioChannels != null &&
-                        (0, r.jsxs)("div", {
-                            className: u.N8,
+                    x.codecInfo?.audioChannels != null &&
+                        (0, i.jsxs)("div", {
+                            className: d.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: T }),
-                                (0, r.jsxs)("span", {
-                                    className: u.cR,
+                                (0, i.jsx)("span", { className: d.Zh, children: "Audio Channels" }),
+                                (0, i.jsxs)("span", {
+                                    className: d.cR,
                                     children: [
-                                        (0, l.At)(t.codecInfo.audioChannels),
-                                        null != t.codecInfo.audioSampleRate &&
-                                            ` @ ${(0, l.YQ)(t.codecInfo.audioSampleRate)}`,
+                                        (0, u.At)(x.codecInfo.audioChannels),
+                                        null != x.codecInfo.audioSampleRate &&
+                                            ` @ ${(0, u.YQ)(x.codecInfo.audioSampleRate)}`,
                                     ],
                                 }),
                             ],
                         }),
-                    (0, r.jsxs)("div", {
-                        className: u.N8,
+                    (0, i.jsxs)("div", {
+                        className: d.N8,
                         children: [
-                            (0, r.jsx)("span", { className: u.Zh, children: v }),
-                            (0, r.jsx)("span", { className: u.cR, children: c(t.bufferedSeconds) }),
+                            (0, i.jsx)("span", { className: d.Zh, children: "Buffer Health" }),
+                            (0, i.jsx)("span", {
+                                className: d.cR,
+                                children: isFinite((g = x.bufferedSeconds)) ? g.toFixed(1) + "s" : "Live",
+                            }),
                         ],
                     }),
-                    null !== t.errorCode &&
-                        (0, r.jsx)("div", {
-                            className: u.K6,
-                            children: (0, r.jsxs)("div", {
-                                className: u.N8,
+                    null !== x.errorCode &&
+                        (0, i.jsx)("div", {
+                            className: d.K6,
+                            children: (0, i.jsxs)("div", {
+                                className: d.N8,
                                 children: [
-                                    (0, r.jsx)("span", { className: u.Zh, children: N }),
-                                    (0, r.jsxs)("span", {
-                                        className: u.cR,
-                                        children: [t.errorCode, null !== t.errorMessage && `: ${t.errorMessage}`],
+                                    (0, i.jsx)("span", { className: d.Zh, children: "Error" }),
+                                    (0, i.jsxs)("span", {
+                                        className: d.cR,
+                                        children: [x.errorCode, null !== x.errorMessage && `: ${x.errorMessage}`],
                                     }),
                                 ],
                             }),

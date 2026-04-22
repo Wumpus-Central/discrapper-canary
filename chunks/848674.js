@@ -1,46 +1,45 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(793574),
-    a = n(70730),
-    o = n(275759),
-    l = n(423998),
-    u = n(880528),
-    c = n(570287),
-    d = n(822775),
-    _ = n(784886),
-    f = n(656884);
-function p(e) {
-    let { user: t, guildId: n, channelId: i, onClose: s, disableAutoFocus: a, upsellEligible: o } = e,
-        c = (0, u.x)().hideDMInput;
-    return (0, r.jsxs)(r.Fragment, {
+i.d(t, { A: () => f });
+var n = i(627968);
+i(64700);
+var r = i(311907),
+    a = i(793574),
+    l = i(70730),
+    s = i(275759),
+    o = i(423998),
+    c = i(880528),
+    d = i(570287),
+    u = i(822775),
+    _ = i(784886),
+    p = i(656884);
+function h(e) {
+    let { user: t, guildId: i, channelId: r, onClose: a, disableAutoFocus: l, upsellEligible: s } = e,
+        d = (0, c.x)().hideDMInput;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            o && (0, r.jsx)(l.O, { profileUserId: t.id }),
-            !c && (0, r.jsx)(_.A, { user: t, guildId: n, channelId: i, onClose: s, disableAutoFocus: a, upsell: o }),
+            s && (0, n.jsx)(o.O, { profileUserId: t.id }),
+            !d && (0, n.jsx)(_.A, { user: t, guildId: i, channelId: r, onClose: a, disableAutoFocus: l, upsell: s }),
         ],
     });
 }
-function h(e) {
-    let { user: t, guildId: n, channelId: l, onClose: u, appContext: _, disableAutoFocus: h = !1 } = e,
-        m = (0, c.A)(t.id, n),
-        E = (0, a.p)(s.A.USER_PROFILE_POPOUT),
-        g = (0, i.bG)([o.Ay], () => o.Ay.canShowProfilePopoutGiftIntents(t.id), [t.id]),
-        A = E && g;
-    return (0, r.jsxs)("div", {
-        className: f.qr,
+function f(e) {
+    let { user: t, guildId: i, channelId: o, onClose: c, appContext: _, disableAutoFocus: f = !1 } = e,
+        A = (0, d.A)(t.id, i),
+        g = (0, l.p)(a.A.USER_PROFILE_POPOUT),
+        m = (0, r.bG)([s.Ay], () => s.Ay.canShowProfilePopoutGiftIntents(t.id), [t.id]);
+    return (0, n.jsxs)("div", {
+        className: p.qr,
         children: [
-            m &&
-                (0, r.jsx)(p, {
+            A &&
+                (0, n.jsx)(h, {
                     user: t,
-                    guildId: n,
-                    channelId: l,
-                    onClose: u,
-                    disableAutoFocus: h,
-                    upsellEligible: A,
+                    guildId: i,
+                    channelId: o,
+                    onClose: c,
+                    disableAutoFocus: f,
+                    upsellEligible: g && m,
                 }),
-            !m && (0, r.jsx)(d.A, { user: t, guildId: n, onClose: u, fullWidth: !0, appContext: _ }),
+            !A && (0, n.jsx)(u.A, { user: t, guildId: i, onClose: c, fullWidth: !0, appContext: _ }),
         ],
     });
 }

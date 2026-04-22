@@ -1,99 +1,100 @@
-n.d(t, { A: () => m }), n(321073);
-var l = n(627968),
-    i = n(64700),
-    a = n(827734),
-    r = n(444550),
-    o = n(397927),
-    s = n(565645),
-    c = n(985018),
-    d = n(65242);
-function u(e) {
+t.d(n, { A: () => h }), t(321073);
+var l = t(627968),
+    i = t(64700),
+    a = t(827734),
+    r = t(444550),
+    o = t(777666),
+    s = t(834730),
+    c = t(565645),
+    u = t(985018),
+    d = t(65242);
+function m(e) {
     return null != e && (null != e.id || null != e.name);
 }
-function m(e) {
-    let { options: t, value: n, onChange: m, canBeNew: h, memberCounts: p } = e,
-        x = i.useMemo(() => {
+function h(e) {
+    let { options: n, value: t, onChange: h, canBeNew: p, memberCounts: A } = e,
+        g = i.useMemo(() => {
             let e = new Map();
             return (
-                t.forEach((t) => {
-                    e.set(t.id, t);
+                n.forEach((n) => {
+                    e.set(n.id, n);
                 }),
                 e
             );
-        }, [t]),
-        A = i.useMemo(() => {
+        }, [n]),
+        x = i.useMemo(() => {
             let e = [];
             return (
-                t.forEach((t) => {
-                    e.push({ value: t.id, label: t.title, key: t.id });
+                n.forEach((n) => {
+                    e.push({ value: n.id, label: n.title, key: n.id });
                 }),
                 e
             );
-        }, [t]),
-        g = i.useCallback(
+        }, [n]),
+        f = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = x.get(e.value);
-                if (null != t && u(t.emoji))
-                    return (0, l.jsx)(s.A, {
-                        emojiId: t.emoji?.id,
-                        emojiName: t.emoji?.name,
-                        animated: t.emoji?.animated ?? !1,
+                let n = g.get(e.value);
+                if (null != n && m(n.emoji))
+                    return (0, l.jsx)(c.A, {
+                        emojiId: n.emoji?.id,
+                        emojiName: n.emoji?.name,
+                        animated: n.emoji?.animated ?? !1,
                     });
             },
-            [x],
+            [g],
         ),
-        f = i.useCallback(
-            (e, t) => {
-                if (null == e || t.inPill) return;
-                let n = x.get(e.value);
-                if (null == n || !u(n.emoji)) return;
-                let i = null == p || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => p[e])),
-                    r = null != p && i > 0;
+        C = i.useCallback(
+            (e, n) => {
+                if (null == e || n.inPill) return;
+                let t = g.get(e.value);
+                if (null == t || !m(t.emoji)) return;
+                let i = null == A || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => A[e])),
+                    r = null != A && i > 0;
                 return (0, l.jsxs)("div", {
                     className: d.ei,
                     children: [
-                        h &&
-                            n.isUnseen &&
-                            (0, l.jsx)(o.LpS, {
+                        p &&
+                            t.isUnseen &&
+                            (0, l.jsx)(o.Lp, {
                                 color: a.A.unsafe_rawColors.BRAND_260.css,
-                                text: c.intl.string(c.t.y2b7CA),
+                                text: u.intl.string(u.t.y2b7CA),
                                 className: d.Ad,
                             }),
                         r &&
                             (0, l.jsx)("div", {
                                 className: d.Kl,
                                 "data-hover": !0,
-                                children: (0, l.jsx)(o.Text, {
+                                children: (0, l.jsx)(s.E, {
                                     variant: "text-xs/normal",
                                     color: "always-white",
-                                    children: c.intl.format(c.t.EgKsZA, { memberCount: i }),
+                                    children: u.intl.format(u.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),
                     ],
                 });
             },
-            [h, p, x],
+            [p, A, g],
         ),
-        C = i.useCallback(
+        j = i.useCallback(
             (e) => {
-                let t = [];
+                let n = [];
                 e.forEach((e) => {
-                    let n = x.get(e);
-                    null != n && t.push(n);
+                    let t = g.get(e);
+                    null != t && n.push(t);
                 }),
-                    m(t);
+                    h(n);
             },
-            [m, x],
+            [h, g],
         );
     return (0, l.jsx)(r.p, {
         multi: !0,
-        options: A,
-        onChange: C,
-        value: n,
+        options: x,
+        onChange: j,
+        value: t,
         closeOnSelect: !1,
-        renderOptionSuffix: f,
-        renderOptionPrefix: g,
+        renderOptionSuffix: C,
+        renderOptionPrefix: f,
         "data-migration-pending": !0,
     });
 }

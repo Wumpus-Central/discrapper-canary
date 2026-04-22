@@ -1,76 +1,77 @@
-l.d(t, { A: () => g });
-var a = l(627968),
-    n = l(64700),
-    r = l(503698),
-    i = l.n(r),
-    o = l(382222),
-    s = l(397927),
-    u = l(475743),
-    c = l(626584),
-    d = l(572009),
-    p = l(14115),
-    m = l(115093),
-    h = l(132182);
-let x = new c.A("BalanceCounter"),
-    b = (0, d._$)(void 0) === m.B.PRODUCTION,
-    y = (e) => (null == e ? 0 : `${e.toFixed(0)}`.length),
-    f = (e) => {
-        let { value: t, onSetDigitCount: l, onValueChange: r, onValueReached: i, targetTotalCounterTime: u = 3e3 } = e,
-            [c, d] = (0, n.useState)(0),
-            m = (0, n.useRef)(null),
-            h = (0, n.useRef)(null);
-        (0, n.useEffect)(() => {
+n.d(t, { A: () => b });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    i = n(517738),
+    u = n(834730),
+    c = n(717421),
+    o = n(475743),
+    d = n(626584),
+    m = n(572009),
+    f = n(14115),
+    x = n(115093),
+    h = n(745926);
+let A = new d.A("BalanceCounter"),
+    j = (0, m._$)(void 0) === x.B.PRODUCTION,
+    v = (e) => (null == e ? 0 : `${e.toFixed(0)}`.length),
+    N = (e) => {
+        let { value: t, onSetDigitCount: n, onValueChange: r, onValueReached: s, targetTotalCounterTime: u = 3e3 } = e,
+            [o, d] = (0, a.useState)(0),
+            m = (0, a.useRef)(null),
+            x = (0, a.useRef)(null);
+        (0, a.useEffect)(() => {
             if (null === t) return;
             if (null === m.current) {
                 m.current = t;
                 return;
             }
             let e = null !== m.current ? t - m.current : t;
-            0 !== e && null !== m.current && r(e), (h.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) });
+            0 !== e && null !== m.current && r(e), (x.current = { lastChangedAt: Date.now(), totalDelta: Math.abs(e) });
         }, [t, r]);
-        let f = t ?? 0,
-            g = m.current ?? f,
-            { duration: v, delay: E } = (0, p.Y)(f - g, u),
-            { number: _ } = (0, s.zhh)({
-                from: { number: m.current ?? f },
-                number: f,
-                config: { mass: 1, tension: 20, friction: 10, duration: v },
-                delay: E,
+        let h = t ?? 0,
+            N = m.current ?? h,
+            { duration: b, delay: g } = (0, f.Y)(h - N, u),
+            { number: C } = (0, c.z)({
+                from: { number: m.current ?? h },
+                number: h,
+                config: { mass: 1, tension: 20, friction: 10, duration: b },
+                delay: g,
                 onStart: () => {
-                    l(y(g));
+                    n(v(N));
                 },
                 onRest: () => {
-                    if ((d(c + 1), i(), !b && null !== h.current && null !== m.current)) {
+                    if ((d(o + 1), s(), !j && null !== x.current && null !== m.current)) {
                         let e = Date.now();
-                        x.log("Balance Counter finished updating: ", {
-                            time: e - h.current.lastChangedAt,
-                            delta: f - m.current,
+                        A.log("Balance Counter finished updating: ", {
+                            time: e - x.current.lastChangedAt,
+                            delta: h - m.current,
                         });
                     }
-                    l(y(f)), (m.current = f);
+                    n(v(h)), (m.current = h);
                 },
             }),
-            C = y(Math.max(t ?? 0, _.get()));
-        return (0, a.jsx)(o.animated.div, {
-            style: { width: `calc(${C}ch)` },
-            children: _.to((e) => `${e.toFixed(0)}`),
+            R = v(Math.max(t ?? 0, C.get()));
+        return (0, l.jsx)(i.animated.div, {
+            style: { width: `calc(${R}ch)` },
+            children: C.to((e) => `${e.toFixed(0)}`),
         });
     },
-    g = (e) => {
-        let { value: t, className: l, ...r } = e,
-            o = null === t,
-            [c, d] = (0, n.useState)(null),
-            p = (0, n.useMemo)(() => y(t), [t]),
-            m = (0, u.A)(p) ?? 0,
-            x = (0, n.useMemo)(() => (null === c ? Math.max(m, p) : Math.max(p, c)), [m, p, c]),
-            b = `${o ? 0 : x}ch`;
-        return (0, a.jsx)(s.Text, {
+    b = (e) => {
+        let { value: t, className: n, ...r } = e,
+            i = null === t,
+            [c, d] = (0, a.useState)(null),
+            m = (0, a.useMemo)(() => v(t), [t]),
+            f = (0, o.A)(m) ?? 0,
+            x = (0, a.useMemo)(() => (null === c ? Math.max(f, m) : Math.max(m, c)), [f, m, c]),
+            A = `${i ? 0 : x}ch`;
+        return (0, l.jsx)(u.E, {
             variant: "text-md/semibold",
-            className: i()(h.S, o ? void 0 : h.r, l),
-            style: { width: b, opacity: o ? "0" : 1 },
-            children: o
+            className: s()(h.S, i ? void 0 : h.r, n),
+            style: { width: A, opacity: i ? "0" : 1 },
+            children: i
                 ? null
-                : (0, a.jsx)(f, {
+                : (0, l.jsx)(N, {
                       onSetDigitCount: (e) => {
                           e !== c && d(e);
                       },

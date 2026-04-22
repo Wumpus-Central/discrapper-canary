@@ -1,36 +1,19 @@
 "use strict";
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, { A: () => l }), n(321073);
 var r = n(652215);
 let i = [],
-    a = !1;
-function s() {
+    s = !1;
+function a() {
     let e = window.navigator.connection;
     return null == e
         ? { type: r.wY_.UNKNOWN, effectiveSpeed: r.NKC.UNKNOWN }
         : { type: null != e.type ? e.type : r.wY_.UNKNOWN, effectiveSpeed: e.effectiveType };
 }
 function o() {
-    if (!0 === a) return;
-    let e = window.navigator.connection;
-    null != e && ((a = !0), e.addEventListener("change", u));
-}
-function l() {
-    if (!1 === a) return;
-    let e = window.navigator.connection;
-    null != e && 0 === i.length && null != e && (e.removeEventListener("change", u), (a = !1));
-}
-function u() {
-    let e = s();
+    let e = a();
     i.forEach((t) => t(e));
 }
-function c(e) {
-    i.push(e), o();
-}
-function d(e) {
-    let t = i.indexOf(e);
-    -1 !== t && (i.splice(t, 1), l());
-}
-let _ = {
+let l = {
     addOnlineCallback(e) {
         window.addEventListener("online", e);
     },
@@ -44,12 +27,24 @@ let _ = {
         window.removeEventListener("offline", e);
     },
     addChangeCallback(e) {
-        c(e);
+        i.push(e),
+            (function () {
+                if (!0 === s) return;
+                let e = window.navigator.connection;
+                null != e && ((s = !0), e.addEventListener("change", o));
+            })();
     },
     removeChangeCallback(e) {
-        d(e);
+        let t;
+        -1 !== (t = i.indexOf(e)) &&
+            (i.splice(t, 1),
+            (function () {
+                if (!1 === s) return;
+                let e = window.navigator.connection;
+                null != e && 0 === i.length && null != e && (e.removeEventListener("change", o), (s = !1));
+            })());
     },
-    getNetworkInformation: () => Promise.resolve(s()),
+    getNetworkInformation: () => Promise.resolve(a()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

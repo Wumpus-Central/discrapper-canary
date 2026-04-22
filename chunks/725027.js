@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { f: () => l });
-var r = n(218681),
-    i = n(503698),
-    s = n.n(i),
-    a = n(752439),
-    o = n(45596);
-let l = (0, a.d)(s()(o.qZ, o.Vl), window.ResizeObserver ?? r.t);
+n.d(t, { f: () => o });
+var i = n(218681),
+    l = n(503698),
+    a = n.n(l),
+    s = n(752439),
+    r = n(45596);
+let o = (0, s.d)(a()(r.qZ, r.Vl), window.ResizeObserver ?? i.t);

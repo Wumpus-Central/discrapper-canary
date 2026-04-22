@@ -1,27 +1,27 @@
-t.d(n, { A: () => o });
-var l = t(627968);
-t(64700);
-var i = t(397927),
-    a = t(954571),
-    s = t(253932),
-    r = t(652215),
-    c = t(985018);
-function o() {
-    let e = s.D_.useSetting(),
-        n = s.SI.useSetting();
+n.d(t, { A: () => d });
+var i = n(627968);
+n(64700);
+var s = n(477782),
+    l = n(954571),
+    a = n(253932),
+    r = n(652215),
+    o = n(985018);
+function d() {
+    let e = a.D_.useSetting(),
+        t = a.SI.useSetting();
     return e
         ? null
-        : (0, l.jsx)(i.sLh, {
+        : (0, i.jsx)(s.sL, {
               id: "preview-markdown-toggle",
-              label: c.intl.string(c.t.sHJ9wZ),
+              label: o.intl.string(o.t.sHJ9wZ),
               action: () => {
-                  let e = !n;
-                  a.default.track(r.HAw.PREVIEW_MARKDOWN_TOGGLED, {
+                  let e = !t;
+                  l.default.track(r.HAw.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
                       location: { section: r.JJy.SETTINGS_CONTEXT_MENU },
                   }),
-                      s.SI.updateSetting(e);
+                      a.SI.updateSetting(e);
               },
-              checked: n,
+              checked: t,
           });
 }

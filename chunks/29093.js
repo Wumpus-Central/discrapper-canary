@@ -1,34 +1,35 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var s = n(503698),
     r = n.n(s),
-    l = n(397927),
-    a = n(854378),
-    o = n(652215),
-    c = n(985018),
-    d = n(379154),
-    u = n(818050);
-function _(e) {
-    let { loginStatus: t, authBoxClassName: n, onSubmit: s, onCancelAccountDeletion: _ } = e,
-        h = t === o.aUe.ACCOUNT_DISABLED,
-        g = h ? c.intl.string(c.t["j3rC+U"]) : c.intl.string(c.t.ZFWofo),
-        p = h ? c.intl.string(c.t["6eNTWe"]) : c.intl.string(c.t["pCBti+"]);
-    return (0, i.jsx)(a.Ay, {
+    l = n(707554),
+    a = n(821609),
+    o = n(854378),
+    c = n(652215),
+    d = n(985018),
+    u = n(379154),
+    _ = n(818050);
+function h(e) {
+    let { loginStatus: t, authBoxClassName: n, onSubmit: s, onCancelAccountDeletion: h } = e,
+        m = t === c.aUe.ACCOUNT_DISABLED,
+        p = m ? d.intl.string(d.t["j3rC+U"]) : d.intl.string(d.t.ZFWofo),
+        g = m ? d.intl.string(d.t["6eNTWe"]) : d.intl.string(d.t["pCBti+"]);
+    return (0, i.jsx)(o.Ay, {
         tag: "form",
         onSubmit: s,
         className: n,
-        children: (0, i.jsxs)(l.Fmo, {
-            component: (0, i.jsx)(a.hE, { className: u.QB, children: g }),
+        children: (0, i.jsxs)(l.F, {
+            component: (0, i.jsx)(o.hE, { className: _.QB, children: p }),
             children: [
-                (0, i.jsx)(a.tK, { className: u.SX, children: p }),
-                (0, i.jsxs)(a.eB, {
+                (0, i.jsx)(o.tK, { className: _.SX, children: g }),
+                (0, i.jsxs)(o.eB, {
                     children: [
-                        (0, i.jsx)(l.Button, { text: c.intl.string(c.t.JhDw5o), fullWidth: !0, type: "submit" }),
+                        (0, i.jsx)(a.$, { text: d.intl.string(d.t.JhDw5o), fullWidth: !0, type: "submit" }),
                         (0, i.jsx)("div", {
-                            className: r()(u.Ot, d.Qt),
-                            children: c.intl.format(c.t.js2rr5, { onClick: _ }),
+                            className: r()(_.Ot, u.Qt),
+                            children: d.intl.format(d.t.js2rr5, { onClick: h }),
                         }),
                     ],
                 }),

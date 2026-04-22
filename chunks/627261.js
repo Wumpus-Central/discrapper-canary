@@ -1,96 +1,98 @@
-n.d(i, { default: () => h });
+n.d(i, { default: () => x });
 var r = n(627968);
 n(64700);
 var t = n(311907),
-    e = n(421380),
-    s = n(397927),
-    a = n(587895),
-    d = n(235986),
-    c = n(755439),
-    o = n(975571),
-    u = n(985018),
-    p = n(137397);
-let h = (l) => {
+    e = n(862482),
+    s = n(935462),
+    a = n(534514),
+    d = n(821609),
+    c = n(587895),
+    o = n(235986),
+    p = n(755439),
+    u = n(975571),
+    h = n(985018),
+    j = n(663630);
+let x = (l) => {
     let { onClose: i, transitionState: n } = l,
-        { error: h, applicationName: j } = (0, t.cf)([c.A, a.A], () => {
-            let l = c.A.getLastError(),
+        { error: x, applicationName: b } = (0, t.cf)([p.A, c.A], () => {
+            let l = p.A.getLastError(),
                 i = null;
             if (null != l && null != l.applicationId) {
-                let n = a.A.getApplication(l.applicationId);
+                let n = c.A.getApplication(l.applicationId);
                 null != n && (i = n.name);
             }
             return { error: l, applicationName: i };
         });
-    return (0, r.jsxs)(s.EOs, {
+    return (0, r.jsxs)(s.EO, {
         transitionState: n,
-        size: s.rIJ.SMALL,
-        "aria-label": u.intl.string(u.t["6kHRYP"]),
+        size: s.rI.SMALL,
+        "aria-label": h.intl.string(h.t["6kHRYP"]),
         parentComponent: "DispatchErrorModal",
         children: [
-            (0, r.jsxs)(s.rQ0, {
-                justify: d.A.Justify.BETWEEN,
+            (0, r.jsxs)(s.rQ, {
+                justify: o.A.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(d.A.Child, {
+                    (0, r.jsx)(o.A.Child, {
                         grow: 1,
-                        children: (0, r.jsx)(s.Heading, {
+                        children: (0, r.jsx)(a.D, {
                             variant: "heading-lg/semibold",
-                            children: u.intl.string(u.t["6kHRYP"]),
+                            children: h.intl.string(h.t["6kHRYP"]),
                         }),
                     }),
-                    (0, r.jsx)(d.A.Child, { grow: 0, children: (0, r.jsx)(s.s_y, { onClick: i }) }),
+                    (0, r.jsx)(o.A.Child, { grow: 0, children: (0, r.jsx)(s.s_, { onClick: i }) }),
                 ],
             }),
-            (0, r.jsx)(s.$mQ, {
+            (0, r.jsx)(s.$m, {
                 children: (0, r.jsxs)("div", {
-                    className: p.rf,
+                    className: j.rf,
                     children: [
                         (0, r.jsx)("div", {
-                            children: u.intl.format(u.t["NnE/6P"], { link: "https://dis.gd/dispatch-error" }),
+                            children: h.intl.format(h.t["NnE/6P"], { link: "https://dis.gd/dispatch-error" }),
                         }),
-                        (0, r.jsx)("div", { className: p.dr, children: u.intl.string(u.t["o+efY9"]) }),
-                        (0, r.jsx)("div", { className: p.Vk, children: u.intl.string(u.t.BiSnZ9) }),
+                        (0, r.jsx)("div", { className: j.dr, children: h.intl.string(h.t["o+efY9"]) }),
+                        (0, r.jsx)("div", { className: j.Vk, children: h.intl.string(h.t.BiSnZ9) }),
                         (0, r.jsx)("div", {
-                            className: p.nf,
+                            className: j.nf,
                             children: (0, r.jsxs)("div", {
                                 children: [
-                                    null != j
-                                        ? `Game: ${j}
+                                    null != b
+                                        ? `Game: ${b}
 `
                                         : null,
-                                    h?.applicationId != null
-                                        ? `Game ID: ${h.applicationId}
+                                    x?.applicationId != null
+                                        ? `Game ID: ${x.applicationId}
 `
                                         : null,
-                                    h?.branchId != null && h?.applicationId !== h?.branchId
-                                        ? `Branch ID: ${h?.branchId}
+                                    x?.branchId != null && x?.applicationId !== x?.branchId
+                                        ? `Branch ID: ${x?.branchId}
 `
                                         : null,
-                                    h?.code != null
-                                        ? `Error Code: ${h?.code}
+                                    x?.code != null
+                                        ? `Error Code: ${x?.code}
 `
                                         : null,
-                                    h?.uuid != null ? `Unique Case ID: ${h?.uuid}` : null,
+                                    x?.uuid != null ? `Unique Case ID: ${x?.uuid}` : null,
                                 ],
                             }),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsxs)(s.jlY, {
+            (0, r.jsxs)(s.jl, {
                 children: [
-                    (0, r.jsx)(s.Button, {
+                    (0, r.jsx)(d.$, {
                         variant: "primary",
-                        text: u.intl.string(u.t.VdyWmB),
+                        text: h.intl.string(h.t.VdyWmB),
                         onClick: () => {
-                            window.open(o.A.getSubmitRequestURL());
+                            window.open(u.A.getSubmitRequestURL());
                         },
                     }),
                     (0, r.jsx)(e.$n, {
                         look: e.$n.Looks.LINK,
                         onClick: i,
-                        color: p.bE,
-                        children: u.intl.string(u.t.cpT0Cq),
+                        color: j.bE,
+                        children: h.intl.string(h.t.cpT0Cq),
                     }),
                 ],
             }),

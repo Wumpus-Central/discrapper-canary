@@ -1,100 +1,102 @@
-n.d(t, { f: () => S });
+n.d(t, { f: () => N });
 var i = n(627968),
     l = n(64700),
     a = n(735438),
-    r = n(110259),
-    s = n(239947),
-    o = n(934551),
+    s = n(110259),
+    r = n(239947),
+    o = n(403581),
     d = n(97808),
-    c = n(732955),
-    u = n(397927),
-    m = n(139286),
-    _ = n(520117),
-    h = n(793943),
-    p = n(763754),
-    g = n(973654),
-    A = n(954571),
-    f = n(467135),
-    x = n(644235),
-    E = n(153469),
-    C = n(652215),
-    I = n(520650),
+    c = n(821609),
+    u = n(778712),
+    m = n(534514),
+    _ = n(834730),
+    h = n(139286),
+    p = n(520117),
+    g = n(793943),
+    A = n(763754),
+    f = n(973654),
+    x = n(954571),
+    C = n(467135),
+    E = n(644235),
+    I = n(153469),
+    v = n(652215),
+    b = n(693227),
     T = n(985018),
-    v = n(294456);
-let N = (e) => e.map((e) => `#${e}`),
-    S = (e) => {
+    S = n(312633);
+let y = (e) => e.map((e) => `#${e}`),
+    N = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            { setAll: l } = (0, f.ko)();
+            { setAll: l } = (0, C.ko)();
         return void 0 === n
             ? null
             : (0, i.jsxs)("div", {
-                  className: v.kL,
+                  className: S.kL,
                   children: [
-                      (0, i.jsx)(b, { message: t }),
-                      (0, i.jsx)(c.$nd, {
+                      (0, i.jsx)(j, { message: t }),
+                      (0, i.jsx)(c.$, {
                           text: T.intl.string(T.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
-                              A.default.track(C.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
-                                  (0, h.nf)(h.HP.CUSTOM_THEME, { from: h.xv.SHARE_MESSAGE }),
+                              x.default.track(v.HAw.CUSTOM_THEME_SHARE_PREVIEWED, {}),
+                                  (0, g.nf)(g.HP.CUSTOM_THEME, { from: g.xv.SHARE_MESSAGE }),
                                   l({
-                                      colors: N(n.colors),
+                                      colors: y(n.colors),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, g.GQ)((0, x.PC)(n.base_theme));
+                                  (0, f.GQ)((0, E.PC)(n.base_theme));
                           },
                       }),
                   ],
               });
     },
-    b = (e) => {
+    j = (e) => {
         let t,
             n,
             c,
-            { message: h } = e,
-            { sharedClientTheme: g } = h,
-            A = (0, p.Ay)(h),
-            f = l.useMemo(
+            { message: g } = e,
+            { sharedClientTheme: f } = g,
+            x = (0, A.Ay)(g),
+            C = l.useMemo(
                 () =>
                     (0, a.once)(() => {
-                        (0, m.x)({ type: r.ImpressionTypes.VIEW, name: s.I.CUSTOM_THEME_SHARE, properties: {} });
+                        (0, h.x)({ type: s.ImpressionTypes.VIEW, name: r.I.CUSTOM_THEME_SHARE, properties: {} });
                     }),
                 [],
             ),
-            x = (0, _.A)({
+            E = (0, p.A)({
                 onVisible: () => {
-                    f();
+                    C();
                 },
                 threshold: 1,
                 minTimeVisibleMs: 200,
             }),
-            C = l.useMemo(() => (void 0 === g ? "" : (0, E.V9)(N(g.colors), g.gradient_angle ?? 0)), [g]);
-        return void 0 === g
+            v = l.useMemo(() => (void 0 === f ? "" : (0, I.V9)(y(f.colors), f.gradient_angle ?? 0)), [f]);
+        return void 0 === f
             ? null
             : (0, i.jsxs)("div", {
-                  className: v.pS,
-                  ref: x,
+                  className: S.pS,
+                  ref: E,
                   children: [
-                      (0, i.jsx)("div", { className: v.sl, style: { background: `${C}` } }),
+                      (0, i.jsx)("div", { className: S.sl, style: { background: `${v}` } }),
                       (0, i.jsxs)("div", {
-                          className: v.Ix,
+                          className: S.Ix,
                           children: [
-                              (0, i.jsxs)(u.Heading, {
+                              (0, i.jsxs)(m.D, {
                                   variant: "heading-md/semibold",
-                                  className: v.qP,
-                                  children: [T.intl.string(I.default.KSBBpC), " ", (0, i.jsx)(o.NitroWheelIcon, {})],
+                                  className: S.qP,
+                                  children: [T.intl.string(b.default.KSBBpC), " ", (0, i.jsx)(o.t, {})],
                               }),
-                              (0, i.jsx)(u.Text, {
+                              (0, i.jsx)(_.E, {
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
-                                  className: v.Tb,
+                                  className: S.Tb,
                                   children:
-                                      ((t = `${T.intl.format(I.default.fQPSEf, { username: "__USERNAME__" })}`),
-                                      (n = h.author),
-                                      (c = A.nick),
+                                      ((t = `${T.intl.format(b.default.fQPSEf, { username: "__USERNAME__" })}`),
+                                      (n = g.author),
+                                      (c = x.nick),
                                       t
                                           .split(" ")
                                           .map((e, t) =>
@@ -103,12 +105,12 @@ let N = (e) => e.map((e) => `#${e}`),
                                                   : (0, i.jsxs)(
                                                         "span",
                                                         {
-                                                            className: v.H,
+                                                            className: S.H,
                                                             children: [
                                                                 (0, i.jsx)(d.eu, {
                                                                     "aria-label": c,
                                                                     src: n.getAvatarURL(null, 20),
-                                                                    size: u._3J.SIZE_20,
+                                                                    size: u._3.SIZE_20,
                                                                 }),
                                                                 " ",
                                                                 c,

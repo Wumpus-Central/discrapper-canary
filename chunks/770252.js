@@ -1,34 +1,36 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(985018),
-    a = n(465905);
-function r(e) {
-    let { currentUser: t, disabled: n, handleDisableAccount: r, handleDeleteAccount: o } = e,
-        d = t.isClaimed();
-    return (0, i.jsx)(s.D0$, {
-        label: l.intl.string(l.t.ZKsIks),
-        description: d ? l.intl.string(l.t.TIh3Yj) : l.intl.string(l.t.czsGA8),
-        children: (0, i.jsxs)(s.ButtonGroup, {
+var s = n(452027),
+    l = n(825484),
+    a = n(821609),
+    r = n(985018),
+    o = n(656161);
+function d(e) {
+    let { currentUser: t, disabled: n, handleDisableAccount: d, handleDeleteAccount: u } = e,
+        c = t.isClaimed();
+    return (0, i.jsx)(s.D, {
+        label: r.intl.string(r.t.ZKsIks),
+        description: c ? r.intl.string(r.t.TIh3Yj) : r.intl.string(r.t.czsGA8),
+        children: (0, i.jsxs)(l.e, {
             size: "sm",
-            className: a.U,
+            className: o.U,
             children: [
-                d
-                    ? (0, i.jsx)(s.Button, {
+                c
+                    ? (0, i.jsx)(a.$, {
                           variant: "critical-primary",
                           size: "sm",
-                          text: l.intl.string(l.t.jf5GGb),
+                          text: r.intl.string(r.t.jf5GGb),
                           disabled: n,
-                          onClick: r,
+                          onClick: d,
                       })
                     : null,
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(a.$, {
                     variant: "critical-secondary",
                     size: "sm",
-                    text: l.intl.string(l.t["8lQ2rR"]),
+                    text: r.intl.string(r.t["8lQ2rR"]),
                     disabled: n,
-                    onClick: o,
+                    onClick: u,
                 }),
             ],
         }),

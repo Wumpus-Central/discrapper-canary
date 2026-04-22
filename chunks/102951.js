@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { J: () => a });
-var r = n(922590),
+n.d(t, { J: () => r });
+var l = n(922590),
     i = n(652215);
-function a(e) {
+function r(e) {
     let { userId: t } = e,
-        n = (0, r.f1)(t);
+        n = (0, l.f1)(t);
     return {
         gameFriends: n,
-        hasOutgoingPendingGameFriends: (0, r.KL)(t, i.eA$.PENDING_OUTGOING),
-        hasIncomingPendingGameFriends: (0, r.KL)(t, i.eA$.PENDING_INCOMING),
+        hasOutgoingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_OUTGOING),
+        hasIncomingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_INCOMING),
     };
 }

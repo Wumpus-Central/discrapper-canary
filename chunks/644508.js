@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { f: () => u });
-var r = n(627968),
-    i = n(397927),
-    a = n(954571),
-    s = n(80569),
-    o = n(421314),
-    l = n(652215);
-let u = async (e) => {
-    let { analyticsLocation: t = null, ...u } = e;
-    a.default.track(l.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
-        await (0, i.mMO)(
+n.d(t, { f: () => c });
+var i = n(627968),
+    l = n(192308),
+    s = n(954571),
+    r = n(80569),
+    a = n(421314),
+    o = n(652215);
+let c = async (e) => {
+    let { analyticsLocation: t = null, ...c } = e;
+    s.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
+        await (0, l.openModalLazy)(
             async () => {
-                let { EmojiStudioModal: e } = await Promise.all([n.e("35929"), n.e("76443")]).then(n.bind(n, 849846));
-                return (t) => (0, r.jsx)(e, { ...t, ...u });
+                let { EmojiStudioModal: e } = await Promise.all([n.e("29259"), n.e("76443")]).then(n.bind(n, 849846));
+                return (t) => (0, i.jsx)(e, { ...t, ...c });
             },
             {
-                modalKey: s.y,
+                modalKey: r.y,
                 onCloseRequest: () => {
-                    (0, o.p)();
+                    (0, a.p)();
                 },
             },
         );

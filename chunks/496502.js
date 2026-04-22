@@ -1,26 +1,25 @@
 "use strict";
 n.d(t, { v: () => c });
-var r = n(627968),
-    i = n(64700),
-    a = n(442433),
-    s = n(71393),
-    o = n(287809),
-    l = n(927578);
-function u(e, t, i, s) {
-    let u = o.default.getCurrentUser();
-    (null != t || l.Ay.canUseCustomCallSounds(u)) &&
-        (0, a.L3)(e, async () => {
-            let { default: e } = await n.e("86266").then(n.bind(n, 313921));
-            return (n) => (0, r.jsx)(e, { ...n, soundGuild: t, activeCallGuildId: s, sound: i });
-        });
-}
+var i = n(627968),
+    l = n(64700),
+    s = n(442433),
+    r = n(71393),
+    a = n(287809),
+    o = n(927578);
 function c(e, t) {
-    return i.useCallback(
-        (n) => {
-            n.stopPropagation();
-            let r = s.A.getGuild(e.guildId),
-                i = o.default.getCurrentUser();
-            (null != r || l.Ay.canUseCustomCallSounds(i)) && u(n, r, e, t);
+    return l.useCallback(
+        (l) => {
+            let c;
+            l.stopPropagation();
+            let u = r.A.getGuild(e.guildId),
+                d = a.default.getCurrentUser();
+            (null != u || o.Ay.canUseCustomCallSounds(d)) &&
+                ((c = a.default.getCurrentUser()),
+                (null != u || o.Ay.canUseCustomCallSounds(c)) &&
+                    (0, s.L3)(l, async () => {
+                        let { default: l } = await n.e("86266").then(n.bind(n, 313921));
+                        return (n) => (0, i.jsx)(l, { ...n, soundGuild: u, activeCallGuildId: t, sound: e });
+                    }));
         },
         [e, t],
     );

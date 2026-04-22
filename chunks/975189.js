@@ -1,112 +1,111 @@
-"use strict";
-n.d(t, { v: () => C });
-var r = n(627968),
-    i = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(417597),
-    l = n(73153),
+n.d(t, { v: () => y });
+var l = n(627968),
+    r = n(64700),
+    i = n(284009),
+    s = n.n(i),
+    a = n(417597),
+    o = n(73153),
     u = n(775602),
-    c = n(427675),
-    d = n(94420),
-    _ = n(590180),
-    f = n(306710),
-    p = n(524246),
-    h = n(14368),
-    m = n(61750),
-    E = n(937008),
-    g = n(156312),
-    A = n(972607),
-    I = n(482132),
+    d = n(427675),
+    c = n(94420),
+    C = n(590180),
+    p = n(306710),
+    m = n(524246),
+    E = n(14368),
+    A = n(61750),
+    h = n(937008),
+    f = n(156312),
+    _ = n(972607),
+    g = n(482132),
     T = n(921925),
-    S = n(758836),
-    y = n(788868),
-    v = n(985018);
-function N(e) {
+    x = n(758836),
+    S = n(788868),
+    I = n(985018);
+function O(e) {
     let { handleClose: t, analyticsLocations: n } = e,
-        s = (0, d.t4)((e) => e.selectedSkuId),
+        i = (0, c.t4)((e) => e.selectedSkuId),
         {
-            application: l,
+            application: o,
             paymentError: u,
-            purchaseError: f,
-            purchasePreviewError: p,
-            appliedUserDiscounts: h,
-        } = (0, g.P5)(),
-        E = (0, c.gU)(),
-        A = (0, o.bG)([_.A], () => _.A.getProduct(s)),
-        y = i.useRef(!1);
-    a()(null != s, "Expected selectedSkuId"), a()(null != l, "Expected application");
-    let N = E[s];
-    a()(null != N, "Expected sku");
-    let C = null != u || null != f || null != p,
-        R =
-            h.length > 0
-                ? v.intl.formatToPlainString(v.t.VuV3Td, { discountOfferAmount: h[0].discount.amount })
+            purchaseError: p,
+            purchasePreviewError: m,
+            appliedUserDiscounts: E,
+        } = (0, f.P5)(),
+        h = (0, d.gU)(),
+        _ = (0, a.bG)([C.A], () => C.A.getProduct(i)),
+        S = r.useRef(!1);
+    s()(null != i, "Expected selectedSkuId"), s()(null != o, "Expected application");
+    let O = h[i];
+    s()(null != O, "Expected sku");
+    let y = null != u || null != p || null != m,
+        N =
+            E.length > 0
+                ? I.intl.formatToPlainString(I.t.VuV3Td, { discountOfferAmount: E[0].discount.amount })
                 : void 0;
-    return (i.useEffect(() => {
-        null == A ||
-            C ||
-            y.current ||
-            ((y.current = !0),
-            (0, m.A)({
-                product: A,
-                overrideTitle: R,
+    return (r.useEffect(() => {
+        null == _ ||
+            y ||
+            S.current ||
+            ((S.current = !0),
+            (0, A.A)({
+                product: _,
+                overrideTitle: N,
                 analyticsLocations: n,
                 onCloseCallback: t,
-                purchaseType: S.gs.FIAT,
+                purchaseType: x.gs.FIAT,
             }));
-    }, [A, n, t, C, R]),
-    C)
-        ? (0, r.jsx)(I.dZ, { children: (0, r.jsx)(T.A, {}) })
+    }, [_, n, t, y, N]),
+    y)
+        ? (0, l.jsx)(g.dZ, { children: (0, l.jsx)(T.A, {}) })
         : null;
 }
-function C(e) {
+function y(e) {
     let {
             isGift: t,
             giftCode: n,
-            selectedGiftStyle: s,
-            hasSentMessage: a,
-            giftRecipient: c,
-            giftMessageError: m,
-            isSendingMessage: g,
-            giftingOrigin: I,
-        } = (0, E.Pv)(),
-        T = (0, o.bG)([u.A], () => u.A.useReducedMotion),
-        S = i.useRef(null),
-        v = (0, d.t4)((e) => e.selectedSkuId),
-        C = (0, o.bG)([_.A], () => _.A.getProduct(v)),
-        { confettiColors: R } = (0, f.A)(C?.styles);
+            selectedGiftStyle: i,
+            hasSentMessage: s,
+            giftRecipient: d,
+            giftMessageError: A,
+            isSendingMessage: f,
+            giftingOrigin: g,
+        } = (0, h.Pv)(),
+        T = (0, a.bG)([u.A], () => u.A.useReducedMotion),
+        x = r.useRef(null),
+        I = (0, c.t4)((e) => e.selectedSkuId),
+        y = (0, a.bG)([C.A], () => C.A.getProduct(I)),
+        { confettiColors: N } = (0, p.A)(y?.styles);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             t &&
-                null != c &&
-                null != v &&
-                (I === y.vQ.USER_PROFILE_WISHLIST || I === y.vQ.DM_CHANNEL_WISHLIST) &&
-                l.h.dispatch({ type: "WISHLIST_GIFT_SENT", skuId: v, recipientId: c.id });
-        }, [t, c, v, I]),
+                null != d &&
+                null != I &&
+                (g === S.vQ.USER_PROFILE_WISHLIST || g === S.vQ.DM_CHANNEL_WISHLIST) &&
+                o.h.dispatch({ type: "WISHLIST_GIFT_SENT", skuId: I, recipientId: d.id });
+        }, [t, d, I, g]),
         t
-            ? (0, r.jsxs)("div", {
-                  ref: S,
+            ? (0, l.jsxs)("div", {
+                  ref: x,
                   children: [
-                      (0, r.jsx)(A.A, {
+                      (0, l.jsx)(_.A, {
                           giftCode: n,
                           onClose: e.handleClose,
-                          selectedGiftStyle: s,
-                          hasSentMessage: a,
-                          giftRecipient: c,
-                          giftMessageError: m,
-                          isSendingMessage: g,
+                          selectedGiftStyle: i,
+                          hasSentMessage: s,
+                          giftRecipient: d,
+                          giftMessageError: A,
+                          isSendingMessage: f,
                       }),
                       !e.hideConfetti &&
                           !T &&
-                          (0, r.jsx)(p.A, {
-                              confettiTarget: S.current,
+                          (0, l.jsx)(m.A, {
+                              confettiTarget: x.current,
                               confettiCanvas: e.confettiCanvas,
-                              sprites: (0, h.rA)(C?.categorySkuId),
-                              colors: R?.map((e) => e.toHexString()),
+                              sprites: (0, E.rA)(y?.categorySkuId),
+                              colors: N?.map((e) => e.toHexString()),
                           }),
                   ],
               })
-            : (0, r.jsx)(N, { ...e })
+            : (0, l.jsx)(O, { ...e })
     );
 }

@@ -1,61 +1,62 @@
-n.d(t, { A: () => p }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var i = n(627968),
     l = n(64700),
-    s = n(397927),
+    a = n(432017),
+    s = n(834730),
     r = n(572211),
-    a = n(354287),
-    o = n(693879),
-    d = n(353411),
-    c = n(882171),
-    u = n(206589),
-    m = n(768349),
-    _ = n(985018),
-    h = n(772234);
-function p(e) {
+    o = n(354287),
+    d = n(693879),
+    c = n(353411),
+    u = n(882171),
+    m = n(206589),
+    _ = n(768349),
+    h = n(985018),
+    p = n(193018);
+function g(e) {
     let {
             application: t,
             message: n,
-            header: p,
-            presenceActivity: g,
-            hideParty: A,
+            header: g,
+            presenceActivity: A,
+            hideParty: f,
             partyStatusElement: x,
-            currentUserPresenceActivity: f,
-            onClickContent: C,
-            onView: E,
-            guildId: I,
+            currentUserPresenceActivity: C,
+            onClickContent: E,
+            onView: I,
+            guildId: v,
         } = e,
-        v = (0, u.w)(f, g),
-        b = (0, d.Gq)(g, n.author, "Invite Embed"),
-        T = l.useMemo(() => {
+        b = (0, m.w)(C, A),
+        T = (0, c.Gq)(A, n.author, "Invite Embed"),
+        S = l.useMemo(() => {
             let e = [];
             return (
-                v ||
+                b ||
                     e.push({
-                        label: b.label ?? _.intl.string(_.t.VJlc0S),
-                        trackingArea: a.kY.SYNC,
+                        label: T.label ?? h.intl.string(h.t.VJlc0S),
+                        trackingArea: o.kY.SYNC,
                         onClick: () => {
-                            b.onClick();
+                            T.onClick();
                         },
-                        disabled: b.disabled,
-                        disabledReason: b.disabled ? b.tooltip : void 0,
+                        disabled: T.disabled,
+                        disabledReason: T.disabled ? T.tooltip : void 0,
                     }),
                 e
             );
-        }, [v, b]),
+        }, [b, T]),
         y =
-            null != g && null != g.details && null != g.state
-                ? _.intl.formatToPlainString(_.t.JCvHtx, { track: g.details, artist: g.state })
+            null != A && null != A.details && null != A.state
+                ? h.intl.formatToPlainString(h.t.JCvHtx, { track: A.details, artist: A.state })
                 : t.name,
-        N = g?.timestamps?.start ?? g?.created_at,
-        S = l.useMemo(
+        N = A?.timestamps?.start ?? A?.created_at,
+        j = l.useMemo(
             () =>
                 null != N
                     ? (0, i.jsxs)("div", {
-                          className: h.Ym,
+                          className: p.Ym,
                           children: [
-                              (0, i.jsx)(s.T7G, { size: "xxs", color: "currentColor" }),
-                              (0, i.jsx)(o.z, {
-                                  entry: { start: N, end: g?.timestamps?.end },
+                              (0, i.jsx)(a.T, { size: "xxs", color: "currentColor" }),
+                              (0, i.jsx)(d.z, {
+                                  entry: { start: N, end: A?.timestamps?.end },
                                   textColor: "currentColor",
                                   textTabularNumbers: !1,
                                   textFontCode: !1,
@@ -63,38 +64,38 @@ function p(e) {
                           ],
                       })
                     : null,
-            [N, g?.timestamps?.end],
+            [N, A?.timestamps?.end],
         ),
-        j = l.useMemo(
+        L = l.useMemo(
             () =>
                 (0, i.jsxs)("div", {
-                    className: h.pq,
+                    className: p.pq,
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(s.E, {
                             variant: "text-xs/normal",
-                            className: h.dS,
+                            className: p.dS,
                             color: "none",
                             lineClamp: 1,
-                            children: S,
+                            children: j,
                         }),
-                        A ? null : x,
+                        f ? null : x,
                     ],
                 }),
-            [S, A, x],
+            [j, f, x],
         );
     return (0, i.jsx)(r.h, {
-        header: p,
+        header: g,
         title: y,
-        iconSrc: (0, c.A)(g, t.id) ?? void 0,
-        info: j,
-        actions: T,
-        onClickContent: C,
+        iconSrc: (0, u.A)(A, t.id) ?? void 0,
+        info: L,
+        actions: S,
+        onClickContent: E,
         trackingConfig: {
             id: t.id,
-            linkType: m.J.RICH_PRESENCE_INVITE,
-            onView: E,
+            linkType: _.J.RICH_PRESENCE_INVITE,
+            onView: I,
             referrerId: n.author.id,
-            guildId: I,
+            guildId: v,
             channelId: n.channel_id,
             messageId: n.id,
         },

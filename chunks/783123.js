@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(993401),
-    a = n(985018);
-function s(e) {
-    let { isBlocked: t, onClick: n, size: s = "sm" } = e;
-    return (0, r.jsx)(i.FD, {
-        size: s,
+n.d(t, { A: () => a });
+var i = n(627968),
+    l = n(993401),
+    s = n(985018);
+function a(e) {
+    let { isBlocked: t, onClick: n, size: a = "sm" } = e;
+    return (0, i.jsx)(l.FD, {
+        size: a,
         action: t ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        text: a.intl.string(a.t["UJKH/l"]),
+        text: s.intl.string(s.t["UJKH/l"]),
         variant: "primary",
         autoFocus: !0,
         fullWidth: !1,

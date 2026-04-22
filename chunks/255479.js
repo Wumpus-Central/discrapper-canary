@@ -1,7 +1,7 @@
 a.d(l, { S: () => i });
 var t = a(627968),
-    o = a(64700),
-    n = a(158954);
+    n = a(64700),
+    o = a(761508);
 let i = {
     title: "TabBar",
     stories: [
@@ -10,14 +10,14 @@ let i = {
             name: "TabBar",
             component: function (e) {
                 let { look: l, type: a, tabCount: i } = e,
-                    [s, r] = o.useState("tab1"),
+                    [r, s] = n.useState("tab1"),
                     d = Array.from({ length: i }, (e, l) => ({ id: `tab${l + 1}`, name: `Tab ${l + 1}` }));
-                return (0, t.jsx)(n.VQ0, {
+                return (0, t.jsx)(o.V, {
                     type: a,
                     look: l,
-                    selectedItem: s,
-                    onItemSelect: r,
-                    children: d.map((e) => (0, t.jsx)(n.VQ0.Item, { id: e.id, children: e.name }, e.id)),
+                    selectedItem: r,
+                    onItemSelect: s,
+                    children: d.map((e) => (0, t.jsx)(o.V.Item, { id: e.id, children: e.name }, e.id)),
                 });
             },
             controls: {

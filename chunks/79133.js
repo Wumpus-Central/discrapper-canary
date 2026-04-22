@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { L: () => l, q: () => o });
+n.d(t, { L: () => d, q: () => s });
 var r = n(281445),
     i = n(390544);
 let a = [
@@ -34,7 +33,7 @@ let a = [
         ],
     },
 ];
-function s(e, t) {
+function l(e, t) {
     return {
         id: e,
         name: t,
@@ -44,21 +43,21 @@ function s(e, t) {
         gameId: "1",
     };
 }
-let o = [
-        s("1", "GameServer Test #1"),
-        s("2", "GameServer Test #2"),
-        s("3", "GameServer Test #3"),
-        s("4", "GameServer Test #4"),
-        s("5", "GameServer Test #5"),
-        s("6", "GameServer Test #6"),
-        s("7", "GameServer Test #7"),
-        s("8", "GameServer Test #8"),
-        s("9", "GameServer Test #9"),
-        s("10", "GameServer Test #10"),
-        s("11", "GameServer Test #11"),
-        s("12", "GameServer Test #12"),
+let s = [
+        l("1", "GameServer Test #1"),
+        l("2", "GameServer Test #2"),
+        l("3", "GameServer Test #3"),
+        l("4", "GameServer Test #4"),
+        l("5", "GameServer Test #5"),
+        l("6", "GameServer Test #6"),
+        l("7", "GameServer Test #7"),
+        l("8", "GameServer Test #8"),
+        l("9", "GameServer Test #9"),
+        l("10", "GameServer Test #10"),
+        l("11", "GameServer Test #11"),
+        l("12", "GameServer Test #12"),
     ],
-    l = [
+    d = [
         {
             id: "1",
             gameId: "1",

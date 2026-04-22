@@ -1,19 +1,18 @@
-"use strict";
 n.d(t, { A: () => c });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
+    l = n(64700),
+    s = n(834730),
     r = n(938078),
     a = n(57222),
     o = n(985018),
     d = n(394661);
-let c = s.memo(function (e) {
-    let { rule: t, onlyRoles: n = !1, onChangeRule: s } = e,
+let c = l.memo(function (e) {
+    let { rule: t, onlyRoles: n = !1, onChangeRule: l } = e,
         c = (0, i.jsx)(r.A, {
             guildId: t.guildId,
             selectedChannelIds: t.exemptChannels,
             selectedRoleIds: t.exemptRoles,
-            onChange: (e, n) => s({ ...t, exemptChannels: e, exemptRoles: n }),
+            onChange: (e, n) => l({ ...t, exemptChannels: e, exemptRoles: n }),
             disableEveryoneRole: !0,
             includeRoleRestrictedPrivateChannels: !0,
         });
@@ -22,14 +21,14 @@ let c = s.memo(function (e) {
             (c = (0, i.jsx)(a.A, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
-                onChange: (e) => s({ ...t, exemptRoles: e }),
+                onChange: (e) => l({ ...t, exemptRoles: e }),
                 placeholder: o.intl.string(o.t.aFO1I6),
                 disableEveryoneRole: !0,
             })),
         (0, i.jsxs)("div", {
             children: [
                 c,
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(s.E, {
                     color: "text-default",
                     variant: "text-xs/normal",
                     className: d.d,

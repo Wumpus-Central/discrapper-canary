@@ -1,58 +1,63 @@
 "use strict";
-n.d(t, { y: () => d });
-var r = n(64700),
-    i = n(417597),
-    a = n(71393),
-    s = n(508675),
-    o = n(770335),
-    l = n(624793),
-    u = n(652215);
-let c = (e, t, n) => {
-        let r = null != n ? e.getCustomEmojiById(n) : null;
-        return r?.type === o.i.GUILD
-            ? { emoji: r, joinedEmojiSourceGuildRecord: t.getGuild(r?.guildId) }
-            : { emoji: null, joinedEmojiSourceGuildRecord: null };
-    },
-    d = (e) => {
-        let { emojiId: t, refreshPositionKey: n } = e,
-            { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cf)([s.Ay, a.A], () => c(s.Ay, a.A, t)),
-            _ = null != o,
-            f = null != o && o.features.has(u.GuildFeatures.DISCOVERABLE),
-            p = (!_ || f) && null != t,
-            [h, m] = r.useState(p),
-            [g, E] = r.useState(null),
-            A = null != o ? l.GO.createFromGuildRecord(o) : null,
-            [I, T] = r.useState(A),
-            [y, S] = r.useState(null),
-            v = r.useRef(n);
-        return (
-            r.useEffect(() => {
-                v.current = n;
-            }),
-            r.useEffect(() => {
-                v.current?.();
-                let e = async () => {
-                    let e = null != t ? await (0, l.g_)(t) : null;
-                    if (null != e)
-                        switch ((E(e.type), e.type)) {
-                            case l.rV.APPLICATION:
-                                S(e.application);
-                                break;
-                            case l.rV.GUILD:
-                                T(e.guild);
-                        }
-                    m(!1), v.current?.();
-                };
-                p ? e() : v.current?.();
-            }, [t, p]),
-            {
-                expressionSourceGuild: I,
-                expressionSourceApplication: y,
-                sourceType: g,
-                joinedEmojiSourceGuildRecord: o,
-                hasJoinedEmojiSourceGuild: _,
-                emoji: d,
-                isFetching: h,
-            }
-        );
-    };
+n.d(t, { y: () => u });
+var i = n(64700),
+    l = n(417597),
+    s = n(71393),
+    r = n(508675),
+    a = n(770335),
+    o = n(624793),
+    c = n(652215);
+let u = (e) => {
+    let { emojiId: t, refreshPositionKey: n } = e,
+        { joinedEmojiSourceGuildRecord: u, emoji: d } = (0, l.cf)([r.Ay, s.A], () => {
+            var e, n;
+            let i;
+            return (
+                (e = r.Ay),
+                (n = s.A),
+                (i = null != t ? e.getCustomEmojiById(t) : null),
+                i?.type === a.i.GUILD
+                    ? { emoji: i, joinedEmojiSourceGuildRecord: n.getGuild(i?.guildId) }
+                    : { emoji: null, joinedEmojiSourceGuildRecord: null }
+            );
+        }),
+        h = null != u,
+        m = null != u && u.features.has(c.GuildFeatures.DISCOVERABLE),
+        p = (!h || m) && null != t,
+        [f, g] = i.useState(p),
+        [_, x] = i.useState(null),
+        A = null != u ? o.GO.createFromGuildRecord(u) : null,
+        [C, E] = i.useState(A),
+        [I, v] = i.useState(null),
+        y = i.useRef(n);
+    return (
+        i.useEffect(() => {
+            y.current = n;
+        }),
+        i.useEffect(() => {
+            y.current?.();
+            let e = async () => {
+                let e = null != t ? await (0, o.g_)(t) : null;
+                if (null != e)
+                    switch ((x(e.type), e.type)) {
+                        case o.rV.APPLICATION:
+                            v(e.application);
+                            break;
+                        case o.rV.GUILD:
+                            E(e.guild);
+                    }
+                g(!1), y.current?.();
+            };
+            p ? e() : y.current?.();
+        }, [t, p]),
+        {
+            expressionSourceGuild: C,
+            expressionSourceApplication: I,
+            sourceType: _,
+            joinedEmojiSourceGuildRecord: u,
+            hasJoinedEmojiSourceGuild: h,
+            emoji: d,
+            isFetching: f,
+        }
+    );
+};

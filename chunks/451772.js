@@ -1,59 +1,57 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927),
+    s = n(503698),
+    a = n.n(s),
+    o = n(939249),
     l = n(860923),
-    u = n(816790);
-let c = 5500,
-    d = 150,
-    _ = (e) => {
-        let {
-                id: t,
-                occupant: n,
-                x: a,
-                y: _,
-                assetKey: f,
-                onClick: p,
-                skipNewUserEducation: h = !1,
-                shadowPosition: m,
-            } = e,
-            g = (0, l.A)(),
-            E = i.useMemo(() => g?.seats[f], [g, f]),
-            A = i.useMemo(() => E?.seat, [E]),
-            I = i.useMemo(() => E?.shadow, [E]);
-        return (0, r.jsx)(o.DUT, {
-            "aria-label": "claim seat",
-            onClick:
-                null != p
-                    ? (e) => {
-                          e.preventDefault(), e.stopPropagation(), p(t);
-                      }
-                    : void 0,
-            className: s()(u.am, { [u.Sf]: null != n }),
-            style: { transform: `translate(${a}px, ${_}px)` },
-            children: (0, r.jsxs)("div", {
-                className: u.LU,
-                children: [
-                    null != I &&
-                        null != m &&
-                        (0, r.jsx)("img", {
-                            className: s()(u.Sl, u.r7),
-                            style: { transform: `translate(${m.x}px, ${m.y}px)` },
-                            src: E?.shadow,
-                            alt: "",
-                        }),
-                    null != A &&
-                        (0, r.jsx)("img", {
-                            onDragStart: (e) => e.preventDefault(),
-                            className: s()(u.Sl, { [u.Sf]: null != n, [u.cb]: h }),
-                            style: { animationDelay: `${c + d * t}ms` },
-                            src: E?.seat,
-                            alt: "",
-                        }),
-                ],
-            }),
-        });
-    };
+    u = n(335827);
+let d = (e) => {
+    let {
+            id: t,
+            occupant: n,
+            x: s,
+            y: d,
+            assetKey: c,
+            onClick: _,
+            skipNewUserEducation: f = !1,
+            shadowPosition: E,
+        } = e,
+        h = (0, l.A)(),
+        p = i.useMemo(() => h?.seats[c], [h, c]),
+        m = i.useMemo(() => p?.seat, [p]),
+        g = i.useMemo(() => p?.shadow, [p]);
+    return (0, r.jsx)(o.D, {
+        "aria-label": "claim seat",
+        onClick:
+            null != _
+                ? (e) => {
+                      e.preventDefault(), e.stopPropagation(), _(t);
+                  }
+                : void 0,
+        className: a()(u.am, { [u.Sf]: null != n }),
+        style: { transform: `translate(${s}px, ${d}px)` },
+        children: (0, r.jsxs)("div", {
+            className: u.LU,
+            children: [
+                null != g &&
+                    null != E &&
+                    (0, r.jsx)("img", {
+                        className: a()(u.Sl, u.r7),
+                        style: { transform: `translate(${E.x}px, ${E.y}px)` },
+                        src: p?.shadow,
+                        alt: "",
+                    }),
+                null != m &&
+                    (0, r.jsx)("img", {
+                        onDragStart: (e) => e.preventDefault(),
+                        className: a()(u.Sl, { [u.Sf]: null != n, [u.cb]: f }),
+                        style: { animationDelay: `${5500 + 150 * t}ms` },
+                        src: p?.seat,
+                        alt: "",
+                    }),
+            ],
+        }),
+    });
+};

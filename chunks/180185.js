@@ -1,32 +1,34 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
-var l = n(934551),
-    i = n(158954),
-    s = n(827734),
-    o = n(49999),
-    a = n(985018),
-    u = n(538409);
-function d(e) {
+var i = n(972213),
+    l = n(695366),
+    s = n(408278),
+    a = n(834730),
+    o = n(827734),
+    d = n(49999),
+    u = n(985018),
+    c = n(689568);
+function _(e) {
     let { notificationConfig: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {
-        className: u.kL,
+        className: c.kL,
         children: [
             (0, r.jsx)("div", {
-                className: u.VN,
-                children: (0, r.jsx)(i.K0, {
+                className: c.VN,
+                children: (0, r.jsx)(s.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": a.intl.string(a.t.cpT0Cq),
+                    "aria-label": u.intl.string(u.t.cpT0Cq),
                     onClick: () => {
-                        n(o.i.USER_DISMISS);
+                        n(d.i.USER_DISMISS);
                     },
-                    icon: l.XLargeIcon,
+                    icon: i.d,
                 }),
             }),
-            (0, r.jsx)(l.CircleErrorIcon, { color: s.A.colors.TEXT_FEEDBACK_WARNING, className: u.Kk }),
-            (0, r.jsx)(i.EYj, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
-            (0, r.jsx)(i.EYj, { variant: "text-sm/medium", children: t.description }),
+            (0, r.jsx)(l.E, { color: o.A.colors.TEXT_FEEDBACK_WARNING, className: c.Kk }),
+            (0, r.jsx)(a.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
+            (0, r.jsx)(a.E, { variant: "text-sm/medium", children: t.description }),
         ],
     });
 }

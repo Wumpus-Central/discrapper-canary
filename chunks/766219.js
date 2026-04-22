@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var r = n(73153),
     i = n(272355),
-    a = n(854492),
-    s = n(734057),
+    s = n(854492),
+    a = n(734057),
     o = n(967198),
     l = n(403362);
 class u extends i.A {
@@ -18,19 +18,17 @@ class u extends i.A {
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, guildId: n } = e;
         if (null != t) {
-            let e = s.A.getChannel(t);
+            let e = a.A.getChannel(t);
             if (null == e || e.isGuildStageVoice()) return;
         }
-        this.terminate();
-        let r = null == t ? null : (n ?? null);
-        this.handleDisconnectFromStageChannel(r);
+        this.terminate(), this.handleDisconnectFromStageChannel(null == t ? null : (n ?? null));
     };
     handleDisconnectFromStageChannel = (e) => {
         let t = o.A.getGuildId();
-        (0, a.A)([t, e].filter(l.Vq));
+        (0, s.A)([t, e].filter(l.Vq));
     };
     handleLogout = () => {
         this.terminate(), this.handleDisconnectFromStageChannel(null);
     };
 }
-let c = new u();
+let d = new u();

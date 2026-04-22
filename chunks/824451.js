@@ -1,96 +1,100 @@
-"use strict";
-n.d(t, { Ay: () => T, wF: () => C });
+n.d(t, { Ay: () => y, wF: () => T });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(311907),
     o = n(36525),
-    d = n(397927),
-    c = n(793574),
-    u = n(688810),
-    m = n(48736),
-    g = n(20851),
-    x = n(537174),
-    h = n(997509),
-    _ = n(555337),
-    p = n(657421),
-    A = n(652215),
-    f = n(381941),
-    j = n(985018),
-    N = n(908328),
-    E = n(480972);
-function C() {
+    d = n(331322),
+    c = n(534514),
+    u = n(834730),
+    m = n(452027),
+    g = n(247928),
+    h = n(43990),
+    x = n(793574),
+    _ = n(688810),
+    p = n(48736),
+    A = n(20851),
+    E = n(537174),
+    f = n(997509),
+    j = n(555337),
+    N = n(657421),
+    I = n(652215),
+    C = n(381941),
+    b = n(985018),
+    v = n(996408),
+    S = n(701628);
+function T() {
     let e,
         {
             guild: t,
             submitting: n,
-            errors: s,
-        } = (0, a.cf)([_.A], () => ({
-            submitting: _.A.isSubmitting(),
-            guild: _.A.getGuild(),
-            errors: _.A.getErrors(),
+            errors: l,
+        } = (0, a.cf)([j.A], () => ({
+            submitting: j.A.isSubmitting(),
+            guild: j.A.getGuild(),
+            errors: j.A.getErrors(),
         })),
-        l = Object.keys(s),
-        r = l.length > 0 ? l[0] : null;
+        s = Object.keys(l),
+        r = s.length > 0 ? s[0] : null;
     return (
-        (e = null != r ? s[r] : void 0),
+        (e = null != r ? l[r] : void 0),
         (0, i.jsx)(o.A, {
             submitting: n,
             onReset: () => {
-                null != t && h.A.init(t.id);
+                null != t && f.A.init(t.id);
             },
             onSave: () => {
-                null != t && h.A.saveGuild(t.id, { officialMessageColor: t.officialMessageColor ?? f.aj });
+                null != t && f.A.saveGuild(t.id, { officialMessageColor: t.officialMessageColor ?? C.aj });
             },
             errorMessage: e,
         })
     );
 }
-function T() {
-    let e = (0, a.bG)([_.A], () => _.A.getProps().guild),
-        { analyticsLocations: t } = (0, u.Ay)(c.A.GUILD_SETTINGS_OFFICIAL_MESSAGES),
-        n = (0, a.bG)([_.A], () => _.A.getError("official_message_color")),
-        l = s.useCallback((e) => {
-            h.A.updateGuild({ officialMessageColor: e });
+function y() {
+    let e = (0, a.bG)([j.A], () => j.A.getProps().guild),
+        { analyticsLocations: t } = (0, _.Ay)(x.A.GUILD_SETTINGS_OFFICIAL_MESSAGES),
+        n = (0, a.bG)([j.A], () => j.A.getError("official_message_color")),
+        s = l.useCallback((e) => {
+            f.A.updateGuild({ officialMessageColor: e });
         }, []);
     if (null == e) return null;
-    let r = e.officialMessageColor ?? f.aj;
-    return (0, i.jsx)(u.f5, {
+    let r = e.officialMessageColor ?? C.aj;
+    return (0, i.jsx)(_.f5, {
         value: t,
-        children: (0, i.jsxs)(d.BJc, {
+        children: (0, i.jsxs)(d.B, {
             gap: 40,
             children: [
-                (0, i.jsxs)(d.BJc, {
+                (0, i.jsxs)(d.B, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(d.Heading, { variant: "heading-lg/semibold", children: j.intl.string(j.t.xHEzFh) }),
-                        (0, i.jsx)(d.Text, {
+                        (0, i.jsx)(c.D, { variant: "heading-lg/semibold", children: b.intl.string(b.t.xHEzFh) }),
+                        (0, i.jsx)(u.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: j.intl.string(j.t.JTlr3L),
+                            children: b.intl.string(b.t.JTlr3L),
                         }),
                     ],
                 }),
-                (0, i.jsx)(d.D0$, { errorMessage: n, children: (0, i.jsx)(I, { color: r, onColorChange: l }) }),
-                (0, i.jsx)(v, { guildId: e.id, color: r }),
+                (0, i.jsx)(m.D, { errorMessage: n, children: (0, i.jsx)(R, { color: r, onColorChange: s }) }),
+                (0, i.jsx)(D, { guildId: e.id, color: r }),
             ],
         }),
     });
 }
-function I(e) {
+function R(e) {
     let { color: t, onColorChange: n } = e;
-    return (0, i.jsxs)(d.BJc, {
+    return (0, i.jsxs)(d.B, {
         gap: 8,
         children: [
-            (0, i.jsx)(d.Text, {
+            (0, i.jsx)(u.E, {
                 variant: "text-md/medium",
                 color: "text-default",
-                children: j.intl.string(j.t["2uQ6wZ"]),
+                children: b.intl.string(b.t["2uQ6wZ"]),
             }),
-            (0, i.jsx)(m.default, {
-                defaultColor: f.aj,
-                colors: A._tK,
+            (0, i.jsx)(p.default, {
+                defaultColor: C.aj,
+                colors: I._tK,
                 value: t,
                 onChange: n,
                 allowBlackCustomColor: !0,
@@ -98,50 +102,50 @@ function I(e) {
         ],
     });
 }
-function b(e) {
-    let { themeClass: t, color: n, author: s, message: l, guildId: a } = e,
-        o = (0, x.A)(n);
+function L(e) {
+    let { themeClass: t, color: n, author: l, message: s, guildId: a } = e,
+        o = (0, E.A)(n);
     return (0, i.jsx)("div", {
-        className: r()(t, N.$O),
+        className: r()(t, v.$O),
         style: o,
         children: (0, i.jsx)("div", {
-            className: N.zC,
-            children: (0, i.jsx)(g.A, { author: s, message: l, previewGuildId: a, isGroupStart: !0, className: E.Sg }),
+            className: v.zC,
+            children: (0, i.jsx)(A.A, { author: l, message: s, previewGuildId: a, isGroupStart: !0, className: S.Sg }),
         }),
     });
 }
-function v(e) {
+function D(e) {
     let { guildId: t, color: n } = e,
-        s = (0, p.A)(j.intl.string(j.t.Mi9Kbe)),
-        l = {
-            nick: s.author.username,
+        l = (0, N.A)(b.intl.string(b.t.Mi9Kbe)),
+        s = {
+            nick: l.author.username,
             guildId: t,
-            authorId: s.author.id,
+            authorId: l.author.id,
             colorRoleId: void 0,
             colorStrings: null,
             colorString: null,
         },
-        r = [A.NJ8.DARK, A.NJ8.DARKER, A.NJ8.MIDNIGHT, A.NJ8.LIGHT];
-    return (0, i.jsx)(d.M1G, {
-        children: (0, i.jsxs)(d.BJc, {
+        r = [I.NJ8.DARK, I.NJ8.DARKER, I.NJ8.MIDNIGHT, I.NJ8.LIGHT];
+    return (0, i.jsx)(g.M, {
+        children: (0, i.jsxs)(d.B, {
             gap: 8,
             children: [
-                (0, i.jsx)(d.Text, {
+                (0, i.jsx)(u.E, {
                     variant: "text-md/medium",
                     color: "text-default",
-                    children: j.intl.string(j.t.VI0jGW),
+                    children: b.intl.string(b.t.VI0jGW),
                 }),
                 (0, i.jsx)("div", {
-                    className: N.i1,
+                    className: v.i1,
                     "aria-hidden": !0,
                     children: r.map((e) =>
                         (0, i.jsx)(
-                            d.NPJ,
+                            h.N,
                             {
                                 theme: e,
                                 disableAdaptiveTheme: !0,
                                 children: (e) =>
-                                    (0, i.jsx)(b, { themeClass: e, color: n, author: l, message: s, guildId: t }),
+                                    (0, i.jsx)(L, { themeClass: e, color: n, author: s, message: l, guildId: t }),
                             },
                             e,
                         ),

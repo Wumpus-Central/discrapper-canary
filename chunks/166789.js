@@ -1,20 +1,20 @@
 e.d(i, { default: () => d });
 var n = e(627968);
 e(64700);
-var r = e(732955),
-    a = e(397927),
-    s = e(487329),
-    l = e(985018);
+var r = e(189213),
+    a = e(834730),
+    l = e(487329),
+    s = e(985018);
 function d(t) {
     let { onClose: i, transitionState: e } = t,
-        d = (0, s.B1)(s.iy.STREAM_FULL)?.errorCode,
-        o = l.intl.formatToPlainString(l.t.ejOT95, { errorCode: d });
-    return (0, n.jsx)(r.aFV, {
+        d = (0, l.B1)(l.iy.STREAM_FULL)?.errorCode,
+        o = s.intl.formatToPlainString(s.t.ejOT95, { errorCode: d });
+    return (0, n.jsx)(r.Modal, {
         transitionState: e,
-        title: l.intl.string(l.t.GzjdO5),
-        subtitle: l.intl.string(l.t.VVZDBL),
+        title: s.intl.string(s.t.GzjdO5),
+        subtitle: s.intl.string(s.t.VVZDBL),
         onClose: i,
-        actions: [{ text: l.intl.string(l.t.BddRzS), variant: "primary", onClick: i }],
-        children: (0, n.jsx)(a.Text, { variant: "text-md/medium", selectable: !0, color: "text-muted", children: o }),
+        actions: [{ text: s.intl.string(s.t.BddRzS), variant: "primary", onClick: i }],
+        children: (0, n.jsx)(a.E, { variant: "text-md/medium", selectable: !0, color: "text-muted", children: o }),
     });
 }

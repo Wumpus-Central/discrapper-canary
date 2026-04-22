@@ -1,155 +1,160 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => L });
 var i = n(627968),
-    a = n(64700),
+    s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    s = n(110259),
+    a = n.n(l),
+    r = n(110259),
     o = n(311907),
-    d = n(3203),
-    c = n(397927),
-    u = n(793574),
-    A = n(688810),
-    h = n(139286),
-    _ = n(414711),
-    m = n(187696),
-    g = n(723690),
-    p = n(21119),
-    E = n(994500),
-    I = n(954571),
-    f = n(45787),
-    C = n(275759),
-    T = n(233971),
-    N = n(652215);
+    c = n(3203),
+    d = n(214947),
+    u = n(834730),
+    m = n(408278),
+    A = n(192308),
+    h = n(821609),
+    x = n(597770),
+    p = n(793574),
+    g = n(688810),
+    N = n(139286),
+    f = n(414711),
+    _ = n(187696),
+    I = n(723690),
+    v = n(21119),
+    j = n(994500),
+    C = n(954571),
+    y = n(45787),
+    S = n(275759),
+    E = n(233971),
+    T = n(652215);
 n(646363);
-var S = n(985018),
-    x = n(955017);
-function v(e) {
+var b = n(985018),
+    P = n(728552);
+function L(e) {
     let {
             ref: t,
             isFocused: l,
-            isActive: v,
-            status: b,
-            activities: y,
+            isActive: L,
+            status: R,
+            activities: D,
             applicationStream: O,
-            isGameRelationship: L,
-            isMobile: R,
-            isVR: P,
-            onOtherHover: D,
-            onClick: j,
-            recipientUser: M,
-            analyticsLocations: w,
-            giftIntentType: U,
+            isGameRelationship: k,
+            isMobile: F,
+            isVR: w,
+            onOtherHover: G,
+            onClick: M,
+            recipientUser: U,
+            analyticsLocations: V,
+            giftIntentType: Y,
         } = e,
-        { analyticsLocations: G } = (0, A.Ay)(u.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
-        { Component: k } = (0, d.V)(),
-        V = (0, o.bG)([C.Ay], () => C.Ay.getFriendAnniversaryYears(M.id)),
-        { openGiftModal: B } = (0, T.$)({
-            giftRecipient: M,
-            analyticsLocations: G,
-            analyticsLocation: N.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+        { analyticsLocations: $ } = (0, g.Ay)(p.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
+        { Component: H } = (0, c.V)(),
+        W = (0, o.bG)([S.Ay], () => S.Ay.getFriendAnniversaryYears(U.id)),
+        { openGiftModal: z } = (0, E.$)({
+            giftRecipient: U,
+            analyticsLocations: $,
+            analyticsLocation: T.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
             analyticsObject: {
-                page: N.liQ.FRIENDS_LIST,
-                section: N.JJy.FRIENDS_LIST_FRIEND_ROW,
-                object: N.ZSU.BUTTON_CTA,
-                objectType: N.AnalyticsObjectTypes.GIFT,
+                page: T.liQ.FRIENDS_LIST,
+                section: T.JJy.FRIENDS_LIST_FRIEND_ROW,
+                object: T.ZSU.BUTTON_CTA,
+                objectType: T.AnalyticsObjectTypes.GIFT,
             },
             location: "gift-intent-friend-row",
         });
-    a.useEffect(() => {
-        let e = p.A.getUserAffinity(M.id);
-        (0, h.x)({
-            name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
-            type: s.ImpressionTypes.VIEW,
-            properties: { gift_intent_type: U, affinity: e?.communicationProbability },
+    s.useEffect(() => {
+        let e = v.A.getUserAffinity(U.id);
+        (0, N.x)({
+            name: r.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
+            type: r.ImpressionTypes.VIEW,
+            properties: { gift_intent_type: Y, affinity: e?.communicationProbability },
         });
-    }, [M, U]);
-    let H = (e) => {
+    }, [U, Y]);
+    let q = (e) => {
         e.stopPropagation();
-        let t = p.A.getUserAffinity(M.id);
-        I.default.track(N.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-            gift_intent_type: U,
+        let t = v.A.getUserAffinity(U.id);
+        C.default.track(T.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            gift_intent_type: Y,
             affinity: t?.dmProbability,
-            location_stack: G,
+            location_stack: $,
         }),
-            B();
+            z();
     };
-    return (0, i.jsx)(_.A, {
+    return (0, i.jsx)(f.A, {
         ref: t,
         isFocused: l,
-        isActive: v,
-        user: M,
-        analyticsLocations: w,
-        onOtherHover: D,
-        onClick: j,
+        isActive: L,
+        user: U,
+        analyticsLocations: V,
+        onOtherHover: G,
+        onClick: M,
         height: 72,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: r()(x.a4, x.Z$),
+                className: a()(P.a4, P.Z$),
                 children: [
-                    (0, i.jsx)(g.A, {
-                        className: x.Cv,
-                        user: M,
-                        status: b,
-                        isMobile: R,
-                        isVR: P,
+                    (0, i.jsx)(I.A, {
+                        className: P.Cv,
+                        user: U,
+                        status: R,
+                        isMobile: F,
+                        isVR: w,
                         subText: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(m.A, {
+                                (0, i.jsx)(_.A, {
                                     hovered: e,
-                                    activities: y,
+                                    activities: D,
                                     applicationStream: O,
-                                    status: b,
-                                    user: M,
-                                    userIgnored: E.A.isIgnored(M.id),
+                                    status: R,
+                                    user: U,
+                                    userIgnored: j.A.isIgnored(U.id),
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: x.K3,
+                                    className: P.K3,
                                     children: [
-                                        (0, i.jsx)(c.$yI, { size: "xxs", color: "currentColor" }),
-                                        (0, i.jsx)(c.Text, {
+                                        (0, i.jsx)(d.$, { size: "xxs", color: "currentColor" }),
+                                        (0, i.jsx)(u.E, {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
-                                            children: S.intl.formatToPlainString(S.t.S3fdq7, { numberOfYears: V }),
+                                            children: b.intl.formatToPlainString(b.t.S3fdq7, { numberOfYears: W }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         hovered: e,
-                        showAccountIdentifier: !L && !M.isProvisional,
+                        showAccountIdentifier: !k && !U.isProvisional,
                     }),
                     (0, i.jsxs)("div", {
-                        className: x.o1,
+                        className: P.o1,
                         children: [
-                            (0, i.jsx)(c.K0, {
+                            (0, i.jsx)(m.K, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: k,
-                                "aria-label": S.intl.string(S.t.I61IsE),
+                                icon: H,
+                                "aria-label": b.intl.string(b.t.I61IsE),
                                 onClick: () => {
-                                    I.default.track(N.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
-                                        gift_intent_type: U,
+                                    C.default.track(T.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        gift_intent_type: Y,
                                         cta_type: "send_message",
-                                        location_stack: G,
+                                        location_stack: $,
                                     }),
-                                        (0, f.xs)(M.id),
-                                        (0, c.mMO)(async () => {
-                                            let { default: e } = await n.e("95501").then(n.bind(n, 367516));
+                                        (0, y.xs)(U.id),
+                                        (0, A.openModalLazy)(async () => {
+                                            let { default: e } = await n.e("17882").then(n.bind(n, 367516));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
-                                                    giftIntentType: U ?? void 0,
-                                                    analyticsLocationHistory: G,
+                                                    giftIntentType: Y ?? void 0,
+                                                    analyticsLocationHistory: $,
                                                 });
                                         });
                                 },
                             }),
-                            (0, i.jsx)(c.Button, {
+                            (0, i.jsx)(h.$, {
                                 size: "sm",
-                                text: S.intl.string(S.t.PEjaCx),
-                                icon: c.okO,
-                                "aria-label": S.intl.string(S.t.PEjaCx),
-                                onClick: H,
+                                text: b.intl.string(b.t.PEjaCx),
+                                icon: x.o,
+                                "aria-label": b.intl.string(b.t.PEjaCx),
+                                onClick: q,
                             }),
                         ],
                     }),

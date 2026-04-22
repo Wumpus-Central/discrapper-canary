@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { C: () => r });
-var r = (function (e) {
-    return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.LIST = 1)] = "LIST"), (e[(e.GRID = 2)] = "GRID"), e;
-})({});
+n.d(t, { C: () => i });
+var r,
+    i = (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"), (r[(r.LIST = 1)] = "LIST"), (r[(r.GRID = 2)] = "GRID"), r);

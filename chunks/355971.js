@@ -1,31 +1,33 @@
-n.d(t, { A: () => _ });
-var l = n(627968);
-n(64700);
-var a = n(317097),
-    r = n(311907),
-    i = n(827734),
-    s = n(990078),
-    d = n(397927),
-    o = n(775602),
-    c = n(496885),
-    u = n(985018);
-function _(e) {
+"use strict";
+a.d(t, { A: () => p });
+var r = a(627968);
+a(64700);
+var i = a(317097),
+    n = a(311907),
+    l = a(827734),
+    s = a(990078),
+    o = a(602853),
+    c = a(478016),
+    d = a(775602),
+    u = a(496885),
+    _ = a(985018);
+function p(e) {
     let t,
-        { color: n, size: _, forcedIconColor: m, className: x, iconClassName: p, tooltipText: g } = e,
-        [h, A] = (0, r.yK)([o.A], () => [o.A.desaturateUserColors, o.A.saturation]),
-        v = (0, d.rdh)(i.A.unsafe_rawColors.PRIMARY_300).hex(),
-        b = (0, a.LX)(n ?? v),
-        f = (0, a.$k)(b, !1, h ? A : null);
+        { color: a, size: p, forcedIconColor: f, className: h, iconClassName: m, tooltipText: g } = e,
+        [b, A] = (0, n.yK)([d.A], () => [d.A.desaturateUserColors, d.A.saturation]),
+        E = (0, o.r)(l.A.unsafe_rawColors.PRIMARY_300).hex(),
+        v = (0, i.LX)(a ?? E),
+        x = (0, i.$k)(v, !1, b ? A : null);
     return (
         (t =
-            null != m ? m : 0.3 > (0, a.OK)(b) ? i.A.unsafe_rawColors.PRIMARY_630.css : i.A.unsafe_rawColors.WHITE.css),
-        (0, l.jsx)(s.m, {
-            text: null != g ? g : u.intl.string(u.t.T3PvV4),
-            children: (0, l.jsx)(c.A, {
-                className: x,
-                color: f,
-                size: _,
-                children: (0, l.jsx)(d.Uzd, { size: "custom", color: t, height: _, width: _, className: p }),
+            null != f ? f : 0.3 > (0, i.OK)(v) ? l.A.unsafe_rawColors.PRIMARY_630.css : l.A.unsafe_rawColors.WHITE.css),
+        (0, r.jsx)(s.m, {
+            text: null != g ? g : _.intl.string(_.t.T3PvV4),
+            children: (0, r.jsx)(u.A, {
+                className: h,
+                color: x,
+                size: p,
+                children: (0, r.jsx)(c.U, { size: "custom", color: t, height: p, width: p, className: m }),
             }),
         })
     );

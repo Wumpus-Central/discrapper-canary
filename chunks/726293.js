@@ -1,42 +1,42 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
+n.d(t, { A: () => u });
+var l = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(397927),
+    s = n(861672),
+    r = n(477782),
     o = n(60809),
-    l = n(985018),
-    u = n(502573);
-function c(e) {
+    c = n(985018),
+    d = n(436806);
+function u(e) {
     let { sortOrder: t, onSortOptionClick: n, closePopout: i } = e,
-        c = (e) => {
+        u = (e) => {
             n(e), i();
         };
-    return (0, r.jsx)("div", {
-        className: a()(o.Wx, u.k),
-        children: (0, r.jsx)(s.W1t, {
+    return (0, l.jsx)("div", {
+        className: a()(o.Wx, d.k),
+        children: (0, l.jsx)(s.W, {
             "data-menu-migrated": !0,
             navId: "command-list-sort",
-            "aria-label": l.intl.string(l.t.Ugo9ud),
+            "aria-label": c.intl.string(c.t.Ugo9ud),
             hideScroller: !0,
             onClose: i,
             onSelect: i,
-            children: (0, r.jsxs)(s.rXV, {
-                label: l.intl.string(l.t.yeYaHf),
+            children: (0, l.jsxs)(r.rX, {
+                label: c.intl.string(c.t.yeYaHf),
                 children: [
-                    (0, r.jsx)(s.iDA, {
+                    (0, l.jsx)(r.iD, {
                         id: "sort-by-popular",
                         group: "sort-by",
-                        label: l.intl.string(l.t.SzxiqK),
-                        action: () => c(o.Ug.POPULAR),
+                        label: c.intl.string(c.t.SzxiqK),
+                        action: () => u(o.Ug.POPULAR),
                         checked: t === o.Ug.POPULAR,
                     }),
-                    (0, r.jsx)(s.iDA, {
+                    (0, l.jsx)(r.iD, {
                         id: "sort-by-alphabetical",
                         group: "sort-by",
-                        label: l.intl.string(l.t.m8xsti),
-                        action: () => c(o.Ug.ALPHABETICAL),
+                        label: c.intl.string(c.t.m8xsti),
+                        action: () => u(o.Ug.ALPHABETICAL),
                         checked: t === o.Ug.ALPHABETICAL,
                     }),
                 ],

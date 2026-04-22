@@ -1,37 +1,36 @@
-n.d(t, { A: () => c });
-var a = n(627968),
+n.d(t, { A: () => h });
+var i = n(627968),
     s = n(64700),
-    i = n(397927),
-    l = n(805866),
-    r = n(646284),
-    o = n(985018),
-    d = n(141200);
-let c = (e) => {
+    l = n(534514),
+    a = n(834730),
+    r = n(331322),
+    o = n(821609),
+    d = n(805866),
+    c = n(837451),
+    u = n(985018),
+    p = n(242235);
+let h = (e) => {
     let { onSubmit: t, disabled: n } = e,
-        c = s.useCallback(async () => {
-            await t({ type: l.Ij.Empty }), window.location.reload();
+        h = s.useCallback(async () => {
+            await t({ type: d.Ij.Empty }), window.location.reload();
         }, [t]);
-    return (0, a.jsxs)("div", {
-        className: d.kL,
+    return (0, i.jsxs)("div", {
+        className: p.kL,
         children: [
-            (0, a.jsx)(i.Heading, {
-                variant: "heading-lg/bold",
-                className: d.DD,
-                children: o.intl.string(r.default.v52itt),
-            }),
-            (0, a.jsx)(i.Text, {
+            (0, i.jsx)(l.D, { variant: "heading-lg/bold", className: p.DD, children: u.intl.string(c.default.v52itt) }),
+            (0, i.jsx)(a.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                className: d.h_,
-                children: o.intl.string(r.default["5am8D3"]),
+                className: p.h_,
+                children: u.intl.string(c.default["5am8D3"]),
             }),
-            (0, a.jsx)(i.BJc, {
+            (0, i.jsx)(r.B, {
                 direction: "horizontal",
                 justify: "end",
-                children: (0, a.jsx)(i.Button, {
+                children: (0, i.jsx)(o.$, {
                     variant: "primary",
-                    text: o.intl.string(r.default["GDsHl+"]),
-                    onClick: c,
+                    text: u.intl.string(c.default["GDsHl+"]),
+                    onClick: h,
                     disabled: n,
                 }),
             }),

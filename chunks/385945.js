@@ -1,52 +1,53 @@
 "use strict";
 n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(158954),
-    s = n(612185),
+var i = n(627968),
+    l = n(331322),
+    s = n(834730),
+    r = n(612185),
     a = n(620632),
     o = n(552283),
-    l = n(126606);
+    c = n(701054);
 function u(e) {
     let {
             component: t,
             variant: n,
             color: u,
-            required: c = !1,
-            className: d,
-            lineClamp: _,
-            imagePosition: f = "right",
+            required: d = !1,
+            className: h,
+            lineClamp: m,
+            imagePosition: p = "right",
         } = e,
-        { resolveFieldValue: p } = (0, s.Q)();
-    if (null == t) return c ? (0, r.jsx)(o.A, { variant: n, className: d }) : null;
-    let h = p(t.fields.text, [a.o.STRING]),
-        m = p(t.fields.label, [a.o.STRING]),
-        E = p(t.fields.icon, [a.o.MEDIA]),
-        g =
-            null != E
-                ? (0, r.jsx)("img", {
+        { resolveFieldValue: f } = (0, r.Q)();
+    if (null == t) return d ? (0, i.jsx)(o.A, { variant: n, className: h }) : null;
+    let g = f(t.fields.text, [a.o.STRING]),
+        _ = f(t.fields.label, [a.o.STRING]),
+        x = f(t.fields.icon, [a.o.MEDIA]),
+        A =
+            null != x
+                ? (0, i.jsx)("img", {
                       alt: "",
-                      src: E.media.url,
-                      width: E.media.width,
-                      height: E.media.height,
-                      className: l.K,
+                      src: x.media.url,
+                      width: x.media.width,
+                      height: x.media.height,
+                      className: c.K,
                   })
                 : null;
-    return (0, r.jsx)(i.BJc, {
+    return (0, i.jsx)(l.B, {
         direction: "horizontal",
         gap: 0,
-        className: d,
+        className: h,
         children:
-            null == h && null == m
-                ? (0, r.jsx)(o.A, { variant: n })
-                : (0, r.jsxs)(i.EYj, {
+            null == g && null == _
+                ? (0, i.jsx)(o.A, { variant: n })
+                : (0, i.jsxs)(s.E, {
                       variant: n,
                       color: u,
-                      lineClamp: _,
+                      lineClamp: m,
                       children: [
-                          null != g && "left" === f ? (0, r.jsxs)(r.Fragment, { children: [g, " "] }) : null,
-                          null != m && "" !== m.value && `${m.value}: `,
-                          null != h && "" !== h.value ? h.value : "–",
-                          null != g && "right" === f ? (0, r.jsxs)(r.Fragment, { children: [" ", g] }) : null,
+                          null != A && "left" === p ? (0, i.jsxs)(i.Fragment, { children: [A, " "] }) : null,
+                          null != _ && "" !== _.value && `${_.value}: `,
+                          null != g && "" !== g.value ? g.value : "–",
+                          null != A && "right" === p ? (0, i.jsxs)(i.Fragment, { children: [" ", A] }) : null,
                       ],
                   }),
     });

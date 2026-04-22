@@ -1,95 +1,97 @@
-n.d(t, { A: () => u });
-var l = n(627968),
-    s = n(64700),
-    r = n(533925),
-    i = n(562465),
-    a = n(397927),
-    o = n(398450),
-    d = n(652215),
-    c = n(985018);
-function u(e) {
-    let { mfaChallenge: t, finish: n, setSlide: u, onClose: h, isSlideReady: g, headerAlignStart: m } = e,
-        [f, x] = s.useState(!1),
-        [S, p] = s.useState(null),
-        [j, b] = s.useState(!1),
-        [A, y] = s.useState(null),
-        [C, k] = s.useState(""),
-        v = s.useRef(null);
-    s.useEffect(() => {
-        x(!0),
-            i.Bo.post({ url: d.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
+n.d(t, { A: () => g });
+var a = n(627968),
+    r = n(64700),
+    i = n(533925),
+    s = n(562465),
+    l = n(532446),
+    o = n(292666),
+    d = n(821609),
+    c = n(398450),
+    u = n(652215),
+    h = n(985018);
+function g(e) {
+    let { mfaChallenge: t, finish: n, setSlide: g, onClose: m, isSlideReady: p, headerAlignStart: f } = e,
+        [x, S] = r.useState(!1),
+        [b, A] = r.useState(null),
+        [j, y] = r.useState(!1),
+        [C, v] = r.useState(null),
+        [k, w] = r.useState(""),
+        E = r.useRef(null);
+    r.useEffect(() => {
+        S(!0),
+            s.Bo.post({ url: u.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
                 .then((e) => {
-                    p(e.body.phone);
+                    A(e.body.phone);
                 })
                 .catch((e) => {
-                    y(e.body?.message ?? e.message);
+                    v(e.body?.message ?? e.message);
                 })
                 .finally(() => {
-                    x(!1);
+                    S(!1);
                 });
     }, [t.ticket]),
-        s.useEffect(() => {
-            g && v.current?.focus();
-        }, [g]);
-    let w = null == S ? c.intl.string(c.t.LQdCQE) : c.intl.formatToPlainString(c.t["8r6h7+"], { phoneNumber: S });
-    return (0, l.jsxs)("form", {
+        r.useEffect(() => {
+            p && E.current?.focus();
+        }, [p]);
+    let R = null == b ? h.intl.string(h.t.LQdCQE) : h.intl.formatToPlainString(h.t["8r6h7+"], { phoneNumber: b });
+    return (0, a.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                b(!0),
-                n({ mfaType: "sms", data: C })
+                y(!0),
+                n({ mfaType: "sms", data: k })
                     .catch((e) => {
-                        y(e.message ?? e.body?.message);
+                        v(e.message ?? e.body?.message);
                     })
                     .finally(() => {
-                        b(!1);
+                        y(!1);
                     });
         },
         children: [
-            (0, l.jsx)(o.A.SlideHeader, { subtitle: w, onClose: h, headerAlignStart: m }),
-            (0, l.jsxs)(o.A.SlideContent, {
+            (0, a.jsx)(c.A.SlideHeader, { subtitle: R, onClose: m, headerAlignStart: f }),
+            (0, a.jsxs)(c.A.SlideContent, {
                 children: [
-                    (0, l.jsxs)(a.M_l, {
+                    (0, a.jsxs)(l.M, {
                         children: [
-                            (0, l.jsx)(a.ksK, {
-                                label: c.intl.string(c.t.HZPBOd),
-                                inputRef: v,
-                                onChange: k,
-                                placeholder: c.intl.string(c.t.tARzgo),
+                            (0, a.jsx)(o.k, {
+                                label: h.intl.string(h.t.HZPBOd),
+                                inputRef: E,
+                                onChange: w,
+                                placeholder: h.intl.string(h.t.tARzgo),
                                 maxLength: 10,
-                                value: C,
+                                value: k,
                                 autoComplete: "one-time-code",
                                 spellCheck: "false",
                                 disabled: j,
                             }),
-                            (0, l.jsx)(a.Button, {
+                            (0, a.jsx)(d.$, {
                                 variant: "secondary",
-                                text: c.intl.string(c.t.ZF29L6),
-                                loading: f,
+                                text: h.intl.string(h.t.ZF29L6),
+                                loading: x,
                                 onClick: () => {
-                                    i.Bo.post({
-                                        url: d.Rsh.LOGIN_SMS_SEND,
+                                    s.Bo.post({
+                                        url: u.Rsh.LOGIN_SMS_SEND,
                                         body: { ticket: t.ticket },
                                         oldFormErrors: !0,
                                         rejectWithError: !1,
                                     })
                                         .then((e) => {
-                                            p(e.body.phone);
+                                            A(e.body.phone);
                                         })
                                         .catch((e) => {
-                                            y(e.message || e.body?.message);
+                                            v(e.message || e.body?.message);
                                         });
                                 },
                             }),
                         ],
                     }),
-                    (0, l.jsx)(o.A.SlideError, { error: A }),
+                    (0, a.jsx)(c.A.SlideError, { error: C }),
                 ],
             }),
-            (0, l.jsx)(o.A.SlideFooter, {
+            (0, a.jsx)(c.A.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: u,
+                setSlide: g,
                 showConfirm: !0,
-                disabled: C.length !== r.$A,
+                disabled: k.length !== i.$A,
                 submitting: j,
             }),
         ],

@@ -1,24 +1,25 @@
 "use strict";
-n.d(t, { b: () => C, k: () => y }), n(667532), n(775443);
+n.d(t, { b: () => O, k: () => y }), n(667532), n(775443);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(735438),
     l = n.n(o),
-    u = n(158954),
+    u = n(892491),
+    d = n(462824),
     c = n(73939),
-    d = n(626494),
-    _ = n(750506),
-    f = n(80556),
-    p = n(267102),
-    h = n(203982),
+    _ = n(626494),
+    f = n(750506),
+    E = n(80556),
+    h = n(267102),
+    p = n(203982),
     m = n(192308),
     g = n(231723),
-    E = n(652215),
-    A = n(727423);
-let I = [_.Ay, f.Ay];
-class T extends i.PureComponent {
+    A = n(652215),
+    I = n(195876);
+let T = [f.Ay, E.Ay];
+class S extends i.PureComponent {
     state = { transitionState: null };
     componentWillAppear = (e) => {
         this.componentWillEnter(e);
@@ -57,87 +58,90 @@ class T extends i.PureComponent {
             this.props.closeModal(this.props.modalKey), setTimeout(() => e(), g.xt);
         });
     render() {
-        let { render: e, LayerComponent: t, isTopModal: n, instant: i, dismissable: a } = this.props,
+        let { render: e, LayerComponent: t, isTopModal: n, instant: i, dismissable: s } = this.props,
             o = e({
                 transitionState: i ? g.ip.ENTERED : this.state.transitionState,
                 onClose: this.close,
-                dismissable: a,
+                dismissable: s,
             });
-        return (0, r.jsx)(t, { children: (0, r.jsx)("div", { className: s()(A.qd, !n && A.AD), children: o }) });
+        return (0, r.jsx)(t, { children: (0, r.jsx)("div", { className: a()(I.qd, !n && I.AD), children: o }) });
     }
 }
 function y() {
-    return (0, m.modalContextFromAppContext)((0, p.Us)());
+    return (0, m.modalContextFromAppContext)((0, h.Us)());
 }
-function S(e) {
-    let t = [],
-        n = !1;
-    for (let r = e.length - 1; r >= 0; r--) {
-        let i = e[r],
-            a = e[r + 1]?.stackingBehavior,
-            s = n || "replace" === a;
-        t.unshift({ ...i, isVisible: !s }), "replaceAll" === i.stackingBehavior && (n = !0);
-    }
-    return t;
-}
-let v = [];
-function C() {
+let N = [];
+function O() {
     let e = y(),
-        t = (0, m.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : v)),
-        n = i.useMemo(() => S(t), [t]),
-        a = i.useRef(void 0);
+        t = (0, m.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
+        n = i.useMemo(
+            () =>
+                (function (e) {
+                    let t = [],
+                        n = !1;
+                    for (let r = e.length - 1; r >= 0; r--) {
+                        let i = e[r],
+                            s = e[r + 1]?.stackingBehavior,
+                            a = n || "replace" === s;
+                        t.unshift({ ...i, isVisible: !a }), "replaceAll" === i.stackingBehavior && (n = !0);
+                    }
+                    return t;
+                })(t),
+            [t],
+        ),
+        s = i.useRef(void 0);
     i.useLayoutEffect(() => {
-        a.current = t[t.length - 1];
+        s.current = t[t.length - 1];
     }, [t]);
-    let s = t.length > 0;
+    let a = t.length > 0;
     i.useLayoutEffect(() => {
-        if (!s) return;
+        if (!a) return;
         let e = () => {
-            let e = a.current;
+            let e = s.current;
             null != e && null != e.onCloseRequest && !1 !== e.dismissable && e.onCloseRequest();
         };
         return (
-            h._.subscribe(E.jej.MODAL_CLOSE, e),
+            p._.subscribe(A.jej.MODAL_CLOSE, e),
             () => {
-                h._.unsubscribe(E.jej.MODAL_CLOSE, e);
+                p._.unsubscribe(A.jej.MODAL_CLOSE, e);
             }
         );
-    }, [s]);
+    }, [a]);
     let o = i.useCallback(() => {
-            let e = a.current;
-            e?.dismissable !== !1 && h._.dispatch(E.jej.MODAL_CLOSE);
+            let e = s.current;
+            e?.dismissable !== !1 && p._.dispatch(A.jej.MODAL_CLOSE);
         }, []),
-        f = i.useCallback(
+        E = i.useCallback(
             (t) => {
                 (0, m.closeModal)(t, e);
             },
             [e],
         ),
-        p = I.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
+        h = T.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.Ay)));
     return (0, r.jsxs)(c.F, {
         component: i.Fragment,
         children: [
-            I.map((e, n) => {
-                let i = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.Ay)),
-                    a = i?.backdropStyle ?? u.F2Z.DARK;
-                return (0, u.sC$)(a)
+            T.map((e, n) => {
+                let i = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.Ay)),
+                    s = i?.backdropStyle ?? u.F.DARK;
+                return (0, d.s)(s)
                     ? (0, r.jsx)(
                           e,
                           {
-                              children: (0, r.jsx)(u.pkL, {
-                                  variant: a === u.F2Z.LIGHTBOX || a === u.F2Z.IMMERSIVE ? "lightbox" : "default",
+                              children: (0, r.jsx)(d.p, {
+                                  variant: s === u.F.LIGHTBOX || s === u.F.IMMERSIVE ? "lightbox" : "default",
                                   animationVariant: i?.instant ? "instant" : "default",
-                                  isVisible: p[n],
+                                  isVisible: h[n],
                                   onClick: o,
                               }),
                           },
                           `layer-${n}`,
                       )
                     : (0, r.jsx)(
-                          d.A,
+                          _.A,
                           {
-                              isVisible: p[n],
-                              backdropStyle: a,
+                              isVisible: h[n],
+                              backdropStyle: s,
                               onClose: o,
                               LayerComponent: e,
                               backdropInstant: i?.instant,
@@ -146,16 +150,16 @@ function C() {
                       );
             }),
             n.map((e, t) => {
-                let { key: i, Layer: a, render: s, instant: o, isVisible: l, dismissable: u } = e;
+                let { key: i, Layer: s, render: a, instant: o, isVisible: l, dismissable: u } = e;
                 return (0, r.jsx)(
-                    T,
+                    S,
                     {
                         modalKey: i,
-                        LayerComponent: a ?? _.Ay,
+                        LayerComponent: s ?? f.Ay,
                         isVisible: l,
                         isTopModal: t === n.length - 1,
-                        render: s,
-                        closeModal: f,
+                        render: a,
+                        closeModal: E,
                         instant: o,
                         dismissable: u,
                     },

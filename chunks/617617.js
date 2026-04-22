@@ -1,47 +1,26 @@
 "use strict";
-n.d(t, { A: () => D });
+n.d(t, { A: () => O });
 var r = n(284009),
     i = n.n(r),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(311907),
     l = n(803805),
     u = n(873298),
-    c = n(335871),
-    d = n(73153),
+    d = n(335871),
+    c = n(73153),
     _ = n(405892),
     f = n(761821),
-    p = n(355097);
-let h = { ProtoClass: u.nT, proto: u.nT.create(), lazyLoaded: !1, editInfo: (0, p.O9)() },
-    m = { ProtoClass: l.aw, proto: l.aw.create(), lazyLoaded: !0, editInfo: (0, p.O9)() },
-    g = { [p.oD.PRELOADED_USER_SETTINGS]: h, [p.oD.FRECENCY_AND_FAVORITES_SETTINGS]: m },
-    E = !1;
-function A(e) {
-    let { userSettingsProto: t } = e;
-    null != t && ((h.proto = t), i()("string" != typeof h.proto, "UserSettingsProto cannot be a string"));
-    let { proto: n, isDirty: r, cleanupFuncs: a } = (0, f.vI)(h.proto, _.A[p.oD.PRELOADED_USER_SETTINGS]);
-    r && S(h),
-        (h.proto = n),
-        i()("string" != typeof h.proto, "UserSettingsProto cannot be a string"),
-        (h.editInfo.triggeredMigrations = r),
-        (h.editInfo.cleanupFuncs = a),
-        (h.editInfo.loaded = !0),
-        Object.values(g).forEach((e) => {
-            e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
-        }),
-        y();
+    E = n(355097);
+let h = { ProtoClass: u.nT, proto: u.nT.create(), lazyLoaded: !1, editInfo: (0, E.O9)() },
+    p = { ProtoClass: l.aw, proto: l.aw.create(), lazyLoaded: !0, editInfo: (0, E.O9)() },
+    m = { [E.oD.PRELOADED_USER_SETTINGS]: h, [E.oD.FRECENCY_AND_FAVORITES_SETTINGS]: p },
+    g = !1;
+function A() {
+    I();
 }
 function I() {
-    y();
-}
-function T() {
-    y(),
-        Object.values(g).forEach((e) => {
-            (e.proto = e.ProtoClass.create()), (e.editInfo = (0, p.O9)());
-        });
-}
-function y() {
-    Object.values(g).forEach((e) => {
+    Object.values(m).forEach((e) => {
         null != e.editInfo.timeout &&
             (clearTimeout(e.editInfo.timeout),
             (e.editInfo.timeout = void 0),
@@ -50,23 +29,19 @@ function y() {
             (e.editInfo.offlineEditDataVersion = e.proto.versions?.dataVersion ?? 0));
     });
 }
+function T(e) {
+    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, E.O9)());
+}
 function S(e) {
-    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, p.O9)());
-}
-function v(e) {
-    let { userSettingsProto: t } = e;
-    (h.proto = (0, f.Gd)(t)), i()("string" != typeof h.proto, "UserSettingsProto cannot be a string");
-}
-function C(e) {
     let {
         settings: { proto: t, type: n },
         partial: r,
-        resetEditInfo: a,
-        local: s,
+        resetEditInfo: s,
+        local: a,
     } = e;
-    E = !s;
-    let o = g[n];
-    a && S(o),
+    g = !a;
+    let o = m[n];
+    s && T(o),
         r
             ? ((o.proto = (0, f.RK)(o.ProtoClass, o.proto, t)),
               i()("string" != typeof o.proto, "UserSettingsProto cannot be a string"))
@@ -75,44 +50,32 @@ function C(e) {
               (o.editInfo.loaded = !0),
               (o.editInfo.loading = !1));
 }
-function b(e) {
-    let {
-        settings: { type: t, changes: n },
-    } = e;
-    i()(!__OVERLAY__, "this cannot run in the overlay");
-    let r = g[t];
-    return (r.editInfo = { ...r.editInfo, ...n }), !1;
-}
-function N(e) {
-    let { userSettings: t } = e;
-    R(t);
-}
-function R(e) {
+function y(e) {
     null != e &&
-        s().forEach(g, (t, n) => {
+        a().forEach(m, (t, n) => {
             let r = e[Number(n)];
             if (null == r) return;
-            let a = r?.proto ?? "",
-                s = (0, f.ii)(t.ProtoClass, a);
-            if (null == s) return;
-            (t.proto = s), i()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
+            let s = r?.proto ?? "",
+                a = (0, f.ii)(t.ProtoClass, s);
+            if (null == a) return;
+            (t.proto = a), i()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
             let o = r?.protoToSave ?? null;
             if (null == o || null == r.offlineEditDataVersion) return;
             let l = (0, f.ii)(t.ProtoClass, o);
             null != l && ((t.editInfo.protoToSave = l), (t.editInfo.offlineEditDataVersion = r.offlineEditDataVersion));
         });
 }
-class O extends o.Ay.PersistedStore {
+class N extends o.Ay.PersistedStore {
     static displayName = "UserSettingsProtoStore";
     static persistKey = "UserSettingsProtoStore-Cache";
     initialize(e) {
-        R(e);
+        y(e);
     }
     getState() {
         return this.computeState();
     }
     computeState() {
-        return s().mapValues(g, (e) => {
+        return a().mapValues(m, (e) => {
             let t = { proto: (0, f.ob)(e.ProtoClass, e.proto) };
             return (
                 null != e.editInfo.offlineEditDataVersion &&
@@ -124,19 +87,19 @@ class O extends o.Ay.PersistedStore {
         });
     }
     hasLoaded(e) {
-        return g[e].editInfo.loaded;
+        return m[e].editInfo.loaded;
     }
     get settings() {
         return h.proto;
     }
     get frecencyWithoutFetchingLatest() {
-        return m.proto;
+        return p.proto;
     }
     get wasMostRecentUpdateFromServer() {
-        return E;
+        return g;
     }
     getFullState() {
-        return g;
+        return m;
     }
     getGuildFolders() {
         let e = h.proto.guildFolders?.folders;
@@ -156,7 +119,7 @@ class O extends o.Ay.PersistedStore {
     getGuildRecentsDismissedAt(e) {
         if (null == e) return 0;
         let t = this.settings.guilds?.guilds[e]?.guildRecentsDismissedAt;
-        return null == t ? 0 : c.D.toDate(t).getTime();
+        return null == t ? 0 : d.D.toDate(t).getTime();
     }
     getDismissedGuildContent(e) {
         return null == e ? null : this.settings.guilds?.guilds?.[e]?.dismissedGuildContent;
@@ -168,14 +131,46 @@ class O extends o.Ay.PersistedStore {
         return this.settings.guilds?.guilds ?? null;
     }
 }
-let D = new O(d.h, {
-    CACHE_LOADED: N,
-    USER_SETTINGS_PROTO_UPDATE: C,
-    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
-    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: b,
-    CONNECTION_OPEN: A,
-    CONNECTION_CLOSED: I,
-    CONNECTION_RESUMED: I,
-    OVERLAY_INITIALIZE: v,
-    LOGOUT: T,
+let O = new N(c.h, {
+    CACHE_LOADED: function (e) {
+        let { userSettings: t } = e;
+        y(t);
+    },
+    USER_SETTINGS_PROTO_UPDATE: S,
+    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: S,
+    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function (e) {
+        let {
+            settings: { type: t, changes: n },
+        } = e;
+        i()(!__OVERLAY__, "this cannot run in the overlay");
+        let r = m[t];
+        return (r.editInfo = { ...r.editInfo, ...n }), !1;
+    },
+    CONNECTION_OPEN: function (e) {
+        let { userSettingsProto: t } = e;
+        null != t && ((h.proto = t), i()("string" != typeof h.proto, "UserSettingsProto cannot be a string"));
+        let { proto: n, isDirty: r, cleanupFuncs: s } = (0, f.vI)(h.proto, _.A[E.oD.PRELOADED_USER_SETTINGS]);
+        r && T(h),
+            (h.proto = n),
+            i()("string" != typeof h.proto, "UserSettingsProto cannot be a string"),
+            (h.editInfo.triggeredMigrations = r),
+            (h.editInfo.cleanupFuncs = s),
+            (h.editInfo.loaded = !0),
+            Object.values(m).forEach((e) => {
+                e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
+            }),
+            I();
+    },
+    CONNECTION_CLOSED: A,
+    CONNECTION_RESUMED: A,
+    OVERLAY_INITIALIZE: function (e) {
+        let { userSettingsProto: t } = e;
+        (h.proto = (0, f.Gd)(t)), i()("string" != typeof h.proto, "UserSettingsProto cannot be a string");
+    },
+    LOGOUT: function () {
+        I(),
+            Object.values(m).forEach((e) => {
+                (e.proto = e.ProtoClass.create()), (e.editInfo = (0, E.O9)());
+            });
+    },
 });

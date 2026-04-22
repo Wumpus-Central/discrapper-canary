@@ -1,82 +1,85 @@
-n.d(t, { G: () => m, O: () => h });
-var r = n(627968),
-    s = n(64700),
-    l = n(990078),
-    i = n(397927),
-    a = n(830215),
-    o = n(31457),
-    d = n(985018),
-    c = n(712104);
-function u() {
-    let [e, t] = s.useState(!1),
-        [n, l] = s.useState(!1),
-        [o, u] = s.useState(!1);
-    s.useEffect(() => {
+"use strict";
+r.d(t, { G: () => m, O: () => h });
+var i = r(627968),
+    a = r(64700),
+    n = r(990078),
+    s = r(834730),
+    l = r(821609),
+    o = r(849516),
+    c = r(830215),
+    d = r(31457),
+    _ = r(985018),
+    u = r(397251);
+function p() {
+    let [e, t] = a.useState(!1),
+        [r, n] = a.useState(!1),
+        [o, d] = a.useState(!1);
+    a.useEffect(() => {
         let e;
         return (
-            n &&
+            r &&
                 (e = setTimeout(() => {
-                    l(!1);
+                    n(!1);
                 }, 2e3)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [n]);
-    let m = async () => {
+    }, [r]);
+    let p = async () => {
         if (!e) {
             t(!0);
             try {
-                await a.A.verifyResend(), l(!0), u(!0);
+                await c.A.verifyResend(), n(!0), d(!0);
             } catch (e) {
             } finally {
                 t(!1);
             }
         }
     };
-    return n
-        ? (0, r.jsx)(i.Text, {
-              className: c.$6,
+    return r
+        ? (0, i.jsx)(s.E, {
+              className: u.$6,
               variant: "text-sm/normal",
               color: "text-feedback-positive",
-              children: d.intl.string(d.t.H3Q7U8),
+              children: _.intl.string(_.t.H3Q7U8),
           })
-        : (0, r.jsx)(i.Button, {
+        : (0, i.jsx)(l.$, {
               variant: "primary",
               size: "sm",
-              text: o ? d.intl.string(d.t.WnX4J2) : d.intl.string(d.t["13ofGu"]),
+              text: o ? _.intl.string(_.t.WnX4J2) : _.intl.string(_.t["13ofGu"]),
               loading: e,
-              onClick: m,
+              onClick: p,
           });
 }
 function m() {
-    return (0, r.jsx)(o.ZK, {
-        className: c.jm,
-        icon: i.u6c,
-        text: d.intl.string(d.t.c6EUJI),
-        footnote: d.intl.string(d.t["jMh+TY"]),
+    return (0, i.jsx)(d.ZK, {
+        className: u.jm,
+        icon: o.u,
+        text: _.intl.string(_.t.c6EUJI),
+        footnote: _.intl.string(_.t["jMh+TY"]),
         meetsRequirement: !1,
-        children: (0, r.jsx)(l.m, {
+        children: (0, i.jsx)(n.m, {
             asContainer: !0,
-            text: d.intl.string(d.t.mGlP30),
-            children: (0, r.jsx)(i.Button, {
+            text: _.intl.string(_.t.mGlP30),
+            children: (0, i.jsx)(l.$, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: d.intl.string(d.t["13ofGu"]),
+                text: _.intl.string(_.t["13ofGu"]),
             }),
         }),
     });
 }
 function h(e) {
     let { isUserVerified: t } = e,
-        n = t ? d.intl.string(d.t.qY1jHN) : d.intl.string(d.t.c6EUJI);
-    return (0, r.jsx)(o.ZK, {
-        className: c.jm,
-        icon: i.u6c,
-        text: n,
-        footnote: d.intl.string(d.t["jMh+TY"]),
+        r = t ? _.intl.string(_.t.qY1jHN) : _.intl.string(_.t.c6EUJI);
+    return (0, i.jsx)(d.ZK, {
+        className: u.jm,
+        icon: o.u,
+        text: r,
+        footnote: _.intl.string(_.t["jMh+TY"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(u, {}),
+        children: (0, i.jsx)(p, {}),
     });
 }

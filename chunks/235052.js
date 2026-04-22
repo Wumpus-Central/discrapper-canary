@@ -1,56 +1,57 @@
-n.d(e, { A: () => f, u: () => g });
+n.d(t, { A: () => f, u: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    r = n(397927),
-    s = n(308368),
-    a = n(627363),
-    o = n(616356),
-    u = n(961350),
-    d = n(159426),
-    c = n(762370),
-    h = n(25528),
+    a = n(477782),
+    s = n(500060),
+    r = n(308368),
+    o = n(627363),
+    c = n(616356),
+    d = n(961350),
+    u = n(159426),
+    h = n(762370),
+    m = n(25528),
     A = n(652215),
-    m = n(426127),
+    g = n(783198),
     p = n(985018);
-function g(t, e, n) {
-    let { enableRequestToStream: i } = d.m.useExperiment(
-            { guildId: e.guild_id, location: n },
+function _(e, t, n) {
+    let { enableRequestToStream: i } = u.m.useExperiment(
+            { guildId: t.guild_id, location: n },
             { autoTrackExposure: !1 },
         ),
-        r = (0, l.bG)([u.default], () => u.default.getId()),
-        m = (0, h.Ay)(t, e.guild_id)[0],
-        p = (0, l.bG)([o.A], () => null != o.A.getStreamForUser(t, e.getGuildId())),
-        g = (0, a.YY)(m?.application_id).data,
-        f = (0, c.A)(t, e.id);
-    return r !== t && null != m && null != g && i && f && !p
+        a = (0, l.bG)([d.default], () => d.default.getId()),
+        s = (0, m.Ay)(e, t.guild_id)[0],
+        g = (0, l.bG)([c.A], () => null != c.A.getStreamForUser(e, t.getGuildId())),
+        p = (0, o.YY)(s?.application_id).data,
+        _ = (0, h.A)(e, t.id);
+    return a !== e && null != s && null != p && i && _ && !g
         ? {
-              playingApplication: g,
+              playingApplication: p,
               handleRequestToStream: function (n) {
-                  s.A.sendActivityInvite({
+                  r.A.sendActivityInvite({
                       type: A.xL.STREAM_REQUEST,
-                      channelId: e.id,
-                      activity: m,
-                      content: `<@${t}>`,
+                      channelId: t.id,
+                      activity: s,
+                      content: `<@${e}>`,
                       location: n,
-                      targetUserId: t,
+                      targetUserId: e,
                   });
               },
           }
         : null;
 }
-function f(t, e) {
-    let n = g(t, e, "useRequestToStreamItem");
+function f(e, t) {
+    let n = _(e, t, "useRequestToStreamItem");
     return null == n
         ? null
         : (0, i.jsx)(
-              r.Drp,
+              a.Dr,
               {
                   id: "request-to-stream",
-                  label: p.intl.format(m.default["8qq+H7"], { applicationName: n.playingApplication.name }),
+                  label: p.intl.format(g.default["8qq+H7"], { applicationName: n.playingApplication.name }),
                   action: () => n.handleRequestToStream("request to stream item"),
-                  icon: r.ofK,
-                  leadingAccessory: { type: "icon", icon: r.ofK },
+                  icon: s.o,
+                  leadingAccessory: { type: "icon", icon: s.o },
               },
               "request-to-stream",
           );

@@ -1,51 +1,52 @@
-n.d(t, { MR: () => c, fY: () => u }), n(321073);
-var l = n(64700),
-    a = n(403362),
-    i = n(129443),
-    r = n(83140),
+"use strict";
+n.d(t, { MR: () => u, fY: () => c }), n(321073);
+var a = n(64700),
+    i = n(403362),
+    r = n(129443),
+    l = n(83140),
     s = n(843540),
     d = n(17372);
 let o = {
-    [d.Wb.SAFETY_DM_SPAM_FILTER]: i.A,
+    [d.Wb.SAFETY_DM_SPAM_FILTER]: r.A,
     [d.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.A,
-    [d.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: r.A,
+    [d.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: l.A,
 };
-function u(e) {
-    return l.useMemo(() => {
+function c(e) {
+    return a.useMemo(() => {
         var t;
         let n;
         return null != e
             ? ((t = e),
               (n = []),
               Object.entries(o).forEach((e) => {
-                  let [l, a] = e;
-                  (null == a.eligibleReportSubtypes || a.eligibleReportSubtypes.includes(t)) && n.push(l);
+                  let [a, i] = e;
+                  (null == i.eligibleReportSubtypes || i.eligibleReportSubtypes.includes(t)) && n.push(a);
               }),
               0 === n.length ? null : n)
             : null;
     }, [e]);
 }
-function c(e, t) {
-    return l.useMemo(
+function u(e, t) {
+    return a.useMemo(
         () =>
             e
                 .map((e) => {
-                    var n, l;
-                    let a;
+                    var n, a;
+                    let i;
                     return (
                         (n = e),
-                        (l = t),
+                        (a = t),
                         !(function (e, t) {
-                            let { predicate: n, eligibleChannelTypes: l } = e,
-                                a = null == n || n?.() === !0,
-                                i = null == t || null == l || l.includes(t);
-                            return a && i;
-                        })((a = o[n]), l)
+                            let { predicate: n, eligibleChannelTypes: a } = e,
+                                i = null == n || n?.() === !0,
+                                r = null == t || null == a || a.includes(t);
+                            return i && r;
+                        })((i = o[n]), a)
                             ? null
-                            : a
+                            : i
                     );
                 })
-                .filter(a.Vq),
+                .filter(i.Vq),
         [e, t],
     );
 }

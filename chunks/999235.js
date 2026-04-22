@@ -1,81 +1,85 @@
-n.d(e, { default: () => p });
-var r = n(627968),
-    i = n(64700),
-    a = n(417597),
-    c = n(397927),
-    u = n(775602),
-    s = n(954571),
-    o = n(178186),
-    _ = n(431804),
-    d = n(652215),
-    l = n(985018),
-    I = n(236103);
-function p(t) {
-    let { onClose: e, source: n = _.y.KEYBIND, transitionState: p } = t,
-        f = (0, a.bG)([u.A], () => u.A.useReducedMotion),
-        [S, U] = i.useState(f),
-        h = i.useRef(null),
-        A = i.useRef(null);
-    async function N() {
+r.d(e, { default: () => S });
+var a = r(627968),
+    n = r(64700),
+    i = r(417597),
+    c = r(404809),
+    s = r(772707),
+    o = r(652929),
+    u = r(782134),
+    d = r(113494),
+    l = r(775602),
+    f = r(954571),
+    p = r(178186),
+    _ = r(431804),
+    A = r(652215),
+    I = r(985018),
+    h = r(263206);
+function S(t) {
+    let { onClose: e, source: r = _.y.KEYBIND, transitionState: S } = t,
+        U = (0, i.bG)([l.A], () => l.A.useReducedMotion),
+        [k, W] = n.useState(U),
+        N = n.useRef(null),
+        b = n.useRef(null);
+    async function C() {
         await e();
     }
     return (
-        i.useEffect(() => {
+        n.useEffect(() => {
             let t = new Date();
             return (
-                s.default.track(d.HAw.VIBING_WUMPUS_VIEWED, { source: n }),
-                f || (0, o.q0)(),
+                f.default.track(A.HAw.VIBING_WUMPUS_VIEWED, { source: r }),
+                U || (0, p.q0)(),
                 () => {
-                    s.default.track(d.HAw.VIBING_WUMPUS_CLOSED, {
+                    f.default.track(A.HAw.VIBING_WUMPUS_CLOSED, {
                         duration_open_ms: new Date().getTime() - t.getTime(),
-                        source: n,
+                        source: r,
                     }),
-                        (0, o.S9)();
+                        (0, p.S9)();
                 }
             );
-        }, [n]),
-        (0, r.jsxs)("div", {
-            className: I._q,
+        }, [r]),
+        (0, a.jsxs)("div", {
+            className: h._q,
             children: [
-                (0, r.jsx)(c.Rfp, {
+                (0, a.jsx)(c.R, {
                     withReducedMotion: "halt",
                     listenOnDocumentBody: !0,
                     artboard: "Background",
-                    ref: A,
-                    className: I.JW,
+                    ref: b,
+                    className: h.JW,
                 }),
-                (0, r.jsx)(c.kpP, {
-                    graphic: { rive: c.Zd_, type: "rive", props: { ref: h, withReducedMotion: "halt" } },
+                (0, a.jsx)(s.k, {
+                    graphic: { rive: o.Z, type: "rive", props: { ref: N, withReducedMotion: "halt" } },
                     gradientColor: "blue",
-                    title: l.intl.string(l.t.L4ifkZ),
-                    subtitle: l.intl.string(l.t.GkCsLr),
+                    title: I.intl.string(I.t.L4ifkZ),
+                    subtitle: I.intl.string(I.t.GkCsLr),
                     actions: [
                         {
-                            text: l.intl.string(l.t["8eKkaf"]),
+                            text: I.intl.string(I.t["8eKkaf"]),
                             onClick: () => {
-                                e(), s.default.track(d.HAw.VIBING_WUMPUS_ACTION, { action: _.r.BACK_TO_CONVERSATION });
+                                e(), f.default.track(A.HAw.VIBING_WUMPUS_ACTION, { action: _.r.BACK_TO_CONVERSATION });
                             },
                             variant: "secondary",
                         },
                         {
-                            text: l.intl.string(S ? l.t.RscU7I : l.t.ZcgDJX),
+                            text: I.intl.string(k ? I.t.RscU7I : I.t.ZcgDJX),
                             onClick: () => {
-                                S
-                                    ? ((0, o.q0)(),
-                                      s.default.track(d.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PLAY }),
-                                      h.current?.play(),
-                                      A.current?.play())
-                                    : ((0, o.O$)(),
-                                      s.default.track(d.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PAUSE }),
-                                      h.current?.pause(),
-                                      A.current?.pause()),
-                                    U(!S);
+                                k
+                                    ? ((0, p.q0)(),
+                                      f.default.track(A.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PLAY }),
+                                      N.current?.play(),
+                                      b.current?.play())
+                                    : ((0, p.O$)(),
+                                      f.default.track(A.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PAUSE }),
+                                      N.current?.pause(),
+                                      b.current?.pause()),
+                                    W(!k);
                             },
-                            icon: S ? c.udU : c.E$n,
+                            icon: k ? u.u : d.E,
                         },
                     ],
-                    onClose: N,
-                    transitionState: p,
+                    onClose: C,
+                    transitionState: S,
                 }),
             ],
         })

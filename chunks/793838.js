@@ -1,23 +1,26 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968);
-n(64700);
-var i = n(833349),
-    a = n(626584),
-    s = n(939496),
-    o = n(993401),
-    l = n(652215),
-    u = n(996988),
-    c = n(985018);
-function d(e) {
-    let { user: t, activity: n, onAction: d } = e,
-        { themeType: _ } = (0, s.E)(),
-        f = _ === u.d.MODAL_V2;
-    if (!(0, i.A)(n, l.jUm.INSTANCE)) return null;
-    let p = (e) => {
-        e.stopPropagation(),
-            d?.({ action: "PRESS_NOTIFY_BUTTON" }),
-            new a.A("UserActivityActions").log("notify", t.id, n);
-    };
-    return (0, r.jsx)(o.FD, { text: c.intl.string(c.t.vwl1PK), fullWidth: !f, onClick: p });
+e.d(n, { A: () => d });
+var i = e(627968);
+e(64700);
+var l = e(833349),
+    r = e(626584),
+    a = e(939496),
+    s = e(993401),
+    o = e(652215),
+    c = e(996988),
+    u = e(985018);
+function d(t) {
+    let { user: n, activity: e, onAction: d } = t,
+        { themeType: A } = (0, a.E)(),
+        x = A === c.d.MODAL_V2;
+    return (0, l.A)(e, o.jUm.INSTANCE)
+        ? (0, i.jsx)(s.FD, {
+              text: u.intl.string(u.t.vwl1PK),
+              fullWidth: !x,
+              onClick: (t) => {
+                  t.stopPropagation(),
+                      d?.({ action: "PRESS_NOTIFY_BUTTON" }),
+                      new r.A("UserActivityActions").log("notify", n.id, e);
+              },
+          })
+        : null;
 }

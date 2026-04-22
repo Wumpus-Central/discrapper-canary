@@ -1,75 +1,78 @@
-s.d(t, { A: () => h });
+s.d(t, { A: () => N });
 var n = s(627968),
-    i = s(64700),
-    l = s(311907),
-    a = s(397927),
-    o = s(212245),
-    r = s(287809),
-    c = s(927578),
-    d = s(987384),
-    u = s(912630),
-    m = s(965162),
-    x = s(413339),
-    p = s(952572),
-    g = s(144830),
-    A = s(577718),
+    l = s(64700),
+    i = s(311907),
+    a = s(192308),
+    o = s(452027),
+    r = s(212245),
+    c = s(287809),
+    d = s(927578),
+    u = s(987384),
+    m = s(912630),
+    x = s(965162),
+    p = s(413339),
+    g = s(952572),
+    A = s(144830),
+    h = s(577718),
     v = s(652215),
     f = s(693591),
-    N = s(985018);
-function h(e) {
+    j = s(985018);
+function N(e) {
     let {
             onLearnMore: t,
-            selectedBackgroundOption: h,
-            onSelectBackgroundOption: j,
-            currentDeviceId: O,
-            className: _,
+            selectedBackgroundOption: N,
+            onSelectBackgroundOption: _,
+            currentDeviceId: I,
+            className: D,
         } = e,
-        D = (0, l.bG)([r.default], () => r.default.getCurrentUser()),
-        [I, C] = i.useState(null),
-        T = (0, p.A)(),
-        E = c.Ay.canUseCustomBackgrounds(D);
-    i.useEffect(() => {
-        (0, d.HR)();
+        O = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
+        [E, C] = l.useState(null),
+        b = (0, g.A)(),
+        T = d.Ay.canUseCustomBackgrounds(O);
+    l.useEffect(() => {
+        (0, u.HR)();
     }, []);
-    let b = (0, l.cf)([u.A], () => (E ? u.A.videoFilterAssets : {})),
-        S = i.useMemo(() => Object.values(b).filter((e) => e.type === A.yZ.BACKGROUND), [b]),
-        U = (0, o.p)(),
-        k = { isVideoBackgroundSupported: T, onSelectBackgroundOption: j, selectedBackgroundOption: h },
-        y = i.useRef(k);
-    i.useEffect(() => {
-        y.current = k;
+    let S = (0, i.cf)([m.A], () => (T ? m.A.videoFilterAssets : {})),
+        U = l.useMemo(() => Object.values(S).filter((e) => e.type === h.yZ.BACKGROUND), [S]),
+        y = (0, r.p)(),
+        k = { isVideoBackgroundSupported: b, onSelectBackgroundOption: _, selectedBackgroundOption: N },
+        M = l.useRef(k);
+    l.useEffect(() => {
+        M.current = k;
     }),
-        i.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
-            e ? (0, x.S1)(s, O, { track: !1 }).catch(() => t(null)) : null != s && t(null);
-        }, [O]);
-    let M = (e) => {
-        j(e),
-            (0, x.S1)(e, O, { location: U.location })
+        l.useEffect(() => {
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = M.current;
+            e ? (0, p.S1)(s, I, { track: !1 }).catch(() => t(null)) : null != s && t(null);
+        }, [I]);
+    let P = (e) => {
+        _(e),
+            (0, p.S1)(e, I, { location: y.location })
                 .then(() => C(null))
                 .catch(() => {
-                    C(N.intl.string(N.t.ejrSLe)), (0, x.S1)(null, O, { location: U.location });
+                    C(j.intl.string(j.t.ejrSLe)), (0, p.S1)(null, I, { location: y.location });
                 });
     };
-    return T
+    return b
         ? (0, n.jsx)("div", {
-              className: _,
-              children: (0, n.jsx)(a.D0$, {
-                  label: N.intl.string(N.t.lZTUPs),
-                  errorMessage: I,
-                  children: (0, n.jsx)(g.A, {
-                      canUseCustomBackgrounds: E,
-                      customBackgroundOptions: S,
-                      selectedOption: h,
-                      onSelectOption: M,
+              className: D,
+              children: (0, n.jsx)(o.D, {
+                  label: j.intl.string(j.t.lZTUPs),
+                  errorMessage: E,
+                  children: (0, n.jsx)(A.A, {
+                      canUseCustomBackgrounds: T,
+                      customBackgroundOptions: U,
+                      selectedOption: N,
+                      onSelectOption: P,
                       onUpsellClick: () => {
-                          (0, a.mMO)(async () => {
-                              let { default: e } = await s.e("95743").then(s.bind(s, 210402));
+                          (0, a.openModalLazy)(async () => {
+                              let { default: e } = await Promise.all([s.e("76640"), s.e("14138"), s.e("45799")]).then(
+                                  s.bind(s, 210402),
+                              );
                               return (s) =>
                                   (0, n.jsx)(e, {
                                       ...s,
                                       onLearnMore: t,
-                                      analyticsSource: { ...U.location, object: v.ZSU.BUTTON_CTA },
+                                      analyticsSource: { ...y.location, object: v.ZSU.BUTTON_CTA },
                                   });
                           });
                       },
@@ -77,8 +80,8 @@ function h(e) {
                           let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                           return new Promise(async (n) => {
                               try {
-                                  let n = await (0, d.F9)(e, A.yZ.BACKGROUND);
-                                  M(n), (0, m.D1)(n, t.type === f.a.MP4, s), C(null);
+                                  let n = await (0, u.F9)(e, h.yZ.BACKGROUND);
+                                  P(n), (0, x.D1)(n, t.type === f.a.MP4, s), C(null);
                               } catch (e) {
                                   C(e.message);
                               }

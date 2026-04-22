@@ -1,68 +1,73 @@
 "use strict";
-n.d(t, { A: () => m }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => T }), n(323874), n(14289), n(35956);
 var r = n(627968);
 n(64700);
 var i = n(179771),
-    s = n(571356),
-    a = n(397927),
-    o = n(224750),
-    l = n(20015),
-    u = n(661191),
-    c = n(510783),
-    d = n(647053),
-    _ = n(652215),
-    f = n(985018),
-    p = n(934715);
-let h = (e) => {
-    switch (e) {
-        case o.yW.IP_LOCATION:
-            return a.L_e;
-        case o.yW.DISPLAYS_ADVERTISEMENTS:
-            return a.JD7;
-        default:
-            return null;
-    }
-};
-function m(e) {
+    s = n(834730),
+    a = n(998445),
+    o = n(11023),
+    l = n(173936),
+    u = n(194261),
+    d = n(406810),
+    c = n(430392),
+    _ = n(231483),
+    f = n(224750),
+    E = n(20015),
+    h = n(661191),
+    p = n(510783),
+    m = n(647053),
+    g = n(652215),
+    A = n(985018),
+    I = n(348418);
+function T(e) {
     let t,
-        { application: n, scopes: s, redirectUri: m, approximateGuildCount: g, isEmbeddedFlow: A, disclosures: I } = e,
-        T = new Date(u.default.extractTimestamp(n.id)),
-        S = (0, d.i4)(s),
-        y = (0, l.n)(n, _.gfo.EMBEDDED);
-    if (null != m && !y && !A)
+        { application: n, scopes: s, redirectUri: T, approximateGuildCount: y, isEmbeddedFlow: N, disclosures: O } = e,
+        R = new Date(h.default.extractTimestamp(n.id)),
+        v = (0, m.i4)(s),
+        C = (0, E.n)(n, g.gfo.EMBEDDED);
+    if (null != T && !C && !N)
         try {
-            let e = new URL(m);
+            let e = new URL(T);
             t = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             t = null;
         }
     return (0, r.jsxs)("div", {
-        className: p.B_,
+        className: I.B_,
         children: [
-            null != t ? (0, r.jsx)(E, { icon: a.qYV, text: f.intl.format(f.t["5k5OKD"], { origin: t }) }) : null,
-            (0, r.jsx)(E, { icon: a.XAi, text: (0, c.w)(n) }),
-            (0, r.jsx)(E, { icon: a.O4, text: f.intl.formatToPlainString(f.t["+1bjc8"], { date: T }) }),
-            s.includes(i.F.BOT) && null != g
-                ? (0, r.jsx)(E, { icon: a.CnV, text: f.intl.formatToPlainString(f.t.UHGHSP, { guildCount: g }) })
+            null != t ? (0, r.jsx)(S, { icon: l.q, text: A.intl.format(A.t["5k5OKD"], { origin: t }) }) : null,
+            (0, r.jsx)(S, { icon: u.X, text: (0, p.w)(n) }),
+            (0, r.jsx)(S, { icon: d.O, text: A.intl.formatToPlainString(A.t["+1bjc8"], { date: R }) }),
+            s.includes(i.F.BOT) && null != y
+                ? (0, r.jsx)(S, { icon: c.C, text: A.intl.formatToPlainString(A.t.UHGHSP, { guildCount: y }) })
                 : null,
-            (0, r.jsx)(E, { icon: a.lmn, text: S }),
-            null != I
-                ? I.map((e) => {
-                      let t = (0, o.wI)(e),
-                          n = h(e);
-                      return null != n && null != t ? (0, r.jsx)(E, { icon: n, text: t }) : null;
+            (0, r.jsx)(S, { icon: _.l, text: v }),
+            null != O
+                ? O.map((e) => {
+                      let t = (0, f.wI)(e),
+                          n = ((e) => {
+                              switch (e) {
+                                  case f.yW.IP_LOCATION:
+                                      return a.L;
+                                  case f.yW.DISPLAYS_ADVERTISEMENTS:
+                                      return o.J;
+                                  default:
+                                      return null;
+                              }
+                          })(e);
+                      return null != n && null != t ? (0, r.jsx)(S, { icon: n, text: t }) : null;
                   })
                 : null,
         ],
     });
 }
-function E(e) {
+function S(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)("div", {
-        className: p.f_,
+        className: I.f_,
         children: [
-            (0, r.jsx)(t, { className: p.u7, color: "currentColor" }),
-            (0, r.jsx)(s.E, { variant: "text-xs/normal", className: p.z9, children: n }),
+            (0, r.jsx)(t, { className: I.u7, color: "currentColor" }),
+            (0, r.jsx)(s.E, { variant: "text-xs/normal", className: I.z9, children: n }),
         ],
     });
 }

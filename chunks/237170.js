@@ -1,103 +1,105 @@
-n.d(e, { G: () => A, default: () => h });
-var i,
+n.d(e, { G: () => x, default: () => m });
+var a,
     r = n(627968),
     s = n(64700),
-    a = n(397927),
-    l = n(544231),
-    o = n(665909),
-    c = n(464838),
-    d = n(120340),
-    E = n(196645),
-    u = n(985018),
-    _ = n(16459),
-    A =
-        (((i = {})[(i.INTRO = 0)] = "INTRO"),
-        (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
-        (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
-        i);
-let h = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: A, channelId: h } = t,
-        [x, T] = s.useState(0),
-        g = s.useMemo(
-            () => ({ channelId: h, senderId: i, warningId: e, warningType: n, isNudgeWarning: !1 }),
-            [h, i, e, n],
+    i = n(935462),
+    l = n(430690),
+    o = n(123292),
+    c = n(544231),
+    d = n(665909),
+    u = n(464838),
+    E = n(120340),
+    h = n(196645),
+    _ = n(985018),
+    A = n(16459),
+    x =
+        (((a = {})[(a.INTRO = 0)] = "INTRO"),
+        (a[(a.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
+        (a[(a.TAKE_ACTION = 2)] = "TAKE_ACTION"),
+        a);
+let m = (t) => {
+    let { warningId: e, warningType: n, senderId: a, modalProps: x, channelId: m } = t,
+        [g, p] = s.useState(0),
+        T = s.useMemo(
+            () => ({ channelId: m, senderId: a, warningId: e, warningType: n, isNudgeWarning: !1 }),
+            [m, a, e, n],
         );
     s.useEffect(() => {
-        (0, o.QF)({ ...g, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
-    }, [g]);
-    let m = s.useCallback(
+        (0, d.QF)({ ...T, viewName: d.gN.SAFETY_TAKEOVER_MODAL });
+    }, [T]);
+    let v = s.useCallback(
             (t) => {
-                (0, o._$)({ ...g, cta: t });
+                (0, d._$)({ ...T, cta: t });
             },
-            [g],
+            [T],
         ),
-        [N, S] = s.useState(!1);
-    function C(t) {
-        T(t);
+        [b, f] = s.useState(!1);
+    function N(t) {
+        p(t);
     }
-    return (0, r.jsxs)(a.EOs, {
+    return (0, r.jsxs)(i.EO, {
         "data-migration-pending": !0,
-        transitionState: A.transitionState,
+        transitionState: x.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
             (0, r.jsx)("div", {
-                className: _.kL,
-                children: (0, r.jsxs)(a.tN_, {
+                className: A.kL,
+                children: (0, r.jsxs)(l.t, {
                     width: 440,
-                    activeSlide: x,
+                    activeSlide: g,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
                     children: [
-                        (0, r.jsx)(a.q7S, {
+                        (0, r.jsx)(l.q, {
                             id: 0,
-                            children: (0, r.jsx)(c.A, {
+                            children: (0, r.jsx)(u.A, {
                                 warningId: e,
-                                senderId: i,
-                                trackAnalyticsEvent: m,
-                                onNavigate: C,
+                                senderId: a,
+                                trackAnalyticsEvent: v,
+                                onNavigate: N,
                             }),
                         }),
-                        (0, r.jsx)(a.q7S, {
+                        (0, r.jsx)(l.q, {
                             id: 1,
-                            children: (0, r.jsx)(d.A, { warningId: e, senderId: i, trackAnalyticsEvent: m }),
+                            children: (0, r.jsx)(E.A, { warningId: e, senderId: a, trackAnalyticsEvent: v }),
                         }),
-                        (0, r.jsx)(a.q7S, {
+                        (0, r.jsx)(l.q, {
                             id: 2,
-                            children: (0, r.jsx)(E.A, {
+                            children: (0, r.jsx)(h.A, {
                                 warningId: e,
-                                senderId: i,
-                                trackAnalyticsEvent: m,
-                                channelId: h,
-                                hasReported: N,
+                                senderId: a,
+                                trackAnalyticsEvent: v,
+                                channelId: m,
+                                hasReported: b,
                                 onReport: function () {
-                                    S(!0);
+                                    f(!0);
                                 },
                             }),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsxs)(a.jlY, {
+            (0, r.jsxs)(i.jl, {
                 "data-migration-pending": !0,
-                className: _.qr,
+                className: A.qr,
                 children: [
-                    (0, r.jsx)(a.QWc, {
+                    (0, r.jsx)(o.Q, {
                         variant: "secondary",
                         size: "sm",
-                        text: u.intl.string(u.t.cpT0Cq),
+                        text: _.intl.string(_.t.cpT0Cq),
                         onClick: function () {
-                            A.onClose(), (0, l.xi)(h, [e]), m(o.Wm.USER_TAKEOVER_MODAL_DISMISS);
+                            x.onClose(), (0, c.xi)(m, [e]), v(d.Wm.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
-                    0 !== x &&
-                        (0, r.jsx)(a.QWc, {
+                    0 !== g &&
+                        (0, r.jsx)(o.Q, {
                             variant: "secondary",
                             size: "sm",
-                            text: u.intl.string(u.t["13/7kX"]),
+                            text: _.intl.string(_.t["13/7kX"]),
                             textVariant: "text-sm/normal",
-                            onClick: () => C(0),
+                            onClick: () => N(0),
                         }),
                 ],
             }),

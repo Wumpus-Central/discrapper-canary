@@ -1,49 +1,53 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(397927),
-    o = n(402216),
-    c = n(667992),
-    d = n(876542);
-let u = l.memo(function (e) {
+    a = n(503698),
+    s = n.n(a),
+    r = n(939249),
+    o = n(177953),
+    c = n(831544),
+    d = n(834730),
+    u = n(847374),
+    _ = n(402216),
+    A = n(667992),
+    p = n(947790);
+let h = l.memo(function (e) {
     let {
         label: t,
         participantCount: n,
         onClick: l,
-        className: s,
-        collapsed: u,
-        speakers: h,
-        channel: A,
-        isStreamLive: _,
+        className: a,
+        collapsed: h,
+        speakers: g,
+        channel: m,
+        isStreamLive: x,
     } = e;
-    return (0, i.jsxs)(r.DUT, {
+    return (0, i.jsxs)(r.D, {
         onClick: l,
-        className: a()(d.kL, s),
+        className: s()(p.kL, a),
         children: [
-            null == h
-                ? (0, i.jsx)(r.nFg, { size: "custom", color: "currentColor", width: 20, height: 20, className: d.Vo })
-                : (0, i.jsx)(r.cNw, { size: "custom", color: "currentColor", width: 20, height: 20, className: d.Vo }),
-            (0, i.jsxs)(r.Text, {
+            null == g
+                ? (0, i.jsx)(o.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: p.Vo })
+                : (0, i.jsx)(c.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: p.Vo }),
+            (0, i.jsxs)(d.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: d.Qq,
+                className: p.Qq,
                 children: [t, " — ", n],
             }),
-            u &&
-                null != A &&
-                null != h &&
-                h.length > 0 &&
+            h &&
+                null != m &&
+                null != g &&
+                g.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(c.A, { channel: A, speakers: h }), _ && (0, i.jsx)(o.Ay, {})],
+                    children: [(0, i.jsx)(A.A, { channel: m, speakers: g }), x && (0, i.jsx)(_.Ay, {})],
                 }),
-            (0, i.jsx)(r.abt, {
+            (0, i.jsx)(u.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(d.mw, { [d.VU]: u }),
+                className: s()(p.mw, { [p.VU]: h }),
             }),
         ],
     });

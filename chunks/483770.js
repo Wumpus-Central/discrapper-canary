@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Rm: "cardBrands__3e8d5",
     Ud: "cardFormHeader__3e8d5",

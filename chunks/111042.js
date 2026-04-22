@@ -1,61 +1,59 @@
 "use strict";
-n.d(t, { A: () => A, e: () => o });
-var r = n(735438),
-    i = n.n(r),
+n.d(t, { A: () => h, e: () => l });
+var r,
+    i = n(735438),
+    s = n.n(i),
     a = n(311907),
-    s = n(73153),
-    o = (function (e) {
-        return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
-    })({});
-let l = [],
-    u = {},
+    o = n(73153),
+    l = (((r = {})[(r.FETCHING = 0)] = "FETCHING"), (r[(r.FETCHED = 1)] = "FETCHED"), (r[(r.ERROR = 2)] = "ERROR"), r);
+let u = [],
+    d = {},
     c = {},
-    d = {};
-function _(e) {
-    let { surface: t, activeState: n } = e;
-    return `surface:${t} activeState:${n}`;
-}
+    _ = {};
 function f(e) {
     let { surface: t, activeState: n } = e;
-    c = { ...c, [_({ surface: t, activeState: n })]: 0 };
-}
-function p(e) {
-    return i().sortBy(e, ["position", "id"]);
-}
-function h(e) {
-    return i().sortBy(e, ["position", "id"]);
-}
-function m(e) {
-    let { collections: t, surface: n, activeState: r } = e,
-        i = _({ surface: n, activeState: r }),
-        a = p(
-            t.map((e) => ((e.application_directory_collection_items = h(e.application_directory_collection_items)), e)),
-        );
-    (u = { ...u, [i]: a }), (c = { ...c, [i]: 1 });
-    let s = Date.now();
-    d = { ...d, [i]: s };
-}
-function g(e) {
-    let { surface: t, activeState: n } = e;
-    c = { ...c, [_({ surface: t, activeState: n })]: 2 };
+    return `surface:${t} activeState:${n}`;
 }
 class E extends a.Ay.Store {
     static displayName;
     getLastFetchTimeMs(e) {
         let { surface: t, activeState: n } = e;
-        return d[_({ surface: t, activeState: n })];
+        return _[f({ surface: t, activeState: n })];
     }
     getFetchState(e) {
         let { surface: t, activeState: n } = e;
-        return c[_({ surface: t, activeState: n })];
+        return c[f({ surface: t, activeState: n })];
     }
     getCollections(e) {
         let { surface: t, activeState: n } = e;
-        return u[_({ surface: t, activeState: n })] ?? l;
+        return d[f({ surface: t, activeState: n })] ?? u;
     }
 }
-let A = new E(s.h, {
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS: f,
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: m,
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: g,
+let h = new E(o.h, {
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function (e) {
+        let { surface: t, activeState: n } = e;
+        c = { ...c, [f({ surface: t, activeState: n })]: 0 };
+    },
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function (e) {
+        var t;
+        let { collections: n, surface: r, activeState: i } = e,
+            a = f({ surface: r, activeState: i }),
+            o =
+                ((t = n.map((e) => {
+                    var t;
+                    return (
+                        (t = e.application_directory_collection_items),
+                        (e.application_directory_collection_items = s().sortBy(t, ["position", "id"])),
+                        e
+                    );
+                })),
+                s().sortBy(t, ["position", "id"]));
+        (d = { ...d, [a]: o }), (c = { ...c, [a]: 1 });
+        let l = Date.now();
+        _ = { ..._, [a]: l };
+    },
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function (e) {
+        let { surface: t, activeState: n } = e;
+        c = { ...c, [f({ surface: t, activeState: n })]: 2 };
+    },
 });

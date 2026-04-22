@@ -1,46 +1,47 @@
-n.d(t, { J: () => g });
+n.d(t, { J: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(15285),
-    o = n(942405),
-    d = n(403362),
+    a = n(834730),
+    r = n(821609),
+    o = n(15285),
+    d = n(942405),
+    u = n(403362),
     c = n(975571),
-    u = n(652215),
+    g = n(652215),
     m = n(985018),
-    _ = n(595241);
-function g() {
+    _ = n(572985);
+function A() {
     let [e, t] = s.useState(!1),
-        [n, g] = s.useState(() => (0, o.TC)()),
-        x = (0, l.bG)([r.Ay], () => r.Ay.getSystemServiceStatus("input-service")),
-        A = s.useCallback(async () => {
-            t(!0), n ? await (0, o.z8)("windows-settings") : await (0, o.sL)("windows-settings"), t(!1), g((0, o.TC)());
+        [n, A] = s.useState(() => (0, d.TC)()),
+        h = (0, l.bG)([o.Ay], () => o.Ay.getSystemServiceStatus("input-service")),
+        p = s.useCallback(async () => {
+            t(!0), n ? await (0, d.z8)("windows-settings") : await (0, d.sL)("windows-settings"), t(!1), A((0, d.TC)());
         }, [n]),
-        h = "running" === x.state;
+        x = "running" === h.state;
     return (0, i.jsxs)("div", {
         className: _.q,
         children: [
             (0, i.jsxs)("div", {
                 className: _.L,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(a.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
                         children: m.intl.string(m.t.roHq80),
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(a.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: m.intl.format(m.t["8CAL+D"], {
-                            helpCenterLink: c.A.getArticleURL(u.MVz.SYSTEM_SERVICE),
+                            helpCenterLink: c.A.getArticleURL(g.MVz.SYSTEM_SERVICE),
                         }),
                     }),
                     n
-                        ? (0, i.jsx)(a.Text, {
+                        ? (0, i.jsx)(a.E, {
                               variant: "text-sm/normal",
-                              color: h ? "text-feedback-positive" : "text-feedback-warning",
-                              children: h
+                              color: x ? "text-feedback-positive" : "text-feedback-warning",
+                              children: x
                                   ? m.intl.string(m.t.KHVMkW)
                                   : m.intl.format(m.t["5Rlr0b"], {
                                         status: (function (e) {
@@ -64,18 +65,18 @@ function g() {
                                                 case "failure":
                                                     return m.intl.string(m.t.Ic0nkd);
                                                 default:
-                                                    (0, d.xb)(e.state);
+                                                    (0, u.xb)(e.state);
                                             }
-                                        })(x),
+                                        })(h),
                                     }),
                           })
                         : null,
                 ],
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(r.$, {
                 variant: n ? "critical-secondary" : "primary",
                 loading: e,
-                onClick: A,
+                onClick: p,
                 text: n ? m.intl.string(m.t.pAwbdL) : m.intl.string(m.t["1iI46O"]),
             }),
         ],

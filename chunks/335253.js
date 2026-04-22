@@ -1,63 +1,64 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => M });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var l = n(861672),
+    r = n(477782),
     a = n(442433),
-    r = n(847767),
-    d = n(358367),
+    d = n(847767),
+    u = n(358367),
     s = n(793574),
     o = n(50268),
-    u = n(235052),
+    A = n(235052),
     c = n(222311),
-    A = n(237749),
+    E = n(237749),
     g = n(961350),
-    E = n(661455),
-    _ = n(291247),
-    b = n(652215),
+    S = n(661455),
+    I = n(291247),
+    _ = n(652215),
     f = n(985018);
-let m = (0, d.A)(
-    (0, r.A)(
+let M = (0, u.A)(
+    (0, d.A)(
         function (e) {
-            let { user: t, channel: n, guildId: r, onSelect: d, onInteraction: s, context: b } = e,
-                m = n.id,
+            let { user: t, channel: n, guildId: d, onSelect: u, onInteraction: s, context: _ } = e,
+                M = n.id,
                 C = t.isNonUserBot(),
-                h = t.id === g.default.getId(),
-                M = (0, c.A)(t),
-                S = (0, A.A)(t, r, m),
-                x = (0, E.n)({ isOwnSettings: h, userId: t.id, channelId: m, guildId: r, context: b }),
-                [I, D] = (0, E.O)(t, m, r),
-                v = (0, _.A)(t, r, m),
-                T = (0, o.A)({ id: t.id, label: f.intl.string(f.t["/AXYnE"]) }),
-                j = (0, u.A)(t.id, n);
-            return (0, i.jsx)(l.W1t, {
+                b = t.id === g.default.getId(),
+                m = (0, c.A)(t),
+                h = (0, E.A)(t, d, M),
+                N = (0, S.n)({ isOwnSettings: b, userId: t.id, channelId: M, guildId: d, context: _ }),
+                [G, x] = (0, S.O)(t, M, d),
+                O = (0, I.A)(t, d, M),
+                v = (0, o.A)({ id: t.id, label: f.intl.string(f.t["/AXYnE"]) }),
+                D = (0, A.A)(t.id, n);
+            return (0, i.jsx)(l.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "user-context",
                 onClose: a.Z_,
                 "aria-label": f.intl.string(f.t.liqwPJ),
-                onSelect: d,
+                onSelect: u,
                 onInteraction: s,
                 variant: "fixed",
                 children:
                     !C &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsxs)(l.rXV, { children: [M, S] }),
-                            j,
-                            x,
-                            !h &&
-                                (0, i.jsx)(l.rXV, {
-                                    children: (0, i.jsxs)(l.Drp, {
+                            (0, i.jsxs)(r.rX, { children: [m, h] }),
+                            D,
+                            N,
+                            !b &&
+                                (0, i.jsx)(r.rX, {
+                                    children: (0, i.jsxs)(r.Dr, {
                                         id: "more-options",
                                         label: f.intl.string(f.t.PdRCRg),
-                                        children: [I, (0, i.jsx)(l.rXV, { children: v }), D],
+                                        children: [G, (0, i.jsx)(r.rX, { children: O }), x],
                                     }),
                                 }),
-                            h && (0, i.jsx)(l.rXV, { children: T }),
+                            b && (0, i.jsx)(r.rX, { children: v }),
                         ],
                     }),
             });
         },
-        { object: b.ZSU.CONTEXT_MENU },
+        { object: _.ZSU.CONTEXT_MENU },
     ),
     [s.A.VOICE_USER],
 );

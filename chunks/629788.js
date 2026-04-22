@@ -3,7 +3,7 @@ n.d(e, { A: () => f });
 var r = n(627968);
 n(64700);
 var o = n(311907),
-    i = n(397927),
+    i = n(477782),
     a = n(688810),
     s = n(915089),
     u = n(287809),
@@ -19,8 +19,8 @@ function f(t, e) {
     return null != e && l.Ay.canUseCustomCallSounds(f)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(i.Drp, { id: p, label: d.intl.string(d.t.p2hUt7), action: () => (0, c.un)(e, t, n) }),
-                  (0, r.jsx)(i.Drp, { id: w, label: d.intl.string(d.t["/yA6Qd"]), action: () => (0, c.un)("0", t, n) }),
+                  (0, r.jsx)(i.Dr, { id: p, label: d.intl.string(d.t.p2hUt7), action: () => (0, c.un)(e, t, n) }),
+                  (0, r.jsx)(i.Dr, { id: w, label: d.intl.string(d.t["/yA6Qd"]), action: () => (0, c.un)("0", t, n) }),
               ],
           })
         : null;

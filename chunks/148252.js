@@ -2,34 +2,35 @@ l.d(t, { A: () => c });
 var n = l(627968);
 l(64700);
 var a = l(503698),
-    s = l.n(a),
-    i = l(397927),
-    r = l(985018),
-    o = l(964421);
+    i = l.n(a),
+    s = l(834730),
+    r = l(939249),
+    o = l(985018),
+    d = l(964421);
 function c(e) {
     let { mediaItems: t, labels: l, selectedIndex: a, onSelectIndex: c } = e;
     return t.length <= 1
         ? null
         : (0, n.jsxs)("div", {
-              className: o.kL,
+              className: d.kL,
               children: [
-                  (0, n.jsx)(i.Text, {
+                  (0, n.jsx)(s.E, {
                       variant: "text-xs/semibold",
                       color: "text-subtle",
-                      children: r.intl.string(r.t.U7DAV9),
+                      children: o.intl.string(o.t.U7DAV9),
                   }),
                   (0, n.jsx)("div", {
-                      className: o.Vg,
+                      className: d.Vg,
                       children: t.map((e, t) =>
                           (0, n.jsx)(
-                              i.DUT,
+                              r.D,
                               {
-                                  className: s()(o.xn, { [o.Y4]: t === a }),
+                                  className: i()(d.xn, { [d.Y4]: t === a }),
                                   onClick: () => c(t),
                                   "aria-label": l?.[t],
                                   "aria-pressed": t === a,
                                   children: (0, n.jsx)("img", {
-                                      className: o.q_,
+                                      className: d.q_,
                                       src:
                                           null != e.thumbnailSrc
                                               ? e.thumbnailSrc

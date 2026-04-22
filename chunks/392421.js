@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { n: () => r });
-var r = (function (e) {
-    return (e.MATCH_ALL = "match_all"), (e.MATCH_SOME = "match_some"), e;
-})({});
+n.d(t, { n: () => i });
+var r,
+    i = (((r = {}).MATCH_ALL = "match_all"), (r.MATCH_SOME = "match_some"), r);

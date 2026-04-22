@@ -1,16 +1,16 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968),
-    l = n(397927),
-    s = n(890687),
-    r = n(985018);
-let a = function (e) {
+    l = n(821609),
+    a = n(890687),
+    s = n(985018);
+let r = function (e) {
     let { quest: t, size: n } = e,
-        a = (0, s.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
-    return (0, i.jsx)(l.Button, {
+        r = (0, a.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
+    return (0, i.jsx)(l.$, {
         variant: "secondary",
         disabled: !0,
         fullWidth: !0,
         size: n,
-        text: r.intl.format(r.t["14o6QY"], { expiryDate: a }),
+        text: s.intl.format(s.t["6p8BZx"], { expiryDate: r }),
     });
 };

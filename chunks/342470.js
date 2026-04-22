@@ -1,41 +1,40 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        Chrono: () => i.u,
-        Meridiem: () => s.FF,
+r.r(t),
+    r.d(t, {
+        Chrono: () => s.u,
+        Meridiem: () => i.FF,
         ParsingComponents: () => a.BP,
         ParsingResult: () => a.s4,
         ReferenceWithTimezone: () => a.b5,
-        Weekday: () => s.Bw,
-        casual: () => f,
-        createCasualConfiguration: () => g,
-        createConfiguration: () => E,
-        parse: () => h,
-        parseDate: () => m,
-        strict: () => p,
+        Weekday: () => i.Bw,
+        casual: () => g,
+        createCasualConfiguration: () => y,
+        createConfiguration: () => x,
+        parse: () => f,
+        parseDate: () => p,
+        strict: () => h,
     });
-var r = n(125659),
-    i = n(880683),
-    a = n(374372),
-    s = n(322811),
-    o = n(774188),
-    l = n(368324),
-    u = n(600107),
-    c = n(573047),
-    d = n(466242),
-    _ = n(224982);
-let f = new i.u(g()),
-    p = new i.u(E(!0));
-function h(e, t, n) {
-    return f.parse(e, t, n);
+var n = r(125659),
+    s = r(880683),
+    a = r(374372),
+    i = r(322811),
+    o = r(774188),
+    l = r(368324),
+    u = r(600107),
+    d = r(573047),
+    m = r(466242),
+    c = r(224982);
+let g = new s.u(y()),
+    h = new s.u(x(!0));
+function f(e, t, r) {
+    return g.parse(e, t, r);
 }
-function m(e, t, n) {
-    return f.parseDate(e, t, n);
+function p(e, t, r) {
+    return g.parseDate(e, t, r);
 }
-function g(e = !0) {
-    let t = E(!1, e);
-    return t.parsers.unshift(new _.A()), t;
+function y(e = !0) {
+    let t = x(!1, e);
+    return t.parsers.unshift(new c.A()), t;
 }
-function E(e = !0, t = !0) {
-    return (0, r.i)({ parsers: [new l.A(), new o.A(t), new c.A(), new u.A(), new d.A()], refiners: [] }, e);
+function x(e = !0, t = !0) {
+    return (0, n.i)({ parsers: [new l.A(), new o.A(t), new d.A(), new u.A(), new m.A()], refiners: [] }, e);
 }

@@ -1,244 +1,250 @@
-n.d(t, { A: () => T });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(554146),
-    o = n(342494),
-    c = n(990078),
-    d = n(397927),
-    u = n(932001),
-    h = n(93055),
-    A = n(253932),
-    _ = n(975571),
-    m = n(822382),
-    g = n(753806),
-    p = n(345859),
-    f = n(145331),
-    x = n(121806),
-    E = n(652215),
-    I = n(49999),
-    C = n(985018),
-    N = n(353231);
-function T(e) {
+s.d(t, { A: () => w });
+var n = s(627968),
+    a = s(64700),
+    l = s(503698),
+    r = s.n(l),
+    i = s(554146),
+    o = s(265486),
+    c = s(990078),
+    u = s(821609),
+    d = s(783977),
+    h = s(289873),
+    g = s(834730),
+    p = s(349288),
+    m = s(265872),
+    x = s(861672),
+    f = s(477782),
+    C = s(408278),
+    S = s(625903),
+    A = s(112173),
+    _ = s(932001),
+    b = s(93055),
+    R = s(253932),
+    I = s(975571),
+    y = s(822382),
+    E = s(753806),
+    j = s(345859),
+    k = s(145331),
+    T = s(121806),
+    N = s(652215),
+    v = s(49999),
+    M = s(985018),
+    P = s(853279);
+function w(e) {
     let {
             searchContext: t,
-            searchMode: n,
-            onSearchModeChange: s,
+            searchMode: s,
+            onSearchModeChange: l,
             totalResults: o,
             isIndexing: c,
-            isSearching: A,
-            documentsIndexed: _,
-            selectedChannelId: f,
+            isSearching: h,
+            documentsIndexed: g,
+            selectedChannelId: p,
         } = e,
-        T = (0, p.H)(t),
-        { totalFilters: b } = (0, x.vj)(T, t),
-        y = l.useMemo(() => {
-            if (t.type === E.I4_.DMS) {
-                let e = (0, m.Zf)(T),
+        m = (0, j.H)(t),
+        { totalFilters: x } = (0, T.vj)(m, t),
+        f = a.useMemo(() => {
+            if (t.type === N.I4_.DMS) {
+                let e = (0, y.Zf)(m),
                     t = e.channel_id?.length ?? 0;
-                return t > 0 ? C.intl.format(C.t.A2dqWG, { filterCount: t }) : C.intl.string(C.t.tc619d);
+                return t > 0 ? M.intl.format(M.t.A2dqWG, { filterCount: t }) : M.intl.string(M.t.tc619d);
             }
             return null;
-        }, [t.type, T]),
-        [v, j] = l.useState(null),
-        L = l.useMemo(() => (A ? [] : [r.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [A]),
-        [M, D] = (0, u.kn)(L),
-        U = M === r.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
-        G = l.useCallback(
+        }, [t.type, m]),
+        [C, S] = a.useState(null),
+        A = a.useMemo(() => (h ? [] : [i.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER]), [h]),
+        [R, I] = (0, _.kn)(A),
+        k = R === i.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
+        w = a.useCallback(
             (e) => {
-                null != e && U && D(I.i.USER_DISMISS), j(e);
+                null != e && k && I(v.i.USER_DISMISS), S(e);
             },
-            [U, D, j],
+            [k, I, S],
         ),
-        P = l.useCallback(
+        H = a.useCallback(
             (e) => {
-                D("user:explicit" === e ? I.i.USER_DISMISS : I.i.AUTO_DISMISS);
+                I("user:explicit" === e ? v.i.USER_DISMISS : v.i.AUTO_DISMISS);
             },
-            [D],
+            [I],
         ),
-        k = l.useCallback(() => {
-            G(null), g.A.openSearchFiltersModal(t);
-        }, [G, t]),
-        w = l.useMemo(() => (b > 0 ? C.intl.format(C.t.uaR4sI, { filterCount: b }) : C.intl.string(C.t.UdhTtk)), [b]),
-        B = !(0, h.DZ)() && (t.type === E.I4_.DMS || t.type === E.I4_.CHANNEL);
-    return (0, i.jsxs)("header", {
-        className: a()(N.wL, { [N.g$]: null != y }),
+        B = a.useCallback(() => {
+            w(null), E.A.openSearchFiltersModal(t);
+        }, [w, t]),
+        L = a.useMemo(() => (x > 0 ? M.intl.format(M.t.uaR4sI, { filterCount: x }) : M.intl.string(M.t.UdhTtk)), [x]),
+        D = !(0, b.DZ)() && (t.type === N.I4_.DMS || t.type === N.I4_.CHANNEL);
+    return (0, n.jsxs)("header", {
+        className: r()(P.wL, { [P.g$]: null != f }),
         children: [
-            (0, i.jsx)("div", {
-                className: N.TN,
+            (0, n.jsx)("div", {
+                className: P.TN,
                 role: "status",
-                children: (0, i.jsx)(S, {
+                children: (0, n.jsx)(O, {
                     totalResults: o,
-                    subtitle: y,
+                    subtitle: f,
                     isIndexing: c,
-                    isSearching: A,
-                    documentsIndexed: _,
+                    isSearching: h,
+                    documentsIndexed: g,
                 }),
             }),
-            (0, i.jsxs)("div", {
-                className: N.vd,
+            (0, n.jsxs)("div", {
+                className: P.vd,
                 children: [
-                    (0, i.jsx)(d.Button, { variant: "secondary", onClick: k, text: w, icon: d.RgP, size: "sm" }),
-                    (0, i.jsx)(O, {
-                        searchMode: n,
-                        onSearchModeChange: s,
-                        isPopoutOpen: "sort" === v,
-                        setOpenPopout: G,
+                    (0, n.jsx)(u.$, { variant: "secondary", onClick: B, text: L, icon: d.R, size: "sm" }),
+                    (0, n.jsx)(q, {
+                        searchMode: s,
+                        onSearchModeChange: l,
+                        isPopoutOpen: "sort" === C,
+                        setOpenPopout: w,
                     }),
-                    B &&
-                        (0, i.jsx)(R, {
+                    D &&
+                        (0, n.jsx)(U, {
                             searchContext: t,
-                            selectedChannelId: f,
-                            isPopoutOpen: "settings" === v,
-                            setOpenPopout: G,
-                            isPopoverVisible: U,
-                            onPopoverRequestClose: P,
+                            selectedChannelId: p,
+                            isPopoutOpen: "settings" === C,
+                            setOpenPopout: w,
+                            isPopoverVisible: k,
+                            onPopoverRequestClose: H,
                         }),
                 ],
             }),
         ],
     });
 }
-function S(e) {
-    let { totalResults: t, subtitle: n, isSearching: l, isIndexing: s, documentsIndexed: a } = e;
-    return s
-        ? (0, i.jsx)(y, { documentsIndexed: a })
-        : l
-          ? (0, i.jsx)(v, {})
-          : (0, i.jsx)(j, { totalResults: t, subtitle: n });
+function O(e) {
+    let { totalResults: t, subtitle: s, isSearching: a, isIndexing: l, documentsIndexed: r } = e;
+    return l
+        ? (0, n.jsx)(B, { documentsIndexed: r })
+        : a
+          ? (0, n.jsx)(L, {})
+          : (0, n.jsx)(D, { totalResults: t, subtitle: s });
 }
-function b() {
-    return (0, i.jsx)("div", {
-        className: N.zp,
-        children: (0, i.jsx)(d.y$y, { type: d.y$y.Type.SPINNING_CIRCLE, className: N.u1, itemClassName: N.pu }),
+function H() {
+    return (0, n.jsx)("div", {
+        className: P.zp,
+        children: (0, n.jsx)(h.y, { type: h.y.Type.SPINNING_CIRCLE, className: P.u1, itemClassName: P.pu }),
     });
 }
-function y(e) {
+function B(e) {
     let { documentsIndexed: t } = e;
-    return (0, i.jsx)(c.m, {
+    return (0, n.jsx)(c.m, {
         asContainer: !0,
-        text: C.intl.formatToPlainString(C.t["4Y3O+O"], { count: t ?? "" }),
-        children: (0, i.jsxs)("div", {
-            className: N.q_,
+        text: M.intl.formatToPlainString(M.t["4Y3O+O"], { count: t ?? "" }),
+        children: (0, n.jsxs)("div", {
+            className: P.q_,
             children: [
-                (0, i.jsx)(d.Text, {
+                (0, n.jsx)(g.E, {
                     variant: "text-md/medium",
                     color: "text-muted",
-                    children: (0, i.jsx)(d.MzZ, {
-                        className: N.Zd,
-                        href: _.A.getArticleURL(E.MVz.SEARCH_INDEXING),
-                        children: C.intl.string(C.t["G3EA+4"]),
+                    children: (0, n.jsx)(p.Anchor, {
+                        className: P.Zd,
+                        href: I.A.getArticleURL(N.MVz.SEARCH_INDEXING),
+                        children: M.intl.string(M.t["G3EA+4"]),
                     }),
                 }),
-                (0, i.jsx)(b, {}),
+                (0, n.jsx)(H, {}),
             ],
         }),
     });
 }
-function v() {
-    return (0, i.jsxs)(i.Fragment, {
+function L() {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, i.jsx)(d.Text, {
-                variant: "text-md/medium",
-                color: "text-default",
-                children: C.intl.string(C.t.uixzLf),
-            }),
-            (0, i.jsx)(b, {}),
+            (0, n.jsx)(g.E, { variant: "text-md/medium", color: "text-default", children: M.intl.string(M.t.uixzLf) }),
+            (0, n.jsx)(H, {}),
         ],
     });
 }
-function j(e) {
-    let { totalResults: t, subtitle: n } = e,
-        l = (0, i.jsx)(d.Text, {
+function D(e) {
+    let { totalResults: t, subtitle: s } = e,
+        a = (0, n.jsx)(g.E, {
             variant: "text-md/medium",
             color: "text-strong",
-            children: C.intl.format(C.t.ZGVL3g, { count: t }),
+            children: M.intl.format(M.t.ZGVL3g, { count: t }),
         });
-    return null != n
-        ? (0, i.jsxs)("div", {
-              className: N.hy,
-              children: [l, (0, i.jsx)(d.Text, { variant: "text-xs/medium", color: "text-subtle", children: n })],
+    return null != s
+        ? (0, n.jsxs)("div", {
+              className: P.hy,
+              children: [a, (0, n.jsx)(g.E, { variant: "text-xs/medium", color: "text-subtle", children: s })],
           })
-        : l;
+        : a;
 }
-function R(e) {
+function U(e) {
     let {
             searchContext: t,
-            selectedChannelId: n,
-            isPopoutOpen: s,
-            setOpenPopout: a,
-            onPopoverRequestClose: r,
+            selectedChannelId: s,
+            isPopoutOpen: l,
+            setOpenPopout: r,
+            onPopoverRequestClose: i,
             isPopoverVisible: c,
         } = e,
-        u = l.useRef(null),
-        h = A.Hu.useSetting(),
-        _ = l.useCallback(
+        u = a.useRef(null),
+        d = R.Hu.useSetting(),
+        h = a.useCallback(
             (e) => {
-                if (h !== e) {
+                if (d !== e) {
                     if (
-                        ((0, f._k)({
+                        ((0, k._k)({
                             searchContext: t,
-                            prevIsCrossDMSettingEnabled: A.Hu.getSetting(),
+                            prevIsCrossDMSettingEnabled: R.Hu.getSetting(),
                             isCrossDMSettingEnabled: e,
-                            location: f.vy.SEARCH_HEADER,
+                            location: k.vy.SEARCH_HEADER,
                         }),
                         e)
                     ) {
-                        let e = { type: E.I4_.DMS };
-                        g.A.transitionStateToSearchContext(t, e, g.A.cleanUpPrivateChannelSearchState);
+                        let e = { type: N.I4_.DMS };
+                        E.A.transitionStateToSearchContext(t, e, E.A.cleanUpPrivateChannelSearchState);
                     } else {
-                        let e = { type: E.I4_.CHANNEL, channelId: n };
-                        g.A.transitionStateToSearchContext(t, e);
+                        let e = { type: N.I4_.CHANNEL, channelId: s };
+                        E.A.transitionStateToSearchContext(t, e);
                     }
-                    a(null), A.Hu.updateSetting(e);
+                    r(null), R.Hu.updateSetting(e);
                 }
             },
-            [h, a, t, n],
+            [d, r, t, s],
         ),
-        [m, p] = l.useMemo(
+        [g, p] = a.useMemo(
             () => [
-                h ? C.intl.string(C.t["8lklch"]) : C.intl.string(C.t.ji3jTF),
-                h ? C.intl.string(C.t.RMQZCa) : C.intl.string(C.t["v/PagC"]),
+                d ? M.intl.string(M.t["8lklch"]) : M.intl.string(M.t.ji3jTF),
+                d ? M.intl.string(M.t.RMQZCa) : M.intl.string(M.t["v/PagC"]),
             ],
-            [h],
+            [d],
         ),
-        x = l.useMemo(() => ({ align: "end" }), []);
-    return (0, i.jsxs)(i.Fragment, {
+        A = a.useMemo(() => ({ align: "end" }), []);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, i.jsx)(d.YNO, {
+            (0, n.jsx)(m.Y, {
                 targetElementRef: u,
-                shouldShow: s,
-                animation: d.YNO.Animation.NONE,
+                shouldShow: l,
+                animation: m.Y.Animation.NONE,
                 position: "bottom",
                 align: "right",
-                onRequestClose: () => a(null),
+                onRequestClose: () => r(null),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(d.W1t, {
+                    return (0, n.jsx)(x.W, {
                         "data-menu-migrated-auto": !0,
                         navId: "search-settings-cog",
                         onClose: t,
-                        "aria-label": C.intl.string(C.t.fb59v0),
-                        onSelect: () => a(null),
-                        children: (0, i.jsxs)(
-                            d.rXV,
+                        "aria-label": M.intl.string(M.t.fb59v0),
+                        onSelect: () => r(null),
+                        children: (0, n.jsxs)(
+                            f.rX,
                             {
-                                label: C.intl.string(C.t["/tMwrA"]),
+                                label: M.intl.string(M.t["/tMwrA"]),
                                 children: [
-                                    (0, i.jsx)(d.iDA, {
+                                    (0, n.jsx)(f.iD, {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
-                                        label: C.intl.string(C.t.jRkYAh),
-                                        checked: !h,
-                                        action: () => _(!1),
+                                        label: M.intl.string(M.t.jRkYAh),
+                                        checked: !d,
+                                        action: () => h(!1),
                                     }),
-                                    (0, i.jsx)(d.iDA, {
+                                    (0, n.jsx)(f.iD, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
-                                        label: C.intl.string(C.t["lWpJ/t"]),
-                                        checked: h,
-                                        action: () => _(!0),
+                                        label: M.intl.string(M.t["lWpJ/t"]),
+                                        checked: d,
+                                        action: () => h(!0),
                                     }),
                                 ],
                             },
@@ -247,77 +253,77 @@ function R(e) {
                     });
                 },
                 children: (e) =>
-                    (0, i.jsx)(d.K0, {
+                    (0, n.jsx)(C.K, {
                         ...e,
                         buttonRef: u,
                         variant: "secondary",
-                        icon: d.Zes,
+                        icon: S.Z,
                         onClick: () => {
-                            a(s ? null : "settings");
+                            r(l ? null : "settings");
                         },
-                        "aria-label": C.intl.string(C.t["3D5yo/"]),
+                        "aria-label": M.intl.string(M.t["3D5yo/"]),
                         size: "sm",
                     }),
             }),
-            (0, i.jsx)(o.AM, {
+            (0, n.jsx)(o.A, {
                 targetElementRef: u,
                 shouldShow: c,
-                onRequestClose: r,
-                title: m,
+                onRequestClose: i,
+                title: g,
                 body: p,
-                caretConfig: x,
+                caretConfig: A,
                 badge: "new",
             }),
         ],
     });
 }
-function O(e) {
-    let { searchMode: t, onSearchModeChange: n, isPopoutOpen: s, setOpenPopout: a } = e,
-        r = l.useRef(null),
-        o = l.useMemo(
+function q(e) {
+    let { searchMode: t, onSearchModeChange: s, isPopoutOpen: l, setOpenPopout: r } = e,
+        i = a.useRef(null),
+        o = a.useMemo(
             () => [
-                { label: C.intl.string(C.t.CbaapP), value: E.BBH.NEWEST },
-                { label: C.intl.string(C.t.OukXZj), value: E.BBH.OLDEST },
-                { label: C.intl.string(C.t.q8gB52), value: E.BBH.MOST_RELEVANT },
+                { label: M.intl.string(M.t.CbaapP), value: N.BBH.NEWEST },
+                { label: M.intl.string(M.t.OukXZj), value: N.BBH.OLDEST },
+                { label: M.intl.string(M.t.q8gB52), value: N.BBH.MOST_RELEVANT },
             ],
             [],
         ),
-        c = l.useCallback(
+        c = a.useCallback(
             (e) => {
-                a(null), n(e);
+                r(null), s(e);
             },
-            [a, n],
+            [r, s],
         );
-    return (0, i.jsx)(d.YNO, {
-        targetElementRef: r,
-        shouldShow: s,
-        animation: d.YNO.Animation.NONE,
+    return (0, n.jsx)(m.Y, {
+        targetElementRef: i,
+        shouldShow: l,
+        animation: m.Y.Animation.NONE,
         position: "bottom",
         align: "right",
-        onRequestClose: () => a(null),
+        onRequestClose: () => r(null),
         renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, i.jsx)(d.W1t, {
+            let { closePopout: s } = e;
+            return (0, n.jsx)(x.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "search-result-sort-menu",
-                onClose: n,
-                "aria-label": C.intl.string(C.t.utp2hS),
-                onSelect: () => a(null),
-                children: (0, i.jsx)(
-                    d.rXV,
+                onClose: s,
+                "aria-label": M.intl.string(M.t.utp2hS),
+                onSelect: () => r(null),
+                children: (0, n.jsx)(
+                    f.rX,
                     {
                         children: o.map((e) => {
-                            let { label: n, value: l } = e;
-                            return (0, i.jsx)(
-                                d.iDA,
+                            let { label: s, value: a } = e;
+                            return (0, n.jsx)(
+                                f.iD,
                                 {
                                     group: "sort-by",
-                                    id: `sort-by-option-${l}`,
-                                    label: n,
-                                    action: () => c(l),
-                                    checked: t === l,
+                                    id: `sort-by-option-${a}`,
+                                    label: s,
+                                    action: () => c(a),
+                                    checked: t === a,
                                 },
-                                l,
+                                a,
                             );
                         }),
                     },
@@ -326,16 +332,16 @@ function O(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(d.Button, {
+            (0, n.jsx)(u.$, {
                 ...e,
-                buttonRef: r,
+                buttonRef: i,
                 variant: "secondary",
-                icon: d.JNJ,
+                icon: A.J,
                 onClick: () => {
-                    a(s ? null : "sort");
+                    r(l ? null : "sort");
                 },
-                text: C.intl.string(C.t.XvNMNk),
-                "aria-label": C.intl.string(C.t.XvNMNk),
+                text: M.intl.string(M.t.XvNMNk),
+                "aria-label": M.intl.string(M.t.XvNMNk),
                 size: "sm",
             }),
     });

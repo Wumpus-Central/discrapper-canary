@@ -1,23 +1,27 @@
-n.d(t, { V: () => u });
-var r = n(627968),
-    a = n(64700),
-    i = n(397927),
-    s = n(954571),
-    l = n(957565),
-    o = n(758836),
-    c = n(652215),
-    d = n(985018);
-function u(e) {
-    let { skuId: t, tab: n, onTrackClick: u } = e,
-        m = a.useCallback(() => {
-            s.default.track(c.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }), u?.(o.sH.COPY_LINK);
-            let e = `${location.protocol}//${location.host}${c.BVt.COLLECTIBLES_SHOP}${((0, o.cw))(n) ? `?tab=${n}` : ""}#itemSkuId=${t}`;
-            (0, l.C)(e, () => (0, i.showToast)((0, i.createToast)(d.intl.string(d.t["L/PwZf"]), i.ToastType.SUCCESS)));
-        }, [t, n, u]);
-    return (0, r.jsx)(i.K0, {
-        "aria-label": d.intl.string(d.t.WqhZss),
-        onClick: m,
-        icon: i.qYV,
+n.d(t, { V: () => h });
+var i = n(627968),
+    r = n(64700),
+    a = n(691540),
+    l = n(857250),
+    s = n(97483),
+    o = n(408278),
+    c = n(173936),
+    d = n(954571),
+    u = n(957565),
+    _ = n(758836),
+    m = n(652215),
+    p = n(985018);
+function h(e) {
+    let { skuId: t, tab: n, onTrackClick: h } = e,
+        f = r.useCallback(() => {
+            d.default.track(m.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }), h?.(_.sH.COPY_LINK);
+            let e = `${location.protocol}//${location.host}${m.BVt.COLLECTIBLES_SHOP}${((0, _.cw))(n) ? `?tab=${n}` : ""}#itemSkuId=${t}`;
+            (0, u.C)(e, () => (0, a.P0)((0, l.o)(p.intl.string(p.t["L/PwZf"]), s.Ck.SUCCESS)));
+        }, [t, n, h]);
+    return (0, i.jsx)(o.K, {
+        "aria-label": p.intl.string(p.t.WqhZss),
+        onClick: f,
+        icon: c.q,
         variant: "overlay-secondary",
         size: "sm",
     });

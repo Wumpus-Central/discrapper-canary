@@ -1,29 +1,32 @@
-i.d(t, { A: () => u });
-var n = i(627968),
-    l = i(64700),
-    s = i(397927),
-    r = i(585510),
-    a = i(834409),
-    d = i(903093),
-    o = i(652215),
-    c = i(985018);
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: u, isUnderLockdown: A, incidentData: g } = (0, r.Li)(e.id),
-        E = l.useCallback(() => {
-            let t = { source: a.Eo.CONTEXT_MENU, alertType: (0, d.$5)(g) };
-            (0, s.mMO)(async () => {
-                let { default: l } = await i.e("43233").then(i.bind(i, 671576));
-                return (i) => (0, n.jsx)(l, { ...i, guildId: e.id, analyticsData: t });
+t.d(n, { A: () => g });
+var l = t(627968),
+    i = t(64700),
+    a = t(192308),
+    r = t(477782),
+    s = t(328162),
+    o = t(194261),
+    d = t(585510),
+    c = t(834409),
+    u = t(903093),
+    v = t(652215),
+    A = t(985018);
+function g(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { shouldShowIncidentActions: g, isUnderLockdown: h, incidentData: p } = (0, d.Li)(e.id),
+        y = i.useCallback(() => {
+            let n = { source: c.Eo.CONTEXT_MENU, alertType: (0, u.$5)(p) };
+            (0, a.openModalLazy)(async () => {
+                let { default: i } = await t.e("65614").then(t.bind(t, 671576));
+                return (t) => (0, l.jsx)(i, { ...t, guildId: e.id, analyticsData: n });
             });
-        }, [e.id, g]);
-    return e.features.has(o.GuildFeatures.COMMUNITY) && u
-        ? (0, n.jsx)(s.Drp, {
+        }, [e.id, p]);
+    return e.features.has(v.GuildFeatures.COMMUNITY) && g
+        ? (0, l.jsx)(r.Dr, {
               id: "server-lockdown",
-              label: A ? c.intl.string(c.t["+tSVi3"]) : c.intl.string(c.t.EPlEdu),
-              icon: t ? (A ? s.wUM : s.XAi) : void 0,
-              leadingAccessory: t ? { type: "icon", icon: A ? s.wUM : s.XAi } : void 0,
-              action: E,
+              label: h ? A.intl.string(A.t["+tSVi3"]) : A.intl.string(A.t.EPlEdu),
+              icon: n ? (h ? s.w : o.X) : void 0,
+              leadingAccessory: n ? { type: "icon", icon: h ? s.w : o.X } : void 0,
+              action: y,
               color: "danger",
           })
         : null;

@@ -1,33 +1,35 @@
-n.d(t, { A: () => o });
-var l = n(627968),
-    a = n(64700),
-    r = n(397927),
-    i = n(46054),
-    s = n(861662),
-    d = n(232409);
-function o(e) {
+"use strict";
+n.d(t, { A: () => c });
+var a = n(627968),
+    i = n(64700),
+    r = n(534514),
+    l = n(834730),
+    s = n(46054),
+    d = n(861662),
+    o = n(704786);
+function c(e) {
     let {
             element: {
-                data: { header: t, body: n, is_localized: o },
+                data: { header: t, body: n, is_localized: c },
             },
         } = e,
-        c = a.useMemo(() => i.A.reactParserFor({ ...i.A.defaultRules, link: s.B }), []);
-    return o && (null != t || null != n)
-        ? (0, l.jsxs)("div", {
+        u = i.useMemo(() => s.A.reactParserFor({ ...s.A.defaultRules, link: d.B }), []);
+    return c && (null != t || null != n)
+        ? (0, a.jsxs)("div", {
               children: [
                   null != t &&
-                      (0, l.jsx)(r.Heading, {
+                      (0, a.jsx)(r.D, {
                           variant: "heading-sm/semibold",
                           color: "text-default",
-                          className: d.w,
+                          className: o.w,
                           children: t,
                       }),
                   null != n &&
-                      (0, l.jsx)(r.Text, {
+                      (0, a.jsx)(l.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          className: d.r,
-                          children: c(n),
+                          className: o.r,
+                          children: u(n),
                       }),
               ],
           })

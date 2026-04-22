@@ -1,20 +1,18 @@
 "use strict";
-n.d(t, { q: () => r });
-var r = (function (e) {
-    return (
-        (e.State = "state"),
-        (e.Speaking = "speaking"),
-        (e.VideoSourceQualityChanged = "video-source-quality-changed"),
-        (e.Video = "video"),
-        (e.Flags = "flags"),
-        (e.Platform = "platform"),
-        (e.Ping = "ping"),
-        (e.ClientConnect = "client-connect"),
-        (e.ClientDisconnect = "client-disconnect"),
-        (e.OutboundLossRate = "outboundlossrate"),
-        (e.SecureFramesUpdate = "secure-frames-update"),
-        (e.RosterMapUpdate = "roster-map-update"),
-        (e.UsersMerged = "users-merged"),
-        e
-    );
-})({});
+n.d(t, { q: () => i });
+var r,
+    i =
+        (((r = {}).State = "state"),
+        (r.Speaking = "speaking"),
+        (r.VideoSourceQualityChanged = "video-source-quality-changed"),
+        (r.Video = "video"),
+        (r.Flags = "flags"),
+        (r.Platform = "platform"),
+        (r.Ping = "ping"),
+        (r.ClientConnect = "client-connect"),
+        (r.ClientDisconnect = "client-disconnect"),
+        (r.OutboundLossRate = "outboundlossrate"),
+        (r.SecureFramesUpdate = "secure-frames-update"),
+        (r.RosterMapUpdate = "roster-map-update"),
+        (r.UsersMerged = "users-merged"),
+        r);

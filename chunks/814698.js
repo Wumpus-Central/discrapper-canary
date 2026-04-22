@@ -1,26 +1,27 @@
-n.d(t, { A: () => m });
-var l = n(627968),
-    a = n(64700),
-    i = n(397927),
-    r = n(155718),
-    s = n(975807),
-    o = n(194362),
+n.d(t, { A: () => _ });
+var a = n(627968),
+    l = n(64700),
+    i = n(349288),
+    r = n(834730),
+    s = n(155718),
+    o = n(975807),
+    d = n(194362),
     c = n(409626),
-    d = n(652215),
-    u = n(985018);
-function m(e) {
+    u = n(652215),
+    m = n(985018);
+function _(e) {
     let { application: t, trackAction: n } = e,
-        m = a.useCallback(async () => {
+        _ = l.useCallback(async () => {
             n(c.Ws.ClaimGame);
-            let e = await (0, o.a)(d.dSh.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
-            (0, s.A)(e);
+            let e = await (0, d.a)(u.dSh.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
+            (0, o.A)(e);
         }, [n]),
-        f = a.useCallback((e) => (0, l.jsx)(i.MzZ, { onClick: m, children: e }), [m]);
-    return t.linkedGames?.some((e) => e.type === r.Mh.OFFICIAL)
+        h = l.useCallback((e) => (0, a.jsx)(i.Anchor, { onClick: _, children: e }), [_]);
+    return t.linkedGames?.some((e) => e.type === s.Mh.OFFICIAL)
         ? null
-        : (0, l.jsx)(i.Text, {
+        : (0, a.jsx)(r.E, {
               variant: "text-xs/normal",
               color: "text-muted",
-              children: u.intl.format(u.t.KAjfKl, { claimLink: f }),
+              children: m.intl.format(m.t.KAjfKl, { claimLink: h }),
           });
 }

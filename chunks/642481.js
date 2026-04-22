@@ -1,103 +1,104 @@
-"use strict";
-n.d(t, { A: () => h, j: () => p });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(964892),
-    l = n(208756),
-    u = n(135564),
-    c = n(916845),
-    d = n(397927),
-    _ = n(714657);
-function f(e) {
-    let { title: t, body: n } = e;
-    return (0, r.jsxs)("div", {
-        className: _.header,
+t.d(n, { A: () => x, j: () => h });
+var l = t(627968),
+    r = t(64700),
+    i = t(503698),
+    a = t.n(i),
+    s = t(964892),
+    o = t(208756),
+    d = t(135564),
+    u = t(916845),
+    c = t(534514),
+    m = t(834730),
+    p = t(608250),
+    f = t(989108);
+function g(e) {
+    let { title: n, body: t } = e;
+    return (0, l.jsxs)("div", {
+        className: f.header,
         children: [
-            (0, r.jsx)(d.Heading, { variant: "heading-md/semibold", className: _.title, children: t }),
-            (0, r.jsx)("div", {
-                className: _.headerBody,
-                children: (0, r.jsx)(d.Text, { variant: "text-sm/normal", color: "none", children: n }),
+            (0, l.jsx)(c.D, { variant: "heading-md/semibold", className: f.title, children: n }),
+            (0, l.jsx)("div", {
+                className: f.headerBody,
+                children: (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "none", children: t }),
             }),
         ],
     });
 }
-function p(e) {
+function h(e) {
     let {
-            title: t,
-            body: n,
-            graphic: a,
-            size: p = "md",
-            actions: h,
-            gradientColor: m,
-            onRequestClose: g,
-            position: E,
-            caretConfig: A,
-            scrollBehavior: I,
-            showCloseButton: T = !0,
-            isCaretHoverable: y = !1,
-            shouldTrapFocus: S = !1,
-            returnRef: v,
-            onNudgeChange: C,
-            ...b
+            title: n,
+            body: t,
+            graphic: i,
+            size: c = "md",
+            actions: m,
+            gradientColor: h,
+            onRequestClose: x,
+            position: A,
+            caretConfig: E,
+            scrollBehavior: j,
+            showCloseButton: v = !0,
+            isCaretHoverable: C = !1,
+            shouldTrapFocus: b = !1,
+            returnRef: R,
+            onNudgeChange: _,
+            ...y
         } = e,
-        [N, R] = i.useState(E ?? "top");
-    i.useEffect(() => {
-        null != E && R(E);
-    }, [E]);
-    let O = i.useMemo(() => ({ align: A?.align ?? "center", customOffset: A?.customOffset }), [A]),
-        D = i.useCallback(() => {
-            g?.();
-        }, [g]),
-        L = i.useCallback(
+        [k, N] = r.useState(A ?? "top");
+    r.useEffect(() => {
+        null != A && N(A);
+    }, [A]);
+    let I = r.useMemo(() => ({ align: E?.align ?? "center", customOffset: E?.customOffset }), [E]),
+        S = r.useCallback(() => {
+            x?.();
+        }, [x]),
+        T = r.useCallback(
             (e) => {
-                g?.(e);
+                x?.(e);
             },
-            [g],
+            [x],
         ),
-        w = i.useCallback((e) => {
-            R(e);
+        D = r.useCallback((e) => {
+            N(e);
         }, []),
-        x = y ? _.caretHoverable : void 0,
-        P = {
-            targetElementRef: b.targetElementRef,
-            shouldShow: b.shouldShow,
-            hasVideo: b.hasVideo,
-            position: N,
-            caretConfig: O,
-            onRequestClose: D,
-            gradientColor: m,
-            onPositionChange: w,
-            onNudgeChange: C,
-            scrollBehavior: I,
-            modal: S,
-            returnRef: v,
+        O = C ? f.caretHoverable : void 0,
+        w = {
+            targetElementRef: y.targetElementRef,
+            shouldShow: y.shouldShow,
+            hasVideo: y.hasVideo,
+            position: k,
+            caretConfig: I,
+            onRequestClose: S,
+            gradientColor: h,
+            onPositionChange: D,
+            onNudgeChange: _,
+            scrollBehavior: j,
+            modal: b,
+            returnRef: R,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === b.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: b.align }
+            ...("edge" === y.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: y.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, r.jsx)(o.x, {
-        ...P,
-        children: (0, r.jsxs)("div", {
+    return (0, l.jsx)(s.x, {
+        ...w,
+        children: (0, l.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                T && (0, r.jsx)(c.q, { onClick: L, variant: null != m ? "color-mix" : void 0 }),
-                null != a &&
-                    (0, r.jsx)("div", {
-                        className: s()(_.graphic, { [_[`graphic--${p}`]]: null != p }),
-                        children: (0, r.jsx)(d.vYh, {
-                            ...a,
-                            aspectRatio: a.aspectRatio ?? ("sm" === p ? "2/1" : "16/9"),
+                v && (0, l.jsx)(u.q, { onClick: T, variant: null != h ? "color-mix" : void 0 }),
+                null != i &&
+                    (0, l.jsx)("div", {
+                        className: a()(f.graphic, { [f[`graphic--${c}`]]: null != c }),
+                        children: (0, l.jsx)(p.v, {
+                            ...i,
+                            aspectRatio: i.aspectRatio ?? ("sm" === c ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, r.jsx)(f, { title: t, body: n }),
-                null != h && h.length > 0 ? (0, r.jsx)(l.Z, { actions: h, className: _.actionBar }) : null,
-                null != O && (0, r.jsx)(u.F, { className: x }),
+                (0, l.jsx)(g, { title: n, body: t }),
+                null != m && m.length > 0 ? (0, l.jsx)(o.Z, { actions: m, className: f.actionBar }) : null,
+                null != I && (0, l.jsx)(d.F, { className: O }),
             ],
         }),
     });
 }
-let h = p;
+let x = h;

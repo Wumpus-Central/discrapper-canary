@@ -1,25 +1,25 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
+    a = n(844222),
     r = n(101058),
     o = n(836602),
     d = n(287070),
-    c = n(578665);
-function u(e) {
-    let { user: t, disabledInputs: u, containerClassName: m } = e,
-        { reducedMotion: _ } = s.useContext(a.CZY),
+    u = n(314649);
+function c(e) {
+    let { user: t, disabledInputs: c, containerClassName: g } = e,
+        { reducedMotion: m } = s.useContext(a.C),
         {
-            pendingAvatar: g,
-            pendingBanner: x,
-            pendingAvatarDecoration: A,
-            pendingProfileEffect: h,
-            pendingDisplayNameStyles: p,
-            pendingThemeColors: f,
+            pendingAvatar: _,
+            pendingBanner: A,
+            pendingAvatarDecoration: h,
+            pendingProfileEffect: p,
+            pendingDisplayNameStyles: x,
+            pendingThemeColors: E,
             pendingPronouns: T,
             pendingBio: S,
-            tryItOutThemeColors: E,
+            tryItOutThemeColors: f,
             tryItOutAvatar: b,
             tryItOutBanner: C,
             tryItOutAvatarDecoration: v,
@@ -29,22 +29,22 @@ function u(e) {
                 t = o.A.getTryItOutChanges();
             return { ...e, ...t };
         }),
-        I = (0, r.V7)({ userId: t.id, image: b ?? g });
+        I = (0, r.V7)({ userId: t.id, image: b ?? _ });
     return (0, i.jsx)(d.A, {
-        containerClassName: m,
+        containerClassName: g,
         user: t,
         pendingPronouns: T,
         pendingBio: S,
-        pendingBanner: C ?? x ?? n(636763),
-        pendingDisplayNameStyles: N ?? p,
+        pendingBanner: C ?? A ?? n(636763),
+        pendingDisplayNameStyles: N ?? x,
         pendingAvatar: I,
-        pendingThemeColors: E ?? f,
-        pendingAvatarDecoration: void 0 !== v ? v : A,
-        pendingProfileEffect: h,
-        avatarClassName: null != b || null != g || _.enabled ? void 0 : c.W,
+        pendingThemeColors: f ?? E,
+        pendingAvatarDecoration: void 0 !== v ? v : h,
+        pendingProfileEffect: p,
+        avatarClassName: null != b || null != _ || m.enabled ? void 0 : u.W,
         canUsePremiumCustomization: !0,
         isTryItOut: !0,
-        disabledInputs: u,
+        disabledInputs: c,
         hideExampleButton: !0,
     });
 }

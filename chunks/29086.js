@@ -3,15 +3,15 @@ var g = h(627968);
 h(64700);
 var B = h(503698),
     C = h.n(B),
-    f = h(397927),
+    f = h(834730),
     M = h(328006),
     H = h(857909),
     Q = h(334840),
     w = h(653919),
     t = h(203656),
-    D = h(583970),
+    D = h(661023),
     l = h(985018),
-    V = h(221893);
+    V = h(166453);
 function s(A) {
     return (0, g.jsxs)("div", {
         className: C()(V.zC, A.className),
@@ -36,7 +36,7 @@ function s(A) {
                         className: V.QV,
                         children: [
                             "string" == typeof A.username
-                                ? (0, g.jsx)(f.Text, {
+                                ? (0, g.jsx)(f.E, {
                                       "data-text": A.username,
                                       className: A.usernameClassName,
                                       variant: "text-md/semibold",
@@ -47,7 +47,7 @@ function s(A) {
                             void 0 !== A.decorations && (0, g.jsx)("div", { className: V.bw, children: A.decorations }),
                         ],
                     }),
-                    null != A.message && (0, g.jsx)(f.Text, { variant: "text-md/medium", children: A.message }),
+                    null != A.message && (0, g.jsx)(f.E, { variant: "text-md/medium", children: A.message }),
                     A.asset,
                 ],
             }),

@@ -1,106 +1,105 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.FileTypes = t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = void 0);
-let r = n(817762),
-    i = n(639371),
-    a = n(536168),
-    s = n(868791),
-    o = n(775356),
-    l = n(501778),
-    u = n(636102);
+let n = i(817762),
+    r = i(639371),
+    o = i(536168),
+    a = i(868791),
+    s = i(775356),
+    l = i(501778),
+    u = i(636102);
 t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = ["m4v", "flv", "mp4", "mkv", "webm", "avif", "heic"];
 class c {
     static getInfoByName(e) {
-        return (0, r.fetchFromObject)(c, e.toUpperCase());
+        return (0, n.fetchFromObject)(c, e.toUpperCase());
     }
     static getSignaturesByName(e) {
-        let { signatures: t } = (0, r.fetchFromObject)(c, e.toUpperCase());
+        let { signatures: t } = (0, n.fetchFromObject)(c, e.toUpperCase());
         return t;
     }
     static detectSignature(e, t) {
-        for (let n of t) {
+        for (let i of t) {
             let t = !0,
-                r = n.offset || 0,
-                i = 0;
-            for (let a = 0; a < n.sequence.length; a++) {
-                if (n.skippedBytes && n.skippedBytes.includes(a)) {
-                    i++;
+                n = i.offset || 0,
+                r = 0;
+            for (let o = 0; o < i.sequence.length; o++) {
+                if (i.skippedBytes && i.skippedBytes.includes(o)) {
+                    r++;
                     continue;
                 }
-                if (e[r + a] !== n.sequence[a - i]) {
+                if (e[n + o] !== i.sequence[o - r]) {
                     t = !1;
                     break;
                 }
             }
-            if (t) return n;
+            if (t) return i;
         }
     }
     static detectTypeByAdditionalCheck(e, t) {
-        let n = t.map((e) => e.extension);
-        if (n.some((e) => ["m4v", "flv", "mp4", "heic"].includes(e)))
-            return n.includes("heic") && (0, u.isHEIC)(e)
+        let i = t.map((e) => e.extension);
+        if (i.some((e) => ["m4v", "flv", "mp4", "heic"].includes(e)))
+            return i.includes("heic") && (0, u.isHEIC)(e)
                 ? "heic"
                 : (0, u.isFLV)(e)
                   ? "flv"
                   : (0, u.isM4V)(e) && !(0, u.isHEIC)(e)
                     ? "m4v"
                     : "mp4";
-        if (n.some((e) => ["mkv", "webm"].includes(e))) {
-            let t = (0, r.findMatroskaDocTypeElements)(e);
+        if (i.some((e) => ["mkv", "webm"].includes(e))) {
+            let t = (0, n.findMatroskaDocTypeElements)(e);
             if ("mkv" === t && (0, u.isMKV)(e)) return "mkv";
             if ("webm" === t && (0, u.isWEBM)(e)) return "webm";
-        } else if (n.some((e) => ["avif"].includes(e)) && (0, r.isAvifStringIncluded)(e)) return "avif";
+        } else if (i.some((e) => ["avif"].includes(e)) && (0, n.isAvifStringIncluded)(e)) return "avif";
     }
     static detectbBySignatures(e, t) {
-        for (let n of t) {
+        for (let i of t) {
             let t = 0,
-                r = !0,
-                i = n.offset || 0,
-                a = (null == n ? void 0 : n.skippedBytes)
-                    ? n.sequence.length + n.skippedBytes.length
-                    : n.sequence.length;
-            for (let s = 0; s < a; s++) {
-                if (n.skippedBytes && n.skippedBytes.includes(s)) {
+                n = !0,
+                r = i.offset || 0,
+                o = (null == i ? void 0 : i.skippedBytes)
+                    ? i.sequence.length + i.skippedBytes.length
+                    : i.sequence.length;
+            for (let a = 0; a < o; a++) {
+                if (i.skippedBytes && i.skippedBytes.includes(a)) {
                     t++;
                     continue;
                 }
-                if (e[i + s] !== n.sequence[s - t]) {
-                    r = !1;
+                if (e[r + a] !== i.sequence[a - t]) {
+                    n = !1;
                     break;
                 }
             }
-            if (r) return n;
+            if (n) return i;
         }
     }
     static checkByFileType(e, t) {
         if (Object.prototype.hasOwnProperty.call(c, t.toUpperCase())) {
-            let n = c.getSignaturesByName(t.toUpperCase());
-            if (c.detectSignature(e, n)) return !0;
+            let i = c.getSignaturesByName(t.toUpperCase());
+            if (c.detectSignature(e, i)) return !0;
         }
         return !1;
     }
 }
 (t.FileTypes = c),
-    (c.AAC = i.AudioTypes.AAC),
-    (c.AMR = i.AudioTypes.AMR),
-    (c.FLAC = i.AudioTypes.FLAC),
-    (c.M4A = i.AudioTypes.M4A),
-    (c.MP3 = i.AudioTypes.MP3),
-    (c.WAV = i.AudioTypes.WAV),
-    (c.AVIF = o.ImageTypes.AVIF),
-    (c.BMP = o.ImageTypes.BMP),
-    (c.BPG = o.ImageTypes.BPG),
-    (c.CR2 = o.ImageTypes.CR2),
-    (c.EXR = o.ImageTypes.EXR),
-    (c.GIF = o.ImageTypes.GIF),
-    (c.ICO = o.ImageTypes.ICO),
-    (c.JPEG = o.ImageTypes.JPEG),
-    (c.PBM = o.ImageTypes.PBM),
-    (c.PGM = o.ImageTypes.PGM),
-    (c.PNG = o.ImageTypes.PNG),
-    (c.PPM = o.ImageTypes.PPM),
-    (c.PSD = o.ImageTypes.PSD),
-    (c.WEBP = o.ImageTypes.WEBP),
-    (c.HEIC = o.ImageTypes.HEIC),
+    (c.AAC = r.AudioTypes.AAC),
+    (c.AMR = r.AudioTypes.AMR),
+    (c.FLAC = r.AudioTypes.FLAC),
+    (c.M4A = r.AudioTypes.M4A),
+    (c.MP3 = r.AudioTypes.MP3),
+    (c.WAV = r.AudioTypes.WAV),
+    (c.AVIF = s.ImageTypes.AVIF),
+    (c.BMP = s.ImageTypes.BMP),
+    (c.BPG = s.ImageTypes.BPG),
+    (c.CR2 = s.ImageTypes.CR2),
+    (c.EXR = s.ImageTypes.EXR),
+    (c.GIF = s.ImageTypes.GIF),
+    (c.ICO = s.ImageTypes.ICO),
+    (c.JPEG = s.ImageTypes.JPEG),
+    (c.PBM = s.ImageTypes.PBM),
+    (c.PGM = s.ImageTypes.PGM),
+    (c.PNG = s.ImageTypes.PNG),
+    (c.PPM = s.ImageTypes.PPM),
+    (c.PSD = s.ImageTypes.PSD),
+    (c.WEBP = s.ImageTypes.WEBP),
+    (c.HEIC = s.ImageTypes.HEIC),
     (c.AVI = l.VideoTypes.AVI),
     (c.FLV = l.VideoTypes.FLV),
     (c.M4V = l.VideoTypes.M4V),
@@ -110,22 +109,22 @@ class c {
     (c.OGG = l.VideoTypes.OGG),
     (c.SWF = l.VideoTypes.SWF),
     (c.WEBM = l.VideoTypes.WEBM),
-    (c._7Z = a.CompressedTypes._7Z),
-    (c.LZH = a.CompressedTypes.LZH),
-    (c.RAR = a.CompressedTypes.RAR),
-    (c.ZIP = a.CompressedTypes.ZIP),
-    (c.BLEND = s.OtherTypes.BLEND),
-    (c.DOC = s.OtherTypes.DOC),
-    (c.ELF = s.OtherTypes.ELF),
-    (c.EXE = s.OtherTypes.EXE),
-    (c.INDD = s.OtherTypes.INDD),
-    (c.MACHO = s.OtherTypes.MACHO),
-    (c.ORC = s.OtherTypes.ORC),
-    (c.PARQUET = s.OtherTypes.PARQUET),
-    (c.PCAP = s.OtherTypes.PCAP),
-    (c.PDF = s.OtherTypes.PDF),
-    (c.PS = s.OtherTypes.PS),
-    (c.RTF = s.OtherTypes.RTF),
-    (c.SQLITE = s.OtherTypes.SQLITE),
-    (c.STL = s.OtherTypes.STL),
-    (c.TTF = s.OtherTypes.TTF);
+    (c._7Z = o.CompressedTypes._7Z),
+    (c.LZH = o.CompressedTypes.LZH),
+    (c.RAR = o.CompressedTypes.RAR),
+    (c.ZIP = o.CompressedTypes.ZIP),
+    (c.BLEND = a.OtherTypes.BLEND),
+    (c.DOC = a.OtherTypes.DOC),
+    (c.ELF = a.OtherTypes.ELF),
+    (c.EXE = a.OtherTypes.EXE),
+    (c.INDD = a.OtherTypes.INDD),
+    (c.MACHO = a.OtherTypes.MACHO),
+    (c.ORC = a.OtherTypes.ORC),
+    (c.PARQUET = a.OtherTypes.PARQUET),
+    (c.PCAP = a.OtherTypes.PCAP),
+    (c.PDF = a.OtherTypes.PDF),
+    (c.PS = a.OtherTypes.PS),
+    (c.RTF = a.OtherTypes.RTF),
+    (c.SQLITE = a.OtherTypes.SQLITE),
+    (c.STL = a.OtherTypes.STL),
+    (c.TTF = a.OtherTypes.TTF);

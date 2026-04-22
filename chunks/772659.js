@@ -1,27 +1,27 @@
-n.d(t, { A: () => c });
-var i = n(627968);
+n.d(t, { A: () => d });
+var s = n(627968);
 n(64700);
-var l = n(397927),
+var l = n(821609),
     a = n(308528),
-    s = n(928658),
+    i = n(928658),
     r = n(978914),
-    o = n(985018);
-function c(e) {
-    let { channel: t, onReportClick: n, onReportSubmit: c, onMouseEnter: d, onMouseLeave: u } = e,
-        { error: h, loaded: m, message: A } = (0, r.I)(t);
-    if (null == A && (m || h)) return null;
-    let p = () => {
-        c?.(), a.A.closePrivateChannel(t.id);
+    c = n(985018);
+function d(e) {
+    let { channel: t, onReportClick: n, onReportSubmit: d, onMouseEnter: o, onMouseLeave: u } = e,
+        { error: A, loaded: h, message: m } = (0, r.I)(t);
+    if (null == m && (h || A)) return null;
+    let g = () => {
+        d?.(), a.A.closePrivateChannel(t.id);
     };
-    return (0, i.jsx)(l.Button, {
+    return (0, s.jsx)(l.$, {
         variant: "critical-primary",
         size: "sm",
-        disabled: null == A,
+        disabled: null == m,
         onClick: (e) => {
-            e.stopPropagation(), n?.(), null != A && (0, s.b8)(A, p);
+            e.stopPropagation(), n?.(), null != m && (0, i.b8)(m, g);
         },
-        onMouseEnter: d,
+        onMouseEnter: o,
         onMouseLeave: u,
-        text: o.intl.string(o.t.HHZmDn),
+        text: c.intl.string(c.t.HHZmDn),
     });
 }

@@ -1,130 +1,134 @@
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => N }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    a = n(397927),
-    r = n(475743),
-    o = n(624458),
-    c = n(408213),
-    d = n(212455),
-    u = n(967198),
-    h = n(636449),
-    A = n(263715),
-    _ = n(928568),
-    m = n(842452),
-    g = n(357064),
-    p = n(985018),
-    f = n(250607);
-function x(e) {
+    a = n(265872),
+    r = n(534514),
+    o = n(834730),
+    d = n(821609),
+    c = n(339350),
+    u = n(475743),
+    h = n(624458),
+    A = n(408213),
+    _ = n(212455),
+    m = n(967198),
+    g = n(636449),
+    p = n(263715),
+    f = n(928568),
+    E = n(842452),
+    x = n(357064),
+    I = n(985018),
+    C = n(785439);
+function b(e) {
     let { onActivate: t, children: n } = e,
-        o = l.useRef(null),
-        u = (0, s.bG)([d.A], () => d.A.hasJoinRequestCoackmark()),
-        h = l.useCallback(() => {
-            c.Ay.clearCoachmark();
+        c = l.useRef(null),
+        h = (0, s.bG)([_.A], () => _.A.hasJoinRequestCoackmark()),
+        m = l.useCallback(() => {
+            A.Ay.clearCoachmark();
         }, []),
-        A = (0, r.A)(u),
-        _ = l.useRef(null);
+        g = (0, u.A)(h),
+        p = l.useRef(null);
     return (
         l.useEffect(() => {
-            u && u !== A && (t(), _.current?.ref?.current?.layerRef?.current?.updatePosition());
-        }, [_, u, A, t]),
+            h && h !== g && (t(), p.current?.ref?.current?.layerRef?.current?.updatePosition());
+        }, [p, h, g, t]),
         (0, i.jsxs)("div", {
-            className: f.kL,
+            className: C.kL,
             children: [
-                (0, i.jsx)(a.YNO, {
-                    ref: _,
-                    targetElementRef: o,
-                    shouldShow: u,
+                (0, i.jsx)(a.Y, {
+                    ref: p,
+                    targetElementRef: c,
+                    shouldShow: h,
                     renderPopout: () =>
                         (0, i.jsxs)("div", {
-                            className: f.jC,
+                            className: C.jC,
                             children: [
                                 (0, i.jsxs)("div", {
-                                    className: f.Bm,
+                                    className: C.Bm,
                                     children: [
                                         (0, i.jsxs)("div", {
-                                            className: f.q3,
+                                            className: C.q3,
                                             children: [
-                                                (0, i.jsx)(a.Heading, {
+                                                (0, i.jsx)(r.D, {
                                                     variant: "heading-md/medium",
-                                                    children: p.intl.string(p.t["0YV0YE"]),
+                                                    children: I.intl.string(I.t["0YV0YE"]),
                                                 }),
-                                                (0, i.jsx)(a.Text, {
+                                                (0, i.jsx)(o.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: p.intl.string(p.t["0UQVDL"]),
+                                                    children: I.intl.string(I.t["0UQVDL"]),
                                                 }),
                                             ],
                                         }),
-                                        (0, i.jsx)(a.Button, {
+                                        (0, i.jsx)(d.$, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: p.intl.string(p.t["4r+amb"]),
+                                            text: I.intl.string(I.t["4r+amb"]),
                                             fullWidth: !0,
-                                            onClick: h,
+                                            onClick: m,
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)("div", { className: f.ed }),
+                                (0, i.jsx)("div", { className: C.ed }),
                             ],
                         }),
                     position: "right",
                     animationPosition: "right",
                     align: "top",
                     spacing: 16,
-                    children: (e) => (0, i.jsx)("div", { ...e, className: f.Ne, ref: o }),
+                    children: (e) => (0, i.jsx)("div", { ...e, className: C.Ne, ref: c }),
                 }),
                 n,
             ],
         })
     );
 }
-function E(e) {
+function N(e) {
     let { onActivate: t } = e,
-        [n, E] = l.useState(!1),
-        I = (0, s.bG)([u.A], () => u.A.getGuildId()),
-        C = (0, s.bG)([d.A], () => d.A.hasFetchedRequestToJoinGuilds),
-        N = (0, _.A)(),
-        T = (0, r.A)(I),
+        [n, a] = l.useState(!1),
+        r = (0, s.bG)([m.A], () => m.A.getGuildId()),
+        o = (0, s.bG)([_.A], () => _.A.hasFetchedRequestToJoinGuilds),
+        d = (0, f.A)(),
+        N = (0, u.A)(r),
         S = l.useMemo(() => {
-            let e = (0, A.xW)({
-                folderId: h.U.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: p.intl.string(p.t["scsU+l"]),
+            let e = (0, p.xW)({
+                folderId: g.U.PENDING_JOIN_REQUESTS_FOLDER,
+                folderName: I.intl.string(I.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
-            for (let t of N) e.children.push((0, A.EL)(t, e.id));
+            for (let t of d) e.children.push((0, p.EL)(t, e.id));
             return e;
-        }, [N, n]);
+        }, [d, n]);
     l.useEffect(() => {
-        n && !C && o.A.fetchRequestToJoinGuilds();
-    }, [n, C]);
-    let b = null != I && N.includes(I);
+        n && !o && h.A.fetchRequestToJoinGuilds();
+    }, [n, o]);
+    let v = null != r && d.includes(r);
     return (l.useEffect(() => {
-        !n && b && T !== I && E(!0);
-    }, [n, b, T, I]),
-    0 === N.length)
+        !n && v && N !== r && a(!0);
+    }, [n, v, N, r]),
+    0 === d.length)
         ? null
-        : (0, i.jsx)(x, {
+        : (0, i.jsx)(b, {
               onActivate: t,
-              children: (0, i.jsx)(m.A, {
+              children: (0, i.jsx)(E.A, {
                   folderNode: S,
                   expanded: n,
-                  selected: b,
+                  selected: v,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      E(!n), c.Ay.clearCoachmark();
+                      a(!n), A.Ay.clearCoachmark();
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, i.jsx)("div", {
-                      className: f.rH,
-                      children: (0, i.jsx)(a.Qfk, { size: "sm", color: "currentColor" }),
+                      className: C.rH,
+                      children: (0, i.jsx)(c.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
-                      return e.type !== A.PJ.GUILD
+                      return e.type !== p.PJ.GUILD
                           ? null
-                          : (0, i.jsx)(g.A, { guildNode: e, "aria-setsize": n, "aria-posinset": t }, e.id);
+                          : (0, i.jsx)(x.A, { guildNode: e, "aria-setsize": n, "aria-posinset": t }, e.id);
                   },
               }),
           });

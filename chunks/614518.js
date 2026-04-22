@@ -1,28 +1,28 @@
 let i;
-n.d(t, { A: () => _, a: () => m }), n(667532);
+n.d(t, { A: () => A, a: () => f }), n(667532);
 var l = n(735438),
     a = n(311907),
-    s = n(582754),
-    r = n(73153),
+    r = n(765178),
+    s = n(73153),
     o = n(927813),
-    c = n(667050);
+    d = n(667050);
 n(806931);
-let d = [],
+let c = [],
     u = {},
-    h = [],
-    m = (e) => {
-        null != e && r.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
+    _ = [],
+    f = (e) => {
+        null != e && s.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
     },
-    A = [],
+    m = [],
     p = 10 * o.A.Millis.SECOND,
     g = (0, l.debounce)(() => {
-        let e = (0, c.fr)(h);
-        s.OR.announce(e, "polite"), (h = []);
+        let e = (0, d.fr)(_);
+        r.O.announce(e, "polite"), (_ = []);
     }, 500);
-class f extends a.Ay.Store {
+class h extends a.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
-        return d;
+        return c;
     }
     get isOnCooldown() {
         return null != i && new Date() < i;
@@ -34,27 +34,27 @@ class f extends a.Ay.Store {
         return u[e];
     }
 }
-let _ = new f(r.h, {
+let A = new h(s.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
         let { userId: t } = e;
         null != u[t] && delete u[t];
     },
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
         let { emoji: t } = e;
-        null != t && (d.unshift(t), (d = (0, l.uniqBy)(d, "name")).length > 9 && d.pop());
+        null != t && (c.unshift(t), (c = (0, l.uniqBy)(c, "name")).length > 9 && c.pop());
     },
     VOICE_CHANNEL_EFFECT_SEND: (e) => {
         let { emoji: t, userId: n, animationType: i } = e;
         null != t &&
             null != i &&
             ((u[n] = { emoji: t, sentAt: Date.now(), animationType: i }),
-            (h = [...h, { emojiName: t.name, userId: n }]),
+            (_ = [..._, { emojiName: t.name, userId: n }]),
             g());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
         let e = new Date();
-        if ((A = [e, ...A].slice(0, 20)).length >= 20) {
-            let t = A[A.length - 1],
+        if ((m = [e, ...m].slice(0, 20)).length >= 20) {
+            let t = m[m.length - 1],
                 n = e.getTime() - t.getTime();
             n < p && (i = new Date(e.getTime() + p - n));
         }

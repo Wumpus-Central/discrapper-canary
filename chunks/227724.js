@@ -1,30 +1,29 @@
 "use strict";
-n.d(t, { k: () => c });
+n.d(t, { k: () => u });
 var r = n(627968),
-    i = n(397927),
-    a = n(994500),
-    s = n(954571),
+    i = n(192308),
+    s = n(994500),
+    a = n(954571),
     o = n(64175),
     l = n(652215);
-let u = "blocked_user_joined_voice_channel_modal";
-function c(e, t) {
-    let c = a.A.isBlocked(t);
-    (0, i.mMO)(
+function u(e, t) {
+    let u = s.A.isBlocked(t);
+    (0, i.openModalLazy)(
         async () => {
-            let { default: i } = await n.e("39679").then(n.bind(n, 552258));
+            let { default: i } = await Promise.all([n.e("83792"), n.e("49222")]).then(n.bind(n, 552258));
             return (n) => {
-                let { transitionState: a, onClose: s } = n;
-                return (0, r.jsx)(i, { channelId: e, userId: t, transitionState: a, onClose: s });
+                let { transitionState: s, onClose: a } = n;
+                return (0, r.jsx)(i, { channelId: e, userId: t, transitionState: s, onClose: a });
             };
         },
         {
-            modalKey: u,
+            modalKey: "blocked_user_joined_voice_channel_modal",
             onCloseCallback: () => {
-                s.default.track(l.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                a.default.track(l.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: o.Qi.DISMISS,
                     channel_id: e,
-                    blocked_user_ids: c ? [t] : [],
-                    ignored_user_ids: c ? [] : [t],
+                    blocked_user_ids: u ? [t] : [],
+                    ignored_user_ids: u ? [] : [t],
                     warning_surface: o.gD.POST_JOIN_MODAL,
                 });
             },

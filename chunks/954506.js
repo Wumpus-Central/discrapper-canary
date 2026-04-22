@@ -1,26 +1,28 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => d });
 var a = n(627968);
 n(64700);
-var l = n(158954),
-    i = n(985018),
-    r = n(355416);
-function s(e) {
-    let { children: t, title: n, onClickViewAll: s } = e;
+var l = n(534514),
+    i = n(821609),
+    r = n(320448),
+    s = n(985018),
+    o = n(274119);
+function d(e) {
+    let { children: t, title: n, onClickViewAll: d } = e;
     return (0, a.jsxs)("div", {
-        className: r.k,
+        className: o.k,
         children: [
             (0, a.jsxs)("div", {
-                className: r.w,
+                className: o.w,
                 children: [
-                    (0, a.jsx)(l.DZT, { variant: "heading-lg/medium", children: n }),
-                    null != s &&
-                        (0, a.jsx)(l.$nd, {
+                    (0, a.jsx)(l.D, { variant: "heading-lg/medium", children: n }),
+                    null != d &&
+                        (0, a.jsx)(i.$, {
                             size: "sm",
-                            icon: l._BQ,
+                            icon: r._,
                             iconPosition: "end",
                             variant: "secondary",
-                            onClick: s,
-                            text: i.intl.string(i.t.budhsM),
+                            onClick: d,
+                            text: s.intl.string(s.t.budhsM),
                         }),
                 ],
             }),

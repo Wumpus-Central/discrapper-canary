@@ -1,58 +1,58 @@
 "use strict";
-n.d(t, { X: () => T, x: () => A });
-var r = n(627968);
+n.d(t, { X: () => E, x: () => A });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
-    o = n(397927),
-    l = n(73153),
-    u = n(927057),
-    c = n(734057),
+var l = n(503698),
+    s = n.n(l),
+    r = n(311907),
+    a = n(834730),
+    o = n(73153),
+    c = n(927057),
+    u = n(734057),
     d = n(696451),
-    _ = n(309010),
-    f = n(287809),
+    h = n(309010),
+    m = n(287809),
     p = n(985018),
-    h = n(1468);
-let m = new Set();
-class E extends a.Ay.PersistedStore {
+    f = n(1468);
+let g = new Set();
+class _ extends r.Ay.PersistedStore {
     static displayName = "PTOStore";
     static persistKey = "PTOStore";
     initialize(e) {
-        this.waitFor(c.A, d.Ay, _.A, f.default), null != e && (m = new Set(e));
+        this.waitFor(u.A, d.Ay, h.A, m.default), null != e && (g = new Set(e));
     }
     hasId(e) {
-        return m.has(e);
+        return g.has(e);
     }
     getState() {
-        return [...m];
+        return [...g];
     }
 }
-let g = new E(l.h, {}),
+let x = new _(o.h, {}),
     A = (e) =>
-        (0, a.bG)([d.Ay, f.default, g], () => {
-            let t = f.default.getCurrentUser();
+        (0, r.bG)([d.Ay, m.default, x], () => {
+            let t = m.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
-            let n = f.default.getUser(e.getRecipientId());
+            let n = m.default.getUser(e.getRecipientId());
             if (!n?.isStaff()) return !1;
-            let r = d.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-            return r ? !g.hasId(n.id) && r : (m.delete(n.id) && g.emitChange(), !1);
+            let i = d.Ay.getNicknames(n.id).some((e) => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
+            return i ? !x.hasId(n.id) && i : (g.delete(n.id) && x.emitChange(), !1);
         }),
-    I = () => {
-        let e = _.A.getChannelId();
+    C = () => {
+        let e = h.A.getChannelId();
         if (null == e) return;
-        let t = c.A.getChannel(e);
-        null != t && t.isPrivate() && (m.has(t.getRecipientId()) || (m.add(t.getRecipientId()), g.emitChange()));
+        let t = u.A.getChannel(e);
+        null != t && t.isPrivate() && (g.has(t.getRecipientId()) || (g.add(t.getRecipientId()), x.emitChange()));
     },
-    T = () =>
-        (0, r.jsxs)("div", {
-            className: h.eU,
+    E = () =>
+        (0, i.jsxs)("div", {
+            className: f.eU,
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, i.jsx)(a.E, {
                     variant: "text-sm/medium",
-                    className: s()(h.Qq, h.Fn),
+                    className: s()(f.Qq, f.Fn),
                     children: p.intl.string(p.t["2UvR1E"]),
                 }),
-                (0, r.jsx)("div", { className: h.o1, children: (0, r.jsx)(u.x, { onClick: I }) }),
+                (0, i.jsx)("div", { className: f.o1, children: (0, i.jsx)(c.x, { onClick: C }) }),
             ],
         });

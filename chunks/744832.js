@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_a6f654",
     ce: "installationPath_a6f654",

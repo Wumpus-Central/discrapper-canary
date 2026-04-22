@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { C: () => f, F: () => p });
-var r = n(64700),
-    i = n(311907),
+n.d(t, { C: () => _, F: () => h });
+var i = n(64700),
+    l = n(311907),
     a = n(996759),
     s = n(339048),
-    o = n(800342),
-    l = n(163437),
-    u = n(961350),
+    r = n(800342),
+    o = n(163437),
+    d = n(961350),
     c = n(97352),
-    d = n(31455),
-    _ = n(67480);
-function f(e) {
-    r.useEffect(() => {
-        p(e);
+    u = n(31455),
+    m = n(67480);
+function _(e) {
+    i.useEffect(() => {
+        h(e);
     }, [e]);
-    let t = (0, i.yK)([d.A, _.A, c.A], () => {
-            let t = d.A.getStoreLayout(e);
-            return (0, l.oC)(t.subscriptions, _.A, c.A);
+    let t = (0, l.yK)([u.A, m.A, c.A], () => {
+            let t = u.A.getStoreLayout(e);
+            return (0, o.oC)(t.subscriptions, m.A, c.A);
         }, [e]),
-        n = (0, i.yK)([d.A], () => d.A.getStoreLayout(e).otps, [e]);
-    return r.useMemo(() => ({ subscriptions: t, otps: n }), [t, n]);
+        n = (0, l.yK)([u.A], () => u.A.getStoreLayout(e).otps, [e]);
+    return i.useMemo(() => ({ subscriptions: t, otps: n }), [t, n]);
 }
-function p(e) {
-    (0, a.V)(e), (0, o.JI)(e), u.default.isAuthenticated() && (0, s.LM)(e, !1);
+function h(e) {
+    (0, a.V)(e), (0, r.JI)(e), d.default.isAuthenticated() && (0, s.LM)(e, !1);
 }

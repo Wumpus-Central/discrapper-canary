@@ -1,7 +1,7 @@
 i.d(e, { b: () => o });
 var s = i(627968),
-    n = i(397927),
-    l = i(954571),
+    l = i(192308),
+    n = i(954571),
     a = i(188275),
     r = i(652215);
 let o = (t) => {
@@ -11,10 +11,10 @@ let o = (t) => {
         channelContext: u,
         customGiftMessage: d,
         analyticsLocations: c,
-        emojiName: f,
-        soundId: p,
+        emojiName: p,
+        soundId: h,
     } = t;
-    (0, n.mMO)(
+    (0, l.openModalLazy)(
         async () => {
             let { default: t } = await i.e("94544").then(i.bind(i, 173971));
             return (i) =>
@@ -25,14 +25,14 @@ let o = (t) => {
                     channelContext: u,
                     customGiftMessage: d,
                     analyticsLocations: c,
-                    emojiName: f,
-                    soundId: p,
+                    emojiName: p,
+                    soundId: h,
                 });
         },
         {
             modalKey: "social-layer-storefront-gift-code-claim-modal",
             onCloseCallback: () => {
-                l.default.track(r.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                n.default.track(r.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
                     type: a.Nu,
                     sku_id: e.id,
                     application_id: e.applicationId,

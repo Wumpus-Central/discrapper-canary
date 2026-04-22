@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_e3077c",
     my: "avatar_e3077c",

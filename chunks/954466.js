@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => r });
-let r = (0, n(945810).mj)({
+n.d(t, { A: () => l });
+let l = (0, n(945810).mj)({
     kind: "user",
     name: "2025-01-allow-nonstaff-to-preview-app-collections",
     defaultConfig: { enabled: !1 },

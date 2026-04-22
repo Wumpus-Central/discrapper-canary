@@ -1,52 +1,47 @@
 "use strict";
-n.d(t, { A: () => C, S: () => S });
+n.d(t, { A: () => A, S: () => g });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(735438),
     l = n(761929),
     u = n(483517),
-    c = n(699426),
-    d = n(652215),
+    d = n(699426),
+    c = n(652215),
     _ = n(806931),
-    f = n(315253);
-let p = 200,
-    h = 40,
-    m = 80,
-    g = 132,
-    E = 80,
-    A = { [d.CUs.TOP_RIGHT]: f.En, [d.CUs.TOP_LEFT]: f.rG, [d.CUs.BOTTOM_LEFT]: f.j$, [d.CUs.BOTTOM_RIGHT]: f.Ue },
-    I = {
-        [d.CUs.TOP_RIGHT]: l.R.HORIZONTAL_LEFT,
-        [d.CUs.TOP_LEFT]: l.R.HORIZONTAL_RIGHT,
-        [d.CUs.BOTTOM_LEFT]: l.R.HORIZONTAL_RIGHT,
-        [d.CUs.BOTTOM_RIGHT]: l.R.HORIZONTAL_LEFT,
+    f = n(423562);
+let E = { [c.CUs.TOP_RIGHT]: f.En, [c.CUs.TOP_LEFT]: f.rG, [c.CUs.BOTTOM_LEFT]: f.j$, [c.CUs.BOTTOM_RIGHT]: f.Ue },
+    h = {
+        [c.CUs.TOP_RIGHT]: l.R.HORIZONTAL_LEFT,
+        [c.CUs.TOP_LEFT]: l.R.HORIZONTAL_RIGHT,
+        [c.CUs.BOTTOM_LEFT]: l.R.HORIZONTAL_RIGHT,
+        [c.CUs.BOTTOM_RIGHT]: l.R.HORIZONTAL_LEFT,
     };
-function T(e, t) {
-    let n = Math.round(e / h) * h;
+function p(e, t) {
+    let n = 40 * Math.round(e / 40);
     return (0, o.clamp)(n, t.minWidth, t.maxWidth);
 }
-function y(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: a, resizeConfig: o, position: u } = e,
-        c = (0, l.A)({
+function m(e) {
+    let { resizableNode: t, onResize: n, onResizeEnd: s, resizeConfig: o, position: u } = e,
+        d = (0, l.A)({
             minDimension: o.minWidth,
-            maxDimension: o.maxWidth + h / 2,
+            maxDimension: o.maxWidth + 20,
             resizableDomNodeRef: t,
             onElementResize: n,
-            onElementResizeEnd: a,
-            orientation: I[u],
+            onElementResizeEnd: s,
+            orientation: h[u],
             usePointerEvents: !0,
         }),
-        d = i.useCallback(
+        c = i.useCallback(
             (e) => {
-                e.stopPropagation(), c(e);
+                e.stopPropagation(), d(e);
             },
-            [c],
+            [d],
         );
-    return (0, r.jsx)("div", { onMouseDown: d, className: s()(f.Di, A[u]) });
+    return (0, r.jsx)("div", { onMouseDown: c, className: a()(f.Di, E[u]) });
 }
-class S extends i.PureComponent {
+class g extends i.PureComponent {
     static defaultProps = { hidden: !1, roundCorners: !0 };
     state = { isResizing: !1 };
     _draggable;
@@ -68,7 +63,7 @@ class S extends i.PureComponent {
             let t = this._width ?? e.width ?? this.props.width;
             (this._width = this.props.width),
                 null != this._innerDivRef.current &&
-                    (Math.abs(t - this._width) > h && (this._innerDivRef.current.style.transition = "none"),
+                    (Math.abs(t - this._width) > 40 && (this._innerDivRef.current.style.transition = "none"),
                     (this._innerDivRef.current.style.width = `${this.props.width}px`));
         }
         (e.edgeOffsetTop !== this.props.edgeOffsetTop ||
@@ -94,26 +89,26 @@ class S extends i.PureComponent {
                 edgeOffsetTop: n,
                 edgeOffsetLeft: r,
                 edgeOffsetBottom: i,
-                edgeOffsetRight: a,
-                maxX: s,
+                edgeOffsetRight: s,
+                maxX: a,
                 maxY: o,
                 dockedRect: l,
                 getDockedRectPositionY: u,
             } = this.props,
-            c = Math.round(n),
+            d = Math.round(n),
             _ = Math.round(o - i - this._boundHeight),
             f = Math.round(r),
-            p = Math.round(s - a - this._boundWidth);
+            E = Math.round(a - s - this._boundWidth);
         if (null != l) return { y: u?.(l.y) ?? l.y ?? 0, x: l?.x ?? 0 };
         switch (e) {
-            case d.CUs.TOP_LEFT:
-                return { y: c, x: f };
-            case d.CUs.BOTTOM_LEFT:
+            case c.CUs.TOP_LEFT:
+                return { y: d, x: f };
+            case c.CUs.BOTTOM_LEFT:
                 return { y: _, x: f };
-            case d.CUs.TOP_RIGHT:
-                return { y: c, x: p };
+            case c.CUs.TOP_RIGHT:
+                return { y: d, x: E };
             default:
-                return { y: _, x: p };
+                return { y: _, x: E };
         }
     }
     setPosition(e) {
@@ -130,17 +125,17 @@ class S extends i.PureComponent {
     ensureWidth = () => {
         let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, resizeConfig: i } = this.props;
         if (null == i) return;
-        let a = T(r - (t + n), i);
-        this.getWidth() > a && ((this._width = a), e?.(a));
+        let s = p(r - (t + n), i);
+        this.getWidth() > s && ((this._width = s), e?.(s));
     };
     calculateDecayingPosition(e, t, n, r) {
-        return { x: e + n * p, y: t + r * p };
+        return { x: e + 200 * n, y: t + 200 * r };
     }
     getXOffset() {
         let { position: e, edgeOffsetLeft: t, edgeOffsetRight: n } = this.props;
         switch (e) {
-            case d.CUs.TOP_LEFT:
-            case d.CUs.BOTTOM_LEFT:
+            case c.CUs.TOP_LEFT:
+            case c.CUs.BOTTOM_LEFT:
                 return -t;
             default:
                 return n;
@@ -149,8 +144,8 @@ class S extends i.PureComponent {
     getYOffset() {
         let { position: e, edgeOffsetTop: t, edgeOffsetBottom: n } = this.props;
         switch (e) {
-            case d.CUs.TOP_LEFT:
-            case d.CUs.TOP_RIGHT:
+            case c.CUs.TOP_LEFT:
+            case c.CUs.TOP_RIGHT:
                 return -t;
             default:
                 return n;
@@ -161,7 +156,7 @@ class S extends i.PureComponent {
         return this._width ?? e ?? _.fG[_.R8.VIDEO];
     }
     get inPopout() {
-        return this.props.appContext === d.BRT.POPOUT;
+        return this.props.appContext === c.BRT.POPOUT;
     }
     handleSetInnerDivRef = (e) => {
         this._innerDivRef.current = e;
@@ -179,7 +174,7 @@ class S extends i.PureComponent {
     handleResizeEnd = (e) => {
         let { onResize: t, resizeConfig: n } = this.props;
         if (null == n) return;
-        let r = T(e, n);
+        let r = p(e, n);
         (this._width = r), t?.(r), this.setState({ isResizing: !1 }), this.ensureWidth();
     };
     handleDragStart = (e, t) => {
@@ -203,14 +198,14 @@ class S extends i.PureComponent {
     handleDragEnd = (e, t) => {
         let n,
             { maxX: r, maxY: i } = this.props,
-            a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY),
-            s = !0,
+            s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY),
+            a = !0,
             o = !0;
         if (
-            (a.x > r / 2 && (o = !1),
-            a.y > i / 2 && (s = !1),
+            (s.x > r / 2 && (o = !1),
+            s.y > i / 2 && (a = !1),
             (n =
-                s && o ? d.CUs.TOP_LEFT : s && !o ? d.CUs.TOP_RIGHT : !s && o ? d.CUs.BOTTOM_LEFT : d.CUs.BOTTOM_RIGHT),
+                a && o ? c.CUs.TOP_LEFT : a && !o ? c.CUs.TOP_RIGHT : !a && o ? c.CUs.BOTTOM_LEFT : c.CUs.BOTTOM_RIGHT),
             this.animateToPosition(n, this.ensureIsInPosition),
             n !== this.props.position)
         ) {
@@ -225,22 +220,22 @@ class S extends i.PureComponent {
                 maxY: t,
                 dockedRect: n,
                 hidden: i,
-                roundCorners: a,
+                roundCorners: s,
                 className: o,
                 position: l,
-                resizeConfig: c,
+                resizeConfig: d,
             } = this.props,
-            d = this.getWidth(),
+            c = this.getWidth(),
             _ = {};
         return (
             null != n
                 ? (_ = { transform: `translate3d(${n.x}, ${n.y}, 0)`, width: n.width, height: n.height })
-                : null != c &&
-                  (_ = { width: d, transition: this.state.isResizing ? "none" : "width 0.2s ease-in-out" }),
+                : null != d &&
+                  (_ = { width: c, transition: this.state.isResizing ? "none" : "width 0.2s ease-in-out" }),
             (0, r.jsxs)(u.A, {
                 dragAnywhere: !0,
                 ref: this.handleSetDraggableRef,
-                className: s()(f.GE, o, { [f.R]: i, [f.Vq]: a }),
+                className: a()(f.GE, o, { [f.R]: i, [f.Vq]: s }),
                 maxX: e,
                 maxY: t,
                 disabled: null != n,
@@ -249,12 +244,12 @@ class S extends i.PureComponent {
                 onDragEnd: this.handleDragEnd,
                 children: [
                     (0, r.jsx)("div", { ref: this.handleSetInnerDivRef, style: _, children: this.props.children }),
-                    null != c
-                        ? (0, r.jsx)(y, {
+                    null != d
+                        ? (0, r.jsx)(m, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
-                              resizeConfig: c,
+                              resizeConfig: d,
                               position: l,
                           })
                         : null,
@@ -263,72 +258,71 @@ class S extends i.PureComponent {
         );
     }
 }
-let v = (e) => {
-        let {
-                selectedPIPWindow: t,
-                pipWindows: n,
-                pipWidth: a,
-                maxX: o,
-                maxY: l,
-                onWindowMove: u,
-                onWindowResize: _,
-                dockedRect: p,
-                pictureInPictureComponents: h,
-                appContext: A,
-                roundCorners: I,
-                resizeConfig: T,
-                className: y,
-                getDockedRectPositionY: v,
-            } = e,
-            [C, b] = i.useState(!1),
-            N = i.useMemo(
-                () =>
-                    null == t
-                        ? null
-                        : n.map((e) => {
-                              if (e.id !== t.id && e.component !== d.o1q.ACTIVITY && e.component !== d.o1q.FRAME)
-                                  return null;
-                              let n = "string" == typeof e.component ? h[e.component] : e.component;
-                              return (0, r.jsx)(n, { width: a, ...e.props }, e.id);
-                          }),
-                [n, t, a, h],
-            ),
-            R = i.useCallback(() => {
-                b(!0);
-            }, []),
-            O = i.useCallback(() => {
-                b(!1);
-            }, []),
-            D = i.useMemo(() => n.some((e) => e.component === d.o1q.ACTIVITY), [n]),
-            L = i.useMemo(() => n.some((e) => e.component === d.o1q.FRAME), [n]);
-        return null == t
-            ? (0, r.jsx)(c.Ay, { children: (0, r.jsx)("div", { className: f._I }) })
-            : (0, r.jsx)(c.Ay, {
-                  children: (0, r.jsx)("div", {
-                      className: s()(f._I, { [f.cB]: C }, y),
-                      children: (0, r.jsx)(S, {
-                          appContext: A,
-                          position: t.position,
-                          id: t.id,
-                          hidden: t.hidden,
-                          onMove: u,
-                          onResize: _,
-                          onDragStart: R,
-                          onDragEnd: O,
-                          maxX: o,
-                          maxY: l,
-                          width: a,
-                          dockedRect: p,
-                          getDockedRectPositionY: v,
-                          edgeOffsetTop: m,
-                          edgeOffsetBottom: g,
-                          edgeOffsetLeft: E,
-                          edgeOffsetRight: m,
-                          roundCorners: I,
-                          resizeConfig: D || L ? void 0 : T,
-                          children: N,
+let A = i.memo((e) => {
+    let {
+            selectedPIPWindow: t,
+            pipWindows: n,
+            pipWidth: s,
+            maxX: o,
+            maxY: l,
+            onWindowMove: u,
+            onWindowResize: _,
+            dockedRect: E,
+            pictureInPictureComponents: h,
+            appContext: p,
+            roundCorners: m,
+            resizeConfig: A,
+            className: I,
+            getDockedRectPositionY: T,
+        } = e,
+        [S, y] = i.useState(!1),
+        N = i.useMemo(
+            () =>
+                null == t
+                    ? null
+                    : n.map((e) => {
+                          if (e.id !== t.id && e.component !== c.o1q.ACTIVITY && e.component !== c.o1q.FRAME)
+                              return null;
+                          let n = "string" == typeof e.component ? h[e.component] : e.component;
+                          return (0, r.jsx)(n, { width: s, ...e.props }, e.id);
                       }),
+            [n, t, s, h],
+        ),
+        O = i.useCallback(() => {
+            y(!0);
+        }, []),
+        R = i.useCallback(() => {
+            y(!1);
+        }, []),
+        v = i.useMemo(() => n.some((e) => e.component === c.o1q.ACTIVITY), [n]),
+        C = i.useMemo(() => n.some((e) => e.component === c.o1q.FRAME), [n]);
+    return null == t
+        ? (0, r.jsx)(d.Ay, { children: (0, r.jsx)("div", { className: f._I }) })
+        : (0, r.jsx)(d.Ay, {
+              children: (0, r.jsx)("div", {
+                  className: a()(f._I, { [f.cB]: S }, I),
+                  children: (0, r.jsx)(g, {
+                      appContext: p,
+                      position: t.position,
+                      id: t.id,
+                      hidden: t.hidden,
+                      onMove: u,
+                      onResize: _,
+                      onDragStart: O,
+                      onDragEnd: R,
+                      maxX: o,
+                      maxY: l,
+                      width: s,
+                      dockedRect: E,
+                      getDockedRectPositionY: T,
+                      edgeOffsetTop: 80,
+                      edgeOffsetBottom: 132,
+                      edgeOffsetLeft: 80,
+                      edgeOffsetRight: 80,
+                      roundCorners: m,
+                      resizeConfig: v || C ? void 0 : A,
+                      children: N,
                   }),
-              });
-    },
-    C = i.memo(v);
+              }),
+          });
+});

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { CV: () => i, E9: () => h, Pl: () => p, eB: () => a, fp: () => c, zL: () => d });
-var r = n(476858);
-let i = {
+r.d(t, { CV: () => s, E9: () => h, Pl: () => g, eB: () => a, fp: () => u, zL: () => d });
+var n = r(476858);
+let s = {
         domingo: 0,
         dom: 0,
         lunes: 1,
@@ -60,7 +59,7 @@ let i = {
         dic: 12,
         "dic.": 12,
     },
-    s = {
+    i = {
         uno: 1,
         dos: 2,
         tres: 3,
@@ -99,17 +98,8 @@ let i = {
         año: "year",
         años: "year",
     },
-    l = `(?:${(0, r.uJ)(s)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`;
-function u(e) {
-    let t = e.toLowerCase();
-    if (void 0 !== s[t]) return s[t];
-    if ("un" === t || "una" === t || "uno" === t) return 1;
-    if (t.match(/algunos?/)) return 3;
-    if (t.match(/unos?/)) return 3;
-    if (t.match(/media?/)) return 0.5;
-    return parseFloat(t);
-}
-let c = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+    l = `(?:${(0, n.uJ)(i)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`,
+    u = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
 function d(e) {
     if (e.match(/^[0-9]{1,4}$/)) {
         let t = parseInt(e);
@@ -117,17 +107,27 @@ function d(e) {
     }
     return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
 }
-let _ = `(${l})\\s{0,5}(${(0, r.uJ)(o)})\\s{0,5}`,
-    f = RegExp(_, "i"),
-    p = (0, r.mb)("", _);
+let m = `(${l})\\s{0,5}(${(0, n.uJ)(o)})\\s{0,5}`,
+    c = RegExp(m, "i"),
+    g = (0, n.mb)("", m);
 function h(e) {
     let t = {},
-        n = e,
-        r = f.exec(n);
-    for (; r; ) m(t, r), (n = n.substring(r[0].length)), (r = f.exec(n));
+        r = e,
+        n = c.exec(r);
+    for (; n; )
+        (function (e, t) {
+            let r = (function (e) {
+                let t = e.toLowerCase();
+                if (void 0 !== i[t]) return i[t];
+                if ("un" === t || "una" === t || "uno" === t) return 1;
+                if (t.match(/algunos?/)) return 3;
+                if (t.match(/unos?/)) return 3;
+                if (t.match(/media?/)) return 0.5;
+                return parseFloat(t);
+            })(t[1]);
+            e[o[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length)),
+            (n = c.exec(r));
     return t;
-}
-function m(e, t) {
-    let n = u(t[1]);
-    e[o[t[2].toLowerCase()]] = n;
 }

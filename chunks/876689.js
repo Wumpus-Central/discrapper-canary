@@ -1,26 +1,26 @@
-n.d(t, { A: () => s });
-var l = n(627968),
+n.d(t, { A: () => i });
+var a = n(627968),
     r = n(64700),
-    a = n(397927),
-    i = n(42754);
-function s(e) {
-    let { onPageChange: t, offset: n, totalCount: s, pageSize: o, renderPageWrapper: E } = e,
-        u = Math.floor(n / o) + 1,
-        c = r.useCallback(
+    l = n(158142),
+    s = n(42754);
+function i(e) {
+    let { onPageChange: t, offset: n, totalCount: i, pageSize: u, renderPageWrapper: o } = e,
+        c = Math.floor(n / u) + 1,
+        d = r.useCallback(
             (e) => {
                 t(e - 1);
             },
             [t],
         );
-    return (0, l.jsx)("div", {
-        className: i.k,
-        children: (0, l.jsx)(a.mgR, {
-            currentPage: u,
-            totalCount: s,
-            pageSize: o,
-            onPageChange: c,
+    return (0, a.jsx)("div", {
+        className: s.k,
+        children: (0, a.jsx)(l.m, {
+            currentPage: c,
+            totalCount: i,
+            pageSize: u,
+            onPageChange: d,
             maxVisiblePages: 5,
-            renderPageWrapper: E,
+            renderPageWrapper: o,
         }),
     });
 }

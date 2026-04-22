@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    Lr: () => I,
-    ZV: () => D,
-    c7: () => A,
-    j2: () => b,
-    kC: () => N,
-    p4: () => S,
-    so: () => O,
-    wT: () => C,
-    zv: () => g,
+    Lr: () => A,
+    ZV: () => O,
+    c7: () => g,
+    j2: () => N,
+    kC: () => T,
+    p4: () => I,
+    so: () => y,
+    wT: () => S,
+    zv: () => m,
 });
 var r = n(835245),
     i = n(317097),
@@ -17,146 +17,120 @@ var r = n(835245),
     o = n(337591),
     l = n(731068),
     u = n(486020),
-    c = n(403362),
-    d = n(661191),
+    d = n(403362),
+    c = n(661191),
     _ = n(489414),
     f = n(532294),
-    p = n(985018);
+    E = n(985018);
 let h = new a.A("InteractionComponentUtils"),
-    m = (e, t) => ({
+    p = (e, t) => ({
         id: e.id,
         name: e.name,
         animated: e.animated,
         src: t && null != e.id ? u.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     }),
-    E = (e) => (e?.errorCode === 429 ? p.intl.string(p.t.fitPBS) : p.intl.string(p.t.VCsUJu)),
-    g = (e, t, n) => {
+    m = (e, t, n) => {
         let r =
             e?.data.interactionType === s.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
-        if (null != (null != r ? v(n, r) : null)) return t?.interactionError ?? E(e);
+        if (
+            null !=
+            (null != r
+                ? (function (e, t) {
+                      switch (e.type) {
+                          case s.I5.ACTION_ROW:
+                              return e.components.find((e) => e.id === t) ?? null;
+                          case s.I5.SECTION:
+                              if (e.accessory.id === t) return e.accessory;
+                              return e.components.find((e) => e.id === t) ?? null;
+                          case s.I5.CONTAINER:
+                              return e.components.find((e) => e.id === t) ?? null;
+                      }
+                  })(n, r)
+                : null)
+        )
+            return (
+                t?.interactionError ?? (e?.errorCode === 429 ? E.intl.string(E.t.fitPBS) : E.intl.string(E.t.VCsUJu))
+            );
     };
-function A(e) {
-    return e.placeholder ?? p.intl.string(p.t.Otr6W2);
+function g(e) {
+    return e.placeholder ?? E.intl.string(E.t.Otr6W2);
 }
-function I(e, t) {
+function A(e, t) {
     let { minValues: n, required: r } = e;
     return "modal" === t ? !r : 0 === n;
 }
-let T = (e) => {
-    switch (e) {
-        case s.I5.ACTION_ROW:
-        case s.I5.BUTTON:
-        case s.I5.STRING_SELECT:
-        case s.I5.TEXT_INPUT:
-        case s.I5.USER_SELECT:
-        case s.I5.ROLE_SELECT:
-        case s.I5.MENTIONABLE_SELECT:
-        case s.I5.CHANNEL_SELECT:
-        case s.I5.SECTION:
-        case s.I5.TEXT_DISPLAY:
-        case s.I5.THUMBNAIL:
-        case s.I5.MEDIA_GALLERY:
-        case s.I5.FILE:
-        case s.I5.SEPARATOR:
-        case s.I5.CONTAINER:
-        case s.I5.LABEL:
-        case s.I5.FILE_UPLOAD:
-        case s.I5.CHECKPOINT_CARD:
-        case s.I5.RADIO_GROUP:
-        case s.I5.CHECKBOX_GROUP:
-        case s.I5.CHECKBOX:
-        case s.I5.CONTENT_INVENTORY_ENTRY:
-            return !0;
-        case s.I5.UNKNOWN:
-        default:
-            return !1;
-    }
-};
-function S(e) {
+function I(e) {
     let t = new Map();
-    for (let n of e) y(t, n);
+    for (let n of e)
+        !(function e(t, n) {
+            switch ((t.set(n.id, n), n.type)) {
+                case s.I5.ACTION_ROW:
+                    n.components.forEach((n) => e(t, n));
+                    break;
+                case s.I5.SECTION:
+                    n.components.forEach((n) => e(t, n)), e(t, n.accessory);
+                    break;
+                case s.I5.CONTAINER:
+                    n.components.forEach((n) => e(t, n));
+            }
+        })(t, n);
     return t;
 }
-function y(e, t) {
-    switch ((e.set(t.id, t), t.type)) {
-        case s.I5.ACTION_ROW:
-            t.components.forEach((t) => y(e, t));
-            break;
-        case s.I5.SECTION:
-            t.components.forEach((t) => y(e, t)), y(e, t.accessory);
-            break;
-        case s.I5.CONTAINER:
-            t.components.forEach((t) => y(e, t));
-    }
-}
-function v(e, t) {
-    switch (e.type) {
-        case s.I5.ACTION_ROW:
-            return e.components.find((e) => e.id === t) ?? null;
-        case s.I5.SECTION:
-            if (e.accessory.id === t) return e.accessory;
-            return e.components.find((e) => e.id === t) ?? null;
-        case s.I5.CONTAINER:
-            return e.components.find((e) => e.id === t) ?? null;
-    }
-}
-function N(e) {
-    let t = Array.from(S(e).values())
+function T(e) {
+    let t = Array.from(I(e).values())
         .filter((e) => e.type === s.I5.TEXT_DISPLAY)
         .map((e) => e.content)
         .join("\n");
     return "" !== t ? t : null;
 }
-function C(e, t) {
-    function n(e) {
+function S(e, t) {
+    return (function e(n) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        for (let i of e) {
-            let e = R(i);
-            if (e.some((e) => e.id === t.id)) return [i, ...r];
-            let s = n(e, [i, ...r]);
-            if (null != s) return s;
+        for (let i of n) {
+            let n = (function (e) {
+                switch (e.type) {
+                    case s.I5.ACTION_ROW:
+                        return e.components;
+                    case s.I5.SECTION:
+                        return [...e.components, e.accessory];
+                    case s.I5.CONTAINER:
+                        return e.components;
+                    case s.I5.LABEL:
+                        return [e.component];
+                    case s.I5.BUTTON:
+                    case s.I5.STRING_SELECT:
+                    case s.I5.TEXT_INPUT:
+                    case s.I5.USER_SELECT:
+                    case s.I5.ROLE_SELECT:
+                    case s.I5.MENTIONABLE_SELECT:
+                    case s.I5.CHANNEL_SELECT:
+                    case s.I5.TEXT_DISPLAY:
+                    case s.I5.THUMBNAIL:
+                    case s.I5.MEDIA_GALLERY:
+                    case s.I5.FILE:
+                    case s.I5.SEPARATOR:
+                    case s.I5.CONTENT_INVENTORY_ENTRY:
+                    case s.I5.FILE_UPLOAD:
+                    case s.I5.CHECKPOINT_CARD:
+                    case s.I5.RADIO_GROUP:
+                    case s.I5.CHECKBOX_GROUP:
+                    case s.I5.CHECKBOX:
+                        return [];
+                    default:
+                        return h.warn("getComponentChildren: Unknown component type", e.type), [];
+                }
+            })(i);
+            if (n.some((e) => e.id === t.id)) return [i, ...r];
+            let a = e(n, [i, ...r]);
+            if (null != a) return a;
         }
         return null;
-    }
-    return n(e);
+    })(e);
 }
-function R(e) {
-    switch (e.type) {
-        case s.I5.ACTION_ROW:
-            return e.components;
-        case s.I5.SECTION:
-            return [...e.components, e.accessory];
-        case s.I5.CONTAINER:
-            return e.components;
-        case s.I5.LABEL:
-            return [e.component];
-        case s.I5.BUTTON:
-        case s.I5.STRING_SELECT:
-        case s.I5.TEXT_INPUT:
-        case s.I5.USER_SELECT:
-        case s.I5.ROLE_SELECT:
-        case s.I5.MENTIONABLE_SELECT:
-        case s.I5.CHANNEL_SELECT:
-        case s.I5.TEXT_DISPLAY:
-        case s.I5.THUMBNAIL:
-        case s.I5.MEDIA_GALLERY:
-        case s.I5.FILE:
-        case s.I5.SEPARATOR:
-        case s.I5.CONTENT_INVENTORY_ENTRY:
-        case s.I5.FILE_UPLOAD:
-        case s.I5.CHECKPOINT_CARD:
-        case s.I5.RADIO_GROUP:
-        case s.I5.CHECKBOX_GROUP:
-        case s.I5.CHECKBOX:
-            return [];
-        default:
-            return h.warn("getComponentChildren: Unknown component type", e.type), [];
-    }
-}
-function O(e) {
+function y(e) {
     return JSON.stringify({ type: "component-upload", containerId: e, uniqueId: crypto.randomUUID?.() ?? (0, r.A)() });
 }
-function b(e) {
+function N(e) {
     try {
         let t = JSON.parse(e);
         if (t?.type !== "component-upload" || "string" != typeof t.containerId || "string" != typeof t.uniqueId)
@@ -166,245 +140,298 @@ function b(e) {
         return null;
     }
 }
-function D(e) {
-    return e.map((e, t) => L(e, [t])).filter((e) => null != e);
+function O(e) {
+    return e
+        .map((e, t) =>
+            (function e(t, n) {
+                if (
+                    !((e) => {
+                        switch (e) {
+                            case s.I5.ACTION_ROW:
+                            case s.I5.BUTTON:
+                            case s.I5.STRING_SELECT:
+                            case s.I5.TEXT_INPUT:
+                            case s.I5.USER_SELECT:
+                            case s.I5.ROLE_SELECT:
+                            case s.I5.MENTIONABLE_SELECT:
+                            case s.I5.CHANNEL_SELECT:
+                            case s.I5.SECTION:
+                            case s.I5.TEXT_DISPLAY:
+                            case s.I5.THUMBNAIL:
+                            case s.I5.MEDIA_GALLERY:
+                            case s.I5.FILE:
+                            case s.I5.SEPARATOR:
+                            case s.I5.CONTAINER:
+                            case s.I5.LABEL:
+                            case s.I5.FILE_UPLOAD:
+                            case s.I5.CHECKPOINT_CARD:
+                            case s.I5.RADIO_GROUP:
+                            case s.I5.CHECKBOX_GROUP:
+                            case s.I5.CHECKBOX:
+                            case s.I5.CONTENT_INVENTORY_ENTRY:
+                                return !0;
+                            case s.I5.UNKNOWN:
+                            default:
+                                return !1;
+                        }
+                    })(t.type)
+                )
+                    return null;
+                function r(t, r) {
+                    let i = e(t, [...n, r]);
+                    return null == i ? null : i;
+                }
+                switch (t.type) {
+                    case s.I5.ACTION_ROW: {
+                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq);
+                        return { type: s.I5.ACTION_ROW, id: R(n), components: e };
+                    }
+                    case s.I5.BUTTON: {
+                        let e = null != t.emoji ? p(t.emoji, !1) : void 0;
+                        return {
+                            type: s.I5.BUTTON,
+                            id: R(n),
+                            customId: t.custom_id,
+                            style: t.style,
+                            disabled: t.disabled,
+                            url: t.url,
+                            label: t.label,
+                            emoji: e,
+                            skuId: t.sku_id,
+                        };
+                    }
+                    case s.I5.STRING_SELECT:
+                        return {
+                            type: s.I5.STRING_SELECT,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            options: t.options.map((e) => ({
+                                type: _.iw.STRING,
+                                label: e.label,
+                                value: e.value,
+                                default: e.default,
+                                description: e.description,
+                                emoji: null != e.emoji ? p(e.emoji, !1) : void 0,
+                            })),
+                            placeholder: t.placeholder,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                        };
+                    case s.I5.TEXT_INPUT:
+                        return {
+                            type: t.type,
+                            id: R(n),
+                            style: t.style,
+                            customId: t.custom_id,
+                            label: t.label,
+                            value: t.value,
+                            placeholder: t.placeholder,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            minLength: t.min_length,
+                            maxLength: t.max_length,
+                        };
+                    case s.I5.USER_SELECT:
+                        return {
+                            type: s.I5.USER_SELECT,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            placeholder: t.placeholder,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                            defaultValues: t.default_values,
+                        };
+                    case s.I5.ROLE_SELECT:
+                        return {
+                            type: s.I5.ROLE_SELECT,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            placeholder: t.placeholder,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                            defaultValues: t.default_values,
+                        };
+                    case s.I5.MENTIONABLE_SELECT:
+                        return {
+                            type: s.I5.MENTIONABLE_SELECT,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            placeholder: t.placeholder,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                            defaultValues: t.default_values,
+                        };
+                    case s.I5.CHANNEL_SELECT:
+                        return {
+                            type: s.I5.CHANNEL_SELECT,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            placeholder: t.placeholder,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                            channelTypes: t.channel_types,
+                            defaultValues: t.default_values,
+                        };
+                    case s.I5.SECTION: {
+                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq),
+                            i = r(t.accessory, e.length);
+                        if (0 === e.length || null == i) return null;
+                        return { type: s.I5.SECTION, id: R(n), components: e, accessory: i };
+                    }
+                    case s.I5.TEXT_DISPLAY:
+                        return { type: s.I5.TEXT_DISPLAY, id: R(n), content: t.content };
+                    case s.I5.THUMBNAIL:
+                        return {
+                            type: s.I5.THUMBNAIL,
+                            id: R(n),
+                            media: (0, l.Uv)(t.media),
+                            description: t.description,
+                            spoiler: t.spoiler,
+                        };
+                    case s.I5.MEDIA_GALLERY:
+                        return {
+                            type: s.I5.MEDIA_GALLERY,
+                            id: R(n),
+                            items: t.items.map((e) => ({
+                                media: (0, l.Uv)(e.media),
+                                description: e.description,
+                                spoiler: e.spoiler,
+                            })),
+                        };
+                    case s.I5.FILE:
+                        return {
+                            type: s.I5.FILE,
+                            id: R(n),
+                            file: (0, l.Uv)(t.file),
+                            name: t.name,
+                            size: t.size,
+                            spoiler: t.spoiler,
+                        };
+                    case s.I5.SEPARATOR:
+                        return {
+                            type: s.I5.SEPARATOR,
+                            id: R(n),
+                            divider: t.divider ?? !0,
+                            spacing: t.spacing ?? s.C8.SMALL,
+                        };
+                    case s.I5.CONTENT_INVENTORY_ENTRY:
+                        if (null == t.content_inventory_entry) return null;
+                        return {
+                            type: s.I5.CONTENT_INVENTORY_ENTRY,
+                            id: R(n),
+                            contentInventoryEntry: t.content_inventory_entry,
+                        };
+                    case s.I5.CONTAINER: {
+                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq);
+                        return {
+                            type: s.I5.CONTAINER,
+                            id: R(n),
+                            accentColor: null != t.accent_color ? (0, i.$k)(t.accent_color, !0) : void 0,
+                            spoiler: t.spoiler,
+                            components: e,
+                        };
+                    }
+                    case s.I5.LABEL: {
+                        let e = r(t.component, 0);
+                        if (null == e) return null;
+                        return { type: s.I5.LABEL, id: R(n), label: t.label, description: t.description, component: e };
+                    }
+                    case s.I5.FILE_UPLOAD:
+                        return {
+                            type: t.type,
+                            id: R(n),
+                            customId: t.custom_id,
+                            disabled: t.disabled,
+                            required: t.required ?? !1,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                        };
+                    case s.I5.CHECKPOINT_CARD:
+                        var a, o;
+                        let u;
+                        return (
+                            (a = t),
+                            (o = n),
+                            (u = a.checkpoint_data).version === f.w.V2025
+                                ? {
+                                      type: a.type,
+                                      id: R(o),
+                                      checkpointData: {
+                                          version: u.version,
+                                          cardId: u.card_id,
+                                          powerLevel: u.power_level,
+                                          powerLevelPercentile: u.power_level_percentile,
+                                          numMessagesSent: u.num_messages_sent,
+                                          totalVoiceMinutes: u.total_voice_minutes,
+                                          numEmojisSent: u.num_emojis_sent,
+                                          topGuild:
+                                              null != u.top_guild
+                                                  ? {
+                                                        guildId: u.top_guild.guild_id,
+                                                        guildName: u.top_guild.guild_name,
+                                                        guildIcon: u.top_guild.guild_icon,
+                                                    }
+                                                  : void 0,
+                                          topEmoji:
+                                              null != u.top_emoji
+                                                  ? {
+                                                        emojiId: c.default.isProbablyAValidSnowflake(
+                                                            u.top_emoji.emoji_id,
+                                                        )
+                                                            ? u.top_emoji.emoji_id
+                                                            : void 0,
+                                                        emojiName: u.top_emoji?.emoji_name,
+                                                    }
+                                                  : void 0,
+                                          topGame:
+                                              null != u.top_game
+                                                  ? {
+                                                        applicationId: u.top_game.application_id,
+                                                        applicationName: u.top_game.application_name,
+                                                        applicationImageId: u.top_game.application_image_id,
+                                                    }
+                                                  : void 0,
+                                      },
+                                  }
+                                : null
+                        );
+                    case s.I5.RADIO_GROUP:
+                        return {
+                            type: t.type,
+                            id: R(n),
+                            customId: t.custom_id,
+                            options: t.options,
+                            required: t.required ?? !1,
+                        };
+                    case s.I5.CHECKBOX_GROUP:
+                        return {
+                            type: t.type,
+                            id: R(n),
+                            customId: t.custom_id,
+                            options: t.options,
+                            minValues: t.min_values,
+                            maxValues: t.max_values,
+                            required: t.required ?? !1,
+                        };
+                    case s.I5.CHECKBOX:
+                        return { type: t.type, id: R(n), customId: t.custom_id, default: t.default };
+                    default:
+                        return h.warn("transformComponent: Unknown component type", t.type), null;
+                }
+            })(e, [t]),
+        )
+        .filter((e) => null != e);
 }
-function L(e, t) {
-    if (!T(e.type)) return null;
-    function n(e, n) {
-        let r = L(e, [...t, n]);
-        return null == r ? null : r;
-    }
-    let r = !1;
-    switch (e.type) {
-        case s.I5.ACTION_ROW: {
-            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq);
-            return { type: s.I5.ACTION_ROW, id: w(t), components: r };
-        }
-        case s.I5.BUTTON: {
-            let n = null != e.emoji ? m(e.emoji, r) : void 0;
-            return {
-                type: s.I5.BUTTON,
-                id: w(t),
-                customId: e.custom_id,
-                style: e.style,
-                disabled: e.disabled,
-                url: e.url,
-                label: e.label,
-                emoji: n,
-                skuId: e.sku_id,
-            };
-        }
-        case s.I5.STRING_SELECT:
-            return {
-                type: s.I5.STRING_SELECT,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                options: e.options.map((e) => ({
-                    type: _.iw.STRING,
-                    label: e.label,
-                    value: e.value,
-                    default: e.default,
-                    description: e.description,
-                    emoji: null != e.emoji ? m(e.emoji, r) : void 0,
-                })),
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-            };
-        case s.I5.TEXT_INPUT:
-            return {
-                type: e.type,
-                id: w(t),
-                style: e.style,
-                customId: e.custom_id,
-                label: e.label,
-                value: e.value,
-                placeholder: e.placeholder,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                minLength: e.min_length,
-                maxLength: e.max_length,
-            };
-        case s.I5.USER_SELECT:
-            return {
-                type: s.I5.USER_SELECT,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                defaultValues: e.default_values,
-            };
-        case s.I5.ROLE_SELECT:
-            return {
-                type: s.I5.ROLE_SELECT,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                defaultValues: e.default_values,
-            };
-        case s.I5.MENTIONABLE_SELECT:
-            return {
-                type: s.I5.MENTIONABLE_SELECT,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                defaultValues: e.default_values,
-            };
-        case s.I5.CHANNEL_SELECT:
-            return {
-                type: s.I5.CHANNEL_SELECT,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                placeholder: e.placeholder,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                channelTypes: e.channel_types,
-                defaultValues: e.default_values,
-            };
-        case s.I5.SECTION: {
-            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq),
-                i = n(e.accessory, r.length);
-            if (0 === r.length || null == i) return null;
-            return { type: s.I5.SECTION, id: w(t), components: r, accessory: i };
-        }
-        case s.I5.TEXT_DISPLAY:
-            return { type: s.I5.TEXT_DISPLAY, id: w(t), content: e.content };
-        case s.I5.THUMBNAIL:
-            return {
-                type: s.I5.THUMBNAIL,
-                id: w(t),
-                media: (0, l.Uv)(e.media),
-                description: e.description,
-                spoiler: e.spoiler,
-            };
-        case s.I5.MEDIA_GALLERY:
-            return {
-                type: s.I5.MEDIA_GALLERY,
-                id: w(t),
-                items: e.items.map((e) => ({
-                    media: (0, l.Uv)(e.media),
-                    description: e.description,
-                    spoiler: e.spoiler,
-                })),
-            };
-        case s.I5.FILE:
-            return {
-                type: s.I5.FILE,
-                id: w(t),
-                file: (0, l.Uv)(e.file),
-                name: e.name,
-                size: e.size,
-                spoiler: e.spoiler,
-            };
-        case s.I5.SEPARATOR:
-            return { type: s.I5.SEPARATOR, id: w(t), divider: e.divider ?? !0, spacing: e.spacing ?? s.C8.SMALL };
-        case s.I5.CONTENT_INVENTORY_ENTRY:
-            if (null == e.content_inventory_entry) return null;
-            return { type: s.I5.CONTENT_INVENTORY_ENTRY, id: w(t), contentInventoryEntry: e.content_inventory_entry };
-        case s.I5.CONTAINER: {
-            let r = e.components.map((e, t) => n(e, t)).filter(c.Vq);
-            return {
-                type: s.I5.CONTAINER,
-                id: w(t),
-                accentColor: null != e.accent_color ? (0, i.$k)(e.accent_color, !0) : void 0,
-                spoiler: e.spoiler,
-                components: r,
-            };
-        }
-        case s.I5.LABEL: {
-            let r = n(e.component, 0);
-            if (null == r) return null;
-            return { type: s.I5.LABEL, id: w(t), label: e.label, description: e.description, component: r };
-        }
-        case s.I5.FILE_UPLOAD:
-            return {
-                type: e.type,
-                id: w(t),
-                customId: e.custom_id,
-                disabled: e.disabled,
-                required: e.required ?? !1,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-            };
-        case s.I5.CHECKPOINT_CARD:
-            return M(e, t);
-        case s.I5.RADIO_GROUP:
-            return { type: e.type, id: w(t), customId: e.custom_id, options: e.options, required: e.required ?? !1 };
-        case s.I5.CHECKBOX_GROUP:
-            return {
-                type: e.type,
-                id: w(t),
-                customId: e.custom_id,
-                options: e.options,
-                minValues: e.min_values,
-                maxValues: e.max_values,
-                required: e.required ?? !1,
-            };
-        case s.I5.CHECKBOX:
-            return { type: e.type, id: w(t), customId: e.custom_id, default: e.default };
-        default:
-            return h.warn("transformComponent: Unknown component type", e.type), null;
-    }
-}
-function w(e) {
+function R(e) {
     return (0, _.X1)(e.join(","));
-}
-function M(e, t) {
-    let n = e.checkpoint_data;
-    return n.version === f.w.V2025
-        ? {
-              type: e.type,
-              id: w(t),
-              checkpointData: {
-                  version: n.version,
-                  cardId: n.card_id,
-                  powerLevel: n.power_level,
-                  powerLevelPercentile: n.power_level_percentile,
-                  numMessagesSent: n.num_messages_sent,
-                  totalVoiceMinutes: n.total_voice_minutes,
-                  numEmojisSent: n.num_emojis_sent,
-                  topGuild:
-                      null != n.top_guild
-                          ? {
-                                guildId: n.top_guild.guild_id,
-                                guildName: n.top_guild.guild_name,
-                                guildIcon: n.top_guild.guild_icon,
-                            }
-                          : void 0,
-                  topEmoji:
-                      null != n.top_emoji
-                          ? {
-                                emojiId: d.default.isProbablyAValidSnowflake(n.top_emoji.emoji_id)
-                                    ? n.top_emoji.emoji_id
-                                    : void 0,
-                                emojiName: n.top_emoji?.emoji_name,
-                            }
-                          : void 0,
-                  topGame:
-                      null != n.top_game
-                          ? {
-                                applicationId: n.top_game.application_id,
-                                applicationName: n.top_game.application_name,
-                                applicationImageId: n.top_game.application_image_id,
-                            }
-                          : void 0,
-              },
-          }
-        : null;
 }

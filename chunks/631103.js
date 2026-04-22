@@ -1,41 +1,41 @@
-"use strict";
-n.d(t, { A: () => c }), n(938796);
+n.d(t, { A: () => u }), n(938796);
 var i = n(627968);
 n(64700);
-var s = n(665260),
-    l = n(397927),
-    r = n(957545),
-    a = n(652215),
-    o = n(985018),
-    d = n(369e3);
-let c = (e) => {
+var l = n(665260),
+    s = n(695366),
+    r = n(834730),
+    a = n(957545),
+    o = n(652215),
+    d = n(985018),
+    c = n(369e3);
+let u = (e) => {
     let { role: t } = e;
-    return (0, s.Lt)(t.flags, a.gxX.IN_PROMPT)
-        ? (0, r.J)(t)
+    return (0, l.Lt)(t.flags, o.gxX.IN_PROMPT)
+        ? (0, a.J)(t)
             ? (0, i.jsxs)("div", {
-                  className: d.lm,
+                  className: c.lm,
                   children: [
-                      (0, i.jsx)(l.EpV, {
+                      (0, i.jsx)(s.E, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: "currentColor",
-                          className: d.Qf,
+                          className: c.Qf,
                       }),
-                      (0, i.jsx)(l.Text, { variant: "text-sm/normal", children: o.intl.string(o.t.YRbgXz) }),
+                      (0, i.jsx)(r.E, { variant: "text-sm/normal", children: d.intl.string(d.t.YRbgXz) }),
                   ],
               })
             : (0, i.jsxs)("div", {
-                  className: d.lm,
+                  className: c.lm,
                   children: [
-                      (0, i.jsx)(l.EpV, {
+                      (0, i.jsx)(s.E, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: "currentColor",
-                          className: d.EP,
+                          className: c.EP,
                       }),
-                      (0, i.jsx)(l.Text, { variant: "text-sm/normal", children: o.intl.string(o.t.mqeO2v) }),
+                      (0, i.jsx)(r.E, { variant: "text-sm/normal", children: d.intl.string(d.t.mqeO2v) }),
                   ],
               })
         : null;

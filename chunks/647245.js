@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => f, fR: () => c });
+n.d(t, { Ay: () => _, fR: () => d });
 var r = n(698351),
     i = n(86675),
     s = n(97191);
@@ -11,18 +11,11 @@ function l(e) {
 function u(e, t) {
     return t.includes(e.key);
 }
-function c(e) {
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (!!t && !1 === e.isTrusted) || (e.key?.toLowerCase() === "d" && (e.metaKey || e.ctrlKey) && !e.altKey);
 }
-function d(e) {
-    if (null == e) return { x: 0, y: 0 };
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    if (null == t) return { x: 0, y: 0 };
-    let { top: n, left: r } = t.getBoundingClientRect();
-    return { x: r, y: n };
-}
-class _ {
+class c {
     static isSetUp;
     manager;
     actions;
@@ -51,13 +44,13 @@ class _ {
             (this._announcer = new r.A(n?.announcer));
     }
     setup() {
-        if (_.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-        (_.isSetUp = !0),
+        if (c.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+        (c.isSetUp = !0),
             (this._handlingFirstEvent = !0),
             this.context.window?.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
-        (_.isSetUp = !1),
+        (c.isSetUp = !1),
             this.context.window?.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
             this.endDrag();
     }
@@ -103,9 +96,16 @@ class _ {
             }
         );
     }
-    getSourceClientOffset = (e) => d(this.sourceNodes.get(e));
+    getSourceClientOffset = (e) =>
+        (function (e) {
+            if (null == e) return { x: 0, y: 0 };
+            let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+            if (null == t) return { x: 0, y: 0 };
+            let { top: n, left: r } = t.getBoundingClientRect();
+            return { x: r, y: n };
+        })(this.sourceNodes.get(e));
     handleDragStart = (e, t) => {
-        if (!c(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
+        if (!d(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
         l(t);
@@ -133,4 +133,4 @@ class _ {
             this.setDndMode(!1);
     }
 }
-let f = (e, t, n) => new _(e, t, n);
+let _ = (e, t, n) => new c(e, t, n);

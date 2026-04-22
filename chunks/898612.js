@@ -1,38 +1,39 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    r = n(963027),
-    o = n(47167),
-    a = n(713654),
-    s = n(403362),
-    u = n(739455),
-    c = n(2242),
-    d = n(985018),
-    m = n(60927);
-function f(e) {
+var l = n(191023),
+    r = n(140735),
+    o = n(963027),
+    a = n(47167),
+    s = n(713654),
+    u = n(403362),
+    c = n(739455),
+    d = n(2242),
+    m = n(985018),
+    f = n(60927);
+function g(e) {
     let { channelId: t } = e,
-        n = (0, u.fE)(t),
-        s = (0, o.Ay)(n);
-    if (null == n) return `[${d.intl.string(d.t.bz1PZX)}]`;
-    let c = n.isMediaChannel() ? l.xfq : (0, a._U)(n.type);
+        n = (0, c.fE)(t),
+        u = (0, a.Ay)(n);
+    if (null == n) return `[${m.intl.string(m.t.bz1PZX)}]`;
+    let d = n.isMediaChannel() ? l.x : (0, s._U)(n.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.AC4, { children: (0, r.Ay)({ channel: n }) }),
+            (0, i.jsx)(r.A, { children: (0, o.Ay)({ channel: n }) }),
             (0, i.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [null != c && (0, i.jsx)(c, { className: m.K, "aria-hidden": !0 }), s],
+                children: [null != d && (0, i.jsx)(d, { className: f.K, "aria-hidden": !0 }), u],
             }),
         ],
     });
 }
-function g(e) {
+function p(e) {
     switch (e.ref_type) {
-        case c.bN.CHANNEL:
-            return (0, i.jsx)(f, { channelId: e.ref_id });
-        case c.bN.INTANGIBLE:
+        case d.bN.CHANNEL:
+            return (0, i.jsx)(g, { channelId: e.ref_id });
+        case d.bN.INTANGIBLE:
             return e.name;
         default:
-            (0, s.xb)(e);
+            (0, u.xb)(e);
     }
 }

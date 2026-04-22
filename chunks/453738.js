@@ -1,32 +1,41 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => G });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    a = n(397927),
-    r = n(835835),
-    o = n(381849),
-    d = n(549973),
-    c = n(976860),
-    u = n(957565),
-    h = n(661191),
-    A = n(256331),
-    _ = n(141850),
-    m = n(736339),
-    p = n(701952),
-    g = n(652215),
-    f = n(84593);
-function E(e, t) {
+    a = n(834730),
+    r = n(939249),
+    o = n(408278),
+    d = n(624479),
+    c = n(691540),
+    u = n(857250),
+    h = n(97483),
+    A = n(534890),
+    _ = n(39623),
+    m = n(952270),
+    g = n(835835),
+    p = n(381849),
+    f = n(549973),
+    E = n(976860),
+    x = n(957565),
+    I = n(661191),
+    C = n(256331),
+    b = n(141850),
+    N = n(736339),
+    S = n(701952),
+    v = n(652215),
+    T = n(84593);
+function y(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].conversation.id !== t[n].conversation.id) return !1;
     return !0;
 }
-function x(e, t) {
+function R(e, t) {
     if (e.size !== t.size) return !1;
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
 }
-let I = ["high", "medium", "low"],
-    C = l.memo(function (e) {
+let j = ["high", "medium", "low"],
+    L = l.memo(function (e) {
         let { moderation: t } = e,
             n = null != t && 1 === t.status,
             s = null != t && !t.flagged_title && !t.flagged_summary && !t.flagged_key_points,
@@ -62,33 +71,33 @@ let I = ["high", "medium", "low"],
                           return (
                               e.severity ===
                               ((n = t.flagged_summary_details.map((e) => e.severity)),
-                              I.find((e) => n.includes(e)) ?? null)
+                              j.find((e) => n.includes(e)) ?? null)
                           );
                       }) ?? null)
                     : null,
             c = d?.severity ?? null,
             u = d?.confidence ?? null;
         return (0, i.jsxs)("div", {
-            className: f.UO,
+            className: T.UO,
             children: [
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(a.E, {
                     variant: "text-xs/semibold",
                     color: "text-default",
-                    className: f.a9,
+                    className: T.a9,
                     children: "Moderation",
                 }),
                 (0, i.jsxs)("div", {
-                    className: f.so,
+                    className: T.so,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: f.a7,
+                            className: T.a7,
                             children: [
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/semibold",
                                     color: null == t ? "text-muted" : n ? "status-positive" : "status-danger",
                                     children: null == t ? "—" : n ? "✓" : "✗",
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     children: "Conversation",
@@ -96,7 +105,7 @@ let I = ["high", "medium", "low"],
                                 null != t &&
                                     !n &&
                                     null != t.status_reason &&
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: t.status_reason,
@@ -104,21 +113,21 @@ let I = ["high", "medium", "low"],
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: f.a7,
+                            className: T.a7,
                             children: [
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/semibold",
                                     color: null == t ? "text-muted" : s ? "status-positive" : "status-danger",
                                     children: null == t ? "—" : s ? "✓" : "✗",
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     children: "Summary",
                                 }),
                                 null != t &&
                                     !s &&
-                                    (0, i.jsxs)(a.Text, {
+                                    (0, i.jsxs)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: [
@@ -136,7 +145,7 @@ let I = ["high", "medium", "low"],
                                 null != t &&
                                     !s &&
                                     (null != c || null != u) &&
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: [c, u].filter(Boolean).join(" \xb7 "),
@@ -144,9 +153,9 @@ let I = ["high", "medium", "low"],
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: f.a7,
+                            className: T.a7,
                             children: [
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/semibold",
                                     color:
                                         null == t || "unknown" === o
@@ -156,14 +165,14 @@ let I = ["high", "medium", "low"],
                                               : "status-danger",
                                     children: null == t || "unknown" === o ? "—" : "passed" === o ? "✓" : "✗",
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     children: "Messages",
                                 }),
                                 null != t &&
                                     (r.passed > 0 || r.failed > 0 || r.unknown > 0) &&
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: [
@@ -181,68 +190,66 @@ let I = ["high", "medium", "low"],
             ],
         });
     }),
-    N = l.memo(function (e) {
+    O = l.memo(function (e) {
         let {
                 conversation: t,
                 color: n,
                 isInViewport: s,
-                scrollTarget: r,
-                onJump: c,
-                onHoverStart: A,
-                onHoverEnd: _,
+                scrollTarget: A,
+                onJump: _,
+                onHoverStart: m,
+                onHoverEnd: g,
             } = e,
-            m = l.useRef(null);
+            E = l.useRef(null);
         l.useEffect(() => {
-            null != r && null != m.current && m.current.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, [r]);
-        let g = h.default.extractTimestamp(t.start_message_id),
-            E = h.default.extractTimestamp(t.end_message_id),
-            x = (0, d.e)({ timestamp: g }),
-            I = Math.max(1, Math.round((E - g) / 1e3)),
-            N = (0, o.WR)({ seconds: I, getFormatter: o.i }),
-            T = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
-            S = null != T ? (0, p.i)(T.content_json) : null;
-        return (0, i.jsxs)(a.DUT, {
-            innerRef: m,
-            className: `${f.Nm}${s ? ` ${f.Sk}` : ""}`,
+            null != A && null != E.current && E.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, [A]);
+        let C = I.default.extractTimestamp(t.start_message_id),
+            b = I.default.extractTimestamp(t.end_message_id),
+            N = (0, f.e)({ timestamp: C }),
+            v = Math.max(1, Math.round((b - C) / 1e3)),
+            y = (0, p.WR)({ seconds: v, getFormatter: p.i }),
+            R = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
+            j = null != R ? (0, S.i)(R.content_json) : null;
+        return (0, i.jsxs)(r.D, {
+            innerRef: E,
+            className: `${T.Nm}${s ? ` ${T.Sk}` : ""}`,
             style: { backgroundColor: s ? n.replace(/,\s*0\.12\)$/, ", 0.24)") : n },
-            onClick: () => c(t),
-            onMouseEnter: () => A(t.id),
-            onMouseLeave: _,
+            onClick: () => _(t),
+            onMouseEnter: () => m(t.id),
+            onMouseLeave: g,
             children: [
                 (0, i.jsxs)("div", {
-                    className: f.PY,
+                    className: T.PY,
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(a.E, {
                             variant: "text-md/medium",
-                            color: null != S ? "text-default" : "text-muted",
-                            className: f.So,
-                            children: S?.title ?? "Summary not available",
+                            color: null != j ? "text-default" : "text-muted",
+                            className: T.So,
+                            children: j?.title ?? "Summary not available",
                         }),
-                        (0, i.jsx)(a.K0, {
-                            icon: a.TdU,
+                        (0, i.jsx)(o.K, {
+                            icon: d.T,
                             "aria-label": "Copy conversation JSON",
                             variant: "secondary",
                             size: "sm",
                             onClick: (e) => {
                                 e.stopPropagation(),
-                                    (0, u.C)(JSON.stringify(t, null, 2), () =>
-                                        (0, a.showToast)(
-                                            (0, a.createToast)("Copied conversation JSON", a.ToastType.SUCCESS),
-                                        ),
+                                    (0, x.C)(JSON.stringify(t, null, 2), () =>
+                                        (0, c.P0)((0, u.o)("Copied conversation JSON", h.Ck.SUCCESS)),
                                     );
                             },
                         }),
                     ],
                 }),
-                (0, i.jsxs)(a.Text, {
+                (0, i.jsxs)(a.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    className: f.FR,
+                    className: T.FR,
                     children: [
-                        x,
-                        " ago \xb7 ",
                         N,
+                        " ago \xb7 ",
+                        y,
                         " duration \xb7 ",
                         t.message_count,
                         " messages \xb7 ",
@@ -250,22 +257,22 @@ let I = ["high", "medium", "low"],
                         " users",
                     ],
                 }),
-                S?.brief_summary != null &&
-                    (0, i.jsx)(a.Text, {
+                j?.brief_summary != null &&
+                    (0, i.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-default",
-                        className: f.g5,
-                        children: S.brief_summary,
+                        className: T.g5,
+                        children: j.brief_summary,
                     }),
-                null != S &&
-                    S.key_points.length > 0 &&
+                null != j &&
+                    j.key_points.length > 0 &&
                     (0, i.jsx)("ul", {
-                        className: f.JP,
-                        children: S.key_points.map((e, t) =>
+                        className: T.JP,
+                        children: j.key_points.map((e, t) =>
                             (0, i.jsx)(
                                 "li",
                                 {
-                                    children: (0, i.jsx)(a.Text, {
+                                    children: (0, i.jsx)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
                                         children: e,
@@ -275,39 +282,39 @@ let I = ["high", "medium", "low"],
                             ),
                         ),
                     }),
-                (0, i.jsxs)(a.Text, {
+                (0, i.jsxs)(a.E, {
                     variant: "text-xs/normal",
                     color: "text-default",
-                    className: f.RE,
+                    className: T.RE,
                     children: [
                         "Keywords: ",
                         (0, i.jsx)("span", {
-                            className: f.Br,
+                            className: T.Br,
                             children: t.keywords.length > 0 ? t.keywords.join(" \xb7 ") : "Not available.",
                         }),
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: f.UO,
+                    className: T.UO,
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(a.E, {
                             variant: "text-xs/semibold",
                             color: "text-default",
-                            className: f.a9,
+                            className: T.a9,
                             children: "Quality Scores",
                         }),
                         (0, i.jsxs)("div", {
-                            className: f.so,
+                            className: T.so,
                             children: [
                                 (0, i.jsxs)("div", {
-                                    className: f.a7,
+                                    className: T.a7,
                                     children: [
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: t.substance?.score?.toFixed(2) ?? "—",
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-xs/normal",
                                             color: "text-default",
                                             children: "Substance",
@@ -315,14 +322,14 @@ let I = ["high", "medium", "low"],
                                     ],
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: f.a7,
+                                    className: T.a7,
                                     children: [
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: t.engagement?.score?.toFixed(2) ?? "—",
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-xs/normal",
                                             color: "text-default",
                                             children: "Engagement",
@@ -330,14 +337,14 @@ let I = ["high", "medium", "low"],
                                     ],
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: f.a7,
+                                    className: T.a7,
                                     children: [
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: t.dynamics?.score?.toFixed(2) ?? "—",
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(a.E, {
                                             variant: "text-xs/normal",
                                             color: "text-default",
                                             children: "Dynamics",
@@ -348,63 +355,63 @@ let I = ["high", "medium", "low"],
                         }),
                     ],
                 }),
-                (0, i.jsx)(C, { moderation: t.moderation }),
+                (0, i.jsx)(L, { moderation: t.moderation }),
             ],
         });
     });
-function T(e) {
+function G(e) {
     let { channel: t } = e,
-        n = (0, s.bG)([m.A], () => m.A.getChannelConversations(t.id), [t.id], E),
-        o = (0, s.bG)([m.A], () => m.A.getVisibleConversationIds(t.id), [t.id], x),
-        d = (0, s.bG)([m.A], () => m.A.hasMoreConversations(t.id, "before"), [t.id]),
-        u = (0, s.bG)([m.A], () => m.A.hasMoreConversations(t.id, "after"), [t.id]),
-        h = (0, s.bG)([m.A], () => m.A.isPendingFetch(t.id), [t.id]),
-        p = (0, s.bG)([A.A], () => A.A.isHighlightingEnabled(), []),
-        I = (0, s.bG)([m.A], () => m.A.getScrollToConversation(t.id), [t.id]),
-        C = l.useCallback(
+        n = (0, s.bG)([N.A], () => N.A.getChannelConversations(t.id), [t.id], y),
+        d = (0, s.bG)([N.A], () => N.A.getVisibleConversationIds(t.id), [t.id], R),
+        c = (0, s.bG)([N.A], () => N.A.hasMoreConversations(t.id, "before"), [t.id]),
+        u = (0, s.bG)([N.A], () => N.A.hasMoreConversations(t.id, "after"), [t.id]),
+        h = (0, s.bG)([N.A], () => N.A.isPendingFetch(t.id), [t.id]),
+        p = (0, s.bG)([C.A], () => C.A.isHighlightingEnabled(), []),
+        f = (0, s.bG)([N.A], () => N.A.getScrollToConversation(t.id), [t.id]),
+        x = l.useCallback(
             (e) => {
-                (0, _.UA)(t.id, e);
+                (0, b.UA)(t.id, e);
             },
             [t.id],
         ),
-        T = l.useCallback(() => {
-            (0, _.UA)(null, null);
+        I = l.useCallback(() => {
+            (0, b.UA)(null, null);
         }, []),
         S = l.useCallback((e) => {
-            (0, _.xI)(e.channel_id, e.id), (0, c.pX)(g.BVt.CHANNEL(e.guild_id, e.channel_id, e.start_message_id));
+            (0, b.xI)(e.channel_id, e.id), (0, E.pX)(v.BVt.CHANNEL(e.guild_id, e.channel_id, e.start_message_id));
         }, []);
     return (0, i.jsxs)("aside", {
         "aria-label": "Conversations",
-        className: f.zr,
+        className: T.zr,
         children: [
-            (0, i.jsx)(r.Y9, {
-                icon: a.oyn,
+            (0, i.jsx)(g.Y9, {
+                icon: A.o,
                 title: "Conversations",
                 children: (0, i.jsx)("div", {
-                    className: f.y6,
-                    children: (0, i.jsx)(a.K0, {
-                        icon: p ? a.bMW : a.G3N,
+                    className: T.y6,
+                    children: (0, i.jsx)(o.K, {
+                        icon: p ? _.b : m.G,
                         "aria-label": p ? "Hide highlights" : "Show highlights",
                         variant: "secondary",
                         size: "sm",
-                        onClick: _.Eg,
+                        onClick: b.Eg,
                     }),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: f.Qs,
+                className: T.Qs,
                 children: [
-                    d &&
+                    c &&
                         (0, i.jsx)("div", {
-                            className: f.f,
-                            children: (0, i.jsx)(a.DUT, {
-                                className: f.Qf,
+                            className: T.f,
+                            children: (0, i.jsx)(r.D, {
+                                className: T.Qf,
                                 onClick: function () {
                                     if (0 === n.length || h) return;
                                     let e = n[0].conversation;
-                                    (0, _.WF)({ channelId: t.id, before: e.start_message_id });
+                                    (0, b.WF)({ channelId: t.id, before: e.start_message_id });
                                 },
-                                children: (0, i.jsx)(a.Text, {
+                                children: (0, i.jsx)(a.E, {
                                     variant: "text-sm/medium",
                                     color: "text-link",
                                     children: h ? "Loading..." : "Load previous conversations",
@@ -415,36 +422,36 @@ function T(e) {
                         ? n.map((e) => {
                               let { conversation: t, color: n } = e;
                               return (0, i.jsx)(
-                                  N,
+                                  O,
                                   {
                                       conversation: t,
                                       color: n,
-                                      isInViewport: o.has(t.id),
-                                      scrollTarget: I?.conversationId === t.id ? I.seq : null,
+                                      isInViewport: d.has(t.id),
+                                      scrollTarget: f?.conversationId === t.id ? f.seq : null,
                                       onJump: S,
-                                      onHoverStart: C,
-                                      onHoverEnd: T,
+                                      onHoverStart: x,
+                                      onHoverEnd: I,
                                   },
                                   t.id,
                               );
                           })
-                        : (0, i.jsx)(a.Text, {
+                        : (0, i.jsx)(a.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              className: f.BI,
+                              className: T.BI,
                               children: "No conversations available.",
                           }),
                     u &&
                         (0, i.jsx)("div", {
-                            className: f.f,
-                            children: (0, i.jsx)(a.DUT, {
-                                className: f.Qf,
+                            className: T.f,
+                            children: (0, i.jsx)(r.D, {
+                                className: T.Qf,
                                 onClick: function () {
                                     if (0 === n.length || h) return;
                                     let e = n[n.length - 1].conversation;
-                                    (0, _.WF)({ channelId: t.id, after: e.end_message_id });
+                                    (0, b.WF)({ channelId: t.id, after: e.end_message_id });
                                 },
-                                children: (0, i.jsx)(a.Text, {
+                                children: (0, i.jsx)(a.E, {
                                     variant: "text-sm/medium",
                                     color: "text-link",
                                     children: h ? "Loading..." : "Load newer conversations",

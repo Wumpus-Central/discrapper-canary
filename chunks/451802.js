@@ -1,4 +1,4 @@
-n.d(t, { A: () => f, E: () => h });
+n.d(t, { A: () => S, E: () => x });
 var i,
     s = n(627968),
     l = n(64700),
@@ -6,17 +6,18 @@ var i,
     r = n.n(a),
     o = n(507392),
     d = n.n(o),
-    c = n(735438),
-    u = n.n(c),
-    m = n(397927),
-    g = n(235986),
-    _ = n(350535),
-    x = n(985018),
-    A = n(945523),
-    h = (((i = {}).DEFAULT = "DEFAULT"), (i.RECORDING = "RECORDING"), i);
-let p = { DEFAULT: A.__invalid_default, RECORDING: A.oz };
+    u = n(735438),
+    c = n.n(u),
+    g = n(187322),
+    m = n(821609),
+    _ = n(235986),
+    A = n(350535),
+    h = n(985018),
+    p = n(598723),
+    x = (((i = {}).DEFAULT = "DEFAULT"), (i.RECORDING = "RECORDING"), i);
+let E = { DEFAULT: p.__invalid_default, RECORDING: p.oz };
 class T extends l.PureComponent {
-    _inputId = u().uniqueId("key-recorder-");
+    _inputId = c().uniqueId("key-recorder-");
     _unregisterNativeRecorder = null;
     _mousedownMode = null;
     _inputRef = l.createRef();
@@ -56,30 +57,30 @@ class T extends l.PureComponent {
     render() {
         let e,
             { mode: t, value: n, disabled: i } = this.props,
-            l = (0, _.dI)(n, !0);
+            l = (0, A.dI)(n, !0);
         return (
             (e =
                 "RECORDING" === t
-                    ? x.intl.string(x.t.bmOri0)
+                    ? h.intl.string(h.t.bmOri0)
                     : 0 === n.length
-                      ? x.intl.string(x.t.co3wt9)
-                      : x.intl.string(x.t.idFMvH)),
-            (0, s.jsx)(m.vN3, {
+                      ? h.intl.string(h.t.co3wt9)
+                      : h.intl.string(h.t.idFMvH)),
+            (0, s.jsx)(g.vN, {
                 focusTarget: this._inputRef,
                 ringTarget: this._containerRef,
                 children: (0, s.jsx)("div", {
                     onClick: this.handleClick,
                     onMouseDown: this.handleMouseDown,
                     ref: this._containerRef,
-                    className: r()(A.Qm, p[t], { [A.Qz]: i }),
-                    children: (0, s.jsxs)(g.A, {
-                        className: A.Pp,
+                    className: r()(p.Qm, E[t], { [p.Qz]: i }),
+                    children: (0, s.jsxs)(_.A, {
+                        className: p.Pp,
                         children: [
-                            (0, s.jsx)(g.A.Child, {
-                                className: A.bZ,
+                            (0, s.jsx)(_.A.Child, {
+                                className: p.bZ,
                                 children: (0, s.jsx)("input", {
                                     id: this._inputId,
-                                    placeholder: x.intl.string(x.t.nWRdnl),
+                                    placeholder: h.intl.string(h.t.nWRdnl),
                                     type: "text",
                                     ref: this.setInputRef,
                                     readOnly: !0,
@@ -88,8 +89,8 @@ class T extends l.PureComponent {
                                 }),
                             }),
                             (0, s.jsx)("div", {
-                                className: A.UD,
-                                children: (0, s.jsx)(m.Button, {
+                                className: p.UD,
+                                children: (0, s.jsx)(m.$, {
                                     size: "sm",
                                     variant: "RECORDING" === this.props.mode ? "critical-secondary" : "secondary",
                                     text: e,
@@ -106,4 +107,4 @@ class T extends l.PureComponent {
         );
     }
 }
-let f = T;
+let S = T;

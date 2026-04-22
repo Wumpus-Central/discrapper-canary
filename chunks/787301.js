@@ -1,91 +1,78 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => p });
 var r = n(311907),
     i = n(506774),
-    a = n(73153),
-    s = n(287809);
-let o = "AgeVerificationStore",
-    l = 864e5,
-    u = null,
-    c = !1,
-    d = "unchecked",
-    _ = null;
+    s = n(73153),
+    a = n(287809);
+let o = null,
+    l = !1,
+    u = "unchecked",
+    d = null;
+function c() {
+    let e = a.default.getCurrentUser()?.id;
+    return null == e ? null : `AgeVerificationStore_${e}`;
+}
+function _() {
+    (u = "unchecked"), (d = null);
+}
 function f() {
-    let e = s.default.getCurrentUser()?.id;
-    return null == e ? null : `${o}_${e}`;
-}
-function p() {
-    (d = "unchecked"), (_ = null);
-}
-function h() {
-    let e = f();
-    null != e && i.w.set(e, { reactiveCheckStatus: d, reactiveCheckMissAt: _ });
-}
-function m(e, t) {
-    return "miss" === e && null != t && Date.now() - t >= l;
-}
-function g() {
-    let e = f();
-    if (null == e) return void p();
-    let t = i.w.get(e);
-    if (null == t || "object" != typeof t) return void p();
-    let n = t,
-        r = n.reactiveCheckStatus ?? "unchecked",
-        a = n.reactiveCheckMissAt ?? null;
-    m(r, a) ? p() : ((d = r), (_ = a));
+    let e = c();
+    null != e && i.w.set(e, { reactiveCheckStatus: u, reactiveCheckMissAt: d });
 }
 function E() {
-    c = !0;
+    return "miss" === u && null != d && Date.now() - d < 864e5;
 }
-function A(e) {
-    let { methods: t } = e;
-    (u = t), (c = !1);
-}
-function I() {
-    c = !1;
-}
-function T() {
-    g();
-}
-function y(e) {
-    let { status: t } = e;
-    (d = t), (_ = "miss" === t ? Date.now() : null), h();
-}
-function S() {
-    (d = "suppress"), (_ = null), h();
-}
-function v() {
-    return "miss" === d && null != _ && Date.now() - _ < l;
-}
-class C extends r.Ay.Store {
+class h extends r.Ay.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
     static displayName = "AgeVerificationStore";
     get loading() {
-        return c;
+        return l;
     }
     get methods() {
-        return u;
+        return o;
     }
     getReactiveCheckStatus() {
-        return d;
+        return u;
     }
     getReactiveCheckMiss() {
-        return v();
+        return E();
     }
     getReactiveCheckPassed() {
-        return "passed" === d;
+        return "passed" === u;
     }
     shouldCallReactiveCheck() {
-        return !("passed" === d || "suppress" === d || v());
+        return !("passed" === u || "suppress" === u || E());
     }
 }
-let b = new C(a.h, {
-    AGE_VERIFICATION_METHODS_LOAD_START: E,
-    AGE_VERIFICATION_METHODS_LOAD_SUCCESS: A,
-    AGE_VERIFICATION_METHODS_LOAD_FAILURE: I,
-    CONNECTION_OPEN: T,
-    AGE_VERIFICATION_CHECK_RESULT_SET: y,
-    AGE_VERIFICATION_RESET: S,
+let p = new h(s.h, {
+    AGE_VERIFICATION_METHODS_LOAD_START: function () {
+        l = !0;
+    },
+    AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
+        let { methods: t } = e;
+        (o = t), (l = !1);
+    },
+    AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
+        l = !1;
+    },
+    CONNECTION_OPEN: function () {
+        !(function () {
+            let e = c();
+            if (null == e) return _();
+            let t = i.w.get(e);
+            if (null == t || "object" != typeof t) return _();
+            let n = t.reactiveCheckStatus ?? "unchecked",
+                r = t.reactiveCheckMissAt ?? null;
+            "miss" === n && null != r && Date.now() - r >= 864e5 ? _() : ((u = n), (d = r));
+        })();
+    },
+    AGE_VERIFICATION_CHECK_RESULT_SET: function (e) {
+        let { status: t } = e;
+        (u = t), (d = "miss" === t ? Date.now() : null), f();
+    },
+    AGE_VERIFICATION_RESET: function () {
+        (u = "suppress"), (d = null), f();
+    },
 });

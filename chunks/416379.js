@@ -1,173 +1,172 @@
 "use strict";
-n.d(t, { A: () => R });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => N });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(311907),
-    l = n(990078),
-    u = n(397927),
-    c = n(58149),
-    d = n(73392),
-    _ = n(763754),
-    f = n(967144),
-    p = n(118517),
-    h = n(976860),
-    m = n(406704),
-    E = n(747926),
-    g = n(320501),
-    A = n(927057),
-    I = n(652215),
-    T = n(985018),
+    r = n.n(s),
+    a = n(311907),
+    o = n(990078),
+    c = n(939249),
+    u = n(834730),
+    d = n(463930),
+    h = n(935063),
+    m = n(58149),
+    p = n(73392),
+    f = n(763754),
+    g = n(967144),
+    _ = n(118517),
+    x = n(976860),
+    A = n(406704),
+    C = n(747926),
+    E = n(320501),
+    I = n(927057),
+    v = n(652215),
+    y = n(985018),
     S = n(1468);
-let y = 2,
-    v = 10;
-function N(e, t) {
-    let n = e.id,
-        r = t.id;
-    return (0, o.bG)([g.A], () => {
-        let e = r;
-        for (let t = 0; t < v; t++) {
-            let r = g.A.getMessage(n, e);
-            if (r?.type !== I.lAJ.REPLY || null == r.messageReference) return t;
-            e = r.messageReference.message_id;
-        }
-        return v;
-    }, [n, r]);
-}
-function C(e) {
-    let { channel: t, message: n, replyChainLength: s } = e;
-    function a() {
-        (0, p.Jx)(t.id), (0, E.Tv)(t, n, "Reply Chain Nudge");
-    }
-    let o = i.useRef(s);
+function b(e) {
+    let { channel: t, message: n, replyChainLength: s } = e,
+        r = l.useRef(s);
     return (
-        i.useEffect(() => {
-            o.current = s;
+        l.useEffect(() => {
+            r.current = s;
         }),
-        i.useEffect(() => {
-            (0, c.zV)(I.HAw.THREAD_NUDGE_SHOWN, {
-                type: `Reply Chain (${y + 1})`,
-                reply_chain_length: o.current + 1,
+        l.useEffect(() => {
+            (0, m.zV)(v.HAw.THREAD_NUDGE_SHOWN, {
+                type: "Reply Chain (3)",
+                reply_chain_length: r.current + 1,
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t]),
-        (0, r.jsxs)(u.DUT, {
-            onClick: a,
+        (0, i.jsxs)(c.D, {
+            onClick: function () {
+                (0, _.Jx)(t.id), (0, C.Tv)(t, n, "Reply Chain Nudge");
+            },
             className: S._r,
             focusProps: { offset: { right: -4, left: -4 } },
             children: [
-                (0, r.jsx)(u.Text, {
+                (0, i.jsx)(u.E, {
                     color: "text-default",
                     className: S.Qq,
                     variant: "text-sm/normal",
-                    children: T.intl.format(T.t.B3V0FM, { count: Math.min(v, s + 1) }),
+                    children: y.intl.format(y.t.B3V0FM, { count: Math.min(10, s + 1) }),
                 }),
-                (0, r.jsx)(u.Text, {
+                (0, i.jsx)(u.E, {
                     color: "text-link",
                     className: S.NG,
                     variant: "text-sm/semibold",
-                    children: T.intl.string(T.t.rBIGBL),
+                    children: y.intl.string(y.t.rBIGBL),
                 }),
             ],
         })
     );
 }
-function R(e) {
-    let { reply: t, chatInputType: n } = e,
-        { channel: i, message: s, shouldMention: o, showMentionToggle: c } = t,
+function N(e) {
+    let t,
+        n,
+        { reply: l, chatInputType: s } = e,
+        { channel: m, message: C, shouldMention: N, showMentionToggle: T } = l,
         {
-            guildId: E,
-            nick: g,
-            colorString: v,
-            colorStrings: R,
-            colorRoleName: O,
-            authorId: b,
-            displayNameStyles: D,
-        } = (0, _.Ay)(s),
-        L = (0, f.gn)(E, b, R),
-        w = (0, d.a)({ displayNameStyles: D }),
-        M = N(i, s),
-        P = (0, m.n)(i, s),
-        x = n.showThreadPromptOnReply && M >= y && P,
-        k = () => (0, h.pX)(I.BVt.CHANNEL(i.getGuildId(), i.id, s.id));
-    function U(e) {
-        e.stopPropagation(), (0, p.vz)(i.id, !o);
-    }
-    function G(e) {
-        e.stopPropagation(), (0, p.Jx)(i.id);
-    }
-    return (0, r.jsx)("div", {
+            guildId: j,
+            nick: R,
+            colorString: w,
+            colorStrings: L,
+            colorRoleName: M,
+            authorId: k,
+            displayNameStyles: O,
+        } = (0, f.Ay)(C),
+        P = (0, g.gn)(j, k, L),
+        D = (0, p.a)({ displayNameStyles: O }),
+        U =
+            ((t = m.id),
+            (n = C.id),
+            (0, a.bG)([E.A], () => {
+                let e = n;
+                for (let n = 0; n < 10; n++) {
+                    let i = E.A.getMessage(t, e);
+                    if (i?.type !== v.lAJ.REPLY || null == i.messageReference) return n;
+                    e = i.messageReference.message_id;
+                }
+                return 10;
+            }, [t, n])),
+        V = (0, A.n)(m, C),
+        G = s.showThreadPromptOnReply && U >= 2 && V;
+    return (0, i.jsx)("div", {
         className: S.e1,
-        children: (0, r.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: S.kL,
             children: [
-                (0, r.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: S.eU,
                     children: [
-                        (0, r.jsx)(u.DUT, {
-                            onClick: k,
+                        (0, i.jsx)(c.D, {
+                            onClick: () => (0, x.pX)(v.BVt.CHANNEL(m.getGuildId(), m.id, C.id)),
                             focusProps: { offset: { top: -8, right: -4, bottom: -8, left: -4 } },
-                            children: (0, r.jsx)(u.Text, {
+                            children: (0, i.jsx)(u.E, {
                                 color: "text-default",
-                                className: a()(S.Qq, S.Fn),
+                                className: r()(S.Qq, S.Fn),
                                 variant: "text-sm/normal",
-                                children: T.intl.format(T.t["8E4GxS"], {
+                                children: y.intl.format(y.t["8E4GxS"], {
                                     userHook: (e, t) =>
-                                        (0, r.jsx)(
-                                            u.gyj,
+                                        (0, i.jsx)(
+                                            d.g,
                                             {
                                                 className: S.UU,
-                                                name: g,
-                                                colorString: v,
-                                                colorStrings: L,
-                                                roleName: O,
-                                                displayNameStylesFont: w,
+                                                name: R,
+                                                colorString: w,
+                                                colorStrings: P,
+                                                roleName: M,
+                                                displayNameStylesFont: D,
                                             },
                                             t,
                                         ),
                                 }),
                             }),
                         }),
-                        (0, r.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             className: S.o1,
                             children: [
-                                c &&
-                                    (0, r.jsxs)(r.Fragment, {
+                                T &&
+                                    (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, r.jsx)(l.m, {
+                                            (0, i.jsx)(o.m, {
                                                 asContainer: !0,
-                                                text: o ? T.intl.string(T.t.DH2o6R) : T.intl.string(T.t.utGGIY),
-                                                children: (0, r.jsx)(u.DUT, {
+                                                text: N ? y.intl.string(y.t.DH2o6R) : y.intl.string(y.t.utGGIY),
+                                                children: (0, i.jsx)(c.D, {
                                                     role: "switch",
-                                                    "aria-checked": o,
-                                                    onClick: U,
-                                                    children: (0, r.jsxs)(u.Text, {
+                                                    "aria-checked": N,
+                                                    onClick: function (e) {
+                                                        e.stopPropagation(), (0, _.vz)(m.id, !N);
+                                                    },
+                                                    children: (0, i.jsxs)(u.E, {
                                                         variant: "text-sm/bold",
-                                                        color: o ? "text-link" : "text-muted",
+                                                        color: N ? "text-link" : "text-muted",
                                                         className: S.Z4,
                                                         children: [
-                                                            (0, r.jsx)(u.XxR, {
+                                                            (0, i.jsx)(h.X, {
                                                                 size: "md",
                                                                 color: "currentColor",
-                                                                "aria-label": T.intl.string(T.t.P8tvKG),
+                                                                "aria-label": y.intl.string(y.t.P8tvKG),
                                                                 className: S.mM,
                                                             }),
-                                                            o ? T.intl.string(T.t.p9jC2r) : T.intl.string(T.t.U7f3bK),
+                                                            N ? y.intl.string(y.t.p9jC2r) : y.intl.string(y.t.U7f3bK),
                                                         ],
                                                     }),
                                                 }),
                                             }),
-                                            (0, r.jsx)("div", { className: S.me, "aria-hidden": !0 }),
+                                            (0, i.jsx)("div", { className: S.me, "aria-hidden": !0 }),
                                         ],
                                     }),
-                                (0, r.jsx)(A.x, { onClick: G }),
+                                (0, i.jsx)(I.x, {
+                                    onClick: function (e) {
+                                        e.stopPropagation(), (0, _.Jx)(m.id);
+                                    },
+                                }),
                             ],
                         }),
                     ],
                 }),
-                x && (0, r.jsx)(C, { channel: i, message: s, replyChainLength: M }),
+                G && (0, i.jsx)(b, { channel: m, message: C, replyChainLength: U }),
             ],
         }),
     });

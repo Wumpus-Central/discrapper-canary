@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
+var l = n(503698),
+    s = n.n(l),
+    r = n(633018),
+    a = n(406810),
     o = n(73510),
-    l = n(703263);
-let u = (e) => {
-    switch (e.id) {
-        case o.Ik.BUILT_IN:
-            return a.kC9;
-        case o.Ik.FRECENCY:
-            return a.O4;
-        default:
-            return;
-    }
-};
-function c(e) {
-    let { section: t, className: n, width: i, height: a, padding: o, isSelected: c, selectable: d = !1, ..._ } = e,
-        f = u(t);
-    return (0, r.jsx)("div", {
-        className: s()(l.iE, n, { [l.rb]: d, [l.wH]: d && c }),
-        style: { width: i, height: a, padding: o ?? 0 },
+    c = n(824527);
+function u(e) {
+    let { section: t, className: n, width: l, height: u, padding: d, isSelected: h, selectable: m = !1, ...p } = e,
+        f = ((e) => {
+            switch (e.id) {
+                case o.Ik.BUILT_IN:
+                    return r.k;
+                case o.Ik.FRECENCY:
+                    return a.O;
+                default:
+                    return;
+            }
+        })(t);
+    return (0, i.jsx)("div", {
+        className: s()(c.iE, n, { [c.rb]: m, [c.wH]: m && h }),
+        style: { width: l, height: u, padding: d ?? 0 },
         children:
             null != f
-                ? (0, r.jsx)(f, { className: l.Kk, color: "currentColor", size: "custom", width: i, height: a, ..._ })
+                ? (0, i.jsx)(f, { className: c.Kk, color: "currentColor", size: "custom", width: l, height: u, ...p })
                 : null,
     });
 }

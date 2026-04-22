@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     lY: "animation__2d5dc",
     Sl: "image__2d5dc",

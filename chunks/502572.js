@@ -1,29 +1,33 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(64700),
-    a = n(781696);
-function s(e) {
-    let { mouseLeaveDelay: t = 100, ...n } = e,
-        { children: s, className: o, ...l } = n,
-        u = i.useRef(0),
-        [c, d] = i.useState(!1);
-    function _() {
-        clearTimeout(u.current), d(!0);
-    }
-    function f() {
-        clearTimeout(u.current), (u.current = setTimeout(() => d(!1), t));
-    }
+a.d(t, { A: () => i });
+var r = a(627968),
+    l = a(64700),
+    n = a(781696);
+function i(e) {
+    let { mouseLeaveDelay: t = 100, ...a } = e,
+        { children: i, className: s, ...o } = a,
+        d = l.useRef(0),
+        [c, u] = l.useState(!1);
     return (0, r.jsx)("div", {
-        className: o,
-        onMouseEnter: 0 !== t ? _ : () => {},
-        onMouseLeave: 0 !== t ? f : () => {},
-        children: (0, r.jsx)(a.ST, {
+        className: s,
+        onMouseEnter:
+            0 !== t
+                ? function () {
+                      clearTimeout(d.current), u(!0);
+                  }
+                : () => {},
+        onMouseLeave:
+            0 !== t
+                ? function () {
+                      clearTimeout(d.current), (d.current = setTimeout(() => u(!1), t));
+                  }
+                : () => {},
+        children: (0, r.jsx)(n.ST, {
             "data-migration-pending": !0,
             forceOpen: c,
             disableTooltipPointerEvents: !1,
-            ...l,
-            children: s,
+            ...o,
+            children: i,
         }),
     });
 }

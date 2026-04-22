@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => l });
 var i = n(73153);
-let s = {
+let l = {
     setPendingInviteRules: function (e, t, n) {
         i.h.dispatch({
             type: "GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES",

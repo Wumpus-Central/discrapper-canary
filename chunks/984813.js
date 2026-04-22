@@ -1,18 +1,17 @@
 "use strict";
-n.d(t, { PP: () => a, mz: () => s, z0: () => o });
-var r = n(311907),
-    i = n(617617);
+n.d(t, { PP: () => a, mz: () => o, z0: () => l });
+var r,
+    i = n(311907),
+    s = n(617617);
 n(980504);
-var a = (function (e) {
-    return (e[(e.GLOBAL = 0)] = "GLOBAL"), (e[(e.GUILD = 1)] = "GUILD"), e;
-})({});
-function s(e) {
-    return (0, r.bG)([i.A], () => l(e, i.A.settings.guilds?.guilds ?? {}));
-}
+var a = (((r = {})[(r.GLOBAL = 0)] = "GLOBAL"), (r[(r.GUILD = 1)] = "GUILD"), r);
 function o(e) {
-    return l(e, i.A.settings.guilds?.guilds ?? {});
+    return (0, i.bG)([s.A], () => u(e, s.A.settings.guilds?.guilds ?? {}));
 }
-function l(e, t) {
+function l(e) {
+    return u(e, s.A.settings.guilds?.guilds ?? {});
+}
+function u(e, t) {
     let n = t[e]?.joinSound,
         r = t["0"]?.joinSound,
         i = n ?? r;

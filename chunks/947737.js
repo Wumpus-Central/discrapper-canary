@@ -1,53 +1,53 @@
 n.d(t, { A: () => o });
-var l = n(627968),
-    s = n(64700),
-    r = n(397927),
-    i = n(398450),
-    a = n(985018);
+var a = n(627968),
+    r = n(64700),
+    i = n(292666),
+    s = n(398450),
+    l = n(985018);
 function o(e) {
     let { mfaChallenge: t, finish: n, setSlide: o, onClose: d, isSlideReady: c, headerAlignStart: u } = e,
-        [h, g] = s.useState(!1),
-        [m, f] = s.useState(null),
-        [x, S] = s.useState(""),
-        p = s.useRef(null);
+        [h, g] = r.useState(!1),
+        [m, p] = r.useState(null),
+        [f, x] = r.useState(""),
+        S = r.useRef(null);
     return (
-        s.useEffect(() => {
-            c && p.current?.focus();
+        r.useEffect(() => {
+            c && S.current?.focus();
         }, [c]),
-        (0, l.jsxs)("form", {
+        (0, a.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     g(!0),
-                    n({ mfaType: "password", data: x })
+                    n({ mfaType: "password", data: f })
                         .catch((e) => {
-                            f(e.body?.message ?? e.message);
+                            p(e.body?.message ?? e.message);
                         })
                         .finally(() => {
                             g(!1);
                         });
             },
             children: [
-                (0, l.jsx)(i.A.SlideHeader, { onClose: d, headerAlignStart: u }),
-                (0, l.jsxs)(i.A.SlideContent, {
+                (0, a.jsx)(s.A.SlideHeader, { onClose: d, headerAlignStart: u }),
+                (0, a.jsxs)(s.A.SlideContent, {
                     children: [
-                        (0, l.jsx)(r.ksK, {
-                            label: a.intl.string(a.t["CIGa+7"]),
-                            inputRef: p,
-                            onChange: S,
-                            value: x,
+                        (0, a.jsx)(i.k, {
+                            label: l.intl.string(l.t["CIGa+7"]),
+                            inputRef: S,
+                            onChange: x,
+                            value: f,
                             type: "password",
                             autoComplete: "password",
                             spellCheck: "false",
                             disabled: h,
                         }),
-                        (0, l.jsx)(i.A.SlideError, { error: m }),
+                        (0, a.jsx)(s.A.SlideError, { error: m }),
                     ],
                 }),
-                (0, l.jsx)(i.A.SlideFooter, {
+                (0, a.jsx)(s.A.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: o,
                     showConfirm: !0,
-                    disabled: 0 === x.length,
+                    disabled: 0 === f.length,
                     submitting: h,
                 }),
             ],

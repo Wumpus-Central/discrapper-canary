@@ -1,19 +1,17 @@
 "use strict";
 let r;
-n.d(t, { SB: () => p, Zk: () => d, iD: () => f, oA: () => _ });
+n.d(t, { SB: () => _, Zk: () => u, iD: () => c, oA: () => d });
 var i = n(562465),
-    a = n(961350),
-    s = n(353835),
+    s = n(961350),
+    a = n(353835),
     o = n(380610);
-let l = "/__development/build_overrides",
-    u = "/__development/create_build_override_link",
-    c = "/__development/link";
-async function d(e) {
+let l = "/__development/build_overrides";
+async function u(e) {
     try {
         let t = await i.Bo.put({
             url: (0, o.i_)(l),
             body: { overrides: e, version: o.hl },
-            headers: { Authorization: a.default.getToken() ?? "" },
+            headers: { Authorization: s.default.getToken() ?? "" },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -22,11 +20,11 @@ async function d(e) {
         return e;
     }
 }
-async function _(e) {
+async function d(e) {
     try {
         let t = await i.Bo.put({
-            url: (0, o.i_)(c),
-            body: { payload: e, token: a.default.getToken(), version: o.hl },
+            url: (0, o.i_)("/__development/link"),
+            body: { payload: e, token: s.default.getToken(), version: o.hl },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -35,15 +33,15 @@ async function _(e) {
         return e;
     }
 }
-async function f() {
+async function c() {
     let e = await i.Bo.del({ url: (0, o.i_)(l), oldFormErrors: !0, rejectWithError: !1 });
     return await r(e), e;
 }
-function p(e) {
+function _(e) {
     return i.Bo.post({
-        url: (0, o.i_)(u),
+        url: (0, o.i_)("/__development/create_build_override_link"),
         body: e,
-        headers: { Authorization: a.default.getToken() ?? "" },
+        headers: { Authorization: s.default.getToken() ?? "" },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then(
@@ -56,6 +54,6 @@ function p(e) {
 }
 r = async (e) => {
     try {
-        await s.A.flushCookies();
+        await a.A.flushCookies();
     } catch (e) {}
 };

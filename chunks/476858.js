@@ -1,17 +1,12 @@
-"use strict";
-function r(e, t, n = "\\s{0,5},?\\s{0,5}") {
-    let i = t.replace(/\((?!\?)/g, "(?:");
-    return `${e}${i}(?:${n}${i}){0,10}`;
+function n(e, t, r = "\\s{0,5},?\\s{0,5}") {
+    let s = t.replace(/\((?!\?)/g, "(?:");
+    return `${e}${s}(?:${r}${s}){0,10}`;
 }
-function i(e) {
-    let t;
-    return e instanceof Array ? [...e] : e instanceof Map ? Array.from(e.keys()) : Object.keys(e);
-}
-function a(e) {
-    let t = i(e)
+function s(e) {
+    let t = (e instanceof Array ? [...e] : e instanceof Map ? Array.from(e.keys()) : Object.keys(e))
         .sort((e, t) => t.length - e.length)
         .join("|")
         .replace(/\./g, "\\.");
     return `(?:${t})`;
 }
-n.d(t, { mb: () => r, uJ: () => a });
+r.d(t, { mb: () => n, uJ: () => s });

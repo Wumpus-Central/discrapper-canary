@@ -1,96 +1,93 @@
 "use strict";
-n.d(t, { A: () => g });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => f });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(397927),
-    u = n(850992),
-    c = n(802019),
+    r = n.n(s),
+    a = n(990078),
+    o = n(939249),
+    c = n(850992),
+    u = n(802019),
     d = n(392054),
-    _ = n(664929),
-    f = n(581942);
-let p = [16, 8, 8, 8],
-    h = 32,
-    m = 4,
-    E = 8;
-function g(e) {
+    h = n(664929),
+    m = n(282214);
+let p = [16, 8, 8, 8];
+function f(e) {
     let {
             className: t,
             channel: n,
             sections: s,
-            activeCategoryIndex: g,
-            filteredSectionId: A,
-            onSectionClick: I,
-            applicationCommandListRef: T,
+            activeCategoryIndex: f,
+            filteredSectionId: g,
+            onSectionClick: _,
+            applicationCommandListRef: x,
         } = e,
-        S = i.useRef(null),
-        y = i.useCallback(
+        A = l.useRef(null),
+        C = l.useCallback(
             (e, t) => {
-                let n = 2 * m;
-                return s[t + 1]?.type === d.Hf.BUILT_IN && (n += E), h + n;
+                let n = 8;
+                return s[t + 1]?.type === d.Hf.BUILT_IN && (n += 8), 32 + n;
             },
             [s],
         ),
-        v = i.useCallback((e, t) => (t ? (s[e + 1]?.type === d.Hf.BUILT_IN ? 0 : 2 * m) : 0 === e ? 0 : 2 * m), [s]),
-        N = i.useCallback(
+        E = l.useCallback((e, t) => (t ? 8 * (s[e + 1]?.type !== d.Hf.BUILT_IN) : 8 * (0 !== e)), [s]),
+        I = l.useCallback(
             (e, t) => {
-                let i = s[t];
-                if (null == i) return;
-                let a = (0, _.Rg)(i),
-                    u = i.type === d.Hf.BUILT_IN ? m : 0,
-                    c = h - 2 * u,
-                    p = (0, r.jsx)(a, {
+                let l = s[t];
+                if (null == l) return;
+                let r = (0, h.Rg)(l),
+                    c = 4 * (l.type === d.Hf.BUILT_IN),
+                    u = 32 - 2 * c,
+                    p = (0, i.jsx)(r, {
                         channel: n,
-                        section: i,
-                        isSelected: null != A ? i.id === A : g === t,
-                        padding: u,
-                        width: c,
-                        height: c,
+                        section: l,
+                        isSelected: null != g ? l.id === g : f === t,
+                        padding: c,
+                        width: u,
+                        height: u,
                         selectable: !0,
                     }),
-                    E = i.type !== d.Hf.BUILT_IN && t < s.length - 1 && s[t + 1].type === d.Hf.BUILT_IN;
-                return (0, r.jsxs)(
+                    x = l.type !== d.Hf.BUILT_IN && t < s.length - 1 && s[t + 1].type === d.Hf.BUILT_IN;
+                return (0, i.jsxs)(
                     "div",
                     {
-                        className: f.uW,
+                        className: m.uW,
                         children: [
-                            (0, r.jsx)(o.m, {
-                                text: i.name,
+                            (0, i.jsx)(a.m, {
+                                text: l.name,
                                 position: "right",
                                 asContainer: !0,
-                                children: (0, r.jsx)(l.DUT, {
-                                    "aria-label": i.name,
+                                children: (0, i.jsx)(o.D, {
+                                    "aria-label": l.name,
                                     onClick: () => {
-                                        I(i);
+                                        _(l);
                                     },
                                     children: p,
                                 }),
                             }),
-                            E ? (0, r.jsx)("hr", { className: f.zQ }) : null,
+                            x ? (0, i.jsx)("hr", { className: m.zQ }) : null,
                         ],
                     },
-                    i.id,
+                    l.id,
                 );
             },
-            [g, n, I, s, A],
+            [f, n, _, s, g],
         );
     return 0 === s.length
         ? null
-        : (0, r.jsx)("div", {
-              className: a()(t, f.iE),
-              children: (0, r.jsx)(c.A, {
-                  categoryListRef: S,
-                  expressionsListRef: T,
-                  store: u.LS,
+        : (0, i.jsx)("div", {
+              className: r()(t, m.iE),
+              children: (0, i.jsx)(u.A, {
+                  categoryListRef: A,
+                  expressionsListRef: x,
+                  store: c.LS,
                   categories: s,
-                  className: f.p_,
-                  renderCategoryListItem: N,
+                  className: m.p_,
+                  renderCategoryListItem: I,
                   rowCount: s.length,
-                  categoryHeight: y,
+                  categoryHeight: C,
                   listPadding: p,
-                  getScrollOffsetForIndex: v,
+                  getScrollOffsetForIndex: E,
               }),
           });
 }

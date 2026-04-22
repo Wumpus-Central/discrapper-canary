@@ -1,77 +1,74 @@
-"use strict";
-n.d(t, { Wb: () => f, Xz: () => g, yz: () => A }), n(321073);
-var r = n(989349),
-    i = n.n(r),
+n.d(t, { Wb: () => m, Xz: () => g, yz: () => _ }), n(321073);
+var i = n(989349),
+    l = n.n(i),
     a = n(405269);
 let s = /^[0]+/,
-    o = /:00/,
-    l = /(AM|ΠΜ|सुबह)/i,
-    u = /(PM|ΜΜ|शाम)/i,
-    c = /\s+/,
-    d = (e) => e.replace(s, "").replace(o, "").replace(l, "").replace(c, ""),
-    _ = (e) => e.replace(s, "").replace(u, "").replace(c, ""),
-    f = (e, t) => {
+    r = /:00/,
+    o = /(AM|ΠΜ|सुबह)/i,
+    c = /(PM|ΜΜ|शाम)/i,
+    d = /\s+/,
+    u = (e) => e.replace(s, "").replace(r, "").replace(o, "").replace(d, ""),
+    h = (e) => e.replace(s, "").replace(c, "").replace(d, ""),
+    m = (e, t) => {
         let n = t.toUpperCase().trim();
         if (n.length > 0) {
-            let t = i()(`${e?.format("YYYY-MM-DD")} ${n}`, "YYYY-MM-DD LT");
-            if (d(t.format("LT")) === d(n)) return t;
+            let t = l()(`${e?.format("YYYY-MM-DD")} ${n}`, "YYYY-MM-DD LT");
+            if (u(t.format("LT")) === u(n)) return t;
         }
     },
-    p = i()("2021-04-12T00:00:00"),
-    h = 15,
-    m = "LT",
+    A = l()("2021-04-12T00:00:00"),
     g = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-    E = (e, t) => e.value.unix() - t.value.unix();
-class A {
+    p = (e, t) => e.value.unix() - t.value.unix();
+class _ {
     intervalInMinutes;
     labelFormat;
     options = [];
     _index = {};
-    constructor({ intervalInMinutes: e = h, labelFormat: t = m } = {}) {
+    constructor({ intervalInMinutes: e = 15, labelFormat: t = "LT" } = {}) {
         if (e <= 0) throw Error(`intervalInMinutes should be positive number, got ${e}`);
         (this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
     }
     lookupByValue(e) {
         if (null == e) return;
-        let t = g(p, e);
+        let t = g(A, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
-        return (0, a.i$)(e.locale(i().locale()), this.labelFormat);
+        return (0, a.i$)(e.locale(l().locale()), this.labelFormat);
     }
     _generateTimeOptions() {
         (this.options = []), (this._index = {});
-        let e = i()(p),
-            t = i()(e).add(1, "day"),
-            n = i()(e);
+        let e = l()(A),
+            t = l()(e).add(1, "day"),
+            n = l()(e);
         for (; n < t; ) {
             let e = this._createNewOption(n.clone());
             this.options.push(e), (this._index[e.value.unix()] = e.value), n.add(this.intervalInMinutes, "minutes");
         }
     }
     _createNewOption(e) {
-        let t = g(p, e),
+        let t = g(A, e),
             n = this._createLabel(t);
         return { id: t.toISOString(), label: n, value: t };
     }
     _addNewOption(e) {
-        let t = g(p, e),
+        let t = g(A, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(E),
+            this.options.sort(p),
             e
         );
     }
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = f(p, e);
+            let n = m(A, e);
             if (null != n) {
                 t.push(n.clone());
-                let r = n.add({ hours: 12 });
-                r.isBefore(p.clone().add({ hours: 24 })) && _(r.format("LT")) === _(e) && t.push(r);
+                let i = n.add({ hours: 12 });
+                i.isBefore(A.clone().add({ hours: 24 })) && h(i.format("LT")) === h(e) && t.push(i);
             }
         }
         return t;
@@ -85,7 +82,7 @@ class A {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(E),
+                e.sort(p),
                 e
             );
         }

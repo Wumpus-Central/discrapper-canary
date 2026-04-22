@@ -1,9 +1,11 @@
 "use strict";
-n.d(t, { F5: () => l, Se: () => o, W8: () => a, s4: () => r, wg: () => s, yK: () => i });
-var r = (function (e) {
-    return (e.NONE = "NONE"), (e.TEXT = "TEXT"), (e.VOICE = "VOICE"), e;
-})({});
-let i = {
+n.d(t, { F5: () => _, Se: () => c, W8: () => u, s4: () => o, wg: () => d, yK: () => l });
+var r,
+    i,
+    s,
+    a,
+    o = (((r = {}).NONE = "NONE"), (r.TEXT = "TEXT"), (r.VOICE = "VOICE"), r);
+let l = {
         SEARCH: "search",
         RECENT: "recent",
         INSTALLED: "installed",
@@ -13,25 +15,17 @@ let i = {
         NEW_TO_APPS: "new_to_apps",
         APPS_IN_THIS_SERVER: "apps_in_this_server",
     },
-    a = { HOME: "home", APP_DETAIL: "app_detail" };
-var s = (function (e) {
-        return (
-            (e.HOME_EMPTY = "home_empty"),
-            (e.SEARCH_EMPTY = "search_empty"),
-            (e.HOME_NO_PERMISSIONS = "home_no_permissions"),
-            (e.COMMAND_NO_PERMISSIONS = "command_no_permissions"),
-            (e.COMMAND_NOT_FOUND = "command_not_found"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (
-            (e[(e.DISMISSED = 0)] = "DISMISSED"),
-            (e[(e.COMMAND = 1)] = "COMMAND"),
-            (e[(e.ACTIVITY = 2)] = "ACTIVITY"),
-            e
-        );
-    })({}),
-    l = (function (e) {
-        return (e.OPEN_APP_DM = "open_app_dm"), (e.USE_APP_COMMAND = "use_app_command"), e;
-    })({});
+    u = { HOME: "home", APP_DETAIL: "app_detail" };
+var d =
+        (((i = {}).HOME_EMPTY = "home_empty"),
+        (i.SEARCH_EMPTY = "search_empty"),
+        (i.HOME_NO_PERMISSIONS = "home_no_permissions"),
+        (i.COMMAND_NO_PERMISSIONS = "command_no_permissions"),
+        (i.COMMAND_NOT_FOUND = "command_not_found"),
+        i),
+    c =
+        (((s = {})[(s.DISMISSED = 0)] = "DISMISSED"),
+        (s[(s.COMMAND = 1)] = "COMMAND"),
+        (s[(s.ACTIVITY = 2)] = "ACTIVITY"),
+        s),
+    _ = (((a = {}).OPEN_APP_DM = "open_app_dm"), (a.USE_APP_COMMAND = "use_app_command"), a);

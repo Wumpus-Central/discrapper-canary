@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__231eb",
     Ow: "refresh__231eb",

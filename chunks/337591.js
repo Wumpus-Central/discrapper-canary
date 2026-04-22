@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { m: () => r });
-var r = (function (e) {
-    return (e[(e.QUEUED = 0)] = "QUEUED"), (e[(e.CREATED = 1)] = "CREATED"), (e[(e.FAILED = 2)] = "FAILED"), e;
-})({});
+n.d(t, { m: () => i });
+var r,
+    i = (((r = {})[(r.QUEUED = 0)] = "QUEUED"), (r[(r.CREATED = 1)] = "CREATED"), (r[(r.FAILED = 2)] = "FAILED"), r);

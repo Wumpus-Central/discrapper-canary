@@ -1,26 +1,24 @@
 var r = n(292528),
-    i = n(461083),
-    a = 1,
-    s = 2;
-e.exports = function (e, t, n, o) {
-    var l = n.length,
-        c = l,
-        u = !o;
-    if (null == e) return !c;
-    for (e = Object(e); l--; ) {
-        var d = n[l];
-        if (u && d[2] ? d[1] !== e[d[0]] : !(d[0] in e)) return !1;
+    i = n(461083);
+e.exports = function (e, t, n, s) {
+    var a = n.length,
+        o = a,
+        l = !s;
+    if (null == e) return !o;
+    for (e = Object(e); a--; ) {
+        var u = n[a];
+        if (l && u[2] ? u[1] !== e[u[0]] : !(u[0] in e)) return !1;
     }
-    for (; ++l < c; ) {
-        var f = (d = n[l])[0],
-            p = e[f],
-            _ = d[1];
-        if (u && d[2]) {
-            if (void 0 === p && !(f in e)) return !1;
+    for (; ++a < o; ) {
+        var d = (u = n[a])[0],
+            c = e[d],
+            _ = u[1];
+        if (l && u[2]) {
+            if (void 0 === c && !(d in e)) return !1;
         } else {
-            var h = new r();
-            if (o) var m = o(p, _, f, e, t, h);
-            if (!(void 0 === m ? i(_, p, a | s, o, h) : m)) return !1;
+            var f = new r();
+            if (s) var E = s(c, _, d, e, t, f);
+            if (!(void 0 === E ? i(_, c, 3, s, f) : E)) return !1;
         }
     }
     return !0;

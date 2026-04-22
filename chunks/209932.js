@@ -1,48 +1,27 @@
 "use strict";
-n.d(t, { A: () => j }), n(321073);
+n.d(t, { A: () => v }), n(321073);
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(253932),
     l = n(617617),
     u = n(287809),
-    c = n(954571),
-    d = n(824744),
+    d = n(954571),
+    c = n(824744),
     _ = n(661191);
 n(980504);
 var f = n(652215),
-    p = n(355097);
+    E = n(355097);
 let h = new Map(),
-    m = new Map(),
-    g = new Set(),
-    E = 0,
+    p = new Map(),
+    m = new Set(),
+    g = 0,
     A = 0,
     I = new Set(),
     T = new Map(),
-    y = !1;
-function S() {
-    h.clear(), m.clear(), T.clear(), (y = !1), (A = 0), (E = 0);
-}
-function v() {
-    m.clear(), T.clear();
-}
-function C() {
-    A = 1;
-}
-function b(e) {
-    let { updates: t } = e;
-    t.forEach((e) => {
-        let { guildId: t, sounds: n } = e;
-        h.set(t, n);
-    }),
-        (A = 2);
-}
-function N(e) {
-    let { guild: t } = e;
-    h.delete(t.id);
-}
-function R(e) {
+    S = !1;
+function y(e) {
     let { sound: t } = e,
         n = h.get(t.guildId),
         r = n?.findIndex((e) => e.soundId === t.soundId);
@@ -50,75 +29,25 @@ function R(e) {
         ? ((n[r] = t), h.set(t.guildId, [...n]))
         : null != n && (n?.push(t), h.set(t.guildId, [...n]));
 }
-function O(e) {
-    let { guildId: t, soundboardSounds: n } = e;
-    h.set(t, n);
-}
-function D(e) {
-    let { soundId: t, guildId: n } = e,
-        r = h.get(n),
-        i = r?.findIndex((e) => e.soundId === t);
-    null == r || null == i || i < 0 || (r.splice(i, 1), h.set(n, [...r]));
-}
-function L() {
-    E = 1;
-}
-function w(e) {
-    let { soundboardSounds: t } = e;
-    h.set("0", t), (E = 2);
-}
-function x(e) {
-    let { soundId: t, userId: n } = e,
-        r = (m.get(t) ?? 0) + 1,
-        i = (T.get(n) ?? 0) + 1;
-    m.set(t, r), T.set(n, i), n !== u.default.getCurrentUser()?.id && (y = !0);
-}
-function P(e) {
-    let { soundId: t, userId: n } = e,
-        r = (m.get(t) ?? 0) - 1,
-        i = (T.get(n) ?? 0) - 1;
-    r <= 0 ? m.delete(t) : m.set(t, r), i <= 0 ? T.delete(n) : T.set(n, i);
-}
-let M = i().debounce((e, t) => {
-    c.default.track(f.HAw.UPDATE_SOUNDBOARD_SETTINGS, { volume: Math.round((0, d.M)(e)), location_stack: t }),
+let N = i().debounce((e, t) => {
+    d.default.track(f.HAw.UPDATE_SOUNDBOARD_SETTINGS, { volume: Math.round((0, c.M)(e)), location_stack: t }),
         o.dG.updateSetting({ volume: e });
 }, 1e3);
-function k(e) {
-    let { volume: t, location: n } = e;
-    M(t, n);
-}
-function U(e) {
+function O(e) {
     let t = e?.audioContextSettings?.user ?? {};
-    for (let [e, n] of Object.entries(t)) n.soundboardMuted ? g.add(e) : g.delete(e);
-    for (let e of g.keys()) null == t[e] && g.delete(e);
+    for (let [e, n] of Object.entries(t)) n.soundboardMuted ? m.add(e) : m.delete(e);
+    for (let e of m.keys()) null == t[e] && m.delete(e);
 }
-function G(e) {
-    let { settings: t } = e,
-        { type: n, proto: r } = t;
-    n === p.oD.FRECENCY_AND_FAVORITES_SETTINGS
-        ? (I = new Set(r?.favoriteSoundboardSounds?.soundIds ?? []))
-        : n === p.oD.PRELOADED_USER_SETTINGS && U(r);
-}
-function V(e) {
-    let { userId: t } = e;
-    g.has(t) ? g.delete(t) : g.add(t);
-}
-function F(e) {
-    let { soundboardStoreState: t } = e;
-    (h = new Map(_.default.entries(t.soundboardSounds))),
-        (I = new Set(t.favoritedSoundIds)),
-        (g = new Set(t.localSoundboardMutes));
-}
-class B extends a.Ay.Store {
+class R extends s.Ay.Store {
     static displayName = "SoundboardStore";
     initialize() {
-        this.waitFor(l.A, u.default), U(l.A.settings);
+        this.waitFor(l.A, u.default), O(l.A.settings);
     }
     getOverlaySerializedState() {
         return {
             soundboardSounds: Object.fromEntries(h),
             favoritedSoundIds: Array.from(I),
-            localSoundboardMutes: Array.from(g),
+            localSoundboardMutes: Array.from(m),
         };
     }
     getSounds() {
@@ -139,23 +68,23 @@ class B extends a.Ay.Store {
         return 1 === A;
     }
     isFetchingDefaultSounds() {
-        return 1 === E;
+        return 1 === g;
     }
     isFetching() {
         return this.isFetchingSounds() || this.isFetchingDefaultSounds();
     }
     shouldFetchDefaultSounds() {
-        return 0 === E;
+        return 0 === g;
     }
     hasFetchedDefaultSounds() {
-        return 2 === E;
+        return 2 === g;
     }
     isUserPlayingSounds(e) {
         let t = T.get(e);
         return null != t && t > 0;
     }
     isPlayingSound(e) {
-        return null != m.get(e);
+        return null != p.get(e);
     }
     isFavoriteSound(e) {
         return I.has(e);
@@ -164,34 +93,90 @@ class B extends a.Ay.Store {
         return I;
     }
     isLocalSoundboardMuted(e) {
-        return g.has(e);
+        return m.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
-        return y;
+        return S;
     }
     hasFetchedAllSounds() {
-        return 2 === A && 2 === E;
+        return 2 === A && 2 === g;
     }
     isFetchingAnySounds() {
-        return 1 === A || 1 === E;
+        return 1 === A || 1 === g;
     }
 }
-let j = new B(s.h, {
-    LOGOUT: S,
-    GUILD_SOUNDBOARD_FETCH: C,
-    GUILD_SOUNDBOARD_SOUND_CREATE: R,
-    GUILD_SOUNDBOARD_SOUND_UPDATE: R,
-    GUILD_SOUNDBOARD_SOUND_DELETE: D,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: x,
-    GUILD_SOUNDBOARD_SOUND_PLAY_END: P,
-    GUILD_SOUNDBOARD_SOUNDS_UPDATE: O,
-    USER_SOUNDBOARD_SET_VOLUME: k,
-    VOICE_CHANNEL_SELECT: v,
-    USER_SETTINGS_PROTO_UPDATE: G,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: L,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: w,
-    SOUNDBOARD_SOUNDS_RECEIVED: b,
-    GUILD_DELETE: N,
-    AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V,
-    OVERLAY_INITIALIZE: F,
+let v = new R(a.h, {
+    LOGOUT: function () {
+        h.clear(), p.clear(), T.clear(), (S = !1), (A = 0), (g = 0);
+    },
+    GUILD_SOUNDBOARD_FETCH: function () {
+        A = 1;
+    },
+    GUILD_SOUNDBOARD_SOUND_CREATE: y,
+    GUILD_SOUNDBOARD_SOUND_UPDATE: y,
+    GUILD_SOUNDBOARD_SOUND_DELETE: function (e) {
+        let { soundId: t, guildId: n } = e,
+            r = h.get(n),
+            i = r?.findIndex((e) => e.soundId === t);
+        null == r || null == i || i < 0 || (r.splice(i, 1), h.set(n, [...r]));
+    },
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: function (e) {
+        let { soundId: t, userId: n } = e,
+            r = (p.get(t) ?? 0) + 1,
+            i = (T.get(n) ?? 0) + 1;
+        p.set(t, r), T.set(n, i), n !== u.default.getCurrentUser()?.id && (S = !0);
+    },
+    GUILD_SOUNDBOARD_SOUND_PLAY_END: function (e) {
+        let { soundId: t, userId: n } = e,
+            r = (p.get(t) ?? 0) - 1,
+            i = (T.get(n) ?? 0) - 1;
+        r <= 0 ? p.delete(t) : p.set(t, r), i <= 0 ? T.delete(n) : T.set(n, i);
+    },
+    GUILD_SOUNDBOARD_SOUNDS_UPDATE: function (e) {
+        let { guildId: t, soundboardSounds: n } = e;
+        h.set(t, n);
+    },
+    USER_SOUNDBOARD_SET_VOLUME: function (e) {
+        let { volume: t, location: n } = e;
+        N(t, n);
+    },
+    VOICE_CHANNEL_SELECT: function () {
+        p.clear(), T.clear();
+    },
+    USER_SETTINGS_PROTO_UPDATE: function (e) {
+        let { settings: t } = e,
+            { type: n, proto: r } = t;
+        n === E.oD.FRECENCY_AND_FAVORITES_SETTINGS
+            ? (I = new Set(r?.favoriteSoundboardSounds?.soundIds ?? []))
+            : n === E.oD.PRELOADED_USER_SETTINGS && O(r);
+    },
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function () {
+        g = 1;
+    },
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function (e) {
+        let { soundboardSounds: t } = e;
+        h.set("0", t), (g = 2);
+    },
+    SOUNDBOARD_SOUNDS_RECEIVED: function (e) {
+        let { updates: t } = e;
+        t.forEach((e) => {
+            let { guildId: t, sounds: n } = e;
+            h.set(t, n);
+        }),
+            (A = 2);
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        h.delete(t.id);
+    },
+    AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: function (e) {
+        let { userId: t } = e;
+        m.has(t) ? m.delete(t) : m.add(t);
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        let { soundboardStoreState: t } = e;
+        (h = new Map(_.default.entries(t.soundboardSounds))),
+            (I = new Set(t.favoritedSoundIds)),
+            (m = new Set(t.localSoundboardMutes));
+    },
 });

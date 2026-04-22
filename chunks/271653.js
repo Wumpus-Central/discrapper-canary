@@ -1,56 +1,58 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => j });
 var i = n(627968),
-    s = n(732955),
-    l = n(397927),
-    r = n(319664),
-    a = n(465932),
-    o = n(957565),
-    d = n(912702),
-    c = n(250627),
-    u = n(253141),
-    m = n(579970),
-    g = n(960427),
-    x = n(482711),
-    h = n(985018),
-    _ = n(296217);
-function A(e) {
-    let { guildId: t, handleCreateOrEditProduct: s } = e,
-        m = (0, c.fZ)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: A } = (0, a.nq)(t),
-        p = m.length > 0;
+    l = n(821609),
+    s = n(192308),
+    r = n(452027),
+    a = n(307301),
+    o = n(696986),
+    d = n(319664),
+    c = n(465932),
+    u = n(957565),
+    m = n(912702),
+    g = n(250627),
+    h = n(253141),
+    x = n(579970),
+    _ = n(960427),
+    p = n(482711),
+    A = n(985018),
+    E = n(433416);
+function f(e) {
+    let { guildId: t, handleCreateOrEditProduct: l } = e,
+        a = (0, g.fZ)(t, { publishedOnly: !1 }),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: o } = (0, c.nq)(t),
+        x = a.length > 0;
     return (0, i.jsx)("div", {
-        className: _.aW,
-        children: (0, i.jsx)(l.D0$, {
-            label: p ? h.intl.string(h.t.RwuStQ) : h.intl.string(h.t.WKMcMW),
+        className: E.aW,
+        children: (0, i.jsx)(r.D, {
+            label: x ? A.intl.string(A.t.RwuStQ) : A.intl.string(A.t.WKMcMW),
             children: (e) =>
-                p
+                x
                     ? (0, i.jsx)("ul", {
-                          className: _.Hn,
+                          className: E.Hn,
                           id: e.controlId,
-                          children: m.map((e) =>
+                          children: a.map((e) =>
                               (0, i.jsx)(
                                   "li",
                                   {
-                                      children: (0, i.jsx)(x.A, {
+                                      children: (0, i.jsx)(p.A, {
                                           guildId: t,
                                           product: e,
-                                          onEditProduct: () => s(e.id),
+                                          onEditProduct: () => l(e.id),
                                           onUnpublishProduct: () => {
                                               var n;
-                                              return (n = e.id), void (0, d.Qm)(t, n, { published: !1 });
+                                              return (n = e.id), void (0, m.Qm)(t, n, { published: !1 });
                                           },
                                           onDeleteProduct: () => {
-                                              var s, r;
+                                              var l, r;
                                               return (
-                                                  (s = e.id),
+                                                  (l = e.id),
                                                   (r = e.name),
-                                                  void (0, l.mMO)(async () => {
+                                                  void (0, s.openModalLazy)(async () => {
                                                       let { default: e } = await n.e("37214").then(n.bind(n, 100909));
                                                       return (n) =>
                                                           (0, i.jsx)(e, {
                                                               guildId: t,
-                                                              productId: s,
+                                                              productId: l,
                                                               productName: r,
                                                               ...n,
                                                           });
@@ -59,32 +61,32 @@ function A(e) {
                                           },
                                           onCopyProductLink: () => {
                                               var n;
-                                              return (n = e.id), void (0, o.C)((0, u.KW)(t, n));
+                                              return (n = e.id), void (0, u.C)((0, h.KW)(t, n));
                                           },
-                                          onTestDownload: () => g.A.open({ guildId: t, productId: e.id }),
+                                          onTestDownload: () => _.A.open({ guildId: t, productId: e.id }),
                                           onReportProduct: () => {},
-                                          disabled: A,
+                                          disabled: o,
                                       }),
                                   },
                                   e.id,
                               ),
                           ),
                       })
-                    : (0, i.jsx)(r.A, { guildId: t, showCTA: !1, responsive: !1 }),
+                    : (0, i.jsx)(d.A, { guildId: t, showCTA: !1, responsive: !1 }),
         }),
     });
 }
-function p(e) {
+function j(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.nq)(t),
-        r = (e) => {
-            m.q(t, e);
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, c.nq)(t),
+        s = (e) => {
+            x.q(t, e);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.$nd, { text: h.intl.string(h.t.riG6Da), icon: l.j96, onClick: () => r(null), disabled: n }),
-            (0, i.jsx)(l.hKd, { size: 24 }),
-            (0, i.jsx)(A, { guildId: t, handleCreateOrEditProduct: r }),
+            (0, i.jsx)(l.$, { text: A.intl.string(A.t.riG6Da), icon: a.j, onClick: () => s(null), disabled: n }),
+            (0, i.jsx)(o.h, { size: 24 }),
+            (0, i.jsx)(f, { guildId: t, handleCreateOrEditProduct: s }),
         ],
     });
 }

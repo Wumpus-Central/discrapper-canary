@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { l: () => A });
+n.d(t, { l: () => p });
 var i = n(627968),
-    s = n(64700),
-    l = n(732955),
+    l = n(64700),
+    s = n(821609),
     r = n(688810),
     a = n(2553),
     o = n(946274),
@@ -11,53 +10,53 @@ var i = n(627968),
     u = n(695800),
     m = n(652215),
     g = n(874864),
-    x = n(478644),
-    h = n(985018),
-    _ = n(822679);
-function A(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: A } = e,
-        { analyticsLocations: p } = (0, r.Ay)(),
-        f = t.features.has(m.GuildFeatures.INVITE_SPLASH),
-        j = n && f,
-        N = s.useRef(null),
-        E = s.useCallback((e) => {
+    h = n(478644),
+    x = n(985018),
+    _ = n(528472);
+function p(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: p } = e,
+        { analyticsLocations: A } = (0, r.Ay)(),
+        E = t.features.has(m.GuildFeatures.INVITE_SPLASH),
+        f = n && E,
+        j = l.useRef(null),
+        N = l.useCallback((e) => {
             d.A.updateGuild({ splash: e });
         }, []),
-        b = s.useCallback(
+        I = l.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, u.p_)({
                         guild: t,
-                        analyticsLocations: p,
+                        analyticsLocations: A,
                         analyticsSection: m.JJy.GUILD_INVITE_BACKGROUND,
                         analyticsObject: m.ZSU.BUTTON_CTA,
                         perks: (0, g.Lp)(),
                     });
             },
-            [p, t],
+            [A, t],
         ),
-        T = s.useCallback(() => {
-            N.current?.activateUploadDialogue();
+        C = l.useCallback(() => {
+            j.current?.activateUploadDialogue();
         }, []);
-    return f
+    return E
         ? (0, i.jsxs)("div", {
-              className: A,
+              className: p,
               children: [
-                  (0, i.jsx)(l.$nd, { disabled: !j, variant: "primary", text: h.intl.string(h.t.yG2pUi), onClick: T }),
+                  (0, i.jsx)(s.$, { disabled: !f, variant: "primary", text: x.intl.string(x.t.yG2pUi), onClick: C }),
                   (0, i.jsx)("div", {
                       className: _.y,
                       children: (0, i.jsx)(o.Ay, {
-                          ref: N,
-                          disabled: !j,
-                          onChange: E,
-                          maxFileSizeBytes: x.j,
-                          onFileSizeError: () => (0, a.A)(x.j),
+                          ref: j,
+                          disabled: !f,
+                          onChange: N,
+                          maxFileSizeBytes: h.j,
+                          onFileSizeError: () => (0, a.A)(h.j),
                           tabIndex: -1,
                           "aria-hidden": !0,
                       }),
                   }),
               ],
           })
-        : (0, i.jsx)("div", { className: A, children: (0, i.jsx)(c.u, { onClick: b }) });
+        : (0, i.jsx)("div", { className: p, children: (0, i.jsx)(c.u, { onClick: I }) });
 }

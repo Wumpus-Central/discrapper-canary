@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => r });
-let r = {
+i.d(t, { A: () => n });
+let n = {
     USE_FILE: !0,
     USE_JFIF: !0,
     USE_PNG_FILE: !0,

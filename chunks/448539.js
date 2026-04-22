@@ -1,22 +1,23 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(64700),
     i = n(340287);
-let a = Object.freeze({ box: "border-box" });
-function s(e) {
-    let { ref: t, onUpdate: n, resizeObserver: s, listenerMap: o, key: l } = e;
+let s = Object.freeze({ box: "border-box" });
+function a(e) {
+    let { ref: t, onUpdate: n, resizeObserver: a, listenerMap: o, key: l } = e;
     (0, r.useLayoutEffect)(() => {
-        let e = (e) => {
-                (0, i.flushSync)(() => {
-                    n(e, l);
-                });
-            },
-            { current: r } = t;
+        let { current: e } = t;
         return (
-            null != r && (o.set(r, e), s.observe(r, a)),
+            null != e &&
+                (o.set(e, (e) => {
+                    (0, i.flushSync)(() => {
+                        n(e, l);
+                    });
+                }),
+                a.observe(e, s)),
             () => {
-                null != r && (s.unobserve(r), o.delete(r));
+                null != e && (a.unobserve(e), o.delete(e));
             }
         );
-    }, [n, s, t, o, l]);
+    }, [n, a, t, o, l]);
 }

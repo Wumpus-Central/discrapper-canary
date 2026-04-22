@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(311907),
-    i = n(734057),
-    a = n(576705),
-    s = n(977997),
-    o = n(818348);
-function l(e) {
-    let { userId: t, guildId: n } = e,
-        l = (0, r.bG)([s.A], () =>
-            null != n && null != t
-                ? s.A.getDiscoverableVoiceState(n, t)
-                : null != t
-                  ? s.A.getDiscoverableVoiceStateForUser(t)
+i.d(e, { A: () => o });
+var l = i(311907),
+    a = i(734057),
+    n = i(576705),
+    r = i(977997),
+    s = i(818348);
+function o(t) {
+    let { userId: e, guildId: i } = t,
+        o = (0, l.bG)([r.A], () =>
+            null != i && null != e
+                ? r.A.getDiscoverableVoiceState(i, e)
+                : null != e
+                  ? r.A.getDiscoverableVoiceStateForUser(e)
                   : void 0,
         ),
-        u = l?.channelId,
-        c = (0, r.bG)([i.A], () => {
-            if (null != u) return i.A.getChannel(u);
+        c = o?.channelId,
+        d = (0, l.bG)([a.A], () => {
+            if (null != c) return a.A.getChannel(c);
         });
-    return (0, r.bG)([a.A], () => c?.isPrivate() || a.A.can(o.xB.VIEW_CHANNEL, c))
-        ? { voiceState: l, voiceChannel: c }
+    return (0, l.bG)([n.A], () => d?.isPrivate() || n.A.can(s.xB.VIEW_CHANNEL, d))
+        ? { voiceState: o, voiceChannel: d }
         : {};
 }

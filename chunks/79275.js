@@ -1,38 +1,38 @@
-n.d(t, { A: () => g }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var r = n(627968),
-    l = n(64700),
-    i = n(512750),
+    i = n(64700),
+    l = n(512750),
     s = n(311907),
-    o = n(554146),
-    a = n(192308),
-    u = n(342494),
-    d = n(379848),
+    a = n(554146),
+    o = n(192308),
+    d = n(265486),
+    u = n(932001),
     c = n(186111),
-    p = n(89305),
+    _ = n(89305),
     m = n(49999),
-    A = n(333354),
-    _ = n(985018);
-function g(e) {
-    let { powerup: t, targetRef: n, isCardVisible: g } = e,
-        f = (0, s.bG)([c.A], () => c.A.hasLayers()),
-        x = (0, a.useHasAnyModalOpen)(),
+    p = n(853513),
+    A = n(985018);
+function x(e) {
+    let { powerup: t, targetRef: n, isCardVisible: x } = e,
+        g = (0, s.bG)([c.A], () => c.A.hasLayers()),
+        f = (0, o.useHasAnyModalOpen)(),
         h =
-            t.skuId === i.FB
+            t.skuId === l.FB
                 ? {
-                      title: _.intl.string(A.default.YWo6VL),
-                      body: _.intl.string(A.default.gXVvKc),
-                      dismissibleContentType: o.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
+                      title: A.intl.string(p.default.YWo6VL),
+                      body: A.intl.string(p.default.gXVvKc),
+                      dismissibleContentType: a.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
         v = [];
-    null == h || f || !g || x || v.push(h.dismissibleContentType);
-    let [j, b] = (0, d.kn)(v),
-        E = l.useCallback(() => {
-            b(m.i.INDIRECT_ACTION);
-        }, [b]);
-    return ((0, p.A)({ targetRef: n, onShouldClose: E, enabled: null != j }), null == h || null == j)
+    null == h || g || !x || f || v.push(h.dismissibleContentType);
+    let [E, S] = (0, u.kn)(v),
+        I = i.useCallback(() => {
+            S(m.i.INDIRECT_ACTION);
+        }, [S]);
+    return ((0, _.A)({ targetRef: n, onShouldClose: I, enabled: null != E }), null == h || null == E)
         ? null
-        : (0, r.jsx)(u.AM, {
+        : (0, r.jsx)(d.A, {
               targetElementRef: n,
               shouldShow: !0,
               position: "right",
@@ -42,7 +42,7 @@ function g(e) {
               title: h.title,
               body: h.body,
               onRequestClose: () => {
-                  b(m.i.USER_DISMISS);
+                  S(m.i.USER_DISMISS);
               },
           });
 }

@@ -1,91 +1,79 @@
-"use strict";
-n.d(t, { A: () => R });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(284009),
-    l = n.n(o),
+n.d(t, { A: () => L });
+var l = n(627968),
+    r = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    a = n(284009),
+    o = n.n(a),
     u = n(575593),
-    c = n(311907),
-    d = n(397927),
-    _ = n(937008),
+    d = n(311907),
+    c = n(452027),
+    C = n(265872),
+    p = n(778712),
+    m = n(939249),
+    E = n(834730),
+    A = n(534514),
+    h = n(937008),
     f = n(287070),
-    p = n(576622),
-    h = n(287809),
-    m = n(927578),
-    E = n(993408),
-    g = n(674658),
-    A = n(898461),
-    I = n(203632),
-    T = n(536572),
-    S = n(14702),
-    y = n(219103),
+    _ = n(576622),
+    g = n(287809),
+    T = n(927578),
+    x = n(993408),
+    S = n(674658),
+    I = n(898461),
+    O = n(203632),
+    y = n(536572),
+    N = n(14702),
+    R = n(219103),
     v = n(525723),
-    N = n(985018),
-    C = n(730939);
-let R = (e) => {
+    P = n(985018),
+    b = n(780651);
+let L = (e) => {
     let {
             skuId: t,
             isSelected: n,
-            priceAmount: s,
-            priceCurrency: o,
-            onSelect: R,
-            shouldDisplayHeader: O = !1,
-            className: b,
-            previewHeaderClassName: D,
-            hideProfilePreview: L = !1,
+            priceAmount: i,
+            priceCurrency: a,
+            onSelect: L,
+            shouldDisplayHeader: k = !1,
+            className: j,
+            previewHeaderClassName: U,
+            hideProfilePreview: M = !1,
         } = e,
-        { product: w } = (0, g.q)(t, !0),
-        { giftRecipient: M, giftRecipientError: x } = (0, _.Pv)(),
-        P = (0, c.bG)([h.default], () => h.default.getCurrentUser()),
-        k = (0, T.VG)(w),
-        U = i.useRef(null),
-        G = m.Ay.canUseCollectibles(P),
-        F = i.useMemo(() => (0, E.fT)(w, G), [w, G]),
-        V = (0, v.V_)(w);
+        { product: w } = (0, S.q)(t, !0),
+        { giftRecipient: F, giftRecipientError: D } = (0, h.Pv)(),
+        H = (0, d.bG)([g.default], () => g.default.getCurrentUser()),
+        G = (0, y.VG)(w),
+        B = r.useRef(null),
+        K = T.Ay.canUseCollectibles(H),
+        V = r.useMemo(() => (0, x.fT)(w, K), [w, K]),
+        W = (0, v.V_)(w);
     if (null == w) return null;
-    let [B] = w.items;
-    l()(null != B, "Product item should not be empty");
-    let H = () => {
-            if (w?.type === u.R.BUNDLE) return null;
-            switch (B.type) {
-                case u.R.AVATAR_DECORATION:
-                    return N.intl.string(N.t["7v0T9P"]);
-                case u.R.PROFILE_EFFECT:
-                    return N.intl.string(N.t.wR5wOo);
-                case u.R.NAMEPLATE:
-                    return N.intl.string(N.t.x5CoXR);
-                default:
-                    return null;
-            }
-        },
-        j = null != M && M.id !== P?.id && w.type !== u.R.BUNDLE && B.type !== u.R.NAMEPLATE && !L,
-        Y = () => {
-            null != t && null != R && R(t);
-        };
-    return (0, r.jsxs)("div", {
-        className: b,
+    let [Y] = w.items;
+    o()(null != Y, "Product item should not be empty");
+    let z = null != F && F.id !== H?.id && w.type !== u.R.BUNDLE && Y.type !== u.R.NAMEPLATE && !M;
+    return (0, l.jsxs)("div", {
+        className: j,
         children: [
-            O &&
-                (0, r.jsx)("div", {
-                    className: a()(C.QU, D),
-                    children: (0, r.jsx)(d.D0$, {
-                        label: N.intl.string(N.t.PpoJzt),
+            k &&
+                (0, l.jsx)("div", {
+                    className: s()(b.QU, U),
+                    children: (0, l.jsx)(c.D, {
+                        label: P.intl.string(P.t.PpoJzt),
                         children:
-                            j &&
-                            (0, r.jsx)(
-                                d.YNO,
+                            z &&
+                            (0, l.jsx)(
+                                C.Y,
                                 {
-                                    targetElementRef: U,
-                                    preload: () => (0, p.A)(M.id, M.getAvatarURL(null, 80)),
+                                    targetElementRef: B,
+                                    preload: () => (0, _.A)(F.id, F.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
-                                        (0, r.jsx)(f.A, {
+                                        (0, l.jsx)(f.A, {
                                             ...e,
-                                            user: M,
-                                            pendingAvatar: M.getAvatarURL(null, (0, d.FT9)(d._3J.SIZE_80)),
-                                            pendingAvatarDecoration: (0, A.T)(B) ? B : null,
-                                            pendingProfileEffect: (0, I.C3)(B) ? B : null,
+                                            user: F,
+                                            pendingAvatar: F.getAvatarURL(null, (0, p.FT)(p._3.SIZE_80)),
+                                            pendingAvatarDecoration: (0, I.T)(Y) ? Y : null,
+                                            pendingProfileEffect: (0, O.C3)(Y) ? Y : null,
                                             canUsePremiumCustomization: !0,
                                             disabledInputs: !0,
                                             hideExampleButton: !0,
@@ -93,58 +81,72 @@ let R = (e) => {
                                     align: "center",
                                     position: "right",
                                     children: (e) =>
-                                        (0, r.jsx)(d.DUT, {
+                                        (0, l.jsx)(m.D, {
                                             ...e,
-                                            className: C.Nx,
-                                            innerRef: U,
-                                            children: (0, r.jsx)(d.Text, {
+                                            className: b.Nx,
+                                            innerRef: B,
+                                            children: (0, l.jsx)(E.E, {
                                                 variant: "text-xs/medium",
                                                 color: "text-link",
-                                                children: N.intl.string(N.t["2GnJQL"]),
+                                                children: P.intl.string(P.t["2GnJQL"]),
                                             }),
                                         }),
                                 },
-                                M.id,
+                                F.id,
                             ),
                     }),
                 }),
-            (0, r.jsxs)(d.DUT, {
+            (0, l.jsxs)(m.D, {
                 tag: "div",
-                onClick: Y,
-                className: a()(C.i1, { [C.no]: n && null == x, [C.cN]: n && null != x }),
+                onClick: () => {
+                    null != t && null != L && L(t);
+                },
+                className: s()(b.i1, { [b.no]: n && null == D, [b.cN]: n && null != D }),
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: C.Ug,
+                    (0, l.jsxs)("div", {
+                        className: b.Ug,
                         children: [
-                            (0, r.jsx)(S.O, { product: w, fallbackLabel: null }),
-                            (0, r.jsxs)("div", {
-                                className: C.JZ,
+                            (0, l.jsx)(N.O, { product: w, fallbackLabel: null }),
+                            (0, l.jsxs)("div", {
+                                className: b.JZ,
                                 children: [
-                                    (0, r.jsx)(d.Text, { variant: "text-md/semibold", children: k }),
-                                    (0, r.jsx)(d.Heading, {
+                                    (0, l.jsx)(E.E, { variant: "text-md/semibold", children: G }),
+                                    (0, l.jsx)(A.D, {
                                         variant: "heading-sm/medium",
                                         color: "text-default",
-                                        children: H(),
+                                        children: (() => {
+                                            if (w?.type === u.R.BUNDLE) return null;
+                                            switch (Y.type) {
+                                                case u.R.AVATAR_DECORATION:
+                                                    return P.intl.string(P.t["7v0T9P"]);
+                                                case u.R.PROFILE_EFFECT:
+                                                    return P.intl.string(P.t.wR5wOo);
+                                                case u.R.NAMEPLATE:
+                                                    return P.intl.string(P.t.x5CoXR);
+                                                default:
+                                                    return null;
+                                            }
+                                        })(),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(y.x, {
-                                priceAmount: s,
-                                priceCurrency: o,
-                                discount: F,
-                                discountOfferAmount: V,
+                            (0, l.jsx)(R.x, {
+                                priceAmount: i,
+                                priceCurrency: a,
+                                discount: V,
+                                discountOfferAmount: W,
                                 variant: "text-md/bold",
                             }),
                         ],
                     }),
                     n &&
-                        null != x &&
-                        (0, r.jsx)("div", {
-                            className: C.Wh,
-                            children: (0, r.jsx)(d.Text, {
+                        null != D &&
+                        (0, l.jsx)("div", {
+                            className: b.Wh,
+                            children: (0, l.jsx)(E.E, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-critical",
-                                children: x,
+                                children: D,
                             }),
                         }),
                 ],

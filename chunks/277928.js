@@ -1,82 +1,82 @@
 n.d(t, { A: () => h });
-var a = n(627968),
-    i = n(64700),
-    s = n(397927),
-    l = n(341915),
+var i = n(627968),
+    s = n(64700),
+    l = n(834730),
+    a = n(341915),
     r = n(714510),
     o = n(646764),
     d = n(568329),
     c = n(453384),
     u = n(963713),
-    m = n(128478);
+    p = n(460131);
 let h = (e) => {
     let {
             isExpanded: t,
             contentLocation: n,
             progressBarRef: h,
-            percentComplete: x,
-            activeScreen: p,
-            popoutTargetElementRef: g,
+            percentComplete: m,
+            activeScreen: _,
+            popoutTargetElementRef: A,
         } = e,
-        { quest: _, onGameSheetOpen: f, onGameSheetClose: b } = i.useContext(u.T),
-        v = (0, r.VX)(_),
-        j = (0, r.tH)({
-            quest: _,
+        { quest: f, onGameSheetOpen: g, onGameSheetClose: x } = s.useContext(u.T),
+        E = (0, r.VX)(f),
+        C = (0, r.tH)({
+            quest: f,
             isExpanded: t,
-            activeScreen: p,
-            sourceQuestContent: l.uF.QUEST_BAR_V2,
-            popoutTargetElementRef: g,
-            onGameSheetOpened: f,
-            onGameSheetClosed: b,
+            activeScreen: _,
+            sourceQuestContent: a.uF.QUEST_BAR_V2,
+            popoutTargetElementRef: A,
+            onGameSheetOpened: g,
+            onGameSheetClosed: x,
         });
-    return (0, a.jsxs)("div", {
-        className: m.Z0,
+    return (0, i.jsxs)("div", {
+        className: p.Z0,
         children: [
-            (0, a.jsx)(d.dN, {
+            (0, i.jsx)(d.dN, {
                 inState: n,
                 id: "progress-bar",
                 ref: h,
                 children: (e) =>
-                    (0, a.jsx)(c.A, {
+                    (0, i.jsx)(c.A, {
                         ref: e,
                         style: "small",
-                        percentComplete: x,
+                        percentComplete: m,
                         size: 42,
-                        children: (0, a.jsx)(o.A, {
+                        children: (0, i.jsx)(o.A, {
                             fullWidth: !0,
-                            quest: _,
-                            questContent: l.uF.QUEST_BAR_V2,
+                            quest: f,
+                            questContent: a.uF.QUEST_BAR_V2,
                             autoplay: !1,
-                            sourceQuestContent: l.uF.QUEST_BAR_V2,
+                            sourceQuestContent: a.uF.QUEST_BAR_V2,
                         }),
                     }),
             }),
-            (0, a.jsxs)("div", {
-                className: m.NZ,
+            (0, i.jsxs)("div", {
+                className: p.NZ,
                 children: [
-                    (0, a.jsx)(d.dN, {
+                    (0, i.jsx)(d.dN, {
                         inState: n,
                         id: "progress-title",
                         children: (e) =>
-                            (0, a.jsx)(s.Text, {
+                            (0, i.jsx)(l.E, {
                                 ref: e,
-                                className: m.FZ,
+                                className: p.FZ,
                                 color: "text-strong",
                                 variant: "text-sm/semibold",
-                                children: v,
+                                children: E,
                             }),
                     }),
-                    (0, a.jsx)(d.dN, {
+                    (0, i.jsx)(d.dN, {
                         inState: n,
                         id: "progress-subtitle",
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, a.jsx)(s.Text, {
+                            (0, i.jsx)(l.E, {
                                 ref: e,
-                                className: m.FZ,
+                                className: p.FZ,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: j,
+                                children: C,
                             }),
                     }),
                 ],

@@ -1,70 +1,63 @@
 var r = n(509185),
     i = n(73224),
-    a = n(112746),
-    s = "Expected a function",
-    o = Math.max,
-    l = Math.min;
+    s = n(112746),
+    a = Math.max,
+    o = Math.min;
 e.exports = function (e, t, n) {
-    var u,
-        c,
+    var l,
+        u,
         d,
+        c,
         _,
         f,
-        p,
-        h = 0,
-        m = !1,
-        g = !1,
-        E = !0;
-    if ("function" != typeof e) throw TypeError(s);
-    function A(t) {
-        var n = u,
-            r = c;
-        return (u = c = void 0), (h = t), (_ = e.apply(r, n));
+        E = 0,
+        h = !1,
+        p = !1,
+        m = !0;
+    if ("function" != typeof e) throw TypeError("Expected a function");
+    function g(t) {
+        var n = l,
+            r = u;
+        return (l = u = void 0), (E = t), (c = e.apply(r, n));
     }
-    function I(e) {
-        return (h = e), (f = setTimeout(S, t)), m ? A(e) : _;
+    function A(e) {
+        var n = e - f,
+            r = e - E;
+        return void 0 === f || n >= t || n < 0 || (p && r >= d);
+    }
+    function I() {
+        var e,
+            n,
+            r,
+            s = i();
+        if (A(s)) return T(s);
+        _ = setTimeout(I, ((e = s - f), (n = s - E), (r = t - e), p ? o(r, d - n) : r));
     }
     function T(e) {
-        var n = e - p,
-            r = e - h,
-            i = t - n;
-        return g ? l(i, d - r) : i;
-    }
-    function y(e) {
-        var n = e - p,
-            r = e - h;
-        return void 0 === p || n >= t || n < 0 || (g && r >= d);
+        return ((_ = void 0), m && l) ? g(e) : ((l = u = void 0), c);
     }
     function S() {
-        var e = i();
-        if (y(e)) return v(e);
-        f = setTimeout(S, T(e));
-    }
-    function v(e) {
-        return ((f = void 0), E && u) ? A(e) : ((u = c = void 0), _);
-    }
-    function C() {
-        return void 0 === f ? _ : v(i());
-    }
-    function b() {
-        var e = i(),
-            n = y(e);
-        if (((u = arguments), (c = this), (p = e), n)) {
-            if (void 0 === f) return I(p);
-            if (g) return clearTimeout(f), (f = setTimeout(S, t)), A(p);
+        var e,
+            n = i(),
+            r = A(n);
+        if (((l = arguments), (u = this), (f = n), r)) {
+            if (void 0 === _) return (E = e = f), (_ = setTimeout(I, t)), h ? g(e) : c;
+            if (p) return clearTimeout(_), (_ = setTimeout(I, t)), g(f);
         }
-        return void 0 === f && (f = setTimeout(S, t)), _;
+        return void 0 === _ && (_ = setTimeout(I, t)), c;
     }
     return (
-        (t = a(t) || 0),
+        (t = s(t) || 0),
         r(n) &&
-            ((m = !!n.leading),
-            (d = (g = "maxWait" in n) ? o(a(n.maxWait) || 0, t) : d),
-            (E = "trailing" in n ? !!n.trailing : E)),
-        (b.cancel = function () {
-            void 0 !== f && clearTimeout(f), (h = 0), (u = p = c = f = void 0);
+            ((h = !!n.leading),
+            (d = (p = "maxWait" in n) ? a(s(n.maxWait) || 0, t) : d),
+            (m = "trailing" in n ? !!n.trailing : m)),
+        (S.cancel = function () {
+            void 0 !== _ && clearTimeout(_), (E = 0), (l = f = u = _ = void 0);
         }),
-        (b.flush = C),
-        b
+        (S.flush = function () {
+            return void 0 === _ ? c : T(i());
+        }),
+        S
     );
 };

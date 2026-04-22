@@ -1,20 +1,20 @@
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    r = n(397927),
-    a = n(427262),
-    o = n(717270);
-let d = (e) => {
-    let { user: t, fill: n, hideUserTag: s } = e,
-        d = `\xa0(@${a.Ay.getUserTag(t, { decoration: "never" })})`;
-    return (0, i.jsxs)(r.Text, {
-        className: l()([{ [o.GS]: n }]),
+l.d(t, { A: () => c });
+var n = l(627968);
+l(64700);
+var i = l(503698),
+    s = l.n(i),
+    a = l(834730),
+    r = l(427262),
+    d = l(717270);
+let c = (e) => {
+    let { user: t, fill: l, hideUserTag: i } = e,
+        c = `\xa0(@${r.Ay.getUserTag(t, { decoration: "never" })})`;
+    return (0, n.jsxs)(a.E, {
+        className: s()([{ [d.GS]: l }]),
         variant: "text-md/medium",
         children: [
-            (0, i.jsx)("span", { className: o.Xh, children: a.Ay.getName(t) }),
-            s ? null : (0, i.jsx)("span", { className: o.D2, children: d }),
+            (0, n.jsx)("span", { className: d.Xh, children: r.Ay.getName(t) }),
+            i ? null : (0, n.jsx)("span", { className: d.D2, children: c }),
         ],
     });
 };

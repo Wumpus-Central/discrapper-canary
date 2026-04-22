@@ -1,147 +1,147 @@
-"use strict";
-n.d(t, { A: () => N });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+n.d(t, { A: () => v });
+var a = n(627968),
+    r = n(64700),
+    l = n(503698),
+    i = n.n(l),
     o = n(478437),
-    l = n(305866),
-    u = n(355622),
-    c = n(408018),
+    s = n(305866),
+    c = n(355622),
+    u = n(408018),
     d = n(133343),
-    _ = n(95701),
-    f = n(403362),
-    p = n(562153),
-    h = n(427262),
-    m = n(448613),
-    g = n(679492),
-    E = n(8925),
-    A = n(939496),
-    I = n(518477),
-    T = n(650583),
-    y = n(985018),
-    S = n(313877);
-let v = (0, _.createChannelRecord)({ id: "1", type: o.r.DM }),
-    C = (e) => {
-        let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
-        switch (r) {
-            case I.dS.ACTIVITY:
-                let a = y.intl.formatToPlainString(y.t.WmvMCo, { username: n }),
-                    s = `
-> ${i}`;
-                return null != i
-                    ? `${E.c5}${a}*${s}
-${t}`
-                    : `${E.c5}${a}*
-${t}`;
-            case I.dS.AVATAR:
-                let o = y.intl.formatToPlainString(y.t.lpaBsB, { username: n });
-                return `${E.c5}${o}*
-${t}`;
-            case I.dS.STATUS:
-                let l = y.intl.formatToPlainString(y.t.lFXgFV, { username: n }),
-                    u = `
-> ${i}`;
-                return null != i
-                    ? `${E.c5}${l}*${u}
-${t}`
-                    : `${E.c5}${l}*
-${t}`;
-            default:
-                (0, f.xb)(r);
-        }
-    },
-    b = (e) => {
-        switch (e) {
-            case I.dS.ACTIVITY:
-                return y.t.Qn081O;
-            case I.dS.AVATAR:
-                return y.t.xGNPFK;
-            case I.dS.STATUS:
-                return y.t.g9BTCM;
-            default:
-                (0, f.xb)(e);
-        }
-    };
-function N(e) {
+    f = n(95701),
+    _ = n(403362),
+    h = n(562153),
+    A = n(427262),
+    p = n(448613),
+    m = n(679492),
+    S = n(8925),
+    g = n(939496),
+    b = n(518477),
+    x = n(650583),
+    T = n(985018),
+    E = n(450262);
+let R = (0, f.createChannelRecord)({ id: "1", type: o.r.DM });
+function v(e) {
     let {
             user: t,
             guildId: n,
-            channelId: a,
+            channelId: l,
             sourceType: o,
-            sourceDetails: _,
-            setPopoutRef: f,
-            modalKey: E,
-            onAction: N,
-            onClose: R,
-            entry: O,
+            sourceDetails: f,
+            setPopoutRef: v,
+            modalKey: C,
+            onAction: y,
+            onClose: j,
+            entry: I,
         } = e,
-        { resetInteraction: D, setInteractionToast: L } = (0, g.Pq)(),
-        { primaryColor: w } = (0, A.E)(),
-        [x, P] = i.useState(""),
-        [M, k] = i.useState((0, c.x7)(x)),
-        U = i.useRef(!1),
-        G = i.useRef(null),
-        V = i.useCallback(
+        { resetInteraction: L, setInteractionToast: P } = (0, m.Pq)(),
+        { primaryColor: N } = (0, g.E)(),
+        [U, w] = r.useState(""),
+        [k, M] = r.useState((0, u.x7)(U)),
+        O = r.useRef(!1),
+        V = r.useRef(null),
+        $ = r.useCallback(
             (e) => {
-                e.key === T.dh.ESCAPE && (e.stopPropagation(), D());
+                e.key === x.dh.ESCAPE && (e.stopPropagation(), L());
             },
-            [D],
+            [L],
         );
-    i.useEffect(() => {
-        f?.(G?.current);
-    }, [G, f]);
+    r.useEffect(() => {
+        v?.(V?.current);
+    }, [V, v]);
     let F = async (e) => {
             if (null == e) return;
-            o === I.dS.AVATAR
-                ? N({ action: "SEND_REPLY_AVATAR" })
-                : o === I.dS.STATUS
-                  ? N({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : N({ action: "SEND_REPLY_ACTIVITY" });
-            let n = C({ input: e, username: h.Ay.getName(t), sourceType: o, sourceDetails: _ });
-            L(null);
+            o === b.dS.AVATAR
+                ? y({ action: "SEND_REPLY_AVATAR" })
+                : o === b.dS.STATUS
+                  ? y({ action: "SEND_REPLY_CUSTOM_STATUS" })
+                  : y({ action: "SEND_REPLY_ACTIVITY" });
+            let n = ((e) => {
+                let { input: t, username: n, sourceType: a, sourceDetails: r } = e;
+                switch (a) {
+                    case b.dS.ACTIVITY:
+                        let l = T.intl.formatToPlainString(T.t.WmvMCo, { username: n }),
+                            i = `
+> ${r}`;
+                        return null != r
+                            ? `${S.c5}${l}*${i}
+${t}`
+                            : `${S.c5}${l}*
+${t}`;
+                    case b.dS.AVATAR:
+                        let o = T.intl.formatToPlainString(T.t.lpaBsB, { username: n });
+                        return `${S.c5}${o}*
+${t}`;
+                    case b.dS.STATUS:
+                        let s = T.intl.formatToPlainString(T.t.lFXgFV, { username: n }),
+                            c = `
+> ${r}`;
+                        return null != r
+                            ? `${S.c5}${s}*${c}
+${t}`
+                            : `${S.c5}${s}*
+${t}`;
+                    default:
+                        (0, _.xb)(a);
+                }
+            })({ input: e, username: A.Ay.getName(t), sourceType: o, sourceDetails: f });
+            P(null);
             try {
-                await (0, m.p)({
+                await (0, p.p)({
                     userId: t.id,
                     content: n,
                     location: "UserProfileReplyPopout",
                     openChannel: !1,
                     whenReady: !1,
-                    entry: O,
+                    entry: I,
                 });
             } catch (e) {}
-            L(I.AQ.REPLY);
+            P(b.AQ.REPLY);
         },
-        B = { [S.h5]: o === I.dS.STATUS, [S.my]: o === I.dS.AVATAR, [S.Eb]: o === I.dS.ACTIVITY };
-    return (0, r.jsx)(l.l, {
-        ref: G,
-        onKeyDown: V,
-        children: (0, r.jsx)("div", {
-            className: s()(S.kL, B, { [S.GE]: null != w }),
-            children: (0, r.jsx)(d.Ay, {
-                parentModalKey: E,
+        D = { [E.h5]: o === b.dS.STATUS, [E.my]: o === b.dS.AVATAR, [E.Eb]: o === b.dS.ACTIVITY };
+    return (0, a.jsx)(s.l, {
+        ref: V,
+        onKeyDown: $,
+        children: (0, a.jsx)("div", {
+            className: i()(E.kL, D, { [E.GE]: null != N }),
+            children: (0, a.jsx)(d.Ay, {
+                parentModalKey: C,
                 emojiPickerCloseOnModalOuterClick: !0,
-                className: S.hF,
-                innerClassName: S.rn,
-                editorClassName: S.EN,
-                type: u.oU.USER_PROFILE_REPLY,
-                placeholder: y.intl.formatToPlainString(b(o), { username: p.Ay.getName(n, a, t) }),
-                channel: v,
-                textValue: x,
-                richValue: M,
+                className: E.hF,
+                innerClassName: E.rn,
+                editorClassName: E.EN,
+                type: c.oU.USER_PROFILE_REPLY,
+                placeholder: T.intl.formatToPlainString(
+                    ((e) => {
+                        switch (e) {
+                            case b.dS.ACTIVITY:
+                                return T.t.Qn081O;
+                            case b.dS.AVATAR:
+                                return T.t.xGNPFK;
+                            case b.dS.STATUS:
+                                return T.t.g9BTCM;
+                            default:
+                                (0, _.xb)(e);
+                        }
+                    })(o),
+                    { username: h.Ay.getName(n, l, t) },
+                ),
+                channel: R,
+                textValue: U,
+                richValue: k,
                 onChange: (e, t, n) => {
-                    t !== x && (P(t), k(n));
+                    t !== U && (w(t), M(n));
                 },
-                focused: U.current,
+                focused: O.current,
                 onFocus: () => {
-                    U.current = !0;
+                    O.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
                         n = t.trim();
                     if (0 === n.length) return { shouldClear: !1, shouldRefocus: !1 };
                     try {
-                        return await F(n), D(), R?.(), { shouldClear: !0, shouldRefocus: !1 };
+                        return await F(n), L(), j?.(), { shouldClear: !0, shouldRefocus: !1 };
                     } catch {
                         return { shouldClear: !1, shouldRefocus: !1 };
                     }

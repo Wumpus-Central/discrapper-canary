@@ -1,90 +1,91 @@
 n.d(t, { A: () => g }), n(323874), n(14289), n(35956);
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    a = n(851907),
-    l = n(587895),
-    s = n(200330),
-    o = n(321987),
-    d = n(595244),
+var r = n(192308),
+    a = n(231723),
+    l = n(851907),
+    s = n(587895),
+    o = n(200330),
+    d = n(321987),
+    u = n(595244),
     c = n(723702),
-    u = n(837921),
-    A = n(636401),
-    h = n(990007),
-    _ = n(546983),
-    m = n(652215),
-    p = n(985018);
-let g = (0, h.A)(
+    A = n(837921),
+    h = n(636401),
+    _ = n(990007),
+    E = n(546983),
+    p = n(652215),
+    m = n(985018);
+let g = (0, _.A)(
     (e) => {
         let {
                 clientId: t,
                 authorizations: n,
                 scopes: c,
-                parsedPermissions: u,
-                responseType: h,
+                parsedPermissions: A,
+                responseType: _,
                 redirectUri: g,
-                codeChallenge: E,
-                codeChallengeMethod: f,
-                state: I,
-                guildId: C,
-                channelId: N,
-                prompt: T,
-                disableGuildSelect: S,
-                disclosures: x,
-                integrationType: v,
-                pid: b,
-                signal: y,
+                codeChallenge: I,
+                codeChallengeMethod: C,
+                state: f,
+                guildId: T,
+                channelId: S,
+                prompt: N,
+                disableGuildSelect: O,
+                disclosures: L,
+                integrationType: y,
+                pid: v,
+                signal: b,
             } = e,
-            L = `OAuth2Authorize_${t}_${C}_${N}`,
-            O = null != v ? n?.get(v) : void 0,
-            R = O?.application ?? l.A.getApplication(t);
-        return new Promise((e, l) => {
-            let O = (0, _.d5)(b),
-                P = r.SYi;
-            null != R && null != (0, a.Ay)({ application: R, channelId: N })
-                ? (P = r.KX8)
-                : O.context === m.BRT.POPOUT && (P = r.KX8);
-            let j = !1,
-                D = (n) => {
-                    let { clientId: a, location: s } = n;
+            D = `OAuth2Authorize_${t}_${T}_${S}`,
+            R = null != y ? n?.get(y) : void 0,
+            P = R?.application ?? s.A.getApplication(t);
+        return new Promise((e, s) => {
+            let R = (0, E.d5)(v),
+                w = a.SY;
+            null != P && null != (0, l.Ay)({ application: P, channelId: S })
+                ? (w = a.KX)
+                : R.context === p.BRT.POPOUT && (w = a.KX);
+            let M = !1,
+                U = (n) => {
+                    let { clientId: a, location: l } = n;
                     if (null == a || a === t) {
-                        if (((j = !0), null == s)) {
-                            l(new A.A({ errorCode: m.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
-                                O.lock();
+                        if (((M = !0), null == l)) {
+                            s(new h.A({ errorCode: p.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                                R.lock();
                             return;
                         }
-                        (e(s), null == g || null == R)
-                            ? O.lock()
-                            : null == new URL(s).searchParams.get("error")
-                              ? (0, r.qfG)(
-                                    (e) => (0, i.jsx)(d.Sm, { application: R, ...e }),
+                        (e(l), null == g || null == P)
+                            ? R.lock()
+                            : null == new URL(l).searchParams.get("error")
+                              ? (0, r.openModal)(
+                                    (e) => (0, i.jsx)(u.Sm, { application: P, ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            O.lock();
+                                            R.lock();
                                         },
                                     },
-                                    P,
+                                    w,
                                 )
-                              : (0, r.qfG)(
-                                    (e) => (0, i.jsx)(d.xb, { ...e }),
+                              : (0, r.openModal)(
+                                    (e) => (0, i.jsx)(u.xb, { ...e }),
                                     {
                                         onCloseCallback: () => {
-                                            O.lock();
+                                            R.lock();
                                         },
                                     },
-                                    P,
+                                    w,
                                 );
                     }
                 },
-                { cleanup: w } = (function (e, t) {
+                { cleanup: x } = (function (e, t) {
                     function n() {
-                        (0, r.OoC)(e) &&
-                            (0, r.qfG)((e) =>
-                                (0, i.jsx)(o.f, {
+                        (0, r.closeModal)(e) &&
+                            (0, r.openModal)((e) =>
+                                (0, i.jsx)(d.f, {
                                     ...e,
-                                    title: p.intl.string(p.t.j2d6Km),
-                                    subtitle: p.intl.string(p.t["4LKmN5"]),
-                                    actions: [{ text: p.intl.string(p.t.cpT0Cq), onClick: e.onClose }],
+                                    title: m.intl.string(m.t.j2d6Km),
+                                    subtitle: m.intl.string(m.t["4LKmN5"]),
+                                    actions: [{ text: m.intl.string(m.t.cpT0Cq), onClick: e.onClose }],
                                 }),
                             );
                     }
@@ -96,45 +97,45 @@ let g = (0, h.A)(
                             },
                         }
                     );
-                })(L, y);
-            (0, r.qfG)(
+                })(D, b);
+            (0, r.openModal)(
                 (e) =>
-                    (0, i.jsx)(s.OAuth2AuthorizeModal, {
+                    (0, i.jsx)(o.OAuth2AuthorizeModal, {
                         ...e,
                         authorizations: n,
                         clientId: t,
                         scopes: c ?? [],
-                        disclosures: x ?? [],
-                        callback: D,
-                        responseType: h,
+                        disclosures: L ?? [],
+                        callback: U,
+                        responseType: _,
                         redirectUri: g,
-                        codeChallenge: E,
-                        codeChallengeMethod: f,
-                        state: I,
-                        permissions: u,
-                        guildId: C,
-                        channelId: N,
-                        prompt: T,
-                        disableGuildSelect: "boolean" == typeof S ? S : "true" === S,
-                        integrationType: v,
+                        codeChallenge: I,
+                        codeChallengeMethod: C,
+                        state: f,
+                        permissions: A,
+                        guildId: T,
+                        channelId: S,
+                        prompt: N,
+                        disableGuildSelect: "boolean" == typeof O ? O : "true" === O,
+                        integrationType: y,
                         cancelCompletesFlow: !0,
                     }),
                 {
-                    modalKey: L,
+                    modalKey: D,
                     onCloseCallback: () => {
-                        w(),
-                            j ||
-                                (l(new A.A({ errorCode: m.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
-                                O.lock());
+                        x(),
+                            M ||
+                                (s(new h.A({ errorCode: p.Lw6.OAUTH2_ERROR }, "User cancelled authorization")),
+                                R.lock());
                     },
                 },
-                P,
+                w,
             );
         });
     },
     function (e, t, n) {
-        if ((0, _.kS)(n) || !c.isPlatformEmbedded) return;
-        let i = (0, a.Ay)({ application: e, channelId: t });
-        (0, c.isWindows)() ? u.Ay.minimize(i) : u.Ay.restore(i), u.Ay.focus(i);
+        if ((0, E.kS)(n) || !c.isPlatformEmbedded) return;
+        let i = (0, l.Ay)({ application: e, channelId: t });
+        (0, c.isWindows)() ? A.Ay.minimize(i) : A.Ay.restore(i), A.Ay.focus(i);
     },
 );

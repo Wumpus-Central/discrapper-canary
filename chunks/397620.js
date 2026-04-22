@@ -1,45 +1,45 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(954485);
-let d = function (e) {
+l.d(t, { A: () => c });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(761508),
+    d = l(954485);
+let c = function (e) {
     let {
             tabs: t,
-            panelClassName: n,
-            tabsClassName: l,
-            defaultTab: d,
-            onTabChange: c,
-            orientation: u = "horizontal",
+            panelClassName: l,
+            tabsClassName: s,
+            defaultTab: c,
+            onTabChange: u,
+            orientation: o = "horizontal",
         } = e,
-        m = d ?? t[0],
-        [g, _] = s.useState(m ?? t[0]);
-    s.useEffect(() => {
-        _(m);
-    }, [m]);
-    let x = s.useMemo(() => {
-        let e = g.component;
-        return (0, i.jsx)(e, {});
-    }, [g]);
-    return (0, i.jsxs)("div", {
-        className: r()(o.P5, { [o.Vd]: "vertical" === u }),
+        x = c ?? t[0],
+        [h, m] = i.useState(x ?? t[0]);
+    i.useEffect(() => {
+        m(x);
+    }, [x]);
+    let g = i.useMemo(() => {
+        let e = h.component;
+        return (0, n.jsx)(e, {});
+    }, [h]);
+    return (0, n.jsxs)("div", {
+        className: a()(d.P5, { [d.Vd]: "vertical" === o }),
         children: [
-            (0, i.jsx)(a.VQ0, {
-                className: r()(o.$H, { [o.Vd]: "vertical" === u }, l),
-                selectedItem: g.id,
+            (0, n.jsx)(r.V, {
+                className: a()(d.$H, { [d.Vd]: "vertical" === o }, s),
+                selectedItem: h.id,
                 onItemSelect: (e) => {
-                    _(t.find((t) => t.id === e) ?? t[0]), c?.(e);
+                    m(t.find((t) => t.id === e) ?? t[0]), u?.(e);
                 },
-                orientation: u,
-                type: "vertical" === u ? "side" : "top",
+                orientation: o,
+                type: "vertical" === o ? "side" : "top",
                 look: "brand",
                 children: t.map((e) =>
-                    (0, i.jsx)(
-                        a.VQ0.Item,
+                    (0, n.jsx)(
+                        r.V.Item,
                         {
-                            className: r()(o.Mf, { [o.Vd]: "vertical" === u, [o.wH]: e.id === g.id }),
+                            className: a()(d.Mf, { [d.Vd]: "vertical" === o, [d.wH]: e.id === h.id }),
                             id: e.id,
                             "aria-label": e.title,
                             children: e.title,
@@ -48,11 +48,11 @@ let d = function (e) {
                     ),
                 ),
             }),
-            (0, i.jsx)(a.VQ0.Panel, {
-                id: g.id,
-                "aria-labelledby": g.title,
-                className: r()(o.NM, n, { [o.Vd]: "vertical" === u }),
-                children: x,
+            (0, n.jsx)(r.V.Panel, {
+                id: h.id,
+                "aria-labelledby": h.title,
+                className: a()(d.NM, l, { [d.Vd]: "vertical" === o }),
+                children: g,
             }),
         ],
     });

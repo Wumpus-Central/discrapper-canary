@@ -1,12 +1,17 @@
 "use strict";
-n.d(t, { r: () => s });
+n.d(t, { r: () => a });
 var r = n(64700),
     i = n(844222),
-    a = n(460890);
-function s(e, t) {
-    let { theme: n, saturation: s, experiments: o } = (0, a.G9)(),
+    s = n(460890);
+function a(e, t) {
+    let { theme: n, saturation: a, experiments: o } = (0, s.G9)(),
         { highContrastModeEnabled: l } = r.useContext(i.C),
-        u = "compact",
-        c = o?.enabledExperiments ?? [];
-    return e.resolve({ theme: t ?? n, saturation: s, enabledExperiments: c, density: u, highContrastModeEnabled: l });
+        u = o?.enabledExperiments ?? [];
+    return e.resolve({
+        theme: t ?? n,
+        saturation: a,
+        enabledExperiments: u,
+        density: "compact",
+        highContrastModeEnabled: l,
+    });
 }

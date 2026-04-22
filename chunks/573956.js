@@ -4,40 +4,41 @@ var i = n(627968),
     s = n(417597),
     a = n(554146),
     r = n(827734),
-    o = n(397927),
+    o = n(777666),
+    d = n(740426),
     c = n(442433),
-    d = n(826673),
-    u = n(591552),
-    h = n(202776),
-    A = n(454058),
-    _ = n(976860),
-    m = n(222823),
-    g = n(661191),
-    p = n(32603),
-    f = n(652793),
+    u = n(826673),
+    h = n(591552),
+    A = n(202776),
+    _ = n(454058),
+    m = n(976860),
+    g = n(222823),
+    p = n(661191),
+    f = n(32603),
+    E = n(652793),
     x = n(652215),
-    E = n(746080),
-    I = n(790782),
-    C = n(985018);
+    I = n(746080),
+    C = n(790782),
+    b = n(985018);
 function N(e) {
     let { guild: t, selected: N } = e,
-        T = (0, h.A)(t),
-        S = (0, d.JZ)(a.M.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        b = (0, s.yK)([A.A], () =>
-            Array.from(A.A.getNewChannelIds(t.id)).filter((e) => A.A.shouldIndicateNewChannel(t.id, e)),
+        S = (0, A.A)(t),
+        v = (0, u.JZ)(a.M.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        T = (0, s.yK)([_.A], () =>
+            Array.from(_.A.getNewChannelIds(t.id)).filter((e) => _.A.shouldIndicateNewChannel(t.id, e)),
         ),
-        y = (0, s.bG)([m.Ay], () => m.Ay.hasUnread(t.id, I.P.GUILD_ONBOARDING_QUESTION)),
-        v = b.length > p.rR,
-        j = (0, s.bG)([u.A, m.Ay], () => {
-            let e = u.A.lastFetchedAt(t.id),
-                n = m.Ay.lastMessageId(t.id, I.P.GUILD_ONBOARDING_QUESTION);
+        y = (0, s.bG)([g.Ay], () => g.Ay.hasUnread(t.id, C.P.GUILD_ONBOARDING_QUESTION)),
+        R = T.length > f.rR,
+        j = (0, s.bG)([h.A, g.Ay], () => {
+            let e = h.A.lastFetchedAt(t.id),
+                n = g.Ay.lastMessageId(t.id, C.P.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let i = g.default.extractTimestamp(n);
+            let i = p.default.extractTimestamp(n);
             return null != e && e > i;
         }),
-        R = l.useCallback(() => {
-            (0, _.pX)(x.BVt.CHANNEL(t.id, T ? E.VV.CUSTOMIZE_COMMUNITY : E.VV.CHANNEL_BROWSER));
-        }, [t.id, T]),
+        L = l.useCallback(() => {
+            (0, m.pX)(x.BVt.CHANNEL(t.id, S ? I.VV.CUSTOMIZE_COMMUNITY : I.VV.CHANNEL_BROWSER));
+        }, [t.id, S]),
         O = l.useCallback(
             (e) => {
                 (0, c.L3)(e, async () => {
@@ -47,20 +48,20 @@ function N(e) {
             },
             [t],
         ),
-        L = null;
+        G = null;
     return (
-        (S && !y && !v) ||
+        (v && !y && !R) ||
             N ||
             j ||
-            (L = (0, i.jsx)(o.LpS, { color: r.A.colors.BADGE_BACKGROUND_BRAND.css, text: C.intl.string(C.t.y2b7CA) })),
-        (0, i.jsx)(f.G, {
+            (G = (0, i.jsx)(o.Lp, { color: r.A.colors.BADGE_BACKGROUND_BRAND.css, text: b.intl.string(b.t.y2b7CA) })),
+        (0, i.jsx)(E.G, {
             id: `channels-${t.id}`,
-            renderIcon: (e) => (0, i.jsx)(o.kiI, { size: "md", color: "currentColor", className: e }),
-            text: T ? C.intl.string(C.t.h9mGOP) : C.intl.string(C.t.et6wav),
+            renderIcon: (e) => (0, i.jsx)(d.k, { size: "md", color: "currentColor", className: e }),
+            text: S ? b.intl.string(b.t.h9mGOP) : b.intl.string(b.t.et6wav),
             selected: N,
-            onClick: R,
+            onClick: L,
             onContextMenu: O,
-            trailing: L,
+            trailing: G,
         })
     );
 }

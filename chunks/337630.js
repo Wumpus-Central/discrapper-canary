@@ -1,19 +1,18 @@
 "use strict";
-n.d(t, { A: () => a }), n(321073);
-var r = n(711371);
-let i = "applicationCommand";
-function a(e, t) {
-    if (r.VW.areStylesDisabled(e)) return [];
-    let [n, a] = t,
+n.d(t, { A: () => l }), n(321073);
+var i = n(711371);
+function l(e, t) {
+    if (i.VW.areStylesDisabled(e)) return [];
+    let [n, l] = t,
         s = [];
-    if (!r.l5.isText(n)) return s;
-    let [o] = r.VW.node(e, r.PW.parent(a));
+    if (!i.l5.isText(n)) return s;
+    let [r] = i.VW.node(e, i.PW.parent(l));
     return (
-        r.AS.isType(o, i) &&
-            n === o.children[0] &&
+        i.AS.isType(r, "applicationCommand") &&
+            n === r.children[0] &&
             s.push({
-                anchor: { path: a, offset: 0 },
-                focus: { path: a, offset: 0 + o.command.displayName.length + 1 },
+                anchor: { path: l, offset: 0 },
+                focus: { path: l, offset: 0 + r.command.displayName.length + 1 },
                 commandName: !0,
             }),
         s

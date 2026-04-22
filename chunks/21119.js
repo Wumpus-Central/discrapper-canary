@@ -1,69 +1,64 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var r = n(311907),
     i = n(73153),
-    a = n(994500),
-    s = n(755915);
-let o = 0.5,
-    l = new Map(),
-    u = !1,
-    c = Object.freeze({ userAffinities: [], lastFetched: 0 }),
-    d = { ...c };
-function _() {
-    l = new Map(d.userAffinities.filter((e) => !a.A.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    s = n(994500),
+    a = n(755915);
+let o = new Map(),
+    l = !1,
+    u = Object.freeze({ userAffinities: [], lastFetched: 0 }),
+    d = { ...u };
+function c() {
+    o = new Map(d.userAffinities.filter((e) => !s.A.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-function f() {
-    u = !0;
-}
-function h(e) {
-    let { affineUsers: t } = e;
-    (d.lastFetched = Date.now()), (u = !1), (d.userAffinities = t), _();
-}
-function p() {
-    u = !1;
-}
-function g() {
-    (d = { ...c }), (l = new Map()), (u = !1);
-}
-class E extends r.Ay.PersistedStore {
+class _ extends r.Ay.PersistedStore {
     static displayName = "UserAffinitiesV2Store";
     static persistKey = "UserAffinitiesStoreV2";
     initialize(e) {
-        this.waitFor(a.A),
-            null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), _()),
-            this.syncWith([a.A], _);
+        this.waitFor(s.A),
+            null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), c()),
+            this.syncWith([s.A], c);
     }
     shouldFetch() {
-        if (!u) return Date.now() - d.lastFetched > s.e;
+        if (!l) return Date.now() - d.lastFetched > a.e;
     }
     isFetching() {
-        return u;
+        return l;
     }
     getUserAffinities() {
         return d.userAffinities;
     }
     getUserAffinitiesMap() {
-        return l;
+        return o;
     }
     compare(e, t) {
-        return (l.get(t)?.communicationProbability ?? 0) - (l.get(e)?.communicationProbability ?? 0);
+        return (o.get(t)?.communicationProbability ?? 0) - (o.get(e)?.communicationProbability ?? 0);
     }
     compareByDmProbability(e, t) {
-        return (l.get(t)?.dmProbability ?? 0) - (l.get(e)?.dmProbability ?? 0);
+        return (o.get(t)?.dmProbability ?? 0) - (o.get(e)?.dmProbability ?? 0);
     }
     getUserAffinity(e) {
-        return l.get(e);
+        return o.get(e);
     }
     getState() {
         return d;
     }
     isHighlyAffinedVCUser(e) {
-        return (l.get(e)?.vcProbability ?? 0) > o;
+        return (o.get(e)?.vcProbability ?? 0) > 0.5;
     }
 }
-let A = new E(i.h, {
-    LOAD_USER_AFFINITIES_V2: f,
-    LOAD_USER_AFFINITIES_V2_SUCCESS: h,
-    LOAD_USER_AFFINITIES_V2_FAILURE: p,
-    LOGOUT: g,
+let f = new _(i.h, {
+    LOAD_USER_AFFINITIES_V2: function () {
+        l = !0;
+    },
+    LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
+        let { affineUsers: t } = e;
+        (d.lastFetched = Date.now()), (l = !1), (d.userAffinities = t), c();
+    },
+    LOAD_USER_AFFINITIES_V2_FAILURE: function () {
+        l = !1;
+    },
+    LOGOUT: function () {
+        (d = { ...u }), (o = new Map()), (l = !1);
+    },
 });

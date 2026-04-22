@@ -1,45 +1,46 @@
-l.d(t, { default: () => c });
+l.d(t, { default: () => o });
 var n = l(627968),
     i = l(311907),
-    a = l(397927),
-    s = l(442433),
-    d = l(684407),
-    r = l(985018);
-let c = (e) => {
-    let { guildId: t, welcomeChannel: l, onChannelReorder: c, onShowDeleteModal: o, index: p, onSelect: b } = e,
-        g = (0, i.bG)([d.A], () => d.A.get(t)),
-        h = (g?.welcome_channels ?? []).length - 1,
-        u = (e) => {
-            c(l, e, !0);
+    a = l(861672),
+    s = l(477782),
+    d = l(442433),
+    r = l(684407),
+    c = l(985018);
+let o = (e) => {
+    let { guildId: t, welcomeChannel: l, onChannelReorder: o, onShowDeleteModal: b, index: g, onSelect: h } = e,
+        u = (0, i.bG)([r.A], () => r.A.get(t)),
+        p = (u?.welcome_channels ?? []).length - 1,
+        x = (e) => {
+            o(l, e, !0);
         };
-    return (0, n.jsxs)(a.W1t, {
+    return (0, n.jsxs)(a.W, {
         "data-menu-migrated-auto": !0,
         navId: "welcome-settings-context",
-        "aria-label": r.intl.string(r.t.ogxXGq),
-        onClose: s.Z_,
-        onSelect: b,
+        "aria-label": c.intl.string(c.t.ogxXGq),
+        onClose: d.Z_,
+        onSelect: h,
         children: [
-            (0, n.jsxs)(a.rXV, {
+            (0, n.jsxs)(s.rX, {
                 children: [
-                    (0, n.jsx)(a.Drp, {
+                    (0, n.jsx)(s.Dr, {
                         id: "move-up",
-                        label: r.intl.string(r.t["4UBqwA"]),
-                        disabled: p <= 0,
-                        action: () => u(p - 1),
+                        label: c.intl.string(c.t["4UBqwA"]),
+                        disabled: g <= 0,
+                        action: () => x(g - 1),
                     }),
-                    (0, n.jsx)(a.Drp, {
+                    (0, n.jsx)(s.Dr, {
                         id: "move-down",
-                        label: r.intl.string(r.t.b73Gwa),
-                        disabled: p >= h,
-                        action: () => u(p + 1),
+                        label: c.intl.string(c.t.b73Gwa),
+                        disabled: g >= p,
+                        action: () => x(g + 1),
                     }),
                 ],
             }),
-            (0, n.jsx)(a.rXV, {
-                children: (0, n.jsx)(a.Drp, {
+            (0, n.jsx)(s.rX, {
+                children: (0, n.jsx)(s.Dr, {
                     id: "delete",
-                    label: r.intl.string(r.t.JYBc3K),
-                    action: o,
+                    label: c.intl.string(c.t.JYBc3K),
+                    action: b,
                     color: "danger",
                 }),
             }),

@@ -1,59 +1,52 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => g });
 var l = n(627968);
 n(64700);
-var i = n(417597),
-    s = n(397927),
-    a = n(355622),
-    r = n(349688),
-    o = n(914905),
-    d = n(302487),
-    c = n(522602),
-    u = n(985018),
-    m = n(343151);
-function h(e) {
+var a = n(417597),
+    s = n(834730),
+    i = n(573613),
+    r = n(355622),
+    o = n(349688),
+    d = n(914905),
+    c = n(302487),
+    u = n(522602),
+    m = n(985018),
+    h = n(343151);
+function g(e) {
     let { parentChannel: t } = e,
-        n = (0, i.yK)([c.A], () => {
-            let e = c.A.getUploads(t.id, a.oU.CREATE_FORUM_POST.drafts.type);
+        n = (0, a.yK)([u.A], () => {
+            let e = u.A.getUploads(t.id, r.oU.CREATE_FORUM_POST.drafts.type);
             return e?.filter((e) => !0 !== e.isThumbnail);
         });
     return (0, l.jsxs)("div", {
-        className: m.kL,
+        className: h.kL,
         children: [
-            (0, l.jsx)(s.Text, {
-                variant: "text-md/semibold",
-                color: "text-muted",
-                children: u.intl.string(u.t.omKGKu),
-            }),
-            (0, l.jsx)(s.Text, {
-                variant: "text-sm/normal",
-                color: "text-muted",
-                children: u.intl.string(u.t["zUjLl+"]),
-            }),
+            (0, l.jsx)(s.E, { variant: "text-md/semibold", color: "text-muted", children: m.intl.string(m.t.omKGKu) }),
+            (0, l.jsx)(s.E, { variant: "text-sm/normal", color: "text-muted", children: m.intl.string(m.t["zUjLl+"]) }),
             (0, l.jsx)("div", {
-                children: (0, l.jsx)(s.IpV, {
-                    className: m.mw,
+                children: (0, l.jsx)(i.Ip, {
+                    className: h.mw,
                     orientation: "horizontal",
                     paddingFix: !1,
                     fade: !0,
                     children: (0, l.jsxs)("div", {
-                        className: m.p8,
+                        className: h.p8,
                         children: [
                             n.map((e) =>
                                 (0, l.jsx)(
-                                    o.A,
+                                    d.A,
                                     {
                                         channelId: t.id,
-                                        draftType: a.oU.CREATE_FORUM_POST.drafts.type,
+                                        draftType: r.oU.CREATE_FORUM_POST.drafts.type,
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,
-                                        size: r.L.SMALL,
+                                        size: o.L.SMALL,
                                     },
                                     e.id,
                                 ),
                             ),
-                            (0, l.jsx)(d.A, { channelId: t.id }),
+                            (0, l.jsx)(c.A, { channelId: t.id }),
                         ],
                     }),
                 }),

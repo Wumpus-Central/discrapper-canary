@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { Z: () => r });
-class r {
+l.d(t, { Z: () => n });
+class n {
     *[Symbol.iterator]() {
         yield* [...this.rows];
     }
@@ -12,13 +11,13 @@ class r {
     }
     getKeyBefore(e) {
         var t;
-        let n = this.keyMap.get(e);
-        return n && null != (t = n.prevKey) ? t : null;
+        let l = this.keyMap.get(e);
+        return l && null != (t = l.prevKey) ? t : null;
     }
     getKeyAfter(e) {
         var t;
-        let n = this.keyMap.get(e);
-        return n && null != (t = n.nextKey) ? t : null;
+        let l = this.keyMap.get(e);
+        return l && null != (t = l.nextKey) ? t : null;
     }
     getFirstKey() {
         var e;
@@ -46,55 +45,55 @@ class r {
             (this.keyMap = new Map()),
             (this.columnCount = null == e ? void 0 : e.columnCount),
             (this.rows = []);
-        let t = (r) => {
-                var i, a, s, o, l;
-                let u = this.keyMap.get(r.key);
-                e.visitNode && (r = e.visitNode(r)), this.keyMap.set(r.key, r);
+        let t = (n) => {
+                var o, r, i, s, u;
+                let a = this.keyMap.get(n.key);
+                e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n);
                 let c = new Set(),
                     d = null,
-                    _ = !1;
-                if ("item" === r.type) {
-                    for (let e of r.childNodes)
-                        if ((null == (i = e.props) ? void 0 : i.colSpan) !== void 0) {
-                            _ = !0;
+                    g = !1;
+                if ("item" === n.type) {
+                    for (let e of n.childNodes)
+                        if ((null == (o = e.props) ? void 0 : o.colSpan) !== void 0) {
+                            g = !0;
                             break;
                         }
                 }
-                for (let e of r.childNodes)
+                for (let e of n.childNodes)
                     "cell" === e.type &&
-                        _ &&
-                        ((e.colspan = null == (a = e.props) ? void 0 : a.colSpan),
-                        (e.colSpan = null == (s = e.props) ? void 0 : s.colSpan),
+                        g &&
+                        ((e.colspan = null == (r = e.props) ? void 0 : r.colSpan),
+                        (e.colSpan = null == (i = e.props) ? void 0 : i.colSpan),
                         (e.colIndex = d
-                            ? (null != (o = d.colIndex) ? o : d.index) + (null != (l = d.colSpan) ? l : 1)
+                            ? (null != (s = d.colIndex) ? s : d.index) + (null != (u = d.colSpan) ? u : 1)
                             : e.index)),
-                        "cell" === e.type && null == e.parentKey && (e.parentKey = r.key),
+                        "cell" === e.type && null == e.parentKey && (e.parentKey = n.key),
                         c.add(e.key),
                         d ? ((d.nextKey = e.key), (e.prevKey = d.key)) : (e.prevKey = null),
                         t(e),
                         (d = e);
-                if ((d && (d.nextKey = null), u)) for (let e of u.childNodes) c.has(e.key) || n(e);
+                if ((d && (d.nextKey = null), a)) for (let e of a.childNodes) c.has(e.key) || l(e);
             },
-            n = (e) => {
-                for (let t of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(t.key) === t && n(t);
+            l = (e) => {
+                for (let t of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(t.key) === t && l(t);
             },
-            r = null;
-        for (let [n, c] of e.items.entries()) {
-            var i, a, s, o, l, u;
+            n = null;
+        for (let [l, c] of e.items.entries()) {
+            var o, r, i, s, u, a;
             let e = {
                 ...c,
-                level: null != (i = c.level) ? i : 0,
-                key: null != (a = c.key) ? a : "row-" + n,
-                type: null != (s = c.type) ? s : "row",
-                value: null != (o = c.value) ? o : null,
+                level: null != (o = c.level) ? o : 0,
+                key: null != (r = c.key) ? r : "row-" + l,
+                type: null != (i = c.type) ? i : "row",
+                value: null != (s = c.value) ? s : null,
                 hasChildNodes: !0,
                 childNodes: [...c.childNodes],
                 rendered: c.rendered,
-                textValue: null != (l = c.textValue) ? l : "",
-                index: null != (u = c.index) ? u : n,
+                textValue: null != (u = c.textValue) ? u : "",
+                index: null != (a = c.index) ? a : l,
             };
-            r ? ((r.nextKey = e.key), (e.prevKey = r.key)) : (e.prevKey = null), this.rows.push(e), t(e), (r = e);
+            n ? ((n.nextKey = e.key), (e.prevKey = n.key)) : (e.prevKey = null), this.rows.push(e), t(e), (n = e);
         }
-        r && (r.nextKey = null);
+        n && (n.nextKey = null);
     }
 }

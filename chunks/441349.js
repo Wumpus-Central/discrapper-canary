@@ -1,36 +1,37 @@
-a.d(l, { l: () => f });
+a.d(l, { l: () => y });
 var t = a(627968),
-    o = a(503698),
-    n = a.n(o),
+    n = a(503698),
+    o = a.n(n),
     i = a(13163),
-    s = a(60628),
-    r = a(521767),
+    r = a(60628),
+    s = a(521767),
     d = a(450902),
     u = a(650682),
     c = a(248062),
     b = a(561392),
-    p = a(720341),
-    m = a(452027),
-    x = a(934551),
-    h = a(862301),
-    v = a(460890),
-    y = a(316128);
-function f(e) {
-    let { value: l, onChange: a, minValue: o, maxValue: f, placeholderValue: g, ...V } = e,
-        { i18n: C } = (0, v.G9)(),
-        { fieldProps: j } = (0, m.n)(V),
-        { disabled: S, errorMessage: k, required: w = !1 } = j,
-        T = { hasError: null != k && "" !== k },
+    p = a(862019),
+    m = a(720341),
+    h = a(452027),
+    x = a(81466),
+    g = a(862301),
+    f = a(460890),
+    v = a(760345);
+function y(e) {
+    let { value: l, onChange: a, minValue: n, maxValue: y, placeholderValue: _, ...C } = e,
+        { i18n: j } = (0, f.G9)(),
+        { fieldProps: V } = (0, h.n)(C),
+        { disabled: k, errorMessage: S, required: w = !1 } = V,
+        M = { hasError: null != S && "" !== S },
         {
-            refs: M,
-            floatingStyles: D,
+            refs: T,
+            floatingStyles: A,
             isOpen: N,
-            setIsOpen: I,
-            context: E,
-            getFloatingProps: A,
+            setIsOpen: E,
+            context: D,
+            getFloatingProps: I,
             getReferenceProps: L,
         } = (0, b.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: O, styles: R } = (0, b.D)(E, {
+        { isMounted: R, styles: P } = (0, p.DL)(D, {
             common: (e) => {
                 let { side: l } = e;
                 return { transformOrigin: `${"top" === l ? "bottom" : "top"} center` };
@@ -38,69 +39,69 @@ function f(e) {
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
         }),
-        B = (e) => {
-            a?.(e), I(!1);
+        O = (e) => {
+            a?.(e), E(!1);
         };
-    return (0, t.jsx)(m.D, {
-        ...j,
+    return (0, t.jsx)(h.D, {
+        ...V,
         children: (e) =>
-            (0, t.jsx)(h.F, {
-                className: y.LF,
-                validation: T,
-                ref: M.setReference,
+            (0, t.jsx)(g.F, {
+                className: v.LF,
+                validation: M,
+                ref: T.setReference,
                 ...L(),
-                children: (0, t.jsxs)(s.lr, {
+                children: (0, t.jsxs)(r.lr, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
                     "aria-describedby": e.describedById,
                     "aria-invalid": null != e.errorMessageId,
                     "aria-errormessage": e.errorMessageId,
                     value: l,
-                    onChange: B,
-                    isDisabled: S,
+                    onChange: O,
+                    isDisabled: k,
                     isRequired: w,
-                    minValue: o,
-                    maxValue: f,
-                    placeholderValue: g,
+                    minValue: n,
+                    maxValue: y,
+                    placeholderValue: _,
                     granularity: "day",
                     "data-mana-component": "date-picker",
-                    className: y.Nz,
+                    className: v.Nz,
                     children: [
-                        (0, t.jsxs)(r.Y, {
-                            className: y.wO,
+                        (0, t.jsxs)(s.Y, {
+                            className: v.wO,
                             children: [
                                 (0, t.jsx)(d.J3, {
                                     children: (e) =>
-                                        (0, t.jsx)(d.Eu, { segment: e, className: n()(y.mX, e.isPlaceholder && y.qf) }),
+                                        (0, t.jsx)(d.Eu, { segment: e, className: o()(v.mX, e.isPlaceholder && v.qf) }),
                                 }),
                                 (0, t.jsx)(u.$, {
-                                    className: y.B7,
-                                    onClick: () => I(!N),
-                                    "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                    children: (0, t.jsx)(x.CalendarIcon, { size: "sm", color: "currentColor" }),
+                                    className: v.B7,
+                                    onClick: () => E(!N),
+                                    "aria-label": j.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                    children: (0, t.jsx)(x.C, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
                         N &&
-                            O &&
+                            R &&
                             (0, t.jsx)("div", {
-                                ...A(),
-                                ref: M.setFloating,
-                                style: D,
-                                className: y.oO,
+                                ...I(),
+                                ref: T.setFloating,
+                                style: A,
+                                className: v.oO,
                                 children: (0, t.jsx)(i.n1, {
                                     contain: !0,
                                     restoreFocus: !0,
                                     children: (0, t.jsx)(c.lG, {
-                                        "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                        style: R,
-                                        className: y.r3,
-                                        children: (0, t.jsx)(p.V, {
+                                        "aria-label": j.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                        style: P,
+                                        className: v.r3,
+                                        children: (0, t.jsx)(m.V, {
                                             value: l,
-                                            onChange: B,
-                                            minValue: o,
-                                            maxValue: f,
-                                            disabled: S,
+                                            onChange: O,
+                                            minValue: n,
+                                            maxValue: y,
+                                            disabled: k,
                                         }),
                                     }),
                                 }),

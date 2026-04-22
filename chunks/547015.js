@@ -1,93 +1,93 @@
-n.d(t, { A: () => C });
+n.r(t), n.d(t, { default: () => h });
 var l = n(627968),
-    r = n(64700),
-    a = n(503698),
-    i = n.n(a),
+    a = n(64700),
+    r = n(503698),
+    i = n.n(r),
     s = n(311907),
-    o = n(397927),
-    E = n(686956),
+    E = n(289873),
+    _ = n(686956),
     u = n(475743),
-    c = n(736653),
-    _ = n(80682),
+    o = n(736653),
+    c = n(80682),
     d = n(793574),
     A = n(688810),
     g = n(221950),
     T = n(950191),
     I = n(454719),
     N = n(946356),
-    h = n(696451),
+    G = n(696451),
     m = n(287809),
-    S = n(985925),
-    G = n(295191),
-    O = n(586387),
-    R = n(885858);
-function C(e) {
-    let { userId: t, guildId: n, onClose: a, className: C, infoPanelClassName: L, style: D, moderatorReportId: f } = e,
-        x = (0, S.q)(n),
-        M = (0, s.bG)([m.default], () => m.default.getUser(t), [t]),
-        p = (0, s.bG)([h.Ay], () => h.Ay.getMember(n, t), [n, t]),
-        [U, k] = r.useState(null == M || null == p),
-        b = (0, u.A)(p),
-        F = r.useRef(null),
-        { analyticsLocations: j } = (0, A.Ay)(d.A.GUILD_MEMBER_MOD_VIEW),
-        v = (0, T.Ay)(t, n),
-        P = (0, c.Ay)();
-    return (r.useEffect(() => {
-        x || a();
-    }, [x, a]),
-    r.useEffect(() => {
-        null == b || null != p || U || a();
-    }, [U, p, a, b]),
-    r.useEffect(() => {
-        null != M && null != p && k(!1);
-    }, [M, p]),
-    r.useEffect(() => {
-        let e = null == p;
+    O = n(985925),
+    S = n(295191),
+    R = n(586387),
+    D = n(271730);
+function h(e) {
+    let { userId: t, guildId: n, onClose: r, className: h, infoPanelClassName: L, style: C, moderatorReportId: M } = e,
+        f = (0, O.q)(n),
+        x = (0, s.bG)([m.default], () => m.default.getUser(t), [t]),
+        U = (0, s.bG)([G.Ay], () => G.Ay.getMember(n, t), [n, t]),
+        [p, b] = a.useState(null == x || null == U),
+        F = (0, u.A)(U),
+        k = a.useRef(null),
+        { analyticsLocations: P } = (0, A.Ay)(d.A.GUILD_MEMBER_MOD_VIEW),
+        j = (0, T.Ay)(t, n),
+        v = (0, o.Ay)();
+    return (a.useEffect(() => {
+        f || r();
+    }, [f, r]),
+    a.useEffect(() => {
+        null == F || null != U || p || r();
+    }, [p, U, r, F]),
+    a.useEffect(() => {
+        null != x && null != U && b(!1);
+    }, [x, U]),
+    a.useEffect(() => {
+        let e = null == U;
         return (
-            !U && e && (F.current = window.setTimeout(a, 500)),
+            !p && e && (k.current = window.setTimeout(r, 500)),
             () => {
-                null != F.current && window.clearTimeout(F.current);
+                null != k.current && window.clearTimeout(k.current);
             }
         );
-    }, [U, p, a]),
-    (0, _.Eq)({ [n]: [t] }, "GuildMemberModViewSidebar"),
-    r.useEffect(() => {
+    }, [p, U, r]),
+    (0, c.Eq)({ [n]: [t] }, "GuildMemberModViewSidebar"),
+    a.useEffect(() => {
         !(async function () {
             let e = [
-                E.A.requestMembersById(n, [t]),
+                _.A.requestMembersById(n, [t]),
                 (0, g.jo)(n, [t]),
                 (0, I.A)(t, void 0, { guildId: n, dispatchWait: !0 }),
             ];
-            await Promise.all(e), k(!1);
+            await Promise.all(e), b(!1);
         })();
     }, [n, t]),
-    x)
-        ? U || null == M || null == p
+    f)
+        ? p || null == x || null == U
             ? (0, l.jsx)("div", {
-                  className: i()(R.so, R.g4, C),
-                  style: D,
-                  children: (0, l.jsx)(o.y$y, {
+                  className: i()(D.so, D.g4, h),
+                  style: C,
+                  children: (0, l.jsx)(E.y, {
                       animated: !0,
-                      type: U ? o.y$y.Type.SPINNING_CIRCLE : o.y$y.Type.CHASING_DOTS,
+                      type: p ? E.y.Type.SPINNING_CIRCLE : E.y.Type.CHASING_DOTS,
                   }),
               })
             : (0, l.jsx)(A.f5, {
-                  value: j,
+                  value: P,
                   children: (0, l.jsx)("div", {
-                      className: i()(R.so, C),
-                      style: D,
+                      className: i()(D.so, h),
+                      style: C,
                       children: (0, l.jsx)(N.A, {
-                          user: M,
-                          displayProfile: v,
+                          user: x,
+                          displayProfile: j,
                           themeType: null,
-                          themeOverride: P,
+                          themeOverride: v,
                           forceShowPremium: !0,
-                          className: R.a2,
+                          className: D.a2,
                           children: (0, l.jsxs)("div", {
-                              className: R.WH,
+                              className: D.WH,
                               children: [
-                                  (0, l.jsx)(O.Ay, { userId: t, guildId: n, onClose: a, moderatorReportId: f }),
-                                  (0, l.jsx)(G.A, { userId: t, guildId: n, onClose: a, className: L }),
+                                  (0, l.jsx)(R.Ay, { userId: t, guildId: n, onClose: r, moderatorReportId: M }),
+                                  (0, l.jsx)(S.A, { userId: t, guildId: n, onClose: r, className: L }),
                               ],
                           }),
                       }),

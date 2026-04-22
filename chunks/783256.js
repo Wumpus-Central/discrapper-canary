@@ -1,108 +1,108 @@
-"use strict";
-n.d(t, { A: () => v });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(311907),
-    l = n(397927),
-    u = n(544420),
-    c = n(429913),
-    d = n(760751),
-    _ = n(486020),
-    f = n(403362),
-    p = n(183555),
-    h = n(633075),
-    m = n(289173),
-    E = n(946356),
-    g = n(939496),
-    A = n(996988),
-    I = n(985018),
-    T = n(539106);
-let S = 4;
-function y(e) {
-    let t = (0, c.A)(e.map((e) => e.applicationId));
-    return (0, o.cf)([d.A], () =>
-        Object.fromEntries(
-            t
-                .filter(f.Vq)
-                .map((e) => [e.id, d.A.getGameByApplication(e)])
-                .filter((e) => {
-                    let [t, n] = e;
-                    return null != n;
-                }),
-        ),
-    );
-}
-function v(e) {
-    let { widgets: t = [], onClick: n, className: s } = e,
-        { trackUserProfileAction: c } = (0, p.NJ)(),
-        v = y(t.filter((e) => e instanceof h.R)),
-        C = (0, i.useMemo)(
+a.d(i, { A: () => N });
+var n = a(627968),
+    t = a(64700),
+    l = a(503698),
+    s = a.n(l),
+    c = a(311907),
+    r = a(939249),
+    o = a(834730),
+    d = a(544420),
+    p = a(429913),
+    u = a(760751),
+    m = a(486020),
+    h = a(403362),
+    f = a(183555),
+    x = a(633075),
+    g = a(289173),
+    I = a(946356),
+    A = a(939496),
+    j = a(996988),
+    v = a(985018),
+    E = a(216914);
+function N(e) {
+    var i;
+    let a,
+        { widgets: l = [], onClick: N, className: b } = e,
+        { trackUserProfileAction: R } = (0, f.NJ)(),
+        w =
+            ((i = l.filter((e) => e instanceof x.R)),
+            (a = (0, p.A)(i.map((e) => e.applicationId))),
+            (0, c.cf)([u.A], () =>
+                Object.fromEntries(
+                    a
+                        .filter(h.Vq)
+                        .map((e) => [e.id, u.A.getGameByApplication(e)])
+                        .filter((e) => {
+                            let [i, a] = e;
+                            return null != a;
+                        }),
+                ),
+            )),
+        P = (0, t.useMemo)(
             () => [
                 ...new Set(
-                    t
+                    l
                         .map((e) =>
-                            e instanceof m.Yy
+                            e instanceof g.Yy
                                 ? e.games.map((e) => e.applicationId)
-                                : e instanceof h.R
-                                  ? v[e.applicationId]?.id
+                                : e instanceof x.R
+                                  ? w[e.applicationId]?.id
                                   : void 0,
                         )
-                        .filter(f.Vq)
+                        .filter(h.Vq)
                         .flat(),
                 ),
             ],
-            [t, v],
+            [l, w],
         ),
-        R = (0, o.bG)([d.A], () => d.A.canFetchDetectableGames()),
-        [O, b] = (0, i.useState)([]),
-        { themeType: D } = (0, g.E)(),
-        L = D === A.d.SIDEBAR,
-        w = (0, i.useRef)(!1);
+        _ = (0, c.bG)([u.A], () => u.A.canFetchDetectableGames()),
+        [y, S] = (0, t.useState)([]),
+        { themeType: M } = (0, A.E)(),
+        k = M === j.d.SIDEBAR,
+        O = (0, t.useRef)(!1);
     return (
-        (0, i.useEffect)(() => {
-            R
-                ? u.Ay.getDetectableGames()
-                : b(
-                      C.map((e) => d.A.getDetectableGame(e))
+        (0, t.useEffect)(() => {
+            _
+                ? d.Ay.getDetectableGames()
+                : S(
+                      P.map((e) => u.A.getDetectableGame(e))
                           .filter((e) => null != e)
                           .map((e) => ({
-                              image: _.Ay.getApplicationIconURL({ id: e.id, icon: e.icon }) ?? "",
+                              image: m.Ay.getApplicationIconURL({ id: e.id, icon: e.icon }) ?? "",
                               name: e.name,
                           }))
                           .filter((e) => "" !== e.image)
-                          .slice(0, S),
+                          .slice(0, 4),
                   );
-        }, [C, R]),
-        (0, i.useEffect)(() => {
-            0 === O.length || w.current || (c({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (w.current = !0));
-        }, [c, O.length]),
-        (0, r.jsx)(l.DUT, {
-            "aria-label": I.intl.string(I.t.JjiwFx),
+        }, [P, _]),
+        (0, t.useEffect)(() => {
+            0 === y.length || O.current || (R({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (O.current = !0));
+        }, [R, y.length]),
+        (0, n.jsx)(r.D, {
+            "aria-label": v.intl.string(v.t.JjiwFx),
             onClick: () => {
-                c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
+                R({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), N();
             },
-            className: T.QF,
-            children: (0, r.jsxs)(E.A.Overlay, {
-                className: a()(T.WH, s),
+            className: E.QF,
+            children: (0, n.jsxs)(I.A.Overlay, {
+                className: s()(E.WH, b),
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        variant: L ? "text-sm/medium" : "text-xs/medium",
-                        children: I.intl.string(I.t.JjiwFx),
+                    (0, n.jsx)(o.E, {
+                        variant: k ? "text-sm/medium" : "text-xs/medium",
+                        children: v.intl.string(v.t.JjiwFx),
                     }),
-                    (0, r.jsx)("div", {
-                        className: T.Pt,
-                        children: O.map((e, t) =>
-                            (0, r.jsx)(
-                                N,
+                    (0, n.jsx)("div", {
+                        className: E.Pt,
+                        children: y.map((e, i) =>
+                            (0, n.jsx)(
+                                C,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === O.length - 1 && C.length > S,
-                                    gameCount: C.length - O.length,
+                                    displayCount: i === y.length - 1 && P.length > 4,
+                                    gameCount: P.length - y.length,
                                 },
-                                t,
+                                i,
                             ),
                         ),
                     }),
@@ -111,16 +111,16 @@ function v(e) {
         })
     );
 }
-function N(e) {
-    let { iconUrl: t, name: n, displayCount: i, gameCount: s } = e;
-    return (0, r.jsxs)("div", {
-        className: T.Kk,
+function C(e) {
+    let { iconUrl: i, name: a, displayCount: t, gameCount: l } = e;
+    return (0, n.jsxs)("div", {
+        className: E.Kk,
         children: [
-            (0, r.jsx)("img", { className: a()({ [T.um]: i }), src: t, alt: n }),
-            i &&
-                (0, r.jsx)("div", {
-                    className: T.pp,
-                    children: (0, r.jsxs)(l.Text, { variant: "text-xs/medium", className: T.gq, children: ["+", s] }),
+            (0, n.jsx)("img", { className: s()({ [E.um]: t }), src: i, alt: a }),
+            t &&
+                (0, n.jsx)("div", {
+                    className: E.pp,
+                    children: (0, n.jsxs)(o.E, { variant: "text-xs/medium", className: E.gq, children: ["+", l] }),
                 }),
         ],
     });

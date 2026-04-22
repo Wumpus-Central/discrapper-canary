@@ -8,11 +8,11 @@ n.r(t),
         EMOJI_MAX_SLOTS_MORE: () => i,
         EMOJI_RE: () => a,
         EMOJI_URL_BASE_SIZE: () => u,
-        EmojiDisabledReasons: () => d,
-        EmojiIntention: () => _,
-        EmojiInteractionPoint: () => p,
-        EmojiSprites: () => c,
-        isExternalEmojiAllowedForIntention: () => h,
+        EmojiDisabledReasons: () => h,
+        EmojiIntention: () => p,
+        EmojiInteractionPoint: () => g,
+        EmojiSprites: () => E,
+        isExternalEmojiAllowedForIntention: () => A,
     });
 let r = 50,
     i = 200,
@@ -21,67 +21,59 @@ let r = 50,
     o = 256,
     l = 262144,
     u = 48;
-var c = (function (e) {
-        return (
-            (e[(e.NonDiversityPerRow = 42)] = "NonDiversityPerRow"),
-            (e[(e.DiversityPerRow = 10)] = "DiversityPerRow"),
-            (e[(e.PickerPerRow = 11)] = "PickerPerRow"),
-            (e[(e.PickerCount = 50)] = "PickerCount"),
-            e
-        );
-    })({}),
-    d = (function (e) {
-        return (
-            (e[(e.DISALLOW_EXTERNAL = 0)] = "DISALLOW_EXTERNAL"),
-            (e[(e.GUILD_SUBSCRIPTION_UNAVAILABLE = 1)] = "GUILD_SUBSCRIPTION_UNAVAILABLE"),
-            (e[(e.PREMIUM_LOCKED = 2)] = "PREMIUM_LOCKED"),
-            (e[(e.ONLY_GUILD_EMOJIS_ALLOWED = 3)] = "ONLY_GUILD_EMOJIS_ALLOWED"),
-            (e[(e.ROLE_SUBSCRIPTION_LOCKED = 4)] = "ROLE_SUBSCRIPTION_LOCKED"),
-            (e[(e.ROLE_SUBSCRIPTION_UNAVAILABLE = 5)] = "ROLE_SUBSCRIPTION_UNAVAILABLE"),
-            (e[(e.DISALLOW_CUSTOM = 6)] = "DISALLOW_CUSTOM"),
-            e
-        );
-    })({}),
-    _ = (function (e) {
-        return (
-            (e[(e.REACTION = 0)] = "REACTION"),
-            (e[(e.STATUS = 1)] = "STATUS"),
-            (e[(e.COMMUNITY_CONTENT = 2)] = "COMMUNITY_CONTENT"),
-            (e[(e.CHAT = 3)] = "CHAT"),
-            (e[(e.GUILD_STICKER_RELATED_EMOJI = 4)] = "GUILD_STICKER_RELATED_EMOJI"),
-            (e[(e.GUILD_ROLE_BENEFIT_EMOJI = 5)] = "GUILD_ROLE_BENEFIT_EMOJI"),
-            (e[(e.SOUNDBOARD = 6)] = "SOUNDBOARD"),
-            (e[(e.VOICE_CHANNEL_TOPIC = 7)] = "VOICE_CHANNEL_TOPIC"),
-            (e[(e.GIFT = 8)] = "GIFT"),
-            (e[(e.AUTO_SUGGESTION = 9)] = "AUTO_SUGGESTION"),
-            (e[(e.POLLS = 10)] = "POLLS"),
-            (e[(e.PROFILE = 11)] = "PROFILE"),
-            (e[(e.GUILD_PROFILE = 12)] = "GUILD_PROFILE"),
-            (e[(e.DEFAULT_REACT_EMOJI = 13)] = "DEFAULT_REACT_EMOJI"),
-            (e[(e.NO_CUSTOM_EMOJI = 14)] = "NO_CUSTOM_EMOJI"),
-            e
-        );
-    })({});
-let f = new Set([2, 4, 5, 6, 8]);
-var p = (function (e) {
-    return (
-        (e.EmojiButtonMouseEntered = "EMOJI_BUTTON_MOUSE_ENTERED"),
-        (e.EmojiButtonFocused = "EMOJI_BUTTON_FOCUSED"),
-        (e.ChatInputExpressionPressed = "CHAT_INPUT_EXPRESSION_PRESSED"),
-        (e.ChatInputSuggestionsShown = "CHAT_INPUT_SUGGESTIONS_SHOWN"),
-        (e.SearchEmojiKeybindPressed = "SEARCH_EMOJI_KEYBIND_PRESSED"),
-        (e.AutocompleteTyped = "AUTOCOMPLETE_TYPED"),
-        (e.AutocompleteWrapperShown = "AUTOCOMPLETE_WRAPPER_SHOWN"),
-        (e.GuildLeaveModalShown = "GUILD_LEAVE_MODAL_SHOWN"),
-        (e.AddReactionPopoutMouseEntered = "ADD_REACTION_POPOUT_MOUSE_ENTERED"),
-        (e.AddReactionPopoutFocused = "ADD_REACTION_POPOUT_FOCUSED"),
-        (e.MessageContextMenuMouseEntered = "MESSAGE_CONTEXT_MENU_MOUSE_ENTERED"),
-        (e.EmojiPickerActionSheetOpened = "EMOJI_PICKER_ACTION_SHEET_OPENED"),
-        (e.TrackOpenPopoutUsed = "TRACK_OPEN_POPOUT_USED"),
-        (e.CustomEmojiTooltipShown = "CUSTOM_EMOJI_TOOLTIP_SHOWN"),
-        e
-    );
-})({});
-function h(e) {
-    return !f.has(e);
+var d,
+    c,
+    _,
+    f,
+    E =
+        (((d = {})[(d.NonDiversityPerRow = 42)] = "NonDiversityPerRow"),
+        (d[(d.DiversityPerRow = 10)] = "DiversityPerRow"),
+        (d[(d.PickerPerRow = 11)] = "PickerPerRow"),
+        (d[(d.PickerCount = 50)] = "PickerCount"),
+        d),
+    h =
+        (((c = {})[(c.DISALLOW_EXTERNAL = 0)] = "DISALLOW_EXTERNAL"),
+        (c[(c.GUILD_SUBSCRIPTION_UNAVAILABLE = 1)] = "GUILD_SUBSCRIPTION_UNAVAILABLE"),
+        (c[(c.PREMIUM_LOCKED = 2)] = "PREMIUM_LOCKED"),
+        (c[(c.ONLY_GUILD_EMOJIS_ALLOWED = 3)] = "ONLY_GUILD_EMOJIS_ALLOWED"),
+        (c[(c.ROLE_SUBSCRIPTION_LOCKED = 4)] = "ROLE_SUBSCRIPTION_LOCKED"),
+        (c[(c.ROLE_SUBSCRIPTION_UNAVAILABLE = 5)] = "ROLE_SUBSCRIPTION_UNAVAILABLE"),
+        (c[(c.DISALLOW_CUSTOM = 6)] = "DISALLOW_CUSTOM"),
+        c),
+    p =
+        (((_ = {})[(_.REACTION = 0)] = "REACTION"),
+        (_[(_.STATUS = 1)] = "STATUS"),
+        (_[(_.COMMUNITY_CONTENT = 2)] = "COMMUNITY_CONTENT"),
+        (_[(_.CHAT = 3)] = "CHAT"),
+        (_[(_.GUILD_STICKER_RELATED_EMOJI = 4)] = "GUILD_STICKER_RELATED_EMOJI"),
+        (_[(_.GUILD_ROLE_BENEFIT_EMOJI = 5)] = "GUILD_ROLE_BENEFIT_EMOJI"),
+        (_[(_.SOUNDBOARD = 6)] = "SOUNDBOARD"),
+        (_[(_.VOICE_CHANNEL_TOPIC = 7)] = "VOICE_CHANNEL_TOPIC"),
+        (_[(_.GIFT = 8)] = "GIFT"),
+        (_[(_.AUTO_SUGGESTION = 9)] = "AUTO_SUGGESTION"),
+        (_[(_.POLLS = 10)] = "POLLS"),
+        (_[(_.PROFILE = 11)] = "PROFILE"),
+        (_[(_.GUILD_PROFILE = 12)] = "GUILD_PROFILE"),
+        (_[(_.DEFAULT_REACT_EMOJI = 13)] = "DEFAULT_REACT_EMOJI"),
+        (_[(_.NO_CUSTOM_EMOJI = 14)] = "NO_CUSTOM_EMOJI"),
+        _);
+let m = new Set([2, 4, 5, 6, 8]);
+var g =
+    (((f = {}).EmojiButtonMouseEntered = "EMOJI_BUTTON_MOUSE_ENTERED"),
+    (f.EmojiButtonFocused = "EMOJI_BUTTON_FOCUSED"),
+    (f.ChatInputExpressionPressed = "CHAT_INPUT_EXPRESSION_PRESSED"),
+    (f.ChatInputSuggestionsShown = "CHAT_INPUT_SUGGESTIONS_SHOWN"),
+    (f.SearchEmojiKeybindPressed = "SEARCH_EMOJI_KEYBIND_PRESSED"),
+    (f.AutocompleteTyped = "AUTOCOMPLETE_TYPED"),
+    (f.AutocompleteWrapperShown = "AUTOCOMPLETE_WRAPPER_SHOWN"),
+    (f.GuildLeaveModalShown = "GUILD_LEAVE_MODAL_SHOWN"),
+    (f.AddReactionPopoutMouseEntered = "ADD_REACTION_POPOUT_MOUSE_ENTERED"),
+    (f.AddReactionPopoutFocused = "ADD_REACTION_POPOUT_FOCUSED"),
+    (f.MessageContextMenuMouseEntered = "MESSAGE_CONTEXT_MENU_MOUSE_ENTERED"),
+    (f.EmojiPickerActionSheetOpened = "EMOJI_PICKER_ACTION_SHEET_OPENED"),
+    (f.TrackOpenPopoutUsed = "TRACK_OPEN_POPOUT_USED"),
+    (f.CustomEmojiTooltipShown = "CUSTOM_EMOJI_TOOLTIP_SHOWN"),
+    f);
+function A(e) {
+    return !m.has(e);
 }

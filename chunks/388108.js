@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { i: () => l });
-var r = n(627968);
-n(64700);
-var i = n(697431),
-    a = n(786558),
-    s = n(799226);
-let o = { "Emoji Neg": {}, "Emoji Mid": {}, "Emoji Happy": {} };
-function l(e) {
-    let { artboard: t = "Emoji Neg", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, s.CE)(i.A),
-        d = (0, s.m2)(i.A);
-    return u === s.BW.Loading
+a.d(t, { i: () => s });
+var l = a(627968);
+a(64700);
+var n = a(697431),
+    i = a(786558),
+    r = a(799226);
+let d = { "Emoji Neg": {}, "Emoji Mid": {}, "Emoji Happy": {} };
+function s(e) {
+    let { artboard: t = "Emoji Neg", stateMachine: a, ...s } = e,
+        { status: u, buffer: o } = (0, r.CE)(n.A),
+        b = (0, r.m2)(n.A);
+    return u === r.BW.Loading
         ? null
-        : (0, r.jsx)(a.w, {
-              ...(d ? { key: "override" } : {}),
-              buffer: c,
+        : (0, l.jsx)(i.w, {
+              ...(b ? { key: "override" } : {}),
+              buffer: o,
               artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+              stateMachine: a,
+              artboardProperties: d,
+              ...s,
           });
 }
-l.riveSrc = i.A;
+s.riveSrc = n.A;

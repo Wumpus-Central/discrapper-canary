@@ -1,207 +1,229 @@
-s.d(e, { q: () => R });
-var i = s(627968),
-    n = s(64700),
+s.d(e, { q: () => K });
+var n = s(627968),
+    i = s(64700),
     r = s(503698),
     a = s.n(r),
     l = s(311907),
-    c = s(397927),
-    o = s(147925),
-    d = s(303727),
-    u = s(954571),
-    N = s(661191),
-    m = s(739010),
-    h = s(207913),
-    x = s(393033),
-    g = s(671773),
-    E = s(335891),
-    A = s(985481),
-    I = s(239093),
-    _ = s(652215),
-    j = s(985018),
-    T = s(86789);
-let v = (t) => {
-        let { status: e, onClick: s, opened: n, count: r } = t;
-        return (0, i.jsxs)(c.DUT, {
-            className: T.wx,
+    c = s(939249),
+    o = s(738188),
+    d = s(827734),
+    u = s(534514),
+    N = s(369606),
+    m = s(834730),
+    h = s(192308),
+    E = s(761508),
+    g = s(147925),
+    x = s(303727),
+    A = s(954571),
+    I = s(661191),
+    _ = s(739010),
+    j = s(207913),
+    D = s(393033),
+    v = s(671773),
+    f = s(335891),
+    T = s(985481),
+    C = s(239093),
+    O = s(652215),
+    p = s(985018),
+    S = s(86789);
+let P = (t) => {
+        let { status: e, onClick: s, opened: i, count: r } = t;
+        return (0, n.jsxs)(c.D, {
+            className: S.wx,
             onClick: s,
             children: [
-                (0, i.jsx)("div", {
-                    className: T.Y5,
-                    children: (0, i.jsx)(c.id, {
+                (0, n.jsx)("div", {
+                    className: S.Y5,
+                    children: (0, n.jsx)(o.i, {
                         size: "md",
-                        color: "active" === e ? c.LU0.colors.INTERACTIVE_TEXT_ACTIVE : c.LU0.colors.ICON_MUTED,
+                        color: "active" === e ? d.A.colors.INTERACTIVE_TEXT_ACTIVE : d.A.colors.ICON_MUTED,
                     }),
                 }),
-                (0, i.jsxs)("div", {
-                    className: T.DD,
+                (0, n.jsxs)("div", {
+                    className: S.DD,
                     children: [
-                        (0, i.jsx)(c.Heading, {
+                        (0, n.jsx)(u.D, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             children:
                                 "active" === e
-                                    ? j.intl.formatToPlainString(j.t.IeV2oY, { count: r.toString() })
-                                    : j.intl.formatToPlainString(j.t.fZAHBT, { count: r.toString() }),
+                                    ? p.intl.formatToPlainString(p.t.IeV2oY, { count: r.toString() })
+                                    : p.intl.formatToPlainString(p.t.fZAHBT, { count: r.toString() }),
                         }),
-                        (0, i.jsx)(c.Heading, {
+                        (0, n.jsx)(u.D, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: "active" === e ? j.intl.string(j.t.XJ2YVR) : j.intl.string(j.t.SzGV0g),
+                            children: "active" === e ? p.intl.string(p.t.XJ2YVR) : p.intl.string(p.t.SzGV0g),
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", {
-                    className: T.OW,
-                    children: (0, i.jsx)(o.A, {
+                (0, n.jsx)("div", {
+                    className: S.OW,
+                    children: (0, n.jsx)(g.A, {
                         width: 18,
                         height: 18,
-                        direction: n ? o.A.Directions.UP : o.A.Directions.DOWN,
+                        direction: i ? g.A.Directions.UP : g.A.Directions.DOWN,
                     }),
                 }),
             ],
         });
     },
-    D = () =>
-        (0, i.jsxs)("div", {
-            className: T.p$,
+    R = () =>
+        (0, n.jsxs)("div", {
+            className: S.p$,
             children: [
-                (0, i.jsxs)("div", {
-                    className: T.zc,
+                (0, n.jsxs)("div", {
+                    className: S.zc,
                     children: [
-                        (0, i.jsx)("div", {
-                            className: T.Wk,
-                            children: (0, i.jsx)(c.OR, { size: "md", color: "currentColor", className: T.Kk }),
+                        (0, n.jsx)("div", {
+                            className: S.Wk,
+                            children: (0, n.jsx)(N.O, { size: "md", color: "currentColor", className: S.Kk }),
                         }),
-                        (0, i.jsx)(d.A, { className: T.uf }),
+                        (0, n.jsx)(x.A, { className: S.uf }),
                     ],
                 }),
-                (0, i.jsx)(c.Heading, {
-                    variant: "heading-md/bold",
-                    className: T.q6,
-                    children: j.intl.string(j.t.reLFaV),
-                }),
-                (0, i.jsx)(c.Text, { variant: "text-xs/normal", className: T.WO, children: j.intl.string(j.t.ERdH1o) }),
+                (0, n.jsx)(u.D, { variant: "heading-md/bold", className: S.q6, children: p.intl.string(p.t.reLFaV) }),
+                (0, n.jsx)(m.E, { variant: "text-xs/normal", className: S.WO, children: p.intl.string(p.t.ERdH1o) }),
             ],
         }),
-    f = () =>
-        (0, i.jsx)("div", {
-            className: T.p$,
-            children: (0, i.jsx)(c.Text, {
+    L = () =>
+        (0, n.jsx)("div", {
+            className: S.p$,
+            children: (0, n.jsx)(m.E, {
                 variant: "text-xs/normal",
-                className: T.WO,
-                children: j.intl.string(j.t.RV3AXf),
+                className: S.WO,
+                children: p.intl.string(p.t.RV3AXf),
             }),
         }),
-    C = (t) => {
+    b = (t) => {
         let { timestamp: e } = t;
-        return (0, i.jsx)(c.Text, { variant: "text-xs/normal", className: T.vE, children: (0, x._W)(e) });
+        return (0, n.jsx)(m.E, { variant: "text-xs/normal", className: S.vE, children: (0, D._W)(e) });
     },
-    O = () => (0, i.jsx)(c.Text, { variant: "text-xs/bold", className: T.Ad, children: j.intl.string(j.t.QKMRC4) }),
-    p = (t) => {
+    k = () => (0, n.jsx)(m.E, { variant: "text-xs/bold", className: S.Ad, children: p.intl.string(p.t.QKMRC4) }),
+    M = (t) => {
         let { classification: e } = t,
             { id: r, description: l } = e,
-            o = N.default.extractTimestamp(r),
-            d = (0, g.e)(e),
-            u = n.useMemo(() => {
+            o = I.default.extractTimestamp(r),
+            d = (0, v.e)(e),
+            N = i.useMemo(() => {
                 let t = {
                     description: l,
-                    descriptionHook: (t) =>
-                        (0, i.jsx)(c.Text, { tag: "span", variant: "heading-lg/bold", children: t }),
+                    descriptionHook: (t) => (0, n.jsx)(m.E, { tag: "span", variant: "heading-lg/bold", children: t }),
                 };
-                return (0, x._g)(e)
-                    ? e?.guild_metadata?.member_type === m.Z9.OWNER
-                        ? j.intl.format(j.t.Lb0HVv, { ...t, guildName: e?.guild_metadata?.name })
-                        : j.intl.format(j.t.rmpEPD, {
+                return (0, D._g)(e)
+                    ? e?.guild_metadata?.member_type === _.Z9.OWNER
+                        ? p.intl.format(p.t.Lb0HVv, { ...t, guildName: e?.guild_metadata?.name })
+                        : p.intl.format(p.t.rmpEPD, {
                               guildName: e?.guild_metadata?.name,
                               classification_type: t.description,
                               classificationHook: t.descriptionHook,
                           })
-                    : j.intl.format(j.t.QY4g5t, t);
+                    : p.intl.format(p.t.QY4g5t, t);
             }, [e, l]);
-        return (0, i.jsx)(
-            c.DUT,
+        return (0, n.jsx)(
+            c.D,
             {
                 onClick: () => {
-                    (0, c.mMO)(async () => {
+                    (0, h.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([
-                            s.e("57174"),
-                            s.e("91652"),
-                            s.e("68859"),
+                            s.e("24199"),
+                            s.e("57036"),
+                            s.e("70474"),
+                            s.e("76640"),
+                            s.e("7175"),
+                            s.e("55202"),
+                            s.e("23353"),
+                            s.e("73667"),
+                            s.e("11250"),
+                            s.e("14138"),
+                            s.e("3442"),
+                            s.e("85071"),
+                            s.e("88017"),
+                            s.e("70994"),
+                            s.e("17239"),
+                            s.e("24267"),
+                            s.e("51793"),
+                            s.e("58164"),
+                            s.e("81645"),
+                            s.e("36682"),
+                            s.e("25370"),
+                            s.e("96313"),
+                            s.e("64243"),
                             s.e("92414"),
                             s.e("9407"),
-                            s.e("70532"),
+                            s.e("4938"),
                         ]).then(s.bind(s, 956450));
-                        return (e) => (0, i.jsx)(t, { classificationId: r, source: I.XN.StandingTab, ...e });
+                        return (e) => (0, n.jsx)(t, { classificationId: r, source: C.XN.StandingTab, ...e });
                     });
                 },
-                className: a()(T.zk, { [T.V5]: d }),
-                children: (0, i.jsxs)("div", {
-                    className: T.iQ,
+                className: a()(S.zk, { [S.V5]: d }),
+                children: (0, n.jsxs)("div", {
+                    className: S.iQ,
                     children: [
-                        d ? (0, i.jsx)(O, {}) : (0, i.jsx)(C, { timestamp: o }),
-                        (0, i.jsx)(c.Heading, { variant: "heading-lg/normal", children: u }),
+                        d ? (0, n.jsx)(k, {}) : (0, n.jsx)(b, { timestamp: o }),
+                        (0, n.jsx)(u.D, { variant: "heading-lg/normal", children: N }),
                     ],
                 }),
             },
             r,
         );
     },
-    S = (t) => {
+    U = (t) => {
         let { status: e, classifications: s } = t,
-            [r, a] = n.useState(!1),
-            [o, d] = n.useState(3),
-            N = (0, E.K)(),
-            m = (0, l.bG)([h.A], () => h.A.getIsDsaEligible()),
-            x = n.useMemo(() => s.slice(0, o), [s, o]);
-        n.useEffect(() => {
+            [r, a] = i.useState(!1),
+            [c, o] = i.useState(3),
+            d = (0, f.K)(),
+            u = (0, l.bG)([j.A], () => j.A.getIsDsaEligible()),
+            N = i.useMemo(() => s.slice(0, c), [s, c]);
+        i.useEffect(() => {
             r &&
-                u.default.track(_.HAw.SAFETY_HUB_ACTION, {
-                    action: I.ZU.ViewViolationsDropdown,
-                    account_standing: N.state,
-                    classification_ids: x.map((t) => Number(t.id)),
-                    source: I.XN.StandingTab,
+                A.default.track(O.HAw.SAFETY_HUB_ACTION, {
+                    action: C.ZU.ViewViolationsDropdown,
+                    account_standing: d.state,
+                    classification_ids: N.map((t) => Number(t.id)),
+                    source: C.XN.StandingTab,
                     is_violative_content_shown: !1,
-                    is_dsa_eligible: m,
+                    is_dsa_eligible: u,
                 });
-        }, [r, N.state, x, m]);
-        let g = s.length - x.length > 3 ? 3 : s.length - x.length;
-        return (0, i.jsxs)("div", {
-            className: T.Wm,
+        }, [r, d.state, N, u]);
+        let m = s.length - N.length > 3 ? 3 : s.length - N.length;
+        return (0, n.jsxs)("div", {
+            className: S.Wm,
             children: [
-                (0, i.jsx)(v, { status: e, onClick: () => a((t) => !t), opened: r, count: s.length }),
+                (0, n.jsx)(P, { status: e, onClick: () => a((t) => !t), opened: r, count: s.length }),
                 r &&
-                    (0, i.jsxs)("div", {
-                        className: T.ld,
+                    (0, n.jsxs)("div", {
+                        className: S.ld,
                         children: [
-                            (0, i.jsx)(c.VQ0.Separator, { style: { height: "1px", width: "100%" } }),
-                            x.length > 0 && x.map((t) => (0, i.jsx)(p, { classification: t }, t.id)),
-                            x.length < s.length &&
-                                (0, i.jsxs)(i.Fragment, {
+                            (0, n.jsx)(E.V.Separator, { style: { height: "1px", width: "100%" } }),
+                            N.length > 0 && N.map((t) => (0, n.jsx)(M, { classification: t }, t.id)),
+                            N.length < s.length &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, i.jsx)(c.VQ0.Separator, { style: { height: "1px", width: "100%" } }),
-                                        (0, i.jsx)("button", {
-                                            className: T.Hr,
-                                            onClick: () => d((t) => t + g),
-                                            children: j.intl.format(j.t["9Ml56H"], { nextPageSize: g }),
+                                        (0, n.jsx)(E.V.Separator, { style: { height: "1px", width: "100%" } }),
+                                        (0, n.jsx)("button", {
+                                            className: S.Hr,
+                                            onClick: () => o((t) => t + m),
+                                            children: p.intl.format(p.t["9Ml56H"], { nextPageSize: m }),
                                         }),
                                     ],
                                 }),
-                            0 === x.length && "active" === e && (0, i.jsx)(D, {}),
-                            0 === x.length && "expired" === e && (0, i.jsx)(f, {}),
+                            0 === N.length && "active" === e && (0, n.jsx)(R, {}),
+                            0 === N.length && "expired" === e && (0, n.jsx)(L, {}),
                         ],
                     }),
             ],
         });
     },
-    R = () => {
-        let t = (0, A.CI)(),
-            e = (0, A.XK)();
+    K = () => {
+        let t = (0, T.CI)(),
+            e = (0, T.XK)();
         return 0 === t.length && 0 === e.length
             ? null
-            : (0, i.jsxs)("div", {
+            : (0, n.jsxs)("div", {
                   children: [
-                      (0, i.jsx)(S, { status: "active", classifications: t }),
-                      (0, i.jsx)(S, { status: "expired", classifications: e }),
+                      (0, n.jsx)(U, { status: "active", classifications: t }),
+                      (0, n.jsx)(U, { status: "expired", classifications: e }),
                   ],
               });
     };

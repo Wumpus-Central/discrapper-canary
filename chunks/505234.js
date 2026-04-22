@@ -1,8 +1,8 @@
-s.d(t, { A: () => i });
-var n = s(627968);
-s(64700);
-var l = s(621466),
-    a = s(442433);
+n.d(t, { A: () => i });
+var s = n(627968);
+n(64700);
+var l = n(621466),
+    a = n(442433);
 let i = (e) => {
     let { facepileRef: t, goToThread: i, channel: r } = e;
     return {
@@ -11,8 +11,10 @@ let i = (e) => {
         },
         handleRightClick: (e) =>
             (0, a.L3)(e, async () => {
-                let { default: e } = await Promise.all([s.e("95834"), s.e("94989"), s.e("9")]).then(s.bind(s, 44536));
-                return (t) => (0, n.jsx)(e, { ...t, channel: r });
+                let { default: e } = await Promise.all([n.e("95834"), n.e("94989"), n.e("22600")]).then(
+                    n.bind(n, 44536),
+                );
+                return (t) => (0, s.jsx)(e, { ...t, channel: r });
             }),
     };
 };

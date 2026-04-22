@@ -1,100 +1,97 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(684013),
-    a = n(793574),
-    r = n(833551),
-    o = n(287809),
-    d = n(9302),
-    c = n(684748),
-    u = n(672396),
-    h = n(985018),
-    p = n(821700);
-function A() {
+var s = n(821609),
+    l = n(231723),
+    a = n(192308),
+    r = n(684013),
+    o = n(793574),
+    d = n(833551),
+    c = n(287809),
+    u = n(9302),
+    h = n(684748),
+    p = n(672396),
+    f = n(985018),
+    A = n(277888);
+function _() {
     return (0, i.jsx)("div", {
-        className: p.q,
-        children: (0, i.jsx)(s.Button, {
-            variant: "active",
-            size: "sm",
-            text: h.intl.string(h.t.U76Ft2),
-            fullWidth: !0,
-        }),
+        className: A.q,
+        children: (0, i.jsx)(s.$, { variant: "active", size: "sm", text: f.intl.string(f.t.U76Ft2), fullWidth: !0 }),
     });
 }
-function f(e) {
+function g(e) {
     switch (e.type) {
-        case u.Jr.GO_LIVE_VOICE: {
-            let { game: t, voiceGuild: p } = e,
-                { trackView: f, trackClick: g } = (0, c.Y)(u.KS.GoLiveNudge, { notif_type: u.KS.GoLiveNudge });
+        case p.Jr.GO_LIVE_VOICE: {
+            let { game: t, voiceGuild: s } = e,
+                { trackView: A, trackClick: g } = (0, h.Y)(p.KS.GoLiveNudge, { notif_type: p.KS.GoLiveNudge });
             return {
                 icon: n(334260),
                 title: null,
-                body: h.intl.formatToPlainString(h.t.z9znpa, { game: t.name, server: p.name }),
-                hint: () => (0, i.jsx)(A, {}),
-                renderFooter: () => (0, i.jsx)(A, {}),
+                body: f.intl.formatToPlainString(f.t.z9znpa, { game: t.name, server: s.name }),
+                hint: () => (0, i.jsx)(_, {}),
+                renderFooter: () => (0, i.jsx)(_, {}),
                 onNotificationShow: () => {
-                    f();
+                    A();
                 },
                 onNotificationClick: (e, t) => {
                     g("unlock");
-                    let c = (0, d.getPID)();
-                    l.A.updateNotificationStatus(t);
-                    let u = r.default.isOverlayOOPEnabledForPid(c);
-                    if ((u ? l.A.setInputLocked(!1, c) : l.A.setInstanceLocked(!1), null == o.default.getCurrentUser()))
+                    let s = (0, u.getPID)();
+                    r.A.updateNotificationStatus(t);
+                    let h = d.default.isOverlayOOPEnabledForPid(s);
+                    if ((h ? r.A.setInputLocked(!1, s) : r.A.setInstanceLocked(!1), null == c.default.getCurrentUser()))
                         return;
-                    let h = u ? { contextKey: s.KX8 } : void 0;
-                    (0, s.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("96811"), n.e("13337")]).then(n.bind(n, 648230));
+                    let p = h ? { contextKey: l.KX } : void 0;
+                    (0, a.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([n.e("96811"), n.e("45150")]).then(n.bind(n, 648230));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                sourcePID: c,
+                                sourcePID: s,
                                 selectSource: !1,
-                                analyticsLocations: [a.A.OVERLAY_NUDGE],
+                                analyticsLocations: [o.A.OVERLAY_NUDGE],
                             });
-                    }, h);
+                    }, p);
                 },
                 onDismissClick: () => {
                     g("dismiss");
                 },
             };
         }
-        case u.Jr.GO_LIVE_NON_VOICE: {
+        case p.Jr.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: o, trackClick: p } = (0, c.Y)(u.KS.GoLiveNonVoiceNudge, {
-                    notif_type: u.KS.GoLiveNonVoiceNudge,
+                { trackView: s, trackClick: c } = (0, h.Y)(p.KS.GoLiveNonVoiceNudge, {
+                    notif_type: p.KS.GoLiveNonVoiceNudge,
                 });
             return {
                 icon: n(334260),
                 title: null,
-                body: h.intl.formatToPlainString(h.t["0SVWgF"], { game: t.name }),
-                hint: () => (0, i.jsx)(A, {}),
-                renderFooter: () => (0, i.jsx)(A, {}),
+                body: f.intl.formatToPlainString(f.t["0SVWgF"], { game: t.name }),
+                hint: () => (0, i.jsx)(_, {}),
+                renderFooter: () => (0, i.jsx)(_, {}),
                 onNotificationShow: () => {
-                    o();
+                    s();
                 },
                 onNotificationClick: (e, t) => {
-                    p("unlock");
-                    let o = (0, d.getPID)();
-                    l.A.updateNotificationStatus(t);
-                    let c = r.default.isOverlayOOPEnabledForPid(o);
-                    c ? l.A.setInputLocked(!1, o) : l.A.setInstanceLocked(!1);
-                    let u = c ? { contextKey: s.KX8 } : void 0;
-                    (0, s.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("96811"), n.e("13337")]).then(n.bind(n, 648230));
+                    c("unlock");
+                    let s = (0, u.getPID)();
+                    r.A.updateNotificationStatus(t);
+                    let h = d.default.isOverlayOOPEnabledForPid(s);
+                    h ? r.A.setInputLocked(!1, s) : r.A.setInstanceLocked(!1);
+                    let p = h ? { contextKey: l.KX } : void 0;
+                    (0, a.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([n.e("96811"), n.e("45150")]).then(n.bind(n, 648230));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                sourcePID: o,
+                                sourcePID: s,
                                 selectSource: !1,
-                                analyticsLocations: [a.A.OVERLAY_NUDGE],
+                                analyticsLocations: [o.A.OVERLAY_NUDGE],
                             });
-                    }, u);
+                    }, p);
                 },
                 onDismissClick: () => {
-                    p("dismiss");
+                    c("dismiss");
                 },
             };
         }

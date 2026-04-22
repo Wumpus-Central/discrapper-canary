@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { y: () => r });
-var r = (function (e) {
-    return (e[(e.FOCUSED = 0)] = "FOCUSED"), (e[(e.PIP = 1)] = "PIP"), e;
-})({});
+n.d(t, { y: () => i });
+var r,
+    i = (((r = {})[(r.FOCUSED = 0)] = "FOCUSED"), (r[(r.PIP = 1)] = "PIP"), r);

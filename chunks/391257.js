@@ -1,45 +1,46 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
-    a = n(435183),
-    r = n(47167),
-    o = n(46054),
-    c = n(95701),
-    d = n(576705),
-    u = n(314307),
-    h = n(652215),
-    m = n(985018),
-    A = n(542992),
-    g = n(782691);
-function p(e) {
+    a = n(821609),
+    s = n(22231),
+    r = n(435183),
+    o = n(47167),
+    c = n(46054),
+    d = n(95701),
+    u = n(576705),
+    h = n(314307),
+    m = n(652215),
+    A = n(985018),
+    g = n(329856),
+    p = n(992595);
+function _(e) {
     let { channel: t } = e,
-        n = (0, r.Ay)(t, !0),
-        p = (0, l.bG)([d.A], () => d.A.can(h.xBc.MANAGE_CHANNELS, t) && c.bk.has(t.type));
-    return (0, i.jsxs)(u.Ay, {
+        n = (0, o.Ay)(t, !0),
+        _ = (0, l.bG)([u.A], () => u.A.can(m.xBc.MANAGE_CHANNELS, t) && d.bk.has(t.type));
+    return (0, i.jsxs)(h.Ay, {
         channelId: t.id,
         children: [
-            (0, i.jsx)(u.WK, { channelType: t.type }),
-            (0, i.jsx)(u.cr, { children: m.intl.format(m.t.I3R7Vn, { channelName: n }) }),
-            (0, i.jsx)(u.j1, {
-                className: g.PT,
-                children: m.intl.format(m.t.pYMVRT, {
+            (0, i.jsx)(h.WK, { channelType: t.type }),
+            (0, i.jsx)(h.cr, { children: A.intl.format(A.t.I3R7Vn, { channelName: n }) }),
+            (0, i.jsx)(h.j1, {
+                className: p.PT,
+                children: A.intl.format(A.t.pYMVRT, {
                     channelName: n,
-                    topicHook: () => o.A.parseTopic(t.topic, !0, { channelId: t.id }),
+                    topicHook: () => c.A.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
             }),
-            p
+            _
                 ? (0, i.jsx)("div", {
-                      className: A.U,
-                      children: (0, i.jsx)(s.Button, {
+                      className: g.U,
+                      children: (0, i.jsx)(a.$, {
                           size: "sm",
                           variant: "secondary",
-                          text: m.intl.string(m.t["3gUsJb"]),
+                          text: A.intl.string(A.t["3gUsJb"]),
                           onClick: () => {
-                              a.Ay.open(t.id);
+                              r.Ay.open(t.id);
                           },
-                          icon: s.R2l,
+                          icon: s.R,
                       }),
                   })
                 : null,

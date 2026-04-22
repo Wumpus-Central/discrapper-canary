@@ -1,46 +1,50 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
-    s = n(554146),
-    a = n(397927),
-    r = n(367727),
-    o = n(954571),
-    d = n(635995),
-    c = n(88001),
-    u = n(652215),
-    h = n(49999),
-    A = n(466919),
-    _ = n(985018),
-    m = n(375043);
-function p(e) {
+    r = n(64700),
+    l = n(554146);
+if (21552 == n.j) var s = n(192308);
+if (21552 == n.j) var a = n(403581);
+if (21552 == n.j) var o = n(827734);
+if (21552 == n.j) var c = n(821609);
+var u = n(367727),
+    d = n(954571),
+    _ = n(635995),
+    E = n(88001),
+    A = n(652215),
+    m = n(49999),
+    I = n(466919),
+    T = n(985018),
+    N = n(375043);
+function g(e) {
     let { premiumSubscription: t } = e,
-        p = t?.id,
-        g = l.useCallback(() => {
-            null != p && (0, r.qr)(s.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR, p, { dismissAction: h.i.USER_DISMISS });
-        }, [p]),
-        f = l.useCallback(() => {
-            g(), o.default.track(u.HAw.APP_NOTICE_CLOSED, { notice_type: u.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR });
+        g = t?.id,
+        p = r.useCallback(() => {
+            null != g && (0, u.qr)(l.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR, g, { dismissAction: m.i.USER_DISMISS });
         }, [g]),
-        E = l.useCallback(() => {
+        C = r.useCallback(() => {
+            p(), d.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR });
+        }, [p]),
+        f = r.useCallback(() => {
             null != t &&
-                (o.default.track(u.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                    notice_type: u.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
+                (d.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                    notice_type: A.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
                 }),
-                g(),
-                (0, a.mMO)(async () => {
+                p(),
+                (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e("73987").then(n.bind(n, 773486));
                     return (n) => (0, i.jsx)(e, { ...n, subscription: t });
                 }));
-        }, [t, g]);
-    return (0, i.jsxs)(d.T0, {
-        onClick: f,
-        className: m.A,
+        }, [t, p]);
+    return (0, i.jsxs)(_.T0, {
+        onClick: C,
+        className: N.A,
         children: [
-            (0, i.jsx)(a.tvc, { color: a.LU0.colors.ICON_STRONG }),
-            (0, i.jsx)(d.In, { children: _.intl.format(A.default.fFt9bd, { premiumGroupProductName: (0, c.DP)() }) }),
-            (0, i.jsx)(a.Button, {
-                onClick: E,
-                text: _.intl.string(A.default["5fZHp3"]),
+            (0, i.jsx)(a.t, { color: o.A.colors.ICON_STRONG }),
+            (0, i.jsx)(_.In, { children: T.intl.format(I.default.fFt9bd, { premiumGroupProductName: (0, E.DP)() }) }),
+            (0, i.jsx)(c.$, {
+                onClick: f,
+                text: T.intl.string(I.default["5fZHp3"]),
                 size: "sm",
                 variant: "overlay-primary",
             }),

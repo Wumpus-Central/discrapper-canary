@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { A: () => m });
-var r = n(64700),
-    i = n(308528),
-    s = n(843472),
-    a = n(56562),
-    o = n(432222),
-    l = n(976860),
-    u = n(734057),
-    c = n(320501),
-    d = n(954571),
-    _ = n(652215),
+n.d(t, { A: () => h });
+var l = n(64700),
+    a = n(308528),
+    r = n(843472),
+    i = n(56562),
+    s = n(432222),
+    o = n(976860),
+    d = n(734057),
+    u = n(320501),
+    c = n(954571),
+    A = n(652215),
     f = n(381941),
-    p = n(901123),
-    h = n(985018);
-function m(e, t) {
-    let n = r.useRef(!1);
-    return r.useCallback(
-        async (r, m) => {
+    _ = n(901123),
+    p = n(985018);
+function h(e, t) {
+    let n = l.useRef(!1);
+    return l.useCallback(
+        async (l, h) => {
             try {
                 if (n.current) return;
                 n.current = !0;
-                let h = await i.A.openPrivateChannel({ recipientIds: e, location: t, navigateToChannel: !1 }),
-                    m = u.A.getChannel(h);
-                if (null == m) throw Error("Failed to open private channel");
-                d.default.track(_.HAw.WAVE_CTA_CLICKED, { source: t }),
-                    await s.A.sendStickers(m.id, [o.w], "", { location: f.Hx.SEND_WAVE }),
-                    r?.(),
-                    (0, l.pX)(_.BVt.CHANNEL(p.ME, m.id)),
-                    s.A.jumpToMessage({
-                        channelId: m.id,
-                        messageId: c.A.getLastMessage(m.id)?.id ?? "",
-                        jumpType: a.US.INSTANT,
+                let p = await a.A.openPrivateChannel({ recipientIds: e, location: t, navigateToChannel: !1 }),
+                    h = d.A.getChannel(p);
+                if (null == h) throw Error("Failed to open private channel");
+                c.default.track(A.HAw.WAVE_CTA_CLICKED, { source: t }),
+                    await r.A.sendStickers(h.id, [s.w], "", { location: f.Hx.SEND_WAVE }),
+                    l?.(),
+                    (0, o.pX)(A.BVt.CHANNEL(_.ME, h.id)),
+                    r.A.jumpToMessage({
+                        channelId: h.id,
+                        messageId: u.A.getLastMessage(h.id)?.id ?? "",
+                        jumpType: i.US.INSTANT,
                     });
             } catch (e) {
-                m(h.intl.string(h.t.Q97Gke));
+                h(p.intl.string(p.t.Q97Gke));
             } finally {
                 n.current = !1;
             }

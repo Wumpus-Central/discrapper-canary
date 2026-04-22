@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { Dz: () => s, fr: () => r });
+n.d(t, { Dz: () => l, fr: () => r });
 var i = n(985018);
-let s = {
+let l = {
         14: [
             () => i.intl.string(i.t.D7iWE8),
             () => i.intl.string(i.t["/L7rG6"]),
@@ -178,20 +177,20 @@ let s = {
             () => i.intl.string(i.t.QiafXT),
         ],
     },
-    l = ["en-GB"];
+    s = ["en-GB"];
 function r() {
     return (0, i.getAvailableLocales)()
         .map((e) => {
             let t,
-                { value: s, name: l } = e;
+                { value: l, name: s } = e;
             try {
                 t = n(579832)(`./${e.value}.png`);
             } catch (e) {
                 t = n(432706);
             }
-            return "en-US" === s
-                ? { id: s, value: s, label: i.intl.string(i.t.WKEPHR), image: t }
-                : { id: s, value: s, label: l, image: t };
+            return "en-US" === l
+                ? { id: l, value: l, label: i.intl.string(i.t.WKEPHR), image: t }
+                : { id: l, value: l, label: s, image: t };
         })
-        .filter((e) => !l.includes(e.value));
+        .filter((e) => !s.includes(e.value));
 }

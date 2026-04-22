@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => A });
-var r = n(627968),
-    i = n(64700),
-    s = n(843472),
-    a = n(684013),
-    o = n(334738),
-    l = n(964486),
-    u = n(480870),
-    c = n(355622),
-    d = n(408018),
-    _ = n(133343),
-    f = n(451909),
-    p = n(135621),
-    h = n(395011),
-    m = n(652215),
-    E = n(381941),
-    g = n(433788);
-function A(e) {
-    let { id: t, replyToMessageId: n, channel: A, onSend: I } = e,
-        T = (0, p.A)(),
-        { placeholder: S, accessibilityLabel: y } = (0, u.A)({ channel: A }),
-        [v, N] = i.useState(() => (0, d.N3)()),
-        { textValue: C, richValue: b } = v,
-        [R, O] = i.useState(!1),
-        D = i.useCallback(() => O(!0), []),
-        L = i.useCallback(() => O(!1), []);
-    (0, l.Ay)(() => {
-        (0, o.ack)(
-            A.id,
+i.d(e, { A: () => E });
+var n = i(627968),
+    l = i(64700),
+    a = i(843472),
+    r = i(684013),
+    s = i(334738),
+    o = i(964486),
+    u = i(480870),
+    c = i(355622),
+    d = i(408018),
+    A = i(133343),
+    f = i(451909),
+    y = i(135621),
+    p = i(395011),
+    m = i(652215),
+    I = i(381941),
+    g = i(267475);
+function E(t) {
+    let { id: e, replyToMessageId: i, channel: E, onSend: N } = t,
+        _ = (0, y.A)(),
+        { placeholder: T, accessibilityLabel: S } = (0, u.A)({ channel: E }),
+        [C, h] = l.useState(() => (0, d.N3)()),
+        { textValue: v, richValue: O } = C,
+        [x, L] = l.useState(!1),
+        D = l.useCallback(() => L(!0), []),
+        b = l.useCallback(() => L(!1), []);
+    (0, o.Ay)(() => {
+        (0, s.ack)(
+            E.id,
             {
                 section: m.JJy.OVERLAY,
                 object: m.ZSU.ACK_INLINE_REPLY,
@@ -35,46 +34,46 @@ function A(e) {
             },
             !0,
             !0,
-            n,
+            i,
         );
     });
-    let w = i.useCallback((e, t, n) => {
-            N({ textValue: t, richValue: n });
+    let R = l.useCallback((t, e, i) => {
+            h({ textValue: e, richValue: i });
         }, []),
-        x = i.useCallback(
-            (e) => {
-                "Escape" === e.key && a.A.updateNotificationStatus(t, m.yFH.ACTIVE);
+        k = l.useCallback(
+            (t) => {
+                "Escape" === t.key && r.A.updateNotificationStatus(e, m.yFH.ACTIVE);
             },
-            [t],
+            [e],
         ),
-        M = i.useCallback(
+        U = l.useCallback(
             () => (
-                C.length > T ||
-                    (s.A.sendMessage(A.id, f.Ay.parse(A, C), !1, { location: E.Hx.OVERLAY }),
-                    a.A.setInputLocked(!0, h.A.getTargetPID()),
-                    a.A.updateNotificationStatus(t, m.yFH.DISMISSED),
-                    I?.(C)),
+                v.length > _ ||
+                    (a.A.sendMessage(E.id, f.Ay.parse(E, v), !1, { location: I.Hx.OVERLAY }),
+                    r.A.setInputLocked(!0, p.A.getTargetPID()),
+                    r.A.updateNotificationStatus(e, m.yFH.DISMISSED),
+                    N?.(v)),
                 Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
             ),
-            [C, T, A, t, I],
+            [v, _, E, e, N],
         );
-    return (0, r.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: g.k,
-        children: (0, r.jsx)(_.Ay, {
+        children: (0, n.jsx)(A.Ay, {
             innerClassName: g.T,
-            onChange: w,
-            placeholder: S,
-            accessibilityLabel: y,
-            channel: A,
-            textValue: C,
-            richValue: b,
+            onChange: R,
+            placeholder: T,
+            accessibilityLabel: S,
+            channel: E,
+            textValue: v,
+            richValue: O,
             type: c.oU.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
-            onBlur: L,
+            onBlur: b,
             onFocus: D,
-            focused: R,
-            onSubmit: M,
-            onKeyDown: x,
+            focused: x,
+            onSubmit: U,
+            onKeyDown: k,
             autoCompletePosition: "bottom",
             disableThemedBackground: !0,
         }),

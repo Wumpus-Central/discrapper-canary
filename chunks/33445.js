@@ -1,8 +1,8 @@
-n.d(t, { A: () => h, E: () => I });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => f, E: () => v });
+var l = n(627968),
+    i = n(64700),
     a = n(311907),
-    r = n(397927),
+    r = n(289873),
     o = n(475743),
     s = n(587895),
     c = n(574172),
@@ -11,44 +11,44 @@ var i = n(627968),
     p = n(969151),
     A = n(833147),
     m = n(780376),
-    f = n(652215),
-    x = n(823226);
-function I(e) {
+    h = n(652215),
+    x = n(376554);
+function v(e) {
     let { activity: t, renderHeader: n, renderActivityIFrameWithLoadedData: u, isLoading: p = !1 } = e,
-        A = l.useRef(null),
+        A = i.useRef(null),
         m = (0, o.A)(t);
-    l.useEffect(() => {
+    i.useEffect(() => {
         null != t
             ? clearTimeout(A.current)
             : null != m &&
               null == t &&
               (A.current = window.setTimeout(() => {
-                  (0, c.close)(f.MLl.ACTIVITY_POPOUT);
+                  (0, c.close)(h.MLl.ACTIVITY_POPOUT);
               }, 5e3));
     }, [m, t]);
-    let I = (0, a.bG)([s.A], () => {
+    let v = (0, a.bG)([s.A], () => {
         let e = t?.applicationId;
         return null == e ? void 0 : s.A.getApplication(e);
     });
-    return (0, i.jsx)("div", {
+    return (0, l.jsx)("div", {
         className: x.kL,
         children:
-            null == t || null == I || p
-                ? (0, i.jsx)(r.y$y, { className: x.pU })
-                : (0, i.jsx)("div", {
+            null == t || null == v || p
+                ? (0, l.jsx)(r.y, { className: x.pU })
+                : (0, l.jsx)("div", {
                       className: x.U$,
-                      children: (0, i.jsxs)("div", {
+                      children: (0, l.jsxs)("div", {
                           className: x.kq,
                           children: [
-                              (0, i.jsx)("div", { className: x.N1, children: n({ application: I }) }),
-                              (0, i.jsx)(d.A, { applicationId: I.id }),
-                              (0, i.jsx)("div", { className: x.Wc, children: u({ application: I }) }),
+                              (0, l.jsx)("div", { className: x.N1, children: n({ application: v }) }),
+                              (0, l.jsx)(d.A, { applicationId: v.id }),
+                              (0, l.jsx)("div", { className: x.Wc, children: u({ application: v }) }),
                           ],
                       }),
                   }),
     });
 }
-function h() {
+function f() {
     let {
             embeddedActivity: e,
             channelId: t,
@@ -60,16 +60,16 @@ function h() {
             return { embeddedActivity: e, channelId: t, guildId: n };
         }),
         r = (0, a.bG)([u.Ay], () => e?.applicationId != null && u.Ay.isProxyTicketRefreshing(e.applicationId), [e]),
-        o = l.useCallback(
+        o = i.useCallback(
             (e) => {
                 let { application: n } = e;
-                return (0, i.jsx)(m.A, { applicationId: n.id, channelId: t });
+                return (0, l.jsx)(m.A, { applicationId: n.id, channelId: t });
             },
             [t],
         ),
-        s = l.useCallback(
-            (l) => {
-                let { application: a } = l,
+        s = i.useCallback(
+            (i) => {
+                let { application: a } = i,
                     r = {};
                 null != e &&
                     ((r.instance_id = e.compositeInstanceId ?? e.launchId ?? ""),
@@ -80,9 +80,9 @@ function h() {
                     null != n && "" !== n && (r.guild_id = n),
                     null != t && "" !== t && (r.channel_id = t));
                 let o = e?.url;
-                return (0, i.jsx)(A.A, { application: a, queryParams: r, url: o });
+                return (0, l.jsx)(A.A, { application: a, queryParams: r, url: o });
             },
             [t, n, e],
         );
-    return (0, i.jsx)(I, { activity: e, isLoading: r, renderHeader: o, renderActivityIFrameWithLoadedData: s });
+    return (0, l.jsx)(v, { activity: e, isLoading: r, renderHeader: o, renderActivityIFrameWithLoadedData: s });
 }

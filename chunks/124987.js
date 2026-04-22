@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { $: () => r });
-var r = (function (e) {
-    return (
-        (e.PRICE = "price"),
-        (e.ALPHABETICAL = "alphabetical"),
-        (e.RECENCY = "recency"),
-        (e.POPULARITY = "popularity"),
-        (e.RELEVANCE = "relevance"),
-        e
-    );
-})({});
+n.d(t, { $: () => i });
+var r,
+    i =
+        (((r = {}).PRICE = "price"),
+        (r.ALPHABETICAL = "alphabetical"),
+        (r.RECENCY = "recency"),
+        (r.POPULARITY = "popularity"),
+        (r.RELEVANCE = "relevance"),
+        r);

@@ -1,124 +1,99 @@
 "use strict";
-n.d(t, { s: () => T });
+n.d(t, { s: () => _ });
 var r = n(321733),
     i = n(681456),
-    a = n(594578),
-    s = n(950143),
+    s = n(594578),
+    a = n(950143),
     o = n(73768),
     l = n(964527);
 function u(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function c(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function d(e, t, n) {
-    return t && c(e.prototype, t), n && c(e, n), e;
-}
-function _(e, t) {
-    return g(e) || m(e, t) || p(e, t) || f();
-}
-function f() {
-    throw TypeError(
-        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
-    );
-}
-function p(e, t) {
-    if (e) {
-        if ("string" == typeof e) return h(e, t);
-        var n = Object.prototype.toString.call(e).slice(8, -1);
-        if (("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n))
-            return Array.from(e);
-        if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return h(e, t);
-    }
-}
-function h(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-function m(e, t) {
-    if ("u" > typeof Symbol && Symbol.iterator in Object(e)) {
-        var n = [],
-            r = !0,
-            i = !1,
-            a = void 0;
-        try {
-            for (
-                var s, o = e[Symbol.iterator]();
-                !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t);
-                r = !0
-            );
-        } catch (e) {
-            (i = !0), (a = e);
-        } finally {
-            try {
-                r || null == o.return || o.return();
-            } finally {
-                if (i) throw a;
-            }
-        }
-        return n;
-    }
-}
-function g(e) {
-    if (Array.isArray(e)) return e;
-}
-function E(e) {
-    var t = (0, a.Q)().toString();
-    switch (e) {
-        case s.z.SOURCE:
-            return "S".concat(t);
-        case s.z.TARGET:
-            return "T".concat(t);
-        default:
-            throw Error("Unknown Handler Role: ".concat(e));
-    }
-}
-function A(e) {
+function d(e) {
     switch (e[0]) {
         case "S":
-            return s.z.SOURCE;
+            return a.z.SOURCE;
         case "T":
-            return s.z.TARGET;
+            return a.z.TARGET;
         default:
             (0, r.V)(!1, "Cannot parse handler ID: ".concat(e));
     }
 }
-function I(e, t) {
+function c(e, t) {
     var n = e.entries(),
         r = !1;
     do {
-        var i = n.next(),
-            a = i.done;
-        if (_(i.value, 2)[1] === t) return !0;
+        var i,
+            s = n.next(),
+            a = s.done;
+        if (
+            ((function (e) {
+                if (Array.isArray(e)) return e;
+            })((i = s.value)) ||
+                (function (e) {
+                    if ("u" > typeof Symbol && Symbol.iterator in Object(e)) {
+                        var t = [],
+                            n = !0,
+                            r = !1,
+                            i = void 0;
+                        try {
+                            for (
+                                var s, a = e[Symbol.iterator]();
+                                !(n = (s = a.next()).done) && (t.push(s.value), 2 !== t.length);
+                                n = !0
+                            );
+                        } catch (e) {
+                            (r = !0), (i = e);
+                        } finally {
+                            try {
+                                n || null == a.return || a.return();
+                            } finally {
+                                if (r) throw i;
+                            }
+                        }
+                        return t;
+                    }
+                })(i) ||
+                (function (e) {
+                    if (e) {
+                        if ("string" == typeof e) return u(e, 2);
+                        var t = Object.prototype.toString.call(e).slice(8, -1);
+                        if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
+                            return Array.from(e);
+                        if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return u(e, 2);
+                    }
+                })(i) ||
+                (function () {
+                    throw TypeError(
+                        "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+                    );
+                })())[1] === t
+        )
+            return !0;
         r = !!a;
     } while (!r);
     return !1;
 }
-var T = (function () {
-    function e(t) {
-        u(this, e),
-            (this.types = new Map()),
+var _ = (function () {
+    var e;
+    function t(e) {
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        (this.types = new Map()),
             (this.dragSources = new Map()),
             (this.dropTargets = new Map()),
             (this.pinnedSourceId = null),
             (this.pinnedSource = null),
-            (this.store = t);
+            (this.store = e);
     }
     return (
-        d(e, [
+        (e = [
             {
                 key: "addSource",
                 value: function (e, t) {
                     (0, o.v2)(e), (0, o.Mv)(t);
-                    var n = this.addHandler(s.z.SOURCE, e, t);
+                    var n = this.addHandler(a.z.SOURCE, e, t);
                     return this.store.dispatch((0, i.pM)(n)), n;
                 },
             },
@@ -126,14 +101,14 @@ var T = (function () {
                 key: "addTarget",
                 value: function (e, t) {
                     (0, o.v2)(e, !0), (0, o.kV)(t);
-                    var n = this.addHandler(s.z.TARGET, e, t);
+                    var n = this.addHandler(a.z.TARGET, e, t);
                     return this.store.dispatch((0, i.z9)(n)), n;
                 },
             },
             {
                 key: "containsHandler",
                 value: function (e) {
-                    return I(this.dragSources, e) || I(this.dropTargets, e);
+                    return c(this.dragSources, e) || c(this.dropTargets, e);
                 },
             },
             {
@@ -167,13 +142,13 @@ var T = (function () {
             {
                 key: "isSourceId",
                 value: function (e) {
-                    return A(e) === s.z.SOURCE;
+                    return d(e) === a.z.SOURCE;
                 },
             },
             {
                 key: "isTargetId",
                 value: function (e) {
-                    return A(e) === s.z.TARGET;
+                    return d(e) === a.z.TARGET;
                 },
             },
             {
@@ -214,15 +189,34 @@ var T = (function () {
             {
                 key: "addHandler",
                 value: function (e, t, n) {
-                    var r = E(e);
+                    var r = (function (e) {
+                        var t = (0, s.Q)().toString();
+                        switch (e) {
+                            case a.z.SOURCE:
+                                return "S".concat(t);
+                            case a.z.TARGET:
+                                return "T".concat(t);
+                            default:
+                                throw Error("Unknown Handler Role: ".concat(e));
+                        }
+                    })(e);
                     return (
                         this.types.set(r, t),
-                        e === s.z.SOURCE ? this.dragSources.set(r, n) : e === s.z.TARGET && this.dropTargets.set(r, n),
+                        e === a.z.SOURCE ? this.dragSources.set(r, n) : e === a.z.TARGET && this.dropTargets.set(r, n),
                         r
                     );
                 },
             },
         ]),
-        e
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

@@ -1,7 +1,7 @@
 a.d(e, { default: () => s });
 var i = a(627968),
     n = a(64700),
-    o = a(397927),
+    o = a(861672),
     l = a(442433),
     r = a(871648),
     u = a(915908),
@@ -16,7 +16,7 @@ function s(t) {
             h.current = s;
         }),
         n.useEffect(() => () => h.current?.(), []),
-        (0, i.jsxs)(o.W1t, {
+        (0, i.jsxs)(o.W, {
             "data-menu-migrated-auto": !0,
             navId: "overlay-go-live-widget-context-menu",
             onClose: l.Z_,

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(315069),
-    i = n(731935);
-class a extends r.A {
+i.d(e, { A: () => n });
+var r = i(315069),
+    s = i(260811);
+class n extends r.A {
     skuId;
     skuProductLine;
     skuName;
     isOwned;
     gifterUserId;
     sku;
-    constructor(e) {
+    constructor(t) {
         super(),
-            (this.skuId = e.sku_id),
-            (this.skuProductLine = e.sku_product_line),
-            (this.skuName = e.sku_name),
-            (this.isOwned = e.is_owned),
-            (this.gifterUserId = e.gifter_user_id),
-            (this.sku = e.sku);
+            (this.skuId = t.sku_id),
+            (this.skuProductLine = t.sku_product_line),
+            (this.skuName = t.sku_name),
+            (this.isOwned = t.is_owned),
+            (this.gifterUserId = t.gifter_user_id),
+            (this.sku = t.sku);
     }
-    static fromServer(e) {
-        let { sku_id: t, sku_product_line: n, sku_name: r, is_owned: s, gifter_user_id: o, sku: l, ...u } = e;
-        return new a({
+    static fromServer(t) {
+        let { sku_id: e, sku_product_line: i, sku_name: r, is_owned: l, gifter_user_id: a, sku: o, ...u } = t;
+        return new n({
             ...u,
-            sku_id: t,
-            sku_product_line: n,
+            sku_id: e,
+            sku_product_line: i,
             sku_name: r,
-            is_owned: s,
-            gifter_user_id: o,
-            sku: null != l ? i.A.createFromServer(l) : void 0,
+            is_owned: l,
+            gifter_user_id: a,
+            sku: null != o ? s.A.createFromServer(o) : void 0,
         });
     }
 }

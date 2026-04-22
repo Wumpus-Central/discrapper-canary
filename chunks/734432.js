@@ -1,29 +1,22 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var r = n(73153),
     i = n(439372),
-    a = n(626584),
-    s = n(616356),
+    s = n(626584),
+    a = n(616356),
     o = n(309010),
     l = n(977997),
-    u = n(709710),
-    c = n(374473),
-    d = n(161518),
+    u = n(487329),
+    d = n(374473),
+    c = n(161518),
     _ = n(734867);
-let f = new a.A("AVErrorManager");
-function p(e, t) {
+let f = new s.A("AVErrorManager");
+function E(e, t) {
     let n = new Set();
     for (let r of e) t.has(r) || n.add(r);
     return n;
 }
-function h(e) {
-    return _.J[e.type];
-}
-function m(e) {
-    let t = h(e);
-    return `${e.type}:${t?.makeErrorContextKey(e)}`;
-}
-class g extends i.A {
+class h extends i.A {
     actions = {
         MEDIA_ENGINE_SET_AUDIO_ENABLED: this.updateActiveErrors,
         AUDIO_INPUT_DETECTED: this.updateActiveErrors,
@@ -54,26 +47,34 @@ class g extends i.A {
         if (__OVERLAY__) return;
         let e = o.A.getVoiceChannelId() ?? null,
             t = null != e ? (l.A.getVoiceStateForChannel(e) ?? null) : null,
-            n = s.A.getAllActiveStreams(),
+            n = a.A.getAllActiveStreams(),
             i = new Map();
         for (let r of Object.values(_.J)) {
-            let a = r.getActiveErrors({ voiceChannelId: e, voiceState: t, activeStreams: n });
-            if (null != a) for (let e of a) i.set(m(e), e);
+            let s = r.getActiveErrors({ voiceChannelId: e, voiceState: t, activeStreams: n });
+            if (null != s)
+                for (let e of s)
+                    i.set(
+                        (function (e) {
+                            let t = _.J[e.type];
+                            return `${e.type}:${t?.makeErrorContextKey(e)}`;
+                        })(e),
+                        e,
+                    );
         }
-        let a = d.A.getActiveErrors();
-        if (!(a instanceof Map))
-            return void f.error(`existingErrors is not a Map: ${a} type: ${Object.prototype.toString.call(a)}`);
-        if (0 === i.size && 0 === a.size) return;
-        let c = new Set(i.keys()),
-            h = new Set(a.keys());
-        if (c.size > h.size)
-            for (let e of p(c, h)) {
+        let s = c.A.getActiveErrors();
+        if (!(s instanceof Map))
+            return void f.error(`existingErrors is not a Map: ${s} type: ${Object.prototype.toString.call(s)}`);
+        if (0 === i.size && 0 === s.size) return;
+        let d = new Set(i.keys()),
+            h = new Set(s.keys());
+        if (d.size > h.size)
+            for (let e of E(d, h)) {
                 let t = i.get(e);
                 null != t && (0, u.QW)(t);
             }
-        if (h.size > c.size)
-            for (let e of p(h, c)) {
-                let t = a.get(e);
+        if (h.size > d.size)
+            for (let e of E(h, d)) {
+                let t = s.get(e);
                 if (null != t) {
                     let { type: e, ...n } = t;
                     f.info(`Error resolved: ${e} ${JSON.stringify(n)}`);
@@ -83,7 +84,7 @@ class g extends i.A {
     }
     handleReportAVError(e) {
         let { error: t, context: n } = e;
-        __OVERLAY__ || (0, c.q)(t, n);
+        __OVERLAY__ || (0, d.q)(t, n);
     }
 }
-let E = new g();
+let p = new h();

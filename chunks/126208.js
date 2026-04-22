@@ -2,8 +2,8 @@
 n.d(t, { A: () => l });
 var r = n(143236),
     i = n(647457),
-    a = n(228272),
-    s = n(731854);
+    s = n(228272),
+    a = n(731854);
 let o = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
 class l extends r.EventEmitter {
     userId;
@@ -49,9 +49,9 @@ class l extends r.EventEmitter {
     createOutput(e, t) {
         let n = this.outputs[e];
         null == n &&
-            (((n = new a.A(this.userId, this.audioContext)).mute = !1),
+            (((n = new s.A(this.userId, this.audioContext)).mute = !1),
             (n.volume = 100),
-            n.setSpeakingFlags(s.ME.VOICE),
+            n.setSpeakingFlags(a.ME.VOICE),
             n.setSinkId(this.sinkId),
             (this.outputs[e] = n)),
             n.addTrack(t),
@@ -62,24 +62,27 @@ class l extends r.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     handshake() {
-        let e = (e) => {
-            let t = e.sdp.split("\n");
-            for (let e = 0; e < t.length; e++) {
-                let n = t[e];
-                if (/^a=mid:/.test(n)) break;
-            }
-            return (e.sdp = t.join("\n")), e;
-        };
-        this.pc1.createOffer(o).then((t) => {
-            this.pc1.setLocalDescription(e(t)).then(() => {
-                this.pc2.setRemoteDescription(t).then(() => {
-                    this.pc2.createAnswer().then((e) => {
-                        this.pc2.setLocalDescription(e).then(() => {
-                            this.pc1.setRemoteDescription(e);
+        this.pc1.createOffer(o).then((e) => {
+            this.pc1
+                .setLocalDescription(
+                    ((e) => {
+                        let t = e.sdp.split("\n");
+                        for (let e = 0; e < t.length; e++) {
+                            let n = t[e];
+                            if (/^a=mid:/.test(n)) break;
+                        }
+                        return (e.sdp = t.join("\n")), e;
+                    })(e),
+                )
+                .then(() => {
+                    this.pc2.setRemoteDescription(e).then(() => {
+                        this.pc2.createAnswer().then((e) => {
+                            this.pc2.setLocalDescription(e).then(() => {
+                                this.pc1.setRemoteDescription(e);
+                            });
                         });
                     });
                 });
-            });
         });
     }
     handleStream = () => {

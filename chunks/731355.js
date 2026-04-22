@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { Z: () => r });
-var r = (function (e) {
-    return (e.GAMEPLAY = "GAMEPLAY"), (e.VIDEO = "VIDEO"), e;
-})({});
+n.d(t, { Z: () => i });
+var r,
+    i = (((r = {}).GAMEPLAY = "GAMEPLAY"), (r.VIDEO = "VIDEO"), r);

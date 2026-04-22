@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var r = n(311907),
     i = n(73153),
     s = n(256415),
@@ -7,28 +7,10 @@ var r = n(311907),
     o = n(93465),
     l = n(672396);
 function u() {
-    return _();
-}
-function c() {
     return { gameSettings: {}, notificationSettings: new Set() };
 }
-let d = c();
-function _() {
-    d = c();
-}
-function f(e) {
-    let { applicationId: t, enabled: n } = e;
-    return (d.gameSettings[t] = { limitedInteractionOverride: n }), !0;
-}
-function p(e) {
-    let { setting: t, disabled: n } = e;
-    return (
-        n ? d.notificationSettings.add(t) : d.notificationSettings.delete(t),
-        (d.notificationSettings = new Set(d.notificationSettings)),
-        !0
-    );
-}
-function h(e) {
+let d = u();
+function c(e) {
     switch (e) {
         case l.KS.TextChat:
             return o.M.TEXT_CHAT;
@@ -56,27 +38,11 @@ function h(e) {
             (0, a.xb)(e);
     }
 }
-function m(e) {
-    let { overlayNotificationSettings: t } = e;
-    d.notificationSettings = new Set(t.notificationSettings);
-    let n = Object.fromEntries(
-        Object.entries(t.gameSettings)
-            .filter((e) => {
-                let [t, n] = e;
-                return null != n.limitedInteractionOverride;
-            })
-            .map((e) => {
-                let [t, n] = e;
-                return [t, { limitedInteractionOverride: n.limitedInteractionOverride ?? void 0 }];
-            }),
-    );
-    d.gameSettings = { ...d.gameSettings, ...n };
-}
-class E extends r.Ay.PersistedStore {
+class _ extends r.Ay.PersistedStore {
     static displayName = "OverlaySettingsStore";
     static persistKey = "OverlaySettingsStore";
     initialize(e) {
-        let t = c();
+        let t = u();
         (d = { ...t, ...(e ?? {}), notificationSettings: new Set(e?.notificationSettings ?? t.notificationSettings) }),
             this.waitFor(s.default);
     }
@@ -101,19 +67,46 @@ class E extends r.Ay.PersistedStore {
         return d.notificationSettings.has(e);
     }
     isNotificationDisabled(e) {
-        let t = h(e);
+        let t = c(e);
         return null != t && d.notificationSettings.has(t);
     }
     getDisabledNotifications() {
         return d.notificationSettings;
     }
     getDisabledSettingByNotificationType(e) {
-        return h(e);
+        return c(e);
     }
 }
-let g = new E(i.h, {
-    LOGOUT: u,
-    OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: f,
-    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: p,
-    OVERLAY_INITIALIZE: m,
+let f = new _(i.h, {
+    LOGOUT: function () {
+        d = u();
+    },
+    OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: function (e) {
+        let { applicationId: t, enabled: n } = e;
+        return (d.gameSettings[t] = { limitedInteractionOverride: n }), !0;
+    },
+    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: function (e) {
+        let { setting: t, disabled: n } = e;
+        return (
+            n ? d.notificationSettings.add(t) : d.notificationSettings.delete(t),
+            (d.notificationSettings = new Set(d.notificationSettings)),
+            !0
+        );
+    },
+    OVERLAY_INITIALIZE: function (e) {
+        let { overlayNotificationSettings: t } = e;
+        d.notificationSettings = new Set(t.notificationSettings);
+        let n = Object.fromEntries(
+            Object.entries(t.gameSettings)
+                .filter((e) => {
+                    let [t, n] = e;
+                    return null != n.limitedInteractionOverride;
+                })
+                .map((e) => {
+                    let [t, n] = e;
+                    return [t, { limitedInteractionOverride: n.limitedInteractionOverride ?? void 0 }];
+                }),
+        );
+        d.gameSettings = { ...d.gameSettings, ...n };
+    },
 });

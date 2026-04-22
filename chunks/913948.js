@@ -1,90 +1,95 @@
 "use strict";
-n.d(t, { A: () => o }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    s = n(397927),
-    a = n(985018);
-function o(e) {
+n.d(t, { A: () => h }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(821609),
+    r = n(477782),
+    a = n(265872),
+    o = n(861672),
+    c = n(900797),
+    u = n(847374),
+    d = n(985018);
+function h(e) {
     let {
             distributorCTAConfigs: t,
             buttonVariant: n = "secondary",
-            fullWidth: o = !0,
-            stopPropagation: l = !1,
-            onAction: u,
-            onClose: c,
+            fullWidth: h = !0,
+            stopPropagation: m = !1,
+            onAction: p,
+            onClose: f,
         } = e,
-        d = i.useRef(null),
-        [_, f] = i.useState(!1);
+        g = l.useRef(null),
+        [_, x] = l.useState(!1);
     if (0 === t.length) return null;
-    let p = (e, t) => {
-        u?.({ action: t }), c?.(), window.open(e, "_blank", "noopener,noreferrer");
+    let A = (e, t) => {
+        p?.({ action: t }), f?.(), window.open(e, "_blank", "noopener,noreferrer");
     };
     if (1 === t.length) {
-        let { ctaConfig: e, skuId: i } = t[0];
-        return (0, r.jsx)(s.Button, {
+        let { ctaConfig: e, skuId: l } = t[0];
+        return (0, i.jsx)(s.$, {
             variant: n,
             size: "sm",
             icon: e.icon,
             text: e.getLabel(),
-            fullWidth: o,
+            fullWidth: h,
             onClick: (t) => {
-                l && t.stopPropagation(), p(e.getStoreUrl(i), e.analyticsAction);
+                m && t.stopPropagation(), A(e.getStoreUrl(l), e.analyticsAction);
             },
         });
     }
-    let h = t.flatMap((e, t) => {
-        let { ctaConfig: n, skuId: i } = e,
-            a = [];
+    let C = t.flatMap((e, t) => {
+        let { ctaConfig: n, skuId: l } = e,
+            s = [];
         return (
-            t > 0 && a.push((0, r.jsx)(s.bXX, {}, `sep-${n.distributor}`)),
-            a.push(
-                (0, r.jsx)(
-                    s.Drp,
+            t > 0 && s.push((0, i.jsx)(r.bX, {}, `sep-${n.distributor}`)),
+            s.push(
+                (0, i.jsx)(
+                    r.Dr,
                     {
                         id: `distributor-${n.distributor}`,
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => p(n.getStoreUrl(i), n.analyticsAction),
+                        action: () => A(n.getStoreUrl(l), n.analyticsAction),
                     },
                     n.distributor,
                 ),
             ),
-            a
+            s
         );
     });
-    return (0, r.jsx)(s.YNO, {
-        targetElementRef: d,
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: g,
         position: "bottom",
-        onRequestOpen: () => f(!0),
-        onRequestClose: () => f(!1),
+        onRequestOpen: () => x(!0),
+        onRequestClose: () => x(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)("div", {
+            return (0, i.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: "fit-content", minWidth: d.current?.offsetWidth },
-                children: (0, r.jsx)(s.W1t, {
+                style: { width: "fit-content", minWidth: g.current?.offsetWidth },
+                children: (0, i.jsx)(o.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
                     onClose: t,
                     onSelect: void 0,
-                    "aria-label": a.intl.string(a.t["3XhYOS"]),
-                    children: (0, r.jsx)(s.rXV, { children: h }),
+                    "aria-label": d.intl.string(d.t["3XhYOS"]),
+                    children: (0, i.jsx)(r.rX, { children: C }),
                 }),
             });
         },
         children: (e) =>
-            (0, r.jsx)(s.Button, {
-                buttonRef: d,
+            (0, i.jsx)(s.$, {
+                buttonRef: g,
                 variant: n,
                 size: "sm",
-                icon: _ ? s.tN5 : s.abt,
+                icon: _ ? c.t : u.a,
                 iconPosition: "end",
-                text: a.intl.string(a.t.nSHoxC),
-                fullWidth: o,
+                text: d.intl.string(d.t.nSHoxC),
+                fullWidth: h,
                 ...e,
                 onClick: (t) => {
-                    l && t.stopPropagation(), e.onClick?.(t);
+                    m && t.stopPropagation(), e.onClick?.(t);
                 },
             }),
     });

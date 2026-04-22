@@ -1,12 +1,12 @@
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(397927),
-    r = n(985018),
-    o = n(347217);
-function d(e) {
+s.d(t, { A: () => c });
+var r = s(627968);
+s(64700);
+var a = s(503698),
+    i = s.n(a),
+    n = s(777666),
+    l = s(985018),
+    o = s(464769);
+function c(e) {
     let { className: t } = e;
-    return (0, i.jsx)(a.LpS, { className: l()(o.T, t), text: r.intl.string(r.t.EYxi0o) });
+    return (0, r.jsx)(n.Lp, { className: i()(o.T, t), text: l.intl.string(l.t.EYxi0o) });
 }

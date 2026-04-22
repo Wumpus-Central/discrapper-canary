@@ -1,30 +1,32 @@
-i.d(t, { default: () => u });
-var s = i(627968),
-    n = i(64700),
-    a = i(158954),
-    l = i(397927),
-    r = i(365258),
-    d = i(929120),
-    c = i(985018);
-function u(e) {
-    let { direction: t, affectedGuildIds: i, settingName: u, onClose: o, transitionState: m } = e,
-        x = t === r.AI.RESTRICTING,
-        { title: h, subtitle: j, confirmText: f, toastContent: I } = (0, r.ae)(x, u),
-        b = (0, n.useMemo)(
+i.d(t, { default: () => m });
+var l = i(627968),
+    s = i(64700),
+    n = i(732159),
+    a = i(691540),
+    r = i(857250),
+    d = i(97483),
+    c = i(365258),
+    o = i(929120),
+    u = i(985018);
+function m(e) {
+    let { direction: t, affectedGuildIds: i, settingName: m, onClose: h, transitionState: x } = e,
+        I = t === c.AI.RESTRICTING,
+        { title: f, subtitle: j, confirmText: v, toastContent: g } = (0, c.ae)(I, m),
+        p = (0, s.useMemo)(
             () => () => {
-                (0, r.gF)(t, i), (0, l.showToast)((0, l.createToast)(I, l.ToastType.SUCCESS));
+                (0, c.gF)(t, i), (0, a.P0)((0, r.o)(g, d.Ck.SUCCESS));
             },
-            [t, i, I],
+            [t, i, g],
         );
-    return (0, s.jsx)(a.ConfirmModal, {
-        title: h,
+    return (0, l.jsx)(n.ConfirmModal, {
+        title: f,
         subtitle: j,
-        confirmText: f,
-        cancelText: c.intl.string(c.t.X1rGEm),
+        confirmText: v,
+        cancelText: u.intl.string(u.t.X1rGEm),
         variant: "primary",
-        onConfirm: b,
-        onClose: o,
-        transitionState: m,
-        children: (0, s.jsx)(d.n, { guildIds: i, direction: t }),
+        onConfirm: p,
+        onClose: h,
+        transitionState: x,
+        children: (0, l.jsx)(o.n, { guildIds: i, direction: t }),
     });
 }

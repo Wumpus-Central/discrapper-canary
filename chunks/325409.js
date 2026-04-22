@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     hH: "profileFrame__7d80f",
     S_: "profileFrameLayer__7d80f",

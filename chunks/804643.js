@@ -1,29 +1,26 @@
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    l = n(926022);
-let a = function (e) {
-    let { children: t, title: n, description: a } = e;
-    return (0, i.jsxs)("div", {
-        className: l.L1,
+l.d(t, { A: () => d });
+var n = l(627968);
+l(64700);
+var i = l(534514),
+    s = l(834730),
+    a = l(404778),
+    r = l(628630);
+let d = function (e) {
+    let { children: t, title: l, description: d } = e;
+    return (0, n.jsxs)("div", {
+        className: r.L1,
         children: [
-            (null != n || null != a) &&
-                (0, i.jsxs)("div", {
-                    className: l.Km,
+            (null != l || null != d) &&
+                (0, n.jsxs)("div", {
+                    className: r.Km,
                     children: [
-                        null != n &&
-                            (0, i.jsx)(s.Heading, {
-                                variant: "heading-lg/semibold",
-                                color: "text-strong",
-                                children: n,
-                            }),
-                        null != a &&
-                            (0, i.jsx)(s.Text, { variant: "text-sm/normal", color: "text-default", children: a }),
+                        null != l &&
+                            (0, n.jsx)(i.D, { variant: "heading-lg/semibold", color: "text-strong", children: l }),
+                        null != d && (0, n.jsx)(s.E, { variant: "text-sm/normal", color: "text-default", children: d }),
                     ],
                 }),
-            (0, i.jsx)("div", { className: l.Yq, children: t }),
-            (0, i.jsx)(s.cGx, { className: l.yj }),
+            (0, n.jsx)("div", { className: r.Yq, children: t }),
+            (0, n.jsx)(a.c, { className: r.yj }),
         ],
     });
 };

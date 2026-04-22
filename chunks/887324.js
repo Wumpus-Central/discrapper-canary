@@ -1,149 +1,152 @@
 "use strict";
-n.d(t, { IK: () => v, Kz: () => C });
+n.d(t, { IK: () => T, Kz: () => S });
 var i,
     s = n(627968),
     r = n(64700),
     l = n(189213),
     a = n(311907),
-    o = n(397927),
-    c = n(830215),
-    d = n(803306),
-    u = n(49463),
-    h = n(17372),
-    _ = n(369053),
-    p = n(961350),
-    g = n(975571),
-    m = n(204173),
-    A = n(19992),
-    f = n(501334),
-    E = n(759788),
-    x = n(652215),
-    I = n(985018),
-    N = n(366616);
+    o = n(192308),
+    c = n(331322),
+    d = n(289873),
+    u = n(347704),
+    _ = n(830215),
+    h = n(803306),
+    m = n(49463),
+    p = n(17372),
+    g = n(369053),
+    A = n(961350),
+    f = n(975571),
+    x = n(204173),
+    E = n(19992),
+    I = n(501334),
+    v = n(759788),
+    N = n(652215),
+    j = n(985018),
+    C = n(725925);
 a.Ay.initialize();
-var v = (((i = {}).SELECTION = "selection"), (i.DSA = "dsa"), (i.TIDA = "tida"), i);
-let T = (e) => {
+var T = (((i = {}).SELECTION = "selection"), (i.DSA = "dsa"), (i.TIDA = "tida"), i);
+let b = (e) => {
         let { transitionState: t, onClose: n } = e,
-            [i, v] = r.useState(!0),
-            [C, j] = r.useState([]),
-            [S, y] = r.useState(null),
-            b = (0, a.bG)([p.default], () => p.default.isAuthenticated()),
-            R = (0, a.bG)([u.A], () => u.A.hasLoadedExperiments),
-            O = r.useCallback(() => {
-                (0, _.OY)()
+            [i, T] = r.useState(!0),
+            [S, y] = r.useState([]),
+            [R, w] = r.useState(null),
+            O = (0, a.bG)([A.default], () => A.default.isAuthenticated()),
+            L = (0, a.bG)([m.A], () => m.A.hasLoadedExperiments),
+            k = r.useCallback(() => {
+                (0, g.OY)()
                     .then((e) => {
                         let {
                             body: { capabilities: t },
                         } = e;
-                        v(!1), j(t);
+                        T(!1), y(t);
                     })
                     .catch(() => {
-                        v(!1), j([]);
+                        T(!1), y([]);
                     });
             }, []);
         r.useEffect(() => {
-            b
-                ? (v(!0),
-                  d
+            O
+                ? (T(!0),
+                  h
                       .rQ({ withAnalyticsToken: !0 })
-                      .then(() => O())
-                      .catch(() => v(!1)))
-                : O();
-        }, [b, O]),
+                      .then(() => k())
+                      .catch(() => T(!1)))
+                : k();
+        }, [O, k]),
             r.useEffect(() => {
                 (async () => {
-                    R || (await c.A.getLocationMetadata(), c.A.getExperiments());
+                    L || (await _.A.getLocationMetadata(), _.A.getExperiments());
                 })();
-            }, [R]);
-        let L = C.filter((e) => e !== h.tY.MEDIA_TAKEDOWN),
-            w = C.includes(h.tY.MEDIA_TAKEDOWN),
-            k = L.length > 0,
-            D = k && w,
-            B = i || !R;
+            }, [L]);
+        let G = S.filter((e) => e !== p.tY.MEDIA_TAKEDOWN),
+            U = S.includes(p.tY.MEDIA_TAKEDOWN),
+            D = G.length > 0,
+            P = D && U,
+            B = i || !L;
         r.useEffect(() => {
-            B || k || w || n();
-        }, [B, k, w, n]);
-        let P = r.useCallback(() => {
-                (0, o.mMO)(() => Promise.resolve((e) => (0, s.jsx)(T, { ...e })), { dismissable: !1 });
+            B || D || U || n();
+        }, [B, D, U, n]);
+        let M = r.useCallback(() => {
+                (0, o.openModalLazy)(() => Promise.resolve((e) => (0, s.jsx)(b, { ...e })), { dismissable: !1 });
             }, []),
-            U = r.useCallback((e, t) => {
-                "selection" !== t && "selection" !== e ? y("selection") : y(e);
+            V = r.useCallback((e, t) => {
+                "selection" !== t && "selection" !== e ? w("selection") : w(e);
             }, []),
-            G = r.useMemo(() => (0, m.i)(h.tY.MEDIA_TAKEDOWN, P), [P]),
-            F = S ?? (D ? "selection" : k ? "dsa" : "tida");
-        if (B || (!k && !w))
+            F = r.useMemo(() => (0, x.i)(p.tY.MEDIA_TAKEDOWN, M), [M]),
+            W = R ?? (P ? "selection" : D ? "dsa" : "tida");
+        if (B || (!D && !U))
             return (0, s.jsx)(l.Modal, {
                 title: "",
                 actions: [],
                 transitionState: t,
                 onClose: n,
                 dismissable: !1,
-                children: (0, s.jsx)(o.BJc, {
+                children: (0, s.jsx)(c.B, {
                     gap: 16,
                     align: "center",
                     justify: "center",
                     style: { minHeight: "200px" },
-                    children: (0, s.jsx)(o.y$y, {}),
+                    children: (0, s.jsx)(d.y, {}),
                 }),
             });
-        if (!D) {
-            if (k)
+        if (!P) {
+            if (D)
                 return (0, s.jsx)(l.Modal, {
-                    title: I.intl.string(I.t.Z11w18),
-                    subtitle: I.intl.format(I.t["532l+q"], {
-                        supportURL: g.A.getArticleURL(x.MVz.COPYRIGHT_AND_IP_POLICY),
+                    title: j.intl.string(j.t.Z11w18),
+                    subtitle: j.intl.format(j.t["532l+q"], {
+                        supportURL: f.A.getArticleURL(N.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                     actions: [],
                     transitionState: t,
                     onClose: n,
                     dismissable: !1,
-                    children: (0, s.jsx)(A.c, { dsaCapabilities: L, onReopen: P }),
+                    children: (0, s.jsx)(E.c, { dsaCapabilities: G, onReopen: M }),
                 });
-            if (w)
+            if (U)
                 return (0, s.jsx)(l.Modal, {
-                    title: I.intl.string(I.t.YignUm),
-                    actions: [{ text: I.intl.string(I.t.D5Czbu), variant: "primary", onClick: G }],
+                    title: j.intl.string(j.t.YignUm),
+                    actions: [{ text: j.intl.string(j.t.D5Czbu), variant: "primary", onClick: F }],
                     transitionState: t,
                     onClose: n,
                     dismissable: !1,
-                    children: (0, s.jsx)(E.K, {}),
+                    children: (0, s.jsx)(v.K, {}),
                 });
         }
-        let M = [
-            { stepKey: "selection", modalProps: { title: I.intl.string(I.t.Z11w18) }, body: (0, s.jsx)(f.u, {}) },
+        let H = [
+            { stepKey: "selection", modalProps: { title: j.intl.string(j.t.Z11w18) }, body: (0, s.jsx)(I.u, {}) },
             {
                 stepKey: "dsa",
                 modalProps: {
-                    title: I.intl.string(I.t.Z11w18),
-                    subtitle: I.intl.format(I.t["532l+q"], {
-                        supportURL: g.A.getArticleURL(x.MVz.COPYRIGHT_AND_IP_POLICY),
+                    title: j.intl.string(j.t.Z11w18),
+                    subtitle: j.intl.format(j.t["532l+q"], {
+                        supportURL: f.A.getArticleURL(N.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                 },
-                body: (0, s.jsx)(A.c, { dsaCapabilities: L, onReopen: P }),
+                body: (0, s.jsx)(E.c, { dsaCapabilities: G, onReopen: M }),
             },
             {
                 stepKey: "tida",
-                modalProps: { title: I.intl.string(I.t.YignUm) },
-                body: (0, s.jsx)(E.K, {}),
-                nextButtonProps: { text: I.intl.string(I.t.D5Czbu) },
-                onNext: () => (G(), !1),
+                modalProps: { title: j.intl.string(j.t.YignUm) },
+                body: (0, s.jsx)(v.K, {}),
+                nextButtonProps: { text: j.intl.string(j.t.D5Czbu) },
+                onNext: () => (F(), !1),
             },
         ];
         return (0, s.jsx)("div", {
-            className: { selection: N.a, dsa: N.q, tida: void 0 }[F],
-            children: (0, s.jsx)(o.t04, {
-                steps: M,
-                currentStepKey: F,
-                onStepChange: U,
+            className: { selection: C.a, dsa: C.q, tida: void 0 }[W],
+            children: (0, s.jsx)(u.t, {
+                steps: H,
+                currentStepKey: W,
+                onStepChange: V,
                 onClose: n,
                 transitionState: t,
                 dismissable: !1,
             }),
         });
     },
-    C = () => (
+    S = () => (
         r.useEffect(() => {
-            (0, o.mMO)(() => Promise.resolve((e) => (0, s.jsx)(T, { ...e })), { dismissable: !1 });
+            (0, o.openModalLazy)(() => Promise.resolve((e) => (0, s.jsx)(b, { ...e })), { dismissable: !1 });
         }, []),
         null
     );

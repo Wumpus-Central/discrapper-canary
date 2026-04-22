@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header_ab6641",
     qd: "headerTitle_ab6641",

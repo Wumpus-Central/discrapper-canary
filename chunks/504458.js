@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     eX: "triggerContainer_b6c6eb",
     H7: "triggerMainContainer_b6c6eb",

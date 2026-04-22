@@ -1,8 +1,8 @@
 a.d(t, { A: () => _ }), a(323874), a(14289), a(35956);
 var n = a(627968),
-    i = a(64700),
-    s = a(311907),
-    l = a(397927),
+    l = a(64700),
+    i = a(311907),
+    s = a(534514),
     r = a(976860),
     o = a(961350),
     c = a(449054),
@@ -17,11 +17,11 @@ function _(e) {
         _,
         g,
         { application: x, className: A } = e,
-        { onGoToSupportServer: C } =
+        { onGoToSupportServer: f } =
             ((t = x),
             (a = (0, d.DB)()),
-            (_ = (0, s.bG)([o.default], () => o.default.getSessionId())),
-            (g = i.useCallback(async () => {
+            (_ = (0, i.bG)([o.default], () => o.default.getSessionId())),
+            (g = l.useCallback(async () => {
                 try {
                     let e = t?.guild?.id;
                     if (null != e) {
@@ -34,7 +34,7 @@ function _(e) {
                     }
                 } catch {}
             }, [t])),
-            i.useEffect(() => {
+            l.useEffect(() => {
                 let e = new URL(location.href);
                 if (null != t && a && null != _ && "true" === e.searchParams.get(p)) {
                     e.searchParams.delete(p);
@@ -43,7 +43,7 @@ function _(e) {
                 }
             }, [a, g, _, t]),
             {
-                onGoToSupportServer: i.useCallback(() => {
+                onGoToSupportServer: l.useCallback(() => {
                     null != t?.guild?.id && (a ? g() : (0, d.jL)({ [p]: "true" }));
                 }, [t, g, a]),
             });
@@ -51,12 +51,12 @@ function _(e) {
         ? (0, n.jsxs)("div", {
               className: A,
               children: [
-                  (0, n.jsx)(l.Heading, {
+                  (0, n.jsx)(s.D, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",
                       children: m.intl.string(m.t.KJEO27),
                   }),
-                  (0, n.jsx)(u.A, { guild: x.guild, onClick: C }),
+                  (0, n.jsx)(u.A, { guild: x.guild, onClick: f }),
               ],
           })
         : null;

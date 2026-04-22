@@ -1,240 +1,239 @@
 "use strict";
-n.d(t, { A: () => f });
-var r = n(64700),
-    i = n(788413),
-    a = n(741918),
-    s = n(602034);
-let o = [a.D$.TAB];
-function l(e) {
-    switch (e.key) {
-        case a.D$.ENTER:
-            return a.X2.SELECT_FOCUSED_ITEM;
-        case a.D$.UP:
-            return a.X2.NAVIGATE_UP;
-        case a.D$.DOWN:
-            return a.X2.NAVIGATE_DOWN;
-        case a.D$.RIGHT:
-            return a.X2.NAVIGATE_RIGHT;
-        case a.D$.LEFT:
-            return a.X2.NAVIGATE_LEFT;
-        case a.D$.HOME:
-            if (e.ctrlKey) return a.X2.NAVIGATE_START;
-            return a.X2.NAVIGATE_INLINE_START;
-        case a.D$.END:
-            if (e.ctrlKey) return a.X2.NAVIGATE_END;
-            return a.X2.NAVIGATE_INLINE_END;
-    }
-}
-function u(e, t, n) {
-    return null != t && null != n ? `#${(0, s.Aq)(e, t, n)}` : `[data-ref-id=${e}]`;
+n.d(t, { A: () => u });
+var i = n(64700),
+    l = n(788413),
+    s = n(741918),
+    r = n(602034);
+let a = [s.D$.TAB];
+function o(e, t, n) {
+    return null != t && null != n ? `#${(0, r.Aq)(e, t, n)}` : `[data-ref-id=${e}]`;
 }
 function c(e) {
     return document.querySelector(e);
 }
-function d(e) {
-    return e?.ownerDocument.activeElement === e;
-}
-function _(e) {
+function u(e) {
     let {
             navId: t,
             columnCounts: n,
-            focusedX: _,
-            focusedY: f,
-            onSelect: p,
-            prepareFocus: h,
-            getNewFocusPosition: m,
-            dispatch: g,
-            maintainFocusPosition: E,
-            enabled: A,
-            autoFocusElement: I,
-            useVirtualFocus: T,
+            focusedX: u = 0,
+            focusedY: d = 0,
+            onSelect: h,
+            prepareFocus: m,
+            getNewFocusPosition: p,
+            maintainFocusPosition: f = !0,
+            enabled: g = !0,
+            onDispatch: _,
+            autoFocusElement: x = !0,
+            useVirtualFocus: A = !1,
         } = e,
-        y = r.useRef(A),
-        S = c(u(t, _, f)),
-        [v, C] = r.useState(!1),
-        [b, N] = r.useState(!1),
-        [R, O] = r.useState(!1),
-        [D] = r.useState(
-            () =>
-                new s.Lp((e) => {
-                    let [t, n] = e.split(",").map(Number);
-                    return () => {
-                        C(!0), g({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
-                    };
-                }),
-        );
-    r.useEffect(() => () => D.clean(), [D]);
-    let L = r.useCallback(
-            (e) => {
-                if (!y.current || !I) return !1;
-                e.focus();
-            },
-            [I],
-        ),
-        w = r.useCallback(
-            (e, n) => {
-                let r = u(t, e, n);
-                (null != h ? h(e, n, r) : Promise.resolve()).then(() => {
-                    let e = c(r);
-                    null != e ? (L(e), N(!1)) : requestAnimationFrame(() => N(!0));
-                });
-            },
-            [t, h, L],
-        ),
-        x = r.useCallback(
-            function () {
-                let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                    [n, r] = null != m ? m(_, f) : [_, f];
-                if ((n !== _ || r !== f) && (g({ type: i.n.SET_FOCUSED_POSITION, x: n, y: r }), !e)) return void O(!0);
-                let a = c(u(t, n, r));
-                null != a && (O(!0), L(a));
-            },
-            [g, _, f, m, t, L],
-        ),
-        [P, M] = r.useState(!1);
-    r.useEffect(() => {
-        if (!P || !v) return;
-        M(!1);
-        let e = c(u(t, _, f));
-        if (null != e) return void L(e);
-        C(!1);
-        let n = c(u(t));
-        null != n && L(n);
-    }, [t, P, v, L, _, f]);
-    let k = r.useCallback((e) => {
-        y.current && null == e && M(!0);
-    }, []);
-    r.useEffect(() => {
-        v && b && null != S && (L(S), N(!1));
-    }, [b, S]),
-        r.useEffect(() => {
-            v && (R || w(_, f), O(!1));
-        }, [_, f]);
-    let U = r.useCallback(
-            (e) => {
-                if (!y.current) return;
-                if (
-                    !T &&
-                    o.includes(e.key) &&
-                    !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
-                    e.currentTarget === e.target
-                ) {
-                    e.preventDefault(), e.stopPropagation(), x();
-                    return;
-                }
-                let t = l(e);
-                switch (t) {
-                    case a.X2.NAVIGATE_UP:
-                    case a.X2.NAVIGATE_DOWN:
-                    case a.X2.NAVIGATE_RIGHT:
-                    case a.X2.NAVIGATE_LEFT:
-                    case a.X2.NAVIGATE_INLINE_START:
-                    case a.X2.NAVIGATE_INLINE_END:
-                    case a.X2.NAVIGATE_START:
-                    case a.X2.NAVIGATE_END:
-                        0 !== n.length &&
-                            (0 !== _ || 0 !== f || t !== a.X2.NAVIGATE_LEFT) &&
-                            (e.preventDefault(), e.stopPropagation()),
-                            g({ type: t });
-                        return;
-                    case a.X2.SELECT_FOCUSED_ITEM:
-                        if ((I && !d(S)) || e.repeat) return;
-                        e.preventDefault(),
-                            e.stopPropagation(),
-                            g({ type: t }),
-                            null != p ? p(_, f, e) : null != S && S.click();
-                }
-            },
-            [x, g, I, S, p, _, f],
-        ),
-        G = r.useCallback(
-            (e) =>
-                e.currentTarget !== e.target
-                    ? (v || (C(!0), O(!0)), !1)
-                    : v
-                      ? (x(!1), !1)
-                      : void (E && null != S ? w(_, f) : x(!0)),
-            [v, E, S, x, w, _, f],
-        ),
-        V = r.useCallback((e) => {
-            if (e.target !== e.currentTarget) {
-                if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                C(!1);
-            }
-        }, []),
-        F = r.useMemo(() => Math.max(...n), [n]),
-        B = r.useCallback(
-            () => ({
-                role: "grid",
-                "aria-rowcount": n.length,
-                "aria-colcount": F,
-                tabIndex: v && E ? -1 : 0,
-                "data-ref-id": t,
-                onKeyDown: U,
-                onFocus: G,
-                onBlur: V,
-            }),
-            [n.length, F, v, E, t, U, G, V],
-        ),
-        j = r.useCallback(
-            (e, n) => {
-                let r = {
-                    role: "gridcell",
-                    "aria-rowindex": n + 1,
-                    "aria-colindex": e + 1,
-                    id: (0, s.Aq)(t, e, n),
-                    tabIndex: E && e === _ && n === f ? 0 : -1,
-                    onFocus: D.get(`${e},${n}`),
-                };
-                return e === _ && n === f && (r.ref = k), r;
-            },
-            [t, E, _, f, D, k],
-        ),
-        H = r.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
-    return r.useMemo(() => ({ dispatch: g, getContainerProps: B, getItemProps: j, getRowProps: H }), [g, B, j, H]);
-}
-function f(e) {
-    let {
-            navId: t,
-            columnCounts: n,
-            focusedX: a = 0,
-            focusedY: o = 0,
-            onSelect: l,
-            prepareFocus: u,
-            getNewFocusPosition: c,
-            maintainFocusPosition: d = !0,
-            enabled: f = !0,
-            onDispatch: p,
-            autoFocusElement: h = !0,
-            useVirtualFocus: m = !1,
-        } = e,
-        g = r.useCallback(
+        C = i.useCallback(
             (e, t) => {
-                let n = (0, i.A)(e, t);
-                return null != p && p(e, n, t), n;
+                let n = (0, l.A)(e, t);
+                return null != _ && _(e, n, t), n;
             },
-            [p],
+            [_],
         ),
-        [E, A] = r.useReducer(g, { focusedX: a, focusedY: o, columnCounts: n }),
-        { columnCounts: I, focusedX: T, focusedY: y } = E,
-        [S] = r.useState(() => (0, s.nF)(A, 16));
+        [E, I] = i.useReducer(C, { focusedX: u, focusedY: d, columnCounts: n }),
+        { columnCounts: v, focusedX: y, focusedY: S } = E,
+        [b] = i.useState(() => (0, r.nF)(I, 16));
     return (
-        r.useEffect(() => {
-            A({ type: i.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
+        i.useEffect(() => {
+            I({ type: l.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
         }, [n]),
-        _({
+        (function (e) {
+            let {
+                    navId: t,
+                    columnCounts: n,
+                    focusedX: u,
+                    focusedY: d,
+                    onSelect: h,
+                    prepareFocus: m,
+                    getNewFocusPosition: p,
+                    dispatch: f,
+                    maintainFocusPosition: g,
+                    enabled: _,
+                    autoFocusElement: x,
+                    useVirtualFocus: A,
+                } = e,
+                C = i.useRef(_),
+                E = c(o(t, u, d)),
+                [I, v] = i.useState(!1),
+                [y, S] = i.useState(!1),
+                [b, N] = i.useState(!1),
+                [T] = i.useState(
+                    () =>
+                        new r.Lp((e) => {
+                            let [t, n] = e.split(",").map(Number);
+                            return () => {
+                                v(!0), f({ type: l.n.SET_FOCUSED_POSITION, x: t, y: n });
+                            };
+                        }),
+                );
+            i.useEffect(() => () => T.clean(), [T]);
+            let j = i.useCallback(
+                    (e) => {
+                        if (!C.current || !x) return !1;
+                        e.focus();
+                    },
+                    [x],
+                ),
+                R = i.useCallback(
+                    (e, n) => {
+                        let i = o(t, e, n);
+                        (null != m ? m(e, n, i) : Promise.resolve()).then(() => {
+                            let e = c(i);
+                            null != e ? (j(e), S(!1)) : requestAnimationFrame(() => S(!0));
+                        });
+                    },
+                    [t, m, j],
+                ),
+                w = i.useCallback(
+                    function () {
+                        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+                            [n, i] = null != p ? p(u, d) : [u, d];
+                        if ((n !== u || i !== d) && (f({ type: l.n.SET_FOCUSED_POSITION, x: n, y: i }), !e))
+                            return void N(!0);
+                        let s = c(o(t, n, i));
+                        null != s && (N(!0), j(s));
+                    },
+                    [f, u, d, p, t, j],
+                ),
+                [L, M] = i.useState(!1);
+            i.useEffect(() => {
+                if (!L || !I) return;
+                M(!1);
+                let e = c(o(t, u, d));
+                if (null != e) return void j(e);
+                v(!1);
+                let n = c(o(t));
+                null != n && j(n);
+            }, [t, L, I, j, u, d]);
+            let k = i.useCallback((e) => {
+                C.current && null == e && M(!0);
+            }, []);
+            i.useEffect(() => {
+                I && y && null != E && (j(E), S(!1));
+            }, [y, E]),
+                i.useEffect(() => {
+                    I && (b || R(u, d), N(!1));
+                }, [u, d]);
+            let O = i.useCallback(
+                    (e) => {
+                        if (!C.current) return;
+                        if (
+                            !A &&
+                            a.includes(e.key) &&
+                            !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
+                            e.currentTarget === e.target
+                        ) {
+                            e.preventDefault(), e.stopPropagation(), w();
+                            return;
+                        }
+                        let t = (function (e) {
+                            switch (e.key) {
+                                case s.D$.ENTER:
+                                    return s.X2.SELECT_FOCUSED_ITEM;
+                                case s.D$.UP:
+                                    return s.X2.NAVIGATE_UP;
+                                case s.D$.DOWN:
+                                    return s.X2.NAVIGATE_DOWN;
+                                case s.D$.RIGHT:
+                                    return s.X2.NAVIGATE_RIGHT;
+                                case s.D$.LEFT:
+                                    return s.X2.NAVIGATE_LEFT;
+                                case s.D$.HOME:
+                                    if (e.ctrlKey) return s.X2.NAVIGATE_START;
+                                    return s.X2.NAVIGATE_INLINE_START;
+                                case s.D$.END:
+                                    if (e.ctrlKey) return s.X2.NAVIGATE_END;
+                                    return s.X2.NAVIGATE_INLINE_END;
+                            }
+                        })(e);
+                        switch (t) {
+                            case s.X2.NAVIGATE_UP:
+                            case s.X2.NAVIGATE_DOWN:
+                            case s.X2.NAVIGATE_RIGHT:
+                            case s.X2.NAVIGATE_LEFT:
+                            case s.X2.NAVIGATE_INLINE_START:
+                            case s.X2.NAVIGATE_INLINE_END:
+                            case s.X2.NAVIGATE_START:
+                            case s.X2.NAVIGATE_END:
+                                0 !== n.length &&
+                                    (0 !== u || 0 !== d || t !== s.X2.NAVIGATE_LEFT) &&
+                                    (e.preventDefault(), e.stopPropagation()),
+                                    f({ type: t });
+                                return;
+                            case s.X2.SELECT_FOCUSED_ITEM:
+                                if ((x && E?.ownerDocument.activeElement !== E) || e.repeat) return;
+                                e.preventDefault(),
+                                    e.stopPropagation(),
+                                    f({ type: t }),
+                                    null != h ? h(u, d, e) : null != E && E.click();
+                        }
+                    },
+                    [w, f, x, E, h, u, d],
+                ),
+                P = i.useCallback(
+                    (e) =>
+                        e.currentTarget !== e.target
+                            ? (I || (v(!0), N(!0)), !1)
+                            : I
+                              ? (w(!1), !1)
+                              : void (g && null != E ? R(u, d) : w(!0)),
+                    [I, g, E, w, R, u, d],
+                ),
+                D = i.useCallback((e) => {
+                    if (e.target !== e.currentTarget) {
+                        if (e.currentTarget.contains(e.relatedTarget)) return !1;
+                        v(!1);
+                    }
+                }, []),
+                U = i.useMemo(() => Math.max(...n), [n]),
+                V = i.useCallback(
+                    () => ({
+                        role: "grid",
+                        "aria-rowcount": n.length,
+                        "aria-colcount": U,
+                        tabIndex: I && g ? -1 : 0,
+                        "data-ref-id": t,
+                        onKeyDown: O,
+                        onFocus: P,
+                        onBlur: D,
+                    }),
+                    [n.length, U, I, g, t, O, P, D],
+                ),
+                G = i.useCallback(
+                    (e, n) => {
+                        let i = {
+                            role: "gridcell",
+                            "aria-rowindex": n + 1,
+                            "aria-colindex": e + 1,
+                            id: (0, r.Aq)(t, e, n),
+                            tabIndex: g && e === u && n === d ? 0 : -1,
+                            onFocus: T.get(`${e},${n}`),
+                        };
+                        return e === u && n === d && (i.ref = k), i;
+                    },
+                    [t, g, u, d, T, k],
+                ),
+                F = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
+            return i.useMemo(
+                () => ({ dispatch: f, getContainerProps: V, getItemProps: G, getRowProps: F }),
+                [f, V, G, F],
+            );
+        })({
             navId: t,
-            columnCounts: I,
-            focusedX: T,
-            focusedY: y,
-            dispatch: S,
-            onSelect: l,
-            prepareFocus: u,
-            getNewFocusPosition: c,
-            maintainFocusPosition: d,
-            enabled: f,
-            autoFocusElement: h,
-            useVirtualFocus: m,
+            columnCounts: v,
+            focusedX: y,
+            focusedY: S,
+            dispatch: b,
+            onSelect: h,
+            prepareFocus: m,
+            getNewFocusPosition: p,
+            maintainFocusPosition: f,
+            enabled: g,
+            autoFocusElement: x,
+            useVirtualFocus: A,
         })
     );
 }

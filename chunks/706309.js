@@ -1,60 +1,61 @@
-a.d(t, { s: () => x });
-var l = a(627968);
+"use strict";
+a.d(t, { s: () => u });
+var r = a(627968);
 a(64700);
-var r = a(397927),
+var l = a(834730),
     n = a(18769),
-    o = a(653793),
+    i = a(653793),
     s = a(673277),
-    d = a(118713);
-let i = () =>
-        (0, l.jsx)("div", {
+    o = a(118713);
+let d = () =>
+        (0, r.jsx)("div", {
             style: { display: "flex", justifyContent: "center", alignItems: "center" },
-            children: (0, l.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
+            children: (0, r.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
         }),
-    c = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } }),
-    x = {
+    c = () => (0, r.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } }),
+    u = {
         name: "Carousel",
         id: "carousel",
         component: (e) =>
-            (0, l.jsxs)(l.Fragment, {
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(r.Text, {
+                    (0, r.jsx)(l.E, {
                         variant: "text-lg/normal",
                         children: "Carousel steps through the children with a swipe and fade animation.",
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, r.jsx)(l.E, {
                         variant: "text-md/normal",
                         children:
                             "It has very minimal configuration options, instead choosing to be opinionated about the functionality of a carousel in a CMS world.",
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, r.jsx)(l.E, {
                         variant: "text-md/normal",
                         children:
                             "The carousel will pause slidding when the mouse hovers it, and resume on mouse leave.",
                     }),
-                    (0, l.jsx)(s.A, {
-                        children: (0, l.jsxs)(d.A, {
+                    (0, r.jsx)(s.A, {
+                        children: (0, r.jsxs)(o.A, {
                             ...e,
                             children: [
-                                (0, l.jsx)("div", { style: { background: "red" }, children: (0, l.jsx)(c, {}) }),
-                                (0, l.jsx)("div", { style: { background: "orange" }, children: (0, l.jsx)(c, {}) }),
-                                (0, l.jsx)("div", { style: { background: "yellow" }, children: (0, l.jsx)(c, {}) }),
-                                (0, l.jsx)("div", { style: { background: "green" }, children: (0, l.jsx)(c, {}) }),
-                                (0, l.jsx)("div", { style: { background: "blue" }, children: (0, l.jsx)(c, {}) }),
-                                (0, l.jsx)("div", { style: { background: "violet" }, children: (0, l.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "red" }, children: (0, r.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "orange" }, children: (0, r.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "yellow" }, children: (0, r.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "green" }, children: (0, r.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "blue" }, children: (0, r.jsx)(c, {}) }),
+                                (0, r.jsx)("div", { style: { background: "violet" }, children: (0, r.jsx)(c, {}) }),
                             ],
                         }),
                     }),
-                    (0, l.jsxs)(s.A, {
+                    (0, r.jsxs)(s.A, {
                         children: [
-                            (0, l.jsx)(r.Text, {
+                            (0, r.jsx)(l.E, {
                                 variant: "text-md/normal",
                                 children:
                                     "Here is an example of what a carousel inside of a card might look like for showing off different products",
                             }),
-                            (0, l.jsx)("br", {}),
-                            (0, l.jsx)(o.A, {
-                                children: (0, l.jsx)("div", {
+                            (0, r.jsx)("br", {}),
+                            (0, r.jsx)(i.A, {
+                                children: (0, r.jsx)("div", {
                                     style: {
                                         background: "white",
                                         padding: 12,
@@ -64,31 +65,31 @@ let i = () =>
                                         display: "flex",
                                         overflow: "hidden",
                                     },
-                                    children: (0, l.jsxs)(d.A, {
+                                    children: (0, r.jsxs)(o.A, {
                                         ...e,
                                         children: [
-                                            (0, l.jsx)(i, {}),
-                                            (0, l.jsx)(i, {}),
-                                            (0, l.jsx)(i, {}),
-                                            (0, l.jsx)(i, {}),
-                                            (0, l.jsx)(i, {}),
+                                            (0, r.jsx)(d, {}),
+                                            (0, r.jsx)(d, {}),
+                                            (0, r.jsx)(d, {}),
+                                            (0, r.jsx)(d, {}),
+                                            (0, r.jsx)(d, {}),
                                         ],
                                     }),
                                 }),
                             }),
                         ],
                     }),
-                    (0, l.jsxs)(s.A, {
+                    (0, r.jsxs)(s.A, {
                         children: [
-                            (0, l.jsx)(r.Text, {
+                            (0, r.jsx)(l.E, {
                                 variant: "text-md/normal",
                                 children: "And here is an example of a FeaturedBlock Carousel",
                             }),
-                            (0, l.jsx)("br", {}),
-                            (0, l.jsxs)(d.A, {
+                            (0, r.jsx)("br", {}),
+                            (0, r.jsxs)(o.A, {
                                 ...e,
                                 children: [
-                                    (0, l.jsx)(n.A, {
+                                    (0, r.jsx)(n.A, {
                                         href: "",
                                         backgroundImage: {
                                             src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -101,7 +102,7 @@ let i = () =>
                                         },
                                         ctaText: "View The Collection",
                                     }),
-                                    (0, l.jsx)(n.A, {
+                                    (0, r.jsx)(n.A, {
                                         href: "",
                                         backgroundImage: {
                                             src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -114,7 +115,7 @@ let i = () =>
                                         },
                                         ctaText: "View The Collection",
                                     }),
-                                    (0, l.jsx)(n.A, {
+                                    (0, r.jsx)(n.A, {
                                         href: "",
                                         backgroundImage: {
                                             src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -127,7 +128,7 @@ let i = () =>
                                         },
                                         ctaText: "View The Collection",
                                     }),
-                                    (0, l.jsx)(n.A, {
+                                    (0, r.jsx)(n.A, {
                                         href: "",
                                         backgroundImage: {
                                             src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",

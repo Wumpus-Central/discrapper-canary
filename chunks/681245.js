@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(582754),
+n.d(t, { A: () => c });
+var r = n(765178),
     i = n(439372),
     s = n(667747),
     a = n(652215),
@@ -10,13 +10,13 @@ function l(e) {
         n = t.userIgnored;
     t.type !== a.eA$.PENDING_INCOMING ||
         n ||
-        (r.OR.announce(o.intl.formatToPlainString(o.t.zH0kC7, { username: t.user.username })), s.m(t.user));
+        (r.O.announce(o.intl.formatToPlainString(o.t.zH0kC7, { username: t.user.username })), s.m(t.user));
 }
 function u(e) {
     let { user: t } = e;
-    r.OR.announce(o.intl.formatToPlainString(o.t["/+7xky"], { username: t.username })), s.I(t);
+    r.O.announce(o.intl.formatToPlainString(o.t["/+7xky"], { username: t.username })), s.I(t);
 }
-class c extends i.A {
+class d extends i.A {
     actions = { RELATIONSHIP_ADD: l, FRIEND_REQUEST_ACCEPTED: u };
 }
-let d = new c();
+let c = new d();

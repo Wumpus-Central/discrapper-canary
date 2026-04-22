@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => u });
 var i = n(963027),
-    s = n(47167),
-    l = n(734057),
+    l = n(47167),
+    s = n(734057),
     r = n(994500),
     a = n(287809),
     o = n(2242),
@@ -11,10 +10,10 @@ var i = n(963027),
 function u(e) {
     switch (e.ref_type) {
         case o.bN.CHANNEL: {
-            let t = l.A.getChannel(e.ref_id);
+            let t = s.A.getChannel(e.ref_id);
             return null != t
                 ? (function (e) {
-                      let t = (0, s.m1)(e, a.default, r.A);
+                      let t = (0, l.m1)(e, a.default, r.A);
                       switch (e.type) {
                           case d.rbe.GUILD_VOICE:
                               return c.intl.formatToPlainString(c.t.bkpadO, { channelName: t });

@@ -1,15 +1,15 @@
 l.d(t, { default: () => h });
 var i = l(627968),
     s = l(64700),
-    a = l(158954),
+    a = l(224640),
     n = l(943457),
     r = l(424912),
     c = l(860689),
     d = l(208882),
     o = l(121004),
     u = l(880392),
-    x = l(843580),
-    m = l(851091),
+    m = l(843580),
+    x = l(851091),
     C = l(909806),
     g = l(946116);
 function h(e) {
@@ -20,37 +20,37 @@ function h(e) {
             onClose: j,
             directoryGuildName: L,
             directoryGuildId: _,
-            currentCategoryId: f,
+            currentCategoryId: p,
         } = e,
-        [p, A] = s.useState(h),
+        [f, A] = s.useState(h),
         [v, S] = s.useState(null),
         [b, I] = s.useState(null),
-        [N, T] = s.useState(null),
-        [H, y] = s.useState(null),
-        [M, G] = s.useState(""),
-        [E, U] = s.useState(f ?? g.mU.UNCATEGORIZED),
-        [k, D] = s.useState(!1),
+        [N, E] = s.useState(null),
+        [y, H] = s.useState(null),
+        [M, T] = s.useState(""),
+        [G, k] = s.useState(p ?? g.mU.UNCATEGORIZED),
+        [U, D] = s.useState(!1),
         { availableGuilds: Z, addedGuilds: O, loading: R } = (0, o.A)(_, t);
     s.useEffect(() => {
         A(h);
     }, [A, h]);
     let B = async () => {
-            let e = H;
-            if (!k) {
+            let e = y;
+            if (!U) {
                 if (null == b || null == v) return;
                 let t = await n.A.createGuildFromTemplate(b, N, v);
-                y((e = (0, c.Y1)(t)));
+                H((e = (0, c.Y1)(t)));
             }
-            null != e && (await d.WD(t, e.id, M, E), A(g.m8.CONFIRMATION));
+            null != e && (await d.WD(t, e.id, M, G), A(g.m8.CONFIRMATION));
         },
         V = null;
-    switch (p) {
+    switch (f) {
         case g.m8.CHOOSE_GUILD:
             V = (0, i.jsx)(u.A, {
                 directoryChannelId: t,
                 directoryGuildName: L,
                 onGuildChosen: (e) => {
-                    D(!0), A(g.m8.CUSTOMIZE_EXISTING_GUILD), y(e);
+                    D(!0), A(g.m8.CUSTOMIZE_EXISTING_GUILD), H(e);
                 },
                 handleChooseCreate: () => {
                     D(!1), A(g.m8.GUILD_TEMPLATES);
@@ -74,24 +74,24 @@ function h(e) {
                 isSlideReady: !0,
                 guildTemplate: v,
                 onHubGuildInfoSet: (e, t) => {
-                    I(e), T(t), A(g.m8.CUSTOMIZE_EXISTING_GUILD);
+                    I(e), E(t), A(g.m8.CUSTOMIZE_EXISTING_GUILD);
                 },
                 onBack: () => A(g.m8.GUILD_TEMPLATES),
             });
             break;
         case g.m8.CUSTOMIZE_EXISTING_GUILD:
-            V = (0, i.jsx)(x.A, {
+            V = (0, i.jsx)(m.A, {
                 directoryChannelId: t,
                 description: M,
-                onDescriptionChange: G,
-                categoryId: E,
-                onCategoryIdChange: U,
+                onDescriptionChange: T,
+                categoryId: G,
+                onCategoryIdChange: k,
                 onSubmit: B,
-                onBack: () => A(k ? g.m8.CHOOSE_GUILD : g.m8.CUSTOMIZE_NEW_GUILD),
+                onBack: () => A(U ? g.m8.CHOOSE_GUILD : g.m8.CUSTOMIZE_NEW_GUILD),
             });
             break;
         case g.m8.CONFIRMATION:
-            V = (0, i.jsx)(m.A, { directoryGuildName: L, guildToAdd: H, isExistingGuildFlow: k, onClose: j });
+            V = (0, i.jsx)(x.A, { directoryGuildName: L, guildToAdd: y, isExistingGuildFlow: U, onClose: j });
     }
-    return (0, i.jsx)("div", { children: (0, i.jsx)(a.dWK, { transitionState: l, onClose: j, children: V }) });
+    return (0, i.jsx)("div", { children: (0, i.jsx)(a.d, { transitionState: l, onClose: j, children: V }) });
 }

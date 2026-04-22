@@ -1,63 +1,64 @@
-n.d(t, { $: () => C, D: () => I });
+"use strict";
+n.d(t, { $: () => f, D: () => C });
 var i = n(627968),
-    l = n(64700),
-    s = n(989349),
-    a = n.n(s),
-    r = n(554146),
+    r = n(64700),
+    l = n(989349),
+    s = n.n(l),
+    a = n(554146),
     o = n(135099),
-    d = n(380786),
-    c = n(916768),
-    u = n(617108),
-    h = n(745299),
-    A = n(816733),
-    _ = n(927578),
+    c = n(380786),
+    u = n(916768),
+    d = n(617108),
+    _ = n(745299),
+    E = n(816733),
+    A = n(927578),
     m = n(160761),
-    p = n(49999),
-    g = n(652215),
-    f = n(788868),
-    E = n(985018),
-    x = n(873494);
-function I(e) {
+    I = n(49999),
+    T = n(652215),
+    N = n(788868),
+    g = n(985018),
+    p = n(452832);
+function C(e) {
     switch (e) {
-        case g.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-            let t = A.A.getAlmostExpiringTrialOffersForReminder([f.pe.TIER_2]);
-            return { cooldownDurationMs: (0, _.e1)(t[0]) };
-        case g.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-            let n = A.A.getAlmostExpiringDiscountOffersForReminder([f.pe.TIER_2]);
-            return { cooldownDurationMs: (0, _.e1)(n[0]) };
-        case g.kqX.RIOT_MIGRATION:
-        case g.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case T.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
+            let t = E.A.getAlmostExpiringTrialOffersForReminder([N.pe.TIER_2]);
+            return { cooldownDurationMs: (0, A.e1)(t[0]) };
+        case T.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
+            let n = E.A.getAlmostExpiringDiscountOffersForReminder([N.pe.TIER_2]);
+            return { cooldownDurationMs: (0, A.e1)(n[0]) };
+        case T.kqX.RIOT_MIGRATION:
+        case T.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-let C = (e) => {
+let f = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        s = l.useMemo(() => I(n), [n]),
-        A = a()().add(5, "days").toDate(),
-        [_, C] = (0, m.Bo)(t, s, p.m.NOTICE_BAR);
-    if (null == _) return null;
-    switch (_) {
-        case r.M.NAGBAR_NOTICE_OFFER_EXPIRING:
-            if (n === g.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
-                return (0, i.jsx)(h.A, {
+        l = r.useMemo(() => C(n), [n]),
+        E = s()().add(5, "days").toDate(),
+        [A, f] = (0, m.Bo)(t, l, I.m.NOTICE_BAR);
+    if (null == A) return null;
+    switch (A) {
+        case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
+            if (n === T.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
+                return (0, i.jsx)(_.A, {
                     dismissCurrentNotice: () => {
-                        C(p.i.USER_DISMISS), (0, c.w)(A);
+                        f(I.i.USER_DISMISS), (0, u.w)(E);
                     },
-                    subscriptionTier: f.pe.TIER_2,
+                    subscriptionTier: N.pe.TIER_2,
                 });
-            if (n === g.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(u.A, {
+            if (n === T.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
+                return (0, i.jsx)(d.A, {
                     dismissCurrentNotice: () => {
-                        C(p.i.USER_DISMISS), (0, c.w)(A);
+                        f(I.i.USER_DISMISS), (0, u.w)(E);
                     },
-                    subscriptionTier: f.pe.TIER_2,
+                    subscriptionTier: N.pe.TIER_2,
                 });
             break;
-        case r.M.RIOT_CONNECTION_DEPRECATION:
-            return (0, i.jsx)(o.A, { markAsDismissed: C, applicationName: E.intl.string(x.default["1S6oAo"]) });
-        case r.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
-            return (0, i.jsx)(d.A, { markAsDismissed: () => C(p.i.USER_DISMISS) });
+        case a.M.RIOT_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(o.A, { markAsDismissed: f, applicationName: g.intl.string(p.default["1S6oAo"]) });
+        case a.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
+            return (0, i.jsx)(c.A, { markAsDismissed: () => f(I.i.USER_DISMISS) });
     }
 };

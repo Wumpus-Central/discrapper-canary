@@ -1,62 +1,65 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(64700),
     s = n(990078),
-    a = n(397927),
-    r = n(976860),
-    o = n(93055),
-    c = n(652215),
-    d = n(665606),
-    u = n(985018);
-let h = l.lazy(() => n.e("60497").then(n.bind(n, 908424)));
-function A(e) {
+    a = n(265872),
+    r = n(939249),
+    o = n(499373),
+    d = n(789645),
+    c = n(976860),
+    u = n(93055),
+    h = n(652215),
+    A = n(335993),
+    _ = n(985018);
+let m = l.lazy(() => n.e("60497").then(n.bind(n, 908424)));
+function g(e) {
     let { className: t } = e,
-        { hasAccess: n } = (0, o.TW)("FavoriteGuildHeaderActionButton"),
-        A = l.useRef(null),
-        _ = n ? u.intl.string(d.default.G9fGlP) : u.intl.string(u.t.ojM1xJ),
-        m = l.useCallback(() => {
-            (0, r.pX)(c.BVt.ME);
+        { hasAccess: n } = (0, u.TW)("FavoriteGuildHeaderActionButton"),
+        g = l.useRef(null),
+        p = n ? _.intl.string(A.default.G9fGlP) : _.intl.string(_.t.ojM1xJ),
+        f = l.useCallback(() => {
+            (0, c.pX)(h.BVt.ME);
         }, []),
-        g = l.useCallback((e) => {
+        E = l.useCallback((e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(l.Suspense, {
                 fallback: null,
-                children: (0, i.jsx)(h, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
+                children: (0, i.jsx)(m, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
             });
         }, []);
     return n
-        ? (0, i.jsx)(a.YNO, {
-              targetElementRef: A,
+        ? (0, i.jsx)(a.Y, {
+              targetElementRef: g,
               position: "bottom",
               align: "left",
               spacing: 4,
-              renderPopout: g,
+              renderPopout: E,
               children: (e, n) => {
                   let { isShown: l } = n;
                   return (0, i.jsx)(s.m, {
-                      text: _,
+                      text: p,
                       position: "bottom",
                       asContainer: !0,
                       shouldShow: !l,
-                      children: (0, i.jsx)(a.DUT, {
-                          innerRef: A,
+                      children: (0, i.jsx)(r.D, {
+                          innerRef: g,
                           className: t,
-                          "aria-label": _,
+                          "aria-label": p,
                           ...e,
-                          children: (0, i.jsx)(a.TIR, { color: "currentColor", size: "refresh_sm" }),
+                          children: (0, i.jsx)(o.T, { color: "currentColor", size: "refresh_sm" }),
                       }),
                   });
               },
           })
         : (0, i.jsx)(s.m, {
-              text: _,
+              text: p,
               position: "bottom",
               asContainer: !0,
-              children: (0, i.jsx)(a.DUT, {
+              children: (0, i.jsx)(r.D, {
                   className: t,
-                  "aria-label": _,
-                  onClick: m,
-                  children: (0, i.jsx)(a.PGe, { color: "currentColor", size: "refresh_sm" }),
+                  "aria-label": p,
+                  onClick: f,
+                  children: (0, i.jsx)(d.P, { color: "currentColor", size: "refresh_sm" }),
               }),
           });
 }

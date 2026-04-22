@@ -1,15 +1,15 @@
 i.d(e, { default: () => A });
 var s = i(627968),
     a = i(64700),
-    n = i(158954),
-    r = i(397927),
-    l = i(384904),
+    n = i(189213),
+    r = i(834730),
+    l = i(323082),
     c = i(954571),
     h = i(580630),
     o = i(71532),
     u = i(652215),
     p = i(985018),
-    d = i(847392);
+    d = i(240465);
 class g extends a.Component {
     state = { step: 0, isAwaitingAuthentication: !1 };
     componentDidMount() {
@@ -96,7 +96,7 @@ class g extends a.Component {
             actions: this.renderButtons(),
             children: [
                 (0, s.jsx)("div", { className: this.getImageStyle() }),
-                (0, s.jsx)(r.Text, { variant: "text-md/normal", children: this.getMessage() }),
+                (0, s.jsx)(r.E, { variant: "text-md/normal", children: this.getMessage() }),
             ],
         });
     }

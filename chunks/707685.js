@@ -1,5 +1,6 @@
-a.d(t, { b: () => l, w: () => s });
-var n = a(803842),
-    i = a(652215);
-let s = { [i.IWg.MODAL_CAROUSEL_NEXT]: n.$0, [i.IWg.MODAL_CAROUSEL_PREV]: n.$4, [i.IWg.CLOSE_MODAL]: n.cu },
-    l = { [i.IWg.CLOSE_MODAL]: n.cu };
+"use strict";
+n.d(t, { b: () => l, w: () => r });
+var i = n(803842),
+    a = n(652215);
+let r = { [a.IWg.MODAL_CAROUSEL_NEXT]: i.$0, [a.IWg.MODAL_CAROUSEL_PREV]: i.$4, [a.IWg.CLOSE_MODAL]: i.cu },
+    l = { [a.IWg.CLOSE_MODAL]: i.cu };

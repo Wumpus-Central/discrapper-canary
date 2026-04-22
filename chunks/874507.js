@@ -1,8 +1,6 @@
 e.exports = function (e) {
-    let t = "primitive rsc_template",
-        n =
-            "group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml",
-        r = "property rsc_defaults op_defaults";
+    let t =
+        "group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml";
     return {
         name: "crmsh",
         aliases: ["crm", "pcmk"],
@@ -19,7 +17,7 @@ e.exports = function (e) {
                 starts: { end: "\\s*([\\w_-]+:)?", starts: { className: "title", end: "\\s*[\\$\\w_][\\w_-]*" } },
             },
             {
-                beginKeywords: t,
+                beginKeywords: "primitive rsc_template",
                 starts: {
                     className: "title",
                     end: "\\s*[\\$\\w_][\\w_-]*",
@@ -27,11 +25,14 @@ e.exports = function (e) {
                 },
             },
             {
-                begin: "\\b(" + n.split(" ").join("|") + ")\\s+",
-                keywords: n,
+                begin: "\\b(" + t.split(" ").join("|") + ")\\s+",
+                keywords: t,
                 starts: { className: "title", end: "[\\$\\w_][\\w_-]*" },
             },
-            { beginKeywords: r, starts: { className: "title", end: "\\s*([\\w_-]+:)?" } },
+            {
+                beginKeywords: "property rsc_defaults op_defaults",
+                starts: { className: "title", end: "\\s*([\\w_-]+:)?" },
+            },
             e.QUOTE_STRING_MODE,
             { className: "meta", begin: "(ocf|systemd|service|lsb):[\\w_:-]+", relevance: 0 },
             { className: "number", begin: "\\b\\d+(\\.\\d+)?(ms|s|h|m)?", relevance: 0 },

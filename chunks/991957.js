@@ -1,42 +1,42 @@
 "use strict";
-n.d(t, { H: () => a });
+n.d(t, { H: () => s });
 var r = n(627968);
 n(64700);
 var i = n(140735);
-function a(e) {
+function s(e) {
     let {
         name: t,
         form: n,
-        disabled: a,
-        autoComplete: s,
+        disabled: s,
+        autoComplete: a,
         selectionMode: o,
         selectedItems: l,
         onSelectionChange: u,
-        listItems: c,
+        listItems: d,
     } = e;
-    if (null == t && (null == s || "off" === s)) return null;
-    function d(e) {
-        let t = Array.from(e.target.selectedOptions).map((e) => e.dataset.id);
-        u(c.filter((e) => t.includes(e.id)));
-    }
-    return (0, r.jsx)(i.A, {
-        children: (0, r.jsx)("select", {
-            "aria-hidden": !0,
-            tabIndex: -1,
-            disabled: a,
-            name: t,
-            form: n,
-            multiple: "multiple" === o,
-            autoComplete: s,
-            onChange: d,
-            children: c?.map((e) => {
-                let t = "object" == typeof e.value ? JSON.stringify(e.value) : String(e.value);
-                return (0, r.jsx)(
-                    "option",
-                    { "data-id": e.id, value: t, selected: l.includes(e), children: e.label },
-                    e.id,
-                );
-            }),
-        }),
-    });
+    return null == t && (null == a || "off" === a)
+        ? null
+        : (0, r.jsx)(i.A, {
+              children: (0, r.jsx)("select", {
+                  "aria-hidden": !0,
+                  tabIndex: -1,
+                  disabled: s,
+                  name: t,
+                  form: n,
+                  multiple: "multiple" === o,
+                  autoComplete: a,
+                  onChange: function (e) {
+                      let t = Array.from(e.target.selectedOptions).map((e) => e.dataset.id);
+                      u(d.filter((e) => t.includes(e.id)));
+                  },
+                  children: d?.map((e) => {
+                      let t = "object" == typeof e.value ? JSON.stringify(e.value) : String(e.value);
+                      return (0, r.jsx)(
+                          "option",
+                          { "data-id": e.id, value: t, selected: l.includes(e), children: e.label },
+                          e.id,
+                      );
+                  }),
+              }),
+          });
 }

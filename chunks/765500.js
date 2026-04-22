@@ -1,67 +1,70 @@
-n.d(t, { N: () => g, x: () => m });
+n.d(t, { N: () => h, x: () => A });
 var i = n(627968);
 n(64700);
-var s = n(158954),
-    l = n(827734),
-    r = n(200921),
-    a = n(176524),
-    o = n(403362),
-    d = n(336926),
-    c = n(985018),
-    u = n(151885);
-function m(e) {
-    let { icon: t, label: n, subLabel: r, description: o, children: d, muted: c } = e;
-    return (0, i.jsxs)(s.BJc, {
+var s = n(331322),
+    l = n(834730),
+    a = n(939249),
+    r = n(789645),
+    o = n(827734),
+    d = n(200921),
+    u = n(176524),
+    c = n(403362),
+    g = n(336926),
+    m = n(985018),
+    _ = n(583133);
+function A(e) {
+    let { icon: t, label: n, subLabel: a, description: r, children: d, muted: c } = e;
+    return (0, i.jsxs)(s.B, {
         direction: "horizontal",
         align: "center",
         gap: "sm",
         role: "listitem",
         children: [
-            (0, i.jsx)(a.A, { Icon: t, color: c ? l.A.colors.ICON_MUTED : "currentColor" }),
-            (0, i.jsxs)(s.BJc, {
+            (0, i.jsx)(u.A, { Icon: t, color: c ? o.A.colors.ICON_MUTED : "currentColor" }),
+            (0, i.jsxs)(s.B, {
                 direction: "vertical",
                 gap: "xxs",
                 children: [
-                    (0, i.jsxs)(s.BJc, {
+                    (0, i.jsxs)(s.B, {
                         direction: "horizontal",
                         gap: "xs",
                         children: [
-                            (0, i.jsx)(s.EYj, { variant: "text-md/semibold", color: "text-strong", children: n }),
+                            (0, i.jsx)(l.E, { variant: "text-md/semibold", color: "text-strong", children: n }),
                             null != n &&
-                                null != r &&
-                                (0, i.jsx)(s.EYj, {
+                                null != a &&
+                                (0, i.jsx)(l.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
                                     "aria-hidden": !0,
                                     children: "•",
                                 }),
-                            null != r &&
-                                (0, i.jsx)(s.EYj, { variant: "text-md/medium", color: "text-subtle", children: r }),
+                            null != a &&
+                                (0, i.jsx)(l.E, { variant: "text-md/medium", color: "text-subtle", children: a }),
                         ],
                     }),
-                    (0, i.jsx)(s.EYj, { variant: "text-sm/normal", color: "text-muted", children: o }),
+                    (0, i.jsx)(l.E, { variant: "text-sm/normal", color: "text-muted", children: r }),
                 ],
             }),
             d,
         ],
     });
 }
-function g(e) {
+function h(e) {
     let { session: t, current: n } = e,
-        { location: l, platform: a, os: g, Icon: _, lastActive: x } = (0, d.T)(t, n),
-        h = [l, x].filter(o.Vq);
-    return (0, i.jsx)(m, {
-        icon: _,
-        label: g,
-        subLabel: a,
-        description: h.join(" \xb7 "),
+        { location: s, platform: l, os: o, Icon: u, lastActive: h } = (0, g.T)(t, n),
+        p = [s, h].filter(c.Vq);
+    return (0, i.jsx)(A, {
+        icon: u,
+        label: o,
+        subLabel: l,
+        description: p.join(" \xb7 "),
         children:
             !n &&
-            (0, i.jsx)(s.DUT, {
-                className: u.X,
-                onClick: () => (0, r.U0)(t.id_hash),
-                "aria-label": c.intl.string(c.t.E4MJNt),
-                children: (0, i.jsx)(s.PGe, { size: "md", color: "currentColor" }),
+            (0, i.jsx)(a.D, {
+                className: _.X,
+                onClick: () => (0, d.U0)(t.id_hash),
+                "aria-label": m.intl.string(m.t.E4MJNt),
+                children: (0, i.jsx)(r.P, { size: "md", color: "currentColor" }),
             }),
     });
 }

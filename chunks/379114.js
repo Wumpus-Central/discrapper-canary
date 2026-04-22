@@ -2,9 +2,9 @@
 n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
-    s = n(397927),
-    a = n(793574),
-    l = n(688810),
+    l = n(834730),
+    s = n(793574),
+    a = n(688810),
     o = n(763754),
     c = n(447215),
     u = n(888675),
@@ -20,7 +20,7 @@ function g(e) {
     let { username: t } = e;
     return (0, i.jsx)("div", {
         className: N._X,
-        children: (0, i.jsx)(s.Text, {
+        children: (0, i.jsx)(l.E, {
             tag: "p",
             className: N._X,
             color: "status-positive-text",
@@ -29,7 +29,7 @@ function g(e) {
                 username: t,
                 usernameHook: (e, t) =>
                     (0, i.jsx)(
-                        s.Text,
+                        l.E,
                         {
                             tag: "span",
                             color: "status-positive-text",
@@ -53,39 +53,39 @@ function p(e) {
     });
 }
 function C(e) {
-    let { channel: t, message: s, compact: A } = e,
-        T = (0, o.Ay)(s),
+    let { channel: t, message: l, compact: A } = e,
+        T = (0, o.Ay)(l),
         N = (function (e) {
             let { author: t, channel: n, message: i } = e,
-                s = n.guild_id,
-                o = (0, c.P)({ user: i.author, channelId: n.id, guildId: s, messageId: i.id })(t),
-                { analyticsLocations: u } = (0, l.Ay)(a.A.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
+                l = n.guild_id,
+                o = (0, c.P)({ user: i.author, channelId: n.id, guildId: l, messageId: i.id })(t),
+                { analyticsLocations: u } = (0, a.Ay)(s.A.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
                 E = i.roleSubscriptionData,
                 A = r.useCallback(() => {
-                    (0, d.pX)(m.BVt.CHANNEL(s, I.VV.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
+                    (0, d.pX)(m.BVt.CHANNEL(l, I.VV.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
                         E?.role_subscription_listing_id != null &&
-                            (0, _.xH)(s, n.id, i.id, E.role_subscription_listing_id);
-                }, [s, n, i, E, u]);
+                            (0, _.xH)(l, n.id, i.id, E.role_subscription_listing_id);
+                }, [l, n, i, E, u]);
             return null == E
                 ? null
                 : (0, _.gw)({
                       username: t.nick,
                       usernameOnClickHandler: o,
                       roleSubscriptionOnClickHandler: A,
-                      guildId: s,
+                      guildId: l,
                       roleSubscriptionData: i.roleSubscriptionData,
                   });
-        })({ channel: t, message: s, author: T }),
+        })({ channel: t, message: l, author: T }),
         g =
-            s.roleSubscriptionData?.total_months_subscribed != null &&
-            s.roleSubscriptionData?.total_months_subscribed <= 1;
+            l.roleSubscriptionData?.total_months_subscribed != null &&
+            l.roleSubscriptionData?.total_months_subscribed <= 1;
     return null == N
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(u.A, { icon: n(617184), timestamp: s.timestamp, compact: A, children: N }),
-                  g && (0, i.jsx)(p, { guildId: t.guild_id, user: s.author, username: T.nick }),
-                  (0, i.jsx)(E.A, { channel: t, message: s }),
+                  (0, i.jsx)(u.A, { icon: n(617184), timestamp: l.timestamp, compact: A, children: N }),
+                  g && (0, i.jsx)(p, { guildId: t.guild_id, user: l.author, username: T.nick }),
+                  (0, i.jsx)(E.A, { channel: t, message: l }),
               ],
           });
 }

@@ -1,45 +1,41 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(64700),
-    i = n(974690),
-    s = n(311907),
-    a = n(205184),
-    o = n(21119),
-    l = n(927813),
-    u = n(661191),
-    c = n(20805),
-    d = n(583846);
-let _ = l.A.Millis.WEEK;
-function f(e) {
-    let t = (0, a.s)(e),
-        n = (0, s.cf)([o.A], () => o.A.getUserAffinitiesMap());
-    return r.useMemo(
+i.d(e, { A: () => f });
+var n = i(64700),
+    l = i(974690),
+    a = i(311907),
+    r = i(205184),
+    s = i(21119),
+    o = i(927813),
+    u = i(661191),
+    c = i(20805),
+    d = i(583846);
+let A = o.A.Millis.WEEK;
+function f(t) {
+    let e = (0, r.s)(t),
+        i = (0, a.cf)([s.A], () => s.A.getUserAffinitiesMap());
+    return n.useMemo(
         () =>
-            null == t
+            null == e
                 ? []
-                : t
+                : e
                       .filter(
-                          (t) => (0, c.zD)(t) && (0, c.P)(t) && t.extra.application_id === e && u.default.age(t.id) < _,
+                          (e) => (0, c.zD)(e) && (0, c.P)(e) && e.extra.application_id === t && u.default.age(e.id) < A,
                       )
-                      .sort((e, t) => g(n, t) - g(n, e)),
-        [t, e, n],
+                      .sort((t, e) => p(i, e) - p(i, t)),
+        [e, t, i],
     );
 }
-let p = 1e-4,
-    h = 30 * l.A.Seconds.MINUTE,
-    m = -0.01,
-    E = 0.6;
-function g(e, t) {
-    let n = t.participants;
-    if (0 === n.length) return 0;
-    let r = Math.max(
-            ...n.map((t) => {
-                let n = e.get(t);
-                return (n?.communicationProbability ?? 0) + p;
+let y = 30 * o.A.Seconds.MINUTE;
+function p(t, e) {
+    let i = e.participants;
+    if (0 === i.length) return 0;
+    let n = Math.max(
+            ...i.map((e) => {
+                let i = t.get(e);
+                return (i?.communicationProbability ?? 0) + 1e-4;
             }),
         ),
-        s = Math.exp((u.default.age(t.id) / 1e3 / h) * m),
-        a = t.traits.some((e) => e.type !== i.K.DURATION_SECONDS),
-        o = (0, d.I5)(t);
-    return r * s * (1 + E * (a && !o ? 1 : 0));
+        a = Math.exp(-((u.default.age(e.id) / 1e3 / y) * 0.01)),
+        r = e.traits.some((t) => t.type !== l.K.DURATION_SECONDS),
+        s = (0, d.I5)(e);
+    return n * a * (1 + 0.6 * (r && !s ? 1 : 0));
 }

@@ -1,20 +1,21 @@
 "use strict";
 let r;
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var i = n(311907),
-    a = n(73153),
-    s = n(194486);
-let o = () => {
-    r = r === s.B.BASIC ? s.B.PREMIUM : s.B.BASIC;
-};
-class l extends i.Ay.PersistedStore {
+    s = n(73153),
+    a = n(194486);
+class o extends i.Ay.PersistedStore {
     static displayName = "VoiceChannelEffectsPersistedStore";
     static persistKey = "VoiceChannelEffectsPersistedStore";
     initialize(e) {
-        r = e?.animationType ?? s.B.PREMIUM;
+        r = e?.animationType ?? a.B.PREMIUM;
     }
     getState() {
         return { animationType: r };
     }
 }
-let u = new l(a.h, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: o });
+let l = new o(s.h, {
+    VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
+        r = r === a.B.BASIC ? a.B.PREMIUM : a.B.BASIC;
+    },
+});

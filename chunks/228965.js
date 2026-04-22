@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(311907),
+n.d(t, { A: () => p });
+var l = n(311907),
     i = n(811024),
     a = n(782091),
     s = n(847381),
-    o = n(849269),
-    l = n(611010),
-    u = n(576705),
-    c = n(723702),
-    d = n(818348),
-    _ = n(985018);
-function f(e) {
+    r = n(849269),
+    o = n(611010),
+    c = n(576705),
+    d = n(723702),
+    u = n(818348),
+    m = n(985018);
+function p(e) {
     let t,
-        { context: n, application: f, activityAction: p } = e,
-        h = "channel" === n.type ? n.channel : void 0,
-        m = (0, r.bG)([u.A], () => u.A.can(d.xB.USE_EMBEDDED_ACTIVITIES, h)),
-        g = (0, a.et)(h?.id),
-        E = !1;
-    switch (p) {
-        case o.o6.LEAVE:
-            E = !1;
+        { context: n, application: p, activityAction: _ } = e,
+        A = "channel" === n.type ? n.channel : void 0,
+        h = (0, l.bG)([c.A], () => c.A.can(u.xB.USE_EMBEDDED_ACTIVITIES, A)),
+        f = (0, a.et)(A?.id),
+        x = !1;
+    switch (_) {
+        case r.o6.LEAVE:
+            x = !1;
             break;
-        case o.o6.START:
-            null == h ? (E = !1) : h?.isGuildVoice() ? g !== a.xy.CAN_LAUNCH && (E = !0) : (0, i.pE)(h) || (E = !0);
+        case r.o6.START:
+            null == A ? (x = !1) : A?.isGuildVoice() ? f !== a.xy.CAN_LAUNCH && (x = !0) : (0, i.pE)(A) || (x = !0);
             break;
-        case o.o6.JOIN:
-            h?.isGuildVoice() ? (E = !m) : (0, i.pE)(h) || (E = !0);
+        case r.o6.JOIN:
+            A?.isGuildVoice() ? (x = !h) : (0, i.pE)(A) || (x = !0);
     }
-    if (p !== o.o6.LEAVE) {
-        let e = f instanceof l.Ay ? f.embeddedActivityConfig : f.embedded_activity_config,
-            n = (0, s.A)((0, c.getOS)());
+    if (_ !== r.o6.LEAVE) {
+        let e = p instanceof o.Ay ? p.embeddedActivityConfig : p.embedded_activity_config,
+            n = (0, s.A)((0, d.getOS)());
         null == e || e.supported_platforms.includes(n)
-            ? h?.isThread() && ((E = !0), (t = _.intl.string(_.t.ddSR3v)))
-            : ((E = !1), (t = _.intl.string(_.t.z2YTgJ)));
+            ? A?.isThread() && ((x = !0), (t = m.intl.string(m.t.ddSR3v)))
+            : ((x = !1), (t = m.intl.string(m.t.z2YTgJ)));
     }
-    return E && null == t && (t = _.intl.string(_.t.f41E1g)), { disabled: E, reason: t };
+    return x && null == t && (t = m.intl.string(m.t.f41E1g)), { disabled: x, reason: t };
 }

@@ -1,24 +1,25 @@
-l.d(t, { Hq: () => u, LB: () => p, MG: () => d, nB: () => s, wn: () => c });
-var a = l(627968);
-l(64700);
-var n = l(503698),
-    r = l.n(n),
-    i = l(397927),
-    o = l(798233);
-let s = () => (0, a.jsx)("hr", { className: o.ts }),
-    u = (e) => {
-        let { label: t, children: l, direction: n = "horizontal", className: u } = e;
-        return (0, a.jsxs)(a.Fragment, {
+"use strict";
+a.d(t, { Hq: () => d, LB: () => h, MG: () => u, nB: () => o, wn: () => c });
+var r = a(627968);
+a(64700);
+var l = a(503698),
+    n = a.n(l),
+    i = a(834730),
+    s = a(723680);
+let o = () => (0, r.jsx)("hr", { className: s.ts }),
+    d = (e) => {
+        let { label: t, children: a, direction: l = "horizontal", className: d } = e;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, a.jsx)(s, {}),
-                (0, a.jsx)(i.Text, { variant: "text-md/semibold", className: o.cW, children: t }),
-                (0, a.jsx)("div", { className: r()(o.kL, u, { [o.YG]: "vertical" === n }), children: l }),
+                (0, r.jsx)(o, {}),
+                (0, r.jsx)(i.E, { variant: "text-md/semibold", className: s.cW, children: t }),
+                (0, r.jsx)("div", { className: n()(s.kL, d, { [s.YG]: "vertical" === l }), children: a }),
             ],
         });
     },
     c = (e) => {
         let { children: t } = e;
-        return (0, a.jsx)("div", { className: o.uW, children: t });
+        return (0, r.jsx)("div", { className: s.uW, children: t });
     },
-    d = (e) => (0, a.jsx)("div", { className: o.wO, children: e.children }),
-    p = (e) => (0, a.jsx)("fieldset", { className: o.lI, children: e.children });
+    u = (e) => (0, r.jsx)("div", { className: s.wO, children: e.children }),
+    h = (e) => (0, r.jsx)("fieldset", { className: s.lI, children: e.children });

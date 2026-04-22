@@ -2,27 +2,27 @@
 n.d(t, {
     Ac: () => T,
     B0: () => _,
-    CP: () => m,
-    EI: () => c,
-    N2: () => p,
+    CP: () => p,
+    EI: () => d,
+    N2: () => E,
     Tu: () => g,
     WU: () => S,
     Xf: () => h,
     a4: () => f,
     lw: () => A,
-    nZ: () => E,
-    rv: () => d,
+    nZ: () => m,
+    rv: () => c,
     z5: () => I,
 }),
     n(321073);
 var r = n(64700),
     i = n(311907),
-    s = n(582754),
+    s = n(765178),
     a = n(836602),
     o = n(622543),
     l = n(696451),
     u = n(985018);
-function c(e) {
+function d(e) {
     return r.useMemo(() => {
         let t = l.Ay.getMutableAllGuildsAndMembers(),
             n = {};
@@ -34,7 +34,7 @@ function c(e) {
         return null != n ? Object.entries(n).map((e) => e[1][0]) : [];
     }, [e]);
 }
-function d(e, t) {
+function c(e, t) {
     let n = (0, i.bG)([l.Ay], () => (void 0 === t ? null : l.Ay.getMember(t, e.id))),
         { pendingNameplate: r, pendingErrors: s } = (0, i.cf)([a.A], () => ({
             pendingNameplate: a.A.getPendingChanges(t).pendingNameplate,
@@ -71,7 +71,7 @@ function f(e) {
         r = (0, i.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
     return null != n ? r?.avatarDecoration : t.avatarDecoration;
 }
-function p(e) {
+function E(e) {
     let { user: t, guildId: n } = e;
     return (0, i.bG)([o.A], () =>
         null == n ? o.A.getUserProfile(t.id)?.profileEffect : o.A.getGuildMemberProfile(t.id, n)?.profileEffect,
@@ -83,13 +83,13 @@ function h(e) {
         null == n ? o.A.getUserProfile(t.id)?.profileFrame : o.A.getGuildMemberProfile(t.id, n)?.profileFrame,
     );
 }
-function m(e) {
+function p(e) {
     return (0, i.cf)([a.A], () => ({
         pendingAvatarDecoration: a.A.getPendingChanges(e).pendingAvatarDecoration,
         errors: a.A.getErrors(e).avatarDecoration,
     }));
 }
-function E(e) {
+function m(e) {
     return (0, i.cf)([a.A], () => ({
         pendingProfileEffect: a.A.getPendingChanges(e).pendingProfileEffect,
         errors: a.A.getErrors(e).profileEffect,
@@ -102,11 +102,16 @@ function g(e) {
     }));
 }
 function A(e) {
-    let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e,
-        s = "" === r || null === r,
-        a = "" !== r && null != r,
-        o = "" !== n && null != n;
-    return s ? (null != i ? t : null) : a ? r : null != i && o ? n : t;
+    let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e;
+    return "" === r || null === r
+        ? null != i
+            ? t
+            : null
+        : "" !== r && null != r
+          ? r
+          : null != i && "" !== n && null != n
+            ? n
+            : t;
 }
 function I(e, t) {
     return void 0 === e ? null != t : null != e;
@@ -116,8 +121,8 @@ function T(e, t) {
 }
 function S(e) {
     "set" === e
-        ? s.OR.announce(u.intl.string(u.t.NstziV))
+        ? s.O.announce(u.intl.string(u.t.NstziV))
         : "remove" === e
-          ? s.OR.announce(u.intl.string(u.t["f1+oNk"]))
-          : s.OR.announce(u.intl.string(u.t["/b5nqj"]));
+          ? s.O.announce(u.intl.string(u.t["f1+oNk"]))
+          : s.O.announce(u.intl.string(u.t["/b5nqj"]));
 }

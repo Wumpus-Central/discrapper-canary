@@ -1,71 +1,73 @@
-n.d(t, { i: () => x });
+n.d(t, { i: () => C });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    l = n(835245),
-    s = n(397927),
-    o = n(954571),
-    d = n(18437),
-    c = n(590202),
-    u = n(545986),
-    _ = n(394900),
-    m = n(652215),
-    h = n(985018),
-    p = n(933674),
-    g = n(956324);
-function A(e) {
-    let { questId: t, questContent: n, fullWidth: r } = e;
+var l = n(503698),
+    a = n.n(l),
+    s = n(835245),
+    r = n(821609),
+    o = n(534514),
+    d = n(834730),
+    c = n(954571),
+    u = n(18437),
+    m = n(590202),
+    _ = n(545986),
+    h = n(394900),
+    p = n(652215),
+    g = n(985018),
+    A = n(651029),
+    f = n(956324);
+function x(e) {
+    let { questId: t, questContent: n, fullWidth: l } = e;
     return (0, i.jsx)("div", {
-        className: p.UD,
-        children: (0, i.jsx)(s.Button, {
-            fullWidth: r,
+        className: A.UD,
+        children: (0, i.jsx)(r.$, {
+            fullWidth: l,
             variant: "primary",
             onClick: () => {
-                (0, u.navigateToQuestHome)({ fromContent: n }),
-                    o.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
+                (0, _.navigateToQuestHome)({ fromContent: n }),
+                    c.default.track(p.HAw.QUEST_CONTENT_CLICKED, {
                         quest_id: t,
-                        click_id: (0, l.A)(),
-                        cta_name: c.Cy.VIEW_QUESTS,
+                        click_id: (0, s.A)(),
+                        cta_name: m.Cy.VIEW_QUESTS,
                         is_targeted: !1,
-                        ...(0, c.fF)(n),
+                        ...(0, m.fF)(n),
                     });
             },
-            text: h.intl.string(h.t.GURBQl),
+            text: g.intl.string(g.t.GURBQl),
         }),
     });
 }
-function x(e) {
-    let { questId: t, fallbackReason: n, bodyText: r, questContent: l } = e,
-        { containerRef: o, size: c } = (0, _.L)();
+function C(e) {
+    let { questId: t, fallbackReason: n, bodyText: l, questContent: s } = e,
+        { containerRef: r, size: c } = (0, h.L)();
     return (
-        (0, d.Ii)(n, t),
+        (0, u.Ii)(n, t),
         (0, i.jsxs)("div", {
             ref: (e) => {
-                o.current = e;
+                r.current = e;
             },
-            className: a()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
+            className: a()(A.kL, { [A.U]: "lg" === c, [A.SP]: "lg" !== c }),
             children: [
                 (0, i.jsxs)("div", {
-                    className: p.hQ,
+                    className: A.hQ,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(o.D, {
                             variant: "lg" === c ? "heading-xl/bold" : "heading-lg/bold",
                             color: "text-strong",
-                            children: h.intl.string(h.t.vnP31W),
+                            children: g.intl.string(g.t.vnP31W),
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(d.E, {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: p.__invalid_mobileWebCopy,
-                            children: r,
+                            className: A.__invalid_mobileWebCopy,
+                            children: l,
                         }),
-                        (0, i.jsx)(A, { questId: t, questContent: l, fullWidth: "lg" !== c }),
+                        (0, i.jsx)(x, { questId: t, questContent: s, fullWidth: "lg" !== c }),
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: p.Dg,
-                    children: (0, i.jsx)("img", { src: g, alt: "", className: p.Wg }),
+                    className: A.Dg,
+                    children: (0, i.jsx)("img", { src: f, alt: "", className: A.Wg }),
                 }),
             ],
         })

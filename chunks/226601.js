@@ -1,82 +1,75 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(890167),
-    i = n(668459),
-    a = n(105423),
-    s = n(643479),
-    o = n(801765);
-let l = { read: c },
-    u = 16;
-function c(e, t, n) {
-    let i = r.A.getByteOrder(e, t),
-        s = (0, o.y)(e, a.dA, t, (0, o.x)(e, t, i), i, n);
-    return d(e, t, s, i);
-}
-function d(e, t, n, r) {
-    if (!n.MPEntry) return n;
-    let a = [];
-    for (let o = 0; o < Math.ceil(n.MPEntry.value.length / u); o++) {
-        a[o] = {};
-        let l = _(n.MPEntry.value, o * u, i.A.getTypeSize("LONG"), r);
-        (a[o].ImageFlags = f(l)), (a[o].ImageFormat = p(l)), (a[o].ImageType = h(l));
-        let c = _(n.MPEntry.value, o * u + 4, i.A.getTypeSize("LONG"), r);
-        a[o].ImageSize = { value: c, description: "" + c };
-        let d = m(o, n.MPEntry, r, t);
-        a[o].ImageOffset = { value: d, description: "" + d };
-        let g = _(n.MPEntry.value, o * u + 12, i.A.getTypeSize("SHORT"), r);
-        a[o].DependentImage1EntryNumber = { value: g, description: "" + g };
-        let E = _(n.MPEntry.value, o * u + 14, i.A.getTypeSize("SHORT"), r);
-        (a[o].DependentImage2EntryNumber = { value: E, description: "" + E }),
-            (a[o].image = e.buffer.slice(d, d + c)),
-            (0, s.L$)(a[o], "base64", function () {
-                return (0, s.Zo)(this.image);
-            });
+i.d(t, { A: () => l });
+var n = i(890167),
+    r = i(668459),
+    o = i(105423),
+    a = i(643479),
+    s = i(801765);
+let l = {
+    read: function (e, t, i) {
+        let l = n.A.getByteOrder(e, t),
+            c = (0, s.y)(e, o.dA, t, (0, s.x)(e, t, l), l, i);
+        return (function (e, t, i, n) {
+            if (!i.MPEntry) return i;
+            let o = [];
+            for (let s = 0; s < Math.ceil(i.MPEntry.value.length / 16); s++) {
+                o[s] = {};
+                let l = u(i.MPEntry.value, 16 * s, r.A.getTypeSize("LONG"), n);
+                (o[s].ImageFlags = (function (e) {
+                    let t = [(e >> 31) & 1, (e >> 30) & 1, (e >> 29) & 1],
+                        i = [];
+                    return (
+                        t[0] && i.push("Dependent Parent Image"),
+                        t[1] && i.push("Dependent Child Image"),
+                        t[2] && i.push("Representative Image"),
+                        { value: t, description: i.join(", ") || "None" }
+                    );
+                })(l)),
+                    (o[s].ImageFormat = (function (e) {
+                        let t = (e >> 24) & 7;
+                        return { value: t, description: 0 === t ? "JPEG" : "Unknown" };
+                    })(l)),
+                    (o[s].ImageType = (function (e) {
+                        let t = 0xffffff & e;
+                        return {
+                            value: t,
+                            description:
+                                {
+                                    196608: "Baseline MP Primary Image",
+                                    65537: "Large Thumbnail (VGA equivalent)",
+                                    65538: "Large Thumbnail (Full HD equivalent)",
+                                    131073: "Multi-Frame Image (Panorama)",
+                                    131074: "Multi-Frame Image (Disparity)",
+                                    131075: "Multi-Frame Image (Multi-Angle)",
+                                    0: "Undefined",
+                                }[t] || "Unknown",
+                        };
+                    })(l));
+                let c = u(i.MPEntry.value, 16 * s + 4, r.A.getTypeSize("LONG"), n);
+                o[s].ImageSize = { value: c, description: "" + c };
+                let d = (function (e, t, i, n) {
+                    return 0 === e ? 0 : u(t.value, 16 * e + 8, r.A.getTypeSize("LONG"), i) + n;
+                })(s, i.MPEntry, n, t);
+                o[s].ImageOffset = { value: d, description: "" + d };
+                let f = u(i.MPEntry.value, 16 * s + 12, r.A.getTypeSize("SHORT"), n);
+                o[s].DependentImage1EntryNumber = { value: f, description: "" + f };
+                let p = u(i.MPEntry.value, 16 * s + 14, r.A.getTypeSize("SHORT"), n);
+                (o[s].DependentImage2EntryNumber = { value: p, description: "" + p }),
+                    (o[s].image = e.buffer.slice(d, d + c)),
+                    (0, a.L$)(o[s], "base64", function () {
+                        return (0, a.Zo)(this.image);
+                    });
+            }
+            return (i.Images = o), i;
+        })(e, t, c, l);
+    },
+};
+function u(e, t, i, r) {
+    if (r === n.A.LITTLE_ENDIAN) {
+        let n = 0;
+        for (let r = 0; r < i; r++) n += e[t + r] << (8 * r);
+        return n;
     }
-    return (n.Images = a), n;
-}
-function _(e, t, n, i) {
-    if (i === r.A.LITTLE_ENDIAN) {
-        let r = 0;
-        for (let i = 0; i < n; i++) r += e[t + i] << (8 * i);
-        return r;
-    }
-    let a = 0;
-    for (let r = 0; r < n; r++) a += e[t + r] << (8 * (n - 1 - r));
-    return a;
-}
-function f(e) {
-    let t = [(e >> 31) & 1, (e >> 30) & 1, (e >> 29) & 1],
-        n = [];
-    return (
-        t[0] && n.push("Dependent Parent Image"),
-        t[1] && n.push("Dependent Child Image"),
-        t[2] && n.push("Representative Image"),
-        { value: t, description: n.join(", ") || "None" }
-    );
-}
-function p(e) {
-    let t = (e >> 24) & 7;
-    return { value: t, description: 0 === t ? "JPEG" : "Unknown" };
-}
-function h(e) {
-    let t = 0xffffff & e;
-    return {
-        value: t,
-        description:
-            {
-                196608: "Baseline MP Primary Image",
-                65537: "Large Thumbnail (VGA equivalent)",
-                65538: "Large Thumbnail (Full HD equivalent)",
-                131073: "Multi-Frame Image (Panorama)",
-                131074: "Multi-Frame Image (Disparity)",
-                131075: "Multi-Frame Image (Multi-Angle)",
-                0: "Undefined",
-            }[t] || "Unknown",
-    };
-}
-function m(e, t, n, r) {
-    return g(e) ? 0 : _(t.value, e * u + 8, i.A.getTypeSize("LONG"), n) + r;
-}
-function g(e) {
-    return 0 === e;
+    let o = 0;
+    for (let n = 0; n < i; n++) o += e[t + n] << (8 * (i - 1 - n));
+    return o;
 }

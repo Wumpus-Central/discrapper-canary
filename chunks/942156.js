@@ -5,11 +5,11 @@ var i = n(627968),
     r = n(503698),
     l = n.n(r),
     a = n(615300),
-    o = n(397927),
-    d = n(652215),
-    c = n(102041);
+    o = n(844222),
+    c = n(652215),
+    d = n(471561);
 class u extends s.Component {
-    static contextType = o.CZY;
+    static contextType = o.C;
     anim = new a.A.Value(0);
     componentDidMount() {
         this.props.show && this.animate(1);
@@ -35,10 +35,10 @@ class u extends s.Component {
     }
     render() {
         return (0, i.jsx)(a.A.a, {
-            href: d.BVt.INDEX,
+            href: c.BVt.INDEX,
             target: "_blank",
             rel: "noopener",
-            className: l()(c.w, this.props.className),
+            className: l()(d.w, this.props.className),
             style: this.getAnimatedStyle(),
         });
     }

@@ -1,57 +1,58 @@
-l.d(t, { b: () => f });
-var a = l(627968),
-    n = l(64700),
-    r = l(503698),
-    i = l.n(r),
-    s = l(732955),
-    o = l(397927),
-    u = l(303136),
-    c = l(975571),
-    d = l(318346),
-    p = l(652215),
-    m = l(985018),
-    h = l(186541),
-    x = l(266770),
-    b = l(268920),
-    g = l(633217);
-let y = () =>
-        (0, a.jsx)("div", {
+n.d(t, { b: () => b });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    i = n(821609),
+    u = n(834730),
+    c = n(349288),
+    o = n(303136),
+    d = n(975571),
+    m = n(318346),
+    f = n(652215),
+    x = n(985018),
+    h = n(429202),
+    A = n(913603),
+    j = n(268920),
+    v = n(633217);
+let N = () =>
+        (0, l.jsx)("div", {
             className: h.s,
-            children: (0, a.jsx)(u.A, { src: g.A, fallbackImage: b.A, className: h.Cb }),
+            children: (0, l.jsx)(o.A, { src: v.A, fallbackImage: j.A, className: h.Cb }),
         }),
-    f = (e) => {
+    b = (e) => {
         let {
                 ctaText: t,
-                ctaOnClick: l,
+                ctaOnClick: n,
                 analyticsPage: r,
-                linkPreText: u = m.intl.string(m.t["5qZv9E"]),
-                linkText: b = m.intl.string(m.t.XRdyjz),
+                linkPreText: o = x.intl.string(x.t["5qZv9E"]),
+                linkText: j = x.intl.string(x.t.XRdyjz),
             } = e,
-            g = n.useCallback(() => {
+            v = a.useCallback(() => {
                 null != r &&
-                    (0, d.Y)({
+                    (0, m.Y)({
                         pageType: r,
-                        sectionType: p.JJy.ORBS_BALANCE_MENU,
-                        ctaObject: p.ZSU.ORBS_LEARN_MORE_LINK,
+                        sectionType: f.JJy.ORBS_BALANCE_MENU,
+                        ctaObject: f.ZSU.ORBS_LEARN_MORE_LINK,
                     });
             }, [r]);
-        return (0, a.jsxs)("div", {
-            className: i()(h.kL, x.O),
+        return (0, l.jsxs)("div", {
+            className: s()(h.kL, A.O),
             children: [
-                (0, a.jsx)(y, {}),
-                (0, a.jsx)(s.$nd, { text: t, variant: "primary", size: "sm", onClick: l, fullWidth: !0 }),
-                (0, a.jsxs)("div", {
+                (0, l.jsx)(N, {}),
+                (0, l.jsx)(i.$, { text: t, variant: "primary", size: "sm", onClick: n, fullWidth: !0 }),
+                (0, l.jsxs)("div", {
                     className: h.kx,
                     children: [
-                        void 0 !== u &&
-                            (0, a.jsxs)(o.Text, { variant: "text-xs/normal", className: h.D5, children: [u, "\xa0"] }),
-                        (0, a.jsx)(o.MzZ, {
+                        void 0 !== o &&
+                            (0, l.jsxs)(u.E, { variant: "text-xs/normal", className: h.D5, children: [o, "\xa0"] }),
+                        (0, l.jsx)(c.Anchor, {
                             target: "_blank",
                             rel: "author",
-                            href: c.A.getArticleURL(p.MVz.ORBS_FAQ),
+                            href: d.A.getArticleURL(f.MVz.ORBS_FAQ),
                             className: h.CU,
-                            onClick: g,
-                            children: b,
+                            onClick: v,
+                            children: j,
                         }),
                     ],
                 }),

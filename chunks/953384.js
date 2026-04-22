@@ -1,49 +1,28 @@
 "use strict";
 let r;
-n.d(t, { A: () => I });
+n.d(t, { A: () => p });
 var i = n(311907),
-    a = n(73153),
-    s = n(194862),
+    s = n(73153),
+    a = n(194862),
     o = n(611010),
     l = n(927813),
     u = n(723702);
-let c = l.A.Millis.DAY,
-    d = new s.A(),
+let d = l.A.Millis.DAY,
+    c = new a.A(),
     _ = "",
     f = null,
-    p = !1;
-function h(e) {
-    return {
-        id: e.id,
-        name: e.name,
-        executables: (e.executables ?? []).map(o.lg),
-        aliases: e.aliases ?? [],
-        icon: e.icon_hash ?? void 0,
-        thirdPartySkus: e.third_party_skus ?? [],
-    };
-}
-function m() {
-    r = !0;
-}
-function g() {
-    (r = !1), (p = !0);
-}
-function E(e) {
-    let { nonGames: t, etag: n } = e;
-    for (let e of (null != n && _ !== n && (d.clear(), (_ = n)), t)) d.set(e.id, h(e));
-    (r = void 0), (f = Date.now()), (p = !0);
-}
-class A extends i.Ay.PersistedStore {
+    E = !1;
+class h extends i.Ay.PersistedStore {
     static displayName = "NonGameStore";
     static persistKey = "NonGameStore";
     initialize(e) {
-        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => d.set(e.id, e)));
+        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => c.set(e.id, e)));
     }
     getState() {
-        return (0, u.isDesktop)() ? { etag: _, nonGames: d.values() } : { etag: "", nonGames: [] };
+        return (0, u.isDesktop)() ? { etag: _, nonGames: c.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
-        return d.values();
+        return c.values();
     }
     get fetching() {
         return !0 === r;
@@ -55,16 +34,36 @@ class A extends i.Ay.PersistedStore {
         return f;
     }
     get hasAttemptedFetch() {
-        return p;
+        return E;
     }
     get ttl() {
-        return c;
+        return d;
     }
     getById(e) {
-        return d.get(e);
+        return c.get(e);
     }
     canFetch() {
-        return !r && (null == f || Date.now() >= f + c);
+        return !r && (null == f || Date.now() >= f + d);
     }
 }
-let I = new A(a.h, { NON_GAMES_DATABASE_FETCH: m, NON_GAMES_DATABASE_FETCH_FAIL: g, NON_GAMES_DATABASE_UPDATE: E });
+let p = new h(s.h, {
+    NON_GAMES_DATABASE_FETCH: function () {
+        r = !0;
+    },
+    NON_GAMES_DATABASE_FETCH_FAIL: function () {
+        (r = !1), (E = !0);
+    },
+    NON_GAMES_DATABASE_UPDATE: function (e) {
+        let { nonGames: t, etag: n } = e;
+        for (let e of (null != n && _ !== n && (c.clear(), (_ = n)), t))
+            c.set(e.id, {
+                id: e.id,
+                name: e.name,
+                executables: (e.executables ?? []).map(o.lg),
+                aliases: e.aliases ?? [],
+                icon: e.icon_hash ?? void 0,
+                thirdPartySkus: e.third_party_skus ?? [],
+            });
+        (r = void 0), (f = Date.now()), (E = !0);
+    },
+});

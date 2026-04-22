@@ -1,7 +1,7 @@
 a.d(e, { default: () => _ });
 var n = a(627968),
     i = a(64700),
-    r = a(397927),
+    r = a(954197),
     l = a(198982),
     o = a(997509),
     s = a(809505),
@@ -14,7 +14,7 @@ function _(t) {
         [C, g] = i.useState(null),
         h = e.features.has(d.GuildFeatures.COMMUNITY),
         v = (0, s.vd)(h, _).filter((t) => !t.disabled),
-        x = i.useCallback(async () => {
+        f = i.useCallback(async () => {
             null != C && g(null);
             try {
                 await o.A.saveGuild(e.id, { verificationLevel: b }), o.A.updateGuild({ verificationLevel: b }), a();
@@ -27,8 +27,8 @@ function _(t) {
         title: u.intl.string(u.t.DpRdYK),
         description: u.intl.format(u.t.iuRk2j, {}),
         errorText: C,
-        onConfirm: x,
+        onConfirm: f,
         onCancel: a,
-        children: (0, n.jsx)(r.z6M, { value: b, options: v, onChange: (t) => p(t) }),
+        children: (0, n.jsx)(r.z, { value: b, options: v, onChange: (t) => p(t) }),
     });
 }

@@ -1,48 +1,50 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(311907),
-    d = n(885151),
-    c = n(760751),
-    u = n(998218),
-    m = n(354285);
-function g(e) {
-    let { applicationId: t, selected: n, onClick: l, disabled: g } = e,
-        { data: x, isLoading: h } = (0, d.k)(t),
-        _ = s.useMemo(() => {
-            let e = x?.getCoverURL();
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(109112),
+    o = n(939249),
+    d = n(658675),
+    c = n(834730),
+    u = n(311907),
+    m = n(454908),
+    g = n(760751),
+    h = n(998218),
+    x = n(461565);
+function _(e) {
+    let { applicationId: t, selected: n, onClick: s, disabled: _ } = e,
+        { data: p, isLoading: A } = (0, m.I)(t),
+        E = l.useMemo(() => {
+            let e = p?.getCoverURL();
             if (null == e) return;
-            let t = u.A.toURLSafe(e);
+            let t = h.A.toURLSafe(e);
             return null == t ? e : (t.searchParams.set("size", "256"), t.toString());
-        }, [x]),
-        p = (0, o.bG)([c.A], () => c.A.getDetectableGame(t)?.name ?? ""),
-        A = s.useCallback(() => {
-            l?.(t);
-        }, [t, l]),
-        f = s.useMemo(
+        }, [p]),
+        f = (0, u.bG)([g.A], () => g.A.getDetectableGame(t)?.name ?? ""),
+        j = l.useCallback(() => {
+            s?.(t);
+        }, [t, s]),
+        N = l.useMemo(
             () =>
-                h
+                A
                     ? null
-                    : null == _
-                      ? (0, i.jsx)("div", { className: m.gP, children: (0, i.jsx)(a._7Z, { size: "lg" }) })
-                      : (0, i.jsx)("img", { className: m.Su, alt: p, src: _ }),
-            [_, h, p],
+                    : null == E
+                      ? (0, i.jsx)("div", { className: x.gP, children: (0, i.jsx)(a._, { size: "lg" }) })
+                      : (0, i.jsx)("img", { className: x.Su, alt: f, src: E }),
+            [E, A, f],
         );
     return (0, i.jsxs)("div", {
-        className: r()(m.id, { [m.rX]: !n, [m.r9]: g }),
+        className: r()(x.id, { [x.rX]: !n, [x.r9]: _ }),
         children: [
-            (0, i.jsxs)(a.DUT, {
-                "aria-disabled": g,
-                tabIndex: g ? -1 : 0,
-                onClick: g ? void 0 : A,
-                className: r()(m.a8, { [m.AL]: h, [m.r9]: g }),
-                children: [n && (0, i.jsx)("div", { className: m.jK, children: (0, i.jsx)(a.P7L, { checked: n }) }), f],
+            (0, i.jsxs)(o.D, {
+                "aria-disabled": _,
+                tabIndex: _ ? -1 : 0,
+                onClick: _ ? void 0 : j,
+                className: r()(x.a8, { [x.AL]: A, [x.r9]: _ }),
+                children: [n && (0, i.jsx)("div", { className: x.jK, children: (0, i.jsx)(d.P, { checked: n }) }), N],
             }),
-            (0, i.jsx)(a.Text, { className: m.mO, variant: "text-xs/medium", color: "text-strong", children: p }),
+            (0, i.jsx)(c.E, { className: x.mO, variant: "text-xs/medium", color: "text-strong", children: f }),
         ],
     });
 }

@@ -1,34 +1,35 @@
-s.d(t, { v: () => c });
-var l = s(64700),
-    a = s(508425),
-    n = s(559949),
-    i = s(207803),
-    r = s(84540),
-    o = s(954571),
-    d = s(652215);
+"use strict";
+a.d(t, { v: () => c });
+var l = a(64700),
+    i = a(508425),
+    r = a(559949),
+    n = a(207803),
+    s = a(84540),
+    o = a(954571),
+    d = a(652215);
 function c(e) {
     let {
         hasChanges: t,
-        selectedFontId: s,
+        selectedFontId: a,
         selectedEffectId: c,
         selectedColors: u,
-        defaultColor: m,
-        guildId: _,
-        isTryItOut: x,
+        defaultColor: _,
+        guildId: h,
+        isTryItOut: m,
         onClose: p,
     } = e;
     return l.useCallback(() => {
         if (t) {
             let e = u;
-            c === a.z.SOLID && u.length > 0 && u[0] === m && (e = []);
-            let t = { fontId: s, effectId: c, colors: e };
-            x ? (0, i.EW)(t) : (0, r.p)({ guildId: _, displayNameStyles: t }),
+            c === i.z.SOLID && u.length > 0 && u[0] === _ && (e = []);
+            let t = { fontId: a, effectId: c, colors: e };
+            m ? (0, n.EW)(t) : (0, s.p)({ guildId: h, displayNameStyles: t }),
                 o.default.track(d.HAw.DISPLAY_NAME_STYLES_APPLIED, {
-                    font_name: n.x[s],
-                    effect_name: a.z[c],
+                    font_name: r.x[a],
+                    effect_name: i.z[c],
                     colors: u,
                 }),
                 p?.();
         }
-    }, [t, s, c, u, m, p, _, x]);
+    }, [t, a, c, u, _, p, h, m]);
 }

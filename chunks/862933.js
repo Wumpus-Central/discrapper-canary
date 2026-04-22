@@ -1,76 +1,76 @@
 "use strict";
-n.d(t, { A: () => S });
-var r = n(627968);
+n.d(t, { A: () => T });
+var i = n(627968);
 n(64700);
-var i = n(417597),
+var l = n(417597),
     s = n(554146),
-    a = n(397927),
-    o = n(565645),
-    l = n(775602),
-    u = n(826673),
-    c = n(724511),
-    d = n(151271),
-    _ = n(338464),
-    f = n(71393),
-    p = n(532624),
-    h = n(531685),
-    m = n(723702),
-    E = n(350535),
-    g = n(209932),
-    A = n(652215),
-    I = n(985018),
-    T = n(735141);
-function S(e) {
-    let { soundboardSound: t, closePicker: S } = e,
-        y = (0, d.RQ)((e) => e.searchQuery),
-        v = (0, i.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
-        N = (0, i.bG)([f.A], () => f.A.getGuild(t?.guildId)),
-        C = (0, i.bG)([l.A], () => l.A.useReducedMotion, []),
-        R = (0, i.bG)([h.A], () => h.A.isFocused()),
-        O = (0, i.bG)([p.Ay], () => p.Ay.getKeybindForAction(A.hCu.SOUNDBOARD_HOLD));
-    if (null != t && y.length > 0)
-        return (0, r.jsx)(_.A, {
+    r = n(191023),
+    a = n(192308),
+    o = n(349288),
+    c = n(695366),
+    u = n(834730),
+    d = n(939249),
+    h = n(789645),
+    m = n(565645),
+    p = n(775602),
+    f = n(826673),
+    g = n(724511),
+    _ = n(151271),
+    x = n(338464),
+    A = n(71393),
+    C = n(532624),
+    E = n(531685),
+    I = n(723702),
+    v = n(350535),
+    y = n(209932),
+    S = n(652215),
+    b = n(985018),
+    N = n(319518);
+function T(e) {
+    let { soundboardSound: t, closePicker: T } = e,
+        j = (0, _.RQ)((e) => e.searchQuery),
+        R = (0, l.bG)([y.A], () => null != t && y.A.isFavoriteSound(t.soundId)),
+        w = (0, l.bG)([A.A], () => A.A.getGuild(t?.guildId)),
+        L = (0, l.bG)([p.A], () => p.A.useReducedMotion, []),
+        M = (0, l.bG)([E.A], () => E.A.isFocused()),
+        k = (0, l.bG)([C.Ay], () => C.Ay.getKeybindForAction(S.hCu.SOUNDBOARD_HOLD));
+    if (null != t && j.length > 0)
+        return (0, i.jsx)(x.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, r.jsx)(o.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: T.Zg })
-                    : (0, r.jsx)(a.xfq, { size: "md", color: "currentColor", className: T.Zg }),
-            graphicSecondary: null != N ? (0, r.jsx)(c.A, { guild: N, shouldAnimate: !C && R }) : null,
+                    ? (0, i.jsx)(m.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: N.Zg })
+                    : (0, i.jsx)(r.x, { size: "md", color: "currentColor", className: N.Zg }),
+            graphicSecondary: null != w ? (0, i.jsx)(g.A, { guild: w, shouldAnimate: !L && M }) : null,
             titlePrimary: t.name,
-            titleSecondary: N?.name,
-            isFavorite: v,
+            titleSecondary: w?.name,
+            isFavorite: R,
         });
-    let b = () => {
-            S(),
-                (0, a.mMO)(async () => {
+    let O = () => {
+            T(),
+                (0, a.openModalLazy)(async () => {
                     let { default: e } = await n.e("12618").then(n.bind(n, 29681));
-                    return (t) => (0, r.jsx)(e, { ...t });
+                    return (t) => (0, i.jsx)(e, { ...t });
                 });
         },
-        D = (0, u.k8)(s.M.SOUNDBOARD_KEYBIND_TIP),
-        L = () => (0, u.Dr)(s.M.SOUNDBOARD_KEYBIND_TIP),
-        w =
-            null != O && (0, m.isWindows)() && !D
-                ? I.intl.format(I.t.udMTth, {
-                      keybind: (0, E.dI)(O.shortcut, !0),
-                      openSettingsHook: (e, t) => (0, r.jsx)(a.MzZ, { onClick: b, children: e }, t),
+        P = (0, f.k8)(s.M.SOUNDBOARD_KEYBIND_TIP),
+        D =
+            null != k && (0, I.isWindows)() && !P
+                ? b.intl.format(b.t.udMTth, {
+                      keybind: (0, v.dI)(k.shortcut, !0),
+                      openSettingsHook: (e, t) => (0, i.jsx)(o.Anchor, { onClick: O, children: e }, t),
                   })
                 : null;
-    return null == w
+    return null == D
         ? null
-        : (0, r.jsxs)("div", {
-              className: T.g,
+        : (0, i.jsxs)("div", {
+              className: N.g,
               children: [
-                  (0, r.jsx)(a.EpV, { size: "custom", width: 20, height: 20, color: "currentColor", className: T.QW }),
-                  (0, r.jsx)(a.Text, {
-                      variant: "text-sm/medium",
-                      color: "text-default",
-                      className: T.L5,
-                      children: w,
-                  }),
-                  (0, r.jsx)(a.DUT, {
-                      className: T.b,
-                      onClick: L,
-                      children: (0, r.jsx)(a.PGe, { size: "xs", color: "currentColor" }),
+                  (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: N.QW }),
+                  (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", className: N.L5, children: D }),
+                  (0, i.jsx)(d.D, {
+                      className: N.b,
+                      onClick: () => (0, f.Dr)(s.M.SOUNDBOARD_KEYBIND_TIP),
+                      children: (0, i.jsx)(h.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
           });

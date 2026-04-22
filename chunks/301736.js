@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(688810),
-    i = n(17460),
-    s = n(866903),
-    a = n(436620);
-function o() {
-    let { analyticsLocations: e } = (0, r.Ay)();
-    if ((0, i.Pi)())
+e.d(n, { A: () => s });
+var i = e(688810),
+    l = e(17460),
+    r = e(866903),
+    a = e(436620);
+function s() {
+    let { analyticsLocations: t } = (0, i.Ay)();
+    if ((0, l.Pi)())
         return () => {
-            (0, s.A)(a.J.ACTIVITY_PRIVACY, { analyticsLocations: e });
+            (0, r.A)(a.J.ACTIVITY_PRIVACY, { analyticsLocations: t });
         };
 }

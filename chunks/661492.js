@@ -1,29 +1,26 @@
-"use strict";
-n.d(t, { TC: () => l, qq: () => u });
-var r = n(575593),
-    i = n(993408),
-    s = n(772427);
-n(872472);
-var a = n(985018);
-function o(e, t) {
-    switch (t) {
+i.d(e, { TC: () => a, qq: () => o });
+var r = i(575593),
+    s = i(993408),
+    n = i(772427);
+i(872472);
+var l = i(985018);
+function a(t) {
+    var e = t.name;
+    switch (t.tenantMetadata?.collectibles?.type) {
         case r.R.AVATAR_DECORATION:
-            return a.intl.formatToPlainString(a.t.lvBzLi, { product: e });
+            return l.intl.formatToPlainString(l.t.lvBzLi, { product: e });
         case r.R.PROFILE_EFFECT:
-            return a.intl.formatToPlainString(a.t.eR7moP, { product: e });
+            return l.intl.formatToPlainString(l.t.eR7moP, { product: e });
         case r.R.NAMEPLATE:
-            return a.intl.formatToPlainString(a.t.YFOwHj, { product: e });
+            return l.intl.formatToPlainString(l.t.YFOwHj, { product: e });
         default:
             return e;
     }
 }
-function l(e) {
-    return o(e.name, e.tenantMetadata?.collectibles?.type);
-}
-function u(e) {
+function o(t) {
     return (
-        !(0, i.G0)(e) &&
-        e.type !== r.R.EXTERNAL_SKU &&
-        (e.type !== r.R.PROFILE_FRAME || !!(0, s.QW)("isWishlistableCollectiblesProduct"))
+        !(0, s.G0)(t) &&
+        t.type !== r.R.EXTERNAL_SKU &&
+        (t.type !== r.R.PROFILE_FRAME || !!(0, n.QW)("isWishlistableCollectiblesProduct"))
     );
 }

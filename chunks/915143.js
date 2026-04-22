@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Kk: "icon_f4b9b5",
     YR: "unlocked_f4b9b5",

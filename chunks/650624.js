@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isPCAP =
         t.isDOC =
@@ -16,65 +15,65 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.isELF =
         t.isBLEND =
             void 0);
-let r = n(835986),
-    i = n(817762);
+let n = i(835986),
+    r = i(817762);
 (t.isBLEND = function (e) {
-    let t = (0, i.getFileChunk)(e);
-    return r.FileTypes.checkByFileType(t, "blend");
+    let t = (0, r.getFileChunk)(e);
+    return n.FileTypes.checkByFileType(t, "blend");
 }),
     (t.isELF = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "elf");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "elf");
     }),
     (t.isEXE = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "exe");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "exe");
     }),
     (t.isMACHO = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "macho");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "macho");
     }),
     (t.isINDD = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "indd");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "indd");
     }),
     (t.isORC = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "orc");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "orc");
     }),
     (t.isPARQUET = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "parquet");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "parquet");
     }),
     (t.isPDF = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "pdf");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "pdf");
     }),
     (t.isPS = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "ps");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "ps");
     }),
     (t.isRTF = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "rtf");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "rtf");
     }),
     (t.isSQLITE = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "sqlite");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "sqlite");
     }),
     (t.isSTL = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "stl");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "stl");
     }),
     (t.isTTF = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "ttf");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "ttf");
     }),
     (t.isDOC = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "doc");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "doc");
     }),
     (t.isPCAP = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "pcap");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "pcap");
     });

@@ -1,32 +1,33 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => _ });
 var i = n(627968),
     a = n(64700),
-    r = n(397927),
-    l = n(183555),
-    s = n(725386),
-    o = n(624160),
+    l = n(534514),
+    s = n(834730),
+    r = n(183555),
+    o = n(725386),
+    c = n(624160),
     d = n(985018),
-    c = n(465058);
-function u() {
-    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, l.NJ)(),
+    u = n(215538);
+function _() {
+    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, r.NJ)(),
         n = a.useRef(!1),
-        u = (0, s.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
+        _ = (0, o.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
         a.useEffect(() => {
             n.current || (e({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (n.current = !0));
         }, [e]),
         (0, i.jsxs)("div", {
-            className: c.Ie,
+            className: u.Ie,
             children: [
                 (0, i.jsxs)("div", {
-                    className: c.FS,
+                    className: u.FS,
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(l.D, {
                             variant: "heading-md/medium",
                             color: "text-strong",
                             children: d.intl.string(d.t["oqalC+"]),
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(s.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: d.intl.string(d.t.O9SQ1c),
@@ -34,12 +35,12 @@ function u() {
                     ],
                 }),
                 (0, i.jsx)("ul", {
-                    className: c.ZW,
+                    className: u.ZW,
                     "aria-label": d.intl.string(d.t["+EIBSA"]),
-                    children: u.map((e) =>
+                    children: _.map((e) =>
                         (0, i.jsx)(
                             "li",
-                            { children: (0, i.jsx)(o.A, { widget: e, size: "small", trackUserProfileEditAction: t }) },
+                            { children: (0, i.jsx)(c.A, { widget: e, size: "small", trackUserProfileEditAction: t }) },
                             e.getUniqueKey(),
                         ),
                     ),

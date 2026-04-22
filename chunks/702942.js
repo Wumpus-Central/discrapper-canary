@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => d });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
+    l = n(64700),
+    s = n(167417),
     r = n(411335),
     a = n(985018);
 function o(e) {
@@ -25,21 +24,21 @@ function o(e) {
 }
 function d(e) {
     let { rule: t, onChangeRule: n } = e,
-        [a, d] = s.useState(new Set(t?.triggerMetadata?.presets)),
-        c = s.useMemo(
+        [a, d] = l.useState(new Set(t?.triggerMetadata?.presets)),
+        c = l.useMemo(
             () => (e) => {
                 n({ ...t, triggerMetadata: { ...t.triggerMetadata, presets: e } });
             },
             [n, t],
         ),
-        u = s.useCallback(
+        u = l.useCallback(
             (e) => {
                 let t = e.map((e) => e);
                 d(new Set(t)), c(t);
             },
             [c],
         ),
-        m = s.useMemo(
+        m = l.useMemo(
             () => [
                 {
                     label: o(r.vY.PROFANITY).headerText,
@@ -56,6 +55,6 @@ function d(e) {
             [],
         );
     return (0, i.jsx)("div", {
-        children: (0, i.jsx)(l.$QX, { selectedValues: Array.from(a).map(String), onChange: u, options: m }),
+        children: (0, i.jsx)(s.$, { selectedValues: Array.from(a).map(String), onChange: u, options: m }),
     });
 }

@@ -1,33 +1,28 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(364242),
-    i = n(147426),
-    a = n(476858),
-    s = n(972409);
-let o = 1,
-    l = 2,
-    u = 3,
-    c = 4;
-class d extends s.w {
+r.d(t, { A: () => o });
+var n = r(364242),
+    s = r(147426),
+    a = r(476858),
+    i = r(972409);
+class o extends i.w {
     innerPatternString(e) {
-        return `(?:з|із)?\\s*(${i.lT})(?:\\s{0,3}(?:по|-|–|до)?\\s{0,3}(${i.lT}))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(${(0, a.uJ)(i.eB)})(?:(?:-|\\/|,?\\s{0,3})(${i.fp}(?![^\\s]\\d)))?`;
+        return `(?:з|із)?\\s*(${s.lT})(?:\\s{0,3}(?:по|-|–|до)?\\s{0,3}(${s.lT}))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(${(0, a.uJ)(s.eB)})(?:(?:-|\\/|,?\\s{0,3})(${s.fp}(?![^\\s]\\d)))?`;
     }
     innerExtract(e, t) {
-        let n = e.createParsingResult(t.index, t[0]),
-            a = i.eB[t[u].toLowerCase()],
-            s = (0, i.k8)(t[o]);
-        if (s > 31) return (t.index = t.index + t[o].length), null;
-        if ((n.start.assign("month", a), n.start.assign("day", s), t[c])) {
-            let e = (0, i.jp)(t[c]);
-            n.start.assign("year", e);
+        let r = e.createParsingResult(t.index, t[0]),
+            a = s.eB[t[3].toLowerCase()],
+            i = (0, s.k8)(t[1]);
+        if (i > 31) return (t.index = t.index + t[1].length), null;
+        if ((r.start.assign("month", a), r.start.assign("day", i), t[4])) {
+            let e = (0, s.jp)(t[4]);
+            r.start.assign("year", e);
         } else {
-            let t = (0, r.Y)(e.reference.instant, s, a);
-            n.start.imply("year", t);
+            let t = (0, n.Y)(e.reference.instant, i, a);
+            r.start.imply("year", t);
         }
-        if (t[l]) {
-            let e = (0, i.k8)(t[l]);
-            (n.end = n.start.clone()), n.end.assign("day", e);
+        if (t[2]) {
+            let e = (0, s.k8)(t[2]);
+            (r.end = r.start.clone()), r.end.assign("day", e);
         }
-        return n;
+        return r;
     }
 }

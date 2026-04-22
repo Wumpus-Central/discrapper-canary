@@ -7,14 +7,14 @@ var r = n(111956),
     o = n(400492),
     l = n(409826),
     u = n(698723),
-    c = n(413339),
-    d = n(347481),
+    d = n(413339),
+    c = n(347481),
     _ = n(734057),
     f = n(430452),
-    p = n(383501),
+    E = n(383501),
     h = n(309010),
-    m = n(287809),
-    E = n(954571),
+    p = n(287809),
+    m = n(954571),
     g = n(650338),
     A = n(652215),
     I = n(257645),
@@ -23,50 +23,50 @@ let S = new a.A("AudioActionCreators");
 function y() {
     (0, o.Ak)("mention3", void 0, void 0, void 0, I.a.VOICE);
 }
-function v() {
+function N() {
     let e = f.Ay.getInputDevices()[f.Ay.getInputDeviceId()];
     return null != e ? e.name : "";
 }
-function N(e, t, n, r) {
+function O(e, t, n, r) {
     let { location: i, analyticsLocations: s } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
     let a = h.A.getVoiceChannelId(),
         o = null != a ? _.A.getChannel(a) : null,
         l = e[t],
         u = e[n],
-        c = f.Ay.getMediaEngine().getAudioSubsystem(),
-        p = f.Ay.getMediaEngine().getAudioLayer();
-    E.default.track(A.HAw.MEDIA_DEVICE_CHANGED, {
-        device_from_name: d.A.getCertifiedDeviceName(t, null != l ? l.name : ""),
-        device_to_name: d.A.getCertifiedDeviceName(n, null != u ? u.name : ""),
+        d = f.Ay.getMediaEngine().getAudioSubsystem(),
+        E = f.Ay.getMediaEngine().getAudioLayer();
+    m.default.track(A.HAw.MEDIA_DEVICE_CHANGED, {
+        device_from_name: c.A.getCertifiedDeviceName(t, null != l ? l.name : ""),
+        device_to_name: c.A.getCertifiedDeviceName(n, null != u ? u.name : ""),
         device_type: r,
-        device_is_certified: d.A.isCertified(n),
+        device_is_certified: c.A.isCertified(n),
         location: i,
         location_stack: s,
         voice_channel_type: o?.type,
-        audio_subsystem: c,
-        audio_layer: p,
+        audio_subsystem: d,
+        audio_layer: E,
     });
 }
 S.enableNativeLogger(!0);
-let C = i()((e, t, n) => {
-        E.default.track(A.HAw.USER_VOLUME_SETTING_UPDATED, {
+let R = i()((e, t, n) => {
+        m.default.track(A.HAw.USER_VOLUME_SETTING_UPDATED, {
             target_user_id: e,
             context: t,
             volume: n,
-            media_session_id: p.A.getMediaSessionId(),
-            rtc_connection_id: p.A.getRTCConnectionId(),
+            media_session_id: E.A.getMediaSessionId(),
+            rtc_connection_id: E.A.getRTCConnectionId(),
         });
     }, 300),
-    R = {
+    v = {
         isNotSupported: () => !1,
         enable: (e) => Promise.resolve(!0),
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {},
     },
-    { enable: O, isNotSupported: b, trackToggleSelfMute: D, trackToggleSelfDeaf: L } = (R = n(401124)),
+    { enable: C, isNotSupported: b, trackToggleSelfMute: D, trackToggleSelfDeaf: L } = (v = n(401124)),
     w = {
-        enable: O,
+        enable: C,
         toggleSelfMute() {
             let {
                 context: e = T.x.DEFAULT,
@@ -79,7 +79,7 @@ let C = i()((e, t, n) => {
                 ? Promise.resolve()
                 : (D({ usedKeybind: n, location: i }),
                     (r = r && !f.Ay.hasActiveCallKitCall()),
-                    m.default.getCurrentUser()?.isStaff() && S.info("Toggling self mute"),
+                    p.default.getCurrentUser()?.isStaff() && S.info("Toggling self mute"),
                     f.Ay.isEnabled())
                   ? s.h.dispatch({ type: "AUDIO_TOGGLE_SELF_MUTE", context: e, syncRemote: t, playSoundEffect: r })
                   : this.enable(!0);
@@ -88,12 +88,12 @@ let C = i()((e, t, n) => {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             b() ||
                 ((n = n && !f.Ay.hasActiveCallKitCall()),
-                m.default.getCurrentUser()?.isStaff() && S.info("Setting self mute", t),
+                p.default.getCurrentUser()?.isStaff() && S.info("Setting self mute", t),
                 s.h.dispatch({ type: "AUDIO_SET_SELF_MUTE", context: e, mute: t, playSoundEffect: n }));
         },
         setTemporarySelfMute(e) {
             b() ||
-                (m.default.getCurrentUser()?.isStaff() && S.info("Setting temporary self mute", e),
+                (p.default.getCurrentUser()?.isStaff() && S.info("Setting temporary self mute", e),
                 s.h.dispatch({ type: "AUDIO_SET_TEMPORARY_SELF_MUTE", mute: e }));
         },
         toggleSelfDeaf() {
@@ -132,7 +132,7 @@ let C = i()((e, t, n) => {
         setLocalVolume(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.x.DEFAULT,
                 r = (0, l.z)(t, n);
-            s.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: r }), C(e, n, r);
+            s.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: r }), R(e, n, r);
         },
         setLocalPan(e, t, n) {
             let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : T.x.DEFAULT;
@@ -150,8 +150,8 @@ let C = i()((e, t, n) => {
                     n = f.Ay.getMediaEngine().getAudioLayer(),
                     i = h.A.getVoiceChannelId(),
                     s = null != i ? _.A.getChannel(i) : null,
-                    a = v();
-                E.default.track(A.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
+                    a = N();
+                m.default.track(A.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: r,
                     voice_channel_type: s?.type,
@@ -164,8 +164,8 @@ let C = i()((e, t, n) => {
                     n = f.Ay.getMediaEngine().getAudioLayer(),
                     i = h.A.getVoiceChannelId(),
                     s = null != i ? _.A.getChannel(i) : null,
-                    o = v();
-                E.default.track(A.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
+                    o = N();
+                m.default.track(A.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: r,
                     voice_channel_type: s?.type,
                     input_device_name: o,
@@ -187,7 +187,7 @@ let C = i()((e, t, n) => {
             s.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
             let n = h.A.getVoiceChannelId(),
                 r = null != n ? _.A.getChannel(n) : null;
-            E.default.track(A.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
+            m.default.track(A.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: r?.type,
@@ -199,7 +199,7 @@ let C = i()((e, t, n) => {
             s.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
             let n = h.A.getVoiceChannelId(),
                 r = null != n ? _.A.getChannel(n) : null;
-            E.default.track(A.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
+            m.default.track(A.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: r?.type,
@@ -211,7 +211,7 @@ let C = i()((e, t, n) => {
             if (b()) return;
             let r = f.Ay.getInputDeviceId();
             (null != t || null != n) &&
-                N(f.Ay.getInputDevices(), r, e, "Audio Input", { location: t, analyticsLocations: n }),
+                O(f.Ay.getInputDevices(), r, e, "Audio Input", { location: t, analyticsLocations: n }),
                 s.h.dispatch({ type: "AUDIO_SET_INPUT_DEVICE", id: e, oldId: r }),
                 y();
         },
@@ -221,7 +221,7 @@ let C = i()((e, t, n) => {
             if (b()) return;
             let r = f.Ay.getOutputDeviceId();
             (null != t || null != n) &&
-                N(f.Ay.getOutputDevices(), r, e, "Audio Output", { location: t, analyticsLocations: n }),
+                O(f.Ay.getOutputDevices(), r, e, "Audio Output", { location: t, analyticsLocations: n }),
                 s.h.dispatch({ type: "AUDIO_SET_OUTPUT_DEVICE", id: e, oldId: r }),
                 y();
         },
@@ -231,7 +231,7 @@ let C = i()((e, t, n) => {
             if (b()) return;
             let r = f.Ay.getVideoDeviceId();
             (null != t || null != n) &&
-                N(f.Ay.getVideoDevices(), r, e, "Video", { location: t, analyticsLocations: n }),
+                O(f.Ay.getVideoDevices(), r, e, "Video", { location: t, analyticsLocations: n }),
                 s.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: r });
         },
         setActiveInputProfile(e) {
@@ -270,23 +270,23 @@ let C = i()((e, t, n) => {
             b() || s.h.dispatch({ type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled: e, location: t });
         },
         setAttenuation(e, t, n) {
-            b() ||
-                ((() => {
-                    let r = f.Ay.getAttenuation(),
-                        i = f.Ay.getAttenuateWhileSpeakingSelf(),
-                        s = f.Ay.getAttenuateWhileSpeakingOthers();
-                    return r !== e
+            if (!b()) {
+                let r, i, a;
+                (r = f.Ay.getAttenuation()),
+                    (i = f.Ay.getAttenuateWhileSpeakingSelf()),
+                    (a = f.Ay.getAttenuateWhileSpeakingOthers()),
+                    r !== e
                         ? (0, u.A)("global_attenuation_strength", e, r)
                         : i !== t
                           ? (0, u.A)("global_attenuation_for_self_speak_enabled", t, i)
-                          : s !== n && (0, u.A)("global_attenuation_for_other_speak_enabled", n, s);
-                })(),
-                s.h.dispatch({
-                    type: "AUDIO_SET_ATTENUATION",
-                    attenuation: e,
-                    attenuateWhileSpeakingSelf: t,
-                    attenuateWhileSpeakingOthers: n,
-                }));
+                          : a !== n && (0, u.A)("global_attenuation_for_other_speak_enabled", n, a),
+                    s.h.dispatch({
+                        type: "AUDIO_SET_ATTENUATION",
+                        attenuation: e,
+                        attenuateWhileSpeakingSelf: t,
+                        attenuateWhileSpeakingOthers: n,
+                    });
+            }
         },
         setQoS(e) {
             b() ||
@@ -327,7 +327,7 @@ let C = i()((e, t, n) => {
                 s.h.dispatch({ type: "AUDIO_SET_SUBSYSTEM", subsystem: e }));
         },
         setVideoEnabled(e) {
-            (0, c.PX)(), s.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e });
+            (0, d.PX)(), s.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e });
         },
         setGoLiveSource(e) {
             e?.qualityOptions != null &&

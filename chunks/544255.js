@@ -1,66 +1,67 @@
-n.d(e, { A: () => A });
+n.d(e, { A: () => m });
 var l = n(627968);
 n(64700);
-var i = n(158954),
+var i = n(732159),
     r = n(311907),
-    a = n(397927),
-    d = n(931991),
-    s = n(698441),
-    u = n(496092),
-    o = n(722260),
-    c = n(563312),
+    a = n(192308),
+    d = n(834730),
+    s = n(477782),
+    u = n(931991),
+    o = n(698441),
+    c = n(496092),
+    g = n(722260),
+    A = n(563312),
     E = n(985018);
-function A(t) {
-    let { guildEventId: e, recurrenceId: n, guild: A, channel: g } = t,
-        _ = null != n,
-        { canManageGuildEvent: h } = (0, d.nr)(g ?? A),
-        [T, f] = (0, r.yK)([s.Ay], () => [s.Ay.isActive(e), s.Ay.getGuildScheduledEvent(e)]),
-        y = (0, o.A)(n, f?.id),
-        m = null != f && h(f),
-        v = f?.recurrence_rule != null && !_,
-        p = (0, c.nh)(e, n);
-    if (!m || (T && !v && !_) || (_ && !_) || null == f || null == p) return null;
-    let { startTime: N } = p;
-    if (T && _) {
-        if (null == N) return null;
-        let t = new Date(y?.scheduled_start_time ?? N);
+function m(t) {
+    let { guildEventId: e, recurrenceId: n, guild: m, channel: f } = t,
+        v = null != n,
+        { canManageGuildEvent: y } = (0, u.nr)(f ?? m),
+        [_, h] = (0, r.yK)([o.Ay], () => [o.Ay.isActive(e), o.Ay.getGuildScheduledEvent(e)]),
+        N = (0, g.A)(n, h?.id),
+        T = null != h && y(h),
+        b = h?.recurrence_rule != null && !v,
+        G = (0, A.nh)(e, n);
+    if (!T || (_ && !b && !v) || (v && !v) || null == h || null == G) return null;
+    let { startTime: p } = G;
+    if (_ && v) {
+        if (null == p) return null;
+        let t = new Date(N?.scheduled_start_time ?? p);
         if (new Date() > t) return null;
     }
-    let S = (t) => {
-        (0, a.qfG)((r) =>
+    let x = (t) => {
+        (0, a.openModal)((r) =>
             (0, l.jsx)(i.ConfirmModal, {
                 ...r,
                 title: E.intl.string(E.t.R5bpin),
                 subtitle: E.intl.string(E.t.v2GWNQ),
-                confirmText: v || t ? E.intl.string(E.t["8ZsNv5"]) : E.intl.string(E.t.B9sJLX),
+                confirmText: b || t ? E.intl.string(E.t["8ZsNv5"]) : E.intl.string(E.t.B9sJLX),
                 cancelText: E.intl.string(E.t.oEAioF),
-                onConfirm: () => (_ && !t ? u.A.deleteRecurrence(A.id, e, n, y) : u.A.deleteGuildEvent(e, A.id)),
+                onConfirm: () => (v && !t ? c.A.deleteRecurrence(m.id, e, n, N) : c.A.deleteGuildEvent(e, m.id)),
                 children:
-                    (v || t) &&
-                    (0, l.jsx)(a.Text, { variant: "text-md/normal", children: E.intl.format(E.t.ZcpcyO, {}) }),
+                    (b || t) && (0, l.jsx)(d.E, { variant: "text-md/normal", children: E.intl.format(E.t.ZcpcyO, {}) }),
             }),
         );
     };
-    return (0, l.jsx)(a.Drp, {
+    return (0, l.jsx)(s.Dr, {
         id: E.intl.string(E.t.B9sJLX),
         label: E.intl.string(E.t.B9sJLX),
-        action: _ ? void 0 : () => S(),
+        action: v ? void 0 : () => x(),
         color: "danger",
         children:
-            _ &&
+            v &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(a.Drp, {
+                    (0, l.jsx)(s.Dr, {
                         id: E.intl.string(E.t.tqClly),
                         label: E.intl.string(E.t.tqClly),
-                        action: () => S(),
-                        disabled: y?.is_canceled,
+                        action: () => x(),
+                        disabled: N?.is_canceled,
                         color: "danger",
                     }),
-                    (0, l.jsx)(a.Drp, {
+                    (0, l.jsx)(s.Dr, {
                         id: E.intl.string(E.t.wr33rW),
                         label: E.intl.string(E.t.wr33rW),
-                        action: () => S(!0),
+                        action: () => x(!0),
                         color: "danger",
                     }),
                 ],

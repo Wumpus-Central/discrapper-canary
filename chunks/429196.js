@@ -1,26 +1,22 @@
 "use strict";
-n.d(t, { S: () => o });
-var r = n(627968);
+n.d(t, { S: () => a });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(985018),
-    s = n(156166);
-let o = (e) => {
+var l = n(834730),
+    s = n(985018),
+    r = n(278351);
+let a = (e) => {
     let { error: t } = e;
-    return (0, r.jsxs)("div", {
-        className: s.M,
+    return (0, i.jsxs)("div", {
+        className: r.M,
         children: [
-            (0, r.jsx)(i.Text, {
-                variant: "text-xs/bold",
-                color: "text-strong",
-                children: a.intl.string(a.t["4VDCG0"]),
-            }),
+            (0, i.jsx)(l.E, { variant: "text-xs/bold", color: "text-strong", children: s.intl.string(s.t["4VDCG0"]) }),
             t
-                ? (0, r.jsx)(i.Text, { variant: "text-xs/medium", className: s.z, children: a.intl.string(a.t.qNorwt) })
-                : (0, r.jsx)(i.Text, {
+                ? (0, i.jsx)(l.E, { variant: "text-xs/medium", className: r.z, children: s.intl.string(s.t.qNorwt) })
+                : (0, i.jsx)(l.E, {
                       variant: "text-xs/medium",
                       color: "text-muted",
-                      children: a.intl.string(a.t["260qZS"]),
+                      children: s.intl.string(s.t["260qZS"]),
                   }),
         ],
     });

@@ -1,56 +1,60 @@
-n.d(t, { U: () => c });
-var a = n(627968),
-    i = n(64700),
-    s = n(158954),
-    l = n(151196),
-    r = n(473336),
-    o = n(222094);
-function d(e) {
-    let { yaml: t, label: n } = e,
-        l = i.useCallback(() => {
+a.d(t, { U: () => p });
+var n = a(627968),
+    l = a(64700),
+    i = a(331322),
+    s = a(834730),
+    r = a(408278),
+    o = a(624479),
+    d = a(534514),
+    c = a(151196),
+    u = a(473336),
+    m = a(545406);
+function h(e) {
+    let { yaml: t, label: a } = e,
+        d = l.useCallback(() => {
             navigator.clipboard.writeText(t);
         }, [t]);
-    return (0, a.jsxs)(s.BJc, {
+    return (0, n.jsxs)(i.B, {
         gap: 4,
         children: [
-            (0, a.jsxs)(s.BJc, {
+            (0, n.jsxs)(i.B, {
                 direction: "horizontal",
                 gap: 8,
                 align: "center",
                 justify: "space-between",
                 children: [
-                    (0, a.jsx)(s.EYj, { variant: "text-md/semibold", children: n }),
-                    (0, a.jsx)(s.K0, {
-                        icon: s.TdU,
-                        "aria-label": `Copy ${n} YAML`,
-                        onClick: l,
+                    (0, n.jsx)(s.E, { variant: "text-md/semibold", children: a }),
+                    (0, n.jsx)(r.K, {
+                        icon: o.T,
+                        "aria-label": `Copy ${a} YAML`,
+                        onClick: d,
                         variant: "secondary",
                         size: "sm",
                     }),
                 ],
             }),
-            (0, a.jsx)("pre", { className: o.RP, children: t }),
+            (0, n.jsx)("pre", { className: m.RP, children: t }),
         ],
     });
 }
-function c(e) {
+function p(e) {
     let { allResolvedStops: t } = e,
-        n = i.useMemo(
+        a = l.useMemo(
             () =>
-                l._V.map((e, n) => {
-                    let a;
+                c._V.map((e, a) => {
+                    let n;
                     return (
-                        (a = l.F$.map((e) => {
-                            let { value: a } = e,
-                                i = l.KC[a],
-                                s = t[a];
-                            return `  ${i}:
-    color: ${(0, r.b5)(s.colors[n])}
-    opacity: ${s.opacities[n]}`;
+                        (n = c.F$.map((e) => {
+                            let { value: n } = e,
+                                l = c.KC[n],
+                                i = t[n];
+                            return `  ${l}:
+    color: ${(0, u.b5)(i.colors[a])}
+    opacity: ${i.opacities[a]}`;
                         }).join("\n")),
                         `type: background
 colors:
-${a}
+${n}
 gradient-colors:
   color-mix: false
 codegen:
@@ -60,11 +64,11 @@ codegen:
                 }),
             [t],
         );
-    return (0, a.jsxs)(s.BJc, {
+    return (0, n.jsxs)(i.B, {
         gap: 16,
         children: [
-            (0, a.jsx)(s.DZT, { variant: "heading-sm/semibold", children: "Token YAML" }),
-            l._V.map((e, t) => (0, a.jsx)(d, { yaml: n[t], label: e }, e)),
+            (0, n.jsx)(d.D, { variant: "heading-sm/semibold", children: "Token YAML" }),
+            c._V.map((e, t) => (0, n.jsx)(h, { yaml: a[t], label: e }, e)),
         ],
     });
 }

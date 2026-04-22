@@ -1,143 +1,148 @@
-n.d(t, { default: () => f });
+n.d(t, { default: () => v });
 var i = n(627968),
     l = n(64700),
-    s = n(158954),
+    s = n(189213),
     a = n(311907),
-    r = n(435371),
-    o = n(397927),
-    d = n(71393),
-    c = n(954571),
-    u = n(554113),
-    m = n(974103),
-    g = n(903093),
-    x = n(610136),
-    h = n(336496),
-    p = n(218113),
-    A = n(652215),
-    b = n(985018),
-    _ = n(651846);
-function f(e) {
-    let { guildId: t, transitionState: n, onClose: f, analyticsData: N } = e,
-        j = (0, a.bG)([d.A], () => d.A.getGuild(t), [t]),
-        T = !!j?.features.has(A.GuildFeatures.INVITES_DISABLED),
-        [C] = l.useState(!1),
-        [v, E] = l.useState(p.f7),
-        I = (0, a.bG)([x.A], () => x.A.getGuildIncident(t)),
-        S = (0, m.w)(j),
-        y = (0, g.r2)(I) || T,
-        O = (0, g.di)(I),
-        [w, R] = l.useState(y),
-        [k, L] = l.useState(O),
-        [M, G] = l.useState(!1),
-        U = w !== y || k !== O || M,
-        D = T && !S;
-    return null == j
-        ? (f(), null)
+    r = n(459192),
+    o = n(192308),
+    d = n(691885),
+    c = n(834730),
+    u = n(243721),
+    m = n(71393),
+    g = n(954571),
+    h = n(554113),
+    x = n(974103),
+    p = n(903093),
+    A = n(610136),
+    b = n(336496),
+    f = n(218113),
+    _ = n(652215),
+    j = n(985018),
+    N = n(226143);
+function v(e) {
+    let { guildId: t, transitionState: n, onClose: v, analyticsData: E } = e,
+        C = (0, a.bG)([m.A], () => m.A.getGuild(t), [t]),
+        I = !!C?.features.has(_.GuildFeatures.INVITES_DISABLED),
+        [T] = l.useState(!1),
+        [S, y] = l.useState(f.f7),
+        w = (0, a.bG)([A.A], () => A.A.getGuildIncident(t)),
+        O = (0, x.w)(C),
+        k = (0, p.r2)(w) || I,
+        L = (0, p.di)(w),
+        [R, M] = l.useState(k),
+        [D, P] = l.useState(L),
+        [G, U] = l.useState(!1),
+        W = R !== k || D !== L || G,
+        B = I && !O;
+    return null == C
+        ? (v(), null)
         : (0, i.jsx)(s.Modal, {
               transitionState: n,
-              title: b.intl.string(b.t.oCYAc7),
+              title: j.intl.string(j.t.oCYAc7),
               actions: [
-                  { text: b.intl.string(b.t["ETE/oC"]), onClick: f, variant: "secondary", disabled: C },
+                  { text: j.intl.string(j.t["ETE/oC"]), onClick: v, variant: "secondary", disabled: T },
                   {
-                      text: b.intl.string(b.t["pwm/z0"]),
+                      text: j.intl.string(j.t["pwm/z0"]),
                       onClick: () => {
-                          (y || O) && !w && !k
-                              ? ((0, u.tr)(j.id, !1, !1),
-                                (0, o.mMO)(() => Promise.resolve((e) => (0, i.jsx)(h.default, { ...e, guildId: t }))))
-                              : (0, u.tr)(j.id, w, k, v);
-                          let { source: e, alertType: n, messageId: l } = N;
-                          c.default.track(A.HAw.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                          (k || L) && !R && !D
+                              ? ((0, h.tr)(C.id, !1, !1),
+                                (0, o.openModalLazy)(() =>
+                                    Promise.resolve((e) => (0, i.jsx)(b.default, { ...e, guildId: t })),
+                                ))
+                              : (0, h.tr)(C.id, R, D, S);
+                          let { source: e, alertType: n, messageId: l } = E;
+                          g.default.track(_.HAw.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                               guild_id: t,
                               source: e,
                               raid_alert_id: l,
                               raid_alert_type: n,
-                              intervention_type_enabled: (0, g.mR)(w, k),
-                              intervention_type_disabled: (0, g.fi)(w, k),
-                              duration: 60 * v,
+                              intervention_type_enabled: (0, p.mR)(R, D),
+                              intervention_type_disabled: (0, p.fi)(R, D),
+                              duration: 60 * S,
                           }),
-                              f();
+                              v();
                       },
-                      loading: C,
-                      disabled: !U,
+                      loading: T,
+                      disabled: !W,
                   },
               ],
-              onClose: f,
+              onClose: v,
               children: (0, i.jsxs)("div", {
-                  className: _.rs,
+                  className: N.rs,
                   children: [
-                      (0, i.jsx)(o.l6P, {
-                          label: b.intl.string(b.t.vKYZzc),
+                      (0, i.jsx)(d.l, {
+                          label: j.intl.string(j.t.vKYZzc),
                           hideLabel: !0,
-                          placeholder: b.intl.string(b.t.vKYZzc),
-                          options: (0, p.aE)(),
+                          placeholder: j.intl.string(j.t.vKYZzc),
+                          options: (0, f.aE)(),
                           onSelectionChange: function (e) {
-                              E(e), G(!0);
+                              y(e), U(!0);
                           },
-                          value: v,
+                          value: S,
                           selectionMode: "single",
                           fullWidth: !0,
                       }),
                       (0, i.jsxs)("div", {
-                          className: _.Qb,
+                          className: N.Qb,
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: _.Iy,
+                                  className: N.Iy,
                                   children: [
-                                      (0, i.jsx)(o.Text, {
+                                      (0, i.jsx)(c.E, {
                                           variant: "text-md/semibold",
                                           color: "text-strong",
-                                          children: b.intl.string(b.t.Uwsjn6),
+                                          children: j.intl.string(j.t.Uwsjn6),
                                       }),
-                                      (0, i.jsx)(o.Text, {
+                                      (0, i.jsx)(c.E, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
-                                          children: b.intl.string(b.t.qPJkZh),
+                                          children: j.intl.string(j.t.qPJkZh),
                                       }),
                                   ],
                               }),
-                              (0, i.jsx)(r.un, {
-                                  body: b.intl.string(b.t["9GPbsV"]),
-                                  shouldShow: T,
+                              (0, i.jsx)(r.u, {
+                                  body: j.intl.string(j.t["9GPbsV"]),
+                                  shouldShow: I,
                                   asContainer: !0,
                                   element: "div",
                                   children: (0, i.jsx)("div", {
-                                      className: _.L$,
-                                      children: (0, i.jsx)(o.dOG, {
+                                      className: N.L$,
+                                      children: (0, i.jsx)(u.d, {
                                           onChange: function () {
-                                              R((e) => !e);
+                                              M((e) => !e);
                                           },
-                                          checked: w,
-                                          disabled: D,
+                                          checked: R,
+                                          disabled: B,
                                       }),
                                   }),
                               }),
                           ],
                       }),
                       (0, i.jsxs)("div", {
-                          className: _.Qb,
+                          className: N.Qb,
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: _.Iy,
+                                  className: N.Iy,
                                   children: [
-                                      (0, i.jsx)(o.Text, {
+                                      (0, i.jsx)(c.E, {
                                           variant: "text-md/semibold",
                                           color: "text-strong",
-                                          children: b.intl.string(b.t["wrDmA/"]),
+                                          children: j.intl.string(j.t["wrDmA/"]),
                                       }),
-                                      (0, i.jsx)(o.Text, {
+                                      (0, i.jsx)(c.E, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
-                                          children: b.intl.string(b.t.UQbJW7),
+                                          children: j.intl.string(j.t.UQbJW7),
                                       }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: _.L$,
-                                  children: (0, i.jsx)(o.dOG, {
+                                  className: N.L$,
+                                  children: (0, i.jsx)(u.d, {
                                       onChange: function () {
-                                          L((e) => !e);
+                                          P((e) => !e);
                                       },
-                                      checked: k,
+                                      checked: D,
                                   }),
                               }),
                           ],

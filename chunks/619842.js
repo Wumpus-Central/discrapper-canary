@@ -1,27 +1,26 @@
-"use strict";
 n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(421380),
-    l = n(945086),
+var l = n(862482),
+    s = n(945086),
     r = n(473145),
     a = n(652215),
     o = n(788868),
     d = n(985018),
-    c = n(914016);
+    c = n(648357);
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
         m = t.premiumTier,
         g = (0, r.ax)(m),
-        x = o.y7[m] - 2;
-    if (null == g || m === a.TVA.TIER_3 || n < x) return null;
-    let h = u ? { color: s.XD.GREEN, look: s.pR.FILLED, text: d.intl.string(d.t.cYzxGn) } : void 0;
-    return (0, i.jsx)(l.A, {
+        h = o.y7[m] - 2;
+    if (null == g || m === a.TVA.TIER_3 || n < h) return null;
+    let x = u ? { color: l.XD.GREEN, look: l.pR.FILLED, text: d.intl.string(d.t.cYzxGn) } : void 0;
+    return (0, i.jsx)(s.A, {
         header: d.intl.string(d.t.zT9SxY),
         text: d.intl.formatToPlainString(d.t.OKqEAU, { level: g, numAdditional: (0, r.Ry)(g) }),
         headerColor: "text-strong",
         textColor: "text-default",
-        buttonProps: h,
+        buttonProps: x,
         useExpressiveButton: !0,
         guild: t,
         analyticsLocation: {

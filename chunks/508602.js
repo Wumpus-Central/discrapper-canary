@@ -1,27 +1,25 @@
 "use strict";
-n.d(t, { A: () => r });
-var r = (function (e) {
-    return (
-        (e.IMAGE = "image"),
-        (e.VIDEO = "video"),
-        (e.LINK = "link"),
-        (e.ARTICLE = "article"),
-        (e.TWEET = "tweet"),
-        (e.RICH = "rich"),
-        (e.GIFV = "gifv"),
-        (e.APPLICATION_NEWS = "application_news"),
-        (e.AUTO_MODERATION_MESSAGE = "auto_moderation_message"),
-        (e.AUTO_MODERATION_NOTIFICATION = "auto_moderation_notification"),
-        (e.TEXT = "text"),
-        (e.POST_PREVIEW = "post_preview"),
-        (e.GIFT = "gift"),
-        (e.SAFETY_POLICY_NOTICE = "safety_policy_notice"),
-        (e.SAFETY_SYSTEM_NOTIFICATION = "safety_system_notification"),
-        (e.AGE_VERIFICATION_SYSTEM_NOTIFICATION = "age_verification_system_notification"),
-        (e.VOICE_CHANNEL = "voice_channel"),
-        (e.GAMING_PROFILE = "gaming_profile"),
-        (e.POLL_RESULT = "poll_result"),
-        (e.COMPONENTS = "components"),
-        e
-    );
-})({});
+n.d(t, { A: () => i });
+var r,
+    i =
+        (((r = {}).IMAGE = "image"),
+        (r.VIDEO = "video"),
+        (r.LINK = "link"),
+        (r.ARTICLE = "article"),
+        (r.TWEET = "tweet"),
+        (r.RICH = "rich"),
+        (r.GIFV = "gifv"),
+        (r.APPLICATION_NEWS = "application_news"),
+        (r.AUTO_MODERATION_MESSAGE = "auto_moderation_message"),
+        (r.AUTO_MODERATION_NOTIFICATION = "auto_moderation_notification"),
+        (r.TEXT = "text"),
+        (r.POST_PREVIEW = "post_preview"),
+        (r.GIFT = "gift"),
+        (r.SAFETY_POLICY_NOTICE = "safety_policy_notice"),
+        (r.SAFETY_SYSTEM_NOTIFICATION = "safety_system_notification"),
+        (r.AGE_VERIFICATION_SYSTEM_NOTIFICATION = "age_verification_system_notification"),
+        (r.VOICE_CHANNEL = "voice_channel"),
+        (r.GAMING_PROFILE = "gaming_profile"),
+        (r.POLL_RESULT = "poll_result"),
+        (r.COMPONENTS = "components"),
+        r);

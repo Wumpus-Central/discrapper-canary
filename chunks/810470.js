@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     MY: "avatarUploader_e04502",
     O7: "avatarUploaderDisabled_e04502",

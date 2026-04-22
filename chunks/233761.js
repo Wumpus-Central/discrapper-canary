@@ -1,44 +1,45 @@
-i.d(t, { A: () => A });
-var l = i(627968),
-    n = i(64700),
-    s = i(503698),
-    a = i.n(s),
-    r = i(397927),
-    d = i(793574),
-    c = i(688810),
-    o = i(404374),
-    u = i(772366),
-    m = i(954571),
-    x = i(652215),
-    h = i(788868),
-    _ = i(985018),
-    g = i(729950);
-function A(e) {
-    let { className: t } = e,
-        { analyticsLocations: i, sourceAnalyticsLocations: s } = (0, c.Ay)(d.A.PREMIUM_UPSELL_TOOLTIP);
+t.d(i, { A: () => p });
+var l = t(627968),
+    s = t(64700),
+    a = t(503698),
+    n = t.n(a),
+    r = t(939249),
+    d = t(403581),
+    o = t(793574),
+    c = t(688810),
+    u = t(404374),
+    h = t(772366),
+    m = t(954571),
+    _ = t(652215),
+    x = t(788868),
+    g = t(985018),
+    A = t(310253);
+function p(e) {
+    let { className: i } = e,
+        { analyticsLocations: t, sourceAnalyticsLocations: a } = (0, c.Ay)(o.A.PREMIUM_UPSELL_TOOLTIP);
     return (
-        n.useEffect(() => {
-            m.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: h.e.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: x.liQ.NATIVE_INVITE_MODAL },
-                location_stack: s,
+        s.useEffect(() => {
+            m.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: x.e.GUILD_CAP_INLINE_INVITE_MODAL,
+                location: { page: _.liQ.NATIVE_INVITE_MODAL },
+                location_stack: a,
             });
-        }, [s]),
-        (0, l.jsxs)(r.DUT, {
+        }, [a]),
+        (0, l.jsxs)(r.D, {
             onClick: () =>
-                (0, u.A)({
-                    analyticsSource: { page: x.ThZ.EXTERNAL_INVITE_LINK_MODAL },
+                (0, h.A)({
+                    analyticsSource: { page: _.ThZ.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: x.ThZ.EXTERNAL_INVITE_LINK_MODAL,
-                        section: x.JJy.GUILD_CAP_UPSELL_MODAL,
+                        page: _.ThZ.EXTERNAL_INVITE_LINK_MODAL,
+                        section: _.JJy.GUILD_CAP_UPSELL_MODAL,
                     },
-                    analyticsLocations: i,
+                    analyticsLocations: t,
                 }),
-            className: a()(g.fA, t),
+            className: n()(A.fA, i),
             children: [
-                (0, l.jsx)(r.tvc, { size: "md", className: g.Y2, color: o.k0.PREMIUM_TIER_2 }),
-                (0, l.jsx)("span", { className: g.Cq, children: _.intl.string(_.t["4/W4Pz"]) }),
-                (0, l.jsx)("span", { className: g.MY, children: _.intl.string(_.t.b6KOkI) }),
+                (0, l.jsx)(d.t, { size: "md", className: A.Y2, color: u.k0.PREMIUM_TIER_2 }),
+                (0, l.jsx)("span", { className: A.Cq, children: g.intl.string(g.t["4/W4Pz"]) }),
+                (0, l.jsx)("span", { className: A.MY, children: g.intl.string(g.t.b6KOkI) }),
             ],
         })
     );

@@ -1,14 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = { begin: "^'{3,}[ \\t]*$", relevance: 10 },
-        r = [
-            { begin: /\\[*_`]/ },
-            { begin: /\\\\\*{2}[^\n]*?\*{2}/ },
-            { begin: /\\\\_{2}[^\n]*_{2}/ },
-            { begin: /\\\\`{2}[^\n]*`{2}/ },
-            { begin: /[:;}][*_`](?![*_`])/ },
-        ],
-        i = [
+        a = [
             { className: "strong", begin: /\*{2}([^\n]+?)\*{2}/ },
             {
                 className: "strong",
@@ -18,7 +10,7 @@ e.exports = function (e) {
             { className: "strong", begin: /\B\*(\S|\S[^\n]*?\S)\*(?!\w)/ },
             { className: "strong", begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/ },
         ],
-        s = [
+        n = [
             { className: "emphasis", begin: /_{2}([^\n]+?)_{2}/ },
             {
                 className: "emphasis",
@@ -34,9 +26,7 @@ e.exports = function (e) {
                 contains: [{ begin: "\\\\'\\w", relevance: 0 }],
                 relevance: 0,
             },
-        ],
-        a = { className: "symbol", begin: "^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+", relevance: 10 },
-        o = { className: "bullet", begin: "^(\\*+|-+|\\.+|[^\\n]+?::)\\s+" };
+        ];
     return {
         name: "AsciiDoc",
         aliases: ["adoc"],
@@ -63,16 +53,20 @@ e.exports = function (e) {
                 contains: [{ begin: "<", end: ">", subLanguage: "xml", relevance: 0 }],
                 relevance: 10,
             },
-            o,
-            a,
-            ...r,
-            ...i,
-            ...s,
+            { className: "bullet", begin: "^(\\*+|-+|\\.+|[^\\n]+?::)\\s+" },
+            { className: "symbol", begin: "^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+", relevance: 10 },
+            { begin: /\\[*_`]/ },
+            { begin: /\\\\\*{2}[^\n]*?\*{2}/ },
+            { begin: /\\\\_{2}[^\n]*_{2}/ },
+            { begin: /\\\\`{2}[^\n]*`{2}/ },
+            { begin: /[:;}][*_`](?![*_`])/ },
+            ...a,
+            ...n,
             { className: "string", variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }] },
             { className: "code", begin: /`{2}/, end: /(\n{2}|`{2})/ },
             { className: "code", begin: "(`.+?`|\\+.+?\\+)", relevance: 0 },
             { className: "code", begin: "^[ \\t]", end: "$", relevance: 0 },
-            n,
+            { begin: "^'{3,}[ \\t]*$", relevance: 10 },
             {
                 begin: "(link:)?(http|https|ftp|file|irc|image:?):\\S+?\\[[^[]*?\\]",
                 returnBegin: !0,

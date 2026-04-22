@@ -1,77 +1,78 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var a = n(627968),
     s = n(64700),
-    i = n(158954),
-    l = n(311907),
-    r = n(990078),
-    d = n(397927),
-    c = n(793574),
-    o = n(665171),
-    u = n(522055),
+    i = n(534514),
+    l = n(573613),
+    r = n(311907),
+    d = n(990078),
+    c = n(289873),
+    o = n(793574),
+    u = n(665171),
+    _ = n(522055),
     m = n(895770),
-    _ = n(355609),
-    x = n(843095),
-    f = n(800007),
-    g = n(738072),
-    v = n(985018),
-    h = n(442800);
-let j = { ...f.ZN, initialStep: f.HS.SERVER_SETTINGS };
-function A(e) {
+    x = n(355609),
+    f = n(843095),
+    g = n(800007),
+    v = n(576709),
+    j = n(985018),
+    h = n(452123);
+let A = { ...g.ZN, initialStep: g.HS.SERVER_SETTINGS };
+function p(e) {
     let { guildId: t, isAdmin: n } = e,
-        { state: A, shouldFetchCatalog: p } = (0, l.cf)([u.A], () => ({
-            state: u.A.getStateForGuild(t),
-            shouldFetchCatalog: u.A.shouldFetchCatalogForGuild(t),
+        { state: p, shouldFetchCatalog: E } = (0, r.cf)([_.A], () => ({
+            state: _.A.getStateForGuild(t),
+            shouldFetchCatalog: _.A.shouldFetchCatalogForGuild(t),
         }));
     s.useEffect(() => {
-        p && (0, o.z9)(t);
-    }, [t, p]);
-    let { catalog: C, instances: N } = s.useMemo(
-            () => ({ catalog: Object.values(A?.catalog ?? {}), instances: Object.values(A?.instances ?? {}) }),
-            [A?.catalog, A?.instances],
+        E && (0, u.z9)(t);
+    }, [t, E]);
+    let { catalog: C, instances: I } = s.useMemo(
+            () => ({ catalog: Object.values(p?.catalog ?? {}), instances: Object.values(p?.instances ?? {}) }),
+            [p?.catalog, p?.instances],
         ),
-        b = N.length >= f.ZI;
+        b = I.length >= g.ZI;
     return 0 === C.length
         ? (0, a.jsx)("div", {
               className: h.kL,
-              children: (0, a.jsx)(d.y$y, { type: d.tVU.SPINNING_CIRCLE, className: h.u1 }),
+              children: (0, a.jsx)(c.y, { type: c.t.SPINNING_CIRCLE, className: h.u1 }),
           })
         : (0, a.jsxs)("div", {
               className: h.kL,
               children: [
-                  (0, a.jsx)(i.DZT, {
+                  (0, a.jsx)(i.D, {
                       className: h.R_,
                       variant: "heading-md/semibold",
-                      children: v.intl.string(n ? g.default["3vWDMz"] : g.default.Uvf9GK),
+                      children: j.intl.string(n ? v.default["3vWDMz"] : v.default.Uvf9GK),
                   }),
-                  n && b && (0, a.jsx)("div", { className: h.Bq, children: (0, a.jsx)(_.k, {}) }),
-                  (0, a.jsx)(i.IpV, {
+                  n && b && (0, a.jsx)("div", { className: h.Bq, children: (0, a.jsx)(x.k, {}) }),
+                  (0, a.jsx)(l.Ip, {
                       className: h.nd,
                       children: (0, a.jsx)("div", {
                           className: h.Y_,
                           children: C.map((e, s) =>
                               n
                                   ? (0, a.jsx)(
-                                        r.m,
+                                        d.m,
                                         {
                                             asContainer: !0,
                                             text: e.disabled
-                                                ? v.intl.formatToPlainString(g.default.uVpJYf, { gameName: e.name })
+                                                ? j.intl.formatToPlainString(v.default.uVpJYf, { gameName: e.name })
                                                 : null,
                                             position: "top",
                                             children: (0, a.jsx)(m.A, {
                                                 guildId: t,
                                                 game: e,
                                                 onClick: () =>
-                                                    (0, x.A)({
+                                                    (0, f.A)({
                                                         guildId: t,
-                                                        stepConfig: j,
+                                                        stepConfig: A,
                                                         initialGameServerGame: e,
-                                                        analyticsLocation: c.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                        analyticsLocation: o.A.GAME_SERVER_PAGE_SIDEBAR,
                                                     }),
                                                 imageClassName: h.Sl,
                                                 titleClassName: h.DD,
                                                 variant: b || e.disabled ? m.e.DISABLED : m.e.CLICKABLE,
-                                                location: c.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                location: o.A.GAME_SERVER_PAGE_SIDEBAR,
                                             }),
                                         },
                                         `sidebar-game-${s}-${e.id}`,
@@ -84,7 +85,7 @@ function A(e) {
                                             variant: m.e.VIEWABLE,
                                             imageClassName: h.Sl,
                                             titleClassName: h.DD,
-                                            location: c.A.GAME_SERVER_PAGE_SIDEBAR,
+                                            location: o.A.GAME_SERVER_PAGE_SIDEBAR,
                                         },
                                         `sidebar-game-${s}-${e.id}`,
                                     ),

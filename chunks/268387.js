@@ -1,46 +1,46 @@
 "use strict";
 let r;
-n.d(t, { A: () => I });
+n.d(t, { A: () => m });
 var i = n(735438),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(506774),
     l = n(73153),
     u = n(652215);
-let c = "GameLibraryViewStore",
-    d = 200,
-    _ = u.tSW.ASCENDING,
-    f = u.DpB.LAST_PLAYED,
-    p = !1,
-    h = a().debounce(() => {
-        (p = !1), A.emitChange();
-    }, d);
-function m(e) {
-    let { key: t, isKeyboardEvent: n } = e;
-    n && ((p = !0), h()), (r = t);
-}
-function g(e) {
-    let { direction: t, key: n } = e;
-    (_ = t), (f = n), o.w.set(c, { sortDirection: _, sortKey: f });
-}
-class E extends s.Ay.Store {
+let d = "GameLibraryViewStore",
+    c = u.tSW.ASCENDING,
+    _ = u.DpB.LAST_PLAYED,
+    f = !1,
+    E = s().debounce(() => {
+        (f = !1), p.emitChange();
+    }, 200);
+class h extends a.Ay.Store {
     static displayName = "GameLibraryViewStore";
     initialize() {
-        let e = o.w.get(c) ?? {};
-        null != e.sortDirection && null != e.sortKey && ((_ = e.sortDirection), (f = e.sortKey));
+        let e = o.w.get(d) ?? {};
+        null != e.sortDirection && null != e.sortKey && ((c = e.sortDirection), (_ = e.sortKey));
     }
     get sortDirection() {
-        return _;
+        return c;
     }
     get sortKey() {
-        return f;
+        return _;
     }
     get activeRowKey() {
         return r;
     }
     get isNavigatingByKeyboard() {
-        return p;
+        return f;
     }
 }
-let A = new E(l.h, { LIBRARY_TABLE_SORT_UPDATE: g, LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: m }),
-    I = A;
+let p = new h(l.h, {
+        LIBRARY_TABLE_SORT_UPDATE: function (e) {
+            let { direction: t, key: n } = e;
+            (c = t), (_ = n), o.w.set(d, { sortDirection: c, sortKey: _ });
+        },
+        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
+            let { key: t, isKeyboardEvent: n } = e;
+            n && ((f = !0), E()), (r = t);
+        },
+    }),
+    m = p;

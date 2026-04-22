@@ -1,94 +1,95 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(417597),
-    r = n(397927),
-    a = n(58149),
-    o = n(408213),
-    c = n(60175),
-    d = n(46054),
-    u = n(954571),
-    m = n(652215),
-    _ = n(985018),
-    x = n(791135);
-function p(e) {
+    r = n(599319),
+    a = n(834730),
+    o = n(534514),
+    c = n(821609),
+    d = n(548411),
+    u = n(58149),
+    m = n(408213),
+    _ = n(60175),
+    p = n(46054),
+    x = n(954571),
+    g = n(652215),
+    h = n(985018),
+    f = n(462918);
+function A(e) {
     let {
             guild: t,
             prompts: n,
-            completeOnboarding: p,
-            setCurrentStep: g,
-            disableTracking: h,
-            previousPromptIndex: f,
+            completeOnboarding: A,
+            setCurrentStep: v,
+            disableTracking: N,
+            previousPromptIndex: E,
         } = e,
-        A = s.useRef(null),
-        v = (0, l.bG)([c.A], () => c.A.getRulesPrompt(t.id)),
-        [N, j] = s.useState(v?.response ?? !1),
-        [b, E] = s.useState(!1),
-        C = (0, l.bG)([c.A], () => c.A.get(t.id)),
-        I = s.useRef(null),
-        O = s.useRef(null),
-        T = s.useCallback(async () => {
-            if (null != C && null != v) {
-                E(!0);
+        j = s.useRef(null),
+        b = (0, l.bG)([_.A], () => _.A.getRulesPrompt(t.id)),
+        [C, I] = s.useState(b?.response ?? !1),
+        [O, D] = s.useState(!1),
+        y = (0, l.bG)([_.A], () => _.A.get(t.id)),
+        P = s.useRef(null),
+        S = s.useRef(null),
+        k = s.useCallback(async () => {
+            if (null != y && null != b) {
+                D(!0);
                 try {
-                    await o.Ay.submitVerificationForm(t.id, { ...C, formFields: [{ ...v, response: N }] });
+                    await m.Ay.submitVerificationForm(t.id, { ...y, formFields: [{ ...b, response: C }] });
                 } catch {}
-                p();
+                A();
             }
-        }, [t.id, C, v, N, p]);
-    function y(e) {
+        }, [t.id, y, b, C, A]);
+    function T(e) {
         let [t] = e;
-        t.isIntersecting && j(!0);
+        t.isIntersecting && I(!0);
     }
     return (s.useEffect(() => {
-        let e = new IntersectionObserver(y, { root: I.current, rootMargin: "0px", threshold: 0 }),
-            t = O.current;
+        let e = new IntersectionObserver(T, { root: P.current, rootMargin: "0px", threshold: 0 }),
+            t = S.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [O, I]),
-    null == v)
+    }, [S, P]),
+    null == b)
         ? null
         : (0, i.jsx)("div", {
-              className: x.J1,
+              className: f.J1,
               children: (0, i.jsxs)("div", {
-                  className: x.mK,
-                  ref: I,
+                  className: f.mK,
+                  ref: P,
                   children: [
-                      (0, i.jsxs)(r.ChK, {
-                          className: x.gT,
-                          ref: A,
+                      (0, i.jsxs)(r.Ch, {
+                          className: f.gT,
+                          ref: j,
                           children: [
-                              (0, i.jsx)(r.Text, {
+                              (0, i.jsx)(a.E, {
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: _.intl.string(_.t["b1JC+l"]),
+                                  children: h.intl.string(h.t["b1JC+l"]),
                               }),
-                              (0, i.jsx)(r.Heading, {
-                                  variant: "heading-xl/semibold",
-                                  children: _.intl.string(_.t.prJqwT),
-                              }),
+                              (0, i.jsx)(o.D, { variant: "heading-xl/semibold", children: h.intl.string(h.t.prJqwT) }),
                               (0, i.jsx)("div", {
-                                  className: x.qE,
-                                  ref: O,
-                                  children: v.values.map((e, n) =>
+                                  className: f.qE,
+                                  ref: S,
+                                  children: b.values.map((e, n) =>
                                       (0, i.jsxs)(
                                           "div",
                                           {
-                                              className: x.gJ,
+                                              className: f.gJ,
                                               children: [
-                                                  (0, i.jsx)(r.Text, {
+                                                  (0, i.jsx)(a.E, {
                                                       variant: "text-sm/normal",
                                                       color: "text-muted",
                                                       children: `${n + 1}.`,
                                                   }),
-                                                  (0, i.jsx)(r.Text, {
+                                                  (0, i.jsx)(a.E, {
                                                       variant: "text-sm/normal",
-                                                      className: x.RQ,
-                                                      children: d.A.parseGuildVerificationFormRule(e, !0, {
+                                                      className: f.RQ,
+                                                      children: p.A.parseGuildVerificationFormRule(e, !0, {
                                                           channelId: t.rulesChannelId,
                                                       }),
                                                   }),
@@ -100,23 +101,23 @@ function p(e) {
                               }),
                           ],
                       }),
-                      (0, i.jsx)("div", { className: x.Lw }),
+                      (0, i.jsx)("div", { className: f.Lw }),
                       (0, i.jsxs)("div", {
-                          className: x.N3,
+                          className: f.N3,
                           children: [
                               (0, i.jsx)("div", {
-                                  className: x.X1,
+                                  className: f.X1,
                                   children:
-                                      -1 !== f &&
-                                      "cover" !== f &&
-                                      (0, i.jsx)(r.Button, {
+                                      -1 !== E &&
+                                      "cover" !== E &&
+                                      (0, i.jsx)(c.$, {
                                           variant: "secondary",
                                           size: "md",
-                                          text: _.intl.string(_.t["13/7kX"]),
+                                          text: h.intl.string(h.t["13/7kX"]),
                                           onClick: () => {
-                                              !h &&
-                                                  (u.default.track(m.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
-                                                      ...(0, a.H$)(t.id),
+                                              !N &&
+                                                  (x.default.track(g.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+                                                      ...(0, u.H$)(t.id),
                                                       step: -1,
                                                       skipped: !1,
                                                       back: !0,
@@ -124,35 +125,35 @@ function p(e) {
                                                       in_onboarding: !0,
                                                       is_final_step: !1,
                                                   }),
-                                                  "number" == typeof f &&
-                                                      f >= 0 &&
-                                                      u.default.track(m.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
-                                                          ...(0, a.H$)(t.id),
-                                                          step: f,
-                                                          required: n[f].required,
+                                                  "number" == typeof E &&
+                                                      E >= 0 &&
+                                                      x.default.track(g.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
+                                                          ...(0, u.H$)(t.id),
+                                                          step: E,
+                                                          required: n[E].required,
                                                       })),
-                                                  g(f);
+                                                  v(E);
                                           },
-                                          icon: r.Zge,
+                                          icon: d.Z,
                                           iconPosition: "start",
                                       }),
                               }),
                               (0, i.jsxs)("div", {
-                                  className: x.Oh,
+                                  className: f.Oh,
                                   children: [
-                                      (0, i.jsx)(r.Text, {
-                                          className: x.BK,
+                                      (0, i.jsx)(a.E, {
+                                          className: f.BK,
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: N ? _.intl.string(_.t.arAe3I) : _.intl.string(_.t.D0CVAc),
+                                          children: C ? h.intl.string(h.t.arAe3I) : h.intl.string(h.t.D0CVAc),
                                       }),
-                                      (0, i.jsx)(r.Button, {
+                                      (0, i.jsx)(c.$, {
                                           variant: "primary",
                                           size: "md",
-                                          text: `${_.intl.string(_.t["8SuVoE"])} 🎉`,
-                                          onClick: T,
-                                          disabled: !N || b,
-                                          loading: b,
+                                          text: `${h.intl.string(h.t["8SuVoE"])} 🎉`,
+                                          onClick: k,
+                                          disabled: !C || O,
+                                          loading: O,
                                       }),
                                   ],
                               }),

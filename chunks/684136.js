@@ -1,30 +1,32 @@
-n.d(t, { A: () => _ });
-var i,
-    a = n(627968);
-n(64700);
-var r = n(503698),
-    l = n.n(r),
-    s = n(607399),
-    o = n(397927),
-    d = n(985018),
-    c = n(494697),
-    u = (((i = u || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
-function _(e) {
-    let { closeAction: t, variant: n = "", keybind: i, className: r } = e;
-    return (0, a.jsxs)("div", {
-        className: l()(c.kL, r),
+l.d(t, { A: () => g });
+var n,
+    i = l(627968);
+l(64700);
+var a = l(503698),
+    s = l.n(a),
+    r = l(607399),
+    o = l(939249),
+    u = l(285796),
+    c = l(789645),
+    d = l(985018),
+    A = l(589753),
+    h = (((n = h || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
+function g(e) {
+    let { closeAction: t, variant: l = "", keybind: n, className: a } = e;
+    return (0, i.jsxs)("div", {
+        className: s()(A.kL, a),
         children: [
-            (0, a.jsx)(o.DUT, {
-                className: l()(c.b, { [c.EH]: "Bold" === n, [c.O3]: "Solid" === n }),
+            (0, i.jsx)(o.D, {
+                className: s()(A.b, { [A.EH]: "Bold" === l, [A.O3]: "Solid" === l }),
                 onClick: t,
                 "aria-label": d.intl.string(d.t.cpT0Cq),
                 children:
-                    "Solid" === n
-                        ? (0, a.jsx)(o.aXh, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, a.jsx)(o.PGe, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === l
+                        ? (0, i.jsx)(u.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, i.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            s.Fr ? null : (0, a.jsx)("div", { className: c.P, "aria-hidden": !0, children: i }),
+            r.Fr ? null : (0, i.jsx)("div", { className: A.P, "aria-hidden": !0, children: n }),
         ],
     });
 }
-_.Variants = u;
+g.Variants = h;

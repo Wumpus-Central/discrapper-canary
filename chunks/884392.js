@@ -1,15 +1,15 @@
 n.d(t, { A: () => g });
 var i = n(627968),
     l = n(412703),
-    s = n(311907),
-    r = n(397927),
-    a = n(829219),
+    a = n(311907),
+    s = n(821609),
+    r = n(829219),
     o = n(859703),
     d = n(890687),
     c = n(590202),
     u = n(792620),
-    _ = n(545986),
-    m = n(654487),
+    m = n(545986),
+    _ = n(654487),
     h = n(985018);
 function p(e) {
     switch (e) {
@@ -28,26 +28,26 @@ let g = function (e) {
             taskType: c,
             size: g = "sm",
             preClickCallback: A,
-            analyticsCtxQuestContent: x,
-            analyticsCtxSourceQuestContent: f,
+            analyticsCtxQuestContent: f,
+            analyticsCtxSourceQuestContent: x,
             analyticsCtxQuestContentPosition: C,
             analyticsCtxQuestContentRowIndex: E,
         } = e,
         I = {
-            questContent: x,
+            questContent: f,
             questContentCTA: p(c),
-            sourceQuestContent: f,
+            sourceQuestContent: x,
             questContentPosition: C,
             questContentRowIndex: E,
         },
         v = n.id,
-        { isEnrolling: b } = (0, s.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
-        T = (0, _.Oz)(n),
-        y = (function (e, t) {
+        { isEnrolling: b } = (0, a.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
+        T = (0, m.Oz)(n),
+        S = (function (e, t) {
             let { launchInGameActivity: n } = (0, d.zW)(t);
             if ((0, u.K$)(t))
                 return () => {
-                    (0, _.Fy)(t);
+                    (0, m.Fy)(t);
                 };
             switch (e) {
                 case l.n.ACHIEVEMENT_IN_ACTIVITY:
@@ -59,7 +59,7 @@ let g = function (e) {
                     return null;
             }
         })(c, n),
-        N = (function (e, t) {
+        y = (function (e, t) {
             let { features: n } = t.config;
             switch (e) {
                 case l.n.WATCH_VIDEO:
@@ -67,17 +67,17 @@ let g = function (e) {
                 case l.n.ACHIEVEMENT_IN_ACTIVITY:
                     return h.intl.string(h.t.CkUzLd);
                 case l.n.PLAY_ACTIVITY:
-                    if (n.includes(m.Li.CLOUD_GAMING_ACTIVITY)) return h.intl.string(h.t["+qoymD"]);
+                    if (n.includes(_.Li.CLOUD_GAMING_ACTIVITY)) return h.intl.string(h.t["+qoymD"]);
                     return h.intl.string(h.t.E4kW5O);
                 default:
                     return h.intl.string(h.t.kUQLMJ);
             }
         })(c, n),
-        S =
-            ((t = y ?? void 0),
+        N =
+            ((t = S ?? void 0),
             c === l.n.WATCH_VIDEO
                 ? async () => {
-                      await (0, _.e0)(n, {
+                      await (0, m.e0)(n, {
                           questContent: I.questContent,
                           questContentCTA: I.questContentCTA,
                           sourceQuestContent: I.sourceQuestContent,
@@ -87,7 +87,7 @@ let g = function (e) {
                       });
                   }
                 : async () => {
-                      await (0, a.Oy)(n.id, {
+                      await (0, r.Oy)(n.id, {
                           questContent: I.questContent,
                           questContentCTA: I.questContentCTA,
                           sourceQuestContent: I.sourceQuestContent,
@@ -96,14 +96,14 @@ let g = function (e) {
                       }),
                           t?.();
                   });
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(s.$, {
         size: g,
         loading: b,
         variant: "primary",
         onClick: () => {
-            A?.(), S();
+            A?.(), N();
         },
-        text: N,
+        text: y,
         icon: T,
         fullWidth: !0,
     });

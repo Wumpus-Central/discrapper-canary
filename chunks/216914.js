@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     QF: "breadcrumb_c2a763",
     WH: "innerContainer_c2a763",

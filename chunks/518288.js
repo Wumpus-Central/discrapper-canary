@@ -1,9 +1,7 @@
 e.exports = function (e) {
     let t = "\\d(_|\\d)*",
-        n = "[eE][-+]?" + t,
-        r = t + "(\\." + t + ")?(" + n + ")?",
-        i = "\\w+",
-        s = "\\b(" + (t + "#" + i + "(\\." + i + ")?#(" + n) + ")?|" + r + ")";
+        a = "[eE][-+]?" + t,
+        n = "\\b(" + (t + "#\\w+(\\.\\w+)?#(" + a) + ")?|" + (t + "(\\." + t + ")?(") + a + ")?)";
     return {
         name: "VHDL",
         case_insensitive: !0,
@@ -161,7 +159,7 @@ e.exports = function (e) {
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT("--", "$"),
             e.QUOTE_STRING_MODE,
-            { className: "number", begin: s, relevance: 0 },
+            { className: "number", begin: n, relevance: 0 },
             { className: "string", begin: "'(U|X|0|1|Z|W|L|H|-)'", contains: [e.BACKSLASH_ESCAPE] },
             { className: "symbol", begin: "'[A-Za-z](_?[A-Za-z0-9])*", contains: [e.BACKSLASH_ESCAPE] },
         ],

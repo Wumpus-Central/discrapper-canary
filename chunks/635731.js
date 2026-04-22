@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i });
-class r extends Array {
+n.d(t, { A: () => r });
+let r = class extends Array {
     maxSize;
     constructor(e) {
         super(), (this.maxSize = e);
@@ -10,5 +10,4 @@ class r extends Array {
         for (let e of t) this.length >= this.maxSize && this.shift(), super.push(e);
         return this.length;
     }
-}
-let i = r;
+};

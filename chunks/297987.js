@@ -5,9 +5,13 @@ let r = (e) => {
         return null != (t = null == e ? void 0 : e.ownerDocument) ? t : document;
     },
     i = (e) => (e && "window" in e && e.window === e ? e : r(e).defaultView || window);
-function a(e) {
-    return null !== e && "object" == typeof e && "nodeType" in e && "number" == typeof e.nodeType;
-}
 function s(e) {
-    return a(e) && e.nodeType === Node.DOCUMENT_FRAGMENT_NODE && "host" in e;
+    return (
+        null !== e &&
+        "object" == typeof e &&
+        "nodeType" in e &&
+        "number" == typeof e.nodeType &&
+        e.nodeType === Node.DOCUMENT_FRAGMENT_NODE &&
+        "host" in e
+    );
 }

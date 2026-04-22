@@ -1,173 +1,174 @@
-n.d(e, { default: () => S });
-var l = n(627968),
-    a = n(64700),
+n.d(e, { default: () => w });
+var a = n(627968),
+    l = n(64700),
     i = n(284009),
     r = n.n(i),
     s = n(989349),
     o = n.n(s),
     u = n(110259),
-    c = n(158954),
-    E = n(311907),
-    d = n(686956),
-    A = n(935649),
-    _ = n(847599),
+    c = n(189213),
+    E = n(772707),
+    d = n(311907),
+    A = n(686956),
+    _ = n(935649),
+    f = n(847599),
     p = n(36149),
-    f = n(734057),
-    m = n(309010),
-    h = n(287809),
-    g = n(954571),
+    m = n(734057),
+    h = n(309010),
+    g = n(287809),
+    T = n(954571),
     y = n(975571),
-    T = n(955437),
-    G = n(612200),
-    b = n(323073),
-    R = n(201505),
-    C = n(204925),
-    N = n(652215),
-    k = n(985018),
+    G = n(955437),
+    b = n(612200),
+    R = n(323073),
+    N = n(201505),
+    k = n(204925),
+    C = n(652215),
+    S = n(985018),
     x = n(700129);
-function S(t) {
+function w(t) {
     let e,
         n,
         { transitionState: i, source: s } = t,
-        S = (0, E.bG)([h.default], () => h.default.getCurrentUser()),
-        w = (0, E.bG)([m.A, f.A], () => f.A.getChannel(m.A.getChannelId())),
-        [I, M] = a.useState(null),
-        [v, D] = a.useState(null),
-        [O, U] = a.useState(!1),
-        [P, V] = a.useState(0),
-        L = a.useRef(null),
-        $ = a.useRef(null),
-        F = s === C.w_.DEEP_LINK_PROMPT,
-        j = s === C.w_.FAMILY_CENTER,
-        W = (0, b.a9)() && !j && !F,
-        { verifyAgreementButtonText: Y, verifyGateDescription: B, verifyTitle: H } = (0, b.Gn)(s),
-        z = (0, b.vL)(w),
-        K = b.Bc.has(s);
+        w = (0, d.bG)([g.default], () => g.default.getCurrentUser()),
+        I = (0, d.bG)([h.A, m.A], () => m.A.getChannel(h.A.getChannelId())),
+        [M, D] = l.useState(null),
+        [v, U] = l.useState(null),
+        [O, P] = l.useState(!1),
+        [V, F] = l.useState(0),
+        L = l.useRef(null),
+        j = l.useRef(null),
+        W = s === k.w_.DEEP_LINK_PROMPT,
+        Y = s === k.w_.FAMILY_CENTER,
+        $ = (0, R.a9)() && !Y && !W,
+        { verifyAgreementButtonText: B, verifyGateDescription: H, verifyTitle: z } = (0, R.Gn)(s),
+        K = (0, R.vL)(I),
+        Z = R.Bc.has(s);
     (0, p.I7)(s);
-    let Z = null != I ? o()().diff(I, "years") : null;
-    function q() {
-        if (s === C.w_.NSFW_SERVER_INVITE_EMBED) return (0, G.IO)(s), Promise.resolve();
-        let t = w?.getGuildId();
-        return d.A.nsfwReturnToSafety(t), (0, G.IO)(s), Promise.resolve();
-    }
-    async function Q() {
-        r()(null != I, "Cannot submit null birthday.");
-        try {
-            return D(null), U(!0), await (0, T.n7)(I, s);
-        } catch (t) {
-            null != t.body && null != t.body.date_of_birth
-                ? (0, G.MP)(s, t.body.date_of_birth)
-                : (t?.body?.username != null ? D(k.intl.string(k.t["TGg/2k"])) : D(t?.body.message), U(!1));
-        }
+    let q = null != M ? o()().diff(M, "years") : null;
+    function Q() {
+        if (s === k.w_.NSFW_SERVER_INVITE_EMBED) return (0, b.IO)(s), Promise.resolve();
+        let t = I?.getGuildId();
+        return A.A.nsfwReturnToSafety(t), (0, b.IO)(s), Promise.resolve();
     }
     async function X() {
-        (r()(null != Z, "Cannot submit if we haven't been able to calculate age."), Z < 18) ? V(1) : await Q();
+        r()(null != M, "Cannot submit null birthday.");
+        try {
+            return U(null), P(!0), await (0, G.n7)(M, s);
+        } catch (t) {
+            null != t.body && null != t.body.date_of_birth
+                ? (0, b.MP)(s, t.body.date_of_birth)
+                : (t?.body?.username != null ? U(S.intl.string(S.t["TGg/2k"])) : U(t?.body.message), P(!1));
+        }
     }
-    async function J(t) {
-        t.preventDefault(), O || null == I || (await X());
+    async function J() {
+        (r()(null != q, "Cannot submit if we haven't been able to calculate age."), q < 18) ? F(1) : await X();
     }
-    async function tt() {
-        null == (await Q()) && V(0);
+    async function tt(t) {
+        t.preventDefault(), O || null == M || (await J());
     }
-    a.useEffect(() => {
-        S?.nsfwAllowed !== !0 || W || F || (0, G.Nk)(s);
+    async function te() {
+        null == (await X()) && F(0);
+    }
+    l.useEffect(() => {
+        w?.nsfwAllowed !== !0 || $ || W || (0, b.Nk)(s);
     }),
-        a.useEffect(() => {
-            g.default.track(N.HAw.AGE_GATE_ACTION, { source: s, action: C.AM.AGE_GATE_OPEN });
+        l.useEffect(() => {
+            T.default.track(C.HAw.AGE_GATE_ACTION, { source: s, action: k.AM.AGE_GATE_OPEN });
         }, [s]);
-    let te = a.useCallback(
+    let tn = l.useCallback(
             (t) => {
-                M(t);
+                D(t);
             },
-            [M],
+            [D],
         ),
-        tn = a.useCallback(() => {
-            $.current?.focus();
-        }, [$]),
-        tl = a.useCallback(() => {
-            A.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.NSFW_AGE_GATE });
+        ta = l.useCallback(() => {
+            j.current?.focus();
+        }, [j]),
+        tl = l.useCallback(() => {
+            _.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.NSFW_AGE_GATE });
         }, []),
-        ta = { transitionState: i, onClose: q, graphic: { type: "image", src: x.A }, gradientColor: "blue" };
-    return W
-        ? (0, l.jsx)(c.ExpressiveModal, {
-              title: H,
-              subtitle: B,
+        ti = { transitionState: i, onClose: Q, graphic: { type: "image", src: x.A }, gradientColor: "blue" };
+    return $
+        ? (0, a.jsx)(E.k, {
+              title: z,
+              subtitle: H,
               actions: [
-                  { text: k.intl.string(k.t.f3Pet9), onClick: q, variant: "secondary" },
-                  { text: Y ?? k.intl.string(k.t.FDSSia), onClick: tl },
+                  { text: S.intl.string(S.t.f3Pet9), onClick: Q, variant: "secondary" },
+                  { text: B ?? S.intl.string(S.t.FDSSia), onClick: tl },
               ],
               trackingProps: {
                   impression: { impressionName: u.ImpressionNames.USER_AGE_GATE_VERIFY },
                   impressionType: u.ImpressionTypes.MODAL,
               },
-              ...ta,
+              ...ti,
           })
-        : S?.nsfwAllowed === !1 && (z || K) && !j && !F
-          ? (0, l.jsx)(c.ExpressiveModal, {
-                title: k.intl.string(K ? k.t["H0SG/g"] : k.t.NEabBa),
-                subtitle: k.intl.format(K ? k.t["6++3cX"] : k.t["2kHZes"], {
-                    helpURL: y.A.getArticleURL(N.MVz.AGE_GATE),
+        : w?.nsfwAllowed === !1 && (K || Z) && !Y && !W
+          ? (0, a.jsx)(E.k, {
+                title: S.intl.string(Z ? S.t["H0SG/g"] : S.t.NEabBa),
+                subtitle: S.intl.format(Z ? S.t["6++3cX"] : S.t["2kHZes"], {
+                    helpURL: y.A.getArticleURL(C.MVz.AGE_GATE),
                 }),
-                actions: [{ text: k.intl.string(k.t["/g10LC"]), onClick: q, variant: "secondary" }],
+                actions: [{ text: S.intl.string(S.t["/g10LC"]), onClick: Q, variant: "secondary" }],
                 trackingProps: {
                     impression: { impressionName: u.ImpressionNames.USER_AGE_GATE_VERIFY },
                     impressionType: u.ImpressionTypes.MODAL,
                 },
-                ...ta,
+                ...ti,
             })
-          : 0 === P
+          : 0 === V
             ? ((e = (() => {
                   switch (s) {
-                      case C.w_.NSFW_SERVER:
-                      case C.w_.NSFW_SERVER_INVITE:
-                      case C.w_.NSFW_SERVER_INVITE_EMBED:
-                          return k.intl.string(k.t.vAymlG);
-                      case C.w_.FAMILY_CENTER:
-                          return k.intl.string(k.t.M7mt7m);
+                      case k.w_.NSFW_SERVER:
+                      case k.w_.NSFW_SERVER_INVITE:
+                      case k.w_.NSFW_SERVER_INVITE_EMBED:
+                          return S.intl.string(S.t.vAymlG);
+                      case k.w_.FAMILY_CENTER:
+                          return S.intl.string(S.t.M7mt7m);
                       default:
-                          return k.intl.string(k.t.F8otRo);
+                          return S.intl.string(S.t.F8otRo);
                   }
               })()),
               (n = (() => {
                   switch (s) {
-                      case C.w_.FAMILY_CENTER:
-                          return k.intl.string(k.t.mhUrKS);
-                      case C.w_.DEEP_LINK_PROMPT:
-                          return k.intl.format(k.t.iyhg2s, { helpURL: y.A.getArticleURL(N.MVz.AGE_GATE) });
+                      case k.w_.FAMILY_CENTER:
+                          return S.intl.string(S.t.mhUrKS);
+                      case k.w_.DEEP_LINK_PROMPT:
+                          return S.intl.format(S.t.iyhg2s, { helpURL: y.A.getArticleURL(C.MVz.AGE_GATE) });
                       default:
-                          return k.intl.format(k.t.n3QjDE, { helpURL: y.A.getArticleURL(N.MVz.AGE_GATE) });
+                          return S.intl.format(S.t.n3QjDE, { helpURL: y.A.getArticleURL(C.MVz.AGE_GATE) });
                   }
               })()),
-              (0, l.jsx)("form", {
-                  onSubmit: J,
-                  children: (0, l.jsx)(c.Modal, {
+              (0, a.jsx)("form", {
+                  onSubmit: tt,
+                  children: (0, a.jsx)(c.Modal, {
                       title: e,
                       subtitle: n,
                       actions: [
-                          { text: k.intl.string(k.t["1MrpWO"]), onClick: q, variant: "secondary" },
-                          { text: k.intl.string(k.t.uBFuok), onClick: X, loading: O, disabled: null == I },
+                          { text: S.intl.string(S.t["1MrpWO"]), onClick: Q, variant: "secondary" },
+                          { text: S.intl.string(S.t.uBFuok), onClick: J, loading: O, disabled: null == M },
                       ],
-                      ...ta,
-                      children: (0, l.jsx)(R.A, {
-                          label: k.intl.string(k.t.rhBeKe),
+                      ...ti,
+                      children: (0, a.jsx)(N.A, {
+                          label: S.intl.string(S.t.rhBeKe),
                           name: "date_of_birth",
-                          onChange: te,
-                          onPopulated: tn,
+                          onChange: tn,
+                          onPopulated: ta,
                           error: v,
-                          value: I,
+                          value: M,
                           ref: L,
                           autoFocus: !0,
                       }),
                   }),
               }))
-            : (0, l.jsx)(c.Modal, {
+            : (0, a.jsx)(c.Modal, {
                   transitionState: i,
-                  onClose: q,
-                  title: k.intl.formatToPlainString(k.t.wumolR, { age: Z ?? "" }),
-                  subtitle: k.intl.formatToPlainString(k.t.n3QjDE, { helpURL: y.A.getArticleURL(N.MVz.AGE_GATE) }),
+                  onClose: Q,
+                  title: S.intl.formatToPlainString(S.t.wumolR, { age: q ?? "" }),
+                  subtitle: S.intl.formatToPlainString(S.t.n3QjDE, { helpURL: y.A.getArticleURL(C.MVz.AGE_GATE) }),
                   actions: [
-                      { text: k.intl.string(k.t.cfYCrb), onClick: () => V(0), variant: "secondary" },
-                      { text: k.intl.string(k.t["6tahin"]), onClick: tt },
+                      { text: S.intl.string(S.t.cfYCrb), onClick: () => F(0), variant: "secondary" },
+                      { text: S.intl.string(S.t["6tahin"]), onClick: te },
                   ],
               });
 }

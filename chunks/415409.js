@@ -1,52 +1,51 @@
 "use strict";
-n.d(t, { A: () => M }), n(321073), n(323874), n(14289), n(35956);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => L }), n(321073), n(323874), n(14289), n(35956);
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(735438),
-    l = n.n(o),
-    u = n(607399),
-    c = n(465532),
+    r = n.n(s),
+    a = n(735438),
+    o = n.n(a),
+    c = n(607399),
+    u = n(465532),
     d = n(608299),
-    _ = n(23658),
-    f = n(155718),
+    h = n(23658),
+    m = n(155718),
     p = n(565150),
-    h = n(861382),
-    m = n(626584),
-    E = n(522602),
-    g = n(234320),
+    f = n(861382),
+    g = n(626584),
+    _ = n(522602),
+    x = n(234320),
     A = n(453771),
-    I = n(741394),
-    T = n(355622),
-    S = n(408018),
-    y = n(579940),
-    v = n(177686),
-    N = n(133684),
-    C = n(827977),
-    R = n(323350),
-    O = n(652215),
-    b = n(985018),
-    D = n(111314);
-new m.A("ChannelEditor.tsx");
-let L = function () {
-        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    },
-    w = 1e3;
-class M extends i.Component {
-    ref = i.createRef();
+    C = n(741394),
+    E = n(355622),
+    I = n(408018),
+    v = n(579940),
+    y = n(177686),
+    S = n(133684),
+    b = n(827977),
+    N = n(323350),
+    T = n(652215),
+    j = n(985018),
+    R = n(266599);
+new g.A("ChannelEditor.tsx");
+let w = function () {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+};
+class L extends l.Component {
+    ref = l.createRef();
     _focusBlurQueue = Promise.resolve();
     _unsubscribe;
     _initTimeoutId = null;
     _cachedEditorWindow = null;
     constructor(e) {
         super(e),
-            (this._unsubscribe = y.Y0.subscribe((e) => {
+            (this._unsubscribe = v.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
             })),
-            (this.state = { focused: !1, submitting: !1, popup: y.Y0.getState() });
+            (this.state = { focused: !1, submitting: !1, popup: v.Y0.getState() });
     }
     _getEditorWindow() {
         let e = this.ref?.current?.getSlateEditor?.()?.windowContext?.renderWindow;
@@ -60,13 +59,13 @@ class M extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), w));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), 1e3));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, R.WO)(this.props.richValue, { mode: "plain" })),
-                this.props.onChange?.(null, e, (0, S.x7)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, N.WO)(this.props.richValue, { mode: "plain" })),
+                this.props.onChange?.(null, e, (0, I.x7)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -99,8 +98,8 @@ class M extends i.Component {
     }
     insertEmoji(e) {
         let { emoji: t, willClose: n } = e,
-            r = this.ref.current;
-        null != t && null != r && (r.insertEmoji({ emoji: t, addSpace: n }), n && this.focus());
+            i = this.ref.current;
+        null != t && null != i && (i.insertEmoji({ emoji: t, addSpace: n }), n && this.focus());
     }
     insertGIF(e) {
         let { textValue: t } = this.props,
@@ -119,8 +118,8 @@ class M extends i.Component {
         let { textValue: t } = this.props,
             n = this.ref.current;
         if (null != e && null != n) {
-            let r = t.length > 0 ? e.replace(/([_`´*])/g, "\\$1") : e;
-            t.length > 0 && !t.endsWith(" ") && n.insertText(" ", void 0, !1), n.insertText(r, void 0, !0);
+            let i = t.length > 0 ? e.replace(/([_`´*])/g, "\\$1") : e;
+            t.length > 0 && !t.endsWith(" ") && n.insertText(" ", void 0, !1), n.insertText(i, void 0, !0);
         }
     }
     handleOuterClick() {
@@ -128,23 +127,23 @@ class M extends i.Component {
     }
     clearValue() {
         let { channel: e, type: t } = this.props;
-        this.setState({ focused: !0, submitting: !1 }), c.A.saveDraft(e.id, "", t.drafts.type);
+        this.setState({ focused: !0, submitting: !1 }), u.A.saveDraft(e.id, "", t.drafts.type);
     }
     getCurrentWord() {
         let e = this.ref.current;
         return e?.getCurrentWord() ?? { word: null, isAtStart: !1 };
     }
     insertAutocomplete(e, t, n) {
-        let r = this.ref.current;
-        return r?.insertAutocomplete(e, t, n);
+        let i = this.ref.current;
+        return i?.insertAutocomplete(e, t, n);
     }
     insertInlineAutocompleteElement(e) {
         let t = this.ref.current;
         return t?.insertInlineAutocompleteInput(e);
     }
     replaceInlineAutocompleteInput(e, t, n) {
-        let r = this.ref.current;
-        return r?.replaceInlineAutocompleteInput(e, t, n);
+        let i = this.ref.current;
+        return i?.replaceInlineAutocompleteInput(e, t, n);
     }
     getCurrentCommandOption() {
         let e = this.ref.current;
@@ -177,15 +176,15 @@ class M extends i.Component {
         var e = this;
         return function () {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                { type: n, channel: r } = e.props;
-            n.drafts.autoSave && (t && e.saveCurrentTextThrottled.cancel(), e.handleSaveCurrentText(r.id));
+                { type: n, channel: i } = e.props;
+            n.drafts.autoSave && (t && e.saveCurrentTextThrottled.cancel(), e.handleSaveCurrentText(i.id));
         };
     })();
     handleBeforeUnload = () => this.saveCurrentText();
-    saveCurrentTextThrottled = l().throttle(this.saveCurrentText.bind(this, !1), 500);
+    saveCurrentTextThrottled = o().throttle(this.saveCurrentText.bind(this, !1), 500);
     getPlaceholder() {
-        let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: r } = this.props;
-        return e && !n ? (r ? "" : b.intl.string(b.t.IYKTTc)) : t;
+        let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: i } = this.props;
+        return e && !n ? (i ? "" : j.intl.string(j.t.IYKTTc)) : t;
     }
     handleEnter = (e) => this.props.onEnter?.(e);
     handleTab = () => this.props.onTab?.();
@@ -197,38 +196,38 @@ class M extends i.Component {
                 textValue: e,
                 richValue: t,
                 disabled: n,
-                onChange: i,
+                onChange: l,
                 onKeyDown: s,
-                onResize: o,
-                onSubmit: l,
-                onSubmitFailure: c,
+                onResize: a,
+                onSubmit: o,
+                onSubmitFailure: u,
                 channel: d,
-                type: _,
-                useSlate: f,
+                type: h,
+                useSlate: m,
                 spellcheckEnabled: p,
-                useNewSlashCommands: h,
-                canOnlyUseTextCommands: m,
-                className: E,
+                useNewSlashCommands: f,
+                canOnlyUseTextCommands: g,
+                className: _,
                 id: A,
-                required: I,
-                maxCharacterCount: y,
-                allowNewLines: v,
-                "aria-describedby": R,
-                "aria-labelledby": b,
-                accessibilityLabel: L,
-                showValueWhenDisabled: w,
+                required: C,
+                maxCharacterCount: v,
+                allowNewLines: y,
+                "aria-describedby": N,
+                "aria-labelledby": j,
+                accessibilityLabel: w,
+                showValueWhenDisabled: L,
             } = this.props,
-            { submitting: M, popup: x } = this.state,
-            P = {
+            { submitting: M, popup: k } = this.state,
+            O = {
                 channel: d,
-                className: a()(E, D.Tg, { [D.w5]: f, [D.Rr]: n || M }),
+                className: r()(_, R.Tg, { [R.w5]: m, [R.Rr]: n || M }),
                 id: A,
                 placeholder: this.getPlaceholder(),
-                required: I,
-                accessibilityLabel: L,
+                required: C,
+                accessibilityLabel: w,
                 disabled: n || !1,
                 submitting: M,
-                isEdit: _ === T.oU.EDIT,
+                isEdit: h === E.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -237,58 +236,58 @@ class M extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: v,
-                onChange: i,
-                onResize: o,
+                allowNewLines: y,
+                onChange: l,
+                onResize: a,
                 onKeyDown: s,
-                onSubmit: l,
-                textAreaPaddingClassName: a()({
-                    [D.H$]: _ === T.oU.CREATE_FORUM_POST,
-                    [D.g_]: _ === T.oU.CUSTOM_GIFT,
-                    [D.Yg]: _ === T.oU.USER_PROFILE,
-                    [D.$$]: _ === T.oU.OVERLAY_INLINE_REPLY,
+                onSubmit: o,
+                textAreaPaddingClassName: r()({
+                    [R.H$]: h === E.oU.CREATE_FORUM_POST,
+                    [R.g_]: h === E.oU.CUSTOM_GIFT,
+                    [R.Yg]: h === E.oU.USER_PROFILE,
+                    [R.$$]: h === E.oU.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: p,
-                useNewSlashCommands: h,
-                disableAutoFocus: u.Fr || (_.disableAutoFocus ?? !1),
-                disableEnterToSubmit: _.submit?.disableEnterToSubmit ?? !1,
-                "aria-controls": x.id ?? void 0,
+                useNewSlashCommands: f,
+                disableAutoFocus: c.Fr || (h.disableAutoFocus ?? !1),
+                disableEnterToSubmit: h.submit?.disableEnterToSubmit ?? !1,
+                "aria-controls": k.id ?? void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== x.id || void 0,
-                "aria-activedescendant": x.activeDescendant ?? void 0,
-                "aria-invalid": e.length > y,
-                "aria-describedby": R,
-                "aria-labelledby": b,
+                "aria-expanded": null !== k.id || void 0,
+                "aria-activedescendant": k.activeDescendant ?? void 0,
+                "aria-invalid": e.length > v,
+                "aria-describedby": N,
+                "aria-labelledby": j,
                 "aria-autocomplete": "list",
             },
-            k = f
-                ? (0, r.jsx)(C.A, {
+            P = m
+                ? (0, i.jsx)(b.A, {
                       ref: this.ref,
-                      ...P,
-                      type: _,
-                      value: n && !w ? (0, S.x7)("") : t,
-                      canUseCommands: _.commands?.enabled,
-                      canOnlyUseTextCommands: m,
-                      onSubmitFailure: c,
+                      ...O,
+                      type: h,
+                      value: n && !L ? (0, I.x7)("") : t,
+                      canUseCommands: h.commands?.enabled,
+                      canOnlyUseTextCommands: g,
+                      onSubmitFailure: u,
                   })
-                : (0, r.jsx)(N.A, { ref: this.ref, ...P, value: n && !w ? "" : e });
-        return (0, r.jsxs)(r.Fragment, {
+                : (0, i.jsx)(S.A, { ref: this.ref, ...O, value: n && !L ? "" : e });
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(g.EG, { event: O.jej.INSERT_TEXT, handler: this.handleInsertText }),
-                (0, r.jsx)(g.EG, { event: O.jej.CLEAR_TEXT, handler: this.handleClearText }),
-                k,
+                (0, i.jsx)(x.EG, { event: T.jej.INSERT_TEXT, handler: this.handleInsertText }),
+                (0, i.jsx)(x.EG, { event: T.jej.CLEAR_TEXT, handler: this.handleClearText }),
+                P,
             ],
         });
     }
     handleSaveCurrentText = (e) => {
-        c.A.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
+        u.A.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
     };
     handleClearText = () => {
-        this.props.onChange?.(null, "", (0, S.x7)(""));
+        this.props.onChange?.(null, "", (0, I.x7)(""));
     };
     handleInsertText = (e) => {
-        let { plainText: t, rawText: n, addSpace: r = !1 } = e;
-        this.props.disabled || (this.appendText(t, n, r), this.focus());
+        let { plainText: t, rawText: n, addSpace: i = !1 } = e;
+        this.props.disabled || (this.appendText(t, n, i), this.focus());
     };
     handleFocus = (e) => {
         let { onFocus: t } = this.props,
@@ -304,40 +303,67 @@ class M extends i.Component {
         let t = e.target?.ownerDocument?.defaultView,
             {
                 channel: n,
-                canPasteFiles: r,
-                uploadPromptCharacterCount: i,
+                canPasteFiles: i,
+                uploadPromptCharacterCount: l,
                 promptToUpload: s,
-                maxCharacterCount: a,
-                type: o,
+                maxCharacterCount: r,
+                type: a,
             } = this.props,
-            l = null != t ? (0, v.VG)(t) : null,
-            u = (0, v.W7)(),
-            c = l ?? u ?? n,
-            m = (0, v.qH)(t, this._getEditorWindow()) ? n : c;
-        if (null == s || (!m.isPrivate() && !r) || (m.isPrivate() && m.isManaged())) return !1;
-        let g = (e) => {
-                let t = h.A.getActiveCommand(m.id);
-                if (null == t) return s(e, m, o.drafts.type, { requireConfirm: !0, origin: "clipboard" });
-                let n = o.drafts.commandType ?? o.drafts.type,
-                    r = null,
-                    i = h.A.getActiveOption(m.id);
-                null !=
-                    (r =
-                        i?.type === f.n4.ATTACHMENT
-                            ? i
-                            : t.options?.find((e) => {
-                                  if (e.type === f.n4.ATTACHMENT) return null == E.A.getUpload(m.id, e.name, n);
-                              })) &&
-                    d.A.setFile({
-                        channelId: m.id,
-                        id: r.name,
-                        draftType: n,
-                        file: { id: r.name, platform: p.xz.WEB, file: e[0] },
-                    });
-            },
-            A = i ?? a,
-            { files: I, errors: T } = x(e.clipboardData, o.uploadLongMessages ? A : null);
-        return (L(
+            o = null != t ? (0, y.VG)(t) : null,
+            c = (0, y.W7)(),
+            u = (0, y.qH)(t, this._getEditorWindow()) ? n : (o ?? c ?? n);
+        if (null == s || (!u.isPrivate() && !i) || (u.isPrivate() && u.isManaged())) return !1;
+        let { files: g, errors: x } = (function (e, t) {
+            let n = [],
+                i = [],
+                l = null,
+                s = null,
+                r = [];
+            for (let t of e.items)
+                if ("file" === t.kind) {
+                    let e = t.webkitGetAsEntry?.() ?? t.getAsEntry?.() ?? null;
+                    if (null != e && !1 === e.isFile) {
+                        r.push({ item: t, error: "is_directory" });
+                        continue;
+                    }
+                    let l = t.getAsFile();
+                    if (null == l) continue;
+                    null != l.path && l.path.length > 0 ? n.push(l) : i.push(l);
+                } else
+                    "string" === t.kind &&
+                        ("text/plain" === t.type && null == l
+                            ? (l = t)
+                            : "text/html" === t.type && null == s && (s = t));
+            if (n.length > 0) return { files: n, errors: r };
+            if (i.length > 0) {
+                if (1 === i.length && "image/png" === i[0].type && null != s) {
+                    let t = i[0],
+                        n =
+                            (function (e) {
+                                let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
+                                if (null != t) {
+                                    let e;
+                                    try {
+                                        let { pathname: n } = new URL(t.src);
+                                        null != n && n.length > 0 && (e = (0, C.kh)(n));
+                                    } catch {}
+                                    if (null != e && e.length > 0) return `${e}.png`;
+                                }
+                            })(e.getData(s.type)) ?? t.name;
+                    return { files: [(0, A.VE)(t, n, t.type)], errors: r };
+                }
+                return { files: i, errors: r };
+            }
+            if (null != l && null != t) {
+                let n = e.getData(l.type);
+                if (n.length > t) {
+                    let e = new Blob([n], { type: "text/plain" });
+                    return { files: [(0, A.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: r };
+                }
+            }
+            return { files: [], errors: r };
+        })(e.clipboardData, a.uploadLongMessages ? (l ?? r) : null);
+        return (w(
             "onPaste",
             [...e.clipboardData.items].map((e) => {
                 if ("file" !== e.kind) return { kind: e.kind, type: e.type };
@@ -347,60 +373,36 @@ class M extends i.Component {
                 }
             }),
         ),
-        0 === I.length)
-            ? (T?.some((e) => {
+        0 === g.length)
+            ? (x?.some((e) => {
                   let { error: t } = e;
                   return "is_directory" === t;
-              }) && (0, _.openUploadError)({ title: b.intl.string(b.t.azO1Pe), help: b.intl.string(b.t["Koklr/"]) }),
+              }) && (0, h.openUploadError)({ title: j.intl.string(j.t.azO1Pe), help: j.intl.string(j.t["Koklr/"]) }),
               !1)
-            : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), g(I), this.focus(), !0);
+            : (e.preventDefault(),
+              e.stopPropagation(),
+              this.saveCurrentText(),
+              ((e) => {
+                  let t = f.A.getActiveCommand(u.id);
+                  if (null == t) return s(e, u, a.drafts.type, { requireConfirm: !0, origin: "clipboard" });
+                  let n = a.drafts.commandType ?? a.drafts.type,
+                      i = null,
+                      l = f.A.getActiveOption(u.id);
+                  null !=
+                      (i =
+                          l?.type === m.n4.ATTACHMENT
+                              ? l
+                              : t.options?.find((e) => {
+                                    if (e.type === m.n4.ATTACHMENT) return null == _.A.getUpload(u.id, e.name, n);
+                                })) &&
+                      d.A.setFile({
+                          channelId: u.id,
+                          id: i.name,
+                          draftType: n,
+                          file: { id: i.name, platform: p.xz.WEB, file: e[0] },
+                      });
+              })(g),
+              this.focus(),
+              !0);
     };
-}
-function x(e, t) {
-    let n = [],
-        r = [],
-        i = null,
-        s = null,
-        a = [];
-    for (let t of e.items)
-        if ("file" === t.kind) {
-            let e = t.webkitGetAsEntry?.() ?? t.getAsEntry?.() ?? null;
-            if (null != e && !1 === e.isFile) {
-                a.push({ item: t, error: "is_directory" });
-                continue;
-            }
-            let i = t.getAsFile();
-            if (null == i) continue;
-            null != i.path && i.path.length > 0 ? n.push(i) : r.push(i);
-        } else
-            "string" === t.kind &&
-                ("text/plain" === t.type && null == i ? (i = t) : "text/html" === t.type && null == s && (s = t));
-    if (n.length > 0) return { files: n, errors: a };
-    if (r.length > 0) {
-        if (1 === r.length && "image/png" === r[0].type && null != s) {
-            let t = r[0],
-                n = P(e.getData(s.type)) ?? t.name;
-            return { files: [(0, A.VE)(t, n, t.type)], errors: a };
-        }
-        return { files: r, errors: a };
-    }
-    if (null != i && null != t) {
-        let n = e.getData(i.type);
-        if (n.length > t) {
-            let e = new Blob([n], { type: "text/plain" });
-            return { files: [(0, A.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: a };
-        }
-    }
-    return { files: [], errors: a };
-}
-function P(e) {
-    let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
-    if (null != t) {
-        let e;
-        try {
-            let { pathname: n } = new URL(t.src);
-            null != n && n.length > 0 && (e = (0, I.kh)(n));
-        } catch {}
-        if (null != e && e.length > 0) return `${e}.png`;
-    }
 }

@@ -1,18 +1,14 @@
 "use strict";
-n.d(t, { Z: () => c, s: () => l });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(532512);
-let l = { PRIMARY: o.Xc, DANGER: o.Wg, WARNING: o.vH, SUCCESS: o.CN, BRAND: o.cX, CUSTOM: o.Nr },
-    u = i.forwardRef((e, t) => {
-        let n,
-            { children: i, editable: a = !1, type: u = l.PRIMARY, className: c, outline: d = !1, ..._ } = e;
-        return (
-            d ? (n = o.rj) : u === l.PRIMARY && a && (n = o.LL),
-            (0, r.jsx)("div", { ref: t, className: s()(c, u, n), ..._, children: i })
-        );
+n.d(t, { Z: () => d, s: () => o });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    a = n(306821);
+let o = { PRIMARY: a.Xc, DANGER: a.Wg, WARNING: a.vH, SUCCESS: a.CN, BRAND: a.cX, CUSTOM: a.Nr },
+    c = s.forwardRef((e, t) => {
+        let { children: n, outline: s = !1, editable: r, type: c = o.PRIMARY, className: d, ...u } = e;
+        return (0, i.jsx)("div", { ref: t, className: l()(d, a.Nr, c, { [a.VR]: s }), ...u, children: n });
     });
-(u.displayName = "Card"), (u.Types = l);
-let c = u;
+(c.displayName = "Card"), (c.Types = o);
+let d = c;

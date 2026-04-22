@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n(262),
-    o = n(916858),
-    l = n(542535),
-    u = n(996988);
-let c = { [u.d.POPOUT]: 12, [u.d.MODAL]: 26, [u.d.MODAL_V2]: 16, [u.d.SIDEBAR]: 13, [u.d.VIDEO_TILE_BACKGROUND]: 12 };
-function d(e) {
+t.d(n, { A: () => c });
+var l = t(627968),
+    r = t(64700),
+    i = t(735438),
+    a = t(262),
+    s = t(916858),
+    o = t(542535),
+    d = t(996988);
+let u = { [d.d.POPOUT]: 12, [d.d.MODAL]: 26, [d.d.MODAL_V2]: 16, [d.d.SIDEBAR]: 13, [d.d.VIDEO_TILE_BACKGROUND]: 12 };
+function c(e) {
     let {
-            displayProfile: t,
-            themeType: n,
-            pendingLegacyUsernameDisabled: u,
-            pendingBadges: d,
-            onClose: _,
-            shouldOpenBadgeTooltip: f,
-            shouldGlowTenureBadge: p,
+            displayProfile: n,
+            themeType: t,
+            pendingLegacyUsernameDisabled: d,
+            pendingBadges: c,
+            onClose: m,
+            shouldOpenBadgeTooltip: p,
+            shouldGlowTenureBadge: f,
         } = e,
-        h = (0, s.A)(t, u),
-        m = i.useMemo(() => {
-            if (null == d) return (0, o.b)(h);
-            let e = new Set(h.map((e) => e.id)),
-                t = [...h, ...d.filter((t) => !e.has(t.id))];
-            return (0, o.b)(t);
-        }, [h, d]);
-    return 0 === m.length
+        g = (0, a.A)(n, d),
+        h = r.useMemo(() => {
+            if (null == c) return (0, s.b)(g);
+            let e = new Set(g.map((e) => e.id)),
+                n = [...g, ...c.filter((n) => !e.has(n.id))];
+            return (0, s.b)(n);
+        }, [g, c]);
+    return 0 === h.length
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: (0, a.chunk)(m, c[n]).map((e) =>
-                  (0, r.jsx)(
-                      l.A,
-                      { badges: e, displayProfile: t, onClose: _, shouldOpenBadgeTooltip: f, shouldGlowTenureBadge: p },
+        : (0, l.jsx)(l.Fragment, {
+              children: (0, i.chunk)(h, u[t]).map((e) =>
+                  (0, l.jsx)(
+                      o.A,
+                      { badges: e, displayProfile: n, onClose: m, shouldOpenBadgeTooltip: p, shouldGlowTenureBadge: f },
                       e[0].id,
                   ),
               ),

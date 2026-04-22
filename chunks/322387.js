@@ -1,56 +1,47 @@
 "use strict";
-n.d(t, { $w: () => s, Uo: () => o, e1: () => i, hW: () => a, r_: () => r });
-var r = (function (e) {
-        return (
-            (e[(e.UPDATE_PROFILE = 0)] = "UPDATE_PROFILE"),
-            (e[(e.FIND_FRIENDS = 1)] = "FIND_FRIENDS"),
-            (e[(e.ADD_FRIEND = 2)] = "ADD_FRIEND"),
-            (e[(e.FIRST_MESSAGE = 3)] = "FIRST_MESSAGE"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (
-            (e.MARK_ALL_READ = "mark_all_read"),
-            (e.CLICKED = "clicked"),
-            (e.FRIEND_REQUESTS_BUTTON_CLICK = "friend_requests_button_click"),
-            (e.ACTION_BUTTON = "action_button"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (e.ForYou = "ForYou"), (e.Mentions = "Mentions"), (e.MessageReminders = "MessageReminders"), e;
-    })({}),
-    a = (function (e) {
-        return (
-            (e.GO_LIVE_PUSH = "go_live_push"),
-            (e.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),
-            (e.FRIEND_REQUEST_PENDING = "friend_request_pending"),
-            (e.FRIEND_SUGGESTION_CREATED = "friend_suggestion_created"),
-            (e.FRIEND_REQUEST_REMINDER = "friend_request_reminder"),
-            (e.DM_FRIEND_NUDGE = "dm_friend_nudge"),
-            (e.RECENT_MENTION = "recent_mention"),
-            (e.REPLY_MENTION = "reply_mention"),
-            (e.GUILD_SCHEDULED_EVENT_STARTED = "scheduled_guild_event_started"),
-            (e.SYSTEM_DEMO = "system_demo"),
-            (e.MISSED_MESSAGES = "missed_messages"),
-            (e.TOP_MESSAGES = "top_messages"),
-            (e.LIFECYCLE_ITEM = "lifecycle_item"),
-            (e.TRENDING_CONTENT = "trending_content"),
-            (e.GAME_FRIEND_REQUEST_ACCEPTED = "game_friend_request_accepted"),
-            (e.REACTION_SENT = "reaction_sent"),
-            (e.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER = "referral_program_entrypoint_reminder"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (
-            (e.INCOMING_FRIEND_REQUESTS = "INCOMING_FRIEND_REQUESTS"),
-            (e.INCOMING_FRIEND_REQUESTS_ACCEPTED = "INCOMING_FRIEND_REQUESTS_ACCEPTED"),
-            (e.FRIEND_REQUESTS_GROUPED = "FRIEND_REQUESTS_GROUPED"),
-            (e.MOBILE_NATIVE_UPDATE_AVAILABLE = "MOBILE_NATIVE_UPDATE_AVAILABLE"),
-            (e.INCOMING_GAME_FRIEND_REQUESTS = "INCOMING_GAME_FRIEND_REQUESTS"),
-            (e.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED = "INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED"),
-            e
-        );
-    })({});
+n.d(t, { $w: () => d, Uo: () => _, e1: () => u, hW: () => c, r_: () => l });
+var r,
+    i,
+    s,
+    a,
+    o,
+    l =
+        (((r = {})[(r.UPDATE_PROFILE = 0)] = "UPDATE_PROFILE"),
+        (r[(r.FIND_FRIENDS = 1)] = "FIND_FRIENDS"),
+        (r[(r.ADD_FRIEND = 2)] = "ADD_FRIEND"),
+        (r[(r.FIRST_MESSAGE = 3)] = "FIRST_MESSAGE"),
+        r),
+    u =
+        (((i = {}).MARK_ALL_READ = "mark_all_read"),
+        (i.CLICKED = "clicked"),
+        (i.FRIEND_REQUESTS_BUTTON_CLICK = "friend_requests_button_click"),
+        (i.ACTION_BUTTON = "action_button"),
+        i),
+    d = (((s = {}).ForYou = "ForYou"), (s.Mentions = "Mentions"), (s.MessageReminders = "MessageReminders"), s),
+    c =
+        (((a = {}).GO_LIVE_PUSH = "go_live_push"),
+        (a.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),
+        (a.FRIEND_REQUEST_PENDING = "friend_request_pending"),
+        (a.FRIEND_SUGGESTION_CREATED = "friend_suggestion_created"),
+        (a.FRIEND_REQUEST_REMINDER = "friend_request_reminder"),
+        (a.DM_FRIEND_NUDGE = "dm_friend_nudge"),
+        (a.RECENT_MENTION = "recent_mention"),
+        (a.REPLY_MENTION = "reply_mention"),
+        (a.GUILD_SCHEDULED_EVENT_STARTED = "scheduled_guild_event_started"),
+        (a.SYSTEM_DEMO = "system_demo"),
+        (a.MISSED_MESSAGES = "missed_messages"),
+        (a.TOP_MESSAGES = "top_messages"),
+        (a.LIFECYCLE_ITEM = "lifecycle_item"),
+        (a.TRENDING_CONTENT = "trending_content"),
+        (a.GAME_FRIEND_REQUEST_ACCEPTED = "game_friend_request_accepted"),
+        (a.REACTION_SENT = "reaction_sent"),
+        (a.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER = "referral_program_entrypoint_reminder"),
+        a),
+    _ =
+        (((o = {}).INCOMING_FRIEND_REQUESTS = "INCOMING_FRIEND_REQUESTS"),
+        (o.INCOMING_FRIEND_REQUESTS_ACCEPTED = "INCOMING_FRIEND_REQUESTS_ACCEPTED"),
+        (o.FRIEND_REQUESTS_GROUPED = "FRIEND_REQUESTS_GROUPED"),
+        (o.MOBILE_NATIVE_UPDATE_AVAILABLE = "MOBILE_NATIVE_UPDATE_AVAILABLE"),
+        (o.INCOMING_GAME_FRIEND_REQUESTS = "INCOMING_GAME_FRIEND_REQUESTS"),
+        (o.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED = "INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED"),
+        o);

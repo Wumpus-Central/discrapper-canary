@@ -1,27 +1,26 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var r = n(588350),
     i = n.n(r),
-    a = n(792620),
-    s = n(985018);
-let o = "1290718710658629658";
-function l(e) {
+    s = n(792620),
+    a = n(985018);
+function o(e) {
     let t = [
         {
             key: "NOT_INTERESTED",
-            text: (0, a.vv)(e)
-                ? s.intl.string(s.t.wHRWkE)
-                : s.intl.formatToPlainString(s.t.AZRWVY, { entityName: e.config.messages.gameTitle }),
+            text: (0, s.vv)(e)
+                ? a.intl.string(a.t.wHRWkE)
+                : a.intl.formatToPlainString(a.t.AZRWVY, { entityName: e.config.messages.gameTitle }),
         },
-        { key: "INVALUABLE", text: s.intl.string(s.t.ETU4Na) },
-        { key: "TOO_LONG", text: s.intl.string(s.t.uRIIpD) },
-        { key: "UNSURE_HOW", text: s.intl.string(s.t["5dxvxs"]) },
-        { key: "OTHER", text: s.intl.string(s.t.RFasgu) },
+        { key: "INVALUABLE", text: a.intl.string(a.t.ETU4Na) },
+        { key: "TOO_LONG", text: a.intl.string(a.t.uRIIpD) },
+        { key: "UNSURE_HOW", text: a.intl.string(a.t["5dxvxs"]) },
+        { key: "OTHER", text: a.intl.string(a.t.RFasgu) },
     ];
     return {
-        id: o,
-        title: s.intl.string(s.t.ugbhDS),
-        subtitle: s.intl.string(s.t.FIYcpC),
+        id: "1290718710658629658",
+        title: a.intl.string(a.t.ugbhDS),
+        subtitle: a.intl.string(a.t.FIYcpC),
         choices: i()(t.slice(0, 4)).concat(t[4]),
     };
 }

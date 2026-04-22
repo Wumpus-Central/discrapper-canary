@@ -1,54 +1,56 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968),
     s = n(64700),
     l = n(827734),
-    a = n(397927),
-    r = n(985018),
-    o = n(346069);
-function d(e) {
-    let { children: t, lineClamp: n = 2, ...d } = e,
-        [c, u] = s.useState(!1),
-        [m, g] = s.useState(null),
-        _ =
-            null != m &&
+    a = n(834730),
+    r = n(900797),
+    o = n(847374),
+    d = n(985018),
+    u = n(988325);
+function c(e) {
+    let { children: t, lineClamp: n = 2, ...c } = e,
+        [g, m] = s.useState(!1),
+        [_, A] = s.useState(null),
+        h =
+            null != _ &&
             (0, i.jsx)("button", {
-                className: o.x6,
-                onClick: () => u((e) => !e),
-                children: (0, i.jsxs)(a.Text, {
-                    className: o.B0,
+                className: u.x6,
+                onClick: () => m((e) => !e),
+                children: (0, i.jsxs)(a.E, {
+                    className: u.B0,
                     variant: "text-sm/medium",
                     color: "text-brand",
                     children: [
-                        c ? r.intl.string(r.t["JQX/Pb"]) : r.intl.string(r.t.Fbrd8J),
-                        c
-                            ? (0, i.jsx)(a.tN5, { color: l.A.colors.TEXT_BRAND, size: "xs" })
-                            : (0, i.jsx)(a.abt, { color: l.A.colors.TEXT_BRAND, size: "xs" }),
+                        g ? d.intl.string(d.t["JQX/Pb"]) : d.intl.string(d.t.Fbrd8J),
+                        g
+                            ? (0, i.jsx)(r.t, { color: l.A.colors.TEXT_BRAND, size: "xs" })
+                            : (0, i.jsx)(o.a, { color: l.A.colors.TEXT_BRAND, size: "xs" }),
                     ],
                 }),
             }),
-        [x, A] = s.useState(null),
-        h = s.useCallback(() => {
-            if (null == x) return;
-            let { scrollHeight: e, clientHeight: t } = x;
-            e > t && g({ truncatedHeight: t, expandedHeight: e });
-        }, [x]);
+        [p, x] = s.useState(null),
+        E = s.useCallback(() => {
+            if (null == p) return;
+            let { scrollHeight: e, clientHeight: t } = p;
+            e > t && A({ truncatedHeight: t, expandedHeight: e });
+        }, [p]);
     s.useEffect(() => {
-        requestAnimationFrame(h);
-    }, [h, t, n]);
-    let p = "auto";
+        requestAnimationFrame(E);
+    }, [E, t, n]);
+    let T = "auto";
     return (
-        null != m && (p = c ? `${m.expandedHeight}px` : `${m.truncatedHeight}px`),
+        null != _ && (T = g ? `${_.expandedHeight}px` : `${_.truncatedHeight}px`),
         (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(a.Text, {
-                    ...d,
-                    className: o.Qs,
-                    lineClamp: c ? void 0 : n,
-                    ref: A,
-                    style: { height: p },
+                (0, i.jsx)(a.E, {
+                    ...c,
+                    className: u.Qs,
+                    lineClamp: g ? void 0 : n,
+                    ref: x,
+                    style: { height: T },
                     children: t,
                 }),
-                _,
+                h,
             ],
         })
     );

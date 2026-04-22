@@ -1,9 +1,9 @@
 n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(534514),
     l = n(985018),
-    a = n(752660);
+    a = n(581796);
 let r = function (e) {
     let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: r, hasBoostPerk: o, canAddBoosts: d } = e;
     return (0, i.jsxs)("div", {
@@ -16,7 +16,7 @@ let r = function (e) {
             (0, i.jsxs)("div", {
                 className: a.D7,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(s.D, {
                         variant: "display-md",
                         className: a.R_,
                         children: (function (e) {

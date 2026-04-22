@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(530560);
-class i extends r.d {
+r.d(t, { A: () => s });
+var n = r(530560);
+class s extends n.d {
     constructor() {
         super();
     }
     isValid(e, t) {
-        let n = t.text.trim();
+        let r = t.text.trim();
         return (
-            n === e.text.trim() ||
-            ("may" !== n.toLowerCase() ||
+            r === e.text.trim() ||
+            ("may" !== r.toLowerCase() ||
             e.text
                 .substring(0, t.index)
                 .trim()
                 .match(/\b(in)$/i)
-                ? !n.toLowerCase().endsWith("the second") ||
+                ? !r.toLowerCase().endsWith("the second") ||
                   (e.text.substring(t.index + t.text.length).trim().length > 0 &&
                       e.debug(() => {
                           console.log(`Removing unlikely result: ${t}`);

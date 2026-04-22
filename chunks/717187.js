@@ -1,7 +1,7 @@
 n.d(t, { y: () => o });
 var r = n(627968);
 n(64700);
-var i = n(397927),
+var i = n(477782),
     l = n(349435),
     a = n(178186),
     d = n(617641),
@@ -15,13 +15,13 @@ function o(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !o &&
-                (0, r.jsx)(i.Drp, {
+                (0, r.jsx)(i.Dr, {
                     id: "mark-as-tier-1-inappro",
                     label: u.intl.string(u.t.EuzCET),
                     action: () => (0, a.Rw)(e.id, l._j.INAPPROPRIATE_CONVERSATION_TIER_1),
                 }),
             !c &&
-                (0, r.jsx)(i.Drp, {
+                (0, r.jsx)(i.Dr, {
                     id: "mark-as-tier-2-inappro",
                     label: u.intl.string(u.t["tBw/1i"]),
                     action: () => (0, a.Rw)(e.id, l._j.INAPPROPRIATE_CONVERSATION_TIER_2),

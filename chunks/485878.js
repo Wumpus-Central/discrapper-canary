@@ -1,10 +1,8 @@
-"use strict";
-n.d(t, { L8: () => a, Wy: () => i, uM: () => s });
-var r = n(64700),
-    i = (function (e) {
-        return (e.HOME = "home"), (e.LIST = "list"), (e.APPLICATION = "application"), e;
-    })({});
-let a = r.createContext({
+n.d(t, { L8: () => s, Wy: () => a, uM: () => r });
+var l,
+    i = n(64700),
+    a = (((l = {}).HOME = "home"), (l.LIST = "list"), (l.APPLICATION = "application"), l);
+let s = i.createContext({
     history: [],
     discard: {},
     currentView: void 0,
@@ -14,6 +12,6 @@ let a = r.createContext({
     isSlideReady: !1,
     setSlideReady: () => {},
 });
-function s() {
-    return r.useContext(a);
+function r() {
+    return i.useContext(s);
 }

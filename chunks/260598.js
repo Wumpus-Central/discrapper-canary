@@ -1,86 +1,85 @@
-"use strict";
-n.d(t, { f: () => m });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(158954),
-    l = n(504345),
-    u = n(823607),
-    c = n(511274),
-    d = n(189812),
-    _ = n(688564),
-    f = n(829681);
-let p = 10,
-    h = 7.23;
-function m(e) {
+a.d(l, { f: () => g });
+var t = a(627968),
+    n = a(64700),
+    o = a(503698),
+    i = a.n(o),
+    r = a(452027),
+    s = a(862301),
+    d = a(187322),
+    u = a(15626),
+    c = a(504345),
+    b = a(823607),
+    p = a(511274),
+    m = a(189812),
+    h = a(264451),
+    x = a(429128);
+function g(e) {
     let {
-            value: t,
-            placeholder: n = "",
-            autoFocus: a = !1,
-            autosize: l = !1,
-            minLength: d,
+            value: l,
+            placeholder: a = "",
+            autoFocus: o = !1,
+            autosize: u = !1,
+            minLength: c,
             maxLength: m,
-            error: E,
-            defaultDirty: A,
-            showCharacterCount: I,
-            showRemainingCharacterCount: T = !0,
-            rows: y = 3,
-            inputRef: S,
-            ...v
+            error: g,
+            defaultDirty: v,
+            showCharacterCount: y,
+            showRemainingCharacterCount: _ = !0,
+            rows: C = 3,
+            inputRef: j,
+            ...V
         } = e,
-        { fieldProps: C, props: b } = (0, o.ndh)(v),
-        { disabled: N } = C,
-        R = (0, c.Y)({ validateOn: "change", error: E, value: t, minLength: d, maxLength: m, defaultDirty: A }),
-        O = i.useMemo(() => {
-            if (null == m) return p;
+        { fieldProps: k, props: S } = (0, r.n)(V),
+        { disabled: w } = k,
+        M = (0, p.Y)({ validateOn: "change", error: g, value: l, minLength: c, maxLength: m, defaultDirty: v }),
+        T = n.useMemo(() => {
+            if (null == m) return 10;
             let e = `${m}`.length;
-            return h * (e += `${m} / `.length) + p;
+            return 7.23 * (e += `${m} / `.length) + 10;
         }, [m]),
-        D = (e) => {
-            let { onChange: t } = b;
-            t?.(e.currentTarget.value), R.setShouldValidate(!0);
-        },
-        L = I ? (0, r.jsx)(u.n, { value: t, maxLength: T && null != m ? m : void 0 }) : null;
-    return (0, r.jsx)(o.D0$, {
-        ...C,
-        trailingAuxiliaryContent: L,
-        errorMessage: R.hasError ? (R.errorMessage ?? void 0) : void 0,
-        children: (0, r.jsx)(o.FON, {
-            validation: R,
-            disabled: N,
-            children: (0, r.jsx)(o.vN3, {
-                children: (0, r.jsx)(g, {
-                    autosize: l,
-                    className: s()(_.Tg, f.qD),
-                    style: { paddingRight: O },
-                    placeholder: n,
-                    value: t,
-                    autoFocus: a,
-                    minLength: d,
+        A = y ? (0, t.jsx)(b.n, { value: l, maxLength: _ && null != m ? m : void 0 }) : null;
+    return (0, t.jsx)(r.D, {
+        ...k,
+        trailingAuxiliaryContent: A,
+        errorMessage: M.hasError ? (M.errorMessage ?? void 0) : void 0,
+        children: (0, t.jsx)(s.F, {
+            validation: M,
+            disabled: w,
+            children: (0, t.jsx)(d.vN, {
+                children: (0, t.jsx)(f, {
+                    autosize: u,
+                    className: i()(h.Tg, x.qD),
+                    style: { paddingRight: T },
+                    placeholder: a,
+                    value: l,
+                    autoFocus: o,
+                    minLength: c,
                     maxLength: m,
-                    rows: y,
-                    disabled: N,
+                    rows: C,
+                    disabled: w,
                     "data-mana-component": "text-area",
-                    ...b,
-                    onChange: D,
-                    ref: S,
+                    ...S,
+                    onChange: (e) => {
+                        let { onChange: l } = S;
+                        l?.(e.currentTarget.value), M.setShouldValidate(!0);
+                    },
+                    ref: j,
                 }),
             }),
         }),
     });
 }
-function g(e) {
-    let { "aria-labelledby": t, autosize: n, ...a } = e,
-        s = (0, l.xW)(),
-        u = i.useContext(o._zY),
-        c = n ? d.d : "textarea";
-    return (0, r.jsx)(c, {
-        ...a,
-        id: u?.controlId,
-        "aria-labelledby": t ?? s.titleId,
-        "aria-describedby": u?.describedById,
-        "aria-errormessage": u?.errorMessageId,
-        "aria-invalid": u?.errorMessageId != null,
+function f(e) {
+    let { "aria-labelledby": l, autosize: a, ...o } = e,
+        i = (0, c.xW)(),
+        r = n.useContext(u._),
+        s = a ? m.d : "textarea";
+    return (0, t.jsx)(s, {
+        ...o,
+        id: r?.controlId,
+        "aria-labelledby": l ?? i.titleId,
+        "aria-describedby": r?.describedById,
+        "aria-errormessage": r?.errorMessageId,
+        "aria-invalid": r?.errorMessageId != null,
     });
 }

@@ -1,45 +1,44 @@
 "use strict";
 n.d(t, {
     CW: () => m,
-    Fi: () => o,
-    Fn: () => S,
-    Ic: () => C,
-    K5: () => R,
-    Mu: () => h,
+    Fi: () => u,
+    Fn: () => N,
+    Ic: () => R,
+    K5: () => b,
+    Mu: () => p,
     NewMemberActionTypes: () => g,
-    RR: () => A,
-    Rc: () => N,
-    SM: () => f,
-    Xu: () => I,
-    Y4: () => T,
-    Yt: () => b,
-    _7: () => _,
-    dl: () => l,
-    jJ: () => v,
-    kh: () => c,
-    kk: () => E,
-    oW: () => p,
-    oc: () => u,
+    RR: () => I,
+    Rc: () => C,
+    SM: () => E,
+    Xu: () => T,
+    Y4: () => S,
+    Yt: () => v,
+    _7: () => f,
+    dl: () => d,
+    jJ: () => O,
+    kh: () => _,
+    kk: () => A,
+    oW: () => h,
+    oc: () => c,
     xr: () => y,
 });
-var r = n(734057),
-    i = n(403362),
-    a = n(488926),
-    s = n(652215);
-let o = 7,
-    l = 300,
-    u = 7,
-    c = 60,
-    d = 3,
-    _ = 5,
-    f = 1,
-    p = 30,
-    h = 200,
+var r,
+    i,
+    s = n(734057),
+    a = n(403362),
+    o = n(488926),
+    l = n(652215);
+let u = 7,
+    d = 300,
+    c = 7,
+    _ = 60,
+    f = 5,
+    E = 1,
+    h = 30,
+    p = 200,
     m = 7;
-var g = (function (e) {
-    return (e[(e.VIEW = 0)] = "VIEW"), (e[(e.CHAT = 1)] = "CHAT"), e;
-})({});
-function E(e) {
+var g = (((r = {})[(r.VIEW = 0)] = "VIEW"), (r[(r.CHAT = 1)] = "CHAT"), r);
+function A(e) {
     return {
         channelId: e.channel_id,
         actionType: e.action_type,
@@ -49,7 +48,7 @@ function E(e) {
         icon: e.icon ?? null,
     };
 }
-function A(e) {
+function I(e) {
     return {
         channelId: e.channel_id,
         title: e.title,
@@ -58,26 +57,26 @@ function A(e) {
         icon: e.icon ?? null,
     };
 }
-function I(e) {
+function T(e) {
     if (null == e) return null;
-    let { welcome_message: t, new_member_actions: n, resource_channels: a, enabled: s } = e,
+    let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
         o = { authorIds: t.author_ids, message: t.message };
     return {
         welcomeMessage: o,
-        newMemberActions: n.filter((e) => (0, i.Vq)(r.A.getChannel(e.channel_id))).map(E),
-        resourceChannels: a.filter((e) => (0, i.Vq)(r.A.getChannel(e.channel_id))).map(A),
-        enabled: s,
+        newMemberActions: n.filter((e) => (0, a.Vq)(s.A.getChannel(e.channel_id))).map(A),
+        resourceChannels: r.filter((e) => (0, a.Vq)(s.A.getChannel(e.channel_id))).map(I),
+        enabled: i,
     };
 }
-function T(e, t) {
+function S(e, t) {
     if (null == t) return null;
-    let { welcomeMessage: n, newMemberActions: a, resourceChannels: s, enabled: o } = t,
+    let { welcomeMessage: n, newMemberActions: r, resourceChannels: i, enabled: o } = t,
         l = { author_ids: n?.authorIds ?? [], message: n?.message ?? "" };
     return {
         guild_id: e,
         welcome_message: l,
-        new_member_actions: (a ?? [])
-            .filter((e) => (0, i.Vq)(r.A.getChannel(e.channelId)))
+        new_member_actions: (r ?? [])
+            .filter((e) => (0, a.Vq)(s.A.getChannel(e.channelId)))
             .map((e) => ({
                 channel_id: e.channelId,
                 action_type: e.actionType,
@@ -90,8 +89,8 @@ function T(e, t) {
                 },
                 icon: e.icon ?? void 0,
             })),
-        resource_channels: (s ?? [])
-            .filter((e) => (0, i.Vq)(r.A.getChannel(e.channelId)))
+        resource_channels: (i ?? [])
+            .filter((e) => (0, a.Vq)(s.A.getChannel(e.channelId)))
             .map((e) => ({
                 channel_id: e.channelId,
                 title: e.title,
@@ -112,60 +111,57 @@ let y = (e) => {
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function S(e) {
+function N(e) {
     return (
         null == e ||
         ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)))
     );
 }
-function v(e) {
+function O(e) {
     return (
         null == e ||
-        (!!S(e.welcomeMessage) &&
+        (!!N(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)))
     );
 }
-function C(e) {
+function R(e) {
     if (null == e) return !1;
-    if (v(e)) return !0;
+    if (O(e)) return !0;
     if (
         e.welcomeMessage?.message == null ||
-        e.welcomeMessage.message.length < o ||
+        e.welcomeMessage.message.length < u ||
         e.welcomeMessage?.authorIds == null ||
         0 === e.welcomeMessage.authorIds.length ||
         null == e.newMemberActions ||
-        e.newMemberActions.length < d
+        e.newMemberActions.length < 3
     )
         return !1;
     if (null != e.newMemberActions)
         for (let t of e.newMemberActions) {
-            let e = r.A.getChannel(t.channelId);
-            if (null == e || !a.MJ(s.xBc.VIEW_CHANNEL, e)) return !1;
+            let e = s.A.getChannel(t.channelId);
+            if (null == e || !o.MJ(l.xBc.VIEW_CHANNEL, e)) return !1;
         }
     return !0;
 }
-function b(e) {
-    return e.type === s.rbe.GUILD_TEXT && !a.MJ(s.xBc.SEND_MESSAGES, e) && a.MJ(s.xBc.VIEW_CHANNEL, e);
+function v(e) {
+    return e.type === l.rbe.GUILD_TEXT && !o.MJ(l.xBc.SEND_MESSAGES, e) && o.MJ(l.xBc.VIEW_CHANNEL, e);
 }
-function N(e) {
+function C(e) {
     switch (e.type) {
-        case s.rbe.GUILD_TEXT:
-        case s.rbe.GUILD_ANNOUNCEMENT:
-        case s.rbe.GUILD_FORUM:
-        case s.rbe.GUILD_MEDIA:
-            return a.MJ(s.xBc.VIEW_CHANNEL, e);
+        case l.rbe.GUILD_TEXT:
+        case l.rbe.GUILD_ANNOUNCEMENT:
+        case l.rbe.GUILD_FORUM:
+        case l.rbe.GUILD_MEDIA:
+            return o.MJ(l.xBc.VIEW_CHANNEL, e);
         default:
             return !1;
     }
 }
-var R = (function (e) {
-    return (
-        (e[(e.DEFAULT = 0)] = "DEFAULT"),
-        (e[(e.TODO = 1)] = "TODO"),
-        (e[(e.RESOURCE = 2)] = "RESOURCE"),
-        (e[(e.RULES = 3)] = "RULES"),
-        (e[(e.UPDATES = 4)] = "UPDATES"),
-        e
-    );
-})({});
+var b =
+    (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
+    (i[(i.TODO = 1)] = "TODO"),
+    (i[(i.RESOURCE = 2)] = "RESOURCE"),
+    (i[(i.RULES = 3)] = "RULES"),
+    (i[(i.UPDATES = 4)] = "UPDATES"),
+    i);

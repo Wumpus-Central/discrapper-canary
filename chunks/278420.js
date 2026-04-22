@@ -3,55 +3,17 @@ function r(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
-var i = r(n(585458)),
-    a = n(442696),
-    s = n(340287),
+var i = r(n(901012)),
+    s = n(442696),
+    a = n(340287),
     o = n(111806),
     l = r(n(165423)),
     u = n(294814),
-    c = n(843455),
-    d = r(n(678456)),
-    _ = /^--/;
-function f(e, t) {
-    return null == t || "boolean" == typeof t || "" === t
-        ? ""
-        : "number" != typeof t || 0 === t || _.test(e) || (m.hasOwnProperty(e) && m[e])
-          ? ("" + t).trim()
-          : t + "px";
-}
-var p = {};
-function h(e, t) {
-    if (!e.nodeType || !e.setAttribute) return !1;
-    var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
-        r = t,
-        a = r.style,
-        s = r.children,
-        o = r.scrollTop,
-        l = r.scrollLeft,
-        u = i(r, ["style", "children", "scrollTop", "scrollLeft"]),
-        d = Object.values(u),
-        h = Object.keys(u).map(function (t) {
-            return n || e.hasAttribute(t)
-                ? t
-                : p[t] ||
-                      (p[t] = t.replace(/([A-Z])/g, function (e) {
-                          return "-" + e.toLowerCase();
-                      }));
-        });
-    c.Globals.frameLoop.onWrite(function () {
-        for (var t in (void 0 !== s && (e.textContent = s), a))
-            if (a.hasOwnProperty(t)) {
-                var n = f(t, a[t]);
-                "float" === t ? (t = "cssFloat") : _.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
-            }
-        h.forEach(function (t, n) {
-            e.setAttribute(t, d[n]);
-        }),
-            void 0 !== o && (e.scrollTop = o),
-            void 0 !== l && (e.scrollLeft = l);
-    });
-}
-var m = {
+    d = n(843455),
+    c = r(n(269274)),
+    _ = /^--/,
+    f = {},
+    E = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -94,74 +56,71 @@ var m = {
         strokeOpacity: !0,
         strokeWidth: !0,
     },
-    g = function (e, t) {
-        return e + t.charAt(0).toUpperCase() + t.substring(1);
-    },
-    E = ["Webkit", "Ms", "Moz", "O"];
-m = Object.keys(m).reduce(function (e, t) {
+    h = ["Webkit", "Ms", "Moz", "O"];
+E = Object.keys(E).reduce(function (e, t) {
     return (
-        E.forEach(function (n) {
-            return (e[g(n, t)] = e[t]);
+        h.forEach(function (n) {
+            return (e[n + t.charAt(0).toUpperCase() + t.substring(1)] = e[t]);
         }),
         e
     );
-}, m);
-var A = /^(matrix|translate|scale|rotate|skew)/,
-    I = /^(translate)/,
-    T = /^(rotate|skew)/,
-    y = function (e, t) {
-        return c.is.num(e) && 0 !== e ? e + t : e;
+}, E);
+var p = /^(matrix|translate|scale|rotate|skew)/,
+    m = /^(translate)/,
+    g = /^(rotate|skew)/,
+    A = function (e, t) {
+        return d.is.num(e) && 0 !== e ? e + t : e;
     },
-    S = function e(t, n) {
-        return c.is.arr(t)
+    I = function e(t, n) {
+        return d.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
               })
-            : c.is.num(t)
+            : d.is.num(t)
               ? t === n
               : parseFloat(t) === n;
     },
-    v = (function (e) {
+    T = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
-                a = t.z,
-                s = i(t, ["x", "y", "z"]),
+                s = t.z,
+                a = i(t, ["x", "y", "z"]),
                 o = [],
                 l = [];
             return (
-                (n || r || a) &&
-                    (o.push([n || 0, r || 0, a || 0]),
+                (n || r || s) &&
+                    (o.push([n || 0, r || 0, s || 0]),
                     l.push(function (e) {
                         return [
                             "translate3d(" +
                                 e
                                     .map(function (e) {
-                                        return y(e, "px");
+                                        return A(e, "px");
                                     })
                                     .join(",") +
                                 ")",
-                            S(e, 0),
+                            I(e, 0),
                         ];
                     })),
-                c.each(s, function (e, t) {
+                d.each(a, function (e, t) {
                     if ("transform" === t)
                         o.push([e || ""]),
                             l.push(function (e) {
                                 return [e, "" === e];
                             });
-                    else if (A.test(t)) {
-                        if ((delete s[t], c.is.und(e))) return;
-                        var n = I.test(t) ? "px" : T.test(t) ? "deg" : "";
-                        o.push(c.toArray(e)),
+                    else if (p.test(t)) {
+                        if ((delete a[t], d.is.und(e))) return;
+                        var n = m.test(t) ? "px" : g.test(t) ? "deg" : "";
+                        o.push(d.toArray(e)),
                             l.push(
                                 "rotate3d" === t
                                     ? function (e) {
                                           var t = e[0],
                                               r = e[1],
                                               i = e[2],
-                                              a = e[3];
-                                          return ["rotate3d(" + t + "," + r + "," + i + "," + y(a, n) + ")", S(a, 0)];
+                                              s = e[3];
+                                          return ["rotate3d(" + t + "," + r + "," + i + "," + A(s, n) + ")", I(s, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -169,23 +128,23 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
                                                   "(" +
                                                   e
                                                       .map(function (e) {
-                                                          return y(e, n);
+                                                          return A(e, n);
                                                       })
                                                       .join(",") +
                                                   ")",
-                                              S(e, +!!t.startsWith("scale")),
+                                              I(e, +!!t.startsWith("scale")),
                                           ];
                                       },
                             );
                     }
                 }),
-                o.length && (s.transform = new C(o, l)),
-                e.call(this, s) || this
+                o.length && (a.transform = new S(o, l)),
+                e.call(this, a) || this
             );
         }
-        return d(t, e), t;
+        return c(t, e), t;
     })(u.AnimatedObject),
-    C = (function (e) {
+    S = (function (e) {
         function t(t, n) {
             var r;
             return (
@@ -196,7 +155,7 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
                 r
             );
         }
-        d(t, e);
+        c(t, e);
         var n = t.prototype;
         return (
             (n.get = function () {
@@ -207,11 +166,11 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
                     t = "",
                     n = !0;
                 return (
-                    c.each(this.inputs, function (r, i) {
-                        var a = c.getFluidValue(r[0]),
-                            s = e.transforms[i](c.is.arr(a) ? a : r.map(c.getFluidValue)),
-                            o = s[0],
-                            l = s[1];
+                    d.each(this.inputs, function (r, i) {
+                        var s = d.getFluidValue(r[0]),
+                            a = e.transforms[i](d.is.arr(s) ? s : r.map(d.getFluidValue)),
+                            o = a[0],
+                            l = a[1];
                         (t += " " + o), (n = n && l);
                     }),
                     n ? "none" : t
@@ -220,9 +179,9 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
             (n.addChild = function (e) {
                 var t = this;
                 this._children.size ||
-                    c.each(this.inputs, function (e) {
-                        return c.each(e, function (e) {
-                            var n = c.getFluidConfig(e);
+                    d.each(this.inputs, function (e) {
+                        return d.each(e, function (e) {
+                            var n = d.getFluidConfig(e);
                             n && n.addChild(t);
                         });
                     }),
@@ -232,23 +191,29 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
                 var t = this;
                 this._children.delete(e),
                     this._children.size ||
-                        c.each(this.inputs, function (e) {
-                            return c.each(e, function (e) {
-                                var n = c.getFluidConfig(e);
+                        d.each(this.inputs, function (e) {
+                            return d.each(e, function (e) {
+                                var n = d.getFluidConfig(e);
                                 n && n.removeChild(t);
                             });
                         });
             }),
             (n.onParentChange = function (e) {
                 "change" == e.type && (this._value = null),
-                    c.each(this._children, function (t) {
+                    d.each(this._children, function (t) {
                         t.onParentChange(e);
                     });
             }),
             t
         );
-    })(c.FluidValue),
-    b = [
+    })(d.FluidValue);
+s.Globals.assign({
+    colorNames: l,
+    createStringInterpolator: o.createStringInterpolator,
+    batchedUpdates: a.unstable_batchedUpdates,
+});
+var y = u.createHost(
+    [
         "a",
         "abbr",
         "address",
@@ -382,29 +347,62 @@ var A = /^(matrix|translate|scale|rotate|skew)/,
         "svg",
         "text",
         "tspan",
-    ];
-a.Globals.assign({
-    colorNames: l,
-    createStringInterpolator: o.createStringInterpolator,
-    batchedUpdates: s.unstable_batchedUpdates,
-});
-var N = u.createHost(b, {
-    applyAnimatedValues: h,
-    createAnimatedStyle: function (e) {
-        return new v(e);
+    ],
+    {
+        applyAnimatedValues: function (e, t) {
+            if (!e.nodeType || !e.setAttribute) return !1;
+            var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
+                r = t.style,
+                s = t.children,
+                a = t.scrollTop,
+                o = t.scrollLeft,
+                l = i(t, ["style", "children", "scrollTop", "scrollLeft"]),
+                u = Object.values(l),
+                c = Object.keys(l).map(function (t) {
+                    return n || e.hasAttribute(t)
+                        ? t
+                        : f[t] ||
+                              (f[t] = t.replace(/([A-Z])/g, function (e) {
+                                  return "-" + e.toLowerCase();
+                              }));
+                });
+            d.Globals.frameLoop.onWrite(function () {
+                for (var t in (void 0 !== s && (e.textContent = s), r))
+                    if (r.hasOwnProperty(t)) {
+                        var n,
+                            i,
+                            l =
+                                ((n = t),
+                                null == (i = r[t]) || "boolean" == typeof i || "" === i
+                                    ? ""
+                                    : "number" != typeof i || 0 === i || _.test(n) || (E.hasOwnProperty(n) && E[n])
+                                      ? ("" + i).trim()
+                                      : i + "px");
+                        "float" === t ? (t = "cssFloat") : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                    }
+                c.forEach(function (t, n) {
+                    e.setAttribute(t, u[n]);
+                }),
+                    void 0 !== a && (e.scrollTop = a),
+                    void 0 !== o && (e.scrollLeft = o);
+            });
+        },
+        createAnimatedStyle: function (e) {
+            return new T(e);
+        },
+        getComponentProps: function (e) {
+            return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
+        },
     },
-    getComponentProps: function (e) {
-        return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
-    },
-}).animated;
-Object.keys(a).forEach(function (e) {
+).animated;
+Object.keys(s).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return a[e];
+                return s[e];
             },
         });
 }),
-    (t.a = N),
-    (t.animated = N);
+    (t.a = y),
+    (t.animated = y);

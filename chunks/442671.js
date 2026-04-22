@@ -1,40 +1,40 @@
-n.d(t, { A: () => m });
-var i = n(627968),
-    s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(615300),
-    o = n(837381),
-    c = n(158954),
-    d = n(688810),
-    u = n(657331),
-    _ = n(331011);
-let m = (e) => {
-    let { userId: t, children: n, isLast: r, className: m } = e,
-        [A, g] = s.useState(!1),
-        { analyticsLocations: E } = (0, d.Ay)(),
-        h = s.useCallback(() => {
-            (0, u.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: E });
-        }, [t, E]),
-        p = () => {
+l.d(t, { A: () => h });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(615300),
+    d = l(837381),
+    c = l(187322),
+    u = l(688810),
+    o = l(657331),
+    x = l(789392);
+let h = (e) => {
+    let { userId: t, children: l, isLast: s, className: h } = e,
+        [m, g] = i.useState(!1),
+        { analyticsLocations: j } = (0, u.Ay)(),
+        A = i.useCallback(() => {
+            (0, o.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: j });
+        }, [t, j]),
+        v = () => {
             g(!0);
         },
-        C = () => {
+        f = () => {
             g(!1);
         };
-    return (0, i.jsx)(o.tG, {
+    return (0, n.jsx)(d.tG, {
         id: t,
         children: (e) =>
-            (0, i.jsx)(c.vN3, {
+            (0, n.jsx)(c.vN, {
                 offset: { left: -8, right: -8 },
-                children: (0, i.jsx)(l.A.div, {
+                children: (0, n.jsx)(r.A.div, {
                     style: { opacity: 1 },
-                    className: a()(_.KG, m, { [_.HV]: r, [_.vu]: A }),
-                    onMouseEnter: p,
-                    onMouseLeave: C,
-                    onClick: h,
+                    className: a()(x.KG, h, { [x.HV]: s, [x.vu]: m }),
+                    onMouseEnter: v,
+                    onMouseLeave: f,
+                    onClick: A,
                     ...e,
-                    children: n(A),
+                    children: l(m),
                 }),
             }),
     });

@@ -1,59 +1,62 @@
-i.d(t, { n: () => j });
-var s = i(627968),
-    l = i(64700),
+i.d(t, { n: () => g });
+var l = i(627968),
+    s = i(64700),
     n = i(503698),
     a = i.n(n),
-    r = i(158954),
-    c = i(311907),
-    d = i(397927),
-    o = i(71393),
-    u = i(365258),
-    m = i(704037),
-    x = i(985018),
-    h = i(593636);
-function j(e) {
+    r = i(534514),
+    c = i(834730),
+    d = i(311907),
+    o = i(939249),
+    u = i(881636),
+    m = i(827734),
+    h = i(71393),
+    x = i(365258),
+    j = i(704037),
+    v = i(985018),
+    f = i(563215);
+function g(e) {
     let { guildIds: t, direction: i, onClick: n } = e,
-        j = (0, l.useMemo)(() => (0, u.AB)(t), [t]),
-        T = (0, c.bG)([o.A], () => o.A.getGuild(j[0])),
-        I = i === u.AI.RESTRICTING ? x.intl.string(x.t.e6Kpa7) : x.intl.string(x.t.cy4G4y),
-        f = T?.name ?? "",
-        v = null != T && j.length > 1,
-        g = null != n ? d.DUT : "div";
-    return (0, s.jsxs)(g, {
-        className: a()(h.Nr, { [h.vk]: null != n }),
+        g = (0, s.useMemo)(() => (0, x.AB)(t), [t]),
+        I = (0, d.bG)([h.A], () => h.A.getGuild(g[0])),
+        A = i === x.AI.RESTRICTING ? v.intl.string(v.t.e6Kpa7) : v.intl.string(v.t.cy4G4y),
+        p = I?.name ?? "",
+        _ = null != I && g.length > 1,
+        C = null != n ? o.D : "div";
+    return (0, l.jsxs)(C, {
+        className: a()(f.Nr, { [f.vk]: null != n }),
         onClick: n,
         children: [
-            (0, s.jsxs)("div", {
-                className: h.Bj,
+            (0, l.jsxs)("div", {
+                className: f.Bj,
                 children: [
-                    (0, s.jsx)(r.DZT, {
+                    (0, l.jsx)(r.D, {
                         variant: "text-md/semibold",
-                        children: x.intl.format(x.t["0fkj8J"], { count: j.length }),
+                        children: v.intl.format(v.t["0fkj8J"], { count: g.length }),
                     }),
-                    (0, s.jsxs)("div", {
-                        className: h.jf,
+                    (0, l.jsxs)("div", {
+                        className: f.jf,
                         children: [
-                            (0, s.jsx)(r.EYj, {
+                            (0, l.jsx)(c.E, {
                                 variant: "text-sm/medium",
-                                color: i === u.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
-                                className: h.Rh,
-                                children: I,
+                                color: i === x.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
+                                className: f.Rh,
+                                children: A,
                             }),
-                            (0, s.jsx)(r.EYj, {
+                            (0, l.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: h.SI,
-                                children: x.intl.format(v ? x.t["8ZLbvR"] : x.t["+NoTYm"], { guildName: f }),
+                                className: f.SI,
+                                children: v.intl.format(_ ? v.t["8ZLbvR"] : v.t["+NoTYm"], { guildName: p }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, s.jsxs)("div", {
-                className: h.hE,
+            (0, l.jsxs)("div", {
+                className: f.hE,
                 children: [
-                    (0, s.jsx)(m.l, { guildIds: j, iconSize: 24 }),
-                    null != n && (0, s.jsx)(d.uhT, { color: d.LU0.colors.TEXT_SUBTLE, size: "xs" }),
+                    (0, l.jsx)(j.l, { guildIds: g, iconSize: 24 }),
+                    null != n && (0, l.jsx)(u.u, { color: m.A.colors.TEXT_SUBTLE, size: "xs" }),
                 ],
             }),
         ],

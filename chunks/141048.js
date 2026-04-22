@@ -1,8 +1,6 @@
 "use strict";
-n.d(t, { B: () => r, G: () => i });
-var r = (function (e) {
-        return (e.PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (e.GUILD_CHANNELS = "GUILD_CHANNELS"), e;
-    })({}),
-    i = (function (e) {
-        return (e[(e.READ = 0)] = "READ"), (e[(e.UNREAD = 1)] = "UNREAD"), (e[(e.MENTION = 2)] = "MENTION"), e;
-    })({});
+n.d(t, { B: () => s, G: () => a });
+var r,
+    i,
+    s = (((r = {}).PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (r.GUILD_CHANNELS = "GUILD_CHANNELS"), r),
+    a = (((i = {})[(i.READ = 0)] = "READ"), (i[(i.UNREAD = 1)] = "UNREAD"), (i[(i.MENTION = 2)] = "MENTION"), i);

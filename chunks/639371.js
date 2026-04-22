@@ -1,8 +1,7 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.AudioTypes = void 0);
-class n {}
-(t.AudioTypes = n),
-    (n.AAC = {
+class i {}
+(t.AudioTypes = i),
+    (i.AAC = {
         extension: "aac",
         mimeType: "audio/aac",
         description: "Advanced Audio Coding (AAC) is an audio coding standard for lossy digital audio compression",
@@ -11,26 +10,26 @@ class n {}
             { sequence: [255, 249], description: "MPEG-2 Advanced Audio Coding (AAC) Low Complexity (LC) audio file" },
         ],
     }),
-    (n.AMR = {
+    (i.AMR = {
         extension: "amr",
         mimeType: "audio/amr",
         description:
             "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec, commonly audio format with GSM cell phones",
         signatures: [{ sequence: [35, 33, 65, 77, 82] }],
     }),
-    (n.FLAC = {
+    (i.FLAC = {
         extension: "flac",
         mimeType: "audio/x-flac",
         description: "Free Lossless Audio Codec file",
         signatures: [{ sequence: [102, 76, 97, 67, 0, 0, 0, 34] }],
     }),
-    (n.M4A = {
+    (i.M4A = {
         extension: "m4a",
         mimeType: "audio/x-m4a",
         description: "Apple Lossless Audio Codec file",
         signatures: [{ sequence: [102, 116, 121, 112, 77, 52, 65, 32], offset: 4, compatibleExtensions: ["aac"] }],
     }),
-    (n.MP3 = {
+    (i.MP3 = {
         extension: "mp3",
         mimeType: "audio/mpeg",
         description:
@@ -54,7 +53,7 @@ class n {}
             { sequence: [73, 68, 51], description: "MP3 file with an ID3v2 container" },
         ],
     }),
-    (n.WAV = {
+    (i.WAV = {
         extension: "wav",
         mimeType: "audio/wav",
         description: "Waveform Audio File Format",

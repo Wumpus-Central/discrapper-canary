@@ -1,40 +1,41 @@
 "use strict";
-n.d(t, { d: () => f });
+n.d(t, { d: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(417597),
-    s = n(397927),
-    o = n(734057),
-    l = n(323443),
-    u = n(82149),
+    s = n(417597),
+    a = n(939249),
+    o = n(534514),
+    l = n(734057),
+    u = n(323443),
+    d = n(82149),
     c = n(446600),
-    d = n(985018);
-function _(e) {
+    _ = n(985018);
+function f(e) {
     let { activity: t } = e,
-        { channelId: n } = (0, u.UW)(t) ?? {},
-        _ = (0, a.bG)([c.A], () => c.A.getStageInstanceByChannel(n), [n]),
-        f = i.useRef(null),
-        p = i.useCallback(() => {
-            let e = o.A.getChannel(n);
-            null != e && l.av(e);
+        { channelId: n } = (0, d.UW)(t) ?? {},
+        f = (0, s.bG)([c.A], () => c.A.getStageInstanceByChannel(n), [n]),
+        E = i.useRef(null),
+        h = i.useCallback(() => {
+            let e = l.A.getChannel(n);
+            null != e && u.av(e);
         }, [n]),
-        h = _?.topic ?? t.name,
-        m = d.intl.formatToPlainString(d.t["T+DNAA"], { channel: h });
+        p = f?.topic ?? t.name,
+        m = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: p });
     return (0, r.jsx)("div", {
-        ref: f,
-        children: (0, r.jsx)(s.DUT, {
-            onClick: p,
-            focusProps: { ringTarget: f },
-            children: (0, r.jsx)(s.Heading, { variant: "heading-sm/semibold", children: m }),
+        ref: E,
+        children: (0, r.jsx)(a.D, {
+            onClick: h,
+            focusProps: { ringTarget: E },
+            children: (0, r.jsx)(o.D, { variant: "heading-sm/semibold", children: m }),
         }),
     });
 }
-class f {
+class E {
     shouldShow(e) {
-        return (0, u.IS)(e);
+        return (0, d.IS)(e);
     }
     createHeader(e) {
-        return { subtitle: d.intl.string(d.t["+AJFJy"]), icon: null };
+        return { subtitle: _.intl.string(_.t["+AJFJy"]), icon: null };
     }
-    body = _;
+    body = f;
 }

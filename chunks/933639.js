@@ -1,78 +1,79 @@
-"use strict";
-n.d(t, { A: () => T });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
+n.d(t, { A: () => x });
+var a = n(627968),
+    r = n(64700),
+    l = n(503698),
+    i = n.n(l),
     o = n(311907),
-    l = n(990078),
-    u = n(397927),
-    c = n(775602),
-    d = n(688810),
-    _ = n(101555),
-    f = n(253932),
+    s = n(990078),
+    c = n(192308),
+    u = n(22231),
+    d = n(241326),
+    f = n(775602),
+    _ = n(688810),
+    h = n(101555),
+    A = n(253932),
     p = n(183555),
-    h = n(939496),
-    m = n(996988),
-    E = n(985018),
-    g = n(241384);
-let A = 300,
-    I = (e) => {
-        let { analyticsLocations: t, stackingBehavior: i } = e;
-        return (0, u.mMO)(
-            async () => {
-                let { default: e } = await n.e("41091").then(n.bind(n, 431374));
-                return (n) => (0, r.jsx)(e, { ...n, sourceAnalyticsLocations: t });
-            },
-            null != i ? { stackingBehavior: i } : void 0,
-        );
-    };
-function T(e) {
-    let { isVisible: t, isExpandable: n, onCloseProfile: s } = e,
-        { analyticsLocations: T } = (0, d.Ay)(),
-        { trackUserProfileAction: S } = (0, p.NJ)(),
-        y = i.useRef(null),
-        v = i.useRef(null),
-        [N, C] = (0, o.yK)([c.A], () => [c.A.useReducedMotion, c.A.keyboardModeEnabled]),
-        R = !n || N || C ? 0 : A,
-        { themeType: O } = (0, h.E)(),
-        b = () => {
-            S({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
-                I({ analyticsLocations: T, stackingBehavior: O === m.d.MODAL_V2 ? "stack" : void 0 }),
-                s?.();
-        },
-        D = () => {
-            S({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), f.G2.updateSetting(void 0);
-        };
-    return (0, r.jsxs)(_.Ay, {
-        className: a()(g.oO, { [g.RK]: t, [g.lu]: n }),
+    m = n(939496),
+    S = n(996988),
+    g = n(985018),
+    b = n(242744);
+function x(e) {
+    let { isVisible: t, isExpandable: l, onCloseProfile: x } = e,
+        { analyticsLocations: T } = (0, _.Ay)(),
+        { trackUserProfileAction: E } = (0, p.NJ)(),
+        R = r.useRef(null),
+        v = r.useRef(null),
+        [C, y] = (0, o.yK)([f.A], () => [f.A.useReducedMotion, f.A.keyboardModeEnabled]),
+        j = !l || C || y ? 0 : 300,
+        { themeType: I } = (0, m.E)();
+    return (0, a.jsxs)(h.Ay, {
+        className: i()(b.oO, { [b.RK]: t, [b.lu]: l }),
         children: [
-            (0, r.jsx)(l.m, {
+            (0, a.jsx)(s.m, {
                 asContainer: !0,
-                targetElementRef: y,
-                text: E.intl.string(E.t.bt75uw),
-                delay: R,
+                targetElementRef: R,
+                text: g.intl.string(g.t.bt75uw),
+                delay: j,
                 ariaHidden: !0,
-                children: (0, r.jsx)(_.$n, {
-                    ref: y,
-                    className: a()(g.x6, g.kb),
-                    "aria-label": E.intl.string(E.t.QdHxos),
+                children: (0, a.jsx)(h.$n, {
+                    ref: R,
+                    className: i()(b.x6, b.kb),
+                    "aria-label": g.intl.string(g.t.QdHxos),
                     "aria-haspopup": "dialog",
-                    onClick: b,
-                    children: (0, r.jsx)(u.R2l, { size: "xs", colorClass: g.Kk }),
+                    onClick: () => {
+                        E({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
+                            ((e) => {
+                                let { analyticsLocations: t, stackingBehavior: r } = e;
+                                return (0, c.openModalLazy)(
+                                    async () => {
+                                        let { default: e } = await Promise.all([
+                                            n.e("28367"),
+                                            n.e("27411"),
+                                            n.e("82166"),
+                                        ]).then(n.bind(n, 431374));
+                                        return (n) => (0, a.jsx)(e, { ...n, sourceAnalyticsLocations: t });
+                                    },
+                                    null != r ? { stackingBehavior: r } : void 0,
+                                );
+                            })({ analyticsLocations: T, stackingBehavior: I === S.d.MODAL_V2 ? "stack" : void 0 }),
+                            x?.();
+                    },
+                    children: (0, a.jsx)(u.R, { size: "xs", colorClass: b.Kk }),
                 }),
             }),
-            (0, r.jsx)(l.m, {
+            (0, a.jsx)(s.m, {
                 asContainer: !0,
-                text: E.intl.string(E.t.VkKicb),
-                delay: R,
+                text: g.intl.string(g.t.VkKicb),
+                delay: j,
                 ariaHidden: !0,
-                children: (0, r.jsx)(_.$n, {
+                children: (0, a.jsx)(h.$n, {
                     ref: v,
-                    className: a()(g.x6, g.pG),
-                    "aria-label": E.intl.string(E.t.wfYTHe),
-                    onClick: D,
-                    children: (0, r.jsx)(u.ucK, { size: "xs", colorClass: g.Kk }),
+                    className: i()(b.x6, b.pG),
+                    "aria-label": g.intl.string(g.t.wfYTHe),
+                    onClick: () => {
+                        E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), A.G2.updateSetting(void 0);
+                    },
+                    children: (0, a.jsx)(d.u, { size: "xs", colorClass: b.Kk }),
                 }),
             }),
         ],

@@ -1,25 +1,26 @@
-e.d(a, { default: () => u });
+e.d(a, { default: () => d });
 var r = e(627968);
 e(64700);
-var i = e(397927),
-    n = e(442433),
-    s = e(684013),
-    l = e(9302);
+var i = e(861672),
+    n = e(477782),
+    s = e(442433),
+    l = e(684013),
+    o = e(9302);
 e(644434);
-var o = e(985018);
-function u(t) {
-    let { onSelect: a, layoutId: e = l.OVERLAY_LAYOUT_ID, version: u } = t;
-    return (0, r.jsx)(i.W1t, {
+var u = e(985018);
+function d(t) {
+    let { onSelect: a, layoutId: e = o.OVERLAY_LAYOUT_ID, version: d } = t;
+    return (0, r.jsx)(i.W, {
         "data-menu-migrated-auto": !0,
         navId: "overlay",
-        onClose: n.Z_,
-        "aria-label": o.intl.string(o.t.tPfVWi),
+        onClose: s.Z_,
+        "aria-label": u.intl.string(u.t.tPfVWi),
         onSelect: a,
-        children: (0, r.jsx)(i.Drp, {
+        children: (0, r.jsx)(n.Dr, {
             id: "reset",
-            label: o.intl.string(o.t["hW+EMu"]),
+            label: u.intl.string(u.t["hW+EMu"]),
             action: (t) => {
-                t.stopPropagation(), s.A.resetDefaultLayout(e, u ?? 4);
+                t.stopPropagation(), l.A.resetDefaultLayout(e, d ?? 4);
             },
         }),
     });

@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var r = n(481613),
     i = n.n(r),
-    a = n(72290);
-function s(e, t) {
-    if (!e.startsWith("discord:")) return (location.href = e), a.nextTick(() => t(!0));
+    s = n(72290);
+function a(e, t) {
+    if (!e.startsWith("discord:")) return (location.href = e), s.nextTick(() => t(!0));
     let { body: n } = document;
-    if (null == n) return a.nextTick(() => t(!1));
+    if (null == n) return s.nextTick(() => t(!1));
     let r = document.createElement("iframe");
     n.appendChild(r);
     try {
-        null != r.contentWindow && (r.contentWindow.location.href = e), a.nextTick(() => t(!0));
+        null != r.contentWindow && (r.contentWindow.location.href = e), s.nextTick(() => t(!0));
     } catch (e) {
-        "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && a.nextTick(() => t(!1));
+        "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && s.nextTick(() => t(!1));
     }
     window.setTimeout(() => {
         (r?.parentElement ?? null) !== null && n.removeChild(r);
@@ -33,16 +33,15 @@ function l(e, t) {
     t(!1);
 }
 function u(e, t) {
-    (location.href = e), a.nextTick(() => t(!0));
+    (location.href = e), s.nextTick(() => t(!0));
 }
-let c = {
-    launch: (function () {
-        return i().os?.family === "Android" || i().os?.family === "iOS"
+let d = {
+    launch:
+        i().os?.family === "Android" || i().os?.family === "iOS"
             ? u
             : "Gecko" === i().layout
-              ? s
+              ? a
               : null != i().ua && -1 !== i().ua.indexOf("Valve Steam GameOverlay")
                 ? l
-                : o;
-    })(),
+                : o,
 };

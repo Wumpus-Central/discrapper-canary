@@ -1,55 +1,57 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    a = n(397927),
-    r = n(58736),
-    o = n(857071),
-    c = n(203982),
-    d = n(607508),
-    u = n(914703),
-    h = n(37411),
-    A = n(652215),
-    _ = n(985018);
-function m(e) {
+    a = n(265872),
+    r = n(780338),
+    o = n(782603),
+    d = n(58736),
+    c = n(857071),
+    u = n(203982),
+    h = n(607508),
+    A = n(914703),
+    _ = n(37411),
+    m = n(652215),
+    g = n(985018);
+function p(e) {
     let { channel: t } = e,
-        n = (0, d.X)(t),
-        [m, g] = l.useState(!1),
-        p = l.useRef(null),
-        f = (0, s.bG)([o.A], () => null != t.guild_id && o.A.isLurking(t.guild_id));
+        n = (0, h.X)(t),
+        [p, f] = l.useState(!1),
+        E = l.useRef(null),
+        x = (0, s.bG)([c.A], () => null != t.guild_id && c.A.isLurking(t.guild_id));
     if (
         (l.useEffect(() => {
-            let e = () => g(!0);
+            let e = () => f(!0);
             return (
-                c._.subscribe(A.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+                u._.subscribe(m.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
                 () => {
-                    c._.unsubscribe(A.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                    u._.unsubscribe(m.jej.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
                 }
             );
         }, []),
-        f)
+        x)
     )
         return null;
-    let x = _.intl.string(_.t.h850Ss);
-    return (0, i.jsx)(a.YNO, {
-        targetElementRef: p,
-        shouldShow: m,
-        animation: a.YNO.Animation.NONE,
+    let I = g.intl.string(g.t.h850Ss);
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: E,
+        shouldShow: p,
+        animation: a.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => g(!1),
+        onRequestClose: () => f(!1),
         renderPopout: (e) =>
-            (0, i.jsx)(u.A, { ...e, channel: t, navId: "thread-context", label: _.intl.string(_.t["1NBjqb"]) }),
+            (0, i.jsx)(A.A, { ...e, channel: t, navId: "thread-context", label: g.intl.string(g.t["1NBjqb"]) }),
         children: (e, t) => {
             let { isShown: l } = t;
-            return (0, i.jsx)(r.Ay.Icon, {
+            return (0, i.jsx)(d.Ay.Icon, {
                 ...e,
-                ref: p,
-                onClick: () => g((e) => !e),
-                tooltip: l ? null : x,
-                icon: n === h.CP.NO_MESSAGES ? a.a_I : a.XFE,
-                "aria-label": x,
+                ref: E,
+                onClick: () => f((e) => !e),
+                tooltip: l ? null : I,
+                icon: n === _.CP.NO_MESSAGES ? r.a : o.X,
+                "aria-label": I,
                 selected: l,
             });
         },

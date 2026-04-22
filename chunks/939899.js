@@ -1,26 +1,27 @@
-n.d(t, { A: () => T, R: () => N });
+n.d(t, { A: () => j, R: () => T });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
     s = n.n(l),
     r = n(485584),
     o = n(598748),
-    c = n(158954),
-    d = n(311907),
-    u = n(793574),
-    m = n(688810),
-    g = n(362490),
-    p = n(369374),
+    c = n(141628),
+    d = n(834730),
+    u = n(311907),
+    _ = n(793574),
+    g = n(688810),
+    f = n(362490),
+    m = n(369374),
     x = n(531913),
-    f = n(429913),
-    _ = n(287809),
-    h = n(183555),
-    A = n(622543),
-    I = n(985018),
-    v = n(413525);
-function j(e) {
+    p = n(429913),
+    I = n(287809),
+    A = n(183555),
+    h = n(622543),
+    E = n(985018),
+    v = n(923608);
+function C(e) {
     let { applicationId: t, size: n = "default" } = e,
-        a = (0, d.bG)([A.A], () => A.A.getApplicationWidgetConfig(t));
+        a = (0, u.bG)([h.A], () => h.A.getApplicationWidgetConfig(t));
     return (0, i.jsxs)("div", {
         className: s()(v.kL, { [v.PG]: "small" === n }),
         children: [
@@ -52,7 +53,7 @@ function j(e) {
         ],
     });
 }
-function E(e) {
+function b(e) {
     let { applicationId: t, size: n = "default", userId: a } = e,
         l = (0, x.A)(a, t),
         c = l.surfaceConfigs[o.m.ADD_WIDGET_PREVIEW];
@@ -68,37 +69,37 @@ function E(e) {
               }),
           });
 }
-function T(e) {
-    let t = (0, d.bG)([_.default], () => _.default.getCurrentUser()),
-        { enabled: n } = p.A.useConfig({ location: "PlaceholderApplicationWidget" });
-    return n ? (null == t ? null : (0, i.jsx)(E, { ...e, userId: t.id })) : (0, i.jsx)(j, { ...e });
+function j(e) {
+    let t = (0, u.bG)([I.default], () => I.default.getCurrentUser()),
+        { enabled: n } = m.A.useConfig({ location: "PlaceholderApplicationWidget" });
+    return n ? (null == t ? null : (0, i.jsx)(b, { ...e, userId: t.id })) : (0, i.jsx)(C, { ...e });
 }
-function N(e) {
+function T(e) {
     let { applicationId: t, size: n = "default" } = e,
-        { trackUserProfileAction: l } = (0, h.NJ)(),
-        s = (0, f.h)(t),
-        { hasAlreadyLinked: r, canStartAuthorization: o, startAuthorization: d, fetched: p } = (0, g.RD)(s),
-        { analyticsLocations: x } = (0, m.Ay)(u.A.USER_PROFILE_APPLICATION_WIDGET),
-        _ = a.useCallback(() => {
+        { trackUserProfileAction: l } = (0, A.NJ)(),
+        s = (0, p.h)(t),
+        { hasAlreadyLinked: r, canStartAuthorization: o, startAuthorization: u, fetched: m } = (0, f.RD)(s),
+        { analyticsLocations: x } = (0, g.Ay)(_.A.USER_PROFILE_APPLICATION_WIDGET),
+        I = a.useCallback(() => {
             o &&
                 (l({ action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT", applicationId: t }),
-                d({ analyticsLocations: x }));
-        }, [o, l, t, d, x]);
+                u({ analyticsLocations: x }));
+        }, [o, l, t, u, x]);
     return "default" !== n || null == s
         ? null
         : (0, i.jsxs)("div", {
               className: v.qr,
               children: [
-                  (0, i.jsx)(c.A5T, { size: "xs" }),
-                  (0, i.jsx)(c.EYj, {
+                  (0, i.jsx)(c.A, { size: "xs" }),
+                  (0, i.jsx)(d.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
-                      children: p
+                      children: m
                           ? r
-                              ? I.intl.format(I.t.wiyuG9, { applicationName: s.name })
+                              ? E.intl.format(E.t.wiyuG9, { applicationName: s.name })
                               : o
-                                ? I.intl.format(I.t.RNWFOQ, { onConnect: _ })
-                                : I.intl.string(I.t["9TX4UT"])
+                                ? E.intl.format(E.t.RNWFOQ, { onConnect: I })
+                                : E.intl.string(E.t["9TX4UT"])
                           : (0, i.jsx)("div", { className: v.bg }),
                   }),
               ],

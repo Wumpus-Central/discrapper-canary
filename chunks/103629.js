@@ -2,10 +2,10 @@ n.d(t, { A: () => _ });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    r = n(845625),
-    d = n(785823),
-    o = n(137207),
+    r = n(477782),
+    a = n(845625),
+    o = n(785823),
+    d = n(137207),
     u = n(734057),
     s = n(320501),
     c = n(576705),
@@ -17,18 +17,18 @@ function _(e, t) {
         ]),
         _ = (0, i.bG)([u.A], () => u.A.getChannel(e), [e]),
         g = (0, i.bG)([s.A], () => (null != e && null != t ? s.A.getMessage(e, t) : null)),
-        M = (0, d.kZ)(null != g ? g : null);
+        I = (0, o.kZ)(null != g ? g : null);
     if (null == _ || null == g) return null;
-    let O = null != M && M.actions.hasOwnProperty(r.G.SET_COMPLETED) ? r.G.UNSET_COMPLETED : r.G.SET_COMPLETED,
-        I = O === r.G.SET_COMPLETED ? E.intl.string(E.t.VWNyUu) : E.intl.string(E.t.l9GqxI);
+    let S = null != I && I.actions.hasOwnProperty(a.G.SET_COMPLETED) ? a.G.UNSET_COMPLETED : a.G.SET_COMPLETED,
+        f = S === a.G.SET_COMPLETED ? E.intl.string(E.t.VWNyUu) : E.intl.string(E.t.l9GqxI);
     return n && null != t
         ? (0, l.jsx)(
-              a.Drp,
+              r.Dr,
               {
                   id: "mark-automod-alert-completed",
-                  label: I,
+                  label: f,
                   action: () => {
-                      (0, o.E5)(t, _, O);
+                      (0, d.E5)(t, _, S);
                   },
               },
               "mark-automod-alert-completed",

@@ -1,71 +1,77 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    s = n(64700),
-    l = n(936504),
-    a = n(946015),
-    r = n(311907),
-    o = n(397927),
-    d = n(100406),
-    c = n(878460),
-    u = n(253932),
-    m = n(779733),
-    g = n(652215),
-    _ = n(431144),
-    x = n(842130),
-    A = n(985018),
-    h = n(475112);
-let p = () => {
-    let e = u.dm.useSetting(),
-        { categories: t, initialized: n } = (0, r.cf)([c.A], () => c.A.getEmailSettings());
+l.d(t, { A: () => S });
+var n = l(627968),
+    i = l(64700),
+    s = l(936504),
+    a = l(946015),
+    r = l(311907),
+    d = l(270003),
+    c = l(243721),
+    u = l(359778),
+    o = l(834730),
+    x = l(939249),
+    h = l(777666),
+    m = l(935286),
+    g = l(100406),
+    j = l(878460),
+    A = l(253932),
+    v = l(779733),
+    f = l(652215),
+    E = l(431144),
+    N = l(602339),
+    p = l(985018),
+    T = l(192280);
+let S = () => {
+    let e = A.dm.useSetting(),
+        { categories: t, initialized: l } = (0, r.cf)([j.A], () => j.A.getEmailSettings());
     return (
-        s.useEffect(() => {
-            null == n && (0, d.cR)();
-        }, [n]),
-        (0, i.jsx)("div", {
-            className: h.kL,
-            children: (0, i.jsxs)(o.nVY, {
-                label: A.intl.string(x.default.USIXU7),
+        i.useEffect(() => {
+            null == l && (0, g.cR)();
+        }, [l]),
+        (0, n.jsx)("div", {
+            className: T.kL,
+            children: (0, n.jsxs)(d.n, {
+                label: p.intl.string(N.default.USIXU7),
                 children: [
-                    (0, i.jsx)(o.dOG, {
+                    (0, n.jsx)(c.d, {
                         checked: e,
-                        description: A.intl.string(x.default["5MdB3j"]),
-                        onChange: u.dm.updateSetting,
-                        label: A.intl.string(x.default.zkEceS),
+                        description: p.intl.string(N.default["5MdB3j"]),
+                        onChange: A.dm.updateSetting,
+                        label: p.intl.string(N.default.zkEceS),
                     }),
                     e
-                        ? (0, i.jsx)(o.ZpM, {
-                              className: h.MT,
-                              type: o.ZpM.Types.CUSTOM,
+                        ? (0, n.jsx)(u.Z, {
+                              className: T.MT,
+                              type: u.Z.Types.CUSTOM,
                               outline: !0,
-                              children: (0, i.jsxs)(a.s, {
+                              children: (0, n.jsxs)(a.s, {
                                   justify: a.s.Justify.END,
                                   children: [
-                                      (0, i.jsx)(a.s.Child, {
-                                          children: (0, i.jsx)(o.Text, {
+                                      (0, n.jsx)(a.s.Child, {
+                                          children: (0, n.jsx)(o.E, {
                                               variant: "text-sm/semibold",
                                               color: "text-default",
-                                              children: A.intl.string(x.default.xAVm7K),
+                                              children: p.intl.string(N.default.xAVm7K),
                                           }),
                                       }),
-                                      (0, i.jsx)(o.DUT, {
-                                          children: (0, i.jsx)(l.N_, {
-                                              onClick: m.default,
-                                              to: { pathname: g.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
-                                              children: A.intl.string(x.default.cUIXFY),
+                                      (0, n.jsx)(x.D, {
+                                          children: (0, n.jsx)(s.N_, {
+                                              onClick: v.default,
+                                              to: { pathname: f.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
+                                              children: p.intl.string(N.default.cUIXFY),
                                           }),
                                       }),
-                                      (0, i.jsx)(o.fkz, { icon: o.EdP, className: h.UE, disableColor: !0 }),
+                                      (0, n.jsx)(h.fk, { icon: m.E, className: T.UE, disableColor: !0 }),
                                   ],
                               }),
                           })
                         : null,
-                    (0, i.jsx)(o.dOG, {
-                        checked: !!t[_.HO.FAMILY_CENTER_DIGEST],
-                        description: A.intl.string(x.default.y34S46),
+                    (0, n.jsx)(c.d, {
+                        checked: !!t[E.HO.FAMILY_CENTER_DIGEST],
+                        description: p.intl.string(N.default.y34S46),
                         onChange: function (e) {
-                            (0, d.CA)(_.HO.FAMILY_CENTER_DIGEST, e);
+                            (0, g.CA)(E.HO.FAMILY_CENTER_DIGEST, e);
                         },
-                        label: A.intl.string(x.default.irvJKR),
+                        label: p.intl.string(N.default.irvJKR),
                     }),
                 ],
             }),

@@ -1,36 +1,29 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(501459),
-    i = n(364242);
-let a = /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i,
-    s = 1,
-    o = 2,
-    l = 3,
-    u = 4,
-    c = 5,
-    d = 6;
-class _ {
+r.d(t, { A: () => i });
+var n = r(501459),
+    s = r(364242);
+let a = /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i;
+class i {
     pattern() {
         return a;
     }
     extract(e, t) {
-        let n = parseInt((0, r.Zp)(t[c])),
-            a = parseInt((0, r.Zp)(t[d])),
-            _ = e.createParsingComponents({ day: a, month: n });
+        let r = parseInt((0, n.Zp)(t[5])),
+            a = parseInt((0, n.Zp)(t[6])),
+            i = e.createParsingComponents({ day: a, month: r });
         if (
-            (t[s] &&
-                t[s].match("同|今|本") &&
-                _.assign("year", e.reference.getDateWithAdjustedTimezone().getFullYear()),
-            t[o])
+            (t[1] &&
+                t[1].match("同|今|本") &&
+                i.assign("year", e.reference.getDateWithAdjustedTimezone().getFullYear()),
+            t[2])
         ) {
-            let e = t[u],
-                n = "元" == e ? 1 : parseInt((0, r.Zp)(e));
-            "令和" == t[l] ? (n += 2018) : "平成" == t[l] ? (n += 1988) : "昭和" == t[l] && (n += 1925),
-                _.assign("year", n);
+            let e = t[4],
+                r = "元" == e ? 1 : parseInt((0, n.Zp)(e));
+            "令和" == t[3] ? (r += 2018) : "平成" == t[3] ? (r += 1988) : "昭和" == t[3] && (r += 1925),
+                i.assign("year", r);
         } else {
-            let t = (0, i.Y)(e.refDate, a, n);
-            _.imply("year", t);
+            let t = (0, s.Y)(e.refDate, a, r);
+            i.imply("year", t);
         }
-        return _;
+        return i;
     }
 }

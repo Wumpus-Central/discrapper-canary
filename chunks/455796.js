@@ -1,22 +1,23 @@
-s.d(t, { default: () => c });
+s.d(t, { default: () => l });
 var i = s(627968),
     n = s(64700),
-    a = s(827734),
-    o = s(397927),
-    r = s(21161),
-    u = s(985018),
-    d = s(375554);
-function c(e) {
-    let { onClose: t, initialPercent: s, numActions: c } = e,
-        [l, p] = n.useState(s),
-        { createMultipleConfetti: h } = n.useContext(r.x);
+    o = s(827734),
+    a = s(534514),
+    r = s(5373),
+    u = s(21161),
+    d = s(985018),
+    c = s(753173);
+function l(e) {
+    let { onClose: t, initialPercent: s, numActions: l } = e,
+        [p, h] = n.useState(s),
+        { createMultipleConfetti: x } = n.useContext(u.x);
     return (
         n.useEffect(() => {
-            setTimeout(() => p(1), 200),
+            setTimeout(() => h(1), 200),
                 setTimeout(() => {
                     let e = window.innerWidth / 2,
                         t = window.innerHeight / 2;
-                    h(
+                    x(
                         {
                             position: {
                                 type: "static-random",
@@ -28,18 +29,18 @@ function c(e) {
                     );
                 }, 700),
                 setTimeout(t, 2e3);
-        }, [h, t]),
+        }, [x, t]),
         (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(o.Heading, {
-                    className: d.R,
+                (0, i.jsx)(a.D, {
+                    className: c.R,
                     variant: "heading-xl/semibold",
                     color: "text-strong",
-                    children: u.intl.format(u.t.pGj5u2, { count: c }),
+                    children: d.intl.format(d.t.pGj5u2, { count: l }),
                 }),
-                (0, i.jsx)(o.iCB, {
-                    foregroundGradientColor: [a.A.unsafe_rawColors.GREEN_300.css, a.A.unsafe_rawColors.GREEN_230.css],
-                    percent: 100 * l,
+                (0, i.jsx)(r.i, {
+                    foregroundGradientColor: [o.A.unsafe_rawColors.GREEN_300.css, o.A.unsafe_rawColors.GREEN_230.css],
+                    percent: 100 * p,
                     animate: !0,
                 }),
             ],

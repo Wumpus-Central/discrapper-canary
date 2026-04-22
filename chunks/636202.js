@@ -1,166 +1,167 @@
 "use strict";
-n.d(t, { A: () => B, n: () => V });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => B, n: () => F });
+var i = n(627968),
+    l = n(64700),
     s = n(808380),
-    a = n(311907),
-    o = n(397927),
-    l = n(833349),
+    r = n(311907),
+    a = n(687966),
+    o = n(39623),
+    c = n(833349),
     u = n(765379),
-    c = n(960076),
-    d = n(709309),
-    _ = n(359549),
-    f = n(566021),
-    p = n(284525),
-    h = n(913948),
-    m = n(648246),
-    E = n(793574),
-    g = n(627363),
-    A = n(308335),
-    I = n(773669),
-    T = n(790381),
-    S = n(266080),
+    d = n(960076),
+    h = n(709309),
+    m = n(359549),
+    p = n(566021),
+    f = n(284525),
+    g = n(913948),
+    _ = n(648246),
+    x = n(793574),
+    A = n(627363),
+    C = n(308335),
+    E = n(773669),
+    I = n(790381),
+    v = n(266080),
     y = n(403362),
-    v = n(939341),
-    N = n(576757),
-    C = n(202195),
-    R = n(583846),
-    O = n(821988),
-    b = n(329575),
-    D = n(434200),
+    S = n(939341),
+    b = n(576757),
+    N = n(202195),
+    T = n(583846),
+    j = n(821988),
+    R = n(329575),
+    w = n(434200),
     L = n(176563),
-    w = n(322789),
-    M = n(506326),
-    x = n(910692),
+    M = n(322789),
+    k = n(506326),
+    O = n(910692),
     P = n(18282),
-    k = n(299846),
+    D = n(299846),
     U = n(652215),
-    G = n(985018);
-let F = [...w.n, M.Yq],
-    V = {
+    V = n(985018);
+let G = [...M.n, k.Yq],
+    F = {
         [s.Y.DESKTOP]: null,
         [s.Y.LINUX]: null,
         [s.Y.MACOS]: null,
         [s.Y.NINTENDO]: null,
         [s.Y.IOS]: null,
         [s.Y.ANDROID]: null,
-        [s.Y.XBOX]: S.A,
-        [s.Y.PLAYSTATION]: T.A,
+        [s.Y.XBOX]: v.A,
+        [s.Y.PLAYSTATION]: I.A,
     },
     B = (e) => {
         let {
                 channel: t,
                 entry: n,
-                disableGameProfileLinks: T,
-                onReaction: S,
-                onVoiceChannelPreview: w,
+                disableGameProfileLinks: I,
+                onReaction: v,
+                onVoiceChannelPreview: M,
                 onUserPopoutClosed: B,
                 trackRankingItemInteraction: H,
             } = e,
-            { largeImage: j } = (0, v.nO)({ entry: n }),
-            { user: Y, details: W, appName: K, activity: $, embeddedActivity: z } = (0, k.u)(n),
-            { primaryColor: q, secondaryColor: Z } = (0, L.A)(j?.src),
-            X = (0, a.bG)([I.default], () => I.default.locale),
-            { streamPreviewUrl: Q, stream: J } = (0, C.A)(n),
-            { displayParticipants: ee, participant1: et, participant2: en, numOtherParticipants: er } = (0, N.A)(n, 3),
-            ei = n.extra.platform,
-            es = null != ei ? V[ei] : null,
-            ea = ei === s.Y.XBOX ? U.fg2.XBOX : ei === s.Y.PLAYSTATION ? U.fg2.PLAYSTATION : void 0,
-            eo = (0, D.A)(ea),
-            { data: el } = (0, g.YY)(n.extra.application_id),
-            eu = (0, d.A)("member_list_gaming_content_popout", n.extra.application_id),
-            ec = (0, _.J)(el),
-            ed = (0, A.o)($?.application_id ?? z?.applicationId ?? el?.id),
-            e_ = i.useCallback(
+            { largeImage: W } = (0, S.nO)({ entry: n }),
+            { user: K, details: z, appName: Z, activity: q, embeddedActivity: Y } = (0, D.u)(n),
+            { primaryColor: J, secondaryColor: $ } = (0, L.A)(W?.src),
+            X = (0, r.bG)([E.default], () => E.default.locale),
+            { streamPreviewUrl: Q, stream: ee } = (0, N.A)(n),
+            { displayParticipants: et, participant1: en, participant2: ei, numOtherParticipants: el } = (0, b.A)(n, 3),
+            es = n.extra.platform,
+            er = null != es ? F[es] : null,
+            ea = es === s.Y.XBOX ? U.fg2.XBOX : es === s.Y.PLAYSTATION ? U.fg2.PLAYSTATION : void 0,
+            eo = (0, w.A)(ea),
+            { data: ec } = (0, A.YY)(n.extra.application_id),
+            eu = (0, h.A)("member_list_gaming_content_popout", n.extra.application_id),
+            ed = (0, m.J)(ec),
+            eh = (0, C.o)(q?.application_id ?? Y?.applicationId ?? ec?.id),
+            em = l.useCallback(
                 (e) => {
-                    if (j?.src == null || null == t || null == Y) return;
-                    let r =
-                        er > 0
-                            ? (0, b.v$)({ entry: n, channel: t, users: [et, en], countOthers: er })
-                            : (0, b.op)(n, t, Y);
-                    return (0, O.p6)({
+                    if (W?.src == null || null == t || null == K) return;
+                    let i =
+                        el > 0
+                            ? (0, R.v$)({ entry: n, channel: t, users: [en, ei], countOthers: el })
+                            : (0, R.op)(n, t, K);
+                    return (0, j.p6)({
                         entry: n,
-                        applicationImageSrc: j?.src,
-                        avatarSrcs: ee.map((e) => e.getAvatarURL(t.guild_id, 128)),
-                        description: r,
-                        timestamp: (0, R.As)(n, X),
-                        colors: [q, Z],
+                        applicationImageSrc: W?.src,
+                        avatarSrcs: et.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        description: i,
+                        timestamp: (0, T.As)(n, X),
+                        colors: [J, $],
                         channelId: e,
                     });
                 },
-                [j?.src, t, ee, n, X, er, et, en, q, Z, Y],
+                [W?.src, t, et, n, X, el, en, ei, J, $, K],
             );
-        if (null == Y) return null;
-        let ef = (0, r.jsx)(M.mG, {
-                location: null == Q ? M.N5.POPOUT : M.N5.STREAMING_POPOUT,
-                children: F.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+        if (null == K) return null;
+        let ep = (0, i.jsx)(k.mG, {
+                location: null == Q ? k.N5.POPOUT : k.N5.STREAMING_POPOUT,
+                children: G.map((e, t) => (0, i.jsx)(e, { entry: n }, t)),
             }),
-            ep =
-                null == J
-                    ? (0, r.jsx)(x.BC, {
+            ef =
+                null == ee
+                    ? (0, i.jsx)(O.BC, {
                           channel: t,
                           headerIcons:
-                              null == es
+                              null == er
                                   ? null
-                                  : (0, r.jsx)(P.A, { onClick: eo, Icon: es, "aria-label": G.intl.string(G.t.YR4cHH) }),
-                          userDescription: (0, R.JM)(n) ? G.t.vPg1JT : G.t.rPqqts,
-                          title: K,
-                          subtitle: W,
-                          badges: ef,
+                                  : (0, i.jsx)(P.A, { onClick: eo, Icon: er, "aria-label": V.intl.string(V.t.YR4cHH) }),
+                          userDescription: (0, T.JM)(n) ? V.t.vPg1JT : V.t.rPqqts,
+                          title: Z,
+                          subtitle: z,
+                          badges: ep,
                           entry: n,
-                          disableGameProfileLinks: T,
+                          disableGameProfileLinks: I,
                           onUserPopoutClosed: B,
                           trackRankingItemInteraction: H,
                           children:
                               eu.length > 0
-                                  ? (0, r.jsx)(h.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
+                                  ? (0, i.jsx)(g.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
                                   : null,
                       })
-                    : (0, r.jsx)(x.Fl, {
+                    : (0, i.jsx)(O.Fl, {
                           channel: t,
                           title: n.extra.game_name,
-                          subtitle: W,
-                          badges: ef,
-                          userDescription: G.t["6oWFUN"],
+                          subtitle: z,
+                          badges: ep,
+                          userDescription: V.t["6oWFUN"],
                           entry: n,
-                          stream: J,
+                          stream: ee,
                           onUserPopoutClosed: B,
                           trackRankingItemInteraction: H,
                           children:
                               eu.length > 0
-                                  ? (0, r.jsx)(h.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
+                                  ? (0, i.jsx)(g.A, { distributorCTAConfigs: eu, buttonVariant: "overlay-primary" })
                                   : null,
                       }),
-            eh =
-                !ed && ec
-                    ? (0, r.jsx)(
-                          f.A,
-                          { application: el, analyticsLocation: E.A.MEMBER_LIST_GAMING_CONTENT_POPOUT },
+            eg =
+                !eh && ed
+                    ? (0, i.jsx)(
+                          p.A,
+                          { application: ec, analyticsLocation: x.A.MEMBER_LIST_GAMING_CONTENT_POPOUT },
                           "cloud-play",
                       )
                     : null,
-            em = [
-                null == eh && ((0, l.A)($, U.jUm.JOIN) || (0, u.A)($))
-                    ? (0, r.jsx)(p.A, { activity: $, user: Y, variant: "primary", size: "md", icon: o._xR }, "join")
+            e_ = [
+                null == eg && ((0, c.A)(q, U.jUm.JOIN) || (0, u.A)(q))
+                    ? (0, i.jsx)(f.A, { activity: q, user: K, variant: "primary", size: "md", icon: a._ }, "join")
                     : null,
-                (0, c.A)($)
-                    ? (0, r.jsx)(m.A, { activity: $, size: "md", variant: "primary", icon: o.bMW }, "watch")
+                (0, d.A)(q)
+                    ? (0, i.jsx)(_.A, { activity: q, size: "md", variant: "primary", icon: o.b }, "watch")
                     : null,
-                eh,
+                eg,
             ].filter(y.Vq);
-        return (0, r.jsxs)(x.YN, {
+        return (0, i.jsxs)(O.YN, {
             children: [
-                ep,
-                (0, r.jsx)(x.Eh, {
-                    children: (0, r.jsx)(x.fD, {
-                        onReaction: S,
-                        onVoiceChannelPreview: w,
-                        user: Y,
+                ef,
+                (0, i.jsx)(O.Eh, {
+                    children: (0, i.jsx)(O.fD, {
+                        onReaction: v,
+                        onVoiceChannelPreview: M,
+                        user: K,
                         channel: t,
-                        generateReactionImage: e_,
-                        reactionImageAltText: (0, b.uG)(n, Y),
+                        generateReactionImage: em,
+                        reactionImageAltText: (0, R.uG)(n, K),
                         entry: n,
-                        buttons: em,
+                        buttons: e_,
                     }),
                 }),
             ],

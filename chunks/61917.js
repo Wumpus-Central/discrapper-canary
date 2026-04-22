@@ -1,42 +1,45 @@
-t.d(e, { b: () => o });
+t.d(e, { b: () => x });
 var n = t(627968);
 t(64700);
-var r = t(397927),
-    s = t(235986),
-    i = t(141241),
-    l = t(985018),
-    c = t(974651);
-function o(a) {
-    let { onClose: e, img: t, title: o, body: d, content: x } = a;
-    return (0, n.jsxs)(i.A, {
+var r = t(935462),
+    s = t(534514),
+    i = t(834730),
+    l = t(821609),
+    c = t(235986),
+    o = t(141241),
+    d = t(985018),
+    m = t(974651);
+function x(a) {
+    let { onClose: e, img: t, title: x, body: u, content: N } = a;
+    return (0, n.jsxs)(o.A, {
         children: [
-            (0, n.jsxs)(r.rQ0, {
+            (0, n.jsxs)(r.rQ, {
                 "data-migration-pending": !0,
-                direction: s.A.Direction.VERTICAL,
-                className: c.wx,
+                direction: c.A.Direction.VERTICAL,
+                className: m.wx,
                 separator: !1,
                 children: [
-                    (0, n.jsx)("div", { className: c.bm, children: t }),
-                    (0, n.jsx)(r.Heading, { className: c.DD, variant: "heading-xl/extrabold", children: o }),
-                    (0, n.jsx)(r.s_y, { "data-migration-pending": !0, className: c.b, onClick: e }),
+                    (0, n.jsx)("div", { className: m.bm, children: t }),
+                    (0, n.jsx)(s.D, { className: m.DD, variant: "heading-xl/extrabold", children: x }),
+                    (0, n.jsx)(r.s_, { "data-migration-pending": !0, className: m.b, onClick: e }),
                 ],
             }),
-            (0, n.jsxs)(r.$mQ, {
+            (0, n.jsxs)(r.$m, {
                 "data-migration-pending": !0,
-                className: c.rf,
+                className: m.rf,
                 paddingFix: !1,
                 children: [
-                    (0, n.jsx)(r.Text, { tag: "p", variant: "text-md/normal", color: "text-default", children: d }),
-                    x,
+                    (0, n.jsx)(i.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: u }),
+                    N,
                 ],
             }),
-            (0, n.jsx)(r.jlY, {
+            (0, n.jsx)(r.jl, {
                 "data-migration-pending": !0,
-                className: c.qr,
+                className: m.qr,
                 children: (0, n.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: c.wC,
-                    children: (0, n.jsx)(r.Button, { variant: "primary", text: l.intl.string(l.t.i4jeWR), onClick: e }),
+                    className: m.wC,
+                    children: (0, n.jsx)(l.$, { variant: "primary", text: d.intl.string(d.t.i4jeWR), onClick: e }),
                 }),
             }),
         ],

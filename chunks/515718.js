@@ -1,18 +1,18 @@
 "use strict";
 n.d(t, {
-    EW: () => S,
-    LZ: () => b,
+    EW: () => I,
+    LZ: () => y,
     NN: () => N,
-    S4: () => I,
-    Sf: () => A,
-    U8: () => _,
+    S4: () => m,
+    Sf: () => p,
+    U8: () => c,
     Uj: () => u,
-    V: () => f,
-    We: () => y,
-    aU: () => C,
-    bX: () => v,
-    eJ: () => p,
-    wU: () => h,
+    V: () => _,
+    We: () => A,
+    aU: () => S,
+    bX: () => T,
+    eJ: () => f,
+    wU: () => E,
     z$: () => d,
 }),
     n(321073),
@@ -26,69 +26,69 @@ n.d(t, {
     n(65162);
 var r = n(284009),
     i = n.n(r),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(531325),
     l = n.n(o);
 function u(e) {
-    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: a = 0, minHeight: s = 0 } = e;
+    let { width: t, height: n, maxWidth: r, maxHeight: i, minWidth: s = 0, minHeight: a = 0 } = e;
     if (t !== r || n !== i) {
         let e = t > r ? r / t : 1;
-        t = Math.max(Math.round(t * e), a);
-        let o = (n = Math.max(Math.round(n * e), s)) > i ? i / n : 1;
-        (t = Math.max(Math.round(t * o), a)), (n = Math.max(Math.round(n * o), s));
+        t = Math.max(Math.round(t * e), s);
+        let o = (n = Math.max(Math.round(n * e), a)) > i ? i / n : 1;
+        (t = Math.max(Math.round(t * o), s)), (n = Math.max(Math.round(n * o), a));
     }
     return { width: t, height: n };
 }
-let c = 2e3;
 function d(e, t) {
-    let n = Math.min(Math.round(0.65 * window.innerHeight), Math.round(window.innerHeight)),
-        r = Math.min(Math.round(0.75 * window.innerWidth), Math.round(window.innerWidth)),
-        i = Math.min(n, c);
-    return u({ width: e, height: t, maxWidth: Math.min(r, c), maxHeight: i });
+    let n = Math.min(Math.round(0.65 * window.innerHeight), Math.round(window.innerHeight));
+    return u({
+        width: e,
+        height: t,
+        maxWidth: Math.min(Math.min(Math.round(0.75 * window.innerWidth), Math.round(window.innerWidth)), 2e3),
+        maxHeight: Math.min(n, 2e3),
+    });
+}
+function c(e) {
+    let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
+        s = 1;
+    t > r && (s = r / t), (t = Math.round(t * s));
+    let a = 1;
+    return (n = Math.round(n * s)) > i && (a = i / n), Math.min(s * a, 1);
 }
 function _(e) {
-    let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
-        a = 1;
-    t > r && (a = r / t), (t = Math.round(t * a));
-    let s = 1;
-    return (n = Math.round(n * a)) > i && (s = i / n), Math.min(a * s, 1);
-}
-function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
     return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1);
 }
-function p(e) {
+function f(e) {
     let { width: t, height: n } = e;
     return null != t && 0 !== t && null != n && 0 !== n;
 }
-function h(e) {
+function E(e) {
     return null == e || "" === e ? "none" : `url(${e})`;
 }
-function m(e, t, n) {
-    let r = [];
-    for (let i = 0, a, s, o, l, u; i < t; i += n)
-        (s = e[(a = 4 * i) + 0]),
-            (o = e[a + 1]),
-            (l = e[a + 2]),
-            (void 0 === (u = e[a + 3]) || u >= 125) && !(s > 250 && o > 250 && l > 250) && r.push([s, o, l]);
-    return r;
-}
-let g = [[0, 0, 0]],
-    E = 128;
-function A(e, t, n) {
+let h = [[0, 0, 0]];
+function p(e, t, n) {
     let r = document.createElement("canvas"),
         i = r.getContext("2d");
-    if (null == i) return g;
-    let a = (r.width = 0 === e.width ? E : e.width),
-        s = (r.height = 0 === e.height ? E : e.height);
-    i.drawImage(e, 0, 0, a, s);
-    let o = m(i.getImageData(0, 0, a, s).data, a * s, n),
+    if (null == i) return h;
+    let s = (r.width = 0 === e.width ? 128 : e.width),
+        a = (r.height = 0 === e.height ? 128 : e.height);
+    i.drawImage(e, 0, 0, s, a);
+    let o = (function (e, t, n) {
+            let r = [];
+            for (let i = 0, s, a, o, l, u; i < t; i += n)
+                (a = e[(s = 4 * i) + 0]),
+                    (o = e[s + 1]),
+                    (l = e[s + 2]),
+                    (void 0 === (u = e[s + 3]) || u >= 125) && !(a > 250 && o > 250 && l > 250) && r.push([a, o, l]);
+            return r;
+        })(i.getImageData(0, 0, s, a).data, s * a, n),
         u = l()(o, t);
-    return "boolean" == typeof u ? g : u.palette();
+    return "boolean" == typeof u ? h : u.palette();
 }
-let I = (e) => ("number" == typeof e ? null : T(e)),
-    T = s().memoize(
+let m = (e) => ("number" == typeof e ? null : g(e)),
+    g = a().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -97,12 +97,12 @@ let I = (e) => ("number" == typeof e ? null : T(e)),
                         n(e), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.onload = () => {
-                        t(A(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
+                        t(p(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.src = e);
             }),
     );
-function y(e) {
+function A(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         r.readAsDataURL(e),
@@ -112,15 +112,15 @@ function y(e) {
             (r.onerror = (e) => n(e));
     });
 }
-function S(e) {
+function I(e) {
     let t = e.split(";base64,");
     return i()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length;
 }
-async function v(e, t, n) {
-    let r = C(e);
+async function T(e, t, n) {
+    let r = S(e);
     return new File([await r.arrayBuffer()], t, { type: n });
 }
-function C(e) {
+function S(e) {
     let t;
     t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
     let n = e.split(",")[0].split(":")[1].split(";")[0],
@@ -128,7 +128,7 @@ function C(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function b(e) {
+async function y(e) {
     if ("image/png" !== e.type?.split(";")[0]) throw Error("File is not a PNG");
     let t = await e.text(),
         n = t.indexOf("IDAT");

@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         ss: "sekundė_sekundžių_sekundes",
@@ -16,28 +14,25 @@
         yy: "metai_metų_metus",
     };
     function n(e, t, n, r) {
-        return t ? "kelios sekundės" : r ? "kelių sekundžių" : "kelias sekundes";
+        return t ? i(n)[0] : r ? i(n)[1] : i(n)[2];
     }
-    function r(e, t, n, r) {
-        return t ? s(n)[0] : r ? s(n)[1] : s(n)[2];
-    }
-    function i(e) {
+    function r(e) {
         return e % 10 == 0 || (e > 10 && e < 20);
     }
-    function s(e) {
+    function i(e) {
         return t[e].split("_");
     }
-    function a(e, t, n, a) {
+    function s(e, t, s, a) {
         var o = e + " ";
         return 1 === e
-            ? o + r(e, t, n[0], a)
+            ? o + n(e, t, s[0], a)
             : t
-              ? o + (i(e) ? s(n)[1] : s(n)[0])
+              ? o + (r(e) ? i(s)[1] : i(s)[0])
               : a
-                ? o + s(n)[1]
-                : o + (i(e) ? s(n)[1] : s(n)[2]);
+                ? o + i(s)[1]
+                : o + (r(e) ? i(s)[1] : i(s)[2]);
     }
-    return e.defineLocale("lt", {
+    e.defineLocale("lt", {
         months: {
             format: "sausio_vasario_kovo_balandžio_gegužės_birželio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio".split(
                 "_",
@@ -81,18 +76,20 @@
         relativeTime: {
             future: "po %s",
             past: "prieš %s",
-            s: n,
-            ss: a,
-            m: r,
-            mm: a,
-            h: r,
-            hh: a,
-            d: r,
-            dd: a,
-            M: r,
-            MM: a,
-            y: r,
-            yy: a,
+            s: function (e, t, n, r) {
+                return t ? "kelios sekundės" : r ? "kelių sekundžių" : "kelias sekundes";
+            },
+            ss: s,
+            m: n,
+            mm: s,
+            h: n,
+            hh: s,
+            d: n,
+            dd: s,
+            M: n,
+            MM: s,
+            y: n,
+            yy: s,
         },
         dayOfMonthOrdinalParse: /\d{1,2}-oji/,
         ordinal: function (e) {
@@ -100,4 +97,4 @@
         },
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

@@ -1,45 +1,46 @@
-n.d(t, { v: () => o });
-var i = n(627968),
-    s = n(397927),
-    l = n(600812),
-    a = n(791498),
-    r = n(244242);
-function o(e) {
-    let { node: t } = e,
+t.d(n, { v: () => c });
+var l = t(627968),
+    r = t(243721),
+    i = t(512950),
+    s = t(600812),
+    a = t(791498),
+    o = t(244242);
+function c(e) {
+    let { node: n } = e,
         {
-            useValue: n,
-            setValue: o,
+            useValue: t,
+            setValue: c,
             useTitle: d,
-            useSubtitle: c,
-            useDisabled: u,
-            useDisabledMessage: _,
-            usePersistentBadge: g,
+            useSubtitle: u,
+            useDisabled: x,
+            useDisabledMessage: j,
+            usePersistentBadge: h,
             hasIcon: m,
-            getDismissibleBadges: A,
-        } = t,
-        h = d(),
-        p = c?.(),
-        x = n(),
-        E = u?.() ?? !1,
-        T = _?.(),
-        S = g?.(),
-        C = A?.(),
-        f = (0, l.A)({ persistentBadge: S, dismissibleBadges: C }),
-        I = (0, a.q)(t);
-    return (0, i.jsxs)(r.L, {
+            getDismissibleBadges: f,
+        } = n,
+        p = d(),
+        y = u?.(),
+        g = t(),
+        v = x?.() ?? !1,
+        A = j?.(),
+        N = h?.(),
+        b = f?.(),
+        k = (0, s.A)({ persistentBadge: N, dismissibleBadges: b }),
+        E = (0, a.q)(n);
+    return (0, l.jsxs)(o.L, {
         children: [
-            (0, i.jsx)(s.dOG, {
-                label: h,
-                description: p,
-                badge: f,
-                checked: x,
+            (0, l.jsx)(r.d, {
+                label: p,
+                description: y,
+                badge: k,
+                checked: g,
                 hasIcon: m,
                 onChange: (e) => {
-                    I(), o(e);
+                    E(), c(e);
                 },
-                disabled: E,
+                disabled: v,
             }),
-            E && null != T ? (0, i.jsx)(s.po8, { messageType: s.YCn.WARNING, children: T }) : null,
+            v && null != A ? (0, l.jsx)(i.p, { messageType: i.Y.WARNING, children: A }) : null,
         ],
     });
 }

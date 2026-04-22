@@ -1,91 +1,92 @@
-n.d(t, { C: () => A });
+n.d(t, { C: () => _ });
 var i = n(627968),
     l = n(64700),
     s = n(562465),
     a = n(990078),
-    r = n(397927),
-    o = n(147087),
-    d = n(320501),
-    c = n(652215),
-    u = n(985018);
-async function h(e) {
+    r = n(152367),
+    o = n(408278),
+    d = n(147087),
+    c = n(320501),
+    u = n(652215),
+    h = n(985018);
+async function A(e) {
     try {
-        let t = await s.Bo.post({ url: c.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
+        let t = await s.Bo.post({ url: u.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
         return t.ok ? (t.body?.title ?? null) : null;
     } catch (e) {
         return null;
     }
 }
-function A(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: s, threadSettings: c, textAreaState: A } = e,
-        [_, m] = l.useState(!1),
-        [p, g] = l.useState(!1),
-        f = (0, o.b)(),
-        E = l.useCallback(async () => {
-            if (f) {
-                m(!0);
+function _(e) {
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: s, threadSettings: u, textAreaState: _ } = e,
+        [m, g] = l.useState(!1),
+        [p, f] = l.useState(!1),
+        E = (0, d.b)(),
+        x = l.useCallback(async () => {
+            if (E) {
+                g(!0);
                 try {
                     let e = null;
                     if (null != n) {
-                        let i = d.A.getMessage(t.id, n);
+                        let i = c.A.getMessage(t.id, n);
                         e = i?.getContentMessage()?.content ?? null;
-                    } else A.textValue.trim().length >= 10 && (e = A.textValue);
+                    } else _.textValue.trim().length >= 10 && (e = _.textValue);
                     if (null != e) {
-                        let t = await h(e);
+                        let t = await A(e);
                         null != t && "" !== t.trim() && s({ name: t });
                     }
                 } finally {
-                    m(!1);
+                    g(!1);
                 }
             }
-        }, [t.id, n, s, f, A.textValue]);
+        }, [t.id, n, s, E, _.textValue]);
     l.useEffect(() => {
-        g(!1), m(!1), t.id === c.parentChannelId && n !== c.parentMessageId && s({ name: "" });
-    }, [n, s, t.id, c.parentChannelId, c.parentMessageId]),
+        f(!1), g(!1), t.id === u.parentChannelId && n !== u.parentMessageId && s({ name: "" });
+    }, [n, s, t.id, u.parentChannelId, u.parentMessageId]),
         l.useEffect(() => {
-            (null != c.name && "" !== c.name.trim()) || p || (f && null != n && (g(!0), E()));
-        }, [t.id, n, s, c.name, p, f, E]);
-    let x = l.useCallback(
+            (null != u.name && "" !== u.name.trim()) || p || (E && null != n && (f(!0), x()));
+        }, [t.id, n, s, u.name, p, E, x]);
+    let I = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if (f)
+                if (E)
                     return {
-                        icon: r.Dud,
-                        onClick: E,
-                        "aria-label": u.intl.string(u.t.ZF2oBs),
-                        disabled: e || _ || (null == n && A.textValue.trim().length < 10),
-                        tooltip: u.intl.string(u.t.ZF2oBs),
-                        loading: _,
+                        icon: r.D,
+                        onClick: x,
+                        "aria-label": h.intl.string(h.t.ZF2oBs),
+                        disabled: e || m || (null == n && _.textValue.trim().length < 10),
+                        tooltip: h.intl.string(h.t.ZF2oBs),
+                        loading: m,
                     };
             },
-            [f, E, _, n, A.textValue],
+            [E, x, m, n, _.textValue],
         ),
-        I = l.useCallback(
+        C = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                return f
+                return E
                     ? (0, i.jsx)(a.m, {
-                          text: u.intl.string(u.t.ZF2oBs),
-                          children: (0, i.jsx)(r.K0, {
-                              icon: r.Dud,
+                          text: h.intl.string(h.t.ZF2oBs),
+                          children: (0, i.jsx)(o.K, {
+                              icon: r.D,
                               variant: "secondary",
                               size: "sm",
-                              "aria-label": u.intl.string(u.t.ZF2oBs),
-                              onClick: E,
-                              disabled: e || _ || (null == n && A.textValue.trim().length < 10),
-                              loading: _,
+                              "aria-label": h.intl.string(h.t.ZF2oBs),
+                              onClick: x,
+                              disabled: e || m || (null == n && _.textValue.trim().length < 10),
+                              loading: m,
                               type: "button",
                           }),
                       })
                     : null;
             },
-            [f, _, n, A.textValue, E],
+            [E, m, n, _.textValue, x],
         );
     return {
-        isGeneratingAI: _,
-        generateAIName: E,
-        enableAIFeatures: f,
-        renderAiGenerateButton: I,
-        getThreadNameInputAccessory: x,
+        isGeneratingAI: m,
+        generateAIName: x,
+        enableAIFeatures: E,
+        renderAiGenerateButton: C,
+        getThreadNameInputAccessory: I,
     };
 }

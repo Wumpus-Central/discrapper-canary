@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     s2: "activeFractionalPremiumBannerContainer__0687d",
     WW: "activeFractionalPremiumBannerBackgroundImage__0687d",

@@ -1,5 +1,4 @@
 e.exports = function (e) {
-    let t = "if eq ne lt lte gt gte select default math sep";
     return {
         name: "Dust",
         aliases: ["dst"],
@@ -19,7 +18,13 @@ e.exports = function (e) {
                     },
                 ],
             },
-            { className: "template-variable", begin: /\{/, end: /\}/, illegal: /;/, keywords: t },
+            {
+                className: "template-variable",
+                begin: /\{/,
+                end: /\}/,
+                illegal: /;/,
+                keywords: "if eq ne lt lte gt gte select default math sep",
+            },
         ],
     };
 };

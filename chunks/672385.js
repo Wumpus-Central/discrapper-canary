@@ -1,321 +1,327 @@
-"use strict";
-n.d(t, {
+i.d(t, {
     R9: () => O,
     Tu: () => R,
-    UI: () => y,
-    Wn: () => N,
-    am: () => D,
-    nR: () => M,
-    pT: () => w,
-    sQ: () => b,
-    un: () => L,
-    wd: () => C,
+    UI: () => x,
+    Wn: () => b,
+    am: () => C,
+    nR: () => w,
+    pT: () => k,
+    sQ: () => N,
+    un: () => T,
+    wd: () => g,
 }),
-    n(321073);
-var r = n(58149),
-    i = n(21119),
-    s = n(616356),
-    a = n(546183),
-    o = n(696451),
-    l = n(290863),
-    u = n(994500),
-    c = n(287809),
-    d = n(954571),
-    _ = n(486020),
-    f = n(622543),
-    p = n(36596),
-    h = n(950191),
-    m = n(518477),
-    E = n(652215),
-    g = n(818348);
-let A = (e) => {
-        let { user: t, userProfile: n, guildMember: r, guildMemberProfile: i } = e,
-            s = n ?? i,
-            a = [];
-        if ((r?.nick && a.push(m.d6.NICKNAME), s?.pronouns && a.push(m.d6.PRONOUNS), t?.avatar)) {
+    i(321073);
+var r = i(58149),
+    l = i(21119),
+    a = i(616356),
+    n = i(546183),
+    s = i(696451),
+    o = i(290863),
+    d = i(994500),
+    c = i(287809),
+    u = i(954571),
+    _ = i(486020),
+    m = i(622543),
+    f = i(36596),
+    p = i(950191),
+    A = i(518477),
+    h = i(652215),
+    v = i(818348);
+let E = (e) => {
+        let { user: t, userProfile: i, guildMember: r, guildMemberProfile: l } = e,
+            a = i ?? l,
+            n = [];
+        if ((r?.nick && n.push(A.d6.NICKNAME), a?.pronouns && n.push(A.d6.PRONOUNS), t?.avatar)) {
             let e = (0, _.VI)(t?.avatar);
-            a.push(e ? m.d6.ANIMATED_AVATAR : m.d6.AVATAR);
+            n.push(e ? A.d6.ANIMATED_AVATAR : A.d6.AVATAR);
         }
-        if (s?.banner) {
-            let e = (0, _.VI)(s?.banner);
-            a.push(e ? m.d6.ANIMATED_BANNER : m.d6.BANNER);
+        if (a?.banner) {
+            let e = (0, _.VI)(a?.banner);
+            n.push(e ? A.d6.ANIMATED_BANNER : A.d6.BANNER);
         }
         return (
-            s?.bio && a.push(m.d6.BIO),
-            s?.themeColors != null && void 0 !== s.themeColors.find((e) => null !== e) && a.push(m.d6.THEME),
-            t?.avatarDecoration != null && a.push(m.d6.AVATAR_DECORATION),
-            s?.profileEffect != null && a.push(m.d6.PROFILE_EFFECT),
-            a
+            a?.bio && n.push(A.d6.BIO),
+            a?.themeColors != null && void 0 !== a.themeColors.find((e) => null !== e) && n.push(A.d6.THEME),
+            t?.avatarDecoration != null && n.push(A.d6.AVATAR_DECORATION),
+            a?.profileEffect != null && n.push(A.d6.PROFILE_EFFECT),
+            n
         );
     },
     I = (e) => {
-        let t = l.A.getStatus(e),
-            n = l.A.isMobileOnline(e);
-        return t === g.cl.ONLINE && n ? `${t}-mobile` : t === g.cl.ONLINE ? `${t}-desktop` : t;
-    },
-    T = (e) => (null == e ? e : "VOICE" === e ? "VOICE" : Object.keys(E.$pd)[Object.values(E.$pd).indexOf(e)]),
-    S = (e) => {
-        let { layout: t, userId: n, guildId: r, sessionId: i, sourceSessionId: s, showGuildProfile: a = !0 } = e,
-            u = c.default.getUser(n);
-        if (null == u) return {};
-        let d = (0, h.AP)(u?.id, a ? r : void 0),
-            _ = a && null != r ? o.Ay.getMember(r, u?.id) : null;
+        var t;
+        let i,
+            r,
+            { layout: l, userId: a, guildId: n, sessionId: d, sourceSessionId: u, showGuildProfile: _ = !0 } = e,
+            m = c.default.getUser(a);
+        if (null == m) return {};
+        let f = (0, p.AP)(m?.id, _ ? n : void 0),
+            A = _ && null != n ? s.Ay.getMember(n, m?.id) : null;
         return {
-            profile_layout: t,
-            profile_session_id: i,
-            source_profile_session_id: s,
-            profile_properties: A({ user: u, userProfile: d?._userProfile }),
-            guild_profile_properties: A({ guildMember: _, guildMemberProfile: d?._guildMemberProfile }),
-            profile_activity_types: l.A.getActivities(u.id)
+            profile_layout: l,
+            profile_session_id: d,
+            source_profile_session_id: u,
+            profile_properties: E({ user: m, userProfile: f?._userProfile }),
+            guild_profile_properties: E({ guildMember: A, guildMemberProfile: f?._guildMemberProfile }),
+            profile_activity_types: o.A.getActivities(m.id)
                 .map((e) => {
                     let { type: t } = e;
                     return t;
                 })
                 .filter((e) => void 0 !== e),
             profile_badges:
-                d
+                f
                     ?.getBadges()
                     ?.map((e) => {
                         let { id: t } = e;
                         return t;
                     })
                     .filter((e) => "string" == typeof e) ?? [],
-            avatar_decoration_sku_id: u.avatarDecoration?.skuId,
-            profile_effect_sku_id: d?.profileEffect?.skuId,
-            user_status: I(u.id),
-            is_guild_profile: d?.guildId != null,
-            is_bot_profile: u.bot,
-            is_private_to_viewer: d?.private ?? !1,
+            avatar_decoration_sku_id: m.avatarDecoration?.skuId,
+            profile_effect_sku_id: f?.profileEffect?.skuId,
+            user_status:
+                ((t = m.id),
+                (i = o.A.getStatus(t)),
+                (r = o.A.isMobileOnline(t)),
+                i === v.cl.ONLINE && r ? `${i}-mobile` : i === v.cl.ONLINE ? `${i}-desktop` : i),
+            is_guild_profile: f?.guildId != null,
+            is_bot_profile: m.bot,
+            is_private_to_viewer: f?.private ?? !1,
         };
     },
-    y = (e) => {
+    x = (e) => {
         let { userId: t } = e;
         if (null == t) return {};
-        let n = i.A.getUserAffinity(t);
+        let i = l.A.getUserAffinity(t);
         return {
             related_user_id: t,
-            relationship_type: u.A.getRelationshipType(t),
-            related_since: u.A.getSince(t),
-            num_mutual_friends: f.A.getMutualFriendsCount(t),
-            num_mutual_guilds: f.A.getMutualGuilds(t)?.length,
-            communication_probability: n?.communicationProbability,
-            communication_rank: n?.communicationRank,
+            relationship_type: d.A.getRelationshipType(t),
+            related_since: d.A.getSince(t),
+            num_mutual_friends: m.A.getMutualFriendsCount(t),
+            num_mutual_guilds: m.A.getMutualGuilds(t)?.length,
+            communication_probability: i?.communicationProbability,
+            communication_rank: i?.communicationRank,
         };
     },
-    v = (e) => ({
+    y = (e) => ({
         application_id: e,
         application_linked:
-            null != e && a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED
-                ? null != a.default.getNewestTokenForApplication(e)
+            null != e && n.default.getFetchStateForApplication(e) === n.FetchState.FETCHED
+                ? null != n.default.getNewestTokenForApplication(e)
                 : null,
     }),
-    N = (e) => {
+    b = (e) => {
         let {
             guildId: t,
-            channelId: n,
-            messageId: i,
-            roleId: s,
-            widgetType: a,
-            analyticsLocations: o,
-            action: l,
-            section: u,
+            channelId: i,
+            messageId: l,
+            roleId: a,
+            widgetType: n,
+            analyticsLocations: s,
+            action: o,
+            section: d,
             applicationId: c,
         } = e;
-        d.default.track(E.HAw.USER_PROFILE_ACTION, {
+        u.default.track(h.HAw.USER_PROFILE_ACTION, {
             ...(0, r.H$)(t),
-            ...(0, r.Ou)(n),
-            ...S(e),
-            ...y(e),
-            ...v(c),
-            location_stack: o,
-            profile_action: l,
-            profile_section: u,
-            source_message_id: i,
-            source_role_id: s,
-            widget_type: a,
+            ...(0, r.Ou)(i),
+            ...I(e),
+            ...x(e),
+            ...y(c),
+            location_stack: s,
+            profile_action: o,
+            profile_section: d,
+            source_message_id: l,
+            source_role_id: a,
+            widget_type: n,
         });
     },
-    C = (e) => {
-        if (!(0, p.i)("UserProfileAnalyticsUtils")) return;
+    g = (e) => {
+        if (!(0, f.i)("UserProfileAnalyticsUtils")) return;
         let {
             guildId: t,
-            channelId: n,
-            analyticsLocations: i,
-            profileUi: s,
-            viewStartedAt: a,
-            fetchStartedAt: o,
-            timeToInteractiveMs: l,
-            timeToLoadMs: u,
+            channelId: i,
+            analyticsLocations: l,
+            profileUi: a,
+            viewStartedAt: n,
+            fetchStartedAt: s,
+            timeToInteractiveMs: o,
+            timeToLoadMs: d,
             timeToFetchMs: c,
         } = e;
-        (l ?? 0) <= 0 ||
-            (u ?? 0) <= 0 ||
+        (o ?? 0) <= 0 ||
+            (d ?? 0) <= 0 ||
             (c ?? 0) <= 0 ||
-            d.default.track(E.HAw.USER_PROFILE_UI_VIEWED, {
+            u.default.track(h.HAw.USER_PROFILE_UI_VIEWED, {
                 ...(0, r.H$)(t),
-                ...(0, r.Ou)(n),
-                ...S(e),
-                ...y(e),
-                location_stack: i,
-                profile_ui: s,
-                view_started_at: a,
-                fetch_started_at: o,
-                time_to_interactive_ms: l,
-                time_to_load_ms: u,
+                ...(0, r.Ou)(i),
+                ...I(e),
+                ...x(e),
+                location_stack: l,
+                profile_ui: a,
+                view_started_at: n,
+                fetch_started_at: s,
+                time_to_interactive_ms: o,
+                time_to_load_ms: d,
                 time_to_fetch_ms: c,
             });
     },
     R = (e) => {
+        var t;
         let {
-            guildId: t,
-            channelId: n,
-            analyticsLocations: i,
-            action: s,
-            display: a,
+            guildId: i,
+            channelId: l,
+            analyticsLocations: a,
+            action: n,
+            display: s,
             activity: o,
-            stream: l,
-            entry: u,
-            outbox: c,
-            voiceChannelId: _,
+            stream: d,
+            entry: c,
+            outbox: _,
+            voiceChannelId: m,
         } = e;
-        d.default.track(E.HAw.USER_PROFILE_ACTIVITY_ACTION, {
-            ...(0, r.H$)(t),
-            ...(0, r.Ou)(n),
-            ...S(e),
-            ...y(e),
-            location_stack: i,
-            activity_action: s,
-            activity_display: a,
-            activity_type: T(null != l ? E.$pd.STREAMING : o?.type),
+        u.default.track(h.HAw.USER_PROFILE_ACTIVITY_ACTION, {
+            ...(0, r.H$)(i),
+            ...(0, r.Ou)(l),
+            ...I(e),
+            ...x(e),
+            location_stack: a,
+            activity_action: n,
+            activity_display: s,
+            activity_type:
+                null == (t = null != d ? h.$pd.STREAMING : o?.type)
+                    ? t
+                    : "VOICE" === t
+                      ? "VOICE"
+                      : Object.keys(h.$pd)[Object.values(h.$pd).indexOf(t)],
             activity_name: o?.name,
             activity_platform: o?.platform,
             activity_session_id: o?.session_id,
             activity_application_id: o?.application_id,
-            item_id: u?.id,
-            author_id_v2: u?.author_id,
-            item_ids: c?.entries.map((e) => {
+            item_id: c?.id,
+            author_id_v2: c?.author_id,
+            item_ids: _?.entries.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
-            author_ids_v2: c?.entries.map((e) => {
+            author_ids_v2: _?.entries.map((e) => {
                 let { author_id: t } = e;
                 return t;
             }),
-            voice_channel_id: _,
+            voice_channel_id: m,
         });
     },
     O = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, badge: s } = e;
-        d.default.track(E.HAw.USER_PROFILE_BADGE_PRESSED, {
+        let { guildId: t, channelId: i, analyticsLocations: l, badge: a } = e;
+        u.default.track(h.HAw.USER_PROFILE_BADGE_PRESSED, {
             ...(0, r.H$)(t),
-            ...(0, r.Ou)(n),
-            ...S(e),
-            ...y(e),
-            location_stack: i,
-            badge: s,
+            ...(0, r.Ou)(i),
+            ...I(e),
+            ...x(e),
+            location_stack: l,
+            badge: a,
         });
     },
-    b = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, badge: s } = e;
-        d.default.track(E.HAw.USER_PROFILE_BADGE_HOVERED, {
+    N = (e) => {
+        let { guildId: t, channelId: i, analyticsLocations: l, badge: a } = e;
+        u.default.track(h.HAw.USER_PROFILE_BADGE_HOVERED, {
             ...(0, r.H$)(t),
-            ...(0, r.Ou)(n),
-            ...S(e),
-            ...y(e),
-            location_stack: i,
-            badge: s,
+            ...(0, r.Ou)(i),
+            ...I(e),
+            ...x(e),
+            location_stack: l,
+            badge: a,
         });
     },
-    D = (e) => {
-        let { displayProfile: t, isProfileOpen: n } = e,
+    C = (e) => {
+        let { displayProfile: t, isProfileOpen: i } = e,
             r = t?.userId,
-            i =
+            l =
                 null != r
-                    ? l.A.findActivity(r, (e) => {
+                    ? o.A.findActivity(r, (e) => {
                           let { type: t } = e;
-                          return null != s.A.getAnyStreamForUser(r) ? t === E.$pd.PLAYING : t !== E.$pd.CUSTOM_STATUS;
+                          return null != a.A.getAnyStreamForUser(r) ? t === h.$pd.PLAYING : t !== h.$pd.CUSTOM_STATUS;
                       })
                     : null;
-        d.default.track(E.HAw.DM_PROFILE_TOGGLED, {
-            is_profile_open: n,
-            has_images: !!(i?.assets?.large_image ?? i?.assets?.small_image),
-            is_friend: u.A.isFriend(r),
+        u.default.track(h.HAw.DM_PROFILE_TOGGLED, {
+            is_profile_open: i,
+            has_images: !!(l?.assets?.large_image ?? l?.assets?.small_image),
+            is_friend: d.A.isFriend(r),
             viewed_profile_user_id: r,
             profile_has_nitro_customization: t?.hasPremiumCustomization(),
             profile_has_theme_color_customized: t?.hasThemeColors(),
             profile_has_theme_animation: t?.popoutAnimationParticleType != null,
         });
     },
-    L = (e) => {
+    T = (e) => {
         let {
             guildId: t,
-            channelId: n,
-            analyticsLocations: i,
-            action: s,
-            widgetEdited: a,
-            gameId: o,
-            numResults: l,
-            numCharacters: u,
+            channelId: i,
+            analyticsLocations: l,
+            action: a,
+            widgetEdited: n,
+            gameId: s,
+            numResults: o,
+            numCharacters: d,
             applicationId: c,
         } = e;
-        N({ ...e, action: s }),
-            d.default.track(E.HAw.USER_PROFILE_EDIT_ACTION, {
+        b({ ...e, action: a }),
+            u.default.track(h.HAw.USER_PROFILE_EDIT_ACTION, {
                 ...(0, r.H$)(t),
-                ...(0, r.Ou)(n),
-                ...S(e),
-                ...v(c),
-                location_stack: i,
-                edit_action: s,
-                widget_edited: a,
-                game_id: o,
-                num_results: l,
-                num_characters: u,
+                ...(0, r.Ou)(i),
+                ...I(e),
+                ...y(c),
+                location_stack: l,
+                edit_action: a,
+                widget_edited: n,
+                game_id: s,
+                num_results: o,
+                num_characters: d,
                 application_id: c,
+            });
+    },
+    k = (e) => {
+        let {
+            guildId: t,
+            channelId: i,
+            analyticsLocations: l,
+            widgetEdited: a,
+            gameIds: n,
+            tags: s,
+            numCharactersCommentary: o,
+            isWidgetRemoved: d,
+        } = e;
+        b({ ...e, action: "EDIT_SAVED" }),
+            u.default.track(h.HAw.USER_PROFILE_EDIT_SAVED, {
+                ...(0, r.H$)(t),
+                ...(0, r.Ou)(i),
+                ...I(e),
+                location_stack: l,
+                widget_edited: a,
+                game_ids: n,
+                tags: s,
+                num_characters_commentary: o,
+                is_widget_removed: d,
             });
     },
     w = (e) => {
         let {
             guildId: t,
-            channelId: n,
-            analyticsLocations: i,
-            widgetEdited: s,
-            gameIds: a,
-            tags: o,
-            numCharactersCommentary: l,
-            isWidgetRemoved: u,
+            channelId: i,
+            analyticsLocations: l,
+            action: a,
+            wishlistId: n,
+            skuId: s,
+            productLines: o,
         } = e;
-        N({ ...e, action: "EDIT_SAVED" }),
-            d.default.track(E.HAw.USER_PROFILE_EDIT_SAVED, {
+        b({ ...e, action: a }),
+            u.default.track(h.HAw.USER_PROFILE_WISHLIST_ACTION, {
                 ...(0, r.H$)(t),
-                ...(0, r.Ou)(n),
-                ...S(e),
-                location_stack: i,
-                widget_edited: s,
-                game_ids: a,
-                tags: o,
-                num_characters_commentary: l,
-                is_widget_removed: u,
-            });
-    },
-    M = (e) => {
-        let {
-            guildId: t,
-            channelId: n,
-            analyticsLocations: i,
-            action: s,
-            wishlistId: a,
-            skuId: o,
-            productLines: l,
-        } = e;
-        N({ ...e, action: s }),
-            d.default.track(E.HAw.USER_PROFILE_WISHLIST_ACTION, {
-                ...(0, r.H$)(t),
-                ...(0, r.Ou)(n),
-                ...S(e),
-                location_stack: i,
-                action_type: s,
-                wishlist_id: a,
-                sku_id: o,
-                product_lines: null != l ? Array.from(l) : [],
+                ...(0, r.Ou)(i),
+                ...I(e),
+                location_stack: l,
+                action_type: a,
+                wishlist_id: n,
+                sku_id: s,
+                product_lines: null != o ? Array.from(o) : [],
             });
     };

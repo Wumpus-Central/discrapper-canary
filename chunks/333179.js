@@ -1,143 +1,148 @@
-l.d(e, { default: () => f }), l(321073);
-var n = l(627968),
-    i = l(64700),
-    r = l(503698),
-    a = l.n(r),
-    s = l(158954),
-    u = l(311907),
-    o = l(397927),
-    d = l(686956),
-    c = l(504049),
-    g = l(734057),
-    h = l(927813),
-    p = l(562153),
-    v = l(226698),
-    A = l(652215),
-    b = l(641131),
-    R = l(985018),
-    C = l(465818);
-function x() {
+e.d(l, { default: () => T }), e(321073);
+var n = e(627968),
+    i = e(64700),
+    a = e(503698),
+    r = e.n(a),
+    s = e(189213),
+    u = e(311907),
+    o = e(150934),
+    d = e(331322),
+    c = e(683071),
+    g = e(954197),
+    h = e(260598),
+    v = e(691885),
+    p = e(686956),
+    A = e(504049),
+    b = e(734057),
+    S = e(927813),
+    m = e(562153),
+    C = e(226698),
+    f = e(652215),
+    x = e(221314),
+    k = e(985018),
+    j = e(667562);
+function M() {
     return [
-        { id: "none", value: 0, label: R.intl.string(R.t["4obaMS"]) },
-        { id: "1hour", value: +h.A.Seconds.HOUR, label: R.intl.string(R.t.RKpitY) },
-        { id: "6hours", value: 6 * h.A.Seconds.HOUR, label: R.intl.string(R.t["8WfJZ8"]) },
-        { id: "12hours", value: 12 * h.A.Seconds.HOUR, label: R.intl.string(R.t.p1up7u) },
-        { id: "1day", value: +h.A.Seconds.DAY, label: R.intl.string(R.t.XuVkkD) },
-        { id: "3days", value: 3 * h.A.Seconds.DAY, label: R.intl.string(R.t["gMcDS+"]) },
-        { id: "7days", value: 7 * h.A.Seconds.DAY, label: R.intl.string(R.t.FA7IUk) },
+        { id: "none", value: 0, label: k.intl.string(k.t["4obaMS"]) },
+        { id: "1hour", value: +S.A.Seconds.HOUR, label: k.intl.string(k.t.RKpitY) },
+        { id: "6hours", value: 6 * S.A.Seconds.HOUR, label: k.intl.string(k.t["8WfJZ8"]) },
+        { id: "12hours", value: 12 * S.A.Seconds.HOUR, label: k.intl.string(k.t.p1up7u) },
+        { id: "1day", value: +S.A.Seconds.DAY, label: k.intl.string(k.t.XuVkkD) },
+        { id: "3days", value: 3 * S.A.Seconds.DAY, label: k.intl.string(k.t["gMcDS+"]) },
+        { id: "7days", value: 7 * S.A.Seconds.DAY, label: k.intl.string(k.t.FA7IUk) },
     ];
 }
-let S = x()[1].value,
-    m = x()[0].value;
-function f(t) {
-    let e,
+let y = M()[1].value,
+    R = M()[0].value;
+function T(t) {
+    let l,
         {
-            guildId: l,
-            user: r,
-            location: h,
-            userIds: f,
-            onBanMultiple: j,
-            transitionState: k,
-            onClose: M,
-            canBulkBan: E = !1,
-            modReportId: y,
+            guildId: e,
+            user: a,
+            location: S,
+            userIds: T,
+            onBanMultiple: U,
+            transitionState: I,
+            onClose: Y,
+            canBulkBan: B = !1,
+            modReportId: D,
         } = t,
-        [T, O] = i.useState(null != y ? m : S),
-        [_, B] = i.useState(""),
-        [D, U] = i.useState(null),
-        { isModReportClosed: I, isModReport: Y } = (0, u.cf)([g.A], () => {
-            let t = g.A.getChannel(y);
+        [K, _] = i.useState(null != D ? R : y),
+        [w, E] = i.useState(""),
+        [H, X] = i.useState(null),
+        { isModReportClosed: F, isModReport: L } = (0, u.cf)([b.A], () => {
+            let t = b.A.getChannel(D);
             return { isModReportClosed: t?.isArchivedThread(), isModReport: t?.isModeratorReportChannel() };
         }),
-        [K, P] = i.useState(!1),
-        [W, w] = i.useState(!1),
-        F = (0, c.$9)(l, { location: h, targetUserId: r?.id, targets: f }),
-        H = i.useCallback(() => {
-            let t = D ?? _;
-            if (null != j) {
-                if (!(null != f && f?.size > 0 && E) || K) return;
-                if ("" === _.trim()) return void P(!0);
-                j(l, [...f], T, t);
+        [N, W] = i.useState(!1),
+        [z, J] = i.useState(!1),
+        O = (0, A.$9)(e, { location: S, targetUserId: a?.id, targets: T }),
+        V = i.useCallback(() => {
+            let t = H ?? w;
+            if (null != U) {
+                if (!(null != T && T?.size > 0 && B) || N) return;
+                if ("" === w.trim()) return void W(!0);
+                U(e, [...T], K, t);
             } else {
-                if (null == r) return;
-                d.A.banUser(l, r?.id, T, t, y).then(() => {
-                    W && null != y && v.A.resolveFlag(y);
+                if (null == a) return;
+                p.A.banUser(e, a?.id, K, t, D).then(() => {
+                    z && null != D && C.A.resolveFlag(D);
                 });
             }
-            F(c.Nj.BAN), M();
-        }, [D, _, j, F, M, f, E, K, l, T, r, y, W]),
-        J = i.useCallback((t) => {
-            O(t);
+            O(A.Nj.BAN), Y();
+        }, [H, w, U, O, Y, T, B, N, e, K, a, D, z]),
+        P = i.useCallback((t) => {
+            _(t);
         }, []),
-        L = i.useCallback((t) => {
-            B(t), P(!1), U(null);
+        Z = i.useCallback((t) => {
+            E(t), W(!1), X(null);
         }, []),
-        N = i.useCallback(
+        $ = i.useCallback(
             (t) => {
-                U(t), K && P(!1);
+                X(t), N && W(!1);
             },
-            [K],
+            [N],
         ),
-        X = Y && !I && null != y,
-        z = [
-            { name: R.intl.string(R.t.tamLhT), value: R.intl.string(R.t.tamLhT) },
-            { name: R.intl.string(R.t.UmxjMg), value: R.intl.string(R.t.UmxjMg) },
-            { name: R.intl.string(R.t.EXY1d8), value: R.intl.string(R.t.EXY1d8) },
-            { name: R.intl.string(R.t.BcZTKu), value: "other" },
+        q = L && !F && null != D,
+        Q = [
+            { name: k.intl.string(k.t.tamLhT), value: k.intl.string(k.t.tamLhT) },
+            { name: k.intl.string(k.t.UmxjMg), value: k.intl.string(k.t.UmxjMg) },
+            { name: k.intl.string(k.t.EXY1d8), value: k.intl.string(k.t.EXY1d8) },
+            { name: k.intl.string(k.t.BcZTKu), value: "other" },
         ],
-        V = (() => {
-            if (null != j && null != f) return R.intl.formatToPlainString(R.t.HVJexf, { count: f?.size });
-            if (null == r) return "";
-            let t = p.Ay.getName(l, null, r);
-            return R.intl.formatToPlainString(null != y ? R.t.WDR8Xd : R.t.jeKpok, { username: `@${t}` });
+        G = (() => {
+            if (null != U && null != T) return k.intl.formatToPlainString(k.t.HVJexf, { count: T?.size });
+            if (null == a) return "";
+            let t = m.Ay.getName(e, null, a);
+            return k.intl.formatToPlainString(null != D ? k.t.WDR8Xd : k.t.jeKpok, { username: `@${t}` });
         })(),
-        Z = null == y ? null : R.intl.string(R.t.pQjhIK);
+        tt = null == D ? null : k.intl.string(k.t.pQjhIK);
     return (0, n.jsx)(s.Modal, {
-        onClose: M,
-        transitionState: k,
-        title: V,
-        subtitle: Z ?? void 0,
+        onClose: Y,
+        transitionState: I,
+        title: G,
+        subtitle: tt ?? void 0,
         actions:
-            ((e = []),
-            Y || e.push({ variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: M }),
-            e.push({ variant: "critical-primary", text: R.intl.string(R.t["5MBJ5M"]), onClick: H }),
-            e),
-        actionBarInput: X
-            ? (0, n.jsx)(o.Checkbox, { checked: W, onChange: (t) => w(t), label: R.intl.string(b.default["8yIKem"]) })
+            ((l = []),
+            L || l.push({ variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: Y }),
+            l.push({ variant: "critical-primary", text: k.intl.string(k.t["5MBJ5M"]), onClick: V }),
+            l),
+        actionBarInput: q
+            ? (0, n.jsx)(o.S, { checked: z, onChange: (t) => J(t), label: k.intl.string(x.default["8yIKem"]) })
             : void 0,
-        children: (0, n.jsxs)(o.BJc, {
+        children: (0, n.jsxs)(d.B, {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, n.jsxs)(o.BJc, {
+                (0, n.jsxs)(d.B, {
                     direction: "vertical",
                     gap: 8,
                     children: [
-                        K && (0, n.jsx)(o.wx6, { type: "critical", children: R.intl.string(R.t.IrYX1y) }),
-                        (0, n.jsx)(o.z6M, {
+                        N && (0, n.jsx)(c.w, { type: "critical", children: k.intl.string(k.t.IrYX1y) }),
+                        (0, n.jsx)(g.z, {
                             required: !0,
-                            label: R.intl.string(null != y ? R.t["+KCLVp"] : R.t.w4Ivys),
-                            value: _,
-                            options: z.map((t) => ({ ...t })),
-                            onChange: L,
+                            label: k.intl.string(null != D ? k.t["+KCLVp"] : k.t.w4Ivys),
+                            value: w,
+                            options: Q.map((t) => ({ ...t })),
+                            onChange: Z,
                         }),
                         (0, n.jsx)("div", {
-                            className: a()(C.Ar, { [C.R]: "other" !== _ }),
-                            children: (0, n.jsx)(o.fs1, {
-                                maxLength: A.hlA,
-                                onChange: N,
-                                value: D ?? "",
+                            className: r()(j.Ar, { [j.R]: "other" !== w }),
+                            children: (0, n.jsx)(h.f, {
+                                maxLength: f.hlA,
+                                onChange: $,
+                                value: H ?? "",
                                 rows: 5,
                                 autoFocus: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(o.l6P, {
-                    label: R.intl.string(null != y ? R.t.ERSM8H : R.t["8l3W0y"]),
-                    options: x(),
-                    value: T,
-                    onSelectionChange: J,
+                (0, n.jsx)(v.l, {
+                    label: k.intl.string(null != D ? k.t.ERSM8H : k.t["8l3W0y"]),
+                    options: M(),
+                    value: K,
+                    onSelectionChange: P,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),

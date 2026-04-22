@@ -1,85 +1,84 @@
-n.d(t, { i: () => g }), n(321073);
-var i = n(64700),
-    a = n(311907),
-    l = n(919796),
-    r = n(4106),
-    s = n(105971),
-    o = n(800319),
-    d = n(883344),
+n.d(t, { i: () => v }), n(321073);
+var a = n(64700),
+    i = n(311907),
+    s = n(919796),
+    l = n(4106),
+    r = n(105971),
+    d = n(800319),
+    o = n(883344),
     c = n(596720),
     u = n(859524),
-    A = n(639040),
+    m = n(639040),
     h = n(567061),
-    _ = n(563874),
-    m = n(118972);
-function g(e) {
+    g = n(563874),
+    p = n(118972);
+function v(e) {
     let { showDot: t, notificationItem: n } = e,
-        [g, p] = i.useState(!1),
-        { unreadItems: E, readItems: I, allUnreadItemsHydrated: f } = (0, A.A)(),
-        C = (0, a.bG)([d.A], () => d.A.getVersion(), []),
-        T = (0, a.bG)([d.A], () => !(d.A.isFirstPageHydrated() && C > 0));
-    i.useEffect(() => {
-        null != d.A.getLoadId() && s.k.trackFeedShown({ homeSessionId: "gravity" });
-    }, [C]);
-    let N = (0, a.bG)([d.A], () => d.A.isRefreshing(), []),
-        S = (0, a.bG)([d.A], () => d.A.isHydrating(), []),
-        [x, v] = i.useState([]),
-        { loadId: b, lastScrollEventTimestamp: y } = (0, a.cf)([d.A], () => ({
-            loadId: d.A.getLoadId(),
-            lastScrollEventTimestamp: d.A.lastScrollEvent(),
+        [v, x] = a.useState(!1),
+        { unreadItems: A, readItems: f, allUnreadItemsHydrated: _ } = (0, m.A)(),
+        y = (0, i.bG)([o.A], () => o.A.getVersion(), []),
+        b = (0, i.bG)([o.A], () => !(o.A.isFirstPageHydrated() && y > 0));
+    a.useEffect(() => {
+        null != o.A.getLoadId() && r.k.trackFeedShown({ homeSessionId: "gravity" });
+    }, [y]);
+    let I = (0, i.bG)([o.A], () => o.A.isRefreshing(), []),
+        j = (0, i.bG)([o.A], () => o.A.isHydrating(), []),
+        [E, k] = a.useState([]),
+        { loadId: T, lastScrollEventTimestamp: C } = (0, i.cf)([o.A], () => ({
+            loadId: o.A.getLoadId(),
+            lastScrollEventTimestamp: o.A.lastScrollEvent(),
         })),
-        O = x
-            .filter((e) => {
-                let { item: t } = e;
-                return !o.P.has(t.data.kind);
-            })
+        w = E.filter((e) => {
+            let { item: t } = e;
+            return !d.P.has(t.data.kind);
+        })
             .map((e) => {
                 let { item: t } = e;
                 return t.id;
             })
             .pop(),
-        L = (0, l.A)(O);
-    i.useEffect(() => {
-        if (N || T || null == L || null == O || O === L) return;
+        N = (0, s.A)(w);
+    a.useEffect(() => {
+        if (I || b || null == N || null == w || w === N) return;
         let e = Date.now();
-        e - y > m.N && (r.A.gravityScrollEvent(e), s.k.trackFeedFirstScrollStarted());
-    }, [N, y, L, O, b, T]);
-    let R = i.useCallback(
+        e - C > p.N && (l.A.gravityScrollEvent(e), r.k.trackFeedFirstScrollStarted());
+    }, [I, C, N, w, T, b]);
+    let S = a.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
-                if ((t.some((e) => "end" === e.item.data.kind) && p(!0), 0 === t.length)) return;
-                v(t);
+                if ((t.some((e) => "end" === e.item.data.kind) && x(!0), 0 === t.length)) return;
+                k(t);
                 let n = [],
-                    i = (0, u.P0)(t),
-                    a = Date.now();
-                for (let e = i.length - 1; e >= 0; e--) {
-                    let t = i[e];
-                    null != t && n.push({ id: t.id, type: (0, c.xG)(t), timestamp: a++ });
+                    a = (0, u.P0)(t),
+                    i = Date.now();
+                for (let e = a.length - 1; e >= 0; e--) {
+                    let t = a[e];
+                    null != t && n.push({ id: t.id, type: (0, c.xG)(t), timestamp: i++ });
                 }
-                n.length > 0 && r.A.ackGravityItems(n, !0),
-                    s.k.trackItemShortImpression(
+                n.length > 0 && l.A.ackGravityItems(n, !0),
+                    r.k.trackItemShortImpression(
                         t,
-                        i.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
-                        C,
+                        a.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
+                        y,
                     );
             },
-            [C, p],
+            [y, x],
         ),
-        P = i.useCallback(
+        M = a.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if (0 === t.length) return;
                 let n = (0, u.P0)(t);
-                s.k.trackItemLongImpression(
+                r.k.trackItemLongImpression(
                     t,
                     n.map((e) => ({ id: e.id, type: (0, c.xG)(e) })),
-                    C,
+                    y,
                 ),
-                    r.A.triggerItemsLongImpression(
+                    l.A.triggerItemsLongImpression(
                         t
                             .filter((e) => {
                                 let { item: t } = e;
-                                return !o.P.has(t.data.kind);
+                                return !d.P.has(t.data.kind);
                             })
                             .map((e) => {
                                 let { item: t, index: n } = e;
@@ -95,15 +94,15 @@ function g(e) {
                             }),
                     );
             },
-            [C],
+            [y],
         ),
-        D = i.useCallback((e) => {
+        G = a.useCallback((e) => {
             let { viewableItems: t } = e;
-            r.A.startItemsDwell(
+            l.A.startItemsDwell(
                 t
                     .filter((e) => {
                         let { item: t } = e;
-                        return !o.P.has(t.data.kind);
+                        return !d.P.has(t.data.kind);
                     })
                     .map((e) => {
                         let { item: t, index: n } = e;
@@ -119,7 +118,7 @@ function g(e) {
                     }),
             );
         }, []),
-        M = i.useMemo(
+        L = a.useMemo(
             () => [
                 {
                     viewabilityConfig: {
@@ -127,7 +126,7 @@ function g(e) {
                         viewAreaCoveragePercentThreshold: 100,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: R,
+                    onViewableItemsChanged: S,
                 },
                 {
                     viewabilityConfig: {
@@ -135,7 +134,7 @@ function g(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 1e3,
                     },
-                    onViewableItemsChanged: P,
+                    onViewableItemsChanged: M,
                 },
                 {
                     viewabilityConfig: {
@@ -143,20 +142,20 @@ function g(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: D,
+                    onViewableItemsChanged: G,
                 },
             ],
-            [R, P, D],
+            [S, M, G],
         );
-    i.useEffect(() => {
-        r.A.openICYMITab();
+    a.useEffect(() => {
+        l.A.openICYMITab();
     }, []);
-    let j = (0, h.E)(t),
-        w = (0, _.n)(),
-        { data: U, stickyHeaderIndices: G } = i.useMemo(() => {
+    let D = (0, h.E)(t),
+        R = (0, g.n)(),
+        { data: U, stickyHeaderIndices: V } = a.useMemo(() => {
             let e = [];
             return (
-                T &&
+                b &&
                     null != n &&
                     n.type === c.Mm.CUSTOM_STATUS &&
                     e.push({
@@ -166,30 +165,30 @@ function g(e) {
                         score: n.score,
                         unread: !0,
                     }),
-                T
+                b
                     ? e.push({ id: "loading", timestamp: 0, unread: !1, data: { kind: "loading" } })
-                    : (w && e.push({ id: "sunsetBanner", timestamp: 0, unread: !1, data: { kind: "sunsetBanner" } }),
-                      E.forEach((t) => {
+                    : (R && e.push({ id: "sunsetBanner", timestamp: 0, unread: !1, data: { kind: "sunsetBanner" } }),
+                      A.forEach((t) => {
                           (0, u.yx)(t) || e.push(t);
                       }),
-                      f && e.push({ id: "end", timestamp: 0, unread: !1, data: { kind: "end" } }),
-                      I.length > 0 &&
-                          I.forEach((t) => {
+                      _ && e.push({ id: "end", timestamp: 0, unread: !1, data: { kind: "end" } }),
+                      f.length > 0 &&
+                          f.forEach((t) => {
                               (0, u.yx)(t) || e.push(t);
                           }),
-                      S && e.push({ id: "bottomLoading", timestamp: 0, unread: !1, data: { kind: "bottomLoading" } })),
+                      j && e.push({ id: "bottomLoading", timestamp: 0, unread: !1, data: { kind: "bottomLoading" } })),
                 { data: e, stickyHeaderIndices: [] }
             );
-        }, [T, n, E, f, I, S, w]);
+        }, [b, n, A, _, f, j, R]);
     return {
         data: U,
-        loading: T,
-        version: C,
-        visibleItemIds: x,
-        endVisible: g,
-        isRefreshing: N,
-        handleOnRefresh: j,
-        stickyHeaderIndices: G,
-        viewabilityConfigCallbackPairs: M,
+        loading: b,
+        version: y,
+        visibleItemIds: E,
+        endVisible: v,
+        isRefreshing: I,
+        handleOnRefresh: D,
+        stickyHeaderIndices: V,
+        viewabilityConfigCallbackPairs: L,
     };
 }

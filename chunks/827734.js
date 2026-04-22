@@ -2,64 +2,60 @@
 n.d(t, { A: () => P });
 var r = n(310784),
     i = n.n(r),
-    a = n(119479),
-    s = n.n(a),
+    s = n(119479),
+    a = n.n(s),
     o = n(563304),
     l = n.n(o),
     u = n(93132),
-    c = n(949816),
-    d = n(589448),
+    d = n(949816),
+    c = n(589448),
     _ = n(415720),
     f = n(626757),
-    p = n(788894),
+    E = n(788894),
     h = n(199222),
-    m = n(857526),
-    g = n(677370);
-let { Themes: E } = n(680049).zv,
-    { SemanticColors: A } = d.z,
+    p = n(857526),
+    m = n(677370);
+let { Themes: g } = n(680049).zv,
+    { SemanticColors: A } = c.z,
     { RawColors: I } = u.z,
-    { SemanticColorExperiments: T } = c.z,
-    { SemanticColorHighContrast: y } = _.z,
-    { Shadows: S } = m.z,
-    { Spacing: v } = g.z,
-    { Modules: C } = p.z,
-    { Layout: b, Space: N } = f.zv,
-    R = l()(I, (e) => i()(e)),
-    O = {
-        themes: E,
-        modules: C,
-        colors: l()(A, (e, t) => {
-            let n = t;
-            return {
-                css: x(n),
-                resolve(t) {
-                    let r = e[t.theme],
-                        i = r.raw,
-                        a = r.opacity;
-                    if (n in T && null != t.enabledExperiments && t.enabledExperiments.length > 0)
-                        for (let e of t.enabledExperiments) {
-                            let r = T[n]?.[e]?.[t.theme];
-                            null != r && ((i = r.raw ?? i), (a = r.opacity ?? a));
-                        }
-                    if (!0 === t.highContrastModeEnabled) {
-                        let e = y[n]?.[t.theme];
-                        null != e && ((i = e.raw ?? i), (a = e.opacity ?? a));
+    { SemanticColorExperiments: T } = d.z,
+    { SemanticColorHighContrast: S } = _.z,
+    { Shadows: y } = p.z,
+    { Spacing: N } = m.z,
+    { Modules: O } = E.z,
+    { Layout: R, Space: v } = f.zv,
+    C = l()(I, (e) => i()(e)),
+    b = {
+        themes: g,
+        modules: O,
+        colors: l()(A, (e, t) => ({
+            css: M(t),
+            resolve(n) {
+                let r = e[n.theme],
+                    i = r.raw,
+                    s = r.opacity;
+                if (t in T && null != n.enabledExperiments && n.enabledExperiments.length > 0)
+                    for (let e of n.enabledExperiments) {
+                        let r = T[t]?.[e]?.[n.theme];
+                        null != r && ((i = r.raw ?? i), (s = r.opacity ?? s));
                     }
-                    if (1 === a) return O.unsafe_rawColors[i].resolve(t);
-                    {
-                        let e = R[i];
-                        return 0 !== e.alpha() && 1 !== a && (e = e.alpha(a)), D(e, t.saturation);
-                    }
-                },
-            };
-        }),
+                if (!0 === n.highContrastModeEnabled) {
+                    let e = S[t]?.[n.theme];
+                    null != e && ((i = e.raw ?? i), (s = e.opacity ?? s));
+                }
+                if (1 === s) return b.unsafe_rawColors[i].resolve(n);
+                {
+                    let e = C[i];
+                    return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), D(e, n.saturation);
+                }
+            },
+        })),
         unsafe_rawColors: l()(I, (e, t) => {
-            let n = t,
-                r = R[n];
-            return { css: x(n), resolve: (e) => D(r, e?.saturation ?? 1) };
+            let n = C[t];
+            return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
         }),
-        shadows: l()(S, (e, t) => ({
-            css: x(t),
+        shadows: l()(y, (e, t) => ({
+            css: M(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
@@ -67,9 +63,9 @@ let { Themes: E } = n(680049).zv,
             }),
         })),
         radii: h.T,
-        spacing: l()(v, (e) => `${e}px`),
-        layout: l()(b, (e) => ("number" == typeof e ? `${e}px` : e)),
-        space: l()(N, (e) => ({
+        spacing: l()(N, (e) => `${e}px`),
+        layout: l()(R, (e) => ("number" == typeof e ? `${e}px` : e)),
+        space: l()(v, (e) => ({
             css: e.css,
             resolve(t) {
                 let { density: n } = t;
@@ -104,16 +100,16 @@ function D(e, t) {
     };
 }
 function L(e, t, n) {
-    let r = s()(n.opacity ?? 1, 0, 1),
+    let r = a()(n.opacity ?? 1, 0, 1),
         i = e;
     return 1 !== t && (i = i.set("hsl.s", i.get("hsl.s") * t)), 1 !== r && (i = i.alpha(i.alpha() * r)), i;
 }
 function w(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function x(e, t) {
+function M(e, t) {
     let n = null != t ? w(t) : null,
         r = w(e);
     return `var(--${[n, r].filter(Boolean).join("-")})`;
 }
-let P = O;
+let P = b;

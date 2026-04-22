@@ -1,17 +1,19 @@
-s.d(e, { default: () => g });
+s.d(e, { default: () => b });
 var l = s(627968),
     a = s(64700),
-    r = s(732955),
-    n = s(397927),
-    i = s(817281),
-    o = s(268218),
-    h = s(711014),
-    d = s(652215),
-    p = s(114329),
-    c = s(985018),
-    u = s(869606);
-let m = (0, o.Fe)({ createPromise: () => s.e("66147").then(s.bind(s, 48736)), webpackId: 48736 });
-class C extends a.PureComponent {
+    r = s(189213),
+    n = s(331322),
+    o = s(292666),
+    i = s(452027),
+    h = s(817281),
+    d = s(268218),
+    p = s(711014),
+    c = s(652215),
+    u = s(114329),
+    m = s(985018),
+    C = s(818486);
+let g = (0, d.Fe)({ createPromise: () => s.e("66147").then(s.bind(s, 48736)), webpackId: 48736 });
+class x extends a.PureComponent {
     state = { name: this.props.folderName ?? "", color: this.props.folderColor };
     close = () => {
         this.props.onClose();
@@ -26,37 +28,37 @@ class C extends a.PureComponent {
         t.preventDefault();
         let { folderId: e } = this.props,
             { name: s, color: l } = this.state,
-            a = h.Ay.getGuildFolders().map((t) => (t.folderId === e ? { ...t, folderName: s, folderColor: l } : t));
-        (0, i.um)(a), this.close();
+            a = p.Ay.getGuildFolders().map((t) => (t.folderId === e ? { ...t, folderName: s, folderColor: l } : t));
+        (0, h.um)(a), this.close();
     };
     render() {
         let { transitionState: t, onClose: e } = this.props,
             { name: s, color: a } = this.state;
         return (0, l.jsx)("form", {
             onSubmit: this.handleSubmit,
-            children: (0, l.jsx)(r.aFV, {
-                title: c.intl.string(c.t.Dx7im5),
-                actions: [{ variant: "primary", text: c.intl.string(c.t.i4jeWR), type: "submit" }],
+            children: (0, l.jsx)(r.Modal, {
+                title: m.intl.string(m.t.Dx7im5),
+                actions: [{ variant: "primary", text: m.intl.string(m.t.i4jeWR), type: "submit" }],
                 transitionState: t,
                 onClose: e,
-                children: (0, l.jsxs)(n.BJc, {
+                children: (0, l.jsxs)(n.B, {
                     gap: 16,
                     children: [
-                        (0, l.jsx)(n.ksK, {
-                            label: c.intl.string(c.t.tGRbjA),
-                            maxLength: d.F05,
+                        (0, l.jsx)(o.k, {
+                            label: m.intl.string(m.t.tGRbjA),
+                            maxLength: c.F05,
                             value: s,
                             onChange: this.handleNameChange,
-                            placeholder: c.intl.string(c.t.xV9hVh),
+                            placeholder: m.intl.string(m.t.xV9hVh),
                             autoFocus: !0,
                         }),
-                        (0, l.jsx)(n.D0$, {
-                            label: c.intl.string(c.t.xpurRF),
-                            children: (0, l.jsx)(m, {
-                                className: u.E,
-                                defaultColor: p.DO,
-                                colors: d._tK,
-                                value: null != a ? a : p.DO,
+                        (0, l.jsx)(i.D, {
+                            label: m.intl.string(m.t.xpurRF),
+                            children: (0, l.jsx)(g, {
+                                className: C.E,
+                                defaultColor: u.DO,
+                                colors: c._tK,
+                                value: null != a ? a : u.DO,
                                 onChange: this.handleColorChange,
                             }),
                         }),
@@ -66,4 +68,4 @@ class C extends a.PureComponent {
         });
     }
 }
-let g = C;
+let b = x;

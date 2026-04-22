@@ -1,65 +1,68 @@
+"use strict";
 n.d(t, { A: () => U });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(873263),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(873263),
     o = n(311907),
-    d = n(451988),
-    c = n(990078),
-    u = n(319060),
-    A = n(397927),
-    _ = n(73153),
-    h = n(442433),
-    m = n(194894),
-    g = n(979604),
-    p = n(235986),
-    E = n(596719),
-    I = n(769015),
-    f = n(290987),
-    C = n(742077),
+    c = n(451988),
+    d = n(990078),
+    h = n(319060),
+    p = n(403581),
+    u = n(952270),
+    A = n(1215),
+    m = n(73153),
+    g = n(442433),
+    f = n(194894),
+    _ = n(979604),
+    x = n(235986),
+    y = n(596719),
+    N = n(769015),
+    C = n(290987),
+    I = n(742077),
     T = n(268387),
-    N = n(954571),
-    S = n(674378),
-    x = n(240248),
+    S = n(954571),
+    b = n(674378),
+    R = n(240248),
     v = n(471761),
-    b = n(652215),
-    y = n(985018),
-    O = n(495333);
-let L = (0, x.xI)(u.A.GAME_LIST_ROW_MIN_HEIGHT),
-    R = (0, x.xI)(u.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
-    P = Object.freeze({ [b.DpB.PLATFORM]: "Platform", [b.DpB.LAST_PLAYED]: "Last Played", [b.DpB.NAME]: "Name" }),
-    D = (e) => {
-        let { flag: t, icon: n, item: a, tooltip: r } = e,
-            s = a.libraryApplication.hasFlag(t);
-        return (0, i.jsx)(c.m, { text: r, children: (0, i.jsx)(n, { className: l()(O.up, { [O.R]: !s }) }) });
+    P = n(652215),
+    w = n(985018),
+    j = n(855189);
+let L = (0, R.xI)(h.A.GAME_LIST_ROW_MIN_HEIGHT),
+    E = (0, R.xI)(h.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
+    D = Object.freeze({ [P.DpB.PLATFORM]: "Platform", [P.DpB.LAST_PLAYED]: "Last Played", [P.DpB.NAME]: "Name" }),
+    M = (e) => {
+        let { flag: t, icon: n, item: s, tooltip: l } = e,
+            a = s.libraryApplication.hasFlag(t);
+        return (0, i.jsx)(d.m, { text: l, children: (0, i.jsx)(n, { className: r()(j.up, { [j.R]: !a }) }) });
     },
-    j = [
+    B = [
         {
-            key: b.DpB.NAME,
-            renderHeader: () => y.intl.string(y.t.dBfWfc),
+            key: P.DpB.NAME,
+            renderHeader: () => w.intl.string(w.t.dBfWfc),
             sort: !0,
-            cellClassName: O.UQ,
-            bodyCellClassName: O.SJ,
+            cellClassName: j.UQ,
+            bodyCellClassName: j.SJ,
             render: (e) =>
-                (0, i.jsxs)(p.A, {
-                    align: p.A.Align.CENTER,
+                (0, i.jsxs)(x.A, {
+                    align: x.A.Align.CENTER,
                     children: [
-                        (0, i.jsx)(I.A, { game: e.application, size: I.M.SMALL, className: O.Gt }),
+                        (0, i.jsx)(N.A, { game: e.application, size: N.M.SMALL, className: j.Gt }),
                         (0, i.jsxs)("div", {
-                            className: O.Ot,
+                            className: j.Ot,
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: O.TF,
+                                    className: j.TF,
                                     children: e.libraryApplication.getBranchedName(e.application),
                                 }),
-                                e.libraryApplication.hasFlag(b.hM6.PREMIUM)
-                                    ? (0, i.jsx)(c.m, {
-                                          text: y.intl.string(y.t.tG2SzG),
-                                          children: (0, i.jsx)(A.tvc, {
+                                e.libraryApplication.hasFlag(P.hM6.PREMIUM)
+                                    ? (0, i.jsx)(d.m, {
+                                          text: w.intl.string(w.t.tG2SzG),
+                                          children: (0, i.jsx)(p.t, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: O.oU,
+                                              className: j.oU,
                                           }),
                                       })
                                     : null,
@@ -69,78 +72,78 @@ let L = (0, x.xI)(u.A.GAME_LIST_ROW_MIN_HEIGHT),
                 }),
         },
         {
-            key: b.DpB.PLATFORM,
-            renderHeader: () => y.intl.string(y.t.YR4cHH),
+            key: P.DpB.PLATFORM,
+            renderHeader: () => w.intl.string(w.t.YR4cHH),
             sort: !0,
-            cellClassName: O.AA,
-            bodyCellClassName: O.iV,
+            cellClassName: j.AA,
+            bodyCellClassName: j.iV,
             render(e) {
                 let t = e.libraryApplication.getDistributor();
-                return (0, i.jsx)(p.A, {
-                    align: p.A.Align.CENTER,
-                    children: null != t ? b.gG4[t] : y.intl.string(y.t["F+l3Jt"]),
+                return (0, i.jsx)(x.A, {
+                    align: x.A.Align.CENTER,
+                    children: null != t ? P.gG4[t] : w.intl.string(w.t["F+l3Jt"]),
                 });
             },
         },
         {
-            key: b.DpB.LAST_PLAYED,
-            renderHeader: () => y.intl.string(y.t.FDDyjS),
+            key: P.DpB.LAST_PLAYED,
+            renderHeader: () => w.intl.string(w.t.FDDyjS),
             sort: !0,
-            cellClassName: O.SX,
-            bodyCellClassName: O.iV,
+            cellClassName: j.SX,
+            bodyCellClassName: j.iV,
             render(e) {
                 let t;
                 return (
                     (t = e.isRunning
-                        ? y.intl.string(y.t.Md326p)
+                        ? w.intl.string(w.t.Md326p)
                         : e.isNew
-                          ? y.intl.string(y.t["+F0Tho"])
+                          ? w.intl.string(w.t["+F0Tho"])
                           : 0 !== e.lastPlayed
-                            ? (0, i.jsx)(f.Ay, { end: e.lastPlayed, location: f.Ay.Locations.GAME_LIBRARY_LAST_PLAYED })
-                            : y.intl.string(y.t.EoWLru)),
-                    (0, i.jsx)(p.A, { align: p.A.Align.CENTER, className: l()({ [O.g3]: e.isNew }), children: t })
+                            ? (0, i.jsx)(C.Ay, { end: e.lastPlayed, location: C.Ay.Locations.GAME_LIBRARY_LAST_PLAYED })
+                            : w.intl.string(w.t.EoWLru)),
+                    (0, i.jsx)(x.A, { align: x.A.Align.CENTER, className: r()({ [j.g3]: e.isNew }), children: t })
                 );
             },
         },
         {
-            key: b.DpB.ACTIONS,
+            key: P.DpB.ACTIONS,
             renderHeader: () => null,
-            cellClassName: O.AT,
+            cellClassName: j.AT,
             render(e, t, n) {
-                var r, s;
+                var l, a;
                 if (null == t) throw Error("No cell props defined.");
                 let o = e.key === t.activeRowKey;
-                return (0, i.jsxs)(a.Fragment, {
+                return (0, i.jsxs)(s.Fragment, {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: O.nU,
+                            className: j.nU,
                             children: [
-                                (0, i.jsx)(D, {
-                                    flag: b.hM6.PRIVATE,
+                                (0, i.jsx)(M, {
+                                    flag: P.hM6.PRIVATE,
                                     item: e,
-                                    icon: A.G3N,
-                                    tooltip: y.intl.string(y.t.NozAop),
+                                    icon: u.G,
+                                    tooltip: w.intl.string(w.t.NozAop),
                                 }),
-                                (0, i.jsx)(D, {
-                                    flag: b.hM6.OVERLAY_DISABLED,
+                                (0, i.jsx)(M, {
+                                    flag: P.hM6.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: A.nkR,
-                                    tooltip: y.intl.string(y.t.Az9eqn),
+                                    icon: A.n,
+                                    tooltip: w.intl.string(w.t.Az9eqn),
                                 }),
                                 (0, i.jsx)(v.A, {
-                                    className: l()(O.up, { [O.R]: !e.supportsCloudSync }),
+                                    className: r()(j.up, { [j.R]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication,
                                 }),
                             ],
                         }),
-                        (0, S.XZ)(e.libraryApplication)
-                            ? (0, i.jsx)(g.A, {
+                        (0, b.XZ)(e.libraryApplication)
+                            ? (0, i.jsx)(_.A, {
                                   analyticsListSort:
-                                      ((r = t.sortKey),
-                                      (s = t.sortDirection),
-                                      `${P[r]} ${s === b.tSW.ASCENDING ? "ASC" : "DESC"}`),
+                                      ((l = t.sortKey),
+                                      (a = t.sortDirection),
+                                      `${D[l]} ${a === P.tSW.ASCENDING ? "ASC" : "DESC"}`),
                                   analyticsListIndex: n,
-                                  source: b.ThZ.APPLICATION_LIBRARY,
+                                  source: P.ThZ.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
                                   playButtonVariant: o ? "primary" : "secondary",
                                   size: "sm",
@@ -154,31 +157,31 @@ let L = (0, x.xI)(u.A.GAME_LIST_ROW_MIN_HEIGHT),
             },
         },
     ],
-    M = (e) => {
+    O = (e) => {
         let {
                 item: t,
                 activeRowKey: n,
-                highlightedApplicationKey: a,
-                onMouseEnter: r,
-                onMouseLeave: s,
+                highlightedApplicationKey: s,
+                onMouseEnter: l,
+                onMouseLeave: a,
                 onContextMenu: o,
-                setRef: d,
-                ...c
+                setRef: c,
+                ...d
             } = e,
-            u = t.key === n,
-            A = t.key === a;
+            h = t.key === n,
+            p = t.key === s;
         return (0, i.jsx)("div", {
-            className: l()({ [O.eO]: u && !A, [O.HM]: A, [O.Ob]: !u && !A, [O.ic]: !u && !t.isLaunchable }),
+            className: r()({ [j.eO]: h && !p, [j.HM]: p, [j.Ob]: !h && !p, [j.ic]: !h && !t.isLaunchable }),
             ref: (e) => {
-                d(e, t.key);
+                c(e, t.key);
             },
-            onMouseEnter: () => r(t),
-            onMouseLeave: s,
+            onMouseEnter: () => l(t),
+            onMouseLeave: a,
             onContextMenu: (e) => o(e, t),
-            children: (0, i.jsx)("div", { ...c }),
+            children: (0, i.jsx)("div", { ...d }),
         });
     };
-class w extends a.PureComponent {
+class k extends s.PureComponent {
     static defaultProps = { stickyHeader: !1 };
     _didUnmount = !1;
     _rowRefs = {};
@@ -198,7 +201,7 @@ class w extends a.PureComponent {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (_.h.wait(h.Z_), this.props.scrollToRow(e, L));
+            null != e && (m.h.wait(g.Z_), this.props.scrollToRow(e, L));
         }
     }
     handleHighlightedApplicationKey() {
@@ -206,7 +209,7 @@ class w extends a.PureComponent {
         null != e &&
             null != this._rowRefs[e] &&
             (this.props.scrollToRow(this._rowRefs[e], L),
-            new d.Ep().start(R, () => {
+            new c.Ep().start(E, () => {
                 this._didUnmount || this.setState({ highlightedApplicationKey: null });
             }));
     }
@@ -225,33 +228,33 @@ class w extends a.PureComponent {
             { analyticsContext: t, applicationViewItems: n } = this.props;
         for (let t of n) {
             switch (t.libraryApplication.getDistributor()) {
-                case b.d3x.DISCORD:
+                case P.d3x.DISCORD:
                     e.num_applications_discord++;
                     break;
-                case b.d3x.STEAM:
+                case P.d3x.STEAM:
                     e.num_applications_steam++;
                     break;
-                case b.d3x.BATTLENET:
+                case P.d3x.BATTLENET:
                     e.num_applications_battlenet++;
                     break;
-                case b.d3x.TWITCH:
+                case P.d3x.TWITCH:
                     e.num_applications_twitch++;
                     break;
-                case b.d3x.UPLAY:
+                case P.d3x.UPLAY:
                     e.num_applications_uplay++;
                     break;
-                case b.d3x.ORIGIN:
+                case P.d3x.ORIGIN:
                     e.num_applications_origin++;
                     break;
-                case b.d3x.GOG:
+                case P.d3x.GOG:
                     e.num_applications_gog++;
                     break;
-                case b.d3x.EPIC:
+                case P.d3x.EPIC:
                     e.num_applications_epic++;
             }
             e.num_applications_total++;
         }
-        N.default.track(b.HAw.LIBRARY_VIEWED, { ...e, load_id: t.loadId });
+        S.default.track(P.HAw.LIBRARY_VIEWED, { ...e, load_id: t.loadId });
     }
     setActiveRowKey = (e) => {
         this.setState({ overflowMenuRowKey: e.key });
@@ -260,18 +263,18 @@ class w extends a.PureComponent {
         this._didUnmount || this.setState({ overflowMenuRowKey: null });
     };
     handleRowMouseEnter = (e) => {
-        this.props.isNavigatingByKeyboard || m.pU(e.key);
+        this.props.isNavigatingByKeyboard || f.pU(e.key);
     };
     handleRowMouseLeave = () => {
-        this.props.isNavigatingByKeyboard || m.pU(null);
+        this.props.isNavigatingByKeyboard || f.pU(null);
     };
     setRowRef = (e, t) => {
         this._rowRefs[t] = e;
     };
     handleApplicationContextMenu = (e, t) => {
         this.setActiveRowKey(t);
-        let { analyticsContext: a } = this.props;
-        (0, h.L3)(
+        let { analyticsContext: s } = this.props;
+        (0, g.L3)(
             e,
             async () => {
                 let { default: e } = await n.e("881").then(n.bind(n, 163368));
@@ -280,34 +283,34 @@ class w extends a.PureComponent {
                         ...n,
                         applicationId: t.libraryApplication.id,
                         branchId: t.libraryApplication.branchId,
-                        analyticsContext: a,
+                        analyticsContext: s,
                     });
             },
             { onClose: this.clearActiveRowKey },
         );
     };
     handleSort(e, t) {
-        m.vt(e, t);
+        f.vt(e, t);
     }
     renderImportHelp() {
         let e,
             { applicationViewItems: t, filterQuery: n } = this.props;
         return t.length > 0
             ? null
-            : ((e = "" !== n ? y.intl.format(y.t["4Q1TAr"], { query: n }) : y.intl.string(y.t["0Y+0PY"])),
+            : ((e = "" !== n ? w.intl.format(w.t["4Q1TAr"], { query: n }) : w.intl.string(w.t["0Y+0PY"])),
               (0, i.jsxs)("div", {
-                  className: O.mv,
+                  className: j.mv,
                   children: [
-                      (0, i.jsx)("div", { className: O.Zd }),
-                      (0, i.jsx)(p.A, {
+                      (0, i.jsx)("div", { className: j.Zd }),
+                      (0, i.jsx)(x.A, {
                           grow: 0,
                           shrink: 0,
-                          direction: p.A.Direction.VERTICAL,
+                          direction: x.A.Direction.VERTICAL,
                           children: (0, i.jsxs)("div", {
-                              className: O.q6,
+                              className: j.q6,
                               children: [
-                                  (0, i.jsx)("div", { className: O.ks, children: y.intl.string(y.t.Lw8X2j) }),
-                                  (0, i.jsx)("div", { className: O.Li, children: e }),
+                                  (0, i.jsx)("div", { className: j.ks, children: w.intl.string(w.t.Lw8X2j) }),
+                                  (0, i.jsx)("div", { className: j.Li, children: e }),
                               ],
                           }),
                       }),
@@ -315,27 +318,27 @@ class w extends a.PureComponent {
               }));
     }
     render() {
-        let { sortKey: e, sortDirection: t, applicationViewItems: n, activeRowKey: r, stickyHeader: l } = this.props,
-            { overflowMenuRowKey: s, highlightedApplicationKey: o } = this.state;
-        return (0, i.jsxs)(a.Fragment, {
+        let { sortKey: e, sortDirection: t, applicationViewItems: n, activeRowKey: l, stickyHeader: r } = this.props,
+            { overflowMenuRowKey: a, highlightedApplicationKey: o } = this.state;
+        return (0, i.jsxs)(s.Fragment, {
             children: [
                 n.length > 0
-                    ? (0, i.jsx)(E.A, {
-                          columns: j,
+                    ? (0, i.jsx)(y.A, {
+                          columns: B,
                           data: n,
                           sortData: !1,
-                          rowComponent: M,
-                          className: O.tp,
-                          headerClassName: l ? O.ln : O.wx,
-                          headerCellClassName: O.e4,
-                          sortedHeaderCellClassName: O.dm,
-                          bodyCellClassName: O.hC,
-                          rowClassName: O.G9,
+                          rowComponent: O,
+                          className: j.tp,
+                          headerClassName: r ? j.ln : j.wx,
+                          headerCellClassName: j.e4,
+                          sortedHeaderCellClassName: j.dm,
+                          bodyCellClassName: j.hC,
+                          rowClassName: j.G9,
                           sortKey: e,
                           sortDirection: t,
-                          stickyHeader: l,
+                          stickyHeader: r,
                           rowProps: {
-                              activeRowKey: s ?? r,
+                              activeRowKey: a ?? l,
                               highlightedApplicationKey: o,
                               onMouseEnter: this.handleRowMouseEnter,
                               onMouseLeave: this.handleRowMouseLeave,
@@ -343,7 +346,7 @@ class w extends a.PureComponent {
                               setRef: this.setRowRef,
                           },
                           cellProps: {
-                              activeRowKey: s ?? r,
+                              activeRowKey: a ?? l,
                               onContextMenu: this.handleApplicationContextMenu,
                               setActiveRowKey: this.setActiveRowKey,
                               clearActiveRowKey: this.clearActiveRowKey,
@@ -359,38 +362,38 @@ class w extends a.PureComponent {
     }
 }
 function U(e) {
-    let t = a.useContext(N.AnalyticsContext),
-        n = (0, s.zy)(),
+    let t = s.useContext(S.AnalyticsContext),
+        n = (0, a.zy)(),
         {
-            applicationViewItems: r,
-            filterQuery: l,
-            fetched: d,
-        } = (0, o.cf)([C.A], () => ({
-            applicationViewItems: C.A.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: C.A.applicationFilterQuery,
-            fetched: C.A.hasFetchedApplications,
+            applicationViewItems: l,
+            filterQuery: r,
+            fetched: c,
+        } = (0, o.cf)([I.A], () => ({
+            applicationViewItems: I.A.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: I.A.applicationFilterQuery,
+            fetched: I.A.hasFetchedApplications,
         })),
         {
-            sortKey: c,
-            sortDirection: u,
-            activeRowKey: A,
-            isNavigatingByKeyboard: _,
+            sortKey: d,
+            sortDirection: h,
+            activeRowKey: p,
+            isNavigatingByKeyboard: u,
         } = (0, o.cf)([T.A], () => ({
             sortKey: T.A.sortKey,
             sortDirection: T.A.sortDirection,
             activeRowKey: T.A.activeRowKey,
             isNavigatingByKeyboard: T.A.isNavigatingByKeyboard,
         }));
-    return (0, i.jsx)(w, {
+    return (0, i.jsx)(k, {
         ...e,
         analyticsContext: t,
         location: n,
-        applicationViewItems: r,
-        filterQuery: l,
-        fetched: d,
-        sortKey: c,
-        sortDirection: u,
-        activeRowKey: A,
-        isNavigatingByKeyboard: _,
+        applicationViewItems: l,
+        filterQuery: r,
+        fetched: c,
+        sortKey: d,
+        sortDirection: h,
+        activeRowKey: p,
+        isNavigatingByKeyboard: u,
     });
 }

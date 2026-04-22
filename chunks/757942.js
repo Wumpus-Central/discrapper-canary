@@ -1,69 +1,69 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => C });
 var i = n(627968);
 n(64700);
-var s = n(735438),
-    r = n.n(s),
-    a = n(397927),
-    l = n(310953),
-    o = n(366811),
-    c = n(808728),
-    d = n(967198),
+var l = n(735438),
+    r = n.n(l),
+    s = n(192308),
+    o = n(310953),
+    a = n(366811),
+    d = n(808728),
+    c = n(967198),
     u = n(711014),
     _ = n(645959),
-    m = n(203982),
-    A = n(265422),
-    g = n(652215),
-    E = n(790782);
-function h(e, t) {
+    A = n(203982),
+    E = n(265422),
+    I = n(652215),
+    h = n(790782);
+function g(e, t) {
     return [
-        { resourceId: e, type: E.P.GUILD_EVENT },
-        ...(e === g.ME
+        { resourceId: e, type: h.P.GUILD_EVENT },
+        ...(e === I.ME
             ? _.default.getPrivateChannelIds()
-            : (0, l.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
+            : (0, o.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
-let p = r().throttle(function (e, t) {
-    var s;
+let C = r().throttle(function (e, t) {
+    var l;
     let r,
-        l,
+        o,
         _,
         {
-            channelPredicate: E = () => !0,
-            guildPredicate: p = () => !0,
-            guildFeaturePredicate: C = () => !1,
-            ensureChatIsVisible: x = () => !1,
+            channelPredicate: h = () => !0,
+            guildPredicate: C = () => !0,
+            guildFeaturePredicate: p = () => !1,
+            ensureChatIsVisible: S = () => !1,
             withVoiceChannels: T = !1,
         } = t,
-        I = o.A.getState().guildId ?? g.ME,
-        S = o.A.getState().channelId,
-        f =
-            ((s = I),
-            (l = (r = [g.ME, ...u.Ay.getFlattenedGuildIds()]).indexOf(s)),
+        N = a.A.getState().guildId ?? I.ME,
+        b = a.A.getState().channelId,
+        L =
+            ((l = N),
+            (o = (r = [I.ME, ...u.Ay.getFlattenedGuildIds()]).indexOf(l)),
             e > 0
-                ? r.slice(l).concat(r.slice(0, l), s)
-                : (r.splice(l, 0, s), r.slice(l + 1).concat(r.slice(0, l + 1)))),
-        N = e > 0 ? 0 : f.length - 1,
-        b = h(I, T),
-        R = b.indexOf(S) + e;
-    for (; null != I && "" !== I; ) {
-        if (((_ = b[R]), p(I)))
+                ? r.slice(o).concat(r.slice(0, o), l)
+                : (r.splice(o, 0, l), r.slice(o + 1).concat(r.slice(0, o + 1)))),
+        f = e > 0 ? 0 : L.length - 1,
+        m = g(N, T),
+        O = m.indexOf(b) + e;
+    for (; null != N && "" !== N; ) {
+        if (((_ = m[O]), C(N)))
             for (; null != _ && "" !== _; ) {
                 if ("string" == typeof _) {
-                    if (E(I, _)) return (0, A.i)(I, _, !1, x(I, _));
-                } else if ("object" == typeof _ && C(_.resourceId, _.type))
+                    if (h(N, _)) return (0, E.i)(N, _, !1, S(N, _));
+                } else if ("object" == typeof _ && p(_.resourceId, _.type))
                     return (
-                        I !== d.A.getGuildId() && (0, A.i)(I, c.Ay.getDefaultChannel(I)?.id),
-                        (0, a.mMO)(async () => {
-                            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("27728")]).then(
+                        N !== c.A.getGuildId() && (0, E.i)(N, d.Ay.getDefaultChannel(N)?.id),
+                        (0, s.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("19452")]).then(
                                 n.bind(n, 926956),
                             );
-                            return (t) => (0, i.jsx)(e, { ...t, guildId: I });
+                            return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                (R += e), (_ = b[R]);
+                (O += e), (_ = m[O]);
             }
-        if (((N += e), null == (I = f[N]) || "" === I)) break;
-        (b = h(I, T)), (R = e < 0 ? b.length - 1 : 0);
+        if (((f += e), null == (N = L[f]) || "" === N)) break;
+        (m = g(N, T)), (O = e < 0 ? m.length - 1 : 0);
     }
-    m._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
-}, g.ugG);
+    A._.dispatch(I.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+}, I.ugG);

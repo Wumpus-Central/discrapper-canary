@@ -1,160 +1,160 @@
-i.d(t, { default: () => I });
+i.d(t, { default: () => R });
 var n = i(627968),
-    l = i(284009),
-    s = i.n(l),
-    r = i(311907),
-    a = i(397927),
-    d = i(442433),
-    c = i(793574),
-    o = i(688810),
-    u = i(359047),
-    g = i(769591),
-    A = i(36942),
-    E = i(260509),
-    h = i(961350),
+    s = i(284009),
+    l = i.n(s),
+    a = i(311907),
+    r = i(192308),
+    d = i(861672),
+    o = i(477782),
+    c = i(442433),
+    u = i(793574),
+    g = i(688810),
+    A = i(359047),
+    E = i(769591),
+    h = i(36942),
+    _ = i(260509),
+    S = i(961350),
     p = i(287809),
-    _ = i(346247),
-    S = i(810263),
-    b = i(911612),
-    N = i(664967),
+    N = i(346247),
+    b = i(810263),
+    L = i(911612),
+    f = i(664967),
     y = i(834265),
-    f = i(507238),
-    G = i(881136),
-    L = i(813597),
-    M = i(21605),
-    v = i(684509),
-    x = i(153594),
-    D = i(531335),
-    j = i(652215),
-    O = i(985018);
-function m(e) {
-    let { guild: t, onSelect: l, hideSettings: c } = e,
-        o = t.id,
-        m = (0, r.bG)([p.default], () => {
+    G = i(507238),
+    M = i(881136),
+    x = i(813597),
+    j = i(21605),
+    m = i(684509),
+    D = i(153594),
+    v = i(531335),
+    O = i(652215),
+    I = i(985018);
+function T(e) {
+    let { guild: t, onSelect: s, hideSettings: u } = e,
+        g = t.id,
+        T = (0, a.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
-            return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, E.bM)(t, e);
+            return l()(null != e, "GuildContextMenu: user cannot be undefined"), (0, _.bM)(t, e);
         }, [t]),
-        I = (0, D.A)({ guild: t, source: j.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        U = (0, x.A)(o),
-        T = (0, f.A)(t),
-        R = (0, G.A)(t),
-        C = (0, v.A)(t),
-        P = (0, _.A)({
+        R = (0, v.A)({ guild: t, source: O.PE1.GUILD_CONTEXT_MENU, channel: null }),
+        U = (0, D.A)(g),
+        P = (0, G.A)(t),
+        k = (0, M.A)(t),
+        B = (0, m.A)(t),
+        C = (0, N.A)({
             guildId: t.id,
-            userId: h.default.getId(),
+            userId: S.default.getId(),
             analyticsLocation: {
-                page: j.liQ.GUILD_CHANNEL,
-                section: j.JJy.CHAT_USERNAME,
-                object: j.ZSU.CONTEXT_MENU_ITEM,
+                page: O.liQ.GUILD_CHANNEL,
+                section: O.JJy.CHAT_USERNAME,
+                object: O.ZSU.CONTEXT_MENU_ITEM,
             },
         }),
-        k = (0, b.A)(t),
-        B = (0, u.A)(t.id),
-        X = (0, S.A)(t),
-        V = (0, y.A)(t, { section: j.JJy.GUILD_LIST }),
-        w = (0, A.A)(t.id),
-        H = (0, L.A)(t.id),
-        Y = (0, N.A)(t),
-        F = (0, g.os)("GuildContextMenu"),
-        W = (0, M.c)(t);
-    function J() {
-        (0, a.mMO)(async () => {
+        X = (0, L.A)(t),
+        Y = (0, A.A)(t.id),
+        w = (0, b.A)(t),
+        H = (0, y.A)(t, { section: O.JJy.GUILD_LIST }),
+        F = (0, h.A)(t.id),
+        W = (0, x.A)(t.id),
+        V = (0, f.A)(t),
+        J = (0, E.os)("GuildContextMenu"),
+        z = (0, j.c)(t);
+    function Q() {
+        (0, r.openModalLazy)(async () => {
             let { default: e } = await i.e("53485").then(i.bind(i, 20508));
             return (i) => (0, n.jsx)(e, { ...i, guild: t });
         });
     }
-    return t.features.has(j.GuildFeatures.HUB)
-        ? (0, n.jsxs)(a.W1t, {
+    return t.features.has(O.GuildFeatures.HUB)
+        ? (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
-              onClose: d.Z_,
-              "aria-label": O.intl.string(O.t.HpQykc),
-              onSelect: l,
+              onClose: c.Z_,
+              "aria-label": I.intl.string(I.t.HpQykc),
+              onSelect: s,
               children: [
-                  (0, n.jsxs)(a.rXV, {
+                  (0, n.jsxs)(o.rX, {
                       children: [
-                          I,
-                          (0, n.jsx)(a.Drp, {
+                          R,
+                          (0, n.jsx)(o.Dr, {
                               id: "privacy",
-                              label: O.intl.string(O.t.IlFwwR),
+                              label: I.intl.string(I.t.IlFwwR),
                               action: () =>
-                                  (0, a.mMO)(async () => {
+                                  (0, r.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
-                                          i.e("53609"),
+                                          i.e("33098"),
                                           i.e("62026"),
-                                          i.e("84183"),
+                                          i.e("95311"),
                                       ]).then(i.bind(i, 585265));
                                       return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                   }),
                           }),
-                          P,
+                          C,
                       ],
                   }),
-                  m
+                  T
                       ? null
-                      : (0, n.jsx)(a.rXV, {
-                            children: (0, n.jsx)(a.Drp, {
+                      : (0, n.jsx)(o.rX, {
+                            children: (0, n.jsx)(o.Dr, {
                                 id: "leave-guild",
-                                label: O.intl.string(O.t.Dv8gFT),
-                                action: J,
+                                label: I.intl.string(I.t.Dv8gFT),
+                                action: Q,
                                 color: "danger",
                             }),
                         }),
-                  (0, n.jsx)(a.rXV, { children: X }),
+                  (0, n.jsx)(o.rX, { children: w }),
               ],
           })
-        : (0, n.jsxs)(a.W1t, {
+        : (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
-              onClose: d.Z_,
-              "aria-label": O.intl.string(O.t.HpQykc),
-              onSelect: l,
+              onClose: c.Z_,
+              "aria-label": I.intl.string(I.t.HpQykc),
+              onSelect: s,
               children: [
-                  (0, n.jsx)(a.rXV, { children: V }),
-                  (0, n.jsx)(a.rXV, { children: I }),
-                  (0, n.jsxs)(a.rXV, {
-                      children: [T, F || __OVERLAY__ ? null : R, F && !__OVERLAY__ ? H : null, U, w],
-                  }),
-                  (0, n.jsxs)(a.rXV, {
+                  (0, n.jsx)(o.rX, { children: H }),
+                  (0, n.jsx)(o.rX, { children: R }),
+                  (0, n.jsxs)(o.rX, { children: [P, J || __OVERLAY__ ? null : k, J && !__OVERLAY__ ? W : null, U, F] }),
+                  (0, n.jsxs)(o.rX, {
                       children: [
-                          c ? null : C,
+                          u ? null : B,
                           __OVERLAY__
                               ? null
-                              : (0, n.jsx)(a.Drp, {
+                              : (0, n.jsx)(o.Dr, {
                                     id: "privacy",
-                                    label: O.intl.string(O.t.BayiAo),
+                                    label: I.intl.string(I.t.BayiAo),
                                     action: () =>
-                                        (0, a.mMO)(async () => {
+                                        (0, r.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                i.e("53609"),
+                                                i.e("33098"),
                                                 i.e("62026"),
-                                                i.e("84183"),
+                                                i.e("95311"),
                                             ]).then(i.bind(i, 585265));
                                             return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                         }),
                                 }),
-                          P,
+                          C,
                       ],
                   }),
-                  (0, n.jsxs)(a.rXV, { children: [k, B] }),
-                  (0, n.jsxs)(a.rXV, {
+                  (0, n.jsxs)(o.rX, { children: [X, Y] }),
+                  (0, n.jsxs)(o.rX, {
                       children: [
-                          Y,
-                          !m &&
-                              (0, n.jsx)(a.Drp, {
+                          V,
+                          !T &&
+                              (0, n.jsx)(o.Dr, {
                                   id: "leave-guild",
-                                  label: O.intl.string(O.t.J2TBi3),
-                                  action: J,
+                                  label: I.intl.string(I.t.J2TBi3),
+                                  action: Q,
                                   color: "danger",
                               }),
                       ],
                   }),
-                  (0, n.jsx)(a.rXV, { children: W }),
-                  (0, n.jsx)(a.rXV, { children: X }),
+                  (0, n.jsx)(o.rX, { children: z }),
+                  (0, n.jsx)(o.rX, { children: w }),
               ],
           });
 }
-function I(e) {
-    let { analyticsLocations: t } = (0, o.Ay)(c.A.CONTEXT_MENU);
-    return (0, n.jsx)(o.f5, { value: t, children: (0, n.jsx)(m, { ...e }) });
+function R(e) {
+    let { analyticsLocations: t } = (0, g.Ay)(u.A.CONTEXT_MENU);
+    return (0, n.jsx)(g.f5, { value: t, children: (0, n.jsx)(T, { ...e }) });
 }

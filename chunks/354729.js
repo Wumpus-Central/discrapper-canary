@@ -13,101 +13,54 @@ function n(e) {
 }
 var r,
     i = "basil",
-    a = function (e) {
-        return 3 === e ? "v3" : e;
-    },
     s = "https://js.stripe.com",
-    o = "".concat(s, "/").concat(i, "/stripe.js"),
-    l = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
-    u = /^https:\/\/js\.stripe\.com\/(v3|[a-z]+)\/stripe\.js(\?.*)?$/,
-    c =
+    a = "".concat(s, "/").concat(i, "/stripe.js"),
+    o = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
+    l = /^https:\/\/js\.stripe\.com\/(v3|[a-z]+)\/stripe\.js(\?.*)?$/,
+    u =
         "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used",
-    d = function (e) {
-        return l.test(e) || u.test(e);
-    },
-    _ = function () {
+    d = function () {
         for (var e = document.querySelectorAll('script[src^="'.concat(s, '"]')), t = 0; t < e.length; t++) {
-            var n = e[t];
-            if (d(n.src)) return n;
+            var n,
+                r = e[t];
+            if (((n = r.src), o.test(n) || l.test(n))) return r;
         }
         return null;
     },
-    f = function (e) {
+    c = function (e) {
         var t = e && !e.advancedFraudSignals ? "?advancedFraudSignals=false" : "",
             n = document.createElement("script");
-        n.src = "".concat(o).concat(t);
+        n.src = "".concat(a).concat(t);
         var r = document.head || document.body;
         if (!r) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
         return r.appendChild(n), n;
     },
-    p = function (e, t) {
+    _ = function (e, t) {
         e && e._registerWrapper && e._registerWrapper({ name: "stripe-js", version: "7.3.1", startTime: t });
     },
+    f = null,
+    E = null,
     h = null,
-    m = null,
-    g = null,
-    E = function (e) {
-        return function (t) {
-            e(Error("Failed to load Stripe.js", { cause: t }));
-        };
-    },
-    A = function (e, t) {
-        return function () {
-            window.Stripe ? e(window.Stripe) : t(Error("Stripe.js not available"));
-        };
-    },
-    I = function (e) {
-        return null !== h
-            ? h
-            : (h = new Promise(function (t, n) {
-                  if ("u" < typeof window || "u" < typeof document) return void t(null);
-                  if ((window.Stripe && e && console.warn(c), window.Stripe)) return void t(window.Stripe);
-                  try {
-                      var r,
-                          i = _();
-                      i && e
-                          ? console.warn(c)
-                          : i
-                            ? i &&
-                              null !== g &&
-                              null !== m &&
-                              (i.removeEventListener("load", g),
-                              i.removeEventListener("error", m),
-                              null == (r = i.parentNode) || r.removeChild(i),
-                              (i = f(e)))
-                            : (i = f(e)),
-                          (g = A(t, n)),
-                          (m = E(n)),
-                          i.addEventListener("load", g),
-                          i.addEventListener("error", m);
-                  } catch (e) {
-                      n(e);
-                      return;
-                  }
-              })).catch(function (e) {
-                  return (h = null), Promise.reject(e);
-              });
-    },
-    T = function (e, t, n) {
+    p = function (e, t, n) {
         if (null === e) return null;
-        var r = t[0].match(/^pk_test/),
-            s = a(e.version),
-            o = i;
-        r &&
-            s !== o &&
+        var r,
+            s = t[0].match(/^pk_test/),
+            a = 3 === (r = e.version) ? "v3" : r;
+        s &&
+            a !== i &&
             console.warn(
                 "Stripe.js@"
-                    .concat(s, " was loaded on the page, but @stripe/stripe-js@")
+                    .concat(a, " was loaded on the page, but @stripe/stripe-js@")
                     .concat("7.3.1", " expected Stripe.js@")
                     .concat(
-                        o,
+                        i,
                         ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning",
                     ),
             );
-        var l = e.apply(void 0, t);
-        return p(l, n), l;
+        var o = e.apply(void 0, t);
+        return _(o, n), o;
     },
-    y = function (e) {
+    m = function (e) {
         var t =
             "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(
                 JSON.stringify(e),
@@ -117,28 +70,62 @@ var r,
         if (1 === Object.keys(e).length && "boolean" == typeof e.advancedFraudSignals) return e;
         throw Error(t);
     },
-    S = !1,
-    v = function () {
-        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        S = !0;
-        var i = Date.now();
-        return I(r).then(function (e) {
-            return T(e, t, i);
+    g = !1,
+    A = function () {
+        for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+        g = !0;
+        var s = Date.now();
+        return ((e = r),
+        null !== f
+            ? f
+            : (f = new Promise(function (t, n) {
+                  if ("u" < typeof window || "u" < typeof document) return void t(null);
+                  if ((window.Stripe && e && console.warn(u), window.Stripe)) return void t(window.Stripe);
+                  try {
+                      var r,
+                          i = d();
+                      i && e
+                          ? console.warn(u)
+                          : i
+                            ? i &&
+                              null !== h &&
+                              null !== E &&
+                              (i.removeEventListener("load", h),
+                              i.removeEventListener("error", E),
+                              null == (r = i.parentNode) || r.removeChild(i),
+                              (i = c(e)))
+                            : (i = c(e)),
+                          (h = function () {
+                              window.Stripe ? t(window.Stripe) : n(Error("Stripe.js not available"));
+                          }),
+                          (E = function (e) {
+                              n(Error("Failed to load Stripe.js", { cause: e }));
+                          }),
+                          i.addEventListener("load", h),
+                          i.addEventListener("error", E);
+                  } catch (e) {
+                      n(e);
+                      return;
+                  }
+              })).catch(function (e) {
+                  return (f = null), Promise.reject(e);
+              })).then(function (e) {
+            return p(e, n, s);
         });
     };
-(v.setLoadParameters = function (e) {
+(A.setLoadParameters = function (e) {
     if (
         !(
-            S &&
+            g &&
             r &&
-            Object.keys(y(e)).reduce(function (t, n) {
+            Object.keys(m(e)).reduce(function (t, n) {
                 var i;
                 return t && e[n] === (null == (i = r) ? void 0 : i[n]);
             }, !0)
         )
     ) {
-        if (S) throw Error("You cannot change load parameters after calling loadStripe");
-        r = y(e);
+        if (g) throw Error("You cannot change load parameters after calling loadStripe");
+        r = m(e);
     }
 }),
-    (t.loadStripe = v);
+    (t.loadStripe = A);

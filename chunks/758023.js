@@ -1,49 +1,52 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => N });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(417597),
     o = n(990078),
-    d = n(397927),
-    c = n(374084),
-    u = n(913423),
-    m = n(961350),
-    g = n(199940),
-    x = n(132514),
-    h = n(817136),
-    _ = n(985018),
-    A = n(659233);
-let p = function (e) {
+    d = n(192308),
+    c = n(821609),
+    u = n(939249),
+    m = n(22231),
+    g = n(140735),
+    h = n(374084),
+    x = n(913423),
+    _ = n(961350),
+    p = n(199940),
+    A = n(132514),
+    E = n(817136),
+    f = n(985018),
+    j = n(327084);
+let N = function (e) {
     let { guildId: t } = e,
-        l = (0, a.cf)([x.A], () => x.A.getSettings().welcomeMessage ?? h.p),
-        p = s.useCallback(
+        s = (0, a.cf)([A.A], () => A.A.getSettings().welcomeMessage ?? E.p),
+        N = l.useCallback(
             () =>
-                (0, d.mMO)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: e } = await n.e("94194").then(n.bind(n, 930345));
-                    return (n) => (0, i.jsx)(e, { ...n, guildId: t, welcomeMessage: l, onSave: (e) => (0, g.hL)(e) });
+                    return (n) => (0, i.jsx)(e, { ...n, guildId: t, welcomeMessage: s, onSave: (e) => (0, p.hL)(e) });
                 }),
-            [t, l],
+            [t, s],
         ),
-        f = (0, a.bG)([m.default], () => m.default.getId());
-    return (0, c.Fn)(l)
-        ? (0, i.jsx)(d.Button, { variant: "primary", size: "sm", text: _.intl.string(_.t["9Z+aEP"]), onClick: p })
-        : (0, i.jsxs)(d.DUT, {
-              className: A.ab,
-              onClick: p,
+        I = (0, a.bG)([_.default], () => _.default.getId());
+    return (0, h.Fn)(s)
+        ? (0, i.jsx)(c.$, { variant: "primary", size: "sm", text: f.intl.string(f.t["9Z+aEP"]), onClick: N })
+        : (0, i.jsxs)(u.D, {
+              className: j.ab,
+              onClick: N,
               children: [
-                  (0, i.jsx)(u.A, {
+                  (0, i.jsx)(x.A, {
                       guildId: t,
-                      welcomeMessage: { authorIds: l.authorIds.length > 0 ? l.authorIds : [f], message: l.message },
+                      welcomeMessage: { authorIds: s.authorIds.length > 0 ? s.authorIds : [I], message: s.message },
                   }),
                   (0, i.jsx)(o.m, {
-                      text: _.intl.string(_.t.bt75uw),
+                      text: f.intl.string(f.t.bt75uw),
                       children: (0, i.jsxs)("div", {
-                          className: r()(A.Md, A.Tu),
+                          className: r()(j.Md, j.Tu),
                           children: [
-                              (0, i.jsx)(d.R2l, { size: "md", color: "currentColor" }),
-                              (0, i.jsx)(d.AC4, { children: _.intl.string(_.t.bt75uw) }),
+                              (0, i.jsx)(m.R, { size: "md", color: "currentColor" }),
+                              (0, i.jsx)(g.A, { children: f.intl.string(f.t.bt75uw) }),
                           ],
                       }),
                   }),

@@ -1,46 +1,50 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     a = n.n(l),
     r = n(311907),
-    o = n(397927),
-    d = n(544420),
-    c = n(15285),
-    u = n(985018),
-    m = n(342905),
-    g = n(778437),
-    _ = n(435115),
-    x = n(885106);
-function A(e) {
+    o = n(305866),
+    d = n(783878),
+    u = n(404778),
+    c = n(123292),
+    g = n(821609),
+    m = n(544420),
+    _ = n(15285),
+    A = n(985018),
+    h = n(133801),
+    p = n(604949),
+    x = n(653307),
+    E = n(818050);
+function T(e) {
     let { onClose: t } = e,
-        n = (0, r.bG)([c.Ay], () => c.Ay.getCandidateGames()),
-        [l, A] = s.useState(null),
-        h = n.map((e) => ({ id: e.pid.toString(), value: e, label: null != e.name ? e.name : "" }));
-    return (0, i.jsxs)(o.lGe, {
-        className: a()(m.H, g.Y_),
-        "aria-label": u.intl.string(u.t.GTCx0p),
+        n = (0, r.bG)([_.Ay], () => _.Ay.getCandidateGames()),
+        [l, T] = s.useState(null),
+        S = n.map((e) => ({ id: e.pid.toString(), value: e, label: null != e.name ? e.name : "" }));
+    return (0, i.jsxs)(o.l, {
+        className: a()(h.H, p.Y_),
+        "aria-label": A.intl.string(A.t.GTCx0p),
         children: [
-            (0, i.jsx)(o.ZiE, {
+            (0, i.jsx)(d.Z, {
                 selectionMode: "single",
-                placeholder: u.intl.string(u.t.XqMe3N),
+                placeholder: A.intl.string(A.t.XqMe3N),
                 value: l,
-                options: h,
+                options: S,
                 onSelectionChange: function (e) {
-                    A(e);
+                    T(e);
                 },
             }),
-            (0, i.jsx)(o.cGx, { className: a()(x.Ot, x.QB) }),
+            (0, i.jsx)(u.c, { className: a()(E.Ot, E.QB) }),
             (0, i.jsxs)("div", {
-                className: a()(m.o, _.xM),
+                className: a()(h.o, x.xM),
                 children: [
-                    (0, i.jsx)(o.QWc, { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: t }),
-                    (0, i.jsx)(o.Button, {
+                    (0, i.jsx)(c.Q, { variant: "secondary", text: A.intl.string(A.t["ETE/oC"]), onClick: t }),
+                    (0, i.jsx)(g.$, {
                         variant: "primary",
-                        text: u.intl.string(u.t.GTCx0p),
+                        text: A.intl.string(A.t.GTCx0p),
                         disabled: null == l,
                         onClick: function () {
-                            null != l && (d.Ay.addGame(l.pid, l.name), t());
+                            null != l && (m.Ay.addGame(l.pid, l.name), t());
                         },
                     }),
                 ],

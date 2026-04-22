@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var r = n(223567);
 function i() {
     let e = r.A.getIsExperimentEligible();
@@ -13,10 +13,7 @@ function a() {
     let e = Date.now();
     return e >= r.A.startTimeMs && e <= r.A.endTimeMs;
 }
-function o() {
-    return i() && null != r.A.soundpack ? r.A.soundpack : null;
-}
-let l = {
+let o = {
     isEligible: i,
     useHolidaySoundpack: function () {
         return s() && null != r.A.soundpack && null != r.A.soundpackLabel
@@ -30,5 +27,7 @@ let l = {
     getLoadingTips: function () {
         return a() ? r.A.getLoadingTips?.() : null;
     },
-    getHolidaySoundpack: o,
+    getHolidaySoundpack: function () {
+        return i() && null != r.A.soundpack ? r.A.soundpack : null;
+    },
 };

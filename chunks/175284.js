@@ -1,118 +1,120 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(686956),
-    d = n(975571),
-    c = n(50249),
-    u = n(512031),
-    m = n(652215),
-    g = n(985018),
-    x = n(823059);
-function h(e) {
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(534514),
+    o = n(834730),
+    d = n(892547),
+    c = n(821609),
+    u = n(686956),
+    m = n(975571),
+    g = n(50249),
+    h = n(512031),
+    x = n(652215),
+    _ = n(985018),
+    p = n(823059);
+function A(e) {
     let {
             guild: t,
             everyoneRole: n,
-            filteredRoles: l,
+            filteredRoles: s,
             setEditRoleId: r,
-            query: o,
-            setQuery: d,
-            setHeaderHeight: c,
+            query: d,
+            setQuery: c,
+            setHeaderHeight: u,
         } = e,
-        m = s.useRef(null);
-    s.useEffect(() => {
-        c(m.current?.offsetHeight ?? u.p4);
-    }, [c]);
-    let h = s.useCallback(() => {
+        m = l.useRef(null);
+    l.useEffect(() => {
+        u(m.current?.offsetHeight ?? h.p4);
+    }, [u]);
+    let g = l.useCallback(() => {
         r(n.id);
     }, [r, n.id]);
     return (0, i.jsxs)("div", {
         ref: m,
         children: [
-            (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", children: g.intl.string(g.t["LPJmL/"]) }),
-            (0, i.jsx)(a.Text, {
-                className: x.h_,
+            (0, i.jsx)(a.D, { variant: "heading-lg/semibold", children: _.intl.string(_.t["LPJmL/"]) }),
+            (0, i.jsx)(o.E, {
+                className: p.h_,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: g.intl.string(g.t["1ydhVp"]),
+                children: _.intl.string(_.t["1ydhVp"]),
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(E, {
                 guild: t,
                 everyoneRole: n,
-                filteredRoles: l,
-                query: o,
-                setQuery: d,
-                onEveryoneRoleClick: h,
+                filteredRoles: s,
+                query: d,
+                setQuery: c,
+                onEveryoneRoleClick: g,
             }),
         ],
     });
 }
-function _(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: s, query: l, setQuery: o, onEveryoneRoleClick: u } = e;
+function E(e) {
+    let { guild: t, everyoneRole: n, filteredRoles: l, query: s, setQuery: a, onEveryoneRoleClick: d } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.A, { role: n, onClick: u }),
-            (0, i.jsx)(A, { guild: t, query: l, setQuery: o }),
-            (0, i.jsx)(a.Text, {
-                className: x.BK,
+            (0, i.jsx)(g.A, { role: n, onClick: d }),
+            (0, i.jsx)(f, { guild: t, query: s, setQuery: a }),
+            (0, i.jsx)(o.E, {
+                className: p.BK,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: g.intl.format(g.t.xkC3Yf, { articleURL: d.A.getArticleURL(m.MVz.PERMISSIONS_TUTORIAL) }),
+                children: _.intl.format(_.t.xkC3Yf, { articleURL: m.A.getArticleURL(x.MVz.PERMISSIONS_TUTORIAL) }),
             }),
             (0, i.jsx)("div", {
-                className: x.kA,
+                className: p.kA,
                 children: (0, i.jsxs)("div", {
-                    className: x.qd,
+                    className: p.qd,
                     children: [
-                        (0, i.jsx)("div", { className: x._M }),
-                        (0, i.jsx)(a.Text, {
-                            className: r()(x.jA, x.N5),
+                        (0, i.jsx)("div", { className: p._M }),
+                        (0, i.jsx)(o.E, {
+                            className: r()(p.jA, p.N5),
                             variant: "text-sm/normal",
-                            children: g.intl.format(g.t["38N3Vz"], { numRoles: String(s.length) }),
+                            children: _.intl.format(_.t["38N3Vz"], { numRoles: String(l.length) }),
                         }),
-                        (0, i.jsx)(a.Text, {
-                            className: r()(x.jA, x.Hp),
+                        (0, i.jsx)(o.E, {
+                            className: r()(p.jA, p.Hp),
                             variant: "text-sm/normal",
-                            children: g.intl.string(g.t["9Oq93m"]),
+                            children: _.intl.string(_.t["9Oq93m"]),
                         }),
-                        (0, i.jsx)("div", { className: x.DE }),
+                        (0, i.jsx)("div", { className: p.DE }),
                     ],
                 }),
             }),
         ],
     });
 }
-function A(e) {
-    let { guild: t, query: n, setQuery: l } = e,
-        [r, d] = s.useState(!1),
-        c = s.useCallback(
+function f(e) {
+    let { guild: t, query: n, setQuery: s } = e,
+        [r, a] = l.useState(!1),
+        o = l.useCallback(
             (e) => {
-                l(e);
+                s(e);
             },
-            [l],
+            [s],
         ),
-        u = s.useCallback(() => {
-            l("");
-        }, [l]),
-        m = async () => {
-            d(!0), await o.A.createRole(t.id), d(!1);
+        m = l.useCallback(() => {
+            s("");
+        }, [s]),
+        g = async () => {
+            a(!0), await u.A.createRole(t.id), a(!1);
         };
     return (0, i.jsx)("div", {
-        className: x.__invalid_rolesList,
+        className: p.__invalid_rolesList,
         children: (0, i.jsxs)("div", {
-            className: x.MT,
+            className: p.MT,
             children: [
-                (0, i.jsx)(a.IWV, {
+                (0, i.jsx)(d.I, {
                     query: n,
-                    onChange: c,
-                    onClear: u,
-                    placeholder: g.intl.string(g.t.Sojqsr),
-                    "aria-label": g.intl.string(g.t.Sojqsr),
+                    onChange: o,
+                    onClear: m,
+                    placeholder: _.intl.string(_.t.Sojqsr),
+                    "aria-label": _.intl.string(_.t.Sojqsr),
                 }),
-                (0, i.jsx)(a.Button, { size: "sm", onClick: m, loading: r, text: g.intl.string(g.t.JZZjQK) }),
+                (0, i.jsx)(c.$, { size: "sm", onClick: g, loading: r, text: _.intl.string(_.t.JZZjQK) }),
             ],
         }),
     });

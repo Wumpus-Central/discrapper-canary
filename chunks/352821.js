@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => g });
 var i = n(311907),
-    s = n(73153),
-    l = n(591552),
+    l = n(73153),
+    s = n(591552),
     r = n(555337),
     a = n(539916);
 let o = [],
@@ -14,12 +13,12 @@ function u() {
         (o = []), (c = []), (d = !1);
         return;
     }
-    (o = [...l.A.getConnections(e)]), (c = []), (d = !1);
+    (o = [...s.A.getConnections(e)]), (c = []), (d = !1);
 }
 class m extends i.Ay.Store {
     static displayName = "GuildSettingsOnboardingConnectionsStore";
     initialize() {
-        this.waitFor(l.A, r.A);
+        this.waitFor(s.A, r.A);
     }
     getEditedConnections() {
         return o;
@@ -33,7 +32,7 @@ class m extends i.Ay.Store {
     hasChanges() {
         let e = r.A.getGuildId();
         if (null == e) return !1;
-        let t = l.A.getConnections(e);
+        let t = s.A.getConnections(e);
         return (
             o.length !== t.length ||
             o.some((e, n) => {
@@ -55,7 +54,7 @@ class m extends i.Ay.Store {
         return c.length > 0;
     }
 }
-let g = new m(s.h, {
+let g = new m(l.h, {
     GUILD_SETTINGS_INIT: u,
     GUILD_SETTINGS_SET_SECTION: u,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: u,
@@ -85,7 +84,7 @@ let g = new m(s.h, {
             (o = []), (c = []);
             return;
         }
-        (o = [...l.A.getConnections(e)]), (c = []);
+        (o = [...s.A.getConnections(e)]), (c = []);
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SUBMIT: function () {
         (d = !0), (c = (0, a.n4)(o));

@@ -1,91 +1,94 @@
-s.d(i, { default: () => A });
+s.d(i, { default: () => E });
 var e = s(627968),
     n = s(64700),
-    r = s(158954),
+    r = s(772707),
     l = s(554146),
-    a = s(397927),
-    o = s(826673),
-    c = s(837057),
-    b = s(813516),
-    d = s(954571),
-    m = s(310419),
-    x = s(652215),
-    u = s(49999),
-    _ = s(488995),
-    C = s(985018),
-    p = s(568163);
-function A(t) {
-    let { guildId: i, transitionState: A, onClose: h, analyticsType: I = l.M.APP_DIRECTORY_UPSELL_MODAL } = t;
+    a = s(152367),
+    c = s(834730),
+    o = s(430392),
+    b = s(460905),
+    d = s(826673),
+    m = s(837057),
+    x = s(813516),
+    u = s(954571),
+    _ = s(310419),
+    C = s(652215),
+    p = s(49999),
+    A = s(488995),
+    h = s(985018),
+    I = s(568163);
+function E(t) {
+    let { guildId: i, transitionState: E, onClose: N, analyticsType: j = l.M.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
         n.useEffect(() => {
-            d.default.track(x.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: l.M[I], guild_id: i });
-        }, [i, I]),
-        (0, e.jsx)(r.ExpressiveModal, {
-            title: C.intl.string(C.t["2tv5YG"]),
-            subtitle: C.intl.string(C.t.pgwlD7),
-            transitionState: A,
+            u.default.track(C.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: l.M[j], guild_id: i });
+        }, [i, j]),
+        (0, e.jsx)(r.k, {
+            title: h.intl.string(h.t["2tv5YG"]),
+            subtitle: h.intl.string(h.t.pgwlD7),
+            transitionState: E,
             size: "sm",
             graphic: { type: "lottie", lottie: () => s.e("95947").then(s.t.bind(s, 604902, 19)), aspectRatio: "6/4" },
-            onClose: h,
+            onClose: N,
             actions: [
                 {
                     variant: "secondary",
-                    text: C.intl.string(C.t.L5eIZ2),
+                    text: h.intl.string(h.t.L5eIZ2),
                     onClick: () => {
-                        h(), (0, o.Dr)(I, { forceTrack: !0, dismissAction: u.i.SECONDARY, guildId: i });
+                        N(), (0, d.Dr)(j, { forceTrack: !0, dismissAction: p.i.SECONDARY, guildId: i });
                     },
                 },
                 {
                     variant: "primary",
-                    text: C.intl.string(C.t["5e8Mrp"]),
+                    text: h.intl.string(h.t["5e8Mrp"]),
                     onClick: () => {
-                        h(),
-                            (0, o.Dr)(I, { forceTrack: !0, dismissAction: u.i.PRIMARY, guildId: i }),
-                            (0, c.transitionToGlobalDiscovery)({
-                                tab: _.GlobalDiscoveryTab.APPS,
+                        N(),
+                            (0, d.Dr)(j, { forceTrack: !0, dismissAction: p.i.PRIMARY, guildId: i }),
+                            (0, m.transitionToGlobalDiscovery)({
+                                tab: A.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: i,
-                                    entrypoint: { name: m.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                    entrypoint: { name: _.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
                                 },
                             });
                     },
                 },
             ],
             children: (0, e.jsxs)("ul", {
-                className: p.qI,
+                className: I.qI,
                 children: [
                     (0, e.jsxs)("li", {
-                        className: p.Aw,
+                        className: I.Aw,
                         children: [
-                            (0, e.jsx)(a.Dud, { color: "currentColor", className: p.Kb }),
-                            (0, e.jsx)(a.Text, {
+                            (0, e.jsx)(a.D, { color: "currentColor", className: I.Kb }),
+                            (0, e.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: C.intl.string(C.t["0vKo5F"]),
+                                children: h.intl.string(h.t["0vKo5F"]),
                             }),
                         ],
                     }),
-                    (0, e.jsx)(b.A, { className: p.yF }),
+                    (0, e.jsx)(x.A, { className: I.yF }),
                     (0, e.jsxs)("li", {
-                        className: p.Aw,
+                        className: I.Aw,
                         children: [
-                            (0, e.jsx)(a.CnV, { color: "currentColor", className: p.EQ }),
-                            (0, e.jsx)(a.Text, {
+                            (0, e.jsx)(o.C, { color: "currentColor", className: I.EQ }),
+                            (0, e.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: C.intl.string(C.t.CprEDO),
+                                children: h.intl.string(h.t.CprEDO),
                             }),
                         ],
                     }),
-                    (0, e.jsx)(b.A, { className: p.yF }),
+                    (0, e.jsx)(x.A, { className: I.yF }),
                     (0, e.jsxs)("li", {
-                        className: p.Aw,
+                        className: I.Aw,
                         children: [
-                            (0, e.jsx)(a.nm2, { color: "currentColor", className: p.Cf }),
-                            (0, e.jsx)(a.Text, {
+                            (0, e.jsx)(b.n, { color: "currentColor", className: I.Cf }),
+                            (0, e.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: C.intl.string(C.t.wQJMPC),
+                                children: h.intl.string(h.t.wQJMPC),
                             }),
                         ],
                     }),

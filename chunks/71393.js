@@ -7,29 +7,28 @@ var r = n(357758),
     o = n(260509),
     l = n(860689),
     u = n(661191),
-    c = n(961350),
-    d = n(652215),
+    d = n(961350),
+    c = n(652215),
     _ = n(349828);
 function f(e) {
-    let t = e;
     return (0, i.yE)(o.vI, {
-        ...t,
-        features: (0, r.y)(t.features),
-        joinedAt: null != t.joinedAt ? new Date(t.joinedAt) : null,
+        ...e,
+        features: (0, r.y)(e.features),
+        joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null,
         premiumProgressBarEnabledUserUpdatedAt:
-            null != t.premiumProgressBarEnabledUserUpdatedAt
-                ? new Date(t.premiumProgressBarEnabledUserUpdatedAt)
+            null != e.premiumProgressBarEnabledUserUpdatedAt
+                ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     });
 }
-class p extends a.yW {
+class E extends a.yW {
     static displayName = "GuildStore";
     database = this.addKVDatabase("guilds", f);
     stateWrapper() {
         return this.database;
     }
     getGuild = (e) => {
-        if (null != e) return e === d.YYv ? _._z : this.database.get(e);
+        if (null != e) return e === c.YYv ? _._z : this.database.get(e);
     };
     getGuilds = this.database.memoized((e) => ({ ...e }));
     getGuildsArray = this.database.memoized((e) => Object.values(e));
@@ -38,7 +37,7 @@ class p extends a.yW {
         return this.database.length();
     }
 }
-let h = new p(
+let h = new E(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -103,7 +102,7 @@ let h = new p(
         },
         GUILD_MEMBER_ADD: (e, t) => {
             let { guildId: n, joinedAt: r, user: i } = e,
-                s = c.default.getId(),
+                s = d.default.getId(),
                 a = t.get(n);
             if (s !== i.id || null == a) return;
             let l = "string" == typeof r ? new Date(r) : r;

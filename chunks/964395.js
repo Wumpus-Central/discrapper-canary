@@ -1,106 +1,109 @@
-t.d(l, { A: () => R });
+t.d(l, { A: () => C });
 var n = t(627968),
     s = t(64700),
     a = t(503698),
     i = t.n(a),
-    r = t(158954),
-    o = t(311907),
-    d = t(736653),
-    c = t(793574),
-    u = t(688810),
-    _ = t(742589),
-    g = t(657331),
-    p = t(287809),
-    x = t(954571),
-    A = t(975571),
-    f = t(371794),
-    I = t(439303),
-    h = t(44724),
-    m = t(995393),
-    E = t(652215),
-    j = t(518477),
-    S = t(985018),
-    k = t(718356);
-function b(e) {
+    r = t(939249),
+    o = t(366010),
+    d = t(834730),
+    c = t(926268),
+    u = t(311907),
+    _ = t(736653),
+    g = t(793574),
+    p = t(688810),
+    x = t(742589),
+    A = t(657331),
+    f = t(287809),
+    I = t(954571),
+    h = t(975571),
+    m = t(371794),
+    E = t(439303),
+    S = t(44724),
+    j = t(995393),
+    k = t(652215),
+    b = t(518477),
+    R = t(985018),
+    N = t(718356);
+function v(e) {
     let { content: l, onClick: t, ariaLabel: s, className: a } = e;
-    return (0, n.jsx)(r.DUT, { className: i()(k.gb, a), onClick: t, "aria-label": s, children: l });
+    return (0, n.jsx)(r.D, { className: i()(N.gb, a), onClick: t, "aria-label": s, children: l });
 }
-function R(e) {
+function C(e) {
     let { guildId: l, storefront: t, selectedPageIndex: a } = e,
-        R = (0, r.Mwr)((0, d.Ay)()),
-        N = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
-        v = (0, I.jM)(),
-        { analyticsLocations: C } = (0, u.Ay)(),
-        L = s.useCallback(() => {
-            N?.id != null &&
-                (0, g.openUserProfileModal)({
-                    userId: N.id,
-                    tabSection: j.RP.WISHLIST,
-                    sourceAnalyticsLocations: [c.A.SOCIAL_LAYER_STOREFRONT],
+        C = (0, o.M)((0, _.Ay)()),
+        L = (0, u.bG)([f.default], () => f.default.getCurrentUser()),
+        M = (0, E.jM)(),
+        { analyticsLocations: T } = (0, p.Ay)(),
+        O = s.useCallback(() => {
+            L?.id != null &&
+                (0, A.openUserProfileModal)({
+                    userId: L.id,
+                    tabSection: b.RP.WISHLIST,
+                    sourceAnalyticsLocations: [g.A.SOCIAL_LAYER_STOREFRONT],
                 });
-        }, [N]),
-        M = s.useCallback(() => {
-            x.default.track(E.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
-                slayer_storefront_session_id: v?.sessionId,
-                cta_type: m.ST.LEARN_MORE,
-                location_stack: C,
+        }, [L]),
+        y = s.useCallback(() => {
+            I.default.track(k.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+                slayer_storefront_session_id: M?.sessionId,
+                cta_type: j.ST.LEARN_MORE,
+                location_stack: T,
             }),
-                window.open(A.A.getArticleURL(E.MVz.SOCIAL_LAYER_STOREFRONT));
-        }, [v, C]);
+                window.open(h.A.getArticleURL(k.MVz.SOCIAL_LAYER_STOREFRONT));
+        }, [M, T]);
     if (null == t) return null;
-    let T = null != t.logoAssetId ? (0, f.YE)(t.applicationId, t.logoAssetId, 75) : null,
-        y = null != t.lightThemeLogoAssetId ? (0, f.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
-        O = null;
+    let G = null != t.logoAssetId ? (0, m.YE)(t.applicationId, t.logoAssetId, 75) : null,
+        D = null != t.lightThemeLogoAssetId ? (0, m.YE)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
+        w = null;
     return (
-        (O = R ? (T ?? y) : (y ?? T)),
-        (0, n.jsxs)(_.A, {
+        (w = C ? (G ?? D) : (D ?? G)),
+        (0, n.jsxs)(x.A, {
             disableDoubleClick: !0,
-            className: k.N1,
+            className: N.N1,
             children: [
-                (0, n.jsxs)(r.DUT, {
+                (0, n.jsxs)(r.D, {
                     onClick: () => {
-                        (0, h.default)({ guildId: l, pageIndex: 0 });
+                        (0, S.default)({ guildId: l, pageIndex: 0 });
                     },
-                    className: k.gn,
+                    className: N.gn,
                     children: [
-                        null != O && (0, n.jsx)("img", { className: k.wm, src: O, alt: t.title }),
-                        (0, n.jsx)(_.A.Title, { children: t.title }),
+                        null != w && (0, n.jsx)("img", { className: N.wm, src: w, alt: t.title }),
+                        (0, n.jsx)(x.A.Title, { children: t.title }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: k.YC,
+                    className: N.YC,
                     children: t.pages.map((e, t) =>
                         (0, n.jsx)(
-                            _.A.Title,
+                            x.A.Title,
                             {
                                 onClick: () => {
-                                    (0, h.default)({ guildId: l, pageIndex: t });
+                                    (0, S.default)({ guildId: l, pageIndex: t });
                                 },
-                                wrapperClassName: k.oB,
-                                className: i()(k.xT, { [k.ys]: a === t }),
-                                children: (0, n.jsx)(r.EYj, { variant: "text-sm/medium", children: e.title }),
+                                wrapperClassName: N.oB,
+                                className: i()(N.xT, { [N.ys]: a === t }),
+                                children: (0, n.jsx)(d.E, { variant: "text-sm/medium", children: e.title }),
                             },
                             `${e.title}-${t}`,
                         ),
                     ),
                 }),
                 (0, n.jsxs)("div", {
-                    className: k.sZ,
+                    className: N.sZ,
                     children: [
-                        (0, n.jsx)(b, {
-                            content: (0, n.jsx)(r.C3E, { size: "xs", color: "currentColor" }),
-                            onClick: L,
-                            ariaLabel: S.intl.string(S.t["7lZ31J"]),
-                            className: k.ij,
+                        (0, n.jsx)(v, {
+                            content: (0, n.jsx)(c.C, { size: "xs", color: "currentColor" }),
+                            onClick: O,
+                            ariaLabel: R.intl.string(R.t["7lZ31J"]),
+                            className: N.ij,
                         }),
-                        (0, n.jsx)(b, {
-                            onClick: M,
-                            ariaLabel: S.intl.string(S.t.hvVgAZ),
-                            content: (0, n.jsx)(r.EYj, {
+                        (0, n.jsx)(v, {
+                            onClick: y,
+                            ariaLabel: R.intl.string(R.t.hvVgAZ),
+                            content: (0, n.jsx)(d.E, {
                                 variant: "text-sm/medium",
-                                children: S.intl.string(S.t.hvVgAZ),
+                                children: R.intl.string(R.t.hvVgAZ),
                             }),
-                            className: k.AJ,
+                            className: N.AJ,
                         }),
                     ],
                 }),

@@ -2,33 +2,34 @@
 n.d(t, { A: () => g }), n(938796);
 var i = n(627968),
     r = n(64700),
-    s = n(665260),
-    l = n(311907),
-    a = n(732955),
-    c = n(397927),
-    o = n(274372),
-    u = n(17069),
-    d = n(794905),
-    _ = n(320501),
-    E = n(998218),
-    A = n(888675),
-    m = n(652215),
-    I = n(985018),
-    T = n(419397);
+    l = n(665260),
+    s = n(311907),
+    a = n(821609),
+    o = n(176781),
+    c = n(110384),
+    u = n(274372),
+    d = n(17069),
+    _ = n(794905),
+    E = n(320501),
+    A = n(998218),
+    m = n(888675),
+    I = n(652215),
+    T = n(985018),
+    N = n(970677);
 function g(e) {
     let { message: t, compact: n } = e,
         g = t.channel_id,
-        N = (0, l.bG)(
-            [_.A],
+        p = (0, s.bG)(
+            [E.A],
             () =>
                 null != t.messageReference
-                    ? _.A.getMessage(t.messageReference.channel_id, t.messageReference.message_id)
+                    ? E.A.getMessage(t.messageReference.channel_id, t.messageReference.message_id)
                     : null,
             [t.messageReference],
         ),
-        { clipId: f, remoteTriggerClipId: p } = r.useMemo(
+        { clipId: C, remoteTriggerClipId: f } = r.useMemo(
             () =>
-                null != N
+                null != p
                     ? (function (e) {
                           let t = "__CLIP_METADATA__",
                               n = e.indexOf(t);
@@ -41,38 +42,38 @@ function g(e) {
                           } catch (e) {
                               return {};
                           }
-                      })(N.content)
+                      })(p.content)
                     : {},
-            [N],
+            [p],
         ),
-        C = (0, l.bG)([o.A], () => o.A.getMatchingGroupClip(f, p)),
-        h = (0, l.bG)([o.A], () => null != C && null != g && o.A.wasClipSharedInChannel(C.id, g)),
-        { onShareClick: S } = (0, d.A)(g),
-        R = r.useCallback(() => {
-            null != C &&
+        h = (0, s.bG)([u.A], () => u.A.getMatchingGroupClip(C, f)),
+        R = (0, s.bG)([u.A], () => null != h && null != g && u.A.wasClipSharedInChannel(h.id, g)),
+        { onShareClick: S } = (0, _.A)(g),
+        O = r.useCallback(() => {
+            null != h &&
                 null != g &&
                 t.messageReference?.message_id != null &&
-                S({ clips: [C], messageReference: { channel_id: g, message_id: t.messageReference.message_id } });
-        }, [C, g, t.messageReference, S]);
-    if (null == N || (null == f && null == p) || null == C || h) return null;
-    let x = N.attachments.find((e) => (0, s.Lt)(e.flags ?? 0, m.sbO.IS_CLIP)),
-        O = null;
+                S({ clips: [h], messageReference: { channel_id: g, message_id: t.messageReference.message_id } });
+        }, [h, g, t.messageReference, S]);
+    if (null == p || (null == C && null == f) || null == h || R) return null;
+    let x = p.attachments.find((e) => (0, l.Lt)(e.flags ?? 0, I.sbO.IS_CLIP)),
+        M = null;
     if (x?.proxy_url != null) {
-        let e = E.A.toURLSafe(x.proxy_url);
-        null != e && (e.searchParams.append("format", "webp"), (O = e.toString()));
+        let e = A.A.toURLSafe(x.proxy_url);
+        null != e && (e.searchParams.append("format", "webp"), (M = e.toString()));
     }
-    let M = null != O ? [O, C.thumbnail] : [C.thumbnail];
-    return (0, i.jsx)(A.A, {
-        iconNode: (0, i.jsx)(c.xgA, { size: "md", color: "currentColor" }),
+    let D = null != M ? [M, h.thumbnail] : [h.thumbnail];
+    return (0, i.jsx)(m.A, {
+        iconNode: (0, i.jsx)(o.x, { size: "md", color: "currentColor" }),
         timestamp: t.timestamp,
         compact: n,
         additionalContent: (0, i.jsxs)("div", {
-            className: T.i,
+            className: N.i,
             children: [
-                (0, i.jsx)(u.A, { thumbnails: M, variant: "stacked" }),
-                (0, i.jsx)(a.$nd, { size: "sm", onClick: R, text: I.intl.string(I.t["5qb8EX"]), icon: c.W4J }),
+                (0, i.jsx)(d.A, { thumbnails: D, variant: "stacked" }),
+                (0, i.jsx)(a.$, { size: "sm", onClick: O, text: T.intl.string(T.t["5qb8EX"]), icon: c.W }),
             ],
         }),
-        children: I.intl.string(I.t.ThhsNG),
+        children: T.intl.string(T.t.ThhsNG),
     });
 }

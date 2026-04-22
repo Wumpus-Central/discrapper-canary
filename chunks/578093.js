@@ -1,43 +1,46 @@
-n.d(t, { j: () => I });
+n.d(t, { j: () => A });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    s = n(397927),
-    r = n(996439),
-    a = n(914853),
-    u = n(676923),
-    o = n(406595),
-    d = n(74395),
-    c = n(652215),
-    h = n(895867),
-    g = n(985018);
-function I(e) {
+    r = n(27232),
+    s = n(505930),
+    a = n(602853),
+    u = n(827734),
+    o = n(996439),
+    d = n(914853),
+    c = n(676923),
+    h = n(406595),
+    g = n(74395),
+    m = n(652215),
+    I = n(499214),
+    E = n(985018);
+function A(e) {
     let {
             tab: t,
             targetId: n,
-            widgetType: I = c.uss.FRIENDS,
-            showTooltip: E = !0,
-            shouldStopPropagation: A = !0,
-            className: f,
+            widgetType: A = m.uss.FRIENDS,
+            showTooltip: f = !0,
+            shouldStopPropagation: p = !0,
+            className: S,
         } = e,
-        [m] = (0, i.bG)([o.A], () => o.A.isFavorite(t, n), [t, n], r.D),
-        S = (0, d.t)({ tab: t, targetId: n, shouldStopPropagation: A, widgetType: I }),
-        p = m ? s.Gg5 : s.yA2,
-        N = (0, s.rdh)(s.LU0.colors.ICON_FEEDBACK_WARNING),
-        T = (0, s.rdh)(s.LU0.colors.ICON_DEFAULT),
-        _ =
-            t === a.x.FRIENDS
-                ? m
-                    ? g.intl.string(h.default.Xr8XHk)
-                    : g.intl.string(h.default.w1MU8Y)
-                : m
-                  ? g.intl.string(h.default.dvUElD)
-                  : g.intl.string(h.default.iK1QsY);
-    return (0, l.jsx)(u.S, {
-        tooltipText: _,
-        showTooltip: E,
-        className: f,
-        onClick: S,
-        children: (0, l.jsx)(p, { size: "sm", color: m ? N.hex() : T.hex() }),
+        [N] = (0, i.bG)([h.A], () => h.A.isFavorite(t, n), [t, n], o.D),
+        x = (0, g.t)({ tab: t, targetId: n, shouldStopPropagation: p, widgetType: A }),
+        T = N ? r.G : s.y,
+        _ = (0, a.r)(u.A.colors.ICON_FEEDBACK_WARNING),
+        y = (0, a.r)(u.A.colors.ICON_DEFAULT),
+        v =
+            t === d.x.FRIENDS
+                ? N
+                    ? E.intl.string(I.default.Xr8XHk)
+                    : E.intl.string(I.default.w1MU8Y)
+                : N
+                  ? E.intl.string(I.default.dvUElD)
+                  : E.intl.string(I.default.iK1QsY);
+    return (0, l.jsx)(c.S, {
+        tooltipText: v,
+        showTooltip: f,
+        className: S,
+        onClick: x,
+        children: (0, l.jsx)(T, { size: "sm", color: N ? _.hex() : y.hex() }),
     });
 }

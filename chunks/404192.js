@@ -1,44 +1,44 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => h });
 var a = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
-    r = n(397927),
-    s = n(975807),
-    d = n(985018),
-    o = n(687404),
-    c = n(566707);
-let u = (e) => {
+var i = n(503698),
+    r = n.n(i),
+    l = n(939249),
+    s = n(834730),
+    d = n(509434),
+    o = n(534514),
+    c = n(975807),
+    u = n(985018),
+    _ = n(777148),
+    m = n(135363);
+let p = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: l, is_localized: d },
+        data: { url: t, link_text: n, link_description: i, is_localized: o },
     } = e;
-    return d
-        ? (0, a.jsxs)(r.DUT, {
+    return o
+        ? (0, a.jsxs)(l.D, {
               role: "link",
-              className: i()(c.$J, o.lD),
+              className: r()(m.$J, _.lD),
               onClick: () => {
-                  (0, s.A)(t);
+                  (0, c.A)(t);
               },
               children: [
                   (0, a.jsxs)("div", {
-                      className: c.xU,
+                      className: m.xU,
                       children: [
-                          (0, a.jsx)(r.Text, {
-                              className: c.__invalid_linkText,
-                              variant: "text-md/normal",
-                              children: n,
-                          }),
-                          null != l &&
-                              "" !== l &&
-                              (0, a.jsx)(r.Text, { variant: "text-md/normal", color: "text-muted", children: l }),
+                          (0, a.jsx)(s.E, { className: m.__invalid_linkText, variant: "text-md/normal", children: n }),
+                          null != i &&
+                              "" !== i &&
+                              (0, a.jsx)(s.E, { variant: "text-md/normal", color: "text-muted", children: i }),
                       ],
                   }),
-                  (0, a.jsx)(r.I9m, { size: "sm", color: "currentColor", className: c.wP }),
+                  (0, a.jsx)(d.I, { size: "sm", color: "currentColor", className: m.wP }),
               ],
           })
         : null;
 };
-function _(e) {
+function h(e) {
     let { elements: t } = e;
     if (
         null == t ||
@@ -52,21 +52,21 @@ function _(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, a.jsx)(u, { data: n }, `external-link+${t}`);
+            return (0, a.jsx)(p, { data: n }, `external-link+${t}`);
         }),
-        l = t.some((e) => {
+        i = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
     return (0, a.jsxs)("div", {
-        className: i()(c.nV, o.E8),
+        className: r()(m.nV, _.E8),
         children: [
-            !l &&
-                (0, a.jsx)(r.Heading, {
+            !i &&
+                (0, a.jsx)(o.D, {
                     variant: "heading-sm/semibold",
                     color: "text-default",
-                    className: c.wx,
-                    children: d.intl.string(d.t.hvVgAZ),
+                    className: m.wx,
+                    children: u.intl.string(u.t.hvVgAZ),
                 }),
             n,
         ],

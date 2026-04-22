@@ -1,31 +1,29 @@
 "use strict";
-n.d(t, { N: () => c, X: () => _ });
-var r = n(972347),
-    i = n(451988),
+n.d(t, { N: () => c, X: () => f });
+var r,
+    i = n(972347),
+    s = n(451988),
     a = n(73153),
-    s = n(626584),
-    o = n(784113),
-    l = n(927813),
-    u = n(399307),
-    c = (function (e) {
-        return (
-            (e.WindowVisibilityChanged = "window-visibility-changed"),
-            (e.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
-            e
-        );
-    })({});
-class d extends r.A {
-    disableVideoTimer = new i.Ep();
+    o = n(626584),
+    l = n(6494),
+    u = n(927813),
+    d = n(399307),
+    c =
+        (((r = {}).WindowVisibilityChanged = "window-visibility-changed"),
+        (r.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
+        r);
+class _ extends i.A {
+    disableVideoTimer = new s.Ep();
     discordVisible = !0;
     incomingVideoEnabled = !0;
     lastEnabledChange = performance.now();
-    logger = new s.A("WindowVisibilityVideoManager");
-    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * l.A.Millis.SECOND;
+    logger = new o.A("WindowVisibilityVideoManager");
+    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * u.A.Millis.SECOND;
     constructor() {
         super(),
             a.h.subscribe("WINDOW_VISIBILITY_CHANGE", this.update),
             a.h.subscribe("APP_STATE_UPDATE", this.update),
-            o.A.addOnPipModeChangedListener(this.update);
+            l.A.addOnPipModeChangedListener(this.update);
     }
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
@@ -34,8 +32,8 @@ class d extends r.A {
         return this.lastEnabledChange;
     }
     update = () => {
-        this.discordVisible !== (0, u.A)() &&
-            ((this.discordVisible = (0, u.A)()),
+        this.discordVisible !== (0, d.A)() &&
+            ((this.discordVisible = (0, d.A)()),
             this.emit("window-visibility-changed", this.discordVisible),
             this.discordVisible
                 ? (this.disableVideoTimer.stop(), this.setIncomingVideoEnabled(!0))
@@ -54,4 +52,4 @@ class d extends r.A {
                 this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled));
     }
 }
-let _ = new d();
+let f = new _();

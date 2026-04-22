@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(723727);
-let i = {
+i.d(t, { A: () => r });
+var n = i(723727);
+let r = {
     iptc: {
         256: { name: "Model Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
         261: { name: "Destination", repeatable: !0 },
@@ -11,9 +10,9 @@ let i = {
         296: "Envelope Number",
         306: "Product ID",
         316: "Envelope Priority",
-        326: { name: "Date Sent", description: a },
-        336: { name: "Time Sent", description: s },
-        346: { name: "Coded Character Set", description: o, encoding_name: o },
+        326: { name: "Date Sent", description: o },
+        336: { name: "Time Sent", description: a },
+        346: { name: "Coded Character Set", description: s, encoding_name: s },
         356: "UNO",
         376: { name: "ARM Identifier", description: (e) => ((e[0] << 8) + e[1]).toString() },
         378: { name: "ARM Version", description: (e) => ((e[0] << 8) + e[1]).toString() },
@@ -24,14 +23,14 @@ let i = {
         519: "Edit Status",
         520: {
             name: "Editorial Update",
-            description: (e) => ("01" === (0, r.Jn)(e) ? "Additional Language" : "Unknown"),
+            description: (e) => ("01" === (0, n.Jn)(e) ? "Additional Language" : "Unknown"),
         },
         522: "Urgency",
         524: {
             name: "Subject Reference",
             repeatable: !0,
             description: (e) => {
-                let t = (0, r.Jn)(e).split(":");
+                let t = (0, n.Jn)(e).split(":");
                 return t[2] + (t[3] ? "/" + t[3] : "") + (t[4] ? "/" + t[4] : "");
             },
         },
@@ -49,7 +48,7 @@ let i = {
         554: {
             name: "Action Advised",
             description: (e) => {
-                let t = (0, r.Jn)(e);
+                let t = (0, n.Jn)(e);
                 return "01" === t
                     ? "Object Kill"
                     : "02" === t
@@ -64,16 +63,16 @@ let i = {
         557: { name: "Reference Service", repeatable: !0 },
         559: { name: "Reference Date", repeatable: !0 },
         562: { name: "Reference Number", repeatable: !0 },
-        567: { name: "Date Created", description: a },
-        572: { name: "Time Created", description: s },
-        574: { name: "Digital Creation Date", description: a },
-        575: { name: "Digital Creation Time", description: s },
+        567: { name: "Date Created", description: o },
+        572: { name: "Time Created", description: a },
+        574: { name: "Digital Creation Date", description: o },
+        575: { name: "Digital Creation Time", description: a },
         577: "Originating Program",
         582: "Program Version",
         587: {
             name: "Object Cycle",
             description: (e) => {
-                let t = (0, r.Jn)(e);
+                let t = (0, n.Jn)(e);
                 return "a" === t ? "morning" : "p" === t ? "evening" : "b" === t ? "both" : "Unknown";
             },
         },
@@ -97,7 +96,7 @@ let i = {
         643: {
             name: "Image Orientation",
             description: (e) => {
-                let t = (0, r.Jn)(e);
+                let t = (0, n.Jn)(e);
                 return "P" === t ? "Portrait" : "L" === t ? "Landscape" : "S" === t ? "Square" : "Unknown";
             },
         },
@@ -105,43 +104,43 @@ let i = {
         662: {
             name: "Audio Type",
             description: (e) => {
-                let t = (0, r.Jn)(e),
-                    n = t.charAt(0),
-                    i = t.charAt(1),
-                    a = "";
-                return ("1" === n ? (a += "Mono") : "2" === n && (a += "Stereo"),
-                "A" === i
-                    ? (a += ", actuality")
-                    : "C" === i
-                      ? (a += ", question and answer session")
-                      : "M" === i
-                        ? (a += ", music, transmitted by itself")
-                        : "Q" === i
-                          ? (a += ", response to a question")
-                          : "R" === i
-                            ? (a += ", raw sound")
-                            : "S" === i
-                              ? (a += ", scener")
-                              : "V" === i
-                                ? (a += ", voicer")
-                                : "W" === i && (a += ", wrap"),
-                "" !== a)
-                    ? a
+                let t = (0, n.Jn)(e),
+                    i = t.charAt(0),
+                    r = t.charAt(1),
+                    o = "";
+                return ("1" === i ? (o += "Mono") : "2" === i && (o += "Stereo"),
+                "A" === r
+                    ? (o += ", actuality")
+                    : "C" === r
+                      ? (o += ", question and answer session")
+                      : "M" === r
+                        ? (o += ", music, transmitted by itself")
+                        : "Q" === r
+                          ? (o += ", response to a question")
+                          : "R" === r
+                            ? (o += ", raw sound")
+                            : "S" === r
+                              ? (o += ", scener")
+                              : "V" === r
+                                ? (o += ", voicer")
+                                : "W" === r && (o += ", wrap"),
+                "" !== o)
+                    ? o
                     : t;
             },
         },
-        663: { name: "Audio Sampling Rate", description: (e) => parseInt((0, r.Jn)(e), 10) + " Hz" },
+        663: { name: "Audio Sampling Rate", description: (e) => parseInt((0, n.Jn)(e), 10) + " Hz" },
         664: {
             name: "Audio Sampling Resolution",
             description: (e) => {
-                let t = parseInt((0, r.Jn)(e), 10);
+                let t = parseInt((0, n.Jn)(e), 10);
                 return t + (1 === t ? " bit" : " bits");
             },
         },
         665: {
             name: "Audio Duration",
             description: (e) => {
-                let t = (0, r.Jn)(e);
+                let t = (0, n.Jn)(e);
                 return t.length >= 6 ? t.substr(0, 2) + ":" + t.substr(2, 2) + ":" + t.substr(4, 2) : t;
             },
         },
@@ -186,13 +185,13 @@ let i = {
                     else if (29 === t) return "Corel Draw [*.CDR]";
                     return `Unknown format ${t}`;
                 }
-                return (0, r.Jn)(e);
+                return (0, n.Jn)(e);
             },
         },
         713: {
             name: "ObjectData Preview File Format Version",
             description: (e, t) => {
-                let n = {
+                let i = {
                         "00": { "00": "1" },
                         "01": { "01": "1", "02": "2", "03": "3", "04": "4" },
                         "02": { "04": "4" },
@@ -204,12 +203,12 @@ let i = {
                         20: { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" },
                         21: { "02": "2.0" },
                     },
-                    i = (0, r.Jn)(e);
+                    r = (0, n.Jn)(e);
                 if (t["ObjectData Preview File Format"]) {
-                    let e = (0, r.Jn)(t["ObjectData Preview File Format"].value);
-                    if (n[e] && n[e][i]) return n[e][i];
+                    let e = (0, n.Jn)(t["ObjectData Preview File Format"].value);
+                    if (i[e] && i[e][r]) return i[e][r];
                 }
-                return i;
+                return r;
             },
         },
         714: "ObjectData Preview Data",
@@ -218,7 +217,7 @@ let i = {
             name: "Max Subfile Size",
             description: (e) => {
                 let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
+                for (let i = 0; i < e.length; i++) t = (t << 8) + e[i];
                 return t.toString();
             },
         },
@@ -226,7 +225,7 @@ let i = {
             name: "ObjectData Size Announced",
             description: (e) => {
                 let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
+                for (let i = 0; i < e.length; i++) t = (t << 8) + e[i];
                 return t.toString();
             },
         },
@@ -234,28 +233,28 @@ let i = {
             name: "Maximum ObjectData Size",
             description: (e) => {
                 let t = 0;
-                for (let n = 0; n < e.length; n++) t = (t << 8) + e[n];
+                for (let i = 0; i < e.length; i++) t = (t << 8) + e[i];
                 return t.toString();
             },
         },
     },
 };
-function a(e) {
-    let t = (0, r.Jn)(e);
+function o(e) {
+    let t = (0, n.Jn)(e);
     return t.length >= 8 ? t.substr(0, 4) + "-" + t.substr(4, 2) + "-" + t.substr(6, 2) : t;
 }
-function s(e) {
-    let t = (0, r.Jn)(e),
-        n = t;
+function a(e) {
+    let t = (0, n.Jn)(e),
+        i = t;
     return (
         t.length >= 6 &&
-            ((n = t.substr(0, 2) + ":" + t.substr(2, 2) + ":" + t.substr(4, 2)),
-            11 === t.length && (n += t.substr(6, 1) + t.substr(7, 2) + ":" + t.substr(9, 2))),
-        n
+            ((i = t.substr(0, 2) + ":" + t.substr(2, 2) + ":" + t.substr(4, 2)),
+            11 === t.length && (i += t.substr(6, 1) + t.substr(7, 2) + ":" + t.substr(9, 2))),
+        i
     );
 }
-function o(e) {
-    let t = (0, r.Jn)(e);
+function s(e) {
+    let t = (0, n.Jn)(e);
     if ("\x1b%G" === t) return "UTF-8";
     if ("\x1b%5" === t) return "Windows-1252";
     if ("\x1b%/G" === t) return "UTF-8 Level 1";

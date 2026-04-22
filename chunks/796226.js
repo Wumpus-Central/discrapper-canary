@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jt: "offerNoticeContainerShared__3e43f",
     p3: "nitroPinkGradient__3e43f",

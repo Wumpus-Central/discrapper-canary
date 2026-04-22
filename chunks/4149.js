@@ -1,5 +1,4 @@
-"use strict";
+n.d(t, { a: () => r });
 function r(e) {
     return null;
 }
-n.d(t, { a: () => r });

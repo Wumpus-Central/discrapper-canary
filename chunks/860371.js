@@ -1,62 +1,63 @@
 "use strict";
-n.d(t, { A: () => T }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n.n(a),
-    o = n(311907),
-    l = n(397927),
-    u = n(796774),
-    c = n(209932),
+n.d(t, { A: () => A }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(735438),
+    r = n.n(s),
+    a = n(311907),
+    o = n(289873),
+    c = n(796774),
+    u = n(209932),
     d = n(69217),
-    _ = n(734057),
-    f = n(71393),
+    h = n(734057),
+    m = n(71393),
     p = n(576705),
-    h = n(287809),
-    m = n(927578);
+    f = n(287809),
+    g = n(927578);
 n(980504);
-var g = n(818348),
-    E = n(343743);
-let A = 4;
-function I(e) {
-    let t = (0, o.bG)([h.default], () => m.Ay.canUseSoundboardEverywhere(h.default.getCurrentUser())),
-        n = (0, o.bG)([c.A], () => c.A.getSoundsForGuild("0")),
-        r = (0, o.yK)([f.A], () => f.A.getGuildIds()),
-        a = i.useMemo(() => p.A.can(g.xB.USE_EXTERNAL_SOUNDS, e), [e]);
-    return i.useMemo(() => {
-        let i = [];
-        if (t && a) {
-            let e = r.flatMap((e) => c.A.getSoundsForGuild(e)?.filter((e) => e.available) ?? []);
-            i.push(...s().sampleSize(e, A));
-        } else if (e?.guild_id != null) {
-            let t = c.A.getSoundsForGuild(e?.guild_id)?.filter((e) => e.available);
-            i.push(...s().sampleSize(t, A));
-        }
-        return i.length < A && i.push(...s().sampleSize(n ?? [], A - i.length)), i;
-    }, [a, e?.guild_id, n, r, t]);
-}
-let T = i.memo(function (e) {
-    let { channelId: t, onSelectSoundmoji: n } = e,
-        a = (0, o.bG)([c.A], () => !c.A.isFetching() && !c.A.hasFetchedAllSounds(), []),
-        s = (0, o.bG)([_.A], () => _.A.getChannel(t)),
-        f = I(s);
-    return (i.useEffect(() => {
-        (0, u.E7)();
-    }, [a]),
-    0 === f.length)
-        ? (0, r.jsx)(l.y$y, {})
-        : (0, r.jsx)("div", {
-              className: E.q,
-              children: f.map((e, t) =>
-                  (0, r.jsx)(
+var _ = n(818348),
+    x = n(219920);
+let A = l.memo(function (e) {
+    let t,
+        n,
+        s,
+        A,
+        { channelId: C, onSelectSoundmoji: E } = e,
+        I = (0, a.bG)([u.A], () => !u.A.isFetching() && !u.A.hasFetchedAllSounds(), []),
+        v = (0, a.bG)([h.A], () => h.A.getChannel(C)),
+        y =
+            ((t = (0, a.bG)([f.default], () => g.Ay.canUseSoundboardEverywhere(f.default.getCurrentUser()))),
+            (n = (0, a.bG)([u.A], () => u.A.getSoundsForGuild("0"))),
+            (s = (0, a.yK)([m.A], () => m.A.getGuildIds())),
+            (A = l.useMemo(() => p.A.can(_.xB.USE_EXTERNAL_SOUNDS, v), [v])),
+            l.useMemo(() => {
+                let e = [];
+                if (t && A) {
+                    let t = s.flatMap((e) => u.A.getSoundsForGuild(e)?.filter((e) => e.available) ?? []);
+                    e.push(...r().sampleSize(t, 4));
+                } else if (v?.guild_id != null) {
+                    let t = u.A.getSoundsForGuild(v?.guild_id)?.filter((e) => e.available);
+                    e.push(...r().sampleSize(t, 4));
+                }
+                return e.length < 4 && e.push(...r().sampleSize(n ?? [], 4 - e.length)), e;
+            }, [A, v?.guild_id, n, s, t]));
+    return (l.useEffect(() => {
+        (0, c.E7)();
+    }, [I]),
+    0 === y.length)
+        ? (0, i.jsx)(o.y, {})
+        : (0, i.jsx)("div", {
+              className: x.q,
+              children: y.map((e, t) =>
+                  (0, i.jsx)(
                       d.Ay,
                       {
                           suppressPlaySound: !0,
                           enableSecondaryActions: !0,
                           isSoundmoji: !0,
                           sound: e,
-                          channel: s,
-                          onSelectItem: (t) => n?.(e, !t.shiftKey),
+                          channel: v,
+                          onSelectItem: (t) => E?.(e, !t.shiftKey),
                       },
                       t,
                   ),

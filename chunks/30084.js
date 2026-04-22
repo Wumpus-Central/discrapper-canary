@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { D: () => o });
-var r = n(627968),
-    i = n(397927),
-    a = n(954571),
-    s = n(652215);
-let o = (e) => {
-    let { analyticsLocations: t, displayProfile: o, location: l } = e;
-    null == l && (l = t[t.length - 1]),
-        a.default.track(s.HAw.OPEN_MODAL, {
+a.d(t, { D: () => s });
+var r = a(627968),
+    l = a(192308),
+    n = a(954571),
+    i = a(652215);
+let s = (e) => {
+    let { analyticsLocations: t, displayProfile: s, location: o } = e;
+    null == o && (o = t[t.length - 1]),
+        n.default.track(i.HAw.OPEN_MODAL, {
             type: "Tiered Tenure Badge Details",
             location_stack: t,
-            location: l,
-            source: l,
+            location: o,
+            source: o,
         }),
-        (0, i.mMO)(async () => {
-            let { default: e } = await n.e("77641").then(n.bind(n, 384048));
-            return (t) => (0, r.jsx)(e, { ...t, displayProfile: o });
+        (0, l.openModalLazy)(async () => {
+            let { default: e } = await a.e("77641").then(a.bind(a, 384048));
+            return (t) => (0, r.jsx)(e, { ...t, displayProfile: s });
         });
 };

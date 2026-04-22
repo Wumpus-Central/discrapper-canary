@@ -1,85 +1,88 @@
-n.d(t, { h: () => c });
-var i = n(627968),
-    l = n(64700),
-    r = n(397927),
-    s = n(571694),
-    a = n(954376),
-    o = n(576692),
-    u = n(652215),
-    d = n(25792);
-let c = l.memo(function (e) {
+n.d(t, { h: () => m });
+var l = n(627968),
+    i = n(64700),
+    r = n(777666),
+    s = n(827734),
+    a = n(778712),
+    u = n(97808),
+    o = n(571694),
+    d = n(954376),
+    c = n(576692),
+    h = n(652215),
+    g = n(25792);
+let m = i.memo(function (e) {
     let {
             channel: t,
             user: n,
-            mentionCount: c = 0,
-            isMentionLowImportance: h,
-            size: g = r._3J.SIZE_32,
-            status: m,
+            mentionCount: m = 0,
+            isMentionLowImportance: I,
+            size: E = a._3.SIZE_32,
+            status: A,
             isMobile: f,
-            isTyping: A = !1,
-            "aria-hidden": I = !1,
+            isTyping: p = !1,
+            "aria-hidden": S = !1,
         } = e,
-        E = (0, r.FT9)(g),
-        p = l.useMemo(
+        N = (0, a.FT)(E),
+        x = i.useMemo(
             () =>
                 t?.isDM() && null != n
-                    ? (0, i.jsx)(r.euF, {
-                          src: n.getAvatarURL(t?.getGuildId(), (0, r.FT9)(g), !1),
-                          size: g,
-                          "aria-hidden": I,
-                          "aria-label": I ? void 0 : n.username,
-                          status: m,
-                          isMobile: !(c > 0) && f,
-                          isTyping: A,
+                    ? (0, l.jsx)(u.eu, {
+                          src: n.getAvatarURL(t?.getGuildId(), (0, a.FT)(E), !1),
+                          size: E,
+                          "aria-hidden": S,
+                          "aria-label": S ? void 0 : n.username,
+                          status: A,
+                          isMobile: !(m > 0) && f,
+                          isTyping: p,
                       })
                     : t?.isMultiUserDM()
                       ? t?.recipients.length >= 2 && null == t.icon
-                          ? (0, i.jsx)(a.A, {
-                                "aria-hidden": I,
+                          ? (0, l.jsx)(d.A, {
+                                "aria-hidden": S,
                                 recipients: t.recipients,
                                 size: (function (e) {
                                     switch (e) {
-                                        case r._3J.SIZE_16:
-                                        case r._3J.SIZE_20:
-                                        case r._3J.SIZE_24:
-                                        case r._3J.SIZE_32:
+                                        case a._3.SIZE_16:
+                                        case a._3.SIZE_20:
+                                        case a._3.SIZE_24:
+                                        case a._3.SIZE_32:
                                             return e;
-                                        case r._3J.SIZE_40:
-                                        case r._3J.SIZE_48:
-                                            return r._3J.SIZE_40;
-                                        case r._3J.SIZE_56:
-                                        case r._3J.SIZE_80:
-                                        case r._3J.SIZE_96:
-                                        case r._3J.SIZE_120:
+                                        case a._3.SIZE_40:
+                                        case a._3.SIZE_48:
+                                            return a._3.SIZE_40;
+                                        case a._3.SIZE_56:
+                                        case a._3.SIZE_80:
+                                        case a._3.SIZE_96:
+                                        case a._3.SIZE_120:
                                             return e;
                                         default:
-                                            return r._3J.SIZE_32;
+                                            return a._3.SIZE_32;
                                     }
-                                })(g),
-                                isTyping: A,
-                                status: A ? u.clD.ONLINE : null,
+                                })(E),
+                                isTyping: p,
+                                status: p ? h.clD.ONLINE : null,
                             })
-                          : (0, i.jsx)(r.euF, {
-                                src: (0, s.Y)(t) ?? void 0,
-                                "aria-hidden": I,
-                                size: g,
-                                status: A ? u.clD.ONLINE : null,
-                                isTyping: A,
+                          : (0, l.jsx)(u.eu, {
+                                src: (0, o.Y)(t) ?? void 0,
+                                "aria-hidden": S,
+                                size: E,
+                                status: p ? h.clD.ONLINE : null,
+                                isTyping: p,
                             })
-                      : (0, i.jsx)(r.euF, { src: void 0, "aria-hidden": I, size: g }),
-            [I, t, f, A, c, g, m, n],
+                      : (0, l.jsx)(u.eu, { src: void 0, "aria-hidden": S, size: E }),
+            [S, t, f, p, m, E, A, n],
         );
-    return c <= 0
-        ? p
-        : (0, i.jsx)(o.i, {
-              size: E,
+    return m <= 0
+        ? x
+        : (0, l.jsx)(c.i, {
+              size: N,
               rounded: !t?.isMultiUserDM(),
-              lowerBadge: (0, i.jsx)(r.hVq, {
-                  count: c,
-                  color: h ? r.LU0.colors.BACKGROUND_ACCENT.css : r.LU0.colors.STATUS_DANGER.css,
+              lowerBadge: (0, l.jsx)(r.hV, {
+                  count: m,
+                  color: I ? s.A.colors.BACKGROUND_ACCENT.css : s.A.colors.STATUS_DANGER.css,
                   "aria-hidden": !0,
               }),
-              lowerBadgeSize: { width: (0, r.o6S)(c) },
-              children: (0, i.jsx)("div", { className: d.R, children: p }),
+              lowerBadgeSize: { width: (0, r.o6)(m) },
+              children: (0, l.jsx)("div", { className: g.R, children: x }),
           });
 });

@@ -1,94 +1,96 @@
-n.d(t, { A: () => S });
-var i = n(627968);
+n.d(t, { A: () => I });
+var s = n(627968);
 n(64700);
-var r = n(311907),
+var l = n(311907),
     a = n(692617),
-    l = n(397927),
-    s = n(297413),
+    i = n(834730),
+    r = n(97808),
+    c = n(778712),
+    d = n(297413),
     o = n(775602),
-    d = n(29160),
-    c = n(854378),
-    u = n(954921),
-    A = n(278539),
+    u = n(29160),
+    A = n(854378),
     h = n(571694),
-    _ = n(994500),
-    m = n(427262),
-    p = n(837921),
-    g = n(800583),
-    E = n(999068),
-    f = n(122943),
-    I = n(985018),
-    C = n(518962);
-let N = (e) => {
+    m = n(562819),
+    g = n(215689),
+    x = n(994500),
+    S = n(427262),
+    E = n(837921),
+    f = n(800583),
+    _ = n(999068),
+    b = n(122943),
+    j = n(985018),
+    p = n(746345);
+let v = (e) => {
         let { userId: t } = e,
-            n = (0, E.y)(t);
+            n = (0, _.y)(t);
         return null == n || 0 === n.length
-            ? (0, i.jsx)(l.Text, {
-                  className: C.tE,
+            ? (0, s.jsx)(i.E, {
+                  className: p.tE,
                   variant: "text-sm/normal",
                   color: "text-muted",
-                  children: I.intl.string(I.t.jpY0X5),
+                  children: j.intl.string(j.t.jpY0X5),
               })
-            : (0, i.jsxs)("div", {
-                  className: C.I9,
+            : (0, s.jsxs)("div", {
+                  className: p.I9,
                   children: [
-                      (0, i.jsx)(a.A, { guilds: n, maxGuilds: 3, size: c.$v.Sizes.SMOL, hideOverflowCount: !0 }),
-                      (0, i.jsx)(l.Text, {
-                          className: C.tE,
+                      (0, s.jsx)(a.A, { guilds: n, maxGuilds: 3, size: A.$v.Sizes.SMOL, hideOverflowCount: !0 }),
+                      (0, s.jsx)(i.E, {
+                          className: p.tE,
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: I.intl.format(I.t.eE3oep, { count: n.length }),
+                          children: j.intl.format(j.t.eE3oep, { count: n.length }),
                       }),
                   ],
               });
     },
-    T = p.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
-function S(e) {
+    C = E.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu;
+function I(e) {
     let { channel: t, otherUser: n, active: a } = e,
-        c = (0, r.bG)([o.A], () => o.A.useReducedMotion),
-        p = (0, r.bG)([_.A], () => (null == n ? null : _.A.getNickname(n.id))),
-        E = !c && a,
-        S = (0, g.j)(t),
-        { avatarDecorationSrc: x } = (0, A.A)({
+        r = (0, l.bG)([o.A], () => o.A.useReducedMotion),
+        A = (0, l.bG)([x.A], () => (null == n ? null : x.A.getNickname(n.id))),
+        E = !r && a,
+        _ = (0, f.j)(t),
+        { avatarDecorationSrc: I } = (0, g.A)({
             user: n,
-            size: (0, u.Te)(l._3J.SIZE_40),
+            size: (0, m.Te)(c._3.SIZE_40),
             onlyAnimateOnHoverOrFocus: !0,
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, i.jsx)(T, {
-                className: C.my,
+            (0, s.jsx)(C, {
+                className: p.my,
                 src: (0, h.Y)(t, 40, E),
-                avatarDecoration: x,
-                size: l._3J.SIZE_40,
-                "aria-label": n?.username ?? I.intl.string(I.t["30mdIx"]),
+                avatarDecoration: I,
+                size: c._3.SIZE_40,
+                "aria-label": n?.username ?? j.intl.string(j.t["30mdIx"]),
             }),
-            (0, i.jsxs)("div", {
-                className: C.yt,
+            (0, s.jsxs)("div", {
+                className: p.yt,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: C.rU,
+                    (0, s.jsxs)("div", {
+                        className: p.rU,
                         children: [
-                            (0, i.jsx)(s.A, {
-                                nick: p,
+                            (0, s.jsx)(d.A, {
+                                nick: A,
                                 user: n,
                                 showAccountIdentifier: !0,
-                                className: C.I8,
-                                usernameClass: C.Xh,
-                                discriminatorClass: null != m.Ay.getGlobalName(n) ? C.vl : C.D2,
+                                className: p.I8,
+                                usernameClass: p.Xh,
+                                discriminatorClass: null != S.Ay.getGlobalName(n) ? p.vl : p.D2,
                             }),
-                            (0, i.jsx)(l.Text, {
-                                className: C.L7,
+                            (0, s.jsx)(i.E, {
+                                className: p.L7,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: S,
+                                children: _,
                             }),
                         ],
                     }),
-                    (0, i.jsx)(d.A, {
-                        hoverText: (0, i.jsx)(f.A, { channel: t }),
+                    (0, s.jsx)(u.A, {
+                        hoverText: (0, s.jsx)(b.A, { channel: t }),
                         forceHover: a,
-                        children: (0, i.jsx)(N, { userId: n.id }),
+                        children: (0, s.jsx)(v, { userId: n.id }),
                     }),
                 ],
             }),

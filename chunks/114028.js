@@ -1,136 +1,145 @@
 "use strict";
 n.d(t, { A: () => w });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(837381),
-    l = n(311907),
-    u = n(435371),
-    c = n(397927),
-    d = n(724511),
-    _ = n(850992),
+    r = n.n(s),
+    a = n(837381),
+    o = n(311907),
+    c = n(990078),
+    u = n(939249),
+    d = n(27232),
+    h = n(111159),
+    m = n(724511),
+    p = n(850992),
     f = n(802019),
-    p = n(407698),
-    h = n(287809),
-    m = n(954571),
-    E = n(927578),
-    g = n(807348),
-    A = n(338821),
+    g = n(407698),
+    _ = n(287809),
+    x = n(954571),
+    A = n(927578),
+    C = n(807348),
+    E = n(338821),
     I = n(652215),
-    T = n(698279),
-    S = n(788868),
-    y = n(985018),
-    v = n(873080);
-let N = [8, 8, 8, 8],
-    C = 40,
-    R = 50;
-function O(e) {
-    let { icon: t, isSelected: n, onClick: i, listItemProps: s } = e;
-    return (0, r.jsx)(c.DUT, {
+    v = n(698279),
+    y = n(788868),
+    S = n(985018),
+    b = n(917419);
+let N = [8, 8, 8, 8];
+function T(e) {
+    let { icon: t, isSelected: n, onClick: l, listItemProps: s } = e;
+    return (0, i.jsx)(u.D, {
         ...s,
-        onClick: i,
-        className: a()(v.Yl, { [v.wH]: n }),
-        children: (0, r.jsx)(t, { className: v.xi, color: "currentColor" }),
+        onClick: l,
+        className: r()(b.Yl, { [b.wH]: n }),
+        children: (0, i.jsx)(t, { className: b.xi, color: "currentColor" }),
     });
 }
-function b(e, t, n, i, s) {
+function j(e, t, n, l, s) {
     switch (e.categoryInfo.type) {
-        case g.Cx.FAVORITES:
-            return (0, r.jsx)(O, { icon: c.Gg5, onClick: t, isSelected: n, listItemProps: i }, e.key);
-        case g.Cx.GUILD:
-            return (0, r.jsx)(
-                c.DUT,
+        case C.Cx.FAVORITES:
+            return (0, i.jsx)(T, { icon: d.G, onClick: t, isSelected: n, listItemProps: l }, e.key);
+        case C.Cx.GUILD:
+            return (0, i.jsx)(
+                u.D,
                 {
-                    ...i,
-                    className: v.L1,
+                    ...l,
+                    className: b.L1,
                     onClick: t,
-                    children: (0, r.jsx)(d.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: s }),
+                    children: (0, i.jsx)(m.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: s }),
                 },
                 e.key,
             );
-        case g.Cx.DEFAULTS:
-            return (0, r.jsx)(O, { icon: c.pVd, onClick: t, isSelected: n, listItemProps: i }, e.key);
+        case C.Cx.DEFAULTS:
+            return (0, i.jsx)(T, { icon: h.p, onClick: t, isSelected: n, listItemProps: l }, e.key);
         default:
             return null;
     }
 }
-function D(e) {
-    switch (e.categoryInfo.type) {
-        case g.Cx.FAVORITES:
-            return y.intl.string(y.t.k8fFjp);
-        case g.Cx.GUILD:
-            return e.categoryInfo.guild.name;
-        case g.Cx.DEFAULTS:
-            return y.intl.string(y.t.Rtvk9X);
-    }
-}
-function L(e) {
-    let { category: t, categoryIndex: n, onClick: i, isSelected: s, isNitroLocked: a } = e,
-        l = (0, o.rm)(`soundboard_guild_${n}`);
-    return t.categoryInfo.type === g.Cx.GUILD
-        ? (0, r.jsx)(p.Q, { guild: t.categoryInfo.guild, children: b(t, i, s, l, a) })
-        : (0, r.jsx)(u.m_, { text: D(t), position: "right", align: "center", children: b(t, i, s, l, a) });
+function R(e) {
+    let { category: t, categoryIndex: n, onClick: l, isSelected: s, isNitroLocked: r } = e,
+        o = (0, a.rm)(`soundboard_guild_${n}`);
+    return t.categoryInfo.type === C.Cx.GUILD
+        ? (0, i.jsx)(g.Q, { guild: t.categoryInfo.guild, children: j(t, l, s, o, r) })
+        : (0, i.jsx)(c.m, {
+              text: (function (e) {
+                  switch (e.categoryInfo.type) {
+                      case C.Cx.FAVORITES:
+                          return S.intl.string(S.t.k8fFjp);
+                      case C.Cx.GUILD:
+                          return e.categoryInfo.guild.name;
+                      case C.Cx.DEFAULTS:
+                          return S.intl.string(S.t.Rtvk9X);
+                  }
+              })(t),
+              position: "right",
+              align: "center",
+              children: j(t, l, s, o, r),
+          });
 }
 function w(e) {
     let {
             soundboardListRef: t,
             categories: n,
             shouldUpsellLockedCategories: s,
-            listPadding: o = N,
-            guildId: u,
+            listPadding: a = N,
+            guildId: c,
             inExpressionPicker: d,
-            showPinnedDefaultsShortcut: p = !1,
+            showPinnedDefaultsShortcut: m = !1,
             defaultsSectionIndex: g = -1,
         } = e,
-        O = i.useRef(null),
-        b = (0, l.bG)([h.default], () => h.default.getCurrentUser()),
-        D = (0, E.TW)(b, S.PremiumTypes.TIER_2),
-        w = i.useCallback(
+        C = l.useRef(null),
+        T = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
+        j = (0, A.TW)(T, y.PremiumTypes.TIER_2),
+        w = l.useCallback(
             (e) => {
                 g >= 0 && (e(g), t.current?.scrollToSectionTop(g));
             },
             [g, t],
         ),
-        M = i.useCallback((e) => (p ? R : 0), [p]),
-        x = i.useCallback(
-            (e, t, n, i) => {
-                let a = s && (0, A.B)(e.categoryInfo, D, u),
-                    o = () => {
-                        m.default.track(I.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+        L = l.useCallback((e) => 50 * !!m, [m]),
+        M = l.useCallback(
+            (e, t, n, l) => {
+                let r = s && (0, E.B)(e.categoryInfo, j, c);
+                return (0, i.jsx)(R, {
+                    category: e,
+                    categoryIndex: t,
+                    onClick: () => {
+                        x.default.track(I.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: I.liQ.SOUNDBOARD_POPOUT },
-                            guild_id: u ?? null,
+                            guild_id: c ?? null,
                             num_expressions: e.items.length,
-                            tab: T.kx.SOUNDBOARD,
+                            tab: v.kx.SOUNDBOARD,
                             sticker_pack_id: null,
                             pack_id: null,
                         }),
                             n();
-                    };
-                return (0, r.jsx)(L, { category: e, categoryIndex: t, onClick: o, isSelected: i, isNitroLocked: a });
+                    },
+                    isSelected: l,
+                    isNitroLocked: r,
+                });
             },
-            [u, s, D],
+            [c, s, j],
         );
     return (
-        p && ((o = [...o])[2] = R),
-        (0, r.jsx)(f.A, {
-            className: a()(d ? v.HZ : v.jv),
-            categoryListRef: O,
+        m && ((a = [...a])[2] = 50),
+        (0, i.jsx)(f.A, {
+            className: r()(d ? b.HZ : b.jv),
+            categoryListRef: C,
             expressionsListRef: t,
-            store: _.LW,
+            store: p.LW,
             categories: n,
-            listPadding: o,
-            renderCategoryListItem: x,
+            listPadding: a,
+            renderCategoryListItem: M,
             rowCount: n.length,
-            categoryHeight: C,
-            getScrollOffsetForIndex: M,
+            categoryHeight: 40,
+            getScrollOffsetForIndex: L,
             children: (e) =>
-                p &&
-                (0, r.jsx)(c.DUT, {
-                    "aria-label": y.intl.string(y.t.Rtvk9X),
-                    className: v.xe,
+                m &&
+                (0, i.jsx)(u.D, {
+                    "aria-label": S.intl.string(S.t.Rtvk9X),
+                    className: b.xe,
                     onClick: () => w(e),
-                    children: (0, r.jsx)(c.pVd, { size: "custom", width: 24, height: 24, color: "currentColor" }),
+                    children: (0, i.jsx)(h.p, { size: "custom", width: 24, height: 24, color: "currentColor" }),
                 }),
         })
     );

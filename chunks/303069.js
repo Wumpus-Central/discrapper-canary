@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Zj: "upsellContainer__17daa",
     $P: "upsellHeader__17daa",

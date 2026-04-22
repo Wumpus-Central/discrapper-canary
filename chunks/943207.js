@@ -1,61 +1,64 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
-    l = n(397927),
-    r = n(98207),
-    a = n(235986),
-    o = n(670492),
-    d = n(957565),
-    c = n(985018),
-    u = n(103579),
-    m = n(818050);
-function g(e) {
+    l = n(939249),
+    a = n(658675),
+    r = n(452027),
+    o = n(123292),
+    d = n(98207),
+    u = n(235986),
+    c = n(670492),
+    g = n(957565),
+    m = n(985018),
+    _ = n(103579),
+    A = n(818050);
+function h(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
         r = `${t.substr(0, 4)}-${t.substr(4)}`,
-        a = s.useRef(null),
-        o = s.useCallback(
+        o = s.useRef(null),
+        d = s.useCallback(
             (e) => {
                 "c" === e.key &&
                     e.metaKey &&
-                    d.p5 &&
-                    (e.preventDefault(), e.stopPropagation(), (0, d.C)(r), a?.current?.focus());
+                    g.p5 &&
+                    (e.preventDefault(), e.stopPropagation(), (0, g.C)(r), o?.current?.focus());
             },
             [r],
         );
     return (0, i.jsx)("li", {
-        className: m.SX,
-        children: (0, i.jsxs)(l.DUT, {
-            innerRef: a,
-            className: u.Uc,
-            onKeyDown: o,
-            children: [(0, i.jsx)(l.P7L, { checked: n }), (0, i.jsx)("span", { className: u.aY, children: r })],
+        className: A.SX,
+        children: (0, i.jsxs)(l.D, {
+            innerRef: o,
+            className: _.Uc,
+            onKeyDown: d,
+            children: [(0, i.jsx)(a.P, { checked: n }), (0, i.jsx)("span", { className: _.aY, children: r })],
         }),
     });
 }
-function _(e) {
+function p(e) {
     let { backupCodes: t } = e,
-        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(g, { code: e }, e.code)), []),
-        d = s.useCallback(async () => {
-            let e = o.A.getVerificationKey();
-            await r.A.confirmViewBackupCodes(e, !0);
+        n = s.useCallback((e) => e.map((e) => (0, i.jsx)(h, { code: e }, e.code)), []),
+        l = s.useCallback(async () => {
+            let e = c.A.getVerificationKey();
+            await d.A.confirmViewBackupCodes(e, !0);
         }, []);
-    return (0, i.jsxs)(l.D0$, {
-        label: c.intl.string(c.t.GfqHPn),
-        description: c.intl.format(c.t.OhmvYt, {}),
+    return (0, i.jsxs)(r.D, {
+        label: m.intl.string(m.t.GfqHPn),
+        description: m.intl.format(m.t.OhmvYt, {}),
         children: [
-            (0, i.jsxs)(a.A, {
+            (0, i.jsxs)(u.A, {
                 children: [
-                    (0, i.jsx)(a.A.Child, {
-                        children: (0, i.jsx)("ul", { className: u.Pm, children: n(t.slice(0, t.length / 2)) }),
+                    (0, i.jsx)(u.A.Child, {
+                        children: (0, i.jsx)("ul", { className: _.Pm, children: n(t.slice(0, t.length / 2)) }),
                     }),
-                    (0, i.jsx)(a.A.Child, {
-                        children: (0, i.jsx)("ul", { className: u.Pm, children: n(t.slice(t.length / 2)) }),
+                    (0, i.jsx)(u.A.Child, {
+                        children: (0, i.jsx)("ul", { className: _.Pm, children: n(t.slice(t.length / 2)) }),
                     }),
                 ],
             }),
-            (0, i.jsx)(l.QWc, { textVariant: "text-sm/medium", onClick: d, text: c.intl.string(c.t.RIThUu) }),
+            (0, i.jsx)(o.Q, { textVariant: "text-sm/medium", onClick: l, text: m.intl.string(m.t.RIThUu) }),
         ],
     });
 }

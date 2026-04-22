@@ -22,63 +22,65 @@ if ("function" == typeof i && "function" == typeof Object.defineProperty)
         e !== n && (i = null);
     }
 else i = null;
-var a = /^\s*class\b/,
-    s = function (e) {
+var s = /^\s*class\b/,
+    a = function (e) {
         try {
             var t = r.call(e);
-            return a.test(t);
+            return s.test(t);
         } catch (e) {
             return !1;
         }
     },
     o = function (e) {
         try {
-            if (s(e)) return !1;
+            if (a(e)) return !1;
             return r.call(e), !0;
         } catch (e) {
             return !1;
         }
     },
     l = Object.prototype.toString,
-    u = "[object Object]",
-    c = "[object Function]",
-    d = "[object GeneratorFunction]",
-    _ = "[object HTMLAllCollection]",
-    f = "[object HTML document.all class]",
-    p = "[object HTMLCollection]",
-    h = "function" == typeof Symbol && !!Symbol.toStringTag,
-    m = !(0 in [,]),
-    g = function () {
+    u = "function" == typeof Symbol && !!Symbol.toStringTag,
+    d = !(0 in [,]),
+    c = function () {
         return !1;
     };
 if ("object" == typeof document) {
-    var E = document.all;
-    l.call(E) === l.call(document.all) &&
-        (g = function (e) {
-            if ((m || !e) && (void 0 === e || "object" == typeof e))
+    var _ = document.all;
+    l.call(_) === l.call(document.all) &&
+        (c = function (e) {
+            if ((d || !e) && (void 0 === e || "object" == typeof e))
                 try {
                     var t = l.call(e);
-                    return (t === _ || t === f || t === p || t === u) && null == e("");
+                    return (
+                        ("[object HTMLAllCollection]" === t ||
+                            "[object HTML document.all class]" === t ||
+                            "[object HTMLCollection]" === t ||
+                            "[object Object]" === t) &&
+                        null == e("")
+                    );
                 } catch (e) {}
             return !1;
         });
 }
 e.exports = i
     ? function (e) {
-          if (g(e)) return !0;
+          if (c(e)) return !0;
           if (!e || ("function" != typeof e && "object" != typeof e)) return !1;
           try {
               i(e, null, t);
           } catch (e) {
               if (e !== n) return !1;
           }
-          return !s(e) && o(e);
+          return !a(e) && o(e);
       }
     : function (e) {
-          if (g(e)) return !0;
+          if (c(e)) return !0;
           if (!e || ("function" != typeof e && "object" != typeof e)) return !1;
-          if (h) return o(e);
-          if (s(e)) return !1;
+          if (u) return o(e);
+          if (a(e)) return !1;
           var t = l.call(e);
-          return (t === c || t === d || !!/^\[object HTML/.test(t)) && o(e);
+          return (
+              ("[object Function]" === t || "[object GeneratorFunction]" === t || !!/^\[object HTML/.test(t)) && o(e)
+          );
       };

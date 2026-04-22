@@ -1,29 +1,51 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
-    l = n(73153),
+    r = n(73153),
     a = n(272355),
-    r = n(958005),
+    l = n(958005),
     s = n(268218),
     o = n(574172),
     d = n(652215);
 n(41604);
-let c = (0, s.Fe)({
-        createPromise: () => n.e("71138").then(n.bind(n, 140539)),
+let u = (0, s.Fe)({
+        createPromise: () =>
+            Promise.all([
+                n.e("755"),
+                n.e("77602"),
+                n.e("34519"),
+                n.e("84114"),
+                n.e("66788"),
+                n.e("13779"),
+                n.e("71138"),
+            ]).then(n.bind(n, 140539)),
         webpackId: 140539,
         name: "PopoutWindowChannelCall",
     }),
-    u = (0, s.Fe)({
-        createPromise: () => n.e("36133").then(n.bind(n, 943472)),
+    c = (0, s.Fe)({
+        createPromise: () =>
+            Promise.all([n.e("755"), n.e("34519"), n.e("84114"), n.e("36133")]).then(n.bind(n, 943472)),
         webpackId: 943472,
         name: "PopoutWindowCallTile",
     }),
     A = (0, s.Fe)({
-        createPromise: () => n.e("36308").then(n.bind(n, 911315)),
+        createPromise: () =>
+            Promise.all([n.e("755"), n.e("34519"), n.e("84114"), n.e("66788"), n.e("55061"), n.e("36308")]).then(
+                n.bind(n, 911315),
+            ),
         webpackId: 911315,
         name: "PopoutWindowStageChannelCall",
     }),
     h = (0, s.Fe)({
-        createPromise: () => n.e("71138").then(n.bind(n, 414760)),
+        createPromise: () =>
+            Promise.all([
+                n.e("755"),
+                n.e("77602"),
+                n.e("34519"),
+                n.e("84114"),
+                n.e("66788"),
+                n.e("13779"),
+                n.e("71138"),
+            ]).then(n.bind(n, 414760)),
         webpackId: 414760,
         name: "PopoutWindowRTCDebug",
     }),
@@ -32,20 +54,20 @@ let c = (0, s.Fe)({
         webpackId: 860051,
         name: "PopoutWindowActivity",
     });
-class m extends a.A {
+class E extends a.A {
     _observer = null;
     _initialize() {
-        l.h.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
-            l.h.subscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
-            l.h.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
-            l.h.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+        r.h.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            r.h.subscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
+            r.h.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
+            r.h.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
             this.initializeStyleSheetObserver();
     }
     _terminate() {
-        l.h.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
-            l.h.unsubscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
-            l.h.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
-            l.h.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
+        r.h.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            r.h.unsubscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
+            r.h.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
+            r.h.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
             this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
@@ -55,14 +77,14 @@ class m extends a.A {
             (e) =>
                 t.isGuildStageVoice()
                     ? (0, i.jsx)(A, { windowKey: e, channelId: t.id })
-                    : (0, i.jsx)(c, { windowKey: e, channelId: t.id }),
+                    : (0, i.jsx)(u, { windowKey: e, channelId: t.id }),
             { defaultWidth: 854, defaultHeight: 480 },
         );
     }
     handleOpenCallTilePopout = (e) => {
         let { channelId: t, participantId: n } = e,
-            l = (0, r.A)(t, n);
-        o.open(l, (e) => (0, i.jsx)(u, { windowKey: e, channelId: t, participantId: n }), {
+            r = (0, l.A)(t, n);
+        o.open(r, (e) => (0, i.jsx)(c, { windowKey: e, channelId: t, participantId: n }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
@@ -97,4 +119,4 @@ class m extends a.A {
         });
     }
 }
-let g = new m();
+let p = new E();

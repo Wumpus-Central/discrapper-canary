@@ -1,142 +1,145 @@
 "use strict";
-n.d(t, { A: () => Q });
+n.d(t, { A: () => et });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(607399),
     l = n(337836),
-    u = n(158954),
-    c = n(311907),
-    d = n(506774),
+    u = n(825437),
+    d = n(311907),
+    c = n(506774),
     _ = n(752239),
-    f = n(397927),
-    p = n(197808),
-    h = n(318009),
-    m = n(638421),
-    E = n(352423),
-    g = n(775602),
-    A = n(697138),
-    I = n(989395),
-    T = n(139286),
-    S = n(596155),
-    y = n(501280),
+    f = n(192308),
+    E = n(187322),
+    h = n(638495),
+    p = n(988393),
+    m = n(197808),
+    g = n(318009),
+    A = n(638421),
+    I = n(352423),
+    T = n(775602),
+    S = n(697138),
+    y = n(989395),
+    N = n(139286),
+    O = n(596155),
+    R = n(501280),
     v = n(196923),
-    N = n(288610),
-    C = n(681582),
-    R = n(172272),
-    O = n(102854),
-    b = n(670735),
-    D = n(318015),
-    L = n(611544),
-    w = n(750506),
-    M = n(361158),
-    P = n(80556),
-    x = n(267102),
-    k = n(867649),
-    U = n(975616),
-    G = n(385838),
-    F = n(961350),
-    V = n(186111),
-    B = n(723702),
-    H = n(268218),
-    j = n(663413),
-    Y = n(905790),
-    W = n(404374),
-    K = n(573435),
-    $ = n(71855),
-    z = n(652215),
-    q = n(906292);
+    C = n(288610),
+    b = n(681582),
+    D = n(172272),
+    L = n(102854),
+    w = n(670735),
+    M = n(318015),
+    P = n(611544),
+    U = n(750506),
+    k = n(361158),
+    x = n(80556),
+    G = n(267102),
+    V = n(867649),
+    F = n(975616),
+    B = n(385838),
+    H = n(961350),
+    Y = n(186111),
+    W = n(723702),
+    j = n(268218),
+    K = n(663413),
+    $ = n(905790),
+    z = n(404374),
+    q = n(573435),
+    X = n(71855),
+    Q = n(652215),
+    J = n(906292);
 n(939857),
     Promise.resolve()
         .then(n.bind(n, 677134))
         .then((e) => {
-            B.isPlatformEmbedded
+            W.isPlatformEmbedded
                 ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
                 : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
         }),
-    (0, _.h)({ getDefaultLinkInterceptor: E.default }),
-    (0, H.Fe)({
+    (0, _.h)({ getDefaultLinkInterceptor: I.default }),
+    (0, j.Fe)({
         createPromise: () => Promise.all([n.e("94678"), n.e("896"), n.e("4787"), n.e("8188")]).then(n.bind(n, 441588)),
         webpackId: 441588,
     }),
-    (0, H.Fe)({
+    (0, j.Fe)({
         createPromise: () => Promise.all([n.e("94678"), n.e("896"), n.e("4787"), n.e("56795")]).then(n.bind(n, 961881)),
         webpackId: 961881,
     });
-let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), webpackId: 359094 }),
-    X = i.memo(function () {
-        let e = (0, c.bG)([V.A], () => V.A.hasLayers()),
-            t = (0, f.red)(f.ueM),
-            n = (0, c.bG)([F.default], () => F.default.isAuthenticated());
-        return (0, r.jsx)($.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
+let Z = (0, j.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), webpackId: 359094 }),
+    ee = i.memo(function () {
+        let e = (0, d.bG)([Y.A], () => Y.A.hasLayers()),
+            t = (0, f.useModalsStore)(f.hasAnyModalOpen),
+            n = (0, d.bG)([H.default], () => H.default.isAuthenticated());
+        return (0, r.jsx)(X.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
     }),
-    Q = function (e) {
+    et = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            s = (0, B.getPlatform)(),
+            s = (0, W.getPlatform)(),
             _ = o.Fr || o.v1,
-            E = (0, c.bG)([g.A], () => (g.A.useForcedColors ? "yes" : "no")),
-            F = i.useRef(document.body),
-            V = `${E}`;
-        (0, L.i)("AppSkeleton");
-        let H = (0, D.sK)("AppSkeleton");
+            f = (0, d.bG)([T.A], () => (T.A.useForcedColors ? "yes" : "no")),
+            I = i.useRef(document.body),
+            H = `${f}`;
+        (0, P.i)("AppSkeleton");
+        let Y = (0, M.sK)("AppSkeleton");
         return (
             i.useEffect(() => {
-                H ? d.w.set(D.AL, !0) : d.w.remove(D.AL);
-            }, [H]),
+                Y ? c.w.set(M.AL, !0) : c.w.remove(M.AL);
+            }, [Y]),
             (0, r.jsx)(
-                U.e,
+                F.e,
                 {
-                    children: (0, r.jsxs)(A.A, {
+                    children: (0, r.jsxs)(S.A, {
                         children: [
-                            (0, r.jsx)(j.A, { skipsSettingDefaultPageTitle: n }),
-                            (0, r.jsx)(m.N, {
-                                children: (0, r.jsx)(b.A, {
-                                    children: (0, r.jsxs)(f.xpW, {
-                                        containerRef: F,
+                            (0, r.jsx)(K.A, { skipsSettingDefaultPageTitle: n }),
+                            (0, r.jsx)(A.N, {
+                                children: (0, r.jsx)(w.A, {
+                                    children: (0, r.jsxs)(E.xp, {
+                                        containerRef: I,
                                         children: [
-                                            (0, r.jsx)(K.Al, {}),
-                                            (0, r.jsx)(W.Ay, {}),
-                                            (0, r.jsx)(u.Utq, {}),
-                                            (0, r.jsx)(x.Wr, {
-                                                appContext: z.BRT.APP,
+                                            (0, r.jsx)(q.Al, {}),
+                                            (0, r.jsx)(z.Ay, {}),
+                                            (0, r.jsx)(u.Ut, {}),
+                                            (0, r.jsx)(G.Wr, {
+                                                appContext: Q.BRT.APP,
                                                 renderWindow: window,
-                                                children: (0, r.jsxs)(w.Yf, {
+                                                children: (0, r.jsxs)(U.Yf, {
                                                     children: [
-                                                        null != s ? (0, r.jsx)(X, {}) : null,
+                                                        null != s ? (0, r.jsx)(ee, {}) : null,
                                                         (0, r.jsxs)("div", {
-                                                            className: a()(q.XX, _ && q.Xq),
+                                                            className: a()(J.XX, _ && J.Xq),
                                                             children: [
-                                                                (0, r.jsx)(R.C1, {}),
+                                                                (0, r.jsx)(D.C1, {}),
                                                                 (0, r.jsx)("div", {
-                                                                    className: q.x$,
+                                                                    className: J.x$,
                                                                     "data-app-not-dev-tools": !0,
-                                                                    children: (0, r.jsx)(C.l, {
-                                                                        children: (0, r.jsx)(P.ks, {
-                                                                            children: (0, r.jsx)(I.A.Provider, {
-                                                                                value: T.A,
-                                                                                children: (0, r.jsxs)(N.p, {
+                                                                    children: (0, r.jsx)(b.l, {
+                                                                        children: (0, r.jsx)(x.ks, {
+                                                                            children: (0, r.jsx)(y.A.Provider, {
+                                                                                value: N.A,
+                                                                                children: (0, r.jsxs)(C.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: a()(
-                                                                                                _ ? q.C$ : q.yA,
+                                                                                                _ ? J.C$ : J.yA,
                                                                                             ),
                                                                                             children: t,
                                                                                         }),
-                                                                                        (0, r.jsx)(p.A, {}),
-                                                                                        (0, r.jsx)(y.A, {}),
-                                                                                        (0, r.jsx)(h.A, {}),
-                                                                                        (0, r.jsx)(f.bM6, {}),
-                                                                                        (0, r.jsx)(G.A, {}),
-                                                                                        (0, r.jsx)(M.up, {}),
+                                                                                        (0, r.jsx)(m.A, {}),
+                                                                                        (0, r.jsx)(R.A, {}),
+                                                                                        (0, r.jsx)(g.A, {}),
+                                                                                        (0, r.jsx)(h.b, {}),
+                                                                                        (0, r.jsx)(B.A, {}),
+                                                                                        (0, r.jsx)(k.up, {}),
                                                                                         (0, r.jsx)(l.P, {}),
-                                                                                        (0, r.jsx)(w.C8, {}),
-                                                                                        (0, r.jsx)(P.ok, {}),
-                                                                                        (0, r.jsx)(f.N9M, {
-                                                                                            appContext: z.BRT.APP,
+                                                                                        (0, r.jsx)(U.C8, {}),
+                                                                                        (0, r.jsx)(x.ok, {}),
+                                                                                        (0, r.jsx)(p.N, {
+                                                                                            appContext: Q.BRT.APP,
                                                                                         }),
-                                                                                        (0, r.jsx)(S.A, {}),
-                                                                                        (0, r.jsx)(k.A, {}),
+                                                                                        (0, r.jsx)(O.A, {}),
+                                                                                        (0, r.jsx)(V.A, {}),
                                                                                         (0, r.jsx)(Z, {}),
                                                                                     ],
                                                                                 }),
@@ -145,15 +148,15 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                                                                     }),
                                                                 }),
                                                                 (0, r.jsx)(v.A, {}),
-                                                                (0, r.jsx)(Y.A, { mobile: _ }),
-                                                                (0, r.jsx)(O.A, { mobile: _ }),
+                                                                (0, r.jsx)($.A, { mobile: _ }),
+                                                                (0, r.jsx)(L.A, { mobile: _ }),
                                                             ],
                                                         }),
                                                         !1,
                                                     ],
                                                 }),
                                             }),
-                                            (0, r.jsx)(u.Utq, {}),
+                                            (0, r.jsx)(u.Ut, {}),
                                         ],
                                     }),
                                 }),
@@ -161,7 +164,7 @@ let Z = (0, H.Fe)({ createPromise: () => n.e("99063").then(n.bind(n, 359094)), w
                         ],
                     }),
                 },
-                V,
+                H,
             )
         );
     };

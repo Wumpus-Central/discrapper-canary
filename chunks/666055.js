@@ -1,17 +1,17 @@
-n.d(t, { A: () => _ });
-var a = n(627968),
-    s = n(64700),
-    i = n(311907),
-    l = n(562465),
-    r = n(397927),
-    o = n(384904),
-    d = n(803306),
-    c = n(112848),
-    u = n(287809),
-    m = n(166403),
-    h = n(661191),
-    x = n(652215),
-    p = n(788868);
+a.d(t, { A: () => v });
+var n = a(627968),
+    l = a(64700),
+    i = a(311907),
+    s = a(562465),
+    r = a(691885),
+    o = a(803306),
+    d = a(323082),
+    c = a(112848),
+    u = a(287809),
+    m = a(166403),
+    h = a(661191),
+    p = a(652215),
+    x = a(788868);
 let g = [
     { id: "1week", label: "1 Week", value: 0 },
     { id: "1month", label: "1 Month (Bronze)", value: 1 },
@@ -23,37 +23,37 @@ let g = [
     { id: "5years", label: "5 Years (Ruby)", value: 60 },
     { id: "6years", label: "6 Years (Opal)", value: 72 },
 ];
-function _() {
-    let [e, t] = s.useState(!1),
-        n = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-        _ = (0, c.Lh)(),
-        f = (0, i.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
-        v = null != _ ? (p.VD[_]?.tenureReqNumMonths ?? 0) : 0,
-        b = s.useCallback(
+function v() {
+    let [e, t] = l.useState(!1),
+        a = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
+        v = (0, c.Lh)(),
+        b = (0, i.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
+        _ = null != v ? (x.VD[v]?.tenureReqNumMonths ?? 0) : 0,
+        f = l.useCallback(
             async (e) => {
-                let a = new Date();
-                e > 0 ? a.setMonth(a.getMonth() - e) : a.setDate(a.getDate() - 7), a.setDate(a.getDate() - 2);
-                let s = {
-                    subscription_status: x.Dmq.ACTIVE,
+                let n = new Date();
+                e > 0 ? n.setMonth(n.getMonth() - e) : n.setDate(n.getDate() - 7), n.setDate(n.getDate() - 2);
+                let l = {
+                    subscription_status: p.Dmq.ACTIVE,
                     endedAt: void 0,
-                    premium_streak_started_at: h.default.fromTimestamp(a.getTime()),
+                    premium_streak_started_at: h.default.fromTimestamp(n.getTime()),
                 };
                 t(!0),
-                    await l.Bo.patch({ url: `/debug/subscriptions/${f.id}`, body: s, rejectWithError: !1 }),
-                    await (0, d.eO)(n.id),
-                    await (0, o.hP)(),
+                    await s.Bo.patch({ url: `/debug/subscriptions/${b.id}`, body: l, rejectWithError: !1 }),
+                    await (0, o.eO)(a.id),
+                    await (0, d.hP)(),
                     t(!1);
             },
-            [f, n],
+            [b, a],
         );
-    if (null != n && null != f)
-        return (0, a.jsx)(r.l6P, {
+    if (null != a && null != b)
+        return (0, n.jsx)(r.l, {
             label: "Tenure",
             hideLabel: !0,
             selectionMode: "single",
             disabled: e,
-            value: v,
+            value: _,
             options: g,
-            onSelectionChange: b,
+            onSelectionChange: f,
         });
 }

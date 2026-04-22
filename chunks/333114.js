@@ -1,14 +1,14 @@
 i.d(e, { default: () => f });
 var l = i(627968),
     n = i(64700),
-    s = i(158954),
+    s = i(189213),
     r = i(311907),
-    a = i(397927),
+    a = i(834730),
     d = i(287809),
     o = i(725386),
     u = i(624160),
     c = i(985018),
-    g = i(480676);
+    g = i(500681);
 function f(t) {
     let { onClose: e, trackUserProfileEditAction: i, ...f } = t,
         h = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
@@ -22,8 +22,8 @@ function f(t) {
                 e
             );
         })(),
-        x = p.length > 0,
-        [k, m] = n.useState(!1),
+        k = p.length > 0,
+        [x, m] = n.useState(!1),
         C = { onClick: () => e(), text: c.intl.string(c.t.cpT0Cq) },
         b = n.useCallback(() => {
             m(!0), e();
@@ -32,23 +32,23 @@ function f(t) {
         ? null
         : (0, l.jsx)(s.Modal, {
               title: c.intl.string(c.t["grUgR+"]),
-              actions: x ? [] : [C],
-              size: x ? "md" : "sm",
+              actions: k ? [] : [C],
+              size: k ? "md" : "sm",
               onClose: e,
               ...f,
-              children: x
+              children: k
                   ? (0, l.jsx)("ul", {
                         "aria-label": c.intl.string(c.t["+EIBSA"]),
                         className: g.f,
                         children: p.map((t) =>
                             (0, l.jsx)(
                                 u.A,
-                                { widget: t, onAddWidget: b, loading: k, trackUserProfileEditAction: i },
+                                { widget: t, onAddWidget: b, loading: x, trackUserProfileEditAction: i },
                                 t.getUniqueKey(),
                             ),
                         ),
                     })
-                  : (0, l.jsx)(a.Text, {
+                  : (0, l.jsx)(a.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
                         children: c.intl.string(c.t["1nkDOs"]),

@@ -1,94 +1,93 @@
 let r = n(74509),
     i = n(46666),
-    { ANY: a } = i,
-    s = n(4144),
+    { ANY: s } = i,
+    a = n(4144),
     o = n(481558),
-    l = (e, t, n = {}) => {
-        if (e === t) return !0;
-        (e = new r(e, n)), (t = new r(t, n));
-        let i = !1;
-        o: for (let r of e.set) {
-            for (let e of t.set) {
-                let t = d(r, e, n);
-                if (((i = i || null !== t), t)) continue o;
-            }
-            if (i) return !1;
-        }
-        return !0;
-    },
-    c = [new i(">=0.0.0-0")],
+    l = [new i(">=0.0.0-0")],
     u = [new i(">=0.0.0")],
     d = (e, t, n) => {
-        let r, i, l, d, _, h, m;
+        let r, i, d, f, E, h, p;
         if (e === t) return !0;
-        if (1 === e.length && e[0].semver === a)
-            if (1 === t.length && t[0].semver === a) return !0;
-            else e = n.includePrerelease ? c : u;
-        if (1 === t.length && t[0].semver === a)
+        if (1 === e.length && e[0].semver === s)
+            if (1 === t.length && t[0].semver === s) return !0;
+            else e = n.includePrerelease ? l : u;
+        if (1 === t.length && t[0].semver === s)
             if (n.includePrerelease) return !0;
             else t = u;
-        let g = new Set();
+        let m = new Set();
         for (let t of e)
             ">" === t.operator || ">=" === t.operator
-                ? (r = f(r, t, n))
+                ? (r = c(r, t, n))
                 : "<" === t.operator || "<=" === t.operator
-                  ? (i = p(i, t, n))
-                  : g.add(t.semver);
-        if (g.size > 1) return null;
-        if (r && i && ((l = o(r.semver, i.semver, n)) > 0 || (0 === l && (">=" !== r.operator || "<=" !== i.operator))))
+                  ? (i = _(i, t, n))
+                  : m.add(t.semver);
+        if (m.size > 1) return null;
+        if (r && i && ((d = o(r.semver, i.semver, n)) > 0 || (0 === d && (">=" !== r.operator || "<=" !== i.operator))))
             return null;
-        for (let e of g) {
-            if ((r && !s(e, String(r), n)) || (i && !s(e, String(i), n))) return null;
-            for (let r of t) if (!s(e, String(r), n)) return !1;
+        for (let e of m) {
+            if ((r && !a(e, String(r), n)) || (i && !a(e, String(i), n))) return null;
+            for (let r of t) if (!a(e, String(r), n)) return !1;
             return !0;
         }
-        let E = !!i && !n.includePrerelease && !!i.semver.prerelease.length && i.semver,
-            b = !!r && !n.includePrerelease && !!r.semver.prerelease.length && r.semver;
-        for (let e of (E && 1 === E.prerelease.length && "<" === i.operator && 0 === E.prerelease[0] && (E = !1), t)) {
+        let g = !!i && !n.includePrerelease && !!i.semver.prerelease.length && i.semver,
+            A = !!r && !n.includePrerelease && !!r.semver.prerelease.length && r.semver;
+        for (let e of (g && 1 === g.prerelease.length && "<" === i.operator && 0 === g.prerelease[0] && (g = !1), t)) {
             if (
-                ((m = m || ">" === e.operator || ">=" === e.operator),
+                ((p = p || ">" === e.operator || ">=" === e.operator),
                 (h = h || "<" === e.operator || "<=" === e.operator),
                 r)
             ) {
                 if (
-                    (b &&
+                    (A &&
                         e.semver.prerelease &&
                         e.semver.prerelease.length &&
-                        e.semver.major === b.major &&
-                        e.semver.minor === b.minor &&
-                        e.semver.patch === b.patch &&
-                        (b = !1),
+                        e.semver.major === A.major &&
+                        e.semver.minor === A.minor &&
+                        e.semver.patch === A.patch &&
+                        (A = !1),
                     ">" === e.operator || ">=" === e.operator)
                 ) {
-                    if ((d = f(r, e, n)) === e && d !== r) return !1;
-                } else if (">=" === r.operator && !s(r.semver, String(e), n)) return !1;
+                    if ((f = c(r, e, n)) === e && f !== r) return !1;
+                } else if (">=" === r.operator && !a(r.semver, String(e), n)) return !1;
             }
             if (i) {
                 if (
-                    (E &&
+                    (g &&
                         e.semver.prerelease &&
                         e.semver.prerelease.length &&
-                        e.semver.major === E.major &&
-                        e.semver.minor === E.minor &&
-                        e.semver.patch === E.patch &&
-                        (E = !1),
+                        e.semver.major === g.major &&
+                        e.semver.minor === g.minor &&
+                        e.semver.patch === g.patch &&
+                        (g = !1),
                     "<" === e.operator || "<=" === e.operator)
                 ) {
-                    if ((_ = p(i, e, n)) === e && _ !== i) return !1;
-                } else if ("<=" === i.operator && !s(i.semver, String(e), n)) return !1;
+                    if ((E = _(i, e, n)) === e && E !== i) return !1;
+                } else if ("<=" === i.operator && !a(i.semver, String(e), n)) return !1;
             }
-            if (!e.operator && (i || r) && 0 !== l) return !1;
+            if (!e.operator && (i || r) && 0 !== d) return !1;
         }
-        return (!r || !h || !!i || 0 === l) && (!i || !m || !!r || 0 === l) && !b && !E && !0;
+        return (!r || !h || !!i || 0 === d) && (!i || !p || !!r || 0 === d) && !A && !g && !0;
     },
-    f = (e, t, n) => {
+    c = (e, t, n) => {
         if (!e) return t;
         let r = o(e.semver, t.semver, n);
         return r > 0 ? e : r < 0 || (">" === t.operator && ">=" === e.operator) ? t : e;
     },
-    p = (e, t, n) => {
+    _ = (e, t, n) => {
         if (!e) return t;
         let r = o(e.semver, t.semver, n);
         return r < 0 ? e : r > 0 || ("<" === t.operator && "<=" === e.operator) ? t : e;
     };
-e.exports = l;
+e.exports = (e, t, n = {}) => {
+    if (e === t) return !0;
+    (e = new r(e, n)), (t = new r(t, n));
+    let i = !1;
+    o: for (let r of e.set) {
+        for (let e of t.set) {
+            let t = d(r, e, n);
+            if (((i = i || null !== t), t)) continue o;
+        }
+        if (i) return !1;
+    }
+    return !0;
+};

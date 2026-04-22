@@ -1,62 +1,62 @@
-l.d(t, { v: () => E });
+l.d(t, { v: () => _ });
 var n = l(627968),
     i = l(64700),
-    r = l(158954),
-    a = l(311907),
+    a = l(691885),
+    r = l(311907),
     s = l(508675),
-    u = l(263063),
-    o = l(492494),
+    o = l(263063),
+    u = l(492494),
     c = l(71393),
     d = l(576705),
-    m = l(711014),
-    h = l(403362),
+    h = l(711014),
+    m = l(403362),
     g = l(473145),
     x = l(80569),
-    j = l(652215),
-    f = l(985018);
-let _ = (e) => ({ label: e.name, value: e.id }),
-    b = (e) => d.A.can(j.xBc.CREATE_GUILD_EXPRESSIONS, e),
-    E = (e) => {
+    f = l(652215),
+    j = l(985018);
+let v = (e) => ({ label: e.name, value: e.id }),
+    E = (e) => d.A.can(f.xBc.CREATE_GUILD_EXPRESSIONS, e),
+    _ = (e) => {
         let {
                 onChange: t,
                 selected: l,
                 onError: d,
-                labelledBy: E,
-                isEmojiAnimated: v,
-                label: I,
-                required: A,
-                errorMessage: S,
+                labelledBy: _,
+                isEmojiAnimated: b,
+                label: A,
+                required: I,
+                errorMessage: N,
             } = e,
-            N = (0, a.cf)([c.A, m.Ay], () =>
+            p = (0, r.cf)([c.A, h.Ay], () =>
                 Object.fromEntries(
-                    m.Ay.getFlattenedGuildIds()
+                    h.Ay.getFlattenedGuildIds()
                         .map((e) => c.A.getGuild(e))
-                        .filter(h.Vq)
+                        .filter(m.Vq)
                         .map((e) => [e.id, e]),
                 ),
             ),
-            p = (0, a.cf)(
+            S = (0, r.cf)(
                 [s.Ay],
                 () =>
                     Object.fromEntries(
-                        Object.entries(N).map((e) => {
+                        Object.entries(p).map((e) => {
                             let [t, l] = e;
                             return [
                                 t,
                                 (function (e) {
                                     let { guild: t, emojis: l, isEmojiAnimated: n } = e,
                                         i =
-                                            l.filter((e) => e.animated === n && !e.managed && !(0, o.Eg)(e, t.id))
+                                            l.filter((e) => e.animated === n && !e.managed && !(0, u.Eg)(e, t.id))
                                                 .length ?? 0;
                                     return (0, g.sN)(t) - i;
-                                })({ guild: l, emojis: s.Ay.getGuildEmoji(t), isEmojiAnimated: v }),
+                                })({ guild: l, emojis: s.Ay.getGuildEmoji(t), isEmojiAnimated: b }),
                             ];
                         }),
                     ),
-                [N, v],
+                [p, b],
             ),
-            O = i.useMemo(() => Object.values(N).filter(b).map(_), [N]),
-            C = i.useCallback(
+            w = i.useMemo(() => Object.values(p).filter(E).map(v), [p]),
+            M = i.useCallback(
                 (e) => {
                     let { value: t, label: l, disabled: i } = e;
                     return {
@@ -66,37 +66,37 @@ let _ = (e) => ({ label: e.name, value: e.id }),
                         disabled: i,
                         leading: ((e) => {
                             if (null == e.value) return null;
-                            let t = N[e.value];
+                            let t = p[e.value];
                             return null == t
                                 ? null
-                                : (0, n.jsx)(u.Ay, { guild: t, size: u.Ay.Sizes.SMALLER, active: !0 });
+                                : (0, n.jsx)(o.Ay, { guild: t, size: o.Ay.Sizes.SMALLER, active: !0 });
                         })(e),
                         trailing:
-                            null == e.value ? null : f.intl.formatToPlainString(f.t.WkK72v, { count: p[e.value] }),
+                            null == e.value ? null : j.intl.formatToPlainString(j.t.WkK72v, { count: S[e.value] }),
                     };
                 },
-                [p, N],
+                [S, p],
             );
         return (
             i.useEffect(() => {
-                O.length < 1
+                w.length < 1
                     ? d(x.j.NO_PERMISSIONS)
-                    : null != l && (p?.[l] ?? 0) < 1
-                      ? d(j.t02.TOO_MANY_EMOJI)
+                    : null != l && (S?.[l] ?? 0) < 1
+                      ? d(f.t02.TOO_MANY_EMOJI)
                       : d(null);
-            }, [O, t, d, l, p]),
-            (0, n.jsx)(r.l6P, {
-                label: I,
-                required: A,
+            }, [w, t, d, l, S]),
+            (0, n.jsx)(a.l, {
+                label: A,
+                required: I,
                 selectionMode: "single",
-                errorMessage: S,
+                errorMessage: N,
                 onSelectionChange: t,
-                options: O,
-                formatOption: C,
+                options: w,
+                formatOption: M,
                 value: l,
-                "aria-labelledby": E,
-                placeholder: O.length < 1 ? f.intl.string(f.t.jHpxwo) : f.intl.string(f.t["4mqeQO"]),
-                disabled: O.length < 1,
+                "aria-labelledby": _,
+                placeholder: w.length < 1 ? j.intl.string(j.t.jHpxwo) : j.intl.string(j.t["4mqeQO"]),
+                disabled: w.length < 1,
             })
         );
     };

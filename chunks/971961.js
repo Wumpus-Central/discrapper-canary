@@ -1,32 +1,28 @@
-n.d(e, { A: () => A });
+n.d(e, { A: () => E });
 var l = n(627968),
     i = n(64700),
     r = n(311907),
-    a = n(397927),
-    d = n(486503),
-    s = n(253932),
-    u = n(957565),
-    o = n(698441),
-    c = n(691012),
-    E = n(985018);
-function A(t, e) {
-    let n = s.Q_.useSetting(),
-        { tidaWebformEnabled: A } = d.A.useExperiment(
+    a = n(477782),
+    d = n(173936),
+    s = n(486503),
+    u = n(253932),
+    o = n(957565),
+    c = n(698441),
+    g = n(691012),
+    A = n(985018);
+function E(t, e) {
+    let n = u.Q_.useSetting(),
+        { tidaWebformEnabled: E } = s.A.useExperiment(
             { location: "useCopyEventImageLinkItem" },
             { autoTrackExposure: !1 },
         ),
-        g = (0, r.bG)([o.Ay], () => o.Ay.getGuildScheduledEvent(t)),
-        _ = null != g ? (0, c.A)(g) : null,
-        h = "event-image" === e.getAttribute("data-type"),
-        T = i.useCallback(() => {
-            null != _ && (0, u.C)(_);
-        }, [_]);
-    return u.p5 && n && A && null != _ && h
-        ? (0, l.jsx)(a.Drp, {
-              id: "copy-event-image-link",
-              label: E.intl.string(E.t["8xHmxo"]),
-              action: T,
-              icon: a.qYV,
-          })
+        m = (0, r.bG)([c.Ay], () => c.Ay.getGuildScheduledEvent(t)),
+        f = null != m ? (0, g.A)(m) : null,
+        v = "event-image" === e.getAttribute("data-type"),
+        y = i.useCallback(() => {
+            null != f && (0, o.C)(f);
+        }, [f]);
+    return o.p5 && n && E && null != f && v
+        ? (0, l.jsx)(a.Dr, { id: "copy-event-image-link", label: A.intl.string(A.t["8xHmxo"]), action: y, icon: d.q })
         : null;
 }

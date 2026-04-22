@@ -1,57 +1,57 @@
 n.d(t, { A: () => p });
 var i = n(627968),
-    r = n(64700),
-    a = n(311907),
-    l = n(397927),
-    s = n(956793),
+    s = n(64700),
+    l = n(311907),
+    a = n(477782),
+    r = n(956793),
     o = n(58149),
-    d = n(378570),
-    c = n(345942),
+    c = n(378570),
+    d = n(345942),
     u = n(576705),
-    A = n(231608),
-    h = n(954571),
-    _ = n(652215),
-    m = n(985018);
+    m = n(231608),
+    A = n(954571),
+    h = n(652215),
+    x = n(985018);
 function p(e) {
-    let t = r.useContext(h.AnalyticsContext),
+    let t = s.useContext(A.AnalyticsContext),
         n = e.voiceChannels[0],
-        p = (0, a.bG)([u.A], () => null != n && u.A.can(_.xBc.CONNECT, n.channel));
+        p = (0, l.bG)([u.A], () => null != n && u.A.can(h.xBc.CONNECT, n.channel));
     return null == n
         ? null
         : [
               (0, i.jsx)(
-                  l.Drp,
+                  a.Dr,
                   {
                       id: "join-voice",
                       action: function () {
-                          (0, d.iN)(n.channel.id),
-                              s.default.selectVoiceChannel(n.channel.id),
-                              o.Ay.trackWithMetadata(_.HAw.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
-                                  source: { ...t.location, object: _.ZSU.LIST_ITEM },
+                          (0, c.iN)(n.channel.id),
+                              r.default.selectVoiceChannel(n.channel.id),
+                              o.Ay.trackWithMetadata(h.HAw.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
+                                  source: { ...t.location, object: h.ZSU.LIST_ITEM },
                                   guild_id: n.guild.id,
                                   channel_id: n.channel.id,
-                                  ...(0, A.o)(e),
+                                  ...(0, m.o)(e),
                               });
                       },
-                      label: m.intl.string(m.t["8yOlh9"]),
+                      label: x.intl.string(x.t["8yOlh9"]),
                       disabled: !p,
                   },
                   "join-voice",
               ),
               (0, i.jsx)(
-                  l.Drp,
+                  a.Dr,
                   {
                       id: "goto-server",
                       action: function () {
-                          (0, c.u)(n.guild.id),
-                              o.Ay.trackWithMetadata(_.HAw.ACTIVITY_FEED_GUILD_VISITED, {
-                                  source: { ...t.location, object: _.ZSU.LIST_ITEM },
+                          (0, d.u)(n.guild.id),
+                              o.Ay.trackWithMetadata(h.HAw.ACTIVITY_FEED_GUILD_VISITED, {
+                                  source: { ...t.location, object: h.ZSU.LIST_ITEM },
                                   guild_id: n.guild.id,
                                   af_recently_played: !1,
-                                  ...(0, A.o)(e),
+                                  ...(0, m.o)(e),
                               });
                       },
-                      label: m.intl.string(m.t.RGgqm1),
+                      label: x.intl.string(x.t.RGgqm1),
                   },
                   "goto-server",
               ),

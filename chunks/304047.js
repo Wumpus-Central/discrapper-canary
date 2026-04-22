@@ -1,94 +1,98 @@
-n.d(t, { M: () => x, X: () => C });
+n.d(t, { M: () => N, X: () => j });
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
+    a = n(503698),
+    r = n.n(a),
+    s = n(311907),
     o = n(265872),
-    c = n(990078),
-    d = n(397927),
-    u = n(587895),
-    h = n(409626),
-    m = n(692969),
+    d = n(990078),
+    c = n(939249),
+    u = n(834730),
+    _ = n(43990),
+    f = n(408278),
+    m = n(597770),
+    p = n(587895),
+    g = n(409626),
+    h = n(692969),
     A = n(535296),
-    g = n(240248),
-    _ = n(360469),
-    p = n(818348),
-    f = n(985018),
-    E = n(391308);
-function C(e) {
+    x = n(240248),
+    v = n(360469),
+    I = n(818348),
+    E = n(985018),
+    C = n(391308);
+function j(e) {
     let t,
-        { applicationId: n, hideApplicationName: s } = e,
-        o = (0, m.A)({
+        { applicationId: n, hideApplicationName: a } = e,
+        o = (0, h.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             applicationId: n,
-            source: h.Ob.CallTile,
+            source: g.Ob.CallTile,
             trackEntryPointImpression: !0,
         }),
-        { name: A, icon: p } =
-            ((t = (0, r.bG)([u.A], () => u.A.getApplication(n))),
+        { name: _, icon: f } =
+            ((t = (0, s.bG)([p.A], () => p.A.getApplication(n))),
             l.useMemo(() => {
                 if (null == t) return null;
-                let e = t.getIconURL(_.iu.SMALL);
-                return (0, g.uJ)(e)
+                let e = t.getIconURL(v.iu.SMALL);
+                return (0, x.uJ)(e)
                     ? null
                     : {
                           name: t.name,
                           icon: () =>
                               (0, i.jsx)("div", {
-                                  className: E.jy,
-                                  children: (0, i.jsx)("img", { className: E.Se, src: e, alt: "", "aria-hidden": !0 }),
+                                  className: C.jy,
+                                  children: (0, i.jsx)("img", { className: C.Se, src: e, alt: "", "aria-hidden": !0 }),
                               }),
                       };
             }, [t]) ?? {});
-    if (null == o || null == p) return null;
-    let C = f.intl.string(f.t.ajHoOr);
-    return (0, i.jsx)(c.m, {
-        text: C,
-        children: (0, i.jsxs)(d.DUT, {
-            className: a()(E.dY, E.ac, { [E.M7]: s }),
+    if (null == o || null == f) return null;
+    let m = E.intl.string(E.t.ajHoOr);
+    return (0, i.jsx)(d.m, {
+        text: m,
+        children: (0, i.jsxs)(c.D, {
+            className: r()(C.dY, C.ac, { [C.M7]: a }),
             onClick: o,
-            "aria-label": C,
-            children: [p(), !s && (0, i.jsx)(d.Text, { variant: "text-sm/normal", className: E.Wk, children: A })],
+            "aria-label": m,
+            children: [f(), !a && (0, i.jsx)(u.E, { variant: "text-sm/normal", className: C.Wk, children: _ })],
         }),
     });
 }
-function x(e) {
-    let { userId: t, applicationId: n, channel: s, hideWhenInactive: r, idle: u } = e,
-        [h, m] = l.useState(!1),
+function N(e) {
+    let { userId: t, applicationId: n, channel: a, hideWhenInactive: s, idle: c } = e,
+        [u, p] = l.useState(!1),
         g = l.useRef(null),
-        _ = l.useCallback(() => m(!0), []),
-        C = l.useCallback(() => m(!1), []),
-        x = f.intl.string(f.t["wg/30i"]);
+        h = l.useCallback(() => p(!0), []),
+        x = l.useCallback(() => p(!1), []),
+        v = E.intl.string(E.t["wg/30i"]);
     return (0, i.jsx)(o.Y, {
         targetElementRef: g,
-        shouldShow: h,
+        shouldShow: u,
         animation: o.Y.Animation.FADE,
         position: "left",
         align: "bottom",
         spacing: 8,
-        onRequestClose: C,
+        onRequestClose: x,
         renderPopout: () =>
-            (0, i.jsx)(d.NPJ, {
-                theme: p.NJ.DARKER,
-                children: (e) => (0, i.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: C }),
+            (0, i.jsx)(_.N, {
+                theme: I.NJ.DARKER,
+                children: (e) => (0, i.jsx)(A.Z, { className: e, userId: t, channel: a, applicationId: n, onClose: x }),
             }),
         children: () =>
             (0, i.jsx)("div", {
                 ref: g,
-                children: (0, i.jsx)(c.m, {
-                    text: x,
-                    shouldShow: !h && void 0,
+                children: (0, i.jsx)(d.m, {
+                    text: v,
+                    shouldShow: !u && void 0,
                     children: (0, i.jsx)("div", {
-                        className: a()(E.V7, { [E.kl]: r, [E.N7]: u }),
-                        children: (0, i.jsx)(d.K0, {
+                        className: r()(C.V7, { [C.kl]: s, [C.N7]: c }),
+                        children: (0, i.jsx)(f.K, {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
-                                e.stopPropagation(), _();
+                                e.stopPropagation(), h();
                             },
-                            "aria-label": x,
-                            icon: d.okO,
+                            "aria-label": v,
+                            icon: m.o,
                         }),
                     }),
                 }),

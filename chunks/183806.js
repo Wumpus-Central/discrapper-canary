@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(360345),
-    i = n(374372),
-    a = n(355418),
-    s = n(632434);
-let o = RegExp(`(this|last|past|next|after|\\+|-)\\s*(${r.Pl})(?=\\W|$)`, "i"),
-    l = RegExp(`(this|last|past|next|after|\\+|-)\\s*(${r.d2})(?=\\W|$)`, "i");
+r.d(t, { A: () => u });
+var n = r(360345),
+    s = r(374372),
+    a = r(355418),
+    i = r(632434);
+let o = RegExp(`(this|last|past|next|after|\\+|-)\\s*(${n.Pl})(?=\\W|$)`, "i"),
+    l = RegExp(`(this|last|past|next|after|\\+|-)\\s*(${n.d2})(?=\\W|$)`, "i");
 class u extends a.c {
     allowAbbreviations;
     constructor(e = !0) {
@@ -15,15 +14,15 @@ class u extends a.c {
         return this.allowAbbreviations ? o : l;
     }
     innerExtract(e, t) {
-        let n = t[1].toLowerCase(),
-            a = (0, r.E9)(t[2]);
+        let r = t[1].toLowerCase(),
+            a = (0, n.E9)(t[2]);
         if (!a) return null;
-        switch (n) {
+        switch (r) {
             case "last":
             case "past":
             case "-":
-                a = (0, s.x4)(a);
+                a = (0, i.x4)(a);
         }
-        return i.BP.createRelativeFromReference(e.reference, a);
+        return s.BP.createRelativeFromReference(e.reference, a);
     }
 }

@@ -1,12 +1,12 @@
-e.d(i, { l: () => a });
-var t = e(627968),
-    l = e(64700),
-    s = e(158954),
-    r = e(217483);
+i.d(e, { l: () => a });
+var t = i(627968),
+    l = i(64700),
+    s = i(834730),
+    r = i(277834);
 function a(n) {
     let {
-            title: i,
-            subtitle: e,
+            title: e,
+            subtitle: i,
             iconSrc: a,
             backgroundSrc: d,
             animatedBackgroundSrc: u,
@@ -35,8 +35,8 @@ function a(n) {
                         }),
                     (0, t.jsxs)("div", {
                         children: [
-                            (0, t.jsx)(s.EYj, { variant: "heading-xl/bold", tag: "div", children: i }),
-                            null != e && (0, t.jsxs)(s.EYj, { variant: "text-sm/normal", children: ["“", e, "”"] }),
+                            (0, t.jsx)(s.E, { variant: "heading-xl/bold", tag: "div", children: e }),
+                            null != i && (0, t.jsxs)(s.E, { variant: "text-sm/normal", children: ["“", i, "”"] }),
                         ],
                     }),
                 ],

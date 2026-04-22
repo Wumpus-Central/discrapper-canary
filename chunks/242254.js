@@ -1,32 +1,33 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => h });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(397927),
-    l = n(692051),
+    r = n.n(s),
+    a = n(782134),
+    o = n(939249),
+    c = n(692051),
     u = n(985018),
-    c = n(83699);
-function d(e) {
+    d = n(83699);
+function h(e) {
     let { onPlay: t, className: n, inactive: s } = e,
-        d = i.useRef(null),
-        _ = (0, r.jsx)("div", {
-            className: c.P0,
-            ref: d,
-            children: (0, r.jsx)(o.udU, { size: "xs", color: "currentColor", className: c.Kk }),
+        h = l.useRef(null),
+        m = (0, i.jsx)("div", {
+            className: d.P0,
+            ref: h,
+            children: (0, i.jsx)(a.u, { size: "xs", color: "currentColor", className: d.Kk }),
         });
-    return (0, r.jsx)(l.Y.Consumer, {
+    return (0, i.jsx)(c.Y.Consumer, {
         children: (e) =>
             s || null == t
-                ? (0, r.jsx)("div", { className: c.Iv, children: _ })
-                : (0, r.jsx)(o.DUT, {
-                      className: a()(n, c.Iv, { [c.vu]: !e.disableInteractions }),
+                ? (0, i.jsx)("div", { className: d.Iv, children: m })
+                : (0, i.jsx)(o.D, {
+                      className: r()(n, d.Iv, { [d.vu]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
                       "aria-label": u.intl.string(u.t.RscU7I),
-                      focusProps: { ringTarget: d },
-                      children: _,
+                      focusProps: { ringTarget: h },
+                      children: m,
                   }),
     });
 }

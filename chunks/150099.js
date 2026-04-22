@@ -1,55 +1,59 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
-    r = n(397927),
-    s = n(857182),
-    o = n(572957),
-    d = n(419056),
-    c = n(985018),
-    u = n(420779);
-let m = (e) => {
+    s = n(778492),
+    r = n(534514),
+    o = n(834730),
+    d = n(939249),
+    c = n(285796),
+    u = n(857182),
+    m = n(572957),
+    _ = n(419056),
+    h = n(985018),
+    p = n(676544);
+let g = (e) => {
     let { channelId: t, messageId: n } = e,
-        m = (0, a.bG)([o.A], () => o.A.shouldShowBump(n), [n]),
-        _ = l.useCallback(() => {
-            s.A.dismissPublishBump(n), (0, d.A)(t, n);
+        g = (0, a.bG)([m.A], () => m.A.shouldShowBump(n), [n]),
+        A = l.useCallback(() => {
+            u.A.dismissPublishBump(n), (0, _.A)(t, n);
         }, [t, n]),
-        h = l.useCallback(() => {
-            s.A.dismissPublishBump(n);
+        f = l.useCallback(() => {
+            u.A.dismissPublishBump(n);
         }, [n]),
-        p = l.useCallback(() => {
-            s.A.permanentlyHidePublishBump(t);
+        x = l.useCallback(() => {
+            u.A.permanentlyHidePublishBump(t);
         }, [t]);
-    return m
+    return g
         ? (0, i.jsxs)("div", {
-              className: u.kL,
+              className: p.kL,
               children: [
                   (0, i.jsxs)("div", {
-                      className: u.mp,
+                      className: p.mp,
                       children: [
-                          (0, i.jsx)(r.koX, { size: "xs", color: "currentColor", className: u.Kk }),
-                          (0, i.jsx)(r.Heading, {
+                          (0, i.jsx)(s.k, { size: "xs", color: "currentColor", className: p.Kk }),
+                          (0, i.jsx)(r.D, {
                               variant: "heading-sm/normal",
-                              className: u.dS,
-                              children: c.intl.string(c.t.hasZoU),
+                              className: p.dS,
+                              children: h.intl.string(h.t.hasZoU),
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(o.E, {
                               color: "text-brand",
-                              className: u.mk,
+                              className: p.mk,
                               variant: "text-sm/normal",
-                              children: (0, i.jsx)(r.DUT, { onClick: _, children: c.intl.string(c.t.MFGE51) }),
+                              children: (0, i.jsx)(d.D, { onClick: A, children: h.intl.string(h.t.MFGE51) }),
                           }),
-                          (0, i.jsx)(r.DUT, {
-                              onClick: h,
-                              children: (0, i.jsx)(r.aXh, { size: "xs", color: "currentColor", className: u.ut }),
+                          (0, i.jsx)(d.D, {
+                              onClick: f,
+                              children: (0, i.jsx)(c.a, { size: "xs", color: "currentColor", className: p.ut }),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(o.E, {
                       color: "text-muted",
-                      className: u.qx,
+                      className: p.qx,
                       variant: "text-sm/normal",
-                      children: (0, i.jsx)(r.DUT, { onClick: p, children: c.intl.string(c.t.efSkDm) }),
+                      children: (0, i.jsx)(d.D, { onClick: x, children: h.intl.string(h.t.efSkDm) }),
                   }),
               ],
           })

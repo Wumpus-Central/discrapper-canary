@@ -1,19 +1,16 @@
-"use strict";
-n.d(t, { A: () => g });
-var r = n(627968);
-n(64700);
-var i = n(735438),
-    a = n(3026),
-    s = n(990078),
-    o = n(397927),
-    l = n(562153),
-    u = n(939496),
-    c = n(996988),
-    d = n(307316);
-let _ = 4,
-    f = 1,
-    p = 3,
-    h = [
+i.d(t, { A: () => x });
+var l = i(627968);
+i(64700);
+var n = i(735438),
+    s = i(3026),
+    a = i(990078),
+    d = i(834730),
+    r = i(778712),
+    o = i(562153),
+    c = i(939496),
+    u = i(996988),
+    A = i(242697);
+let h = [
         [{ top: 15, left: 15, width: 28, height: 28 }],
         [
             { top: 7, left: 7, width: 20, height: 20 },
@@ -31,7 +28,7 @@ let _ = 4,
             { top: 31, left: 31, width: 22, height: 22 },
         ],
     ],
-    m = [
+    g = [
         [{ top: 23, left: 23, width: 52, height: 52 }],
         [
             { top: 13, left: 13, width: 32, height: 32 },
@@ -49,44 +46,44 @@ let _ = 4,
             { top: 52, left: 52, width: 36, height: 36 },
         ],
     ];
-function g(e) {
-    let { users: t, channel: n } = e,
-        { themeType: g } = (0, u.E)(),
-        E = g === c.d.MODAL_V2 ? m : h,
-        A = t.length > _,
-        I = t.length - _ + 1,
-        T = I >= 10 ? p : f;
-    return (0, r.jsx)("div", {
-        className: d.kL,
-        children: E[(0, i.clamp)(t.length - 1, 0, E.length - 1)].map((e, i) => {
-            let u = t[i];
-            return null == u
+function x(e) {
+    let { users: t, channel: i } = e,
+        { themeType: x } = (0, c.E)(),
+        m = x === u.d.MODAL_V2 ? g : h,
+        C = t.length > 4,
+        _ = t.length - 4 + 1,
+        p = _ >= 10 ? 3 : 1;
+    return (0, l.jsx)("div", {
+        className: A.kL,
+        children: m[(0, n.clamp)(t.length - 1, 0, m.length - 1)].map((e, n) => {
+            let c = t[n];
+            return null == c
                 ? null
-                : (0, r.jsx)(
+                : (0, l.jsx)(
                       "div",
                       {
-                          className: d.n1,
+                          className: A.n1,
                           style: e,
                           children:
-                              A && i === T
-                                  ? (0, r.jsx)("div", {
-                                        className: d.mB,
-                                        children: (0, r.jsx)(o.Text, {
+                              C && n === p
+                                  ? (0, l.jsx)("div", {
+                                        className: A.mB,
+                                        children: (0, l.jsx)(d.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(a.A, { children: I > 99 ? ">99" : `+${I}` }),
+                                            children: (0, l.jsx)(s.A, { children: _ > 99 ? ">99" : `+${_}` }),
                                         }),
                                     })
-                                  : (0, r.jsx)(s.m, {
-                                        text: l.Ay.getName(n.guild_id, n.id, u),
-                                        children: (0, r.jsx)("img", {
-                                            className: d.my,
-                                            src: u.getAvatarURL(n.guild_id, (0, o.FT9)(o._3J.SIZE_80)),
+                                  : (0, l.jsx)(a.m, {
+                                        text: o.Ay.getName(i.guild_id, i.id, c),
+                                        children: (0, l.jsx)("img", {
+                                            className: A.my,
+                                            src: c.getAvatarURL(i.guild_id, (0, r.FT)(r._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
                       },
-                      u.id,
+                      c.id,
                   );
         }),
     });

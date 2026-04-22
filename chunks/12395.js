@@ -1,16 +1,16 @@
 var t = "[0-9](_*[0-9])*",
-    n = `\\.(${t})`,
-    r = "[0-9a-fA-F](_*[0-9a-fA-F])*",
-    i = {
+    a = `\\.(${t})`,
+    n = "[0-9a-fA-F](_*[0-9a-fA-F])*",
+    r = {
         className: "number",
         variants: [
-            { begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
-            { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
-            { begin: `(${n})[fFdD]?\\b` },
+            { begin: `(\\b(${t})((${a})|\\.)?|(${a}))[eE][+-]?(${t})[fFdD]?\\b` },
+            { begin: `\\b(${t})((${a})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
+            { begin: `(${a})[fFdD]?\\b` },
             { begin: `\\b(${t})[fFdD]\\b` },
-            { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
+            { begin: `\\b0[xX]((${n})\\.?|(${n})?\\.(${n}))[pP][+-]?(${t})[fFdD]?\\b` },
             { begin: "\\b(0|[1-9](_*[0-9])*)[lL]?\\b" },
-            { begin: `\\b0[xX](${r})[lL]?\\b` },
+            { begin: `\\b0[xX](${n})[lL]?\\b` },
             { begin: "\\b0(_*[0-7])*[lL]?\\b" },
             { begin: "\\b0[bB][01](_*[01])*[lL]?\\b" },
         ],
@@ -23,47 +23,40 @@ e.exports = function (e) {
             built_in: "Byte Short Char Int Long Boolean Float Double Void Unit Nothing",
             literal: "true false null",
         },
-        n = {
-            className: "keyword",
-            begin: /\b(break|continue|return|this)\b/,
-            starts: { contains: [{ className: "symbol", begin: /@\w+/ }] },
-        },
-        r = { className: "symbol", begin: e.UNDERSCORE_IDENT_RE + "@" },
-        s = { className: "subst", begin: /\$\{/, end: /\}/, contains: [e.C_NUMBER_MODE] },
-        a = { className: "variable", begin: "\\$" + e.UNDERSCORE_IDENT_RE },
+        a = { className: "symbol", begin: e.UNDERSCORE_IDENT_RE + "@" },
+        n = { className: "subst", begin: /\$\{/, end: /\}/, contains: [e.C_NUMBER_MODE] },
+        i = { className: "variable", begin: "\\$" + e.UNDERSCORE_IDENT_RE },
         o = {
             className: "string",
             variants: [
-                { begin: '"""', end: '"""(?=[^"])', contains: [a, s] },
+                { begin: '"""', end: '"""(?=[^"])', contains: [i, n] },
                 { begin: "'", end: "'", illegal: /\n/, contains: [e.BACKSLASH_ESCAPE] },
-                { begin: '"', end: '"', illegal: /\n/, contains: [e.BACKSLASH_ESCAPE, a, s] },
+                { begin: '"', end: '"', illegal: /\n/, contains: [e.BACKSLASH_ESCAPE, i, n] },
             ],
         };
-    s.contains.push(o);
-    let l = {
+    n.contains.push(o);
+    let s = {
             className: "meta",
             begin:
                 "@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*" +
                 e.UNDERSCORE_IDENT_RE +
                 ")?",
         },
-        u = {
+        l = {
             className: "meta",
             begin: "@" + e.UNDERSCORE_IDENT_RE,
             contains: [{ begin: /\(/, end: /\)/, contains: [e.inherit(o, { className: "string" }), "self"] }],
         },
-        c = i,
-        d = e.COMMENT("/\\*", "\\*/", { contains: [e.C_BLOCK_COMMENT_MODE] }),
+        c = e.COMMENT("/\\*", "\\*/", { contains: [e.C_BLOCK_COMMENT_MODE] }),
         _ = {
             variants: [
                 { className: "type", begin: e.UNDERSCORE_IDENT_RE },
                 { begin: /\(/, end: /\)/, contains: [] },
             ],
-        },
-        f = _;
+        };
     return (
-        (f.variants[1].contains = [_]),
-        (_.variants[1].contains = [f]),
+        (_.variants[1].contains = [_]),
+        (_.variants[1].contains = [_]),
         {
             name: "Kotlin",
             aliases: ["kt", "kts"],
@@ -74,11 +67,15 @@ e.exports = function (e) {
                     contains: [{ className: "doctag", begin: "@[A-Za-z]+" }],
                 }),
                 e.C_LINE_COMMENT_MODE,
-                d,
-                n,
-                r,
+                c,
+                {
+                    className: "keyword",
+                    begin: /\b(break|continue|return|this)\b/,
+                    starts: { contains: [{ className: "symbol", begin: /@\w+/ }] },
+                },
+                a,
+                s,
                 l,
-                u,
                 {
                     className: "function",
                     beginKeywords: "fun",
@@ -107,18 +104,18 @@ e.exports = function (e) {
                                     begin: /:/,
                                     end: /[=,\/]/,
                                     endsWithParent: !0,
-                                    contains: [_, e.C_LINE_COMMENT_MODE, d],
+                                    contains: [_, e.C_LINE_COMMENT_MODE, c],
                                     relevance: 0,
                                 },
                                 e.C_LINE_COMMENT_MODE,
-                                d,
+                                c,
+                                s,
                                 l,
-                                u,
                                 o,
                                 e.C_NUMBER_MODE,
                             ],
                         },
-                        d,
+                        c,
                     ],
                 },
                 {
@@ -133,13 +130,13 @@ e.exports = function (e) {
                         e.UNDERSCORE_TITLE_MODE,
                         { className: "type", begin: /</, end: />/, excludeBegin: !0, excludeEnd: !0, relevance: 0 },
                         { className: "type", begin: /[,:]\s*/, end: /[<\(,){\s]|$/, excludeBegin: !0, returnEnd: !0 },
+                        s,
                         l,
-                        u,
                     ],
                 },
                 o,
                 { className: "meta", begin: "^#!/usr/bin/env", end: "$", illegal: "\n" },
-                c,
+                r,
             ],
         }
     );

@@ -1,67 +1,69 @@
-"use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var i = n(627968),
-    s = n(64700),
-    l = n(382222),
+    l = n(64700),
+    s = n(517738),
     r = n(827734),
-    a = n(397927),
-    o = n(627794),
-    d = n(53594),
-    c = n(268749),
-    u = n(690420),
-    m = n(985018),
-    g = n(170218);
-function x(e) {
+    a = n(717421),
+    o = n(939249),
+    d = n(245604),
+    c = n(834730),
+    u = n(627794),
+    m = n(53594),
+    g = n(268749),
+    h = n(690420),
+    x = n(985018),
+    _ = n(676602);
+function p(e) {
     let { guildId: t, triggerType: n } = e,
-        x = s.useMemo(() => () => (0, o._I)(t, n), [t, n]),
-        [h] = s.useState(x),
-        [_, p] = s.useState(!1),
-        { editingRule: A, createNewEditingRule: f } = (0, c.U)(),
-        { getDefaultRuleName: j } = d.i$[n],
-        N = !(0, o.wC)(A) && A?.triggerType === n,
-        [E, b] = s.useState(N ? A : h),
-        C = (0, a.zhh)({ opacity: +!N, pointerEvents: N ? "none" : "all", config: { ...l.config.stiff, clamp: !0 } }),
-        T = (0, a.zhh)({
-            opacity: +!!N,
-            pointerEvents: N ? "all" : "none",
-            config: { ...l.config.stiff, clamp: !0 },
+        p = l.useMemo(() => () => (0, u._I)(t, n), [t, n]),
+        [A] = l.useState(p),
+        [E, f] = l.useState(!1),
+        { editingRule: j, createNewEditingRule: N } = (0, g.U)(),
+        { getDefaultRuleName: I } = m.i$[n],
+        C = !(0, u.wC)(j) && j?.triggerType === n,
+        [b, v] = l.useState(C ? j : A),
+        S = (0, a.z)({ opacity: +!C, pointerEvents: C ? "none" : "all", config: { ...s.config.stiff, clamp: !0 } }),
+        T = (0, a.z)({
+            opacity: +!!C,
+            pointerEvents: C ? "all" : "none",
+            config: { ...s.config.stiff, clamp: !0 },
             onStart: () => {
-                b(N ? A : h);
+                v(C ? j : A);
             },
             onRest: () => {
-                b(N ? A : h), p(N);
+                v(C ? j : A), f(C);
             },
         });
-    return null == A || N
+    return null == j || C
         ? (0, i.jsxs)("div", {
-              className: g.$F,
-              style: { height: N ? "auto" : "60px" },
+              className: _.$F,
+              style: { height: C ? "auto" : "60px" },
               children: [
-                  (0, i.jsx)(l.animated.div, {
-                      className: g.pT,
+                  (0, i.jsx)(s.animated.div, {
+                      className: _.pT,
                       style: T,
-                      children: (0, i.jsx)(u.A, { rule: E, persistEdit: _ }),
+                      children: (0, i.jsx)(h.A, { rule: b, persistEdit: E }),
                   }),
-                  (0, i.jsx)(l.animated.div, {
-                      className: g.animatedNewRuleContainer,
-                      style: C,
-                      children: (0, i.jsxs)(a.DUT, {
-                          className: g.Y0,
+                  (0, i.jsx)(s.animated.div, {
+                      className: _.animatedNewRuleContainer,
+                      style: S,
+                      children: (0, i.jsxs)(o.D, {
+                          className: _.Y0,
                           onClick: () => {
-                              f(t, n);
+                              N(t, n);
                           },
                           children: [
-                              (0, i.jsx)(a.U1e, {
+                              (0, i.jsx)(d.U, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: r.A.unsafe_rawColors.BLUE_345.css,
-                                  className: g.WW,
+                                  className: _.WW,
                               }),
-                              (0, i.jsx)(a.Text, {
+                              (0, i.jsx)(c.E, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: m.intl.format(m.t.dNjRAf, { ruleName: j() }),
+                                  children: x.intl.format(x.t.dNjRAf, { ruleName: I() }),
                               }),
                           ],
                       }),

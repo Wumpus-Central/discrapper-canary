@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     tp: "table_adb41f",
     wx: "header_adb41f",

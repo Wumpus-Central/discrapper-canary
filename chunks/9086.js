@@ -1,88 +1,92 @@
-a.d(t, { A: () => m });
+a.d(t, { A: () => x });
 var n = a(627968),
-    i = a(64700),
-    s = a(397927),
-    l = a(973925),
-    r = a(975571),
-    o = a(307600),
-    c = a(652215),
-    d = a(985018),
-    u = a(276156);
-let h = r.A.getArticleURL(c.MVz.BOT_DATA_ACCESS);
-function m(e) {
+    l = a(64700),
+    i = a(534514),
+    s = a(534890),
+    r = a(812991),
+    o = a(177953),
+    c = a(834730),
+    d = a(973925),
+    u = a(975571),
+    h = a(307600),
+    m = a(652215),
+    p = a(985018),
+    _ = a(169795);
+let g = u.A.getArticleURL(m.MVz.BOT_DATA_ACCESS);
+function x(e) {
     let { application: t } = e,
-        { hasMessageContent: a, hasGuildPresences: r, hasGuildMembers: c, hasIntents: m } = (0, l.Z)(t),
-        _ = i.useCallback(() => {
-            null != t.privacy_policy_url && (0, o.h)({ href: t.privacy_policy_url });
+        { hasMessageContent: a, hasGuildPresences: u, hasGuildMembers: m, hasIntents: x } = (0, d.Z)(t),
+        f = l.useCallback(() => {
+            null != t.privacy_policy_url && (0, h.h)({ href: t.privacy_policy_url });
         }, [t.privacy_policy_url]);
     return (0, n.jsxs)("div", {
-        className: u.hd,
+        className: _.hd,
         children: [
-            (0, n.jsx)(s.Heading, {
+            (0, n.jsx)(i.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                children: d.intl.string(d.t.QzDgMq),
+                children: p.intl.string(p.t.QzDgMq),
             }),
             (0, n.jsxs)("div", {
-                className: u.hQ,
+                className: _.hQ,
                 children: [
-                    m &&
+                    x &&
                         (0, n.jsxs)("ul", {
-                            className: u.In,
+                            className: _.In,
                             children: [
-                                (0, n.jsx)(s.Heading, {
+                                (0, n.jsx)(i.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-default",
-                                    children: d.intl.string(d.t.U6KH5S),
+                                    children: p.intl.string(p.t.U6KH5S),
                                 }),
                                 a &&
-                                    (0, n.jsx)(p, {
-                                        icon: s.oyn,
-                                        heading: d.intl.string(d.t.gJpBO2),
-                                        body: d.intl.string(d.t["L+QVbh"]),
+                                    (0, n.jsx)(A, {
+                                        icon: s.o,
+                                        heading: p.intl.string(p.t.gJpBO2),
+                                        body: p.intl.string(p.t["L+QVbh"]),
                                     }),
-                                r &&
-                                    (0, n.jsx)(p, {
-                                        icon: s.nRI,
-                                        heading: d.intl.string(d.t["jo0oj/"]),
-                                        body: d.intl.string(d.t.Dm0jqx),
+                                u &&
+                                    (0, n.jsx)(A, {
+                                        icon: r.n,
+                                        heading: p.intl.string(p.t["jo0oj/"]),
+                                        body: p.intl.string(p.t.Dm0jqx),
                                     }),
-                                c &&
-                                    (0, n.jsx)(p, {
-                                        icon: s.nFg,
-                                        heading: d.intl.string(d.t.QZql7O),
-                                        body: d.intl.string(d.t["ez/N/R"]),
+                                m &&
+                                    (0, n.jsx)(A, {
+                                        icon: o.n,
+                                        heading: p.intl.string(p.t.QZql7O),
+                                        body: p.intl.string(p.t["ez/N/R"]),
                                     }),
                             ],
                         }),
-                    (0, n.jsx)(s.Text, {
+                    (0, n.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: d.intl.format(d.t.b6nqk0, { helpCenterUrl: h }),
+                        children: p.intl.format(p.t.b6nqk0, { helpCenterUrl: g }),
                     }),
                     null != t.privacy_policy_url &&
-                        (0, n.jsx)(s.Text, {
+                        (0, n.jsx)(c.E, {
                             variant: "text-md/normal",
                             color: "text-default",
-                            className: u.hM,
-                            children: d.intl.format(d.t.agYVY5, { onClick: _ }),
+                            className: _.hM,
+                            children: p.intl.format(p.t.agYVY5, { onClick: f }),
                         }),
                 ],
             }),
         ],
     });
 }
-function p(e) {
-    let { icon: t, heading: a, body: i } = e;
+function A(e) {
+    let { icon: t, heading: a, body: l } = e;
     return (0, n.jsxs)("li", {
-        className: u.KT,
+        className: _.KT,
         children: [
             (0, n.jsx)(t, { color: "currentColor", size: "md" }),
             (0, n.jsxs)("div", {
-                className: u.D6,
+                className: _.D6,
                 children: [
-                    (0, n.jsx)(s.Heading, { variant: "heading-md/semibold", color: "text-default", children: a }),
-                    (0, n.jsx)(s.Text, { variant: "text-md/normal", color: "text-default", children: i }),
+                    (0, n.jsx)(i.D, { variant: "heading-md/semibold", color: "text-default", children: a }),
+                    (0, n.jsx)(c.E, { variant: "text-md/normal", color: "text-default", children: l }),
                 ],
             }),
         ],

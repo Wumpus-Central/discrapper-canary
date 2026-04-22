@@ -1,36 +1,20 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(506774),
+    s = n(311907),
+    a = n(506774),
     o = n(73153),
     l = n(652215);
 let u = {};
-function c(e) {
-    let { changes: t } = e;
-    for (let e in t) {
-        let n = e,
-            { shouldSync: r, settings: i } = t[n];
-        if (!0 === r) {
-            delete u[n];
-            continue;
-        }
-        if ((!1 === r && (u[n] = { shouldSync: r, settings: {} }), u[n]?.shouldSync === !1))
-            for (let e in i) u[n].settings[e] = i[e];
-    }
-}
-function d() {
-    u = {};
-}
-class _ extends a.Ay.PersistedStore {
+class d extends s.Ay.PersistedStore {
     static displayName = "SelectivelySyncedUserSettingsStore";
     static persistKey = "SelectivelySyncedUserSettingsStore";
     static migrations = [
         () => {
-            let e = s.w.get("UserSettingsSync") ?? {},
-                t = s.w.get("UserSettingsStore") ?? {};
-            s.w.remove("UserSettingsSync");
+            let e = a.w.get("UserSettingsSync") ?? {},
+                t = a.w.get("UserSettingsStore") ?? {};
+            a.w.remove("UserSettingsSync");
             let n = {};
             return (
                 !1 === e[l.nc_.TEXT] &&
@@ -79,4 +63,20 @@ class _ extends a.Ay.PersistedStore {
         return u.appearance?.settings;
     }
 }
-let f = new _(o.h, { SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: c, LOGOUT: d });
+let c = new d(o.h, {
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
+        let { changes: t } = e;
+        for (let e in t) {
+            let { shouldSync: n, settings: r } = t[e];
+            if (!0 === n) {
+                delete u[e];
+                continue;
+            }
+            if ((!1 === n && (u[e] = { shouldSync: n, settings: {} }), u[e]?.shouldSync === !1))
+                for (let t in r) u[e].settings[t] = r[t];
+        }
+    },
+    LOGOUT: function () {
+        u = {};
+    },
+});

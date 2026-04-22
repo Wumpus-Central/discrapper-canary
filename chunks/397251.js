@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     DX: "wrapperBase_d48a51",
     gJ: "termsRow_d48a51",

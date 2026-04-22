@@ -1,16 +1,14 @@
-"use strict";
-n.d(t, { i: () => m });
-var r = n(627968),
-    i = n(64700),
-    a = n(106778),
-    s = n(21161),
-    o = n(531301),
-    l = n(267102),
+n.d(t, { i: () => f });
+var i = n(627968),
+    s = n(64700),
+    r = n(106778),
+    a = n(21161),
+    l = n(531301),
+    o = n(267102),
     u = n(129185),
-    c = n(652215);
-let d = 1e3 / 60,
-    _ = 24,
-    f = {
+    d = n(652215);
+let c = 1e3 / 60,
+    m = {
         velocity: { type: "static-random", minValue: { x: 8, y: 0 }, maxValue: { x: 50, y: 0 } },
         rotation: {
             type: "linear-random",
@@ -23,37 +21,37 @@ let d = 1e3 / 60,
         dragCoefficient: { type: "static", value: 0.8 },
         opacity: { type: "static-random", minValue: 0.7, maxValue: 0.5 },
     },
-    p = ["#FFFFFF"],
-    h = [n(426560), ...(0, o.A)(["snowflake"])];
-function m(e) {
+    h = ["#FFFFFF"],
+    p = [n(426560), ...(0, l.A)(["snowflake"])];
+function f(e) {
     let { children: t } = e,
-        [n, o] = i.useState(!1),
-        m = (0, l.Us)(),
-        [g, E] = i.useState(null),
-        { confettiCanvas: A } = i.useContext(s.x),
-        I = (0, a.f9)(A, g),
-        T = i.useMemo(() => ({ triggerAnimation: () => o(!0), untriggerAnimation: () => o(!1) }), []),
-        y = i.useCallback(() => {
-            let e = A?.getCanvas();
+        [n, l] = s.useState(!1),
+        f = (0, o.Us)(),
+        [g, C] = s.useState(null),
+        { confettiCanvas: y } = s.useContext(a.x),
+        b = (0, r.f9)(y, g),
+        v = s.useMemo(() => ({ triggerAnimation: () => l(!0), untriggerAnimation: () => l(!1) }), []),
+        x = s.useCallback(() => {
+            let e = y?.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            I.createConfetti({
-                ...f,
+            b.createConfetti({
+                ...m,
                 position: {
                     type: "static-random",
-                    minValue: { x: -t.width / 2, y: -_ },
-                    maxValue: { x: t.width, y: -_ },
+                    minValue: { x: -t.width / 2, y: -24 },
+                    maxValue: { x: t.width, y: -24 },
                 },
             });
-        }, [I, A]);
-    return (i.useEffect(() => {
-        let e = n ? setInterval(y, d) : null;
+        }, [b, y]);
+    return (s.useEffect(() => {
+        let e = n ? setInterval(x, c) : null;
         return () => clearInterval(e);
-    }, [n, y]),
-    m === c.BRT.OVERLAY)
+    }, [n, x]),
+    f === d.BRT.OVERLAY)
         ? t
-        : (0, r.jsxs)(u.wE.Provider, {
-              value: T,
-              children: [t, (0, r.jsx)(a.K_, { ref: E, colors: p, sprites: h, spriteWidth: _, spriteHeight: _ })],
+        : (0, i.jsxs)(u.wE.Provider, {
+              value: v,
+              children: [t, (0, i.jsx)(r.K_, { ref: C, colors: h, sprites: p, spriteWidth: 24, spriteHeight: 24 })],
           });
 }

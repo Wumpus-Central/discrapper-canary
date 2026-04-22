@@ -1,53 +1,55 @@
-a.d(e, { default: () => x });
+a.d(e, { default: () => h });
 var n = a(627968);
 a(64700);
 var l = a(110259),
-    s = a(158954),
-    r = a(397927),
-    i = a(139286),
-    o = a(954571),
-    c = a(60888),
-    d = a(652215),
-    u = a(985018),
-    m = a(537114);
-function x(t) {
-    let { url: e, trustUrl: a, isProtocol: x, onConfirm: p, onCancel: h, onClose: _, transitionState: C } = t,
+    s = a(189213),
+    r = a(573613),
+    i = a(834730),
+    o = a(150934),
+    c = a(139286),
+    d = a(954571),
+    u = a(60888),
+    m = a(652215),
+    p = a(985018),
+    x = a(526826);
+function h(t) {
+    let { url: e, trustUrl: a, isProtocol: h, onConfirm: _, onCancel: C, onClose: k, transitionState: f } = t,
         {
-            protocol: k,
-            authorityPrefix: f,
-            hostname: b,
-            theRestOfTheUrl: g,
-            shouldTrustUrl: A,
-            setShouldTrustUrl: L,
-            handleConfirm: v,
-            handleCancel: D,
-        } = (0, c.u)({ url: e, trustUrl: a, onConfirm: p, onCancel: h, onClose: _ });
+            protocol: g,
+            authorityPrefix: b,
+            hostname: A,
+            theRestOfTheUrl: L,
+            shouldTrustUrl: v,
+            setShouldTrustUrl: D,
+            handleConfirm: M,
+            handleCancel: E,
+        } = (0, u.u)({ url: e, trustUrl: a, onConfirm: _, onCancel: C, onClose: k });
     return (
-        (0, i.A)({ type: l.ImpressionTypes.MODAL, name: l.ImpressionNames.MASKED_LINK_MODAL }),
+        (0, c.A)({ type: l.ImpressionTypes.MODAL, name: l.ImpressionNames.MASKED_LINK_MODAL }),
         (0, n.jsxs)(s.Modal, {
             size: "md",
-            transitionState: C,
-            onClose: _,
-            title: u.intl.string(u.t["3w1QGl"]),
-            subtitle: x ? u.intl.format(u.t.aCYv1z, {}) : u.intl.string(u.t.soRxRe),
+            transitionState: f,
+            onClose: k,
+            title: p.intl.string(p.t["3w1QGl"]),
+            subtitle: h ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
             actions: [
                 {
-                    text: u.intl.string(u.t["/g10LC"]),
+                    text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        D(),
-                            o.default.track(d.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: A,
+                        E(),
+                            d.default.track(m.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: v,
                                 action_type: "cancel",
                             });
                     },
                     variant: "secondary",
                 },
                 {
-                    text: x ? u.intl.string(u.t.COq6kk) : u.intl.string(u.t.NcJfJG),
+                    text: h ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: () => {
-                        v(),
-                            o.default.track(d.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: A,
+                        M(),
+                            d.default.track(m.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: v,
                                 action_type: "confirm",
                             });
                     },
@@ -55,37 +57,32 @@ function x(t) {
                 },
             ],
             children: [
-                (0, n.jsxs)(r.HOs, {
-                    className: m.ul,
+                (0, n.jsxs)(r.Ip, {
+                    className: x.ul,
                     children: [
-                        (0, n.jsxs)(r.Text, {
+                        (0, n.jsxs)(i.E, {
                             tag: "span",
-                            variant: x ? "text-md/semibold" : "text-md/normal",
-                            color: x ? "text-default" : "text-muted",
-                            children: [k, f],
+                            variant: h ? "text-md/semibold" : "text-md/normal",
+                            color: h ? "text-default" : "text-muted",
+                            children: [g, b],
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, n.jsx)(i.E, {
                             tag: "span",
-                            variant: x ? "text-md/normal" : "text-md/semibold",
-                            color: x ? "text-muted" : "text-default",
-                            children: b,
+                            variant: h ? "text-md/normal" : "text-md/semibold",
+                            color: h ? "text-muted" : "text-default",
+                            children: A,
                         }),
-                        (0, n.jsx)(r.Text, {
-                            tag: "span",
-                            variant: "text-md/normal",
-                            color: "text-muted",
-                            children: g,
-                        }),
+                        (0, n.jsx)(i.E, { tag: "span", variant: "text-md/normal", color: "text-muted", children: L }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: m.F5,
-                    children: (0, n.jsx)(r.Checkbox, {
-                        checked: A,
-                        onChange: (t) => L(t),
-                        label: x
-                            ? u.intl.format(u.t["haA+Xw"], { protocol: k.replace(":", "") })
-                            : u.intl.format(u.t.ZgXDsI, { domain: b }),
+                    className: x.F5,
+                    children: (0, n.jsx)(o.S, {
+                        checked: v,
+                        onChange: (t) => D(t),
+                        label: h
+                            ? p.intl.format(p.t["haA+Xw"], { protocol: g.replace(":", "") })
+                            : p.intl.format(p.t.ZgXDsI, { domain: A }),
                         labelType: "secondary",
                     }),
                 }),

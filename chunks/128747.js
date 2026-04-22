@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => y }), n(321073), n(323874), n(14289), n(35956);
 var r = n(735438),
     i = n.n(r),
     s = n(791332),
@@ -7,26 +7,24 @@ var r = n(735438),
     o = n(167189),
     l = n(833291),
     u = n(219065),
-    c = n(594061),
-    d = n(750808),
+    d = n(594061),
+    c = n(750808),
     _ = n(808728),
     f = n(994500),
-    p = n(287809),
+    E = n(287809),
     h = n(248465),
-    m = n(695184),
-    E = n(998218),
+    p = n(695184),
+    m = n(998218),
     g = n(450827),
     A = n(989133),
     I = n(926140);
-let T = 100,
-    S = Object.freeze({}),
-    y = 300;
-function v(e, t) {
+let T = Object.freeze({});
+function S(e, t) {
     return t.frecencyBoosters ? (0, h.X3)(e) : {};
 }
-class N {
+class y {
     query = "";
-    options = S;
+    options = T;
     results = [];
     _userResults = [];
     _groupDMResults = [];
@@ -44,7 +42,7 @@ class N {
     _limit;
     _refetchForSingleCategoryLimit;
     _refetched = !1;
-    constructor(e, t, n = T, r = S, i = 0) {
+    constructor(e, t, n = 100, r = T, i = 0) {
         (this.onResultsChange = e),
             this.setOptions(r, !0),
             (this._limit = n),
@@ -143,7 +141,7 @@ class N {
             this.clear(), this.updateAllResults();
             return;
         }
-        (this.options.frecencyBoosters ? c.bW.loadIfNecessary() : Promise.resolve()).finally(() => {
+        (this.options.frecencyBoosters ? d.bW.loadIfNecessary() : Promise.resolve()).finally(() => {
             this.queryUsers(e, t, this._limit),
                 (this._groupDMResults = this.queryGroupDMs(e, this._limit)),
                 (this._textChannelResults = this.queryTextChannels(e, this._limit)),
@@ -153,7 +151,7 @@ class N {
                 (this._linkResults = this.queryLink(e, this._limit)),
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
-                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, y)))
+                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, 300)))
                     : this._include(I.rD.USER) || this.updateAllResults();
         });
     }
@@ -185,7 +183,7 @@ class N {
     }
     queryTextChannels(e, t) {
         if (!this._include(I.rD.TEXT_CHANNEL)) return [];
-        let n = v(I.rD.TEXT_CHANNEL, this.options),
+        let n = S(I.rD.TEXT_CHANNEL, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
             s = null != i ? (e) => !i.has(`channel:${e.id}`) : void 0;
         return h.Ay.queryChannels({
@@ -201,7 +199,7 @@ class N {
     queryVoiceChannels(e, t) {
         if (!this._include(I.rD.VOICE_CHANNEL)) return [];
         let { allowSnowflake: n, voiceChannelGuildFilter: r } = this.options,
-            i = v(I.rD.VOICE_CHANNEL, this.options);
+            i = S(I.rD.VOICE_CHANNEL, this.options);
         return h.Ay.queryChannels({
             query: e,
             guildId: r,
@@ -214,7 +212,7 @@ class N {
     }
     queryGuilds(e, t) {
         if (!this._include(I.rD.GUILD)) return [];
-        let n = v(I.rD.GUILD, this.options),
+        let n = S(I.rD.GUILD, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
             s = null != i ? (e) => !i.has(`guild:${e.id}`) : void 0;
         return h.Ay.queryGuilds({ query: e, limit: t, fuzzy: !0, filter: s, boosters: n, allowSnowflake: r });
@@ -223,7 +221,7 @@ class N {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(I.rD.USER)) return;
         let { allowSnowflake: i, userFilters: s } = this.options,
-            a = v(I.rD.USER, this.options);
+            a = S(I.rD.USER, this.options);
         if (s?.thread != null) {
             let t = u.A.getMemberListSections(s.thread),
                 r = [];
@@ -236,14 +234,14 @@ class N {
             this._userResults = h.Ay.queryUsers({ query: e, users: r, limit: n, boosters: a, allowSnowflake: i });
             return;
         }
-        void 0 !== t && m.A.requestMembers(t, e, 100),
+        void 0 !== t && p.A.requestMembers(t, e, 100),
             r.setLimit(n),
             r.setQuery({ query: e, filters: s, blacklist: this._userBlacklist, boosters: a });
     }
     queryGroupDMs(e, t) {
         if (!this._include(I.rD.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            r = v(I.rD.GROUP_DM, this.options),
+            r = S(I.rD.GROUP_DM, this.options),
             i = null != n ? (e) => !n.has(`channel:${e.id}`) : void 0;
         return h.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, filter: i, boosters: r });
     }
@@ -254,16 +252,16 @@ class N {
         let n;
         if (!this._include(I.rD.LINK)) return [];
         let r = (0, l.br)(e);
-        if (r?.type === o.I.INVITE) return [{ type: I.rD.LINK, record: d.A.fromInviteCode(r.code), score: 1 }];
+        if (r?.type === o.I.INVITE) return [{ type: I.rD.LINK, record: c.A.fromInviteCode(r.code), score: 1 }];
         let i = a().sanitizeUrl(e);
         try {
             n = new URL(i);
         } catch (e) {
             return [];
         }
-        let { pathname: s, hostname: u = "", host: c } = n,
-            _ = E.A.isDiscordHostname(u) || window.location.host === c;
-        return null !== s && _ && E.A.isAppRoute(s) ? [{ type: I.rD.LINK, record: d.A.fromPath(s), score: 1 }] : [];
+        let { pathname: s, hostname: u = "", host: d } = n,
+            _ = m.A.isDiscordHostname(u) || window.location.host === d;
+        return null !== s && _ && m.A.isAppRoute(s) ? [{ type: I.rD.LINK, record: c.A.fromPath(s), score: 1 }] : [];
     }
     queryInAppNavigations(e, t) {
         return this._include(I.rD.IN_APP_NAVIGATION)
@@ -274,7 +272,7 @@ class N {
         let { results: t } = e;
         if (!this._include(I.rD.USER)) return;
         for (let { id: e, score: n, comparator: r } of ((this._userResults = []), t)) {
-            let t = p.default.getUser(e);
+            let t = E.default.getUser(e);
             null != t &&
                 this._userResults.push({ type: I.rD.USER, record: t, score: (0, h.zy)(n), comparator: r ?? void 0 });
         }

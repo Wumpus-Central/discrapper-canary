@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(530560);
-class i extends r.d {
+r.d(t, { A: () => s });
+var n = r(530560);
+class s extends n.d {
     strictMode;
     constructor(e) {
         super(), (this.strictMode = e);

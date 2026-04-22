@@ -2,8 +2,8 @@
 n.d(t, { m: () => l }), n(323874), n(14289), n(35956);
 var r = n(972347),
     i = n(118356),
-    a = n(205693),
-    s = n(206607),
+    s = n(205693),
+    a = n(206607),
     o = n(264572).Buffer;
 class l extends r.A {
     logger;
@@ -22,26 +22,24 @@ class l extends r.A {
             (this.logger = new i.Vy("DaveSessionManager")),
             (this.dave = e),
             (this.transientKeys = t),
-            (this.userId = n);
-        const r = "",
-            s = "";
-        (this.mlsSession = new e.Session(r, s, (e, t) => {
-            this.emit(a.yq.MLSFailure, e, t);
-        })),
+            (this.userId = n),
+            (this.mlsSession = new e.Session("", "", (e, t) => {
+                this.emit(s.yq.MLSFailure, e, t);
+            })),
             (this.encryptionWorker = this.setupEncryptionWorker());
     }
     createUser(e) {
         this.recognizedUserIds.add(e),
-            this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, s.jU.DECRYPT);
+            this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, a.jU.DECRYPT);
     }
     destroyUser(e) {
-        this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: s.lA.DESTROY_USER, userId: e });
+        this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: a.lA.DESTROY_USER, userId: e });
     }
     updateLocalUserCodecs(e, t) {
-        this.encryptionWorker.postMessage({ type: s.lA.UPDATE_CODECS, audioCodec: e, videoCodec: t });
+        this.encryptionWorker.postMessage({ type: a.lA.UPDATE_CODECS, audioCodec: e, videoCodec: t });
     }
     updateSsrcs(e, t, n) {
-        this.encryptionWorker.postMessage({ type: s.lA.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
+        this.encryptionWorker.postMessage({ type: a.lA.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
     }
     setupEncodedTransformsForTransceiver(e) {
         this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver);
@@ -63,7 +61,7 @@ class l extends r.A {
         let t = this.secureFramesTransitions.get(e);
         this.secureFramesTransitions.delete(e),
             t === this.dave.kDisabledVersion && this.mlsSession.Reset(),
-            this.setupKeyRatchetForUser(this.userId, t, s.jU.ENCRYPT),
+            this.setupKeyRatchetForUser(this.userId, t, a.jU.ENCRYPT),
             this.onSecureFramesStateChanged();
     }
     getMLSKeyPackage(e) {
@@ -83,10 +81,9 @@ class l extends r.A {
             r.ignored || n(i, this.mlsSession.GetProtocolVersion(), r.rosterUpdate);
     }
     processMLSWelcome(e, t, n) {
-        let r = this.mlsSession.ProcessWelcome(t, this.getRecognizedUserIDs()),
-            i = null != r;
+        let r = this.mlsSession.ProcessWelcome(t, this.getRecognizedUserIDs());
         r && this.prepareSecureFramesRatchets(e, this.mlsSession.GetProtocolVersion()),
-            n(i, this.mlsSession.GetProtocolVersion(), r);
+            n(null != r, this.mlsSession.GetProtocolVersion(), r);
     }
     setupEncryptionWorker() {
         let e = new Worker(
@@ -96,7 +93,7 @@ class l extends r.A {
         return (
             (e.onmessage = (e) => {
                 let { data: t } = e;
-                t.type === s.h5.PROTOCOL_VERSION_CHANGED
+                t.type === a.h5.PROTOCOL_VERSION_CHANGED
                     ? ((this.currentEncryptorProtocolVersion = t.protocolVersion), this.onSecureFramesStateChanged())
                     : this.logger.warn("Unknown message type from encryption worker", t);
             }),
@@ -106,7 +103,7 @@ class l extends r.A {
             (e.onmessageerror = (e) => {
                 this.logger.error("Encryption worker message error", e);
             }),
-            e.postMessage({ type: s.lA.INITIALIZE }),
+            e.postMessage({ type: a.lA.INITIALIZE }),
             e
         );
     }
@@ -120,13 +117,13 @@ class l extends r.A {
         if ("transform" in e) e.transform = new RTCRtpScriptTransform(this.encryptionWorker, {});
         else if ("createEncodedStreams" in e) {
             let { readable: t, writable: n } = e.createEncodedStreams();
-            this.encryptionWorker.postMessage({ type: s.lA.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
+            this.encryptionWorker.postMessage({ type: a.lA.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
         } else throw Error("Encoded transforms not supported");
     }
     setupKeyRatchetForUser(e, t, n) {
         let r = this.makeUserKeyRatchet(e, t);
         this.encryptionWorker.postMessage({
-            type: s.lA.SET_KEY_RATCHET,
+            type: a.lA.SET_KEY_RATCHET,
             userId: e,
             operation: n,
             protocolVersion: t,
@@ -134,9 +131,9 @@ class l extends r.A {
         });
     }
     prepareSecureFramesRatchets(e, t) {
-        for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, s.jU.DECRYPT);
+        for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, a.jU.DECRYPT);
         e === this.dave.kInitTransitionId
-            ? (this.setupKeyRatchetForUser(this.userId, t, s.jU.ENCRYPT), this.onSecureFramesStateChanged())
+            ? (this.setupKeyRatchetForUser(this.userId, t, a.jU.ENCRYPT), this.onSecureFramesStateChanged())
             : this.secureFramesTransitions.set(e, t),
             (this.latestPreparedTransitionVersion = t);
     }
@@ -150,7 +147,7 @@ class l extends r.A {
             this.lastSecureFramesStateUpdate.version !== e.version ||
             this.lastSecureFramesStateUpdate.epochAuthenticator !== e.epochAuthenticator) &&
             (this.logger.info(`DAVE protocol state update: ${JSON.stringify(e)}`),
-            this.emit(a.yq.SecureFramesUpdate, e),
+            this.emit(s.yq.SecureFramesUpdate, e),
             (this.lastSecureFramesStateUpdate = e));
     }
 }

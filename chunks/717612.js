@@ -1,42 +1,44 @@
-n.d(t, { A: () => c });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => u });
+var a = n(627968);
 n(64700);
-var a = n(397927),
-    i = n(263063),
-    r = n(734057),
-    s = n(71393),
-    d = n(985018),
-    o = n(309704);
-let c = (e) => {
+var i = n(534514),
+    r = n(834730),
+    l = n(263063),
+    s = n(734057),
+    d = n(71393),
+    o = n(985018),
+    c = n(729985);
+let u = (e) => {
     let { entry: t } = e,
-        n = r.A.getChannel(t.channelId);
+        n = s.A.getChannel(t.channelId);
     if (null == n) return null;
-    let c = s.A.getGuild(n.guild_id);
-    return null == c
+    let u = d.A.getGuild(n.guild_id);
+    return null == u
         ? null
-        : (0, l.jsxs)("div", {
-              className: o.kL,
+        : (0, a.jsxs)("div", {
+              className: c.kL,
               children: [
-                  (0, l.jsx)(a.Heading, {
-                      className: o.wx,
+                  (0, a.jsx)(i.D, {
+                      className: c.wx,
                       variant: "heading-sm/semibold",
-                      children: d.intl.string(d.t.nTe4HC),
+                      children: o.intl.string(o.t.nTe4HC),
                   }),
-                  (0, l.jsxs)("div", {
-                      className: o.bo,
+                  (0, a.jsxs)("div", {
+                      className: c.bo,
                       children: [
-                          (0, l.jsxs)("div", {
-                              className: o.mo,
+                          (0, a.jsxs)("div", {
+                              className: c.mo,
                               children: [
-                                  (0, l.jsx)(i.Ay, { guild: c, size: i.Ay.Sizes.MINI, className: o.xG }),
-                                  (0, l.jsx)(a.Text, {
+                                  (0, a.jsx)(l.Ay, { guild: u, size: l.Ay.Sizes.MINI, className: c.xG }),
+                                  (0, a.jsx)(r.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
-                                      children: c.name,
+                                      children: u.name,
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(a.Text, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
+                          (0, a.jsx)(r.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                       ],
                   }),
               ],

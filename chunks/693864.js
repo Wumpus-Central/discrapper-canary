@@ -1,17 +1,18 @@
-n.d(e, { default: () => r });
-var i = n(627968),
-    s = n(64700),
-    a = n(158954),
-    l = n(397927),
-    c = n(985018);
-function r(t) {
-    let { transitionState: e, onConfirm: n, onClose: r, onDismiss: d } = t,
-        [o, u] = s.useState(!1),
-        [b, h] = s.useState(!0),
-        [C, k] = s.useState(!0);
+e.d(n, { default: () => d });
+var i = e(627968),
+    s = e(64700),
+    a = e(189213),
+    l = e(150934),
+    r = e(243721),
+    c = e(985018);
+function d(t) {
+    let { transitionState: n, onConfirm: e, onClose: d, onDismiss: o } = t,
+        [u, b] = s.useState(!1),
+        [h, p] = s.useState(!0),
+        [C, g] = s.useState(!0);
     return (0, i.jsx)(a.Modal, {
-        transitionState: e,
-        onClose: r,
+        transitionState: n,
+        onClose: d,
         title: c.intl.string(c.t["6rP+Bd"]),
         subtitle: c.intl.string(c.t["1LuCnS"]),
         actions: [
@@ -19,32 +20,32 @@ function r(t) {
                 variant: "secondary",
                 text: c.intl.string(c.t["ETE/oC"]),
                 onClick: () => {
-                    d(), r();
+                    o(), d();
                 },
-                disabled: o,
+                disabled: u,
             },
             {
                 text: c.intl.string(c.t["cY+Oob"]),
                 onClick: () => {
-                    o || (u(!0), n(b, C), u(!1), r());
+                    u || (b(!0), e(h, C), b(!1), d());
                 },
-                disabled: o,
-                loading: o,
+                disabled: u,
+                loading: u,
             },
         ],
-        actionBarInput: (0, i.jsx)(l.Checkbox, {
+        actionBarInput: (0, i.jsx)(l.S, {
             checked: C,
             onChange: (t) => {
-                k(t);
+                g(t);
             },
             label: c.intl.string(c.t.KX8WJm),
             labelType: "secondary",
         }),
-        children: (0, i.jsx)(l.dOG, {
+        children: (0, i.jsx)(r.d, {
             label: c.intl.string(c.t["zLb+ux"]),
-            checked: b,
+            checked: h,
             onChange: (t) => {
-                h(t);
+                p(t);
             },
         }),
     });

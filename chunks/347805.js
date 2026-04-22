@@ -1,38 +1,38 @@
-l.d(n, { A: () => p });
+l.d(n, { A: () => m });
 var t = l(627968),
     i = l(64700),
-    s = l(311907),
-    a = l(397927),
-    r = l(629403),
+    r = l(311907),
+    s = l(826745),
+    a = l(629403),
     o = l(612630),
     d = l(351906),
     c = l(652215),
     u = l(650583),
-    m = l(985018),
+    g = l(985018),
     A = l(999878);
-function p(e) {
-    let { autoFocus: n = !1, className: l, userId: p, onUpdate: x } = e,
-        g = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: f, note: h } = (0, o.A)(p),
+function m(e) {
+    let { autoFocus: n = !1, className: l, userId: m, onUpdate: f } = e,
+        p = (0, r.bG)([d.A], () => d.A.hidePersonalInformation),
+        { loading: x, note: h } = (0, o.A)(m),
         v = i.useRef(null);
     return (i.useEffect(() => {
-        if (!n || g) return;
+        if (!n || p) return;
         let e = v.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, g]),
-    g)
+    }, [n, p]),
+    p)
         ? null
         : (0, t.jsx)("div", {
               className: l,
-              children: (0, t.jsx)(a.d4u, {
+              children: (0, t.jsx)(s.y, {
                   ref: v,
                   className: A.P,
-                  disabled: f,
-                  placeholder: f ? m.intl.string(m.t["WLKx/9"]) : m.intl.string(m.t.VBhOe2),
-                  "aria-label": m.intl.string(m.t.PbMNh2),
+                  disabled: x,
+                  placeholder: x ? g.intl.string(g.t["WLKx/9"]) : g.intl.string(g.t.VBhOe2),
+                  "aria-label": g.intl.string(g.t.PbMNh2),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (h ?? "") !== n && (x?.(), r.A.updateNote(p, n));
+                      (h ?? "") !== n && (f?.(), a.A.updateNote(m, n));
                   },
                   onKeyPress: (e) => {
                       e.key === u.dh.ENTER

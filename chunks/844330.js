@@ -1,66 +1,67 @@
-n.d(t, { A: () => c });
-var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(397927),
-    o = n(147925),
-    d = n(314516);
-function c(e) {
+a.d(t, { A: () => u });
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(939249),
+    o = a(834730),
+    d = a(147925),
+    c = a(214205);
+function u(e) {
     let {
             icon: t,
-            title: n,
+            title: a,
             subtitle: i,
-            children: c,
-            className: u,
-            isExpanded: m,
-            onExpandedChange: h,
+            children: u,
+            className: m,
+            isExpanded: h,
+            onExpandedChange: p,
             defaultExpanded: x = !1,
-            onOpen: p,
-            maxHeight: g,
+            onOpen: g,
+            maxHeight: v,
         } = e,
-        [_, f] = s.useState(x),
-        v = s.useRef(null),
-        [b, j] = s.useState(null),
-        A = void 0 !== m,
-        C = A ? m : _;
-    s.useEffect(() => {
-        C && null != v.current && j(v.current.scrollHeight);
-    }, [C, c]);
-    let S = s.useCallback(() => {
+        [b, _] = l.useState(x),
+        f = l.useRef(null),
+        [j, A] = l.useState(null),
+        y = void 0 !== h,
+        C = y ? h : b;
+    l.useEffect(() => {
+        C && null != f.current && A(f.current.scrollHeight);
+    }, [C, u]);
+    let E = l.useCallback(() => {
             let e = !C;
-            A || f(e), h?.(e), e && null != p && p();
-        }, [C, A, h, p]),
-        T = s.useMemo(() => {
+            y || _(e), p?.(e), e && null != g && g();
+        }, [C, y, p, g]),
+        S = l.useMemo(() => {
             if (C) {
-                if (null != g) return { maxHeight: "number" == typeof g ? `${g}px` : g };
-                if (null != b) return { maxHeight: `${b}px` };
+                if (null != v) return { maxHeight: "number" == typeof v ? `${v}px` : v };
+                if (null != j) return { maxHeight: `${j}px` };
             }
-        }, [g, C, b]);
-    return (0, a.jsxs)("div", {
-        className: l()(d.Yt, u, { [d.Sg]: C }),
+        }, [v, C, j]);
+    return (0, n.jsxs)("div", {
+        className: s()(c.Yt, m, { [c.Sg]: C }),
         children: [
-            (0, a.jsxs)(r.DUT, {
-                className: d.wx,
-                onClick: S,
+            (0, n.jsxs)(r.D, {
+                className: c.wx,
+                onClick: E,
                 children: [
-                    null != t && (0, a.jsx)("div", { className: d.Y5, children: t }),
-                    (0, a.jsxs)("div", {
-                        className: d.DD,
+                    null != t && (0, n.jsx)("div", { className: c.Y5, children: t }),
+                    (0, n.jsxs)("div", {
+                        className: c.DD,
                         children: [
-                            (0, a.jsx)(r.Text, { variant: "text-sm/medium", color: "text-default", children: n }),
+                            (0, n.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: a }),
                             null != i &&
                                 "" !== i &&
-                                (0, a.jsx)(r.Text, { variant: "text-xs/medium", color: "text-subtle", children: i }),
+                                (0, n.jsx)(o.E, { variant: "text-xs/medium", color: "text-subtle", children: i }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
-                        className: l()(d.OW, { [d.Sg]: C }),
-                        children: (0, a.jsx)(o.A, { width: 20, height: 20, direction: o.A.Directions.RIGHT }),
+                    (0, n.jsx)("div", {
+                        className: s()(c.OW, { [c.Sg]: C }),
+                        children: (0, n.jsx)(d.A, { width: 20, height: 20, direction: d.A.Directions.RIGHT }),
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { ref: v, className: l()(d.Qs, { [d.Sg]: C }), style: T, children: c }),
+            (0, n.jsx)("div", { ref: f, className: s()(c.Qs, { [c.Sg]: C }), style: S, children: u }),
         ],
     });
 }

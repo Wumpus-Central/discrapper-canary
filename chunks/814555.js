@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__99486",
     VH: "preview__99486",

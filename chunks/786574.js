@@ -1,85 +1,80 @@
-n.d(t, { N: () => o }), n(321073);
-var a = n(627968),
-    s = n(64700),
-    i = n(614820),
-    l = n(397927),
-    r = n(231643);
-function o(e, t) {
-    let [n, o] = s.useState(""),
-        d = s.useMemo(() => {
-            if ("" === n.trim()) return e;
-            let t = n.toLowerCase().trim();
+a.d(t, { N: () => d }), a(321073);
+var n = a(627968),
+    l = a(64700),
+    i = a(614820),
+    s = a(477782),
+    r = a(583650),
+    o = a(231643);
+function d(e, t) {
+    let [a, d] = l.useState(""),
+        c = l.useMemo(() => {
+            if ("" === a.trim()) return e;
+            let t = a.toLowerCase().trim();
             return e.filter((e) => {
-                let n = ((0, i.O)(e.name) ?? "").toLowerCase(),
-                    a = (e.group ?? "").toLowerCase(),
-                    s = e.tags ?? [];
+                let a = ((0, i.O)(e.name) ?? "").toLowerCase(),
+                    n = (e.group ?? "").toLowerCase(),
+                    l = e.tags ?? [];
                 return (
-                    n.includes(t) ||
-                    e.id.toLowerCase().includes(t) ||
                     a.includes(t) ||
-                    s.some((e) => e.toLowerCase().includes(t))
+                    e.id.toLowerCase().includes(t) ||
+                    n.includes(t) ||
+                    l.some((e) => e.toLowerCase().includes(t))
                 );
             });
-        }, [e, n]);
+        }, [e, a]);
     return [
-        s.useMemo(
+        l.useMemo(
             () =>
-                (0, a.jsx)(
-                    l.aK1,
+                (0, n.jsx)(
+                    s.aK,
                     {
                         id: "devtools-search",
                         control: (e, t) =>
-                            (0, a.jsx)(l.VPO, {
-                                ...e,
-                                query: n,
-                                onChange: o,
-                                placeholder: "Search DevTools...",
-                                ref: t,
-                            }),
+                            (0, n.jsx)(r.V, { ...e, query: a, onChange: d, placeholder: "Search DevTools...", ref: t }),
                     },
                     "devtools-search",
                 ),
-            [n],
+            [a],
         ),
-        ...s.useMemo(() => {
+        ...l.useMemo(() => {
             let e = [];
-            if ("" !== n.trim() && 0 === d.length)
+            if ("" !== a.trim() && 0 === c.length)
                 e.push(
-                    (0, a.jsx)(
-                        l.Drp,
-                        { id: "devtools-no-results", label: `No DevTools found for "${n}"`, disabled: !0 },
+                    (0, n.jsx)(
+                        s.Dr,
+                        { id: "devtools-no-results", label: `No DevTools found for "${a}"`, disabled: !0 },
                         "devtools-no-results",
                     ),
                 );
             else {
-                let s = d.filter((e) => e.group === r.fu.NONE),
-                    o = (function (e) {
+                let l = c.filter((e) => e.group === o.fu.NONE),
+                    r = (function (e) {
                         let t = new Map();
-                        for (let n of e) {
-                            let e = t.get(n.group) ?? [];
-                            e.push(n), t.set(n.group, e);
+                        for (let a of e) {
+                            let e = t.get(a.group) ?? [];
+                            e.push(a), t.set(a.group, e);
                         }
                         return t;
-                    })(d.filter((e) => e.group !== r.fu.NONE));
-                s.forEach((n) => {
-                    let { id: s, name: r } = n;
-                    return e.push((0, a.jsx)(l.Drp, { id: s, label: (0, i.O)(r) ?? "", action: () => t(s) }, s));
+                    })(c.filter((e) => e.group !== o.fu.NONE));
+                l.forEach((a) => {
+                    let { id: l, name: r } = a;
+                    return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
                 }),
-                    r.BW.forEach((s) => {
-                        let r = o.get(s);
-                        if (null != r && r.length > 0) {
-                            let o = r.sort((e, t) => ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""));
-                            "" === n.trim()
+                    o.BW.forEach((l) => {
+                        let o = r.get(l);
+                        if (null != o && o.length > 0) {
+                            let r = o.sort((e, t) => ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""));
+                            "" === a.trim()
                                 ? e.push(
-                                      (0, a.jsx)(
-                                          l.Drp,
+                                      (0, n.jsx)(
+                                          s.Dr,
                                           {
-                                              id: `devtools-${s}`,
-                                              label: s,
-                                              children: (0, a.jsx)(l.rXV, {
-                                                  children: o.map((e) =>
-                                                      (0, a.jsx)(
-                                                          l.Drp,
+                                              id: `devtools-${l}`,
+                                              label: l,
+                                              children: (0, n.jsx)(s.rX, {
+                                                  children: r.map((e) =>
+                                                      (0, n.jsx)(
+                                                          s.Dr,
                                                           {
                                                               id: `devtools-${e.id}`,
                                                               label: (0, i.O)(e.name) ?? "",
@@ -90,17 +85,17 @@ function o(e, t) {
                                                   ),
                                               }),
                                           },
-                                          `devtools-${s}`,
+                                          `devtools-${l}`,
                                       ),
                                   )
                                 : e.push(
-                                      (0, a.jsx)(
-                                          l.rXV,
+                                      (0, n.jsx)(
+                                          s.rX,
                                           {
-                                              label: s,
-                                              children: o.map((e) =>
-                                                  (0, a.jsx)(
-                                                      l.Drp,
+                                              label: l,
+                                              children: r.map((e) =>
+                                                  (0, n.jsx)(
+                                                      s.Dr,
                                                       {
                                                           id: `devtools-filtered-${e.id}`,
                                                           label: (0, i.O)(e.name) ?? "",
@@ -110,13 +105,13 @@ function o(e, t) {
                                                   ),
                                               ),
                                           },
-                                          `devtools-filtered-${s}`,
+                                          `devtools-filtered-${l}`,
                                       ),
                                   );
                         }
                     });
             }
             return e;
-        }, [d, n, t]),
+        }, [c, a, t]),
     ];
 }

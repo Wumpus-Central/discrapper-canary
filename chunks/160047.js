@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { Cm: () => o });
-var r = n(322811);
-let i = {
+r.d(t, { Cm: () => o });
+var n = r(322811);
+let s = {
     ACDT: 630,
     ACST: 570,
     ADT: -180,
@@ -38,8 +37,8 @@ let i = {
     CET: {
         timezoneOffsetDuringDst: 120,
         timezoneOffsetNonDst: 60,
-        dstStart: (e) => s(e, r.fF.MARCH, r.Bw.SUNDAY, 2),
-        dstEnd: (e) => s(e, r.fF.OCTOBER, r.Bw.SUNDAY, 3),
+        dstStart: (e) => i(e, n.fF.MARCH, n.Bw.SUNDAY, 2),
+        dstEnd: (e) => i(e, n.fF.OCTOBER, n.Bw.SUNDAY, 3),
     },
     CHADT: 825,
     CHAST: 765,
@@ -51,8 +50,8 @@ let i = {
     CT: {
         timezoneOffsetDuringDst: -300,
         timezoneOffsetNonDst: -360,
-        dstStart: (e) => a(e, r.fF.MARCH, r.Bw.SUNDAY, 2, 2),
-        dstEnd: (e) => a(e, r.fF.NOVEMBER, r.Bw.SUNDAY, 1, 2),
+        dstStart: (e) => a(e, n.fF.MARCH, n.Bw.SUNDAY, 2, 2),
+        dstEnd: (e) => a(e, n.fF.NOVEMBER, n.Bw.SUNDAY, 1, 2),
     },
     CVT: -60,
     CXT: 420,
@@ -71,8 +70,8 @@ let i = {
     ET: {
         timezoneOffsetDuringDst: -240,
         timezoneOffsetNonDst: -300,
-        dstStart: (e) => a(e, r.fF.MARCH, r.Bw.SUNDAY, 2, 2),
-        dstEnd: (e) => a(e, r.fF.NOVEMBER, r.Bw.SUNDAY, 1, 2),
+        dstStart: (e) => a(e, n.fF.MARCH, n.Bw.SUNDAY, 2, 2),
+        dstEnd: (e) => a(e, n.fF.NOVEMBER, n.Bw.SUNDAY, 1, 2),
     },
     FJST: 780,
     FJT: 720,
@@ -138,8 +137,8 @@ let i = {
     MT: {
         timezoneOffsetDuringDst: -360,
         timezoneOffsetNonDst: -420,
-        dstStart: (e) => a(e, r.fF.MARCH, r.Bw.SUNDAY, 2, 2),
-        dstEnd: (e) => a(e, r.fF.NOVEMBER, r.Bw.SUNDAY, 1, 2),
+        dstStart: (e) => a(e, n.fF.MARCH, n.Bw.SUNDAY, 2, 2),
+        dstEnd: (e) => a(e, n.fF.NOVEMBER, n.Bw.SUNDAY, 1, 2),
     },
     MUT: 240,
     MVT: 300,
@@ -171,8 +170,8 @@ let i = {
     PT: {
         timezoneOffsetDuringDst: -420,
         timezoneOffsetNonDst: -480,
-        dstStart: (e) => a(e, r.fF.MARCH, r.Bw.SUNDAY, 2, 2),
-        dstEnd: (e) => a(e, r.fF.NOVEMBER, r.Bw.SUNDAY, 1, 2),
+        dstStart: (e) => a(e, n.fF.MARCH, n.Bw.SUNDAY, 2, 2),
+        dstEnd: (e) => a(e, n.fF.NOVEMBER, n.Bw.SUNDAY, 1, 2),
     },
     PWT: 540,
     PYST: -180,
@@ -221,32 +220,32 @@ let i = {
     YEKST: 360,
     YEKT: 360,
 };
-function a(e, t, n, r, i = 0) {
-    let s = 0,
+function a(e, t, r, n, s = 0) {
+    let i = 0,
         o = 0;
-    for (; o < r; ) new Date(e, t - 1, ++s).getDay() === n && o++;
-    return new Date(e, t - 1, s, i);
+    for (; o < n; ) new Date(e, t - 1, ++i).getDay() === r && o++;
+    return new Date(e, t - 1, i, s);
 }
-function s(e, t, n, r = 0) {
-    let i,
-        a = 0 === n ? 7 : n,
+function i(e, t, r, n = 0) {
+    let s,
+        a = 0 === r ? 7 : r,
         o = new Date(e, t - 1 + 1, 1, 12),
         l = 0 === o.getDay() ? 7 : o.getDay();
     return (
-        (i = l === a ? 7 : l < a ? 7 + l - a : l - a), o.setDate(o.getDate() - i), new Date(e, t - 1, o.getDate(), r)
+        (s = l === a ? 7 : l < a ? 7 + l - a : l - a), o.setDate(o.getDate() - s), new Date(e, t - 1, o.getDate(), n)
     );
 }
-function o(e, t, n = {}) {
+function o(e, t, r = {}) {
     if (null == e) return null;
     if ("number" == typeof e) return e;
-    let r = n[e] ?? i[e];
-    return null == r
+    let n = r[e] ?? s[e];
+    return null == n
         ? null
-        : "number" == typeof r
-          ? r
+        : "number" == typeof n
+          ? n
           : null == t
             ? null
-            : t > r.dstStart(t.getFullYear()) && !(t > r.dstEnd(t.getFullYear()))
-              ? r.timezoneOffsetDuringDst
-              : r.timezoneOffsetNonDst;
+            : t > n.dstStart(t.getFullYear()) && !(t > n.dstEnd(t.getFullYear()))
+              ? n.timezoneOffsetDuringDst
+              : n.timezoneOffsetNonDst;
 }

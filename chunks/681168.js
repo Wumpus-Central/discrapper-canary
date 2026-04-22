@@ -1,121 +1,128 @@
-n.d(t, { A: () => N });
-var l = n(627968);
+n.d(t, { A: () => b });
+var a = n(627968);
 n(64700);
-var a = n(503698),
-    r = n.n(a),
-    s = n(397927),
-    i = n(769840),
-    o = n(263577),
-    c = n(156603),
-    d = n(176563),
-    u = n(506326),
-    m = n(915089),
-    p = n(818348),
-    A = n(985018),
-    h = n(672743),
-    C = n(392419);
-function E(e) {
-    let { className: t, clickableClassName: n, clickable: a, children: i } = e,
-        o = (0, m.GV)();
-    if (null != a && "href" in a) {
-        let { ariaDescription: e, href: c } = a;
-        return (0, l.jsxs)(l.Fragment, {
+var l = n(503698),
+    r = n.n(l),
+    i = n(140735),
+    s = n(349288),
+    o = n(531142),
+    d = n(939249),
+    c = n(43990),
+    u = n(696986),
+    m = n(534514),
+    _ = n(834730),
+    p = n(769840),
+    h = n(263577),
+    A = n(156603),
+    C = n(176563),
+    x = n(506326),
+    f = n(915089),
+    E = n(818348),
+    I = n(985018),
+    N = n(672743),
+    g = n(392419);
+function v(e) {
+    let { className: t, clickableClassName: n, clickable: l, children: c } = e,
+        u = (0, f.GV)();
+    if (null != l && "href" in l) {
+        let { ariaDescription: e, href: o } = l;
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, l.jsx)(s.AC4, { id: o, children: e }),
-                (0, l.jsx)(s.MzZ, { className: r()(t, n), href: c, "aria-describedby": o, children: i }),
+                (0, a.jsx)(i.A, { id: u, children: e }),
+                (0, a.jsx)(s.Anchor, { className: r()(t, n), href: o, "aria-describedby": u, children: c }),
             ],
         });
     }
-    let { onClick: c, ariaDescription: d } = a ?? {};
-    return (0, l.jsxs)(s.gmh.Provider, {
-        value: null == c,
+    let { onClick: m, ariaDescription: _ } = l ?? {};
+    return (0, a.jsxs)(o.g.Provider, {
+        value: null == m,
         children: [
-            null != c && null != d && (0, l.jsx)(s.AC4, { id: o, children: d }),
-            (0, l.jsx)(s.DUT, {
-                onClick: c,
-                "aria-describedby": null == c ? void 0 : o,
-                className: r()(t, null != c && n),
-                children: i,
+            null != m && null != _ && (0, a.jsx)(i.A, { id: u, children: _ }),
+            (0, a.jsx)(d.D, {
+                onClick: m,
+                "aria-describedby": null == m ? void 0 : u,
+                className: r()(t, null != m && n),
+                children: c,
             }),
         ],
     });
 }
-function x(e) {
+function T(e) {
     let { clickable: t, ...n } = e;
-    return (0, l.jsx)(E, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: C.v });
+    return (0, a.jsx)(v, { ...n, clickable: { ...t, ariaDescription: "" }, clickableClassName: g.v });
 }
-function N(e) {
+function b(e) {
     let {
             entry: t,
             channel: n,
-            title: a,
-            subtitle: C,
-            thumbnailUrl: N,
-            titleClickable: I,
-            subtitleClickable: _,
-            thumbnailClickable: f,
-            providerIconProps: g,
-            style: T = {},
+            title: l,
+            subtitle: i,
+            thumbnailUrl: s,
+            titleClickable: o,
+            subtitleClickable: d,
+            thumbnailClickable: g,
+            providerIconProps: b,
+            style: S = {},
         } = e,
-        v = (0, m.GV)(),
-        { primaryColor: j, secondaryColor: S } = (0, d.A)(N);
+        j = (0, f.GV)(),
+        { primaryColor: O, secondaryColor: y } = (0, C.A)(s);
     return (
-        null != N && (T.background = `linear-gradient(45deg, ${j}, ${S})`),
-        (0, l.jsx)(s.NPJ, {
-            theme: p.NJ.DARK,
+        null != s && (S.background = `linear-gradient(45deg, ${O}, ${y})`),
+        (0, a.jsx)(c.N, {
+            theme: E.NJ.DARK,
             disableAdaptiveTheme: !0,
             children: (e) =>
-                (0, l.jsxs)("figure", {
-                    "aria-roledescription": A.intl.string(A.t.zFfUhF),
-                    "aria-labelledby": v,
-                    className: r()(h.kL, e),
-                    style: T,
+                (0, a.jsxs)("figure", {
+                    "aria-roledescription": I.intl.string(I.t.zFfUhF),
+                    "aria-labelledby": j,
+                    className: r()(N.kL, e),
+                    style: S,
                     children: [
-                        (0, l.jsx)(E, {
-                            className: h.iT,
-                            clickableClassName: h.vk,
-                            clickable: f,
-                            children: (0, l.jsx)(o.V, { src: N, constrain: "width", size: 64, "aria-hidden": !0 }),
+                        (0, a.jsx)(v, {
+                            className: N.iT,
+                            clickableClassName: N.vk,
+                            clickable: g,
+                            children: (0, a.jsx)(h.V, { src: s, constrain: "width", size: 64, "aria-hidden": !0 }),
                         }),
-                        (0, l.jsxs)("div", {
-                            className: h.op,
+                        (0, a.jsxs)("div", {
+                            className: N.op,
                             children: [
-                                (0, l.jsx)(i.A, { channel: n, entry: t, className: h.VV }),
-                                (0, l.jsx)(s.hKd, { size: 2 }),
-                                (0, l.jsx)(x, {
-                                    clickable: I,
-                                    className: h.sd,
-                                    children: (0, l.jsx)(s.Heading, {
-                                        id: v,
+                                (0, a.jsx)(p.A, { channel: n, entry: t, className: N.VV }),
+                                (0, a.jsx)(u.h, { size: 2 }),
+                                (0, a.jsx)(T, {
+                                    clickable: o,
+                                    className: N.sd,
+                                    children: (0, a.jsx)(m.D, {
+                                        id: j,
                                         variant: "heading-md/medium",
                                         lineClamp: 1,
-                                        className: r()(h.ek, h.IY),
+                                        className: r()(N.ek, N.IY),
                                         scaleFontToUserSetting: !0,
-                                        children: a,
+                                        children: l,
                                     }),
                                 }),
-                                null != C
-                                    ? (0, l.jsxs)(l.Fragment, {
+                                null != i
+                                    ? (0, a.jsxs)(a.Fragment, {
                                           children: [
-                                              (0, l.jsx)(s.hKd, { size: 2 }),
-                                              (0, l.jsx)(x, {
-                                                  clickable: _,
-                                                  className: h.sd,
-                                                  children: (0, l.jsx)(s.Text, {
+                                              (0, a.jsx)(u.h, { size: 2 }),
+                                              (0, a.jsx)(T, {
+                                                  clickable: d,
+                                                  className: N.sd,
+                                                  children: (0, a.jsx)(_.E, {
                                                       variant: "text-sm/normal",
-                                                      className: r()(h.c1, h.IY),
+                                                      className: r()(N.c1, N.IY),
                                                       lineClamp: 1,
                                                       scaleFontToUserSetting: !0,
-                                                      children: C,
+                                                      children: i,
                                                   }),
                                               }),
                                           ],
                                       })
                                     : null,
-                                (0, l.jsx)(u.iT, { className: h.jp, entry: t, location: u.N5.EMBED }),
+                                (0, a.jsx)(x.iT, { className: N.jp, entry: t, location: x.N5.EMBED }),
                             ],
                         }),
-                        (0, l.jsx)("div", { className: h.Y, children: null != g ? (0, l.jsx)(c.A, { ...g }) : null }),
+                        (0, a.jsx)("div", { className: N.Y, children: null != b ? (0, a.jsx)(A.A, { ...b }) : null }),
                     ],
                 }),
         })

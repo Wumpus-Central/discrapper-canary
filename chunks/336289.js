@@ -1,72 +1,76 @@
-l.d(n, { A: () => N });
-var i = l(627968);
+l.d(n, { A: () => C });
+var t = l(627968);
 l(64700);
-var t = l(317097),
-    s = l(311907),
-    a = l(827734),
-    r = l(397927),
+var i = l(317097),
+    r = l(311907),
+    s = l(827734),
+    a = l(602853),
     o = l(688810),
     d = l(450373),
     c = l(919395),
     u = l(385612),
-    m = l(287809),
-    p = l(84540),
-    x = l(836602),
-    A = l(950191),
-    g = l(930349),
-    f = l(339984),
-    h = l(985018),
-    v = l(228122);
-function j(e) {
-    let { backgroundColor: n } = e;
-    return (0, i.jsx)("div", { className: v.o, style: { backgroundColor: n } });
-}
+    g = l(287809),
+    A = l(84540),
+    m = l(836602),
+    f = l(622543),
+    p = l(950191),
+    x = l(930349),
+    h = l(339984),
+    v = l(985018),
+    j = l(111242);
 function I(e) {
-    let { src: n } = e;
-    return (0, i.jsx)("img", { src: n, alt: "", className: v._ });
+    let { backgroundColor: n } = e;
+    return (0, t.jsx)("div", { className: j.o, style: { backgroundColor: n } });
 }
-function N(e) {
-    let { userId: n, guildId: l, disabled: v } = e,
-        { newestAnalyticsLocation: N } = (0, o.Ay)(),
-        y = null != l,
-        C = (0, A.Ay)(n, l),
-        b = (0, s.bG)([x.A], () => x.A.getPendingChanges(l ?? void 0).pendingBanner),
-        E = (0, s.bG)([m.default], () => m.default.getCurrentUser()?.banner != null),
-        T = null === b,
-        P = void 0 !== b,
-        _ = y && (C?.isUsingGuildMemberBanner() ?? !1),
-        R = T && y ? E : (0, c.Ac)(b, C?.banner),
-        O = y ? _ : C?.banner != null,
-        S = P ? null != b : O,
-        L = C?.getPreviewBanner(b, !1, 296) ?? void 0,
-        k = (0, r.rdh)(a.A.unsafe_rawColors.PRIMARY_800).hex(),
-        D = C?.primaryColor ?? (0, t.LX)(k),
-        { hex: U } = (0, d.A)(D),
-        G = () =>
-            (0, u.XD)({ uploadType: f.HL.BANNER, analyticsSource: N, guildId: l ?? void 0, stackingBehavior: "stack" }),
-        M = null != L ? (0, i.jsx)(I, { src: L }) : (0, i.jsx)(j, { backgroundColor: U });
-    if (!R)
-        return (0, i.jsx)(g.kL, {
+function b(e) {
+    let { src: n } = e;
+    return (0, t.jsx)("img", { src: n, alt: "", className: j._ });
+}
+function C(e) {
+    let { userId: n, guildId: l, disabled: j } = e,
+        { newestAnalyticsLocation: C } = (0, o.Ay)(),
+        N = null != l,
+        y = (0, p.Ay)(n, l),
+        E = (0, r.bG)([m.A], () => m.A.getPendingChanges(l ?? void 0).pendingBanner),
+        P = (0, r.bG)([g.default], () => g.default.getCurrentUser()?.banner != null),
+        R = (0, r.bG)([f.A], () =>
+            null != l ? f.A.getGuildMemberProfile(n, l)?.banner : f.A.getUserProfile(n)?.banner,
+        ),
+        _ = null === E,
+        T = void 0 !== E,
+        O = N && (y?.isUsingGuildMemberBanner() ?? !1),
+        S = _ && N ? P : (0, c.Ac)(E, y?.banner),
+        k = N ? O : y?.banner != null,
+        D = T ? null != E : k,
+        L = y?.getPreviewBanner(_ && N && !O ? void 0 : E, !1, 296) ?? void 0,
+        M = (0, a.r)(s.A.unsafe_rawColors.PRIMARY_800).hex(),
+        G = y?.primaryColor ?? (0, i.LX)(M),
+        { hex: U } = (0, d.A)(G),
+        F = () =>
+            (0, u.XD)({ uploadType: h.HL.BANNER, analyticsSource: C, guildId: l ?? void 0, stackingBehavior: "stack" }),
+        w = null != L ? (0, t.jsx)(b, { src: L }) : (0, t.jsx)(I, { backgroundColor: U });
+    if (!S)
+        return (0, t.jsx)(x.kL, {
             variant: "square",
-            onClick: G,
-            accessibleLabel: h.intl.string(h.t.N0bC3P),
-            disabled: v,
-            children: M,
+            onClick: F,
+            accessibleLabel: v.intl.string(v.t.N0bC3P),
+            disabled: j,
+            children: w,
         });
-    let F = y && E,
-        w = S
+    let V = N && P,
+        B = D
             ? {
-                  onClick: () => (0, p.p)({ guildId: l ?? void 0, banner: null }),
-                  type: F ? "reset" : "remove",
-                  accessibleLabel: h.intl.string(F ? h.t.jHlJNS : h.t.tT9n7D),
+                  onClick: () => (0, u.rM)(null, R, (e) => (0, A.p)({ guildId: l ?? void 0, banner: e })),
+                  type: V ? "reset" : "remove",
+                  accessibleLabel: v.intl.string(V ? v.t.jHlJNS : v.t.tT9n7D),
               }
             : void 0;
-    return (0, i.jsx)(g.NW, {
+    return (0, t.jsx)(x.NW, {
         variant: "square",
-        onClick: G,
-        accessibleLabel: h.intl.string(h.t.N0bC3P),
-        deleteButtonConfig: w,
-        disabled: v,
-        children: M,
+        onClick: F,
+        accessibleLabel: v.intl.string(v.t.N0bC3P),
+        deleteButtonConfig: B,
+        disabled: j,
+        children: w,
     });
 }

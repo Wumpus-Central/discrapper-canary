@@ -1,21 +1,21 @@
 t.d(n, { N: () => j });
 var l = t(627968),
     r = t(64700),
-    a = t(397927),
+    a = t(588975),
     s = t(442433),
-    i = t(9578),
-    c = t(975807),
+    c = t(9578),
+    i = t(975807),
     d = t(235393),
     u = t(332173),
     o = t(202803),
     h = t(403362),
     m = t(62849),
-    x = t(800344);
+    x = t(995257);
 function j(e) {
     let { type: n, value: t, children: r } = e;
     switch (n) {
         case "normal":
-            return (0, l.jsx)(i.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
+            return (0, l.jsx)(c.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
         case "mention":
             switch (t.type) {
                 case "channel":
@@ -23,8 +23,8 @@ function j(e) {
                     let {
                             value: { guild_id: a, channel_id: s },
                         } = t,
-                        c = "message_id" in t.value ? t.value.message_id : void 0;
-                    return (0, l.jsx)(m.A, { channelId: s, guildId: a, messageId: c });
+                        i = "message_id" in t.value ? t.value.message_id : void 0;
+                    return (0, l.jsx)(m.A, { channelId: s, guildId: a, messageId: i });
                 case "attachment":
                     let {
                         value: { domain: d, ephemeral: u, channel_id: o, attachment_id: x, name: j },
@@ -39,11 +39,11 @@ function j(e) {
     }
 }
 function g(e) {
-    let { domain: n, ephemeral: i, channelId: h, attachmentId: m, name: j } = e,
-        g = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
+    let { domain: n, ephemeral: c, channelId: h, attachmentId: m, name: j } = e,
+        g = `https://${n}/${c ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
         f = r.useCallback(async () => {
             let e = await (0, o.AN)(g);
-            d.A.trackLinkClicked(e), (0, c.A)(e);
+            d.A.trackLinkClicked(e), (0, i.A)(e);
         }, [g]),
         p = r.useCallback(
             (e) => {
@@ -60,6 +60,6 @@ function g(e) {
         onClick: f,
         onContextMenu: p,
         className: "attachmentLink",
-        children: [(0, l.jsx)(a.PtA, { size: "xs", className: x.Kk, color: "currentColor" }), j],
+        children: [(0, l.jsx)(a.P, { size: "xs", className: x.Kk, color: "currentColor" }), j],
     });
 }

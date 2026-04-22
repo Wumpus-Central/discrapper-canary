@@ -1,203 +1,207 @@
-n.d(t, { e: () => V, r: () => R });
+n.d(t, { e: () => P, r: () => O });
 var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    a = n(503698),
+    s = n.n(a),
     r = n(311907),
-    o = n(397927),
-    d = n(774300),
-    u = n(566903),
-    c = n(714114),
-    g = n(864436),
-    h = n(835072),
-    A = n(313961),
-    p = n(85448),
-    x = n(571694),
-    I = n(47167),
-    m = n(10862),
-    S = n(410876),
-    v = n(71393),
-    y = n(535820),
-    E = n(290863),
-    T = n(994500),
-    _ = n(287809),
-    f = n(486020),
-    C = n(240248),
-    N = n(427262),
-    b = n(652215),
-    M = n(806931),
-    j = n(985018),
-    G = n(465892);
-let R = 48;
-function U(e, t) {
-    if (null != e) return { suggestionData: y.A.getSelectedInviteMetadata(e), source: t };
+    o = n(935154),
+    d = n(652215),
+    u = n(834730),
+    c = n(778712),
+    g = n(97808),
+    h = n(821609),
+    A = n(774300),
+    p = n(566903),
+    I = n(714114),
+    x = n(864436),
+    m = n(835072),
+    S = n(313961),
+    v = n(85448),
+    f = n(571694),
+    y = n(47167),
+    E = n(10862),
+    _ = n(410876),
+    C = n(71393),
+    T = n(535820),
+    N = n(290863),
+    b = n(994500),
+    M = n(287809),
+    j = n(486020),
+    G = n(240248),
+    R = n(427262),
+    w = n(806931),
+    V = n(985018),
+    U = n(640852);
+let O = 48;
+function D(e, t) {
+    if (null != e) return { suggestionData: T.A.getSelectedInviteMetadata(e), source: t };
 }
-let V = i.memo(
+let P = i.memo(
     function (e) {
         let t,
             {
                 user: n,
-                channel: s,
-                inviteKey: y,
-                location: R,
-                row: V,
-                source: O,
-                ringingEnabled: w,
-                inviteChannel: D,
-                guildId: P,
+                channel: a,
+                inviteKey: T,
+                location: O,
+                row: P,
+                source: L,
+                ringingEnabled: k,
+                inviteChannel: F,
+                guildId: B,
             } = e,
-            [L, k] = i.useState(!1),
-            [F, B] = i.useState(!1),
-            H = (0, r.bG)([v.A], () => v.A.getGuild(s?.guild_id)),
+            [H, K] = i.useState(!1),
+            [Q, z] = i.useState(!1),
+            q = (0, r.bG)([C.A], () => C.A.getGuild(a?.guild_id)),
             {
-                status: K,
-                isMobileOnline: z,
-                activities: Q,
+                status: W,
+                isMobileOnline: Y,
+                activities: J,
             } = (0, r.cf)(
-                [E.A],
+                [N.A],
                 () =>
                     null == n
                         ? { status: void 0, isMobileOnline: void 0, activities: void 0 }
                         : {
-                              status: E.A.getStatus(n.id, P),
-                              isMobileOnline: E.A.isMobileOnline(n.id),
-                              activities: E.A.getActivities(n.id, P),
+                              status: N.A.getStatus(n.id, B),
+                              isMobileOnline: N.A.isMobileOnline(n.id),
+                              activities: N.A.getActivities(n.id, B),
                           },
-                [n, P],
+                [n, B],
             ),
-            { activityStatusText: q, activityStatusIcon: W } = i.useMemo(() => {
-                if (null == Q) return { activityStatusText: {}, activityStatusIcon: void 0 };
-                let e = Q.find((e) => e.type !== b.$pd.CUSTOM_STATUS && e.type !== b.$pd.HANG_STATUS);
-                return { activityStatusText: (0, u.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, h.f)(e) };
-            }, [Q]),
-            { voiceChannel: Y } = (0, c.A)({ userId: n?.id }),
-            J = (0, I.Ay)(Y),
-            Z = (0, r.bG)([A.A], () => (null != D && null != n ? A.A.getParticipant(D.id, n.id) : null)),
-            X = w && null != Z && Z.type === M.lp.USER && Z.ringing,
-            $ = (0, o.S31)(o.clD.ONLINE),
-            ee = i.useCallback(() => {
-                null != y &&
-                    (null != s
-                        ? (k(!0),
-                          d.A.enqueue(
+            { activityStatusText: X, activityStatusIcon: Z } = i.useMemo(() => {
+                if (null == J) return { activityStatusText: {}, activityStatusIcon: void 0 };
+                let e = J.find((e) => e.type !== d.$pd.CUSTOM_STATUS && e.type !== d.$pd.HANG_STATUS);
+                return { activityStatusText: (0, p.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, m.f)(e) };
+            }, [J]),
+            { voiceChannel: $ } = (0, I.A)({ userId: n?.id }),
+            ee = (0, y.Ay)($),
+            et = (0, r.bG)([S.A], () => (null != F && null != n ? S.A.getParticipant(F.id, n.id) : null)),
+            en = k && null != et && et.type === w.lp.USER && et.ringing,
+            el = (0, o.S3)(d.clD.ONLINE),
+            ei = i.useCallback(() => {
+                null != T &&
+                    (null != a
+                        ? (K(!0),
+                          A.A.enqueue(
                               {
-                                  type: d.F.GROUP_DM,
-                                  channel: s,
-                                  inviteKey: y,
-                                  location: R,
-                                  inviteAnalyticsMetadata: U(V, O),
+                                  type: A.F.GROUP_DM,
+                                  channel: a,
+                                  inviteKey: T,
+                                  location: O,
+                                  inviteAnalyticsMetadata: D(P, L),
                               },
                               (e) => {
-                                  k(!1), B(e);
+                                  K(!1), z(e);
                               },
                           ))
                         : null != n &&
-                          (k(!0),
-                          d.A.enqueue(
-                              { type: d.F.USER, user: n, inviteKey: y, location: R, inviteAnalyticsMetadata: U(V, O) },
+                          (K(!0),
+                          A.A.enqueue(
+                              { type: A.F.USER, user: n, inviteKey: T, location: O, inviteAnalyticsMetadata: D(P, L) },
                               (e) => {
-                                  k(!1), B(e);
+                                  K(!1), z(e);
                               },
                           )));
-            }, [y, s, n, R, V, O]),
-            et = N.Ay.getName(n),
-            en = null != n ? T.A.getNickname(n.id) : null,
-            el = null != s ? (0, I.m1)(s, _.default, T.A) : null,
-            ei = null != n ? n.getAvatarURL(s?.guild_id, 32) : null,
-            es = null != s ? (0, x.Y)(s) : null,
-            ea =
-                null != H && null != s && null == es
-                    ? f.Ay.getGuildIconURL({ id: s.guild_id, icon: H.icon, size: 32 })
+            }, [T, a, n, O, P, L]),
+            ea = R.Ay.getName(n),
+            es = null != n ? b.A.getNickname(n.id) : null,
+            er = null != a ? (0, y.m1)(a, M.default, b.A) : null,
+            eo = null != n ? n.getAvatarURL(a?.guild_id, 32) : null,
+            ed = null != a ? (0, f.Y)(a) : null,
+            eu =
+                null != q && null != a && null == ed
+                    ? j.Ay.getGuildIconURL({ id: a.guild_id, icon: q.icon, size: 32 })
                     : null,
-            er = K !== o.clD.OFFLINE ? K : void 0,
-            eo = ei ?? es ?? ea,
-            ed = et ?? el ?? void 0,
-            eu = null != H && null == H.icon ? (0, C.oN)(H.name) : null,
-            ec = null != eo && null != ed;
-        null != n && (t = en ?? et);
-        let eg = N.Ay.getUserTag(n, { decoration: "never" }),
-            eh = (0, l.jsx)(o.Button, {
+            ec = W !== d.clD.OFFLINE ? W : void 0,
+            eg = eo ?? ed ?? eu,
+            eh = ea ?? er ?? void 0,
+            eA = null != q && null == q.icon ? (0, G.oN)(q.name) : null,
+            ep = null != eg && null != eh;
+        null != n && (t = es ?? ea);
+        let eI = R.Ay.getUserTag(n, { decoration: "never" }),
+            ex = (0, l.jsx)(h.$, {
                 variant: "secondary",
-                text: F ? j.intl.string(j.t.dVT149) : j.intl.string(j.t.jYnGPG),
+                text: Q ? V.intl.string(V.t.dVT149) : V.intl.string(V.t.jYnGPG),
                 size: "sm",
-                loading: L,
-                onClick: ee,
-                disabled: F,
+                loading: H,
+                onClick: ei,
+                disabled: Q,
             }),
-            eA = null != q.text,
-            ep = null != Y && null != J,
-            ex = ep || eA || null != n;
+            em = null != X.text,
+            eS = null != $ && null != ee,
+            ev = eS || em || null != n;
         return (0, l.jsxs)("div", {
-            className: G.Og,
+            className: U.Og,
             children: [
                 (0, l.jsxs)("div", {
-                    className: G.mQ,
+                    className: U.mQ,
                     children: [
-                        ec
-                            ? X
-                                ? (0, l.jsx)(p.A, { size: o._3J.SIZE_32, ringing: X, src: eo, className: G.hO })
-                                : (0, l.jsx)(o.euF, {
-                                      src: eo,
-                                      "aria-label": ed,
-                                      size: o._3J.SIZE_32,
-                                      className: G.hO,
-                                      status: null != n ? er : void 0,
-                                      isMobile: null != n ? z : void 0,
+                        ep
+                            ? en
+                                ? (0, l.jsx)(v.A, { size: c._3.SIZE_32, ringing: en, src: eg, className: U.hO })
+                                : (0, l.jsx)(g.eu, {
+                                      src: eg,
+                                      "aria-label": eh,
+                                      size: c._3.SIZE_32,
+                                      className: U.hO,
+                                      status: null != n ? ec : void 0,
+                                      isMobile: null != n ? Y : void 0,
                                   })
-                            : (0, l.jsx)(o.Text, {
+                            : (0, l.jsx)(u.E, {
                                   variant: "text-md/medium",
-                                  className: G.q9,
+                                  className: U.q9,
                                   "aria-hidden": !0,
-                                  children: eu,
+                                  children: eA,
                               }),
                         (0, l.jsxs)("div", {
-                            className: a()(G.BT, { [G.DF]: X }),
+                            className: s()(U.BT, { [U.DF]: en }),
                             children: [
-                                (0, l.jsxs)(o.Text, {
+                                (0, l.jsxs)(u.E, {
                                     tag: "strong",
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
-                                    children: [t, null != s ? (0, I.m1)(s, _.default, T.A, !0) : null],
+                                    children: [t, null != a ? (0, y.m1)(a, M.default, b.A, !0) : null],
                                 }),
-                                ex &&
+                                ev &&
                                     (0, l.jsxs)("div", {
-                                        className: a()(G.eq, { [G.DF]: X }),
+                                        className: s()(U.eq, { [U.DF]: en }),
                                         children: [
-                                            ep
-                                                ? (0, l.jsx)(m.A, {
+                                            eS
+                                                ? (0, l.jsx)(E.A, {
                                                       size: "custom",
-                                                      color: $,
-                                                      channel: Y,
-                                                      className: G.j8,
+                                                      color: el,
+                                                      channel: $,
+                                                      className: U.j8,
                                                   })
-                                                : null != W
-                                                  ? (0, l.jsx)(g.A, { icon: W, className: G.j8 })
+                                                : null != Z
+                                                  ? (0, l.jsx)(x.A, { icon: Z, className: U.j8 })
                                                   : null,
-                                            ep
-                                                ? (0, l.jsx)(o.Text, {
+                                            eS
+                                                ? (0, l.jsx)(u.E, {
                                                       variant: "text-xs/medium",
                                                       color: "text-status-online",
                                                       lineClamp: 1,
-                                                      children: J,
+                                                      children: ee,
                                                   })
-                                                : eA
-                                                  ? (0, l.jsx)(o.Text, {
+                                                : em
+                                                  ? (0, l.jsx)(u.E, {
                                                         variant: "text-xs/medium",
                                                         color: "text-status-online",
                                                         lineClamp: 1,
-                                                        children: q.text,
+                                                        children: X.text,
                                                     })
-                                                  : (0, l.jsx)(o.Text, {
+                                                  : (0, l.jsx)(u.E, {
                                                         variant: "text-xs/normal",
                                                         color: "text-muted",
                                                         lineClamp: 1,
-                                                        children: eg,
+                                                        children: eI,
                                                     }),
-                                            (0, l.jsx)(o.Text, {
+                                            (0, l.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
                                                 lineClamp: 1,
-                                                children: X && ` • ${j.intl.string(j.t.sURrjb)}`,
+                                                children: en && ` • ${V.intl.string(V.t.sURrjb)}`,
                                             }),
                                         ],
                                     }),
@@ -206,10 +210,10 @@ let V = i.memo(
                     ],
                 }),
                 (0, l.jsxs)("div", {
-                    className: G.t$,
+                    className: U.t$,
                     children: [
-                        w && null != n && null != D && (0, l.jsx)(S.A, { user: n, channel: D, location: "InviteRow" }),
-                        eh,
+                        k && null != n && null != F && (0, l.jsx)(_.A, { user: n, channel: F, location: "InviteRow" }),
+                        ex,
                     ],
                 }),
             ],

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XG: "scroller_fb04e1",
     rf: "body_fb04e1",

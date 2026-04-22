@@ -1,58 +1,63 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(955382),
-    a = n(985018),
-    r = n(578673),
-    o = n(906471);
-function c(e) {
-    let { icon: t, title: n, description: s, onClick: a } = e;
-    return (0, i.jsx)(l.vN3, {
+var l = n(187322),
+    s = n(834730),
+    a = n(998445),
+    r = n(836480),
+    o = n(283973),
+    c = n(664121),
+    d = n(955382),
+    u = n(985018),
+    p = n(578673),
+    m = n(906471);
+function x(e) {
+    let { icon: t, title: n, description: a, onClick: r } = e;
+    return (0, i.jsx)(l.vN, {
         children: (0, i.jsxs)("button", {
-            className: r.we,
-            onClick: a,
+            className: p.we,
+            onClick: r,
             children: [
-                (0, i.jsx)("div", { className: r.XM, children: (0, i.jsx)(t, { size: "md", color: "currentColor" }) }),
+                (0, i.jsx)("div", { className: p.XM, children: (0, i.jsx)(t, { size: "md", color: "currentColor" }) }),
                 (0, i.jsxs)("div", {
-                    className: r.ht,
+                    className: p.ht,
                     children: [
-                        (0, i.jsx)(l.Text, { variant: "text-md/semibold", children: n }),
-                        (0, i.jsx)(l.Text, { variant: "text-sm/normal", color: "text-subtle", children: s }),
+                        (0, i.jsx)(s.E, { variant: "text-md/semibold", children: n }),
+                        (0, i.jsx)(s.E, { variant: "text-sm/normal", color: "text-subtle", children: a }),
                     ],
                 }),
-                (0, i.jsx)("img", { className: r.$O, alt: "", src: o }),
+                (0, i.jsx)("img", { className: p.$O, alt: "", src: m }),
             ],
         }),
     });
 }
-function d(e) {
-    let { onSelectOption: t, onExplore: n, onCreateServer: r } = e;
+function g(e) {
+    let { onSelectOption: t, onExplore: n, onCreateServer: l } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c, {
-                icon: l.L_e,
-                title: a.intl.string(a.t.riOUtB),
-                description: a.intl.string(a.t["5u0zvP"]),
-                onClick: () => t(s.Z.JOIN_SERVER),
+            (0, i.jsx)(x, {
+                icon: a.L,
+                title: u.intl.string(u.t.riOUtB),
+                description: u.intl.string(u.t["5u0zvP"]),
+                onClick: () => t(d.Z.JOIN_SERVER),
             }),
-            (0, i.jsx)(c, {
-                icon: l.QGJ,
-                title: a.intl.string(a.t.gHNiza),
-                description: a.intl.string(a.t.v7xiEA),
+            (0, i.jsx)(x, {
+                icon: r.Q,
+                title: u.intl.string(u.t.gHNiza),
+                description: u.intl.string(u.t.v7xiEA),
                 onClick: n,
             }),
-            (0, i.jsx)(c, {
-                icon: l.Rvf,
-                title: a.intl.string(a.t.w5uwoI),
-                description: a.intl.string(a.t.bgoxKS),
-                onClick: () => t(s.Z.ADD_FRIEND),
+            (0, i.jsx)(x, {
+                icon: o.R,
+                title: u.intl.string(u.t.w5uwoI),
+                description: u.intl.string(u.t.bgoxKS),
+                onClick: () => t(d.Z.ADD_FRIEND),
             }),
-            (0, i.jsx)(c, {
-                icon: l.RR9,
-                title: a.intl.string(a.t.ZLfEo8),
-                description: a.intl.string(a.t.z7OAvN),
-                onClick: r,
+            (0, i.jsx)(x, {
+                icon: c.R,
+                title: u.intl.string(u.t.ZLfEo8),
+                description: u.intl.string(u.t.z7OAvN),
+                onClick: l,
             }),
         ],
     });

@@ -1,16 +1,16 @@
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var l = n(397927),
-    s = n(387755),
-    a = n(709562),
-    r = n(985018);
+t.d(n, { A: () => o });
+var l = t(627968);
+t(64700);
+var i = t(789645),
+    a = t(387755),
+    s = t(709562),
+    r = t(985018);
 function o(e) {
-    let { channel: t, ...n } = e;
-    return (0, i.jsx)(a.l, {
-        ...n,
-        iconComponent: l.PGe,
+    let { channel: n, ...t } = e;
+    return (0, l.jsx)(s.l, {
+        ...t,
+        iconComponent: i.P,
         label: r.intl.string(r.t.WAI6xu),
-        onClick: () => s.A.stopRinging(t.id),
+        onClick: () => a.A.stopRinging(n.id),
     });
 }

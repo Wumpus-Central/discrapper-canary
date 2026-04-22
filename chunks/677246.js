@@ -1,33 +1,19 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n) {
-        return e + " " + i({ mm: "munutenn", MM: "miz", dd: "devezh" }[n], e);
+        var r, i, s;
+        return (
+            e +
+            " " +
+            ((r = { mm: "munutenn", MM: "miz", dd: "devezh" }[n]),
+            2 === e
+                ? void 0 === (s = { m: "v", b: "v", d: "z" })[(i = r).charAt(0)]
+                    ? i
+                    : s[i.charAt(0)] + i.substring(1)
+                : r)
+        );
     }
-    function n(e) {
-        switch (r(e)) {
-            case 1:
-            case 3:
-            case 4:
-            case 5:
-            case 9:
-                return e + " bloaz";
-            default:
-                return e + " vloaz";
-        }
-    }
-    function r(e) {
-        return e > 9 ? r(e % 10) : e;
-    }
-    function i(e, t) {
-        return 2 === t ? s(e) : e;
-    }
-    function s(e) {
-        var t = { m: "v", b: "v", d: "z" };
-        return void 0 === t[e.charAt(0)] ? e : t[e.charAt(0)] + e.substring(1);
-    }
-    return e.defineLocale("br", {
+    e.defineLocale("br", {
         months: "Genver_C'hwevrer_Meurzh_Ebrel_Mae_Mezheven_Gouere_Eost_Gwengolo_Here_Du_Kerzu".split("_"),
         monthsShort: "Gen_C'hwe_Meu_Ebr_Mae_Eve_Gou_Eos_Gwe_Her_Du_Ker".split("_"),
         weekdays: "Sul_Lun_Meurzh_Merc'her_Yaou_Gwener_Sadorn".split("_"),
@@ -64,13 +50,27 @@
             M: "ur miz",
             MM: t,
             y: "ur bloaz",
-            yy: n,
+            yy: function (e) {
+                switch (
+                    (function e(t) {
+                        return t > 9 ? e(t % 10) : t;
+                    })(e)
+                ) {
+                    case 1:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 9:
+                        return e + " bloaz";
+                    default:
+                        return e + " vloaz";
+                }
+            },
         },
         dayOfMonthOrdinalParse: /\d{1,2}(añ|vet)/,
         ordinal: function (e) {
-            var t = 1 === e ? "a\xf1" : "vet";
-            return e + t;
+            return e + (1 === e ? "a\xf1" : "vet");
         },
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

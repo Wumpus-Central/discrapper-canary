@@ -1,72 +1,73 @@
-e.d(i, { A: () => o });
-var t = e(627968);
-e(64700);
-var l = e(503698),
-    s = e.n(l),
-    r = e(187322),
-    a = e(158954),
-    d = e(581444),
-    u = e(671816);
-function o(n) {
+i.d(e, { A: () => c });
+var t = i(627968);
+i(64700);
+var l = i(503698),
+    s = i.n(l),
+    r = i(187322),
+    a = i(638916),
+    d = i(834730),
+    u = i(667055),
+    o = i(693217);
+function c(n) {
     let {
-        title: i,
-        description: e,
+        title: e,
+        description: i,
         headerImage: l,
-        onDetails: o,
-        onPurchase: c,
-        PurchaseButton: m,
-        GiftButton: p,
+        onDetails: c,
+        onPurchase: m,
+        PurchaseButton: p,
+        GiftButton: h,
         availabilityLabel: x,
     } = n;
     return (0, t.jsx)(r.vN, {
         children: (0, t.jsxs)("div", {
-            className: s()(d.iE, u.t),
+            className: s()(u.iE, o.t),
             tabIndex: 0,
             onClick: () => {
-                null != o ? o() : null != c && c();
+                null != c ? c() : null != m && m();
             },
             onKeyUp: (n) => {
-                "Enter" === n.key && (n.stopPropagation(), n.preventDefault(), null != o ? o() : null != c && c());
+                "Enter" === n.key && (n.stopPropagation(), n.preventDefault(), null != c ? c() : null != m && m());
             },
             children: [
                 (0, t.jsx)("div", {
-                    className: d.Td,
+                    className: u.Td,
                     style: null != l ? { backgroundImage: null != l ? `url(${l.toString()})` : void 0 } : void 0,
-                    children: null == l && (0, t.jsx)(a.qyI, { color: "white", size: "custom", height: 80, width: 80 }),
+                    children: null == l && (0, t.jsx)(a.q, { color: "white", size: "custom", height: 80, width: 80 }),
                 }),
                 (0, t.jsxs)("div", {
-                    className: d.zH,
+                    className: u.zH,
                     children: [
-                        (0, t.jsx)(a.EYj, { color: "text-strong", variant: "text-md/semibold", children: i }),
-                        null != e &&
-                            (0, t.jsx)(a.EYj, {
-                                className: d.h_,
+                        (0, t.jsx)(d.E, { color: "text-strong", variant: "text-md/semibold", children: e }),
+                        null != i &&
+                            (0, t.jsx)(d.E, {
+                                className: u.h_,
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                children: e,
+                                children: i,
                             }),
                     ],
                 }),
-                (null != m || null != p) &&
+                (null != p || null != h) &&
                     (0, t.jsxs)("div", {
-                        className: d.qr,
+                        className: u.qr,
                         children: [
-                            null != m &&
-                                (0, t.jsx)(a.EYj, {
+                            null != p &&
+                                (0, t.jsx)(d.E, {
                                     color: "interactive-text-default",
                                     variant: "text-sm/normal",
                                     children: x,
                                 }),
                             (0, t.jsxs)("div", {
-                                className: d.GC,
+                                className: u.GC,
                                 children: [
-                                    null != m &&
-                                        (0, t.jsx)(m, {
+                                    null != p &&
+                                        (0, t.jsx)(p, {
                                             onClick: (n) => {
-                                                n.stopPropagation(), c?.();
+                                                n.stopPropagation(), m?.();
                                             },
                                         }),
-                                    null != p && (0, t.jsx)(p, {}),
+                                    null != h && (0, t.jsx)(h, {}),
                                 ],
                             }),
                         ],

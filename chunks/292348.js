@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { OW: () => c, YK: () => l, dm: () => d, eM: () => o, ly: () => _ });
+n.d(t, { OW: () => u, YK: () => l, dm: () => d, eM: () => o, ly: () => c });
 var r = n(565150),
     i = n(762555),
     s = n(381941);
@@ -22,35 +22,34 @@ let a = [
     o = 524288e3,
     l = 500;
 function u(e) {
-    let { spoiler: t } = e;
-    return t ? s._W : "";
-}
-function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
-        s = { id: t?.toString() ?? e.id };
-    null != e.description && (s.description = e.description);
-    let a = u({ spoiler: e.spoiler });
+        a = { id: t?.toString() ?? e.id };
+    null != e.description && (a.description = e.description);
+    let o = (function (e) {
+        let { spoiler: t } = e;
+        return t ? s._W : "";
+    })({ spoiler: e.spoiler });
     return (
-        (s.filename = `${a}${n ?? e.filename}`),
-        (s.uploaded_filename = e.uploadedFilename),
-        "durationSecs" in e && null != e.durationSecs && (s.duration_secs = e.durationSecs),
-        "waveform" in e && null != e.waveform && (s.waveform = e.waveform),
-        "isThumbnail" in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail),
+        (a.filename = `${o}${n ?? e.filename}`),
+        (a.uploaded_filename = e.uploadedFilename),
+        "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs),
+        "waveform" in e && null != e.waveform && (a.waveform = e.waveform),
+        "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail),
         "clip" in e &&
             null != e.clip &&
-            ((s.is_clip = !0),
-            (s.title = e.clip.name),
-            (s.application_id = e.clip.applicationId),
-            (s.clip_created_at = (0, i.U)(e.clip.createdAt)),
-            (s.clip_participant_ids = (0, i.g)(e.clip.users))),
+            ((a.is_clip = !0),
+            (a.title = e.clip.name),
+            (a.application_id = e.clip.applicationId),
+            (a.clip_created_at = (0, i.U)(e.clip.createdAt)),
+            (a.clip_participant_ids = (0, i.g)(e.clip.users))),
         "item" in e &&
             null != e.item &&
             e.item.platform === r.xz.WEB &&
             "mimeType" in e &&
             null != e.mimeType &&
-            (s.original_content_type = e.mimeType),
-        s
+            (a.original_content_type = e.mimeType),
+        a
     );
 }
 function d(e) {
@@ -65,7 +64,7 @@ function d(e) {
             t.send();
     });
 }
-function _(e) {
+function c(e) {
     let t,
         { uri: n, i: r, overrideFilename: i, overrideType: s } = e,
         o = n.split("/"),

@@ -1,37 +1,37 @@
-n.d(t, { r: () => s });
-var i = n(627968);
-n(64700);
-var l = n(442433);
-function s(e, t, s, a, r) {
-    let o = s.getGuildId();
+t.d(n, { r: () => a });
+var l = t(627968);
+t(64700);
+var i = t(442433);
+function a(e, n, a, s, r) {
+    let o = a.getGuildId();
     return null != o
-        ? (0, l.L3)(
+        ? (0, i.L3)(
               e,
               async () => {
-                  let { default: e } = await n.e("52502").then(n.bind(n, 335253));
-                  return (n) =>
-                      (0, i.jsx)(e, {
-                          ...n,
-                          user: t,
-                          channel: s,
+                  let { default: e } = await Promise.all([t.e("43076"), t.e("14058")]).then(t.bind(t, 335253));
+                  return (t) =>
+                      (0, l.jsx)(e, {
+                          ...t,
+                          user: n,
+                          channel: a,
                           guildId: o,
                           onInteraction: (e) => r("GuildVoiceUserContextMenu", e),
                       });
               },
-              a,
+              s,
           )
-        : (0, l.L3)(
+        : (0, i.L3)(
               e,
               async () => {
-                  let { default: e } = await n.e("43076").then(n.bind(n, 661455));
-                  return (n) =>
-                      (0, i.jsx)(e, {
-                          ...n,
-                          user: t,
-                          channel: s,
+                  let { default: e } = await Promise.all([t.e("43076"), t.e("2062")]).then(t.bind(t, 661455));
+                  return (t) =>
+                      (0, l.jsx)(e, {
+                          ...t,
+                          user: n,
+                          channel: a,
                           onInteraction: (e) => r("BaseVoiceUserContextMenu", e),
                       });
               },
-              a,
+              s,
           );
 }

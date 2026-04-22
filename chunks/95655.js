@@ -1,51 +1,56 @@
-n.d(t, { n: () => f });
+n.d(t, { n: () => b });
 var i = n(627968),
     l = n(64700),
     s = n(990078),
-    a = n(397927),
-    r = n(442433),
-    o = n(793574),
-    d = n(47167),
-    c = n(598104),
-    u = n(73028),
-    h = n(665691),
-    A = n(954571),
-    _ = n(652215),
-    m = n(985018),
-    g = n(917328);
-let p = (e) => {
+    a = n(254138),
+    r = n(827734),
+    o = n(939249),
+    d = n(778712),
+    c = n(834730),
+    u = n(22231),
+    h = n(442433),
+    A = n(793574),
+    _ = n(47167),
+    m = n(598104),
+    g = n(73028),
+    p = n(665691),
+    f = n(954571),
+    E = n(652215),
+    x = n(985018),
+    I = n(762432);
+let C = (e) => {
         let { channel: t } = e;
-        return (0, h.bG)({ channelId: t.id })
+        return (0, p.bG)({ channelId: t.id })
             ? (0, i.jsx)(s.m, {
-                  text: m.intl.string(m.t.QyZ4Td),
-                  children: (0, i.jsx)(a.m5V, {
+                  text: x.intl.string(x.t.QyZ4Td),
+                  children: (0, i.jsx)(a.m, {
                       size: "xs",
-                      "aria-label": m.intl.string(m.t.VHXh8a),
-                      color: a.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
+                      "aria-label": x.intl.string(x.t.VHXh8a),
+                      color: r.A.colors.INTERACTIVE_TEXT_DEFAULT,
                   }),
               })
             : null;
     },
-    f = l.memo(function (e) {
+    b = l.memo(function (e) {
         let { channel: t } = e,
             l = t.id,
-            h = (0, d.Ay)(t);
+            a = (0, _.Ay)(t);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.m, {
                     asContainer: !0,
-                    text: m.intl.string(m.t["5Q9+/L"]),
+                    text: x.intl.string(x.t["5Q9+/L"]),
                     position: "bottom",
-                    children: (0, i.jsxs)(a.DUT, {
-                        className: g.cD,
+                    children: (0, i.jsxs)(o.D, {
+                        className: I.cD,
                         onClick: () => {
-                            (0, u.U)(l, o.A.HEADER_BAR);
+                            (0, g.U)(l, A.A.HEADER_BAR);
                         },
                         onContextMenu: (e) =>
-                            (0, r.L3)(
+                            (0, h.L3)(
                                 e,
                                 () =>
-                                    Promise.all([n.e("97262"), n.e("60200"), n.e("21969")])
+                                    Promise.all([n.e("97262"), n.e("95834"), n.e("60200")])
                                         .then(n.bind(n, 4027))
                                         .then((e) => {
                                             let { default: n } = e;
@@ -55,27 +60,27 @@ let p = (e) => {
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
-                            A.default.track(_.HAw.GDM_EDIT_INTERACTED, {
+                            f.default.track(E.HAw.GDM_EDIT_INTERACTED, {
                                 channel_id: t.id,
                                 action: "entry_point_hovered",
-                                location: o.A.HEADER_BAR,
+                                location: A.A.HEADER_BAR,
                             });
                         },
-                        "aria-label": m.intl.string(m.t["5Q9+/L"]),
+                        "aria-label": x.intl.string(x.t["5Q9+/L"]),
                         children: [
-                            (0, i.jsx)(c.A, {
-                                className: g.gn,
+                            (0, i.jsx)(m.A, {
+                                className: I.gn,
                                 "aria-hidden": !0,
                                 channel: t,
-                                size: a._3J.SIZE_20,
-                                facepileSizeOverride: a._3J.SIZE_24,
+                                size: d._3.SIZE_20,
+                                facepileSizeOverride: d._3.SIZE_24,
                             }),
-                            (0, i.jsx)(a.Text, { variant: "text-md/medium", color: "text-strong", children: h ?? "" }),
-                            (0, i.jsx)(a.R2l, { className: g.IZ, size: "xs", color: "currentColor" }),
+                            (0, i.jsx)(c.E, { variant: "text-md/medium", color: "text-strong", children: a ?? "" }),
+                            (0, i.jsx)(u.R, { className: I.IZ, size: "xs", color: "currentColor" }),
                         ],
                     }),
                 }),
-                (0, i.jsx)(p, { channel: t }),
+                (0, i.jsx)(C, { channel: t }),
             ],
         });
     });

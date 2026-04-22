@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => L }), n(321073);
+n.d(t, { A: () => A }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(198982),
-    s = n(141468),
+    s = n(198982),
+    a = n(141468),
     o = n(815807),
     l = n(961350),
     u = n(994500);
-class c {
+class d {
     isIndexing = !1;
     isHistoricalIndexing = !1;
     isFetching = !1;
@@ -34,19 +34,19 @@ class c {
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
             (this.isHistoricalIndexing = !1),
-            (this.error = new a.LG(e)),
+            (this.error = new s.LG(e)),
             (this.analyticsId = null),
             (this.documentsIndexed = 0);
     }
     handleSearchSuccess(e, t) {
-        let { analyticsId: n, cursor: r, totalResults: i, doingHistoricalIndex: a, documentsIndexed: s } = e;
+        let { analyticsId: n, cursor: r, totalResults: i, doingHistoricalIndex: s, documentsIndexed: a } = e;
         (this.analyticsId = n),
             (this.isFetching = !1),
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
-            (this.isHistoricalIndexing = a),
+            (this.isHistoricalIndexing = s),
             (this.error = null),
-            (this.documentsIndexed = s),
+            (this.documentsIndexed = a),
             (this.cursor = r);
         let o = [...(this.messages ?? [])],
             l = [];
@@ -60,100 +60,32 @@ class c {
         );
     }
 }
-let d = new Map(),
+let c = new Map(),
     _ = new Map(),
     f = new Map();
-function p(e) {
-    return d.get(e) ?? new c();
+function E(e) {
+    return c.get(e) ?? new d();
 }
 function h(e) {
-    let t = p(e);
-    return d.set(e, t), t;
+    let t = E(e);
+    return c.set(e, t), t;
 }
-function m(e, t) {
+function p(e, t) {
     let n = _.get(e);
     if (null == n) return !1;
     let r = t(n);
     return _.set(e, r), !0;
 }
-function g(e, t) {
-    return t(p(e));
-}
-function E() {
-    (d = new Map()), (_ = new Map()), (f = new Map());
-}
-function A(e) {
-    e.ids.forEach((e) => {
-        h(e).handleSearchStart();
-    });
-}
-function I(e) {
-    e.data.forEach((e) => {
-        let t = h(e.id),
-            n = e.messages.map((e) => {
-                let [t] = e;
-                return (0, s.rh)(t);
-            });
-        t.handleSearchSuccess(e, n).forEach((e) => {
-            _.set(e.id, e);
-            let t = f.get(e.id) ?? 0;
-            f.set(e.id, t + 1);
-        });
-    });
-}
-function T(e) {
-    let t = e.message.id;
-    if (null == t) return !1;
-    let n = _.get(t);
-    if (null == n) return !1;
-    let r = (0, s.IU)(n, e.message);
-    _.set(t, r);
-}
-function y(e) {
+function m(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
     if (!(0, o.vp)(e)) return !1;
-    let a = l.default.getId() === r;
-    return m(n, (n) => {
+    let s = l.default.getId() === r;
+    return p(n, (n) => {
         let { reactionType: r } = e;
-        return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, a, e.colors, r) : n.removeReaction(i, a, r);
+        return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, s, e.colors, r) : n.removeReaction(i, s, r);
     });
 }
-function S(e) {
-    let { messageId: t, reactions: n } = e,
-        r = l.default.getId();
-    return m(t, (e) => e.addReactionBatch(n, r));
-}
-function v(e) {
-    let { messageId: t } = e;
-    return m(t, (e) => e.set("reactions", []));
-}
-function C(e) {
-    let { messageId: t, emoji: n } = e;
-    return m(t, (e) => e.removeReactionsForEmoji(n));
-}
-function b(e) {
-    e.ids.forEach((e) => {
-        h(e).handleSearchIndexing();
-    });
-}
-function N(e) {
-    e.ids.forEach((t) => {
-        h(t).handleSearchFailure(e.error);
-    });
-}
-function R(e) {
-    let t = d.get(e.id);
-    if (null == t) return !1;
-    t.messageIds.forEach((e) => {
-        let t = f.get(e) ?? 0;
-        t <= 1 ? (_.delete(e), f.delete(e)) : f.set(e, t - 1);
-    }),
-        d.delete(e.id);
-}
-function O(e) {
-    (d = new Map()), (_ = new Map()), (f = new Map());
-}
-class D extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "SearchMessageStore";
     initialize() {
         this.waitFor(l.default, u.A);
@@ -162,51 +94,105 @@ class D extends r.Ay.Store {
         return _.get(e);
     }
     getTotalCount(e) {
-        return g(e, (e) => e.totalResults);
+        return E(e).totalResults;
     }
     getIsInitialFetchComplete(e) {
-        return g(e, (e) => e.isInitialFetchComplete);
+        return E(e).isInitialFetchComplete;
     }
     getIsIndexing(e) {
-        return g(e, (e) => e.isIndexing);
+        return E(e).isIndexing;
     }
     getIsHistoricalIndexing(e) {
-        return g(e, (e) => e.isHistoricalIndexing);
+        return E(e).isHistoricalIndexing;
     }
     getDocumentsIndexed(e) {
-        return g(e, (e) => e.documentsIndexed);
+        return E(e).documentsIndexed;
     }
     getIsFetching(e) {
-        return g(e, (e) => e.isFetching);
+        return E(e).isFetching;
     }
     getError(e) {
-        return g(e, (e) => e.error);
+        return E(e).error;
     }
     getMessages(e) {
-        return g(e, (e) => e.messages);
+        return E(e).messages;
     }
     getCursor(e) {
-        return g(e, (e) => e.cursor);
+        return E(e).cursor;
     }
     getAnalyticsId(e) {
-        return g(e, (e) => e.analyticsId);
+        return E(e).analyticsId;
     }
     hasSearchState(e) {
-        return d.has(e);
+        return c.has(e);
     }
 }
-let L = new D(i.h, {
-    SEARCH_MESSAGES_START: A,
-    SEARCH_MESSAGES_SUCCESS: I,
-    SEARCH_MESSAGES_INDEXING: b,
-    SEARCH_MESSAGES_FAILURE: N,
-    SEARCH_MESSAGES_CLEAR: R,
-    SEARCH_MESSAGES_CLEAR_ALL: O,
-    MESSAGE_UPDATE: T,
-    MESSAGE_REACTION_ADD: y,
-    MESSAGE_REACTION_ADD_MANY: S,
-    MESSAGE_REACTION_REMOVE: y,
-    MESSAGE_REACTION_REMOVE_ALL: v,
-    MESSAGE_REACTION_REMOVE_EMOJI: C,
-    CONNECTION_OPEN: E,
+let A = new g(i.h, {
+    SEARCH_MESSAGES_START: function (e) {
+        e.ids.forEach((e) => {
+            h(e).handleSearchStart();
+        });
+    },
+    SEARCH_MESSAGES_SUCCESS: function (e) {
+        e.data.forEach((e) => {
+            let t = h(e.id),
+                n = e.messages.map((e) => {
+                    let [t] = e;
+                    return (0, a.rh)(t);
+                });
+            t.handleSearchSuccess(e, n).forEach((e) => {
+                _.set(e.id, e);
+                let t = f.get(e.id) ?? 0;
+                f.set(e.id, t + 1);
+            });
+        });
+    },
+    SEARCH_MESSAGES_INDEXING: function (e) {
+        e.ids.forEach((e) => {
+            h(e).handleSearchIndexing();
+        });
+    },
+    SEARCH_MESSAGES_FAILURE: function (e) {
+        e.ids.forEach((t) => {
+            h(t).handleSearchFailure(e.error);
+        });
+    },
+    SEARCH_MESSAGES_CLEAR: function (e) {
+        let t = c.get(e.id);
+        if (null == t) return !1;
+        t.messageIds.forEach((e) => {
+            let t = f.get(e) ?? 0;
+            t <= 1 ? (_.delete(e), f.delete(e)) : f.set(e, t - 1);
+        }),
+            c.delete(e.id);
+    },
+    SEARCH_MESSAGES_CLEAR_ALL: function (e) {
+        (c = new Map()), (_ = new Map()), (f = new Map());
+    },
+    MESSAGE_UPDATE: function (e) {
+        let t = e.message.id;
+        if (null == t) return !1;
+        let n = _.get(t);
+        if (null == n) return !1;
+        let r = (0, a.IU)(n, e.message);
+        _.set(t, r);
+    },
+    MESSAGE_REACTION_ADD: m,
+    MESSAGE_REACTION_ADD_MANY: function (e) {
+        let { messageId: t, reactions: n } = e,
+            r = l.default.getId();
+        return p(t, (e) => e.addReactionBatch(n, r));
+    },
+    MESSAGE_REACTION_REMOVE: m,
+    MESSAGE_REACTION_REMOVE_ALL: function (e) {
+        let { messageId: t } = e;
+        return p(t, (e) => e.set("reactions", []));
+    },
+    MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
+        let { messageId: t, emoji: n } = e;
+        return p(t, (e) => e.removeReactionsForEmoji(n));
+    },
+    CONNECTION_OPEN: function () {
+        (c = new Map()), (_ = new Map()), (f = new Map());
+    },
 });

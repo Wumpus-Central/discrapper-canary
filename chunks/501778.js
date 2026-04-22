@@ -1,14 +1,13 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.VideoTypes = void 0);
-class n {}
-(t.VideoTypes = n),
-    (n.AVI = {
+class i {}
+(t.VideoTypes = i),
+    (i.AVI = {
         extension: "avi",
         mimeType: "video/x-msvideo",
         description: "Audio Video Interleave video format",
         signatures: [{ sequence: [82, 73, 70, 70, 65, 86, 73, 32, 76, 73, 83, 84], skippedBytes: [4, 5, 6, 7] }],
     }),
-    (n.FLV = {
+    (i.FLV = {
         extension: "flv",
         mimeType: "video/x-flv",
         description: "Flash Video file",
@@ -22,7 +21,7 @@ class n {}
             },
         ],
     }),
-    (n.M4V = {
+    (i.M4V = {
         extension: "m4v",
         mimeType: "video/x-m4v",
         description: "Apple's video container format, very similar to MP4",
@@ -41,7 +40,7 @@ class n {}
             },
         ],
     }),
-    (n.MKV = {
+    (i.MKV = {
         extension: "mkv",
         mimeType: "video/x-matroska",
         description:
@@ -54,7 +53,7 @@ class n {}
             },
         ],
     }),
-    (n.MOV = {
+    (i.MOV = {
         extension: "mov",
         mimeType: "video/quicktime",
         description: "QuickTime movie file",
@@ -63,7 +62,7 @@ class n {}
             { sequence: [109, 111, 111, 118], offset: 4 },
         ],
     }),
-    (n.MP4 = {
+    (i.MP4 = {
         extension: "mp4",
         mimeType: "video/mp4",
         description:
@@ -83,7 +82,7 @@ class n {}
             },
         ],
     }),
-    (n.OGG = {
+    (i.OGG = {
         extension: "ogg",
         mimeType: "video/ogg",
         description: "Ogg Vorbis Codec compressed Multimedia file",
@@ -91,7 +90,7 @@ class n {}
             { sequence: [79, 103, 103, 83, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0], compatibleExtensions: ["oga", "ogv", "ogx"] },
         ],
     }),
-    (n.SWF = {
+    (i.SWF = {
         extension: "swf",
         mimeType: "application/x-shockwave-flash",
         description:
@@ -105,7 +104,7 @@ class n {}
             { sequence: [90, 87, 83], description: "Macromedia Shockwave Flash player file (uncompressed)" },
         ],
     }),
-    (n.WEBM = {
+    (i.WEBM = {
         extension: "webm",
         mimeType: "video/webm",
         description:

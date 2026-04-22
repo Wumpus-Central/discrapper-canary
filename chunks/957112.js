@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table__16462",
     CZ: "tableContainer__16462",

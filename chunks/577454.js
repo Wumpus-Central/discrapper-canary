@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     $6: "attributionBannerContainer__7b5f3",
     H: "avatarContainer__7b5f3",

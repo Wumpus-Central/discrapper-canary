@@ -1,17 +1,17 @@
-"use strict";
-n.d(t, { D: () => o });
-var r = n(627968);
-n(64700);
-var i = n(934551),
-    a = n(460890),
-    s = n(657718);
+a.d(t, { D: () => o });
+var n = a(627968);
+a(64700);
+var r = a(113494),
+    l = a(782134),
+    i = a(460890),
+    s = a(657718);
 function o(e) {
-    let { "aria-label": t, playing: n, ...o } = e,
-        { i18n: l } = (0, a.G9)();
-    return (0, r.jsx)(s.S, {
+    let { "aria-label": t, playing: a, ...o } = e,
+        { i18n: c } = (0, i.G9)();
+    return (0, n.jsx)(s.S, {
         ...o,
-        "aria-label": t ?? (n ? l.PAUSE_BUTTON_LABEL : l.PLAY_BUTTON_LABEL),
-        icon: n ? i.PauseIcon : i.PlayIcon,
+        "aria-label": t ?? (a ? c.PAUSE_BUTTON_LABEL : c.PLAY_BUTTON_LABEL),
+        icon: a ? r.E : l.u,
         variant: "overlay-secondary",
         fullWidth: !1,
         rounded: !0,

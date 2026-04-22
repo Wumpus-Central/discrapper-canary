@@ -1,397 +1,409 @@
-t.d(e, { default: () => J });
-var n = t(627968),
-    a = t(64700),
+t.d(e, { default: () => Ao });
+var a = t(627968),
+    n = t(64700),
     r = t(503698),
-    i = t.n(r),
-    l = t(284009),
-    s = t.n(l),
+    l = t.n(r),
+    i = t(284009),
+    s = t.n(i),
     o = t(417597),
     d = t(827734),
-    u = t(73939),
-    c = t(36525),
+    c = t(73939),
+    u = t(36525),
     g = t(314116),
-    q = t(397927),
-    p = t(686956),
-    f = t(262828),
-    m = t(915089),
-    h = t(722888),
-    C = t(809506),
-    v = t(465932),
-    U = t(2553),
-    V = t(253932),
-    x = t(317525),
-    b = t(580630),
-    j = t(371794),
-    K = t(218394),
-    N = t(464990),
-    F = t(871109),
-    T = t(253141),
-    I = t(937409),
-    X = t(500770),
-    W = t(563838),
-    P = t(426043),
-    Q = t(575077),
-    Z = t(692646),
-    z = t(184119),
-    O = t(717040),
-    L = t(319543),
-    S = t(500208),
-    R = t(652215),
-    G = t(705751),
-    y = t(985018),
-    k = t(933354);
-let D = (0, m.Ld)(),
-    B = (0, m.Ld)(),
-    E = (0, m.Ld)();
-function Y(A) {
-    let { text: e, onChange: t, value: a, disabled: r, warning: l } = A,
-        s = (0, m.GV)(),
+    h = t(834730),
+    p = t(696986),
+    f = t(243721),
+    m = t(783878),
+    q = t(871682),
+    v = t(628284),
+    C = t(192308),
+    x = t(935462),
+    U = t(534514),
+    V = t(573613),
+    b = t(292666),
+    j = t(452027),
+    N = t(821609),
+    I = t(686956),
+    T = t(262828),
+    F = t(915089),
+    K = t(722888),
+    X = t(809506),
+    P = t(465932),
+    W = t(2553),
+    Q = t(253932),
+    Z = t(317525),
+    z = t(580630),
+    L = t(371794),
+    O = t(218394),
+    S = t(464990),
+    y = t(871109),
+    R = t(253141),
+    E = t(937409),
+    D = t(500770),
+    k = t(563838),
+    G = t(426043),
+    B = t(575077),
+    w = t(692646),
+    Y = t(184119),
+    H = t(717040),
+    M = t(319543),
+    J = t(500208),
+    _ = t(652215),
+    $ = t(705751),
+    AA = t(985018),
+    Ae = t(350138);
+let At = (0, F.Ld)(),
+    Aa = (0, F.Ld)(),
+    An = (0, F.Ld)();
+function Ar(A) {
+    let { text: e, onChange: t, value: n, disabled: r, warning: i } = A,
+        s = (0, F.GV)(),
         o = r ? "text-muted" : "text-default";
-    return (0, n.jsxs)("label", {
-        className: i()(k.$4, { [k.r9]: r }),
+    return (0, a.jsxs)("label", {
+        className: l()(Ae.$4, { [Ae.r9]: r }),
         htmlFor: s,
         children: [
-            (0, n.jsx)(q.Text, { variant: "text-sm/medium", color: o, children: e }),
-            null != l && (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(q.hKd, { size: 4, horizontal: !0 }), l] }),
-            (0, n.jsx)(q.dOG, { onChange: t, checked: a, disabled: r, id: s }),
+            (0, a.jsx)(h.E, { variant: "text-sm/medium", color: o, children: e }),
+            null != i && (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(p.h, { size: 4, horizontal: !0 }), i] }),
+            (0, a.jsx)(f.d, { onChange: t, checked: n, disabled: r, id: s }),
         ],
     });
 }
-function w(A, e) {
+function Al(A, e) {
     return A.filter((A) => {
-        let { value: t, label: n } = A;
-        return t.toString().includes(e) || n.includes(e);
+        let { value: t, label: a } = A;
+        return t.toString().includes(e) || a.includes(e);
     });
 }
-function H(A) {
-    let { guildId: e, selectedPriceTier: t, setPriceTier: r, label: i, errorMessage: l } = A,
-        { priceTiers: s } = (0, h._)(e, R.L_o.GUILD_PRODUCTS),
-        o = a.useMemo(
+function Ai(A) {
+    let { guildId: e, selectedPriceTier: t, setPriceTier: r, label: l, errorMessage: i } = A,
+        { priceTiers: s } = (0, K._)(e, _.L_o.GUILD_PRODUCTS),
+        o = n.useMemo(
             () =>
                 (s ?? (null != t ? [t] : [])).map((A) => ({
                     id: A.toString(),
                     value: A,
-                    label: (0, b.$g)(A, R.Yri.USD),
+                    label: (0, z.$g)(A, _.Yri.USD),
                 })),
             [s, t],
         );
-    return (0, n.jsx)(q.ZiE, {
+    return (0, a.jsx)(m.Z, {
         selectionMode: "single",
-        label: i,
-        errorMessage: l,
+        label: l,
+        errorMessage: i,
         value: t,
-        placeholder: y.intl.string(y.t.aI4J5H),
+        placeholder: AA.intl.string(AA.t.aI4J5H),
         maxOptionsVisible: 5,
         options: o,
         onSelectionChange: r,
-        customMatchSorter: w,
+        customMatchSorter: Al,
         required: !0,
     });
 }
-function M(A) {
-    let { guildId: e, productId: t, transitionState: r, onClose: i } = A,
-        [l, m] = a.useState(t),
-        h = (0, o.bG)([F.A], () => (null == l ? null : F.A.getGuildProduct(l)), [l]),
-        U = (0, o.bG)([F.A], () => F.A.getGuildProductsForGuild(e, { publishedOnly: !0 }).length, [e]),
-        w = h?.published === !0,
-        { application: M } = (0, f.A)(e, G.S7.GUILD_ROLE_SUBSCRIPTIONS),
-        _ = I.D["0"],
-        $ = V.kt.useSetting(),
-        AA = (0, K.j)(),
-        Ae = a.useCallback(
+function As(A) {
+    let { guildId: e, productId: t, transitionState: r, onClose: l } = A,
+        [i, f] = n.useState(t),
+        m = (0, o.bG)([y.A], () => (null == i ? null : y.A.getGuildProduct(i)), [i]),
+        F = (0, o.bG)([y.A], () => y.A.getGuildProductsForGuild(e, { publishedOnly: !0 }).length, [e]),
+        K = m?.published === !0,
+        { application: W } = (0, T.A)(e, $.S7.GUILD_ROLE_SUBSCRIPTIONS),
+        Al = E.D["0"],
+        As = Q.kt.useSetting(),
+        Ad = (0, O.j)(),
+        Ac = n.useCallback(
             () =>
-                h?.image_asset?.application_id == null
-                    ? _.data
-                    : (0, j.YE)(h.image_asset.application_id, h.image_asset, 600, AA && $ ? void 0 : "webp"),
-            [_, h, AA, $],
+                m?.image_asset?.application_id == null
+                    ? Al.data
+                    : (0, L.YE)(m.image_asset.application_id, m.image_asset, 600, Ad && As ? void 0 : "webp"),
+            [Al, m, Ad, As],
         ),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: At } = (0, v.nq)(e);
-    a.useEffect(() => {
-        At && (i(), (0, Q.p)(y.intl.string(y.t.OLf3xn), y.t["90LBVr"]));
-    }, [At, i]);
-    let [An, Aa] = a.useState(h?.name ?? ""),
-        [Ar, Ai] = a.useState(h?.description ?? ""),
-        [Al, As] = a.useState(h?.price_tier ?? void 0),
-        [Ao, Ad] = a.useState(Ae),
-        [Au, Ac] = a.useState(h?.image_asset?.filename ?? _.name),
-        [Ag, Aq] = a.useState(!1),
-        [Ap, Af] = a.useState(),
-        Am = a.useMemo(() => (null != Al ? (0, b.$g)(Al, R.Yri.USD) : void 0), [Al]),
-        [Ah, AC] = a.useState(!0),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: Au } = (0, P.nq)(e);
+    n.useEffect(() => {
+        Au && (l(), (0, B.p)(AA.intl.string(AA.t.OLf3xn), AA.t["90LBVr"]));
+    }, [Au, l]);
+    let [Ag, Ah] = n.useState(m?.name ?? ""),
+        [Ap, Af] = n.useState(m?.description ?? ""),
+        [Am, Aq] = n.useState(m?.price_tier ?? void 0),
+        [Av, AC] = n.useState(Ac),
+        [Ax, AU] = n.useState(m?.image_asset?.filename ?? Al.name),
+        [AV, Ab] = n.useState(!1),
+        [Aj, AN] = n.useState(),
+        AI = n.useMemo(() => (null != Am ? (0, z.$g)(Am, _.Yri.USD) : void 0), [Am]),
+        [AT, AF] = n.useState(!0),
         {
-            changesSaving: Av,
-            saveError: AU,
-            saveProductWithAttachments: AV,
-            hasUnsavedAttachmentChanges: Ax,
-            cancelUnusedUploads: Ab,
-        } = (0, N.Z)(),
-        Aj = h?.attachments != null && h?.attachments.length > 0,
-        AK = AU ?? Ap,
-        AN = null != Av && "published" in Av,
-        AF = null != Av && !AN,
-        AT = h?.role_id ?? null,
-        [AI, AX] = a.useState(),
-        AW = null != AI || null != AT,
-        AP = (0, o.bG)([x.A], () => (null != AT && null !== AI ? x.A.getRole(e, AT) : (AI ?? void 0)), [AI, AT, e]),
-        AQ = "";
-    AW && Ah
-        ? (AQ = y.intl.string(y.t.ih4QMU))
-        : AW
-          ? (AQ = y.intl.string(y.t.o9xphc))
-          : Ah && (AQ = y.intl.string(y.t.DWYJua));
-    let AZ = () => {
-            AC(!1), Ab();
+            changesSaving: AK,
+            saveError: AX,
+            saveProductWithAttachments: AP,
+            hasUnsavedAttachmentChanges: AW,
+            cancelUnusedUploads: AQ,
+        } = (0, S.Z)(),
+        AZ = m?.attachments != null && m?.attachments.length > 0,
+        Az = AX ?? Aj,
+        AL = null != AK && "published" in AK,
+        AO = null != AK && !AL,
+        AS = m?.role_id ?? null,
+        [Ay, AR] = n.useState(),
+        AE = null != Ay || null != AS,
+        AD = (0, o.bG)([Z.A], () => (null != AS && null !== Ay ? Z.A.getRole(e, AS) : (Ay ?? void 0)), [Ay, AS, e]),
+        Ak = "";
+    AE && AT
+        ? (Ak = AA.intl.string(AA.t.ih4QMU))
+        : AE
+          ? (Ak = AA.intl.string(AA.t.o9xphc))
+          : AT && (Ak = AA.intl.string(AA.t.DWYJua));
+    let AG = () => {
+            AF(!1), AQ();
         },
-        [Az, AO] = a.useState(),
+        [AB, Aw] = n.useState(),
         {
-            changes: AL,
-            hasUnsavedChanges: AS,
-            canSaveForDraft: AR,
-            canSaveForPublished: AG,
-            canPublishOrUnpublish: Ay,
-        } = a.useMemo(
+            changes: AY,
+            hasUnsavedChanges: AH,
+            canSaveForDraft: AM,
+            canSaveForPublished: AJ,
+            canPublishOrUnpublish: A_,
+        } = n.useMemo(
             () =>
-                (0, T.EY)({
-                    guildProductListing: h,
-                    name: An,
-                    priceTier: Al,
-                    description: Ar,
-                    image: Ao,
-                    imageName: Au,
-                    isImageChanged: Ag,
-                    newRoleParams: AI,
-                    hasSavedAttachments: Aj,
-                    hasUnsavedAttachmentChanges: Ax,
+                (0, R.EY)({
+                    guildProductListing: m,
+                    name: Ag,
+                    priceTier: Am,
+                    description: Ap,
+                    image: Av,
+                    imageName: Ax,
+                    isImageChanged: AV,
+                    newRoleParams: Ay,
+                    hasSavedAttachments: AZ,
+                    hasUnsavedAttachmentChanges: AW,
                 }),
-            [h, An, Al, Ar, Ao, Au, Ag, AI, Aj, Ax],
+            [m, Ag, Am, Ap, Av, Ax, AV, Ay, AZ, AW],
         ),
-        Ak = a.useMemo(
+        A$ = n.useMemo(
             () =>
-                AS || null == Az || "publish" === Az || null != AK
+                AH || null == AB || "publish" === AB || null != Az
                     ? null
-                    : (0, n.jsx)(q.FQk, {
-                          className: k.Er,
-                          children: (0, n.jsx)(c.A, {
-                              message: (0, n.jsxs)("div", {
-                                  className: k.Lk,
+                    : (0, a.jsx)(q.F, {
+                          className: Ae.Er,
+                          children: (0, a.jsx)(u.A, {
+                              message: (0, a.jsxs)("div", {
+                                  className: Ae.Lk,
                                   children: [
-                                      (0, n.jsx)(q.yr3, {
+                                      (0, a.jsx)(v.y, {
                                           size: "md",
                                           color: d.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT.css,
                                           secondaryColor: d.A.colors.WHITE.css,
                                       }),
-                                      (0, n.jsx)(q.Text, {
+                                      (0, a.jsx)(h.E, {
                                           variant: "text-md/medium",
                                           children:
-                                              "draft" === Az
-                                                  ? y.intl.string(y.t["3Rv4MB"])
-                                                  : "update_publish" === Az
-                                                    ? y.intl.string(y.t["8fPiB3"])
-                                                    : y.intl.string(y.t["3LUFnI"]),
+                                              "draft" === AB
+                                                  ? AA.intl.string(AA.t["3Rv4MB"])
+                                                  : "update_publish" === AB
+                                                    ? AA.intl.string(AA.t["8fPiB3"])
+                                                    : AA.intl.string(AA.t["3LUFnI"]),
                                       }),
                                   ],
                               }),
-                              onReset: () => AO(void 0),
-                              onResetText: y.intl.string(y.t.T6QuWe),
+                              onReset: () => Aw(void 0),
+                              onResetText: AA.intl.string(AA.t.T6QuWe),
                           }),
                       }),
-            [AK, AS, Az],
+            [Az, AH, AB],
         ),
-        AD = a.useCallback(() => {
-            AS
-                ? (0, P.A)({
-                      title: y.intl.string(y.t.FVDhIW),
-                      body: y.intl.string(y.t.Hgdhwb),
-                      cta: y.intl.string(y.t["h0bti/"]),
-                      closeLabel: y.intl.string(y.t["+WYo0m"]),
+        A0 = n.useCallback(() => {
+            AH
+                ? (0, G.A)({
+                      title: AA.intl.string(AA.t.FVDhIW),
+                      body: AA.intl.string(AA.t.Hgdhwb),
+                      cta: AA.intl.string(AA.t["h0bti/"]),
+                      closeLabel: AA.intl.string(AA.t["+WYo0m"]),
                       onConfirm: () => {
-                          i();
+                          l();
                       },
                   })
-                : i();
-        }, [i, AS]);
-    a.useEffect(() => {
-        (0, q.zbz)(S.DG, (A) => (0, n.jsx)(J, { guildId: e, productId: l, ...A }), AD);
-    }, [e, AD, l]);
-    let AB = async (A) => {
-        let t = (0, T.ig)({ newRoleParams: AI });
-        if ((Af(t), null != t)) return;
-        let n = await AV(A);
-        if ((Aq(!1), null != n)) {
-            if ((null != A.name && Aa(n.name), null != A.description && Ai(n.description), null != AI)) {
-                let A = n.role_id;
-                s()(null != A, "Cannot update role without role ID"), await p.A.updateRole(e, A, AI);
+                : l();
+        }, [l, AH]);
+    n.useEffect(() => {
+        (0, C.updateModal)(J.DG, (A) => (0, a.jsx)(Ao, { guildId: e, productId: i, ...A }), A0);
+    }, [e, A0, i]);
+    let A1 = async (A) => {
+        let t = (0, R.ig)({ newRoleParams: Ay });
+        if ((AN(t), null != t)) return;
+        let a = await AP(A);
+        if ((Ab(!1), null != a)) {
+            if ((null != A.name && Ah(a.name), null != A.description && Af(a.description), null != Ay)) {
+                let A = a.role_id;
+                s()(null != A, "Cannot update role without role ID"), await I.A.updateRole(e, A, Ay);
             }
-            AX(void 0), m(n.id), "published" in A && !0 === A.published && i();
+            AR(void 0), f(a.id), "published" in A && !0 === A.published && l();
         }
     };
-    a.useEffect(() => {
-        null != AK && (0, Z.Z)(AK, e, M?.team?.id);
-    }, [AK, e, M]),
-        a.useEffect(() => {
-            AS && AO(void 0);
-        }, [AS]);
-    let AE = a.useRef(null);
-    return (0, n.jsxs)(q.EOs, {
+    n.useEffect(() => {
+        null != Az && (0, w.Z)(Az, e, W?.team?.id);
+    }, [Az, e, W]),
+        n.useEffect(() => {
+            AH && Aw(void 0);
+        }, [AH]);
+    let A9 = n.useRef(null);
+    return (0, a.jsxs)(x.EO, {
         transitionState: r,
-        size: q.rIJ.DYNAMIC,
-        className: k.CR,
-        "aria-labelledby": D,
+        size: x.rI.DYNAMIC,
+        className: Ae.CR,
+        "aria-labelledby": At,
         parentComponent: "GuildProductEditModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsxs)(q.rQ0, {
-                className: k.Hc,
+            (0, a.jsxs)(x.rQ, {
+                className: Ae.Hc,
                 separator: !1,
                 "data-migration-pending": !0,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: k.TK,
+                    (0, a.jsxs)("div", {
+                        className: Ae.TK,
                         children: [
-                            (0, n.jsx)(q.Heading, {
-                                id: D,
+                            (0, a.jsx)(U.D, {
+                                id: At,
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
-                                children: y.intl.string(y.t.DnNl1T),
+                                children: AA.intl.string(AA.t.DnNl1T),
                             }),
-                            (0, n.jsx)(q.Text, {
+                            (0, a.jsx)(h.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: y.intl.string(y.t["Tu7f+f"]),
+                                children: AA.intl.string(AA.t["Tu7f+f"]),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(q.s_y, {
-                        onClick: AD,
-                        className: k.__invalid_modalCloseButton,
+                    (0, a.jsx)(x.s_, {
+                        onClick: A0,
+                        className: Ae.__invalid_modalCloseButton,
                         "data-migration-pending": !0,
                     }),
                 ],
             }),
-            (0, n.jsxs)(q.$mQ, {
-                className: k.jE,
+            (0, a.jsxs)(x.$m, {
+                className: Ae.jE,
                 scrollbarType: "none",
                 "data-migration-pending": !0,
                 children: [
-                    (0, n.jsx)(q.IpV, {
-                        children: (0, n.jsxs)("div", {
-                            className: k.sj,
-                            ref: AE,
+                    (0, a.jsx)(V.Ip, {
+                        children: (0, a.jsxs)("div", {
+                            className: Ae.sj,
+                            ref: A9,
                             children: [
-                                (0, n.jsx)(q.ksK, {
-                                    label: y.intl.string(y.t.Hsk7xT),
-                                    error: AK?.getFirstFieldErrorMessage("name"),
-                                    value: An,
-                                    onChange: Aa,
-                                    id: B,
+                                (0, a.jsx)(b.k, {
+                                    label: AA.intl.string(AA.t.Hsk7xT),
+                                    error: Az?.getFirstFieldErrorMessage("name"),
+                                    value: Ag,
+                                    onChange: Ah,
+                                    id: Aa,
                                     maxLength: 100,
-                                    placeholder: y.intl.string(y.t["/BiYSO"]),
+                                    placeholder: AA.intl.string(AA.t["/BiYSO"]),
                                     required: !0,
                                 }),
-                                (0, n.jsx)(C.A, {
-                                    label: y.intl.string(y.t.QdKLyW),
-                                    errorMessage: AK?.getFirstFieldErrorMessage("description") ?? void 0,
-                                    id: E,
-                                    className: k.kj,
-                                    value: Ar,
-                                    onChange: Ai,
+                                (0, a.jsx)(X.A, {
+                                    label: AA.intl.string(AA.t.QdKLyW),
+                                    errorMessage: Az?.getFirstFieldErrorMessage("description") ?? void 0,
+                                    id: An,
+                                    className: Ae.kj,
+                                    value: Ap,
+                                    onChange: Af,
                                     maxLength: 1500,
-                                    placeholder: y.intl.string(y.t.BFwyum),
-                                    showCharacterCount: Ar.length > 0,
-                                    parentModalKey: S.DG,
+                                    placeholder: AA.intl.string(AA.t.BFwyum),
+                                    showCharacterCount: Ap.length > 0,
+                                    parentModalKey: J.DG,
                                     required: !0,
                                 }),
-                                (0, n.jsx)(H, {
-                                    label: y.intl.string(y.t["CAY/vh"]),
-                                    errorMessage: AK?.getFirstFieldErrorMessage("price_tier") ?? void 0,
+                                (0, a.jsx)(Ai, {
+                                    label: AA.intl.string(AA.t["CAY/vh"]),
+                                    errorMessage: Az?.getFirstFieldErrorMessage("price_tier") ?? void 0,
                                     guildId: e,
-                                    selectedPriceTier: Al,
-                                    setPriceTier: As,
+                                    selectedPriceTier: Am,
+                                    setPriceTier: Aq,
                                 }),
-                                (0, n.jsx)(q.D0$, {
-                                    label: y.intl.string(y.t.sqXj60),
-                                    errorMessage: AK?.getFirstFieldErrorMessage("image") ?? void 0,
-                                    description: y.intl.string(y.t.yOU4Vm),
-                                    children: (0, n.jsx)(z.A, {
-                                        presetImages: I.D,
-                                        radioGroupAriaLabel: y.intl.string(y.t.fKzQj0),
-                                        image: Ao,
-                                        imageName: Au,
-                                        savedImageName: h?.image_asset?.filename,
+                                (0, a.jsx)(j.D, {
+                                    label: AA.intl.string(AA.t.sqXj60),
+                                    errorMessage: Az?.getFirstFieldErrorMessage("image") ?? void 0,
+                                    description: AA.intl.string(AA.t.yOU4Vm),
+                                    children: (0, a.jsx)(Y.A, {
+                                        presetImages: E.D,
+                                        radioGroupAriaLabel: AA.intl.string(AA.t.fKzQj0),
+                                        image: Av,
+                                        imageName: Ax,
+                                        savedImageName: m?.image_asset?.filename,
                                         onChange: (A, e) => {
                                             null != A &&
-                                                (Ad(A),
-                                                Ac(e),
-                                                Aq(A.startsWith("data:") || e !== h?.image_asset?.filename));
+                                                (AC(A),
+                                                AU(e),
+                                                Ab(A.startsWith("data:") || e !== m?.image_asset?.filename));
                                         },
                                     }),
                                 }),
-                                Ah
-                                    ? (0, n.jsx)(q.D0$, {
-                                          label: y.intl.string(y.t.zLrtkN),
-                                          errorMessage: AK?.getFirstFieldErrorMessage("attachments") ?? void 0,
-                                          children: (0, n.jsx)(W.F, {
+                                AT
+                                    ? (0, a.jsx)(j.D, {
+                                          label: AA.intl.string(AA.t.zLrtkN),
+                                          errorMessage: Az?.getFirstFieldErrorMessage("attachments") ?? void 0,
+                                          children: (0, a.jsx)(k.F, {
                                               onFileAdded: () => {
-                                                  AE.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+                                                  A9.current?.scrollIntoView({ behavior: "smooth", block: "end" });
                                               },
                                           }),
                                       })
                                     : null,
-                                AW
-                                    ? (0, n.jsx)(L.Ay, {
-                                          error: AK?.getFirstFieldErrorMessage(T.a) ?? void 0,
-                                          newRoleParams: AI,
-                                          setNewRoleParams: AX,
+                                AE
+                                    ? (0, a.jsx)(M.Ay, {
+                                          error: Az?.getFirstFieldErrorMessage(R.a) ?? void 0,
+                                          newRoleParams: Ay,
+                                          setNewRoleParams: AR,
                                           guildId: e,
-                                          listingRoleId: AT,
-                                          productId: l,
+                                          listingRoleId: AS,
+                                          productId: i,
                                       })
                                     : null,
                             ],
                         }),
                     }),
-                    (0, n.jsx)("div", { className: k.cD }),
-                    (0, n.jsx)(q.IpV, {
-                        children: (0, n.jsxs)("div", {
-                            className: k.mA,
+                    (0, a.jsx)("div", { className: Ae.cD }),
+                    (0, a.jsx)(V.Ip, {
+                        children: (0, a.jsxs)("div", {
+                            className: Ae.mA,
                             children: [
-                                (0, n.jsx)(O.A, {
-                                    disabled: !Ay || (!w && U >= 50),
-                                    disabledTooltip: w
-                                        ? y.intl.string(y.t["0NQ00t"])
-                                        : U >= 50
-                                          ? y.intl.format(y.t.IqWPVt, { maxProducts: 50 })
-                                          : y.intl.string(y.t["Ax89/c"]),
-                                    published: w,
+                                (0, a.jsx)(H.A, {
+                                    disabled: !A_ || (!K && F >= 50),
+                                    disabledTooltip: K
+                                        ? AA.intl.string(AA.t["0NQ00t"])
+                                        : F >= 50
+                                          ? AA.intl.format(AA.t.IqWPVt, { maxProducts: 50 })
+                                          : AA.intl.string(AA.t["Ax89/c"]),
+                                    published: K,
                                     onClick: () => {
-                                        s()(Ay, "Attempting to publish/unpublish when not allowed"),
-                                            AO(w ? "unpublish" : "publish"),
-                                            AB({ ...AL, published: !w });
+                                        s()(A_, "Attempting to publish/unpublish when not allowed"),
+                                            Aw(K ? "unpublish" : "publish"),
+                                            A1({ ...AY, published: !K });
                                     },
-                                    submitting: AN,
+                                    submitting: AL,
                                 }),
-                                (0, n.jsx)("div", { className: k.AC }),
-                                (0, n.jsx)(q.Heading, {
+                                (0, a.jsx)("div", { className: Ae.AC }),
+                                (0, a.jsx)(U.D, {
                                     variant: "text-xs/bold",
                                     color: "text-default",
-                                    className: k.B9,
-                                    children: y.intl.string(y.t["6I7nQT"]),
+                                    className: Ae.B9,
+                                    children: AA.intl.string(AA.t["6I7nQT"]),
                                 }),
-                                (0, n.jsx)(q.hKd, { size: 4 }),
-                                (0, n.jsx)(q.Text, {
+                                (0, a.jsx)(p.h, { size: 4 }),
+                                (0, a.jsx)(h.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: y.intl.string(y.t.Oq4dfU),
+                                    children: AA.intl.string(AA.t.Oq4dfU),
                                 }),
-                                (0, n.jsx)(q.hKd, { size: 16 }),
-                                (0, n.jsx)(X.A, {
-                                    imageUrl: Ao,
-                                    name: "" === An ? y.intl.string(y.t.EmqIwl) : An,
-                                    description: "" === Ar ? y.intl.string(y.t["11NA2L"]) : Ar,
-                                    formattedPrice: Am,
-                                    role: AP,
-                                    productType: AQ,
-                                    ctaComponent: (0, n.jsx)(q.Button, { text: y.intl.string(y.t.xUi3BL) }),
+                                (0, a.jsx)(p.h, { size: 16 }),
+                                (0, a.jsx)(D.A, {
+                                    imageUrl: Av,
+                                    name: "" === Ag ? AA.intl.string(AA.t.EmqIwl) : Ag,
+                                    description: "" === Ap ? AA.intl.string(AA.t["11NA2L"]) : Ap,
+                                    formattedPrice: AI,
+                                    role: AD,
+                                    productType: Ak,
+                                    ctaComponent: (0, a.jsx)(N.$, { text: AA.intl.string(AA.t.xUi3BL) }),
                                     cardWidth: 340,
                                     thumbnailHeight: 190,
                                 }),
@@ -400,83 +412,83 @@ function M(A) {
                     }),
                 ],
             }),
-            (0, n.jsx)(q.jlY, {
+            (0, a.jsx)(x.jl, {
                 "data-migration-pending": !0,
-                children: (0, n.jsxs)("div", {
-                    className: k.jj,
+                children: (0, a.jsxs)("div", {
+                    className: Ae.jj,
                     children: [
-                        (0, n.jsxs)("div", {
-                            className: k.mx,
+                        (0, a.jsxs)("div", {
+                            className: Ae.mx,
                             children: [
-                                (0, n.jsx)(Y, {
-                                    text: y.intl.string(y.t.YzGIVF),
-                                    value: AW,
+                                (0, a.jsx)(Ar, {
+                                    text: AA.intl.string(AA.t.YzGIVF),
+                                    value: AE,
                                     onChange: (A) => {
-                                        A ? AX((0, L.Jn)()) : AX(void 0);
+                                        A ? AR((0, M.Jn)()) : AR(void 0);
                                     },
-                                    warning: null === AI ? (0, n.jsx)(L.id, {}) : void 0,
-                                    disabled: null != AT,
+                                    warning: null === Ay ? (0, a.jsx)(M.id, {}) : void 0,
+                                    disabled: null != AS,
                                 }),
-                                (0, n.jsx)(Y, {
-                                    text: y.intl.string(y.t.C6wP2Q),
-                                    value: Ah,
+                                (0, a.jsx)(Ar, {
+                                    text: AA.intl.string(AA.t.C6wP2Q),
+                                    value: AT,
                                     onChange: (A) => {
                                         A
-                                            ? AC(!0)
-                                            : Ax
+                                            ? AF(!0)
+                                            : AW
                                               ? (0, g.A)({
-                                                    title: y.intl.string(y.t["2WihyY"]),
-                                                    subtitle: y.intl.string(y.t.ixRBLh),
-                                                    confirmText: y.intl.string(y.t.N86XcP),
-                                                    onConfirm: AZ,
+                                                    title: AA.intl.string(AA.t["2WihyY"]),
+                                                    subtitle: AA.intl.string(AA.t.ixRBLh),
+                                                    confirmText: AA.intl.string(AA.t.N86XcP),
+                                                    onConfirm: AG,
                                                 })
-                                              : AZ();
+                                              : AG();
                                     },
-                                    disabled: Aj,
+                                    disabled: AZ,
                                 }),
                             ],
                         }),
-                        (0, n.jsx)("div", {
-                            className: k.TM,
-                            children: w
-                                ? (0, n.jsx)(q.Button, {
+                        (0, a.jsx)("div", {
+                            className: Ae.TM,
+                            children: K
+                                ? (0, a.jsx)(N.$, {
                                       variant: "secondary",
-                                      text: y.intl.string(y.t.XYBEaV),
-                                      disabled: !AG,
-                                      loading: AF,
+                                      text: AA.intl.string(AA.t.XYBEaV),
+                                      disabled: !AJ,
+                                      loading: AO,
                                       onClick: () => {
                                           s()(
-                                              AG,
+                                              AJ,
                                               "cannot save changes for published product without adding all fields",
                                           ),
-                                              AO("update_publish"),
-                                              AB(AL);
+                                              Aw("update_publish"),
+                                              A1(AY);
                                       },
                                   })
-                                : (0, n.jsx)(q.Button, {
+                                : (0, a.jsx)(N.$, {
                                       variant: "secondary",
-                                      text: y.intl.string(y.t.ZCjwob),
-                                      disabled: !AR,
-                                      loading: AF,
+                                      text: AA.intl.string(AA.t.ZCjwob),
+                                      disabled: !AM,
+                                      loading: AO,
                                       onClick: () => {
-                                          s()(AR, "cannot save changes without name or price tier"),
-                                              AO("draft"),
-                                              AB(AL);
+                                          s()(AM, "cannot save changes without name or price tier"),
+                                              Aw("draft"),
+                                              A1(AY);
                                       },
                                   }),
                         }),
                     ],
                 }),
             }),
-            (0, n.jsx)(u.F, { component: "div", className: k.Nt, children: Ak }),
+            (0, a.jsx)(c.F, { component: "div", className: Ae.Nt, children: A$ }),
         ],
     });
 }
-function J(A) {
-    return (0, n.jsx)(N.R, {
+function Ao(A) {
+    return (0, a.jsx)(S.R, {
         guildId: A.guildId,
         editSkuId: A.productId ?? void 0,
-        onFileSizeError: () => (0, U.A)(S.vN),
-        children: (0, n.jsx)(M, { ...A }),
+        onFileSizeError: () => (0, W.A)(J.vN),
+        children: (0, a.jsx)(As, { ...A }),
     });
 }

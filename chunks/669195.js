@@ -1,47 +1,47 @@
 n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(821609),
     l = n(688810),
-    r = n(13875),
-    a = n(515727),
+    a = n(13875),
+    r = n(515727),
     o = n(84540),
     d = n(919395),
-    c = n(128450),
-    u = n(212168),
-    m = n(985018),
-    g = n(238780);
+    u = n(128450),
+    c = n(212168),
+    g = n(985018),
+    m = n(238780);
 function _(e) {
     let { user: t, guild: n, sectionTitle: _ } = e,
-        { analyticsLocations: x } = (0, l.Ay)(),
-        h = (0, r.A)("ProfileFrameSection"),
-        A = (0, d.Xf)({ user: t, guildId: n?.id }),
-        { pendingProfileFrame: p, errors: T } = (0, d.Tu)(n?.id);
+        { analyticsLocations: A } = (0, l.Ay)(),
+        h = (0, a.A)("ProfileFrameSection"),
+        p = (0, d.Xf)({ user: t, guildId: n?.id }),
+        { pendingProfileFrame: x, errors: E } = (0, d.Tu)(n?.id);
     return h
-        ? (0, i.jsx)(c.A, {
-              borderType: u.i.PREMIUM,
+        ? (0, i.jsx)(u.A, {
+              borderType: c.i.PREMIUM,
               hasBackground: !0,
               title: _,
-              errors: T,
+              errors: E,
               children: (0, i.jsxs)("div", {
-                  className: g.N,
+                  className: m.N,
                   children: [
-                      (0, i.jsx)(s.Button, {
+                      (0, i.jsx)(s.$, {
                           variant: "primary",
                           size: "sm",
-                          text: m.intl.string(m.t["9/hmle"]),
+                          text: g.intl.string(g.t["9/hmle"]),
                           onClick: () => {
-                              (0, a.w)({ analyticsLocations: x, guild: n });
+                              (0, r.w)({ analyticsLocations: A, guild: n });
                           },
                       }),
-                      (void 0 === p ? null != A : null != p) &&
+                      (void 0 === x ? null != p : null != x) &&
                           (0, i.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: g.D,
-                              children: (0, i.jsx)(s.Button, {
+                              className: m.D,
+                              children: (0, i.jsx)(s.$, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: null != n ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.nQBruk),
+                                  text: null != n ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.nQBruk),
                                   onClick: () => {
                                       (0, o.p)({ guildId: n?.id, profileFrame: null });
                                   },

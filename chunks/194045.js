@@ -1,27 +1,27 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => O });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var r = n(192308),
     a = n(73153),
-    r = n(626584),
+    l = n(626584),
     s = n(450510),
     o = n(891540),
     d = n(594061),
-    c = n(734057),
-    u = n(430452),
+    u = n(734057),
+    c = n(430452),
     A = n(309010),
     h = n(532624),
     _ = n(518647),
-    m = n(796774),
-    g = n(209932),
-    p = n(123973),
-    E = n(102597),
+    E = n(796774),
+    p = n(209932),
+    m = n(123973),
+    g = n(102597),
     I = n(904054),
-    f = n(857179),
-    C = n(652215),
+    C = n(857179),
+    f = n(652215),
     T = n(731854);
-let N = new r.A("SoundboardManager");
-class S extends _.A {
+let S = new l.A("SoundboardManager");
+class N extends _.A {
     playingSoundsWeb = new Map();
     _initialize() {
         super._initialize(),
@@ -42,8 +42,8 @@ class S extends _.A {
                 a.h.unsubscribe("RTC_CONNECTION_STATE", this._handleRTCConnectionState));
     }
     _stopAndClearSounds = () => {
-        u.Ay.supports(T.O5.SAMPLE_PLAYBACK) &&
-            u.Ay.getMediaEngine().eachConnection((e) => {
+        c.Ay.supports(T.O5.SAMPLE_PLAYBACK) &&
+            c.Ay.getMediaEngine().eachConnection((e) => {
                 e.stopAllSamplesLocalPlayback();
             }),
             this.playingSoundsWeb.forEach((e) => {
@@ -56,43 +56,43 @@ class S extends _.A {
         return async function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                 i = arguments.length > 2 ? arguments[2] : void 0,
-                l = arguments.length > 3 ? arguments[3] : void 0,
-                a = null != l && A.A.getVoiceChannelId() === l;
-            if ((null == l || a) && !u.Ay.isDeaf() && !g.A.isLocalSoundboardMuted(i))
+                r = arguments.length > 3 ? arguments[3] : void 0,
+                a = null != r && A.A.getVoiceChannelId() === r;
+            if ((null == r || a) && !c.Ay.isDeaf() && !p.A.isLocalSoundboardMuted(i))
                 try {
-                    let l = {
+                    let r = {
                         soundKey: `${i}-${t}`,
-                        soundURL: (0, E.A)(t),
+                        soundURL: (0, g.A)(t),
                         soundVolume: (0, I.A)(n),
-                        reportSoundStartedPlaying: () => (0, m.dZ)(t, i),
+                        reportSoundStartedPlaying: () => (0, E.dZ)(t, i),
                     };
-                    u.Ay.supports(T.O5.SAMPLE_PLAYBACK) ? await (0, f.o)(l) : await (0, f.G)(l, e.playingSoundsWeb);
+                    c.Ay.supports(T.O5.SAMPLE_PLAYBACK) ? await (0, C.o)(r) : await (0, C.G)(r, e.playingSoundsWeb);
                 } catch (e) {
-                    N.warn(`Error playing soundboard sound: ${e.message}`);
+                    S.warn(`Error playing soundboard sound: ${e.message}`);
                 } finally {
-                    (0, m.g0)(t, i);
+                    (0, E.g0)(t, i);
                 }
         };
     })();
     _handleRTCConnectionState = (e) => {
         let { state: t } = e;
-        t === C.S7L.RTC_CONNECTED && (d.bW.loadIfNecessary(), (0, m.E7)({ disableAnalytics: !0 }));
+        t === f.S7L.RTC_CONNECTED && (d.bW.loadIfNecessary(), (0, E.E7)({ disableAnalytics: !0 }));
     };
     _handleOverlaySoundboardSoundsFetchRequest = () => {
-        (0, m.E7)();
+        (0, E.E7)();
     };
     _handleOpenEducationModal = (e, t) => {
         if (null == e) return;
-        let a = c.A.getChannel(t),
-            r = h.Ay.getKeybindForAction(C.hCu.SOUNDBOARD_HOLD);
+        let a = u.A.getChannel(t),
+            l = h.Ay.getKeybindForAction(f.hCu.SOUNDBOARD_HOLD);
         null != a &&
-            (0, p.Ay)(a) &&
-            null != r &&
+            (0, m.Ay)(a) &&
+            null != l &&
             o.A.hasHotspot(s._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
-            (0, l.mMO)(async () => {
+            (0, r.openModalLazy)(async () => {
                 let { default: t } = await n.e("51143").then(n.bind(n, 888762));
-                return (n) => (0, i.jsx)(t, { ...n, guildId: e, keybind: r, channel: a });
+                return (n) => (0, i.jsx)(t, { ...n, guildId: e, keybind: l, channel: a });
             });
     };
 }
-let x = new S();
+let O = new N();

@@ -1,18 +1,17 @@
 "use strict";
-n.d(t, { o: () => i });
-var r = n(652215);
-let i = [
-    r.HAw.NOTIFICATION_CLICKED,
-    r.HAw.EXPERIMENT_USER_TRIGGERED,
-    r.HAw.EXPERIMENT_DM_TRIGGERED,
-    r.HAw.EXPERIMENT_GUILD_TRIGGERED,
-    r.HAw.DEVICE_EVENT,
-    r.HAw.REACT_SOFT_EXCEPTION,
-    r.HAw.NETWORK_CAPABILITIES_CHANGED,
-    r.HAw.FOREGROUND_SERVICE,
-    r.HAw.APP_LIFECYCLE,
-    r.HAw.UI_LIFECYCLE,
-    r.HAw.TOUCH_EVENT,
-    r.HAw.HTTP_REQUEST,
-    r.HAw.WEBSOCKET_MESSAGE_RECEIVED,
+n.d(t, { o: () => r });
+let r = [
+    "notification_clicked",
+    "experiment_user_triggered",
+    "experiment_dm_triggered",
+    "experiment_guild_triggered",
+    "device_event",
+    "react_soft_exception",
+    "network_capabilities_changed",
+    "foreground_service",
+    "app_lifecycle",
+    "ui_lifecycle",
+    "touch_event",
+    "http_request",
+    "websocket_message_received",
 ];

@@ -1,68 +1,62 @@
 "use strict";
 n.d(t, {
-    AA: () => c,
-    Do: () => l,
-    Ec: () => m,
-    N6: () => d,
-    R2: () => s,
-    W3: () => f,
-    as: () => o,
-    g9: () => h,
-    k1: () => u,
-    lq: () => i,
-    ni: () => p,
-    pE: () => _,
-    s: () => r,
-    tm: () => a,
+    AA: () => E,
+    Do: () => _,
+    Ec: () => I,
+    N6: () => h,
+    R2: () => u,
+    W3: () => m,
+    as: () => c,
+    g9: () => A,
+    k1: () => f,
+    lq: () => l,
+    ni: () => g,
+    pE: () => p,
+    s: () => o,
+    tm: () => d,
 });
-var r = (function (e) {
-    return (
-        (e.GUILD = "GUILD"),
-        (e.UNICODE = "UNICODE"),
-        (e.RECENT = "RECENT"),
-        (e.CUSTOM = "CUSTOM"),
-        (e.SEARCH_RESULTS = "SEARCH_RESULTS"),
-        (e.FAVORITES = "FAVORITES"),
-        (e.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI"),
-        (e.PREMIUM_UPSELL = "PREMIUM_UPSELL"),
-        (e.SOUNDMOJI = "SOUNDMOJI"),
-        (e.KAOMOJI = "KAOMOJI"),
-        e
-    );
-})({});
-let i = "emoji-picker-grid";
-var s = (function (e) {
-        return (
-            (e.RECENT = "recent"),
-            (e.FAVORITES = "favorites"),
-            (e.TOP_GUILD_EMOJI = "top guild emoji"),
-            (e.CUSTOM = "custom"),
-            (e.PEOPLE = "people"),
-            (e.NATURE = "nature"),
-            (e.FOOD = "food"),
-            (e.ACTIVITY = "activity"),
-            (e.TRAVEL = "travel"),
-            (e.OBJECTS = "objects"),
-            (e.SYMBOLS = "symbols"),
-            (e.FLAGS = "flags"),
-            (e.PREMIUM_UPSELL = "premium emoji"),
-            (e.SOUNDMOJI = "soundmoji"),
-            (e.KAOMOJI = "kaomoji"),
-            e
-        );
-    })({}),
-    a = (function (e) {
-        return (e.NONE = ""), (e.TOP_GUILD_EMOJI = "top_server"), (e.NEWLY_ADDED_EMOJI = "newly_added"), e;
-    })({}),
-    o = (function (e) {
-        return (e[(e.MEDIUM = 40)] = "MEDIUM"), (e[(e.LARGE = 48)] = "LARGE"), e;
-    })({});
-let l = "emoji-picker-tab-panel",
-    u = "emoji-picker-tab",
-    c = "soundboard-picker-tab-panel",
-    d = "soundboard-picker-tab",
-    _ = "kaomoji-picker-tab-panel",
-    f = "kaomoji-picker-tab",
-    p = "gif-picker-tab-panel",
-    h = "gif-picker-tab",
-    m = { reaction: 40, default: 44, jumbo: 96 };
+var r,
+    i,
+    s,
+    a,
+    o =
+        (((r = {}).GUILD = "GUILD"),
+        (r.UNICODE = "UNICODE"),
+        (r.RECENT = "RECENT"),
+        (r.CUSTOM = "CUSTOM"),
+        (r.SEARCH_RESULTS = "SEARCH_RESULTS"),
+        (r.FAVORITES = "FAVORITES"),
+        (r.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI"),
+        (r.PREMIUM_UPSELL = "PREMIUM_UPSELL"),
+        (r.SOUNDMOJI = "SOUNDMOJI"),
+        (r.KAOMOJI = "KAOMOJI"),
+        r);
+let l = "emoji-picker-grid";
+var u =
+        (((i = {}).RECENT = "recent"),
+        (i.FAVORITES = "favorites"),
+        (i.TOP_GUILD_EMOJI = "top guild emoji"),
+        (i.CUSTOM = "custom"),
+        (i.PEOPLE = "people"),
+        (i.NATURE = "nature"),
+        (i.FOOD = "food"),
+        (i.ACTIVITY = "activity"),
+        (i.TRAVEL = "travel"),
+        (i.OBJECTS = "objects"),
+        (i.SYMBOLS = "symbols"),
+        (i.FLAGS = "flags"),
+        (i.PREMIUM_UPSELL = "premium emoji"),
+        (i.SOUNDMOJI = "soundmoji"),
+        (i.KAOMOJI = "kaomoji"),
+        i),
+    d = (((s = {}).NONE = ""), (s.TOP_GUILD_EMOJI = "top_server"), (s.NEWLY_ADDED_EMOJI = "newly_added"), s),
+    c = (((a = {})[(a.MEDIUM = 40)] = "MEDIUM"), (a[(a.LARGE = 48)] = "LARGE"), a);
+let _ = "emoji-picker-tab-panel",
+    f = "emoji-picker-tab",
+    E = "soundboard-picker-tab-panel",
+    h = "soundboard-picker-tab",
+    p = "kaomoji-picker-tab-panel",
+    m = "kaomoji-picker-tab",
+    g = "gif-picker-tab-panel",
+    A = "gif-picker-tab",
+    I = { reaction: 40, default: 44, jumbo: 96 };

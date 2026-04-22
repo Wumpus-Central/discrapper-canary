@@ -1,256 +1,261 @@
-a.r(t), a.d(t, { default: () => V });
+a.r(t), a.d(t, { default: () => X });
 var n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
     r = a(735438),
     o = a(311907),
-    c = a(397927),
-    d = a(178629),
-    u = a(770472),
-    m = a(737823),
-    h = (a(153527), a(876622)),
-    p = a(521974),
-    _ = a(965660),
-    g = a(976860),
-    x = a(961350),
-    A = a(287809),
-    f = a(954571),
-    b = a(354138),
-    C = a(416730),
-    v = a(212534),
-    j = a(38181),
-    I = a(767599),
-    S = a(412461),
-    E = a(157561),
-    N = a(497773),
-    y = a(310419),
-    T = a(656106),
-    R = a(97432),
-    P = a(244460),
-    L = a(569495),
-    D = a(410608),
-    O = a(360832),
-    k = a(435220),
-    G = a(652215),
-    M = a(985018),
-    U = a(947736);
-function w(e) {
-    let { applicationId: t, hideDetailHeaderButtons: a, onClickBack: l } = e,
-        r = (0, o.bG)([v.A], () => v.A.getApplication(t)),
-        [d, u] = i.useState(a),
-        h = i.useCallback(() => {
-            u(a);
+    c = a(323384),
+    d = a(548411),
+    u = a(534514),
+    h = a(417098),
+    m = a(111159),
+    p = a(834730),
+    _ = a(178629),
+    g = a(770472),
+    x = a(737823),
+    A = (a(153527), a(876622)),
+    f = a(299593),
+    C = a(965660),
+    v = a(976860),
+    b = a(961350),
+    j = a(287809),
+    I = a(954571),
+    E = a(354138),
+    N = a(416730),
+    S = a(212534),
+    y = a(38181),
+    P = a(767599),
+    R = a(412461),
+    T = a(157561),
+    L = a(497773),
+    D = a(310419),
+    k = a(656106),
+    O = a(97432),
+    G = a(22079),
+    M = a(569495),
+    w = a(410608),
+    U = a(360832),
+    B = a(435220),
+    F = a(652215),
+    V = a(985018),
+    H = a(386607);
+function Y(e) {
+    let { applicationId: t, hideDetailHeaderButtons: a, onClickBack: i } = e,
+        r = (0, o.bG)([S.A], () => S.A.getApplication(t)),
+        [c, h] = l.useState(a),
+        m = l.useCallback(() => {
+            h(a);
         }, [a]);
     return (0, n.jsxs)("div", {
-        className: U._u,
+        className: H._u,
         children: [
-            (0, n.jsx)("div", { className: U.w$, children: (0, n.jsx)(m.XQ, { icon: c.Zge, onClick: l }) }),
-            (0, n.jsx)(c.Heading, {
+            (0, n.jsx)("div", { className: H.w$, children: (0, n.jsx)(x.XQ, { icon: d.Z, onClick: i }) }),
+            (0, n.jsx)(u.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: U.Rm,
+                className: H.Rm,
                 lineClamp: 1,
                 children: r?.name,
             }),
             (0, n.jsx)("div", {
-                className: s()(U.w$, U.xY, { [U.RK]: !a, [U.jD]: a && !d, [U.R]: a && d }),
-                onTransitionEnd: h,
-                children: null != r ? (0, n.jsx)(L.A, { application: r, size: "sm" }) : null,
+                className: s()(H.w$, H.xY, { [H.RK]: !a, [H.jD]: a && !c, [H.R]: a && c }),
+                onTransitionEnd: m,
+                children: null != r ? (0, n.jsx)(M.A, { application: r, size: "sm" }) : null,
             }),
         ],
     });
 }
-function H() {
-    let e = i.useCallback(() => {
-            (0, S.dG)();
+function z() {
+    let e = l.useCallback(() => {
+            (0, R.dG)();
         }, []),
-        t = i.useCallback(() => {
-            (0, S.jL)();
+        t = l.useCallback(() => {
+            (0, R.jL)();
         }, []);
-    return (0, n.jsxs)(c.$Td, {
-        color: c.Hv$.BRAND,
-        className: U.aL,
+    return (0, n.jsxs)(h.$T, {
+        color: h.Hv.BRAND,
+        className: H.aL,
         children: [
-            (0, n.jsx)(c.pVd, { size: "custom", color: "white", className: U.wm }),
-            (0, n.jsx)(c.Text, {
+            (0, n.jsx)(m.p, { size: "custom", color: "white", className: H.wm }),
+            (0, n.jsx)(p.E, {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: M.intl.string(M.t.Ol3MIt),
+                children: V.intl.string(V.t.Ol3MIt),
             }),
             (0, n.jsxs)("div", {
-                className: U.ll,
+                className: H.ll,
                 children: [
-                    (0, n.jsx)(c.Z_L, { onClick: e, noticeType: G.kqX.LOGIN, children: M.intl.string(M.t["825cFy"]) }),
-                    (0, n.jsx)(c.Z_L, {
+                    (0, n.jsx)(h.Z_, { onClick: e, noticeType: F.kqX.LOGIN, children: V.intl.string(V.t["825cFy"]) }),
+                    (0, n.jsx)(h.Z_, {
                         onClick: t,
-                        noticeType: G.kqX.REGISTER,
+                        noticeType: F.kqX.REGISTER,
                         minor: !0,
-                        children: M.intl.string(M.t.HAkXzo),
+                        children: V.intl.string(V.t.HAkXzo),
                     }),
                 ],
             }),
         ],
     });
 }
-let V = function () {
-    let e = (0, o.bG)([x.default], () => !x.default.isAuthenticated()),
-        { onScroll: t, scrollPosition: a, resetScrollPosition: l } = (0, d.G)(),
-        v = (0, y.R4)(),
-        L = (0, S.DB)(),
-        V = v?.type === y.ev.CATEGORY ? v.categoryId : void 0,
-        { applicationId: B, section: F } = v?.type === y.ev.APPLICATION ? v : {},
-        { query: Y, categoryId: z } = v?.type === y.ev.SEARCH ? v : {},
-        X = (0, o.bG)([j.A], () => j.A.getCategories()),
-        W = i.useMemo(() => [(0, I.AU)(), ...X], [X]),
-        K = i.useMemo(() => W.find((e) => e.id === Number(z)), [W, z]),
-        { tabs: Z, selectedTab: $, onSelectTab: Q } = (0, N.S)(V?.toString()),
-        [J, q] = i.useState(!0),
-        ee = y.h.useField("trackedOpenedFromExternalEntrypoint"),
-        et = y.h.useField("sessionId"),
-        ea = (0, o.bG)([A.default], () => A.default.getCurrentUser());
-    i.useEffect(() => {
-        if (!ee && null == et) {
-            let e = (0, _.YP)();
-            f.default.track(G.HAw.APP_DIRECTORY_OPENED, { source: y.sW.EXTERNAL, session_id: e, user_id: ea?.id }),
-                y.h.setState({
+let X = function () {
+    let e = (0, o.bG)([b.default], () => !b.default.isAuthenticated()),
+        { onScroll: t, scrollPosition: a, resetScrollPosition: i } = (0, _.G)(),
+        h = (0, D.R4)(),
+        m = (0, R.DB)(),
+        p = h?.type === D.ev.CATEGORY ? h.categoryId : void 0,
+        { applicationId: S, section: M } = h?.type === D.ev.APPLICATION ? h : {},
+        { query: X, categoryId: K } = h?.type === D.ev.SEARCH ? h : {},
+        W = (0, o.bG)([y.A], () => y.A.getCategories()),
+        $ = l.useMemo(() => [(0, P.AU)(), ...W], [W]),
+        J = l.useMemo(() => $.find((e) => e.id === Number(K)), [$, K]),
+        { tabs: Q, selectedTab: Z, onSelectTab: q } = (0, L.S)(p?.toString()),
+        [ee, et] = l.useState(!0),
+        ea = D.h.useField("trackedOpenedFromExternalEntrypoint"),
+        en = D.h.useField("sessionId"),
+        el = (0, o.bG)([j.default], () => j.default.getCurrentUser());
+    l.useEffect(() => {
+        if (!ea && null == en) {
+            let e = (0, C.YP)();
+            I.default.track(F.HAw.APP_DIRECTORY_OPENED, { source: D.sW.EXTERNAL, session_id: e, user_id: el?.id }),
+                D.h.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
                     sessionId: e,
-                    entrypoint: { name: y.sW.EXTERNAL },
+                    entrypoint: { name: D.sW.EXTERNAL },
                     guildId: null,
                 });
         }
-    }, [et, ee, ea?.id]),
-        i.useEffect(() => {
-            b.bW();
+    }, [en, ea, el?.id]),
+        l.useEffect(() => {
+            E.bW();
         }, []),
-        i.useEffect(() => {
-            L && b.wD();
-        }, [L]),
-        i.useEffect(() => y.tS.setState({ lastItem: v }), [v]);
-    let en = null != B,
-        ei = v?.type === y.ev.SEARCH,
+        l.useEffect(() => {
+            m && E.wD();
+        }, [m]),
+        l.useEffect(() => D.tS.setState({ lastItem: h }), [h]);
+    let ei = null != S,
+        es = h?.type === D.ev.SEARCH,
         {
-            searchQuery: el,
-            onSearchTextChange: es,
-            onClearSearch: er,
-            onSearchSubmit: eo,
-        } = (0, E.v)({ initialQuery: Y ?? "" }),
-        ec = C.A.useField("searchBarState"),
+            searchQuery: er,
+            onSearchTextChange: eo,
+            onClearSearch: ec,
+            onSearchSubmit: ed,
+        } = (0, T.v)({ initialQuery: X ?? "" }),
+        eu = N.A.useField("searchBarState"),
         {
-            onTabsAvailableWidthChange: ed,
-            onCollapsedSearchBarClick: eu,
-            onSearchBarBlur: em,
-            tabsClassName: eh,
-        } = (0, u.p)({
+            onTabsAvailableWidthChange: eh,
+            onCollapsedSearchBarClick: em,
+            onSearchBarBlur: ep,
+            tabsClassName: e_,
+        } = (0, g.p)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: "" === el.trim(),
-            searchBarState: ec,
-            setSearchBarState: (e) => C.A.setState({ searchBarState: e }),
+            isSearchBarEmpty: "" === er.trim(),
+            searchBarState: eu,
+            setSearchBarState: (e) => N.A.setState({ searchBarState: e }),
         }),
-        ep = i.useCallback(
+        eg = l.useCallback(
             (e) => {
-                Q(e), ei && er(), l();
+                q(e), es && ec(), i();
             },
-            [ei, er, Q, l],
+            [es, ec, q, i],
         ),
-        e_ = i.useCallback((e) => (0, T.YR)({ applicationId: e }), []),
-        eg = en || ei,
-        ex = i.useCallback(() => {
-            null != (0, y.Bn)() ? (0, g.aX)() : (0, T.eM)();
+        ex = l.useCallback((e) => (0, k.YR)({ applicationId: e }), []),
+        eA = ei || es,
+        ef = l.useCallback(() => {
+            null != (0, D.Bn)() ? (0, v.aX)() : (0, k.eM)();
         }, []),
-        eA = i.useMemo(
+        eC = l.useMemo(
             () =>
                 (0, r.debounce)((e) => {
-                    let { scrollTop: t, offsetHeight: a, scrollHeight: n, location: i } = e;
+                    let { scrollTop: t, offsetHeight: a, scrollHeight: n, location: l } = e;
                     t > 0 &&
-                        (0, S.TR)(G.HAw.APP_DIRECTORY_PAGE_SCROLLED, {
+                        (0, R.TR)(F.HAw.APP_DIRECTORY_PAGE_SCROLLED, {
                             scroll_visible_percentile: (t + a) / n,
-                            current_page: i,
+                            current_page: l,
                         });
                 }, 200),
             [],
         ),
-        ef = i.useCallback(
+        ev = l.useCallback(
             (e, a) => {
                 t(e),
-                    eA({
+                    eC({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
                         location: a,
                     });
             },
-            [eA, t],
+            [eC, t],
         );
     return (0, n.jsxs)("div", {
-        className: s()(U.nw, { [U.Yz]: e }),
+        className: s()(H.nw, { [H.Yz]: e }),
         children: [
-            e ? (0, n.jsx)(H, {}) : null,
+            e ? (0, n.jsx)(z, {}) : null,
             (0, n.jsxs)("div", {
-                className: U.WH,
+                className: H.WH,
                 children: [
-                    (0, n.jsxs)(m.Ay, {
-                        variant: eg ? m.Z5.RELATIVE : m.Z5.OVERLAY,
+                    (0, n.jsxs)(x.Ay, {
+                        variant: eA ? x.Z5.RELATIVE : x.Z5.OVERLAY,
                         children: [
-                            !eg && (0, n.jsx)(m.ns, { scrollPosition: a }),
-                            en
-                                ? (0, n.jsx)(w, { applicationId: B, hideDetailHeaderButtons: J, onClickBack: ex })
+                            !eA && (0, n.jsx)(x.ns, { scrollPosition: a }),
+                            ei
+                                ? (0, n.jsx)(Y, { applicationId: S, hideDetailHeaderButtons: ee, onClickBack: ef })
                                 : (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                          ei
-                                              ? (0, n.jsx)(m.XQ, { icon: c.Zge, onClick: ex })
-                                              : (0, n.jsx)(m.T4, { icon: c.k9F }),
-                                          ei
-                                              ? (0, n.jsx)(c.Heading, {
+                                          es
+                                              ? (0, n.jsx)(x.XQ, { icon: d.Z, onClick: ef })
+                                              : (0, n.jsx)(x.T4, { icon: c.k }),
+                                          es
+                                              ? (0, n.jsx)(u.D, {
                                                     variant: "heading-lg/semibold",
                                                     color: "text-strong",
-                                                    className: U.wL,
+                                                    className: H.wL,
                                                     children:
-                                                        null != Y && "" !== Y
-                                                            ? M.intl.formatToPlainString(M.t.zHdzqW, { query: Y })
-                                                            : M.intl.formatToPlainString(M.t.Qhj5Br, {
-                                                                  categoryName: K?.name ?? M.intl.string(M.t.E407b7),
+                                                        null != X && "" !== X
+                                                            ? V.intl.formatToPlainString(V.t.zHdzqW, { query: X })
+                                                            : V.intl.formatToPlainString(V.t.Qhj5Br, {
+                                                                  categoryName: J?.name ?? V.intl.string(V.t.E407b7),
                                                               }),
                                                 })
-                                              : (0, n.jsx)(h.A, {
-                                                    className: eh,
-                                                    tabs: Z,
-                                                    selectedTab: $,
-                                                    onTabSelect: ep,
-                                                    onAvailableWidthChange: ed,
+                                              : (0, n.jsx)(A.A, {
+                                                    className: e_,
+                                                    tabs: Q,
+                                                    selectedTab: Z,
+                                                    onTabSelect: eg,
+                                                    onAvailableWidthChange: eh,
                                                 }),
-                                          (0, n.jsx)(p.A, {
-                                              query: el,
-                                              placeholder: M.intl.string(M.t["5h0QOP"]),
-                                              onTextChange: es,
-                                              onClear: er,
-                                              onSubmit: eo,
-                                              onCollapsedClick: eu,
-                                              state: ec,
-                                              onBlur: em,
+                                          (0, n.jsx)(f.A, {
+                                              query: er,
+                                              placeholder: V.intl.string(V.t["5h0QOP"]),
+                                              onTextChange: eo,
+                                              onClear: ec,
+                                              onSubmit: ed,
+                                              onCollapsedClick: em,
+                                              state: eu,
+                                              onBlur: ep,
                                           }),
                                       ],
                                   }),
                         ],
                     }),
-                    en
-                        ? (0, n.jsx)(P.A, {
-                              onScroll: (e) => ef(e, y.ev.APPLICATION),
-                              onSelectApplication: e_,
-                              applicationId: B,
-                              initialTab: F,
-                              onButtonsVisibilityChange: q,
+                    ei
+                        ? (0, n.jsx)(G.A, {
+                              onScroll: (e) => ev(e, D.ev.APPLICATION),
+                              onSelectApplication: ex,
+                              applicationId: S,
+                              initialTab: M,
+                              onButtonsVisibilityChange: et,
                           })
-                        : ei
-                          ? (0, n.jsx)(O.A, { onSelectApplication: e_, onScroll: (e) => ef(e, y.ev.SEARCH) })
-                          : $ === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
-                            ? (0, n.jsx)(D.A, { onScroll: (e) => ef(e, y.ev.HOME), onSelectApplication: e_ })
-                            : (0, n.jsx)(R.A, {
-                                  tabId: Number($),
-                                  onScroll: (e) => ef(e, y.ev.CATEGORY),
-                                  onSelectApplication: e_,
+                        : es
+                          ? (0, n.jsx)(U.A, { onSelectApplication: ex, onScroll: (e) => ev(e, D.ev.SEARCH) })
+                          : Z === B.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                            ? (0, n.jsx)(w.A, { onScroll: (e) => ev(e, D.ev.HOME), onSelectApplication: ex })
+                            : (0, n.jsx)(O.A, {
+                                  tabId: Number(Z),
+                                  onScroll: (e) => ev(e, D.ev.CATEGORY),
+                                  onSelectApplication: ex,
                               }),
                 ],
             }),

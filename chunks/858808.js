@@ -1,31 +1,34 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var a = n(503698),
-    r = n.n(a),
-    l = n(990078),
-    s = n(397927),
-    o = n(183555),
-    d = n(735321),
-    c = n(985018),
-    u = n(440375);
-function A(e) {
-    let { game: t, widgetType: n, iconSize: a = "refresh_sm", className: A, buttonRef: _, onRemove: h } = e,
-        { trackUserProfileEditAction: m } = (0, o.NJ)();
-    return (0, i.jsx)(l.m, {
-        text: c.intl.string(c.t.HUvyDc),
+    l = n.n(a),
+    s = n(990078),
+    r = n(765178),
+    o = n(939249),
+    c = n(241326),
+    d = n(827734),
+    u = n(183555),
+    _ = n(735321),
+    g = n(985018),
+    f = n(448295);
+function m(e) {
+    let { game: t, widgetType: n, iconSize: a = "refresh_sm", className: m, buttonRef: x, onRemove: p } = e,
+        { trackUserProfileEditAction: I } = (0, u.NJ)();
+    return (0, i.jsx)(s.m, {
+        text: g.intl.string(g.t.HUvyDc),
         ariaHidden: !0,
-        children: (0, i.jsx)(s.DUT, {
-            innerRef: _,
+        children: (0, i.jsx)(o.D, {
+            innerRef: x,
             onClick: () => {
-                (0, d.ef)(n, t.applicationId),
-                    s.ORC.announce(c.intl.string(c.t["08HmMj"])),
-                    m({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: n }),
-                    h?.();
+                (0, _.ef)(n, t.applicationId),
+                    r.O.announce(g.intl.string(g.t["08HmMj"])),
+                    I({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: n }),
+                    p?.();
             },
-            "aria-label": c.intl.string(c.t.HUvyDc),
-            className: r()(A, u.v),
-            children: (0, i.jsx)(s.ucK, { size: a, className: u.K, color: s.LU0.colors.ICON_FEEDBACK_CRITICAL }),
+            "aria-label": g.intl.string(g.t.HUvyDc),
+            className: l()(m, f.v),
+            children: (0, i.jsx)(c.u, { size: a, className: f.K, color: d.A.colors.ICON_FEEDBACK_CRITICAL }),
         }),
     });
 }

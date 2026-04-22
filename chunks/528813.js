@@ -2,13 +2,13 @@
 n.d(t, { $: () => l, m: () => u });
 var r = n(56636),
     i = n(114922),
-    a = n(734481),
-    s = n(222367),
+    s = n(734481),
+    a = n(222367),
     o = n(90727);
 function l(e) {
     var t = e
         .split("\n")
-        .map(c)
+        .map(d)
         .filter(function (e) {
             return null !== e;
         });
@@ -20,24 +20,24 @@ function u(e) {
     if (!n) return t;
     var r = n[1],
         i = n[2];
-    return r && (t.tzid = r), (t.dtstart = (0, s.lP)(i)), t;
+    return r && (t.tzid = r), (t.dtstart = (0, a.lP)(i)), t;
 }
-function c(e) {
+function d(e) {
     if (!(e = e.replace(/^\s+|\s+$/, "")).length) return null;
     var t = /^([A-Z]+?)[:;]/.exec(e.toUpperCase());
-    if (!t) return d(e);
+    if (!t) return c(e);
     var n = t[1];
     switch (n.toUpperCase()) {
         case "RRULE":
         case "EXRULE":
-            return d(e);
+            return c(e);
         case "DTSTART":
             return u(e);
         default:
             throw Error("Unsupported RFC prop ".concat(n, " in ").concat(e));
     }
 }
-function d(e) {
+function c(e) {
     var t = u(e.replace(/^RRULE:/i, ""));
     return (
         e
@@ -45,14 +45,14 @@ function d(e) {
             .split(";")
             .forEach(function (n) {
                 var r = n.split("="),
-                    a = r[0],
-                    l = r[1];
-                switch (a.toUpperCase()) {
+                    l = r[0],
+                    d = r[1];
+                switch (l.toUpperCase()) {
                     case "FREQ":
-                        t.freq = i.j[l.toUpperCase()];
+                        t.freq = i.j[d.toUpperCase()];
                         break;
                     case "WKST":
-                        t.wkst = o.Wn[l.toUpperCase()];
+                        t.wkst = o.Wn[d.toUpperCase()];
                         break;
                     case "COUNT":
                     case "INTERVAL":
@@ -64,45 +64,40 @@ function d(e) {
                     case "BYHOUR":
                     case "BYMINUTE":
                     case "BYSECOND":
-                        var c = _(l);
-                        t[a.toLowerCase()] = c;
+                        var c,
+                            f = -1 !== (c = d).indexOf(",") ? c.split(",").map(_) : _(c);
+                        t[l.toLowerCase()] = f;
                         break;
                     case "BYWEEKDAY":
                     case "BYDAY":
-                        t.byweekday = p(l);
+                        t.byweekday = d.split(",").map(function (e) {
+                            if (2 === e.length) return o.Wn[e];
+                            var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
+                            if (!t || t.length < 3) throw SyntaxError("Invalid weekday string: ".concat(e));
+                            var n = Number(t[1]),
+                                r = t[2],
+                                i = o.Wn[r].weekday;
+                            return new s.B(i, n);
+                        });
                         break;
                     case "DTSTART":
                     case "TZID":
-                        var d = u(e);
-                        (t.tzid = d.tzid), (t.dtstart = d.dtstart);
+                        var E = u(e);
+                        (t.tzid = E.tzid), (t.dtstart = E.dtstart);
                         break;
                     case "UNTIL":
-                        t.until = (0, s.lP)(l);
+                        t.until = (0, a.lP)(d);
                         break;
                     case "BYEASTER":
-                        t.byeaster = Number(l);
+                        t.byeaster = Number(d);
                         break;
                     default:
-                        throw Error("Unknown RRULE property '" + a + "'");
+                        throw Error("Unknown RRULE property '" + l + "'");
                 }
             }),
         t
     );
 }
 function _(e) {
-    return -1 !== e.indexOf(",") ? e.split(",").map(f) : f(e);
-}
-function f(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
-}
-function p(e) {
-    return e.split(",").map(function (e) {
-        if (2 === e.length) return o.Wn[e];
-        var t = e.match(/^([+-]?\d{1,2})([A-Z]{2})$/);
-        if (!t || t.length < 3) throw SyntaxError("Invalid weekday string: ".concat(e));
-        var n = Number(t[1]),
-            r = t[2],
-            i = o.Wn[r].weekday;
-        return new a.B(i, n);
-    });
 }

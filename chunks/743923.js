@@ -1,52 +1,51 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        Chrono: () => i.u,
-        Meridiem: () => s.FF,
+r.r(t),
+    r.d(t, {
+        Chrono: () => s.u,
+        Meridiem: () => i.FF,
         ParsingComponents: () => a.BP,
         ParsingResult: () => a.s4,
         ReferenceWithTimezone: () => a.b5,
-        Weekday: () => s.Bw,
-        casual: () => A,
-        createCasualConfiguration: () => S,
+        Weekday: () => i.Bw,
+        casual: () => w,
+        createCasualConfiguration: () => C,
         createConfiguration: () => v,
-        parse: () => T,
-        parseDate: () => y,
-        strict: () => I,
+        parse: () => D,
+        parseDate: () => P,
+        strict: () => A,
     });
-var r = n(125659),
-    i = n(880683),
-    a = n(374372),
-    s = n(322811),
-    o = n(532740),
-    l = n(917741),
-    u = n(774188),
-    c = n(768474),
-    d = n(336002),
-    _ = n(55824),
-    f = n(734189),
-    p = n(894518),
-    h = n(166565),
-    m = n(680212),
-    g = n(728442),
-    E = n(936401);
-let A = new i.u(S()),
-    I = new i.u(v(!0));
-function T(e, t, n) {
-    return A.parse(e, t, n);
+var n = r(125659),
+    s = r(880683),
+    a = r(374372),
+    i = r(322811),
+    o = r(532740),
+    l = r(917741),
+    u = r(774188),
+    d = r(768474),
+    m = r(336002),
+    c = r(55824),
+    g = r(734189),
+    h = r(894518),
+    f = r(166565),
+    p = r(680212),
+    y = r(728442),
+    x = r(936401);
+let w = new s.u(C()),
+    A = new s.u(v(!0));
+function D(e, t, r) {
+    return w.parse(e, t, r);
 }
-function y(e, t, n) {
-    return A.parseDate(e, t, n);
+function P(e, t, r) {
+    return w.parseDate(e, t, r);
 }
-function S(e = !0) {
+function C(e = !0) {
     let t = v(!1, e);
-    return t.parsers.unshift(new o.A()), t.parsers.unshift(new l.A()), t.parsers.unshift(new E.A()), t;
+    return t.parsers.unshift(new o.A()), t.parsers.unshift(new l.A()), t.parsers.unshift(new x.A()), t;
 }
 function v(e = !0, t = !0) {
-    return (0, r.i)(
+    return (0, n.i)(
         {
-            parsers: [new u.A(t), new h.A(), new c.A(), new p.A(), new m.A(), new g.A(), new f.A()],
-            refiners: [new d.A(), new _.A()],
+            parsers: [new u.A(t), new f.A(), new d.A(), new h.A(), new p.A(), new y.A(), new g.A()],
+            refiners: [new m.A(), new c.A()],
         },
         e,
     );

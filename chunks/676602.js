@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Y0: "addAnotherRuleCardContainer__0c1e8",
     $F: "mainRuleContainer__0c1e8",

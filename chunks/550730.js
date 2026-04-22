@@ -1,37 +1,41 @@
-n.d(t, { A: () => b }), n(508300);
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(835245),
-    o = n(397927),
-    d = n(157559),
-    c = n(817363),
-    u = n(993408),
-    m = n(315949),
-    h = n(559474),
-    x = n(816866),
-    p = n(87558),
-    g = n(918550),
-    f = n(525221);
-let v = "Make sure you're only uploading text files!",
-    _ = (e) => {
-        let { profileEffect: t, onClick: n } = e,
-            { deleteProfileEffect: i } = (0, x.wu)();
-        return (0, a.jsxs)(o.DUT, {
-            className: f.B0,
-            onClick: n,
+a.d(t, { A: () => C }), a(508300);
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(835245),
+    o = a(939249),
+    d = a(834730),
+    c = a(821609),
+    u = a(534514),
+    m = a(292666),
+    h = a(157559),
+    p = a(817363),
+    x = a(993408),
+    g = a(315949),
+    v = a(559474),
+    b = a(816866),
+    _ = a(87558),
+    f = a(918550),
+    j = a(314485);
+let A = "Make sure you're only uploading text files!",
+    y = (e) => {
+        let { profileEffect: t, onClick: a } = e,
+            { deleteProfileEffect: l } = (0, b.wu)();
+        return (0, n.jsxs)(o.D, {
+            className: j.B0,
+            onClick: a,
             children: [
-                (0, a.jsx)("div", { className: f.yV, style: { backgroundImage: `url(${t.effects?.[0]?.base64})` } }),
-                (0, a.jsxs)("div", {
-                    className: f.eL,
+                (0, n.jsx)("div", { className: j.yV, style: { backgroundImage: `url(${t.effects?.[0]?.base64})` } }),
+                (0, n.jsxs)("div", {
+                    className: j.eL,
                     children: [
-                        (0, a.jsx)(o.Text, { variant: "text-md/bold", children: t.name }),
-                        (0, a.jsx)(o.Button, {
+                        (0, n.jsx)(d.E, { variant: "text-md/bold", children: t.name }),
+                        (0, n.jsx)(c.$, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), i(t.skuId);
+                                e.preventDefault(), e.stopPropagation(), l(t.skuId);
                             },
                         }),
                     ],
@@ -39,96 +43,96 @@ let v = "Make sure you're only uploading text files!",
             ],
         });
     };
-function b() {
-    let { profileEffects: e, upsertProfileEffect: t, clearAll: n } = (0, x.wu)(),
-        [s, b] = i.useState(),
-        j = i.useRef(null),
-        { categories: A } = (0, m.A)(),
-        C = i.useMemo(() => (0, u.Wj)(A), [A]),
-        [y, S] = i.useState(""),
-        E = i.useMemo(
+function C() {
+    let { profileEffects: e, upsertProfileEffect: t, clearAll: a } = (0, b.wu)(),
+        [i, C] = l.useState(),
+        E = l.useRef(null),
+        { categories: S } = (0, g.A)(),
+        N = l.useMemo(() => (0, x.Wj)(S), [S]),
+        [k, I] = l.useState(""),
+        D = l.useMemo(
             () =>
-                "" === y
-                    ? C
-                    : C.filter((e) => {
-                          let t = y.toLowerCase(),
-                              n = e.title?.toLowerCase() ?? "",
-                              a = e.description?.toLowerCase() ?? "";
-                          return n.includes(t) || a.includes(t);
+                "" === k
+                    ? N
+                    : N.filter((e) => {
+                          let t = k.toLowerCase(),
+                              a = e.title?.toLowerCase() ?? "",
+                              n = e.description?.toLowerCase() ?? "";
+                          return a.includes(t) || n.includes(t);
                       }),
-            [y, C],
+            [k, N],
         ),
-        T = i.useCallback(
-            (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, h.Ni)(v);
-                let [a, i] = n.split(",");
-                if (!a.includes("text/plain")) return (0, h.Ni)(v);
-                let s = JSON.parse(atob(i));
-                (s.skuId = (0, r.A)()), t(s), (0, h.GF)("Profile Effect (maybe??) imported!");
+        T = l.useCallback(
+            (e, a) => {
+                if (null == a || !e.type.startsWith("text/")) return (0, v.Ni)(A);
+                let [n, l] = a.split(",");
+                if (!n.includes("text/plain")) return (0, v.Ni)(A);
+                let i = JSON.parse(atob(l));
+                (i.skuId = (0, r.A)()), t(i), (0, v.GF)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        N = i.useCallback(
+        w = l.useCallback(
             (e) => {
                 e.currentTarget?.files == null
-                    ? (0, h.Ni)("Error uploading file. Try again!")
-                    : (0, h.KE)(e.currentTarget.files, T, h.Ni);
+                    ? (0, v.Ni)("Error uploading file. Try again!")
+                    : (0, v.KE)(e.currentTarget.files, T, v.Ni);
             },
             [T],
         );
-    return (0, a.jsxs)("div", {
-        className: f.zr,
+    return (0, n.jsxs)("div", {
+        className: j.zr,
         children: [
-            null == s &&
-                (0, a.jsxs)(a.Fragment, {
+            null == i &&
+                (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: f.nz,
+                        (0, n.jsxs)("div", {
+                            className: j.nz,
                             children: [
-                                (0, a.jsxs)("div", {
-                                    className: l()(f.uW, f.nM),
+                                (0, n.jsxs)("div", {
+                                    className: s()(j.uW, j.nM),
                                     children: [
-                                        (0, a.jsx)(o.Heading, {
+                                        (0, n.jsx)(u.D, {
                                             variant: "heading-xl/bold",
                                             children: "Custom Profile Effects",
                                         }),
-                                        (0, a.jsx)(o.Button, {
+                                        (0, n.jsx)(c.$, {
                                             variant: "critical-secondary",
                                             text: "Clear All",
                                             onClick: async () => {
-                                                (await d.A.confirm({
+                                                (await h.A.confirm({
                                                     title: "Clear All Profile Effects",
                                                     body: "Are you sure you want to clear all profile effects? This cannot be undone.",
                                                     confirmText: "Clear All",
                                                     confirmVariant: "critical-primary",
-                                                })) && (n(), (0, h.GF)("All profile effects cleared!"));
+                                                })) && (a(), (0, v.GF)("All profile effects cleared!"));
                                             },
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)("div", {
-                                    className: f.Iv,
+                                (0, n.jsx)("div", {
+                                    className: j.Iv,
                                     children: Object.values(e).map((e) =>
-                                        (0, a.jsx)(_, { profileEffect: e, onClick: () => b(e) }, e.skuId),
+                                        (0, n.jsx)(y, { profileEffect: e, onClick: () => C(e) }, e.skuId),
                                     ),
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)("div", {
-                            className: l()(f.nM, f._N, f.uW),
+                        (0, n.jsxs)("div", {
+                            className: s()(j.nM, j._N, j.uW),
                             children: [
-                                (0, a.jsxs)("div", {
-                                    className: f.au,
+                                (0, n.jsxs)("div", {
+                                    className: j.au,
                                     children: [
-                                        (0, a.jsx)(o.Text, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-md/normal",
                                             color: "always-white",
                                             children: "Import Shared Config",
                                         }),
-                                        (0, a.jsx)(c.A, { ref: j, onChange: N, multiple: !1 }),
+                                        (0, n.jsx)(p.A, { ref: E, onChange: w, multiple: !1 }),
                                     ],
                                 }),
-                                (0, a.jsx)(o.Button, {
+                                (0, n.jsx)(c.$, {
                                     variant: "primary",
                                     text: "Create New Effect",
                                     onClick: () => {
@@ -137,28 +141,28 @@ function b() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)("hr", {}),
-                        (0, a.jsxs)("div", {
-                            className: f.uW,
+                        (0, n.jsx)("hr", {}),
+                        (0, n.jsxs)("div", {
+                            className: j.uW,
                             children: [
-                                (0, a.jsx)(o.Heading, { variant: "heading-xl/bold", children: "All Effects" }),
-                                (0, a.jsx)(o.ksK, {
-                                    value: y,
+                                (0, n.jsx)(u.D, { variant: "heading-xl/bold", children: "All Effects" }),
+                                (0, n.jsx)(m.k, {
+                                    value: k,
                                     onChange: (e) => {
-                                        S(e);
+                                        I(e);
                                     },
                                 }),
-                                (0, a.jsx)("div", {
-                                    className: f.xm,
-                                    children: E.map((e) =>
-                                        (0, a.jsx)(
-                                            o.DUT,
+                                (0, n.jsx)("div", {
+                                    className: j.xm,
+                                    children: D.map((e) =>
+                                        (0, n.jsx)(
+                                            o.D,
                                             {
-                                                className: f.S5,
+                                                className: j.S5,
                                                 style: { backgroundImage: `url(${e.thumbnailPreviewSrc})` },
                                                 onClick: () => {
                                                     let t = {
-                                                        [p.qH.THUMBNAIL]:
+                                                        [_.qH.THUMBNAIL]:
                                                             null != e.thumbnailPreviewSrc &&
                                                             "" !== e.thumbnailPreviewSrc
                                                                 ? {
@@ -167,7 +171,7 @@ function b() {
                                                                       base64: "",
                                                                   }
                                                                 : null,
-                                                        [p.qH.STATIC]:
+                                                        [_.qH.STATIC]:
                                                             null != e.staticFrameSrc && "" !== e.staticFrameSrc
                                                                 ? {
                                                                       src: e.staticFrameSrc,
@@ -175,7 +179,7 @@ function b() {
                                                                       base64: "",
                                                                   }
                                                                 : null,
-                                                        [p.qH.REDUCED_MOTION]:
+                                                        [_.qH.REDUCED_MOTION]:
                                                             null != e.reducedMotionSrc && "" !== e.reducedMotionSrc
                                                                 ? {
                                                                       src: e.reducedMotionSrc,
@@ -184,7 +188,7 @@ function b() {
                                                                   }
                                                                 : null,
                                                     };
-                                                    b({
+                                                    C({
                                                         skuId: e.skuId,
                                                         name: e.title,
                                                         effects: e.effects,
@@ -192,9 +196,9 @@ function b() {
                                                         readonly: !0,
                                                     });
                                                 },
-                                                children: (0, a.jsx)("div", {
-                                                    className: f.Hd,
-                                                    children: (0, a.jsx)(o.Text, {
+                                                children: (0, n.jsx)("div", {
+                                                    className: j.Hd,
+                                                    children: (0, n.jsx)(d.E, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
                                                         children: e.title,
@@ -209,7 +213,7 @@ function b() {
                         }),
                     ],
                 }),
-            null != s && (0, a.jsx)(g.A, { profileEffect: s }),
+            null != i && (0, n.jsx)(f.A, { profileEffect: i }),
         ],
     });
 }

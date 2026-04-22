@@ -1,46 +1,49 @@
-n.d(e, { A: () => g });
-var i = n(627968),
-    s = n(64700),
-    r = n(397927),
-    a = n(311907),
-    l = n(49229),
-    o = n(975807),
-    c = n(928658),
-    d = n(426190),
-    E = n(662502),
-    _ = n(994500),
-    u = n(665909),
-    A = n(192311),
-    h = n(12105),
-    x = n(327337),
+n.d(e, { A: () => b });
+var a = n(627968),
+    r = n(64700),
+    s = n(821609),
+    i = n(285796),
+    l = n(138134),
+    o = n(534890),
+    c = n(311907),
+    d = n(49229),
+    u = n(975807),
+    E = n(928658),
+    h = n(426190),
+    _ = n(662502),
+    A = n(994500),
+    x = n(665909),
+    m = n(192311),
+    g = n(12105),
+    p = n(327337),
     T = n(985018),
-    m = n(286965);
-function g(t) {
-    let { senderId: e, channelId: n, hasReported: g, onReport: N, trackAnalyticsEvent: S } = t,
-        C = (0, a.bG)([_.A], () => _.A.isBlocked(e)),
-        [p, R] = s.useState(C),
-        I = (0, d.N)(),
-        f = (0, d.z)(),
-        [j, v] = s.useState(!1),
-        b = (0, A.W)(n),
-        O = s.useMemo(() => (I ? 0 : f ? 2 : 1), [I, f]),
-        L = async () => {
-            null != b &&
-                (v(!0),
-                await (0, c.LF)(
-                    b,
+    v = n(230780);
+function b(t) {
+    let { senderId: e, channelId: n, hasReported: b, onReport: f, trackAnalyticsEvent: N } = t,
+        C = (0, c.bG)([A.A], () => A.A.isBlocked(e)),
+        [S, I] = r.useState(C),
+        j = (0, h.N)(),
+        R = (0, h.z)(),
+        [w, O] = r.useState(!1),
+        y = (0, m.W)(n),
+        L = r.useMemo(() => (j ? 0 : R ? 2 : 1), [j, R]),
+        D = async () => {
+            null != y &&
+                (O(!0),
+                await (0, E.LF)(
+                    y,
                     () => {
-                        E.A.showReportSuccessToast(e, n), N();
+                        _.A.showReportSuccessToast(e, n), f();
                     },
                     () => {
-                        E.A.showFailedToast();
+                        _.A.showFailedToast();
                     },
                 ),
-                v(!1),
-                S(u.Wm.USER_TAKEOVER_MODAL_REPORT));
+                O(!1),
+                N(x.Wm.USER_TAKEOVER_MODAL_REPORT));
         },
-        w = s.useMemo(() => {
-            switch (O) {
+        M = r.useMemo(() => {
+            switch (L) {
                 case 0:
                     return T.intl.string(T.t.sZf6cz);
                 case 2:
@@ -48,51 +51,51 @@ function g(t) {
                 default:
                     return T.intl.string(T.t["65XQar"]);
             }
-        }, [O]);
-    return (0, i.jsx)(h.A, {
+        }, [L]);
+    return (0, a.jsx)(g.A, {
         header: T.intl.string(T.t["mWO+ys"]),
         description: T.intl.string(T.t.S0XtKF),
-        children: (0, i.jsxs)("div", {
-            className: m.UD,
+        children: (0, a.jsxs)("div", {
+            className: v.UD,
             children: [
-                (0, i.jsx)(r.Button, {
-                    text: p ? T.intl.string(T.t.XyHpKH) : T.intl.string(T.t.l4Emac),
+                (0, a.jsx)(s.$, {
+                    text: S ? T.intl.string(T.t.XyHpKH) : T.intl.string(T.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
-                    icon: r.aXh,
+                    icon: i.a,
                     onClick: () => {
-                        p
-                            ? (R(!1),
-                              l.A.unblockUser(e, { location: x.Ht }),
-                              S(u.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
-                              E.A.showUnblockSuccessToast(e, n))
-                            : (R(!0),
-                              S(u.Wm.USER_TAKEOVER_MODAL_BLOCK),
-                              l.A.blockUser(e, { location: x.Ht }).then(() => {
-                                  E.A.showBlockSuccessToast(e, n);
+                        S
+                            ? (I(!1),
+                              d.A.unblockUser(e, { location: p.Ht }),
+                              N(x.Wm.USER_TAKEOVER_MODAL_UNBLOCK),
+                              _.A.showUnblockSuccessToast(e, n))
+                            : (I(!0),
+                              N(x.Wm.USER_TAKEOVER_MODAL_BLOCK),
+                              d.A.blockUser(e, { location: p.Ht }).then(() => {
+                                  _.A.showBlockSuccessToast(e, n);
                               }));
                     },
                 }),
-                (0, i.jsx)(r.Button, {
-                    text: g ? T.intl.string(T.t.QvwOJ6) : T.intl.string(T.t["7fHyE6"]),
+                (0, a.jsx)(s.$, {
+                    text: b ? T.intl.string(T.t.QvwOJ6) : T.intl.string(T.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
-                    icon: r.iFK,
-                    onClick: L,
-                    loading: j,
-                    disabled: g,
+                    icon: l.i,
+                    onClick: D,
+                    loading: w,
+                    disabled: b,
                 }),
-                (0, i.jsx)(r.Button, {
-                    text: w,
+                (0, a.jsx)(s.$, {
+                    text: M,
                     variant: "secondary",
                     fullWidth: !0,
-                    icon: r.oyn,
+                    icon: o.o,
                     onClick: () => {
-                        0 === O
-                            ? ((0, o.A)(x.x7), S(u.Wm.USER_TAKEOVER_MODAL_CTL))
-                            : 2 === O
-                              ? ((0, o.A)(x.CL), S(u.Wm.USER_TAKEOVER_MODAL_THROUGHLINE))
-                              : ((0, o.A)(x.jR), S(u.Wm.USER_TAKEOVER_MODAL_NO_FILTR));
+                        0 === L
+                            ? ((0, u.A)(p.x7), N(x.Wm.USER_TAKEOVER_MODAL_CTL))
+                            : 2 === L
+                              ? ((0, u.A)(p.CL), N(x.Wm.USER_TAKEOVER_MODAL_THROUGHLINE))
+                              : ((0, u.A)(p.jR), N(x.Wm.USER_TAKEOVER_MODAL_NO_FILTR));
                     },
                 }),
             ],

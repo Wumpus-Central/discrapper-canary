@@ -3,9 +3,9 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(397927),
+    r = n(573613),
     o = n(235986),
-    d = n(657737);
+    d = n(621328);
 class c extends l.PureComponent {
     static defaultProps = { basis: 232, grow: 0, shrink: 0 };
     render() {
@@ -13,7 +13,7 @@ class c extends l.PureComponent {
         return e
             ? (0, i.jsx)("aside", {
                   className: d.EW,
-                  children: (0, i.jsx)(r.HOs, {
+                  children: (0, i.jsx)(r.Ip, {
                       fade: !0,
                       className: d.XG,
                       children: (0, i.jsx)(o.A.Child, { ...t, wrap: !0 }),

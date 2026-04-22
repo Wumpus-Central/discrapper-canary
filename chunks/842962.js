@@ -1,41 +1,38 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(643479),
-    i = n(668459),
-    a = n(420897);
-let s = { read: d },
-    o = "8BIM",
-    l = 2,
-    u = 4,
-    c = o.length;
-function d(e, t) {
-    let n = (0, r.MS)(new Uint8Array(e).buffer),
-        s = {},
-        d = 0;
-    for (; d < e.length; ) {
-        let e = (0, r.hT)(n, d, c);
-        d += c;
-        let f = i.A.getShortAt(n, d),
-            { tagName: p, tagNameSize: h } = _(n, (d += l));
-        d += h;
-        let m = i.A.getLongAt(n, d);
-        if (((d += u), e === o)) {
-            let e = (0, r.MS)(n.buffer, d, m),
-                i = { id: f, value: (0, r.hT)(e, 0, m) };
-            if (a.A[f]) {
-                try {
-                    i.description = a.A[f].description(e);
-                } catch (e) {
-                    i.description = "<no description formatter>";
+i.d(t, { A: () => a });
+var n = i(643479),
+    r = i(668459),
+    o = i(643278);
+let a = {
+        read: function (e, t) {
+            let i = (0, n.MS)(new Uint8Array(e).buffer),
+                a = {},
+                u = 0;
+            for (; u < e.length; ) {
+                let e = (0, n.hT)(i, u, l);
+                u += l;
+                let c = r.A.getShortAt(i, u),
+                    { tagName: d, tagNameSize: f } = (function (e, t) {
+                        let [i, r] = (0, n.z6)(e, t);
+                        return { tagName: r, tagNameSize: 1 + i + +(i % 2 == 0) };
+                    })(i, (u += 2));
+                u += f;
+                let p = r.A.getLongAt(i, u);
+                if (((u += 4), e === s)) {
+                    let e = (0, n.MS)(i.buffer, u, p),
+                        r = { id: c, value: (0, n.hT)(e, 0, p) };
+                    if (o.A[c]) {
+                        try {
+                            r.description = o.A[c].description(e);
+                        } catch (e) {
+                            r.description = "<no description formatter>";
+                        }
+                        a[d || o.A[c].name] = r;
+                    } else t && (a[`undefined-${c}`] = r);
                 }
-                s[p || a.A[f].name] = i;
-            } else t && (s[`undefined-${f}`] = i);
-        }
-        d += m + (m % 2);
-    }
-    return s;
-}
-function _(e, t) {
-    let [n, i] = (0, r.z6)(e, t);
-    return { tagName: i, tagNameSize: 1 + n + +(n % 2 == 0) };
-}
+                u += p + (p % 2);
+            }
+            return a;
+        },
+    },
+    s = "8BIM",
+    l = s.length;

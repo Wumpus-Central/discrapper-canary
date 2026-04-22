@@ -1,58 +1,58 @@
-a.d(t, { default: () => g });
-var n = a(627968),
-    s = a(64700),
-    i = a(110259),
-    l = a(158954),
-    r = a(311907),
-    c = a(397927),
-    o = a(139286),
-    d = a(287809),
-    u = a(274303),
-    m = a(970573),
-    _ = a(347853);
-a(573879);
-var x = a(652215),
-    A = a(985018),
-    f = a(202501);
-function g(e) {
-    let { transitionState: t, onClose: a } = e,
-        { currentUser: g, multiAccountUsers: h } = (0, r.cf)([d.default, u.A], () => ({
-            currentUser: d.default.getCurrentUser(),
+s.d(t, { default: () => f });
+var a = s(627968),
+    i = s(64700),
+    n = s(110259),
+    l = s(189213),
+    r = s(311907),
+    c = s(512950),
+    d = s(139286),
+    o = s(287809),
+    u = s(274303),
+    m = s(970573),
+    _ = s(347853);
+s(573879);
+var x = s(652215),
+    A = s(985018),
+    h = s(812001);
+function f(e) {
+    let { transitionState: t, onClose: s } = e,
+        { currentUser: f, multiAccountUsers: g } = (0, r.cf)([o.default, u.A], () => ({
+            currentUser: o.default.getCurrentUser(),
             multiAccountUsers: u.A.getUsers(),
         })),
-        [C, b] = s.useState(!1),
-        [p, N] = s.useState(x.dJq),
-        [T, U] = s.useState(null);
+        [p, N] = i.useState(!1),
+        [C, E] = i.useState(x.dJq),
+        [U, b] = i.useState(null);
     return (
-        s.useEffect(() => {
-            if (C)
-                U(
-                    (0, n.jsx)(c.po8, {
-                        messageType: c.YCn.ERROR,
-                        className: f.u,
+        i.useEffect(() => {
+            if (p)
+                b(
+                    (0, a.jsx)(c.p, {
+                        messageType: c.Y.ERROR,
+                        className: h.u,
                         children: A.intl.format(A.t.HAuRSM, { maxNumAccounts: 5 }),
                     }),
                 ),
-                    N(x.dJq);
-            else if (null != p) {
-                let e = d.default.getUser(p);
+                    E(x.dJq);
+            else if (null != C) {
+                let e = o.default.getUser(C);
                 null != e &&
-                    U(
-                        (0, n.jsx)(c.po8, {
-                            messageType: c.YCn.POSITIVE,
-                            className: f.u,
+                    b(
+                        (0, a.jsx)(c.p, {
+                            messageType: c.Y.POSITIVE,
+                            className: h.u,
                             children: A.intl.format(A.t["09qide"], { username: e.username }),
                         }),
                     ),
-                    b(!1);
+                    N(!1);
             }
-        }, [p, C]),
-        s.useEffect(() => {
-            h.length < 5 && b(!1);
-        }, [h]),
-        (0, o.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
-        (0, n.jsxs)(l.Modal, {
-            onClose: a,
+        }, [C, p]),
+        i.useEffect(() => {
+            g.length < 5 && N(!1);
+        }, [g]),
+        (0, d.A)({ type: n.ImpressionTypes.MODAL, name: n.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
+        (0, a.jsxs)(l.Modal, {
+            onClose: s,
             transitionState: t,
             size: "md",
             "aria-label": A.intl.string(A.t.WbFpq4),
@@ -63,24 +63,24 @@ function g(e) {
                     text: A.intl.string(A.t["9g2mqT"]),
                     variant: "secondary",
                     onClick: () => {
-                        h.length >= 5 ? b(!0) : (a(), (0, _.D)());
+                        g.length >= 5 ? N(!0) : (s(), (0, _.D)());
                     },
                 },
             ],
             children: [
-                T,
-                (0, n.jsx)(m.A, {
+                U,
+                (0, a.jsx)(m.A, {
                     actionText: A.intl.string(A.t.Wf421J),
                     onAction: (e, t) => {
                         switch (e) {
                             case m.X.LOGIN_REQUIRED:
-                                a(), (0, _.D)();
+                                s(), (0, _.D)();
                                 break;
                             case m.X.SWITCHED:
-                                a();
+                                s();
                                 break;
                             case m.X.REMOVED:
-                                t === g?.id && a(), N(t);
+                                t === f?.id && s(), E(t);
                         }
                     },
                 }),

@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { A_: () => s, Wu: () => i, ay: () => l });
+n.d(t, { A_: () => l, Wu: () => i, ay: () => s });
 let i = new Set(["Enter", "Tab"]),
-    s = new Set(["z", "y"]),
-    l = /[\n\t\r\f\v\x10]/;
+    l = new Set(["z", "y"]),
+    s = /[\n\t\r\f\v\x10]/;

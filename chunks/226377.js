@@ -1,110 +1,114 @@
-t.d(e, { b: () => C });
+t.d(e, { b: () => E });
 var n = t(627968),
     r = t(64700),
     s = t(284009),
     i = t.n(s),
     l = t(13202),
-    c = t(397927),
-    o = t(73153),
-    d = t(370480),
-    x = t(738104),
-    m = t(235986),
-    u = t(626584),
-    N = t(141241),
-    h = t(985018),
-    p = t(974651);
-let j = new u.A("TwoWayLink");
-function C(a) {
+    c = t(935462),
+    o = t(834730),
+    d = t(534514),
+    m = t(821609),
+    x = t(811893),
+    u = t(73153),
+    N = t(370480),
+    h = t(738104),
+    p = t(235986),
+    j = t(626584),
+    C = t(141241),
+    g = t(985018),
+    b = t(974651);
+let v = new j.A("TwoWayLink");
+function E(a) {
     let {
             platformType: e,
             isWaitingForConnection: t,
             onWaitingForConnection: s,
-            expectedCallbackState: u,
-            onAuthToken: C,
-            onError: g,
-            onClose: b,
-            img: v,
-            title: E,
-            body: f,
-            redirectDestination: k,
+            expectedCallbackState: j,
+            onAuthToken: E,
+            onError: k,
+            onClose: A,
+            img: f,
+            title: w,
+            body: D,
+            redirectDestination: _,
         } = a,
-        A = r.useCallback(async () => {
+        L = r.useCallback(async () => {
             let a;
             try {
-                if (((a = await (0, x.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
+                if (((a = await (0, h.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
                     throw Error("missing authorizeURL");
             } catch (a) {
-                j.error("Error opening provider authorize page", a), g();
+                v.error("Error opening provider authorize page", a), k();
                 return;
             }
-            let { state: t } = (0, d.vA)(a);
+            let { state: t } = (0, N.vA)(a);
             i()(null != t, "Authorize URL state query parameter must be present"), s?.(t);
-        }, [e, g, s]),
-        T = r.useCallback(
+        }, [e, k, s]),
+        R = r.useCallback(
             (a) => {
                 let { callbackCode: t, callbackState: n } = a;
-                n !== u
-                    ? j.warn(`${e} link: received mismatching callback state!`)
-                    : C({ callbackCode: t, callbackState: n });
+                n !== j
+                    ? v.warn(`${e} link: received mismatching callback state!`)
+                    : E({ callbackCode: t, callbackState: n });
             },
-            [e, u, C],
+            [e, j, E],
         );
     return (
         r.useEffect(
             () => (
-                o.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", T),
+                u.h.subscribe("USER_CONNECTIONS_LINK_CALLBACK", R),
                 () => {
-                    o.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", T);
+                    u.h.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", R);
                 }
             ),
-            [T],
+            [R],
         ),
-        (0, n.jsxs)(N.A, {
+        (0, n.jsxs)(C.A, {
             children: [
-                (0, n.jsxs)(c.rQ0, {
+                (0, n.jsxs)(c.rQ, {
                     "data-migration-pending": !0,
-                    direction: m.A.Direction.VERTICAL,
-                    className: p.wx,
+                    direction: p.A.Direction.VERTICAL,
+                    className: b.wx,
                     separator: !1,
                     children: [
-                        (0, n.jsx)(c.Text, {
-                            className: p.u1,
+                        (0, n.jsx)(o.E, {
+                            className: b.u1,
                             variant: "text-xs/bold",
                             color: "text-default",
-                            children: h.intl.format(h.t.fHz6eR, { number: 1, total: 2 }),
+                            children: g.intl.format(g.t.fHz6eR, { number: 1, total: 2 }),
                         }),
-                        (0, n.jsxs)("div", { className: p.bm, children: [v, " "] }),
-                        (0, n.jsx)(c.Heading, { className: p.DD, variant: "heading-xl/extrabold", children: E }),
-                        null != b && (0, n.jsx)(c.s_y, { className: p.b, onClick: b }),
+                        (0, n.jsxs)("div", { className: b.bm, children: [f, " "] }),
+                        (0, n.jsx)(d.D, { className: b.DD, variant: "heading-xl/extrabold", children: w }),
+                        null != A && (0, n.jsx)(c.s_, { className: b.b, onClick: A }),
                     ],
                 }),
-                (0, n.jsxs)(c.$mQ, {
+                (0, n.jsxs)(c.$m, {
                     "data-migration-pending": !0,
-                    className: p.rf,
+                    className: b.rf,
                     paddingFix: !1,
                     children: [
-                        (0, n.jsx)(c.Text, { tag: "p", variant: "text-md/normal", color: "text-default", children: f }),
+                        (0, n.jsx)(o.E, { tag: "p", variant: "text-md/normal", color: "text-default", children: D }),
                         !t &&
-                            null != k &&
-                            (0, n.jsx)(c.Text, {
+                            null != _ &&
+                            (0, n.jsx)(o.E, {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: h.intl.format(h.t.XhlYYn, { redirectUrl: k }),
+                                children: g.intl.format(g.t.XhlYYn, { redirectUrl: _ }),
                             }),
                     ],
                 }),
-                (0, n.jsx)(c.jlY, {
+                (0, n.jsx)(c.jl, {
                     "data-migration-pending": !0,
-                    className: p.qr,
-                    children: (0, n.jsx)(c.Button, {
+                    className: b.qr,
+                    children: (0, n.jsx)(m.$, {
                         variant: t ? "secondary" : "primary",
-                        text: h.intl.format(t ? h.t["8Laby+"] : h.t["6623tt"], {
+                        text: g.intl.format(t ? g.t["8Laby+"] : g.t["6623tt"], {
                             popoutWindowIcon: {},
                             popoutWindowIconHook: () =>
-                                (0, n.jsx)(c.tfB, { color: "currentColor", className: p.LE, size: "xs" }),
+                                (0, n.jsx)(x.t, { color: "currentColor", className: b.LE, size: "xs" }),
                         }),
-                        onClick: A,
+                        onClick: L,
                         fullWidth: !0,
                     }),
                 }),

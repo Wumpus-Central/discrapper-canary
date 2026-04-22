@@ -3,11 +3,11 @@ var i = r(627968);
 r(64700);
 var n = r(503698),
     a = r.n(n),
-    s = r(397927),
+    s = r(777666),
     l = r(953727),
     o = r(927135),
     c = r(985018),
-    d = r(469340);
+    d = r(988460);
 function u(e) {
     return (0, i.jsx)("svg", {
         ...(0, l.A)({ ...e }),
@@ -32,7 +32,7 @@ function m(e) {
     return (0, i.jsx)(o.A, {
         className: t,
         forceUseColor: r,
-        children: (0, i.jsx)(s.LpS, {
+        children: (0, i.jsx)(s.Lp, {
             disableColor: !0,
             className: a()(d.Tc, { [d.YO]: n, [d.ju]: l }),
             text: c.intl.string(c.t.y2b7CA),

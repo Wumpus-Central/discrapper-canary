@@ -1,21 +1,22 @@
-"use strict";
 n.d(t, { F: () => _ });
-var r = n(627968);
+var l = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(417597),
-    o = n(397927),
-    l = n(909206),
+    r = n(150934),
+    o = n(292666),
+    c = n(892547),
+    d = n(909206),
     u = n(10716),
-    c = n(985018),
-    d = n(878753);
+    m = n(985018),
+    p = n(393856);
 function _(e) {
     let { hideSearch: t, className: n } = e,
         {
             activityUrlOverride: i,
             useActivityUrlOverride: _,
-            filter: f,
+            filter: A,
         } = (0, s.cf)(
             [u.A],
             () => ({
@@ -25,26 +26,30 @@ function _(e) {
             }),
             [],
         );
-    function p() {
-        l._9("");
-    }
-    return (0, r.jsxs)("div", {
-        className: a()(d.kL, n),
+    return (0, l.jsxs)("div", {
+        className: a()(p.kL, n),
         children: [
-            (0, r.jsx)(o.Checkbox, { checked: _, onChange: l.c2, label: c.intl.string(c.t["3TSGuD"]) }),
+            (0, l.jsx)(r.S, { checked: _, onChange: d.c2, label: m.intl.string(m.t["3TSGuD"]) }),
             _
-                ? (0, r.jsx)(o.ksK, {
-                      label: c.intl.string(c.t["9rnmem"]),
+                ? (0, l.jsx)(o.k, {
+                      label: m.intl.string(m.t["9rnmem"]),
                       disabled: !_,
                       value: i ?? void 0,
-                      onChange: l.ri,
+                      onChange: d.ri,
                       placeholder: "https://localhost:3000",
                   })
                 : null,
             !0 === t
                 ? null
-                : (0, r.jsx)("div", {
-                      children: (0, r.jsx)(o.IWV, { size: "sm", query: f, onChange: l._9, onClear: p }),
+                : (0, l.jsx)("div", {
+                      children: (0, l.jsx)(c.I, {
+                          size: "sm",
+                          query: A,
+                          onChange: d._9,
+                          onClear: function () {
+                              d._9("");
+                          },
+                      }),
                   }),
         ],
     });

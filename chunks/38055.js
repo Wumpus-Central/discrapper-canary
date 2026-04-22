@@ -1,70 +1,77 @@
 "use strict";
-n.d(t, { A: () => _, MemberListContentSettingsMenu: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(708197),
-    l = n(435738),
-    u = n(652215),
-    c = n(985018);
-let d = (e) => {
+n.d(t, { A: () => A, MemberListContentSettingsMenu: () => x });
+var i = n(627968),
+    l = n(64700),
+    s = n(311907),
+    r = n(861672),
+    a = n(477782),
+    o = n(885574),
+    c = n(192308),
+    u = n(952270),
+    d = n(265872),
+    h = n(939249),
+    m = n(625903),
+    p = n(708197),
+    f = n(435738),
+    g = n(652215),
+    _ = n(985018);
+let x = (e) => {
         let { closePopout: t } = e,
-            i = (0, a.bG)([l.A], () => l.A.hidden);
-        return (0, r.jsx)(s.W1t, {
+            l = (0, s.bG)([f.A], () => f.A.hidden);
+        return (0, i.jsx)(r.W, {
             "data-menu-migrated": !0,
             onSelect: () => {},
             navId: "member-list-settings-menu",
-            onClose: null != t ? t : u.tEg,
-            "aria-label": c.intl.string(c.t.w2jvOf),
-            children: (0, r.jsxs)(s.rXV, {
+            onClose: null != t ? t : g.tEg,
+            "aria-label": _.intl.string(_.t.w2jvOf),
+            children: (0, i.jsxs)(a.rX, {
                 children: [
-                    (0, r.jsx)(s.Drp, {
+                    (0, i.jsx)(a.Dr, {
                         id: "about",
-                        label: c.intl.string(c.t.pWLGnF),
-                        leadingAccessory: { type: "icon", icon: s.mir },
-                        icon: s.mir,
+                        label: _.intl.string(_.t.pWLGnF),
+                        leadingAccessory: { type: "icon", icon: o.m },
+                        icon: o.m,
                         action: () => {
-                            (0, s.mMO)(async () => {
+                            (0, c.openModalLazy)(async () => {
                                 let { default: e } = await n.e("90309").then(n.bind(n, 643460));
-                                return (t) => (0, r.jsx)(e, { ...t });
+                                return (t) => (0, i.jsx)(e, { ...t });
                             }),
                                 t?.();
                         },
                     }),
-                    (0, r.jsx)(s.sLh, {
+                    (0, i.jsx)(a.sL, {
                         id: "hide",
-                        label: c.intl.string(c.t.AhNYuY),
-                        checked: i,
-                        leadingAccessory: { type: "icon", icon: s.G3N },
+                        label: _.intl.string(_.t.AhNYuY),
+                        checked: l,
+                        leadingAccessory: { type: "icon", icon: u.G },
                         action: () => {
-                            (0, o.Il)(), t?.();
+                            (0, p.Il)(), t?.();
                         },
                     }),
                 ],
             }),
         });
     },
-    _ = () => {
-        let e = i.useRef(null);
-        return (0, r.jsx)(s.YNO, {
+    A = () => {
+        let e = l.useRef(null);
+        return (0, i.jsx)(d.Y, {
             targetElementRef: e,
-            animation: s.YNO.Animation.NONE,
+            animation: d.Y.Animation.NONE,
             position: "bottom",
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(d, { closePopout: t });
+                return (0, i.jsx)(x, { closePopout: t });
             },
             children: (t) =>
-                (0, r.jsx)(s.DUT, {
+                (0, i.jsx)(h.D, {
                     ...t,
                     innerRef: e,
                     onClick: (e) => {
                         e.stopPropagation(), t.onClick(e);
                     },
                     style: { width: "12px", height: "12px", display: "flex" },
-                    children: (0, r.jsx)(s.Zes, { size: "xxs" }),
+                    children: (0, i.jsx)(m.Z, { size: "xxs" }),
                 }),
         });
     };

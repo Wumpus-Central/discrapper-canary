@@ -1,32 +1,28 @@
 "use strict";
-n.d(t, { HP: () => a, Jp: () => u, fy: () => o, nf: () => l, xv: () => s });
-var r = n(353640),
-    i = n(121894),
-    a = (function (e) {
-        return (
-            (e.CLIENT_THEMES = "CLIENT_THEMES"),
-            (e.APP_ICON = "APP_ICON"),
-            (e.CUSTOM_THEME = "CUSTOM_THEME"),
-            (e.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (
-            (e.CLIENT_THEMES_EDITOR = "CLIENT_THEMES_EDITOR"),
-            (e.SETTING = "SETTING"),
-            (e.SHARE_MESSAGE = "SHARE_MESSAGE"),
-            e
-        );
-    })({});
-let o = (0, r.v)(() => ({ activePanel: null, metadata: null }));
-function l(e, t) {
-    (0, i.r)(() => {
-        o.setState({ activePanel: e, metadata: t ?? null });
+n.d(t, { HP: () => o, Jp: () => c, fy: () => u, nf: () => d, xv: () => l });
+var r,
+    i,
+    s = n(353640),
+    a = n(121894),
+    o =
+        (((r = {}).CLIENT_THEMES = "CLIENT_THEMES"),
+        (r.APP_ICON = "APP_ICON"),
+        (r.CUSTOM_THEME = "CUSTOM_THEME"),
+        (r.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
+        r),
+    l =
+        (((i = {}).CLIENT_THEMES_EDITOR = "CLIENT_THEMES_EDITOR"),
+        (i.SETTING = "SETTING"),
+        (i.SHARE_MESSAGE = "SHARE_MESSAGE"),
+        i);
+let u = (0, s.v)(() => ({ activePanel: null, metadata: null }));
+function d(e, t) {
+    (0, a.r)(() => {
+        u.setState({ activePanel: e, metadata: t ?? null });
     });
 }
-function u() {
-    (0, i.r)(() => {
-        o.setState({ activePanel: null, metadata: null });
+function c() {
+    (0, a.r)(() => {
+        u.setState({ activePanel: null, metadata: null });
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => H }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -7,169 +7,177 @@ var i = n(627968),
     o = n.n(r),
     d = n(837381),
     c = n(311907),
-    u = n(397927),
-    h = n(928039),
-    A = n(793574),
-    _ = n(688810),
-    m = n(222823),
-    g = n(203982),
-    p = n(661191),
-    f = n(851109),
-    x = n(932883),
-    E = n(39324),
-    I = n(320697),
-    C = n(394953),
-    N = n(628325),
-    T = n(524628),
-    S = n(849077),
-    b = n(652215),
-    y = n(228160),
-    v = n(985018),
-    j = n(852259);
-function R(e) {
+    u = n(939249),
+    h = n(331322),
+    A = n(534514),
+    _ = n(847374),
+    m = n(912592),
+    g = n(827734),
+    p = n(834730),
+    f = n(821609),
+    E = n(599319),
+    x = n(928039),
+    I = n(793574),
+    C = n(688810),
+    b = n(222823),
+    N = n(203982),
+    S = n(661191),
+    v = n(851109),
+    T = n(932883),
+    y = n(816943),
+    R = n(320697),
+    j = n(394953),
+    L = n(628325),
+    O = n(524628),
+    G = n(849077),
+    D = n(652215),
+    M = n(756195),
+    U = n(985018),
+    P = n(645875);
+function w(e) {
     e.stopPropagation();
 }
-function O(e) {
+function k(e) {
     let { group: t, isOpen: n, toggleOpenedState: l } = e;
-    return (0, i.jsx)(u.DUT, {
+    return (0, i.jsx)(u.D, {
         "aria-expanded": n,
         onClick: l,
-        className: a()(j.TP, { [j.yZ]: !n }),
-        children: (0, i.jsxs)(u.BJc, {
+        className: a()(P.TP, { [P.yZ]: !n }),
+        children: (0, i.jsxs)(h.B, {
             gap: 4,
             direction: "horizontal",
             align: "center",
             children: [
-                (0, i.jsx)(u.Heading, {
+                (0, i.jsx)(A.D, {
                     variant: "text-sm/medium",
                     color: "text-subtle",
-                    className: j.P7,
-                    children: (0, r.capitalize)(v.intl.string(S.v7[t]).toLowerCase()),
+                    className: P.P7,
+                    children: (0, r.capitalize)(U.intl.string(G.v7[t]).toLowerCase()),
                 }),
-                (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
+                (0, i.jsx)(_.a, { size: "xxs", className: P.ai }),
             ],
         }),
     });
 }
-let L = [S.Ur.UNREAD, S.Ur.TODAY, S.Ur.YESTERDAY, S.Ur.OLDER];
-function M() {
-    let { analyticsLocations: e } = (0, _.Ay)(A.A.NOTIFICATIONS_INBOX);
+let V = [G.Ur.UNREAD, G.Ur.TODAY, G.Ur.YESTERDAY, G.Ur.OLDER];
+function B() {
+    let { analyticsLocations: e } = (0, C.Ay)(I.A.NOTIFICATIONS_INBOX);
     return (0, i.jsx)("div", {
-        className: j.y7,
-        children: (0, i.jsxs)(u.BJc, {
+        className: P.y7,
+        children: (0, i.jsxs)(h.B, {
             gap: 24,
             align: "center",
             children: [
-                (0, i.jsxs)(u.BJc, {
+                (0, i.jsxs)(h.B, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, i.jsx)(u.K$s, {
+                        (0, i.jsx)(m.K, {
                             size: "custom",
                             height: 40,
                             width: 40,
-                            color: u.LU0.colors.BACKGROUND_MOD_STRONG,
+                            color: g.A.colors.BACKGROUND_MOD_STRONG,
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, i.jsx)(p.E, {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
-                            children: v.intl.string(y.default["O+racd"]),
+                            children: U.intl.string(M.default["O+racd"]),
                         }),
                     ],
                 }),
-                (0, i.jsx)(u.Button, {
+                (0, i.jsx)(f.$, {
                     variant: "secondary",
-                    onClick: () => (0, C.tZ)(e),
-                    text: v.intl.string(y.default.klSpfs),
+                    onClick: () => (0, j.tZ)(e),
+                    text: U.intl.string(M.default.klSpfs),
                 }),
             ],
         }),
     });
 }
-function D(e) {
+function H(e) {
     let t,
         {
             messages: n,
             unreadMessages: s,
             loadMore: r,
-            renderLoadingState: A,
-            renderMessageGroup: _,
-            scrollerClassName: y,
-            className: v,
-            listName: D,
-            ignoreGrouping: U = !1,
+            renderLoadingState: u,
+            renderMessageGroup: h,
+            scrollerClassName: A,
+            className: _,
+            listName: m,
+            ignoreGrouping: g = !1,
         } = e,
-        G = (0, x.op)(),
-        P = l.useRef(null),
-        k = (0, h.A)(D, P),
-        { entrypoint: w, notificationCenterVariant: B } = (0, f.X8)({ location: "NotificationsInboxSidebarList" }),
+        p = (0, T.op)(),
+        f = l.useRef(null),
+        I = (0, x.A)(m, f),
+        { entrypoint: C, notificationCenterVariant: M } = (0, v.X8)({ location: "NotificationsInboxSidebarList" }),
         {
-            isLoading: V,
+            isLoading: U,
             isLoadingComplete: H,
             hasLoadedEver: F,
-        } = (0, c.cf)([I.A], () => ({
-            isLoading: I.A.isLoading,
-            isLoadingComplete: I.A.isLoadingComplete,
-            hasLoadedEver: I.A.hasLoadedEver,
+        } = (0, c.cf)([R.A], () => ({
+            isLoading: R.A.isLoading,
+            isLoadingComplete: R.A.isLoadingComplete,
+            hasLoadedEver: R.A.hasLoadedEver,
         })),
-        W = !F && V,
-        { messageCategoryOpenStates: K, toggleOpenState: Y } = (0, E.A)(),
+        W = !F && U,
+        { messageCategoryOpenStates: Y, toggleOpenState: K } = (0, y.A)(),
         z =
-            ((t = (0, c.yK)([I.A], () => I.A.getNotifyingChannelIds() ?? [])),
-            (0, c.bG)([I.A, m.Ay], () => {
-                let e = I.A.getChannelInfoMap();
+            ((t = (0, c.yK)([R.A], () => R.A.getNotifyingChannelIds() ?? [])),
+            (0, c.bG)([R.A, b.Ay], () => {
+                let e = R.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && m.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === G.Ve.UNLOADED) && b.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
     l.useEffect(() => {
         function e() {
-            P.current?.scrollPageUp({ animate: !0 });
+            f.current?.scrollPageUp({ animate: !0 });
         }
         function t() {
-            P.current?.scrollPageDown({ animate: !0 });
+            f.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            g._.subscribe(b.jej.SCROLL_PAGE_DOWN, t),
-            g._.subscribe(b.jej.SCROLL_PAGE_UP, e),
+            N._.subscribe(D.jej.SCROLL_PAGE_DOWN, t),
+            N._.subscribe(D.jej.SCROLL_PAGE_UP, e),
             () => {
-                g._.unsubscribe(b.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(b.jej.SCROLL_PAGE_UP, e);
+                N._.unsubscribe(D.jej.SCROLL_PAGE_DOWN, t), N._.unsubscribe(D.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
     let q = l.useCallback(() => {
-            let e = P.current?.getScrollerState();
+            let e = f.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
-            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(S.VA.USER_SCROLL);
+            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(G.VA.USER_SCROLL);
         }, [r]),
         X = l.useMemo(() => {
-            let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
-                t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
-                i = { [S.Ur.UNREAD]: {}, [S.Ur.TODAY]: {}, [S.Ur.YESTERDAY]: {}, [S.Ur.OLDER]: {} };
+            let e = { [G.Ur.UNREAD]: [], [G.Ur.TODAY]: [], [G.Ur.YESTERDAY]: [], [G.Ur.OLDER]: [] },
+                t = { [G.Ur.UNREAD]: [], [G.Ur.TODAY]: [], [G.Ur.YESTERDAY]: [], [G.Ur.OLDER]: [] },
+                i = { [G.Ur.UNREAD]: {}, [G.Ur.TODAY]: {}, [G.Ur.YESTERDAY]: {}, [G.Ur.OLDER]: {} };
             return (
                 (n.length > 0 || s.length > 0) &&
                     (o().each(s, (e) => {
-                        e.kind === S.yL.MENTION
-                            ? t[S.Ur.UNREAD].push(e)
-                            : e.channelId in i[S.Ur.UNREAD]
-                              ? i[S.Ur.UNREAD][e.channelId].push(e)
-                              : (i[S.Ur.UNREAD][e.channelId] = [e]);
+                        e.kind === G.yL.MENTION
+                            ? t[G.Ur.UNREAD].push(e)
+                            : e.channelId in i[G.Ur.UNREAD]
+                              ? i[G.Ur.UNREAD][e.channelId].push(e)
+                              : (i[G.Ur.UNREAD][e.channelId] = [e]);
                     }),
                     o().each(n, (e) => {
-                        let n = (0, C.i7)(e);
-                        e.kind === S.yL.MENTION
+                        let n = (0, j.i7)(e);
+                        e.kind === G.yL.MENTION
                             ? t[n].push(e)
                             : e.channelId in i[n]
                               ? i[n][e.channelId].push(e)
                               : (i[n][e.channelId] = [e]);
                     }),
-                    o().each(L, (n) => {
+                    o().each(V, (n) => {
                         [...Object.values(i[n]).map((e) => e.reverse()), ...t[n].map((e) => [e])]
-                            .sort((e, t) => p.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => S.default.compare(t[0].id, e[0].id))
                             .forEach((t) => {
                                 e[n].push(t);
                             });
@@ -177,94 +185,94 @@ function D(e) {
                 e
             );
         }, [n, s]),
-        $ = 0 === n.length && 0 === s.length && H,
-        J = 0 === n.length && 0 === s.length && !F && V,
-        Q = l.useMemo(() => {
+        Q = 0 === n.length && 0 === s.length && H,
+        J = 0 === n.length && 0 === s.length && !F && U,
+        Z = l.useMemo(() => {
             let e = [];
             return (
                 J
-                    ? e.push(A())
-                    : $
-                      ? e.push((0, i.jsx)(M, {}, "empty-state"))
-                      : U
-                        ? (e.push(...s.map((e) => _([e], !0))), e.push(...n.map((e) => _([e], !1))))
-                        : o().each(L, (t) => {
+                    ? e.push(u())
+                    : Q
+                      ? e.push((0, i.jsx)(B, {}, "empty-state"))
+                      : g
+                        ? (e.push(...s.map((e) => h([e], !0))), e.push(...n.map((e) => h([e], !1))))
+                        : o().each(V, (t) => {
                               0 !== X[t].length &&
                                   (e.push(
                                       (0, i.jsx)(
-                                          O,
+                                          k,
                                           {
                                               group: t,
-                                              isOpen: K[t],
+                                              isOpen: Y[t],
                                               toggleOpenedState: () => {
-                                                  let e = K[t];
-                                                  Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: G });
+                                                  let e = Y[t];
+                                                  K(t), (0, T.Ut)({ section: t, enabled: !e, viewId: p });
                                               },
                                           },
                                           t,
                                       ),
                                   ),
-                                  K[t] && e.push(...X[t].map((e) => _(e, t === S.Ur.UNREAD))));
+                                  Y[t] && e.push(...X[t].map((e) => h(e, t === G.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, s, A, K, Y, X, U, _, $, J, G]),
-        Z = Q[Q.length - 1],
-        ee = l.isValidElement(Z) && Z.type === O,
-        et = (0, N.S)((e) => e.setInboxReadState);
+        }, [n, s, u, Y, K, X, g, h, Q, J, p]),
+        $ = Z[Z.length - 1],
+        ee = l.isValidElement($) && $.type === k,
+        et = (0, L.S)((e) => e.setInboxReadState);
     l.useEffect(() => {
         J || et(0 === X.UNREAD.length);
     }, [X, J, et]);
-    let en = (n.length > 0 || s.length > 0) && null != r && V;
+    let en = (n.length > 0 || s.length > 0) && null != r && U;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             i = l.useRef(!1),
             s = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: a } = (0, E.A)();
+            { setOpenStateFromUnreads: a } = (0, y.A)();
         l.useEffect(() => {
             t || i.current || (a(s), (i.current = !0));
         }, [a, s, t]);
     })({ messagesByCategory: X, loadingInitial: W });
     let ei = l.useCallback(() => {
-        let e = L.filter((e) => K[e]).reduce((e, t) => e + X[t].length, 0),
-            t = P.current?.getScrollerState();
+        let e = V.filter((e) => Y[e]).reduce((e, t) => e + X[t].length, 0),
+            t = f.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [K, X]);
+    }, [Y, X]);
     l.useEffect(() => {
-        J || V || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
-    }, [ei, r, J, V, ee, z]);
+        J || U || 0 >= ei() || ((!ee || z) && r?.(G.VA.FILL_SCROLLER));
+    }, [ei, r, J, U, ee, z]);
     let el = l.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
-        return (0, i.jsx)(T.A, { withHeader: !1, size: e });
+        return (0, i.jsx)(O.A, { withHeader: !1, size: e });
     }, [ei]);
     return (
-        (0, x.Hi)({
-            notificationCenterVariant: B,
-            entrypoint: w,
+        (0, T.Hi)({
+            notificationCenterVariant: M,
+            entrypoint: C,
             messages: n,
             unreadMessages: s,
             messagesByCategory: X,
-            viewId: G,
+            viewId: p,
         }),
         (0, i.jsx)("div", {
-            className: a()(v, j.KQ),
-            onClick: R,
-            onDoubleClick: R,
+            className: a()(_, P.KQ),
+            onClick: w,
+            onDoubleClick: w,
             "aria-label": e["aria-label"],
             children: (0, i.jsx)(d.hD, {
-                navigator: k,
+                navigator: I,
                 children: (0, i.jsx)(d.PR, {
                     children: (e) => {
                         let { ref: t, ...n } = e;
-                        return (0, i.jsxs)(u.T7Y, {
+                        return (0, i.jsxs)(E.Ch, {
                             ref: (e) => {
-                                (P.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                (f.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: a()(j.m4, y),
+                            className: a()(P.m4, A),
                             onScroll: q,
                             fade: !0,
                             ...n,
-                            children: [Q, en && !ee ? el : null],
+                            children: [Z, en && !ee ? el : null],
                         });
                     },
                 }),

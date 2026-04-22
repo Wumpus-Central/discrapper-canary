@@ -1,88 +1,87 @@
-"use strict";
-n.d(t, { A: () => x });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(833349),
-    a = n(682261),
-    o = n(874546),
-    l = n(765379),
-    u = n(141639),
-    c = n(61330),
-    d = n(960076),
-    _ = n(709309),
-    f = n(359549),
-    p = n(373966),
-    h = n(913948),
-    m = n(793574),
-    E = n(688810),
-    g = n(362490),
-    A = n(308335),
-    I = n(82149),
-    T = n(961350),
-    S = n(790381),
-    y = n(266080),
-    v = n(939496),
-    N = n(934173),
-    C = n(691041),
-    R = n(306300),
-    O = n(793838),
-    b = n(668880),
-    D = n(72742),
-    L = n(312784),
-    w = n(985629),
-    M = n(652215),
-    P = n(996988);
-function x(e) {
-    let { user: t, activity: n, onAction: x, onClose: k, application: U, containerClassName: G } = e,
-        { themeType: F } = (0, v.E)(),
-        V = (0, i.bG)([T.default], () => T.default.getId() === t.id),
-        B = (0, f.J)(U),
-        H = (0, A.o)(n?.application_id ?? U?.id),
-        { analyticsLocations: j } = (0, E.Ay)(m.A.USER_PROFILE_ACTIVITY_BUTTONS),
-        Y = (0, _.A)("user_profile_activity_buttons", n?.application_id),
-        { fetched: W, canStartAuthorization: K, hasAlreadyLinked: $, startAuthorization: z } = (0, g.RD)(U),
-        q = F === P.d.MODAL || F === P.d.MODAL_V2,
-        Z = F === P.d.POPOUT,
-        X = (() => {
-            if (V)
-                return Z && n?.type === M.$pd.PLAYING && U?.id != null
-                    ? (0, r.jsx)(p.A, { applicationId: U.id, onAction: x, onClose: k })
+e.d(n, { A: () => U });
+var i = e(627968);
+e(64700);
+var l = e(311907),
+    r = e(833349),
+    a = e(682261),
+    s = e(874546),
+    o = e(765379),
+    c = e(141639),
+    u = e(61330),
+    d = e(960076),
+    A = e(709309),
+    x = e(359549),
+    p = e(373966),
+    f = e(913948),
+    _ = e(793574),
+    m = e(688810),
+    E = e(362490),
+    T = e(308335),
+    g = e(82149),
+    N = e(961350),
+    C = e(790381),
+    I = e(266080),
+    O = e(939496),
+    S = e(934173),
+    y = e(691041),
+    h = e(306300),
+    j = e(793838),
+    v = e(668880),
+    P = e(72742),
+    L = e(312784),
+    R = e(985629),
+    b = e(652215),
+    D = e(996988);
+function U(t) {
+    let { user: n, activity: e, onAction: U, onClose: M, application: G, containerClassName: V } = t,
+        { themeType: Y } = (0, O.E)(),
+        k = (0, l.bG)([N.default], () => N.default.getId() === n.id),
+        W = (0, x.J)(G),
+        B = (0, T.o)(e?.application_id ?? G?.id),
+        { analyticsLocations: w } = (0, m.Ay)(_.A.USER_PROFILE_ACTIVITY_BUTTONS),
+        F = (0, A.A)("user_profile_activity_buttons", e?.application_id),
+        { fetched: H, canStartAuthorization: z, hasAlreadyLinked: X, startAuthorization: $ } = (0, E.RD)(G),
+        Q = Y === D.d.MODAL || Y === D.d.MODAL_V2,
+        q = Y === D.d.POPOUT,
+        J = (() => {
+            if (k)
+                return q && e?.type === b.$pd.PLAYING && G?.id != null
+                    ? (0, i.jsx)(p.A, { applicationId: G.id, onAction: U, onClose: M })
                     : null;
-            if (n?.buttons != null && n?.buttons.length >= 1)
-                return (0, r.jsx)(N.A, { user: t, activity: n, onAction: x });
-            if (!H && B && null != U && !q)
-                return (0, r.jsx)(w.A, { application: U, onAction: x, onClose: k, analyticsLocations: j });
-            if ((0, l.A)(n) || ((0, o.Ay)(n) && H))
-                return (0, r.jsx)(C.A, { user: t, activity: n, onAction: x, onClose: k });
-            if (W && K && !$) return (0, r.jsx)(R.A, { startAuthorization: z, onAction: x });
-            if (Y.length > 0)
-                return (0, r.jsx)(h.A, {
-                    distributorCTAConfigs: Y,
-                    fullWidth: F !== P.d.MODAL_V2,
+            if (e?.buttons != null && e?.buttons.length >= 1)
+                return (0, i.jsx)(S.A, { user: n, activity: e, onAction: U });
+            if (!B && W && null != G && !Q)
+                return (0, i.jsx)(R.A, { application: G, onAction: U, onClose: M, analyticsLocations: w });
+            if ((0, o.A)(e) || ((0, s.Ay)(e) && B))
+                return (0, i.jsx)(y.A, { user: n, activity: e, onAction: U, onClose: M });
+            if (H && z && !X) return (0, i.jsx)(h.A, { startAuthorization: $, onAction: U });
+            if (F.length > 0)
+                return (0, i.jsx)(f.A, {
+                    distributorCTAConfigs: F,
+                    fullWidth: Y !== D.d.MODAL_V2,
                     stopPropagation: !0,
-                    onAction: x,
-                    onClose: k,
+                    onAction: U,
+                    onClose: M,
                 });
-            if (!(0, a.A)(n)) {
-                if ((0, c.A)(n))
-                    return (0, r.jsx)(b.A, { platformType: M.fg2.XBOX, icon: () => (0, r.jsx)(y.A, {}), onAction: x });
-                if ((0, u.A)(n))
-                    return (0, r.jsx)(b.A, {
-                        platformType: M.fg2.PLAYSTATION,
-                        icon: () => (0, r.jsx)(S.A, {}),
-                        onAction: x,
+            if (!(0, a.A)(e)) {
+                if ((0, u.A)(e))
+                    return (0, i.jsx)(v.A, { platformType: b.fg2.XBOX, icon: () => (0, i.jsx)(I.A, {}), onAction: U });
+                if ((0, c.A)(e))
+                    return (0, i.jsx)(v.A, {
+                        platformType: b.fg2.PLAYSTATION,
+                        icon: () => (0, i.jsx)(C.A, {}),
+                        onAction: U,
                     });
             }
-            return (0, d.A)(n)
-                ? (0, r.jsx)(L.A, { activity: n, onAction: x })
-                : (0, o._C)(n)
-                  ? (0, r.jsx)(C.A, { user: t, activity: n, onAction: x, onClose: k })
-                  : (0, s.A)(n, M.jUm.INSTANCE)
-                    ? (0, r.jsx)(O.A, { user: t, activity: n, onAction: x })
-                    : (0, I.Cy)(n)
-                      ? (0, r.jsx)(D.A, { activity: n, onAction: x, onClose: k })
+            return (0, d.A)(e)
+                ? (0, i.jsx)(L.A, { activity: e, onAction: U })
+                : (0, s._C)(e)
+                  ? (0, i.jsx)(y.A, { user: n, activity: e, onAction: U, onClose: M })
+                  : (0, r.A)(e, b.jUm.INSTANCE)
+                    ? (0, i.jsx)(j.A, { user: n, activity: e, onAction: U })
+                    : (0, g.Cy)(e)
+                      ? (0, i.jsx)(P.A, { activity: e, onAction: U, onClose: M })
                       : null;
         })();
-    return null == X ? null : (0, r.jsx)("div", { className: G, children: X });
+    return null == J ? null : (0, i.jsx)("div", { className: V, children: J });
 }

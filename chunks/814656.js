@@ -1,35 +1,38 @@
 "use strict";
-n.d(t, { i: () => c });
+n.d(t, { i: () => f });
 var r = n(627968),
     i = n(310784),
     s = n.n(i),
-    a = n(158954),
-    o = n(292666),
-    l = n(397927),
-    u = n(531781);
-function c(e) {
+    a = n(331322),
+    o = n(834730),
+    l = n(292666),
+    u = n(691885),
+    d = n(150934),
+    c = n(106236),
+    _ = n(895925);
+function f(e) {
     let { controls: t, props: n, onPropsChange: i } = e,
-        s = (e, t) => {
+        f = (e, t) => {
             i({ ...n, [e]: t });
         },
-        c = Object.entries(t);
-    return 0 === c.length
+        h = Object.entries(t);
+    return 0 === h.length
         ? null
         : (0, r.jsx)("div", {
-              className: u.in,
-              children: (0, r.jsx)(a.BJc, {
+              className: _.in,
+              children: (0, r.jsx)(a.B, {
                   gap: 16,
-                  children: c.map((e) => {
+                  children: h.map((e) => {
                       let [t, i] = e,
-                          c = n[t] ?? i.defaultValue;
+                          a = n[t] ?? i.defaultValue;
                       return (0, r.jsxs)(r.Fragment, {
                           children: [
                               "select" === i.type &&
                                   null != i.options &&
-                                  (0, r.jsx)(l.l6P, {
+                                  (0, r.jsx)(u.l, {
                                       label: i.label,
-                                      value: c,
-                                      onSelectionChange: (e) => s(t, e),
+                                      value: a,
+                                      onSelectionChange: (e) => f(t, e),
                                       options: i.options,
                                       formatOption: (e) => {
                                           let { label: t, value: n } = e;
@@ -39,25 +42,25 @@ function c(e) {
                                       fullWidth: !0,
                                   }),
                               "boolean" === i.type &&
-                                  (0, r.jsx)(l.Checkbox, { checked: c, onChange: (e) => s(t, e), label: i.label }),
+                                  (0, r.jsx)(d.S, { checked: a, onChange: (e) => f(t, e), label: i.label }),
                               "text" === i.type &&
-                                  (0, r.jsx)(o.k, { value: c, onChange: (e) => s(t, e), label: i.label }),
+                                  (0, r.jsx)(l.k, { value: a, onChange: (e) => f(t, e), label: i.label }),
                               "number" === i.type &&
-                                  (0, r.jsx)(o.k, {
+                                  (0, r.jsx)(l.k, {
                                       type: "number",
-                                      value: String(c),
+                                      value: String(a),
                                       min: i.minValue,
-                                      onChange: (e) => s(t, Number(e)),
+                                      onChange: (e) => f(t, Number(e)),
                                       label: i.label,
                                   }),
                               "slider" === i.type &&
-                                  (0, r.jsx)(l.Apm, {
-                                      initialValue: null != c ? Number(c) : 0,
-                                      value: null != c ? Number(c) : void 0,
+                                  (0, r.jsx)(c.A, {
+                                      initialValue: null != a ? Number(a) : 0,
+                                      value: null != a ? Number(a) : void 0,
                                       minValue: i.minValue,
                                       maxValue: i.maxValue,
                                       keyboardStep: (i.maxValue - i.minValue) * 0.05,
-                                      asValueChanges: (e) => s(t, e),
+                                      asValueChanges: (e) => f(t, e),
                                       handleSize: 10,
                                       disabled: !1,
                                       stickToMarkers: !1,
@@ -67,24 +70,31 @@ function c(e) {
                                   }),
                               "color" === i.type &&
                                   (0, r.jsxs)("div", {
-                                      className: u.fJ,
+                                      className: _.fJ,
                                       children: [
-                                          (0, r.jsx)(a.EYj, {
+                                          (0, r.jsx)(o.E, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
                                               tag: "label",
                                               children: i.label,
                                           }),
                                           (0, r.jsxs)("div", {
-                                              className: u.nY,
+                                              className: _.nY,
                                               children: [
                                                   (0, r.jsx)("input", {
                                                       type: "color",
-                                                      className: u.oP,
-                                                      value: _(c),
-                                                      onChange: (e) => s(t, e.target.value),
+                                                      className: _.oP,
+                                                      value: (function (e) {
+                                                          if (null == e || "" === e) return E;
+                                                          try {
+                                                              return s()(e).hex();
+                                                          } catch {
+                                                              return E;
+                                                          }
+                                                      })(a),
+                                                      onChange: (e) => f(t, e.target.value),
                                                   }),
-                                                  (0, r.jsx)(o.k, { value: c ?? "", onChange: (e) => s(t, e) }),
+                                                  (0, r.jsx)(l.k, { value: a ?? "", onChange: (e) => f(t, e) }),
                                               ],
                                           }),
                                       ],
@@ -95,12 +105,4 @@ function c(e) {
               }),
           });
 }
-let d = "#000000";
-function _(e) {
-    if (null == e || "" === e) return d;
-    try {
-        return s()(e).hex();
-    } catch {
-        return d;
-    }
-}
+let E = "#000000";

@@ -1,58 +1,59 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var s = n(311907),
-    l = n(397927),
-    a = n(926919),
-    r = n(172272),
-    o = n(540999),
-    d = n(111162),
+    l = n(477782),
+    a = n(964355),
+    r = n(926919),
+    o = n(172272),
+    d = n(540999),
+    u = n(111162),
     c = n(253932),
-    u = n(780964),
-    _ = n(840065);
-function m() {
+    g = n(780964),
+    m = n(858897);
+function _() {
     let {
             layoutDebuggingEnabled: e,
             isDeveloper: t,
             isLoggingGatewayEvents: n,
-            isLoggingOverlayEvents: m,
-            isLoggingAnalyticsEvents: g,
-            isTracingRequests: A,
-            isForcedCanary: h,
+            isLoggingOverlayEvents: _,
+            isLoggingAnalyticsEvents: A,
+            isTracingRequests: h,
+            isForcedCanary: p,
             isAxeEnabled: x,
-            preventPopoutClose: p,
+            preventPopoutClose: E,
             onlyShowPreviewAppCollections: T,
-            disableAppCollectionsCache: E,
-        } = (0, s.cf)([d.default, o.A], () => ({
-            layoutDebuggingEnabled: d.default.layoutDebuggingEnabled,
-            isDeveloper: o.A.isDeveloper,
-            isLoggingGatewayEvents: d.default.isLoggingGatewayEvents,
-            isLoggingOverlayEvents: d.default.isLoggingOverlayEvents,
-            isLoggingAnalyticsEvents: d.default.isLoggingAnalyticsEvents,
-            isTracingRequests: d.default.isTracingRequests,
-            isForcedCanary: d.default.isForcedCanary,
-            isSourceMapsEnabled: d.default.sourceMapsEnabled,
-            isAxeEnabled: d.default.isAxeEnabled,
-            preventPopoutClose: d.default.preventPopoutClose,
-            onlyShowPreviewAppCollections: d.default.onlyShowPreviewAppCollections,
-            disableAppCollectionsCache: d.default.disableAppCollectionsCache,
+            disableAppCollectionsCache: S,
+        } = (0, s.cf)([u.default, d.A], () => ({
+            layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
+            isDeveloper: d.A.isDeveloper,
+            isLoggingGatewayEvents: u.default.isLoggingGatewayEvents,
+            isLoggingOverlayEvents: u.default.isLoggingOverlayEvents,
+            isLoggingAnalyticsEvents: u.default.isLoggingAnalyticsEvents,
+            isTracingRequests: u.default.isTracingRequests,
+            isForcedCanary: u.default.isForcedCanary,
+            isSourceMapsEnabled: u.default.sourceMapsEnabled,
+            isAxeEnabled: u.default.isAxeEnabled,
+            preventPopoutClose: u.default.preventPopoutClose,
+            onlyShowPreviewAppCollections: u.default.onlyShowPreviewAppCollections,
+            disableAppCollectionsCache: u.default.disableAppCollectionsCache,
         })),
-        { horizontalSpacing: S, verticalSpacing: C } = (0, r.Or)(),
-        { setHorizontalSpacing: f, setVerticalSpacing: b } = r.Or.getState(),
+        { horizontalSpacing: f, verticalSpacing: b } = (0, o.Or)(),
+        { setHorizontalSpacing: C, setVerticalSpacing: v } = o.Or.getState(),
         N = c.HZ.useSetting();
     return t
         ? [
               (0, i.jsxs)(
-                  l.Drp,
+                  l.Dr,
                   {
                       id: "overrides",
                       label: "Overrides",
                       action: () => {
-                          (0, _.openUserSettings)(u.X.DEV_OVERRIDES);
+                          (0, m.openUserSettings)(g.X.DEV_OVERRIDES);
                       },
                       children: [
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "always-deliver",
                                   label: "Always Deliver Ads",
@@ -64,37 +65,37 @@ function m() {
                               "always-deliver",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "forced-canary",
                                   label: "Forced Canary",
-                                  checked: h,
+                                  checked: p,
                                   action: () => {
-                                      (0, a.x)({ canary: !h });
+                                      (0, r.x)({ canary: !p });
                                   },
                               },
                               "forced-canary",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "preview-collections",
                                   label: "Preview Unpublished Collections",
                                   checked: T,
                                   action: () => {
-                                      (0, a.x)({ onlyShowPreviewAppCollections: !T });
+                                      (0, r.x)({ onlyShowPreviewAppCollections: !T });
                                   },
                               },
                               "preview-collections",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "disable-collections-cache",
                                   label: "Disable Collections Cache",
-                                  checked: E,
+                                  checked: S,
                                   action: () => {
-                                      (0, a.x)({ disableAppCollectionsCache: !E });
+                                      (0, r.x)({ disableAppCollectionsCache: !S });
                                   },
                               },
                               "disable-collections-cache",
@@ -104,70 +105,70 @@ function m() {
                   "overrides",
               ),
               (0, i.jsxs)(
-                  l.Drp,
+                  l.Dr,
                   {
                       id: "logging",
                       label: "Logging",
                       action: () => {
-                          (0, _.openUserSettings)(u.X.LOGGING);
+                          (0, m.openUserSettings)(g.X.LOGGING);
                       },
                       children: [
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "gateway-events",
                                   label: "Gateway Events",
                                   checked: n,
                                   action: () => {
-                                      (0, a.x)({ logGatewayEvents: !n });
+                                      (0, r.x)({ logGatewayEvents: !n });
                                   },
                               },
                               "gateway-events",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "overlay-events",
                                   label: "Overlay RPC Events",
-                                  checked: m,
+                                  checked: _,
                                   action: () => {
-                                      (0, a.x)({ logOverlayEvents: !m });
+                                      (0, r.x)({ logOverlayEvents: !_ });
                                   },
                               },
                               "overlay-events",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "analytics-events",
                                   label: "Analytics Events",
-                                  checked: g,
+                                  checked: A,
                                   action: () => {
-                                      (0, a.x)({ logAnalyticsEvents: !g });
+                                      (0, r.x)({ logAnalyticsEvents: !A });
                                   },
                               },
                               "analytics-events",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "tracing-requests",
                                   label: "Tracing Requests",
-                                  checked: A,
+                                  checked: h,
                                   action: () => {
-                                      (0, a.x)({ trace: !A });
+                                      (0, r.x)({ trace: !h });
                                   },
                               },
                               "tracing-requests",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "prevent-popout-close",
                                   label: "Prevent Popouts From Closing",
-                                  checked: p,
+                                  checked: E,
                                   action: () => {
-                                      (0, a.x)({ preventPopoutClose: !p });
+                                      (0, r.x)({ preventPopoutClose: !E });
                                   },
                               },
                               "prevent-popout-close",
@@ -177,34 +178,34 @@ function m() {
                   "logging",
               ),
               (0, i.jsxs)(
-                  l.Drp,
+                  l.Dr,
                   {
                       id: "design-tools",
                       label: "Design/A11y Tools",
                       action: () => {
-                          (0, _.openUserSettings)(u.X.DESIGN_TOOLS);
+                          (0, m.openUserSettings)(g.X.DESIGN_TOOLS);
                       },
                       children: [
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "accessibility-auditing",
                                   label: "Accessibility Auditing",
                                   checked: x,
                                   action: () => {
-                                      (0, a.x)({ axeEnabled: !x });
+                                      (0, r.x)({ axeEnabled: !x });
                                   },
                               },
                               "accessibility-auditing",
                           ),
                           (0, i.jsx)(
-                              l.sLh,
+                              l.sL,
                               {
                                   id: "layout-debugging",
                                   label: "Enable Layout Debugging",
                                   checked: e,
                                   action: () => {
-                                      (0, a.x)({ layoutDebuggingEnabled: !e });
+                                      (0, r.x)({ layoutDebuggingEnabled: !e });
                                   },
                               },
                               "layout-debugging",
@@ -213,18 +214,18 @@ function m() {
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(
-                                          l.aK1,
+                                          l.aK,
                                           {
                                               id: "horizontal-spacing",
                                               label: "Horizontal Spacing",
                                               control: (e, t) =>
-                                                  (0, i.jsx)(l.i42, {
+                                                  (0, i.jsx)(a.i, {
                                                       ...e,
                                                       ref: t,
-                                                      value: S,
+                                                      value: f,
                                                       minValue: 0,
-                                                      maxValue: r.YR,
-                                                      onChange: (e) => f(e),
+                                                      maxValue: o.YR,
+                                                      onChange: (e) => C(e),
                                                       renderValue: (e) => `${Math.round(e)}px`,
                                                       "aria-label": "Horizontal Spacing",
                                                   }),
@@ -232,18 +233,18 @@ function m() {
                                           "horizontal-spacing",
                                       ),
                                       (0, i.jsx)(
-                                          l.aK1,
+                                          l.aK,
                                           {
                                               id: "vertical-spacing",
                                               label: "Vertical Spacing",
                                               control: (e, t) =>
-                                                  (0, i.jsx)(l.i42, {
+                                                  (0, i.jsx)(a.i, {
                                                       ...e,
                                                       ref: t,
-                                                      value: C,
+                                                      value: b,
                                                       minValue: 0,
-                                                      maxValue: r.YR,
-                                                      onChange: (e) => b(e),
+                                                      maxValue: o.YR,
+                                                      onChange: (e) => v(e),
                                                       "aria-label": "Vertical Spacing",
                                                       renderValue: (e) => `${Math.round(e)}px`,
                                                   }),

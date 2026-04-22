@@ -1,37 +1,23 @@
 "use strict";
-function r(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function i(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function a(e, t, n) {
-    return t && i(e.prototype, t), n && i(e, n), e;
-}
-function s(e, t, n) {
+n.d(t, { x: () => i });
+function r(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-n.d(t, { x: () => o });
-var o = (function () {
-    function e(t) {
-        r(this, e),
-            s(this, "item", void 0),
-            s(this, "config", void 0),
-            (this.config = t),
+var i = (function () {
+    var e;
+    function t(e) {
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        r(this, "item", void 0),
+            r(this, "config", void 0),
+            (this.config = e),
             (this.item = {}),
             this.initializeExposedProperties();
     }
     return (
-        a(e, [
+        (e = [
             {
                 key: "initializeExposedProperties",
                 value: function () {
@@ -89,6 +75,15 @@ var o = (function () {
             },
             { key: "endDrag", value: function () {} },
         ]),
-        e
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

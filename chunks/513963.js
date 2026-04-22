@@ -1,33 +1,34 @@
-n.d(t, { A: () => c });
-var i = n(627968),
-    l = n(64700),
-    s = n(732955),
-    a = n(817281),
-    r = n(951829),
-    o = n(985018);
-function c(e) {
-    let { type: t, onConfirm: n, onClose: c, ...d } = e,
-        [u, h] = l.useState(!1),
-        A = l.useCallback(() => {
-            u && a.Ay.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n(), c();
-        }, [n, u, c]),
-        _ = t === r.f.STREAM ? o.intl.string(o.t["/lFMWr"]) : o.intl.string(o.t.xzxhZS),
-        m = t === r.f.STREAM ? o.intl.string(o.t.xaOX7d) : o.intl.string(o.t.oU1p9O);
-    return (0, i.jsx)(s.aFV, {
+t.d(n, { A: () => u });
+var l = t(627968),
+    i = t(64700),
+    a = t(189213),
+    s = t(150934),
+    r = t(817281),
+    o = t(951829),
+    c = t(985018);
+function u(e) {
+    let { type: n, onConfirm: t, onClose: u, ...d } = e,
+        [A, h] = i.useState(!1),
+        p = i.useCallback(() => {
+            A && r.Ay.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), t(), u();
+        }, [t, A, u]),
+        m = n === o.f.STREAM ? c.intl.string(c.t["/lFMWr"]) : c.intl.string(c.t.xzxhZS),
+        g = n === o.f.STREAM ? c.intl.string(c.t.xaOX7d) : c.intl.string(c.t.oU1p9O);
+    return (0, l.jsx)(a.Modal, {
         size: "md",
-        actionBarInput: (0, i.jsx)(s.Sc0, {
-            checked: u,
+        actionBarInput: (0, l.jsx)(s.S, {
+            checked: A,
             onChange: (e) => h(e),
-            label: o.intl.string(o.t["JdIQ/Y"]),
+            label: c.intl.string(c.t["JdIQ/Y"]),
             labelType: "secondary",
         }),
         actions: [
-            { variant: "secondary", text: o.intl.string(o.t["ETE/oC"]), onClick: c },
-            { variant: "primary", text: o.intl.string(o.t.BddRzS), onClick: A },
+            { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: u },
+            { variant: "primary", text: c.intl.string(c.t.BddRzS), onClick: p },
         ],
-        title: _,
-        subtitle: m,
-        onClose: c,
+        title: m,
+        subtitle: g,
+        onClose: u,
         ...d,
     });
 }

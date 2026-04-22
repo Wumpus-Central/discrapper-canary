@@ -1,82 +1,80 @@
-"use strict";
-n.d(t, { Ay: () => j, Jd: () => F, Oo: () => V, bG: () => w, h9: () => M });
+n.d(t, { Ay: () => B, Jd: () => U, Oo: () => w, bG: () => P, h9: () => D });
 var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n.n(a),
-    o = n(837381),
-    l = n(681154),
+    l = n(64700),
+    i = n(735438),
+    a = n.n(i),
+    s = n(837381),
+    o = n(681154),
     u = n(311907),
-    c = n(397927),
-    d = n(442433),
-    _ = n(775602),
-    f = n(941726),
-    p = n(963307),
-    h = n(287809),
-    m = n(947593),
+    c = n(265872),
+    d = n(939249),
+    _ = n(442433),
+    p = n(775602),
+    h = n(941726),
+    m = n(963307),
+    A = n(287809),
+    f = n(947593),
     g = n(468581),
     E = n(849258),
-    A = n(322789),
+    C = n(322789),
     I = n(636202),
-    T = n(27322),
+    v = n(27322),
     y = n(363670),
-    S = n(525313),
-    v = n(620708),
-    C = n(247807),
-    b = n(977001),
+    T = n(525313),
+    x = n(620708),
+    b = n(247807),
+    S = n(977001),
     N = n(273198),
-    R = n(514243),
+    L = n(514243),
     O = n(654288),
-    D = n(299846),
-    L = n(424994);
-let w = 72,
-    x = 32,
-    P = 2e3;
-function M(e) {
-    return e?.type === p.S9.CONTENT_INVENTORY
-        ? e.entry.content_type === l.ContentInventoryEntryType.PLAYED_GAME && null != e.entry.applicationWidgetPreview
-            ? w + x
-            : w
+    R = n(299846),
+    j = n(424994);
+let P = 72;
+function D(e) {
+    return e?.type === m.S9.CONTENT_INVENTORY
+        ? e.entry.content_type === o.ContentInventoryEntryType.PLAYED_GAME && null != e.entry.applicationWidgetPreview
+            ? P + 32
+            : P
         : 0;
 }
-let k = (e) => {
+let M = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
-            case l.ContentInventoryEntryType.PLAYED_GAME:
-                return (0, r.jsx)(A.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.WATCHED_MEDIA:
-                return (0, r.jsx)(R.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_GAME:
-                return (0, r.jsx)(b.Ay, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_ARTIST:
-                return (0, r.jsx)(v.Ay, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LISTENED_SESSION:
+            case o.ContentInventoryEntryType.PLAYED_GAME:
+                return (0, r.jsx)(C.A, { ...n, entry: t });
+            case o.ContentInventoryEntryType.WATCHED_MEDIA:
+                return (0, r.jsx)(L.A, { ...n, entry: t });
+            case o.ContentInventoryEntryType.TOP_GAME:
+                return (0, r.jsx)(S.Ay, { ...n, entry: t });
+            case o.ContentInventoryEntryType.TOP_ARTIST:
+                return (0, r.jsx)(x.Ay, { ...n, entry: t });
+            case o.ContentInventoryEntryType.LISTENED_SESSION:
                 return (0, r.jsx)(y.Ay, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+            case o.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
                 return (0, r.jsx)(g.A, { ...n, entry: t });
             default:
                 return null;
         }
     },
-    U = (e) => {
-        let { entry: t, targetElementRef: n, ...i } = e;
-        return t.content_type === l.ContentInventoryEntryType.PLAYED_GAME
-            ? (0, r.jsx)(T.A, {
+    F = (e) => {
+        let { entry: t, targetElementRef: n, ...l } = e;
+        return t.content_type === o.ContentInventoryEntryType.PLAYED_GAME
+            ? (0, r.jsx)(v.A, {
                   entry: t,
                   targetElementRef: n,
-                  isFirstApplicationOccurrence: i.isFirstApplicationOccurrence ?? !1,
+                  isFirstApplicationOccurrence: l.isFirstApplicationOccurrence ?? !1,
               })
             : null;
     },
     G = (e) => {
         let { closePopout: t, ...n } = e;
-        return (0, r.jsx)(V, {
+        return (0, r.jsx)(w, {
             onReaction: (e, r) => {
                 n.trackRankingItemInteraction(e, { destinationChannelId: r.id, destinationGuildId: r.guild_id }), t();
             },
             closePopout: t,
             onVoiceChannelPreview: (e) => {
-                n.trackRankingItemInteraction(L.PA.VOICE_CHANNEL_PREVIEWED, {
+                n.trackRankingItemInteraction(j.PA.VOICE_CHANNEL_PREVIEWED, {
                     destinationChannelId: e.id,
                     destinationGuildId: e.guild_id,
                 });
@@ -84,142 +82,142 @@ let k = (e) => {
             ...n,
         });
     },
-    V = (e) => {
+    w = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
-            case l.ContentInventoryEntryType.PLAYED_GAME:
+            case o.ContentInventoryEntryType.PLAYED_GAME:
                 return (0, r.jsx)(I.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.WATCHED_MEDIA:
+            case o.ContentInventoryEntryType.WATCHED_MEDIA:
                 return (0, r.jsx)(O.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_GAME:
+            case o.ContentInventoryEntryType.TOP_GAME:
                 return (0, r.jsx)(N.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_ARTIST:
-                return (0, r.jsx)(C.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LISTENED_SESSION:
-                return (0, r.jsx)(S.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+            case o.ContentInventoryEntryType.TOP_ARTIST:
+                return (0, r.jsx)(b.A, { ...n, entry: t });
+            case o.ContentInventoryEntryType.LISTENED_SESSION:
+                return (0, r.jsx)(T.A, { ...n, entry: t });
+            case o.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
                 return (0, r.jsx)(E.Ay, { ...n, entry: t });
             default:
                 return null;
         }
     },
-    F = i.createContext(void 0),
-    B = (e) => {
-        let { index: t, ref: a, ...l } = e,
-            p = i.useRef(null),
-            [g, E] = i.useState("default"),
-            [A, I] = i.useState(!1),
-            T = (0, o.rm)(`${t}`),
-            y = h.default.getCurrentUser()?.isStaff(),
-            { isRich: S, appName: v } = (0, D.u)(l.entry);
-        (0, f.T2)(l.entry.id);
-        let C = i.useMemo(
+    U = l.createContext(void 0),
+    B = l.memo((e) => {
+        let { index: t, ref: i, ...o } = e,
+            m = l.useRef(null),
+            [g, E] = l.useState("default"),
+            [C, I] = l.useState(!1),
+            v = (0, s.rm)(`${t}`),
+            y = A.default.getCurrentUser()?.isStaff(),
+            { isRich: T, appName: x } = (0, R.u)(o.entry);
+        (0, h.T2)(o.entry.id);
+        let b = l.useMemo(
                 () => ({
-                    entry: l.entry,
-                    channelId: l.channel.id,
-                    guildId: l.channel.guild_id,
-                    requestId: l.requestId,
-                    richPresenceName: S ? v : void 0,
+                    entry: o.entry,
+                    channelId: o.channel.id,
+                    guildId: o.channel.guild_id,
+                    requestId: o.requestId,
+                    richPresenceName: T ? x : void 0,
                 }),
-                [v, l.channel.guild_id, l.channel.id, l.entry, l.requestId, S],
+                [x, o.channel.guild_id, o.channel.id, o.entry, o.requestId, T],
             ),
-            b = i.useRef(!1),
-            [N, R] = i.useState(!1),
-            [O, w] = i.useState(!1),
-            x = (0, u.bG)([_.A], () => _.A.keyboardModeEnabled);
-        i.useEffect(() => {
-            N && x && w(!0);
-        }, [N, x]),
-            i.useLayoutEffect(() => {
-                null != p.current && I(!0);
+            S = l.useRef(!1),
+            [N, L] = l.useState(!1),
+            [O, P] = l.useState(!1),
+            D = (0, u.bG)([p.A], () => p.A.keyboardModeEnabled);
+        l.useEffect(() => {
+            N && D && P(!0);
+        }, [N, D]),
+            l.useLayoutEffect(() => {
+                null != m.current && I(!0);
             }, []);
-        let M = i.useCallback(
+        let w = l.useCallback(
                 (e) => {
                     y &&
-                        (0, d.L3)(e, async () => {
+                        (0, _.L3)(e, async () => {
                             let { default: e } = await n.e("89346").then(n.bind(n, 949881));
-                            return () => (0, r.jsx)(e, { entry: l.entry, requestId: l.requestId });
+                            return () => (0, r.jsx)(e, { entry: o.entry, requestId: o.requestId });
                         });
                 },
-                [l, y],
+                [o, y],
             ),
-            V = i.useCallback(() => {
+            B = l.useCallback(() => {
                 E(String(Date.now()));
             }, []),
-            B = i.useCallback(
+            k = l.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, m.I)(e, { ...C, ...t });
+                    (0, f.I)(e, { ...b, ...t });
                 },
-                [C],
+                [b],
             ),
-            j = i.useMemo(
+            V = l.useMemo(
                 () =>
-                    s().throttle(
+                    a().throttle(
                         (e) => {
-                            (0, m.I)(L.PA.CARD_POPOUT_OPEN, e);
+                            (0, f.I)(j.PA.CARD_POPOUT_OPEN, e);
                         },
-                        P,
+                        2e3,
                         { leading: !0, trailing: !1 },
                     ),
                 [],
             ),
             H = () => {
-                (b.current = !1),
+                (S.current = !1),
                     setTimeout(() => {
-                        b.current || (R(!1), w(x));
+                        S.current || (L(!1), P(D));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                A && (0, r.jsx)(U, { ...l, targetElementRef: p }),
+                C && (0, r.jsx)(F, { ...o, targetElementRef: m }),
                 (0, r.jsx)("div", {
-                    ref: a,
+                    ref: i,
                     onMouseEnter: () => {
-                        (b.current = !0),
+                        (S.current = !0),
                             setTimeout(() => {
-                                b.current && R(!0), j(C);
+                                S.current && L(!0), V(b);
                             }, 100);
                     },
                     onMouseLeave: H,
-                    children: (0, r.jsx)(c.YNO, {
-                        targetElementRef: p,
+                    children: (0, r.jsx)(c.Y, {
+                        targetElementRef: m,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(F.Provider, {
+                            return (0, r.jsx)(U.Provider, {
                                 value: H,
                                 children: (0, r.jsx)(G, {
                                     closePopout: t,
-                                    updatePopoutPosition: V,
-                                    trackRankingItemInteraction: B,
-                                    ...l,
+                                    updatePopoutPosition: B,
+                                    trackRankingItemInteraction: k,
+                                    ...o,
                                 }),
                             });
                         },
                         position: "left",
                         shouldShow: N,
                         positionKey: g,
-                        onRequestOpen: () => j(C),
+                        onRequestOpen: () => V(b),
                         onRequestClose: () => {
                             O && H();
                         },
                         spacing: 8,
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, r.jsx)(c.DUT, {
+                            return (0, r.jsx)(d.D, {
                                 ...e,
-                                ...T,
-                                innerRef: p,
+                                ...v,
+                                innerRef: m,
                                 focusProps: { offset: { top: 4, bottom: 4, left: 4, right: 4 } },
                                 onClick: () => {
-                                    N || R(!0);
+                                    N || L(!0);
                                 },
-                                onContextMenu: M,
-                                children: (0, r.jsx)(k, {
-                                    ...l,
+                                onContextMenu: w,
+                                children: (0, r.jsx)(M, {
+                                    ...o,
                                     selected: n,
-                                    hovered: b.current,
-                                    trackRankingItemInteraction: B,
+                                    hovered: S.current,
+                                    trackRankingItemInteraction: k,
                                 }),
                             });
                         },
@@ -227,5 +225,4 @@ let k = (e) => {
                 }),
             ],
         });
-    },
-    j = i.memo(B);
+    });

@@ -1,36 +1,38 @@
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => b }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(554146),
-    a = n(397927),
-    r = n(688810),
-    o = n(357186),
-    d = n(932001),
-    c = n(84511),
-    u = n(332772),
-    h = n(35092),
-    A = n(403362),
-    _ = n(183555),
-    m = n(535089),
-    p = n(946356),
-    g = n(652215),
-    f = n(49999),
-    E = n(985018),
-    x = n(141076);
-function I(e) {
-    let { unownedWishlistItems: t = [], profileOwner: n, onClick: I, wishlistId: C, title: N } = e,
-        { analyticsLocations: T } = (0, r.Ay)(),
-        { trackUserProfileWishlistAction: S } = (0, _.NJ)(),
-        b = (0, l.useId)();
-    (0, u.T)({ location: "user_profile_sidebar_wishlist_breadcrumb" });
-    let y = (0, l.useCallback)(
+    a = n(534514),
+    r = n(123292),
+    o = n(707554),
+    d = n(688810),
+    c = n(357186),
+    u = n(932001),
+    h = n(84511),
+    A = n(332772),
+    _ = n(35092),
+    m = n(403362),
+    g = n(183555),
+    p = n(535089),
+    f = n(946356),
+    E = n(652215),
+    x = n(49999),
+    I = n(985018),
+    C = n(617348);
+function b(e) {
+    let { unownedWishlistItems: t = [], profileOwner: n, onClick: b, wishlistId: N, title: S } = e,
+        { analyticsLocations: v } = (0, d.Ay)(),
+        { trackUserProfileWishlistAction: T } = (0, g.NJ)(),
+        y = (0, l.useId)();
+    (0, A.T)({ location: "user_profile_sidebar_wishlist_breadcrumb" });
+    let R = (0, l.useCallback)(
             (e) => {
                 let { wishlistId: t, action: n, productLines: i } = e;
-                null != t && S({ wishlistId: t, action: n, productLines: i });
+                null != t && T({ wishlistId: t, action: n, productLines: i });
             },
-            [S],
+            [T],
         ),
-        v = (0, l.useMemo)(() => {
+        j = (0, l.useMemo)(() => {
             let e = [];
             for (let n = 0; n < t.length && e.length < 3; n++) {
                 let i = t[n];
@@ -38,72 +40,72 @@ function I(e) {
             }
             return e;
         }, [t]),
-        j = (0, l.useMemo)(() => new Set(v.map((e) => e.skuProductLine)), [v]),
-        R = (0, m.A)({ wishlistId: C ?? null, onAction: y, productLines: j }),
-        O = (0, l.useMemo)(
+        L = (0, l.useMemo)(() => new Set(j.map((e) => e.skuProductLine)), [j]),
+        O = (0, p.A)({ wishlistId: N ?? null, onAction: R, productLines: L }),
+        G = (0, l.useMemo)(
             () =>
-                v
+                j
                     .map((e, l) =>
                         null == e.sku
                             ? null
                             : (0, i.jsx)(
-                                  h.A,
+                                  _.A,
                                   {
                                       sku: e.sku,
                                       index: l,
                                       wishlistOwner: n,
-                                      wishlistId: C,
-                                      analyticsLocations: T,
-                                      onViewWishlist: I,
+                                      wishlistId: N,
+                                      analyticsLocations: v,
+                                      onViewWishlist: b,
                                       isSingleCard: 1 === t.length,
                                   },
                                   e.skuId,
                               ),
                     )
-                    .filter(A.Vq),
-            [T, I, n, t.length, v, C],
+                    .filter(m.Vq),
+            [v, b, n, t.length, j, N],
         ),
-        [L, M] = (0, d.RF)(
+        [D, M] = (0, u.RF)(
             s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL,
-            (0, o.c)(s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL),
+            (0, c.c)(s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL),
             void 0,
             !0,
         ),
-        D = L !== s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL;
-    return 0 === O.length
+        U = D !== s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL;
+    return 0 === G.length
         ? null
         : (0, i.jsx)("section", {
-              "aria-labelledby": b,
-              children: (0, i.jsxs)(p.A.Overlay, {
-                  ref: R,
-                  className: x.kL,
+              "aria-labelledby": y,
+              children: (0, i.jsxs)(f.A.Overlay, {
+                  ref: O,
+                  className: C.kL,
                   children: [
                       (0, i.jsxs)("div", {
-                          className: x.wx,
+                          className: C.wx,
                           children: [
-                              (0, i.jsx)(a.Heading, {
+                              (0, i.jsx)(a.D, {
                                   variant: "text-sm/medium",
-                                  id: b,
-                                  children: N ?? E.intl.string(E.t["7lZ31J"]),
+                                  id: y,
+                                  children: S ?? I.intl.string(I.t["7lZ31J"]),
                               }),
                               t.length > 3 &&
-                                  (0, i.jsx)(a.QWc, {
+                                  (0, i.jsx)(r.Q, {
                                       variant: "secondary",
                                       textVariant: "text-xs/normal",
-                                      onClick: I,
-                                      text: E.intl.string(E.t.y6PSA3),
+                                      onClick: b,
+                                      text: I.intl.string(I.t.y6PSA3),
                                   }),
                           ],
                       }),
-                      (0, i.jsxs)(a.Fmo, {
+                      (0, i.jsxs)(o.F, {
                           children: [
-                              (0, i.jsx)("div", { className: x.vY, children: O }),
-                              !D &&
-                                  j.has(g.EZt.SOCIAL_LAYER_GAME_ITEM) &&
-                                  (0, i.jsx)(c.A, {
+                              (0, i.jsx)("div", { className: C.vY, children: G }),
+                              !U &&
+                                  L.has(E.EZt.SOCIAL_LAYER_GAME_ITEM) &&
+                                  (0, i.jsx)(h.A, {
                                       location: "user_profile_sidebar_wishlist_breadcrumb",
-                                      className: x.EK,
-                                      onDismiss: () => M(f.i.USER_DISMISS),
+                                      className: C.EK,
+                                      onDismiss: () => M(x.i.USER_DISMISS),
                                   }),
                           ],
                       }),

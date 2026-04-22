@@ -1,77 +1,71 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => d });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(962125),
-    l = n(151271),
-    u = n(652215),
-    c = n(103551);
-let d = (e) => {
-        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
-            s = i.useRef(u.An1),
-            a = i.useRef(t);
-        return (
-            i.useEffect(() => {
-                null != t &&
-                    t !== a.current &&
-                    (s.current !== u.An1 && window.cancelAnimationFrame(s.current),
-                    (s.current = window.requestAnimationFrame(() => {
-                        if (null == n.current) return;
-                        let e = t > (a.current ?? -1),
-                            i = null != r ? r(t, e) : 0;
-                        n.current.scrollRowIntoView(t, { animate: !0, offset: i }),
-                            (s.current = u.An1),
-                            (a.current = t);
-                    })));
-            }, [t, n, r]),
-            { categoryListRef: n }
-        );
-    },
-    _ = function (e) {
-        let {
-                categoryListRef: t,
-                expressionsListRef: n,
-                categories: s,
-                store: u,
-                children: _,
-                className: f,
+    r = n.n(s),
+    a = n(962125),
+    o = n(151271),
+    c = n(652215),
+    u = n(654360);
+let d = function (e) {
+    let {
+            categoryListRef: t,
+            expressionsListRef: n,
+            categories: s,
+            store: d,
+            children: h,
+            className: m,
+            listPadding: p,
+            rowCount: f,
+            getScrollOffsetForIndex: g,
+            categoryHeight: _,
+            onScroll: x,
+            renderCategoryListItem: A,
+            rowCountBySection: C,
+            renderSection: E,
+        } = e,
+        I = d.useStore((e) => e.activeCategoryIndex);
+    ((e) => {
+        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
+            s = l.useRef(c.An1),
+            r = l.useRef(t);
+        return l.useEffect(() => {
+            null != t &&
+                t !== r.current &&
+                (s.current !== c.An1 && window.cancelAnimationFrame(s.current),
+                (s.current = window.requestAnimationFrame(() => {
+                    if (null == n.current) return;
+                    let e = t > (r.current ?? -1),
+                        l = null != i ? i(t, e) : 0;
+                    n.current.scrollRowIntoView(t, { animate: !0, offset: l }), (s.current = c.An1), (r.current = t);
+                })));
+        }, [t, n, i]);
+    })({ activeIndex: I, categoryListRef: t, getScrollOffsetForIndex: g });
+    let v = l.useCallback(
+            (e) => {
+                let { searchQuery: t } = o.RQ.getState();
+                d.setActiveCategoryIndex(e), "" !== t ? (0, o.Ri)("") : n.current?.scrollToSectionTop(e);
+            },
+            [n, d],
+        ),
+        y = l.useCallback((e) => A(s[e], e, () => v(e), I === e), [I, s, v, A]),
+        S = l.useMemo(() => ("function" == typeof _ ? (e) => _(s[e], e) : _), [s, _]);
+    return (0, i.jsxs)("div", {
+        className: r()(u.i, m),
+        children: [
+            (0, i.jsx)(a.A, {
                 listPadding: p,
-                rowCount: h,
-                getScrollOffsetForIndex: m,
-                categoryHeight: E,
-                onScroll: g,
-                renderCategoryListItem: A,
-                rowCountBySection: I,
-                renderSection: T,
-            } = e,
-            S = u.useStore((e) => e.activeCategoryIndex);
-        d({ activeIndex: S, categoryListRef: t, getScrollOffsetForIndex: m });
-        let y = i.useCallback(
-                (e) => {
-                    let { searchQuery: t } = l.RQ.getState();
-                    u.setActiveCategoryIndex(e), "" !== t ? (0, l.Ri)("") : n.current?.scrollToSectionTop(e);
-                },
-                [n, u],
-            ),
-            v = i.useCallback((e) => A(s[e], e, () => y(e), S === e), [S, s, y, A]),
-            N = i.useMemo(() => ("function" == typeof E ? (e) => E(s[e], e) : E), [s, E]);
-        return (0, r.jsxs)("div", {
-            className: a()(c.i, f),
-            children: [
-                (0, r.jsx)(o.A, {
-                    listPadding: p,
-                    onScroll: g,
-                    ref: t,
-                    renderRow: v,
-                    rowCount: h,
-                    rowHeight: N,
-                    hideScrollbar: !0,
-                    rowCountBySection: I,
-                    renderSection: T,
-                }),
-                _?.(y),
-            ],
-        });
-    };
+                onScroll: x,
+                ref: t,
+                renderRow: y,
+                rowCount: f,
+                rowHeight: S,
+                hideScrollbar: !0,
+                rowCountBySection: C,
+                renderSection: E,
+            }),
+            h?.(v),
+        ],
+    });
+};

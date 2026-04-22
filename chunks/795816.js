@@ -1,20 +1,20 @@
 "use strict";
 n.d(t, {
-    CS: () => e_,
-    D2: () => eS,
-    Ir: () => eg,
-    LK: () => eE,
-    LV: () => ep,
+    CS: () => ec,
+    D2: () => eT,
+    Ir: () => em,
+    LK: () => ep,
+    LV: () => ef,
     SE: () => ed,
-    Ue: () => em,
-    _H: () => ec,
-    gk: () => eA,
-    i5: () => eI,
-    jp: () => eT,
-    od: () => ey,
+    Ue: () => eh,
+    _H: () => eu,
+    gk: () => eg,
+    i5: () => eA,
+    jp: () => eI,
+    od: () => eS,
     rW: () => es,
     su: () => ea,
-    tk: () => eh,
+    tk: () => eE,
 });
 var r = n(110259),
     i = n(344351),
@@ -23,50 +23,50 @@ var r = n(110259),
     o = n(73153),
     l = n(157559),
     u = n(308528),
-    c = n(367513),
-    d = n(846293),
+    d = n(367513),
+    c = n(846293),
     _ = n(843472),
     f = n(181658),
-    p = n(155718),
+    E = n(155718),
     h = n(264322),
-    m = n(545152),
-    E = n(361926),
+    p = n(545152),
+    m = n(361926),
     g = n(587895),
     A = n(972995),
     I = n(20015),
     T = n(568598),
     S = n(313961),
     y = n(367727),
-    v = n(744230),
-    N = n(113267),
-    C = n(207371),
-    b = n(451909),
-    R = n(195880),
-    O = n(87001),
+    N = n(744230),
+    O = n(113267),
+    R = n(207371),
+    v = n(451909),
+    C = n(195880),
+    b = n(87001),
     D = n(192552),
     L = n(611010),
     w = n(961350),
-    x = n(734057),
-    M = n(71393),
-    P = n(576705),
+    M = n(734057),
+    P = n(71393),
+    U = n(576705),
     k = n(287809),
-    U = n(977997),
+    x = n(977997),
     G = n(954571),
-    F = n(403362),
-    V = n(499785),
+    V = n(403362),
+    F = n(499785),
     B = n(811024),
     H = n(933958),
-    j = n(383497),
-    Y = n(969151),
-    W = n(817636),
+    Y = n(383497),
+    W = n(969151),
+    j = n(817636),
     K = n(782091),
-    z = n(108959),
-    $ = n(448739),
+    $ = n(108959),
+    z = n(448739),
     q = n(90804),
-    Z = n(946255),
-    X = n(859007),
-    Q = n(360469),
-    J = n(5867),
+    X = n(946255),
+    Q = n(859007),
+    J = n(360469),
+    Z = n(5867),
     ee = n(652215),
     et = n(705751),
     en = n(49999),
@@ -74,7 +74,7 @@ var r = n(110259),
     ei = n(985018);
 function es(e) {
     let t = H.Ay.getSelfEmbeddedActivityForLocation(e);
-    null != t && ec({ location: t.location, applicationId: t.applicationId, showFeedback: !1 });
+    null != t && eu({ location: t.location, applicationId: t.applicationId, showFeedback: !1 });
 }
 async function ea(e) {
     let {
@@ -84,41 +84,41 @@ async function ea(e) {
             analyticsLocations: a,
             locationObject: l,
             embeddedActivitiesManager: u,
-            componentId: c,
-            commandOrigin: d,
+            componentId: d,
+            commandOrigin: c,
             sectionName: _,
-            source: p,
+            source: E,
             onExecutedCallback: h,
-            referrerId: m,
-            customId: E,
+            referrerId: p,
+            customId: m,
             inviterUserId: A,
-            onConfirmActivityLaunchChecksAlertOpen: I,
+            onConfirmActivityLaunchChecksAlertOpen: T,
         } = e,
-        T = x.A.getChannel(t),
-        S = T?.getGuildId() ?? void 0;
-    if (null == S && !T?.isPrivate()) return !1;
-    let y = g.A.getApplication(r),
-        b = null != y && (0, C.x)(y),
-        D = (0, R.m)();
+        S = M.A.getChannel(t),
+        y = S?.getGuildId() ?? void 0;
+    if (null == y && !S?.isPrivate()) return !1;
+    let v = g.A.getApplication(r),
+        D = null != v && (0, R.x)(v),
+        L = (0, C.m)();
     try {
-        if (O.A.getWindowOpen(ee.MLl.ACTIVITY_POPOUT)) {
+        if (b.A.getWindowOpen(ee.MLl.ACTIVITY_POPOUT)) {
             let { close: e } = n(574172);
             e(ee.MLl.ACTIVITY_POPOUT);
         }
-        if (((0, $.Q)(), (0, X.y)({ applicationId: r }))) return !0;
+        if (((0, z.Q)(), (0, Q.y)({ applicationId: r }))) return !0;
         o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-            nonce: D,
+            nonce: L,
             applicationId: r,
             channelId: t ?? null,
-            componentId: c,
+            componentId: d,
             analyticsLocations: a,
-            source: p,
-            commandOrigin: d,
+            source: E,
+            commandOrigin: c,
             inviterUserId: A,
-            launchParams: { customId: E, referrerId: m },
+            launchParams: { customId: m, referrerId: p },
         });
-        let e = await eS(r, t ?? void 0);
+        let e = await eT(r, t ?? void 0);
         o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: r,
@@ -128,64 +128,76 @@ async function ea(e) {
         let i = k.default.getCurrentUser();
         if (
             (null != i &&
-                (0, Z.A)({
+                (0, X.A)({
                     type: s ? ee.UqL.LAUNCH : ee.UqL.JOIN,
                     userId: i?.id,
-                    guildId: S,
+                    guildId: y,
                     channelId: t,
-                    channelType: T?.type,
+                    channelType: S?.type,
                     applicationId: r,
                     locationObject: l,
                     analyticsLocations: a ?? [],
-                    source: p,
-                    referrerId: m,
+                    source: E,
+                    referrerId: p,
                     inviterUserId: A,
                 }),
             s)
         ) {
-            if (null == t || !eo(r, T)) throw new v.A(v.A.Reasons.INVALID_CHANNEL);
-            let e = await el({
+            var w, P;
+            let e, n, i, s;
+            if (
+                null == t ||
+                ((w = r),
+                (P = S),
+                (e = P?.type === ee.rbe.GUILD_VOICE),
+                (n = g.A.getApplication(w)),
+                (i = (0, I.n)(n, ee.gfo.EMBEDDED)),
+                (s = (0, B.AX)(P)),
+                (!e || !i) && !s)
+            )
+                throw new N.A(N.A.Reasons.INVALID_CHANNEL);
+            let a = await eo({
                 applicationId: r,
-                nonce: D,
+                nonce: L,
                 channelId: t,
-                guildId: S,
-                commandOrigin: d,
+                guildId: y,
+                commandOrigin: c,
                 sectionName: _,
-                source: p,
+                source: E,
                 onExecutedCallback: h,
-                onConfirmActivityLaunchChecksAlertOpen: I,
+                onConfirmActivityLaunchChecksAlertOpen: T,
                 embeddedActivitiesManager: u,
             });
-            if ("failure" === e.result)
-                if (4 === e.reason)
+            if ("failure" === a.result)
+                if (4 === a.reason)
                     return (
                         o.h.dispatch({
                             type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL",
-                            nonce: D,
+                            nonce: L,
                             applicationId: r,
                             channelId: t ?? null,
                         }),
                         !1
                     );
-                else throw new v.A(v.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                else throw new N.A(N.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await eu({ applicationId: r, channelId: t, embeddedActivitiesManager: u, isStart: s, guildId: S });
+            let e = await el({ applicationId: r, channelId: t, embeddedActivitiesManager: u, isStart: s, guildId: y });
             if ((h?.(), "failure" === e.result))
-                throw new v.A(v.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
+                throw new N.A(N.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
-        o.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: D, applicationId: r, channelId: t ?? null });
+        o.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: L, applicationId: r, channelId: t ?? null });
     } catch (n) {
-        if (b) return !1;
-        let e = null != S ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
+        if (D) return !1;
+        let e = null != y ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         return (
             o.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: D,
+                nonce: L,
                 applicationId: r,
                 channelId: t ?? null,
-                guildId: S ?? null,
+                guildId: y ?? null,
                 isStart: s,
-                error: n instanceof v.A || n instanceof f.A || n instanceof N.A ? n : new f.A(n),
+                error: n instanceof N.A || n instanceof f.A || n instanceof O.A ? n : new f.A(n),
                 locationKind: e,
             }),
             !1
@@ -193,14 +205,7 @@ async function ea(e) {
     }
     return !0;
 }
-function eo(e, t) {
-    let n = t?.type === ee.rbe.GUILD_VOICE,
-        r = g.A.getApplication(e),
-        i = (0, I.n)(r, ee.gfo.EMBEDDED),
-        s = (0, B.AX)(t);
-    return (n && i) || s;
-}
-async function el(e) {
+async function eo(e) {
     let {
             applicationId: t,
             nonce: n,
@@ -211,28 +216,28 @@ async function el(e) {
             source: o,
             onExecutedCallback: l,
             onConfirmActivityLaunchChecksAlertOpen: u,
-            embeddedActivitiesManager: c,
+            embeddedActivitiesManager: d,
         } = e,
-        d = null;
+        c = null;
     try {
-        d = await (0, E.Ay)(r, t);
+        c = await (0, m.Ay)(r, t);
     } catch (e) {
-        if (e.message === E.c5) return { result: "failure", reason: 1 };
+        if (e.message === m.c5) return { result: "failure", reason: 1 };
         throw e;
     }
-    let _ = d.handler !== p.Ys.APP_HANDLER;
+    let _ = c.handler !== E.Ys.APP_HANDLER;
     if (!(_ || et.TR.includes(t))) {
         null != r && (await (0, h.Zn)({ type: "channel", channelId: r })), await (0, h.Zn)({ type: "user" });
-        let e = x.A.getChannel(r),
+        let e = M.A.getChannel(r),
             { isAuthorized: n } = await (0, A.q)({
                 applicationId: t,
                 channel: e,
-                commandIntegrationTypes: d.integration_types,
+                commandIntegrationTypes: c.integration_types,
             });
         if (!n) return { result: "failure", reason: 2 };
     }
-    let I = x.A.getChannel(r),
-        T = null != i ? M.A.getGuild(i) : null;
+    let I = M.A.getChannel(r),
+        T = null != i ? P.A.getGuild(i) : null;
     if (null == I) return { result: "failure", reason: 3 };
     if (_) {
         let e,
@@ -242,12 +247,12 @@ async function el(e) {
         let i = k.default.getCurrentUser();
         if (
             null != i &&
-            !(await (0, j.O)({
+            !(await (0, Y.O)({
                 applicationId: t,
                 application: n,
                 channel: I,
                 currentEmbeddedApplication: e,
-                embeddedActivitiesManager: c,
+                embeddedActivitiesManager: d,
                 user: i,
                 onConfirmActivityLaunchChecksAlertOpen: u,
                 shouldClosePopoutOnLeaveCurrentEmbeddedApplication: !1,
@@ -257,8 +262,8 @@ async function el(e) {
     }
     return (
         await new Promise((e, u) => {
-            (0, m.A)({
-                command: d,
+            (0, p.A)({
+                command: c,
                 optionValues: {},
                 context: { channel: I, guild: T },
                 commandOrigin: s,
@@ -284,9 +289,9 @@ async function el(e) {
                             }),
                             null != e && null != n && null != s
                                 ? u(new f.A({ status: s, body: { message: n, code: e } }))
-                                : null != a && a in N.A.ReasonCodes
-                                  ? u(new N.A(a))
-                                  : u(new N.A(N.A.ReasonCodes.UNKNOWN));
+                                : null != a && a in O.A.ReasonCodes
+                                  ? u(new O.A(a))
+                                  : u(new O.A(O.A.ReasonCodes.UNKNOWN));
                     },
                 }),
             });
@@ -294,25 +299,24 @@ async function el(e) {
         { result: "success" }
     );
 }
-async function eu(e) {
+async function el(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: s, isStart: a, guildId: o } = e,
         u = w.default.getSessionId(),
-        c = k.default.getCurrentUser(),
-        d = n;
-    if (null == d) return { result: "failure", reason: 1 };
-    let _ = await (0, W.A)(d, i);
-    if (null == c || null == _) return { result: "failure", reason: 2 };
+        d = k.default.getCurrentUser();
+    if (null == n) return { result: "failure", reason: 1 };
+    let c = await (0, j.A)(n, i);
+    if (null == d || null == c) return { result: "failure", reason: 2 };
     if (null == i) return { result: "failure", reason: 3 };
-    let f = x.A.getChannel(i);
-    if (null == f) return { result: "failure", reason: 3 };
-    let p = (0, K.JH)({ channelId: i, ChannelStore: x.A, GuildStore: M.A, PermissionStore: P.A, VoiceStateStore: U.A });
-    if (p !== K.xy.CAN_LAUNCH) {
+    let _ = M.A.getChannel(i);
+    if (null == _) return { result: "failure", reason: 3 };
+    let f = (0, K.JH)({ channelId: i, ChannelStore: M.A, GuildStore: P.A, PermissionStore: U.A, VoiceStateStore: x.A });
+    if (f !== K.xy.CAN_LAUNCH) {
         let e = 4;
         return (
-            p === K.xy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            f === K.xy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? ((e = 5), (0, D.i)())
-                : p === K.xy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : f === K.xy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   l.A.show({
                       title: ei.intl.string(ei.t["IOy+I5"]),
@@ -322,31 +326,31 @@ async function eu(e) {
             { result: "failure", reason: e }
         );
     }
-    let h = H.Ay.getCurrentEmbeddedActivity();
+    let E = H.Ay.getCurrentEmbeddedActivity();
     if (
-        (h?.applicationId != null && (t = g.A.getApplication(h?.applicationId)),
+        (E?.applicationId != null && (t = g.A.getApplication(E?.applicationId)),
         !(
             !a ||
-            (await (0, j.O)({
+            (await (0, Y.O)({
                 applicationId: n,
-                application: _,
-                channel: f,
+                application: c,
+                channel: _,
                 currentEmbeddedApplication: t,
                 embeddedActivitiesManager: s,
-                user: c,
+                user: d,
             }))
         ))
     )
         return { result: "failure", reason: 7 };
-    if (null != f) {
-        let e = (0, z.A)(f.id),
-            n = Q.lk.includes(f.type);
+    if (null != _) {
+        let e = (0, $.A)(_.id),
+            n = J.lk.includes(_.type);
         if (e) {
-            if (!(await (0, q.A)({ channelId: f.id, bypassChangeModal: null != t })))
+            if (!(await (0, q.A)({ channelId: _.id, bypassChangeModal: null != t })))
                 return { result: "failure", reason: 8 };
-        } else if (!(0, B.pE)(f) || !n) return { result: "failure", reason: 9 };
+        } else if (!(0, B.pE)(_) || !n) return { result: "failure", reason: 9 };
     }
-    let m = {
+    let h = {
         trackedActionData: {
             event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
             properties: { guild_id: o, channel_id: i, application_id: n, session_id: u },
@@ -356,15 +360,15 @@ async function eu(e) {
         rejectWithError: !0,
     };
     return null != i
-        ? (await V.A.post({
+        ? (await F.A.post({
               url: ee.Rsh.ACTIVITY_CHANNEL_LAUNCH(i, n),
               body: { session_id: u, guild_id: o ?? void 0 },
-              ...m,
+              ...h,
           }),
           { result: "success" })
         : { result: "failure", reason: 0 };
 }
-function ec(e) {
+function eu(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
         i = H.Ay.getSelfEmbeddedActivityForLocation(t);
     o.h.dispatch({
@@ -374,13 +378,13 @@ function ec(e) {
         instanceId: i?.launchId,
         showFeedback: r,
     });
-    let s = (0, Y.H)(t);
+    let s = (0, W.H)(t);
     if (null != s) {
         let e = S.A.getSelectedParticipantId(s),
             t = k.default.getCurrentUser()?.id,
             r = H.Ay.getEmbeddedActivitiesForChannel(s).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
-        e === (0, T.Qt)({ applicationId: n, instanceId: r?.compositeInstanceId }) && c.A.selectParticipant(s, null);
+        e === (0, T.Qt)({ applicationId: n, instanceId: r?.compositeInstanceId }) && d.A.selectParticipant(s, null);
     }
 }
 async function ed() {
@@ -400,41 +404,40 @@ async function ed() {
         o.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
     }
 }
-async function e_(e, t, n) {
+async function ec(e, t, n) {
     try {
         o.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START" });
-        let r = null != t ? { channel_id: t } : void 0,
-            i = await s.Bo.post({
-                url: ee.Rsh.APPLICATION_UPLOAD_ATTACHMENT(e),
-                query: r,
-                attachments: [{ name: "file", file: n }],
-                rejectWithError: !0,
-            });
+        let r = await s.Bo.post({
+            url: ee.Rsh.APPLICATION_UPLOAD_ATTACHMENT(e),
+            query: null != t ? { channel_id: t } : void 0,
+            attachments: [{ name: "file", file: n }],
+            rejectWithError: !0,
+        });
         return (
-            o.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS", attachment: i.body.attachment }),
-            i.body.attachment
+            o.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS", attachment: r.body.attachment }),
+            r.body.attachment
         );
     } catch (e) {
         return o.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new f.A(e);
     }
 }
-let ef = (e, t, n) => {
+let e_ = (e, t, n) => {
     let { guildId: r } = n;
     (r === e || (null == r && null == e)) && t();
 };
-async function ep(e) {
+async function ef(e) {
     let { guildId: t, force: n = !1 } = e,
         i = H.Ay.getShelfActivities(t),
-        s = i.map((e) => g.A.getApplication(e.application_id)).filter(F.Vq);
+        s = i.map((e) => g.A.getApplication(e.application_id)).filter(V.Vq);
     if (!n && !H.Ay.shouldFetchShelf(t)) {
         if (H.Ay.getShelfFetchStatus(t)?.isFetching) {
             let e,
                 n,
                 r = new Promise((n) => {
-                    (e = ef.bind(null, t, n)), o.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e);
+                    (e = e_.bind(null, t, n)), o.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e);
                 }),
                 i = new Promise((e) => {
-                    (n = ef.bind(null, t, e)), o.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n);
+                    (n = e_.bind(null, t, e)), o.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n);
                 });
             await Promise.race([r, i]),
                 null != e && (o.h.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), (e = null)),
@@ -445,7 +448,7 @@ async function ep(e) {
     try {
         o.h.dispatch({ type: "EMBEDDED_ACTIVITY_FETCH_SHELF", guildId: t });
         let e = void 0 !== t && "" !== t ? { guild_id: t } : void 0,
-            n = await V.A.get({
+            n = await F.A.get({
                 url: ee.Rsh.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
@@ -477,26 +480,26 @@ async function ep(e) {
         );
     }
 }
-async function eh(e) {
+async function eE(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i, inviteAnalyticsMetadata: s } = e,
-        a = await d.Ay.createInvite(t, { target_type: er.yV.EMBEDDED_APPLICATION, target_application_id: r }, i);
-    null != x.A.getChannel(n) && _.A.sendInvite(n, a.code, i, s);
+        a = await c.Ay.createInvite(t, { target_type: er.yV.EMBEDDED_APPLICATION, target_application_id: r }, i);
+    null != M.A.getChannel(n) && _.A.sendInvite(n, a.code, i, s);
 }
-async function em(e) {
+async function eh(e) {
     let { channelId: t, applicationId: n, userId: r, location: i, inviteAnalyticsMetadata: s, prefixedContent: a } = e,
-        o = await d.Ay.createInvite(t, { target_type: er.yV.EMBEDDED_APPLICATION, target_application_id: n }, i);
+        o = await c.Ay.createInvite(t, { target_type: er.yV.EMBEDDED_APPLICATION, target_application_id: n }, i);
     await u.A.ensurePrivateChannel(r).then((e) => {
         let t,
-            n = x.A.getChannel(e);
+            n = M.A.getChannel(e);
         if (null == n) throw Error("Private channel not found");
-        null != a && (t = b.Ay.parse(n, a).content), _.A.sendInvite(e, o.code, i, s, t);
+        null != a && (t = v.Ay.parse(n, a).content), _.A.sendInvite(e, o.code, i, s, t);
     });
 }
-function eE() {
+function ep() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : en.i.INDIRECT_ACTION;
     (0, y.$l)(a.M.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1e3), { dismissAction: e });
 }
-async function eg(e) {
+async function em(e) {
     let t = ee.Rsh.ACTIVITY_TEST_MODE(e);
     try {
         return await s.Bo.get({ url: t, oldFormErrors: !0, rejectWithError: !0 }), !0;
@@ -504,26 +507,26 @@ async function eg(e) {
         return !1;
     }
 }
-function eA(e) {
+function eg(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: e });
 }
-function eI(e) {
+function eA(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout: e });
 }
-function eT() {
-    eA(J.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+function eI() {
+    eg(Z.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
 }
-async function eS(e, t) {
+async function eT(e, t) {
     let n = {};
     return (
         null != t && (n.channel_id = t),
         (await s.Bo.post({ url: ee.Rsh.APPLICATION_PROXY_TICKET(e), body: n, rejectWithError: !0 })).body.ticket
     );
 }
-async function ey(e, t) {
+async function eS(e, t) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: e, refreshing: !0 });
     try {
-        let n = await eS(e, t ?? void 0);
+        let n = await eT(e, t ?? void 0);
         o.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: e,
@@ -532,18 +535,18 @@ async function ey(e, t) {
         }),
             o.h.dispatch({ type: "EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET", applicationId: e, proxyTicket: n });
     } catch (a) {
-        let n = x.A.getChannel(t),
+        let n = M.A.getChannel(t),
             r = n?.guild_id ?? null,
             s = null != r ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         return (
             o.h.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                nonce: (0, R.m)(),
+                nonce: (0, C.m)(),
                 applicationId: e,
                 channelId: t,
                 guildId: r,
                 locationKind: s,
-                error: a instanceof v.A || a instanceof f.A || a instanceof N.A ? a : new f.A(a),
+                error: a instanceof N.A || a instanceof f.A || a instanceof O.A ? a : new f.A(a),
             }),
             !1
         );

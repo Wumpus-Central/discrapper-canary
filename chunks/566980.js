@@ -1,5 +1,9 @@
 "use strict";
-n.d(t, { h: () => r });
-var r = (function (e) {
-    return (e.WAITING = "WAITING"), (e.PURCHASING = "PURCHASING"), (e.FAIL = "FAIL"), (e.COMPLETED = "COMPLETED"), e;
-})({});
+n.d(t, { h: () => i });
+var r,
+    i =
+        (((r = {}).WAITING = "WAITING"),
+        (r.PURCHASING = "PURCHASING"),
+        (r.FAIL = "FAIL"),
+        (r.COMPLETED = "COMPLETED"),
+        r);

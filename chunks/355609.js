@@ -1,131 +1,134 @@
-n.d(t, { A: () => I, k: () => S });
-var a = n(627968),
-    l = n(64700),
-    s = n(503698),
-    i = n.n(s),
-    r = n(990078),
-    d = n(397927),
-    o = n(793574),
-    c = n(208039),
-    u = n(363487),
-    m = n(397400),
-    x = n(709255),
-    v = n(895770),
-    g = n(468946),
-    f = n(27023),
-    j = n(548392),
-    b = n(800007),
-    h = n(576709),
-    p = n(985018),
-    N = n(51158);
-function S() {
-    return (0, a.jsx)(c.A, {
-        className: N.Bq,
-        children: (0, a.jsx)(d.Text, {
+l.d(t, { A: () => k, k: () => C });
+var n = l(627968),
+    a = l(64700),
+    s = l(503698),
+    i = l.n(s),
+    r = l(990078),
+    d = l(834730),
+    o = l(289873),
+    c = l(534514),
+    u = l(885574),
+    m = l(793574),
+    v = l(208039),
+    x = l(363487),
+    g = l(397400),
+    f = l(709255),
+    j = l(895770),
+    h = l(468946),
+    b = l(27023),
+    p = l(548392),
+    N = l(800007),
+    A = l(576709),
+    I = l(985018),
+    S = l(51158);
+function C() {
+    return (0, n.jsx)(v.A, {
+        className: S.Bq,
+        children: (0, n.jsx)(d.E, {
             variant: "text-sm/medium",
-            children: p.intl.formatToPlainString(h.default.xta2U9, { maxInstances: b.ZI }),
+            children: I.intl.formatToPlainString(A.default.xta2U9, { maxInstances: N.ZI }),
         }),
     });
 }
-function I() {
+function k() {
     let {
         guildId: e,
         gameServerGames: t,
-        instances: n,
+        instances: l,
         gameServerInstance: s,
-        setGameServerInstance: c,
-        setCurrentGame: I,
-        onNext: A,
-    } = (0, f.bv)();
-    (0, m.ft)(e, null == s ? "create" : "edit");
-    let C = l.useCallback(
+        setGameServerInstance: v,
+        setCurrentGame: k,
+        onNext: y,
+    } = (0, b.bv)();
+    (0, g.ft)(e, null == s ? "create" : "edit");
+    let T = a.useCallback(
             (e) => {
-                I(e), A();
+                k(e), y();
             },
-            [I, A],
+            [k, y],
         ),
-        T = l.useCallback(
+        E = a.useCallback(
             (e) => {
-                c(e), A();
+                v(e), y();
             },
-            [c, A],
+            [v, y],
         ),
-        k = n.length >= b.ZI,
-        y = n.length > 0,
-        L = (0, u.A)(e);
+        G = l.length >= N.ZI,
+        L = l.length > 0,
+        P = (0, x.A)(e);
     return 0 === Object.values(t).length
-        ? (0, a.jsx)("div", { className: N.g4, children: (0, a.jsx)(d.y$y, { type: d.tVU.SPINNING_CIRCLE }) })
-        : (0, a.jsxs)(a.Fragment, {
+        ? (0, n.jsx)("div", { className: S.g4, children: (0, n.jsx)(o.y, { type: o.t.SPINNING_CIRCLE }) })
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  y &&
-                      (0, a.jsxs)("div", {
-                          className: N.yn,
+                  L &&
+                      (0, n.jsxs)("div", {
+                          className: S.yn,
                           children: [
-                              (0, a.jsx)(d.Heading, {
+                              (0, n.jsx)(c.D, {
                                   variant: "heading-md/semibold",
-                                  children: p.intl.string(h.default.BOWmmT),
+                                  children: I.intl.string(A.default.BOWmmT),
                               }),
-                              (0, a.jsx)("div", {
-                                  className: N.Hy,
-                                  children: n.map((t, n) =>
-                                      (0, a.jsx)(
-                                          x.A,
-                                          { guildId: e, gameInstance: t, onClick: T },
-                                          `instance-${t.id}-${n}`,
+                              (0, n.jsx)("div", {
+                                  className: S.Hy,
+                                  children: l.map((t, l) =>
+                                      (0, n.jsx)(
+                                          f.A,
+                                          { guildId: e, gameInstance: t, onClick: E },
+                                          `instance-${t.id}-${l}`,
                                       ),
                                   ),
                               }),
-                              k && (0, a.jsx)(S, {}),
+                              G && (0, n.jsx)(C, {}),
                           ],
                       }),
-                  (0, a.jsxs)("div", {
-                      className: i()(N.yn, { [N.r9]: k }),
+                  (0, n.jsxs)("div", {
+                      className: i()(S.yn, { [S.r9]: G }),
                       children: [
-                          y &&
-                              (0, a.jsx)(d.Heading, {
+                          L &&
+                              (0, n.jsx)(c.D, {
                                   variant: "heading-md/semibold",
-                                  children: p.intl.string(h.default.NIwDqW),
+                                  children: I.intl.string(A.default.NIwDqW),
                               }),
-                          (0, a.jsx)("div", {
-                              className: N.Y_,
-                              children: Object.values(t).map((t, n) =>
-                                  (0, a.jsx)(
+                          (0, n.jsx)("div", {
+                              className: S.Y_,
+                              children: Object.values(t).map((t, l) =>
+                                  (0, n.jsx)(
                                       r.m,
                                       {
                                           asContainer: !0,
                                           text: t.disabled
-                                              ? p.intl.formatToPlainString(h.default.uVpJYf, { gameName: t.name })
+                                              ? I.intl.formatToPlainString(A.default.uVpJYf, { gameName: t.name })
                                               : null,
                                           position: "top",
-                                          children: (0, a.jsx)(v.A, {
+                                          children: (0, n.jsx)(j.A, {
                                               guildId: e,
                                               game: t,
-                                              variant: k || !L || t.disabled ? v.e.DISABLED : v.e.CLICKABLE,
-                                              onClick: C,
-                                              location: o.A.GAME_SERVER_SETUP_MODAL,
+                                              variant: G || !P || t.disabled ? j.e.DISABLED : j.e.CLICKABLE,
+                                              onClick: T,
+                                              location: m.A.GAME_SERVER_SETUP_MODAL,
                                           }),
                                       },
-                                      `game-${t.id}-${n}`,
+                                      `game-${t.id}-${l}`,
                                   ),
                               ),
                           }),
                       ],
                   }),
-                  (0, a.jsxs)(j.N4, {
-                      step: b.HS.SELECT_GAME,
-                      className: N.xQ,
+                  (0, n.jsxs)(p.N4, {
+                      step: N.HS.SELECT_GAME,
+                      className: S.xQ,
                       children: [
-                          (0, a.jsxs)("div", {
-                              className: N.UW,
+                          (0, n.jsxs)("div", {
+                              className: S.UW,
                               children: [
-                                  (0, a.jsx)(d.mir, { size: "sm" }),
-                                  (0, a.jsx)(d.Text, {
+                                  (0, n.jsx)(u.m, { size: "sm" }),
+                                  (0, n.jsx)(d.E, {
                                       variant: "text-sm/medium",
-                                      children: p.intl.string(h.default["5DjxXm"]),
+                                      children: I.intl.string(A.default["5DjxXm"]),
                                   }),
                               ],
                           }),
-                          (0, a.jsx)(g.A, {}),
+                          (0, n.jsx)(h.A, {}),
                       ],
                   }),
               ],

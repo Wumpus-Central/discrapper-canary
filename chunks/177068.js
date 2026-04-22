@@ -1,14 +1,12 @@
 "use strict";
-n.d(t, { DX: () => f, MS: () => _ });
+n.d(t, { DX: () => c, MS: () => d });
 var r = n(488428),
     i = n(562465),
     s = n(626584),
     a = n(734057),
     o = n(927813),
     l = n(652215);
-let u = 5e3,
-    c = 5;
-class d {
+class u {
     indexingPollId;
     searchId;
     searchType;
@@ -25,9 +23,11 @@ class d {
                 if (null == r || this.isCanceled) return;
                 if (200 === r.status) e(r);
                 else if (202 === r.status) {
-                    if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > c)) return;
+                    if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > 5)) return;
                     let i = parseInt(r.headers["retry-after"]);
-                    (this.retryDelay = isNaN(i) || 0 === i ? u : i * o.A.Millis.SECOND), this.retryLater(e, t, n), t(r);
+                    (this.retryDelay = isNaN(i) || 0 === i ? 5e3 : i * o.A.Millis.SECOND),
+                        this.retryLater(e, t, n),
+                        t(r);
                 }
             } catch (e) {
                 new s.A("SearchFetcher").error(e), n(e);
@@ -41,7 +41,7 @@ class d {
             (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
     }
 }
-class _ extends d {
+class d extends u {
     getEndpoint() {
         switch (this.searchType) {
             case l.I4_.GUILD:
@@ -69,7 +69,7 @@ class _ extends d {
             : i.Bo.get({ url: n, query: r.stringify(this.query), oldFormErrors: !0, rejectWithError: t });
     }
 }
-class f extends d {
+class c extends u {
     payload;
     constructor(e, t, n, r) {
         super(e, t, n), (this.payload = r);

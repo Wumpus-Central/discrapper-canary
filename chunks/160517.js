@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { j: () => r });
-var r = (function (e) {
-    return (e[(e.DESKTOP = 0)] = "DESKTOP"), (e[(e.MOBILE = 1)] = "MOBILE"), e;
-})({});
+n.d(t, { j: () => i });
+var r,
+    i = (((r = {})[(r.DESKTOP = 0)] = "DESKTOP"), (r[(r.MOBILE = 1)] = "MOBILE"), r);

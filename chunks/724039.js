@@ -2,10 +2,6 @@
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
     r = Object.prototype.propertyIsEnumerable;
-function i(e) {
-    if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
-    return Object(e);
-}
 e.exports = !(function () {
     try {
         if (!Object.assign) return !1;
@@ -29,14 +25,24 @@ e.exports = !(function () {
         return !1;
     }
 })()
-    ? function (e, a) {
-          for (var s, o, l = i(e), u = 1; u < arguments.length; u++) {
-              for (var c in (s = Object(arguments[u]))) n.call(s, c) && (l[c] = s[c]);
+    ? function (e, i) {
+          for (
+              var s,
+                  a,
+                  o = (function (e) {
+                      if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
+                      return Object(e);
+                  })(e),
+                  l = 1;
+              l < arguments.length;
+              l++
+          ) {
+              for (var u in (s = Object(arguments[l]))) n.call(s, u) && (o[u] = s[u]);
               if (t) {
-                  o = t(s);
-                  for (var d = 0; d < o.length; d++) r.call(s, o[d]) && (l[o[d]] = s[o[d]]);
+                  a = t(s);
+                  for (var d = 0; d < a.length; d++) r.call(s, a[d]) && (o[a[d]] = s[a[d]]);
               }
           }
-          return l;
+          return o;
       }
     : Object.assign;

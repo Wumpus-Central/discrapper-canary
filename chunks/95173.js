@@ -1,72 +1,75 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => T });
 var l = n(627968),
-    r = n(64700),
-    a = n(417597),
-    i = n(397927),
-    s = n(576470),
+    a = n(64700),
+    r = n(417597),
+    i = n(452027),
+    s = n(953822),
+    E = n(834730),
+    _ = n(60270),
+    u = n(576470),
     o = n(316031),
-    E = n(157347),
-    u = n(266047),
-    c = n(829887),
-    _ = n(985018);
-function d(e) {
+    c = n(157347),
+    d = n(266047),
+    A = n(829887),
+    g = n(985018);
+function T(e) {
     let { member: t } = e,
         n = t.userId,
-        d = t.guildId,
-        g = ((0, a.bG)([u.A], () => u.A.getEnhancedMember(d, n), [n, d]) ?? t).unusualDMActivityUntil,
-        A = r.useCallback((e) => {
+        T = t.guildId,
+        I = ((0, r.bG)([d.A], () => d.A.getEnhancedMember(T, n), [n, T]) ?? t).unusualDMActivityUntil,
+        N = a.useCallback((e) => {
             if (null == e) return null;
             let t = new Date(e).getTime();
-            return (0, E.hL)(t, E.wN.JOINED_AT);
+            return (0, c.hL)(t, c.wN.JOINED_AT);
         }, []),
-        T = r.useMemo(() => (null == t ? null : A(g)), [t, A, g]),
-        I = r.useMemo(() => (0, o.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-        N = r.useMemo(
+        G = a.useMemo(() => (null == t ? null : N(I)), [t, N, I]),
+        m = a.useMemo(() => (0, o.n)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        O = a.useMemo(
             () => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)),
             [t.communicationDisabledUntil],
         );
-    return null != g || I
-        ? (0, l.jsx)(i.D0$, {
-              label: _.intl.string(_.t["7V3759"]),
-              children: (0, l.jsxs)(c.SQ, {
+    return null != I || m
+        ? (0, l.jsx)(i.D, {
+              label: g.intl.string(g.t["7V3759"]),
+              children: (0, l.jsxs)(A.SQ, {
                   children: [
-                      null != g &&
-                          (0, l.jsx)(c.RU, {
-                              icon: (0, l.jsx)(i.EF8, {
+                      null != I &&
+                          (0, l.jsx)(A.RU, {
+                              icon: (0, l.jsx)(s.E, {
                                   size: "custom",
                                   color: "currentColor",
-                                  width: c.mb,
-                                  height: c.mb,
+                                  width: A.mb,
+                                  height: A.mb,
                               }),
-                              name: (0, l.jsx)(i.Text, {
+                              name: (0, l.jsx)(E.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: _.intl.string(_.t.ZRnON3),
+                                  children: g.intl.string(g.t.ZRnON3),
                               }),
-                              description: (0, l.jsx)(i.Text, {
+                              description: (0, l.jsx)(E.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: T,
+                                  children: G,
                               }),
                           }),
-                      I &&
-                          null != N &&
-                          (0, l.jsx)(c.RU, {
-                              icon: (0, l.jsx)(i.gQi, {
+                      m &&
+                          null != O &&
+                          (0, l.jsx)(A.RU, {
+                              icon: (0, l.jsx)(_.g, {
                                   size: "custom",
                                   color: "currentColor",
-                                  width: c.mb,
-                                  height: c.mb,
+                                  width: A.mb,
+                                  height: A.mb,
                               }),
-                              name: (0, l.jsx)(i.Text, {
+                              name: (0, l.jsx)(E.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: _.intl.string(_.t["TJ8/tE"]),
+                                  children: g.intl.string(g.t["TJ8/tE"]),
                               }),
-                              description: (0, l.jsx)(i.Text, {
+                              description: (0, l.jsx)(E.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: (0, l.jsx)(s.A, { deadline: N, showUnits: !0, stopAtOneSec: !0 }),
+                                  children: (0, l.jsx)(u.A, { deadline: O, showUnits: !0, stopAtOneSec: !0 }),
                               }),
                           }),
                   ],

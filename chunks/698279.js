@@ -1,16 +1,13 @@
 "use strict";
-n.d(t, { VQ: () => i, kx: () => r, wp: () => s });
-var r = (function (e) {
-    return (
-        (e.EMOJI = "emoji"),
-        (e.GIF = "gif"),
-        (e.STICKER = "sticker"),
-        (e.SOUNDBOARD = "soundboard"),
-        (e.KAOMOJI = "kaomoji"),
-        e
-    );
-})({});
-let i = "expression-picker-chat-input-button";
-var s = (function (e) {
-    return (e.MIN = "min"), (e.MAX = "max"), e;
-})({});
+n.d(t, { VQ: () => a, kx: () => s, wp: () => o });
+var r,
+    i,
+    s =
+        (((r = {}).EMOJI = "emoji"),
+        (r.GIF = "gif"),
+        (r.STICKER = "sticker"),
+        (r.SOUNDBOARD = "soundboard"),
+        (r.KAOMOJI = "kaomoji"),
+        r);
+let a = "expression-picker-chat-input-button";
+var o = (((i = {}).MIN = "min"), (i.MAX = "max"), i);

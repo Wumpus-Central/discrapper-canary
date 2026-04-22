@@ -1,33 +1,33 @@
-i.d(n, { default: () => c });
-var e = i(627968),
-    s = i(64700),
-    a = i(158954),
-    l = i(397927),
-    r = i(411335),
-    o = i(985018);
-function c(t) {
-    let { initialCustomMessage: n, onSubmit: i, onClose: c, transitionState: u } = t,
-        [d, h] = s.useState(n);
-    return (0, e.jsx)(a.Modal, {
-        onClose: c,
+r.d(t, { default: () => d });
+var a = r(627968),
+    n = r(64700),
+    l = r(189213),
+    o = r(260598),
+    i = r(411335),
+    s = r(985018);
+function d(e) {
+    let { initialCustomMessage: t, onSubmit: r, onClose: d, transitionState: u } = e,
+        [c, g] = n.useState(t);
+    return (0, a.jsx)(l.Modal, {
+        onClose: d,
         transitionState: u,
-        title: o.intl.string(o.t.Df4aUN),
-        subtitle: o.intl.string(o.t.eOWEmL),
+        title: s.intl.string(s.t.Df4aUN),
+        subtitle: s.intl.string(s.t.eOWEmL),
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oC"]),
+                text: s.intl.string(s.t["ETE/oC"]),
                 onClick: () => {
-                    c();
+                    d();
                 },
                 variant: "secondary",
             },
             {
-                text: o.intl.string(o.t.bt75uw),
+                text: s.intl.string(s.t.bt75uw),
                 onClick: () => {
-                    i(d);
+                    r(c);
                 },
             },
         ],
-        children: (0, e.jsx)(l.fs1, { placeholder: o.intl.string(o.t.gDZw7A), value: d, onChange: h, maxLength: r.TZ }),
+        children: (0, a.jsx)(o.f, { placeholder: s.intl.string(s.t.gDZw7A), value: c, onChange: g, maxLength: i.TZ }),
     });
 }

@@ -1,7 +1,7 @@
-e.d(n, { default: () => d });
+e.d(n, { default: () => U });
 var s = e(627968),
     i = e(64700),
-    o = e(158954),
+    o = e(772707),
     a = e(311907),
     u = e(116833),
     r = e(829219),
@@ -9,50 +9,50 @@ var s = e(627968),
     T = e(341915),
     c = e(714510),
     C = e(890687),
-    l = e(590202),
-    _ = e(73473),
+    _ = e(590202),
+    l = e(73473),
     L = e(654487),
     N = e(985018);
 function A(t) {
-    let { transitionState: n, onClose: e, quest: _, showSkipButton: A } = t,
-        d = (0, C.fc)(_),
-        U = (0, c.mU)({
-            quest: _,
-            taskDetails: d,
+    let { transitionState: n, onClose: e, quest: l, showSkipButton: A } = t,
+        U = (0, C.fc)(l),
+        d = (0, c.mU)({
+            quest: l,
+            taskDetails: U,
             location: L.rE.QUEST_ACTIVITY_UNENROLLED_MODAL,
             questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
             sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
         }),
-        p = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
-        I = i.useCallback(async () => {
-            await (0, r.Oy)(_.id, {
+        I = (0, a.bG)([E.A], () => E.A.isEnrolling(l.id)),
+        O = i.useCallback(async () => {
+            await (0, r.Oy)(l.id, {
                 questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-                questContentCTA: l.Cy.START_QUEST,
+                questContentCTA: _.Cy.START_QUEST,
                 sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
             }),
                 e();
-        }, [_.id, e]),
-        O = i.useCallback(() => ((0, r.Zb)(_.id), e()), [_.id, e]);
-    return (0, s.jsx)(o.ExpressiveModal, {
+        }, [l.id, e]),
+        p = i.useCallback(() => ((0, r.Zb)(l.id), e()), [l.id, e]);
+    return (0, s.jsx)(o.k, {
         transitionState: n,
-        onClose: O,
+        onClose: p,
         graphic: {
             type: "dynamic",
             component: u.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
-            props: { quest: _ },
+            props: { quest: l },
         },
         gradientColor: "blue",
         title: N.intl.string(N.t.IrNgN4),
-        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: _.config.messages.questName })} ${U}`,
+        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: l.config.messages.questName })} ${d}`,
         actions: [
-            ...(A ? [{ text: N.intl.string(N.t["5Wxrcd"]), variant: "secondary", onClick: O }] : []),
-            { text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: I, loading: p },
+            ...(A ? [{ text: N.intl.string(N.t["5Wxrcd"]), variant: "secondary", onClick: p }] : []),
+            { text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: O, loading: I },
         ],
     });
 }
-function d(t) {
+function U(t) {
     let { quest: n, showSkipButton: e, transitionState: i, onClose: o } = t;
-    return (0, s.jsx)(_.R, {
+    return (0, s.jsx)(l.R, {
         questOrQuests: n,
         questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
         sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,

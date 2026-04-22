@@ -1,12 +1,12 @@
-n.d(t, { A: () => i });
-var a = n(627968);
-n(64700);
-var s = n(397927);
+a.d(t, { A: () => i });
+var n = a(627968);
+a(64700);
+var l = a(192308);
 function i(e) {
-    (0, s.mMO)(
+    (0, l.openModalLazy)(
         async () => {
-            let { default: e } = await n.e("25810").then(n.bind(n, 114857));
-            return (t) => (0, a.jsx)(e, { ...t });
+            let { default: e } = await a.e("25810").then(a.bind(a, 114857));
+            return (t) => (0, n.jsx)(e, { ...t });
         },
         { onCloseCallback: e },
     );

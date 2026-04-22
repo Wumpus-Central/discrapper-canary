@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { E: () => x });
+n.d(t, { E: () => h });
 var i = n(627968),
-    s = n(64700),
-    l = n(732955),
+    l = n(64700),
+    s = n(821609),
     r = n(688810),
     a = n(342490),
     o = n(695800),
@@ -11,49 +10,49 @@ var i = n(627968),
     u = n(339984),
     m = n(478644),
     g = n(985018);
-function x(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: x } = e,
-        { analyticsLocations: h } = (0, r.Ay)(),
+function h(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: h } = e,
+        { analyticsLocations: x } = (0, r.Ay)(),
         _ = t.features.has(d.GuildFeatures.BANNER),
-        A = s.useCallback(
+        p = l.useCallback(
             (e) => {
                 let { imageUri: n, file: i } = e;
-                (0, o.fI)(t, h, n, i);
+                (0, o.fI)(t, x, n, i);
             },
-            [h, t],
+            [x, t],
         ),
-        p = s.useCallback(
+        A = l.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     (0, o.p_)({
                         guild: t,
-                        analyticsLocations: h,
+                        analyticsLocations: x,
                         analyticsSection: d.JJy.GUILD_BANNER,
                         analyticsObject: d.ZSU.BUTTON_CTA,
                         perks: (0, c.QR)(),
                     });
             },
-            [h, t],
+            [x, t],
         ),
-        f = s.useCallback(() => {
+        E = l.useCallback(() => {
             (0, o.Nn)({
                 uploadType: u.HL.GUILD_BANNER,
                 maxFileSizeBytes: m.j,
-                onComplete: A,
+                onComplete: p,
                 analyticsLocation: { page: d.liQ.GUILD_SETTINGS, section: d.JJy.GUILD_BANNER },
-                analyticsLocations: h,
+                analyticsLocations: x,
             });
-        }, [h, A]);
+        }, [x, p]);
     return _
         ? (0, i.jsx)("div", {
-              className: x,
-              children: (0, i.jsx)(l.$nd, {
+              className: h,
+              children: (0, i.jsx)(s.$, {
                   disabled: !(_ && n),
                   variant: "primary",
                   text: g.intl.string(g.t.yG2pUi),
-                  onClick: f,
+                  onClick: E,
               }),
           })
-        : (0, i.jsx)("div", { className: x, children: (0, i.jsx)(a.u, { onClick: p }) });
+        : (0, i.jsx)("div", { className: h, children: (0, i.jsx)(a.u, { onClick: A }) });
 }

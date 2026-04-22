@@ -1,146 +1,147 @@
-"use strict";
-n.d(t, { A: () => C });
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(230109),
-    o = n(397927),
-    l = n(688810),
-    u = n(665171),
-    c = n(488803),
-    d = n(522055),
-    _ = n(645619),
-    f = n(954571),
-    p = n(917064),
-    h = n(787001),
-    m = n(232122),
-    E = n(340195),
-    g = n(244027),
-    A = n(278115),
-    I = n(527113),
-    T = n(250493),
-    S = n(436083),
-    y = n(652215),
-    v = n(985018),
-    N = n(909095);
-function C(e) {
-    let { analyticsLocation: t, guild: n, onClose: C, scrollToPowerupCards: R } = e,
-        [O, b] = i.useState(!0),
-        D = i.useRef(!1),
-        { analyticsLocations: L } = (0, l.Ay)(),
-        w = i.useRef(null),
-        M = i.useRef(null),
-        P = i.useRef(null),
-        x = i.useCallback(() => {
-            C?.();
-        }, [C]),
-        k = i.useCallback(() => {
-            null != P.current &&
-                null != M.current &&
-                M.current.scrollIntoViewNode({ node: P.current, animate: !0, shouldScrollToStart: !0 });
+i.d(t, { A: () => V });
+var s = i(627968),
+    l = i(64700),
+    a = i(311907),
+    n = i(230109),
+    r = i(939249),
+    c = i(789645),
+    o = i(599319),
+    d = i(688810),
+    u = i(665171),
+    m = i(488803),
+    g = i(522055),
+    T = i(645619),
+    x = i(954571),
+    A = i(917064),
+    f = i(787001),
+    h = i(232122),
+    j = i(340195),
+    p = i(244027),
+    N = i(278115),
+    E = i(527113),
+    b = i(250493),
+    v = i(436083),
+    I = i(652215),
+    _ = i(985018),
+    R = i(215895);
+function V(e) {
+    let { analyticsLocation: t, guild: i, onClose: V, scrollToPowerupCards: S } = e,
+        [P, y] = l.useState(!0),
+        C = l.useRef(!1),
+        { analyticsLocations: k } = (0, d.Ay)(),
+        L = l.useRef(null),
+        U = l.useRef(null),
+        M = l.useRef(null),
+        O = l.useCallback(() => {
+            V?.();
+        }, [V]),
+        G = l.useCallback(() => {
+            null != M.current &&
+                null != U.current &&
+                U.current.scrollIntoViewNode({ node: M.current, animate: !0, shouldScrollToStart: !0 });
         }, []),
-        U = i.useCallback(
+        D = l.useCallback(
             (e) => {
                 e &&
-                    !D.current &&
-                    (f.default.track(y.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: y.liQ.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: L,
+                    !C.current &&
+                    (x.default.track(I.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: I.liQ.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: k,
                         location_section: t.section,
                         location_object: t.object,
-                        guild_id: n.id,
+                        guild_id: i.id,
                     }),
-                    (D.current = !0));
+                    (C.current = !0));
             },
-            [t, L, n.id],
+            [t, k, i.id],
         );
-    i.useEffect(() => {
-        f.default.track(y.HAw.OPEN_MODAL, {
-            type: y.liQ.PREMIUM_GUILD_USER_MODAL,
-            location_stack: L,
+    l.useEffect(() => {
+        x.default.track(I.HAw.OPEN_MODAL, {
+            type: I.liQ.PREMIUM_GUILD_USER_MODAL,
+            location_stack: k,
             location_section: t.section,
             location_object: t.object,
-            guild_id: n.id,
+            guild_id: i.id,
         });
-    }, [n.id, t, L]);
-    let G = (0, c.C$)(n.id, "GuildBoostingMarketingRefresh"),
-        F = (0, s.bG)([d.A], () => d.A.shouldFetchCatalogForGuild(n.id));
-    i.useEffect(() => {
-        G && F && (0, u.z9)(n.id);
-    }, [n.id, G, F]);
-    let V = (0, s.bG)([_.A], () => _.A.hasFetchedPowerupCatalog(n.id));
+    }, [i.id, t, k]);
+    let w = (0, m.C$)(i.id, "GuildBoostingMarketingRefresh"),
+        z = (0, a.bG)([g.A], () => g.A.shouldFetchCatalogForGuild(i.id));
+    l.useEffect(() => {
+        w && z && (0, u.z9)(i.id);
+    }, [i.id, w, z]);
+    let Q = (0, a.bG)([T.A], () => T.A.hasFetchedPowerupCatalog(i.id));
     return (
-        i.useEffect(() => {
-            if (R && V) {
+        l.useEffect(() => {
+            if (S && Q) {
                 let e = setTimeout(() => {
-                    k();
+                    G();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [R, k, V]),
-        (0, r.jsxs)(r.Fragment, {
+        }, [S, G, Q]),
+        (0, s.jsxs)(s.Fragment, {
             children: [
-                null != C &&
-                    (0, r.jsx)("div", {
-                        className: N.Yk,
-                        children: (0, r.jsx)(o.DUT, {
-                            className: N.b,
-                            onClick: x,
-                            "aria-label": v.intl.string(v.t.cpT0Cq),
-                            children: (0, r.jsx)(o.PGe, { size: "md", color: "currentColor" }),
+                null != V &&
+                    (0, s.jsx)("div", {
+                        className: R.Yk,
+                        children: (0, s.jsx)(r.D, {
+                            className: R.b,
+                            onClick: O,
+                            "aria-label": _.intl.string(_.t.cpT0Cq),
+                            children: (0, s.jsx)(c.P, { size: "md", color: "currentColor" }),
                         }),
                     }),
-                (0, r.jsxs)(o.GtU, {
-                    ref: M,
-                    className: N.XG,
+                (0, s.jsxs)(o.Gt, {
+                    ref: U,
+                    className: R.XG,
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: N.wx,
+                        (0, s.jsxs)("div", {
+                            className: R.wx,
                             children: [
-                                (0, r.jsx)(E.A, { className: N.y2 }),
-                                (0, r.jsxs)("div", {
-                                    className: N.AZ,
+                                (0, s.jsx)(j.A, { className: R.y2 }),
+                                (0, s.jsxs)("div", {
+                                    className: R.AZ,
                                     children: [
-                                        (0, r.jsx)(h.A, {
-                                            guild: n,
-                                            closeLayer: x,
-                                            onCtaVisibilityChange: b,
-                                            className: N.Oh,
+                                        (0, s.jsx)(f.A, {
+                                            guild: i,
+                                            closeLayer: O,
+                                            onCtaVisibilityChange: y,
+                                            className: R.Oh,
                                         }),
-                                        (0, r.jsx)(S.A, {
-                                            guild: n,
+                                        (0, s.jsx)(v.A, {
+                                            guild: i,
                                             analyticsLocation: t,
                                             videoPlacement: "top",
-                                            sourceAnalyticsLocations: L,
+                                            sourceAnalyticsLocations: k,
                                         }),
-                                        (0, r.jsx)(g.A, { guild: n }),
+                                        (0, s.jsx)(p.A, { guild: i }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: N.uE,
-                            children: (0, r.jsx)(A.A, { ref: P, guild: e.guild, onClose: x }),
+                        (0, s.jsx)("div", {
+                            className: R.uE,
+                            children: (0, s.jsx)(N.A, { ref: M, guild: e.guild, onClose: O }),
                         }),
-                        (0, r.jsx)("div", {
-                            className: N.o6,
-                            children: (0, r.jsxs)("div", {
-                                className: N.y$,
+                        (0, s.jsx)("div", {
+                            className: R.o6,
+                            children: (0, s.jsxs)("div", {
+                                className: R.y$,
                                 children: [
-                                    (0, r.jsx)(I.A, { className: N.Q, guild: n }),
-                                    (0, r.jsx)(p.A, {}),
-                                    (0, r.jsx)(m.A, {}),
+                                    (0, s.jsx)(E.A, { className: R.Q, guild: i }),
+                                    (0, s.jsx)(A.A, {}),
+                                    (0, s.jsx)(h.A, {}),
                                 ],
                             }),
                         }),
-                        (0, r.jsx)(a.L, {
-                            innerRef: w,
-                            onChange: U,
-                            children: (0, r.jsx)("div", { ref: w, className: N.mR }),
+                        (0, s.jsx)(n.L, {
+                            innerRef: L,
+                            onChange: D,
+                            children: (0, s.jsx)("div", { ref: L, className: R.mR }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(T.A, { guild: n, isVisible: !O, closeLayer: x }),
+                (0, s.jsx)(b.A, { guild: i, isVisible: !P, closeLayer: O }),
             ],
         })
     );

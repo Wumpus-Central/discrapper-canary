@@ -1,83 +1,85 @@
-t.d(n, { A: () => j });
-var i = t(627968);
-t(64700);
-var a = t(311907),
-    r = t(397927),
-    l = t(821269),
-    o = t(437774),
-    s = t(773669),
-    d = t(967198),
-    c = t(351906),
-    _ = t(183555),
-    u = t(346713),
-    p = t(484509),
-    A = t(389996),
-    g = t(46937),
-    m = t(361311),
-    f = t(743987),
-    h = t(900179),
-    x = t(280645),
-    I = t(928223),
-    b = t(518477),
-    v = t(985018),
-    E = t(824860);
-function j(e) {
-    let { user: n, displayProfile: t, onClose: j } = e,
-        { trackUserProfileAction: y } = (0, _.NJ)(),
-        C = (0, a.bG)([d.A], () => d.A.getGuildId()),
-        T = (0, l.q)({ userId: n.id }),
-        S = (0, a.bG)([c.A], () => c.A.hidePersonalInformation),
-        N = (0, a.bG)([s.default], () => s.default.locale),
-        R = (0, p.A)(n.id),
-        L = (0, u.A)(n.id);
-    return (0, i.jsxs)(r.IpV, {
+a.d(t, { A: () => N });
+var n = a(627968);
+a(64700);
+var i = a(311907),
+    l = a(573613),
+    r = a(695366),
+    d = a(827734),
+    o = a(821269),
+    s = a(437774),
+    c = a(773669),
+    _ = a(967198),
+    u = a(351906),
+    m = a(183555),
+    p = a(346713),
+    g = a(484509),
+    b = a(389996),
+    f = a(46937),
+    x = a(361311),
+    h = a(743987),
+    A = a(900179),
+    v = a(280645),
+    I = a(928223),
+    y = a(518477),
+    C = a(985018),
+    j = a(741036);
+function N(e) {
+    let { user: t, displayProfile: a, onClose: N } = e,
+        { trackUserProfileAction: E } = (0, m.NJ)(),
+        S = (0, i.bG)([_.A], () => _.A.getGuildId()),
+        T = (0, o.q)({ userId: t.id }),
+        w = (0, i.bG)([u.A], () => u.A.hidePersonalInformation),
+        P = (0, i.bG)([c.default], () => c.default.locale),
+        k = (0, g.A)(t.id),
+        M = (0, p.A)(t.id);
+    return (0, n.jsxs)(l.Ip, {
         fade: !0,
-        className: E.XG,
+        className: j.XG,
         children: [
-            t?.bio != null && t?.bio !== "" && !S && (0, i.jsx)(A.A, { userBio: t.bio, setLineClamp: !1 }),
-            t?.guildId != null && (0, i.jsx)(x.A, { userId: n.id, guildId: t.guildId }),
-            n.isProvisional &&
-                (0, i.jsx)(h.A, {
-                    heading: v.intl.string(v.t.Iyka0U),
-                    headingIcon: (0, i.jsx)(r.EpV, { size: "xxs", color: r.LU0.colors.TEXT_STRONG }),
+            a?.bio != null && a?.bio !== "" && !w && (0, n.jsx)(b.A, { userBio: a.bio, setLineClamp: !1 }),
+            a?.guildId != null && (0, n.jsx)(v.A, { userId: t.id, guildId: a.guildId }),
+            t.isProvisional &&
+                (0, n.jsx)(A.A, {
+                    heading: C.intl.string(C.t.Iyka0U),
+                    headingIcon: (0, n.jsx)(r.E, { size: "xxs", color: d.A.colors.TEXT_STRONG }),
                     headingColor: "text-default",
-                    children: (0, i.jsx)(o.T, { userId: n.id }),
+                    children: (0, n.jsx)(s.T, { userId: t.id }),
                 }),
             T.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: v.intl.string(v.t["Uv/eTx"]),
-                    children: (0, i.jsx)(m.A, { applicationIds: T }),
+                (0, n.jsx)(A.A, {
+                    heading: C.intl.string(C.t["Uv/eTx"]),
+                    children: (0, n.jsx)(x.A, { applicationIds: T }),
                 }),
-            (0, i.jsx)(h.A, {
-                heading: v.intl.string(v.t.a6XYD9),
-                children: (0, i.jsx)(f.A, { userId: n.id, guildId: t?.guildId, tooltipDelay: b.In }),
+            (0, n.jsx)(A.A, {
+                heading: C.intl.string(C.t.a6XYD9),
+                children: (0, n.jsx)(h.A, { userId: t.id, guildId: a?.guildId, tooltipDelay: y.In }),
             }),
-            R.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: v.intl.string(v.t["3fe7U5"]),
-                    scrollTargetId: b.bk.CONNECTIONS,
-                    children: (0, i.jsx)(g.Ay, { connectedAccounts: R, className: E.oQ, userId: n.id, locale: N }),
+            k.length > 0 &&
+                (0, n.jsx)(A.A, {
+                    heading: C.intl.string(C.t["3fe7U5"]),
+                    scrollTargetId: y.bk.CONNECTIONS,
+                    children: (0, n.jsx)(f.Ay, { connectedAccounts: k, className: j.oQ, userId: t.id, locale: P }),
                 }),
-            L.length > 0 &&
-                (0, i.jsx)(h.A, {
-                    heading: v.intl.string(v.t.PHjkRE),
-                    children: L.map((e) =>
-                        (0, i.jsx)(
-                            g.Wc,
+            M.length > 0 &&
+                (0, n.jsx)(A.A, {
+                    heading: C.intl.string(C.t.PHjkRE),
+                    children: M.map((e) =>
+                        (0, n.jsx)(
+                            f.Wc,
                             {
-                                className: E.MI,
+                                className: j.MI,
                                 applicationRoleConnection: e,
-                                locale: N,
+                                locale: P,
                                 onApplicationClicked: () => {
-                                    y({ action: "PRESS_APP_CONNECTION" }), j();
+                                    E({ action: "PRESS_APP_CONNECTION" }), N();
                                 },
-                                selectedGuildId: C ?? void 0,
+                                selectedGuildId: S ?? void 0,
                             },
                             e.application.id,
                         ),
                     ),
                 }),
-            (0, i.jsx)(I.A, { userId: n.id }),
+            (0, n.jsx)(I.A, { userId: t.id }),
         ],
     });
 }

@@ -129,12 +129,8 @@ e.exports = function (e) {
                 "Charts",
             ]),
         },
-        n = { className: "string", begin: '"', end: '"', illegal: "\\n" },
-        r = { className: "string", begin: "'", end: "'", illegal: "\\n" },
-        i = { className: "string", begin: "<<", end: ">>" },
-        s = { className: "number", begin: "[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?" },
-        a = { beginKeywords: "import", end: "$", keywords: t, contains: [n] },
-        o = {
+        a = { className: "string", begin: '"', end: '"', illegal: "\\n" },
+        n = {
             className: "function",
             begin: /[a-z][^\n]*->/,
             returnBegin: !0,
@@ -145,6 +141,16 @@ e.exports = function (e) {
         name: "XL",
         aliases: ["tao"],
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, n, r, i, o, a, s, e.NUMBER_MODE],
+        contains: [
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            a,
+            { className: "string", begin: "'", end: "'", illegal: "\\n" },
+            { className: "string", begin: "<<", end: ">>" },
+            n,
+            { beginKeywords: "import", end: "$", keywords: t, contains: [a] },
+            { className: "number", begin: "[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?" },
+            e.NUMBER_MODE,
+        ],
     };
 };

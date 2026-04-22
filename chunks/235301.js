@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_ceece4",
     rf: "body_ceece4",

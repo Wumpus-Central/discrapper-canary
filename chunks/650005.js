@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Fv: "categoryRow__1ea09",
     d0: "uncategorized__1ea09",

@@ -1,54 +1,56 @@
-t.d(l, { default: () => b });
+t.d(l, { default: () => h });
 var r = t(627968);
 t(64700);
 var d = t(311907),
-    i = t(397927),
-    n = t(442433),
-    a = t(686956),
-    s = t(383394),
-    o = t(711014),
-    c = t(567035),
-    u = t(652215),
-    p = t(985018);
-function b(e) {
-    let { folderId: l, folderName: b, folderColor: f, unread: h, onSelect: x } = e,
-        g = (0, d.bG)([o.Ay], () => o.Ay.getGuildFolderById(l), [l]),
-        A = (0, d.bG)([s.A], () => s.A.getExpandedFolders().size > 0);
-    return (0, r.jsxs)(i.W1t, {
+    i = t(861672),
+    n = t(477782),
+    a = t(192308),
+    s = t(442433),
+    o = t(686956),
+    c = t(383394),
+    u = t(711014),
+    p = t(567035),
+    b = t(652215),
+    f = t(985018);
+function h(e) {
+    let { folderId: l, folderName: h, folderColor: x, unread: g, onSelect: A } = e,
+        j = (0, d.bG)([u.Ay], () => u.Ay.getGuildFolderById(l), [l]),
+        y = (0, d.bG)([c.A], () => c.A.getExpandedFolders().size > 0);
+    return (0, r.jsxs)(i.W, {
         "data-menu-migrated": !0,
         navId: "guild-context",
-        "aria-label": p.intl.string(p.t.HpQykc),
-        onClose: n.Z_,
-        onSelect: x,
+        "aria-label": f.intl.string(f.t.HpQykc),
+        onClose: s.Z_,
+        onSelect: A,
         children: [
-            (0, r.jsx)(i.rXV, {
-                children: (0, r.jsx)(i.Drp, {
+            (0, r.jsx)(n.rX, {
+                children: (0, r.jsx)(n.Dr, {
                     id: "mark-folder-read",
-                    label: p.intl.string(p.t.thzRJA),
+                    label: f.intl.string(f.t.thzRJA),
                     action: function () {
-                        if (null == g) return;
-                        let { guildIds: e } = g;
-                        (0, c.A)(e, u.JJy.GUILD_LIST);
+                        if (null == j) return;
+                        let { guildIds: e } = j;
+                        (0, p.A)(e, b.JJy.GUILD_LIST);
                     },
-                    disabled: !h,
+                    disabled: !g,
                 }),
             }),
-            (0, r.jsxs)(i.rXV, {
+            (0, r.jsxs)(n.rX, {
                 children: [
-                    (0, r.jsx)(i.Drp, {
+                    (0, r.jsx)(n.Dr, {
                         id: "folder-settings",
-                        label: p.intl.string(p.t.Dx7im5),
+                        label: f.intl.string(f.t.Dx7im5),
                         action: () =>
-                            (0, i.mMO)(async () => {
+                            (0, a.openModalLazy)(async () => {
                                 let { default: e } = await t.e("99116").then(t.bind(t, 672551));
-                                return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: b, folderColor: f });
+                                return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: h, folderColor: x });
                             }),
                     }),
-                    A &&
-                        (0, r.jsx)(i.Drp, {
+                    y &&
+                        (0, r.jsx)(n.Dr, {
                             id: "folder-collapse",
-                            label: p.intl.string(p.t.rCPsbo),
-                            action: () => a.A.collapseAllFolders(),
+                            label: f.intl.string(f.t.rCPsbo),
+                            action: () => o.A.collapseAllFolders(),
                         }),
                 ],
             }),

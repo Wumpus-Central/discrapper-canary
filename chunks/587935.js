@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(116657);
-let i = {
+i.d(t, { A: () => r });
+var n = i(116657);
+let r = {
     "tiff:Orientation": (e) =>
         "1" === e
             ? "Horizontal (normal)"
@@ -20,51 +19,51 @@ let i = {
                         : "8" === e
                           ? "Rotate 270 CW"
                           : e,
-    "tiff:ResolutionUnit": (e) => r.A.ResolutionUnit(parseInt(e, 10)),
-    "tiff:XResolution": (e) => a(r.A.XResolution, e),
-    "tiff:YResolution": (e) => a(r.A.YResolution, e),
-    "exif:ApertureValue": (e) => a(r.A.ApertureValue, e),
-    "exif:GPSLatitude": l,
-    "exif:GPSLongitude": l,
-    "exif:FNumber": (e) => a(r.A.FNumber, e),
-    "exif:FocalLength": (e) => a(r.A.FocalLength, e),
-    "exif:FocalPlaneResolutionUnit": (e) => r.A.FocalPlaneResolutionUnit(parseInt(e, 10)),
-    "exif:ColorSpace": (e) => r.A.ColorSpace(s(e)),
+    "tiff:ResolutionUnit": (e) => n.A.ResolutionUnit(parseInt(e, 10)),
+    "tiff:XResolution": (e) => o(n.A.XResolution, e),
+    "tiff:YResolution": (e) => o(n.A.YResolution, e),
+    "exif:ApertureValue": (e) => o(n.A.ApertureValue, e),
+    "exif:GPSLatitude": s,
+    "exif:GPSLongitude": s,
+    "exif:FNumber": (e) => o(n.A.FNumber, e),
+    "exif:FocalLength": (e) => o(n.A.FocalLength, e),
+    "exif:FocalPlaneResolutionUnit": (e) => n.A.FocalPlaneResolutionUnit(parseInt(e, 10)),
+    "exif:ColorSpace": (e) => {
+        var t;
+        return n.A.ColorSpace("0x" === (t = e).substring(0, 2) ? parseInt(t.substring(2), 16) : parseInt(t, 10));
+    },
     "exif:ComponentsConfiguration"(e, t) {
         if (/^\d, \d, \d, \d$/.test(t)) {
             let e = t.split(", ").map((e) => e.charCodeAt(0));
-            return r.A.ComponentsConfiguration(e);
+            return n.A.ComponentsConfiguration(e);
         }
         return t;
     },
-    "exif:Contrast": (e) => r.A.Contrast(parseInt(e, 10)),
-    "exif:CustomRendered": (e) => r.A.CustomRendered(parseInt(e, 10)),
-    "exif:ExposureMode": (e) => r.A.ExposureMode(parseInt(e, 10)),
-    "exif:ExposureProgram": (e) => r.A.ExposureProgram(parseInt(e, 10)),
-    "exif:ExposureTime": (e) => (o(e) ? r.A.ExposureTime(e.split("/").map((e) => parseInt(e, 10))) : e),
-    "exif:MeteringMode": (e) => r.A.MeteringMode(parseInt(e, 10)),
-    "exif:Saturation": (e) => r.A.Saturation(parseInt(e, 10)),
-    "exif:SceneCaptureType": (e) => r.A.SceneCaptureType(parseInt(e, 10)),
-    "exif:Sharpness": (e) => r.A.Sharpness(parseInt(e, 10)),
-    "exif:ShutterSpeedValue": (e) => a(r.A.ShutterSpeedValue, e),
-    "exif:WhiteBalance": (e) => r.A.WhiteBalance(parseInt(e, 10)),
+    "exif:Contrast": (e) => n.A.Contrast(parseInt(e, 10)),
+    "exif:CustomRendered": (e) => n.A.CustomRendered(parseInt(e, 10)),
+    "exif:ExposureMode": (e) => n.A.ExposureMode(parseInt(e, 10)),
+    "exif:ExposureProgram": (e) => n.A.ExposureProgram(parseInt(e, 10)),
+    "exif:ExposureTime": (e) => (a(e) ? n.A.ExposureTime(e.split("/").map((e) => parseInt(e, 10))) : e),
+    "exif:MeteringMode": (e) => n.A.MeteringMode(parseInt(e, 10)),
+    "exif:Saturation": (e) => n.A.Saturation(parseInt(e, 10)),
+    "exif:SceneCaptureType": (e) => n.A.SceneCaptureType(parseInt(e, 10)),
+    "exif:Sharpness": (e) => n.A.Sharpness(parseInt(e, 10)),
+    "exif:ShutterSpeedValue": (e) => o(n.A.ShutterSpeedValue, e),
+    "exif:WhiteBalance": (e) => n.A.WhiteBalance(parseInt(e, 10)),
 };
-function a(e, t) {
-    return o(t) ? e(t.split("/")) : t;
+function o(e, t) {
+    return a(t) ? e(t.split("/")) : t;
 }
-function s(e) {
-    return "0x" === e.substring(0, 2) ? parseInt(e.substring(2), 16) : parseInt(e, 10);
-}
-function o(e) {
+function a(e) {
     return /^-?\d+\/-?\d+$/.test(e);
 }
-function l(e) {
-    let [t, n] = e.split(",");
-    if (void 0 !== t && void 0 !== n) {
+function s(e) {
+    let [t, i] = e.split(",");
+    if (void 0 !== t && void 0 !== i) {
         let e = parseFloat(t),
-            r = parseFloat(n),
-            i = n.charAt(n.length - 1);
-        if (!Number.isNaN(e) && !Number.isNaN(r)) return "" + (e + r / 60) + i;
+            n = parseFloat(i),
+            r = i.charAt(i.length - 1);
+        if (!Number.isNaN(e) && !Number.isNaN(n)) return "" + (e + n / 60) + r;
     }
     return e;
 }

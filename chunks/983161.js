@@ -1,193 +1,182 @@
-l.d(n, { default: () => I });
+l.d(n, { default: () => D });
 var t = l(627968),
     a = l(64700),
     i = l(91871),
     s = l.n(i),
-    r = l(158954),
+    r = l(189213),
     c = l(417597),
-    o = l(397927),
-    d = l(47167),
-    u = l(713654),
-    h = l(374084),
-    m = l(342298),
-    x = l(734057),
-    g = l(808728),
-    p = l(71393),
-    v = l(994500),
-    C = l(287809),
-    j = l(486020),
-    k = l(132514),
-    b = l(721228),
-    A = l(985018),
-    N = l(755874);
-function _(e, n, l, t) {
+    o = l(123292),
+    d = l(534514),
+    u = l(783878),
+    h = l(834730),
+    m = l(292666),
+    x = l(260598),
+    g = l(95635),
+    p = l(47167),
+    v = l(713654),
+    j = l(374084),
+    C = l(342298),
+    k = l(734057),
+    b = l(808728),
+    A = l(71393),
+    N = l(994500),
+    _ = l(287809),
+    I = l(486020),
+    f = l(132514),
+    S = l(721228),
+    y = l(985018),
+    E = l(915858);
+function M(e, n, l, t) {
     return { channelId: e, title: n, description: l, emoji: null, icon: t ?? null };
 }
-function I(e) {
-    let { transitionState: n, onClose: l, resourceChannel: i, guildId: I, onSave: f, onDelete: H, onIconUpload: S } = e,
-        [y, M] = a.useState(i?.title ?? ""),
-        [E, K] = a.useState(i?.description ?? ""),
-        [U, w] = a.useState(
+function D(e) {
+    let { transitionState: n, onClose: l, resourceChannel: i, guildId: D, onSave: H, onDelete: U, onIconUpload: w } = e,
+        [K, L] = a.useState(i?.title ?? ""),
+        [R, G] = a.useState(i?.description ?? ""),
+        [J, P] = a.useState(
             (function (e) {
                 if (null == e) return null;
-                let n = x.A.getChannel(e.channelId);
+                let n = k.A.getChannel(e.channelId);
                 return null == n ? null : n.id;
             })(i),
         ),
-        L = (0, c.bG)([k.A], () => k.A.getResourceChannel(i?.channelId)?.icon),
-        R = (0, c.yK)([k.A], () => (k.A.getSettings()?.resourceChannels ?? []).map((e) => e.channelId)),
-        G = y.length < h.SM || null == U,
-        J = a.useCallback(() => {
-            null == U || y.length <= 0 || (f(_(U, y, E, L)), l());
-        }, [f, l, y, U, L, E]),
-        P = a.useCallback(() => {
-            H?.(), l();
-        }, [H, l]),
-        T = a.useCallback(
+        z = (0, c.bG)([f.A], () => f.A.getResourceChannel(i?.channelId)?.icon),
+        B = (0, c.yK)([f.A], () => (f.A.getSettings()?.resourceChannels ?? []).map((e) => e.channelId)),
+        O = K.length < j.SM || null == J,
+        V = a.useCallback(() => {
+            null == J || K.length <= 0 || (H(M(J, K, R, z)), l());
+        }, [H, l, K, J, z, R]),
+        W = a.useCallback(() => {
+            U?.(), l();
+        }, [U, l]),
+        X = a.useCallback(
             (e) => {
-                w(e);
+                P(e);
             },
-            [w],
+            [P],
         ),
-        W = a.useCallback(
+        F = a.useCallback(
             (e) => {
-                let n = g.Ay.getSelectableChannels(I),
-                    l = p.A.getGuild(I);
+                let n = b.Ay.getSelectableChannels(D),
+                    l = A.A.getGuild(D);
                 return Promise.resolve(
                     n
                         .filter(
                             (n) =>
-                                (0, h.Yt)(n.channel) &&
-                                !R.includes(n.channel.id) &&
-                                s()(e, (0, d.m1)(n.channel, C.default, v.A)),
+                                (0, j.Yt)(n.channel) &&
+                                !B.includes(n.channel.id) &&
+                                s()(e, (0, p.m1)(n.channel, _.default, N.A)),
                         )
                         .map((e) => {
-                            let n = (0, u.gU)(e.channel, l);
+                            let n = (0, v.gU)(e.channel, l);
                             return {
                                 id: e.channel.id,
                                 value: e.channel.id,
-                                label: (0, d.m1)(e.channel, C.default, v.A),
+                                label: (0, p.m1)(e.channel, _.default, N.A),
                                 leading:
                                     null != n
-                                        ? (0, t.jsx)(n, { size: "xs", color: "currentColor", className: N.p })
+                                        ? (0, t.jsx)(n, { size: "xs", color: "currentColor", className: E.p })
                                         : void 0,
                             };
                         }),
                 );
             },
-            [I, R],
+            [D, B],
         ),
-        z = a.useCallback(
+        Y = a.useCallback(
             (e) => {
-                null != S && null != U && S(_(U, y, E), e);
+                null != w && null != J && w(M(J, K, R), e);
             },
-            [U, y, S, E],
+            [J, K, w, R],
         ),
-        B = a.useCallback(
-            () => (null == L || null == U ? null : j.Ay.getResourceChannelIconURL({ channelId: U, icon: L })),
-            [U, L],
+        Q = a.useCallback(
+            () => (null == z || null == J ? null : I.Ay.getResourceChannelIconURL({ channelId: J, icon: z })),
+            [J, z],
         ),
-        O = a.useMemo(
+        T = a.useMemo(
             () => [
-                { variant: "secondary", text: A.intl.string(A.t["ETE/oC"]), onClick: l },
-                { variant: "primary", text: A.intl.string(A.t["R3BPH+"]), onClick: J, disabled: G },
+                { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: l },
+                { variant: "primary", text: y.intl.string(y.t["R3BPH+"]), onClick: V, disabled: O },
             ],
-            [J, G, l],
+            [V, O, l],
         );
     return (0, t.jsxs)(r.Modal, {
-        title: A.intl.string(A.t.SNMXYt),
+        title: y.intl.string(y.t.SNMXYt),
         transitionState: n,
         onClose: l,
-        actions: O,
+        actions: T,
         actionBarInput:
-            null != i
-                ? (0, t.jsx)(o.QWc, { text: A.intl.string(A.t.N86XcP), onClick: P, variant: "critical" })
-                : void 0,
+            null != i ? (0, t.jsx)(o.Q, { text: y.intl.string(y.t.N86XcP), onClick: W, variant: "critical" }) : void 0,
         children: [
             (0, t.jsxs)("div", {
-                className: N.eH,
+                className: E.eH,
                 children: [
-                    (0, t.jsxs)(o.Heading, {
+                    (0, t.jsxs)(d.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: [A.intl.string(A.t.nPa4Ju), (0, t.jsx)(b.A, {})],
+                        children: [y.intl.string(y.t.nPa4Ju), (0, t.jsx)(S.A, {})],
                     }),
-                    (0, t.jsx)(o.ZiE, {
-                        selectionMode: "single",
-                        value: U ?? void 0,
-                        options: W,
-                        onSelectionChange: T,
-                    }),
-                    (0, t.jsx)(o.Text, {
+                    (0, t.jsx)(u.Z, { selectionMode: "single", value: J ?? void 0, options: F, onSelectionChange: X }),
+                    (0, t.jsx)(h.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: A.intl.string(A.t.eNDtJK),
+                        children: y.intl.string(y.t.eNDtJK),
                     }),
                 ],
             }),
-            (0, t.jsx)("div", { className: N.me }),
+            (0, t.jsx)("div", { className: E.me }),
             (0, t.jsxs)("div", {
-                className: N.eH,
+                className: E.eH,
                 children: [
-                    (0, t.jsxs)(o.Heading, {
+                    (0, t.jsxs)(d.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: [A.intl.string(A.t["lFy+aW"]), (0, t.jsx)(b.A, {})],
+                        children: [y.intl.string(y.t["lFy+aW"]), (0, t.jsx)(S.A, {})],
                     }),
-                    (0, t.jsx)(o.ksK, {
-                        value: y,
-                        onChange: M,
-                        placeholder: A.intl.string(A.t.XKUimI),
-                        maxLength: h.oW,
-                    }),
+                    (0, t.jsx)(m.k, { value: K, onChange: L, placeholder: y.intl.string(y.t.XKUimI), maxLength: j.oW }),
                 ],
             }),
-            (0, t.jsx)("div", { className: N.me }),
+            (0, t.jsx)("div", { className: E.me }),
             (0, t.jsxs)("div", {
-                className: N.eH,
+                className: E.eH,
                 children: [
-                    (0, t.jsx)(o.Heading, {
+                    (0, t.jsx)(d.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: A.intl.string(A.t.CnkilH),
+                        children: y.intl.string(y.t.CnkilH),
                     }),
-                    (0, t.jsx)(o.fs1, {
-                        value: E,
-                        onChange: K,
-                        placeholder: A.intl.string(A.t.na0V4E),
-                        maxLength: h.Mu,
-                    }),
+                    (0, t.jsx)(x.f, { value: R, onChange: G, placeholder: y.intl.string(y.t.na0V4E), maxLength: j.Mu }),
                 ],
             }),
-            (0, t.jsx)("div", { className: N.me }),
+            (0, t.jsx)("div", { className: E.me }),
             (0, t.jsxs)("div", {
-                className: N.kE,
+                className: E.kE,
                 children: [
                     (0, t.jsxs)("div", {
                         children: [
-                            (0, t.jsx)(o.Heading, {
+                            (0, t.jsx)(d.D, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
-                                children: A.intl.string(A.t.CB6dyu),
+                                children: y.intl.string(y.t.CB6dyu),
                             }),
-                            (0, t.jsx)(o.Text, {
+                            (0, t.jsx)(h.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: A.intl.string(A.t.Kcdk7D),
+                                children: y.intl.string(y.t.Kcdk7D),
                             }),
                         ],
                     }),
                     (0, t.jsx)("div", {
-                        children: (0, t.jsx)(m.A, {
-                            className: N.xp,
-                            imageClassName: N.V6,
-                            image: L,
-                            makeURL: B,
-                            icon: (0, t.jsx)(o.JMY, { size: "md", color: "currentColor" }),
+                        children: (0, t.jsx)(C.A, {
+                            className: E.xp,
+                            imageClassName: E.V6,
+                            image: z,
+                            makeURL: Q,
+                            icon: (0, t.jsx)(g.J, { size: "md", color: "currentColor" }),
                             hideSize: !0,
-                            onChange: z,
-                            iconClassName: N.Ow,
-                            showIcon: null == L,
+                            onChange: Y,
+                            iconClassName: E.Ow,
+                            showIcon: null == z,
                         }),
                     }),
                 ],

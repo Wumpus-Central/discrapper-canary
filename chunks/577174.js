@@ -1,77 +1,79 @@
-n.d(t, { A: () => A });
-var i = n(627968),
-    s = n(64700),
-    l = n(311907),
-    r = n(397927),
-    a = n(793574),
-    o = n(742589),
-    d = n(909536),
-    c = n(287809),
-    u = n(65470),
-    m = n(400669),
-    g = n(736455),
-    _ = n(876587),
-    x = n(985018),
-    h = n(503255);
-let A = (e) => {
-    let { navBarSections: t, activeSectionId: n, isAnimationComplete: A } = e,
-        p = {
-            [g.k.HOME]: x.intl.string(x.t.uGRXjS),
-            [g.k.WHATS_NEW]: x.intl.string(x.t["mfcR/v"]),
-            [g.k.BEST_OF_NITRO]: x.intl.string(x.t.xQKkE8),
-            [g.k.PLANS]: x.intl.string(x.t.wyNMnm),
-            [g.k.COMPARE]: x.intl.string(x.t.pwD7If),
+s.d(t, { A: () => C });
+var r = s(627968),
+    a = s(64700),
+    i = s(311907),
+    n = s(403581),
+    l = s(939249),
+    o = s(834730),
+    c = s(793574),
+    d = s(742589),
+    m = s(909536),
+    u = s(287809),
+    _ = s(65470),
+    x = s(400669),
+    p = s(736455),
+    g = s(876587),
+    h = s(985018),
+    f = s(503255);
+let C = (e) => {
+    let { navBarSections: t, activeSectionId: s, isAnimationComplete: C } = e,
+        b = {
+            [p.k.HOME]: h.intl.string(h.t.uGRXjS),
+            [p.k.WHATS_NEW]: h.intl.string(h.t["mfcR/v"]),
+            [p.k.BEST_OF_NITRO]: h.intl.string(h.t.xQKkE8),
+            [p.k.PLANS]: h.intl.string(h.t.wyNMnm),
+            [p.k.COMPARE]: h.intl.string(h.t.pwD7If),
         },
-        T = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
-        f = (0, d.Gh)("premium_marketing_nav_bar") && null != T,
-        S = s.useRef(null),
-        E = Object.values(t).sort((e, t) => e.order - t.order);
-    return (0, i.jsxs)(o.A, {
-        className: h.TQ,
+        j = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
+        A = (0, m.Gh)("premium_marketing_nav_bar") && null != j,
+        N = a.useRef(null),
+        I = Object.values(t).sort((e, t) => e.order - t.order);
+    return (0, r.jsxs)(d.A, {
+        className: f.TQ,
         transparent: !0,
         children: [
-            (0, i.jsxs)("div", {
-                className: h.Wc,
+            (0, r.jsxs)("div", {
+                className: f.Wc,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: h.wG,
+                    (0, r.jsxs)("div", {
+                        className: f.wG,
                         children: [
-                            (0, i.jsx)(r.tvc, { className: h.nE, colorClass: h.oG }),
-                            (0, i.jsx)("div", {
-                                className: h.zc,
-                                children: E.map((e) => {
-                                    let t = n === e.id,
-                                        s = p[e.id];
-                                    return (0, i.jsxs)(
-                                        r.DUT,
+                            (0, r.jsx)(n.t, { className: f.nE, colorClass: f.oG }),
+                            (0, r.jsx)("div", {
+                                className: f.zc,
+                                children: I.map((e) => {
+                                    let t = s === e.id,
+                                        a = b[e.id];
+                                    return (0, r.jsxs)(
+                                        l.D,
                                         {
-                                            className: h.S0,
+                                            className: f.S0,
                                             onClick: e.scrollToSection,
                                             children: [
-                                                (0, i.jsx)(r.Text, {
+                                                (0, r.jsx)(o.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-strong",
-                                                    children: s,
+                                                    children: a,
                                                 }),
-                                                t && (0, i.jsx)("div", { className: h.W0 }),
+                                                t && (0, r.jsx)("div", { className: f.W0 }),
                                             ],
                                         },
-                                        s,
+                                        a,
                                     );
                                 }),
                             }),
                         ],
                     }),
-                    (0, i.jsxs)("div", {
-                        className: h.MQ,
+                    (0, r.jsxs)("div", {
+                        className: f.MQ,
                         children: [
-                            f && (0, i.jsx)(m.l, { ref: S, size: "sm", location: a.A.PREMIUM_WISHLIST_MARKETING_PAGE }),
-                            (0, i.jsx)(u.A, { size: "sm", variant: "overlay-secondary" }),
+                            A && (0, r.jsx)(x.l, { ref: N, size: "sm", location: c.A.PREMIUM_WISHLIST_MARKETING_PAGE }),
+                            (0, r.jsx)(_.A, { size: "sm", variant: "overlay-secondary" }),
                         ],
                     }),
                 ],
             }),
-            f && A && (0, i.jsx)(_.O, { targetElementRef: S }),
+            A && C && (0, r.jsx)(g.O, { targetElementRef: N }),
         ],
     });
 };

@@ -1,49 +1,50 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    o = n(308528),
-    l = n(630054),
-    u = n(690990),
-    c = n(994500),
-    d = n(880528),
-    _ = n(993401),
-    f = n(518477),
-    p = n(985018),
-    h = n(863415);
-function m(e) {
-    let { user: t, onClose: n } = e,
-        m = (0, d.x)(),
-        E = (0, s.bG)([c.A], () => c.A.isBlocked(t.id)),
-        { runVoiceCallAction: g } = (0, u.b)({ userId: t.id, onClose: n }),
-        A = i.useCallback(() => {
-            o.A.openPrivateChannel({ recipientIds: t.id }), n?.(), l.A.popAll();
-        }, [t.id, n]);
-    if (!m.showCTA) return null;
-    let I = !t.bot && !t.isProvisional;
-    return (0, r.jsxs)("div", {
-        className: h.n,
+i.d(t, { A: () => g });
+var n = i(627968),
+    r = i(64700),
+    a = i(311907),
+    l = i(534890),
+    s = i(978940),
+    o = i(308528),
+    c = i(630054),
+    d = i(690990),
+    u = i(994500),
+    _ = i(880528),
+    p = i(993401),
+    h = i(518477),
+    f = i(985018),
+    A = i(863415);
+function g(e) {
+    let { user: t, onClose: i } = e,
+        g = (0, _.x)(),
+        m = (0, a.bG)([u.A], () => u.A.isBlocked(t.id)),
+        { runVoiceCallAction: E } = (0, d.b)({ userId: t.id, onClose: i }),
+        b = r.useCallback(() => {
+            o.A.openPrivateChannel({ recipientIds: t.id }), i?.(), c.A.popAll();
+        }, [t.id, i]);
+    if (!g.showCTA) return null;
+    let v = !t.bot && !t.isProvisional;
+    return (0, n.jsxs)("div", {
+        className: A.n,
         children: [
-            (0, r.jsx)(_.FD, {
-                action: f.pt.SEND_MESSAGE,
+            (0, n.jsx)(p.FD, {
+                action: h.pt.SEND_MESSAGE,
                 variant: "secondary",
                 size: "sm",
-                text: p.intl.string(p.t.zROXEV),
-                icon: a.oyn,
-                onClick: A,
+                text: f.intl.string(f.t.zROXEV),
+                icon: l.o,
+                onClick: b,
                 fullWidth: !0,
             }),
-            I &&
-                (0, r.jsx)(_.FD, {
-                    action: f.pt.VOICE_CALL,
+            v &&
+                (0, n.jsx)(p.FD, {
+                    action: h.pt.VOICE_CALL,
                     variant: "secondary",
                     size: "sm",
-                    text: p.intl.string(p.t.JJogjm),
-                    icon: a._jp,
-                    onClick: g,
-                    disabled: E,
+                    text: f.intl.string(f.t.JJogjm),
+                    icon: s._,
+                    onClick: E,
+                    disabled: m,
                     fullWidth: !0,
                 }),
         ],

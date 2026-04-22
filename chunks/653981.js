@@ -1,154 +1,157 @@
-i.d(e, { default: () => y }), i(321073);
-var n = i(627968),
-    a = i(64700),
-    s = i(136722),
-    o = i(311907),
-    l = i(554146),
-    c = i(827734),
-    r = i(990078),
-    d = i(732955),
-    _ = i(397927),
-    p = i(997509),
-    E = i(636042),
-    u = i(376092),
-    S = i(317525),
-    I = i(488926),
-    N = i(45780),
-    h = i(652215),
-    T = i(49999),
-    f = i(124759),
-    m = i(985018),
-    O = i(763481);
-function x(t) {
-    let { guild: e } = t,
-        i = (0, o.bG)([S.A], () => S.A.getEveryoneRole(e));
-    if (null == i) return null;
-    let { name: a, color: s } = i;
-    return (0, n.jsxs)("span", {
-        className: O.xf,
+e.d(s, { default: () => C }), e(321073);
+var i = e(627968),
+    n = e(64700),
+    l = e(136722),
+    a = e(311907),
+    o = e(554146),
+    r = e(827734),
+    c = e(990078),
+    d = e(189213),
+    _ = e(545442),
+    E = e(834730),
+    S = e(628284),
+    u = e(885574),
+    f = e(997509),
+    m = e(636042),
+    h = e(376092),
+    p = e(317525),
+    N = e(488926),
+    I = e(45780),
+    T = e(652215),
+    x = e(49999),
+    O = e(124759),
+    R = e(985018),
+    g = e(909906);
+function L(t) {
+    let { guild: s } = t,
+        e = (0, a.bG)([p.A], () => p.A.getEveryoneRole(s));
+    if (null == e) return null;
+    let { name: n, color: l } = e;
+    return (0, i.jsxs)("span", {
+        className: g.xf,
         children: [
-            (0, n.jsx)(_.WYI, { className: O.m4, color: s.toString(), background: !1, tooltip: !1 }),
-            (0, n.jsx)(_.Text, {
-                className: O.S3,
+            (0, i.jsx)(_.W, { className: g.m4, color: l.toString(), background: !1, tooltip: !1 }),
+            (0, i.jsx)(E.E, {
+                className: g.S3,
                 variant: "text-sm/medium",
                 color: "interactive-text-active",
-                children: a,
+                children: n,
             }),
         ],
     });
 }
-let C = (t) => (t.toString() === h.xBc.MENTION_EVERYONE.toString() ? m.intl.string(m.t.yCpsQw) : (0, u.hx)(t));
-function R(t) {
-    let { permissions: e, step: i } = t;
-    return 2 === i
+let G = (t) => (t.toString() === T.xBc.MENTION_EVERYONE.toString() ? R.intl.string(R.t.yCpsQw) : (0, h.hx)(t));
+function A(t) {
+    let { permissions: s, step: e } = t;
+    return 2 === e
         ? null
-        : (0, n.jsxs)("div", {
-              className: O.CZ,
+        : (0, i.jsxs)("div", {
+              className: g.CZ,
               children: [
-                  (0, n.jsx)(_.Text, {
-                      className: O.qd,
+                  (0, i.jsx)(E.E, {
+                      className: g.qd,
                       variant: "text-xs/semibold",
                       color: "text-muted",
-                      children: 0 === i ? m.intl.string(m.t["0WZKI4"]) : m.intl.string(m.t.xU8RDk),
+                      children: 0 === e ? R.intl.string(R.t["0WZKI4"]) : R.intl.string(R.t.xU8RDk),
                   }),
-                  (0, n.jsx)("div", {
-                      className: O.lM,
-                      children: e.map((t, e) =>
-                          (0, n.jsxs)(
+                  (0, i.jsx)("div", {
+                      className: g.lM,
+                      children: s.map((t, s) =>
+                          (0, i.jsxs)(
                               "div",
                               {
-                                  className: O.ce,
+                                  className: g.ce,
                                   children: [
-                                      (0, n.jsx)("div", { className: 0 === i ? O.I0 : O.dT }),
-                                      (0, n.jsx)(_.Text, {
+                                      (0, i.jsx)("div", { className: 0 === e ? g.I0 : g.dT }),
+                                      (0, i.jsx)(E.E, {
                                           variant: "text-sm/normal",
                                           color: "text-default",
-                                          children: C(t),
+                                          children: G(t),
                                       }),
                                   ],
                               },
-                              e,
+                              s,
                           ),
                       ),
                   }),
               ],
           });
 }
-function L(t) {
-    let { permissions: e, step: i } = t;
-    return 0 === e.length && 2 !== i
+function U(t) {
+    let { permissions: s, step: e } = t;
+    return 0 === s.length && 2 !== e
         ? null
-        : (2 === i && (e = f.dR),
-          (0, n.jsxs)("div", {
-              className: O.CZ,
+        : (2 === e && (s = O.dR),
+          (0, i.jsxs)("div", {
+              className: g.CZ,
               children: [
-                  (0, n.jsx)(_.Text, {
-                      className: O.qd,
+                  (0, i.jsx)(E.E, {
+                      className: g.qd,
                       variant: "text-xs/semibold",
                       color: "text-muted",
-                      children: 2 === i ? m.intl.string(m.t.FgMS6i) : m.intl.string(m.t.Yo5qlq),
+                      children: 2 === e ? R.intl.string(R.t.FgMS6i) : R.intl.string(R.t.Yo5qlq),
                   }),
-                  (0, n.jsx)("div", {
-                      className: O.lM,
-                      children: e.map((t, e) =>
-                          (0, n.jsxs)(
+                  (0, i.jsx)("div", {
+                      className: g.lM,
+                      children: s.map((t, s) =>
+                          (0, i.jsxs)(
                               "div",
                               {
-                                  className: O.ce,
+                                  className: g.ce,
                                   children: [
-                                      (0, n.jsx)("div", { className: O.xE }),
-                                      (0, n.jsx)(_.Text, {
+                                      (0, i.jsx)("div", { className: g.xE }),
+                                      (0, i.jsx)(E.E, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
-                                          children: C(t),
+                                          children: G(t),
                                       }),
                                   ],
                               },
-                              e,
+                              s,
                           ),
                       ),
                   }),
               ],
           }));
 }
-function U(t) {
-    let { permissions: e, step: i } = t,
-        { enabledPermissions: a, disabledPermissions: s } = e;
-    return 0 === a.length && 2 !== i
+function j(t) {
+    let { permissions: s, step: e } = t,
+        { enabledPermissions: n, disabledPermissions: l } = s;
+    return 0 === n.length && 2 !== e
         ? null
-        : (0, n.jsxs)("div", {
-              className: O.tp,
+        : (0, i.jsxs)("div", {
+              className: g.tp,
               children: [
-                  2 !== i ? (0, n.jsx)(R, { permissions: a, step: i }) : null,
-                  (0, n.jsx)(L, { permissions: s, step: i }),
+                  2 !== e ? (0, i.jsx)(A, { permissions: n, step: e }) : null,
+                  (0, i.jsx)(U, { permissions: l, step: e }),
               ],
           });
 }
-function g(t) {
-    let { guild: e, permissions: i, step: a, canEveryoneModerate: s, isDefaultNotificationsAllMessages: o } = t;
-    return (0, n.jsxs)(n.Fragment, {
+function v(t) {
+    let { guild: s, permissions: e, step: n, canEveryoneModerate: l, isDefaultNotificationsAllMessages: a } = t;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            o
-                ? (0, n.jsxs)("div", {
-                      className: O.J_,
+            a
+                ? (0, i.jsxs)("div", {
+                      className: g.J_,
                       children: [
-                          (0, n.jsx)(_.yr3, {
+                          (0, i.jsx)(S.y, {
                               size: "md",
-                              className: O.aV,
-                              color: c.A.unsafe_rawColors.GREEN_360.css,
-                              secondaryColor: c.A.unsafe_rawColors.WHITE.css,
+                              className: g.aV,
+                              color: r.A.unsafe_rawColors.GREEN_360.css,
+                              secondaryColor: r.A.unsafe_rawColors.WHITE.css,
                           }),
-                          (0, n.jsx)(_.Text, {
+                          (0, i.jsx)(E.E, {
                               variant: "text-md/normal",
-                              children: m.intl.format(m.t.K8Eg4P, {
+                              children: R.intl.format(R.t.K8Eg4P, {
                                   infoHook: () =>
-                                      (0, n.jsx)(r.m, {
-                                          text: m.intl.string(m.t["3h2WyM"]),
-                                          "aria-label": m.intl.string(m.t["3h2WyM"]),
-                                          children: (0, n.jsx)(_.mir, {
+                                      (0, i.jsx)(c.m, {
+                                          text: R.intl.string(R.t["3h2WyM"]),
+                                          "aria-label": R.intl.string(R.t["3h2WyM"]),
+                                          children: (0, i.jsx)(u.m, {
                                               size: "xs",
                                               color: "currentColor",
-                                              className: O.Kk,
+                                              className: g.Kk,
                                           }),
                                       }),
                               }),
@@ -156,92 +159,92 @@ function g(t) {
                       ],
                   })
                 : null,
-            s
-                ? (0, n.jsxs)("div", {
-                      className: O.J_,
+            l
+                ? (0, i.jsxs)("div", {
+                      className: g.J_,
                       children: [
-                          (0, n.jsx)(_.yr3, {
+                          (0, i.jsx)(S.y, {
                               size: "md",
-                              className: O.aV,
-                              color: c.A.unsafe_rawColors.GREEN_360.css,
-                              secondaryColor: c.A.unsafe_rawColors.WHITE.css,
+                              className: g.aV,
+                              color: r.A.unsafe_rawColors.GREEN_360.css,
+                              secondaryColor: r.A.unsafe_rawColors.WHITE.css,
                           }),
-                          (0, n.jsx)(_.Text, { variant: "text-md/normal", children: m.intl.string(m.t.LfeFFr) }),
-                          (0, n.jsx)(x, { guild: e }),
+                          (0, i.jsx)(E.E, { variant: "text-md/normal", children: R.intl.string(R.t.LfeFFr) }),
+                          (0, i.jsx)(L, { guild: s }),
                       ],
                   })
                 : null,
-            (0, n.jsx)(U, { permissions: i, step: a }),
+            (0, i.jsx)(j, { permissions: e, step: n }),
         ],
     });
 }
-function y(t) {
-    let { guild: e, canEveryoneModerate: i, isDefaultNotificationsAllMessages: o, transitionState: c, onClose: r } = t,
-        [_, u] = a.useState(0),
-        O = a.useMemo(() => {
+function C(t) {
+    let { guild: s, canEveryoneModerate: e, isDefaultNotificationsAllMessages: a, transitionState: r, onClose: c } = t,
+        [_, E] = n.useState(0),
+        S = n.useMemo(() => {
             let t = [],
-                i = [];
+                e = [];
             return (
-                f.dR.map((n) => {
-                    I.Ib(n, e) ? t.push(n) : i.push(n);
+                O.dR.map((i) => {
+                    N.Ib(i, s) ? t.push(i) : e.push(i);
                 }),
-                { enabledPermissions: t, disabledPermissions: i }
+                { enabledPermissions: t, disabledPermissions: e }
             );
-        }, [e]);
-    if (null == e) return null;
-    let x = () => {
-            let t, n;
-            i &&
-                ((t = S.A.getEveryoneRole(e)),
-                (n = s.TF(t.permissions, f.e$)),
-                (0, E.JY)(e.id, [{ ...t, permissions: n }])),
-                o &&
-                    (p.A.updateGuild({ defaultMessageNotifications: h.orn.ONLY_MENTIONS }),
-                    p.A.saveGuild(e.id, { defaultMessageNotifications: h.orn.ONLY_MENTIONS }));
+        }, [s]);
+    if (null == s) return null;
+    let u = () => {
+            let t, i;
+            e &&
+                ((t = p.A.getEveryoneRole(s)),
+                (i = l.TF(t.permissions, O.e$)),
+                (0, m.JY)(s.id, [{ ...t, permissions: i }])),
+                a &&
+                    (f.A.updateGuild({ defaultMessageNotifications: T.orn.ONLY_MENTIONS }),
+                    f.A.saveGuild(s.id, { defaultMessageNotifications: T.orn.ONLY_MENTIONS }));
         },
-        C = [
+        h = [
             ...(0 === _
                 ? [
                       {
                           variant: "secondary",
-                          text: m.intl.string(m.t.gWQZvr),
+                          text: R.intl.string(R.t.gWQZvr),
                           onClick: () => {
-                              r(), (0, N._$)(l.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, e.id, !0, T.i.DISMISS);
+                              c(), (0, I._$)(o.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, s.id, !0, x.i.DISMISS);
                           },
                       },
                   ]
                 : []),
             {
                 variant: "primary",
-                text: 0 === _ ? (i ? m.intl.string(m.t.R7GC7b) : m.intl.string(m.t.iOSdAW)) : m.intl.string(m.t.mVuDq5),
+                text: 0 === _ ? (e ? R.intl.string(R.t.R7GC7b) : R.intl.string(R.t.iOSdAW)) : R.intl.string(R.t.mVuDq5),
                 onClick: () => {
-                    i ||
-                        (x(),
-                        r(),
-                        (0, N._$)(l.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, e?.id ?? "", !0, T.i.PRIMARY)),
+                    e ||
+                        (u(),
+                        c(),
+                        (0, I._$)(o.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, s?.id ?? "", !0, x.i.PRIMARY)),
                         0 === _
-                            ? (u(1), setTimeout(() => u(2), 3e3))
+                            ? (E(1), setTimeout(() => E(2), 3e3))
                             : 2 === _ &&
-                              (x(),
-                              r(),
-                              (0, N._$)(l.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, e?.id ?? "", !0, T.i.PRIMARY));
+                              (u(),
+                              c(),
+                              (0, I._$)(o.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, s?.id ?? "", !0, x.i.PRIMARY));
                 },
                 loading: 1 === _,
             },
         ];
-    return (0, n.jsx)(d.aFV, {
-        transitionState: c,
-        onClose: r,
+    return (0, i.jsx)(d.Modal, {
+        transitionState: r,
+        onClose: c,
         size: "md",
-        title: i ? m.intl.string(m.t["7/ux15"]) : m.intl.string(m.t.sRcn4z),
-        subtitle: i ? m.intl.string(m.t.aliKPx) : m.intl.string(m.t.F4KDOH),
-        actions: C,
-        children: (0, n.jsx)(g, {
-            guild: e,
-            permissions: O,
+        title: e ? R.intl.string(R.t["7/ux15"]) : R.intl.string(R.t.sRcn4z),
+        subtitle: e ? R.intl.string(R.t.aliKPx) : R.intl.string(R.t.F4KDOH),
+        actions: h,
+        children: (0, i.jsx)(v, {
+            guild: s,
+            permissions: S,
             step: _,
-            canEveryoneModerate: i,
-            isDefaultNotificationsAllMessages: o,
+            canEveryoneModerate: e,
+            isDefaultNotificationsAllMessages: a,
         }),
     });
 }

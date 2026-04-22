@@ -4,21 +4,17 @@ function i(e, t, n) {
         (this.delta = e || 0.01),
         (this.K = void 0 === t ? 25 : t),
         (this.CX = void 0 === n ? 1.1 : n),
-        (this.centroids = new r(a)),
+        (this.centroids = new r(s)),
         (this.nreset = 0),
         this.reset();
 }
-function a(e, t) {
+function s(e, t) {
     return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
 }
-function s(e, t) {
+function a(e, t) {
     return e.mean_cumn - t.mean_cumn;
 }
 function o(e) {
-    var t = Math.floor(Math.random() * e.length);
-    return e.splice(t, 1)[0];
-}
-function l(e) {
     (this.config = e || {}),
         (this.mode = this.config.mode || "auto"),
         i.call(this, "cont" === this.mode && e.delta),
@@ -66,8 +62,7 @@ function l(e) {
     }),
     (i.prototype._cumulate = function (e) {
         if (this.n !== this.last_cumulate && (e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
-            var t = 0,
-                n = this;
+            var t = 0;
             this.centroids.each(function (e) {
                 (e.mean_cumn = t + e.n / 2), (t = e.cumn = t + e.n);
             }),
@@ -102,8 +97,8 @@ function l(e) {
         else if (i === r) this._new_centroid(e, t, this.n);
         else if (this.discrete) this._new_centroid(e, t, i.cumn);
         else {
-            var a = i.mean_cumn / this.n;
-            Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t
+            var s = i.mean_cumn / this.n;
+            Math.floor(4 * this.n * this.delta * s * (1 - s)) - i.n >= t
                 ? this._addweight(i, e, t)
                 : this._new_centroid(e, t, i.cumn);
         }
@@ -133,9 +128,9 @@ function l(e) {
         }
     }),
     (i.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = s;
-        var t = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = a;
+        var t = this.centroids.upperBound({ mean_cumn: e });
+        this.centroids._comparator = s;
         var n = t.prev(),
             r = n && n.mean_cumn === e ? n : t.next();
         return [n, r];
@@ -146,45 +141,49 @@ function l(e) {
     }),
     (i.prototype._percentile = function (e) {
         if (0 !== this.size()) {
-            this._cumulate(!0);
-            var t = this.centroids.min(),
-                n = this.centroids.max(),
-                r = this.n * e,
-                i = this.bound_mean_cumn(r),
-                a = i[0],
-                s = i[1];
-            return s === a || null === a || null === s
-                ? (a || s).mean
+            this._cumulate(!0), this.centroids.min(), this.centroids.max();
+            var t = this.n * e,
+                n = this.bound_mean_cumn(t),
+                r = n[0],
+                i = n[1];
+            return i === r || null === r || null === i
+                ? (r || i).mean
                 : this.discrete
-                  ? r <= a.cumn
-                      ? a.mean
-                      : s.mean
-                  : a.mean + ((r - a.mean_cumn) * (s.mean - a.mean)) / (s.mean_cumn - a.mean_cumn);
+                  ? t <= r.cumn
+                      ? r.mean
+                      : i.mean
+                  : r.mean + ((t - r.mean_cumn) * (i.mean - r.mean)) / (i.mean_cumn - r.mean_cumn);
         }
     }),
     (i.prototype.compress = function () {
         if (!this.compressing) {
             var e = this.toArray();
-            for (this.reset(), this.compressing = !0; e.length > 0; ) this.push_centroid(o(e));
+            for (this.reset(), this.compressing = !0; e.length > 0; )
+                this.push_centroid(
+                    (function (e) {
+                        var t = Math.floor(Math.random() * e.length);
+                        return e.splice(t, 1)[0];
+                    })(e),
+                );
             this._cumulate(!0), (this.compressing = !1);
         }
     }),
-    (l.prototype = Object.create(i.prototype)),
-    (l.prototype.constructor = l),
-    (l.prototype.push = function (e) {
+    (o.prototype = Object.create(i.prototype)),
+    (o.prototype.constructor = o),
+    (o.prototype.push = function (e) {
         i.prototype.push.call(this, e), this.check_continuous();
     }),
-    (l.prototype._new_centroid = function (e, t, n) {
+    (o.prototype._new_centroid = function (e, t, n) {
         (this.n_unique += 1), i.prototype._new_centroid.call(this, e, t, n);
     }),
-    (l.prototype._addweight = function (e, t, n) {
+    (o.prototype._addweight = function (e, t, n) {
         1 === e.n && (this.n_unique -= 1), i.prototype._addweight.call(this, e, t, n);
     }),
-    (l.prototype.check_continuous = function () {
+    (o.prototype.check_continuous = function () {
         return (
             !("auto" !== this.mode || this.size() < this.digest_thresh) &&
             this.n_unique / this.size() > this.digest_ratio &&
             ((this.mode = "cont"), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0)
         );
     }),
-    (e.exports = { TDigest: i, Digest: l });
+    (e.exports = { TDigest: i, Digest: o });

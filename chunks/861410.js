@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => h });
 var i = n(311907),
-    s = n(73153),
-    l = n(71393),
+    l = n(73153),
+    s = n(71393),
     r = n(652215);
 let a = { description: "", channels: [], enabled: !1 },
     o = a,
@@ -11,7 +10,7 @@ let a = { description: "", channels: [], enabled: !1 },
     u = a;
 function m(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        i = l.A.getGuild(n);
+        i = s.A.getGuild(n);
     (u = o =
         null != t
             ? {
@@ -25,7 +24,7 @@ function m(e) {
 class g extends i.Ay.Store {
     static displayName = "WelcomeScreenSettingsStore";
     initialize() {
-        this.waitFor(l.A);
+        this.waitFor(s.A);
     }
     get() {
         return u;
@@ -37,7 +36,7 @@ class g extends i.Ay.Store {
         return { submitting: d, hasErrors: c, welcomeSettings: u, originalWelcomeSettings: o };
     }
 }
-let x = new g(s.h, {
+let h = new g(l.h, {
     WELCOME_SCREEN_FETCH_SUCCESS: m,
     WELCOME_SCREEN_UPDATE: m,
     WELCOME_SCREEN_SETTINGS_RESET: function () {

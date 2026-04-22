@@ -1,38 +1,37 @@
 "use strict";
-n.d(t, { $u: () => f, Ay: () => m, wE: () => p });
-var r = n(627968),
-    i = n(64700),
-    a = n(56121),
-    s = n(403362),
-    o = n(939341),
-    l = n(263577),
-    u = n(583846),
-    c = n(506326),
+n.d(t, { $u: () => m, Ay: () => f, wE: () => p });
+var i = n(627968),
+    l = n(64700),
+    s = n(56121),
+    r = n(403362),
+    a = n(939341),
+    o = n(263577),
+    c = n(583846),
+    u = n(506326),
     d = n(868065),
-    _ = n(332225);
-let f = [c.Y8],
-    p = [a.j.WEEK],
-    h = (e) => {
-        let { entry: t, channel: n, selected: i } = e,
-            { largeImage: a } = (0, o.nO)({ entry: t }),
-            h = (0, u.TQ)(t);
-        return null != h && (0, s.S1)(h, p)
-            ? (0, r.jsxs)(d.Zp, {
-                  selected: i,
+    h = n(352760);
+let m = [u.Y8],
+    p = [s.j.WEEK],
+    f = l.memo((e) => {
+        let { entry: t, channel: n, selected: l } = e,
+            { largeImage: s } = (0, a.nO)({ entry: t }),
+            f = (0, c.TQ)(t);
+        return null != f && (0, r.S1)(f, p)
+            ? (0, i.jsxs)(d.Zp, {
+                  selected: l,
                   children: [
-                      (0, r.jsxs)(d.UA, {
+                      (0, i.jsxs)(d.UA, {
                           children: [
-                              (0, r.jsx)(d.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                              (0, r.jsx)(d.ZB, { children: t.extra.artist.name }),
-                              (0, r.jsx)(c.mG, {
-                                  location: c.N5.CARD,
-                                  children: f.map((e, n) => (0, r.jsx)(e, { entry: t }, n)),
+                              (0, i.jsx)(d.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                              (0, i.jsx)(d.ZB, { children: t.extra.artist.name }),
+                              (0, i.jsx)(u.mG, {
+                                  location: u.N5.CARD,
+                                  children: m.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                               }),
                           ],
                       }),
-                      (0, r.jsx)(l.V, { src: a?.src, size: 48, className: _.xn }),
+                      (0, i.jsx)(o.V, { src: s?.src, size: 48, className: h.xn }),
                   ],
               })
             : null;
-    },
-    m = i.memo(h);
+    });

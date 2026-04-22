@@ -1,19 +1,20 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(723702),
-    r = n(837921),
-    a = n(985018);
-function c(e, t) {
-    return s.isPlatformEmbedded && e?.length !== 0
-        ? (0, i.jsx)(l.Drp, {
+var s = n(477782),
+    l = n(624479),
+    r = n(723702),
+    a = n(837921),
+    c = n(985018);
+function o(e, t) {
+    return r.isPlatformEmbedded && e?.length !== 0
+        ? (0, i.jsx)(s.Dr, {
               id: "copy",
-              label: a.intl.string(a.t.OpuAlK),
-              shortcut: (0, s.isMac)() ? "⌘C" : "Ctrl+C",
-              leadingAccessory: { type: "icon", icon: l.TdU },
+              label: c.intl.string(c.t.OpuAlK),
+              shortcut: (0, r.isMac)() ? "⌘C" : "Ctrl+C",
+              leadingAccessory: { type: "icon", icon: l.T },
               action: () => {
-                  r.Ay.copy(e), t?.focus();
+                  a.Ay.copy(e), t?.focus();
               },
           })
         : null;

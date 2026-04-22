@@ -1,32 +1,33 @@
-n.d(t, { A: () => C });
+"use strict";
+n.d(t, { A: () => N });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(397927),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(599319),
     o = n(73153),
-    d = n(944791),
-    c = n(781763),
-    u = n(661439),
-    A = n(820284),
-    h = n(970672),
-    _ = n(468691),
+    c = n(944791),
+    d = n(781763),
+    h = n(661439),
+    p = n(820284),
+    u = n(970672),
+    A = n(468691),
     m = n(765258),
     g = n(767852),
-    p = n(906320),
-    E = n(652215),
-    I = n(613057),
-    f = n(20438);
-class C extends l.PureComponent {
-    _scrollerRef = l.createRef();
+    f = n(906320),
+    _ = n(652215),
+    x = n(613057),
+    y = n(20438);
+class N extends s.PureComponent {
+    _scrollerRef = s.createRef();
     _scrollToOnMount;
     _scrollToPadding = 0;
     state = { includeUpdatesInScroller: !1 };
     componentDidMount() {
-        d.I(E.BVt.APPLICATION_LIBRARY),
-            (0, h.h)(I.XK.LIBRARY),
-            o.h.wait(() => (0, c.r)()),
-            (0, u.X)(),
+        c.I(_.BVt.APPLICATION_LIBRARY),
+            (0, u.h)(x.XK.LIBRARY),
+            o.h.wait(() => (0, d.r)()),
+            (0, h.X)(),
             null != this._scrollToOnMount &&
                 null != this._scrollerRef.current &&
                 this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
@@ -35,7 +36,7 @@ class C extends l.PureComponent {
         this.setState({ includeUpdatesInScroller: e });
     };
     renderToolbar() {
-        return (0, i.jsx)(_.A, {});
+        return (0, i.jsx)(A.A, {});
     }
     scrollToRow = (e, t) => {
         let n = this._scrollerRef.current;
@@ -46,24 +47,24 @@ class C extends l.PureComponent {
     render() {
         let { includeUpdatesInScroller: e } = this.state,
             t = (0, i.jsx)("div", {
-                children: (0, i.jsx)(A.A, {
-                    section: E.JJy.LIBRARY_INSTALL_MODULE,
-                    children: (0, i.jsx)(p.A, {
+                children: (0, i.jsx)(p.A, {
+                    section: _.JJy.LIBRARY_INSTALL_MODULE,
+                    children: (0, i.jsx)(f.A, {
                         onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange,
                     }),
                 }),
             });
-        return (0, i.jsxs)(l.Fragment, {
+        return (0, i.jsxs)(s.Fragment, {
             children: [
-                (0, i.jsx)(m.A, { currentRoute: E.BVt.APPLICATION_LIBRARY, renderToolbar: this.renderToolbar }),
+                (0, i.jsx)(m.A, { currentRoute: _.BVt.APPLICATION_LIBRARY, renderToolbar: this.renderToolbar }),
                 e ? null : t,
-                (0, i.jsxs)(s.GtU, {
-                    className: r()(f.k, f.X),
+                (0, i.jsxs)(a.Gt, {
+                    className: r()(y.k, y.X),
                     ref: this._scrollerRef,
                     children: [
                         e ? t : null,
-                        (0, i.jsx)(A.A, {
-                            section: E.JJy.LIBRARY_APPLICATION_LIST,
+                        (0, i.jsx)(p.A, {
+                            section: _.JJy.LIBRARY_APPLICATION_LIST,
                             children: (0, i.jsx)(g.A, { stickyHeader: !e, scrollToRow: this.scrollToRow }),
                         }),
                     ],

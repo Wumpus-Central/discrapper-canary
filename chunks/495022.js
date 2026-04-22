@@ -1,44 +1,45 @@
-n.d(t, { A: () => u });
-var i = n(627968),
-    s = n(64700),
-    a = n(397927),
-    l = n(720462),
-    r = n(102815),
+n.d(t, { A: () => _ });
+var r = n(627968),
+    a = n(64700),
+    i = n(534514),
+    s = n(761508),
+    l = n(951707),
+    c = n(744064),
     o = n(674624),
-    c = n(985018),
-    d = n(574268);
-function u(e) {
+    d = n(985018),
+    u = n(758495);
+function _(e) {
     let { glowingPerkId: t = null } = e,
         n = (0, o.Ay)(),
-        u = null != t ? n.find((e) => e?.id === t) : null,
-        [_, m] = (0, s.useState)(u?.categories[0] ?? o.jW.BEST_OF_NITRO),
-        A = (0, s.useMemo)(() => n.filter((e) => null != e && e.categories.includes(_)), [n, _]);
-    return (0, i.jsxs)("div", {
-        className: d.uW,
+        _ = null != t ? n.find((e) => e?.id === t) : null,
+        [m, p] = (0, a.useState)(_?.categories[0] ?? o.jW.BEST_OF_NITRO),
+        f = (0, a.useMemo)(() => n.filter((e) => null != e && e.categories.includes(m)), [n, m]);
+    return (0, r.jsxs)("div", {
+        className: u.uW,
         children: [
-            (0, i.jsx)(a.Heading, { variant: "display-sm", className: d.R_, children: c.intl.string(c.t["Uh3+CA"]) }),
-            (0, i.jsx)(a.VQ0, {
+            (0, r.jsx)(i.D, { variant: "display-sm", className: u.R_, children: d.intl.string(d.t["Uh3+CA"]) }),
+            (0, r.jsx)(s.V, {
                 type: "top-pill",
                 look: "custom",
-                selectedItem: _,
-                onItemSelect: m,
-                className: d.Lq,
-                "aria-label": c.intl.string(c.t["Uh3+CA"]),
+                selectedItem: m,
+                onItemSelect: p,
+                className: u.Lq,
+                "aria-label": d.intl.string(d.t["Uh3+CA"]),
                 children: o.w1.map((e) =>
-                    (0, i.jsx)(a.VQ0.Item, { id: e.id, className: d.IC, children: e.label() }, e.id),
+                    (0, r.jsx)(s.V.Item, { id: e.id, className: u.IC, children: e.label() }, e.id),
                 ),
             }),
-            (0, i.jsx)(
+            (0, r.jsx)(
                 l.A,
                 {
                     gap: 20,
-                    className: d.jG,
-                    children: A.map((e) => {
+                    className: u.jG,
+                    children: f.map((e) => {
                         if (null != e)
-                            return (0, i.jsx)(r.S, { ...e, glowing: t === e.id, containerClassName: d.Ui }, e.id);
+                            return (0, r.jsx)(c.S, { ...e, glowing: t === e.id, containerClassName: u.Ui }, e.id);
                     }),
                 },
-                _,
+                m,
             ),
         ],
     });

@@ -1,51 +1,50 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(64700),
-    i = n(884362),
-    a = n(741918),
-    s = n(267102),
-    o = n(374803);
-function l(e) {
-    let { navId: t, scrollerRef: n, state: l, onFocus: u } = e,
-        { renderWindow: c } = r.useContext(s.Ay),
-        d = (e, t) => {
-            let r = c.document.querySelector(e);
-            null != r && n.current?.scrollIntoViewNode({ node: r }), u?.(+t);
-        },
-        _ = (e, t, r) => {
-            if ((n.current?.scrollToTop(), e && null != l.query)) {
-                let e = l.query.typeInfo.focusMode,
-                    n = e !== o.e.MANUAL && (e !== o.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
-                l.isVisible && (!0 !== t || !1 !== n) && !0 !== r
-                    ? (p.setFocus("0"), u?.(0))
-                    : (p.setFocus(null), u?.(null));
+n.d(t, { A: () => o });
+var i = n(64700),
+    l = n(884362),
+    s = n(741918),
+    r = n(267102),
+    a = n(374803);
+function o(e) {
+    let { navId: t, scrollerRef: n, state: o, onFocus: c } = e,
+        { renderWindow: u } = i.useContext(r.Ay),
+        d = (e, t, i) => {
+            if ((n.current?.scrollToTop(), e && null != o.query)) {
+                let e = o.query.typeInfo.focusMode,
+                    n = e !== a.e.MANUAL && (e !== a.e.AUTO_WHEN_FILTERED || 0 !== o.query.queryText.length);
+                o.isVisible && (!0 !== t || !1 !== n) && !0 !== i
+                    ? (m.setFocus("0"), c?.(0))
+                    : (m.setFocus(null), c?.(null));
             }
         },
-        f = (e) => {
-            if ((n.current?.scrollToBottom(), e && null != l.query && l.query.resultCount > 0)) {
-                let e = l.query.resultCount - 1;
-                p.setFocus(e.toString()), u?.(e);
+        h = (e) => {
+            if ((n.current?.scrollToBottom(), e && null != o.query && o.query.resultCount > 0)) {
+                let e = o.query.resultCount - 1;
+                m.setFocus(e.toString()), c?.(e);
             }
         },
-        p = (0, i.Ay)({
+        m = (0, l.Ay)({
             id: t,
-            isEnabled: l.isVisible,
-            orientation: a.Gl.VERTICAL,
+            isEnabled: o.isVisible,
+            orientation: s.Gl.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: d,
-            onNavigateNextAtEnd: () => _(!0),
-            onNavigatePreviousAtStart: () => f(!0),
-            scrollToStart: () => (_(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (f(!1), Promise.resolve()),
+            setFocus: (e, t) => {
+                let i = u.document.querySelector(e);
+                null != i && n.current?.scrollIntoViewNode({ node: i }), c?.(+t);
+            },
+            onNavigateNextAtEnd: () => d(!0),
+            onNavigatePreviousAtStart: () => h(!0),
+            scrollToStart: () => (d(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (h(!1), Promise.resolve()),
         }),
-        h = r.useRef(_);
+        p = i.useRef(d);
     return (
-        r.useEffect(() => {
-            h.current = _;
+        i.useEffect(() => {
+            p.current = d;
         }),
-        r.useEffect(() => {
-            h.current(!0, !0, l.isInitialAfterError);
-        }, [l.query?.type, l.query?.queryText, l.query?.isLoading, l.isVisible, l.isInitialAfterError]),
-        p
+        i.useEffect(() => {
+            p.current(!0, !0, o.isInitialAfterError);
+        }, [o.query?.type, o.query?.queryText, o.query?.isLoading, o.isVisible, o.isInitialAfterError]),
+        m
     );
 }

@@ -1,84 +1,84 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927),
-    a = n(956793),
-    r = n(164617),
-    o = n(47167),
-    c = n(202384),
-    d = n(51758),
-    u = n(141035),
-    h = n(175203),
-    A = n(426660),
-    _ = n(806931),
-    m = n(985018),
-    g = n(616124);
-let p = function (e) {
-    let { participants: t, channel: n, hasConnectPermission: p } = e,
-        f = t.filter(_.Xw),
-        x = (0, d.H)(n.guild_id),
-        E = l.useCallback(() => {
-            x ? (0, c.Ze)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, x]),
-        I = 4 === f.length ? 2 : 3,
-        C = (0, o.Ay)(n);
+    a = n(64700),
+    l = n(534514),
+    s = n(834730),
+    r = n(821609),
+    o = n(956793),
+    c = n(164617),
+    d = n(47167),
+    u = n(202384),
+    p = n(51758),
+    h = n(141035),
+    _ = n(175203),
+    m = n(426660),
+    A = n(806931),
+    x = n(985018),
+    f = n(376460);
+let g = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: g } = e,
+        C = t.filter(A.Xw),
+        y = (0, p.H)(n.guild_id),
+        v = a.useCallback(() => {
+            y ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, y]),
+        E = 4 === C.length ? 2 : 3,
+        N = (0, d.Ay)(n);
     return (0, i.jsxs)("div", {
-        className: g.kL,
+        className: f.kL,
         children: [
-            (0, i.jsx)(A.A, {}),
+            (0, i.jsx)(m.A, {}),
             (0, i.jsx)("div", {
-                className: g.os,
-                style: { maxWidth: 168 * I },
-                children: f
-                    .slice(0, 5)
-                    .map((e) =>
-                        (0, i.jsx)(
-                            h.Ay,
-                            {
-                                participant: e,
-                                channel: n,
-                                className: g.Vs,
-                                inCall: !0,
-                                noVideoRender: !0,
-                                popoutType: r.N.NO_POPOUT,
-                                width: 48,
-                            },
-                            e.id,
-                        ),
+                className: f.os,
+                style: { maxWidth: 168 * E },
+                children: C.slice(0, 5).map((e) =>
+                    (0, i.jsx)(
+                        _.Ay,
+                        {
+                            participant: e,
+                            channel: n,
+                            className: f.Vs,
+                            inCall: !0,
+                            noVideoRender: !0,
+                            popoutType: c.N.NO_POPOUT,
+                            width: 48,
+                        },
+                        e.id,
                     ),
+                ),
             }),
-            (0, i.jsx)(s.Heading, { className: g.HA, variant: "heading-xxl/semibold", children: C }),
+            (0, i.jsx)(l.D, { className: f.HA, variant: "heading-xxl/semibold", children: N }),
             (0, i.jsx)("div", {
-                className: g.Nu,
-                children: (0, i.jsx)(s.Text, {
+                className: f.Nu,
+                children: (0, i.jsx)(s.E, {
                     color: "text-default",
                     variant: "text-sm/normal",
                     children:
-                        0 === f.length
-                            ? m.intl.string(m.t.zSqdrS)
-                            : 1 === f.length
-                              ? m.intl.formatToPlainString(m.t.BUyJIG, { a: (0, u.A)(n, f[0]) })
-                              : 2 === f.length
-                                ? m.intl.formatToPlainString(m.t["dcyZf/"], {
-                                      a: (0, u.A)(n, f[0]),
-                                      b: (0, u.A)(n, f[1]),
+                        0 === C.length
+                            ? x.intl.string(x.t.zSqdrS)
+                            : 1 === C.length
+                              ? x.intl.formatToPlainString(x.t.BUyJIG, { a: (0, h.A)(n, C[0]) })
+                              : 2 === C.length
+                                ? x.intl.formatToPlainString(x.t["dcyZf/"], {
+                                      a: (0, h.A)(n, C[0]),
+                                      b: (0, h.A)(n, C[1]),
                                   })
-                                : f.length > 2
-                                  ? m.intl.formatToPlainString(m.t["44/Obu"], {
-                                        a: (0, u.A)(n, f[0]),
-                                        b: (0, u.A)(n, f[1]),
-                                        n: f.length - 2,
+                                : C.length > 2
+                                  ? x.intl.formatToPlainString(x.t["44/Obu"], {
+                                        a: (0, h.A)(n, C[0]),
+                                        b: (0, h.A)(n, C[1]),
+                                        n: C.length - 2,
                                     })
                                   : void 0,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: g.PD,
-                children: (0, i.jsx)(s.Button, {
+                className: f.PD,
+                children: (0, i.jsx)(r.$, {
                     variant: "overlay-primary",
-                    text: p ? m.intl.string(m.t["96ANUN"]) : m.intl.string(m.t.TVBCKZ),
-                    onClick: E,
-                    disabled: !p,
+                    text: g ? x.intl.string(x.t["96ANUN"]) : x.intl.string(x.t.TVBCKZ),
+                    onClick: v,
+                    disabled: !g,
                 }),
             }),
         ],

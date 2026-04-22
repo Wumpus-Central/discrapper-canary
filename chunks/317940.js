@@ -1,55 +1,53 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(158954),
-    r = n(732955),
-    l = n(397927),
-    a = n(854378),
-    o = n(819670);
-function c(e) {
-    let { title: t, subtitle: n, buttonText: c, image: d, onButtonClick: u, loading: h } = e;
-    return (0, i.jsx)(a.Ay, {
-        className: o.kL,
-        children: (0, i.jsxs)(s.BJc, {
+var s = n(331322),
+    r = n(534514),
+    l = n(834730),
+    a = n(821609),
+    o = n(289873),
+    c = n(854378),
+    d = n(794347);
+function u(e) {
+    let { title: t, subtitle: n, buttonText: u, image: _, onButtonClick: h, loading: m } = e;
+    return (0, i.jsx)(c.Ay, {
+        className: d.kL,
+        children: (0, i.jsxs)(s.B, {
             align: "center",
             justify: "center",
             gap: 24,
             children: [
-                (0, i.jsxs)(s.BJc, {
+                (0, i.jsxs)(s.B, {
                     gap: 8,
                     align: "center",
                     children: [
-                        (0, i.jsxs)(s.BJc, {
+                        (0, i.jsxs)(s.B, {
                             gap: 24,
                             align: "center",
                             children: [
-                                null != d &&
-                                    (0, i.jsx)(s.BJc, {
+                                null != _ &&
+                                    (0, i.jsx)(s.B, {
                                         align: "center",
                                         justify: "center",
-                                        className: o.Sl,
-                                        children: d,
+                                        className: d.Sl,
+                                        children: _,
                                     }),
-                                h && (0, i.jsx)(l.y$y, { type: l.y$y.Type.SPINNING_CIRCLE }),
-                                (0, i.jsx)(s.DZT, {
-                                    variant: "heading-xl/semibold",
-                                    color: "text-strong",
-                                    children: t,
-                                }),
+                                m && (0, i.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE }),
+                                (0, i.jsx)(r.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
                             ],
                         }),
                         null != n &&
                             "" !== n &&
-                            (0, i.jsx)(s.EYj, {
+                            (0, i.jsx)(l.E, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                className: o.VA,
+                                className: d.VA,
                                 children: n,
                             }),
                     ],
                 }),
-                !h && (0, i.jsx)(r.$nd, { onClick: u, text: c, variant: "overlay-primary" }),
+                !m && (0, i.jsx)(a.$, { onClick: h, text: u, variant: "overlay-primary" }),
             ],
         }),
     });

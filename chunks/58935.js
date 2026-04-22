@@ -1,9 +1,9 @@
 n.d(t, { default: () => m });
 var l = n(627968),
     i = n(64700),
-    r = n(158954),
+    r = n(189213),
     u = n(311907),
-    a = n(397927),
+    a = n(834730),
     s = n(47167),
     d = n(60868),
     o = n(374084),
@@ -119,7 +119,7 @@ let m = (e) => {
             { text: R, onClick: m, variant: "critical-primary" },
         ],
         children: V
-            ? (0, l.jsx)(a.Text, {
+            ? (0, l.jsx)(a.E, {
                   variant: "text-md/normal",
                   color: "text-default",
                   children: h.intl.format(h.t.Ze005A, { count: O.length }),

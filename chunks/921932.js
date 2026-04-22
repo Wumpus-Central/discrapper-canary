@@ -1,40 +1,35 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(364242),
-    i = n(528352),
-    a = n(476858),
-    s = n(355418);
+r.d(t, { A: () => l });
+var n = r(364242),
+    s = r(528352),
+    a = r(476858),
+    i = r(355418);
 let o = RegExp(
-        `(?:on\\s*?)?(${i.lT})(?:\\s*(?:tot|\\-|\\–|until|through|till|\\s)\\s*(${i.lT}))?(?:-|/|\\s*(?:of)?\\s*)(` +
-            (0, a.uJ)(i.eB) +
-            ")(?:(?:-|/|,?\\s*)" +
-            `(${i.fp}(?![^\\s]\\d))` +
-            ")?(?=\\W|$)",
-        "i",
-    ),
-    l = 3,
-    u = 1,
-    c = 2,
-    d = 4;
-class _ extends s.c {
+    `(?:on\\s*?)?(${s.lT})(?:\\s*(?:tot|\\-|\\–|until|through|till|\\s)\\s*(${s.lT}))?(?:-|/|\\s*(?:of)?\\s*)(` +
+        (0, a.uJ)(s.eB) +
+        ")(?:(?:-|/|,?\\s*)" +
+        `(${s.fp}(?![^\\s]\\d))` +
+        ")?(?=\\W|$)",
+    "i",
+);
+class l extends i.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = i.eB[t[l].toLowerCase()],
-            a = (0, i.k8)(t[u]);
-        if (a > 31) return (t.index = t.index + t[u].length), null;
-        let s = e.createParsingComponents({ day: a, month: n });
-        if (t[d]) {
-            let e = (0, i.zL)(t[d]);
-            s.assign("year", e);
+        let r = s.eB[t[3].toLowerCase()],
+            a = (0, s.k8)(t[1]);
+        if (a > 31) return (t.index = t.index + t[1].length), null;
+        let i = e.createParsingComponents({ day: a, month: r });
+        if (t[4]) {
+            let e = (0, s.zL)(t[4]);
+            i.assign("year", e);
         } else {
-            let t = (0, r.Y)(e.refDate, a, n);
-            s.imply("year", t);
+            let t = (0, n.Y)(e.refDate, a, r);
+            i.imply("year", t);
         }
-        if (!t[c]) return s;
-        let o = (0, i.k8)(t[c]),
-            _ = e.createParsingResult(t.index, t[0]);
-        return (_.start = s), (_.end = s.clone()), _.end.assign("day", o), _;
+        if (!t[2]) return i;
+        let o = (0, s.k8)(t[2]),
+            l = e.createParsingResult(t.index, t[0]);
+        return (l.start = i), (l.end = i.clone()), l.end.assign("day", o), l;
     }
 }

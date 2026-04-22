@@ -1,79 +1,83 @@
-l.d(t, { A: () => _ });
+l.d(t, { A: () => j });
 var n = l(627968),
     i = l(64700),
-    s = l(33851),
-    a = l.n(s),
-    r = l(417597),
-    o = l(565787),
-    C = l(397927),
-    d = l(530347),
-    c = l(504049),
-    u = l(266047),
-    m = l(221950),
-    x = l(652215),
-    h = l(985018);
-let g = (0, o.k)(d.A);
-function _(e) {
+    a = l(33851),
+    s = l.n(a),
+    C = l(417597),
+    r = l(565787),
+    o = l(861672),
+    d = l(477782),
+    c = l(953822),
+    u = l(60270),
+    m = l(353182),
+    h = l(530347),
+    x = l(504049),
+    g = l(266047),
+    H = l(221950),
+    _ = l(652215),
+    p = l(985018);
+let f = (0, r.k)(h.A);
+function j(e) {
     let { guildId: t, onClose: l } = e,
-        s = (0, r.bG)([u.A], () => u.A.getSearchStateByGuildId(t), [t], a()),
-        o = (0, c.Tj)(t),
-        d = i.useCallback(() => {
-            s.requireUnusualDmActivity || o(c.Zp.UNUSUAL_DM_ACTIVITY),
-                (0, m.Ld)(t, { ...s, requireUnusualDmActivity: !s.requireUnusualDmActivity });
-        }, [t, s, o]),
-        _ = i.useCallback(() => {
-            s.requireCommunicationDisabled || o(c.Zp.COMMUNICATION_DISABLED),
-                (0, m.Ld)(t, { ...s, requireCommunicationDisabled: !s.requireCommunicationDisabled });
-        }, [t, s, o]),
-        H = i.useCallback(() => {
-            s.requireUnusualAccountActivity || o(c.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, m.Ld)(t, { ...s, requireUnusualAccountActivity: !s.requireUnusualAccountActivity });
-        }, [t, s, o]),
-        p = i.useCallback(() => {
-            s.requireUsernameQuarantined || o(c.Zp.USERNAME_QUARANTINED),
-                (0, m.Ld)(t, { ...s, requireUsernameQuarantined: !s.requireUsernameQuarantined });
-        }, [t, s, o]);
-    return (0, n.jsx)(C.W1t, {
+        a = (0, C.bG)([g.A], () => g.A.getSearchStateByGuildId(t), [t], s()),
+        r = (0, x.Tj)(t),
+        h = i.useCallback(() => {
+            a.requireUnusualDmActivity || r(x.Zp.UNUSUAL_DM_ACTIVITY),
+                (0, H.Ld)(t, { ...a, requireUnusualDmActivity: !a.requireUnusualDmActivity });
+        }, [t, a, r]),
+        j = i.useCallback(() => {
+            a.requireCommunicationDisabled || r(x.Zp.COMMUNICATION_DISABLED),
+                (0, H.Ld)(t, { ...a, requireCommunicationDisabled: !a.requireCommunicationDisabled });
+        }, [t, a, r]),
+        b = i.useCallback(() => {
+            a.requireUnusualAccountActivity || r(x.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
+                (0, H.Ld)(t, { ...a, requireUnusualAccountActivity: !a.requireUnusualAccountActivity });
+        }, [t, a, r]),
+        A = i.useCallback(() => {
+            a.requireUsernameQuarantined || r(x.Zp.USERNAME_QUARANTINED),
+                (0, H.Ld)(t, { ...a, requireUsernameQuarantined: !a.requireUsernameQuarantined });
+        }, [t, a, r]);
+    return (0, n.jsx)(o.W, {
         "data-menu-migrated": !0,
         navId: "member-safety-flags",
         onClose: l,
-        "aria-label": h.intl.string(h.t.k9m8Rg),
-        onSelect: x.tEg,
-        children: (0, n.jsxs)(C.rXV, {
+        "aria-label": p.intl.string(p.t.k9m8Rg),
+        onSelect: _.tEg,
+        children: (0, n.jsxs)(d.rX, {
             children: [
-                (0, n.jsx)(C.sLh, {
+                (0, n.jsx)(d.sL, {
                     id: "toggle-require-unusual-dm-activity",
-                    label: h.intl.string(h.t.ZRnON3),
-                    leftIcon: C.EF8,
-                    leadingAccessory: { type: "icon", icon: C.EF8 },
-                    action: d,
-                    checked: s.requireUnusualDmActivity,
+                    label: p.intl.string(p.t.ZRnON3),
+                    leftIcon: c.E,
+                    leadingAccessory: { type: "icon", icon: c.E },
+                    action: h,
+                    checked: a.requireUnusualDmActivity,
                 }),
-                (0, n.jsx)(C.sLh, {
+                (0, n.jsx)(d.sL, {
                     id: "toggle-require-communication-disabled",
-                    label: h.intl.string(h.t.z3wbj8),
-                    leftIcon: C.gQi,
-                    leadingAccessory: { type: "icon", icon: C.gQi },
-                    action: _,
-                    checked: s.requireCommunicationDisabled,
+                    label: p.intl.string(p.t.z3wbj8),
+                    leftIcon: u.g,
+                    leadingAccessory: { type: "icon", icon: u.g },
+                    action: j,
+                    checked: a.requireCommunicationDisabled,
                 }),
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(C.sLh, {
+                        (0, n.jsx)(d.sL, {
                             id: "toggle-require-unusual-account-activity",
-                            label: h.intl.string(h.t.DIQsD9),
-                            leftIcon: g,
-                            leadingAccessory: { type: "icon", icon: g },
-                            action: H,
-                            checked: s.requireUnusualAccountActivity,
+                            label: p.intl.string(p.t.DIQsD9),
+                            leftIcon: f,
+                            leadingAccessory: { type: "icon", icon: f },
+                            action: b,
+                            checked: a.requireUnusualAccountActivity,
                         }),
-                        (0, n.jsx)(C.sLh, {
+                        (0, n.jsx)(d.sL, {
                             id: "toggle-require-username-quarantined",
-                            label: h.intl.string(h.t.Jloklk),
-                            leftIcon: C._mZ,
-                            leadingAccessory: { type: "icon", icon: C._mZ },
-                            action: p,
-                            checked: s.requireUsernameQuarantined,
+                            label: p.intl.string(p.t.Jloklk),
+                            leftIcon: m._,
+                            leadingAccessory: { type: "icon", icon: m._ },
+                            action: A,
+                            checked: a.requireUsernameQuarantined,
                         }),
                     ],
                 }),

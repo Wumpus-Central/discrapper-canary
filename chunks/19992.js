@@ -1,37 +1,40 @@
 "use strict";
-n.d(t, { c: () => h });
+n.d(t, { c: () => p });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
-    l = n(17372),
-    a = n(204173),
-    o = n(985018),
-    c = n(750997);
-let d = { [l.tY.MESSAGE]: o.t.fuqnBC, [l.tY.USER]: o.t.F4jrRW, [l.tY.GUILD]: o.t.gH3aMs },
-    u = (e) => {
-        let { title: t, menuType: n, onReopen: l } = e,
-            o = s.useCallback(() => {
-                (0, a.i)(n, l)();
-            }, [n, l]);
-        return (0, i.jsxs)(r.DUT, {
-            className: c.b0,
-            onClick: o,
+    r = n(939249),
+    l = n(834730),
+    a = n(921853),
+    o = n(331322),
+    c = n(17372),
+    d = n(204173),
+    u = n(985018),
+    _ = n(750997);
+let h = { [c.tY.MESSAGE]: u.t.fuqnBC, [c.tY.USER]: u.t.F4jrRW, [c.tY.GUILD]: u.t.gH3aMs },
+    m = (e) => {
+        let { title: t, menuType: n, onReopen: o } = e,
+            c = s.useCallback(() => {
+                (0, d.i)(n, o)();
+            }, [n, o]);
+        return (0, i.jsxs)(r.D, {
+            className: _.b0,
+            onClick: c,
             children: [
-                (0, i.jsx)(r.Text, { variant: "text-md/medium", children: t }),
-                (0, i.jsx)(r.n2b, { size: "sm", style: { transform: "rotate(180deg)" } }),
+                (0, i.jsx)(l.E, { variant: "text-md/medium", children: t }),
+                (0, i.jsx)(a.n, { size: "sm", style: { transform: "rotate(180deg)" } }),
             ],
         });
     },
-    h = (e) => {
+    p = (e) => {
         let { dsaCapabilities: t, onReopen: n } = e;
-        return (0, i.jsx)(r.BJc, {
+        return (0, i.jsx)(o.B, {
             gap: 16,
             children: (0, i.jsx)("div", {
-                className: c.kL,
+                className: _.kL,
                 children: t.map((e) =>
-                    e === l.tY.MEDIA_TAKEDOWN || null == d[e]
+                    e === c.tY.MEDIA_TAKEDOWN || null == h[e]
                         ? null
-                        : (0, i.jsx)(u, { title: o.intl.string(d[e]), menuType: e, onReopen: n }, e),
+                        : (0, i.jsx)(m, { title: u.intl.string(h[e]), menuType: e, onReopen: n }, e),
                 ),
             }),
         });

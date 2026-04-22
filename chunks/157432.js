@@ -1,29 +1,30 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
-    a = n(397927),
-    s = n(989985),
-    r = n(226698),
-    o = n(221314),
-    c = n(985018),
-    d = n(81987);
-let u = (e) => {
+    a = n(834730),
+    s = n(821609),
+    r = n(989985),
+    o = n(226698),
+    c = n(221314),
+    d = n(985018),
+    u = n(81987);
+let h = (e) => {
     let { channelId: t } = e,
         n = l.useCallback(() => {
-            r.A.reopenModReport(t);
+            o.A.reopenModReport(t);
         }, [t]);
-    return (0, i.jsx)(s._, {
-        bannerHeader: (0, i.jsx)(a.Text, {
+    return (0, i.jsx)(r._, {
+        bannerHeader: (0, i.jsx)(a.E, {
             variant: "text-md/medium",
             color: "text-muted",
-            children: c.intl.string(o.default["0eUUeF"]),
+            children: d.intl.string(c.default["0eUUeF"]),
         }),
-        headerStyles: d.U,
-        containerStyles: d.c,
-        children: (0, i.jsx)(a.Button, {
+        headerStyles: u.U,
+        containerStyles: u.c,
+        children: (0, i.jsx)(s.$, {
             variant: "secondary",
             size: "sm",
-            text: c.intl.string(o.default["6quCi9"]),
+            text: d.intl.string(c.default["6quCi9"]),
             onClick: n,
         }),
     });

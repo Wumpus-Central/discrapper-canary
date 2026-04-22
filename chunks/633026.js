@@ -1,95 +1,96 @@
 "use strict";
-s.d(t, { A: () => E });
+s.d(t, { A: () => A });
 var n = s(627968);
 s(64700);
-var r = s(503698),
-    l = s.n(r),
-    i = s(172218),
-    a = s(651162),
+var l = s(503698),
+    r = s.n(l),
+    a = s(172218),
+    i = s(651162),
     o = s(311907),
-    c = s(397927),
-    d = s(793574),
-    u = s(688810),
-    _ = s(287809),
-    g = s(993408),
+    c = s(534514),
+    d = s(834730),
+    u = s(793574),
+    g = s(688810),
+    h = s(287809),
+    _ = s(993408),
     m = s(212407),
-    h = s(815280),
-    p = s(695413),
-    f = s(572199);
-(0, g.$b)(90);
+    p = s(815280),
+    f = s(695413),
+    E = s(941734);
+(0, _.$b)(90);
 let x = {
         rankedSkuIds: [],
         name: "",
         unpublishedAt: void 0,
         categorySkuId: void 0,
         summary: "",
-        type: a.g.REWARD_HERO,
+        type: i.g.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
-    E = (e) => {
-        let { isLoading: t = !1, heroBlock: s, tab: r, onVisibilityChange: a } = e,
-            g = (0, i.K)(
+    A = (e) => {
+        let { isLoading: t = !1, heroBlock: s, tab: l, onVisibilityChange: i } = e,
+            _ = (0, a.K)(
                 (e) => {
-                    a?.(e);
+                    i?.(e);
                 },
                 0.1,
-                null != a,
+                null != i,
             ),
-            E = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
-            { analyticsLocations: b } = (0, u.Ay)(d.A.COLLECTIBLES_SHOP_HERO),
+            A = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+            { analyticsLocations: C } = (0, g.Ay)(u.A.COLLECTIBLES_SHOP_HERO),
             {
-                bannerDisplayConfig: C,
-                logoDisplayConfig: A,
-                heroLogo: S,
-                heroBannerStatic: v,
+                bannerDisplayConfig: S,
+                logoDisplayConfig: b,
+                heroLogo: v,
+                heroBannerStatic: L,
                 heroBannerAnimated: I,
             } = (0, m.Kk)(s),
-            L = C?.responsive ?? !1,
-            j = C?.backgroundStyle;
-        return null != E && (t || s !== x)
-            ? (0, n.jsx)(u.f5, {
-                  value: b,
+            j = S?.responsive ?? !1,
+            N = S?.backgroundStyle;
+        return null != A && (t || s !== x)
+            ? (0, n.jsx)(g.f5, {
+                  value: C,
                   children: (0, n.jsxs)("div", {
-                      ref: g,
-                      className: f.os,
+                      ref: _,
+                      className: E.os,
                       children: [
                           (0, n.jsx)("div", {
-                              className: l()(f.vK, { [f.no]: L }),
-                              style: null != j ? { background: j } : void 0,
+                              className: r()(E.vK, { [E.no]: j }),
+                              style: null != N ? { background: N } : void 0,
                               children:
-                                  null != v && (0, n.jsx)(h.A, { bannerStatic: v, bannerAnimated: I, isResponsive: L }),
+                                  null != L && (0, n.jsx)(p.A, { bannerStatic: L, bannerAnimated: I, isResponsive: j }),
                           }),
                           (0, n.jsxs)("div", {
-                              className: f.xX,
+                              className: E.xX,
                               children: [
                                   (0, n.jsx)("div", {
-                                      className: l()(f.bC, { [f.no]: L }),
+                                      className: r()(E.bC, { [E.no]: j }),
                                       children: t
-                                          ? (0, n.jsx)("div", { className: f.Hw })
+                                          ? (0, n.jsx)("div", { className: E.Hw })
                                           : (0, n.jsx)("div", {
-                                                className: f.Hw,
+                                                className: E.Hw,
                                                 children: (0, n.jsxs)("div", {
-                                                    className: f.Wq,
+                                                    className: E.Wq,
                                                     children: [
-                                                        null != S &&
+                                                        null != v &&
                                                             (0, n.jsx)("img", {
-                                                                className: f.rm,
-                                                                src: S,
+                                                                className: E.rm,
+                                                                src: v,
                                                                 alt: s.name,
-                                                                style: A?.toDesktopStyles(),
+                                                                style: b?.toDesktopStyles(),
                                                             }),
                                                         null != s.title &&
-                                                            (0, n.jsx)(c.Heading, {
+                                                            (0, n.jsx)(c.D, {
                                                                 variant: "heading-xxl/bold",
-                                                                className: f.DD,
+                                                                className: E.DD,
                                                                 color: "text-strong",
                                                                 children: s.title,
                                                             }),
                                                         "" !== s.summary &&
-                                                            (0, n.jsx)(c.Text, {
+                                                            (0, n.jsx)(d.E, {
                                                                 variant: "text-md/normal",
-                                                                className: f.Tm,
+                                                                className: E.Tm,
                                                                 style:
                                                                     null != s.bannerTextColor
                                                                         ? { color: s.bannerTextColor }
@@ -100,7 +101,7 @@ let x = {
                                                 }),
                                             }),
                                   }),
-                                  (0, n.jsx)(p.A, { isBlockLoading: t, heroBlock: s, tab: r }),
+                                  (0, n.jsx)(f.A, { isBlockLoading: t, heroBlock: s, tab: l }),
                               ],
                           }),
                       ],

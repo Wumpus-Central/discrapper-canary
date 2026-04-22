@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qR: "descriptionBox__981f7",
     eg: "descriptionSection__981f7",

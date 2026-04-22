@@ -1,13 +1,13 @@
-n.d(t, { A: () => o, M: () => a });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    l = n(985018);
-function a(e) {
+"use strict";
+n.d(t, { A: () => s, M: () => l });
+var i = n(627968);
+if ((n(64700), 21552 == n.j)) var r = n(834730);
+var a = n(985018);
+function l(e) {
     return null == e || null == e.end_time
         ? null
-        : l.intl.formatToPlainString(l.t.j7h4AJ, {
-              endTime: new Date(e.end_time).toLocaleString(l.intl.currentLocale, {
+        : a.intl.formatToPlainString(a.t.j7h4AJ, {
+              endTime: new Date(e.end_time).toLocaleString(a.intl.currentLocale, {
                   month: "numeric",
                   day: "numeric",
                   hour: "numeric",
@@ -15,10 +15,10 @@ function a(e) {
               }),
           });
 }
-function o(e) {
+function s(e) {
     let { muteConfig: t, className: n } = e,
-        l = a(t);
-    return null != l
-        ? (0, r.jsx)(i.Text, { variant: "text-xs/normal", color: "text-muted", className: n, children: l })
+        a = l(t);
+    return null != a
+        ? (0, i.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", className: n, children: a })
         : null;
 }

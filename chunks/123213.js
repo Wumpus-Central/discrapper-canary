@@ -1,92 +1,91 @@
-"use strict";
-n.d(t, { A: () => g, Y: () => m });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(846293),
-    o = n(415951),
-    l = n(849841),
-    u = n(976860),
-    c = n(345942),
-    d = n(449054),
-    _ = n(348943),
-    f = n(461888),
-    p = n(652215),
-    h = n(985018);
-function m(e) {
+l.d(t, { A: () => v, Y: () => f });
+var i = l(627968),
+    n = l(64700),
+    s = l(821609),
+    a = l(846293),
+    r = l(415951),
+    c = l(849841),
+    o = l(976860),
+    u = l(345942),
+    d = l(449054),
+    m = l(348943),
+    h = l(461888),
+    A = l(652215),
+    x = l(985018);
+function f(e) {
     let {
             guildId: t,
-            ctaType: n,
-            submitting: s,
-            onGoToGuild: o,
-            onAcceptInvite: c,
-            onStartApplication: _,
-            onComplete: m,
+            ctaType: l,
+            submitting: a,
+            onGoToGuild: r,
+            onAcceptInvite: u,
+            onStartApplication: m,
+            onComplete: f,
         } = e,
-        [g, E] = i.useState(!1),
-        A = (0, l.A)(t),
-        I = i.useCallback(() => {
-            (0, u.pX)(p.BVt.GUILD_MEMBER_VERIFICATION(t));
+        [v, I] = n.useState(!1),
+        g = (0, c.A)(t),
+        N = n.useCallback(() => {
+            (0, o.pX)(A.BVt.GUILD_MEMBER_VERIFICATION(t));
         }, [t]),
-        T = i.useCallback(async () => {
-            await (0, d.Z2)(t, { object: p.ZSU.GUILD_PROFILE });
+        j = n.useCallback(async () => {
+            await (0, d.Z2)(t, { object: A.ZSU.GUILD_PROFILE });
         }, [t]),
-        { text: y, onClick: S } = i.useMemo(() => {
-            switch (n) {
-                case f.SP.IS_MEMBER:
-                    return { text: h.intl.string(h.t.IRoQXr), onClick: o };
-                case f.SP.ADOPT_TAG:
-                    return { text: h.intl.string(h.t.cQDYRu), onClick: A };
-                case f.SP.HAS_APPLICATION:
-                    return { text: h.intl.string(h.t["4yfIDk"]), onClick: I };
-                case f.SP.APPLY_TO_JOIN:
-                    return { text: h.intl.string(h.t["7XdMW2"]), onClick: _ };
-                case f.SP.LURK_DISCOVERABLE:
-                    return { text: h.intl.string(h.t.VJlc0S), onClick: T };
-                case f.SP.JOIN_VIA_INVITE:
-                    return { text: h.intl.string(h.t.VJlc0S), onClick: c };
-                case f.SP.ACCEPT_ROLES:
-                    return { text: h.intl.string(h.t.MMlhsr), onClick: c };
+        { text: C, onClick: _ } = n.useMemo(() => {
+            switch (l) {
+                case h.SP.IS_MEMBER:
+                    return { text: x.intl.string(x.t.IRoQXr), onClick: r };
+                case h.SP.ADOPT_TAG:
+                    return { text: x.intl.string(x.t.cQDYRu), onClick: g };
+                case h.SP.HAS_APPLICATION:
+                    return { text: x.intl.string(x.t["4yfIDk"]), onClick: N };
+                case h.SP.APPLY_TO_JOIN:
+                    return { text: x.intl.string(x.t["7XdMW2"]), onClick: m };
+                case h.SP.LURK_DISCOVERABLE:
+                    return { text: x.intl.string(x.t.VJlc0S), onClick: j };
+                case h.SP.JOIN_VIA_INVITE:
+                    return { text: x.intl.string(x.t.VJlc0S), onClick: u };
+                case h.SP.ACCEPT_ROLES:
+                    return { text: x.intl.string(x.t.MMlhsr), onClick: u };
                 default:
                     return { text: null, onClick: null };
             }
-        }, [n, I, T, c, o, _, A]),
-        v = i.useCallback(
+        }, [l, N, j, u, r, m, g]),
+        E = n.useCallback(
             async (e) => {
-                e.stopPropagation(), E(!0);
+                e.stopPropagation(), I(!0);
                 try {
-                    await S?.();
+                    await _?.();
                 } catch {
                 } finally {
-                    m?.(), E(!1);
+                    f?.(), I(!1);
                 }
             },
-            [S, m],
+            [_, f],
         );
-    return null == y
+    return null == C
         ? null
-        : (0, r.jsx)(a.Button, { variant: "active", size: "sm", text: y, fullWidth: !0, loading: g || s, onClick: v });
+        : (0, i.jsx)(s.$, { variant: "active", size: "sm", text: C, fullWidth: !0, loading: v || a, onClick: E });
 }
-function g(e) {
-    let { profile: t, onComplete: n } = e,
-        { guildId: a, validInviteKey: l, ctaType: u } = (0, f.Ay)(t),
-        d = i.useCallback(() => (0, c.u)(a), [a]),
-        p = i.useCallback(() => {
-            null != l && s.Ay.acceptInvite({ inviteKey: l, context: { location: "guild_profile" } });
-        }, [l]),
-        h = i.useCallback(() => {
-            t.visibility !== _.n.PUBLIC_WITH_RECRUITMENT && null != l
-                ? p()
-                : o.A.openMemberVerificationModal(a, void 0, l);
-        }, [p, a, t.visibility, l]);
-    return null == u
+function v(e) {
+    let { profile: t, onComplete: l } = e,
+        { guildId: s, validInviteKey: c, ctaType: o } = (0, h.Ay)(t),
+        d = n.useCallback(() => (0, u.u)(s), [s]),
+        A = n.useCallback(() => {
+            null != c && a.Ay.acceptInvite({ inviteKey: c, context: { location: "guild_profile" } });
+        }, [c]),
+        x = n.useCallback(() => {
+            t.visibility !== m.n.PUBLIC_WITH_RECRUITMENT && null != c
+                ? A()
+                : r.A.openMemberVerificationModal(s, void 0, c);
+        }, [A, s, t.visibility, c]);
+    return null == o
         ? null
-        : (0, r.jsx)(m, {
-              guildId: a,
-              ctaType: u,
+        : (0, i.jsx)(f, {
+              guildId: s,
+              ctaType: o,
               onGoToGuild: d,
-              onAcceptInvite: p,
-              onStartApplication: h,
-              onComplete: n,
+              onAcceptInvite: A,
+              onStartApplication: x,
+              onComplete: l,
           });
 }

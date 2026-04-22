@@ -1,157 +1,159 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => p });
+var i = n(627968),
+    l = n(64700),
     s = n(735438),
-    a = n(962125),
-    o = n(927578),
-    l = n(151271),
-    u = n(240864),
-    c = n(887695),
-    d = n(241356);
-let _ = 20,
-    f = i.forwardRef(function (e, t) {
+    r = n(962125),
+    a = n(927578),
+    o = n(151271),
+    c = n(240864),
+    u = n(887695),
+    d = n(711548);
+let h = l.forwardRef(function (e, t) {
         let {
                 categories: n,
                 store: s,
-                hasSearchResults: u,
-                listPadding: f,
-                renderRow: h,
-                renderSection: m,
-                renderSectionHeader: E,
-                renderSectionFooter: g,
-                renderInspector: A,
-                renderEmptySearchState: I,
-                rowCount: T,
-                rowCountBySection: S,
-                rowHeight: y,
+                hasSearchResults: c,
+                listPadding: h,
+                renderRow: p,
+                renderSection: f,
+                renderSectionHeader: g,
+                renderSectionFooter: _,
+                renderInspector: x,
+                renderEmptySearchState: A,
+                rowCount: C,
+                rowCountBySection: E,
+                rowHeight: I,
                 sectionHeaderHeight: v,
-                sectionFooterHeight: N,
-                renderUpsell: C,
-                onScroll: R,
+                sectionFooterHeight: y,
+                renderUpsell: S,
+                onScroll: b,
             } = e,
-            O = i.useRef(!1),
-            b = i.useRef(null),
-            D = (0, l.RQ)((e) => e.searchQuery),
-            L = s.useStore((e) => e.activeCategoryIndex),
-            w = i.useMemo(
+            N = l.useRef(!1),
+            T = l.useRef(null),
+            j = (0, o.RQ)((e) => e.searchQuery),
+            R = s.useStore((e) => e.activeCategoryIndex),
+            w = l.useMemo(
                 () =>
                     n.map((e) =>
-                        (0, o.Em)(e.categoryInfo)
+                        (0, a.Em)(e.categoryInfo)
                             ? { isNitroLocked: e.categoryInfo.isNitroLocked }
                             : { isNitroLocked: !1 },
                     ),
                 [n],
             ),
-            M = (0, c.Fk)({
-                activeCategoryIndex: L,
-                isScrolling: O,
-                listRef: b,
+            L = (0, u.Fk)({
+                activeCategoryIndex: R,
+                isScrolling: N,
+                listRef: T,
                 onActiveCategoryIndexChange: s.setActiveCategoryIndex,
-                scrollOffset: _,
-                searchQuery: D,
+                scrollOffset: 20,
+                searchQuery: j,
             }),
-            x = i.useCallback(
+            M = l.useCallback(
                 (e) => {
-                    M(e),
-                        p({
-                            listRef: b,
-                            searchQuery: D,
+                    L(e),
+                        m({
+                            listRef: T,
+                            searchQuery: j,
                             nitroLockedSectionStates: w,
                             scrollTop: e,
                             sectionHeaderHeight: v,
-                            sectionFooterHeight: N,
+                            sectionFooterHeight: y,
                         }),
-                        R?.(e);
+                        b?.(e);
                 },
-                [M, D, w, v, N, R],
+                [L, j, w, v, y, b],
             );
         return (
-            i.useEffect(() => {
-                null != b.current && x(b.current.getScrollerNode()?.scrollTop ?? 0);
-            }, [x, b]),
-            (0, c.FV)({ searchQuery: D, activeCategoryIndex: L, listRef: b }),
-            i.useImperativeHandle(
+            l.useEffect(() => {
+                null != T.current && M(T.current.getScrollerNode()?.scrollTop ?? 0);
+            }, [M, T]),
+            (0, u.FV)({ searchQuery: j, activeCategoryIndex: R, listRef: T }),
+            l.useImperativeHandle(
                 t,
                 () => ({
                     scrollTo: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.scrollTo(...t);
+                        return T.current?.scrollTo(...t);
                     },
-                    getRowDescriptors: () => b.current?.getRowDescriptors() ?? [],
-                    getSectionDescriptors: () => b.current?.getSectionDescriptors() ?? [],
+                    getRowDescriptors: () => T.current?.getRowDescriptors() ?? [],
+                    getSectionDescriptors: () => T.current?.getSectionDescriptors() ?? [],
                     scrollToSectionTop: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.scrollToSectionTop(...t);
+                        return T.current?.scrollToSectionTop(...t);
                     },
                     scrollRowIntoView: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.scrollRowIntoView(...t);
+                        return T.current?.scrollRowIntoView(...t);
                     },
                     getScrollerNode: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.getScrollerNode(...t);
+                        return T.current?.getScrollerNode(...t);
                     },
                     scrollIntoViewNode: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.scrollIntoViewNode(...t);
+                        return T.current?.scrollIntoViewNode(...t);
                     },
                     getListDimensions: function () {
                         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                        return b.current?.getListDimensions(...t) ?? { height: -1, totalHeight: -1 };
+                        return T.current?.getListDimensions(...t) ?? { height: -1, totalHeight: -1 };
                     },
                 }),
                 [],
             ),
-            (0, r.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: d.i,
                 children: [
-                    D.length > 0 && !u && null != I
-                        ? I()
-                        : (0, r.jsx)(a.A, {
+                    j.length > 0 && !c && null != A
+                        ? A()
+                        : (0, i.jsx)(r.A, {
                               role: "none presentation",
-                              listPadding: f,
-                              onScroll: x,
-                              renderRow: h,
-                              renderSection: m,
-                              renderSectionHeader: E,
-                              renderSectionFooter: g,
-                              rowCount: T,
-                              rowCountBySection: S,
-                              rowHeight: y,
+                              listPadding: h,
+                              onScroll: M,
+                              renderRow: p,
+                              renderSection: f,
+                              renderSectionHeader: g,
+                              renderSectionFooter: _,
+                              rowCount: C,
+                              rowCountBySection: E,
+                              rowHeight: I,
                               sectionHeaderHeight: v,
-                              sectionFooterHeight: N,
+                              sectionFooterHeight: y,
                               stickyHeaders: !0,
-                              ref: b,
+                              ref: T,
                           }),
-                    C?.(),
-                    A?.(),
+                    S?.(),
+                    x?.(),
                 ],
             })
         );
     }),
-    p = (0, s.throttle)(h, 300, { leading: !1, trailing: !0 });
-function h(e) {
-    let {
-        listRef: t,
-        searchQuery: n,
-        nitroLockedSectionStates: r,
-        scrollTop: i,
-        sectionHeaderHeight: s,
-        sectionFooterHeight: a,
-    } = e;
-    if (null == t.current) return;
-    let o = (0, u.s)({
-        listRef: t,
-        searchQuery: n,
-        nitroLockedSectionStates: r,
-        scrollTop: i,
-        sectionHeaderHeight: s,
-        sectionFooterHeight: a,
-    });
-    l.RQ.setState({
-        isNitroLockedSectionVisible: o.isNitroLockedSectionVisible,
-        areOnlyNitroLockedSectionsVisible: o.areOnlyNitroLockedSectionsVisible,
-    });
-}
-let m = f;
+    m = (0, s.throttle)(
+        function (e) {
+            let {
+                listRef: t,
+                searchQuery: n,
+                nitroLockedSectionStates: i,
+                scrollTop: l,
+                sectionHeaderHeight: s,
+                sectionFooterHeight: r,
+            } = e;
+            if (null == t.current) return;
+            let a = (0, c.s)({
+                listRef: t,
+                searchQuery: n,
+                nitroLockedSectionStates: i,
+                scrollTop: l,
+                sectionHeaderHeight: s,
+                sectionFooterHeight: r,
+            });
+            o.RQ.setState({
+                isNitroLockedSectionVisible: a.isNitroLockedSectionVisible,
+                areOnlyNitroLockedSectionsVisible: a.areOnlyNitroLockedSectionsVisible,
+            });
+        },
+        300,
+        { leading: !1, trailing: !0 },
+    ),
+    p = h;

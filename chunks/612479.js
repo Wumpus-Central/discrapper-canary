@@ -1,4 +1,4 @@
-t.d(a, { A: () => R });
+t.d(a, { A: () => T });
 var l = t(627968),
     n = t(64700),
     i = t(503698),
@@ -6,171 +6,178 @@ var l = t(627968),
     d = t(735438),
     s = t.n(d),
     u = t(66455),
-    E = t(397927),
-    O = t(964486),
-    b = t(475743),
-    v = t(235986),
-    c = t(915089),
-    o = t(124480),
-    N = t(954571),
-    f = t(975571),
-    U = t(930932),
-    h = t(321563),
-    g = t(670455),
-    S = t(652215),
-    A = t(985018),
-    _ = t(768919);
-function R(e) {
+    E = t(935462),
+    O = t(534514),
+    b = t(834730),
+    v = t(452027),
+    c = t(260598),
+    o = t(150934),
+    f = t(825484),
+    N = t(821609),
+    U = t(964486),
+    g = t(475743),
+    h = t(235986),
+    S = t(915089),
+    A = t(124480),
+    _ = t(954571),
+    m = t(975571),
+    R = t(930932),
+    L = t(321563),
+    j = t(670455),
+    D = t(652215),
+    I = t(985018),
+    C = t(519560);
+function T(e) {
     let {
             modalType: a,
             header: t,
             body: i,
             problemTitle: d,
-            problems: R,
-            transitionState: L,
-            ratingOptions: m,
-            ratingEmojiKind: D,
-            ratingTextLabels: I,
-            freeformNeededProblems: j = [],
-            otherKey: T,
-            hideDontShowAgainCheckbox: C,
-            startRating: V = null,
-            hideHelpDeskLink: x = !1,
-            onSubmit: p,
-            onClose: F,
-            impression: M,
-            freeformDescription: G,
+            problems: T,
+            transitionState: V,
+            ratingOptions: p,
+            ratingEmojiKind: x,
+            ratingTextLabels: F,
+            freeformNeededProblems: M = [],
+            otherKey: P,
+            hideDontShowAgainCheckbox: G,
+            startRating: H = null,
+            hideHelpDeskLink: k = !1,
+            onSubmit: B,
+            onClose: y,
+            impression: X,
+            freeformDescription: K,
         } = e,
-        P = (0, b.A)(R),
-        [H, k] = n.useState(!1),
-        [B, X] = n.useState(V),
-        [y, Y] = n.useState(null),
-        [K, q] = n.useState(s().shuffle(R)),
-        [w, Q] = n.useState(""),
-        z = (0, c.GV)(),
-        Z = (0, u.A)(B),
-        W = (0, u.A)(H),
-        J = (0, u.A)(y),
-        $ = (0, u.A)(p),
-        ee = (0, u.A)(w),
-        ea = null;
+        Y = (0, g.A)(T),
+        [q, w] = n.useState(!1),
+        [z, Q] = n.useState(H),
+        [Z, W] = n.useState(null),
+        [J, $] = n.useState(s().shuffle(T)),
+        [ee, ea] = n.useState(""),
+        et = (0, S.GV)(),
+        el = (0, u.A)(z),
+        en = (0, u.A)(q),
+        ei = (0, u.A)(Z),
+        er = (0, u.A)(B),
+        ed = (0, u.A)(ee),
+        es = null;
     return (
-        null == B
-            ? (ea = "RATING")
-            : B !== g.P0.GOOD && null == y
-              ? (ea = "PROBLEM")
-              : null != y && j.includes(y.value) && (ea = "FREEFORM"),
+        null == z
+            ? (es = "RATING")
+            : z !== j.P0.GOOD && null == Z
+              ? (es = "PROBLEM")
+              : null != Z && M.includes(Z.value) && (es = "FREEFORM"),
         n.useEffect(() => {
-            s().isEqual(P, R) || q((0, U.ed)(R, T));
-        }, [R, P, T]),
-        (0, O.Ay)(
+            s().isEqual(Y, T) || $((0, R.ed)(T, P));
+        }, [T, Y, P]),
+        (0, U.Ay)(
             () => (
-                N.default.track(S.HAw.OPEN_MODAL, { type: a, source: "Feedback Modal" }),
+                _.default.track(D.HAw.OPEN_MODAL, { type: a, source: "Feedback Modal" }),
                 () => {
-                    $.current({
-                        rating: Z.current,
-                        problem: J.current,
-                        dontShowAgain: W.current,
-                        feedback: ee.current,
+                    er.current({
+                        rating: el.current,
+                        problem: ei.current,
+                        dontShowAgain: en.current,
+                        feedback: ed.current,
                     });
                 }
             ),
         ),
-        (0, l.jsxs)(E.EOs, {
+        (0, l.jsxs)(E.EO, {
             "data-migration-pending": !0,
-            impression: M,
-            transitionState: L,
-            className: _.CR,
-            "aria-labelledby": z,
+            impression: X,
+            transitionState: V,
+            className: C.CR,
+            "aria-labelledby": et,
             parentComponent: "FeedbackModal",
             children: [
-                (0, l.jsxs)(E.rQ0, {
+                (0, l.jsxs)(E.rQ, {
                     "data-migration-pending": !0,
                     separator: !1,
-                    className: _.N1,
+                    className: C.N1,
                     children: [
-                        (0, l.jsx)(E.Heading, { id: z, variant: "heading-xl/extrabold", color: "none", children: t }),
-                        (0, l.jsx)(E.Text, { variant: "text-md/normal", color: "none", className: _.sB, children: i }),
+                        (0, l.jsx)(O.D, { id: et, variant: "heading-xl/extrabold", color: "none", children: t }),
+                        (0, l.jsx)(b.E, { variant: "text-md/normal", color: "none", className: C.sB, children: i }),
                     ],
                 }),
-                ("RATING" === ea || ("PROBLEM" === ea && null == I)) &&
+                ("RATING" === es || ("PROBLEM" === es && null == F)) &&
                     (0, l.jsx)("div", {
-                        className: r()(_.OS, _.Ko),
-                        children: (0, l.jsx)(h.A, {
-                            ratingOptions: m,
-                            emojiKind: D,
-                            textLabels: I,
-                            selectedRating: B,
+                        className: r()(C.OS, C.Ko),
+                        children: (0, l.jsx)(L.A, {
+                            ratingOptions: p,
+                            emojiKind: x,
+                            textLabels: F,
+                            selectedRating: z,
                             onChangeRating: function (e) {
-                                X(e), e === g.P0.GOOD && F();
+                                Q(e), e === j.P0.GOOD && y();
                             },
                         }),
                     }),
-                "PROBLEM" === ea &&
-                    (0, l.jsx)(E.$mQ, {
+                "PROBLEM" === es &&
+                    (0, l.jsx)(E.$m, {
                         "data-migration-pending": !0,
-                        children: (0, l.jsx)(E.D0$, {
+                        children: (0, l.jsx)(v.D, {
                             label: d,
-                            children: (0, l.jsx)(o.A, {
-                                options: K,
+                            children: (0, l.jsx)(A.A, {
+                                options: J,
                                 onClick: function (e) {
-                                    Y(e), j.includes(e.value) || F();
+                                    W(e), M.includes(e.value) || y();
                                 },
                                 hideCaret: (e) => {
                                     let { value: a } = e;
-                                    return !j.includes(a);
+                                    return !M.includes(a);
                                 },
                             }),
                         }),
                     }),
-                "FREEFORM" === ea &&
-                    (0, l.jsx)(E.$mQ, {
+                "FREEFORM" === es &&
+                    (0, l.jsx)(E.$m, {
                         "data-migration-pending": !0,
-                        className: _.__invalid_content,
-                        children: (0, l.jsx)(E.fs1, {
-                            label: G?.(y) ?? A.intl.string(A.t.h95hcn),
-                            helperText: x
+                        className: C.__invalid_content,
+                        children: (0, l.jsx)(c.f, {
+                            label: K?.(Z) ?? I.intl.string(I.t.h95hcn),
+                            helperText: k
                                 ? void 0
-                                : A.intl.format(A.t.ybi2tD, { helpdeskURL: f.A.getSubmitRequestURL() }),
-                            value: w,
-                            maxLength: g.u0,
-                            onChange: Q,
+                                : I.intl.format(I.t.ybi2tD, { helpdeskURL: m.A.getSubmitRequestURL() }),
+                            value: ee,
+                            maxLength: j.u0,
+                            onChange: ea,
                         }),
                     }),
-                "RATING" === ea &&
-                    !C &&
-                    (0, l.jsx)(E.jlY, {
+                "RATING" === es &&
+                    !G &&
+                    (0, l.jsx)(E.jl, {
                         "data-migration-pending": !0,
-                        className: _.qr,
-                        direction: v.A.Direction.HORIZONTAL,
-                        children: (0, l.jsx)(E.Checkbox, {
-                            checked: H,
-                            onChange: () => k(!H),
-                            label: A.intl.string(A.t["5E9SB9"]),
+                        className: C.qr,
+                        direction: h.A.Direction.HORIZONTAL,
+                        children: (0, l.jsx)(o.S, {
+                            checked: q,
+                            onChange: () => w(!q),
+                            label: I.intl.string(I.t["5E9SB9"]),
                             labelType: "secondary",
                         }),
                     }),
-                ("FREEFORM" === ea || ("PROBLEM" === ea && null != I)) &&
-                    (0, l.jsx)(E.jlY, {
+                ("FREEFORM" === es || ("PROBLEM" === es && null != F)) &&
+                    (0, l.jsx)(E.jl, {
                         "data-migration-pending": !0,
-                        className: _.qr,
-                        direction: v.A.Direction.HORIZONTAL,
-                        children: (0, l.jsxs)(E.ButtonGroup, {
+                        className: C.qr,
+                        direction: h.A.Direction.HORIZONTAL,
+                        children: (0, l.jsxs)(f.e, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, l.jsx)(E.Button, {
+                                (0, l.jsx)(N.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: A.intl.string(A.t["13/7kX"]),
+                                    text: I.intl.string(I.t["13/7kX"]),
                                     onClick: () => {
-                                        "FREEFORM" === ea ? (Y(null), Q("")) : X(null);
+                                        "FREEFORM" === es ? (W(null), ea("")) : Q(null);
                                     },
                                 }),
-                                (0, l.jsx)(E.Button, {
+                                (0, l.jsx)(N.$, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: A.intl.string(A.t.geKm7t),
-                                    onClick: F,
+                                    text: I.intl.string(I.t.geKm7t),
+                                    onClick: y,
                                 }),
                             ],
                         }),

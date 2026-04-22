@@ -1,6 +1,4 @@
-var r = n(141181),
-    i = 1,
-    a = 4;
+var r = n(141181);
 e.exports = function (e) {
-    return r(e, i | a);
+    return r(e, 5);
 };

@@ -1,53 +1,54 @@
 n.d(t, { A: () => A });
-var i = n(627968),
-    l = n(64700),
-    s = n(110259),
-    a = n(837381),
-    r = n(397927),
-    o = n(928039),
+var s = n(627968),
+    a = n(64700),
+    l = n(110259),
+    i = n(837381),
+    r = n(289873),
+    o = n(599319),
+    d = n(928039),
     c = n(139286),
-    d = n(688895),
-    u = n(456425),
-    h = n(546292);
+    u = n(688895),
+    h = n(456425),
+    _ = n(523396);
 function A(e) {
-    let { initialized: t, items: n, loading: A, loadMore: _ } = e,
-        m = l.useRef(null),
-        g = (0, o.A)("for-you", m);
+    let { initialized: t, items: n, loading: A, loadMore: m } = e,
+        g = a.useRef(null),
+        f = (0, d.A)("for-you", g);
     (0, c.A)(
         {
-            type: s.ImpressionTypes.VIEW,
-            name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+            type: l.ImpressionTypes.VIEW,
+            name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
             properties: { empty: 0 === n.length },
         },
         { disableTrack: !t },
         [t],
     );
-    let p = () => {
-        let e = m.current?.getScrollerState();
-        null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 1500 && _());
+    let E = () => {
+        let e = g.current?.getScrollerState();
+        null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 1500 && m());
     };
     return t
         ? 0 === n.length
-            ? (0, i.jsx)(d.H, {})
-            : (0, i.jsx)(a.hD, {
-                  navigator: g,
-                  children: (0, i.jsx)(a.PR, {
+            ? (0, s.jsx)(u.H, {})
+            : (0, s.jsx)(i.hD, {
+                  navigator: f,
+                  children: (0, s.jsx)(i.PR, {
                       children: (e) => {
-                          let { ref: t, ...l } = e;
-                          return (0, i.jsxs)(r.T7Y, {
-                              className: h.kL,
+                          let { ref: t, ...a } = e;
+                          return (0, s.jsxs)(o.Ch, {
+                              className: _.kL,
                               ref: (e) => {
-                                  (m.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                  (g.current = e), (t.current = e?.getScrollerNode() ?? null);
                               },
-                              ...l,
-                              onScroll: p,
+                              ...a,
+                              onScroll: E,
                               children: [
-                                  (0, i.jsx)(u.$, { items: n }),
-                                  A ? (0, i.jsx)(r.y$y, { className: h.u1 }) : null,
+                                  (0, s.jsx)(h.$, { items: n }),
+                                  A ? (0, s.jsx)(r.y, { className: _.u1 }) : null,
                               ],
                           });
                       },
                   }),
               })
-        : (0, i.jsx)(r.y$y, { className: h.k$ });
+        : (0, s.jsx)(r.y, { className: _.k$ });
 }

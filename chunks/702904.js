@@ -1,23 +1,23 @@
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var l = n(397927),
-    s = n(985018);
-function a() {
+s.d(t, { A: () => l });
+var i = s(627968);
+s(64700);
+var n = s(192308),
+    r = s(985018);
+function l() {
     function e() {
-        (0, l.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
+        (0, n.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([s.e("56423"), s.e("25280")]).then(s.bind(s, 987482));
             return (t) => (0, i.jsx)(e, { source: "Screenshare Unavailable", ...t });
         });
     }
-    (0, l.mMO)(async () => {
-        let { default: t } = await n.e("11487").then(n.bind(n, 792866));
-        return (n) =>
+    (0, n.openModalLazy)(async () => {
+        let { default: t } = await s.e("11487").then(s.bind(s, 792866));
+        return (s) =>
             (0, i.jsx)(t, {
-                ...n,
-                header: s.intl.string(s.t.GFr0GR),
-                body: s.intl.string(s.t.QSk6E8),
-                confirmText: s.intl.string(s.t["BK8LK+"]),
+                ...s,
+                header: r.intl.string(r.t.GFr0GR),
+                body: r.intl.string(r.t.QSk6E8),
+                confirmText: r.intl.string(r.t["BK8LK+"]),
                 onConfirm: e,
             });
     });

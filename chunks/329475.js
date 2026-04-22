@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { d: () => r });
-var r = (function (e) {
-    return (
-        (e.BIO = "bio"),
-        (e.USERNAME = "username"),
-        (e.NICKNAME = "nickname"),
-        (e.GLOBAL_NAME = "display_name"),
-        (e.CLAN_TAG = "clan_tag"),
-        e
-    );
-})({});
+n.d(t, { d: () => i });
+var r,
+    i =
+        (((r = {}).BIO = "bio"),
+        (r.USERNAME = "username"),
+        (r.NICKNAME = "nickname"),
+        (r.GLOBAL_NAME = "display_name"),
+        (r.CLAN_TAG = "clan_tag"),
+        r);

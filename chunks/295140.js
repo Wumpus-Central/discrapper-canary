@@ -1,19 +1,19 @@
-n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
-var r = n(367622),
-    l = n(397927),
-    a = n(728160);
-function s(e) {
-    let { orbsCount: t } = e;
-    return (0, i.jsxs)("div", {
-        className: a.kL,
+a.d(l, { A: () => c });
+var t = a(627968);
+a(64700);
+var s = a(928157),
+    i = a(834730),
+    n = a(912293);
+function c(e) {
+    let { orbsCount: l } = e;
+    return (0, t.jsxs)("div", {
+        className: n.kL,
         children: [
-            (0, i.jsx)("div", {
-                className: a.dy,
-                children: (0, i.jsx)(r.GhN, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
+            (0, t.jsx)("div", {
+                className: n.dy,
+                children: (0, t.jsx)(s.G, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
             }),
-            (0, i.jsx)(l.Text, { variant: "display-lg", color: "text-strong", className: a.Uq, children: t }),
+            (0, t.jsx)(i.E, { variant: "display-lg", color: "text-strong", className: n.Uq, children: l }),
         ],
     });
 }

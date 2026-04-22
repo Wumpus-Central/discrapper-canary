@@ -1,43 +1,28 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => c });
 var r = n(311907),
     i = n(73153),
-    a = n(202613);
-let s = {},
+    s = n(202613);
+let a = {},
     o = null,
     l = !1;
 function u(e) {
-    let { paymentSources: t } = e;
-    for (let e of ((s = {}), (o = null), t)) (s[e.id] = a.Ay.createFromServer(e)), e.default && (o = e.id);
-    null == o && t.length > 0 && (o = t[0].id), (l = !0);
-}
-function c(e) {
     let { paymentSource: t } = e;
-    (s = { ...s, [t.id]: t }), (t.isDefault || 1 === Object.keys(s).length) && (o = t.id);
+    (a = { ...a, [t.id]: t }), (t.isDefault || 1 === Object.keys(a).length) && (o = t.id);
 }
-function d(e) {
-    let { id: t } = e;
-    if (((s = { ...s }), delete s[t], o === t)) {
-        let e = Object.keys(s);
-        o = 0 === e.length ? null : e[0];
-    }
-}
-function _() {
-    (s = {}), (o = null), (l = !1);
-}
-class f extends r.Ay.Store {
+class d extends r.Ay.Store {
     static displayName = "PaymentSourceStore";
     get paymentSources() {
-        return s;
+        return a;
     }
     get paymentSourceIds() {
-        return Object.keys(s);
+        return Object.keys(a);
     }
     get defaultPaymentSourceId() {
         return o;
     }
     get defaultPaymentSource() {
-        return null != o ? s[o] : null;
+        return null != o ? a[o] : null;
     }
     get hasFetchedPaymentSources() {
         return l;
@@ -47,14 +32,26 @@ class f extends r.Ay.Store {
         return null == e ? null : e.paymentMethodCountry;
     }
     getPaymentSource(e) {
-        return s[e];
+        return a[e];
     }
 }
-let p = new f(i.h, {
-    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: c,
-    BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: c,
-    BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: c,
-    BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: u,
-    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: d,
-    LOGOUT: _,
+let c = new d(i.h, {
+    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: u,
+    BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: u,
+    BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: u,
+    BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: function (e) {
+        let { paymentSources: t } = e;
+        for (let e of ((a = {}), (o = null), t)) (a[e.id] = s.Ay.createFromServer(e)), e.default && (o = e.id);
+        null == o && t.length > 0 && (o = t[0].id), (l = !0);
+    },
+    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function (e) {
+        let { id: t } = e;
+        if (((a = { ...a }), delete a[t], o === t)) {
+            let e = Object.keys(a);
+            o = 0 === e.length ? null : e[0];
+        }
+    },
+    LOGOUT: function () {
+        (a = {}), (o = null), (l = !1);
+    },
 });

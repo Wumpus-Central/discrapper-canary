@@ -1,40 +1,42 @@
-n.d(i, { default: () => c });
+n.d(i, { default: () => d });
 var a = n(627968),
-    r = n(158954),
-    e = n(397927),
-    s = n(360469),
-    l = n(985018);
-function c(t) {
-    let { application: i, onCancel: n, onClose: c, onConfirm: o, ...d } = t;
+    r = n(189213),
+    s = n(331322),
+    e = n(834730),
+    l = n(349288),
+    c = n(360469),
+    o = n(985018);
+function d(t) {
+    let { application: i, onCancel: n, onClose: d, onConfirm: h, ...x } = t;
     return (0, a.jsx)(r.Modal, {
-        transitionState: d.transitionState,
-        onClose: c,
-        title: l.intl.string(l.t["06YebE"]),
+        transitionState: x.transitionState,
+        onClose: d,
+        title: o.intl.string(o.t["06YebE"]),
         actions: [
             {
-                text: l.intl.string(l.t["ETE/oC"]),
+                text: o.intl.string(o.t["ETE/oC"]),
                 onClick: () => {
-                    n(), c();
+                    n(), d();
                 },
                 variant: "secondary",
             },
             {
-                text: l.intl.string(l.t["3PatSz"]),
+                text: o.intl.string(o.t["3PatSz"]),
                 onClick: () => {
-                    o(), c();
+                    h(), d();
                 },
                 variant: "primary",
             },
         ],
-        children: (0, a.jsxs)(e.BJc, {
+        children: (0, a.jsxs)(s.B, {
             children: [
-                (0, a.jsxs)(e.Text, {
+                (0, a.jsxs)(e.E, {
                     variant: "text-sm/normal",
-                    children: [l.intl.format(l.t["s+WDGz"], { activityName: i.name }), " "],
+                    children: [o.intl.format(o.t["s+WDGz"], { activityName: i.name }), " "],
                 }),
-                (0, a.jsx)(e.Text, {
+                (0, a.jsx)(e.E, {
                     variant: "text-sm/normal",
-                    children: (0, a.jsx)(e.MzZ, { href: s.i6, children: l.intl.string(l.t.E0gf5l) }),
+                    children: (0, a.jsx)(l.Anchor, { href: c.i6, children: o.intl.string(o.t.E0gf5l) }),
                 }),
             ],
         }),

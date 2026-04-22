@@ -1,27 +1,30 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => C });
 var i = n(627968),
     l = n(64700),
     s = n(554146),
     a = n(192308),
     r = n(990078),
-    o = n(397927),
-    d = n(932001),
-    c = n(652793),
-    u = n(976860),
-    h = n(652215),
-    A = n(746080),
-    _ = n(49999),
-    m = n(576709),
-    p = n(985018),
-    g = n(494352),
-    f = n(907305);
-let E = l.memo(function (e) {
-    let { guildId: t, selected: E } = e,
-        [x, I] = (0, d.ww)([s.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        C = x === s.M.GAME_SERVER_HOSTING_NEW_BADGE,
-        N = l.useCallback(() => {
-            I(_.i.USER_DISMISS), (0, u.pX)(h.BVt.CHANNEL(t, A.VV.GAME_SERVERS));
-        }, [t, I]),
+    o = n(939249),
+    d = n(789645),
+    c = n(777666),
+    u = n(687966),
+    h = n(932001),
+    A = n(652793),
+    _ = n(976860),
+    m = n(652215),
+    g = n(746080),
+    p = n(49999),
+    f = n(576709),
+    E = n(985018),
+    x = n(494352),
+    I = n(907305);
+let C = l.memo(function (e) {
+    let { guildId: t, selected: C } = e,
+        [b, N] = (0, h.ww)([s.M.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        S = b === s.M.GAME_SERVER_HOSTING_NEW_BADGE,
+        v = l.useCallback(() => {
+            N(p.i.USER_DISMISS), (0, _.pX)(m.BVt.CHANNEL(t, g.VV.GAME_SERVERS));
+        }, [t, N]),
         T = l.useCallback(
             (e) => {
                 e.stopPropagation(),
@@ -32,39 +35,39 @@ let E = l.memo(function (e) {
             },
             [t],
         ),
-        S = (0, i.jsxs)("div", {
-            className: g.c,
+        y = (0, i.jsxs)("div", {
+            className: x.c,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.Xs,
+                    className: I.Xs,
                     children: (0, i.jsx)(r.m, {
-                        text: p.intl.string(p.t.fgq1gs),
+                        text: E.intl.string(E.t.fgq1gs),
                         position: "top",
-                        children: (0, i.jsx)(o.DUT, {
+                        children: (0, i.jsx)(o.D, {
                             onClick: T,
-                            "aria-label": p.intl.string(p.t.fgq1gs),
-                            children: (0, i.jsx)(o.PGe, { size: "xs", color: "currentColor", className: f.gE }),
+                            "aria-label": E.intl.string(E.t.fgq1gs),
+                            children: (0, i.jsx)(d.P, { size: "xs", color: "currentColor", className: I.gE }),
                         }),
                     }),
                 }),
-                C &&
+                S &&
                     (0, i.jsx)("div", {
-                        className: f.yW,
-                        children: (0, i.jsx)(o.LpS, {
+                        className: I.yW,
+                        children: (0, i.jsx)(c.Lp, {
                             disableColor: !0,
-                            text: p.intl.string(p.t.y2b7CA),
-                            className: g.q,
+                            text: E.intl.string(E.t.y2b7CA),
+                            className: x.q,
                         }),
                     }),
             ],
         });
-    return (0, i.jsx)(c.G, {
-        className: f.Ki,
+    return (0, i.jsx)(A.G, {
+        className: I.Ki,
         id: `game-server-empty-${t}`,
-        renderIcon: (e) => (0, i.jsx)(o._xR, { size: "md", className: e, color: "currentColor" }),
-        text: p.intl.string(m.default.vCzwM7),
-        selected: E,
-        onClick: N,
-        trailing: S,
+        renderIcon: (e) => (0, i.jsx)(u._, { size: "md", className: e, color: "currentColor" }),
+        text: E.intl.string(f.default.vCzwM7),
+        selected: C,
+        onClick: v,
+        trailing: y,
     });
 });

@@ -1,7 +1,7 @@
 l.d(t, { q: () => c });
 var a = l(627968);
 l(64700);
-var n = l(397927),
+var n = l(534514),
     r = l(73079),
     i = l(156312),
     o = l(252561),
@@ -27,7 +27,7 @@ let c = {
             activeSubscription: null,
             children: (0, a.jsxs)(o.wn, {
                 children: [
-                    (0, a.jsx)(n.Heading, { variant: "heading-xl/semibold", children: "Choose Payment Source Type" }),
+                    (0, a.jsx)(n.D, { variant: "heading-xl/semibold", children: "Choose Payment Source Type" }),
                     (0, a.jsx)(o.e_, {
                         className: d.Bt,
                         children: (0, a.jsx)("div", { className: d.VS, children: (0, a.jsx)(r.A, { ...u }) }),

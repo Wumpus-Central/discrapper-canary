@@ -1,8 +1,8 @@
 n.d(i, { default: () => e });
 var a = n(627968);
 n(64700);
-var r = n(158954),
-    s = n(397927),
+var r = n(189213),
+    s = n(834730),
     l = n(985018);
 function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
@@ -15,6 +15,6 @@ function e(t) {
             { text: l.intl.string(l.t["ETE/oC"]), variant: "secondary", onClick: i },
             { text: l.intl.string(l.t.dO8DLI), variant: "critical-primary", onClick: n },
         ],
-        children: (0, a.jsx)(s.Text, { variant: "text-md/normal", children: l.intl.string(l.t["9sgGbL"]) }),
+        children: (0, a.jsx)(s.E, { variant: "text-md/normal", children: l.intl.string(l.t["9sgGbL"]) }),
     });
 }

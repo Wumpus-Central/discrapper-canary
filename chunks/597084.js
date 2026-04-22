@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 });
 let r = n(152772);
-class i {
+t.default = class {
     constructor() {
         this._queue = [];
     }
@@ -21,5 +21,4 @@ class i {
     get size() {
         return this._queue.length;
     }
-}
-t.default = i;
+};

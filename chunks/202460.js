@@ -37,13 +37,12 @@ class r {
     }
     traceEvent(e, t) {
         let n,
-            r = this._report,
-            i = ["detached", "waiting", "attached", "started", "playing", "silence"];
+            r = this._report;
         void 0 !==
         r[
             (n =
                 "soundshare_state_transition" === t.type
-                    ? `soundshare_state_transition_${i[t.newState]}_count`
+                    ? `soundshare_state_transition_${["detached", "waiting", "attached", "started", "playing", "silence"][t.newState]}_count`
                     : `${t.type}_count`)
         ]
             ? r[n] < 32767 && r[n]++

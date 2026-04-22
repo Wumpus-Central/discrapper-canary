@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => a });
 var i = n(64700),
-    s = n(735438),
-    l = n(627794),
+    l = n(735438),
+    s = n(627794),
     r = n(789821);
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -14,10 +13,10 @@ function a(e) {
                 errorMessage: t,
                 handleValidateKeywords: i.useMemo(
                     () =>
-                        (0, s.debounce)(
+                        (0, l.debounce)(
                             (t) => {
                                 try {
-                                    (0, l.wk)(t, e), n(null);
+                                    (0, s.wk)(t, e), n(null);
                                 } catch (e) {
                                     n(e.message);
                                 }

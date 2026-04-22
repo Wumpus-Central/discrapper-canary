@@ -1,15 +1,18 @@
-a.d(l, { Q: () => i });
+a.d(l, { Q: () => d });
 var t = a(627968);
 a(64700);
-var o = a(158954),
-    n = a(397927);
-let i = {
+var n = a(821609),
+    o = a(408278),
+    i = a(123292),
+    r = a(825484),
+    s = a(111159);
+let d = {
     title: "Buttons",
     stories: [
         {
             name: "Button",
             id: "button",
-            component: o.$nd,
+            component: n.$,
             docs: "https://design.discord.tools/components/web/buttons/button",
             controls: {
                 text: { label: "Text", type: "text", defaultValue: "Click me" },
@@ -48,7 +51,7 @@ let i = {
             id: "icon-button",
             docs: "https://design.discord.tools/components/web/buttons/icon-button",
             component: function (e) {
-                return (0, t.jsx)(o.K0, { ...e, icon: n.pVd, "aria-label": "Clyde" });
+                return (0, t.jsx)(o.K, { ...e, icon: s.p, "aria-label": "Clyde" });
             },
             controls: {
                 variant: {
@@ -83,7 +86,7 @@ let i = {
             name: "TextButton",
             id: "text-button",
             docs: "https://design.discord.tools/components/web/buttons/text-button",
-            component: o.QWc,
+            component: i.Q,
             controls: {
                 text: { label: "Text", type: "text", defaultValue: "Link Button" },
                 variant: {
@@ -105,11 +108,11 @@ let i = {
             id: "button-group",
             docs: "https://design.discord.tools/components/web/buttons/button-group",
             component: function (e) {
-                return (0, t.jsxs)(o.e2v, {
+                return (0, t.jsxs)(r.e, {
                     ...e,
                     children: [
-                        (0, t.jsx)(o.$nd, { variant: "secondary", text: "Cancel" }),
-                        (0, t.jsx)(o.$nd, { variant: "primary", text: "Submit" }),
+                        (0, t.jsx)(n.$, { variant: "secondary", text: "Cancel" }),
+                        (0, t.jsx)(n.$, { variant: "primary", text: "Submit" }),
                     ],
                 });
             },

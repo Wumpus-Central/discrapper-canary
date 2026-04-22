@@ -1,100 +1,103 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(58149),
-    r = n(688810),
-    a = n(753838),
-    o = n(201275),
-    d = n(631305),
-    c = n(657048),
-    u = n(636042),
-    m = n(652215),
-    g = n(874864),
-    x = n(985018),
-    h = n(636997);
-let _ = function (e) {
-    let { guild: t, disabled: _, role: A } = e,
-        p = (0, o.qE)(t.id, A),
-        { analyticsLocations: f } = (0, r.Ay)(),
-        j = t.features.has(m.GuildFeatures.ROLE_ICONS),
-        N = (e) => {
-            j ||
-                ((0, l.zV)(m.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: { ...e, section: m.JJy.CUSTOM_ROLE_ICONS_TOOLTIP },
+var l = n(192308),
+    s = n(742158),
+    r = n(244367),
+    a = n(750943),
+    o = n(821609),
+    d = n(58149),
+    c = n(688810),
+    u = n(753838),
+    m = n(201275),
+    g = n(631305),
+    h = n(657048),
+    x = n(636042),
+    _ = n(652215),
+    p = n(874864),
+    A = n(985018),
+    E = n(422746);
+let f = function (e) {
+    let { guild: t, disabled: f, role: j } = e,
+        N = (0, m.qE)(t.id, j),
+        { analyticsLocations: I } = (0, c.Ay)(),
+        C = t.features.has(_.GuildFeatures.ROLE_ICONS),
+        b = (e) => {
+            C ||
+                ((0, d.zV)(_.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    location: { ...e, section: _.JJy.CUSTOM_ROLE_ICONS_TOOLTIP },
                     guild_id: t?.id,
-                    location_stack: f,
+                    location_stack: I,
                 }),
-                (0, d.A)({
-                    analyticsLocations: f,
+                (0, g.A)({
+                    analyticsLocations: I,
                     analyticsSourceLocation: {
-                        page: m.liQ.GUILD_SETTINGS,
-                        section: m.JJy.GUILD_ROLE_EDIT_UPSELL_MODAL,
-                        object: m.ZSU.BADGE,
+                        page: _.liQ.GUILD_SETTINGS,
+                        section: _.JJy.GUILD_ROLE_EDIT_UPSELL_MODAL,
+                        object: _.ZSU.BADGE,
                     },
                     guild: t,
-                    perks: (0, g.$_)(),
+                    perks: (0, p.$_)(),
                 }));
         },
-        E = (0, i.jsx)(a.A, {
-            className: h.Jz,
+        v = (0, i.jsx)(u.A, {
+            className: E.Jz,
             guild: t,
-            guildFeature: m.GuildFeatures.ROLE_ICONS,
+            guildFeature: _.GuildFeatures.ROLE_ICONS,
             tooltipPosition: "top",
-            hideTooltip: j,
-            onClick: () => N({ object: m.ZSU.LEARN_MORE, objectType: m.AnalyticsObjectTypes.TIER_2 }),
+            hideTooltip: C,
+            onClick: () => b({ object: _.ZSU.LEARN_MORE, objectType: _.AnalyticsObjectTypes.TIER_2 }),
         });
     return (0, i.jsxs)("div", {
-        className: h.kL,
+        className: E.kL,
         children: [
-            (0, i.jsxs)(s.zEo, {
-                className: h.Hc,
-                children: [(0, i.jsx)("div", { children: x.intl.string(x.t.B9grJw) }), E],
+            (0, i.jsxs)(s.z, {
+                className: E.Hc,
+                children: [(0, i.jsx)("div", { children: A.intl.string(A.t.B9grJw) }), v],
             }),
-            (0, i.jsx)(s.ayl, { className: h.h_, children: x.intl.string(x.t.I3YQeV) }),
+            (0, i.jsx)(r.a, { className: E.h_, children: A.intl.string(A.t.I3YQeV) }),
             (0, i.jsxs)("div", {
-                className: h.Mw,
+                className: E.Mw,
                 children: [
                     (0, i.jsx)("div", {
-                        className: h.i1,
+                        className: E.i1,
                         children:
-                            null != p
-                                ? (0, i.jsx)(c.A, { ...p, className: h.s1, enableTooltip: !1 })
-                                : (0, i.jsx)(s.XGR, {
+                            null != N
+                                ? (0, i.jsx)(h.A, { ...N, className: E.s1, enableTooltip: !1 })
+                                : (0, i.jsx)(a.X, {
                                       size: "custom",
                                       color: "currentColor",
                                       width: 24,
                                       height: 24,
-                                      className: h.VH,
+                                      className: E.VH,
                                   }),
                     }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(o.$, {
                         onClick: () =>
-                            t.features.has(m.GuildFeatures.ROLE_ICONS)
-                                ? void (0, s.mMO)(async () => {
+                            t.features.has(_.GuildFeatures.ROLE_ICONS)
+                                ? void (0, l.openModalLazy)(async () => {
                                       let { default: e } = await n.e("64939").then(n.bind(n, 836774));
                                       return (n) =>
                                           (0, i.jsx)(e, {
                                               ...n,
                                               guildId: t.id,
-                                              onUploadIcon: (e) => (0, u.n3)(A.id, e, null),
-                                              onSelectUnicodeEmoji: (e) => (0, u.n3)(A.id, null, e),
+                                              onUploadIcon: (e) => (0, x.n3)(j.id, e, null),
+                                              onSelectUnicodeEmoji: (e) => (0, x.n3)(j.id, null, e),
                                           });
                                   })
-                                : N({ object: m.ZSU.UPLOAD_IMAGE }),
+                                : b({ object: _.ZSU.UPLOAD_IMAGE }),
                         variant: "primary",
-                        disabled: _,
-                        text: x.intl.string(x.t.mD1oGB),
+                        disabled: f,
+                        text: A.intl.string(A.t.mD1oGB),
                     }),
-                    null != p
-                        ? (0, i.jsx)(s.Button, {
+                    null != N
+                        ? (0, i.jsx)(o.$, {
                               onClick: () => {
-                                  (0, u.n3)(A.id, null, null);
+                                  (0, x.n3)(j.id, null, null);
                               },
                               variant: "critical-secondary",
-                              disabled: _,
-                              text: x.intl.string(x.t["uY+Nk/"]),
+                              disabled: f,
+                              text: A.intl.string(A.t["uY+Nk/"]),
                           })
                         : null,
                 ],

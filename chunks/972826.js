@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(989479),
-    i = n(374372),
-    a = n(241738),
-    s = n(632434);
+r.d(t, { A: () => o });
+var n = r(989479),
+    s = r(374372),
+    a = r(241738),
+    i = r(632434);
 class o extends a.d {
     innerPatternString(e) {
-        return `(${r.Pl})\\s{0,5}назад(?=(?:\\W|$))`;
+        return `(${n.Pl})\\s{0,5}назад(?=(?:\\W|$))`;
     }
     innerExtract(e, t) {
-        let n = (0, r.E9)(t[1]),
-            a = (0, s.x4)(n);
-        return i.BP.createRelativeFromReference(e.reference, a);
+        let r = (0, n.E9)(t[1]),
+            a = (0, i.x4)(r);
+        return s.BP.createRelativeFromReference(e.reference, a);
     }
 }

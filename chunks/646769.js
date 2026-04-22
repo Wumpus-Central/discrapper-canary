@@ -1,48 +1,47 @@
 "use strict";
-n.d(t, { Mt: () => c, Tg: () => d, c$: () => u, c6: () => _ });
+n.d(t, { Mt: () => d, Tg: () => c, c$: () => u, c6: () => _ });
 var r = n(311907),
     i = n(73153),
-    a = n(284016),
-    s = n(594061),
+    s = n(284016),
+    a = n(594061),
     o = n(617617),
     l = n(355097);
 function u(e, t, n, i) {
-    let { delay: a = l.Sb.INFREQUENT_USER_ACTION, comparator: u = (e, t) => e === t } =
+    let { delay: s = l.Sb.INFREQUENT_USER_ACTION, comparator: u = (e, t) => e === t } =
             arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        c = () => n(o.A.settings[e]?.[t]),
-        d = () => (0, r.bG)([o.A], c, void 0, u);
+        d = () => n(o.A.settings[e]?.[t]);
     return {
-        getSetting: c,
-        updateSetting: f(c, (n) =>
-            s.wc.updateAsync(
+        getSetting: d,
+        updateSetting: f(d, (n) =>
+            a.wc.updateAsync(
                 e,
                 (e) => {
                     e[t] = i(n, e[t]);
                 },
-                a,
+                s,
             ),
         ),
-        useSetting: d,
+        useSetting: () => (0, r.bG)([o.A], d, void 0, u),
     };
 }
-function c(e, t, n) {
-    let s = () => {
-        let r = a.A.getState()[t];
+function d(e, t, n) {
+    let a = () => {
+        let r = s.A.getState()[t];
         return r?.settings[n] ?? e.getSetting();
     };
     return {
-        getSetting: s,
+        getSetting: a,
         useSetting: () => {
             let i = e.useSetting();
             return (
-                (0, r.bG)([a.A], () => {
-                    let e = a.A.getState()[t];
+                (0, r.bG)([s.A], () => {
+                    let e = s.A.getState()[t];
                     return e?.settings[n];
                 }) ?? i
             );
         },
-        updateSetting: f(s, (r) =>
-            a.A.shouldSync(t)
+        updateSetting: f(a, (r) =>
+            s.A.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.h.dispatch({
                       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
@@ -52,16 +51,16 @@ function c(e, t, n) {
         ),
     };
 }
-function d(e, t, n, r) {
-    let a = () => n() ?? e.getSetting();
+function c(e, t, n, r) {
+    let s = () => n() ?? e.getSetting();
     return {
-        getSetting: a,
+        getSetting: s,
         useSetting: () => {
             let t = e.useSetting();
             return r() ?? t;
         },
         updateSetting: f(
-            a,
+            s,
             (n) => (i.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: [t] }), e.updateSetting(n)),
         ),
     };
@@ -72,18 +71,18 @@ function _(e) {
         isEligible: n,
         useIsEligible: r,
         eligibleDefault: i,
-        ineligibleDefault: a,
-        onUseDefault: s,
+        ineligibleDefault: s,
+        onUseDefault: a,
     } = e;
     return {
         getSetting: () => {
             let e = t.getSetting();
-            return null != e ? e : (s?.(), n() ? i() : a);
+            return null != e ? e : (a?.(), n() ? i() : s);
         },
         useSetting: () => {
             let e = t.useSetting(),
                 n = r();
-            return null != e ? e : (s?.(), n ? i() : a);
+            return null != e ? e : (a?.(), n ? i() : s);
         },
         updateSetting: (e) => t.updateSetting(e),
     };

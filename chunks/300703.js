@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => p, V: () => l });
+n.d(t, { A: () => c, V: () => l });
 var r = n(838677),
     i = n(486020),
-    a = n(998304),
-    s = n(515718),
+    s = n(998304),
+    a = n(515718),
     o = n(791059);
 let l = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
 function u(e) {
@@ -15,30 +15,27 @@ function u(e) {
         return console.warn(t, "no emoji for", e), "";
     }
 }
-function c(e) {
-    return e;
-}
-function d(e) {
-    let { palette: t, shouldProcessMobileColors: n = !1 } = e;
-    return t;
-}
-async function _(e) {
+async function d(e) {
     let t,
         { id: n, name: r } = e;
     t = null != n ? i.Ay.getEmojiURL({ id: n, size: 32, animated: !1 }) : u(r);
-    let o = await (0, s.S4)(t);
+    let o = await (0, a.S4)(t);
     return o?.map((e) => {
         let [t, n, r] = e;
-        return (0, a.Ob)(t, n, r);
+        return (0, s.Ob)(t, n, r);
     });
 }
-function f(e) {
-    let { channelId: t, messageId: n, emoji: r } = e;
-}
-let p = {
+let c = {
     getURL: o.A.makeMemoizer(u),
-    filterUnsupportedEmojis: c,
-    applyPlatformToThemedEmojiColorPalette: d,
-    getEmojiColors: _,
-    triggerFullscreenAnimation: f,
+    filterUnsupportedEmojis: function (e) {
+        return e;
+    },
+    applyPlatformToThemedEmojiColorPalette: function (e) {
+        let { palette: t, shouldProcessMobileColors: n = !1 } = e;
+        return t;
+    },
+    getEmojiColors: d,
+    triggerFullscreenAnimation: function (e) {
+        let { channelId: t, messageId: n, emoji: r } = e;
+    },
 };

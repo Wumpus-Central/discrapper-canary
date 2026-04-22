@@ -1,41 +1,42 @@
-n.d(t, { A: () => A, S: () => g });
+n.d(t, { A: () => h, S: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(284009),
     a = n.n(l),
-    r = n(158954),
+    r = n(189213),
     o = n(311907),
     d = n(139033),
-    c = n(397927),
-    u = n(830215),
-    _ = n(287809),
-    m = n(985018);
-function g(e) {
-    return u.A.verifyResend()
+    u = n(192308),
+    c = n(821609),
+    g = n(830215),
+    m = n(287809),
+    _ = n(985018);
+function A(e) {
+    return g.A.verifyResend()
         .then(() => {
-            (0, d.A)({ title: m.intl.string(m.t.LykQYk), subtitle: m.intl.format(m.t.azKEPy, { email: e.email }) });
+            (0, d.A)({ title: _.intl.string(_.t.LykQYk), subtitle: _.intl.format(_.t.azKEPy, { email: e.email }) });
         })
         .catch((e) => {
             let { body: t } = e,
-                n = m.intl.string(m.t.XcrQN5);
+                n = _.intl.string(_.t.XcrQN5);
             null != t && t.email && (n = t.email),
-                (0, c.qfG)((e) =>
+                (0, u.openModal)((e) =>
                     (0, i.jsx)(r.Modal, {
-                        actions: [{ variant: "primary", text: m.intl.string(m.t.BddRzS), onClick: e.onClose }],
-                        title: m.intl.string(m.t.VbTh0E),
+                        actions: [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: e.onClose }],
+                        title: _.intl.string(_.t.VbTh0E),
                         subtitle: n,
                         ...e,
                     }),
                 );
         });
 }
-function A(e) {
+function h(e) {
     let { size: t, variant: n } = e,
-        l = (0, o.bG)([_.default], () => _.default.getCurrentUser());
+        l = (0, o.bG)([m.default], () => m.default.getCurrentUser());
     a()(null != l, "ResendEmailVerificationButton: currentUser cannot be undefined");
     let [r, d] = s.useState(!1),
         u = s.useCallback(() => {
-            d(!0), g(l).then(() => d(!1));
+            d(!0), A(l).then(() => d(!1));
         }, [l]);
-    return (0, i.jsx)(c.Button, { size: t, variant: n, onClick: u, text: m.intl.string(m.t.lm1UKt), disabled: r });
+    return (0, i.jsx)(c.$, { size: t, variant: n, onClick: u, text: _.intl.string(_.t.lm1UKt), disabled: r });
 }

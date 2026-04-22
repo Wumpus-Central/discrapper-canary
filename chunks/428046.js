@@ -2,8 +2,8 @@
 n.d(t, { A: () => u });
 var r = n(746280),
     i = n(90727),
-    a = n(391898),
-    s = function (e, t) {
+    s = n(391898),
+    a = function (e, t) {
         return -1 !== e.indexOf(t);
     },
     o = function (e) {
@@ -27,43 +27,43 @@ let u = (function () {
             (this.origOptions = e.origOptions),
             this.origOptions.bymonthday)
         ) {
-            var s = [].concat(this.options.bymonthday),
+            var a = [].concat(this.options.bymonthday),
                 u = [].concat(this.options.bynmonthday);
-            s.sort(function (e, t) {
+            a.sort(function (e, t) {
                 return e - t;
             }),
                 u.sort(function (e, t) {
                     return t - e;
                 }),
-                (this.bymonthday = s.concat(u)),
+                (this.bymonthday = a.concat(u)),
                 this.bymonthday.length || (this.bymonthday = null);
         }
-        if ((0, a.Wo)(this.origOptions.byweekday)) {
-            var c = (0, a.cy)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
-                d = String(c);
+        if ((0, s.Wo)(this.origOptions.byweekday)) {
+            var d = (0, s.cy)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
+                c = String(d);
             this.byweekday = {
-                allWeeks: c.filter(function (e) {
+                allWeeks: d.filter(function (e) {
                     return !e.n;
                 }),
-                someWeeks: c.filter(function (e) {
+                someWeeks: d.filter(function (e) {
                     return !!e.n;
                 }),
                 isWeekdays:
-                    -1 !== d.indexOf("MO") &&
-                    -1 !== d.indexOf("TU") &&
-                    -1 !== d.indexOf("WE") &&
-                    -1 !== d.indexOf("TH") &&
-                    -1 !== d.indexOf("FR") &&
-                    -1 === d.indexOf("SA") &&
-                    -1 === d.indexOf("SU"),
+                    -1 !== c.indexOf("MO") &&
+                    -1 !== c.indexOf("TU") &&
+                    -1 !== c.indexOf("WE") &&
+                    -1 !== c.indexOf("TH") &&
+                    -1 !== c.indexOf("FR") &&
+                    -1 === c.indexOf("SA") &&
+                    -1 === c.indexOf("SU"),
                 isEveryDay:
-                    -1 !== d.indexOf("MO") &&
-                    -1 !== d.indexOf("TU") &&
-                    -1 !== d.indexOf("WE") &&
-                    -1 !== d.indexOf("TH") &&
-                    -1 !== d.indexOf("FR") &&
-                    -1 !== d.indexOf("SA") &&
-                    -1 !== d.indexOf("SU"),
+                    -1 !== c.indexOf("MO") &&
+                    -1 !== c.indexOf("TU") &&
+                    -1 !== c.indexOf("WE") &&
+                    -1 !== c.indexOf("TH") &&
+                    -1 !== c.indexOf("FR") &&
+                    -1 !== c.indexOf("SA") &&
+                    -1 !== c.indexOf("SU"),
             };
             var _ = function (e, t) {
                 return e.weekday - t.weekday;
@@ -76,13 +76,12 @@ let u = (function () {
     }
     return (
         (e.isFullyConvertible = function (t) {
-            var n = !0;
             if (!(t.options.freq in e.IMPLEMENTED) || (t.origOptions.until && t.origOptions.count)) return !1;
-            for (var r in t.origOptions) {
-                if (s(["dtstart", "wkst", "freq"], r)) return !0;
-                if (!s(e.IMPLEMENTED[t.options.freq], r)) return !1;
+            for (var n in t.origOptions) {
+                if (a(["dtstart", "wkst", "freq"], n)) break;
+                if (!a(e.IMPLEMENTED[t.options.freq], n)) return !1;
             }
-            return n;
+            return !0;
         }),
         (e.prototype.isFullyConvertible = function () {
             return e.isFullyConvertible(this.rrule);
@@ -229,7 +228,7 @@ let u = (function () {
             return this.language.monthNames[e - 1];
         }),
         (e.prototype.weekdaytext = function (e) {
-            var t = (0, a.Et)(e) ? (e + 1) % 7 : e.getJsWeekday();
+            var t = (0, s.Et)(e) ? (e + 1) % 7 : e.getJsWeekday();
             return (e.n ? this.nth(e.n) + " " : "") + this.language.dayNames[t];
         }),
         (e.prototype.plural = function (e) {
@@ -240,21 +239,20 @@ let u = (function () {
         }),
         (e.prototype.list = function (e, t, n, r) {
             var i = this;
-            void 0 === r && (r = ","), (0, a.cy)(e) || (e = [e]);
-            var s = function (e, t, n) {
-                for (var r = "", i = 0; i < e.length; i++)
-                    0 !== i && (i === e.length - 1 ? (r += " " + n + " ") : (r += t + " ")), (r += e[i]);
-                return r;
-            };
-            t =
-                t ||
-                function (e) {
-                    return e.toString();
-                };
-            var o = function (e) {
+            void 0 === r && (r = ","),
+                (0, s.cy)(e) || (e = [e]),
+                (t =
+                    t ||
+                    function (e) {
+                        return e.toString();
+                    });
+            var a = function (e) {
                 return t && t.call(i, e);
             };
-            return n ? s(e.map(o), r, n) : e.map(o).join(r + " ");
+            if (!n) return e.map(a).join(r + " ");
+            for (var o = e.map(a), l = r, u = "", d = 0; d < o.length; d++)
+                0 !== d && (d === o.length - 1 ? (u += " " + n + " ") : (u += l + " ")), (u += o[d]);
+            return u;
         }),
         e
     );

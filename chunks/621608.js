@@ -1,20 +1,16 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FormatBuilder = void 0),
-    (t.bindFormatValuesWithBuilder = l),
-    (t.bindFormatValues = u);
+    (t.bindFormatValuesWithBuilder = a),
+    (t.bindFormatValues = o);
 let r = n(450678),
     i = n(725354);
-function s(e) {
-    return "$" === e[0];
-}
-class a {
+t.FormatBuilder = class {
     constructor(e) {
         this.context = e;
     }
-}
-t.FormatBuilder = a;
-class o extends Error {
+};
+class s extends Error {
     constructor(e, t, n) {
         super(`No value for variable '${e}' was provided for the localized message '${t}'`),
             (this.variableName = e),
@@ -22,174 +18,173 @@ class o extends Error {
             (this.nodeType = n);
     }
 }
-function l(e) {
+function a(e) {
     var t;
     let {
         builder: n,
-        originalMessage: a,
-        nodes: c,
+        originalMessage: l,
+        nodes: u,
         locales: d,
-        values: _,
-        dataFormatters: f,
-        formatConfig: p,
-        currentPluralValue: h,
-        keyPrefix: m,
+        values: c,
+        dataFormatters: _,
+        formatConfig: f,
+        currentPluralValue: E,
+        keyPrefix: h,
     } = e;
-    if (1 === c.length && "string" == typeof c[0]) return void n.pushLiteralText(c[0]);
-    for (let e = 0; e < c.length; e++) {
-        let E = c[e];
-        if ("string" == typeof E) {
-            n.pushLiteralText(E);
+    if (1 === u.length && "string" == typeof u[0]) return void n.pushLiteralText(u[0]);
+    for (let e = 0; e < u.length; e++) {
+        let p = u[e];
+        if ("string" == typeof p) {
+            n.pushLiteralText(p);
             continue;
         }
-        let g = E[0];
-        if (g === i.FormatJsNodeType.Pound) {
-            if ("number" == typeof h) {
-                let e = f.formatNumber(h);
+        let m = p[0];
+        if (m === i.FormatJsNodeType.Pound) {
+            if ("number" == typeof E) {
+                let e = _.formatNumber(E);
                 n.pushLiteralText(e);
             }
             continue;
         }
-        let A = E[1];
-        if (!(A in _) && !s(A)) throw new o(A, a, g);
-        let I = _[A];
-        switch (g) {
+        let g = p[1];
+        if (!(g in c) && "$" !== g[0]) throw new s(g, l, m);
+        let A = c[g];
+        switch (m) {
             case i.FormatJsNodeType.Argument:
-                "object" == typeof I || "function" == typeof I ? n.pushObject(I) : n.pushLiteralText(String(I));
+                "object" == typeof A || "function" == typeof A ? n.pushObject(A) : n.pushLiteralText(String(A));
                 break;
             case i.FormatJsNodeType.Date: {
-                let e = E[2],
-                    t = e in p.date ? p.date[e] : null != e ? (0, r.parseDateTimeSkeleton)(e) : void 0;
-                n.pushLiteralText(f.formatDate(I, t));
+                let e = p[2],
+                    t = e in f.date ? f.date[e] : null != e ? (0, r.parseDateTimeSkeleton)(e) : void 0;
+                n.pushLiteralText(_.formatDate(A, t));
                 break;
             }
             case i.FormatJsNodeType.Time: {
-                let e = E[2],
-                    t = e in p.time ? p.time[e] : null != e ? (0, r.parseDateTimeSkeleton)(e) : void 0;
-                n.pushLiteralText(f.formatTime(I, t));
+                let e = p[2],
+                    t = e in f.time ? f.time[e] : null != e ? (0, r.parseDateTimeSkeleton)(e) : void 0;
+                n.pushLiteralText(_.formatTime(A, t));
                 break;
             }
             case i.FormatJsNodeType.Number: {
-                let e = E[2],
+                let e = p[2],
                     i =
-                        e in p.number
-                            ? p.number[e]
+                        e in f.number
+                            ? f.number[e]
                             : null != e
                               ? (0, r.parseNumberSkeleton)((0, r.parseNumberSkeletonFromString)(e))
                               : void 0,
-                    s = "number" != typeof I ? I : I * (null != (t = null == i ? void 0 : i.scale) ? t : 1);
-                n.pushLiteralText(f.formatNumber(s, i));
+                    s = "number" != typeof A ? A : A * (null != (t = null == i ? void 0 : i.scale) ? t : 1);
+                n.pushLiteralText(_.formatNumber(s, i));
                 break;
             }
             case i.FormatJsNodeType.Tag: {
-                let t = E[2],
-                    r = E[3],
-                    i = u({
+                let t = p[2],
+                    r = p[3],
+                    i = o({
                         Builder: n.constructor,
                         nodes: t,
                         locales: d,
-                        dataFormatters: f,
-                        formatConfig: p,
-                        values: _,
-                        currentPluralValue: h,
-                        keyPrefix: `${m}.${e}`,
+                        dataFormatters: _,
+                        formatConfig: f,
+                        values: c,
+                        currentPluralValue: E,
+                        keyPrefix: `${h}.${e}`,
                     }),
-                    a =
+                    s =
                         null != r
-                            ? u({
+                            ? o({
                                   Builder: n.constructor,
                                   nodes: r,
                                   locales: d,
-                                  dataFormatters: f,
-                                  formatConfig: p,
-                                  values: _,
-                                  currentPluralValue: h,
-                                  keyPrefix: `${m}.${e}-control`,
+                                  dataFormatters: _,
+                                  formatConfig: f,
+                                  values: c,
+                                  currentPluralValue: E,
+                                  keyPrefix: `${h}.${e}-control`,
                               })
                             : [];
-                if (s(A)) n.pushRichTextTag(A, i, a);
+                if ("$" === g[0]) n.pushRichTextTag(g, i, s);
                 else {
-                    if ("function" != typeof I)
-                        throw `expected a function type for a Tag formatting value, ${A}. got ${typeof I}: ${I}`;
-                    let t = I(i, `${m}.${e}`);
+                    if ("function" != typeof A)
+                        throw `expected a function type for a Tag formatting value, ${g}. got ${typeof A}: ${A}`;
+                    let t = A(i, `${h}.${e}`);
                     for (let e of (t = Array.isArray(t) ? t : [t]))
                         "string" == typeof e ? n.pushLiteralText(e) : n.pushObject(e);
                 }
                 break;
             }
             case i.FormatJsNodeType.Select: {
-                let t = I,
-                    r = E[2],
-                    i = t in r ? r[t] : r.other;
-                if (null == i)
-                    throw `${t} is not a known option for select value ${A}. Valid options are ${Object.keys(r).join(", ")}`;
-                l({
+                let t = p[2],
+                    r = A in t ? t[A] : t.other;
+                if (null == r)
+                    throw `${A} is not a known option for select value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                a({
                     builder: n,
-                    nodes: i,
+                    nodes: r,
                     locales: d,
-                    dataFormatters: f,
-                    formatConfig: p,
-                    values: _,
-                    keyPrefix: `${m}.${e}`,
+                    dataFormatters: _,
+                    formatConfig: f,
+                    values: c,
+                    keyPrefix: `${h}.${e}`,
                 });
                 break;
             }
             case i.FormatJsNodeType.Plural: {
-                let t = E[2],
-                    r = E[3],
-                    i = E[4],
+                let t = p[2],
+                    r = p[3],
+                    i = p[4],
                     s = (() => {
                         var e;
-                        let n = `=${I}`;
+                        let n = `=${A}`;
                         return n in t
                             ? t[n]
-                            : null != (e = t[f.getPluralRules({ type: i }).select(I - (null != r ? r : 0))])
+                            : null != (e = t[_.getPluralRules({ type: i }).select(A - (null != r ? r : 0))])
                               ? e
                               : t.other;
                     })();
                 if (null == s)
-                    throw `${I} is not a known option for plural value ${A}. Valid options are ${Object.keys(t).join(", ")}`;
-                l({
+                    throw `${A} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                a({
                     builder: n,
                     nodes: s,
                     locales: d,
-                    dataFormatters: f,
-                    formatConfig: p,
-                    values: _,
-                    currentPluralValue: I - (null != r ? r : 0),
-                    keyPrefix: `${m}.${e}`,
+                    dataFormatters: _,
+                    formatConfig: f,
+                    values: c,
+                    currentPluralValue: A - (null != r ? r : 0),
+                    keyPrefix: `${h}.${e}`,
                 });
             }
         }
     }
 }
-function u(e) {
+function o(e) {
     let {
             Builder: t,
             originalMessage: n,
             nodes: r,
             locales: i,
             dataFormatters: s,
-            formatConfig: a,
-            values: o,
+            formatConfig: o,
+            values: l,
             currentPluralValue: u,
-            keyPrefix: c,
+            keyPrefix: d,
         } = e,
-        d = new t({ keyPrefix: c });
+        c = new t({ keyPrefix: d });
     return (
         "string" == typeof r
-            ? d.pushLiteralText(r)
-            : l({
-                  builder: d,
+            ? c.pushLiteralText(r)
+            : a({
+                  builder: c,
                   originalMessage: n,
                   nodes: r,
                   locales: i,
                   dataFormatters: s,
-                  formatConfig: a,
-                  values: o,
+                  formatConfig: o,
+                  values: l,
                   currentPluralValue: u,
-                  keyPrefix: c,
+                  keyPrefix: d,
               }),
-        d.finish()
+        c.finish()
     );
 }

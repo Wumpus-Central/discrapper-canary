@@ -1,11 +1,10 @@
 "use strict";
-n.d(t, { A: () => l, p: () => a.p }), n(938796);
+n.d(t, { A: () => o, p: () => a.p }), n(938796);
 var r = n(143236),
     i = n(873985),
     s = n(661191),
     a = n(353198);
-let o = 15360;
-class l extends r.EventEmitter {
+class o extends r.EventEmitter {
     presenceUpdate(e, t, n, r) {
         this.send(a.p.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: r });
     }
@@ -18,12 +17,12 @@ class l extends r.EventEmitter {
                 selfVideo: o = !1,
                 preferredRegion: l = null,
                 preferredRegions: u = null,
-                videoStreamParameters: c = null,
-                flags: d = 0,
+                videoStreamParameters: d = null,
+                flags: c = 0,
             } = e,
-            _ = { guild_id: t, channel_id: n, self_mute: r, self_deaf: s, self_video: o, flags: d };
+            _ = { guild_id: t, channel_id: n, self_mute: r, self_deaf: s, self_video: o, flags: c };
         null != n && i.A.shouldIncludePreferredRegion() && ((_.preferred_region = l), (_.preferred_regions = u)),
-            null != c && (_.tracks = c?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
+            null != d && (_.tracks = d?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(a.p.VOICE_STATE_UPDATE, _);
     }
     voiceServerPing() {
@@ -43,7 +42,7 @@ class l extends r.EventEmitter {
         s.default.keys(e).forEach((r) => {
             let i = e[r],
                 s = JSON.stringify([r, i]).length;
-            n + s > o && (this.send(a.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+            n + s > 15360 && (this.send(a.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
                 (t[r] = i),
                 (n += s);
         }),

@@ -1,80 +1,81 @@
 "use strict";
-s.d(t, { A: () => S });
+s.d(t, { A: () => v });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    i = s.n(l),
-    a = s(311907),
-    o = s(397927),
-    c = s(793574),
-    d = s(688810),
-    u = s(951707),
-    _ = s(287809),
-    g = s(440938),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
+    i = s(311907),
+    o = s(534514),
+    c = s(821609),
+    d = s(793574),
+    u = s(688810),
+    g = s(951707),
+    h = s(287809),
+    _ = s(440938),
     m = s(590180),
-    h = s(940980),
-    p = s(313276),
-    f = s(206077),
+    p = s(940980),
+    f = s(313276),
+    E = s(206077),
     x = s(751304),
-    E = s(561769),
-    b = s(758836),
-    C = s(985018),
-    A = s(572199);
-let S = (e) => {
-    let { shelf: t, handleTransition: s, tab: l } = e,
-        S = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
-        v = (0, h.W)("ShelfBlock"),
-        I = (0, a.bG)([m.A], () => m.A.getCategory(t.categorySkuId)),
-        L = (0, p.A)(),
-        j = r.useMemo(() => L(t.rankedSkuIds), [t.rankedSkuIds, L]),
-        O = (0, f.X)(j),
-        { analyticsLocations: T } = (0, d.Ay)(c.A.COLLECTIBLES_SHOP_SHELF);
-    return null == S
+    A = s(561769),
+    C = s(758836),
+    S = s(985018),
+    b = s(941734);
+let v = (e) => {
+    let { shelf: t, handleTransition: s, tab: r } = e,
+        v = (0, i.bG)([h.default], () => h.default.getCurrentUser()),
+        L = (0, p.W)("ShelfBlock"),
+        I = (0, i.bG)([m.A], () => m.A.getCategory(t.categorySkuId)),
+        j = (0, f.A)(),
+        N = l.useMemo(() => j(t.rankedSkuIds), [t.rankedSkuIds, j]),
+        T = (0, E.X)(N),
+        { analyticsLocations: O } = (0, u.Ay)(d.A.COLLECTIBLES_SHOP_SHELF);
+    return null == v
         ? null
-        : (0, n.jsx)(d.f5, {
-              value: T,
+        : (0, n.jsx)(u.f5, {
+              value: O,
               children: (0, n.jsxs)("div", {
-                  className: i()(A.Vp, A.YB),
+                  className: a()(b.Vp, b.YB),
                   children: [
                       (0, n.jsxs)("div", {
-                          className: A.$6,
+                          className: b.$6,
                           children: [
-                              (0, n.jsx)(o.Heading, { variant: "heading-lg/semibold", children: t.name }),
-                              (0, n.jsx)(o.Button, {
+                              (0, n.jsx)(o.D, { variant: "heading-lg/semibold", children: t.name }),
+                              (0, n.jsx)(c.$, {
                                   variant: "secondary",
-                                  text: C.intl.formatToPlainString(C.t.bc9RBE, { category_name: t.name }),
+                                  text: S.intl.formatToPlainString(S.t.bc9RBE, { category_name: t.name }),
                                   onClick: () => {
                                       s({
                                           sourceButton: "shelf block see all",
                                           categorySkuId: t.categorySkuId,
                                           isInternalShopDeeplink: !0,
-                                          isOrbsExclusive: I?.isOrbsExclusive && l !== b.G2.ORBS,
+                                          isOrbsExclusive: I?.isOrbsExclusive && r !== C.G2.ORBS,
                                       });
                                   },
                               }),
                           ],
                       }),
-                      (0, n.jsx)(u.A, {
+                      (0, n.jsx)(g.A, {
                           gap: "xl",
                           children: (0, n.jsx)(n.Fragment, {
-                              children: O.map((e, s) => {
+                              children: T.map((e, s) => {
                                   if (null == m.A.getCategoryForProduct(e.skuId) || null == e) return null;
-                                  let r = e.skuId;
+                                  let l = e.skuId;
                                   return (0, n.jsx)(
-                                      g.R9,
+                                      _.R9,
                                       {
                                           newValue: { tilePosition: s, pageSection: t.name, categoryPosition: 2 },
                                           children: (0, n.jsx)(
                                               x.A,
                                               {
-                                                  skuId: r,
+                                                  skuId: l,
                                                   prioritizedCurrency:
-                                                      l === b.G2.ORBS ? E.Hi.ORBS : v ? E.Hi.FIAT : void 0,
+                                                      r === C.G2.ORBS ? A.Hi.ORBS : L ? A.Hi.FIAT : void 0,
                                               },
-                                              r,
+                                              l,
                                           ),
                                       },
-                                      r,
+                                      l,
                                   );
                               }),
                           }),

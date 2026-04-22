@@ -1,128 +1,132 @@
-n.d(i, { default: () => A });
-var e = n(627968),
-    s = n(64700),
-    r = n(110259),
-    l = n(421380),
-    a = n(397927),
-    o = n(49229),
-    c = n(754302),
-    d = n(632738),
-    u = n(954571),
-    x = n(975571),
-    m = n(562153),
+n.d(e, { default: () => b });
+var i = n(627968),
+    l = n(64700),
+    s = n(110259),
+    r = n(862482),
+    a = n(628284),
+    c = n(885574),
+    o = n(640238),
+    d = n(97808),
+    x = n(778712),
+    m = n(952270),
+    u = n(534514),
+    h = n(834730),
+    j = n(192308),
+    N = n(49229),
+    f = n(754302),
+    _ = n(632738),
+    g = n(954571),
+    v = n(975571),
+    E = n(562153),
     I = n(994288),
-    E = n(235627),
-    N = n(652215),
-    g = n(985018),
-    f = n(261369);
-function _() {
-    return (0, e.jsxs)(c.q, {
+    A = n(235627),
+    p = n(652215),
+    C = n(985018),
+    T = n(261369);
+function R() {
+    return (0, i.jsxs)(f.q, {
         children: [
-            (0, e.jsx)(c.B, {
-                title: g.intl.string(g.t.ruhGkg),
-                description: g.intl.string(g.t["/FWKKC"]),
-                icon: a.yr3,
-            }),
-            (0, e.jsx)(c.B, { title: g.intl.string(g.t.N9v3eq), description: g.intl.string(g.t.ddpuJg), icon: a.yr3 }),
-            (0, e.jsx)(c.B, {
-                title: g.intl.string(g.t["4ycGE0"]),
-                description: g.intl.string(g.t["5yfN+o"]),
-                icon: a.mir,
+            (0, i.jsx)(f.B, { title: C.intl.string(C.t.ruhGkg), description: C.intl.string(C.t["/FWKKC"]), icon: a.y }),
+            (0, i.jsx)(f.B, { title: C.intl.string(C.t.N9v3eq), description: C.intl.string(C.t.ddpuJg), icon: a.y }),
+            (0, i.jsx)(f.B, {
+                title: C.intl.string(C.t["4ycGE0"]),
+                description: C.intl.string(C.t["5yfN+o"]),
+                icon: c.m,
             }),
         ],
     });
 }
-function A(t) {
-    let { user: i, guildId: n, channelId: c, onIgnore: A, onBlock: j, location: C = "ContextMenu", ...h } = t;
+function b(t) {
+    let { user: e, guildId: n, channelId: a, onIgnore: c, onBlock: f, location: b = "ContextMenu", ...k } = t;
     return (
-        s.useLayoutEffect(
+        l.useLayoutEffect(
             () => () => {
-                u.default.track(N.HAw.USER_REMEDIATION_ACTION, { action: E.p.DISMISS_IGNORE, location: C });
+                g.default.track(p.HAw.USER_REMEDIATION_ACTION, { action: A.p.DISMISS_IGNORE, location: b });
             },
-            [C],
+            [b],
         ),
-        (0, e.jsx)(a.VoidConfirmModal, {
-            confirmText: g.intl.string(g.t.ytCpKs),
-            cancelText: g.intl.string(g.t["ETE/oC"]),
+        (0, i.jsx)(o.a, {
+            confirmText: C.intl.string(C.t.ytCpKs),
+            cancelText: C.intl.string(C.t["ETE/oC"]),
             onConfirm: () => {
-                A?.(), o.A.ignoreUser(i.id, C, c ?? void 0), u.default.track(N.HAw.IGNORE_USER_CONFIRMED);
+                c?.(), N.A.ignoreUser(e.id, b, a ?? void 0), g.default.track(p.HAw.IGNORE_USER_CONFIRMED);
             },
             onCancel: () => {
-                u.default.track(N.HAw.USER_REMEDIATION_ACTION, { action: E.p.CANCEL_IGNORE, location: C });
+                g.default.track(p.HAw.USER_REMEDIATION_ACTION, { action: A.p.CANCEL_IGNORE, location: b });
             },
-            impression: { impressionName: r.ImpressionNames.IGNORE_USER_CONFIRMATION },
-            confirmButtonColor: l.$n.Colors.BRAND,
-            ...h,
-            children: (0, e.jsxs)("div", {
-                className: f.kL,
+            impression: { impressionName: s.ImpressionNames.IGNORE_USER_CONFIRMATION },
+            confirmButtonColor: r.$n.Colors.BRAND,
+            ...k,
+            children: (0, i.jsxs)("div", {
+                className: T.kL,
                 children: [
-                    (0, e.jsxs)("div", {
-                        className: f.RS,
+                    (0, i.jsxs)("div", {
+                        className: T.RS,
                         children: [
-                            (0, e.jsxs)("div", {
-                                className: f.zc,
+                            (0, i.jsxs)("div", {
+                                className: T.zc,
                                 children: [
-                                    (0, e.jsx)(a.euF, {
-                                        size: a._3J.SIZE_56,
-                                        src: i.getAvatarURL(void 0, 64),
+                                    (0, i.jsx)(d.eu, {
+                                        size: x._3.SIZE_56,
+                                        src: e.getAvatarURL(void 0, 64),
                                         "aria-hidden": !0,
                                     }),
-                                    (0, e.jsx)("div", { className: f.Kk, children: (0, e.jsx)(a.G3N, {}) }),
+                                    (0, i.jsx)("div", { className: T.Kk, children: (0, i.jsx)(m.G, {}) }),
                                 ],
                             }),
-                            (0, e.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 children: [
-                                    (0, e.jsx)(a.Heading, {
+                                    (0, i.jsx)(u.D, {
                                         variant: "heading-xl/bold",
                                         color: "text-strong",
-                                        children: g.intl.format(g.t["WrQD/Y"], { username: m.Ay.getName(n, c, i) }),
+                                        children: C.intl.format(C.t["WrQD/Y"], { username: E.Ay.getName(n, a, e) }),
                                     }),
-                                    (0, e.jsx)(a.Text, {
+                                    (0, i.jsx)(h.E, {
                                         variant: "text-md/medium",
                                         color: "text-default",
-                                        children: g.intl.string(g.t.JKL1u1),
+                                        children: C.intl.string(C.t.JKL1u1),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, e.jsx)(_, {}),
-                    (0, e.jsxs)("div", {
-                        className: f.l_,
+                    (0, i.jsx)(R, {}),
+                    (0, i.jsxs)("div", {
+                        className: T.l_,
                         children: [
-                            (0, e.jsx)(d.Y0, {
-                                title: g.intl.string(g.t["1v01gh"]),
-                                children: (0, e.jsx)(d.PQ, {
-                                    title: g.intl.string(g.t.bwxY30),
-                                    description: g.intl.string(g.t.NTnf1T),
+                            (0, i.jsx)(_.Y0, {
+                                title: C.intl.string(C.t["1v01gh"]),
+                                children: (0, i.jsx)(_.PQ, {
+                                    title: C.intl.string(C.t.bwxY30),
+                                    description: C.intl.string(C.t.NTnf1T),
                                     titleVariant: "text-md/medium",
                                     descriptionVariant: "text-xs/medium",
-                                    buttonText: g.intl.string(g.t.QdfUHE),
+                                    buttonText: C.intl.string(C.t.QdfUHE),
                                     onButtonPress: () => {
-                                        u.default.track(N.HAw.USER_REMEDIATION_ACTION, {
-                                            action: E.p.GOTO_BLOCK,
-                                            location: C,
+                                        g.default.track(p.HAw.USER_REMEDIATION_ACTION, {
+                                            action: A.p.GOTO_BLOCK,
+                                            location: b,
                                         }),
-                                            (0, a.s7G)(),
-                                            (0, a.qfG)((t) =>
-                                                (0, e.jsx)(I.default, {
+                                            (0, j.closeAllModals)(),
+                                            (0, j.openModal)((t) =>
+                                                (0, i.jsx)(I.default, {
                                                     ...t,
-                                                    user: i,
+                                                    user: e,
                                                     guildId: n,
-                                                    channelId: c,
-                                                    onBlock: j,
-                                                    onIgnore: A,
-                                                    location: C,
+                                                    channelId: a,
+                                                    onBlock: f,
+                                                    onIgnore: c,
+                                                    location: b,
                                                 }),
                                             );
                                     },
                                 }),
                             }),
-                            (0, e.jsx)(a.Text, {
+                            (0, i.jsx)(h.E, {
                                 variant: "text-sm/medium",
-                                className: f.FV,
-                                children: g.intl.format(g.t.Hjvqr6, {
-                                    articleLink: x.A.getArticleURL(N.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                                className: T.FV,
+                                children: C.intl.format(C.t.Hjvqr6, {
+                                    articleLink: v.A.getArticleURL(p.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
                                 }),
                             }),
                         ],

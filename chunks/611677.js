@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { l: () => o });
-var r = n(627968),
-    i = n(64700),
-    a = n(331322),
-    s = n(64584);
-function o(e) {
-    let { children: t, ...n } = e,
-        { spacing: o } = i.useContext(s.c);
-    return (0, r.jsx)("form", { ...n, children: (0, r.jsx)(a.B, { direction: "vertical", gap: o, children: t }) });
+a.d(t, { l: () => r });
+var n = a(627968),
+    l = a(64700),
+    i = a(331322),
+    s = a(64584);
+function r(e) {
+    let { children: t, ...a } = e,
+        { spacing: r } = l.useContext(s.c);
+    return (0, n.jsx)("form", { ...a, children: (0, n.jsx)(i.B, { direction: "vertical", gap: r, children: t }) });
 }

@@ -1,105 +1,106 @@
-n.d(t, { A: () => W });
+n.d(t, { A: () => K });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(311907),
-    o = n(571356),
-    c = n(990078),
-    d = n(397927),
-    u = n(817281),
-    h = n(475743),
-    A = n(775602),
-    _ = n(58149),
-    m = n(587837),
-    g = n(473553),
-    p = n(964404),
-    f = n(709562),
+    o = n(834730),
+    d = n(990078),
+    c = n(43990),
+    u = n(446576),
+    h = n(817281),
+    A = n(475743),
+    _ = n(775602),
+    m = n(58149),
+    g = n(587837),
+    p = n(473553),
+    f = n(964404),
+    E = n(709562),
     x = n(383831),
-    E = n(128286),
-    I = n(734057),
-    C = n(696451),
+    I = n(128286),
+    C = n(734057),
+    b = n(696451),
     N = n(309010),
-    T = n(287809),
-    S = n(203982),
-    b = n(427262),
+    S = n(287809),
+    v = n(203982),
+    T = n(427262),
     y = n(795816),
-    v = n(933958),
+    R = n(933958),
     j = n(685399),
-    R = n(216418),
+    L = n(216418),
     O = n(969151),
-    L = n(620148),
-    M = n(732637),
-    D = n(104171),
+    G = n(620148),
+    D = n(732637),
+    M = n(104171),
     U = n(47294),
-    G = n(594007),
-    P = n(16961),
+    P = n(594007),
+    w = n(16961),
     k = n(716730),
-    w = n(5867),
+    V = n(5867),
     B = n(652215),
-    V = n(985018),
-    H = n(513336);
-let F = D.DN.SIZE_32,
-    K = { [w.E8.NO_CHAT]: H.Oo, [w.E8.RESIZABLE]: H.Ig };
-function W(e) {
+    H = n(985018),
+    F = n(141160);
+let W = M.DN.SIZE_32,
+    Y = { [V.E8.NO_CHAT]: F.Oo, [V.E8.RESIZABLE]: F.Ig };
+function K(e) {
     let { maxHeight: t, connectedLocation: n, renderExternalHeader: s } = e,
-        W = (0, L.A)(),
-        Y = (0, r.yK)([v.Ay], () => v.Ay.getEmbeddedActivitiesForLocation(n), [n]),
-        z = (0, O.H)(n),
-        q = (0, r.bG)([I.A], () => I.A.getChannel(z)),
-        X = (0, j.IQ)(Y),
-        J = (0, j.Rz)(X),
-        Q = l.useCallback(() => {
-            (0, y.gk)(w.Gd.PIP);
+        K = (0, G.A)(),
+        z = (0, r.yK)([R.Ay], () => R.Ay.getEmbeddedActivitiesForLocation(n), [n]),
+        q = (0, O.H)(n),
+        X = (0, r.bG)([C.A], () => C.A.getChannel(q)),
+        Q = (0, j.IQ)(z),
+        J = (0, j.Rz)(Q),
+        Z = l.useCallback(() => {
+            (0, y.gk)(V.Gd.PIP);
         }, []),
         $ = l.useRef(null),
-        Z = (0, r.bG)([v.Ay], () => v.Ay.getFocusedLayout()),
-        ee = Z !== w.E8.NO_CHAT,
-        [et, en] = l.useState(p.Ay.activityPanelHeight ?? t ?? null),
-        ei = l.useCallback((e) => {
-            u.Ay.updatedUnsyncedSettings({ activityPanelHeight: e });
+        ee = (0, r.bG)([R.Ay], () => R.Ay.getFocusedLayout()),
+        et = ee !== V.E8.NO_CHAT,
+        [en, ei] = l.useState(f.Ay.activityPanelHeight ?? t ?? null),
+        el = l.useCallback((e) => {
+            h.Ay.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        el = l.useRef(null),
-        [es, ea] = l.useState({ width: 0, height: 0 });
+        es = l.useRef(null),
+        [ea, er] = l.useState({ width: 0, height: 0 });
     l.useLayoutEffect(() => {
-        if (null == el.current) return;
+        if (null == es.current) return;
         let e = new ResizeObserver(() => {
-            ea({ width: el.current?.clientWidth ?? 0, height: el.current?.clientHeight ?? 0 });
+            er({ width: es.current?.clientWidth ?? 0, height: es.current?.clientHeight ?? 0 });
         });
-        return e.observe(el.current), () => e.disconnect();
+        return e.observe(es.current), () => e.disconnect();
     }, []);
-    let er = es.width / Math.max(es.height, 1) < w.B5,
-        eo = 0,
+    let eo = ea.width / Math.max(ea.height, 1) < V.B5,
+        ed = 0,
         ec = 0,
-        ed = (0, R.A)(W?.id);
-    if (!ed) {
-        let e = es.width,
-            t = es.height;
-        er
-            ? ((t = es.width / w.B5) > es.height && (e = (t = es.height) * w.B5), (ec = (es.height - t) / 2))
-            : ((e = Math.min(es.height * w.B5)) > es.width && (t = (e = es.width) / w.B5), (eo = (es.width - e) / 2));
+        eu = (0, L.A)(K?.id);
+    if (!eu) {
+        let e = ea.width,
+            t = ea.height;
+        eo
+            ? ((t = ea.width / V.B5) > ea.height && (e = (t = ea.height) * V.B5), (ec = (ea.height - t) / 2))
+            : ((e = Math.min(ea.height * V.B5)) > ea.width && (t = (e = ea.width) / V.B5), (ed = (ea.width - e) / 2));
     }
-    let eu = J.get(W?.id ?? ""),
-        eh = (0, r.bG)([N.A], () => N.A.getChannelId()),
-        eA = (0, r.yK)(
-            [C.Ay],
+    let eh = J.get(K?.id ?? ""),
+        eA = (0, r.bG)([N.A], () => N.A.getChannelId()),
+        e_ = (0, r.yK)(
+            [b.Ay],
             () =>
-                null == q
+                null == X
                     ? []
-                    : Array.from(eu?.embeddedActivity.userIds ?? []).map((e) => C.Ay.getMember(q.guild_id, e)),
-            [eu, q],
+                    : Array.from(eh?.embeddedActivity.userIds ?? []).map((e) => b.Ay.getMember(X.guild_id, e)),
+            [eh, X],
         ),
-        e_ = l.useMemo(() => {
+        em = l.useMemo(() => {
             let e = new Map();
             return (
-                eA.forEach((t) => {
+                e_.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [eA]),
-        em = (function (e, t, n) {
-            let i = (0, h.A)(e),
+        }, [e_]),
+        eg = (function (e, t, n) {
+            let i = (0, A.A)(e),
                 s = e !== i,
                 [a, r] = l.useState(!1);
             l.useEffect(() => {
@@ -107,7 +108,7 @@ function W(e) {
                 let e = setTimeout(() => r(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !A.A.useReducedMotion && (s || a);
+            let o = !_.A.useReducedMotion && (s || a);
             return l.useMemo(() => {
                 let i = o
                     ? {
@@ -118,90 +119,90 @@ function W(e) {
                     : void 0;
                 return e && null != t && null != n ? { ...i, minHeight: 200, maxHeight: n, height: t } : i;
             }, [o, e, n, t]);
-        })(ee, et, t),
-        eg = (0, P.G)();
-    if (null == W) return null;
-    let ep = [];
-    null != eu &&
-        (ep = Array.from(eu.embeddedActivity.userIds)
-            .map((e) => T.default.getUser(e))
+        })(et, en, t),
+        ep = (0, w.G)();
+    if (null == K) return null;
+    let ef = [];
+    null != eh &&
+        (ef = Array.from(eh.embeddedActivity.userIds)
+            .map((e) => S.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let ef = (e) => {
-        if (null == e || void 0 === e || e === D.mt) return null;
-        let t = e_.get(e.id),
-            n = t?.nick ?? b.Ay.getName(e);
+    let eE = (e) => {
+        if (null == e || void 0 === e || e === M.mt) return null;
+        let t = em.get(e.id),
+            n = t?.nick ?? T.Ay.getName(e);
         return (0, i.jsx)(
-            c.m,
+            d.m,
             {
                 asContainer: !0,
                 text: n,
                 position: "bottom",
-                children: (0, i.jsx)("img", { src: e.getAvatarURL(q?.guild_id, F), alt: n, className: H.my }, e.id),
+                children: (0, i.jsx)("img", { src: e.getAvatarURL(X?.guild_id, W), alt: n, className: F.my }, e.id),
             },
             e.id,
         );
     };
-    return (0, i.jsx)(d.NPJ, {
+    return (0, i.jsx)(c.N, {
         theme: B.NJ8.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: a()(H.iE, K[Z], e),
+                className: a()(F.iE, Y[ee], e),
                 ref: $,
-                style: em,
+                style: eg,
                 children: [
                     s?.(),
-                    (0, i.jsx)(g.A, { applicationId: W.id }),
+                    (0, i.jsx)(p.A, { applicationId: K.id }),
                     (0, i.jsxs)("div", {
-                        className: H.lq,
+                        className: F.lq,
                         children: [
-                            ee
+                            et
                                 ? null
                                 : (0, i.jsx)("div", {
-                                      className: H.wx,
+                                      className: F.wx,
                                       children: (0, i.jsx)(o.E, {
                                           color: "text-strong",
                                           variant: "text-md/semibold",
-                                          className: H.qd,
-                                          children: W?.name,
+                                          className: F.qd,
+                                          children: K?.name,
                                       }),
                                   }),
                             (0, i.jsx)("div", {
-                                className: a()(H.ht, { [H.kK]: ed }),
-                                style: { paddingLeft: eo, paddingRight: eo, paddingTop: ec, paddingBottom: ec },
-                                ref: el,
-                                children: (0, i.jsx)(M.A, { className: H.pU, embedId: (0, G.A)(n.id, W.id) }),
+                                className: a()(F.ht, { [F.kK]: eu }),
+                                style: { paddingLeft: ed, paddingRight: ed, paddingTop: ec, paddingBottom: ec },
+                                ref: es,
+                                children: (0, i.jsx)(D.A, { className: F.pU, embedId: (0, P.A)(n.id, K.id) }),
                             }),
-                            null != eh
+                            null != eA
                                 ? (0, i.jsxs)("div", {
-                                      className: H.qr,
+                                      className: F.qr,
                                       children: [
-                                          (0, i.jsx)(D.Ay, {
+                                          (0, i.jsx)(M.Ay, {
                                               renderIcon: !1,
-                                              users: ep,
-                                              size: F,
+                                              users: ef,
+                                              size: W,
                                               max: 6,
-                                              renderUser: ef,
+                                              renderUser: eE,
                                           }),
                                           (0, i.jsxs)("div", {
-                                              className: H.Hq,
+                                              className: F.Hq,
                                               children: [
                                                   (0, i.jsxs)("div", {
-                                                      className: H.qi,
+                                                      className: F.qi,
                                                       children: [
-                                                          (0, i.jsx)(k.A, { channelId: eh }),
-                                                          (0, i.jsx)(f.l, {
+                                                          (0, i.jsx)(k.A, { channelId: eA }),
+                                                          (0, i.jsx)(E.l, {
                                                               isTrayButton: !0,
-                                                              label: V.intl.string(V.t.brPQ5U),
-                                                              onClick: Q,
-                                                              iconComponent: d.gR,
+                                                              label: H.intl.string(H.t.brPQ5U),
+                                                              onClick: Z,
+                                                              iconComponent: u.g,
                                                               themeable: !0,
                                                           }),
                                                       ],
                                                   }),
                                                   (0, i.jsx)("div", {
-                                                      className: H.pt,
+                                                      className: F.pt,
                                                       children: (0, i.jsx)(x.A, {
-                                                          applicationId: W.id,
+                                                          applicationId: K.id,
                                                           location: n,
                                                           centerButton: !0,
                                                           color: "disconnect",
@@ -209,16 +210,16 @@ function W(e) {
                                                   }),
                                               ],
                                           }),
-                                          eg
-                                              ? (0, i.jsx)(E.A, {
+                                          ep
+                                              ? (0, i.jsx)(I.A, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
-                                                        (0, _.zV)(B.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                                        (0, m.zV)(B.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
                                                             (0, U.A)({
                                                                 onConfirm: async () => {
-                                                                    W?.id != null &&
-                                                                        null != z &&
-                                                                        (await (0, y.od)(W.id, z)),
+                                                                    K?.id != null &&
+                                                                        null != q &&
+                                                                        (await (0, y.od)(K.id, q)),
                                                                         (0, y.jp)();
                                                                 },
                                                             });
@@ -231,16 +232,16 @@ function W(e) {
                                 : null,
                         ],
                     }),
-                    ee && null != t
-                        ? (0, i.jsx)(m.A, {
+                    et && null != t
+                        ? (0, i.jsx)(g.A, {
                               minHeight: 480,
                               maxHeight: t,
                               resizableNode: $,
                               onResize: (e) => {
-                                  S._.dispatch(B.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), en(e);
+                                  v._.dispatch(B.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ei(e);
                               },
                               onResizeEnd: (e) => {
-                                  S._.dispatch(B.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e);
+                                  v._.dispatch(B.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), el(e);
                               },
                           })
                         : null,

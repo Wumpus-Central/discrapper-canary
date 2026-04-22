@@ -1,34 +1,34 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
-    r = n(362599),
-    a = n(342494),
-    s = n(732955),
-    o = n(976860),
-    d = n(235365),
-    c = n(652215),
-    u = n(49999),
-    A = n(188875),
-    h = n(985018);
-function _(e) {
-    let { targetElementRef: t, dismissPopover: n, children: _ } = e,
-        m = l.useCallback(() => {
-            n(u.i.TAKE_ACTION), (0, o.pX)(`${c.BVt.NITRO_HOME}?section=${d.L}`);
-        }, [n]),
-        g = (0, i.jsx)(a.AM, {
-            targetElementRef: t,
-            onRequestClose: () => n(u.i.USER_DISMISS),
-            graphic: { type: "rive", rive: r.Z },
+a.d(l, { A: () => p });
+var t = a(627968),
+    s = a(64700),
+    i = a(362599),
+    n = a(265486),
+    c = a(403581),
+    h = a(976860),
+    r = a(235365),
+    o = a(652215),
+    d = a(49999),
+    v = a(490285),
+    g = a(985018);
+function p(e) {
+    let { targetElementRef: l, dismissPopover: a, children: p } = e,
+        m = s.useCallback(() => {
+            a(d.i.TAKE_ACTION), (0, h.pX)(`${o.BVt.NITRO_HOME}?section=${r.L}`);
+        }, [a]),
+        f = (0, t.jsx)(n.A, {
+            targetElementRef: l,
+            onRequestClose: () => a(d.i.USER_DISMISS),
+            graphic: { type: "rive", rive: i.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: h.intl.string(A.default.UPOlxO),
-            body: h.intl.string(A.default.e6r8OX),
-            actions: [{ text: h.intl.string(h.t.RzWDqY), icon: s.tvc, onClick: m }],
+            title: g.intl.string(v.default.UPOlxO),
+            body: g.intl.string(v.default.e6r8OX),
+            actions: [{ text: g.intl.string(g.t.RzWDqY), icon: c.t, onClick: m }],
             gradientColor: "nitro-pink",
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: _ }), g] });
+    return (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("div", { children: p }), f] });
 }

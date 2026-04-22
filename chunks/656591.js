@@ -1,31 +1,32 @@
-n.d(t, { g: () => _ });
+n.d(t, { g: () => A });
 var o = n(627968),
     i = n(64700),
-    r = n(397927),
-    s = n(975571),
-    a = n(305881),
+    r = n(983851),
+    s = n(687966),
+    a = n(975571),
+    l = n(305881),
     c = n(652215),
-    l = n(985018),
-    d = n(547166);
-function _(e) {
-    let { platformType: t, onContinue: n, onClose: _ } = e,
-        p = i.useMemo(
+    d = n(985018),
+    _ = n(547166);
+function A(e) {
+    let { platformType: t, onContinue: n, onClose: A } = e,
+        T = i.useMemo(
             () => [
-                { label: l.intl.string(l.t["+eJP7o"]), subLabel: l.intl.string(l.t["+0VIUh"]), icon: r.HKD },
-                { label: l.intl.string(l.t.ZH4QFa), icon: r._xR },
+                { label: d.intl.string(d.t["+eJP7o"]), subLabel: d.intl.string(d.t["+0VIUh"]), icon: r.H },
+                { label: d.intl.string(d.t.ZH4QFa), icon: s._ },
             ],
             [],
         ),
-        b = s.A.getArticleURL(c.MVz.PS_CONNECTION),
-        C = l.intl.format(l.t.kqZQNe, { helpdeskArticleUrl: b });
-    return (0, o.jsx)(a.B, {
+        p = a.A.getArticleURL(c.MVz.PS_CONNECTION),
+        b = d.intl.format(d.t.kqZQNe, { helpdeskArticleUrl: p });
+    return (0, o.jsx)(l.B, {
         platformType: t,
-        headerConnect: l.intl.string(l.t.xAWHOy),
-        headerReconnect: l.intl.string(l.t["ZJ/vBh"]),
-        body: C,
-        onClose: _,
+        headerConnect: d.intl.string(d.t.xAWHOy),
+        headerReconnect: d.intl.string(d.t["ZJ/vBh"]),
+        body: b,
+        onClose: A,
         onContinue: n,
-        img: (0, o.jsx)("img", { src: d.A, width: 230, height: 160, alt: "" }),
-        valueProps: p,
+        img: (0, o.jsx)("img", { src: _.A, width: 230, height: 160, alt: "" }),
+        valueProps: T,
     });
 }

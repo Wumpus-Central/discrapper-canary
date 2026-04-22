@@ -1,28 +1,28 @@
-n.d(t, { A: () => h });
-var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(311907),
-    o = n(397927),
-    d = n(263834),
-    c = n(865116),
-    u = n(759136),
-    m = n(661251);
+a.d(t, { A: () => h });
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(311907),
+    o = a(243721),
+    d = a(263834),
+    c = a(865116),
+    u = a(460281),
+    m = a(505206);
 function h(e) {
     let { devSettingsCategory: t } = e,
-        n = (0, r.bG)([c.Ay], () => c.Ay.allByCategory(t), [t], r.My),
-        i = s.useMemo(
+        a = (0, r.bG)([c.Ay], () => c.Ay.allByCategory(t), [t], r.My),
+        i = l.useMemo(
             () =>
-                n.map((e) => {
-                    let [t, n, { label: s }] = e;
-                    return (0, a.jsx)(
-                        o.dOG,
-                        { label: s, description: t, checked: n, onChange: (e) => (0, d.L)(t, e) },
+                a.map((e) => {
+                    let [t, a, { label: l }] = e;
+                    return (0, n.jsx)(
+                        o.d,
+                        { label: l, description: t, checked: a, onChange: (e) => (0, d.L)(t, e) },
                         t,
                     );
                 }),
-            [n],
+            [a],
         );
-    return (0, a.jsx)("div", { className: l()(m.nd, u.n), children: i });
+    return (0, n.jsx)("div", { className: s()(m.nd, u.n), children: i });
 }

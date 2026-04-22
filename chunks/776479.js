@@ -1,47 +1,48 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
-    a = n(397927),
-    r = n(998874),
-    o = n(542580),
-    d = n(803378),
-    c = n(825453),
-    u = n(602418),
-    m = n(2655),
-    g = n(985018),
-    x = n(199271);
-function h(e) {
-    let { application: t, canNavigate: n, guildId: c } = e,
-        m = (0, s.bG)([d.A], () => d.A.isUnavailable());
-    return (l.useEffect(() => (o.hu(t.id), o.AL), [t.id]),
+    a = n(633018),
+    r = n(834730),
+    o = n(998874),
+    d = n(542580),
+    c = n(803378),
+    u = n(825453),
+    m = n(602418),
+    g = n(2655),
+    h = n(985018),
+    x = n(830662);
+function p(e) {
+    let { application: t, canNavigate: n, guildId: u } = e,
+        g = (0, s.bG)([c.A], () => c.A.isUnavailable());
+    return (l.useEffect(() => (d.hu(t.id), d.AL), [t.id]),
     l.useEffect(() => {
-        o.gV(t.id, c, t.id), o.Jw(c, t.id);
-    }, [t.id, c]),
-    m)
+        d.gV(t.id, u, t.id), d.Jw(u, t.id);
+    }, [t.id, u]),
+    g)
         ? null
         : (0, i.jsxs)(l.Fragment, {
               children: [
-                  (0, i.jsx)(r.A, {
-                      icon: (0, i.jsx)(a.kC9, { size: "md", color: "currentColor" }),
-                      title: g.intl.string(g.t.RGoJNN),
+                  (0, i.jsx)(o.A, {
+                      icon: (0, i.jsx)(a.k, { size: "md", color: "currentColor" }),
+                      title: h.intl.string(h.t.RGoJNN),
                   }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(r.E, {
                       color: "text-muted",
                       variant: "text-sm/normal",
-                      children: g.intl.string(g.t.sCkD3Z),
+                      children: h.intl.string(h.t.sCkD3Z),
                   }),
-                  (0, i.jsx)(p, { guildId: c, applicationId: t.id }),
-                  (0, i.jsx)(u.A, { applicationIcon: t.icon, applicationName: t.name, canNavigate: n, guildId: c }),
+                  (0, i.jsx)(A, { guildId: u, applicationId: t.id }),
+                  (0, i.jsx)(m.A, { applicationIcon: t.icon, applicationName: t.name, canNavigate: n, guildId: u }),
               ],
           });
 }
-function p(e) {
+function A(e) {
     let { applicationId: t, guildId: n } = e,
-        { originalApplicationPermissions: l, editedTargetPermissions: s, selectedPermissionCount: a } = (0, c.A)(n, t);
+        { originalApplicationPermissions: l, editedTargetPermissions: s, selectedPermissionCount: a } = (0, u.A)(n, t);
     return (0, i.jsx)("div", {
         className: x.zi,
-        children: (0, i.jsx)(m.A, {
+        children: (0, i.jsx)(g.A, {
             applicationId: t,
             guildId: n,
             inModal: !1,

@@ -1,21 +1,22 @@
-n.d(t, { N: () => d });
-var a = n(627968);
-n(64700);
-var i = n(311907),
-    s = n(397927),
-    l = n(979286),
-    r = n(590180),
-    o = n(385815);
-let d = () => {
-    let e = (0, i.bG)([r.A], () => r.A.skipNumCategories);
-    return (0, a.jsxs)("div", {
-        className: o.k,
+a.d(t, { N: () => c });
+var n = a(627968);
+a(64700);
+var l = a(311907),
+    i = a(834730),
+    s = a(663803),
+    r = a(979286),
+    o = a(590180),
+    d = a(385815);
+let c = () => {
+    let e = (0, l.bG)([o.A], () => o.A.skipNumCategories);
+    return (0, n.jsxs)("div", {
+        className: d.k,
         children: [
-            (0, a.jsx)(s.Text, { variant: "text-md/normal", children: "Hide first # of categories" }),
-            (0, a.jsx)(s.lw3, {
+            (0, n.jsx)(i.E, { variant: "text-md/normal", children: "Hide first # of categories" }),
+            (0, n.jsx)(s.l, {
                 value: e,
                 onChange: (e) => {
-                    (0, l.ue)(e);
+                    (0, r.ue)(e);
                 },
                 minValue: 0,
                 maxValue: 100,

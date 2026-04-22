@@ -1,105 +1,68 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => S });
 var r = n(311907),
     i = n(73153),
-    a = n(739508),
-    s = n(580630),
+    s = n(739508),
+    a = n(580630),
     o = n(558519),
     l = n(818348);
 let u = o.vx.DISCONNECTED,
-    c = null,
-    d = new Map(),
+    d = null,
+    c = new Map(),
     _ = new Set(),
     f = new Set(),
-    p = null,
+    E = null,
     h = !1,
+    p = !1,
     m = !1,
-    g = !1,
-    E = null;
+    g = null;
 function A(e) {
-    let { connectionState: t } = e;
-    u = t;
-}
-function I(e) {
     let t = e.currencyCode.toLowerCase(),
         n = e.price / 100,
         r =
-            "BG" === E && t === l.Yr.EUR
-                ? (0, s.ze)(n, { convertToMajorUnits: !1 })
-                : (0, s.Gp)(n, t, { convertToMajorUnits: !1 });
+            "BG" === g && t === l.Yr.EUR
+                ? (0, a.ze)(n, { convertToMajorUnits: !1 })
+                : (0, a.Gp)(n, t, { convertToMajorUnits: !1 });
     return { ...e, price: e.price, currencyCode: t, priceString: r };
 }
-function T() {
-    g = !0;
-}
-function y() {
-    g = !1;
-}
-function S() {
-    m = !0;
-}
-function v() {
-    m = !1;
-}
-function C(e) {
+function I(e) {
     let { skus: t, skusType: n } = e;
     t.forEach((e) => {
-        d.set(e.identifier, e);
+        c.set(e.identifier, e);
     }),
-        (c = Array.from(d.values())?.filter((e) => null != e)),
-        c?.forEach((e) => {
+        (d = Array.from(c.values())?.filter((e) => null != e)),
+        d?.forEach((e) => {
             let t = e?.offerIds;
             null != t && t.forEach((e) => _.add(e));
         });
     try {
-        c = c?.map(I);
+        d = d?.map(A);
     } catch (e) {
-        (0, a.pM)(e);
+        (0, s.pM)(e);
     }
     switch (
-        (c?.forEach((e) => {
-            d.set(e.identifier, e);
+        (d?.forEach((e) => {
+            c.set(e.identifier, e);
         }),
         n)
     ) {
         case o.MA.IN_APP:
-            m = !1;
+            p = !1;
             break;
         case o.MA.SUBSCRIPTION:
-            g = !1;
+            m = !1;
     }
 }
-function b(e) {
-    let { productId: t } = e;
-    f.add(t);
-}
-function N(e) {
-    let { productId: t } = e;
-    if (!f.has(t)) throw Error(`Tried verifying product without initialization: ${t}`);
-    f.delete(t);
-}
-function R(e) {
-    let { pendingDowngrade: t } = e;
-    p = t;
-}
-function O(e) {
-    let { isDowngrading: t } = e;
-    h = t;
-}
-function D(e) {
-    let { countryCode: t } = e;
-    E = t;
-}
-class L extends r.Ay.Store {
+class T extends r.Ay.Store {
     static displayName = "IAPStore";
     getProducts() {
-        return c;
+        return d;
     }
     getOfferIds() {
         return _;
     }
     getProduct(e) {
-        return d.get(e) ?? null;
+        return c.get(e) ?? null;
     }
     isBusy() {
         return f.size > 0 || h;
@@ -114,29 +77,56 @@ class L extends r.Ay.Store {
         return u === o.vx.ERROR;
     }
     getPendingDowngrade() {
-        return p;
-    }
-    isFetchingGoogleSkus() {
-        return g || m;
-    }
-    isFetchingProducts() {
-        return g || m;
-    }
-    getUserCountry() {
         return E;
     }
+    isFetchingGoogleSkus() {
+        return m || p;
+    }
+    isFetchingProducts() {
+        return m || p;
+    }
+    getUserCountry() {
+        return g;
+    }
 }
-let w = new L(i.h, {
-    GPLAY_UPDATE_CONNECTION_STATE: A,
-    GPLAY_FETCH_SUBSCRIPTION_SKUS_START: T,
-    GPLAY_SUBSCRIPTION_SKUS_LOADED: C,
-    GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED: y,
-    GPLAY_FETCH_IN_APP_SKUS_START: S,
-    GPLAY_IN_APP_SKUS_LOADED: C,
-    GPLAY_FETCH_IN_APP_SKUS_FAILED: v,
-    GPLAY_VERIFICATION_START: b,
-    GPLAY_VERIFICATION_END: N,
-    GPLAY_UPDATE_PENDING_DOWNGRADE: R,
-    GPLAY_UPDATE_IS_DOWNGRADING: O,
-    GPLAY_SET_USER_COUNTRY: D,
+let S = new T(i.h, {
+    GPLAY_UPDATE_CONNECTION_STATE: function (e) {
+        let { connectionState: t } = e;
+        u = t;
+    },
+    GPLAY_FETCH_SUBSCRIPTION_SKUS_START: function () {
+        m = !0;
+    },
+    GPLAY_SUBSCRIPTION_SKUS_LOADED: I,
+    GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED: function () {
+        m = !1;
+    },
+    GPLAY_FETCH_IN_APP_SKUS_START: function () {
+        p = !0;
+    },
+    GPLAY_IN_APP_SKUS_LOADED: I,
+    GPLAY_FETCH_IN_APP_SKUS_FAILED: function () {
+        p = !1;
+    },
+    GPLAY_VERIFICATION_START: function (e) {
+        let { productId: t } = e;
+        f.add(t);
+    },
+    GPLAY_VERIFICATION_END: function (e) {
+        let { productId: t } = e;
+        if (!f.has(t)) throw Error(`Tried verifying product without initialization: ${t}`);
+        f.delete(t);
+    },
+    GPLAY_UPDATE_PENDING_DOWNGRADE: function (e) {
+        let { pendingDowngrade: t } = e;
+        E = t;
+    },
+    GPLAY_UPDATE_IS_DOWNGRADING: function (e) {
+        let { isDowngrading: t } = e;
+        h = t;
+    },
+    GPLAY_SET_USER_COUNTRY: function (e) {
+        let { countryCode: t } = e;
+        g = t;
+    },
 });

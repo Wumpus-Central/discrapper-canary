@@ -1,16 +1,12 @@
 "use strict";
-n.d(t, { V: () => f }), n(321073);
+n.d(t, { V: () => u }), n(321073);
 var r = n(607399),
     i = n(499979),
     s = n(626584),
     a = n(264644),
     o = n(927813),
     l = n(652215);
-let u = 16,
-    c = 600,
-    d = 900,
-    _ = !1;
-class f {
+class u {
     logger = new s.A("VideoHealthManager");
     windowLength;
     fpsThreshold;
@@ -52,7 +48,7 @@ class f {
             n > this.prevTimestamp[e] + 1e3 * this.windowLength
         )
             return (this.prevFramesCodec[e] = t), (this.prevTimestamp[e] = n), (this.perUserFpsWindow[e] = []), NaN;
-        if (n < this.prevTimestamp[e] + d) return NaN;
+        if (n < this.prevTimestamp[e] + 900) return NaN;
         let r = this.elapsedSeconds(n, this.prevTimestamp[e]);
         this.prevTimestamp[e] = n;
         let i = (t - this.prevFramesCodec[e]) / r;
@@ -61,7 +57,7 @@ class f {
     updateFps(e, t, n) {
         if (!this.disabled && !this.streamDisabledUsers.has(e)) {
             let r = this.calculateFps(e, t, n);
-            if ((_ && this.logger.info(`frames=${t}, timestamp=${n} fps=${r}`), !(r < 0) && Number.isFinite(r)))
+            if (!(r < 0) && Number.isFinite(r))
                 this.perUserFpsWindow[e].push(r),
                     this.perUserFpsWindow[e].length < this.windowLength ||
                         (this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(),
@@ -85,7 +81,7 @@ class f {
         if (this.disabled) return;
         this.logger.info(`startReenableBackoffTimer for user ${e}`);
         let { lastBackoffTime: t, expBackoffFactor: n } = this.retryBackoffCache[e];
-        null === t || n > u || this.elapsedSeconds((0, i.tB)(), t) > c ? (n = 1) : (n *= 2),
+        null === t || n > 16 || this.elapsedSeconds((0, i.tB)(), t) > 600 ? (n = 1) : (n *= 2),
             (this.retryBackoffCache[e] = { lastBackoffTime: (0, i.tB)(), expBackoffFactor: n });
         let r = n * this.backoffTimeSec * o.A.Millis.SECOND;
         this.logger.info(`starting backoff timer with time = ${r} milliseconds`),

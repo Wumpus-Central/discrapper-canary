@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jB: "onboardingStepContainer__28e57",
     jA: "leftContainer__28e57",

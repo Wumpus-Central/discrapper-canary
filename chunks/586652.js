@@ -1,33 +1,34 @@
 "use strict";
-n.d(t, { A: () => d, E: () => c }), n(801541);
-var r = n(64700),
-    i = n(889137),
-    s = n(311907),
+n.d(t, { A: () => h, E: () => d }), n(801541);
+var i,
+    l = n(64700),
+    s = n(889137),
+    r = n(311907),
     a = n(287809),
     o = n(927578),
-    l = n(704591);
+    c = n(704591);
 n(980504);
 var u = n(985018),
-    c = (function (e) {
-        return (
-            (e[(e.JOIN_GUILD = 0)] = "JOIN_GUILD"), (e[(e.GET_NITRO = 1)] = "GET_NITRO"), (e[(e.NONE = 2)] = "NONE"), e
-        );
-    })({});
-function d(e, t, n, c) {
+    d =
+        (((i = {})[(i.JOIN_GUILD = 0)] = "JOIN_GUILD"),
+        (i[(i.GET_NITRO = 1)] = "GET_NITRO"),
+        (i[(i.NONE = 2)] = "NONE"),
+        i);
+function h(e, t, n, i) {
     let d = "0" === e.guildId,
-        _ = (0, s.bG)([a.default], () => o.Ay.canUseSoundboardEverywhere(a.default.getCurrentUser())),
-        f = (0, l.tj)({ location: "useSoundmojiGuildInfoData" }),
+        h = (0, r.bG)([a.default], () => o.Ay.canUseSoundboardEverywhere(a.default.getCurrentUser())),
+        m = (0, c.tj)({ location: "useSoundmojiGuildInfoData" }),
         p = e.guildId !== t?.guild_id;
     return {
-        buttonType: r.useMemo(() => (d || !f ? 2 : _ ? (n || null == c ? 2 : 0) : 1), [d, _, f, n, c]),
-        description: r.useMemo(() => {
-            let e = null != c;
-            return (0, i.YW)({
-                hasSoundmojiPermissions: _,
+        buttonType: l.useMemo(() => (d || !m ? 2 : h ? (n || null == i ? 2 : 0) : 1), [d, h, m, n, i]),
+        description: l.useMemo(() => {
+            let e = null != i;
+            return (0, s.YW)({
+                hasSoundmojiPermissions: h,
                 isInGuild: n,
                 isGuildDiscoverable: e,
                 isSoundFromDifferentGuild: p,
-                canSendSoundmojis: f,
+                canSendSoundmojis: m,
                 isDefaultSound: d,
             })
                 .with({ canSendSoundmojis: !1 }, () => u.intl.string(u.t.x2kyyJ))
@@ -58,6 +59,6 @@ function d(e, t, n, c) {
                     u.intl.string(u.t.qRkWhZ),
                 )
                 .exhaustive();
-        }, [d, c, _, n, p, f]),
+        }, [d, i, h, n, p, m]),
     };
 }

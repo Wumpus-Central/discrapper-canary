@@ -1,104 +1,103 @@
-"use strict";
-n.d(t, { Ii: () => A, Ut: () => g, cR: () => I, u0: () => E });
-var r = n(64700),
-    i = n(835245),
-    s = n(323889),
-    a = n(345353),
-    o = n(69114),
-    l = n(954571),
-    u = n(723702),
-    c = n(859703),
-    d = n(341915),
-    _ = n(710969),
-    f = n(561844),
-    p = n(590202),
-    h = n(971649),
-    m = n(652215);
-function E() {
-    let e = (0, h.vU)();
-    return r.useCallback(
+a.d(t, { Ii: () => b, Ut: () => f, cR: () => x, u0: () => g });
+var n = a(64700),
+    r = a(835245),
+    i = a(323889),
+    l = a(345353),
+    o = a(69114),
+    s = a(954571),
+    d = a(723702),
+    c = a(859703),
+    u = a(341915),
+    p = a(710969),
+    m = a(561844),
+    h = a(590202),
+    v = a(971649),
+    _ = a(652215);
+function g() {
+    let e = (0, v.vU)();
+    return n.useCallback(
         (t) => {
-            (0, f.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, m.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
         },
         [e],
     );
 }
-function g() {
-    let e = E();
-    return r.useCallback(
+function f() {
+    let e = g();
+    return n.useCallback(
         (t) => {
             let {
-                    questId: n,
-                    questContent: r,
-                    questContentCTA: s,
-                    questContentPosition: l,
-                    questContentRowIndex: d,
-                    trackGuildAndChannelMetadata: f,
-                    sourceQuestContent: h,
+                    questId: a,
+                    questContent: n,
+                    questContentCTA: i,
+                    questContentPosition: s,
+                    questContentRowIndex: u,
+                    trackGuildAndChannelMetadata: m,
+                    sourceQuestContent: v,
                 } = t,
-                E = c.A.getQuest(n),
-                g = (0, _.L4)(r),
-                A = (0, _.yI)(r, n),
-                I = (0, _.Gp)(r, n);
-            (0, a.N)((0, p.jO)(r)).then((t) => {
+                g = c.A.getQuest(a),
+                f = (0, p.L4)(n),
+                b = (0, p.yI)(n, a),
+                x = (0, p.Gp)(n, a);
+            (0, l.N)((0, h.jO)(n)).then((t) => {
                 e({
-                    questId: n,
-                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    questId: a,
+                    event: _.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, p.fF)(r, l, d),
+                        ...(0, h.fF)(n, s, u),
                         ...(0, o.A)(),
-                        cta_name: s,
-                        quest_status: null != E ? (0, p.NI)(E) : null,
-                        click_id: (0, i.A)(),
-                        apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != g ? g : null,
-                        traffic_metadata_raw: null != A ? A : null,
-                        traffic_metadata_sealed: null != I ? I : null,
+                        cta_name: i,
+                        quest_status: null != g ? (0, h.NI)(g) : null,
+                        click_id: (0, r.A)(),
+                        apple_advertising_id: null != t && (0, d.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, d.isAndroid)() ? t.advertisingId : null,
+                        metadata_sealed: null != f ? f : null,
+                        traffic_metadata_raw: null != b ? b : null,
+                        traffic_metadata_sealed: null != x ? x : null,
                     },
-                    trackGuildAndChannelMetadata: f,
-                    shouldExtendSession: (0, _.xn)(r),
-                    sourceQuestContent: h,
+                    trackGuildAndChannelMetadata: m,
+                    shouldExtendSession: (0, p.xn)(n),
+                    sourceQuestContent: v,
                 });
             });
         },
         [e],
     );
 }
-function A(e, t) {
-    r.useEffect(() => {
-        (0, f.DZ)(t, e);
+function b(e, t) {
+    n.useEffect(() => {
+        (0, m.DZ)(t, e);
     }, [e, t]);
 }
-function I(e) {
-    let { questHomeHero: t, shouldShowQuestHomeHeroContent: n } = e,
-        i = n ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
-        a = r.useMemo(() => {
-            let e = (0, p.fF)(i);
+function x(e) {
+    let { questHomeHero: t, shouldShowQuestHomeHeroContent: a } = e,
+        r = a ? u.uF.QUEST_HOME_ENTRYPOINT_THEMED : u.uF.QUEST_HOME_ENTRYPOINT,
+        l = n.useMemo(() => {
+            let e = (0, h.fF)(r);
             return delete e.row_index, e;
-        }, [i]),
-        o = r.useCallback(
+        }, [r]),
+        o = n.useCallback(
             (e) => {
-                null != t && n
-                    ? (0, f.Qg)({
+                null != t && a
+                    ? (0, m.Qg)({
                           adContentId: t.id,
-                          adCreativeType: s.p.QUEST_HOME_HERO,
+                          adCreativeType: i.p.QUEST_HOME_HERO,
                           event: e,
-                          properties: a,
-                          sourceQuestContent: i,
+                          properties: l,
+                          sourceQuestContent: r,
                       })
-                    : l.default.track(e, a);
+                    : s.default.track(e, l);
             },
-            [t, n, i, a],
+            [t, a, r, l],
         ),
-        u = r.useCallback(() => {
-            o(m.HAw.QUEST_HOVER);
+        d = n.useCallback(() => {
+            o(_.HAw.QUEST_HOVER);
         }, [o]),
-        c = r.useCallback(() => {
-            o(m.HAw.QUEST_HOVER_OFF);
+        c = n.useCallback(() => {
+            o(_.HAw.QUEST_HOVER_OFF);
         }, [o]),
-        _ = r.useCallback(() => {
-            l.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+        p = n.useCallback(() => {
+            s.default.track(_.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []);
-    return r.useMemo(() => ({ handleMouseEnter: u, handleMouseLeave: c, handleOnboardingPopoutRender: _ }), [u, c, _]);
+    return n.useMemo(() => ({ handleMouseEnter: d, handleMouseLeave: c, handleOnboardingPopoutRender: p }), [d, c, p]);
 }

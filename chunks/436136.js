@@ -1,29 +1,31 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(989095),
-    s = n(868048),
-    r = n(355097),
-    o = n(985018),
-    c = n(709994);
-function d(e) {
+var l = n(834730),
+    a = n(821609),
+    s = n(744898),
+    r = n(989095),
+    o = n(868048),
+    c = n(355097),
+    d = n(985018),
+    u = n(927933);
+function h(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, i.jsxs)("div", {
-        className: c.l,
+        className: u.l,
         children: [
-            (0, i.jsx)(a.A, { id: t.id }),
+            (0, i.jsx)(r.A, { id: t.id }),
             (0, i.jsx)("div", {
-                className: c.p,
-                children: (0, i.jsx)(l.Text, { variant: "text-sm/medium", children: o.intl.format(o.t.P6Y2N1, {}) }),
+                className: u.p,
+                children: (0, i.jsx)(l.E, { variant: "text-sm/medium", children: d.intl.format(d.t.P6Y2N1, {}) }),
             }),
-            (0, i.jsx)(l.Button, {
+            (0, i.jsx)(a.$, {
                 variant: "secondary",
-                text: o.intl.string(o.t.KyUKhT),
-                icon: l.ejX,
+                text: d.intl.string(d.t.KyUKhT),
+                icon: s.e,
                 size: "sm",
                 onClick: () => {
-                    (0, s.A)(t.guild_id, t.id, r.vv.UNREADS_ONLY_MENTIONS), n();
+                    (0, o.A)(t.guild_id, t.id, c.vv.UNREADS_ONLY_MENTIONS), n();
                 },
             }),
         ],

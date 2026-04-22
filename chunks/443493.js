@@ -1,23 +1,23 @@
-i.d(t, { A: () => d });
-var n = i(627968);
-i(64700);
-var a = i(311907),
-    l = i(397927),
-    r = i(323443),
-    s = i(977997),
-    o = i(985018);
-let d = (e) => {
-    let { guildId: t, channelId: i, variant: d = "active", size: c = "sm", onAction: u, ...m } = e,
-        _ = (0, a.bG)([s.A], () => s.A.isInChannel(i), [i]);
-    return (0, n.jsx)(l.Button, {
-        variant: d,
-        size: c,
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var l = n(311907),
+    a = n(821609),
+    s = n(323443),
+    r = n(977997),
+    o = n(985018);
+let c = (e) => {
+    let { guildId: t, channelId: n, variant: c = "active", size: d = "sm", onAction: u, ...h } = e,
+        m = (0, l.bG)([r.A], () => r.A.isInChannel(n), [n]);
+    return (0, i.jsx)(a.$, {
+        variant: c,
+        size: d,
         text: o.intl.string(o.t.ZYO5OK),
-        disabled: _,
+        disabled: m,
         onClick: () => {
-            u?.(), r.CH(t, i);
+            u?.(), s.CH(t, n);
         },
         fullWidth: !0,
-        ...m,
+        ...h,
     });
 };

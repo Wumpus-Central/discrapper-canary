@@ -1,56 +1,50 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(668459),
-    i = n(234291),
-    a = n(643479);
-let s = { read: o };
-function o(e, t) {
-    let n = {};
-    for (let s = 0; s < t.length; s++) {
-        let o = r.A.getLongAt(e, t[s] + i.vW),
-            _ = (0, a.hT)(e, t[s] + i.XU, i.LV);
-        _ === i.eZ
-            ? ((n["Pixels Per Unit X"] = l(e, t[s], o)),
-              (n["Pixels Per Unit Y"] = u(e, t[s], o)),
-              (n["Pixel Units"] = c(e, t[s], o)))
-            : _ === i.J$ && (n["Modify Date"] = d(e, t[s], o));
-    }
-    return n;
+i.d(t, { A: () => a });
+var n = i(668459),
+    r = i(234291),
+    o = i(643479);
+let a = {
+    read: function (e, t) {
+        let i = {};
+        for (let a = 0; a < t.length; a++) {
+            let u = n.A.getLongAt(e, t[a] + r.vW),
+                c = (0, o.hT)(e, t[a] + r.XU, r.LV);
+            c === r.eZ
+                ? ((i["Pixels Per Unit X"] = (function (e, t, i) {
+                      if (!s(e, t, i, 0, 4)) return;
+                      let o = n.A.getLongAt(e, t + r.LO + 0);
+                      return { value: o, description: "" + o };
+                  })(e, t[a], u)),
+                  (i["Pixels Per Unit Y"] = (function (e, t, i) {
+                      if (!s(e, t, i, 4, 4)) return;
+                      let o = n.A.getLongAt(e, t + r.LO + 4);
+                      return { value: o, description: "" + o };
+                  })(e, t[a], u)),
+                  (i["Pixel Units"] = (function (e, t, i) {
+                      if (!s(e, t, i, 8, 1)) return;
+                      let o = n.A.getByteAt(e, t + r.LO + 8);
+                      return { value: o, description: 1 === o ? "meters" : "Unknown" };
+                  })(e, t[a], u)))
+                : c === r.J$ &&
+                  (i["Modify Date"] = (function (e, t, i) {
+                      if (!s(e, t, i, 0, 7)) return;
+                      let o = n.A.getShortAt(e, t + r.LO),
+                          a = n.A.getByteAt(e, t + r.LO + 2),
+                          u = n.A.getByteAt(e, t + r.LO + 3),
+                          c = n.A.getByteAt(e, t + r.LO + 4),
+                          d = n.A.getByteAt(e, t + r.LO + 5),
+                          f = n.A.getByteAt(e, t + r.LO + 6);
+                      return {
+                          value: [o, a, u, c, d, f],
+                          description: `${l(o, 4)}-${l(a, 2)}-${l(u, 2)} ${l(c, 2)}:${l(d, 2)}:${l(f, 2)}`,
+                      };
+                  })(e, t[a], u));
+        }
+        return i;
+    },
+};
+function s(e, t, i, n, o) {
+    return n + o <= i && t + r.LO + n + o <= e.byteLength;
 }
-function l(e, t, n) {
-    let a = 0;
-    if (!_(e, t, n, 0, 4)) return;
-    let s = r.A.getLongAt(e, t + i.LO + a);
-    return { value: s, description: "" + s };
-}
-function u(e, t, n) {
-    let a = 4;
-    if (!_(e, t, n, 4, 4)) return;
-    let s = r.A.getLongAt(e, t + i.LO + a);
-    return { value: s, description: "" + s };
-}
-function c(e, t, n) {
-    let a = 8;
-    if (!_(e, t, n, 8, 1)) return;
-    let s = r.A.getByteAt(e, t + i.LO + a);
-    return { value: s, description: 1 === s ? "meters" : "Unknown" };
-}
-function d(e, t, n) {
-    if (!_(e, t, n, 0, 7)) return;
-    let a = r.A.getShortAt(e, t + i.LO),
-        s = r.A.getByteAt(e, t + i.LO + 2),
-        o = r.A.getByteAt(e, t + i.LO + 3),
-        l = r.A.getByteAt(e, t + i.LO + 4),
-        u = r.A.getByteAt(e, t + i.LO + 5),
-        c = r.A.getByteAt(e, t + i.LO + 6);
-    return {
-        value: [a, s, o, l, u, c],
-        description: `${f(a, 4)}-${f(s, 2)}-${f(o, 2)} ${f(l, 2)}:${f(u, 2)}:${f(c, 2)}`,
-    };
-}
-function _(e, t, n, r, a) {
-    return r + a <= n && t + i.LO + r + a <= e.byteLength;
-}
-function f(e, t) {
+function l(e, t) {
     return `${"0".repeat(t - ("" + e).length)}${e}`;
 }

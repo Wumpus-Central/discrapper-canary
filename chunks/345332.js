@@ -1,38 +1,39 @@
-t.d(n, { default: () => b });
+t.d(n, { default: () => k });
 var a = t(627968);
 t(64700);
 var l = t(417597),
-    r = t(397927),
-    e = t(442433),
-    s = t(58149),
-    c = t(576705),
-    d = t(954571),
-    o = t(147036),
-    _ = t(957565),
+    r = t(861672),
+    e = t(477782),
+    s = t(442433),
+    c = t(58149),
+    d = t(576705),
+    o = t(954571),
+    _ = t(147036),
+    u = t(957565),
     p = t(634654),
-    u = t(652215),
-    h = t(746080),
-    C = t(985018);
-function b(i) {
+    h = t(652215),
+    C = t(746080),
+    b = t(985018);
+function k(i) {
     let { guild: n, onSelect: t } = i,
-        b = (0, l.bG)([c.A], () => null != n && c.A.can(u.xBc.ADMINISTRATOR, n));
-    return (0, a.jsx)(r.W1t, {
+        k = (0, l.bG)([d.A], () => null != n && d.A.can(h.xBc.ADMINISTRATOR, n));
+    return (0, a.jsx)(r.W, {
         "data-menu-migrated": !0,
         navId: "guild-shop-context",
-        "aria-label": C.intl.string(C.t.g3KvYF),
-        onClose: e.Z_,
+        "aria-label": b.intl.string(b.t.g3KvYF),
+        onClose: s.Z_,
         onSelect: t,
-        children: (0, a.jsx)(r.rXV, {
-            children: (0, a.jsx)(r.Drp, {
+        children: (0, a.jsx)(e.rX, {
+            children: (0, a.jsx)(e.Dr, {
                 id: "role-subscription-copy-link",
-                label: C.intl.string(C.t.WqhZss),
+                label: b.intl.string(b.t.WqhZss),
                 action: () => {
-                    d.default.track(u.HAw.GUILD_SHOP_COPY_LINK, {
-                        ...(0, s.H$)(n.id),
-                        is_admin_or_owner: b,
+                    o.default.track(h.HAw.GUILD_SHOP_COPY_LINK, {
+                        ...(0, c.H$)(n.id),
+                        is_admin_or_owner: k,
                         copy_location: p.lJ.CHANNEL_ROW_CONTEXT_MENU,
                     }),
-                        (0, _.C)((0, o.n)(n.id, h.VV.GUILD_SHOP));
+                        (0, u.C)((0, _.n)(n.id, C.VV.GUILD_SHOP));
                 },
             }),
         }),

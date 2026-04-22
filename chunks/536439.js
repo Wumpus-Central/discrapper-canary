@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__06c2b",
     uW: "section__06c2b",

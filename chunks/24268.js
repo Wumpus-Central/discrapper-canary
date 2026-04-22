@@ -1,87 +1,91 @@
-n.d(t, { A: () => b });
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(311907),
-    o = n(397927),
-    d = n(271866),
-    c = n(409626),
-    u = n(692969),
-    m = n(867099),
-    h = n(147964),
-    x = n(760716),
-    p = n(652215),
-    g = n(115093),
-    f = n(505206),
-    v = n(11039);
-let _ = window.GLOBAL_ENV.RELEASE_CHANNEL === g.B.STAGING ? "1438571444891025408" : "1346069614634864772";
-function b() {
-    let e = (0, x.i)((e) => e.overrideApplicationId),
-        t = (0, x.i)((e) => e.setOverrideApplicationId),
-        n = null != e,
-        [s, g] = i.useState(_),
-        [b, j] = i.useState(p.FYj),
-        A = i.useCallback(
+a.d(t, { A: () => C });
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(311907),
+    o = a(192308),
+    d = a(292666),
+    c = a(534514),
+    u = a(243721),
+    m = a(821609),
+    h = a(271866),
+    p = a(409626),
+    x = a(692969),
+    g = a(867099),
+    v = a(147964),
+    b = a(760716),
+    _ = a(652215),
+    f = a(115093),
+    j = a(505206),
+    A = a(11039);
+let y = window.GLOBAL_ENV.RELEASE_CHANNEL === f.B.STAGING ? "1438571444891025408" : "1346069614634864772";
+function C() {
+    let e = (0, b.i)((e) => e.overrideApplicationId),
+        t = (0, b.i)((e) => e.setOverrideApplicationId),
+        a = null != e,
+        [i, f] = l.useState(y),
+        [C, E] = l.useState(_.FYj),
+        S = l.useCallback(
             (e) => {
-                e ? t(s) : t(null);
+                e ? t(i) : t(null);
             },
-            [s, t],
+            [i, t],
         ),
-        C = i.useCallback(
+        N = l.useCallback(
             (e) => {
-                g(e), n && t(e);
+                f(e), a && t(e);
             },
-            [n, t],
+            [a, t],
         ),
-        y = (0, x.i)((e) => e.showSelfActivity),
-        S = (0, x.i)((e) => e.setShowSelfActivity),
-        E = (0, x.i)((e) => e.recommendationApplicationIds),
-        T = (0, x.i)((e) => e.setRecommendationApplicationIds),
-        N = i.useCallback(
+        k = (0, b.i)((e) => e.showSelfActivity),
+        I = (0, b.i)((e) => e.setShowSelfActivity),
+        D = (0, b.i)((e) => e.recommendationApplicationIds),
+        T = (0, b.i)((e) => e.setRecommendationApplicationIds),
+        w = l.useCallback(
             (e) => {
-                e ? T(b) : T(null);
+                e ? T(C) : T(null);
             },
-            [b, T],
+            [C, T],
         ),
-        I = (0, r.bG)([h.A], () => null != h.A.testModeApplicationId),
-        k = i.useCallback((e) => {
-            e ? (0, o.qfG)((e) => (0, a.jsx)(m.A, { ...e })) : d.cL();
+        O = (0, r.bG)([v.A], () => null != v.A.testModeApplicationId),
+        R = l.useCallback((e) => {
+            e ? (0, o.openModal)((e) => (0, n.jsx)(g.A, { ...e })) : h.cL();
         }, []),
-        O = (0, u.A)({
+        L = (0, x.A)({
             location: "DevToolsSlayerStorefrontPanel",
-            applicationId: s,
-            source: c.Ob.Embed,
+            applicationId: i,
+            source: p.Ob.Embed,
             trackEntryPointImpression: !0,
         }),
-        R = i.useCallback(
+        M = l.useCallback(
             (e) => {
-                O?.(e);
+                L?.(e);
             },
-            [O],
+            [L],
         );
-    return (0, a.jsx)("div", {
-        className: l()(f.nd, v.n),
-        children: (0, a.jsxs)("div", {
-            className: v.k,
+    return (0, n.jsx)("div", {
+        className: s()(j.nd, A.n),
+        children: (0, n.jsxs)("div", {
+            className: A.k,
             children: [
-                (0, a.jsx)(o.ksK, { label: "Application ID", value: s, onChange: C }),
-                (0, a.jsx)(o.Heading, { variant: "heading-lg/normal", children: "Activity Override" }),
-                (0, a.jsx)(o.dOG, { label: "Override activity application ID", checked: n, onChange: A }),
-                (0, a.jsx)(o.dOG, { label: "Show own voice activity (bypass self check)", checked: y, onChange: S }),
-                (0, a.jsx)(o.dOG, { label: "Enable application test mode", checked: I, onChange: k }),
-                (0, a.jsx)(o.Button, { text: "Open Game Profile Modal", onClick: R }),
-                (0, a.jsx)(o.Heading, { variant: "heading-lg/normal", children: "Wishlists" }),
-                (0, a.jsx)(o.ksK, {
+                (0, n.jsx)(d.k, { label: "Application ID", value: i, onChange: N }),
+                (0, n.jsx)(c.D, { variant: "heading-lg/normal", children: "Activity Override" }),
+                (0, n.jsx)(u.d, { label: "Override activity application ID", checked: a, onChange: S }),
+                (0, n.jsx)(u.d, { label: "Show own voice activity (bypass self check)", checked: k, onChange: I }),
+                (0, n.jsx)(u.d, { label: "Enable application test mode", checked: O, onChange: R }),
+                (0, n.jsx)(m.$, { text: "Open Game Profile Modal", onClick: M }),
+                (0, n.jsx)(c.D, { variant: "heading-lg/normal", children: "Wishlists" }),
+                (0, n.jsx)(d.k, {
                     label: "Recommendation application IDs",
-                    value: b,
-                    onChange: j,
-                    disabled: null == E,
+                    value: C,
+                    onChange: E,
+                    disabled: null == D,
                 }),
-                (0, a.jsx)(o.dOG, {
+                (0, n.jsx)(u.d, {
                     label: "Enable recommendation application IDs override",
-                    checked: null != E,
-                    onChange: N,
+                    checked: null != D,
+                    onChange: w,
                 }),
             ],
         }),

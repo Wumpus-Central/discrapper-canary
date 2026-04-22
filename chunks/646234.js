@@ -1,41 +1,42 @@
-n.d(t, { C: () => p });
+n.d(t, { C: () => E });
 var i = n(627968),
     s = n(935399),
-    l = n(158954),
+    l = n(785007),
+    a = n(331322),
     r = n(311907),
-    a = n(793574),
-    o = n(526162),
-    d = n(848971),
+    o = n(793574),
+    d = n(526162),
+    u = n(848971),
     c = n(915089),
-    u = n(419954),
+    g = n(419954),
     m = n(954571),
-    g = n(780964),
-    _ = n(652215),
-    x = n(635917),
-    h = n(788868),
-    A = n(985018);
-let p = (0, u.E2)(g.X.APPEARANCE_IN_APP_ICON, {
-    useSearchTerms: () => [A.intl.string(A.t.gnwxvT)],
+    _ = n(780964),
+    A = n(652215),
+    h = n(635917),
+    p = n(788868),
+    x = n(985018);
+let E = (0, g.E2)(_.X.APPEARANCE_IN_APP_ICON, {
+    useSearchTerms: () => [x.intl.string(x.t.gnwxvT)],
     Component: function () {
         let e = (0, c.GV)(),
-            { ref: t, ...n } = (0, l._uI)({ orientation: "horizontal", labelledBy: e }),
-            u = (0, r.bG)([o.A], () => o.A.isUpsellPreview);
+            { ref: t, ...n } = (0, l._u)({ orientation: "horizontal", labelledBy: e }),
+            g = (0, r.bG)([d.A], () => d.A.isUpsellPreview);
         return (
             (0, s.Ay)(() => {
-                u &&
-                    m.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
-                        type: h.e.APP_ICON_UPSELL,
-                        location_stack: [a.A.USER_SETTINGS],
+                g &&
+                    m.default.track(A.HAw.PREMIUM_UPSELL_VIEWED, {
+                        type: p.e.APP_ICON_UPSELL,
+                        location_stack: [o.A.USER_SETTINGS],
                     });
             }),
             (0, i.jsx)("div", {
                 ...n,
                 ref: t,
-                children: (0, i.jsx)(l.BJc, {
+                children: (0, i.jsx)(a.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
-                    children: (0, i.jsx)(d.m, { disabled: u, size: x.N8.SIZE_48 }),
+                    children: (0, i.jsx)(u.m, { disabled: g, size: h.N8.SIZE_48 }),
                 }),
             })
         );

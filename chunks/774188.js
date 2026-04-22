@@ -1,49 +1,43 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(364242);
-let i = RegExp(
-        "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
-        "i",
-    ),
-    a = 1,
-    s = 5,
-    o = 2,
-    l = 3,
-    u = 4;
-class c {
+r.d(t, { A: () => a });
+var n = r(364242);
+let s = RegExp(
+    "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
+    "i",
+);
+class a {
     groupNumberMonth;
     groupNumberDay;
     constructor(e) {
-        (this.groupNumberMonth = e ? l : o), (this.groupNumberDay = e ? o : l);
+        (this.groupNumberMonth = e ? 3 : 2), (this.groupNumberDay = e ? 2 : 3);
     }
     pattern() {
-        return i;
+        return s;
     }
     extract(e, t) {
-        let n = t.index + t[a].length,
-            i = t.index + t[0].length - t[s].length;
+        let r = t.index + t[1].length,
+            s = t.index + t[0].length - t[5].length;
         if (
-            (n > 0 && e.text.substring(0, n).match("\\d/?$")) ||
-            (i < e.text.length && e.text.substring(i).match("^/?\\d"))
+            (r > 0 && e.text.substring(0, r).match("\\d/?$")) ||
+            (s < e.text.length && e.text.substring(s).match("^/?\\d"))
         )
             return;
-        let o = e.text.substring(n, i);
-        if (o.match(/^\d\.\d$/) || o.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/) || (!t[u] && 0 > o.indexOf("/"))) return;
-        let l = e.createParsingResult(n, o),
-            c = parseInt(t[this.groupNumberMonth]),
-            d = parseInt(t[this.groupNumberDay]);
-        if ((c < 1 || c > 12) && c > 12)
-            if (!(d >= 1) || !(d <= 12) || !(c <= 31)) return null;
-            else [d, c] = [c, d];
-        if (d < 1 || d > 31) return null;
-        if ((l.start.assign("day", d), l.start.assign("month", c), t[u])) {
-            let e = parseInt(t[u]),
-                n = (0, r.D)(e);
-            l.start.assign("year", n);
+        let a = e.text.substring(r, s);
+        if (a.match(/^\d\.\d$/) || a.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/) || (!t[4] && 0 > a.indexOf("/"))) return;
+        let i = e.createParsingResult(r, a),
+            o = parseInt(t[this.groupNumberMonth]),
+            l = parseInt(t[this.groupNumberDay]);
+        if ((o < 1 || o > 12) && o > 12)
+            if (!(l >= 1) || !(l <= 12) || !(o <= 31)) return null;
+            else [l, o] = [o, l];
+        if (l < 1 || l > 31) return null;
+        if ((i.start.assign("day", l), i.start.assign("month", o), t[4])) {
+            let e = parseInt(t[4]),
+                r = (0, n.D)(e);
+            i.start.assign("year", r);
         } else {
-            let t = (0, r.Y)(e.refDate, d, c);
-            l.start.imply("year", t);
+            let t = (0, n.Y)(e.refDate, l, o);
+            i.start.imply("year", t);
         }
-        return l.addTag("parser/SlashDateFormatParser");
+        return i.addTag("parser/SlashDateFormatParser");
     }
 }

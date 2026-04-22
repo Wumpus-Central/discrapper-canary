@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e) {
         if (e % 100 == 11);
@@ -51,7 +49,7 @@
                 return s + (n || i ? "\xe1r" : "\xe1ri");
         }
     }
-    return e.defineLocale("is", {
+    e.defineLocale("is", {
         months: "jan\xfaar_febr\xfaar_mars_apr\xedl_ma\xed_j\xfan\xed_j\xfal\xed_\xe1g\xfast_september_okt\xf3ber_n\xf3vember_desember".split(
             "_",
         ),
@@ -98,4 +96,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

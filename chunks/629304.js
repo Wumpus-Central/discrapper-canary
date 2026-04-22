@@ -1,13 +1,14 @@
-i.d(n, { default: () => g });
+i.d(n, { default: () => c });
 var l = i(627968),
     e = i(64700),
-    a = i(732955),
-    s = i(397927),
-    r = i(514041),
-    d = i(835806),
-    o = i(104890),
-    u = i(985018);
-class p extends e.PureComponent {
+    a = i(189213),
+    s = i(192308),
+    r = i(691885),
+    d = i(514041),
+    o = i(835806),
+    u = i(104890),
+    p = i(985018);
+class g extends e.PureComponent {
     state = { problem: null };
     handleChanged = (t) => {
         this.setState({ problem: t ?? null });
@@ -15,23 +16,23 @@ class p extends e.PureComponent {
     handleSubmit = () => {
         let { stream: t, streamApplication: n, analyticsData: e, onClose: a } = this.props,
             { problem: r } = this.state;
-        (0, d.A)({ problem: r, stream: t, feedback: "", streamApplication: n, analyticsData: e, location: "Stream" }),
+        (0, o.A)({ problem: r, stream: t, feedback: "", streamApplication: n, analyticsData: e, location: "Stream" }),
             a(),
-            (0, s.mMO)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let { default: t } = await i.e("37836").then(i.bind(i, 845671));
-                return (n) => (0, l.jsx)(t, { body: u.intl.string(u.t.mMTVnv), ...n });
+                return (n) => (0, l.jsx)(t, { body: p.intl.string(p.t.mMTVnv), ...n });
             });
     };
     render() {
         let { isStreamer: t, transitionState: n, onClose: i } = this.props,
             { problem: e } = this.state;
-        return (0, l.jsxs)(a.aFV, {
-            title: u.intl.string(u.t.qnJ9W3),
-            subtitle: u.intl.string(u.t["7vw0h+"]),
+        return (0, l.jsxs)(a.Modal, {
+            title: p.intl.string(p.t.qnJ9W3),
+            subtitle: p.intl.string(p.t["7vw0h+"]),
             actions: [
-                { text: u.intl.string(u.t["ETE/oC"]), variant: "secondary", onClick: i },
+                { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: i },
                 {
-                    text: u.intl.string(u.t.E48BIc),
+                    text: p.intl.string(p.t.E48BIc),
                     variant: "primary",
                     onClick: this.handleSubmit,
                     disabled: null == e,
@@ -40,12 +41,12 @@ class p extends e.PureComponent {
             onClose: i,
             transitionState: n,
             children: [
-                (0, l.jsx)(o.A, {}),
-                (0, l.jsx)(s.l6P, {
+                (0, l.jsx)(u.A, {}),
+                (0, l.jsx)(r.l, {
                     selectionMode: "single",
-                    label: u.intl.string(u.t["6Y1t5P"]),
-                    placeholder: u.intl.string(u.t.U0kGk6),
-                    options: (0, r.A)({ isStreamer: t, isEndStream: !1 }),
+                    label: p.intl.string(p.t["6Y1t5P"]),
+                    placeholder: p.intl.string(p.t.U0kGk6),
+                    options: (0, d.A)({ isStreamer: t, isEndStream: !1 }),
                     onSelectionChange: this.handleChanged,
                     value: e,
                     maxOptionsVisible: 4,
@@ -54,4 +55,4 @@ class p extends e.PureComponent {
         });
     }
 }
-let g = p;
+let c = g;

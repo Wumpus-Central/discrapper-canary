@@ -3,73 +3,74 @@ var i = n(627968),
     l = n(64700),
     s = n(311907),
     a = n(192308),
-    r = n(435371),
-    o = n(397927),
+    r = n(990078),
+    o = n(765178),
+    d = n(231483),
     c = n(964486),
-    d = n(544231),
-    u = n(338510),
-    h = n(151119),
-    A = n(278941),
-    _ = n(665909),
-    m = n(186111),
-    g = n(58736),
-    p = n(327337),
-    f = n(985018);
+    u = n(544231),
+    h = n(338510),
+    A = n(151119),
+    _ = n(278941),
+    m = n(665909),
+    g = n(186111),
+    p = n(58736),
+    f = n(327337),
+    E = n(985018);
 let x = l.memo(function (e) {
     let { channel: t } = e,
-        x = (0, u.u)(t.id),
-        E = (0, h.S)(t.id),
-        I = (0, A.e)(t.id),
-        C = (0, a.useHasAnyModalOpen)(),
-        N = (0, s.bG)([m.A], () => m.A.hasLayers()),
-        T = l.useCallback(
-            () => (E ? f.intl.string(f.t["16QyDv"]) : null != I ? f.intl.string(f.t.kCN9i0) : null),
-            [E, I],
+        x = (0, h.u)(t.id),
+        I = (0, A.S)(t.id),
+        C = (0, _.e)(t.id),
+        b = (0, a.useHasAnyModalOpen)(),
+        N = (0, s.bG)([g.A], () => g.A.hasLayers()),
+        S = l.useCallback(
+            () => (I ? E.intl.string(E.t["16QyDv"]) : null != C ? E.intl.string(E.t.kCN9i0) : null),
+            [I, C],
         ),
-        S = l.useMemo(() => (E || null != I) && !C && !N, [E, I, C, N]),
-        [b, y] = l.useState(T());
+        v = l.useMemo(() => (I || null != C) && !b && !N, [I, C, b, N]),
+        [T, y] = l.useState(S());
     l.useEffect(() => {
-        null != I &&
+        null != C &&
             null != x &&
-            (o.ORC.announce(f.intl.string(f.t.acsXuG)),
+            (o.O.announce(E.intl.string(E.t.acsXuG)),
             setTimeout(() => {
-                (0, d.xi)(t.id, [I.id]);
+                (0, u.xi)(t.id, [C.id]);
             }, 5e3),
-            (0, _.QF)({
+            (0, m.QF)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: I.id,
-                warningType: I.type,
-                isNudgeWarning: null != I,
-                viewName: _.gN.SAFETY_TOOLS_NUDGE_TOOLTIP,
+                warningId: C.id,
+                warningType: C.type,
+                isNudgeWarning: null != C,
+                viewName: m.gN.SAFETY_TOOLS_NUDGE_TOOLTIP,
             })),
-            E &&
-                (o.ORC.announce(f.intl.string(f.t["1dxCqG"])),
+            I &&
+                (o.O.announce(E.intl.string(E.t["1dxCqG"])),
                 setTimeout(() => {
-                    (0, d.bg)(t.id);
+                    (0, u.bg)(t.id);
                 }, 5e3));
-    }, [t, I, x, E]),
+    }, [t, C, x, I]),
         (0, c.Ay)(() => {
             null != x &&
-                (0, _.QF)({
+                (0, m.QF)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
                     warningId: x.id,
                     warningType: x.type,
-                    isNudgeWarning: null != I,
-                    viewName: _.gN.SAFETY_TOOLS_BUTTON,
+                    isNudgeWarning: null != C,
+                    viewName: m.gN.SAFETY_TOOLS_BUTTON,
                 });
         }),
         l.useEffect(() => {
-            let e = T();
+            let e = S();
             null != e && y(e);
-        }, [E, I, T]);
-    let v = l.useCallback(() => {
-        null != I && (0, d.xi)(t.id, [I.id]),
+        }, [I, C, S]);
+    let R = l.useCallback(() => {
+        null != C && (0, u.xi)(t.id, [C.id]),
             null != x &&
-                ((0, o.mMO)(
+                ((0, a.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("45033"), n.e("46717"), n.e("88331")]).then(
+                        let { default: e } = await Promise.all([n.e("45033"), n.e("46717"), n.e("12115")]).then(
                             n.bind(n, 788099),
                         );
                         return (n) => {
@@ -84,28 +85,28 @@ let x = l.memo(function (e) {
                             });
                         };
                     },
-                    { modalKey: p.V },
+                    { modalKey: f.V },
                 ),
-                (0, _._$)({
+                (0, m._$)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
                     warningId: x.id,
                     warningType: x.type,
-                    cta: _.Wm.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != I,
+                    cta: m.Wm.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                    isNudgeWarning: null != C,
                 }));
-    }, [I, x, t]);
+    }, [C, x, t]);
     return null == x
         ? null
-        : (0, i.jsx)(r.m_, {
-              forceOpen: S,
-              text: b,
+        : (0, i.jsx)(r.m, {
+              forceOpen: v,
+              text: T,
               position: "bottom",
-              children: (0, i.jsx)(g.Ay.Icon, {
-                  icon: o.lmn,
-                  onClick: v,
-                  tooltip: f.intl.string(f.t.rpc2qv),
-                  tooltipDisabled: null != I,
+              children: (0, i.jsx)(p.Ay.Icon, {
+                  icon: d.l,
+                  onClick: R,
+                  tooltip: E.intl.string(E.t.rpc2qv),
+                  tooltipDisabled: null != C,
               }),
           });
 });

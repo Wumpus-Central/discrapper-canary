@@ -1,20 +1,21 @@
+"use strict";
 n.d(t, { A: () => s });
-var l = n(627968);
+var a = n(627968);
 n(64700);
-var a = n(397927),
-    i = n(985018),
-    r = n(955562);
+var i = n(534514),
+    r = n(985018),
+    l = n(146985);
 function s(e) {
     let { children: t, title: n } = e;
-    return (0, l.jsxs)("div", {
-        className: r.kL,
+    return (0, a.jsxs)("div", {
+        className: l.kL,
         children: [
-            (0, l.jsx)(a.Heading, {
-                className: r.wx,
+            (0, a.jsx)(i.D, {
+                className: l.wx,
                 variant: "text-sm/semibold",
-                children: n ?? i.intl.string(i.t["k+QA9N"]),
+                children: n ?? r.intl.string(r.t["k+QA9N"]),
             }),
-            (0, l.jsx)("div", { className: r.uk, children: t }),
+            (0, a.jsx)("div", { className: l.uk, children: t }),
         ],
     });
 }

@@ -1,20 +1,22 @@
-l.d(t, { E: () => b });
-var a = l(627968),
-    n = l(64700),
-    s = l(735438),
-    i = l.n(s),
+l.d(t, { E: () => C });
+var n = l(627968),
+    a = l(64700),
+    i = l(735438),
+    s = l.n(i),
     r = l(311907),
-    o = l(118356),
-    u = l(397927),
-    c = l(287809),
-    d = l(690521),
-    m = l(562153),
-    h = l(372684),
-    p = l(429364),
-    f = l(731854),
-    g = l(845397);
-let v = new o.Vy("ClipsSpeakingOverlay");
-class x {
+    d = l(118356),
+    o = l(97808),
+    c = l(778712),
+    u = l(834730),
+    m = l(287809),
+    h = l(690521),
+    p = l(562153),
+    f = l(372684),
+    v = l(429364),
+    g = l(731854),
+    x = l(178420);
+let j = new d.Vy("ClipsSpeakingOverlay");
+class b {
     timeline;
     userSpeakingStates;
     activeSoundboards;
@@ -25,9 +27,9 @@ class x {
         (this.activeSoundboards = new Map()),
         (this.soundboardPlayCounts = new Map()),
         [...e].sort((e, t) => e.timestamp - t.timestamp)))
-            t.signal.type === h.Gy.SPEAKING
+            t.signal.type === f.Gy.SPEAKING
                 ? this.processSpeakingEvent(t.signal)
-                : t.signal.type === h.Gy.SOUNDBOARD && this.processSoundboardEvent(t.signal),
+                : t.signal.type === f.Gy.SOUNDBOARD && this.processSoundboardEvent(t.signal),
                 this.timeline.set(t.timestamp, this.getCurrentSnapshot());
     }
     getSoundboardKey(e, t) {
@@ -38,7 +40,7 @@ class x {
             0 === e.speakingFlags &&
             (this.userSpeakingStates.set(e.userId, !0),
             this.timeline.has(0) || this.timeline.set(0, this.getCurrentSnapshot())),
-            this.userSpeakingStates.set(e.userId, (e.speakingFlags & f.ME.VOICE) === f.ME.VOICE);
+            this.userSpeakingStates.set(e.userId, (e.speakingFlags & g.ME.VOICE) === g.ME.VOICE);
     }
     processSoundboardEvent(e) {
         let t = this.getSoundboardKey(e.soundboardId, e.userId),
@@ -89,76 +91,76 @@ class x {
     getEventsAtTimestamp(e) {
         let t = Array.from(this.timeline.keys()).sort((e, t) => e - t),
             l = 0,
-            a = t.length - 1,
-            n = -1;
-        for (; l <= a; ) {
-            let s = Math.floor((l + a) / 2);
-            t[s] <= e ? ((n = s), (l = s + 1)) : (a = s - 1);
+            n = t.length - 1,
+            a = -1;
+        for (; l <= n; ) {
+            let i = Math.floor((l + n) / 2);
+            t[i] <= e ? ((a = i), (l = i + 1)) : (n = i - 1);
         }
-        return -1 === n
+        return -1 === a
             ? { speakingUserIds: [], activeSoundboards: [] }
-            : (this.timeline.get(t[n]) ?? { speakingUserIds: [], activeSoundboards: [] });
+            : (this.timeline.get(t[a]) ?? { speakingUserIds: [], activeSoundboards: [] });
     }
 }
-function b(e) {
-    let { clip: t, soundboardAudioEnabled: l, voiceAudioEnabled: s } = e,
-        { useCurrentTime: o, subscribe: h } = (0, p.T)(),
-        f = o(),
-        b = t.decision?.timestamp ?? 0,
-        [j] = n.useState(() => new x(t.timeline ?? [])),
-        C = b - t.length,
-        N = n.useCallback(
+function C(e) {
+    let { clip: t, soundboardAudioEnabled: l, voiceAudioEnabled: i } = e,
+        { useCurrentTime: d, subscribe: f } = (0, v.T)(),
+        g = d(),
+        C = t.decision?.timestamp ?? 0,
+        [y] = a.useState(() => new b(t.timeline ?? [])),
+        A = C - t.length,
+        N = a.useCallback(
             (e) => {
-                let t = 1e3 * i().round(e, 3),
-                    l = j.getEventsAtTimestamp(C + t);
+                let t = 1e3 * s().round(e, 3),
+                    l = y.getEventsAtTimestamp(A + t);
                 return {
-                    speakingUserIds: i().sortBy(l.speakingUserIds),
-                    activeSoundboards: i().sortBy(l.activeSoundboards, "soundboardId"),
+                    speakingUserIds: s().sortBy(l.speakingUserIds),
+                    activeSoundboards: s().sortBy(l.activeSoundboards, "soundboardId"),
                 };
             },
-            [j, C],
+            [y, A],
         ),
-        [k, y] = n.useState(() => N(f)),
-        E = (0, r.cf)([c.default], () => i().pick(c.default.getUsers(), t.users));
-    return (n.useEffect(
+        [E, w] = a.useState(() => N(g)),
+        k = (0, r.cf)([m.default], () => s().pick(m.default.getUsers(), t.users));
+    return (a.useEffect(
         () =>
-            h({
+            f({
                 onTimeUpdate: (e) => {
                     let t = N(e);
-                    y((e) =>
-                        i().isEqual(t, e)
+                    w((e) =>
+                        s().isEqual(t, e)
                             ? e
-                            : (v.info("Event snapshot changed", { newEventSnapshot: t, currentEventSnapshot: e }), t),
+                            : (j.info("Event snapshot changed", { newEventSnapshot: t, currentEventSnapshot: e }), t),
                     );
                 },
             }),
-        [h, N],
+        [f, N],
     ),
-    null == b)
+    null == C)
         ? null
-        : (0, a.jsxs)("div", {
-              className: g.h8,
+        : (0, n.jsxs)("div", {
+              className: x.h8,
               children: [
-                  s &&
-                      k.speakingUserIds.map((e) => {
-                          let l = E[e];
+                  i &&
+                      E.speakingUserIds.map((e) => {
+                          let l = k[e];
                           if (null == l) return null;
-                          let n = (0, m.mG)(t.guildId, t.channelId, l);
-                          return (0, a.jsxs)(
+                          let a = (0, p.mG)(t.guildId, t.channelId, l);
+                          return (0, n.jsxs)(
                               "div",
                               {
-                                  className: g.q7,
+                                  className: x.q7,
                                   children: [
-                                      (0, a.jsx)(u.euF, {
-                                          "aria-label": n,
-                                          size: u._3J.SIZE_24,
+                                      (0, n.jsx)(o.eu, {
+                                          "aria-label": a,
+                                          size: c._3.SIZE_24,
                                           src: l.getAvatarURL(null, 24, !1),
                                       }),
-                                      (0, a.jsx)(u.Text, {
-                                          className: g.Xh,
+                                      (0, n.jsx)(u.E, {
+                                          className: x.Xh,
                                           color: "always-white",
                                           variant: "text-sm/normal",
-                                          children: n,
+                                          children: a,
                                       }),
                                   ],
                               },
@@ -166,25 +168,25 @@ function b(e) {
                           );
                       }),
                   l &&
-                      k.activeSoundboards.map((e) => {
-                          let t = E[e.userId];
+                      E.activeSoundboards.map((e) => {
+                          let t = k[e.userId];
                           return null == t
                               ? null
-                              : (0, a.jsxs)(
+                              : (0, n.jsxs)(
                                     "div",
                                     {
-                                        className: g.q7,
+                                        className: x.q7,
                                         children: [
-                                            (0, a.jsx)(u.euF, {
+                                            (0, n.jsx)(o.eu, {
                                                 "aria-label": t.username,
-                                                size: u._3J.SIZE_24,
+                                                size: c._3.SIZE_24,
                                                 src: t.getAvatarURL(null, 24, !1),
                                             }),
                                             null != e.emojiId || null != e.emojiName
-                                                ? (0, a.jsx)("img", {
+                                                ? (0, n.jsx)("img", {
                                                       alt: e.name,
-                                                      className: g.g8,
-                                                      src: (0, d.Ez)(
+                                                      className: x.g8,
+                                                      src: (0, h.Ez)(
                                                           {
                                                               id: e.emojiId,
                                                               name: e.emojiName ?? "",
@@ -194,8 +196,8 @@ function b(e) {
                                                       ),
                                                   })
                                                 : null,
-                                            (0, a.jsx)(u.Text, {
-                                                className: g.Xh,
+                                            (0, n.jsx)(u.E, {
+                                                className: x.Xh,
                                                 color: "always-white",
                                                 variant: "text-sm/normal",
                                                 children: e.name,

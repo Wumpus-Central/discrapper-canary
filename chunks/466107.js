@@ -1,8 +1,8 @@
 "use strict";
 var r = n(589841),
     i = Object.prototype.hasOwnProperty,
-    a = Array.isArray,
-    s = {
+    s = Array.isArray,
+    a = {
         allowDots: !1,
         allowEmptyArrays: !1,
         allowPrototypes: !1,
@@ -25,12 +25,7 @@ var r = n(589841),
         strictNullHandling: !1,
         throwOnLimitExceeded: !1,
     },
-    o = function (e) {
-        return e.replace(/&#(\d+);/g, function (e, t) {
-            return String.fromCharCode(parseInt(t, 10));
-        });
-    },
-    l = function (e, t, n) {
+    o = function (e, t, n) {
         if (e && "string" == typeof e && t.comma && e.indexOf(",") > -1) return e.split(",");
         if (t.throwOnLimitExceeded && n >= t.arrayLimit)
             throw RangeError(
@@ -42,98 +37,102 @@ var r = n(589841),
             );
         return e;
     },
-    u = "utf8=%26%2310003%3B",
-    c = "utf8=%E2%9C%93",
-    d = function (e, t) {
+    l = function (e, t) {
         var n = { __proto__: null },
-            d = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e;
-        d = d.replace(/%5B/gi, "[").replace(/%5D/gi, "]");
-        var _ = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-            f = d.split(t.delimiter, t.throwOnLimitExceeded ? _ + 1 : _);
-        if (t.throwOnLimitExceeded && f.length > _)
-            throw RangeError("Parameter limit exceeded. Only " + _ + " parameter" + (1 === _ ? "" : "s") + " allowed.");
-        var p = -1,
-            h = t.charset;
+            l = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e;
+        l = l.replace(/%5B/gi, "[").replace(/%5D/gi, "]");
+        var u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
+            d = l.split(t.delimiter, t.throwOnLimitExceeded ? u + 1 : u);
+        if (t.throwOnLimitExceeded && d.length > u)
+            throw RangeError("Parameter limit exceeded. Only " + u + " parameter" + (1 === u ? "" : "s") + " allowed.");
+        var c = -1,
+            _ = t.charset;
         if (t.charsetSentinel)
-            for (m = 0; m < f.length; ++m)
-                0 === f[m].indexOf("utf8=") &&
-                    (f[m] === c ? (h = "utf-8") : f[m] === u && (h = "iso-8859-1"), (p = m), (m = f.length));
-        for (m = 0; m < f.length; ++m)
-            if (m !== p) {
-                var m,
-                    g,
+            for (f = 0; f < d.length; ++f)
+                0 === d[f].indexOf("utf8=") &&
+                    ("utf8=%E2%9C%93" === d[f] ? (_ = "utf-8") : "utf8=%26%2310003%3B" === d[f] && (_ = "iso-8859-1"),
+                    (c = f),
+                    (f = d.length));
+        for (f = 0; f < d.length; ++f)
+            if (f !== c) {
+                var f,
                     E,
-                    A = f[m],
-                    I = A.indexOf("]="),
-                    T = -1 === I ? A.indexOf("=") : I + 1;
-                -1 === T
-                    ? ((g = t.decoder(A, s.decoder, h, "key")), (E = t.strictNullHandling ? null : ""))
-                    : ((g = t.decoder(A.slice(0, T), s.decoder, h, "key")),
-                      (E = r.maybeMap(l(A.slice(T + 1), t, a(n[g]) ? n[g].length : 0), function (e) {
-                          return t.decoder(e, s.decoder, h, "value");
+                    h,
+                    p = d[f],
+                    m = p.indexOf("]="),
+                    g = -1 === m ? p.indexOf("=") : m + 1;
+                -1 === g
+                    ? ((E = t.decoder(p, a.decoder, _, "key")), (h = t.strictNullHandling ? null : ""))
+                    : ((E = t.decoder(p.slice(0, g), a.decoder, _, "key")),
+                      (h = r.maybeMap(o(p.slice(g + 1), t, s(n[E]) ? n[E].length : 0), function (e) {
+                          return t.decoder(e, a.decoder, _, "value");
                       }))),
-                    E && t.interpretNumericEntities && "iso-8859-1" === h && (E = o(String(E))),
-                    A.indexOf("[]=") > -1 && (E = a(E) ? [E] : E);
-                var y = i.call(n, g);
-                y && "combine" === t.duplicates
-                    ? (n[g] = r.combine(n[g], E))
-                    : (y && "last" !== t.duplicates) || (n[g] = E);
+                    h &&
+                        t.interpretNumericEntities &&
+                        "iso-8859-1" === _ &&
+                        (h = String(h).replace(/&#(\d+);/g, function (e, t) {
+                            return String.fromCharCode(parseInt(t, 10));
+                        })),
+                    p.indexOf("[]=") > -1 && (h = s(h) ? [h] : h);
+                var A = i.call(n, E);
+                A && "combine" === t.duplicates
+                    ? (n[E] = r.combine(n[E], h))
+                    : (A && "last" !== t.duplicates) || (n[E] = h);
             }
         return n;
     },
-    _ = function (e, t, n, i) {
-        var a = 0;
+    u = function (e, t, n, i) {
+        var s = 0;
         if (e.length > 0 && "[]" === e[e.length - 1]) {
-            var s = e.slice(0, -1).join("");
-            a = Array.isArray(t) && t[s] ? t[s].length : 0;
+            var a = e.slice(0, -1).join("");
+            s = Array.isArray(t) && t[a] ? t[a].length : 0;
         }
-        for (var o = i ? t : l(t, n, a), u = e.length - 1; u >= 0; --u) {
-            var c,
-                d = e[u];
-            if ("[]" === d && n.parseArrays)
-                c = n.allowEmptyArrays && ("" === o || (n.strictNullHandling && null === o)) ? [] : r.combine([], o);
+        for (var l = i ? t : o(t, n, s), u = e.length - 1; u >= 0; --u) {
+            var d,
+                c = e[u];
+            if ("[]" === c && n.parseArrays)
+                d = n.allowEmptyArrays && ("" === l || (n.strictNullHandling && null === l)) ? [] : r.combine([], l);
             else {
-                c = n.plainObjects ? { __proto__: null } : {};
-                var _ = "[" === d.charAt(0) && "]" === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
+                d = n.plainObjects ? { __proto__: null } : {};
+                var _ = "[" === c.charAt(0) && "]" === c.charAt(c.length - 1) ? c.slice(1, -1) : c,
                     f = n.decodeDotInKeys ? _.replace(/%2E/g, ".") : _,
-                    p = parseInt(f, 10);
+                    E = parseInt(f, 10);
                 n.parseArrays || "" !== f
-                    ? !isNaN(p) && d !== f && String(p) === f && p >= 0 && n.parseArrays && p <= n.arrayLimit
-                        ? ((c = [])[p] = o)
-                        : "__proto__" !== f && (c[f] = o)
-                    : (c = { 0: o });
+                    ? !isNaN(E) && c !== f && String(E) === f && E >= 0 && n.parseArrays && E <= n.arrayLimit
+                        ? ((d = [])[E] = l)
+                        : "__proto__" !== f && (d[f] = l)
+                    : (d = { 0: l });
             }
-            o = c;
+            l = d;
         }
-        return o;
+        return l;
     },
-    f = function (e, t, n, r) {
+    d = function (e, t, n, r) {
         if (e) {
-            var a = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
-                s = /(\[[^[\]]*])/,
-                o = /(\[[^[\]]*])/g,
-                l = n.depth > 0 && s.exec(a),
-                u = l ? a.slice(0, l.index) : a,
-                c = [];
-            if (u) {
-                if (!n.plainObjects && i.call(Object.prototype, u) && !n.allowPrototypes) return;
-                c.push(u);
-            }
-            for (var d = 0; n.depth > 0 && null !== (l = o.exec(a)) && d < n.depth; ) {
-                if (((d += 1), !n.plainObjects && i.call(Object.prototype, l[1].slice(1, -1)) && !n.allowPrototypes))
-                    return;
-                c.push(l[1]);
-            }
+            var s = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
+                a = /(\[[^[\]]*])/g,
+                o = n.depth > 0 && /(\[[^[\]]*])/.exec(s),
+                l = o ? s.slice(0, o.index) : s,
+                d = [];
             if (l) {
+                if (!n.plainObjects && i.call(Object.prototype, l) && !n.allowPrototypes) return;
+                d.push(l);
+            }
+            for (var c = 0; n.depth > 0 && null !== (o = a.exec(s)) && c < n.depth; ) {
+                if (((c += 1), !n.plainObjects && i.call(Object.prototype, o[1].slice(1, -1)) && !n.allowPrototypes))
+                    return;
+                d.push(o[1]);
+            }
+            if (o) {
                 if (!0 === n.strictDepth)
                     throw RangeError("Input depth exceeded depth option of " + n.depth + " and strictDepth is true");
-                c.push("[" + a.slice(l.index) + "]");
+                d.push("[" + s.slice(o.index) + "]");
             }
-            return _(c, t, n, r);
+            return u(d, t, n, r);
         }
     },
-    p = function (e) {
-        if (!e) return s;
+    c = function (e) {
+        if (!e) return a;
         if (void 0 !== e.allowEmptyArrays && "boolean" != typeof e.allowEmptyArrays)
             throw TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
         if (void 0 !== e.decodeDotInKeys && "boolean" != typeof e.decodeDotInKeys)
@@ -144,51 +143,51 @@ var r = n(589841),
             throw TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
         if (void 0 !== e.throwOnLimitExceeded && "boolean" != typeof e.throwOnLimitExceeded)
             throw TypeError("`throwOnLimitExceeded` option must be a boolean");
-        var t = void 0 === e.charset ? s.charset : e.charset,
-            n = void 0 === e.duplicates ? s.duplicates : e.duplicates;
+        var t = void 0 === e.charset ? a.charset : e.charset,
+            n = void 0 === e.duplicates ? a.duplicates : e.duplicates;
         if ("combine" !== n && "first" !== n && "last" !== n)
             throw TypeError("The duplicates option must be either combine, first, or last");
         return {
-            allowDots: void 0 === e.allowDots ? !0 === e.decodeDotInKeys || s.allowDots : !!e.allowDots,
-            allowEmptyArrays: "boolean" == typeof e.allowEmptyArrays ? !!e.allowEmptyArrays : s.allowEmptyArrays,
-            allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : s.allowPrototypes,
-            allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : s.allowSparse,
-            arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : s.arrayLimit,
+            allowDots: void 0 === e.allowDots ? !0 === e.decodeDotInKeys || a.allowDots : !!e.allowDots,
+            allowEmptyArrays: "boolean" == typeof e.allowEmptyArrays ? !!e.allowEmptyArrays : a.allowEmptyArrays,
+            allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : a.allowPrototypes,
+            allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : a.allowSparse,
+            arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : a.arrayLimit,
             charset: t,
-            charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : s.charsetSentinel,
-            comma: "boolean" == typeof e.comma ? e.comma : s.comma,
-            decodeDotInKeys: "boolean" == typeof e.decodeDotInKeys ? e.decodeDotInKeys : s.decodeDotInKeys,
-            decoder: "function" == typeof e.decoder ? e.decoder : s.decoder,
-            delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : s.delimiter,
-            depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : s.depth,
+            charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : a.charsetSentinel,
+            comma: "boolean" == typeof e.comma ? e.comma : a.comma,
+            decodeDotInKeys: "boolean" == typeof e.decodeDotInKeys ? e.decodeDotInKeys : a.decodeDotInKeys,
+            decoder: "function" == typeof e.decoder ? e.decoder : a.decoder,
+            delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : a.delimiter,
+            depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : a.depth,
             duplicates: n,
             ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
             interpretNumericEntities:
                 "boolean" == typeof e.interpretNumericEntities
                     ? e.interpretNumericEntities
-                    : s.interpretNumericEntities,
-            parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : s.parameterLimit,
+                    : a.interpretNumericEntities,
+            parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : a.parameterLimit,
             parseArrays: !1 !== e.parseArrays,
-            plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : s.plainObjects,
-            strictDepth: "boolean" == typeof e.strictDepth ? !!e.strictDepth : s.strictDepth,
-            strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : s.strictNullHandling,
+            plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : a.plainObjects,
+            strictDepth: "boolean" == typeof e.strictDepth ? !!e.strictDepth : a.strictDepth,
+            strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : a.strictNullHandling,
             throwOnLimitExceeded: "boolean" == typeof e.throwOnLimitExceeded && e.throwOnLimitExceeded,
         };
     };
 e.exports = function (e, t) {
-    var n = p(t);
+    var n = c(t);
     if ("" === e || null == e) return n.plainObjects ? { __proto__: null } : {};
     for (
-        var i = "string" == typeof e ? d(e, n) : e,
-            a = n.plainObjects ? { __proto__: null } : {},
-            s = Object.keys(i),
+        var i = "string" == typeof e ? l(e, n) : e,
+            s = n.plainObjects ? { __proto__: null } : {},
+            a = Object.keys(i),
             o = 0;
-        o < s.length;
+        o < a.length;
         ++o
     ) {
-        var l = s[o],
-            u = f(l, i[l], n, "string" == typeof e);
-        a = r.merge(a, u, n);
+        var u = a[o],
+            _ = d(u, i[u], n, "string" == typeof e);
+        s = r.merge(s, _, n);
     }
-    return !0 === n.allowSparse ? a : r.compact(a);
+    return !0 === n.allowSparse ? s : r.compact(s);
 };

@@ -1,55 +1,59 @@
-n.d(t, { default: () => L });
+n.d(t, { default: () => U });
 var a = n(627968),
     l = n(64700),
     i = n(812729),
     r = n.n(i),
-    s = n(158954),
-    u = n(311907),
-    o = n(499979),
-    d = n(397927),
-    c = n(684013),
-    m = n(56562),
-    g = n(964486),
-    f = n(77729),
-    p = n(49463),
-    h = n(383501),
-    v = n(242286),
-    _ = n(954571),
-    y = n(220478),
-    x = n(9302),
-    A = n(41984),
-    b = n(181435),
-    N = n(78878),
-    I = n(729292),
+    s = n(189213),
+    o = n(311907),
+    u = n(499979),
+    d = n(192308),
+    c = n(568602),
+    m = n(834730),
+    g = n(691885),
+    f = n(260598),
+    p = n(684013),
+    h = n(56562),
+    _ = n(964486),
+    v = n(77729),
+    b = n(49463),
+    A = n(383501),
+    y = n(242286),
+    x = n(954571),
+    S = n(220478),
+    k = n(9302),
+    E = n(41984),
+    L = n(181435),
+    I = n(78878),
+    w = n(729292),
     G = n(833551),
-    S = n(395011),
-    E = n(127242),
-    j = n(680243),
-    k = n(554311),
-    w = n(652215),
-    T = n(985018),
-    C = n(345860);
-function D(e, t) {
+    M = n(395011),
+    C = n(127242),
+    N = n(680243),
+    R = n(554311),
+    j = n(652215),
+    D = n(985018),
+    F = n(988787);
+function T(e, t) {
     return r()(e, t);
 }
-let M = new Set([
-        m.aI.BORDERLESS_FULLSCREEN,
-        m.aI.FULLSCREEN,
-        m.aI.WINDOWED,
-        m.aI.MAXIMIZED,
-        m.aI.MINIMIZED,
-        m.aI.UNKNOWN,
+let P = new Set([
+        h.aI.BORDERLESS_FULLSCREEN,
+        h.aI.FULLSCREEN,
+        h.aI.WINDOWED,
+        h.aI.MAXIMIZED,
+        h.aI.MINIMIZED,
+        h.aI.UNKNOWN,
     ]),
     O = {
         HandleFocusChanged: (e, t) => {
-            if (!(0, b.$8)(e, "HandleFocusChanged")) return !0;
-            let n = null != t ? (S.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
+            if (!(0, L.$8)(e, "HandleFocusChanged")) return !0;
+            let n = null != t ? (M.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
                 { focusedPid: a, focusedWindowHandle: l } = e.data;
-            return null != l && null != a && a !== x.UNSET_PID && !!n.has(l) && a === t;
+            return null != l && null != a && a !== k.UNSET_PID && !!n.has(l) && a === t;
         },
         EventHook: (e, t) => {
-            if (!(0, b.$8)(e, "EventHook")) return !0;
-            let n = null != t ? (S.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
+            if (!(0, L.$8)(e, "EventHook")) return !0;
+            let n = null != t ? (M.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
             try {
                 let { receivedWindow: a, targetPid: l } = e.data;
                 if (null != a && n.has(a)) return null != l && l === t;
@@ -58,76 +62,76 @@ let M = new Set([
             }
         },
     };
-function L(e) {
-    let { onClose: t, transitionState: i, location: r, appContext: L } = e,
-        P = (0, u.bG)([v.default], () => v.default.getFocusedPID()) ?? (0, x.getPID)(),
-        R = (0, u.bG)([G.default], () => G.default.getTrackedGameByPid(P), [P]),
-        [F, U] = l.useState(null),
-        [W, B] = l.useState(""),
-        K = (0, k.tX)(),
-        [Z, q] = l.useState(K?.fullscreenType ?? R?.fullscreenType ?? null),
-        [H, z] = l.useState(K),
-        [J, X] = l.useState(!1),
-        [Q, Y] = l.useState(!1),
-        [$, V] = l.useState(!1),
+function U(e) {
+    let { onClose: t, transitionState: i, location: r, appContext: U } = e,
+        q = (0, o.bG)([y.default], () => y.default.getFocusedPID()) ?? (0, k.getPID)(),
+        W = (0, o.bG)([G.default], () => G.default.getTrackedGameByPid(q), [q]),
+        [B, z] = l.useState(null),
+        [X, Z] = l.useState(""),
+        H = (0, R.tX)(),
+        [K, V] = l.useState(H?.fullscreenType ?? W?.fullscreenType ?? null),
+        [J, Q] = l.useState(H),
+        [Y, $] = l.useState(!1),
+        [ee, et] = l.useState(!1),
+        [en, ea] = l.useState(!1),
         {
-            nativeState: ee,
-            breadcrumbs: [et],
+            nativeState: el,
+            breadcrumbs: [ei],
         } =
-            ((0, g.Ay)(
+            ((0, _.Ay)(
                 () => (
-                    c.A.setModuleLogging(!0),
-                    c.A.setStateDebugging(!0),
+                    p.A.setModuleLogging(!0),
+                    p.A.setStateDebugging(!0),
                     () => {
-                        c.A.setModuleLogging(!1), c.A.setStateDebugging(!1);
+                        p.A.setModuleLogging(!1), p.A.setStateDebugging(!1);
                     }
                 ),
             ),
-            (0, u.bG)(
-                [E.A],
-                () => ({ nativeState: E.A.getDebuggingState(), breadcrumbs: E.A.getOverlayLoggingBreadcrumbs() }),
+            (0, o.bG)(
+                [C.A],
+                () => ({ nativeState: C.A.getDebuggingState(), breadcrumbs: C.A.getOverlayLoggingBreadcrumbs() }),
                 [],
-                D,
+                T,
             )),
-        en = l.useMemo(() => {
+        er = l.useMemo(() => {
             let e = {
-                game_crashes_occurred: T.t["1UWmCV"],
-                poor_performance: T.t["4owu+4"],
-                overlay_unresponsive: T.t.Q8Z0xo,
-                keybindings_not_working: T.t.UnzaZs,
-                alt_tabbing_issues: T.t["/sG9Sf"],
-                game_not_interactable: T.t["+18gq6"],
-                game_forced_minimized: T.t.dabM8C,
-                other: T.t["UhbPA+"],
+                game_crashes_occurred: D.t["1UWmCV"],
+                poor_performance: D.t["4owu+4"],
+                overlay_unresponsive: D.t.Q8Z0xo,
+                keybindings_not_working: D.t.UnzaZs,
+                alt_tabbing_issues: D.t["/sG9Sf"],
+                game_not_interactable: D.t["+18gq6"],
+                game_forced_minimized: D.t.dabM8C,
+                other: D.t["UhbPA+"],
             };
-            return Object.keys(e).map((t) => ({ id: t, label: T.intl.string(e[t]), value: t }));
+            return Object.keys(e).map((t) => ({ id: t, label: D.intl.string(e[t]), value: t }));
         }, []),
-        ea = l.useMemo(() => {
+        es = l.useMemo(() => {
             let e = {
-                [m.aI.FULLSCREEN]: T.t.AjBsPe,
-                [m.aI.WINDOWED]: T.t["0oYq2i"],
-                [m.aI.BORDERLESS_FULLSCREEN]: T.t.NwNvjf,
-                [m.aI.MINIMIZED]: T.t.Wypflu,
-                [m.aI.MAXIMIZED]: T.t["MUX2+G"],
-                [m.aI.UNKNOWN]: T.t.QPOep8,
+                [h.aI.FULLSCREEN]: D.t.AjBsPe,
+                [h.aI.WINDOWED]: D.t["0oYq2i"],
+                [h.aI.BORDERLESS_FULLSCREEN]: D.t.NwNvjf,
+                [h.aI.MINIMIZED]: D.t.Wypflu,
+                [h.aI.MAXIMIZED]: D.t["MUX2+G"],
+                [h.aI.UNKNOWN]: D.t.QPOep8,
             };
-            return [...M].map((t) => ({ id: t.toString(), label: T.intl.string(e[t]), value: t }));
+            return [...P].map((t) => ({ id: t.toString(), label: D.intl.string(e[t]), value: t }));
         }, []),
-        el = async () => {
-            Y(!0), await (0, o.yy)(500), Y(!1);
+        eo = async () => {
+            et(!0), await (0, u.yy)(500), et(!1);
         },
-        ei = async () => {
-            if (null === F && 0 === W.length) {
-                V(!0), el();
+        eu = async () => {
+            if (null === B && 0 === X.length) {
+                ea(!0), eo();
                 return;
             }
-            X(!0);
-            let e = v.default.getFocusedPID() ?? (0, x.getPID)(),
+            $(!0);
+            let e = y.default.getFocusedPID() ?? (0, k.getPID)(),
                 l = G.default.getTrackedGameByPid(e),
-                i = S.A.getPopoutInitializationStages(),
-                s = l?.overlayMethod != null ? A.Ue[l.overlayMethod] : null,
-                u = l?.fullscreenType ?? m.aI.UNKNOWN,
-                c = (0, b.tn)(et, (t) => {
+                i = M.A.getPopoutInitializationStages(),
+                s = l?.overlayMethod != null ? E.Ue[l.overlayMethod] : null,
+                o = l?.fullscreenType ?? h.aI.UNKNOWN,
+                c = (0, L.tn)(ei, (t) => {
                     for (let n of Object.values(O))
                         try {
                             if (!n(t, e)) return !1;
@@ -136,9 +140,9 @@ function L(e) {
                         }
                     return !0;
                 }),
-                g = N.A.getRecentActions(10),
-                I = y.A.getRecentExperimentBuckets(p.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
-                E =
+                m = I.A.getRecentActions(10),
+                g = S.A.getRecentExperimentBuckets(b.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+                f =
                     l?.fullscreenHistory == null
                         ? null
                         : Object.entries(l.fullscreenHistory)
@@ -149,131 +153,131 @@ function L(e) {
                               })
                               .map((e) => {
                                   let [t, n] = e;
-                                  return `${t}:${m.aI[n]}`;
+                                  return `${t}:${h.aI[n]}`;
                               }),
-                k = {
-                    issue_category: F,
-                    details: W,
+                p = {
+                    issue_category: B,
+                    details: X,
                     overlay_render_method: s,
-                    hardware_display_count: (await f.A?.hardware?.getDisplayCount?.()) ?? null,
-                    detected_fullscreen_type: m.aI[u],
+                    hardware_display_count: (await v.A?.hardware?.getDisplayCount?.()) ?? null,
+                    detected_fullscreen_type: h.aI[o],
                     application_id: l?.applicationId,
                     application_name: l?.gameName,
                     game_pid: l?.pid,
-                    recent_overlay_flux_actions: g,
+                    recent_overlay_flux_actions: m,
                     overlay_module_state: l?.state,
-                    overlay_native_state: JSON.stringify(ee),
+                    overlay_native_state: JSON.stringify(el),
                     overlay_module_oop_initialization_state: JSON.stringify(i),
-                    overlay_module_error_message: j.A.errorMessage,
+                    overlay_module_error_message: N.A.errorMessage,
                     overlay_module_breadcrumbs: JSON.stringify(c),
-                    fullscreen_history_for_pid: E,
-                    media_session_id: h.A.getMediaSessionId(),
-                    recent_experiment_buckets: JSON.stringify(I),
+                    fullscreen_history_for_pid: f,
+                    media_session_id: A.A.getMediaSessionId(),
+                    recent_experiment_buckets: JSON.stringify(g),
                     location: r,
                 };
-            await _.default.track(w.HAw.OVERLAY_BUG_REPORT, k),
-                await (0, o.yy)(1e3),
-                X(!1),
+            await x.default.track(j.HAw.OVERLAY_BUG_REPORT, p),
+                await (0, u.yy)(1e3),
+                $(!1),
                 t?.(),
-                (0, d.mMO)(
+                (0, d.openModalLazy)(
                     async () => {
                         let { default: e } = await n.e("36058").then(n.bind(n, 823777));
                         return (t) => (0, a.jsx)(e, { ...t });
                     },
-                    { contextKey: (0, d.TId)(L) },
+                    { contextKey: (0, d.modalContextFromAppContext)(U) },
                 );
         };
     return (
-        (0, g.Ay)(() => {
-            _.default.track(w.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: r });
+        (0, _.Ay)(() => {
+            x.default.track(j.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: r });
         }),
         (0, a.jsx)(s.Modal, {
             transitionState: i,
-            title: T.intl.string(T.t.OKmenM),
+            title: D.intl.string(D.t.OKmenM),
             actions: [
-                { text: T.intl.string(T.t["ETE/oC"]), onClick: t, variant: "secondary", disabled: J },
-                { text: T.intl.string(T.t.geKm7t), onClick: ei, variant: "primary", loading: J },
+                { text: D.intl.string(D.t["ETE/oC"]), onClick: t, variant: "secondary", disabled: Y },
+                { text: D.intl.string(D.t.geKm7t), onClick: eu, variant: "primary", loading: Y },
             ],
             onClose: t,
             children: (0, a.jsxs)("div", {
-                className: C.jE,
+                className: F.jE,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: C.DB,
+                        className: F.DB,
                         children: [
-                            (0, a.jsx)(d.bfh, {
-                                isShaking: Q,
+                            (0, a.jsx)(c.b, {
+                                isShaking: ee,
                                 intensity: 1.5,
-                                children: (0, a.jsx)(d.Text, {
+                                children: (0, a.jsx)(m.E, {
                                     variant: "text-md/medium",
-                                    color: $ ? "text-feedback-critical" : "text-strong",
-                                    children: T.intl.string(T.t.Trx7eJ),
+                                    color: en ? "text-feedback-critical" : "text-strong",
+                                    children: D.intl.string(D.t.Trx7eJ),
                                 }),
                             }),
-                            (0, a.jsx)(d.l6P, {
-                                label: T.intl.string(T.t.mKTzjI),
+                            (0, a.jsx)(g.l, {
+                                label: D.intl.string(D.t.mKTzjI),
                                 hideLabel: !0,
-                                placeholder: T.intl.string(T.t.mKTzjI),
-                                options: en,
-                                value: F,
+                                placeholder: D.intl.string(D.t.mKTzjI),
+                                options: er,
+                                value: B,
                                 onSelectionChange: (e) => {
-                                    U(e), V(!1), Y(!1);
+                                    z(e), ea(!1), et(!1);
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            $ &&
-                                (0, a.jsx)(d.Text, {
+                            en &&
+                                (0, a.jsx)(m.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
-                                    children: T.intl.string(T.t["5cqa9J"]),
+                                    children: D.intl.string(D.t["5cqa9J"]),
                                 }),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: C.DB,
+                        className: F.DB,
                         children: [
-                            (0, a.jsx)(d.Text, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: T.intl.string(T.t.iZufAY),
+                                children: D.intl.string(D.t.iZufAY),
                             }),
-                            (0, a.jsx)(d.fs1, {
+                            (0, a.jsx)(f.f, {
                                 autosize: !0,
-                                value: W,
+                                value: X,
                                 maxLength: 1e3,
                                 showCharacterCount: !1,
-                                placeholder: T.intl.string(T.t["68mJXW"]),
-                                onChange: B,
+                                placeholder: D.intl.string(D.t["68mJXW"]),
+                                onChange: Z,
                             }),
-                            (0, a.jsx)(d.Text, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: T.intl.string(T.t.TzkM2a),
+                                children: D.intl.string(D.t.TzkM2a),
                             }),
                         ],
                     }),
-                    (0, a.jsx)("div", { className: C.hr }),
+                    (0, a.jsx)("div", { className: F.hr }),
                     (0, a.jsxs)("div", {
-                        className: C.DB,
+                        className: F.DB,
                         children: [
-                            (0, a.jsx)(d.Text, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: T.intl.string(T.t["8+SU+a"]),
+                                children: D.intl.string(D.t["8+SU+a"]),
                             }),
-                            (0, a.jsx)(I.A, {
-                                selectedGame: H,
-                                setSelectedGame: z,
-                                placeholder: T.intl.string(T.t.b1IW2e),
+                            (0, a.jsx)(w.A, {
+                                selectedGame: J,
+                                setSelectedGame: Q,
+                                placeholder: D.intl.string(D.t.b1IW2e),
                             }),
-                            (0, a.jsx)(d.l6P, {
-                                label: T.intl.string(T.t.IjlqrF),
+                            (0, a.jsx)(g.l, {
+                                label: D.intl.string(D.t.IjlqrF),
                                 hideLabel: !0,
-                                placeholder: T.intl.string(T.t.IjlqrF),
-                                options: ea,
-                                value: Z,
-                                onSelectionChange: q,
+                                placeholder: D.intl.string(D.t.IjlqrF),
+                                options: es,
+                                value: K,
+                                onSelectionChange: V,
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),

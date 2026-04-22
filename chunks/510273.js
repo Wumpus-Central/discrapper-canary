@@ -1,88 +1,89 @@
-r.r(t), r.d(t, { default: () => R });
-var i = r(627968),
-    a = r(64700),
-    s = r(517738),
-    l = r(575593),
-    n = r(334279),
-    d = r(417597),
-    u = r(397927),
-    c = r(242874),
-    o = r(75825),
-    h = r(287809),
-    m = r(512213),
-    f = r(139136),
-    g = r(846957),
-    p = r(929283),
-    j = r(245068),
-    x = r(158216),
-    y = r(788868),
-    A = r(985018),
-    _ = r(416408),
-    v = r(743102),
-    N = r(241988);
-let S = (e) => {
-        let { product: t, itemConsumed: r, forCollectedModal: a } = e,
-            s = (0, d.bG)([h.default], () => h.default.getCurrentUser());
-        if (null == s) return null;
-        let [x] = t.items;
-        if (t.type === l.R.PROFILE_EFFECT)
-            return (0, i.jsx)("div", {
-                className: _.NM,
-                children: (0, i.jsx)(f.A, {
-                    skuId: x.skuId,
-                    delayProfileEffectIntro: a,
-                    withScaleAnimation: a,
+a.r(t), a.d(t, { default: () => N });
+var r = a(627968),
+    n = a(64700),
+    l = a(517738),
+    s = a(575593),
+    i = a(334279),
+    c = a(417597),
+    d = a(778712),
+    o = a(717421),
+    u = a(242874),
+    _ = a(75825),
+    f = a(287809),
+    E = a(512213),
+    A = a(139136),
+    h = a(846957),
+    p = a(929283),
+    m = a(245068),
+    I = a(158216),
+    b = a(788868),
+    g = a(985018),
+    T = a(416408),
+    R = a(743102),
+    S = a(241988);
+let v = (e) => {
+        let { product: t, itemConsumed: a, forCollectedModal: n } = e,
+            l = (0, c.bG)([f.default], () => f.default.getCurrentUser());
+        if (null == l) return null;
+        let [o] = t.items;
+        if (t.type === s.R.PROFILE_EFFECT)
+            return (0, r.jsx)("div", {
+                className: T.NM,
+                children: (0, r.jsx)(A.A, {
+                    skuId: o.skuId,
+                    delayProfileEffectIntro: n,
+                    withScaleAnimation: n,
                     removeSetHeight: !0,
                 }),
             });
-        if (t.type === l.R.AVATAR_DECORATION)
-            return (0, i.jsx)(p.i, { item: x, user: s, avatarSize: u._3J.SIZE_120, isHighlighted: !0 });
-        if (t.type === l.R.NAMEPLATE)
-            return (0, i.jsx)("div", {
-                className: _.qF,
-                children: (0, i.jsx)(m.A, { nameplate: x, user: s, nameplatePreviewSize: "large", isHighlighted: !0 }),
+        if (t.type === s.R.AVATAR_DECORATION)
+            return (0, r.jsx)(p.i, { item: o, user: l, avatarSize: d._3.SIZE_120, isHighlighted: !0 });
+        if (t.type === s.R.NAMEPLATE)
+            return (0, r.jsx)("div", {
+                className: T.qF,
+                children: (0, r.jsx)(E.A, { nameplate: o, user: l, nameplatePreviewSize: "large", isHighlighted: !0 }),
             });
-        if (t.type === l.R.PROFILE_FRAME)
-            return (0, i.jsx)(o.A, {
-                giftStyle: y.o2.STANDARD_BOX,
-                defaultAnimationState: c.oA.ACTION,
-                idleAnimationState: c.oA.LOOP,
+        if (t.type === s.R.PROFILE_FRAME)
+            return (0, r.jsx)(_.A, {
+                giftStyle: b.o2.STANDARD_BOX,
+                defaultAnimationState: u.oA.ACTION,
+                idleAnimationState: u.oA.LOOP,
             });
-        if (t.type === l.R.BUNDLE)
-            return (0, i.jsx)("div", {
-                className: _.hT,
-                children: (0, i.jsx)(j.X, {
+        if (t.type === s.R.BUNDLE)
+            return (0, r.jsx)("div", {
+                className: T.hT,
+                children: (0, r.jsx)(m.X, {
                     product: t,
-                    user: s,
+                    user: l,
                     isHighlighted: !0,
-                    forCollectedModal: a,
-                    staticPreviewClassName: _.Nq,
+                    forCollectedModal: n,
+                    staticPreviewClassName: T.Nq,
                 }),
             });
-        if (t.type === l.R.EXTERNAL_SKU) {
-            if (Object.values(n.j).includes(t.skuId))
-                if (r) return (0, i.jsx)("img", { src: N, alt: A.intl.string(A.t.t0xkSB), style: { width: "100%" } });
-                else return (0, i.jsx)("img", { src: v, alt: A.intl.string(A.t.g5W1g8) });
-            return (0, i.jsx)(g.B, { product: t });
+        if (t.type === s.R.EXTERNAL_SKU) {
+            if (Object.values(i.j).includes(t.skuId))
+                if (a) return (0, r.jsx)("img", { src: S, alt: g.intl.string(g.t.t0xkSB), style: { width: "100%" } });
+                else return (0, r.jsx)("img", { src: R, alt: g.intl.string(g.t.g5W1g8) });
+            return (0, r.jsx)(h.B, { product: t });
         }
         return null;
     },
-    E = (e) => {
-        let { reducedMotion: t, displayOptions: r } = e,
-            [l, n] = a.useState(!1),
-            d = (0, u.zhh)({
+    O = (e) => {
+        let { reducedMotion: t, displayOptions: a } = e,
+            [s, i] = n.useState(!1),
+            c = (0, o.z)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
-                onRest: () => setTimeout(() => n(!0), 100),
+                onRest: () => setTimeout(() => i(!0), 100),
             }),
-            c = (0, u.zhh)({
+            d = (0, o.z)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
-                reverse: l,
+                reverse: s,
             }),
-            o = (0, u.zhh)(
+            u = (0, o.z)(
                 {
                     from: { transform: "translateX(50%)", right: "50%", opacity: 1 },
                     to: { transform: "translateX(50%)", right: "50%", opacity: 0 },
@@ -91,18 +92,18 @@ let S = (e) => {
                 },
                 "animate-always",
             );
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(s.animated.div, { className: _.VH, style: d, children: (0, i.jsx)(S, { ...e }) }),
-                (0, i.jsx)(s.animated.div, {
-                    className: _.VH,
-                    style: t ? o : c,
-                    children: (0, i.jsx)("img", { src: r.getSrc(), style: r.style, alt: "", "aria-hidden": "true" }),
+                (0, r.jsx)(l.animated.div, { className: T.VH, style: c, children: (0, r.jsx)(v, { ...e }) }),
+                (0, r.jsx)(l.animated.div, {
+                    className: T.VH,
+                    style: t ? u : d,
+                    children: (0, r.jsx)("img", { src: a.getSrc(), style: a.style, alt: "", "aria-hidden": "true" }),
                 }),
             ],
         });
     };
-function R(e) {
-    let t = (0, x.K9)(e.product.categorySkuId);
-    return null != t ? (0, i.jsx)(E, { ...e, displayOptions: t }) : (0, i.jsx)(S, { ...e });
+function N(e) {
+    let t = (0, I.K9)(e.product.categorySkuId);
+    return null != t ? (0, r.jsx)(O, { ...e, displayOptions: t }) : (0, r.jsx)(v, { ...e });
 }

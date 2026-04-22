@@ -1,139 +1,143 @@
-n.d(e, { default: () => S });
-var a = n(627968),
-    i = n(64700),
-    l = n(158954),
-    o = n(311907),
-    r = n(421380),
-    s = n(397927),
-    u = n(262577),
-    c = n(964486),
-    _ = n(688810),
-    d = n(504049),
-    A = n(226698),
-    E = n(734057),
-    T = n(287809),
-    D = n(954571),
-    m = n(562153),
-    C = n(200700),
-    g = n(652215),
-    O = n(985018),
-    h = n(641131),
-    I = n(471053);
-function M(t) {
+a.d(t, { default: () => I });
+var l = a(627968),
+    n = a(64700),
+    r = a(189213),
+    i = a(311907),
+    o = a(135714),
+    s = a(834730),
+    u = a(691540),
+    d = a(857250),
+    c = a(97483),
+    g = a(150934),
+    m = a(331322),
+    b = a(534514),
+    h = a(260598),
+    p = a(262577),
+    x = a(964486),
+    y = a(688810),
+    _ = a(504049),
+    f = a(226698),
+    v = a(734057),
+    C = a(287809),
+    A = a(954571),
+    D = a(562153),
+    j = a(200700),
+    O = a(652215),
+    w = a(985018),
+    E = a(221314),
+    T = a(213808);
+function N(e) {
     return {
-        value: t,
+        value: e,
         get label() {
-            return (0, C.getFriendlyDurationString)(t);
+            return (0, j.getFriendlyDurationString)(e);
         },
     };
 }
-let R = [
-    M(C.DisableCommunicationDuration.DURATION_60_SEC),
-    M(C.DisableCommunicationDuration.DURATION_5_MIN),
-    M(C.DisableCommunicationDuration.DURATION_10_MIN),
-    M(C.DisableCommunicationDuration.DURATION_1_HOUR),
-    M(C.DisableCommunicationDuration.DURATION_1_DAY),
-    M(C.DisableCommunicationDuration.DURATION_1_WEEK),
+let S = [
+    N(j.DisableCommunicationDuration.DURATION_60_SEC),
+    N(j.DisableCommunicationDuration.DURATION_5_MIN),
+    N(j.DisableCommunicationDuration.DURATION_10_MIN),
+    N(j.DisableCommunicationDuration.DURATION_1_HOUR),
+    N(j.DisableCommunicationDuration.DURATION_1_DAY),
+    N(j.DisableCommunicationDuration.DURATION_1_WEEK),
 ];
-function S(t) {
-    let { guildId: e, userId: n, anaylticsLocations: M, transitionState: S, onClose: N, modReportId: b } = t,
-        { analyticsLocations: p } = (0, _.Ay)(),
-        U = M?.[0] ?? p?.[0] ?? null,
-        f = (0, o.bG)([T.default], () => T.default.getUser(n), [n]),
-        [y, k] = i.useState(C.DisableCommunicationDuration.DURATION_60_SEC),
-        [v, x] = i.useState(""),
-        [H, B] = i.useState(!1),
-        [j, L] = i.useState(!1),
-        w = (0, o.bG)([E.A], () => E.A.getChannel(b)?.isArchivedThread()),
-        F = (0, d.$9)(e, { location: U, targetUserId: n }),
-        P = i.useCallback(async () => {
-            if (null != f) {
-                B(!0);
+function I(e) {
+    let { guildId: t, userId: a, anaylticsLocations: N, transitionState: I, onClose: R, modReportId: M } = e,
+        { analyticsLocations: P } = (0, y.Ay)(),
+        k = N?.[0] ?? P?.[0] ?? null,
+        U = (0, i.bG)([C.default], () => C.default.getUser(a), [a]),
+        [F, B] = n.useState(j.DisableCommunicationDuration.DURATION_60_SEC),
+        [z, L] = n.useState(""),
+        [V, $] = n.useState(!1),
+        [H, W] = n.useState(!1),
+        G = (0, i.bG)([v.A], () => v.A.getChannel(M)?.isArchivedThread()),
+        K = (0, _.$9)(t, { location: k, targetUserId: a }),
+        X = n.useCallback(async () => {
+            if (null != U) {
+                $(!0);
                 try {
-                    await u.A.setCommunicationDisabledDuration(e, n, y, v, U, b),
-                        j && null != b && A.A.resolveFlag(b),
-                        F(d.Nj.TIMEOUT),
-                        (0, s.showToast)(
-                            (0, s.createToast)(
-                                O.intl.formatToPlainString(O.t.O9C3Nt, { user: m.Ay.getName(e, null, f) }),
-                                s.ToastType.SUCCESS,
+                    await p.A.setCommunicationDisabledDuration(t, a, F, z, k, M),
+                        H && null != M && f.A.resolveFlag(M),
+                        K(_.Nj.TIMEOUT),
+                        (0, u.P0)(
+                            (0, d.o)(
+                                w.intl.formatToPlainString(w.t.O9C3Nt, { user: D.Ay.getName(t, null, U) }),
+                                c.Ck.SUCCESS,
                             ),
                         ),
-                        N();
-                } catch (t) {
-                    (0, s.showToast)((0, s.createToast)(O.intl.string(O.t.epyCuh), s.ToastType.FAILURE));
+                        R();
+                } catch (e) {
+                    (0, u.P0)((0, d.o)(w.intl.string(w.t.epyCuh), c.Ck.FAILURE));
                 } finally {
-                    B(!1);
+                    $(!1);
                 }
             }
-        }, [e, f, n, N, y, v, U, F, b, j]);
-    return ((0, c.Ay)(() => {
-        null != f && D.default.track(g.HAw.OPEN_MODAL, { type: C.aZ, guild_id: e, other_user_id: f.id });
+        }, [t, U, a, R, F, z, k, K, M, H]);
+    return ((0, x.Ay)(() => {
+        null != U && A.default.track(O.HAw.OPEN_MODAL, { type: j.aZ, guild_id: t, other_user_id: U.id });
     }),
-    i.useEffect(() => {
-        (null == f || null == e) && N();
-    }, [e, f, N]),
-    null == f || null == e)
+    n.useEffect(() => {
+        (null == U || null == t) && R();
+    }, [t, U, R]),
+    null == U || null == t)
         ? null
-        : (0, a.jsx)(l.Modal, {
-              transitionState: S,
-              title: O.intl.formatToPlainString(O.t.OhsOy0, { user: m.Ay.getName(e, null, f) }),
-              subtitle: O.intl.format(O.t.Ns83GT, { helpdeskArticle: C.MO }),
+        : (0, l.jsx)(r.Modal, {
+              transitionState: I,
+              title: w.intl.formatToPlainString(w.t.OhsOy0, { user: D.Ay.getName(t, null, U) }),
+              subtitle: w.intl.format(w.t.Ns83GT, { helpdeskArticle: j.MO }),
               actions: [
-                  { text: O.intl.string(O.t["ETE/oC"]), onClick: N, variant: "secondary" },
-                  { text: O.intl.string(O.t.MlPTIi), onClick: P, loading: H },
+                  { text: w.intl.string(w.t["ETE/oC"]), onClick: R, variant: "secondary" },
+                  { text: w.intl.string(w.t.MlPTIi), onClick: X, loading: V },
               ],
               actionBarInput:
-                  null == b || w
+                  null == M || G
                       ? void 0
-                      : (0, a.jsx)(s.Checkbox, {
-                            checked: j,
-                            onChange: (t) => L(t),
+                      : (0, l.jsx)(g.S, {
+                            checked: H,
+                            onChange: (e) => W(e),
                             labelType: "secondary",
-                            label: O.intl.string(h.default["8yIKem"]),
+                            label: w.intl.string(E.default["8yIKem"]),
                         }),
-              onClose: N,
-              children: (0, a.jsxs)(s.BJc, {
+              onClose: R,
+              children: (0, l.jsxs)(m.B, {
                   gap: 16,
                   children: [
-                      (0, a.jsxs)(s.BJc, {
+                      (0, l.jsxs)(m.B, {
                           gap: 8,
                           children: [
-                              (0, a.jsx)(s.Heading, {
+                              (0, l.jsx)(b.D, {
                                   variant: "heading-sm/semibold",
-                                  children: O.intl.string(O.t["9XsExm"]),
+                                  children: w.intl.string(w.t["9XsExm"]),
                               }),
-                              (0, a.jsx)(r.e2, {
-                                  buttons: R.map((t) =>
-                                      (function (t, e, n) {
-                                          let { value: i, label: l } = t;
+                              (0, l.jsx)(o.A, {
+                                  buttons: S.map((e) =>
+                                      (function (e, t, a) {
+                                          let { value: n, label: r } = e;
                                           return {
-                                              content: (0, a.jsx)(s.Text, {
+                                              content: (0, l.jsx)(s.E, {
                                                   variant: "text-sm/semibold",
-                                                  className: e ? I.u$ : I.nM,
-                                                  children: l,
+                                                  className: t ? T.u$ : T.nM,
+                                                  children: r,
                                               }),
-                                              className: e ? I.XZ : I.aK,
-                                              onClick: () => n(i),
+                                              className: t ? T.XZ : T.aK,
+                                              onClick: () => a(n),
                                           };
-                                      })(t, t.value === y, k),
+                                      })(e, e.value === F, B),
                                   ),
                               }),
                           ],
                       }),
-                      (0, a.jsxs)(s.BJc, {
+                      (0, l.jsxs)(m.B, {
                           gap: 8,
                           children: [
-                              (0, a.jsx)(s.Heading, {
-                                  variant: "heading-sm/semibold",
-                                  children: O.intl.string(O.t.ewHW15),
-                              }),
-                              (0, a.jsx)(s.fs1, {
-                                  value: v,
-                                  onChange: (t) => x(t),
-                                  placeholder: O.intl.string(O.t.GakiH1),
+                              (0, l.jsx)(b.D, { variant: "heading-sm/semibold", children: w.intl.string(w.t.ewHW15) }),
+                              (0, l.jsx)(h.f, {
+                                  value: z,
+                                  onChange: (e) => L(e),
+                                  placeholder: w.intl.string(w.t.GakiH1),
                                   rows: 4,
-                                  maxLength: C.hl,
+                                  maxLength: j.hl,
                               }),
                           ],
                       }),

@@ -1,14 +1,12 @@
 "use strict";
-n.d(t, { I: () => i, j: () => r });
-var r = (function (e) {
-    return (
-        (e.PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
-        (e.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
-        (e.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
-        e
-    );
-})({});
-let i = {
+n.d(t, { I: () => s, j: () => i });
+var r,
+    i =
+        (((r = {}).PREMIUM_TIER_2_1_HOUR = "1271583180566036480"),
+        (r.PREMIUM_TIER_2_1_DAY = "1298745361602449479"),
+        (r.PREMIUM_TIER_2_3_DAY = "1333912750274904064"),
+        r);
+let s = {
     ALL: new Set(["1271583180566036480", "1298745361602449479", "1333912750274904064"]),
     ACTIVE_FRACTIONAL_PREMIUM_SKUS: new Set(["1271583180566036480", "1298745361602449479", "1333912750274904064"]),
 };

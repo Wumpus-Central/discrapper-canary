@@ -1,71 +1,73 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
-    r = n(397927),
-    s = n(554375),
-    o = n(212245),
-    d = n(822123),
-    c = n(508675),
-    u = n(7584),
-    g = n(60587),
-    A = n(631576),
-    p = n(891090),
-    m = n(256449),
-    f = n(679382),
+    r = n(477782),
+    s = n(505930),
+    o = n(27232),
+    d = n(554375),
+    c = n(212245),
+    u = n(822123),
+    g = n(508675),
+    A = n(7584),
+    h = n(60587),
+    m = n(631576),
+    f = n(891090),
+    p = n(256449),
+    E = n(679382),
     y = n(378058),
-    h = n(652215),
-    E = n(985018);
+    v = n(652215),
+    _ = n(985018);
 function S(e) {
-    return u.Ay.getByName(e.replace(/(^:|:$)/g, ""));
+    return A.Ay.getByName(e.replace(/(^:|:$)/g, ""));
 }
-function _(e) {
-    let { type: t, id: n, name: _, isInExpressionPicker: b = !1 } = e,
-        { location: v } = (0, o.p)(),
-        I = l.useMemo(() => ({ ...v, section: b ? h.JJy.EXPRESSION_PICKER : h.JJy.CONTEXT_MENU }), [v, b]),
-        T = (0, m.ln)(),
-        x = (0, a.bG)([f.A], () => (t === g.g.STICKER && null != n ? f.A.getStickerById(n) : null)),
-        D = null != x && T.includes(x.id),
-        j = (0, a.bG)([c.Ay], () => {
-            if (t === g.g.EMOJI) {
-                if (null != n) return c.Ay.getDisambiguatedEmojiContext().getById(n);
-                else if (null != _) return S(_) ?? S(u.Ay.convertSurrogateToName(_));
+function I(e) {
+    let { type: t, id: n, name: I, isInExpressionPicker: x = !1 } = e,
+        { location: b } = (0, c.p)(),
+        T = l.useMemo(() => ({ ...b, section: x ? v.JJy.EXPRESSION_PICKER : v.JJy.CONTEXT_MENU }), [b, x]),
+        M = (0, p.ln)(),
+        C = (0, a.bG)([E.A], () => (t === h.g.STICKER && null != n ? E.A.getStickerById(n) : null)),
+        D = null != C && M.includes(C.id),
+        j = (0, a.bG)([g.Ay], () => {
+            if (t === h.g.EMOJI) {
+                if (null != n) return g.Ay.getDisambiguatedEmojiContext().getById(n);
+                else if (null != I) return S(I) ?? S(A.Ay.convertSurrogateToName(I));
             }
         }),
-        M = (0, d.O7)(null, j);
-    return null != x && t === g.g.STICKER
-        ? (0, y.Xw)(x) && !(0, y.Y4)(x)
+        N = (0, u.O7)(null, j);
+    return null != C && t === h.g.STICKER
+        ? (0, y.Xw)(C) && !(0, y.Y4)(C)
             ? null
             : D
-              ? (0, i.jsx)(r.Drp, {
+              ? (0, i.jsx)(r.Dr, {
                     id: "unfavorite",
-                    action: () => (0, A.vr)(x.id),
-                    label: E.intl.string(E.t.XhzKyF),
-                    leadingAccessory: { type: "icon", icon: r.yA2 },
+                    action: () => (0, m.vr)(C.id),
+                    label: _.intl.string(_.t.XhzKyF),
+                    leadingAccessory: { type: "icon", icon: s.y },
                 })
-              : (0, i.jsx)(r.Drp, {
+              : (0, i.jsx)(r.Dr, {
                     id: "favorite",
                     action: () => {
-                        (0, p.Dt)({ sticker: x, location: { ...I, object: h.ZSU.STICKER } }), (0, A.uK)(x?.id);
+                        (0, f.Dt)({ sticker: C, location: { ...T, object: v.ZSU.STICKER } }), (0, m.uK)(C?.id);
                     },
-                    label: E.intl.string(E.t.kWmiPW),
-                    leadingAccessory: { type: "icon", icon: r.Gg5 },
+                    label: _.intl.string(_.t.kWmiPW),
+                    leadingAccessory: { type: "icon", icon: o.G },
                 })
-        : null != j && t === g.g.EMOJI
-          ? M
-              ? (0, i.jsx)(r.Drp, {
+        : null != j && t === h.g.EMOJI
+          ? N
+              ? (0, i.jsx)(r.Dr, {
                     id: "unfavorite",
-                    action: () => (0, s.Sw)(j),
-                    label: E.intl.string(E.t.Ay49KA),
-                    leadingAccessory: { type: "icon", icon: r.yA2 },
+                    action: () => (0, d.Sw)(j),
+                    label: _.intl.string(_.t.Ay49KA),
+                    leadingAccessory: { type: "icon", icon: s.y },
                 })
-              : (0, i.jsx)(r.Drp, {
+              : (0, i.jsx)(r.Dr, {
                     id: "favorite",
                     action: () => {
-                        (0, d.C5)({ emoji: j, location: { ...I, object: h.ZSU.EMOJI } }), (0, s.V4)(j);
+                        (0, u.C5)({ emoji: j, location: { ...T, object: v.ZSU.EMOJI } }), (0, d.V4)(j);
                     },
-                    label: E.intl.string(E.t.nNsr67),
-                    leadingAccessory: { type: "icon", icon: r.Gg5 },
+                    label: _.intl.string(_.t.nNsr67),
+                    leadingAccessory: { type: "icon", icon: o.G },
                 })
           : void 0;
 }

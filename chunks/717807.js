@@ -1,31 +1,31 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    a = n(311907),
-    l = n(988506),
-    r = n(342494),
-    s = n(793574),
-    o = n(22007),
-    d = n(287809),
-    c = n(927578),
-    u = n(161319),
-    A = n(385327),
-    h = n(788868),
-    _ = n(652215),
-    m = n(985018),
-    g = n(174872);
-let p = (e) => {
-    let { targetElementRef: t } = e,
-        n = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
-        p = !1 === c.Ay.isPremiumExactly(n, h.PremiumTypes.TIER_2),
-        E =
-            n?.premiumState?.premiumSource === l.fE.FRACTIONAL_NITRO &&
-            n?.premiumState.premiumSubscriptionType !== l.jK.TIER_2,
-        I = !0 === (null == n || p || E) ? m.intl.string(m.t.E1ONHQ) : m.intl.string(m.t.CMKNhr);
-    return (0, i.jsx)(r.AM, {
-        targetElementRef: t,
+a.d(l, { A: () => w });
+var t = a(627968),
+    s = a(311907),
+    i = a(988506),
+    n = a(265486),
+    c = a(793574),
+    h = a(22007),
+    r = a(287809),
+    o = a(927578),
+    d = a(161319),
+    v = a(385327),
+    g = a(788868),
+    p = a(652215),
+    m = a(985018),
+    f = a(174872);
+let w = (e) => {
+    let { targetElementRef: l } = e,
+        a = (0, s.bG)([r.default], () => r.default.getCurrentUser()),
+        w = !1 === o.Ay.isPremiumExactly(a, g.PremiumTypes.TIER_2),
+        x =
+            a?.premiumState?.premiumSource === i.fE.FRACTIONAL_NITRO &&
+            a?.premiumState.premiumSubscriptionType !== i.jK.TIER_2,
+        u = !0 === (null == a || w || x) ? m.intl.string(m.t.E1ONHQ) : m.intl.string(m.t.CMKNhr);
+    return (0, t.jsx)(n.A, {
+        targetElementRef: l,
         title: m.intl.string(m.t["V8J+16"]),
-        body: I,
-        graphic: { type: "image", src: g.A },
+        body: u,
+        graphic: { type: "image", src: f.A },
         badge: { type: "beta", variant: "expressive" },
         size: "md",
         alignmentStrategy: "edge",
@@ -36,12 +36,12 @@ let p = (e) => {
             {
                 text: m.intl.string(m.t["CDdYB/"]),
                 onClick: () => {
-                    (0, o.A)(_.BVt.NITRO_HOME),
-                        (0, u.u)({ analyticsLocations: [s.A.HOME_PAGE_PREMIUM_TAB] }),
-                        (0, A.Es)();
+                    (0, h.A)(p.BVt.NITRO_HOME),
+                        (0, d.u)({ analyticsLocations: [c.A.HOME_PAGE_PREMIUM_TAB] }),
+                        (0, v.Es)();
                 },
             },
         ],
-        onRequestClose: A.Es,
+        onRequestClose: v.Es,
     });
 };

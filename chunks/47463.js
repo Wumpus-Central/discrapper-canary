@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     RV: "subscriptionCostRow__3d62f",
     _H: "invoiceItemLabelWithIcon__3d62f",

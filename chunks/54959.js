@@ -1,87 +1,93 @@
-i.d(t, { A: () => j });
-var l = i(627968),
-    n = i(64700),
-    a = i(311907),
-    s = i(397927),
-    r = i(966327),
-    d = i(972387),
-    o = i(539895),
-    c = i(233761),
-    u = i(960736),
-    m = i(398884),
-    x = i(287809),
-    g = i(954571),
-    h = i(162284),
-    _ = i(652215),
-    p = i(985018),
-    A = i(139616);
-function j(e) {
-    let { invite: t, guild: i, className: j } = e,
-        E = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
-        { submitting: v, error: I, invite_instance_id: f } = (0, a.cf)([o.A], () => o.A.getProps()),
-        T = n.useCallback(() => {
-            d.A.acceptInvite(t, f);
-        }, [t, f]),
-        C = (0, u.uE)(),
-        N =
-            "" !== C
-                ? p.intl.format(p.t["9sWQNT"], { usernameHook: (e, t) => (0, l.jsx)("span", { children: C }, t) })
-                : p.intl.string(p.t["e/6Ogt"]),
-        y = n.useRef(null),
-        [D, S] = n.useState(!1),
-        L = n.useCallback(() => {
-            D ||
-                g.default.track(_.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                    guild_id: i.id,
-                    invite_code: t.code,
+t.d(i, { A: () => N });
+var l = t(627968),
+    s = t(64700),
+    a = t(311907),
+    n = t(683071),
+    r = t(825484),
+    d = t(821609),
+    o = t(778712),
+    c = t(265872),
+    u = t(408278),
+    h = t(625903),
+    m = t(966327),
+    _ = t(972387),
+    x = t(539895),
+    g = t(233761),
+    A = t(960736),
+    p = t(398884),
+    v = t(287809),
+    E = t(954571),
+    j = t(162284),
+    I = t(652215),
+    f = t(985018),
+    C = t(963120);
+function N(e) {
+    let { invite: i, guild: t, className: N } = e,
+        y = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
+        { submitting: T, error: D, invite_instance_id: b } = (0, a.cf)([x.A], () => x.A.getProps()),
+        L = s.useCallback(() => {
+            _.A.acceptInvite(i, b);
+        }, [i, b]),
+        R = (0, A.uE)(),
+        S =
+            "" !== R
+                ? f.intl.format(f.t["9sWQNT"], { usernameHook: (e, i) => (0, l.jsx)("span", { children: R }, i) })
+                : f.intl.string(f.t["e/6Ogt"]),
+        w = s.useRef(null),
+        [U, O] = s.useState(!1),
+        G = s.useCallback(() => {
+            U ||
+                E.default.track(I.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                    guild_id: t.id,
+                    invite_code: i.code,
                     location: "accept_invite_modal_redesign",
                 }),
-                S(!D);
-        }, [i.id, t.code, D]),
-        b = (0, m.Sn)();
+                O(!U);
+        }, [t.id, i.code, U]),
+        M = (0, p.Sn)();
     return (0, l.jsxs)("div", {
-        className: j,
+        className: N,
         children: [
-            null != I
-                ? (0, l.jsx)("div", { className: A.Un, children: (0, l.jsx)(s.wx6, { type: "critical", children: I }) })
+            null != D
+                ? (0, l.jsx)("div", { className: C.Un, children: (0, l.jsx)(n.w, { type: "critical", children: D }) })
                 : null,
-            b ? (0, l.jsx)(c.A, { className: A.sX }) : null,
-            (0, l.jsxs)(s.ButtonGroup, {
+            M ? (0, l.jsx)(g.A, { className: C.sX }) : null,
+            (0, l.jsxs)(r.e, {
                 fullWidthContainer: !0,
                 fullWidth: !0,
                 direction: "horizontal",
                 children: [
-                    (0, l.jsx)(s.Button, {
-                        onClick: T,
-                        loading: v,
+                    (0, l.jsx)(d.$, {
+                        onClick: L,
+                        loading: T,
                         variant: "primary",
-                        disabled: b,
-                        text: b ? p.intl.string(p.t.ZNCziL) : N,
+                        disabled: M,
+                        text: M ? f.intl.string(f.t.ZNCziL) : S,
                         icon:
-                            b || null == E
+                            M || null == y
                                 ? void 0
-                                : () => (0, l.jsx)(r.A, { "aria-hidden": !0, size: s._3J.SIZE_16, user: E }),
+                                : () => (0, l.jsx)(m.A, { "aria-hidden": !0, size: o._3.SIZE_16, user: y }),
                     }),
-                    b
+                    M
                         ? null
-                        : (0, l.jsx)(s.YNO, {
-                              targetElementRef: y,
-                              animation: s.YNO.Animation.NONE,
+                        : (0, l.jsx)(c.Y, {
+                              targetElementRef: w,
+                              animation: c.Y.Animation.NONE,
                               position: "top",
                               align: "right",
-                              shouldShow: D,
+                              shouldShow: U,
                               autoInvert: !1,
-                              onRequestClose: () => S(!1),
-                              renderPopout: (e) => (0, l.jsx)(h.A, { invite: t, ...e }),
+                              onRequestClose: () => O(!1),
+                              renderPopout: (e) => (0, l.jsx)(j.A, { invite: i, ...e }),
                               children: (e) =>
                                   (0, l.jsx)("div", {
-                                      ref: y,
-                                      children: (0, l.jsx)(s.K0, {
+                                      ref: w,
+                                      children: (0, l.jsx)(u.K, {
                                           ...e,
-                                          icon: s.Zes,
-                                          "aria-label": p.intl.string(p.t["3D5yo/"]),
+                                          icon: h.Z,
+                                          "aria-label": f.intl.string(f.t["3D5yo/"]),
                                           variant: "secondary",
-                                          onClick: L,
+                                          onClick: G,
                                       }),
                                   }),
                           }),

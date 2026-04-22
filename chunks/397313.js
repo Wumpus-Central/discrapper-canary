@@ -1,88 +1,94 @@
-i.d(n, { default: () => A });
-var s = i(627968),
-    r = i(64700),
-    t = i(503698),
-    l = i.n(t),
-    c = i(311907),
-    a = i(421380),
-    o = i(397927),
-    d = i(73153),
-    _ = i(73825),
-    m = i(323082),
-    u = i(160946),
-    p = i(422936),
-    x = i(234419),
-    f = i(725807),
-    j = i(811611),
-    g = i(901017),
-    h = i(773669),
-    k = i(295405),
-    C = i(252424),
-    y = i(927578),
-    N = i(580630),
-    E = i(652215),
-    v = i(788868),
-    I = i(985018),
-    P = i(403231);
-let T = (e) => {
-        let { locale: n } = e;
+n.d(i, { default: () => w });
+var s = n(627968),
+    r = n(64700),
+    t = n(503698),
+    l = n.n(t),
+    c = n(311907),
+    a = n(862482),
+    o = n(797285),
+    d = n(369163),
+    _ = n(460905),
+    m = n(935462),
+    u = n(289873),
+    p = n(834730),
+    x = n(821609),
+    f = n(73153),
+    j = n(73825),
+    g = n(323082),
+    h = n(160946),
+    k = n(422936),
+    C = n(234419),
+    N = n(725807),
+    E = n(811611),
+    v = n(901017),
+    y = n(773669),
+    I = n(295405),
+    P = n(252424),
+    b = n(927578),
+    S = n(580630),
+    T = n(652215),
+    A = n(788868),
+    O = n(985018),
+    M = n(892494);
+let R = (e) => {
+        let { locale: i } = e;
         return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(g.A, { icon: o.tEP, iconClassName: P.xy, description: I.intl.string(I.t.uAfKTe) }),
-                (0, s.jsx)(g.A, {
-                    icon: o.vRF,
-                    iconClassName: P.Jx,
-                    description: I.intl.formatToPlainString(I.t.sWnv5M, {
-                        numGuildSubscriptions: v.M4,
-                        discountPercent: (0, C.l9)(n, v.oX / 100),
+                (0, s.jsx)(v.A, { icon: o.t, iconClassName: M.xy, description: O.intl.string(O.t.uAfKTe) }),
+                (0, s.jsx)(v.A, {
+                    icon: d.v,
+                    iconClassName: M.Jx,
+                    description: O.intl.formatToPlainString(O.t.sWnv5M, {
+                        numGuildSubscriptions: A.M4,
+                        discountPercent: (0, P.l9)(i, A.oX / 100),
                     }),
                 }),
-                (0, s.jsx)(g.A, { icon: o.nm2, iconClassName: P.Zr, description: I.intl.string(I.t.pqHIf7) }),
+                (0, s.jsx)(v.A, { icon: _.n, iconClassName: M.Zr, description: O.intl.string(O.t.pqHIf7) }),
             ],
         });
     },
-    b = (e) => {
-        let { trialOffer: n, discountOffer: r, isLoading: t, price: a, onClose: d } = e,
-            _ = (0, c.bG)([h.default], () => h.default.locale),
-            m = null != n || null != r;
+    L = (e) => {
+        let { trialOffer: i, discountOffer: r, isLoading: t, price: a, onClose: o } = e,
+            d = (0, c.bG)([y.default], () => y.default.locale),
+            _ = null != i || null != r;
         return (0, s.jsxs)("div", {
-            className: P.iE,
+            className: M.iE,
             children: [
-                (0, s.jsx)(o.s_y, { "data-migration-pending": !0, onClick: d, className: P.b }),
-                m && (0, s.jsx)(j.Vq, { className: P.Fg }),
-                (0, s.jsx)("img", { className: l()(P.c8, { [P.mk]: m }), src: i(377191), alt: "" }),
+                (0, s.jsx)(m.s_, { "data-migration-pending": !0, onClick: o, className: M.b }),
+                _ && (0, s.jsx)(E.Vq, { className: M.Fg }),
+                (0, s.jsx)("img", { className: l()(M.c8, { [M.mk]: _ }), src: n(377191), alt: "" }),
                 t
-                    ? (0, s.jsx)(o.y$y, {})
+                    ? (0, s.jsx)(u.y, {})
                     : (0, s.jsxs)(s.Fragment, {
                           children: [
-                              (0, s.jsx)(o.Text, {
+                              (0, s.jsx)(p.E, {
                                   variant: "text-md/normal",
-                                  className: P.R_,
+                                  className: M.R_,
                                   children:
                                       null == a
-                                          ? (0, s.jsx)(o.y$y, { type: o.y$y.Type.PULSING_ELLIPSIS })
-                                          : I.intl.format(I.t.TBsJfQ, {
-                                                monthlyPrice: (0, N.$g)(a.amount, a.currency),
+                                          ? (0, s.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS })
+                                          : O.intl.format(O.t.TBsJfQ, {
+                                                monthlyPrice: (0, S.$g)(a.amount, a.currency),
                                             }),
                               }),
-                              (0, s.jsx)("div", { className: P.md, children: (0, s.jsx)(T, { locale: _ }) }),
+                              (0, s.jsx)("div", { className: M.md, children: (0, s.jsx)(R, { locale: d }) }),
                           ],
                       }),
             ],
         });
     },
-    S = (e) => {
-        let { trialOffer: n, discountOffer: i, onClose: r } = e,
-            t = { section: E.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
-        return (0, s.jsxs)(o.jlY, {
+    F = (e) => {
+        let { trialOffer: i, discountOffer: n, onClose: r } = e,
+            t = { section: T.JJy.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+        return (0, s.jsxs)(m.jl, {
             "data-migration-pending": !0,
-            className: P.qr,
+            className: M.qr,
             children: [
-                (0, s.jsx)(o.Button, { variant: "secondary", size: "sm", text: I.intl.string(I.t.cpT0Cq), onClick: r }),
-                (0, s.jsx)(f.A, {
-                    textOptions: { textOverride: null != n || null != i ? I.intl.string(I.t["Gd/XHF"]) : void 0 },
+                (0, s.jsx)(x.$, { variant: "secondary", size: "sm", text: O.intl.string(O.t.cpT0Cq), onClick: r }),
+                (0, s.jsx)(N.A, {
+                    textOptions: { textOverride: null != i || null != n ? O.intl.string(O.t["Gd/XHF"]) : void 0 },
                     premiumModalAnalyticsLocation: t,
-                    subscriptionTier: v.pe.TIER_2,
+                    subscriptionTier: A.pe.TIER_2,
                     size: a.$n.Sizes.SMALL,
                     color: a.$n.Colors.GREEN,
                     onClick: () => {
@@ -92,27 +98,27 @@ let T = (e) => {
             ],
         });
     };
-function A(e) {
-    let { onClose: n, ...i } = e,
-        t = (0, u.Y)(),
-        l = (0, c.bG)([k.A], () => k.A.hasFetchedPaymentSources),
+function w(e) {
+    let { onClose: i, ...n } = e,
+        t = (0, h.Y)(),
+        l = (0, c.bG)([I.A], () => I.A.hasFetchedPaymentSources),
         a = t && l,
-        f = (0, x.V)(),
-        j = (0, p.O)();
+        o = (0, C.V)(),
+        d = (0, k.O)();
     r.useEffect(() => {
-        d.h.wait(() => {
-            (0, m.$o)(), (0, _.zS)(null, null, E.tF5.DISCOVERY);
+        f.h.wait(() => {
+            (0, g.$o)(), (0, j.zS)(null, null, T.tF5.DISCOVERY);
         });
     }, []);
-    let g = a ? y.Ay.getDefaultPrice(v.gD.PREMIUM_MONTH_TIER_2) : null;
-    return (0, s.jsxs)(o.EOs, {
+    let _ = a ? b.Ay.getDefaultPrice(A.gD.PREMIUM_MONTH_TIER_2) : null;
+    return (0, s.jsxs)(m.EO, {
         "data-migration-pending": !0,
-        ...i,
+        ...n,
         "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
         parentComponent: "StickerPackPremiumUpsellModal",
         children: [
-            (0, s.jsx)(b, { trialOffer: f, discountOffer: j, isLoading: !a, price: g, onClose: n }),
-            (0, s.jsx)(S, { trialOffer: f, discountOffer: j, onClose: n }),
+            (0, s.jsx)(L, { trialOffer: o, discountOffer: d, isLoading: !a, price: _, onClose: i }),
+            (0, s.jsx)(F, { trialOffer: o, discountOffer: d, onClose: i }),
         ],
     });
 }

@@ -1,11 +1,10 @@
 "use strict";
-n.d(t, { d: () => s, p: () => a });
-var r = n(118356),
-    i = n(369543),
-    a = (function (e) {
-        return (e.STREAM = "stream"), (e.PAUSE = "pause"), (e.STOP = "stop"), e;
-    })({});
-class s {
+n.d(t, { d: () => o, p: () => a });
+var r,
+    i = n(118356),
+    s = n(369543),
+    a = (((r = {}).STREAM = "stream"), (r.PAUSE = "pause"), (r.STOP = "stop"), r);
+class o {
     callback;
     active;
     application;
@@ -16,10 +15,10 @@ class s {
             (this.active = !1),
             (this.application = null),
             (this.sound = !0),
-            (this.logger = new r.Vy("StreamDirector"));
+            (this.logger = new i.Vy("StreamDirector"));
     }
     onStreamBegin(e, t, n) {
-        let r = (0, i.M)(e, t);
+        let r = (0, s.M)(e, t);
         (this.sound = n), null == r || null == r.windowHandle ? this.callback({ type: "stop" }) : this._stream(r);
     }
     onStreamKilled() {
@@ -40,7 +39,7 @@ class s {
             : this._stop();
     }
     _update(e) {
-        let t = (0, i.w)(e, this.application);
+        let t = (0, s.w)(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop();
     }

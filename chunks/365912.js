@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => g, J$: () => h, Wd: () => E });
+n.d(t, { Ay: () => m, J$: () => h, Wd: () => p });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,9 +7,9 @@ var r = n(627968),
     o = n(340287),
     l = n(621466),
     u = n(51906),
-    c = n(508382),
-    d = n(56553);
-let _ = d.n7;
+    d = n(508382),
+    c = n(56553);
+let _ = c.n7;
 class f extends i.Component {
     state = { layerContainerElement: null };
     setLayerContainerElement = (e) => {
@@ -25,7 +25,7 @@ class f extends i.Component {
         return (0, r.jsx)(e.Provider, { value: this.getContextValue(n), children: t });
     }
 }
-let p = (e) => {
+let E = (e) => {
     let { layerContext: t, className: n } = e,
         [, s] = i.useContext(t),
         o = i.useCallback(
@@ -37,24 +37,26 @@ let p = (e) => {
     return (0, r.jsx)("div", { className: a()(_, n), ref: o });
 };
 function h(e) {
-    let t = (0, l.p3)(e, d.n7);
-    if ((null == t && (t = (0, l.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
+    let t = (0, l.p3)(e, c.n7);
+    if ((null == t && (t = (0, l.wB)(e, d.IP)), null == t)) throw Error("Unexpected missing parent container");
     return t;
 }
-function m(e, t) {
-    let [n] = e;
-    return null == n ? null : o.createPortal(i.Children.only(t), n);
-}
-let E = (e) => {
+let p = (e) => {
     let { layerContext: t, children: n } = e;
-    return (0, r.jsx)(t.Consumer, { children: (e) => m(e, n) });
+    return (0, r.jsx)(t.Consumer, {
+        children: (e) =>
+            (function (e, t) {
+                let [n] = e;
+                return null == n ? null : o.createPortal(i.Children.only(t), n);
+            })(e, n),
+    });
 };
-function g(e) {
+function m(e) {
     let t = i.createContext([null, () => {}]),
         n = {
             LayerProvider: (e) => (0, r.jsx)(f, { layerContext: t, ...e }),
-            LayerContainer: (e) => (0, r.jsx)(p, { layerContext: t, ...e }),
-            Layer: (e) => (0, r.jsx)(E, { layerContext: t, ...e }),
+            LayerContainer: (e) => (0, r.jsx)(E, { layerContext: t, ...e }),
+            Layer: (e) => (0, r.jsx)(p, { layerContext: t, ...e }),
             layerContext: t,
         };
     return (

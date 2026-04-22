@@ -1,54 +1,51 @@
 "use strict";
-n.d(t, { f: () => a, u: () => l });
-var r = n(64700),
-    i = n(735438),
-    s = n(860923),
-    a = (function (e) {
-        return (
-            (e.IDLE = "idle"),
-            (e.HEAD_TURN = "headTurn"),
-            (e.HEAD_TURN_BACK = "headTurnBack"),
-            (e.TALKING = "talking"),
-            e
-        );
-    })({});
-let o = {
+n.d(t, { f: () => o, u: () => u });
+var r,
+    i = n(64700),
+    s = n(735438),
+    a = n(860923),
+    o =
+        (((r = {}).IDLE = "idle"),
+        (r.HEAD_TURN = "headTurn"),
+        (r.HEAD_TURN_BACK = "headTurnBack"),
+        (r.TALKING = "talking"),
+        r);
+let l = {
         idle: ["headTurnBack", "talking"],
         headTurn: ["idle", "talking"],
         headTurnBack: ["headTurn"],
         talking: ["idle", "headTurnBack"],
     },
-    l = (e) => {
-        let [t, n] = r.useState("idle"),
-            [a, l] = r.useState(),
-            u = (0, s.A)(),
-            c = r.useMemo(() => u?.characters[e], [u, e]),
-            d = r.useCallback(() => {
-                if (null == c) return a;
-                let e = c[t];
-                return (0, i.sample)(e);
-            }, [a, c, t]);
-        r.useEffect(() => {
-            l(d());
-        }, [u, e, d]),
-            r.useEffect(() => {
-                l(() => d());
-            }, [t]);
-        let _ = () => {
-                let e = 10,
-                    n = 0,
-                    r = new Set([t]);
-                for (; n < e; ) n += 1;
-                return r;
-            },
-            f = (e) => (e === t ? t : o[e].includes(t) ? (n(e), e) : t);
-        return {
-            animationState: t,
-            updateAnimationState: f,
-            asset: a,
-            setAsset: l,
-            sampleAsset: d,
-            findAnimationTree: _,
-            characterAssets: c,
-        };
+    u = (e) => {
+        let [t, n] = i.useState("idle"),
+            [r, o] = i.useState(),
+            u = (0, a.A)(),
+            d = i.useMemo(() => u?.characters[e], [u, e]),
+            c = i.useCallback(() => {
+                if (null == d) return r;
+                let e = d[t];
+                return (0, s.sample)(e);
+            }, [r, d, t]);
+        return (
+            i.useEffect(() => {
+                o(c());
+            }, [u, e, c]),
+            i.useEffect(() => {
+                o(() => c());
+            }, [t]),
+            {
+                animationState: t,
+                updateAnimationState: (e) => (e === t ? t : l[e].includes(t) ? (n(e), e) : t),
+                asset: r,
+                setAsset: o,
+                sampleAsset: c,
+                findAnimationTree: () => {
+                    let e = 0,
+                        n = new Set([t]);
+                    for (; e < 10; ) e += 1;
+                    return n;
+                },
+                characterAssets: d,
+            }
+        );
     };

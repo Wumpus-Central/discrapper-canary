@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { G: () => r });
-let r = "april_fools_2026";
+t.d(n, { G: () => l });
+let l = "april_fools_2026";

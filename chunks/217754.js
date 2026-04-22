@@ -1,22 +1,22 @@
-i.d(t, { A: () => A });
-var e = i(627968);
-i(64700);
-var l = i(311907),
-    r = i(314116),
-    a = i(397927),
-    s = i(849736),
-    d = i(233993),
-    c = i(576705),
-    o = i(985018);
+e.d(t, { A: () => A });
+var i = e(627968);
+e(64700);
+var l = e(311907),
+    a = e(314116),
+    r = e(477782),
+    s = e(849736),
+    d = e(233993),
+    c = e(576705),
+    o = e(985018);
 function A(n, t) {
-    let i = (0, l.bG)([c.A], () => c.A.can(d.QY, n), [n]);
-    return null != t && i
-        ? (0, e.jsx)(a.Drp, {
+    let e = (0, l.bG)([c.A], () => c.A.can(d.QY, n), [n]);
+    return null != t && e
+        ? (0, i.jsx)(r.Dr, {
               id: "end-stage",
               label: o.intl.string(o.t.saZaRb),
               color: "danger",
               action: function () {
-                  (0, r.A)({
+                  (0, a.A)({
                       title: o.intl.string(o.t.gW9je1),
                       subtitle: o.intl.string(o.t.mT7jwN),
                       confirmText: o.intl.string(o.t.saZaRb),

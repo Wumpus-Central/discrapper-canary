@@ -1,21 +1,20 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = { className: "params", begin: "\\(", end: "\\)" },
-        r = {
+        a = {
             variants: [
                 e.COMMENT("!", "$", { relevance: 0 }),
                 e.COMMENT("^C[ ]", "$", { relevance: 0 }),
                 e.COMMENT("^C$", "$", { relevance: 0 }),
             ],
         },
-        i = /(_[a-z_\d]+)?/,
-        s = /([de][+-]?\d+)?/,
-        a = {
+        n = /(_[a-z_\d]+)?/,
+        r = /([de][+-]?\d+)?/,
+        i = {
             className: "number",
             variants: [
-                { begin: t.concat(/\b\d+/, /\.(\d*)/, s, i) },
-                { begin: t.concat(/\b\d+/, s, i) },
-                { begin: t.concat(/\.\d+/, s, i) },
+                { begin: t.concat(/\b\d+/, /\.(\d*)/, r, n) },
+                { begin: t.concat(/\b\d+/, r, n) },
+                { begin: t.concat(/\.\d+/, r, n) },
             ],
             relevance: 0,
         },
@@ -23,7 +22,7 @@ e.exports = function (e) {
             className: "function",
             beginKeywords: "subroutine function program",
             illegal: "[${=\\n]",
-            contains: [e.UNDERSCORE_TITLE_MODE, n],
+            contains: [e.UNDERSCORE_TITLE_MODE, { className: "params", begin: "\\(", end: "\\)" }],
         };
     return {
         name: "Fortran",
@@ -523,8 +522,8 @@ e.exports = function (e) {
             { className: "string", relevance: 0, variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE] },
             o,
             { begin: /^C\s*=(?!=)/, relevance: 0 },
-            r,
             a,
+            i,
         ],
     };
 };

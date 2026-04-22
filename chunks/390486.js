@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { H: () => a, R: () => s });
-var r = n(506774);
-let i = "recentBuildOverrides";
-function a() {
-    return (r.w.get(i) ?? []).filter((e) => null == e.exp || e.exp > Date.now());
+t.d(l, { H: () => i, R: () => a });
+var r = t(506774);
+let n = "recentBuildOverrides";
+function i() {
+    return (r.w.get(n) ?? []).filter((e) => null == e.exp || e.exp > Date.now());
 }
-function s(e, t) {
-    if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;
-    let n = { id: e.targetBuildOverride.discord_web.id, payload: t, exp: Date.parse(e.expiresAt) },
-        s = [n, ...a().filter((e) => n.id !== e.id)].slice(0, 5);
-    r.w.set(i, s);
+function a(e, l) {
+    if (null == l || null == e || null == e.targetBuildOverride.discord_web) return;
+    let t = { id: e.targetBuildOverride.discord_web.id, payload: l, exp: Date.parse(e.expiresAt) },
+        a = [t, ...i().filter((e) => t.id !== e.id)].slice(0, 5);
+    r.w.set(n, a);
 }

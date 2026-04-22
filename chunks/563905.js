@@ -1,23 +1,23 @@
-n.d(t, { _: () => d });
-var i = n(627968),
-    l = n(397927),
-    a = n(341915),
-    r = n(439075),
-    s = n(985018),
-    o = n(332544);
-let d = (e) => {
+s.d(t, { _: () => c });
+var n = s(627968),
+    l = s(534514),
+    a = s(341915),
+    r = s(439075),
+    i = s(985018),
+    o = s(332544);
+let c = (e) => {
     let { quest: t } = e;
-    return (0, i.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: o.x3,
-        children: (0, i.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: o.B0,
             children: [
-                (0, i.jsx)(l.Heading, {
+                (0, n.jsx)(l.D, {
                     className: o.R_,
                     variant: "heading-md/semibold",
-                    children: s.intl.string(s.t["5wnpF3"]),
+                    children: i.intl.string(i.t["5wnpF3"]),
                 }),
-                (0, i.jsx)(r.A, {
+                (0, n.jsx)(r.A, {
                     className: o.d,
                     quest: t,
                     questContent: a.uF.QUEST_HOME_DESKTOP,

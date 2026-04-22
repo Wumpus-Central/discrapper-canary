@@ -1,20 +1,31 @@
-n.d(t, { eW: () => _, em: () => h, oi: () => A, wN: () => u });
+n.d(t, { eW: () => S, em: () => b, oi: () => N, wN: () => C });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
     a = n(827734),
-    r = n(397927),
-    o = n(513461),
-    c = n(791606),
-    d = n(186942);
-function u(e, t, n) {
-    return (0, i.jsx)(r.hVq, { count: e, color: t, "aria-hidden": n });
+    r = n(406810),
+    o = n(789645),
+    d = n(933832),
+    c = n(22231),
+    u = n(777666),
+    h = n(565787),
+    A = n(81466),
+    _ = n(451394),
+    m = n(31300),
+    g = n(428689),
+    p = n(983851),
+    f = n(323384),
+    E = n(513461),
+    x = n(791606),
+    I = n(266062);
+function C(e, t, n) {
+    return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
 }
-function h() {
-    return (0, i.jsx)(r.fkz, { icon: (0, r.kHD)(c.A), disableColor: !0, className: d.yk });
+function b() {
+    return (0, i.jsx)(u.fk, { icon: (0, h.k)(x.A), disableColor: !0, className: I.yk });
 }
-function A(e) {
+function N(e) {
     let t,
         {
             audio: n,
@@ -22,41 +33,41 @@ function A(e) {
             screenshare: l,
             isCurrentUserConnected: s,
             liveStage: a,
-            activeEvent: o,
-            activity: c,
+            activeEvent: r,
+            activity: o,
         } = e;
-    if (o) t = r.CTc;
-    else if (a) t = r.qux;
-    else if (l) t = r.kN9;
-    else if (i) t = r.npA;
-    else if (n) t = r.HKD;
+    if (r) t = A.C;
+    else if (a) t = _.q;
+    else if (l) t = m.k;
+    else if (i) t = g.n;
+    else if (n) t = p.H;
     else {
-        if (!c) return null;
-        t = r.k9F;
+        if (!o) return null;
+        t = f.k;
     }
-    return m({ icon: t, isCurrentUserConnected: s });
+    return v({ icon: t, isCurrentUserConnected: s });
 }
-function _(e) {
+function S(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
-                case o.B5.SUBMITTED:
-                    return [void 0, r.O4];
-                case o.B5.REJECTED:
-                    return [a.A.unsafe_rawColors.RED_400.css, r.PGe];
-                case o.B5.APPROVED:
-                    return [a.A.unsafe_rawColors.GREEN_360.css, r.A9s];
+                case E.B5.SUBMITTED:
+                    return [void 0, r.O];
+                case E.B5.REJECTED:
+                    return [a.A.unsafe_rawColors.RED_400.css, o.P];
+                case E.B5.APPROVED:
+                    return [a.A.unsafe_rawColors.GREEN_360.css, d.A];
                 default:
-                    return [void 0, r.R2l];
+                    return [void 0, c.R];
             }
         })(t);
-    return m({ icon: i, color: n });
+    return v({ icon: i, color: n });
 }
-function m(e) {
+function v(e) {
     let { icon: t, color: n, isCurrentUserConnected: l } = e;
-    return (0, i.jsx)(r.fkz, {
+    return (0, i.jsx)(u.fk, {
         icon: t,
-        className: s()(d.bG, { [d.gB]: l }),
+        className: s()(I.bG, { [I.gB]: l }),
         ...(null == n ? { disableColor: !0 } : { color: n }),
     });
 }

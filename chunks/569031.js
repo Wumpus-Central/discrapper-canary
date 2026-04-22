@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     vK: "banner_ec75b3",
     OQ: "ctaContainer_ec75b3",

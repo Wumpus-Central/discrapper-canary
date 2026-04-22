@@ -2,20 +2,21 @@ s.d(e, { A: () => u }), s(321073);
 var n = s(627968),
     i = s(64700),
     a = s(451988),
-    l = s(732955),
-    r = s(397927),
-    o = s(652215),
-    h = s(650583),
-    d = s(985018),
-    g = s(31008);
+    l = s(772707),
+    r = s(331322),
+    o = s(292666),
+    h = s(652215),
+    d = s(650583),
+    g = s(985018),
+    c = s(31008);
 class p extends i.PureComponent {
     static defaultProps = {
         canResend: !1,
         canChange: !0,
-        onChangeEmailClick: o.tEg,
+        onChangeEmailClick: h.tEg,
         onVerify: (t, e) => {},
-        onResend: o.tEg,
-        onClose: o.tEg,
+        onResend: h.tEg,
+        onClose: h.tEg,
     };
     _timeout = new a.Ep();
     state = { resent: !1, shouldClose: !1, email: "", password: "" };
@@ -28,38 +29,38 @@ class p extends i.PureComponent {
         if (!t)
             return [
                 {
-                    text: d.intl.string(d.t.v740sh),
+                    text: g.intl.string(g.t.v740sh),
                     variant: "primary",
                     onClick: this.handleVerify,
                     loading: s,
                     disabled: 0 === n.length || 0 === i.length,
                 },
             ];
-        let a = [{ variant: "secondary", text: d.intl.string(d.t.WnX4J2), onClick: this.handleResendEmail }];
+        let a = [{ variant: "secondary", text: g.intl.string(g.t.WnX4J2), onClick: this.handleResendEmail }];
         return (
-            e && a.push({ text: d.intl.string(d.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
+            e && a.push({ text: g.intl.string(g.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
             a
         );
     }
     renderInputs() {
         let { emailError: t, passwordError: e } = this.props,
             { email: s, password: i } = this.state;
-        return (0, n.jsx)(r.BJc, {
+        return (0, n.jsx)(r.B, {
             gap: 40,
             padding: { bottom: 8 },
-            children: (0, n.jsxs)(r.BJc, {
+            children: (0, n.jsxs)(r.B, {
                 gap: 20,
                 children: [
-                    (0, n.jsx)(r.ksK, {
-                        label: d.intl.string(d.t.dI4d4S),
+                    (0, n.jsx)(o.k, {
+                        label: g.intl.string(g.t.dI4d4S),
                         value: s,
                         error: t,
                         onChange: this.handleEmailChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0,
                     }),
-                    (0, n.jsx)(r.ksK, {
-                        label: d.intl.string(d.t["CIGa+7"]),
+                    (0, n.jsx)(o.k, {
+                        label: g.intl.string(g.t["CIGa+7"]),
                         type: "password",
                         value: i,
                         error: e,
@@ -77,15 +78,15 @@ class p extends i.PureComponent {
         return (
             (t =
                 e && null != s
-                    ? d.intl.format(d.t.JqLgQL, { email: s })
+                    ? g.intl.format(g.t.JqLgQL, { email: s })
                     : i
-                      ? d.intl.string(d.t.tSXg8O)
-                      : d.intl.string(d.t.KW5DEh)),
-            (0, n.jsx)(l.kpP, {
+                      ? g.intl.string(g.t.tSXg8O)
+                      : g.intl.string(g.t.KW5DEh)),
+            (0, n.jsx)(l.k, {
                 transitionState: a,
-                title: d.intl.string(d.t["1MPz27"]),
+                title: g.intl.string(g.t["1MPz27"]),
                 subtitle: t,
-                graphic: { type: "image", src: g.A },
+                graphic: { type: "image", src: c.A },
                 onClose: this.props.onClose,
                 actions: this.getActions(),
                 children: !i && this.renderInputs(),
@@ -117,7 +118,7 @@ class p extends i.PureComponent {
     };
     handleKeyPress = (t) => {
         let { email: e, password: s } = this.state;
-        t.key === h.dh.ENTER && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
+        t.key === d.dh.ENTER && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
     };
 }
 let u = p;

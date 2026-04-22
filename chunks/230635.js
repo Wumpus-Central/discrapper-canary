@@ -1,23 +1,24 @@
-l.d(t, { A: () => E });
+l.d(t, { A: () => C });
 var a = l(627968),
     n = l(64700),
     r = l(311907),
-    i = l(397927),
-    o = l(688810),
-    s = l(601255),
-    d = l(562819),
-    c = l(713517),
-    u = l(919395),
-    p = l(71393),
-    m = l(837921),
+    i = l(778712),
+    o = l(97808),
+    s = l(688810),
+    d = l(601255),
+    c = l(562819),
+    u = l(713517),
+    p = l(919395),
+    m = l(71393),
+    b = l(837921),
     h = l(84540),
     x = l(854627),
-    b = l(930349),
-    y = l(985018),
-    f = l(987118);
-let g = i._3J.SIZE_72,
-    v = m.Ay.getEnableHardwareAcceleration() ? i.JsQ : i.euF;
-function _(e) {
+    y = l(930349),
+    v = l(985018),
+    g = l(209150);
+let f = i._3.SIZE_72,
+    _ = b.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
+function E(e) {
     let { user: t, guildId: l, avatarDecorationOverride: n, isEmpty: r, isHovered: i, disabled: o } = e,
         {
             avatarDecorationSrc: s,
@@ -27,69 +28,69 @@ function _(e) {
         } = (0, x.A)({
             userId: t.id,
             guildId: l,
-            size: g,
+            size: f,
             showPending: !0,
             avatarDecorationOverride: n,
             animateOnHover: !i,
         });
-    return (0, a.jsx)(v, {
-        className: r ? f.yT : void 0,
+    return (0, a.jsx)(_, {
+        className: r ? g.yT : void 0,
         src: i ? d : c,
-        imageClassName: i && !o ? f.WG : void 0,
+        imageClassName: i && !o ? g.WG : void 0,
         avatarDecoration: s,
-        size: g,
+        size: f,
         "aria-hidden": !0,
         ...u,
     });
 }
-function E(e) {
+function C(e) {
     let { user: t, guildId: l, disabled: i } = e,
-        { analyticsLocations: m } = (0, o.Ay)(),
-        x = (0, r.bG)([p.A], () => (null != l ? p.A.getGuild(l) : null)),
-        f = null != l,
+        { analyticsLocations: o } = (0, s.Ay)(),
+        b = (0, r.bG)([m.A], () => (null != l ? m.A.getGuild(l) : null)),
+        x = null != l,
         g = n.useRef(null),
-        { isHoveringOrFocusing: v } = (0, c.A)(g),
-        E = (0, u.a4)({ user: t }),
-        C = (0, u.a4)({ user: t, guildId: l ?? void 0 }),
-        { pendingAvatarDecoration: j } = (0, u.CP)(l ?? void 0),
-        S = (0, s.A)((0, u.lw)({ userValue: E, guildValue: C, pendingValue: j, guildId: l })),
-        T = void 0 !== j,
-        A = () => (0, d.L)({ analyticsLocations: m, guild: x ?? void 0, stackingBehavior: "stack" }),
-        P = f && null != E,
-        k =
-            null != S && (T ? null != j : null != C)
+        { isHoveringOrFocusing: f } = (0, u.A)(g),
+        _ = (0, p.a4)({ user: t }),
+        C = (0, p.a4)({ user: t, guildId: l ?? void 0 }),
+        { pendingAvatarDecoration: S } = (0, p.CP)(l ?? void 0),
+        j = (0, d.A)((0, p.lw)({ userValue: _, guildValue: C, pendingValue: S, guildId: l })),
+        T = void 0 !== S,
+        P = () => (0, c.L)({ analyticsLocations: o, guild: b ?? void 0, stackingBehavior: "stack" }),
+        I = x && null != _,
+        A =
+            null != j && (T ? null != S : null != C)
                 ? {
                       onClick: () => (0, h.p)({ guildId: l ?? void 0, avatarDecoration: null }),
-                      type: P ? "reset" : "remove",
-                      accessibleLabel: y.intl.string(P ? y.t.pJsnPf : y.t["2U4Bga"]),
+                      type: I ? "reset" : "remove",
+                      accessibleLabel: v.intl.string(I ? v.t.pJsnPf : v.t["2U4Bga"]),
                   }
                 : void 0,
-        I = (0, a.jsx)(_, {
+        k = (0, a.jsx)(E, {
             user: t,
             guildId: l,
-            avatarDecorationOverride: T ? S : void 0,
-            isEmpty: null == S,
-            isHovered: null != S && v,
+            avatarDecorationOverride: T ? j : void 0,
+            isEmpty: null == j,
+            isHovered: null != j && f,
             disabled: i,
         });
     return (0, a.jsx)("div", {
         ref: g,
         children:
-            null == S
-                ? (0, a.jsx)(b.kL, {
+            null == j
+                ? (0, a.jsx)(y.kL, {
                       variant: "square",
-                      onClick: A,
-                      accessibleLabel: y.intl.string(y.t.HykynS),
+                      onClick: P,
+                      accessibleLabel: v.intl.string(v.t.HykynS),
                       disabled: i,
-                      children: I,
+                      children: k,
                   })
-                : (0, a.jsx)(b.NW, {
+                : (0, a.jsx)(y.NW, {
                       variant: "square",
-                      onClick: A,
-                      accessibleLabel: y.intl.string(y.t.HykynS),
-                      deleteButtonConfig: k,
+                      onClick: P,
+                      accessibleLabel: v.intl.string(v.t.HykynS),
+                      deleteButtonConfig: A,
                       disabled: i,
-                      children: I,
+                      children: k,
                   }),
     });
 }

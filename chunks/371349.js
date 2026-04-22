@@ -1,27 +1,29 @@
-r.d(t, { A: () => i });
-var s = r(627968),
-    n = r(397927),
-    l = r(704456),
-    a = r(252645);
-function i(e) {
-    let { reminder: t, throttledNow: r } = e,
-        { dueInText: i, isOverdue: o } = (0, l.Ce)({ dueAt: t?.saveData.dueAt, now: r, type: l.kh.SHORT });
-    if (null == t.saveData.dueAt) return null;
+t.d(s, { A: () => d });
+var a = t(627968),
+    n = t(406810),
+    l = t(827734),
+    i = t(534514),
+    r = t(704456),
+    c = t(953424);
+function d(e) {
+    let { reminder: s, throttledNow: t } = e,
+        { dueInText: d, isOverdue: o } = (0, r.Ce)({ dueAt: s?.saveData.dueAt, now: t, type: r.kh.SHORT });
+    if (null == s.saveData.dueAt) return null;
     let u = o ? "text-feedback-critical" : "text-default";
-    return (0, s.jsxs)("div", {
-        className: a.k,
+    return (0, a.jsxs)("div", {
+        className: c.k,
         children: [
-            (0, s.jsx)("div", {
-                className: a.K,
-                children: (0, s.jsx)(n.O4, {
+            (0, a.jsx)("div", {
+                className: c.K,
+                children: (0, a.jsx)(n.O, {
                     size: "xxs",
                     color:
                         "text-feedback-critical" === u
-                            ? n.LU0.colors.TEXT_FEEDBACK_CRITICAL
-                            : n.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
+                            ? l.A.colors.TEXT_FEEDBACK_CRITICAL
+                            : l.A.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
-            (0, s.jsx)(n.Heading, { variant: "text-md/semibold", color: u, children: i }),
+            (0, a.jsx)(i.D, { variant: "text-md/semibold", color: u, children: d }),
         ],
     });
 }

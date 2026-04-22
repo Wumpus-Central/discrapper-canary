@@ -1,21 +1,19 @@
 "use strict";
-n.d(t, { A: () => i });
-let r = 5;
 function i(e, t, n) {
     let { onChange: i } = e,
-        a = !1,
+        l = !1,
         s = !1;
     return (
         (e.onChange = () => {
-            if (a) {
+            if (l) {
                 s = !0;
                 return;
             }
-            a = !0;
+            l = !0;
             try {
                 let e = 0;
                 do {
-                    if (((s = !1), e++ >= r)) break;
+                    if (((s = !1), e++ >= 5)) break;
                     t?.();
                     try {
                         i();
@@ -24,9 +22,10 @@ function i(e, t, n) {
                     }
                 } while (s);
             } finally {
-                a = !1;
+                l = !1;
             }
         }),
         e
     );
 }
+n.d(t, { A: () => i });

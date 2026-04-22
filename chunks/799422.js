@@ -7,8 +7,7 @@ class i {
         return (e & t) != 0;
     }
     static asBasicFlag(e) {
-        let t = 20;
-        return r.pG(t, e);
+        return r.pG(20, e);
     }
     static asBigFlag(e) {
         return Object.hasOwn(this.cache, e) || (this.cache[e] = r.iu(e)), this.cache[e];

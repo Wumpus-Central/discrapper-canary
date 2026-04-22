@@ -1,9 +1,8 @@
 "use strict";
-n.d(t, { FK: () => a, PC: () => s });
+n.d(t, { FK: () => s, PC: () => a });
 var r = n(374994),
     i = n(185928);
-n(818348);
-function a(e) {
+function s(e) {
     let { angle: t, colors: n } = e;
     return `linear-gradient(${t}deg, ${n
         .map((e) => {
@@ -12,4 +11,5 @@ function a(e) {
         })
         .join(", ")})`;
 }
-let s = (e) => i.dP[e];
+n(818348);
+let a = (e) => i.dP[e];

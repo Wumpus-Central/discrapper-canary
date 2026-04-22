@@ -1,53 +1,50 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(106778),
+n.d(t, { A: () => a });
+var l = n(627968),
+    r = n(64700),
+    i = n(106778),
     s = n(851110);
-let o = 50,
-    l = 10,
-    u = 100;
-function c(e, t) {
+let a = function (e) {
+    let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: a, sprites: o, colors: u } = e,
+        [d, c] = r.useState(null),
+        C = (0, i.f9)(n, d),
+        [p, m] = r.useState(!1);
     return (
-        (t = t ?? 1),
-        {
-            ...s.Mw,
-            position: {
-                type: "static-random",
-                minValue: { x: e.x, y: e.y },
-                maxValue: { x: e.x + e.width, y: e.y + e.height / 2 },
-            },
-            velocity: {
-                type: "static-random",
-                minValue: { x: -100 * t, y: -50 * t },
-                maxValue: { x: 100 * t, y: -300 * t },
-            },
-            dragCoefficient: { type: "static", value: 0.166 },
-        }
-    );
-}
-let d = function (e) {
-    let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: d, sprites: _, colors: f } = e,
-        [p, h] = i.useState(null),
-        m = (0, a.f9)(n, p),
-        [g, E] = i.useState(!1);
-    return (
-        i.useEffect(() => {
-            let e = Array(l).fill(0);
+        r.useEffect(() => {
+            let e = Array(10).fill(0);
             return (
                 null != t &&
-                    m.isReady &&
-                    !g &&
-                    (e = e.map((n, r) =>
+                    C.isReady &&
+                    !p &&
+                    (e = e.map((n, l) =>
                         setTimeout(() => {
-                            r === e.length - 1 && E(!0), m.createMultipleConfetti(c(t.getBoundingClientRect(), d), o);
-                        }, r * u),
+                            var n, r;
+                            l === e.length - 1 && m(!0),
+                                C.createMultipleConfetti(
+                                    ((n = t.getBoundingClientRect()),
+                                    (r = (r = a) ?? 1),
+                                    {
+                                        ...s.Mw,
+                                        position: {
+                                            type: "static-random",
+                                            minValue: { x: n.x, y: n.y },
+                                            maxValue: { x: n.x + n.width, y: n.y + n.height / 2 },
+                                        },
+                                        velocity: {
+                                            type: "static-random",
+                                            minValue: { x: -100 * r, y: -50 * r },
+                                            maxValue: { x: 100 * r, y: -300 * r },
+                                        },
+                                        dragCoefficient: { type: "static", value: 0.166 },
+                                    }),
+                                    50,
+                                );
+                        }, 100 * l),
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);
                 }
             );
-        }, [m, t, g, d]),
-        (0, r.jsx)(a.K_, { ref: h, sprites: _ ?? s.uI, colors: f ?? s._t, spriteWidth: s.wn, spriteHeight: s.wn })
+        }, [C, t, p, a]),
+        (0, l.jsx)(i.K_, { ref: c, sprites: o ?? s.uI, colors: u ?? s._t, spriteWidth: s.wn, spriteHeight: s.wn })
     );
 };

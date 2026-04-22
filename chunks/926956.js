@@ -1,125 +1,131 @@
-t.d(n, { default: () => b });
-var i = t(627968),
-    l = t(64700),
+t.d(n, { default: () => D });
+var l = t(627968),
+    i = t(64700),
     a = t(735438),
-    r = t.n(a),
-    s = t(311907),
-    c = t(397927),
-    o = t(334738),
-    d = t(964486),
-    u = t(915089),
-    g = t(256587),
-    A = t(71393),
-    h = t(222823),
-    m = t(954571),
-    x = t(403362);
+    s = t.n(a),
+    r = t(311907),
+    c = t(192308),
+    o = t(935462),
+    d = t(81466),
+    u = t(534514),
+    g = t(821609),
+    A = t(939249),
+    m = t(789645),
+    h = t(334738),
+    v = t(964486),
+    C = t(915089),
+    x = t(256587),
+    p = t(71393),
+    N = t(222823),
+    E = t(954571),
+    f = t(403362);
 t(645034);
-var C = t(661191),
-    v = t(285059),
-    p = t(770666),
-    N = t(508654),
-    E = t(614170),
-    f = t(868711),
-    j = t(823508),
-    k = t(988794),
-    y = t(652215),
-    G = t(790782),
-    _ = t(985018),
-    I = t(658215);
-function b(e) {
-    let { transitionState: n, onClose: a, guildId: b } = e,
-        T = (0, u.GV)(),
-        P = (0, s.bG)([A.A], () => A.A.getGuild(b)),
-        L = (0, p.A)(P?.id),
-        S = (0, N.Ay)(b),
-        M = l.useRef(h.Ay.ackMessageId(b, G.P.GUILD_EVENT)),
-        w = (0, j.A)();
+var j = t(661191),
+    k = t(285059),
+    y = t(770666),
+    G = t(508654),
+    _ = t(614170),
+    I = t(868711),
+    b = t(823508),
+    P = t(988794),
+    L = t(652215),
+    M = t(790782),
+    S = t(985018),
+    T = t(420183);
+function D(e) {
+    let { transitionState: n, onClose: a, guildId: D } = e,
+        w = (0, C.GV)(),
+        B = (0, r.bG)([p.A], () => p.A.getGuild(D)),
+        R = (0, y.A)(B?.id),
+        U = (0, G.Ay)(D),
+        V = i.useRef(N.Ay.ackMessageId(D, M.P.GUILD_EVENT)),
+        O = (0, b.A)();
     return (
-        l.useEffect(() => {
-            S.forEach((e) => v.A.getGuildEventUserCounts(b, e.id, [])), v.A.getGuildEventsForCurrentUser(b);
-        }, [S, b]),
-        (0, d.Ay)(() => {
-            m.default.track(y.HAw.OPEN_MODAL, { type: k.BV, guild_id: b, guild_events_count: S.length });
+        i.useEffect(() => {
+            U.forEach((e) => k.A.getGuildEventUserCounts(D, e.id, [])), k.A.getGuildEventsForCurrentUser(D);
+        }, [U, D]),
+        (0, v.Ay)(() => {
+            E.default.track(L.HAw.OPEN_MODAL, { type: P.BV, guild_id: D, guild_events_count: U.length });
         }),
-        l.useEffect(() => {
-            r()(S)
+        i.useEffect(() => {
+            s()(U)
                 .map((e) => e.creator_id)
-                .filter(x.Vq)
+                .filter(f.Vq)
                 .uniq()
                 .forEach((e) => {
-                    g.A.requestMember(b, e);
+                    x.A.requestMember(D, e);
                 });
-        }, [b, S]),
-        l.useEffect(() => {
-            null != b && (0, o.hK)(b, G.P.GUILD_EVENT);
-        }, [b]),
-        (0, i.jsxs)(c.EOs, {
-            size: c.rIJ.MEDIUM,
+        }, [D, U]),
+        i.useEffect(() => {
+            null != D && (0, h.hK)(D, M.P.GUILD_EVENT);
+        }, [D]),
+        (0, l.jsxs)(o.EO, {
+            size: o.rI.MEDIUM,
             transitionState: n,
-            "aria-labelledby": T,
+            "aria-labelledby": w,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
-                (0, i.jsxs)(c.rQ0, {
-                    className: I.wx,
+                (0, l.jsxs)(o.rQ, {
+                    className: T.wx,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(c.CTc, { size: "md", color: "currentColor", className: I.Kk }),
-                        (0, i.jsx)(c.Heading, {
-                            id: T,
+                        (0, l.jsx)(d.C, { size: "md", color: "currentColor", className: T.Kk }),
+                        (0, l.jsx)(u.D, {
+                            id: w,
                             variant: "heading-md/semibold",
                             children:
-                                S.length > 0
-                                    ? _.intl.formatToPlainString(_.t.IBdqSu, { number: S.length })
-                                    : _.intl.string(_.t.tlopTM),
+                                U.length > 0
+                                    ? S.intl.formatToPlainString(S.t.IBdqSu, { number: U.length })
+                                    : S.intl.string(S.t.tlopTM),
                         }),
-                        L &&
-                            (0, i.jsxs)(i.Fragment, {
+                        R &&
+                            (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: I.yF, children: "|" }),
-                                    (0, i.jsx)(c.Button, {
+                                    (0, l.jsx)("div", { className: T.yF, children: "|" }),
+                                    (0, l.jsx)(g.$, {
                                         variant: "primary",
                                         size: "sm",
                                         onClick: () => {
-                                            (0, c.mMO)(async () => {
+                                            (0, c.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    t.e("68587"),
                                                     t.e("28136"),
+                                                    t.e("68587"),
                                                     t.e("342"),
-                                                    t.e("70669"),
+                                                    t.e("95504"),
                                                 ]).then(t.bind(t, 21653));
-                                                return (n) => (0, i.jsx)(e, { ...n, guildId: b });
-                                            }, w);
+                                                return (n) => (0, l.jsx)(e, { ...n, guildId: D });
+                                            }, O);
                                         },
-                                        text: _.intl.string(_.t["60lJ0C"]),
+                                        text: S.intl.string(S.t["60lJ0C"]),
                                     }),
                                 ],
                             }),
-                        (0, i.jsx)(c.DUT, {
+                        (0, l.jsx)(A.D, {
                             onClick: a,
-                            className: I.gb,
-                            "aria-label": _.intl.string(_.t.cpT0Cq),
-                            children: (0, i.jsx)(c.PGe, { size: "md", color: "currentColor", className: I.Kk }),
+                            className: T.gb,
+                            "aria-label": S.intl.string(S.t.cpT0Cq),
+                            children: (0, l.jsx)(m.P, { size: "md", color: "currentColor", className: T.Kk }),
                         }),
                     ],
                 }),
-                (0, i.jsx)(c.$mQ, {
-                    className: I.Qs,
+                (0, l.jsx)(o.$m, {
+                    className: T.Qs,
                     "data-migration-pending": !0,
                     children:
-                        S.length > 0
-                            ? S.map((e) =>
-                                  (0, i.jsx)(
-                                      E.A,
+                        U.length > 0
+                            ? U.map((e) =>
+                                  (0, l.jsx)(
+                                      _.A,
                                       {
                                           guildEvent: e,
                                           onActionTaken: a,
-                                          isNew: null != M.current && C.default.compare(e.id, M.current) > 0,
+                                          isNew: null != V.current && j.default.compare(e.id, V.current) > 0,
                                       },
                                       e.id,
                                   ),
                               )
-                            : (0, i.jsx)(f.A, { guildId: b, onClose: a }),
+                            : (0, l.jsx)(I.A, { guildId: D, onClose: a }),
                 }),
             ],
         })

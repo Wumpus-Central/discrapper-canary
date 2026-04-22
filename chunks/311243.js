@@ -1,49 +1,49 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => m });
 var l = n(627968);
 n(64700);
 var s = n(503698),
-    i = n.n(s),
-    a = n(397927),
-    r = n(714510),
-    u = n(890687),
-    o = n(895253),
-    c = n(442734),
-    d = n(646764),
-    m = n(102810);
-let A = function (e) {
+    a = n.n(s),
+    r = n(834730),
+    i = n(714510),
+    o = n(890687),
+    u = n(895253),
+    d = n(442734),
+    c = n(646764),
+    p = n(417386);
+let m = function (e) {
     let {
             className: t,
             autoplay: n,
             quest: s,
-            questContent: A,
-            taskDetails: E,
-            location: p,
-            sourceQuestContent: f,
-            gameProfileSource: S,
+            questContent: m,
+            taskDetails: f,
+            location: A,
+            sourceQuestContent: v,
+            gameProfileSource: h,
         } = e,
-        h = (0, r.mU)({
+        E = (0, i.mU)({
             quest: s,
-            taskDetails: E,
-            location: p,
-            questContent: A,
-            sourceQuestContent: f,
-            gameProfileSource: S,
+            taskDetails: f,
+            location: A,
+            questContent: m,
+            sourceQuestContent: v,
+            gameProfileSource: h,
         }),
-        x = (0, u.SD)(s),
-        T = (0, u.Oq)(),
-        _ = x && T;
+        g = (0, o.SD)(s),
+        x = (0, o.Oq)(),
+        S = g && x;
     return (0, l.jsxs)("div", {
-        className: i()(m.iE, t),
+        className: a()(p.iE, t),
         children: [
-            (0, l.jsx)(o.A, { visible: _ }),
-            (0, l.jsx)(d.A, { autoplay: n, className: m.Qq, quest: s, questContent: A, sourceQuestContent: f }),
+            (0, l.jsx)(u.A, { visible: S }),
+            (0, l.jsx)(c.A, { autoplay: n, className: p.Qq, quest: s, questContent: m, sourceQuestContent: v }),
             (0, l.jsx)("div", {
-                className: m.C,
+                className: p.C,
                 children: (0, l.jsxs)("div", {
-                    className: m.P2,
+                    className: p.P2,
                     children: [
-                        (0, l.jsx)(a.Text, { variant: "text-sm/normal", color: "text-default", children: h }),
-                        x && (0, l.jsx)(c.e, { questId: s.id, canUseQuestOrbMultiplier: T }),
+                        (0, l.jsx)(r.E, { variant: "text-sm/normal", color: "text-default", children: E }),
+                        g && (0, l.jsx)(d.e, { questId: s.id, canUseQuestOrbMultiplier: x }),
                     ],
                 }),
             }),

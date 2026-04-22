@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { A: () => c });
-var r = n(627968);
+var a = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
-    o = n(147925),
-    l = n(89892);
+var r = n(503698),
+    l = n.n(r),
+    i = n(834730),
+    s = n(147925),
+    o = n(89892);
 function u(e) {
-    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: u } = e;
-    return (0, r.jsxs)(
+    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: r, separatorClassName: u } = e;
+    return (0, a.jsxs)(
         "div",
         {
-            className: s()(l.hj, { [l.jQ]: i }),
+            className: l()(o.hj, { [o.jQ]: r }),
             children: [
-                (0, r.jsx)(a.Text, {
+                (0, a.jsx)(i.E, {
                     variant: "text-sm/medium",
                     color: n ? "text-strong" : "text-muted",
                     children: t.label,
                 }),
-                i ? null : (0, r.jsx)(o.A, { className: s()(l.LJ, u), direction: o.A.Directions.RIGHT }),
+                r ? null : (0, a.jsx)(s.A, { className: l()(o.LJ, u), direction: s.A.Directions.RIGHT }),
             ],
         },
         t.id,
     );
 }
 let c = function (e) {
-    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: a } = e;
-    return (0, r.jsx)("div", {
-        className: s()(l.jD, i),
-        children: t.map((e, i) =>
-            (0, r.jsx)(
+    let { breadcrumbs: t, activeId: n, className: r, separatorClassName: i } = e;
+    return (0, a.jsx)("div", {
+        className: l()(o.jD, r),
+        children: t.map((e, r) =>
+            (0, a.jsx)(
                 u,
                 {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === n,
-                    isFinalBreadcrumb: i === t.length - 1,
-                    separatorClassName: a,
+                    isFinalBreadcrumb: r === t.length - 1,
+                    separatorClassName: i,
                 },
                 e.id,
             ),

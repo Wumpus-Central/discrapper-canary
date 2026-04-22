@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     cB: "dragging_f7c056",
     XQ: "draggableInputContainer_f7c056",

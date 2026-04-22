@@ -1,50 +1,50 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    r = n(64700),
-    a = n(342494),
-    l = n(582754),
-    s = n(736653),
-    o = n(793574),
-    d = n(688810),
-    c = n(976860),
-    u = n(979286),
-    A = n(652215),
-    h = n(985018);
-let _ = (e) => {
-    let { displayOptions: t, targetElementRef: n, onRequestClose: _, onClick: m } = e,
-        { analyticsLocations: p } = (0, d.Ay)(o.A.HOME_PAGE_SHOP_TAB),
-        g = (0, s.Ay)(),
-        E = (0, l.Mw)(g) ? t.assetDark : t.assetLight,
-        f = r.useRef(_);
+a.d(l, { A: () => p });
+var t = a(627968),
+    s = a(64700),
+    i = a(265486),
+    n = a(462887),
+    c = a(736653),
+    h = a(793574),
+    r = a(688810),
+    o = a(976860),
+    d = a(979286),
+    v = a(652215),
+    g = a(985018);
+let p = (e) => {
+    let { displayOptions: l, targetElementRef: a, onRequestClose: p, onClick: m } = e,
+        { analyticsLocations: f } = (0, r.Ay)(h.A.HOME_PAGE_SHOP_TAB),
+        w = (0, c.Ay)(),
+        x = (0, n.M)(w) ? l.assetDark : l.assetLight,
+        u = s.useRef(p);
     return (
-        (f.current = _),
-        r.useEffect(
+        (u.current = p),
+        s.useEffect(
             () => () => {
-                f.current?.();
+                u.current?.();
             },
             [],
         ),
-        (0, i.jsx)(a.AM, {
-            targetElementRef: n,
+        (0, t.jsx)(i.A, {
+            targetElementRef: a,
             position: "right",
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: t.title(),
-            body: t.body(),
-            graphic: { type: "image", src: E },
+            title: l.title(),
+            body: l.body(),
+            graphic: { type: "image", src: x },
             actions: [
                 {
-                    text: h.intl.string(h.t.fYfGgK),
+                    text: g.intl.string(g.t.fYfGgK),
                     variant: "primary",
                     onClick: () => {
                         m?.(),
-                            (0, c.pX)(A.BVt.COLLECTIBLES_SHOP),
-                            (0, u.Cz)({ analyticsLocations: p, analyticsSource: o.A.HOME_PAGE_SHOP_TAB });
+                            (0, o.pX)(v.BVt.COLLECTIBLES_SHOP),
+                            (0, d.Cz)({ analyticsLocations: f, analyticsSource: h.A.HOME_PAGE_SHOP_TAB });
                     },
                 },
             ],
-            onRequestClose: _,
+            onRequestClose: p,
         })
     );
 };

@@ -1,88 +1,89 @@
-n.d(t, { g: () => x });
-var i = n(627968),
-    l = n(64700),
-    s = n(934551),
-    a = n(158954),
-    r = n(421380),
-    o = n(397927),
-    d = n(404374),
-    c = n(725807),
-    u = n(927578),
-    h = n(226017),
-    A = n(652215),
-    _ = n(788868),
-    m = n(985018),
-    p = n(939957),
-    g = n(7410),
-    f = n(936037);
-function x() {
-    return (0, h.A)()
-        ? (0, i.jsx)("div", {
-              className: p.do,
-              children: (0, i.jsxs)("div", {
-                  className: p.U6,
+t.d(s, { g: () => b });
+var a = t(627968),
+    n = t(64700),
+    l = t(403581),
+    i = t(834730),
+    r = t(862482),
+    c = t(534514),
+    d = t(192308),
+    o = t(404374),
+    u = t(725807),
+    m = t(927578),
+    x = t(226017),
+    g = t(652215),
+    v = t(788868),
+    j = t(985018),
+    h = t(398610),
+    A = t(7410),
+    f = t(936037);
+function b() {
+    return (0, x.A)()
+        ? (0, a.jsx)("div", {
+              className: h.do,
+              children: (0, a.jsxs)("div", {
+                  className: h.U6,
                   children: [
-                      (0, i.jsx)("img", { src: g, className: p.Sl, alt: "" }),
-                      (0, i.jsx)(o.Heading, {
-                          className: p.wx,
+                      (0, a.jsx)("img", { src: A, className: h.Sl, alt: "" }),
+                      (0, a.jsx)(c.D, {
+                          className: h.wx,
                           variant: "heading-xl/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t.erEf2g),
+                          children: j.intl.string(j.t.erEf2g),
                       }),
-                      (0, i.jsx)(a.EYj, {
+                      (0, a.jsx)(i.E, {
                           variant: "text-md/medium",
                           color: "text-muted",
-                          children: m.intl.string(m.t.NaRCXT),
+                          children: j.intl.string(j.t.NaRCXT),
                       }),
                   ],
               }),
           })
-        : (0, i.jsxs)("div", {
-              className: p.do,
+        : (0, a.jsxs)("div", {
+              className: h.do,
               children: [
-                  (0, i.jsxs)("div", {
-                      className: p.U6,
+                  (0, a.jsxs)("div", {
+                      className: h.U6,
                       children: [
-                          (0, i.jsx)("img", { src: f, className: p.Sl, alt: "" }),
-                          (0, i.jsx)(o.Heading, {
-                              className: p.wx,
+                          (0, a.jsx)("img", { src: f, className: h.Sl, alt: "" }),
+                          (0, a.jsx)(c.D, {
+                              className: h.wx,
                               variant: "heading-xl/semibold",
                               color: "text-default",
-                              children: m.intl.string(m.t.w4DRbZ),
+                              children: j.intl.string(j.t.w4DRbZ),
                           }),
-                          (0, i.jsx)(a.EYj, {
+                          (0, a.jsx)(i.E, {
                               variant: "text-md/medium",
                               color: "text-muted",
-                              children: m.intl.string(m.t.F6u3E3),
+                              children: j.intl.string(j.t.F6u3E3),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(E, {}),
+                  (0, a.jsx)(N, {}),
               ],
           });
 }
-function E() {
-    let e = (0, u.Dd)(_.PremiumTypes.TIER_2),
-        t = l.useCallback(
+function N() {
+    let e = (0, m.Dd)(v.PremiumTypes.TIER_2),
+        s = n.useCallback(
             () =>
-                (0, o.mMO)(async () => {
-                    let { default: e } = await n.e("159").then(n.bind(n, 530951));
-                    return (t) => (0, i.jsx)(e, { ...t });
+                (0, d.openModalLazy)(async () => {
+                    let { default: e } = await t.e("159").then(t.bind(t, 530951));
+                    return (s) => (0, a.jsx)(e, { ...s });
                 }),
             [],
         ),
-        h = m.intl.format(m.t.qXh3fo, { nitroTierName: e, onClick: t });
-    return (0, i.jsxs)("div", {
-        className: p.Zj,
+        c = j.intl.format(j.t.qXh3fo, { nitroTierName: e, onClick: s });
+    return (0, a.jsxs)("div", {
+        className: h.Zj,
         children: [
-            (0, i.jsx)(s.NitroWheelIcon, { size: "md", color: d.k0.PREMIUM_TIER_2 }),
-            (0, i.jsx)(a.EYj, { variant: "text-xs/medium", color: "text-strong", className: p.tD, children: h }),
-            (0, i.jsx)(c.A, {
-                className: p.Oy,
+            (0, a.jsx)(l.t, { size: "md", color: o.k0.PREMIUM_TIER_2 }),
+            (0, a.jsx)(i.E, { variant: "text-xs/medium", color: "text-strong", className: h.tD, children: c }),
+            (0, a.jsx)(u.A, {
+                className: h.Oy,
                 size: r.lO.TINY,
-                shinyButtonClassName: p.Oy,
-                subscriptionTier: _.pe.TIER_2,
-                premiumModalAnalyticsLocation: { section: A.JJy.FOR_LATER_POPOUT_UPSELL },
+                shinyButtonClassName: h.Oy,
+                subscriptionTier: v.pe.TIER_2,
+                premiumModalAnalyticsLocation: { section: g.JJy.FOR_LATER_POPOUT_UPSELL },
             }),
         ],
     });

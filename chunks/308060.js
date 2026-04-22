@@ -3,120 +3,106 @@ var r = n(72290);
     "use strict";
     if (!e.setImmediate) {
         var t,
-            n = 1,
-            i = {},
-            s = !1,
-            a = e.document,
-            o = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (o = o && o.setTimeout ? o : e),
+            n,
+            i,
+            s,
+            a,
+            o = 1,
+            l = {},
+            u = !1,
+            d = e.document,
+            c = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        (c = c && c.setTimeout ? c : e),
             "[object process]" === {}.toString.call(e.process)
-                ? _()
-                : f()
-                  ? p()
+                ? (a = function (e) {
+                      r.nextTick(function () {
+                          f(e);
+                      });
+                  })
+                : (function () {
+                        if (e.postMessage && !e.importScripts) {
+                            var t = !0,
+                                n = e.onmessage;
+                            return (
+                                (e.onmessage = function () {
+                                    t = !1;
+                                }),
+                                e.postMessage("", "*"),
+                                (e.onmessage = n),
+                                t
+                            );
+                        }
+                    })()
+                  ? ((t = "setImmediate$" + Math.random() + "$"),
+                    (n = function (n) {
+                        n.source === e &&
+                            "string" == typeof n.data &&
+                            0 === n.data.indexOf(t) &&
+                            f(+n.data.slice(t.length));
+                    }),
+                    e.addEventListener ? e.addEventListener("message", n, !1) : e.attachEvent("onmessage", n),
+                    (a = function (n) {
+                        e.postMessage(t + n, "*");
+                    }))
                   : e.MessageChannel
-                    ? h()
-                    : a && "onreadystatechange" in a.createElement("script")
-                      ? m()
-                      : E(),
-            (o.setImmediate = l),
-            (o.clearImmediate = u);
+                    ? (((i = new MessageChannel()).port1.onmessage = function (e) {
+                          f(e.data);
+                      }),
+                      (a = function (e) {
+                          i.port2.postMessage(e);
+                      }))
+                    : d && "onreadystatechange" in d.createElement("script")
+                      ? ((s = d.documentElement),
+                        (a = function (e) {
+                            var t = d.createElement("script");
+                            (t.onreadystatechange = function () {
+                                f(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
+                            }),
+                                s.appendChild(t);
+                        }))
+                      : (a = function (e) {
+                            setTimeout(f, 0, e);
+                        }),
+            (c.setImmediate = function (e) {
+                "function" != typeof e && (e = Function("" + e));
+                for (var t = Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
+                var r = { callback: e, args: t };
+                return (l[o] = r), a(o), o++;
+            }),
+            (c.clearImmediate = _);
     }
-    function l(e) {
-        "function" != typeof e && (e = Function("" + e));
-        for (var r = Array(arguments.length - 1), s = 0; s < r.length; s++) r[s] = arguments[s + 1];
-        var a = { callback: e, args: r };
-        return (i[n] = a), t(n), n++;
+    function _(e) {
+        delete l[e];
     }
-    function u(e) {
-        delete i[e];
-    }
-    function c(e) {
-        var t = e.callback,
-            n = e.args;
-        switch (n.length) {
-            case 0:
-                t();
-                break;
-            case 1:
-                t(n[0]);
-                break;
-            case 2:
-                t(n[0], n[1]);
-                break;
-            case 3:
-                t(n[0], n[1], n[2]);
-                break;
-            default:
-                t.apply(void 0, n);
-        }
-    }
-    function d(e) {
-        if (s) setTimeout(d, 0, e);
+    function f(e) {
+        if (u) setTimeout(f, 0, e);
         else {
-            var t = i[e];
+            var t = l[e];
             if (t) {
-                s = !0;
+                u = !0;
                 try {
-                    c(t);
+                    var n = t.callback,
+                        r = t.args;
+                    switch (r.length) {
+                        case 0:
+                            n();
+                            break;
+                        case 1:
+                            n(r[0]);
+                            break;
+                        case 2:
+                            n(r[0], r[1]);
+                            break;
+                        case 3:
+                            n(r[0], r[1], r[2]);
+                            break;
+                        default:
+                            n.apply(void 0, r);
+                    }
                 } finally {
-                    u(e), (s = !1);
+                    _(e), (u = !1);
                 }
             }
         }
-    }
-    function _() {
-        t = function (e) {
-            r.nextTick(function () {
-                d(e);
-            });
-        };
-    }
-    function f() {
-        if (e.postMessage && !e.importScripts) {
-            var t = !0,
-                n = e.onmessage;
-            return (
-                (e.onmessage = function () {
-                    t = !1;
-                }),
-                e.postMessage("", "*"),
-                (e.onmessage = n),
-                t
-            );
-        }
-    }
-    function p() {
-        var n = "setImmediate$" + Math.random() + "$",
-            r = function (t) {
-                t.source === e && "string" == typeof t.data && 0 === t.data.indexOf(n) && d(+t.data.slice(n.length));
-            };
-        e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r),
-            (t = function (t) {
-                e.postMessage(n + t, "*");
-            });
-    }
-    function h() {
-        var e = new MessageChannel();
-        (e.port1.onmessage = function (e) {
-            d(e.data);
-        }),
-            (t = function (t) {
-                e.port2.postMessage(t);
-            });
-    }
-    function m() {
-        var e = a.documentElement;
-        t = function (t) {
-            var n = a.createElement("script");
-            (n.onreadystatechange = function () {
-                d(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
-            }),
-                e.appendChild(n);
-        };
-    }
-    function E() {
-        t = function (e) {
-            setTimeout(d, 0, e);
-        };
     }
 })("u" < typeof self ? (void 0 === n.g ? this : n.g) : self);

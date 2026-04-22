@@ -1,99 +1,103 @@
-n.d(t, { L: () => N });
+n.d(t, { L: () => j });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(565645),
-    o = n(688810),
-    d = n(687021),
-    c = n(128450),
-    u = n(419954),
-    m = n(796774),
-    g = n(209932),
-    _ = n(536432),
-    x = n(984813),
-    A = n(595953),
-    h = n(975571),
-    p = n(780964),
-    T = n(617617),
-    f = n(652215);
+    a = n(270003),
+    r = n(403581),
+    o = n(512950),
+    d = n(983851),
+    u = n(834730),
+    c = n(565645),
+    g = n(688810),
+    m = n(687021),
+    _ = n(128450),
+    A = n(419954),
+    h = n(796774),
+    p = n(209932),
+    x = n(536432),
+    E = n(984813),
+    T = n(595953),
+    S = n(975571),
+    f = n(780964),
+    b = n(617617),
+    C = n(652215);
 n(980504);
-var S = n(985018),
-    E = n(314657);
-function b(e) {
-    return (0, l.bG)([g.A], () => {
+var v = n(985018),
+    N = n(811249);
+function I(e) {
+    return (0, l.bG)([p.A], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return g.A.getSound("0" === t ? "0" : t, n);
+        return p.A.getSound("0" === t ? "0" : t, n);
     });
 }
-function C(e) {
+function y(e) {
     let { guildId: t } = e,
-        n = (0, l.bG)([T.A], () => T.A.settings.guilds?.guilds?.[t]?.joinSound),
-        s = b(n);
+        n = (0, l.bG)([b.A], () => b.A.settings.guilds?.guilds?.[t]?.joinSound),
+        s = I(n);
     if (null == n || null == s) return null;
-    let { emojiId: o, emojiName: d } = s,
-        c = null != o || null != d;
+    let { emojiId: a, emojiName: r } = s,
+        o = null != a || null != r;
     return (0, i.jsxs)("div", {
-        className: E.Io,
+        className: N.Io,
         children: [
-            c
-                ? (0, i.jsx)(r.A, { emojiId: o, emojiName: d, className: E.nW })
-                : (0, i.jsx)(a.HKD, { size: "md", color: "currentColor", className: E.nW }),
-            (0, i.jsx)(a.Text, { className: E.dK, variant: "text-xs/medium", children: s.name }),
+            o
+                ? (0, i.jsx)(c.A, { emojiId: a, emojiName: r, className: N.nW })
+                : (0, i.jsx)(d.H, { size: "md", color: "currentColor", className: N.nW }),
+            (0, i.jsx)(u.E, { className: N.dK, variant: "text-xs/medium", children: s.name }),
         ],
     });
 }
-let N = (0, u.E2)(p.X.ENTRANCE_SOUNDS_SETTING, {
-    useSearchTerms: () => [S.intl.string(S.t.nzUc3B)],
+let j = (0, A.E2)(f.X.ENTRANCE_SOUNDS_SETTING, {
+    useSearchTerms: () => [v.intl.string(v.t.nzUc3B)],
     Component: function () {
-        let { analyticsLocations: e } = (0, o.Ay)(),
+        let { analyticsLocations: e } = (0, g.Ay)(),
             [t, n] = s.useState("0"),
-            r = (0, x.mz)(t),
-            u = b(r),
-            p = r?.type === x.PP.GLOBAL,
-            T = (0, l.bG)([g.A], () => g.A.hasFetchedAllSounds()) && null != r && null == u;
+            d = (0, E.mz)(t),
+            u = I(d),
+            c = d?.type === E.PP.GLOBAL,
+            A = (0, l.bG)([p.A], () => p.A.hasFetchedAllSounds()) && null != d && null == u;
         s.useEffect(() => {
-            T && (0, _.ND)({ location: e });
-        }, [T, e]),
+            A && (0, x.ND)({ location: e });
+        }, [A, e]),
             s.useEffect(() => {
-                (0, m.E7)();
+                (0, h.E7)();
             }, []);
-        let N = s.useCallback((e, t) => {
+        let f = s.useCallback((e, t) => {
             let { inDropdown: n } = t;
-            return null == e ? null : n ? (0, i.jsx)(C, { guildId: e.value }) : null;
+            return null == e ? null : n ? (0, i.jsx)(y, { guildId: e.value }) : null;
         }, []);
-        return (0, i.jsxs)(a.nVY, {
-            label: S.intl.string(S.t.nzUc3B),
-            description: S.intl.format(S.t.u9RWmv, { helpdeskArticle: h.A.getArticleURL(f.MVz.SOUNDBOARD) }),
+        return (0, i.jsxs)(a.n, {
+            label: v.intl.string(v.t.nzUc3B),
+            description: v.intl.format(v.t.u9RWmv, { helpdeskArticle: S.A.getArticleURL(C.MVz.SOUNDBOARD) }),
             children: [
-                (0, i.jsx)(d.A, {
+                (0, i.jsx)(m.A, {
                     guildId: t,
-                    className: E.Dt,
-                    globalOption: { label: S.intl.string(S.t["CpEUP/"]), value: "0" },
+                    className: N.Dt,
+                    globalOption: { label: v.intl.string(v.t["CpEUP/"]), value: "0" },
                     onChange: (e) => {
                         n(null == e ? "0" : e.id);
                     },
-                    renderOptionSuffix: N,
+                    renderOptionSuffix: f,
                     hideDivider: !0,
                 }),
-                (0, i.jsxs)(c.A, {
-                    title: S.intl.format(S.t.I2TsYN, {
-                        nitroWheelHook: () => (0, i.jsx)(a.tvc, { size: "md", color: "currentColor", className: E.ax }),
+                (0, i.jsxs)(_.A, {
+                    title: v.intl.format(v.t.I2TsYN, {
+                        nitroWheelHook: () => (0, i.jsx)(r.t, { size: "md", color: "currentColor", className: N.ax }),
                     }),
                     children: [
-                        (0, i.jsx)(A.A, {
+                        (0, i.jsx)(T.A, {
                             sound: u,
-                            isGlobal: p,
+                            isGlobal: c,
                             onSelect: (n) => {
-                                null == n ? (0, _.Dv)(t, e) : (0, _.un)(t, n, e);
+                                null == n ? (0, x.Dv)(t, e) : (0, x.un)(t, n, e);
                             },
                         }),
-                        T &&
-                            (0, i.jsx)(a.po8, {
-                                className: E.lm,
-                                messageType: a.YCn.WARNING,
-                                children: S.intl.string(S.t.WkPsFR),
+                        A &&
+                            (0, i.jsx)(o.p, {
+                                className: N.lm,
+                                messageType: o.Y.WARNING,
+                                children: v.intl.string(v.t.WkPsFR),
                             }),
                     ],
                 }),

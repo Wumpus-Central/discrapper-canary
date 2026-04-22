@@ -7,15 +7,15 @@ var r = n(73153),
     o = n(41237),
     l = n(279263),
     u = n(961350),
-    c = n(317525),
-    d = n(71393),
+    d = n(317525),
+    c = n(71393),
     _ = n(954571),
     f = n(728458),
-    p = n(157016),
+    E = n(157016),
     h = n(548965),
-    m = n(652215);
-let E = new i.A("DispatcherBridge"),
-    g = [l.A, d.A, c.A, a.A, o.A],
+    p = n(652215);
+let m = new i.A("DispatcherBridge"),
+    g = [l.A, c.A, d.A, a.A, o.A],
     A = {
         GUILD_MEMBER_ADD: (e) => ({ ...e, currentUserId: u.default.getId() }),
         CONNECTION_OPEN: (e) => ({ guilds: e.guilds, unavailableGuilds: e.unavailableGuilds }),
@@ -28,8 +28,8 @@ class I {
     disabledFromFatalError = !1;
     constructor(e) {
         if (0 === e.length) return;
-        const t = p.V;
-        if (null == t) return void E.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
+        const t = E.V;
+        if (null == t) return void m.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
         try {
             const n = [];
             for (const r of e) {
@@ -37,9 +37,9 @@ class I {
                     i = r.connectWithLibdiscore(t);
                 this.tokenToStore.set(i, r), n.push(`${e} => [token: ${i}, mode: ${r.getMode()}]`);
             }
-            E.info(`Connected ${e.length} store(s), mapping: ${n.join(", ")}.`);
+            m.info(`Connected ${e.length} store(s), mapping: ${n.join(", ")}.`);
             const i = t.getRegisteredActionTypes();
-            E.info(`Registering ${i.length} bridged action(s): ${i.join(", ")}.`);
+            m.info(`Registering ${i.length} bridged action(s): ${i.join(", ")}.`);
             const a = (e) => {
                 let n;
                 if (this.disabledFromFatalError) return;
@@ -51,9 +51,9 @@ class I {
                     l = t.dispatchAction(n, o);
                 if (!l.ok) return void this.handleFatalError(l.error, e.type);
                 let u = performance.now() - i,
-                    { metrics: c, storeResults: d } = l.value,
+                    { metrics: d, storeResults: c } = l.value,
                     f = [];
-                for (let t of d) null != t.error ? this.handleStoreError(t, e.type) : f.push(t);
+                for (let t of c) null != t.error ? this.handleStoreError(t, e.type) : f.push(t);
                 for (let t of f)
                     this.withStoreToken(t.storeToken, e.type, (e) => {
                         e.applyChanges(t.databaseChanges);
@@ -62,8 +62,8 @@ class I {
                     this.withStoreToken(t.storeToken, e.type, (t) => {
                         t.doEmitChanges(e);
                     });
-                if (null != c && o) {
-                    let t = [a, ...c.timings];
+                if (null != d && o) {
+                    let t = [a, ...d.timings];
                     if (s.Ay.get("libdiscore_verbose_telemetry_logging")) {
                         let n = t
                                 .map((e) => {
@@ -71,7 +71,7 @@ class I {
                                     return ` - ${t}: ${n}ms`;
                                 })
                                 .join("\n"),
-                            r = c.mutations
+                            r = d.mutations
                                 .map((e) => {
                                     let { recordType: t, metrics: n } = e,
                                         r = Object.entries(n)
@@ -88,7 +88,7 @@ class I {
 ${r}`;
                                 })
                                 .join("\n"),
-                            i = c.memory
+                            i = d.memory
                                 .map((e) => {
                                     let { recordType: t, statistics: n } = e,
                                         r = Object.entries(n)
@@ -116,15 +116,15 @@ ${r}`;
 ${n}`;
                                 })
                                 .join("\n\n");
-                        E.info(`Handling action ${e.type} took ${u}ms
+                        m.info(`Handling action ${e.type} took ${u}ms
 ${s}`);
                     }
-                    _.default.track(m.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
+                    _.default.track(p.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
                         action_type: e.type,
                         total_duration_millis: u,
                         timings: JSON.stringify(t),
-                        mutations: JSON.stringify(c.mutations),
-                        memory_usage: JSON.stringify(c.memory),
+                        mutations: JSON.stringify(d.mutations),
+                        memory_usage: JSON.stringify(d.memory),
                     }),
                         h.pd.didEmit();
                 }
@@ -136,14 +136,14 @@ ${s}`);
                 r.A.Database,
             );
         } catch (e) {
-            E.error("Failed to initialize the dispatcher bridge", e);
+            m.error("Failed to initialize the dispatcher bridge", e);
         }
     }
     handleFatalError(e, t) {
         let n = Error(e),
             r = this.hasAnyAuthoritativeStore();
         if (
-            (E.error("Fatal dispatch error for action", t, "hasAuthoritativeStore:", r, n),
+            (m.error("Fatal dispatch error for action", t, "hasAuthoritativeStore:", r, n),
             f.A.captureException(n, {
                 extra: { actionType: t, hasAuthoritativeStore: r },
                 tags: { source: "libdiscore", errorKind: "fatal_dispatch" },
@@ -151,7 +151,7 @@ ${s}`);
             r)
         )
             throw ((0, h.pX)(), n);
-        for (let e of (E.warn("Disabling DispatcherBridge until restart"),
+        for (let e of (m.warn("Disabling DispatcherBridge until restart"),
         (this.disabledFromFatalError = !0),
         this.tokenToStore.values()))
             e.disableDualReadValidation();
@@ -162,21 +162,21 @@ ${s}`);
             i = n?.getMode(),
             s = Error(e.error ?? "unknown store error");
         if (
-            (E.error("Store", r, "failed to handle action", t, "mode:", i, s),
+            (m.error("Store", r, "failed to handle action", t, "mode:", i, s),
             f.A.captureException(s, {
                 extra: { actionType: t, storeName: r, storeMode: i },
                 tags: { source: "libdiscore", errorKind: "store_dispatch" },
             }),
             "typescript-libdiscore-dual-read" === i)
         )
-            E.warn(`Store: ${r} had unexpected error in Rust implementation, disabling moving forward`),
+            m.warn(`Store: ${r} had unexpected error in Rust implementation, disabling moving forward`),
                 n?.disableDualReadValidation();
         else if ("libdiscore" === i) throw ((0, h.pX)(), s);
         else throw Error(`unexpected storeMode '${i}' for store ${r}`);
     }
     withStoreToken(e, t, n) {
         let r = this.tokenToStore.get(e);
-        null == r ? E.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
+        null == r ? m.warn("When dispatching action", t, "we got a store token", e, "that is unknown") : n(r);
     }
     hasAnyAuthoritativeStore() {
         for (let e of this.tokenToStore.values()) if ("libdiscore" === e.getMode()) return !0;
@@ -185,9 +185,7 @@ ${s}`);
 }
 let T = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
 new I(
-    (function (e) {
-        return __OVERLAY__
-            ? (E.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
-            : e.filter((e) => T.has(e.getMode()));
-    })(g),
+    __OVERLAY__
+        ? (m.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
+        : g.filter((e) => T.has(e.getMode())),
 );

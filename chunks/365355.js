@@ -1,24 +1,24 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
+    a = n(292666),
     r = n(274372),
     o = n(399925),
     d = n(419954),
-    c = n(780964),
-    u = n(985018);
-let m = (0, d.E2)(c.X.CLIPS_PHRASES, {
-    useSearchTerms: () => [u.intl.string(u.t.JIze0o)],
+    u = n(780964),
+    c = n(985018);
+let g = (0, d.E2)(u.X.CLIPS_PHRASES, {
+    useSearchTerms: () => [c.intl.string(c.t.JIze0o)],
     usePredicate: () => (0, l.bG)([r.A], () => r.A.getSettings().clipSignals).enablePhraseSignals,
     Component: function () {
         let e = (0, l.bG)([r.A], () => r.A.getSettings().autoClipPhrases),
             [t, n] = s.useState(""),
             d = s.useMemo(() => e.map((e) => ({ id: e, label: e })), [e]),
-            c = s.useCallback((e) => {
+            u = s.useCallback((e) => {
                 n(e);
             }, []),
-            m = s.useCallback(
+            g = s.useCallback(
                 (i) => {
                     if ("Enter" === i.key || "," === i.key) {
                         i.preventDefault();
@@ -31,7 +31,7 @@ let m = (0, d.E2)(c.X.CLIPS_PHRASES, {
                 },
                 [t, e],
             ),
-            g = s.useCallback(
+            m = s.useCallback(
                 (t) => {
                     let n = Array.from(t)[0],
                         i = e.filter((e) => e !== n);
@@ -39,12 +39,12 @@ let m = (0, d.E2)(c.X.CLIPS_PHRASES, {
                 },
                 [e],
             );
-        return (0, i.jsx)(a.ksK, {
+        return (0, i.jsx)(a.k, {
             value: t,
-            onChange: c,
-            onKeyDown: m,
-            placeholder: u.intl.string(u.t.zYUZpt),
-            leading: d.length > 0 ? { type: "tags", items: d, onRemove: g } : void 0,
+            onChange: u,
+            onKeyDown: g,
+            placeholder: c.intl.string(c.t.zYUZpt),
+            leading: d.length > 0 ? { type: "tags", items: d, onRemove: m } : void 0,
         });
     },
 });

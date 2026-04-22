@@ -1,24 +1,25 @@
-r.d(t, { A: () => o });
-var l = r(627968),
-    n = r(397927),
-    a = r(976860),
-    s = r(53566),
-    c = r(427941),
-    i = r(653793),
-    d = r(46008);
-let o = (e) => {
-    let { backgroundImage: t, href: r, ctaText: o } = e,
-        u = (0, s.S)(o);
-    return (0, l.jsx)(i.A, {
-        children: (0, l.jsx)(n.DUT, {
-            className: d.v,
-            onClick: () => (0, a.pX)(r),
-            children: (0, l.jsx)(c.A, {
+l.d(t, { A: () => u });
+var r = l(627968),
+    n = l(939249),
+    a = l(834730),
+    s = l(976860),
+    c = l(53566),
+    i = l(427941),
+    d = l(653793),
+    o = l(46008);
+let u = (e) => {
+    let { backgroundImage: t, href: l, ctaText: u } = e,
+        m = (0, c.S)(u);
+    return (0, r.jsx)(d.A, {
+        children: (0, r.jsx)(n.D, {
+            className: o.v,
+            onClick: () => (0, s.pX)(l),
+            children: (0, r.jsx)(i.A, {
                 backgroundImage: t,
                 backgroundPosition: "left",
-                children: (0, l.jsx)("div", {
-                    className: d.j,
-                    children: (0, l.jsx)(n.Text, { variant: "text-lg/bold", color: "always-white", children: u }),
+                children: (0, r.jsx)("div", {
+                    className: o.j,
+                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "always-white", children: m }),
                 }),
             }),
         }),

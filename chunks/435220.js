@@ -1,11 +1,11 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        ApplicationDirectoryProfileSections: () => u,
+        ApplicationDirectoryProfileSections: () => _,
         EMPTY_QUERY: () => i,
         GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID: () => r,
-        GlobalDiscoveryAppsSections: () => o,
-        GlobalDiscoveryAppsTabId: () => l,
+        GlobalDiscoveryAppsSections: () => d,
+        GlobalDiscoveryAppsTabId: () => c,
         MAX_PAGES: () => s,
         PAGE_SIZE: () => a,
     });
@@ -13,27 +13,22 @@ let r = 0,
     i = "",
     s = 100,
     a = 48;
-var o = (function (e) {
-        return (e.ABOUT = "about"), (e.STORE = "store"), e;
-    })({}),
-    l = (function (e) {
-        return (
-            (e.FEATURED = "Featured"),
-            (e.GAMES = "Games"),
-            (e.ENTERTAINMENT = "Entertainment"),
-            (e.MODERATION_AND_TOOLS = "Moderation & Tools"),
-            (e.SOCIAL = "Social"),
-            (e.UTILITIES = "Utilities"),
-            e
-        );
-    })({}),
-    u = (function (e) {
-        return (
-            (e.GENERAL = "general"),
-            (e.IMAGES = "images"),
-            (e.PREMIUM_DEPRECATED = "premium"),
-            (e.STORE = "store"),
-            (e.PRIVACY = "privacy"),
-            e
-        );
-    })({});
+var o,
+    l,
+    u,
+    d = (((o = {}).ABOUT = "about"), (o.STORE = "store"), o),
+    c =
+        (((l = {}).FEATURED = "Featured"),
+        (l.GAMES = "Games"),
+        (l.ENTERTAINMENT = "Entertainment"),
+        (l.MODERATION_AND_TOOLS = "Moderation & Tools"),
+        (l.SOCIAL = "Social"),
+        (l.UTILITIES = "Utilities"),
+        l),
+    _ =
+        (((u = {}).GENERAL = "general"),
+        (u.IMAGES = "images"),
+        (u.PREMIUM_DEPRECATED = "premium"),
+        (u.STORE = "store"),
+        (u.PRIVACY = "privacy"),
+        u);

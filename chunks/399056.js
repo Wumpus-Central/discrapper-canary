@@ -1,106 +1,109 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => j });
 var i = n(627968),
-    s = n(64700),
-    l = n(417597),
-    r = n(397927),
-    a = n(219504),
-    o = n(374084),
-    d = n(199940),
-    c = n(132514),
-    u = n(987957),
-    m = n(985018),
-    g = n(659233);
-let x = [];
-function h() {
+    l = n(64700),
+    s = n(417597),
+    r = n(622629),
+    a = n(834730),
+    o = n(192308),
+    d = n(939249),
+    c = n(245604),
+    u = n(219504),
+    m = n(374084),
+    g = n(199940),
+    h = n(132514),
+    x = n(987957),
+    _ = n(985018),
+    p = n(327084);
+let A = [];
+function E() {
     return (0, i.jsx)("div", {
-        className: g.L8,
+        className: p.L8,
         children: (0, i.jsxs)("div", {
-            className: g.kv,
+            className: p.kv,
             children: [
                 (0, i.jsx)("div", {
-                    className: g.zV,
-                    children: (0, i.jsx)(r.B8Q, { size: "custom", color: "currentColor", height: 20, width: 22 }),
+                    className: p.zV,
+                    children: (0, i.jsx)(r.B, { size: "custom", color: "currentColor", height: 20, width: 22 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: g.tV,
-                    children: (0, i.jsx)(r.Text, {
+                    className: p.tV,
+                    children: (0, i.jsx)(a.E, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: m.intl.string(m.t["K/i3iQ"]),
+                        children: _.intl.string(_.t["K/i3iQ"]),
                     }),
                 }),
             ],
         }),
     });
 }
-function _(e) {
-    let { guildId: t, onAddAction: l } = e,
-        a = s.useCallback(() => {
+function f(e) {
+    let { guildId: t, onAddAction: s } = e,
+        r = l.useCallback(() => {
             if (null != t)
-                return (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
-                    return (n) => (0, i.jsx)(e, { ...n, guildId: t, onSave: l });
+                return (0, o.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("58203")]).then(n.bind(n, 251632));
+                    return (n) => (0, i.jsx)(e, { ...n, guildId: t, onSave: s });
                 });
-        }, [t, l]);
-    return (0, i.jsxs)(r.DUT, {
-        className: g.Bw,
-        onClick: a,
+        }, [t, s]);
+    return (0, i.jsxs)(d.D, {
+        className: p.Bw,
+        onClick: r,
         children: [
-            (0, i.jsx)(r.U1e, { size: "xs", color: "currentColor" }),
-            (0, i.jsx)(r.Text, { variant: "text-md/normal", color: "none", children: m.intl.string(m.t.qce3EM) }),
+            (0, i.jsx)(c.U, { size: "xs", color: "currentColor" }),
+            (0, i.jsx)(a.E, { variant: "text-md/normal", color: "none", children: _.intl.string(_.t.qce3EM) }),
         ],
     });
 }
-let p = function (e) {
+let j = function (e) {
     let { guildId: t } = e,
-        n = (0, l.yK)([c.A], () => c.A.getSettings().newMemberActions ?? x),
-        r = s.useCallback((e, t) => {
-            (0, d.G$)(e, t);
+        n = (0, s.yK)([h.A], () => h.A.getSettings().newMemberActions ?? A),
+        r = l.useCallback((e, t) => {
+            (0, g.G$)(e, t);
         }, []),
-        m = s.useCallback(
-            (e, i, s, l) => {
+        a = l.useCallback(
+            (e, i, l, s) => {
                 let r = n[e]?.channelId,
                     a = i.channelId;
                 null == r ||
-                    null == c.A.getSettings() ||
-                    (null == c.A.getPendingDataForChannel(a) && l && (0, d.Wh)(t, r, s), (0, d.A4)(r, i));
+                    null == h.A.getSettings() ||
+                    (null == h.A.getPendingDataForChannel(a) && s && (0, g.Wh)(t, r, l), (0, g.A4)(r, i));
             },
             [n, t],
         ),
-        p = s.useCallback(
+        o = l.useCallback(
             (e) => {
                 let t = n[e]?.channelId;
-                null != t && (0, d.sd)(t);
+                null != t && (0, g.sd)(t);
             },
             [n],
         ),
-        A = n.map((e) => ({ ...e, id: e.channelId })),
-        f = s.useCallback((e) => {
-            (0, d.DE)(e);
+        d = n.map((e) => ({ ...e, id: e.channelId })),
+        c = l.useCallback((e) => {
+            (0, g.DE)(e);
         }, []),
-        { handleDragStart: j, handleDragReset: N, handleDragComplete: E } = (0, a.A)(A, f);
+        { handleDragStart: _, handleDragReset: j, handleDragComplete: N } = (0, u.A)(d, c);
     return (0, i.jsxs)("div", {
-        className: g.uW,
+        className: p.uW,
         children: [
             n.map((e, n) =>
                 (0, i.jsx)(
-                    u.A,
+                    x.A,
                     {
                         guildId: t,
                         action: e,
                         actionIndex: n,
-                        onChange: m,
-                        onDelete: p,
-                        onDragStart: j,
-                        onDragReset: N,
-                        onDragComplete: E,
+                        onChange: a,
+                        onDelete: o,
+                        onDragStart: _,
+                        onDragReset: j,
+                        onDragComplete: N,
                     },
                     e.channelId,
                 ),
             ),
-            (0, i.jsx)(h, {}),
-            n.length < o._7 && (0, i.jsx)(_, { guildId: t, onAddAction: r }),
+            (0, i.jsx)(E, {}),
+            n.length < m._7 && (0, i.jsx)(f, { guildId: t, onAddAction: r }),
         ],
     });
 };

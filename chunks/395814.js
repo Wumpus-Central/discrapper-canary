@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     NC: "buttonsContainer__24d0d",
     oP: "colorSwatch__24d0d",

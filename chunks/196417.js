@@ -1,44 +1,41 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(355418),
-    i = n(322811),
-    a = n(658809);
-let s = 1,
-    o = 2;
-class l extends r.c {
+r.d(t, { A: () => i });
+var n = r(355418),
+    s = r(322811),
+    a = r(881190);
+class i extends n.c {
     innerPattern(e) {
         return /(gisteren|morgen|van)(ochtend|middag|namiddag|avond|nacht)(?=\W|$)/i;
     }
     innerExtract(e, t) {
-        let n = t[s].toLowerCase(),
-            r = t[o].toLowerCase(),
-            l = e.createParsingComponents(),
-            u = e.refDate;
-        switch (n) {
+        let r = t[1].toLowerCase(),
+            n = t[2].toLowerCase(),
+            i = e.createParsingComponents(),
+            o = e.refDate;
+        switch (r) {
             case "gisteren":
-                let c = new Date(u.getTime());
-                c.setDate(c.getDate() - 1), (0, a.Pl)(l, c);
+                let l = new Date(o.getTime());
+                l.setDate(l.getDate() - 1), (0, a.Pl)(i, l);
                 break;
             case "van":
-                (0, a.Pl)(l, u);
+                (0, a.Pl)(i, o);
                 break;
             case "morgen":
-                let d = new Date(u.getTime());
-                d.setDate(d.getDate() + 1), (0, a.Pl)(l, d), (0, a.A4)(l, d);
+                let u = new Date(o.getTime());
+                u.setDate(u.getDate() + 1), (0, a.Pl)(i, u), (0, a.A4)(i, u);
         }
-        switch (r) {
+        switch (n) {
             case "ochtend":
-                l.imply("meridiem", i.FF.AM), l.imply("hour", 6);
+                i.imply("meridiem", s.FF.AM), i.imply("hour", 6);
                 break;
             case "middag":
-                l.imply("meridiem", i.FF.AM), l.imply("hour", 12);
+                i.imply("meridiem", s.FF.AM), i.imply("hour", 12);
                 break;
             case "namiddag":
-                l.imply("meridiem", i.FF.PM), l.imply("hour", 15);
+                i.imply("meridiem", s.FF.PM), i.imply("hour", 15);
                 break;
             case "avond":
-                l.imply("meridiem", i.FF.PM), l.imply("hour", 20);
+                i.imply("meridiem", s.FF.PM), i.imply("hour", 20);
         }
-        return l;
+        return i;
     }
 }

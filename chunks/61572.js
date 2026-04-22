@@ -1,85 +1,83 @@
-"use strict";
-n.d(t, { N: () => p });
-var r = n(627968),
+n.d(t, { N: () => m });
+var l = n(627968),
     i = n(64700),
-    s = n(311907),
-    a = n(918022),
-    o = n(156312),
-    l = n(351906),
+    a = n(311907),
+    r = n(918022),
+    s = n(156312),
+    o = n(351906),
     u = n(935899),
     c = n(93159),
     d = n(94420);
-let _ = (e) => {
-        let { paymentSourceId: t, setPaymentSourceId: n, location: r, subscriptionPaymentSourceId: o } = e,
-            c = (0, u.D)(),
-            _ = (0, d.t4)((e) => {
-                let { checkoutInvoicePreview: t } = e;
-                return null != t ? t.total : void 0;
-            }),
-            {
-                dropdownPaymentSources: f,
-                giftCardsEnabled: p,
-                dropdownPaymentSourceId: h,
-                handleDropdownPaymentSourceChange: m,
-                giftCardCheckboxProps: E,
-            } = (0, a.Y)({
-                checkoutPaymentSources: c,
-                paymentSourceId: t,
-                setPaymentSourceId: n,
-                location: r ?? "BaseStatefulPaymentSourceSelector",
-                subscriptionPaymentSourceId: o,
-                itemAmount: _,
-            }),
-            g = i.useMemo(() => {
-                let e = f.find((e) => e.isDefault);
-                return null != e ? e.id : void 0;
-            }, [f]),
-            A = (0, s.bG)([l.A], () => l.A.hidePersonalInformation ?? !1);
-        return {
-            giftCardsEnabled: p,
-            giftCardCheckboxProps: E,
-            basePaymentSourceDropdownProps: i.useMemo(
-                () => ({
-                    selectedPaymentSourceId: h,
-                    paymentSources: f,
-                    defaultPaymentSourceId: g,
-                    hidePersonalInformation: A,
-                    onChange: m,
-                }),
-                [h, f, g, A, m],
-            ),
-        };
-    },
-    f = (e) => {
+let p = (e) => {
         let {
                 label: t,
                 additionalPaymentSourceDropdownProps: n,
                 disabled: s,
-                setPaymentSourceId: a,
-                location: o,
-                subscriptionPaymentSourceId: l,
-                onPaymentSourceAdd: u,
-                paymentSourceId: d,
+                setPaymentSourceId: p,
+                location: m,
+                subscriptionPaymentSourceId: h,
+                onPaymentSourceAdd: A,
+                paymentSourceId: _,
             } = e,
             {
-                giftCardsEnabled: f,
-                giftCardCheckboxProps: p,
-                basePaymentSourceDropdownProps: h,
-            } = _({ paymentSourceId: d, setPaymentSourceId: a, subscriptionPaymentSourceId: l, location: o }),
-            m = i.useMemo(() => ({ ...h, ...n, onPaymentSourceAdd: u }), [h, u, n]);
-        return (0, r.jsx)(c.nL, {
+                giftCardsEnabled: C,
+                giftCardCheckboxProps: E,
+                basePaymentSourceDropdownProps: y,
+            } = ((e) => {
+                let { paymentSourceId: t, setPaymentSourceId: n, location: l, subscriptionPaymentSourceId: s } = e,
+                    c = (0, u.D)(),
+                    p = (0, d.t4)((e) => {
+                        let { checkoutInvoicePreview: t } = e;
+                        return null != t ? t.total : void 0;
+                    }),
+                    {
+                        dropdownPaymentSources: m,
+                        giftCardsEnabled: h,
+                        dropdownPaymentSourceId: A,
+                        handleDropdownPaymentSourceChange: _,
+                        giftCardCheckboxProps: C,
+                    } = (0, r.Y)({
+                        checkoutPaymentSources: c,
+                        paymentSourceId: t,
+                        setPaymentSourceId: n,
+                        location: l ?? "BaseStatefulPaymentSourceSelector",
+                        subscriptionPaymentSourceId: s,
+                        itemAmount: p,
+                    }),
+                    E = i.useMemo(() => {
+                        let e = m.find((e) => e.isDefault);
+                        return null != e ? e.id : void 0;
+                    }, [m]),
+                    y = (0, a.bG)([o.A], () => o.A.hidePersonalInformation ?? !1);
+                return {
+                    giftCardsEnabled: h,
+                    giftCardCheckboxProps: C,
+                    basePaymentSourceDropdownProps: i.useMemo(
+                        () => ({
+                            selectedPaymentSourceId: A,
+                            paymentSources: m,
+                            defaultPaymentSourceId: E,
+                            hidePersonalInformation: y,
+                            onChange: _,
+                        }),
+                        [A, m, E, y, _],
+                    ),
+                };
+            })({ paymentSourceId: _, setPaymentSourceId: p, subscriptionPaymentSourceId: h, location: m }),
+            f = i.useMemo(() => ({ ...y, ...n, onPaymentSourceAdd: A }), [y, A, n]);
+        return (0, l.jsx)(c.nL, {
             label: t,
-            giftCardsEnabled: f,
-            giftCardCheckboxProps: p,
-            paymentSourceDropdownProps: m,
+            giftCardsEnabled: C,
+            giftCardCheckboxProps: E,
+            paymentSourceDropdownProps: f,
             disabled: s,
         });
     },
-    p = (e) => {
-        let { setPaymentSourceId: t, paymentSourceId: n } = (0, o.P5)(),
-            { setPaymentSourceId: s, paymentSourceId: a } = i.useMemo(
+    m = (e) => {
+        let { setPaymentSourceId: t, paymentSourceId: n } = (0, s.P5)(),
+            { setPaymentSourceId: a, paymentSourceId: r } = i.useMemo(
                 () => ({ setPaymentSourceId: e.setPaymentSourceId ?? t, paymentSourceId: e.paymentSourceId ?? n }),
                 [e.setPaymentSourceId, e.paymentSourceId, t, n],
             );
-        return (0, r.jsx)(f, { ...e, setPaymentSourceId: s, paymentSourceId: a });
+        return (0, l.jsx)(p, { ...e, setPaymentSourceId: a, paymentSourceId: r });
     };

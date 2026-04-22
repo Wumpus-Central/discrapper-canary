@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { kb: () => T, oO: () => I, uK: () => A });
-var r = n(627968);
+n.d(t, { kb: () => N, oO: () => T, uK: () => x });
+var l = n(627968);
 n(64700);
 var i = n(503698),
-    s = n.n(i),
-    a = n(827734),
-    o = n(732955),
-    l = n(582754),
-    u = n(397927),
-    c = n(736653),
-    d = n(975571),
+    a = n.n(i),
+    r = n(827734),
+    s = n(20742),
+    o = n(462887),
+    u = n(534514),
+    c = n(834730),
+    d = n(430993),
+    p = n(359778),
+    m = n(695366),
+    h = n(736653),
+    A = n(975571),
     _ = n(86379),
-    f = n(652215),
-    p = n(985018),
-    h = n(808175),
-    m = n(270516),
-    E = n(480540);
-function g(e) {
+    C = n(652215),
+    E = n(985018),
+    y = n(351818),
+    f = n(270516),
+    P = n(480540);
+function S(e) {
     let { className: t } = e,
-        n = (0, c.Ay)(),
-        i = (0, l.Mw)(n) ? m : E;
-    return (0, r.jsxs)("div", {
-        className: s()(h.kL, t),
+        n = (0, h.Ay)(),
+        i = (0, o.M)(n) ? f : P;
+    return (0, l.jsxs)("div", {
+        className: a()(y.kL, t),
         children: [
-            (0, r.jsx)(u.Heading, {
-                className: h.wx,
-                variant: "heading-xl/semibold",
-                children: p.intl.string(p.t.vwMEHS),
-            }),
-            (0, r.jsxs)(u.Text, {
-                className: h.h_,
+            (0, l.jsx)(u.D, { className: y.wx, variant: "heading-xl/semibold", children: E.intl.string(E.t.vwMEHS) }),
+            (0, l.jsxs)(c.E, {
+                className: y.h_,
                 variant: "text-md/normal",
                 color: "text-default",
                 children: [
-                    (0, r.jsx)("p", { children: p.intl.string(p.t.fev8MQ) }),
-                    (0, r.jsx)("p", {
-                        children: p.intl.format(p.t.IHxEJU, {
-                            helpdeskArticle: d.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
+                    (0, l.jsx)("p", { children: E.intl.string(E.t.fev8MQ) }),
+                    (0, l.jsx)("p", {
+                        children: E.intl.format(E.t.IHxEJU, {
+                            helpdeskArticle: A.A.getArticleURL(C.MVz.BLOCKED_PAYMENTS),
                         }),
                     }),
                 ],
             }),
-            (0, r.jsx)("img", { src: i, className: h.j0, alt: "Blocked Payments" }),
+            (0, l.jsx)("img", { src: i, className: y.j0, alt: "Blocked Payments" }),
         ],
     });
 }
-function A() {
-    return (0, r.jsx)(g, { className: h.W0 });
+function x() {
+    return (0, l.jsx)(S, { className: y.W0 });
 }
-function I() {
-    return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(o.rQ0, {}), (0, r.jsx)(u.cwr, { children: (0, r.jsx)(g, { className: h.yl }) })],
+function T() {
+    return (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(s.rQ, {}), (0, l.jsx)(d.c, { children: (0, l.jsx)(S, { className: y.yl }) })],
     });
 }
-function T(e) {
+function N(e) {
     let { className: t } = e;
     return (0, _.Hp)()
-        ? (0, r.jsxs)(u.ZpM, {
-              className: s()(h.ek, t),
-              type: u.ZpM.Types.CUSTOM,
+        ? (0, l.jsxs)(p.Z, {
+              className: a()(y.ek, t),
+              type: p.Z.Types.CUSTOM,
               children: [
-                  (0, r.jsx)(u.EpV, {
+                  (0, l.jsx)(m.E, {
                       size: "custom",
                       width: 20,
                       height: 20,
-                      className: h.XJ,
-                      color: a.A.unsafe_rawColors.YELLOW_300.css,
+                      className: y.XJ,
+                      color: r.A.unsafe_rawColors.YELLOW_300.css,
                   }),
-                  (0, r.jsx)(u.Text, {
+                  (0, l.jsx)(c.E, {
                       variant: "text-sm/normal",
-                      children: p.intl.format(p.t.NYkcCh, {
-                          helpdeskArticle: d.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
+                      children: E.intl.format(E.t.NYkcCh, {
+                          helpdeskArticle: A.A.getArticleURL(C.MVz.BLOCKED_PAYMENTS),
                       }),
                   }),
               ],

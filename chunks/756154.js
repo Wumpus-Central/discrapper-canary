@@ -1,130 +1,131 @@
-l.r(t), l.d(t, { default: () => F });
+l.r(t), l.d(t, { default: () => z });
 var n = l(627968),
     s = l(64700),
     i = l(503698),
     a = l.n(i),
     r = l(311907),
-    d = l(397927),
+    o = l(177953),
+    d = l(599319),
     c = l(793574),
-    o = l(688810),
-    u = l(726249),
-    x = l(985925),
-    m = l(624458),
-    h = l(513461),
-    j = l(496767),
-    _ = l(663997),
-    A = l(417718),
-    g = l(324023),
-    b = l(786180),
-    T = l(742589),
-    f = l(976860),
-    E = l(761640),
-    v = l(808728),
-    S = l(71393),
-    N = l(836872),
+    u = l(688810),
+    x = l(726249),
+    m = l(985925),
+    h = l(624458),
+    j = l(513461),
+    _ = l(496767),
+    A = l(663997),
+    g = l(417718),
+    f = l(324023),
+    E = l(786180),
+    v = l(742589),
+    b = l(976860),
+    N = l(761640),
+    S = l(808728),
+    C = l(71393),
+    p = l(836872),
     I = l(134413),
-    R = l(202309),
-    C = l(841933),
-    p = l(836501),
-    M = l(735937),
-    D = l(823712),
+    T = l(202309),
+    R = l(841933),
+    M = l(836501),
+    D = l(735937),
+    y = l(823712),
     G = l(606326),
-    y = l(856768),
-    L = l(332352),
-    U = l(652215),
-    P = l(746080),
-    k = l(985018),
-    B = l(947256),
-    w = l(638990);
-function O(e) {
+    L = l(856768),
+    k = l(332352),
+    P = l(652215),
+    w = l(746080),
+    B = l(985018),
+    U = l(256177),
+    O = l(964623);
+function F(e) {
     let { guild: t, currentTab: l, onTabSelect: s } = e,
-        i = (0, j.W)(t.id),
-        a = k.intl.string(k.t.oclz3Z),
-        r = k.intl.string(k.t.oclz3Z);
+        i = (0, _.W)(t.id),
+        a = B.intl.string(B.t.oclz3Z),
+        r = B.intl.string(B.t.oclz3Z);
     return (
-        (0, u.HU)({ location: t.name, subsection: a }),
-        (0, n.jsxs)(T.A, {
-            className: B.wx,
-            innerClassname: B.__invalid_innerHeader,
-            channelId: P.VV.MEMBER_SAFETY,
+        (0, x.HU)({ location: t.name, subsection: a }),
+        (0, n.jsxs)(v.A, {
+            className: U.wx,
+            innerClassname: U.__invalid_innerHeader,
+            channelId: w.VV.MEMBER_SAFETY,
             guildId: t.id,
             hideSearch: !0,
             children: [
-                (0, n.jsx)(T.A.Icon, { icon: d.nFg, "aria-hidden": !0 }),
-                (0, n.jsx)(T.A.Title, { children: r }),
-                i && (0, n.jsx)(D.A, { guildId: t.id, currentTab: l, onTabSelect: s }),
+                (0, n.jsx)(v.A.Icon, { icon: o.n, "aria-hidden": !0 }),
+                (0, n.jsx)(v.A.Title, { children: r }),
+                i && (0, n.jsx)(y.A, { guildId: t.id, currentTab: l, onTabSelect: s }),
             ],
         })
     );
 }
-function F(e) {
+function z(e) {
     let { guildId: t } = e,
-        l = (0, b.H)({ guildId: t }) ?? 0,
-        [i, u] = s.useState(l > 0 ? N.D.PENDING : N.D.ALL_MEMBERS),
-        j = (0, r.bG)([S.A], () => S.A.getGuild(t)),
-        { analyticsLocations: T } = (0, o.Ay)(c.A.MEMBER_SAFETY_PAGE),
-        D = (0, A.n)({ guildId: t }),
-        { guildJoinRequests: P } = (0, g.K)({
+        l = (0, E.H)({ guildId: t }) ?? 0,
+        [i, o] = s.useState(l > 0 ? p.D.PENDING : p.D.ALL_MEMBERS),
+        x = (0, r.bG)([C.A], () => C.A.getGuild(t)),
+        { analyticsLocations: _ } = (0, u.Ay)(c.A.MEMBER_SAFETY_PAGE),
+        v = (0, g.n)({ guildId: t }),
+        { guildJoinRequests: y } = (0, f.K)({
             guildId: t,
-            applicationStatus: "ALL_MEMBERS" === i ? h.B5.SUBMITTED : i,
-            sortOrder: D,
+            applicationStatus: "ALL_MEMBERS" === i ? j.B5.SUBMITTED : i,
+            sortOrder: v,
         });
     s.useEffect(() => {
-        j?.features.has(U.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) || u(N.D.ALL_MEMBERS);
-    }, [j]);
-    let k = (0, I.fw)(t),
-        F = (0, x.q)(t),
-        V = s.useRef(null);
-    (0, R.e)(t);
-    let { fetchNextPage: z } = (0, _.K)({ guildId: t, guildJoinRequests: P }),
+        x?.features.has(P.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) || o(p.D.ALL_MEMBERS);
+    }, [x]);
+    let w = (0, I.fw)(t),
+        B = (0, m.q)(t),
+        z = s.useRef(null);
+    (0, T.e)(t);
+    let { fetchNextPage: q } = (0, A.K)({ guildId: t, guildJoinRequests: y }),
         H = s.useCallback(async () => {
-            if (i === N.D.ALL_MEMBERS) return;
-            let e = V.current?.getScrollerState();
-            null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 200 && (await z(D, i)));
-        }, [i, i, D, z]),
-        q = s.useCallback(
+            if (i === p.D.ALL_MEMBERS) return;
+            let e = z.current?.getScrollerState();
+            null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 200 && (await q(v, i)));
+        }, [i, i, v, q]),
+        V = s.useCallback(
             async (e) => {
-                i === e || (u(e), m.A.setSelectedGuildJoinRequest(t, null), "ALL_MEMBERS" !== e && (await z(D, e)));
+                i === e || (o(e), h.A.setSelectedGuildJoinRequest(t, null), "ALL_MEMBERS" !== e && (await q(v, e)));
             },
-            [i, t, z, D],
+            [i, t, q, v],
         );
     s.useEffect(() => {
-        if (!k && null != j) {
-            let e = v.Ay.getDefaultChannel(j.id)?.id;
-            (0, f.uh)(j.id, e);
+        if (!w && null != x) {
+            let e = S.Ay.getDefaultChannel(x.id)?.id;
+            (0, b.uh)(x.id, e);
         }
-    }, [j, k]);
-    let Q = (0, r.bG)([E.Ay], () => null != E.Ay.getGuildSidebarState(t), [t]);
-    return null != j && k
-        ? (0, n.jsxs)(o.f5, {
-              value: T,
+    }, [x, w]);
+    let W = (0, r.bG)([N.Ay], () => null != N.Ay.getGuildSidebarState(t), [t]);
+    return null != x && w
+        ? (0, n.jsxs)(u.f5, {
+              value: _,
               children: [
                   (0, n.jsxs)("div", {
-                      className: a()(w.TE, B.MY, { [w.js]: Q }),
+                      className: a()(O.TE, U.MY, { [O.js]: W }),
                       children: [
-                          (0, n.jsx)(O, { guild: j, currentTab: i, onTabSelect: q }),
-                          (0, n.jsx)(d.T7Y, {
+                          (0, n.jsx)(F, { guild: x, currentTab: i, onTabSelect: V }),
+                          (0, n.jsx)(d.Ch, {
                               onScroll: H,
-                              ref: V,
+                              ref: z,
                               orientation: "vertical",
                               children: (0, n.jsx)("div", {
-                                  className: a()(w.Qs, B.kL),
+                                  className: a()(O.Qs, U.kL),
                                   children:
-                                      i === N.D.ALL_MEMBERS
+                                      i === p.D.ALL_MEMBERS
                                           ? (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(M.A, { guild: j }),
-                                                    (0, n.jsx)(L.A, { guild: j }),
+                                                    (0, n.jsx)(D.A, { guild: x }),
+                                                    (0, n.jsx)(k.A, { guild: x }),
                                                 ],
                                             })
-                                          : (0, n.jsx)(p.A, { guildId: j.id, currentTab: i }),
+                                          : (0, n.jsx)(M.A, { guildId: x.id, currentTab: i }),
                               }),
                           }),
-                          (0, n.jsx)(y.A, { guildId: j.id }),
+                          (0, n.jsx)(L.A, { guildId: x.id }),
                       ],
                   }),
-                  F &&
-                      (i === N.D.ALL_MEMBERS ? (0, n.jsx)(G.A, { guildId: j.id }) : (0, n.jsx)(C.A, { guildId: j.id })),
+                  B &&
+                      (i === p.D.ALL_MEMBERS ? (0, n.jsx)(G.A, { guildId: x.id }) : (0, n.jsx)(R.A, { guildId: x.id })),
               ],
           })
         : null;

@@ -1,14 +1,3 @@
-"use strict";
-function n(e) {
-    return e.every((e) => "number" == typeof e && !isNaN(e));
-}
-function r(e, t) {
-    let n = t.indexOf(".");
-    return n > -1 ? r(e[t.slice(0, n)], t.slice(n + 1)) : e[t];
-}
-function i(e) {
-    return e.every((e) => "number" == typeof e);
-}
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isHeicSignatureIncluded =
         t.isAvifStringIncluded =
@@ -20,34 +9,39 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.getFileChunk =
             void 0),
     (t.getFileChunk = function (e, t = 32) {
-        let r = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
-            a = [];
-        if ((Array.isArray(e) && i(e)) || e instanceof ArrayBuffer || e instanceof Uint8Array)
-            a = Array.from(r.slice(0, t));
+        let i = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
+            n = [];
+        if (
+            (Array.isArray(e) && e.every((e) => "number" == typeof e)) ||
+            e instanceof ArrayBuffer ||
+            e instanceof Uint8Array
+        )
+            n = Array.from(i.slice(0, t));
         else
             throw TypeError(
                 `Expected the \`file\` argument to be of type \`Array<number>\`, \`Uint8Array\`, or \`ArrayBuffer\`, got \`${typeof e}\``,
             );
-        if (!n(a)) throw TypeError("File content contains illegal values");
-        return a;
+        if (!n.every((e) => "number" == typeof e && !isNaN(e))) throw TypeError("File content contains illegal values");
+        return n;
     }),
-    (t.fetchFromObject = r),
+    (t.fetchFromObject = function e(t, i) {
+        let n = i.indexOf(".");
+        return n > -1 ? e(t[i.slice(0, n)], i.slice(n + 1)) : t[i];
+    }),
     (t.findMatroskaDocTypeElements = function (e) {
-        let t = "webm",
-            n = "matroska",
-            r = e.map((e) => String.fromCharCode(e)).join("");
-        return r.includes(t) ? "webm" : r.includes(n) ? "mkv" : void 0;
+        let t = e.map((e) => String.fromCharCode(e)).join("");
+        return t.includes("webm") ? "webm" : t.includes("matroska") ? "mkv" : void 0;
     }),
     (t.isftypStringIncluded = function (e) {
         let t = [102, 116, 121, 112];
-        for (let n = 0; n < e.length - t.length; n++) {
-            let r = !0;
-            for (let i = 0; i < t.length; i++)
-                if (e[n + i] !== t[i]) {
-                    r = !1;
+        for (let i = 0; i < e.length - t.length; i++) {
+            let n = !0;
+            for (let r = 0; r < t.length; r++)
+                if (e[i + r] !== t[r]) {
+                    n = !1;
                     break;
                 }
-            if (r) return !0;
+            if (n) return !0;
         }
         return !1;
     }),

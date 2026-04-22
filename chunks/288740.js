@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     i1: "previewContainer__74a6a",
     Kk: "icon__74a6a",

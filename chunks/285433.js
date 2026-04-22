@@ -1,121 +1,124 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => S });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(382222),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(517738),
     o = n(827734),
     d = n(990078),
-    c = n(397927),
-    u = n(770178),
-    _ = n(765548),
-    m = n(341915),
-    h = n(890687),
-    p = n(918338),
-    g = n(270045),
-    A = n(57718),
-    x = n(847641),
-    f = n(398025);
+    c = n(534514),
+    u = n(834730),
+    m = n(939249),
+    _ = n(365199),
+    h = n(770178),
+    p = n(765548),
+    g = n(341915),
+    A = n(890687),
+    f = n(918338),
+    x = n(270045),
+    C = n(57718),
+    E = n(847641),
+    I = n(398025);
 n(433745);
-var C = n(818348),
-    I = n(985018),
-    E = n(798324);
-let b = (e) => {
+var v = n(818348),
+    b = n(985018),
+    T = n(237732);
+let S = (e) => {
     let {
             isQuestExpired: t,
             quest: n,
-            location: r,
-            size: b,
-            expansionSpring: v,
-            isAnimating: T,
-            isExpanded: y,
-            isInteracting: S,
-            contentPosition: N,
-            toggleExpanded: j,
-            sourceQuestContent: L,
+            location: a,
+            size: S,
+            expansionSpring: y,
+            isAnimating: N,
+            isExpanded: j,
+            isInteracting: L,
+            contentPosition: R,
+            toggleExpanded: P,
+            sourceQuestContent: w,
         } = e,
-        [R, P] = a.useState(null),
-        [w, M] = a.useState(null),
-        D = (0, _.A)((e) => {
+        [D, k] = l.useState(null),
+        [O, M] = l.useState(null),
+        U = (0, p.A)((e) => {
             let t = e.target;
-            P(t.offsetWidth), M(t.scrollWidth);
+            k(t.offsetWidth), M(t.scrollWidth);
         }),
-        k = (0, u.w)(D),
-        O = r === m.uF.QUESTS_EMBED,
-        U = n.userStatus?.completedAt != null,
-        B = (0, h.S5)(n.config.expiresAt),
-        G = (0, h.S5)(n.config.rewardsConfig.rewardsExpireAt),
-        F = a.useMemo(() => null != n.config.cosponsorMetadata, [n]),
-        H = (0, i.jsx)(A.Ay, {
-            className: E.Iu,
-            logotypeClassName: F ? E.qN : void 0,
-            gameTileSize: A.LU.MEDIUM,
+        G = (0, h.w)(U),
+        B = a === g.uF.QUESTS_EMBED,
+        F = n.userStatus?.completedAt != null,
+        H = (0, A.S5)(n.config.expiresAt),
+        V = (0, A.S5)(n.config.rewardsConfig.rewardsExpireAt),
+        q = l.useMemo(() => null != n.config.cosponsorMetadata, [n]),
+        W = (0, i.jsx)(C.Ay, {
+            className: T.Iu,
+            logotypeClassName: q ? T.qN : void 0,
+            gameTileSize: C.LU.MEDIUM,
             quest: n,
-            separatorSpacing: A.C8.MEDIUM,
-            theme: C.NJ.DARK,
-            withGameTile: !O || null == n.config.cosponsorMetadata,
+            separatorSpacing: C.C8.MEDIUM,
+            theme: v.NJ.DARK,
+            withGameTile: !B || null == n.config.cosponsorMetadata,
         });
     return (0, i.jsxs)("div", {
-        className: l()(E.nw, { [E.Gg]: O, [E.e5]: "xs" === b }),
-        "aria-label": I.intl.string(I.t.dcl9MQ),
+        className: s()(T.nw, { [T.Gg]: B, [T.e5]: "xs" === S }),
+        "aria-label": b.intl.string(b.t.dcl9MQ),
         children: [
-            (0, i.jsx)(p.A, {
+            (0, i.jsx)(f.A, {
                 quest: n,
-                isInteracting: S,
-                containerClassName: E.v7,
+                isInteracting: L,
+                containerClassName: T.v7,
                 imageSize: { width: 660, height: 185 },
-                imageClassName: E.Z5,
+                imageClassName: T.Z5,
             }),
             (0, i.jsxs)("div", {
-                className: E.wx,
-                "aria-expanded": y,
+                className: T.wx,
+                "aria-expanded": j,
                 children: [
-                    (0, i.jsx)(s.animated.div, {
-                        className: l()(E.VW, { [E.eX]: O }),
-                        children: (0, i.jsx)(s.animated.div, {
-                            className: l()(E.Yu, { [E.Gg]: O }),
+                    (0, i.jsx)(r.animated.div, {
+                        className: s()(T.VW, { [T.eX]: B }),
+                        children: (0, i.jsx)(r.animated.div, {
+                            className: s()(T.Yu, { [T.Gg]: B }),
                             style: {
-                                opacity: (0, f.a)(v.to({ range: [0, 1], output: [0, 1] })),
-                                visibility: T || y ? "inherit" : "hidden",
+                                opacity: (0, I.a)(y.to({ range: [0, 1], output: [0, 1] })),
+                                visibility: N || j ? "inherit" : "hidden",
                             },
-                            "aria-hidden": !T && !y,
+                            "aria-hidden": !N && !j,
                             children: (0, i.jsxs)("div", {
-                                className: E.uA,
+                                className: T.uA,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: E._V,
-                                        children: [H, O ? null : (0, i.jsx)(x.A, { color: "always-white" })],
+                                        className: T._V,
+                                        children: [W, B ? null : (0, i.jsx)(E.A, { color: "always-white" })],
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: E.P9,
+                                        className: T.P9,
                                         children: [
                                             (0, i.jsx)(d.m, {
                                                 __unsupportedReactNodeAsText: n.config.messages.questName,
-                                                shouldShow: null != R && null != w && R < w,
-                                                children: (0, i.jsx)(c.Heading, {
-                                                    ref: k,
+                                                shouldShow: null != D && null != O && D < O,
+                                                children: (0, i.jsx)(c.D, {
+                                                    ref: G,
                                                     variant:
-                                                        "lg" === b
+                                                        "lg" === S
                                                             ? "heading-xxl/bold"
-                                                            : "sm" === b
+                                                            : "sm" === S
                                                               ? "heading-xl/bold"
                                                               : "heading-lg/bold",
-                                                    className: E.R_,
+                                                    className: T.R_,
                                                     color: "always-white",
-                                                    children: I.intl.format(I.t.EAYZAr, {
+                                                    children: b.intl.format(b.t.EAYZAr, {
                                                         questName: n.config.messages.questName,
                                                     }),
                                                 }),
                                             }),
-                                            (0, i.jsx)(c.Text, {
+                                            (0, i.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 color: "always-white",
-                                                children: U
-                                                    ? I.intl.formatToPlainString(I.t.APddvF, { expirationDate: G })
+                                                children: F
+                                                    ? b.intl.formatToPlainString(b.t.APddvF, { expirationDate: V })
                                                     : t
-                                                      ? I.intl.formatToPlainString(I.t.v7xMw7, { expirationDate: B })
-                                                      : I.intl.formatToPlainString(I.t["pX+fmn"], {
-                                                            expirationDate: B,
+                                                      ? b.intl.formatToPlainString(b.t.v7xMw7, { expirationDate: H })
+                                                      : b.intl.formatToPlainString(b.t["pX+fmn"], {
+                                                            expirationDate: H,
                                                         }),
                                             }),
                                         ],
@@ -124,25 +127,25 @@ let b = (e) => {
                             }),
                         }),
                     }),
-                    (0, i.jsx)(s.animated.div, {
-                        className: E._q,
+                    (0, i.jsx)(r.animated.div, {
+                        className: T._q,
                         style: { top: 20 },
-                        children: (0, i.jsx)(g.C, {
-                            questContent: r,
+                        children: (0, i.jsx)(x.C, {
+                            questContent: a,
                             quest: n,
-                            questContentPosition: N,
+                            questContentPosition: R,
                             shouldShowDisclosure: !0,
-                            showShareLink: !t && O,
-                            sourceQuestContent: L,
+                            showShareLink: !t && B,
+                            sourceQuestContent: w,
                             children: (e) =>
-                                (0, i.jsx)(s.animated.div, {
-                                    style: { opacity: (0, f.a)(v), visibility: T || y ? "inherit" : "hidden" },
-                                    "aria-hidden": !T && !y,
-                                    children: (0, i.jsx)(c.DUT, {
+                                (0, i.jsx)(r.animated.div, {
+                                    style: { opacity: (0, I.a)(y), visibility: N || j ? "inherit" : "hidden" },
+                                    "aria-hidden": !N && !j,
+                                    children: (0, i.jsx)(m.D, {
                                         ...e,
-                                        className: E.P0,
-                                        "aria-label": I.intl.string(I.t.DEoVWZ),
-                                        children: (0, i.jsx)(c.jNK, { size: "md", color: o.A.colors.WHITE }),
+                                        className: T.P0,
+                                        "aria-label": b.intl.string(b.t.DEoVWZ),
+                                        children: (0, i.jsx)(_.j, { size: "md", color: o.A.colors.WHITE }),
                                     }),
                                 }),
                         }),

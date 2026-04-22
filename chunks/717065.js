@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, { k: () => a });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(69741);
+var l = n(69741);
 function a(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: a, role: s, size: o = 64 } = e;
-    return (0, r.jsx)("img", {
-        style: { width: o, height: o },
-        src: i.A,
+    let { alt: t, ariaLabel: n, ariaHidden: a, role: s, size: r = 64 } = e;
+    return (0, i.jsx)("img", {
+        style: { width: r, height: r },
+        src: l.A,
         alt: t,
         "aria-label": n,
         "aria-hidden": a,

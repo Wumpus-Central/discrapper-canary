@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, {
+r.d(t, {
     CV: () => a,
-    E9: () => m,
+    E9: () => p,
     EB: () => l,
-    Pl: () => h,
-    eB: () => s,
-    fp: () => d,
+    Pl: () => f,
+    eB: () => i,
+    fp: () => m,
     nj: () => u,
-    zL: () => _,
-    zp: () => c,
+    zL: () => c,
+    zp: () => d,
 });
-var r = n(476858),
-    i = n(364242);
+var n = r(476858),
+    s = r(364242);
 let a = {
         sonntag: 0,
         so: 0,
@@ -28,7 +27,7 @@ let a = {
         samstag: 6,
         sa: 6,
     },
-    s = {
+    i = {
         januar: 1,
         jänner: 1,
         janner: 1,
@@ -124,8 +123,8 @@ let a = {
         jahren: "year",
         jahres: "year",
     },
-    u = `(?:${(0, r.uJ)(o)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`;
-function c(e) {
+    u = `(?:${(0, n.uJ)(o)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`;
+function d(e) {
     let t = e.toLowerCase();
     if (void 0 !== o[t]) return o[t];
     if ("ein" === t || "einer" === t || "einem" === t || "einen" === t || "eine" === t) return 1;
@@ -135,25 +134,27 @@ function c(e) {
     else if (t.match(/mehreren/)) return 7;
     return parseFloat(t);
 }
-let d =
+let m =
     "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
-function _(e) {
+function c(e) {
     if (/v/i.test(e)) return -parseInt(e.replace(/[^0-9]+/gi, ""));
     if (/n/i.test(e) || /z/i.test(e)) return parseInt(e.replace(/[^0-9]+/gi, ""));
     let t = parseInt(e);
-    return (0, i.D)(t);
+    return (0, s.D)(t);
 }
-let f = `(${u})\\s{0,5}(${(0, r.uJ)(l)})\\s{0,5}`,
-    p = RegExp(f, "i"),
-    h = (0, r.mb)("", f);
-function m(e) {
+let g = `(${u})\\s{0,5}(${(0, n.uJ)(l)})\\s{0,5}`,
+    h = RegExp(g, "i"),
+    f = (0, n.mb)("", g);
+function p(e) {
     let t = {},
-        n = e,
-        r = p.exec(n);
-    for (; r; ) g(t, r), (n = n.substring(r[0].length)), (r = p.exec(n));
+        r = e,
+        n = h.exec(r);
+    for (; n; )
+        (function (e, t) {
+            let r = d(t[1]);
+            e[l[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length)),
+            (n = h.exec(r));
     return t;
-}
-function g(e, t) {
-    let n = c(t[1]);
-    e[l[t[2].toLowerCase()]] = n;
 }

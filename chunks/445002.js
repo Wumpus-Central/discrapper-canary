@@ -1,156 +1,164 @@
-i.d(t, { default: () => D });
+i.d(t, { default: () => G });
 var l = i(627968),
     n = i(64700),
     a = i(835245),
     s = i(830917),
-    r = i(158954),
-    o = i(311907),
-    u = i(397927),
-    d = i(508675),
-    m = i(78213),
-    c = i(643374),
-    g = i(71393),
-    f = i(287809),
-    p = i(954571),
-    j = i(255438),
-    x = i(975571),
-    h = i(515718),
-    A = i(631576),
-    E = i(842086),
-    b = i(378058),
-    y = i(148355),
-    S = i(823894),
-    N = i(652215),
-    v = i(985018),
-    C = i(799764);
-let k = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
-    I = [{ name: "Sticker file", extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"] }];
-function T(e, t) {
-    p.default.track(N.HAw.STICKER_UPLOAD_COMPLETED, { successful: e, error: t ?? "" });
+    r = i(189213),
+    o = i(270003),
+    u = i(452027),
+    d = i(311907),
+    m = i(750943),
+    c = i(691540),
+    g = i(857250),
+    f = i(97483),
+    p = i(292666),
+    j = i(260598),
+    x = i(834730),
+    h = i(508675),
+    A = i(78213),
+    E = i(643374),
+    b = i(71393),
+    y = i(287809),
+    S = i(954571),
+    v = i(255438),
+    C = i(975571),
+    k = i(515718),
+    I = i(631576),
+    N = i(842086),
+    _ = i(378058),
+    w = i(148355),
+    D = i(823894),
+    R = i(652215),
+    z = i(985018),
+    T = i(557155);
+let L = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
+    B = [{ name: "Sticker file", extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"] }];
+function U(e, t) {
+    S.default.track(R.HAw.STICKER_UPLOAD_COMPLETED, { successful: e, error: t ?? "" });
 }
-let _ = (e) => {
+let F = (e) => {
     let { stickerPreview: t } = e;
     return (0, l.jsxs)("div", {
-        className: C.VH,
+        className: T.VH,
         children: [
             (0, l.jsx)("div", {
-                className: C.rA,
+                className: T.rA,
                 children:
                     t ??
-                    (0, l.jsx)(u.XGR, { size: "lg", color: "currentColor", "aria-label": v.intl.string(v.t.qOsjZh) }),
+                    (0, l.jsx)(m.X, { size: "lg", color: "currentColor", "aria-label": z.intl.string(z.t.qOsjZh) }),
             }),
             (0, l.jsx)("div", {
-                className: C.F_,
+                className: T.F_,
                 children:
                     t ??
-                    (0, l.jsx)(u.XGR, { size: "lg", color: "currentColor", "aria-label": v.intl.string(v.t.YC5NAI) }),
+                    (0, l.jsx)(m.X, { size: "lg", color: "currentColor", "aria-label": z.intl.string(z.t.YC5NAI) }),
             }),
         ],
     });
 };
-async function w(e) {
-    let t = await (0, h.We)(e),
+async function P(e) {
+    let t = await (0, k.We)(e),
         i = new Image();
     (i.src = t), await i.decode();
     let l = (0, s.h_)(i, 320, 320);
-    return (0, h.bX)(l, e.name, "image/png");
+    return (0, k.bX)(l, e.name, "image/png");
 }
-function D(e) {
-    let { transitionState: t, onClose: i, guildId: s, sticker: D } = e,
-        R = (0, o.bG)([d.Ay], () => (D?.tags != null ? d.Ay.getCustomEmojiById(D.tags) : null)),
-        z = f.default.getCurrentUser()?.isStaff() ? S.Ny : 524288,
-        [L, B] = n.useState(null),
-        [O, U] = n.useState(D?.name ?? ""),
-        [F, G] = n.useState({ file: null, filename: (0, b.sL)(D) ?? "" }),
-        [K, P] = n.useState(R?.id),
-        [M, Y] = n.useState(R?.name ?? D?.tags),
-        [X, q] = n.useState(D?.description ?? ""),
-        [V, H] = n.useState(!1),
-        [Z, J] = n.useState(null),
-        $ = (0, o.bG)([g.A], () => g.A.getGuild(s)),
-        Q = $?.features.has(N.GuildFeatures.PARTNERED) || $?.features.has(N.GuildFeatures.VERIFIED),
-        W = null != D,
-        ee = W || F?.file != null,
-        et = 0 === X.length || (X.length >= 2 && X.length <= 100),
-        ei =
-            !V &&
-            Z?.isBlocking !== !0 &&
-            O.length >= 2 &&
-            (null != K || null != M || (D?.tags != null && D?.tags !== "")) &&
-            ee &&
-            et,
-        el = async (e) => {
+function G(e) {
+    let { transitionState: t, onClose: i, guildId: s, sticker: m } = e,
+        G = (0, d.bG)([h.Ay], () => (m?.tags != null ? h.Ay.getCustomEmojiById(m.tags) : null)),
+        O = y.default.getCurrentUser()?.isStaff() ? D.Ny : 524288,
+        [K, M] = n.useState(null),
+        [X, q] = n.useState(m?.name ?? ""),
+        [Y, H] = n.useState({ file: null, filename: (0, _.sL)(m) ?? "" }),
+        [V, Z] = n.useState(G?.id),
+        [J, Q] = n.useState(G?.name ?? m?.tags),
+        [W, $] = n.useState(m?.description ?? ""),
+        [ee, et] = n.useState(!1),
+        [ei, el] = n.useState(null),
+        en = (0, d.bG)([b.A], () => b.A.getGuild(s)),
+        ea = en?.features.has(R.GuildFeatures.PARTNERED) || en?.features.has(R.GuildFeatures.VERIFIED),
+        es = null != m,
+        er = es || Y?.file != null,
+        eo = 0 === W.length || (W.length >= 2 && W.length <= 100),
+        eu =
+            !ee &&
+            ei?.isBlocking !== !0 &&
+            X.length >= 2 &&
+            (null != V || null != J || (m?.tags != null && m?.tags !== "")) &&
+            er &&
+            eo,
+        ed = async (e) => {
             if (null == e) return;
             let t = e.type?.split(";")[0];
-            if (!k.has(t)) return void J({ message: v.intl.string(v.t.B2hGAG), isBlocking: !0 });
+            if (!L.has(t)) return void el({ message: z.intl.string(z.t.B2hGAG), isBlocking: !0 });
             let i = e;
-            if ("image/jpeg" === t || "image/jpg" === t) i = await w(e);
-            else if ("image/png" === t && e.size > z && !(await (0, h.LZ)(e))) {
-                let t = (i = await w(e)).size > z;
-                p.default.track(N.HAw.STICKER_FILE_RESIZED, {
+            if ("image/jpeg" === t || "image/jpg" === t) i = await P(e);
+            else if ("image/png" === t && e.size > O && !(await (0, k.LZ)(e))) {
+                let t = (i = await P(e)).size > O;
+                S.default.track(R.HAw.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
                     resized_file_size_bytes: i.size,
                     resized_file_too_big: t,
                 });
             }
-            if (i.size > z) {
-                J({
-                    message: v.intl.formatToPlainString(v.t["3eK7Ru"], { maxSize: (0, j.up)(z, { useKibibytes: !0 }) }),
-                    isBlocking: null == F.file,
+            if (i.size > O) {
+                el({
+                    message: z.intl.formatToPlainString(z.t["3eK7Ru"], { maxSize: (0, v.up)(O, { useKibibytes: !0 }) }),
+                    isBlocking: null == Y.file,
                 }),
-                    p.default.track(N.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type });
+                    S.default.track(R.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type });
                 return;
             }
-            let l = (0, b.l3)(i.type);
-            if (l === E.TG.LOTTIE) {
-                if (!Q)
-                    return void J({
-                        message: v.intl.format(v.t.RNNjy6, { articleURL: x.A.getArticleURL(N.MVz.STICKERS_UPLOAD) }),
+            let l = (0, _.l3)(i.type);
+            if (l === N.TG.LOTTIE) {
+                if (!ea)
+                    return void el({
+                        message: z.intl.format(z.t.RNNjy6, { articleURL: C.A.getArticleURL(R.MVz.STICKERS_UPLOAD) }),
                         isBlocking: !0,
                     });
                 let e = new FileReader();
                 e.addEventListener("load", () => {
-                    B({ id: (0, a.A)(), formatType: l, content: e.result }), J(null);
+                    M({ id: (0, a.A)(), formatType: l, content: e.result }), el(null);
                 }),
                     e.readAsText(i);
             } else {
-                let e = await (0, h.We)(i);
-                B({ id: (0, a.A)(), formatType: l, content: e }), J(null);
+                let e = await (0, k.We)(i);
+                M({ id: (0, a.A)(), formatType: l, content: e }), el(null);
             }
-            G({ file: i, filename: i.name });
+            H({ file: i, filename: i.name });
         },
-        en = async (e) => {
+        em = async (e) => {
             e.preventDefault();
-            let t = K ?? M ?? D?.tags ?? "";
+            let t = V ?? J ?? m?.tags ?? "";
             try {
-                if ((H(!0), W)) await (0, A.MO)(s, D?.id ?? "", { name: O, tags: t, description: X });
+                if ((et(!0), es)) await (0, I.MO)(s, m?.id ?? "", { name: X, tags: t, description: W });
                 else {
                     var l;
                     let e = new FormData();
-                    e.append("name", O),
+                    e.append("name", X),
                         e.append("tags", t),
-                        e.append("description", X),
-                        F?.file != null && e.append("file", F.file),
-                        (l = F.file?.type ?? ""),
-                        p.default.track(N.HAw.STICKER_UPLOAD_STARTED, { filetype: l }),
-                        await (0, A.p9)({ guildId: s, body: e, platform: "web" }),
-                        T(!0),
-                        (0, u.showToast)((0, u.createToast)(v.intl.string(v.t.QR85gd), u.ToastType.SUCCESS));
+                        e.append("description", W),
+                        Y?.file != null && e.append("file", Y.file),
+                        (l = Y.file?.type ?? ""),
+                        S.default.track(R.HAw.STICKER_UPLOAD_STARTED, { filetype: l }),
+                        await (0, I.p9)({ guildId: s, body: e, platform: "web" }),
+                        U(!0),
+                        (0, c.P0)((0, g.o)(z.intl.string(z.t.QR85gd), f.Ck.SUCCESS));
                 }
                 i();
             } catch (e) {
-                J({ message: e.body.message, isBlocking: !1 }), T(!1, e.body.message);
+                el({ message: e.body.message, isBlocking: !1 }), U(!1, e.body.message);
             } finally {
-                H(!1);
+                et(!1);
             }
         },
-        ea = ((e) => {
+        ec = ((e) => {
             let { sticker: t, previewData: i, onStickerError: n } = e;
-            if (null != t) return (0, l.jsx)(y.A, { size: 160, sticker: t });
+            if (null != t) return (0, l.jsx)(w.A, { size: 160, sticker: t });
             if (null == i) return null;
             let { id: a, formatType: s, content: r } = i;
             return (0, l.jsx)(
-                y.A,
+                w.A,
                 {
                     assetData: r,
                     fileUri: r,
@@ -161,86 +169,86 @@ function D(e) {
                 a,
             );
         })({
-            sticker: D,
-            previewData: L,
+            sticker: m,
+            previewData: K,
             onStickerError: n.useCallback(() => {
-                J({ message: v.intl.string(v.t["/WIYNX"]), isBlocking: !0 });
+                el({ message: z.intl.string(z.t["/WIYNX"]), isBlocking: !0 });
             }, []),
         }),
-        es = Q ? v.t.alYXBF : v.t.kpcMft;
+        eg = ea ? z.t.alYXBF : z.t.kpcMft;
     return (0, l.jsx)("form", {
-        onSubmit: en,
-        className: C.Zd,
+        onSubmit: em,
+        className: T.Zd,
         children: (0, l.jsx)(r.Modal, {
             transitionState: t,
             onClose: i,
-            title: v.intl.string(v.t.yxVsBJ),
-            subtitle: v.intl.format(es, { fileSize: (0, j.up)(524288, { useKibibytes: !0 }) }),
+            title: z.intl.string(z.t.yxVsBJ),
+            subtitle: z.intl.format(eg, { fileSize: (0, v.up)(524288, { useKibibytes: !0 }) }),
             actions: [
-                { variant: "secondary", text: v.intl.string(v.t.oEAioF), onClick: i },
+                { variant: "secondary", text: z.intl.string(z.t.oEAioF), onClick: i },
                 {
                     variant: "primary",
-                    text: W ? v.intl.string(v.t.Arwnev) : v.intl.string(v.t["3UB9ad"]),
-                    onSubmit: en,
-                    disabled: !ei,
+                    text: es ? z.intl.string(z.t.Arwnev) : z.intl.string(z.t["3UB9ad"]),
+                    onSubmit: em,
+                    disabled: !eu,
                     type: "submit",
                 },
             ],
-            children: (0, l.jsxs)(r.nVY, {
+            children: (0, l.jsxs)(o.n, {
                 children: [
-                    (0, l.jsx)(r.D0$, {
-                        label: v.intl.string(v.t.gjdiKE),
-                        children: (0, l.jsx)(_, { stickerPreview: ea }),
+                    (0, l.jsx)(u.D, {
+                        label: z.intl.string(z.t.gjdiKE),
+                        children: (0, l.jsx)(F, { stickerPreview: ec }),
                     }),
-                    W
-                        ? (0, l.jsx)(u.ksK, {
-                              label: v.intl.string(v.t.wp36sx),
+                    es
+                        ? (0, l.jsx)(p.k, {
+                              label: z.intl.string(z.t.wp36sx),
                               required: !0,
                               disabled: !0,
-                              value: F?.filename ?? "",
+                              value: Y?.filename ?? "",
                           })
-                        : (0, l.jsx)(r.D0$, {
-                              label: v.intl.string(v.t.AM3mzX),
+                        : (0, l.jsx)(u.D, {
+                              label: z.intl.string(z.t.AM3mzX),
                               required: !0,
-                              children: (0, l.jsx)(c.A, {
-                                  buttonText: v.intl.string(v.t.xEnDUa),
-                                  filters: I,
-                                  filename: F?.filename ?? "",
-                                  placeholder: v.intl.string(v.t.rUYLJ4),
-                                  onFileSelect: el,
+                              children: (0, l.jsx)(E.A, {
+                                  buttonText: z.intl.string(z.t.xEnDUa),
+                                  filters: B,
+                                  filename: Y?.filename ?? "",
+                                  placeholder: z.intl.string(z.t.rUYLJ4),
+                                  onFileSelect: ed,
                               }),
                           }),
-                    (0, l.jsx)(m.A, {
-                        className: C.uR,
+                    (0, l.jsx)(A.A, {
+                        className: T.uR,
                         guildId: s,
-                        emojiId: K,
-                        emojiName: M,
-                        setEmojiId: P,
-                        setEmojiName: Y,
+                        emojiId: V,
+                        emojiName: J,
+                        setEmojiId: Z,
+                        setEmojiName: Q,
                         shouldUpdateBothEmojiFields: !0,
                     }),
-                    (0, l.jsx)(u.ksK, {
-                        label: v.intl.string(v.t["0VRh6n"]),
+                    (0, l.jsx)(p.k, {
+                        label: z.intl.string(z.t["0VRh6n"]),
                         required: !0,
-                        value: O,
-                        onChange: U,
-                        placeholder: v.intl.string(v.t["3fGttT"]),
-                        maxLength: 30,
-                    }),
-                    (0, l.jsx)(u.fs1, {
-                        label: v.intl.string(v.t.uGccej),
-                        helperText: v.intl.string(v.t.S6jlDj),
                         value: X,
                         onChange: q,
-                        placeholder: v.intl.string(v.t.zwR0fa),
+                        placeholder: z.intl.string(z.t["3fGttT"]),
+                        maxLength: 30,
+                    }),
+                    (0, l.jsx)(j.f, {
+                        label: z.intl.string(z.t.uGccej),
+                        helperText: z.intl.string(z.t.S6jlDj),
+                        value: W,
+                        onChange: $,
+                        placeholder: z.intl.string(z.t.zwR0fa),
                         maxLength: 100,
                     }),
-                    null != Z &&
-                        (0, l.jsx)(u.Text, {
-                            className: C.kz,
+                    null != ei &&
+                        (0, l.jsx)(x.E, {
+                            className: T.kz,
                             variant: "text-sm/normal",
                             color: "text-feedback-critical",
-                            children: Z.message,
+                            children: ei.message,
                         }),
                 ],
             }),

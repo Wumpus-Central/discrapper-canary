@@ -1,55 +1,57 @@
-i.d(t, { A: () => E });
+i.d(t, { A: () => _ });
 var n = i(627968);
 i(64700);
-var l = i(397927),
-    s = i(837057),
-    r = i(310419),
-    a = i(997509),
-    d = i(5298),
-    c = i(266648),
-    o = i(267102),
-    u = i(652215),
-    A = i(488995),
-    g = i(985018);
-function E(e) {
-    let t = (0, o.aL)(),
-        i = (0, d.A)(e);
+var s = i(192308),
+    l = i(477782),
+    a = i(811893),
+    r = i(837057),
+    d = i(310419),
+    o = i(997509),
+    c = i(5298),
+    u = i(266648),
+    g = i(267102),
+    A = i(652215),
+    E = i(488995),
+    h = i(985018);
+function _(e) {
+    let t = (0, g.aL)(),
+        i = (0, c.A)(e);
     if (__OVERLAY__ || !i) return null;
-    let E = (i) => {
-        a.A.open(e.id, i), t.dispatch(u.jej.POPOUT_CLOSE), (0, l.s7G)();
+    let _ = (i) => {
+        o.A.open(e.id, i), t.dispatch(A.jej.POPOUT_CLOSE), (0, s.closeAllModals)();
     };
-    return (0, n.jsx)(l.Drp, {
+    return (0, n.jsx)(l.Dr, {
         id: "guild-settings",
-        label: g.intl.string(g.t["154/bL"]),
-        action: () => E(),
-        children: (0, c.P)(e).map((t) => {
-            let { section: i, label: a, ariaLabel: d } = t;
+        label: h.intl.string(h.t["154/bL"]),
+        action: () => _(),
+        children: (0, u.P)(e).map((t) => {
+            let { section: i, label: s, ariaLabel: o } = t;
             switch (i) {
-                case u.BEX.DELETE:
+                case A.BEX.DELETE:
                     return null;
-                case u.BEX.COMMUNITY:
-                    return (0, n.jsx)(l.Drp, { id: i, action: () => E(i), label: g.intl.string(g.t.nRtNqn) }, i);
-                case u.BEX.APP_DIRECTORY:
+                case A.BEX.COMMUNITY:
+                    return (0, n.jsx)(l.Dr, { id: i, action: () => _(i), label: h.intl.string(h.t.nRtNqn) }, i);
+                case A.BEX.APP_DIRECTORY:
                     return (0, n.jsx)(
-                        l.Drp,
+                        l.Dr,
                         {
                             id: i,
                             action: () => {
-                                (0, s.transitionToGlobalDiscovery)({
-                                    tab: A.GlobalDiscoveryTab.APPS,
-                                    newSessionState: { guildId: e.id, entrypoint: { name: r.sW.GUILD_HEADER_POPOUT } },
+                                (0, r.transitionToGlobalDiscovery)({
+                                    tab: E.GlobalDiscoveryTab.APPS,
+                                    newSessionState: { guildId: e.id, entrypoint: { name: d.sW.GUILD_HEADER_POPOUT } },
                                 });
                             },
-                            leadingAccessory: { type: "icon", icon: l.tfB },
-                            iconLeft: l.tfB,
-                            label: g.intl.string(g.t.AKcFUj),
+                            leadingAccessory: { type: "icon", icon: a.t },
+                            iconLeft: a.t,
+                            label: h.intl.string(h.t.AKcFUj),
                         },
                         i,
                     );
                 default:
-                    let c = "string" == typeof a ? a : d;
+                    let c = "string" == typeof s ? s : o;
                     if (null == c) return null;
-                    return (0, n.jsx)(l.Drp, { id: i, action: () => E(i), label: c }, i);
+                    return (0, n.jsx)(l.Dr, { id: i, action: () => _(i), label: c }, i);
             }
         }),
     });

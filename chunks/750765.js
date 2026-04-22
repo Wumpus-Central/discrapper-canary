@@ -1,41 +1,41 @@
-"use strict";
-n.d(t, { A: () => E });
-var r = n(627968);
-n(64700);
-var i = n(284009),
-    s = n.n(i),
-    a = n(311907),
-    o = n(397927),
-    l = n(820284),
-    u = n(688810),
-    c = n(48435),
-    d = n(287809),
-    _ = n(855187),
-    f = n(555572),
-    p = n(652215),
-    h = n(731854),
-    m = n(985018);
-function E(e) {
-    let { onClose: t, onSelect: n, minimal: i = !1, appContext: E, onInteraction: g } = e,
-        { analyticsLocations: A } = (0, u.Ay)(),
-        I = (0, a.bG)([d.default], () => {
-            let e = d.default.getCurrentUser();
+l.d(t, { A: () => m });
+var n = l(627968);
+l(64700);
+var i = l(284009),
+    s = l.n(i),
+    a = l(311907),
+    r = l(861672),
+    o = l(477782),
+    c = l(820284),
+    d = l(688810),
+    u = l(270816),
+    h = l(287809),
+    g = l(855187),
+    f = l(555572),
+    A = l(652215),
+    v = l(731854),
+    _ = l(985018);
+function m(e) {
+    let { onClose: t, onSelect: l, minimal: i = !1, appContext: m, onInteraction: p } = e,
+        { analyticsLocations: x } = (0, d.Ay)(),
+        C = (0, a.bG)([h.default], () => {
+            let e = h.default.getCurrentUser();
             return s()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
-        T = (0, c.H)({ deviceType: h.oh.VIDEO_INPUT, analyticsLocations: A, asSubmenu: i }),
-        S = (0, _.A)(I.id, E),
-        y = (0, f.A)(E);
-    return (0, r.jsx)(l.A, {
-        object: p.ZSU.CONTEXT_MENU,
-        children: (0, r.jsxs)(o.W1t, {
+        E = (0, u.H)({ deviceType: v.oh.VIDEO_INPUT, analyticsLocations: x, asSubmenu: i }),
+        I = (0, g.A)(C.id, m),
+        N = (0, f.A)(m);
+    return (0, n.jsx)(c.A, {
+        object: A.ZSU.CONTEXT_MENU,
+        children: (0, n.jsxs)(r.W, {
             "data-menu-migrated": !0,
             onClose: t,
             navId: "video-device-context",
             variant: "fixed",
-            "aria-label": m.intl.string(m.t.F122Gz),
-            onSelect: n,
-            onInteraction: g,
-            children: [T, (0, r.jsxs)(o.rXV, { children: [S, i ? y : null] })],
+            "aria-label": _.intl.string(_.t.F122Gz),
+            onSelect: l,
+            onInteraction: p,
+            children: [E, (0, n.jsxs)(o.rX, { children: [I, i ? N : null] })],
         }),
     });
 }

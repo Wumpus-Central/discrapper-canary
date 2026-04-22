@@ -1,64 +1,65 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var s = n(827734),
-    l = n(397927),
-    r = n(774474),
-    a = n(985018),
-    o = n(233593);
-let d = (e) => {
+var l = n(827734),
+    s = n(781696),
+    r = n(885574),
+    a = n(834730),
+    o = n(774474),
+    d = n(985018),
+    c = n(969842);
+let u = (e) => {
     let {
             title: t,
-            subtext: n = a.intl.string(a.t.jHpxwo),
-            localizedNumber: d,
-            isTrendingUp: c,
-            isTrendingDown: u,
-            tooltipText: m,
+            subtext: n = d.intl.string(d.t.jHpxwo),
+            localizedNumber: u,
+            isTrendingUp: m,
+            isTrendingDown: g,
+            tooltipText: h,
         } = e,
-        g =
-            null != m
-                ? (0, i.jsx)(l.STz, {
-                      text: m,
+        x =
+            null != h
+                ? (0, i.jsx)(s.ST, {
+                      text: h,
                       position: "top",
-                      "aria-label": "string" == typeof m ? m : t,
-                      children: (e) => (0, i.jsx)(l.mir, { size: "xs", color: "currentColor", className: o.G, ...e }),
+                      "aria-label": "string" == typeof h ? h : t,
+                      children: (e) => (0, i.jsx)(r.m, { size: "xs", color: "currentColor", className: c.G, ...e }),
                   })
                 : null;
     return (0, i.jsxs)("div", {
-        className: o.Tp,
+        className: c.Tp,
         children: [
-            (0, i.jsxs)(l.Text, { variant: "text-md/medium", className: o.tG, children: [t, g] }),
+            (0, i.jsxs)(a.E, { variant: "text-md/medium", className: c.tG, children: [t, x] }),
             (0, i.jsx)("div", {
-                className: o.yz,
-                children: (0, i.jsx)(l.Text, {
-                    className: null != d ? o.MB : o.WY,
+                className: c.yz,
+                children: (0, i.jsx)(a.E, {
+                    className: null != u ? c.MB : c.WY,
                     variant: "text-lg/semibold",
-                    children: null != d ? d : a.intl.string(a.t.jHpxwo),
+                    children: null != u ? u : d.intl.string(d.t.jHpxwo),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: o.BP,
+                className: c.BP,
                 children: [
-                    c
-                        ? (0, i.jsx)(r.A, {
-                              className: o.Tz,
-                              color: s.A.unsafe_rawColors.GREEN_360.css,
-                              "aria-label": a.intl.string(a.t["8mcccd"]),
+                    m
+                        ? (0, i.jsx)(o.A, {
+                              className: c.Tz,
+                              color: l.A.unsafe_rawColors.GREEN_360.css,
+                              "aria-label": d.intl.string(d.t["8mcccd"]),
                               width: 14,
                               height: 12,
                           })
                         : null,
-                    u
-                        ? (0, i.jsx)(r.A, {
-                              className: o.AL,
-                              color: s.A.unsafe_rawColors.RED_400.css,
-                              "aria-label": a.intl.string(a.t.NLl6Q3),
+                    g
+                        ? (0, i.jsx)(o.A, {
+                              className: c.AL,
+                              color: l.A.unsafe_rawColors.RED_400.css,
+                              "aria-label": d.intl.string(d.t.NLl6Q3),
                               width: 14,
                               height: 12,
                           })
                         : null,
-                    (0, i.jsx)(l.Text, { variant: "text-xs/normal", children: n }),
+                    (0, i.jsx)(a.E, { variant: "text-xs/normal", children: n }),
                 ],
             }),
         ],

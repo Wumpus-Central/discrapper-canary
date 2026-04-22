@@ -1,52 +1,52 @@
 n.d(t, { A: () => d });
 var r = n(627968),
-    i = n(64700),
-    s = n(158954),
-    a = n(92246),
-    l = n(856658),
-    o = n(80026),
-    u = n(654487);
+    s = n(64700),
+    a = n(717421),
+    l = n(92246),
+    i = n(856658),
+    u = n(80026),
+    o = n(654487);
 let c = { tension: 500, friction: 30, clamp: !0 };
 function d(e) {
-    let { targetSec: t, quest: n, sourceQuestContent: d, questConfig: m, onIndicatorClick: E } = e,
-        _ = i.useMemo(() => m?.features.includes(u.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [m?.features]),
-        [p, f] = i.useState(null),
-        v = i.useRef(null),
-        [{ expansion: S }, h] = (0, s.zhh)(() => ({
+    let { targetSec: t, quest: n, sourceQuestContent: d, questConfig: E, onIndicatorClick: m } = e,
+        f = s.useMemo(() => E?.features.includes(o.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [E?.features]),
+        [_, S] = s.useState(null),
+        p = s.useRef(null),
+        [{ expansion: v }, g] = (0, a.z)(() => ({
             expansion: 0,
             config: c,
             onRest: () => {
-                null == v.current && f(null);
+                null == p.current && S(null);
             },
         })),
-        g = i.useCallback(
+        h = s.useCallback(
             (e) => {
-                (v.current = e), null != e ? (f(e), h({ expansion: o.KY })) : h({ expansion: 0 });
+                (p.current = e), null != e ? (S(e), g({ expansion: u.KY })) : g({ expansion: 0 });
             },
-            [h],
+            [g],
         ),
-        A = i.useMemo(() => [{ index: 0, timeSec: t, widthPx: o.ws, gapPx: o.Ue }], [t]),
-        C = i.useMemo(() => (_ ? (0, a.mq)(m) : void 0), [m, _]),
-        T = i.useCallback(
-            (e, i) => {
-                let s = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: C };
+        A = s.useMemo(() => [{ index: 0, timeSec: t, widthPx: u.ws, gapPx: u.Ue }], [t]),
+        C = s.useMemo(() => (f ? (0, l.mq)(E) : void 0), [E, f]),
+        x = s.useCallback(
+            (e, s) => {
+                let a = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: C };
                 return (0, r.jsx)(
-                    l.A,
+                    i.A,
                     {
-                        currentPx: i,
-                        indicator: s,
-                        isAnimated: p === e.index,
-                        expansionSpring: S,
+                        currentPx: s,
+                        indicator: a,
+                        isAnimated: _ === e.index,
+                        expansionSpring: v,
                         quest: n,
                         sourceQuestContent: d,
-                        onMouseEnter: () => g(e.index),
-                        onMouseLeave: () => g(null),
-                        onClick: null != E ? () => E(s.targetSec) : void 0,
+                        onMouseEnter: () => h(e.index),
+                        onMouseLeave: () => h(null),
+                        onClick: null != m ? () => m(a.targetSec) : void 0,
                     },
                     `indicator-${e.index}`,
                 );
             },
-            [t, C, p, S, n, d, g, E],
+            [t, C, _, v, n, d, h, m],
         );
-    if (_) return { indicators: A, animatingIndex: p, expansionSpring: S, hoverExpansionPx: o.KY, renderIndicator: T };
+    if (f) return { indicators: A, animatingIndex: _, expansionSpring: v, hoverExpansionPx: u.KY, renderIndicator: x };
 }

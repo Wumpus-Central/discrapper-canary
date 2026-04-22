@@ -1,22 +1,22 @@
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    r = n.n(s),
-    a = n(990078),
-    l = n(397927),
-    o = n(290223);
+l.d(t, { A: () => c });
+var n = l(627968);
+l(64700);
+var i = l(503698),
+    s = l.n(i),
+    a = l(990078),
+    r = l(939249),
+    d = l(665566);
 function c(e) {
-    let { icon: t, tooltip: n, onClick: s, className: c } = e;
-    return (0, i.jsx)(a.m, {
-        text: n,
-        children: (0, i.jsx)(l.DUT, {
-            "aria-label": n,
+    let { icon: t, tooltip: l, onClick: i, className: c } = e;
+    return (0, n.jsx)(a.m, {
+        text: l,
+        children: (0, n.jsx)(r.D, {
+            "aria-label": l,
             onClick: (e) => {
-                e.preventDefault(), e.stopPropagation(), s(e);
+                e.preventDefault(), e.stopPropagation(), i(e);
             },
-            className: r()(o.hP, c),
-            children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
+            className: s()(d.hP, c),
+            children: (0, n.jsx)(t, { className: d.Kk, color: "currentColor" }),
         }),
     });
 }

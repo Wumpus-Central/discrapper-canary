@@ -7,24 +7,22 @@ var i = n(377802),
     a = n(709562),
     o = n(985018);
 function l(e) {
-    let { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u, ...c } = e,
-        d = t ? a.l : a.A,
-        _ = () => {
+    let { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u, ...d } = e,
+        c = t ? a.l : a.A,
+        { Component: _, events: f } = (0, i.O)();
+    return (0, r.jsx)(c, {
+        ...d,
+        isTrayButton: !1,
+        onClick: () => {
             n?.(), s.default.disconnect();
         },
-        f = () => o.intl.string(o.t["6vrfgt"]),
-        { Component: p, events: h } = (0, i.O)();
-    return (0, r.jsx)(d, {
-        ...c,
-        isTrayButton: !1,
-        onClick: _,
-        iconComponent: p,
+        iconComponent: _,
         onMouseEnter: (e) => {
-            l?.(e), h.onMouseEnter();
+            l?.(e), f.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            u?.(e), h.onMouseLeave();
+            u?.(e), f.onMouseLeave();
         },
-        label: f(),
+        label: o.intl.string(o.t["6vrfgt"]),
     });
 }

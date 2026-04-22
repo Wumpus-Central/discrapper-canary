@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__394db",
     Tm: "chipletContainer__394db",

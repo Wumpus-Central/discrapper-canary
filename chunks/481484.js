@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => l, y: () => o });
-var r = n(311907),
-    i = n(256415),
-    s = n(395011),
-    a = n(222506);
-function o() {
-    return i.default.isLocked(s.A.getTargetPID());
+i.d(e, { A: () => o, y: () => s });
+var n = i(311907),
+    l = i(256415),
+    a = i(395011),
+    r = i(222506);
+function s() {
+    return l.default.isLocked(a.A.getTargetPID());
 }
-function l() {
-    return (0, r.bG)([a.A, s.A], () => a.A.isInputLocked(s.A.getTargetPID()));
+function o() {
+    return (0, n.bG)([r.A, a.A], () => r.A.isInputLocked(a.A.getTargetPID()));
 }

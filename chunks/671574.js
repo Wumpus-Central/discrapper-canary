@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     rs: "mainContainer_c615b7",
     Tg: "textArea_c615b7",

@@ -1,71 +1,56 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(668459);
-let i = { read: a };
-function a(e, t) {
-    let n = s(e, t),
-        r = _(e, t, n),
-        i = f(e, t, n),
-        a = {
-            "JFIF Version": o(e, t, n),
-            "Resolution Unit": l(e, t, n),
-            XResolution: c(e, t, n),
-            YResolution: d(e, t, n),
-            "JFIF Thumbnail Width": r,
-            "JFIF Thumbnail Height": i,
-        };
-    if (void 0 !== r && void 0 !== i) {
-        let s = p(e, t, 3 * r.value * i.value, n);
-        s && (a["JFIF Thumbnail"] = s);
-    }
-    for (let e in a) void 0 === a[e] && delete a[e];
-    return a;
-}
-function s(e, t) {
-    return r.A.getShortAt(e, t);
-}
-function o(e, t, n) {
-    let i = 7;
-    if (9 > n) return;
-    let a = r.A.getByteAt(e, t + i),
-        s = r.A.getByteAt(e, t + i + 1);
-    return { value: 256 * a + s, description: a + "." + s };
-}
-function l(e, t, n) {
-    let i = 9;
-    if (10 > n) return;
-    let a = r.A.getByteAt(e, t + i);
-    return { value: a, description: u(a) };
-}
-function u(e) {
-    return 0 === e ? "None" : 1 === e ? "inches" : 2 === e ? "cm" : "Unknown";
-}
-function c(e, t, n) {
-    let i = 10;
-    if (12 > n) return;
-    let a = r.A.getShortAt(e, t + i);
-    return { value: a, description: "" + a };
-}
-function d(e, t, n) {
-    let i = 12;
-    if (14 > n) return;
-    let a = r.A.getShortAt(e, t + i);
-    return { value: a, description: "" + a };
-}
-function _(e, t, n) {
-    let i = 14;
-    if (15 > n) return;
-    let a = r.A.getByteAt(e, t + i);
-    return { value: a, description: `${a}px` };
-}
-function f(e, t, n) {
-    let i = 15;
-    if (16 > n) return;
-    let a = r.A.getByteAt(e, t + i);
-    return { value: a, description: `${a}px` };
-}
-function p(e, t, n, r) {
-    let i = 16;
-    if (0 !== n && !(i + n > r))
-        return { value: e.buffer.slice(t + i, t + i + n), description: "<24-bit RGB pixel data>" };
-}
+i.d(t, { A: () => r });
+var n = i(668459);
+let r = {
+    read: function (e, t) {
+        var i, r;
+        let o = ((i = e), (r = t), n.A.getShortAt(i, r)),
+            a = (function (e, t, i) {
+                if (15 > i) return;
+                let r = n.A.getByteAt(e, t + 14);
+                return { value: r, description: `${r}px` };
+            })(e, t, o),
+            s = (function (e, t, i) {
+                if (16 > i) return;
+                let r = n.A.getByteAt(e, t + 15);
+                return { value: r, description: `${r}px` };
+            })(e, t, o),
+            l = {
+                "JFIF Version": (function (e, t, i) {
+                    if (9 > i) return;
+                    let r = n.A.getByteAt(e, t + 7),
+                        o = n.A.getByteAt(e, t + 7 + 1);
+                    return { value: 256 * r + o, description: r + "." + o };
+                })(e, t, o),
+                "Resolution Unit": (function (e, t, i) {
+                    var r;
+                    if (10 > i) return;
+                    let o = n.A.getByteAt(e, t + 9);
+                    return {
+                        value: o,
+                        description: 0 === (r = o) ? "None" : 1 === r ? "inches" : 2 === r ? "cm" : "Unknown",
+                    };
+                })(e, t, o),
+                XResolution: (function (e, t, i) {
+                    if (12 > i) return;
+                    let r = n.A.getShortAt(e, t + 10);
+                    return { value: r, description: "" + r };
+                })(e, t, o),
+                YResolution: (function (e, t, i) {
+                    if (14 > i) return;
+                    let r = n.A.getShortAt(e, t + 12);
+                    return { value: r, description: "" + r };
+                })(e, t, o),
+                "JFIF Thumbnail Width": a,
+                "JFIF Thumbnail Height": s,
+            };
+        if (void 0 !== a && void 0 !== s) {
+            let i = (function (e, t, i, n) {
+                if (0 !== i && !(16 + i > n))
+                    return { value: e.buffer.slice(t + 16, t + 16 + i), description: "<24-bit RGB pixel data>" };
+            })(e, t, 3 * a.value * s.value, o);
+            i && (l["JFIF Thumbnail"] = i);
+        }
+        for (let e in l) void 0 === l[e] && delete l[e];
+        return l;
+    },
+};

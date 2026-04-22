@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { f: () => i, x: () => a });
-var r = n(643479);
-let i = {
+i.d(t, { f: () => r, x: () => o });
+var n = i(643479);
+let r = {
         desc: { name: "ICC Description" },
         cprt: { name: "ICC Copyright" },
         dmdd: { name: "ICC Device Model Description" },
@@ -9,11 +8,11 @@ let i = {
         dmnd: { name: "ICC Device Manufacturer for Display" },
         tech: { name: "Technology" },
     },
-    a = {
+    o = {
         4: {
             name: "Preferred CMM type",
-            value: (e, t) => (0, r.hT)(e, t, 4),
-            description: (e) => (null !== e ? l(e) : ""),
+            value: (e, t) => (0, n.hT)(e, t, 4),
+            description: (e) => (null !== e ? a(e) : ""),
         },
         8: {
             name: "Profile Version",
@@ -26,7 +25,7 @@ let i = {
         },
         12: {
             name: "Profile/Device class",
-            value: (e, t) => (0, r.hT)(e, t, 4),
+            value: (e, t) => (0, n.hT)(e, t, 4),
             description: (e) => {
                 switch (e.toLowerCase()) {
                     case "scnr":
@@ -56,13 +55,36 @@ let i = {
                 }
             },
         },
-        16: { name: "Color Space", value: (e, t) => (0, r.hT)(e, t, 4) },
-        20: { name: "Connection Space", value: (e, t) => (0, r.hT)(e, t, 4) },
-        24: { name: "ICC Profile Date", value: (e, t) => s(e, t).toISOString() },
-        36: { name: "ICC Signature", value: (e, t) => o(e.buffer.slice(t, t + 4)) },
-        40: { name: "Primary Platform", value: (e, t) => (0, r.hT)(e, t, 4), description: (e) => l(e) },
-        48: { name: "Device Manufacturer", value: (e, t) => (0, r.hT)(e, t, 4), description: (e) => l(e) },
-        52: { name: "Device Model Number", value: (e, t) => (0, r.hT)(e, t, 4) },
+        16: { name: "Color Space", value: (e, t) => (0, n.hT)(e, t, 4) },
+        20: { name: "Connection Space", value: (e, t) => (0, n.hT)(e, t, 4) },
+        24: {
+            name: "ICC Profile Date",
+            value: (e, t) => {
+                var i, n;
+                return ((i = e),
+                (n = t),
+                new Date(
+                    Date.UTC(
+                        i.getUint16(n),
+                        i.getUint16(n + 2) - 1,
+                        i.getUint16(n + 4),
+                        i.getUint16(n + 6),
+                        i.getUint16(n + 8),
+                        i.getUint16(n + 10),
+                    ),
+                )).toISOString();
+            },
+        },
+        36: {
+            name: "ICC Signature",
+            value: (e, t) => {
+                var i;
+                return (i = e.buffer.slice(t, t + 4)), String.fromCharCode.apply(null, new Uint8Array(i));
+            },
+        },
+        40: { name: "Primary Platform", value: (e, t) => (0, n.hT)(e, t, 4), description: (e) => a(e) },
+        48: { name: "Device Manufacturer", value: (e, t) => (0, n.hT)(e, t, 4), description: (e) => a(e) },
+        52: { name: "Device Model Number", value: (e, t) => (0, n.hT)(e, t, 4) },
         64: {
             name: "Rendering Intent",
             value: (e, t) => e.getUint32(t),
@@ -81,24 +103,9 @@ let i = {
                 }
             },
         },
-        80: { name: "Profile Creator", value: (e, t) => (0, r.hT)(e, t, 4) },
+        80: { name: "Profile Creator", value: (e, t) => (0, n.hT)(e, t, 4) },
     };
-function s(e, t) {
-    return new Date(
-        Date.UTC(
-            e.getUint16(t),
-            e.getUint16(t + 2) - 1,
-            e.getUint16(t + 4),
-            e.getUint16(t + 6),
-            e.getUint16(t + 8),
-            e.getUint16(t + 10),
-        ),
-    );
-}
-function o(e) {
-    return String.fromCharCode.apply(null, new Uint8Array(e));
-}
-function l(e) {
+function a(e) {
     switch (e.toLowerCase()) {
         case "appl":
             return "Apple";

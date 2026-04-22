@@ -1,98 +1,98 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => v });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    s = n(397927),
-    a = n(450510),
-    r = n(421838),
-    d = n(985018),
-    c = n(435493),
-    o = n(728749);
-let u = () =>
+    s = n(834730),
+    r = n(534514),
+    a = n(825484),
+    d = n(821609),
+    o = n(123292),
+    c = n(450510),
+    u = n(421838),
+    x = n(985018),
+    h = n(419836),
+    m = n(728749);
+let g = () =>
     (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(s.Text, {
+            (0, l.jsx)(s.E, {
                 color: "text-strong",
                 variant: "text-xs/normal",
-                className: c.ln,
-                children: d.intl.string(d.t.GcZzp2),
+                className: h.ln,
+                children: x.intl.string(x.t.GcZzp2),
             }),
-            (0, l.jsx)(s.Text, {
+            (0, l.jsx)(s.E, {
                 color: "text-strong",
                 variant: "text-xs/normal",
-                className: c.ln,
-                children: d.intl.string(d.t["/NEGrO"]),
+                className: h.ln,
+                children: x.intl.string(x.t["/NEGrO"]),
             }),
-            (0, l.jsx)(s.Text, {
+            (0, l.jsx)(s.E, {
                 color: "text-strong",
                 variant: "text-xs/normal",
-                className: c.ln,
-                children: d.intl.string(d.t.eUbuHL),
+                className: h.ln,
+                children: x.intl.string(x.t.eUbuHL),
             }),
-            (0, l.jsx)(s.Text, {
+            (0, l.jsx)(s.E, {
                 color: "text-strong",
                 variant: "text-xs/normal",
-                className: c.ln,
-                children: d.intl.string(d.t.sCAZeI),
+                className: h.ln,
+                children: x.intl.string(x.t.sCAZeI),
             }),
         ],
     });
-function x(e) {
+function v(e) {
     let { onClick: t } = e;
-    return (0, i.bG)([a.HP], () => !a.HP.hasHotspot(a._2.STAGE_CHANNEL_UPSELL))
+    return (0, i.bG)([c.HP], () => !c.HP.hasHotspot(c._2.STAGE_CHANNEL_UPSELL))
         ? null
         : (0, l.jsxs)("div", {
-              className: c.kL,
+              className: h.kL,
               children: [
                   (0, l.jsxs)("div", {
-                      className: c.Qs,
+                      className: h.Qs,
                       children: [
                           (0, l.jsxs)("div", {
-                              className: c.FS,
+                              className: h.FS,
                               children: [
-                                  (0, l.jsx)(s.Heading, {
+                                  (0, l.jsx)(r.D, {
                                       variant: "heading-md/semibold",
-                                      children: d.intl.string(d.t.Sx8Ezi),
+                                      children: x.intl.string(x.t.Sx8Ezi),
                                   }),
-                                  (0, l.jsx)(s.Text, {
+                                  (0, l.jsx)(s.E, {
                                       color: "text-default",
                                       variant: "text-xs/normal",
-                                      className: c.ij,
-                                      children: d.intl.string(d.t.JUzPhm),
+                                      className: h.ij,
+                                      children: x.intl.string(x.t.JUzPhm),
                                   }),
-                                  (0, l.jsx)(s.Text, {
+                                  (0, l.jsx)(s.E, {
                                       color: "text-default",
                                       variant: "text-xs/normal",
-                                      children: d.intl.format(d.t.Vh7rP7, { suggestionsHook: u }),
+                                      children: x.intl.format(x.t.Vh7rP7, { suggestionsHook: g }),
                                   }),
                               ],
                           }),
                           (0, l.jsx)("div", {
-                              className: c.Sl,
-                              children: (0, l.jsx)("img", { src: o, alt: d.intl.string(d.t["uIm/n4"]) }),
+                              className: h.Sl,
+                              children: (0, l.jsx)("img", { src: m, alt: x.intl.string(x.t["uIm/n4"]) }),
                           }),
                       ],
                   }),
                   (0, l.jsx)("div", {
-                      className: c.qr,
-                      children: (0, l.jsxs)(s.ButtonGroup, {
+                      className: h.qr,
+                      children: (0, l.jsxs)(a.e, {
                           direction: "horizontal",
                           size: "sm",
                           children: [
-                              (0, l.jsx)(s.Button, {
-                                  onClick: t,
-                                  variant: "secondary",
-                                  text: d.intl.string(d.t["X/3SyA"]),
-                              }),
+                              (0, l.jsx)(d.$, { onClick: t, variant: "secondary", text: x.intl.string(x.t["X/3SyA"]) }),
                               (0, l.jsx)("div", {
-                                  className: c.zt,
-                                  children: (0, l.jsx)(s.QWc, {
+                                  className: h.zt,
+                                  children: (0, l.jsx)(o.Q, {
                                       onClick: () => {
-                                          r.sF(a._2.STAGE_CHANNEL_UPSELL);
+                                          u.sF(c._2.STAGE_CHANNEL_UPSELL);
                                       },
                                       variant: "secondary",
                                       textVariant: "text-sm/medium",
-                                      text: d.intl.string(d.t["5E9SB9"]),
+                                      text: x.intl.string(x.t["5E9SB9"]),
                                   }),
                               }),
                           ],

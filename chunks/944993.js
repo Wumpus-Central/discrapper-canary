@@ -1,10 +1,10 @@
-i.d(t, { _: () => r });
-var n = i(627968);
-i(64700);
-var l = i(397927);
-function r(e) {
-    (0, l.mMO)(async () => {
-        let { default: t } = await Promise.all([i.e("56423"), i.e("25280")]).then(i.bind(i, 987482));
-        return (i) => (0, n.jsx)(t, { source: e, ...i });
+n.d(t, { _: () => l });
+var i = n(627968);
+n(64700);
+var s = n(192308);
+function l(e) {
+    (0, s.openModalLazy)(async () => {
+        let { default: t } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
+        return (n) => (0, i.jsx)(t, { source: e, ...n });
     });
 }

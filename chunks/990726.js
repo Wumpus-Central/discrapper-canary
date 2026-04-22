@@ -1,24 +1,24 @@
-n.d(i, { default: () => e });
-var r = n(627968);
-n(64700);
-var a = n(732955),
-    s = n(172710),
-    o = n(985018);
-function e(t) {
-    let { transitionState: i, onClose: n } = t;
-    return (0, r.jsx)(a.aFV, {
-        transitionState: i,
-        onClose: n,
+i.d(n, { default: () => a });
+var e = i(627968);
+i(64700);
+var r = i(189213),
+    o = i(172710),
+    l = i(985018);
+function a(t) {
+    let { transitionState: n, onClose: i } = t;
+    return (0, e.jsx)(r.Modal, {
+        transitionState: n,
+        onClose: i,
         size: "sm",
-        title: o.intl.formatToMarkdownString(o.t.DQsSGr, {}),
-        subtitle: o.intl.string(o.t.xGMwi9),
+        title: l.intl.formatToMarkdownString(l.t.DQsSGr, {}),
+        subtitle: l.intl.string(l.t.xGMwi9),
         actions: [
-            { variant: "secondary", text: o.intl.string(o.t["ETE/oC"]), onClick: n },
+            { variant: "secondary", text: l.intl.string(l.t["ETE/oC"]), onClick: i },
             {
                 variant: "primary",
-                text: o.intl.string(o.t.n8U5jd),
+                text: l.intl.string(l.t.n8U5jd),
                 onClick: function () {
-                    (0, s.Pt)(), n();
+                    (0, o.Pt)(), i();
                 },
             },
         ],

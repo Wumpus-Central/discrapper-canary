@@ -1,156 +1,164 @@
-n.d(t, { A: () => z });
+n.d(t, { A: () => et });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(311907),
-    o = n(397927),
-    d = n(465532),
-    c = n(414798),
-    u = n(579872),
-    h = n(147192),
-    A = n(738876),
-    _ = n(775602),
-    m = n(793574),
-    p = n(688810),
-    g = n(355622),
-    f = n(408018),
-    E = n(133343),
-    x = n(171593),
-    I = n(915089),
-    C = n(314307),
-    N = n(58736),
-    T = n(636922),
-    S = n(931664),
-    b = n(631576),
-    y = n(253932),
-    v = n(734057),
-    R = n(31717),
-    j = n(320501),
-    O = n(576705),
-    L = n(522602),
-    M = n(234320),
-    D = n(460350),
-    U = n(518960),
-    G = n(710640),
-    P = n(393309),
-    k = n(474078),
-    w = n(747926),
-    B = n(965601),
-    V = n(55294),
-    H = n(652215),
-    F = n(985018),
-    W = n(790158),
-    K = n(415296);
-let Y = g.oU.THREAD_CREATION;
-function z(e) {
+    o = n(789645),
+    d = n(163328),
+    c = n(425557),
+    u = n(573613),
+    h = n(270003),
+    A = n(150934),
+    _ = n(452027),
+    m = n(292666),
+    g = n(511274),
+    p = n(465532),
+    f = n(414798),
+    E = n(579872),
+    x = n(147192),
+    I = n(738876),
+    C = n(775602),
+    b = n(793574),
+    N = n(688810),
+    S = n(355622),
+    v = n(408018),
+    T = n(133343),
+    y = n(171593),
+    R = n(915089),
+    j = n(314307),
+    L = n(58736),
+    O = n(636922),
+    G = n(931664),
+    D = n(631576),
+    M = n(253932),
+    U = n(734057),
+    P = n(31717),
+    w = n(320501),
+    k = n(576705),
+    V = n(522602),
+    B = n(234320),
+    H = n(460350),
+    F = n(518960),
+    W = n(710640),
+    Y = n(393309),
+    K = n(474078),
+    z = n(747926),
+    q = n(965601),
+    X = n(55294),
+    Q = n(652215),
+    J = n(985018),
+    Z = n(790158),
+    $ = n(415296);
+let ee = S.oU.THREAD_CREATION;
+function et(e) {
     let { parentChannelId: t, parentMessageId: n, location: l } = e,
-        s = (0, r.bG)([v.A], () => v.A.getChannel(t)),
-        { analyticsLocations: a } = (0, p.Ay)(m.A.CREATE_THREAD);
+        s = (0, r.bG)([U.A], () => U.A.getChannel(t)),
+        { analyticsLocations: a } = (0, N.Ay)(b.A.CREATE_THREAD);
     return null == s
         ? null
-        : (0, i.jsx)(p.f5, {
+        : (0, i.jsx)(N.f5, {
               value: a,
-              children: (0, i.jsx)(M.Ah, {
+              children: (0, i.jsx)(B.Ah, {
                   children: (0, i.jsxs)("section", {
-                      "aria-label": F.intl.string(F.t.rBIGBL),
-                      className: W.kL,
+                      "aria-label": J.intl.string(J.t.rBIGBL),
+                      className: Z.kL,
                       children: [
-                          (0, i.jsx)(A.A, { channel: s, draftType: R.C.FirstThreadMessage }),
-                          (0, i.jsx)(q, { parentChannelId: t }),
-                          (0, i.jsx)(X, { parentChannel: s, parentMessageId: n, location: l }),
+                          (0, i.jsx)(I.A, { channel: s, draftType: P.C.FirstThreadMessage }),
+                          (0, i.jsx)(en, { parentChannelId: t }),
+                          (0, i.jsx)(ei, { parentChannel: s, parentMessageId: n, location: l }),
                       ],
                   }),
               }),
           });
 }
-function q(e) {
+function en(e) {
     let { parentChannelId: t } = e,
         n = l.useCallback(() => {
-            let e = R.A.getThreadSettings(t),
-                n = R.A.getDraft(t, R.C.FirstThreadMessage).trim(),
-                i = L.A.getUploads(t, R.C.FirstThreadMessage);
+            let e = P.A.getThreadSettings(t),
+                n = P.A.getDraft(t, P.C.FirstThreadMessage).trim(),
+                i = V.A.getUploads(t, P.C.FirstThreadMessage);
             (e?.name != null && e?.name !== "") || 0 !== n.length || 0 !== i.length
-                ? u.A.show({
-                      title: F.intl.string(F.t["6kDZh1"]),
-                      body: F.intl.string(F.t.NgS9jX),
-                      confirmText: F.intl.string(F.t["7WGI4H"]),
+                ? E.A.show({
+                      title: J.intl.string(J.t["6kDZh1"]),
+                      body: J.intl.string(J.t.NgS9jX),
+                      confirmText: J.intl.string(J.t["7WGI4H"]),
                       confirmVariant: "critical-primary",
-                      cancelText: F.intl.string(F.t["olcKd/"]),
+                      cancelText: J.intl.string(J.t["olcKd/"]),
                       onConfirm: () => {
-                          (0, w.bA)(t);
+                          (0, z.bA)(t);
                       },
                   })
-                : (0, w.bA)(t);
+                : (0, z.bA)(t);
         }, [t]);
-    return (0, i.jsxs)(N.Ay, {
-        toolbar: (0, i.jsx)(N.Ay.Icon, { icon: o.PGe, tooltip: F.intl.string(F.t.cpT0Cq), onClick: n }),
+    return (0, i.jsxs)(L.Ay, {
+        toolbar: (0, i.jsx)(L.Ay.Icon, { icon: o.P, tooltip: J.intl.string(J.t.cpT0Cq), onClick: n }),
         children: [
-            (0, i.jsx)(N.Ay.Icon, { icon: o.ysw, disabled: !0, "aria-label": F.intl.string(F.t["7Xm5QI"]) }),
-            (0, i.jsx)(N.Ay.Title, { children: F.intl.string(F.t["4WNcpu"]) }),
+            (0, i.jsx)(L.Ay.Icon, { icon: d.y, disabled: !0, "aria-label": J.intl.string(J.t["7Xm5QI"]) }),
+            (0, i.jsx)(L.Ay.Title, { children: J.intl.string(J.t["4WNcpu"]) }),
         ],
     });
 }
-function X(e) {
+function ei(e) {
     let t,
-        { parentChannel: n, parentMessageId: s, location: c } = e,
-        u = (0, r.bG)([_.A], () => _.A.messageGroupSpacing),
-        A =
-            ((t = l.useContext(M.EH)),
+        { parentChannel: n, parentMessageId: s, location: o } = e,
+        A = (0, r.bG)([C.A], () => C.A.messageGroupSpacing),
+        _ =
+            ((t = l.useContext(B.EH)),
             l.useCallback(() => {
                 t.bumpDispatchPriority();
             }, [t])),
         {
             threadSettings: m,
-            setThreadSettings: p,
-            updateThreadSettings: g,
+            setThreadSettings: g,
+            updateThreadSettings: f,
         } = (function (e, t) {
-            let n = (0, r.bG)([R.A], () => R.A.getThreadSettings(e.id) ?? {}, [e.id]),
+            let n = (0, r.bG)([P.A], () => P.A.getThreadSettings(e.id) ?? {}, [e.id]),
                 [i, s] = l.useState(n),
                 a = l.useCallback(
                     (n) => {
-                        s((e) => ({ ...e, ...n })), d.A.changeThreadSettings(e.id, { ...n, parentMessageId: t });
+                        s((e) => ({ ...e, ...n })), p.A.changeThreadSettings(e.id, { ...n, parentMessageId: t });
                     },
                     [e.id, t],
                 );
             return { threadSettings: i, setThreadSettings: s, updateThreadSettings: a };
         })(n, s),
-        { textAreaState: E, setTextAreaState: x } = (function (e, t) {
-            let [n, i] = l.useState((0, f.N3)());
+        { textAreaState: E, setTextAreaState: I } = (function (e, t) {
+            let [n, i] = l.useState((0, v.N3)());
             return (
                 l.useEffect(() => {
                     function n(n) {
-                        let l = R.A.getDraft(e.id, R.C.FirstThreadMessage);
-                        (0 === l.length || !0 === n) && i((0, f.ur)(l)), t(R.A.getThreadSettings(e.id) ?? {});
+                        let l = P.A.getDraft(e.id, P.C.FirstThreadMessage);
+                        (0 === l.length || !0 === n) && i((0, v.ur)(l)), t(P.A.getThreadSettings(e.id) ?? {});
                     }
                     return (
                         n(!0),
-                        R.A.addChangeListener(n),
+                        P.A.addChangeListener(n),
                         () => {
-                            R.A.removeChangeListener(n);
+                            P.A.removeChangeListener(n);
                         }
                     );
                 }, [e.id, t]),
                 { textAreaState: n, setTextAreaState: i }
             );
-        })(n, p),
-        I = (0, P.EN)(n),
+        })(n, g),
+        b = (0, Y.EN)(n),
         {
             isGeneratingAI: N,
-            enableAIFeatures: T,
-            getThreadNameInputAccessory: y,
-        } = (0, B.C)({
+            enableAIFeatures: S,
+            getThreadNameInputAccessory: T,
+        } = (0, q.C)({
             parentChannel: n,
             parentMessageId: s,
-            updateThreadSettings: g,
+            updateThreadSettings: f,
             threadSettings: m,
             textAreaState: E,
         }),
         {
-            nameError: v,
-            messageError: j,
-            submit: O,
-            submitting: U,
+            nameError: y,
+            messageError: R,
+            submit: L,
+            submitting: O,
         } = (function (e) {
             let {
                     parentChannel: t,
@@ -164,13 +172,13 @@ function X(e) {
                 [d, c] = l.useState(null),
                 [u, h] = l.useState(null),
                 [A, _] = l.useState(!1),
-                m = (0, V.A)({
+                m = (0, X.A)({
                     parentChannel: t,
                     parentMessageId: n,
                     threadSettings: i,
                     privateThreadMode: s,
                     location: r,
-                    onThreadCreated: w.JA,
+                    onThreadCreated: z.JA,
                     useDefaultThreadName: !0,
                 });
             return {
@@ -183,35 +191,35 @@ function X(e) {
                             null == e && (e = a.textValue),
                             (e = e.trim()),
                             (null == l || 0 === l.length) &&
-                                (l = S.A.getStickerPreview(t.id, Y.drafts.type)?.map((e) => e.id)),
-                            (null == s || 0 === s.length) && (s = L.A.getUploads(t.id, R.C.FirstThreadMessage));
+                                (l = G.A.getStickerPreview(t.id, ee.drafts.type)?.map((e) => e.id)),
+                            (null == s || 0 === s.length) && (s = V.A.getUploads(t.id, P.C.FirstThreadMessage));
                         let r = (i.name ?? "").trim(),
                             d = (o || null == n) && 0 === r.length,
                             u = "" === e && (null == l || 0 === l.length) && 0 === s.length;
-                        if ((c(d ? (0, G.uW)() : null), h(u ? (0, G.fo)() : null), d || u))
+                        if ((c(d ? (0, W.uW)() : null), h(u ? (0, W.fo)() : null), d || u))
                             return _(!1), { shouldClear: !1, shouldRefocus: !0 };
-                        let { valid: p } = await (0, D.i)({
+                        let { valid: g } = await (0, H.i)({
                             content: e,
                             stickers: l,
                             uploads: s,
-                            type: Y,
+                            type: ee,
                             channel: null == n ? t : null,
                         });
-                        if (!p) return _(!1), { shouldClear: !1, shouldRefocus: !0 };
+                        if (!g) return _(!1), { shouldClear: !1, shouldRefocus: !0 };
                         try {
                             await m(e, l, s);
                         } catch (e) {
                             return (
-                                e.body?.code === H.t02.AUTOMOD_TITLE_BLOCKED
-                                    ? c((0, G.z0)(e.body, t))
-                                    : e.body?.code === H.t02.INVALID_FORM_BODY &&
+                                e.body?.code === Q.t02.AUTOMOD_TITLE_BLOCKED
+                                    ? c((0, W.z0)(e.body, t))
+                                    : e.body?.code === Q.t02.INVALID_FORM_BODY &&
                                       e.body?.errors?.name != null &&
-                                      c((0, G.T4)()),
+                                      c((0, W.T4)()),
                                 _(!1),
                                 { shouldClear: !1, shouldRefocus: !0 }
                             );
                         }
-                        return (0, b.x5)(t.id, Y.drafts.type), _(!1), { shouldClear: !0, shouldRefocus: !1 };
+                        return (0, D.x5)(t.id, ee.drafts.type), _(!1), { shouldClear: !0, shouldRefocus: !1 };
                     },
                     [m, a.textValue, i.name, n, t, A, o],
                 ),
@@ -221,80 +229,80 @@ function X(e) {
             parentChannel: n,
             parentMessageId: s,
             threadSettings: m,
-            privateThreadMode: I,
+            privateThreadMode: b,
             textAreaState: E,
-            location: c,
-            enableAIFeatures: T,
+            location: o,
+            enableAIFeatures: S,
         }),
-        k = (0, P.Iy)(m, I) ? o.tn0 : o.ysw;
+        M = (0, Y.Iy)(m, b) ? c.t : d.y;
     return (0, i.jsx)("div", {
-        className: W.TE,
-        onMouseDown: A,
-        onFocus: A,
+        className: Z.TE,
+        onMouseDown: _,
+        onFocus: _,
         children: (0, i.jsx)("div", {
-            className: a()(W.Og, `group-spacing-${u}`),
+            className: a()(Z.Og, `group-spacing-${A}`),
             children: (0, i.jsxs)("form", {
                 onSubmit: (e) => {
-                    e.preventDefault(), O();
+                    e.preventDefault(), L();
                 },
-                className: W.Zd,
+                className: Z.Zd,
                 children: [
-                    (0, i.jsx)(o.HOs, {
-                        className: W.XG,
+                    (0, i.jsx)(u.Ip, {
+                        className: Z.XG,
                         fade: !0,
                         children: (0, i.jsxs)("div", {
-                            className: W.bv,
+                            className: Z.bv,
                             children: [
-                                (0, i.jsxs)(C.Ay, {
+                                (0, i.jsxs)(j.Ay, {
                                     channelId: "create-thread-null",
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: a()(K.P0, W.P0),
-                                            children: (0, i.jsx)(k, { className: K.Kk }),
+                                            className: a()($.P0, Z.P0),
+                                            children: (0, i.jsx)(M, { className: $.Kk }),
                                         }),
-                                        (0, i.jsxs)(o.nVY, {
+                                        (0, i.jsxs)(h.n, {
                                             children: [
-                                                (0, i.jsx)(J, {
+                                                (0, i.jsx)(es, {
                                                     parentChannel: n,
                                                     parentMessageId: s,
                                                     threadSettings: m,
-                                                    updateThreadSettings: g,
-                                                    error: v,
-                                                    disabled: U,
+                                                    updateThreadSettings: f,
+                                                    error: y,
+                                                    disabled: O,
                                                     isGeneratingAI: N,
-                                                    enableAIFeatures: T,
-                                                    getThreadNameInputAccessory: y,
+                                                    enableAIFeatures: S,
+                                                    getThreadNameInputAccessory: T,
                                                 }),
-                                                n.type === H.rbe.GUILD_TEXT
-                                                    ? (0, i.jsx)($, {
+                                                n.type === Q.rbe.GUILD_TEXT
+                                                    ? (0, i.jsx)(el, {
                                                           startedFromMessage: null != s,
                                                           threadSettings: m,
-                                                          updateThreadSettings: g,
-                                                          privateThreadMode: I,
+                                                          updateThreadSettings: f,
+                                                          privateThreadMode: b,
                                                       })
                                                     : null,
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(Z, { parentChannel: n, parentMessageId: s }),
+                                (0, i.jsx)(er, { parentChannel: n, parentMessageId: s }),
                             ],
                         }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: W.Eh,
+                        className: Z.Eh,
                         children: [
-                            (0, i.jsx)(Q, {
+                            (0, i.jsx)(ea, {
                                 parentChannel: n,
                                 textAreaState: E,
-                                setTextAreaState: x,
-                                submit: O,
-                                error: j,
+                                setTextAreaState: I,
+                                submit: L,
+                                error: R,
                             }),
-                            (0, i.jsx)(h.Ay, {
+                            (0, i.jsx)(x.Ay, {
                                 channel: n,
                                 isThreadCreation: !0,
-                                className: W.RL,
+                                className: Z.RL,
                                 isInTextChannel: !0,
                             }),
                         ],
@@ -304,24 +312,24 @@ function X(e) {
         }),
     });
 }
-function $(e) {
+function el(e) {
     let { startedFromMessage: t, threadSettings: n, updateThreadSettings: l, privateThreadMode: s } = e,
-        a = (0, P.Iy)(n, s),
-        r = (0, i.jsx)(o.Checkbox, {
-            disabled: s === P.jk.PrivateOnly,
+        a = (0, Y.Iy)(n, s),
+        r = (0, i.jsx)(A.S, {
+            disabled: s === Y.jk.PrivateOnly,
             checked: a,
             onChange: (e) => l({ isPrivate: e }),
-            label: F.intl.string(F.t.TRPp3g),
+            label: J.intl.string(J.t.TRPp3g),
         });
-    return t || s === P.jk.Disabled
+    return t || s === Y.jk.Disabled
         ? null
-        : (0, i.jsx)(o.D0$, {
-              label: F.intl.string(F.t.F1zyvU),
-              helperText: a ? F.intl.string(F.t.EWXycz) : void 0,
+        : (0, i.jsx)(_.D, {
+              label: J.intl.string(J.t.F1zyvU),
+              helperText: a ? J.intl.string(J.t.EWXycz) : void 0,
               children: r,
           });
 }
-function J(e) {
+function es(e) {
     let {
             parentChannel: t,
             parentMessageId: n,
@@ -329,96 +337,96 @@ function J(e) {
             updateThreadSettings: s,
             error: a,
             disabled: r,
-            isGeneratingAI: d,
-            enableAIFeatures: u,
-            getThreadNameInputAccessory: h,
+            isGeneratingAI: o,
+            enableAIFeatures: d,
+            getThreadNameInputAccessory: c,
         } = e,
-        A = l.name ?? "",
-        _ = (0, G.vr)(a, { content: A }),
-        m = (0, P.l1)(t, n),
-        p = null != n && !u,
-        g = (0, I.GV)(),
-        f = u ? F.intl.string(F.t["Nb2/RE"]) : "" !== m ? m : F.intl.string(F.t["Nb2/RE"]);
-    return (0, i.jsx)(o.ksK, {
-        label: F.intl.string(p ? F.t.JPvIiL : F.t.j3XWjD),
-        trailing: h(r),
-        value: A,
+        u = l.name ?? "",
+        h = (0, W.vr)(a, { content: u }),
+        A = (0, Y.l1)(t, n),
+        _ = null != n && !d,
+        g = (0, R.GV)(),
+        p = d ? J.intl.string(J.t["Nb2/RE"]) : "" !== A ? A : J.intl.string(J.t["Nb2/RE"]);
+    return (0, i.jsx)(m.k, {
+        label: J.intl.string(_ ? J.t.JPvIiL : J.t.j3XWjD),
+        trailing: c(r),
+        value: u,
         id: g,
-        placeholder: f,
-        maxLength: H.Ign,
+        placeholder: p,
+        maxLength: Q.Ign,
         onChange: (e) => {
-            s({ name: (0, k.A)(e, !1) }), "" !== e ? c.A.startTyping(t.id) : c.A.stopTyping(t.id);
+            s({ name: (0, K.A)(e, !1) }), "" !== e ? f.A.startTyping(t.id) : f.A.stopTyping(t.id);
         },
         onBlur: () => {
-            let e = (0, k.A)(A, !0);
-            e !== A && s({ name: e });
+            let e = (0, K.A)(u, !0);
+            e !== u && s({ name: e });
         },
-        error: _,
-        disabled: r || d,
+        error: h,
+        disabled: r || o,
     });
 }
-function Q(e) {
-    let { parentChannel: t, textAreaState: n, setTextAreaState: s, submit: u, error: h } = e,
-        [A, _] = l.useState(!0),
-        m = l.useRef(null),
-        p = l.useCallback((e) => {
-            _(!0), e?.wasEnterPressed && (e?.event?.preventDefault(), m.current?.submit());
+function ea(e) {
+    let { parentChannel: t, textAreaState: n, setTextAreaState: s, submit: o, error: d } = e,
+        [c, u] = l.useState(!0),
+        h = l.useRef(null),
+        A = l.useCallback((e) => {
+            u(!0), e?.wasEnterPressed && (e?.event?.preventDefault(), h.current?.submit());
         }, []),
-        g = l.useCallback(() => _(!1), []),
-        f = l.useCallback(
+        _ = l.useCallback(() => u(!1), []),
+        m = l.useCallback(
             (e, n, i) => {
-                d.A.saveDraft(t.id, n, R.C.FirstThreadMessage),
+                p.A.saveDraft(t.id, n, P.C.FirstThreadMessage),
                     s(
                         (e) => (
-                            "" !== n && e.textValue !== n ? c.A.startTyping(t.id) : "" === n && c.A.stopTyping(t.id),
+                            "" !== n && e.textValue !== n ? f.A.startTyping(t.id) : "" === n && f.A.stopTyping(t.id),
                             { textValue: n, richValue: i }
                         ),
                     );
             },
             [t.id, s],
         ),
-        I = l.useCallback(
+        E = l.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: i } = e;
-                return u(t, i, n);
+                return o(t, i, n);
             },
-            [u],
+            [o],
         );
-    (0, M.Vo)({ event: H.jej.TEXTAREA_FOCUS, handler: p }), (0, M.Vo)({ event: H.jej.TEXTAREA_BLUR, handler: g });
-    let C = (0, r.bG)([O.A], () => O.A.can(H.xBc.ATTACH_FILES, t)),
-        N = (0, G.vr)(h, { content: n.textValue });
+    (0, B.Vo)({ event: Q.jej.TEXTAREA_FOCUS, handler: A }), (0, B.Vo)({ event: Q.jej.TEXTAREA_BLUR, handler: _ });
+    let x = (0, r.bG)([k.A], () => k.A.can(Q.xBc.ATTACH_FILES, t)),
+        I = (0, W.vr)(d, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(x.A, { channelId: t.id, type: Y, canAttachFiles: C }),
-            (0, i.jsx)("div", { className: W.xN, children: (0, i.jsx)(o.dzK, { error: N }) }),
-            (0, i.jsx)(E.Ay, {
-                type: Y,
+            (0, i.jsx)(y.A, { channelId: t.id, type: ee, canAttachFiles: x }),
+            (0, i.jsx)("div", { className: Z.xN, children: (0, i.jsx)(g.U, { error: I }) }),
+            (0, i.jsx)(T.Ay, {
+                type: ee,
                 channel: t,
-                placeholder: F.intl.string(F.t.taZfIC),
+                placeholder: J.intl.string(J.t.taZfIC),
                 textValue: n.textValue,
                 richValue: n.richValue,
-                focused: A,
-                className: a()(W.gM, W.Yy),
-                innerClassName: a()(W.SL, { [W.cr]: null != N }),
-                onFocus: p,
-                onBlur: g,
-                onChange: f,
-                onSubmit: I,
-                promptToUpload: U.R,
+                focused: c,
+                className: a()(Z.gM, Z.Yy),
+                innerClassName: a()(Z.SL, { [Z.cr]: null != I }),
+                onFocus: A,
+                onBlur: _,
+                onChange: m,
+                onSubmit: E,
+                promptToUpload: F.R,
                 setEditorRef: (e) => {
-                    m.current = e;
+                    h.current = e;
                 },
             }),
         ],
     });
 }
-function Z(e) {
+function er(e) {
     let { parentChannel: t, parentMessageId: n } = e,
-        l = (0, r.bG)([j.A], () => (null == n ? null : j.A.getMessage(t.id, n))),
-        s = y.hH.useSetting();
+        l = (0, r.bG)([w.A], () => (null == n ? null : w.A.getMessage(t.id, n))),
+        s = M.hH.useSetting();
     return null != l
-        ? (0, i.jsx)(T.A, {
-              className: W.IL,
+        ? (0, i.jsx)(O.A, {
+              className: Z.IL,
               message: l,
               channel: t,
               compact: s,

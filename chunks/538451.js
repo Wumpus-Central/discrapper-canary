@@ -1,60 +1,63 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(397927),
-    l = n(297413),
-    u = n(342296),
-    c = n(960074);
-function d(e) {
+    o = n(939249),
+    l = n(97808),
+    u = n(778712),
+    d = n(834730),
+    c = n(297413),
+    _ = n(342296),
+    f = n(193370);
+function E(e) {
     let {
             user: t,
             guildId: n,
             channelId: s,
-            nick: d,
-            className: _,
-            textClassName: f,
-            disablePopout: p,
-            ignoreModalClicks: h,
-            onClick: m,
-            onContextMenu: E,
-            onPopoutRequestOpen: g,
-            onPopoutRequestClose: A,
+            nick: E,
+            className: h,
+            textClassName: p,
+            disablePopout: m,
+            ignoreModalClicks: g,
+            onClick: A,
+            onContextMenu: I,
+            onPopoutRequestOpen: T,
+            onPopoutRequestClose: S,
         } = e,
-        I = i.useRef(null);
-    return (0, r.jsx)(u.A, {
-        targetElementRef: I,
+        y = i.useRef(null);
+    return (0, r.jsx)(_.A, {
+        targetElementRef: y,
         user: t,
         guildId: n,
         channelId: s,
         position: "left",
-        shouldShow: !p && void 0,
-        onRequestOpen: g,
-        onRequestClose: A,
-        ignoreModalClicks: h,
+        shouldShow: !m && void 0,
+        onRequestOpen: T,
+        onRequestClose: S,
+        ignoreModalClicks: g,
         children: (e) => {
             let { onClick: i, ...s } = e;
-            return (0, r.jsxs)(o.DUT, {
+            return (0, r.jsxs)(o.D, {
                 ...s,
-                innerRef: I,
-                className: a()(c.DV, _, { [c.YR]: p }),
-                onContextMenu: E,
+                innerRef: y,
+                className: a()(f.DV, h, { [f.YR]: m }),
+                onContextMenu: I,
                 onClick: (e) => {
-                    i(e), m?.(e);
+                    i(e), A?.(e);
                 },
                 children: [
-                    (0, r.jsx)(o.euF, {
-                        src: t.getAvatarURL(n, (0, o.FT9)(o._3J.SIZE_24)),
-                        className: c.my,
+                    (0, r.jsx)(l.eu, {
+                        src: t.getAvatarURL(n, (0, u.FT)(u._3.SIZE_24)),
+                        className: f.my,
                         "aria-label": t.username,
-                        size: o._3J.SIZE_24,
+                        size: u._3.SIZE_24,
                     }),
-                    (0, r.jsx)(o.Text, {
-                        className: a()(c.Ft, f),
+                    (0, r.jsx)(d.E, {
+                        className: a()(f.Ft, p),
                         variant: "text-sm/normal",
-                        children: (0, r.jsx)(l.A, { user: t, nick: d, usernameClass: c.Xh, hideDiscriminator: !0 }),
+                        children: (0, r.jsx)(c.A, { user: t, nick: E, usernameClass: f.Xh, hideDiscriminator: !0 }),
                     }),
                 ],
             });

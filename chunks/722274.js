@@ -1,33 +1,33 @@
 n.d(t, { A: () => u });
-var i = n(627968);
+var r = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(725807),
-    a = n(774774),
-    r = n(652215),
-    o = n(985018),
-    d = n(622410),
-    c = n(888283);
+var a = n(834730),
+    i = n(725807),
+    s = n(774774),
+    l = n(652215),
+    c = n(985018),
+    o = n(695661),
+    d = n(888283);
 let u = () => {
-    let e = { section: r.JJy.REVERSE_TRIAL_BANNER };
-    return (0, i.jsxs)("div", {
-        className: d.vK,
+    let e = { section: l.JJy.REVERSE_TRIAL_BANNER };
+    return (0, r.jsxs)("div", {
+        className: o.vK,
         children: [
-            (0, i.jsx)(a.e4, { text: o.intl.string(o.t.qYKftX), className: d.Io }),
-            (0, i.jsx)("img", { src: c, width: 64, height: 64, alt: "", className: d._u }),
-            (0, i.jsx)("div", {
-                className: d.IP,
-                children: (0, i.jsx)(s.Text, {
+            (0, r.jsx)(s.e4, { text: c.intl.string(c.t.qYKftX), className: o.Io }),
+            (0, r.jsx)("img", { src: d, width: 64, height: 64, alt: "", className: o._u }),
+            (0, r.jsx)("div", {
+                className: o.IP,
+                children: (0, r.jsx)(a.E, {
                     color: "text-subtle",
                     variant: "text-sm/normal",
-                    children: o.intl.format(o.t.uu1WAa, { weeks: 1 }),
+                    children: c.intl.format(c.t.uu1WAa, { weeks: 1 }),
                 }),
             }),
-            (0, i.jsx)(l.A, {
+            (0, r.jsx)(i.A, {
                 premiumModalAnalyticsLocation: e,
                 showGradient: !0,
-                className: d.aA,
-                shinyButtonClassName: d.Xp,
+                className: o.aA,
+                shinyButtonClassName: o.Xp,
             }),
         ],
     });

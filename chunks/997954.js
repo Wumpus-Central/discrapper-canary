@@ -1,58 +1,59 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(397927),
+var l = n(503698),
+    s = n.n(l),
+    r = n(192308),
+    a = n(588975),
     o = n(442433),
-    l = n(975807),
+    c = n(975807),
     u = n(235393),
-    c = n(332173),
-    d = n(202803),
-    _ = n(365526),
-    f = n(652215),
-    p = n(660007),
-    h = n(811369);
-function m(e) {
+    d = n(332173),
+    h = n(202803),
+    m = n(365526),
+    p = n(652215),
+    f = n(238999),
+    g = n(995257);
+function _(e) {
     return {
-        react(t, i, m) {
-            let E = m.noStyleAndInteraction
+        react(t, l, _) {
+            let x = _.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
-                          let r = await (0, d.AN)(t.attachmentUrl);
+                          let i = await (0, h.AN)(t.attachmentUrl);
                           e.shouldStopPropagation && n?.stopPropagation(),
-                              u.A.trackLinkClicked(r),
-                              e.shouldCloseDefaultModals && (0, a.s7G)(),
-                              (0, l.A)(r);
+                              u.A.trackLinkClicked(i),
+                              e.shouldCloseDefaultModals && (0, r.closeAllModals)(),
+                              (0, c.A)(i);
                       },
-                g = m.noStyleAndInteraction
-                    ? f.tEg
+                A = _.noStyleAndInteraction
+                    ? p.tEg
                     : (e) => {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await n.e("62529").then(n.bind(n, 740024));
                               return (n) =>
-                                  (0, r.jsx)(e, {
+                                  (0, i.jsx)(e, {
                                       ...n,
                                       attachmentUrl: t.attachmentUrl,
                                       attachmentName: t.attachmentName,
                                   });
                           });
                       };
-            return (0, r.jsxs)(
-                c.A,
+            return (0, i.jsxs)(
+                d.A,
                 {
                     role: "link",
                     href: t.attachmentUrl,
-                    onClick: E,
-                    onContextMenu: g,
+                    onClick: x,
+                    onContextMenu: A,
                     className: "attachmentLink",
                     children: [
-                        (0, r.jsx)(a.PtA, { size: "xs", className: s()(h.Kk, p.K), color: "currentColor" }),
-                        (0, _.t)(t, i, m),
+                        (0, i.jsx)(a.P, { size: "xs", className: s()(g.Kk, f.K), color: "currentColor" }),
+                        (0, m.t)(t, l, _),
                     ],
                 },
-                m.key,
+                _.key,
             );
         },
     };

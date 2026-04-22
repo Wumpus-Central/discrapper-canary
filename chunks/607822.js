@@ -1,22 +1,24 @@
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    l = n(400641),
-    r = n(474063);
-let a = (e) => {
-    let { header: t, displayType: n } = e,
-        a = (0, l.Gn)(n),
-        o = (0, l.Ju)(n);
-    return (0, i.jsxs)("div", {
-        className: r.hJ,
+l.d(t, { A: () => c });
+var n = l(627968);
+l(64700);
+var i = l(534514),
+    s = l(707554),
+    a = l(834730),
+    r = l(400641),
+    d = l(474063);
+let c = (e) => {
+    let { header: t, displayType: l } = e,
+        c = (0, r.Gn)(l),
+        u = (0, r.Ju)(l);
+    return (0, n.jsxs)("div", {
+        className: d.hJ,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, n.jsx)(i.D, {
                 variant: "heading-xxl/medium",
-                color: a > 0 ? "text-brand" : "text-muted",
-                children: (0, i.jsx)(s.Fmo, { children: o }),
+                color: c > 0 ? "text-brand" : "text-muted",
+                children: (0, n.jsx)(s.F, { children: u }),
             }),
-            (0, i.jsx)(s.Text, { variant: "text-sm/semibold", className: r.io, children: t }),
+            (0, n.jsx)(a.E, { variant: "text-sm/semibold", className: d.io, children: t }),
         ],
     });
 };

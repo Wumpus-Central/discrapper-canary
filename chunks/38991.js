@@ -1,20 +1,19 @@
 var r = n(99302),
     i = n(632516),
-    a = n(509185),
-    s = n(429397),
-    o = /[\\^$.*+?()[\]{}|]/g,
-    l = /^\[object .+?Constructor\]$/,
-    c = Object.prototype,
+    s = n(509185),
+    a = n(429397),
+    o = /^\[object .+?Constructor\]$/,
+    l = Object.prototype,
     u = Function.prototype.toString,
-    d = c.hasOwnProperty,
-    f = RegExp(
+    d = l.hasOwnProperty,
+    c = RegExp(
         "^" +
             u
                 .call(d)
-                .replace(o, "\\$&")
+                .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
             "$",
     );
 e.exports = function (e) {
-    return !(!a(e) || i(e)) && (r(e) ? f : l).test(s(e));
+    return !(!s(e) || i(e)) && (r(e) ? c : o).test(a(e));
 };

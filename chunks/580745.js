@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => _ });
 var r = n(311907),
     i = n(73153),
     s = n(408018),
@@ -7,32 +7,8 @@ var r = n(311907),
     o = n(253932),
     l = n(320501);
 let u = {},
-    c = {};
-function d(e) {
-    let { channelId: t, messageId: n, content: r, source: i } = e,
-        l = o.D_.getSetting(),
-        d = a.Ay.unparse(r, t);
-    (u[t] = { channelId: t, messageId: n, textValue: d, richValue: (0, s.x7)(l ? d : r) }), (c[t] = i);
-}
-function _(e) {
-    let { channelId: t, textValue: n, richValue: r } = e,
-        i = u[t];
-    if (null == i) return !1;
-    u[t] = { ...i, textValue: n, richValue: r };
-}
-function f(e) {
-    let { channelId: t } = e;
-    if (null == t || null == u[t]) return !1;
-    delete u[t], delete c[t];
-}
-function p(e) {
-    let { channelId: t, id: n } = e;
-    u[t]?.messageId === n && (delete u[t], delete c[t]);
-}
-function h() {
-    (u = {}), (c = {});
-}
-class m extends r.Ay.Store {
+    d = {};
+class c extends r.Ay.Store {
     initialize() {
         this.waitFor(l.A);
     }
@@ -57,13 +33,32 @@ class m extends r.Ay.Store {
         return null != t && null != t.messageId ? l.A.getMessage(e, t.messageId) : null;
     }
     getEditActionSource(e) {
-        return c[e];
+        return d[e];
     }
 }
-let E = new m(i.h, {
-    MESSAGE_START_EDIT: d,
-    MESSAGE_UPDATE_EDIT: _,
-    MESSAGE_END_EDIT: f,
-    MESSAGE_DELETE: p,
-    LOGOUT: h,
+let _ = new c(i.h, {
+    MESSAGE_START_EDIT: function (e) {
+        let { channelId: t, messageId: n, content: r, source: i } = e,
+            l = o.D_.getSetting(),
+            c = a.Ay.unparse(r, t);
+        (u[t] = { channelId: t, messageId: n, textValue: c, richValue: (0, s.x7)(l ? c : r) }), (d[t] = i);
+    },
+    MESSAGE_UPDATE_EDIT: function (e) {
+        let { channelId: t, textValue: n, richValue: r } = e,
+            i = u[t];
+        if (null == i) return !1;
+        u[t] = { ...i, textValue: n, richValue: r };
+    },
+    MESSAGE_END_EDIT: function (e) {
+        let { channelId: t } = e;
+        if (null == t || null == u[t]) return !1;
+        delete u[t], delete d[t];
+    },
+    MESSAGE_DELETE: function (e) {
+        let { channelId: t, id: n } = e;
+        u[t]?.messageId === n && (delete u[t], delete d[t]);
+    },
+    LOGOUT: function () {
+        (u = {}), (d = {});
+    },
 });

@@ -1,9 +1,9 @@
 n.d(e, { default: () => b });
 var i = n(627968),
     a = n(64700),
-    l = n(158954),
+    l = n(189213),
     r = n(311907),
-    s = n(397927),
+    s = n(834730),
     o = n(696451),
     c = n(71393),
     d = n(287809),
@@ -12,18 +12,18 @@ var i = n(627968),
     p = n(212455),
     m = n(739985),
     _ = n(985018),
-    h = n(400783);
+    h = n(146983);
 let b = function (t) {
     let { guildId: e, transitionState: n, onClose: b } = t,
         f = (0, r.bG)([p.A], () => p.A.getRequest(e), [e]),
-        x = (0, r.bG)([c.A], () => c.A.getGuild(e), [e]),
-        A = (0, r.bG)([d.default], () => d.default.getCurrentUser()?.id),
-        j = (0, r.bG)([o.Ay], () => (null != A ? o.Ay.getMember(e, A) : null), [A, e]),
-        k = a.useCallback(() => {
-            b(), null == j && (0, m.A)();
-        }, [j, b]),
+        A = (0, r.bG)([c.A], () => c.A.getGuild(e), [e]),
+        j = (0, r.bG)([d.default], () => d.default.getCurrentUser()?.id),
+        k = (0, r.bG)([o.Ay], () => (null != j ? o.Ay.getMember(e, j) : null), [j, e]),
+        x = a.useCallback(() => {
+            b(), null == k && (0, m.A)();
+        }, [k, b]),
         C = a.useCallback(async () => {
-            if (j?.isPending) {
+            if (k?.isPending) {
                 try {
                     await u.A.removeGuildJoinRequest(e);
                 } catch (t) {
@@ -31,25 +31,25 @@ let b = function (t) {
                 }
                 b(), (0, g.Ze)(e);
             } else u.A.resetGuildJoinRequest(e);
-        }, [e, j?.isPending, b]),
+        }, [e, k?.isPending, b]),
         R = a.useMemo(
             () => [
                 { text: _.intl.string(_.t.I1LYVk), variant: "secondary", onClick: C },
-                { text: _.intl.string(_.t.BddRzS), variant: "critical-primary", onClick: k },
+                { text: _.intl.string(_.t.BddRzS), variant: "critical-primary", onClick: x },
             ],
-            [C, k],
+            [C, x],
         );
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
         onClose: b,
         title:
-            x?.name != null
-                ? _.intl.formatToPlainString(_.t["P+/gzA"], { guildName: x.name })
+            A?.name != null
+                ? _.intl.formatToPlainString(_.t["P+/gzA"], { guildName: A.name })
                 : _.intl.string(_.t.gBPcuP),
         actions: R,
         children:
             f?.rejectionReason != null && f?.rejectionReason !== ""
-                ? (0, i.jsxs)(s.Text, {
+                ? (0, i.jsxs)(s.E, {
                       variant: "text-md/medium",
                       color: "text-default",
                       children: [

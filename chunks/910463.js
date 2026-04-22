@@ -7,49 +7,51 @@ var r = n(47167),
     o = n(994500),
     l = n(967198),
     u = n(287809),
-    c = n(486020),
-    d = n(710969);
+    d = n(486020),
+    c = n(710969);
 function _(e) {
-    let t = (0, d.xn)(e),
-        n = (0, d.vZ)(e),
-        _ = (0, i.pc)(),
-        f = (0, i.Ld)();
-    if (!n?.is_campaign_ias_enabled || !t || void 0 === _ || void 0 === f) return null;
-    let p = () => {
-            let e = _(),
-                t = a.A.getGuilds();
-            return e
-                .map((e) => {
-                    let n = t[e];
-                    if (void 0 === n) return null;
-                    let r = { id: n.id, name: n.name };
-                    null !== n.description && (r.description = n.description);
-                    let i =
-                        null !== n.icon
-                            ? (c.Ay.getGuildIconURL({ id: n.id, icon: n.icon, size: 44, canAnimate: !0 }) ?? null)
-                            : null;
-                    return null !== i && (r.icon_url = i), r;
-                })
-                .filter((e) => null !== e);
-        },
-        h = l.A.getGuildId(),
-        m = null != h ? a.A.getGuild(h) : null,
-        E = () =>
-            null == m
-                ? []
-                : f()
-                      .map((e) => {
-                          let t = s.A.getChannel(e);
-                          if (void 0 === t) return null;
-                          let n = { id: t.id, name: (0, r.m1)(t, u.default, o.A) };
-                          return t.topic.length > 0 && (n.channel_topic = t.topic), n;
-                      })
-                      .filter((e) => null !== e),
-        g = { guilds: p(), channels: E() };
-    null != h && (g.selected_guild_id = h);
+    let t,
+        n,
+        _ = (0, c.xn)(e),
+        f = (0, c.vZ)(e),
+        E = (0, i.pc)(),
+        h = (0, i.Ld)();
+    if (!f?.is_campaign_ias_enabled || !_ || void 0 === E || void 0 === h) return null;
+    let p = l.A.getGuildId(),
+        m = null != p ? a.A.getGuild(p) : null,
+        g = {
+            guilds:
+                ((t = E()),
+                (n = a.A.getGuilds()),
+                t
+                    .map((e) => {
+                        let t = n[e];
+                        if (void 0 === t) return null;
+                        let r = { id: t.id, name: t.name };
+                        null !== t.description && (r.description = t.description);
+                        let i =
+                            null !== t.icon
+                                ? (d.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 44, canAnimate: !0 }) ?? null)
+                                : null;
+                        return null !== i && (r.icon_url = i), r;
+                    })
+                    .filter((e) => null !== e)),
+            channels:
+                null == m
+                    ? []
+                    : h()
+                          .map((e) => {
+                              let t = s.A.getChannel(e);
+                              if (void 0 === t) return null;
+                              let n = { id: t.id, name: (0, r.m1)(t, u.default, o.A) };
+                              return t.topic.length > 0 && (n.channel_topic = t.topic), n;
+                          })
+                          .filter((e) => null !== e),
+        };
+    null != p && (g.selected_guild_id = p);
     let A =
         m?.banner !== null && m?.banner !== void 0
-            ? (c.Ay.getGuildBannerURL({ id: m.id, banner: m.banner }, !0) ?? null)
+            ? (d.Ay.getGuildBannerURL({ id: m.id, banner: m.banner }, !0) ?? null)
             : null;
     return (
         null !== A && (g.selected_guild_banner_url = A),

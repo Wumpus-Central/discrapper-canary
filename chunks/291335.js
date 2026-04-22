@@ -1,102 +1,105 @@
-n.d(t, { A: () => j });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(311907),
-    r = n(397927),
-    d = n(730134),
-    o = n(169869),
-    c = n(837057),
-    u = n(310419),
-    A = n(773669),
-    x = n(427157),
-    m = n(967198),
-    p = n(183555),
-    h = n(488995),
-    f = n(985018),
-    g = n(882119);
-function I(e) {
-    let { applicationRoleConnection: t, locale: n, onApplicationClicked: s, selectedGuildId: l } = e,
-        a = (0, o.VW)(t, n);
-    return (0, i.jsxs)(i.Fragment, {
+l.d(n, { A: () => C });
+var t = l(627968);
+l(64700);
+var i = l(503698),
+    r = l.n(i),
+    s = l(311907),
+    a = l(778712),
+    o = l(109112),
+    d = l(939249),
+    c = l(834730),
+    u = l(730134),
+    g = l(169869),
+    A = l(837057),
+    m = l(310419),
+    f = l(773669),
+    p = l(427157),
+    x = l(967198),
+    h = l(183555),
+    v = l(488995),
+    j = l(985018),
+    I = l(985176);
+function b(e) {
+    let { applicationRoleConnection: n, locale: l, onApplicationClicked: i, selectedGuildId: r } = e,
+        s = (0, g.VW)(n, l);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, i.jsx)("div", {
-                className: g.k_,
+            (0, t.jsx)("div", {
+                className: I.k_,
                 children:
-                    null != t.application.bot
-                        ? (0, i.jsx)(d.A, { user: new x.A(t.application.bot), size: r._3J.SIZE_16 })
-                        : (0, i.jsx)(r._7Z, { color: "currentColor", size: "sm" }),
+                    null != n.application.bot
+                        ? (0, t.jsx)(u.A, { user: new p.A(n.application.bot), size: a._3.SIZE_16 })
+                        : (0, t.jsx)(o._, { color: "currentColor", size: "sm" }),
             }),
-            (0, i.jsxs)("div", {
-                className: g.Hd,
+            (0, t.jsxs)("div", {
+                className: I.Hd,
                 children: [
-                    (0, i.jsxs)(r.DUT, {
-                        className: g.OB,
+                    (0, t.jsxs)(d.D, {
+                        className: I.OB,
                         onClick: () => {
-                            s?.(),
-                                (0, c.transitionToGlobalDiscovery)({
-                                    tab: h.GlobalDiscoveryTab.APPS,
-                                    applicationId: t.application.id,
+                            i?.(),
+                                (0, A.transitionToGlobalDiscovery)({
+                                    tab: v.GlobalDiscoveryTab.APPS,
+                                    applicationId: n.application.id,
                                     newSessionState: {
-                                        entrypoint: { name: u.sW.APPLICATION_DIRECTORY_URL },
-                                        guildId: l,
+                                        entrypoint: { name: m.sW.APPLICATION_DIRECTORY_URL },
+                                        guildId: r,
                                     },
                                 });
                         },
                         children: [
-                            null != t.platform_name
-                                ? (0, i.jsx)(r.Text, {
+                            null != n.platform_name
+                                ? (0, t.jsx)(c.E, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: t.platform_name,
+                                      children: n.platform_name,
                                   })
                                 : null,
-                            null != t.platform_username
-                                ? (0, i.jsx)(r.Text, {
+                            null != n.platform_username
+                                ? (0, t.jsx)(c.E, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: t.platform_username,
+                                      children: n.platform_username,
                                   })
                                 : null,
-                            (0, i.jsx)(r.Text, {
+                            (0, t.jsx)(c.E, {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
-                                className: g.nk,
-                                children: f.intl.format(f.t.zIT9YA, { applicationHook: () => t.application.name }),
+                                className: I.nk,
+                                children: j.intl.format(j.t.zIT9YA, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),
-                    null != a && a.length > 0 ? (0, i.jsx)("div", { className: g.yu, children: a }) : null,
+                    null != s && s.length > 0 ? (0, t.jsx)("div", { className: I.yu, children: s }) : null,
                 ],
             }),
         ],
     });
 }
-function j(e) {
-    let { applicationRoleConnections: t, className: n, onClose: s } = e,
-        { trackUserProfileAction: r } = (0, p.NJ)(),
-        d = (0, a.bG)([A.default], () => A.default.locale),
-        o = (0, a.bG)([m.A], () => m.A.getGuildId());
-    return 0 === t.length
+function C(e) {
+    let { applicationRoleConnections: n, className: l, onClose: i } = e,
+        { trackUserProfileAction: a } = (0, h.NJ)(),
+        o = (0, s.bG)([f.default], () => f.default.locale),
+        d = (0, s.bG)([x.A], () => x.A.getGuildId());
+    return 0 === n.length
         ? null
-        : (0, i.jsx)("ul", {
-              className: l()(g.kL, n),
-              children: t.map((e, t) =>
-                  (0, i.jsx)(
+        : (0, t.jsx)("ul", {
+              className: r()(I.kL, l),
+              children: n.map((e, n) =>
+                  (0, t.jsx)(
                       "li",
                       {
-                          className: g.FI,
-                          children: (0, i.jsx)(I, {
+                          className: I.FI,
+                          children: (0, t.jsx)(b, {
                               applicationRoleConnection: e,
-                              locale: d,
+                              locale: o,
                               onApplicationClicked: () => {
-                                  r({ action: "PRESS_APP_CONNECTION" }), s();
+                                  a({ action: "PRESS_APP_CONNECTION" }), i();
                               },
-                              selectedGuildId: o ?? void 0,
+                              selectedGuildId: d ?? void 0,
                           }),
                       },
-                      `${t}-${e.application.id}`,
+                      `${n}-${e.application.id}`,
                   ),
               ),
           });

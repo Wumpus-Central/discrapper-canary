@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { mf: () => u });
-var r = n(310784),
-    i = n.n(r);
-let a = [
+l.d(t, { mf: () => c });
+var n = l(310784),
+    a = l.n(n);
+let s = [
         "#94E0CF",
         "#9AF0B1",
         "#9A90FF",
@@ -18,69 +18,78 @@ let a = [
         "#F0AE29",
         "#DF4232",
     ],
-    s = [0, 45, 90, 135, 180, 225, 270, 315],
-    o = [20, 40, 60, 80],
-    l = ["analogous", "complementary", "split-complementary", "triadic"];
-function u() {
-    let e = o[Math.floor(Math.random() * o.length)],
-        t = s[Math.floor(Math.random() * s.length)];
+    i = [0, 45, 90, 135, 180, 225, 270, 315],
+    r = [20, 40, 60, 80],
+    o = ["analogous", "complementary", "split-complementary", "triadic"];
+function c() {
+    let e = r[Math.floor(Math.random() * r.length)],
+        t = i[Math.floor(Math.random() * i.length)];
     if ("path1" == (0.2 > Math.random() ? "path1" : "path2")) {
-        let n = Math.floor(Math.random() * a.length),
-            r = Math.floor(Math.random() * a.length);
-        for (; r === n; ) r = Math.floor(Math.random() * a.length);
-        return { type: "gradient", colors: [a[n], a[r]], angle: t, intensity: e, gradientType: "two-color" };
+        let l = Math.floor(Math.random() * s.length),
+            n = Math.floor(Math.random() * s.length);
+        for (; n === l; ) n = Math.floor(Math.random() * s.length);
+        return { type: "gradient", colors: [s[l], s[n]], angle: t, intensity: e, gradientType: "two-color" };
     }
     {
-        let n = a[Math.floor(Math.random() * a.length)],
-            r = l[Math.floor(Math.random() * l.length)];
-        return { type: "gradient", colors: p(n, r), angle: t, intensity: e, gradientType: r };
-    }
-}
-function c(e, t, n, r) {
-    return [
-        i()
-            .hsl(r - 30, t, n)
-            .hex(),
-        e,
-        i()
-            .hsl(r + 30, t, n)
-            .hex(),
-    ];
-}
-function d(e, t, n, r) {
-    let a = (r + 180) % 360,
-        s = i().hsl(a, t, n).hex();
-    return [e, i().mix(e, s, 0.5).hex(), s];
-}
-function _(e, t, n, r) {
-    let a = (r + 150) % 360,
-        s = (r + 210) % 360;
-    return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
-}
-function f(e, t, n, r) {
-    let a = (r + 120) % 360,
-        s = (r + 240) % 360;
-    return [e, i().hsl(a, t, n).hex(), i().hsl(s, t, n).hex()];
-}
-function p(e, t) {
-    try {
-        let n = i()(e),
-            r = n.get("hsl.h"),
-            a = n.get("hsl.s"),
-            s = n.get("hsl.l");
-        switch (t) {
-            case "analogous":
-                return c(e, a, s, r);
-            case "complementary":
-                return d(e, a, s, r);
-            case "split-complementary":
-                return _(e, a, s, r);
-            case "triadic":
-                return f(e, a, s, r);
-            default:
-                return [e];
-        }
-    } catch {
-        return [e];
+        let l = s[Math.floor(Math.random() * s.length)],
+            n = o[Math.floor(Math.random() * o.length)];
+        return {
+            type: "gradient",
+            colors: (function (e, t) {
+                try {
+                    let l = a()(e),
+                        n = l.get("hsl.h"),
+                        s = l.get("hsl.s"),
+                        i = l.get("hsl.l");
+                    switch (t) {
+                        case "analogous":
+                            return [
+                                a()
+                                    .hsl(n - 30, s, i)
+                                    .hex(),
+                                e,
+                                a()
+                                    .hsl(n + 30, s, i)
+                                    .hex(),
+                            ];
+                        case "complementary":
+                            let r;
+                            return (
+                                (r = a()
+                                    .hsl((n + 180) % 360, s, i)
+                                    .hex()),
+                                [e, a().mix(e, r, 0.5).hex(), r]
+                            );
+                        case "split-complementary":
+                            return [
+                                e,
+                                a()
+                                    .hsl((n + 150) % 360, s, i)
+                                    .hex(),
+                                a()
+                                    .hsl((n + 210) % 360, s, i)
+                                    .hex(),
+                            ];
+                        case "triadic":
+                            return [
+                                e,
+                                a()
+                                    .hsl((n + 120) % 360, s, i)
+                                    .hex(),
+                                a()
+                                    .hsl((n + 240) % 360, s, i)
+                                    .hex(),
+                            ];
+                        default:
+                            return [e];
+                    }
+                } catch {
+                    return [e];
+                }
+            })(l, n),
+            angle: t,
+            intensity: e,
+            gradientType: n,
+        };
     }
 }

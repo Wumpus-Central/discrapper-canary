@@ -1,16 +1,18 @@
-l.d(t, { I7: () => m });
+l.d(t, { I7: () => h });
 var a = l(627968);
 l(64700);
-var n = l(397927),
-    r = l(706276),
-    i = l(808411),
-    o = l(919470),
-    s = l(624716),
+var n = l(359778),
+    r = l(534514),
+    i = l(834730),
+    o = l(706276),
+    s = l(808411),
+    d = l(919470),
+    c = l(624716),
     u = l(872725),
-    c = l(985018);
-let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress", controls: {} },
-    p = { name: "Tab Tooltip", component: s.A, id: "tab-tooltip", controls: {} },
-    m = {
+    p = l(985018);
+let m = { name: "Expressive Progress", component: s.A, id: "expressive-progress", controls: {} },
+    b = { name: "Tab Tooltip", component: c.A, id: "tab-tooltip", controls: {} },
+    h = {
         title: "Nitro Components",
         stories: [
             {
@@ -26,21 +28,18 @@ let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress"
                                 glowAmount: e.glowAmount,
                                 blurAmount: e.blurAmount,
                                 hueRotate: e.hueRotate,
-                                cardType: n.sl2.PRIMARY,
+                                cardType: n.s.PRIMARY,
                                 glowing: !0,
                                 children: (0, a.jsxs)("div", {
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
                                     children: [
-                                        (0, a.jsx)(n.Heading, {
-                                            variant: "heading-lg/semibold",
-                                            children: "Card Title",
-                                        }),
-                                        (0, a.jsx)(n.Text, {
+                                        (0, a.jsx)(r.D, { variant: "heading-lg/semibold", children: "Card Title" }),
+                                        (0, a.jsx)(i.E, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
                                             children: "This is sample card content using design system tokens.",
                                         }),
-                                        (0, a.jsx)(n.Text, {
+                                        (0, a.jsx)(i.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             children: "This is more sample content.",
@@ -105,14 +104,14 @@ let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress"
                     },
                 },
             },
-            { name: "Cancellation Flow", component: () => (0, a.jsx)(r.o, {}), id: "cancellation-flow", controls: {} },
-            d,
+            { name: "Cancellation Flow", component: () => (0, a.jsx)(o.o, {}), id: "cancellation-flow", controls: {} },
+            m,
             {
                 name: "Premium Tooltip",
-                component: o.A,
+                component: d.A,
                 id: "premium-tooltip",
                 controls: {
-                    title: { label: "Title", type: "text", defaultValue: c.intl.string(c.t.lG6a5x).toUpperCase() },
+                    title: { label: "Title", type: "text", defaultValue: p.intl.string(p.t.lG6a5x).toUpperCase() },
                     body: {
                         label: "Body",
                         type: "text",
@@ -185,6 +184,6 @@ let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress"
                     },
                 },
             },
-            p,
+            b,
         ],
     };

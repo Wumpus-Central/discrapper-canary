@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { CV: () => a, E9: () => d, Pl: () => g, d2: () => E, eB: () => s, zL: () => I });
-var r = n(476858),
-    i = n(364242);
+r.d(t, { CV: () => a, E9: () => u, Pl: () => h, d2: () => f, eB: () => i, zL: () => p });
+var n = r(476858),
+    s = r(364242);
 let a = {
         söndag: 0,
         sön: 0,
@@ -25,7 +24,7 @@ let a = {
         lör: 6,
         lö: 6,
     },
-    s = {
+    i = {
         januari: 1,
         jan: 1,
         "jan.": 1,
@@ -63,39 +62,6 @@ let a = {
         "dec.": 12,
     },
     o = {
-        första: 1,
-        andra: 2,
-        tredje: 3,
-        fjärde: 4,
-        femte: 5,
-        sjätte: 6,
-        sjunde: 7,
-        åttonde: 8,
-        nionde: 9,
-        tionde: 10,
-        elfte: 11,
-        tolfte: 12,
-        trettonde: 13,
-        fjortonde: 14,
-        femtonde: 15,
-        sextonde: 16,
-        sjuttonde: 17,
-        artonde: 18,
-        nittonde: 19,
-        tjugonde: 20,
-        tjugoförsta: 21,
-        tjugoandra: 22,
-        tjugotredje: 23,
-        tjugofjärde: 24,
-        tjugofemte: 25,
-        tjugosjätte: 26,
-        tjugosjunde: 27,
-        tjugoåttonde: 28,
-        tjugonionde: 29,
-        trettionde: 30,
-        trettioförsta: 31,
-    },
-    l = {
         en: 1,
         ett: 1,
         två: 2,
@@ -127,7 +93,7 @@ let a = {
         hundra: 100,
         tusen: 1e3,
     },
-    u = {
+    l = {
         sek: "second",
         sekund: "second",
         sekunder: "second",
@@ -147,50 +113,68 @@ let a = {
         år: "year",
         kvartаl: "quarter",
         kvartal: "quarter",
-    },
-    c = {
-        sekund: "second",
-        sekunder: "second",
-        minut: "minute",
-        minuter: "minute",
-        timme: "hour",
-        timmar: "hour",
-        dag: "day",
-        dagar: "day",
-        vecka: "week",
-        veckor: "week",
-        månad: "month",
-        månader: "month",
-        år: "year",
-        kvartal: "quarter",
     };
-function d(e) {
+function u(e) {
     let t = {},
-        n = e,
-        r = h.exec(n);
-    for (; r; ) _(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
+        r = e,
+        n = c.exec(r);
+    for (; n; )
+        (function (e, t) {
+            let r = (function (e) {
+                let t = e.toLowerCase();
+                return void 0 !== o[t] ? o[t] : parseInt(t);
+            })(t[1]);
+            e[l[t[2].toLowerCase()]] = r;
+        })(t, n),
+            (r = r.substring(n[0].length)),
+            (n = c.exec(r));
     return t;
 }
-function _(e, t) {
-    let n = A(t[1]);
-    e[u[t[2].toLowerCase()]] = n;
-}
-let f = `(?:${(0, r.uJ)(l)}|\\d+)`;
-(0, r.uJ)(o), (0, r.uJ)(u);
-let p = `(${f})\\s{0,5}(${(0, r.uJ)(u)})\\s{0,5}`,
-    h = RegExp(p, "i"),
-    m = `(${f})\\s{0,5}(${(0, r.uJ)(c)})\\s{0,5}`,
-    g = (0, r.mb)("", p),
-    E = (0, r.mb)("", m);
-function A(e) {
-    let t = e.toLowerCase();
-    return void 0 !== l[t] ? l[t] : parseInt(t);
-}
-function I(e) {
+let d = `(?:${(0, n.uJ)(o)}|\\d+)`;
+(0, n.uJ)({
+    första: 1,
+    andra: 2,
+    tredje: 3,
+    fjärde: 4,
+    femte: 5,
+    sjätte: 6,
+    sjunde: 7,
+    åttonde: 8,
+    nionde: 9,
+    tionde: 10,
+    elfte: 11,
+    tolfte: 12,
+    trettonde: 13,
+    fjortonde: 14,
+    femtonde: 15,
+    sextonde: 16,
+    sjuttonde: 17,
+    artonde: 18,
+    nittonde: 19,
+    tjugonde: 20,
+    tjugoförsta: 21,
+    tjugoandra: 22,
+    tjugotredje: 23,
+    tjugofjärde: 24,
+    tjugofemte: 25,
+    tjugosjätte: 26,
+    tjugosjunde: 27,
+    tjugoåttonde: 28,
+    tjugonionde: 29,
+    trettionde: 30,
+    trettioförsta: 31,
+}),
+    (0, n.uJ)(l);
+let m = `(${d})\\s{0,5}(${(0, n.uJ)(l)})\\s{0,5}`,
+    c = RegExp(m, "i"),
+    g = `(${d})\\s{0,5}(${(0, n.uJ)({ sekund: "second", sekunder: "second", minut: "minute", minuter: "minute", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", månad: "month", månader: "month", år: "year", kvartal: "quarter" })})\\s{0,5}`,
+    h = (0, n.mb)("", m),
+    f = (0, n.mb)("", g);
+function p(e) {
     if (/\d+/.test(e)) {
         let t = parseInt(e);
-        return t < 100 && (t = (0, i.D)(t)), t;
+        return t < 100 && (t = (0, s.D)(t)), t;
     }
     let t = e.toLowerCase();
-    return void 0 !== l[t] ? l[t] : parseInt(e);
+    return void 0 !== o[t] ? o[t] : parseInt(e);
 }

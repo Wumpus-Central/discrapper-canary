@@ -1,20 +1,19 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.isZIP = t.isRAR = t.isLZH = t.is7Z = void 0);
-let r = n(835986),
-    i = n(817762);
+let n = i(835986),
+    r = i(817762);
 (t.is7Z = function (e) {
-    let t = (0, i.getFileChunk)(e);
-    return r.FileTypes.checkByFileType(t, "_7z");
+    let t = (0, r.getFileChunk)(e);
+    return n.FileTypes.checkByFileType(t, "_7z");
 }),
     (t.isLZH = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "lzh");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "lzh");
     }),
     (t.isRAR = function (e) {
-        let t = (0, i.getFileChunk)(e);
-        return r.FileTypes.checkByFileType(t, "rar");
+        let t = (0, r.getFileChunk)(e);
+        return n.FileTypes.checkByFileType(t, "rar");
     }),
     (t.isZIP = function (e, t) {
-        let n = (0, i.getFileChunk)(e, (null == t ? void 0 : t.chunkSize) || 64);
-        return r.FileTypes.checkByFileType(n, "zip");
+        let i = (0, r.getFileChunk)(e, (null == t ? void 0 : t.chunkSize) || 64);
+        return n.FileTypes.checkByFileType(i, "zip");
     });

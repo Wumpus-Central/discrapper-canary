@@ -1,22 +1,7 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => i });
 var r = n(837921);
-let i = 256;
-function a(e, t) {
-    return r.Ay.ensureModule("discord_spellcheck").then(() => {
-        let { cld: n } = r.Ay.requireModule("discord_spellcheck");
-        return new Promise((r, i) => {
-            n.detect(e, { httpHint: t, encodingHint: "UTF8" }, (e, t) => {
-                null != e
-                    ? i(Error(e.message))
-                    : !t.reliable || t.languages[0].percent < 90 || t.languages[0].score < 500
-                      ? i(Error("Not enough reliable text."))
-                      : r(t.languages[0].code);
-            });
-        });
-    });
-}
-class s {
+class i {
     _language;
     _onChange;
     _languageHint;
@@ -39,10 +24,24 @@ class s {
         this._processing ||
             ((this._processing = !0),
             requestIdleCallback((t) => {
+                var n, i;
                 t.timeRemaining() <= this._minimumTimeRemaining
                     ? this._processEnd()
-                    : (e.length > i && (e = e.slice(0, i)),
-                      a(e, this._languageHint).then(
+                    : (e.length > 256 && (e = e.slice(0, 256)),
+                      ((n = e),
+                      (i = this._languageHint),
+                      r.Ay.ensureModule("discord_spellcheck").then(() => {
+                          let { cld: e } = r.Ay.requireModule("discord_spellcheck");
+                          return new Promise((t, r) => {
+                              e.detect(n, { httpHint: i, encodingHint: "UTF8" }, (e, n) => {
+                                  null != e
+                                      ? r(Error(e.message))
+                                      : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500
+                                        ? r(Error("Not enough reliable text."))
+                                        : t(n.languages[0].code);
+                              });
+                          });
+                      })).then(
                           (e) => {
                               (this.language = e), this._processEnd(t.didTimeout);
                           },

@@ -1,21 +1,23 @@
-a.d(l, { d: () => s });
+a.d(l, { d: () => d });
 var t = a(627968),
-    o = a(206471),
-    n = a(397927),
-    i = a(860606);
-let s = {
+    n = a(206471),
+    o = a(573613),
+    i = a(359778),
+    r = a(834730),
+    s = a(653197);
+let d = {
     title: "Text",
     stories: [
         {
             name: "Text",
             id: "text",
-            component: n.Text,
+            component: r.E,
             controls: {
                 variant: {
                     label: "Variant",
                     type: "select",
                     defaultValue: "text-sm/normal",
-                    options: Object.values(o.O).map((e) => ({ label: e, value: e })),
+                    options: Object.values(n.O).map((e) => ({ label: e, value: e })),
                 },
                 color: {
                     label: "Color",
@@ -42,20 +44,16 @@ let s = {
             name: "Typography Scales",
             id: "text-scales",
             component: function (e) {
-                return (0, t.jsx)(n.ArX, {
-                    className: i.H,
-                    children: Object.values(o.O).map((l) =>
+                return (0, t.jsx)(o.Ar, {
+                    className: s.H,
+                    children: Object.values(n.O).map((l) =>
                         (0, t.jsxs)(
-                            n.ZpM,
+                            i.Z,
                             {
-                                className: i.N,
+                                className: s.N,
                                 children: [
-                                    (0, t.jsx)(n.Text, { ...e, variant: l, children: e.children }),
-                                    (0, t.jsx)(n.Text, {
-                                        variant: "text-xs/normal",
-                                        color: "text-subtle",
-                                        children: l,
-                                    }),
+                                    (0, t.jsx)(r.E, { ...e, variant: l, children: e.children }),
+                                    (0, t.jsx)(r.E, { variant: "text-xs/normal", color: "text-subtle", children: l }),
                                 ],
                             },
                             l,

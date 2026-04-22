@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_f53c21",
     nI: "emojiRow_f53c21",

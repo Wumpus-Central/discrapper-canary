@@ -1,7 +1,6 @@
 "use strict";
-var t = TypeError,
-    n = 0x1fffffffffffff;
+var t = TypeError;
 e.exports = function (e) {
-    if (e > n) throw t("Maximum allowed index exceeded");
+    if (e > 0x1fffffffffffff) throw t("Maximum allowed index exceeded");
     return e;
 };

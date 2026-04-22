@@ -1,116 +1,122 @@
-"use strict";
-n.d(t, { A: () => h, m: () => u });
+n.d(t, { A: () => N, m: () => A });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(635582),
-    a = n(139637),
-    o = n(985018),
-    d = n(99895),
-    c = n(584643);
-let u = "role_subscriptions_eligibility_modal";
-function m(e) {
-    let { guild: t, eligibility: s, eligibilityLoading: r, eligibilityError: a, refreshEligibility: d } = e;
-    return (0, i.jsx)(l.Button, {
+    l = n(64700),
+    s = n(192308),
+    r = n(821609),
+    a = n(695366),
+    o = n(150934),
+    d = n(696986),
+    c = n(683071),
+    u = n(534514),
+    m = n(834730),
+    g = n(635582),
+    h = n(139637),
+    x = n(985018),
+    _ = n(99895),
+    p = n(584643);
+let A = "role_subscriptions_eligibility_modal";
+function E(e) {
+    let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
+    return (0, i.jsx)(r.$, {
         variant: "expressive",
         onClick: function () {
-            (0, l.mMO)(
+            (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e("91699").then(n.bind(n, 561406));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            eligibility: s,
-                            eligibilityLoading: r,
-                            eligibilityError: a,
-                            refreshEligibility: d,
+                            eligibility: l,
+                            eligibilityLoading: o,
+                            eligibilityError: d,
+                            refreshEligibility: c,
                             guildId: t.id,
                         });
                 },
-                { modalKey: u },
+                { modalKey: A },
             );
         },
         size: "md",
-        text: o.intl.string(o.t.NL5ZNS),
-        icon: l.EpV,
+        text: x.intl.string(x.t.NL5ZNS),
+        icon: a.E,
     });
 }
-function g(e) {
+function f(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: a, error: d, loading: c, submitAcceptTermsRequest: u } = (0, r.A)(t.id),
-        [m, g] = s.useState(!1);
+        { canSubmitAcceptance: s, error: a, loading: u, submitAcceptTermsRequest: m } = (0, g.A)(t.id),
+        [h, _] = l.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.Checkbox, {
+            (0, i.jsx)(o.S, {
                 onChange: function () {
-                    g((e) => !e);
+                    _((e) => !e);
                 },
-                checked: m,
+                checked: h,
                 label: n,
             }),
-            (0, i.jsx)(l.hKd, { size: 24 }),
-            (0, i.jsx)(l.Button, {
-                disabled: !m || !a,
-                onClick: u,
-                loading: c,
+            (0, i.jsx)(d.h, { size: 24 }),
+            (0, i.jsx)(r.$, {
+                disabled: !h || !s,
+                onClick: m,
+                loading: u,
                 variant: "expressive",
-                text: o.intl.string(o.t.NL5ZNS),
+                text: x.intl.string(x.t.NL5ZNS),
             }),
-            null != d &&
+            null != a &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(l.hKd, { size: 24 }),
-                        (0, i.jsx)(l.wx6, { type: "critical", children: d.getAnyErrorMessage() }),
+                        (0, i.jsx)(d.h, { size: 24 }),
+                        (0, i.jsx)(c.w, { type: "critical", children: a.getAnyErrorMessage() }),
                     ],
                 }),
         ],
     });
 }
-function x(e) {
+function j(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
-            eligibilityLoading: s,
-            eligibilityError: l,
+            eligibilityLoading: l,
+            eligibilityError: s,
             refreshEligibility: r,
-            eligibility: o,
-            eligibleForMonetization: d,
-            acceptTermsCheckboxText: c,
-            wasRejectedInV1: u,
+            eligibility: a,
+            eligibleForMonetization: o,
+            acceptTermsCheckboxText: d,
+            wasRejectedInV1: c,
         } = n;
-    return d
-        ? u
-            ? (0, i.jsx)(a.A, { ...n })
-            : (0, i.jsx)(g, { guild: t, checkboxText: c })
-        : (0, i.jsx)(m, {
+    return o
+        ? c
+            ? (0, i.jsx)(h.A, { ...n })
+            : (0, i.jsx)(f, { guild: t, checkboxText: d })
+        : (0, i.jsx)(E, {
               guild: t,
-              eligibility: o,
-              eligibilityLoading: s,
-              eligibilityError: l,
+              eligibility: a,
+              eligibilityLoading: l,
+              eligibilityError: s,
               refreshEligibility: r,
           });
 }
-function h(e) {
+function N(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, i.jsxs)("div", {
-        className: d.OQ,
+        className: _.OQ,
         children: [
-            (0, i.jsx)("img", { className: d.hV, src: c, alt: o.intl.string(o.t.Af4klP) }),
+            (0, i.jsx)("img", { className: _.hV, src: p, alt: x.intl.string(x.t.Af4klP) }),
             (0, i.jsxs)("div", {
-                className: d.mv,
+                className: _.mv,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        children: o.intl.string(o.t["PqYfh/"]),
+                        children: x.intl.string(x.t["PqYfh/"]),
                     }),
-                    (0, i.jsx)(l.hKd, { size: 12 }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(d.h, { size: 12 }),
+                    (0, i.jsx)(m.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: o.intl.string(o.t["41wkMc"]),
+                        children: x.intl.string(x.t["41wkMc"]),
                     }),
-                    (0, i.jsx)(l.hKd, { size: 24 }),
-                    (0, i.jsx)(x, { guild: t, monetizationEligibility: n }),
+                    (0, i.jsx)(d.h, { size: 24 }),
+                    (0, i.jsx)(j, { guild: t, monetizationEligibility: n }),
                 ],
             }),
         ],

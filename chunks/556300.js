@@ -1,56 +1,56 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(627968);
+n.d(t, { A: () => h });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(442433),
-    s = n(332173),
-    o = n(37632),
-    l = n(734057),
-    u = n(987877),
-    c = n(365526),
+var l = n(192308),
+    s = n(442433),
+    r = n(332173),
+    a = n(37632),
+    o = n(734057),
+    c = n(987877),
+    u = n(365526),
     d = n(652215);
-function _(e) {
+function h(e) {
     return {
-        react(t, _, f) {
-            let h = l.A.getChannel(t.channelId),
-                p = f.noStyleAndInteraction
+        react(t, h, m) {
+            let p = o.A.getChannel(t.channelId),
+                f = m.noStyleAndInteraction
                     ? void 0
                     : (n) => {
                           e.shouldStopPropagation && n?.stopPropagation(),
-                              (0, u.o)(t.guildId, t.channelId, t.messageId),
-                              e.shouldCloseDefaultModals && (0, i.s7G)();
+                              (0, c.o)(t.guildId, t.channelId, t.messageId),
+                              e.shouldCloseDefaultModals && (0, l.closeAllModals)();
                       },
                 g =
-                    f.noStyleAndInteraction || null == t.channelId || (null == h && null == t.originalLink)
+                    m.noStyleAndInteraction || null == t.channelId || (null == p && null == t.originalLink)
                         ? d.tEg
                         : (e) => {
-                              (0, a.L3)(e, async () => {
+                              (0, s.L3)(e, async () => {
                                   let { default: e } = await n.e("99041").then(n.bind(n, 612856));
                                   return (n) =>
-                                      (0, r.jsx)(e, {
+                                      (0, i.jsx)(e, {
                                           ...n,
-                                          channel: h,
-                                          channelId: h?.id ?? t.channelId,
+                                          channel: p,
+                                          channelId: p?.id ?? t.channelId,
                                           originalLink: t.originalLink,
                                           messageId: t.messageId,
                                       });
                               });
                           };
-            return (0, r.jsxs)(
-                s.A,
+            return (0, i.jsxs)(
+                r.A,
                 {
                     role: "link",
-                    onClick: p,
+                    onClick: f,
                     onContextMenu: g,
                     className: "channelMention",
                     children: [
-                        null != t.inContent ? _(t.inContent, f) : null,
-                        null != t.inContent ? (0, r.jsx)(o.A, {}) : null,
-                        (0, c.t)(t, _, f),
+                        null != t.inContent ? h(t.inContent, m) : null,
+                        null != t.inContent ? (0, i.jsx)(a.A, {}) : null,
+                        (0, u.t)(t, h, m),
                     ],
                 },
-                f.key,
+                m.key,
             );
         },
     };

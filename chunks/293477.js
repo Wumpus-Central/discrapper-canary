@@ -1,67 +1,67 @@
-n.d(t, { B: () => m });
-var r = n(627968),
-    a = n(397927),
-    i = n(501664),
-    s = n(882342),
-    l = n(219103),
+n.d(t, { B: () => _ });
+var i = n(627968),
+    r = n(834730),
+    a = n(501664),
+    l = n(882342),
+    s = n(219103),
     o = n(818348),
     c = n(985018),
-    d = n(610306);
+    d = n(752274);
 function u(e) {
-    let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: i } = e,
-        s = n ? c.intl.string(c.t.wu4gyV) : c.intl.string(c.t.eFNRzU),
-        o = n || !i;
-    return (0, r.jsxs)("div", {
+    let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: a } = e,
+        l = n ? c.intl.string(c.t.wu4gyV) : c.intl.string(c.t.eFNRzU),
+        o = n || !a;
+    return (0, i.jsxs)("div", {
         className: d.eg,
         children: [
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: d.zR,
-                children: (0, r.jsx)(a.Text, { variant: "text-xs/normal", className: o ? d.r9 : void 0, children: s }),
+                children: (0, i.jsx)(r.E, { variant: "text-xs/normal", className: o ? d.r9 : void 0, children: l }),
             }),
-            (0, r.jsx)(l.x, { priceAmount: t.amount, priceCurrency: t.currency, className: o ? d.r9 : void 0 }),
+            (0, i.jsx)(s.x, { priceAmount: t.amount, priceCurrency: t.currency, className: o ? d.r9 : void 0 }),
         ],
     });
 }
-function m(e) {
+function _(e) {
     let {
             prices: t,
             isPremiumUser: n,
-            discount: a,
+            discount: r,
             product: c,
-            hasSufficientOrbs: m,
-            onTrackClick: h,
+            hasSufficientOrbs: _,
+            onTrackClick: m,
             isProductDisabled: p,
-            discountOfferAmount: x,
+            discountOfferAmount: h,
         } = e,
-        f = null != x;
+        f = null != h;
     return 0 === t.length
         ? null
         : t[0].currency === o.Yr.DISCORD_ORB
-          ? (0, r.jsx)(u, { orbPrice: t[0], isProductDisabled: p, hasSufficientOrbs: m })
-          : (0, r.jsxs)("div", {
+          ? (0, i.jsx)(u, { orbPrice: t[0], isProductDisabled: p, hasSufficientOrbs: _ })
+          : (0, i.jsxs)("div", {
                 className: d.eg,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: d.pw,
                         children: [
-                            (0, r.jsx)(i.A, {
+                            (0, i.jsx)(a.A, {
                                 product: c,
-                                discount: a,
+                                discount: r,
                                 isPremiumUser: n,
                                 hideStrikethroughPrice: !n || f,
                                 nitroIconType: "tooltip",
                                 nitroIconSize: "xs",
-                                discountOfferAmount: x,
+                                discountOfferAmount: h,
                             }),
-                            n || f ? null : (0, r.jsx)(s.A, { product: c, onTrackClick: h }),
+                            n || f ? null : (0, i.jsx)(l.A, { product: c, onTrackClick: m }),
                         ],
                     }),
                     t.length > 1 &&
                         t[1].currency === o.Yr.DISCORD_ORB &&
-                        (0, r.jsx)(l.x, {
+                        (0, i.jsx)(s.x, {
                             priceAmount: t[1].amount,
                             priceCurrency: t[1].currency,
-                            className: p || !m ? d.r9 : void 0,
+                            className: p || !_ ? d.r9 : void 0,
                         }),
                 ],
             });

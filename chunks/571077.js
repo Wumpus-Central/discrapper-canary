@@ -1,38 +1,58 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968);
+n.d(e, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    s = n(397927),
+var l = n(311907),
+    r = n(34188),
+    o = n(192308),
     a = n(658575),
-    o = n(123791),
-    l = n(622543),
-    u = n(993401),
-    c = n(985018);
-function d(e) {
-    let { user: t, onClick: n, ...i } = e;
+    s = n(123791),
+    c = n(622543),
+    d = n(993401),
+    u = n(985018);
+function p(t) {
+    let { user: e, onClick: n, ...l } = t;
     return (
-        (0, o.C)(t.id),
-        (0, r.jsx)(u.FD, {
+        (0, s.C)(e.id),
+        (0, i.jsx)(d.FD, {
             action: "PRESS_APP_STOREFRONT",
-            icon: s.U1X,
-            text: c.intl.string(c.t.V7j5aZ),
+            icon: r.U,
+            text: u.intl.string(u.t.V7j5aZ),
             onClick: n,
             variant: "primary",
-            ...i,
+            ...l,
         })
     );
 }
-function _(e) {
-    let { user: t, guildId: o, ...u } = e,
-        c = (0, i.bG)([l.A], () => l.A.getUserProfile(t.id)?.application),
-        _ = (0, a.G)(c?.id ?? "");
-    if (null == c || !_) return null;
-    let f = () => {
-        (0, s.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("13088"), n.e("33563"), n.e("35946")]).then(n.bind(n, 719847));
-            return (t) => (0, r.jsx)(e, { appId: c.id, guildId: o, ...t });
-        });
-    };
-    return (0, r.jsx)(d, { user: t, guildId: o, onClick: f, ...u });
+function _(t) {
+    let { user: e, guildId: r, ...s } = t,
+        d = (0, l.bG)([c.A], () => c.A.getUserProfile(e.id)?.application),
+        u = (0, a.G)(d?.id ?? "");
+    return null != d && u
+        ? (0, i.jsx)(p, {
+              user: e,
+              guildId: r,
+              onClick: () => {
+                  (0, o.openModalLazy)(async () => {
+                      let { default: t } = await Promise.all([
+                          n.e("61943"),
+                          n.e("28367"),
+                          n.e("27411"),
+                          n.e("12721"),
+                          n.e("58283"),
+                          n.e("8087"),
+                          n.e("55057"),
+                          n.e("60471"),
+                          n.e("48563"),
+                          n.e("27355"),
+                          n.e("67876"),
+                          n.e("374"),
+                          n.e("33563"),
+                          n.e("87760"),
+                      ]).then(n.bind(n, 719847));
+                      return (e) => (0, i.jsx)(t, { appId: d.id, guildId: r, ...e });
+                  });
+              },
+              ...s,
+          })
+        : null;
 }

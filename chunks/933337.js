@@ -1,12 +1,12 @@
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(64700),
-    l = n(397927);
-function s(e, t) {
-    return i.useCallback(() => {
-        (0, l.mMO)(async () => {
-            let { default: i } = await n.e("74488").then(n.bind(n, 285899));
-            return (n) => (0, r.jsx)(i, { guildId: e, powerup: t, ...n });
+l.d(e, { A: () => r });
+var n = l(627968),
+    a = l(64700),
+    i = l(192308);
+function r(t, e) {
+    return a.useCallback(() => {
+        (0, i.openModalLazy)(async () => {
+            let { default: a } = await l.e("74488").then(l.bind(l, 285899));
+            return (l) => (0, n.jsx)(a, { guildId: t, powerup: e, ...l });
         });
-    }, [e, t]);
+    }, [t, e]);
 }

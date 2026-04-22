@@ -25,8 +25,8 @@ class i {
         friction: n = 22,
         mass: r = 1,
         threshold: i = 0.001,
-        clamp: a = !1,
-        maxVelocity: s = 1 / 0,
+        clamp: s = !1,
+        maxVelocity: a = 1 / 0,
         getNodeWindow: o = () => window,
     }) {
         (this.callback = e),
@@ -34,9 +34,9 @@ class i {
             (this.tension = t),
             (this.friction = n),
             (this.mass = r),
-            (this.maxVelocity = s),
+            (this.maxVelocity = a),
             (this.threshold = i),
-            (this.clamp = a),
+            (this.clamp = s),
             (this.getNodeWindow = o);
     }
     to(e) {
@@ -76,8 +76,7 @@ class i {
             (this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1);
             return;
         }
-        let t = e;
-        for (this.accumulator = Math.min((t - this.last) / 1e3 + this.accumulator, 2); this.accumulator > r; ) {
+        for (this.accumulator = Math.min((e - this.last) / 1e3 + this.accumulator, 2); this.accumulator > r; ) {
             this.accumulator -= r;
             let { vel: e, from: t, accel: n } = this.getUpdates(this.vel, this.from);
             if (
@@ -91,15 +90,15 @@ class i {
                 return void this.stop(this.target);
             this.from = t;
         }
-        let { from: n } = this;
+        let { from: t } = this;
         if (this.accumulator > 0) {
-            let { from: e } = this.getUpdates(this.vel, n),
-                t = (e - n) * (this.accumulator / r);
-            n += t;
+            let { from: e } = this.getUpdates(this.vel, t),
+                n = (e - t) * (this.accumulator / r);
+            t += n;
         }
-        this.callback(n, this.abort),
+        this.callback(t, this.abort),
             this.animating &&
-                ((this.last = t), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1));
+                ((this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1));
     };
     stop(e) {
         this.nodeWindow?.cancelAnimationFrame(this.nextTick),

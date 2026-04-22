@@ -1,4 +1,4 @@
-r.d(t, { A: () => N });
+r.d(t, { A: () => C });
 var n = r(627968),
     s = r(64700),
     l = r(503698),
@@ -6,45 +6,46 @@ var n = r(627968),
     i = r(989349),
     o = r.n(i),
     u = r(311907),
-    c = r(397927),
-    h = r(734057),
-    d = r(309010),
-    _ = r(692986),
+    c = r(573613),
+    h = r(939538),
+    d = r(734057),
+    _ = r(309010),
+    E = r(692986),
     S = r(822382),
-    E = r(753806),
-    f = r(424913),
-    p = r(65600),
-    g = r(145331),
-    A = r(272444),
-    y = r(806595),
-    R = r(768570),
-    T = r(652215),
-    I = r(21799);
-let m = o()("2015-05-15").local();
-function L(e) {
+    f = r(753806),
+    p = r(424913),
+    g = r(65600),
+    A = r(145331),
+    y = r(272444),
+    R = r(806595),
+    m = r(768570),
+    I = r(652215),
+    T = r(21799);
+let L = o()("2015-05-15").local();
+function x(e) {
     let { items: t, navId: r, selectedIndex: s } = e,
         l = 0;
     return (0, n.jsx)(n.Fragment, {
         children: t.map((e) => {
             switch (e.type) {
-                case y.$.ROW:
+                case R.$.ROW:
                     let { icon: t, label: a, onSelect: i } = e.data,
                         o = l;
                     return (
                         (l += 1),
                         (0, n.jsx)(
-                            A.Jx,
+                            y.Jx,
                             { icon: t, label: a, onSelect: i, navId: r, index: o, selected: s === o },
                             `${e.type}-${o}`,
                         )
                     );
-                case y.$.GROUP:
+                case R.$.GROUP:
                     let { rows: u, title: c } = e.data,
                         h = l;
                     return (
                         (l += u.length),
                         (0, n.jsx)(
-                            A.YD,
+                            y.YD,
                             { navId: r, item: e, startingIndex: h, selectedIndex: s },
                             `${e.type}--${c}-${h}`,
                         )
@@ -55,7 +56,7 @@ function L(e) {
         }),
     });
 }
-let x = s.forwardRef(function (e, t) {
+let b = s.forwardRef(function (e, t) {
         let { searchContext: r, navId: l, resultsState: a, onSelectedIndexChanged: i, selectedChannel: o } = e,
             [u, h] = s.useState(-1),
             d = s.useCallback(
@@ -69,18 +70,18 @@ let x = s.forwardRef(function (e, t) {
             _ = s.useCallback(
                 (e) => {
                     let { query: t, performSearch: r, replace: n } = e;
-                    E.A.setSearchQuery({
+                    f.A.setSearchQuery({
                         query: t,
                         performSearch: r,
                         replace: n,
                         resultsState: a,
-                        searchQuerySource: R.Q_.SEARCH_POPOUT,
+                        searchQuerySource: m.Q_.SEARCH_POPOUT,
                     }),
                         d(-1);
                 },
                 [a, d],
             ),
-            { items: S, itemsData: p } = (0, f.A)({
+            { items: E, itemsData: S } = (0, p.A)({
                 resultsState: a,
                 searchContext: r,
                 selectedChannel: o,
@@ -92,13 +93,13 @@ let x = s.forwardRef(function (e, t) {
                 return (
                     null == n && (n = u),
                     !(n < 0) &&
-                        !(n > p.length - 1) &&
-                        (p[n].data.onSelect({ searchAutocompleteSelectAction: r, selectedIndex: n }), !0)
+                        !(n > S.length - 1) &&
+                        (S[n].data.onSelect({ searchAutocompleteSelectAction: r, selectedIndex: n }), !0)
                 );
             },
             A = (e) => {
                 let t;
-                (t = u + e) > p.length - 1 ? (t = 0) : t < 0 && (t = p.length - 1), d(t);
+                (t = u + e) > S.length - 1 ? (t = 0) : t < 0 && (t = S.length - 1), d(t);
             },
             y = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
         return (
@@ -106,19 +107,19 @@ let x = s.forwardRef(function (e, t) {
                 let { itemsData: e, selectedIndex: t, modeType: r, query: n } = y.current,
                     s = a.mode.type,
                     l = a.query;
-                if (s !== r) s === T.o$q.FILTER ? d(0) : d(-1);
-                else if (s === T.o$q.FILTER && a.query !== n && p.length > 0) d(0);
-                else if (s === T.o$q.FILTER && 0 === e.length && p.length > 0) d(0);
-                else if (t >= 0 && (t === u || e.length !== p.length)) {
+                if (s !== r) s === I.o$q.FILTER ? d(0) : d(-1);
+                else if (s === I.o$q.FILTER && a.query !== n && S.length > 0) d(0);
+                else if (s === I.o$q.FILTER && 0 === e.length && S.length > 0) d(0);
+                else if (t >= 0 && (t === u || e.length !== S.length)) {
                     let r = e[t],
                         n = r?.data.resultText;
                     if (null != n) {
-                        let e = p.findIndex((e) => e.data.resultText === n);
-                        -1 !== e ? d(e) : t >= p.length && d(Math.max(0, p.length - 1));
-                    } else t >= p.length && d(Math.max(0, p.length - 1));
+                        let e = S.findIndex((e) => e.data.resultText === n);
+                        -1 !== e ? d(e) : t >= S.length && d(Math.max(0, S.length - 1));
+                    } else t >= S.length && d(Math.max(0, S.length - 1));
                 }
-                y.current = { itemsData: p, selectedIndex: u, modeType: s, query: l };
-            }, [p, u, a.mode.type, a.query, d]),
+                y.current = { itemsData: S, selectedIndex: u, modeType: s, query: l };
+            }, [S, u, a.mode.type, a.query, d]),
             s.useImperativeHandle(t, () => ({
                 selectedIndex: u,
                 focusNextOption: () => {
@@ -129,7 +130,7 @@ let x = s.forwardRef(function (e, t) {
                 },
                 selectOption: g,
             })),
-            (0, n.jsx)(c.d_W, {
+            (0, n.jsx)(c.d_, {
                 onMouseDown: (e) => {
                     e.stopPropagation(), e.preventDefault();
                 },
@@ -137,12 +138,12 @@ let x = s.forwardRef(function (e, t) {
                 id: l,
                 tabIndex: -1,
                 "aria-activedescendant": `${l}-${u}`,
-                className: S.length > 0 ? I.kL : void 0,
-                children: (0, n.jsx)(L, { items: S, navId: l, selectedIndex: u }),
+                className: E.length > 0 ? T.kL : void 0,
+                children: (0, n.jsx)(x, { items: E, navId: l, selectedIndex: u }),
             })
         );
     }),
-    C = s.forwardRef(function (e, t) {
+    N = s.forwardRef(function (e, t) {
         let { navId: r, resultsState: l, searchContext: i } = e;
         return (
             s.useImperativeHandle(t, () => ({
@@ -151,7 +152,7 @@ let x = s.forwardRef(function (e, t) {
                 focusPreviousOption: () => {},
                 selectOption: () => {},
             })),
-            (0, n.jsx)(c.d_W, {
+            (0, n.jsx)(c.d_, {
                 onMouseDown: (e) => {
                     e.stopPropagation(), e.preventDefault();
                 },
@@ -159,47 +160,47 @@ let x = s.forwardRef(function (e, t) {
                 id: r,
                 tabIndex: -1,
                 "aria-activedescendant": `${r}--1`,
-                className: a()(I.kL, I.Wl),
-                children: (0, n.jsx)(c.xuO, {
+                className: a()(T.kL, T.Wl),
+                children: (0, n.jsx)(h.CalendarPicker, {
                     onSelect: (e) => {
                         let t = (0, S.bS)(i);
-                        (0, g.kc)({
+                        (0, A.kc)({
                             searchContext: i,
-                            searchQuery: p.A.getSearchResultsQuery(t),
-                            searchQueryString: E.A.getSearchInputText(i),
+                            searchQuery: g.A.getSearchResultsQuery(t),
+                            searchQueryString: f.A.getSearchInputText(i),
                             searchTokenType: l.mode.filter,
-                            searchAutocompleteGroup: T.x2k.DATES,
+                            searchAutocompleteGroup: I.x2k.DATES,
                             searchAutocompleteMode: l.mode,
                             isSearchFilterPrefix: !1,
                             isSearchFilterAnswer: !0,
                             isSearchFilterComplete: !1,
-                            searchAutocompleteSelectAction: R.oi.CLICK,
+                            searchAutocompleteSelectAction: m.oi.CLICK,
                         }),
-                            E.A.setSearchQuery({
-                                query: e.format(T.ump) + " ",
+                            f.A.setSearchQuery({
+                                query: e.format(I.ump) + " ",
                                 performSearch: !0,
                                 replace: !1,
                                 resultsState: l,
-                                searchQuerySource: R.Q_.SEARCH_POPOUT,
+                                searchQuerySource: m.Q_.SEARCH_POPOUT,
                             });
                     },
                     maxDate: o()().local(),
-                    minDate: m,
-                    calendarClassName: I.BJ,
+                    minDate: L,
+                    calendarClassName: T.BJ,
                 }),
             })
         );
     }),
-    N = s.forwardRef(function (e, t) {
+    C = s.forwardRef(function (e, t) {
         let { searchContext: r, navId: s, onSelectedIndexChanged: l } = e,
-            [a, i] = (0, u.yK)([_.A, d.A, h.A], () => {
-                let e = _.A.getState(r),
-                    t = d.A.getChannelId();
-                return [e, h.A.getChannel(t)];
+            [a, i] = (0, u.yK)([E.A, _.A, d.A], () => {
+                let e = E.A.getState(r),
+                    t = _.A.getChannelId();
+                return [e, d.A.getChannel(t)];
             });
         return (0, S.av)(a.mode.filter)
-            ? (0, n.jsx)(C, { navId: s, resultsState: a, searchContext: r })
-            : (0, n.jsx)(x, {
+            ? (0, n.jsx)(N, { navId: s, resultsState: a, searchContext: r })
+            : (0, n.jsx)(b, {
                   ref: t,
                   searchContext: r,
                   navId: s,

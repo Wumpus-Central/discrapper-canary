@@ -7,10 +7,9 @@ function i(e) {
         i = (0, r.useCallback)(
             (t) => {
                 if ("function" == typeof e) {
-                    let n = e,
-                        r = n(t);
+                    let n = e(t);
                     return () => {
-                        "function" == typeof r ? r() : n(null);
+                        "function" == typeof n ? n() : e(null);
                     };
                 }
                 if (e)

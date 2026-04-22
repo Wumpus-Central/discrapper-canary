@@ -1,125 +1,130 @@
-n.d(t, { A: () => y });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(311907),
-    o = n(435371),
-    d = n(421380),
-    c = n(397927),
-    u = n(793574),
-    m = n(688810),
-    _ = n(854627),
-    g = n(427157),
-    x = n(954571),
-    A = n(975571),
-    h = n(326084),
-    p = n(851746),
-    f = n(344904),
-    T = n(664654),
-    S = n(871582),
-    E = n(652215),
-    b = n(985018),
-    C = n(739650),
-    v = n(615981);
-let N = (e) => {
-        let { userRecord: t, placement: n } = e,
-            { avatarSrc: s, eventHandlers: l } = (0, _.A)({ userId: t?.id, size: c._3J.SIZE_32, animateOnHover: !0 }),
-            a = null != t,
-            r = a
-                ? (0, i.jsx)(c.euF, { src: s, "aria-label": t.username, size: c._3J.SIZE_32, ...l })
-                : (0, i.jsx)(c.Heading, { variant: "heading-md/semibold", className: C.n5, children: n });
-        return (0, i.jsx)(o.m_, {
-            text: b.intl.string(b.t.UnKHdo),
-            shouldShow: !a,
-            children: (0, i.jsx)("div", { className: C.Lg, children: r }),
+s.d(t, { A: () => B });
+var r = s(627968),
+    a = s(64700),
+    i = s(503698),
+    n = s.n(i),
+    l = s(311907),
+    o = s(990078),
+    c = s(862482),
+    d = s(778712),
+    m = s(534514),
+    u = s(97808),
+    _ = s(192308),
+    x = s(834730),
+    p = s(930861),
+    g = s(793574),
+    h = s(688810),
+    f = s(854627),
+    C = s(427157),
+    b = s(954571),
+    j = s(975571),
+    A = s(326084),
+    N = s(851746),
+    I = s(344904),
+    T = s(664654),
+    v = s(871582),
+    E = s(652215),
+    R = s(985018),
+    M = s(694354),
+    S = s(615981);
+let y = (e) => {
+        let { userRecord: t, placement: s } = e,
+            { avatarSrc: a, eventHandlers: i } = (0, f.A)({ userId: t?.id, size: d._3.SIZE_32, animateOnHover: !0 }),
+            n = null != t,
+            l = n
+                ? (0, r.jsx)(u.eu, { src: a, "aria-label": t.username, size: d._3.SIZE_32, ...i })
+                : (0, r.jsx)(m.D, { variant: "heading-md/semibold", className: M.n5, children: s });
+        return (0, r.jsx)(o.m, {
+            text: R.intl.string(R.t.UnKHdo),
+            shouldShow: !n,
+            children: (0, r.jsx)("div", { className: M.Lg, children: l }),
         });
     },
-    I = (e) => {
-        let { numSentReferrals: t, placement: n } = e;
-        return (0, i.jsxs)("div", {
-            className: C.Ip,
+    P = (e) => {
+        let { numSentReferrals: t, placement: s } = e;
+        return (0, r.jsxs)("div", {
+            className: M.Ip,
             children: [
-                (0, i.jsx)("div", { className: C.Ej }),
-                (0, i.jsx)("div", { className: a()({ [C.ch]: t > n, [C.q_]: t === n }) }),
+                (0, r.jsx)("div", { className: M.Ej }),
+                (0, r.jsx)("div", { className: n()({ [M.ch]: t > s, [M.q_]: t === s }) }),
             ],
         });
     },
-    j = (e) => {
+    k = (e) => {
         let { userRecords: t } = e,
-            n = t.length,
-            s = n < 1 ? null : t[0],
-            l = n < 2 ? null : t[1],
-            a = n < 3 ? null : t[2];
-        return (0, i.jsxs)("div", {
-            className: C.ZM,
+            s = t.length,
+            a = s < 1 ? null : t[0],
+            i = s < 2 ? null : t[1],
+            n = s < 3 ? null : t[2];
+        return (0, r.jsxs)("div", {
+            className: M.ZM,
             children: [
-                (0, i.jsx)(N, { userRecord: s, placement: 1 }),
-                (0, i.jsx)(I, { numSentReferrals: n, placement: 1 }),
-                (0, i.jsx)(N, { userRecord: l, placement: 2 }),
-                (0, i.jsx)(I, { numSentReferrals: n, placement: 2 }),
-                (0, i.jsx)(N, { userRecord: a, placement: 3 }),
+                (0, r.jsx)(y, { userRecord: a, placement: 1 }),
+                (0, r.jsx)(P, { numSentReferrals: s, placement: 1 }),
+                (0, r.jsx)(y, { userRecord: i, placement: 2 }),
+                (0, r.jsx)(P, { numSentReferrals: s, placement: 2 }),
+                (0, r.jsx)(y, { userRecord: n, placement: 3 }),
             ],
         });
     },
-    y = (e) => {
+    B = (e) => {
         let { isInSettings: t = !1 } = e,
-            l = (0, r.bG)([p.A], () => p.A.getRecipientStatus()),
+            i = (0, l.bG)([N.A], () => N.A.getRecipientStatus()),
             { referralSentUsers: o } = (0, T.J)(),
-            _ = s.useMemo(() => o.map((e) => new g.A(e)), [o]),
-            N = { redeemed: 0, converted: 0, sent: l.size };
-        l.forEach((e) => {
-            e === h.aK.REDEEMED && N.redeemed++, e === h.aK.CONVERTED && (N.redeemed++, N.converted++);
+            d = a.useMemo(() => o.map((e) => new C.A(e)), [o]),
+            u = { redeemed: 0, converted: 0, sent: i.size };
+        i.forEach((e) => {
+            e === A.aK.REDEEMED && u.redeemed++, e === A.aK.CONVERTED && (u.redeemed++, u.converted++);
         });
-        let I = N.sent === T.Z,
-            y = A.A.getArticleURL(E.MVz.REFERRAL_PROGRAM),
-            { analyticsLocations: O } = (0, m.Ay)(u.A.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-            R = s.useRef(null),
-            L = (N.sent / T.Z) * 100,
-            P = (0, i.jsxs)("div", {
-                className: C.hE,
+        let f = u.sent === T.Z,
+            y = j.A.getArticleURL(E.MVz.REFERRAL_PROGRAM),
+            { analyticsLocations: P } = (0, h.Ay)(g.A.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+            B = a.useRef(null),
+            w = (u.sent / T.Z) * 100,
+            G = (0, r.jsxs)("div", {
+                className: M.hE,
                 children: [
-                    (0, i.jsx)(f.Ay, {
-                        percentage: L,
-                        progressCircleVariation: f.BN.NITRO_LOGO,
-                        iconClassName: a()({ [C.VC]: !t, [C.ER]: t }),
+                    (0, r.jsx)(I.Ay, {
+                        percentage: w,
+                        progressCircleVariation: I.BN.NITRO_LOGO,
+                        iconClassName: n()({ [M.VC]: !t, [M.ER]: t }),
                     }),
-                    (0, i.jsxs)("div", {
-                        className: C.Ns,
+                    (0, r.jsxs)("div", {
+                        className: M.Ns,
                         children: [
-                            (0, i.jsx)(c.Heading, {
+                            (0, r.jsx)(m.D, {
                                 variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
-                                className: C.R0,
-                                children: (0, S.X8)({ hasSentAll: I }),
+                                className: M.R0,
+                                children: (0, v.X8)({ hasSentAll: f }),
                             }),
-                            (0, i.jsx)(j, { userRecords: _ }),
-                            (0, i.jsx)(c.Text, {
+                            (0, r.jsx)(k, { userRecords: d }),
+                            (0, r.jsx)(x.E, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
-                                children: (0, S.dB)({ helpdeskArticle: y, referralsStatuses: N }),
+                                children: (0, v.dB)({ helpdeskArticle: y, referralsStatuses: u }),
                             }),
-                            (0, i.jsx)("div", {
-                                className: a()(C.Fb, { [C.jv]: !t }),
-                                children: (0, i.jsx)(c.wLn, {
+                            (0, r.jsx)("div", {
+                                className: n()(M.Fb, { [M.jv]: !t }),
+                                children: (0, r.jsx)(p.wL, {
                                     "data-migration-pending": !0,
-                                    className: C.r$,
-                                    color: d.XD.CUSTOM,
+                                    className: M.r$,
+                                    color: c.XD.CUSTOM,
                                     onClick: () =>
                                         ((e) => {
                                             let { analyticsLocations: t } = e;
-                                            x.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                                            b.default.track(E.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                                                 location_stack: t,
                                             }),
-                                                (0, c.mMO)(async () => {
-                                                    let { default: e } = await n.e("62156").then(n.bind(n, 263783));
-                                                    return (n) => (0, i.jsx)(e, { ...n, sourceAnalyticsLocations: t });
+                                                (0, _.openModalLazy)(async () => {
+                                                    let { default: e } = await s.e("62156").then(s.bind(s, 263783));
+                                                    return (s) => (0, r.jsx)(e, { ...s, sourceAnalyticsLocations: t });
                                                 });
-                                        })({ analyticsLocations: O }),
+                                        })({ analyticsLocations: P }),
                                     onlyShineOnHover: !0,
-                                    children: (0, i.jsxs)("div", {
-                                        className: C.Zn,
+                                    children: (0, r.jsxs)("div", {
+                                        className: M.Zn,
                                         children: [
-                                            (0, i.jsx)("img", { src: v, alt: "", className: C.QH }),
-                                            I ? b.intl.string(b.t.SY9tyI) : b.intl.string(b.t.Lm2nFc),
+                                            (0, r.jsx)("img", { src: S, alt: "", className: M.QH }),
+                                            f ? R.intl.string(R.t.SY9tyI) : R.intl.string(R.t.Lm2nFc),
                                         ],
                                     }),
                                 }),
@@ -128,15 +133,15 @@ let N = (e) => {
                     }),
                 ],
             }),
-            D = N.redeemed === T.Z;
-        return (0, i.jsx)(m.f5, {
-            value: O,
-            children: (0, i.jsx)("div", {
-                className: a()({ [C.f5]: D, [C.JY]: !D, [C.VX]: !t, [C.m$]: D && t }),
-                children: (0, i.jsx)("div", {
-                    ref: R,
-                    className: a()({ [C.dn]: !t, [C.d_]: t, [C.kS]: D }),
-                    children: P,
+            O = u.redeemed === T.Z;
+        return (0, r.jsx)(h.f5, {
+            value: P,
+            children: (0, r.jsx)("div", {
+                className: n()({ [M.f5]: O, [M.JY]: !O, [M.VX]: !t, [M.m$]: O && t }),
+                children: (0, r.jsx)("div", {
+                    ref: B,
+                    className: n()({ [M.dn]: !t, [M.d_]: t, [M.kS]: O }),
+                    children: G,
                 }),
             }),
         });

@@ -1,77 +1,78 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(627968),
-    l = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    a = n(311907),
-    o = n(397927),
-    u = n(55619),
-    d = n(734057),
-    c = n(309010),
-    h = n(351906),
-    g = n(589051),
-    m = n(494566),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    l = n(311907),
+    o = n(417098),
+    d = n(834730),
+    c = n(55619),
+    u = n(734057),
+    h = n(309010),
+    m = n(351906),
+    p = n(589051),
+    g = n(494566),
     f = n(652215),
-    A = n(985018),
-    I = n(275533);
-let E = l.memo(function () {
-    let e = (0, a.bG)([h.A], () => h.A.enabled),
-        t = (0, g.Mn)("StreamerModeNotice");
+    _ = n(985018),
+    x = n(423005);
+let A = r.memo(function () {
+    let e = (0, l.bG)([m.A], () => m.A.enabled),
+        t = (0, p.Mn)("StreamerModeNotice");
     return e && t
-        ? (0, i.jsxs)(o.$Td, {
-              color: o.Hv$.STREAMER_MODE,
-              className: I.$X,
+        ? (0, i.jsxs)(o.$T, {
+              color: o.Hv.STREAMER_MODE,
+              className: x.$X,
               children: [
-                  (0, i.jsx)(o.Text, {
+                  (0, i.jsx)(d.E, {
                       tag: "span",
                       variant: "text-sm/medium",
                       color: "always-white",
-                      children: A.intl.string(A.t.q9K7jp),
+                      children: _.intl.string(_.t.q9K7jp),
                   }),
-                  (0, i.jsx)(o.Z_L, {
-                      className: I.lI,
-                      onClick: () => u.A.setEnabled(!1),
+                  (0, i.jsx)(o.Z_, {
+                      className: x.lI,
+                      onClick: () => c.A.setEnabled(!1),
                       noticeType: f.kqX.STREAMER_MODE,
-                      children: A.intl.string(A.t.R9GHya),
+                      children: _.intl.string(_.t.R9GHya),
                   }),
               ],
           })
         : null;
 });
-function p(e) {
+function E(e) {
     let { locked: t } = e,
-        n = (0, a.bG)([c.A], () => c.A.getVoiceChannelId()),
-        l = (0, a.bG)([d.A], () => d.A.getChannel(n)),
-        r = null != l;
+        n = (0, l.bG)([h.A], () => h.A.getVoiceChannelId()),
+        r = (0, l.bG)([u.A], () => u.A.getChannel(n)),
+        a = null != r;
     return (0, i.jsxs)("div", {
-        className: s()({ [I.KE]: !0, [I.xt]: t }),
+        className: s()({ [x.KE]: !0, [x.xt]: t }),
         children: [
-            (0, i.jsx)(E, {}),
+            (0, i.jsx)(A, {}),
             (0, i.jsxs)("div", {
-                className: I.Pm,
+                className: x.Pm,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: I.qi,
+                        className: x.qi,
                         children: [
-                            (0, i.jsx)(m.pp, { voiceChannel: l, locked: t }),
-                            (0, i.jsx)(m.Yb, { voiceChannel: l, locked: t }),
-                            (0, i.jsx)(m.GF, { voiceChannel: l, locked: t }),
+                            (0, i.jsx)(g.pp, { voiceChannel: r, locked: t }),
+                            (0, i.jsx)(g.Yb, { voiceChannel: r, locked: t }),
+                            (0, i.jsx)(g.GF, { voiceChannel: r, locked: t }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: I.qi,
+                        className: x.qi,
                         children: [
-                            (0, i.jsx)(m.un, { voiceChannel: l, locked: t }),
-                            (0, i.jsx)(m.sm, { voiceChannel: l, locked: t }),
+                            (0, i.jsx)(g.un, { voiceChannel: r, locked: t }),
+                            (0, i.jsx)(g.sm, { voiceChannel: r, locked: t }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: s()(I.qi, r && I.SV),
-                        children: (0, i.jsx)(m.NO, { voiceChannel: l, locked: t }),
+                        className: s()(x.qi, a && x.SV),
+                        children: (0, i.jsx)(g.NO, { voiceChannel: r, locked: t }),
                     }),
                 ],
             }),
-            r && (0, i.jsx)("div", { className: I.Pm, children: (0, i.jsx)(m.LK, { voiceChannel: l, locked: t }) }),
+            a && (0, i.jsx)("div", { className: x.Pm, children: (0, i.jsx)(g.LK, { voiceChannel: r, locked: t }) }),
         ],
     });
 }

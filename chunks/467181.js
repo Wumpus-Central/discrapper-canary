@@ -1,58 +1,58 @@
 n.d(t, { A: () => d });
-var l = n(627968),
-    s = n(64700),
-    r = n(533925),
-    i = n(397927),
-    a = n(398450),
+var a = n(627968),
+    r = n(64700),
+    i = n(533925),
+    s = n(292666),
+    l = n(398450),
     o = n(985018);
 function d(e) {
     let { mfaChallenge: t, finish: n, setSlide: d, onClose: c, isSlideReady: u, headerAlignStart: h } = e,
-        [g, m] = s.useState(!1),
-        [f, x] = s.useState(null),
-        [S, p] = s.useState(""),
-        j = s.useRef(null);
+        [g, m] = r.useState(!1),
+        [p, f] = r.useState(null),
+        [x, S] = r.useState(""),
+        b = r.useRef(null);
     return (
-        s.useEffect(() => {
-            u && j.current?.focus();
+        r.useEffect(() => {
+            u && b.current?.focus();
         }, [u]),
-        (0, l.jsxs)("form", {
+        (0, a.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     m(!0),
-                    x(null),
-                    n({ mfaType: "totp", data: S })
+                    f(null),
+                    n({ mfaType: "totp", data: x })
                         .catch((e) => {
-                            x(e.body?.message ?? e.message);
+                            f(e.body?.message ?? e.message);
                         })
                         .finally(() => {
                             m(!1);
                         });
             },
             children: [
-                (0, l.jsx)(a.A.SlideHeader, { onClose: c, headerAlignStart: h }),
-                (0, l.jsxs)(a.A.SlideContent, {
+                (0, a.jsx)(l.A.SlideHeader, { onClose: c, headerAlignStart: h }),
+                (0, a.jsxs)(l.A.SlideContent, {
                     scrollbarType: "none",
                     children: [
-                        (0, l.jsx)(i.ksK, {
+                        (0, a.jsx)(s.k, {
                             label: o.intl.string(o.t.HZPBOd),
-                            inputRef: j,
-                            onChange: p,
+                            inputRef: b,
+                            onChange: S,
                             placeholder: o.intl.string(o.t.tARzgo),
-                            maxLength: r.XZ,
-                            minLength: r.XZ,
-                            value: S,
+                            maxLength: i.XZ,
+                            minLength: i.XZ,
+                            value: x,
                             autoComplete: "one-time-code",
                             spellCheck: "false",
                             disabled: g,
                         }),
-                        (0, l.jsx)(a.A.SlideError, { error: f }),
+                        (0, a.jsx)(l.A.SlideError, { error: p }),
                     ],
                 }),
-                (0, l.jsx)(a.A.SlideFooter, {
+                (0, a.jsx)(l.A.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: d,
                     showConfirm: !0,
-                    disabled: S.length !== r.XZ,
+                    disabled: x.length !== i.XZ,
                     submitting: g,
                 }),
             ],

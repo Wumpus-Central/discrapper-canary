@@ -1,10 +1,8 @@
 "use strict";
-n.d(t, { D5: () => a, Nf: () => s });
-let r = !1,
-    i = !1;
-function a() {
-    return r;
+function r() {
+    return !1;
 }
-function s() {
-    return i;
+function i() {
+    return !1;
 }
+n.d(t, { D5: () => r, Nf: () => i });

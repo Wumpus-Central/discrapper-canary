@@ -1,7 +1,7 @@
 u.d(e, { openGuildProductLink: () => s });
 var i = u(627968);
 u(64700);
-var d = u(397927),
+var d = u(192308),
     l = u(22007),
     n = u(71393),
     r = u(871109),
@@ -9,7 +9,7 @@ var d = u(397927),
 function s(t, e) {
     let s = n.A.getGuild(t);
     r.A.getGuildProductFetchState(e) === r.e.FETCHED && r.A.getGuildProduct(e)?.published !== !0 && null != s
-        ? (0, d.mMO)(async () => {
+        ? (0, d.openModalLazy)(async () => {
               let { default: t } = await u.e("57968").then(u.bind(u, 558067));
               return (e) => (0, i.jsx)(t, { ...e });
           })

@@ -1,24 +1,25 @@
-n.d(e, { default: () => d });
-var a = n(627968);
+n.d(e, { default: () => u });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    l = n(442433),
-    r = n(723702),
+var a = n(861672),
+    l = n(477782),
+    r = n(442433),
+    s = n(723702),
     o = n(115184),
-    s = n(777933),
-    c = n(985018);
-function d(t) {
+    c = n(777933),
+    d = n(985018);
+function u(t) {
     let { src: e, onSelect: n } = t,
-        d = (0, o.A)(e),
-        p = (0, s.A)(e, null);
-    return r.isPlatformEmbedded
-        ? (0, a.jsxs)(i.W1t, {
+        u = (0, o.A)(e),
+        h = (0, c.A)(e, null);
+    return s.isPlatformEmbedded
+        ? (0, i.jsxs)(a.W, {
               "data-menu-all-icons-auto": !0,
               navId: "image-context",
-              onClose: l.Z_,
-              "aria-label": c.intl.string(c.t.Zow2V5),
+              onClose: r.Z_,
+              "aria-label": d.intl.string(d.t.Zow2V5),
               onSelect: n,
-              children: [(0, a.jsx)(i.rXV, { children: d }), (0, a.jsx)(i.rXV, { children: p })],
+              children: [(0, i.jsx)(l.rX, { children: u }), (0, i.jsx)(l.rX, { children: h })],
           })
         : null;
 }

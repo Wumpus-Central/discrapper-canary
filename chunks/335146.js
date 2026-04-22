@@ -1,12 +1,9 @@
 "use strict";
-n.d(t, { V: () => o });
+n.d(t, { V: () => a });
 var r = n(181981),
     i = n(250015),
-    a = n(685518),
-    s = function (e) {
-        return !(0, a.XJ)(e) && !(0, a.td)(e) && "inline" === getComputedStyle(e).display;
-    },
-    o = (function () {
+    s = n(685518),
+    a = (function () {
         function e(e, t) {
             (this.target = e),
                 (this.observedBox = t || r.U.CONTENT_BOX),
@@ -14,10 +11,15 @@ var r = n(181981),
         }
         return (
             (e.prototype.isActive = function () {
-                var e = (0, i.Px)(this.target, this.observedBox);
+                var e,
+                    t = (0, i.Px)(this.target, this.observedBox);
                 return (
-                    s(this.target) && (this.lastReportedSize = e),
-                    this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize
+                    (e = this.target),
+                    (0, s.XJ)(e) ||
+                        (0, s.td)(e) ||
+                        "inline" !== getComputedStyle(e).display ||
+                        (this.lastReportedSize = t),
+                    this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
                 );
             }),
             e

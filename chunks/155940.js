@@ -1,53 +1,53 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
+n.d(t, { A: () => p });
+var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(311907),
-    l = n(397927),
-    u = n(775602),
-    c = n(169909),
-    d = n(457806);
-function _(e) {
-    let { look: t = c.r0.LARGE_BANNER } = e,
-        n = (0, o.bG)([u.A], () => u.A.useReducedMotion),
-        { styleLarge: s, styleSmall: _ } = i.useMemo(
+    a = n(503698),
+    s = n.n(a),
+    r = n(311907),
+    o = n(534514),
+    c = n(834730),
+    d = n(775602),
+    u = n(169909),
+    m = n(357887);
+function p(e) {
+    let { look: t = u.r0.LARGE_BANNER } = e,
+        n = (0, r.bG)([d.A], () => d.A.useReducedMotion),
+        { styleLarge: a, styleSmall: p } = i.useMemo(
             () => ({
                 styleLarge: { width: `${10 + 50 * Math.random()}%` },
                 styleSmall: { width: `${30 + 60 * Math.random()}%` },
             }),
             [],
         );
-    return (0, r.jsxs)("div", {
-        className: a()(d.kL, d.NX, { [d.cb]: n, [d.uS]: t !== c.r0.ROW, [d.qd]: t === c.r0.ROW }),
+    return (0, l.jsxs)("div", {
+        className: s()(m.kL, m.NX, { [m.cb]: n, [m.uS]: t !== u.r0.ROW, [m.qd]: t === u.r0.ROW }),
         children: [
-            (0, r.jsx)("div", {
-                className: a()(d._e, { [d.i2]: t === c.r0.MEDIUM_BANNER, [d.ir]: t === c.r0.LARGE_BANNER }),
+            (0, l.jsx)("div", {
+                className: s()(m._e, { [m.i2]: t === u.r0.MEDIUM_BANNER, [m.ir]: t === u.r0.LARGE_BANNER }),
             }),
-            (0, r.jsxs)("div", {
-                className: a()(d.TD, { [d.Ne]: t === c.r0.ROW }),
+            (0, l.jsxs)("div", {
+                className: s()(m.TD, { [m.Ne]: t === u.r0.ROW }),
                 children: [
-                    (0, r.jsx)("div", { className: a()(d.Pz, { [d.Lu]: t === c.r0.ROW }) }),
-                    (0, r.jsxs)("div", {
-                        className: d.FS,
+                    (0, l.jsx)("div", { className: s()(m.Pz, { [m.Lu]: t === u.r0.ROW }) }),
+                    (0, l.jsxs)("div", {
+                        className: m.FS,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: d.jC,
-                                style: s,
-                                children: (0, r.jsx)(l.Heading, {
-                                    className: d.R,
+                            (0, l.jsx)("div", {
+                                className: m.jC,
+                                style: a,
+                                children: (0, l.jsx)(o.D, {
+                                    className: m.R,
                                     variant: "heading-md/semibold",
                                     color: "text-strong",
                                     lineClamp: 1,
                                     children: "_",
                                 }),
                             }),
-                            (0, r.jsx)("div", {
-                                className: d.jC,
-                                style: _,
-                                children: (0, r.jsx)(l.Text, {
-                                    className: d.R,
+                            (0, l.jsx)("div", {
+                                className: m.jC,
+                                style: p,
+                                children: (0, l.jsx)(c.E, {
+                                    className: m.R,
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
                                     lineClamp: 1,
@@ -56,7 +56,7 @@ function _(e) {
                             }),
                         ],
                     }),
-                    t === c.r0.ROW && (0, r.jsx)("div", { className: d.ek }),
+                    t === u.r0.ROW && (0, l.jsx)("div", { className: m.ek }),
                 ],
             }),
         ],

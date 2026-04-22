@@ -1,52 +1,52 @@
-n.d(t, { z: () => c });
-var a = n(627968),
-    l = n(64700),
-    r = n(837381),
-    s = n(397927),
-    o = n(928039),
-    i = n(61916);
+a.d(t, { z: () => c });
+var i = a(627968),
+    r = a(64700),
+    l = a(837381),
+    n = a(475825),
+    s = a(928039),
+    o = a(61916);
 function c(e) {
     let {
             rowData: t,
-            message: n,
+            message: a,
             originChannel: c,
-            selectedDestinations: u,
-            handleToggleDestination: d,
-            disableSelection: _,
+            selectedDestinations: d,
+            handleToggleDestination: _,
+            disableSelection: u,
             rowClassName: h,
-            ...f
+            ...A
         } = e,
         {
             sections: p,
-            sectionHeight: m,
-            renderRow: g,
-            rowHeight: C,
-        } = (0, i.s)({
+            sectionHeight: g,
+            renderRow: E,
+            rowHeight: I,
+        } = (0, o.s)({
             rowData: t,
-            message: n,
+            message: a,
             originChannel: c,
-            selectedDestinations: u,
-            handleToggleDestination: d,
-            disableSelection: _,
+            selectedDestinations: d,
+            handleToggleDestination: _,
+            disableSelection: u,
             rowClassName: h,
         }),
-        b = l.useRef(null),
-        k = (0, o.A)("forward-modal", b);
-    return (0, a.jsx)(r.hD, {
-        navigator: k,
-        children: (0, a.jsx)(r.PR, {
+        f = r.useRef(null),
+        m = (0, s.A)("forward-modal", f);
+    return (0, i.jsx)(l.hD, {
+        navigator: m,
+        children: (0, i.jsx)(l.PR, {
             children: (e) => {
-                let { ref: t, ...n } = e;
-                return (0, a.jsx)(s.OZj, {
+                let { ref: t, ...a } = e;
+                return (0, i.jsx)(n.OZ, {
                     ref: (e) => {
-                        (b.current = e), (t.current = e?.getScrollerNode() ?? null);
+                        (f.current = e), (t.current = e?.getScrollerNode() ?? null);
                     },
-                    ...n,
-                    ...f,
+                    ...a,
+                    ...A,
                     sections: p,
-                    sectionHeight: m,
-                    renderRow: g,
-                    rowHeight: C,
+                    sectionHeight: g,
+                    renderRow: E,
+                    rowHeight: I,
                 });
             },
         }),

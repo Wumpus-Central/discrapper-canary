@@ -1,101 +1,101 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => T });
 var i = n(627968),
     s = n(64700),
-    l = n(397927),
-    r = n(98207),
-    a = n(557722),
-    o = n(662758),
-    d = n(615715),
-    c = n(87707),
-    u = n(652215),
-    m = n(53516),
-    g = n(985018),
-    _ = n(103579);
-function x(e) {
+    l = n(192308),
+    a = n(834730),
+    r = n(349288),
+    o = n(821609),
+    d = n(825484),
+    u = n(452027),
+    c = n(98207),
+    g = n(557722),
+    m = n(662758),
+    _ = n(615715),
+    A = n(87707),
+    h = n(652215),
+    p = n(53516),
+    x = n(985018),
+    E = n(103579);
+function T(e) {
     let t,
         n,
-        { currentUser: x, togglingSMS: h } = e,
-        [A, p] = s.useState(!1),
-        T = s.useCallback(
+        { currentUser: T, togglingSMS: S } = e,
+        [f, b] = s.useState(!1),
+        C = s.useCallback(
             (e) => {
-                e.preventDefault(), p(!A);
+                e.preventDefault(), b(!f);
             },
-            [A],
+            [f],
         ),
-        f = s.useCallback(function () {
+        v = s.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            (0, l.qfG)((t) => (0, i.jsx)(d.default, { reason: a.d.USER_SETTINGS_UPDATE, ...t, ...e }), {
-                modalKey: m.V,
+            (0, l.openModal)((t) => (0, i.jsx)(_.default, { reason: g.d.USER_SETTINGS_UPDATE, ...t, ...e }), {
+                modalKey: p.V,
             });
         }, []),
-        S = s.useCallback(() => {
-            f();
-        }, [f]),
-        E = s.useCallback(() => {
-            null == x.phone ? f({ onAddedPhone: r.A.enableSMS }) : r.A.enableSMS();
-        }, [x, f]),
-        b = s.useCallback(() => {
-            (0, l.qfG)((e) =>
-                (0, i.jsx)(o.default, {
+        N = s.useCallback(() => {
+            v();
+        }, [v]),
+        I = s.useCallback(() => {
+            null == T.phone ? v({ onAddedPhone: c.A.enableSMS }) : c.A.enableSMS();
+        }, [T, v]),
+        y = s.useCallback(() => {
+            (0, l.openModal)((e) =>
+                (0, i.jsx)(m.default, {
                     ...e,
-                    handleSubmit: r.A.disableSMS,
-                    title: g.intl.string(g.t.KLWnit),
-                    children: g.intl.string(g.t["W0/Duf"]),
+                    handleSubmit: c.A.disableSMS,
+                    title: x.intl.string(x.t.KLWnit),
+                    children: x.intl.string(x.t["W0/Duf"]),
                 }),
             );
         }, []),
-        C = s.useCallback((e) => (null == e ? "" : `${"*".repeat(e.length - 4)}${e.slice(-4)}`), []),
-        v = null != x.phone,
-        N = x.hasFlag(u.nhx.MFA_SMS);
-    if (v || N) {
-        let e = A ? x.phone : C(x.phone);
-        n = (0, i.jsxs)(l.Text, {
+        j = s.useCallback((e) => (null == e ? "" : `${"*".repeat(e.length - 4)}${e.slice(-4)}`), []),
+        O = null != T.phone,
+        R = T.hasFlag(h.nhx.MFA_SMS);
+    if (O || R) {
+        let e = f ? T.phone : j(T.phone);
+        n = (0, i.jsxs)(a.E, {
             variant: "text-sm/normal",
             children: [
-                g.intl.format(g.t.PXVoEO, { phoneNumber: e }),
-                (0, i.jsx)(l.MzZ, {
-                    onClick: T,
-                    className: _.vN,
-                    children: A ? g.intl.string(g.t.FfltIN) : g.intl.string(g.t.llArAg),
+                x.intl.format(x.t.PXVoEO, { phoneNumber: e }),
+                (0, i.jsx)(r.Anchor, {
+                    onClick: C,
+                    className: E.vN,
+                    children: f ? x.intl.string(x.t.FfltIN) : x.intl.string(x.t.llArAg),
                 }),
             ],
         });
     }
-    if (N)
-        t = (0, i.jsx)(l.Button, {
+    if (R)
+        t = (0, i.jsx)(o.$, {
             variant: "critical-secondary",
             size: "sm",
-            text: g.intl.string(g.t.KLWnit),
-            loading: h,
-            onClick: b,
+            text: x.intl.string(x.t.KLWnit),
+            loading: S,
+            onClick: y,
         });
     else {
-        let e = (0, c.BE)(x);
-        t = (0, i.jsxs)(l.ButtonGroup, {
+        let e = (0, A.BE)(T);
+        t = (0, i.jsxs)(d.e, {
             size: "sm",
             children: [
-                (0, i.jsx)(l.Button, {
+                (0, i.jsx)(o.$, {
                     variant: "primary",
                     size: "sm",
-                    text: e ?? g.intl.string(g.t.DZQe23),
-                    onClick: E,
-                    loading: h,
+                    text: e ?? x.intl.string(x.t.DZQe23),
+                    onClick: I,
+                    loading: S,
                     disabled: null != e,
                 }),
-                v
-                    ? (0, i.jsx)(l.Button, {
-                          variant: "secondary",
-                          size: "sm",
-                          text: g.intl.string(g.t.Ulqq6K),
-                          onClick: S,
-                      })
+                O
+                    ? (0, i.jsx)(o.$, { variant: "secondary", size: "sm", text: x.intl.string(x.t.Ulqq6K), onClick: N })
                     : null,
             ],
         });
     }
-    return (0, i.jsxs)(l.D0$, {
-        label: g.intl.string(g.t.uHAJ5v),
-        description: g.intl.string(g.t.fspJ4H),
+    return (0, i.jsxs)(u.D, {
+        label: x.intl.string(x.t.uHAJ5v),
+        description: x.intl.string(x.t.fspJ4H),
         children: [n, t],
     });
 }

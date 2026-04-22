@@ -1,47 +1,49 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(573435),
-    s = n(145497),
-    o = n(649640),
-    l = n(985018),
-    u = n(838934);
-function c(e) {
+var l = n(534514),
+    a = n(939249),
+    s = n(695366),
+    r = n(834730),
+    o = n(573435),
+    d = n(145497),
+    c = n(649640),
+    u = n(985018),
+    m = n(890653);
+function _(e) {
     let { name: t, onRetry: n } = e,
-        c = (0, o.b2)(),
-        d = (0, o.n6)(c.hex()),
-        _ = t ?? l.intl.string(l.t.DmIUGK);
-    return (0, r.jsxs)("div", {
-        className: u.kL,
+        _ = (0, c.b2)(),
+        h = (0, c.n6)(_.hex()),
+        p = t ?? u.intl.string(u.t.DmIUGK);
+    return (0, i.jsxs)("div", {
+        className: m.kL,
         children: [
-            (0, r.jsx)("div", { className: u.vK, style: { background: d } }),
-            (0, r.jsx)("div", {
-                className: u.H,
-                children: (0, r.jsx)(a.Ay, {
-                    mask: a.hW.CLAN_ICON,
+            (0, i.jsx)("div", { className: m.vK, style: { background: h } }),
+            (0, i.jsx)("div", {
+                className: m.H,
+                children: (0, i.jsx)(o.Ay, {
+                    mask: o.hW.CLAN_ICON,
                     width: 70,
                     height: 70,
-                    children: (0, r.jsx)("div", {
-                        className: u.R3,
-                        children: (0, r.jsx)(s.B$, { guildName: _, iconSize: 64 }),
+                    children: (0, i.jsx)("div", {
+                        className: m.R3,
+                        children: (0, i.jsx)(d.B$, { guildName: p, iconSize: 64 }),
                     }),
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: u.wx,
+            (0, i.jsxs)("div", {
+                className: m.wx,
                 children: [
-                    (0, r.jsx)(i.Heading, { variant: "heading-lg/medium", color: "text-strong", children: _ }),
-                    (0, r.jsxs)(i.DUT, {
-                        className: u.z3,
+                    (0, i.jsx)(l.D, { variant: "heading-lg/medium", color: "text-strong", children: p }),
+                    (0, i.jsxs)(a.D, {
+                        className: m.z3,
                         onClick: n,
                         children: [
-                            (0, r.jsx)(i.EpV, { size: "sm", color: "currentColor" }),
-                            (0, r.jsx)(i.Text, {
+                            (0, i.jsx)(s.E, { size: "sm", color: "currentColor" }),
+                            (0, i.jsx)(r.E, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-warning",
-                                children: l.intl.string(l.t.tmGHjc),
+                                children: u.intl.string(u.t.tmGHjc),
                             }),
                         ],
                     }),

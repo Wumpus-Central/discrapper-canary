@@ -1,8 +1,8 @@
 e.d(n, { default: () => s });
 var i = e(627968),
     a = e(64700),
-    l = e(158954),
-    o = e(397927),
+    l = e(189213),
+    o = e(292666),
     r = e(422258),
     u = e(985018);
 function s(t) {
@@ -26,7 +26,7 @@ function s(t) {
             ],
             transitionState: e,
             onClose: n,
-            children: (0, i.jsx)(o.ksK, {
+            children: (0, i.jsx)(o.k, {
                 label: u.intl.string(u.t.OCAkGP),
                 value: s,
                 onChange: f,

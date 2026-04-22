@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header_e34850",
     E3: "prompts_e34850",

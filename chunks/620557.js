@@ -1,17 +1,16 @@
 "use strict";
-n.r(t), n.d(t, { announce: () => a, clearAnnouncer: () => s, destroyAnnouncer: () => o });
-let r = 7e3,
-    i = null;
-function a(e, t = "assertive", n = r) {
-    i || (i = new l()), i.announce(e, t, n);
+n.r(t), n.d(t, { announce: () => i, clearAnnouncer: () => s, destroyAnnouncer: () => a });
+let r = null;
+function i(e, t = "assertive", n = 7e3) {
+    r || (r = new o()), r.announce(e, t, n);
 }
 function s(e) {
-    i && i.clear(e);
+    r && r.clear(e);
 }
-function o() {
-    i && (i.destroy(), (i = null));
+function a() {
+    r && (r.destroy(), (r = null));
 }
-class l {
+class o {
     createLog(e) {
         let t = document.createElement("div");
         return (
@@ -24,14 +23,14 @@ class l {
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, t = "assertive", n = r) {
+    announce(e, t = "assertive", n = 7e3) {
         if (!this.node) return;
-        let i = document.createElement("div");
-        (i.textContent = e),
-            "assertive" === t ? this.assertiveLog.appendChild(i) : this.politeLog.appendChild(i),
+        let r = document.createElement("div");
+        (r.textContent = e),
+            "assertive" === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
             "" !== e &&
                 setTimeout(() => {
-                    i.remove();
+                    r.remove();
                 }, n);
     }
     clear(e) {

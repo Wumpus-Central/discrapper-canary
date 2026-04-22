@@ -1,58 +1,60 @@
-n.d(t, { T: () => E });
+"use strict";
+n.d(t, { T: () => C });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(554146),
-    r = n(397927),
-    o = n(264779),
-    d = n(597758),
-    c = n(780964),
-    u = n(840065),
-    h = n(287809),
+    r = n(64700),
+    l = n(311907),
+    s = n(554146);
+if (21552 == n.j) var a = n(417098);
+if (21552 == n.j) var o = n(403581);
+var c = n(264779),
+    u = n(597758),
+    d = n(780964),
+    _ = n(858897),
+    E = n(287809),
     A = n(954571),
-    _ = n(927578),
-    m = n(379848),
-    g = n(49999),
-    p = n(652215),
-    f = n(985018),
-    x = n(258527);
-let E = (e) => {
+    m = n(927578),
+    I = n(379848),
+    T = n(49999),
+    N = n(652215),
+    g = n(985018),
+    p = n(946319);
+let C = (e) => {
     let { dismissibleContent: t } = e,
-        n = (0, o.Cp)(),
-        E = (0, s.bG)([h.default], () => !_.Ay.isPremium(h.default.getCurrentUser())),
-        I = l.useCallback(() => {
-            A.default.track(p.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
-                (0, u.openUserSettings)(c.X.GIFT_PANEL),
-                d.Ay.dismissOutboundPromotionNotice();
+        n = (0, c.Cp)(),
+        C = (0, l.bG)([E.default], () => !m.Ay.isPremium(E.default.getCurrentUser())),
+        f = r.useCallback(() => {
+            A.default.track(N.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
+                (0, _.openUserSettings)(d.X.GIFT_PANEL),
+                u.Ay.dismissOutboundPromotionNotice();
         }, []);
     return null == n
         ? null
-        : (0, i.jsx)(m.YS, {
+        : (0, i.jsx)(I.YS, {
               contentType: t,
               newSnowflakeId: n,
               timeRecurringConfig: { cooldownDurationMs: 0 },
-              groupName: g.m.NOTICE_BAR,
+              groupName: T.m.NOTICE_BAR,
               bypassAutoDismiss: !0,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: n } = e;
-                  if (t === a.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)
-                      return (0, i.jsxs)(r.$Td, {
-                          color: r.Hv$.PREMIUM_TIER_2,
+                  if (t === s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)
+                      return (0, i.jsxs)(a.$T, {
+                          color: a.Hv.PREMIUM_TIER_2,
                           children: [
-                              (0, i.jsx)(r.PMB, {
-                                  noticeType: p.kqX.OUTBOUND_PROMOTION,
+                              (0, i.jsx)(a.PM, {
+                                  noticeType: N.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      d.Ay.dismissOutboundPromotionNotice(), null !== n && n(g.i.USER_DISMISS);
+                                      u.Ay.dismissOutboundPromotionNotice(), null !== n && n(T.i.USER_DISMISS);
                                   },
                               }),
-                              (0, i.jsx)(r.tvc, { size: "md", color: "currentColor", className: x.P }),
-                              E ? f.intl.string(f.t["5JMiOo"]) : f.intl.string(f.t["Pzh+G2"]),
-                              (0, i.jsx)(r.Z_L, {
-                                  noticeType: p.kqX.OUTBOUND_PROMOTION,
+                              (0, i.jsx)(o.t, { size: "md", color: "currentColor", className: p.P }),
+                              C ? g.intl.string(g.t["5JMiOo"]) : g.intl.string(g.t["Pzh+G2"]),
+                              (0, i.jsx)(a.Z_, {
+                                  noticeType: N.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      I(), null !== n && n(g.i.TAKE_ACTION);
+                                      f(), null !== n && n(T.i.TAKE_ACTION);
                                   },
-                                  children: f.intl.string(f.t.jVcuVY),
+                                  children: g.intl.string(g.t.jVcuVY),
                               }),
                           ],
                       });

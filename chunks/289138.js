@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yl: "modal__6c516",
     Hx: "modalFooter__6c516",

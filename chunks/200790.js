@@ -1,51 +1,52 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    a = n(421380),
-    r = n(397927),
-    o = n(688810),
-    d = n(507698),
-    c = n(954921),
-    u = n(84540),
-    _ = n(919395),
-    m = n(128450),
-    g = n(985018),
-    A = n(223772);
-function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: h = !1, withTutorial: p = !1 } = e,
-        { analyticsLocations: T } = (0, o.Ay)(),
-        E = (0, _.a4)({ user: t, guildId: n?.id }),
-        { pendingAvatarDecoration: S, errors: f } = (0, _.CP)(n?.id),
-        C = p ? r.wLn : a.$n;
-    return (0, i.jsx)(m.A, {
+    a = n(862482),
+    r = n(930861),
+    o = n(821609),
+    d = n(688810),
+    u = n(821956),
+    c = n(562819),
+    g = n(84540),
+    m = n(919395),
+    _ = n(128450),
+    A = n(985018),
+    h = n(408919);
+function p(e) {
+    let { user: t, guild: n, className: s, sectionTitle: p, forcedDivider: x = !1, withTutorial: E = !1 } = e,
+        { analyticsLocations: T } = (0, d.Ay)(),
+        S = (0, m.a4)({ user: t, guildId: n?.id }),
+        { pendingAvatarDecoration: f, errors: b } = (0, m.CP)(n?.id),
+        C = E ? r.wL : a.$n;
+    return (0, i.jsx)(_.A, {
         className: s,
-        forcedDivider: h,
+        forcedDivider: x,
         hasBackground: !0,
-        title: x,
-        errors: f,
+        title: p,
+        errors: b,
         children: (0, i.jsxs)("div", {
-            className: A.NC,
+            className: h.NC,
             children: [
                 (0, i.jsx)(C, {
                     size: a.$n.Sizes.SMALL,
                     onClick: () => {
                         (0, c.L)({ analyticsLocations: T, guild: n });
                     },
-                    className: l()({ [A.yj]: p }),
-                    children: g.intl.string(g.t.BVcYCx),
+                    className: l()({ [h.yj]: E }),
+                    children: A.intl.string(A.t.BVcYCx),
                 }),
-                (void 0 === S ? null != E : null != S) &&
+                (void 0 === f ? null != S : null != f) &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: A.DT,
-                        children: (0, i.jsx)(r.Button, {
+                        className: h.DT,
+                        children: (0, i.jsx)(o.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: (0, d.uZ)(t, n) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
+                            text: (0, u.uZ)(t, n) ? A.intl.string(A.t.CHf9iJ) : A.intl.string(A.t.OrokWm),
                             onClick: () => {
-                                (0, u.p)({ guildId: n?.id, avatarDecoration: null });
+                                (0, g.p)({ guildId: n?.id, avatarDecoration: null });
                             },
                         }),
                     }),

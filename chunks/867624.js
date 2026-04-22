@@ -2,7 +2,7 @@ n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
+    s = n(306788),
     a = n(323073),
     r = n(863922),
     o = n(513272),
@@ -16,7 +16,7 @@ function _(e) {
         n = (0, a.ni)(t),
         _ = (0, l.bG)([o.A], () => o.A.shouldShowTopicsBar());
     return (0, i.jsx)(c.Ay.Icon, {
-        icon: s.Kck,
+        icon: s.K,
         onClick: () => {
             d.default.track(u.HAw.SUMMARIES_SIDEBAR_TOGGLED, {
                 summaries_sidebar_open: !_,

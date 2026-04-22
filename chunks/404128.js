@@ -1,106 +1,109 @@
-i.d(e, { default: () => p });
-var n = i(627968);
+i.d(a, { default: () => N });
+var t = i(627968);
 i(64700);
-var t = i(503698),
-    l = i.n(t),
+var l = i(503698),
+    n = i.n(l),
     d = i(311907),
     s = i(990078),
-    r = i(397927),
-    o = i(29086),
-    g = i(581781),
-    c = i(71393),
-    u = i(287809),
-    _ = i(685073),
-    f = i(514661),
-    m = i(985018),
-    b = i(583970),
-    h = i(581298);
-function p(a) {
-    let { guildId: e, ...i } = a,
-        t = (0, d.bG)([c.A], () => c.A.getGuild(e)),
-        p = (0, d.bG)([u.default], () => {
-            let a = u.default.getCurrentUser()?.primaryGuild;
-            return a?.identityGuildId === e && a?.identityEnabled === !0;
-        }, [e]),
-        { isAdopting: x, onAdoptTag: C, onEditProfile: j } = (0, f.A)(e, i.onClose);
-    if (null != t && (0, _.Rg)(t) && (0, _.q0)(t))
-        return (0, n.jsxs)(r.EOs, {
+    r = i(935462),
+    o = i(534514),
+    c = i(834730),
+    u = i(821609),
+    g = i(29086),
+    _ = i(581781),
+    m = i(71393),
+    f = i(287809),
+    x = i(685073),
+    h = i(514661),
+    b = i(985018),
+    p = i(661023),
+    C = i(393125);
+function N(e) {
+    let { guildId: a, ...i } = e,
+        l = (0, d.bG)([m.A], () => m.A.getGuild(a)),
+        N = (0, d.bG)([f.default], () => {
+            let e = f.default.getCurrentUser()?.primaryGuild;
+            return e?.identityGuildId === a && e?.identityEnabled === !0;
+        }, [a]),
+        { isAdopting: j, onAdoptTag: v, onEditProfile: I } = (0, h.A)(a, i.onClose);
+    if (null != l && (0, x.Rg)(l) && (0, x.q0)(l))
+        return (0, t.jsxs)(r.EO, {
             "data-migration-pending": !0,
-            className: h.yl,
-            size: r.rIJ.DYNAMIC,
+            className: C.yl,
+            size: r.rI.DYNAMIC,
             ...i,
             parentComponent: "GuildTagAdoptModal",
             children: [
-                (0, n.jsxs)(r.$mQ, {
+                (0, t.jsxs)(r.$m, {
                     "data-migration-pending": !0,
-                    className: h.jE,
+                    className: C.jE,
                     scrollbarType: "none",
                     children: [
-                        (0, n.jsx)("div", {
-                            className: h.X6,
-                            children: (0, n.jsxs)("div", {
-                                className: h.kb,
+                        (0, t.jsx)("div", {
+                            className: C.X6,
+                            children: (0, t.jsxs)("div", {
+                                className: C.kb,
                                 children: [
-                                    (0, n.jsxs)("div", {
-                                        className: h.N1,
+                                    (0, t.jsxs)("div", {
+                                        className: C.N1,
                                         children: [
-                                            (0, n.jsx)(r.Heading, {
+                                            (0, t.jsx)(o.D, {
                                                 variant: "heading-lg/bold",
-                                                children: m.intl.string(b.default.OvKPi0),
+                                                children: b.intl.string(p.default.OvKPi0),
                                             }),
-                                            (0, n.jsx)(r.Text, {
+                                            (0, t.jsx)(c.E, {
                                                 variant: "text-md/normal",
-                                                children: m.intl.string(b.default.kHxfDw),
+                                                children: b.intl.string(p.default.kHxfDw),
                                             }),
                                         ],
                                     }),
-                                    (0, n.jsx)(g.A, {
-                                        className: h._S,
-                                        guildId: t.id,
-                                        guildName: t.name,
-                                        guildIcon: t.icon,
+                                    (0, t.jsx)(_.A, {
+                                        className: C._S,
+                                        guildId: l.id,
+                                        guildName: l.name,
+                                        guildIcon: l.icon,
                                         guildIconSize: 32,
-                                        guildTag: t.profile.tag,
-                                        guildBadge: t.profile.badge ?? "",
+                                        guildTag: l.profile.tag,
+                                        guildBadge: l.profile.badge ?? "",
                                     }),
-                                    (0, n.jsxs)("div", {
-                                        className: h.UD,
+                                    (0, t.jsxs)("div", {
+                                        className: C.UD,
                                         children: [
-                                            (0, n.jsx)(s.m, {
-                                                text: m.intl.string(b.default.WlENZt),
-                                                shouldShow: p,
-                                                children: (0, n.jsx)(r.Button, {
+                                            (0, t.jsx)(s.m, {
+                                                text: b.intl.string(p.default.WlENZt),
+                                                shouldShow: N,
+                                                children: (0, t.jsx)(u.$, {
                                                     variant: "primary",
-                                                    text: m.intl.string(m.t.jwEaiX),
+                                                    text: b.intl.string(b.t.jwEaiX),
                                                     fullWidth: !0,
-                                                    onClick: C,
-                                                    loading: x,
-                                                    disabled: p,
+                                                    onClick: v,
+                                                    loading: j,
+                                                    disabled: N,
                                                 }),
                                             }),
-                                            (0, n.jsx)(r.Button, {
+                                            (0, t.jsx)(u.$, {
                                                 variant: "secondary",
-                                                text: m.intl.string(m.t.s5vZlQ),
+                                                text: b.intl.string(b.t.s5vZlQ),
                                                 fullWidth: !0,
-                                                onClick: j,
+                                                onClick: I,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
                         }),
-                        (0, n.jsx)("div", {
-                            className: l()(h.X6, h.pG),
-                            children: (0, n.jsx)(o.A, {
-                                className: h.uJ,
-                                guildId: t.id,
-                                tag: t.profile.tag,
-                                badge: t.profile.badge ?? "",
+                        (0, t.jsx)("div", {
+                            className: n()(C.X6, C.pG),
+                            children: (0, t.jsx)(g.A, {
+                                className: C.uJ,
+                                guildId: l.id,
+                                tag: l.profile.tag,
+                                badge: l.profile.badge ?? "",
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(r.s_y, { "data-migration-pending": !0, className: h.VN, onClick: i.onClose }),
+                (0, t.jsx)(r.s_, { "data-migration-pending": !0, className: C.VN, onClick: i.onClose }),
             ],
         });
 }

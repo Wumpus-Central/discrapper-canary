@@ -1,17 +1,18 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153),
-    a = n(652215);
-let s = 0;
-function o(e) {
-    let { port: t } = e;
-    s = a.xEi - t;
-}
-class l extends r.Ay.Store {
+    s = n(652215);
+let a = 0;
+class o extends r.Ay.Store {
     static displayName = "InstanceIdStore";
     getId() {
-        return s;
+        return a;
     }
 }
-let u = new l(i.h, { RPC_SERVER_READY: o });
+let l = new o(i.h, {
+    RPC_SERVER_READY: function (e) {
+        let { port: t } = e;
+        a = s.xEi - t;
+    },
+});

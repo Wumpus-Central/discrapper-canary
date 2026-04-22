@@ -1,50 +1,43 @@
 "use strict";
-n.d(t, { A: () => M }), n(321073);
+n.d(t, { A: () => C }), n(321073);
 var r = n(812729),
     i = n.n(r),
-    a = n(311907),
-    s = n(562465),
+    s = n(311907),
+    a = n(562465),
     o = n(73153),
     l = n(77468),
     u = n(573648),
-    c = n(139675),
-    d = n(927813),
+    d = n(139675),
+    c = n(927813),
     _ = n(962173),
     f = n(351906),
-    p = n(652215);
-let h = "33kozedd0zs6fbauka98psnc7zwom2s",
-    m = +d.A.Millis.MINUTE,
-    g = (e) => `https://youtube.com/watch?v=${e}`,
-    E = 5 * d.A.Millis.MINUTE,
-    A = "https://api.twitch.tv/helix",
-    I = /live_user_(.*)-\{width\}/,
-    T = 128,
-    y = null,
-    S = 0,
-    v = null,
-    C = new Set(),
-    b = {};
-function N(e) {
-    return I.exec(e)?.[1];
-}
-function R(e, t, n) {
-    return s.Bo.get({
-        url: `${A}${e}`,
+    E = n(652215);
+let h = +c.A.Millis.MINUTE,
+    p = 5 * c.A.Millis.MINUTE,
+    m = /live_user_(.*)-\{width\}/,
+    g = null,
+    A = 0,
+    I = null,
+    T = new Set(),
+    S = {};
+function y(e, t, n) {
+    return a.Bo.get({
+        url: `https://api.twitch.tv/helix${e}`,
         query: t,
-        headers: { "Client-ID": h, Authorization: `Bearer ${n}` },
+        headers: { "Client-ID": "33kozedd0zs6fbauka98psnc7zwom2s", Authorization: `Bearer ${n}` },
         rejectWithError: !1,
     });
 }
-async function O(e, t) {
-    let n = b[e];
+async function N(e, t) {
+    let n = S[e];
     if (null != n) return n;
     let {
             body: { data: r },
-        } = await R("/games", { id: e }, t),
+        } = await y("/games", { id: e }, t),
         i = r[0]?.name;
-    return (b[e] = i), i;
+    return (S[e] = i), i;
 }
-class D {
+let O = new (class {
     _nextCheck;
     _started;
     constructor() {
@@ -55,8 +48,8 @@ class D {
     }
     stop() {
         (this._started = !1),
-            (v = null),
-            (S = 0),
+            (I = null),
+            (A = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             o.h.dispatch({ type: "STREAMING_UPDATE", stream: null });
     }
@@ -66,19 +59,19 @@ class D {
         try {
             let {
                     body: { data: n },
-                } = await R("/streams", { user_id: e.id, first: 1 }, t),
+                } = await y("/streams", { user_id: e.id, first: 1 }, t),
                 r = n[0];
             if (null == r || "live" !== r.type) throw Error("no stream");
-            let { thumbnail_url: i, game_id: a, title: s } = r,
-                o = { large_image: null != i ? ((0, c.Di)(p.fg2.TWITCH, i) ?? void 0) : void 0 },
-                l = await O(a, t),
-                d = u.A.get(p.fg2.TWITCH),
-                _ = N(i) ?? e.name,
-                f = null != s && "" !== s ? s.slice(0, T) : void 0,
-                h = null != l && "" !== l ? l.slice(0, T) : void 0;
+            let { thumbnail_url: i, game_id: s, title: a } = r,
+                o = { large_image: null != i ? ((0, d.Di)(E.fg2.TWITCH, i) ?? void 0) : void 0 },
+                l = await N(s, t),
+                c = u.A.get(E.fg2.TWITCH),
+                _ = m.exec(i)?.[1] ?? e.name,
+                f = null != a && "" !== a ? a.slice(0, 128) : void 0,
+                h = null != l && "" !== l ? l.slice(0, 128) : void 0;
             return {
-                url: d.getPlatformUserUrl?.({ id: e.id, name: _ }),
-                name: d.name,
+                url: c.getPlatformUserUrl?.({ id: e.id, name: _ }),
+                name: c.name,
                 assets: o,
                 details: f,
                 state: h,
@@ -93,11 +86,11 @@ class D {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((v = null), e.revoked || C.has(e.id))) return null;
+        if (((I = null), e.revoked || T.has(e.id))) return null;
         try {
             let {
                 body: { items: n },
-            } = await s.Bo.get({
+            } = await a.Bo.get({
                 url: "https://www.googleapis.com/youtube/v3/liveBroadcasts",
                 query: { part: "id,snippet", broadcastStatus: "active", broadcastType: "all" },
                 headers: { Authorization: `Bearer ${null != t ? t : e.accessToken}` },
@@ -107,17 +100,22 @@ class D {
             if (n.length < 1) throw Error("no stream");
             let {
                     id: r,
-                    snippet: { title: i, thumbnails: a },
+                    snippet: { title: i, thumbnails: s },
                 } = n[0],
-                o = { large_image: (0, c.Di)(p.fg2.YOUTUBE, a.high.url) ?? void 0 },
-                l = null != i && "" !== i ? i.slice(0, T) : void 0;
-            return (v = { url: g(r), name: u.A.get(p.fg2.YOUTUBE).name, details: l, assets: o });
+                o = { large_image: (0, d.Di)(E.fg2.YOUTUBE, s.high.url) ?? void 0 },
+                l = null != i && "" !== i ? i.slice(0, 128) : void 0;
+            return (I = {
+                url: `https://youtube.com/watch?v=${r}`,
+                name: u.A.get(E.fg2.YOUTUBE).name,
+                details: l,
+                assets: o,
+            });
         } catch (n) {
             if (401 === n.status && null == t)
                 return l.A.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return 403 === n.status && C.add(e.id), null;
+            return 403 === n.status && T.add(e.id), null;
         }
     }
     _check() {
@@ -125,40 +123,41 @@ class D {
         let e = _.A.getAccounts();
         if (null == e) return;
         null != this._nextCheck && clearTimeout(this._nextCheck);
-        let t = [p.fg2.TWITCH],
+        let t = [E.fg2.TWITCH],
             n = Date.now();
-        S <= n && (t.push(p.fg2.YOUTUBE), (S = n + E)),
+        A <= n && (t.push(E.fg2.YOUTUBE), (A = n + p)),
             Promise.allSettled(
                 e
                     .filter((e) => t.includes(e.type))
-                    .map((e) => (e.type === p.fg2.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))),
+                    .map((e) => (e.type === E.fg2.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))),
             ).then((e) => {
                 if (this._started) {
                     let t = e.find((e) => "fulfilled" === e.status && null != e.value)?.value;
-                    null == t && null != v && (t = v), o.h.dispatch({ type: "STREAMING_UPDATE", stream: t });
+                    null == t && null != I && (t = I), o.h.dispatch({ type: "STREAMING_UPDATE", stream: t });
                 }
                 this._scheduleCheck();
             });
     }
     _scheduleCheck() {
-        this._started && (this._nextCheck = setTimeout(() => this._check(), m));
+        this._started && (this._nextCheck = setTimeout(() => this._check(), h));
     }
+})();
+function R() {
+    f.A.enabled ? O.start() : O.stop();
 }
-let L = new D();
-function w() {
-    f.A.enabled ? L.start() : L.stop();
-}
-function x(e) {
-    if (i()(e.stream, y)) return !1;
-    y = e.stream ?? null;
-}
-class P extends a.Ay.Store {
+class v extends s.Ay.Store {
     static displayName = "ExternalStreamingStore";
     initialize() {
-        w(), this.waitFor(_.A, f.A), this.syncWith([f.A], w);
+        R(), this.waitFor(_.A, f.A), this.syncWith([f.A], R);
     }
     getStream() {
-        return y;
+        return g;
     }
 }
-let M = new P(o.h, { STREAMING_UPDATE: x, USER_CONNECTIONS_UPDATE: () => L._check() });
+let C = new v(o.h, {
+    STREAMING_UPDATE: function (e) {
+        if (i()(e.stream, g)) return !1;
+        g = e.stream ?? null;
+    },
+    USER_CONNECTIONS_UPDATE: () => O._check(),
+});

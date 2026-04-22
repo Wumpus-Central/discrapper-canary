@@ -5,34 +5,31 @@ class r {
         return { ...this };
     }
     set(e, t) {
-        let n = this,
-            r = n[e];
-        return t instanceof Date && r instanceof Date && t.getTime() === r.getTime()
+        let n = this[e];
+        return t instanceof Date && n instanceof Date && t.getTime() === n.getTime()
             ? this
-            : r !== t
+            : n !== t
               ? new this.constructor({ ...this, [e]: t })
               : this;
     }
     merge(e) {
-        let t = this,
-            n = null;
-        for (let r in e) {
-            if (!e.hasOwnProperty(r)) continue;
-            let i = t[r],
-                a = e[r];
-            (a instanceof Date && i instanceof Date && a.getTime() === i.getTime()) ||
-                (i !== a && (null == n && (n = { ...this }), (n[r] = e[r])));
+        let t = null;
+        for (let n in e) {
+            if (!e.hasOwnProperty(n)) continue;
+            let r = this[n],
+                i = e[n];
+            (i instanceof Date && r instanceof Date && i.getTime() === r.getTime()) ||
+                (r !== i && (null == t && (t = { ...this }), (t[n] = e[n])));
         }
-        return null != n ? new this.constructor(n) : this;
+        return null != t ? new this.constructor(t) : this;
     }
     update(e, t, n) {
         null == n && ((n = t), (t = void 0));
-        let i = this,
-            a = i[e];
+        let i = this[e];
         return (
-            a instanceof r || (a instanceof Array ? (a = [...a]) : a instanceof Object && (a = { ...a })),
-            void 0 === a && (a = t),
-            this.set(e, n(a))
+            i instanceof r || (i instanceof Array ? (i = [...i]) : i instanceof Object && (i = { ...i })),
+            void 0 === i && (i = t),
+            this.set(e, n(i))
         );
     }
 }

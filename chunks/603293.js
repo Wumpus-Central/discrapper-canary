@@ -1,36 +1,37 @@
 n.d(t, { b: () => m });
 var i = n(627968),
     s = n(64700),
-    l = n(158954),
-    r = n(397927),
-    a = n(500380),
-    o = n(518977),
-    d = n(985018),
+    l = n(189213),
+    a = n(834730),
+    r = n(192308),
+    o = n(500380),
+    d = n(518977),
+    u = n(985018),
     c = n(223784);
-function u(e) {
-    let { country: t, countryName: n, ...o } = e,
-        { onClose: u } = o,
-        m = s.useCallback(
-            () => (null == t ? null : (0, i.jsx)("img", { alt: "", className: c.b, src: (0, a.t)(t) })),
+function g(e) {
+    let { country: t, countryName: n, ...r } = e,
+        { onClose: d } = r,
+        g = s.useCallback(
+            () => (null == t ? null : (0, i.jsx)("img", { alt: "", className: c.b, src: (0, o.t)(t) })),
             [t],
         ),
-        g = null != n && null != t ? { text: n, leadingIcon: m } : (n ?? void 0),
+        m = null != n && null != t ? { text: n, leadingIcon: g } : (n ?? void 0),
         _ = s.useCallback(() => {
-            window.open("https://support.discord.com/hc/articles/39799791912087", "_blank"), u();
-        }, [u]);
+            window.open("https://support.discord.com/hc/articles/39799791912087", "_blank"), d();
+        }, [d]);
     return (0, i.jsx)(l.Modal, {
-        ...o,
-        title: d.intl.string(d.t.PuB1W7),
-        subtitle: g,
-        actions: [{ text: d.intl.string(d.t.PuB1W7), onClick: _, variant: "primary" }],
-        children: (0, i.jsx)(r.Text, {
+        ...r,
+        title: u.intl.string(u.t.PuB1W7),
+        subtitle: m,
+        actions: [{ text: u.intl.string(u.t.PuB1W7), onClick: _, variant: "primary" }],
+        children: (0, i.jsx)(a.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: d.intl.string(d.t["21skUa"]),
+            children: u.intl.string(u.t["21skUa"]),
         }),
     });
 }
 function m(e) {
-    let t = null != e ? (0, o.Gw)(e) : null;
-    (0, r.qfG)((n) => (0, i.jsx)(u, { ...n, country: e, countryName: t }));
+    let t = null != e ? (0, d.Gw)(e) : null;
+    (0, r.openModal)((n) => (0, i.jsx)(g, { ...n, country: e, countryName: t }));
 }

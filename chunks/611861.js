@@ -4,30 +4,30 @@ var i = n(627968),
     s = n(64700),
     l = n(337836),
     a = n(311907),
-    r = n(397927),
+    r = n(638495),
     o = n(318009),
     d = n(638421),
     c = n(196492),
     u = n(663413),
     h = n(404374),
     p = n(573435),
-    A = n(750506),
-    f = n(267102),
-    g = n(580960),
-    _ = n(237631),
+    f = n(750506),
+    A = n(267102),
+    _ = n(580960),
+    g = n(237631),
     m = n(355052),
-    E = n(8088),
-    x = n(652215);
+    x = n(8088),
+    E = n(652215);
 n(71071), n(939857), n(40876), n(851341), n(921955), a.Ay.initialize();
 let y = function () {
     return (
         s.useEffect(
             () => (
-                g.A.initialize(),
+                _.A.initialize(),
                 c.A.initialize(),
-                _.A.init(),
+                g.A.init(),
                 () => {
-                    g.A.terminate(), c.A.terminate();
+                    _.A.terminate(), c.A.terminate();
                 }
             ),
             [],
@@ -40,16 +40,16 @@ let y = function () {
                         children: [
                             (0, i.jsx)(p.Al, {}),
                             (0, i.jsx)(h.Ay, {}),
-                            (0, i.jsx)(f.Wr, {
-                                appContext: x.BRT.OVERLAY,
+                            (0, i.jsx)(A.Wr, {
+                                appContext: E.BRT.OVERLAY,
                                 renderWindow: window,
-                                children: (0, i.jsxs)(A.Yf, {
+                                children: (0, i.jsxs)(f.Yf, {
                                     children: [
-                                        (0, i.jsx)(E.A, {}),
-                                        (0, i.jsx)(r.bM6, {}),
+                                        (0, i.jsx)(x.A, {}),
+                                        (0, i.jsx)(r.b, {}),
                                         (0, i.jsx)(o.A, {}),
                                         (0, i.jsx)(l.P, {}),
-                                        (0, i.jsx)(A.C8, {}),
+                                        (0, i.jsx)(f.C8, {}),
                                     ],
                                 }),
                             }),

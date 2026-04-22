@@ -1,55 +1,48 @@
-"use strict";
-n.d(t, { A: () => h });
-var r = n(311907),
+n.d(t, { A: () => u });
+var l = n(311907),
     i = n(73153);
-let s = [],
-    a = s,
-    o = (e) => {
-        c(e.shopHome.userDiscounts);
-    },
-    l = (e) => {
-        c(e.categories.userDiscounts);
-    },
-    u = (e) => {
-        let { userDiscounts: t } = e;
-        c(t);
-    },
-    c = (e) => {
-        a = null != e && e.length > 0 ? e : s;
-    },
-    d = (e) => {
-        let t = e.appliedUserDiscounts;
-        if (null != t && t.length > 0) {
-            let e = a.filter((e) => !t.some((t) => t.discount.id === e.discountId));
-            if (e.length !== a.length) return (a = e), !0;
-        }
-        return !1;
-    },
-    _ = (e) => {
-        let t = e.discountIds;
-        if (t.length > 0) {
-            let e = a.filter((e) => !t.includes(e.discountId));
-            if (e.length !== a.length) return (a = e), !0;
-        }
-        return !1;
-    },
-    f = () => {
-        a = s;
+let a = [],
+    r = a,
+    s = (e) => {
+        r = null != e && e.length > 0 ? e : a;
     };
-class p extends r.Ay.Store {
+class o extends l.Ay.Store {
     static displayName = "CollectiblesUserDiscountStore";
     getUserDiscounts() {
-        return a;
+        return r;
     }
     getUserDiscount(e) {
-        return a.find((t) => t.discountId === e);
+        return r.find((t) => t.discountId === e);
     }
 }
-let h = new p(i.h, {
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: o,
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: l,
-    SKU_PURCHASE_SUCCESS: d,
-    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: _,
-    WISHLIST_USER_DISCOUNTS_RESPONSE_SUCCESS: u,
-    LOGOUT: f,
+let u = new o(i.h, {
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: (e) => {
+        s(e.shopHome.userDiscounts);
+    },
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
+        s(e.categories.userDiscounts);
+    },
+    SKU_PURCHASE_SUCCESS: (e) => {
+        let t = e.appliedUserDiscounts;
+        if (null != t && t.length > 0) {
+            let e = r.filter((e) => !t.some((t) => t.discount.id === e.discountId));
+            if (e.length !== r.length) return (r = e), !0;
+        }
+        return !1;
+    },
+    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: (e) => {
+        let t = e.discountIds;
+        if (t.length > 0) {
+            let e = r.filter((e) => !t.includes(e.discountId));
+            if (e.length !== r.length) return (r = e), !0;
+        }
+        return !1;
+    },
+    WISHLIST_USER_DISCOUNTS_RESPONSE_SUCCESS: (e) => {
+        let { userDiscounts: t } = e;
+        s(t);
+    },
+    LOGOUT: () => {
+        r = a;
+    },
 });

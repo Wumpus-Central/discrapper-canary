@@ -1,57 +1,58 @@
-n.d(e, { default: () => b });
+n.d(e, { default: () => m });
 var i = n(627968),
     o = n(64700),
-    a = n(397927),
-    l = n(975807),
-    s = n(95035),
-    r = n(400492),
-    d = n(985018),
-    p = n(654923);
-let c = [
+    a = n(935462),
+    l = n(834730),
+    s = n(975807),
+    r = n(95035),
+    d = n(400492),
+    p = n(985018),
+    c = n(872244);
+let u = [
     { preBold: "That's pretty...", bold: "fly!" },
     { preBold: "On Point will make sure to", bold: " tick ", postBold: "a look at it!" },
     { preBold: "You're...un", bold: "bee ", postBold: "lievable!" },
 ];
-function u(t) {
+function b(t) {
     let { punConfig: e } = t;
     return (0, i.jsxs)(i.Fragment, {
         children: [e.preBold, (0, i.jsx)("b", { children: (0, i.jsx)("i", { children: e.bold }) }), e.postBold],
     });
 }
-function b(t) {
-    let { transitionState: e, onClose: n, asanaTask: b } = t;
+function m(t) {
+    let { transitionState: e, onClose: n, asanaTask: m } = t;
     o.useEffect(() => {
-        (0, r.Ak)("success", 0.1);
+        (0, d.Ak)("success", 0.1);
     }, []);
-    let m = o.useRef(c[Math.floor(Math.random() * c.length)]).current;
-    return (0, i.jsx)(a.EOs, {
+    let h = o.useRef(u[Math.floor(Math.random() * u.length)]).current;
+    return (0, i.jsx)(a.EO, {
         "data-migration-pending": !0,
-        className: p.Nk,
+        className: c.Nk,
         transitionState: e,
-        "aria-label": d.intl.string(d.t.mCCdwi),
+        "aria-label": p.intl.string(p.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
-        children: (0, i.jsxs)(a.$mQ, {
+        children: (0, i.jsxs)(a.$m, {
             "data-migration-pending": !0,
             style: { overflow: "hidden", paddingRight: "0px" },
-            className: p.jE,
+            className: c.jE,
             paddingFix: !1,
             children: [
-                (0, i.jsx)(a.s_y, {
+                (0, i.jsx)(a.s_, {
                     "data-migration-pending": !0,
                     onClick: () => {
                         n?.();
                     },
-                    className: p.b,
+                    className: c.b,
                 }),
-                (0, i.jsxs)(a.Text, {
-                    className: p.KP,
+                (0, i.jsxs)(l.E, {
+                    className: c.KP,
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",
-                        (0, i.jsx)(s.A, { onClick: () => (0, l.A)(b.permalink_url), children: "bug" }),
+                        (0, i.jsx)(r.A, { onClick: () => (0, s.A)(m.permalink_url), children: "bug" }),
                         "!",
                         (0, i.jsx)("br", {}),
-                        (0, i.jsx)(u, { punConfig: m }),
+                        (0, i.jsx)(b, { punConfig: h }),
                     ],
                 }),
             ],

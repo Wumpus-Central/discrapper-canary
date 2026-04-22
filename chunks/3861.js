@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(95701),
-    i = n(734057),
-    a = n(977997);
-function s(e) {
-    let { channelId: t, userId: n, activity: s } = e,
-        o = i.A.getChannel(t);
+    l = n(734057),
+    i = n(977997);
+function a(e) {
+    let { channelId: t, userId: n, activity: a } = e,
+        s = l.A.getChannel(t);
     return (
-        (s?.session_id == null || (null != o && (0, r.pQ)(o.type))
+        (a?.session_id == null || (null != s && (0, r.pQ)(s.type))
             ? t
-            : a.A.getVoiceStateForSession(n, s?.session_id)?.channelId) ?? void 0
+            : i.A.getVoiceStateForSession(n, a?.session_id)?.channelId) ?? void 0
     );
 }

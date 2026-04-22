@@ -1,70 +1,74 @@
-"use strict";
-n.d(t, { A: () => q });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(407045),
-    l = n(311907),
-    u = n(397927),
-    c = n(387755),
-    d = n(517499),
-    _ = n(956793),
-    f = n(803306),
-    p = n(712960),
-    h = n(793574),
-    m = n(58149),
-    E = n(688810),
-    g = n(571694),
-    A = n(47167),
-    I = n(713654),
-    T = n(573435),
-    S = n(481947),
-    y = n(260509),
-    v = n(616356),
-    N = n(71393),
-    C = n(430452),
-    R = n(287809),
-    O = n(607567),
-    b = n(503509),
-    D = n(531685),
-    L = n(954571),
-    w = n(486020),
-    M = n(203982),
-    P = n(427262),
-    x = n(313961),
-    k = n(850226),
-    U = n(717319),
-    G = n(384059),
-    F = n(652215),
-    V = n(650583),
-    B = n(731854),
-    H = n(985018),
-    j = n(384043),
-    Y = n(604949);
-let W = 80,
-    K = 40,
-    $ = 32;
-function z(e) {
-    let { voiceState: t, user: n, channel: i } = e,
-        s = (0, l.bG)([v.A], () => v.A.getStreamForUser(n.id, i.guild_id)),
-        a = (0, P.tx)(n);
-    return (0, r.jsxs)("div", {
-        className: j.q7,
+l.d(t, { A: () => ee });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(517738),
+    o = l(311907),
+    c = l(97808),
+    d = l(778712),
+    u = l(834730),
+    h = l(43990),
+    g = l(534514),
+    f = l(827734),
+    A = l(573613),
+    v = l(821609),
+    _ = l(265872),
+    m = l(387755),
+    p = l(517499),
+    x = l(956793),
+    C = l(803306),
+    E = l(712960),
+    I = l(793574),
+    N = l(58149),
+    w = l(688810),
+    b = l(571694),
+    L = l(47167),
+    y = l(713654),
+    D = l(573435),
+    j = l(481947),
+    M = l(260509),
+    R = l(616356),
+    T = l(71393),
+    O = l(430452),
+    U = l(287809),
+    V = l(607567),
+    k = l(503509),
+    G = l(531685),
+    S = l(954571),
+    Z = l(486020),
+    P = l(203982),
+    F = l(427262),
+    B = l(313961),
+    H = l(850226),
+    X = l(717319),
+    z = l(384059),
+    W = l(652215),
+    Y = l(650583),
+    K = l(731854),
+    $ = l(985018),
+    J = l(384043),
+    q = l(604949);
+function Q(e) {
+    let { voiceState: t, user: l, channel: i } = e,
+        s = (0, o.bG)([R.A], () => R.A.getStreamForUser(l.id, i.guild_id)),
+        a = (0, F.tx)(l);
+    return (0, n.jsxs)("div", {
+        className: J.q7,
         children: [
-            (0, r.jsxs)("div", {
-                className: j.G7,
+            (0, n.jsxs)("div", {
+                className: J.G7,
                 children: [
-                    (0, r.jsx)(u.euF, {
-                        "aria-label": n.username,
-                        src: n.getAvatarURL(i.guild_id, $, !1, !1),
-                        size: u._3J.SIZE_32,
+                    (0, n.jsx)(c.eu, {
+                        "aria-label": l.username,
+                        src: l.getAvatarURL(i.guild_id, 32, !1, !1),
+                        size: d._3.SIZE_32,
                     }),
-                    (0, r.jsx)(u.Text, { variant: "text-sm/medium", children: a }),
+                    (0, n.jsx)(u.E, { variant: "text-sm/medium", children: a }),
                 ],
             }),
-            (0, r.jsx)(S.Kc, {
-                user: n,
+            (0, n.jsx)(j.Kc, {
+                user: l,
                 channelId: i.id,
                 mute: t.isVoiceMuted(),
                 deaf: t.isVoiceDeafened(),
@@ -76,142 +80,142 @@ function z(e) {
         ],
     });
 }
-function q(e) {
-    let { animatedStyle: t, x: n, y: s, channel: S, senderId: v } = e,
-        { analyticsLocations: $ } = (0, E.Ay)(h.A.INCOMING_CALL_MODAL),
-        q = i.useRef(null),
-        Z = (0, l.bG)([D.A], () => D.A.windowSize()),
-        X = (0, l.bG)([N.A], () => N.A.getGuild(S.guild_id)),
-        Q = null != X ? w.Ay.getGuildIconURL({ id: X.id, icon: X.icon, size: K }) : null,
-        J = (0, g.Y)(S, K, !0) ?? Q,
-        ee = (0, A.Ay)(S),
-        et = (0, l.yK)([O.Ay, x.A], () =>
-            O.Ay.getVoiceStatesForChannel(S).filter((e) => !x.A.getGuildRingingUsers(S.id).has(e.user.id)),
+function ee(e) {
+    let { animatedStyle: t, x: l, y: s, channel: j, senderId: R } = e,
+        { analyticsLocations: ee } = (0, w.Ay)(I.A.INCOMING_CALL_MODAL),
+        et = i.useRef(null),
+        el = (0, o.bG)([G.A], () => G.A.windowSize()),
+        en = (0, o.bG)([T.A], () => T.A.getGuild(j.guild_id)),
+        ei = null != en ? Z.Ay.getGuildIconURL({ id: en.id, icon: en.icon, size: 40 }) : null,
+        es = (0, b.Y)(j, 40, !0) ?? ei,
+        ea = (0, L.Ay)(j),
+        er = (0, o.yK)([V.Ay, B.A], () =>
+            V.Ay.getVoiceStatesForChannel(j).filter((e) => !B.A.getGuildRingingUsers(j.id).has(e.user.id)),
         ),
-        [en, er] = (0, l.yK)([C.Ay], () => [C.Ay.supports(B.O5.VIDEO), Object.keys(C.Ay.getVideoDevices()).length]),
-        ei = (0, l.bG)([x.A], () => x.A.getVideoParticipants(S.id).length > 0),
-        es = (0, l.bG)([R.default], () => R.default.getUser(v)),
-        ea = (0, P.tx)(es),
-        eo = ei && en && er > 0,
-        el = i.useCallback((e) => {
-            null != e.top && null != e.left && d.A.move(e.left, e.top);
+        [eo, ec] = (0, o.yK)([O.Ay], () => [O.Ay.supports(K.O5.VIDEO), Object.keys(O.Ay.getVideoDevices()).length]),
+        ed = (0, o.bG)([B.A], () => B.A.getVideoParticipants(j.id).length > 0),
+        eu = (0, o.bG)([U.default], () => U.default.getUser(R)),
+        eh = (0, F.tx)(eu),
+        eg = ed && eo && ec > 0,
+        ef = i.useCallback((e) => {
+            null != e.top && null != e.left && p.A.move(e.left, e.top);
         }, []),
-        eu = i.useCallback(() => {
-            (0, G.X)($[0], G.O.DISCONNECT),
-                L.default.track(F.HAw.RING_CALL_DECLINED, { location: $[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
-                c.A.stopRinging(S.id);
-        }, [S, $]),
-        ec = i.useCallback(() => {
-            (0, G.X)($[0], G.O.JOIN_CALL),
-                L.default.track(F.HAw.RING_CALL_ACCEPTED, { location: $[0], guild_id: S.guild_id, ...(0, m.dI)(S) }),
-                _.default.selectVoiceChannel(S.id);
-        }, [S, $]);
+        eA = i.useCallback(() => {
+            (0, z.X)(ee[0], z.O.DISCONNECT),
+                S.default.track(W.HAw.RING_CALL_DECLINED, { location: ee[0], guild_id: j.guild_id, ...(0, N.dI)(j) }),
+                m.A.stopRinging(j.id);
+        }, [j, ee]),
+        ev = i.useCallback(() => {
+            (0, z.X)(ee[0], z.O.JOIN_CALL),
+                S.default.track(W.HAw.RING_CALL_ACCEPTED, { location: ee[0], guild_id: j.guild_id, ...(0, N.dI)(j) }),
+                x.default.selectVoiceChannel(j.id);
+        }, [j, ee]);
     i.useEffect(() => {
         let e = (e) => {
-            e.key === V.dh.ESCAPE && c.A.stopRinging(S.id);
+            e.key === Y.dh.ESCAPE && m.A.stopRinging(j.id);
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
-    }, [S]),
+    }, [j]),
         i.useEffect(
             () => (
-                M._.subscribe(F.jej.CALL_ACCEPT, ec),
+                P._.subscribe(W.jej.CALL_ACCEPT, ev),
                 () => {
-                    M._.unsubscribe(F.jej.CALL_ACCEPT, ec);
+                    P._.unsubscribe(W.jej.CALL_ACCEPT, ev);
                 }
             ),
-            [ec],
+            [ev],
         ),
         i.useEffect(() => {
-            null == es && (0, f.wz)(v);
-        }, [v, es]);
-    let ed = (0, I.gU)(S);
-    return (0, r.jsx)(E.f5, {
-        value: $,
-        children: (0, r.jsx)(p.A, {
-            className: j.iE,
-            selector: `.${j.zr}`,
-            initialPosition: { left: n, top: s },
-            maxX: Z.width,
-            maxY: Z.height,
-            onDragEnd: el,
+            null == eu && (0, C.wz)(R);
+        }, [R, eu]);
+    let e_ = (0, y.gU)(j);
+    return (0, n.jsx)(w.f5, {
+        value: ee,
+        children: (0, n.jsx)(E.A, {
+            className: J.iE,
+            selector: `.${J.zr}`,
+            initialPosition: { left: l, top: s },
+            maxX: el.width,
+            maxY: el.height,
+            onDragEnd: ef,
             dragAnywhere: !0,
-            children: (0, r.jsx)(u.NPJ, {
+            children: (0, n.jsx)(h.N, {
                 children: (e) =>
-                    (0, r.jsxs)(o.animated.div, {
-                        className: a()(j.zr, Y.a8, e),
-                        style: { ...t, "--custom-modal-width": `${b.c.width}px` },
+                    (0, n.jsxs)(r.animated.div, {
+                        className: a()(J.zr, q.a8, e),
+                        style: { ...t, "--custom-modal-width": `${k.c.width}px` },
                         children: [
-                            (0, r.jsxs)("div", {
-                                className: j.wx,
+                            (0, n.jsxs)("div", {
+                                className: J.wx,
                                 children: [
-                                    null != es &&
-                                        (0, r.jsx)(u.euF, {
-                                            className: j.gX,
+                                    null != eu &&
+                                        (0, n.jsx)(c.eu, {
+                                            className: J.gX,
                                             "aria-label": "user",
-                                            src: es?.getAvatarURL(S.guild_id, W, !1, !1),
-                                            size: u._3J.SIZE_80,
+                                            src: eu?.getAvatarURL(j.guild_id, 80, !1, !1),
+                                            size: d._3.SIZE_80,
                                         }),
-                                    (0, r.jsx)(u.Heading, {
+                                    (0, n.jsx)(g.D, {
                                         variant: "heading-lg/semibold",
-                                        className: a()(j.gX, j.DD),
+                                        className: a()(J.gX, J.DD),
                                         children:
-                                            null != es
-                                                ? H.intl.format(H.t.M3F6cv, { username: ea })
-                                                : H.intl.string(H.t["3rE1P8"]),
+                                            null != eu
+                                                ? $.intl.format($.t.M3F6cv, { username: eh })
+                                                : $.intl.string($.t["3rE1P8"]),
                                     }),
-                                    (0, r.jsxs)("div", {
-                                        className: j.C5,
+                                    (0, n.jsxs)("div", {
+                                        className: J.C5,
                                         children: [
-                                            (null != X || null != J) &&
-                                                (0, r.jsx)(T.Ay, {
-                                                    mask: T.hW.SQUIRCLE,
-                                                    width: K,
-                                                    height: K,
-                                                    className: j.NR,
+                                            (null != en || null != es) &&
+                                                (0, n.jsx)(D.Ay, {
+                                                    mask: D.hW.SQUIRCLE,
+                                                    width: 40,
+                                                    height: 40,
+                                                    className: J.NR,
                                                     children:
-                                                        null != J
-                                                            ? (0, r.jsx)("img", {
-                                                                  alt: X?.name ?? ee ?? "",
-                                                                  src: J,
-                                                                  width: K,
-                                                                  height: K,
+                                                        null != es
+                                                            ? (0, n.jsx)("img", {
+                                                                  alt: en?.name ?? ea ?? "",
+                                                                  src: es,
+                                                                  width: 40,
+                                                                  height: 40,
                                                               })
-                                                            : null != X
-                                                              ? (0, r.jsx)("div", {
-                                                                    className: j.$r,
-                                                                    children: (0, r.jsx)("div", {
-                                                                        className: j.q9,
-                                                                        children: (0, y.Rb)(X),
+                                                            : null != en
+                                                              ? (0, n.jsx)("div", {
+                                                                    className: J.$r,
+                                                                    children: (0, n.jsx)("div", {
+                                                                        className: J.q9,
+                                                                        children: (0, M.Rb)(en),
                                                                     }),
                                                                 })
                                                               : null,
                                                 }),
-                                            (0, r.jsxs)("div", {
-                                                className: j.Ug,
+                                            (0, n.jsxs)("div", {
+                                                className: J.Ug,
                                                 children: [
-                                                    (0, r.jsxs)("div", {
-                                                        className: j.HA,
+                                                    (0, n.jsxs)("div", {
+                                                        className: J.HA,
                                                         children: [
-                                                            null != ed &&
-                                                                (0, r.jsx)(ed, {
+                                                            null != e_ &&
+                                                                (0, n.jsx)(e_, {
                                                                     size: "xs",
-                                                                    color: u.LU0.colors.TEXT_DEFAULT,
-                                                                    className: j.NR,
+                                                                    color: f.A.colors.TEXT_DEFAULT,
+                                                                    className: J.NR,
                                                                 }),
-                                                            (0, r.jsx)(u.Text, {
+                                                            (0, n.jsx)(u.E, {
                                                                 variant: "text-md/semibold",
                                                                 color: "text-default",
-                                                                className: j.zb,
-                                                                children: ee,
+                                                                className: J.zb,
+                                                                children: ea,
                                                             }),
                                                         ],
                                                     }),
-                                                    X?.name != null &&
-                                                        (0, r.jsx)(u.Text, {
+                                                    en?.name != null &&
+                                                        (0, n.jsx)(u.E, {
                                                             variant: "text-sm/medium",
                                                             color: "text-muted",
-                                                            className: j.zb,
-                                                            children: X.name,
+                                                            className: J.zb,
+                                                            children: en.name,
                                                         }),
                                                 ],
                                             }),
@@ -219,57 +223,57 @@ function q(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsxs)(u.HOs, {
-                                className: j.XG,
+                            (0, n.jsxs)(A.Ip, {
+                                className: J.XG,
                                 children: [
-                                    (0, r.jsx)(u.Text, {
+                                    (0, n.jsx)(u.E, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        className: j.bi,
-                                        children: H.intl.format(H.t.e95u3C, { count: et.length }),
+                                        className: J.bi,
+                                        children: $.intl.format($.t.e95u3C, { count: er.length }),
                                     }),
-                                    (0, r.jsx)("div", {
-                                        className: j.Xk,
-                                        children: et.map((e) => {
-                                            let { voiceState: t, user: n } = e;
-                                            return (0, r.jsx)(z, { voiceState: t, user: n, channel: S }, n.id);
+                                    (0, n.jsx)("div", {
+                                        className: J.Xk,
+                                        children: er.map((e) => {
+                                            let { voiceState: t, user: l } = e;
+                                            return (0, n.jsx)(Q, { voiceState: t, user: l, channel: j }, l.id);
                                         }),
                                     }),
                                 ],
                             }),
-                            (0, r.jsxs)("div", {
-                                className: j.o1,
+                            (0, n.jsxs)("div", {
+                                className: J.o1,
                                 children: [
-                                    (0, r.jsx)(u.Button, {
-                                        text: H.intl.string(H.t.L5eIZ2),
+                                    (0, n.jsx)(v.$, {
+                                        text: $.intl.string($.t.L5eIZ2),
                                         fullWidth: !0,
                                         variant: "secondary",
-                                        onClick: eu,
+                                        onClick: eA,
                                     }),
-                                    eo
-                                        ? (0, r.jsx)(u.YNO, {
-                                              targetElementRef: q,
+                                    eg
+                                        ? (0, n.jsx)(_.Y, {
+                                              targetElementRef: et,
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
-                                                  return (0, r.jsx)(k.A, { onClose: t, channel: S });
+                                                  return (0, n.jsx)(H.A, { onClose: t, channel: j });
                                               },
                                               position: "bottom",
                                               children: (e) => {
                                                   let { onClick: t } = e;
-                                                  return (0, r.jsx)(U.A, {
-                                                      ref: q,
-                                                      text: H.intl.string(H.t["96ANUN"]),
+                                                  return (0, n.jsx)(X.A, {
+                                                      ref: et,
+                                                      text: $.intl.string($.t["96ANUN"]),
                                                       fullWidth: !0,
                                                       variant: "active",
-                                                      onClick: ec,
-                                                      caretTooltipText: H.intl.string(H.t["+1H47t"]),
+                                                      onClick: ev,
+                                                      caretTooltipText: $.intl.string($.t["+1H47t"]),
                                                       onContextMenu: t,
                                                   });
                                               },
                                           })
-                                        : (0, r.jsx)(u.Button, {
-                                              text: H.intl.string(H.t["96ANUN"]),
-                                              onClick: ec,
+                                        : (0, n.jsx)(v.$, {
+                                              text: $.intl.string($.t["96ANUN"]),
+                                              onClick: ev,
                                               fullWidth: !0,
                                               variant: "active",
                                           }),

@@ -1,65 +1,69 @@
-n.d(t, { A: () => m });
-var i = n(627968),
-    l = n(64700),
-    a = n(397927),
-    r = n(793574),
-    s = n(688810),
-    o = n(975571),
-    d = n(993401),
-    c = n(652215),
-    u = n(985018);
-let g = o.A.getArticleURL(c.MVz.CUSTOM_PROFILES_WISHLIST);
-function m(e) {
-    let { isOwner: t, isWishlistPublic: n, onToggleVisibility: o } = e,
-        c = l.useRef(null),
-        { analyticsLocations: m } = (0, s.Ay)(r.A.USER_PROFILE_WISHLIST),
-        x = l.useMemo(
+i.d(t, { A: () => A });
+var n = i(627968),
+    l = i(64700),
+    s = i(477782),
+    a = i(509434),
+    r = i(265872),
+    d = i(861672),
+    o = i(365199),
+    c = i(793574),
+    u = i(688810),
+    g = i(975571),
+    m = i(993401),
+    h = i(652215),
+    x = i(985018);
+let p = g.A.getArticleURL(h.MVz.CUSTOM_PROFILES_WISHLIST);
+function A(e) {
+    let { isOwner: t, isWishlistPublic: i, onToggleVisibility: g } = e,
+        h = l.useRef(null),
+        { analyticsLocations: A } = (0, u.Ay)(c.A.USER_PROFILE_WISHLIST),
+        j = l.useMemo(
             () =>
                 t
-                    ? (0, i.jsxs)(a.rXV, {
+                    ? (0, n.jsxs)(s.rX, {
                           children: [
-                              (0, i.jsx)(a.fPC, {
+                              (0, n.jsx)(s.fP, {
                                   id: "wishlist-privacy-setting",
-                                  label: u.intl.string(u.t.b2nFyA),
-                                  subtext: u.intl.string(u.t.dw58pE),
-                                  checked: n,
-                                  action: o,
+                                  label: x.intl.string(x.t.b2nFyA),
+                                  subtext: x.intl.string(x.t.dw58pE),
+                                  checked: i,
+                                  action: g,
                               }),
-                              (0, i.jsx)(a.bXX, {}),
-                              (0, i.jsx)(a.Drp, {
+                              (0, n.jsx)(s.bX, {}),
+                              (0, n.jsx)(s.Dr, {
                                   id: "wishlist-privacy-setting2",
-                                  label: u.intl.string(u.t.hvVgAZ),
-                                  icon: a.I9m,
-                                  trailingIndicator: { type: "icon", icon: a.I9m },
-                                  action: () => window.open(g),
+                                  label: x.intl.string(x.t.hvVgAZ),
+                                  icon: a.I,
+                                  trailingIndicator: { type: "icon", icon: a.I },
+                                  action: () => window.open(p),
                               }),
                           ],
                       })
                     : null,
-            [t, n, o],
+            [t, i, g],
         );
-    return null == x
+    return null == j
         ? null
-        : (0, i.jsx)(s.f5, {
-              value: m,
-              children: (0, i.jsx)(a.YNO, {
-                  targetElementRef: c,
+        : (0, n.jsx)(u.f5, {
+              value: A,
+              children: (0, n.jsx)(r.Y, {
+                  targetElementRef: h,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, i.jsx)(a.W1t, {
+                      return (0, n.jsx)(d.W, {
                           "data-menu-migrated": !0,
                           navId: "wishlist-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
-                          "aria-label": u.intl.string(u.t.GdNkvG),
-                          children: x,
+                          "aria-label": x.intl.string(x.t.GdNkvG),
+                          children: j,
                       });
                   },
                   children: (e) =>
-                      (0, i.jsx)(d.q3, {
-                          buttonRef: c,
-                          icon: a.jNK,
-                          tooltipText: u.intl.string(u.t["UKOtz+"]),
+                      (0, n.jsx)(m.q3, {
+                          buttonRef: h,
+                          icon: o.j,
+                          tooltipText: x.intl.string(x.t["UKOtz+"]),
                           action: "PRESS_OPTIONS",
                           ...e,
                       }),

@@ -1,10 +1,10 @@
 a.d(l, { V: () => d });
 var t = a(627968),
-    o = a(64700),
-    n = a(397927),
+    n = a(64700),
+    o = a(821609),
     i = a(459192),
-    s = a(990078),
-    r = a(557464);
+    r = a(990078),
+    s = a(557464);
 let d = {
     title: "Tooltip",
     stories: [
@@ -17,18 +17,18 @@ let d = {
                         text: l,
                         position: a,
                         align: i,
-                        caretAlign: r,
+                        caretAlign: s,
                         customOffset: d,
                         delay: u,
                         spacing: c,
                         ariaHidden: b,
                         ...p
                     } = e,
-                    m = o.useMemo(() => {
-                        if ("center" !== r && null != r)
-                            return "custom" === r ? { align: r, customOffset: d } : { align: r };
-                    }, [r, d]);
-                return (0, t.jsx)(s.m, {
+                    m = n.useMemo(() => {
+                        if ("center" !== s && null != s)
+                            return "custom" === s ? { align: s, customOffset: d } : { align: s };
+                    }, [s, d]);
+                return (0, t.jsx)(r.m, {
                     text: l,
                     position: a,
                     align: i,
@@ -37,7 +37,7 @@ let d = {
                     caretConfig: m,
                     ariaHidden: b,
                     ...p,
-                    children: (0, t.jsx)(n.Button, { variant: "primary", text: "Hover me" }),
+                    children: (0, t.jsx)(o.$, { variant: "primary", text: "Hover me" }),
                 });
             },
             controls: {
@@ -91,37 +91,37 @@ let d = {
                 let {
                         title: l,
                         body: a,
-                        showAsset: s,
+                        showAsset: r,
                         assetSize: d,
                         padding: u,
                         position: c,
                         align: b,
                         caretAlign: p,
                         customOffset: m,
-                        delay: x,
-                        spacing: v,
-                        forceOpen: h,
-                        ...y
+                        delay: h,
+                        spacing: x,
+                        forceOpen: g,
+                        ...f
                     } = e,
-                    f = o.useMemo(() => {
+                    v = n.useMemo(() => {
                         if ("center" !== p && null != p)
                             return "custom" === p ? { align: p, customOffset: m } : { align: p };
                     }, [p, m]),
-                    g = o.useMemo(() => (s ? { type: "image", src: r.A, aspectRatio: "1/1" } : void 0), [s]);
+                    y = n.useMemo(() => (r ? { type: "image", src: s.A, aspectRatio: "1/1" } : void 0), [r]);
                 return (0, t.jsx)(i.u, {
                     title: l,
                     body: a,
                     position: c,
                     align: b,
                     padding: u,
-                    delay: x,
-                    spacing: v,
-                    caretConfig: f,
-                    asset: g,
+                    delay: h,
+                    spacing: x,
+                    caretConfig: v,
+                    asset: y,
                     assetSize: d,
-                    forceOpen: h,
-                    ...y,
-                    children: (0, t.jsx)(n.Button, { variant: "primary", text: "Hover me (rich)" }),
+                    forceOpen: g,
+                    ...f,
+                    children: (0, t.jsx)(o.$, { variant: "primary", text: "Hover me (rich)" }),
                 });
             },
             controls: {

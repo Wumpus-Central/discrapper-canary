@@ -1,18 +1,18 @@
-a.d(t, { A: () => u });
+a.d(t, { A: () => o });
 var n = a(627968);
 a(64700);
-var s = a(503698),
-    r = a.n(s),
-    l = a(397927),
+var l = a(503698),
+    r = a.n(l),
+    s = a(778712),
     i = a(595535),
     c = a(915710);
-function u(e) {
+function o(e) {
     let { className: t, size: a = i.q } = e,
-        s = (0, l.FT9)(a);
+        l = (0, s.FT)(a);
     return (0, n.jsx)("svg", {
-        width: s,
-        height: s,
-        viewBox: `0 0 ${s} ${s}`,
+        width: l,
+        height: l,
+        viewBox: `0 0 ${l} ${l}`,
         className: r()(c.R, t),
         "aria-hidden": !0,
         children: (0, n.jsx)("path", {

@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    Cy: () => y,
-    OH: () => M,
-    Qd: () => S,
-    Xt: () => x,
+    Cy: () => S,
+    OH: () => C,
+    Qd: () => T,
+    Xt: () => D,
     Z0: () => g,
     _$: () => I,
-    dI: () => P,
-    pi: () => w,
-    sg: () => k,
+    dI: () => b,
+    pi: () => v,
+    sg: () => L,
 }),
     n(321073);
 var r = n(695497),
@@ -18,119 +18,116 @@ var r = n(695497),
     o = n(649334),
     l = n(403362),
     u = n(723702),
-    c = n(316501),
-    d = n(650583);
-let _ = __OVERLAY__ ? d.Nu : (0, u.isLinux)() ? d.C8 : (0, u.isMac)() ? d.V8 : (0, u.isWindows)() ? d.Nu : {},
-    f = a().invert(d.C8);
+    d = n(316501),
+    c = n(650583);
+let _ = __OVERLAY__ ? c.Nu : (0, u.isLinux)() ? c.C8 : (0, u.isMac)() ? c.V8 : (0, u.isWindows)() ? c.Nu : {},
+    f = a().invert(c.C8);
 (f["223"] = "`"), Object.freeze(f);
-let p = Object.freeze(a().invert(d.V8)),
-    h = a().invert(d.Nu);
+let E = Object.freeze(a().invert(c.V8)),
+    h = a().invert(c.Nu);
 (h["223"] = "`"), Object.freeze(h);
-let m = a().invert(_ ?? {});
-function E(e) {
+let p = a().invert(_ ?? {});
+function m(e) {
     return "+" === e ? "plus" : e;
 }
 function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I();
-    return t === d.g$.BROWSER ? i()(e) : _[e];
+    return t === c.g$.BROWSER ? i()(e) : _[e];
 }
 function A(e, t, n) {
-    if ((null != n && n !== d.g$.WINDOWS) || !c.Kh.has(e)) return t;
-    let r = (0, c.Ze)().get("Backquote");
-    if (t === r) return E(t);
-    let i = { key: r, code: "Backquote", keyCode: e },
-        s = (0, c.sv)(i);
-    return "\\" === t && "`" === r ? t : null == s ? E(r ?? t) : E(s.key);
+    if ((null != n && n !== c.g$.WINDOWS) || !d.Kh.has(e)) return t;
+    let r = (0, d.Ze)().get("Backquote");
+    if (t === r) return m(t);
+    let i = (0, d.sv)({ key: r, code: "Backquote", keyCode: e });
+    return "\\" === t && "`" === r ? t : null == i ? m(r ?? t) : m(i.key);
 }
 function I() {
     return (0, u.isLinux)()
-        ? d.g$.LINUX
+        ? c.g$.LINUX
         : (0, u.isMac)()
-          ? d.g$.MACOS
+          ? c.g$.MACOS
           : (0, u.isWindows)()
-            ? d.g$.WINDOWS
+            ? c.g$.WINDOWS
             : __OVERLAY__
-              ? d.g$.WINDOWS
-              : d.g$.BROWSER;
+              ? c.g$.WINDOWS
+              : c.g$.BROWSER;
 }
 function T(e) {
-    let t,
-        [, n, r] = e;
-    switch (r) {
-        case d.g$.LINUX:
-            t = f["" + n];
-            break;
-        case d.g$.MACOS:
-            t = p["" + n];
-            break;
-        case d.g$.WINDOWS:
-            t = h["" + n];
-            break;
-        case d.g$.BROWSER: {
-            let e = i()(n);
-            if (null == e) return null;
-            t = v(e);
-            break;
-        }
-        default:
-            t = m["" + n];
-    }
-    return null != t ? t : null;
+    let [, t, n] = e,
+        r = (function (e) {
+            let t,
+                [, n, r] = e;
+            switch (r) {
+                case c.g$.LINUX:
+                    t = f["" + n];
+                    break;
+                case c.g$.MACOS:
+                    t = E["" + n];
+                    break;
+                case c.g$.WINDOWS:
+                    t = h["" + n];
+                    break;
+                case c.g$.BROWSER: {
+                    let e = i()(n);
+                    if (null == e) return null;
+                    t = y(e);
+                    break;
+                }
+                default:
+                    t = p["" + n];
+            }
+            return null != t ? t : null;
+        })(e);
+    if (null != r) return A(t, r, n);
+    let s = (0, d.Pk)(t);
+    return null != s ? A(s.keyCode, s.key, n) : null;
 }
 function S(e) {
-    let [, t, n] = e,
-        r = T(e);
-    if (null != r) return A(t, r, n);
-    let i = (0, c.Pk)(t);
-    return null != i ? A(i.keyCode, i.key, n) : null;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.zY.KEYBOARD_KEY,
+        r = (function (e) {
+            let t,
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
+                r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.zY.KEYBOARD_KEY;
+            if (null == e) return null;
+            let s = r === c.zY.KEYBOARD_KEY || r === c.zY.KEYBOARD_MODIFIER_KEY;
+            switch (!0) {
+                case s && n === c.g$.LINUX:
+                    t = c.C8[e];
+                    break;
+                case s && n === c.g$.MACOS:
+                    t = c.V8[e];
+                    break;
+                case s && n === c.g$.WINDOWS:
+                    t = "+" === e ? c.Nu.plus : c.Nu[e];
+                    break;
+                case s && n === c.g$.BROWSER:
+                    t = i()(y(e));
+                    break;
+                case s:
+                    t = _[e];
+                    break;
+                case r === c.zY.MOUSE_BUTTON:
+                    t = parseInt(e.replace("MOUSE", ""), 10);
+                    break;
+                case r === c.zY.GAMEPAD_BUTTON:
+                    t = parseInt(e.replace("GAMEPAD", ""), 10);
+                    break;
+                default:
+                    throw Error(`Unrecognized DeviceType ${r}.`);
+            }
+            return null != t ? t : null;
+        })(e, t, n);
+    if (null != r) return r;
+    let s = (0, d.Q_)(e);
+    return null != s ? s.keyCode : null;
 }
 function y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY,
-        r = N(e, t, n);
-    if (null != r) return r;
-    let i = (0, c.Q_)(e);
-    return null != i ? i.keyCode : null;
-}
-function v(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
-function N(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
-    if (null == e) return null;
-    let s = r === d.zY.KEYBOARD_KEY || r === d.zY.KEYBOARD_MODIFIER_KEY;
-    switch (!0) {
-        case s && n === d.g$.LINUX:
-            t = d.C8[e];
-            break;
-        case s && n === d.g$.MACOS:
-            t = d.V8[e];
-            break;
-        case s && n === d.g$.WINDOWS:
-            t = "+" === e ? d.Nu.plus : d.Nu[e];
-            break;
-        case s && n === d.g$.BROWSER:
-            t = i()(v(e));
-            break;
-        case s:
-            t = _[e];
-            break;
-        case r === d.zY.MOUSE_BUTTON:
-            t = parseInt(e.replace("MOUSE", ""), 10);
-            break;
-        case r === d.zY.GAMEPAD_BUTTON:
-            t = parseInt(e.replace("GAMEPAD", ""), 10);
-            break;
-        default:
-            throw Error(`Unrecognized DeviceType ${r}.`);
-    }
-    return null != t ? t : null;
-}
-(0, u.isMac)() || (m["223"] = "`"), Object.freeze(m);
-let C = [
+(0, u.isMac)() || (p["223"] = "`"), Object.freeze(p);
+let N = [
         ["META", "⌘"],
         ["CMD", "⌘"],
         ["RIGHT META", "RIGHT ⌘"],
@@ -156,39 +153,30 @@ let C = [
         ["TAB", "⇥"],
         ["SPACE", "␣"],
     ],
-    R = (e) => {
-        for (let [t, n] of C) if (t === e.toUpperCase()) return n;
-        return e;
-    },
     O = (e) => {
-        for (let [t, n] of C) if (n === e.toUpperCase()) return t.toLowerCase();
+        for (let [t, n] of N) if (t === e.toUpperCase()) return n;
         return e;
     },
-    b = /shift|meta|ctrl|alt$/;
-function D(e) {
-    return "meta" === e || "shift" === e || "alt" === e || "ctrl" === e;
-}
-function L(e) {
-    return e + "Key";
-}
-function w(e) {
+    R = /shift|meta|ctrl|alt$/;
+function v(e) {
     let t = { keyCode: 0, key: "", code: "", metaKey: !1, shiftKey: !1, altKey: !1, ctrlKey: !1 };
     return null == e
         ? []
         : e.reduce((e, n) => {
-              let r = S(n),
+              let r = T(n),
                   i = { ...t };
               if (null == r) return e.push({ ...i, combo: n }), e;
-              if (b.test(r) && D(r)) return (t[L(r)] = !0), e.map((e) => ((e[L(r)] = !0), e));
+              if (R.test(r) && ("meta" === r || "shift" === r || "alt" === r || "ctrl" === r))
+                  return (t[r + "Key"] = !0), e.map((e) => ((e[r + "Key"] = !0), e));
               {
-                  let t = y(r, d.g$.BROWSER);
+                  let t = S(r, c.g$.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
 }
-function M(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.zY.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, "")
         .replace(/NUMPAD \+/i, "numpad plus")
@@ -196,30 +184,37 @@ function M(e) {
         .split("+")
         .map((e) => e.trim().replace("plus", "+"))
         .reduce((e, r) => {
-            let i = y(O(r), t, n);
+            let i = S(
+                ((e) => {
+                    for (let [t, n] of N) if (n === e.toUpperCase()) return t.toLowerCase();
+                    return e;
+                })(r),
+                t,
+                n,
+            );
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
-function P(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .map((e) => {
                 let [t, n, r] = e,
                     i = "number" == typeof r ? r : I();
-                return t === d.zY.KEYBOARD_KEY || t === d.zY.KEYBOARD_MODIFIER_KEY
-                    ? (S(null != i ? [t, n, i] : [t, n]) ?? `UNK${n}`)
-                    : t === d.zY.MOUSE_BUTTON
+                return t === c.zY.KEYBOARD_KEY || t === c.zY.KEYBOARD_MODIFIER_KEY
+                    ? (T(null != i ? [t, n, i] : [t, n]) ?? `UNK${n}`)
+                    : t === c.zY.MOUSE_BUTTON
                       ? `mouse${n}`
-                      : t === d.zY.GAMEPAD_BUTTON
+                      : t === c.zY.GAMEPAD_BUTTON
                         ? `gamepad${n}`
                         : `dev${t},${n}`;
             })
             .filter(l.Vq);
     return t
-        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(R) : r).join(" + ").toUpperCase()
+        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(O) : r).join(" + ").toUpperCase()
         : r.join("+");
 }
-function x(e, t) {
+function D(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return (
         e.length === t.length &&
@@ -230,7 +225,7 @@ function x(e, t) {
         })
     );
 }
-function k(e) {
+function L(e) {
     return (
         null != e &&
         "object" == typeof e &&

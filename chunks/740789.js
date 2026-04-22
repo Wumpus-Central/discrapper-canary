@@ -1,32 +1,28 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(530560),
-    i = n(374372),
-    a = n(615339),
-    s = n(632434);
+r.d(t, { A: () => l });
+var n = r(530560),
+    s = r(374372),
+    a = r(615339),
+    i = r(632434);
 function o(e) {
     return null != e.text.match(/\s+(prima|dal)$/i);
 }
-function l(e) {
-    return null != e.text.match(/\s+(dopo|dal|fino)$/i);
-}
-class u extends r.X {
+class l extends n.X {
     patternBetween() {
         return /^\s*$/i;
     }
-    shouldMergeResults(e, t, n) {
+    shouldMergeResults(e, t, r) {
         return (
             !!e.match(this.patternBetween()) &&
-            (!!o(t) || !!l(t)) &&
-            !!n.start.get("day") &&
-            !!n.start.get("month") &&
-            !!n.start.get("year")
+            (!!o(t) || null != t.text.match(/\s+(dopo|dal|fino)$/i)) &&
+            !!r.start.get("day") &&
+            !!r.start.get("month") &&
+            !!r.start.get("year")
         );
     }
-    mergeResults(e, t, n) {
-        let r = (0, a.E9)(t.text);
-        o(t) && (r = (0, s.x4)(r));
-        let l = i.BP.createRelativeFromReference(i.b5.fromDate(n.start.date()), r);
-        return new i.s4(n.reference, t.index, `${t.text}${e}${n.text}`, l);
+    mergeResults(e, t, r) {
+        let n = (0, a.E9)(t.text);
+        o(t) && (n = (0, i.x4)(n));
+        let l = s.BP.createRelativeFromReference(s.b5.fromDate(r.start.date()), n);
+        return new s.s4(r.reference, t.index, `${t.text}${e}${r.text}`, l);
     }
 }

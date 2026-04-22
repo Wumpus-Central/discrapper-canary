@@ -1,38 +1,32 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        GLOBAL_DISCOVERY_DEFAULT_TAB: () => o,
-        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => l,
-        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => u,
-        GLOBAL_DISCOVERY_TABS: () => i,
-        GlobalDiscoveryAnalyticsLocations: () => _,
-        GlobalDiscoveryRoutes: () => d,
-        GlobalDiscoverySearchBarState: () => c,
-        GlobalDiscoverySharedTabId: () => s,
-        GlobalDiscoveryTab: () => r,
-        MOBILE_GLOBAL_DISCOVERY_TABS: () => a,
+        GLOBAL_DISCOVERY_DEFAULT_TAB: () => _,
+        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => f,
+        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => E,
+        GLOBAL_DISCOVERY_TABS: () => u,
+        GlobalDiscoveryAnalyticsLocations: () => m,
+        GlobalDiscoveryRoutes: () => p,
+        GlobalDiscoverySearchBarState: () => h,
+        GlobalDiscoverySharedTabId: () => c,
+        GlobalDiscoveryTab: () => l,
+        MOBILE_GLOBAL_DISCOVERY_TABS: () => d,
     });
-var r = (function (e) {
-    return (e.SERVERS = "servers"), (e.QUESTS = "quests"), (e.APPS = "apps"), e;
-})({});
-let i = ["apps", "servers", "quests"],
-    a = ["servers", "quests"];
-var s = (function (e) {
-    return (e.MORE = "More"), e;
-})({});
-let o = "servers",
-    l = 24,
-    u = 240;
-var c = (function (e) {
-        return (e.DEFAULT = "default"), (e.FLOATING = "floating"), (e.COLLAPSED = "collapsed"), e;
-    })({}),
-    d = (function (e) {
-        return (e.ROOT = "root"), (e.SERVERS_CATEGORY = "server_tab"), (e.SERVERS_SEARCH = "server_search"), e;
-    })({}),
-    _ = (function (e) {
-        return (
-            (e.GUILDS_BAR_ICON = "guilds_bar_icon"),
-            (e.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
-            e
-        );
-    })({});
+var r,
+    i,
+    s,
+    a,
+    o,
+    l = (((r = {}).SERVERS = "servers"), (r.QUESTS = "quests"), (r.APPS = "apps"), r);
+let u = ["apps", "servers", "quests"],
+    d = ["servers", "quests"];
+var c = (((i = {}).MORE = "More"), i);
+let _ = "servers",
+    f = 24,
+    E = 240;
+var h = (((s = {}).DEFAULT = "default"), (s.FLOATING = "floating"), (s.COLLAPSED = "collapsed"), s),
+    p = (((a = {}).ROOT = "root"), (a.SERVERS_CATEGORY = "server_tab"), (a.SERVERS_SEARCH = "server_search"), a),
+    m =
+        (((o = {}).GUILDS_BAR_ICON = "guilds_bar_icon"),
+        (o.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
+        o);

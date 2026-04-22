@@ -1,27 +1,26 @@
-"use strict";
-n.d(t, { V: () => a, W: () => i }), n(323874), n(14289), n(35956);
-var r = n(652215);
-function i(e) {
-    let { applicationId: t, customId: n, referrerId: i, linkId: a } = e,
-        s = new URL(r.BVt.ACTIVITY_DETAILS(t), `${location.protocol}//${location.host}`),
-        o = s.searchParams;
+n.d(t, { V: () => s, W: () => l }), n(323874), n(14289), n(35956);
+var i = n(652215);
+function l(e) {
+    let { applicationId: t, customId: n, referrerId: l, linkId: s } = e,
+        a = new URL(i.BVt.ACTIVITY_DETAILS(t), `${location.protocol}//${location.host}`),
+        r = a.searchParams;
     return (
-        null != a && o.set("link_id", a),
-        null != i && o.set("referrer_id", i),
-        null != n && o.set("custom_id", n),
-        s.toString()
+        null != s && r.set("link_id", s),
+        null != l && r.set("referrer_id", l),
+        null != n && r.set("custom_id", n),
+        a.toString()
     );
 }
-function a(e) {
-    let { id: t, customInstallUrl: n, installParams: i, integrationTypesConfig: a } = e;
+function s(e) {
+    let { id: t, customInstallUrl: n, installParams: l, integrationTypesConfig: s } = e;
     if (null != n) return n;
-    let s = new URLSearchParams();
-    s.set("client_id", t);
-    let o =
-        null != a && Object.values(a).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null);
-    if (null != i && !o) {
-        let { permissions: e, scopes: t } = i;
-        null != e && s.set("permissions", e), null != t && s.set("scope", t.join(" "));
+    let a = new URLSearchParams();
+    a.set("client_id", t);
+    let r =
+        null != s && Object.values(s).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null);
+    if (null != l && !r) {
+        let { permissions: e, scopes: t } = l;
+        null != e && a.set("permissions", e), null != t && a.set("scope", t.join(" "));
     }
-    return `${location.protocol}//${location.host}${r.BVt.OAUTH2_AUTHORIZE}?${s.toString()}`;
+    return `${location.protocol}//${location.host}${i.BVt.OAUTH2_AUTHORIZE}?${a.toString()}`;
 }

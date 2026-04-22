@@ -1,26 +1,28 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    r = n(397927),
-    o = n(453771),
+    l = n(503698),
+    a = n.n(l),
+    r = n(834730),
+    o = n(742158),
+    d = n(244367),
+    u = n(453771),
     c = n(450232),
-    d = n(212168),
-    u = n(317448);
+    g = n(212168),
+    m = n(850949);
 function _(e) {
     let { errors: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t.map((e, t) =>
             (0, i.jsx)(
-                r.Text,
+                r.E,
                 {
                     variant: "text-xs/normal",
                     color: "text-feedback-critical",
-                    className: u.gJ,
+                    className: m.gJ,
                     children: e.replace(/[0-9.,]+ ?kb/g, (e) => {
                         let t = 1024 * parseInt(e, 10);
-                        return isNaN(t) ? e : (0, o.Hb)(t);
+                        return isNaN(t) ? e : (0, u.Hb)(t);
                     }),
                 },
                 t,
@@ -28,49 +30,49 @@ function _(e) {
         ),
     });
 }
-let m = s.forwardRef(function (e, t) {
+let A = s.forwardRef(function (e, t) {
     let {
         title: n,
         titleIcon: s,
-        titleId: a,
-        description: o,
-        children: m,
+        titleId: l,
+        description: r,
+        children: u,
         className: A,
-        errors: g,
-        disabled: h = !1,
+        errors: h,
+        disabled: p = !1,
         hideDivider: x = !1,
-        showBorder: p = !1,
-        borderType: E,
-        hasBackground: C = !1,
-        forcedDivider: T = !1,
-        showPremiumIcon: S = !1,
+        showBorder: E = !1,
+        borderType: T,
+        hasBackground: S = !1,
+        forcedDivider: f = !1,
+        showPremiumIcon: b = !1,
     } = e;
     return (0, i.jsx)("div", {
-        className: l()(u.fz, A, { [u.r9]: h, [u.Ai]: x, [u.Ac]: p, [u.Cx]: T }),
+        className: a()(m.fz, A, { [m.r9]: p, [m.Ai]: x, [m.Ac]: E, [m.Cx]: f }),
         ref: t,
-        children: (0, i.jsxs)(d.A, {
-            className: u.D6,
-            backgroundClassName: u.fr,
-            isShown: p,
-            type: E,
-            hasBackground: C,
+        children: (0, i.jsxs)(g.A, {
+            className: m.D6,
+            backgroundClassName: m.fr,
+            isShown: E,
+            type: T,
+            hasBackground: S,
             children: [
-                (0, i.jsxs)(r.zEo, {
-                    className: u.DD,
-                    id: a,
+                (0, i.jsxs)(o.z, {
+                    className: m.DD,
+                    id: l,
                     "data-migration-pending": !0,
-                    children: [n, S && (0, i.jsx)(c.A, { size: "xs" }), s],
+                    children: [n, b && (0, i.jsx)(c.A, { size: "xs" }), s],
                 }),
-                null != o
-                    ? (0, i.jsx)(r.ayl, {
-                          type: r.ayl.Types.DESCRIPTION,
-                          className: u.yV,
+                null != r
+                    ? (0, i.jsx)(d.a, {
+                          type: d.a.Types.DESCRIPTION,
+                          className: m.yV,
                           "data-migration-pending": !0,
-                          children: o,
+                          children: r,
                       })
                     : null,
-                m,
-                null != g && (0, i.jsx)(_, { errors: g }),
+                u,
+                null != h && (0, i.jsx)(_, { errors: h }),
             ],
         }),
     });

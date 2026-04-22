@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, H: () => I });
+n.d(t, { A: () => T, H: () => v });
 var i,
     l = n(627968);
 n(64700);
@@ -6,91 +6,96 @@ var s = n(503698),
     a = n.n(s),
     r = n(311907),
     o = n(139033),
-    d = n(397927),
-    c = n(830215),
-    u = n(315982),
-    h = n(915089),
-    A = n(557722),
-    _ = n(834942),
-    m = n(287809),
-    p = n(652215),
-    g = n(53516),
-    f = n(985018),
-    E = n(725673),
-    x = n(824078),
-    I = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
-let C = (e) => {
+    d = n(192308),
+    c = n(305866),
+    u = n(534514),
+    h = n(834730),
+    A = n(821609),
+    _ = n(123292),
+    m = n(830215),
+    g = n(315982),
+    p = n(915089),
+    f = n(557722),
+    E = n(834942),
+    x = n(287809),
+    I = n(652215),
+    C = n(53516),
+    b = n(985018),
+    N = n(725673),
+    S = n(824078),
+    v = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
+let T = (e) => {
     let { type: t, guildId: i, closePopout: s } = e,
-        I = (0, h.GV)(),
+        v = (0, p.GV)(),
         {
-            notClaimed: C,
-            notEmailVerified: N,
-            notPhoneVerified: T,
-            newAccount: S,
-            newMember: b,
-        } = (0, r.bG)([_.A], () => _.A.getCheck(i), [i]),
-        y = 0 === t ? f.intl.string(f.t["6zY8BI"]) : null,
-        v = null,
-        R = null;
+            notClaimed: T,
+            notEmailVerified: y,
+            notPhoneVerified: R,
+            newAccount: j,
+            newMember: L,
+        } = (0, r.bG)([E.A], () => E.A.getCheck(i), [i]),
+        O = 0 === t ? b.intl.string(b.t["6zY8BI"]) : null,
+        G = null,
+        D = null;
     return (0 === t &&
-        (C
-            ? ((v = f.intl.string(f.t.IRxUlG)), (R = f.intl.string(f.t.fiNVin)))
-            : T
-              ? ((v = f.intl.string(f.t.vW8iUF)), (R = f.intl.string(f.t["50gfOv"])))
-              : N
-                ? ((v = f.intl.string(f.t.vdSOpz)), (R = f.intl.string(f.t.lm1UKt)))
-                : b
-                  ? ((v = f.intl.formatToPlainString(f.t.v1ktYb, { min: p.$8o.MEMBER_AGE })),
-                    (R = f.intl.string(f.t.BddRzS)))
-                  : S &&
-                    ((v = f.intl.formatToPlainString(f.t.sncw41, { min: p.$8o.ACCOUNT_AGE })),
-                    (R = f.intl.string(f.t.BddRzS)))),
-    null == y || null == v)
+        (T
+            ? ((G = b.intl.string(b.t.IRxUlG)), (D = b.intl.string(b.t.fiNVin)))
+            : R
+              ? ((G = b.intl.string(b.t.vW8iUF)), (D = b.intl.string(b.t["50gfOv"])))
+              : y
+                ? ((G = b.intl.string(b.t.vdSOpz)), (D = b.intl.string(b.t.lm1UKt)))
+                : L
+                  ? ((G = b.intl.formatToPlainString(b.t.v1ktYb, { min: I.$8o.MEMBER_AGE })),
+                    (D = b.intl.string(b.t.BddRzS)))
+                  : j &&
+                    ((G = b.intl.formatToPlainString(b.t.sncw41, { min: I.$8o.ACCOUNT_AGE })),
+                    (D = b.intl.string(b.t.BddRzS)))),
+    null == O || null == G)
         ? null
-        : (0, l.jsxs)(d.lGe, {
-              className: a()(x.popover, E.kL),
-              "aria-labelledby": I,
+        : (0, l.jsxs)(c.l, {
+              className: a()(S.popover, N.kL),
+              "aria-labelledby": v,
               children: [
-                  (0, l.jsx)("img", { alt: "", className: E.Sl, src: n(303528) }),
+                  (0, l.jsx)("img", { alt: "", className: N.Sl, src: n(303528) }),
                   (0, l.jsxs)("div", {
-                      className: E.Qs,
+                      className: N.Qs,
                       children: [
-                          (0, l.jsx)(d.Heading, { variant: "heading-md/semibold", id: I, children: y }),
-                          (0, l.jsx)(d.Text, { color: "text-default", variant: "text-sm/normal", children: v }),
+                          (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: v, children: O }),
+                          (0, l.jsx)(h.E, { color: "text-default", variant: "text-sm/normal", children: G }),
                           (0, l.jsxs)("div", {
-                              className: E.UD,
+                              className: N.UD,
                               children: [
-                                  null != R
+                                  null != D
                                       ? (0, l.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
-                                            className: E.FS,
-                                            children: (0, l.jsx)(d.Button, {
+                                            className: N.FS,
+                                            children: (0, l.jsx)(A.$, {
                                                 variant: "primary",
-                                                text: R,
+                                                text: D,
                                                 onClick: () => {
-                                                    C
-                                                        ? u.R()
-                                                        : T
-                                                          ? (0, d.mMO)(
+                                                    T
+                                                        ? g.R()
+                                                        : R
+                                                          ? (0, d.openModalLazy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("16398"),
+                                                                        n.e("85543"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, l.jsx)(e, {
-                                                                            reason: A.d.GUILD_PHONE_REQUIRED,
+                                                                            reason: f.d.GUILD_PHONE_REQUIRED,
                                                                             ...t,
                                                                         });
                                                                 },
-                                                                { modalKey: g.V },
+                                                                { modalKey: C.V },
                                                             )
-                                                          : N &&
-                                                            (c.A.verifyResend(),
+                                                          : y &&
+                                                            (m.A.verifyResend(),
                                                             (0, o.A)({
-                                                                title: f.intl.string(f.t.LykQYk),
-                                                                subtitle: f.intl.format(f.t.azKEPy, {
-                                                                    email: m.default.getCurrentUser()?.email,
+                                                                title: b.intl.string(b.t.LykQYk),
+                                                                subtitle: b.intl.format(b.t.azKEPy, {
+                                                                    email: x.default.getCurrentUser()?.email,
                                                                 }),
                                                             })),
                                                         s();
@@ -98,10 +103,10 @@ let C = (e) => {
                                             }),
                                         })
                                       : null,
-                                  C || T || N
-                                      ? (0, l.jsx)(d.QWc, {
+                                  T || R || y
+                                      ? (0, l.jsx)(_.Q, {
                                             onClick: s,
-                                            text: f.intl.string(f.t.oEAioF),
+                                            text: b.intl.string(b.t.oEAioF),
                                             variant: "secondary",
                                         })
                                       : null,

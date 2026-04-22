@@ -1,75 +1,75 @@
-e.d(i, { A: () => f, l: () => P }), e(938796);
-var n = e(627968);
-e(64700);
-var l = e(284009),
-    s = e.n(l),
-    a = e(835245),
-    r = e(397927),
-    o = e(339048),
-    u = e(391048),
-    c = e(636099),
-    d = e(589078),
-    S = e(742810),
-    p = e(163437),
-    I = e(97352),
-    A = e(67480),
-    _ = e(954571),
-    T = e(937008),
-    E = e(491057),
-    C = e(652215);
-function f(t) {
+i.d(e, { A: () => C, l: () => g }), i(938796);
+var n = i(627968);
+i(64700);
+var l = i(284009),
+    s = i.n(l),
+    a = i(835245),
+    r = i(192308),
+    o = i(339048),
+    u = i(391048),
+    c = i(636099),
+    d = i(589078),
+    p = i(742810),
+    S = i(163437),
+    I = i(97352),
+    A = i(67480),
+    _ = i(954571),
+    T = i(937008),
+    h = i(491057),
+    E = i(652215);
+function C(t) {
     let {
-            initialPlanId: i,
+            initialPlanId: e,
             activeSubscription: l,
             analyticsObject: s,
             analyticsLocation: o,
-            analyticsLocations: p,
+            analyticsLocations: S,
             analyticsSubscriptionType: I,
             renderHeader: A,
-            planGroup: f,
-            skuId: N,
-            guildId: P,
-            reviewWarningMessage: h,
-            applicationId: g,
+            planGroup: C,
+            skuId: f,
+            guildId: g,
+            reviewWarningMessage: N,
+            applicationId: P,
             showBenefitsFirst: m,
             onComplete: L,
-            forcesTransitionToGuild: O,
+            forcesTransitionToGuild: v,
         } = t,
-        F = (0, a.A)(),
-        b = !1;
-    (0, r.mMO)(
+        O = (0, a.A)(),
+        F = !1;
+    (0, r.openModalLazy)(
         async () => {
-            let { PaymentContextProvider: t } = await Promise.resolve().then(e.bind(e, 156312)),
-                a = (await e.e("72752").then(e.bind(e, 97491))).default,
-                { getApplicationPaymentSteps: r } = await e.e("50243").then(e.bind(e, 107854)),
-                u = r({ guildId: P, showBenefitsFirst: m });
-            return (e) =>
+            let { PaymentContextProvider: t } = await Promise.resolve().then(i.bind(i, 156312)),
+                a = (await i.e("72752").then(i.bind(i, 97491))).default,
+                { getApplicationPaymentSteps: r } = await i.e("50243").then(i.bind(i, 107854)),
+                u = r({ guildId: g, showBenefitsFirst: m });
+            return (i) =>
                 (0, n.jsx)(t, {
-                    loadId: F,
-                    applicationId: g,
+                    loadId: O,
+                    applicationId: P,
                     activeSubscription: l,
                     stepConfigs: u,
-                    skuIDs: [N],
+                    skuIDs: [f],
                     unifiedCheckoutFlow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
-                    children: (0, n.jsx)(E.Qt, {
+                    children: (0, n.jsx)(h.Qt, {
                         children: (0, n.jsx)(T.dX, {
                             children: (0, n.jsx)(a, {
-                                ...e,
-                                initialPlanId: i,
-                                skuId: N,
-                                analyticsLocations: p,
+                                ...i,
+                                initialPlanId: e,
+                                skuId: f,
+                                analyticsLocations: S,
                                 analyticsObject: s,
                                 analyticsLocation: o,
                                 analyticsSubscriptionType: I,
                                 renderHeader: A,
-                                planGroup: f,
-                                reviewWarningMessage: h,
-                                applicationId: g,
-                                guildId: P ?? void 0,
+                                planGroup: C,
+                                reviewWarningMessage: N,
+                                applicationId: P,
+                                guildId: g ?? void 0,
                                 onComplete: () => {
-                                    (b = !0), L?.();
+                                    (F = !0), L?.();
                                 },
-                                forcesTransitionToGuild: O,
+                                forcesTransitionToGuild: v,
                             }),
                         }),
                     }),
@@ -77,57 +77,57 @@ function f(t) {
         },
         {
             onCloseCallback: () => {
-                b ||
-                    (_.default.track(C.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: F,
-                        payment_type: C.frM[C.VVm.SUBSCRIPTION],
+                F ||
+                    (_.default.track(E.HAw.PAYMENT_FLOW_CANCELED, {
+                        load_id: O,
+                        payment_type: E.frM[E.VVm.SUBSCRIPTION],
                         location: o ?? s,
                         is_gift: !1,
-                        sku_id: N,
-                        application_id: g,
-                        location_stack: p,
-                        checkout_design: S.rS.UNIFIED,
+                        sku_id: f,
+                        application_id: P,
+                        location_stack: S,
+                        checkout_design: p.rS.UNIFIED,
                         checkout_flow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
                     }),
                     (0, u.ET)(),
                     (0, c.z)());
             },
-            onCloseRequest: C.tEg,
+            onCloseRequest: E.tEg,
         },
     );
 }
-let N = async (t, i) => {
-    let e = (await (0, o.LM)(t))
+let f = async (t, e) => {
+    let i = (await (0, o.LM)(t))
         .filter((t) => null == t.ends_at || new Date(t.ends_at) > new Date())
-        .find((t) => t.sku_id === i);
-    s()(null == e, "User already has an active subscription to this SKU");
+        .find((t) => t.sku_id === e);
+    s()(null == i, "User already has an active subscription to this SKU");
 };
-async function P(t) {
+async function g(t) {
     let {
-            applicationId: i,
-            skuId: e,
+            applicationId: e,
+            skuId: i,
             initialPlanId: n,
             analyticsLocationObject: l,
             analyticsLocations: a,
             renderHeader: r,
         } = t,
-        o = A.A.get(e),
-        u = I.A.getForSKU(e);
+        o = A.A.get(i),
+        u = I.A.getForSKU(i);
     s()(null != o, "Failed to find SKU");
-    let c = (0, p.bg)(o.flags);
+    let c = (0, S.bg)(o.flags);
     s()(c, "Guild application subscriptions unsupported!"),
-        await N(i, e),
-        f({
+        await f(e, i),
+        C({
             initialPlanId: n ?? u[0]?.id,
             activeSubscription: null,
             analyticsLocations: a,
             analyticsLocationObject: l,
-            analyticsSubscriptionType: C.rzx.APPLICATION,
+            analyticsSubscriptionType: E.rzx.APPLICATION,
             renderHeader: r,
             planGroup: [],
-            skuId: e,
+            skuId: i,
             guildId: null,
             showBenefitsFirst: !1,
-            applicationId: i,
+            applicationId: e,
         });
 }

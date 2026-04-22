@@ -1,33 +1,34 @@
-n.d(t, { A: () => _, H: () => u });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    r = n(854627),
-    a = n(837921),
-    l = n(842130),
-    o = n(985018),
-    c = n(241938);
-let d = a.Ay.getEnableHardwareAcceleration() ? s.JsQ : s.euF,
-    u = (e) => {
-        let { user: t, avatarSize: n = s._3J.SIZE_48 } = e,
-            { avatarSrc: a, avatarDecorationSrc: c, eventHandlers: u } = (0, r.A)({ userId: t?.id, size: n });
-        return (0, i.jsx)("div", {
+l.d(t, { A: () => h, H: () => x });
+var n = l(627968);
+l(64700);
+var i = l(97808),
+    s = l(778712),
+    a = l(854627),
+    r = l(837921),
+    d = l(602339),
+    c = l(985018),
+    u = l(279199);
+let o = r.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu,
+    x = (e) => {
+        let { user: t, avatarSize: l = s._3.SIZE_48 } = e,
+            { avatarSrc: i, avatarDecorationSrc: r, eventHandlers: u } = (0, a.A)({ userId: t?.id, size: l });
+        return (0, n.jsx)("div", {
             ...u,
-            children: (0, i.jsx)(d, {
-                src: a,
-                avatarDecoration: c,
-                size: n,
-                "aria-label": o.intl.formatToPlainString(l.default.kFj4h1, { name: t.username }),
+            children: (0, n.jsx)(o, {
+                src: i,
+                avatarDecoration: r,
+                size: l,
+                "aria-label": c.intl.formatToPlainString(d.default.kFj4h1, { name: t.username }),
             }),
         });
     },
-    _ = (e) => {
-        let { currentUser: t, otherUser: n, children: s } = e;
-        return (0, i.jsx)("div", {
-            className: c.b,
-            children: (0, i.jsxs)("div", {
-                className: c.M,
-                children: [(0, i.jsx)(u, { user: t }), s, (0, i.jsx)(u, { user: n })],
+    h = (e) => {
+        let { currentUser: t, otherUser: l, children: i } = e;
+        return (0, n.jsx)("div", {
+            className: u.b,
+            children: (0, n.jsxs)("div", {
+                className: u.M,
+                children: [(0, n.jsx)(x, { user: t }), i, (0, n.jsx)(x, { user: l })],
             }),
         });
     };

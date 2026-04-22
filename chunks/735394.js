@@ -1,37 +1,27 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => f });
 var r = n(136601),
     i = n(44134),
-    a = n(216803),
-    s = n(655909),
+    s = n(216803),
+    a = n(655909),
     o = n(564804),
     l = n(544195),
-    u = n(792828),
-    c = "midnight",
-    d = "noon",
-    _ = "morning",
-    f = "afternoon",
-    p = "evening",
-    h = "night";
-function m(e, t) {
+    u = n(792828);
+function d(e, t) {
     var n = e > 0 ? "-" : "+",
         r = Math.abs(e),
         i = Math.floor(r / 60),
-        a = r % 60;
-    if (0 === a) return n + String(i);
-    var s = t || "";
-    return n + String(i) + s + (0, l.A)(a, 2);
+        s = r % 60;
+    return 0 === s ? n + String(i) : n + String(i) + (t || "") + (0, l.A)(s, 2);
 }
-function g(e, t) {
-    return e % 60 == 0 ? (e > 0 ? "-" : "+") + (0, l.A)(Math.abs(e) / 60, 2) : E(e, t);
+function c(e, t) {
+    return e % 60 == 0 ? (e > 0 ? "-" : "+") + (0, l.A)(Math.abs(e) / 60, 2) : _(e, t);
 }
-function E(e, t) {
-    var n = t || "",
-        r = e > 0 ? "-" : "+",
-        i = Math.abs(e);
-    return r + (0, l.A)(Math.floor(i / 60), 2) + n + (0, l.A)(i % 60, 2);
+function _(e, t) {
+    var n = Math.abs(e);
+    return (e > 0 ? "-" : "+") + (0, l.A)(Math.floor(n / 60), 2) + (t || "") + (0, l.A)(n % 60, 2);
 }
-let A = {
+let f = {
     G: function (e, t, n) {
         var r = +(e.getUTCFullYear() > 0);
         switch (t) {
@@ -47,23 +37,22 @@ let A = {
     },
     y: function (e, t, n) {
         if ("yo" === t) {
-            var r = e.getUTCFullYear(),
-                i = r > 0 ? r : 1 - r;
-            return n.ordinalNumber(i, { unit: "year" });
+            var r = e.getUTCFullYear();
+            return n.ordinalNumber(r > 0 ? r : 1 - r, { unit: "year" });
         }
         return u.A.y(e, t);
     },
     Y: function (e, t, n, r) {
         var i = (0, o.A)(e, r),
-            a = i > 0 ? i : 1 - i;
+            s = i > 0 ? i : 1 - i;
         if ("YY" === t) {
-            var s = a % 100;
-            return (0, l.A)(s, 2);
+            var a = s % 100;
+            return (0, l.A)(a, 2);
         }
-        return "Yo" === t ? n.ordinalNumber(a, { unit: "year" }) : (0, l.A)(a, t.length);
+        return "Yo" === t ? n.ordinalNumber(s, { unit: "year" }) : (0, l.A)(s, t.length);
     },
     R: function (e, t) {
-        var n = (0, a.A)(e);
+        var n = (0, s.A)(e);
         return (0, l.A)(n, t.length);
     },
     u: function (e, t) {
@@ -138,7 +127,7 @@ let A = {
         }
     },
     w: function (e, t, n, r) {
-        var i = (0, s.A)(e, r);
+        var i = (0, a.A)(e, r);
         return "wo" === t ? n.ordinalNumber(i, { unit: "week" }) : (0, l.A)(i, t.length);
     },
     I: function (e, t, n) {
@@ -169,14 +158,14 @@ let A = {
     },
     e: function (e, t, n, r) {
         var i = e.getUTCDay(),
-            a = (i - r.weekStartsOn + 8) % 7 || 7;
+            s = (i - r.weekStartsOn + 8) % 7 || 7;
         switch (t) {
             case "e":
-                return String(a);
+                return String(s);
             case "ee":
-                return (0, l.A)(a, 2);
+                return (0, l.A)(s, 2);
             case "eo":
-                return n.ordinalNumber(a, { unit: "day" });
+                return n.ordinalNumber(s, { unit: "day" });
             case "eee":
                 return n.day(i, { width: "abbreviated", context: "formatting" });
             case "eeeee":
@@ -189,14 +178,14 @@ let A = {
     },
     c: function (e, t, n, r) {
         var i = e.getUTCDay(),
-            a = (i - r.weekStartsOn + 8) % 7 || 7;
+            s = (i - r.weekStartsOn + 8) % 7 || 7;
         switch (t) {
             case "c":
-                return String(a);
+                return String(s);
             case "cc":
-                return (0, l.A)(a, t.length);
+                return (0, l.A)(s, t.length);
             case "co":
-                return n.ordinalNumber(a, { unit: "day" });
+                return n.ordinalNumber(s, { unit: "day" });
             case "ccc":
                 return n.day(i, { width: "abbreviated", context: "standalone" });
             case "ccccc":
@@ -244,7 +233,7 @@ let A = {
     b: function (e, t, n) {
         var r,
             i = e.getUTCHours();
-        switch (((r = 12 === i ? d : 0 === i ? c : i / 12 >= 1 ? "pm" : "am"), t)) {
+        switch (((r = 12 === i ? "noon" : 0 === i ? "midnight" : i / 12 >= 1 ? "pm" : "am"), t)) {
             case "b":
             case "bb":
                 return n.dayPeriod(r, { width: "abbreviated", context: "formatting" });
@@ -259,7 +248,7 @@ let A = {
     B: function (e, t, n) {
         var r,
             i = e.getUTCHours();
-        switch (((r = i >= 17 ? p : i >= 12 ? f : i >= 4 ? _ : h), t)) {
+        switch (((r = i >= 17 ? "evening" : i >= 12 ? "afternoon" : i >= 4 ? "morning" : "night"), t)) {
             case "B":
             case "BB":
             case "BBB":
@@ -302,24 +291,24 @@ let A = {
         if (0 === i) return "Z";
         switch (t) {
             case "X":
-                return g(i);
+                return c(i);
             case "XXXX":
             case "XX":
-                return E(i);
+                return _(i);
             default:
-                return E(i, ":");
+                return _(i, ":");
         }
     },
     x: function (e, t, n, r) {
         var i = (r._originalDate || e).getTimezoneOffset();
         switch (t) {
             case "x":
-                return g(i);
+                return c(i);
             case "xxxx":
             case "xx":
-                return E(i);
+                return _(i);
             default:
-                return E(i, ":");
+                return _(i, ":");
         }
     },
     O: function (e, t, n, r) {
@@ -328,9 +317,9 @@ let A = {
             case "O":
             case "OO":
             case "OOO":
-                return "GMT" + m(i, ":");
+                return "GMT" + d(i, ":");
             default:
-                return "GMT" + E(i, ":");
+                return "GMT" + _(i, ":");
         }
     },
     z: function (e, t, n, r) {
@@ -339,9 +328,9 @@ let A = {
             case "z":
             case "zz":
             case "zzz":
-                return "GMT" + m(i, ":");
+                return "GMT" + d(i, ":");
             default:
-                return "GMT" + E(i, ":");
+                return "GMT" + _(i, ":");
         }
     },
     t: function (e, t, n, r) {

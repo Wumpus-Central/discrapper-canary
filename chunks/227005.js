@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(882997),
-    i = n(652215);
-function a(e) {
-    return !!e || ((0, r.A)({ platformType: i.fg2.SPOTIFY, location: "Spotify Button" }), !1);
+i.d(e, { A: () => n });
+var l = i(882997),
+    a = i(652215);
+function n(t) {
+    return !!t || ((0, l.A)({ platformType: a.fg2.SPOTIFY, location: "Spotify Button" }), !1);
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => V });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
@@ -8,57 +8,58 @@ var i = n(627968),
     o = n(110259),
     c = n(935399),
     d = n(311907),
-    u = n(397927),
+    u = n(821609),
+    _ = n(921853),
     h = n(830215),
-    _ = n(475743),
+    m = n(475743),
     p = n(17841),
     g = n(965252),
-    m = n(139286),
-    A = n(908192),
-    f = n(669629),
+    A = n(139286),
+    f = n(908192),
+    x = n(669629),
     E = n(854378),
-    x = n(491509),
-    I = n(895600),
+    I = n(491509),
+    v = n(895600),
     N = n(274303),
-    v = n(942614),
-    T = n(976860),
-    j = n(210714),
-    C = n(961350),
+    j = n(942614),
+    C = n(976860),
+    T = n(210714),
+    b = n(961350),
     S = n(153488),
     y = n(650048),
-    b = n(954571),
-    R = n(203982),
+    R = n(954571),
+    w = n(203982),
     O = n(161928),
     L = n(890698),
-    w = n(538796),
-    k = n(652215),
-    D = n(68729),
-    U = n(771016),
+    k = n(538796),
+    G = n(652215),
+    U = n(68729),
+    D = n(771016),
     P = n(985018),
     B = n(731286),
-    G = n(818050);
-function M(e) {
+    M = n(818050);
+function V(e) {
     let {
             authBoxClassName: t,
             giftCode: n,
             giftCodeSKU: r,
-            guildTemplate: M,
+            guildTemplate: V,
             invite: F,
-            location: V,
-            redirectTo: W,
-            onLoginStart: H,
+            location: W,
+            redirectTo: H,
+            onLoginStart: z,
             onRegister: K,
-            transitionTo: z = T.pX,
+            transitionTo: Q = C.pX,
         } = e,
-        Q = (0, d.bG)([S.A], () => S.A.getAuthenticationConsentRequired()),
-        q = (0, d.bG)([C.default], () => C.default.isAuthenticated()),
-        Y = (0, d.bG)([p.A], () => p.A.isUnderageAnonymous()),
-        X = (0, d.bG)([N.A], () => N.A.getHasLoggedInAccounts()),
-        J = null != e.location ? (0, a.parse)(e.location.search) : {},
-        [$, Z] = s.useState(J.email ?? ""),
-        [ee, et] = s.useState({}),
-        en = (0, _.A)(q),
-        ei = (function (e, t, n) {
+        q = (0, d.bG)([S.A], () => S.A.getAuthenticationConsentRequired()),
+        Y = (0, d.bG)([b.default], () => b.default.isAuthenticated()),
+        X = (0, d.bG)([p.A], () => p.A.isUnderageAnonymous()),
+        $ = (0, d.bG)([N.A], () => N.A.getHasLoggedInAccounts()),
+        Z = null != e.location ? (0, a.parse)(e.location.search) : {},
+        [J, ee] = s.useState(Z.email ?? ""),
+        [et, en] = s.useState({}),
+        ei = (0, m.A)(Y),
+        es = (function (e, t, n) {
             if (null != e) return "gift";
             if (null != t) return "guild_template";
             if (null != n) {
@@ -67,94 +68,94 @@ function M(e) {
                 else if (null != n.inviter) return "friend_invite";
             }
             return null;
-        })(n, M, F),
-        es = null != F && (null != F.guild || null != F.channel),
-        er = null != F && null == F.guild && null == F.channel && null != F.inviter,
-        el = s.useCallback(() => {
-            q && (null != W ? z(W) : z(y.A.defaultRoute));
-        }, [q, W, z]);
+        })(n, V, F),
+        er = null != F && (null != F.guild || null != F.channel),
+        el = null != F && null == F.guild && null == F.channel && null != F.inviter,
+        ea = s.useCallback(() => {
+            Y && (null != H ? Q(H) : Q(y.A.defaultRoute));
+        }, [Y, H, Q]);
     (0, c.Ay)(() => {
-        el(),
-            b.default.track(
-                k.HAw.REGISTER_VIEWED,
+        ea(),
+            R.default.track(
+                G.HAw.REGISTER_VIEWED,
                 {
                     location: null != F ? "Invite Register Page" : "Non-Invite Register Page",
-                    registration_source: ei,
-                    ...(null != r ? (0, x.A)(r, !1, !1) : {}),
+                    registration_source: es,
+                    ...(null != r ? (0, I.A)(r, !1, !1) : {}),
                 },
                 { flush: !0 },
             ),
-            null == Q && h.A.getLocationMetadata(),
-            (0, j.d)("register");
+            null == q && h.A.getLocationMetadata(),
+            (0, T.d)("register");
     }),
         s.useEffect(() => {
-            q && !1 === en && ((0, v.C)(U.zY.ORGANIC_REGISTERED), el());
-        }, [q, en, el]);
-    let ea = D.ju.FULL;
-    Y || null != ee.date_of_birth ? (ea = D.ju.AGE_GATE) : es && (ea = D.ju.INVITE),
-        (0, m.A)(
+            Y && !1 === ei && ((0, j.C)(D.zY.ORGANIC_REGISTERED), ea());
+        }, [Y, ei, ea]);
+    let eo = U.ju.FULL;
+    X || null != et.date_of_birth ? (eo = U.ju.AGE_GATE) : er && (eo = U.ju.INVITE),
+        (0, A.A)(
             {
                 type: o.ImpressionTypes.VIEW,
                 name: o.ImpressionNames.USER_REGISTRATION,
-                properties: { impression_group: o.ImpressionGroups.USER_REGISTRATION_FLOW, step: ea },
+                properties: { impression_group: o.ImpressionGroups.USER_REGISTRATION_FLOW, step: eo },
             },
             {},
-            [ea],
+            [eo],
         );
-    let eo = s.useCallback(
+    let ec = s.useCallback(
         (e) => {
             let t,
-                i = null != V ? (0, a.parse)(V.search) : {};
+                i = null != W ? (0, a.parse)(W.search) : {};
             null != F
-                ? (t = k.BVt.INVITE_LOGIN(F.code))
+                ? (t = G.BVt.INVITE_LOGIN(F.code))
                 : null != n
-                  ? (t = k.BVt.GIFT_CODE_LOGIN(n.code))
-                  : null != M
-                    ? (t = k.BVt.GUILD_TEMPLATE_LOGIN(M.code))
-                    : null != W
-                      ? ((t = k.BVt.LOGIN), (i.redirect_to = W))
-                      : ((t = k.BVt.LOGIN), "" !== $ && (i = { email: $ })),
+                  ? (t = G.BVt.GIFT_CODE_LOGIN(n.code))
+                  : null != V
+                    ? (t = G.BVt.GUILD_TEMPLATE_LOGIN(V.code))
+                    : null != H
+                      ? ((t = G.BVt.LOGIN), (i.redirect_to = H))
+                      : ((t = G.BVt.LOGIN), "" !== J && (i = { email: J })),
                 h.A.loginReset(),
-                z(t, { search: (0, a.stringify)(i), source: "register" }),
-                H?.(e),
-                R._.dispatch(k.jej.WAVE_EMPHASIZE);
+                Q(t, { search: (0, a.stringify)(i), source: "register" }),
+                z?.(e),
+                w._.dispatch(G.jej.WAVE_EMPHASIZE);
         },
-        [$, F, n, M, W, V, H, z],
+        [J, F, n, V, H, W, z, Q],
     );
-    if (Y || null != ee.date_of_birth) return (0, i.jsx)(g.A, {});
-    if (null != F && es)
-        return (0, i.jsx)(f.A, { invite: F, authBoxClassName: t, onApiErrors: et, onGotoLogin: eo, onRegister: K });
-    let ec = (0, i.jsx)(E.hE, { children: P.intl.string(P.t.wC4TlR) }, "title"),
-        ed = !1;
-    null != M
-        ? ((ec = (0, i.jsx)(I.A, { guildTemplate: M })), (ed = !0))
+    if (X || null != et.date_of_birth) return (0, i.jsx)(g.A, {});
+    if (null != F && er)
+        return (0, i.jsx)(x.A, { invite: F, authBoxClassName: t, onApiErrors: en, onGotoLogin: ec, onRegister: K });
+    let ed = (0, i.jsx)(E.hE, { children: P.intl.string(P.t.wC4TlR) }, "title"),
+        eu = !1;
+    null != V
+        ? ((ed = (0, i.jsx)(v.A, { guildTemplate: V })), (eu = !0))
         : null != n
-          ? (ec = (0, i.jsx)(O.A, { giftCode: n }))
+          ? (ed = (0, i.jsx)(O.A, { giftCode: n }))
           : null != F &&
-            er &&
-            F.state === k.elq.RESOLVED &&
-            (ec = (0, i.jsx)("div", { className: G.S3, children: (0, i.jsx)(L.A, { invite: F, isRegister: !0 }) }));
-    let eu = (0, i.jsx)(A.A, {
-        initialEmail: J.email ?? "",
+            el &&
+            F.state === G.elq.RESOLVED &&
+            (ed = (0, i.jsx)("div", { className: M.S3, children: (0, i.jsx)(L.A, { invite: F, isRegister: !0 }) }));
+    let e_ = (0, i.jsx)(f.A, {
+        initialEmail: Z.email ?? "",
         invite: F,
         giftCode: n,
-        guildTemplate: M,
-        onApiErrors: et,
-        onEmailChange: Z,
-        onGotoLogin: eo,
+        guildTemplate: V,
+        onApiErrors: en,
+        onEmailChange: ee,
+        onGotoLogin: ec,
         onRegister: K,
     });
-    return ed
-        ? (0, i.jsx)(w.A, {
+    return eu
+        ? (0, i.jsx)(k.A, {
               tag: "section",
               className: l()(t, B.Sy),
               children: () => [
-                  ec,
+                  ed,
                   (0, i.jsxs)(
                       "div",
                       {
                           className: B.Uu,
-                          children: [(0, i.jsx)(E.hE, { className: B.lR, children: P.intl.string(P.t.wC4TlR) }), eu],
+                          children: [(0, i.jsx)(E.hE, { className: B.lR, children: P.intl.string(P.t.wC4TlR) }), e_],
                       },
                       "register-title",
                   ),
@@ -164,20 +165,20 @@ function M(e) {
               tag: "section",
               className: t,
               children: [
-                  X
+                  $
                       ? (0, i.jsx)("div", {
                             className: B.AX,
-                            children: (0, i.jsx)(u.Button, {
-                                onClick: eo,
+                            children: (0, i.jsx)(u.$, {
+                                onClick: ec,
                                 variant: "secondary",
                                 text: P.intl.string(P.t["1MrpWO"]),
-                                icon: u.n2b,
+                                icon: _.n,
                                 iconPosition: "start",
                             }),
                         })
                       : null,
-                  ec,
-                  eu,
+                  ed,
+                  e_,
               ],
           });
 }

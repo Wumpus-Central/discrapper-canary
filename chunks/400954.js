@@ -1,7 +1,7 @@
 n.d(e, { default: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(732955),
+    s = n(189213),
     a = n(424798),
     o = n(663535),
     l = n(747926),
@@ -23,7 +23,7 @@ function h(t) {
             },
             [u, p],
         );
-    return (0, i.jsx)(s.aFV, {
+    return (0, i.jsx)(s.Modal, {
         title: d.intl.string(d.t["dOWb+f"]),
         actions: [{ text: d.intl.string(d.t.cpT0Cq), onClick: n, variant: "primary" }],
         onClose: n,

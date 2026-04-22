@@ -1,115 +1,118 @@
-n.d(t, { a: () => v });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { a: () => D });
+var l = n(627968),
+    i = n(64700),
     r = n(311907),
-    s = n(397927),
-    a = n(429913),
-    o = n(609425),
-    u = n(922301),
-    d = n(750112),
-    c = n(769015),
-    h = n(534400),
-    g = n(342296),
-    m = n(481947),
+    s = n(939249),
+    a = n(97808),
+    u = n(778712),
+    o = n(834730),
+    d = n(429913),
+    c = n(609425),
+    h = n(922301),
+    g = n(750112),
+    m = n(769015),
+    I = n(534400),
+    E = n(342296),
+    A = n(481947),
     f = n(616356),
-    A = n(290863),
-    I = n(287809),
-    E = n(977997),
-    p = n(403362),
-    _ = n(562153),
-    S = n(996439),
-    x = n(67103),
-    T = n(70191),
-    N = n(652215),
-    C = n(664674);
-let v = l.memo(function (e) {
-    let { channelId: t, guildId: n, userId: v, onDoubleClick: y, onContextMenu: M } = e,
-        R = l.useRef(null),
-        [D, b] = l.useState(!1),
-        O = (0, r.bG)([I.default], () => I.default.getUser(v), [v]),
-        w = (function (e, t) {
+    p = n(290863),
+    S = n(287809),
+    N = n(977997),
+    x = n(403362),
+    T = n(562153),
+    _ = n(996439),
+    y = n(67103),
+    v = n(70191),
+    C = n(652215),
+    R = n(567346);
+let D = i.memo(function (e) {
+    let { channelId: t, guildId: n, userId: D, onDoubleClick: b, onContextMenu: j } = e,
+        M = i.useRef(null),
+        [k, O] = i.useState(!1),
+        w = (0, r.bG)([S.default], () => S.default.getUser(D), [D]),
+        L = (function (e, t) {
             let [n] = (0, r.bG)(
-                [E.A],
-                () => [E.A.getVoiceStateForChannel(e, t) ?? null, E.A.getVoiceStateVersion()],
+                [N.A],
+                () => [N.A.getVoiceStateForChannel(e, t) ?? null, N.A.getVoiceStateVersion()],
                 [e, t],
-                S.D,
+                _.D,
             );
             return n;
-        })(t, v),
-        j = (0, o.A)({ userId: v, guildId: n }),
-        U = (0, r.bG)([f.A], () => null != n && null != f.A.getStreamForUser(v, n), [n, v]),
-        L = (0, r.bG)([A.A], () => A.A.findActivity(v, T.A), [v]),
-        k = (0, a.h)(L?.application_id),
-        G = (0, _.tx)(n ?? void 0, t, O),
-        P = l.useCallback(
+        })(t, D),
+        F = (0, c.A)({ userId: D, guildId: n }),
+        G = (0, r.bG)([f.A], () => null != n && null != f.A.getStreamForUser(D, n), [n, D]),
+        U = (0, r.bG)([p.A], () => p.A.findActivity(D, v.A), [D]),
+        P = (0, d.h)(U?.application_id),
+        V = (0, T.tx)(n ?? void 0, t, w),
+        H = i.useCallback(
             (e) => {
-                (0, p.Vq)(O) && null != w && M?.({ type: x.K.VOICE_USER, event: e, user: O, channelId: t });
+                (0, x.Vq)(w) && null != L && j?.({ type: y.K.VOICE_USER, event: e, user: w, channelId: t });
             },
-            [t, M, O, w],
+            [t, j, w, L],
         );
-    return (0, p.Vq)(O) && null != w
-        ? (0, i.jsx)(g.A, {
-              targetElementRef: R,
-              user: O,
+    return (0, x.Vq)(w) && null != L
+        ? (0, l.jsx)(E.A, {
+              targetElementRef: M,
+              user: w,
               guildId: n ?? void 0,
               channelId: t,
-              appContext: N.BRT.OVERLAY,
-              shouldShow: D,
-              onRequestClose: () => b(!1),
+              appContext: C.BRT.OVERLAY,
+              shouldShow: k,
+              onRequestClose: () => O(!1),
               spacing: 24,
               children: (e) =>
-                  (0, i.jsx)(s.DUT, {
+                  (0, l.jsx)(s.D, {
                       ...e,
-                      innerRef: R,
-                      className: C.gD,
-                      onDoubleClick: y,
-                      onContextMenu: P,
+                      innerRef: M,
+                      className: R.gD,
+                      onDoubleClick: b,
+                      onContextMenu: H,
                       onClick: (e) => {
-                          e.preventDefault(), e.stopPropagation(), b(!0);
+                          e.preventDefault(), e.stopPropagation(), O(!0);
                       },
-                      children: (0, i.jsxs)("div", {
-                          className: C.h6,
+                      children: (0, l.jsxs)("div", {
+                          className: R.h6,
                           children: [
-                              (0, i.jsx)(s.euF, {
-                                  src: O.getAvatarURL(n ?? void 0, 24),
-                                  size: s._3J.SIZE_24,
-                                  "aria-label": G,
+                              (0, l.jsx)(a.eu, {
+                                  src: w.getAvatarURL(n ?? void 0, 24),
+                                  size: u._3.SIZE_24,
+                                  "aria-label": V,
                               }),
-                              (0, i.jsxs)(s.Text, {
-                                  className: C.rg,
+                              (0, l.jsxs)(o.E, {
+                                  className: R.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
-                                      (0, i.jsx)(d.A, {
-                                          userName: G,
-                                          displayNameStyles: j,
-                                          effectDisplayType: u.G.STATIC,
-                                          textClassName: C.m2,
+                                      (0, l.jsx)(g.A, {
+                                          userName: V,
+                                          displayNameStyles: F,
+                                          effectDisplayType: h.G.STATIC,
+                                          textClassName: R.m2,
                                       }),
-                                      (0, i.jsx)(h.Ay, { userId: v, disableGuildProfile: !0 }),
+                                      (0, l.jsx)(I.Ay, { userId: D, disableGuildProfile: !0 }),
                                   ],
                               }),
-                              (0, i.jsx)("div", {
-                                  className: C.ZA,
-                                  onDoubleClick: y,
-                                  children: (0, i.jsx)(m.Kc, {
+                              (0, l.jsx)("div", {
+                                  className: R.ZA,
+                                  onDoubleClick: b,
+                                  children: (0, l.jsx)(A.Kc, {
                                       guildId: n ?? void 0,
-                                      user: O,
-                                      video: w.selfVideo,
-                                      isStreaming: U,
-                                      className: C.ZA,
-                                      iconClassName: C.Ow,
+                                      user: w,
+                                      video: L.selfVideo,
+                                      isStreaming: G,
+                                      className: R.ZA,
+                                      iconClassName: R.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
-                                      mute: w.isVoiceMuted(),
-                                      deaf: w.isVoiceDeafened(),
-                                      serverMute: w.mute || w.suppress,
-                                      serverDeaf: w.deaf,
+                                      mute: L.isVoiceMuted(),
+                                      deaf: L.isVoiceDeafened(),
+                                      serverMute: L.mute || L.suppress,
+                                      serverDeaf: L.deaf,
                                       disabled: !1,
                                   }),
                               }),
-                              null != k ? (0, i.jsx)(c.A, { game: k, size: c.M.XSMALL, className: C.IV }) : null,
+                              null != P ? (0, l.jsx)(m.A, { game: P, size: m.M.XSMALL, className: R.IV }) : null,
                           ],
                       }),
                   }),

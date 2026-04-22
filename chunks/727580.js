@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = /[a-zA-Z]\w*/,
-        r = [
+        a = /[a-zA-Z]\w*/,
+        n = [
             "as",
             "break",
             "class",
@@ -19,23 +19,8 @@ e.exports = function (e) {
             "var",
             "while",
         ],
-        i = ["true", "false", "null"],
-        s = ["this", "super"],
-        a = [
-            "Bool",
-            "Class",
-            "Fiber",
-            "Fn",
-            "List",
-            "Map",
-            "Null",
-            "Num",
-            "Object",
-            "Range",
-            "Sequence",
-            "String",
-            "System",
-        ],
+        r = ["true", "false", "null"],
+        i = ["this", "super"],
         o = [
             "-",
             "~",
@@ -62,42 +47,53 @@ e.exports = function (e) {
             /\?:/,
             "=",
         ],
-        l = {
+        s = {
             relevance: 0,
-            match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
+            match: t.concat(/\b(?!(if|while|for|else|super)\b)/, a, /(?=\s*[({])/),
             className: "title.function",
         },
-        u = {
+        l = {
             match: t.concat(
-                t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...o)),
+                t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, a), t.either(...o)),
                 /(?=\s*\([^)]+\)\s*\{)/,
             ),
             className: "title.function",
-            starts: { contains: [{ begin: /\(/, end: /\)/, contains: [{ relevance: 0, scope: "params", match: n }] }] },
+            starts: { contains: [{ begin: /\(/, end: /\)/, contains: [{ relevance: 0, scope: "params", match: a }] }] },
         },
-        c = {
-            variants: [{ match: [/class\s+/, n, /\s+is\s+/, n] }, { match: [/class\s+/, n] }],
-            scope: { 2: "title.class", 4: "title.class.inherited" },
-            keywords: r,
+        c = { relevance: 0, match: t.either(...o), className: "operator" },
+        _ = { className: "property", begin: t.concat(/\./, t.lookahead(a)), end: a, excludeBegin: !0, relevance: 0 },
+        d = { relevance: 0, match: t.concat(/\b_/, a), scope: "variable" },
+        m = {
+            relevance: 0,
+            match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
+            scope: "title.class",
+            keywords: {
+                _: [
+                    "Bool",
+                    "Class",
+                    "Fiber",
+                    "Fn",
+                    "List",
+                    "Map",
+                    "Null",
+                    "Num",
+                    "Object",
+                    "Range",
+                    "Sequence",
+                    "String",
+                    "System",
+                ],
+            },
         },
-        d = { relevance: 0, match: t.either(...o), className: "operator" },
-        _ = { className: "string", begin: /"""/, end: /"""/ },
-        f = { className: "property", begin: t.concat(/\./, t.lookahead(n)), end: n, excludeBegin: !0, relevance: 0 },
-        p = { relevance: 0, match: t.concat(/\b_/, n), scope: "variable" },
-        h = { relevance: 0, match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/, scope: "title.class", keywords: { _: a } },
-        m = e.C_NUMBER_MODE,
+        p = e.C_NUMBER_MODE,
+        u = e.COMMENT(/\/\*\*/, /\*\//, { contains: [{ match: /@[a-z]+/, scope: "doctag" }, "self"] }),
+        g = { scope: "subst", begin: /%\(/, end: /\)/, contains: [p, m, s, d, c] },
         E = {
-            match: [n, /\s*/, /=/, /\s*/, /\(/, n, /\)\s*\{/],
-            scope: { 1: "title.function", 3: "operator", 6: "params" },
-        },
-        g = e.COMMENT(/\/\*\*/, /\*\//, { contains: [{ match: /@[a-z]+/, scope: "doctag" }, "self"] }),
-        A = { scope: "subst", begin: /%\(/, end: /\)/, contains: [m, h, l, p, d] },
-        I = {
             scope: "string",
             begin: /"/,
             end: /"/,
             contains: [
-                A,
+                g,
                 {
                     scope: "char.escape",
                     variants: [
@@ -109,29 +105,52 @@ e.exports = function (e) {
                 },
             ],
         };
-    A.contains.push(I);
-    let T = [...r, ...s, ...i],
-        S = {
+    g.contains.push(E);
+    let S = [...n, ...i, ...r],
+        b = {
             relevance: 0,
-            match: t.concat("\\b(?!", T.join("|"), "\\b)", /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat("\\b(?!", S.join("|"), "\\b)", /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: "variable",
-        },
-        y = {
-            scope: "comment",
-            variants: [
-                {
-                    begin: [/#!?/, /[A-Za-z_]+(?=\()/],
-                    beginScope: {},
-                    keywords: { literal: i },
-                    contains: [],
-                    end: /\)/,
-                },
-                { begin: [/#!?/, /[A-Za-z_]+/], beginScope: {}, end: /$/ },
-            ],
         };
     return {
         name: "Wren",
-        keywords: { keyword: r, "variable.language": s, literal: i },
-        contains: [y, m, I, _, g, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, c, E, u, l, d, p, f, S],
+        keywords: { keyword: n, "variable.language": i, literal: r },
+        contains: [
+            {
+                scope: "comment",
+                variants: [
+                    {
+                        begin: [/#!?/, /[A-Za-z_]+(?=\()/],
+                        beginScope: {},
+                        keywords: { literal: r },
+                        contains: [],
+                        end: /\)/,
+                    },
+                    { begin: [/#!?/, /[A-Za-z_]+/], beginScope: {}, end: /$/ },
+                ],
+            },
+            p,
+            E,
+            { className: "string", begin: /"""/, end: /"""/ },
+            u,
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            m,
+            {
+                variants: [{ match: [/class\s+/, a, /\s+is\s+/, a] }, { match: [/class\s+/, a] }],
+                scope: { 2: "title.class", 4: "title.class.inherited" },
+                keywords: n,
+            },
+            {
+                match: [a, /\s*/, /=/, /\s*/, /\(/, a, /\)\s*\{/],
+                scope: { 1: "title.function", 3: "operator", 6: "params" },
+            },
+            l,
+            s,
+            c,
+            d,
+            _,
+            b,
+        ],
     };
 };

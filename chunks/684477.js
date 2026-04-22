@@ -1,46 +1,44 @@
-"use strict";
 n.d(t, { E: () => p });
-var r = n(627968),
-    i = n(64700),
-    s = n(156312),
-    a = n(166532),
-    o = n(482132),
-    l = n(866485),
+var l = n(627968),
+    r = n(64700),
+    i = n(156312),
+    s = n(166532),
+    a = n(482132),
+    o = n(866485),
     u = n(981036),
-    c = n(985018),
-    d = n(367644);
-let _ = (e) => (0, r.jsx)(f, { ...e }),
-    f = (e) => {
+    d = n(985018),
+    c = n(367644);
+let C = (e) => {
         let {
                 paymentModalStepProps: { handleStepChange: t },
                 unifiedStepProps: n,
             } = e,
             {
-                layout: l,
-                renderStepBody: _,
-                renderLeftColumn: f,
-                renderRightColumn: p,
-                primaryCTAButtonProps: h,
-                onBackClick: m,
+                layout: o,
+                renderStepBody: C,
+                renderLeftColumn: p,
+                renderRightColumn: m,
+                primaryCTAButtonProps: E,
+                onBackClick: A,
             } = n,
-            { hasPaymentSources: E } = (0, s.P5)(),
-            g = E ? a.pn.REVIEW : a.pn.ADD_PAYMENT_STEPS,
-            A = i.useCallback(() => t(g), [t, g]),
-            I = i.useMemo(
+            { hasPaymentSources: h } = (0, i.P5)(),
+            f = h ? s.pn.REVIEW : s.pn.ADD_PAYMENT_STEPS,
+            _ = r.useCallback(() => t(f), [t, f]),
+            g = r.useMemo(
                 () =>
-                    "custom-step-body" === l
-                        ? _()
-                        : "two-column" === l
-                          ? (0, r.jsxs)("div", { className: d.D, children: [f(), p()] })
+                    "custom-step-body" === o
+                        ? C()
+                        : "two-column" === o
+                          ? (0, l.jsxs)("div", { className: c.D, children: [p(), m()] })
                           : null,
-                [l, _, f, p],
+                [o, C, p, m],
             ),
-            T = i.useMemo(() => ({ ...h, onClick: A, text: c.intl.string(c.t.XiOHRX) }), [h, A]);
-        return (0, r.jsxs)(r.Fragment, {
+            T = r.useMemo(() => ({ ...E, onClick: _, text: d.intl.string(d.t.XiOHRX) }), [E, _]);
+        return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsx)(o.dZ, { children: I }),
-                (0, r.jsx)(o.UX, { children: (0, r.jsx)(u.cy, { onBackClick: m, primaryCTAButtonProps: T }) }),
+                (0, l.jsx)(a.dZ, { children: g }),
+                (0, l.jsx)(a.UX, { children: (0, l.jsx)(u.cy, { onBackClick: A, primaryCTAButtonProps: T }) }),
             ],
         });
     },
-    p = (0, l.R)({ step: a.pn.GIFT_CUSTOMIZATION, renderStep: _ });
+    p = (0, o.R)({ step: s.pn.GIFT_CUSTOMIZATION, renderStep: (e) => (0, l.jsx)(C, { ...e }) });

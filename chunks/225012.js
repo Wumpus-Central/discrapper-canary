@@ -1,27 +1,3 @@
-"use strict";
-n.d(t, {
-    FC: () => a.a,
-    H_: () => r.s,
-    O1: () => s.d,
-    TV: () => i.a,
-    YJ: () => o.r,
-    av: () => f.f,
-    hA: () => d.u,
-    hN: () => u.i,
-    q7: () => l.D,
-    rh: () => p.Y,
-    t6: () => _.c,
-    wv: () => c.b,
-});
-var r = n(888457),
-    i = n(601485),
-    s = n(52822),
-    a = n(128599),
-    o = n(216126),
-    l = n(505202),
-    u = n(663551),
-    c = n(742714),
-    d = n(637389),
-    _ = n(592873),
-    f = n(410142),
-    p = n(413357);
+d.d(c, { A: () => t });
+let t =
+    "https://cdn.discordapp.com/assets/content/253a2888f9829e1208eb8da7f182437d389340e4368db1dbe5babe31d4e1e1b4.mov";

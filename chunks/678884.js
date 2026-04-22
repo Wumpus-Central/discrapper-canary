@@ -1,4 +1,4 @@
-class t {
+e.exports = class {
     constructor() {
         (this.max = 1e3), (this.map = new Map());
     }
@@ -19,5 +19,4 @@ class t {
         }
         return this;
     }
-}
-e.exports = t;
+};

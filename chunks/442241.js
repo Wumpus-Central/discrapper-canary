@@ -1,52 +1,42 @@
-e.d(a, { default: () => c });
-var n = e(627968),
-    s = e(64700),
-    i = e(158954),
-    r = e(397927),
-    o = e(49999),
-    d = e(985018),
-    l = e(89946);
-function c(t) {
-    let { modalConfig: a, markAsDismissed: e, ...c } = t,
+n.d(t, { default: () => c });
+var e = n(627968),
+    s = n(64700),
+    i = n(189213),
+    r = n(834730),
+    o = n(49999),
+    d = n(985018),
+    l = n(89946);
+function c(a) {
+    let { modalConfig: t, markAsDismissed: n, ...c } = a,
         h = s.useCallback(
-            (t) => {
-                a.onPrimaryClick?.(t), e(o.i.TAKE_ACTION);
+            (a) => {
+                t.onPrimaryClick?.(a), n(o.i.TAKE_ACTION);
             },
-            [a, e],
+            [t, n],
         ),
-        x = [a.firstHeader, a.secondHeader].filter(Boolean).join(" "),
-        m = [
+        m = [t.firstHeader, t.secondHeader].filter(Boolean).join(" "),
+        p = [
             { variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: c.onClose },
-            ...(null != a.primaryButtonText ? [{ variant: "primary", text: a.primaryButtonText, onClick: h }] : []),
+            ...(null != t.primaryButtonText ? [{ variant: "primary", text: t.primaryButtonText, onClick: h }] : []),
         ];
-    return (0, n.jsx)(i.Modal, {
+    return (0, e.jsx)(i.Modal, {
         ...c,
-        title: x,
-        actions: m,
+        title: m,
+        actions: p,
         size: "md",
-        children: (0, n.jsx)("div", {
+        children: (0, e.jsx)("div", {
             className: l.kL,
-            children: (0, n.jsxs)("div", {
+            children: (0, e.jsxs)("div", {
                 className: l.hQ,
                 children: [
-                    (0, n.jsx)(r.Text, {
+                    (0, e.jsx)(r.E, { tag: "span", className: l.h_, variant: "text-sm/normal", children: t.firstBody }),
+                    (0, e.jsx)(r.E, {
                         tag: "span",
                         className: l.h_,
                         variant: "text-sm/normal",
-                        children: a.firstBody,
+                        children: t.secondBody,
                     }),
-                    (0, n.jsx)(r.Text, {
-                        tag: "span",
-                        className: l.h_,
-                        variant: "text-sm/normal",
-                        children: a.secondBody,
-                    }),
-                    (0, n.jsx)(r.Text, {
-                        tag: "span",
-                        className: l.h_,
-                        variant: "text-sm/normal",
-                        children: a.thirdBody,
-                    }),
+                    (0, e.jsx)(r.E, { tag: "span", className: l.h_, variant: "text-sm/normal", children: t.thirdBody }),
                 ],
             }),
         }),

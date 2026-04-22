@@ -1,56 +1,56 @@
-i.d(t, { A: () => g });
-var l = i(627968),
-    n = i(64700),
-    a = i(503698),
-    s = i.n(a),
-    r = i(417597),
-    o = i(397927),
-    d = i(966327),
-    c = i(287809),
-    u = i(260451),
-    m = i(985018),
-    x = i(383499);
-function g(e) {
-    let { friendMemberIds: t, className: i, avatarSize: a = o._3J.SIZE_16 } = e,
-        g = (0, r.yK)([c.default], () =>
-            t
+t.d(i, { A: () => x });
+var l = t(627968),
+    s = t(64700),
+    a = t(503698),
+    n = t.n(a),
+    r = t(417597),
+    d = t(778712),
+    o = t(834730),
+    c = t(966327),
+    u = t(287809),
+    h = t(260451),
+    m = t(985018),
+    _ = t(197691);
+function x(e) {
+    let { friendMemberIds: i, className: t, avatarSize: a = d._3.SIZE_16 } = e,
+        x = (0, r.yK)([u.default], () =>
+            i
                 .slice(0, 3)
-                .map((e) => c.default.getUser(e))
+                .map((e) => u.default.getUser(e))
                 .filter((e) => null != e),
         ),
-        { enabled: h } = u.SH.useConfig({ location: "InviteFriendMembers" }),
-        _ = n.useCallback(
-            (e, t) =>
-                (0, l.jsx)(o.Text, { tag: "span", variant: "text-sm/medium", color: "text-subtle", children: e }, t),
+        { enabled: g } = h.SH.useConfig({ location: "InviteFriendMembers" }),
+        A = s.useCallback(
+            (e, i) => (0, l.jsx)(o.E, { tag: "span", variant: "text-sm/medium", color: "text-subtle", children: e }, i),
             [],
         );
-    if (0 === g.length) return null;
-    let p = g[0],
-        A = {
-            count: t.length - 1,
+    if (0 === x.length) return null;
+    let p = x[0],
+        v = {
+            count: i.length - 1,
             username: p.username,
-            username2: 2 === t.length && g.length >= 2 ? g[1].username : "",
+            username2: 2 === i.length && x.length >= 2 ? x[1].username : "",
         },
-        j = h ? m.intl.format(m.t.qnYumI, { usernameHook: _, ...A }) : m.intl.format(m.t["5NHEPu"], A);
+        E = g ? m.intl.format(m.t.qnYumI, { usernameHook: A, ...v }) : m.intl.format(m.t["5NHEPu"], v);
     return (0, l.jsxs)("div", {
-        className: s()(x.kL, i),
+        className: n()(_.kL, t),
         children: [
             (0, l.jsx)("div", {
-                className: x.yA,
-                style: { maxHeight: `${(0, o.FT9)(a)}px` },
-                children: g.map((e, t) =>
+                className: _.yA,
+                style: { maxHeight: `${(0, d.FT)(a)}px` },
+                children: x.map((e, i) =>
                     (0, l.jsx)(
                         "div",
                         {
-                            className: x.R3,
-                            style: { zIndex: g.length - t },
-                            children: (0, l.jsx)(d.A, { user: e, size: a }),
+                            className: _.R3,
+                            style: { zIndex: x.length - i },
+                            children: (0, l.jsx)(c.A, { user: e, size: a }),
                         },
                         e.id,
                     ),
                 ),
             }),
-            (0, l.jsx)(o.Text, { variant: "text-sm/normal", color: "text-subtle", children: j }),
+            (0, l.jsx)(o.E, { variant: "text-sm/normal", color: "text-subtle", children: E }),
         ],
     });
 }

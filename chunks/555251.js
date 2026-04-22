@@ -1,54 +1,55 @@
-a.d(e, { default: () => d });
-var i = a(627968),
-    s = a(64700),
-    n = a(732955),
-    r = a(397927),
-    l = a(656925),
-    c = a(985018),
-    o = a(856367);
-function d(t) {
-    let { avatarId: e, storageHash: a, avatarDescription: d, onConfirmDelete: x, onClose: u, ...h } = t,
-        [f, m] = s.useState(!1),
-        { avatarSrc: v, eventHandlers: p } = (0, l.A)({ avatarId: e, storageHash: a, size: r._3J.SIZE_120 }),
-        { onMouseEnter: y, onMouseLeave: _ } = p,
-        C = s.useCallback(async () => {
-            m(!0);
+e.d(a, { default: () => x });
+var i = e(627968),
+    s = e(64700),
+    n = e(189213),
+    r = e(778712),
+    l = e(834730),
+    c = e(656925),
+    o = e(985018),
+    d = e(918684);
+function x(t) {
+    let { avatarId: a, storageHash: e, avatarDescription: x, onConfirmDelete: u, onClose: h, ...f } = t,
+        [m, v] = s.useState(!1),
+        { avatarSrc: p, eventHandlers: y } = (0, c.A)({ avatarId: a, storageHash: e, size: r._3.SIZE_120 }),
+        { onMouseEnter: _, onMouseLeave: C } = y,
+        E = s.useCallback(async () => {
+            v(!0);
             try {
-                await x();
+                await u();
             } catch (t) {
             } finally {
-                m(!1);
+                v(!1);
             }
-            u();
-        }, [x, u]);
-    return (0, i.jsx)(n.aFV, {
+            h();
+        }, [u, h]);
+    return (0, i.jsx)(n.Modal, {
         size: "sm",
-        title: c.intl.string(c.t.rfaLTH),
-        subtitle: c.intl.string(c.t.EKmxKc),
+        title: o.intl.string(o.t.rfaLTH),
+        subtitle: o.intl.string(o.t.EKmxKc),
         actions: [
-            { text: c.intl.string(c.t["ETE/oC"]), variant: "secondary", onClick: u, disabled: f },
-            { text: c.intl.string(c.t.Lh0uyy), variant: "critical-primary", onClick: C, loading: f },
+            { text: o.intl.string(o.t["ETE/oC"]), variant: "secondary", onClick: h, disabled: m },
+            { text: o.intl.string(o.t.Lh0uyy), variant: "critical-primary", onClick: E, loading: m },
         ],
-        onClose: u,
-        ...h,
+        onClose: h,
+        ...f,
         children: (0, i.jsxs)("div", {
-            className: o.jE,
+            className: d.jE,
             children: [
                 (0, i.jsx)("div", {
-                    onMouseEnter: y,
-                    onMouseLeave: _,
-                    className: o.H,
-                    children: (0, i.jsx)("img", { src: v, alt: d, className: o.my }),
+                    onMouseEnter: _,
+                    onMouseLeave: C,
+                    className: d.H,
+                    children: (0, i.jsx)("img", { src: p, alt: x, className: d.my }),
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.E, {
                     variant: "eyebrow",
                     color: "text-feedback-positive",
-                    children: c.intl.string(c.t["2Ld8DM"]),
+                    children: o.intl.string(o.t["2Ld8DM"]),
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.E, {
                     variant: "text-xs/normal",
                     color: "text-subtle",
-                    children: c.intl.string(c.t.Oe0xqt),
+                    children: o.intl.string(o.t.Oe0xqt),
                 }),
             ],
         }),

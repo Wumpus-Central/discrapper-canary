@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { H: () => a });
-var r = n(627968);
-n(64700);
-var i = n(996682),
-    s = n(27989);
-let a = (e) => {
-    let { size: t = "md", width: n, height: a, ...o } = e,
-        l = (0, s.J)(t),
-        u = l?.width ?? n,
-        c = l?.height ?? a;
-    return (0, r.jsxs)("svg", {
-        ...(0, i.A)(o),
+a.d(l, { H: () => n });
+var t = a(627968);
+a(64700);
+var s = a(996682),
+    i = a(27989);
+let n = (e) => {
+    let { size: l = "md", width: a, height: n, ...c } = e,
+        h = (0, i.J)(l),
+        r = h?.width ?? a,
+        o = h?.height ?? n;
+    return (0, t.jsxs)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: u,
-        height: c,
+        width: r,
+        height: o,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, r.jsx)("mask", {
+            (0, t.jsx)("mask", {
                 id: "a",
                 fill: "#fff",
-                children: (0, r.jsx)("path", {
+                children: (0, t.jsx)("path", {
                     fillRule: "evenodd",
                     d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
                     clipRule: "evenodd",
                 }),
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#F3F3F4",
                 fillRule: "evenodd",
                 d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
                 clipRule: "evenodd",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#97979F",
                 fillOpacity: ".3",
                 d: "M2.4 4v.5h19.2v-1H2.4V4Zm19.2 0v.5c1.14 0 1.9.75 1.9 1.5h1c0-1.46-1.39-2.5-2.9-2.5V4ZM24 6h-.5v12h1V6H24Zm0 12h-.5c0 .75-.76 1.5-1.9 1.5v1c1.51 0 2.9-1.04 2.9-2.5H24Zm-2.4 2v-.5H2.4v1h19.2V20ZM2.4 20v-.5C1.26 19.5.5 18.75.5 18h-1c0 1.46 1.39 2.5 2.9 2.5V20ZM0 18h.5V6h-1v12H0ZM0 6h.5c0-.75.76-1.5 1.9-1.5v-1C.89 3.5-.5 4.54-.5 6H0Z",
                 mask: "url(#a)",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 d: "m14.62 10.43.84 2.13.86-2.13h.66l-1.36 3.25h-.34l-1.34-3.25h.68ZM6.54 11.25c0 .17.1.26.48.4.7.25.9.48.9.98 0 .62-.44 1.04-1.09 1.04-.46 0-.8-.18-1.1-.6l.4-.38c.15.27.39.42.68.42.28 0 .48-.2.48-.45a.38.38 0 0 0-.18-.33c-.07-.03-.19-.1-.43-.18-.58-.2-.78-.43-.78-.86 0-.52.43-.91.99-.91.34 0 .66.12.93.35l-.33.42c-.16-.18-.3-.25-.5-.25-.26 0-.45.15-.45.35Z",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 fillRule: "evenodd",
                 d: "M2 10.43h.9c1 0 1.7.65 1.7 1.59a1.59 1.59 0 0 1-1.7 1.58H2v-3.17Zm.78 2.63c.4 0 .65-.08.85-.25a1.09 1.09 0 0 0 0-1.59c-.2-.18-.45-.25-.85-.25h-.16v2.09h.16Z",
                 clipRule: "evenodd",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 d: "M4.89 13.6h.62v-3.17h-.62v3.17ZM8.12 12.02c0 .93.73 1.65 1.67 1.65.27 0 .5-.06.78-.19v-.72c-.25.24-.47.34-.75.34-.62 0-1.06-.45-1.06-1.09 0-.6.45-1.09 1.03-1.09.3 0 .52.1.78.36v-.73c-.28-.13-.5-.2-.76-.2-.94 0-1.69.75-1.69 1.67ZM17.26 13.6h1.75v-.54h-1.13v-.85h1.1v-.54h-1.1v-.7h1.13v-.54h-1.75v3.17Z",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 fillRule: "evenodd",
                 d: "M21.46 11.36c0-.59-.41-.93-1.12-.93h-.92v3.17h.62v-1.28h.08l.85 1.28h.76l-1-1.34c.47-.1.73-.41.73-.9Zm-1.24.53h-.18v-.96h.19c.38 0 .6.16.6.47 0 .32-.22.49-.61.49Z",
                 clipRule: "evenodd",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 d: "M21.75 10.46c.06 0 .1.03.1.09v.02a.07.07 0 0 0 .03-.06c0-.05-.04-.08-.13-.08h-.03v.03h.03ZM21.72 10.59v-.13h-.06v.28h.06v-.1l.08.1h.08l-.09-.11c.03-.01.06-.03.06-.06a.18.18 0 0 1-.1.02h-.03Z",
             }),
-            (0, r.jsx)("path", {
+            (0, t.jsx)("path", {
                 fill: "#201D1C",
                 fillRule: "evenodd",
                 d: "M21.76 10.36c-.13 0-.24.1-.24.24 0 .14.1.24.24.24.13 0 .24-.1.24-.24 0-.13-.1-.24-.24-.24Zm0 .44a.2.2 0 0 1-.2-.2c0-.1.1-.2.2-.2s.2.1.2.2c0 .11-.1.2-.2.2Z",
                 clipRule: "evenodd",
             }),
-            (0, r.jsx)("path", { fill: "url(#b)", d: "M12.38 13.8a1.77 1.77 0 1 1 0-3.55 1.77 1.77 0 0 1 0 3.54Z" }),
-            (0, r.jsx)("defs", {
-                children: (0, r.jsxs)("radialGradient", {
+            (0, t.jsx)("path", { fill: "url(#b)", d: "M12.38 13.8a1.77 1.77 0 1 1 0-3.55 1.77 1.77 0 0 1 0 3.54Z" }),
+            (0, t.jsx)("defs", {
+                children: (0, t.jsxs)("radialGradient", {
                     id: "b",
                     cx: "0",
                     cy: "0",
@@ -78,9 +77,9 @@ let a = (e) => {
                     gradientTransform: "matrix(-2.72642 -2.18115 1.701 -2.12624 13.6 12.98)",
                     gradientUnits: "userSpaceOnUse",
                     children: [
-                        (0, r.jsx)("stop", { stopColor: "#F08F14" }),
-                        (0, r.jsx)("stop", { offset: ".8", stopColor: "#E0481E" }),
-                        (0, r.jsx)("stop", { offset: "1", stopColor: "#661D14" }),
+                        (0, t.jsx)("stop", { stopColor: "#F08F14" }),
+                        (0, t.jsx)("stop", { offset: ".8", stopColor: "#E0481E" }),
+                        (0, t.jsx)("stop", { offset: "1", stopColor: "#661D14" }),
                     ],
                 }),
             }),

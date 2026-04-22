@@ -1,35 +1,36 @@
 "use strict";
 n.d(t, { z: () => o });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(194267),
-    a = n(650746);
+var l = n(939249),
+    s = n(834730),
+    r = n(194267),
+    a = n(420298);
 function o(e) {
     let {
         quest: t,
         sourceQuestContent: n,
         applications: o,
-        popoutTargetElementRef: l,
+        popoutTargetElementRef: c,
         onGameSheetOpened: u,
-        onGameSheetClosed: c,
+        onGameSheetClosed: d,
     } = e;
     return (e) =>
-        (0, r.jsx)(
-            s.A,
+        (0, i.jsx)(
+            r.A,
             {
                 quest: t,
                 sourceQuestContent: n,
                 applications: o ?? [],
-                targetElementRef: l,
+                targetElementRef: c,
                 onGameSheetOpened: u,
-                onGameSheetClosed: c,
+                onGameSheetClosed: d,
                 children: (t, n) =>
-                    (0, r.jsx)(i.DUT, {
+                    (0, i.jsx)(l.D, {
                         ...t,
                         style: { display: "inline-block", cursor: "pointer" },
                         innerRef: n,
-                        children: (0, r.jsx)(i.Text, {
+                        children: (0, i.jsx)(s.E, {
                             variant: "text-xs/normal",
                             color: "text-link",
                             className: a.s3,

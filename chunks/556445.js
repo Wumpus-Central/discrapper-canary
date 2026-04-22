@@ -1,36 +1,37 @@
-i.d(t, { A: () => o });
-var n = i(627968);
-i(64700);
-var a = i(990078),
-    l = i(397927),
-    r = i(562153),
-    s = i(353411);
-function o(e) {
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var l = n(990078),
+    a = n(408278),
+    s = n(835723),
+    r = n(562153),
+    o = n(353411);
+function c(e) {
     let {
             activity: t,
-            user: i,
-            channelId: o,
+            user: n,
+            channelId: c,
             guildId: d,
-            source: c,
-            size: u = "sm",
+            source: u,
+            size: h = "sm",
             variant: m = "secondary",
-            onAction: _,
-            ...A
+            onAction: A,
+            ...g
         } = e,
-        { tooltip: g, loading: h, disabled: f, onClick: p } = (0, s.J$)(t, i, c, r.Ay.getNickname(d, o, i));
-    return (0, n.jsx)(a.m, {
-        text: g,
-        children: (0, n.jsx)(l.K0, {
-            icon: l.J2m,
-            size: u,
+        { tooltip: p, loading: _, disabled: f, onClick: E } = (0, o.J$)(t, n, u, r.Ay.getNickname(d, c, n));
+    return (0, i.jsx)(l.m, {
+        text: p,
+        children: (0, i.jsx)(a.K, {
+            icon: s.J,
+            size: h,
             variant: m,
             onClick: () => {
-                _?.(), p();
+                A?.(), E();
             },
             disabled: f,
-            loading: h,
-            "aria-label": g ?? t.name,
-            ...A,
+            loading: _,
+            "aria-label": p ?? t.name,
+            ...g,
         }),
     });
 }

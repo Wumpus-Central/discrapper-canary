@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root__2dbe1",
     mY: "previewCamera__2dbe1",

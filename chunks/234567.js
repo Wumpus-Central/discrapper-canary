@@ -1,40 +1,41 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     a = n.n(l),
-    s = n(397927),
-    r = n(569989),
-    o = n(84476);
-function c(e) {
+    s = n(939249),
+    r = n(789645),
+    o = n(569989),
+    c = n(84476);
+function d(e) {
     let {
         className: t,
         roleColor: n,
         roleName: l,
-        hasRemoveIcon: c = !1,
-        onClick: d,
-        disabled: u = !1,
-        verified: h = !1,
+        hasRemoveIcon: d = !1,
+        onClick: u,
+        disabled: h = !1,
+        verified: m = !1,
     } = e;
-    return (0, i.jsx)(s.DUT, {
-        className: a()(t, o.x6, { [o.r9]: u }),
-        onClick: u ? void 0 : d,
-        "aria-disabled": u,
+    return (0, i.jsx)(s.D, {
+        className: a()(t, c.x6, { [c.r9]: h }),
+        onClick: h ? void 0 : u,
+        "aria-disabled": h,
         role: "button",
-        children: (0, i.jsx)(r.A, {
-            className: o.JC,
+        children: (0, i.jsx)(o.A, {
+            className: c.JC,
             roleColor: n,
             roleName: l,
-            verified: h,
+            verified: m,
             children:
-                c &&
-                (0, i.jsx)(s.PGe, {
+                d &&
+                (0, i.jsx)(r.P, {
                     size: "custom",
                     color: "currentColor",
                     height: 6,
                     width: 6,
-                    className: o.Tj,
-                    colorClass: o.eG,
+                    className: c.Tj,
+                    colorClass: c.eG,
                 }),
         }),
     });

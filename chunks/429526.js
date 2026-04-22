@@ -1,89 +1,90 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => j });
 var i = n(627968),
-    s = n(64700),
-    l = n(735438),
+    l = n(64700),
+    s = n(735438),
     r = n(417597),
-    a = n(397927),
-    o = n(374084),
-    d = n(808728),
-    c = n(71393),
-    u = n(488926),
-    m = n(199940),
-    g = n(132514),
-    x = n(139497),
-    h = n(652215),
-    _ = n(985018),
-    A = n(659233);
-let p = [],
-    f = function (e) {
+    a = n(834730),
+    o = n(939249),
+    d = n(933832),
+    c = n(374084),
+    u = n(808728),
+    m = n(71393),
+    g = n(488926),
+    h = n(199940),
+    x = n(132514),
+    _ = n(139497),
+    p = n(652215),
+    A = n(985018),
+    E = n(327084);
+let f = [],
+    j = function (e) {
         let { guildId: t } = e,
-            n = (0, r.bG)([c.A], () => c.A.getGuild(t)),
-            f = (0, r.yK)([g.A], () => {
-                let e = g.A.getSettings();
-                return e.resourceChannels?.map((e) => e.channelId) ?? p;
+            n = (0, r.bG)([m.A], () => m.A.getGuild(t)),
+            j = (0, r.yK)([x.A], () => {
+                let e = x.A.getSettings();
+                return e.resourceChannels?.map((e) => e.channelId) ?? f;
             }),
-            j = (0, r.yK)([g.A], () => g.A.getDismissedSuggestedChannelIds(t)),
-            N = (0, r.bG)([d.Ay], () => d.Ay.getSelectableChannels(t)),
-            E = s.useMemo(
+            N = (0, r.yK)([x.A], () => x.A.getDismissedSuggestedChannelIds(t)),
+            I = (0, r.bG)([u.Ay], () => u.Ay.getSelectableChannels(t)),
+            C = l.useMemo(
                 () =>
-                    (0, l.chain)(N)
+                    (0, s.chain)(I)
                         .filter(
                             (e) =>
-                                e.channel.type === h.rbe.GUILD_TEXT &&
+                                e.channel.type === p.rbe.GUILD_TEXT &&
                                 e.channel.id !== n?.rulesChannelId &&
+                                !N.includes(e.channel.id) &&
                                 !j.includes(e.channel.id) &&
-                                !f.includes(e.channel.id) &&
-                                u.MJ(h.xBc.VIEW_CHANNEL, e.channel) &&
-                                !u.MJ(h.xBc.SEND_MESSAGES, e.channel),
+                                g.MJ(p.xBc.VIEW_CHANNEL, e.channel) &&
+                                !g.MJ(p.xBc.SEND_MESSAGES, e.channel),
                         )
                         .take(5)
                         .value(),
-                [N, j, n?.rulesChannelId, f],
+                [I, N, n?.rulesChannelId, j],
             ),
-            b = s.useCallback(() => {
-                let e = E.map((e) => e.channel.id);
-                (0, m.kO)(t, e);
-            }, [t, E]);
-        return E.length <= 0 || f.length >= o.CW
+            b = l.useCallback(() => {
+                let e = C.map((e) => e.channel.id);
+                (0, h.kO)(t, e);
+            }, [t, C]);
+        return C.length <= 0 || j.length >= c.CW
             ? null
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: A.rS,
+                          className: E.rS,
                           children: [
-                              (0, i.jsx)(a.Text, { variant: "text-md/semibold", children: _.intl.string(_.t.WThgAR) }),
+                              (0, i.jsx)(a.E, { variant: "text-md/semibold", children: A.intl.string(A.t.WThgAR) }),
                               (0, i.jsxs)("div", {
-                                  className: A.vn,
+                                  className: E.vn,
                                   children: [
-                                      (0, i.jsx)(a.Text, {
+                                      (0, i.jsx)(a.E, {
                                           variant: "text-xs/medium",
                                           color: "text-muted",
-                                          children: _.intl.string(_.t.YtNI8C),
+                                          children: A.intl.string(A.t.YtNI8C),
                                       }),
-                                      (0, i.jsxs)(a.DUT, {
-                                          className: A.iC,
+                                      (0, i.jsxs)(o.D, {
+                                          className: E.iC,
                                           onClick: b,
                                           children: [
-                                              (0, i.jsx)(a.A9s, { size: "md", color: "currentColor", className: A.An }),
-                                              (0, i.jsx)(a.Text, {
+                                              (0, i.jsx)(d.A, { size: "md", color: "currentColor", className: E.An }),
+                                              (0, i.jsx)(a.E, {
                                                   variant: "text-xs/semibold",
                                                   color: "text-brand",
-                                                  children: _.intl.string(_.t.aLqZTl),
+                                                  children: A.intl.string(A.t.aLqZTl),
                                               }),
                                           ],
                                       }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: A.cF,
-                                  children: E.map((e, t) =>
-                                      (0, i.jsx)(x.A, { channel: e.channel, end: t < E.length - 1 }, e.channel.id),
+                                  className: E.cF,
+                                  children: C.map((e, t) =>
+                                      (0, i.jsx)(_.A, { channel: e.channel, end: t < C.length - 1 }, e.channel.id),
                                   ),
                               }),
                           ],
                       }),
-                      (0, i.jsx)("div", { className: A.DY }),
+                      (0, i.jsx)("div", { className: E.DY }),
                   ],
               });
     };

@@ -1,47 +1,49 @@
 "use strict";
-n.d(t, { F: () => h });
-var r = n(627968);
-n(64700);
-var i = n(934551),
-    s = n(311907),
-    a = n(397927),
-    o = n(544028),
-    l = n(230835),
-    u = n(738419),
-    c = n(818348),
-    d = n(520650),
-    _ = n(985018),
-    f = n(521529);
-let p = (e, t) => (e === t ? f.HE : void 0);
-function h() {
-    let e = (0, s.bG)([o.A], () => o.A.theme),
-        t = (0, a.Mwr)(e) ? c.NJ.DARK : c.NJ.LIGHT,
-        n = [
+l.d(t, { F: () => x });
+var n = l(627968);
+l(64700);
+var a = l(943255),
+    s = l(575181),
+    i = l(311907),
+    r = l(366010),
+    o = l(629584),
+    c = l(544028),
+    u = l(230835),
+    d = l(738419),
+    h = l(818348),
+    m = l(693227),
+    _ = l(985018),
+    g = l(893897);
+let f = (e, t) => (e === t ? g.HE : void 0);
+function x() {
+    let e = (0, i.bG)([c.A], () => c.A.theme),
+        t = (0, r.M)(e) ? h.NJ.DARK : h.NJ.LIGHT,
+        l = [
             {
                 name: "",
-                value: c.NJ.DARK,
-                icon: i.ThemeDarkIcon,
-                className: p(t, c.NJ.DARK),
-                tooltip: _.intl.string(d.default["Dk+OWY"]),
-                tooltipAriaLabel: _.intl.string(d.default["Dk+OWY"]),
+                value: h.NJ.DARK,
+                icon: a.Z,
+                className: f(t, h.NJ.DARK),
+                tooltip: _.intl.string(m.default["Dk+OWY"]),
+                tooltipAriaLabel: _.intl.string(m.default["Dk+OWY"]),
             },
             {
                 name: "",
-                value: c.NJ.LIGHT,
-                icon: i.ThemeLightIcon,
-                className: p(t, c.NJ.LIGHT),
-                tooltip: _.intl.string(d.default["5vlJkY"]),
-                tooltipAriaLabel: _.intl.string(d.default["5vlJkY"]),
+                value: h.NJ.LIGHT,
+                icon: s.F,
+                className: f(t, h.NJ.LIGHT),
+                tooltip: _.intl.string(m.default["5vlJkY"]),
+                tooltipAriaLabel: _.intl.string(m.default["5vlJkY"]),
             },
         ];
-    return (0, r.jsx)(a.IzF, {
-        className: f.t7,
-        optionClassName: f.aF,
-        options: n,
+    return (0, n.jsx)(o.I, {
+        className: g.t7,
+        optionClassName: g.aF,
+        options: l,
         value: t,
         onChange: (e) => {
             let { value: t } = e;
-            (0, u.dR)(), (0, l.IE)(t);
+            (0, d.dR)(), (0, u.IE)(t);
         },
         look: "pill",
     });

@@ -1,7 +1,7 @@
 n.d(e, { A: () => s });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var l = n(477782),
     a = n(398590),
     d = n(957316),
     r = n(652215),
@@ -9,7 +9,7 @@ var l = n(397927),
 function s(t, e) {
     return e === r.BRT.POPOUT
         ? null
-        : (0, i.jsx)(l.Drp, {
+        : (0, i.jsx)(l.Dr, {
               id: "report-raid",
               label: u.intl.string(u.t.cswId3),
               action: () => {

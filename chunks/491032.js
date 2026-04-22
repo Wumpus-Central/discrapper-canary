@@ -1,50 +1,50 @@
-"use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => h });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(878701),
-    a = n(754513),
-    o = n(985018),
-    d = n(576165);
-function c(e) {
-    let { rule: t, onChangeRule: n, collapsed: c = !1 } = e,
-        [u, m] = s.useState(!c),
-        g = s.useCallback(() => {
-            m(!u);
-        }, [u, m]),
-        x = s.useCallback(
+    l = n(64700),
+    s = n(311678),
+    r = n(939249),
+    a = n(534514),
+    o = n(900797),
+    d = n(847374),
+    c = n(878701),
+    u = n(754513),
+    m = n(985018),
+    g = n(120085);
+function h(e) {
+    let { rule: t, onChangeRule: n, collapsed: h = !1 } = e,
+        [x, _] = l.useState(!h),
+        p = l.useCallback(() => {
+            _(!x);
+        }, [x, _]),
+        A = l.useCallback(
             (e) => {
                 n({ ...t, triggerMetadata: { ...t.triggerMetadata, regexPatterns: e } });
             },
             [n, t],
         );
-    return (0, r.u)(t.triggerType)
-        ? (0, i.jsx)(l.Nt8, {
-              isExpanded: u,
-              collapsibleContent: (0, i.jsx)(a.A, {
+    return (0, c.u)(t.triggerType)
+        ? (0, i.jsx)(s.N, {
+              isExpanded: x,
+              collapsibleContent: (0, i.jsx)(u.A, {
                   rule: t,
-                  onChangeText: x,
-                  className: d.kS,
+                  onChangeText: A,
+                  className: g.kS,
                   initialValue: t.triggerMetadata?.regexPatterns,
               }),
-              className: d.uR,
+              className: g.uR,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(l.DUT, {
+                  return (0, i.jsx)(r.D, {
                       onClick: (e) => {
-                          g(), t(e);
+                          p(), t(e);
                       },
                       children: (0, i.jsxs)("div", {
-                          className: d.wx,
+                          className: g.wx,
                           children: [
-                              (0, i.jsx)(l.Heading, {
-                                  variant: "text-sm/medium",
-                                  children: o.intl.string(o.t["dnunm+"]),
-                              }),
-                              u
-                                  ? (0, i.jsx)(l.tN5, { size: "md", color: "currentColor", className: d.UE })
-                                  : (0, i.jsx)(l.abt, { size: "md", color: "currentColor", className: d.UE }),
+                              (0, i.jsx)(a.D, { variant: "text-sm/medium", children: m.intl.string(m.t["dnunm+"]) }),
+                              x
+                                  ? (0, i.jsx)(o.t, { size: "md", color: "currentColor", className: g.UE })
+                                  : (0, i.jsx)(d.a, { size: "md", color: "currentColor", className: g.UE }),
                           ],
                       }),
                   });

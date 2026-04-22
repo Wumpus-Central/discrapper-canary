@@ -1,27 +1,28 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968),
-    l = n(311907),
-    r = n(397927),
-    a = n(15285),
-    s = n(916768),
+    r = n(311907);
+if (21552 == n.j) var l = n(417098);
+var s = n(15285),
+    a = n(916768),
     o = n(942405),
     c = n(652215),
-    _ = n(985018);
-function E() {
+    u = n(985018);
+function d() {
     (0, o.sL)("nagbar");
 }
-function d() {
-    return null == (0, l.bG)([a.Ay], () => a.Ay.getVisibleGame())
+function _() {
+    return null == (0, r.bG)([s.Ay], () => s.Ay.getVisibleGame())
         ? null
-        : (0, i.jsxs)(r.$Td, {
-              color: r.Hv$.DANGER,
+        : (0, i.jsxs)(l.$T, {
+              color: l.Hv.DANGER,
               children: [
-                  (0, i.jsx)(r.PMB, { noticeType: c.kqX.SYSTEM_SERVICE_WARNING, onClick: () => (0, s.w)() }),
-                  _.intl.string(_.t["5rPt+j"]),
-                  (0, i.jsx)(r.Z_L, {
-                      onClick: E,
+                  (0, i.jsx)(l.PM, { noticeType: c.kqX.SYSTEM_SERVICE_WARNING, onClick: () => (0, a.w)() }),
+                  u.intl.string(u.t["5rPt+j"]),
+                  (0, i.jsx)(l.Z_, {
+                      onClick: d,
                       noticeType: c.kqX.SYSTEM_SERVICE_WARNING,
-                      children: _.intl.string(_.t["1iI46O"]),
+                      children: u.intl.string(u.t["1iI46O"]),
                   }),
               ],
           });

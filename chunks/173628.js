@@ -1,25 +1,25 @@
-n.d(t, { A: () => m });
-var a = n(627968);
-n(64700);
-var s = n(311907),
-    i = n(397927),
-    l = n(21119),
-    r = n(287809),
-    o = n(303054),
-    d = n(987986),
-    c = n(661251);
+a.d(t, { A: () => m });
+var n = a(627968);
+a(64700);
+var l = a(311907),
+    i = a(834730),
+    s = a(21119),
+    r = a(287809),
+    o = a(303054),
+    d = a(465153),
+    c = a(505206);
 let u = [
     {
         key: "user",
         cellClassName: d.iL,
         render(e) {
-            let { user: t, key: n } = e;
-            return t?.username ?? n;
+            let { user: t, key: a } = e;
+            return t?.username ?? a;
         },
     },
     {
         key: "affinity",
-        renderHeader: () => (0, a.jsx)(i.Text, { variant: "text-sm/semibold", children: "COMMUNICATION AFFINITY" }),
+        renderHeader: () => (0, n.jsx)(i.E, { variant: "text-sm/semibold", children: "COMMUNICATION AFFINITY" }),
         cellClassName: d.nz,
         render(e) {
             let { affinity: t } = e;
@@ -28,7 +28,7 @@ let u = [
     },
     {
         key: "vcProbability",
-        renderHeader: () => (0, a.jsx)(i.Text, { variant: "text-sm/semibold", children: "VOICE AFFINITY" }),
+        renderHeader: () => (0, n.jsx)(i.E, { variant: "text-sm/semibold", children: "VOICE AFFINITY" }),
         cellClassName: d.nz,
         render(e) {
             let { vcProbability: t } = e;
@@ -37,7 +37,7 @@ let u = [
     },
     {
         key: "isFriend",
-        renderHeader: () => (0, a.jsx)(i.Text, { variant: "text-sm/semibold", children: "IS FRIEND" }),
+        renderHeader: () => (0, n.jsx)(i.E, { variant: "text-sm/semibold", children: "IS FRIEND" }),
         cellClassName: d.nz,
         render(e) {
             let { isFriend: t } = e;
@@ -46,11 +46,11 @@ let u = [
     },
 ];
 function m() {
-    let e = (0, s.yK)([l.A, r.default], () =>
-        l.A.getUserAffinities().map((e) => {
-            let { otherUserId: t, communicationProbability: n, vcProbability: a, isFriend: s } = e;
-            return { user: r.default.getUser(t), affinity: n, vcProbability: a, isFriend: s, key: t };
+    let e = (0, l.yK)([s.A, r.default], () =>
+        s.A.getUserAffinities().map((e) => {
+            let { otherUserId: t, communicationProbability: a, vcProbability: n, isFriend: l } = e;
+            return { user: r.default.getUser(t), affinity: a, vcProbability: n, isFriend: l, key: t };
         }),
     );
-    return 0 === e.length ? null : (0, a.jsx)(o.A, { className: c.nd, columns: u, rowClassName: d.nM, data: e });
+    return 0 === e.length ? null : (0, n.jsx)(o.A, { className: c.nd, columns: u, rowClassName: d.nM, data: e });
 }

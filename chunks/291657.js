@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     hQ: "contentContainer_c94584",
     Zp: "commandListHeader_c94584",

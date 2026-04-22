@@ -1,70 +1,69 @@
 "use strict";
-n.d(t, { $Y: () => A, IE: () => m, JB: () => p, eq: () => E, tr: () => T, vC: () => g });
-var r = n(64700),
-    i = n(311907),
-    a = n(582754),
-    s = n(973654),
-    o = n(544028),
-    l = n(253932),
-    u = n(467135),
-    c = n(823459),
-    d = n(74396),
-    _ = n(385803),
-    f = n(818348),
-    p = (function (e) {
-        return (e.RESET_BUTTON = "reset_button"), (e.EDITOR_CLOSE = "editor_close"), e;
-    })({});
-function h(e) {
-    return (0, a.Mw)(e) ? f.NJ.DARK : f.NJ.LIGHT;
+l.d(t, { $Y: () => p, IE: () => x, JB: () => g, eq: () => T, tr: () => v, vC: () => E });
+var n,
+    a = l(64700),
+    s = l(311907),
+    i = l(462887),
+    r = l(973654),
+    o = l(544028),
+    c = l(253932),
+    u = l(467135),
+    d = l(823459),
+    h = l(74396),
+    m = l(385803),
+    _ = l(818348),
+    g = (((n = {}).RESET_BUTTON = "reset_button"), (n.EDITOR_CLOSE = "editor_close"), n);
+function f(e) {
+    return (0, i.M)(e) ? _.NJ.DARK : _.NJ.LIGHT;
 }
-function m(e) {
-    let t = l.eh.getSetting(),
-        n =
+function x(e) {
+    let t = c.eh.getSetting(),
+        l =
             null != t.backgroundGradientPresetId &&
-            t.backgroundGradientPresetId in _.ag &&
-            _.ag[t.backgroundGradientPresetId].theme !== e;
-    (0, s.GQ)(e), n && (0, c.S8)();
+            t.backgroundGradientPresetId in m.ag &&
+            m.ag[t.backgroundGradientPresetId].theme !== e;
+    (0, r.GQ)(e), l && (0, d.S8)();
 }
-function g() {
-    let [e] = r.useState(() => o.A.theme);
-    return r.useCallback(
+function E() {
+    let [e] = a.useState(() => o.A.theme);
+    return a.useCallback(
         (t) => {
-            let { resetColors: n, resetGradientAngle: r, resetChassisMixAmount: i, resetBaseTheme: a } = I(t, e);
-            u.ko.getState().setAll({ colors: n, gradientAngle: r, chassisMixAmount: i }),
-                "reset_button" === t ? m(h(a ?? o.A.theme)) : (0, s.XG)();
-            let d = l.eh.getSetting().backgroundGradientPresetId;
-            null != d && (0, c.bc)(d);
+            let { resetColors: l, resetGradientAngle: n, resetChassisMixAmount: a, resetBaseTheme: s } = A(t, e);
+            u.ko.getState().setAll({ colors: l, gradientAngle: n, chassisMixAmount: a }),
+                "reset_button" === t ? x(f(s ?? o.A.theme)) : (0, r.XG)();
+            let i = c.eh.getSetting().backgroundGradientPresetId;
+            null != i && (0, d.bc)(i);
         },
         [e],
     );
 }
-function E() {
-    let e = h(o.A.theme);
-    e !== o.A.theme && m(e);
+function T() {
+    let e = f(o.A.theme);
+    e !== o.A.theme && x(e);
 }
-function A(e, t, n) {
-    0 === e.length && n([t]), E();
+function p(e, t, l) {
+    0 === e.length && l([t]), T();
 }
-function I(e, t) {
-    let n = l.eh.getSetting().customUserThemeSettings,
-        r = d.A.getSavedCustomTheme(),
-        i = "reset_button" === e ? [u.OT] : [],
-        a = 0,
-        s = u.kJ,
-        o = t;
+function A(e, t) {
+    let l = c.eh.getSetting().customUserThemeSettings,
+        n = h.A.getSavedCustomTheme(),
+        a = "reset_button" === e ? [u.OT] : [],
+        s = 0,
+        i = u.kJ,
+        r = t;
     return (
-        n?.colors != null
-            ? ((i = n.colors), (a = n.gradientAngle ?? 0), (s = n.baseMix ?? u.kJ))
+        l?.colors != null
+            ? ((a = l.colors), (s = l.gradientAngle ?? 0), (i = l.baseMix ?? u.kJ))
             : "reset_button" === e &&
-              null != r &&
-              ((i = r.colors), (a = r.gradient_angle ?? 0), (s = r.base_mix ?? u.kJ), (o = r.base_theme)),
-        { resetColors: i, resetGradientAngle: a, resetChassisMixAmount: s, resetBaseTheme: o }
+              null != n &&
+              ((a = n.colors), (s = n.gradient_angle ?? 0), (i = n.base_mix ?? u.kJ), (r = n.base_theme)),
+        { resetColors: a, resetGradientAngle: s, resetChassisMixAmount: i, resetBaseTheme: r }
     );
 }
-function T() {
-    let { colors: e, chassisMixAmount: t, gradientAngle: n } = (0, u.ko)(),
-        a = (0, i.bG)([o.A], () => o.A.theme),
-        [s] = r.useState(() => o.A.theme),
-        { resetColors: l, resetGradientAngle: c, resetChassisMixAmount: d, resetBaseTheme: _ } = I("reset_button", s);
-    return JSON.stringify(e) === JSON.stringify(l) && t === d && n === c && a === _;
+function v() {
+    let { colors: e, chassisMixAmount: t, gradientAngle: l } = (0, u.ko)(),
+        n = (0, s.bG)([o.A], () => o.A.theme),
+        [i] = a.useState(() => o.A.theme),
+        { resetColors: r, resetGradientAngle: c, resetChassisMixAmount: d, resetBaseTheme: h } = A("reset_button", i);
+    return JSON.stringify(e) === JSON.stringify(r) && t === d && l === c && n === h;
 }

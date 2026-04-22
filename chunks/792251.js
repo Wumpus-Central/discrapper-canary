@@ -1,18 +1,14 @@
 "use strict";
-n.d(t, { M: () => s, w: () => a });
-let r = 2.8,
-    i = 6;
-function a(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
+function r(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
     if (0 === e) return 0;
-    let a = e / n;
-    return (t = a < 1 ? Math.pow(a, r) : Math.pow(10, ((a - 1) * i) / 20)) * n;
+    let n = e / t;
+    return (n < 1 ? Math.pow(n, 2.8) : Math.pow(10, ((n - 1) * 6) / 20)) * t;
 }
-function s(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
+function i(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
     if (0 === e) return 0;
-    let a = e / n;
-    return (t = a < 1 ? Math.pow(a, 1 / r) : (20 * Math.log10(a)) / i + 1) * n;
+    let n = e / t;
+    return (n < 1 ? Math.pow(n, 0.35714285714285715) : (20 * Math.log10(n)) / 6 + 1) * t;
 }
+n.d(t, { M: () => i, w: () => r });

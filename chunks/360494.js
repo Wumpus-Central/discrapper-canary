@@ -1,25 +1,26 @@
-n.d(i, { default: () => e });
+n.d(i, { default: () => l });
 var a = n(627968);
 n(64700);
-var r = n(732955),
-    s = n(985018);
-function e(t) {
-    let { roleName: i, onConfirmDelete: n, ...e } = t;
-    return (0, a.jsx)(r.aFV, {
-        ...e,
+var r = n(189213),
+    s = n(683071),
+    e = n(985018);
+function l(t) {
+    let { roleName: i, onConfirmDelete: n, ...l } = t;
+    return (0, a.jsx)(r.Modal, {
+        ...l,
         size: "sm",
-        title: s.intl.string(s.t.YWISbQ),
-        subtitle: s.intl.format(s.t["9+nrUS"], { name: i }),
+        title: e.intl.string(e.t.YWISbQ),
+        subtitle: e.intl.format(e.t["9+nrUS"], { name: i }),
         actions: [
-            { text: s.intl.string(s.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
+            { text: e.intl.string(e.t["ETE/oC"]), onClick: l.onClose, variant: "secondary" },
             {
-                text: s.intl.string(s.t.oyYWHE),
+                text: e.intl.string(e.t.oyYWHE),
                 onClick: async () => {
-                    await n(), await e.onClose();
+                    await n(), await l.onClose();
                 },
                 variant: "primary",
             },
         ],
-        children: (0, a.jsx)(r.wx6, { type: "warning", children: s.intl.string(s.t.lXk2SU) }),
+        children: (0, a.jsx)(s.w, { type: "warning", children: e.intl.string(e.t.lXk2SU) }),
     });
 }

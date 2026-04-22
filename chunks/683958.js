@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { CV: () => r, eB: () => i, fp: () => a, zL: () => s });
-let r = {
+r.d(t, { CV: () => n, eB: () => s, fp: () => a, zL: () => i });
+let n = {
         domingo: 0,
         dom: 0,
         segunda: 1,
@@ -22,7 +21,7 @@ let r = {
         sabado: 6,
         sab: 6,
     },
-    i = {
+    s = {
         janeiro: 1,
         jan: 1,
         "jan.": 1,
@@ -61,7 +60,7 @@ let r = {
         "dez.": 12,
     },
     a = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
-function s(e) {
+function i(e) {
     if (e.match(/^[0-9]{1,4}$/)) {
         let t = parseInt(e);
         return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;

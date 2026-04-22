@@ -1,73 +1,70 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(355418),
-    i = n(658809),
-    a = n(996483);
-let s = RegExp(
-        "(nu|idag|imorgon|\xf6vermorgon|ig\xe5r|f\xf6rrg\xe5r|i\\s*f\xf6rrg\xe5r)(?:\\s*(?:p\xe5\\s*)?(morgonen?|f\xf6rmiddagen?|middagen?|eftermiddagen?|kv\xe4llen?|natten?|midnatt))?(?=\\W|$)",
-        "i",
-    ),
-    o = 1,
-    l = 2;
-class u extends r.c {
+r.d(t, { A: () => o });
+var n = r(355418),
+    s = r(881190),
+    a = r(996483);
+let i = RegExp(
+    "(nu|idag|imorgon|\xf6vermorgon|ig\xe5r|f\xf6rrg\xe5r|i\\s*f\xf6rrg\xe5r)(?:\\s*(?:p\xe5\\s*)?(morgonen?|f\xf6rmiddagen?|middagen?|eftermiddagen?|kv\xe4llen?|natten?|midnatt))?(?=\\W|$)",
+    "i",
+);
+class o extends n.c {
     innerPattern(e) {
-        return s;
+        return i;
     }
     innerExtract(e, t) {
-        let n = e.refDate,
-            r = (t[o] || "").toLowerCase(),
-            s = (t[l] || "").toLowerCase(),
-            u = e.createParsingComponents();
-        switch (r) {
+        let r = e.refDate,
+            n = (t[1] || "").toLowerCase(),
+            i = (t[2] || "").toLowerCase(),
+            o = e.createParsingComponents();
+        switch (n) {
             case "nu":
-                u = a.tB(e.reference);
+                o = a.tB(e.reference);
                 break;
             case "idag":
-                u = a.Ec(e.reference);
+                o = a.Ec(e.reference);
                 break;
             case "imorgon":
             case "imorn":
-                let c = new Date(n.getTime());
-                c.setDate(c.getDate() + 1), (0, i.Pl)(u, c), (0, i.A4)(u, c);
+                let l = new Date(r.getTime());
+                l.setDate(l.getDate() + 1), (0, s.Pl)(o, l), (0, s.A4)(o, l);
                 break;
             case "ig\xe5r":
-                let d = new Date(n.getTime());
-                d.setDate(d.getDate() - 1), (0, i.Pl)(u, d), (0, i.A4)(u, d);
+                let u = new Date(r.getTime());
+                u.setDate(u.getDate() - 1), (0, s.Pl)(o, u), (0, s.A4)(o, u);
                 break;
             case "f\xf6rrg\xe5r":
             case "i f\xf6rrg\xe5r":
-                let _ = new Date(n.getTime());
-                _.setDate(_.getDate() - 2), (0, i.Pl)(u, _), (0, i.A4)(u, _);
+                let d = new Date(r.getTime());
+                d.setDate(d.getDate() - 2), (0, s.Pl)(o, d), (0, s.A4)(o, d);
         }
-        switch (s) {
+        switch (i) {
             case "morgon":
             case "morgonen":
-                u.imply("hour", 6), u.imply("minute", 0), u.imply("second", 0), u.imply("millisecond", 0);
+                o.imply("hour", 6), o.imply("minute", 0), o.imply("second", 0), o.imply("millisecond", 0);
                 break;
             case "f\xf6rmiddag":
             case "f\xf6rmiddagen":
-                u.imply("hour", 9), u.imply("minute", 0), u.imply("second", 0), u.imply("millisecond", 0);
+                o.imply("hour", 9), o.imply("minute", 0), o.imply("second", 0), o.imply("millisecond", 0);
                 break;
             case "middag":
             case "middagen":
-                u.imply("hour", 12), u.imply("minute", 0), u.imply("second", 0), u.imply("millisecond", 0);
+                o.imply("hour", 12), o.imply("minute", 0), o.imply("second", 0), o.imply("millisecond", 0);
                 break;
             case "eftermiddag":
             case "eftermiddagen":
-                u.imply("hour", 15), u.imply("minute", 0), u.imply("second", 0), u.imply("millisecond", 0);
+                o.imply("hour", 15), o.imply("minute", 0), o.imply("second", 0), o.imply("millisecond", 0);
                 break;
             case "kv\xe4ll":
             case "kv\xe4llen":
-                u.imply("hour", 20), u.imply("minute", 0), u.imply("second", 0), u.imply("millisecond", 0);
+                o.imply("hour", 20), o.imply("minute", 0), o.imply("second", 0), o.imply("millisecond", 0);
                 break;
             case "natt":
             case "natten":
             case "midnatt":
-                "midnatt" === s ? u.imply("hour", 0) : u.imply("hour", 2),
-                    u.imply("minute", 0),
-                    u.imply("second", 0),
-                    u.imply("millisecond", 0);
+                "midnatt" === i ? o.imply("hour", 0) : o.imply("hour", 2),
+                    o.imply("minute", 0),
+                    o.imply("second", 0),
+                    o.imply("millisecond", 0);
         }
-        return u;
+        return o;
     }
 }

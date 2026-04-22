@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n, r) {
         var i = {
@@ -19,7 +17,7 @@
         };
         return r || t ? i[n][0] : i[n][1];
     }
-    return e.defineLocale("tzl", {
+    e.defineLocale("tzl", {
         months: "Januar_Fevraglh_Mar\xe7_Avr\xefu_Mai_G\xfcn_Julia_Guscht_Setemvar_Listop\xe4ts_Noemvar_Zecemvar".split(
             "_",
         ),
@@ -70,4 +68,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

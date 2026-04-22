@@ -1,68 +1,70 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => S });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
-    o = n(397927),
-    d = n(765671),
-    c = n(4616),
-    u = n(743674),
-    A = n(426660),
-    _ = n(71393),
-    h = n(486020),
+    o = n(534514),
+    d = n(834730),
+    u = n(821609),
+    c = n(765671),
+    A = n(4616),
+    h = n(743674),
+    _ = n(426660),
+    E = n(71393),
+    p = n(486020),
     m = n(998304),
     g = n(817818),
-    p = n(967305),
-    E = n(985018),
-    I = n(336693),
-    f = n(418195);
-function C(e) {
+    I = n(967305),
+    C = n(985018),
+    f = n(342501),
+    T = n(339875);
+function S(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: r, width: C, height: T } = (0, d.Ay)(),
-        N = a.useCallback(() => {
-            null != t && null != n && ((0, g.sy)(t), (0, p.default)({ guildId: t, returnChannelId: n }));
+        { ref: a, width: S, height: N } = (0, c.Ay)(),
+        O = r.useCallback(() => {
+            null != t && null != n && ((0, g.sy)(t), (0, I.default)({ guildId: t, returnChannelId: n }));
         }, [t, n]),
-        S = (0, s.bG)([_.A], () => _.A.getGuild(t)),
-        x = a.useMemo(() => (null == S ? null : h.Ay.getGuildSplashURL({ id: S.id, splash: S.splash })), [S]),
-        v = (0, u.S)(x);
+        L = (0, s.bG)([E.A], () => E.A.getGuild(t)),
+        y = r.useMemo(() => (null == L ? null : p.Ay.getGuildSplashURL({ id: L.id, splash: L.splash })), [L]),
+        v = (0, h.S)(y);
     return (0, i.jsxs)("div", {
-        className: l()(I.kf, f.iW, { [f.Me]: null == x }),
-        ref: r,
+        className: l()(f.kf, T.iW, { [T.Me]: null == y }),
+        ref: a,
         children: [
-            null != x
-                ? (0, i.jsx)(c.A, { className: f.xX, src: x, width: C, height: T, imageClassName: f.Iv })
-                : (0, i.jsx)(A.A, {}),
+            null != y
+                ? (0, i.jsx)(A.A, { className: T.xX, src: y, width: S, height: N, imageClassName: T.Iv })
+                : (0, i.jsx)(_.A, {}),
             null != v &&
-                null != x &&
+                null != y &&
                 (0, i.jsx)("div", {
-                    className: f.D7,
+                    className: T.D7,
                     style: { background: `linear-gradient(180deg, ${(0, m.cb)(v, 0.16)} 0%, ${(0, m.cb)(v, 1)} 100%)` },
                 }),
-            null != x && (0, i.jsx)("div", { className: f.D7 }),
+            null != y && (0, i.jsx)("div", { className: T.D7 }),
             (0, i.jsxs)("div", {
-                className: l()(I.Cj, I.Vw),
+                className: l()(f.Cj, f.Vw),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: I.wx,
+                        className: f.wx,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, i.jsx)(o.D, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
-                                children: E.intl.string(E.t.CCmhpF),
+                                children: C.intl.string(C.t.CCmhpF),
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(d.E, {
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                children: E.intl.string(E.t.gRAHcZ),
+                                children: C.intl.string(C.t.gRAHcZ),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(o.Button, {
+                    (0, i.jsx)(u.$, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: E.intl.string(E.t.VVFjAC),
-                        onClick: N,
+                        text: C.intl.string(C.t.VVFjAC),
+                        onClick: O,
                     }),
                 ],
             }),

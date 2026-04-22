@@ -1,25 +1,22 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(528352),
-    i = n(374372),
-    a = n(355418),
-    s = n(632434);
-let o = RegExp(`(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(${r.Pl})(?=\\W|$)`, "i"),
-    l = 1,
-    u = 2;
-class c extends a.c {
+r.d(t, { A: () => l });
+var n = r(528352),
+    s = r(374372),
+    a = r(355418),
+    i = r(632434);
+let o = RegExp(`(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(${n.Pl})(?=\\W|$)`, "i");
+class l extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[l].toLowerCase(),
-            a = (0, r.E9)(t[u]);
-        switch (n) {
+        let r = t[1].toLowerCase(),
+            a = (0, n.E9)(t[2]);
+        switch (r) {
             case "vorig":
             case "afgelopen":
             case "-":
-                a = (0, s.x4)(a);
+                a = (0, i.x4)(a);
         }
-        return i.BP.createRelativeFromReference(e.reference, a);
+        return s.BP.createRelativeFromReference(e.reference, a);
     }
 }

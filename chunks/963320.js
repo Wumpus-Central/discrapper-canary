@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => a });
 var i = n(64700),
-    s = n(181658),
-    l = n(493540),
+    l = n(181658),
+    s = n(493540),
     r = n(853922);
 function a(e) {
     let [t, n] = i.useState(null != e),
@@ -11,7 +10,7 @@ function a(e) {
         u = i.useCallback(async (e) => {
             n(!0), o(void 0);
             try {
-                let t = await l.jh(e);
+                let t = await s.jh(e);
                 c({
                     isEligibleForMonetization: t.sufficient,
                     hasSufficientMembers: t.size,
@@ -35,7 +34,7 @@ function a(e) {
                     retentionScore: t.health_score?.perc_ret_w1,
                 });
             } catch (e) {
-                o(new s.A(e));
+                o(new l.A(e));
             } finally {
                 n(!1);
             }

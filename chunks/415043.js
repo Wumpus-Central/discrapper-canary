@@ -1,49 +1,51 @@
-n.d(t, { A: () => u, H: () => A });
+n.d(t, { A: () => g, H: () => f });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    a = n.n(l),
-    r = n(342952),
-    s = n(435371),
-    o = n(397927),
-    d = n(915089),
-    c = n(499270);
-function u(e) {
-    let { label: t, className: n, size: l = o._3J.SIZE_16, maxUsers: s = 4, ...u } = e,
-        A = (0, d.GV)();
+var a = n(503698),
+    l = n.n(a),
+    s = n(342952),
+    r = n(990078),
+    o = n(778712),
+    c = n(834730),
+    d = n(939249),
+    u = n(915089),
+    _ = n(499270);
+function g(e) {
+    let { label: t, className: n, size: a = o._3.SIZE_16, maxUsers: r = 4, ...d } = e,
+        g = (0, u.GV)();
     return (0, i.jsxs)("div", {
-        className: a()(n, c.k),
+        className: l()(n, _.k),
         children: [
-            (0, i.jsx)(r.I, { "aria-labelledby": A, overflowCountClassName: c.j, size: l, maxUsers: s, ...u }),
-            (0, i.jsx)(o.Text, { variant: "text-xs/normal", color: "text-subtle", id: A, children: t }),
+            (0, i.jsx)(s.I, { "aria-labelledby": g, overflowCountClassName: _.j, size: a, maxUsers: r, ...d }),
+            (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", id: g, children: t }),
         ],
     });
 }
-function A(e) {
+function f(e) {
     let {
         label: t,
         className: n,
-        overflowCountClassName: l,
-        size: d = o._3J.SIZE_16,
+        overflowCountClassName: a,
+        size: c = o._3.SIZE_16,
         maxUsers: u = 4,
-        onClick: A,
-        ...h
+        onClick: g,
+        ...f
     } = e;
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(s.m_, {
+        children: (0, i.jsx)(r.m, {
             text: t,
             asContainer: !0,
             ariaHidden: !0,
-            children: (0, i.jsx)(o.DUT, {
-                onClick: A,
+            children: (0, i.jsx)(d.D, {
+                onClick: g,
                 "aria-label": t,
-                children: (0, i.jsx)(r.I, {
-                    size: d,
+                children: (0, i.jsx)(s.I, {
+                    size: c,
                     maxUsers: u,
-                    overflowCountClassName: a()(c.j, l),
+                    overflowCountClassName: l()(_.j, a),
                     "aria-hidden": !0,
-                    ...h,
+                    ...f,
                 }),
             }),
         }),

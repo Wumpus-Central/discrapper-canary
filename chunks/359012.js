@@ -1,69 +1,72 @@
-i.d(e, { default: () => p });
-var n = i(627968),
-    a = i(64700),
-    r = i(311907),
-    l = i(732955),
-    s = i(397927),
-    c = i(557722),
-    o = i(176524),
-    d = i(287809),
-    u = i(652215),
-    h = i(53516),
-    m = i(985018),
-    x = i(606513);
-function p(t) {
-    let { onClose: e, transitionState: p } = t,
-        S = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        b = S?.phone ?? "",
-        g = a.useCallback(() => {
+n.d(e, { default: () => g });
+var i = n(627968),
+    a = n(64700),
+    r = n(311907),
+    l = n(189213),
+    s = n(192308),
+    o = n(331322),
+    c = n(646270),
+    d = n(834730),
+    u = n(557722),
+    h = n(176524),
+    p = n(287809),
+    m = n(652215),
+    x = n(53516),
+    S = n(985018),
+    b = n(606513);
+function g(t) {
+    let { onClose: e, transitionState: g } = t,
+        v = (0, r.bG)([p.default], () => p.default.getCurrentUser()),
+        C = v?.phone ?? "",
+        y = a.useCallback(() => {
             e(),
-                (0, s.mMO)(
+                (0, s.openModalLazy)(
                     async () => {
-                        let { default: t } = await Promise.resolve().then(i.bind(i, 615715));
-                        return (e) => (0, n.jsx)(t, { reason: c.d.USER_SETTINGS_UPDATE, ...e });
+                        let { default: t } = await Promise.resolve().then(n.bind(n, 615715));
+                        return (e) => (0, i.jsx)(t, { reason: u.d.USER_SETTINGS_UPDATE, ...e });
                     },
-                    { modalKey: h.V },
+                    { modalKey: x.V },
                 );
         }, [e]),
-        v = a.useCallback(() => {
-            null != S &&
+        _ = a.useCallback(() => {
+            null != v &&
                 (e(),
-                (0, s.mMO)(async () => {
-                    let { default: t } = await Promise.resolve().then(i.bind(i, 662758));
+                (0, s.openModalLazy)(async () => {
+                    let { default: t } = await Promise.resolve().then(n.bind(n, 662758));
                     return (e) =>
-                        (0, n.jsx)(t, {
+                        (0, i.jsx)(t, {
                             ...e,
-                            title: m.intl.string(m.t["3CTiKi"]),
-                            actionText: m.intl.string(m.t.N86XcP),
+                            title: S.intl.string(S.t["3CTiKi"]),
+                            actionText: S.intl.string(S.t.N86XcP),
                             variant: "critical-primary",
-                            handleSubmit: (t) => c.A.removePhone(t, c.d.USER_SETTINGS_UPDATE),
-                            children: S.hasFlag(u.nhx.MFA_SMS) ? m.intl.string(m.t.jrhJyo) : void 0,
+                            handleSubmit: (t) => u.A.removePhone(t, u.d.USER_SETTINGS_UPDATE),
+                            children: v.hasFlag(m.nhx.MFA_SMS) ? S.intl.string(S.t.jrhJyo) : void 0,
                         });
                 }));
-        }, [e, S]);
-    return (0, n.jsx)(l.aFV, {
+        }, [e, v]);
+    return (0, i.jsx)(l.Modal, {
         onClose: e,
-        title: m.intl.string(m.t.CbdZR3),
+        title: S.intl.string(S.t.CbdZR3),
         actions: [
-            ...(S?.email != null
-                ? [{ text: m.intl.string(m.t.N86XcP), onClick: v, variant: "critical-secondary" }]
+            ...(v?.email != null
+                ? [{ text: S.intl.string(S.t.N86XcP), onClick: _, variant: "critical-secondary" }]
                 : []),
-            { text: m.intl.string(m.t.bt75uw), onClick: g, variant: "primary" },
+            { text: S.intl.string(S.t.bt75uw), onClick: y, variant: "primary" },
         ],
-        transitionState: p,
-        children: (0, n.jsxs)(s.BJc, {
+        transitionState: g,
+        children: (0, i.jsxs)(o.B, {
             direction: "horizontal",
             align: "center",
             gap: "md",
             children: [
-                (0, n.jsx)(o.A, { Icon: s.u6o }),
-                (0, n.jsx)(s.BJc, {
+                (0, i.jsx)(h.A, { Icon: c.u }),
+                (0, i.jsx)(o.B, {
                     direction: "vertical",
                     gap: 4,
-                    children: (0, n.jsx)(s.Text, {
+                    children: (0, i.jsx)(d.E, {
                         variant: "text-md/normal",
-                        className: x.S,
-                        children: m.intl.format(m.t.BxZHPD, { phone: b }),
+                        className: b.S,
+                        children: S.intl.format(S.t.BxZHPD, { phone: C }),
                     }),
                 }),
             ],

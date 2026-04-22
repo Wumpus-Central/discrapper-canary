@@ -1,68 +1,66 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
-    a = n(263063),
-    r = n(513461),
-    o = n(654265),
-    c = n(561446),
-    d = n(287809),
-    u = n(314307),
-    h = n(985018),
-    m = n(470725);
-function A(e) {
+    a = n(534514),
+    s = n(834730),
+    r = n(289873),
+    o = n(263063),
+    c = n(513461),
+    d = n(654265),
+    u = n(561446),
+    h = n(287809),
+    m = n(314307),
+    A = n(985018),
+    g = n(806700);
+function p(e) {
     let { joinRequest: t, guild: n } = e,
-        o = (0, l.bG)([d.default], () => d.default.getUser(t.userId));
+        r = (0, l.bG)([h.default], () => h.default.getUser(t.userId));
     return (0, i.jsxs)("div", {
-        className: m.I8,
+        className: g.I8,
         children: [
             (0, i.jsxs)("div", {
-                className: m.Ov,
+                className: g.Ov,
                 children: [
                     null != n &&
                         (0, i.jsxs)("div", {
-                            className: m.yB,
+                            className: g.yB,
                             children: [
-                                (0, i.jsx)(a.Ay, { guild: n, active: !0, size: a.Ay.Sizes.SMOL, className: m.$f }),
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(o.Ay, { guild: n, active: !0, size: o.Ay.Sizes.SMOL, className: g.$f }),
+                                (0, i.jsx)(a.D, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     children: n.name,
                                 }),
                             ],
                         }),
-                    null != o &&
-                        (0, i.jsx)(s.Heading, {
+                    null != r &&
+                        (0, i.jsx)(a.D, {
                             variant: "heading-xl/semibold",
                             color: "text-strong",
-                            children: h.intl.format(h.t.jDV3i6, { username: o.globalName }),
+                            children: A.intl.format(A.t.jDV3i6, { username: r.globalName }),
                         }),
                 ],
             }),
             t.formResponses
-                ?.filter((e) => e.field_type !== r.rX.TERMS)
+                ?.filter((e) => e.field_type !== c.rX.TERMS)
                 .map((e) => {
                     let t =
-                        e.field_type === r.rX.MULTIPLE_CHOICE && null != e.response
+                        e.field_type === c.rX.MULTIPLE_CHOICE && null != e.response
                             ? e.choices[e.response]
                             : e.response;
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)("hr", { className: m.g2 }),
+                            (0, i.jsx)("hr", { className: g.g2 }),
                             (0, i.jsxs)("div", {
-                                className: m.fs,
+                                className: g.fs,
                                 children: [
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(s.E, {
                                         variant: "text-xs/semibold",
                                         color: "text-muted",
                                         children: e.label,
                                     }),
-                                    (0, i.jsx)(s.Text, {
-                                        variant: "text-md/medium",
-                                        color: "text-strong",
-                                        children: t,
-                                    }),
+                                    (0, i.jsx)(s.E, { variant: "text-md/medium", color: "text-strong", children: t }),
                                 ],
                             }),
                         ],
@@ -71,23 +69,23 @@ function A(e) {
         ],
     });
 }
-function g(e) {
+function _(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: l, joinRequestGuild: a } = (0, o.A)(t.id);
-    return (0, i.jsx)(u.Ay, {
+        { loading: n, joinRequest: l, joinRequestGuild: a } = (0, d.A)(t.id);
+    return (0, i.jsx)(m.Ay, {
         channelId: t.id,
-        className: m.kL,
+        className: g.kL,
         children:
             null != l && null != l.formResponses
                 ? (0, i.jsxs)("div", {
-                      className: m.KJ,
+                      className: g.KJ,
                       children: [
-                          (0, i.jsx)("div", { children: (0, i.jsx)(A, { guild: a, joinRequest: l }) }),
-                          (0, i.jsx)(c.A, { channelId: t.id, showProfile: !0 }),
+                          (0, i.jsx)("div", { children: (0, i.jsx)(p, { guild: a, joinRequest: l }) }),
+                          (0, i.jsx)(u.A, { channelId: t.id, showProfile: !0 }),
                       ],
                   })
                 : n
-                  ? (0, i.jsx)(s.y$y, {})
+                  ? (0, i.jsx)(r.y, {})
                   : null,
     });
 }

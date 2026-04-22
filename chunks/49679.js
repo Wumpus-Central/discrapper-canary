@@ -1,47 +1,44 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
-    function r(e, t, n, r) {
-        var s = "";
-        switch (n) {
+    function r(e, r, i, s) {
+        var a,
+            o,
+            l = "";
+        switch (i) {
             case "s":
-                return r ? "muutaman sekunnin" : "muutama sekunti";
+                return s ? "muutaman sekunnin" : "muutama sekunti";
             case "ss":
-                return r ? "sekunnin" : "sekuntia";
+                return s ? "sekunnin" : "sekuntia";
             case "m":
-                return r ? "minuutin" : "minuutti";
+                return s ? "minuutin" : "minuutti";
             case "mm":
-                s = r ? "minuutin" : "minuuttia";
+                l = s ? "minuutin" : "minuuttia";
                 break;
             case "h":
-                return r ? "tunnin" : "tunti";
+                return s ? "tunnin" : "tunti";
             case "hh":
-                s = r ? "tunnin" : "tuntia";
+                l = s ? "tunnin" : "tuntia";
                 break;
             case "d":
-                return r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4";
+                return s ? "p\xe4iv\xe4n" : "p\xe4iv\xe4";
             case "dd":
-                s = r ? "p\xe4iv\xe4n" : "p\xe4iv\xe4\xe4";
+                l = s ? "p\xe4iv\xe4n" : "p\xe4iv\xe4\xe4";
                 break;
             case "M":
-                return r ? "kuukauden" : "kuukausi";
+                return s ? "kuukauden" : "kuukausi";
             case "MM":
-                s = r ? "kuukauden" : "kuukautta";
+                l = s ? "kuukauden" : "kuukautta";
                 break;
             case "y":
-                return r ? "vuoden" : "vuosi";
+                return s ? "vuoden" : "vuosi";
             case "yy":
-                s = r ? "vuoden" : "vuotta";
+                l = s ? "vuoden" : "vuotta";
         }
-        return i(e, r) + " " + s;
+        return (a = e), (o = s), (a < 10 ? (o ? n[a] : t[a]) : a) + " " + l;
     }
-    function i(e, r) {
-        return e < 10 ? (r ? n[e] : t[e]) : e;
-    }
-    return e.defineLocale("fi", {
+    e.defineLocale("fi", {
         months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\xe4kuu_hein\xe4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(
             "_",
         ),
@@ -89,4 +86,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

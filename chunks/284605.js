@@ -1,10 +1,10 @@
-n.d(t, { i: () => C });
+n.d(t, { i: () => E });
 var i = n(627968);
 n(64700);
 var l = n(417597),
-    a = n(732955),
-    r = n(492749),
-    s = n(827186),
+    a = n(821609),
+    s = n(492749),
+    r = n(827186),
     o = n(465932),
     d = n(317525),
     c = n(71393),
@@ -17,49 +17,49 @@ var l = n(417597),
     A = n(482711),
     f = n(897518),
     x = n(10979),
-    E = n(652215);
-function C(e) {
+    C = n(652215);
+function E(e) {
     let {
             guildProductListing: t,
             guildId: n,
-            location: C,
+            location: E,
             shouldShowFullDescriptionButton: I = !0,
-            hideRoleTag: T = !1,
-            lineClamp: v = 1,
-            cardWidth: N,
+            hideRoleTag: v = !1,
+            lineClamp: b = 1,
+            cardWidth: T,
             cardHeight: S,
-            thumbnailHeight: b,
-            descriptionTextVariant: y = "text-sm/normal",
+            thumbnailHeight: y,
+            descriptionTextVariant: N = "text-sm/normal",
             showOpaqueBackground: j = !1,
         } = e,
-        R = (0, l.bG)([c.A], () => c.A.getGuild(n), [n]),
-        L = (0, l.bG)([d.A], () => d.A.getRole(n, t?.role_id ?? E.dJq)),
-        M = (0, r.R)(t, 600),
-        O = (0, g.z)(t),
-        P = (0, m.BB)(R),
-        { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(n),
-        k = (0, g.X)(t),
-        U = (0, f.A)({ guildId: n, guildProductListingId: t.id, sourceAnalyticsLocations: C });
-    if (null == R || D) return null;
-    let w = () => (0, x.M)({ guildId: n, guildProductListingId: t.id, analyticsLocation: C }),
+        L = (0, l.bG)([c.A], () => c.A.getGuild(n), [n]),
+        R = (0, l.bG)([d.A], () => d.A.getRole(n, t?.role_id ?? C.dJq)),
+        P = (0, s.R)(t, 600),
+        w = (0, g.z)(t),
+        D = (0, m.BB)(L),
+        { shouldHideGuildPurchaseEntryPoints: k } = (0, o.MH)(n),
+        O = (0, g.X)(t),
+        M = (0, f.A)({ guildId: n, guildProductListingId: t.id, sourceAnalyticsLocations: E });
+    if (null == L || k) return null;
+    let U = () => (0, x.M)({ guildId: n, guildProductListingId: t.id, analyticsLocation: E }),
         G = (0, i.jsx)(A.i, {
             product: t,
             guildId: n,
-            showEditProduct: P,
+            showEditProduct: D,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: P
+            onEditProduct: D
                 ? () => {
-                      h.q(R.id, t.id);
+                      h.q(L.id, t.id);
                   }
                 : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-                (0, s.F)({ listing: t });
+                (0, r.F)({ listing: t });
             },
             onCopyProductLink: () => {
                 (0, u.C)((0, _.KW)(n, t.id));
@@ -69,24 +69,24 @@ function C(e) {
     return (0, i.jsx)(
         p.A,
         {
-            imageUrl: M,
+            imageUrl: P,
             name: t.name,
             description: t.description,
-            formattedPrice: k,
-            role: L,
-            ctaComponent: (0, i.jsx)(a.$nd, { ...U }),
-            productType: O,
+            formattedPrice: O,
+            role: R,
+            ctaComponent: (0, i.jsx)(a.$, { ...M }),
+            productType: w,
             shouldShowFullDescriptionButton: I,
-            onShowFullDescription: w,
-            onTapCard: w,
+            onShowFullDescription: U,
+            onTapCard: U,
             actionMenu: G,
             showOpaqueBackground: j,
-            hideRoleTag: T,
-            lineClamp: v,
-            cardWidth: N,
+            hideRoleTag: v,
+            lineClamp: b,
+            cardWidth: T,
             cardHeight: S,
-            thumbnailHeight: b,
-            descriptionTextVariant: y,
+            thumbnailHeight: y,
+            descriptionTextVariant: N,
             isDraft: !t.published,
         },
         t.id,

@@ -1,46 +1,44 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var r = n(311907),
     i = n(73153),
     s = n(661191);
-let a = 20,
-    o = new Set(),
-    l = !1;
-function u(e) {
-    return (
-        o.size >= a &&
-            (o = new Set(
-                o
-                    .values()
-                    .toArray()
-                    .sort(s.default.compare)
-                    .slice(Math.floor(a / 2))
-                    .map((e) => e.toString()),
-            )),
-        o.add(e.questId),
-        !0
-    );
-}
-function c(e) {
-    return (l = e.autoEnroll), !0;
-}
-!(function () {
-    (o = new Set()), (l = !1);
-})();
-class d extends r.Ay.PersistedStore {
+let a = new Set(),
+    o = !1;
+(a = new Set()), (o = !1);
+class l extends r.Ay.PersistedStore {
     static displayName = "UnenrolledActivityQuestStore";
     static persistKey = "UnenrolledActivityQuestStore";
     initialize(e) {
-        (o = new Set(e?.dismissedQuestIds ?? [])), (l = e?.autoEnroll ?? !1);
+        (a = new Set(e?.dismissedQuestIds ?? [])), (o = e?.autoEnroll ?? !1);
     }
     getState() {
-        return { dismissedQuestIds: [...o], autoEnroll: l };
+        return { dismissedQuestIds: [...a], autoEnroll: o };
     }
     isDismissed(e) {
-        return null != e && o.has(e);
+        return null != e && a.has(e);
     }
     getDismissedQuestIds() {
-        return o;
+        return a;
     }
 }
-let _ = new d(i.h, { UNENROLLED_ACTIVITY_QUEST_DISMISS: u, UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: c });
+let u = new l(i.h, {
+    UNENROLLED_ACTIVITY_QUEST_DISMISS: function (e) {
+        return (
+            a.size >= 20 &&
+                (a = new Set(
+                    a
+                        .values()
+                        .toArray()
+                        .sort(s.default.compare)
+                        .slice(Math.floor(10))
+                        .map((e) => e.toString()),
+                )),
+            a.add(e.questId),
+            !0
+        );
+    },
+    UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: function (e) {
+        return (o = e.autoEnroll), !0;
+    },
+});

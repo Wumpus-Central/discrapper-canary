@@ -1,140 +1,143 @@
-n.d(t, { u: () => U });
+n.d(t, { u: () => V });
 var i = n(627968),
     s = n(935399),
-    l = n(934551),
-    r = n(158954),
-    a = n(311907),
-    o = n(554146),
-    d = n(932001),
-    c = n(843402),
-    u = n(589051),
-    m = n(592598),
-    g = n(46373),
-    _ = n(419954),
+    l = n(625657),
+    a = n(534514),
+    r = n(834730),
+    o = n(821609),
+    d = n(683071),
+    u = n(311907),
+    c = n(554146),
+    g = n(932001),
+    m = n(843402),
+    _ = n(589051),
+    A = n(592598),
+    h = n(46373),
+    p = n(419954),
     x = n(933297),
-    h = n(351906),
-    A = n(532624),
-    p = n(242286),
-    T = n(256415),
-    f = n(723702),
-    S = n(780964),
-    E = n(858897),
-    b = n(17460),
-    C = n(202949),
-    v = n(762678),
-    N = n(900155),
-    I = n(237887),
-    j = n(444381),
-    y = n(49999),
-    O = n(985018),
-    R = n(192391),
-    L = n(130324),
-    P = n(966040);
-function D() {
-    let [e, t] = (0, d.kn)([o.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0);
+    E = n(351906),
+    T = n(532624),
+    S = n(242286),
+    f = n(256415),
+    b = n(723702),
+    C = n(780964),
+    v = n(858897),
+    N = n(17460),
+    I = n(202949),
+    y = n(762678),
+    j = n(900155),
+    O = n(237887),
+    R = n(444381),
+    L = n(49999),
+    D = n(985018),
+    P = n(192391),
+    G = n(130324),
+    M = n(966040);
+function U() {
+    let [e, t] = (0, g.kn)([c.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0);
     return ((0, s.Ay)(() => () => {
-        t(y.i.AUTO_DISMISS);
+        t(L.i.AUTO_DISMISS);
     }),
-    e !== o.M.OVERLAY_OOP_SETTINGS_NUX)
+    e !== c.M.OVERLAY_OOP_SETTINGS_NUX)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)("div", {
-                      className: R.xC,
+                      className: P.xC,
                       children: [
                           (0, i.jsx)("div", {
                               children: (0, i.jsx)("img", {
-                                  src: L.A,
-                                  alt: O.intl.string(O.t.mdXZh1),
-                                  className: R.tl,
+                                  src: G.A,
+                                  alt: D.intl.string(D.t.mdXZh1),
+                                  className: P.tl,
                               }),
                           }),
                           (0, i.jsx)("div", {
                               children: (0, i.jsxs)("div", {
-                                  className: R.vJ,
+                                  className: P.vJ,
                                   children: [
-                                      (0, i.jsx)(r.DZT, {
+                                      (0, i.jsx)(a.D, {
                                           variant: "heading-xl/medium",
                                           color: "text-strong",
-                                          children: O.intl.string(O.t.jzjJQg),
+                                          children: D.intl.string(D.t.jzjJQg),
                                       }),
-                                      (0, i.jsx)(r.EYj, {
+                                      (0, i.jsx)(r.E, {
                                           variant: "text-md/normal",
                                           color: "text-muted",
-                                          children: O.intl.string(O.t["5dOfxb"]),
+                                          children: D.intl.string(D.t["5dOfxb"]),
                                       }),
                                   ],
                               }),
                           }),
                           (0, i.jsx)("div", {
                               children: (0, i.jsx)("img", {
-                                  src: P.A,
-                                  alt: O.intl.string(O.t.mdXZh1),
-                                  className: R.lh,
+                                  src: M.A,
+                                  alt: D.intl.string(D.t.mdXZh1),
+                                  className: P.lh,
                               }),
                           }),
                           (0, i.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: R.VV,
-                              children: (0, i.jsx)(r.$nd, {
+                              className: P.VV,
+                              children: (0, i.jsx)(o.$, {
                                   variant: "primary",
-                                  text: O.intl.string(O.t.Q26diF),
-                                  onClick: () => void t(y.i.DISMISS),
+                                  text: D.intl.string(D.t.Q26diF),
+                                  onClick: () => void t(L.i.DISMISS),
                               }),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(g.A, { className: R.yF }),
+                  (0, i.jsx)(h.A, { className: P.yF }),
               ],
           });
 }
-function G() {
-    let e = (0, a.bG)([h.A], () => h.A.enabled),
-        t = (0, u.Mn)("OverlayStreamerModeNotice");
+function k() {
+    let e = (0, u.bG)([E.A], () => E.A.enabled),
+        t = (0, _.Mn)("OverlayStreamerModeNotice");
     return e && t
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(r.wx6, {
+                  (0, i.jsx)(d.w, {
                       type: "warning",
-                      children: O.intl.format(O.t.fuEX5B, {
-                          onClick: () => (0, E.openUserSettings)(S.X.STREAMER_MODE_CATEGORY),
+                      children: D.intl.format(D.t.fuEX5B, {
+                          onClick: () => (0, v.openUserSettings)(C.X.STREAMER_MODE_CATEGORY),
                       }),
                   }),
-                  (0, i.jsx)(g.A, { className: R.yF }),
+                  (0, i.jsx)(h.A, { className: P.yF }),
               ],
           })
         : null;
 }
-let M = (0, _.t_)(S.X.OVERLAY_PANEL, {
+let w = (0, p.t_)(C.X.OVERLAY_PANEL, {
         initialize: function () {
             return (
-                (0, C.Q)(),
-                A.Ay.addChangeListener(C.Q),
-                m.A.addChangeListener(C.Q),
-                T.default.addChangeListener(C.Q),
-                p.default.addChangeListener(C.Q),
-                f.isPlatformEmbedded && (0, c.a2)(),
+                (0, I.Q)(),
+                T.Ay.addChangeListener(I.Q),
+                A.A.addChangeListener(I.Q),
+                f.default.addChangeListener(I.Q),
+                S.default.addChangeListener(I.Q),
+                b.isPlatformEmbedded && (0, m.a2)(),
                 () => {
-                    A.Ay.removeChangeListener(C.Q),
-                        m.A.removeChangeListener(C.Q),
-                        T.default.removeChangeListener(C.Q),
-                        p.default.removeChangeListener(C.Q),
-                        f.isPlatformEmbedded && (0, c.e0)();
+                    T.Ay.removeChangeListener(I.Q),
+                        A.A.removeChangeListener(I.Q),
+                        f.default.removeChangeListener(I.Q),
+                        S.default.removeChangeListener(I.Q),
+                        b.isPlatformEmbedded && (0, m.e0)();
                 }
             );
         },
-        useTitle: () => O.intl.string(O.t["9cb1Uz"]),
+        useTitle: () => D.intl.string(D.t["9cb1Uz"]),
         decoration: {
             type: x.t9.STRONGLY_DISCOURAGED_CUSTOM,
             component: function () {
-                return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(D, {}), (0, i.jsx)(G, {})] });
+                return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(U, {}), (0, i.jsx)(k, {})] });
             },
         },
-        buildLayout: () => [v.u, N.X, j.D, I.h],
+        buildLayout: () => [y.u, j.X, R.D, O.h],
     }),
-    U = (0, _.i4)(S.X.OVERLAY_SIDEBAR_ITEM, {
-        useTitle: () => O.intl.string(O.t["9cb1Uz"]),
-        icon: l.WindowTopOutlineIcon,
-        usePredicate: b.b_,
-        buildLayout: () => [M],
+    V = (0, p.i4)(C.X.OVERLAY_SIDEBAR_ITEM, {
+        useTitle: () => D.intl.string(D.t["9cb1Uz"]),
+        icon: l.l,
+        usePredicate: N.b_,
+        buildLayout: () => [w],
     });

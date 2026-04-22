@@ -1,7 +1,9 @@
 "use strict";
-n.d(t, { B: () => r });
-var r = (function (e) {
-    return (
-        (e.STAGING = "staging"), (e.DEVELOPMENT = "development"), (e.PRODUCTION = "production"), (e.TEST = "test"), e
-    );
-})({});
+n.d(t, { B: () => i });
+var r,
+    i =
+        (((r = {}).STAGING = "staging"),
+        (r.DEVELOPMENT = "development"),
+        (r.PRODUCTION = "production"),
+        (r.TEST = "test"),
+        r);

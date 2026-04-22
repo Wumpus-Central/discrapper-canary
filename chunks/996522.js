@@ -1,103 +1,109 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => b });
 var i = n(627968);
 n(64700);
-var a = n(503698),
-    l = n.n(a),
-    r = n(311907),
-    s = n(397927),
-    o = n(442433),
-    d = n(47167),
-    c = n(143413),
-    u = n(734057),
-    _ = n(661191),
-    m = n(321045),
-    h = n(456874),
-    p = n(707539),
-    g = n(519397),
-    A = n(747926),
-    x = n(650583),
-    f = n(985018),
-    C = n(74791);
-function E(e) {
+var l = n(503698),
+    a = n.n(l),
+    s = n(311907),
+    r = n(939249),
+    o = n(531142),
+    d = n(140735),
+    c = n(834730),
+    u = n(442433),
+    m = n(47167),
+    _ = n(143413),
+    h = n(734057),
+    p = n(661191),
+    g = n(321045),
+    A = n(456874),
+    f = n(707539),
+    x = n(519397),
+    C = n(747926),
+    E = n(650583),
+    I = n(985018),
+    v = n(74791);
+function b(e) {
     let { message: t, compact: n } = e,
-        a = (0, r.bG)([u.A], () => u.A.getChannel(_.default.castMessageIdAsChannelId(t.id)));
-    return null == a ? null : (0, i.jsx)(I, { channel: a, compact: n, isSystemMessage: (0, c.A)(t) });
+        l = (0, s.bG)([h.A], () => h.A.getChannel(p.default.castMessageIdAsChannelId(t.id)));
+    return null == l ? null : (0, i.jsx)(T, { channel: l, compact: n, isSystemMessage: (0, _.A)(t) });
 }
-function I(e) {
+function T(e) {
     var t;
-    let a,
-        c,
-        u,
-        { channel: _, compact: E, isSystemMessage: I } = e,
-        v = (0, d.Ay)(_),
-        b = (0, r.bG)([h.A], () => h.A.getCount(_.id)),
-        T =
-            ((t = _),
-            (a = (0, r.bG)([h.A], () => h.A.getMostRecentMessage(t.id))),
-            (c = (0, r.bG)([h.A], () => h.A.getCount(t.id))),
-            (u = (0, p.JO)(t)),
+    let l,
+        _,
+        h,
+        { channel: p, compact: b, isSystemMessage: T } = e,
+        S = (0, m.Ay)(p),
+        y = (0, s.bG)([A.A], () => A.A.getCount(p.id)),
+        N =
+            ((t = p),
+            (l = (0, s.bG)([A.A], () => A.A.getMostRecentMessage(t.id))),
+            (_ = (0, s.bG)([A.A], () => A.A.getCount(t.id))),
+            (h = (0, f.JO)(t)),
             t.threadMetadata?.archived
-                ? f.intl.string(f.t.ZTo4HS)
-                : null == c || 0 === c
-                  ? f.intl.string(f.t.HYtNyE)
-                  : null == a
+                ? I.intl.string(I.t.ZTo4HS)
+                : null == _ || 0 === _
+                  ? I.intl.string(I.t.HYtNyE)
+                  : null == l
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)("span", { children: f.intl.string(f.t.ZTo4HS) }),
-                              (0, i.jsx)("span", { className: C.vE, children: (0, p.aK)(u) }),
+                              (0, i.jsx)("span", { children: I.intl.string(I.t.ZTo4HS) }),
+                              (0, i.jsx)("span", { className: v.vE, children: (0, f.aK)(h) }),
                           ],
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(g.A, { message: a, channel: t }),
-                              (0, i.jsx)("span", { className: C.vE, children: (0, p.aK)(u) }),
+                              (0, i.jsx)(x.A, { message: l, channel: t }),
+                              (0, i.jsx)("span", { className: v.vE, children: (0, f.aK)(h) }),
                           ],
                       })),
-        y = null != b && b > 0;
+        j = null != y && y > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: l()(C.GI, { [C.E]: !E, [C.E_]: I }) }),
-            (0, i.jsx)(s.DUT, {
+            (0, i.jsx)("div", { className: a()(v.GI, { [v.E]: !b, [v.E_]: T }) }),
+            (0, i.jsx)(r.D, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, A.JA)(_, e.shiftKey);
+                    e.stopPropagation(), (0, C.JA)(p, e.shiftKey);
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let t = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         n = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.key === x.dh.SPACE || e.key === x.dh.ENTER) && (e.preventDefault(), (t || n) && (0, A.JA)(_, n));
+                    (e.key === E.dh.SPACE || e.key === E.dh.ENTER) && (e.preventDefault(), (t || n) && (0, C.JA)(p, n));
                 },
                 onContextMenu: function (e) {
-                    (0, o.L3)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("95834"), n.e("94989"), n.e("9")]).then(
-                            n.bind(n, 44536),
-                        );
-                        return (t) => (0, i.jsx)(e, { channel: _, ...t });
+                    (0, u.L3)(e, async () => {
+                        let { default: e } = await Promise.all([
+                            n.e("95834"),
+                            n.e("99011"),
+                            n.e("94989"),
+                            n.e("219"),
+                        ]).then(n.bind(n, 44536));
+                        return (t) => (0, i.jsx)(e, { channel: p, ...t });
                     });
                 },
-                "aria-roledescription": f.intl.string(f.t["8ipxiY"]),
-                className: l()(C.kL, { [C.og]: I }),
-                children: (0, i.jsxs)(s.RDc, {
+                "aria-roledescription": I.intl.string(I.t["8ipxiY"]),
+                className: a()(v.kL, { [v.og]: T }),
+                children: (0, i.jsxs)(o.R, {
                     children: [
                         (0, i.jsxs)("div", {
-                            className: C.kq,
+                            className: v.kq,
                             children: [
-                                (0, i.jsx)(s.AC4, { children: f.intl.string(f.t["7Xm5QI"]) }),
-                                (0, i.jsx)("span", { className: C.UU, children: v }),
+                                (0, i.jsx)(d.A, { children: I.intl.string(I.t["7Xm5QI"]) }),
+                                (0, i.jsx)("span", { className: v.UU, children: S }),
                                 (0, i.jsx)("span", {
-                                    className: C.lO,
-                                    "aria-hidden": !y,
-                                    children: (0, m.ub)(b, _.id),
+                                    className: v.lO,
+                                    "aria-hidden": !j,
+                                    children: (0, g.ub)(y, p.id),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(c.E, {
                             variant: "text-sm/normal",
                             "aria-hidden": !0,
                             lineClamp: 1,
                             color: "text-default",
-                            className: C.sb,
-                            children: T,
+                            className: v.sb,
+                            children: N,
                         }),
                     ],
                 }),

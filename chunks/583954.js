@@ -1,25 +1,19 @@
 "use strict";
-n.d(t, { Kq: () => r, VZ: () => i, uS: () => s, z5: () => a });
-var r = (function (e) {
-        return (e[(e.None = 0)] = "None"), (e[(e.Truncate = 1)] = "Truncate"), (e[(e.Wrap = 2)] = "Wrap"), e;
-    })({}),
-    i = (function (e) {
-        return (e[(e.Stretch = 0)] = "Stretch"), (e[(e.Contain = 1)] = "Contain"), (e[(e.Cover = 2)] = "Cover"), e;
-    })({}),
-    a = (function (e) {
-        return (
-            (e[(e.Base64 = 0)] = "Base64"),
-            (e[(e.Blob = 1)] = "Blob"),
-            (e[(e.File = 2)] = "File"),
-            (e[(e.CloudUpload = 3)] = "CloudUpload"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (
-            (e[(e.Success = 0)] = "Success"),
-            (e[(e.Failure = 1)] = "Failure"),
-            (e[(e.ImageNotLoaded = 2)] = "ImageNotLoaded"),
-            e
-        );
-    })({});
+n.d(t, { Kq: () => a, VZ: () => o, uS: () => u, z5: () => c });
+var i,
+    l,
+    s,
+    r,
+    a = (((i = {})[(i.None = 0)] = "None"), (i[(i.Truncate = 1)] = "Truncate"), (i[(i.Wrap = 2)] = "Wrap"), i),
+    o = (((l = {})[(l.Stretch = 0)] = "Stretch"), (l[(l.Contain = 1)] = "Contain"), (l[(l.Cover = 2)] = "Cover"), l),
+    c =
+        (((s = {})[(s.Base64 = 0)] = "Base64"),
+        (s[(s.Blob = 1)] = "Blob"),
+        (s[(s.File = 2)] = "File"),
+        (s[(s.CloudUpload = 3)] = "CloudUpload"),
+        s),
+    u =
+        (((r = {})[(r.Success = 0)] = "Success"),
+        (r[(r.Failure = 1)] = "Failure"),
+        (r[(r.ImageNotLoaded = 2)] = "ImageNotLoaded"),
+        r);

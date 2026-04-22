@@ -1,139 +1,141 @@
-l.d(t, { A: () => w });
-var a = l(627968),
-    n = l(64700),
-    r = l(503698),
-    i = l.n(r),
-    o = l(892227),
-    s = l(311907),
-    d = l(964892),
-    c = l(916845),
-    u = l(732955),
-    p = l(303136),
-    m = l(31502),
-    h = l(320118),
-    x = l(976860),
-    b = l(309954),
-    y = l(287809),
-    f = l(975571),
-    g = l(474090),
-    v = l(920050),
-    _ = l(94264),
-    E = l(235365),
-    C = l(566119),
-    j = l(788868),
-    S = l(652215),
-    T = l(901123),
-    A = l(490285),
-    k = l(985018),
-    P = l(757705),
-    I = l(268920),
-    R = l(633217),
-    N = l(909340);
-let M = () =>
-    (0, a.jsx)("div", { className: P.s, children: (0, a.jsx)(p.A, { src: R.A, fallbackImage: I.A, className: P.Cb }) });
-function D() {
-    return (0, m.Q)("PremiumTenureRewardsOrbsBalancePopover")
-        ? `${T.BV.NITRO_HOME}?perk=${v.NITRO_ORBS_REWARDS_CARD_ID}`
-        : `${T.BV.NITRO_HOME}?section=${E.L}`;
-}
-function O() {
-    (0, C.RQ)(), (0, x.pX)(D());
-}
+n.d(t, { A: () => I });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    i = n(892227),
+    u = n(311907),
+    c = n(964892),
+    o = n(916845),
+    d = n(834730),
+    m = n(43990),
+    f = n(821609),
+    x = n(303136),
+    h = n(31502),
+    A = n(320118),
+    j = n(976860),
+    v = n(309954),
+    N = n(287809),
+    b = n(975571),
+    g = n(474090),
+    C = n(920050),
+    R = n(94264),
+    E = n(235365),
+    k = n(566119),
+    p = n(788868),
+    S = n(652215),
+    O = n(901123),
+    y = n(490285),
+    _ = n(985018),
+    D = n(757705),
+    T = n(268920),
+    M = n(633217),
+    L = n(909340);
+let w = () =>
+    (0, l.jsx)("div", { className: D.s, children: (0, l.jsx)(x.A, { src: M.A, fallbackImage: T.A, className: D.Cb }) });
 function B() {
-    (0, C.gP)(), (0, x.pX)(D());
+    return (0, h.Q)("PremiumTenureRewardsOrbsBalancePopover")
+        ? `${O.BV.NITRO_HOME}?perk=${C.NITRO_ORBS_REWARDS_CARD_ID}`
+        : `${O.BV.NITRO_HOME}?section=${E.L}`;
 }
-function L() {
-    (0, C.b)(), window.open(f.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank");
+function F() {
+    (0, k.RQ)(), (0, j.pX)(B());
 }
-function w(e) {
-    let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: m, ctaOnClick: x } = e,
-        { passesGeneralUIInvariant: f, programReward: v } = (0, h.F)({
+function P() {
+    (0, k.gP)(), (0, j.pX)(B());
+}
+function $() {
+    (0, k.b)(), window.open(b.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank");
+}
+function I(e) {
+    let { targetElementRef: t, shouldShow: n, onRequestClose: r, ctaText: h, ctaOnClick: j } = e,
+        { passesGeneralUIInvariant: b, programReward: C } = (0, A.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        E = (0, s.bG)([y.default], () => y.default.getCurrentUser()),
-        { balance: C } = (0, b.W)(),
-        T = !(0, g.ki)(E),
-        I = n.useMemo(() => {
-            let e = (0, g.YE)(E, j.PremiumTypes.TIER_2);
-            if (!f || T) return null;
-            if (e && null != v) {
-                let e = (0, o.default)(new Date(v.next_reward_date), new Date());
-                return (0, a.jsxs)(a.Fragment, {
+        E = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
+        { balance: k } = (0, v.W)(),
+        O = !(0, g.ki)(E),
+        T = a.useMemo(() => {
+            let e = (0, g.YE)(E, p.PremiumTypes.TIER_2);
+            if (!b || O) return null;
+            if (e && null != C) {
+                let e = (0, i.default)(new Date(C.next_reward_date), new Date());
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, a.jsx)(u.EYj, {
+                        (0, l.jsx)(d.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: k.intl.format(A.default["AvL/At"], {
+                            children: _.intl.format(y.default["AvL/At"], {
                                 days: Math.max(1, e),
-                                deepLinkToNitroOrbs: O,
+                                deepLinkToNitroOrbs: F,
                             }),
                         }),
-                        (0, a.jsx)(_.A, {}),
+                        (0, l.jsx)(R.A, {}),
                     ],
                 });
             }
             return null;
-        }, [E, T, v, f]),
-        R = (C ?? 0) >= 4100;
-    return (0, a.jsx)(d.x, {
+        }, [E, O, C, b]),
+        M = (k ?? 0) >= 4100;
+    return (0, l.jsx)(c.x, {
         targetElementRef: t,
-        shouldShow: l,
+        shouldShow: n,
         onRequestClose: r,
         position: "bottom",
         gradientColor: "blue",
         modal: !0,
         closeOnClickOutside: !0,
-        children: (0, a.jsx)(u.NPJ, {
-            theme: R ? S.NJ8.DARKER : void 0,
+        children: (0, l.jsx)(m.N, {
+            theme: M ? S.NJ8.DARKER : void 0,
             children: (e) =>
-                (0, a.jsxs)("div", {
-                    className: i()(e, P.j),
+                (0, l.jsxs)("div", {
+                    className: s()(e, D.j),
                     children: [
-                        R && (0, a.jsx)(p.A, { src: N.A, className: P.yG }),
-                        (0, a.jsxs)("div", {
-                            className: P.Qs,
+                        M && (0, l.jsx)(x.A, { src: L.A, className: D.yG }),
+                        (0, l.jsxs)("div", {
+                            className: D.Qs,
                             children: [
-                                (0, a.jsx)(c.q, { onClick: r }),
-                                (0, a.jsxs)("div", {
-                                    className: P.hQ,
+                                (0, l.jsx)(o.q, { onClick: r }),
+                                (0, l.jsxs)("div", {
+                                    className: D.hQ,
                                     children: [
-                                        (0, a.jsx)(M, {}),
-                                        (0, a.jsxs)("div", {
-                                            className: P.y$,
+                                        (0, l.jsx)(w, {}),
+                                        (0, l.jsxs)("div", {
+                                            className: D.y$,
                                             children: [
-                                                (C ?? 0) > 0 &&
-                                                    (0, a.jsxs)("div", {
-                                                        className: P.E2,
+                                                (k ?? 0) > 0 &&
+                                                    (0, l.jsxs)("div", {
+                                                        className: D.E2,
                                                         children: [
-                                                            (0, a.jsx)(u.EYj, {
+                                                            (0, l.jsx)(d.E, {
                                                                 variant: "display-lg",
-                                                                className: P.K,
-                                                                children: C ?? 0,
+                                                                className: D.K,
+                                                                children: k ?? 0,
                                                             }),
-                                                            (0, a.jsx)(u.EYj, {
+                                                            (0, l.jsx)(d.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-muted",
-                                                                children: k.intl.string(A.default.KclK9z),
+                                                                children: _.intl.string(y.default.KclK9z),
                                                             }),
                                                         ],
                                                     }),
-                                                I,
+                                                T,
                                             ],
                                         }),
-                                        (0, a.jsx)(u.$nd, {
-                                            text: m,
+                                        (0, l.jsx)(f.$, {
+                                            text: h,
                                             variant: "primary",
                                             size: "sm",
-                                            onClick: x,
+                                            onClick: j,
                                             fullWidth: !0,
                                         }),
-                                        (0, a.jsx)(u.EYj, {
+                                        (0, l.jsx)(d.E, {
                                             variant: "text-xs/normal",
-                                            color: T ? "text-default" : "text-muted",
-                                            className: P.CU,
-                                            children: T
-                                                ? k.intl.format(A.default.juvXqj, { deepLinkToNitroOrbs: B })
-                                                : k.intl.format(A.default.fhAVek, { helpdeskArticle: L }),
+                                            color: O ? "text-default" : "text-muted",
+                                            className: D.CU,
+                                            children: O
+                                                ? _.intl.format(y.default.juvXqj, { deepLinkToNitroOrbs: P })
+                                                : _.intl.format(y.default.fhAVek, { helpdeskArticle: $ }),
                                         }),
                                     ],
                                 }),

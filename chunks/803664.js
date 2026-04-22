@@ -1,61 +1,65 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(49229),
-    l = n(327166),
-    u = n(994500),
+n.d(t, { A: () => A });
+var i = n(627968),
+    l = n(64700),
+    r = n(311907),
+    a = n(192308),
+    o = n(477782),
+    d = n(49229),
+    u = n(327166),
+    s = n(994500),
     c = n(287809),
-    d = n(985018);
-function _(e) {
+    _ = n(985018);
+function A(e) {
     let {
             user: t,
-            location: _ = "ContextMenu",
+            location: A = "ContextMenu",
             onFriendRequestSent: f,
-            onFriendRemove: p,
+            onFriendRemove: E,
             appContext: h,
-            setLoading: m,
+            setLoading: g,
         } = e,
-        { id: g, username: E, bot: A } = t,
-        I = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.id === g, [g]),
-        T = (0, l.D)(g),
-        [y, S] = (0, a.yK)([u.A], () => [u.A.isFriend(g), u.A.isBlocked(g)], [g]),
-        [v, C] = i.useState(!1);
-    if (A || I) return null;
-    function b() {
-        (0, s.mMO)(
-            async () => {
-                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 158954));
-                return (t) =>
-                    (0, r.jsx)(e, {
-                        title: d.intl.formatToPlainString(d.t.fPLvZd, { name: E }),
-                        subtitle: d.intl.format(d.t.l5FFq6, { name: E }),
-                        confirmText: d.intl.string(d.t.cvSt1J),
-                        cancelText: d.intl.string(d.t["ETE/oC"]),
-                        onConfirm: () => {
-                            o.A.removeFriend(g, { location: _ }), C(!1), p?.();
+        { id: b, username: p, bot: v } = t,
+        S = (0, r.bG)([c.default], () => c.default.getCurrentUser()?.id === b, [b]),
+        I = (0, u.D)(b),
+        [T, y] = (0, r.yK)([s.A], () => [s.A.isFriend(b), s.A.isBlocked(b)], [b]),
+        [m, R] = l.useState(!1);
+    return v || S
+        ? null
+        : T
+          ? (0, i.jsx)(o.Dr, {
+                id: "remove-friend",
+                label: _.intl.string(_.t.cvSt1J),
+                action: function () {
+                    (0, a.openModalLazy)(
+                        async () => {
+                            let { ConfirmModal: e } = await n.e("27204").then(n.bind(n, 158954));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    title: _.intl.formatToPlainString(_.t.fPLvZd, { name: p }),
+                                    subtitle: _.intl.format(_.t.l5FFq6, { name: p }),
+                                    confirmText: _.intl.string(_.t.cvSt1J),
+                                    cancelText: _.intl.string(_.t["ETE/oC"]),
+                                    onConfirm: () => {
+                                        d.A.removeFriend(b, { location: A }), R(!1), E?.();
+                                    },
+                                    ...t,
+                                });
                         },
-                        ...t,
-                    });
-            },
-            { contextKey: null != h ? (0, s.TId)(h) : void 0 },
-        );
-    }
-    return y
-        ? (0, r.jsx)(s.Drp, { id: "remove-friend", label: d.intl.string(d.t.cvSt1J), action: b })
-        : (0, r.jsx)(s.Drp, {
-              id: "add-friend",
-              label: v ? d.intl.string(d.t.xMH6vD) : T,
-              action: async () => {
-                  v ||
-                      (m?.(!0),
-                      await o.A.addRelationship({ userId: g, context: { location: _ } }),
-                      C(!0),
-                      f?.(),
-                      m?.(!1));
-              },
-              disabled: S || (v && !y),
-          });
+                        { contextKey: null != h ? (0, a.modalContextFromAppContext)(h) : void 0 },
+                    );
+                },
+            })
+          : (0, i.jsx)(o.Dr, {
+                id: "add-friend",
+                label: m ? _.intl.string(_.t.xMH6vD) : I,
+                action: async () => {
+                    m ||
+                        (g?.(!0),
+                        await d.A.addRelationship({ userId: b, context: { location: A } }),
+                        R(!0),
+                        f?.(),
+                        g?.(!1));
+                },
+                disabled: y || (m && !T),
+            });
 }

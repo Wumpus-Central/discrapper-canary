@@ -1,79 +1,86 @@
-n.d(t, { A: () => p, M: () => T });
+n.d(t, { A: () => L, M: () => v });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
     r = n(311907),
-    a = n(397927),
-    d = n(58149),
-    o = n(133266),
-    c = n(120076),
-    u = n(283012),
-    m = n(913423),
-    N = n(71393),
-    h = n(287809),
-    I = n(954571),
-    g = n(555337),
-    A = n(527678),
-    E = n(400812),
-    S = n(652215),
-    x = n(985018),
-    _ = n(944171);
-function T(e) {
+    a = n(778492),
+    d = n(276293),
+    o = n(56059),
+    c = n(834730),
+    u = n(534514),
+    m = n(933832),
+    N = n(821609),
+    h = n(404778),
+    I = n(58149),
+    E = n(133266),
+    g = n(120076),
+    A = n(283012),
+    S = n(913423),
+    _ = n(71393),
+    f = n(287809),
+    x = n(954571),
+    T = n(555337),
+    D = n(527678),
+    j = n(400812),
+    p = n(652215),
+    O = n(985018),
+    G = n(951773);
+function v(e) {
     let { isTooltip: t = !1 } = e,
         n = [
             {
                 emoji: "\uD83E\uDDD9",
-                emojiDescription: x.intl.string(x.t.Jh9uif),
-                title: x.intl.string(x.t.ATF45v),
+                emojiDescription: O.intl.string(O.t.Jh9uif),
+                title: O.intl.string(O.t.ATF45v),
                 selected: !0,
             },
             {
                 emoji: "\uD83C\uDFA4",
-                emojiDescription: x.intl.string(x.t["nGt+MV"]),
-                title: x.intl.string(x.t["30uo7D"]),
+                emojiDescription: O.intl.string(O.t["nGt+MV"]),
+                title: O.intl.string(O.t["30uo7D"]),
                 selected: !1,
             },
             {
                 emoji: "\uD83D\uDC40",
-                emojiDescription: x.intl.string(x.t.hOMH5o),
-                title: x.intl.string(x.t["5Z5sgj"]),
+                emojiDescription: O.intl.string(O.t.hOMH5o),
+                title: O.intl.string(O.t["5Z5sgj"]),
                 selected: !1,
             },
         ];
     t && n.pop();
     let l = t
-            ? (0, i.jsx)(a.Text, {
+            ? (0, i.jsx)(c.E, {
                   variant: "text-sm/semibold",
                   color: "text-strong",
-                  children: x.intl.string(x.t.nTI2mQ),
+                  children: O.intl.string(O.t.nTI2mQ),
               })
-            : (0, i.jsx)(a.Heading, { variant: "heading-md/semibold", children: x.intl.string(x.t.g1OQtu) }),
+            : (0, i.jsx)(u.D, { variant: "heading-md/semibold", children: O.intl.string(O.t.g1OQtu) }),
         r = t
-            ? (0, i.jsx)(a.Text, { variant: "text-xxs/normal", children: x.intl.format(x.t.hGwDPV, {}) })
-            : (0, i.jsx)(a.Text, { variant: "text-xs/normal", children: x.intl.format(x.t["8XLD3r"], {}) });
+            ? (0, i.jsx)(c.E, { variant: "text-xxs/normal", children: O.intl.format(O.t.hGwDPV, {}) })
+            : (0, i.jsx)(c.E, { variant: "text-xs/normal", children: O.intl.format(O.t["8XLD3r"], {}) });
     return (0, i.jsxs)("div", {
-        className: s()(_.SI, _.f5, { [_.YL]: t }),
+        className: s()(G.SI, G.f5, { [G.YL]: t }),
         children: [
             l,
             (0, i.jsx)("div", {
-                className: _.Pf,
+                className: G.Pf,
                 children: n.map((e, t) => {
-                    let { emoji: n, emojiDescription: l, title: r, selected: d } = e;
+                    let { emoji: n, emojiDescription: l, title: r, selected: a } = e;
                     return (0, i.jsxs)(
                         "div",
                         {
-                            className: s()(_.CQ, { [_.wH]: d }),
+                            className: s()(G.CQ, { [G.wH]: a }),
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": l, children: n }),
-                                (0, i.jsx)(a.Text, { variant: "text-sm/medium", color: "text-strong", children: r }),
-                                d &&
+                                (0, i.jsx)(c.E, { variant: "text-sm/medium", color: "text-strong", children: r }),
+                                a &&
                                     (0, i.jsx)("div", {
-                                        className: _.ct,
-                                        children: (0, i.jsx)(a.A9s, {
+                                        className: G.ct,
+                                        children: (0, i.jsx)(m.A, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: _.AI,
+                                            className: G.AI,
                                         }),
                                     }),
                             ],
@@ -86,146 +93,143 @@ function T(e) {
         ],
     });
 }
-function f() {
+function C() {
     let e = [
         {
-            message: x.t.FUUXXk,
+            message: O.t.FUUXXk,
             profilePic:
                 "https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80",
-            adminTitle: x.intl.string(x.t.RZVpuo),
+            adminTitle: O.intl.string(O.t.RZVpuo),
         },
         {
-            message: x.t.JAXvDe,
+            message: O.t.JAXvDe,
             profilePic:
                 "https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80",
-            adminTitle: x.intl.string(x.t.xyrlg7),
+            adminTitle: O.intl.string(O.t.xyrlg7),
         },
         {
-            message: x.t.Wj9Djq,
+            message: O.t.Wj9Djq,
             profilePic:
                 "https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80",
-            adminTitle: x.intl.string(x.t["o/LQMi"]),
+            adminTitle: O.intl.string(O.t["o/LQMi"]),
         },
         {
-            message: x.t.ALsMNZ,
+            message: O.t.ALsMNZ,
             profilePic:
                 "https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80",
-            adminTitle: x.intl.string(x.t["uvM+xc"]),
+            adminTitle: O.intl.string(O.t["uvM+xc"]),
         },
     ];
-    return (0, i.jsx)(c.e, { testimonials: e });
+    return (0, i.jsx)(g.e, { testimonials: e });
 }
-function p() {
-    let e = (0, r.bG)([g.A], () => g.A.getGuildId()),
-        t = (0, r.bG)([N.A], () => N.A.getGuild(e)),
-        n = (0, r.bG)([h.default], () => h.default.getCurrentUser());
+function L() {
+    let e = (0, r.bG)([T.A], () => T.A.getGuildId()),
+        t = (0, r.bG)([_.A], () => _.A.getGuild(e)),
+        n = (0, r.bG)([f.default], () => f.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, i.jsxs)("div", {
-              className: _.Zj,
+              className: G.Zj,
               children: [
                   (0, i.jsxs)("div", {
-                      className: _.$P,
+                      className: G.$P,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: _.tU,
+                              className: G.tU,
                               children: [
-                                  (0, i.jsx)(o.Mm, {}),
-                                  (0, i.jsx)(o.j5, { guild: t, mainIslandClassName: _.$h, balloonDogClassName: _.Sb }),
-                                  (0, i.jsx)(o.RA, {}),
+                                  (0, i.jsx)(E.Mm, {}),
+                                  (0, i.jsx)(E.j5, { guild: t, mainIslandClassName: G.$h, balloonDogClassName: G.Sb }),
+                                  (0, i.jsx)(E.RA, {}),
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: _.KF,
+                              className: G.KF,
                               children: [
-                                  (0, i.jsx)(a.Heading, {
+                                  (0, i.jsx)(u.D, {
                                       variant: "heading-xl/semibold",
-                                      children: x.intl.string(x.t.GnKOAx),
+                                      children: O.intl.string(O.t.GnKOAx),
                                   }),
-                                  (0, i.jsx)(a.Text, {
-                                      variant: "text-md/normal",
-                                      children: x.intl.string(x.t.SJRFJj),
-                                  }),
+                                  (0, i.jsx)(c.E, { variant: "text-md/normal", children: O.intl.string(O.t.SJRFJj) }),
                               ],
                           }),
                           (0, i.jsx)("div", {
-                              className: _.JO,
-                              children: (0, i.jsx)(a.Button, {
+                              className: G.JO,
+                              children: (0, i.jsx)(N.$, {
                                   variant: "primary",
-                                  text: x.intl.string(x.t.RzWDqY),
+                                  text: O.intl.string(O.t.RzWDqY),
                                   onClick: function () {
                                       null != e &&
-                                          (I.default.track(
-                                              S.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                                              { ...(0, d.H$)(e), step: E.Hy[E.Hy.LANDING], back: !1, skip: !1 },
+                                          (x.default.track(
+                                              p.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
+                                              { ...(0, I.H$)(e), step: j.Hy[j.Hy.LANDING], back: !1, skip: !1 },
                                           ),
-                                          (0, A._k)(e, E.Hy.LANDING));
+                                          (0, D._k)(e, j.Hy.LANDING));
                                   },
                                   disabled: !1,
                               }),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(a.cGx, {}),
-                  (0, i.jsx)(f, {}),
-                  (0, i.jsx)(a.cGx, {}),
+                  (0, i.jsx)(h.c, {}),
+                  (0, i.jsx)(C, {}),
+                  (0, i.jsx)(h.c, {}),
                   (0, i.jsxs)("div", {
-                      className: _.a7,
+                      className: G.a7,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: _.fP,
+                              className: G.fP,
                               children: [
-                                  (0, i.jsx)(T, {}),
+                                  (0, i.jsx)(v, {}),
                                   (0, i.jsxs)("div", {
-                                      className: _.Ru,
+                                      className: G.Ru,
                                       children: [
-                                          (0, i.jsx)(a.Heading, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t.Z7kqKZ),
+                                              children: O.intl.string(O.t.Z7kqKZ),
                                           }),
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(c.E, {
                                               variant: "text-sm/normal",
-                                              children: x.intl.string(x.t.di3UC5),
+                                              children: O.intl.string(O.t.di3UC5),
                                           }),
                                       ],
                                   }),
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: _.fP,
+                              className: G.fP,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: _.Ru,
+                                      className: G.Ru,
                                       children: [
-                                          (0, i.jsx)(a.Heading, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t.O4jYEh),
+                                              children: O.intl.string(O.t.O4jYEh),
                                           }),
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(c.E, {
                                               variant: "text-sm/normal",
-                                              children: x.intl.string(x.t["l/l/Gw"]),
+                                              children: O.intl.string(O.t["l/l/Gw"]),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: s()(_.SI, _.f5),
+                                      className: s()(G.SI, G.f5),
                                       children: [
-                                          (0, i.jsx)(m.A, {
+                                          (0, i.jsx)(S.A, {
                                               guildId: e,
-                                              welcomeMessage: { authorIds: [n.id], message: x.intl.string(x.t.hIWAft) },
+                                              welcomeMessage: { authorIds: [n.id], message: O.intl.string(O.t.hIWAft) },
                                           }),
-                                          (0, i.jsx)(u.v, {
-                                              title: x.intl.string(x.t["47zu7B"]),
-                                              subtitle: x.intl.string(x.t["amoSN/"]),
+                                          (0, i.jsx)(A.v, {
+                                              title: O.intl.string(O.t["47zu7B"]),
+                                              subtitle: O.intl.string(O.t["amoSN/"]),
                                               completed: !0,
-                                              Icon: a.N$i,
+                                              Icon: d.N,
                                               variant: "static",
                                           }),
-                                          (0, i.jsx)(u.v, {
-                                              title: x.intl.string(x.t.EZfTKE),
-                                              subtitle: x.intl.string(x.t["/sYelW"]),
+                                          (0, i.jsx)(A.v, {
+                                              title: O.intl.string(O.t.EZfTKE),
+                                              subtitle: O.intl.string(O.t["/sYelW"]),
                                               completed: !0,
-                                              Icon: a.N$i,
+                                              Icon: d.N,
                                               variant: "static",
                                           }),
                                       ],
@@ -233,49 +237,49 @@ function p() {
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: _.fP,
+                              className: G.fP,
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: s()(_.SI, _.f5),
+                                      className: s()(G.SI, G.f5),
                                       children: [
                                           {
                                               channelIcon: () =>
-                                                  (0, i.jsx)(a.koX, {
+                                                  (0, i.jsx)(a.k, {
                                                       size: "xs",
                                                       color: "currentColor",
-                                                      className: _.p,
+                                                      className: G.p,
                                                   }),
-                                              channel: x.intl.string(x.t.MXJozL),
+                                              channel: O.intl.string(O.t.MXJozL),
                                               selected: !0,
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, i.jsx)(a.N$i, {
+                                                  (0, i.jsx)(d.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: _.p,
+                                                      className: G.p,
                                                   }),
-                                              channel: x.intl.string(x.t.Pkj0f6),
+                                              channel: O.intl.string(O.t.Pkj0f6),
                                               selected: !0,
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, i.jsx)(a.N$i, {
+                                                  (0, i.jsx)(d.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: _.p,
+                                                      className: G.p,
                                                   }),
-                                              channel: x.intl.string(x.t["imVD+u"]),
+                                              channel: O.intl.string(O.t["imVD+u"]),
                                               selected: !1,
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, i.jsx)(a.bSJ, {
+                                                  (0, i.jsx)(o.b, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: _.p,
+                                                      className: G.p,
                                                   }),
-                                              channel: x.intl.string(x.t["Pj/Wpt"]),
+                                              channel: O.intl.string(O.t["Pj/Wpt"]),
                                               selected: !0,
                                           },
                                       ].map((e, t) => {
@@ -283,13 +287,13 @@ function p() {
                                           return (0, i.jsxs)(
                                               "div",
                                               {
-                                                  className: s()(_.CQ, _.p9, { [_.wH]: r }),
+                                                  className: s()(G.CQ, G.p9, { [G.wH]: r }),
                                                   children: [
                                                       (0, i.jsxs)("div", {
-                                                          className: _.Ix,
+                                                          className: G.Ix,
                                                           children: [
                                                               n(),
-                                                              (0, i.jsx)(a.Text, {
+                                                              (0, i.jsx)(c.E, {
                                                                   variant: "text-md/medium",
                                                                   color: "text-strong",
                                                                   children: l,
@@ -297,13 +301,13 @@ function p() {
                                                           ],
                                                       }),
                                                       (0, i.jsx)("div", {
-                                                          className: s()(_.kv, { [_.wH]: r }),
+                                                          className: s()(G.kv, { [G.wH]: r }),
                                                           children:
                                                               r &&
-                                                              (0, i.jsx)(a.A9s, {
+                                                              (0, i.jsx)(m.A, {
                                                                   size: "md",
                                                                   color: "currentColor",
-                                                                  className: _.AI,
+                                                                  className: G.AI,
                                                               }),
                                                       }),
                                                   ],
@@ -313,15 +317,15 @@ function p() {
                                       }),
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: _.Ru,
+                                      className: G.Ru,
                                       children: [
-                                          (0, i.jsx)(a.Heading, {
+                                          (0, i.jsx)(u.D, {
                                               variant: "heading-md/semibold",
-                                              children: x.intl.string(x.t["3T9aHG"]),
+                                              children: O.intl.string(O.t["3T9aHG"]),
                                           }),
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(c.E, {
                                               variant: "text-sm/normal",
-                                              children: x.intl.string(x.t.dA7Cag),
+                                              children: O.intl.string(O.t.dA7Cag),
                                           }),
                                       ],
                                   }),

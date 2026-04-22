@@ -1,75 +1,77 @@
-"use strict";
-n.d(t, { A: () => A });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(485584),
-    l = n(598748),
-    u = n(158954),
-    c = n(619517),
-    d = n(183555),
-    _ = n(946356),
-    f = n(985018),
-    p = n(687109);
-function h(e) {
-    let { applicationName: t, applicationIcon: n } = e;
-    return (0, r.jsxs)(u.BJc, {
+a.d(i, { A: () => E });
+var n = a(627968),
+    t = a(64700),
+    l = a(503698),
+    s = a.n(l),
+    c = a(485584),
+    r = a(598748),
+    o = a(331322),
+    d = a(834730),
+    p = a(890856),
+    u = a(123292),
+    m = a(619517),
+    h = a(183555),
+    f = a(946356),
+    x = a(985018),
+    g = a(646997);
+function I(e) {
+    let { applicationName: i, applicationIcon: a } = e;
+    return (0, n.jsxs)(o.B, {
         direction: "horizontal",
         gap: 4,
         children: [
-            null != n
-                ? (0, r.jsx)(c.Ay, { width: 16, height: 16, src: n, className: p.In })
-                : (0, r.jsx)("div", { className: p.Fi }),
-            (0, r.jsx)(u.EYj, { variant: "text-xs/medium", children: t }),
+            null != a
+                ? (0, n.jsx)(m.Ay, { width: 16, height: 16, src: a, className: g.In })
+                : (0, n.jsx)("div", { className: g.Fi }),
+            (0, n.jsx)(d.E, { variant: "text-xs/medium", children: i }),
         ],
     });
 }
-function m(e) {
-    let { trackUserProfileAction: t } = (0, d.NJ)(),
-        n = i.useRef(!1);
-    i.useEffect(() => {
-        n.current || (t({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (n.current = !0));
-    }, [t, e]);
+function A(e) {
+    let { trackUserProfileAction: i } = (0, h.NJ)(),
+        a = t.useRef(!1);
+    t.useEffect(() => {
+        a.current || (i({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (a.current = !0));
+    }, [i, e]);
 }
-function E(e) {
-    let { previewData: t, className: n, onClick: i } = e,
-        { trackUserProfileAction: s } = (0, d.NJ)();
+function j(e) {
+    let { previewData: i, className: a, onClick: t } = e,
+        { trackUserProfileAction: l } = (0, h.NJ)();
     return (
-        m(t.application.id),
-        (0, r.jsx)(u.sqX, {
+        A(i.application.id),
+        (0, n.jsx)(p.s, {
             onClick: () => {
-                s({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: t.application.id }), i?.();
+                l({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: i.application.id }), t?.();
             },
-            "aria-label": t.application.name,
-            children: (0, r.jsxs)(_.A.Overlay, {
-                className: a()(p.kL, n),
+            "aria-label": i.application.name,
+            children: (0, n.jsxs)(f.A.Overlay, {
+                className: s()(g.kL, a),
                 children: [
-                    (0, r.jsxs)(u.BJc, {
+                    (0, n.jsxs)(o.B, {
                         gap: 8,
                         padding: 8,
-                        className: p.Qs,
+                        className: g.Qs,
                         children: [
-                            (0, r.jsx)(h, { applicationName: t.application.name, applicationIcon: t.application.icon }),
-                            (0, r.jsxs)("div", {
-                                className: p.P_,
+                            (0, n.jsx)(I, { applicationName: i.application.name, applicationIcon: i.application.icon }),
+                            (0, n.jsxs)("div", {
+                                className: g.P_,
                                 children: [
-                                    (0, r.jsxs)(u.EYj, {
+                                    (0, n.jsxs)(d.E, {
                                         tag: "div",
                                         variant: "heading-sm/semibold",
                                         lineClamp: 2,
                                         children: [
-                                            t.previewText,
-                                            null != t.previewIcon &&
-                                                (0, r.jsxs)(r.Fragment, {
+                                            i.previewText,
+                                            null != i.previewIcon &&
+                                                (0, n.jsxs)(n.Fragment, {
                                                     children: [
                                                         " ",
-                                                        (0, r.jsx)("div", {
-                                                            className: p.mP,
-                                                            children: (0, r.jsx)(c.Ay, {
-                                                                src: t.previewIcon.proxyUrl,
-                                                                width: t.previewIcon.width,
-                                                                height: t.previewIcon.height,
+                                                        (0, n.jsx)("div", {
+                                                            className: g.mP,
+                                                            children: (0, n.jsx)(m.Ay, {
+                                                                src: i.previewIcon.proxyUrl,
+                                                                width: i.previewIcon.width,
+                                                                height: i.previewIcon.height,
                                                                 responsive: !0,
                                                             }),
                                                         }),
@@ -77,23 +79,23 @@ function E(e) {
                                                 }),
                                         ],
                                     }),
-                                    (0, r.jsx)(u.QWc, {
+                                    (0, n.jsx)(u.Q, {
                                         textVariant: "text-xs/normal",
-                                        text: f.intl.string(f.t.qI8ZP6),
+                                        text: x.intl.string(x.t.qI8ZP6),
                                         variant: "secondary",
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", {
-                        className: p.Pq,
-                        children: (0, r.jsx)(c.Ay, {
-                            src: t.previewImage.proxyUrl,
-                            width: t.previewImage.width,
-                            height: t.previewImage.height,
+                    (0, n.jsx)("div", {
+                        className: g.Pq,
+                        children: (0, n.jsx)(m.Ay, {
+                            src: i.previewImage.proxyUrl,
+                            width: i.previewImage.width,
+                            height: i.previewImage.height,
                             responsive: !0,
-                            className: p.oz,
+                            className: g.oz,
                         }),
                     }),
                 ],
@@ -101,29 +103,29 @@ function E(e) {
         })
     );
 }
-function g(e) {
-    let { application: t, rendererProps: n, className: i, onClick: s } = e,
-        { trackUserProfileAction: c } = (0, d.NJ)(),
-        f = n.surfaceConfigs[l.m.MINI_PROFILE],
-        E = t.id;
-    return (m(E), null == f)
+function v(e) {
+    let { application: i, rendererProps: a, className: t, onClick: l } = e,
+        { trackUserProfileAction: o } = (0, h.NJ)(),
+        d = a.surfaceConfigs[r.m.MINI_PROFILE],
+        u = i.id;
+    return (A(u), null == d)
         ? null
-        : (0, r.jsx)(u.sqX, {
+        : (0, n.jsx)(p.s, {
               onClick: () => {
-                  c({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: E }), s?.();
+                  o({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: u }), l?.();
               },
-              "aria-label": t.name,
-              children: (0, r.jsx)(_.A.Overlay, {
-                  className: a()(p.iW, i),
-                  children: (0, r.jsx)(o.kH, {
-                      ...n,
-                      surface: l.m.MINI_PROFILE,
-                      surfaceConfig: f,
-                      header: (0, r.jsx)(h, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
+              "aria-label": i.name,
+              children: (0, n.jsx)(f.A.Overlay, {
+                  className: s()(g.iW, t),
+                  children: (0, n.jsx)(c.kH, {
+                      ...a,
+                      surface: r.m.MINI_PROFILE,
+                      surfaceConfig: d,
+                      header: (0, n.jsx)(I, { applicationName: i.name, applicationIcon: i.getIconURL(16) }),
                   }),
               }),
           });
 }
-let A = function (e) {
-    return "v2" === e.type ? (0, r.jsx)(g, { ...e }) : (0, r.jsx)(E, { ...e });
+let E = function (e) {
+    return "v2" === e.type ? (0, n.jsx)(v, { ...e }) : (0, n.jsx)(j, { ...e });
 };

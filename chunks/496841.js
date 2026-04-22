@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(956793),
-    o = n(688810),
-    l = n(384059),
-    u = n(203982),
-    c = n(709562),
-    d = n(652215),
-    _ = n(985018);
-function f(e) {
-    let { channel: t, centerButton: n = !1, onCallJoined: f, ...p } = e,
-        { parentAnalyticsLocation: h } = (0, o.Ay)(),
-        m = n ? c.l : c.A,
-        g = t.isManaged() || !t.isPrivate() ? _.intl.string(_.t.S0W8Z5) : _.intl.string(_.t["0D/6Rz"]),
-        E = i.useCallback(() => {
-            f?.(), (0, l.X)(h, l.O.JOIN_CALL), s.default.selectVoiceChannel(t.id);
-        }, [t.id, f, h]);
+t.d(n, { A: () => h });
+var l = t(627968),
+    i = t(64700),
+    a = t(978940),
+    s = t(956793),
+    r = t(688810),
+    o = t(384059),
+    c = t(203982),
+    u = t(709562),
+    d = t(652215),
+    A = t(985018);
+function h(e) {
+    let { channel: n, centerButton: t = !1, onCallJoined: h, ...p } = e,
+        { parentAnalyticsLocation: m } = (0, r.Ay)(),
+        g = t ? u.l : u.A,
+        f = n.isManaged() || !n.isPrivate() ? A.intl.string(A.t.S0W8Z5) : A.intl.string(A.t["0D/6Rz"]),
+        C = i.useCallback(() => {
+            h?.(), (0, o.X)(m, o.O.JOIN_CALL), s.default.selectVoiceChannel(n.id);
+        }, [n.id, h, m]);
     return (
         i.useEffect(
             () => (
-                u._.subscribe(d.jej.CALL_ACCEPT, E),
+                c._.subscribe(d.jej.CALL_ACCEPT, C),
                 () => {
-                    u._.unsubscribe(d.jej.CALL_ACCEPT, E);
+                    c._.unsubscribe(d.jej.CALL_ACCEPT, C);
                 }
             ),
-            [E],
+            [C],
         ),
-        (0, r.jsx)(m, { ...p, iconComponent: a._jp, label: g, onClick: E, isTrayButton: !1 })
+        (0, l.jsx)(g, { ...p, iconComponent: a._, label: f, onClick: C, isTrayButton: !1 })
     );
 }

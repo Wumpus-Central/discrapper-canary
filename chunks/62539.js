@@ -1,16 +1,14 @@
-"use strict";
-n.d(t, { J: () => o, _: () => s }), n(321073);
-var r = n(64700),
-    i = n(735438),
-    a = n.n(i),
-    s = (function (e) {
-        return (e.PAGE = "PAGE"), (e.GAP = "GAP"), (e.BACK = "BACK"), (e.NEXT = "NEXT"), e;
-    })({});
-class o extends r.PureComponent {
+a.d(t, { J: () => o, _: () => r }), a(321073);
+var n,
+    l = a(64700),
+    i = a(735438),
+    s = a.n(i),
+    r = (((n = {}).PAGE = "PAGE"), (n.GAP = "GAP"), (n.BACK = "BACK"), (n.NEXT = "NEXT"), n);
+class o extends l.PureComponent {
     static defaultProps = { maxVisiblePages: 9, hideMaxPage: !1 };
     changePageTo = (e) => {
-        let { selectedPage: t, onPageChange: n } = this.props;
-        t !== e && null != n && n(e);
+        let { selectedPage: t, onPageChange: a } = this.props;
+        t !== e && null != a && a(e);
     };
     handleForward = () => {
         this.changePageTo(Math.min(this.props.selectedPage + 1, this.props.totalPageCount));
@@ -22,37 +20,36 @@ class o extends r.PureComponent {
         this.changePageTo(e);
     };
     getNeighborBounds() {
-        let { totalPageCount: e, maxVisiblePages: t, selectedPage: n } = this.props,
-            r = Math.ceil(t / 2),
-            i = Math.floor(t / 2),
-            a = [1, e],
-            [s, o] = (a = n <= r ? [1, t] : n > e - i ? [e - t + 1, e] : [n - r + 1, n + i]);
-        return [Math.max(s, 1), Math.min(o, e)];
+        let { totalPageCount: e, maxVisiblePages: t, selectedPage: a } = this.props,
+            n = Math.ceil(t / 2),
+            l = Math.floor(t / 2),
+            [i, s] = a <= n ? [1, t] : a > e - l ? [e - t + 1, e] : [a - n + 1, a + l];
+        return [Math.max(i, 1), Math.min(s, e)];
     }
     getPageList() {
-        let { totalPageCount: e, selectedPage: t, hideMaxPage: n } = this.props,
-            [r, i] = this.getNeighborBounds(),
-            s = { type: "BACK", key: "back", disabled: 1 === t, selected: !1, navigateToPage: this.handleBackward },
-            o = { type: "NEXT", key: "next", disabled: t === e, selected: !1, navigateToPage: this.handleForward },
-            l = [],
-            u = [];
+        let { totalPageCount: e, selectedPage: t, hideMaxPage: a } = this.props,
+            [n, l] = this.getNeighborBounds(),
+            i = { type: "BACK", key: "back", disabled: 1 === t, selected: !1, navigateToPage: this.handleBackward },
+            r = { type: "NEXT", key: "next", disabled: t === e, selected: !1, navigateToPage: this.handleForward },
+            o = [],
+            c = [];
         return (
-            r > 1 &&
-                ((l = [
+            n > 1 &&
+                ((o = [
                     { type: "PAGE", key: "page-1", targetPage: 1, navigateToPage: () => this.handleJump(1) },
                     { type: "GAP", key: "left-gap" },
                 ]),
-                (r += 2)),
-            i < e &&
-                ((u = [{ type: "GAP", key: "right-gap" }]),
-                n ||
-                    u.push({ type: "PAGE", key: `page-${e}`, targetPage: e, navigateToPage: () => this.handleJump(e) }),
-                (i -= 2)),
+                (n += 2)),
+            l < e &&
+                ((c = [{ type: "GAP", key: "right-gap" }]),
+                a ||
+                    c.push({ type: "PAGE", key: `page-${e}`, targetPage: e, navigateToPage: () => this.handleJump(e) }),
+                (l -= 2)),
             [
-                s,
-                ...l,
-                ...a()
-                    .range(r, i + 1)
+                i,
+                ...o,
+                ...s()
+                    .range(n, l + 1)
                     .map((e) => ({
                         type: "PAGE",
                         key: `page-${e}`,
@@ -61,8 +58,8 @@ class o extends r.PureComponent {
                         disabled: !1,
                         navigateToPage: () => this.handleJump(e),
                     })),
-                ...u,
-                o,
+                ...c,
+                r,
             ]
         );
     }

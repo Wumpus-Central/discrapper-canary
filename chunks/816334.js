@@ -1,10 +1,9 @@
 "use strict";
-let r;
 n.d(t, { r: () => s });
 var i = n(283639),
-    a = n(913589);
+    l = n(913589);
 try {
-    r = n(
+    n(
         Object(
             (function () {
                 var e = Error("Cannot find module '@shopify/react-native-skia'");
@@ -12,22 +11,20 @@ try {
             })(),
         ),
     ).Skia;
-} catch (e) {
-    r = null;
-}
+} catch (e) {}
 async function s(e) {
-    let { assetsToLoad: t, drawImage: r, exportConfigs: s } = e,
-        o = await (0, i.h9)(t);
-    await o.loadFonts();
+    let { assetsToLoad: t, drawImage: s, exportConfigs: r } = e,
+        a = await (0, i.h9)(t);
+    await a.loadFonts();
     {
         let e = n(507428).A,
             t = n(684266).A,
             i = document.createElement("canvas"),
-            l = new e(i, o),
-            u = new t(),
-            c = new a.A(l, u);
-        r(c.canvas);
-        let d = await c.export(s);
+            o = new e(i, a),
+            c = new t(),
+            u = new l.A(o, c);
+        s(u.canvas);
+        let d = await u.export(r);
         return i.remove(), d;
     }
 }

@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(64700),
+n.d(t, { A: () => u });
+var l = n(64700),
     i = n(735438),
     a = n.n(i),
     s = n(311907),
-    o = n(205184),
-    l = n(994500),
-    u = n(287809),
-    c = n(661191);
-function d(e) {
-    let t = (0, o.s)(e.id),
-        n = (0, s.cf)([u.default, l.A], () => {
+    r = n(205184),
+    o = n(994500),
+    c = n(287809),
+    d = n(661191);
+function u(e) {
+    let t = (0, r.s)(e.id),
+        n = (0, s.cf)([c.default, o.A], () => {
             let e = {};
             for (let n of t.values()) {
-                let t = u.default.getUser(n.author_id),
-                    r = l.A.isFriend(n.author_id);
-                null != t && r && (e[t.id] = n.id);
+                let t = c.default.getUser(n.author_id),
+                    l = o.A.isFriend(n.author_id);
+                null != t && l && (e[t.id] = n.id);
             }
             return e;
         }),
-        [i, d] = r.useState([]);
+        [i, u] = l.useState([]);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             let e = a().sortBy(Object.entries(n), (e) => {
                 let [t, n] = e;
-                return -c.default.extractTimestamp(n);
+                return -d.default.extractTimestamp(n);
             });
-            d(
+            u(
                 a()
                     .map(e, (e) => {
                         let [t, n] = e;
-                        return u.default.getUser(t);
+                        return c.default.getUser(t);
                     })
                     .filter((e) => null != e),
             );

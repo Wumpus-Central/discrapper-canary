@@ -1,12 +1,12 @@
-n.d(t, { P: () => l });
-var i = n(627968),
-    r = n(397927),
-    a = n(985018);
-let l = (e) => {
+s.d(t, { P: () => r });
+var n = s(627968),
+    l = s(417098),
+    a = s(985018);
+let r = (e) => {
     let { error: t } = e,
-        n = t.getAnyErrorMessage();
-    return (0, i.jsx)(r.$Td, {
-        color: r.Hv$.DANGER,
-        children: (0, i.jsx)("div", { children: null != n ? n : a.intl.string(a.t.ZErSg5) }),
+        s = t.getAnyErrorMessage();
+    return (0, n.jsx)(l.$T, {
+        color: l.Hv.DANGER,
+        children: (0, n.jsx)("div", { children: null != s ? s : a.intl.string(a.t.ZErSg5) }),
     });
 };

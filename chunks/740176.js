@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n, r) {
         var i = {
@@ -13,25 +11,19 @@
         return t ? i[n][0] : i[n][1];
     }
     function n(e) {
-        return i(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e;
-    }
-    function r(e) {
-        return i(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e;
-    }
-    function i(e) {
         if (isNaN((e = parseInt(e, 10)))) return !1;
         if (e < 0) return !0;
         if (e < 10) return !!(4 <= e) && !!(e <= 7);
         if (e < 100) {
             var t = e % 10,
-                n = e / 10;
-            return 0 === t ? i(n) : i(t);
+                r = e / 10;
+            return 0 === t ? n(r) : n(t);
         }
-        if (!(e < 1e4)) return i((e /= 1e3));
+        if (!(e < 1e4)) return n((e /= 1e3));
         for (; e >= 10; ) e /= 10;
-        return i(e);
+        return n(e);
     }
-    return e.defineLocale("lb", {
+    e.defineLocale("lb", {
         months: "Januar_Februar_M\xe4erz_Abr\xebll_Mee_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),
         monthsShort: "Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.".split("_"),
         monthsParseExact: !0,
@@ -64,8 +56,12 @@
             },
         },
         relativeTime: {
-            future: n,
-            past: r,
+            future: function (e) {
+                return n(e.substr(0, e.indexOf(" "))) ? "a " + e : "an " + e;
+            },
+            past: function (e) {
+                return n(e.substr(0, e.indexOf(" "))) ? "viru " + e : "virun " + e;
+            },
             s: "e puer Sekonnen",
             ss: "%d Sekonnen",
             m: t,
@@ -83,4 +79,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

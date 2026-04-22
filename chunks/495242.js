@@ -1,40 +1,41 @@
-n.d(t, { Z: () => p });
-var a = n(627968);
+n.d(t, { Z: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(780964),
-    l = n(840065),
-    r = n(341915),
-    o = n(18437),
-    d = n(590202),
-    c = n(985018),
-    u = n(805180);
-function m(e) {
-    let { text: t, quest: n, sourceQuestContent: c } = e,
-        m = (0, o.Ut)();
-    return (0, a.jsx)(i.DUT, {
-        className: u.Z0,
+var s = n(939249),
+    l = n(834730),
+    a = n(780964),
+    r = n(858897),
+    o = n(341915),
+    d = n(18437),
+    c = n(590202),
+    u = n(985018),
+    p = n(540037);
+function h(e) {
+    let { text: t, quest: n, sourceQuestContent: u } = e,
+        h = (0, d.Ut)();
+    return (0, i.jsx)(s.D, {
+        className: p.Z0,
         onClick: () => {
-            m({
+            h({
                 questId: n.id,
-                questContent: r.uF.QUEST_BAR_V2,
-                questContentCTA: d.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                sourceQuestContent: c,
+                questContent: o.uF.QUEST_BAR_V2,
+                questContentCTA: c.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                sourceQuestContent: u,
             }),
-                (0, l.openUserSettings)(s.X.CONNECTIONS_PANEL);
+                (0, r.openUserSettings)(a.X.CONNECTIONS_PANEL);
         },
-        children: (0, a.jsx)(i.Text, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
+        children: (0, i.jsx)(l.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
     });
 }
-function h(e) {
-    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: i } = e;
-    return t.length > 0 ? (0, a.jsx)(m, { text: c.intl.string(c.t["qiS+xj"]), quest: n, sourceQuestContent: i }) : null;
+function m(e) {
+    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
+    return t.length > 0 ? (0, i.jsx)(h, { text: u.intl.string(u.t["qiS+xj"]), quest: n, sourceQuestContent: s }) : null;
 }
-function p(e) {
-    return (0, a.jsxs)(a.Fragment, {
+function _(e) {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsx)(i.Text, { color: "text-muted", variant: "text-xs/medium", children: c.intl.string(c.t.EJFSvD) }),
-            (0, a.jsx)(h, { ...e }),
+            (0, i.jsx)(l.E, { color: "text-muted", variant: "text-xs/medium", children: u.intl.string(u.t.EJFSvD) }),
+            (0, i.jsx)(m, { ...e }),
         ],
     });
 }

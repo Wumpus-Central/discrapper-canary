@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     hr: "progressBar_c44edb",
     M0: "bar_c44edb",

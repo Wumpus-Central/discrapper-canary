@@ -1,33 +1,29 @@
-t.d(n, { A: () => c });
-var i = t(627968),
-    l = t(64700),
-    d = t(397927),
-    r = t(988794),
-    s = t(985018),
-    a = t(301491);
-function c(e) {
-    let { selectedTab: n, onTabSelected: t, userCount: c } = e,
-        o = l.useRef(null);
+n.d(t, { A: () => o });
+var l = n(627968),
+    i = n(64700),
+    r = n(761508),
+    s = n(988794),
+    a = n(985018),
+    c = n(378787);
+function o(e) {
+    let { selectedTab: t, onTabSelected: n, userCount: o } = e,
+        d = i.useRef(null);
     return (
-        l.useEffect(() => o.current?.ref?.blur?.(), []),
-        (0, i.jsx)("div", {
-            className: a.kL,
-            children: (0, i.jsxs)(d.VQ0, {
-                className: a.$H,
-                "aria-label": s.intl.string(s.t["+1H47t"]),
-                selectedItem: n,
+        i.useEffect(() => d.current?.ref?.blur?.(), []),
+        (0, l.jsx)("div", {
+            className: c.kL,
+            children: (0, l.jsxs)(r.V, {
+                className: c.$H,
+                "aria-label": a.intl.string(a.t["+1H47t"]),
+                selectedItem: t,
                 type: "top",
-                onItemSelect: t,
+                onItemSelect: n,
                 children: [
-                    (0, i.jsx)(d.VQ0.Item, {
-                        className: a.YU,
-                        id: r.al.EVENT_INFO,
-                        children: s.intl.string(s.t.iW6Xuo),
-                    }),
-                    (0, i.jsx)(d.VQ0.Item, {
-                        className: a.YU,
-                        id: r.al.RSVP_LIST,
-                        children: s.intl.formatToPlainString(s.t["ZrTT/N"], { userCount: c }),
+                    (0, l.jsx)(r.V.Item, { className: c.YU, id: s.al.EVENT_INFO, children: a.intl.string(a.t.iW6Xuo) }),
+                    (0, l.jsx)(r.V.Item, {
+                        className: c.YU,
+                        id: s.al.RSVP_LIST,
+                        children: a.intl.formatToPlainString(a.t["ZrTT/N"], { userCount: o }),
                     }),
                 ],
             }),

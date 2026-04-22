@@ -1,55 +1,52 @@
 "use strict";
 n.d(t, {
-    EY: () => s,
-    Gp: () => a,
-    K8: () => _,
-    NL: () => l,
-    f$: () => c,
-    hv: () => d,
-    hw: () => u,
-    sS: () => o,
-    v_: () => f,
+    EY: () => l,
+    Gp: () => o,
+    K8: () => E,
+    NL: () => d,
+    f$: () => _,
+    hv: () => f,
+    hw: () => c,
+    sS: () => u,
+    v_: () => h,
     yM: () => p,
 }),
     n(323874),
     n(14289),
     n(35956);
-var r = n(179771),
-    i = n(652215);
-let a = "xbox://communitylinking/donut/audio",
-    s = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
-    o = [
-        r.F.VOICE,
-        r.F.DM_CHANNELS_READ,
-        r.F.GUILDS,
-        r.F.GUILDS_MEMBERS_READ,
-        r.F.IDENTIFY,
-        r.F.CONNECTIONS,
-        r.F.ACTIVITIES_READ,
+var r,
+    i,
+    s = n(179771),
+    a = n(652215);
+let o = "xbox://communitylinking/donut/audio",
+    l = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
+    u = [
+        s.F.VOICE,
+        s.F.DM_CHANNELS_READ,
+        s.F.GUILDS,
+        s.F.GUILDS_MEMBERS_READ,
+        s.F.IDENTIFY,
+        s.F.CONNECTIONS,
+        s.F.ACTIVITIES_READ,
     ],
-    l = [r.F.VOICE, r.F.DM_CHANNELS_READ, r.F.GUILDS, r.F.GUILDS_MEMBERS_READ, r.F.IDENTIFY, r.F.CONNECTIONS],
-    u = (e) => {
-        let { guildId: t, channelName: n, guildName: r, channelId: i, muted: a, deafened: s, nonce: o } = e,
-            l = { channelid: i, guildid: t, channelname: n, guildname: r, muted: String(a), deafened: String(s) };
+    d = [s.F.VOICE, s.F.DM_CHANNELS_READ, s.F.GUILDS, s.F.GUILDS_MEMBERS_READ, s.F.IDENTIFY, s.F.CONNECTIONS],
+    c = (e) => {
+        let { guildId: t, channelName: n, guildName: r, channelId: i, muted: s, deafened: a, nonce: o } = e,
+            l = { channelid: i, guildid: t, channelname: n, guildname: r, muted: String(s), deafened: String(a) };
         return null != o && (l.nonce = o), new URLSearchParams(l);
     };
-var c = (function (e) {
-    return (e.PLAYSTATION = "playstation"), (e.XBOX = "xbox"), e;
-})({});
-let d = new Set(["xbox", "playstation"]);
-i.yTV.XBOX, i.yTV.PS5;
-var _ = (function (e) {
-    return (
-        (e[(e.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
-        (e[(e.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = "CONSOLE_DEVICE_UNAVAILABLE"),
-        (e[(e.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002)] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS"),
-        (e[(e.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003)] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED"),
-        (e[(e.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004)] = "CONSOLE_DEVICE_INVALID_POWER_MODE"),
-        (e[(e.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005)] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR"),
-        (e[(e.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006)] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED"),
-        (e[(e.CONSOLE_DEVICE_BAD_COMMAND = 270007)] = "CONSOLE_DEVICE_BAD_COMMAND"),
-        e
-    );
-})({});
-let f = new Set([27e4]),
+var _ = (((r = {}).PLAYSTATION = "playstation"), (r.XBOX = "xbox"), r);
+let f = new Set(["xbox", "playstation"]);
+a.yTV.XBOX, a.yTV.PS5;
+var E =
+    (((i = {})[(i.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
+    (i[(i.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = "CONSOLE_DEVICE_UNAVAILABLE"),
+    (i[(i.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002)] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS"),
+    (i[(i.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003)] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED"),
+    (i[(i.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004)] = "CONSOLE_DEVICE_INVALID_POWER_MODE"),
+    (i[(i.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005)] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR"),
+    (i[(i.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006)] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED"),
+    (i[(i.CONSOLE_DEVICE_BAD_COMMAND = 270007)] = "CONSOLE_DEVICE_BAD_COMMAND"),
+    i);
+let h = new Set([27e4]),
     p = "console error alert";

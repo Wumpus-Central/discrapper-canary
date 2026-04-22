@@ -1,52 +1,51 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(64700),
-    i = n(417597),
-    s = n(727170),
-    a = n(919395),
+n.d(t, { A: () => u });
+var a = n(64700),
+    r = n(417597),
+    l = n(727170),
+    i = n(919395),
     o = n(207803),
-    l = n(84540),
-    u = n(836602);
-function c(e) {
-    let { isTryItOut: t, analyticsLocations: n, guildId: c } = e,
-        d = (0, s.A)(n),
+    s = n(84540),
+    c = n(836602);
+function u(e) {
+    let { isTryItOut: t, analyticsLocations: n, guildId: u } = e,
+        d = (0, l.A)(n),
         {
-            pendingAvatar: _,
-            pendingAvatarDecoration: f,
-            pendingErrors: p,
-        } = (0, i.cf)([u.A], () => {
+            pendingAvatar: p,
+            pendingAvatarDecoration: A,
+            pendingErrors: g,
+        } = (0, r.cf)([c.A], () => {
             if (t) {
-                let e = u.A.getTryItOutChanges();
+                let e = c.A.getTryItOutChanges();
                 return {
                     pendingAvatar: e.tryItOutAvatar,
                     pendingAvatarDecoration: e.tryItOutAvatarDecoration,
-                    pendingErrors: u.A.getErrors(c).avatarDecoration,
+                    pendingErrors: c.A.getErrors(u).avatarDecoration,
                 };
             }
-            let e = u.A.getPendingChanges(c);
+            let e = c.A.getPendingChanges(u);
             return {
                 pendingAvatar: e.pendingAvatar,
                 pendingAvatarDecoration: e.pendingAvatarDecoration,
-                pendingErrors: u.A.getErrors(c).avatarDecoration,
+                pendingErrors: c.A.getErrors(u).avatarDecoration,
             };
         }),
-        h = (0, r.useCallback)(
+        _ = (0, a.useCallback)(
             (e) => {
-                (0, l.p)({ guildId: c, avatar: e }), (0, a.WU)(null == e ? "remove" : "set");
+                (0, s.p)({ guildId: u, avatar: e }), (0, i.WU)(null == e ? "remove" : "set");
             },
-            [c],
+            [u],
         ),
-        m = (0, r.useCallback)(
+        v = (0, a.useCallback)(
             (e) => {
-                (0, l.p)({ guildId: c, avatarDecoration: e }), null != e && d(e);
+                (0, s.p)({ guildId: u, avatarDecoration: e }), null != e && d(e);
             },
-            [d, c],
+            [d, u],
         );
     return {
-        pendingAvatar: _,
-        pendingAvatarDecoration: f,
-        pendingErrors: p,
-        setPendingAvatar: t ? o.e$ : h,
-        setPendingAvatarDecoration: t ? o.Go : m,
+        pendingAvatar: p,
+        pendingAvatarDecoration: A,
+        pendingErrors: g,
+        setPendingAvatar: t ? o.e$ : _,
+        setPendingAvatarDecoration: t ? o.Go : v,
     };
 }

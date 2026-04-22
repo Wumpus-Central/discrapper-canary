@@ -1,55 +1,58 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => A });
 var r = n(311907),
     i = n(73153),
-    a = n(793943),
-    s = n(287809),
+    s = n(793943),
+    a = n(287809),
     o = n(954571),
     l = n(927578),
     u = n(350972),
-    c = n(652215),
-    d = n(49999),
+    d = n(652215),
+    c = n(49999),
     _ = n(788868);
-let f = 2,
-    p = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
-    h = !0,
-    m = () => {
-        (h = !l.Ay.canUsePremiumAppIcons(s.default.getCurrentUser())) && g(u.LW.DEFAULT);
+let f = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
+    E = !0,
+    h = () => {
+        (E = !l.Ay.canUsePremiumAppIcons(a.default.getCurrentUser())) && p(u.LW.DEFAULT);
     },
-    g = (e) => {
-        (p.client.desktop = e),
-            h ||
-                o.default.track(c.HAw.APP_ICON_UPDATED, {
+    p = (e) => {
+        (f.client.desktop = e),
+            E ||
+                o.default.track(d.HAw.APP_ICON_UPDATED, {
                     icon_id: e,
-                    user_premium_tier: s.default.getCurrentUser()?.premiumType,
+                    user_premium_tier: a.default.getCurrentUser()?.premiumType,
                     icon_premium_tier: e !== u.LW.DEFAULT ? _.PremiumTypes.TIER_2 : null,
                 });
     };
-function E(e) {
-    let { id: t } = e;
-    null != t && g(t);
+function m() {
+    E && (f.client = { desktop: u.LW.DEFAULT, coachmarkImpressions: 2 });
 }
-function A() {
-    h && (p.client = { desktop: u.LW.DEFAULT, coachmarkImpressions: f });
-}
-function I(e) {
-    let { markAsDismissed: t } = e;
-    (p.client.coachmarkImpressions += 1), p.client.coachmarkImpressions >= f && (t?.(d.i.UNKNOWN), A(), (0, a.Jp)());
-}
-class T extends r.Ay.PersistedStore {
+class g extends r.Ay.PersistedStore {
     static displayName = "AppIconPersistedStoreState";
     static persistKey = "AppIconPersistedStoreState";
     initialize(e) {
-        null != e && (p = e), this.waitFor(s.default), this.syncWith([s.default], m);
+        null != e && (f = e), this.waitFor(a.default), this.syncWith([a.default], h);
     }
     get isUpsellPreview() {
-        return h;
+        return E;
     }
     getState() {
-        return p;
+        return f;
     }
     getCurrentDesktopIcon() {
-        return p?.client?.desktop;
+        return f?.client?.desktop;
     }
 }
-let y = new T(i.h, { APP_ICON_UPDATED: E, APP_ICON_EDITOR_RESET: A, APP_ICON_TRACK_IMPRESSION: I, LOGOUT: A });
+let A = new g(i.h, {
+    APP_ICON_UPDATED: function (e) {
+        let { id: t } = e;
+        null != t && p(t);
+    },
+    APP_ICON_EDITOR_RESET: m,
+    APP_ICON_TRACK_IMPRESSION: function (e) {
+        let { markAsDismissed: t } = e;
+        (f.client.coachmarkImpressions += 1),
+            f.client.coachmarkImpressions >= 2 && (t?.(c.i.UNKNOWN), m(), (0, s.Jp)());
+    },
+    LOGOUT: m,
+});

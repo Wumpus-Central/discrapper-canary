@@ -1,10 +1,10 @@
 a.d(n, { default: () => d });
 var e = a(627968),
     i = a(64700),
-    l = a(158954),
-    r = a(397927),
-    s = a(573648),
-    o = a(777574),
+    l = a(189213),
+    r = a(292666),
+    o = a(573648),
+    s = a(777574),
     c = a(738104),
     u = a(985018);
 function d(t) {
@@ -12,7 +12,7 @@ function d(t) {
         [m, p] = i.useState(""),
         [f, b] = i.useState(null),
         [x, S] = i.useState(!1),
-        k = s.A.get(h)?.name ?? u.intl.string(u.t["bU/GZm"]),
+        k = o.A.get(h)?.name ?? u.intl.string(u.t["bU/GZm"]),
         y = async () => {
             S(!0), b(null);
             try {
@@ -23,8 +23,8 @@ function d(t) {
                 b(u.intl.string(u.t["7wbPNl"])), S(!1);
             }
         },
-        C = (0, o.X)(h),
-        T = (0, o.x)(m, h);
+        C = (0, s.X)(h),
+        T = (0, s.x)(m, h);
     return (0, e.jsx)(l.Modal, {
         transitionState: a,
         title: u.intl.formatToPlainString(u.t["ImMhq+"], { serviceName: k }),
@@ -38,7 +38,7 @@ function d(t) {
             onSubmit: (t) => {
                 t.preventDefault(), T && !x && y();
             },
-            children: (0, e.jsx)(r.ksK, {
+            children: (0, e.jsx)(r.k, {
                 label: u.intl.string(u.t.tZ9QFR),
                 error: f,
                 onChange: p,

@@ -1,18 +1,18 @@
-n.d(t, { H: () => p, default: () => g });
+n.d(t, { H: () => p, default: () => m });
 var i = n(627968);
 n(64700);
 var r = n(65412),
     a = n(554146),
     l = n(287683),
-    s = n(397927),
+    s = n(366010),
     o = n(212245),
     d = n(736653),
-    c = n(793574),
-    u = n(688810),
+    u = n(793574),
+    c = n(688810),
     A = n(826673),
     h = n(728458),
     _ = n(716600),
-    m = n(848295);
+    E = n(848295);
 function p(e) {
     let { promotionId: t, content: n, isPreview: i } = e,
         s = l.m.fromBinary((0, r.A)(n));
@@ -22,12 +22,12 @@ function p(e) {
         return !i && e ? null : (i && (s.properties.announcementModalVariant1.dismissKey = ""), s);
     }
 }
-function g(e) {
+function m(e) {
     let { componentId: t, promotionId: n, renderModalProps: r, properties: a } = e,
         { location: l } = (0, o.p)(),
-        { analyticsLocations: A } = (0, u.Ay)(c.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        { analyticsLocations: A } = (0, c.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         p = (0, d.Ay)(),
-        g = (0, s.qB1)(p);
+        m = (0, s.q)(p);
     if ("announcementModalVariant1" === a.properties.oneofKind) {
         let e = (0, _.t)({
             componentId: t,
@@ -36,9 +36,9 @@ function g(e) {
             renderModalProps: r,
             analyticsLocations: A,
             analyticsLocation: l,
-            isLightTheme: g,
+            isLightTheme: m,
         });
-        return (0, i.jsx)(m.A, { ...e });
+        return (0, i.jsx)(E.A, { ...e });
     }
     return (
         h.A.captureMessage(

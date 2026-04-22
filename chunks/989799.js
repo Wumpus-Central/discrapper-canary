@@ -1,65 +1,66 @@
 "use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => f });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(397927),
-    l = n(793574),
+    r = n.n(s),
+    a = n(305866),
+    o = n(289873),
+    c = n(793574),
     u = n(688810),
-    c = n(151271),
-    d = n(237248),
-    _ = n(338821),
-    f = n(843288);
-function p(e) {
+    d = n(151271),
+    h = n(237248),
+    m = n(338821),
+    p = n(367720);
+function f(e) {
     let {
             guildId: t,
             channel: n,
             containerWidth: s,
-            onClose: p,
-            onSelect: h,
-            analyticsSource: m,
-            suppressPlaySound: E,
-            shouldValidateSelectedSound: g,
-            shouldShowLockedSounds: A = !0,
-            gridNotice: I,
-            inExpressionPicker: T,
-            soundButtonOverlay: S,
+            onClose: f,
+            onSelect: g,
+            analyticsSource: _,
+            suppressPlaySound: x,
+            shouldValidateSelectedSound: A,
+            shouldShowLockedSounds: C = !0,
+            gridNotice: E,
+            inExpressionPicker: I,
+            soundButtonOverlay: v,
             listPadding: y,
-            renderHeader: v,
-            defaultSoundsOnly: N,
+            renderHeader: S,
+            defaultSoundsOnly: b,
         } = e,
-        { fetching: C, maybeFetchData: R } = (0, d.A)(),
-        { analyticsLocations: O } = (0, u.Ay)(l.A.SOUNDBOARD_POPOUT);
+        { fetching: N, maybeFetchData: T } = (0, h.A)(),
+        { analyticsLocations: j } = (0, u.Ay)(c.A.SOUNDBOARD_POPOUT);
     return (
-        i.useEffect(() => {
-            R();
-        }, [R]),
-        i.useEffect(() => {
-            T || (0, c.Ri)("");
+        l.useEffect(() => {
+            T();
         }, [T]),
-        (0, r.jsx)(u.f5, {
-            value: O,
-            children: (0, r.jsx)(o.lGe, {
-                className: a()(f.Nz, { [f.Bg]: C, [f.yV]: T }),
-                children: C
-                    ? (0, r.jsx)(o.y$y, {})
-                    : (0, r.jsx)(_.A, {
+        l.useEffect(() => {
+            I || (0, d.Ri)("");
+        }, [I]),
+        (0, i.jsx)(u.f5, {
+            value: j,
+            children: (0, i.jsx)(a.l, {
+                className: r()(p.Nz, { [p.Bg]: N, [p.yV]: I }),
+                children: N
+                    ? (0, i.jsx)(o.y, {})
+                    : (0, i.jsx)(m.A, {
                           guildId: t,
                           channel: n,
-                          onClose: p,
-                          onSelect: h,
-                          shouldValidateSelectedSound: g,
+                          onClose: f,
+                          onSelect: g,
+                          shouldValidateSelectedSound: A,
                           containerWidth: s,
-                          suppressPlaySound: E,
-                          shouldShowLockedSounds: A,
-                          gridNotice: I,
-                          soundButtonOverlay: S,
+                          suppressPlaySound: x,
+                          shouldShowLockedSounds: C,
+                          gridNotice: E,
+                          soundButtonOverlay: v,
                           listPadding: y,
-                          renderHeader: v,
-                          defaultSoundsOnly: N,
-                          inExpressionPicker: T,
-                          analyticsSource: m,
+                          renderHeader: S,
+                          defaultSoundsOnly: b,
+                          inExpressionPicker: I,
+                          analyticsSource: _,
                       }),
             }),
         })

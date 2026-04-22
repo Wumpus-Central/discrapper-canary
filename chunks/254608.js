@@ -1,18 +1,18 @@
-n.d(t, { l: () => i });
-var a = n(627968),
-    l = n(64700),
-    r = n(397927),
-    s = n(457417),
-    o = n(985018);
-let i = () => {
-    let { searchText: e, updateSearchText: t } = (0, s.Vw)(),
-        n = l.useRef(null);
+a.d(t, { l: () => o });
+var i = a(627968),
+    r = a(64700),
+    l = a(892547),
+    n = a(457417),
+    s = a(985018);
+let o = () => {
+    let { searchText: e, updateSearchText: t } = (0, n.Vw)(),
+        a = r.useRef(null);
     return (
-        (0, l.useEffect)(() => {
-            null !== n.current && "" === e && n.current.focus();
-        }, [e, n]),
-        (0, a.jsx)(r.IWV, {
-            ref: n,
+        (0, r.useEffect)(() => {
+            null !== a.current && "" === e && a.current.focus();
+        }, [e, a]),
+        (0, i.jsx)(l.I, {
+            ref: a,
             query: e,
             onChange: (e) => {
                 t(e);
@@ -20,8 +20,8 @@ let i = () => {
             onClear: () => {
                 t("");
             },
-            placeholder: o.intl.string(o.t["5h0QOP"]),
-            "aria-label": o.intl.string(o.t["5h0QOP"]),
+            placeholder: s.intl.string(s.t["5h0QOP"]),
+            "aria-label": s.intl.string(s.t["5h0QOP"]),
             autoFocus: !0,
         })
     );

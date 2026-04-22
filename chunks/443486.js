@@ -1,68 +1,66 @@
-r.d(t, { A: () => g });
+r.d(t, { A: () => R });
 var n = r(627968),
     s = r(64700),
-    l = r(397927),
-    a = r(822382),
-    i = r(771650),
-    o = r(674142),
-    u = r(753806),
-    c = r(272444),
-    h = r(806595),
-    d = r(949759),
-    _ = r(65600),
-    S = r(145331),
-    E = r(652215),
-    f = r(985018),
-    p = r(611027);
-function g(e) {
-    let { setSearchQuery: t, searchContext: r, mode: g } = e,
-        A = (0, o.o)(r);
+    l = r(950305),
+    a = r(276293),
+    i = r(588975),
+    o = r(935063),
+    u = r(822382),
+    c = r(771650),
+    h = r(674142),
+    d = r(753806),
+    _ = r(272444),
+    E = r(806595),
+    S = r(949759),
+    f = r(65600),
+    p = r(145331),
+    g = r(652215),
+    A = r(985018),
+    y = r(611027);
+function R(e) {
+    let { setSearchQuery: t, searchContext: r, mode: R } = e,
+        m = (0, h.o)(r);
     return s.useMemo(() => {
         let e = [
             {
-                type: E.LWr.FILTER_FROM,
-                isEligible: A.has(E.LWr.FILTER_FROM),
-                icon: l.nys,
-                label: f.intl.string(f.t.ktr6z5),
+                type: g.LWr.FILTER_FROM,
+                isEligible: m.has(g.LWr.FILTER_FROM),
+                icon: l.n,
+                label: A.intl.string(A.t.ktr6z5),
+            },
+            { type: g.LWr.FILTER_IN, isEligible: m.has(g.LWr.FILTER_IN), icon: a.N, label: A.intl.string(A.t.VMjDvS) },
+            {
+                type: g.LWr.FILTER_HAS,
+                isEligible: m.has(g.LWr.FILTER_HAS),
+                icon: i.P,
+                label: A.intl.string(A.t.IhIpc7),
             },
             {
-                type: E.LWr.FILTER_IN,
-                isEligible: A.has(E.LWr.FILTER_IN),
-                icon: l.N$i,
-                label: f.intl.string(f.t.VMjDvS),
-            },
-            {
-                type: E.LWr.FILTER_HAS,
-                isEligible: A.has(E.LWr.FILTER_HAS),
-                icon: l.PtA,
-                label: f.intl.string(f.t.IhIpc7),
-            },
-            {
-                type: E.LWr.FILTER_MENTIONS,
-                isEligible: A.has(E.LWr.FILTER_MENTIONS),
-                icon: l.XxR,
-                label: f.intl.string(f.t.fpKv9Y),
+                type: g.LWr.FILTER_MENTIONS,
+                isEligible: m.has(g.LWr.FILTER_MENTIONS),
+                icon: o.X,
+                label: A.intl.string(A.t.fpKv9Y),
             },
         ];
         return e
             .filter((e) => e.isEligible)
             .map((s) => {
-                let { icon: l, label: o, type: E } = s;
-                return (0, d.wE)(h.$.ROW, {
-                    icon: (0, n.jsx)(l, { size: "sm", color: "currentColor", className: p.Fx }),
-                    label: (0, n.jsx)(c.bg, { label: o }),
-                    sublabel: (0, n.jsx)(c.bj, { searchTokenType: E }),
+                let { icon: l, label: a, type: i } = s;
+                return (0, S.wE)(E.$.ROW, {
+                    icon: (0, n.jsx)(l, { size: "sm", color: "currentColor", className: y.Fx }),
+                    label: (0, n.jsx)(_.bg, { label: a }),
+                    sublabel: (0, n.jsx)(_.bj, { searchTokenType: i }),
                     onSelect: (n) => {
                         let { selectedIndex: s, searchAutocompleteSelectAction: l } = n,
-                            o = i.Ay[E]?.key ?? "",
-                            c = (0, a.bS)(r);
-                        (0, S.kc)({
+                            a = c.Ay[i]?.key ?? "",
+                            o = (0, u.bS)(r);
+                        (0, p.kc)({
                             searchContext: r,
-                            searchQuery: _.A.getSearchResultsQuery(c),
-                            searchQueryString: u.A.getSearchInputText(r),
-                            searchTokenType: E,
-                            searchAutocompleteGroup: E,
-                            searchAutocompleteMode: g,
+                            searchQuery: f.A.getSearchResultsQuery(o),
+                            searchQueryString: d.A.getSearchInputText(r),
+                            searchTokenType: i,
+                            searchAutocompleteGroup: i,
+                            searchAutocompleteMode: R,
                             searchAutocompleteResultIndex: s - 1,
                             searchAutocompleteTotalResults: e.length,
                             isSearchFilterPrefix: !0,
@@ -71,9 +69,9 @@ function g(e) {
                             isInFilterForSelectedChannel: !1,
                             searchAutocompleteSelectAction: l,
                         }),
-                            t({ query: `${o} `, performSearch: !1, replace: !1 });
+                            t({ query: `${a} `, performSearch: !1, replace: !1 });
                     },
                 });
             });
-    }, [A, r, g, t]);
+    }, [m, r, R, t]);
 }

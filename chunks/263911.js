@@ -1,7 +1,8 @@
-n.d(t, { I: () => s });
-var a = n(627968),
-    l = n(158954),
-    i = n(985018);
-function s() {
-    return (0, a.jsx)(l.Exy, { type: { text: i.intl.string(i.t.RiDMFz) }, variant: "brand", icon: l.pVd });
+l.d(t, { I: () => r });
+var n = l(627968),
+    a = l(508770),
+    i = l(111159),
+    s = l(985018);
+function r() {
+    return (0, n.jsx)(a.E, { type: { text: s.intl.string(s.t.RiDMFz) }, variant: "brand", icon: i.p });
 }

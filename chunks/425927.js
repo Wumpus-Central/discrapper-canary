@@ -1,57 +1,58 @@
 "use strict";
-n.d(t, { U1: () => _, fS: () => c }), n(321073);
-var r = n(250119),
-    i = n(381438),
-    s = n(550630),
-    a = n(692603),
-    o = n(199585),
-    l = n(665260),
-    u = n(96914),
-    c = (function (e) {
-        return (e.FULL = "full"), (e.MINIMAL = "minimal"), e;
-    })({});
-let d = { source: r.j.NO_CLASSIFICATION, status: i.Y.EVERYONE };
-function _(e) {
-    return f(e).status;
-}
+n.d(t, { U1: () => f, fS: () => c }), n(321073);
+var r,
+    i = n(250119),
+    s = n(381438),
+    a = n(550630),
+    o = n(692603),
+    l = n(199585),
+    u = n(665260),
+    d = n(96914),
+    c = (((r = {}).FULL = "full"), (r.MINIMAL = "minimal"), r);
+let _ = { source: i.j.NO_CLASSIFICATION, status: s.Y.EVERYONE };
 function f(e) {
-    if (null == e) return d;
-    let t = [],
-        { type: n, data: i } = e;
-    return (
-        "minimal" === n
-            ? null != i.discord_classifications && t.push(p(r.j.DISCORD_CLASSIFICATION, i.discord_classifications))
-            : null != i.manual_classifications
-              ? t.push(p(r.j.MANUAL_CLASSIFICATION, i.manual_classifications))
-              : null != i.automated_classifications &&
-                t.push(p(r.j.AUTOMATED_CLASSIFICATION, i.automated_classifications)),
-        null != i.agency_ratings &&
-            (null != i.agency_ratings.esrb && t.push(h(i.agency_ratings.esrb)),
-            null != i.agency_ratings.pegi && t.push(m(i.agency_ratings.pegi))),
-        E(t)
-    );
+    return (function (e) {
+        var t, n;
+        let r, l;
+        if (null == e) return _;
+        let u = [],
+            { type: c, data: f } = e;
+        return (
+            "minimal" === c
+                ? null != f.discord_classifications && u.push(E(i.j.DISCORD_CLASSIFICATION, f.discord_classifications))
+                : null != f.manual_classifications
+                  ? u.push(E(i.j.MANUAL_CLASSIFICATION, f.manual_classifications))
+                  : null != f.automated_classifications &&
+                    u.push(E(i.j.AUTOMATED_CLASSIFICATION, f.automated_classifications)),
+            null != f.agency_ratings &&
+                (null != f.agency_ratings.esrb &&
+                    u.push(
+                        ((t = f.agency_ratings.esrb),
+                        (r = a.j.IS_ADULT_ONLY.has(t.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: i.j.AGENCY_CLASSIFICATION_ESRB, status: r }),
+                    ),
+                null != f.agency_ratings.pegi &&
+                    u.push(
+                        ((n = f.agency_ratings.pegi),
+                        (l = o.C.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: i.j.AGENCY_CLASSIFICATION_PEGI, status: l }),
+                    )),
+            (function (e) {
+                let t = null;
+                for (let n of e) {
+                    if (null == t) {
+                        t = n;
+                        continue;
+                    }
+                    d.U(n.status, t.status) > 0 && (t = n);
+                }
+                return t ?? _;
+            })(u)
+        );
+    })(e).status;
 }
-function p(e, t) {
-    return l.Lt(t, o.H.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
-        ? { source: e, status: i.Y.ADULT }
-        : { source: e, status: l.br(t, o.M.RESTRICTED_TO_ADULT) ? i.Y.ADULT : i.Y.EVERYONE };
-}
-function h(e) {
-    let t = s.j.IS_ADULT_ONLY.has(e.rating) ? i.Y.ADULT : i.Y.EVERYONE;
-    return { source: r.j.AGENCY_CLASSIFICATION_ESRB, status: t };
-}
-function m(e) {
-    let t = a.C.IS_ADULT_ONLY.has(e.rating) ? i.Y.ADULT : i.Y.EVERYONE;
-    return { source: r.j.AGENCY_CLASSIFICATION_PEGI, status: t };
-}
-function E(e) {
-    let t = null;
-    for (let n of e) {
-        if (null == t) {
-            t = n;
-            continue;
-        }
-        u.U(n.status, t.status) > 0 && (t = n);
-    }
-    return t ?? d;
+function E(e, t) {
+    return u.Lt(t, l.H.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
+        ? { source: e, status: s.Y.ADULT }
+        : { source: e, status: u.br(t, l.M.RESTRICTED_TO_ADULT) ? s.Y.ADULT : s.Y.EVERYONE };
 }

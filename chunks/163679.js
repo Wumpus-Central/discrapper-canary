@@ -1,158 +1,162 @@
-n.d(t, { A: () => C });
-var a = n(627968),
-    i = n(64700),
-    s = n(397927),
-    l = n(964486),
-    r = n(847599),
-    o = n(767379),
-    d = n(240248),
-    c = n(39537),
-    u = n(278466),
-    m = n(805866),
-    h = n(627575),
-    x = n(870341),
-    p = n(686267),
-    g = n(231723),
-    f = n(818348),
-    _ = n(646284),
+n.d(t, { A: () => I });
+var i = n(627968),
+    s = n(64700),
+    l = n(289873),
+    a = n(331322),
+    r = n(534514),
+    o = n(834730),
+    d = n(821609),
+    c = n(964486),
+    u = n(847599),
+    p = n(767379),
+    h = n(240248),
+    m = n(39537),
+    _ = n(278466),
+    A = n(805866),
+    f = n(627575),
+    g = n(870341),
+    x = n(686267),
+    E = n(231723),
+    C = n(818348),
+    T = n(837451),
     v = n(985018),
-    b = n(474716);
-let j = n(843020);
-function A(e) {
-    let { task: t, handleSubmit: n, disabled: s } = e,
-        [l, r] = i.useState(t),
-        o = i.useMemo(() => ({ task: l, setTask: r }), [l, r]);
+    S = n(561452);
+let b = n(843020);
+function j(e) {
+    let { task: t, handleSubmit: n, disabled: l } = e,
+        [a, r] = s.useState(t),
+        o = s.useMemo(() => ({ task: a, setTask: r }), [a, r]);
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             r(t);
         }, [t]),
-        (0, a.jsxs)(u.h.Provider, {
+        (0, i.jsxs)(_.h.Provider, {
             value: o,
-            children: [(0, a.jsx)(p.A, {}), (0, a.jsx)(x.A, { onSubmit: n, disabled: s })],
+            children: [(0, i.jsx)(x.A, {}), (0, i.jsx)(g.A, { onSubmit: n, disabled: l })],
         })
     );
 }
-let C = function (e) {
+let I = function (e) {
     let { transitionState: t, onClose: n } = e,
-        [u, x] = i.useState(null),
-        [p, C] = i.useState(!0),
-        [y, T] = i.useState(null),
-        [S, E] = i.useState(!1),
-        N = i.useCallback(async () => {
-            C(!0), T(null);
+        [_, g] = s.useState(null),
+        [x, I] = s.useState(!0),
+        [R, N] = s.useState(null),
+        [y, O] = s.useState(!1),
+        M = s.useCallback(async () => {
+            I(!0), N(null);
             try {
-                let e = await (0, c.$R)();
+                let e = await (0, m.$R)();
                 if (null == e) return void n();
-                !(0, d.uJ)(e.ui_component?.component.type) && m.Vn.has(e.ui_component.component.type)
-                    ? x(e)
-                    : x({
+                !(0, h.uJ)(e.ui_component?.component.type) && A.Vn.has(e.ui_component.component.type)
+                    ? g(e)
+                    : g({
                           task_id: e.task_id,
-                          task_type: m.wP.REFRESH_APP,
+                          task_type: A.wP.REFRESH_APP,
                           assignment_id: e.assignment_id,
-                          ui_component: { component: { type: m.Qq.REFRESH_APP, data: {} } },
+                          ui_component: { component: { type: A.Qq.REFRESH_APP, data: {} } },
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                T(v.intl.string(_.default["/f++3g"]));
+                N(v.intl.string(T.default["/f++3g"]));
             } finally {
-                C(!1);
+                I(!1);
             }
         }, [n]),
-        I = i.useCallback(
+        U = s.useCallback(
             async (e) => {
-                if (null !== u) {
-                    E(!0);
+                if (null !== _) {
+                    O(!0);
                     try {
-                        let t = { task_id: u.task_id, flow_id: u.flow_context.flow_id, data: e };
-                        await (0, c.Rt)(t), N();
+                        let t = { task_id: _.task_id, flow_id: _.flow_context.flow_id, data: e };
+                        await (0, m.Rt)(t), M();
                     } catch (e) {
-                        T(v.intl.string(_.default["+QRSxc"]));
+                        N(v.intl.string(T.default["+QRSxc"]));
                     } finally {
-                        E(!1);
+                        O(!1);
                     }
                 }
             },
-            [u, N],
+            [_, M],
         );
-    (0, l.Ay)(() => {
-        N();
+    (0, c.Ay)(() => {
+        M();
     });
-    let k = i.useMemo(() => u?.task_type === m.wP.AGE_VERIFICATION, [u]);
-    return (0, a.jsxs)("div", {
-        className: b.Tp,
+    let k = s.useMemo(() => _?.task_type === A.wP.AGE_VERIFICATION, [_]);
+    return (0, i.jsxs)("div", {
+        className: S.Tp,
         children: [
-            (0, a.jsx)("img", { className: b.xX, src: j, alt: "" }),
+            (0, i.jsx)("img", { className: S.xX, src: b, alt: "" }),
             k
-                ? (0, a.jsx)(o.default, {
-                      transitionState: t ?? g.ip.ENTERED,
-                      entryPoint: r.q1.SAFETY_FLOWS,
-                      onClose: f.tE,
+                ? (0, i.jsx)(p.default, {
+                      transitionState: t ?? E.ip.ENTERED,
+                      entryPoint: u.q1.SAFETY_FLOWS,
+                      onClose: C.tE,
                       onComplete: async () => {
-                          await I({ type: m.Ij.Empty });
+                          await U({ type: A.Ij.Empty });
                       },
                       dismissable: !1,
                   })
-                : (0, a.jsx)("div", {
-                      className: b.nA,
-                      children: p
-                          ? (0, a.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE })
-                          : (0, a.jsx)("div", {
-                                className: b.kL,
-                                children: (0, a.jsxs)(s.BJc, {
+                : (0, i.jsx)("div", {
+                      className: S.nA,
+                      children: x
+                          ? (0, i.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE })
+                          : (0, i.jsx)("div", {
+                                className: S.kL,
+                                children: (0, i.jsxs)(a.B, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: b.rf,
+                                    className: S.rf,
                                     children: [
-                                        null !== y &&
-                                            (0, a.jsxs)(s.BJc, {
+                                        null !== R &&
+                                            (0, i.jsxs)(a.B, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: b.Nj,
+                                                className: S.Nj,
                                                 padding: 16,
                                                 children: [
-                                                    (0, a.jsxs)(s.BJc, {
+                                                    (0, i.jsxs)(a.B, {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, a.jsx)(s.Heading, {
+                                                            (0, i.jsx)(r.D, {
                                                                 variant: "heading-xl/semibold",
                                                                 children: v.intl.string(v.t.c6kn6F),
                                                             }),
-                                                            (0, a.jsx)(s.Text, {
+                                                            (0, i.jsx)(o.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
                                                                 children: v.intl.string(v.t.ZUEGFn),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, a.jsxs)(s.BJc, {
+                                                    (0, i.jsxs)(a.B, {
                                                         direction: "horizontal",
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, a.jsx)(s.Button, {
+                                                            (0, i.jsx)(d.$, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
                                                                 text: v.intl.string(v.t["2jxGer"]),
                                                                 onClick: () => {
-                                                                    (0, h.k)("safety_flows_modal");
+                                                                    (0, f.k)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, a.jsx)(s.Button, {
+                                                            (0, i.jsx)(d.$, {
                                                                 fullWidth: !0,
                                                                 text: v.intl.string(v.t["7NqTJn"]),
                                                                 onClick: () => {
-                                                                    N();
+                                                                    M();
                                                                 },
                                                             }),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                        null === y &&
-                                            null != u &&
-                                            (0, a.jsx)(A, { task: u, handleSubmit: I, disabled: S }),
+                                        null === R &&
+                                            null != _ &&
+                                            (0, i.jsx)(j, { task: _, handleSubmit: U, disabled: y }),
                                     ],
                                 }),
                             }),

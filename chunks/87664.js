@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => s });
 var r = n(311907),
-    i = n(616356),
-    a = n(994500),
-    s = n(652215);
-function o(e) {
-    let t = (0, r.bG)([a.A], () => (null != e ? a.A.getRelationshipType(e) : s.eA$.NONE)),
-        n = (0, r.bG)([i.A], () => (null == e ? null : i.A.getAnyDiscoverableStreamForUser(e)), [e]);
-    return t === s.eA$.BLOCKED ? null : n;
+    l = n(616356),
+    i = n(994500),
+    a = n(652215);
+function s(e) {
+    let t = (0, r.bG)([i.A], () => (null != e ? i.A.getRelationshipType(e) : a.eA$.NONE)),
+        n = (0, r.bG)([l.A], () => (null == e ? null : l.A.getAnyDiscoverableStreamForUser(e)), [e]);
+    return t === a.eA$.BLOCKED ? null : n;
 }

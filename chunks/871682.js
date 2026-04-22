@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { F: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(615300),
-    l = n(397927),
-    u = n(796032);
-let c = { friction: 7, tension: 60 };
-class d extends i.Component {
-    static contextType = l.CZY;
-    animation = new o.A.Value(0);
-    componentWillAppear(e) {
-        this.animateTo(1).start(e);
+t.d(e, { F: () => c });
+var a = t(627968),
+    n = t(64700),
+    r = t(503698),
+    l = t.n(r),
+    i = t(615300),
+    s = t(844222),
+    o = t(225677);
+let d = { friction: 7, tension: 60 };
+class c extends n.Component {
+    static contextType = s.C;
+    animation = new i.A.Value(0);
+    componentWillAppear(A) {
+        this.animateTo(1).start(A);
     }
-    componentWillEnter(e) {
-        this.animateTo(1).start(e);
+    componentWillEnter(A) {
+        this.animateTo(1).start(A);
     }
-    componentWillLeave(e) {
-        let { reducedMotion: t } = this.context;
-        t.enabled ? this.animateTo(0).start(e) : o.A.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e);
+    componentWillLeave(A) {
+        let { reducedMotion: e } = this.context;
+        e.enabled ? this.animateTo(0).start(A) : i.A.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(A);
     }
-    animateTo(e) {
-        return o.A.spring(this.animation, { ...c, toValue: e });
+    animateTo(A) {
+        return i.A.spring(this.animation, { ...d, toValue: A });
     }
     getAnimatedStyle() {
-        let { reducedMotion: e } = this.context;
-        return o.A.accelerate({
+        let { reducedMotion: A } = this.context;
+        return i.A.accelerate({
             opacity: this.animation,
-            transform: e.enabled
+            transform: A.enabled
                 ? void 0
                 : [{ translateY: this.animation.interpolate({ inputRange: [0, 1], outputRange: ["150%", "0%"] }) }],
         });
     }
     render() {
-        let { className: e, children: t } = this.props;
-        return (0, r.jsx)(o.A.div, { className: s()(e, u.a), style: this.getAnimatedStyle(), children: t });
+        let { className: A, children: e } = this.props;
+        return (0, a.jsx)(i.A.div, { className: l()(A, o.a), style: this.getAnimatedStyle(), children: e });
     }
 }

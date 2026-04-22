@@ -1,16 +1,18 @@
 e.exports = function (e) {
     let t = { className: "keyword", begin: "\\$(f[asn]|t|vp[rtd]|children)" },
-        n = { className: "literal", begin: "false|true|PI|undef" },
-        r = { className: "number", begin: "\\b\\d+(\\.\\d+)?(e-?\\d+)?", relevance: 0 },
-        i = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        s = { className: "meta", keywords: { keyword: "include use" }, begin: "include|use <", end: ">" },
-        a = { begin: "[*!#%]", relevance: 0 },
-        o = {
+        a = { className: "number", begin: "\\b\\d+(\\.\\d+)?(e-?\\d+)?", relevance: 0 },
+        n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        r = {
             className: "function",
             beginKeywords: "module function",
             end: /=|\{/,
             contains: [
-                { className: "params", begin: "\\(", end: "\\)", contains: ["self", r, i, t, n] },
+                {
+                    className: "params",
+                    begin: "\\(",
+                    end: "\\)",
+                    contains: ["self", a, n, t, { className: "literal", begin: "false|true|PI|undef" }],
+                },
                 e.UNDERSCORE_TITLE_MODE,
             ],
         };
@@ -23,6 +25,15 @@ e.exports = function (e) {
             built_in:
                 "circle square polygon text sphere cube cylinder polyhedron translate rotate scale resize mirror multmatrix color offset hull minkowski union difference intersection abs sign sin cos tan acos asin atan atan2 floor round ceil ln log pow sqrt exp rands min max concat lookup str chr search version version_num norm cross parent_module echo import import_dxf dxf_linear_extrude linear_extrude rotate_extrude surface projection render children dxf_cross dxf_dim let assign",
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, r, s, i, t, a, o],
+        contains: [
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            a,
+            { className: "meta", keywords: { keyword: "include use" }, begin: "include|use <", end: ">" },
+            n,
+            t,
+            { begin: "[*!#%]", relevance: 0 },
+            r,
+        ],
     };
 };

@@ -1,46 +1,43 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(284009),
-    i = n.n(r),
-    a = n(451909),
-    s = n(963307),
+n.d(t, { A: () => d });
+var a = n(284009),
+    r = n.n(a),
+    l = n(451909),
+    i = n(963307),
     o = n(576705),
-    l = n(652215);
-let u = new RegExp(/@(:?everyone|here)/),
-    c = 30;
-function d(e, t) {
+    s = n(652215);
+let c = new RegExp(/@(:?everyone|here)/);
+function u(e, t) {
     let n = 0;
     return t.isThread()
         ? (t.memberCount ?? 0)
-        : (s.Ay.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-              ("@everyone" === e || t.id !== l.clD.OFFLINE) && (n += t.count);
+        : (i.Ay.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
+              ("@everyone" === e || t.id !== s.clD.OFFLINE) && (n += t.count);
           }),
           n);
 }
-function _(e) {
-    if ("string" == typeof e.content) {
-        if ("inlineCode" === e.type || "codeBlock" === e.type) return null;
-        let t = e.content?.match(u);
-        if (null != t) {
-            let [e] = t;
-            return e;
-        }
-    } else if (Array.isArray(e.content))
-        for (let t of e.content) {
-            let e = _(t);
-            if (null != e) return e;
-        }
-    return null;
-}
-let f = {
+let d = {
     shouldShowEveryoneGuard: function (e, t) {
         let n = t.getGuildId();
-        return i()(n, "isGuildChannel with null guildId"), d(e, t) > c && o.A.can(l.xBc.MENTION_EVERYONE, t);
+        return r()(n, "isGuildChannel with null guildId"), u(e, t) > 30 && o.A.can(s.xBc.MENTION_EVERYONE, t);
     },
-    everyoneMemberCount: d,
+    everyoneMemberCount: u,
     extractEveryoneRole: function (e, t) {
-        for (let n of a.Ay.parsePreprocessor(t, e)) {
-            let e = _(n);
+        for (let n of l.Ay.parsePreprocessor(t, e)) {
+            let e = (function e(t) {
+                if ("string" == typeof t.content) {
+                    if ("inlineCode" === t.type || "codeBlock" === t.type) return null;
+                    let e = t.content?.match(c);
+                    if (null != e) {
+                        let [t] = e;
+                        return t;
+                    }
+                } else if (Array.isArray(t.content))
+                    for (let n of t.content) {
+                        let t = e(n);
+                        if (null != t) return t;
+                    }
+                return null;
+            })(n);
             if (null != e) return e;
         }
         return null;

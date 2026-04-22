@@ -17,9 +17,9 @@ function r() {
 function i(e, t, n) {
     for (let r = 0; r < 28; r += 7) {
         let i = e >>> r,
-            a = i >>> 7 != 0 || 0 != t,
-            s = (a ? 128 | i : i) & 255;
-        if ((n.push(s), !a)) return;
+            s = i >>> 7 != 0 || 0 != t,
+            a = (s ? 128 | i : i) & 255;
+        if ((n.push(a), !s)) return;
     }
     let r = ((e >>> 28) & 15) | ((7 & t) << 4),
         i = t >> 3 != 0;
@@ -27,46 +27,41 @@ function i(e, t, n) {
         for (let e = 3; e < 31; e += 7) {
             let r = t >>> e,
                 i = r >>> 7 != 0,
-                a = (i ? 128 | r : r) & 255;
-            if ((n.push(a), !i)) return;
+                s = (i ? 128 | r : r) & 255;
+            if ((n.push(s), !i)) return;
         }
         n.push((t >>> 31) & 1);
     }
 }
-n.d(t, { Gn: () => u, Jg: () => s, cV: () => i, f7: () => l, ls: () => r, oJ: () => o });
-let a = 0x100000000;
 function s(e) {
     let t = "-" == e[0];
     t && (e = e.slice(1));
-    let n = 1e6,
-        r = 0,
-        i = 0;
-    function s(t, s) {
-        let o = Number(e.slice(t, s));
-        (i *= n), (r = r * n + o) >= a && ((i += (r / a) | 0), (r %= a));
+    let n = 0,
+        r = 0;
+    function i(t, i) {
+        let s = Number(e.slice(t, i));
+        (r *= 1e6), (n = 1e6 * n + s) >= 0x100000000 && ((r += (n / 0x100000000) | 0), (n %= 0x100000000));
     }
-    return s(-24, -18), s(-18, -12), s(-12, -6), s(-6), [t, r, i];
+    return i(-24, -18), i(-18, -12), i(-12, -6), i(-6), [t, n, r];
 }
-function o(e, t) {
-    if (t <= 2097151) return "" + (a * t + (e >>> 0));
-    let n = 0xffffff & e,
-        r = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
-        i = (t >> 16) & 65535,
-        s = n + 6777216 * r + 6710656 * i,
-        o = r + 8147497 * i,
-        l = 2 * i,
-        u = 1e7;
-    function c(e, t) {
+function a(e, t) {
+    if (t <= 2097151) return "" + (0x100000000 * t + (e >>> 0));
+    let n = (((e >>> 24) | (t << 8)) >>> 0) & 0xffffff,
+        r = (t >> 16) & 65535,
+        i = (0xffffff & e) + 6777216 * n + 6710656 * r,
+        s = n + 8147497 * r,
+        a = 2 * r;
+    function o(e, t) {
         let n = e ? String(e) : "";
         return t ? "0000000".slice(n.length) + n : n;
     }
     return (
-        s >= 1e7 && ((o += Math.floor(s / u)), (s %= u)),
-        o >= u && ((l += Math.floor(o / u)), (o %= u)),
-        c(l, 0) + c(o, l) + c(s, 1)
+        i >= 1e7 && ((s += Math.floor(i / 1e7)), (i %= 1e7)),
+        s >= 1e7 && ((a += Math.floor(s / 1e7)), (s %= 1e7)),
+        o(a, 0) + o(s, a) + o(i, 1)
     );
 }
-function l(e, t) {
+function o(e, t) {
     if (e >= 0) {
         for (; e > 127; ) t.push((127 & e) | 128), (e >>>= 7);
         t.push(e);
@@ -75,7 +70,7 @@ function l(e, t) {
         t.push(1);
     }
 }
-function u() {
+function l() {
     let e = this.buf[this.pos++],
         t = 127 & e;
     if (
@@ -90,3 +85,4 @@ function u() {
     if ((128 & e) != 0) throw Error("invalid varint");
     return this.assertBounds(), t >>> 0;
 }
+n.d(t, { Gn: () => l, Jg: () => s, cV: () => i, f7: () => o, ls: () => r, oJ: () => a });

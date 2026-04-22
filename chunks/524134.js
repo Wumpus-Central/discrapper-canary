@@ -1,48 +1,48 @@
-n.d(t, { A: () => T });
-var a = n(627968),
+n.d(t, { A: () => b });
+var i = n(627968),
     s = n(64700),
-    i = n(110259),
-    l = n(311907),
+    l = n(110259),
+    a = n(311907),
     r = n(562465),
-    o = n(397927),
+    o = n(192308),
     d = n(830215),
     c = n(398590),
     u = n(631670),
-    m = n(475743),
+    p = n(475743),
     h = n(775121),
-    x = n(139286),
-    p = n(80556),
-    g = n(557722),
-    _ = n(544028),
-    f = n(870570),
-    v = n(446868),
-    b = n(683589),
-    j = n(87404),
-    A = n(652215),
-    C = n(53516),
+    m = n(139286),
+    _ = n(80556),
+    A = n(557722),
+    f = n(544028),
+    g = n(870570),
+    x = n(446868),
+    E = n(683589),
+    C = n(87404),
+    T = n(652215),
+    v = n(53516),
     S = n(985018);
-function T() {
-    let { action: e, theme: t } = (0, l.cf)([f.A, _.A], () => ({ action: f.A.getAction(), theme: _.A.theme })),
-        T = v.A.getVerificationTypes(e),
-        [y, N] = s.useState(0),
-        E = (0, m.A)(T);
-    (0, x.A)(
+function b() {
+    let { action: e, theme: t } = (0, a.cf)([g.A, f.A], () => ({ action: g.A.getAction(), theme: f.A.theme })),
+        b = x.A.getVerificationTypes(e),
+        [j, I] = s.useState(0),
+        R = (0, p.A)(b);
+    (0, m.A)(
         {
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.USER_ACTION_REQUIRED,
-            properties: { verification_type: T[0], verification_types: T },
+            type: l.ImpressionTypes.MODAL,
+            name: l.ImpressionNames.USER_ACTION_REQUIRED,
+            properties: { verification_type: b[0], verification_types: b },
         },
         {},
-        [T.toString()],
+        [b.toString()],
     );
-    let I = () => {
+    let N = () => {
         (0, u.Cw)(),
-            (0, o.mMO)(
+            (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e("95988").then(n.bind(n, 946815));
-                    return (t) => (0, a.jsx)(e, { ...t });
+                    return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: j.H1, Layer: p.Ay },
+                { modalKey: C.H1, Layer: _.Ay },
             );
     };
     return (
@@ -56,54 +56,56 @@ function T() {
             [],
         ),
         s.useEffect(() => {
-            E?.[0] === A.Fz7.PHONE &&
-                T?.[0] === A.Fz7.EMAIL &&
-                (0, o.mMO)(
+            R?.[0] === T.Fz7.PHONE &&
+                b?.[0] === T.Fz7.EMAIL &&
+                (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await n.e("10919").then(n.bind(n, 556506));
                         return (t) =>
-                            (0, a.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...t,
                                 title: S.intl.string(S.t.KLnLIP),
                                 body: S.intl.string(S.t.XGbCq3),
                                 confirmText: S.intl.string(S.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: j.Pr, Layer: p.Ay, onCloseCallback: I },
+                    { modalKey: C.Pr, Layer: _.Ay, onCloseCallback: N },
                 );
-        }, [T, E]),
-        (0, a.jsx)(b.A, {
-            types: T,
-            captchaKey: y,
+        }, [b, R]),
+        (0, i.jsx)(E.A, {
+            types: b,
+            captchaKey: j,
             onCaptchaVerify: (e) => {
                 r.Bo.post({
-                    url: A.Rsh.CAPTCHA,
+                    url: T.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(c.jH, () => {
-                    N((e) => e + 1);
+                    I((e) => e + 1);
                 });
             },
             theme: t,
             onClick: (e) => {
-                e === A.Fz7.EMAIL_OR_PHONE || e === A.Fz7.EMAIL || e === A.Fz7.REVERIFY_EMAIL
-                    ? I()
-                    : (0, o.mMO)(
+                e === T.Fz7.EMAIL_OR_PHONE || e === T.Fz7.EMAIL || e === T.Fz7.REVERIFY_EMAIL
+                    ? N()
+                    : (0, o.openModalLazy)(
                           async () => {
-                              let { default: e } = await Promise.resolve().then(n.bind(n, 615715));
+                              let { default: e } = await Promise.all([n.e("84704"), n.e("16398")]).then(
+                                  n.bind(n, 615715),
+                              );
                               return (t) =>
-                                  (0, a.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: _.OH, reason: A.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: C.V, Layer: p.Ay },
+                          { modalKey: v.V, Layer: _.Ay },
                       );
             },
             onLogout: () => {
-                (0, o.mMO)(
+                (0, o.openModalLazy)(
                     async () => {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
                         return (t) =>
-                            (0, a.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 title: S.intl.string(S.t["2jxGer"]),
                                 subtitle: S.intl.string(S.t.SUnWBB),
                                 confirmText: S.intl.string(S.t["2jxGer"]),
@@ -112,7 +114,7 @@ function T() {
                                 ...t,
                             });
                     },
-                    { Layer: p.Ay },
+                    { Layer: _.Ay },
                 );
             },
         })

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_b08af5",
     E6: "unfocusedMessage_b08af5",

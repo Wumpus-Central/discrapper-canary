@@ -1,19 +1,15 @@
-"use strict";
-n.d(t, { Ay: () => u, _C: () => l });
-var r = n(574381),
-    i = n(809733),
-    s = n(833349),
-    a = n(652215);
-function o() {
-    return (0, r.un)() ? a.yTV.IOS : (0, i.I)() ? a.yTV.META_QUEST : (0, r.m0)() ? a.yTV.ANDROID : a.yTV.DESKTOP;
+i.d(e, { Ay: () => o, _C: () => s });
+var l = i(574381),
+    a = i(809733),
+    n = i(833349),
+    r = i(652215);
+function s(t) {
+    return null != t && !!(0, n.A)(t, r.jUm.JOIN) && t.type === r.$pd.PLAYING;
 }
-function l(e) {
-    return null != e && !!(0, s.A)(e, a.jUm.JOIN) && e.type === a.$pd.PLAYING;
-}
-function u(e) {
-    if (!l(e)) return !1;
-    let t = o();
-    if ((e?.platform != null ? e.platform : a.yTV.DESKTOP) === t) return !0;
-    let n = e?.supported_platforms;
-    return null != n && 0 !== n.length && n.includes(t);
+function o(t) {
+    if (!s(t)) return !1;
+    let e = (0, l.un)() ? r.yTV.IOS : (0, a.I)() ? r.yTV.META_QUEST : (0, l.m0)() ? r.yTV.ANDROID : r.yTV.DESKTOP;
+    if ((t?.platform != null ? t.platform : r.yTV.DESKTOP) === e) return !0;
+    let i = t?.supported_platforms;
+    return null != i && 0 !== i.length && i.includes(e);
 }

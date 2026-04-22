@@ -1,37 +1,37 @@
-n.d(t, { A: () => m });
-var i = n(627968),
-    s = n(158954),
-    l = n(272053),
-    r = n(176524),
-    a = n(688897),
-    o = n(791498),
-    d = n(590089),
-    c = n(876813),
-    u = n(869376);
-function m(e) {
-    let { node: t } = e,
-        { destinationKey: n, useTrailingDecoration: m, useTitle: g, useSubtitle: _ } = t,
-        x = m?.(),
-        h = _?.(),
-        { parentPanelNode: A, parentSidebarItemNode: p } = (0, a.x)(n),
-        T = g?.(),
-        f = A?.useTitle?.(),
-        S = T ?? f,
-        E = (0, o.q)(t);
-    if (null == A || null == S) return null;
-    let b = null != p ? p.icon : void 0;
-    return (0, i.jsx)(d.U, {
+t.d(n, { A: () => x });
+var l = t(627968),
+    r = t(881636),
+    i = t(272053),
+    s = t(176524),
+    a = t(688897),
+    o = t(791498),
+    c = t(590089),
+    d = t(876813),
+    u = t(869376);
+function x(e) {
+    let { node: n } = e,
+        { destinationKey: t, useTrailingDecoration: x, useTitle: j, useSubtitle: h } = n,
+        m = x?.(),
+        f = h?.(),
+        { parentPanelNode: p, parentSidebarItemNode: y } = (0, a.x)(t),
+        g = j?.(),
+        v = p?.useTitle?.(),
+        A = g ?? v,
+        N = (0, o.q)(n);
+    if (null == p || null == A) return null;
+    let b = null != y ? y.icon : void 0;
+    return (0, l.jsx)(c.U, {
         role: "link",
-        "aria-label": f,
-        title: S,
-        description: h,
-        leadingElement: null != b && (0, i.jsx)(r.A, { Icon: b }),
-        trailingElement: (0, i.jsxs)("div", {
+        "aria-label": v,
+        title: A,
+        description: f,
+        leadingElement: null != b && (0, l.jsx)(s.A, { Icon: b }),
+        trailingElement: (0, l.jsxs)("div", {
             className: u.M,
-            children: [null != x && (0, i.jsx)(c.Q, { decoration: x }), (0, i.jsx)(s.uhT, {})],
+            children: [null != m && (0, l.jsx)(d.Q, { decoration: m }), (0, l.jsx)(r.u, {})],
         }),
         onClick: () => {
-            l.A.navigate(n, { animateSidebarScroll: !1 }), E();
+            i.A.navigate(t, { animateSidebarScroll: !1 }), N();
         },
     });
 }

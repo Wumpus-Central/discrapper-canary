@@ -1,202 +1,198 @@
 "use strict";
 n.d(t, {
-    A6: () => E,
-    B3: () => L,
-    BQ: () => U,
-    CI: () => T,
-    Fw: () => C,
-    GD: () => I,
-    J6: () => D,
-    K3: () => P,
-    Ko: () => h,
-    Li: () => s.L,
-    Ls: () => w,
-    Pc: () => k,
-    TY: () => c.T,
-    Tz: () => _,
-    WQ: () => V,
-    ZV: () => p,
-    aA: () => m,
-    aJ: () => R,
-    eA: () => N,
-    ej: () => y,
-    fO: () => g,
-    fP: () => S,
-    gB: () => O,
-    hK: () => b,
-    kL: () => x,
-    mg: () => v,
-    pc: () => H,
-    rE: () => d,
-    tZ: () => f,
-    zO: () => M,
+    A6: () => N,
+    B3: () => G,
+    BQ: () => W,
+    CI: () => C,
+    Fw: () => M,
+    GD: () => v,
+    J6: () => x,
+    K3: () => B,
+    Ko: () => S,
+    Li: () => _.L,
+    Ls: () => V,
+    Pc: () => Y,
+    TY: () => m.T,
+    Tz: () => A,
+    WQ: () => j,
+    ZV: () => T,
+    aA: () => y,
+    aJ: () => P,
+    eA: () => w,
+    ej: () => D,
+    fO: () => O,
+    fP: () => b,
+    gB: () => U,
+    hK: () => k,
+    kL: () => H,
+    mg: () => L,
+    pc: () => $,
+    rE: () => g,
+    tZ: () => I,
+    zO: () => F,
 });
-var r = n(735438),
-    i = n(412703),
-    s = n(902173),
-    a = n(257280),
-    o = n(562465),
-    l = n(927813),
-    u = n(341915),
-    c = n(557567),
-    d = (function (e) {
-        return (
-            (e.ACTIVITY_PANEL = "quests_bar_activity_panel"),
-            (e.QUESTS_MANAGER = "quests_manager"),
-            (e.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
-            (e.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
-            (e.USER_SETTINGS_SEARCH_GIFT_INVENTORY = "user_settings_search_gift_inventory"),
-            (e.USE_QUESTS = "use_quests"),
-            (e.STREAM_SOURCE_SELECT = "stream_source_select"),
-            (e.MEMBERS_LIST = "members_list"),
-            (e.QUESTS_BAR = "quests_bar"),
-            (e.QUESTS_BAR_MOBILE = "quests_bar_mobile"),
-            (e.REWARD_CODE_MODAL = "reward_code_modal"),
-            (e.INGAME_REWARD_MODAL = "ingame_reward_modal"),
-            (e.COLLECTIBLE_REWARD_MODAL = "collectible_reward_modal"),
-            (e.ORBS_REWARD_MODAL = "orbs_reward_modal"),
-            (e.QUESTS_MINOR_REWARD_CAPPING_CONFIG = "QUESTS_MINOR_REWARD_CAPPING_CONFIG"),
-            (e.QUESTS_CARD = "quests_card"),
-            (e.QUESTS_STORE = "quests_store"),
-            (e.QUEST_CHANNEL_CALL_HEADER = "quests_channel_call_header"),
-            (e.QUEST_HOME_DESKTOP = "quest_home_desktop"),
-            (e.QUEST_HOME_MOBILE = "quest_home_mobile"),
-            (e.QUEST_PROGRESS_BAR = "quest_progress_bar"),
-            (e.EMBED_MOBILE = "embed_mobile"),
-            (e.EMBED_DESKTOP = "embed_desktop"),
-            (e.QUEST_CONTEXT_MENU = "context_menu"),
-            (e.CODED_LINK = "coded_link"),
-            (e.QUEST_DISCLOSURE_MODAL = "quest_disclosure_modal"),
-            (e.DISCOVERY_SIDEBAR = "discovery_sidebar"),
-            (e.DISCOVERY_COMPASS = "discovery_compass"),
-            (e.BADGE = "badge"),
-            (e.COLLECTIBLES_SHOP_HEADER_BAR = "collectibles_shop_header_bar"),
-            (e.ORBS_ANNOUNCEMENT_MODAL = "orbs_announcement_modal"),
-            (e.CONFLICT_CHECKS = "conflict_checks"),
-            (e.VIDEO_MODAL = "video_modal"),
-            (e.VIDEO_MODAL_MOBILE = "video_modal_mobile"),
-            (e.GAME_WIDGETS_POPOVER = "game_widgets_popover"),
-            (e.PRIVATE_CHANNELS_LIST = "private_channels_list"),
-            (e.INTERNAL_TOOLING = "internal_tooling"),
-            (e.QUEST_HOME_MOVED_CALLOUT = "quest_home_moved_callout"),
-            (e.IN_APP_NAVIGATION = "in_app_navigation"),
-            (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
-            (e.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
-            (e.QUEST_INSTRUCTIONS = "quest_instructions"),
-            (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
-            (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
-            (e.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
-            (e.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
-            (e.NITRO_HOME_MARKETING = "nitro_home_marketing"),
-            (e.NITRO_HOME_TAB = "nitro_home_tab"),
-            e
-        );
-    })({});
-let _ = new Set([s.L.NITRO_CONTROL_CTA, s.L.NITRO_2_POINT_0_CTA]),
-    f = l.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
-    p = { tension: 900, friction: 45, clamp: !0 },
-    h = { tension: 360, friction: 30, clamp: !0 },
-    m = 6,
-    E = 2;
-var g = (function (e) {
-    return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
-})({});
-let A = (0, o.TP)(),
-    I =
-        -1 !== A.indexOf("localhost") || -1 !== A.indexOf("127.0.0.1")
-            ? `${A}/_cdn_storage/`
+var r,
+    i,
+    s,
+    a,
+    o,
+    l,
+    u,
+    d = n(735438),
+    c = n(412703),
+    _ = n(902173),
+    f = n(257280),
+    E = n(562465),
+    h = n(927813),
+    p = n(341915),
+    m = n(557567),
+    g =
+        (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
+        (r.QUESTS_MANAGER = "quests_manager"),
+        (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
+        (r.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
+        (r.USER_SETTINGS_SEARCH_GIFT_INVENTORY = "user_settings_search_gift_inventory"),
+        (r.USE_QUESTS = "use_quests"),
+        (r.STREAM_SOURCE_SELECT = "stream_source_select"),
+        (r.MEMBERS_LIST = "members_list"),
+        (r.QUESTS_BAR = "quests_bar"),
+        (r.QUESTS_BAR_MOBILE = "quests_bar_mobile"),
+        (r.REWARD_CODE_MODAL = "reward_code_modal"),
+        (r.INGAME_REWARD_MODAL = "ingame_reward_modal"),
+        (r.COLLECTIBLE_REWARD_MODAL = "collectible_reward_modal"),
+        (r.ORBS_REWARD_MODAL = "orbs_reward_modal"),
+        (r.QUESTS_MINOR_REWARD_CAPPING_CONFIG = "QUESTS_MINOR_REWARD_CAPPING_CONFIG"),
+        (r.QUESTS_CARD = "quests_card"),
+        (r.QUESTS_STORE = "quests_store"),
+        (r.QUEST_CHANNEL_CALL_HEADER = "quests_channel_call_header"),
+        (r.QUEST_HOME_DESKTOP = "quest_home_desktop"),
+        (r.QUEST_HOME_MOBILE = "quest_home_mobile"),
+        (r.QUEST_PROGRESS_BAR = "quest_progress_bar"),
+        (r.EMBED_MOBILE = "embed_mobile"),
+        (r.EMBED_DESKTOP = "embed_desktop"),
+        (r.QUEST_CONTEXT_MENU = "context_menu"),
+        (r.CODED_LINK = "coded_link"),
+        (r.QUEST_DISCLOSURE_MODAL = "quest_disclosure_modal"),
+        (r.DISCOVERY_SIDEBAR = "discovery_sidebar"),
+        (r.DISCOVERY_COMPASS = "discovery_compass"),
+        (r.BADGE = "badge"),
+        (r.COLLECTIBLES_SHOP_HEADER_BAR = "collectibles_shop_header_bar"),
+        (r.ORBS_ANNOUNCEMENT_MODAL = "orbs_announcement_modal"),
+        (r.CONFLICT_CHECKS = "conflict_checks"),
+        (r.VIDEO_MODAL = "video_modal"),
+        (r.VIDEO_MODAL_MOBILE = "video_modal_mobile"),
+        (r.GAME_WIDGETS_POPOVER = "game_widgets_popover"),
+        (r.PRIVATE_CHANNELS_LIST = "private_channels_list"),
+        (r.INTERNAL_TOOLING = "internal_tooling"),
+        (r.QUEST_HOME_MOVED_CALLOUT = "quest_home_moved_callout"),
+        (r.IN_APP_NAVIGATION = "in_app_navigation"),
+        (r.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
+        (r.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
+        (r.QUEST_INSTRUCTIONS = "quest_instructions"),
+        (r.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
+        (r.QUEST_PRIMARY_CTA = "quest_primary_cta"),
+        (r.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
+        (r.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
+        (r.NITRO_HOME_MARKETING = "nitro_home_marketing"),
+        (r.NITRO_HOME_TAB = "nitro_home_tab"),
+        r);
+let A = new Set([_.L.NITRO_CONTROL_CTA, _.L.NITRO_2_POINT_0_CTA]),
+    I = h.A.Millis.MINUTE * f.K.ConsecutiveHeartbeatPeriodMinutes,
+    T = { tension: 900, friction: 45, clamp: !0 },
+    S = { tension: 360, friction: 30, clamp: !0 },
+    y = 6,
+    N = 2;
+var O = (((i = {}).CONSOLE = "CONSOLE"), (i.DESKTOP = "DESKTOP"), i);
+let R = (0, E.TP)(),
+    v =
+        -1 !== R.indexOf("localhost") || -1 !== R.indexOf("127.0.0.1")
+            ? `${R}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    T = I + "quests/";
-var S = (function (e) {
-    return (
-        (e.COLLAPSED = "collapsed"),
-        (e.EXPANDED = "expanded"),
-        (e.CLOSED = "closed"),
-        (e.SOFT_DISMISSED = "soft-dismissed"),
-        (e.RESET_TO_PREVIOUS = "reset-to-previous"),
-        e
-    );
-})({});
-let y = "545364944258990091",
-    v = "{reward_code}";
-var N = (function (e) {
-    return (
-        (e.EXCLUDED_QUEST = "excluded_quest"),
-        (e.UNKNOWN_QUEST = "unknown_quest"),
-        (e.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
-        e
-    );
-})({});
-let C = "1333839522189938740",
-    R = "1410358070831480904",
-    O = "1420556874629251124",
-    b = "1402418703554842694",
-    D = new Set([u.yW.DESKTOP_ACCOUNT_PANEL_AREA, u.yW.MOBILE_HOME_DOCK_AREA, u.yW.QUEST_HOME_BANNER_DESKTOP]),
-    L = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ACTIVITY,
+    C = v + "quests/";
+var b =
+    (((s = {}).COLLAPSED = "collapsed"),
+    (s.EXPANDED = "expanded"),
+    (s.CLOSED = "closed"),
+    (s.SOFT_DISMISSED = "soft-dismissed"),
+    (s.RESET_TO_PREVIOUS = "reset-to-previous"),
+    s);
+let D = "545364944258990091",
+    L = "{reward_code}";
+var w =
+    (((a = {}).EXCLUDED_QUEST = "excluded_quest"),
+    (a.UNKNOWN_QUEST = "unknown_quest"),
+    (a.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+    a);
+let M = "1333839522189938740",
+    P = "1410358070831480904",
+    U = "1420556874629251124",
+    k = "1402418703554842694",
+    x = new Set([p.yW.DESKTOP_ACCOUNT_PANEL_AREA, p.yW.MOBILE_HOME_DOCK_AREA, p.yW.QUEST_HOME_BANNER_DESKTOP]),
+    G = new Set([
+        c.n.STREAM_ON_DESKTOP,
+        c.n.PLAY_ON_DESKTOP,
+        c.n.PLAY_ON_XBOX,
+        c.n.PLAY_ON_PLAYSTATION,
+        c.n.PLAY_ACTIVITY,
     ]),
-    w = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ACTIVITY,
+    V = new Set([
+        c.n.STREAM_ON_DESKTOP,
+        c.n.PLAY_ON_DESKTOP,
+        c.n.PLAY_ON_XBOX,
+        c.n.PLAY_ON_PLAYSTATION,
+        c.n.PLAY_ACTIVITY,
     ]),
-    M = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ACTIVITY,
+    F = new Set([
+        c.n.STREAM_ON_DESKTOP,
+        c.n.PLAY_ON_DESKTOP,
+        c.n.PLAY_ON_XBOX,
+        c.n.PLAY_ON_PLAYSTATION,
+        c.n.PLAY_ACTIVITY,
     ]),
-    P = { is_targeted: !1 };
-var x = (function (e) {
-        return (
-            (e.SUGGESTED = "suggested"),
-            (e.MOST_RECENT = "most_recent"),
-            (e.EXPIRING_SOON = "expiring_soon"),
-            (e.RECENTLY_ENROLLED = "recently_enrolled"),
-            e
-        );
-    })({}),
-    k = (function (e) {
-        return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
-    })({}),
-    U = (function (e) {
-        return (
-            (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
-            (e.COLLECTIBLE = "reward_collectible"),
-            (e.IN_GAME = "reward_in_game"),
-            e
-        );
-    })({});
-let G = [
-        { group: "task", filter: "task_play" },
-        { group: "task", filter: "task_video" },
-        { group: "reward", filter: "reward_virtual_currency" },
-        { group: "reward", filter: "reward_collectible" },
-        { group: "reward", filter: "reward_in_game" },
-    ],
-    F = [
-        { group: "reward", filter: "reward_virtual_currency" },
-        { group: "reward", filter: "reward_collectible" },
-        { group: "reward", filter: "reward_in_game" },
-    ];
-function V(e) {
-    return Object.values(k).includes(e)
+    B = { is_targeted: !1 };
+var H =
+        (((o = {}).SUGGESTED = "suggested"),
+        (o.MOST_RECENT = "most_recent"),
+        (o.EXPIRING_SOON = "expiring_soon"),
+        (o.RECENTLY_ENROLLED = "recently_enrolled"),
+        o),
+    Y = (((l = {}).VIDEO = "task_video"), (l.PLAY = "task_play"), l),
+    W =
+        (((u = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
+        (u.COLLECTIBLE = "reward_collectible"),
+        (u.IN_GAME = "reward_in_game"),
+        u);
+function j(e) {
+    return Object.values(Y).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(U).includes(e)
+        : Object.values(W).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let B = ["reward", "task"],
-    H = Object.entries((0, r.groupBy)(G, "group")).sort((e, t) => {
-        let n = B.indexOf(e[0]),
-            r = B.indexOf(t[0]);
+let K = ["reward", "task"],
+    $ = Object.entries(
+        (0, d.groupBy)(
+            [
+                { group: "task", filter: "task_play" },
+                { group: "task", filter: "task_video" },
+                { group: "reward", filter: "reward_virtual_currency" },
+                { group: "reward", filter: "reward_collectible" },
+                { group: "reward", filter: "reward_in_game" },
+            ],
+            "group",
+        ),
+    ).sort((e, t) => {
+        let n = K.indexOf(e[0]),
+            r = K.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });
-Object.entries((0, r.groupBy)(F, "group"));
+Object.entries(
+    (0, d.groupBy)(
+        [
+            { group: "reward", filter: "reward_virtual_currency" },
+            { group: "reward", filter: "reward_collectible" },
+            { group: "reward", filter: "reward_in_game" },
+        ],
+        "group",
+    ),
+);

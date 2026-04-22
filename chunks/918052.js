@@ -1,22 +1,23 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153);
-function a() {
+function s() {
     return { usageByApplicationId: {}, shelfOrder: [] };
 }
-let s = a();
-function o() {
-    s = a();
-}
-class l extends r.Ay.PersistedStore {
+let a = s();
+class o extends r.Ay.PersistedStore {
     static displayName = "ActivityShelfStore";
     static persistKey = "ActivityShelfStore";
     initialize(e) {
-        s = { ...a(), ...(e ?? {}) };
+        a = { ...s(), ...(e ?? {}) };
     }
     getState() {
-        return s;
+        return a;
     }
 }
-let u = new l(i.h, { LOGOUT: o });
+let l = new o(i.h, {
+    LOGOUT: function () {
+        a = s();
+    },
+});

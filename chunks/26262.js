@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { D: () => u });
-var r = n(64700),
+n.d(t, { D: () => c });
+var l = n(64700),
     i = n(311907),
     a = n(253932),
     s = n(10716),
-    o = n(795816),
-    l = n(170148);
-function u() {
-    let e = (0, l.z)(),
+    r = n(795816),
+    o = n(170148);
+function c() {
+    let e = (0, o.z)(),
         t = a.Q_.getSetting(),
         n = (0, i.bG)([s.A], () => s.A.getFetchState(), []);
     return (
-        r.useEffect(() => {
-            e && t && n === s.$.INITIALIZED && (0, o.SE)();
+        l.useEffect(() => {
+            e && t && n === s.$.INITIALIZED && (0, r.SE)();
         }, [e, n, t]),
         null
     );

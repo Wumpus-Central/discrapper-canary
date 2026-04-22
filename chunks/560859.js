@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => T });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(397927),
-    l = n(688810),
-    u = n(532622),
-    c = n(271683),
-    d = n(882840),
-    _ = n(46054),
-    f = n(345640),
-    p = n(954571),
-    h = n(939496),
-    m = n(531648),
-    E = n(652215),
-    g = n(996988),
-    A = n(985018),
-    I = n(237770);
-function T(e) {
-    let { voiceChannel: t, onAction: n, onClose: s } = e,
-        { themeType: T } = (0, h.E)(),
-        { analyticsLocations: S } = (0, l.Ay)(),
-        y = (0, f.b)(t),
-        v = (0, u.Ay)(t, !0),
-        N = (0, d.l)(t),
-        C = i.useMemo(
-            () => (null == N || "" === N ? null : _.A.parseVoiceChannelStatus(N, !0, { channelId: t.id })),
-            [N, t.id],
+i.d(t, { A: () => v });
+var l = i(627968),
+    n = i(64700),
+    s = i(503698),
+    a = i.n(s),
+    d = i(939249),
+    r = i(22231),
+    o = i(688810),
+    c = i(532622),
+    u = i(271683),
+    A = i(882840),
+    h = i(46054),
+    g = i(345640),
+    x = i(954571),
+    m = i(939496),
+    C = i(531648),
+    _ = i(652215),
+    p = i(996988),
+    N = i(985018),
+    f = i(237770);
+function v(e) {
+    let { voiceChannel: t, onAction: i, onClose: s } = e,
+        { themeType: v } = (0, m.E)(),
+        { analyticsLocations: j } = (0, o.Ay)(),
+        E = (0, g.b)(t),
+        S = (0, c.Ay)(t, !0),
+        O = (0, A.l)(t),
+        I = n.useMemo(
+            () => (null == O || "" === O ? null : h.A.parseVoiceChannelStatus(O, !0, { channelId: t.id })),
+            [O, t.id],
         );
-    i.useEffect(() => {
-        null != C &&
-            p.default.track(E.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
+    return (n.useEffect(() => {
+        null != I &&
+            x.default.track(_.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
-                location_stack: S,
+                location_stack: j,
             });
-    }, [C, t.id, t.guild_id, S]);
-    let R = (e) => {
-        e.stopPropagation(),
-            n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
-            T === g.d.POPOUT && s?.(),
-            (0, c.A)({ channel: t, sourceAnalyticsLocations: S });
-    };
-    return v && y
-        ? (0, r.jsxs)(o.DUT, {
-              className: I.vk,
-              onClick: R,
+    }, [I, t.id, t.guild_id, j]),
+    S && E)
+        ? (0, l.jsxs)(d.D, {
+              className: f.vk,
+              onClick: (e) => {
+                  e.stopPropagation(),
+                      i({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
+                      v === p.d.POPOUT && s?.(),
+                      (0, u.A)({ channel: t, sourceAnalyticsLocations: j });
+              },
               children: [
-                  (0, r.jsx)(m.A, {
-                      text: C ?? A.intl.string(A.t.Mgpxiw),
+                  (0, l.jsx)(C.A, {
+                      text: I ?? N.intl.string(N.t.Mgpxiw),
                       variant: "text-xs/normal",
                       color: "text-subtle",
-                      className: I.Qq,
+                      className: f.Qq,
                   }),
-                  (0, r.jsx)(o.R2l, {
+                  (0, l.jsx)(r.R, {
                       color: "currentColor",
                       size: "xxs",
-                      className: a()(I.rD, null != C ? I.R : void 0),
-                      "aria-label": A.intl.string(A.t.bt75uw),
+                      className: a()(f.rD, null != I ? f.R : void 0),
+                      "aria-label": N.intl.string(N.t.bt75uw),
                   }),
               ],
           })
-        : null != C
-          ? (0, r.jsx)(m.A, { text: C, variant: "text-xs/normal", color: "text-subtle", className: I.Qq })
+        : null != I
+          ? (0, l.jsx)(C.A, { text: I, variant: "text-xs/normal", color: "text-subtle", className: f.Qq })
           : null;
 }

@@ -1,10 +1,9 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => a });
 var r = n(526218),
     i = n(139675),
-    a = n(257269);
-let s = 512;
-class o {
+    s = n(257269);
+class a {
     type;
     applicationId;
     linkId;
@@ -26,9 +25,9 @@ class o {
     }
     getAssetURL() {
         return this.type === r.G.MANAGED
-            ? (0, i.uD)(this.applicationId, this.assetId, s)
+            ? (0, i.uD)(this.applicationId, this.assetId, 512)
             : this.type === r.G.QUICK
-              ? (0, a.VP)(this.assetPath)
+              ? (0, s.VP)(this.assetPath)
               : void 0;
     }
 }

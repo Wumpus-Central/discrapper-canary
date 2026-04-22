@@ -3,8 +3,8 @@ n.d(t, { A: () => o });
 var r = n(627968);
 n(64700);
 var i = n(791332),
-    a = n.n(i),
-    s = n(397927);
+    s = n.n(i),
+    a = n(349288);
 function o(e) {
     return (
         (e.paragraph = {
@@ -22,8 +22,8 @@ function o(e) {
                     t && t.onClick ? ((i.onClick = t.onClick), (i.onContextMenu = t.onContextMenu)) : (i.onClick = t);
                 }
                 return (
-                    null == i.onClick && (i.href = a().sanitizeUrl(e.target)),
-                    (0, r.jsx)(s.MzZ, { title: e.title, ...i, children: t(e.content, n) }, n.key)
+                    null == i.onClick && (i.href = s().sanitizeUrl(e.target)),
+                    (0, r.jsx)(a.Anchor, { title: e.title, ...i, children: t(e.content, n) }, n.key)
                 );
             },
         }),

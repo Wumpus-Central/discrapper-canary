@@ -4,7 +4,7 @@ var r = n(835245);
 function i(e) {
     return { channelId: e, sessionId: (0, r.A)() };
 }
-class a {
+let s = new (class {
     session;
     getForumChannelSessionId(e) {
         return (
@@ -13,5 +13,4 @@ class a {
             this.session.sessionId
         );
     }
-}
-let s = new a();
+})();

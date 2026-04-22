@@ -2,7 +2,7 @@ e.d(n, { A: () => c, b: () => S });
 var i = e(627968);
 e(64700);
 var r = e(311907),
-    s = e(397927),
+    s = e(477782),
     l = e(832712),
     a = e(543465),
     o = e(477427),
@@ -45,31 +45,31 @@ function S(t) {
         }, [n, t.parent_id]),
         c = (0, r.bG)([a.Ay], () => a.Ay.getNewForumThreadsCreated(t)),
         _ = (0, r.bG)([a.Ay], () => a.Ay.getChannelOverrides(n)[e], [n, e]),
-        A = null == _ ? d.orn.NULL : _.message_notifications,
-        N = u(t);
-    return null == N
+        N = null == _ ? d.orn.NULL : _.message_notifications,
+        A = u(t);
+    return null == A
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   t.isForumLikeChannel()
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(s.sLh, {
+                                (0, i.jsx)(s.sL, {
                                     id: "new-forum-threads-created",
                                     label: g.intl.string(g.t.Rkgjph),
                                     checked: c,
                                     action: () => l.A.setForumThreadsCreated(t, !c),
                                 }),
-                                (0, i.jsx)(s.bXX, {}),
+                                (0, i.jsx)(s.bX, {}),
                             ],
                         })
                       : null,
-                  N.map((t) => {
+                  A.map((t) => {
                       let { setting: r, label: a } = t;
                       return (
                           null != a &&
                           (0, i.jsx)(
-                              s.iDA,
+                              s.iD,
                               {
                                   group: "channel-notifications",
                                   id: `${r}`,
@@ -99,7 +99,7 @@ function S(t) {
                                               o.G_.notifications(r),
                                           );
                                   },
-                                  checked: r === A,
+                                  checked: r === N,
                               },
                               r,
                           )
@@ -120,6 +120,6 @@ function c(t) {
                       return n === e;
                   })?.label;
     return null != n
-        ? (0, i.jsx)(s.Drp, { id: "channel-notifications", label: g.intl.string(g.t.h850Ss), subtext: o, children: n })
+        ? (0, i.jsx)(s.Dr, { id: "channel-notifications", label: g.intl.string(g.t.h850Ss), subtext: o, children: n })
         : null;
 }

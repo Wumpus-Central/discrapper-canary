@@ -1,39 +1,40 @@
-n.d(t, { F: () => i });
-var l = n(627968);
+n.d(t, { F: () => o });
+var a = n(627968);
 n(64700);
-var a = n(855522),
-    r = n(158954),
-    s = n(183377);
-function i(e) {
-    let { benefits: t, description: n, imgSrc: i, title: o, tag: d, FallbackIcon: c } = e,
-        u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;
-    return (0, l.jsxs)("div", {
+var l = n(855522),
+    r = n(534514),
+    i = n(834730),
+    s = n(963925);
+function o(e) {
+    let { benefits: t, description: n, imgSrc: o, title: d, tag: c, FallbackIcon: u } = e,
+        m = null != o ? { "--custom-background-url": `url(${o.toString()})` } : void 0;
+    return (0, a.jsxs)("div", {
         className: s.kL,
         children: [
-            (0, l.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: s.wx,
                 children: [
-                    (0, l.jsx)("div", { className: s.y2, style: u }),
-                    (0, l.jsx)("div", {
+                    (0, a.jsx)("div", { className: s.y2, style: m }),
+                    (0, a.jsx)("div", {
                         className: s.F0,
                         children:
-                            null != i
-                                ? (0, l.jsx)("img", { src: i.toString(), alt: "" })
-                                : (0, l.jsx)(c, { size: "custom", color: "var(--text-muted)", height: 96, width: 96 }),
+                            null != o
+                                ? (0, a.jsx)("img", { src: o.toString(), alt: "" })
+                                : (0, a.jsx)(u, { size: "custom", color: "var(--text-muted)", height: 96, width: 96 }),
                     }),
                 ],
             }),
-            (0, l.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: s.Qs,
                 children: [
-                    (0, l.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: s.zH,
                         children: [
-                            null != d && (0, l.jsx)("div", { children: d }),
-                            (0, l.jsx)(r.DZT, { color: "text-strong", variant: "heading-xl/semibold", children: o }),
+                            null != c && (0, a.jsx)("div", { children: c }),
+                            (0, a.jsx)(r.D, { color: "text-strong", variant: "heading-xl/semibold", children: d }),
                             null != n &&
                                 "" !== n &&
-                                (0, l.jsx)(r.EYj, {
+                                (0, a.jsx)(i.E, {
                                     color: "text-default",
                                     variant: "text-md/normal",
                                     className: s.h_,
@@ -42,13 +43,13 @@ function i(e) {
                         ],
                     }),
                     null != t &&
-                        (0, l.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: s.PX,
                             children: [
-                                (0, l.jsx)(r.EYj, {
+                                (0, a.jsx)(i.E, {
                                     color: "text-default",
                                     variant: "eyebrow",
-                                    children: a.A.Messages.STOREFRONT_BENEFITS_TITLE,
+                                    children: l.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                 }),
                                 t,
                             ],

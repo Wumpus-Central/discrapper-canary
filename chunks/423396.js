@@ -1,7 +1,7 @@
-l.d(t, { Gu: () => v });
+l.d(t, { Gu: () => f });
 var a = l(627968),
     n = l(64700),
-    r = l(397927),
+    r = l(834730),
     i = l(166532),
     o = l(623020),
     s = l(927578),
@@ -10,31 +10,31 @@ var a = l(627968),
     u = l(689614),
     p = l(652215),
     m = l(788868),
-    h = l(985018),
-    x = l(895375);
-let b = [
+    b = l(985018),
+    h = l(439519);
+let x = [
         {
             key: i.pn.REVIEW,
             renderStep: (e) => (0, a.jsx)(o._, { ...e }),
-            options: { useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq) },
         },
         {
             key: i.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) =>
                 (0, a.jsx)(d.eO, { ...e, originStep: i.pn.REVIEW, text: "Add Payment Steps Placeholder" }),
-            options: { useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq) },
         },
         {
             key: i.pn.CONFIRM,
             renderStep: (e) => (0, a.jsx)(d.eO, { ...e, originStep: i.pn.REVIEW, text: "Confirm Step Placeholder" }),
-            options: { useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq) },
         },
         {
             key: i.pn.PLAN_SELECT,
             renderStep: (e) =>
                 (0, a.jsx)(d.eO, { ...e, originStep: i.pn.REVIEW, text: "Plan Select Step Placeholder" }),
             options: {
-                useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq),
+                useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq),
                 modalSizeGetter: (e) => {
                     let { isGift: t } = e;
                     return t ? "xl" : "md";
@@ -42,13 +42,13 @@ let b = [
             },
         },
     ],
-    y = () => (0, a.jsx)(r.Text, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" }),
-    f = {
+    y = () => (0, a.jsx)(r.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" }),
+    v = {
         isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
         hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
     g = (0, u.R)(),
-    v = {
+    f = {
         title: "Checkout Review Step",
         stories: [
             {
@@ -62,16 +62,16 @@ let b = [
                             handleClose: o,
                             handleComplete: u,
                             isFetching: m,
-                            sku: h,
+                            sku: b,
                         } = (0, d.ud)({ skuId: t, isGift: l, applicationId: p.FYj }),
-                        f = s.Ay.isPremiumSku(t);
-                    return m || null == h || f
+                        v = s.Ay.isPremiumSku(t);
+                    return m || null == b || v
                         ? (0, a.jsx)(c.k, {})
                         : (0, a.jsxs)("div", {
-                              className: x.Cd,
+                              className: h.Cd,
                               children: [
                                   (0, a.jsx)(d.dL, {
-                                      stepConfigs: b,
+                                      stepConfigs: x,
                                       analyticsLocations: r,
                                       applicationId: p.FYj,
                                       initialPlanId: void 0,
@@ -91,7 +91,7 @@ let b = [
                 },
                 controls: {
                     skuId: { label: "SKU ID", type: "select", options: g.options, defaultValue: g.defaultValue },
-                    ...f,
+                    ...v,
                 },
             },
             {
@@ -103,24 +103,24 @@ let b = [
                             analyticsLocations: i,
                             loadId: o,
                             handleClose: u,
-                            handleComplete: h,
-                            isFetching: f,
+                            handleComplete: b,
+                            isFetching: v,
                             sku: g,
                         } = (0, d.ud)({ skuId: t, isGift: l, applicationId: m.tv }),
-                        v = s.Ay.isPremiumSku(t),
-                        _ = v ? m.zE[t] : void 0,
+                        f = s.Ay.isPremiumSku(t),
+                        _ = f ? m.zE[t] : void 0,
                         [E, C] = n.useState(_),
-                        j = n.useRef(!1);
+                        S = n.useRef(!1);
                     n.useEffect(() => {
-                        j.current || null == _ || ((j.current = !0), C(_));
+                        S.current || null == _ || ((S.current = !0), C(_));
                     }, [_, E]);
-                    let { isLoadedForPremiumSKUs: S, selectedPlan: T } = (0, d.n1)({ subscriptionPlanId: E });
-                    return !f && null != g && S && v && null != T
+                    let { isLoadedForPremiumSKUs: j, selectedPlan: T } = (0, d.n1)({ subscriptionPlanId: E });
+                    return !v && null != g && j && f && null != T
                         ? (0, a.jsxs)("div", {
-                              className: x.Cd,
+                              className: h.Cd,
                               children: [
                                   (0, a.jsx)(d.dL, {
-                                      stepConfigs: b,
+                                      stepConfigs: x,
                                       analyticsLocations: i,
                                       applicationId: m.tv,
                                       initialPlanId: _,
@@ -131,7 +131,7 @@ let b = [
                                       purchaseType: p.VVm.SUBSCRIPTION,
                                       disablePurchases: !0,
                                       onClose: u,
-                                      onComplete: h,
+                                      onComplete: b,
                                       paymentContextOverrides: {},
                                   }),
                                   (0, a.jsx)(y, {}),
@@ -149,7 +149,7 @@ let b = [
                         ],
                         defaultValue: m.pe.TIER_0,
                     },
-                    ...f,
+                    ...v,
                 },
             },
         ],

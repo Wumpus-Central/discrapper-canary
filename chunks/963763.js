@@ -1,20 +1,20 @@
-n.d(t, { A: () => o });
-var a = n(627968),
-    s = n(64700),
-    i = n(158954),
-    l = n(739560),
-    r = n(387265);
+a.d(t, { A: () => o });
+var n = a(627968),
+    l = a(64700),
+    i = a(331322),
+    s = a(739560),
+    r = a(387265);
 function o(e) {
-    let { items: t, onChange: n } = e,
-        [o, d] = (0, l.A)(),
-        c = (0, s.useCallback)(
+    let { items: t, onChange: a } = e,
+        [o, d] = (0, s.A)(),
+        c = (0, l.useCallback)(
             (e) => {
-                d(e), n?.(e);
+                d(e), a?.(e);
             },
-            [d, n],
+            [d, a],
         );
-    return (0, a.jsx)(i.BJc, {
+    return (0, n.jsx)(i.B, {
         gap: 16,
-        children: t.filter((e) => isNaN(Number(e))).map((e) => (0, a.jsx)(r.A, { content: e, onChange: c }, e)),
+        children: t.filter((e) => isNaN(Number(e))).map((e) => (0, n.jsx)(r.A, { content: e, onChange: c }, e)),
     });
 }

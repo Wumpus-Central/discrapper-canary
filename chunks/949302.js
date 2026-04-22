@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, e: () => T }), n(321073);
+n.d(t, { A: () => y, e: () => E }), n(321073);
 var i = n(627968),
     s = n(64700),
     r = n(503698),
@@ -6,75 +6,75 @@ var i = n(627968),
     o = n(311907),
     a = n(554146),
     c = n(827734),
-    d = n(397927),
+    d = n(403581),
     u = n(404374),
     h = n(826673),
     m = n(932001),
     p = n(40185),
-    E = n(552736),
-    S = n(422936),
-    g = n(234419),
-    _ = n(412260),
-    A = n(852218),
-    f = n(603488),
+    x = n(552736),
+    b = n(422936),
+    S = n(234419),
+    f = n(412260),
+    g = n(852218),
+    j = n(603488),
     v = n(282077),
-    x = n(105390),
-    N = n(49999),
-    C = n(788868),
-    b = n(985018),
-    j = n(292127);
-function T() {
+    N = n(105390),
+    A = n(49999),
+    _ = n(788868),
+    T = n(985018),
+    C = n(826799);
+function E() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = (0, g.V)(),
-        r = (0, S.O)(),
+        n = (0, S.V)(),
+        r = (0, b.O)(),
         l = (0, p.cg)(),
-        c = null != (0, E.A)(),
+        c = null != (0, x.A)(),
         d = l || c,
-        u = n?.trial_id === C.Dw,
-        j = [];
-    d && j.push(a.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [T, R] = (0, m.kn)(j, void 0, !0),
-        O = (0, o.bG)([_.A], () => {
-            let e = _.A.getPromotionByTypeAndKey(A.pt.MARKETING_MOMENT, A.zw);
+        u = n?.trial_id === _.Dw,
+        C = [];
+    d && C.push(a.M.BOGO_2025_NITRO_TAB_BADGE);
+    let [E, y] = (0, m.kn)(C, void 0, !0),
+        R = (0, o.bG)([f.A], () => {
+            let e = f.A.getPromotionByTypeAndKey(g.pt.MARKETING_MOMENT, g.zw);
             return null == e || e.endDate < new Date() ? null : e;
         }),
-        [I, y] = (0, m.Cc)(
-            null != O ? a.M.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE : null,
-            O?.id ?? "",
+        [I, O] = (0, m.Cc)(
+            null != R ? a.M.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE : null,
+            R?.id ?? "",
             void 0,
             !0,
         );
     return (
         s.useEffect(() => {
-            !0 === t && (T === a.M.BOGO_2025_NITRO_TAB_BADGE && R(N.i.AUTO_DISMISS), null != I && y(N.i.AUTO_DISMISS));
-        }, [R, y, t, T, I]),
-        null != O
+            !0 === t && (E === a.M.BOGO_2025_NITRO_TAB_BADGE && y(A.i.AUTO_DISMISS), null != I && O(A.i.AUTO_DISMISS));
+        }, [y, O, t, E, I]),
+        null != R
             ? (e = (0, i.jsx)(v.A, {
                   componentId: "nitro-settings-offer-badge",
-                  badgeCopy: b.intl.string(b.t.OS9KPu),
-                  acknowledgedBadgeCopy: b.intl.string(b.t.OS9KPu),
-                  isDismissed: (0, h.u$)(a.M.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE, O.id).isDismissed,
+                  badgeCopy: T.intl.string(T.t.OS9KPu),
+                  acknowledgedBadgeCopy: T.intl.string(T.t.OS9KPu),
+                  isDismissed: (0, h.u$)(a.M.PREMIUM_MARKETING_MOMENT_USER_SETTINGS_OFFER_BADGE, R.id).isDismissed,
               }))
             : d
-              ? (e = (0, i.jsx)(f.A, {}))
+              ? (e = (0, i.jsx)(j.A, {}))
               : null != r
-                ? (e = (0, i.jsx)(x.fY, { isTabSelected: t, userDiscount: r, includesAmountOff: !1 }))
-                : null == n || u || (e = (0, i.jsx)(x.Ag, { isTabSelected: t, trialOffer: n })),
+                ? (e = (0, i.jsx)(N.fY, { isTabSelected: t, userDiscount: r, includesAmountOff: !1 }))
+                : null == n || u || (e = (0, i.jsx)(N.Ag, { isTabSelected: t, trialOffer: n })),
         e
     );
 }
-function R(e) {
+function y(e) {
     let { decoration: t, label: n, isSelected: s } = e,
         r = (0, p.cg)(),
         o =
-            T(s) ??
+            E(s) ??
             t ??
-            (0, i.jsx)(d.tvc, { size: "sm", color: s ? c.A.unsafe_rawColors.WHITE.css : u.k0.PREMIUM_TIER_2 });
+            (0, i.jsx)(d.t, { size: "sm", color: s ? c.A.unsafe_rawColors.WHITE.css : u.k0.PREMIUM_TIER_2 });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)("div", { className: l()(j.gj, { [j.wH]: s && !r }), children: [n, o] }),
-            (0, i.jsx)("div", { className: l()(j.Tp, { [j._I]: !r && s }) }),
+            (0, i.jsxs)("div", { className: l()(C.gj, { [C.wH]: s && !r }), children: [n, o] }),
+            (0, i.jsx)("div", { className: l()(C.Tp, { [C._I]: !r && s }) }),
         ],
     });
 }

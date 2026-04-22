@@ -1,25 +1,23 @@
 "use strict";
-n.d(t, { Gw: () => p, XF: () => d, j7: () => h, ni: () => m, rE: () => _ });
+n.d(t, { Gw: () => _, XF: () => u, j7: () => f, ni: () => E, rE: () => d });
 var r = n(284009),
     i = n.n(r),
     s = n(96337),
     a = n(997101),
     o = n(487052),
     l = n(985018);
-let u = "United States";
-function c(e) {
-    let t = s.A.find((t) => t.name === e);
-    if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
-}
-function d(e) {
+function u(e) {
     let t = s.A.find((t) => t.alpha2 === e);
     if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
 }
-function _() {
-    let e = c(u);
+function d() {
+    let e = (function (e) {
+        let t = s.A.find((t) => t.name === e);
+        if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
+    })("United States");
     return i()(e, "Default country code cannot be missing."), e;
 }
-let f = {
+let c = {
     AF: () => l.intl.string(l.t["Jafq/8"]),
     AX: () => l.intl.string(l.t.fqW5xC),
     AL: () => l.intl.string(l.t["45zGd8"]),
@@ -276,14 +274,14 @@ let f = {
     ZM: () => l.intl.string(l.t.e0NQFU),
     ZW: () => l.intl.string(l.t.kQ6oLs),
 };
-function p(e) {
-    return f[e]();
+function _(e) {
+    return c[e]();
 }
-function h(e) {
-    let t = f[e];
+function f(e) {
+    let t = c[e];
     return null != t ? t() : e;
 }
-function m(e) {
+function E(e) {
     let t;
     if (2 === e.length) {
         let t = a.d[e];

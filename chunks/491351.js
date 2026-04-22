@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n, r) {
         var i = {
@@ -19,7 +17,7 @@
         };
         return t ? i[n][0] : i[n][1];
     }
-    return e.defineLocale("gom-latn", {
+    e.defineLocale("gom-latn", {
         months: "Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr".split("_"),
         monthsShort: "Jan._Feb._Mars_Abr._Mai_Jun_Jul._Ago._Set._Otu._Nov._Dez.".split("_"),
         monthsParseExact: !0,
@@ -85,4 +83,4 @@
             return e < 4 ? "rati" : e < 12 ? "sokalli" : e < 16 ? "donparam" : e < 20 ? "sanje" : "rati";
         },
     });
-});
+})(n(989349));

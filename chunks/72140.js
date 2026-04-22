@@ -1,25 +1,27 @@
-t.d(n, { A: () => d, G: () => u });
-var i = t(627968);
-t(64700);
-var l = t(503698),
-    r = t.n(l),
-    s = t(397927),
-    a = t(985018),
-    o = t(51465),
-    c = t(404648);
+"use strict";
+n.d(t, { A: () => _, G: () => u });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    a = n.n(r),
+    l = n(834730),
+    s = n(403581),
+    o = n(985018),
+    c = n(51465),
+    d = n(404648);
 function u() {
     return (0, i.jsxs)("div", {
-        className: r()(o.dt, o.dE),
+        className: a()(c.dt, c.dE),
         children: [
-            (0, i.jsx)("img", { src: c.A, alt: "reverse trial unlock", className: o.qq }),
-            (0, i.jsx)(s.Text, { variant: "text-sm/medium", className: o.tD, children: a.intl.format(a.t.f5VHKm, {}) }),
+            (0, i.jsx)("img", { src: d.A, alt: "reverse trial unlock", className: c.qq }),
+            (0, i.jsx)(l.E, { variant: "text-sm/medium", className: c.tD, children: o.intl.format(o.t.f5VHKm, {}) }),
         ],
     });
 }
-function d(e) {
-    let { text: n, color: t } = e;
+function _(e) {
+    let { text: t, color: n } = e;
     return (0, i.jsxs)("div", {
-        className: o.dt,
-        children: [(0, i.jsx)(s.tvc, { size: "md", className: o.YW, color: t }), (0, i.jsx)("div", { children: n })],
+        className: c.dt,
+        children: [(0, i.jsx)(s.t, { size: "md", className: c.YW, color: n }), (0, i.jsx)("div", { children: t })],
     });
 }

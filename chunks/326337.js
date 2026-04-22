@@ -1,34 +1,26 @@
 "use strict";
-n.d(t, { I: () => g, h: () => E });
+n.d(t, { I: () => d, h: () => u });
 var r = n(311907),
     i = n(775602),
     s = n(253932),
     a = n(531685),
     o = n(652215);
-let l = 145,
-    u = 400,
-    c = 91,
-    d = 65,
-    _ = 1.05,
-    f = 10;
-function p(e, t, n) {
-    return Math.max(t, Math.min(n, e));
+function l(e, t, n) {
+    var r;
+    return (
+        (r = Math.ceil(1.05 * Math.ceil(e / ((t ? 65 : 91) * (n / o.hH7.FONT_SIZE_DEFAULT))))),
+        Math.max(10, Math.min(o.EMb, r))
+    );
 }
-function h() {
-    return Math.max(a.A.windowSize().height - l, u);
-}
-function m(e, t, n) {
-    return p(Math.ceil(Math.ceil(e / ((t ? d : c) * (n / o.hH7.FONT_SIZE_DEFAULT))) * _), f, o.EMb);
-}
-function E() {
+function u() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let e = h(),
+    let e = Math.max(a.A.windowSize().height - 145, 400),
         t = i.A.fontSize;
-    return m(e, s.hH.getSetting(), t);
+    return l(e, s.hH.getSetting(), t);
 }
-function g(e, t) {
-    return m(
-        (0, r.bG)([a.A], () => Math.max(a.A.windowSize().height - l, u)),
+function d(e, t) {
+    return l(
+        (0, r.bG)([a.A], () => Math.max(a.A.windowSize().height - 145, 400)),
         e,
         t,
     );

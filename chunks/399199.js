@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Vu: "settingsHeader__4b8d8",
     KD: "bannedUser__4b8d8",

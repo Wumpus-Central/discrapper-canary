@@ -1,36 +1,39 @@
-n.d(t, { A: () => I });
-var a = n(627968),
-    i = n(64700),
-    s = n(935399),
-    l = n(311907),
-    r = n(732955),
-    o = n(582754),
-    d = n(397927),
-    c = n(565645),
-    u = n(736653),
-    m = n(7584),
-    h = n(103738),
-    x = n(207803),
-    p = n(84540),
-    g = n(836602),
-    f = n(950191),
-    _ = n(576622),
-    v = n(287809),
-    b = n(993408),
-    j = n(841702),
-    A = n(892118),
-    C = n(744808),
-    y = n(623575),
-    E = n(626768),
-    S = n(464896),
-    T = n(778765);
-function N() {
-    let e = (0, u.Ay)();
-    return (0, a.jsxs)("div", {
-        className: y.z3,
+a.d(t, { A: () => w });
+var n = a(627968),
+    l = a(64700),
+    i = a(935399),
+    s = a(311907),
+    r = a(821609),
+    o = a(462887),
+    d = a(834730),
+    c = a(534514),
+    u = a(289873),
+    m = a(478016),
+    h = a(565645),
+    p = a(736653),
+    x = a(7584),
+    g = a(103738),
+    v = a(207803),
+    b = a(84540),
+    _ = a(836602),
+    f = a(950191),
+    j = a(576622),
+    A = a(287809),
+    y = a(993408),
+    C = a(841702),
+    E = a(892118),
+    S = a(744808),
+    N = a(725287),
+    k = a(626768),
+    I = a(464896),
+    D = a(778765);
+function T() {
+    let e = (0, p.Ay)();
+    return (0, n.jsxs)("div", {
+        className: N.z3,
         children: [
-            (0, a.jsx)("img", { src: (0, o.Mw)(e) ? E : S, alt: "" }),
-            (0, a.jsx)(d.Text, {
+            (0, n.jsx)("img", { src: (0, o.M)(e) ? k : I, alt: "" }),
+            (0, n.jsx)(d.E, {
                 variant: "text-sm/normal",
                 children:
                     "No frames found on your account. You must be granted test profile frame entitlements to use this tool.",
@@ -38,74 +41,74 @@ function N() {
         ],
     });
 }
-function I() {
-    let e = (0, l.bG)([v.default], () => v.default.getCurrentUser()),
+function w() {
+    let e = (0, s.bG)([A.default], () => A.default.getCurrentUser()),
         t = (0, f.Ay)(e?.id);
-    i.useEffect(() => {
-        e?.id != null && (0, _.A)(e.id);
+    l.useEffect(() => {
+        e?.id != null && (0, j.A)(e.id);
     }, [e?.id]);
-    let { purchases: n, isFetchingPurchases: o } = (0, j.Bf)(),
-        u = i.useMemo(() => (0, b.MG)(n, new Map()), [n]),
-        [{ pendingProfileFrame: E }, S] = (0, l.yK)([g.A], () => [g.A.getPendingChanges(), g.A.showNotice()]),
-        I = void 0 === E ? t?.profileFrame : E,
-        O = null != I ? n.get(I.skuId) : void 0,
-        k = (0, A.s)(O?.items[0]) ? O.items[0] : void 0;
+    let { purchases: a, isFetchingPurchases: o } = (0, C.Bf)(),
+        p = l.useMemo(() => (0, y.MG)(a, new Map()), [a]),
+        [{ pendingProfileFrame: k }, I] = (0, s.yK)([_.A], () => [_.A.getPendingChanges(), _.A.showNotice()]),
+        w = void 0 === k ? t?.profileFrame : k,
+        O = null != w ? a.get(w.skuId) : void 0,
+        R = (0, E.s)(O?.items[0]) ? O.items[0] : void 0;
     return (
-        (0, s.l0)(x.RE),
-        (0, a.jsxs)("div", {
-            className: y.kL,
+        (0, i.l0)(v.RE),
+        (0, n.jsxs)("div", {
+            className: N.kL,
             children: [
-                (0, a.jsxs)(d.Heading, {
+                (0, n.jsxs)(c.D, {
                     variant: "heading-xl/bold",
                     children: [
-                        (0, a.jsx)(c.A, {
-                            emojiName: m.Ay.getByName("frame_with_picture")?.surrogates,
-                            className: y.Zg,
+                        (0, n.jsx)(h.A, {
+                            emojiName: x.Ay.getByName("frame_with_picture")?.surrogates,
+                            className: N.Zg,
                         }),
                         "Profile Frames!",
                     ],
                 }),
-                0 === u.length && o && (0, a.jsx)(d.y$y, {}),
-                0 === u.length && !o && (0, a.jsx)(N, {}),
-                u.length > 0 &&
-                    (0, a.jsxs)("div", {
-                        className: y.MK,
+                0 === p.length && o && (0, n.jsx)(u.y, {}),
+                0 === p.length && !o && (0, n.jsx)(T, {}),
+                p.length > 0 &&
+                    (0, n.jsxs)("div", {
+                        className: N.MK,
                         children: [
-                            (0, a.jsx)(d.Text, {
+                            (0, n.jsx)(d.E, {
                                 variant: "text-sm/normal",
                                 children: "Select a frame to preview. Save to apply the frame to your main profile.",
                             }),
-                            (0, a.jsxs)("ul", {
-                                className: y.p_,
+                            (0, n.jsxs)("ul", {
+                                className: N.p_,
                                 children: [
-                                    (0, a.jsx)(
+                                    (0, n.jsx)(
                                         "li",
                                         {
-                                            children: (0, a.jsx)(r.$nd, {
+                                            children: (0, n.jsx)(r.$, {
                                                 text: "None",
                                                 variant: "secondary",
                                                 fullWidth: !0,
-                                                icon: null == I ? d.Uzd : void 0,
-                                                disabled: null == I,
-                                                onClick: () => (0, p.p)({ profileFrame: null }),
+                                                icon: null == w ? m.U : void 0,
+                                                disabled: null == w,
+                                                onClick: () => (0, b.p)({ profileFrame: null }),
                                             }),
                                         },
                                         "none",
                                     ),
-                                    u.map((e) => {
-                                        let t = n.get(e.skuId);
+                                    p.map((e) => {
+                                        let t = a.get(e.skuId);
                                         return null == t
                                             ? null
-                                            : (0, a.jsx)(
+                                            : (0, n.jsx)(
                                                   "li",
                                                   {
-                                                      children: (0, a.jsx)(r.$nd, {
+                                                      children: (0, n.jsx)(r.$, {
                                                           text: t.name,
                                                           variant: "secondary",
                                                           fullWidth: !0,
-                                                          icon: I?.skuId === e.skuId ? d.Uzd : void 0,
-                                                          disabled: I?.skuId === e.skuId,
-                                                          onClick: () => (0, p.p)({ profileFrame: e }),
+                                                          icon: w?.skuId === e.skuId ? m.U : void 0,
+                                                          disabled: w?.skuId === e.skuId,
+                                                          onClick: () => (0, b.p)({ profileFrame: e }),
                                                       }),
                                                   },
                                                   e.skuId,
@@ -113,16 +116,16 @@ function I() {
                                     }),
                                 ],
                             }),
-                            S && (0, a.jsx)(h.A, {}),
-                            (0, a.jsxs)("div", {
-                                className: y.VH,
+                            I && (0, n.jsx)(g.A, {}),
+                            (0, n.jsxs)("div", {
+                                className: N.VH,
                                 children: [
-                                    (0, a.jsx)(d.Text, { variant: "text-sm/normal", children: "Preview:" }),
-                                    (0, a.jsxs)("div", {
-                                        className: y.ME,
+                                    (0, n.jsx)(d.E, { variant: "text-sm/normal", children: "Preview:" }),
+                                    (0, n.jsxs)("div", {
+                                        className: N.ME,
                                         children: [
-                                            (0, a.jsx)("img", { src: T.A, alt: "" }),
-                                            null != k && (0, a.jsx)(C.A, { frame: k }),
+                                            (0, n.jsx)("img", { src: D.A, alt: "" }),
+                                            null != R && (0, n.jsx)(S.A, { frame: R }),
                                         ],
                                     }),
                                 ],

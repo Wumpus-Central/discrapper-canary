@@ -1,114 +1,118 @@
-"use strict";
-n.d(t, { A: () => R });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(735438),
-    l = n.n(o),
-    u = n(311907),
-    c = n(803805),
-    d = n(827734),
-    _ = n(397927),
-    f = n(497685),
-    p = n(25277),
-    h = n(821102),
-    m = n(583613),
-    E = n(996566),
-    g = n(327143),
-    A = n(453212),
-    I = n(247683),
-    T = n(652215),
-    S = n(985018),
-    y = n(311204);
-let v = (e, t) => (0, r.jsx)(A.XW, { columns: e }, t);
-function N(e) {
-    let t = l().sample(l().values(e));
-    return {
-        type: T.dD.FAVORITES,
-        name: S.intl.string(S.t.y3LQCG),
-        icon: _.Gg5,
-        src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
-        format: t?.format ?? c.TL.IMAGE,
+r.d(t, { A: () => T });
+var s = r(627968),
+    l = r(64700),
+    n = r(503698),
+    i = r.n(n),
+    o = r(735438),
+    a = r.n(o),
+    c = r(311907),
+    u = r(803805),
+    d = r(827734),
+    h = r(27232),
+    m = r(555704),
+    f = r(42286),
+    p = r(497685),
+    g = r(25277),
+    E = r(821102),
+    _ = r(583613),
+    R = r(996566),
+    I = r(327143),
+    A = r(453212),
+    C = r(247683),
+    v = r(652215),
+    w = r(985018),
+    S = r(736212);
+let y = (e, t) => (0, s.jsx)(A.XW, { columns: e }, t);
+class x extends l.PureComponent {
+    _masonryRef = l.createRef();
+    state = {
+        favoritesTile: (function (e) {
+            let t = a().sample(a().values(e));
+            return {
+                type: v.dD.FAVORITES,
+                name: w.intl.string(w.t.y3LQCG),
+                icon: h.G,
+                src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
+                format: t?.format ?? u.TL.IMAGE,
+            };
+        })(this.props.favorites),
+        selectedIndex: { column: 0, row: 0 },
+        focusedId: null,
     };
-}
-class C extends i.PureComponent {
-    _masonryRef = i.createRef();
-    state = { favoritesTile: N(this.props.favorites), selectedIndex: { column: 0, row: 0 }, focusedId: null };
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, f.k8)();
+        0 === this.props.trendingCategories.length && (0, p.k8)();
     }
     handleFocus = (e) => {
         let { current: t } = this._masonryRef;
         if (null == t) return;
-        let n = t.getCoordsMap()[e];
-        null != n &&
-            (t.scrollIntoViewRect({ start: n.top - 10, end: n.top + n.height + 10 }), this.setState({ focusedId: e }));
+        let r = t.getCoordsMap()[e];
+        null != r &&
+            (t.scrollIntoViewRect({ start: r.top - 10, end: r.top + r.height + 10 }), this.setState({ focusedId: e }));
     };
     handleSelect = (e) => {
         let { onSelectItem: t } = this.props,
-            n = this.getData().find((t) => t.name === e);
-        null != n && null != t && t(n.type, n.name);
+            r = this.getData().find((t) => t.name === e);
+        null != r && null != t && t(r.type, r.name);
     };
     getItemKey = (e, t) => {
         if (e > 0) return null;
-        let n = this.getData()[t];
-        return null != n ? n.name : null;
+        let r = this.getData()[t];
+        return null != r ? r.name : null;
     };
-    memoizedData = (0, m.L_)(function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return n ? [...t] : [e, ...t];
+    memoizedData = (0, _.L_)(function (e, t) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return r ? [...t] : [e, ...t];
     });
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
     }
     renderCategoryExtras(e) {
-        let { name: t, type: n } = e;
-        return (0, r.jsxs)(i.Fragment, {
+        let { name: t, type: r } = e;
+        return (0, s.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsx)("div", { className: n === T.dD.FAVORITES ? y.H7 : y.FP }),
-                (0, r.jsxs)("div", {
-                    className: y.O1,
+                (0, s.jsx)("div", { className: r === v.dD.FAVORITES ? S.H7 : S.FP }),
+                (0, s.jsxs)("div", {
+                    className: S.O1,
                     children: [
-                        n === T.dD.TRENDING_GIFS ? (0, r.jsx)(_.Uy2, { className: y.Yl, color: "currentColor" }) : null,
-                        (0, r.jsx)("span", { className: y.yb, children: t }),
+                        r === v.dD.TRENDING_GIFS ? (0, s.jsx)(m.U, { className: S.Yl, color: "currentColor" }) : null,
+                        (0, s.jsx)("span", { className: S.yb, children: t }),
                     ],
                 }),
             ],
         });
     }
-    renderItem = (e, t, n, i) => {
+    renderItem = (e, t, r, l) => {
         if (e > 0) return null;
-        let s = this.getData()[t];
-        if (null == s) return;
-        let { onSelectItem: a, imagePool: o, videoPool: l } = this.props,
-            { focusedId: u } = this.state;
-        return (0, r.jsx)(
-            I.uG,
+        let n = this.getData()[t];
+        if (null == n) return;
+        let { onSelectItem: i, imagePool: o, videoPool: a } = this.props,
+            { focusedId: c } = this.state;
+        return (0, s.jsx)(
+            C.uG,
             {
-                format: s.format,
+                format: n.format,
                 color: d.A.unsafe_rawColors.PRIMARY_800.css,
-                src: s.src,
-                item: s,
+                src: n.src,
+                item: n,
                 index: t,
-                coords: n,
-                onClick: () => a(s.type, s.name),
+                coords: r,
+                onClick: () => i(n.type, n.name),
                 renderExtras: this.renderCategoryExtras,
-                focused: s.name === u,
+                focused: n.name === c,
                 imagePool: o,
-                videoPool: l,
+                videoPool: a,
             },
-            i,
+            l,
         );
     };
-    renderContent = (e, t, n) => {
-        let { className: i, trendingCategories: s } = this.props;
-        return 0 === s.length
-            ? (0, r.jsx)(A.oK, { columns: e, width: t, renderColumn: v })
-            : (0, r.jsx)(_.a0_, {
+    renderContent = (e, t, r) => {
+        let { className: l, trendingCategories: n } = this.props;
+        return 0 === n.length
+            ? (0, s.jsx)(A.oK, { columns: e, width: t, renderColumn: y })
+            : (0, s.jsx)(f.f, {
                   ref: this._masonryRef,
                   fade: !0,
-                  className: a()(y.kL, i),
+                  className: i()(S.kL, l),
                   itemGutter: 12,
                   getItemKey: this.getItemKey,
                   columns: e,
@@ -127,18 +131,18 @@ class C extends i.PureComponent {
         return null != e ? e.getCoordsMap() : {};
     };
     render() {
-        return (0, r.jsx)(p.A, {
+        return (0, s.jsx)(g.A, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, r.jsx)(g.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
+            children: (0, s.jsx)(I.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
         });
     }
 }
-function R(e) {
-    let t = (0, u.bG)([h.A], () => h.A.getTrendingCategories()),
-        n = (0, E.rM)(),
-        i = (0, I.d5)();
-    return (0, r.jsx)(C, { ...e, ...i, trendingCategories: t, favorites: n });
+function T(e) {
+    let t = (0, c.bG)([E.A], () => E.A.getTrendingCategories()),
+        r = (0, R.rM)(),
+        l = (0, C.d5)();
+    return (0, s.jsx)(x, { ...e, ...l, trendingCategories: t, favorites: r });
 }

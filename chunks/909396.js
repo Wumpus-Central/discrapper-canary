@@ -1,6 +1,6 @@
 s.d(a, { Op: () => n.Op, hK: () => eZ, oS: () => n.oS });
 var n = s(551499);
-let t = new URL(s(235991), s.b),
+let t = new URL(s(791229), s.b),
     r = new URL(s(358963), s.b),
     o = new URL(s(653443), s.b),
     m = new URL(s(776259), s.b),
@@ -105,7 +105,7 @@ let t = new URL(s(235991), s.b),
         ada: { module: () => s.e("61233").then(s.bind(s, 174728)), wasm: t },
         agda: { module: () => s.e("81365").then(s.bind(s, 248980)), wasm: r },
         asciidoc: { module: () => s.e("24229").then(s.bind(s, 238980)), wasm: o },
-        asm: { module: () => s.e("9314").then(s.bind(s, 977716)), wasm: m },
+        asm: { module: () => s.e("31695").then(s.bind(s, 977716)), wasm: m },
         awk: { module: () => s.e("47465").then(s.bind(s, 487088)), wasm: d },
         bash: { module: () => s.e("83387").then(s.bind(s, 74294)), wasm: l },
         batch: { module: () => s.e("51573").then(s.bind(s, 675892)), wasm: i },

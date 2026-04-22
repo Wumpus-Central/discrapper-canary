@@ -1,6 +1,3 @@
 "use strict";
-var r;
-n.d(t, { z: () => r }),
-    (function (e) {
-        (e.SOURCE = "SOURCE"), (e.TARGET = "TARGET");
-    })(r || (r = {}));
+var r, i;
+n.d(t, { z: () => r }), ((i = r || (r = {})).SOURCE = "SOURCE"), (i.TARGET = "TARGET");

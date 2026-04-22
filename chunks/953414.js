@@ -1,27 +1,30 @@
-n.d(t, { A: () => A }), n(321073);
-var a = n(627968),
-    i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(311907),
-    o = n(397927),
-    d = n(73153),
-    c = n(58736),
-    u = n(231545),
-    m = n(260880),
-    h = n(303054),
-    x = n(231643),
-    p = n(310086),
-    g = n(338919);
+a.d(t, { A: () => E }), a(321073);
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(311907),
+    o = a(573613),
+    d = a(821609),
+    c = a(278416),
+    u = a(892547),
+    m = a(73153),
+    h = a(58736),
+    p = a(231545),
+    x = a(260880),
+    g = a(303054),
+    v = a(231643),
+    b = a(505206),
+    _ = a(220631);
 function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function v(e) {
-    let { store: t, dataGetter: n } = e,
-        [s, l] = i.useState(n(t));
+function j(e) {
+    let { store: t, dataGetter: a } = e,
+        [i, s] = l.useState(a(t));
     return (
-        i.useEffect(() => {
-            let e = () => l(n(t));
+        l.useEffect(() => {
+            let e = () => s(a(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -29,112 +32,112 @@ function v(e) {
                     t.removeChangeListener(e);
                 }
             );
-        }, [t, n]),
-        (0, a.jsx)(o.IpV, { className: g.Dx, children: (0, a.jsx)(u.A, { data: s }) })
+        }, [t, a]),
+        (0, n.jsx)(o.Ip, { className: _.Dx, children: (0, n.jsx)(p.A, { data: i }) })
     );
 }
-function _(e) {
+function A(e) {
     let { store: t } = e,
-        [n, s] = i.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
-        [r, c] = i.useState(null),
-        u = i.useCallback(() => {
-            s(JSON.stringify(t.__getLocalVars(), null, 2)), c(null);
+        [a, i] = l.useState(() => JSON.stringify(t.__getLocalVars(), null, 2)),
+        [r, o] = l.useState(null),
+        c = l.useCallback(() => {
+            i(JSON.stringify(t.__getLocalVars(), null, 2)), o(null);
         }, [t]);
-    i.useEffect(() => (t.addChangeListener(u), () => t.removeChangeListener(u)), [t, u]);
-    let m = i.useCallback(() => {
+    l.useEffect(() => (t.addChangeListener(c), () => t.removeChangeListener(c)), [t, c]);
+    let u = l.useCallback(() => {
             let e;
-            c(null);
+            o(null);
             try {
-                e = JSON.parse(n);
+                e = JSON.parse(a);
             } catch (e) {
-                c(e instanceof SyntaxError ? e.message : "Invalid JSON");
+                o(e instanceof SyntaxError ? e.message : "Invalid JSON");
                 return;
             }
-            let a = t.__getLocalVarsEditConfig?.();
-            if (null == a) return void c("Store does not support editing");
+            let n = t.__getLocalVarsEditConfig?.();
+            if (null == n) return void o("Store does not support editing");
             try {
-                for (let e of a.preDispatches ?? []) d.h.dispatch(e);
-                d.h.dispatch({ ...a.buildPayload(e), type: a.actionType }), u();
+                for (let e of n.preDispatches ?? []) m.h.dispatch(e);
+                m.h.dispatch({ ...n.buildPayload(e), type: n.actionType }), c();
             } catch (e) {
-                c(e instanceof Error ? e.message : String(e));
+                o(e instanceof Error ? e.message : String(e));
             }
-        }, [n, t, u]),
-        h = i.useCallback(() => {
+        }, [a, t, c]),
+        h = l.useCallback(() => {
             let e = t.__getLocalVarsEditConfig?.();
-            if (e?.getPurgeVars == null) return void c("Store does not support purge");
-            c(null);
+            if (e?.getPurgeVars == null) return void o("Store does not support purge");
+            o(null);
             try {
                 let t = e.getPurgeVars();
-                for (let t of e.preDispatches ?? []) d.h.dispatch(t);
-                d.h.dispatch({ ...e.buildPayload(t), type: e.actionType }), u();
+                for (let t of e.preDispatches ?? []) m.h.dispatch(t);
+                m.h.dispatch({ ...e.buildPayload(t), type: e.actionType }), c();
             } catch (e) {
-                c(e instanceof Error ? e.message : String(e));
+                o(e instanceof Error ? e.message : String(e));
             }
-        }, [t, u]);
-    return (0, a.jsxs)("div", {
-        className: l()(g.Dx, g.Ef),
+        }, [t, c]);
+    return (0, n.jsxs)("div", {
+        className: s()(_.Dx, _.Ef),
         children: [
-            (0, a.jsx)("textarea", {
-                className: g.Vz,
-                value: n,
-                onChange: (e) => s(e.target.value),
+            (0, n.jsx)("textarea", {
+                className: _.Vz,
+                value: a,
+                onChange: (e) => i(e.target.value),
                 spellCheck: !1,
                 "aria-label": "Edit local variables as JSON",
             }),
-            null != r && (0, a.jsx)("div", { className: g.Xf, role: "alert", children: r }),
-            (0, a.jsxs)("div", {
-                className: g.KA,
+            null != r && (0, n.jsx)("div", { className: _.Xf, role: "alert", children: r }),
+            (0, n.jsxs)("div", {
+                className: _.KA,
                 children: [
-                    (0, a.jsx)(o.Button, { variant: "primary", size: "sm", text: "Apply", onClick: m }),
-                    (0, a.jsx)(o.Button, { variant: "secondary", size: "sm", text: "Refresh from store", onClick: u }),
+                    (0, n.jsx)(d.$, { variant: "primary", size: "sm", text: "Apply", onClick: u }),
+                    (0, n.jsx)(d.$, { variant: "secondary", size: "sm", text: "Refresh from store", onClick: c }),
                     t.__getLocalVarsEditConfig?.().getPurgeVars != null &&
-                        (0, a.jsx)(o.Button, { variant: "secondary", size: "sm", text: "Purge store", onClick: h }),
+                        (0, n.jsx)(d.$, { variant: "secondary", size: "sm", text: "Purge store", onClick: h }),
                 ],
             }),
         ],
     });
 }
-let b = [
+let y = [
     {
         key: "name",
-        cellClassName: g.__invalid_eventColumn,
+        cellClassName: _.__invalid_eventColumn,
         render(e) {
             let { store: t } = e;
             return t.getName();
         },
     },
 ];
-function j(e) {
-    let { store: t, initialHeight: n } = e,
-        s = i.useMemo(() => {
+function C(e) {
+    let { store: t, initialHeight: a } = e,
+        i = l.useMemo(() => {
             let e;
             return (
                 (e = [
                     {
                         id: "local",
                         name: "Local Variables",
-                        group: x.fu.NONE,
+                        group: v.fu.NONE,
                         render(e) {
                             let { store: t } = e;
                             return null == t.__getLocalVars
-                                ? (0, a.jsxs)("div", {
-                                      className: g.Dx,
+                                ? (0, n.jsxs)("div", {
+                                      className: _.Dx,
                                       children: [
                                           "Store is missing ",
-                                          (0, a.jsx)("code", { children: "__getLocalVars" }),
+                                          (0, n.jsx)("code", { children: "__getLocalVars" }),
                                           " method.",
                                       ],
                                   })
-                                : (0, a.jsx)(v, { store: t, dataGetter: (e) => e.__getLocalVars() });
+                                : (0, n.jsx)(j, { store: t, dataGetter: (e) => e.__getLocalVars() });
                         },
                     },
                     {
                         id: "instance",
                         name: "Store Instance",
-                        group: x.fu.NONE,
+                        group: v.fu.NONE,
                         render(e) {
                             let { store: t } = e;
-                            return (0, a.jsx)(v, { store: t, dataGetter: (e) => e });
+                            return (0, n.jsx)(j, { store: t, dataGetter: (e) => e });
                         },
                     },
                 ]),
@@ -142,74 +145,74 @@ function j(e) {
                     e.push({
                         id: "edit-local",
                         name: "Edit Local Variables",
-                        group: x.fu.NONE,
+                        group: v.fu.NONE,
                         render(e) {
                             let { store: t } = e;
                             return null == t.__getLocalVarsEditConfig
-                                ? (0, a.jsxs)("div", {
-                                      className: g.Dx,
+                                ? (0, n.jsxs)("div", {
+                                      className: _.Dx,
                                       children: [
                                           "Store is missing ",
-                                          (0, a.jsx)("code", { children: "__getLocalVarsEditConfig" }),
+                                          (0, n.jsx)("code", { children: "__getLocalVarsEditConfig" }),
                                           " method.",
                                       ],
                                   })
-                                : (0, a.jsx)(_, { store: t });
+                                : (0, n.jsx)(A, { store: t });
                         },
                     }),
                 e
             );
         }, [t]),
-        { TabBar: r, renderSelectedTab: d } = (0, x.Ay)({ tabs: s }, []);
-    return (0, a.jsxs)(m.A, {
-        className: g.rf,
+        { TabBar: r, renderSelectedTab: o } = (0, v.Ay)({ tabs: i }, []);
+    return (0, n.jsxs)(x.A, {
+        className: _.rf,
         minHeight: 100,
-        initialHeight: n,
+        initialHeight: a,
         children: [
-            (0, a.jsx)(r, {}),
-            (0, a.jsxs)(c.Ay, {
-                className: l()(p.jr, g.nZ),
+            (0, n.jsx)(r, {}),
+            (0, n.jsxs)(h.Ay, {
+                className: s()(b.jr, _.nZ),
                 children: [
-                    (0, a.jsx)(c.Ay.Icon, { icon: o.gqV, tooltip: t.getName() }),
-                    (0, a.jsx)(c.Ay.Title, { children: t.getName() }),
+                    (0, n.jsx)(h.Ay.Icon, { icon: c.g, tooltip: t.getName() }),
+                    (0, n.jsx)(h.Ay.Title, { children: t.getName() }),
                 ],
             }),
-            d({ store: t }),
+            o({ store: t }),
         ],
     });
 }
-function A() {
-    let e = i.useRef(null),
-        [t, n] = i.useState(""),
-        s = r.il.getAll(),
-        d = i
-            .useMemo(() => s.map((e) => ({ key: e._dispatchToken, store: e })).sort(f), [s])
+function E() {
+    let e = l.useRef(null),
+        [t, a] = l.useState(""),
+        i = r.il.getAll(),
+        o = l
+            .useMemo(() => i.map((e) => ({ key: e._dispatchToken, store: e })).sort(f), [i])
             .filter((e) =>
                 (function (e, t) {
-                    let { store: n } = e;
-                    return n.getName().toLowerCase().includes(t.toLowerCase());
+                    let { store: a } = e;
+                    return a.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t),
             ),
-        [c, u] = i.useState(),
-        m = s.find((e) => e._dispatchToken === c);
-    return (0, a.jsxs)("div", {
+        [d, c] = l.useState(),
+        m = i.find((e) => e._dispatchToken === d);
+    return (0, n.jsxs)("div", {
         ref: e,
-        className: l()(p.nd, g.nd),
+        className: s()(b.nd, _.nd),
         children: [
-            (0, a.jsx)("div", {
-                className: g.KE,
-                children: (0, a.jsx)(o.IWV, {
+            (0, n.jsx)("div", {
+                className: _.KE,
+                children: (0, n.jsx)(u.I, {
                     size: "sm",
                     query: t,
-                    onChange: n,
-                    onClear: () => n(""),
+                    onChange: a,
+                    onClear: () => a(""),
                     placeholder: "Search stores",
                     "aria-label": "Search stores",
                 }),
             }),
-            (0, a.jsx)(h.A, { columns: b, data: d, selectedRowKey: c, onClickRow: (e) => u(e.key) }),
+            (0, n.jsx)(g.A, { columns: y, data: o, selectedRowKey: d, onClickRow: (e) => c(e.key) }),
             null != m &&
-                (0, a.jsx)(j, { store: m, initialHeight: null != e.current ? e.current.clientHeight / 2 : 300 }, c),
+                (0, n.jsx)(C, { store: m, initialHeight: null != e.current ? e.current.clientHeight / 2 : 300 }, d),
         ],
     });
 }

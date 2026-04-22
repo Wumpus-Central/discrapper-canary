@@ -1,33 +1,35 @@
-n.d(t, { q: () => p });
+n.d(t, { q: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(989349),
-    r = n.n(l),
-    a = n(158954),
-    o = n(397927),
-    d = n(793574),
-    c = n(688810),
-    u = n(323082),
-    m = n(915089),
-    g = n(250253),
-    _ = n(2242),
-    x = n(985018),
-    h = n(969389);
-let A = (e) => {
-        let { transitionState: t, groupListing: n, listing: l, subscription: A, onClose: p } = e,
-            T = (0, m.GV)(),
-            { analyticsLocations: f } = (0, c.Ay)(d.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+    a = n.n(l),
+    r = n(189213),
+    o = n(331322),
+    d = n(683071),
+    u = n(192308),
+    c = n(793574),
+    g = n(688810),
+    m = n(323082),
+    _ = n(915089),
+    A = n(250253),
+    h = n(2242),
+    p = n(985018),
+    x = n(969389);
+let E = (e) => {
+        let { transitionState: t, groupListing: n, listing: l, subscription: u, onClose: E } = e,
+            T = (0, _.GV)(),
+            { analyticsLocations: S } = (0, g.Ay)(c.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             {
-                cancelSubscription: S,
-                error: E,
-                submitting: b,
+                cancelSubscription: f,
+                error: b,
+                submitting: C,
             } = ((e) => {
                 let [t, n] = s.useState(!1),
                     [i, l] = s.useState(null);
                 return {
                     cancelSubscription: async (t) => {
                         try {
-                            return n(!0), await u.M2(t, e), !0;
+                            return n(!0), await m.M2(t, e), !0;
                         } catch (e) {
                             l(e);
                         } finally {
@@ -37,37 +39,37 @@ let A = (e) => {
                     error: i,
                     submitting: t,
                 };
-            })(f),
-            C = async () => {
-                (await S(A.id)) && p();
+            })(S),
+            v = async () => {
+                (await f(u.id)) && E();
             },
-            v = l.role_benefits.benefits.filter((e) => e.ref_type === _.bN.CHANNEL),
-            N = l.role_benefits.benefits.filter((e) => e.ref_type === _.bN.INTANGIBLE),
-            I = r()(A.currentPeriodEnd).format("MMMM Do, YYYY"),
-            j = x.intl.formatToPlainString(x.t.KsMRP5, {
-                numChannels: v.length,
-                numAdditionalBenefits: N.length,
-                subscriptionEndDate: I,
+            N = l.role_benefits.benefits.filter((e) => e.ref_type === h.bN.CHANNEL),
+            I = l.role_benefits.benefits.filter((e) => e.ref_type === h.bN.INTANGIBLE),
+            y = a()(u.currentPeriodEnd).format("MMMM Do, YYYY"),
+            j = p.intl.formatToPlainString(p.t.KsMRP5, {
+                numChannels: N.length,
+                numAdditionalBenefits: I.length,
+                subscriptionEndDate: y,
             });
-        return (0, i.jsx)(a.Modal, {
+        return (0, i.jsx)(r.Modal, {
             transitionState: t,
             "aria-labelledby": T,
             actions: [
-                { text: x.intl.string(x.t.EP6EPb), variant: "secondary", onClick: p },
-                { variant: "critical-primary", text: x.intl.string(x.t.F6lUDF), onClick: C, loading: b },
+                { text: p.intl.string(p.t.EP6EPb), variant: "secondary", onClick: E },
+                { variant: "critical-primary", text: p.intl.string(p.t.F6lUDF), onClick: v, loading: C },
             ],
-            title: x.intl.string(x.t.O6l5tM),
+            title: p.intl.string(p.t.O6l5tM),
             subtitle: j,
-            onClose: p,
-            children: (0, i.jsxs)(o.BJc, {
+            onClose: E,
+            children: (0, i.jsxs)(o.B, {
                 gap: 8,
                 children: [
-                    null != E ? (0, i.jsx)(o.wx6, { type: "critical", children: E.message }) : null,
-                    (0, i.jsx)(g.x, { listingId: l.id, guildId: n.guild_id, className: h.P }),
+                    null != b ? (0, i.jsx)(d.w, { type: "critical", children: b.message }) : null,
+                    (0, i.jsx)(A.x, { listingId: l.id, guildId: n.guild_id, className: x.P }),
                 ],
             }),
         });
     },
-    p = (e) => {
-        (0, o.qfG)((t) => (0, i.jsx)(A, { ...t, ...e }));
+    T = (e) => {
+        (0, u.openModal)((t) => (0, i.jsx)(E, { ...t, ...e }));
     };

@@ -1,239 +1,242 @@
-n.d(t, { A: () => e_, c: () => em });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(989349),
-    o = n.n(r),
-    d = n(607399),
-    c = n(877624),
-    u = n(311907),
-    m = n(230109),
-    g = n(732955),
-    _ = n(582754),
-    x = n(421380),
-    A = n(397927),
-    h = n(73153),
-    p = n(73825),
-    T = n(736653),
-    f = n(793574),
-    S = n(688810),
-    b = n(323082),
-    E = n(86379),
-    C = n(531260),
-    N = n(160946),
-    v = n(459793),
-    I = n(721668),
-    j = n(976860),
-    y = n(780964),
-    O = n(779733),
-    R = n(858897),
-    L = n(287809),
-    P = n(166403),
-    D = n(224016),
-    G = n(954571),
-    M = n(975571),
-    U = n(927578),
-    k = n(526292),
-    w = n(881489),
-    V = n(810498),
-    B = n(807098),
-    F = n(412260),
-    H = n(103411),
-    z = n(190187),
-    Y = n(263747),
-    X = n(194509),
-    K = n(65470),
-    W = n(465794),
-    Z = n(774774),
-    q = n(559606),
-    Q = n(156601),
-    J = n(244778),
-    $ = n(788868),
-    ee = n(88001),
-    et = n(652215),
-    en = n(985018),
-    ei = n(699357),
-    es = n(396785),
-    el = n(956537);
-let ea = "to_premium_home_button",
-    er = "premium home page",
-    eo = "gifting_button",
-    ed = "payment modal";
-function ec(e) {
-    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: s, theme: l } = e,
-        a = t.hasActiveTrial,
-        r = t.planIdFromItems === $.gD.PREMIUM_YEAR_TIER_2,
-        d = n || a,
-        c = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), "d") : 0,
-        u = $.hd[t.planIdFromItems],
-        m = U.Ay.formatPriceString(U.Ay.getDefaultPrice(u.id), u.interval);
-    return d
-        ? (0, i.jsxs)(i.Fragment, {
+s.d(t, { A: () => eh, c: () => ep });
+var r = s(627968),
+    a = s(64700),
+    i = s(503698),
+    n = s.n(i),
+    l = s(989349),
+    o = s.n(l),
+    c = s(607399),
+    d = s(877624),
+    m = s(311907),
+    u = s(230109),
+    _ = s(825484),
+    x = s(821609),
+    p = s(462887),
+    g = s(862482),
+    h = s(534514),
+    f = s(834730),
+    C = s(289873),
+    b = s(73153),
+    j = s(73825),
+    A = s(736653),
+    N = s(793574),
+    I = s(688810),
+    T = s(323082),
+    v = s(86379),
+    E = s(531260),
+    R = s(160946),
+    M = s(459793),
+    S = s(721668),
+    y = s(976860),
+    P = s(780964),
+    k = s(779733),
+    B = s(858897),
+    w = s(287809),
+    G = s(166403),
+    O = s(224016),
+    D = s(954571),
+    L = s(975571),
+    H = s(927578),
+    U = s(526292),
+    F = s(881489),
+    W = s(810498),
+    z = s(807098),
+    V = s(412260),
+    K = s(103411),
+    Q = s(190187),
+    Z = s(263747),
+    Y = s(194509),
+    J = s(65470),
+    X = s(465794),
+    q = s(774774),
+    $ = s(559606),
+    ee = s(156601),
+    et = s(244778),
+    es = s(788868),
+    er = s(88001),
+    ea = s(652215),
+    ei = s(985018),
+    en = s(613741),
+    el = s(396785),
+    eo = s(956537);
+let ec = "to_premium_home_button",
+    ed = "premium home page",
+    em = "gifting_button",
+    eu = "payment modal";
+function e_(e) {
+    let { premiumSubscription: t, isDiscountApplied: s, activeDiscountInfo: a, theme: i } = e,
+        n = t.hasActiveTrial,
+        l = t.planIdFromItems === es.gD.PREMIUM_YEAR_TIER_2,
+        c = s || n,
+        d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), "d") : 0,
+        m = es.hd[t.planIdFromItems],
+        u = H.Ay.formatPriceString(H.Ay.getDefaultPrice(m.id), m.interval);
+    return c
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (a || !r) &&
-                      (0, i.jsx)(Z.HU, {
-                          text: a ? en.intl.string(en.t.qYKftX) : en.intl.string(en.t.EyjDRE),
-                          className: ei.uS,
-                          colorOptions: (0, _.Mw)(l)
-                              ? Z.at.PREMIUM_TIER_2_WHITE_FILL
-                              : Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                  (n || !l) &&
+                      (0, r.jsx)(q.HU, {
+                          text: n ? ei.intl.string(ei.t.qYKftX) : ei.intl.string(ei.t.EyjDRE),
+                          className: en.uS,
+                          colorOptions: (0, p.M)(i)
+                              ? q.at.PREMIUM_TIER_2_WHITE_FILL
+                              : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
-                  (a || !r) && (0, i.jsx)("div", { className: ei.on }),
-                  (0, i.jsx)(A.Heading, {
+                  (n || !l) && (0, r.jsx)("div", { className: en.on }),
+                  (0, r.jsx)(h.D, {
                       variant: "heading-md/normal",
                       color: "always-white",
-                      className: ei.KB,
-                      children: a
-                          ? en.intl.format(en.t["2CGBri"], { remainingTime: c, price: m })
-                          : r
-                            ? en.intl.format(en.t["+qqh6g"], { percent: s?.percentage ?? $.Cq, regularPrice: m })
-                            : en.intl.formatToPlainString(en.t["3ZiutU"], {
-                                  percent: s?.percentage ?? $._$,
-                                  regularPrice: m,
-                                  numMonths: s?.duration ?? $.OJ,
+                      className: en.KB,
+                      children: n
+                          ? ei.intl.format(ei.t["2CGBri"], { remainingTime: d, price: u })
+                          : l
+                            ? ei.intl.format(ei.t["+qqh6g"], { percent: a?.percentage ?? es.Cq, regularPrice: u })
+                            : ei.intl.formatToPlainString(ei.t["3ZiutU"], {
+                                  percent: a?.percentage ?? es._$,
+                                  regularPrice: u,
+                                  numMonths: a?.duration ?? es.OJ,
                               }),
                   }),
               ],
           })
-        : (0, i.jsx)(Q.A, { variant: void 0, subscriptionTier: $.pe.TIER_2, interval: u.interval });
+        : (0, r.jsx)(ee.A, { variant: void 0, subscriptionTier: es.pe.TIER_2, interval: m.interval });
 }
-function eu() {
-    let e = (0, k.k5)(),
-        t = (0, k.nf)(),
-        n = (0, T.Ay)(),
-        s = (0, u.bG)([P.A], () => P.A.getPremiumTypeSubscription()),
-        l = (0, u.bG)([L.default], () => L.default.getCurrentUser()),
-        r = l?.isPremiumWithPremiumGroup(),
-        o = (0, C.A)(),
-        d = (0, w.ds)(),
-        c = null !== s && null !== s.planIdFromItems;
-    if (!c && !o.isFractionalPremiumActive && !r) return null;
-    let m = o.isFractionalPremiumActive,
-        x = null !== s && s.hasActiveTrial;
-    return (0, i.jsxs)("div", {
-        className: a()(ei.$Y, { [ei.J5]: e || x }),
+function ex() {
+    let e = (0, U.k5)(),
+        t = (0, U.nf)(),
+        s = (0, A.Ay)(),
+        a = (0, m.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
+        i = (0, m.bG)([w.default], () => w.default.getCurrentUser()),
+        l = i?.isPremiumWithPremiumGroup(),
+        o = (0, E.A)(),
+        c = (0, F.ds)(),
+        d = null !== a && null !== a.planIdFromItems;
+    if (!d && !o.isFractionalPremiumActive && !l) return null;
+    let u = o.isFractionalPremiumActive,
+        g = null !== a && a.hasActiveTrial;
+    return (0, r.jsxs)("div", {
+        className: n()(en.$Y, { [en.J5]: e || g }),
         children: [
-            (0, i.jsxs)("div", {
-                className: ei.jp,
+            (0, r.jsxs)("div", {
+                className: en.jp,
                 children: [
-                    r
-                        ? (0, i.jsx)(A.Heading, {
+                    l
+                        ? (0, r.jsx)(h.D, {
                               variant: "display-md",
                               color: "always-white",
-                              className: ei._K,
-                              children: (0, ee.DP)(),
+                              className: en._K,
+                              children: (0, er.DP)(),
                           })
-                        : (0, i.jsx)(D.A, { className: ei.TJ }),
-                    r
-                        ? (0, i.jsx)("div", { style: { marginBottom: "18px" } })
-                        : m && !d
-                          ? (0, i.jsxs)(i.Fragment, {
+                        : (0, r.jsx)(O.A, { className: en.TJ }),
+                    l
+                        ? (0, r.jsx)("div", { style: { marginBottom: "18px" } })
+                        : u && !c
+                          ? (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, i.jsx)(Z.e4, {
-                                        text: en.intl.string(en.t.uXF4c4),
-                                        className: ei.rd,
-                                        colorOptions: Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                                    (0, r.jsx)(q.e4, {
+                                        text: ei.intl.string(ei.t.uXF4c4),
+                                        className: en.rd,
+                                        colorOptions: q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                     }),
-                                    (0, i.jsx)(A.Heading, {
+                                    (0, r.jsx)(h.D, {
                                         variant: "heading-md/normal",
                                         color: "always-white",
-                                        className: ei.sQ,
-                                        children: en.intl.format(en.t.sK7fGl, {
-                                            helpCenterLink: M.A.getArticleURL(et.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                        className: en.sQ,
+                                        children: ei.intl.format(ei.t.sK7fGl, {
+                                            helpCenterLink: L.A.getArticleURL(ea.MVz.FRACTIONAL_PREMIUM_ABOUT),
                                         }),
                                     }),
                                 ],
                             })
-                          : c
-                            ? (0, i.jsx)(ec, {
-                                  premiumSubscription: s,
+                          : d
+                            ? (0, r.jsx)(e_, {
+                                  premiumSubscription: a,
                                   isDiscountApplied: e,
                                   activeDiscountInfo: t,
-                                  theme: n,
+                                  theme: s,
                               })
-                            : d
-                              ? (0, i.jsxs)(i.Fragment, {
+                            : c
+                              ? (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, i.jsx)(Z.HU, {
-                                            text: en.intl.string(en.t.qYKftX),
-                                            className: ei.uS,
-                                            colorOptions: (0, _.Mw)(n)
-                                                ? Z.at.PREMIUM_TIER_2_WHITE_FILL
-                                                : Z.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
+                                        (0, r.jsx)(q.HU, {
+                                            text: ei.intl.string(ei.t.qYKftX),
+                                            className: en.uS,
+                                            colorOptions: (0, p.M)(s)
+                                                ? q.at.PREMIUM_TIER_2_WHITE_FILL
+                                                : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
-                                        (0, i.jsx)(A.Heading, {
+                                        (0, r.jsx)(h.D, {
                                             variant: "heading-md/normal",
                                             color: "always-white",
-                                            className: ei.KB,
-                                            children: en.intl.format(en.t["/SfHwl"], { weeks: 1 }),
+                                            className: en.KB,
+                                            children: ei.intl.format(ei.t["/SfHwl"], { weeks: 1 }),
                                         }),
                                     ],
                                 })
                               : null,
-                    (0, i.jsx)(q.ZP, {
-                        featureSet: l?.isPremiumGroupPrimary()
-                            ? q.Nz.PREMIUM_GROUP_PRIMARY
-                            : l?.isPremiumGroupMember()
-                              ? q.Nz.PREMIUM_GROUP_MEMBER
-                              : m
-                                ? q.Nz.FRACTIONAL_PREMIUM
-                                : q.Nz.DEFAULT,
+                    (0, r.jsx)($.ZP, {
+                        featureSet: i?.isPremiumGroupPrimary()
+                            ? $.Nz.PREMIUM_GROUP_PRIMARY
+                            : i?.isPremiumGroupMember()
+                              ? $.Nz.PREMIUM_GROUP_MEMBER
+                              : u
+                                ? $.Nz.FRACTIONAL_PREMIUM
+                                : $.Nz.DEFAULT,
                     }),
-                    m && !c
-                        ? (0, i.jsxs)(g.e2v, {
+                    u && !d
+                        ? (0, r.jsxs)(_.e, {
                               fullWidth: !0,
                               direction: "vertical",
                               children: [
-                                  (0, i.jsx)(W.A, {
-                                      defaultTextOverride: d
-                                          ? en.intl.string(en.t.YScQSF)
-                                          : en.intl.string(en.t["0b3YRn"]),
+                                  (0, r.jsx)(X.A, {
+                                      defaultTextOverride: c
+                                          ? ei.intl.string(ei.t.YScQSF)
+                                          : ei.intl.string(ei.t["0b3YRn"]),
                                   }),
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, r.jsx)(x.$, {
                                       onClick: () => {
-                                          G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                              cta_type: ea,
-                                              target: er,
+                                          D.default.track(ea.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: ec,
+                                              target: ed,
                                           }),
-                                              (0, O.default)(),
-                                              (0, j.pX)(et.BVt.APPLICATION_STORE);
+                                              (0, k.default)(),
+                                              (0, y.pX)(ea.BVt.APPLICATION_STORE);
                                       },
                                       variant: "overlay-secondary",
                                       fullWidth: !0,
                                       size: "md",
-                                      text: d ? en.intl.string(en.t.VR2iVB) : en.intl.string(en.t.T1aUAX),
+                                      text: c ? ei.intl.string(ei.t.VR2iVB) : ei.intl.string(ei.t.T1aUAX),
                                   }),
                               ],
                           })
-                        : (0, i.jsxs)(g.e2v, {
+                        : (0, r.jsxs)(_.e, {
                               fullWidth: !0,
                               direction: "vertical",
                               children: [
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, r.jsx)(x.$, {
                                       variant: "overlay-primary",
                                       fullWidth: !0,
                                       onClick: () => {
-                                          G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, {
-                                              cta_type: ea,
-                                              target: er,
+                                          D.default.track(ea.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: ec,
+                                              target: ed,
                                           }),
-                                              (0, O.default)(),
-                                              (0, j.pX)(et.BVt.APPLICATION_STORE);
+                                              (0, k.default)(),
+                                              (0, y.pX)(ea.BVt.APPLICATION_STORE);
                                       },
-                                      text: en.intl.string(en.t.VR2iVB),
+                                      text: ei.intl.string(ei.t.VR2iVB),
                                       size: "md",
                                   }),
-                                  (0, i.jsx)(g.$nd, {
+                                  (0, r.jsx)(x.$, {
                                       variant: "overlay-secondary",
                                       onClick: () => {
-                                          G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                          D.default.track(ea.HAw.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: "to_subscriptions_button",
                                               target: "subscriptions settings",
                                           }),
-                                              (0, R.openUserSettings)(y.X.SUBSCRIPTIONS_PANEL);
+                                              (0, B.openUserSettings)(P.X.SUBSCRIPTIONS_PANEL);
                                       },
-                                      text: en.intl.string(en.t["9uDy6C"]),
+                                      text: ei.intl.string(ei.t["9uDy6C"]),
                                       fullWidth: !0,
                                       size: "md",
                                   }),
@@ -241,52 +244,52 @@ function eu() {
                           }),
                 ],
             }),
-            (0, i.jsx)("div", {
-                className: ei.ah,
-                children: (0, i.jsx)("img", { className: ei.ah, alt: "", src: es }),
+            (0, r.jsx)("div", {
+                className: en.ah,
+                children: (0, r.jsx)("img", { className: en.ah, alt: "", src: el }),
             }),
         ],
     });
 }
-function em(e) {
-    let { className: t, config: n } = e,
-        l = (0, B.T)(n.asset),
-        r = (0, B.T)(n.backgroundAsset),
-        o = (0, V.gc)(r),
-        d = s.useMemo(() => {
-            let e = n.gradient;
+function ep(e) {
+    let { className: t, config: s } = e,
+        i = (0, z.T)(s.asset),
+        l = (0, z.T)(s.backgroundAsset),
+        o = (0, W.gc)(l),
+        c = a.useMemo(() => {
+            let e = s.gradient;
             if (null != e && null != e.colors && !(e.colors.length < 2))
-                return (0, V.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
-        }, [n.gradient]),
-        c = (0, V.x)(o, d),
-        u = { color: null != n.textColor && "" !== n.textColor ? n.textColor : "var(--always-white)" };
-    return (0, i.jsxs)("div", {
-        className: a()(ei.WR, t),
-        style: c,
+                return (0, W.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
+        }, [s.gradient]),
+        d = (0, W.x)(o, c),
+        m = { color: null != s.textColor && "" !== s.textColor ? s.textColor : "var(--always-white)" };
+    return (0, r.jsxs)("div", {
+        className: n()(en.WR, t),
+        style: d,
         children: [
-            null != l && (0, i.jsx)("img", { alt: "", className: ei.TB, "aria-hidden": !0, src: l }),
-            (0, i.jsxs)("div", {
-                className: ei.QT,
+            null != i && (0, r.jsx)("img", { alt: "", className: en.TB, "aria-hidden": !0, src: i }),
+            (0, r.jsxs)("div", {
+                className: en.QT,
                 children: [
-                    (0, i.jsx)(A.Heading, {
-                        className: ei.u_,
-                        style: u,
+                    (0, r.jsx)(h.D, {
+                        className: en.u_,
+                        style: m,
                         variant: "heading-lg/extrabold",
-                        children: n.header,
+                        children: s.header,
                     }),
-                    (0, i.jsx)(A.Text, { className: ei.Oi, style: u, variant: "text-xs/medium", children: n.body }),
-                    null != n.additionalTerms &&
-                        (0, i.jsx)(A.Text, {
-                            className: ei.KW,
-                            style: u,
+                    (0, r.jsx)(f.E, { className: en.Oi, style: m, variant: "text-xs/medium", children: s.body }),
+                    null != s.additionalTerms &&
+                        (0, r.jsx)(f.E, {
+                            className: en.KW,
+                            style: m,
                             variant: "text-xxs/normal",
-                            children: n.additionalTerms,
+                            children: s.additionalTerms,
                         }),
-                    (0, i.jsx)(K.A, {
+                    (0, r.jsx)(J.A, {
                         variant: "primary",
                         size: "md",
                         onClick: () => {
-                            G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: eo, target: ed });
+                            D.default.track(ea.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: em, target: eu });
                         },
                     }),
                 ],
@@ -295,29 +298,29 @@ function em(e) {
     });
 }
 function eg() {
-    return (0, i.jsxs)("div", {
-        className: ei.T1,
+    return (0, r.jsxs)("div", {
+        className: en.T1,
         children: [
-            (0, i.jsx)("img", { className: ei.GY, alt: "", src: el }),
-            (0, i.jsxs)("div", {
-                className: ei.b4,
+            (0, r.jsx)("img", { className: en.GY, alt: "", src: eo }),
+            (0, r.jsxs)("div", {
+                className: en.b4,
                 children: [
-                    (0, i.jsx)(A.Heading, {
-                        className: ei.Vz,
+                    (0, r.jsx)(h.D, {
+                        className: en.Vz,
                         variant: "heading-xl/extrabold",
-                        children: en.intl.string(en.t["3KomGa"]),
+                        children: ei.intl.string(ei.t["3KomGa"]),
                     }),
-                    (0, i.jsx)(A.Text, {
-                        className: ei.Oi,
+                    (0, r.jsx)(f.E, {
+                        className: en.Oi,
                         variant: "text-sm/normal",
-                        children: en.intl.string(en.t.yQ06u1),
+                        children: ei.intl.string(ei.t.yQ06u1),
                     }),
-                    (0, i.jsx)(X.A, {
-                        className: a()(ei.Tp, ei._c),
-                        textOptions: { textOverride: en.intl.string(en.t.Ve9Ge6), textClassName: ei.VV },
-                        color: x.$n.Colors.CUSTOM,
+                    (0, r.jsx)(Y.A, {
+                        className: n()(en.Tp, en._c),
+                        textOptions: { textOverride: ei.intl.string(ei.t.Ve9Ge6), textClassName: en.VV },
+                        color: g.$n.Colors.CUSTOM,
                         onClick: () => {
-                            G.default.track(et.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: eo, target: ed });
+                            D.default.track(ea.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: em, target: eu });
                         },
                     }),
                 ],
@@ -325,66 +328,66 @@ function eg() {
         ],
     });
 }
-let e_ = function () {
-    let e = (0, E.Hp)(),
-        { analyticsLocations: t } = (0, S.Ay)(f.A.PREMIUM_SETTINGS),
-        n = (0, u.bG)([L.default], () => L.default.getCurrentUser()),
-        l = (0, u.bG)([P.A], () => P.A.getPremiumTypeSubscription()),
-        a = (0, u.bG)([P.A], () => P.A.hasFetchedSubscriptions()),
-        r = (0, N.Y)($.T7),
-        [o, g] = s.useState(!0),
-        _ = (0, C.A)({ forceFetch: !0 }),
-        x = (0, u.bG)([F.A], () => {
-            let e = F.A.getMarketingComponentByType(c.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
+let eh = function () {
+    let e = (0, v.Hp)(),
+        { analyticsLocations: t } = (0, I.Ay)(N.A.PREMIUM_SETTINGS),
+        s = (0, m.bG)([w.default], () => w.default.getCurrentUser()),
+        i = (0, m.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
+        n = (0, m.bG)([G.A], () => G.A.hasFetchedSubscriptions()),
+        l = (0, R.Y)(es.T7),
+        [o, _] = a.useState(!0),
+        x = (0, E.A)({ forceFetch: !0 }),
+        p = (0, m.bG)([V.A], () => {
+            let e = V.A.getMarketingComponentByType(d.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.billingSettingsNitroGiftBanner;
         }),
-        T = !(d.Fr || d.v1) && null != x,
-        j = s.useRef(null);
-    (0, z.i)();
-    let y = (0, H.m)();
-    s.useEffect(() => {
-        h.h.wait(async () => {
-            e || (await Promise.all([b.hP(), b.$o(), (0, p.zS)(null, null, et.tF5.DISCOVERY)])), g(!1);
+        g = !(c.Fr || c.v1) && null != p,
+        h = a.useRef(null);
+    (0, Q.i)();
+    let f = (0, K.m)();
+    a.useEffect(() => {
+        b.h.wait(async () => {
+            e || (await Promise.all([T.hP(), T.$o(), (0, j.zS)(null, null, ea.tF5.DISCOVERY)])), _(!1);
         });
     }, [e]);
-    let [O, R] = s.useState(!1);
-    if (e) return (0, i.jsx)(v.uK, {});
-    let D = a && null !== l && r,
-        M = _.fetched && _.isFractionalPremiumActive,
-        U = n?.isPremiumWithPremiumGroup();
-    if (!D && !M && !o && !U) return (0, i.jsx)(I.A, { title: en.intl.string(en.t.dyq9TR), note: null });
-    if ((!D && !M && !U) || o) return (0, i.jsx)(A.y$y, {});
-    let k = !!l?.hasActiveTrial;
-    return (0, i.jsx)(S.f5, {
+    let [A, y] = a.useState(!1);
+    if (e) return (0, r.jsx)(M.uK, {});
+    let P = n && null !== i && l,
+        k = x.fetched && x.isFractionalPremiumActive,
+        B = s?.isPremiumWithPremiumGroup();
+    if (!P && !k && !o && !B) return (0, r.jsx)(S.A, { title: ei.intl.string(ei.t.dyq9TR), note: null });
+    if ((!P && !k && !B) || o) return (0, r.jsx)(C.y, {});
+    let O = !!i?.hasActiveTrial;
+    return (0, r.jsx)(I.f5, {
         value: t,
-        children: (0, i.jsxs)(i.Fragment, {
+        children: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     children: [
-                        T && (0, i.jsx)(em, { config: x }),
-                        (0, i.jsx)(eu, {}),
-                        y && (0, i.jsx)(Y.A, { isInSettings: !0 }),
-                        !T && (0, i.jsx)(eg, {}),
-                        (0, i.jsx)(J.A, {
+                        g && (0, r.jsx)(ep, { config: p }),
+                        (0, r.jsx)(ex, {}),
+                        f && (0, r.jsx)(Z.A, { isInSettings: !0 }),
+                        !g && (0, r.jsx)(eg, {}),
+                        (0, r.jsx)(et.A, {
                             hideCTAs: !0,
-                            headingOverride: en.intl.string(en.t.dnVvQS),
-                            hidePill: !k,
-                            selectedPlanColumnClassName: ei.JG,
-                            selectedPlanTier: $.PremiumTypes.TIER_2,
+                            headingOverride: ei.intl.string(ei.t.dnVvQS),
+                            hidePill: !O,
+                            selectedPlanColumnClassName: en.JG,
+                            selectedPlanTier: es.PremiumTypes.TIER_2,
                         }),
                     ],
                 }),
-                (0, i.jsx)(m.L, {
-                    innerRef: j,
+                (0, r.jsx)(u.L, {
+                    innerRef: h,
                     onChange: (e) => {
                         e &&
-                            !O &&
-                            (G.default.track(et.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
-                            R(!0));
+                            !A &&
+                            (D.default.track(ea.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
+                            y(!0));
                     },
-                    children: (0, i.jsx)("div", { ref: j, className: ei._Z }),
+                    children: (0, r.jsx)("div", { ref: h, className: en._Z }),
                 }),
             ],
         }),

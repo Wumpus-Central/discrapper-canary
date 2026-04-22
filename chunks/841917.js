@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(627968),
-    i = n(435371),
-    s = n(409294);
+t.d(n, { A: () => a });
+var l = t(627968),
+    r = t(459192),
+    i = t(409294);
 function a(e) {
-    let { targetElementRef: t, delay: n, forceOpen: a, badgeDescription: o, children: l } = e;
-    return (0, r.jsx)(i.un, {
-        targetElementRef: t,
-        delay: n,
+    let { targetElementRef: n, delay: t, forceOpen: a, badgeDescription: s, children: o } = e;
+    return (0, l.jsx)(r.u, {
+        targetElementRef: n,
+        delay: t,
         forceOpen: a,
-        asset: { type: "image", src: s.A },
+        asset: { type: "image", src: i.A },
         title: "Last Meadow Online",
-        body: o,
-        children: l,
+        body: s,
+        children: o,
     });
 }

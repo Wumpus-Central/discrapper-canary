@@ -1,5 +1,62 @@
 "use strict";
-n.d(t, { K: () => u, T: () => c }), n(321073);
+n.d(t, {
+    K: () => u,
+    T: () =>
+        function e(t) {
+            if (t.productLine !== l.EZt.COLLECTIBLES) return;
+            if (t.type === l.Puh.BUNDLE) {
+                let n = [];
+                for (let r of t.bundledSkus ?? []) {
+                    let t = e(r);
+                    t?.type === "single" && n.push(t.item);
+                }
+                if (0 === n.length) return;
+                return { type: "bundle", items: n };
+            }
+            let n = t.tenantMetadata?.collectibles,
+                u = n?.item;
+            if (null != u) {
+                if (u.type === r.R.AVATAR_DECORATION)
+                    return {
+                        type: "single",
+                        item: new i.A({ skuId: t.id, type: u.type, asset: u.asset, label: u.label }),
+                    };
+                if (u.type === r.R.NAMEPLATE)
+                    return {
+                        type: "single",
+                        item: new s.A({
+                            skuId: t.id,
+                            type: u.type,
+                            asset: u.asset,
+                            label: u.label,
+                            palette: u.palette,
+                        }),
+                    };
+                if (u.type === r.R.PROFILE_EFFECT)
+                    return {
+                        type: "single",
+                        item: new a.Ay({
+                            skuId: t.id,
+                            type: u.type,
+                            title: u.title,
+                            description: u.description,
+                            thumbnailPreviewSrc: u.thumbnailPreviewSrc,
+                            reducedMotionSrc: u.reducedMotionSrc,
+                            effects: u.effects ?? [],
+                            accessibilityLabel: u.accessibilityLabel,
+                            animationType: u.animationType,
+                            staticFrameSrc: u.staticFrameSrc,
+                        }),
+                    };
+                if (u.type === r.R.PROFILE_FRAME)
+                    return {
+                        type: "single",
+                        item: new o.A({ skuId: t.id, type: u.type, label: u.label, layers: u.layers }),
+                    };
+            }
+        },
+}),
+    n(321073);
 var r = n(575593),
     i = n(898461),
     s = n(837015),
@@ -19,44 +76,3 @@ let u = (e) =>
               ),
               [],
           );
-function c(e) {
-    if (e.productLine !== l.EZt.COLLECTIBLES) return;
-    if (e.type === l.Puh.BUNDLE) {
-        let t = [];
-        for (let n of e.bundledSkus ?? []) {
-            let e = c(n);
-            e?.type === "single" && t.push(e.item);
-        }
-        if (0 === t.length) return;
-        return { type: "bundle", items: t };
-    }
-    let t = e.tenantMetadata?.collectibles,
-        n = t?.item;
-    if (null != n) {
-        if (n.type === r.R.AVATAR_DECORATION)
-            return { type: "single", item: new i.A({ skuId: e.id, type: n.type, asset: n.asset, label: n.label }) };
-        if (n.type === r.R.NAMEPLATE)
-            return {
-                type: "single",
-                item: new s.A({ skuId: e.id, type: n.type, asset: n.asset, label: n.label, palette: n.palette }),
-            };
-        if (n.type === r.R.PROFILE_EFFECT)
-            return {
-                type: "single",
-                item: new a.Ay({
-                    skuId: e.id,
-                    type: n.type,
-                    title: n.title,
-                    description: n.description,
-                    thumbnailPreviewSrc: n.thumbnailPreviewSrc,
-                    reducedMotionSrc: n.reducedMotionSrc,
-                    effects: n.effects ?? [],
-                    accessibilityLabel: n.accessibilityLabel,
-                    animationType: n.animationType,
-                    staticFrameSrc: n.staticFrameSrc,
-                }),
-            };
-        if (n.type === r.R.PROFILE_FRAME)
-            return { type: "single", item: new o.A({ skuId: e.id, type: n.type, label: n.label, layers: n.layers }) };
-    }
-}

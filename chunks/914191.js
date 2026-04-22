@@ -1,33 +1,33 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(985018),
-    r = n(659233);
-let a = function () {
+var l = n(834730),
+    s = n(789645),
+    r = n(985018),
+    a = n(327084);
+let o = function () {
     return (0, i.jsxs)("div", {
-        className: r.Sz,
+        className: a.Sz,
         children: [
-            (0, i.jsx)(s.Text, { variant: "eyebrow", color: "text-default", children: l.intl.string(l.t.MjVwl8) }),
+            (0, i.jsx)(l.E, { variant: "eyebrow", color: "text-default", children: r.intl.string(r.t.MjVwl8) }),
             (0, i.jsxs)("div", {
-                className: r.Fw,
+                className: a.Fw,
                 children: [
                     (0, i.jsx)("div", {
-                        className: r.fM,
-                        children: (0, i.jsx)(s.PGe, { size: "md", color: "currentColor" }),
+                        className: a.fM,
+                        children: (0, i.jsx)(s.P, { size: "md", color: "currentColor" }),
                     }),
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                children: l.intl.string(l.t.wyARgw),
+                                children: r.intl.string(r.t.wyARgw),
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: l.intl.string(l.t.lhsK1V),
+                                children: r.intl.string(r.t.lhsK1V),
                             }),
                         ],
                     }),

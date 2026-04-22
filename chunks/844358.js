@@ -1,66 +1,68 @@
-n.d(t, { A: () => m });
-var i = n(627968),
-    l = n(64700),
-    a = n(835245),
-    r = n(607399),
-    s = n(732955),
-    o = n(397927),
-    d = n(642277),
-    c = n(723702),
-    u = n(652215),
-    A = n(613057),
-    h = n(985018),
-    _ = n(897152);
-function m(e) {
+r.r(t), r.d(t, { default: () => j });
+var s = r(627968),
+    n = r(64700),
+    i = r(835245),
+    a = r(607399),
+    l = r(821609),
+    d = r(534514),
+    c = r(834730),
+    u = r(289873),
+    h = r(642277),
+    x = r(723702),
+    o = r(652215),
+    f = r(613057),
+    m = r(985018),
+    p = r(897152);
+function j(e) {
     let { applicationId: t } = e,
-        [m, g] = l.useState(null),
-        [p, E] = l.useState(!1),
-        I = l.useRef(!1),
-        f = !c.isPlatformEmbedded && !r.Fr,
-        C = l.useMemo(() => (0, a.A)(), []);
+        [j, v] = n.useState(null),
+        [b, k] = n.useState(!1),
+        g = n.useRef(!1),
+        E = !x.isPlatformEmbedded && !a.Fr,
+        I = n.useMemo(() => (0, i.A)(), []);
     if (
-        (l.useEffect(() => {
-            f && !0 !== I.current
+        (n.useEffect(() => {
+            E && !0 !== g.current
                 ? (Promise.resolve()
-                      .then(n.bind(n, 129014))
+                      .then(r.bind(r, 129014))
                       .then((e) => {
-                          let { default: n } = e;
-                          n.request(u.e$_.DEEP_LINK, {
-                              type: A.XK.ACTIVITIES,
-                              params: { applicationId: t, url: location.href, attemptId: C },
+                          let { default: r } = e;
+                          r.request(o.e$_.DEEP_LINK, {
+                              type: f.XK.ACTIVITIES,
+                              params: { applicationId: t, url: location.href, attemptId: I },
                           })
                               .then((e) => {
                                   let t = e ?? !1;
-                                  g(t), t || E(!0);
+                                  v(t), t || k(!0);
                               })
                               .catch(() => {
-                                  g(!1), E(!0);
+                                  v(!1), k(!0);
                               })
-                              .then(() => n.disconnect());
+                              .then(() => r.disconnect());
                       }),
-                  (I.current = !0))
-                : f || E(!0);
-        }, [t, f, C]),
-        p)
+                  (g.current = !0))
+                : E || k(!0);
+        }, [t, E, I]),
+        b)
     )
-        return (0, i.jsx)(d.A, {});
-    if (f && !1 !== m)
-        if (!0 === m)
-            return (0, i.jsxs)("div", {
-                className: _.k,
+        return (0, s.jsx)(h.A, {});
+    if (E && !1 !== j)
+        if (!0 === j)
+            return (0, s.jsxs)("div", {
+                className: p.k,
                 children: [
-                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: h.intl.string(h.t.csrAMJ) }),
-                    (0, i.jsx)(o.Text, { variant: "text-xs/semibold", children: h.intl.string(h.t["m1+IBn"]) }),
-                    (0, i.jsx)(s.$nd, { variant: "primary", text: h.intl.string(h.t.fIv16B), onClick: () => E(!0) }),
+                    (0, s.jsx)(d.D, { variant: "heading-xxl/bold", children: m.intl.string(m.t.csrAMJ) }),
+                    (0, s.jsx)(c.E, { variant: "text-xs/semibold", children: m.intl.string(m.t["m1+IBn"]) }),
+                    (0, s.jsx)(l.$, { variant: "primary", text: m.intl.string(m.t.fIv16B), onClick: () => k(!0) }),
                 ],
             });
         else
-            return (0, i.jsxs)("div", {
-                className: _.k,
+            return (0, s.jsxs)("div", {
+                className: p.k,
                 children: [
-                    (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: h.intl.string(h.t["Z+hCVU"]) }),
-                    (0, i.jsx)(o.y$y, {}),
+                    (0, s.jsx)(d.D, { variant: "heading-xxl/bold", children: m.intl.string(m.t["Z+hCVU"]) }),
+                    (0, s.jsx)(u.y, {}),
                 ],
             });
-    return (0, i.jsx)(d.A, {});
+    return (0, s.jsx)(h.A, {});
 }

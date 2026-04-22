@@ -1,20 +1,21 @@
-l.d(t, {
-    Hq: () => r.Hq,
-    LB: () => r.LB,
-    MG: () => r.MG,
+"use strict";
+a.d(t, {
+    Hq: () => n.Hq,
+    LB: () => n.LB,
+    MG: () => n.MG,
     Tu: () => o,
     a8: () => i.a,
     e_: () => s.e,
-    nB: () => r.nB,
-    wn: () => r.wn,
+    nB: () => n.nB,
+    wn: () => n.wn,
 });
-var a = l(627968),
-    n = l(397927),
-    r = l(441446);
-l(714126);
-var i = l(709772),
-    s = l(32058);
+var r = a(627968),
+    l = a(349288),
+    n = a(441446);
+a(714126);
+var i = a(709772),
+    s = a(32058);
 let o = (e) => {
     let { href: t } = e;
-    return (0, a.jsx)(n.MzZ, { href: t, children: t });
+    return (0, r.jsx)(l.Anchor, { href: t, children: t });
 };

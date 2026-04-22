@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table_fda3e4",
     u0: "premiumRebrand_fda3e4",

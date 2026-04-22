@@ -1,8 +1,8 @@
 n.d(t, { A: () => c });
 var l = n(627968),
     i = n(311907),
-    s = n(435371),
-    a = n(397927),
+    a = n(990078),
+    s = n(408278),
     r = n(309010),
     o = n(562153),
     d = n(135635),
@@ -14,23 +14,23 @@ function c(e) {
         {
             icon: A,
             iconColor: p,
-            tooltipText: m,
-            disabled: I,
-            shouldHideButton: x,
-            onClick: v,
+            tooltipText: I,
+            disabled: x,
+            shouldHideButton: m,
+            onClick: S,
         } = (0, d.A)({ user: t, channel: n, location: c });
-    return !g || x
+    return !g || m
         ? null
-        : (0, l.jsx)(s.m_, {
-              text: m,
+        : (0, l.jsx)(a.m, {
+              text: I,
               children: (0, l.jsx)("div", {
-                  children: (0, l.jsx)(a.K0, {
+                  children: (0, l.jsx)(s.K, {
                       variant: "icon-only",
                       icon: () => (0, l.jsx)(A, { size: "sm", color: p }),
                       "aria-label": u.intl.formatToPlainString(u.t["3IPBG1"], { username: h }),
                       size: "sm",
-                      onClick: v,
-                      disabled: I,
+                      onClick: S,
+                      disabled: x,
                   }),
               }),
           });

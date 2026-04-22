@@ -1,19 +1,21 @@
 "use strict";
-n.d(t, { A: () => o });
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
-var i = n(990078),
-    s = n(397927),
-    a = n(785620);
-function o(e) {
-    let { onClick: t, Icon: n, "aria-label": o } = e,
-        l = (0, s.rdh)(s.LU0.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
-        u = (0, r.jsx)(n, { color: l.hex(), size: "custom", width: 16, height: 16 });
+var l = n(990078),
+    s = n(602853),
+    r = n(827734),
+    a = n(939249),
+    o = n(383643);
+function c(e) {
+    let { onClick: t, Icon: n, "aria-label": c } = e,
+        u = (0, s.r)(r.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
+        d = (0, i.jsx)(n, { color: u.hex(), size: "custom", width: 16, height: 16 });
     return null == t
-        ? (0, r.jsx)("div", { className: a.k, "aria-label": o, children: u })
-        : (0, r.jsx)(i.m, {
+        ? (0, i.jsx)("div", { className: o.k, "aria-label": c, children: d })
+        : (0, i.jsx)(l.m, {
               asContainer: !0,
-              text: o,
-              children: (0, r.jsx)(s.DUT, { className: a.k, onClick: t, children: u }),
+              text: c,
+              children: (0, i.jsx)(a.D, { className: o.k, onClick: t, children: d }),
           });
 }

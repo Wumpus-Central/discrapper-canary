@@ -1,22 +1,10 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153),
     s = n(961350);
 let a = { users: {} };
-function o(e) {
-    let { channelId: t } = e,
-        n = s.default.getId();
-    if (null == n) return !1;
-    null == a.users[n] && (a.users[n] = { channels: {} }), (a.users[n].channels[t] = !0);
-}
-function l(e) {
-    let { channelId: t } = e,
-        n = s.default.getId();
-    if (null == n || null == a.users[n]) return !1;
-    delete a.users[n].channels[t];
-}
-class u extends r.Ay.DeviceSettingsStore {
+class o extends r.Ay.DeviceSettingsStore {
     static displayName = "ChannelSpoilerAgreeStore";
     static persistKey = "ChannelSpoilerAgreeStore";
     initialize(e) {
@@ -34,4 +22,17 @@ class u extends r.Ay.DeviceSettingsStore {
         return a;
     }
 }
-let c = new u(i.h, { CHANNEL_SPOILER_AGREE: o, CHANNEL_SPOILER_AGREE_CLEAR: l });
+let l = new o(i.h, {
+    CHANNEL_SPOILER_AGREE: function (e) {
+        let { channelId: t } = e,
+            n = s.default.getId();
+        if (null == n) return !1;
+        null == a.users[n] && (a.users[n] = { channels: {} }), (a.users[n].channels[t] = !0);
+    },
+    CHANNEL_SPOILER_AGREE_CLEAR: function (e) {
+        let { channelId: t } = e,
+            n = s.default.getId();
+        if (null == n || null == a.users[n]) return !1;
+        delete a.users[n].channels[t];
+    },
+});

@@ -1,124 +1,128 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => C });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(58149),
-    a = n(753838),
-    o = n(631305),
-    d = n(664007),
-    c = n(405810),
-    u = n(486020),
-    m = n(997509),
-    g = n(652215),
-    x = n(874864),
-    h = n(339984),
-    _ = n(478644),
-    A = n(985018),
-    p = n(327084);
-let f = function (e) {
+    l = n(64700),
+    s = n(192308),
+    r = n(534514),
+    a = n(834730),
+    o = n(821609),
+    d = n(104510),
+    c = n(939249),
+    u = n(58149),
+    m = n(753838),
+    g = n(631305),
+    h = n(664007),
+    x = n(405810),
+    _ = n(486020),
+    p = n(997509),
+    A = n(652215),
+    E = n(874864),
+    f = n(339984),
+    j = n(478644),
+    N = n(985018),
+    I = n(327084);
+let C = function (e) {
     let { guild: t } = e,
-        f = t.features.has(g.GuildFeatures.BANNER),
-        j = s.useCallback(
-            (e, s) => {
-                null == e || void 0 === s
-                    ? m.A.saveGuild(t.id, { homeHeader: null })
-                    : (0, l.mMO)(async () => {
-                          let { default: l } = await Promise.all([
+        C = t.features.has(A.GuildFeatures.BANNER),
+        b = l.useCallback(
+            (e, l) => {
+                null == e || void 0 === l
+                    ? p.A.saveGuild(t.id, { homeHeader: null })
+                    : (0, s.openModalLazy)(async () => {
+                          let { default: s } = await Promise.all([
                               n.e("79149"),
-                              n.e("35929"),
+                              n.e("29259"),
                               n.e("74571"),
                               n.e("56000"),
                           ]).then(n.bind(n, 142630));
                           return (n) =>
-                              (0, i.jsx)(l, {
+                              (0, i.jsx)(s, {
                                   imageUri: e,
-                                  file: s,
+                                  file: l,
                                   onCrop: (e) => {
                                       let { imageUri: n } = e;
-                                      return m.A.saveGuild(t.id, { homeHeader: n });
+                                      return p.A.saveGuild(t.id, { homeHeader: n });
                                   },
-                                  uploadType: h.HL.HOME_HEADER,
+                                  uploadType: f.HL.HOME_HEADER,
                                   ...n,
                               });
                       });
             },
             [t.id],
         ),
-        N = s.useCallback(
+        v = l.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, r.zV)(g.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
-                        location: { section: g.JJy.GUILD_SETTINGS_ONBOARDING, object: g.ZSU.LEARN_MORE },
+                    (0, u.zV)(A.HAw.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        location: { section: A.JJy.GUILD_SETTINGS_ONBOARDING, object: A.ZSU.LEARN_MORE },
                         guild_id: t?.id,
                         location_stack: [],
                     }),
-                    (0, o.A)({
+                    (0, g.A)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
-                            section: g.JJy.GUILD_SETTINGS_ONBOARDING,
-                            object: g.ZSU.ONBOARDING_EDIT,
-                            page: g.liQ.GUILD_SETTINGS,
+                            section: A.JJy.GUILD_SETTINGS_ONBOARDING,
+                            object: A.ZSU.ONBOARDING_EDIT,
+                            page: A.liQ.GUILD_SETTINGS,
                         },
                         guild: t,
-                        perks: (0, x.QR)(),
+                        perks: (0, E.QR)(),
                     });
             },
             [t],
         ),
-        E = (0, i.jsx)(d.A, {
+        S = (0, i.jsx)(h.A, {
             image: t.homeHeader,
-            makeURL: (e) => (null != e ? u.Ay.getGuildHomeHeaderURL({ id: t.id, homeHeader: e }) : null),
-            disabled: !f,
-            onChange: j,
-            hint: A.intl.string(A.t.NyXznh),
-            enabled: f,
-            maxFileSizeBytes: _.j,
+            makeURL: (e) => (null != e ? _.Ay.getGuildHomeHeaderURL({ id: t.id, homeHeader: e }) : null),
+            disabled: !C,
+            onChange: b,
+            hint: N.intl.string(N.t.NyXznh),
+            enabled: C,
+            maxFileSizeBytes: j.j,
         });
-    return f
+    return C
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)("div", {
-                      className: p.bV,
+                      className: I.bV,
                       children: [
-                          (0, i.jsx)(l.Heading, {
-                              className: p.wx,
+                          (0, i.jsx)(r.D, {
+                              className: I.wx,
                               variant: "heading-lg/extrabold",
-                              children: A.intl.string(A.t.BBj1nY),
+                              children: N.intl.string(N.t.BBj1nY),
                           }),
-                          (0, i.jsx)(a.A, {
-                              className: p.ts,
+                          (0, i.jsx)(m.A, {
+                              className: I.ts,
                               guild: t,
-                              guildFeature: g.GuildFeatures.BANNER,
-                              onClick: N,
+                              guildFeature: A.GuildFeatures.BANNER,
+                              onClick: v,
                           }),
                       ],
                   }),
                   (0, i.jsxs)("div", {
-                      className: p.uW,
+                      className: I.uW,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: p.uc,
+                              className: I.uc,
                               children: [
-                                  (0, i.jsx)(l.Text, {
+                                  (0, i.jsx)(a.E, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: A.intl.string(A.t.Vwintv),
+                                      children: N.intl.string(N.t.Vwintv),
                                   }),
                                   (0, i.jsx)("div", {
-                                      className: p.au,
-                                      children: (0, i.jsx)(c.A, {
-                                          onChange: j,
-                                          maxFileSizeBytes: _.j,
-                                          text: A.intl.string(A.t.yG2pUi),
+                                      className: I.au,
+                                      children: (0, i.jsx)(x.A, {
+                                          onChange: b,
+                                          maxFileSizeBytes: j.j,
+                                          text: N.intl.string(N.t.yG2pUi),
                                           size: "md",
                                           variant: "primary",
                                       }),
                                   }),
                               ],
                           }),
-                          (0, i.jsx)("div", { children: E }),
+                          (0, i.jsx)("div", { children: S }),
                       ],
                   }),
               ],
@@ -126,43 +130,43 @@ let f = function (e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)("div", {
-                      className: p.bV,
+                      className: I.bV,
                       children: [
-                          (0, i.jsx)(l.Heading, {
-                              className: p.wx,
+                          (0, i.jsx)(r.D, {
+                              className: I.wx,
                               variant: "heading-lg/extrabold",
-                              children: A.intl.string(A.t.BBj1nY),
+                              children: N.intl.string(N.t.BBj1nY),
                           }),
-                          (0, i.jsx)(a.A, {
-                              className: p.ts,
+                          (0, i.jsx)(m.A, {
+                              className: I.ts,
                               guild: t,
-                              guildFeature: g.GuildFeatures.BANNER,
-                              onClick: N,
+                              guildFeature: A.GuildFeatures.BANNER,
+                              onClick: v,
                           }),
                       ],
                   }),
                   (0, i.jsxs)("div", {
-                      className: p.uW,
+                      className: I.uW,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: p.uc,
+                              className: I.uc,
                               children: [
-                                  (0, i.jsx)(l.Text, {
+                                  (0, i.jsx)(a.E, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      className: p.tb,
-                                      children: A.intl.string(A.t.Vwintv),
+                                      className: I.tb,
+                                      children: N.intl.string(N.t.Vwintv),
                                   }),
-                                  (0, i.jsx)(l.Button, {
+                                  (0, i.jsx)(o.$, {
                                       variant: "expressive",
-                                      icon: l._Jp,
-                                      text: A.intl.string(A.t["+7XY31"]),
-                                      onClick: N,
+                                      icon: d._,
+                                      text: N.intl.string(N.t["+7XY31"]),
+                                      onClick: v,
                                   }),
                               ],
                           }),
                           (0, i.jsx)("div", {
-                              children: (0, i.jsx)(l.DUT, { "aria-hidden": !0, tabIndex: -1, onClick: N, children: E }),
+                              children: (0, i.jsx)(c.D, { "aria-hidden": !0, tabIndex: -1, onClick: v, children: S }),
                           }),
                       ],
                   }),

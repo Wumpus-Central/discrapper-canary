@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(627968);
+n.d(t, { A: () => c });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(690868);
-function l(e) {
-    let { name: t, className: n, state: i, isInline: l, onClick: u } = e,
-        c = t + (l ? ":" : ""),
+var l = n(503698),
+    s = n.n(l),
+    r = n(834730),
+    a = n(939249),
+    o = n(632533);
+function c(e) {
+    let { name: t, className: n, state: l, isInline: c, onClick: u } = e,
         d = null;
-    i?.isActive && !l
+    l?.isActive && !c
         ? (d = o.vu)
-        : i?.lastValidationResult?.success === !1
+        : l?.lastValidationResult?.success === !1
           ? (d = o.z3)
-          : i?.hasValue && !l && (d = o.hZ);
-    let _ = (0, r.jsx)(s.Text, {
-        variant: l ? "text-md/normal" : "text-sm/normal",
+          : l?.hasValue && !c && (d = o.hZ);
+    let h = (0, i.jsx)(r.E, {
+        variant: c ? "text-md/normal" : "text-sm/normal",
         color: "text-strong",
-        className: a()(o.uK, { [o.mG]: l }, d, n),
-        children: c,
+        className: s()(o.uK, { [o.mG]: c }, d, n),
+        children: t + (c ? ":" : ""),
     });
-    return null == u ? _ : (0, r.jsx)(s.DUT, { className: o.vk, onClick: () => u(t), children: _ });
+    return null == u ? h : (0, i.jsx)(a.D, { className: o.vk, onClick: () => u(t), children: h });
 }

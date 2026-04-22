@@ -1,71 +1,73 @@
-n.d(t, { default: () => v });
-var r = n(627968),
-    s = n(64700),
-    i = n(158954),
-    l = n(73939),
-    a = n(36525),
-    o = n(732955),
-    d = n(421380),
-    c = n(397927),
-    u = n(915089),
-    _ = n(60175),
-    h = n(890620),
-    m = n(338724),
-    f = n(29697),
-    x = n(260197),
-    E = n(985018),
-    p = n(356698);
-let g = () =>
-        (0, r.jsx)(a.A, {
+"use strict";
+r.d(t, { default: () => E });
+var i = r(627968),
+    a = r(64700),
+    n = r(224640),
+    s = r(73939),
+    l = r(36525),
+    o = r(815021),
+    c = r(862482),
+    d = r(192308),
+    _ = r(871682),
+    u = r(915089),
+    p = r(60175),
+    m = r(890620),
+    h = r(338724),
+    g = r(29697),
+    f = r(260197),
+    b = r(985018),
+    x = r(944970);
+let v = () =>
+        (0, i.jsx)(l.A, {
             submitting: !1,
-            message: E.intl.string(E.t["8g514U"]),
+            message: b.intl.string(b.t["8g514U"]),
             onReset: () => {
-                (0, h.C7)(!1);
+                (0, m.C7)(!1);
             },
-            onResetText: E.intl.string(E.t["ETE/oC"]),
+            onResetText: b.intl.string(b.t["ETE/oC"]),
             onSave: () => {
-                (0, h.C7)(!1), (0, c.OoC)(x.LC);
+                (0, m.C7)(!1), (0, d.closeModal)(f.LC);
             },
-            onSaveText: E.intl.string(E.t["Xt+Uab"]),
-            onSaveButtonColor: d.XD.RED,
+            onSaveText: b.intl.string(b.t["Xt+Uab"]),
+            onSaveButtonColor: c.XD.RED,
         }),
-    v = (e) => {
-        let { transitionState: t, guildId: n, onClose: a, onComplete: d, inviteKey: x, isPreview: E = !1 } = e,
-            v = (0, h.YN)((e) => e.shouldShowWarning),
-            { verificationForm: N, hasFetched: j } = (0, m.$x)(n, E, x),
+    E = (e) => {
+        let { transitionState: t, guildId: r, onClose: l, onComplete: c, inviteKey: d, isPreview: f = !1 } = e,
+            b = (0, m.YN)((e) => e.shouldShowWarning),
+            { verificationForm: E, hasFetched: S } = (0, h.$x)(r, f, d),
             I = (0, u.GV)();
-        return (s.useEffect(() => {
-            j && N === _.U && a();
-        }, [j, a, N]),
-        N === _.U)
+        return (a.useEffect(() => {
+            S && E === p.U && l();
+        }, [S, l, E]),
+        E === p.U)
             ? null
-            : (0, r.jsxs)(r.Fragment, {
+            : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, r.jsxs)(i.dWK, {
+                      (0, i.jsxs)(n.d, {
                           transitionState: t,
                           "aria-labelledby": I,
                           size: "xxl",
-                          onClose: a,
+                          onClose: l,
                           children: [
-                              (0, r.jsx)("div", {
-                                  className: p.b,
-                                  children: (0, r.jsx)(o.JnF, { onClick: () => a(!1) }),
+                              (0, i.jsx)("div", {
+                                  className: x.b,
+                                  children: (0, i.jsx)(o.J, { onClick: () => l(!1) }),
                               }),
-                              (0, r.jsx)("div", {
-                                  className: p.kL,
-                                  children: (0, r.jsx)(f.A, {
-                                      verificationForm: N,
+                              (0, i.jsx)("div", {
+                                  className: x.kL,
+                                  children: (0, i.jsx)(g.A, {
+                                      verificationForm: E,
                                       headerId: I,
-                                      guildId: n,
-                                      onClose: a,
-                                      onComplete: d,
-                                      isPreview: E,
+                                      guildId: r,
+                                      onClose: l,
+                                      onComplete: c,
+                                      isPreview: f,
                                   }),
                               }),
                           ],
                       }),
-                      (0, r.jsx)(l.F, {
-                          children: !0 === v && (0, r.jsx)(c.FQk, { className: p.lm, children: (0, r.jsx)(g, {}) }),
+                      (0, i.jsx)(s.F, {
+                          children: !0 === b && (0, i.jsx)(_.F, { className: x.lm, children: (0, i.jsx)(v, {}) }),
                       }),
                   ],
               });

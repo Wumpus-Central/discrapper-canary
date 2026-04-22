@@ -1,105 +1,40 @@
-"use strict";
-n.d(t, { Et: () => o, QS: () => u, hz: () => d, yP: () => c });
+n.d(t, { Et: () => c, QS: () => g, hz: () => u, yP: () => m });
 var i = n(627968);
 n(64700);
-var s = n(397927),
-    l = n(527678),
-    r = n(985018),
-    a = n(47022);
-function o() {
-    return (0, i.jsxs)("div", {
-        className: a.kL,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/semibold",
-                color: "text-default",
-                className: a.u1,
-                children: r.intl.format(r.t.tCQ3H8, { number: 1 }),
-            }),
-            (0, i.jsx)(s.Heading, {
-                variant: "heading-lg/semibold",
-                color: "text-strong",
-                className: a.wx,
-                children: r.intl.string(r.t.e6spZv),
-            }),
-            (0, i.jsx)(s.Text, {
-                variant: "text-sm/normal",
-                color: "text-default",
-                children: r.intl.string(r.t["8ega11"]),
-            }),
-            (0, i.jsx)("div", {
-                "data-button-hoisted-classname-wrapper": !0,
-                className: a.x6,
-                children: (0, i.jsx)(s.Button, {
-                    variant: "primary",
-                    text: r.intl.string(r.t.TbzK3w),
-                    onClick: () => (0, l.Ay)("Safety Check"),
-                }),
-            }),
-        ],
-    });
-}
-function d() {
-    return (0, i.jsxs)("div", {
-        className: a.kL,
-        children: [
-            (0, i.jsx)(s.Text, {
-                variant: "text-xs/semibold",
-                color: "text-default",
-                className: a.u1,
-                children: r.intl.format(r.t.tCQ3H8, { number: 2 }),
-            }),
-            (0, i.jsx)(s.Heading, {
-                variant: "heading-lg/semibold",
-                color: "text-strong",
-                className: a.wx,
-                children: r.intl.string(r.t.nRE3tc),
-            }),
-            (0, i.jsx)(s.Text, {
-                variant: "text-sm/normal",
-                color: "text-default",
-                children: r.intl.string(r.t.y08PCJ),
-            }),
-            (0, i.jsx)("div", {
-                "data-button-hoisted-classname-wrapper": !0,
-                className: a.x6,
-                children: (0, i.jsx)(s.Button, {
-                    variant: "primary",
-                    text: r.intl.string(r.t.TbzK3w),
-                    onClick: () => (0, l.Ay)("Default Channels"),
-                }),
-            }),
-        ],
-    });
-}
+var l = n(834730),
+    s = n(534514),
+    r = n(821609),
+    a = n(527678),
+    o = n(985018),
+    d = n(47022);
 function c() {
     return (0, i.jsxs)("div", {
-        className: a.kL,
+        className: d.kL,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.E, {
                 variant: "text-xs/semibold",
                 color: "text-default",
-                className: a.u1,
-                children: r.intl.format(r.t.tCQ3H8, { number: 3 }),
+                className: d.u1,
+                children: o.intl.format(o.t.tCQ3H8, { number: 1 }),
             }),
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(s.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: a.wx,
-                children: r.intl.string(r.t.VkaI6l),
+                className: d.wx,
+                children: o.intl.string(o.t.e6spZv),
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: r.intl.string(r.t.TVGk1c),
+                children: o.intl.string(o.t["8ega11"]),
             }),
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: a.x6,
-                children: (0, i.jsx)(s.Button, {
+                className: d.x6,
+                children: (0, i.jsx)(r.$, {
                     variant: "primary",
-                    text: r.intl.string(r.t.TbzK3w),
-                    onClick: () => (0, l.Ay)("Customization Questions"),
+                    text: o.intl.string(o.t.TbzK3w),
+                    onClick: () => (0, a.Ay)("Safety Check"),
                 }),
             }),
         ],
@@ -107,32 +42,90 @@ function c() {
 }
 function u() {
     return (0, i.jsxs)("div", {
-        className: a.kL,
+        className: d.kL,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.E, {
                 variant: "text-xs/semibold",
                 color: "text-default",
-                className: a.u1,
-                children: r.intl.format(r.t.tCQ3H8, { number: 4 }),
+                className: d.u1,
+                children: o.intl.format(o.t.tCQ3H8, { number: 2 }),
             }),
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(s.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: a.wx,
-                children: r.intl.string(r.t["3SM68F"]),
+                className: d.wx,
+                children: o.intl.string(o.t.nRE3tc),
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.E, { variant: "text-sm/normal", color: "text-default", children: o.intl.string(o.t.y08PCJ) }),
+            (0, i.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
+                className: d.x6,
+                children: (0, i.jsx)(r.$, {
+                    variant: "primary",
+                    text: o.intl.string(o.t.TbzK3w),
+                    onClick: () => (0, a.Ay)("Default Channels"),
+                }),
+            }),
+        ],
+    });
+}
+function m() {
+    return (0, i.jsxs)("div", {
+        className: d.kL,
+        children: [
+            (0, i.jsx)(l.E, {
+                variant: "text-xs/semibold",
+                color: "text-default",
+                className: d.u1,
+                children: o.intl.format(o.t.tCQ3H8, { number: 3 }),
+            }),
+            (0, i.jsx)(s.D, {
+                variant: "heading-lg/semibold",
+                color: "text-strong",
+                className: d.wx,
+                children: o.intl.string(o.t.VkaI6l),
+            }),
+            (0, i.jsx)(l.E, { variant: "text-sm/normal", color: "text-default", children: o.intl.string(o.t.TVGk1c) }),
+            (0, i.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
+                className: d.x6,
+                children: (0, i.jsx)(r.$, {
+                    variant: "primary",
+                    text: o.intl.string(o.t.TbzK3w),
+                    onClick: () => (0, a.Ay)("Customization Questions"),
+                }),
+            }),
+        ],
+    });
+}
+function g() {
+    return (0, i.jsxs)("div", {
+        className: d.kL,
+        children: [
+            (0, i.jsx)(l.E, {
+                variant: "text-xs/semibold",
+                color: "text-default",
+                className: d.u1,
+                children: o.intl.format(o.t.tCQ3H8, { number: 4 }),
+            }),
+            (0, i.jsx)(s.D, {
+                variant: "heading-lg/semibold",
+                color: "text-strong",
+                className: d.wx,
+                children: o.intl.string(o.t["3SM68F"]),
+            }),
+            (0, i.jsx)(l.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: r.intl.string(r.t["eamP2+"]),
+                children: o.intl.string(o.t["eamP2+"]),
             }),
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: a.x6,
-                children: (0, i.jsx)(s.Button, {
+                className: d.x6,
+                children: (0, i.jsx)(r.$, {
                     variant: "primary",
-                    text: r.intl.string(r.t.TbzK3w),
-                    onClick: () => (0, l.Ay)("Home Settings"),
+                    text: o.intl.string(o.t.TbzK3w),
+                    onClick: () => (0, a.Ay)("Home Settings"),
                 }),
             }),
         ],

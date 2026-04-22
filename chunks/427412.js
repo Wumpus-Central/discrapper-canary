@@ -1,15 +1,15 @@
 i.d(e, { default: () => g });
 var n = i(627968);
 i(64700);
-var r = i(158954),
-    s = i(397927),
+var r = i(772707),
+    s = i(451394),
     a = i(935649),
     o = i(847599),
     c = i(47167),
     l = i(849736),
     h = i(418208),
     d = i(985018),
-    p = i(622864),
+    p = i(286641),
     u = i(973324);
 function g(t) {
     let { transitionState: e, onClose: i, channel: g } = t,
@@ -21,7 +21,7 @@ function g(t) {
             }
             (0, l.e7)(g, t), i();
         };
-    return (0, n.jsx)(r.ExpressiveModal, {
+    return (0, n.jsx)(r.k, {
         transitionState: e,
         graphic: { type: "image", src: u.A },
         title: d.intl.string(d.t.Ul1RJQ),
@@ -29,7 +29,7 @@ function g(t) {
             stageChannelHook: () =>
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(s.qux, {
+                        (0, n.jsx)(s.q, {
                             size: "custom",
                             color: "currentColor",
                             height: 14,

@@ -1,21 +1,16 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(528352),
-    i = n(476858),
-    a = n(355418);
-let s = RegExp(`([0-9]{4})[\\.\\/\\s](?:(${(0, i.uJ)(r.eB)})|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)`, "i"),
-    o = 1,
-    l = 2,
-    u = 3,
-    c = 4;
-class d extends a.c {
+r.d(t, { A: () => o });
+var n = r(528352),
+    s = r(476858),
+    a = r(355418);
+let i = RegExp(`([0-9]{4})[\\.\\/\\s](?:(${(0, s.uJ)(n.eB)})|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)`, "i");
+class o extends a.c {
     innerPattern() {
-        return s;
+        return i;
     }
     innerExtract(e, t) {
-        let n = t[u] ? parseInt(t[u]) : r.eB[t[l].toLowerCase()];
-        if (n < 1 || n > 12) return null;
-        let i = parseInt(t[o]);
-        return { day: parseInt(t[c]), month: n, year: i };
+        let r = t[3] ? parseInt(t[3]) : n.eB[t[2].toLowerCase()];
+        if (r < 1 || r > 12) return null;
+        let s = parseInt(t[1]);
+        return { day: parseInt(t[4]), month: r, year: s };
     }
 }

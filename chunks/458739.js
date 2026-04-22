@@ -1,31 +1,33 @@
-n.d(t, { A: () => d });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => o });
+var a = n(627968);
 n(64700);
-var a = n(397927),
-    r = n(263063),
-    i = n(985018),
-    s = n(345303);
-let d = (e) => {
+var i = n(534514),
+    r = n(834730),
+    l = n(263063),
+    s = n(985018),
+    d = n(306032);
+let o = (e) => {
     let { guild: t } = e;
-    return (0, l.jsxs)("div", {
-        className: s.kL,
+    return (0, a.jsxs)("div", {
+        className: d.kL,
         children: [
-            (0, l.jsx)(a.Heading, {
-                className: s.wx,
+            (0, a.jsx)(i.D, {
+                className: d.wx,
                 variant: "heading-sm/semibold",
-                children: i.intl.string(i.t["0ox7Hq"]),
+                children: s.intl.string(s.t["0ox7Hq"]),
             }),
-            (0, l.jsx)("div", {
-                className: s.bo,
-                children: (0, l.jsxs)("div", {
-                    className: s.OA,
+            (0, a.jsx)("div", {
+                className: d.bo,
+                children: (0, a.jsxs)("div", {
+                    className: d.OA,
                     children: [
-                        (0, l.jsx)("div", {
-                            className: s.$f,
-                            children: (0, l.jsx)(r.Ay, { guild: t, size: r.Ay.Sizes.LARGE }),
+                        (0, a.jsx)("div", {
+                            className: d.$f,
+                            children: (0, a.jsx)(l.Ay, { guild: t, size: l.Ay.Sizes.LARGE }),
                         }),
-                        (0, l.jsx)("div", {
-                            children: (0, l.jsx)(a.Text, {
+                        (0, a.jsx)("div", {
+                            children: (0, a.jsx)(r.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 children: t.name,

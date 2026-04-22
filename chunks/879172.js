@@ -1,23 +1,19 @@
 "use strict";
-n.d(t, { gq: () => o, rQ: () => l, tM: () => s });
+n.d(t, { gq: () => s, rQ: () => a, tM: () => i });
 let r = {};
 function i(e, t) {
-    return `${e}:${t}`;
+    return r[`${e}:${t}`];
+}
+function s(e, t, n) {
+    let i = `${e}:${t}`;
+    r[i] = { ...r[i], ...n };
 }
 function a(e) {
-    let [t, n] = e.split(":");
-    return [t, n];
-}
-function s(e, t) {
-    return r[i(e, t)];
-}
-function o(e, t, n) {
-    let a = i(e, t);
-    r[a] = { ...r[a], ...n };
-}
-function l(e) {
     for (let t in r) {
-        let [n, i] = a(t);
+        let [n, i] = (function (e) {
+            let [t, n] = e.split(":");
+            return [t, n];
+        })(t);
         e(n, i, r[t]);
     }
     r = {};

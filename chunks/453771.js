@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
-    Aw: () => O,
-    GD: () => T,
-    Hb: () => S,
-    Iu: () => D,
-    SH: () => C,
-    TX: () => I,
-    VE: () => g,
-    bB: () => b,
-    o2: () => N,
-    ww: () => E,
+    Aw: () => N,
+    GD: () => A,
+    Hb: () => I,
+    Iu: () => R,
+    SH: () => y,
+    TX: () => g,
+    VE: () => p,
+    bB: () => O,
+    o2: () => S,
+    ww: () => h,
 });
 var r = n(796873),
     i = n.n(r),
@@ -18,20 +18,18 @@ var r = n(796873),
     o = n(228756),
     l = n(71393),
     u = n(287809),
-    c = n(255438),
-    d = n(927578),
+    d = n(255438),
+    c = n(927578),
     _ = n(652215),
     f = n(788868),
-    p = n(985018);
-let h = 524288e3,
-    m = 524288e3;
-function E(e, t) {
-    return e instanceof File ? e : g(e.data.buffer, e.filename, t ?? "text/plain");
+    E = n(985018);
+function h(e, t) {
+    return e instanceof File ? e : p(e.data.buffer, e.filename, t ?? "text/plain");
 }
-function g(e, t, n) {
+function p(e, t, n) {
     return new File([e], t, { type: n });
 }
-let A = [
+let m = [
     { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
     { reType: /^image\/svg\+xml/, klass: "webcode" },
     { reType: /^image\//, klass: "image" },
@@ -50,57 +48,62 @@ let A = [
     { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" },
     { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" },
 ];
-function I(e) {
-    return T(e.name, e.type);
+function g(e) {
+    return A(e.name, e.type);
 }
-function T(e, t) {
+function A(e, t) {
     e = e?.toLowerCase() ?? "";
-    let n = a().find(A, (n) =>
+    let n = a().find(m, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function S(e) {
+function I(e) {
     return i().filesize(e);
 }
-let y = [
+let T = [
     [_.GuildFeatures.MAX_FILE_SIZE_250_MB, f.q9],
     [_.GuildFeatures.MAX_FILE_SIZE_100_MB, f.w6],
     [_.GuildFeatures.MAX_FILE_SIZE_50_MB, f.eZ],
 ];
-function v(e) {
-    let { enabled: t } = o.E.getConfig({ location: "getGuildMaxFileSize" });
-    return y.reduce((n, r) => {
-        let [i, s] = r;
-        return t && i === _.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(i) && s > n ? s : n;
-    }, _.TbF);
-}
-function N(e) {
+function S(e) {
     let t = u.default.getCurrentUser(),
-        n = d.Ay.getUserMaxFileSize(t);
+        n = c.Ay.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = l.A.getGuild(e);
-    return Math.max(null != r ? v(r) : _.TbF, n);
+    return Math.max(
+        null != r
+            ? (function (e) {
+                  let { enabled: t } = o.E.getConfig({ location: "getGuildMaxFileSize" });
+                  return T.reduce((n, r) => {
+                      let [i, s] = r;
+                      return t && i === _.GuildFeatures.MAX_FILE_SIZE_250_MB ? n : e.features.has(i) && s > n ? s : n;
+                  }, _.TbF);
+              })(r)
+            : _.TbF,
+        n,
+    );
 }
-function C(e, t) {
-    let n = N(t);
+function y(e, t) {
+    let n = S(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function R(e) {
-    let t = 0;
-    for (let n of e) t += n.size;
-    return t;
+function N(e) {
+    return (
+        (function (e) {
+            let t = 0;
+            for (let n of e) t += n.size;
+            return t;
+        })(e) > O()
+    );
 }
-function O(e) {
-    return R(e) > b();
-}
-function b() {
+function O() {
     let e = u.default.getCurrentUser();
-    return null != e && e.isStaff() ? m : h;
+    return null != e && e.isStaff(), 524288e3;
 }
-function D(e) {
+function R(e) {
     let { guildId: t, onClick: n } = e,
-        r = (0, c.Xq)(N(t) / 1024, { useKibibytes: !0 }),
-        i = (0, c.Xq)(f.f3 / 1024, { useKibibytes: !0 });
-    return p.intl.format(p.t.tRuxk9, { maxSize: r, premiumMaxSize: i, onClick: n });
+        r = (0, d.Xq)(S(t) / 1024, { useKibibytes: !0 }),
+        i = (0, d.Xq)(f.f3 / 1024, { useKibibytes: !0 });
+    return E.intl.format(E.t.tRuxk9, { maxSize: r, premiumMaxSize: i, onClick: n });
 }

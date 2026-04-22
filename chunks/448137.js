@@ -1,20 +1,22 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(110259),
+n.d(t, { A: () => o });
+var l = n(110259),
     i = n(311907),
     a = n(139286),
     s = n(989837),
-    o = n(520117);
-function l(e) {
-    let { applicationId: t, commandId: n, searchResultsPosition: l, query: u } = e,
-        c = (0, i.bG)([s.A], () => s.A.entrypoint()),
-        d = () => {
-            (0, a.x)({
-                type: r.ImpressionTypes.VIEW,
-                name: r.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
-                properties: { application_id: t, command_id: n, search_results_position: l, query: u, source: c },
-            });
-        },
-        _ = 1;
-    return { trackSearchResultsItemImpressionRef: (0, o.A)({ onVisible: d, threshold: _ }) };
+    r = n(520117);
+function o(e) {
+    let { applicationId: t, commandId: n, searchResultsPosition: o, query: c } = e,
+        d = (0, i.bG)([s.A], () => s.A.entrypoint());
+    return {
+        trackSearchResultsItemImpressionRef: (0, r.A)({
+            onVisible: () => {
+                (0, a.x)({
+                    type: l.ImpressionTypes.VIEW,
+                    name: l.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                    properties: { application_id: t, command_id: n, search_results_position: o, query: c, source: d },
+                });
+            },
+            threshold: 1,
+        }),
+    };
 }

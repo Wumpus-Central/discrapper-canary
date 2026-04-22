@@ -1,36 +1,37 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    r = n(64700),
-    a = n(311907),
-    l = n(397927),
-    s = n(747550),
-    o = n(282026),
-    d = n(997590),
-    c = n(324580),
-    u = n(985018),
-    A = n(516616),
-    h = n(842503);
+a.d(t, { A: () => _ });
+var s = a(627968),
+    l = a(64700),
+    r = a(311907),
+    i = a(534514),
+    n = a(834730),
+    c = a(747550),
+    o = a(282026),
+    d = a(997590),
+    u = a(324580),
+    h = a(985018),
+    g = a(922985),
+    A = a(842503);
 let _ = function (e) {
     let { loadId: t } = e,
-        n = o.A.useField("categoryId"),
-        _ = (0, a.bG)([d.A], () => d.A.getCategoryName(n)),
-        m = r.useCallback(() => {
-            o.A.setState({ categoryId: c.Iq }),
-                s.A.loadCategoryResults({
+        a = o.A.useField("categoryId"),
+        _ = (0, r.bG)([d.A], () => d.A.getCategoryName(a)),
+        m = l.useCallback(() => {
+            o.A.setState({ categoryId: u.Iq }),
+                c.A.loadCategoryResults({
                     loadId: t,
-                    categoryId: c.Iq,
+                    categoryId: u.Iq,
                     query: o.A.getField("fetchedQuery"),
                     languageCode: o.A.getField("languageCode"),
                 });
         }, [t]),
-        p = n === c.Iq ? u.intl.string(u.t.Ivw1Is) : u.intl.formatToPlainString(u.t["+1WAFb"], { categoryName: _ }),
-        g = n === c.Iq ? u.intl.string(u.t.aXvEjd) : u.intl.format(u.t.XLioqn, { onClick: m });
-    return (0, i.jsxs)("div", {
-        className: A.kL,
+        C = a === u.Iq ? h.intl.string(h.t.Ivw1Is) : h.intl.formatToPlainString(h.t["+1WAFb"], { categoryName: _ }),
+        f = a === u.Iq ? h.intl.string(h.t.aXvEjd) : h.intl.format(h.t.XLioqn, { onClick: m });
+    return (0, s.jsxs)("div", {
+        className: g.kL,
         children: [
-            (0, i.jsx)("img", { alt: "", src: h, className: A.Sl }),
-            (0, i.jsx)(l.Heading, { variant: "heading-xl/semibold", className: A.wx, children: p }),
-            (0, i.jsx)(l.Text, { variant: "text-md/normal", color: "text-default", children: g }),
+            (0, s.jsx)("img", { alt: "", src: A, className: g.Sl }),
+            (0, s.jsx)(i.D, { variant: "heading-xl/semibold", className: g.wx, children: C }),
+            (0, s.jsx)(n.E, { variant: "text-md/normal", color: "text-default", children: f }),
         ],
     });
 };

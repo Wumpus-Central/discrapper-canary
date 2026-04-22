@@ -1,40 +1,40 @@
-n.d(e, { A: () => p });
-var i = n(627968),
-    r = n(64700),
-    l = n(735438),
-    a = n.n(l),
-    s = n(311907),
-    d = n(397927),
-    o = n(367513),
-    u = n(313961),
-    c = n(721592),
-    A = n(406704),
-    g = n(977997),
-    f = n(262763),
-    h = n(985018);
-function p(t) {
-    let e = (0, A._M)(t),
-        n = (0, s.bG)([g.A], () => g.A.isInChannel(t.id)),
-        l = (0, s.bG)([g.A], () => !a().isEmpty(g.A.getVoiceStatesForChannel(t.id))),
-        { needSubscriptionToAccess: p } = (0, c.A)(t.id),
-        m = (0, s.bG)([u.A], () => u.A.getChatOpen(t.id)),
-        v = r.useCallback(() => {
-            f.A.handleVoiceConnect({ channel: t, connected: n, needSubscriptionToAccess: p, locked: !1 });
-        }, [t, n, p]);
-    return n || !e
+i.d(n, { A: () => m });
+var e = i(627968),
+    l = i(64700),
+    r = i(735438),
+    a = i.n(r),
+    s = i(311907),
+    d = i(477782),
+    o = i(367513),
+    u = i(313961),
+    c = i(721592),
+    A = i(406704),
+    h = i(977997),
+    g = i(262763),
+    b = i(985018);
+function m(t) {
+    let n = (0, A._M)(t),
+        i = (0, s.bG)([h.A], () => h.A.isInChannel(t.id)),
+        r = (0, s.bG)([h.A], () => !a().isEmpty(h.A.getVoiceStatesForChannel(t.id))),
+        { needSubscriptionToAccess: m } = (0, c.A)(t.id),
+        f = (0, s.bG)([u.A], () => u.A.getChatOpen(t.id)),
+        j = l.useCallback(() => {
+            g.A.handleVoiceConnect({ channel: t, connected: i, needSubscriptionToAccess: m, locked: !1 });
+        }, [t, i, m]);
+    return i || !n
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, e.jsxs)(e.Fragment, {
               children: [
-                  (0, i.jsx)(d.Drp, {
+                  (0, e.jsx)(d.Dr, {
                       id: "join-thread-voice",
-                      label: l ? h.intl.string(h.t["0D/6Rz"]) : h.intl.string(h.t.My50nf),
-                      action: v,
+                      label: r ? b.intl.string(b.t["0D/6Rz"]) : b.intl.string(b.t.My50nf),
+                      action: j,
                   }),
-                  l &&
-                      !m &&
-                      (0, i.jsx)(d.Drp, {
+                  r &&
+                      !f &&
+                      (0, e.jsx)(d.Dr, {
                           id: "open-chat",
-                          label: h.intl.string(h.t.ZXxLQg),
+                          label: b.intl.string(b.t.ZXxLQg),
                           action: () => {
                               o.A.updateChatOpen(t.id, !0);
                           },

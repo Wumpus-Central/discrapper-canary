@@ -1,37 +1,37 @@
-n.d(t, { A: () => g });
-var l = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(688810),
-    r = n(612630),
-    d = n(657331),
-    o = n(961350),
-    s = n(351906),
-    u = n(652215),
-    c = n(518477),
-    A = n(985018);
+l.d(n, { A: () => g });
+var t = l(627968);
+l(64700);
+var i = l(477782),
+    r = l(688810),
+    a = l(612630),
+    d = l(657331),
+    s = l(961350),
+    o = l(351906),
+    u = l(652215),
+    c = l(518477),
+    A = l(985018);
 function g(e) {
-    let { user: t, guildId: n, channelId: g, context: m } = e,
-        { id: b } = t,
-        { loading: E, note: f } = (0, r.A)(b),
-        h = !E && null != f && f.length > 0,
-        x = m === u.BRT.POPOUT || m === u.BRT.OVERLAY,
-        { analyticsLocations: M } = (0, a.Ay)();
-    return b === o.default.getId() || s.A.hidePersonalInformation || x
+    let { user: n, guildId: l, channelId: g, context: b } = e,
+        { id: m } = n,
+        { loading: x, note: f } = (0, a.A)(m),
+        h = !x && null != f && f.length > 0,
+        E = b === u.BRT.POPOUT || b === u.BRT.OVERLAY,
+        { analyticsLocations: C } = (0, r.Ay)();
+    return m === s.default.getId() || o.A.hidePersonalInformation || E
         ? null
-        : (0, l.jsx)(i.Drp, {
+        : (0, t.jsx)(i.Dr, {
               id: "note",
-              label: E ? A.intl.string(A.t["WLKx/9"]) : h ? A.intl.string(A.t.sHHsOM) : A.intl.string(A.t.Dglxrf),
+              label: x ? A.intl.string(A.t["WLKx/9"]) : h ? A.intl.string(A.t.sHHsOM) : A.intl.string(A.t.Dglxrf),
               subtext: A.intl.string(A.t.r1BOdd),
               action: () => {
                   (0, d.openUserProfileModal)({
-                      userId: t.id,
+                      userId: n.id,
                       tabSection: c.RP.USER_INFO,
                       scrollTarget: c.bk.NOTE,
-                      guildId: n,
+                      guildId: l,
                       channelId: g,
-                      sourceAnalyticsLocations: M,
-                      appContext: m,
+                      sourceAnalyticsLocations: C,
+                      appContext: b,
                   });
               },
           });

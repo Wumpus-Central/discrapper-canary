@@ -1,5 +1,4 @@
-"use strict";
-function r(e, t) {
-    return t?.party?.id != null && e?.party?.id != null && e.party.id === t.party.id;
+i.d(e, { w: () => l });
+function l(t, e) {
+    return e?.party?.id != null && t?.party?.id != null && t.party.id === e.party.id;
 }
-n.d(t, { w: () => r });

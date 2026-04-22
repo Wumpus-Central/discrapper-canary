@@ -1,58 +1,60 @@
-s.r(t), s.d(t, { default: () => p });
+s.r(t), s.d(t, { default: () => f });
 var r = s(627968),
     l = s(64700),
-    n = s(158954),
+    n = s(189213),
     a = s(311907),
-    c = s(397927),
-    i = s(162605),
-    o = s(798286),
-    d = s(814278),
-    u = s(998759),
-    x = s(75811),
-    h = s(930840);
+    c = s(534514),
+    i = s(827734),
+    o = s(834730),
+    d = s(162605),
+    u = s(798286),
+    h = s(814278),
+    x = s(998759),
+    m = s(75811),
+    _ = s(930840);
 s(603266);
-var m = s(985018),
-    _ = s(963565);
-let p = function (e) {
-    let { transitionState: t, streamKey: s, channelId: p, onClose: f } = e,
-        j = (0, a.bG)([i.A], () => i.A.getSecureFramesState(s)?.epochAuthenticator),
-        T = (0, u.z)({ fingerprintBase64: j, chunkSize: 5, desiredLength: 30 }),
-        v = l.useCallback(() => {
-            (0, o.y5)({ channelId: p });
-        }, [p]),
-        g = { transitionState: t, title: m.intl.string(m.t.QogHld), subtitle: m.intl.string(m.t.qODBkW) },
-        k = (0, r.jsxs)(r.Fragment, {
+var p = s(985018),
+    j = s(751005);
+let f = function (e) {
+    let { transitionState: t, streamKey: s, channelId: f, onClose: v } = e,
+        g = (0, a.bG)([d.A], () => d.A.getSecureFramesState(s)?.epochAuthenticator),
+        E = (0, x.z)({ fingerprintBase64: g, chunkSize: 5, desiredLength: 30 }),
+        T = l.useCallback(() => {
+            (0, u.y5)({ channelId: f });
+        }, [f]),
+        k = { transitionState: t, title: p.intl.string(p.t.QogHld), subtitle: p.intl.string(p.t.qODBkW) },
+        A = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.Ot,
+                    className: j.Ot,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: _.wx,
+                            className: j.wx,
                             children: [
-                                (0, r.jsx)(c.Heading, {
+                                (0, r.jsx)(c.D, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
-                                    children: m.intl.string(m.t.cgBTyO),
+                                    children: p.intl.string(p.t.cgBTyO),
                                 }),
-                                null != T &&
-                                    (0, r.jsx)(h.c, {
-                                        className: _.nJ,
-                                        chunks: T,
-                                        color: c.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
-                                        onCopy: v,
+                                null != E &&
+                                    (0, r.jsx)(_.c, {
+                                        className: j.nJ,
+                                        chunks: E,
+                                        color: i.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                        onCopy: T,
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(x.j, { className: _.aY, chunks: T, columns: 3 }),
+                        (0, r.jsx)(m.j, { className: j.aY, chunks: E, columns: 3 }),
                     ],
                 }),
-                (0, r.jsx)(c.Text, {
-                    className: _.qr,
+                (0, r.jsx)(o.E, {
+                    className: j.qr,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: m.intl.format(m.t["H3+ktv"], { helpArticle: (0, d.aW)() }),
+                    children: p.intl.format(p.t["H3+ktv"], { helpArticle: (0, h.aW)() }),
                 }),
             ],
         });
-    return (0, r.jsx)(n.Modal, { ...g, onClose: f, actions: [], children: k });
+    return (0, r.jsx)(n.Modal, { ...k, onClose: v, actions: [], children: A });
 };

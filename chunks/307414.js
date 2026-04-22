@@ -1,12 +1,14 @@
-r.d(t, { A: () => h }), r(321073);
+r.d(t, { A: () => b }), r(321073);
 var n = r(627968),
-    a = r(64700),
-    i = r(397927),
+    i = r(64700),
+    a = r(289873),
+    o = r(331322),
+    l = r(534514),
     s = r(828904),
-    l = r(522278),
-    o = r(974175),
-    d = r(985018);
-let u = {
+    d = r(522278),
+    c = r(974175),
+    u = r(985018);
+let m = {
         hdrFrames: { key: "hdrFramesCapable", suffix: "Capable" },
         hybridDxgiFrames: { key: "hybridDxgiFramesUnique", suffix: "Unique" },
         hybridGdiBitBltFrames: { key: "hybridGdiBitBltFramesUnique", suffix: "Unique" },
@@ -14,7 +16,7 @@ let u = {
         hybridGraphicsCaptureFrames: { key: "hybridGraphicsCaptureFramesUnique", suffix: "Unique" },
         hybridVideohookFrames: { key: "hybridVideohookFramesUnique", suffix: "Unique" },
     },
-    c = [
+    p = [
         "hdrFrames",
         "hybridCaptureMethodSwitches",
         "hybridDxgiFrames",
@@ -31,45 +33,45 @@ let u = {
         "screenshareCapturedFps",
         "screenshareCapturedFpsUnique",
     ],
-    m = new Set([...c, ...Object.values(u).map((e) => e.key)]);
-class p extends a.PureComponent {
+    h = new Set([...p, ...Object.values(m).map((e) => e.key)]);
+class y extends i.PureComponent {
     render() {
         let { screenshare: e } = this.props;
         return null == e
-            ? (0, n.jsx)(i.y$y, { type: i.y$y.Type.SPINNING_CIRCLE })
-            : (0, n.jsxs)(i.BJc, {
+            ? (0, n.jsx)(a.y, { type: a.y.Type.SPINNING_CIRCLE })
+            : (0, n.jsxs)(o.B, {
                   children: [
-                      (0, n.jsx)(i.Heading, { variant: "heading-md/medium", children: d.intl.string(d.t["gWbr/U"]) }),
+                      (0, n.jsx)(l.D, { variant: "heading-md/medium", children: u.intl.string(u.t["gWbr/U"]) }),
                       (0, s.C6)(
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
                                   r = [];
-                              for (let a of c) {
-                                  if ("hybridGdiFrames" === a && t) continue;
-                                  let i = e[a];
-                                  if (void 0 === i) continue;
-                                  let s = u[a],
-                                      d = null != s ? e[s.key] : void 0;
-                                  null != s && void 0 !== d
+                              for (let i of p) {
+                                  if ("hybridGdiFrames" === i && t) continue;
+                                  let a = e[i];
+                                  if (void 0 === a) continue;
+                                  let o = m[i],
+                                      l = null != o ? e[o.key] : void 0;
+                                  null != o && void 0 !== l
                                       ? r.push(
                                             (0, n.jsx)(
-                                                l.A,
+                                                d.A,
                                                 {
-                                                    label: a,
-                                                    valueRendered: `${i} (${d})`,
+                                                    label: i,
+                                                    valueRendered: `${a} (${l})`,
                                                     renderGraph: null,
-                                                    children: `${o.f8[a] ?? a} (${s.suffix})`,
+                                                    children: `${c.f8[i] ?? i} (${o.suffix})`,
                                                 },
-                                                a,
+                                                i,
                                             ),
                                         )
-                                      : r.push((0, n.jsx)(o.q7, { label: a, value: i }, a));
+                                      : r.push((0, n.jsx)(c.q7, { label: i, value: a }, i));
                               }
-                              for (let [t, a] of Object.entries(e))
-                                  m.has(t) ||
-                                      o.R[t] ||
-                                      void 0 === a ||
-                                      r.push((0, n.jsx)(o.q7, { label: t, value: a }, t));
+                              for (let [t, i] of Object.entries(e))
+                                  h.has(t) ||
+                                      c.R[t] ||
+                                      void 0 === i ||
+                                      r.push((0, n.jsx)(c.q7, { label: t, value: i }, t));
                               return r;
                           })(e),
                       ),
@@ -77,4 +79,4 @@ class p extends a.PureComponent {
               });
     }
 }
-let h = p;
+let b = y;

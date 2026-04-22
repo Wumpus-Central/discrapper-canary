@@ -1,10 +1,11 @@
 "use strict";
-function n(e, t) {
-    return "string" == typeof (null == t ? void 0 : t.format) ? Object.assign(Object.assign({}, e[t.format]), t) : t;
-}
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.DEFAULT_FORMAT_CONFIG = void 0),
-    (t.resolveFormatConfigOptions = n),
+    (t.resolveFormatConfigOptions = function (e, t) {
+        return "string" == typeof (null == t ? void 0 : t.format)
+            ? Object.assign(Object.assign({}, e[t.format]), t)
+            : t;
+    }),
     (t.DEFAULT_FORMAT_CONFIG = {
         duration: {},
         list: {},

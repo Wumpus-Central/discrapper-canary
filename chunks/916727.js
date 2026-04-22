@@ -1,45 +1,46 @@
-i.d(t, { v: () => m });
+i.d(t, { v: () => x });
 var l = i(627968);
 i(64700);
 var n = i(311907),
-    a = i(732955),
-    s = i(397927),
-    r = i(701273),
-    c = i(71393),
-    d = i(602461),
-    o = i(985018),
-    u = i(432959);
-let m = (e) => {
-    let { onClose: t, listing: i, guildId: m } = e,
-        x = (0, n.bG)([c.A], () => c.A.getGuild(m), [m]),
-        h = (0, d.A)({ listing: i, guildId: m });
+    s = i(821609),
+    a = i(534514),
+    r = i(834730),
+    c = i(701273),
+    d = i(71393),
+    o = i(602461),
+    u = i(985018),
+    m = i(207816);
+let x = (e) => {
+    let { onClose: t, listing: i, guildId: x } = e,
+        h = (0, n.bG)([d.A], () => d.A.getGuild(x), [x]),
+        g = (0, o.A)({ listing: i, guildId: x });
     return (0, l.jsxs)("div", {
-        className: u.RP,
+        className: m.RP,
         children: [
-            (0, l.jsx)(s.Heading, {
-                className: u.RS,
+            (0, l.jsx)(a.D, {
+                className: m.RS,
                 variant: "heading-lg/extrabold",
-                children: o.intl.format(o.t.I5dYFs, { serverName: x?.name, tierName: i.name }),
+                children: u.intl.format(u.t.I5dYFs, { serverName: h?.name, tierName: i.name }),
             }),
-            !h.isEmpty() &&
-                (0, l.jsx)(s.Text, {
-                    className: u.sT,
+            !g.isEmpty() &&
+                (0, l.jsx)(r.E, {
+                    className: m.sT,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: o.intl.format(o.t.TnhFHv, { benefits: h.asString() }),
+                    children: u.intl.format(u.t.TnhFHv, { benefits: g.asString() }),
                 }),
             (0, l.jsxs)("div", {
-                className: u.o1,
+                className: m.o1,
                 children: [
-                    (0, l.jsx)(a.$nd, {
+                    (0, l.jsx)(s.$, {
                         variant: "primary",
-                        text: o.intl.string(o.t.WWvswD),
+                        text: u.intl.string(u.t.WWvswD),
                         fullWidth: !0,
-                        onClick: () => (0, r.A)("role_sub_mweb_success_modal"),
+                        onClick: () => (0, c.A)("role_sub_mweb_success_modal"),
                     }),
-                    (0, l.jsx)(a.$nd, {
+                    (0, l.jsx)(s.$, {
                         variant: "secondary",
-                        text: o.intl.string(o.t.y84Dhr),
+                        text: u.intl.string(u.t.y84Dhr),
                         fullWidth: !0,
                         onClick: () => t(!0),
                     }),

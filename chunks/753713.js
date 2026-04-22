@@ -1,49 +1,46 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    s = n(853390),
-    a = n(985018),
-    o = n(246453);
-let l = 10;
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l;
-    return Math.floor(e / t) * t;
-}
-function c(e) {
-    let { start: t, end: n } = e,
-        { elapsed: l, duration: c, percentage: d } = (0, s.Ay)({ start: t, end: n }),
-        _ = u(l),
-        f = c > 0 ? Math.round((_ / c) * 100) : 0,
-        p = (0, s.Ar)(_),
-        h = (0, s.Ar)(c),
-        m = a.intl.formatToPlainString(a.t.wmUSiy, { count: p, max: h });
-    return (0, r.jsxs)("div", {
-        className: o.kL,
+e.d(n, { A: () => o });
+var i = e(627968);
+e(64700);
+var l = e(834730),
+    r = e(853390),
+    a = e(985018),
+    s = e(860464);
+function o(t) {
+    let { start: n, end: e } = t,
+        { elapsed: o, duration: c, percentage: u } = (0, r.Ay)({ start: n, end: e }),
+        d = (function (t) {
+            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+            return Math.floor(t / n) * n;
+        })(o),
+        A = c > 0 ? Math.round((d / c) * 100) : 0,
+        x = (0, r.Ar)(d),
+        p = (0, r.Ar)(c),
+        f = a.intl.formatToPlainString(a.t.wmUSiy, { count: x, max: p });
+    return (0, i.jsxs)("div", {
+        className: s.kL,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(l.E, {
                 variant: "text-xs/normal",
                 color: "text-default",
-                className: o.Qq,
+                className: s.Qq,
                 "aria-hidden": !0,
-                children: (0, s.fU)(l),
+                children: (0, r.fU)(o),
             }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 role: "progressbar",
-                className: o.M0,
-                "aria-valuenow": f,
+                className: s.M0,
+                "aria-valuenow": A,
                 "aria-valuemin": 0,
                 "aria-valuemax": 100,
-                "aria-valuetext": m,
-                children: (0, r.jsx)("div", { className: o.qB, style: { width: `${100 * d}%` } }),
+                "aria-valuetext": f,
+                children: (0, i.jsx)("div", { className: s.qB, style: { width: `${100 * u}%` } }),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(l.E, {
                 variant: "text-xs/normal",
                 color: "text-default",
-                className: o.Qq,
+                className: s.Qq,
                 "aria-hidden": !0,
-                children: (0, s.fU)(c),
+                children: (0, r.fU)(c),
             }),
         ],
     });

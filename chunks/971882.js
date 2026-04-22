@@ -13,21 +13,15 @@ function t(e) {
     else if (arguments.length > 0) for (var r = 0, i = arguments.length; r < i; r++) n.push(arguments[r]);
     return n;
 }
-function n(e, t) {
-    (e.tail = new i(t, e.tail, null, e)), e.head || (e.head = e.tail), e.length++;
-}
-function r(e, t) {
-    (e.head = new i(t, null, e.head, e)), e.tail || (e.tail = e.head), e.length++;
-}
-function i(e, t, n, r) {
-    if (!(this instanceof i)) return new i(e, t, n, r);
-    (this.list = r),
+function n(e, t, r, i) {
+    if (!(this instanceof n)) return new n(e, t, r, i);
+    (this.list = i),
         (this.value = e),
         t ? ((t.next = this), (this.prev = t)) : (this.prev = null),
-        n ? ((n.prev = this), (this.next = n)) : (this.next = null);
+        r ? ((r.prev = this), (this.next = r)) : (this.next = null);
 }
 (e.exports = t),
-    (t.Node = i),
+    (t.Node = n),
     (t.create = t),
     (t.prototype.removeNode = function (e) {
         if (e.list !== this) throw Error("removing node which does not belong to this list");
@@ -67,11 +61,23 @@ function i(e, t, n, r) {
         }
     }),
     (t.prototype.push = function () {
-        for (var e = 0, t = arguments.length; e < t; e++) n(this, arguments[e]);
+        for (var e, t, r = 0, i = arguments.length; r < i; r++) {
+            (e = this),
+                (t = arguments[r]),
+                (e.tail = new n(t, e.tail, null, e)),
+                e.head || (e.head = e.tail),
+                e.length++;
+        }
         return this.length;
     }),
     (t.prototype.unshift = function () {
-        for (var e = 0, t = arguments.length; e < t; e++) r(this, arguments[e]);
+        for (var e, t, r = 0, i = arguments.length; r < i; r++) {
+            (e = this),
+                (t = arguments[r]),
+                (e.head = new n(t, null, e.head, e)),
+                e.tail || (e.tail = e.head),
+                e.length++;
+        }
         return this.length;
     }),
     (t.prototype.pop = function () {
@@ -147,8 +153,8 @@ function i(e, t, n, r) {
         var r = new t();
         if (n < e || n < 0) return r;
         e < 0 && (e = 0), n > this.length && (n = this.length);
-        for (var i = 0, a = this.head; null !== a && i < e; i++) a = a.next;
-        for (; null !== a && i < n; i++, a = a.next) r.push(a.value);
+        for (var i = 0, s = this.head; null !== s && i < e; i++) s = s.next;
+        for (; null !== s && i < n; i++, s = s.next) r.push(s.value);
         return r;
     }),
     (t.prototype.sliceReverse = function (e, n) {
@@ -156,8 +162,8 @@ function i(e, t, n, r) {
         var r = new t();
         if (n < e || n < 0) return r;
         e < 0 && (e = 0), n > this.length && (n = this.length);
-        for (var i = this.length, a = this.tail; null !== a && i > n; i--) a = a.prev;
-        for (; null !== a && i > e; i--, a = a.prev) r.push(a.value);
+        for (var i = this.length, s = this.tail; null !== s && i > n; i--) s = s.prev;
+        for (; null !== s && i > e; i--, s = s.prev) r.push(s.value);
         return r;
     }),
     (t.prototype.reverse = function () {

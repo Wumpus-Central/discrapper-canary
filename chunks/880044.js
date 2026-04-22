@@ -1,78 +1,88 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0);
 let r = n(725354);
-class i {
+t.InternalIntlMessage = class {
     constructor(e, t) {
         (this.locale = t), (this.ast = (0, r.isCompressedAst)(e) ? e : (0, r.compressFormatJsToAst)(e));
     }
     reserialize() {
         if ("string" == typeof this.ast) return this.ast;
         let e = { value: "" };
-        return s(this.ast, e), e.value;
+        return (
+            (function e(t, n) {
+                for (let i of t) {
+                    if ("string" == typeof i) {
+                        n.value += i;
+                        continue;
+                    }
+                    switch (i[0]) {
+                        case r.FormatJsNodeType.Argument:
+                            n.value += "{" + i[1] + "}";
+                            break;
+                        case r.FormatJsNodeType.Date:
+                            (n.value += "{" + i[1] + ", date"),
+                                null != i[2] && (n.value += ", " + i[2]),
+                                (n.value += "}");
+                            break;
+                        case r.FormatJsNodeType.Time:
+                            (n.value += "{" + i[1] + ", time"),
+                                null != i[2] && (n.value += ", " + i[2]),
+                                (n.value += "}");
+                            break;
+                        case r.FormatJsNodeType.Number:
+                            (n.value += "{" + i[1] + ", number"),
+                                null != i[2] && (n.value += ", " + i[2]),
+                                (n.value += "}");
+                            break;
+                        case r.FormatJsNodeType.Plural: {
+                            let t = "ordinal" == i[4] ? "selectordinal" : "plural";
+                            for (let [r, s] of ((n.value += "{" + i[1] + ", " + t + ","),
+                            i[3] && (n.value += " offset:" + i[3]),
+                            Object.entries(i[2])))
+                                (n.value += " " + r + " {"), e(s, n), (n.value += "}");
+                            n.value += "}";
+                            break;
+                        }
+                        case r.FormatJsNodeType.Pound:
+                            n.value += "#";
+                            break;
+                        case r.FormatJsNodeType.Select:
+                            for (let [t, r] of ((n.value += "{" + i[1] + ", select,"), Object.entries(i[2])))
+                                (n.value += " " + t + " {"), e(r, n), (n.value += "}");
+                            n.value += "}";
+                            break;
+                        case r.FormatJsNodeType.Tag:
+                            !(function (t, n) {
+                                switch (t[1]) {
+                                    case "$b":
+                                        (n.value += "**"), e(t[2], n), (n.value += "**");
+                                        break;
+                                    case "$i":
+                                        (n.value += "*"), e(t[2], n), (n.value += "*");
+                                        break;
+                                    case "$code":
+                                        (n.value += "`"), e(t[2], n), (n.value += "`");
+                                        break;
+                                    case "$p":
+                                        e(t[2], n), (n.value += "\n\n");
+                                        break;
+                                    case "$link":
+                                        let r = t[2],
+                                            i = t[3];
+                                        (n.value += "["),
+                                            e(r, n),
+                                            (n.value += "]("),
+                                            null != i && e(i, n),
+                                            (n.value += ")");
+                                        break;
+                                    default:
+                                        (n.value += "$["), e(t[2], n), (n.value += "](" + t[1] + ")");
+                                }
+                            })(i, n);
+                    }
+                }
+            })(this.ast, e),
+            e.value
+        );
     }
-}
-function s(e, t) {
-    for (let n of e) {
-        if ("string" == typeof n) {
-            t.value += n;
-            continue;
-        }
-        switch (n[0]) {
-            case r.FormatJsNodeType.Argument:
-                t.value += "{" + n[1] + "}";
-                break;
-            case r.FormatJsNodeType.Date:
-                (t.value += "{" + n[1] + ", date"), null != n[2] && (t.value += ", " + n[2]), (t.value += "}");
-                break;
-            case r.FormatJsNodeType.Time:
-                (t.value += "{" + n[1] + ", time"), null != n[2] && (t.value += ", " + n[2]), (t.value += "}");
-                break;
-            case r.FormatJsNodeType.Number:
-                (t.value += "{" + n[1] + ", number"), null != n[2] && (t.value += ", " + n[2]), (t.value += "}");
-                break;
-            case r.FormatJsNodeType.Plural: {
-                let e = "ordinal" == n[4] ? "selectordinal" : "plural";
-                for (let [r, i] of ((t.value += "{" + n[1] + ", " + e + ","),
-                n[3] && (t.value += " offset:" + n[3]),
-                Object.entries(n[2])))
-                    (t.value += " " + r + " {"), s(i, t), (t.value += "}");
-                t.value += "}";
-                break;
-            }
-            case r.FormatJsNodeType.Pound:
-                t.value += "#";
-                break;
-            case r.FormatJsNodeType.Select:
-                for (let [e, r] of ((t.value += "{" + n[1] + ", select,"), Object.entries(n[2])))
-                    (t.value += " " + e + " {"), s(r, t), (t.value += "}");
-                t.value += "}";
-                break;
-            case r.FormatJsNodeType.Tag:
-                a(n, t);
-        }
-    }
-}
-function a(e, t) {
-    switch (e[1]) {
-        case "$b":
-            (t.value += "**"), s(e[2], t), (t.value += "**");
-            break;
-        case "$i":
-            (t.value += "*"), s(e[2], t), (t.value += "*");
-            break;
-        case "$code":
-            (t.value += "`"), s(e[2], t), (t.value += "`");
-            break;
-        case "$p":
-            s(e[2], t), (t.value += "\n\n");
-            break;
-        case "$link":
-            let n = e[2],
-                r = e[3];
-            (t.value += "["), s(n, t), (t.value += "]("), null != r && s(r, t), (t.value += ")");
-            break;
-        default:
-            (t.value += "$["), s(e[2], t), (t.value += "](" + e[1] + ")");
-    }
-}
-t.InternalIntlMessage = i;
+};

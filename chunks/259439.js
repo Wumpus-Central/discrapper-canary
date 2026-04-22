@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var r = n(311907),
     i = n(506774),
-    a = n(73153),
-    s = n(998218),
+    s = n(73153),
+    a = n(998218),
     o = n(155078),
     l = n(272984);
 let u = "MaskedLinkStore",
-    c = new Set(),
     d = new Set(),
+    c = new Set(),
     _ = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.replace("//", "");
 function f(e) {
     let t = (0, o.E)(e);
@@ -20,38 +20,39 @@ function f(e) {
         case location.hostname:
             return !0;
         default:
-            return l.UN.includes(t) || s.A.isDiscordHostname(t) || c.has(t);
+            return l.UN.includes(t) || a.A.isDiscordHostname(t) || d.has(t);
     }
 }
-function p(e) {
+function E(e) {
     let t = (0, o.J)(e);
-    return d.has(t);
+    return c.has(t);
 }
-function h(e) {
-    let { url: t } = e;
-    if (f(t)) return !1;
-    c.add((0, o.E)(t)), i.w.set(u, { trustedDomains: c, trustedProtocols: d });
-}
-function m(e) {
-    let { url: t } = e;
-    if (p(t)) return !1;
-    d.add((0, o.J)(t)), i.w.set(u, { trustedDomains: c, trustedProtocols: d });
-}
-class g extends r.Ay.Store {
+class h extends r.Ay.Store {
     static displayName = "MaskedLinkStore";
     initialize() {
         let e = i.w.get(u) ?? {};
-        if (Array.isArray(e)) (c = new Set(null != e ? Array.from(e) : null)), (d = new Set());
+        if (Array.isArray(e)) (d = new Set(null != e ? Array.from(e) : null)), (c = new Set());
         else {
             let { trustedDomains: t, trustedProtocols: n } = e;
-            (c = new Set(null != t ? Array.from(t) : null)), (d = new Set(null != n ? Array.from(n) : null));
+            (d = new Set(null != t ? Array.from(t) : null)), (c = new Set(null != n ? Array.from(n) : null));
         }
     }
     isTrustedDomain(e) {
         return f(e);
     }
     isTrustedProtocol(e) {
-        return p(e);
+        return E(e);
     }
 }
-let E = new g(a.h, { MASKED_LINK_ADD_TRUSTED_DOMAIN: h, MASKED_LINK_ADD_TRUSTED_PROTOCOL: m });
+let p = new h(s.h, {
+    MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
+        let { url: t } = e;
+        if (f(t)) return !1;
+        d.add((0, o.E)(t)), i.w.set(u, { trustedDomains: d, trustedProtocols: c });
+    },
+    MASKED_LINK_ADD_TRUSTED_PROTOCOL: function (e) {
+        let { url: t } = e;
+        if (E(t)) return !1;
+        c.add((0, o.J)(t)), i.w.set(u, { trustedDomains: d, trustedProtocols: c });
+    },
+});

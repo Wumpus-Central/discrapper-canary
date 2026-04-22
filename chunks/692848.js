@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { Z: () => c, o: () => u }), n(323874), n(14289), n(35956);
-var r = n(607399),
-    i = n(136722),
+n.d(t, { Z: () => c, o: () => d }), n(323874), n(14289), n(35956);
+var i = n(607399),
+    l = n(136722),
     a = n(200330),
     s = n(954571),
-    o = n(307600),
-    l = n(652215);
-function u(e) {
+    r = n(307600),
+    o = n(652215);
+function d(e) {
     let {
         applicationId: t,
         customInstallUrl: n,
-        installParams: u,
+        installParams: d,
         integrationTypesConfig: c,
-        guildId: d,
-        channelId: _,
-        disableGuildSelect: f,
-        source: p,
-        oauth2Callback: h,
+        guildId: u,
+        channelId: m,
+        disableGuildSelect: _,
+        source: h,
+        oauth2Callback: p,
     } = e;
     if (null != n) {
-        s.default.track(l.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        s.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
-            guild_id: d,
+            guild_id: u,
             auth_type: "custom_url",
-            source: p,
-            device_platform: r.Fr ? "mobile_web" : "desktop_web",
+            source: h,
+            device_platform: i.Fr ? "mobile_web" : "desktop_web",
         }),
-            (0, o.h)({ href: n });
+            (0, r.h)({ href: n });
         return;
     }
     if (null != c && Object.values(c).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
-        s.default.track(l.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+        s.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
-            guild_id: d,
+            guild_id: u,
             auth_type: "in_app",
-            source: p,
-            device_platform: r.Fr ? "mobile_web" : "desktop_web",
+            source: h,
+            device_platform: i.Fr ? "mobile_web" : "desktop_web",
         }),
-            (0, a.openOAuth2Modal)({ clientId: t, guildId: d, channelId: _, disableGuildSelect: f, callback: h });
+            (0, a.openOAuth2Modal)({ clientId: t, guildId: u, channelId: m, disableGuildSelect: _, callback: p });
         return;
     }
-    null != u &&
-        (s.default.track(l.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+    null != d &&
+        (s.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
-            guild_id: d,
+            guild_id: u,
             auth_type: "in_app",
-            source: p,
-            device_platform: r.Fr ? "mobile_web" : "desktop_web",
+            source: h,
+            device_platform: i.Fr ? "mobile_web" : "desktop_web",
         }),
         (0, a.openOAuth2Modal)({
             clientId: t,
-            guildId: d,
-            channelId: _,
-            disableGuildSelect: f,
-            scopes: u.scopes,
-            permissions: null != u.permissions ? i.iu(u.permissions) : void 0,
-            callback: h,
+            guildId: u,
+            channelId: m,
+            disableGuildSelect: _,
+            scopes: d.scopes,
+            permissions: null != d.permissions ? l.iu(d.permissions) : void 0,
+            callback: p,
         }));
 }
 function c(e) {
-    let { applicationId: t, customInstallUrl: n, installParams: r, integrationTypesConfig: i } = e;
+    let { applicationId: t, customInstallUrl: n, installParams: i, integrationTypesConfig: l } = e;
     if (null != n) return null;
-    if (null != i && Object.values(i).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
-        let e = new URL(l.BVt.OAUTH2_AUTHORIZE, window.location.origin);
+    if (null != l && Object.values(l).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
+        let e = new URL(o.BVt.OAUTH2_AUTHORIZE, window.location.origin);
         return e.searchParams.set("client_id", t), e.toString();
     }
-    if (null != r) {
-        let e = new URL(l.BVt.OAUTH2_AUTHORIZE, window.location.origin);
+    if (null != i) {
+        let e = new URL(o.BVt.OAUTH2_AUTHORIZE, window.location.origin);
         return (
             e.searchParams.set("client_id", t),
-            e.searchParams.set("scope", r.scopes.join(" ")),
-            null != r.permissions && e.searchParams.set("permissions", r.permissions),
+            e.searchParams.set("scope", i.scopes.join(" ")),
+            null != i.permissions && e.searchParams.set("permissions", i.permissions),
             e.toString()
         );
     }

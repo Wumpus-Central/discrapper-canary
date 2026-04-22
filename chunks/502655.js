@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__5d756",
     cK: "dragContainer__5d756",

@@ -1,24 +1,24 @@
-n.d(t, { n: () => o });
-var i = n(627968),
-    l = n(397927),
-    a = n(164203),
-    r = n(985018),
-    s = n(332544);
+s.d(t, { n: () => o });
+var n = s(627968),
+    l = s(534514),
+    a = s(164203),
+    r = s(985018),
+    i = s(332544);
 let o = (e) => {
     let { quest: t } = e;
-    return (0, i.jsx)("div", {
-        className: s.x3,
-        children: (0, i.jsxs)("div", {
-            className: s.B0,
+    return (0, n.jsx)("div", {
+        className: i.x3,
+        children: (0, n.jsxs)("div", {
+            className: i.B0,
             children: [
-                (0, i.jsx)(l.Heading, {
-                    className: s.R_,
+                (0, n.jsx)(l.D, {
+                    className: i.R_,
                     variant: "heading-md/semibold",
                     children: r.intl.string(r.t.gWinpQ),
                 }),
-                (0, i.jsx)("div", {
-                    className: s.YT,
-                    children: (0, i.jsx)(a.A, {
+                (0, n.jsx)("div", {
+                    className: i.YT,
+                    children: (0, n.jsx)(a.A, {
                         channelId: "preview-channel-id",
                         previewQuest: t,
                         isParticipatingOverride: !1,

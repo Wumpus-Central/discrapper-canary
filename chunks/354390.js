@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { S: () => o });
 var i = n(627968),
-    s = n(64700),
-    l = n(95035),
+    l = n(64700),
+    s = n(95035),
     r = n(192701);
 function a(e) {
     return e;
@@ -10,9 +9,9 @@ function a(e) {
 function o(e) {
     let { onEnableMFAClick: t, onMFAEnabled: n } = e,
         { isUserMFAEnabled: o, isModerationMFAEnabled: d } = (0, r.f)(),
-        c = s.useCallback(async () => {
+        c = l.useCallback(async () => {
             await t(), n?.();
         }, [t, n]),
-        u = s.useCallback((e) => (0, i.jsx)(l.A, { onClick: c, children: e }), [c]);
+        u = l.useCallback((e) => (0, i.jsx)(s.A, { onClick: c, children: e }), [c]);
     return o && d ? a : u;
 }

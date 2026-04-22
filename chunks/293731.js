@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { J: () => l, v: () => a }),
+n.d(e, { J: () => r, v: () => l }),
     n(393431),
     n(532706),
     n(42231),
@@ -8,60 +7,60 @@ n.d(t, { J: () => l, v: () => a }),
     n(767709),
     n(65162),
     n(508300);
-var i = n(284009),
-    s = n.n(i);
-function r(e) {
-    if (null != e)
-        return btoa(String.fromCharCode(...new Uint8Array(e)))
+var s = n(284009),
+    i = n.n(s);
+function a(t) {
+    if (null != t)
+        return btoa(String.fromCharCode(...new Uint8Array(t)))
             .replace(/\+/g, "-")
             .replace(/\//g, "_")
             .replace(/=/g, "");
 }
-async function l(e, t) {
+async function r(t, e) {
     var n;
-    let i,
-        l = JSON.parse(e),
-        a = PublicKeyCredential.parseRequestOptionsFromJSON(l.publicKey),
-        o = { ...l, publicKey: a, signal: t };
+    let s,
+        r = JSON.parse(t),
+        l = PublicKeyCredential.parseRequestOptionsFromJSON(r.publicKey),
+        c = { ...r, publicKey: l, signal: e };
     return (
-        (i = (n = await navigator.credentials.get(o)).response),
-        s()(i instanceof AuthenticatorAssertionResponse, "WebAuthn: Cannot parse attestation response for assertion"),
+        (s = (n = await navigator.credentials.get(c)).response),
+        i()(s instanceof AuthenticatorAssertionResponse, "WebAuthn: Cannot parse attestation response for assertion"),
         JSON.stringify({
             authenticatorAttachment: n.authenticatorAttachment,
             clientExtensionResults: n.getClientExtensionResults(),
             id: n.id,
-            rawId: r(n.rawId),
+            rawId: a(n.rawId),
             response: {
-                authenticatorData: r(i.authenticatorData),
-                clientDataJSON: r(i.clientDataJSON),
-                signature: r(i.signature),
-                userHandle: r(i.userHandle),
+                authenticatorData: a(s.authenticatorData),
+                clientDataJSON: a(s.clientDataJSON),
+                signature: a(s.signature),
+                userHandle: a(s.userHandle),
             },
             type: n.type,
         })
     );
 }
-async function a(e, t) {
+async function l(t, e) {
     var n;
-    let i,
-        l = JSON.parse(e),
-        a = PublicKeyCredential.parseCreationOptionsFromJSON(l.publicKey),
-        o = { ...l, publicKey: a, signal: t };
+    let s,
+        r = JSON.parse(t),
+        l = PublicKeyCredential.parseCreationOptionsFromJSON(r.publicKey),
+        c = { ...r, publicKey: l, signal: e };
     return (
-        (i = (n = await navigator.credentials.create(o)).response),
-        s()(i instanceof AuthenticatorAttestationResponse, "WebAuthn: Cannot parse assertion response for attestation"),
+        (s = (n = await navigator.credentials.create(c)).response),
+        i()(s instanceof AuthenticatorAttestationResponse, "WebAuthn: Cannot parse assertion response for attestation"),
         JSON.stringify({
             authenticatorAttachment: n.authenticatorAttachment,
             clientExtensionResults: n.getClientExtensionResults(),
             id: n.id,
-            rawId: r(n.rawId),
+            rawId: a(n.rawId),
             response: {
-                attestationObject: r(i.attestationObject),
-                authenticatorData: r(i.getAuthenticatorData()),
-                clientDataJSON: r(i.clientDataJSON),
-                publicKey: r(i.getPublicKey()),
-                publicKeyAlgorithm: i.getPublicKeyAlgorithm(),
-                transports: i.getTransports(),
+                attestationObject: a(s.attestationObject),
+                authenticatorData: a(s.getAuthenticatorData()),
+                clientDataJSON: a(s.clientDataJSON),
+                publicKey: a(s.getPublicKey()),
+                publicKeyAlgorithm: s.getPublicKeyAlgorithm(),
+                transports: s.getTransports(),
             },
             type: n.type,
         })

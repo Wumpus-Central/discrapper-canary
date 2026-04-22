@@ -1,14 +1,14 @@
-n.d(t, { K: () => d, default: () => c });
+n.d(t, { K: () => d, default: () => u });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(192308),
     l = n(87719),
-    a = n(244975),
+    a = n(831318),
     r = n(985018),
     o = n(880223);
 function d(e) {
     let { onSubscribeFinish: t, stackingBehavior: l } = e;
-    (0, s.mMO)(
+    (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 407217));
             return (n) => (0, i.jsx)(e, { onSubscribeFinish: t, ...n });
@@ -16,9 +16,9 @@ function d(e) {
         { stackingBehavior: l },
     );
 }
-function c(e) {
+function u(e) {
     let { onClose: t, ...n } = e;
-    return (0, i.jsx)(a.F, {
+    return (0, i.jsx)(a.A, {
         title: r.intl.string(r.t.reVc0M),
         subtitle: r.intl.string(r.t.KckEj7),
         graphic: { src: o.A, type: "image" },

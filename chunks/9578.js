@@ -1,33 +1,31 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(791332),
-    s = n.n(a),
-    o = n(397927),
-    l = n(793574),
-    u = n(688810),
-    c = n(307600);
-let d = 1,
-    _ = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: a, href: _, children: f, messageId: p, channelId: h, ...m } = e,
-            { analyticsLocations: g } = (0, u.Ay)(l.A.MASKED_LINK),
-            E = i.useCallback((t) => (0, c.h)(e, t, g), [g, e]),
-            A = i.useCallback(
-                (e) => {
-                    e.button === d && E(e);
-                },
-                [E],
-            ),
-            I = s().sanitizeUrl(_);
-        return (0, r.jsx)(o.MzZ, {
-            ...m,
-            title: a,
-            target: "_blank",
-            rel: "noreferrer noopener",
-            href: I,
-            onClick: E,
-            onAuxClick: A,
-            children: f ?? a,
-        });
+t.d(l, { A: () => c });
+var r = t(627968),
+    n = t(64700),
+    i = t(791332),
+    a = t.n(i),
+    s = t(349288),
+    d = t(793574),
+    o = t(688810),
+    u = t(307600);
+let c = n.memo(function (e) {
+    let { onClick: l, trusted: t, title: i, href: c, children: v, messageId: C, channelId: h, ...m } = e,
+        { analyticsLocations: g } = (0, o.Ay)(d.A.MASKED_LINK),
+        f = n.useCallback((l) => (0, u.h)(e, l, g), [g, e]),
+        p = n.useCallback(
+            (e) => {
+                1 === e.button && f(e);
+            },
+            [f],
+        ),
+        x = a().sanitizeUrl(c);
+    return (0, r.jsx)(s.Anchor, {
+        ...m,
+        title: i,
+        target: "_blank",
+        rel: "noreferrer noopener",
+        href: x,
+        onClick: f,
+        onAuxClick: p,
+        children: v ?? i,
     });
+});

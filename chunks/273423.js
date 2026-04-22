@@ -1,43 +1,44 @@
-a.d(t, { A: () => C, I: () => A }), a(321073);
+a.d(t, { A: () => b, I: () => f }), a(321073);
 var n,
-    i = a(627968),
-    l = a(64700),
+    l = a(627968),
+    i = a(64700),
     s = a(503698),
     r = a.n(s),
     o = a(311907),
     c = a(990078),
     d = a(319060),
-    u = a(397927),
+    u = a(664121),
+    h = a(834730),
     m = a(573435),
-    h = a(773669),
-    p = a(486020),
-    _ = a(240248),
-    g = a(985018),
-    x = a(805936),
-    A =
-        (((n = {})[(n.SMALL = (0, _.xI)(d.A.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
-        (n[(n.LARGE = (0, _.xI)(d.A.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
+    p = a(773669),
+    _ = a(486020),
+    g = a(240248),
+    x = a(985018),
+    A = a(805936),
+    f =
+        (((n = {})[(n.SMALL = (0, g.xI)(d.A.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
+        (n[(n.LARGE = (0, g.xI)(d.A.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
         n);
-let f = { [A.SMALL]: x.Ps, [A.LARGE]: x.XY },
-    b = { [A.SMALL]: x.Bx, [A.LARGE]: x.J3 };
-function C(e) {
+let C = { [f.SMALL]: A.Ps, [f.LARGE]: A.XY },
+    v = { [f.SMALL]: A.Bx, [f.LARGE]: A.J3 };
+function b(e) {
     let {
             application: t,
             mutualGuilds: a,
             mutualGuildShownMax: n = 4,
             className: s,
             textVariant: d = "text-sm/normal",
-            compact: _,
-            guildIconSize: C = A.LARGE,
-            guildsClassName: v,
-            children: j,
+            compact: g,
+            guildIconSize: b = f.LARGE,
+            guildsClassName: j,
+            children: I,
         } = e,
-        I = (0, o.bG)([h.default], () => h.default.locale),
-        S = new Intl.ListFormat(I),
-        E = t.directory_entry?.guild_count ?? 0,
-        N = a?.length ?? 0,
-        y = Math.max(0, E - N),
-        { shownMutualGuilds: T, hiddenMutualGuilds: R } = l.useMemo(() => {
+        E = (0, o.bG)([p.default], () => p.default.locale),
+        N = new Intl.ListFormat(E),
+        S = t.directory_entry?.guild_count ?? 0,
+        y = a?.length ?? 0,
+        P = Math.max(0, S - y),
+        { shownMutualGuilds: R, hiddenMutualGuilds: T } = i.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -48,86 +49,86 @@ function C(e) {
                 { shownMutualGuilds: e, hiddenMutualGuilds: t }
             );
         }, [a, n]),
-        P = R.length,
-        L = (function (e, t, a, n, i) {
+        L = T.length,
+        D = (function (e, t, a, n, l) {
             if (0 === t && 0 === e) return null;
-            if (t > 0 && 0 === a) return g.intl.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
-            let l = t > 0 ? g.t.YR8PSL : g.t.GQjq6c,
-                s = new Intl.NumberFormat(n, { notation: i ? "compact" : "standard", compactDisplay: "short" });
-            return g.intl.formatToPlainString(l, {
+            if (t > 0 && 0 === a) return x.intl.formatToPlainString(x.t.pnzE1t, { mutualGuildCount: t });
+            let i = t > 0 ? x.t.YR8PSL : x.t.GQjq6c,
+                s = new Intl.NumberFormat(n, { notation: l ? "compact" : "standard", compactDisplay: "short" });
+            return x.intl.formatToPlainString(i, {
                 guildCount: s.format(e),
                 mutualGuildCount: t,
                 nonMutualGuildCount: s.format(a),
             });
-        })(E, N, y, I, _);
-    return 0 === T.length && null == L
+        })(S, y, P, E, g);
+    return 0 === R.length && null == D
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  j,
-                  (0, i.jsxs)("div", {
-                      className: r()(s, x.iE),
+                  I,
+                  (0, l.jsxs)("div", {
+                      className: r()(s, A.iE),
                       children: [
-                          (0, i.jsx)("div", {
-                              className: r()(x.Pt, v),
+                          (0, l.jsx)("div", {
+                              className: r()(A.Pt, j),
                               children:
-                                  T.length > 0
-                                      ? (0, i.jsxs)(i.Fragment, {
+                                  R.length > 0
+                                      ? (0, l.jsxs)(l.Fragment, {
                                             children: [
-                                                T.map((e, t) => {
-                                                    let a = t === T.length - 1 && 0 === P,
-                                                        n = p.Ay.getGuildIconURL({
+                                                R.map((e, t) => {
+                                                    let a = t === R.length - 1 && 0 === L,
+                                                        n = _.Ay.getGuildIconURL({
                                                             id: e.id,
                                                             icon: e.icon,
-                                                            size: C,
+                                                            size: b,
                                                             canAnimate: !1,
                                                         }),
-                                                        s = (0, i.jsx)(c.m, {
+                                                        s = (0, l.jsx)(c.m, {
                                                             text: e.name,
                                                             position: "top",
-                                                            children: (0, i.jsx)("img", {
-                                                                className: r()(x.Kk, b[C]),
+                                                            children: (0, l.jsx)("img", {
+                                                                className: r()(A.Kk, v[b]),
                                                                 src: n,
                                                                 alt: "",
                                                             }),
                                                         });
                                                     return a
-                                                        ? (0, i.jsx)(l.Fragment, { children: s }, e.id)
-                                                        : (0, i.jsx)(
+                                                        ? (0, l.jsx)(i.Fragment, { children: s }, e.id)
+                                                        : (0, l.jsx)(
                                                               m.Ay,
                                                               {
-                                                                  className: x.SA,
-                                                                  height: C,
-                                                                  width: C,
+                                                                  className: A.SA,
+                                                                  height: b,
+                                                                  width: b,
                                                                   mask: m.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
                                                                   children: s,
                                                               },
                                                               e.id,
                                                           );
                                                 }),
-                                                P > 0
-                                                    ? (0, i.jsx)(c.m, {
-                                                          text: g.intl.formatToPlainString(g.t.m6oRrA, {
-                                                              appNames: S.format(R.map((e) => e.name)),
+                                                L > 0
+                                                    ? (0, l.jsx)(c.m, {
+                                                          text: x.intl.formatToPlainString(x.t.m6oRrA, {
+                                                              appNames: N.format(T.map((e) => e.name)),
                                                           }),
                                                           position: "top",
-                                                          children: (0, i.jsxs)("div", {
-                                                              className: r()(x.S_, f[C]),
-                                                              children: ["+", P],
+                                                          children: (0, l.jsxs)("div", {
+                                                              className: r()(A.S_, C[b]),
+                                                              children: ["+", L],
                                                           }),
                                                       })
                                                     : null,
                                             ],
                                         })
-                                      : (0, i.jsx)(u.RR9, {
+                                      : (0, l.jsx)(u.R, {
                                             size: "custom",
                                             color: "currentColor",
-                                            width: C,
-                                            height: C,
-                                            className: x.DE,
+                                            width: b,
+                                            height: b,
+                                            className: A.DE,
                                         }),
                           }),
-                          null != L ? (0, i.jsx)(u.Text, { variant: d, color: "text-default", children: L }) : null,
+                          null != D ? (0, l.jsx)(h.E, { variant: d, color: "text-default", children: D }) : null,
                       ],
                   }),
               ],

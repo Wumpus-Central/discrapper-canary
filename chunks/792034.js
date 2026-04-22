@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+A.exports = {
     Tg: "textArea__89a34",
     Xl: "resizeable__89a34",
     b4: "inputMaxLength__89a34",

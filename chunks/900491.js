@@ -1,34 +1,37 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var s = n(627968),
     r = n(64700),
-    o = n(397927),
-    i = n(975571),
-    a = n(305881),
-    c = n(652215),
-    l = n(985018),
-    d = n(928490);
-function p(e) {
+    i = n(983851),
+    o = n(500060),
+    a = n(177953),
+    l = n(687966),
+    c = n(975571),
+    d = n(305881),
+    p = n(652215),
+    u = n(985018),
+    _ = n(928490);
+function h(e) {
     let { onContinue: t, onClose: n } = e,
-        p = i.A.getArticleURL(c.MVz.XBOX_CONNECTION),
-        u = l.intl.format(l.t.CIc3IN, { helpdeskArticleUrl: p }),
-        _ = r.useMemo(
+        h = c.A.getArticleURL(p.MVz.XBOX_CONNECTION),
+        C = u.intl.format(u.t.CIc3IN, { helpdeskArticleUrl: h }),
+        f = r.useMemo(
             () => [
-                { label: l.intl.string(l.t.ihQXsb), icon: o.HKD },
-                { label: l.intl.string(l.t.Xt1n4P), icon: o.ofK },
-                { label: l.intl.string(l.t.xqVY3p), icon: o.nFg },
-                { label: l.intl.string(l.t.iQsKVW), icon: o._xR },
+                { label: u.intl.string(u.t.ihQXsb), icon: i.H },
+                { label: u.intl.string(u.t.Xt1n4P), icon: o.o },
+                { label: u.intl.string(u.t.xqVY3p), icon: a.n },
+                { label: u.intl.string(u.t.iQsKVW), icon: l._ },
             ],
             [],
         );
-    return (0, s.jsx)(a.B, {
-        platformType: c.fg2.XBOX,
-        headerConnect: l.intl.string(l.t.m8aahn),
-        headerReconnect: l.intl.string(l.t.z3rAhq),
-        body: u,
+    return (0, s.jsx)(d.B, {
+        platformType: p.fg2.XBOX,
+        headerConnect: u.intl.string(u.t.m8aahn),
+        headerReconnect: u.intl.string(u.t.z3rAhq),
+        body: C,
         onClose: n,
         onContinue: t,
-        img: (0, s.jsx)("img", { src: d.A, width: 230, height: 160, alt: "" }),
-        valueProps: _,
+        img: (0, s.jsx)("img", { src: _.A, width: 230, height: 160, alt: "" }),
+        valueProps: f,
     });
 }

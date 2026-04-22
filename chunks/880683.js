@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { u: () => a });
-var r = n(374372),
-    i = n(579926);
+r.d(t, { u: () => a });
+var n = r(374372),
+    s = r(579926);
 class a {
     parsers;
     refiners;
-    defaultConfig = new i.A();
+    defaultConfig = new s.A();
     constructor(e) {
         (e = e || this.defaultConfig.createCasualConfiguration()),
             (this.parsers = [...e.parsers]),
@@ -14,74 +13,74 @@ class a {
     clone() {
         return new a({ parsers: [...this.parsers], refiners: [...this.refiners] });
     }
-    parseDate(e, t, n) {
-        let r = this.parse(e, t, n);
-        return r.length > 0 ? r[0].start.date() : null;
+    parseDate(e, t, r) {
+        let n = this.parse(e, t, r);
+        return n.length > 0 ? n[0].start.date() : null;
     }
-    parse(e, t, n) {
-        let r = new s(e, t, n),
-            i = [];
+    parse(e, t, r) {
+        let n = new i(e, t, r),
+            s = [];
         return (
             this.parsers.forEach((e) => {
-                let t = a.executeParser(r, e);
-                i = i.concat(t);
+                let t = a.executeParser(n, e);
+                s = s.concat(t);
             }),
-            i.sort((e, t) => e.index - t.index),
+            s.sort((e, t) => e.index - t.index),
             this.refiners.forEach(function (e) {
-                i = e.refine(r, i);
+                s = e.refine(n, s);
             }),
-            i
+            s
         );
     }
     static executeParser(e, t) {
-        let n = [],
-            i = t.pattern(e),
+        let r = [],
+            s = t.pattern(e),
             a = e.text,
-            s = e.text,
-            o = i.exec(s);
+            i = e.text,
+            o = s.exec(i);
         for (; o; ) {
-            let l = o.index + a.length - s.length;
+            let l = o.index + a.length - i.length;
             o.index = l;
             let u = t.extract(e, o);
             if (!u) {
-                (s = a.substring(o.index + 1)), (o = i.exec(s));
+                (i = a.substring(o.index + 1)), (o = s.exec(i));
                 continue;
             }
-            let c = null;
-            u instanceof r.s4
-                ? (c = u)
-                : u instanceof r.BP
-                  ? ((c = e.createParsingResult(o.index, o[0])).start = u)
-                  : (c = e.createParsingResult(o.index, o[0], u));
-            let d = c.index,
-                _ = c.text;
-            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${d}) '${_}'`)),
-                n.push(c),
-                (s = a.substring(d + _.length)),
-                (o = i.exec(s));
+            let d = null;
+            u instanceof n.s4
+                ? (d = u)
+                : u instanceof n.BP
+                  ? ((d = e.createParsingResult(o.index, o[0])).start = u)
+                  : (d = e.createParsingResult(o.index, o[0], u));
+            let m = d.index,
+                c = d.text;
+            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${m}) '${c}'`)),
+                r.push(d),
+                (i = a.substring(m + c.length)),
+                (o = s.exec(i));
         }
-        return n;
+        return r;
     }
 }
-class s {
+class i {
     text;
     option;
     reference;
     refDate;
-    constructor(e, t, n) {
+    constructor(e, t, r) {
         (this.text = e),
-            (this.option = n ?? {}),
-            (this.reference = r.b5.fromInput(t, this.option.timezones)),
+            (this.option = r ?? {}),
+            (this.reference = n.b5.fromInput(t, this.option.timezones)),
             (this.refDate = this.reference.instant);
     }
     createParsingComponents(e) {
-        return e instanceof r.BP ? e : new r.BP(this.reference, e);
+        return e instanceof n.BP ? e : new n.BP(this.reference, e);
     }
-    createParsingResult(e, t, n, i) {
+    createParsingResult(e, t, r, s) {
         let a = "string" == typeof t ? t : this.text.substring(e, t),
-            s = n ? this.createParsingComponents(n) : null,
-            o = i ? this.createParsingComponents(i) : null;
-        return new r.s4(this.reference, e, a, s, o);
+            i = r ? this.createParsingComponents(r) : null,
+            o = s ? this.createParsingComponents(s) : null;
+        return new n.s4(this.reference, e, a, i, o);
     }
     debug(e) {
         this.option.debug &&

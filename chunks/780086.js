@@ -1,62 +1,63 @@
 i.d(e, { default: () => g });
-var a = i(627968),
-    l = i(64700),
-    n = i(158954),
-    r = i(311907),
-    s = i(846293),
-    o = i(299091),
+var l = i(627968),
+    n = i(64700),
+    a = i(224640),
+    r = i(289873),
+    s = i(311907),
+    o = i(846293),
+    d = i(299091),
     c = i(197654),
-    d = i(365940),
-    u = i(531461),
-    _ = i(71441),
-    I = i(760322),
-    E = i(330936),
-    A = i(914984);
+    u = i(365940),
+    E = i(531461),
+    I = i(71441),
+    A = i(760322),
+    _ = i(330936),
+    h = i(914984);
 function g(t) {
     let { inviteCode: e, ...i } = t,
-        [g, h] = l.useState(null != e);
-    l.useEffect(() => {
-        null != e && s.Ay.resolveInvite(e, "Hub").finally(() => h(!1));
+        [g, m] = n.useState(null != e);
+    n.useEffect(() => {
+        null != e && o.Ay.resolveInvite(e, "Hub").finally(() => m(!1));
     }, [e]);
-    let m = (0, r.bG)([o.A], () => (null != e ? o.A.getInvite(e) : null)),
-        [S, y] = l.useState([E.Di.VERIFY_EMAIL]),
-        [x, f] = l.useState(""),
-        [L, p] = l.useState(""),
-        [C, T] = l.useState(void 0),
-        [v, R] = l.useState([]),
-        M = (t) => {
-            y(S.concat(t).slice(-4));
+    let S = (0, s.bG)([d.A], () => (null != e ? d.A.getInvite(e) : null)),
+        [y, L] = n.useState([_.Di.VERIFY_EMAIL]),
+        [x, p] = n.useState(""),
+        [C, v] = n.useState(""),
+        [f, M] = n.useState(void 0),
+        [T, R] = n.useState([]),
+        N = (t) => {
+            L(y.concat(t).slice(-4));
         },
-        N = S[S.length - 1];
-    if (g) return (0, a.jsx)(n.dWK, { ...i, children: (0, a.jsx)(n.y$y, { className: A.u }) });
-    switch (N) {
-        case E.Di.VERIFY_EMAIL:
-            return (0, a.jsx)(c.A, {
+        j = y[y.length - 1];
+    if (g) return (0, l.jsx)(a.d, { ...i, children: (0, l.jsx)(r.y, { className: h.u }) });
+    switch (j) {
+        case _.Di.VERIFY_EMAIL:
+            return (0, l.jsx)(c.A, {
                 setGuildsInfo: R,
-                setStep: M,
+                setStep: N,
                 email: x,
-                setEmail: f,
-                setGuildId: T,
-                invite: m,
+                setEmail: p,
+                setGuildId: M,
+                invite: S,
                 ...i,
             });
-        case E.Di.SELECT_SCHOOL:
-            return (0, a.jsx)(d.A, { guildsInfo: v, setStep: M, email: x, setGuildId: T, ...i });
-        case E.Di.SUBMIT_SCHOOL:
-            return (0, a.jsx)(u.A, {
+        case _.Di.SELECT_SCHOOL:
+            return (0, l.jsx)(u.A, { guildsInfo: T, setStep: N, email: x, setGuildId: M, ...i });
+        case _.Di.SUBMIT_SCHOOL:
+            return (0, l.jsx)(E.A, {
                 onBack: () => {
-                    S.length > 1 && y(S.slice(0, -1).slice(-4));
+                    y.length > 1 && L(y.slice(0, -1).slice(-4));
                 },
-                setStep: M,
+                setStep: N,
                 email: x,
-                school: L,
-                setSchool: p,
+                school: C,
+                setSchool: v,
                 ...i,
             });
-        case E.Di.VERIFY_PIN:
-            return (0, a.jsx)(_.A, { email: x, guildId: C, ...i });
-        case E.Di.EMAIL_WAITLIST:
-            return (0, a.jsx)(I.A, { setStep: M, school: L, ...i });
+        case _.Di.VERIFY_PIN:
+            return (0, l.jsx)(I.A, { email: x, guildId: f, ...i });
+        case _.Di.EMAIL_WAITLIST:
+            return (0, l.jsx)(A.A, { setStep: N, school: C, ...i });
         default:
             return i.onClose(), null;
     }

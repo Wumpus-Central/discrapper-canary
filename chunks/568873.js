@@ -1,22 +1,22 @@
 i.d(t, { A: () => c });
 var n = i(627968);
 i(64700);
-var l = i(311907),
-    s = i(397927),
-    r = i(832712),
-    a = i(543465),
+var s = i(311907),
+    l = i(477782),
+    a = i(832712),
+    r = i(543465),
     d = i(477427),
     o = i(985018);
 function c(e) {
-    let t = (0, l.bG)([a.Ay], () => a.Ay.isMuteScheduledEventsEnabled(e), [e]);
-    return (0, n.jsx)(s.sLh, {
+    let t = (0, s.bG)([r.Ay], () => r.Ay.isMuteScheduledEventsEnabled(e), [e]);
+    return (0, n.jsx)(l.sL, {
         id: "mute-events",
         label: o.intl.string(o.t.ONG3Yz),
         action: () => {
             var i;
             return (
                 (i = { mute_scheduled_events: !t }),
-                void r.A.updateGuildNotificationSettings(e, i, d.G_.mutedEvents(i.mute_scheduled_events))
+                void a.A.updateGuildNotificationSettings(e, i, d.G_.mutedEvents(i.mute_scheduled_events))
             );
         },
         checked: t,

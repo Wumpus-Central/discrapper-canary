@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Zy: "authedAppV2__24605",
     ie: "headerV2__24605",

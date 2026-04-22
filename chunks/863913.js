@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => x, f: () => u });
+n.d(t, { A: () => h, f: () => u });
 var i,
-    s = n(627968),
-    l = n(64700),
+    l = n(627968),
+    s = n(64700),
     r = n(503698),
     a = n.n(r),
     o = n(615300),
     d = n(73939),
-    c = n(209349),
+    c = n(641694),
     u = (((i = {})[(i.RIGHT = -1)] = "RIGHT"), (i[(i.LEFT = 1)] = "LEFT"), i);
 let m = { friction: 10, tension: 40, overshootClamping: !0 };
-class g extends l.PureComponent {
+class g extends s.PureComponent {
     _animated;
     constructor(e) {
         super(e), (this._animated = new o.A.Value(-1 * e.direction));
@@ -36,14 +35,14 @@ class g extends l.PureComponent {
         });
     }
     render() {
-        return (0, s.jsx)(o.A.div, { style: this.getStyle(), className: c.A, children: this.props.children });
+        return (0, l.jsx)(o.A.div, { style: this.getStyle(), className: c.A, children: this.props.children });
     }
 }
-let x = (e) => {
-    let { children: t, step: n, direction: i, className: l, onAnimationStart: r, onAnimationEnd: o } = e;
-    return (0, s.jsx)(d.F, {
+let h = (e) => {
+    let { children: t, step: n, direction: i, className: s, onAnimationStart: r, onAnimationEnd: o } = e;
+    return (0, l.jsx)(d.F, {
         component: "div",
-        className: a()(c.Q, l),
-        children: (0, s.jsx)(g, { direction: i, onAnimationStart: r, onAnimationEnd: o, children: t }, n),
+        className: a()(c.Q, s),
+        children: (0, l.jsx)(g, { direction: i, onAnimationStart: r, onAnimationEnd: o, children: t }, n),
     });
 };

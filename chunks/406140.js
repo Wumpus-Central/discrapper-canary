@@ -1,29 +1,30 @@
 n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(397927),
+var r = n(534514),
+    a = n(834730),
     l = n(263063),
-    a = n(253932),
-    s = n(218394),
-    o = n(258335),
-    d = n(918296);
+    s = n(253932),
+    o = n(218394),
+    d = n(258335),
+    u = n(556545);
 function c(e) {
-    let { coverImageAsset: t, title: n, guild: c, description: u, children: A } = e,
-        h = a.kt.useSetting(),
-        _ = (0, s.j)(),
-        [m, p] = (0, o.A)(t, _ && h);
+    let { coverImageAsset: t, title: n, guild: c, description: A, children: h } = e,
+        _ = s.kt.useSetting(),
+        E = (0, o.j)(),
+        [p, m] = (0, d.A)(t, E && _);
     return (0, i.jsxs)("div", {
-        className: d.kL,
+        className: u.kL,
         children: [
             (0, i.jsx)("div", {
-                ref: m,
-                className: d.El,
-                children: null != p && (0, i.jsx)("img", { src: p, alt: "", className: d.N4 }),
+                ref: p,
+                className: u.El,
+                children: null != m && (0, i.jsx)("img", { src: m, alt: "", className: u.N4 }),
             }),
-            (0, i.jsx)("div", { className: d._C, children: (0, i.jsx)(l.Ay, { guild: c, size: l.Ay.Sizes.XLARGE }) }),
-            (0, i.jsx)(r.Heading, { variant: "heading-xl/semibold", className: d.H1, children: n }),
-            (0, i.jsx)(r.Text, { className: d.jr, variant: "text-md/normal", color: "text-default", children: u }),
-            A,
+            (0, i.jsx)("div", { className: u._C, children: (0, i.jsx)(l.Ay, { guild: c, size: l.Ay.Sizes.XLARGE }) }),
+            (0, i.jsx)(r.D, { variant: "heading-xl/semibold", className: u.H1, children: n }),
+            (0, i.jsx)(a.E, { className: u.jr, variant: "text-md/normal", color: "text-default", children: A }),
+            h,
         ],
     });
 }

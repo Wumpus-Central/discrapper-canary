@@ -1,9 +1,9 @@
-n.d(t, { m: () => l });
-var a = n(627968),
-    i = n(397927);
-function l(e, t) {
-    (0, i.mMO)(async () => {
-        let { default: i } = await n.e("32140").then(n.bind(n, 608391));
-        return (n) => (0, a.jsx)(i, { guildId: e, gameInstance: t, ...n });
+l.d(t, { m: () => s });
+var n = l(627968),
+    a = l(192308);
+function s(e, t) {
+    (0, a.openModalLazy)(async () => {
+        let { default: a } = await l.e("32140").then(l.bind(l, 608391));
+        return (l) => (0, n.jsx)(a, { guildId: e, gameInstance: t, ...l });
     });
 }

@@ -1,50 +1,50 @@
-s.d(a, { L: () => j, T: () => f });
+s.d(a, { L: () => j, T: () => k });
 var r = s(627968),
-    t = s(64700),
-    n = s(503698),
-    o = s.n(n),
-    l = s(397927),
+    n = s(64700),
+    l = s(503698),
+    t = s.n(l),
+    o = s(36075),
     i = s(328006),
     d = s(334840),
     c = s(48736),
     _ = s(610042),
-    m = s(29086),
-    u = s(203656),
-    x = s(525104),
-    p = s(176201),
-    g = s(178758),
-    v = s(652215),
-    h = s(743981),
-    k = s(985018),
-    C = s(252137),
-    b = s(979282);
-function f() {
-    let [e, a] = t.useState(() => {
-            let e = Math.floor(Math.random() * g.Oz.length);
-            return { primary_color: g.Oz[e].start, secondary_color: g.Oz[e].end, tertiary_color: null };
+    u = s(29086),
+    m = s(203656),
+    p = s(525104),
+    g = s(176201),
+    x = s(178758),
+    h = s(652215),
+    f = s(743981),
+    b = s(985018),
+    v = s(252137),
+    C = s(979282);
+function k() {
+    let [e, a] = n.useState(() => {
+            let e = Math.floor(Math.random() * x.Oz.length);
+            return { primary_color: x.Oz[e].start, secondary_color: x.Oz[e].end, tertiary_color: null };
         }),
-        { gradientStyle: s, gradientClassname: n } = (0, l.v5K)({
-            colorStrings: (0, p.K3)(e),
+        { gradientStyle: s, gradientClassname: l } = (0, o.v5)({
+            colorStrings: (0, g.K3)(e),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
         });
     return (0, r.jsxs)("div", {
-        className: C.kL,
+        className: v.kL,
         children: [
             (0, r.jsx)("div", {
-                className: C.zC,
-                children: (0, r.jsx)(m.V, {
+                className: v.zC,
+                children: (0, r.jsx)(u.V, {
                     avatar: i.A,
                     username: "Cherry",
                     usernameStyle: s,
-                    usernameClassName: o()(n, b.q),
-                    message: k.intl.string(k.t["6OSasb"]),
+                    usernameClassName: t()(l, C.q),
+                    message: b.intl.string(b.t["6OSasb"]),
                 }),
             }),
             (0, r.jsx)(c.default, {
-                defaultColor: v.TGz,
-                colors: g.Oz,
+                defaultColor: h.TGz,
+                colors: x.Oz,
                 value: e.primary_color,
                 secondaryValue: e.secondary_color ?? void 0,
                 onChange: (s) => a({ ...e, primary_color: s }),
@@ -56,23 +56,23 @@ function f() {
 }
 function j(e) {
     let { guildId: a } = e,
-        [s, n] = t.useState(h.bl.HEART),
-        o = (0, x.A)(),
-        l = t.useMemo(() => ({ unlockedBadges: o.unlockedBadges.slice(0, 10), lockedBadges: [] }), [o]);
+        [s, l] = n.useState(f.bl.HEART),
+        t = (0, p.A)(),
+        o = n.useMemo(() => ({ unlockedBadges: t.unlockedBadges.slice(0, 10), lockedBadges: [] }), [t]);
     return (0, r.jsxs)("div", {
-        className: C.kL,
+        className: v.kL,
         children: [
             (0, r.jsx)("div", {
-                className: C.zC,
-                children: (0, r.jsx)(m.V, {
+                className: v.zC,
+                children: (0, r.jsx)(u.V, {
                     avatar: d.A,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
-                    message: k.intl.string(k.t["6OSasb"]),
-                    decorations: (0, r.jsx)(u.M, { guildId: a, tag: "GGEZ", badge: s }),
+                    message: b.intl.string(b.t["6OSasb"]),
+                    decorations: (0, r.jsx)(m.M, { guildId: a, tag: "GGEZ", badge: s }),
                 }),
             }),
-            (0, r.jsx)(_.y, { selectedBadge: s, onBadgeClicked: n, badgeCollection: l }),
+            (0, r.jsx)(_.y, { selectedBadge: s, onBadgeClicked: l, badgeCollection: o }),
         ],
     });
 }

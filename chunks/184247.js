@@ -1,36 +1,38 @@
-a.d(t, { x: () => i });
-var l = a(627968);
+"use strict";
+a.d(t, { x: () => c });
+var r = a(627968);
 a(64700);
-var r = a(397927),
-    n = a(458306),
+var l = a(834730),
+    n = a(534514),
+    i = a(219561),
     s = a(261225),
-    d = a(673277),
-    o = a(427941);
-let i = {
+    o = a(673277),
+    d = a(427941);
+let c = {
     name: "BackgroundImage",
     id: "background-image",
     component: (e) => {
         let { backgroundImage: t, secondBackgroundImage: a } = e;
-        return (0, l.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             children: [
-                (0, l.jsx)(r.Text, {
+                (0, r.jsx)(l.E, {
                     variant: "text-lg/semibold",
                     children:
                         "Background Image just takes children and displays them in with a background image behind them, and some padding to add inset",
                 }),
-                (0, l.jsx)(o.A, {
+                (0, r.jsx)(d.A, {
                     backgroundImage: { src: t },
-                    children: (0, l.jsx)(d.A, {
-                        children: (0, l.jsx)(s.A, {
+                    children: (0, r.jsx)(o.A, {
+                        children: (0, r.jsx)(s.A, {
                             columns: 2,
-                            children: (0, l.jsxs)(n.Kp, {
+                            children: (0, r.jsxs)(i.Kp, {
                                 direction: "vertical",
                                 children: [
-                                    (0, l.jsx)(r.Heading, {
+                                    (0, r.jsx)(n.D, {
                                         variant: "heading-xxl/bold",
                                         children: "What can I get with orbs?",
                                     }),
-                                    (0, l.jsx)(r.Text, {
+                                    (0, r.jsx)(l.E, {
                                         variant: "text-md/normal",
                                         children: "Spend Orbs on exclusives or grab your favorites from the shop",
                                     }),
@@ -39,25 +41,25 @@ let i = {
                         }),
                     }),
                 }),
-                (0, l.jsx)(d.A, {
-                    children: (0, l.jsx)(r.Text, {
+                (0, r.jsx)(o.A, {
+                    children: (0, r.jsx)(l.E, {
                         variant: "text-lg/semibold",
                         children: "It also automatically handles animated asset urls",
                     }),
                 }),
-                (0, l.jsx)(o.A, {
+                (0, r.jsx)(d.A, {
                     backgroundImage: { src: a },
-                    children: (0, l.jsx)(d.A, {
-                        children: (0, l.jsx)(s.A, {
+                    children: (0, r.jsx)(o.A, {
+                        children: (0, r.jsx)(s.A, {
                             columns: 2,
-                            children: (0, l.jsxs)(n.Kp, {
+                            children: (0, r.jsxs)(i.Kp, {
                                 direction: "vertical",
                                 children: [
-                                    (0, l.jsx)(r.Heading, {
+                                    (0, r.jsx)(n.D, {
                                         variant: "heading-xxl/bold",
                                         children: "What can I get with orbs?",
                                     }),
-                                    (0, l.jsx)(r.Text, {
+                                    (0, r.jsx)(l.E, {
                                         variant: "text-md/normal",
                                         children: "Spend Orbs on exclusives or grab your favorites from the shop",
                                     }),

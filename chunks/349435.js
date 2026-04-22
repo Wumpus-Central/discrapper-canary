@@ -1,98 +1,89 @@
 "use strict";
-n.d(t, { Ay: () => v, _j: () => o, fy: () => l });
-var r = n(311907),
-    i = n(73153),
-    a = n(734057);
-let s = 5 * n(927813).A.Millis.SECOND;
-var o = (function (e) {
-        return (
-            (e[(e.STRANGER_DANGER = 1)] = "STRANGER_DANGER"),
-            (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = "INAPPROPRIATE_CONVERSATION_TIER_1"),
-            (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = "INAPPROPRIATE_CONVERSATION_TIER_2"),
-            (e[(e.LIKELY_ATO = 4)] = "LIKELY_ATO"),
-            e
-        );
-    })({}),
-    l = (function (e) {
-        return (e[(e.UPVOTE = 0)] = "UPVOTE"), (e[(e.DOWNVOTE = 1)] = "DOWNVOTE"), e;
-    })({});
-let u = [],
-    c = {},
-    d = new Set();
-function _(e) {
-    return 2 === e.type || 3 === e.type;
-}
-function f(e) {
+n.d(t, { Ay: () => m, _j: () => u, fy: () => d });
+var r,
+    i,
+    s = n(311907),
+    a = n(73153),
+    o = n(734057);
+let l = 5 * n(927813).A.Millis.SECOND;
+var u =
+        (((r = {})[(r.STRANGER_DANGER = 1)] = "STRANGER_DANGER"),
+        (r[(r.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = "INAPPROPRIATE_CONVERSATION_TIER_1"),
+        (r[(r.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = "INAPPROPRIATE_CONVERSATION_TIER_2"),
+        (r[(r.LIKELY_ATO = 4)] = "LIKELY_ATO"),
+        r),
+    d = (((i = {})[(i.UPVOTE = 0)] = "UPVOTE"), (i[(i.DOWNVOTE = 1)] = "DOWNVOTE"), i);
+let c = [],
+    _ = {},
+    f = new Set();
+function E(e) {
     let { safetyWarnings: t } = e;
     null != t &&
-        ((c[e.id] = t),
-        t.some((e) => _(e) && null != e.dismiss_timestamp && !y(e.dismiss_timestamp)) ? d.add(e.id) : d.delete(e.id)),
-        null == t && (null != c[e.id] && delete c[e.id], d.delete(e.id));
+        ((_[e.id] = t),
+        t.some(
+            (e) =>
+                (2 === e.type || 3 === e.type) &&
+                null != e.dismiss_timestamp &&
+                !(new Date(e.dismiss_timestamp).getTime() > Date.now() - l),
+        )
+            ? f.add(e.id)
+            : f.delete(e.id)),
+        null == t && (null != _[e.id] && delete _[e.id], f.delete(e.id));
 }
-function p(e) {
-    f(e.channel);
-}
-function h(e) {
-    e.channels.forEach((e) => {
-        f(e);
-    });
-}
-function m(e) {
-    let { channel: t } = e;
-    null != c[t.id] && delete c[t.id], d.delete(t.id);
-}
-function g(e) {
-    let { channelId: t, warningId: n, feedbackType: r } = e,
-        i = c[t];
-    null != i && (c[t] = i.map((e) => (e.id === n ? { ...e, feedback_type: r } : e)));
-}
-function E(e) {
-    let { channelId: t } = e,
-        n = c[t];
-    d.delete(t), null != n && (c[t] = n.map((e) => ({ ...e, dismiss_timestamp: void 0 })));
-}
-function A(e) {
-    let { channelId: t, warningIds: n } = e,
-        r = c[t];
-    if (null == r) return;
-    let i = new Date().toISOString();
-    c[t] = r.map((e) => (n.includes(e.id) ? { ...e, dismiss_timestamp: i } : e));
-}
-function I(e) {
-    let { channelId: t } = e;
-    d.add(t);
-}
-function T() {
-    (c = {}),
-        Object.values(a.A.getMutablePrivateChannels()).forEach((e) => {
-            f(e);
+function h() {
+    (_ = {}),
+        Object.values(o.A.getMutablePrivateChannels()).forEach((e) => {
+            E(e);
         });
 }
-function y(e) {
-    return new Date(e).getTime() > Date.now() - s;
-}
-class S extends r.Ay.Store {
+class p extends s.Ay.Store {
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(o.A);
     }
     getChannelSafetyWarning(e, t) {
-        return c[e]?.find((e) => e.id === t);
+        return _[e]?.find((e) => e.id === t);
     }
     getChannelSafetyWarnings(e) {
-        return c[e] ?? u;
+        return _[e] ?? c;
     }
     hasShownInitialTooltipForChannel(e) {
-        return d.has(e);
+        return f.has(e);
     }
 }
-let v = new S(i.h, {
-    CHANNEL_CREATE: p,
-    CHANNEL_DELETE: m,
-    CHANNEL_UPDATES: h,
-    CONNECTION_OPEN: T,
-    CONNECTION_OPEN_SUPPLEMENTAL: T,
-    CHANNEL_SAFETY_WARNING_FEEDBACK: g,
-    CLEAR_CHANNEL_SAFETY_WARNINGS: E,
-    DISMISS_CHANNEL_SAFETY_WARNINGS: A,
-    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: I,
+let m = new p(a.h, {
+    CHANNEL_CREATE: function (e) {
+        E(e.channel);
+    },
+    CHANNEL_DELETE: function (e) {
+        let { channel: t } = e;
+        null != _[t.id] && delete _[t.id], f.delete(t.id);
+    },
+    CHANNEL_UPDATES: function (e) {
+        e.channels.forEach((e) => {
+            E(e);
+        });
+    },
+    CONNECTION_OPEN: h,
+    CONNECTION_OPEN_SUPPLEMENTAL: h,
+    CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
+        let { channelId: t, warningId: n, feedbackType: r } = e,
+            i = _[t];
+        null != i && (_[t] = i.map((e) => (e.id === n ? { ...e, feedback_type: r } : e)));
+    },
+    CLEAR_CHANNEL_SAFETY_WARNINGS: function (e) {
+        let { channelId: t } = e,
+            n = _[t];
+        f.delete(t), null != n && (_[t] = n.map((e) => ({ ...e, dismiss_timestamp: void 0 })));
+    },
+    DISMISS_CHANNEL_SAFETY_WARNINGS: function (e) {
+        let { channelId: t, warningIds: n } = e,
+            r = _[t];
+        if (null == r) return;
+        let i = new Date().toISOString();
+        _[t] = r.map((e) => (n.includes(e.id) ? { ...e, dismiss_timestamp: i } : e));
+    },
+    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function (e) {
+        let { channelId: t } = e;
+        f.add(t);
+    },
 });

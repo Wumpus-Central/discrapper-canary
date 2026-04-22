@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    l = n(429913),
-    a = n(102876),
-    r = n(985018);
+a.d(t, { A: () => o });
+var n = a(627968);
+a(64700);
+var i = a(834730),
+    l = a(429913),
+    r = a(102876),
+    d = a(985018);
 function o(e) {
     let { applicationIds: t } = e,
-        n = (0, l.A)(t).filter((e) => null != e);
-    if (0 === n.length) return null;
+        a = (0, l.A)(t).filter((e) => null != e);
+    if (0 === a.length) return null;
     let o = null;
-    if (1 === n.length)
-        o = r.intl.format(r.t.wQ6urw, { applicationName: () => (0, i.jsx)(a.A, { application: n[0] }, n[0].id) });
-    else if (2 === n.length)
-        o = r.intl.format(r.t.C98CSN, {
-            applicationName: () => (0, i.jsx)(a.A, { application: n[0] }, n[0].id),
-            applicationName2: () => (0, i.jsx)(a.A, { application: n[1] }, n[1].id),
+    if (1 === a.length)
+        o = d.intl.format(d.t.wQ6urw, { applicationName: () => (0, n.jsx)(r.A, { application: a[0] }, a[0].id) });
+    else if (2 === a.length)
+        o = d.intl.format(d.t.C98CSN, {
+            applicationName: () => (0, n.jsx)(r.A, { application: a[0] }, a[0].id),
+            applicationName2: () => (0, n.jsx)(r.A, { application: a[1] }, a[1].id),
         });
     else {
-        let e = n[n.length - 1],
-            t = n.slice(0, -1);
-        o = r.intl.format(r.t.UxpwAh, {
-            applications: () => t.map((e) => (0, i.jsx)(a.A, { application: e, useComma: !0 }, e.id)),
-            applicationNameLast: () => (0, i.jsx)(a.A, { application: e }, e.id),
+        let e = a[a.length - 1],
+            t = a.slice(0, -1);
+        o = d.intl.format(d.t.UxpwAh, {
+            applications: () => t.map((e) => (0, n.jsx)(r.A, { application: e, useComma: !0 }, e.id)),
+            applicationNameLast: () => (0, n.jsx)(r.A, { application: e }, e.id),
         });
     }
-    return (0, i.jsx)(s.Text, { variant: "text-sm/normal", children: o });
+    return (0, n.jsx)(i.E, { variant: "text-sm/normal", children: o });
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header_eae0ef",
     Xf: "safetyChecklist_eae0ef",

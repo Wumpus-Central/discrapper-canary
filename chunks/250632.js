@@ -1,48 +1,49 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    l = n(235986),
-    s = n(957358),
+var s = n(503698),
+    l = n.n(s),
+    r = n(235986),
+    a = n(957358),
     o = n(505806),
-    d = n(985018),
-    c = n(602570);
-let u = function (e) {
-    let { title: t, className: n, color: r, animate: u, getHistoricalTotalBytes: A } = e;
+    c = n(985018),
+    d = n(743827);
+let h = function (e) {
+    let { title: t, className: n, color: s, animate: h, getHistoricalTotalBytes: p } = e;
     return (0, i.jsx)(o.A, {
-        getHistoricalTotalBytes: A,
-        children: (e, o, A) => {
-            var h;
+        getHistoricalTotalBytes: p,
+        children: (e, o, p) => {
+            var u;
             return (0, i.jsx)("div", {
-                className: a()(c.dm, n),
-                children: (0, i.jsxs)(l.A, {
-                    align: l.A.Align.CENTER,
+                className: l()(d.dm, n),
+                children: (0, i.jsxs)(r.A, {
+                    align: r.A.Align.CENTER,
                     children: [
-                        (0, i.jsxs)(l.A, {
-                            className: c.Qq,
-                            direction: l.A.Direction.VERTICAL,
+                        (0, i.jsxs)(r.A, {
+                            className: d.Qq,
+                            direction: r.A.Direction.VERTICAL,
                             children: [
-                                (0, i.jsx)("div", { className: c.DD, children: t }),
+                                (0, i.jsx)("div", { className: d.DD, children: t }),
                                 (0, i.jsx)("div", {
-                                    className: c.TS,
+                                    className: d.TS,
                                     children:
-                                        (h = (e[e.length - 1] / o) * 1e3) > 1e3
-                                            ? d.intl.formatToPlainString(d.t["WU+gTX"], { size: Math.round(h / 1e3) })
-                                            : d.intl.formatToPlainString(d.t.wnF6TH, { size: Math.round(h) }),
+                                        (u = (e[e.length - 1] / o) * 1e3) > 1e3
+                                            ? c.intl.formatToPlainString(c.t["WU+gTX"], { size: Math.round(u / 1e3) })
+                                            : c.intl.formatToPlainString(c.t.wnF6TH, { size: Math.round(u) }),
                                 }),
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: c.MQ,
-                            children: (0, i.jsx)(s.A, {
+                            className: d.MQ,
+                            children: (0, i.jsx)(a.A, {
                                 data: e,
                                 maxValue: Math.max(Math.max.apply(null, e), 1e3),
-                                className: c.CD,
+                                className: d.CD,
                                 updateInterval: o,
-                                color: r,
-                                numUpdatesToShow: A,
-                                animate: u,
+                                color: s,
+                                numUpdatesToShow: p,
+                                animate: h,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
                                 lineWidth: 4,

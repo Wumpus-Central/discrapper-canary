@@ -1,38 +1,40 @@
-n.d(e, { A: () => u });
-var i = n(627968);
-n(64700);
-var r = n(311907),
-    l = n(397927),
-    a = n(147087),
-    s = n(867455),
-    d = n(780057),
-    o = n(985018);
-function u(t) {
-    let e = (0, r.bG)([d.A], () => d.A.isInProgress());
-    return (0, a.b)() && t.isThread()
-        ? (0, i.jsx)(l.Drp, {
+i.d(n, { A: () => A });
+var e = i(627968);
+i(64700);
+var l = i(311907),
+    r = i(477782),
+    a = i(177953),
+    s = i(950305),
+    d = i(147087),
+    o = i(867455),
+    u = i(780057),
+    c = i(985018);
+function A(t) {
+    let n = (0, l.bG)([u.A], () => u.A.isInProgress());
+    return (0, d.b)() && t.isThread()
+        ? (0, e.jsx)(r.Dr, {
               id: "summarize-thread",
-              label: e ? o.intl.string(o.t.oKECxB) : o.intl.string(o.t.EXfguE),
-              disabled: e,
-              loading: e,
-              action: () => s.A.summarizeThread(t),
-              children: e
+              label: n ? c.intl.string(c.t.oKECxB) : c.intl.string(c.t.EXfguE),
+              disabled: n,
+              loading: n,
+              action: () => o.A.summarizeThread(t),
+              children: n
                   ? null
-                  : (0, i.jsxs)(i.Fragment, {
+                  : (0, e.jsxs)(e.Fragment, {
                         children: [
-                            (0, i.jsx)(l.Drp, {
+                            (0, e.jsx)(r.Dr, {
                                 id: "summarize_thread_for_everyone",
-                                label: o.intl.string(o.t.eCzSdd),
-                                action: () => s.A.summarizeThread(t, !1),
-                                icon: l.nFg,
-                                leadingAccessory: { type: "icon", icon: l.nFg },
+                                label: c.intl.string(c.t.eCzSdd),
+                                action: () => o.A.summarizeThread(t, !1),
+                                icon: a.n,
+                                leadingAccessory: { type: "icon", icon: a.n },
                             }),
-                            (0, i.jsx)(l.Drp, {
+                            (0, e.jsx)(r.Dr, {
                                 id: "summarize_thread_for_me",
-                                label: o.intl.string(o.t["HOe+Hq"]),
-                                action: () => s.A.summarizeThread(t),
-                                icon: l.nys,
-                                leadingAccessory: { type: "icon", icon: l.nys },
+                                label: c.intl.string(c.t["HOe+Hq"]),
+                                action: () => o.A.summarizeThread(t),
+                                icon: s.n,
+                                leadingAccessory: { type: "icon", icon: s.n },
                             }),
                         ],
                     }),

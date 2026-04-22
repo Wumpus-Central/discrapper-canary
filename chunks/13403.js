@@ -1,171 +1,172 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(627968),
-    a = n(64700),
-    l = n(311907),
-    r = n(554146),
-    s = n(342494),
-    o = n(397927),
-    d = n(735991),
-    c = n(690456),
-    u = n(55787),
+    l = n(64700),
+    a = n(311907),
+    s = n(554146),
+    r = n(265486),
+    o = n(414499),
+    d = n(116833),
+    c = n(735991),
+    u = n(690456),
+    m = n(55787),
     _ = n(359800),
-    m = n(362490),
-    h = n(587895),
-    p = n(354287),
-    g = n(574660),
-    A = n(379848),
+    h = n(362490),
+    p = n(587895),
+    g = n(354287),
+    A = n(574660),
+    f = n(379848),
     x = n(409626),
-    f = n(692969),
-    C = n(928550),
-    E = n(760751),
-    I = n(320501),
-    v = n(139675),
-    b = n(486020),
-    T = n(723702),
+    C = n(692969),
+    E = n(928550),
+    I = n(760751),
+    v = n(320501),
+    b = n(139675),
+    T = n(486020),
+    S = n(723702),
     y = n(456060),
-    S = n(659051),
-    N = n(837197),
-    j = n(359549),
-    L = n(537643),
-    R = n(444901),
-    P = n(842157),
-    w = n(49999),
-    M = n(985018);
-function D(e) {
+    N = n(659051),
+    j = n(837197),
+    L = n(359549),
+    R = n(537643),
+    P = n(444901),
+    w = n(842157),
+    D = n(49999),
+    k = n(985018);
+function O(e) {
     var t, n;
-    let D,
-        k,
+    let O,
+        M,
         {
-            analyticsLocations: O,
-            application: U,
+            analyticsLocations: U,
+            application: G,
             channel: B,
-            currentUserId: G,
-            currentUserPresenceActivity: F,
-            hideParty: H,
-            message: V,
-            onView: q,
-            partyStatusElement: W,
-            presenceActivity: z,
+            currentUserId: F,
+            currentUserPresenceActivity: H,
+            hideParty: V,
+            message: q,
+            onView: W,
+            partyStatusElement: z,
+            presenceActivity: Y,
         } = e,
-        Y = (0, d.Ag)(U),
-        { iconSrc: Q, name: K } = (function (e, t) {
+        Q = (0, c.Ag)(G),
+        { iconSrc: K, name: Z } = (function (e, t) {
             let { bot: n } = t;
             return {
                 iconSrc:
-                    (e.activity?.icon_override != null ? (0, v.uD)(t.id, e.activity?.icon_override) : null) ??
-                    b.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
+                    (e.activity?.icon_override != null ? (0, b.uD)(t.id, e.activity?.icon_override) : null) ??
+                    T.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
                 name: e.activity?.name_override ?? t.name,
             };
-        })(V, U),
-        X = (0, L.I)({ messageId: V.id, presenceActivity: z, application: U }) ?? void 0,
-        { openGameProfileModal: J, launchableAppId: Z } =
-            ((t = U.id),
-            (n = V.author.id),
-            (D = (0, C.d)(t)),
-            (k = (0, l.bG)([h.A, E.A], () => {
-                let e = h.A.getApplication(t);
-                return null != e ? E.A.getGameByApplication(e) : null;
+        })(q, G),
+        J = (0, R.I)({ messageId: q.id, presenceActivity: Y, application: G }) ?? void 0,
+        { openGameProfileModal: X, launchableAppId: $ } =
+            ((t = G.id),
+            (n = q.author.id),
+            (O = (0, E.d)(t)),
+            (M = (0, a.bG)([p.A, I.A], () => {
+                let e = p.A.getApplication(t);
+                return null != e ? I.A.getGameByApplication(e) : null;
             }, [t])),
             {
-                openGameProfileModal: (0, f.A)({
+                openGameProfileModal: (0, C.A)({
                     location: "Rich Presence Activity Invite Embed",
-                    applicationId: k?.id ?? void 0,
+                    applicationId: M?.id ?? void 0,
                     source: x.Ob.Embed,
                     trackEntryPointImpression: !0,
                     sourceUserId: n,
                 }),
-                launchableAppId: D,
+                launchableAppId: O,
             }),
-        $ = (0, j.A)({ application: U, analyticsLocations: O }),
-        ee = a.useMemo(() => {
-            if (null != $)
-                return { label: M.intl.string(M.t["jaYS/h"]), icon: o.hpF, trackingArea: p.kY.CLOUD_PLAY, onClick: $ };
-        }, [$]),
-        et = (0, g.F)(U),
-        en = a.useMemo(() => (null != J ? J : null != et && Y ? et : void 0), [Y, J, et]),
-        ei = c.A.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
-        ea = u.A.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
-        { canStartAuthorization: el, hasAlreadyLinked: er, startAuthorization: es } = (0, m.RD)(U),
-        eo = (0, _.z)(es, er),
-        ed = T.isPlatformEmbedded && ea.required && el && !er,
-        ec = !(0, S.A)(z, V, U.id),
-        eu = (0, y.n$)(K, V.activity?.type, ec),
-        e_ = a.useRef(null),
-        em = (0, l.bG)([I.A], () => I.A.getMessages(B.id)),
-        eh = () => {
+        ee = (0, L.A)({ application: G, analyticsLocations: U }),
+        et = l.useMemo(() => {
+            if (null != ee)
+                return { label: k.intl.string(k.t["jaYS/h"]), icon: o.h, trackingArea: g.kY.CLOUD_PLAY, onClick: ee };
+        }, [ee]),
+        en = (0, A.F)(G),
+        ei = l.useMemo(() => (null != X ? X : null != en && Q ? en : void 0), [Q, X, en]),
+        el = u.A.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        ea = m.A.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        { canStartAuthorization: es, hasAlreadyLinked: er, startAuthorization: eo } = (0, h.RD)(G),
+        ed = (0, _.z)(eo, er),
+        ec = S.isPlatformEmbedded && ea.required && es && !er,
+        eu = !(0, N.A)(Y, q, G.id),
+        em = (0, y.n$)(Z, q.activity?.type, eu),
+        e_ = l.useRef(null),
+        eh = (0, a.bG)([v.A], () => v.A.getMessages(B.id)),
+        ep = () => {
             let e = [];
             return (
-                (0, N.G)(V.id, em) && el && !er && ei.enabled && e.push(r.M.GAME_INVITE_ACCOUNT_LINK_UPSELL),
-                (0, i.jsx)(A.Ay, {
+                (0, j.G)(q.id, eh) && es && !er && el.enabled && e.push(s.M.GAME_INVITE_ACCOUNT_LINK_UPSELL),
+                (0, i.jsx)(f.Ay, {
                     contentTypes: e,
                     children: (e) => {
                         let { visibleContent: t, markAsDismissed: n } = e;
-                        if (t === r.M.GAME_INVITE_ACCOUNT_LINK_UPSELL)
-                            return (0, i.jsx)(s.AM, {
+                        if (t === s.M.GAME_INVITE_ACCOUNT_LINK_UPSELL)
+                            return (0, i.jsx)(r.A, {
                                 graphic: {
                                     type: "dynamic",
-                                    component: o.Z86.ACCOUNT_LINK_DISPLAY,
-                                    props: { application: U },
+                                    component: d.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
+                                    props: { application: G },
                                 },
-                                title: M.intl.formatToPlainString(M.t["lo6H6+"], { gameName: U.name }),
-                                body: M.intl.string(M.t.qYAzOp),
+                                title: k.intl.formatToPlainString(k.t["lo6H6+"], { gameName: G.name }),
+                                body: k.intl.string(k.t.qYAzOp),
                                 targetElementRef: e_,
                                 caretConfig: { align: "start" },
                                 shouldShow: !0,
                                 gradientColor: "purple",
-                                onRequestClose: () => n(w.i.USER_DISMISS),
+                                onRequestClose: () => n(D.i.USER_DISMISS),
                             });
                     },
                 })
             );
         };
-    return ec
-        ? (0, i.jsx)(R.A, {
-              message: V,
-              application: U,
-              applicationName: K,
+    return eu
+        ? (0, i.jsx)(P.A, {
+              message: q,
+              application: G,
+              applicationName: Z,
               channel: B,
-              header: eu,
-              currentUserId: G,
-              launchableAppId: Z,
-              isEmbeddedApplication: Y,
-              tryWithGdnAction: ee,
-              staticBannerSrc: X,
-              onClickContent: en,
-              iconSrc: Q,
-              onView: q,
-              presenceActivity: z,
-              analyticsLocations: O,
-              showAuthButton: el && !er && ei.enabled,
-              requireAccountLink: ed,
-              startAuthorization: eo,
+              header: em,
+              currentUserId: F,
+              launchableAppId: $,
+              isEmbeddedApplication: Q,
+              tryWithGdnAction: et,
+              staticBannerSrc: J,
+              onClickContent: ei,
+              iconSrc: K,
+              onView: W,
+              presenceActivity: Y,
+              analyticsLocations: U,
+              showAuthButton: es && !er && el.enabled,
+              requireAccountLink: ec,
+              startAuthorization: ed,
               accountLinkButtonRef: e_,
-              renderAccountLinkUpsell: eh,
+              renderAccountLinkUpsell: ep,
           })
-        : (0, i.jsx)(P.A, {
-              message: V,
-              application: U,
-              applicationName: K,
+        : (0, i.jsx)(w.A, {
+              message: q,
+              application: G,
+              applicationName: Z,
               channel: B,
-              header: eu,
-              currentUserId: G,
-              launchableAppId: Z,
-              isEmbeddedApplication: Y,
-              tryWithGdnAction: ee,
-              staticBannerSrc: X,
-              onClickContent: en,
-              iconSrc: Q,
-              onView: q,
-              presenceActivity: z,
-              currentUserPresenceActivity: F,
-              hideParty: H,
-              partyStatusElement: W,
-              analyticsLocations: O,
-              showAuthButton: el && !er && ei.enabled,
-              requireAccountLink: ed,
-              canPromptAuth: el && !er,
-              startAuthorization: eo,
+              header: em,
+              currentUserId: F,
+              launchableAppId: $,
+              isEmbeddedApplication: Q,
+              tryWithGdnAction: et,
+              staticBannerSrc: J,
+              onClickContent: ei,
+              iconSrc: K,
+              onView: W,
+              presenceActivity: Y,
+              currentUserPresenceActivity: H,
+              hideParty: V,
+              partyStatusElement: z,
+              analyticsLocations: U,
+              showAuthButton: es && !er && el.enabled,
+              requireAccountLink: ec,
+              canPromptAuth: es && !er,
+              startAuthorization: ed,
               accountLinkButtonRef: e_,
-              renderAccountLinkUpsell: eh,
+              renderAccountLinkUpsell: ep,
           });
 }

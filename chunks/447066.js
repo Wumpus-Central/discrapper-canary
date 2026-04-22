@@ -1,65 +1,68 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
     a = n(990078),
-    r = n(397927),
-    o = n(985018),
-    d = n(571316);
-function c(e) {
+    r = n(834730),
+    o = n(331322),
+    d = n(534514),
+    c = n(638916),
+    u = n(985018),
+    m = n(866219);
+function g(e) {
     let {
         name: t,
         description: n,
         icon: l,
-        imageSrc: c,
-        iconBackgroundColor: u,
-        iconClassName: m,
-        iconWrapperClassName: g,
-        details: x,
-        detailsClassName: h,
-        isHeader: p,
-        isPremium: A,
-        children: b,
+        imageSrc: g,
+        iconBackgroundColor: h,
+        iconClassName: x,
+        iconWrapperClassName: p,
+        details: A,
+        detailsClassName: b,
+        isHeader: f,
+        isPremium: _,
+        children: j,
     } = e;
-    return (0, i.jsxs)(r.BJc, {
+    return (0, i.jsxs)(o.B, {
         direction: "horizontal",
         fullWidth: !0,
         gap: 16,
         children: [
-            null != l || null != c
+            null != l || null != g
                 ? (function (e, t, n, l, a) {
-                      if (null != t) return (0, i.jsx)("img", { alt: "", src: t, className: s()(d.P0, l) });
+                      if (null != t) return (0, i.jsx)("img", { alt: "", src: t, className: s()(m.P0, l) });
                       let r = null;
                       return (
                           null != e &&
                               (r =
                                   "string" == typeof e
-                                      ? (0, i.jsx)("img", { alt: "", src: e, className: s()(d.Kk, l) })
-                                      : (0, i.jsx)(e, { className: s()(d.Kk, l), color: "currentColor" })),
-                          (0, i.jsx)("div", { style: { backgroundColor: n }, className: s()(d.P0, a), children: r })
+                                      ? (0, i.jsx)("img", { alt: "", src: e, className: s()(m.Kk, l) })
+                                      : (0, i.jsx)(e, { className: s()(m.Kk, l), color: "currentColor" })),
+                          (0, i.jsx)("div", { style: { backgroundColor: n }, className: s()(m.P0, a), children: r })
                       );
-                  })(l, c, u, m, g)
+                  })(l, g, h, x, p)
                 : null,
-            (0, i.jsxs)(r.BJc, {
+            (0, i.jsxs)(o.B, {
                 justify: "center",
                 children: [
                     (function (e) {
-                        let { name: t, description: n, details: l, detailsClassName: c, isHeader: u, isPremium: m } = e,
-                            g = l?.map((e, t) => {
+                        let { name: t, description: n, details: l, detailsClassName: g, isHeader: h, isPremium: x } = e,
+                            p = l?.map((e, t) => {
                                 let { icon: n, text: l } = e;
                                 return (0, i.jsxs)(
                                     "div",
                                     {
-                                        className: s()(d.yM, u ? d.Vw : null),
+                                        className: s()(m.yM, h ? m.Vw : null),
                                         children: [
                                             null != n
-                                                ? (0, i.jsx)(n, { size: "xs", color: "currentColor", className: d.Ul })
+                                                ? (0, i.jsx)(n, { size: "xs", color: "currentColor", className: m.Ul })
                                                 : null,
-                                            (0, i.jsx)(r.Text, {
+                                            (0, i.jsx)(r.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                className: c,
+                                                className: g,
                                                 children: l,
                                             }),
                                         ],
@@ -67,37 +70,33 @@ function c(e) {
                                     t,
                                 );
                             });
-                        return (0, i.jsxs)(r.BJc, {
+                        return (0, i.jsxs)(o.B, {
                             gap: 0,
                             children: [
-                                (0, i.jsxs)(r.Heading, {
-                                    variant: u ? "heading-xl/semibold" : "heading-md/medium",
-                                    className: u ? d.wx : d.K8,
+                                (0, i.jsxs)(d.D, {
+                                    variant: h ? "heading-xl/semibold" : "heading-md/medium",
+                                    className: h ? m.wx : m.K8,
                                     children: [
                                         t,
-                                        m &&
+                                        x &&
                                             (0, i.jsx)(a.m, {
-                                                text: o.intl.string(o.t.VFuFum),
-                                                children: (0, i.jsx)(r.qyI, {
+                                                text: u.intl.string(u.t.VFuFum),
+                                                children: (0, i.jsx)(c.q, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: d.PC,
+                                                    className: m.PC,
                                                 }),
                                             }),
                                     ],
                                 }),
                                 null != n
-                                    ? (0, i.jsx)(r.Text, {
-                                          variant: "text-sm/normal",
-                                          color: "text-default",
-                                          children: n,
-                                      })
+                                    ? (0, i.jsx)(r.E, { variant: "text-sm/normal", color: "text-default", children: n })
                                     : null,
-                                (0, i.jsx)(r.BJc, { direction: "horizontal", children: g }),
+                                (0, i.jsx)(o.B, { direction: "horizontal", children: p }),
                             ],
                         });
-                    })({ name: t, description: n, details: x, detailsClassName: h, isHeader: p, isPremium: A }),
-                    b,
+                    })({ name: t, description: n, details: A, detailsClassName: b, isHeader: f, isPremium: _ }),
+                    j,
                 ],
             }),
         ],

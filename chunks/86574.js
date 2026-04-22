@@ -1,49 +1,46 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(355418),
-    i = n(658809),
-    a = n(620695),
-    s = n(996483),
-    o = n(632434);
+r.d(t, { A: () => u });
+var n = r(355418),
+    s = r(881190),
+    a = r(620695),
+    i = r(996483),
+    o = r(632434);
 let l = RegExp(
-        "(jetzt|heute|morgen|\xfcbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)",
-        "i",
-    ),
-    u = 1,
-    c = 2;
-class d extends r.c {
+    "(jetzt|heute|morgen|\xfcbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)",
+    "i",
+);
+class u extends n.c {
     innerPattern(e) {
         return l;
     }
     innerExtract(e, t) {
-        let n = e.reference.getDateWithAdjustedTimezone(),
-            r = (t[u] || "").toLowerCase(),
-            l = (t[c] || "").toLowerCase(),
-            d = e.createParsingComponents();
-        switch (r) {
+        let r = e.reference.getDateWithAdjustedTimezone(),
+            n = (t[1] || "").toLowerCase(),
+            l = (t[2] || "").toLowerCase(),
+            u = e.createParsingComponents();
+        switch (n) {
             case "jetzt":
-                d = s.tB(e.reference);
+                u = i.tB(e.reference);
                 break;
             case "heute":
-                d = s.Ec(e.reference);
+                u = i.Ec(e.reference);
                 break;
             case "morgen":
-                (n = (0, o.Gw)(n, { day: 1 })), (0, i.Pl)(d, n), (0, i.A4)(d, n);
+                (r = (0, o.Gw)(r, { day: 1 })), (0, s.Pl)(u, r), (0, s.A4)(u, r);
                 break;
             case "\xfcbermorgen":
             case "uebermorgen":
-                (n = (0, o.Gw)(n, { day: 2 })), (0, i.Pl)(d, n), (0, i.A4)(d, n);
+                (r = (0, o.Gw)(r, { day: 2 })), (0, s.Pl)(u, r), (0, s.A4)(u, r);
                 break;
             case "gestern":
-                (n = (0, o.Gw)(n, { day: -1 })), (0, i.Pl)(d, n), (0, i.A4)(d, n);
+                (r = (0, o.Gw)(r, { day: -1 })), (0, s.Pl)(u, r), (0, s.A4)(u, r);
                 break;
             case "vorgestern":
-                (n = (0, o.Gw)(n, { day: -2 })), (0, i.Pl)(d, n), (0, i.A4)(d, n);
+                (r = (0, o.Gw)(r, { day: -2 })), (0, s.Pl)(u, r), (0, s.A4)(u, r);
                 break;
             default:
-                r.match(/letzte\s*nacht/) &&
-                    (n.getHours() > 6 && (n = (0, o.Gw)(n, { day: -1 })), (0, i.Pl)(d, n), d.imply("hour", 0));
+                n.match(/letzte\s*nacht/) &&
+                    (r.getHours() > 6 && (r = (0, o.Gw)(r, { day: -1 })), (0, s.Pl)(u, r), u.imply("hour", 0));
         }
-        return l && (d = a.A.extractTimeComponents(d, l)), d;
+        return l && (u = a.A.extractTimeComponents(u, l)), u;
     }
 }

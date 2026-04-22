@@ -1,34 +1,39 @@
-"use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => G });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(33851),
     o = n.n(a),
     d = n(989349),
     c = n.n(d),
     u = n(311907),
     m = n(827734),
-    g = n(421380),
-    x = n(397927),
-    h = n(47167),
-    _ = n(808728),
-    A = n(994500),
-    p = n(287809),
-    f = n(975571),
-    j = n(661191),
-    N = n(997509),
-    E = n(834720),
-    C = n(652215),
-    T = n(985018),
-    I = n(859854);
-let b = (e) => {
+    g = n(27192),
+    h = n(862482),
+    x = n(695366),
+    _ = n(285796),
+    p = n(534514),
+    A = n(834730),
+    E = n(289873),
+    f = n(192308),
+    j = n(47167),
+    N = n(808728),
+    I = n(994500),
+    C = n(287809),
+    b = n(975571),
+    v = n(661191),
+    S = n(997509),
+    T = n(834720),
+    y = n(652215),
+    R = n(985018),
+    L = n(672419);
+let D = (e) => {
     let {
             name: t,
             failingName: n,
-            description: s,
-            checked: l,
+            description: l,
+            checked: s,
             pending: r,
             pendingDescription: a,
             failingDescription: o,
@@ -38,40 +43,40 @@ let b = (e) => {
         u = null;
     return (
         r
-            ? ((c = (0, i.jsx)(x.EpV, {
+            ? ((c = (0, i.jsx)(x.E, {
                   size: "custom",
                   color: m.A.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20,
               })),
-              (u = null != a ? a : s))
-            : l
-              ? ((c = (0, i.jsx)(g.Kj, { readOnly: !0, shape: g.Ib.ROUND, size: 20, type: g.Xo.INVERTED, value: !0 })),
-                (u = s))
-              : ((c = (0, i.jsx)(x.aXh, {
+              (u = null != a ? a : l))
+            : s
+              ? ((c = (0, i.jsx)(g.Kj, { readOnly: !0, shape: g.DO.ROUND, size: 20, type: g.Or.INVERTED, value: !0 })),
+                (u = l))
+              : ((c = (0, i.jsx)(_.a, {
                     size: "custom",
                     color: m.A.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20,
                 })),
                 (d = null != n ? n : t),
-                (u = null != o ? o : s)),
+                (u = null != o ? o : l)),
         (0, i.jsxs)("div", {
-            className: I.gd,
+            className: L.gd,
             children: [
-                (0, i.jsx)("div", { className: I.aV, children: c }),
+                (0, i.jsx)("div", { className: L.aV, children: c }),
                 (0, i.jsxs)("div", {
-                    className: I.QL,
+                    className: L.QL,
                     children: [
-                        (0, i.jsx)(x.Heading, { variant: "heading-md/semibold", children: d }),
-                        (0, i.jsx)(x.Text, { color: "text-muted", variant: "text-sm/normal", children: u }),
+                        (0, i.jsx)(p.D, { variant: "heading-md/semibold", children: d }),
+                        (0, i.jsx)(A.E, { color: "text-muted", variant: "text-sm/normal", children: u }),
                     ],
                 }),
             ],
         })
     );
 };
-function v(e, t) {
+function O(e, t) {
     return o()(
         e?.map((e) => {
             let [t, n] = e;
@@ -83,160 +88,160 @@ function v(e, t) {
         }),
     );
 }
-let S = (e) => {
+let G = (e) => {
     let t,
-        { guild: l, guildId: a, className: o, headerContent: d, failedItemsOnly: m = !1 } = e,
-        [S, y] = (0, u.yK)([E.Ay], () => [E.Ay.getDiscoveryChecklist(a), E.Ay.isLoading()], [a]),
-        { nsfwProperties: R } = S ?? {},
-        O = l?.features.has(C.GuildFeatures.PARTNERED),
-        G = R?.channels_banned_keywords,
-        L = (0, u.bG)(
-            [_.Ay],
+        { guild: s, guildId: a, className: o, headerContent: d, failedItemsOnly: m = !1 } = e,
+        [g, x] = (0, u.yK)([T.Ay], () => [T.Ay.getDiscoveryChecklist(a), T.Ay.isLoading()], [a]),
+        { nsfwProperties: _ } = g ?? {},
+        G = s?.features.has(y.GuildFeatures.PARTNERED),
+        M = _?.channels_banned_keywords,
+        k = (0, u.bG)(
+            [N.Ay],
             () => {
-                if (null == G) return [];
-                let e = (_.Ay.getChannels(l.id) ?? {})[_.I6] ?? [],
+                if (null == M) return [];
+                let e = (N.Ay.getChannels(s.id) ?? {})[N.I6] ?? [],
                     t = e?.map((e) => e.channel).reduce((e, t) => ({ ...e, [t.id]: t }), {}) ?? {};
-                return null == G
+                return null == M
                     ? []
-                    : Object.entries(G).map((e) => {
+                    : Object.entries(M).map((e) => {
                           let [n, i] = e;
                           return [t[n], i];
                       });
             },
-            [l.id, G],
-            v,
+            [s.id, M],
+            O,
         );
-    if (y || null == S)
+    if (x || null == g)
         return (0, i.jsxs)("div", {
-            className: r()(I.kL, I.NQ, o),
+            className: r()(L.kL, L.NQ, o),
             children: [
-                (0, i.jsx)(x.Heading, {
-                    className: I.KQ,
+                (0, i.jsx)(p.D, {
+                    className: L.KQ,
                     variant: "heading-md/semibold",
                     color: "text-default",
-                    children: T.intl.string(T.t.e1gm0f),
+                    children: R.intl.string(R.t.e1gm0f),
                 }),
-                (0, i.jsx)(x.y$y, { className: I.__invalid_spinner }),
+                (0, i.jsx)(E.y, { className: L.__invalid_spinner }),
             ],
         });
-    let D = O ? T.t["WH+1Yz"] : T.t.a4MYDO,
-        M = [
+    let U = G ? R.t["WH+1Yz"] : R.t.a4MYDO,
+        w = [
             {
-                name: T.intl.string(T.t.yvk9py),
-                failingName: T.intl.string(T.t["IY/UT/"]),
-                description: T.intl.string(T.t.hSLSM6),
-                failingDescription: T.intl.format(T.t.odsGgy, {
-                    termsURL: C.X7G.TERMS,
-                    guidelinesURL: f.A.getArticleURL(C.MVz.PUBLIC_GUILD_GUILDLINES),
+                name: R.intl.string(R.t.yvk9py),
+                failingName: R.intl.string(R.t["IY/UT/"]),
+                description: R.intl.string(R.t.hSLSM6),
+                failingDescription: R.intl.format(R.t.odsGgy, {
+                    termsURL: y.X7G.TERMS,
+                    guidelinesURL: b.A.getArticleURL(y.MVz.PUBLIC_GUILD_GUILDLINES),
                 }),
-                checked: S?.safeEnvironment,
+                checked: g?.safeEnvironment,
             },
             {
-                name: T.intl.formatToPlainString(T.t.NYovA2, { minMembers: S.minimumGuildSize }),
-                failingName: T.intl.formatToPlainString(T.t.wvJwYs, {
-                    minMembers: S.minimumGuildSize.toLocaleString(),
+                name: R.intl.formatToPlainString(R.t.NYovA2, { minMembers: g.minimumGuildSize }),
+                failingName: R.intl.formatToPlainString(R.t.wvJwYs, {
+                    minMembers: g.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: T.intl.format(D, { minMembers: S.minimumGuildSize.toLocaleString() }),
-                checked: S?.size,
+                failingDescription: R.intl.format(U, { minMembers: g.minimumGuildSize.toLocaleString() }),
+                checked: g?.size,
             },
             {
-                name: T.intl.string(T.t.PtxOCK),
-                failingName: T.intl.string(T.t.JPF5IL),
-                description: T.intl.formatToPlainString(T.t.VT0bQJ, {
-                    minimumGuildAge: Math.ceil(S.minimumGuildAge / 7),
+                name: R.intl.string(R.t.PtxOCK),
+                failingName: R.intl.string(R.t.JPF5IL),
+                description: R.intl.formatToPlainString(R.t.VT0bQJ, {
+                    minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
                 }),
-                failingDescription: T.intl.formatToPlainString(T.t.jYwM1Y, {
-                    minimumGuildAge: Math.ceil(S.minimumGuildAge / 7),
-                    passDate: c()(j.default.extractTimestamp(a)).add(S.minimumGuildAge, "days").format("LL"),
+                failingDescription: R.intl.formatToPlainString(R.t.jYwM1Y, {
+                    minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
+                    passDate: c()(v.default.extractTimestamp(a)).add(g.minimumGuildAge, "days").format("LL"),
                 }),
-                checked: S?.age,
+                checked: g?.age,
             },
             {
-                name: S?.healthScorePending ? T.intl.string(T.t.G77ud0) : T.intl.string(T.t["95nW0H"]),
-                failingName: T.intl.string(T.t["+GHxPy"]),
-                description: T.intl.string(T.t.rTWJwX),
+                name: g?.healthScorePending ? R.intl.string(R.t.G77ud0) : R.intl.string(R.t["95nW0H"]),
+                failingName: R.intl.string(R.t["+GHxPy"]),
+                description: R.intl.string(R.t.rTWJwX),
                 failingDescription: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(x.Text, {
+                        (0, i.jsx)(A.E, {
                             color: "text-muted",
-                            className: I.t,
+                            className: L.t,
                             variant: "text-sm/normal",
-                            children: T.intl.string(T.t.LjqS0G),
+                            children: R.intl.string(R.t.LjqS0G),
                         }),
-                        S?.engagementHealthy
+                        g?.engagementHealthy
                             ? null
-                            : (0, i.jsx)(x.Text, {
+                            : (0, i.jsx)(A.E, {
                                   color: "text-feedback-critical",
                                   variant: "text-sm/normal",
-                                  children: T.intl.string(T.t.X8Lt77),
+                                  children: R.intl.string(R.t.X8Lt77),
                               }),
-                        S?.retentionHealthy
+                        g?.retentionHealthy
                             ? null
-                            : (0, i.jsx)(x.Text, {
+                            : (0, i.jsx)(A.E, {
                                   color: "text-feedback-critical",
                                   variant: "text-sm/normal",
-                                  children: T.intl.string(T.t.esdy89),
+                                  children: R.intl.string(R.t.esdy89),
                               }),
                         (() => {
-                            if (null == S || null == S.healthScore) return !1;
-                            let { retentionHealthy: e, engagementHealthy: t, healthScore: n } = S,
+                            if (null == g || null == g.healthScore) return !1;
+                            let { retentionHealthy: e, engagementHealthy: t, healthScore: n } = g,
                                 {
                                     avg_nonnew_participators: i,
-                                    avg_nonnew_communicators: s,
-                                    perc_ret_w1_intentful: l,
+                                    avg_nonnew_communicators: l,
+                                    perc_ret_w1_intentful: s,
                                 } = n;
-                            return (!e && null != l) || (!t && null != i && null != s);
+                            return (!e && null != s) || (!t && null != i && null != l);
                         })() &&
-                            (0, i.jsx)(g.$n, {
-                                className: I.zh,
-                                look: g.$n.Looks.LINK,
-                                size: g.$n.Sizes.NONE,
-                                color: g.$n.Colors.LINK,
+                            (0, i.jsx)(h.$n, {
+                                className: L.zh,
+                                look: h.$n.Looks.LINK,
+                                size: h.$n.Sizes.NONE,
+                                color: h.$n.Colors.LINK,
                                 onClick: () =>
-                                    (0, x.mMO)(async () => {
+                                    (0, f.openModalLazy)(async () => {
                                         let { default: e } = await n.e("63401").then(n.bind(n, 247920));
-                                        return (t) => (0, i.jsx)(e, { ...t, guildChecklist: S });
+                                        return (t) => (0, i.jsx)(e, { ...t, guildChecklist: g });
                                     }),
-                                children: T.intl.string(T.t.qyiTH8),
+                                children: R.intl.string(R.t.qyiTH8),
                             }),
                     ],
                 }),
-                pendingDescription: S?.size
-                    ? T.intl.format(T.t.ALtXIF, {
-                          checkBackHook: (e, t) => (0, i.jsx)("strong", { className: I.eb, children: e }, t),
+                pendingDescription: g?.size
+                    ? R.intl.format(R.t.ALtXIF, {
+                          checkBackHook: (e, t) => (0, i.jsx)("strong", { className: L.eb, children: e }, t),
                       })
-                    : T.intl.formatToPlainString(T.t["6S/96D"], { minMembers: 200 }),
-                checked: S?.healthy,
-                pending: S?.healthScorePending,
+                    : R.intl.formatToPlainString(R.t["6S/96D"], { minMembers: 200 }),
+                checked: g?.healthy,
+                pending: g?.healthScorePending,
             },
             {
-                name: T.intl.string(T.t["AUUV/x"]),
-                failingName: T.intl.string(T.t["jURyO+"]),
-                description: T.intl.string(T.t.wikb1q),
+                name: R.intl.string(R.t["AUUV/x"]),
+                failingName: R.intl.string(R.t["jURyO+"]),
+                description: R.intl.string(R.t.wikb1q),
                 failingDescription: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        R?.channels != null
-                            ? (0, i.jsx)(x.Text, {
+                        _?.channels != null
+                            ? (0, i.jsx)(A.E, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: T.intl.format(T.t["T+DQYY"], {
-                                      channelHook: (e, t) => (0, i.jsx)("span", { className: I.ty, children: e }, t),
+                                  children: R.intl.format(R.t["T+DQYY"], {
+                                      channelHook: (e, t) => (0, i.jsx)("span", { className: L.ty, children: e }, t),
                                   }),
                               })
                             : null,
-                        L.length > 0
+                        k.length > 0
                             ? (0, i.jsx)("div", {
-                                  className: I.pZ,
-                                  children: L.map((e) => {
+                                  className: L.pZ,
+                                  children: k.map((e) => {
                                       let [t, n] = e;
                                       return null != t
                                           ? (0, i.jsxs)(
-                                                x.Text,
+                                                A.E,
                                                 {
                                                     color: "text-muted",
                                                     variant: "text-sm/normal",
-                                                    children: [(0, h.m1)(t, p.default, A.A, !0), ": ", n.join(", ")],
+                                                    children: [(0, j.m1)(t, C.default, I.A, !0), ": ", n.join(", ")],
                                                 },
                                                 t.id,
                                             )
@@ -244,68 +249,70 @@ let S = (e) => {
                                   }),
                               })
                             : null,
-                        R?.name != null
-                            ? (0, i.jsx)(x.Text, {
+                        _?.name != null
+                            ? (0, i.jsx)(A.E, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: T.intl.format(T.t.KVD8E3, {
-                                      nameHook: (e, t) => (0, i.jsx)("span", { className: I.ty, children: e }, t),
+                                  children: R.intl.format(R.t.KVD8E3, {
+                                      nameHook: (e, t) => (0, i.jsx)("span", { className: L.ty, children: e }, t),
                                   }),
                               })
                             : null,
-                        R?.description != null
-                            ? (0, i.jsx)(x.Text, {
+                        _?.description != null
+                            ? (0, i.jsx)(A.E, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: T.intl.format(T.t["/W9Kel"], {
+                                  children: R.intl.format(R.t["/W9Kel"], {
                                       descriptionHook: (e, t) =>
-                                          (0, i.jsx)("span", { className: I.ty, children: e }, t),
+                                          (0, i.jsx)("span", { className: L.ty, children: e }, t),
                                   }),
                               })
                             : null,
-                        R?.icon != null || R?.discovery_splash != null || R?.invite_splash != null || R?.banner != null
-                            ? (0, i.jsx)(x.Text, {
+                        _?.icon != null || _?.discovery_splash != null || _?.invite_splash != null || _?.banner != null
+                            ? (0, i.jsx)(A.E, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: T.intl.string(T.t.WVKQ6q),
+                                  children: R.intl.string(R.t.WVKQ6q),
                               })
                             : null,
                     ],
                 }),
-                checked: null == R || 0 === Object.keys(R).length,
+                checked: null == _ || 0 === Object.keys(_).length,
             },
             {
-                name: T.intl.string(T.t.lSXnL9),
-                failingName: T.intl.string(T.t.awA3Pb),
-                description: T.intl.string(T.t.QbBJ7R),
-                failingDescription: T.intl.format(T.t.kBXInb, {
-                    onClick: () => N.A.setSection(C.BEX.SAFETY, C.nd0.SAFETY_PERMISSIONS),
+                name: R.intl.string(R.t.lSXnL9),
+                failingName: R.intl.string(R.t.awA3Pb),
+                description: R.intl.string(R.t.QbBJ7R),
+                failingDescription: R.intl.format(R.t.kBXInb, {
+                    onClick: () => S.A.setSection(y.BEX.SAFETY, y.nd0.SAFETY_PERMISSIONS),
                 }),
-                checked: S?.protected,
+                checked: g?.protected,
             },
         ];
     return (0, i.jsxs)("div", {
-        className: r()(I.kL, o),
+        className: r()(L.kL, o),
         children: [
-            ((t = S?.sufficient ? n(617416) : n(848887)),
+            ((t = g?.sufficient ? n(617416) : n(848887)),
             null == d
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: I.wx,
-                      children: [(0, i.jsx)("img", { alt: "", src: t, className: I.nr, width: 40 }), d],
+                      className: L.wx,
+                      children: [(0, i.jsx)("img", { alt: "", src: t, className: L.nr, width: 40 }), d],
                   })),
-            M.filter((e) => !m || null == e.checked || !e.checked).map((e, t) =>
-                (0, i.jsxs)(
-                    s.Fragment,
-                    {
-                        children: [
-                            (0, i.jsx)(b, { ...e }),
-                            t < M.length - 1 ? (0, i.jsx)("hr", { className: I.me }) : null,
-                        ],
-                    },
-                    `${e.name}`,
+            w
+                .filter((e) => !m || null == e.checked || !e.checked)
+                .map((e, t) =>
+                    (0, i.jsxs)(
+                        l.Fragment,
+                        {
+                            children: [
+                                (0, i.jsx)(D, { ...e }),
+                                t < w.length - 1 ? (0, i.jsx)("hr", { className: L.me }) : null,
+                            ],
+                        },
+                        `${e.name}`,
+                    ),
                 ),
-            ),
         ],
     });
 };

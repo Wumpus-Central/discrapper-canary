@@ -1,51 +1,52 @@
-n.d(e, { default: () => g });
+n.d(e, { default: () => k });
 var i = n(627968),
-    l = n(64700),
-    a = n(284009),
-    r = n.n(a),
-    s = n(158954),
-    u = n(311907),
-    d = n(397927),
-    o = n(876696),
-    c = n(287809),
-    m = n(985018),
-    f = n(657346);
-let g = function (t) {
-    let { onClose: e, transitionState: a } = t,
-        g = (0, u.bG)([c.default], () => c.default.getCurrentUser()),
-        [k, b] = l.useState(!1),
-        C = l.useCallback(() => (e?.(), Promise.resolve()), [e]),
-        x = l.useCallback(() => {
+    a = n(64700),
+    l = n(284009),
+    r = n.n(l),
+    s = n(189213),
+    d = n(311907),
+    o = n(192308),
+    u = n(834730),
+    c = n(876696),
+    m = n(287809),
+    f = n(985018),
+    g = n(696850);
+let k = function (t) {
+    let { onClose: e, transitionState: l } = t,
+        k = (0, d.bG)([m.default], () => m.default.getCurrentUser()),
+        [b, p] = a.useState(!1),
+        C = a.useCallback(() => (e?.(), Promise.resolve()), [e]),
+        x = a.useCallback(() => {
             e?.(),
-                (0, d.mMO)(async () => {
-                    let { default: t } = await Promise.all([n.e("89129"), n.e("97544")]).then(n.bind(n, 354096));
+                (0, o.openModalLazy)(async () => {
+                    let { default: t } = await Promise.all([n.e("89129"), n.e("66543")]).then(n.bind(n, 354096));
                     return (e) => (0, i.jsx)(t, { ...e });
                 });
         }, [e]),
-        p = l.useCallback(() => {
+        h = a.useCallback(() => {
             e?.(),
-                r()(null != g, "ResendEmailVerificationButton: currentUser cannot be undefined"),
-                b(!0),
-                (0, o.S)(g).finally(() => b(!1));
-        }, [g, e]),
-        h = l.useMemo(
+                r()(null != k, "ResendEmailVerificationButton: currentUser cannot be undefined"),
+                p(!0),
+                (0, c.S)(k).finally(() => p(!1));
+        }, [k, e]),
+        v = a.useMemo(
             () =>
-                g?.email == null
-                    ? [{ text: m.intl.string(m.t.ydw5nX), onClick: x, variant: "primary" }]
+                k?.email == null
+                    ? [{ text: f.intl.string(f.t.ydw5nX), onClick: x, variant: "primary" }]
                     : [
-                          { text: m.intl.string(m.t.Vm8akB), onClick: x, variant: "secondary" },
-                          { text: m.intl.string(m.t.lm1UKt), onClick: p, variant: "primary", loading: k },
+                          { text: f.intl.string(f.t.Vm8akB), onClick: x, variant: "secondary" },
+                          { text: f.intl.string(f.t.lm1UKt), onClick: h, variant: "primary", loading: b },
                       ],
-            [g, x, p, k],
+            [k, x, h, b],
         );
     return (0, i.jsxs)(s.Modal, {
-        title: m.intl.string(m.t.UZLrY1),
-        transitionState: a,
+        title: f.intl.string(f.t.UZLrY1),
+        transitionState: l,
         onClose: C,
-        actions: h,
+        actions: v,
         children: [
-            (0, i.jsx)("div", { className: f.p }),
-            (0, i.jsx)(d.Text, { variant: "text-md/normal", className: f.i, children: m.intl.string(m.t["0LgOKH"]) }),
+            (0, i.jsx)("div", { className: g.p }),
+            (0, i.jsx)(u.E, { variant: "text-md/normal", className: g.i, children: f.intl.string(f.t["0LgOKH"]) }),
         ],
     });
 };

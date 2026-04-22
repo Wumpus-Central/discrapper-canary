@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { x: () => a });
-var r = n(627968);
-n(64700);
-var i = n(645059),
-    s = n(977544);
-function a(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: a, role: o, width: l = 288, height: u = 192 } = e;
-    return (0, r.jsx)("img", {
-        style: { width: l, height: u },
-        src: i.A,
-        srcSet: `${i.A} 1x, ${s.A} 2x`,
-        alt: t,
-        "aria-label": n,
-        "aria-hidden": a,
-        role: o ?? "img",
+i.d(e, { x: () => n });
+var a = i(627968);
+i(64700);
+var s = i(645059),
+    c = i(977544);
+function n(t) {
+    let { alt: e, ariaLabel: i, ariaHidden: n, role: r, width: d = 288, height: o = 192 } = t;
+    return (0, a.jsx)("img", {
+        style: { width: d, height: o },
+        src: s.A,
+        srcSet: `${s.A} 1x, ${c.A} 2x`,
+        alt: e,
+        "aria-label": i,
+        "aria-hidden": n,
+        role: r ?? "img",
     });
 }

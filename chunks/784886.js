@@ -1,110 +1,110 @@
-"use strict";
-n.d(t, { A: () => R });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
+n.d(t, { A: () => j });
+var a = n(627968),
+    r = n(64700),
+    l = n(503698),
+    i = n.n(l),
     o = n(3203),
-    l = n(397927),
+    s = n(192308),
+    c = n(408278),
     u = n(308528),
-    c = n(688810),
-    d = n(355622),
+    d = n(688810),
+    f = n(355622),
     _ = n(408018),
-    f = n(133343),
-    p = n(195880),
-    h = n(45787),
+    h = n(133343),
+    A = n(195880),
+    p = n(45787),
     m = n(746174),
-    E = n(95701),
+    S = n(95701),
     g = n(562153),
-    A = n(183555),
-    I = n(448613),
+    b = n(183555),
+    x = n(448613),
     T = n(633572),
-    S = n(652215),
-    y = n(788868),
+    E = n(652215),
+    R = n(788868),
     v = n(985018),
-    N = n(599159);
-let C = (0, E.createChannelRecord)({ id: "1", type: S.rbe.DM });
-function R(e) {
-    let { user: t, guildId: s, channelId: E, onClose: S, disableAutoFocus: R = !1, upsell: O = !1 } = e,
-        { newestAnalyticsLocation: b, analyticsLocations: D } = (0, c.Ay)(),
-        { trackUserProfileAction: L } = (0, A.NJ)(),
-        w = (0, m.j)("UserProfilePopoutDirectMessageSection"),
-        [M, x] = i.useState(""),
-        [P, k] = i.useState((0, _.x7)(M)),
-        U = i.useRef(!1),
-        G = i.useRef(null),
-        F = i.useRef(null),
-        { Component: V } = (0, o.V)(),
-        B = i.useMemo(() => ({ ...d.oU.USER_PROFILE, disableAutoFocus: R }), [R]),
-        H = i.useCallback(async () => {
-            (0, h.xs)(t.id),
+    C = n(831111);
+let y = (0, S.createChannelRecord)({ id: "1", type: E.rbe.DM });
+function j(e) {
+    let { user: t, guildId: l, channelId: S, onClose: E, disableAutoFocus: j = !1, upsell: I = !1 } = e,
+        { newestAnalyticsLocation: L, analyticsLocations: P } = (0, d.Ay)(),
+        { trackUserProfileAction: N } = (0, b.NJ)(),
+        U = (0, m.j)("UserProfilePopoutDirectMessageSection"),
+        [w, k] = r.useState(""),
+        [M, O] = r.useState((0, _.x7)(w)),
+        V = r.useRef(!1),
+        $ = r.useRef(null),
+        F = r.useRef(null),
+        { Component: D } = (0, o.V)(),
+        G = r.useMemo(() => ({ ...f.oU.USER_PROFILE, disableAutoFocus: j }), [j]),
+        B = r.useCallback(async () => {
+            (0, p.xs)(t.id),
                 await u.A.openPrivateChannel({ recipientIds: [t.id] }),
-                (0, l.mMO)(async () => {
+                (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                     return (t) =>
-                        (0, r.jsx)(e, { ...t, giftIntentType: y.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: D });
+                        (0, a.jsx)(e, { ...t, giftIntentType: R.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: P });
                 });
-        }, [t.id, D]),
-        j = i.useCallback(
+        }, [t.id, P]),
+        H = r.useCallback(
             () =>
-                (0, r.jsxs)("div", {
-                    className: N.Uo,
+                (0, a.jsxs)("div", {
+                    className: C.Uo,
                     children: [
-                        (0, r.jsx)(l.K0, {
+                        (0, a.jsx)(c.K, {
                             size: "sm",
                             variant: "icon-only",
-                            icon: V,
+                            icon: D,
                             "aria-label": v.intl.string(v.t.I61IsE),
-                            onClick: H,
+                            onClick: B,
                         }),
-                        (0, r.jsx)(T.A, { user: t, analyticsLocations: D, onClose: S, confettiEnabled: O }),
+                        (0, a.jsx)(T.A, { user: t, analyticsLocations: P, onClose: E, confettiEnabled: I }),
                     ],
                 }),
-            [V, H, t, D, S, O],
+            [D, B, t, P, E, I],
         );
-    return (0, r.jsx)(f.Ay, {
-        className: a()(N.kL, { [N.UX]: O }),
-        editorClassName: N.EN,
-        type: B,
-        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], { name: g.Ay.getName(s, E, t) }),
-        channel: C,
-        textValue: M,
-        richValue: P,
+    return (0, a.jsx)(h.Ay, {
+        className: i()(C.kL, { [C.UX]: I }),
+        editorClassName: C.EN,
+        type: G,
+        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], { name: g.Ay.getName(l, S, t) }),
+        channel: y,
+        textValue: w,
+        richValue: M,
         onChange: (e, t, n) => {
-            t !== M && (x(t), k(n));
+            t !== w && (k(t), O(n));
         },
-        focused: U.current,
+        focused: V.current,
         onFocus: () => {
-            U.current = !0;
+            V.current = !0;
         },
         onBlur: () => {
-            U.current = !1;
+            V.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e,
-                r = n.trim();
-            if ("" === r) return { shouldClear: !1, shouldRefocus: !0 };
-            (G.current !== r || null == F.current) && ((G.current = r), (F.current = (0, p.m)()));
+                a = n.trim();
+            if ("" === a) return { shouldClear: !1, shouldRefocus: !0 };
+            ($.current !== a || null == F.current) && (($.current = a), (F.current = (0, A.m)()));
             try {
                 return (
-                    L({ action: "SEND_DIRECT_MESSAGE" }),
-                    await (0, I.p)({
+                    N({ action: "SEND_DIRECT_MESSAGE" }),
+                    await (0, x.p)({
                         userId: t.id,
-                        content: r,
+                        content: a,
                         openChannel: !0,
                         whenReady: !0,
-                        location: b,
+                        location: L,
                         nonce: F.current ?? void 0,
                     }),
-                    (G.current = null),
+                    ($.current = null),
                     (F.current = null),
-                    S?.(),
+                    E?.(),
                     { shouldClear: !0, shouldRefocus: !1 }
                 );
             } catch {
                 return { shouldClear: !1, shouldRefocus: !1 };
             }
         },
-        renderButtons: O || w ? j : void 0,
+        renderButtons: I || U ? H : void 0,
     });
 }

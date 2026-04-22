@@ -1,19 +1,18 @@
 "use strict";
-n.d(t, { A: () => c, i: () => u });
-var r = n(972347),
-    i = n(118356),
+n.d(t, { A: () => c, i: () => d });
+var r,
+    i = n(972347),
+    s = n(118356),
     a = n(277738),
-    s = n(201327),
-    o = n(731854);
-let l = new i.Vy("Output");
-var u = (function (e) {
-    return (e.InteractionRequired = "interactionrequired"), (e.Speaking = "speaking"), (e.Video = "video"), e;
-})({});
-class c extends r.A {
+    o = n(201327),
+    l = n(731854);
+let u = new s.Vy("Output");
+var d = (((r = {}).InteractionRequired = "interactionrequired"), (r.Speaking = "speaking"), (r.Video = "video"), r);
+class c extends i.A {
     id;
-    _speakingFlags = o.ME.NONE;
+    _speakingFlags = l.ME.NONE;
     _mute = !1;
-    _volume = o.Hz;
+    _volume = l.Hz;
     sinkId = null;
     audioElement = null;
     stream = new MediaStream();
@@ -29,11 +28,11 @@ class c extends r.A {
     }
     destroy() {
         this.audioElement?.pause(),
-            null != this.videoStreamId && (0, s.it)(this.videoStreamId),
+            null != this.videoStreamId && (0, o.it)(this.videoStreamId),
             null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)),
             null != this.levelNode &&
                 (this.levelNode.disconnect(), this.levelNode.port.postMessage("close"), (this.levelNode = null)),
-            this.setSpeakingFlags(o.ME.NONE),
+            this.setSpeakingFlags(l.ME.NONE),
             this.removeAllListeners();
     }
     addTrack(e) {
@@ -55,16 +54,16 @@ class c extends r.A {
                     }),
                     null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode);
             } catch (e) {
-                l.warn(`Output#Failed to setup speaking indicator: ${e}`);
+                u.warn(`Output#Failed to setup speaking indicator: ${e}`);
             }
         }
         return (
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, s.it)(this.videoStreamId),
+                (null != this.videoStreamId && (0, o.it)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, s.ju)(this.stream)),
+                (this.videoStreamId = (0, o.ju)(this.stream)),
                 this.emit("video", this.videoStreamId)),
             "audio" === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -77,7 +76,7 @@ class c extends r.A {
         return (
             this.stream.removeTrack(e),
             "video" === e.kind &&
-                (null != this.videoStreamId && (0, s.it)(this.videoStreamId), this.emit("video", null)),
+                (null != this.videoStreamId && (0, o.it)(this.videoStreamId), this.emit("video", null)),
             this.stream.getTracks().length
         );
     }
@@ -91,13 +90,13 @@ class c extends r.A {
         (this._mute = e || !1), this.updateAudioElement();
     }
     get priority() {
-        return (this._speakingFlags & o.ME.PRIORITY) === o.ME.PRIORITY;
+        return (this._speakingFlags & l.ME.PRIORITY) === l.ME.PRIORITY;
     }
     get volume() {
         return this._volume;
     }
     set volume(e) {
-        (this._volume = Math.max(0, Math.min(Math.round(e), o.Hz))), this.updateAudioElement();
+        (this._volume = Math.max(0, Math.min(Math.round(e), l.Hz))), this.updateAudioElement();
     }
     get speakingFlags() {
         return this._speakingFlags;

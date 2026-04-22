@@ -1,53 +1,38 @@
 "use strict";
-n.d(t, { A: () => h, e: () => s });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => f, e: () => o });
+var r,
+    i = n(311907),
+    s = n(73153),
     a = n(611010),
-    s = (function (e) {
-        return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
-    })({});
-let o = {},
-    l = {},
-    u = new Set(),
+    o = (((r = {})[(r.FETCHING = 0)] = "FETCHING"), (r[(r.FETCHED = 1)] = "FETCHED"), (r[(r.ERROR = 2)] = "ERROR"), r);
+let l = {},
+    u = {},
+    d = new Set(),
     c = {};
-function d(e) {
-    let { applicationId: t } = e;
-    l = { ...l, [t]: 0 };
-}
-function _(e) {
-    let { application: t } = e;
-    (o = { ...o, [t.id]: t }), (l = { ...l, [t.id]: 1 });
-    let n = Date.now();
-    (c = { ...c, [t.id]: n }), u.has(t.id) && (u.delete(t.id), (u = new Set(u)));
-}
-function f(e) {
-    let { applicationId: t, isInvalidApplication: n } = e;
-    (l = { ...l, [t]: 2 }), n && (u.add(t), (u = new Set(u)));
-}
-class p extends r.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "ApplicationDirectoryApplicationsStore";
     getApplication(e) {
-        if (null != e) return o[e];
+        if (null != e) return l[e];
     }
     getApplicationRecord(e) {
         if (null == e) return;
-        let t = o[e];
+        let t = l[e];
         if (null != t) return a.Ay.createFromServer(t);
     }
     getApplications() {
-        return o;
-    }
-    getApplicationFetchState(e) {
-        if (null != e) return l[e];
-    }
-    getApplicationFetchStates() {
         return l;
     }
+    getApplicationFetchState(e) {
+        if (null != e) return u[e];
+    }
+    getApplicationFetchStates() {
+        return u;
+    }
     isInvalidApplication(e) {
-        return null != e && u.has(e);
+        return null != e && d.has(e);
     }
     getInvalidApplicationIds() {
-        return u;
+        return d;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
@@ -56,8 +41,19 @@ class p extends r.Ay.Store {
         if (null != e) return c[e];
     }
 }
-let h = new p(i.h, {
-    APPLICATION_DIRECTORY_FETCH_APPLICATION: d,
-    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: _,
-    APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: f,
+let f = new _(s.h, {
+    APPLICATION_DIRECTORY_FETCH_APPLICATION: function (e) {
+        let { applicationId: t } = e;
+        u = { ...u, [t]: 0 };
+    },
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: function (e) {
+        let { application: t } = e;
+        (l = { ...l, [t.id]: t }), (u = { ...u, [t.id]: 1 });
+        let n = Date.now();
+        (c = { ...c, [t.id]: n }), d.has(t.id) && (d.delete(t.id), (d = new Set(d)));
+    },
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: function (e) {
+        let { applicationId: t, isInvalidApplication: n } = e;
+        (u = { ...u, [t]: 2 }), n && (d.add(t), (d = new Set(d)));
+    },
 });

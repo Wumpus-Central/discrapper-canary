@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var r = n(810531),
     i = n(7584),
     s = n(548965),
@@ -21,48 +21,48 @@ function u(e) {
         [r.L]: "GuildSticker",
     };
 }
-function c(e) {
+function d(e) {
     let t = {};
     for (let n of e) t[n.id] = u(n);
     return t;
 }
-function d(e, t) {
-    let n = [],
-        { tags: r } = t,
-        s = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
-    if ((n.push(s), null != r)) {
-        let t = { type: l.cG.TAG, value: r.trim().toLocaleLowerCase() };
-        n.push(t);
-        let s = o.A.getGuild(e);
-        if (null != s) {
-            let e = s.name.trim().toLocaleLowerCase();
-            null != e && "" !== e && n.push({ type: l.cG.GUILD_NAME, value: e });
-        }
-        let a = i.Ay.getByName(r);
-        null != a &&
-            (n.push({ type: l.cG.CORRELATED_EMOJI, value: a.surrogates }),
-            a.forEachDiversity((e) => n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates })));
-    }
-    return n;
-}
-class _ extends a.yW {
+class c extends a.yW {
     static displayName = "GuildStickersStore";
     database = this.addKKVDatabase("guildStickers");
     stickerByIdIndex = this.database.addSecondaryKVIndex("id");
     getAllGuildStickers = this.database.memoized((e) => {
         let t = new Map();
-        for (let n in e) {
-            let r = n;
-            t.set(r, Object.values(e[r].root));
-        }
+        for (let n in e) t.set(n, Object.values(e[n].root));
         return t;
     });
     getStickerMetadataMap = this.database.memoized((e) => {
         let t = new Map();
-        for (let n in e) {
-            let r = n;
-            for (let [n, i] of Object.entries(e[r].root)) t.set(n, d(r, i));
-        }
+        for (let n in e)
+            for (let [r, s] of Object.entries(e[n].root))
+                t.set(
+                    r,
+                    (function (e, t) {
+                        let n = [],
+                            { tags: r } = t,
+                            s = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
+                        if ((n.push(s), null != r)) {
+                            let t = { type: l.cG.TAG, value: r.trim().toLocaleLowerCase() };
+                            n.push(t);
+                            let s = o.A.getGuild(e);
+                            if (null != s) {
+                                let e = s.name.trim().toLocaleLowerCase();
+                                null != e && "" !== e && n.push({ type: l.cG.GUILD_NAME, value: e });
+                            }
+                            let a = i.Ay.getByName(r);
+                            null != a &&
+                                (n.push({ type: l.cG.CORRELATED_EMOJI, value: a.surrogates }),
+                                a.forEachDiversity((e) =>
+                                    n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates }),
+                                ));
+                        }
+                        return n;
+                    })(n, s),
+                );
         return t;
     });
     getStickersByGuildId = this.database.memoizedPartition((e, t) => Object.values(t));
@@ -73,11 +73,11 @@ class _ extends a.yW {
         return this.database;
     }
 }
-function f(e, t, n) {
-    if ("full_sync" === t.op) n.setPartition(e, c(t.items));
+function _(e, t, n) {
+    if ("full_sync" === t.op) n.setPartition(e, d(t.items));
     else {
         let r = n.getNullablePartition(e);
-        if (null == r) n.setPartition(e, c(t.writes));
+        if (null == r) n.setPartition(e, d(t.writes));
         else if (t.writes.length > 0 || t.deletes.length > 0) {
             let i = { ...r };
             for (let e of t.deletes) delete i[e];
@@ -86,7 +86,7 @@ function f(e, t, n) {
         }
     }
 }
-let p = new _(
+let f = new c(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
@@ -96,11 +96,11 @@ let p = new _(
                 i = new Set(n.map((e) => e.id));
             for (let e of r) i.add(e);
             for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
-            for (let e of n) f(e.id, e.stickers, t);
+            for (let e of n) _(e.id, e.stickers, t);
         },
         GUILD_CREATE: (e, t) => {
             if (null == e.guild.joined_at) return !1;
-            f(e.guild.id, e.guild.stickers, t);
+            _(e.guild.id, e.guild.stickers, t);
         },
         GUILD_DELETE: (e, t) => {
             t.removePartition(e.guild.id);
@@ -113,7 +113,7 @@ let p = new _(
         },
         GUILD_STICKERS_UPDATE: (e, t) => {
             let n = t.getPartition(e.guildId),
-                r = c(e.stickers);
+                r = d(e.stickers);
             if (null != n)
                 for (let e in r) {
                     let t = r[e],
@@ -123,10 +123,10 @@ let p = new _(
             t.setPartition(e.guildId, r);
         },
         CACHED_STICKERS_LOADED: (e, t) => {
-            for (let [n, r] of e.stickers) t.setPartition(n, c(r));
+            for (let [n, r] of e.stickers) t.setPartition(n, d(r));
         },
         GUILD_STICKERS_FETCH_SUCCESS: (e, t) => {
-            t.setPartition(e.guildId, c(e.stickers));
+            t.setPartition(e.guildId, d(e.stickers));
         },
     },
     s.P4.getCachedBridgedStoreMode(),

@@ -1,30 +1,37 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => C });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    a = n(735438),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(735438),
     o = n(131346),
-    c = n(522437),
-    d = n(158954),
+    d = n(744818),
+    c = n(834730),
     u = n(827734),
-    x = n(397927),
-    m = n(828208),
-    v = n(513461),
-    j = n(985018),
-    h = n(637671);
-function f(e) {
+    x = n(916099),
+    h = n(673185),
+    v = n(565787),
+    m = n(622629),
+    j = n(772838),
+    f = n(939249),
+    p = n(22231),
+    g = n(241326),
+    w = n(828208),
+    A = n(513461),
+    E = n(985018),
+    y = n(637671);
+function T(e) {
     let { type: t } = e,
-        n = r.useMemo(() => {
+        n = a.useMemo(() => {
             switch (t) {
-                case v.rX.MULTIPLE_CHOICE:
-                    return { icon: x.jsc, text: j.intl.string(j.t.ooKh3m) };
-                case v.rX.PARAGRAPH:
-                    return { icon: x.$tc, text: j.intl.string(j.t.gG0JBN) };
-                case v.rX.TEXT_INPUT:
-                    return { icon: (0, x.kHD)(m.A), text: j.intl.string(j.t.w6Q9wz) };
-                case v.rX.TERMS:
-                    return { icon: x.B8Q, text: j.intl.string(j.t["3pz9t3"]) };
+                case A.rX.MULTIPLE_CHOICE:
+                    return { icon: x.j, text: E.intl.string(E.t.ooKh3m) };
+                case A.rX.PARAGRAPH:
+                    return { icon: h.$, text: E.intl.string(E.t.gG0JBN) };
+                case A.rX.TEXT_INPUT:
+                    return { icon: (0, v.k)(w.A), text: E.intl.string(E.t.w6Q9wz) };
+                case A.rX.TERMS:
+                    return { icon: m.B, text: E.intl.string(E.t["3pz9t3"]) };
                 default:
                     return null;
             }
@@ -32,107 +39,107 @@ function f(e) {
     return null == n
         ? null
         : (0, i.jsxs)("div", {
-              className: h.L6,
+              className: y.L6,
               children: [
                   (0, i.jsx)(n.icon, { size: "xs", color: "currentColor" }),
-                  (0, i.jsx)(d.EYj, { variant: "text-sm/medium", tag: "span", children: n.text }),
+                  (0, i.jsx)(c.E, { variant: "text-sm/medium", tag: "span", children: n.text }),
               ],
           });
 }
-function p(e) {
+function M(e) {
     let { title: t, field: n } = e;
     return (0, i.jsx)("div", {
-        className: h._Q,
+        className: y._Q,
         children: (0, i.jsxs)("div", {
-            className: h.ds,
+            className: y.ds,
             children: [
-                (0, i.jsx)(d.EYj, { variant: "text-md/medium", className: h.ID, children: t }),
-                (0, i.jsx)(f, { type: n.field_type }),
+                (0, i.jsx)(c.E, { variant: "text-md/medium", className: y.ID, children: t }),
+                (0, i.jsx)(T, { type: n.field_type }),
             ],
         }),
     });
 }
-let g = "FORM_FIELD";
-function A(e) {
-    let { index: t, field: n, isDropHovered: s, onDrop: d } = e,
-        m = (0, a.debounce)(async (e, t, n) => {
-            await d(e, t, n);
+let R = "FORM_FIELD";
+function b(e) {
+    let { index: t, field: n, isDropHovered: r, onDrop: c } = e,
+        x = (0, s.debounce)(async (e, t, n) => {
+            await c(e, t, n);
         }),
-        v = r.useRef(null),
-        [, j] = (0, o.i)({
-            type: g,
+        h = a.useRef(null),
+        [, v] = (0, o.i)({
+            type: R,
             item: { index: t, field: n },
             end: (e, t) => {
-                null == e || t.didDrop() || m(e.field, null, !0);
+                null == e || t.didDrop() || x(e.field, null, !0);
             },
         }),
-        [, f] = (0, c.H)({
-            accept: g,
+        [, m] = (0, d.H)({
+            accept: R,
             hover: (e, n) => {
                 let { index: i } = e,
-                    r = v.current?.getBoundingClientRect(),
-                    s = n.getClientOffset();
-                if (null == r || null == s) return;
-                let l = (r.bottom - r.top) / 2,
-                    a = s.y - r.top;
-                (i < t && a < l) || (i > t && a < l) || i === t || m(e.field, t, !1);
+                    a = h.current?.getBoundingClientRect(),
+                    r = n.getClientOffset();
+                if (null == a || null == r) return;
+                let l = (a.bottom - a.top) / 2,
+                    s = r.y - a.top;
+                (i < t && s < l) || (i > t && s < l) || i === t || x(e.field, t, !1);
             },
             drop: (e) => {
-                m(e.field, t, !0);
+                x(e.field, t, !0);
             },
         });
     return (
-        r.useLayoutEffect(
+        a.useLayoutEffect(
             () => (
-                j(f(v)),
+                v(m(h)),
                 () => {
-                    f(null), j(null);
+                    m(null), v(null);
                 }
             ),
-            [j, f],
+            [v, m],
         ),
         (0, i.jsxs)("div", {
-            ref: v,
+            ref: h,
             "data-dnd-name": `field-${t}`,
-            className: l()(h.cK, { [h.TG]: s }),
+            className: l()(y.cK, { [y.TG]: r }),
             children: [
                 (0, i.jsx)("div", {
-                    className: l()(h.VU, h.oE),
-                    children: (0, i.jsx)(x.WP0, {
+                    className: l()(y.VU, y.oE),
+                    children: (0, i.jsx)(j.W, {
                         size: "xs",
-                        className: h.co,
+                        className: y.co,
                         color: u.A.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
-                (0, i.jsx)(p, { ...e }),
+                (0, i.jsx)(M, { ...e }),
             ],
         })
     );
 }
-function E(e) {
+function C(e) {
     return (0, i.jsxs)("div", {
-        className: l()(h.e4, h.oE),
+        className: l()(y.e4, y.oE),
         children: [
             (0, i.jsx)("div", {
-                className: h.Th,
-                children: e.isDragEnabled ? (0, i.jsx)(A, { ...e }) : (0, i.jsx)(p, { ...e }),
+                className: y.Th,
+                children: e.isDragEnabled ? (0, i.jsx)(b, { ...e }) : (0, i.jsx)(M, { ...e }),
             }),
             "side" === e.actionsLocation &&
                 (0, i.jsxs)("div", {
-                    className: l()(h.fc, h.oE, { [h.ZM]: e.canRemove }),
+                    className: l()(y.fc, y.oE, { [y.ZM]: e.canRemove }),
                     children: [
-                        (0, i.jsx)(x.DUT, {
-                            className: h.hP,
+                        (0, i.jsx)(f.D, {
+                            className: y.hP,
                             onClick: e.onEdit,
-                            "aria-label": j.intl.string(j.t.bt75uw),
-                            children: (0, i.jsx)(x.R2l, { size: "xs" }),
+                            "aria-label": E.intl.string(E.t.bt75uw),
+                            children: (0, i.jsx)(p.R, { size: "xs" }),
                         }),
                         e.canRemove &&
-                            (0, i.jsx)(x.DUT, {
-                                className: h.hP,
+                            (0, i.jsx)(f.D, {
+                                className: y.hP,
                                 onClick: e.onRemove,
-                                "aria-label": j.intl.string(j.t.N86XcP),
-                                children: (0, i.jsx)(x.ucK, { size: "xs" }),
+                                "aria-label": E.intl.string(E.t.N86XcP),
+                                children: (0, i.jsx)(g.u, { size: "xs" }),
                             }),
                     ],
                 }),

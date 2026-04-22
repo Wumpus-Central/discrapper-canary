@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var r = n(735438),
     i = n(311907),
     s = n(873298),
@@ -7,20 +7,11 @@ var r = n(735438),
     o = n(617617),
     l = n(95701),
     u = n(349828),
-    c = n(652215);
-let d = {},
+    d = n(652215);
+let c = {},
     _ = !1,
     f = !1;
-function p(e) {
-    return (0, l.createChannelRecord)({
-        id: e.id,
-        name: e.nickname ?? "",
-        type: c.rbe.GUILD_CATEGORY,
-        position: e.order,
-        guild_id: c.YYv,
-    });
-}
-function h() {
+function E() {
     let e = o.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
@@ -37,15 +28,15 @@ function h() {
             };
         }
     let s = e?.guildVisible?.value ?? !(0, r.isEmpty)(n);
-    return !(_ === t && f === s && (0, r.isEqual)(d, n)) && ((_ = t), (f = s), (d = n), !0);
+    return !(_ === t && f === s && (0, r.isEqual)(c, n)) && ((_ = t), (f = s), (c = n), !0);
 }
-class m extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(o.A), h(), this.syncWith([o.A], h);
+        this.waitFor(o.A), E(), this.syncWith([o.A], E);
     }
     getFavoriteChannels() {
-        return d;
+        return c;
     }
     get favoriteGuildMuted() {
         return _;
@@ -54,13 +45,26 @@ class m extends i.Ay.Store {
         return f;
     }
     isFavorite(e) {
-        return null != e && null != d[e];
+        return null != e && null != c[e];
     }
     getFavorite(e) {
-        if (null != e) return d[e];
+        if (null != e) return c[e];
     }
     getCategoryRecord(e) {
-        return e in d && d[e].type === s.Ip.CATEGORY ? p(d[e]) : null;
+        if (e in c && c[e].type === s.Ip.CATEGORY) {
+            var t;
+            return (
+                (t = c[e]),
+                (0, l.createChannelRecord)({
+                    id: t.id,
+                    name: t.nickname ?? "",
+                    type: d.rbe.GUILD_CATEGORY,
+                    position: t.order,
+                    guild_id: d.YYv,
+                })
+            );
+        }
+        return null;
     }
     getNickname(e) {
         let t = this.getFavorite(e);
@@ -73,4 +77,4 @@ class m extends i.Ay.Store {
         return !(0, r.isEmpty)(this.getFavoriteChannels());
     }
 }
-let E = new m(a.h, {});
+let p = new h(a.h, {});

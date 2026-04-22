@@ -1,79 +1,80 @@
-n.d(t, { A: () => u, R: () => d });
-var i = n(627968),
-    l = n(64700),
-    s = n(158954),
-    a = n(308528),
-    r = n(607272),
-    o = n(985018),
-    c = n(174720);
-function d(e) {
+n.d(t, { A: () => h, R: () => u });
+var s = n(627968),
+    a = n(64700),
+    l = n(825484),
+    i = n(821609),
+    r = n(308528),
+    o = n(607272),
+    d = n(985018),
+    c = n(897968);
+function u(e) {
     let { userId: t } = e,
-        n = l.useCallback(
+        n = a.useCallback(
             (e) => {
-                e.stopPropagation(), a.A.openPrivateChannel({ recipientIds: [t] });
+                e.stopPropagation(), r.A.openPrivateChannel({ recipientIds: [t] });
             },
             [t],
         );
-    return (0, i.jsx)("div", {
+    return (0, s.jsx)("div", {
         className: c.Ze,
-        children: (0, i.jsx)(s.e2v, {
+        children: (0, s.jsx)(l.e, {
             size: "sm",
-            children: (0, i.jsx)(s.$nd, { variant: "secondary", onClick: n, text: o.intl.string(o.t["g33r/P"]) }),
+            children: (0, s.jsx)(i.$, { variant: "secondary", onClick: n, text: d.intl.string(d.t["g33r/P"]) }),
         }),
     });
 }
-function u(e) {
+function h(e) {
     let { userId: t, applicationId: n } = e,
-        [a, d] = l.useState(!1),
-        [u, h] = l.useState(!1),
-        A = l.useCallback(
+        [r, u] = a.useState(!1),
+        [h, _] = a.useState(!1),
+        A = a.useCallback(
             async (e) => {
-                e.stopPropagation(), h(!0);
+                e.stopPropagation(), _(!0);
                 try {
-                    await r.A.cancelFriendRequest({
+                    await o.A.cancelFriendRequest({
                         userId: t,
                         applicationId: n,
                         location: "ActionButtonFriendRequest",
                     });
                 } finally {
-                    h(!1);
+                    _(!1);
                 }
             },
             [n, t],
         ),
-        _ = l.useCallback(
+        m = a.useCallback(
             async (e) => {
-                e.stopPropagation(), d(!0);
+                e.stopPropagation(), u(!0);
                 try {
-                    await r.A.maybeConfirmFriendRequestAccept({
+                    await o.A.maybeConfirmFriendRequestAccept({
                         userId: t,
                         applicationId: n,
                         location: "ActionButtonFriendRequest",
                     });
                 } finally {
-                    d(!1);
+                    u(!1);
                 }
             },
             [n, t],
         );
-    return (0, i.jsx)("div", {
+    return (0, s.jsx)("div", {
         className: c.Ze,
-        children: (0, i.jsxs)(s.e2v, {
+        children: (0, s.jsxs)(l.e, {
             size: "sm",
             children: [
-                (0, i.jsx)(s.$nd, {
+                (0, s.jsx)(i.$, {
                     variant: "active",
-                    onClick: _,
-                    text: o.intl.string(o.t.Zcibdf),
-                    loading: a,
-                    disabled: u,
+                    onClick: m,
+                    text: d.intl.string(d.t.Zcibdf),
+                    loading: r,
+                    disabled: h,
                 }),
-                (0, i.jsx)(s.$nd, {
+                (0, s.jsx)(i.$, {
                     variant: "secondary",
                     onClick: A,
-                    text: o.intl.string(o.t.xuio0C),
-                    loading: u,
-                    disabled: a,
+                    text: d.intl.string(d.t.xuio0C),
+                    loading: h,
+                    disabled: r,
                 }),
             ],
         }),

@@ -1,26 +1,27 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    s = n(397927),
-    a = n(997509),
-    r = n(529942),
-    o = n(209700),
-    d = n(576705),
-    c = n(652215),
-    u = n(985018);
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.BEX.ROLES;
-    return (0, l.bG)([d.A], () => d.A.canImpersonateRole(e, t))
+    s = n(477782),
+    a = n(935286),
+    r = n(997509),
+    o = n(529942),
+    d = n(209700),
+    c = n(576705),
+    u = n(652215),
+    m = n(985018);
+function g(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.BEX.ROLES;
+    return (0, l.bG)([c.A], () => c.A.canImpersonateRole(e, t))
         ? (0, i.jsx)(
-              s.Drp,
+              s.Dr,
               {
                   id: "view-as-role",
-                  label: u.intl.string(u.t.arFPfJ),
-                  icon: s.EdP,
-                  leadingAccessory: { type: "icon", icon: s.EdP },
+                  label: m.intl.string(m.t.arFPfJ),
+                  icon: a.E,
+                  leadingAccessory: { type: "icon", icon: a.E },
                   action: () => {
-                      a.A.close(), (0, r.Tk)(e.id, { type: o._.ROLES, roles: { [t.id]: t }, returnToSection: n });
+                      r.A.close(), (0, o.Tk)(e.id, { type: d._.ROLES, roles: { [t.id]: t }, returnToSection: n });
                   },
               },
               "view-as-role",

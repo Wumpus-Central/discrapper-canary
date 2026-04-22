@@ -1,17 +1,17 @@
 e.d(i, { default: () => g });
 var a = e(627968),
     l = e(64700),
-    n = e(158954),
-    s = e(397927),
+    n = e(189213),
+    s = e(683071),
     r = e(964486),
     d = e(780964),
-    u = e(840065),
+    u = e(858897),
     o = e(954571),
     _ = e(427262),
     c = e(677185),
     C = e(88001),
     I = e(652215),
-    E = e(519412),
+    E = e(466919),
     p = e(985018);
 let g = (t) => {
     let { subscriptionId: i, invitedUser: e, subscriptionGroupMemberId: g, onClose: P, ...k } = t,
@@ -56,6 +56,6 @@ let g = (t) => {
                   { text: p.intl.string(E.default["2blqtw"]), variant: "critical-primary", onClick: U, loading: T },
               ],
               ...k,
-              children: N && (0, a.jsx)(s.wx6, { type: "critical", children: p.intl.string(p.t["rTU7/z"]) }),
+              children: N && (0, a.jsx)(s.w, { type: "critical", children: p.intl.string(p.t["rTU7/z"]) }),
           });
 };

@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(397927),
+n.d(t, { A: () => h });
+var i = n(627968),
+    l = n(477782),
+    s = n(173936),
     a = n(735991),
-    s = n(287809),
+    r = n(287809),
     o = n(957565),
-    l = n(342384),
-    u = n(20015),
-    c = n(652215);
-function d(e) {
-    let { application: t, label: n, onSuccess: d, showIconFirst: _ } = e;
+    d = n(342384),
+    c = n(20015),
+    u = n(652215);
+function h(e) {
+    let { application: t, label: n, onSuccess: h, showIconFirst: A } = e;
     if (__OVERLAY__ || !o.p5 || null == t) return null;
-    let f = s.default.getCurrentUser(),
-        p = (0, a.EF)(t);
-    function h() {
-        if (null == t) return;
-        let e = (0, u.n)(t, c.gfo.EMBEDDED)
-            ? (0, l.W)({ applicationId: t.id, referrerId: f?.id })
-            : (0, l.V)({ id: t.id, ...p });
-        null != e && (0, o.C)(e, d);
-    }
-    let m = `copy-app-link-${t.id}`;
-    return (0, r.jsx)(
-        i.Drp,
+    let _ = r.default.getCurrentUser(),
+        m = (0, a.EF)(t),
+        g = `copy-app-link-${t.id}`;
+    return (0, i.jsx)(
+        l.Dr,
         {
-            id: m,
+            id: g,
             label: n,
-            action: h,
-            icon: _ ? void 0 : i.qYV,
-            iconLeft: _ ? i.qYV : void 0,
-            leadingAccessory: { type: "icon", icon: i.qYV },
+            action: function () {
+                if (null == t) return;
+                let e = (0, c.n)(t, u.gfo.EMBEDDED)
+                    ? (0, d.W)({ applicationId: t.id, referrerId: _?.id })
+                    : (0, d.V)({ id: t.id, ...m });
+                null != e && (0, o.C)(e, h);
+            },
+            icon: A ? void 0 : s.q,
+            iconLeft: A ? s.q : void 0,
+            leadingAccessory: { type: "icon", icon: s.q },
         },
-        m,
+        g,
     );
 }

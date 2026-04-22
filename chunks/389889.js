@@ -1,20 +1,21 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    a = n(397927),
-    r = n(54570),
-    s = n(8880),
-    o = n(985018);
-function d(e, t) {
-    let n = (0, l.bG)([s.A], () => s.A.isSpeakingMessage(t.id, e.id), [t, e]);
+    a = n(477782),
+    r = n(556112),
+    s = n(54570),
+    o = n(8880),
+    d = n(985018);
+function c(e, t) {
+    let n = (0, l.bG)([o.A], () => o.A.isSpeakingMessage(t.id, e.id), [t, e]);
     return "" === e.content
         ? null
-        : (0, i.jsx)(a.Drp, {
+        : (0, i.jsx)(a.Dr, {
               id: "tts",
-              label: n ? o.intl.string(o.t.CJ30BP) : o.intl.string(o.t.yGLjXF),
-              leadingAccessory: { type: "icon", icon: a._Ft },
-              icon: a._Ft,
-              action: () => (n ? (0, r.pr)() : (0, r.kP)(t, e)),
+              label: n ? d.intl.string(d.t.CJ30BP) : d.intl.string(d.t.yGLjXF),
+              leadingAccessory: { type: "icon", icon: r._ },
+              icon: r._,
+              action: () => (n ? (0, s.pr)() : (0, s.kP)(t, e)),
           });
 }

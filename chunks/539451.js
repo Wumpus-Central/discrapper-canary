@@ -1,9 +1,7 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(722872);
-let i = 500,
-    a = 150;
-class s {
+n.d(t, { A: () => l });
+var i = n(722872);
+class l {
     value;
     animationDetails;
     isReset;
@@ -13,12 +11,12 @@ class s {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? a : i;
+            t = this.value < this.animationDetails.lastValue ? 150 : 500;
         return e > t
             ? ((this.animationDetails = null), this.value)
             : this.value < this.animationDetails.lastValue
-              ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t)
-              : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
+              ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, t)
+              : i.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {
         (this.isReset = !1),

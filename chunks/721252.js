@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { hh: () => A, kJ: () => f, r2: () => E, zK: () => p, zX: () => g });
-var r = n(627968);
+n.d(t, { hh: () => _, kJ: () => p, r2: () => h, zK: () => m, zX: () => f });
+var l = n(627968);
 n(64700);
-var i = n(295405),
-    s = n(166532),
-    a = n(735305),
-    o = n(343834),
-    l = n(467122),
-    u = n(810809),
-    c = n(623020),
-    d = n(881677),
-    _ = n(985018);
-let f = { key: null, renderStep: (e) => (0, r.jsx)(d.B, { ...e }), options: { modalSizeGetter: () => "md" } },
-    p = {
-        key: s.pn.ADD_PAYMENT_STEPS,
+var r = n(295405),
+    i = n(166532),
+    s = n(735305),
+    a = n(343834),
+    o = n(467122),
+    u = n(33190),
+    d = n(623020),
+    c = n(881677),
+    C = n(985018);
+let p = { key: null, renderStep: (e) => (0, l.jsx)(c.B, { ...e }), options: { modalSizeGetter: () => "md" } },
+    m = {
+        key: i.pn.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(a.x, {
+            (0, l.jsx)(s.x, {
                 ...e,
-                breadcrumbSteps: [s.pn.ADD_PAYMENT_STEPS, s.pn.REVIEW, s.pn.CONFIRM],
+                breadcrumbSteps: [i.pn.ADD_PAYMENT_STEPS, i.pn.REVIEW, i.pn.CONFIRM],
                 onReturn: () => {
-                    0 === Object.keys(i.A.paymentSources).length
+                    0 === Object.keys(r.A.paymentSources).length
                         ? e.handleClose()
-                        : e.handleStepChange(s.pn.REVIEW, { trackedFromStep: s.pn.ADD_PAYMENT_STEPS });
+                        : e.handleStepChange(i.pn.REVIEW, { trackedFromStep: i.pn.ADD_PAYMENT_STEPS });
                 },
             }),
         options: { renderHeader: !0 },
     },
-    h = { key: s.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, r.jsx)(l.A, {}) },
-    m = { key: s.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, r.jsx)(o.A, {}), options: { renderHeader: !0 } },
-    E = {
-        key: s.pn.REVIEW,
-        renderStep: (e) => (0, r.jsx)(c._, { ...e }),
-        options: { useBreadcrumbLabel: () => _.intl.string(_.t.QBnNHq) },
+    E = { key: i.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(o.A, {}) },
+    A = { key: i.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(a.A, {}), options: { renderHeader: !0 } },
+    h = {
+        key: i.pn.REVIEW,
+        renderStep: (e) => (0, l.jsx)(d._, { ...e }),
+        options: { useBreadcrumbLabel: () => C.intl.string(C.t.QBnNHq) },
     },
-    g = { key: s.pn.CONFIRM, renderStep: (e) => (0, r.jsx)(u.k, { ...e }) },
-    A = [h, m];
+    f = { key: i.pn.CONFIRM, renderStep: (e) => (0, l.jsx)(u.k, { ...e }) },
+    _ = [E, A];

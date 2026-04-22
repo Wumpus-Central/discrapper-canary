@@ -1,14 +1,15 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(627968),
-    l = n(64700),
+    r = n(64700),
     a = n(503698),
-    r = n.n(a),
-    s = n(397927),
-    o = n(927018),
-    d = n(64585),
+    l = n.n(a),
+    s = n(939249),
+    o = n(834730),
+    d = n(927018),
+    u = n(64585),
     c = n(906688),
-    u = n(60828);
-let A = (e) => {
+    A = n(60828);
+let h = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
         width: "48",
@@ -23,7 +24,7 @@ let A = (e) => {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 10.1968 7)",
-                className: u.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "27.3936",
@@ -31,7 +32,7 @@ let A = (e) => {
                 width: "23.4851",
                 height: "23.4851",
                 transform: "rotate(45 27.3936 0.59021)",
-                className: u.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "44.5903",
@@ -39,7 +40,7 @@ let A = (e) => {
                 width: "14.4203",
                 height: "14.4203",
                 transform: "rotate(45 44.5903 7)",
-                className: u.__invalid_toastBG,
+                className: A.__invalid_toastBG,
             }),
             (0, i.jsx)("rect", {
                 x: "10.1968",
@@ -64,42 +65,42 @@ let A = (e) => {
         ],
     });
 };
-function h(e) {
+function _(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
-        { color: p } = (0, o.ag)(_);
-    l.useEffect(() => {
+        { name: a, description: _, rarity: E, hideDescriptionUntilUnlock: p, onAction: m } = t,
+        { color: g } = (0, d.ag)(E);
+    r.useEffect(() => {
         let e = setTimeout(() => {
-            d.A.playAchievementUnlockSound();
+            u.A.playAchievementUnlockSound();
         }, 50);
         return () => {
             clearTimeout(e);
         };
     }, []);
-    let E = null != g && n,
-        I = E ? s.DUT : "div";
-    return (0, i.jsxs)(I, {
-        className: r()(u.kL, E && u.b),
+    let I = null != m && n,
+        C = I ? s.D : "div";
+    return (0, i.jsxs)(C, {
+        className: l()(A.kL, I && A.b),
         onClick: () => {
-            E && g();
+            I && m();
         },
         children: [
             (0, i.jsx)("div", {
-                className: u.zc,
+                className: A.zc,
                 children: (0, i.jsx)(c.A, { achievementId: t.id, size: c.A.Sizes.SIZE_40, unlocked: n }),
             }),
             (0, i.jsxs)("div", {
-                className: u.__invalid_nameContainer,
+                className: A.__invalid_nameContainer,
                 children: [
-                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", color: "text-strong", children: a() }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(o.E, { variant: "text-md/semibold", color: "text-strong", children: a() }),
+                    (0, i.jsx)(o.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: m && !n ? "?????" : h(),
+                        children: p && !n ? "?????" : _(),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: u.Db, children: (0, i.jsx)(A, { color: p }) }),
+            (0, i.jsx)("div", { className: A.Db, children: (0, i.jsx)(h, { color: g }) }),
         ],
     });
 }

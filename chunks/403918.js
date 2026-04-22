@@ -1,50 +1,47 @@
-"use strict";
-n.d(t, { P2: () => u, SX: () => o, W_: () => l, hp: () => a, yt: () => s }), n(427262);
-var r = n(818348),
-    i = n(985018);
-let a = 128,
+l.d(t, { P2: () => d, SX: () => o, W_: () => u, hp: () => r, yt: () => s }), l(427262);
+var a,
+    n = l(818348),
+    i = l(985018);
+let r = 128,
     s = Object.freeze({ MINUTES_30: 18e5, HOURS_1: 36e5, HOURS_4: 144e5, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });
-r.cl.ONLINE, r.cl.IDLE, r.cl.DND, r.cl.INVISIBLE;
+n.cl.ONLINE, n.cl.IDLE, n.cl.DND, n.cl.INVISIBLE;
 let o = [s.TODAY, s.HOURS_4, s.HOURS_1, s.MINUTES_30, s.DONT_CLEAR];
-var l = (function (e) {
-    return (
-        (e.PLAYING = "PLAYING"),
-        (e.LISTENING_TO = "LISTENING_TO"),
-        (e.WATCHING = "WATCHING"),
-        (e.CURRENT_OBSESSION = "CURRENT_OBSESSION"),
-        (e.SHOWER_THOUGHT = "SHOWER_THOUGHT"),
-        (e.TODAY_I_LEARNED = "TODAY_I_LEARNED"),
-        (e.HOT_TAKE = "HOT_TAKE"),
-        (e.DAD_JOKE = "DAD_JOKE"),
-        (e.EMOJI_DAY = "EMOJI_DAY"),
-        (e.USELESS_TALENT = "USELESS_TALENT"),
-        (e.VIDEO_GAME_ITEM = "VIDEO_GAME_ITEM"),
-        (e.READING = "READING"),
-        (e.SONG_STUCK = "SONG_STUCK"),
-        (e.MOST_USED_EMOJI = "MOST_USED_EMOJI"),
-        (e.BEST_FOOD = "BEST_FOOD"),
-        (e.FICTIONAL_WORLD = "FICTIONAL_WORLD"),
-        (e.USERNAME_ORIGIN = "USERNAME_ORIGIN"),
-        (e.THEME_SONG = "THEME_SONG"),
-        (e.FAVORITE_COLLECTIBLE = "FAVORITE_COLLECTIBLE"),
-        (e.GAME_MECHANIC = "GAME_MECHANIC"),
-        (e.NPC_COMPANION = "NPC_COMPANION"),
-        (e.FOOD_CRAVING = "FOOD_CRAVING"),
-        (e.MYTHICAL_PET = "MYTHICAL_PET"),
-        (e.LATEST_HOBBY = "LATEST_HOBBY"),
-        (e.FAVORITE_ANIME = "FAVORITE_ANIME"),
-        (e.RANKED_UP = "RANKED_UP"),
-        (e.CHARACTER_CLASS = "CHARACTER_CLASS"),
-        (e.HIGH_SCORE = "HIGH_SCORE"),
-        (e.FINISHED_PLAYING = "FINISHED_PLAYING"),
-        (e.FINISHED_READING = "FINISHED_READING"),
-        (e.CANT_WAIT = "CANT_WAIT"),
-        (e.ADD_STATUS = "ADD_STATUS"),
-        (e.WHATS_ON_YOUR_MIND = "WHATS_ON_YOUR_MIND"),
-        e
-    );
-})({});
-let u = [
+var u =
+    (((a = {}).PLAYING = "PLAYING"),
+    (a.LISTENING_TO = "LISTENING_TO"),
+    (a.WATCHING = "WATCHING"),
+    (a.CURRENT_OBSESSION = "CURRENT_OBSESSION"),
+    (a.SHOWER_THOUGHT = "SHOWER_THOUGHT"),
+    (a.TODAY_I_LEARNED = "TODAY_I_LEARNED"),
+    (a.HOT_TAKE = "HOT_TAKE"),
+    (a.DAD_JOKE = "DAD_JOKE"),
+    (a.EMOJI_DAY = "EMOJI_DAY"),
+    (a.USELESS_TALENT = "USELESS_TALENT"),
+    (a.VIDEO_GAME_ITEM = "VIDEO_GAME_ITEM"),
+    (a.READING = "READING"),
+    (a.SONG_STUCK = "SONG_STUCK"),
+    (a.MOST_USED_EMOJI = "MOST_USED_EMOJI"),
+    (a.BEST_FOOD = "BEST_FOOD"),
+    (a.FICTIONAL_WORLD = "FICTIONAL_WORLD"),
+    (a.USERNAME_ORIGIN = "USERNAME_ORIGIN"),
+    (a.THEME_SONG = "THEME_SONG"),
+    (a.FAVORITE_COLLECTIBLE = "FAVORITE_COLLECTIBLE"),
+    (a.GAME_MECHANIC = "GAME_MECHANIC"),
+    (a.NPC_COMPANION = "NPC_COMPANION"),
+    (a.FOOD_CRAVING = "FOOD_CRAVING"),
+    (a.MYTHICAL_PET = "MYTHICAL_PET"),
+    (a.LATEST_HOBBY = "LATEST_HOBBY"),
+    (a.FAVORITE_ANIME = "FAVORITE_ANIME"),
+    (a.RANKED_UP = "RANKED_UP"),
+    (a.CHARACTER_CLASS = "CHARACTER_CLASS"),
+    (a.HIGH_SCORE = "HIGH_SCORE"),
+    (a.FINISHED_PLAYING = "FINISHED_PLAYING"),
+    (a.FINISHED_READING = "FINISHED_READING"),
+    (a.CANT_WAIT = "CANT_WAIT"),
+    (a.ADD_STATUS = "ADD_STATUS"),
+    (a.WHATS_ON_YOUR_MIND = "WHATS_ON_YOUR_MIND"),
+    a);
+let d = [
     { value: "PLAYING", label: () => i.intl.string(i.t.r5TNmx) },
     { value: "LISTENING_TO", label: () => i.intl.string(i.t["ylzor/"]) },
     { value: "WATCHING", label: () => i.intl.string(i.t.pzz9iP) },

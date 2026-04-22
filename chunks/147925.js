@@ -1,33 +1,36 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(849881);
-let s = { UP: a.hv, RIGHT: a.kL, DOWN: a.Gb, LEFT: a.PI },
-    o = (e) => {
+var i = n(900797),
+    s = n(847374),
+    a = n(921853),
+    o = n(320448),
+    l = n(570188);
+let u = { UP: l.hv, RIGHT: l.kL, DOWN: l.Gb, LEFT: l.PI },
+    d = (e) => {
         let {
-                direction: t = s.DOWN,
+                direction: t = u.DOWN,
                 width: n = 24,
-                height: a = 24,
-                color: o = "currentColor",
-                className: l,
-                foreground: u,
-                expanded: c,
-                ...d
+                height: l = 24,
+                color: d = "currentColor",
+                className: c,
+                foreground: _,
+                expanded: f,
+                ...E
             } = e,
-            _ = t;
-        !0 === c ? (_ = s.DOWN) : !1 === c && (_ = s.RIGHT);
-        let f = { [s.UP]: i.tN5, [s.DOWN]: i.abt, [s.LEFT]: i.n2b, [s.RIGHT]: i._BQ }[_];
-        return (0, r.jsx)(f, {
-            ...d,
-            className: l,
+            h = t;
+        !0 === f ? (h = u.DOWN) : !1 === f && (h = u.RIGHT);
+        let p = { [u.UP]: i.t, [u.DOWN]: s.a, [u.LEFT]: a.n, [u.RIGHT]: o._ }[h];
+        return (0, r.jsx)(p, {
+            ...E,
+            className: c,
             size: "custom",
             width: n,
-            height: a,
-            color: o ?? "currentColor",
-            colorClass: u,
+            height: l,
+            color: d ?? "currentColor",
+            colorClass: _,
         });
     };
-o.Directions = s;
-let l = o;
+d.Directions = u;
+let c = d;

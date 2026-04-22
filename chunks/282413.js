@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { o: () => h });
+n.d(t, { o: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,18 +7,17 @@ var r = n(627968),
     o = n(615300),
     l = n(451988),
     u = n(73939),
-    c = n(235986),
-    d = n(652215),
-    _ = n(978788);
-let f = 3e3,
-    p = {
-        [d.DUB.NORMAL]: _.qb,
-        [d.DUB.MINIMUM]: _.Bp,
-        [d.DUB.NO_CHAT]: _.Oo,
-        [d.DUB.FULL_SCREEN]: _.iy,
-        [d.DUB.HAVEN]: _.VT,
-    };
-class h extends i.PureComponent {
+    d = n(235986),
+    c = n(652215),
+    _ = n(507252);
+let f = {
+    [c.DUB.NORMAL]: _.qb,
+    [c.DUB.MINIMUM]: _.Bp,
+    [c.DUB.NO_CHAT]: _.Oo,
+    [c.DUB.FULL_SCREEN]: _.iy,
+    [c.DUB.HAVEN]: _.VT,
+};
+class E extends i.PureComponent {
     constructor(e) {
         super(e), (this.state = { animation: new o.A.Value(0) });
     }
@@ -40,8 +39,8 @@ class h extends i.PureComponent {
         });
     }
 }
-class m extends i.PureComponent {
-    static defaultProps = { layout: d.DUB.MINIMUM, animated: !0 };
+class h extends i.PureComponent {
+    static defaultProps = { layout: c.DUB.MINIMUM, animated: !0 };
     _timeout = new l.Ep();
     constructor(e) {
         super(e), (this.state = { idle: !1, backgroundAnimation: new o.A.Value(0), layoutProp: e.layout });
@@ -67,34 +66,35 @@ class m extends i.PureComponent {
     }
     handleMouseEvent = () => {
         let { layout: e } = this.props;
-        (e === d.DUB.FULL_SCREEN || e === d.DUB.NO_CHAT) &&
-            (this._timeout.start(f, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 }));
+        (e === c.DUB.FULL_SCREEN || e === c.DUB.NO_CHAT) &&
+            (this._timeout.start(3e3, () => this.setState({ idle: !0 })),
+            this.state.idle && this.setState({ idle: !1 }));
     };
     renderBackground() {
         let { background: e, backgroundKey: t, layout: n } = this.props,
             i = `${n}-${t ?? ""}`;
-        return (0, r.jsx)(u.F, { className: _.yG, component: "div", children: (0, r.jsx)(h, { children: e }, i) });
+        return (0, r.jsx)(u.F, { className: _.yG, component: "div", children: (0, r.jsx)(E, { children: e }, i) });
     }
     renderContents() {
         let { top: e, center: t, bottom: n, layout: i, focused: s } = this.props,
             { idle: o } = this.state;
-        return (0, r.jsx)(c.A, {
-            className: a()(_.Ki, p[i], { [_.N7]: o }),
-            direction: c.A.Direction.VERTICAL,
-            justify: c.A.Justify.CENTER,
-            children: (0, r.jsxs)(c.A, {
+        return (0, r.jsx)(d.A, {
+            className: a()(_.Ki, f[i], { [_.N7]: o }),
+            direction: d.A.Direction.VERTICAL,
+            justify: d.A.Justify.CENTER,
+            children: (0, r.jsxs)(d.A, {
                 className: _.tN,
-                direction: c.A.Direction.VERTICAL,
+                direction: d.A.Direction.VERTICAL,
                 children: [
                     this.renderBackground(),
-                    (0, r.jsxs)(c.A, {
+                    (0, r.jsxs)(d.A, {
                         className: a()(_.IR, { [_.in]: s }),
-                        direction: c.A.Direction.VERTICAL,
-                        justify: c.A.Justify.BETWEEN,
+                        direction: d.A.Direction.VERTICAL,
+                        justify: d.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)(c.A, { className: _.JV, grow: 0, children: e }),
-                            (0, r.jsx)(c.A, { className: _.R2, children: t }),
-                            (0, r.jsx)(c.A, { className: _.ZJ, grow: 0, children: n }),
+                            (0, r.jsx)(d.A, { className: _.JV, grow: 0, children: e }),
+                            (0, r.jsx)(d.A, { className: _.R2, children: t }),
+                            (0, r.jsx)(d.A, { className: _.ZJ, grow: 0, children: n }),
                         ],
                     }),
                 ],
@@ -103,6 +103,6 @@ class m extends i.PureComponent {
     }
     render() {
         let { layout: e, className: t, animated: n } = this.props;
-        return (0, r.jsx)("div", { className: a()(_.hP, p[e], t, { [_.CS]: n }), children: this.renderContents() });
+        return (0, r.jsx)("div", { className: a()(_.hP, f[e], t, { [_.CS]: n }), children: this.renderContents() });
     }
 }

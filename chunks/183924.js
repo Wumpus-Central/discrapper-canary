@@ -1,22 +1,23 @@
-n.d(t, { A: () => o });
-var l = n(627968);
+n.d(t, { A: () => d });
+var a = n(627968);
 n(64700);
-var a = n(397927),
-    r = n(155718),
+var l = n(321471),
+    r = n(244367),
+    i = n(155718),
     s = n(207963),
-    i = n(518774);
-function o(e) {
-    let { label: t, description: n, component: o, renderComponent: d } = e,
-        c = (0, s.bO)(o);
-    return o.type === r.I5.CHECKBOX
-        ? d(o, "label-child")
-        : (0, l.jsxs)(a.eIh, {
+    o = n(704475);
+function d(e) {
+    let { label: t, description: n, component: d, renderComponent: c } = e,
+        u = (0, s.bO)(d);
+    return d.type === i.I5.CHECKBOX
+        ? c(d, "label-child")
+        : (0, a.jsxs)(l.e, {
               title: t,
-              required: o.required,
-              error: c,
+              required: d.required,
+              error: u,
               children: [
-                  null != n && (0, l.jsx)(a.ayl, { type: a.tiu.DESCRIPTION, className: i.h, children: n }),
-                  d(o, "label-child"),
+                  null != n && (0, a.jsx)(r.a, { type: r.t.DESCRIPTION, className: o.h, children: n }),
+                  c(d, "label-child"),
               ],
           });
 }

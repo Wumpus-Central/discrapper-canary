@@ -1,30 +1,30 @@
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var l = n(397927),
-    a = n(892742),
-    r = n(985018),
-    s = n(332544),
-    o = n(330034);
-let d = function (e) {
+s.d(t, { A: () => c });
+var n = s(627968);
+s(64700);
+var l = s(534514),
+    a = s(892742),
+    r = s(985018),
+    i = s(332544),
+    o = s(330034);
+let c = function (e) {
     let { questId: t } = e;
-    return (0, i.jsx)("div", {
-        className: s.x3,
-        children: (0, i.jsxs)("div", {
-            className: s.B0,
+    return (0, n.jsx)("div", {
+        className: i.x3,
+        children: (0, n.jsxs)("div", {
+            className: i.B0,
             children: [
-                (0, i.jsx)(l.Heading, { variant: "heading-md/semibold", children: r.intl.string(r.t.IcljUu) }),
-                (0, i.jsx)("div", {
+                (0, n.jsx)(l.D, { variant: "heading-md/semibold", children: r.intl.string(r.t.IcljUu) }),
+                (0, n.jsx)("div", {
                     className: o.wu,
-                    children: (0, i.jsx)("span", { className: o.cy, children: r.intl.string(r.t.q97mEu) }),
+                    children: (0, n.jsx)("span", { className: o.cy, children: r.intl.string(r.t.q97mEu) }),
                 }),
-                (0, i.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: o.oU,
-                    children: (0, i.jsx)("div", {
+                    children: (0, n.jsx)("div", {
                         className: o.zx,
-                        children: (0, i.jsx)("div", {
+                        children: (0, n.jsx)("div", {
                             className: o.Lj,
-                            children: (0, i.jsx)("div", { className: o.n0, children: (0, i.jsx)(a.A, { questId: t }) }),
+                            children: (0, n.jsx)("div", { className: o.n0, children: (0, n.jsx)(a.A, { questId: t }) }),
                         }),
                     }),
                 }),

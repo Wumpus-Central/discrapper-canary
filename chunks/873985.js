@@ -1,19 +1,14 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => _ });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(927813);
 let l = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
     u = l,
-    c = +o.A.Millis.HOUR;
-function d(e) {
-    e.latencyRankedRegions.length > 0 &&
-        ((u.lastGeoRankedOrder = e.geoRankedRegions), (u.preferredRegions = e.latencyRankedRegions)),
-        (u.lastTestTimestamp = Date.now());
-}
-class _ extends a.Ay.DeviceSettingsStore {
+    d = +o.A.Millis.HOUR;
+class c extends s.Ay.DeviceSettingsStore {
     static displayName = "RTCRegionStore";
     static persistKey = "RTCRegionStore";
     static migrations = [
@@ -45,8 +40,14 @@ class _ extends a.Ay.DeviceSettingsStore {
         return (
             null === u.preferredRegions ||
             !i().isEqual(e, u.lastGeoRankedOrder ?? []) ||
-            Date.now() - (u.lastTestTimestamp ?? 0) >= c
+            Date.now() - (u.lastTestTimestamp ?? 0) >= d
         );
     }
 }
-let f = new _(s.h, { RTC_LATENCY_TEST_COMPLETE: d });
+let _ = new c(a.h, {
+    RTC_LATENCY_TEST_COMPLETE: function (e) {
+        e.latencyRankedRegions.length > 0 &&
+            ((u.lastGeoRankedOrder = e.geoRankedRegions), (u.preferredRegions = e.latencyRankedRegions)),
+            (u.lastTestTimestamp = Date.now());
+    },
+});

@@ -1,62 +1,65 @@
-n.d(t, { _: () => u });
-var i = n(627968),
-    s = n(158954),
-    l = n(397927),
-    a = n(933297);
-function r(e) {
-    let { decoration: t } = e,
-        { type: n, id: l, ...a } = t;
-    return (0, i.jsx)(s.$nd, { variant: "secondary", ...a });
-}
-function o(e) {
-    let { decoration: t } = e,
-        n = t.button;
-    return (0, i.jsx)(n, {});
-}
+t.d(n, { _: () => h });
+var l = t(627968),
+    r = t(821609),
+    i = t(331322),
+    s = t(534514),
+    a = t(834730),
+    o = t(827734),
+    c = t(933297);
 function d(e) {
-    let { decoration: t } = e;
-    return (0, i.jsx)(s.BJc, {
+    let { decoration: n } = e,
+        { type: t, id: i, ...s } = n;
+    return (0, l.jsx)(r.$, { variant: "secondary", ...s });
+}
+function u(e) {
+    let { decoration: n } = e,
+        t = n.button;
+    return (0, l.jsx)(t, {});
+}
+function x(e) {
+    let { decoration: n } = e;
+    return (0, l.jsx)(i.B, {
         direction: "horizontal",
         gap: "sm",
         fullWidth: !1,
-        children: t.buttons.map((e) => {
+        children: n.buttons.map((e) => {
             switch (e.type) {
-                case a.UV.BUTTON:
-                    return (0, i.jsx)(r, { decoration: e }, e.id);
-                case a.UV.STRONGLY_DISCOURAGED_CUSTOM:
-                    return (0, i.jsx)(o, { decoration: e }, e.id);
+                case c.UV.BUTTON:
+                    return (0, l.jsx)(d, { decoration: e }, e.id);
+                case c.UV.STRONGLY_DISCOURAGED_CUSTOM:
+                    return (0, l.jsx)(u, { decoration: e }, e.id);
             }
         }),
     });
 }
-function c(e) {
-    let { decoration: t } = e;
-    return null == t ? null : t.type === a.WX.BUTTON_GROUP ? (0, i.jsx)(d, { decoration: t }) : void 0;
+function j(e) {
+    let { decoration: n } = e;
+    return null == n ? null : n.type === c.WX.BUTTON_GROUP ? (0, l.jsx)(x, { decoration: n }) : void 0;
 }
-function u(e) {
-    let { title: t, icon: n, subtitle: a, decoration: r } = e;
-    return (0, i.jsxs)(s.BJc, {
+function h(e) {
+    let { title: n, icon: t, subtitle: r, decoration: c } = e;
+    return (0, l.jsxs)(i.B, {
         direction: "horizontal",
         align: "center",
         gap: 16,
         padding: { left: "sm", right: "sm", bottom: "lg" },
         children: [
-            (0, i.jsxs)(s.BJc, {
+            (0, l.jsxs)(i.B, {
                 direction: "vertical",
                 gap: 4,
                 children: [
-                    (0, i.jsxs)(s.BJc, {
+                    (0, l.jsxs)(i.B, {
                         direction: "horizontal",
                         gap: 8,
                         children: [
-                            (0, i.jsx)(s.DZT, { variant: "heading-xl/normal", color: "text-strong", children: t }),
-                            null != n && (0, i.jsx)(n, { color: l.LU0.colors.INTERACTIVE_ICON_DEFAULT, size: "md" }),
+                            (0, l.jsx)(s.D, { variant: "heading-xl/normal", color: "text-strong", children: n }),
+                            null != t && (0, l.jsx)(t, { color: o.A.colors.INTERACTIVE_ICON_DEFAULT, size: "md" }),
                         ],
                     }),
-                    null != a && (0, i.jsx)(s.EYj, { variant: "text-sm/normal", color: "text-subtle", children: a }),
+                    null != r && (0, l.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
                 ],
             }),
-            (0, i.jsx)(c, { decoration: r }),
+            (0, l.jsx)(j, { decoration: c }),
         ],
     });
 }

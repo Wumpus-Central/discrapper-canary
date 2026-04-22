@@ -2,8 +2,8 @@
 function r(e) {
     return "row" === e.type;
 }
-n.d(t, { A: () => a, o: () => r }), n(321073);
-class i {
+n.d(t, { A: () => i, o: () => r }), n(321073);
+let i = class {
     sectionHeight = 0;
     rowHeight = 0;
     footerHeight = 0;
@@ -19,8 +19,8 @@ class i {
             rowHeight: n,
             footerHeight: r,
             listHeaderHeight: i,
-            paddingTop: a,
-            paddingBottom: s,
+            paddingTop: s,
+            paddingBottom: a,
             sections: o,
             getAnchorId: l,
         } = e;
@@ -30,8 +30,8 @@ class i {
             (this.footerHeight = r),
             (this.listHeaderHeight = i),
             (this.uniform = "number" == typeof n),
-            (this.paddingTop = a),
-            (this.paddingBottom = s),
+            (this.paddingTop = s),
+            (this.paddingBottom = a),
             (this.getAnchorId = l ?? this.getAnchorId);
     }
     getHeight() {
@@ -64,10 +64,10 @@ class i {
         let n = this.paddingTop,
             r = n,
             i = n,
-            a = 0,
             s = 0,
+            a = 0,
             o = [],
-            l = (a) => (((i = n), (n += a) < e) ? ((r += a), !1) : !(i > t));
+            l = (s) => (((i = n), (n += s) < e) ? ((r += s), !1) : !(i > t));
         l(this.getListHeaderHeight()) && o.push({ type: "header", section: -1, offsetTop: i });
         for (let e = 0; e < this.sections.length; e++) {
             let t = this.sections[e];
@@ -77,11 +77,11 @@ class i {
                         o.push({
                             type: "section",
                             section: e,
-                            listIndex: s,
+                            listIndex: a,
                             offsetTop: i,
                             anchorId: this.getAnchorId(e),
                         }),
-                    (s += 1),
+                    (a += 1),
                     this.uniform)
                 ) {
                     let n = this.getHeightForRow(e, 0);
@@ -90,28 +90,28 @@ class i {
                             o.push({
                                 type: "row",
                                 section: e,
-                                listIndex: s,
+                                listIndex: a,
                                 row: r,
-                                rowIndex: a,
+                                rowIndex: s,
                                 offsetTop: i,
                                 anchorId: this.getAnchorId(e, r),
                             }),
-                            (a += 1),
-                            (s += 1);
+                            (s += 1),
+                            (a += 1);
                 } else
                     for (let n = 0; n < t; n++)
                         l(this.getHeightForRow(e, n)) &&
                             o.push({
                                 type: "row",
                                 section: e,
-                                listIndex: s,
+                                listIndex: a,
                                 row: n,
-                                rowIndex: a,
+                                rowIndex: s,
                                 offsetTop: i,
                                 anchorId: this.getAnchorId(e, n),
                             }),
-                            (a += 1),
-                            (s += 1);
+                            (s += 1),
+                            (a += 1);
                 l(this.getHeightForFooter(e)) && o.push({ type: "footer", section: e, offsetTop: i });
             }
         }
@@ -121,11 +121,11 @@ class i {
         let { paddingTop: n } = this,
             r = n + this.getListHeaderHeight(),
             i = 0,
-            a = !1;
+            s = !1;
         for (; i <= e; ) {
             let n = this.sections[i];
             if (i === e && null == t) {
-                a = !0;
+                s = !0;
                 break;
             }
             if (0 === n) {
@@ -133,18 +133,17 @@ class i {
                 continue;
             }
             if (((r += this.getHeightForSection(i)), this.uniform)) {
-                let s = this.getHeightForRow(i, 0);
-                i === e && null != t ? ((r += s * t), (a = !0)) : (r += s * n);
+                let a = this.getHeightForRow(i, 0);
+                i === e && null != t ? ((r += a * t), (s = !0)) : (r += a * n);
             } else
-                for (let s = 0; s < n; s++)
-                    if (i < e || (i === e && null != t && s < t)) r += this.getHeightForRow(i, s);
-                    else if (i === e && null != t && s === t) {
-                        a = !0;
+                for (let a = 0; a < n; a++)
+                    if (i < e || (i === e && null != t && a < t)) r += this.getHeightForRow(i, a);
+                    else if (i === e && null != t && a === t) {
+                        s = !0;
                         break;
                     }
-            a || (r += this.getHeightForFooter(i)), (i += 1);
+            s || (r += this.getHeightForFooter(i)), (i += 1);
         }
         return [r, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(i)];
     }
-}
-let a = i;
+};

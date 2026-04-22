@@ -1,31 +1,32 @@
-t.d(r, { default: () => s });
+t.d(r, { default: () => p });
 var i = t(627968);
 t(64700);
 var l = t(311907),
-    o = t(397927),
-    a = t(442433),
-    n = t(775602),
-    c = t(652215),
-    d = t(985018);
-function s(e) {
+    o = t(861672),
+    a = t(477782),
+    n = t(442433),
+    c = t(775602),
+    d = t(652215),
+    s = t(985018);
+function p(e) {
     let { roles: r } = e,
-        t = (0, l.bG)([n.A], () => n.A.roleStyle);
-    return (0, i.jsx)(o.W1t, {
+        t = (0, l.bG)([c.A], () => c.A.roleStyle);
+    return (0, i.jsx)(o.W, {
         "data-menu-migrated": !0,
         navId: "invite-roles-menu",
-        onClose: a.Z_,
+        onClose: n.Z_,
         onSelect: () => {},
-        "aria-label": d.intl.string(d.t["LPJmL/"]),
-        children: (0, i.jsx)(o.rXV, {
+        "aria-label": s.intl.string(s.t["LPJmL/"]),
+        children: (0, i.jsx)(a.rX, {
             children: r.map((e) =>
                 (0, i.jsx)(
-                    o.Drp,
+                    a.Dr,
                     {
                         id: e.id,
                         leadingAccessory: {
                             type: "roleDot",
                             variant: "dot" === t ? "dot" : "circle",
-                            color: e.colorString ?? c.TpD,
+                            color: e.colorString ?? d.TpD,
                             colors: e.colorStrings,
                         },
                         label: e.name,

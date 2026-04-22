@@ -1,9 +1,9 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
+    l = n(292666),
     a = n(34006);
-let l = /[^0-9]/g;
+let r = /[^0-9]/g;
 class o extends s.PureComponent {
     _inputRef;
     selectionStart = 0;
@@ -19,17 +19,17 @@ class o extends s.PureComponent {
         let { value: n, onChange: i } = this.props,
             s = this._inputRef;
         if (e === n || null == s || null == n) return;
-        let r = (0, a.N)(e),
+        let l = (0, a.N)(e),
             o = s.selectionStart;
-        r === n && r.length <= 3 && n.includes("/") && !e.includes("/")
-            ? (r = r.replace(l, ""))
-            : r === n && e.includes("/") && !n.includes("/") && (r += "/"),
-            r.length > e.length && (o += r.length - e.length),
+        l === n && l.length <= 3 && n.includes("/") && !e.includes("/")
+            ? (l = l.replace(r, ""))
+            : l === n && e.includes("/") && !n.includes("/") && (l += "/"),
+            l.length > e.length && (o += l.length - e.length),
             (this.selectionStart = o),
-            null != i && i(r, t);
+            null != i && i(l, t);
     };
     render() {
-        return (0, i.jsx)(r.ksK, {
+        return (0, i.jsx)(l.k, {
             ...this.props,
             inputMode: "numeric",
             onChange: this.handleChange,
@@ -37,4 +37,4 @@ class o extends s.PureComponent {
         });
     }
 }
-let c = o;
+let d = o;

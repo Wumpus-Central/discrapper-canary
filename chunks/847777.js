@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     TV: "enableContainer__5ea8c",
     kJ: "iconCircle__5ea8c",

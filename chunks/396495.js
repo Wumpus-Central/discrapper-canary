@@ -1,60 +1,62 @@
-n.d(t, { b: () => g });
-var i = n(627968);
-n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(110259),
-    r = n(421380),
-    o = n(397927),
-    c = n(139286),
-    d = n(954571),
-    u = n(222643),
-    h = n(652215),
-    A = n(985018),
-    _ = n(164778);
-function m(e) {
-    let { hidden: t, onDismiss: n } = e;
+t.d(n, { b: () => C });
+var l = t(627968);
+t(64700);
+var i = t(503698),
+    a = t.n(i),
+    s = t(110259),
+    r = t(862482),
+    o = t(789645),
+    c = t(834730),
+    u = t(403581),
+    d = t(139286),
+    A = t(954571),
+    h = t(222643),
+    p = t(652215),
+    m = t(985018),
+    g = t(648666);
+function f(e) {
+    let { hidden: n, onDismiss: t } = e;
     return (
-        (0, c.A)({ type: a.ImpressionTypes.VIEW, name: a.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: t }, [
-            t,
+        (0, d.A)({ type: s.ImpressionTypes.VIEW, name: s.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
+            n,
         ]),
-        (0, i.jsxs)("div", {
-            className: s()(_.jC, { [_.R]: t }),
+        (0, l.jsxs)("div", {
+            className: a()(g.jC, { [g.R]: n }),
             children: [
-                (0, i.jsx)("img", {
-                    className: _.Sl,
+                (0, l.jsx)("img", {
+                    className: g.Sl,
                     src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
                     alt: "HD Streaming Nitro Perk",
                 }),
-                (0, i.jsx)(r.$n, {
+                (0, l.jsx)(r.$n, {
                     "data-migration-pending": !0,
-                    className: _.b,
-                    "aria-label": A.intl.string(A.t.cpT0Cq),
+                    className: g.b,
+                    "aria-label": m.intl.string(m.t.cpT0Cq),
                     look: r.$n.Looks.BLANK,
                     size: r.$n.Sizes.NONE,
                     onClick: () => {
-                        n(), d.default.track(h.HAw.HD_STREAMING_POPOUT_DISMISSED);
+                        t(), A.default.track(p.HAw.HD_STREAMING_POPOUT_DISMISSED);
                     },
-                    children: (0, i.jsx)(o.PGe, { size: "xs", className: _.ut, color: "white" }),
+                    children: (0, l.jsx)(o.P, { size: "xs", className: g.ut, color: "white" }),
                 }),
-                (0, i.jsx)("div", {
-                    className: _.Gm,
-                    children: (0, i.jsxs)("div", {
-                        className: _.op,
+                (0, l.jsx)("div", {
+                    className: g.Gm,
+                    children: (0, l.jsxs)("div", {
+                        className: g.op,
                         children: [
-                            (0, i.jsx)(o.Text, {
-                                className: _.aV,
+                            (0, l.jsx)(c.E, {
+                                className: g.aV,
                                 variant: "text-sm/medium",
-                                children: A.intl.format(A.t.ruvD7i, {}),
+                                children: m.intl.format(m.t.ruvD7i, {}),
                             }),
-                            (0, i.jsxs)("div", {
-                                className: _.vX,
+                            (0, l.jsxs)("div", {
+                                className: g.vX,
                                 children: [
-                                    (0, i.jsx)(o.tvc, { size: "xs" }),
-                                    (0, i.jsx)(o.Text, {
-                                        className: _.aV,
+                                    (0, l.jsx)(u.t, { size: "xs" }),
+                                    (0, l.jsx)(c.E, {
+                                        className: g.aV,
                                         variant: "text-sm/medium",
-                                        children: A.intl.string(A.t["BMw+7I"]),
+                                        children: m.intl.string(m.t["BMw+7I"]),
                                     }),
                                 ],
                             }),
@@ -65,7 +67,7 @@ function m(e) {
         })
     );
 }
-function g(e) {
-    let { ...t } = e;
-    return (0, i.jsx)(u.x, { ...t, renderComponent: (e) => (0, i.jsx)(m, { ...e }) });
+function C(e) {
+    let { ...n } = e;
+    return (0, l.jsx)(h.x, { ...n, renderComponent: (e) => (0, l.jsx)(f, { ...e }) });
 }

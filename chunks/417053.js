@@ -1,19 +1,20 @@
-n.d(t, { t: () => o });
+n.d(t, { t: () => d });
 var i = n(627968),
-    s = n(158954),
-    l = n(200921),
-    a = n(754333),
-    r = n(985018);
-function o() {
-    let { otherSessions: e } = (0, a.r)();
-    return (0, i.jsx)(s.D0$, {
-        label: r.intl.string(r.t.Vij32M),
-        description: r.intl.string(r.t.OTXyaf),
-        children: (0, i.jsx)(s.$nd, {
-            onClick: () => (0, l.U0)(e.map((e) => e.id_hash)),
+    s = n(452027),
+    l = n(821609),
+    a = n(200921),
+    r = n(754333),
+    o = n(985018);
+function d() {
+    let { otherSessions: e } = (0, r.r)();
+    return (0, i.jsx)(s.D, {
+        label: o.intl.string(o.t.Vij32M),
+        description: o.intl.string(o.t.OTXyaf),
+        children: (0, i.jsx)(l.$, {
+            onClick: () => (0, a.U0)(e.map((e) => e.id_hash)),
             variant: "critical-primary",
             size: "sm",
-            text: r.intl.string(r.t.cLmmeY),
+            text: o.intl.string(o.t.cLmmeY),
         }),
     });
 }

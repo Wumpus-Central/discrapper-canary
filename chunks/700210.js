@@ -1,73 +1,70 @@
-"use strict";
-n.d(t, { A: () => g }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    o = n(282956),
-    l = n(264322),
-    u = n(997509),
-    c = n(780964),
-    d = n(630457),
-    _ = n(858897),
-    f = n(546183),
-    p = n(71393),
-    h = n(576705),
-    m = n(652215),
-    E = n(985018);
-function g(e) {
-    let { user: t, application: g, guildId: A, context: I, onItemClick: T } = e,
-        S = g?.id ?? t?.id,
-        y = p.A.getGuild(A),
-        v = (0, s.bG)([h.A], () => (null != y ? h.A.can(m.xBc.MANAGE_GUILD, y) : null)),
-        N = !0,
-        C = !0,
-        R = (0, l.ON)(A, C),
-        O = (0, l.A4)(N, C),
-        b = (0, s.bG)([f.default], () => null != f.default.getNewestTokenForApplication(S)),
-        { isUserApp: D, isGuildApp: L } = i.useMemo(() => {
-            if (null == S) return { isGuildApp: !1, isUserApp: !1 };
-            let e = Object.values(R.result?.sections ?? {}),
-                t = Object.values(O.result?.sections ?? {});
+l.d(t, { A: () => j }), l(321073);
+var n = l(627968),
+    s = l(64700),
+    i = l(311907),
+    r = l(477782),
+    a = l(282956),
+    o = l(264322),
+    c = l(997509),
+    d = l(780964),
+    u = l(630457),
+    m = l(858897),
+    p = l(546183),
+    h = l(71393),
+    x = l(576705),
+    A = l(652215),
+    N = l(985018);
+function j(e) {
+    let { user: t, application: j, guildId: g, context: I, onItemClick: v } = e,
+        T = j?.id ?? t?.id,
+        _ = h.A.getGuild(g),
+        C = (0, i.bG)([x.A], () => (null != _ ? x.A.can(A.xBc.MANAGE_GUILD, _) : null)),
+        f = (0, o.ON)(g, !0),
+        E = (0, o.A4)(!0, !0),
+        P = (0, i.bG)([p.default], () => null != p.default.getNewestTokenForApplication(T)),
+        { isUserApp: b, isGuildApp: S } = s.useMemo(() => {
+            if (null == T) return { isGuildApp: !1, isUserApp: !1 };
+            let e = Object.values(f.result?.sections ?? {}),
+                t = Object.values(E.result?.sections ?? {});
             return {
-                isGuildApp: e.some((e) => e.descriptor.application?.id === S),
-                isUserApp: t.some((e) => e.descriptor.application?.id === S),
+                isGuildApp: e.some((e) => e.descriptor.application?.id === T),
+                isUserApp: t.some((e) => e.descriptor.application?.id === T),
             };
-        }, [R, O, S]);
-    i.useEffect(() => {
-        n(53656);
+        }, [f, E, T]);
+    s.useEffect(() => {
+        l(53656);
     }, []);
-    let w = i.useCallback(() => {
-            y?.id != null && (u.A.open(y.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, S), T?.());
-        }, [S, y?.id, T]),
-        M = i.useCallback(() => {
-            (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL);
+    let y = s.useCallback(() => {
+            _?.id != null && (c.A.open(_.id, A.BEX.INTEGRATIONS), a.A.setSection(A.wLn.APPLICATION, T), v?.());
+        }, [T, _?.id, v]),
+        L = s.useCallback(() => {
+            (0, m.openUserSettings)(d.X.AUTHORIZED_APPS_PANEL);
             let e = "";
-            null != g ? (e = g.name) : null != t && (e = t.username),
-                "" !== e && d.iU.setState({ searchQuery: e }),
-                T?.();
-        }, [g, T, t]);
-    if (I === m.BRT.POPOUT) return null;
-    let x = [];
+            null != j ? (e = j.name) : null != t && (e = t.username),
+                "" !== e && u.iU.setState({ searchQuery: e }),
+                v?.();
+        }, [j, v, t]);
+    if (I === A.BRT.POPOUT) return null;
+    let D = [];
     return (
-        L &&
-            v &&
-            x.push(
-                (0, r.jsx)(
-                    a.Drp,
-                    { id: "manage-server-integration", label: E.intl.string(E.t.IuSJT8), action: w },
+        S &&
+            C &&
+            D.push(
+                (0, n.jsx)(
+                    r.Dr,
+                    { id: "manage-server-integration", label: N.intl.string(N.t.IuSJT8), action: y },
                     "manage-server-integration",
                 ),
             ),
-        D &&
-            b &&
-            x.push(
-                (0, r.jsx)(
-                    a.Drp,
-                    { id: "manage-authorized-app", label: E.intl.string(E.t.V8ruvz), action: M },
+        b &&
+            P &&
+            D.push(
+                (0, n.jsx)(
+                    r.Dr,
+                    { id: "manage-authorized-app", label: N.intl.string(N.t.V8ruvz), action: L },
                     "manage-authorized-app",
                 ),
             ),
-        x
+        D
     );
 }

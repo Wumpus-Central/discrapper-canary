@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => i, I: () => a });
-var r = n(333748);
-function i(e) {
-    return r.i.XBOX_APPLICATION_ID === e || r.N.PLAYSTATION_APPLICATION_IDS.has(e);
+l.d(t, { A: () => s, I: () => i });
+var n = l(333748);
+function s(e) {
+    return n.i.XBOX_APPLICATION_ID === e || n.N.PLAYSTATION_APPLICATION_IDS.has(e);
 }
-function a(e) {
-    return i(e);
+function i(e) {
+    return s(e);
 }

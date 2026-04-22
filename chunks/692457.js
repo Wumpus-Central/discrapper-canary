@@ -1,24 +1,25 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    a = n(397927),
-    r = n(843472),
-    s = n(406704),
-    o = n(961350),
-    d = n(697470),
-    c = n(985018);
-function u(e, t) {
-    let n = (0, l.bG)([o.default], () => o.default.getId()),
-        u = (0, s.Id)(t),
-        g = (0, s.s5)(t);
-    return (0, d.A)(e, n) && u && !g
-        ? (0, i.jsx)(a.Drp, {
+    a = n(477782),
+    r = n(22231),
+    s = n(843472),
+    o = n(406704),
+    d = n(961350),
+    c = n(697470),
+    u = n(985018);
+function g(e, t) {
+    let n = (0, l.bG)([d.default], () => d.default.getId()),
+        g = (0, o.Id)(t),
+        A = (0, o.s5)(t);
+    return (0, c.A)(e, n) && g && !A
+        ? (0, i.jsx)(a.Dr, {
               id: "edit",
-              label: c.intl.string(c.t.fsBWmS),
-              action: () => r.A.startEditMessageRecord(t.id, e),
-              leadingAccessory: { type: "icon", icon: a.R2l },
-              icon: a.R2l,
+              label: u.intl.string(u.t.fsBWmS),
+              action: () => s.A.startEditMessageRecord(t.id, e),
+              leadingAccessory: { type: "icon", icon: r.R },
+              icon: r.R,
           })
         : null;
 }

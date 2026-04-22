@@ -1,63 +1,65 @@
-n.d(t, { M: () => p });
-var i = n(627968),
-    s = n(64700),
-    r = n(284009),
-    a = n.n(r),
-    l = n(417597),
-    o = n(397927),
-    c = n(287809),
-    d = n(438732),
-    u = n(834981),
-    _ = n(53719),
-    m = n(390370),
-    A = n(191627),
-    g = n(842130),
-    E = n(985018),
-    h = n(487693);
-function p(e) {
+l.d(t, { M: () => E });
+var n = l(627968),
+    i = l(64700),
+    s = l(284009),
+    a = l.n(s),
+    r = l(417597),
+    d = l(192308),
+    c = l(933832),
+    u = l(789645),
+    o = l(287809),
+    x = l(438732),
+    h = l(834981),
+    m = l(53719),
+    g = l(390370),
+    j = l(191627),
+    A = l(602339),
+    v = l(985018),
+    f = l(528218);
+function E(e) {
     let { user: t } = e,
-        r = (0, d.A)(),
-        p = (0, u.xr)(),
-        C = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
-        x = s.useCallback(() => {
-            a()(void 0 !== C, "User must be logged in to accept a link request"),
-                (0, o.mMO)(async () => {
-                    let { default: e } = await n.e("31385").then(n.bind(n, 58144));
-                    return (n) => (0, i.jsx)(e, { ...n, currentUser: C, otherUser: t });
+        s = (0, x.A)(),
+        E = (0, h.xr)(),
+        N = (0, r.bG)([o.default], () => o.default.getCurrentUser()),
+        p = i.useCallback(() => {
+            a()(void 0 !== N, "User must be logged in to accept a link request"),
+                (0, d.openModalLazy)(async () => {
+                    let { default: e } = await l.e("31385").then(l.bind(l, 58144));
+                    return (l) => (0, n.jsx)(e, { ...l, currentUser: N, otherUser: t });
                 });
-        }, [C, t]),
-        T = s.useCallback(() => {
-            a()(void 0 !== C, "User must be logged in to decline a link request"),
-                (0, o.mMO)(async () => {
-                    let { default: e } = await n.e("84811").then(n.bind(n, 389094));
-                    return (n) => (0, i.jsx)(e, { ...n, currentUser: C, otherUser: t });
+        }, [N, t]),
+        T = i.useCallback(() => {
+            a()(void 0 !== N, "User must be logged in to decline a link request"),
+                (0, d.openModalLazy)(async () => {
+                    let { default: e } = await l.e("84811").then(l.bind(l, 389094));
+                    return (l) => (0, n.jsx)(e, { ...l, currentUser: N, otherUser: t });
                 });
-        }, [C, t]),
-        I = s.useCallback(() => {
-            a()(void 0 !== C, "User must be logged in to decline a link request"),
-                (0, o.mMO)(async () => {
-                    let { default: e } = await n.e("17219").then(n.bind(n, 187278));
-                    return (n) => (0, i.jsx)(e, { ...n, currentUser: C, otherUser: t });
+        }, [N, t]),
+        S = i.useCallback(() => {
+            a()(void 0 !== N, "User must be logged in to decline a link request"),
+                (0, d.openModalLazy)(async () => {
+                    let { default: e } = await l.e("17219").then(l.bind(l, 187278));
+                    return (l) => (0, n.jsx)(e, { ...l, currentUser: N, otherUser: t });
                 });
-        }, [C, t]);
-    return (0, i.jsxs)("div", {
-        className: h.kL,
+        }, [N, t]);
+    return (0, n.jsxs)("div", {
+        className: f.kL,
         children: [
-            (0, i.jsx)("div", { className: h.zH, children: (0, i.jsx)(m.A, { otherUser: t, status: A.Ef.PENDING }) }),
-            (0, i.jsx)("div", {
-                className: h.o1,
-                children: r
-                    ? (0, i.jsx)(_.A, { icon: o.PGe, tooltip: E.intl.string(g.default.e5iHmZ), onClick: I })
-                    : (0, i.jsxs)(i.Fragment, {
+            (0, n.jsx)("div", { className: f.zH, children: (0, n.jsx)(g.A, { otherUser: t, status: j.Ef.PENDING }) }),
+            (0, n.jsx)("div", {
+                className: f.o1,
+                children: s
+                    ? (0, n.jsx)(m.A, { icon: u.P, tooltip: v.intl.string(A.default.e5iHmZ), onClick: S })
+                    : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              p
+                              E
                                   ? null
-                                  : (0, i.jsx)(_.A, {
-                                        icon: o.A9s,
-                                        tooltip: E.intl.string(g.default.krWQZK),
-                                        onClick: x,
+                                  : (0, n.jsx)(m.A, {
+                                        icon: c.A,
+                                        tooltip: v.intl.string(A.default.krWQZK),
+                                        onClick: p,
                                     }),
-                              (0, i.jsx)(_.A, { icon: o.PGe, tooltip: E.intl.string(g.default.bBDeNI), onClick: T }),
+                              (0, n.jsx)(m.A, { icon: u.P, tooltip: v.intl.string(A.default.bBDeNI), onClick: T }),
                           ],
                       }),
             }),

@@ -1,25 +1,23 @@
 "use strict";
-n.d(t, { t: () => a, z: () => s });
-var r = n(954571),
-    i = n(652215),
-    a = (function (e) {
-        return (
-            (e.SHOP_MOUNTED = "shop_mounted"),
-            (e.CATEGORIES_FETCH_STARTED = "categories_fetch_started"),
-            (e.CATEGORIES_FETCH_COMPLETED = "categories_fetch_completed"),
-            (e.SHOP_HOME_FETCH_STARTED = "shop_home_fetch_started"),
-            (e.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
-            (e.SHOP_RENDERED = "shop_rendered"),
-            e
-        );
-    })({});
-let s = (e) => {
-    let { sessionId: t, checkpoint: n, tab: a, unpublishedCategoriesShown: s, cacheDisabled: o } = e;
-    r.default.track(i.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
+n.d(t, { t: () => a, z: () => o });
+var r,
+    i = n(954571),
+    s = n(652215),
+    a =
+        (((r = {}).SHOP_MOUNTED = "shop_mounted"),
+        (r.CATEGORIES_FETCH_STARTED = "categories_fetch_started"),
+        (r.CATEGORIES_FETCH_COMPLETED = "categories_fetch_completed"),
+        (r.SHOP_HOME_FETCH_STARTED = "shop_home_fetch_started"),
+        (r.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
+        (r.SHOP_RENDERED = "shop_rendered"),
+        r);
+let o = (e) => {
+    let { sessionId: t, checkpoint: n, tab: r, unpublishedCategoriesShown: a, cacheDisabled: o } = e;
+    i.default.track(s.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
         page_session_id: t,
         checkpoint: n,
-        tab: a,
-        unpublished_categories_shown: s,
+        tab: r,
+        unpublished_categories_shown: a,
         cache_disabled: o,
     });
 };

@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { t: () => l });
-var r = n(627968);
-n(64700);
-var i = n(362058),
-    a = n(786558),
-    s = n(799226);
-let o = {
+a.d(l, { t: () => s });
+var t = a(627968);
+a(64700);
+var n = a(362058),
+    o = a(786558),
+    i = a(799226);
+let r = {
     "Gem L1": { reducedMotion: "boolean" },
     Sparkle_Tiny: { reducedMotion: "boolean" },
     Sparkle: { reducedMotion: "boolean" },
 };
-function l(e) {
-    let { artboard: t = "Gem L1", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, s.CE)(i.A),
-        d = (0, s.m2)(i.A);
-    return u === s.BW.Loading
+function s(e) {
+    let { artboard: l = "Gem L1", stateMachine: a, ...s } = e,
+        { status: d, buffer: u } = (0, i.CE)(n.A),
+        c = (0, i.m2)(n.A);
+    return d === i.BW.Loading
         ? null
-        : (0, r.jsx)(a.w, {
-              ...(d ? { key: "override" } : {}),
-              buffer: c,
-              artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+        : (0, t.jsx)(o.w, {
+              ...(c ? { key: "override" } : {}),
+              buffer: u,
+              artboard: l,
+              stateMachine: a,
+              artboardProperties: r,
+              ...s,
           });
 }
-l.riveSrc = i.A;
+s.riveSrc = n.A;

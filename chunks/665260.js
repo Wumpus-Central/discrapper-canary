@@ -5,20 +5,20 @@ function r(e, t) {
 function i(e, t) {
     return (e & t) != 0;
 }
-function a(e, t) {
+function s(e, t) {
     return e | t;
 }
-function s(e, t) {
+function a(e, t) {
     return e & ~t;
 }
 function o(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-    return n.reduce((e, t) => s(e, t), e);
+    return n.reduce((e, t) => e & ~t, e);
 }
 function l(e, t, n) {
-    return n ? a(e, t) : s(e, t);
+    return n ? e | t : e & ~t;
 }
 function u(e, t) {
-    return r(e, t) ? s(e, t) : a(e, t);
+    return r(e, t) ? e & ~t : e | t;
 }
-n.d(t, { Lt: () => r, PQ: () => u, UI: () => a, VL: () => s, br: () => i, iE: () => o, lA: () => l });
+n.d(t, { Lt: () => r, PQ: () => u, UI: () => s, VL: () => a, br: () => i, iE: () => o, lA: () => l });

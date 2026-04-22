@@ -1,40 +1,41 @@
-"use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var s = n(417597),
-    l = n(732955),
-    r = n(397927),
-    a = n(260509),
-    o = n(71393),
-    d = n(287809),
-    c = n(11351),
-    u = n(985018);
-function m(e) {
-    let { guildId: t, application: m } = e,
-        g = (0, s.bG)([o.A], () => o.A.getGuild(t)),
-        x = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
-        h = (0, c.gN)();
-    if (null == g || !(0, a.bM)(g, x)) return null;
-    let _ = m.team;
+var l = n(417597),
+    s = n(821609),
+    r = n(192308),
+    a = n(834730),
+    o = n(696986),
+    d = n(260509),
+    c = n(71393),
+    u = n(287809),
+    m = n(11351),
+    g = n(985018);
+function h(e) {
+    let { guildId: t, application: h } = e,
+        x = (0, l.bG)([c.A], () => c.A.getGuild(t)),
+        _ = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
+        p = (0, m.gN)();
+    if (null == x || !(0, d.bM)(x, _)) return null;
+    let A = h.team;
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.E, {
                 variant: "text-sm/normal",
-                color: h ? "text-muted" : "text-default",
-                children: null != _ ? u.intl.format(u.t.erxwWA, { teamName: _.name }) : u.intl.string(u.t.FGzLkK),
+                color: p ? "text-muted" : "text-default",
+                children: null != A ? g.intl.format(g.t.erxwWA, { teamName: A.name }) : g.intl.string(g.t.FGzLkK),
             }),
-            (0, i.jsx)(r.hKd, { size: 16 }),
-            (0, i.jsx)(l.$nd, {
-                text: null != _ ? u.intl.string(u.t["/Fjq5P"]) : u.intl.string(u.t["6ih+b4"]),
-                variant: null != _ ? "secondary" : "primary",
+            (0, i.jsx)(o.h, { size: 16 }),
+            (0, i.jsx)(s.$, {
+                text: null != A ? g.intl.string(g.t["/Fjq5P"]) : g.intl.string(g.t["6ih+b4"]),
+                variant: null != A ? "secondary" : "primary",
                 onClick: () => {
-                    (0, r.mMO)(async () => {
+                    (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e("71678").then(n.bind(n, 180493));
-                        return (t) => (0, i.jsx)(e, { ...t, application: m });
+                        return (t) => (0, i.jsx)(e, { ...t, application: h });
                     });
                 },
-                disabled: h,
+                disabled: p,
             }),
         ],
     });

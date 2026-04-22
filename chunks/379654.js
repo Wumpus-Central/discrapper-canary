@@ -1,151 +1,148 @@
-"use strict";
-n.d(t, { A: () => C }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    s = n(485584),
-    a = n(598748),
-    o = n(311907),
-    l = n(688810),
-    u = n(549699),
-    c = n(29496),
-    d = n(369374),
-    _ = n(850046),
-    f = n(188951),
-    p = n(429913),
-    h = n(201718),
-    m = n(773669),
-    E = n(403362),
-    g = n(183555),
-    A = n(633075),
-    I = n(289173),
-    T = n(80330),
-    S = n(139730),
-    y = n(783256),
-    v = n(518477),
-    N = n(985018);
-function C(e) {
-    let { enabled: t } = d.A.useConfig({ location: "UserProfileStackedWidgetPreviews" });
-    return t ? (0, r.jsx)(b, { ...e }) : (0, r.jsx)(O, { ...e });
-}
+a.d(i, { A: () => R }), a(321073);
+var n = a(627968),
+    t = a(64700),
+    l = a(485584),
+    s = a(598748),
+    c = a(311907),
+    r = a(688810),
+    o = a(549699),
+    d = a(29496),
+    p = a(369374),
+    u = a(850046),
+    m = a(188951),
+    h = a(429913),
+    f = a(201718),
+    x = a(773669),
+    g = a(403362),
+    I = a(183555),
+    A = a(633075),
+    j = a(289173),
+    v = a(80330),
+    E = a(139730),
+    N = a(783256),
+    C = a(518477),
+    b = a(985018);
 function R(e) {
-    let { onOpenUserProfileModal: t } = e,
-        { analyticsLocations: n } = (0, l.Ay)(),
-        { trackUserProfileAction: r } = (0, g.NJ)(),
-        s = i.useCallback(() => {
-            t?.({ tabSection: v.RP.WIDGETS });
-        }, [t]),
-        a = i.useCallback(() => {
-            r({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: n }), s();
-        }, [r, n, s]);
-    return { openModal: s, onExpand: a };
+    let { enabled: i } = p.A.useConfig({ location: "UserProfileStackedWidgetPreviews" });
+    return i ? (0, n.jsx)(_, { ...e }) : (0, n.jsx)(P, { ...e });
 }
-function O(e) {
-    let { user: t, widgets: n = [], ...s } = e,
-        { openModal: a, onExpand: o } = R({ user: t, widgets: n, ...s }),
-        l = i.useMemo(() => n.filter((e) => e instanceof A.R), [n]),
-        u = i.useMemo(() => l.map((e) => e.applicationId), [l]),
-        c = (0, _.A)(t.id, u),
-        d = i.useCallback(
+function w(e) {
+    let { onOpenUserProfileModal: i } = e,
+        { analyticsLocations: a } = (0, r.Ay)(),
+        { trackUserProfileAction: n } = (0, I.NJ)(),
+        l = t.useCallback(() => {
+            i?.({ tabSection: C.RP.WIDGETS });
+        }, [i]),
+        s = t.useCallback(() => {
+            n({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: a }), l();
+        }, [n, a, l]);
+    return { openModal: l, onExpand: s };
+}
+function P(e) {
+    let { user: i, widgets: a = [], ...l } = e,
+        { openModal: s, onExpand: c } = w({ user: i, widgets: a, ...l }),
+        r = t.useMemo(() => a.filter((e) => e instanceof A.R), [a]),
+        o = t.useMemo(() => r.map((e) => e.applicationId), [r]),
+        d = (0, u.A)(i.id, o),
+        p = t.useCallback(
             (e) => {
-                let t = [],
-                    i = !1;
-                for (let s of n)
-                    if (s instanceof A.R) {
-                        let n = c[s.applicationId];
-                        null != n &&
-                            t.push(
-                                (0, r.jsx)(
-                                    S.A,
-                                    { type: "v1", previewData: n, onClick: a, ...e },
-                                    `application-widget-${s.applicationId}`,
+                let i = [],
+                    t = !1;
+                for (let l of a)
+                    if (l instanceof A.R) {
+                        let a = d[l.applicationId];
+                        null != a &&
+                            i.push(
+                                (0, n.jsx)(
+                                    E.A,
+                                    { type: "v1", previewData: a, onClick: s, ...e },
+                                    `application-widget-${l.applicationId}`,
                                 ),
                             );
                     } else
-                        s instanceof I.Yy &&
-                            !i &&
-                            (t.push((0, r.jsx)(y.A, { widgets: n, onClick: a, ...e }, "collection-breadcrumb")),
-                            (i = !0));
-                return t;
+                        l instanceof j.Yy &&
+                            !t &&
+                            (i.push((0, n.jsx)(N.A, { widgets: a, onClick: s, ...e }, "collection-breadcrumb")),
+                            (t = !0));
+                return i;
             },
-            [c, a, n],
+            [d, s, a],
         );
-    return 0 === n.length ? null : (0, r.jsx)(T.A, { renderCards: d, heading: N.intl.string(N.t.Y55Tua), onExpand: o });
+    return 0 === a.length ? null : (0, n.jsx)(v.A, { renderCards: p, heading: b.intl.string(b.t.Y55Tua), onExpand: c });
 }
-function b(e) {
-    let { user: t, widgets: n = [], ...l } = e,
-        { openModal: d, onExpand: _ } = R({ user: t, widgets: n, ...l }),
-        g = i.useMemo(() => n.filter((e) => e instanceof A.R), [n]),
-        v = i.useMemo(() => g.map((e) => e.applicationId), [g]),
-        C = (0, p.A)(v),
-        O = i.useMemo(() => new Map(C.filter(E.Vq).map((e) => [e.id, e])), [C]),
-        b = (0, f.A)(v),
-        D = i.useMemo(() => new Map(b.map((e) => [e.application_id, e])), [b]),
-        { data: L } = (0, h.P)(t.id),
-        w = i.useMemo(() => new Map(L?.map((e) => [e.application_id, e])), [L]),
-        M = (0, o.bG)([m.default], () => m.default.locale),
-        x = (0, o.cf)([c.A], () => Object.fromEntries(g.map((e) => [e.applicationId, c.A.getAssets(e.applicationId)]))),
-        P = i.useMemo(
+function _(e) {
+    let { user: i, widgets: a = [], ...r } = e,
+        { openModal: p, onExpand: u } = w({ user: i, widgets: a, ...r }),
+        I = t.useMemo(() => a.filter((e) => e instanceof A.R), [a]),
+        C = t.useMemo(() => I.map((e) => e.applicationId), [I]),
+        R = (0, h.A)(C),
+        P = t.useMemo(() => new Map(R.filter(g.Vq).map((e) => [e.id, e])), [R]),
+        _ = (0, m.A)(C),
+        y = t.useMemo(() => new Map(_.map((e) => [e.application_id, e])), [_]),
+        { data: S } = (0, f.P)(i.id),
+        M = t.useMemo(() => new Map(S?.map((e) => [e.application_id, e])), [S]),
+        k = (0, c.bG)([x.default], () => x.default.locale),
+        O = (0, c.cf)([d.A], () => Object.fromEntries(I.map((e) => [e.applicationId, d.A.getAssets(e.applicationId)]))),
+        G = t.useMemo(
             () =>
-                0 === O.size || 0 === D.size || 0 === w.size
+                0 === P.size || 0 === y.size || 0 === M.size
                     ? null
                     : new Map(
-                          g
-                              .map((e) => {
-                                  let t = O.get(e.applicationId),
-                                      n = D.get(e.applicationId),
-                                      r = w.get(e.applicationId);
-                                  if (null == t || null == n || null == r) return null;
-                                  let i = n.surfaces;
-                                  if (null == i || null == i[a.m.MINI_PROFILE]) return null;
-                                  let o = (0, s.VG)(r.profile),
-                                      l = Object.values(x[e.applicationId] ?? {}).filter(E.Vq);
-                                  return [e, { surfaceConfigs: n.surfaces, data: o, application: t, assets: l }];
-                              })
-                              .filter(E.Vq),
+                          I.map((e) => {
+                              let i = P.get(e.applicationId),
+                                  a = y.get(e.applicationId),
+                                  n = M.get(e.applicationId);
+                              if (null == i || null == a || null == n) return null;
+                              let t = a.surfaces;
+                              if (null == t || null == t[s.m.MINI_PROFILE]) return null;
+                              let c = (0, l.VG)(n.profile),
+                                  r = Object.values(O[e.applicationId] ?? {}).filter(g.Vq);
+                              return [e, { surfaceConfigs: a.surfaces, data: c, application: i, assets: r }];
+                          }).filter(g.Vq),
                       ),
-            [g, O, D, w, x],
+            [I, P, y, M, O],
         ),
-        k = i.useCallback(
+        T = t.useCallback(
             (e) => {
-                let t = [],
-                    i = !1;
-                for (let s of n)
-                    if (s instanceof A.R) {
-                        let n = P?.get(s);
-                        if (null == n) continue;
-                        t.push(
-                            (0, r.jsx)(
-                                S.A,
+                let i = [],
+                    t = !1;
+                for (let l of a)
+                    if (l instanceof A.R) {
+                        let a = G?.get(l);
+                        if (null == a) continue;
+                        i.push(
+                            (0, n.jsx)(
+                                E.A,
                                 {
                                     type: "v2",
-                                    application: n.application,
+                                    application: a.application,
                                     rendererProps: {
-                                        locale: M,
-                                        surfaceConfigs: n.surfaceConfigs,
+                                        locale: k,
+                                        surfaceConfigs: a.surfaceConfigs,
                                         isLoading: !1,
                                         hasIdentity: !0,
                                         resolutionContext: {
-                                            data: n.data,
-                                            applicationAssets: n.assets,
+                                            data: a.data,
+                                            applicationAssets: a.assets,
                                             getApplicationAssetUrl: (e) =>
-                                                (0, u.Q)(s.applicationId, e, e.metadata.width),
+                                                (0, o.Q)(l.applicationId, e, e.metadata.width),
                                             localizedStrings: [],
                                         },
                                     },
-                                    onClick: d,
+                                    onClick: p,
                                     ...e,
                                 },
-                                `application-widget-${s.applicationId}`,
+                                `application-widget-${l.applicationId}`,
                             ),
                         );
                     } else
-                        s instanceof I.Yy &&
-                            !i &&
-                            (t.push((0, r.jsx)(y.A, { widgets: n, onClick: d, ...e }, "collection-breadcrumb")),
-                            (i = !0));
-                return t;
+                        l instanceof j.Yy &&
+                            !t &&
+                            (i.push((0, n.jsx)(N.A, { widgets: a, onClick: p, ...e }, "collection-breadcrumb")),
+                            (t = !0));
+                return i;
             },
-            [n, d, P, M],
+            [a, p, G, k],
         );
-    return 0 === n.length ? null : (0, r.jsx)(T.A, { renderCards: k, heading: N.intl.string(N.t.Y55Tua), onExpand: _ });
+    return 0 === a.length ? null : (0, n.jsx)(v.A, { renderCards: T, heading: b.intl.string(b.t.Y55Tua), onExpand: u });
 }

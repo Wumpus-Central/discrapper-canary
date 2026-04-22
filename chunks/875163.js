@@ -1,119 +1,113 @@
 "use strict";
-n.d(t, { A: () => b });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => S });
+var i = n(627968),
+    l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    o = n(837381),
-    l = n(311907),
-    u = n(397927),
-    c = n(811024),
-    d = n(933958),
-    _ = n(969151),
-    f = n(580424),
-    p = n(579940),
-    h = n(915089),
-    m = n(750506),
-    E = n(513609),
-    g = n(71393),
-    A = n(374803),
-    I = n(105330),
-    T = n(638897),
-    S = n(5867),
-    y = n(130139);
-let v = 490,
-    N = 490,
-    C = 245,
-    R = 200,
-    O = 120,
-    b = i.forwardRef(function (e, t) {
-        let { channel: n, type: s, editorHeight: b, onVisibilityChange: D, editorScrollerRef: L, barsHeight: w } = e,
-            M = (0, h.GV)(),
-            x = (0, l.bG)([g.A], () => g.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
-            P = i.useRef(null),
-            [k, U, G] = (0, T.A)({ ...e, guild: x }, t, P),
-            F = s.autocomplete?.forceChatLayer ? E.Ay : m.Ay,
-            V = (0, f.aI)(k.selectedIndex);
-        (0, p.gf)(M, k.isVisible, V);
-        let B = (0, I.l)({ editorHeight: b, type: s, state: k }),
-            H = (0, l.bG)([d.Ay], () => {
-                let e = d.Ay.getSelfEmbeddedActivityForChannel(n.id),
-                    t = d.Ay.getActivityPanelMode();
-                return (0, c.AX)(n) && null != e && (0, _.H)(e.location) === n.id && t === S.Gd.PANEL;
-            }, [n]),
-            j = i.useMemo(
-                () =>
-                    B?.top == null && B?.left == null && B?.bottom == null && B?.right == null
-                        ? ""
-                        : String(Date.now()),
-                [B?.top, B?.left, B?.bottom, B?.right],
-            );
-        if (
-            (i.useEffect(() => {
-                D(k.isVisible);
-            }, [D, k.isVisible]),
-            !k.isVisible || null == k.query || void 0 === B)
-        )
-            return null;
-        let Y =
-            k.query.typeInfo.renderResults({
-                results: k.query.results,
-                selectedIndex: k.selectedIndex,
-                channel: n,
-                guild: x,
-                query: k.query.queryText,
-                options: k.query.options,
-                onHover: (e) => U.onResultHover(e),
-                onClick: (e) => U.onResultClick(e),
-            }) ?? null;
-        if (null == Y) return null;
-        let W = { [y.pK]: null == B, [y.YB]: null != B, [y.sQ]: null == B && "bottom" === e.position, [y.mO]: H },
-            K = v;
-        null != B && (K = s.autocomplete?.small ? R : k.query?.type === A.DB.EMOJIS_AND_STICKERS ? N : C);
-        let $ = Math.max(b, L?.current?.clientHeight ?? 0),
-            z = Math.min(0.5 * window.innerHeight, $);
-        K = Math.min(window.innerHeight - O - z - (w ?? 0), K);
-        let q = (0, r.jsx)(f.Ay, {
-            id: M,
-            className: a()(y.nx, W),
-            innerClassName: y.Fv,
-            onMouseDown: (e) => e.preventDefault(),
-            children: (0, r.jsx)(o.hD, {
-                navigator: G,
-                children: (0, r.jsx)(o.PR, {
-                    children: (e) => {
-                        let { ref: t, ...n } = e;
-                        return (0, r.jsx)(u.ChK, {
-                            id: M,
-                            ref: (e) => {
-                                (t.current = e?.getScrollerNode() ?? null), (P.current = e);
-                            },
-                            orientation: "vertical",
-                            overflow: "auto",
-                            ...n,
-                            className: y.XG,
-                            style: { maxHeight: K },
-                            role: "listbox",
-                            "aria-labelledby": (0, f.Sz)(M),
-                            children: Y,
-                        });
-                    },
-                }),
+    r = n.n(s),
+    a = n(837381),
+    o = n(311907),
+    c = n(599319),
+    u = n(623646),
+    d = n(811024),
+    h = n(933958),
+    m = n(969151),
+    p = n(580424),
+    f = n(579940),
+    g = n(915089),
+    _ = n(750506),
+    x = n(513609),
+    A = n(71393),
+    C = n(374803),
+    E = n(105330),
+    I = n(638897),
+    v = n(5867),
+    y = n(122484);
+let S = l.forwardRef(function (e, t) {
+    let { channel: n, type: s, editorHeight: S, onVisibilityChange: b, editorScrollerRef: N, barsHeight: T } = e,
+        j = (0, g.GV)(),
+        R = (0, o.bG)([A.A], () => A.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+        w = l.useRef(null),
+        [L, M, k] = (0, I.A)({ ...e, guild: R }, t, w),
+        O = s.autocomplete?.forceChatLayer ? x.Ay : _.Ay,
+        P = (0, p.aI)(L.selectedIndex);
+    (0, f.gf)(j, L.isVisible, P);
+    let D = (0, E.l)({ editorHeight: S, type: s, state: L }),
+        U = (0, o.bG)([h.Ay], () => {
+            let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
+                t = h.Ay.getActivityPanelMode();
+            return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === v.Gd.PANEL;
+        }, [n]),
+        V = l.useMemo(
+            () =>
+                D?.top == null && D?.left == null && D?.bottom == null && D?.right == null ? "" : String(Date.now()),
+            [D?.top, D?.left, D?.bottom, D?.right],
+        );
+    if (
+        (l.useEffect(() => {
+            b(L.isVisible);
+        }, [b, L.isVisible]),
+        !L.isVisible || null == L.query || void 0 === D)
+    )
+        return null;
+    let G =
+        L.query.typeInfo.renderResults({
+            results: L.query.results,
+            selectedIndex: L.selectedIndex,
+            channel: n,
+            guild: R,
+            query: L.query.queryText,
+            options: L.query.options,
+            onHover: (e) => M.onResultHover(e),
+            onClick: (e) => M.onResultClick(e),
+        }) ?? null;
+    if (null == G) return null;
+    let F = { [y.pK]: null == D, [y.YB]: null != D, [y.sQ]: null == D && "bottom" === e.position, [y.mO]: U },
+        B = 490;
+    null != D && (B = s.autocomplete?.small ? 200 : L.query?.type === C.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    let H = Math.max(S, N?.current?.clientHeight ?? 0),
+        W = Math.min(0.5 * window.innerHeight, H);
+    B = Math.min(window.innerHeight - 120 - W - (T ?? 0), B);
+    let K = (0, i.jsx)(p.Ay, {
+        id: j,
+        className: r()(y.nx, F),
+        innerClassName: y.Fv,
+        onMouseDown: (e) => e.preventDefault(),
+        children: (0, i.jsx)(a.hD, {
+            navigator: k,
+            children: (0, i.jsx)(a.PR, {
+                children: (e) => {
+                    let { ref: t, ...n } = e;
+                    return (0, i.jsx)(c.Ch, {
+                        id: j,
+                        ref: (e) => {
+                            (t.current = e?.getScrollerNode() ?? null), (w.current = e);
+                        },
+                        orientation: "vertical",
+                        overflow: "auto",
+                        ...n,
+                        className: y.XG,
+                        style: { maxHeight: B },
+                        role: "listbox",
+                        "aria-labelledby": (0, p.Sz)(j),
+                        children: G,
+                    });
+                },
             }),
-        });
-        return null != B
-            ? (0, r.jsx)(F, {
-                  children: (0, r.jsx)(u.QCO, {
-                      targetRef: e.targetRef,
-                      overrideTargetRect: B,
-                      positionKey: j,
-                      position: e.position ?? "top",
-                      align: "left",
-                      spacing: 8,
-                      autoInvert: !0,
-                      nudgeAlignIntoViewport: !0,
-                      children: () => q,
-                  }),
-              })
-            : q;
+        }),
     });
+    return null != D
+        ? (0, i.jsx)(O, {
+              children: (0, i.jsx)(u.Q, {
+                  targetRef: e.targetRef,
+                  overrideTargetRect: D,
+                  positionKey: V,
+                  position: e.position ?? "top",
+                  align: "left",
+                  spacing: 8,
+                  autoInvert: !0,
+                  nudgeAlignIntoViewport: !0,
+                  children: () => K,
+              }),
+          })
+        : K;
+});

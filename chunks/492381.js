@@ -1,36 +1,32 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(683958),
-    i = n(476858),
-    a = n(355418),
-    s = n(1673);
+r.d(t, { A: () => l });
+var n = r(683958),
+    s = r(476858),
+    a = r(355418),
+    i = r(1673);
 let o = RegExp(
-        `(?:(?:\\,|\\(|\\（)\\s*)?(?:(este|esta|passado|pr[o\xf3]ximo)\\s*)?(${(0, i.uJ)(r.CV)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(este|esta|passado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
-        "i",
-    ),
-    l = 1,
-    u = 2,
-    c = 3;
-class d extends a.c {
+    `(?:(?:\\,|\\(|\\（)\\s*)?(?:(este|esta|passado|pr[o\xf3]ximo)\\s*)?(${(0, s.uJ)(n.CV)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(este|esta|passado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
+    "i",
+);
+class l extends a.c {
     innerPattern() {
         return o;
     }
     innerExtract(e, t) {
-        let n = t[u].toLowerCase(),
-            i = r.CV[n];
-        if (void 0 === i) return null;
-        let a = t[l],
-            o = t[c],
-            d = a || o || "";
-        d = d.toLowerCase();
-        let _ = null;
+        let r = t[2].toLowerCase(),
+            s = n.CV[r];
+        if (void 0 === s) return null;
+        let a = t[1],
+            o = t[3],
+            l = a || o || "";
+        l = l.toLowerCase();
+        let u = null;
         return (
-            "passado" == d
-                ? (_ = "this")
-                : "pr\xf3ximo" == d || "proximo" == d
-                  ? (_ = "next")
-                  : "este" == d && (_ = "this"),
-            (0, s.Y5)(e.reference, i, _)
+            "passado" == l
+                ? (u = "this")
+                : "pr\xf3ximo" == l || "proximo" == l
+                  ? (u = "next")
+                  : "este" == l && (u = "this"),
+            (0, i.Y5)(e.reference, s, u)
         );
     }
 }

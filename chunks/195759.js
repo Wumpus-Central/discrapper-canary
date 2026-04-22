@@ -1,10 +1,10 @@
 i.d(a, { default: () => d });
-var t = i(627968),
-    n = i(64700),
-    l = i(397927),
+var n = i(627968),
+    t = i(64700),
+    l = i(192308),
     s = i(885377),
     r = i(985018);
-class c extends n.Component {
+class c extends t.Component {
     cancel = () => {
         let { onClose: e } = this.props;
         e?.();
@@ -12,14 +12,14 @@ class c extends n.Component {
     claimAccount = () => {
         let { onClose: e } = this.props;
         e?.(),
-            (0, l.mMO)(async () => {
+            (0, l.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([i.e("78925"), i.e("27672")]).then(i.bind(i, 888363));
-                return (a) => (0, t.jsx)(e, { ...a });
+                return (a) => (0, n.jsx)(e, { ...a });
             });
     };
     render() {
         let { transitionState: e } = this.props;
-        return (0, t.jsx)(s.A, {
+        return (0, n.jsx)(s.A, {
             transitionState: e,
             onClose: async () => await this.cancel(),
             "aria-label": r.intl.string(r.t.Nn0Px8),

@@ -1,32 +1,29 @@
 "use strict";
-n.r(t), n.d(t, { DISCORD_EPOCH: () => a.ZY, SnowflakeSequence: () => a.gg, default: () => o });
+n.r(t), n.d(t, { DISCORD_EPOCH: () => s.ZY, SnowflakeSequence: () => s.gg, default: () => a });
 var r = n(735438),
     i = n.n(r),
-    a = n(363270);
-function s(e) {
-    return e;
-}
-let o = {
+    s = n(363270);
+let a = {
     age: function (e) {
-        return a.KW(e);
+        return s.KW(e);
     },
     extractTimestamp: function (e) {
-        return a.uL(e);
+        return s.uL(e);
     },
     compare: function (e, t) {
-        return a.UD(e, t);
+        return s.UD(e, t);
     },
     atPreviousMillisecond: function (e) {
-        return a.QQ(e);
+        return s.QQ(e);
     },
     atNextMillisecond: function (e) {
-        return a.Uk(e);
+        return s.Uk(e);
     },
     fromTimestamp: function (e) {
-        return a.z(e);
+        return s.z(e);
     },
     fromTimestampWithSequence: function (e, t) {
-        return a.M0(e, t);
+        return s.M0(e, t);
     },
     keys: function (e) {
         return Object.keys(e);
@@ -41,16 +38,18 @@ let o = {
         return Object.entries(e);
     },
     isProbablyAValidSnowflake: function (e) {
-        return a.Nl(e);
+        return s.Nl(e);
     },
     castChannelIdAsMessageId: function (e) {
-        return s(e);
+        return e;
     },
     castMessageIdAsChannelId: function (e) {
-        return s(e);
+        return e;
     },
     castGuildIdAsEveryoneGuildRoleId: function (e) {
-        return s(e);
+        return e;
     },
-    cast: s,
+    cast: function (e) {
+        return e;
+    },
 };

@@ -1,47 +1,16 @@
 "use strict";
-n.d(t, { A: () => m, K: () => f }), n(321073);
-var r = n(635377),
-    i = n.n(r),
+n.d(t, { A: () => c, K: () => u }), n(321073);
+var r,
+    i = n(635377),
+    s = n.n(i),
     a = n(439372),
-    s = n(954571),
-    o = n(652215);
-let l = 6e4,
-    u = 1e3,
-    c = 10,
-    d = 2e3,
-    _ = 500;
-var f = (function (e) {
-    return (e.ANNOUNCEMENT = "announcement"), (e.APP_EMBED = "app_embed"), e;
-})({});
-function p(e) {
-    if ("announcement" === e.type)
-        return {
-            event: o.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
-            properties: {
-                message_id: e.messageId,
-                channel_id: e.channelId,
-                guild_id: e.guildId,
-                source_channel_id: e.sourceChannelId,
-                source_guild_id: e.sourceGuildId,
-            },
-        };
-    if ("app_embed" === e.type)
-        return {
-            event: o.HAw.APP_EMBED_VIEWED,
-            properties: {
-                application_id: e.applicationId,
-                link_type: e.linkType,
-                message_id: e.messageId,
-                channel_id: e.channelId,
-                guild_id: e.guildId,
-            },
-        };
-    throw Error("Invalid message type for message view tracking");
-}
-class h extends a.A {
+    o = n(954571),
+    l = n(652215),
+    u = (((r = {}).ANNOUNCEMENT = "announcement"), (r.APP_EMBED = "app_embed"), r);
+class d extends a.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
-    recentViewTimes = new (i())({ max: _, maxAge: l });
+    recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
     batchBuffer = [];
     batchTimerId = null;
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
@@ -50,14 +19,14 @@ class h extends a.A {
             r = `${n}-${t}`;
         if (null != this.currentlyVisibleMessageTimers[r] || this.viewsInCurrentChannel.has(r)) return;
         let i = this.recentViewTimes.get(r);
-        if (null != i && Date.now() - i < l) return;
-        let a = setTimeout(() => {
+        if (null != i && Date.now() - i < 6e4) return;
+        let s = setTimeout(() => {
             delete this.currentlyVisibleMessageTimers[r],
                 this.viewsInCurrentChannel.add(r),
                 this.recentViewTimes.set(r, Date.now()),
                 this.bufferViewTrack(e);
-        }, u);
-        this.currentlyVisibleMessageTimers[r] = a;
+        }, 1e3);
+        this.currentlyVisibleMessageTimers[r] = s;
     }
     handleMessageLostVisibility(e, t) {
         let n = `${e}-${t}`,
@@ -79,16 +48,40 @@ class h extends a.A {
     }
     drainBuffer() {
         for (let e of this.batchBuffer) {
-            let t = p(e);
-            s.default.track(t.event, t.properties);
+            let t = (function (e) {
+                if ("announcement" === e.type)
+                    return {
+                        event: l.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
+                        properties: {
+                            message_id: e.messageId,
+                            channel_id: e.channelId,
+                            guild_id: e.guildId,
+                            source_channel_id: e.sourceChannelId,
+                            source_guild_id: e.sourceGuildId,
+                        },
+                    };
+                if ("app_embed" === e.type)
+                    return {
+                        event: l.HAw.APP_EMBED_VIEWED,
+                        properties: {
+                            application_id: e.applicationId,
+                            link_type: e.linkType,
+                            message_id: e.messageId,
+                            channel_id: e.channelId,
+                            guild_id: e.guildId,
+                        },
+                    };
+                throw Error("Invalid message type for message view tracking");
+            })(e);
+            o.default.track(t.event, t.properties);
         }
         (this.batchBuffer = []),
             null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= c && this.drainBuffer(),
+        this.batchBuffer.length >= 10 && this.drainBuffer(),
             this.batchBuffer.push(e),
-            null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), d));
+            null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let m = new h();
+let c = new d();

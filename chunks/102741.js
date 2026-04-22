@@ -1,32 +1,34 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
+n.d(l, { A: () => h });
+var r,
+    s,
+    t = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(235986),
-    l = n(634105),
-    u = (function (e) {
-        return (e.PRIMARY = "primary"), (e.SECONDARY = "secondary"), (e.WARNING = "warning"), (e.ERROR = "error"), e;
-    })(u || {}),
-    c = (function (e) {
-        return (e.SMALL = "small"), (e.LARGE = "large"), (e.NONE = "none"), e;
-    })(c || {});
-let d = { primary: l.cG, secondary: l.QU, warning: l.SO, error: l._r },
-    _ = { small: l.EX, large: l.as, none: null };
-class f extends i.PureComponent {
+    d = n.n(a),
+    c = n(235986),
+    o = n(536554),
+    u =
+        (((r = u || {}).PRIMARY = "primary"),
+        (r.SECONDARY = "secondary"),
+        (r.WARNING = "warning"),
+        (r.ERROR = "error"),
+        r),
+    p = (((s = p || {}).SMALL = "small"), (s.LARGE = "large"), (s.NONE = "none"), s);
+let m = { primary: o.cG, secondary: o.QU, warning: o.SO, error: o._r },
+    N = { small: o.EX, large: o.as, none: null };
+class A extends i.PureComponent {
     static Colors = u;
-    static Sizes = c;
+    static Sizes = p;
     render() {
-        let { icon: e, color: t, children: n, iconSize: i, className: a, iconClassName: u } = this.props;
-        return (0, r.jsxs)(o.A, {
-            className: s()(l.N4, d[t], a),
-            align: o.A.Align.CENTER,
+        let { icon: e, color: l, children: n, iconSize: r, className: s, iconClassName: i } = this.props;
+        return (0, t.jsxs)(c.A, {
+            className: d()(o.N4, m[l], s),
+            align: c.A.Align.CENTER,
             children: [
-                (0, r.jsx)(e, { className: s()(l.Kk, _[i], u), color: "currentColor" }),
-                (0, r.jsx)("div", { children: n }),
+                (0, t.jsx)(e, { className: d()(o.Kk, N[r], i), color: "currentColor" }),
+                (0, t.jsx)("div", { children: n }),
             ],
         });
     }
 }
-let p = f;
+let h = A;

@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => l });
-var r = n(627968);
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(908289),
-    s = n(960076),
-    o = n(985018);
-function l(e) {
-    let { activity: t, onAction: n, variant: l = "secondary", size: u = "sm", ...c } = e;
-    if (!(0, s.A)(t)) return null;
-    let d = () => {
-        n?.();
-        let e = (0, a.A)(t);
-        return window.open(null != e ? e : void 0);
-    };
-    return (0, r.jsx)(i.Button, {
-        variant: l,
-        size: u,
-        text: o.intl.string(o.t.I6JG46),
-        onClick: d,
-        fullWidth: !0,
-        ...c,
-    });
+var l = n(821609),
+    s = n(908289),
+    r = n(960076),
+    a = n(985018);
+function o(e) {
+    let { activity: t, onAction: n, variant: o = "secondary", size: c = "sm", ...u } = e;
+    return (0, r.A)(t)
+        ? (0, i.jsx)(l.$, {
+              variant: o,
+              size: c,
+              text: a.intl.string(a.t.I6JG46),
+              onClick: () => {
+                  n?.();
+                  let e = (0, s.A)(t);
+                  return window.open(null != e ? e : void 0);
+              },
+              fullWidth: !0,
+              ...u,
+          })
+        : null;
 }

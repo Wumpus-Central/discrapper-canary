@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { i: () => r });
-var r = (function (e) {
-    return (e.SHAREABLE_EVERYWHERE = "shareable_everywhere"), (e.NOT_SHAREABLE = "not_shareable"), e;
-})({});
+n.d(t, { i: () => i });
+var r,
+    i = (((r = {}).SHAREABLE_EVERYWHERE = "shareable_everywhere"), (r.NOT_SHAREABLE = "not_shareable"), r);

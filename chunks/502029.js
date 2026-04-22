@@ -1,27 +1,28 @@
-n.d(t, { default: () => o });
+n.d(t, { default: () => h });
 var i = n(627968);
 n(64700);
-var r = n(397927),
-    d = n(442433),
-    s = n(820284),
-    a = n(250729),
-    c = n(568873),
-    l = n(652215),
-    u = n(985018);
-function o(e) {
-    let { guildId: t, analyticsContext: n, onSelect: o } = e,
-        h = (0, a.A)(t),
-        v = (0, c.A)(t);
-    return (0, i.jsx)(s.A, {
+var r = n(861672),
+    d = n(477782),
+    s = n(442433),
+    a = n(820284),
+    c = n(250729),
+    l = n(568873),
+    u = n(652215),
+    o = n(985018);
+function h(e) {
+    let { guildId: t, analyticsContext: n, onSelect: h } = e,
+        v = (0, c.A)(t),
+        _ = (0, l.A)(t);
+    return (0, i.jsx)(a.A, {
         context: n,
-        object: l.ZSU.CONTEXT_MENU,
-        children: (0, i.jsxs)(r.W1t, {
+        object: u.ZSU.CONTEXT_MENU,
+        children: (0, i.jsxs)(r.W, {
             "data-menu-migrated": !0,
             navId: "user-context",
-            onClose: d.Z_,
-            "aria-label": u.intl.string(u.t.liqwPJ),
-            onSelect: o,
-            children: [(0, i.jsx)(r.rXV, { children: h }), (0, i.jsx)(r.rXV, { children: v })],
+            onClose: s.Z_,
+            "aria-label": o.intl.string(o.t.liqwPJ),
+            onSelect: h,
+            children: [(0, i.jsx)(d.rX, { children: v }), (0, i.jsx)(d.rX, { children: _ })],
         }),
     });
 }

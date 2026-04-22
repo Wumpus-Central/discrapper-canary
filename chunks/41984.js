@@ -1,114 +1,97 @@
 "use strict";
 n.d(t, {
-    AR: () => d,
-    B9: () => l,
-    Ue: () => a,
-    V6: () => i,
-    sf: () => c,
-    su: () => r,
-    x7: () => s,
-    y7: () => o,
-    yp: () => u,
+    AR: () => I,
+    B9: () => m,
+    Ue: () => E,
+    V6: () => f,
+    sf: () => A,
+    su: () => _,
+    x7: () => h,
+    y7: () => p,
+    yp: () => g,
 });
-var r = (function (e) {
-        return (e.TRACK_FOCUS = "track_focus"), (e.UNTRACK_FOCUS = "untrack_focus"), e;
-    })({}),
-    i = (function (e) {
-        return (
-            (e.UNSET = "UNSET"),
-            (e.IN_PROCESS_V2 = "IN_PROCESS_V2"),
-            (e.OUT_OF_PROCESS_V3 = "OUT_OF_PROCESS_V3"),
-            (e.OUT_OF_PROCESS_V3_LIMITED_INTERACTION = "OUT_OF_PROCESS_V3_LIMITED_INTERACTION"),
-            e
-        );
-    })({}),
-    a = (function (e) {
-        return (
-            (e[(e.Disabled = 0)] = "Disabled"),
-            (e[(e.Hook = 1)] = "Hook"),
-            (e[(e.OutOfProcess = 2)] = "OutOfProcess"),
-            (e[(e.OutOfProcessLimitedInteraction = 3)] = "OutOfProcessLimitedInteraction"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (
-            (e.ClickZones = "click_zones"),
-            (e.WidgetAreas = "widget_areas"),
-            (e.WindowContainer = "window_container"),
-            (e.DisabledGPUBoost = "disabled_gpu_boost"),
-            (e.ForceGPUBoost = "force_gpu_boost"),
-            (e.TrackFocusPIDs = "track_focus_pids"),
-            (e.OverlayRafManagerForceEnabled = "overlay_raf_manager_force_enabled"),
-            (e.LegacyOverlayLogging = "legacy_overlay_logging"),
-            e
-        );
-    })({}),
-    o = (function (e) {
-        return (
-            (e.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED = "HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED"),
-            (e.OVERLAY_UNLOCKED = "OVERLAY_UNLOCKED"),
-            (e.OVERLAY_VIDEO_STREAM_RENDERING = "OVERLAY_VIDEO_STREAM_RENDERING"),
-            (e.OVERLAY_RENDERING = "OVERLAY_RENDERING"),
-            (e.DEV_FORCED_GPU_BOOST = "DEV_FORCED_GPU_BOOST"),
-            e
-        );
-    })({}),
-    l = (function (e) {
-        return (
-            (e.INCOMING_DM_MESSAGE = "INCOMING_DM_MESSAGE"),
-            (e.INCOMING_MENTION_MESSAGE = "INCOMING_MENTION_MESSAGE"),
-            (e.FRIENDS_WIDGET_CLICK = "FRIENDS_WIDGET_CLICK"),
-            (e.MANUAL = "MANUAL"),
-            (e.NOTIFICATION_CLICK = "NOTIFICATION_CLICK"),
-            (e.AUTOMATIC_CHANNEL_SELECT = "AUTOMATIC_CHANNEL_SELECT"),
-            e
-        );
-    })({}),
-    u = (function (e) {
-        return (
-            (e.LAUNCHER = "LAUNCHER"),
-            (e.LIBRARY_APPLICATION = "LIBRARY_APPLICATION"),
-            (e.USER_OVERRIDE = "USER_OVERRIDE"),
-            (e.DATABASE = "DATABASE"),
-            (e.DEFAULT = "DEFAULT"),
-            (e.OOP_DEFAULT = "OOP_DEFAULT"),
-            (e.OOP_DEFAULT_DATABASE = "OOP_DEFAULT_DATABASE"),
-            (e.DEV_OVERRIDE = "DEV_OVERRIDE"),
-            (e.LEGACY_ENABLED = "LEGACY_ENABLED"),
-            (e.NO_OUT_OF_PROCESS_SUPPORT = "NO_OUT_OF_PROCESS_SUPPORT"),
-            (e.FULL_SCREEN_TYPE = "FULL_SCREEN_TYPE"),
-            (e.NO_TRACKED_GAME = "NO_TRACKED_GAME"),
-            (e.GLOBAL_OVERLAY_LOCK_FAILED = "GLOBAL_OVERLAY_LOCK_FAILED"),
-            (e.UNKNOWN = "UNKNOWN"),
-            e
-        );
-    })({}),
-    c = (function (e) {
-        return (
-            (e.SCREEN_TYPE_RESOLUTION = "screen_type_resolution"),
-            (e.MODULE_TRACKING = "module_tracking"),
-            (e.OVERLAY_RENDERING = "overlay_rendering"),
-            e
-        );
-    })({}),
-    d = (function (e) {
-        return (
-            (e.INITIALIZING = "initializing"),
-            (e.OVERLAY_DISABLED = "overlay_disabled"),
-            (e.OVERLAY_TEARING_DOWN = "overlay_tearing_down"),
-            (e.WAITING_FOR_SCREEN_TYPE_RESOLUTION = "waiting_for_screen_type_resolution"),
-            (e.WAITING_FOR_MODULE_TRACKING = "waiting_for_module_tracking"),
-            (e.WAITING_FOR_OVERLAY_OPEN = "waiting_for_overlay_open"),
-            (e.WAITING_FOR_POPOUT_OPEN = "waiting_for_popout_open"),
-            (e.WAITING_FOR_MODULE_POPOUT_CAPTURE = "waiting_for_module_popout_capture"),
-            (e.WAITING_FOR_REACT_INITIALIZATION = "waiting_for_react_initialization"),
-            (e.WAITING_FOR_PID_FOCUS = "waiting_for_pid_focus"),
-            (e.WAITING_FOR_SUCCESSFUL_SHOW = "waiting_for_successful_show"),
-            (e.OVERLAY_RENDERING = "overlay_rendering"),
-            (e.OVERLAY_CRASHED = "overlay_crashed"),
-            (e.OVERLAY_CRASHED_DISABLED = "overlay_crashed_disabled"),
-            (e.GAME_UNTRACKED = "game_untracked"),
-            e
-        );
-    })({});
+var r,
+    i,
+    s,
+    a,
+    o,
+    l,
+    u,
+    d,
+    c,
+    _ = (((r = {}).TRACK_FOCUS = "track_focus"), (r.UNTRACK_FOCUS = "untrack_focus"), r),
+    f =
+        (((i = {}).UNSET = "UNSET"),
+        (i.IN_PROCESS_V2 = "IN_PROCESS_V2"),
+        (i.OUT_OF_PROCESS_V3 = "OUT_OF_PROCESS_V3"),
+        (i.OUT_OF_PROCESS_V3_LIMITED_INTERACTION = "OUT_OF_PROCESS_V3_LIMITED_INTERACTION"),
+        i),
+    E =
+        (((s = {})[(s.Disabled = 0)] = "Disabled"),
+        (s[(s.Hook = 1)] = "Hook"),
+        (s[(s.OutOfProcess = 2)] = "OutOfProcess"),
+        (s[(s.OutOfProcessLimitedInteraction = 3)] = "OutOfProcessLimitedInteraction"),
+        s),
+    h =
+        (((a = {}).ClickZones = "click_zones"),
+        (a.WidgetAreas = "widget_areas"),
+        (a.WindowContainer = "window_container"),
+        (a.DisabledGPUBoost = "disabled_gpu_boost"),
+        (a.ForceGPUBoost = "force_gpu_boost"),
+        (a.TrackFocusPIDs = "track_focus_pids"),
+        (a.OverlayRafManagerForceEnabled = "overlay_raf_manager_force_enabled"),
+        (a.LegacyOverlayLogging = "legacy_overlay_logging"),
+        a),
+    p =
+        (((o = {}).HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED = "HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED"),
+        (o.OVERLAY_UNLOCKED = "OVERLAY_UNLOCKED"),
+        (o.OVERLAY_VIDEO_STREAM_RENDERING = "OVERLAY_VIDEO_STREAM_RENDERING"),
+        (o.OVERLAY_RENDERING = "OVERLAY_RENDERING"),
+        (o.DEV_FORCED_GPU_BOOST = "DEV_FORCED_GPU_BOOST"),
+        o),
+    m =
+        (((l = {}).INCOMING_DM_MESSAGE = "INCOMING_DM_MESSAGE"),
+        (l.INCOMING_MENTION_MESSAGE = "INCOMING_MENTION_MESSAGE"),
+        (l.FRIENDS_WIDGET_CLICK = "FRIENDS_WIDGET_CLICK"),
+        (l.MANUAL = "MANUAL"),
+        (l.NOTIFICATION_CLICK = "NOTIFICATION_CLICK"),
+        (l.AUTOMATIC_CHANNEL_SELECT = "AUTOMATIC_CHANNEL_SELECT"),
+        l),
+    g =
+        (((u = {}).LAUNCHER = "LAUNCHER"),
+        (u.LIBRARY_APPLICATION = "LIBRARY_APPLICATION"),
+        (u.USER_OVERRIDE = "USER_OVERRIDE"),
+        (u.DATABASE = "DATABASE"),
+        (u.DEFAULT = "DEFAULT"),
+        (u.OOP_DEFAULT = "OOP_DEFAULT"),
+        (u.OOP_DEFAULT_DATABASE = "OOP_DEFAULT_DATABASE"),
+        (u.DEV_OVERRIDE = "DEV_OVERRIDE"),
+        (u.LEGACY_ENABLED = "LEGACY_ENABLED"),
+        (u.NO_OUT_OF_PROCESS_SUPPORT = "NO_OUT_OF_PROCESS_SUPPORT"),
+        (u.FULL_SCREEN_TYPE = "FULL_SCREEN_TYPE"),
+        (u.NO_TRACKED_GAME = "NO_TRACKED_GAME"),
+        (u.GLOBAL_OVERLAY_LOCK_FAILED = "GLOBAL_OVERLAY_LOCK_FAILED"),
+        (u.UNKNOWN = "UNKNOWN"),
+        u),
+    A =
+        (((d = {}).SCREEN_TYPE_RESOLUTION = "screen_type_resolution"),
+        (d.MODULE_TRACKING = "module_tracking"),
+        (d.OVERLAY_RENDERING = "overlay_rendering"),
+        d),
+    I =
+        (((c = {}).INITIALIZING = "initializing"),
+        (c.OVERLAY_DISABLED = "overlay_disabled"),
+        (c.OVERLAY_TEARING_DOWN = "overlay_tearing_down"),
+        (c.WAITING_FOR_SCREEN_TYPE_RESOLUTION = "waiting_for_screen_type_resolution"),
+        (c.WAITING_FOR_MODULE_TRACKING = "waiting_for_module_tracking"),
+        (c.WAITING_FOR_OVERLAY_OPEN = "waiting_for_overlay_open"),
+        (c.WAITING_FOR_POPOUT_OPEN = "waiting_for_popout_open"),
+        (c.WAITING_FOR_MODULE_POPOUT_CAPTURE = "waiting_for_module_popout_capture"),
+        (c.WAITING_FOR_REACT_INITIALIZATION = "waiting_for_react_initialization"),
+        (c.WAITING_FOR_PID_FOCUS = "waiting_for_pid_focus"),
+        (c.WAITING_FOR_SUCCESSFUL_SHOW = "waiting_for_successful_show"),
+        (c.OVERLAY_RENDERING = "overlay_rendering"),
+        (c.OVERLAY_CRASHED = "overlay_crashed"),
+        (c.OVERLAY_CRASHED_DISABLED = "overlay_crashed_disabled"),
+        (c.GAME_UNTRACKED = "game_untracked"),
+        c);

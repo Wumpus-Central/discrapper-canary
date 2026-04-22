@@ -1,32 +1,34 @@
-n.d(t, { A: () => c }), n(938796);
+n.d(t, { A: () => g }), n(938796);
 var i = n(627968);
 n(64700);
 var l = n(665260),
-    a = n(397927),
-    r = n(843472),
-    s = n(475481),
-    o = n(652215),
-    d = n(985018);
-function c(e, t) {
-    let n = (0, s.Vc)(t.guild_id, t, "MessageContextMenu"),
-        c = (0, l.Lt)(e.flags, o.pr7.IS_GUILD_OFFICIAL);
+    a = n(477782),
+    r = n(563119),
+    s = n(581925),
+    o = n(843472),
+    d = n(521427),
+    c = n(652215),
+    u = n(985018);
+function g(e, t) {
+    let n = (0, d.Vc)(t.guild_id, t, "MessageContextMenu"),
+        g = (0, l.Lt)(e.flags, c.pr7.IS_GUILD_OFFICIAL);
     return n
-        ? c
-            ? (0, i.jsx)(a.Drp, {
+        ? g
+            ? (0, i.jsx)(a.Dr, {
                   id: "guild-official-unset",
                   action: () => {
-                      r.A.patchMessageGuildOfficial(t.id, e.id, !1);
+                      o.A.patchMessageGuildOfficial(t.id, e.id, !1);
                   },
-                  label: d.intl.string(d.t["2km5Gf"]),
-                  leadingAccessory: { type: "icon", icon: a.IdC },
+                  label: u.intl.string(u.t["2km5Gf"]),
+                  leadingAccessory: { type: "icon", icon: r.$ },
               })
-            : (0, i.jsx)(a.Drp, {
+            : (0, i.jsx)(a.Dr, {
                   id: "guild-official-set",
                   action: () => {
-                      r.A.patchMessageGuildOfficial(t.id, e.id, !0);
+                      o.A.patchMessageGuildOfficial(t.id, e.id, !0);
                   },
-                  label: d.intl.string(d.t["lE/PG3"]),
-                  leadingAccessory: { type: "icon", icon: a.oyn },
+                  label: u.intl.string(u.t["lE/PG3"]),
+                  leadingAccessory: { type: "icon", icon: s.L },
               })
         : null;
 }

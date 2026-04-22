@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { R: () => d });
 var i = n(627968),
-    s = n(158954),
-    l = n(890514),
+    l = n(834730),
+    s = n(890514),
     r = n(863598),
     a = n(985018),
-    o = n(932249);
+    o = n(936339);
 function d(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, i.jsxs)("div", {
@@ -24,7 +23,7 @@ function d(e) {
                     }),
                     (0, i.jsx)("div", {
                         className: o._,
-                        children: (0, i.jsx)(l.S, {
+                        children: (0, i.jsx)(s.S, {
                             label: a.intl.string(a.t.brhYaR),
                             canManageGuild: t,
                             afkChannelId: n.afkChannelId,
@@ -33,7 +32,7 @@ function d(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(s.EYj, { variant: "text-sm/medium", color: "text-subtle", children: a.intl.string(a.t.ffEOKP) }),
+            (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "text-subtle", children: a.intl.string(a.t.ffEOKP) }),
         ],
     });
 }

@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { r: () => r });
 var i = n(975571),
-    s = n(652215),
-    l = n(985018);
+    l = n(652215),
+    s = n(985018);
 function r() {
-    return l.intl.format(l.t["+ALa7+"], {
-        fullTermsUrl: i.A.getArticleURL(s.MVz.CREATOR_TERMS),
-        creatorRevenuePolicyUrl: i.A.getArticleURL(s.MVz.CREATOR_POLICY),
+    return s.intl.format(s.t["+ALa7+"], {
+        fullTermsUrl: i.A.getArticleURL(l.MVz.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: i.A.getArticleURL(l.MVz.CREATOR_POLICY),
     });
 }

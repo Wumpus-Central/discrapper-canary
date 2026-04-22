@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(723727),
-    i = n(116657);
-let a = {
-    33434: { name: "ExposureTime", description: i.A.ExposureTime },
-    33437: { name: "FNumber", description: i.A.FNumber },
-    34850: { name: "ExposureProgram", description: i.A.ExposureProgram },
+i.d(t, { A: () => o });
+var n = i(723727),
+    r = i(116657);
+let o = {
+    33434: { name: "ExposureTime", description: r.A.ExposureTime },
+    33437: { name: "FNumber", description: r.A.FNumber },
+    34850: { name: "ExposureProgram", description: r.A.ExposureProgram },
     34852: "SpectralSensitivity",
     34855: "ISOSpeedRatings",
     34856: { name: "OECF", description: () => "[Raw OECF table data]" },
@@ -29,23 +28,23 @@ let a = {
     34867: "ISOSpeed",
     34868: "ISOSpeedLatitudeyyy",
     34869: "ISOSpeedLatitudezzz",
-    36864: { name: "ExifVersion", description: (e) => (0, r.Jn)(e) },
+    36864: { name: "ExifVersion", description: (e) => (0, n.Jn)(e) },
     36867: "DateTimeOriginal",
     36868: "DateTimeDigitized",
     36873: "GooglePlusUploadCode",
     36880: "OffsetTime",
     36881: "OffsetTimeOriginal",
     36882: "OffsetTimeDigitized",
-    37121: { name: "ComponentsConfiguration", description: i.A.ComponentsConfiguration },
+    37121: { name: "ComponentsConfiguration", description: r.A.ComponentsConfiguration },
     37122: "CompressedBitsPerPixel",
-    37377: { name: "ShutterSpeedValue", description: i.A.ShutterSpeedValue },
-    37378: { name: "ApertureValue", description: i.A.ApertureValue },
+    37377: { name: "ShutterSpeedValue", description: r.A.ShutterSpeedValue },
+    37378: { name: "ApertureValue", description: r.A.ApertureValue },
     37379: "BrightnessValue",
     37380: "ExposureBiasValue",
     37381: { name: "MaxApertureValue", description: (e) => Math.pow(Math.sqrt(2), e[0] / e[1]).toFixed(2) },
     37382: { name: "SubjectDistance", description: (e) => e[0] / e[1] + " m" },
-    37383: { name: "MeteringMode", description: i.A.MeteringMode },
-    37384: { name: "LightSource", description: i.A.LightSource },
+    37383: { name: "MeteringMode", description: r.A.MeteringMode },
+    37384: { name: "LightSource", description: r.A.LightSource },
     37385: {
         name: "Flash",
         description: (e) => {
@@ -76,7 +75,7 @@ let a = {
             return "Unknown";
         },
     },
-    37386: { name: "FocalLength", description: i.A.FocalLength },
+    37386: { name: "FocalLength", description: r.A.FocalLength },
     37393: "ImageNumber",
     37394: {
         name: "SecurityClassification",
@@ -96,7 +95,7 @@ let a = {
                     : "Unknown",
     },
     37500: { name: "MakerNote", description: () => "[Raw maker note data]" },
-    37510: { name: "UserComment", description: r.Cn },
+    37510: { name: "UserComment", description: n.Cn },
     37520: "SubSecTime",
     37521: "SubSecTimeOriginal",
     37522: "SubSecTimeDigitized",
@@ -108,7 +107,7 @@ let a = {
     37892: { name: "Acceleration", description: (e) => e[0] / e[1] + " mGal" },
     37893: { name: "CameraElevationAngle", description: (e) => e[0] / e[1] + " \xb0" },
     40960: { name: "FlashpixVersion", description: (e) => e.map((e) => String.fromCharCode(e)).join("") },
-    40961: { name: "ColorSpace", description: i.A.ColorSpace },
+    40961: { name: "ColorSpace", description: r.A.ColorSpace },
     40962: "PixelXDimension",
     40963: "PixelYDimension",
     40964: "RelatedSoundFile",
@@ -117,7 +116,7 @@ let a = {
     41484: { name: "SpatialFrequencyResponse", description: () => "[Raw SFR table data]" },
     41486: "FocalPlaneXResolution",
     41487: "FocalPlaneYResolution",
-    41488: { name: "FocalPlaneResolutionUnit", description: i.A.FocalPlaneResolutionUnit },
+    41488: { name: "FocalPlaneResolutionUnit", description: r.A.FocalPlaneResolutionUnit },
     41492: { name: "SubjectLocation", description: ([e, t]) => `X: ${e}, Y: ${t}` },
     41493: "ExposureIndex",
     41495: {
@@ -136,15 +135,15 @@ let a = {
     41728: { name: "FileSource", description: (e) => (3 === e ? "DSC" : "Unknown") },
     41729: { name: "SceneType", description: (e) => (1 === e ? "A directly photographed image" : "Unknown") },
     41730: { name: "CFAPattern", description: () => "[Raw CFA pattern table data]" },
-    41985: { name: "CustomRendered", description: i.A.CustomRendered },
-    41986: { name: "ExposureMode", description: i.A.ExposureMode },
-    41987: { name: "WhiteBalance", description: i.A.WhiteBalance },
+    41985: { name: "CustomRendered", description: r.A.CustomRendered },
+    41986: { name: "ExposureMode", description: r.A.ExposureMode },
+    41987: { name: "WhiteBalance", description: r.A.WhiteBalance },
     41988: {
         name: "DigitalZoomRatio",
         description: (e) => (0 === e[0] ? "Digital zoom was not used" : "" + e[0] / e[1]),
     },
-    41989: { name: "FocalLengthIn35mmFilm", description: i.A.FocalLengthIn35mmFilm },
-    41990: { name: "SceneCaptureType", description: i.A.SceneCaptureType },
+    41989: { name: "FocalLengthIn35mmFilm", description: r.A.FocalLengthIn35mmFilm },
+    41990: { name: "SceneCaptureType", description: r.A.SceneCaptureType },
     41991: {
         name: "GainControl",
         description: (e) => {
@@ -156,9 +155,9 @@ let a = {
             return "Unknown";
         },
     },
-    41992: { name: "Contrast", description: i.A.Contrast },
-    41993: { name: "Saturation", description: i.A.Saturation },
-    41994: { name: "Sharpness", description: i.A.Sharpness },
+    41992: { name: "Contrast", description: r.A.Contrast },
+    41993: { name: "Saturation", description: r.A.Saturation },
+    41994: { name: "Sharpness", description: r.A.Sharpness },
     41995: { name: "DeviceSettingDescription", description: () => "[Raw device settings table data]" },
     41996: {
         name: "SubjectDistanceRange",
@@ -171,11 +170,11 @@ let a = {
         name: "LensSpecification",
         description: (e) => {
             let t = parseFloat((e[0][0] / e[0][1]).toFixed(5)),
-                n = parseFloat((e[1][0] / e[1][1]).toFixed(5)),
-                r = `${t}-${n} mm`;
-            if (0 === e[3][1]) return `${r} f/?`;
-            let i = 1 / (e[2][1] / e[2][1] / (e[3][0] / e[3][1]));
-            return `${r} f/${parseFloat(i.toFixed(5))}`;
+                i = parseFloat((e[1][0] / e[1][1]).toFixed(5)),
+                n = `${t}-${i} mm`;
+            if (0 === e[3][1]) return `${n} f/?`;
+            let r = 1 / (e[2][1] / e[2][1] / (e[3][0] / e[3][1]));
+            return `${n} f/${parseFloat(r.toFixed(5))}`;
         },
     },
     42035: "LensMake",

@@ -1,162 +1,167 @@
-n.d(t, { A: () => v }), n(321073);
+n.d(t, { A: () => C }), n(321073);
 var a = n(627968),
-    i = n(64700),
-    l = n(540185),
+    l = n(64700),
+    i = n(540185),
     r = n(311907),
-    s = n(397927),
-    o = n(395332),
-    c = n(672385),
-    d = n(633075),
-    u = n(289173),
-    m = n(622543),
+    s = n(926268),
+    o = n(53788),
+    d = n(831453),
+    c = n(785866),
+    u = n(477782),
+    m = n(555704),
+    _ = n(395332),
+    h = n(672385),
+    f = n(633075),
+    g = n(289173),
+    p = n(622543),
     x = n(958805),
-    g = n(735321),
-    h = n(961350),
-    f = n(760751),
-    p = n(985018);
-async function _(e) {
-    let t = e((0, g.BF)());
+    b = n(735321),
+    A = n(961350),
+    v = n(760751),
+    E = n(985018);
+async function I(e) {
+    let t = e((0, b.BF)());
     await x.A.savePendingWidgets(t.filter((e) => !e.isDiscardable()));
 }
-function v(e) {
+function C(e) {
     let t = e?.id,
         n = e?.name ?? "",
-        x = (0, r.bG)([h.default], () => h.default.getId()),
-        v = (0, r.bG)([f.A], () => f.A.getDetectableGame(t)),
-        A = i.useMemo(
+        x = (0, r.bG)([A.default], () => A.default.getId()),
+        C = (0, r.bG)([v.A], () => v.A.getDetectableGame(t)),
+        N = l.useMemo(
             () => [
                 {
-                    type: l.x.FAVORITE_GAMES,
-                    addLabel: p.intl.string(p.t.fgmitg),
-                    removeLabel: p.intl.string(p.t.TSGNQY),
+                    type: i.x.FAVORITE_GAMES,
+                    addLabel: E.intl.string(E.t.fgmitg),
+                    removeLabel: E.intl.string(E.t.TSGNQY),
                     menuId: "game-profile-add-favorite-game",
-                    icon: s.C3E,
+                    icon: s.C,
                 },
                 {
-                    type: l.x.PLAYED_GAMES,
-                    addLabel: p.intl.string(p.t["0xIVLR"]),
-                    removeLabel: p.intl.string(p.t.iN9ShA),
+                    type: i.x.PLAYED_GAMES,
+                    addLabel: E.intl.string(E.t["0xIVLR"]),
+                    removeLabel: E.intl.string(E.t.iN9ShA),
                     menuId: "game-profile-add-games-i-like",
-                    icon: s.Gek,
+                    icon: o.G,
                 },
                 {
-                    type: l.x.CURRENT_GAMES,
-                    addLabel: p.intl.string(p.t.G0c4En),
-                    removeLabel: p.intl.string(p.t.h00srf),
+                    type: i.x.CURRENT_GAMES,
+                    addLabel: E.intl.string(E.t.G0c4En),
+                    removeLabel: E.intl.string(E.t.h00srf),
                     menuId: "game-profile-add-games-in-rotation",
-                    icon: s.H_z,
+                    icon: d.H,
                 },
                 {
-                    type: l.x.WANT_TO_PLAY_GAMES,
-                    addLabel: p.intl.string(p.t.UuBS4K),
-                    removeLabel: p.intl.string(p.t.MB8XLq),
+                    type: i.x.WANT_TO_PLAY_GAMES,
+                    addLabel: E.intl.string(E.t.UuBS4K),
+                    removeLabel: E.intl.string(E.t.MB8XLq),
                     menuId: "game-profile-add-want-to-play",
-                    icon: s._b6,
+                    icon: c._,
                 },
             ],
             [],
         ),
-        j = (0, r.yK)([m.A], () => (null == x ? [] : (m.A.getUserProfile(x)?.widgets ?? [])), [x]),
-        E = (0, o.w$)({ location: "game-profile-overflow-menu" }),
-        b = i.useMemo(() => {
-            if (null == E || 0 === E.length) return null;
+        j = (0, r.yK)([p.A], () => (null == x ? [] : (p.A.getUserProfile(x)?.widgets ?? [])), [x]),
+        y = (0, _.w$)({ location: "game-profile-overflow-menu" }),
+        S = l.useMemo(() => {
+            if (null == y || 0 === y.length) return null;
             if (null != e) {
-                if (E.some((t) => t.applicationId === e.id)) return e.id;
-                for (let t of e.linkedApplications ?? []) if (E.some((e) => e.applicationId === t.id)) return t.id;
+                if (y.some((t) => t.applicationId === e.id)) return e.id;
+                for (let t of e.linkedApplications ?? []) if (y.some((e) => e.applicationId === t.id)) return t.id;
             }
             return null;
-        }, [E, e]),
-        C = i.useCallback(
+        }, [y, e]),
+        R = l.useCallback(
             async (e, n) => {
                 let a = null;
                 if (
-                    (await _((i) => {
-                        let l = i.filter(u.fu).find((t) => t.type === e) ?? null;
+                    (await I((l) => {
+                        let i = l.filter(g.fu).find((t) => t.type === e) ?? null;
                         if (n) {
-                            if (l?.games.some((e) => e.applicationId === t) || (null != l && (0, g.uA)(l))) return i;
+                            if (i?.games.some((e) => e.applicationId === t) || (null != i && (0, b.uA)(i))) return l;
                             let n = { applicationId: t },
-                                r = null != l ? [n, ...(l.games ?? [])] : [n];
-                            a = new u.Yy({ ...(l ?? { type: e }), games: r });
+                                r = null != i ? [n, ...(i.games ?? [])] : [n];
+                            a = new g.Yy({ ...(i ?? { type: e }), games: r });
                         } else {
-                            if (null == l) return i;
-                            let e = l.games.filter((e) => e.applicationId !== t);
-                            a = new u.Yy({ ...l, games: e });
+                            if (null == i) return l;
+                            let e = i.games.filter((e) => e.applicationId !== t);
+                            a = new g.Yy({ ...i, games: e });
                         }
                         var r = a;
-                        let s = i.findIndex((e) => e.getUniqueKey() === r.getUniqueKey());
-                        if (-1 === s) return [r, ...i];
-                        let o = [...i];
+                        let s = l.findIndex((e) => e.getUniqueKey() === r.getUniqueKey());
+                        if (-1 === s) return [r, ...l];
+                        let o = [...l];
                         return (o[s] = r), o;
                     }),
                     null == a)
                 )
                     return;
-                let i = a;
-                (0, c.un)({ action: n ? "GAME_ADDED" : "GAME_REMOVED", ...i.getProfileEditAnalyticsOptions() });
+                let l = a;
+                (0, h.un)({ action: n ? "GAME_ADDED" : "GAME_REMOVED", ...l.getProfileEditAnalyticsOptions() });
             },
             [t],
         ),
-        I = i.useCallback(
+        T = l.useCallback(
             async (e) => {
-                if (null == b) return;
+                if (null == S) return;
                 let t = null;
                 if (
-                    (await _((n) =>
+                    (await I((n) =>
                         e
-                            ? n.some((e) => e instanceof d.R && e.applicationId === b)
+                            ? n.some((e) => e instanceof f.R && e.applicationId === S)
                                 ? n
-                                : [(t = new d.R({ applicationId: b })), ...n]
-                            : ((t = n.find((e) => e instanceof d.R && e.applicationId === b) ?? null),
-                              n.filter((e) => !(e instanceof d.R && e.applicationId === b))),
+                                : [(t = new f.R({ applicationId: S })), ...n]
+                            : ((t = n.find((e) => e instanceof f.R && e.applicationId === S) ?? null),
+                              n.filter((e) => !(e instanceof f.R && e.applicationId === S))),
                     ),
                     null == t)
                 )
                     return;
                 let n = t;
-                (0, c.un)({ action: e ? "WIDGET_ADDED" : "WIDGET_REMOVED", ...n.getProfileEditAnalyticsOptions() });
+                (0, h.un)({ action: e ? "WIDGET_ADDED" : "WIDGET_REMOVED", ...n.getProfileEditAnalyticsOptions() });
             },
-            [b],
+            [S],
         );
     if (null == x) return null;
-    let N = null != e && null != v && (0, g.XX)(v),
-        S = [];
-    if (null != b) {
-        let e = j.some((e) => e instanceof d.R && e.applicationId === b);
-        S.push(
+    let L = null != e && null != C && (0, b.XX)(C),
+        k = [];
+    if (null != S) {
+        let e = j.some((e) => e instanceof f.R && e.applicationId === S);
+        k.push(
             (0, a.jsx)(
-                s.Drp,
+                u.Dr,
                 {
                     id: "game-profile-app-widget",
                     label: e
-                        ? p.intl.formatToPlainString(p.t.Ktb1n8, { name: n })
-                        : p.intl.formatToPlainString(p.t.Xp6iZt, { name: n }),
-                    action: () => I(!e),
-                    leadingAccessory: { type: "icon", icon: s.Uy2 },
+                        ? E.intl.formatToPlainString(E.t.Ktb1n8, { name: n })
+                        : E.intl.formatToPlainString(E.t.Xp6iZt, { name: n }),
+                    action: () => T(!e),
+                    leadingAccessory: { type: "icon", icon: m.U },
                 },
                 e ? "remove-app-widget" : "add-app-widget",
             ),
         );
     }
-    if (N)
-        for (let e of A) {
-            let n = j.filter(u.fu).find((t) => t.type === e.type) ?? null,
-                i = null != n && n.games.some((e) => e.applicationId === t),
-                l = !i && null != n && (0, g.uA)(n);
-            S.push(
+    if (L)
+        for (let e of N) {
+            let n = j.filter(g.fu).find((t) => t.type === e.type) ?? null,
+                l = null != n && n.games.some((e) => e.applicationId === t),
+                i = !l && null != n && (0, b.uA)(n);
+            k.push(
                 (0, a.jsx)(
-                    s.Drp,
+                    u.Dr,
                     {
                         id: e.menuId,
-                        label: i ? e.removeLabel : e.addLabel,
-                        subtext: l ? p.intl.string(p.t["86OoiH"]) : void 0,
+                        label: l ? e.removeLabel : e.addLabel,
+                        subtext: i ? E.intl.string(E.t["86OoiH"]) : void 0,
                         subtextLineClamp: 1,
-                        action: () => C(e.type, !i),
+                        action: () => R(e.type, !l),
                         leadingAccessory: { type: "icon", icon: e.icon },
-                        disabled: l,
+                        disabled: i,
                     },
                     e.type,
                 ),
             );
         }
-    return 0 === S.length ? null : S;
+    return 0 === k.length ? null : k;
 }

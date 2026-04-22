@@ -1,32 +1,33 @@
-s.d(e, { default: () => A });
+s.d(e, { default: () => x });
 var n = s(627968),
     a = s(64700),
-    i = s(311907),
-    r = s(397927),
-    o = s(989837),
-    p = s(500049),
-    c = s(7691),
-    l = s(699803),
-    d = s(60809),
-    h = s(985018),
-    u = s(60227);
-let A = a.memo(function (t) {
+    o = s(311907),
+    i = s(192308),
+    l = s(935462),
+    r = s(989837),
+    c = s(500049),
+    p = s(7691),
+    d = s(699803),
+    h = s(60809),
+    u = s(985018),
+    A = s(60227);
+let x = a.memo(function (t) {
     let { context: e, ...s } = t,
-        A = (0, i.bG)([o.A], () => o.A.shouldShowModal());
+        x = (0, o.bG)([r.A], () => r.A.shouldShowModal());
     a.useEffect(() => {
-        A || (0, r.CT7)(d.gS);
+        x || (0, i.closeModalInAllContexts)(h.gS);
     });
-    let C = (0, l.A)();
+    let C = (0, d.A)();
     return (0, n.jsx)("span", {
-        style: d.sK,
-        children: (0, n.jsx)(r.EOs, {
-            className: u.z,
-            "aria-label": h.intl.string(h.t.shUONg),
-            size: r.rIJ.DYNAMIC,
+        style: h.sK,
+        children: (0, n.jsx)(l.EO, {
+            className: A.z,
+            "aria-label": u.intl.string(u.t.shUONg),
+            size: l.rI.DYNAMIC,
             ...s,
             parentComponent: "AppLauncherModal",
             "data-migration-pending": !0,
-            children: (0, n.jsx)(c.A, { context: e, entrypoint: p.s4.VOICE, initHistory: C }),
+            children: (0, n.jsx)(p.A, { context: e, entrypoint: c.s4.VOICE, initHistory: C }),
         }),
     });
 });

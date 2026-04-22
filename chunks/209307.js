@@ -1,10 +1,7 @@
-"use strict";
-n.d(t, { r: () => o });
-var r = n(181370),
-    i = n.n(r);
-let s = 0x7fffffff,
-    a = 0.01;
-function o(e) {
-    let t = i().v3(String(e));
-    return t < 0 && (t += 0x100000000), t % s < a * s;
+i.d(e, { r: () => l });
+var n = i(181370),
+    a = i.n(n);
+function l(t) {
+    let e = a().v3(String(t));
+    return e < 0 && (e += 0x100000000), e % 0x7fffffff < 21474836.47;
 }

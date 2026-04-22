@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qq: "seasonalGiftBoxHeaderIcon_ae16b8",
     kL: "container_ae16b8",

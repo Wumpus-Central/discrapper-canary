@@ -1,51 +1,54 @@
-n.d(t, { A: () => _ });
-var l = n(627968),
-    a = n(64700),
+"use strict";
+n.d(t, { A: () => p });
+var a = n(627968),
+    i = n(64700),
     r = n(503698),
-    i = n.n(r),
-    s = n(397927),
-    d = n(46054),
-    o = n(957565),
-    c = n(985018),
-    u = n(996004);
-function _(e) {
+    l = n.n(r),
+    s = n(534514),
+    d = n(834730),
+    o = n(821609),
+    c = n(46054),
+    u = n(957565),
+    _ = n(985018),
+    m = n(415924);
+function p(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: r, is_localized: _ },
+                data: { title: t, body: n, sms: r, is_localized: p },
             },
         } = e,
-        [m, x] = a.useState(!1),
-        p = a.useRef(d.A.reactParserFor(d.A.defaultRules));
-    return _
-        ? (0, l.jsxs)("div", {
-              className: u.kL,
+        [h, g] = i.useState(!1),
+        f = i.useRef(c.A.reactParserFor(c.A.defaultRules));
+    return p
+        ? (0, a.jsxs)("div", {
+              className: m.kL,
               children: [
-                  (0, l.jsx)(s.Heading, {
+                  (0, a.jsx)(s.D, {
                       variant: "heading-sm/semibold",
                       color: "text-default",
-                      className: u.wx,
+                      className: m.wx,
                       children: t,
                   }),
-                  (0, l.jsx)(s.Text, { variant: "text-sm/normal", className: u.G3, children: p.current(n) }),
-                  (0, l.jsx)("div", {
-                      children: (0, l.jsxs)("div", {
-                          className: i()(u.GH, { [u.pG]: m }),
+                  (0, a.jsx)(d.E, { variant: "text-sm/normal", className: m.G3, children: f.current(n) }),
+                  (0, a.jsx)("div", {
+                      children: (0, a.jsxs)("div", {
+                          className: l()(m.GH, { [m.pG]: h }),
                           children: [
-                              (0, l.jsx)(s.Text, {
+                              (0, a.jsx)(d.E, {
                                   variant: "text-md/normal",
                                   selectable: !0,
-                                  className: u.Kk,
+                                  className: m.Kk,
                                   children: r,
                               }),
-                              (0, l.jsx)("div", {
+                              (0, a.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: u.__invalid_trailingButton,
-                                  children: (0, l.jsx)(s.Button, {
+                                  className: m.__invalid_trailingButton,
+                                  children: (0, a.jsx)(o.$, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: m ? c.intl.string(c.t.t5VZ88) : c.intl.string(c.t.OpuAlK),
+                                      text: h ? _.intl.string(_.t.t5VZ88) : _.intl.string(_.t.OpuAlK),
                                       onClick: () => {
-                                          (0, o.C)(r, () => x(!0));
+                                          (0, u.C)(r, () => g(!0));
                                       },
                                   }),
                               }),

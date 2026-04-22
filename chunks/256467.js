@@ -1,114 +1,117 @@
-i.r(e), i.d(e, { default: () => B });
+i.r(e), i.d(e, { default: () => O });
 var s = i(627968),
     r = i(64700),
     n = i(503698),
     l = i.n(n),
-    d = i(110259),
-    a = i(311907),
+    a = i(110259),
+    d = i(311907),
     o = i(827734),
-    c = i(397927),
-    C = i(139286),
-    u = i(465932),
-    x = i(142120),
-    h = i(495066),
-    _ = i(298780),
-    p = i(742589),
-    j = i(71393),
-    g = i(722888),
-    m = i(683271),
-    f = i(558060),
-    v = i(381969),
-    L = i(920814),
-    I = i(638964),
-    A = i(422373),
-    w = i(812136),
-    N = i(398828),
-    T = i(46623),
-    R = i(43136),
-    S = i(575926),
-    b = i(284683),
-    V = i(746080),
-    k = i(412728),
-    D = i(985018),
-    U = i(122090),
-    P = i(358943);
-function E(t) {
+    c = i(289873),
+    C = i(696986),
+    u = i(565787),
+    x = i(573613),
+    h = i(139286),
+    _ = i(465932),
+    p = i(142120),
+    j = i(495066),
+    g = i(854018),
+    m = i(742589),
+    f = i(71393),
+    v = i(722888),
+    L = i(683271),
+    I = i(558060),
+    A = i(381969),
+    w = i(920814),
+    N = i(638964),
+    R = i(422373),
+    S = i(812136),
+    V = i(398828),
+    b = i(46623),
+    T = i(43136),
+    E = i(575926),
+    k = i(284683),
+    D = i(746080),
+    U = i(412728),
+    P = i(985018),
+    M = i(660858),
+    G = i(964623);
+function H(t) {
     let { guildId: e, productId: i } = t,
-        { loaded: r, subscriptionsSettings: n } = (0, g.G)(e),
-        l = (0, a.bG)([j.A], () => j.A.getGuild(e)),
-        { selectedTab: d, isPhantomPreview: o, categoryTabs: C } = (0, v.k)(),
-        u = !r || null == n;
-    return null == l || (!o && u)
-        ? (0, s.jsx)(c.y$y, {})
-        : (0, s.jsx)(f.default, {
-              defaultSortOption: n?.store_page_guild_products_default_sort ?? b.p$.NAME,
+        { loaded: r, subscriptionsSettings: n } = (0, v.G)(e),
+        l = (0, d.bG)([f.A], () => f.A.getGuild(e)),
+        { selectedTab: a, isPhantomPreview: o, categoryTabs: u } = (0, A.k)(),
+        x = !r || null == n;
+    return null == l || (!o && x)
+        ? (0, s.jsx)(c.y, {})
+        : (0, s.jsx)(I.default, {
+              defaultSortOption: n?.store_page_guild_products_default_sort ?? k.p$.NAME,
               children: (0, s.jsxs)("div", {
-                  className: U.hQ,
+                  className: M.hQ,
                   children: [
-                      (0, s.jsx)(R.A, { guild: l, subscriptionsSettings: n }),
-                      (0, s.jsx)(c.hKd, { size: 32 }),
-                      C.length > 0 && (0, s.jsx)(w.F, { guild: l }),
+                      (0, s.jsx)(T.A, { guild: l, subscriptionsSettings: n }),
+                      (0, s.jsx)(C.h, { size: 32 }),
+                      u.length > 0 && (0, s.jsx)(S.F, { guild: l }),
                       (0, s.jsxs)("div", {
-                          className: U.v_,
+                          className: M.v_,
                           children: [
-                              (0, s.jsx)(c.hKd, { size: 32 }),
-                              o && (0, s.jsx)(N.A, { guildId: e }),
-                              d === L.B.GUILD_PRODUCTS && (0, s.jsx)(I.h, { guildId: e, productId: i }),
-                              d === L.B.GUILD_ROLE_SUBSCRIPTIONS && (0, s.jsx)(A.A, { guildId: e }),
+                              (0, s.jsx)(C.h, { size: 32 }),
+                              o && (0, s.jsx)(V.A, { guildId: e }),
+                              a === w.B.GUILD_PRODUCTS && (0, s.jsx)(N.h, { guildId: e, productId: i }),
+                              a === w.B.GUILD_ROLE_SUBSCRIPTIONS && (0, s.jsx)(R.A, { guildId: e }),
                           ],
                       }),
                   ],
               }),
           });
 }
-function H(t) {
+function B(t) {
     let { guildId: e, productId: i } = t,
-        n = (0, a.bG)([x.A], () => x.A.isConnected()),
-        g = (0, a.bG)([j.A], () => j.A.getGuild(e)),
-        { shouldHideGuildPurchaseEntryPoints: f, restrictionsLoading: L } = (0, u.MH)(e),
-        { selectedTab: I, isPhantomPreview: A, categoryTabs: w } = (0, v.k)(),
-        N = n && (null == g || (0 === w.length && !A) || (f && !L));
+        n = (0, d.bG)([p.A], () => p.A.isConnected()),
+        C = (0, d.bG)([f.A], () => f.A.getGuild(e)),
+        { shouldHideGuildPurchaseEntryPoints: v, restrictionsLoading: I } = (0, _.MH)(e),
+        { selectedTab: w, isPhantomPreview: N, categoryTabs: R } = (0, A.k)(),
+        S = n && (null == C || (0 === R.length && !N) || (v && !I));
     return (
         r.useEffect(() => {
-            N && (0, m.B)(e, V.VV.GUILD_SHOP);
-        }, [e, N]),
-        (0, C.A)(
-            { type: k.z.PAGE, name: d.ImpressionNames.GUILD_SHOP_PAGE, properties: { product_id: i, tab: I } },
-            { disableTrack: N },
+            S && (0, L.B)(e, D.VV.GUILD_SHOP);
+        }, [e, S]),
+        (0, h.A)(
+            { type: U.z.PAGE, name: a.ImpressionNames.GUILD_SHOP_PAGE, properties: { product_id: i, tab: w } },
+            { disableTrack: S },
         ),
         (0, s.jsxs)("div", {
             "data-has-border": !0,
-            className: l()(P.TE, U.kL),
+            className: l()(G.TE, M.kL),
             children: [
-                (0, s.jsxs)(p.A, {
+                (0, s.jsxs)(m.A, {
                     children: [
-                        (0, s.jsx)(p.A.Icon, {
-                            icon: (0, c.kHD)(S.h),
+                        (0, s.jsx)(m.A.Icon, {
+                            icon: (0, u.k)(E.h),
                             "aria-hidden": !0,
                             color: o.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
-                        (0, s.jsx)(p.A.Title, { children: D.intl.string(D.t.al5EXL) }),
-                        (0, s.jsx)(T.A, {}),
+                        (0, s.jsx)(m.A.Title, { children: P.intl.string(P.t.al5EXL) }),
+                        (0, s.jsx)(b.A, {}),
                     ],
                 }),
-                (0, s.jsx)(c.d_W, {
-                    className: U.Qs,
-                    children: n ? (0, s.jsx)(E, { guildId: e, productId: i }) : (0, s.jsx)(c.y$y, {}),
+                (0, s.jsx)(x.d_, {
+                    className: M.Qs,
+                    children: n ? (0, s.jsx)(H, { guildId: e, productId: i }) : (0, s.jsx)(c.y, {}),
                 }),
-                (0, s.jsx)(_.A, { className: U.Dv }),
-                (0, s.jsx)(h.A, { className: U.xC }),
+                (0, s.jsx)(g.A, { className: M.Dv }),
+                (0, s.jsx)(j.A, { className: M.xC }),
             ],
         })
     );
 }
-function B(t) {
+function O(t) {
     let { guildId: e, productId: i, initialTab: r } = t;
     return (
-        null == r && null != i && (r = L.B.GUILD_PRODUCTS),
-        (0, s.jsx)(v.A, {
+        null == r && null != i && (r = w.B.GUILD_PRODUCTS),
+        (0, s.jsx)(A.A, {
             initialTab: r,
             guildId: e,
-            children: (0, s.jsx)(H, { initialTab: r, productId: i, guildId: e }),
+            children: (0, s.jsx)(B, { initialTab: r, productId: i, guildId: e }),
         })
     );
 }

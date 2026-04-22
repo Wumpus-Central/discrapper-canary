@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    Dv: () => S,
-    Rd: () => g,
+    Dv: () => m,
+    Rd: () => h,
     S: () => E,
     Yn: () => u,
-    _g: () => p,
-    oc: () => N,
-    rO: () => f,
+    _g: () => _,
+    oc: () => g,
+    rO: () => c,
     s2: () => l,
-    tp: () => _,
+    tp: () => d,
 }),
     n(801541);
 var r = n(889137),
@@ -30,22 +30,7 @@ function u(e) {
         .with({ config_version: 2 }, (e) => (0, o.k)(e))
         .exhaustive();
 }
-function c(e) {
-    return null == e ? null : { lastBeatAt: e.last_beat_at, expiresAt: e.expires_at };
-}
 function d(e) {
-    let t = {};
-    for (let [n, r] of Object.entries(e))
-        t[n] = {
-            eventName: r.event_name,
-            value: r.value,
-            updatedAt: r.updated_at,
-            completedAt: r.completed_at,
-            heartbeat: c(r.heartbeat),
-        };
-    return t;
-}
-function _(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -57,24 +42,38 @@ function _(e) {
         lastStreamHeartbeatAt: e.last_stream_heartbeat_at,
         streamProgressSeconds: e.stream_progress_seconds,
         dismissedQuestContent: e.dismissed_quest_content,
-        progress: d(e.progress),
+        progress: (function (e) {
+            let t = {};
+            for (let [r, i] of Object.entries(e)) {
+                var n;
+                t[r] = {
+                    eventName: i.event_name,
+                    value: i.value,
+                    updatedAt: i.updated_at,
+                    completedAt: i.completed_at,
+                    heartbeat:
+                        null == (n = i.heartbeat) ? null : { lastBeatAt: n.last_beat_at, expiresAt: n.expires_at },
+                };
+            }
+            return t;
+        })(e.progress),
     };
 }
-function f(e) {
+function c(e) {
     return {
         id: e.id,
         preview: e.preview,
         config: u(e.config),
-        userStatus: null == e.user_status ? null : _(e.user_status),
+        userStatus: null == e.user_status ? null : d(e.user_status),
         targetedContent: e.targeted_content,
         trafficMetadataRaw: e.traffic_metadata_raw,
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
-function p(e) {
+function _(e) {
     return { id: e.id, replacementId: e.replacement_id };
 }
-function h(e) {
+function f(e) {
     return e.type === i.l.VIRTUAL_CURRENCY
         ? {
               skuId: e.sku_id,
@@ -94,38 +93,40 @@ function h(e) {
               collectibleProduct: e.collectible_product,
           };
 }
-function m(e) {
+function E(e) {
+    var t;
     return {
         id: e.id,
-        startsAt: e.starts_at,
-        expiresAt: e.expires_at,
-        features: e.features,
-        messages: {
-            questName: e.messages.quest_name,
-            gamePublisher: e.messages.game_publisher,
-            gameTitle: e.messages.game_title,
+        config: {
+            id: (t = e.config).id,
+            startsAt: t.starts_at,
+            expiresAt: t.expires_at,
+            features: t.features,
+            messages: {
+                questName: t.messages.quest_name,
+                gamePublisher: t.messages.game_publisher,
+                gameTitle: t.messages.game_title,
+            },
+            assets: {
+                hero: t.assets.hero,
+                heroVideo: t.assets.hero_video,
+                questBarHero: t.assets.quest_bar_hero,
+                questBarHeroVideo: t.assets.quest_bar_hero_video,
+                gameTile: t.assets.game_tile,
+                logotype: t.assets.logotype,
+                logotypeLight: t.assets.logotype_light,
+                logotypeDark: t.assets.logotype_dark,
+                gameTileLight: t.assets.game_tile_light,
+                gameTileDark: t.assets.game_tile_dark,
+            },
+            colors: { primary: t.colors.primary, secondary: t.colors.secondary },
+            rewards: t.rewards.map(f),
+            cosponsorMetadata: (0, o.j)(t.cosponsor_metadata),
         },
-        assets: {
-            hero: e.assets.hero,
-            heroVideo: e.assets.hero_video,
-            questBarHero: e.assets.quest_bar_hero,
-            questBarHeroVideo: e.assets.quest_bar_hero_video,
-            gameTile: e.assets.game_tile,
-            logotype: e.assets.logotype,
-            logotypeLight: e.assets.logotype_light,
-            logotypeDark: e.assets.logotype_dark,
-            gameTileLight: e.assets.game_tile_light,
-            gameTileDark: e.assets.game_tile_dark,
-        },
-        colors: { primary: e.colors.primary, secondary: e.colors.secondary },
-        rewards: e.rewards.map(h),
-        cosponsorMetadata: (0, o.j)(e.cosponsor_metadata),
+        userStatus: null == e.user_status ? null : d(e.user_status),
     };
 }
-function E(e) {
-    return { id: e.id, config: m(e.config), userStatus: null == e.user_status ? null : _(e.user_status) };
-}
-function g(e) {
+function h(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -135,58 +136,61 @@ function g(e) {
         tier: e.tier ?? null,
     };
 }
-function A(e) {
-    if (e?.quest_rewards == null) return null;
-    let t = e.quest_rewards;
-    switch (t.reward.tag) {
-        case i.l.IN_GAME:
-            return { questRewards: { reward: { tag: t.reward.tag } } };
-        case i.l.REWARD_CODE:
-            return { questRewards: { reward: { tag: t.reward.tag, rewardCode: g(t.reward.reward_code) } } };
-    }
-}
-function I(e) {
-    return { eventName: e.event_name, title: e.title, description: e.description, target: e.target };
-}
-function T(e) {
-    return { skuId: e.sku_id, tenantMetadata: A(e.tenant_metadata), consumed: e.consumed };
-}
-function S(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(T), errors: e.errors };
-}
-function y(e) {
+function p(e) {
     return {
-        linearGradient:
-            null != e.linear_gradient_start && null != e.linear_gradient_end
-                ? { start: e.linear_gradient_start, end: e.linear_gradient_end }
-                : void 0,
-        radialGradient:
-            null != e.radial_gradient_start && null != e.radial_gradient_end
-                ? { start: e.radial_gradient_start, end: e.radial_gradient_end }
-                : void 0,
-        image: null != e.entrypoint_asset_image_url ? (0, a.dv)(e.entrypoint_asset_image_url) : void 0,
-        tooltipImage: null != e.tooltip_asset_image_url ? (0, a.dv)(e.tooltip_asset_image_url) : void 0,
-        tooltipTitle: e.tooltip_title,
-        tooltipSubtitle: e.tooltip_subtitle,
+        skuId: e.sku_id,
+        tenantMetadata: (function (e) {
+            if (e?.quest_rewards == null) return null;
+            let t = e.quest_rewards;
+            switch (t.reward.tag) {
+                case i.l.IN_GAME:
+                    return { questRewards: { reward: { tag: t.reward.tag } } };
+                case i.l.REWARD_CODE:
+                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: h(t.reward.reward_code) } } };
+            }
+        })(e.tenant_metadata),
+        consumed: e.consumed,
     };
 }
-function v(e) {
-    return {
-        id: e.campaign_id,
-        labelTitle: e.label_title,
-        labelSubtitle: e.label_subtitle,
-        heroImage: (0, a.dv)(e.asset_hero_image.url),
-        heroVideo: null != e.asset_hero_video ? (0, a.dv)(e.asset_hero_video.url) : void 0,
-        sponsorImage: (0, a.dv)(e.asset_sponsor_image.url),
-        cta: { url: e.cta_sponsor_url.url, buttonLabel: e.cta_sponsor_url.title },
-        questIds: e.shelf?.quest_ids ?? e.cta_quests.map((e) => e.quest_id),
-        questHomeEntrypoint: null != e.quest_home_entrypoint ? y(e.quest_home_entrypoint) : void 0,
-        shelfImage: e.shelf?.intro_asset_image != null ? (0, a.dv)(e.shelf.intro_asset_image.url) : void 0,
-        shelfVideo: e.shelf?.intro_asset_video != null ? (0, a.dv)(e.shelf.intro_asset_video.url) : void 0,
-    };
+function m(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(p), errors: e.errors };
 }
-function N(e) {
+function g(e) {
+    var t;
     if (1 !== e.version || !(s.gh.QUEST_HOME_BANNER in e.placements)) return null;
-    let t = e.placements[s.gh.QUEST_HOME_BANNER];
-    return null == t ? null : v(t);
+    let n = e.placements[s.gh.QUEST_HOME_BANNER];
+    return null == n
+        ? null
+        : {
+              id: n.campaign_id,
+              labelTitle: n.label_title,
+              labelSubtitle: n.label_subtitle,
+              heroImage: (0, a.dv)(n.asset_hero_image.url),
+              heroVideo: null != n.asset_hero_video ? (0, a.dv)(n.asset_hero_video.url) : void 0,
+              sponsorImage: (0, a.dv)(n.asset_sponsor_image.url),
+              cta: { url: n.cta_sponsor_url.url, buttonLabel: n.cta_sponsor_url.title },
+              questIds: n.shelf?.quest_ids ?? n.cta_quests.map((e) => e.quest_id),
+              questHomeEntrypoint:
+                  null != n.quest_home_entrypoint
+                      ? {
+                            linearGradient:
+                                null != (t = n.quest_home_entrypoint).linear_gradient_start &&
+                                null != t.linear_gradient_end
+                                    ? { start: t.linear_gradient_start, end: t.linear_gradient_end }
+                                    : void 0,
+                            radialGradient:
+                                null != t.radial_gradient_start && null != t.radial_gradient_end
+                                    ? { start: t.radial_gradient_start, end: t.radial_gradient_end }
+                                    : void 0,
+                            image:
+                                null != t.entrypoint_asset_image_url ? (0, a.dv)(t.entrypoint_asset_image_url) : void 0,
+                            tooltipImage:
+                                null != t.tooltip_asset_image_url ? (0, a.dv)(t.tooltip_asset_image_url) : void 0,
+                            tooltipTitle: t.tooltip_title,
+                            tooltipSubtitle: t.tooltip_subtitle,
+                        }
+                      : void 0,
+              shelfImage: n.shelf?.intro_asset_image != null ? (0, a.dv)(n.shelf.intro_asset_image.url) : void 0,
+              shelfVideo: n.shelf?.intro_asset_video != null ? (0, a.dv)(n.shelf.intro_asset_video.url) : void 0,
+          };
 }

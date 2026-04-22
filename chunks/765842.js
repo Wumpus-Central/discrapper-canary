@@ -1,52 +1,50 @@
 e.exports = function (e) {
     let t = "(_?[ui](8|16|32|64|128))?",
-        n = "(_?f(32|64))?",
-        r =
+        a =
             "[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?",
-        i = "[A-Za-z_]\\w*(::\\w+)*(\\?|!)?",
-        s = {
+        n = "[A-Za-z_]\\w*(::\\w+)*(\\?|!)?",
+        r = {
             $pattern: "[a-zA-Z_]\\w*[!?=]?",
             keyword:
                 "abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__",
             literal: "false nil true",
         },
-        a = { className: "subst", begin: /#\{/, end: /\}/, keywords: s },
-        o = { className: "variable", begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])" },
-        l = {
+        i = { className: "subst", begin: /#\{/, end: /\}/, keywords: r },
+        o = {
             className: "template-variable",
             variants: [
                 { begin: "\\{\\{", end: "\\}\\}" },
                 { begin: "\\{%", end: "%\\}" },
             ],
-            keywords: s,
+            keywords: r,
         };
-    function u(e, t) {
-        let n = [{ begin: e, end: t }];
-        return (n[0].contains = n), n;
+    function s(e, t) {
+        let a = [{ begin: e, end: t }];
+        return (a[0].contains = a), a;
     }
-    let c = {
+    let l = {
             className: "string",
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, i],
             variants: [
                 { begin: /'/, end: /'/ },
                 { begin: /"/, end: /"/ },
                 { begin: /`/, end: /`/ },
-                { begin: "%[Qwi]?\\(", end: "\\)", contains: u("\\(", "\\)") },
-                { begin: "%[Qwi]?\\[", end: "\\]", contains: u("\\[", "\\]") },
-                { begin: "%[Qwi]?\\{", end: /\}/, contains: u(/\{/, /\}/) },
-                { begin: "%[Qwi]?<", end: ">", contains: u("<", ">") },
+                { begin: "%[Qwi]?\\(", end: "\\)", contains: s("\\(", "\\)") },
+                { begin: "%[Qwi]?\\[", end: "\\]", contains: s("\\[", "\\]") },
+                { begin: "%[Qwi]?\\{", end: /\}/, contains: s(/\{/, /\}/) },
+                { begin: "%[Qwi]?<", end: ">", contains: s("<", ">") },
                 { begin: "%[Qwi]?\\|", end: "\\|" },
                 { begin: /<<-\w+$/, end: /^\s*\w+$/ },
             ],
             relevance: 0,
         },
-        d = {
+        c = {
             className: "string",
             variants: [
-                { begin: "%q\\(", end: "\\)", contains: u("\\(", "\\)") },
-                { begin: "%q\\[", end: "\\]", contains: u("\\[", "\\]") },
-                { begin: "%q\\{", end: /\}/, contains: u(/\{/, /\}/) },
-                { begin: "%q<", end: ">", contains: u("<", ">") },
+                { begin: "%q\\(", end: "\\)", contains: s("\\(", "\\)") },
+                { begin: "%q\\[", end: "\\]", contains: s("\\[", "\\]") },
+                { begin: "%q\\{", end: /\}/, contains: s(/\{/, /\}/) },
+                { begin: "%q<", end: ">", contains: s("<", ">") },
                 { begin: "%q\\|", end: "\\|" },
                 { begin: /<<-'\w+'$/, end: /^\s*\w+$/ },
             ],
@@ -58,7 +56,7 @@ e.exports = function (e) {
             contains: [
                 {
                     className: "regexp",
-                    contains: [e.BACKSLASH_ESCAPE, a],
+                    contains: [e.BACKSLASH_ESCAPE, i],
                     variants: [
                         { begin: "//[a-z]*", relevance: 0 },
                         { begin: "/(?!\\/)", end: "/[a-z]*" },
@@ -67,18 +65,18 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        f = [
+        d = [
+            o,
             l,
             c,
-            d,
             {
                 className: "regexp",
-                contains: [e.BACKSLASH_ESCAPE, a],
+                contains: [e.BACKSLASH_ESCAPE, i],
                 variants: [
-                    { begin: "%r\\(", end: "\\)", contains: u("\\(", "\\)") },
-                    { begin: "%r\\[", end: "\\]", contains: u("\\[", "\\]") },
-                    { begin: "%r\\{", end: /\}/, contains: u(/\{/, /\}/) },
-                    { begin: "%r<", end: ">", contains: u("<", ">") },
+                    { begin: "%r\\(", end: "\\)", contains: s("\\(", "\\)") },
+                    { begin: "%r\\[", end: "\\]", contains: s("\\[", "\\]") },
+                    { begin: "%r\\{", end: /\}/, contains: s(/\{/, /\}/) },
+                    { begin: "%r<", end: ">", contains: s("<", ">") },
                     { begin: "%r\\|", end: "\\|" },
                 ],
                 relevance: 0,
@@ -90,55 +88,55 @@ e.exports = function (e) {
                 end: "\\]",
                 contains: [e.inherit(e.QUOTE_STRING_MODE, { className: "string" })],
             },
-            o,
+            { className: "variable", begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])" },
             e.HASH_COMMENT_MODE,
             {
                 className: "class",
                 beginKeywords: "class module struct",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i }), { begin: "<" }],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: n }), { begin: "<" }],
             },
             {
                 className: "class",
                 beginKeywords: "lib enum union",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: n })],
             },
             {
                 beginKeywords: "annotation",
                 end: "$|;",
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: n })],
                 relevance: 2,
             },
             {
                 className: "function",
                 beginKeywords: "def",
                 end: /\B\b/,
-                contains: [e.inherit(e.TITLE_MODE, { begin: r, endsParent: !0 })],
+                contains: [e.inherit(e.TITLE_MODE, { begin: a, endsParent: !0 })],
             },
             {
                 className: "function",
                 beginKeywords: "fun macro",
                 end: /\B\b/,
-                contains: [e.inherit(e.TITLE_MODE, { begin: r, endsParent: !0 })],
+                contains: [e.inherit(e.TITLE_MODE, { begin: a, endsParent: !0 })],
                 relevance: 2,
             },
             { className: "symbol", begin: e.UNDERSCORE_IDENT_RE + "(!|\\?)?:", relevance: 0 },
-            { className: "symbol", begin: ":", contains: [c, { begin: r }], relevance: 0 },
+            { className: "symbol", begin: ":", contains: [l, { begin: a }], relevance: 0 },
             {
                 className: "number",
                 variants: [
                     { begin: "\\b0b([01_]+)" + t },
                     { begin: "\\b0o([0-7_]+)" + t },
                     { begin: "\\b0x([A-Fa-f0-9_]+)" + t },
-                    { begin: "\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?" + n + "(?!_)" },
+                    { begin: "\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?(_?f(32|64))?(?!_)" },
                     { begin: "\\b([1-9][0-9_]*|0)" + t },
                 ],
                 relevance: 0,
             },
         ];
-    return (a.contains = f), (l.contains = f.slice(1)), { name: "Crystal", aliases: ["cr"], keywords: s, contains: f };
+    return (i.contains = d), (o.contains = d.slice(1)), { name: "Crystal", aliases: ["cr"], keywords: r, contains: d };
 };

@@ -21,32 +21,25 @@ var r =
         return function (t, n, r) {
             return n && e(t.prototype, n), r && e(t, r), t;
         };
-    })();
-function a(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function s(e, t) {
-    if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t && ("object" == typeof t || "function" == typeof t) ? t : e;
-}
-function o(e, t) {
-    if ("function" != typeof t && null !== t)
-        throw TypeError("Super expression must either be null or a function, not " + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var l = n(313319),
-    u = n(940798);
+    })(),
+    s = n(313319),
+    a = n(940798);
 e.exports = (function (e) {
+    if ("function" != typeof e && null !== e)
+        throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e, n) {
-        a(this, t);
-        var i = s(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return e.style && (e = r({}, e, { style: new u(e.style) })), (i._props = e), (i._callback = n), i.__attach(), i;
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        var i = (function (e, t) {
+            if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return t && ("object" == typeof t || "function" == typeof t) ? t : e;
+        })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return e.style && (e = r({}, e, { style: new a(e.style) })), (i._props = e), (i._callback = n), i.__attach(), i;
     }
     return (
-        o(t, e),
+        (t.prototype = Object.create(e && e.prototype, {
+            constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
+        })),
+        e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
         i(t, [
             {
                 key: "__getValue",
@@ -54,7 +47,7 @@ e.exports = (function (e) {
                     var e = {};
                     for (var t in this._props) {
                         var n = this._props[t];
-                        n instanceof l ? (e[t] = n.__getValue()) : (e[t] = n);
+                        n instanceof s ? (e[t] = n.__getValue()) : (e[t] = n);
                     }
                     return e;
                 },
@@ -65,7 +58,7 @@ e.exports = (function (e) {
                     var e = {};
                     for (var t in this._props) {
                         var n = this._props[t];
-                        n instanceof l && (e[t] = n.__getAnimatedValue());
+                        n instanceof s && (e[t] = n.__getAnimatedValue());
                     }
                     return e;
                 },
@@ -75,7 +68,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._props) {
                         var t = this._props[e];
-                        t instanceof l && t.__addChild(this);
+                        t instanceof s && t.__addChild(this);
                     }
                 },
             },
@@ -84,7 +77,7 @@ e.exports = (function (e) {
                 value: function () {
                     for (var e in this._props) {
                         var t = this._props[e];
-                        t instanceof l && t.__removeChild(this);
+                        t instanceof s && t.__removeChild(this);
                     }
                 },
             },
@@ -97,4 +90,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(l);
+})(s);

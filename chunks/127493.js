@@ -1,53 +1,53 @@
-n.d(t, { Ct: () => _, oO: () => x });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(397927),
-    o = n(31502),
-    d = n(750338),
-    c = n(23003),
-    u = n(985018),
-    m = n(856556);
-function g(e) {
+s.d(t, { Ct: () => x, oO: () => p });
+var r = s(627968),
+    a = s(64700),
+    i = s(503698),
+    n = s.n(i),
+    l = s(534514),
+    o = s(31502),
+    c = s(750338),
+    d = s(23003),
+    m = s(985018),
+    u = s(856556);
+function _(e) {
     let {
         className: t,
-        boxLayout: n,
-        title: s,
-        shouldLoadVideo: l,
+        boxLayout: s,
+        title: a,
+        shouldLoadVideo: i,
         isReducedMotion: o,
-        startLeftAligned: u = !1,
-        highlightBento: g,
+        startLeftAligned: m = !1,
+        highlightBento: _,
     } = e;
-    return (0, i.jsxs)("div", {
-        className: r()(m.boxBackdrop, t),
+    return (0, r.jsxs)("div", {
+        className: n()(u.boxBackdrop, t),
         children: [
-            (0, i.jsx)(a.Heading, {
-                className: m.bentoSectionHeader,
+            (0, r.jsx)(l.D, {
+                className: u.bentoSectionHeader,
                 variant: "display-md",
                 color: "text-strong",
-                children: s,
+                children: a,
             }),
-            null != g && (0, i.jsx)("div", { className: m.highlightBento, children: g }),
-            (0, i.jsx)("div", {
-                className: m.bentoBoxesGrid,
-                children: n.map((e, t) => {
-                    let n;
+            null != _ && (0, r.jsx)("div", { className: u.highlightBento, children: _ }),
+            (0, r.jsx)("div", {
+                className: u.bentoBoxesGrid,
+                children: s.map((e, t) => {
+                    let s;
                     switch (e.length) {
                         case 3:
-                            n = c.A0.SMALL;
+                            s = d.A0.SMALL;
                             break;
                         case 2:
-                            n = c.A0.MEDIUM;
+                            s = d.A0.MEDIUM;
                             break;
                         default:
-                            n = c.A0.LARGE;
+                            s = d.A0.LARGE;
                     }
-                    return (0, i.jsx)(i.Fragment, {
+                    return (0, r.jsx)(r.Fragment, {
                         children: e.map((e) =>
-                            (0, i.jsx)(
-                                d.A,
-                                { index: t + +!!u, ...e, size: n, shouldLoadVideo: l, isReducedMotion: o },
+                            (0, r.jsx)(
+                                c.A,
+                                { index: t + +!!m, ...e, size: s, shouldLoadVideo: i, isReducedMotion: o },
                                 e.name,
                             ),
                         ),
@@ -57,18 +57,18 @@ function g(e) {
         ],
     });
 }
-let _ = s.memo(function (e) {
+let x = a.memo(function (e) {
         let t = (0, o.l)("premium_marketing_bento"),
-            { whatsNewBoxes: n } = (0, c.Ay)(t);
-        return (0, i.jsx)(g, {
-            boxLayout: n,
-            title: u.intl.string(u.t.LRmNAl),
+            { whatsNewBoxes: s } = (0, d.Ay)(t);
+        return (0, r.jsx)(_, {
+            boxLayout: s,
+            title: m.intl.string(m.t.LRmNAl),
             startLeftAligned: !0,
             highlightBento: null,
             ...e,
         });
     }),
-    x = s.memo(function (e) {
-        let { bestOfBoxes: t } = (0, c.Ay)();
-        return (0, i.jsx)(g, { boxLayout: t, title: u.intl.string(u.t.EnzW2H), startLeftAligned: !0, ...e });
+    p = a.memo(function (e) {
+        let { bestOfBoxes: t } = (0, d.Ay)();
+        return (0, r.jsx)(_, { boxLayout: t, title: m.intl.string(m.t.EnzW2H), startLeftAligned: !0, ...e });
     });

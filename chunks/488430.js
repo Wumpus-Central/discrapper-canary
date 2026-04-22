@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { G: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.COACHTIP = 0)] = "COACHTIP"),
-        (e[(e.BADGE = 1)] = "BADGE"),
-        (e[(e.BANNER = 2)] = "BANNER"),
-        (e[(e.COACHMARK = 3)] = "COACHMARK"),
-        (e[(e.TAB_TOOLTIP = 4)] = "TAB_TOOLTIP"),
-        e
-    );
-})({});
+n.d(t, { G: () => i });
+var r,
+    i =
+        (((r = {})[(r.COACHTIP = 0)] = "COACHTIP"),
+        (r[(r.BADGE = 1)] = "BADGE"),
+        (r[(r.BANNER = 2)] = "BANNER"),
+        (r[(r.COACHMARK = 3)] = "COACHMARK"),
+        (r[(r.TAB_TOOLTIP = 4)] = "TAB_TOOLTIP"),
+        r);

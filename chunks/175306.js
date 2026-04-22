@@ -1,14 +1,12 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = (function (e) {
-    return (
-        (e.CLOSED = "CLOSED"),
-        (e.WILL_RECONNECT = "WILL_RECONNECT"),
-        (e.CONNECTING = "CONNECTING"),
-        (e.IDENTIFYING = "IDENTIFYING"),
-        (e.RESUMING = "RESUMING"),
-        (e.SESSION_ESTABLISHED = "SESSION_ESTABLISHED"),
-        e
-    );
-})(r || {});
-let i = r;
+n.d(t, { A: () => s });
+var r,
+    i =
+        (((r = i || {}).CLOSED = "CLOSED"),
+        (r.WILL_RECONNECT = "WILL_RECONNECT"),
+        (r.CONNECTING = "CONNECTING"),
+        (r.IDENTIFYING = "IDENTIFYING"),
+        (r.RESUMING = "RESUMING"),
+        (r.SESSION_ESTABLISHED = "SESSION_ESTABLISHED"),
+        r);
+let s = i;

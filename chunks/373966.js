@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { A: () => m });
-var r = n(627968),
-    i = n(64700),
-    a = n(540185),
-    s = n(311907),
-    o = n(289173),
-    l = n(735321),
-    u = n(950191),
-    c = n(657331),
-    d = n(993401),
-    _ = n(961350),
-    f = n(760751),
-    p = n(518477),
-    h = n(985018);
-function m(e) {
-    let { applicationId: t, onAction: n, onClose: m } = e,
-        g = (0, s.bG)([_.default], () => _.default.getId()),
-        E = (0, u.Ay)(g, null),
-        A = (0, s.bG)([f.A], () => f.A.getDetectableGame(t)),
-        I = i.useMemo(
+e.d(n, { A: () => _ });
+var i = e(627968),
+    l = e(64700),
+    r = e(540185),
+    a = e(311907),
+    s = e(289173),
+    o = e(735321),
+    c = e(950191),
+    u = e(657331),
+    d = e(993401),
+    A = e(961350),
+    x = e(760751),
+    p = e(518477),
+    f = e(985018);
+function _(t) {
+    let { applicationId: n, onAction: e, onClose: _ } = t,
+        m = (0, a.bG)([A.default], () => A.default.getId()),
+        E = (0, c.Ay)(m, null),
+        T = (0, a.bG)([x.A], () => x.A.getDetectableGame(n)),
+        g = l.useMemo(
             () =>
                 !(
-                    null == A ||
+                    null == T ||
                     E?.widgets?.some(
-                        (e) =>
-                            e instanceof o.Yy &&
-                            e.type === a.x.CURRENT_GAMES &&
-                            e.games?.some((e) => e.applicationId === t),
+                        (t) =>
+                            t instanceof s.Yy &&
+                            t.type === r.x.CURRENT_GAMES &&
+                            t.games?.some((t) => t.applicationId === n),
                     )
-                ) && (0, l.XX)(A),
-            [t, E?.widgets, A],
+                ) && (0, o.XX)(T),
+            [n, E?.widgets, T],
         ),
-        T = i.useCallback(
-            (e) => {
-                e.stopPropagation(),
-                    n?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, l.ew)({ widgetType: a.x.CURRENT_GAMES, game: { applicationId: t }, ignoreMaxGames: !0 }),
-                    (0, c.openUserProfileModal)({
-                        userId: g,
+        N = l.useCallback(
+            (t) => {
+                t.stopPropagation(),
+                    e?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
+                    (0, o.ew)({ widgetType: r.x.CURRENT_GAMES, game: { applicationId: n }, ignoreMaxGames: !0 }),
+                    (0, u.openUserProfileModal)({
+                        userId: m,
                         tabSection: p.RP.WIDGETS,
-                        scrollTarget: a.x.CURRENT_GAMES,
+                        scrollTarget: r.x.CURRENT_GAMES,
                     }),
-                    m?.();
+                    _?.();
             },
-            [t, g, n, m],
+            [n, m, e, _],
         );
-    return I ? (0, r.jsx)(d.FD, { text: h.intl.string(h.t.BjYzmC), onClick: T, fullWidth: !0 }) : null;
+    return g ? (0, i.jsx)(d.FD, { text: f.intl.string(f.t.BjYzmC), onClick: N, fullWidth: !0 }) : null;
 }

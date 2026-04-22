@@ -2,10 +2,10 @@
 n.d(t, { X: () => c });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(834730),
     r = n(713654),
     l = n(557582),
-    a = n(561901);
+    a = n(131165);
 function o(e) {
     let { channel: t } = e,
         n = (0, r._U)(t.type);
@@ -13,7 +13,7 @@ function o(e) {
         className: a.Nj,
         children: [
             null != n ? (0, i.jsx)(n, { color: "currentColor", size: "custom", width: 20, height: 20 }) : null,
-            (0, i.jsx)(s.Text, { className: a.dN, color: "none", variant: "text-sm/semibold", children: t.name }),
+            (0, i.jsx)(s.E, { className: a.dN, color: "none", variant: "text-sm/semibold", children: t.name }),
         ],
     });
 }

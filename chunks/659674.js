@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
-    G8: () => w,
-    NV: () => b,
+    G8: () => b,
+    NV: () => R,
     QY: () => O,
-    V: () => L,
-    ax: () => P,
-    ds: () => M,
-    fK: () => N,
-    fS: () => x,
-    nh: () => R,
-    p6: () => D,
+    V: () => C,
+    ax: () => w,
+    ds: () => D,
+    fK: () => y,
+    fS: () => L,
+    nh: () => N,
+    p6: () => v,
 }),
     n(938796),
     n(323874),
@@ -23,28 +23,22 @@ var r = n(735438),
     o = n(317097),
     l = n(665260),
     u = n(814890),
-    c = n(661191),
-    d = n(652215),
+    d = n(661191),
+    c = n(652215),
     _ = n(581619);
 let f = /sketchfab/i,
-    p = /^https:\/\/sketchfab\.com/i,
+    E = /^https:\/\/sketchfab\.com/i,
     h = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    m = 0x15b7e4a5bfb,
-    E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    A = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
-    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
-    T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
-function S(e) {
+    p = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    g = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
+    A = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
+    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
+function T(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function y(e, t, n) {
-    if ((null != t && f.test(t.name)) || p.test(n.url)) return !1;
-    let r = null != n.proxy_url || /^https:/i.test(n.url);
-    return null != e && c.default.extractTimestamp(e) < m && (r = r && null != t && h.test(t.name)), r;
-}
-function v(e) {
+function S(e) {
     let {
         url: t,
         proxy_url: n,
@@ -54,7 +48,7 @@ function v(e) {
         placeholder_version: a,
         description: o,
         flags: u,
-        content_type: c,
+        content_type: d,
     } = e;
     return {
         url: t,
@@ -64,81 +58,93 @@ function v(e) {
         placeholder: s,
         placeholderVersion: a,
         description: o,
-        srcIsAnimated: (0, l.Lt)(u ?? 0, d.qNw.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(u ?? 0, c.qNw.IS_ANIMATED),
         flags: u ?? 0,
-        contentType: c ?? void 0,
+        contentType: d ?? void 0,
     };
 }
-function N(e, t, n) {
-    let r = {
-        id: i().uniqueId("embed_"),
-        url: n.url,
-        type: n.type,
-        rawTitle: n.title,
-        rawDescription: n.description,
-        referenceId: n.reference_id,
-        flags: n.flags,
-        contentScanVersion: n.content_scan_version,
-    };
+function y(e, t, n) {
+    var r, s;
+    let l,
+        p = {
+            id: i().uniqueId("embed_"),
+            url: n.url,
+            type: n.type,
+            rawTitle: n.title,
+            rawDescription: n.description,
+            referenceId: n.reference_id,
+            flags: n.flags,
+            contentScanVersion: n.content_scan_version,
+        };
     if (
         (null != n.footer &&
-            (r.footer = { text: n.footer.text, iconURL: n.footer.icon_url, iconProxyURL: n.footer.proxy_icon_url }),
+            (p.footer = { text: n.footer.text, iconURL: n.footer.icon_url, iconProxyURL: n.footer.proxy_icon_url }),
         null != n.author &&
             null != n.author.name &&
-            (r.author = {
+            (p.author = {
                 name: n.author.name,
                 url: n.author.url,
                 iconURL: n.author.icon_url,
                 iconProxyURL: n.author.proxy_icon_url,
             }),
-        null != n.provider && null != n.provider.name && (r.provider = { name: n.provider.name, url: n.provider.url }),
-        null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
-        null != n.color && (r.color = (0, o.$k)(n.color, !0)),
-        null != n.thumbnail && S(n.thumbnail))
+        null != n.provider && null != n.provider.name && (p.provider = { name: n.provider.name, url: n.provider.url }),
+        null != n.timestamp && (p.timestamp = a()(new Date(n.timestamp))),
+        null != n.color && (p.color = (0, o.$k)(n.color, !0)),
+        null != n.thumbnail && T(n.thumbnail))
     )
-        switch (r.type) {
-            case d.Auw.ARTICLE:
-            case d.Auw.IMAGE:
-                r.image = v(n.thumbnail);
+        switch (p.type) {
+            case c.Auw.ARTICLE:
+            case c.Auw.IMAGE:
+                p.image = S(n.thumbnail);
                 break;
             default:
-                r.thumbnail = v(n.thumbnail);
+                p.thumbnail = S(n.thumbnail);
         }
     if (
-        (null != n.image && S(n.image) && (r.image = v(n.image)),
+        (null != n.image && T(n.image) && (p.image = S(n.image)),
         null != n.video &&
-            (null == r.thumbnail &&
+            (null == p.thumbnail &&
                 null != n.video.proxy_url &&
-                S(n.video) &&
-                (r.thumbnail = {
+                T(n.video) &&
+                (p.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: C(n.video.proxy_url, { format: "webp" }),
+                    url:
+                        ((r = n.video.proxy_url),
+                        (s = { format: "webp" }),
+                        (l = new URL(r)),
+                        Object.keys(s).forEach((e) => {
+                            l.searchParams.set(e, s[e]);
+                        }),
+                        l.toString()),
                 }),
-            null != r.thumbnail && S(n.video) && y(t, n.provider, n.video) && (r.video = v(n.video))),
-        _.p.has(r.type)
-            ? (r.fields = (n.fields ?? []).map((e) => {
+            null != p.thumbnail &&
+                T(n.video) &&
+                (function (e, t, n) {
+                    if ((null != t && f.test(t.name)) || E.test(n.url)) return !1;
+                    let r = null != n.proxy_url || /^https:/i.test(n.url);
+                    return (
+                        null != e &&
+                            0x15b7e4a5bfb > d.default.extractTimestamp(e) &&
+                            (r = r && null != t && h.test(t.name)),
+                        r
+                    );
+                })(t, n.provider, n.video) &&
+                (p.video = S(n.video))),
+        _.p.has(p.type)
+            ? (p.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: r } = e;
                   return { rawName: t, rawValue: n, inline: r };
               }))
-            : (r.fields = []),
+            : (p.fields = []),
         null != n.components)
     ) {
         let e = (0, u.ZV)(n.components);
-        r.components = e.length > 0 ? e : void 0;
+        p.components = e.length > 0 ? e : void 0;
     }
-    return r;
+    return p;
 }
-function C(e, t) {
-    let n = new URL(e);
-    return (
-        Object.keys(t).forEach((e) => {
-            n.searchParams.set(e, t[e]);
-        }),
-        n.toString()
-    );
-}
-function R(e) {
+function N(e) {
     let t = new Map(),
         n = [];
     return (
@@ -166,30 +172,30 @@ function O(e, t) {
         } catch {}
     return e;
 }
-function b(e) {
+function R(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: s } = e;
-    return (null != t || null != n) && (r === d.Auw.GIFV || (r !== d.Auw.RICH && null == i && null == s));
+    return (null != t || null != n) && (r === c.Auw.GIFV || (r !== c.Auw.RICH && null == i && null == s));
 }
-function D(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && (g.test(e.url) || E.test(e.url));
+function v(e) {
+    return e.type === c.Auw.ARTICLE && null != e.url && (m.test(e.url) || p.test(e.url));
 }
-function L(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && A.test(e.url);
+function C(e) {
+    return e.type === c.Auw.ARTICLE && null != e.url && g.test(e.url);
 }
-function w(e) {
-    return e.type === d.Auw.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url));
+function b(e) {
+    return e.type === c.Auw.ARTICLE && null != e.url && (I.test(e.url) || A.test(e.url));
 }
-function M(e, t, n) {
+function D(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok"
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function x(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(d.xBc.EMBED_LINKS, e);
+function L(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(c.xBc.EMBED_LINKS, e);
 }
-function P(e) {
+function w(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );

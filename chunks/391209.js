@@ -1,67 +1,70 @@
-r.d(t, { A: () => f });
+r.d(t, { A: () => x });
 var a = r(627968),
     s = r(64700),
     n = r(503698),
     o = r.n(n),
-    i = r(397927),
-    c = r(503852),
-    l = r(363487),
-    d = r(998418),
-    u = r(193157),
-    p = r(439156),
-    _ = r(568065),
-    m = r(985018),
-    I = r(750845),
-    b = r(107836);
-function f(e) {
-    let { guildId: t, powerup: r, onClose: n, ...f } = e,
-        [k, x] = s.useState(void 0),
-        T = (0, d.Ay)(t, r),
-        v = T.type === _.b_.TIER_OVERRIDE_ACTIVATED,
-        A = (0, l.A)(t),
-        E = null == T.sourceEntitlement || !A;
+    i = r(935462),
+    l = r(534514),
+    c = r(834730),
+    d = r(821609),
+    u = r(503852),
+    _ = r(363487),
+    p = r(998418),
+    m = r(193157),
+    f = r(439156),
+    b = r(568065),
+    I = r(985018),
+    k = r(764872),
+    v = r(107836);
+function x(e) {
+    let { guildId: t, powerup: r, onClose: n, ...x } = e,
+        [T, A] = s.useState(void 0),
+        E = (0, p.Ay)(t, r),
+        N = E.type === b.b_.TIER_OVERRIDE_ACTIVATED,
+        h = (0, _.A)(t),
+        g = null == E.sourceEntitlement || !h;
     return (
-        (0, c.Z)(t, r, c.q.DETAIL),
-        (0, a.jsxs)(i.EOs, {
+        (0, u.Z)(t, r, u.q.DETAIL),
+        (0, a.jsxs)(i.EO, {
             "data-migration-pending": !0,
-            className: I.yl,
-            size: i.rIJ.DYNAMIC,
-            ...f,
+            className: k.yl,
+            size: i.rI.DYNAMIC,
+            ...x,
             parentComponent: "GuildPowerupLevelModal",
             children: [
-                (0, a.jsxs)(i.$mQ, {
+                (0, a.jsxs)(i.$m, {
                     "data-migration-pending": !0,
-                    className: I._F,
+                    className: k._F,
                     scrollbarType: "none",
                     children: [
-                        (0, a.jsx)("img", { alt: "", src: b, className: I.v5 }),
+                        (0, a.jsx)("img", { alt: "", src: v, className: k.v5 }),
                         (0, a.jsxs)("div", {
-                            className: I.hQ,
+                            className: k.hQ,
                             children: [
-                                (0, a.jsx)(i.Heading, { variant: "heading-xl/extrabold", children: r.title }),
-                                (0, a.jsx)(u.A, { powerup: r }),
-                                null != k &&
-                                    (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(l.D, { variant: "heading-xl/extrabold", children: r.title }),
+                                (0, a.jsx)(m.A, { powerup: r }),
+                                null != T &&
+                                    (0, a.jsx)(c.E, {
                                         color: "text-feedback-critical",
                                         variant: "text-sm/semibold",
-                                        children: k,
+                                        children: T,
                                     }),
                                 (0, a.jsxs)("div", {
-                                    className: o()(I.qr, { [I.r9]: E }),
+                                    className: o()(k.qr, { [k.r9]: g }),
                                     children: [
-                                        !v &&
-                                            A &&
-                                            (0, a.jsx)(p.A, {
+                                        !N &&
+                                            h &&
+                                            (0, a.jsx)(f.A, {
                                                 guildId: t,
                                                 powerup: r,
-                                                onError: x,
+                                                onError: A,
                                                 grow: !1,
-                                                compact: !E,
+                                                compact: !g,
                                             }),
-                                        (0, a.jsx)(i.Button, {
-                                            variant: E ? "secondary" : "primary",
+                                        (0, a.jsx)(d.$, {
+                                            variant: g ? "secondary" : "primary",
                                             onClick: n,
-                                            text: m.intl.string(m.t.cpT0Cq),
+                                            text: I.intl.string(I.t.cpT0Cq),
                                         }),
                                     ],
                                 }),
@@ -69,7 +72,7 @@ function f(e) {
                         }),
                     ],
                 }),
-                (0, a.jsx)(i.s_y, { "data-migration-pending": !0, className: I.VN, onClick: n }),
+                (0, a.jsx)(i.s_, { "data-migration-pending": !0, className: k.VN, onClick: n }),
             ],
         })
     );

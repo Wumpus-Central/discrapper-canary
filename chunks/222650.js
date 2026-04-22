@@ -1,52 +1,55 @@
-n.d(t, { A: () => u, e: () => _ });
-var r = n(627968);
-n(64700);
-var s = n(990078),
-    i = n(397927),
-    l = n(557722),
-    a = n(31457),
-    o = n(53516),
-    d = n(985018),
-    c = n(397251);
-function u() {
-    return (0, r.jsx)(a.ZK, {
-        className: c.jm,
-        icon: i.u6o,
-        text: d.intl.string(d.t.woMjLV),
-        footnote: d.intl.string(d.t["jMh+TY"]),
+"use strict";
+r.d(t, { A: () => p, e: () => m });
+var i = r(627968);
+r(64700);
+var a = r(990078),
+    n = r(646270),
+    s = r(821609),
+    l = r(192308),
+    o = r(557722),
+    c = r(31457),
+    d = r(53516),
+    _ = r(985018),
+    u = r(397251);
+function p() {
+    return (0, i.jsx)(c.ZK, {
+        className: u.jm,
+        icon: n.u,
+        text: _.intl.string(_.t.woMjLV),
+        footnote: _.intl.string(_.t["jMh+TY"]),
         meetsRequirement: !1,
-        children: (0, r.jsx)(s.m, {
+        children: (0, i.jsx)(a.m, {
             asContainer: !0,
-            text: d.intl.string(d.t.mGlP30),
-            children: (0, r.jsx)(i.Button, {
+            text: _.intl.string(_.t.mGlP30),
+            children: (0, i.jsx)(s.$, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: d.intl.string(d.t["13ofGu"]),
+                text: _.intl.string(_.t["13ofGu"]),
             }),
         }),
     });
 }
-function _(e) {
+function m(e) {
     let { isUserVerified: t } = e,
-        s = t ? d.intl.string(d.t.WWzQta) : d.intl.string(d.t.woMjLV);
-    return (0, r.jsx)(a.ZK, {
-        className: c.jm,
-        icon: i.u6o,
-        text: s,
-        footnote: d.intl.string(d.t["jMh+TY"]),
+        a = t ? _.intl.string(_.t.WWzQta) : _.intl.string(_.t.woMjLV);
+    return (0, i.jsx)(c.ZK, {
+        className: u.jm,
+        icon: n.u,
+        text: a,
+        footnote: _.intl.string(_.t["jMh+TY"]),
         meetsRequirement: t,
-        children: (0, r.jsx)(i.Button, {
+        children: (0, i.jsx)(s.$, {
             variant: "primary",
             size: "sm",
-            text: d.intl.string(d.t["13ofGu"]),
+            text: _.intl.string(_.t["13ofGu"]),
             onClick: () => {
-                (0, i.mMO)(
+                (0, l.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("84704"), n.e("16398")]).then(n.bind(n, 615715));
-                        return (t) => (0, r.jsx)(e, { reason: l.d.GUILD_PHONE_REQUIRED, ...t });
+                        let { default: e } = await Promise.all([r.e("84704"), r.e("11696")]).then(r.bind(r, 615715));
+                        return (t) => (0, i.jsx)(e, { reason: o.d.GUILD_PHONE_REQUIRED, ...t });
                     },
-                    { modalKey: o.V },
+                    { modalKey: d.V },
                 );
             },
         }),

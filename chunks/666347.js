@@ -1,36 +1,36 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => P });
 var r = n(627968),
     i = n(64700),
     s = n(735438),
     a = n.n(s),
-    o = n(687498),
+    o = n(517738),
     l = n(258873),
     u = n(622242),
-    c = n(731738),
-    d = n(311907),
-    _ = n(397927),
+    d = n(731738),
+    c = n(311907),
+    _ = n(834730),
     f = n(544420),
-    p = n(684013),
+    E = n(684013),
     h = n(964486),
-    m = n(831062),
-    E = n(976860),
+    p = n(831062),
+    m = n(976860),
     g = n(287809),
     A = n(144400),
     I = n(927813),
     T = n(777334),
     S = n(41984),
     y = n(302614),
-    v = n(395011),
-    N = n(672910),
-    C = n(672396),
-    R = n(652215),
-    O = n(985018),
-    b = n(570818);
+    N = n(395011),
+    O = n(672910),
+    R = n(672396),
+    v = n(652215),
+    C = n(985018),
+    b = n(481234);
 let D = a().throttle(
         () => {
-            m.A.increment(
-                { name: c.K.APP_CRASHED, tags: [`reason:${l.J.UNHANDLED_JS_ERROR}`, `level:${u.k.FATAL}`] },
+            p.A.increment(
+                { name: d.K.APP_CRASHED, tags: [`reason:${l.J.UNHANDLED_JS_ERROR}`, `level:${u.k.FATAL}`] },
                 !0,
             );
         },
@@ -41,43 +41,43 @@ let D = a().throttle(
 function w(e) {
     let { error: t, onLock: n, onReload: s, onDisable: a, onCrashDisabled: l } = e,
         u = i.useMemo(() => new o.SpringValue(1), []),
-        c = i.useRef(null),
-        [f, m] = i.useState(!1),
-        [E, I] = i.useState(!1),
-        T = (0, d.bG)([g.default], () => g.default.getCurrentUser());
+        d = i.useRef(null),
+        [f, p] = i.useState(!1),
+        [m, I] = i.useState(!1),
+        T = (0, c.bG)([g.default], () => g.default.getCurrentUser());
     (0, h.Ay)(
         () => (
-            (c.current = setTimeout(y, L)),
-            p.A.track(R.HAw.NOTIFICATION_VIEWED, { notif_type: C.KS.OverlayCrashed }),
+            (d.current = setTimeout(y, L)),
+            E.A.track(v.HAw.NOTIFICATION_VIEWED, { notif_type: R.KS.OverlayCrashed }),
             () => {
-                null != c.current && clearTimeout(c.current);
+                null != d.current && clearTimeout(d.current);
             }
         ),
     );
     let S = (T?.isStaff() ?? !1) || (T?.isStaffPersonal() ?? !1),
         y = i.useCallback(() => {
-            u.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), l?.();
+            u.set(0), null != d.current && clearTimeout(d.current), (d.current = null), n?.(), l?.();
         }, [u, n, l]),
         D = i.useCallback(
             (e) => {
-                E ||
+                m ||
                     (I(!0),
                     n?.(),
-                    p.A.track(
-                        R.HAw.NOTIFICATION_CLICKED,
-                        { notif_type: C.KS.OverlayCrashed, action_type: "reload" },
+                    E.A.track(
+                        v.HAw.NOTIFICATION_CLICKED,
+                        { notif_type: R.KS.OverlayCrashed, action_type: "reload" },
                         !0,
                     ),
                     e.stopPropagation(),
                     setTimeout(() => s?.(), 200));
             },
-            [n, s, E],
+            [n, s, m],
         ),
         w = i.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (m(!0), null != c.current && clearTimeout(c.current)) : m(!1);
+                e.stopPropagation(), e.shiftKey ? (p(!0), null != d.current && clearTimeout(d.current)) : p(!1);
             },
-            [m],
+            [p],
         ),
         M = i.useCallback(
             (e) => {
@@ -85,24 +85,20 @@ function w(e) {
             },
             [a, n],
         ),
-        x = (0, d.bG)([v.A], () => v.A.getFocusedRunningGame()),
-        P = f
+        P = (0, c.bG)([N.A], () => N.A.getFocusedRunningGame()),
+        U = f
             ? (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(_.Text, {
+                      (0, r.jsx)(_.E, {
                           variant: "text-md/semibold",
                           color: "text-strong",
-                          children: O.intl.string(O.t.mn4eXC),
+                          children: C.intl.string(C.t.mn4eXC),
                       }),
                       (0, r.jsxs)("div", {
                           className: b.Xh,
                           children: [
-                              (0, r.jsx)(_.Text, {
-                                  variant: "text-sm/normal",
-                                  color: "text-subtle",
-                                  children: t.message,
-                              }),
-                              (0, r.jsx)(_.Text, {
+                              (0, r.jsx)(_.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
+                              (0, r.jsx)(_.E, {
                                   variant: "text-xxs/normal",
                                   color: "text-subtle",
                                   children: (0, r.jsx)("code", {
@@ -115,23 +111,23 @@ function w(e) {
                   ],
               })
             : null,
-        k = f ? null : O.intl.string(O.t.oEJEFq);
-    return (0, r.jsx)(N.$, {
-        title: O.intl.string(O.t.U38qZj),
-        body: P,
+        k = f ? null : C.intl.string(C.t.oEJEFq);
+    return (0, r.jsx)(O.$, {
+        title: C.intl.string(C.t.U38qZj),
+        body: U,
         hint: S ? k : void 0,
-        confirmText: O.intl.string(O.t.a3HlgJ),
-        cancelText: null != x ? O.intl.string(O.t.qIYnPo) : void 0,
+        confirmText: C.intl.string(C.t.a3HlgJ),
+        cancelText: null != P ? C.intl.string(C.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(A.A, { width: 40, height: 40, className: b.Lo }),
         onNotificationClick: w,
         onConfirmClick: D,
-        onCancelClick: null != x ? M : void 0,
+        onCancelClick: null != P ? M : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
         notificationId: "overlay-crashed",
         index: 0,
-        status: R.yFH.ACTIVE,
+        status: v.yFH.ACTIVE,
         containerRef: null,
         contentOpacity: u,
         className: b.Pl,
@@ -142,12 +138,12 @@ class M extends i.PureComponent {
     state = { error: null, showError: !0, info: null };
     pid = null;
     componentDidCatch(e, t) {
-        let n = (0, E.JK)().location;
+        let n = (0, m.JK)().location;
         this.setState({ error: e, info: t });
-        let r = v.A.getTargetPID();
-        p.A.setOverlayCrashed(r, e), p.A.setInputLocked(!0, r);
+        let r = N.A.getTargetPID();
+        E.A.setOverlayCrashed(r, e), E.A.setInputLocked(!0, r);
         let i = (0, T.St)(e, S.Ue.OutOfProcess, { extra: { info: t, location: n } });
-        p.A.track(R.HAw.APP_CRASHED, {
+        E.A.track(v.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -168,20 +164,20 @@ class M extends i.PureComponent {
                       children: (0, r.jsx)(w, {
                           error: n,
                           onLock: () => {
-                              let e = this.pid ?? v.A.getTargetPID();
-                              p.A.setInputLocked(!0, e), this.setState({ showError: !1 });
+                              let e = this.pid ?? N.A.getTargetPID();
+                              E.A.setInputLocked(!0, e), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
-                              let e = v.A.getFocusedRunningGame();
+                              let e = N.A.getFocusedRunningGame();
                               null != e && f.Ay.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
-                              let e = this.pid ?? v.A.getTargetPID();
-                              p.A.updateOverlayState(e, S.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
+                              let e = this.pid ?? N.A.getTargetPID();
+                              E.A.updateOverlayState(e, S.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
                                   this.setState({ showError: !1 });
                           },
                           onReload: () => {
-                              p.A.setReloadOverlay(v.A.getTargetPID()), this.setState({ showError: !1 });
+                              E.A.setReloadOverlay(N.A.getTargetPID()), this.setState({ showError: !1 });
                           },
                       }),
                   })
@@ -189,4 +185,4 @@ class M extends i.PureComponent {
             : (0, r.jsx)("div", { className: t, children: e });
     }
 }
-let x = M;
+let P = M;

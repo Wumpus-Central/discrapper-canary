@@ -1,24 +1,10 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(311907),
-    i = n(73153),
-    a = n(652215);
+n.d(t, { A: () => a });
+var l = n(311907),
+    r = n(73153),
+    i = n(652215);
 let s = {},
     o = { integration: "", query: "" };
-function l(e) {
-    let { integration: t, query: n } = e;
-    (s[t] = s[t] ?? {}), (s[t][n] = { loading: !0, results: [] });
-}
-function u(e) {
-    let { integration: t, query: n, results: r } = e;
-    (s[t][n] = { loading: !1, results: r.map((e) => ({ type: a.Z86[t].type, meta: e })) }),
-        (o = { query: n, integration: t });
-}
-function c(e) {
-    let { integration: t, query: n } = e;
-    delete s[t][n];
-}
-class d extends r.Ay.Store {
+class u extends l.Ay.Store {
     static displayName = "IntegrationQueryStore";
     getResults(e, t) {
         if (null == e || null == t) return null;
@@ -29,4 +15,18 @@ class d extends r.Ay.Store {
         return o;
     }
 }
-let _ = new d(i.h, { INTEGRATION_QUERY: l, INTEGRATION_QUERY_SUCCESS: u, INTEGRATION_QUERY_FAILURE: c });
+let a = new u(r.h, {
+    INTEGRATION_QUERY: function (e) {
+        let { integration: t, query: n } = e;
+        (s[t] = s[t] ?? {}), (s[t][n] = { loading: !0, results: [] });
+    },
+    INTEGRATION_QUERY_SUCCESS: function (e) {
+        let { integration: t, query: n, results: l } = e;
+        (s[t][n] = { loading: !1, results: l.map((e) => ({ type: i.Z86[t].type, meta: e })) }),
+            (o = { query: n, integration: t });
+    },
+    INTEGRATION_QUERY_FAILURE: function (e) {
+        let { integration: t, query: n } = e;
+        delete s[t][n];
+    },
+});

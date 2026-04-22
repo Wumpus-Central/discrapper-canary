@@ -22,6 +22,4 @@ e.exports = {
     wN: "gradientBackgroundContainer__8a3ee",
     kQ: "gradientBackgroundPosition__8a3ee",
     oG: "nitroWheelIconColor__8a3ee",
-    aT: "labelContent__8a3ee",
-    Nj: "logoImage__8a3ee",
 };

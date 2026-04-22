@@ -1,60 +1,62 @@
-n.d(e, { A: () => E });
+n.d(e, { A: () => A });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    r = n(397927),
-    a = n(931991),
-    d = n(698441),
-    s = n(722260),
-    u = n(563312),
-    o = n(823508),
-    c = n(985018);
-function E(t) {
-    let { guildEventId: e, guild: E, channel: A, recurrenceId: g, isRecurrenceItem: _ } = t,
-        { canManageGuildEvent: h } = (0, a.nr)(A ?? E),
-        T = (0, i.bG)([d.Ay], () => d.Ay.getGuildScheduledEvent(e)),
-        f = h(T),
-        m = (0, o.A)(),
-        y = (0, s.A)(g, T?.id),
-        v = (0, u.nh)(e, g);
-    if (!f || null == v || null == T) return null;
-    let p = null != T.recurrence_rule && !_,
-        N = (t) => {
-            (null == g || t) && !_
-                ? (0, r.mMO)(async () => {
+    r = n(192308),
+    a = n(477782),
+    d = n(931991),
+    s = n(698441),
+    u = n(722260),
+    o = n(563312),
+    c = n(823508),
+    g = n(985018);
+function A(t) {
+    let { guildEventId: e, guild: A, channel: E, recurrenceId: m, isRecurrenceItem: f } = t,
+        { canManageGuildEvent: v } = (0, d.nr)(E ?? A),
+        y = (0, i.bG)([s.Ay], () => s.Ay.getGuildScheduledEvent(e)),
+        _ = v(y),
+        h = (0, c.A)(),
+        N = (0, u.A)(m, y?.id),
+        T = (0, o.nh)(e, m);
+    if (!_ || null == T || null == y) return null;
+    let b = null != y.recurrence_rule && !f,
+        G = (t) => {
+            (null == m || t) && !f
+                ? (0, r.openModalLazy)(async () => {
                       let { default: t } = await Promise.all([
-                          n.e("68587"),
                           n.e("28136"),
+                          n.e("68883"),
+                          n.e("68587"),
                           n.e("342"),
-                          n.e("22970"),
+                          n.e("17387"),
                       ]).then(n.bind(n, 21653));
-                      return (n) => (0, l.jsx)(t, { ...n, guildScheduledEventId: e, guildId: E.id });
-                  }, m)
-                : null != g &&
-                  (0, r.mMO)(async () => {
-                      let { default: t } = await n.e("43940").then(n.bind(n, 271983));
-                      return (e) => (0, l.jsx)(t, { ...e, guildEvent: T, recurrenceId: g });
-                  }, m);
+                      return (n) => (0, l.jsx)(t, { ...n, guildScheduledEventId: e, guildId: A.id });
+                  }, h)
+                : null != m &&
+                  (0, r.openModalLazy)(async () => {
+                      let { default: t } = await Promise.all([n.e("68883"), n.e("43940")]).then(n.bind(n, 271983));
+                      return (e) => (0, l.jsx)(t, { ...e, guildEvent: y, recurrenceId: m });
+                  }, h);
         };
-    return (0, l.jsx)(r.Drp, {
-        id: c.intl.string(c.t.Rgy2dU),
-        label: c.intl.string(c.t.Rgy2dU),
-        action: p ? void 0 : () => N(!0),
+    return (0, l.jsx)(a.Dr, {
+        id: g.intl.string(g.t.Rgy2dU),
+        label: g.intl.string(g.t.Rgy2dU),
+        action: b ? void 0 : () => G(!0),
         children:
-            p &&
+            b &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(r.Drp, {
-                        id: c.intl.string(c.t.wmVmXN),
-                        label: c.intl.string(c.t.wmVmXN),
-                        action: () => N(!1),
-                        disabled: y?.is_canceled || v.startTime.getTime() < Date.now(),
+                    (0, l.jsx)(a.Dr, {
+                        id: g.intl.string(g.t.wmVmXN),
+                        label: g.intl.string(g.t.wmVmXN),
+                        action: () => G(!1),
+                        disabled: N?.is_canceled || T.startTime.getTime() < Date.now(),
                     }),
-                    (0, l.jsx)(r.Drp, {
-                        id: c.intl.string(c.t.BW1Qoh),
-                        label: c.intl.string(c.t.BW1Qoh),
-                        action: () => N(!0),
-                        disabled: new Date(T.scheduled_start_time).getTime() < Date.now(),
+                    (0, l.jsx)(a.Dr, {
+                        id: g.intl.string(g.t.BW1Qoh),
+                        label: g.intl.string(g.t.BW1Qoh),
+                        action: () => G(!0),
+                        disabled: new Date(y.scheduled_start_time).getTime() < Date.now(),
                     }),
                 ],
             }),

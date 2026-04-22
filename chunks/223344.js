@@ -1,26 +1,30 @@
-n.d(t, { A: () => o });
-var a = n(627968),
-    s = n(64700),
-    i = n(317097),
-    l = n(397927),
-    r = n(350246);
-let o = function (e) {
-    let { colorKey: t, value: n, onChange: o, title: d } = e,
-        c = s.useRef(null);
-    return (0, a.jsx)(l.D0$, {
-        label: d,
-        children: (0, a.jsx)(l.YNO, {
-            targetElementRef: c,
-            renderPopout: (e) => (0, a.jsx)(l.VNw, { ...e, value: n, onChange: (e) => o(t, (0, i.Hl)(e)) }),
+a.d(t, { A: () => m });
+var n = a(627968),
+    l = a(64700),
+    i = a(317097),
+    s = a(452027),
+    r = a(265872),
+    o = a(508274),
+    d = a(939249),
+    c = a(714385),
+    u = a(359923);
+let m = function (e) {
+    let { colorKey: t, value: a, onChange: m, title: h } = e,
+        p = l.useRef(null);
+    return (0, n.jsx)(s.D, {
+        label: h,
+        children: (0, n.jsx)(r.Y, {
+            targetElementRef: p,
+            renderPopout: (e) => (0, n.jsx)(o.VN, { ...e, value: a, onChange: (e) => m(t, (0, i.Hl)(e)) }),
             children: (e) =>
-                (0, a.jsx)(l.DUT, {
+                (0, n.jsx)(d.D, {
                     ...e,
-                    innerRef: c,
+                    innerRef: p,
                     tag: "span",
                     "aria-label": "Select a color",
-                    className: r.O6,
-                    style: { backgroundColor: n },
-                    children: (0, a.jsx)(l.dDg, { size: "xs", color: "currentColor", className: r.WY }),
+                    className: u.O6,
+                    style: { backgroundColor: a },
+                    children: (0, n.jsx)(c.d, { size: "xs", color: "currentColor", className: u.WY }),
                 }),
         }),
     });

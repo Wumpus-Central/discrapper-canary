@@ -1,7 +1,7 @@
 n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var l = n(192308),
     s = n(73153),
     a = n(272355),
     r = n(960736),
@@ -16,24 +16,24 @@ class A extends a.A {
             s.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        (0, l.OoC)(h),
+        (0, l.closeModal)(h),
             s.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             s.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
         c.A.isOpen() &&
-            !(0, l.kBI)(h) &&
-            (0, l.mMO)(
+            !(0, l.hasModalOpen)(h) &&
+            (0, l.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("64161"), n.e("83155"), n.e("64252")]).then(
+                    let { default: e } = await Promise.all([n.e("64161"), n.e("83155"), n.e("57180")]).then(
                         n.bind(n, 563038),
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
                 {
                     modalKey: h,
-                    contextKey: (0, l.TId)(t),
+                    contextKey: (0, l.modalContextFromAppContext)(t),
                     onCloseRequest: () => {
                         let e = (0, r.p9)(),
                             t = (0, r.xD)();
@@ -44,7 +44,7 @@ class A extends a.A {
             );
     }
     handleCloseModal(e) {
-        (0, l.OoC)(h);
+        (0, l.closeModal)(h);
     }
 }
 let _ = new A();

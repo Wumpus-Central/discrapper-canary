@@ -1,34 +1,35 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153);
-let a = !1,
-    s = !1;
-function o(e) {
-    let { muted: t } = e;
-    (a = t), (s = !1);
-}
-function l(e) {
-    let { play: t } = e;
-    s = t;
-}
-function u() {
-    s = !1;
-}
-class c extends r.Ay.DeviceSettingsStore {
+let s = !1,
+    a = !1;
+class o extends r.Ay.DeviceSettingsStore {
     static displayName = "StageMusicStore";
     static persistKey = "StageMusicStore";
     initialize(e) {
-        null != e && (a = e);
+        null != e && (s = e);
     }
     isMuted() {
-        return a;
-    }
-    shouldPlay() {
         return s;
     }
-    getUserAgnosticState() {
+    shouldPlay() {
         return a;
     }
+    getUserAgnosticState() {
+        return s;
+    }
 }
-let d = new c(i.h, { STAGE_MUSIC_MUTE: o, STAGE_MUSIC_PLAY: l, VOICE_CHANNEL_SELECT: u });
+let l = new o(i.h, {
+    STAGE_MUSIC_MUTE: function (e) {
+        let { muted: t } = e;
+        (s = t), (a = !1);
+    },
+    STAGE_MUSIC_PLAY: function (e) {
+        let { play: t } = e;
+        a = t;
+    },
+    VOICE_CHANNEL_SELECT: function () {
+        a = !1;
+    },
+});

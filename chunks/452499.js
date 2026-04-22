@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { A: () => a });
 var i = n(64700),
-    s = n(486020),
-    l = n(791275),
+    l = n(486020),
+    s = n(791275),
     r = n(652215);
 function a(e, t, n) {
-    let { isLoading: a, error: o, highlightedCreatorDetails: d } = (0, l.A)(e),
+    let { isLoading: a, error: o, highlightedCreatorDetails: d } = (0, s.A)(e),
         c = d?.store_page,
         u = i.useMemo(() => {
             var e;
@@ -23,27 +22,27 @@ function a(e, t, n) {
             return i?.filter((e) => e.roles.some((e) => n.has(e)));
         }, [c?.role_subscription]),
         m = c?.guild.icon_hash,
-        g = s.Ay.getGuildIconURL({ id: e, icon: m, size: n }),
-        x = i.useMemo(() => (null != u && u.length > t ? u.slice(0, t) : u), [u, t]),
-        h = null != u && u.length > t ? u.length - t : null,
+        g = l.Ay.getGuildIconURL({ id: e, icon: m, size: n }),
+        h = i.useMemo(() => (null != u && u.length > t ? u.slice(0, t) : u), [u, t]),
+        x = null != u && u.length > t ? u.length - t : null,
         _ = d?.slug,
-        A = null != _ ? r.X7G.ROLE_SUBSCRIPTION_STORE_PAGE(_) : void 0,
-        p = c?.guild?.name,
-        f = c?.role_subscription?.subscriber_count,
-        j = !a && null != p && null != m && null != g;
-    return j
+        p = null != _ ? r.X7G.ROLE_SUBSCRIPTION_STORE_PAGE(_) : void 0,
+        A = c?.guild?.name,
+        E = c?.role_subscription?.subscriber_count,
+        f = !a && null != A && null != m && null != g;
+    return f
         ? {
-              hasAllImperativeDetails: j,
+              hasAllImperativeDetails: f,
               isLoading: a,
               details: {
-                  guildName: p,
+                  guildName: A,
                   guildIcon: m,
                   guildAvatarUrl: g,
-                  storePageUrl: A,
-                  subscriberCount: f,
-                  emojisToShow: x,
-                  notShownEmojiCount: h,
+                  storePageUrl: p,
+                  subscriberCount: E,
+                  emojisToShow: h,
+                  notShownEmojiCount: x,
               },
           }
-        : { hasAllImperativeDetails: j, isLoading: a, error: o };
+        : { hasAllImperativeDetails: f, isLoading: a, error: o };
 }

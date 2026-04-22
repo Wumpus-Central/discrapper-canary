@@ -1,39 +1,37 @@
 "use strict";
-n.d(t, { QM: () => S, Zb: () => g, al: () => T, ds: () => E });
+n.d(t, { QM: () => I, Zb: () => m, al: () => A, ds: () => p });
 var r = n(627968);
 n(64700);
 var i = n(311907),
     s = n(554146),
-    a = n(397927),
+    a = n(192308),
     o = n(496431),
     l = n(366999),
     u = n(826673),
-    c = n(367727),
-    d = n(287809),
+    d = n(367727),
+    c = n(287809),
     _ = n(816733),
     f = n(469778),
-    p = n(788868),
+    E = n(788868),
     h = n(652215);
-let m = 36e5;
-function E() {
-    return (0, i.bG)([d.default], () => {
-        let e = d.default.getCurrentUser();
+function p() {
+    return (0, i.bG)([c.default], () => {
+        let e = c.default.getCurrentUser();
         return e?.isOnReverseTrial() ?? !1;
     });
 }
-function g(e) {
-    let t = (0, o.A)(e.toDate(), m);
+function m(e) {
+    let t = (0, o.A)(e.toDate(), 36e5);
     return Math.max(1, (0, l.Vb)(t).days);
 }
-let A = "ReverseTrialUpsellModal";
-function I(e, t, i) {
-    if ((0, a.ueM)()) return;
+function g(e, t, i) {
+    if ((0, a.hasAnyModalOpen)()) return;
     let { isDismissed: s } = (0, u.u$)(t, i);
     if (s) return;
     let o = (e) => {
-        (0, c.qr)(t, i, { dismissAction: e, forceTrack: !0 });
+        (0, d.qr)(t, i, { dismissAction: e, forceTrack: !0 });
     };
-    (0, a.mMO)(
+    (0, a.openModalLazy)(
         async () => {
             if ("followup" === e) {
                 let { default: e } = await n.e("24580").then(n.bind(n, 34255));
@@ -42,17 +40,17 @@ function I(e, t, i) {
             let { default: i } = await n.e("47948").then(n.bind(n, 166247));
             return (e) => (0, r.jsx)(i, { renderModalProps: e, dismissibleContent: t, markAsDismissed: o });
         },
-        { modalKey: A },
+        { modalKey: "ReverseTrialUpsellModal" },
     );
 }
-function T() {
-    let e = d.default.getCurrentUser();
+function A() {
+    let e = c.default.getCurrentUser();
     if (null == e || !e.isOnReverseTrial()) return;
     let t = f.A.getFractionalPremium({ excludeReverseTrial: !1 }).find((e) => e.sourceType === h.GD.REVERSE_TRIAL);
-    null != t && I("initial", s.M.ML_REVERSE_TRIAL_UPSELL_MODAL, t.id);
+    null != t && g("initial", s.M.ML_REVERSE_TRIAL_UPSELL_MODAL, t.id);
 }
-function S() {
-    if (null == d.default.getCurrentUser()) return;
-    let e = _.A.getUserTrialOffer(p.Tt);
-    null != e && I("followup", s.M.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL, e.id);
+function I() {
+    if (null == c.default.getCurrentUser()) return;
+    let e = _.A.getUserTrialOffer(E.Tt);
+    null != e && g("followup", s.M.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL, e.id);
 }

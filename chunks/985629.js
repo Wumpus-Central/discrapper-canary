@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(110259),
-    a = n(435371),
-    s = n(397927),
-    o = n(359549),
-    l = n(139286),
-    u = n(939496),
-    c = n(993401),
-    d = n(996988),
-    _ = n(985018);
-function f(e) {
-    let { application: t, analyticsLocations: n, onAction: f, onClose: p } = e,
-        { themeType: h } = (0, u.E)(),
-        m = (0, o.A)({ application: t, analyticsLocations: n });
-    return ((0, l.A)(
-        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
-        { disableTrack: null == m },
-        [m],
+e.d(n, { A: () => x });
+var i = e(627968),
+    l = e(110259),
+    r = e(990078),
+    a = e(414499),
+    s = e(359549),
+    o = e(139286),
+    c = e(939496),
+    u = e(993401),
+    d = e(996988),
+    A = e(985018);
+function x(t) {
+    let { application: n, analyticsLocations: e, onAction: x, onClose: p } = t,
+        { themeType: f } = (0, c.E)(),
+        _ = (0, s.A)({ application: n, analyticsLocations: e });
+    return ((0, o.A)(
+        { name: l.ImpressionNames.CLOUD_PLAY_CTA, type: l.ImpressionTypes.VIEW, properties: { location_stack: e } },
+        { disableTrack: null == _ },
+        [_],
     ),
-    null == m)
+    null == _)
         ? null
-        : (0, r.jsx)(a.m_, {
-              text: _.intl.string(_.t.JVwWva),
+        : (0, i.jsx)(r.m, {
+              text: A.intl.string(A.t.JVwWva),
               position: "top",
-              children: (0, r.jsx)(c.FD, {
-                  icon: s.hpF,
-                  text: _.intl.string(_.t["jaYS/h"]),
+              children: (0, i.jsx)(u.FD, {
+                  icon: a.h,
+                  text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
-                  onClick: (e) => {
-                      e.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.();
+                  onClick: (t) => {
+                      t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), p?.();
                   },
-                  fullWidth: h !== d.d.MODAL_V2,
+                  fullWidth: f !== d.d.MODAL_V2,
               }),
           });
 }

@@ -4,8 +4,8 @@ t.a(e, async function (e, l) {
         var r = t(627968),
             a = t(64700),
             s = t(223535),
-            i = t(484030),
-            c = t(397927),
+            c = t(484030),
+            i = t(834730),
             d = t(791606),
             u = t(728458),
             o = t(715764),
@@ -16,14 +16,14 @@ t.a(e, async function (e, l) {
             g = t(131765),
             f = t(167507),
             p = t(908347),
-            A = t(62849),
-            I = t(558447),
-            v = t(886609),
+            I = t(62849),
+            v = t(558447),
+            A = t(886609),
             y = t(580019),
             k = t(985018),
-            C = t(967615),
-            b = e([x, v, s]);
-        [x, v, s] = b.then ? (await b)() : b;
+            b = t(352372),
+            C = e([x, A, s]);
+        [x, A, s] = C.then ? (await C)() : C;
         let $ = {
             text: o.EY,
             paragraph: o.fz,
@@ -34,20 +34,20 @@ t.a(e, async function (e, l) {
             listItem: p.c,
             code: h.C,
             code_block: m.N,
-            quote: I.P,
+            quote: v.P,
             bold: j.yN,
             italic: j.J2,
             underline: j.z2,
             strikethrough: j.Gk,
-            mention: A.P,
+            mention: I.P,
             heading: g.D,
             small: g.O,
-            spoiler: v.d,
+            spoiler: A.d,
             timestamp: y.D,
         };
         function N(e) {
             let { content: n } = e;
-            return (0, r.jsx)(i.tH, {
+            return (0, r.jsx)(c.tH, {
                 fallbackRender: (e) => {
                     let { error: t } = e;
                     return (0, r.jsx)(w, { content: n, error: t });
@@ -64,10 +64,10 @@ t.a(e, async function (e, l) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("span", { children: n }),
-                        (0, r.jsxs)(c.Text, {
+                        (0, r.jsxs)(i.E, {
                             variant: "text-md/normal",
                             color: "text-feedback-critical",
-                            className: C.g,
+                            className: b.g,
                             children: [(0, r.jsx)(d.A, { width: 16, height: 16 }), k.intl.string(k.t.dpFK4M)],
                         }),
                     ],

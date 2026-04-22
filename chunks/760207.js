@@ -1,69 +1,72 @@
-n.d(t, { A: () => j, W: () => N });
-var l = n(627968),
-    i = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(812771),
-    d = n(274541),
-    c = n(761640),
-    o = n(769765),
-    u = n(808728),
-    _ = n(71393),
-    h = n(576705),
-    x = n(954571),
-    m = n(637248),
-    g = n(743015),
-    A = n(652215),
-    C = n(746080),
-    f = n(985018),
-    p = n(853124);
-function N(e) {
-    let { channelId: t } = e;
-    return (0, l.jsx)(r.A, {
-        sidebarType: r.X.ThreadSidebar,
+t.d(n, { A: () => E, W: () => b });
+var l = t(627968),
+    i = t(64700),
+    s = t(311907),
+    a = t(192308),
+    r = t(892547),
+    d = t(821609),
+    c = t(307301),
+    o = t(812771),
+    u = t(274541),
+    _ = t(761640),
+    h = t(769765),
+    m = t(808728),
+    x = t(71393),
+    A = t(576705),
+    C = t(954571),
+    g = t(637248),
+    f = t(743015),
+    p = t(652215),
+    N = t(746080),
+    j = t(985018),
+    v = t(551348);
+function b(e) {
+    let { channelId: n } = e;
+    return (0, l.jsx)(o.A, {
+        sidebarType: o.X.ThreadSidebar,
         maxWidth: 600,
-        children: (0, l.jsx)(d.A, { channelId: t, baseChannelId: C.VV.CHANNEL_BROWSER }),
+        children: (0, l.jsx)(u.A, { channelId: n, baseChannelId: N.VV.CHANNEL_BROWSER }),
     });
 }
-function j(e) {
-    let { guildId: t } = e,
-        [r, d] = i.useState(""),
-        N = (0, s.bG)([_.A], () => _.A.getGuild(t)),
-        j = (0, s.bG)([u.Ay], () => u.Ay.getChannels(t)),
-        v = (0, s.bG)([o.A], () => o.A.getCategories(t)),
-        b = (0, m.vh)(t, v, j, r),
-        I = (0, s.bG)([h.A], () => h.A.canWithPartialContext(A.xBc.MANAGE_CHANNELS, { guildId: t })),
-        E = (0, s.bG)([c.Ay], () => null != c.Ay.getCurrentSidebarChannelId(C.VV.CHANNEL_BROWSER)),
-        S = i.useCallback(() => d(""), [d]),
-        w = i.useCallback(() => {
-            (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("64233"), n.e("38405")]).then(n.bind(n, 409200));
-                return (n) => (0, l.jsx)(e, { ...n, channelType: null, guildId: t });
+function E(e) {
+    let { guildId: n } = e,
+        [o, u] = i.useState(""),
+        b = (0, s.bG)([x.A], () => x.A.getGuild(n)),
+        E = (0, s.bG)([m.Ay], () => m.Ay.getChannels(n)),
+        I = (0, s.bG)([h.A], () => h.A.getCategories(n)),
+        w = (0, g.vh)(n, I, E, o),
+        S = (0, s.bG)([A.A], () => A.A.canWithPartialContext(p.xBc.MANAGE_CHANNELS, { guildId: n })),
+        y = (0, s.bG)([_.Ay], () => null != _.Ay.getCurrentSidebarChannelId(N.VV.CHANNEL_BROWSER)),
+        D = i.useCallback(() => u(""), [u]),
+        O = i.useCallback(() => {
+            (0, a.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([t.e("64233"), t.e("40988")]).then(t.bind(t, 409200));
+                return (t) => (0, l.jsx)(e, { ...t, channelType: null, guildId: n });
             });
-        }, [t]);
-    return null == N
+        }, [n]);
+    return null == b
         ? null
         : (0, l.jsxs)("div", {
-              className: p.kw,
+              className: v.kw,
               children: [
                   (0, l.jsxs)("div", {
-                      className: p.wx,
+                      className: v.wx,
                       children: [
-                          (0, l.jsx)(a.IWV, {
-                              query: r,
+                          (0, l.jsx)(r.I, {
+                              query: o,
                               onChange: (e) => {
-                                  "" === r &&
+                                  "" === o &&
                                       "" !== e &&
-                                      x.default.track(A.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
-                                      d(e.toLowerCase());
+                                      C.default.track(p.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
+                                      u(e.toLowerCase());
                               },
-                              onClear: S,
-                              placeholder: f.intl.string(f.t.s5MnmC),
+                              onClear: D,
+                              placeholder: j.intl.string(j.t.s5MnmC),
                           }),
-                          I ? (0, l.jsx)(a.Button, { icon: a.j96, onClick: w, text: f.intl.string(f.t.CumH4u) }) : null,
+                          S ? (0, l.jsx)(d.$, { icon: c.j, onClick: O, text: j.intl.string(j.t.CumH4u) }) : null,
                       ],
                   }),
-                  (0, l.jsx)(g.A, { className: p.T, channels: j, categories: b, guild: N, hasSidebar: E }),
+                  (0, l.jsx)(f.A, { className: v.T, channels: E, categories: w, guild: b, hasSidebar: y }),
               ],
           });
 }

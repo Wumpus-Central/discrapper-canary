@@ -1,54 +1,55 @@
-t.d(n, { _: () => E });
-var l = t(627968);
-t(64700);
-var i = t(877624),
-    r = t(311907),
-    s = t(397927),
-    a = t(937008),
-    o = t(807098),
-    u = t(412260),
-    d = t(810498),
-    c = t(298305),
-    p = t(985018),
-    m = t(625489);
-function E() {
-    let e = (0, r.bG)([u.A], () => {
-            let e = u.A.getMarketingComponentByType(i.C.GIFT_CUSTOMIZATION_BANNER);
+n.d(t, { _: () => S });
+var l = n(627968);
+n(64700);
+var i = n(877624),
+    r = n(311907),
+    s = n(778712),
+    a = n(834730),
+    o = n(937008),
+    u = n(807098),
+    d = n(412260),
+    c = n(810498),
+    p = n(298305),
+    m = n(985018),
+    E = n(387745);
+function S() {
+    let e = (0, r.bG)([d.A], () => {
+            let e = d.A.getMarketingComponentByType(i.C.GIFT_CUSTOMIZATION_BANNER);
             return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftCustomizationBanner;
         }),
-        { claimableRewards: n } = (0, a.Pv)(),
-        t = (0, o.T)(e?.asset),
-        E = (0, o.T)(e?.backgroundAsset),
+        { claimableRewards: t } = (0, o.Pv)(),
+        n = (0, u.T)(e?.asset),
+        S = (0, u.T)(e?.backgroundAsset),
         _ = e?.gradient,
-        S =
+        I =
             null != _ && null != _.colors && _.colors.length >= 2
-                ? (0, d.K5)({ gradient: _.colors, angle: _.angle ?? void 0 })
+                ? (0, c.K5)({ gradient: _.colors, angle: _.angle ?? void 0 })
                 : void 0,
-        x = (0, d.gc)(E);
-    null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
-    let T = (0, d.x)(x, S);
-    return null == e || null == n
+        P = (0, c.gc)(S);
+    null != P && ((P.backgroundSize = "cover, auto"), (P.backgroundPosition = "right center, 0% 0%"));
+    let A = (0, c.x)(P, I);
+    return null == e || null == t
         ? null
         : (0, l.jsxs)("div", {
-              className: m.qD,
-              style: T,
+              className: E.qD,
+              style: A,
               children: [
                   (0, l.jsx)("div", {
-                      className: m.my,
-                      children: (0, l.jsx)(c.A, {
-                          claimableRewards: n,
-                          maxRewardImageSrc: t ?? "",
-                          size: s._3J.SIZE_40,
+                      className: E.my,
+                      children: (0, l.jsx)(p.A, {
+                          claimableRewards: t,
+                          maxRewardImageSrc: n ?? "",
+                          size: s._3.SIZE_40,
                           imageScaling: 1.25,
                       }),
                   }),
-                  (0, l.jsx)(s.Text, {
+                  (0, l.jsx)(a.E, {
                       variant: "text-md/medium",
-                      className: m._M,
+                      className: E._M,
                       color: "always-white",
-                      children: p.intl.string(p.t.Abiuci),
+                      children: m.intl.string(m.t.Abiuci),
                   }),
               ],
           });

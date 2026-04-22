@@ -3,8 +3,8 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(435371),
-    o = n(278148);
+    r = n(990078),
+    o = n(547732);
 function d(e) {
     let {
             children: t,
@@ -18,7 +18,7 @@ function d(e) {
         } = e,
         _ = l.useMemo(() => (null == n || d ? null : (0, i.jsx)("div", { className: o.SH, children: n })), [n, d]),
         m = s ? t : (0, i.jsx)("div", { className: a()(o.pm, { [o.wH]: A }), children: t });
-    return (0, i.jsx)(r.m_, {
+    return (0, i.jsx)(r.m, {
         __unsupportedReactNodeAsText: _,
         position: "right",
         spacing: 12,

@@ -1,104 +1,104 @@
 "use strict";
 n.d(t, { A: () => s });
-var r = n(186306),
-    i = n(711371);
-let a = 4e3;
+var i = n(186306),
+    l = n(711371);
 function s(e, t) {
     let {
         apply: n,
-        deleteBackward: a,
-        deleteForward: s,
-        deleteFragment: l,
+        deleteBackward: s,
+        deleteForward: a,
+        deleteFragment: o,
         insertData: c,
-        insertText: d,
-        onChange: _,
+        insertText: u,
+        onChange: d,
     } = e;
-    function f(n) {
-        let i = r.o.currentEntry(e);
-        if ((null != i && (i.mergeable = !1), n >= e.history.stack.length)) return;
+    function h(n) {
+        let l = i.o.currentEntry(e);
+        if ((null != l && (l.mergeable = !1), n >= e.history.stack.length)) return;
         e.history.index = n;
-        let a = r.o.currentEntry(e);
-        t({ newValue: a.value, newSelection: a.selection });
+        let s = i.o.currentEntry(e);
+        t({ newValue: s.value, newSelection: s.selection });
     }
     (e.history = { index: 0, stack: [] }),
         (e.onChange = () => {
             let { history: t } = e;
-            0 === t.stack.length && ((t.stack = [u(e)]), (t.index = 0)),
-                null != e.selection && (r.o.currentEntry(e).selection = e.selection),
-                (h = null),
-                _();
+            0 === t.stack.length && ((t.stack = [r(e)]), (t.index = 0)),
+                null != e.selection && (i.o.currentEntry(e).selection = e.selection),
+                (p = null),
+                d();
         }),
         (e.undo = () => {
-            e.history.index > 0 && f(e.history.index - 1);
+            e.history.index > 0 && h(e.history.index - 1);
         }),
         (e.redo = () => {
-            e.history.index < e.history.stack.length - 1 && f(e.history.index + 1);
+            e.history.index < e.history.stack.length - 1 && h(e.history.index + 1);
         });
-    let p = null,
-        h = null,
-        m = null;
+    let m = null,
+        p = null,
+        f = null;
     return (
         (e.apply = (t) => {
-            let { history: a } = e;
+            let { history: s } = e;
             n(t);
-            let s = i.VW.richValue(e);
-            s !== m &&
-                (0 === a.stack.length && ((a.stack = [u(e)]), (a.index = 0)),
-                r.o.isSaving(e) && (o(e, t, p), (p = t)),
-                (h = t),
-                (m = s));
+            let a = l.VW.richValue(e);
+            a !== f &&
+                (0 === s.stack.length && ((s.stack = [r(e)]), (s.index = 0)),
+                i.o.isSaving(e) &&
+                    ((function (e, t, n) {
+                        var l, s;
+                        let r,
+                            { selection: a } = e,
+                            o = i.o.currentEntry(e),
+                            c = !0,
+                            u = !0;
+                        if (
+                            ("insert_text" === t.type && 1 === t.text.length
+                                ? ((r = "insert"),
+                                  (u = !(
+                                      ("" === t.text || t.text.endsWith(" ")) &&
+                                      n?.type === "insert_text" &&
+                                      !("" === n.text && n.text.endsWith(" "))
+                                  )))
+                                : "split_node" === t.type
+                                  ? (r = "insert")
+                                  : "remove_text" === t.type && 1 === t.text.length
+                                    ? (r = "delete")
+                                    : ((r = "other"), (c = !1), (u = !1)),
+                            "set_selection" === t.type && null != o)
+                        ) {
+                            o.selection = a;
+                            return;
+                        }
+                        c && ((l = o), (s = r), !(l?.type !== s || Date.now() - l.createdAt >= 4e3))
+                            ? i.o.insertOrMergeEntry(e, r, u)
+                            : i.o.insertEntry(e, r, u);
+                    })(e, t, m),
+                    (m = t)),
+                (p = t),
+                (f = a));
         }),
         (e.deleteBackward = (t) => {
-            r.o.withSingleEntry(e, () => a(t));
+            i.o.withSingleEntry(e, () => s(t));
         }),
         (e.deleteForward = (t) => {
-            r.o.withSingleEntry(e, () => s(t));
+            i.o.withSingleEntry(e, () => a(t));
         }),
         (e.deleteFragment = (t) => {
-            r.o.withSingleEntry(e, () => l(t));
+            i.o.withSingleEntry(e, () => o(t));
         }),
         (e.insertText = (t) => {
-            1 === t.length && h?.type === "remove_text"
-                ? r.o.withMergedEntry(e, () => d(t))
-                : null != e.selection && i.ZF.isExpanded(e.selection)
-                  ? r.o.withSingleEntry(e, () => d(t))
-                  : d(t);
+            1 === t.length && p?.type === "remove_text"
+                ? i.o.withMergedEntry(e, () => u(t))
+                : null != e.selection && l.ZF.isExpanded(e.selection)
+                  ? i.o.withSingleEntry(e, () => u(t))
+                  : u(t);
         }),
         (e.insertData = (t) => {
-            h?.type === "remove_text" ? r.o.withMergedEntry(e, () => c(t)) : r.o.withSingleEntry(e, () => c(t));
+            p?.type === "remove_text" ? i.o.withMergedEntry(e, () => c(t)) : i.o.withSingleEntry(e, () => c(t));
         }),
         e
     );
 }
-function o(e, t, n) {
-    let i,
-        { selection: a } = e,
-        s = r.o.currentEntry(e),
-        o = !0,
-        u = !0;
-    if (
-        ("insert_text" === t.type && 1 === t.text.length
-            ? ((i = "insert"),
-              (u = !(
-                  ("" === t.text || t.text.endsWith(" ")) &&
-                  n?.type === "insert_text" &&
-                  !("" === n.text && n.text.endsWith(" "))
-              )))
-            : "split_node" === t.type
-              ? (i = "insert")
-              : "remove_text" === t.type && 1 === t.text.length
-                ? (i = "delete")
-                : ((i = "other"), (o = !1), (u = !1)),
-        "set_selection" === t.type && null != s)
-    ) {
-        s.selection = a;
-        return;
-    }
-    o && l(s, i) ? r.o.insertOrMergeEntry(e, i, u) : r.o.insertEntry(e, i, u);
-}
-function l(e, t) {
-    return !(e?.type !== t || Date.now() - e.createdAt >= a);
-}
-function u(e) {
-    return { type: "other", mergeable: !1, createdAt: Date.now(), value: i.VW.richValue(e), selection: e.selection };
+function r(e) {
+    return { type: "other", mergeable: !1, createdAt: Date.now(), value: l.VW.richValue(e), selection: e.selection };
 }

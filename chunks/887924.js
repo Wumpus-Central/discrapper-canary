@@ -1,12 +1,10 @@
 "use strict";
-var r;
-r = { value: !0 };
-let i = n(20816),
-    a = n(978884),
+let r = n(20816),
+    i = n(978884),
     s = n(597084),
-    o = () => {},
-    l = new a.TimeoutError();
-class u extends i {
+    a = () => {},
+    o = new i.TimeoutError();
+t.default = class extends r {
     constructor(e) {
         var t, n, r, i;
         if (
@@ -14,8 +12,8 @@ class u extends i {
             (this._intervalCount = 0),
             (this._intervalEnd = 0),
             (this._pendingCount = 0),
-            (this._resolveEmpty = o),
-            (this._resolveIdle = o),
+            (this._resolveEmpty = a),
+            (this._resolveIdle = a),
             !(
                 "number" ==
                     typeof (e = Object.assign(
@@ -60,8 +58,8 @@ class u extends i {
     }
     _resolvePromises() {
         this._resolveEmpty(),
-            (this._resolveEmpty = o),
-            0 === this._pendingCount && (this._resolveIdle(), (this._resolveIdle = o), this.emit("idle"));
+            (this._resolveEmpty = a),
+            0 === this._pendingCount && (this._resolveIdle(), (this._resolveIdle = a), this.emit("idle"));
     }
     _onResumeInterval() {
         this._onInterval(), this._initializeIntervalIfNeeded(), (this._timeoutId = void 0);
@@ -128,22 +126,22 @@ class u extends i {
     }
     async add(e, t = {}) {
         return new Promise((n, r) => {
-            let i = async () => {
+            let s = async () => {
                 this._pendingCount++, this._intervalCount++;
                 try {
-                    let i =
+                    let s =
                         void 0 === this._timeout && void 0 === t.timeout
                             ? e()
-                            : a.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
-                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && r(l);
+                            : i.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
+                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && r(o);
                               });
-                    n(await i);
+                    n(await s);
                 } catch (e) {
                     r(e);
                 }
                 this._next();
             };
-            this._queue.enqueue(i, t), this._tryToStartAnother(), this.emit("add");
+            this._queue.enqueue(s, t), this._tryToStartAnother(), this.emit("add");
         });
     }
     async addAll(e, t) {
@@ -194,5 +192,4 @@ class u extends i {
     set timeout(e) {
         this._timeout = e;
     }
-}
-t.default = u;
+};

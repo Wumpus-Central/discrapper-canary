@@ -1,52 +1,57 @@
-s.d(t, { q: () => o });
-var a = s(627968);
+s.d(t, { q: () => b });
+var i = s(627968);
 s(64700);
-var r = s(503698),
-    i = s.n(r),
-    n = s(397927),
-    l = s(308528),
-    c = s(854627),
+var a = s(503698),
+    l = s.n(a),
+    r = s(778712),
+    n = s(97808),
+    d = s(534514),
+    u = s(834730),
+    c = s(821609),
+    o = s(534890),
+    m = s(308528),
+    f = s(854627),
     _ = s(779733),
-    d = s(427262),
-    u = s(518582),
-    E = s(985018),
-    m = s(177192);
-let o = (e) => {
-    let { recipient: t, isSuccess: s, onClose: r } = e,
-        { avatarSrc: o, eventHandlers: h } = (0, c.A)({ userId: t?.id, size: n._3J.SIZE_56 }),
-        R = d.Ay.getName(t),
-        M = !s;
-    return (0, a.jsxs)("div", {
-        className: i()(m.nM, { [m.z3]: M }),
+    p = s(427262),
+    g = s(466919),
+    h = s(985018),
+    S = s(372829);
+let b = (e) => {
+    let { recipient: t, isSuccess: s, onClose: a } = e,
+        { avatarSrc: b, eventHandlers: x } = (0, f.A)({ userId: t?.id, size: r._3.SIZE_56 }),
+        I = p.Ay.getName(t),
+        N = !s;
+    return (0, i.jsxs)("div", {
+        className: l()(S.nM, { [S.z3]: N }),
         children: [
-            (0, a.jsx)(n.euF, { src: o, "aria-label": R, size: n._3J.SIZE_32, ...h }),
-            (0, a.jsxs)("div", {
-                className: m.Qs,
+            (0, i.jsx)(n.eu, { src: b, "aria-label": I, size: r._3.SIZE_32, ...x }),
+            (0, i.jsxs)("div", {
+                className: S.Qs,
                 children: [
-                    (0, a.jsx)(n.Heading, {
+                    (0, i.jsx)(d.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        className: m.QC,
-                        children: R,
+                        className: S.QC,
+                        children: I,
                     }),
-                    M &&
-                        (0, a.jsx)(n.Text, {
+                    N &&
+                        (0, i.jsx)(u.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
-                            className: m.kc,
-                            children: E.intl.format(u.default["Y/oMwY"], { userName: R }),
+                            className: S.kc,
+                            children: h.intl.format(g.default["Y/oMwY"], { userName: I }),
                         }),
                 ],
             }),
             s &&
-                (0, a.jsx)(n.Button, {
+                (0, i.jsx)(c.$, {
                     variant: "secondary",
                     size: "sm",
-                    text: E.intl.string(E.t["g33r/P"]),
-                    icon: n.oyn,
+                    text: h.intl.string(h.t["g33r/P"]),
+                    icon: o.o,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, _.default)(), l.A.openPrivateChannel({ recipientIds: e }), r());
+                        return (e = t.id), void ((0, _.default)(), m.A.openPrivateChannel({ recipientIds: e }), a());
                     },
                 }),
         ],

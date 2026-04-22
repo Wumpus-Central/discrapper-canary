@@ -1,62 +1,60 @@
-e.d(s, { default: () => u });
+e.d(t, { default: () => k });
 var a = e(627968);
 e(64700);
 var i = e(735438),
     l = e.n(i),
     r = e(330140),
-    n = e(582754),
-    d = e(397927),
-    o = e(736653),
-    c = e(915089),
-    g = e(985018),
-    p = e(883456),
-    x = e(581446),
-    m = e(913221),
-    v = e(415972);
-let _ = [e(239686), e(87813), e(590564)],
-    b = [x, m, v],
-    h = [
-        () => g.intl.string(g.t["w2o/60"]),
-        () => g.intl.string(g.t.FiAvKg),
-        () => g.intl.string(g.t.vKUFek),
-        () => g.intl.string(g.t.veQl5T),
-        () => g.intl.string(g.t.Pxb7BR),
-        () => g.intl.string(g.t["W03w++"]),
-        () => g.intl.string(g.t["95HTb5"]),
-        () => g.intl.string(g.t["+XFelz"]),
-        () => g.intl.string(g.t.hedHel),
-        () => g.intl.string(g.t.jgC65t),
+    n = e(462887),
+    d = e(935462),
+    o = e(534514),
+    c = e(834730),
+    g = e(821609),
+    p = e(736653),
+    m = e(915089),
+    x = e(985018),
+    v = e(602195),
+    _ = e(581446),
+    b = e(913221),
+    h = e(415972);
+let u = [e(239686), e(87813), e(590564)],
+    f = [_, b, h],
+    j = [
+        () => x.intl.string(x.t["w2o/60"]),
+        () => x.intl.string(x.t.FiAvKg),
+        () => x.intl.string(x.t.vKUFek),
+        () => x.intl.string(x.t.veQl5T),
+        () => x.intl.string(x.t.Pxb7BR),
+        () => x.intl.string(x.t["W03w++"]),
+        () => x.intl.string(x.t["95HTb5"]),
+        () => x.intl.string(x.t["+XFelz"]),
+        () => x.intl.string(x.t.hedHel),
+        () => x.intl.string(x.t.jgC65t),
     ],
-    u = (t) => {
-        let { transitionState: s, onClose: e } = t,
-            i = (0, o.Ay)(),
-            x = (0, c.GV)(),
-            m = (0, n.Mw)(i) ? b : _,
-            v = (0, r.A)(() => l().sample(m), [m]),
-            u = (0, r.A)(() => l().sample(h), []);
-        return (0, a.jsxs)(d.EOs, {
-            transitionState: s,
-            className: p.zr,
-            "aria-labelledby": x,
+    k = (s) => {
+        let { transitionState: t, onClose: e } = s,
+            i = (0, p.Ay)(),
+            _ = (0, m.GV)(),
+            b = (0, n.M)(i) ? f : u,
+            h = (0, r.A)(() => l().sample(b), [b]),
+            k = (0, r.A)(() => l().sample(j), []);
+        return (0, a.jsxs)(d.EO, {
+            transitionState: t,
+            className: v.zr,
+            "aria-labelledby": _,
             parentComponent: "FollowSuccessModal",
             children: [
-                (0, a.jsx)("img", { alt: "", src: v, className: p.Sl }),
-                (0, a.jsxs)(d.$mQ, {
-                    className: p.yl,
+                (0, a.jsx)("img", { alt: "", src: h, className: v.Sl }),
+                (0, a.jsxs)(d.$m, {
+                    className: v.yl,
                     children: [
-                        (0, a.jsx)(d.Heading, {
-                            variant: "heading-xl/semibold",
-                            className: p._J,
-                            id: x,
-                            children: u(),
-                        }),
-                        (0, a.jsx)(d.Text, {
+                        (0, a.jsx)(o.D, { variant: "heading-xl/semibold", className: v._J, id: _, children: k() }),
+                        (0, a.jsx)(c.E, {
                             color: "text-muted",
                             variant: "text-md/medium",
-                            className: p.rf,
-                            children: g.intl.string(g.t["2QbSea"]),
+                            className: v.rf,
+                            children: x.intl.string(x.t["2QbSea"]),
                         }),
-                        (0, a.jsx)(d.Button, { variant: "primary", text: g.intl.string(g.t["+IrDzN"]), onClick: e }),
+                        (0, a.jsx)(g.$, { variant: "primary", text: x.intl.string(x.t["+IrDzN"]), onClick: e }),
                     ],
                 }),
             ],

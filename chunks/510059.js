@@ -1,103 +1,101 @@
-n.d(l, { A: () => C });
-var t = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
-    r = n(990078),
-    o = n(397927),
-    d = n(573648),
-    c = n(58149),
-    u = n(681819),
-    m = n(370480),
-    p = n(169869),
-    x = n(773669),
-    A = n(486020),
-    g = n(307600),
-    f = n(652215),
-    h = n(783419),
-    j = n(985018),
-    v = n(622376);
-function I(e) {
-    let { account: l, locale: n, userId: i } = e,
-        s = l.metadata ?? {},
-        a = (0, m.An)(s[h.pK.CREATED_AT], n),
-        x = d.A.get((0, u.ML)(l.type));
+l.d(n, { A: () => E });
+var t = l(627968);
+l(64700);
+var i = l(503698),
+    r = l.n(i),
+    s = l(311907),
+    a = l(990078),
+    o = l(834730),
+    d = l(349288),
+    c = l(509434),
+    u = l(573648),
+    g = l(58149),
+    A = l(681819),
+    m = l(370480),
+    f = l(169869),
+    p = l(773669),
+    x = l(486020),
+    h = l(307600),
+    v = l(652215),
+    j = l(783419),
+    I = l(985018),
+    b = l(985176);
+function C(e) {
+    let { account: n, locale: l, userId: i } = e,
+        r = n.metadata ?? {},
+        s = (0, m.An)(r[j.pK.CREATED_AT], l),
+        p = u.A.get((0, A.ML)(n.type));
     return (0, t.jsx)(y, {
         renderAccountName: () => {
-            let e = x?.getPlatformUserUrl?.(l);
+            let e = p?.getPlatformUserUrl?.(n);
             return null == e
-                ? (0, t.jsx)(r.m, {
+                ? (0, t.jsx)(a.m, {
                       overflowOnly: !0,
-                      text: l.name,
-                      children: (0, t.jsx)(o.Text, { variant: "text-sm/normal", className: v.GW, children: l.name }),
+                      text: n.name,
+                      children: (0, t.jsx)(o.E, { variant: "text-sm/normal", className: b.GW, children: n.name }),
                   })
-                : (0, t.jsx)(o.MzZ, {
+                : (0, t.jsx)(d.Anchor, {
                       href: e,
-                      className: v.Y2,
+                      className: b.Y2,
                       useDefaultUnderlineStyles: !1,
                       "aria-label":
-                          x?.name != null
-                              ? `${x.name}, ${l.name}, ${j.intl.string(j.t.q5jLJB)}`
-                              : `${l.name}, ${j.intl.string(j.t.q5jLJB)}`,
-                      onClick: (n) => {
-                          (0, c.zV)(f.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l.type, other_user_id: i }),
-                              (0, g.h)({ href: e, trusted: x?.type !== f.fg2.DOMAIN }, n);
+                          p?.name != null
+                              ? `${p.name}, ${n.name}, ${I.intl.string(I.t.q5jLJB)}`
+                              : `${n.name}, ${I.intl.string(I.t.q5jLJB)}`,
+                      onClick: (l) => {
+                          (0, g.zV)(v.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: n.type, other_user_id: i }),
+                              (0, h.h)({ href: e, trusted: p?.type !== v.fg2.DOMAIN }, l);
                       },
                       children: (0, t.jsxs)("div", {
-                          className: v.vi,
+                          className: b.vi,
                           children: [
-                              (0, t.jsx)(r.m, {
+                              (0, t.jsx)(a.m, {
                                   overflowOnly: !0,
-                                  text: l.name,
-                                  children: (0, t.jsx)(o.Text, {
+                                  text: n.name,
+                                  children: (0, t.jsx)(o.E, {
                                       variant: "text-sm/normal",
-                                      className: v.GW,
-                                      children: l.name,
+                                      className: b.GW,
+                                      children: n.name,
                                   }),
                               }),
-                              (0, t.jsx)(o.I9m, { size: "xs", color: "currentColor" }),
+                              (0, t.jsx)(c.I, { size: "xs", color: "currentColor" }),
                           ],
                       }),
                   });
         },
         renderMetadata: () =>
-            l.type === f.fg2.REDDIT
-                ? (0, p.xE)(s)
-                : l.type === f.fg2.STEAM
-                  ? (0, p.dy)(s)
-                  : l.type === f.fg2.BLUESKY || l.type === f.fg2.MASTODON || l.type === f.fg2.TWITTER
-                    ? (0, p.ED)(s)
-                    : l.type === f.fg2.PAYPAL
-                      ? (0, p.gZ)(s)
-                      : l.type === f.fg2.EBAY
-                        ? (0, p.ub)(s)
-                        : l.type === f.fg2.TIKTOK
-                          ? (0, p.HU)(s)
+            n.type === v.fg2.REDDIT
+                ? (0, f.xE)(r)
+                : n.type === v.fg2.STEAM
+                  ? (0, f.dy)(r)
+                  : n.type === v.fg2.BLUESKY || n.type === v.fg2.MASTODON || n.type === v.fg2.TWITTER
+                    ? (0, f.ED)(r)
+                    : n.type === v.fg2.PAYPAL
+                      ? (0, f.gZ)(r)
+                      : n.type === v.fg2.EBAY
+                        ? (0, f.ub)(r)
+                        : n.type === v.fg2.TIKTOK
+                          ? (0, f.HU)(r)
                           : null,
-        platformIcon: x?.icon.lightPNG,
-        platformName: x?.name,
-        createdAtDate: a,
+        platformIcon: p?.icon.lightPNG,
+        platformName: p?.name,
+        createdAtDate: s,
     });
 }
 function N(e) {
-    let { identityWithApplication: l } = e,
-        { identity: n, application: i } = l;
-    if (null == n.profile || null == n.profile.username || null == i) return null;
-    let s = A.Ay.getApplicationIconURL({ id: i.id, icon: i.icon });
+    let { identityWithApplication: n } = e,
+        { identity: l, application: i } = n;
+    if (null == l.profile || null == l.profile.username || null == i) return null;
+    let r = x.Ay.getApplicationIconURL({ id: i.id, icon: i.icon });
     return (0, t.jsx)(y, {
         renderAccountName: () =>
-            (0, t.jsx)(r.m, {
+            (0, t.jsx)(a.m, {
                 overflowOnly: !0,
-                text: n.profile.username,
-                children: (0, t.jsx)(o.Text, {
-                    variant: "text-sm/normal",
-                    className: v.GW,
-                    children: n.profile.username,
-                }),
+                text: l.profile.username,
+                children: (0, t.jsx)(o.E, { variant: "text-sm/normal", className: b.GW, children: l.profile.username }),
             }),
         renderMetadata: () => null,
-        platformIcon: s,
+        platformIcon: r,
         platformName: i.name,
         createdAtDate: void 0,
         applyIconBorderRadius: !0,
@@ -105,56 +103,56 @@ function N(e) {
 }
 function y(e) {
     let {
-        renderAccountName: l,
-        renderMetadata: n,
+        renderAccountName: n,
+        renderMetadata: l,
         platformName: i,
-        platformIcon: a,
+        platformIcon: s,
         createdAtDate: d,
         applyIconBorderRadius: c = !1,
     } = e;
     return (0, t.jsxs)("li", {
-        className: v.FI,
+        className: b.FI,
         children: [
-            (0, t.jsx)(r.m, {
+            (0, t.jsx)(a.m, {
                 __unsupportedReactNodeAsText: i,
                 children: (0, t.jsx)("div", {
-                    className: v.k_,
+                    className: b.k_,
                     children: (0, t.jsx)("img", {
-                        alt: j.intl.formatToPlainString(j.t.rtm15P, { name: i }),
-                        className: s()(v.tV, c ? v.sN : null),
-                        src: a,
+                        alt: I.intl.formatToPlainString(I.t.rtm15P, { name: i }),
+                        className: r()(b.tV, c ? b.sN : null),
+                        src: s,
                     }),
                 }),
             }),
             (0, t.jsxs)("div", {
-                className: v.Hd,
+                className: b.Hd,
                 children: [
                     (0, t.jsxs)("div", {
                         children: [
-                            l(),
+                            n(),
                             null != d &&
-                                (0, t.jsx)(o.Text, {
+                                (0, t.jsx)(o.E, {
                                     variant: "text-xs/normal",
-                                    children: j.intl.format(j.t["9rfonh"], { date: d }),
+                                    children: I.intl.format(I.t["9rfonh"], { date: d }),
                                 }),
                         ],
                     }),
-                    (0, t.jsx)("div", { className: v.yu, children: n() }),
+                    (0, t.jsx)("div", { className: b.yu, children: l() }),
                 ],
             }),
         ],
     });
 }
-function C(e) {
-    let { connections: l, applicationIdentities: n, userId: i, className: r } = e,
-        o = (0, a.bG)([x.default], () => x.default.locale);
-    return 0 === l.length && 0 === n.length
+function E(e) {
+    let { connections: n, applicationIdentities: l, userId: i, className: a } = e,
+        o = (0, s.bG)([p.default], () => p.default.locale);
+    return 0 === n.length && 0 === l.length
         ? null
         : (0, t.jsxs)("ul", {
-              className: s()(v.kL, r),
+              className: r()(b.kL, a),
               children: [
-                  l.map((e) => (0, t.jsx)(I, { account: e, userId: i, locale: o }, `${e.type}:${e.id}`)),
-                  n?.map((e) => (0, t.jsx)(N, { identityWithApplication: e }, e.identity.application_id)),
+                  n.map((e) => (0, t.jsx)(C, { account: e, userId: i, locale: o }, `${e.type}:${e.id}`)),
+                  l?.map((e) => (0, t.jsx)(N, { identityWithApplication: e }, e.identity.application_id)),
               ],
           });
 }

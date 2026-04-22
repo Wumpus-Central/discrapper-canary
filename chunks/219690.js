@@ -2,14 +2,7 @@
 var r =
     (this && this.__awaiter) ||
     function (e, t, n, r) {
-        function i(e) {
-            return e instanceof n
-                ? e
-                : new n(function (t) {
-                      t(e);
-                  });
-        }
-        return new (n || (n = Promise))(function (n, s) {
+        return new (n || (n = Promise))(function (i, s) {
             function a(e) {
                 try {
                     l(r.next(e));
@@ -25,16 +18,35 @@ var r =
                 }
             }
             function l(e) {
-                e.done ? n(e.value) : i(e.value).then(a, o);
+                var t;
+                e.done
+                    ? i(e.value)
+                    : ((t = e.value) instanceof n
+                          ? t
+                          : new n(function (e) {
+                                e(t);
+                            })
+                      ).then(a, o);
             }
             l((r = r.apply(e, t || [])).next());
         });
     };
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.MessageLoader = void 0),
-    (t.loadAllMessagesInLocale = o),
-    (t.waitForAllDefaultIntlMessagesLoaded = l),
-    (t.createLoader = u);
+    (t.loadAllMessagesInLocale = function (e) {
+        return r(this, void 0, void 0, function* () {
+            yield Promise.all(a.map((t) => t._loadLocale(e)));
+        });
+    }),
+    (t.waitForAllDefaultIntlMessagesLoaded = function () {
+        return r(this, void 0, void 0, function* () {
+            yield Promise.all(a.map((e) => e.waitForDefaultLocale()));
+        });
+    }),
+    (t.createLoader = function (e, t) {
+        let n = new s(e, t);
+        return a.push(n), n;
+    });
 let i = n(880044);
 class s {
     constructor(e, t) {
@@ -144,17 +156,3 @@ class s {
 }
 t.MessageLoader = s;
 let a = [];
-function o(e) {
-    return r(this, void 0, void 0, function* () {
-        yield Promise.all(a.map((t) => t._loadLocale(e)));
-    });
-}
-function l() {
-    return r(this, void 0, void 0, function* () {
-        yield Promise.all(a.map((e) => e.waitForDefaultLocale()));
-    });
-}
-function u(e, t) {
-    let n = new s(e, t);
-    return a.push(n), n;
-}

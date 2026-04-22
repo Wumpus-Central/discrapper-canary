@@ -1,45 +1,42 @@
 "use strict";
-n.d(t, { A: () => o });
-var r = n(627968),
-    i = n(732955),
-    s = n(783420),
-    a = n(938973);
-let o = function (e) {
+a.d(t, { A: () => s });
+var r = a(627968),
+    l = a(821609),
+    n = a(783420),
+    i = a(938973);
+let s = function (e) {
     let {
             subscriptionTier: t,
-            onClick: n,
-            postSuccessGuild: o,
-            onSubscribeModalClose: l,
-            premiumModalAnalyticsLocation: u,
+            onClick: a,
+            postSuccessGuild: s,
+            onSubscribeModalClose: o,
+            premiumModalAnalyticsLocation: d,
             applicationId: c,
-            confirmationFooter: d,
-            buttonTextOverride: _,
-            defaultTextOverride: f,
-            iconOverride: p,
-            variantOverride: h,
-            ...m
+            confirmationFooter: u,
+            buttonTextOverride: h,
+            defaultTextOverride: p,
+            iconOverride: _,
+            variantOverride: m,
+            ...b
         } = e,
-        E = {
-            onClick: n,
+        { subscribeButtonProps: g } = (0, i.B)({
             subscriptionTier: t,
-            postSuccessGuild: o,
-            onSubscribeModalClose: l,
-            premiumModalAnalyticsLocation: u,
-            applicationId: c,
-            confirmationFooter: d,
-        },
-        { subscribeButtonProps: g } = (0, a.B)({
-            subscriptionTier: t,
-            buttonTextOverride: _,
-            defaultTextOverride: f,
-            iconOverride: p,
-            variantOverride: h,
+            buttonTextOverride: h,
+            defaultTextOverride: p,
+            iconOverride: _,
+            variantOverride: m,
         });
-    return (0, r.jsx)(s.A, {
-        ...E,
+    return (0, r.jsx)(n.A, {
+        onClick: a,
+        subscriptionTier: t,
+        postSuccessGuild: s,
+        onSubscribeModalClose: o,
+        premiumModalAnalyticsLocation: d,
+        applicationId: c,
+        confirmationFooter: u,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(i.$nd, { onClick: t, ...g, ...m });
+            return (0, r.jsx)(l.$, { onClick: t, ...g, ...b });
         },
     });
 };

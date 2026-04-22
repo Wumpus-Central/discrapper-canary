@@ -7234,36 +7234,13 @@ let t = [
     "$WolframUUID",
 ];
 e.exports = function (e) {
-    let n = e.regex,
-        r = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
-        i = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        s = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        a = n.either(n.concat(r, i), s),
-        o = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
-        l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
-        u = n.either(o, l),
-        c = /\*\^[+-]?\d+/,
-        d = { className: "number", relevance: 0, begin: n.concat(a, n.optional(u), n.optional(c)) },
-        _ = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        f = new Set(t),
-        p = {
-            variants: [
-                {
-                    className: "builtin-symbol",
-                    begin: _,
-                    "on:begin": (e, t) => {
-                        f.has(e[0]) || t.ignoreMatch();
-                    },
-                },
-                { className: "symbol", relevance: 0, begin: _ },
-            ],
-        },
-        h = { className: "named-character", begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/ },
-        m = { className: "operator", relevance: 0, begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/ },
-        E = { className: "pattern", relevance: 0, begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/ },
-        g = { className: "slot", relevance: 0, begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/ },
-        A = { className: "brace", relevance: 0, begin: /[[\](){}]/ },
-        I = { className: "message-name", relevance: 0, begin: n.concat("::", _) };
+    let a = e.regex,
+        n = a.either(a.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
+        r = a.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
+        i = a.concat(n, a.optional(r), a.optional(/\*\^[+-]?\d+/)),
+        o = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        s = new Set(t),
+        l = { className: "message-name", relevance: 0, begin: a.concat("::", o) };
     return {
         name: "Mathematica",
         aliases: ["mma", "wl"],
@@ -7276,6 +7253,28 @@ e.exports = function (e) {
             "builtin-symbol": "built_in",
             "message-name": "string",
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ["self"] }), E, g, I, p, h, e.QUOTE_STRING_MODE, d, m, A],
+        contains: [
+            e.COMMENT(/\(\*/, /\*\)/, { contains: ["self"] }),
+            { className: "pattern", relevance: 0, begin: /([a-zA-Z$][a-zA-Z0-9$]*)?_+([a-zA-Z$][a-zA-Z0-9$]*)?/ },
+            { className: "slot", relevance: 0, begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/ },
+            l,
+            {
+                variants: [
+                    {
+                        className: "builtin-symbol",
+                        begin: o,
+                        "on:begin": (e, t) => {
+                            s.has(e[0]) || t.ignoreMatch();
+                        },
+                    },
+                    { className: "symbol", relevance: 0, begin: o },
+                ],
+            },
+            { className: "named-character", begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/ },
+            e.QUOTE_STRING_MODE,
+            { className: "number", relevance: 0, begin: i },
+            { className: "operator", relevance: 0, begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/ },
+            { className: "brace", relevance: 0, begin: /[[\](){}]/ },
+        ],
     };
 };

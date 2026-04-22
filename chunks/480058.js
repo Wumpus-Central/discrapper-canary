@@ -1,48 +1,39 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
-    function t(e, t) {
-        var n = e.split("_");
-        return t % 10 == 1 && t % 100 != 11
-            ? n[0]
-            : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20)
-              ? n[1]
-              : n[2];
+    function t(e, t, n) {
+        var r, i, s;
+        return "m" === n
+            ? t
+                ? "хвилина"
+                : "хвилину"
+            : "h" === n
+              ? t
+                  ? "година"
+                  : "годину"
+              : e +
+                " " +
+                ((r = {
+                    ss: t ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
+                    mm: t ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
+                    hh: t ? "година_години_годин" : "годину_години_годин",
+                    dd: "день_дні_днів",
+                    MM: "місяць_місяці_місяців",
+                    yy: "рік_роки_років",
+                }[n]),
+                (i = +e),
+                (s = r.split("_")),
+                i % 10 == 1 && i % 100 != 11
+                    ? s[0]
+                    : i % 10 >= 2 && i % 10 <= 4 && (i % 100 < 10 || i % 100 >= 20)
+                      ? s[1]
+                      : s[2]);
     }
-    function n(e, n, r) {
-        var i = {
-            ss: n ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
-            mm: n ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
-            hh: n ? "година_години_годин" : "годину_години_годин",
-            dd: "день_дні_днів",
-            MM: "місяць_місяці_місяців",
-            yy: "рік_роки_років",
-        };
-        return "m" === r ? (n ? "хвилина" : "хвилину") : "h" === r ? (n ? "година" : "годину") : e + " " + t(i[r], +e);
-    }
-    function r(e, t) {
-        var n = {
-            nominative: "неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота".split("_"),
-            accusative: "неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу".split("_"),
-            genitive: "неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи".split("_"),
-        };
-        return e
-            ? n[
-                  /(\[[ВвУу]\]) ?dddd/.test(t)
-                      ? "accusative"
-                      : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t)
-                        ? "genitive"
-                        : "nominative"
-              ][e.day()]
-            : n.nominative;
-    }
-    function i(e) {
+    function n(e) {
         return function () {
             return e + "о" + (11 === this.hours() ? "б" : "") + "] LT";
         };
     }
-    return e.defineLocale("uk", {
+    e.defineLocale("uk", {
         months: {
             format: "січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня".split("_"),
             standalone:
@@ -51,7 +42,22 @@
                 ),
         },
         monthsShort: "січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд".split("_"),
-        weekdays: r,
+        weekdays: function (e, t) {
+            var n = {
+                nominative: "неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота".split("_"),
+                accusative: "неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу".split("_"),
+                genitive: "неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи".split("_"),
+            };
+            return e
+                ? n[
+                      /(\[[ВвУу]\]) ?dddd/.test(t)
+                          ? "accusative"
+                          : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t)
+                            ? "genitive"
+                            : "nominative"
+                  ][e.day()]
+                : n.nominative;
+        },
         weekdaysShort: "нд_пн_вт_ср_чт_пт_сб".split("_"),
         weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
         longDateFormat: {
@@ -63,21 +69,21 @@
             LLLL: "dddd, D MMMM YYYY р., HH:mm",
         },
         calendar: {
-            sameDay: i("[Сьогодні "),
-            nextDay: i("[Завтра "),
-            lastDay: i("[Вчора "),
-            nextWeek: i("[У] dddd ["),
+            sameDay: n("[Сьогодні "),
+            nextDay: n("[Завтра "),
+            lastDay: n("[Вчора "),
+            nextWeek: n("[У] dddd ["),
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
                     case 3:
                     case 5:
                     case 6:
-                        return i("[Минулої] dddd [").call(this);
+                        return n("[Минулої] dddd [").call(this);
                     case 1:
                     case 2:
                     case 4:
-                        return i("[Минулого] dddd [").call(this);
+                        return n("[Минулого] dddd [").call(this);
                 }
             },
             sameElse: "L",
@@ -86,17 +92,17 @@
             future: "за %s",
             past: "%s тому",
             s: "декілька секунд",
-            ss: n,
-            m: n,
-            mm: n,
+            ss: t,
+            m: t,
+            mm: t,
             h: "годину",
-            hh: n,
+            hh: t,
             d: "день",
-            dd: n,
+            dd: t,
             M: "місяць",
-            MM: n,
+            MM: t,
             y: "рік",
-            yy: n,
+            yy: t,
         },
         meridiemParse: /ночі|ранку|дня|вечора/,
         isPM: function (e) {
@@ -122,4 +128,4 @@
         },
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

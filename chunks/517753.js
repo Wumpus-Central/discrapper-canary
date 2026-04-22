@@ -1,76 +1,77 @@
-s.d(t, { A: () => A });
-var r = s(627968);
+s.d(t, { A: () => C });
+var i = s(627968);
 s(64700);
-var i = s(421380),
-    n = s(397927),
-    l = s(793574),
-    a = s(688810),
-    o = s(404374),
-    c = s(422936),
-    d = s(234419),
-    u = s(725807),
-    f = s(511484),
-    h = s(400669),
-    x = s(909536),
-    p = s(927578),
+var r = s(862482),
+    n = s(834730),
+    l = s(194261),
+    a = s(793574),
+    o = s(688810),
+    c = s(404374),
+    d = s(422936),
+    u = s(234419),
+    f = s(725807),
+    h = s(511484),
+    x = s(400669),
+    p = s(909536),
+    _ = s(927578),
     m = s(213279),
-    _ = s(788868),
-    g = s(191850),
-    j = s(985018),
-    v = s(591960);
-function A(e) {
+    g = s(788868),
+    j = s(710787),
+    v = s(985018),
+    A = s(518728);
+function C(e) {
     let { onClose: t } = e,
-        { analyticsLocations: s } = (0, a.Ay)(l.A.GO_LIVE_MODAL_V2),
-        A = (0, x.St)("hd_streaming_upsell_ribbon"),
-        S = (0, d.V)(),
-        y = (0, c.O)(),
-        C = S?.subscription_trial?.sku_id === _.pe.TIER_2 || (0, f.U9)(y, _.pe.TIER_2),
-        b = j.intl.string(g.default["+f+cqk"]);
+        { analyticsLocations: s } = (0, o.Ay)(a.A.GO_LIVE_MODAL_V2),
+        C = (0, p.St)("hd_streaming_upsell_ribbon"),
+        S = (0, u.V)(),
+        y = (0, d.O)(),
+        b = S?.subscription_trial?.sku_id === g.pe.TIER_2 || (0, h.U9)(y, g.pe.TIER_2),
+        w = v.intl.string(j.default["+f+cqk"]);
     return (
-        C &&
+        b &&
             (null != S
-                ? (b = (0, p.FY)({
+                ? (w = (0, _.FY)({
                       intervalType: S?.subscription_trial?.interval,
                       intervalCount: S?.subscription_trial?.interval_count,
                   }))
-                : null != y && (b = j.intl.formatToPlainString(j.t.bkQ4bH, { percent: y.discount.amount }))),
-        (0, r.jsxs)("div", {
-            className: v.zr,
+                : null != y && (w = v.intl.formatToPlainString(v.t.bkQ4bH, { percent: y.discount.amount }))),
+        (0, i.jsxs)("div", {
+            className: A.zr,
             children: [
-                (0, r.jsxs)(n.Text, {
-                    className: v.aV,
+                (0, i.jsxs)(n.E, {
+                    className: A.aV,
                     variant: "text-xs/normal",
                     color: "always-white",
                     children: [
-                        (0, r.jsx)(n.XAi, { size: "xxs", color: "currentColor" }),
-                        j.intl.format(j.t.sLJ3EV, {
+                        (0, i.jsx)(l.X, { size: "xxs", color: "currentColor" }),
+                        v.intl.format(v.t.sLJ3EV, {
                             onNitroClick: function () {
                                 (0, m.p)({ analyticsLocation: s[0], onClose: t });
                             },
                         }),
                     ],
                 }),
-                (0, r.jsxs)("div", {
-                    className: v.OQ,
+                (0, i.jsxs)("div", {
+                    className: A.OQ,
                     children: [
-                        A &&
-                            (0, r.jsx)(h.l, {
+                        C &&
+                            (0, i.jsx)(x.l, {
                                 size: "sm",
-                                className: v.ij,
-                                location: l.A.PREMIUM_WISHLIST_STREAM_UPSELL,
+                                className: A.ij,
+                                location: a.A.PREMIUM_WISHLIST_STREAM_UPSELL,
                             }),
-                        (0, r.jsx)(u.A, {
-                            className: v.lI,
-                            iconClassName: v.PC,
-                            size: i.$n.Sizes.TINY,
-                            color: i.$n.Colors.BRAND_INVERTED,
-                            subscriptionTier: _.pe.TIER_2,
-                            buttonShineClassName: v.vb,
-                            iconColor: o.k0.PREMIUM_TIER_2,
+                        (0, i.jsx)(f.A, {
+                            className: A.lI,
+                            iconClassName: A.PC,
+                            size: r.$n.Sizes.TINY,
+                            color: r.$n.Colors.BRAND_INVERTED,
+                            subscriptionTier: g.pe.TIER_2,
+                            buttonShineClassName: A.vb,
+                            iconColor: c.k0.PREMIUM_TIER_2,
                             onClick: () => {
                                 t();
                             },
-                            textOptions: { subscribeText: b, textClassName: v.U_ },
+                            textOptions: { subscribeText: w, textClassName: A.U_ },
                         }),
                     ],
                 }),

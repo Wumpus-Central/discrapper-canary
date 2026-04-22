@@ -1,35 +1,11 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => l });
 var r = n(155718),
     i = n(315069),
     s = n(611010),
     a = n(486020),
     o = n(898736);
-function l(e) {
-    if (e?.steam != null || e?.opencritic != null)
-        return {
-            steam:
-                null != e.steam
-                    ? {
-                          rating: e.steam.rating,
-                          ratingCount: e.steam.rating_count,
-                          recentRating: e.steam.recent_rating,
-                          recentRatingCount: e.steam.recent_rating_count,
-                          localizedRating: e.steam.localized_rating,
-                          localizedRatingCount: e.steam.localized_rating_count,
-                      }
-                    : void 0,
-            opencritic:
-                null != e.opencritic
-                    ? {
-                          topCriticRating: e.opencritic.top_critic_rating,
-                          topCriticRatingCount: e.opencritic.top_critic_rating_count,
-                          tier: e.opencritic.tier,
-                      }
-                    : void 0,
-        };
-}
-class u extends i.A {
+class l extends i.A {
     id;
     name;
     description;
@@ -99,7 +75,30 @@ class u extends i.A {
             (this.firstReleaseDate = e.first_release_date),
             (this.shopCollectionIds = e.shop_collection_ids),
             (this.steamReleaseStatus = e.steam_release_status),
-            (this.reviews = l(e.reviews)),
+            (this.reviews = (function (e) {
+                if (e?.steam != null || e?.opencritic != null)
+                    return {
+                        steam:
+                            null != e.steam
+                                ? {
+                                      rating: e.steam.rating,
+                                      ratingCount: e.steam.rating_count,
+                                      recentRating: e.steam.recent_rating,
+                                      recentRatingCount: e.steam.recent_rating_count,
+                                      localizedRating: e.steam.localized_rating,
+                                      localizedRatingCount: e.steam.localized_rating_count,
+                                  }
+                                : void 0,
+                        opencritic:
+                            null != e.opencritic
+                                ? {
+                                      topCriticRating: e.opencritic.top_critic_rating,
+                                      topCriticRatingCount: e.opencritic.top_critic_rating_count,
+                                      tier: e.opencritic.tier,
+                                  }
+                                : void 0,
+                    };
+            })(e.reviews)),
             (this.opencriticUrl = e.opencritic_url),
             (this.gameFlags = e.game_flags ?? 0);
     }

@@ -1,40 +1,53 @@
-"use strict";
-function r(e) {
+function n(e) {
     let t = [
         "prefix is non-null and namespace is null",
         "prefix not bound to a namespace",
         "prefix inte bundet till en namnrymd",
         /Namespace prefix .+ is not defined/,
     ];
-    for (let n = 0; n < t.length; n++) if (new RegExp(t[n]).test(e.message)) return !0;
+    for (let i = 0; i < t.length; i++) if (new RegExp(t[i]).test(e.message)) return !0;
     return !1;
 }
-function i(e) {
-    let t = e.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
-    if (!t) return e;
-    let n = t[1],
-        r = a(e),
-        i = s(e).filter((e) => -1 === r.indexOf(e));
-    return 0 === i.length ? e : u(e, n, l(i));
+function r(e) {
+    var t, i, n;
+    let r,
+        a = e.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+    if (!a) return e;
+    let s = a[1],
+        l = (function (e) {
+            let t,
+                i = [],
+                n = /xmlns:([\w-]+)=["'][^"']+["']/g;
+            for (; null !== (t = n.exec(e)); ) -1 === i.indexOf(t[1]) && i.push(t[1]);
+            return i;
+        })(e),
+        u = (function (e) {
+            let t,
+                i = [],
+                n = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+            for (; null !== (t = n.exec(e)); ) {
+                let e = t[1];
+                "xmlns" !== e && "xml" !== e && -1 === i.indexOf(e) && i.push(e);
+            }
+            return i;
+        })(e).filter((e) => -1 === l.indexOf(e));
+    return 0 === u.length
+        ? e
+        : ((t = e),
+          (i = s),
+          (n = (function (e) {
+              let t = [];
+              for (let i = 0; i < e.length; i++) {
+                  let n = e[i],
+                      r = o[n] || "http://fallback.namespace/" + n;
+                  t.push(" xmlns:" + n + '="' + r + '"');
+              }
+              return t.join("");
+          })(u)),
+          (r = RegExp("<" + i + "([^>]*)>")),
+          t.replace(r, "<" + i + "$1" + n + ">"));
 }
-function a(e) {
-    let t,
-        n = [],
-        r = /xmlns:([\w-]+)=["'][^"']+["']/g;
-    for (; null !== (t = r.exec(e)); ) -1 === n.indexOf(t[1]) && n.push(t[1]);
-    return n;
-}
-function s(e) {
-    let t,
-        n = [],
-        r = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
-    for (; null !== (t = r.exec(e)); ) {
-        let e = t[1];
-        "xmlns" !== e && "xml" !== e && -1 === n.indexOf(e) && n.push(e);
-    }
-    return n;
-}
-n.d(t, { E: () => i, g: () => r });
+i.d(t, { E: () => r, g: () => n });
 let o = {
     xmp: "http://ns.adobe.com/xap/1.0/",
     tiff: "http://ns.adobe.com/tiff/1.0/",
@@ -45,16 +58,3 @@ let o = {
     stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
     photoshop: "http://ns.adobe.com/photoshop/1.0/",
 };
-function l(e) {
-    let t = [];
-    for (let n = 0; n < e.length; n++) {
-        let r = e[n],
-            i = o[r] || "http://fallback.namespace/" + r;
-        t.push(" xmlns:" + r + '="' + i + '"');
-    }
-    return t.join("");
-}
-function u(e, t, n) {
-    let r = RegExp("<" + t + "([^>]*)>");
-    return e.replace(r, "<" + t + "$1" + n + ">");
-}

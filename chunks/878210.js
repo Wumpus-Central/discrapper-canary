@@ -1,27 +1,27 @@
-t.d(l, { A: () => o });
-var i = t(627968),
-    n = t(64700),
-    s = t(397927),
-    a = t(203982),
-    r = t(652215);
+l.d(n, { A: () => o });
+var t = l(627968),
+    i = l(64700),
+    r = l(568602),
+    s = l(203982),
+    a = l(652215);
 function o(e) {
-    let { children: l } = e,
-        [t, o] = n.useState(!1);
+    let { children: n } = e,
+        [l, o] = i.useState(!1);
     return (
-        n.useEffect(() => {
+        i.useEffect(() => {
             let e = () => {
                 o(!0),
                     setTimeout(() => {
                         o(!1);
-                    }, 1e3);
+                    }, 300);
             };
             return (
-                a._.subscribe(r.jej.SHAKE_PROFILE_MODAL, e),
+                s._.subscribe(a.jej.SHAKE_PROFILE_MODAL, e),
                 () => {
-                    a._.unsubscribe(r.jej.SHAKE_PROFILE_MODAL, e);
+                    s._.unsubscribe(a.jej.SHAKE_PROFILE_MODAL, e);
                 }
             );
         }, []),
-        (0, i.jsx)(s.bfh, { isShaking: t, intensity: 1.4, children: l })
+        (0, t.jsx)(r.b, { isShaking: l, intensity: 1.4, children: n })
     );
 }

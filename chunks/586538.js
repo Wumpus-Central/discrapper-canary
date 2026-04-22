@@ -4,16 +4,15 @@ function r(e, t) {
     var n = e % 19,
         r = Math.floor(e / 100),
         i = e % 100,
-        a = Math.floor(r / 4),
-        s = r % 4,
-        o = Math.floor((r + 8) / 25),
-        l = Math.floor((r - o + 1) / 3),
-        u = Math.floor(19 * n + r - a - l + 15) % 30,
-        c = Math.floor(32 + 2 * s + 2 * Math.floor(i / 4) - u - (i % 4)) % 7,
-        d = Math.floor((n + 11 * u + 22 * c) / 451);
+        s = Math.floor(r / 4),
+        a = Math.floor((r + 8) / 25),
+        o = Math.floor((r - a + 1) / 3),
+        l = Math.floor(19 * n + r - s - o + 15) % 30,
+        u = Math.floor(32 + (r % 4) * 2 + 2 * Math.floor(i / 4) - l - (i % 4)) % 7,
+        d = Math.floor((n + 11 * l + 22 * u) / 451);
     return [
         Math.ceil(
-            (Date.UTC(e, Math.floor((u + c - 7 * d + 114) / 31) - 1, ((u + c - 7 * d + 114) % 31) + 1 + t) -
+            (Date.UTC(e, Math.floor((l + u - 7 * d + 114) / 31) - 1, ((l + u - 7 * d + 114) % 31) + 1 + t) -
                 Date.UTC(e, 0, 1)) /
                 864e5,
         ),

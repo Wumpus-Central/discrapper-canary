@@ -1,35 +1,28 @@
 "use strict";
-n.d(t, { L7: () => d, qr: () => f, uG: () => _ }), n(167789), n(954571), n(652215);
+n.d(t, { L7: () => l, qr: () => d, uG: () => u }), n(954571), n(652215);
 let r = ["COLD_START"],
-    i = "NO_REASONS",
-    s = !0,
-    a = new Map();
-function o(e) {
-    let t = a.get(e) ?? 0;
-    a.set(e, t + 1);
+    i = !0,
+    s = new Map();
+function a(e) {
+    let t = (s.get(e) ?? 0) - 1;
+    t <= 0 ? s.delete(e) : s.set(e, t);
 }
-function l(e) {
-    let t = (a.get(e) ?? 0) - 1;
-    t <= 0 ? a.delete(e) : a.set(e, t);
+function o() {
+    return s.size > 0 || i;
+}
+function l() {
+    let e = [...(i ? r : []), ...s.keys()].sort();
+    return e.length > 0 ? e.join(",") : "NO_REASONS";
 }
 function u(e) {
-    return `BRIDGE:${e}`;
-}
-function c() {
-    return a.size > 0 || s;
-}
-function d() {
-    let e = [...(s ? r : []), ...a.keys()].sort();
-    return e.length > 0 ? e.join(",") : i;
-}
-function _(e) {
-    p(() => {
-        o(e), l(u(e));
+    c(() => {
+        let t;
+        (t = s.get(e) ?? 0), s.set(e, t + 1), a(`BRIDGE:${e}`);
     });
 }
-function f(e) {
-    p(() => l(e));
+function d(e) {
+    c(() => a(e));
 }
-function p(e) {
-    c(), (s = !1), e(), c();
+function c(e) {
+    o(), (i = !1), e(), o();
 }

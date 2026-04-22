@@ -1,26 +1,23 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(147426),
-    i = n(364242),
-    a = n(476858),
-    s = n(972409);
-let o = 2,
-    l = 3;
-class u extends s.d {
+r.d(t, { A: () => o });
+var n = r(147426),
+    s = r(364242),
+    a = r(476858),
+    i = r(972409);
+class o extends i.d {
     innerPatternString(e) {
-        return `((?:в|у)\\s*)?(${(0, a.uJ)(r.eB)})\\s*(?:[,-]?\\s*(${r.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`;
+        return `((?:в|у)\\s*)?(${(0, a.uJ)(n.eB)})\\s*(?:[,-]?\\s*(${n.fp})?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`;
     }
     innerExtract(e, t) {
-        let n = t[o].toLowerCase();
-        if (t[0].length <= 3 && !r.Wp[n]) return null;
+        let r = t[2].toLowerCase();
+        if (t[0].length <= 3 && !n.Wp[r]) return null;
         let a = e.createParsingResult(t.index, t.index + t[0].length);
         a.start.imply("day", 1);
-        let s = r.eB[n];
-        if ((a.start.assign("month", s), t[l])) {
-            let e = (0, r.jp)(t[l]);
+        let i = n.eB[r];
+        if ((a.start.assign("month", i), t[3])) {
+            let e = (0, n.jp)(t[3]);
             a.start.assign("year", e);
         } else {
-            let t = (0, i.Y)(e.reference.instant, 1, s);
+            let t = (0, s.Y)(e.reference.instant, 1, i);
             a.start.imply("year", t);
         }
         return a;

@@ -1,54 +1,55 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var l = n(311907),
     s = n(827734),
     a = n(990078),
-    r = n(397927),
-    o = n(775602),
+    r = n(818407),
+    o = n(821609),
+    d = n(775602),
     c = n(890687),
-    d = n(92246),
-    u = n(792620),
-    h = n(793683),
-    A = n(985018);
-function _(e) {
-    let { quest: t, questContent: n, sourceQuestContent: _, onClose: m, size: g = "md" } = e,
-        p = (0, c.LS)(t),
-        f = (0, l.bG)([o.A], () => o.A.useReducedMotion),
-        x = null != (0, d._Z)(t.config),
-        E = (0, u.vv)(t),
-        I = (0, h.v)({
+    u = n(92246),
+    h = n(792620),
+    A = n(793683),
+    _ = n(985018);
+function m(e) {
+    let { quest: t, questContent: n, sourceQuestContent: m, onClose: g, size: p = "md" } = e,
+        f = (0, c.LS)(t),
+        E = (0, l.bG)([d.A], () => d.A.useReducedMotion),
+        x = null != (0, u._Z)(t.config),
+        I = (0, h.vv)(t),
+        C = (0, A.v)({
             quest: t,
             questContent: n,
-            sourceQuestContent: _,
-            onCloseModal: m,
+            sourceQuestContent: m,
+            onCloseModal: g,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
-        C =
+        b =
             t.userStatus?.claimedAt != null
                 ? x
-                    ? A.intl.string(A.t.WYchde)
-                    : A.intl.string(A.t.vTgCWx)
-                : A.intl.string(A.t.cfY4PE),
+                    ? _.intl.string(_.t.WYchde)
+                    : _.intl.string(_.t.vTgCWx)
+                : _.intl.string(_.t.cfY4PE),
         N =
             t.userStatus?.completedAt == null
-                ? p
-                    ? A.intl.string(A.t.NJ6Bnm)
-                    : E
-                      ? A.intl.string(A.t.USNO1K)
+                ? f
+                    ? _.intl.string(_.t.NJ6Bnm)
+                    : I
+                      ? _.intl.string(_.t.USNO1K)
                       : void 0
                 : void 0;
     return (0, i.jsx)(a.m, {
         text: N,
         children: (0, i.jsx)("div", {
-            children: (0, i.jsx)(r.Button, {
+            children: (0, i.jsx)(o.$, {
                 variant: "secondary",
                 fullWidth: !0,
                 icon: ((e, t) => {
                     if (e.userStatus?.claimedAt == null)
                         return {
                             type: "rive",
-                            asset: r.Vs8,
+                            asset: r.V,
                             riveProps: {
                                 withReducedMotion: "play",
                                 dataBinding: {
@@ -58,11 +59,11 @@ function _(e) {
                                 },
                             },
                         };
-                })(t, f),
-                onClick: I,
-                text: C,
+                })(t, E),
+                onClick: C,
+                text: b,
                 disabled: t.userStatus?.completedAt == null,
-                size: g,
+                size: p,
             }),
         }),
     });

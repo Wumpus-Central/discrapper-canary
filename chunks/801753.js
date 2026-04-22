@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Ns: "infoNotice__9b260",
     At: "paymentModalBreadcrumbs__9b260",

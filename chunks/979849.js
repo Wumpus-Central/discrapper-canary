@@ -1,88 +1,87 @@
-"use strict";
-n.d(t, { A: () => g });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(311907),
-    l = n(397927),
-    u = n(688810),
-    c = n(954921),
-    d = n(290863),
-    _ = n(837921),
-    f = n(351242),
-    p = n(385612),
-    h = n(339984),
-    m = n(577401);
-let E = _.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
-function g(e) {
+a.d(i, { A: () => C });
+var r = a(627968),
+    n = a(64700),
+    l = a(503698),
+    s = a.n(l),
+    t = a(311907),
+    d = a(97808),
+    o = a(778712),
+    u = a(935154),
+    c = a(939249),
+    m = a(403581),
+    g = a(265872),
+    p = a(22231),
+    v = a(688810),
+    h = a(562819),
+    A = a(290863),
+    y = a(837921),
+    x = a(351242),
+    P = a(385612),
+    f = a(339984),
+    j = a(430770);
+let b = y.Ay.getEnableHardwareAcceleration() ? d.Js : d.eu;
+function C(e) {
     let {
-            user: t,
-            guild: n,
-            displayProfile: s,
-            canUsePremiumCustomization: _,
-            previewAvatar: g,
-            previewAvatarDecorationSrc: A,
+            user: i,
+            guild: a,
+            displayProfile: l,
+            canUsePremiumCustomization: d,
+            previewAvatar: y,
+            previewAvatarDecorationSrc: C,
             previewTheme: I,
-            previewPrimaryColor: T,
-            className: S,
-            disabledInputs: y,
-            isTryItOut: v,
-            onUpsellClick: N,
+            previewPrimaryColor: w,
+            className: T,
+            disabledInputs: D,
+            isTryItOut: N,
+            onUpsellClick: k,
         } = e,
-        C = i.useRef(null),
-        { analyticsLocations: R, newestAnalyticsLocation: O } = (0, u.Ay)(),
-        b = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
-        D = null == n || s?.canUsePremiumProfileCustomization || _,
-        L = (0, r.jsx)(E, {
-            src: g,
-            avatarDecoration: A,
-            imageClassName: a()(S, { [m.Lw]: !y }),
-            size: l._3J.SIZE_80,
-            "aria-label": t.username,
-            status: b,
+        S = n.useRef(null),
+        { analyticsLocations: O, newestAnalyticsLocation: U } = (0, v.Ay)(),
+        B = (0, t.bG)([A.A], () => A.A.getStatus(i.id)),
+        _ = null == a || l?.canUsePremiumProfileCustomization || d,
+        E = (0, r.jsx)(b, {
+            src: y,
+            avatarDecoration: C,
+            imageClassName: s()(T, { [j.Lw]: !D }),
+            size: o._3.SIZE_80,
+            "aria-label": i.username,
+            status: B,
             statusTooltip: !1,
-            statusBackdropColor: null != T ? (0, l.C$5)(I) : void 0,
+            statusBackdropColor: null != w ? (0, u.C$)(I) : void 0,
         });
-    return y
-        ? (0, r.jsx)("div", { className: m.my, children: L })
-        : D
-          ? (0, r.jsx)(l.YNO, {
-                targetElementRef: C,
+    return D
+        ? (0, r.jsx)("div", { className: j.my, children: E })
+        : _
+          ? (0, r.jsx)(g.Y, {
+                targetElementRef: S,
                 renderPopout: (e) => {
-                    let { closePopout: t } = e;
-                    return (0, r.jsx)(f.A, {
-                        onClose: t,
+                    let { closePopout: i } = e;
+                    return (0, r.jsx)(x.A, {
+                        onClose: i,
                         onChangeAvatar: () =>
-                            (0, p.XD)({ uploadType: h.HL.AVATAR, guildId: n?.id, analyticsSource: O, isTryItOut: v }),
+                            (0, P.XD)({ uploadType: f.HL.AVATAR, guildId: a?.id, analyticsSource: U, isTryItOut: N }),
                         onChangeAvatarDecoration: () => {
-                            (0, c.L)({ guild: null == n ? void 0 : n, analyticsLocations: R });
+                            (0, h.L)({ guild: null == a ? void 0 : a, analyticsLocations: O });
                         },
                     });
                 },
                 children: (e) =>
-                    (0, r.jsxs)(l.DUT, {
+                    (0, r.jsxs)(c.D, {
                         ...e,
-                        innerRef: C,
-                        className: a()(m.my, m.vk),
+                        innerRef: S,
+                        className: s()(j.my, j.vk),
                         children: [
-                            L,
-                            (0, r.jsx)(l.R2l, {
-                                size: "custom",
-                                className: m.QY,
-                                width: 20,
-                                height: 20,
-                                color: "white",
-                            }),
+                            E,
+                            (0, r.jsx)(p.R, { size: "custom", className: j.QY, width: 20, height: 20, color: "white" }),
                         ],
                     }),
             })
-          : (0, r.jsxs)(l.DUT, {
-                onClick: N,
-                className: a()(m.my, m.vk),
+          : (0, r.jsxs)(c.D, {
+                onClick: k,
+                className: s()(j.my, j.vk),
                 children: [
-                    L,
-                    (0, r.jsx)(l.tvc, { size: "custom", className: m.QY, width: 20, height: 20, color: "white" }),
+                    E,
+                    (0, r.jsx)(m.t, { size: "custom", className: j.QY, width: 20, height: 20, color: "white" }),
                 ],
             });
 }

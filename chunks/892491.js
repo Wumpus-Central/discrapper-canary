@@ -1,13 +1,11 @@
 "use strict";
-n.d(t, { F: () => r });
-var r = (function (e) {
-    return (
-        (e.DARK = "DARK"),
-        (e.LIGHTBOX = "LIGHTBOX"),
-        (e.IMMERSIVE = "IMMERSIVE"),
-        (e.SUBTLE = "SUBTLE"),
-        (e.BLUR = "BLUR"),
-        (e.TOP_RADIAL = "TOP_RADIAL"),
-        e
-    );
-})({});
+n.d(t, { F: () => i });
+var r,
+    i =
+        (((r = {}).DARK = "DARK"),
+        (r.LIGHTBOX = "LIGHTBOX"),
+        (r.IMMERSIVE = "IMMERSIVE"),
+        (r.SUBTLE = "SUBTLE"),
+        (r.BLUR = "BLUR"),
+        (r.TOP_RADIAL = "TOP_RADIAL"),
+        r);

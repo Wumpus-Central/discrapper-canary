@@ -1,77 +1,73 @@
-"use strict";
 n.d(t, { A: () => S });
-var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n.n(a),
-    o = n(397927),
-    l = n(73153),
-    u = n(696459),
-    c = n(58149),
-    d = n(861382),
-    _ = n(392054),
-    f = n(580424),
-    p = n(235986),
-    h = n(29599),
-    m = n(374803);
+var l = n(627968),
+    r = n(64700),
+    i = n(735438),
+    s = n.n(i),
+    o = n(289873),
+    u = n(73153),
+    a = n(696459),
+    m = n(58149),
+    c = n(861382),
+    d = n(392054),
+    p = n(580424),
+    y = n(235986),
+    A = n(29599),
+    h = n(374803);
 n(827669);
 var g = n(652215),
-    E = n(985018),
-    A = n(538830);
-let I = { results: { command: null, integrations: [], isLoading: !1 } };
-function T(e, t, n) {
-    let r;
+    M = n(985018),
+    I = n(331691);
+let N = { results: { command: null, integrations: [], isLoading: !1 } };
+function E(e, t, n) {
+    let l;
     return (
-        n.commands === m.Ze.OLD_BUILT_INS
-            ? ((r = t.split(" ")[0].substring(1)), (t = t.substring((r.length ?? 0) + 1)))
-            : (r = d.A.getActiveCommand(e.id)?.untranslatedName),
-        { command: r, query: t.trim() }
+        n.commands === h.Ze.OLD_BUILT_INS
+            ? ((l = t.split(" ")[0].substring(1)), (t = t.substring((l.length ?? 0) + 1)))
+            : (l = c.A.getActiveCommand(e.id)?.untranslatedName),
+        { command: l, query: t.trim() }
     );
 }
-function y(e) {
-    return e.meta.url;
-}
 let S = {
-    stores: [d.A, h.A],
-    matches: (e, t, n, r, i) =>
-        i.commands !== m.Ze.DISABLED &&
-        (i.commands === m.Ze.OLD_BUILT_INS
+    stores: [c.A, A.A],
+    matches: (e, t, n, l, r) =>
+        r.commands !== h.Ze.DISABLED &&
+        (r.commands === h.Ze.OLD_BUILT_INS
             ? n.startsWith("/gif") || n.startsWith("/tenor")
-            : d.A.getActiveCommand(e.id)?.integrationType === g.p_j.GIF && d.A.getOptionStates(e.id).query.hasValue),
-    queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = T(e, n, r);
-        if (null == a) return I;
-        let l = s().findKey(g.Z86, (e) => e.command === a);
-        i && null != l && o.length > 0 && u.A.search(l, o);
-        let c = h.A.getResults(l, o);
-        return null == c ? I : { results: { command: a, integrations: c.results, isLoading: c.loading } };
+            : c.A.getActiveCommand(e.id)?.integrationType === g.p_j.GIF && c.A.getOptionStates(e.id).query.hasValue),
+    queryResults(e, t, n, l, r) {
+        let { command: i, query: o } = E(e, n, l);
+        if (null == i) return N;
+        let u = s().findKey(g.Z86, (e) => e.command === i);
+        r && null != u && o.length > 0 && a.A.search(u, o);
+        let m = A.A.getResults(u, o);
+        return null == m ? N : { results: { command: i, integrations: m.results, isLoading: m.loading } };
     },
     renderResults(e) {
         let {
                 results: { integrations: t, isLoading: n },
-                selectedIndex: a,
+                selectedIndex: i,
                 channel: s,
-                query: l,
-                options: u,
-                onHover: c,
-                onClick: _,
+                query: u,
+                options: a,
+                onHover: m,
+                onClick: d,
             } = e,
-            { command: h, query: I } = T(s, l, u);
-        if (null == h || 0 === I.length) return null;
-        if (n) return (0, r.jsx)(o.y$y, { className: A.u1, type: o.y$y.Type.SPINNING_CIRCLE });
+            { command: A, query: N } = E(s, u, a);
+        if (null == A || 0 === N.length) return null;
+        if (n) return (0, l.jsx)(o.y, { className: I.u1, type: o.y.Type.SPINNING_CIRCLE });
         if (null != t) {
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === g.p_j.GIF)
                         return (
                             (e = !0),
-                            (0, r.jsx)(
-                                f.Ay.GIFIntegration,
+                            (0, l.jsx)(
+                                p.Ay.GIFIntegration,
                                 {
-                                    className: A.ho,
-                                    onClick: _,
-                                    onHover: c,
-                                    selected: a === n,
+                                    className: I.ho,
+                                    onClick: d,
+                                    onHover: m,
+                                    selected: i === n,
                                     index: n,
                                     width: t.meta.width ?? 0,
                                     height: t.meta.height ?? 0,
@@ -82,19 +78,19 @@ let S = {
                             )
                         );
                 }),
-                o = u.commands === m.Ze.OLD_BUILT_INS ? h : (d.A.getActiveCommand(s.id)?.integrationTitle ?? h),
-                l =
-                    I.length > 0 && null != o
-                        ? E.intl.format(E.t["3njXz/"], { query: I, command: o })
+                o = a.commands === h.Ze.OLD_BUILT_INS ? A : (c.A.getActiveCommand(s.id)?.integrationTitle ?? A),
+                u =
+                    N.length > 0 && null != o
+                        ? M.intl.format(M.t["3njXz/"], { query: N, command: o })
                         : null != o
                           ? o
-                          : h;
-            return (0, r.jsxs)(
-                i.Fragment,
+                          : A;
+            return (0, l.jsxs)(
+                r.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(f.Ay.Title, { title: l }),
-                        e ? (0, r.jsx)(p.A, { className: A.os, children: n }) : n,
+                        (0, l.jsx)(p.Ay.Title, { title: u }),
+                        e ? (0, l.jsx)(y.A, { className: I.os, children: n }) : n,
                     ],
                 },
                 "gifs",
@@ -104,38 +100,38 @@ let S = {
     onSelect(e) {
         let {
             results: { command: t, integrations: n },
-            index: r,
-            type: i,
-            options: a,
+            index: l,
+            type: r,
+            options: i,
             channel: s,
             guild: o,
         } = e;
         if (null == t) return { type: null };
-        let u = n[r];
+        let a = n[l];
         if (
-            (i === m.lg.INSERT ? a.replaceText(y(u)) : a.sendMessage(y(u)),
-            c.Ay.trackWithMetadata(g.HAw.SEARCH_RESULT_SELECTED, {
+            (r === h.lg.INSERT ? i.replaceText(a.meta.url) : i.sendMessage(a.meta.url),
+            m.Ay.trackWithMetadata(g.HAw.SEARCH_RESULT_SELECTED, {
                 search_type: g.I4_.GIF,
-                index_num: r,
+                index_num: l,
                 source_object: `/${t}`,
             }),
-            a.commands !== m.Ze.OLD_BUILT_INS)
+            i.commands !== h.Ze.OLD_BUILT_INS)
         ) {
-            let e = d.A.getActiveCommand(s.id);
-            e?.inputType === _.y$.BUILT_IN_INTEGRATION &&
-                (l.h.dispatch({
+            let e = c.A.getActiveCommand(s.id);
+            e?.inputType === d.y$.BUILT_IN_INTEGRATION &&
+                (u.h.dispatch({
                     type: "APPLICATION_COMMAND_USED",
                     context: { channel: s, guild: o },
                     command: e,
-                    commandOrigin: _.iw.CHAT,
+                    commandOrigin: d.iw.CHAT,
                 }),
-                c.Ay.trackWithMetadata(g.HAw.APPLICATION_COMMAND_USED, {
+                m.Ay.trackWithMetadata(g.HAw.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
                     command_type: e.type,
-                    source: d.A.getSource(s.id),
+                    source: c.A.getSource(s.id),
                 }));
         }
-        return { type: m.kc.GIF };
+        return { type: h.kc.GIF };
     },
 };

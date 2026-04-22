@@ -1,15 +1,14 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
+        a = {
             keyword:
                 "abort acronym acronyms alias all and assign binary card diag display else eq file files for free ge gt if integer le loop lt maximizing minimizing model models ne negative no not option options or ord positive prod put putpage puttl repeat sameas semicont semiint smax smin solve sos1 sos2 sum system table then until using while xor yes",
             literal: "eps inf na",
             built_in:
                 "abs arccos arcsin arctan arctan2 Beta betaReg binomial ceil centropy cos cosh cvPower div div0 eDist entropy errorf execSeed exp fact floor frac gamma gammaReg log logBeta logGamma log10 log2 mapVal max min mod ncpCM ncpF ncpVUpow ncpVUsin normal pi poly power randBinomial randLinear randTriangle round rPower sigmoid sign signPower sin sinh slexp sllog10 slrec sqexp sqlog10 sqr sqrec sqrt tan tanh trunc uniform uniformInt vcPower bool_and bool_eqv bool_imp bool_not bool_or bool_xor ifThen rel_eq rel_ge rel_gt rel_le rel_lt rel_ne gday gdow ghour gleap gmillisec gminute gmonth gsecond gyear jdate jnow jstart jtime errorLevel execError gamsRelease gamsVersion handleCollect handleDelete handleStatus handleSubmit heapFree heapLimit heapSize jobHandle jobKill jobStatus jobTerminate licenseLevel licenseStatus maxExecError sleep timeClose timeComp timeElapsed timeExec timeStart",
         },
-        r = { className: "params", begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0 },
-        i = { className: "symbol", variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }] },
-        s = {
+        n = { className: "symbol", variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }] },
+        r = {
             className: "comment",
             variants: [
                 { begin: "'", end: "'" },
@@ -18,12 +17,12 @@ e.exports = function (e) {
             illegal: "\\n",
             contains: [e.BACKSLASH_ESCAPE],
         },
-        a = {
+        i = {
             begin: "/",
             end: "/",
-            keywords: n,
+            keywords: a,
             contains: [
-                s,
+                r,
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 e.QUOTE_STRING_MODE,
@@ -32,14 +31,14 @@ e.exports = function (e) {
             ],
         },
         o = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
-        l = {
+        s = {
             begin: /[a-z][a-z0-9_]*(\([a-z0-9_, ]*\))?[ \t]+/,
             excludeBegin: !0,
             end: "$",
             endsWithParent: !0,
             contains: [
-                s,
-                a,
+                r,
+                i,
                 { className: "comment", begin: t.concat(o, t.anyNumberOfTimes(t.concat(/[ ]+/, o))), relevance: 0 },
             ],
         };
@@ -47,7 +46,7 @@ e.exports = function (e) {
         name: "GAMS",
         aliases: ["gms"],
         case_insensitive: !0,
-        keywords: n,
+        keywords: a,
         contains: [
             e.COMMENT(/^\$ontext/, /^\$offtext/),
             {
@@ -71,8 +70,8 @@ e.exports = function (e) {
                     e.C_BLOCK_COMMENT_MODE,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    a,
-                    l,
+                    i,
+                    s,
                 ],
             },
             {
@@ -80,7 +79,7 @@ e.exports = function (e) {
                 end: ";",
                 returnBegin: !0,
                 contains: [
-                    { beginKeywords: "table", end: "$", contains: [l] },
+                    { beginKeywords: "table", end: "$", contains: [s] },
                     e.COMMENT("^\\*", "$"),
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
@@ -93,10 +92,14 @@ e.exports = function (e) {
                 className: "function",
                 begin: /^[a-z][a-z0-9_,\-+' ()$]+\.{2}/,
                 returnBegin: !0,
-                contains: [{ className: "title", begin: /^[a-z0-9_]+/ }, r, i],
+                contains: [
+                    { className: "title", begin: /^[a-z0-9_]+/ },
+                    { className: "params", begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0 },
+                    n,
+                ],
             },
             e.C_NUMBER_MODE,
-            i,
+            n,
         ],
     };
 };

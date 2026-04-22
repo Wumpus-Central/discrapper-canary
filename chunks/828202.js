@@ -1,6 +1,10 @@
 e.exports = function (e) {
     let t = /[a-zA-Z@][a-zA-Z0-9_]*/,
-        n = {
+        a = { $pattern: t, keyword: ["@interface", "@class", "@protocol", "@implementation"] };
+    return {
+        name: "Objective-C",
+        aliases: ["mm", "objc", "obj-c", "obj-c++", "objective-c++"],
+        keywords: {
             "variable.language": ["this", "super"],
             $pattern: t,
             keyword: [
@@ -139,11 +143,6 @@ e.exports = function (e) {
                 "_Bool",
             ],
         },
-        r = { $pattern: t, keyword: ["@interface", "@class", "@protocol", "@implementation"] };
-    return {
-        name: "Objective-C",
-        aliases: ["mm", "objc", "obj-c", "obj-c++", "objective-c++"],
-        keywords: n,
         illegal: "</",
         contains: [
             { className: "built_in", begin: "\\b(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)\\w+" },
@@ -171,10 +170,10 @@ e.exports = function (e) {
             },
             {
                 className: "class",
-                begin: "(" + r.keyword.join("|") + ")\\b",
+                begin: "(" + a.keyword.join("|") + ")\\b",
                 end: /(\{|$)/,
                 excludeEnd: !0,
-                keywords: r,
+                keywords: a,
                 contains: [e.UNDERSCORE_TITLE_MODE],
             },
             { begin: "\\." + e.UNDERSCORE_IDENT_RE, relevance: 0 },

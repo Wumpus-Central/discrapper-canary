@@ -1,35 +1,34 @@
-n.d(t, { A: () => d });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => c });
+var a = n(627968);
 n(64700);
-var a = n(397927),
-    r = n(730134),
-    i = n(985018),
-    s = n(896736);
-let d = (e) => {
+var i = n(534514),
+    r = n(778712),
+    l = n(834730),
+    s = n(730134),
+    d = n(985018),
+    o = n(896736);
+let c = (e) => {
     let { user: t } = e;
-    return (0, l.jsxs)("div", {
-        className: s.kL,
+    return (0, a.jsxs)("div", {
+        className: o.kL,
         children: [
-            (0, l.jsx)(a.Heading, {
-                className: s.wx,
-                variant: "heading-sm/semibold",
-                children: i.intl.string(i.t.Rsth7z),
-            }),
-            (0, l.jsx)("div", {
-                className: s.f1,
-                children: (0, l.jsxs)("div", {
-                    className: s.eF,
+            (0, a.jsx)(i.D, { className: o.wx, variant: "heading-sm/semibold", children: d.intl.string(d.t.Rsth7z) }),
+            (0, a.jsx)("div", {
+                className: o.f1,
+                children: (0, a.jsxs)("div", {
+                    className: o.eF,
                     children: [
-                        (0, l.jsx)(r.A, { className: s.Hk, user: t, size: a._3J.SIZE_40 }),
-                        (0, l.jsxs)("div", {
+                        (0, a.jsx)(s.A, { className: o.Hk, user: t, size: r._3.SIZE_40 }),
+                        (0, a.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
-                                    (0, l.jsx)(a.Text, {
+                                    (0, a.jsx)(l.E, {
                                         variant: "text-md/semibold",
                                         color: "text-strong",
                                         children: t.globalName,
                                     }),
-                                (0, l.jsx)(a.Text, {
+                                (0, a.jsx)(l.E, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
                                     children: t.username,

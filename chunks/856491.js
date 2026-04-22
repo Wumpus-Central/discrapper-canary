@@ -1,5 +1,4 @@
 "use strict";
-n.d(t, { d: () => r });
-var r = (function (e) {
-    return (e.NICKNAME_UPDATE = "nickname_update"), (e.NICKNAME_RESET = "nickname_reset"), e;
-})({});
+n.d(t, { d: () => i });
+var r,
+    i = (((r = {}).NICKNAME_UPDATE = "nickname_update"), (r.NICKNAME_RESET = "nickname_reset"), r);

@@ -1,56 +1,57 @@
 n.d(t, { A: () => A });
 var r = n(627968),
-    l = n(64700),
-    i = n(311907),
+    i = n(64700),
+    l = n(311907),
     s = n(990078),
-    o = n(397927),
-    a = n(775602),
+    a = n(834730),
+    o = n(821609),
+    d = n(775602),
     u = n(600941),
-    d = n(890942),
-    c = n(744201),
-    p = n(271484),
-    m = n(628743);
+    c = n(890942),
+    _ = n(744201),
+    m = n(271484),
+    p = n(401996);
 function A(e) {
     let { guildId: t, group: n, powerups: A } = e,
-        [_, g] = l.useState(!1),
-        f = (0, i.bG)([a.A], () => a.A.useReducedMotion),
-        x = (0, p.A)(n, t),
-        h = !f && _ ? x?.image?.animatedUrl : x?.image?.staticUrl,
-        v = (0, u.A)({ guildId: t, powerups: A }),
-        { textColor: j } = (0, c.A)(v?.isActive ?? !1);
-    if (null == v || null == x) return null;
-    let { status: b, cost: E, costDecorator: I } = v;
-    return (0, r.jsxs)(d.NI, {
-        label: x.title,
-        isActive: b?.type === "active",
-        isWarning: b?.type === "expiring",
-        badge: x.badge,
-        onClick: () => x.openModal(A),
+        [x, g] = i.useState(!1),
+        f = (0, l.bG)([d.A], () => d.A.useReducedMotion),
+        h = (0, m.A)(n, t),
+        v = !f && x ? h?.image?.animatedUrl : h?.image?.staticUrl,
+        E = (0, u.A)({ guildId: t, powerups: A }),
+        { textColor: S } = (0, _.A)(E?.isActive ?? !1);
+    if (null == E || null == h) return null;
+    let { status: I, cost: b, costDecorator: j } = E;
+    return (0, r.jsxs)(c.NI, {
+        label: h.title,
+        isActive: I?.type === "active",
+        isWarning: I?.type === "expiring",
+        badge: h.badge,
+        onClick: () => h.openModal(A),
         onMouseOver: () => g(!0),
         onMouseLeave: () => g(!1),
         children: [
-            (0, r.jsx)("img", { alt: "", src: h, className: m.S }),
-            (0, r.jsx)(d.Ft, {
-                title: x.title,
-                textColor: j,
-                footer: (0, r.jsx)(d.$L, { status: b, cost: E, costDecorator: I }),
-                children: (0, r.jsx)(o.Text, {
-                    className: m.h,
-                    color: j,
+            (0, r.jsx)("img", { alt: "", src: v, className: p.S }),
+            (0, r.jsx)(c.Ft, {
+                title: h.title,
+                textColor: S,
+                footer: (0, r.jsx)(c.$L, { status: I, cost: b, costDecorator: j }),
+                children: (0, r.jsx)(a.E, {
+                    className: p.h,
+                    color: S,
                     variant: "text-sm/medium",
-                    children: x.description,
+                    children: h.description,
                 }),
             }),
-            (0, r.jsx)(d.kd, {
+            (0, r.jsx)(c.kd, {
                 children:
-                    x?.viewCtaTooltip != null
+                    h?.viewCtaTooltip != null
                         ? (0, r.jsx)(s.m, {
                               asContainer: !0,
-                              text: x.viewCtaTooltip,
+                              text: h.viewCtaTooltip,
                               delay: 100,
-                              children: (0, r.jsx)(o.Button, { text: x.viewCta, fullWidth: !0 }),
+                              children: (0, r.jsx)(o.$, { text: h.viewCta, fullWidth: !0 }),
                           })
-                        : (0, r.jsx)(o.Button, { text: x.viewCta, fullWidth: !0 }),
+                        : (0, r.jsx)(o.$, { text: h.viewCta, fullWidth: !0 }),
             }),
         ],
     });

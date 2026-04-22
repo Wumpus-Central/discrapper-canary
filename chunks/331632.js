@@ -1,112 +1,115 @@
-n.d(t, { default: () => _ }), n(801541);
+n.d(t, { default: () => f }), n(801541);
 var i = n(627968),
-    s = n(64700),
-    r = n(284009),
-    a = n.n(r),
+    r = n(64700),
+    s = n(284009),
+    a = n.n(s),
     o = n(889137),
-    l = n(158954),
+    l = n(189213),
     u = n(311907),
-    d = n(397927),
-    g = n(631670),
-    E = n(546727),
-    m = n(975169),
-    c = n(836602),
-    h = n(287809),
-    S = n(927578),
-    A = n(652215),
-    R = n(985018),
-    U = n(913374);
-function _(e) {
+    d = n(231723),
+    g = n(331322),
+    E = n(292666),
+    m = n(834730),
+    c = n(631670),
+    h = n(546727),
+    S = n(975169),
+    A = n(836602),
+    R = n(287809),
+    U = n(927578),
+    _ = n(652215),
+    T = n(985018),
+    v = n(548027);
+function f(e) {
     var t;
-    let { transitionState: n, onClose: r } = e,
-        _ = (0, u.bG)([h.default], () => {
-            let e = h.default.getCurrentUser();
+    let { transitionState: n, onClose: s } = e,
+        f = (0, u.bG)([R.default], () => {
+            let e = R.default.getCurrentUser();
             return a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e;
         }),
-        T = s.useMemo(() => S.Ay.canEditDiscriminator(_) && !_.hasUniqueUsername(), [_]),
-        [v, f] = s.useState(_.username),
-        [N, p] = s.useState(_.discriminator),
-        [I, L] = s.useState(""),
-        [y, M] = s.useState(!1),
-        O = (0, u.bG)([c.A], () => c.A.getErrors()),
-        w = _.hasUniqueUsername(),
-        k = (0, m.i)(v, w, !1, _.username),
-        C = s.useRef(null),
-        b = s.useMemo(() => O?.username?.[0] ?? O?.discriminator?.[0], [O]);
-    s.useEffect(() => {
-        n === d.ip4.ENTERED && C.current?.focus();
+        N = r.useMemo(() => U.Ay.canEditDiscriminator(f) && !f.hasUniqueUsername(), [f]),
+        [p, I] = r.useState(f.username),
+        [L, y] = r.useState(f.discriminator),
+        [M, O] = r.useState(""),
+        [w, k] = r.useState(!1),
+        C = (0, u.bG)([A.A], () => A.A.getErrors()),
+        b = f.hasUniqueUsername(),
+        P = (0, S.i)(p, b, !1, f.username),
+        x = r.useRef(null),
+        G = r.useMemo(() => C?.username?.[0] ?? C?.discriminator?.[0], [C]);
+    r.useEffect(() => {
+        n === d.ip.ENTERED && x.current?.focus();
     }, [n]);
-    let x = N !== _.discriminator;
-    async function P(e) {
-        e.preventDefault(), M(!0);
-        let t = await (0, g._L)({ username: v, discriminator: T ? N : void 0, password: I });
-        M(!1), t?.ok && r();
+    let q = L !== f.discriminator;
+    async function j(e) {
+        e.preventDefault(), k(!0);
+        let t = await (0, c._L)({ username: p, discriminator: N ? L : void 0, password: M });
+        k(!1), t?.ok && s();
     }
     return (0, i.jsx)("form", {
-        onSubmit: P,
+        onSubmit: j,
         children: (0, i.jsx)(l.Modal, {
-            onClose: r,
+            onClose: s,
             transitionState: n,
-            title: R.intl.string(R.t.m5or54),
-            subtitle: R.intl.string(R.t.SLJvy0),
+            title: T.intl.string(T.t.m5or54),
+            subtitle: T.intl.string(T.t.SLJvy0),
             actions: [
-                { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: r },
-                { variant: "primary", text: R.intl.string(R.t.i4jeWR), type: "submit", loading: y },
+                { variant: "secondary", text: T.intl.string(T.t["ETE/oC"]), onClick: s },
+                { variant: "primary", text: T.intl.string(T.t.i4jeWR), type: "submit", loading: w },
             ],
-            children: (0, i.jsxs)(d.BJc, {
+            children: (0, i.jsxs)(g.B, {
                 gap: 16,
                 children: [
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsxs)(d.BJc, {
+                            (0, i.jsxs)(g.B, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: [
-                                    (0, i.jsx)(d.ksK, {
-                                        label: R.intl.string(R.t.TWzdWj),
-                                        error: b,
+                                    (0, i.jsx)(E.k, {
+                                        label: T.intl.string(T.t.TWzdWj),
+                                        error: G,
                                         name: "username",
-                                        value: v,
-                                        maxLength: A.d0r,
-                                        onChange: f,
-                                        inputRef: C,
+                                        value: p,
+                                        maxLength: _.d0r,
+                                        onChange: I,
+                                        inputRef: x,
                                         fullWidth: !0,
-                                        ...((t = _.hasUniqueUsername()),
-                                        (0, o.YW)(k)
-                                            .with({ type: E.q.ERROR, message: o.P.select() }, (e) => ({ error: e }))
-                                            .with({ type: E.q.AVAILABLE, message: o.P.select() }, (e) => ({
+                                        ...((t = f.hasUniqueUsername()),
+                                        (0, o.YW)(P)
+                                            .with({ type: h.q.ERROR, message: o.P.select() }, (e) => ({ error: e }))
+                                            .with({ type: h.q.AVAILABLE, message: o.P.select() }, (e) => ({
                                                 successMessage: e,
                                             }))
-                                            .otherwise(() => (t ? { helperText: R.intl.string(R.t.z7c4bP) } : {}))),
+                                            .otherwise(() => (t ? { helperText: T.intl.string(T.t.z7c4bP) } : {}))),
                                     }),
-                                    !_.hasUniqueUsername() &&
-                                        (0, i.jsx)(d.ksK, {
+                                    !f.hasUniqueUsername() &&
+                                        (0, i.jsx)(E.k, {
                                             name: "discriminator",
-                                            "aria-label": R.intl.string(R.t.ozumaN),
+                                            "aria-label": T.intl.string(T.t.ozumaN),
                                             maxLength: 4,
-                                            value: N,
-                                            onChange: p,
-                                            disabled: !T,
+                                            value: L,
+                                            onChange: y,
+                                            disabled: !N,
                                             leading: "#",
                                         }),
                                 ],
                             }),
-                            x
-                                ? (0, i.jsx)(d.Text, {
+                            q
+                                ? (0, i.jsx)(m.E, {
                                       variant: "text-xs/normal",
                                       color: "text-default",
-                                      className: U.Z,
-                                      children: R.intl.string(R.t.mConUX),
+                                      className: v.Z,
+                                      children: T.intl.string(T.t.mConUX),
                                   })
                                 : null,
                         ],
                     }),
-                    (0, i.jsx)(d.ksK, {
-                        label: R.intl.string(R.t.TmdnJ3),
-                        error: O?.password?.[0],
+                    (0, i.jsx)(E.k, {
+                        label: T.intl.string(T.t.TmdnJ3),
+                        error: C?.password?.[0],
                         type: "password",
-                        value: I,
-                        onChange: L,
+                        value: M,
+                        onChange: O,
                     }),
                 ],
             }),

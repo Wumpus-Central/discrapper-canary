@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { Mv: () => o, My: () => u, bV: () => l });
-var r = n(353640),
-    i = n(499867),
+n.d(t, { Mv: () => r, My: () => c, bV: () => o });
+var i = n(353640),
+    l = n(499867),
     a = n(121894);
-let s = (0, r.v)((0, i.eh)(() => ({ commandAnalyticsContext: new Map() })));
-function o(e) {
-    let { command: t, location: n, sectionName: r } = e,
-        { commandAnalyticsContext: i } = s.getState(),
-        o = i.get(t);
-    if (null == o || o.location !== n || o.sectionName !== r) {
-        let e = new Map(i);
-        e.set(t, { location: n, sectionName: r }), (0, a.r)(() => s.setState({ commandAnalyticsContext: e }));
+let s = (0, i.v)((0, l.eh)(() => ({ commandAnalyticsContext: new Map() })));
+function r(e) {
+    let { command: t, location: n, sectionName: i } = e,
+        { commandAnalyticsContext: l } = s.getState(),
+        r = l.get(t);
+    if (null == r || r.location !== n || r.sectionName !== i) {
+        let e = new Map(l);
+        e.set(t, { location: n, sectionName: i }), (0, a.r)(() => s.setState({ commandAnalyticsContext: e }));
     }
 }
-function l(e) {
+function o(e) {
     let { commandAnalyticsContext: t } = s.getState();
     return t.get(e);
 }
-function u(e) {
+function c(e) {
     let { commandAnalyticsContext: t } = s.getState();
     if (t.has(e)) {
         let n = new Map(t);

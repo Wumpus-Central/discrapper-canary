@@ -1,19 +1,16 @@
 "use strict";
-n.d(t, { A: () => _, j: () => u });
-var r = n(972347),
-    i = n(451988),
-    s = n(626584),
-    a = n(94902),
-    o = n(723702);
-let l = 500;
-var u = (function (e) {
-    return (
-        (e.RequestedSSRCsUpdate = "requested-ssrcs-update"), (e.RequestedStreamsUpdate = "requested-streams-update"), e
-    );
-})({});
-let c = 100,
-    d = 0;
-class _ extends r.A {
+n.d(t, { A: () => d, j: () => u });
+var r,
+    i = n(972347),
+    s = n(451988),
+    a = n(626584),
+    o = n(94902),
+    l = n(723702),
+    u =
+        (((r = {}).RequestedSSRCsUpdate = "requested-ssrcs-update"),
+        (r.RequestedStreamsUpdate = "requested-streams-update"),
+        r);
+class d extends i.A {
     logger;
     userId;
     streamId = null;
@@ -26,9 +23,9 @@ class _ extends r.A {
     delayedCall;
     constructor() {
         super(),
-            (this.logger = new s.A("GoLiveQualityManager")),
+            (this.logger = new a.A("GoLiveQualityManager")),
             this.logger.enableNativeLogger(!0),
-            (this.delayedCall = new i.J_(l, () => {
+            (this.delayedCall = new s.J_(500, () => {
                 this.update();
             }));
     }
@@ -56,28 +53,26 @@ class _ extends r.A {
             (this.incomingVideoEnabled ? this.requestStream() : this.stopStream());
     }
     requestStream() {
-        null != this.videoStream && this.request({ [this.videoStream.ssrc]: c }, [this.videoStream.ssrc]);
+        null != this.videoStream && this.request({ [this.videoStream.ssrc]: 100 }, [this.videoStream.ssrc]);
     }
     stopStream() {
-        null != this.videoStream && this.request({ [this.videoStream.ssrc]: d }, []);
+        null != this.videoStream && this.request({ [this.videoStream.ssrc]: 0 }, []);
     }
     request(e, t) {
-        if (void 0 !== this.userId) {
-            let n = e;
-            t.forEach((e) => {
-                null == n.pixelCounts && (n.pixelCounts = {}),
-                    n[e] > 0 &&
-                        (n.pixelCounts[e] = Math.floor(
+        void 0 !== this.userId &&
+            (t.forEach((t) => {
+                null == e.pixelCounts && (e.pixelCounts = {}),
+                    e[t] > 0 &&
+                        (e.pixelCounts[t] = Math.floor(
                             this.resolutionWidth * this.resolutionHeight * this.zoom * this.zoom,
                         ));
             }),
-                this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t),
-                this.emit("requested-streams-update", n);
-        }
+            this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t),
+            this.emit("requested-streams-update", e));
     }
     setVideoSize(e, t, n) {
         this.streamId === e &&
-            (!((0, o.isAndroid)() || (0, o.isIOS)()) || a.A.getConfig({ location: "GoLiveQualityManager" }).enabled) &&
+            (!((0, l.isAndroid)() || (0, l.isIOS)()) || o.A.getConfig({ location: "GoLiveQualityManager" }).enabled) &&
             (null != t && ((this.resolutionWidth = t.width), (this.resolutionHeight = t.height)),
             null != n && (this.zoom = n),
             this.delayedUpdate());

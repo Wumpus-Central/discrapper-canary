@@ -2,7 +2,7 @@ n.d(i, { default: () => o });
 var r = n(627968);
 n(64700);
 var a = n(478437),
-    s = n(732955),
+    s = n(189213),
     l = n(47167),
     e = n(985018);
 let o = (t) => {
@@ -24,7 +24,7 @@ let o = (t) => {
                   body: e.intl.format(e.t["2z/hBg"], { channelName: i }),
                   confirm: e.intl.string(e.t.gGs6TT),
               });
-    return (0, r.jsx)(s.aFV, {
+    return (0, r.jsx)(s.Modal, {
         title: d,
         subtitle: h,
         actions: [

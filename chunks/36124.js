@@ -2,8 +2,8 @@
 n.d(t, { Ay: () => d, JM: () => o, LD: () => l });
 var r = n(735438),
     i = n.n(r),
-    a = n(635377),
-    s = n.n(a);
+    s = n(635377),
+    a = n.n(s);
 let o = 100,
     l = [[0, 99]];
 function u(e) {
@@ -15,7 +15,6 @@ function u(e) {
         t
     );
 }
-let c = 5;
 class d {
     _subscriptions = {};
     _onChange;
@@ -29,7 +28,7 @@ class d {
         return u(this._get(e));
     }
     _get(e) {
-        return this._subscriptions[e] ?? new (s())({ max: c });
+        return this._subscriptions[e] ?? new (a())({ max: 5 });
     }
     clear(e) {
         delete this._subscriptions[e];

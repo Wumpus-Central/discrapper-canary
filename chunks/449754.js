@@ -1,46 +1,43 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => p });
 var r = n(982520),
     i = n.n(r),
-    a = n(439372),
-    s = n(400492);
-let o = 100,
-    l = 0.5,
-    u = 500,
-    c = (0, s.Qh)("vibing_wumpus", "vibing_wumpus", 0),
-    d = 0,
-    _ = 0,
-    f = null;
-function p(e, t) {
+    s = n(439372);
+let a = (0, n(400492).Qh)("vibing_wumpus", "vibing_wumpus", 0),
+    o = 0,
+    l = 0,
+    u = null;
+function d(e, t) {
     let n = Math.round(100 * e),
-        r = Math.round(100 * _),
-        a = Math.round(100 * d);
-    (n > 0 && a >= r) || (n < 0 && a <= r)
-        ? (clearInterval(f), 0 === r && null != t && t())
-        : ((a += n), (d = a / 100), (c.volume = i()(d, 0, l)));
+        r = Math.round(100 * l),
+        s = Math.round(100 * o);
+    (n > 0 && s >= r) || (n < 0 && s <= r)
+        ? (clearInterval(u), 0 === r && null != t && t())
+        : ((s += n), (o = s / 100), (a.volume = i()(o, 0, 0.5)));
 }
-function h(e) {
-    null != f && clearInterval(f), (_ = 0);
-    let t = A();
-    f = setInterval(() => {
-        p(t, e);
-    }, o);
+function c(e) {
+    null != u && clearInterval(u), (l = 0);
+    let t = (function () {
+        return 0.2 * (l - o);
+    })();
+    u = setInterval(() => {
+        d(t, e);
+    }, 100);
 }
-function m() {
-    null != f && clearInterval(f), c.loop(), (_ = l);
-    let e = A();
-    f = setInterval(() => p(e), o);
+function _() {
+    null != u && clearInterval(u), a.loop(), (l = 0.5);
+    let e = (function () {
+        return 0.2 * (l - o);
+    })();
+    u = setInterval(() => d(e), 100);
 }
-function g() {
-    h(c.pause.bind(c));
+function f() {
+    c(a.pause.bind(a));
 }
 function E() {
-    h(c.stop.bind(c));
+    c(a.stop.bind(a));
 }
-function A() {
-    return (o / u) * (_ - d);
+class h extends s.A {
+    actions = { VIBING_WUMPUS_PLAY_MUSIC: _, VIBING_WUMPUS_STOP_MUSIC: E, VIBING_WUMPUS_PAUSE_MUSIC: f };
 }
-class I extends a.A {
-    actions = { VIBING_WUMPUS_PLAY_MUSIC: m, VIBING_WUMPUS_STOP_MUSIC: E, VIBING_WUMPUS_PAUSE_MUSIC: g };
-}
-let T = new I();
+let p = new h();

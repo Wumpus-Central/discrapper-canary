@@ -1,42 +1,59 @@
-"use strict";
-n.d(t, { s: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
-    let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsxs)("svg", {
-        ...(0, a.A)(c),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                fillRule: "evenodd",
-                d: "M4.5 5.04A3 3 0 0 0 2 8v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V8a3 3 0 0 0-2.5-2.96c-.27-.04-.5.18-.5.46V6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-.5c0-.28-.23-.5-.5-.46ZM7 14a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Z",
-                clipRule: "evenodd",
-                className: u,
-            }),
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                d: "M7 5a1 1 0 0 1 1-1h1c.55 0 .98-.47 1.24-.96a2 2 0 0 1 3.52 0c.26.49.69.96 1.24.96h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5Z",
-                className: u,
-            }),
-        ],
-    });
-};
+i.d(t, { A: () => o });
+var n = i(668459),
+    r = i(643479);
+let o = {
+        2e3: {
+            name: "PathInformation",
+            description: function (e) {
+                let t = {},
+                    i = [];
+                for (let r = 0; r < e.byteLength; r += 26) {
+                    let o = n.A.getShortAt(e, r);
+                    a[o] && (t[o] || (t[o] = a[o].description), i.push({ type: o, path: a[o].path(e, r + 2) }));
+                }
+                return JSON.stringify({ types: t, paths: i });
+            },
+        },
+        2999: {
+            name: "ClippingPathName",
+            description(e) {
+                let [, t] = (0, r.z6)(e, 0);
+                return t;
+            },
+        },
+    },
+    a = {
+        0: { description: "Closed subpath length", path: (e, t) => [n.A.getShortAt(e, t)] },
+        1: { description: "Closed subpath Bezier knot, linked", path: s },
+        2: { description: "Closed subpath Bezier knot, unlinked", path: s },
+        3: { description: "Open subpath length", path: (e, t) => [n.A.getShortAt(e, t)] },
+        4: { description: "Open subpath Bezier knot, linked", path: s },
+        5: { description: "Open subpath Bezier knot, unlinked", path: s },
+        6: { description: "Path fill rule", path: () => [] },
+        8: { description: "Initial fill rule", path: (e, t) => [n.A.getShortAt(e, t)] },
+        7: {
+            description: "Clipboard",
+            path: function (e, t) {
+                return [[l(e, t, 8), l(e, t + 4, 8), l(e, t + 8, 8), l(e, t + 12, 8)], l(e, t + 16, 8)];
+            },
+        },
+    };
+function s(e, t) {
+    let i = [];
+    for (let n = 0; n < 24; n += 8)
+        i.push(
+            (function (e, t) {
+                let i = l(e, t, 8);
+                return [l(e, t + 4, 8), i];
+            })(e, t + n),
+        );
+    return i;
+}
+function l(e, t, i) {
+    let o = n.A.getLongAt(e, t),
+        a = o & parseInt((0, r.tp)("1", 32 - i), 2);
+    return (
+        (o >>> 31 == 0 ? 1 : -1) *
+        (0, r.Aj)(((0x7f000000 & o) >>> (32 - i)).toString(2) + "." + (0, r.CF)(a.toString(2), 32 - i, "0"), 2)
+    );
+}

@@ -1,30 +1,31 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var s = n(23339),
-    r = n(417597),
-    a = n(397927),
-    l = n(260509),
-    o = n(695515),
-    c = n(254847),
-    d = n(432882);
-let u = (e) => {
+l.d(t, { A: () => x });
+var n = l(627968);
+l(64700);
+var i = l(23339),
+    s = l(417597),
+    a = l(97808),
+    r = l(778712),
+    d = l(260509),
+    c = l(695515),
+    u = l(254847),
+    o = l(904425);
+let x = (e) => {
     let { guildId: t } = e,
-        n = (0, r.bG)([o.A], () => o.A.getGuild(t));
-    if (void 0 === n) return null;
-    let { name: u } = n,
-        _ = (0, l.Iv)(n, 40, !0),
+        l = (0, s.bG)([c.A], () => c.A.getGuild(t));
+    if (void 0 === l) return null;
+    let { name: x } = l,
+        h = (0, d.Iv)(l, 40, !0),
         m = null,
-        A = 10;
+        g = 10;
     return (
-        null == n.icon && null != u && ((m = (0, s.oN)(u)), (A = (0, c.Y)(m))),
-        (0, i.jsx)("div", {
-            className: d.k,
-            children: (0, i.jsxs)("div", {
-                style: { fontSize: A },
+        null == l.icon && null != x && ((m = (0, i.oN)(x)), (g = (0, u.Y)(m))),
+        (0, n.jsx)("div", {
+            className: o.k,
+            children: (0, n.jsxs)("div", {
+                style: { fontSize: g },
                 children: [
-                    null != m ? (0, i.jsx)("div", { className: d.X, "aria-hidden": !0, children: m }) : null,
-                    null != _ ? (0, i.jsx)(a.euF, { src: _, size: a._3J.SIZE_40, "aria-hidden": !0 }) : null,
+                    null != m ? (0, n.jsx)("div", { className: o.X, "aria-hidden": !0, children: m }) : null,
+                    null != h ? (0, n.jsx)(a.eu, { src: h, size: r._3.SIZE_40, "aria-hidden": !0 }) : null,
                 ],
             }),
         })

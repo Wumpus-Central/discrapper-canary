@@ -8,40 +8,16 @@ var r = n(562465),
     l = n(209489);
 n(723702);
 var u = n(728458),
-    c = n(998218),
-    d = n(368626),
+    d = n(998218),
+    c = n(368626),
     _ = n(472229),
-    f = n(230172),
-    p = n(652215);
-let h = [
+    f = (n(230172), n(652215));
+let E = [
         "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
-    m = new d.n();
-function E(e) {
-    let t = new URLSearchParams();
-    t.append("query", `@http.x_client_trace_id:"${e}"`), t.append("showAllSpans", "true");
-    let n = c.A.toURLSafe(`traces?${t.toString()}`, "https://datadog.discord.tools/apm/");
-    return null == n ? null : n.toString();
-}
-let g = /\/api(\/v\d+)?\/science/;
-function A(e) {
-    let t = 10;
-    return e
-        .reduce((e, n) => (10 === t ? e.push(n) : e.push(`${n};q=0.${t}`), (t = Math.max(t - 1, 1)), e), [])
-        .join(",");
-}
-function I(e) {
-    try {
-        let t = new URL(e).pathname;
-        return g.test(t);
-    } catch {
-        return g.test(e);
-    }
-}
-function T(e, t) {
-    return !1;
-}
+    h = new c.n(),
+    p = /\/api(\/v\d+)?\/science/;
 (0, r.IA)({
     prepareRequest(e) {
         let { default: t } = n(961350),
@@ -49,7 +25,7 @@ function T(e, t) {
             { default: o } = n(773669),
             { default: l } = n(287809),
             { default: c } = n(954571),
-            { isPlatformEmbedded: d } = n(723702);
+            { isPlatformEmbedded: f } = n(723702);
         if ("/" === e.url[0]) {
             (e.url = (0, r.TP)() + e.url),
                 "Authorization" in e.header || "authorization" in e.header || e.set("Authorization", t.getToken()),
@@ -59,34 +35,56 @@ function T(e, t) {
             let s = t.getFingerprint();
             null != s && "" !== s && e.set("X-Fingerprint", s);
             let u = t.getInstallationForTracking();
-            if ((null != u && "" !== u && e.set("X-Installation-ID", u), d)) {
-                let t = [];
-                null != navigator && (t = [...navigator.languages] ?? []);
-                let n = A(t);
-                e.set("Accept-Language", n);
+            if ((null != u && "" !== u && e.set("X-Installation-ID", u), f)) {
+                let t,
+                    n = [];
+                null != navigator && (n = [...navigator.languages] ?? []);
+                let r =
+                    ((t = 10),
+                    n
+                        .reduce(
+                            (e, n) => (10 === t ? e.push(n) : e.push(`${n};q=0.${t}`), (t = Math.max(t - 1, 1)), e),
+                            [],
+                        )
+                        .join(","));
+                e.set("Accept-Language", r);
             }
             e.set("X-Discord-Locale", o.locale);
-            let f = (0, _.A)();
-            null != f && e.set("X-Discord-Timezone", f);
-            let p = a.getDebugOptionsHeaderValue();
-            if ((null != p && "" !== p && e.set("X-Debug-Options", p), a.isTracingRequests)) {
+            let E = (0, _.A)();
+            null != E && e.set("X-Discord-Timezone", E);
+            let m = a.getDebugOptionsHeaderValue();
+            if ((null != m && "" !== m && e.set("X-Debug-Options", m), a.isTracingRequests)) {
                 let t = l.getCurrentUser(),
-                    n = m.generate(t?.id ?? "0");
+                    n = h.generate(t?.id ?? "0");
                 e.set("x-client-trace-id", n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!I(t)) {
-                        let r = E(n);
-                        null !== r && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, r);
+                    if (
+                        !(function (e) {
+                            try {
+                                let t = new URL(e).pathname;
+                                return p.test(t);
+                            } catch {
+                                return p.test(e);
+                            }
+                        })(t)
+                    ) {
+                        let r,
+                            i,
+                            s =
+                                ((r = new URLSearchParams()).append("query", `@http.x_client_trace_id:"${n}"`),
+                                r.append("showAllSpans", "true"),
+                                (i = d.A.toURLSafe(`traces?${r.toString()}`, "https://datadog.discord.tools/apm/")),
+                                null == i ? null : i.toString());
+                        null !== s && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, s);
                     }
                 } catch (e) {
                     console.error("error while printing tracing log", e);
                 }
             }
         }
-        let p = e.url,
-            g = e.method;
-        T(p, g) && (0, f.R)(p, g),
+        e.url,
+            e.method,
             s.z8("Network", `Sending ${e.method} to ${e.url}`),
             e.on("response", (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
@@ -99,7 +97,7 @@ function T(e, t) {
                     null != t && "parse" in t && t.parse)
                 ) {
                     let n = "[FILTERED]";
-                    h.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
+                    E.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
                         u.A.addBreadcrumb({
                             category: "superagent",
                             message: "Failed to parse HTTP response.",
@@ -122,8 +120,8 @@ function T(e, t) {
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && e.body?.code === p.t02.MFA_REQUIRED && e.body?.mfa
-              ? (Promise.all([n.e("88890"), n.e("98394")])
+            : 401 === e.statusCode && e.body?.code === f.t02.MFA_REQUIRED && e.body?.mfa
+              ? (Promise.all([n.e("88890"), n.e("28482")])
                     .then(n.bind(n, 522238))
                     .then((n) => {
                         let { openMFAModal: i } = n;
@@ -147,7 +145,7 @@ function T(e, t) {
                                 n(e.body?.guild_id);
                             })
                       : 403 === e.statusCode &&
-                        e.body?.code === p.t02.RESTRICTED_HOURS_ACTIVE &&
+                        e.body?.code === f.t02.RESTRICTED_HOURS_ACTIVE &&
                         Promise.resolve()
                             .then(n.bind(n, 390660))
                             .then((e) => {

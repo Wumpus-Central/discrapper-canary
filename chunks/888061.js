@@ -1,14 +1,15 @@
 "use strict";
-var r = {
-    container: "container__8ef77",
-    "aspect-ratio-21/9": "aspect-ratio-21/9__8ef77",
-    "aspect-ratio-16/9": "aspect-ratio-16/9__8ef77",
-    "aspect-ratio-6/4": "aspect-ratio-6/4__8ef77",
-    "aspect-ratio-2/1": "aspect-ratio-2/1__8ef77",
-    "aspect-ratio-1/1": "aspect-ratio-1/1__8ef77",
-    image: "image__8ef77",
-    video: "video__8ef77",
-    lottie: "lottie__8ef77",
-    rive: "rive__8ef77",
-};
-n.r((e.exports = r));
+n.r(
+    (e.exports = {
+        container: "container__8ef77",
+        "aspect-ratio-21/9": "aspect-ratio-21/9__8ef77",
+        "aspect-ratio-16/9": "aspect-ratio-16/9__8ef77",
+        "aspect-ratio-6/4": "aspect-ratio-6/4__8ef77",
+        "aspect-ratio-2/1": "aspect-ratio-2/1__8ef77",
+        "aspect-ratio-1/1": "aspect-ratio-1/1__8ef77",
+        image: "image__8ef77",
+        video: "video__8ef77",
+        lottie: "lottie__8ef77",
+        rive: "rive__8ef77",
+    }),
+);

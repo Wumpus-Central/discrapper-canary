@@ -1,13 +1,13 @@
 "use strict";
-let r;
-n.d(t, { y: () => f });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    o = n.n(s),
-    l = n(745262),
-    u = n(158954),
-    c = n(829681);
+let i;
+n.d(t, { y: () => m });
+var l = n(627968),
+    s = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    o = n(745262),
+    c = n(187322),
+    u = n(429128);
 let d = `
   visibility:hidden;
   overflow:hidden;
@@ -16,7 +16,7 @@ let d = `
   top:0;
   right:0;
 `,
-    _ = [
+    h = [
         "letter-spacing",
         "line-height",
         "padding-top",
@@ -31,7 +31,7 @@ let d = `
         "border-width",
         "box-sizing",
     ];
-class f extends a.PureComponent {
+class m extends s.PureComponent {
     static defaultProps = { autoFocus: !1, disabled: !1, autoCorrect: "off" };
     _textArea;
     constructor(e) {
@@ -51,32 +51,32 @@ class f extends a.PureComponent {
         let e = this._textArea;
         if (null == e) return;
         let { fontWidthEstimate: t, rows: n } = this.props,
-            i = this.props.value ?? e.value;
-        if (null != t && -1 === i.indexOf("\n") && i.length * t < 0.8 * e.offsetWidth)
+            l = this.props.value ?? e.value;
+        if (null != t && -1 === l.indexOf("\n") && l.length * t < 0.8 * e.offsetWidth)
             return void this.setState({ height: void 0 });
-        null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r));
-        let { paddingSize: a, borderSize: s, boxSizing: o, sizingStyle: l } = this.calculateNodeStyling(e);
-        r.setAttribute("style", l + ";" + d),
-            (r.value = i),
-            null != n ? r.setAttribute("rows", `${n}`) : r.removeAttribute("rows");
-        let u = r.scrollHeight;
-        "border-box" === o ? (u += s) : "content-box" === o && (u -= a), this.setState({ height: u });
+        null == i && null != document.body && ((i = document.createElement("textarea")), document.body.appendChild(i));
+        let { paddingSize: s, borderSize: r, boxSizing: a, sizingStyle: o } = this.calculateNodeStyling(e);
+        i.setAttribute("style", o + ";" + d),
+            (i.value = l),
+            null != n ? i.setAttribute("rows", `${n}`) : i.removeAttribute("rows");
+        let c = i.scrollHeight;
+        "border-box" === a ? (c += r) : "content-box" === a && (c -= s), this.setState({ height: c });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
-            n = (0, l.G)(
+            n = (0, o.G)(
                 t.getPropertyValue("box-sizing"),
                 t.getPropertyValue("-moz-box-sizing"),
                 t.getPropertyValue("-webkit-box-sizing"),
             ),
-            r = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
-            i =
+            i = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
+            l =
                 parseFloat(t.getPropertyValue("border-bottom-width")) +
                 parseFloat(t.getPropertyValue("border-top-width"));
         return {
-            sizingStyle: _.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
-            paddingSize: r,
-            borderSize: i,
+            sizingStyle: h.map((e) => `${e}:${t.getPropertyValue(e)}`).join(";"),
+            paddingSize: i,
+            borderSize: l,
             boxSizing: n,
         };
     }
@@ -104,15 +104,15 @@ class f extends a.PureComponent {
         return this._textArea?.value ?? "";
     }
     render() {
-        let { style: e, className: t, onResize: n, ...r } = this.props;
-        delete r.fontWidthEstimate;
-        let a = { ...this.state, ...e };
-        return (0, i.jsx)(u.vN3, {
-            children: (0, i.jsx)("textarea", {
-                ...r,
-                className: o()(t, c.kw),
+        let { style: e, className: t, onResize: n, ...i } = this.props;
+        delete i.fontWidthEstimate;
+        let s = { ...this.state, ...e };
+        return (0, l.jsx)(c.vN, {
+            children: (0, l.jsx)("textarea", {
+                ...i,
+                className: a()(t, u.kw),
                 ref: this.handleSetRef,
-                style: a,
+                style: s,
                 onChange: this.handleChange,
             }),
         });

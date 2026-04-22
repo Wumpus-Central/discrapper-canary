@@ -1,122 +1,127 @@
-n.d(t, { A: () => G }), n(321073);
+n.d(t, { A: () => $ }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    a = n(735438),
-    r = n.n(a),
-    s = n(311907),
-    o = n(397927),
-    d = n(711950),
-    c = n(49229),
-    u = n(820284),
-    A = n(793574),
-    h = n(688810),
-    _ = n(429913),
-    m = n(70730),
-    g = n(45787),
-    p = n(275759),
-    E = n(21119),
-    I = n(994500),
-    f = n(595623),
-    C = n(531685),
-    T = n(98165),
-    N = n(174279),
-    S = n(278066),
-    x = n(594968),
-    v = n(756901),
-    b = n(575474),
-    y = n(535266),
+    s = n(64700),
+    l = n(735438),
+    a = n.n(l),
+    r = n(311907),
+    o = n(192308),
+    c = n(123292),
+    d = n(821609),
+    u = n(900797),
+    m = n(847374),
+    A = n(892547),
+    h = n(711950),
+    x = n(49229),
+    p = n(820284),
+    g = n(793574),
+    N = n(688810),
+    f = n(429913),
+    _ = n(70730),
+    I = n(45787),
+    v = n(275759),
+    j = n(21119),
+    C = n(994500),
+    y = n(595623),
+    S = n(531685),
+    E = n(98165),
+    T = n(174279),
+    b = n(278066),
+    P = n(594968),
+    L = n(756901),
+    R = n(575474),
+    D = n(535266),
     O = n(787331);
 n(646363);
-var L = n(652215),
-    R = n(788868),
-    P = n(985018),
-    D = n(795733);
-let j = [];
-function M() {
-    d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
+var k = n(652215),
+    F = n(788868),
+    w = n(985018),
+    G = n(795733);
+let M = [];
+function U() {
+    h.A.transitionToSection(k.m3P.ADD_FRIEND, { explicit: !0 });
 }
-function w() {
-    (0, o.mMO)(async () => {
-        let { default: e } = await n.e("73152").then(n.bind(n, 516259));
+function V() {
+    (0, o.openModalLazy)(async () => {
+        let { default: e } = await n.e("50771").then(n.bind(n, 516259));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function U(e) {
+function Y(e) {
     let { section: t, showSpamCta: n } = e,
-        a = l.useMemo(() => (n ? w : t !== L.m3P.PENDING ? M : void 0), [n, t]);
-    return (0, i.jsx)("div", { className: D.y7, children: (0, i.jsx)(S.A, { type: t, onClick: a }, t) });
+        l = s.useMemo(() => (n ? V : t !== k.m3P.PENDING ? U : void 0), [n, t]);
+    return (0, i.jsx)("div", { className: G.y7, children: (0, i.jsx)(b.A, { type: t, onClick: l }, t) });
 }
-let G = function (e) {
+let $ = function (e) {
     let { titleId: t } = e,
-        { analyticsLocations: n } = (0, h.Ay)(A.A.FRIENDS_LIST),
-        { rows: a, section: d } = (0, s.cf)([f.Ay], () => f.Ay.getState()),
-        M = (0, s.bG)([C.A], () => C.A.isFocused()),
-        { relationshipCount: G, hasBlockedOrIgnored: k } = (0, s.cf)([I.A], () => ({
-            relationshipCount: I.A.getRelationshipCount(),
-            hasBlockedOrIgnored: I.A.getBlockedOrIgnoredIDs().length > 0,
+        { analyticsLocations: n } = (0, N.Ay)(g.A.FRIENDS_LIST),
+        { rows: l, section: o } = (0, r.cf)([y.Ay], () => y.Ay.getState()),
+        h = (0, r.bG)([S.A], () => S.A.isFocused()),
+        { relationshipCount: U, hasBlockedOrIgnored: $ } = (0, r.cf)([C.A], () => ({
+            relationshipCount: C.A.getRelationshipCount(),
+            hasBlockedOrIgnored: C.A.getBlockedOrIgnoredIDs().length > 0,
         })),
-        { enabled: V } = T.A.useConfig({ location: "PeopleList" }),
-        [B, H] = l.useState([]),
-        F = l.useCallback((e) => {
-            let { enabled: t } = T.A.getConfig({ location: "Friend Request Accept" });
-            t && H((t) => [...t, e]);
+        { enabled: H } = E.A.useConfig({ location: "PeopleList" }),
+        [W, z] = s.useState([]),
+        q = s.useCallback((e) => {
+            let { enabled: t } = E.A.getConfig({ location: "Friend Request Accept" });
+            t && z((t) => [...t, e]);
         }, []);
-    d !== L.m3P.PENDING && B.length > 0 && H([]);
-    let [Y, W] = l.useState(() => {
+    o !== k.m3P.PENDING && W.length > 0 && z([]);
+    let [B, X] = s.useState(() => {
             let e = {};
-            for (let t of Object.values(L.m3P)) e[t] = "";
+            for (let t of Object.values(k.m3P)) e[t] = "";
             return e;
         }),
-        K = (0, m.p)(A.A.FRIENDS_LIST),
-        [q, z] = l.useState(!1),
-        $ = l.useCallback(
+        Q = (0, _.p)(g.A.FRIENDS_LIST),
+        [K, Z] = s.useState(!1),
+        J = s.useCallback(
             (e, t) => {
-                let { key: l, ...a } = e;
-                switch (d) {
-                    case L.m3P.PENDING:
-                        return (0, i.jsx)(x.A, { ...a, isFocused: M, onAcceptFriendRequest: () => F(e) }, l);
-                    case L.m3P.SUGGESTIONS:
-                        return (0, i.jsx)(O.A, { ...a, isFocused: M }, l);
-                    case L.m3P.ALL:
+                let { key: s, ...l } = e;
+                switch (o) {
+                    case k.m3P.PENDING:
+                        return (0, i.jsx)(P.A, { ...l, isFocused: h, onAcceptFriendRequest: () => q(e) }, s);
+                    case k.m3P.SUGGESTIONS:
+                        return (0, i.jsx)(O.A, { ...l, isFocused: h }, s);
+                    case k.m3P.ALL:
                         return (0, i.jsx)(
-                            N.A,
+                            T.A,
                             {
-                                ...a,
-                                isFocused: M,
+                                ...l,
+                                isFocused: h,
                                 analyticsLocations: n,
                                 sectionIndex: t,
-                                hasFriendAnniversarySection: K,
+                                hasFriendAnniversarySection: Q,
                             },
-                            `${t}-${l}`,
+                            `${t}-${s}`,
                         );
-                    case L.m3P.ONLINE:
+                    case k.m3P.ONLINE:
                     default:
-                        return (0, i.jsx)(N.A, { ...a, isFocused: M, analyticsLocations: n }, l);
+                        return (0, i.jsx)(T.A, { ...l, isFocused: h, analyticsLocations: n }, s);
                 }
             },
-            [d, M, n, K, F],
+            [o, h, n, Q, q],
         ),
-        Q = l.useCallback(
+        ee = s.useCallback(
             (e) => {
-                W({ ...Y, [d]: e });
+                X({ ...B, [o]: e });
             },
-            [Y, d],
+            [B, o],
         ),
-        X = l.useCallback(() => {
-            W({ ...Y, [d]: "" });
-        }, [Y, d]),
-        Z = l.useMemo(
+        et = s.useCallback(() => {
+            X({ ...B, [o]: "" });
+        }, [B, o]),
+        en = s.useMemo(
             () =>
-                d === L.m3P.PENDING && (a.filter(L.m3P.SPAM).length > 0 || a.filter(L.m3P.PENDING_IGNORED).length > 0),
-            [a, d],
+                o === k.m3P.PENDING && (l.filter(k.m3P.SPAM).length > 0 || l.filter(k.m3P.PENDING_IGNORED).length > 0),
+            [l, o],
         ),
-        J = l.useMemo(() => {
-            let e = a.filter(d, Y[d]);
+        ei = s.useMemo(() => {
+            let e = l.filter(o, B[o]);
             return (
-                V &&
-                    d === L.m3P.PENDING &&
-                    "" === Y[d] &&
-                    (e = r()([...e, ...B])
+                H &&
+                    o === k.m3P.PENDING &&
+                    "" === B[o] &&
+                    (e = a()([...e, ...W])
                         .uniqBy("key")
                         .sortBy(
                             (e) => e.nickname?.toLowerCase() ?? e.user?.globalName?.toLowerCase() ?? e.usernameLower,
@@ -124,182 +129,182 @@ let G = function (e) {
                         .value()),
                 e
             );
-        }, [B, V, a, Y, d]),
-        ee = d === L.m3P.PENDING,
-        et = l.useMemo(() => {
-            if (!ee) return j;
+        }, [W, H, l, B, o]),
+        es = o === k.m3P.PENDING,
+        el = s.useMemo(() => {
+            if (!es) return M;
             let e = [];
             return (
-                J.forEach((t) => {
+                ei.forEach((t) => {
                     let { applicationId: n } = t;
                     null != n && e.push(n);
                 }),
                 e
             );
-        }, [ee, J]);
-    (0, _.A)(et, ee);
-    let en = l.useMemo(
+        }, [es, ei]);
+    (0, f.A)(el, es);
+    let ea = s.useMemo(
             () =>
-                d === L.m3P.ALL && K && J.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY)
-                    ? J.filter((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY).length
+                o === k.m3P.ALL && Q && ei.some((e) => e.giftIntentType === F.np.FRIEND_ANNIVERSARY)
+                    ? ei.filter((e) => e.giftIntentType === F.np.FRIEND_ANNIVERSARY).length
                     : 0,
-            [J, d, K],
+            [ei, o, Q],
         ),
-        ei = l.useMemo(() => {
-            switch (d) {
-                case L.m3P.PENDING:
+        er = s.useMemo(() => {
+            switch (o) {
+                case k.m3P.PENDING:
                     let e = [],
                         t = [];
                     return (
-                        J.forEach((n) => {
-                            n.type === L.eA$.PENDING_INCOMING
+                        ei.forEach((n) => {
+                            n.type === k.eA$.PENDING_INCOMING
                                 ? e.push(n)
-                                : n.type === L.eA$.PENDING_OUTGOING && t.push(n);
+                                : n.type === k.eA$.PENDING_OUTGOING && t.push(n);
                         }),
                         [e, t]
                     );
-                case L.m3P.ALL:
-                    if (!(K && J.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY))) return [J];
+                case k.m3P.ALL:
+                    if (!(Q && ei.some((e) => e.giftIntentType === F.np.FRIEND_ANNIVERSARY))) return [ei];
                     {
                         let e = [];
                         return (
-                            J.forEach((t) => {
-                                t.giftIntentType === R.np.FRIEND_ANNIVERSARY && e.push(t);
+                            ei.forEach((t) => {
+                                t.giftIntentType === F.np.FRIEND_ANNIVERSARY && e.push(t);
                             }),
-                            e.sort((e, t) => E.A.compareByDmProbability(e.userId, t.userId)),
-                            [q ? e : e.slice(0, p.ZD), J]
+                            e.sort((e, t) => j.A.compareByDmProbability(e.userId, t.userId)),
+                            [K ? e : e.slice(0, v.ZD), ei]
                         );
                     }
                 default:
-                    return [J];
+                    return [ei];
             }
-        }, [J, d, q, K]),
-        el = l.useMemo(() => J.filter((e) => e.type === L.eA$.PENDING_INCOMING).length, [J]),
-        ea = d === L.m3P.PENDING && el > 0 && el >= 5,
-        er = l.useCallback(
+        }, [ei, o, K, Q]),
+        eo = s.useMemo(() => ei.filter((e) => e.type === k.eA$.PENDING_INCOMING).length, [ei]),
+        ec = o === k.m3P.PENDING && eo > 0 && eo >= 5,
+        ed = s.useCallback(
             (e) => {
-                e.stopPropagation(), c.A.confirmClearPendingRelationships(el);
+                e.stopPropagation(), x.A.confirmClearPendingRelationships(eo);
             },
-            [el],
+            [eo],
         ),
-        es = l.useCallback(() => {
-            z((e) => !e);
+        eu = s.useCallback(() => {
+            Z((e) => !e);
         }, []),
-        eo = l.useCallback(
+        em = s.useCallback(
             (e) => {
-                let n = ei[e],
-                    l = (function (e, t, n, i) {
+                let n = er[e],
+                    s = (function (e, t, n, i) {
                         switch (e) {
-                            case L.m3P.ONLINE:
-                                return P.intl.formatToPlainString(P.t.BagU2U, { online: t.toString() });
-                            case L.m3P.PENDING:
-                                if (0 === n) return P.intl.formatToPlainString(P.t["g+3FIa"], { count: t.toString() });
-                                if (1 === n) return P.intl.formatToPlainString(P.t.npJsRl, { count: t.toString() });
+                            case k.m3P.ONLINE:
+                                return w.intl.formatToPlainString(w.t.BagU2U, { online: t.toString() });
+                            case k.m3P.PENDING:
+                                if (0 === n) return w.intl.formatToPlainString(w.t["g+3FIa"], { count: t.toString() });
+                                if (1 === n) return w.intl.formatToPlainString(w.t.npJsRl, { count: t.toString() });
                                 throw Error(`Unexpected pending friend requests section index: ${n}`);
-                            case L.m3P.SUGGESTIONS:
-                                return P.intl.formatToPlainString(P.t["DYMZ/p"], { count: t.toString() });
+                            case k.m3P.SUGGESTIONS:
+                                return w.intl.formatToPlainString(w.t["DYMZ/p"], { count: t.toString() });
                             default:
-                                if ((0, m.p)(A.A.FRIENDS_LIST) && i)
-                                    if (0 === n) return P.intl.formatToPlainString(P.t.rrZTqK, { count: t.toString() });
+                                if ((0, _.p)(g.A.FRIENDS_LIST) && i)
+                                    if (0 === n) return w.intl.formatToPlainString(w.t.rrZTqK, { count: t.toString() });
                                     else if (1 === n);
                                     else throw Error(`Unexpected friends all section index: ${n}`);
-                                return P.intl.formatToPlainString(P.t.rHRrhC, { count: t.toString() });
+                                return w.intl.formatToPlainString(w.t.rHRrhC, { count: t.toString() });
                         }
                     })(
-                        d,
+                        o,
                         n.length,
                         e,
-                        n.some((e) => e.giftIntentType === R.np.FRIEND_ANNIVERSARY),
+                        n.some((e) => e.giftIntentType === F.np.FRIEND_ANNIVERSARY),
                     );
-                return d === L.m3P.PENDING && 0 === e
+                return o === k.m3P.PENDING && 0 === e
                     ? (0, i.jsxs)(
                           "div",
                           {
-                              className: D.Gf,
+                              className: G.Gf,
                               children: [
-                                  (0, i.jsx)(y.A, { id: t, title: l }),
-                                  ea &&
+                                  (0, i.jsx)(D.A, { id: t, title: s }),
+                                  ec &&
                                       (0, i.jsx)("div", {
-                                          className: D.mt,
-                                          children: (0, i.jsx)(o.QWc, {
-                                              text: P.intl.string(P.t.O8k7O4),
-                                              onClick: er,
-                                              "aria-label": P.intl.string(P.t.O8k7O4),
+                                          className: G.mt,
+                                          children: (0, i.jsx)(c.Q, {
+                                              text: w.intl.string(w.t.O8k7O4),
+                                              onClick: ed,
+                                              "aria-label": w.intl.string(w.t.O8k7O4),
                                               textVariant: "text-sm/medium",
                                           }),
                                       }),
                               ],
                           },
-                          l,
+                          s,
                       )
-                    : (0, i.jsx)("div", { className: D.Gf, children: (0, i.jsx)(y.A, { id: t, title: l }) }, l);
+                    : (0, i.jsx)("div", { className: G.Gf, children: (0, i.jsx)(D.A, { id: t, title: s }) }, s);
             },
-            [ei, d, t, ea, er],
+            [er, o, t, ec, ed],
         ),
-        ed = l.useCallback(
+        eA = s.useCallback(
             (e) =>
-                d === L.m3P.ALL && 0 === e && K && en > p.ZD
+                o === k.m3P.ALL && 0 === e && Q && ea > v.ZD
                     ? (0, i.jsx)("div", {
-                          className: D.Nf,
-                          children: (0, i.jsx)(o.Button, {
-                              icon: q ? o.tN5 : o.abt,
+                          className: G.Nf,
+                          children: (0, i.jsx)(d.$, {
+                              icon: K ? u.t : m.a,
                               variant: "secondary",
                               size: "sm",
-                              text: P.intl.string(q ? P.t["6MwJo/"] : P.t["37C26f"]),
-                              onClick: es,
-                              "aria-label": P.intl.string(q ? P.t["6MwJo/"] : P.t["37C26f"]),
+                              text: w.intl.string(K ? w.t["6MwJo/"] : w.t["37C26f"]),
+                              onClick: eu,
+                              "aria-label": w.intl.string(K ? w.t["6MwJo/"] : w.t["37C26f"]),
                           }),
                       })
                     : null,
-            [d, en, q, es, K],
+            [o, ea, K, eu, Q],
         );
     if (
-        (l.useEffect(() => {
-            d === L.m3P.ALL && (0, g.Ad)();
-        }, [d]),
-        l.useEffect(() => {
-            z(!1);
-        }, [d, en]),
-        0 === J.length && "" === Y[d])
+        (s.useEffect(() => {
+            o === k.m3P.ALL && (0, I.Ad)();
+        }, [o]),
+        s.useEffect(() => {
+            Z(!1);
+        }, [o, ea]),
+        0 === ei.length && "" === B[o])
     )
-        return (0, i.jsx)(U, { section: d, showSpamCta: Z });
-    let ec = "" !== Y[d],
-        eu = 0 === J.length && ec;
-    return (0, i.jsx)(h.f5, {
+        return (0, i.jsx)(Y, { section: o, showSpamCta: en });
+    let eh = "" !== B[o],
+        ex = 0 === ei.length && eh;
+    return (0, i.jsx)(N.f5, {
         value: n,
-        children: (0, i.jsxs)(u.A, {
-            section: L.JJy.FRIENDS_LIST,
+        children: (0, i.jsxs)(p.A, {
+            section: k.JJy.FRIENDS_LIST,
             children: [
-                k && (0, i.jsx)(b.g, {}),
+                $ && (0, i.jsx)(R.g, {}),
                 (0, i.jsx)("div", {
-                    className: D.ON,
-                    children: (0, i.jsx)(o.IWV, { query: Y[d], onChange: Q, onClear: X }),
+                    className: G.ON,
+                    children: (0, i.jsx)(A.I, { query: B[o], onChange: ee, onClear: et }),
                 }),
-                (0, i.jsx)(v.A, {
-                    rows: ei,
-                    renderRow: $,
-                    renderSection: eo,
-                    sectionFilter: d,
-                    isVirtualizedList: G >= 64,
-                    hasSearchQuery: ec,
-                    renderSectionFooter: ed,
+                (0, i.jsx)(L.A, {
+                    rows: er,
+                    renderRow: J,
+                    renderSection: em,
+                    sectionFilter: o,
+                    isVirtualizedList: U >= 64,
+                    hasSearchQuery: eh,
+                    renderSectionFooter: eA,
                     footer:
-                        Z && !eu
+                        en && !ex
                             ? (0, i.jsx)("div", {
-                                  className: D.RE,
-                                  children: (0, i.jsx)(o.QWc, {
-                                      text: P.intl.string(P.t.R40bU2),
-                                      onClick: w,
+                                  className: G.RE,
+                                  children: (0, i.jsx)(c.Q, {
+                                      text: w.intl.string(w.t.R40bU2),
+                                      onClick: V,
                                       textVariant: "text-xs/medium",
                                       variant: "secondary",
                                   }),
                               })
                             : null,
                 }),
-                eu &&
+                ex &&
                     (0, i.jsx)("div", {
-                        className: D.y7,
-                        children: (0, i.jsx)(S.A, { type: S.a.SECTION_NO_RESULTS }, d),
+                        className: G.y7,
+                        children: (0, i.jsx)(b.A, { type: b.a.SECTION_NO_RESULTS }, o),
                     }),
             ],
         }),

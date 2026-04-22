@@ -1,61 +1,64 @@
-n.d(e, { default: () => u });
-var i = n(627968),
-    a = n(64700),
-    s = n(158954),
-    d = n(397927),
-    l = n(450510),
-    c = n(350535),
-    r = n(927421),
-    o = n(985018),
-    h = n(290844);
-function u(t) {
-    let { guildId: e, channel: u, keybind: k, transitionState: p, onClose: x } = t,
-        y = a.useCallback(async () => {
-            (0, l.sF)(l._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await x();
-        }, [x]),
-        _ = a.useCallback(async () => {
-            await y(),
-                (0, d.mMO)(async () => {
-                    let { default: t } = await n.e("90237").then(n.bind(n, 29681));
-                    return (e) => (0, i.jsx)(t, { ...e });
+n.d(e, { default: () => y });
+var a = n(627968),
+    i = n(64700),
+    s = n(189213),
+    d = n(192308),
+    l = n(834730),
+    c = n(475358),
+    o = n(349288),
+    r = n(450510),
+    h = n(350535),
+    u = n(927421),
+    k = n(985018),
+    p = n(999267);
+function y(t) {
+    let { guildId: e, channel: y, keybind: x, transitionState: _, onClose: j } = t,
+        C = i.useCallback(async () => {
+            (0, r.sF)(r._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await j();
+        }, [j]),
+        b = i.useCallback(async () => {
+            await C(),
+                (0, d.openModalLazy)(async () => {
+                    let { default: t } = await n.e("12618").then(n.bind(n, 29681));
+                    return (e) => (0, a.jsx)(t, { ...e });
                 });
-        }, [y]),
-        j = a.useMemo(
+        }, [C]),
+        m = i.useMemo(
             () => [
-                { variant: "secondary", text: o.intl.string(o.t.TJ0N99), onClick: _ },
-                { text: o.intl.string(o.t.ZwRzIH), onClick: y, variant: "primary" },
+                { variant: "secondary", text: k.intl.string(k.t.TJ0N99), onClick: b },
+                { text: k.intl.string(k.t.ZwRzIH), onClick: C, variant: "primary" },
             ],
-            [_, y],
+            [b, C],
         );
-    return (0, i.jsxs)(s.Modal, {
-        onClose: y,
-        actions: j,
-        transitionState: p,
-        title: o.intl.string(o.t.yJeV51),
+    return (0, a.jsxs)(s.Modal, {
+        onClose: C,
+        actions: m,
+        transitionState: _,
+        title: k.intl.string(k.t.yJeV51),
         children: [
-            (0, i.jsx)(d.Text, {
+            (0, a.jsx)(l.E, {
                 variant: "text-md/normal",
-                children: o.intl.format(o.t.fq3Swz, {
-                    keybind: (0, c.dI)(k.shortcut, !0).split(" + "),
+                children: k.intl.format(k.t.fq3Swz, {
+                    keybind: (0, h.dI)(x.shortcut, !0).split(" + "),
                     keybindHook: (t, e) =>
-                        (0, i.jsx)(
+                        (0, a.jsx)(
                             "span",
                             {
-                                className: h.EY,
-                                children: (0, i.jsx)(d.e7I, { className: h.d4, shortcut: (0, c.dI)(k.shortcut, !1) }),
+                                className: p.EY,
+                                children: (0, a.jsx)(c.e, { className: p.d4, shortcut: (0, h.dI)(x.shortcut, !1) }),
                             },
                             e,
                         ),
-                    openSettingsHook: (t, e) => (0, i.jsx)(d.MzZ, { onClick: _, children: t }, e),
+                    openSettingsHook: (t, e) => (0, a.jsx)(o.Anchor, { onClick: b, children: t }, e),
                 }),
             }),
-            (0, i.jsx)("div", {
-                className: h.Rj,
-                children: (0, i.jsx)(r.A, {
+            (0, a.jsx)("div", {
+                className: p.Rj,
+                children: (0, a.jsx)(u.A, {
                     width: 372,
                     height: 316,
                     guildId: e,
-                    channel: u,
+                    channel: y,
                     interactive: !1,
                     keepOpen: !0,
                     onClose: () => {},

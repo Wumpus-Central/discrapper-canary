@@ -1,8 +1,8 @@
 n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
-    s = n(607399),
-    a = n(397927),
+    a = n(607399),
+    s = n(821609),
     r = n(308528),
     o = n(928658),
     c = n(957283),
@@ -13,17 +13,17 @@ function h(e) {
         h = !0 === n.bot,
         { message: m, isReportable: A, isLoaded: g } = (0, d.R)(t, n.id, h),
         { channelId: p } = (0, c.N)(),
-        f = t.id === p,
-        _ = !s.Fr && !f,
+        _ = t.id === p,
+        f = !a.Fr && !_,
         E = l.useCallback(() => {
             null != m &&
                 (0, o.b8)(m, () => {
-                    r.A.closePrivateChannel(t.id, _);
+                    r.A.closePrivateChannel(t.id, f);
                 });
-        }, [t.id, m, _]);
+        }, [t.id, m, f]);
     return !A || (null == m && g)
         ? null
-        : (0, i.jsx)(a.Button, {
+        : (0, i.jsx)(s.$, {
               size: "sm",
               variant: "critical-primary",
               disabled: null == m,

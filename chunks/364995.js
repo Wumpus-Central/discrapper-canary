@@ -1,32 +1,37 @@
 "use strict";
-n.d(t, { Fy: () => u, P7: () => l, aN: () => c });
+n.d(t, { Fy: () => l, P7: () => o, aN: () => u });
 var r = n(64700),
     i = n(73153),
     s = n(826469),
     a = n(94420);
-let o = (e) =>
-        null == e
-            ? { paymentSourceRecords: [], allowedCurrencies: [] }
-            : {
-                  paymentSourceRecords: e.payment_sources.map(s.A.createFromCheckoutContext),
-                  allowedCurrencies: e.allowed_currencies ?? [],
-              },
-    l = () => {
+let o = () => {
         let e = (0, a.t4)((e) => {
             let { invoiceOrderContext: t } = e;
             return t;
         });
         return r.useMemo(() => (null == e || null == e.store_country ? null : e.store_country.country), [e]);
     },
-    u = () => {
+    l = () => {
         let { invoiceOrderContext: e } = (0, a.t4)((e) => {
                 let { invoiceOrderContext: t } = e;
                 return { invoiceOrderContext: t };
             }),
             t = null != e;
-        return { ...r.useMemo(() => o(e), [e]), hasCheckoutContextForSession: t };
+        return {
+            ...r.useMemo(
+                () =>
+                    null == e
+                        ? { paymentSourceRecords: [], allowedCurrencies: [] }
+                        : {
+                              paymentSourceRecords: e.payment_sources.map(s.A.createFromCheckoutContext),
+                              allowedCurrencies: e.allowed_currencies ?? [],
+                          },
+                [e],
+            ),
+            hasCheckoutContextForSession: t,
+        };
     },
-    c = (e) => {
+    u = (e) => {
         let t = r.useCallback(
                 (t) => {
                     null != t.price &&

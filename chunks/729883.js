@@ -1,19 +1,20 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(406704),
-    r = n(519222),
-    s = n(985018);
-function o(e, t) {
-    return (0, a.n)(t, e)
-        ? (0, i.jsx)(l.Drp, {
+var l = n(477782),
+    a = n(163328),
+    r = n(406704),
+    s = n(519222),
+    o = n(985018);
+function d(e, t) {
+    return (0, r.n)(t, e)
+        ? (0, i.jsx)(l.Dr, {
               id: "thread",
-              label: s.intl.string(s.t.rBIGBL),
-              leadingAccessory: { type: "icon", icon: l.ysw },
-              icon: l.ysw,
+              label: o.intl.string(o.t.rBIGBL),
+              leadingAccessory: { type: "icon", icon: a.y },
+              icon: a.y,
               action: () => {
-                  (0, r.Nw)(t, e);
+                  (0, s.Nw)(t, e);
               },
           })
         : null;

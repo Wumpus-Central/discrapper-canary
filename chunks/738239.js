@@ -23,6 +23,5 @@ let t = {};
         );
     }),
     (e.exports = function () {
-        let e = t;
-        return !(0, e.isSafari)() && !(0, e.isMobile)();
+        return !(0, t.isSafari)() && !(0, t.isMobile)();
     });

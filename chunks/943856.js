@@ -7,37 +7,38 @@ e.exports = function (e) {
                 "bool cdouble cent cfloat char creal dchar delegate double dstring float function idouble ifloat ireal long real short string ubyte ucent uint ulong ushort wchar wstring",
             literal: "false null true",
         },
-        n = "(0|[1-9][\\d_]*)",
-        r = "(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)",
-        i = "([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)",
-        s = "([eE][+-]?" + r + ")",
-        a = "(" + r + "(\\.\\d*|" + s + ")|\\d+\\." + r + "|\\." + n + s + "?)",
-        o = "(" + n + "|0[bB][01_]+|0[xX]" + i + ")",
-        l = "\\\\(['\"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};",
-        u = { className: "number", begin: "\\b" + o + "(L|u|U|Lu|LU|uL|UL)?", relevance: 0 },
-        c = {
+        a = "(0|[1-9][\\d_]*)",
+        n = "(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)",
+        r = "([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)",
+        i = "([eE][+-]?" + n + ")",
+        o = "(" + n + "(\\.\\d*|" + i + ")|\\d+\\." + n + "|\\." + a + i + "?)",
+        s = "(0[xX](" + r + "\\." + r + "|\\.?" + r + ")[pP][+-]?" + n + ")",
+        l = "(" + a + "|0[bB][01_]+|0[xX]" + r + ")",
+        c = "\\\\(['\"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};",
+        _ = {
             className: "number",
-            begin:
-                "\\b(" +
-                ("(" + ("(0[xX](" + i + "\\." + i + "|\\.?" + i + ")[pP][+-]?" + r) + ")|" + a) +
-                ")([fF]|L|i|[fF]i|Li)?|" +
-                o +
-                "(i|[fF]i|Li))",
+            begin: "\\b(" + ("(" + s + "|") + o + ")([fF]|L|i|[fF]i|Li)?|" + l + "(i|[fF]i|Li))",
             relevance: 0,
         },
-        d = { className: "string", begin: "'(" + l + "|.)", end: "'", illegal: "." },
-        _ = { className: "string", begin: '"', contains: [{ begin: l, relevance: 0 }], end: '"[cwd]?' },
-        f = { className: "string", begin: '[rq]"', end: '"[cwd]?', relevance: 5 },
-        p = { className: "string", begin: "`", end: "`[cwd]?" },
-        h = { className: "string", begin: 'x"[\\da-fA-F\\s\\n\\r]*"[cwd]?', relevance: 10 },
-        m = { className: "string", begin: 'q"\\{', end: '\\}"' },
-        E = { className: "meta", begin: "^#!", end: "$", relevance: 5 },
-        g = { className: "meta", begin: "#(line)", end: "$", relevance: 5 },
-        A = { className: "keyword", begin: "@[a-zA-Z_][a-zA-Z_\\d]*" },
-        I = e.COMMENT("\\/\\+", "\\+\\/", { contains: ["self"], relevance: 10 });
+        d = e.COMMENT("\\/\\+", "\\+\\/", { contains: ["self"], relevance: 10 });
     return {
         name: "D",
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, I, h, _, f, p, m, c, u, d, E, g, A],
+        contains: [
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            d,
+            { className: "string", begin: 'x"[\\da-fA-F\\s\\n\\r]*"[cwd]?', relevance: 10 },
+            { className: "string", begin: '"', contains: [{ begin: c, relevance: 0 }], end: '"[cwd]?' },
+            { className: "string", begin: '[rq]"', end: '"[cwd]?', relevance: 5 },
+            { className: "string", begin: "`", end: "`[cwd]?" },
+            { className: "string", begin: 'q"\\{', end: '\\}"' },
+            _,
+            { className: "number", begin: "\\b" + l + "(L|u|U|Lu|LU|uL|UL)?", relevance: 0 },
+            { className: "string", begin: "'(" + c + "|.)", end: "'", illegal: "." },
+            { className: "meta", begin: "^#!", end: "$", relevance: 5 },
+            { className: "meta", begin: "#(line)", end: "$", relevance: 5 },
+            { className: "keyword", begin: "@[a-zA-Z_][a-zA-Z_\\d]*" },
+        ],
     };
 };

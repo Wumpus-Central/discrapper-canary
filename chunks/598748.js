@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { m: () => r });
-var r = (function (e) {
-    return (
-        (e.WIDGET_TOP = "widget_top"),
-        (e.WIDGET_BOTTOM = "widget_bottom"),
-        (e.ADD_WIDGET_PREVIEW = "add_widget_preview"),
-        (e.MINI_PROFILE = "mini_profile"),
-        (e.ACTIVITY_ACCESSORY = "activity_accessory"),
-        e
-    );
-})({});
+n.d(t, { m: () => l });
+var i,
+    l =
+        (((i = {}).WIDGET_TOP = "widget_top"),
+        (i.WIDGET_BOTTOM = "widget_bottom"),
+        (i.ADD_WIDGET_PREVIEW = "add_widget_preview"),
+        (i.MINI_PROFILE = "mini_profile"),
+        (i.ACTIVITY_ACCESSORY = "activity_accessory"),
+        i);

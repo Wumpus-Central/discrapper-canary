@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { A0: () => d, BF: () => c, Hj: () => u, Ve: () => l, XI: () => _, nA: () => o });
-var r = n(627968);
-n(64700);
-var i = n(439626),
-    a = n(834730),
-    s = n(364309);
-function o(e) {
-    return (0, r.jsx)(i.fh, { ...e, className: s.Hn });
-}
+t.d(s, { A0: () => h, BF: () => d, Hj: () => c, Ve: () => o, XI: () => x, nA: () => l });
+var n = t(627968);
+t(64700);
+var i = t(439626),
+    r = t(834730),
+    a = t(350688);
 function l(e) {
-    let { children: t, ...n } = e;
-    return (0, r.jsx)(i.VP, {
-        ...n,
-        className: s.fi,
-        children: (0, r.jsx)(a.E, { variant: "eyebrow", className: s.QP, children: t }),
+    return (0, n.jsx)(i.fh, { ...e, className: a.Hn });
+}
+function o(e) {
+    let { children: s, ...t } = e;
+    return (0, n.jsx)(i.VP, {
+        ...t,
+        className: a.fi,
+        children: (0, n.jsx)(r.E, { variant: "eyebrow", className: a.QP, children: s }),
     });
 }
-function u(e) {
-    return (0, r.jsx)(i.fI, { ...e, className: s.nM });
-}
 function c(e) {
-    return (0, r.jsx)(i.BF, { ...e, className: s.rf });
+    return (0, n.jsx)(i.fI, { ...e, className: a.nM });
 }
 function d(e) {
-    return (0, r.jsx)(i.A0, { ...e, className: s.wx });
+    return (0, n.jsx)(i.BF, { ...e, className: a.rf });
 }
-function _(e) {
-    let { header: t, footer: n, children: a, ...o } = e;
-    return (0, r.jsx)("div", {
-        className: s.kL,
-        children: (0, r.jsxs)(i.XI, {
-            ...o,
-            className: s.tp,
+function h(e) {
+    return (0, n.jsx)(i.A0, { ...e, className: a.wx });
+}
+function x(e) {
+    let { header: s, footer: t, children: r, ...l } = e;
+    return (0, n.jsx)("div", {
+        className: a.kL,
+        children: (0, n.jsxs)(i.XI, {
+            ...l,
+            className: a.tp,
             children: [
-                null != t && (0, r.jsx)("div", { className: s.wx, children: t }),
-                a,
-                null != n && (0, r.jsx)("div", { className: s.qr, children: n }),
+                null != s && (0, n.jsx)("div", { className: a.wx, children: s }),
+                r,
+                null != t && (0, n.jsx)("div", { className: a.qr, children: t }),
             ],
         }),
     });

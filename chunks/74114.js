@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { l: () => d });
-var r = n(311907),
-    i = n(321404),
-    s = n(195443),
-    a = n(287809),
-    o = n(349435),
-    l = n(963555),
-    u = n(840387),
-    c = n(168447);
-function d(e) {
-    let t = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        n = (0, s.z)(e),
-        d = (0, i.O)(e),
-        _ = (0, l.F)(e, o._j.STRANGER_DANGER),
-        f = (0, u.Z)(),
-        p = t?.isStaff() !== !0,
-        h = (0, c.Y)(e).length > 0;
-    if (!(!f && p) && !n && !d && !h) return _;
+n.d(t, { l: () => u });
+var i = n(311907),
+    l = n(321404),
+    a = n(195443),
+    s = n(287809),
+    r = n(349435),
+    o = n(963555),
+    c = n(840387),
+    d = n(168447);
+function u(e) {
+    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
+        n = (0, a.z)(e),
+        u = (0, l.O)(e),
+        h = (0, o.F)(e, r._j.STRANGER_DANGER),
+        m = (0, c.Z)(),
+        A = t?.isStaff() !== !0,
+        g = (0, d.Y)(e).length > 0;
+    if (!(!m && A) && !n && !u && !g) return h;
 }

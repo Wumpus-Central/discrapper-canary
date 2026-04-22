@@ -1,59 +1,58 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        Chrono: () => h.u,
-        Meridiem: () => g.FF,
-        ParsingComponents: () => m.BP,
-        ParsingResult: () => m.s4,
-        ReferenceWithTimezone: () => m.b5,
-        Weekday: () => g.Bw,
-        casual: () => I,
+r.r(t),
+    r.d(t, {
+        Chrono: () => f.u,
+        Meridiem: () => y.FF,
+        ParsingComponents: () => p.BP,
+        ParsingResult: () => p.s4,
+        ReferenceWithTimezone: () => p.b5,
+        Weekday: () => y.Bw,
+        casual: () => A,
         createCasualConfiguration: () => v,
-        createConfiguration: () => C,
-        parse: () => y,
-        parseDate: () => S,
-        strict: () => T,
+        createConfiguration: () => T,
+        parse: () => P,
+        parseDate: () => C,
+        strict: () => D,
     });
-var r = n(854724),
-    i = n(584823),
-    a = n(179860),
-    s = n(225960),
-    o = n(972826),
-    l = n(381620),
-    u = n(762094),
-    c = n(125659),
-    d = n(280598),
-    _ = n(504927),
-    f = n(749867),
-    p = n(368072),
-    h = n(880683),
-    m = n(374372),
-    g = n(322811),
-    E = n(774188),
-    A = n(373122);
-let I = new h.u(v()),
-    T = new h.u(C(!0));
-function y(e, t, n) {
-    return I.parse(e, t, n);
+var n = r(854724),
+    s = r(584823),
+    a = r(179860),
+    i = r(225960),
+    o = r(972826),
+    l = r(381620),
+    u = r(762094),
+    d = r(125659),
+    m = r(58217),
+    c = r(504927),
+    g = r(749867),
+    h = r(368072),
+    f = r(880683),
+    p = r(374372),
+    y = r(322811),
+    x = r(774188),
+    w = r(373122);
+let A = new f.u(v()),
+    D = new f.u(T(!0));
+function P(e, t, r) {
+    return A.parse(e, t, r);
 }
-function S(e, t, n) {
-    return I.parseDate(e, t, n);
+function C(e, t, r) {
+    return A.parseDate(e, t, r);
 }
 function v() {
-    let e = C(!1);
+    let e = T(!1);
     return (
-        e.parsers.unshift(new d.A()),
-        e.parsers.unshift(new _.A()),
+        e.parsers.unshift(new m.A()),
+        e.parsers.unshift(new c.A()),
         e.parsers.unshift(new a.A()),
-        e.parsers.unshift(new p.A()),
-        e.parsers.unshift(new A.A()),
+        e.parsers.unshift(new h.A()),
+        e.parsers.unshift(new w.A()),
         e
     );
 }
-function C(e = !0) {
-    return (0, c.i)(
+function T(e = !0) {
+    return (0, d.i)(
         {
-            parsers: [new E.A(!0), new r.A(), new i.A(), new f.A(), new s.A(e), new o.A()],
+            parsers: [new x.A(!0), new n.A(), new s.A(), new g.A(), new i.A(e), new o.A()],
             refiners: [new u.A(), new l.A()],
         },
         e,

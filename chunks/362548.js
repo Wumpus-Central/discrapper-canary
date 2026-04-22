@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     function t(e, t, n) {
         var r = e + " ";
@@ -27,7 +25,7 @@
                 return 1 === e ? (r += "godina") : 2 === e || 3 === e || 4 === e ? (r += "godine") : (r += "godina"), r;
         }
     }
-    return e.defineLocale("hr", {
+    e.defineLocale("hr", {
         months: {
             format: "siječnja_veljače_ožujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
                 "_",
@@ -106,4 +104,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 7 },
     });
-});
+})(n(989349));

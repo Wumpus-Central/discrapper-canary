@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table_c3fe25",
     FQ: "tableWithoutSeparators_c3fe25",

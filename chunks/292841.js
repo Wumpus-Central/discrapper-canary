@@ -1,37 +1,40 @@
 "use strict";
-n.d(t, { I: () => a });
+n.d(t, { I: () => i });
 var r = n(64700);
-let i = 1e3;
-function a(e) {
-    let { keyboardDelegate: t, selectionManager: n, onTypeSelect: a } = e,
-        o = (0, r.useRef)({ search: "", timeout: void 0 }).current,
-        l = (e) => {
-            let r = s(e.key);
-            if (
-                r &&
-                !e.ctrlKey &&
-                !e.metaKey &&
-                e.currentTarget.contains(e.target) &&
-                (0 !== o.search.length || " " !== r)
-            ) {
-                if (
-                    (" " === r &&
-                        o.search.trim().length > 0 &&
-                        (e.preventDefault(), "continuePropagation" in e || e.stopPropagation()),
-                    (o.search += r),
-                    null != t.getKeyForSearch)
-                ) {
-                    let e = t.getKeyForSearch(o.search, n.focusedKey);
-                    null == e && (e = t.getKeyForSearch(o.search)), null != e && (n.setFocusedKey(e), a && a(e));
-                }
-                clearTimeout(o.timeout),
-                    (o.timeout = setTimeout(() => {
-                        o.search = "";
-                    }, i));
-            }
-        };
-    return { typeSelectProps: { onKeyDownCapture: t.getKeyForSearch ? l : void 0 } };
-}
-function s(e) {
-    return 1 !== e.length && /^[A-Z]/i.test(e) ? "" : e;
+function i(e) {
+    let { keyboardDelegate: t, selectionManager: n, onTypeSelect: i } = e,
+        s = (0, r.useRef)({ search: "", timeout: void 0 }).current;
+    return {
+        typeSelectProps: {
+            onKeyDownCapture: t.getKeyForSearch
+                ? (e) => {
+                      var r;
+                      let a = 1 !== (r = e.key).length && /^[A-Z]/i.test(r) ? "" : r;
+                      if (
+                          a &&
+                          !e.ctrlKey &&
+                          !e.metaKey &&
+                          e.currentTarget.contains(e.target) &&
+                          (0 !== s.search.length || " " !== a)
+                      ) {
+                          if (
+                              (" " === a &&
+                                  s.search.trim().length > 0 &&
+                                  (e.preventDefault(), "continuePropagation" in e || e.stopPropagation()),
+                              (s.search += a),
+                              null != t.getKeyForSearch)
+                          ) {
+                              let e = t.getKeyForSearch(s.search, n.focusedKey);
+                              null == e && (e = t.getKeyForSearch(s.search)),
+                                  null != e && (n.setFocusedKey(e), i && i(e));
+                          }
+                          clearTimeout(s.timeout),
+                              (s.timeout = setTimeout(() => {
+                                  s.search = "";
+                              }, 1e3));
+                      }
+                  }
+                : void 0,
+        },
+    };
 }

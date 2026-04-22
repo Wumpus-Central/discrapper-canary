@@ -1,34 +1,39 @@
 "use strict";
-n.d(t, { Ic: () => i, LW: () => r });
-var r = (function (e) {
-        return (e.DEFAULT = "AppIcon"), e;
-    })({}),
-    i = (function (e) {
-        return (
-            (e.BRAND_DARK = "BrandDarkIcon"),
-            (e.BRAND_INVERTED = "BrandInvertedIcon"),
-            (e.MATTE_LIGHT = "MatteLightIcon"),
-            (e.MATTE_DARK = "MatteDarkIcon"),
-            (e.PASTEL = "PastelIcon"),
-            (e.PIRATE = "PirateIcon"),
-            (e.CAMO = "CamoIcon"),
-            (e.SUNSET = "SunsetIcon"),
-            (e.GALAXY = "GalaxyIcon"),
-            (e.Y2K = "Y2KIcon"),
-            (e.CHERRY_BLOSSOM = "CherryBlossomIcon"),
-            (e.BEANIE = "BeanieIcon"),
-            (e.GAMING = "GamingIcon"),
-            (e.CIRCUIT = "CircuitIcon"),
-            (e.HOLO_WAVES = "HoloWavesIcon"),
-            (e.BLUSH = "BlushIcon"),
-            (e.ANGRY = "AngryIcon"),
-            (e.MANGA = "MangaIcon"),
-            (e.CONTROLLER = "ControllerIcon"),
-            (e.MUSHROOM = "MushroomIcon"),
-            (e.BLURPLE_TWILIGHT = "BlurpleTwilightIcon"),
-            (e.IN_RAINBOWS = "InRainbowsIcon"),
-            (e.COLOR_WAVE = "ColorWaveIcon"),
-            (e.MIDNIGHT_PRISM = "MidnightPrismIcon"),
-            e
-        );
-    })({});
+n.d(t, { Ic: () => o, LW: () => a });
+var r,
+    i,
+    s,
+    a = (((r = {}).DEFAULT = "AppIcon"), r),
+    o =
+        (((i = {}).BRAND_DARK = "BrandDarkIcon"),
+        (i.BRAND_INVERTED = "BrandInvertedIcon"),
+        (i.MATTE_LIGHT = "MatteLightIcon"),
+        (i.MATTE_DARK = "MatteDarkIcon"),
+        (i.PASTEL = "PastelIcon"),
+        (i.PIRATE = "PirateIcon"),
+        (i.CAMO = "CamoIcon"),
+        (i.SUNSET = "SunsetIcon"),
+        (i.GALAXY = "GalaxyIcon"),
+        (i.Y2K = "Y2KIcon"),
+        (i.CHERRY_BLOSSOM = "CherryBlossomIcon"),
+        (i.BEANIE = "BeanieIcon"),
+        (i.GAMING = "GamingIcon"),
+        (i.CIRCUIT = "CircuitIcon"),
+        (i.HOLO_WAVES = "HoloWavesIcon"),
+        (i.BLUSH = "BlushIcon"),
+        (i.ANGRY = "AngryIcon"),
+        (i.MANGA = "MangaIcon"),
+        (i.CONTROLLER = "ControllerIcon"),
+        (i.MUSHROOM = "MushroomIcon"),
+        (i.BLURPLE_TWILIGHT = "BlurpleTwilightIcon"),
+        (i.IN_RAINBOWS = "InRainbowsIcon"),
+        (i.COLOR_WAVE = "ColorWaveIcon"),
+        (i.MIDNIGHT_PRISM = "MidnightPrismIcon"),
+        i),
+    l =
+        (((s = {}).DRIP = "DripIcon"),
+        (s.SLIMY = "SlimyIcon"),
+        (s.ZOMBIE = "ZombieIcon"),
+        (s.CLYDE_STEIN = "ClydeSteinIcon"),
+        s);
+({ ...a, ...o, ...l });

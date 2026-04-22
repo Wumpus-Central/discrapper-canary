@@ -1,46 +1,51 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     r = n.n(a),
-    s = n(397927),
-    o = n(442433),
-    d = n(928658),
-    c = n(985018),
-    u = n(418843);
-function g(e) {
-    let { widget: t, userId: n, className: a, menuItems: g } = e,
-        m = l.useRef(null),
-        x = () => {
-            (0, d.GJ)(n, t);
+    s = n(265872),
+    o = n(861672),
+    c = n(477782),
+    d = n(138134),
+    u = n(939249),
+    m = n(365199),
+    p = n(442433),
+    h = n(928658),
+    g = n(985018),
+    x = n(620266);
+function f(e) {
+    let { widget: t, userId: n, className: a, menuItems: f } = e,
+        E = l.useRef(null),
+        y = () => {
+            (0, h.GJ)(n, t);
         };
-    return (0, i.jsx)(s.YNO, {
-        targetElementRef: m,
+    return (0, i.jsx)(s.Y, {
+        targetElementRef: E,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(s.W1t, {
+            return (0, i.jsx)(o.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, o.Z_)(), t();
+                    (0, p.Z_)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": c.intl.string(c.t.xpSHSk),
-                children: (0, i.jsxs)(s.rXV, {
+                "aria-label": g.intl.string(g.t.xpSHSk),
+                children: (0, i.jsxs)(c.rX, {
                     children: [
-                        g,
+                        f,
                         (0, i.jsx)(
-                            s.Drp,
+                            c.Dr,
                             {
                                 id: "flag-widget",
-                                label: c.intl.string(c.t.D4GvHE),
-                                action: x,
+                                label: g.intl.string(g.t.D4GvHE),
+                                action: y,
                                 color: "danger",
-                                icon: s.iFK,
-                                leadingAccessory: { type: "icon", icon: s.iFK },
+                                icon: d.i,
+                                leadingAccessory: { type: "icon", icon: d.i },
                             },
                             "flag-widget",
                         ),
@@ -49,12 +54,12 @@ function g(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(s.DUT, {
+            (0, i.jsx)(u.D, {
                 ...e,
-                innerRef: m,
-                "aria-label": c.intl.string(c.t.xpSHSk),
-                className: r()(u.x, a),
-                children: (0, i.jsx)(s.jNK, { size: "sm", color: "currentColor" }),
+                innerRef: E,
+                "aria-label": g.intl.string(g.t.xpSHSk),
+                className: r()(x.x, a),
+                children: (0, i.jsx)(m.j, { size: "sm", color: "currentColor" }),
             }),
     });
 }

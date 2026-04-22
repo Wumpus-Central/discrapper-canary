@@ -1,22 +1,14 @@
 "use strict";
 var r = n(683402),
     i = n(549412),
-    a = n(382811),
-    s = n(163173),
+    s = n(382811),
+    a = n(163173),
     o = n(267795),
-    l = Object.prototype.toString,
-    u = 0,
-    c = 4,
-    d = 0,
-    _ = 1,
-    f = 2,
-    p = -1,
-    h = 0,
-    m = 8;
-function g(e) {
-    if (!(this instanceof g)) return new g(e);
+    l = Object.prototype.toString;
+function u(e) {
+    if (!(this instanceof u)) return new u(e);
     this.options = i.assign(
-        { level: p, method: m, chunkSize: 16384, windowBits: 15, memLevel: 8, strategy: h, to: "" },
+        { level: -1, method: 8, chunkSize: 16384, windowBits: 15, memLevel: 8, strategy: 0, to: "" },
         e || {},
     );
     var t,
@@ -30,42 +22,36 @@ function g(e) {
         (this.chunks = []),
         (this.strm = new o()),
         (this.strm.avail_out = 0);
-    var u = r.deflateInit2(this.strm, n.level, n.method, n.windowBits, n.memLevel, n.strategy);
-    if (u !== d) throw Error(s[u]);
+    var d = r.deflateInit2(this.strm, n.level, n.method, n.windowBits, n.memLevel, n.strategy);
+    if (0 !== d) throw Error(a[d]);
     if ((n.header && r.deflateSetHeader(this.strm, n.header), n.dictionary)) {
         if (
             ((t =
                 "string" == typeof n.dictionary
-                    ? a.string2buf(n.dictionary)
+                    ? s.string2buf(n.dictionary)
                     : "[object ArrayBuffer]" === l.call(n.dictionary)
                       ? new Uint8Array(n.dictionary)
                       : n.dictionary),
-            (u = r.deflateSetDictionary(this.strm, t)) !== d)
+            0 !== (d = r.deflateSetDictionary(this.strm, t)))
         )
-            throw Error(s[u]);
+            throw Error(a[d]);
         this._dict_set = !0;
     }
 }
-function E(e, t) {
-    var n = new g(t);
-    if ((n.push(e, !0), n.err)) throw n.msg || s[n.err];
+function d(e, t) {
+    var n = new u(t);
+    if ((n.push(e, !0), n.err)) throw n.msg || a[n.err];
     return n.result;
 }
-function A(e, t) {
-    return ((t = t || {}).raw = !0), E(e, t);
-}
-function I(e, t) {
-    return ((t = t || {}).gzip = !0), E(e, t);
-}
-(g.prototype.push = function (e, t) {
+(u.prototype.push = function (e, t) {
     var n,
-        s,
+        a,
         o = this.strm,
-        p = this.options.chunkSize;
+        u = this.options.chunkSize;
     if (this.ended) return !1;
-    (s = t === ~~t ? t : !0 === t ? c : u),
+    (a = t === ~~t ? t : 4 * (!0 === t)),
         "string" == typeof e
-            ? (o.input = a.string2buf(e))
+            ? (o.input = s.string2buf(e))
             : "[object ArrayBuffer]" === l.call(e)
               ? (o.input = new Uint8Array(e))
               : (o.input = e),
@@ -73,24 +59,24 @@ function I(e, t) {
         (o.avail_in = o.input.length);
     do {
         if (
-            (0 === o.avail_out && ((o.output = new i.Buf8(p)), (o.next_out = 0), (o.avail_out = p)),
-            (n = r.deflate(o, s)) !== _ && n !== d)
+            (0 === o.avail_out && ((o.output = new i.Buf8(u)), (o.next_out = 0), (o.avail_out = u)),
+            1 !== (n = r.deflate(o, a)) && 0 !== n)
         )
             return this.onEnd(n), (this.ended = !0), !1;
-        (0 === o.avail_out || (0 === o.avail_in && (s === c || s === f))) &&
+        (0 === o.avail_out || (0 === o.avail_in && (4 === a || 2 === a))) &&
             ("string" === this.options.to
-                ? this.onData(a.buf2binstring(i.shrinkBuf(o.output, o.next_out)))
+                ? this.onData(s.buf2binstring(i.shrinkBuf(o.output, o.next_out)))
                 : this.onData(i.shrinkBuf(o.output, o.next_out)));
-    } while ((o.avail_in > 0 || 0 === o.avail_out) && n !== _);
-    return s === c
-        ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === d)
-        : (s === f && (this.onEnd(d), (o.avail_out = 0)), !0);
+    } while ((o.avail_in > 0 || 0 === o.avail_out) && 1 !== n);
+    return 4 === a
+        ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), 0 === n)
+        : (2 === a && (this.onEnd(0), (o.avail_out = 0)), !0);
 }),
-    (g.prototype.onData = function (e) {
+    (u.prototype.onData = function (e) {
         this.chunks.push(e);
     }),
-    (g.prototype.onEnd = function (e) {
-        e === d &&
+    (u.prototype.onEnd = function (e) {
+        0 === e &&
             ("string" === this.options.to
                 ? (this.result = this.chunks.join(""))
                 : (this.result = i.flattenChunks(this.chunks))),
@@ -98,7 +84,11 @@ function I(e, t) {
             (this.err = e),
             (this.msg = this.strm.msg);
     }),
-    (t.Deflate = g),
-    (t.deflate = E),
-    (t.deflateRaw = A),
-    (t.gzip = I);
+    (t.Deflate = u),
+    (t.deflate = d),
+    (t.deflateRaw = function (e, t) {
+        return ((t = t || {}).raw = !0), d(e, t);
+    }),
+    (t.gzip = function (e, t) {
+        return ((t = t || {}).gzip = !0), d(e, t);
+    });

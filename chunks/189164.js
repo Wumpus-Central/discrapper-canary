@@ -1,17 +1,18 @@
-l.d(t, { C: () => n });
-var a = l(627968);
-l(64700);
-var r = l(724560);
+"use strict";
+a.d(t, { C: () => n });
+var r = a(627968);
+a(64700);
+var l = a(724560);
 let n = {
     name: "FullBleedContent",
     id: "full-bleed-content",
     component: (e) => {
         let { padding: t } = e;
-        return (0, a.jsx)("div", {
+        return (0, r.jsx)("div", {
             style: { background: "#5865f2", width: "100%" },
-            children: (0, a.jsx)(r.A, {
+            children: (0, r.jsx)(l.A, {
                 padding: t,
-                children: (0, a.jsx)("div", {
+                children: (0, r.jsx)("div", {
                     style: { background: "white", color: "#000", padding: 16, fontWeight: "bold" },
                     children: "Full-width content",
                 }),

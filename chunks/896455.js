@@ -1,8 +1,8 @@
 n.d(t, { default: () => u, t: () => d });
 var i = n(627968),
     l = n(64700),
-    a = n(158954),
-    s = n(397927),
+    a = n(189213),
+    s = n(192308),
     r = n(151282),
     o = n(388096),
     c = n(985018);
@@ -21,7 +21,7 @@ function u(e) {
                 variant: "primary",
                 text: c.intl.string(c.t.iQ1SwX),
                 onClick: () => {
-                    (0, r.yF)({ channelId: t.id, scheduledTimestamp: m.toISOString() }), (0, s.OoC)(d);
+                    (0, r.yF)({ channelId: t.id, scheduledTimestamp: m.toISOString() }), (0, s.closeModal)(d);
                 },
             },
         ],

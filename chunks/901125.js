@@ -1,56 +1,58 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(397927),
-    r = n(780964),
-    o = n(840065),
-    d = n(975571),
-    c = n(927578),
-    u = n(526292),
-    _ = n(788868),
-    m = n(652215),
-    g = n(985018),
-    A = n(158793);
-let h = (e) => {
+s.d(t, { A: () => f });
+var r = s(627968);
+s(64700);
+var a = s(503698),
+    i = s.n(a),
+    n = s(359778),
+    l = s(695366),
+    o = s(834730),
+    c = s(780964),
+    d = s(858897),
+    m = s(975571),
+    u = s(927578),
+    _ = s(526292),
+    x = s(788868),
+    p = s(652215),
+    g = s(985018),
+    h = s(824888);
+let f = (e) => {
     let t,
-        n,
-        { premiumSubscription: s, className: h, textColor: x } = e,
-        p = (0, u.ar)();
-    if (null == s) return null;
-    let T = null != s ? c.Ay.getPremiumPlanItem(s) : null;
+        s,
+        { premiumSubscription: a, className: f, textColor: C } = e,
+        b = (0, _.ar)();
+    if (null == a) return null;
+    let j = null != a ? u.Ay.getPremiumPlanItem(a) : null;
     if (
-        (c.Ay.isBoostOnlySubscription(s)
+        (u.Ay.isBoostOnlySubscription(a)
             ? (t = g.intl.string(g.t.Uj0md3))
-            : null != T && (t = c.Ay.getTierDisplayNameByPlanId(T.planId)),
+            : null != j && (t = u.Ay.getTierDisplayNameByPlanId(j.planId)),
         null == t)
     )
         return null;
-    let E = () => (0, o.openUserSettings)(r.X.SUBSCRIPTIONS_PANEL),
-        S = (null != T ? c.Ay.getSkuIdForPlan(T.planId) : null) === _.pe.TIER_1;
+    let A = () => (0, d.openUserSettings)(c.X.SUBSCRIPTIONS_PANEL),
+        N = (null != j ? u.Ay.getSkuIdForPlan(j.planId) : null) === x.pe.TIER_1;
     return (
-        (n = null != x ? x : p ? "always-white" : "text-default"),
-        (0, i.jsxs)(a.ZpM, {
-            className: l()(A.kL, h, { [A.He]: p }),
-            type: a.ZpM.Types.CUSTOM,
+        (s = null != C ? C : b ? "always-white" : "text-default"),
+        (0, r.jsxs)(n.Z, {
+            className: i()(h.kL, f, { [h.He]: b }),
+            type: n.Z.Types.CUSTOM,
             children: [
-                (0, i.jsx)(a.EpV, {
+                (0, r.jsx)(l.E, {
                     size: "custom",
                     width: 20,
                     height: 20,
                     color: "currentColor",
-                    className: l()(A.Kk, { [A.Pt]: p }),
+                    className: i()(h.Kk, { [h.Pt]: b }),
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, r.jsx)(o.E, {
                     variant: "text-sm/medium",
-                    color: n,
-                    children: S
+                    color: s,
+                    children: N
                         ? g.intl.format(g.t["tYuv+T"], {
-                              helpdeskArticle: d.A.getArticleURL(m.MVz.PREMIUM_DETAILS),
-                              onSubscriptionsClick: E,
+                              helpdeskArticle: m.A.getArticleURL(p.MVz.PREMIUM_DETAILS),
+                              onSubscriptionsClick: A,
                           })
-                        : g.intl.format(g.t.xHRgU2, { subscriptionName: t, onSubscriptionsClick: E }),
+                        : g.intl.format(g.t.xHRgU2, { subscriptionName: t, onSubscriptionsClick: A }),
                 }),
             ],
         })

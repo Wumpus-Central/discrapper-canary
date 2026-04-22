@@ -2,77 +2,76 @@
 n.d(t, { e: () => l });
 var r = n(803082),
     i = n(290424),
-    a = n(702992),
-    s = n(8321),
+    s = n(702992),
+    a = n(8321),
     o = n(946020);
 function l(e, t, n) {
     let {
             isDisabled: l = !1,
             isReadOnly: u = !1,
-            value: c,
-            name: d,
+            value: d,
+            name: c,
             form: _,
             children: f,
-            "aria-label": p,
+            "aria-label": E,
             "aria-labelledby": h,
-            validationState: m = "valid",
-            isInvalid: g,
-            onPressStart: E,
+            validationState: p = "valid",
+            isInvalid: m,
+            onPressStart: g,
             onPressEnd: A,
             onPressChange: I,
             onPress: T,
-            onPressUp: y,
-            onClick: S,
+            onPressUp: S,
+            onClick: y,
         } = e,
-        v = (e) => {
-            e.stopPropagation(), t.setSelected(e.target.checked);
-        },
-        { pressProps: C, isPressed: b } = (0, s.d)({
-            onPressStart: E,
+        { pressProps: N, isPressed: O } = (0, a.d)({
+            onPressStart: g,
             onPressEnd: A,
             onPressChange: I,
             onPress: T,
-            onPressUp: y,
-            onClick: S,
+            onPressUp: S,
+            onClick: y,
             isDisabled: l,
         }),
-        { pressProps: N, isPressed: R } = (0, s.d)({
-            onPressStart: E,
+        { pressProps: R, isPressed: v } = (0, a.d)({
+            onPressStart: g,
             onPressEnd: A,
             onPressChange: I,
-            onPressUp: y,
-            onClick: S,
+            onPressUp: S,
+            onClick: y,
             onPress(e) {
                 var r;
                 null == T || T(e), t.toggle(), null == (r = n.current) || r.focus();
             },
             isDisabled: l || u,
         }),
-        { focusableProps: O } = (0, o.Wc)(e, n),
-        D = (0, r.v)(C, O),
-        L = (0, i.$)(e, { labelable: !0 });
+        { focusableProps: C } = (0, o.Wc)(e, n),
+        b = (0, r.v)(N, C),
+        D = (0, i.$)(e, { labelable: !0 });
     return (
-        (0, a.F)(n, t.defaultSelected, t.setSelected),
+        (0, s.F)(n, t.defaultSelected, t.setSelected),
         {
-            labelProps: (0, r.v)(N, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.v)(L, {
-                "aria-invalid": g || "invalid" === m || void 0,
+            labelProps: (0, r.v)(R, { onClick: (e) => e.preventDefault() }),
+            inputProps: (0, r.v)(D, {
+                "aria-invalid": m || "invalid" === p || void 0,
                 "aria-errormessage": e["aria-errormessage"],
                 "aria-controls": e["aria-controls"],
                 "aria-readonly": u || void 0,
-                onChange: v,
+                onChange: (e) => {
+                    e.stopPropagation(), t.setSelected(e.target.checked);
+                },
                 disabled: l,
-                ...(null == c ? {} : { value: c }),
-                name: d,
+                ...(null == d ? {} : { value: d }),
+                name: c,
                 form: _,
                 type: "checkbox",
-                ...D,
+                ...b,
             }),
             isSelected: t.isSelected,
-            isPressed: b || R,
+            isPressed: O || v,
             isDisabled: l,
             isReadOnly: u,
-            isInvalid: g || "invalid" === m,
+            isInvalid: m || "invalid" === p,
         }
     );
 }

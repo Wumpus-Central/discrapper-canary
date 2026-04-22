@@ -1,84 +1,82 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => U });
 var i = n(627968),
     r = n(64700),
-    s = n(311907),
-    l = n(554146),
-    a = n(397927),
-    c = n(155718),
-    o = n(775602),
-    u = n(793574),
-    d = n(367727),
-    _ = n(509536),
-    E = n(881635),
-    A = n(363487),
-    m = n(828162),
-    I = n(71393),
-    T = n(888675),
-    g = n(652215),
-    N = n(49999),
-    f = n(985018),
-    p = n(333354),
-    C = n(884967),
-    h = n(274993),
-    S = n(218924);
-function R(e) {
-    let { title: t, body: n, guild: r, analyticsLocations: l } = e,
-        c = (0, s.bG)([o.A], () => o.A.useReducedMotion);
+    l = n(311907),
+    s = n(554146),
+    a = n(534514),
+    o = n(834730),
+    c = n(939249),
+    u = n(782603),
+    d = n(155718),
+    _ = n(775602),
+    E = n(793574),
+    A = n(367727),
+    m = n(509536),
+    I = n(881635),
+    T = n(363487),
+    N = n(828162),
+    g = n(71393),
+    p = n(888675),
+    C = n(652215),
+    f = n(49999),
+    h = n(985018),
+    R = n(853513),
+    S = n(829687),
+    O = n(274993),
+    x = n(218924);
+function M(e) {
+    let { title: t, body: n, guild: r, analyticsLocations: s } = e,
+        c = (0, l.bG)([_.A], () => _.A.useReducedMotion);
     return (0, i.jsxs)("div", {
-        className: C.kL,
+        className: S.kL,
         children: [
             (0, i.jsx)("div", {
-                className: C.ZS,
-                children: (0, i.jsx)("img", { className: C.Sl, src: c ? S.A : h.A, alt: "Boost gem" }),
+                className: S.ZS,
+                children: (0, i.jsx)("img", { className: S.Sl, src: c ? x.A : O.A, alt: "Boost gem" }),
             }),
             (0, i.jsxs)("div", {
-                className: C.Qs,
+                className: S.Qs,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(a.D, {
                         variant: "heading-md/semibold",
                         style: { marginTop: 0, marginBottom: "var(--space-4)" },
                         children: t,
                     }),
-                    (0, i.jsx)(a.Text, {
-                        color: "text-muted",
-                        className: C.rf,
-                        variant: "text-sm/medium",
-                        children: n,
-                    }),
+                    (0, i.jsx)(o.E, { color: "text-muted", className: S.rf, variant: "text-sm/medium", children: n }),
                 ],
             }),
             (0, i.jsx)("div", {
-                children: (0, i.jsx)(E.A, {
+                children: (0, i.jsx)(I.A, {
                     guild: r,
-                    analyticsLocations: l,
-                    analyticsLocation: { page: g.liQ.GUILD_CHANNEL, section: g.JJy.CHANNEL_TEXT_AREA },
+                    analyticsLocations: s,
+                    analyticsLocation: { page: C.liQ.GUILD_CHANNEL, section: C.JJy.CHANNEL_TEXT_AREA },
                 }),
             }),
         ],
     });
 }
-function x(e) {
+function D(e) {
     let { guild: t } = e;
     r.useEffect(() => {
-        (0, d.uh)(l.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: N.i.AUTO_DISMISS, guildId: t.id });
+        (0, A.uh)(s.M.FIRST_BOOSTER_UPSELL_OVERSEER, { dismissAction: f.i.AUTO_DISMISS, guildId: t.id });
     }, [t.id]);
-    let n = (0, A.A)(t.id);
-    return (0, i.jsx)(R, {
-        title: f.intl.string(p.default.qGDEON),
-        body: f.intl.format(p.default["s+HTdX"], {
+    let n = (0, T.A)(t.id);
+    return (0, i.jsx)(M, {
+        title: h.intl.string(R.default.qGDEON),
+        body: h.intl.format(R.default["s+HTdX"], {
             viewAllPerks: (e) =>
-                (0, i.jsx)(a.DUT, {
+                (0, i.jsx)(c.D, {
                     tag: "a",
                     role: "link",
                     onClick: () => {
                         n
-                            ? (0, m.A)(t.id, u.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL)
-                            : (0, _.K4)({
+                            ? (0, N.A)(t.id, E.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL)
+                            : (0, m.K4)({
                                   guildId: t.id,
                                   location: {
-                                      section: g.JJy.CHANNEL_TEXT_AREA,
-                                      object: g.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
+                                      section: C.JJy.CHANNEL_TEXT_AREA,
+                                      object: C.ZSU.BOOST_ANNOUNCEMENT_UPSELL,
                                   },
                               });
                     },
@@ -86,23 +84,23 @@ function x(e) {
                 }),
         }),
         guild: t,
-        analyticsLocations: [u.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL],
+        analyticsLocations: [E.A.GUILD_BOOSTING_FIRST_TIME_BOOSTER_UPSELL],
     });
 }
-function O(e) {
+function P(e) {
     let { boostingPrompt: t, guild: n } = e;
-    return t.guildBoostUpsellType === c.Mk.FIRST_BOOSTER ? (0, i.jsx)(x, { guild: n }) : null;
+    return t.guildBoostUpsellType === d.Mk.FIRST_BOOSTER ? (0, i.jsx)(D, { guild: n }) : null;
 }
-function M(e) {
+function U(e) {
     let { boostingPrompt: t, channel: n } = e,
         r = n.guild_id,
-        l = (0, s.bG)([I.A], () => I.A.getGuild(r), [r]);
-    return null == l
+        s = (0, l.bG)([g.A], () => g.A.getGuild(r), [r]);
+    return null == s
         ? null
-        : (0, i.jsx)(T.A, {
-              contentClassName: C.FG,
-              iconContainerClassName: C.zc,
-              iconNode: (0, i.jsx)(a.XFE, { colorClass: C.Kk }),
-              children: (0, i.jsx)(O, { boostingPrompt: t, guild: l }),
+        : (0, i.jsx)(p.A, {
+              contentClassName: S.FG,
+              iconContainerClassName: S.zc,
+              iconNode: (0, i.jsx)(u.X, { colorClass: S.Kk }),
+              children: (0, i.jsx)(P, { boostingPrompt: t, guild: s }),
           });
 }

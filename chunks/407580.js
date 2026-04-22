@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var r = n(311907),
     i = n(73153),
-    a = n(626584),
-    s = n(69114),
+    s = n(626584),
+    a = n(69114),
     o = n(322683),
     l = n(734057),
     u = n(498642),
-    c = n(544180),
-    d = n(954571),
+    d = n(544180),
+    c = n(954571),
     _ = n(652215);
-let f = new a.A("MessageRoundtripTrackerStore");
-function p(e) {
+let f = new s.A("MessageRoundtripTrackerStore");
+function E(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
 function h(e) {
@@ -22,27 +22,22 @@ function h(e) {
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
         i = (0, o.O)();
-    d.default.track(_.HAw.SEND_MESSAGE_ROUNDTRIP, {
-        ...(0, s.A)(),
+    c.default.track(_.HAw.SEND_MESSAGE_ROUNDTRIP, {
+        ...(0, a.A)(),
         api_latency_ms: n,
         gateway_latency_ms: r,
         channel_id: t.id,
         channel_type: t.type,
         guild_id: t.guild_id,
         guild_size: u.A.getMemberCount(t.guild_id),
-        mobile_network_type: c.A.getType(),
+        mobile_network_type: d.A.getType(),
         num_attachments: e.attachmentCount,
         ...(null != i && { mobile_signal_strength_level: i }),
     });
 }
-function m(e) {
-    let { optimistic: t, message: n } = e,
-        r = n.nonce;
-    t || null == r || E.recordGatewayResponse(r);
-}
-class g extends r.Ay.Store {
+class p extends r.Ay.Store {
     initialize() {
-        this.waitFor(l.A, u.A, c.A);
+        this.waitFor(l.A, u.A, d.A);
     }
     pendingMessages = new Map();
     recordMessageSendAttempt(e, t) {
@@ -65,16 +60,22 @@ class g extends r.Ay.Store {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, apiResponseTimestamp: Date.now() };
-            p(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            E(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, gatewaySeenTimestamp: Date.now() };
-            p(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            E(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
 }
-let E = new g(i.h, { MESSAGE_CREATE: m }),
-    A = E;
+let m = new p(i.h, {
+        MESSAGE_CREATE: function (e) {
+            let { optimistic: t, message: n } = e,
+                r = n.nonce;
+            t || null == r || m.recordGatewayResponse(r);
+        },
+    }),
+    g = m;

@@ -1,51 +1,50 @@
 "use strict";
-n.d(t, { A: () => m, o: () => h });
-var r = n(627968),
-    i = n(64700),
-    a = n(735438),
-    s = n(835245),
-    o = n(311907),
-    l = n(775602),
-    u = n(667050),
-    c = n(407781),
+n.d(t, { A: () => f, o: () => p });
+var i = n(627968),
+    l = n(64700),
+    s = n(735438),
+    r = n(835245),
+    a = n(311907),
+    o = n(775602),
+    c = n(667050),
+    u = n(407781),
     d = n(287809),
-    _ = n(194486),
-    f = n(874880);
-let p = 50;
-function h(e) {
+    h = n(194486),
+    m = n(651175);
+function p(e) {
     let t = e?.parentElement?.getBoundingClientRect();
     return null == t ? { width: 0, height: 0 } : { width: t.width, height: t.height };
 }
-let m = i.forwardRef(function (e, t) {
-    let { sound: n, containerDimensions: h } = e,
-        m = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
-        g = (0, o.bG)([l.A], () => l.A.useReducedMotion),
-        [E, A] = i.useState([]),
-        I = E.length < p,
-        T = n?.emojiId != null || n?.emojiName != null,
-        y = i.useCallback(() => {
-            if (!g && I && T && null != m) {
-                let e = (0, u.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
+let f = l.forwardRef(function (e, t) {
+    let { sound: n, containerDimensions: p } = e,
+        f = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        g = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        [_, x] = l.useState([]),
+        A = _.length < 50,
+        C = n?.emojiId != null || n?.emojiName != null,
+        E = l.useCallback(() => {
+            if (!g && A && C && null != f) {
+                let e = (0, c.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
                     t = null != n.emojiId,
-                    r = _.B.PREMIUM,
-                    i = (0, a.random)(u.Bf[r].length, !1),
-                    o = { id: (0, s.A)(), animationId: i, animationType: r, shouldResize: t, url: e, userId: m.id };
-                A((e) => [...e, o]);
+                    i = h.B.PREMIUM,
+                    l = (0, s.random)(c.Bf[i].length, !1),
+                    a = { id: (0, r.A)(), animationId: l, animationType: i, shouldResize: t, url: e, userId: f.id };
+                x((e) => [...e, a]);
             }
-        }, [g, I, T, m, n]);
-    i.useImperativeHandle(t, () => ({ addAnimation: y }));
-    let S = i.useCallback((e) => {
-        A((t) => {
+        }, [g, A, C, f, n]);
+    l.useImperativeHandle(t, () => ({ addAnimation: E }));
+    let I = l.useCallback((e) => {
+        x((t) => {
             let n = [...t],
-                r = n.findIndex((t) => t.id === e);
-            return n.splice(r, 1), n;
+                i = n.findIndex((t) => t.id === e);
+            return n.splice(i, 1), n;
         });
     }, []);
-    return g || !T
+    return g || !C
         ? null
-        : (0, r.jsx)("div", {
-              className: f.z,
-              style: { width: h.width, height: h.height },
-              children: E.map((e) => (0, r.jsx)(c.A, { containerDimensions: h, effect: e, onComplete: S }, e.id)),
+        : (0, i.jsx)("div", {
+              className: m.z,
+              style: { width: p.width, height: p.height },
+              children: _.map((e) => (0, i.jsx)(u.A, { containerDimensions: p, effect: e, onComplete: I }, e.id)),
           });
 });

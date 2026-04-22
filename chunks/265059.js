@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c, q: () => a });
+n.d(t, { A: () => u, q: () => a });
 var r = n(311907),
     i = n(73153),
     s = n(540999);
@@ -13,10 +13,7 @@ let a = 460,
         devWidgetPosition: { x: 0, y: 0 },
         sortedScreenKeys: [],
     };
-function l(e) {
-    s.A.isDeveloper && (o = { ...o, ...e.settings });
-}
-class u extends r.Ay.DeviceSettingsStore {
+class l extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsSettingsStore";
     static persistKey = "DevToolsSettingsStore";
     initialize(e) {
@@ -47,4 +44,8 @@ class u extends r.Ay.DeviceSettingsStore {
         return o.sortedScreenKeys;
     }
 }
-let c = new u(i.h, { DEV_TOOLS_SETTINGS_UPDATE: l });
+let u = new l(i.h, {
+    DEV_TOOLS_SETTINGS_UPDATE: function (e) {
+        s.A.isDeveloper && (o = { ...o, ...e.settings });
+    },
+});

@@ -1,37 +1,31 @@
 "use strict";
-n.d(t, { F5: () => r, hL: () => i, iL: () => s });
-var r = (function (e) {
-        return (
-            (e.AUTHORIZED = "authorized"),
-            (e.DENIED = "denied"),
-            (e.RESTRICTED = "restricted"),
-            (e.LIMITED = "limited"),
-            (e.UNDETERMINED = "undetermined"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (
-            (e.DISMISSED = "dismissed"),
-            (e.DENIED = "denied"),
-            (e.ACCEPTED = "accepted"),
-            (e.NO_DEVICES = "no_devices"),
-            (e.ERROR = "error"),
-            (e.NONE = "none"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (
-            (e.AUDIO = "audio"),
-            (e.CAMERA = "camera"),
-            (e.HEADSET_CAMERA = "headset_camera"),
-            (e.STORAGE = "storage"),
-            (e.NOTIFICATIONS = "notifications"),
-            (e.PHOTOS = "photos"),
-            (e.CONTACTS = "contacts"),
-            (e.INPUT_MONITORING = "input_monitoring"),
-            (e.SCREEN_RECORDING = "screen_recording"),
-            e
-        );
-    })({});
+n.d(t, { F5: () => a, hL: () => o, iL: () => l });
+var r,
+    i,
+    s,
+    a =
+        (((r = {}).AUTHORIZED = "authorized"),
+        (r.DENIED = "denied"),
+        (r.RESTRICTED = "restricted"),
+        (r.LIMITED = "limited"),
+        (r.UNDETERMINED = "undetermined"),
+        r),
+    o =
+        (((i = {}).DISMISSED = "dismissed"),
+        (i.DENIED = "denied"),
+        (i.ACCEPTED = "accepted"),
+        (i.NO_DEVICES = "no_devices"),
+        (i.ERROR = "error"),
+        (i.NONE = "none"),
+        i),
+    l =
+        (((s = {}).AUDIO = "audio"),
+        (s.CAMERA = "camera"),
+        (s.HEADSET_CAMERA = "headset_camera"),
+        (s.STORAGE = "storage"),
+        (s.NOTIFICATIONS = "notifications"),
+        (s.PHOTOS = "photos"),
+        (s.CONTACTS = "contacts"),
+        (s.INPUT_MONITORING = "input_monitoring"),
+        (s.SCREEN_RECORDING = "screen_recording"),
+        s);

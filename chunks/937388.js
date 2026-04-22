@@ -1,75 +1,77 @@
 a.d(t, { A: () => S });
 var n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
-    r = a(397927),
-    o = a(871751),
-    c = a(259407),
-    d = a(323933),
-    u = a(619517),
-    m = a(248643),
-    h = a(652176),
-    p = a(503879),
-    _ = a(652215),
-    g = a(985018),
-    x = a(271298);
-let A = (e) => {
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(534514),
+    o = a(289873),
+    c = a(939249),
+    d = a(871751),
+    u = a(259407),
+    h = a(323933),
+    m = a(619517),
+    p = a(248643),
+    _ = a(652176),
+    g = a(503879),
+    x = a(652215),
+    A = a(985018),
+    f = a(665513);
+let C = (e) => {
         let { className: t, ...a } = e;
-        return (0, n.jsx)(m.A, {
+        return (0, n.jsx)(p.A, {
             ...a,
-            className: s()(x.Zy, t),
-            mediaPlayerClassName: x.Zy,
-            renderLinkComponent: h.bU,
+            className: s()(f.Zy, t),
+            mediaPlayerClassName: f.Zy,
+            renderLinkComponent: _.bU,
         });
     },
-    f = (e) => {
-        let { containerClassName: t, className: a, ...i } = e;
-        return (0, n.jsx)(u.Ay, { ...i, className: s()(a, t) });
+    v = (e) => {
+        let { containerClassName: t, className: a, ...l } = e;
+        return (0, n.jsx)(m.Ay, { ...l, className: s()(a, t) });
     },
     b = { width: 1280, height: 720 },
-    C = { width: 640, height: 360 },
-    v = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${_.NzX}`,
-    j = (e) => {
+    j = { width: 640, height: 360 },
+    I = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${x.NzX}`,
+    E = (e) => {
         let t,
             a,
-            i,
-            { item: l, onPlay: s, volume: r, onVolumeChange: d, onMute: u, isMuted: m, autoPlay: g } = e;
-        if (l.type === _.geh.YOUTUBE_VIDEO)
-            (t = { url: (0, _.PE$)(l.youtubeVideoId), ...b }),
-                (a = { url: `${(0, _.uJ2)(l.youtubeVideoId)}?${v}`, ...C }),
-                (i = c.mt.YOUTUBE);
+            l,
+            { item: i, onPlay: s, volume: r, onVolumeChange: o, onMute: c, isMuted: h, autoPlay: m } = e;
+        if (i.type === x.geh.YOUTUBE_VIDEO)
+            (t = { url: (0, x.PE$)(i.youtubeVideoId), ...b }),
+                (a = { url: `${(0, x.uJ2)(i.youtubeVideoId)}?${I}`, ...j }),
+                (l = u.mt.YOUTUBE);
         else {
-            let e = null != l.width ? l.width : 0,
-                n = null != l.height ? l.height : 0;
-            (t = { url: l.thumbnailSrc, width: e, height: n }),
-                (a = { url: l.src, proxyURL: l.src, width: e, height: n });
+            let e = null != i.width ? i.width : 0,
+                n = null != i.height ? i.height : 0;
+            (t = { url: i.thumbnailSrc, width: e, height: n }),
+                (a = { url: i.src, proxyURL: i.src, width: e, height: n });
         }
         return (0, n.jsx)("div", {
-            className: x.x,
-            children: (0, n.jsx)(o.rr, {
-                className: x.Zy,
-                iframeWrapperClassName: x.Zy,
+            className: f.x,
+            children: (0, n.jsx)(d.rr, {
+                className: f.Zy,
+                iframeWrapperClassName: f.Zy,
                 href: null,
                 thumbnail: t,
                 video: a,
-                provider: i,
-                maxHeight: p.s.SMALL.height,
+                provider: l,
+                maxHeight: g.s.SMALL.height,
                 maxWidth: "small",
                 onPlay: s,
                 playable: !0,
                 volume: r,
-                onVolumeChange: d,
-                autoMute: m,
-                onMute: u,
-                autoPlay: g,
-                renderImageComponent: f,
-                renderVideoComponent: A,
-                renderLinkComponent: h.bU,
+                onVolumeChange: o,
+                autoMute: h,
+                onMute: c,
+                autoPlay: m,
+                renderImageComponent: v,
+                renderVideoComponent: C,
+                renderLinkComponent: _.bU,
             }),
         });
     };
-class I extends i.PureComponent {
+class N extends l.PureComponent {
     static defaultProps = { paused: !1, videoAutoPlay: !0 };
     state = {
         hasInteracted: !1,
@@ -82,7 +84,7 @@ class I extends i.PureComponent {
     componentDidMount() {
         let { items: e } = this.props;
         e.length > 0 &&
-            e[0].type === _.geh.IMG &&
+            e[0].type === x.geh.IMG &&
             this.setState({
                 imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()),
             });
@@ -98,15 +100,15 @@ class I extends i.PureComponent {
     };
     handleChangeItem = (e) => {
         this.setState({ isVideoPlaying: !1 }),
-            e.type === _.geh.IMG &&
+            e.type === x.geh.IMG &&
                 this.setState({
                     imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()),
                 });
     };
     handleIntentionalChange = (e, t, a, n) => {
         this.setState({ hasInteracted: !0 });
-        let { onIntentionalChange: i } = this.props;
-        null != i && i(e, t, a, n);
+        let { onIntentionalChange: l } = this.props;
+        null != l && l(e, t, a, n);
     };
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: a } = this.props;
@@ -124,44 +126,41 @@ class I extends i.PureComponent {
     };
     renderItem = (e, t) => {
         let a,
-            { isMuted: i, volume: l } = this.state,
-            { videoAutoPlay: o } = this.props;
+            { isMuted: l, volume: i } = this.state,
+            { videoAutoPlay: d } = this.props;
         switch (e.type) {
-            case _.geh.YOUTUBE_VIDEO:
-            case _.geh.VIDEO:
-                a = (0, n.jsx)(j, {
+            case x.geh.YOUTUBE_VIDEO:
+            case x.geh.VIDEO:
+                a = (0, n.jsx)(E, {
                     item: e,
                     onPlay: this.handlePlay,
-                    isMuted: i,
-                    volume: l,
+                    isMuted: l,
+                    volume: i,
                     onVolumeChange: this.handleVolumeChange,
                     onMute: this.handleMute,
-                    autoPlay: o,
+                    autoPlay: d,
                 });
                 break;
-            case _.geh.IMG:
+            case x.geh.IMG:
                 if ("errored" === this.state.status.get(e.src)) {
-                    let e = (0, n.jsx)(r.Heading, {
-                        variant: "heading-xl/semibold",
-                        children: g.intl.string(g.t.UvDfMz),
-                    });
+                    let e = (0, n.jsx)(r.D, { variant: "heading-xl/semibold", children: A.intl.string(A.t.UvDfMz) });
                     return (0, n.jsx)("div", {
-                        className: x.Un,
+                        className: f.Un,
                         children: void 0 !== this.props.errorComponent ? this.props.errorComponent : e,
                     });
                 }
                 {
-                    let t = e.alt ?? g.intl.string(g.t.X4IxWL);
+                    let t = e.alt ?? A.intl.string(A.t.X4IxWL);
                     a = (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, n.jsx)(r.y$y, {
-                                className: s()(x.u1, { [x.R]: void 0 !== this.state.status.get(e.src) }),
-                                type: r.y$y.Type.SPINNING_CIRCLE,
+                            (0, n.jsx)(o.y, {
+                                className: s()(f.u1, { [f.R]: void 0 !== this.state.status.get(e.src) }),
+                                type: o.y.Type.SPINNING_CIRCLE,
                             }),
                             (0, n.jsx)("img", {
                                 onError: this.handleOnErrorImg,
                                 onLoad: this.handleOnLoadImg,
-                                className: s()(x.JD, { [x.R]: "loaded" !== this.state.status.get(e.src) }),
+                                className: s()(f.JD, { [f.R]: "loaded" !== this.state.status.get(e.src) }),
                                 src: e.src,
                                 alt: t,
                             }),
@@ -172,21 +171,21 @@ class I extends i.PureComponent {
             default:
                 throw Error("Unexpected MediaType");
         }
-        return (0, n.jsx)(r.DUT, { className: x.Pj, onClick: () => this.handleCurrentItemClick(e, t), children: a });
+        return (0, n.jsx)(c.D, { className: f.Pj, onClick: () => this.handleCurrentItemClick(e, t), children: a });
     };
     render() {
-        let { items: e, autoplayInterval: t, className: a, paused: i, themedPagination: l } = this.props,
+        let { items: e, autoplayInterval: t, className: a, paused: l, themedPagination: i } = this.props,
             { hasInteracted: r } = this.state;
-        return (0, n.jsx)(d.A, {
+        return (0, n.jsx)(h.A, {
             items: e.slice(0, 12),
             delay: t,
-            initialPaused: i || r,
+            initialPaused: l || r,
             renderItem: this.renderItem,
-            className: s()(x.Gt, a),
-            themedPagination: l,
+            className: s()(f.Gt, a),
+            themedPagination: i,
             onIntentionalChange: this.handleIntentionalChange,
             onChangeItem: this.handleChangeItem,
         });
     }
 }
-let S = I;
+let S = N;

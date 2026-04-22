@@ -1,204 +1,208 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(735438),
+    a = n(503698),
+    r = n.n(a),
+    s = n(735438),
     o = n(451988),
-    c = n(435371),
-    d = n(397927),
-    u = n(964486),
-    h = n(461782),
-    m = n(430452),
+    d = n(990078),
+    c = n(939249),
+    u = n(408278),
+    _ = n(92259),
+    f = n(106236),
+    m = n(218429),
+    p = n(964486),
+    g = n(461782),
+    h = n(430452),
     A = n(40056),
-    g = n(985018),
-    p = n(463689),
-    f = n(654305);
-function _(e) {
+    x = n(985018),
+    v = n(473772),
+    I = n(590782);
+function E(e) {
     e.preventDefault(), e.stopPropagation();
 }
-function E(e) {
+function C(e) {
     return (1 & e.buttons) == 1;
 }
-let x = l.memo(function (e) {
-    let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: x, onPreventIdle: C, onAllowIdle: S } = l.useContext(h.k3),
+let j = l.memo(function (e) {
+    let { mirror: t = !1, streamId: n, paused: a } = e,
+        { onActive: j, onPreventIdle: N, onAllowIdle: y } = l.useContext(g.k3),
         {
-            enabled: I,
-            zoomLevel: T,
-            minZoom: N,
-            maxZoom: y,
-            isDragging: b,
-            isWheeling: v,
-            isSlidering: j,
-            setIsSlidering: R,
+            enabled: b,
+            zoomLevel: S,
+            minZoom: w,
+            maxZoom: T,
+            isDragging: k,
+            isWheeling: R,
+            isSlidering: L,
+            setIsSlidering: D,
             doZoom: M,
-            isZooming: D,
-            videoAspectRatio: O,
-            wrapperRef: L,
+            isZooming: O,
+            videoAspectRatio: F,
+            wrapperRef: V,
             panOffset: P,
-            setPanOffset: w,
-            clampPanOffset: k,
+            setPanOffset: G,
+            clampPanOffset: H,
         } = l.useContext(A.e9),
-        [U, G] = l.useState(!1),
-        F = l.useRef(null),
-        H = T > N,
-        B = l.useCallback(() => {
-            C("interact");
-        }, [C]),
-        V = l.useCallback(() => {
-            G(!1), S("interact");
-        }, [S]),
-        K = l.useMemo(() => {
-            let e = 120 * Math.min(O, 32 / 9);
-            return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
-        }, [O]),
-        z = l.useCallback(
-            (e) => {
-                if (null == F.current || null == L.current) return;
-                let t = F.current.getBoundingClientRect(),
-                    n = L.current.clientWidth,
-                    i = L.current.clientHeight,
-                    l = e.x - t.left,
-                    s = e.y - t.top;
-                w(k({ x: (0.5 - l / t.width) * n * T, y: (0.5 - s / t.height) * i * T }));
-            },
-            [k, T, L, w],
-        ),
-        W = l.useCallback(
-            (e) => {
-                E(e) && (e.preventDefault(), e.stopPropagation(), G(!0), z({ x: e.clientX, y: e.clientY }));
-            },
-            [z],
-        ),
-        Y = l.useCallback(
-            (e) => {
-                U && (e.preventDefault(), e.stopPropagation(), z({ x: e.clientX, y: e.clientY }));
-            },
-            [U, z],
-        ),
-        q = l.useCallback(
-            (e) => {
-                !U || E(e) || (e.preventDefault(), e.stopPropagation(), G(!1));
-            },
-            [U],
-        ),
-        J = m.Ay.getVideoComponent(),
+        [U, W] = l.useState(!1),
+        z = l.useRef(null),
+        B = S > w,
+        Z = l.useCallback(() => {
+            N("interact");
+        }, [N]),
+        Y = l.useCallback(() => {
+            W(!1), y("interact");
+        }, [y]),
         $ = l.useMemo(() => {
-            let e = null != L.current ? L.current.clientWidth : 1,
-                t = null != L.current ? L.current.clientHeight : 1,
-                n = 1 / T,
-                i = 1 / T,
-                l = 0.5 - P.x / (e * T),
-                s = 0.5 - P.y / (t * T);
-            return {
-                "--custom-zoom-indicator-left": `${100 * ((0, r.clamp))(l - n / 2, 0, 1 - n)}%`,
-                "--custom-zoom-indicator-top": `${100 * ((0, r.clamp))(s - i / 2, 0, 1 - i)}%`,
-                "--custom-zoom-indicator-width": `${100 * n}%`,
-                "--custom-zoom-indicator-height": `${100 * i}%`,
-                "--custom-zoom-indicator-transition":
-                    b || U || v || j
-                        ? "none"
-                        : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
-            };
-        }, [b, U, v, j, P, T, L]),
-        Z = l.useCallback(
+            let e = 120 * Math.min(F, 32 / 9);
+            return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
+        }, [F]),
+        Q = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(T - 0.25, A.qd, "button");
+                if (null == z.current || null == V.current) return;
+                let t = z.current.getBoundingClientRect(),
+                    n = V.current.clientWidth,
+                    i = V.current.clientHeight,
+                    l = e.x - t.left,
+                    a = e.y - t.top;
+                G(H({ x: (0.5 - l / t.width) * n * S, y: (0.5 - a / t.height) * i * S }));
             },
-            [M, T],
+            [H, S, V, G],
+        ),
+        K = l.useCallback(
+            (e) => {
+                C(e) && (e.preventDefault(), e.stopPropagation(), W(!0), Q({ x: e.clientX, y: e.clientY }));
+            },
+            [Q],
         ),
         X = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(T + 0.25, A.qd, "button");
+                U && (e.preventDefault(), e.stopPropagation(), Q({ x: e.clientX, y: e.clientY }));
             },
-            [M, T],
+            [U, Q],
         ),
-        Q = l.useRef(null),
-        ee = l.useCallback(
+        q = l.useCallback(
             (e) => {
-                R(!0),
+                !U || C(e) || (e.preventDefault(), e.stopPropagation(), W(!1));
+            },
+            [U],
+        ),
+        J = h.Ay.getVideoComponent(),
+        ee = l.useMemo(() => {
+            let e = null != V.current ? V.current.clientWidth : 1,
+                t = null != V.current ? V.current.clientHeight : 1,
+                n = 1 / S,
+                i = 1 / S,
+                l = 0.5 - P.x / (e * S),
+                a = 0.5 - P.y / (t * S);
+            return {
+                "--custom-zoom-indicator-left": `${100 * ((0, s.clamp))(l - n / 2, 0, 1 - n)}%`,
+                "--custom-zoom-indicator-top": `${100 * ((0, s.clamp))(a - i / 2, 0, 1 - i)}%`,
+                "--custom-zoom-indicator-width": `${100 * n}%`,
+                "--custom-zoom-indicator-height": `${100 * i}%`,
+                "--custom-zoom-indicator-transition":
+                    k || U || R || L
+                        ? "none"
+                        : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
+            };
+        }, [k, U, R, L, P, S, V]),
+        et = l.useCallback(
+            (e) => {
+                e.preventDefault(), e.stopPropagation(), M(S - 0.25, A.qd, "button");
+            },
+            [M, S],
+        ),
+        en = l.useCallback(
+            (e) => {
+                e.preventDefault(), e.stopPropagation(), M(S + 0.25, A.qd, "button");
+            },
+            [M, S],
+        ),
+        ei = l.useRef(null),
+        el = l.useCallback(
+            (e) => {
+                D(!0),
                     M(e, A.qd, "slider"),
-                    x(),
-                    null == Q.current && (Q.current = new o.Ep()),
-                    Q.current.start(100, () => {
-                        R(!1);
+                    j(),
+                    null == ei.current && (ei.current = new o.Ep()),
+                    ei.current.start(100, () => {
+                        D(!1);
                     });
             },
-            [M, x, R],
+            [M, j, D],
         );
-    return ((0, u.l0)(() => {
-        Q.current?.stop();
+    return ((0, p.l0)(() => {
+        ei.current?.stop();
     }),
-    I && null != n)
+    b && null != n)
         ? (0, i.jsxs)("div", {
-              className: a()(f.ne, { [f.Ge]: D || H }),
-              onMouseEnter: B,
-              onMouseLeave: V,
-              onClick: _,
+              className: r()(I.ne, { [I.Ge]: O || B }),
+              onMouseEnter: Z,
+              onMouseLeave: Y,
+              onClick: E,
               children: [
-                  (D || H) &&
-                      (0, i.jsx)(d.DUT, {
-                          onClick: _,
-                          onMouseEnter: B,
-                          onMouseLeave: V,
+                  (O || B) &&
+                      (0, i.jsx)(c.D, {
+                          onClick: E,
+                          onMouseEnter: Z,
+                          onMouseLeave: Y,
                           children: (0, i.jsxs)("div", {
-                              ref: F,
-                              className: f.Wc,
-                              style: K,
-                              onMouseDown: W,
-                              onMouseMove: Y,
+                              ref: z,
+                              className: I.Wc,
+                              style: $,
+                              onMouseDown: K,
+                              onMouseMove: X,
                               onMouseUp: q,
                               children: [
                                   (0, i.jsx)(J, {
-                                      className: a()(f.BZ, { [p.mirror]: t }),
+                                      className: r()(I.BZ, { [v.mirror]: t }),
                                       streamId: n,
-                                      paused: s,
+                                      paused: a,
                                       reportContainerResized: !1,
                                   }),
-                                  (0, i.jsx)("div", { className: f.xq, style: $ }),
+                                  (0, i.jsx)("div", { className: I.xq, style: ee }),
                               ],
                           }),
                       }),
                   (0, i.jsxs)("div", {
-                      className: f.xu,
+                      className: I.xu,
                       children: [
-                          (D || H) &&
+                          (O || B) &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(c.m_, {
-                                          text: g.intl.string(g.t.M6Cmwy),
+                                      (0, i.jsx)(d.m, {
+                                          text: x.intl.string(x.t.M6Cmwy),
                                           position: "top",
-                                          children: (0, i.jsx)(d.K0, {
-                                              icon: d.V0_,
-                                              onClick: Z,
-                                              disabled: T <= N,
+                                          children: (0, i.jsx)(u.K, {
+                                              icon: _.V,
+                                              onClick: et,
+                                              disabled: S <= w,
                                               variant: "overlay-secondary",
                                               size: "sm",
-                                              "aria-label": g.intl.string(g.t.M6Cmwy),
+                                              "aria-label": x.intl.string(x.t.M6Cmwy),
                                           }),
                                       }),
-                                      (0, i.jsx)(d.Apm, {
-                                          minValue: N,
-                                          maxValue: y,
-                                          initialValue: T,
-                                          value: T,
-                                          asValueChanges: ee,
+                                      (0, i.jsx)(f.A, {
+                                          minValue: w,
+                                          maxValue: T,
+                                          initialValue: S,
+                                          value: S,
+                                          asValueChanges: el,
                                           onValueRender: (e) => `${Math.round(100 * e)}%`,
-                                          "aria-label": g.intl.string(g.t.grzPmr),
+                                          "aria-label": x.intl.string(x.t.grzPmr),
                                       }),
                                   ],
                               }),
-                          (0, i.jsx)(c.m_, {
-                              text: g.intl.string(g.t["9hMafy"]),
+                          (0, i.jsx)(d.m, {
+                              text: x.intl.string(x.t["9hMafy"]),
                               position: "top",
-                              children: (0, i.jsx)(d.K0, {
-                                  icon: d.r1u,
-                                  onClick: X,
-                                  disabled: T >= y,
+                              children: (0, i.jsx)(u.K, {
+                                  icon: m.r,
+                                  onClick: en,
+                                  disabled: S >= T,
                                   variant: "overlay-secondary",
                                   size: "sm",
-                                  "aria-label": g.intl.string(g.t["9hMafy"]),
+                                  "aria-label": x.intl.string(x.t["9hMafy"]),
                               }),
                           }),
                       ],

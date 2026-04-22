@@ -1,80 +1,82 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => b });
 var i = n(627968),
     l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(956793),
-    o = n(313961),
-    c = n(164617),
-    d = n(47167),
-    u = n(202384),
-    h = n(51758),
-    A = n(175203),
-    _ = n(426660),
+    a = n(311907),
+    s = n(534514),
+    r = n(834730),
+    o = n(821609),
+    c = n(956793),
+    d = n(313961),
+    u = n(164617),
+    _ = n(47167),
+    A = n(202384),
+    p = n(51758),
+    h = n(175203),
+    g = n(426660),
     m = n(403362),
-    g = n(69407),
-    p = n(110618),
-    f = n(566388),
-    x = n(985018),
-    E = n(616124);
-let I = function (e) {
-    let { participants: t, channel: n, hasConnectPermission: I } = e,
-        C = (0, h.H)(n.guild_id),
-        N = l.useCallback(() => {
-            C ? (0, u.Ze)(n.guild_id, () => r.default.selectVoiceChannel(n.id)) : r.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, C]),
-        T = t.filter((e) => e.type === g.wY.VOICE),
-        S = (0, d.Ay)(n),
-        b = 4 === T.length ? 2 : 3,
-        y = (0, s.yK)([o.A], () => T.map((e) => o.A.getParticipant(n.id, e.id)).filter(m.Vq), [n.id, T]);
+    x = n(69407),
+    f = n(110618),
+    C = n(566388),
+    E = n(985018),
+    j = n(376460);
+let b = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: b } = e,
+        N = (0, p.H)(n.guild_id),
+        T = l.useCallback(() => {
+            N ? (0, A.Ze)(n.guild_id, () => c.default.selectVoiceChannel(n.id)) : c.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, N]),
+        I = t.filter((e) => e.type === x.wY.VOICE),
+        v = (0, _.Ay)(n),
+        S = 4 === I.length ? 2 : 3,
+        y = (0, a.yK)([d.A], () => I.map((e) => d.A.getParticipant(n.id, e.id)).filter(m.Vq), [n.id, I]);
     return (0, i.jsxs)("div", {
-        className: E.kL,
+        className: j.kL,
         children: [
-            (0, i.jsx)(_.A, {}),
+            (0, i.jsx)(g.A, {}),
             (0, i.jsx)("div", {
-                className: E.os,
-                style: { maxWidth: 168 * b },
+                className: j.os,
+                style: { maxWidth: 168 * S },
                 children: y
                     .slice(0, 5)
                     .map((e) =>
                         (0, i.jsx)(
-                            A.Ay,
+                            h.Ay,
                             {
                                 participant: e,
                                 channel: n,
-                                className: E.Vs,
+                                className: j.Vs,
                                 inCall: !0,
                                 noVideoRender: !0,
-                                popoutType: c.N.NO_POPOUT,
+                                popoutType: u.N.NO_POPOUT,
                                 width: 48,
                             },
                             e.id,
                         ),
                     ),
             }),
-            (0, i.jsx)(a.Heading, { className: E.HA, variant: "heading-xxl/normal", children: S }),
+            (0, i.jsx)(s.D, { className: j.HA, variant: "heading-xxl/normal", children: v }),
             (0, i.jsx)("div", {
-                className: E.Nu,
-                children: (0, i.jsx)(a.Text, {
+                className: j.Nu,
+                children: (0, i.jsx)(r.E, {
                     tag: "div",
                     color: "text-default",
                     variant: "heading-lg/normal",
-                    children: (0, p.DO)(n, T),
+                    children: (0, f.DO)(n, I),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: E.UD,
+                className: j.UD,
                 children: [
                     (0, i.jsx)("div", {
-                        className: E.PD,
-                        children: (0, i.jsx)(a.Button, {
+                        className: j.PD,
+                        children: (0, i.jsx)(o.$, {
                             variant: "overlay-primary",
-                            text: I ? x.intl.string(x.t["7vb2cc"]) : x.intl.string(x.t.TVBCKZ),
-                            onClick: N,
-                            disabled: !I,
+                            text: b ? E.intl.string(E.t["7vb2cc"]) : E.intl.string(E.t.TVBCKZ),
+                            onClick: T,
+                            disabled: !b,
                         }),
                     }),
-                    (0, i.jsx)(f.l, { channel: n }),
+                    (0, i.jsx)(C.StageChannelInviteButton, { channel: n }),
                 ],
             }),
         ],

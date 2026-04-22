@@ -1,40 +1,43 @@
-n.d(t, { HY: () => m, OA: () => c, mA: () => u });
-var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(397927),
-    o = n(957565),
-    d = n(661251);
-function c(e) {
-    let { className: t, children: n } = e;
-    return (0, a.jsx)("dl", { className: l()(d.qo, t), children: n });
+a.d(t, { HY: () => x, OA: () => h, mA: () => p });
+var n = a(627968),
+    l = a(64700),
+    i = a(503698),
+    s = a.n(i),
+    r = a(939249),
+    o = a(478016),
+    d = a(624479),
+    c = a(658675),
+    u = a(957565),
+    m = a(505206);
+function h(e) {
+    let { className: t, children: a } = e;
+    return (0, n.jsx)("dl", { className: s()(m.qo, t), children: a });
 }
-let u = (e) => {
-    let { name: t, children: n, copyValue: i } = e,
-        [l, c] = s.useState(!1);
+let p = (e) => {
+    let { name: t, children: a, copyValue: i } = e,
+        [s, c] = l.useState(!1);
     return (
-        s.useEffect(() => {
-            if (l) {
+        l.useEffect(() => {
+            if (s) {
                 let e = setTimeout(() => c(!1), 1e3);
                 return () => clearTimeout(e);
             }
-        }, [l]),
-        (0, a.jsxs)(a.Fragment, {
+        }, [s]),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, a.jsx)("dt", { className: d.Bz, children: t }),
-                (0, a.jsxs)("dd", {
-                    className: d.Nw,
+                (0, n.jsx)("dt", { className: m.Bz, children: t }),
+                (0, n.jsxs)("dd", {
+                    className: m.Nw,
                     children: [
-                        n,
+                        a,
                         null != i
-                            ? (0, a.jsx)(r.DUT, {
+                            ? (0, n.jsx)(r.D, {
                                   tag: "span",
-                                  className: d.nH,
-                                  onClick: () => (0, o.C)(i, () => c(!0)),
-                                  children: l
-                                      ? (0, a.jsx)(r.Uzd, { color: "currentColor", size: "sm" })
-                                      : (0, a.jsx)(r.TdU, { color: "currentColor", size: "sm" }),
+                                  className: m.nH,
+                                  onClick: () => (0, u.C)(i, () => c(!0)),
+                                  children: s
+                                      ? (0, n.jsx)(o.U, { color: "currentColor", size: "sm" })
+                                      : (0, n.jsx)(d.T, { color: "currentColor", size: "sm" }),
                               })
                             : null,
                     ],
@@ -43,7 +46,7 @@ let u = (e) => {
         })
     );
 };
-function m(e) {
+function x(e) {
     let { value: t } = e;
-    return (0, a.jsx)(r.P7L, { checked: t });
+    return (0, n.jsx)(c.P, { checked: t });
 }

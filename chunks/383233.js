@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => p, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
+n.d(t, { Ay: () => f, _c: () => _, go: () => d, vF: () => c }), n(938796), n(321073);
 var r = n(485845),
     i = n(665260),
     s = n(315069),
@@ -7,7 +7,7 @@ var r = n(485845),
     o = n(505527),
     l = n(815807),
     u = n(652215);
-class c extends s.A {
+class d extends s.A {
     type;
     content;
     attachments;
@@ -39,14 +39,17 @@ class c extends s.A {
         return (0, i.Lt)(this.flags, e);
     }
 }
-class d extends s.A {
+class c extends s.A {
     message;
     moderatorReport;
     constructor(e) {
-        super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null);
+        super(), (this.message = new d(e.message)), (this.moderatorReport = e.moderator_report ?? null);
     }
 }
-class _ extends c {
+function _(e) {
+    return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
+}
+let f = class extends d {
     id;
     channel_id;
     author;
@@ -254,10 +257,10 @@ class _ extends c {
                 return i;
             }),
             { count: s, burst_count: a, count_details: u } = i[r] ?? {},
-            c = u?.normal ?? 0,
-            d = u?.burst ?? 0,
+            d = u?.normal ?? 0,
+            c = u?.burst ?? 0,
             _ = u?.vote ?? 0;
-        return -1 !== r && s <= 0 && a <= 0 && c <= 0 && d <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
+        return -1 !== r && s <= 0 && a <= 0 && d <= 0 && c <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -293,8 +296,4 @@ class _ extends c {
     isFirstMessageInForumPost(e) {
         return this.id === this.channel_id && e.isForumPost();
     }
-}
-function f(e) {
-    return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
-}
-let p = _;
+};

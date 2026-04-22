@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { x: () => i });
 let i = {
     facebook: { presentation: "Facebook", baseUrl: "https://facebook.com/" },

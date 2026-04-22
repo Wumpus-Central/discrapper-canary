@@ -1,57 +1,56 @@
-"use strict";
 n.d(t, { A: () => g });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    r = n.n(l),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
     a = n(451988),
-    o = n(397927),
+    o = n(939249),
     d = n(147925),
     c = n(863913),
     u = n(985018),
-    m = n(443531);
+    m = n(666843);
 let g = function (e) {
     let {
             items: t,
             carouselClassName: n,
-            paginationCaretClassName: l,
+            paginationCaretClassName: s,
             intervalBetweenAutomaticItemRotations: g,
-            renderItem: x,
+            renderItem: h,
         } = e,
-        h = s.useMemo(() => new a.IX(), []),
-        [_, p] = s.useState(c.f.LEFT),
-        [A, f] = s.useState(0),
-        [j, N] = s.useState(!1),
-        [E, b] = s.useState(!1),
-        C = s.useCallback(
+        x = l.useMemo(() => new a.IX(), []),
+        [_, p] = l.useState(c.f.LEFT),
+        [A, E] = l.useState(0),
+        [f, j] = l.useState(!1),
+        [N, I] = l.useState(!1),
+        C = l.useCallback(
             (e, t) => {
-                f((n) => {
+                E((n) => {
                     let i = n + t;
                     return i < 0 ? (i = e.length - 1) : i > e.length - 1 && (i = 0), i;
                 });
             },
-            [f],
+            [E],
         ),
-        T = s.useCallback(() => {
-            E || C(t, 1);
-        }, [C, t, E]),
-        I = s.useCallback(() => {
-            E || C(t, -1);
-        }, [C, t, E]);
+        b = l.useCallback(() => {
+            N || C(t, 1);
+        }, [C, t, N]),
+        v = l.useCallback(() => {
+            N || C(t, -1);
+        }, [C, t, N]);
     return (
-        s.useEffect(() => {
-            null != g && (j ? h.stop() : h.start(g, T));
-        }, [j, h, g, T]),
+        l.useEffect(() => {
+            null != g && (f ? x.stop() : x.start(g, b));
+        }, [f, x, g, b]),
         (0, i.jsxs)("div", {
             className: m.zr,
-            onMouseEnter: () => N(!0),
-            onMouseLeave: () => N(!1),
+            onMouseEnter: () => j(!0),
+            onMouseLeave: () => j(!1),
             children: [
-                (0, i.jsx)(o.DUT, {
-                    className: r()(m.Sx, l),
-                    onClick: I,
+                (0, i.jsx)(o.D, {
+                    className: r()(m.Sx, s),
+                    onClick: v,
                     onMouseEnter: () => p(c.f.RIGHT),
-                    ignoreKeyPress: E,
+                    ignoreKeyPress: N,
                     children: (0, i.jsx)(d.A, {
                         direction: d.A.Directions.LEFT,
                         height: 48,
@@ -62,16 +61,16 @@ let g = function (e) {
                 (0, i.jsx)(c.A, {
                     step: A,
                     direction: _,
-                    onAnimationStart: () => b(!0),
-                    onAnimationEnd: () => b(!1),
+                    onAnimationStart: () => I(!0),
+                    onAnimationEnd: () => I(!1),
                     className: r()(m.Dk, n),
-                    children: x(t[A]),
+                    children: h(t[A]),
                 }),
-                (0, i.jsx)(o.DUT, {
-                    className: r()(m.Sx, l),
-                    onClick: T,
+                (0, i.jsx)(o.D, {
+                    className: r()(m.Sx, s),
+                    onClick: b,
                     onMouseEnter: () => p(c.f.LEFT),
-                    ignoreKeyPress: E,
+                    ignoreKeyPress: N,
                     children: (0, i.jsx)(d.A, {
                         direction: d.A.Directions.RIGHT,
                         height: 48,

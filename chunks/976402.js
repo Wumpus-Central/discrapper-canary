@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     HS: "groupContainer__6f5a6",
     ro: "groupHeaderRow__6f5a6",

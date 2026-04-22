@@ -1,45 +1,47 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
-    s = n(582754),
-    a = n(397927),
-    r = n(736653),
-    o = n(58149),
-    d = n(742589),
-    c = n(652215),
-    u = n(985018),
-    h = n(96361),
-    A = n(745652),
-    _ = n(855324);
-let m = () => {
-    let e = (0, r.Ay)();
+    s = n(462887),
+    a = n(276293),
+    r = n(534514),
+    o = n(834730),
+    d = n(736653),
+    c = n(58149),
+    u = n(742589),
+    h = n(652215),
+    A = n(985018),
+    _ = n(96361),
+    m = n(745652),
+    g = n(855324);
+let p = () => {
+    let e = (0, d.Ay)();
     l.useEffect(() => {
-        o.Ay.trackWithMetadata(c.HAw.GUILD_OUTAGE_VIEWED, {});
+        c.Ay.trackWithMetadata(h.HAw.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, s.Mw)(e) ? A : _;
+    let t = (0, s.M)(e) ? m : g;
     return (0, i.jsxs)("div", {
-        className: h.kL,
+        className: _.kL,
         children: [
-            (0, i.jsxs)(d.A, {
+            (0, i.jsxs)(u.A, {
                 toolbar: (0, i.jsx)(l.Fragment, {}),
                 children: [
-                    (0, i.jsx)(d.A.Icon, { icon: a.N$i, "aria-hidden": !0 }),
-                    (0, i.jsx)(d.A.Title, { children: u.intl.string(u.t["8LKchl"]) }),
+                    (0, i.jsx)(u.A.Icon, { icon: a.N, "aria-hidden": !0 }),
+                    (0, i.jsx)(u.A.Title, { children: A.intl.string(A.t["8LKchl"]) }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: h.Qs,
+                className: _.Qs,
                 children: [
-                    (0, i.jsx)("img", { alt: "", className: h.j0, src: t }),
-                    (0, i.jsx)(a.Heading, {
-                        className: h.Zd,
+                    (0, i.jsx)("img", { alt: "", className: _.j0, src: t }),
+                    (0, i.jsx)(r.D, {
+                        className: _.Zd,
                         variant: "heading-lg/medium",
-                        children: u.intl.string(u.t.m9gRVN),
+                        children: A.intl.string(A.t.m9gRVN),
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: h.fh,
+                    (0, i.jsx)(o.E, {
+                        className: _.fh,
                         variant: "text-md/normal",
-                        children: u.intl.string(u.t.wC3j56),
+                        children: A.intl.string(A.t.wC3j56),
                     }),
                 ],
             }),

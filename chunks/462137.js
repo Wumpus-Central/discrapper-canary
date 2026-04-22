@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = [
+        a = [
             "displayHeight",
             "displayWidth",
             "mouseY",
@@ -263,19 +263,17 @@ e.exports = function (e) {
             "randomGaussian",
             "randomSeed",
         ],
-        r = e.IDENT_RE,
-        i = {
+        n = e.IDENT_RE,
+        r = {
             variants: [
-                { match: t.concat(t.either(...n), t.lookahead(/\s*\(/)), className: "built_in" },
+                { match: t.concat(t.either(...a), t.lookahead(/\s*\(/)), className: "built_in" },
                 {
                     relevance: 0,
-                    match: t.concat(/\b(?!for|if|while)/, r, t.lookahead(/\s*\(/)),
+                    match: t.concat(/\b(?!for|if|while)/, n, t.lookahead(/\s*\(/)),
                     className: "title.function",
                 },
             ],
-        },
-        s = { match: [/new\s+/, r], className: { 1: "keyword", 2: "class.title" } },
-        a = { relevance: 0, match: [/\./, r], className: { 2: "property" } };
+        };
     return {
         name: "Processing",
         aliases: ["pde"],
@@ -324,7 +322,7 @@ e.exports = function (e) {
             title: "setup draw",
             variable: "super this",
             built_in: [
-                ...n,
+                ...a,
                 "BufferedReader",
                 "PVector",
                 "PFont",
@@ -351,12 +349,12 @@ e.exports = function (e) {
         },
         contains: [
             {
-                variants: [{ match: [/class/, /\s+/, r, /\s+/, /extends/, /\s+/, r] }, { match: [/class/, /\s+/, r] }],
+                variants: [{ match: [/class/, /\s+/, n, /\s+/, /extends/, /\s+/, n] }, { match: [/class/, /\s+/, n] }],
                 className: { 1: "keyword", 3: "title.class", 5: "keyword", 7: "title.class.inherited" },
             },
-            s,
-            i,
-            a,
+            { match: [/new\s+/, n], className: { 1: "keyword", 2: "class.title" } },
+            r,
+            { relevance: 0, match: [/\./, n], className: { 2: "property" } },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,

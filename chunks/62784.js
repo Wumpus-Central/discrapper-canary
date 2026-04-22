@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__927fc",
     G: "developerShelfControlsContainer__927fc",

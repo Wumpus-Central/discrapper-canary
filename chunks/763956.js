@@ -1,28 +1,25 @@
-"use strict";
-n.d(t, { W: () => r });
-var r = (function (e) {
-    return (
-        (e[(e.THRILLER = 0)] = "THRILLER"),
-        (e[(e.SCIENCE_FICTION = 1)] = "SCIENCE_FICTION"),
-        (e[(e.ACTION = 2)] = "ACTION"),
-        (e[(e.HORROR = 3)] = "HORROR"),
-        (e[(e.SURVIVAL = 4)] = "SURVIVAL"),
-        (e[(e.FANTASY = 5)] = "FANTASY"),
-        (e[(e.HISTORICAL = 6)] = "HISTORICAL"),
-        (e[(e.STEALTH = 7)] = "STEALTH"),
-        (e[(e.COMEDY = 8)] = "COMEDY"),
-        (e[(e.BUSINESS = 9)] = "BUSINESS"),
-        (e[(e.DRAMA = 10)] = "DRAMA"),
-        (e[(e.NON_FICTION = 11)] = "NON_FICTION"),
-        (e[(e.KIDS = 12)] = "KIDS"),
-        (e[(e.SANDBOX = 13)] = "SANDBOX"),
-        (e[(e.OPEN_WORLD = 14)] = "OPEN_WORLD"),
-        (e[(e.WARFARE = 15)] = "WARFARE"),
-        (e[(e.EDUCATIONAL = 16)] = "EDUCATIONAL"),
-        (e[(e.MYSTERY = 17)] = "MYSTERY"),
-        (e[(e.PARTY = 18)] = "PARTY"),
-        (e[(e.ROMANCE = 19)] = "ROMANCE"),
-        (e[(e.EROTIC = 20)] = "EROTIC"),
-        e
-    );
-})({});
+t.d(i, { W: () => l });
+var n,
+    l =
+        (((n = {})[(n.THRILLER = 0)] = "THRILLER"),
+        (n[(n.SCIENCE_FICTION = 1)] = "SCIENCE_FICTION"),
+        (n[(n.ACTION = 2)] = "ACTION"),
+        (n[(n.HORROR = 3)] = "HORROR"),
+        (n[(n.SURVIVAL = 4)] = "SURVIVAL"),
+        (n[(n.FANTASY = 5)] = "FANTASY"),
+        (n[(n.HISTORICAL = 6)] = "HISTORICAL"),
+        (n[(n.STEALTH = 7)] = "STEALTH"),
+        (n[(n.COMEDY = 8)] = "COMEDY"),
+        (n[(n.BUSINESS = 9)] = "BUSINESS"),
+        (n[(n.DRAMA = 10)] = "DRAMA"),
+        (n[(n.NON_FICTION = 11)] = "NON_FICTION"),
+        (n[(n.KIDS = 12)] = "KIDS"),
+        (n[(n.SANDBOX = 13)] = "SANDBOX"),
+        (n[(n.OPEN_WORLD = 14)] = "OPEN_WORLD"),
+        (n[(n.WARFARE = 15)] = "WARFARE"),
+        (n[(n.EDUCATIONAL = 16)] = "EDUCATIONAL"),
+        (n[(n.MYSTERY = 17)] = "MYSTERY"),
+        (n[(n.PARTY = 18)] = "PARTY"),
+        (n[(n.ROMANCE = 19)] = "ROMANCE"),
+        (n[(n.EROTIC = 20)] = "EROTIC"),
+        n);

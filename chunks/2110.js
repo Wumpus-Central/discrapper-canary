@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { x: () => r });
-let r = {
+n.d(t, { x: () => i });
+let i = {
     IN_APP: new Set([
         "application",
         "first_dm",

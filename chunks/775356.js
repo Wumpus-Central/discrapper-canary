@@ -1,44 +1,43 @@
-"use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.ImageTypes = void 0);
-class n {}
-(t.ImageTypes = n),
-    (n.AVIF = {
+class i {}
+(t.ImageTypes = i),
+    (i.AVIF = {
         extension: "avif",
         mimeType: "image/avif",
         description: "Alliance for Open Media (AOMedia) Video 1 (AV1) Image File",
         signatures: [{ sequence: [0, 0, 0] }],
     }),
-    (n.BMP = {
+    (i.BMP = {
         extension: "bmp",
         mimeType: "image/bmp",
         description: "A bitmap format used mostly in Windows",
         signatures: [{ sequence: [66, 77], compatibleExtensions: ["dib"] }],
     }),
-    (n.BPG = {
+    (i.BPG = {
         extension: "bpg",
         mimeType: "image/bpg",
         description: "Better Portable Graphics image format",
         signatures: [{ sequence: [66, 80, 71, 251] }],
     }),
-    (n.CR2 = {
+    (i.CR2 = {
         extension: "cr2",
         mimeType: "image/x-canon-cr2",
         description: "Canon digital camera RAW file",
         signatures: [{ sequence: [73, 73, 42, 0, 16, 0, 0, 0, 67, 82] }],
     }),
-    (n.EXR = {
+    (i.EXR = {
         extension: "exr",
         mimeType: "image/x-exr",
         description: "OpenEXR bitmap image format",
         signatures: [{ sequence: [118, 47, 49, 1] }],
     }),
-    (n.GIF = {
+    (i.GIF = {
         extension: "gif",
         mimeType: "image/gif",
         description: "Image file encoded in the Graphics Interchange Format (GIF)",
         signatures: [{ sequence: [71, 73, 70, 56, 55, 97] }, { sequence: [71, 73, 70, 56, 57, 97] }],
     }),
-    (n.HEIC = {
+    (i.HEIC = {
         extension: "heic",
         mimeType: "image/heic",
         description:
@@ -48,13 +47,13 @@ class n {}
             { sequence: [102, 116, 121, 112, 109], offset: 4 },
         ],
     }),
-    (n.ICO = {
+    (i.ICO = {
         extension: "ico",
         mimeType: "image/x-icon",
         description: "Computer icon encoded in ICO file format",
         signatures: [{ sequence: [0, 0, 1, 0], compatibleExtensions: ["spl"] }],
     }),
-    (n.JPEG = {
+    (i.JPEG = {
         extension: "jpeg",
         mimeType: "image/jpeg",
         description: "JPEG (Joint Photographic Experts Group) is a widely used lossy image compression format.",
@@ -89,7 +88,7 @@ class n {}
             { sequence: [255, 216], description: "Generic JPEGimage file", compatibleExtensions: ["jpe"] },
         ],
     }),
-    (n.PBM = {
+    (i.PBM = {
         extension: "pbm",
         mimeType: "image/x-portable-bitmap",
         description:
@@ -99,7 +98,7 @@ class n {}
             { sequence: [80, 52, 10], description: "Portable bitmap binary" },
         ],
     }),
-    (n.PGM = {
+    (i.PGM = {
         extension: "pgm",
         mimeType: "image/x-portable-graymap",
         description:
@@ -109,14 +108,14 @@ class n {}
             { sequence: [80, 53, 10], description: "Portable Gray Map binary" },
         ],
     }),
-    (n.PNG = {
+    (i.PNG = {
         extension: "png",
         mimeType: "image/png",
         description:
             "PNG (Portable Network Graphics) is a lossless image compression format that supports a wide range of color depths and transparency and is widely used for high-quality graphics.",
         signatures: [{ sequence: [137, 80, 78, 71, 13, 10, 26, 10] }],
     }),
-    (n.PPM = {
+    (i.PPM = {
         extension: "ppm",
         mimeType: "image/x-portable-pixmap",
         description:
@@ -126,13 +125,13 @@ class n {}
             { sequence: [80, 54, 10], description: "Portable Pixmap binary" },
         ],
     }),
-    (n.PSD = {
+    (i.PSD = {
         extension: "psd",
         mimeType: "image/vnd.adobe.photoshop",
         description: "PSD (Photoshop Document) is an Adobe Photoshop image file format",
         signatures: [{ sequence: [56, 66, 80, 83] }],
     }),
-    (n.WEBP = {
+    (i.WEBP = {
         extension: "webp",
         mimeType: "image/webp",
         description:

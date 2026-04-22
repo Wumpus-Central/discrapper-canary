@@ -1,56 +1,57 @@
-r.r(_), r.d(_, { default: () => x });
-var s = r(627968),
-    d = r(64700),
-    t = r(503698),
-    o = r.n(t),
-    n = r(397927),
-    i = r(409013),
-    l = r(785330),
-    a = r(856535),
-    b = r(697454),
-    c = r(611924),
-    m = r(594832),
-    u = r(621653),
-    g = r(983545),
-    h = r(599062),
-    p = r(155486),
-    I = r(938191),
-    w = r(758836),
-    C = r(652215),
-    f = r(157884);
-let x = (e) => {
-    let { layoutId: _ } = e;
-    (0, c.P)(b.a), (0, u.g)(), (0, m.pE)();
-    let r = d.useRef(null);
-    d.useEffect(() => {
-        r.current?.focus();
+l.r(s), l.d(s, { default: () => P });
+var r = l(627968),
+    t = l(64700),
+    n = l(503698),
+    a = l.n(n),
+    u = l(289873),
+    c = l(573613),
+    d = l(409013),
+    i = l(785330),
+    o = l(856535),
+    h = l(475073),
+    j = l(611924),
+    p = l(594832),
+    x = l(621653),
+    b = l(983545),
+    f = l(599062),
+    y = l(155486),
+    g = l(938191),
+    A = l(758836),
+    k = l(652215),
+    v = l(647685);
+let P = (e) => {
+    let { layoutId: s } = e;
+    (0, j.P)(h.a), (0, x.g)(), (0, p.pE)();
+    let l = t.useRef(null);
+    t.useEffect(() => {
+        l.current?.focus();
     }, []);
-    let t = (0, I.yB)("CollectiblesShopLayout");
-    (0, I.gB)();
-    let { selectedTab: x, transitionToTab: R } = (0, g.o)(w.G2.LAYOUT),
-        { layout: j, loading: v, error: k } = (0, a.A)(C.FYj, _);
-    return (0, s.jsxs)("div", {
-        className: o()(f.bx, { [I.jP]: t }),
-        ref: r,
+    let n = (0, g.yB)("CollectiblesShopLayout");
+    (0, g.gB)();
+    let { selectedTab: P, transitionToTab: m } = (0, b.o)(A.G2.LAYOUT),
+        { layout: C, loading: E, error: G } = (0, o.A)(k.FYj, s);
+    return (0, r.jsxs)("div", {
+        className: a()(v.bx, { [g.jP]: n }),
+        ref: l,
         tabIndex: -1,
         children: [
-            (0, s.jsx)(p.G, { handleTransition: R, selectedTab: x }),
-            (0, s.jsx)(n.HOs, {
-                children: (0, s.jsx)("div", {
-                    className: f.Qs,
+            (0, r.jsx)(y.G, { handleTransition: m, selectedTab: P }),
+            (0, r.jsx)(c.Ip, {
+                children: (0, r.jsx)("div", {
+                    className: v.Qs,
                     children:
-                        v || null == _
-                            ? (0, s.jsx)(n.y$y, {})
-                            : null != k
-                              ? (0, s.jsx)(h.h, {
-                                    errorMessage: k.message,
-                                    errorOrigin: h.A.SHOP_PAGE,
+                        E || null == s
+                            ? (0, r.jsx)(u.y, {})
+                            : null != G
+                              ? (0, r.jsx)(f.h, {
+                                    errorMessage: G.message,
+                                    errorOrigin: f.A.SHOP_PAGE,
                                     onRetry: () => {
-                                        (0, i.v)({ tenantId: C.FYj, layoutId: _ });
+                                        (0, d.v)({ tenantId: k.FYj, layoutId: s });
                                     },
                                 })
-                              : null != j
-                                ? (0, s.jsx)(l.Ay, { layout: j })
+                              : null != C
+                                ? (0, r.jsx)(i.Ay, { layout: C })
                                 : null,
                 }),
             }),

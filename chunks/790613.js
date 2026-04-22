@@ -1,78 +1,79 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(64700),
-    s = n(397927),
-    a = n(282956),
-    r = n(573648),
-    o = n(997509),
-    d = n(447066),
-    c = n(780765),
-    u = n(287603);
-function m(e) {
+    s = n(404778),
+    a = n(834730),
+    r = n(282956),
+    o = n(573648),
+    d = n(997509),
+    c = n(447066),
+    u = n(780765),
+    m = n(836803);
+function g(e) {
     let {
             integrations: t,
             editedIntegration: n,
-            guild: m,
-            platformType: g,
+            guild: g,
+            platformType: h,
             labelText: x,
-            descriptionText: h,
-            helpText: p,
-            errors: A,
-            canNavigate: b,
+            descriptionText: p,
+            helpText: A,
+            errors: b,
+            canNavigate: f,
         } = e,
-        f = r.A.get(g),
-        _ = l.useCallback(
+        _ = o.A.get(h),
+        j = l.useCallback(
             async (e) => {
-                b() && (await o.A.enableIntegration(m.id, e.type, e.id), a.A.startEditingIntegration(e.id));
+                f() && (await d.A.enableIntegration(g.id, e.type, e.id), r.A.startEditingIntegration(e.id));
             },
-            [b, m.id],
+            [f, g.id],
         ),
         N = l.useCallback(
             (e) => {
-                b() && (e.id === n?.id && a.A.stopEditingIntegration(), o.A.disableIntegration(m.id, e.id));
+                f() && (e.id === n?.id && r.A.stopEditingIntegration(), d.A.disableIntegration(g.id, e.id));
             },
-            [b, n, m.id],
+            [f, n, g.id],
         ),
-        j = l.useCallback(
+        v = l.useCallback(
             (e) => {
-                b() && (e === n?.id ? a.A.stopEditingIntegration() : a.A.startEditingIntegration(e));
+                f() && (e === n?.id ? r.A.stopEditingIntegration() : r.A.startEditingIntegration(e));
             },
-            [b, n],
+            [f, n],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(d.A, {
+            (0, i.jsx)(c.A, {
                 name: x,
-                icon: f?.icon.whiteSVG,
-                iconBackgroundColor: f?.color,
-                iconClassName: u.tV,
-                description: h,
+                icon: _?.icon.whiteSVG,
+                iconBackgroundColor: _?.color,
+                iconClassName: m.tV,
+                description: p,
                 isHeader: !0,
             }),
-            (0, i.jsx)(s.cGx, { className: u.zN }),
-            "message" in A &&
-                (0, i.jsx)(s.Text, {
-                    className: u.kc,
+            (0, i.jsx)(s.c, { className: m.zN }),
+            "message" in b &&
+                (0, i.jsx)(a.E, {
+                    className: m.kc,
                     color: "text-feedback-critical",
                     variant: "text-sm/normal",
-                    children: A.message,
+                    children: b.message,
                 }),
             t.map((e) =>
                 (0, i.jsx)(
-                    c.A,
+                    u.A,
                     {
                         integration: e,
                         editedIntegration: n,
-                        guild: m,
+                        guild: g,
                         isExpanded: n?.id === e.id,
-                        onEnable: _,
+                        onEnable: j,
                         onDisable: N,
-                        onToggleExpand: () => j(e.id),
+                        onToggleExpand: () => v(e.id),
                     },
                     e.id,
                 ),
             ),
-            (0, i.jsx)(s.Text, { className: u.BK, color: "text-muted", variant: "text-sm/normal", children: p }),
+            (0, i.jsx)(a.E, { className: m.BK, color: "text-muted", variant: "text-sm/normal", children: A }),
         ],
     });
 }

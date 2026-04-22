@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => f });
+n.d(t, { E: () => _ });
 var r = n(735438),
     i = n.n(r),
     s = n(562465),
@@ -7,7 +7,6 @@ var r = n(735438),
     o = n(73153),
     l = n(311043),
     u = n(652215);
-let c = 20;
 async function d(e) {
     try {
         let t = (
@@ -22,12 +21,12 @@ async function d(e) {
         o.h.dispatch({ type: "GAME_FETCH_FAILURE", gameIds: e });
     }
 }
-let _ = new a.OC(
+let c = new a.OC(
     async (e) => {
-        o.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(i().chunk(e, c).map(d));
+        o.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(i().chunk(e, 20).map(d));
     },
     (e) => !l.A.hasNoData(e),
 );
-async function f(e) {
-    0 !== e.length && (await _.queue(e));
+async function _(e) {
+    0 !== e.length && (await c.queue(e));
 }

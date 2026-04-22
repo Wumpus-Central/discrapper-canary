@@ -1,14 +1,15 @@
-n.d(t, { t: () => s });
-var l = n(392107),
-    a = n(954571),
-    i = n(486020),
-    r = n(652215);
+"use strict";
+a.d(t, { t: () => s });
+var r = a(392107),
+    l = a(954571),
+    n = a(486020),
+    i = a(652215);
 function s(e) {
-    let { avatarHash: t, avatarId: n, isGuildProfile: s = !1, avatarAssetOrigin: d = l.E.NEW_ASSET } = e;
-    a.default.track(r.HAw.USER_AVATAR_UPDATED, {
-        animated: (0, i.VI)(t),
+    let { avatarHash: t, avatarId: a, isGuildProfile: s = !1, avatarAssetOrigin: o = r.E.NEW_ASSET } = e;
+    l.default.track(i.HAw.USER_AVATAR_UPDATED, {
+        animated: (0, n.VI)(t),
         is_guild_profile: s,
-        recent_avatar_id: d === l.E.ARCHIVED_ASSET ? Number(n) : void 0,
-        is_edited_recent_avatar: d === l.E.EDITED_ARCHIVED_ASSET,
+        recent_avatar_id: o === r.E.ARCHIVED_ASSET ? Number(a) : void 0,
+        is_edited_recent_avatar: o === r.E.EDITED_ARCHIVED_ASSET,
     });
 }

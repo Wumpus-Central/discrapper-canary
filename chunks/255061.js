@@ -1,13 +1,6 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(355418);
-let i = 1,
-    a = 2,
-    s = 3,
-    o = 4,
-    l = 5,
-    u = 6;
-class c extends r.c {
+r.d(t, { A: () => s });
+var n = r(355418);
+class s extends n.c {
     innerPattern(e) {
         return RegExp(
             "(现在|立(?:刻|即)|即刻)|(今|明|前|大前|后|大后|昨)(早|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s|,|，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?",
@@ -15,75 +8,75 @@ class c extends r.c {
         );
     }
     innerExtract(e, t) {
-        let n = t.index,
-            r = e.createParsingResult(n, t[0]),
-            c = e.refDate,
-            d = new Date(c.getTime());
-        if (t[i])
-            r.start.imply("hour", c.getHours()),
-                r.start.imply("minute", c.getMinutes()),
-                r.start.imply("second", c.getSeconds()),
-                r.start.imply("millisecond", c.getMilliseconds());
-        else if (t[a]) {
-            let e = t[a],
-                n = t[s];
+        let r = t.index,
+            n = e.createParsingResult(r, t[0]),
+            s = e.refDate,
+            a = new Date(s.getTime());
+        if (t[1])
+            n.start.imply("hour", s.getHours()),
+                n.start.imply("minute", s.getMinutes()),
+                n.start.imply("second", s.getSeconds()),
+                n.start.imply("millisecond", s.getMilliseconds());
+        else if (t[2]) {
+            let e = t[2],
+                r = t[3];
             "明" == e
-                ? c.getHours() > 1 && d.setDate(d.getDate() + 1)
+                ? s.getHours() > 1 && a.setDate(a.getDate() + 1)
                 : "昨" == e
-                  ? d.setDate(d.getDate() - 1)
+                  ? a.setDate(a.getDate() - 1)
                   : "前" == e
-                    ? d.setDate(d.getDate() - 2)
+                    ? a.setDate(a.getDate() - 2)
                     : "大前" == e
-                      ? d.setDate(d.getDate() - 3)
+                      ? a.setDate(a.getDate() - 3)
                       : "后" == e
-                        ? d.setDate(d.getDate() + 2)
-                        : "大后" == e && d.setDate(d.getDate() + 3),
-                "早" == n
-                    ? r.start.imply("hour", 6)
-                    : "晚" == n && (r.start.imply("hour", 22), r.start.imply("meridiem", 1));
-        } else if (t[o]) {
-            let e = t[o][0];
+                        ? a.setDate(a.getDate() + 2)
+                        : "大后" == e && a.setDate(a.getDate() + 3),
+                "早" == r
+                    ? n.start.imply("hour", 6)
+                    : "晚" == r && (n.start.imply("hour", 22), n.start.imply("meridiem", 1));
+        } else if (t[4]) {
+            let e = t[4][0];
             "早" == e || "上" == e
-                ? r.start.imply("hour", 6)
+                ? n.start.imply("hour", 6)
                 : "下" == e
-                  ? (r.start.imply("hour", 15), r.start.imply("meridiem", 1))
+                  ? (n.start.imply("hour", 15), n.start.imply("meridiem", 1))
                   : "中" == e
-                    ? (r.start.imply("hour", 12), r.start.imply("meridiem", 1))
+                    ? (n.start.imply("hour", 12), n.start.imply("meridiem", 1))
                     : "夜" == e || "晚" == e
-                      ? (r.start.imply("hour", 22), r.start.imply("meridiem", 1))
-                      : "凌" == e && r.start.imply("hour", 0);
-        } else if (t[l]) {
-            let e = t[l];
+                      ? (n.start.imply("hour", 22), n.start.imply("meridiem", 1))
+                      : "凌" == e && n.start.imply("hour", 0);
+        } else if (t[5]) {
+            let e = t[5];
             "明" == e
-                ? c.getHours() > 1 && d.setDate(d.getDate() + 1)
+                ? s.getHours() > 1 && a.setDate(a.getDate() + 1)
                 : "昨" == e
-                  ? d.setDate(d.getDate() - 1)
+                  ? a.setDate(a.getDate() - 1)
                   : "前" == e
-                    ? d.setDate(d.getDate() - 2)
+                    ? a.setDate(a.getDate() - 2)
                     : "大前" == e
-                      ? d.setDate(d.getDate() - 3)
+                      ? a.setDate(a.getDate() - 3)
                       : "后" == e
-                        ? d.setDate(d.getDate() + 2)
-                        : "大后" == e && d.setDate(d.getDate() + 3);
-            let n = t[u];
-            if (n) {
-                let e = n[0];
+                        ? a.setDate(a.getDate() + 2)
+                        : "大后" == e && a.setDate(a.getDate() + 3);
+            let r = t[6];
+            if (r) {
+                let e = r[0];
                 "早" == e || "上" == e
-                    ? r.start.imply("hour", 6)
+                    ? n.start.imply("hour", 6)
                     : "下" == e
-                      ? (r.start.imply("hour", 15), r.start.imply("meridiem", 1))
+                      ? (n.start.imply("hour", 15), n.start.imply("meridiem", 1))
                       : "中" == e
-                        ? (r.start.imply("hour", 12), r.start.imply("meridiem", 1))
+                        ? (n.start.imply("hour", 12), n.start.imply("meridiem", 1))
                         : "夜" == e || "晚" == e
-                          ? (r.start.imply("hour", 22), r.start.imply("meridiem", 1))
-                          : "凌" == e && r.start.imply("hour", 0);
+                          ? (n.start.imply("hour", 22), n.start.imply("meridiem", 1))
+                          : "凌" == e && n.start.imply("hour", 0);
             }
         }
         return (
-            r.start.assign("day", d.getDate()),
-            r.start.assign("month", d.getMonth() + 1),
-            r.start.assign("year", d.getFullYear()),
-            r
+            n.start.assign("day", a.getDate()),
+            n.start.assign("month", a.getMonth() + 1),
+            n.start.assign("year", a.getFullYear()),
+            n
         );
     }
 }

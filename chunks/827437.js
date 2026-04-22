@@ -1,69 +1,70 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(793574),
-    o = n(688810),
-    l = n(315246),
-    u = n(92240),
-    c = n(679492),
-    d = n(645463),
-    _ = n(985018);
-function f(e) {
+e.d(n, { A: () => f });
+var i = e(627968),
+    l = e(64700),
+    r = e(265872),
+    a = e(861672),
+    s = e(477782),
+    o = e(793574),
+    c = e(688810),
+    u = e(315246),
+    d = e(92240),
+    A = e(679492),
+    x = e(645463),
+    p = e(985018);
+function f(t) {
     let {
-            children: t,
-            user: n,
+            children: n,
+            user: e,
             activity: f,
-            entry: p,
-            display: h,
-            onSelect: m,
-            onClose: g,
-            appContext: E,
-            targetElementRef: A,
-        } = e,
-        [I, T] = i.useState(!1),
-        { analyticsLocations: y } = (0, o.Ay)(s.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        S = (0, u.A)({ display: h, user: n, activity: f, entry: p, analyticsLocations: y }),
-        v = (0, c.NR)(),
-        C = i.useRef(null),
-        b = v?.interactionPopoutTargetRef ?? C,
-        N = (0, d.A)({
-            entry: p,
+            entry: _,
+            display: m,
+            onSelect: E,
+            onClose: T,
+            appContext: g,
+            targetElementRef: N,
+        } = t,
+        [C, I] = l.useState(!1),
+        { analyticsLocations: O } = (0, c.Ay)(o.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        S = (0, d.A)({ display: m, user: e, activity: f, entry: _, analyticsLocations: O }),
+        y = (0, A.NR)(),
+        h = l.useRef(null),
+        j = y?.interactionPopoutTargetRef ?? h,
+        v = (0, x.A)({
+            entry: _,
             activity: f,
-            user: n,
-            display: h,
-            onClose: g,
+            user: e,
+            display: m,
+            onClose: T,
             onAction: S,
-            isMenuOpen: I,
-            appContext: E,
+            isMenuOpen: C,
+            appContext: g,
         });
-    return 0 === N.length || n.bot
+    return 0 === v.length || e.bot
         ? null
-        : (0, r.jsx)(a.YNO, {
-              targetElementRef: A ?? b,
+        : (0, i.jsx)(r.Y, {
+              targetElementRef: N ?? j,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  S({ action: "OPEN_MENU" }), T(!0);
+                  S({ action: "OPEN_MENU" }), I(!0);
               },
-              renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, r.jsx)("div", {
-                      onClick: (e) => e.stopPropagation(),
-                      children: (0, r.jsx)(a.W1t, {
+              renderPopout: (t) => {
+                  let { closePopout: n } = t;
+                  return (0, i.jsx)("div", {
+                      onClick: (t) => t.stopPropagation(),
+                      children: (0, i.jsx)(a.W, {
                           "data-menu-migrated-auto": !0,
-                          navId: l.n,
+                          navId: u.n,
                           onClose: () => {
-                              t(), T(!1);
+                              n(), I(!1);
                           },
-                          "aria-label": _.intl.string(_.t.PlAQz1),
-                          onSelect: m,
-                          children: (0, r.jsx)(a.rXV, { children: N }),
+                          "aria-label": p.intl.string(p.t.PlAQz1),
+                          onSelect: E,
+                          children: (0, i.jsx)(s.rX, { children: v }),
                       }),
                   });
               },
-              children: t,
+              children: n,
           });
 }

@@ -1,33 +1,33 @@
-n.d(t, { A: () => c });
-var i = n(627968),
-    l = n(64700),
-    a = n(342494),
-    r = n(976860),
-    s = n(652215),
-    o = n(985018),
-    d = n(78701);
-function c(e) {
-    let { onNavigateToQuestHome: t, onRender: n, onRequestClose: c, targetElementRef: u } = e,
-        A = l.useCallback(() => {
-            t(), (0, r.pX)(s.BVt.QUEST_HOME);
-        }, [t]);
+a.d(l, { A: () => o });
+var t = a(627968),
+    s = a(64700),
+    i = a(265486),
+    n = a(976860),
+    c = a(652215),
+    h = a(985018),
+    r = a(78701);
+function o(e) {
+    let { onNavigateToQuestHome: l, onRender: a, onRequestClose: o, targetElementRef: d } = e,
+        v = s.useCallback(() => {
+            l(), (0, n.pX)(c.BVt.QUEST_HOME);
+        }, [l]);
     return (
-        l.useEffect(() => {
-            n();
-        }, [n]),
-        (0, i.jsx)(a.AM, {
-            actions: [{ text: o.intl.string(o.t.facYnD), variant: "primary", onClick: A }],
+        s.useEffect(() => {
+            a();
+        }, [a]),
+        (0, t.jsx)(i.A, {
+            actions: [{ text: h.intl.string(h.t.facYnD), variant: "primary", onClick: v }],
             alignmentStrategy: "edge",
             align: "top",
-            body: o.intl.string(o.t.o4NGXc),
+            body: h.intl.string(h.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: { type: "image", src: d.A },
-            onRequestClose: c,
+            graphic: { type: "image", src: r.A },
+            onRequestClose: o,
             position: "right",
             size: "lg",
-            targetElementRef: u,
-            title: o.intl.string(o.t.EDDchq),
+            targetElementRef: d,
+            title: h.intl.string(h.t.EDDchq),
         })
     );
 }

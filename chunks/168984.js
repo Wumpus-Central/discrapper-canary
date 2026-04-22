@@ -1,16 +1,16 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
+n.d(t, { A: () => A });
+var l = n(627968),
     i = n(64700),
-    s = n(311907),
-    a = n(397927),
+    a = n(311907),
+    r = n(534514),
+    s = n(834730),
     o = n(812745),
-    l = n(825755),
-    u = n(682449),
-    c = n(490581),
-    d = n(985018),
-    _ = n(40417);
-class f extends i.PureComponent {
+    u = n(825755),
+    c = n(682449),
+    d = n(490581),
+    p = n(985018),
+    m = n(40417);
+class h extends i.PureComponent {
     componentDidMount() {
         this.maybeOpenCashAppOverlay();
     }
@@ -21,42 +21,42 @@ class f extends i.PureComponent {
             this.maybeOpenCashAppOverlay();
     }
     maybeOpenCashAppOverlay() {
-        null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && u.uy();
+        null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.uy();
     }
     render() {
         let { className: e, cashAppPayComponent: t } = this.props,
             n = this.props.adyenPaymentData,
             i = n?.paymentMethod?.cashtag ?? "",
-            s = null != n && "" !== i;
-        return (0, r.jsxs)("div", {
+            a = null != n && "" !== i;
+        return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, r.jsx)(o.Ay, { type: o.Ay.Types.CASH_APP, size: o.y3.MEDIUM, className: _.K }),
-                s
-                    ? (0, r.jsxs)(r.Fragment, {
+                (0, l.jsx)(o.Ay, { type: o.Ay.Types.CASH_APP, size: o.y3.MEDIUM, className: m.K }),
+                a
+                    ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, r.jsx)(a.Heading, {
+                              (0, l.jsx)(r.D, {
                                   variant: i.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
-                                  className: _.y,
-                                  children: d.intl.format(d.t["ze/1yE"], { cashtag: i }),
+                                  className: m.y,
+                                  children: p.intl.format(p.t["ze/1yE"], { cashtag: i }),
                               }),
-                              (0, r.jsx)(a.Text, {
+                              (0, l.jsx)(s.E, {
                                   variant: "text-md/medium",
-                                  className: _.y,
-                                  children: d.intl.string(d.t.VPOx7N),
+                                  className: m.y,
+                                  children: p.intl.string(p.t.VPOx7N),
                               }),
                           ],
                       })
-                    : (0, r.jsx)(a.Text, {
+                    : (0, l.jsx)(s.E, {
                           variant: "text-md/medium",
-                          className: _.y,
-                          children: null == t ? d.intl.string(d.t["CgVe/w"]) : d.intl.string(d.t["1MqcjI"]),
+                          className: m.y,
+                          children: null == t ? p.intl.string(p.t["CgVe/w"]) : p.intl.string(p.t["1MqcjI"]),
                       }),
             ],
         });
     }
 }
-let p = s.Ay.connectStores([c.A, l.A], () => ({
-    cashAppPayComponent: c.A.cashAppPayComponent,
-    adyenPaymentData: l.A.adyenPaymentData,
-}))(f);
+let A = a.Ay.connectStores([d.A, u.A], () => ({
+    cashAppPayComponent: d.A.cashAppPayComponent,
+    adyenPaymentData: u.A.adyenPaymentData,
+}))(h);

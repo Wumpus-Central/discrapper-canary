@@ -1,28 +1,28 @@
-s.d(t, { A: () => u });
-var n = s(627968);
-s(64700);
-var l = s(503698),
-    a = s.n(l),
-    i = s(397927),
-    r = s(447215),
-    o = s(435470),
-    d = s(985018),
-    c = s(834502);
-let u = (e) => {
-    let { message: t, channel: s, renderColon: l, hasUnreads: u } = e,
-        { user: h, author: m } = (0, o.kn)(s),
+n.d(t, { A: () => d });
+var s = n(627968);
+n(64700);
+var l = n(503698),
+    a = n.n(l),
+    i = n(834730),
+    r = n(447215),
+    c = n(435470),
+    o = n(985018),
+    u = n(273259);
+let d = (e) => {
+    let { message: t, channel: n, renderColon: l, hasUnreads: d } = e,
+        { user: h, author: m } = (0, c.kn)(n),
         g = m?.nick ?? h?.username ?? "",
         x = (0, r.P)({
             user: t?.author,
-            channelId: s.id,
-            guildId: s.guild_id,
+            channelId: n.id,
+            guildId: n.guild_id,
             messageId: t?.id,
             stopPropagation: !0,
-            ariaLabel: d.intl.formatToPlainString(d.t.CSIeU1, { name: g }),
-        })(m ?? void 0)(g, s.id);
-    return (0, n.jsxs)(i.Text, {
+            ariaLabel: o.intl.formatToPlainString(o.t.CSIeU1, { name: g }),
+        })(m ?? void 0)(g, n.id);
+    return (0, s.jsxs)(i.E, {
         tag: "span",
-        className: a()(c.c, { [c.p]: u }),
+        className: a()(u.c, { [u.p]: d }),
         variant: "text-sm/semibold",
         children: [x, !0 === l ? ": " : null],
     });

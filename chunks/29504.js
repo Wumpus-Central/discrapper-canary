@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pz: "sidebar_e29cd7",
     kL: "container_e29cd7",

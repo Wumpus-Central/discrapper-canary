@@ -1,25 +1,14 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(73153),
     i = n(439372),
-    a = n(696451),
-    s = n(287809),
+    s = n(696451),
+    a = n(287809),
     o = n(316031);
-let l = 1e4,
-    u = null,
-    c = () => {
-        let e = a.Ay.getCommunicationDisabledUserMap();
-        Object.keys(e).forEach((t) => {
-            let n = t,
-                r = (0, a.DL)(n),
-                i = (0, a.vg)(n),
-                s = e[n];
-            (0, o.n)(s) || d(r, i);
-        });
-    },
-    d = (e, t) => {
-        let n = a.Ay.getMember(e, t),
-            i = s.default.getUser(t);
+let l = null,
+    u = (e, t) => {
+        let n = s.Ay.getMember(e, t),
+            i = a.default.getUser(t);
         if (null == n || null == i || (0, o.Z)(n)) return;
         let l = {
             ...n,
@@ -34,13 +23,21 @@ let l = 1e4,
         };
         r.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
     };
-class _ extends i.A {
+class d extends i.A {
     _initialize() {
-        u = setInterval(() => c(), l);
+        l = setInterval(() => {
+            let e;
+            Object.keys((e = s.Ay.getCommunicationDisabledUserMap())).forEach((t) => {
+                let n = (0, s.DL)(t),
+                    r = (0, s.vg)(t),
+                    i = e[t];
+                (0, o.n)(i) || u(n, r);
+            });
+        }, 1e4);
     }
     _terminate() {
-        clearInterval(u);
+        clearInterval(l);
     }
-    clearGuildMemberTimeout = d;
+    clearGuildMemberTimeout = u;
 }
-let f = new _();
+let c = new d();

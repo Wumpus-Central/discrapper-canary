@@ -1,15 +1,11 @@
 "use strict";
-n.d(t, { L: () => p, c: () => f });
+n.d(t, { L: () => f, c: () => c });
 var r = n(45145),
     i = n(717205),
     a = n(941257),
-    s = 0,
-    o = function () {
-        return !!s;
-    },
-    l = 250,
+    o = 0,
     u = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    c = [
+    s = [
         "resize",
         "load",
         "transitionend",
@@ -25,11 +21,11 @@ var r = n(45145),
         "blur",
         "focus",
     ],
-    d = function (e) {
+    l = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    _ = !1,
-    f = new ((function () {
+    d = !1,
+    c = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -40,15 +36,15 @@ var r = n(45145),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if ((void 0 === e && (e = l), !_)) {
-                    _ = !0;
-                    var n = d(e);
+                if ((void 0 === e && (e = 250), !d)) {
+                    d = !0;
+                    var n = l(e);
                     (0, a.Y)(function () {
                         var i = !1;
                         try {
                             i = (0, r.e)();
                         } finally {
-                            if (((_ = !1), (e = n - d()), !o())) return;
+                            if (((d = !1), (e = n - l()), !o)) return;
                             i ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -70,7 +66,7 @@ var r = n(45145),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    c.forEach(function (t) {
+                    s.forEach(function (t) {
                         return i.S.addEventListener(t, e.listener, !0);
                     }));
             }),
@@ -78,7 +74,7 @@ var r = n(45145),
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    c.forEach(function (t) {
+                    s.forEach(function (t) {
                         return i.S.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
@@ -86,6 +82,6 @@ var r = n(45145),
             e
         );
     })())(),
-    p = function (e) {
-        !s && e > 0 && f.start(), (s += e) || f.stop();
+    f = function (e) {
+        !o && e > 0 && c.start(), (o += e) || c.stop();
     };

@@ -1,11 +1,11 @@
 t.d(l, { A: () => c });
 var n = t(627968),
     s = t(64700),
-    a = t(397927),
+    a = t(534514),
     i = t(439303),
     r = t(183802),
     o = t(205830),
-    d = t(749025);
+    d = t(259238);
 function c(e) {
     let { analyticsSectionId: l, sectionTitle: t, skuIds: c, variant: u = r.s.SMALL } = e,
         _ = s.useMemo(() => ({ pageSection: l, pageSectionTitle: t }), [l, t]);
@@ -18,7 +18,7 @@ function c(e) {
                   children: [
                       null != t &&
                           t.length > 0 &&
-                          (0, n.jsx)(a.Heading, {
+                          (0, n.jsx)(a.D, {
                               variant: "heading-lg/semibold",
                               color: "text-strong",
                               lineClamp: 1,

@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
-var i = n(311907),
-    l = n(734057),
-    r = n(309010);
-function a() {
-    return (0, i.bG)([r.A, l.A], () => {
-        let e = r.A.getVoiceChannelId();
+"use strict";
+a.d(t, { A: () => s });
+var n = a(311907),
+    r = a(734057),
+    i = a(309010);
+function s() {
+    return (0, n.bG)([i.A, r.A], () => {
+        let e = i.A.getVoiceChannelId();
         if (null != e) {
-            let t = l.A.getChannel(e);
+            let t = r.A.getChannel(e);
             if (t?.isGuildStageVoice()) return t;
         }
         return null;

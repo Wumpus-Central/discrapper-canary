@@ -1,36 +1,34 @@
 "use strict";
-n.d(t, { MO: () => a, NB: () => s, n4: () => c, qi: () => d, vg: () => u }), n(321073);
+n.d(t, { MO: () => s, NB: () => a, n4: () => l, qi: () => u, vg: () => o }), n(321073);
 var r = n(696451),
     i = n(70738);
-let a = [12, 25, 50, 100],
-    s = 7,
-    o = 5,
-    l = 250;
-function u() {
+let s = [12, 25, 50, 100],
+    a = 7;
+function o() {
     return {
-        pageSize: a[0],
+        pageSize: s[0],
         currentPage: 1,
         continuationToken: null,
         sort: i.mF.ORDER_BY_UNSPECIFIED,
         elasticSearchCursor: null,
     };
 }
-function c(e) {
-    return Math.max(e.pageSize * o, l);
+function l(e) {
+    return Math.max(5 * e.pageSize, 250);
 }
-class d {
+class u {
     guildId;
     _sortedMemberIds;
     _paginationState;
     _version;
     _cachedPaginationChunks;
     constructor(e, t) {
-        (this.guildId = e), (this._paginationState = u()), (this._version = 0);
+        (this.guildId = e), (this._paginationState = o()), (this._version = 0);
         const [n, r] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);
     }
     reset() {
-        (this._paginationState = u()),
+        (this._paginationState = o()),
             (this._sortedMemberIds = []),
             (this._cachedPaginationChunks = {}),
             (this._version += 1);
@@ -103,10 +101,10 @@ class d {
             n = e;
         n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
         let i = this._sortedMemberIds[e],
-            a = r.Ay.getMember(this.guildId, i);
-        for (; null == a && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); )
-            (i = this._sortedMemberIds[e]), (a = r.Ay.getMember(this.guildId, i)), a?.joinedAt == null && (a = null);
-        return a;
+            s = r.Ay.getMember(this.guildId, i);
+        for (; null == s && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); )
+            (i = this._sortedMemberIds[e]), (s = r.Ay.getMember(this.guildId, i)), s?.joinedAt == null && (s = null);
+        return s;
     }
     getElasticSearchPagination() {
         return this.getPaginationState().elasticSearchCursor;

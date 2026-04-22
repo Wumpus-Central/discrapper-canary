@@ -1,98 +1,101 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(627968),
+n.d(t, { A: () => E });
+var l = n(627968),
     i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(827734),
-    l = n(397927),
-    u = n(807348),
-    c = n(989799),
-    d = n(985018),
-    _ = n(879254);
-let f = [54, 8, 8, 8];
-function p(e) {
+    a = n(503698),
+    r = n.n(a),
+    s = n(827734),
+    o = n(834730),
+    u = n(265872),
+    c = n(305866),
+    d = n(939249),
+    p = n(7807),
+    m = n(807348),
+    h = n(989799),
+    A = n(985018),
+    _ = n(139599);
+let C = [54, 8, 8, 8];
+function E(e) {
     let { onSelect: t, sound: n } = e,
-        [s, p] = i.useState(!1),
-        h = i.useRef(null),
-        m = a()(_.Qq, _.Ow);
-    function E(e) {
-        p(!1), t?.(e);
+        [a, E] = i.useState(!1),
+        y = i.useRef(null),
+        f = r()(_.Qq, _.Ow);
+    function P(e) {
+        E(!1), t?.(e);
     }
-    let g = (e) =>
-        (0, r.jsxs)("div", {
+    let S = (e) =>
+        (0, l.jsxs)("div", {
             className: _.Ry,
             children: [
-                (0, r.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: _.__invalid_customGiftHeaderText,
                     children: [
-                        (0, r.jsx)(l.Text, { variant: "text-md/bold", children: d.intl.string(d.t.aThJz8) }),
-                        (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: d.intl.string(d.t.stGFA3) }),
+                        (0, l.jsx)(o.E, { variant: "text-md/bold", children: A.intl.string(A.t.aThJz8) }),
+                        (0, l.jsx)(o.E, { variant: "text-sm/normal", children: A.intl.string(A.t.stGFA3) }),
                     ],
                 }),
-                (0, r.jsx)("div", { className: _.$H, children: e }),
+                (0, l.jsx)("div", { className: _.$H, children: e }),
             ],
         });
-    return (0, r.jsx)(l.YNO, {
-        targetElementRef: h,
-        shouldShow: s,
+    return (0, l.jsx)(u.Y, {
+        targetElementRef: y,
+        shouldShow: a,
         position: "bottom",
         align: "left",
-        onRequestClose: () => p(!1),
+        onRequestClose: () => E(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(l.lGe, {
-                children: (0, r.jsx)(c.A, {
+            return (0, l.jsx)(c.l, {
+                children: (0, l.jsx)(h.A, {
                     suppressPlaySound: !0,
                     shouldShowLockedSounds: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: E,
+                    onSelect: P,
                     analyticsSource: "gift soundboard",
-                    soundButtonOverlay: u.If.ADD,
-                    listPadding: f,
-                    renderHeader: g,
+                    soundButtonOverlay: m.If.ADD,
+                    listPadding: C,
+                    renderHeader: S,
                     defaultSoundsOnly: !0,
                 }),
             });
         },
         children: () =>
-            (0, r.jsx)(l.DUT, {
-                className: a()(_.kL, _.Ow),
-                onClick: () => p(!0),
-                innerRef: h,
+            (0, l.jsx)(d.D, {
+                className: r()(_.kL, _.Ow),
+                onClick: () => E(!0),
+                innerRef: y,
                 children:
                     null == n
-                        ? (0, r.jsxs)("div", {
+                        ? (0, l.jsxs)("div", {
                               className: _.hQ,
                               children: [
-                                  (0, r.jsx)(l.JMI, {
+                                  (0, l.jsx)(p.J, {
                                       size: "custom",
-                                      color: o.A.colors.ICON_STRONG,
+                                      color: s.A.colors.ICON_STRONG,
                                       className: _.tc,
                                       width: 14,
                                       height: 14,
                                   }),
-                                  (0, r.jsx)(l.Text, {
-                                      className: m,
+                                  (0, l.jsx)(o.E, {
+                                      className: f,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: d.intl.string(d.t.aThJz8),
+                                      children: A.intl.string(A.t.aThJz8),
                                   }),
                               ],
                           })
-                        : (0, r.jsxs)("div", {
+                        : (0, l.jsxs)("div", {
                               className: _.hQ,
                               children: [
-                                  (0, r.jsx)(l.Text, {
-                                      className: m,
+                                  (0, l.jsx)(o.E, {
+                                      className: f,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
-                                  (0, r.jsx)(l.Text, {
-                                      className: m,
+                                  (0, l.jsx)(o.E, {
+                                      className: f,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

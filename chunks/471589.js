@@ -1,49 +1,46 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(322811),
-    i = n(355418),
-    a = n(658809);
-let s = 1,
-    o = 2;
-class l extends i.c {
+r.d(t, { A: () => i });
+var n = r(322811),
+    s = r(355418),
+    a = r(881190);
+class i extends s.c {
     innerPattern() {
         return /(deze)?\s*(namiddag|avond|middernacht|ochtend|middag|'s middags|'s avonds|'s ochtends)(?=\W|$)/i;
     }
     innerExtract(e, t) {
-        let n = e.refDate,
-            i = e.createParsingComponents();
+        let r = e.refDate,
+            s = e.createParsingComponents();
         switch (
-            ("deze" === t[s] &&
-                (i.assign("day", e.refDate.getDate()),
-                i.assign("month", e.refDate.getMonth() + 1),
-                i.assign("year", e.refDate.getFullYear())),
-            t[o].toLowerCase())
+            ("deze" === t[1] &&
+                (s.assign("day", e.refDate.getDate()),
+                s.assign("month", e.refDate.getMonth() + 1),
+                s.assign("year", e.refDate.getFullYear())),
+            t[2].toLowerCase())
         ) {
             case "namiddag":
             case "'s namiddags":
-                i.imply("meridiem", r.FF.PM), i.imply("hour", 15);
+                s.imply("meridiem", n.FF.PM), s.imply("hour", 15);
                 break;
             case "avond":
             case "'s avonds'":
-                i.imply("meridiem", r.FF.PM), i.imply("hour", 20);
+                s.imply("meridiem", n.FF.PM), s.imply("hour", 20);
                 break;
             case "middernacht":
-                let l = new Date(n.getTime());
-                l.setDate(l.getDate() + 1),
-                    (0, a.Pl)(i, l),
-                    (0, a.A4)(i, l),
-                    i.imply("hour", 0),
-                    i.imply("minute", 0),
-                    i.imply("second", 0);
+                let i = new Date(r.getTime());
+                i.setDate(i.getDate() + 1),
+                    (0, a.Pl)(s, i),
+                    (0, a.A4)(s, i),
+                    s.imply("hour", 0),
+                    s.imply("minute", 0),
+                    s.imply("second", 0);
                 break;
             case "ochtend":
             case "'s ochtends":
-                i.imply("meridiem", r.FF.AM), i.imply("hour", 6);
+                s.imply("meridiem", n.FF.AM), s.imply("hour", 6);
                 break;
             case "middag":
             case "'s middags":
-                i.imply("meridiem", r.FF.AM), i.imply("hour", 12);
+                s.imply("meridiem", n.FF.AM), s.imply("hour", 12);
         }
-        return i;
+        return s;
     }
 }

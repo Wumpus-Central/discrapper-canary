@@ -1,102 +1,105 @@
-i.d(e, { default: () => j });
+i.d(e, { default: () => N });
 var n = i(627968),
     l = i(64700),
-    a = i(158954),
-    o = i(397927),
-    s = i(435183),
-    r = i(937773),
-    d = i(235640),
-    m = i(307731),
-    c = i(985018),
-    u = i(608307);
-let j = (t) => {
-    let { channel: e, onClose: i, transitionState: j } = t,
-        [x, h] = l.useState(e.defaultReactionEmoji ?? null),
-        [N, p] = l.useState(!1),
-        [b, g] = l.useState(!1),
-        v = l.useRef(null),
-        f = (e.defaultReactionEmoji?.emojiId ?? null) !== (x?.emojiId ?? null),
-        E = (e.defaultReactionEmoji?.emojiName ?? null) !== (x?.emojiName ?? null),
-        k = f || E,
-        _ = (t) => {
-            h(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
+    a = i(189213),
+    o = i(825484),
+    s = i(265872),
+    r = i(821609),
+    d = i(834730),
+    c = i(435183),
+    m = i(937773),
+    u = i(235640),
+    j = i(307731),
+    x = i(985018),
+    h = i(532067);
+let N = (t) => {
+    let { channel: e, onClose: i, transitionState: N } = t,
+        [b, g] = l.useState(e.defaultReactionEmoji ?? null),
+        [p, v] = l.useState(!1),
+        [E, f] = l.useState(!1),
+        k = l.useRef(null),
+        _ = (e.defaultReactionEmoji?.emojiId ?? null) !== (b?.emojiId ?? null),
+        y = (e.defaultReactionEmoji?.emojiName ?? null) !== (b?.emojiName ?? null),
+        C = _ || y,
+        I = (t) => {
+            g(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
         },
-        y = async () => {
-            if (k) {
-                p(!0), g(!1);
+        w = async () => {
+            if (C) {
+                v(!0), f(!1);
                 try {
-                    await (0, s.RT)(e.id, { defaultReactionEmoji: x }), i();
+                    await (0, c.RT)(e.id, { defaultReactionEmoji: b }), i();
                 } catch (t) {
-                    g(!0);
+                    f(!0);
                 } finally {
-                    p(!1);
+                    v(!1);
                 }
             }
         };
     return (0, n.jsxs)(a.Modal, {
-        title: c.intl.string(c.t.XlDE3k),
-        subtitle: c.intl.string(c.t.lVqhdd),
-        transitionState: j,
+        title: x.intl.string(x.t.XlDE3k),
+        subtitle: x.intl.string(x.t.lVqhdd),
+        transitionState: N,
         onClose: i,
         actions: [
-            { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: i },
+            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: i },
             {
                 variant: "primary",
-                text: c.intl.string(c.t["R3BPH+"]),
-                loading: N,
-                disabled: !k,
-                onClick: y,
+                text: x.intl.string(x.t["R3BPH+"]),
+                loading: p,
+                disabled: !C,
+                onClick: w,
                 autoFocus: !0,
             },
         ],
         children: [
-            (0, n.jsx)(d.A, { reactionEmoji: x }),
-            (0, n.jsxs)(o.ButtonGroup, {
+            (0, n.jsx)(u.A, { reactionEmoji: b }),
+            (0, n.jsxs)(o.e, {
                 size: "sm",
-                className: u.v,
+                className: h.v,
                 children: [
-                    (0, n.jsx)(o.YNO, {
-                        targetElementRef: v,
+                    (0, n.jsx)(s.Y, {
+                        targetElementRef: k,
                         renderPopout: (t) => {
                             let { closePopout: i } = t;
-                            return (0, n.jsx)(r.A, {
+                            return (0, n.jsx)(m.A, {
                                 guildId: e?.guild_id,
                                 closePopout: i,
                                 onSelectEmoji: (t) => {
                                     let { emoji: e, willClose: n } = t;
-                                    _(e), n && i();
+                                    I(e), n && i();
                                 },
-                                pickerIntention: m.EmojiIntention.COMMUNITY_CONTENT,
+                                pickerIntention: j.EmojiIntention.COMMUNITY_CONTENT,
                                 channel: e,
                             });
                         },
                         position: "right",
-                        animation: o.YNO.Animation.NONE,
+                        animation: s.Y.Animation.NONE,
                         align: "center",
                         children: (t) =>
-                            (0, n.jsx)(o.Button, {
+                            (0, n.jsx)(r.$, {
                                 ...t,
-                                buttonRef: v,
-                                text: c.intl.string(c.t["59QgaD"]),
+                                buttonRef: k,
+                                text: x.intl.string(x.t["59QgaD"]),
                                 variant: "primary",
                                 onClick: (e) => {
                                     t.onClick?.(e);
                                 },
                             }),
                     }),
-                    null != x &&
-                        (0, n.jsx)(o.Button, {
-                            text: c.intl.string(c.t.N86XcP),
+                    null != b &&
+                        (0, n.jsx)(r.$, {
+                            text: x.intl.string(x.t.N86XcP),
                             variant: "critical-secondary",
-                            onClick: () => _(null),
+                            onClick: () => I(null),
                         }),
                 ],
             }),
-            b
-                ? (0, n.jsx)(o.Text, {
+            E
+                ? (0, n.jsx)(d.E, {
                       variant: "text-sm/normal",
                       color: "text-feedback-critical",
-                      children: c.intl.string(c.t.F75nNl),
+                      children: x.intl.string(x.t.F75nNl),
                   })
                 : null,
         ],

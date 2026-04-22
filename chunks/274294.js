@@ -1,29 +1,15 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => d });
 var r = n(562465),
-    i = n(582754),
+    i = n(765178),
     a = n(157559),
-    s = n(198982),
+    l = n(198982),
     o = n(652215),
-    l = n(985018);
+    s = n(985018);
 function u(e) {
-    let t = new s.LG(e).getAnyErrorMessage();
-    a.A.show({ title: l.intl.string(l.t["328j/I"]), body: null != t ? t : l.intl.string(l.t.fEptJP) });
+    let t = new l.LG(e).getAnyErrorMessage();
+    a.A.show({ title: s.intl.string(s.t["328j/I"]), body: null != t ? t : s.intl.string(s.t.fEptJP) });
 }
-function c(e) {
-    let { userId: t, applicationId: n, onSuccess: i, type: a } = e;
-    return r.Bo.put({
-        url: o.Rsh.USER_GAME_RELATIONSHIP(t, n),
-        body: { type: a },
-        oldFormErrors: !0,
-        rejectWithError: !1,
-    })
-        .then(() => {
-            i();
-        })
-        .catch((e) => (u(e), Promise.reject(e)));
-}
-async function d(e) {
+async function c(e) {
     let { userId: t, applicationId: n, onSuccess: i } = e;
     try {
         await r.Bo.del({ url: o.Rsh.USER_GAME_RELATIONSHIP(t, n), oldFormErrors: !0, rejectWithError: !1 }), i();
@@ -31,35 +17,47 @@ async function d(e) {
         u(e);
     }
 }
-let _ = {
+let d = {
     removeGameFriend: async function (e) {
         let { userId: t, applicationId: n } = e;
-        await d({
+        await c({
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                i.OR.announce(l.intl.string(l.t.zRf8cO));
+                i.O.announce(s.intl.string(s.t.zRf8cO));
             },
         });
     },
     acceptGameFriendRequest: function (e) {
         let { userId: t, applicationId: n } = e;
-        return c({
+        return (function (e) {
+            let { userId: t, applicationId: n, onSuccess: i, type: a } = e;
+            return r.Bo.put({
+                url: o.Rsh.USER_GAME_RELATIONSHIP(t, n),
+                body: { type: a },
+                oldFormErrors: !0,
+                rejectWithError: !1,
+            })
+                .then(() => {
+                    i();
+                })
+                .catch((e) => (u(e), Promise.reject(e)));
+        })({
             userId: t,
             applicationId: n,
             type: o.eA$.FRIEND,
             onSuccess: () => {
-                i.OR.announce(l.intl.string(l.t.taJiuc));
+                i.O.announce(s.intl.string(s.t.taJiuc));
             },
         });
     },
     cancelGameFriendRequest: async function (e) {
         let { userId: t, applicationId: n } = e;
-        await d({
+        await c({
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                i.OR.announce(l.intl.string(l.t.XMf21q));
+                i.O.announce(s.intl.string(s.t.XMf21q));
             },
         });
     },

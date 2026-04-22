@@ -1,17 +1,13 @@
 "use strict";
-n.d(t, { QR: () => s, Xd: () => r, uR: () => i, yV: () => a });
-var r = (function (e) {
-    return (e[(e.GUILD = 0)] = "GUILD"), (e[(e.GROUP_DM = 1)] = "GROUP_DM"), (e[(e.FRIEND = 2)] = "FRIEND"), e;
-})({});
-let i = new Set([0, 1]);
-var a = (function (e) {
-        return (
-            (e[(e.STREAM = 1)] = "STREAM"),
-            (e[(e.EMBEDDED_APPLICATION = 2)] = "EMBEDDED_APPLICATION"),
-            (e[(e.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = "ROLE_SUBSCRIPTIONS_PURCHASE"),
-            e
-        );
-    })({}),
-    s = (function (e) {
-        return (e.MAIN = "main"), (e.SETTINGS = "settings"), e;
-    })({});
+n.d(t, { QR: () => u, Xd: () => a, uR: () => o, yV: () => l });
+var r,
+    i,
+    s,
+    a = (((r = {})[(r.GUILD = 0)] = "GUILD"), (r[(r.GROUP_DM = 1)] = "GROUP_DM"), (r[(r.FRIEND = 2)] = "FRIEND"), r);
+let o = new Set([0, 1]);
+var l =
+        (((i = {})[(i.STREAM = 1)] = "STREAM"),
+        (i[(i.EMBEDDED_APPLICATION = 2)] = "EMBEDDED_APPLICATION"),
+        (i[(i.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = "ROLE_SUBSCRIPTIONS_PURCHASE"),
+        i),
+    u = (((s = {}).MAIN = "main"), (s.SETTINGS = "settings"), s);

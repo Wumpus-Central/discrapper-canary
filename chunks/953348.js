@@ -1,39 +1,41 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => m });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(985018),
-    a = n(22057);
-function o(e) {
-    let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: d } = e,
-        c = s.useRef(null);
+    l = n(64700),
+    s = n(315710),
+    r = n(834730),
+    a = n(508274),
+    o = n(265872),
+    d = n(985018),
+    c = n(22057);
+function u(e) {
+    let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: u } = e,
+        m = l.useRef(null);
     return (
-        (0, l.tjt)(c),
+        (0, s.t)(m),
         (0, i.jsxs)("div", {
-            className: a.jC,
+            className: c.jC,
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(r.E, {
                     variant: "text-xs/semibold",
                     color: "text-default",
-                    className: a.Fb,
-                    children: r.intl.string(r.t.JhNpgy),
+                    className: c.Fb,
+                    children: d.intl.string(d.t.JhNpgy),
                 }),
                 (0, i.jsxs)("div", {
-                    ref: c,
-                    className: a.Kf,
+                    ref: m,
+                    className: c.Kf,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: a.sg,
+                            className: c.sg,
                             children: [
-                                (0, i.jsx)("div", { className: a.oP, style: { backgroundColor: n.primary } }),
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)("div", { className: c.oP, style: { backgroundColor: n.primary } }),
+                                (0, i.jsx)(r.E, {
                                     variant: "text-xs/medium",
                                     color: "text-default",
-                                    children: r.intl.string(r.t.C3KTQk),
+                                    children: d.intl.string(d.t.C3KTQk),
                                 }),
-                                (0, i.jsx)(l.VNw, {
-                                    className: a.Ei,
+                                (0, i.jsx)(a.VN, {
+                                    className: c.Ei,
                                     value: n.primary,
                                     eagerUpdate: !0,
                                     wrapperComponentType: "div",
@@ -44,21 +46,21 @@ function o(e) {
                         }),
                         t &&
                             (0, i.jsxs)("div", {
-                                className: a.sg,
+                                className: c.sg,
                                 children: [
-                                    (0, i.jsx)("div", { className: a.oP, style: { backgroundColor: n.secondary } }),
-                                    (0, i.jsx)(l.Text, {
+                                    (0, i.jsx)("div", { className: c.oP, style: { backgroundColor: n.secondary } }),
+                                    (0, i.jsx)(r.E, {
                                         variant: "text-xs/medium",
                                         color: "text-default",
-                                        children: r.intl.string(r.t["8elvy6"]),
+                                        children: d.intl.string(d.t["8elvy6"]),
                                     }),
-                                    (0, i.jsx)(l.VNw, {
-                                        className: a.Ei,
+                                    (0, i.jsx)(a.VN, {
+                                        className: c.Ei,
                                         value: n.secondary,
                                         eagerUpdate: !0,
                                         wrapperComponentType: "div",
                                         showEyeDropper: !0,
-                                        onChange: d,
+                                        onChange: u,
                                     }),
                                 ],
                             }),
@@ -68,26 +70,26 @@ function o(e) {
         })
     );
 }
-function d(e) {
+function m(e) {
     let {
         shouldShow: t,
         showSecondaryColor: n,
-        onRequestClose: s,
-        children: r,
-        palette: a,
-        onPrimaryColorChange: d,
-        onSecondaryColorChange: c,
-        popoutTargetRef: u,
+        onRequestClose: l,
+        children: s,
+        palette: r,
+        onPrimaryColorChange: a,
+        onSecondaryColorChange: d,
+        popoutTargetRef: c,
     } = e;
-    return (0, i.jsx)(l.YNO, {
-        targetElementRef: u,
+    return (0, i.jsx)(o.Y, {
+        targetElementRef: c,
         renderPopout: () =>
-            (0, i.jsx)(o, { showSecondaryColor: n, palette: a, onPrimaryColorChange: d, onSecondaryColorChange: c }),
+            (0, i.jsx)(u, { showSecondaryColor: n, palette: r, onPrimaryColorChange: a, onSecondaryColorChange: d }),
         position: "top",
         shouldShow: t,
-        onRequestClose: s,
-        animation: l.YNO.Animation.TRANSLATE,
+        onRequestClose: l,
+        animation: o.Y.Animation.TRANSLATE,
         animationPosition: "right",
-        children: r,
+        children: s,
     });
 }

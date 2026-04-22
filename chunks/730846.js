@@ -1,21 +1,19 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(360345);
-let i = RegExp(`^\\s*(${r.fp})`, "i"),
-    a = 1;
-class s {
+r.d(t, { A: () => a });
+var n = r(360345);
+let s = RegExp(`^\\s*(${n.fp})`, "i");
+class a {
     refine(e, t) {
         return (
             t.forEach(function (t) {
                 if (!t.start.isDateWithUnknownYear()) return;
-                let n = e.text.substring(t.index + t.text.length),
-                    s = i.exec(n);
-                if (!s || s[0].trim().length <= 3) return;
+                let r = e.text.substring(t.index + t.text.length),
+                    a = s.exec(r);
+                if (!a || a[0].trim().length <= 3) return;
                 e.debug(() => {
-                    console.log(`Extracting year: '${s[0]}' into : ${t}`);
+                    console.log(`Extracting year: '${a[0]}' into : ${t}`);
                 });
-                let o = (0, r.zL)(s[a]);
-                null != t.end && t.end.assign("year", o), t.start.assign("year", o), (t.text += s[0]);
+                let i = (0, n.zL)(a[1]);
+                null != t.end && t.end.assign("year", i), t.start.assign("year", i), (t.text += a[0]);
             }),
             t
         );

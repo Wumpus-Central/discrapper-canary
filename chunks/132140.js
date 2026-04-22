@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__4a4f2",
     nP: "flexContainer__4a4f2",

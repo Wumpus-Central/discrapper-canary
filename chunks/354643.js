@@ -1,13 +1,13 @@
 n.d(e, { default: () => c });
 var i = n(627968),
     o = n(64700),
-    r = n(397927),
+    r = n(732159),
     l = n(72152),
     s = n(770376),
     a = n(985018);
 function c(t) {
     let [e, n] = o.useState(!1);
-    return (0, i.jsx)(r.uoB, {
+    return (0, i.jsx)(r.ConfirmModal, {
         ...t,
         title: a.intl.string(a.t["pjYu0/"]),
         subtitle: a.intl.format(a.t["0eydyj"], {}),

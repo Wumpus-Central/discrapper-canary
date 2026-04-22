@@ -1,208 +1,212 @@
 "use strict";
-n.d(t, { A: () => K }), n(801541);
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(889137),
-    l = n(311907),
-    u = n(873298),
-    c = n(732955),
-    d = n(397927),
-    _ = n(817281),
-    f = n(82495),
-    p = n(775602),
-    h = n(793574),
-    m = n(688810),
-    E = n(793943),
-    g = n(996254),
-    A = n(234419),
-    I = n(792656),
-    T = n(400669),
-    S = n(450232),
-    y = n(780964),
-    v = n(858897),
-    N = n(909536),
-    C = n(287809),
-    R = n(954571),
-    O = n(927578),
-    b = n(47671),
-    D = n(11029),
-    L = n(58034),
-    w = n(474529),
-    M = n(692798),
-    P = n(385803),
-    x = n(652215),
-    k = n(49999),
-    U = n(788868),
-    G = n(985018),
-    F = n(758981);
-let V = () =>
-        (0, r.jsx)("div", {
-            className: F.nV,
-            children: (0, r.jsxs)("div", {
-                className: F.mR,
+n.r(t), n.d(t, { default: () => Y }), n(801541);
+var i = n(627968),
+    l = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(889137),
+    c = n(311907),
+    o = n(873298),
+    u = n(821609),
+    d = n(534514),
+    _ = n(939249),
+    E = n(285796),
+    m = n(707554),
+    T = n(573613),
+    f = n(817281),
+    A = n(82495),
+    h = n(775602),
+    S = n(793574),
+    p = n(688810),
+    C = n(793943),
+    v = n(996254),
+    x = n(234419),
+    b = n(792656),
+    I = n(400669),
+    g = n(450232),
+    H = n(780964),
+    O = n(858897),
+    R = n(909536),
+    N = n(287809),
+    k = n(954571),
+    M = n(927578),
+    y = n(47671),
+    j = n(11029),
+    D = n(58034),
+    P = n(474529),
+    w = n(692798),
+    L = n(385803),
+    U = n(652215),
+    G = n(49999),
+    W = n(788868),
+    V = n(985018),
+    B = n(758981);
+let F = () =>
+        (0, i.jsx)("div", {
+            className: B.nV,
+            children: (0, i.jsxs)("div", {
+                className: B.mR,
                 children: [
-                    (0, r.jsx)(S.A, { className: F.PC, size: "md" }),
-                    (0, r.jsx)(d.Heading, {
+                    (0, i.jsx)(g.A, { className: B.PC, size: "md" }),
+                    (0, i.jsx)(d.D, {
                         variant: "heading-md/bold",
                         color: "always-white",
-                        children: G.intl.string(G.t.POSLGY),
+                        children: V.intl.string(V.t.POSLGY),
                     }),
                 ],
             }),
         }),
-    B = (e) => {
+    K = (e) => {
         let { markAsDismissed: t } = e,
-            n = (0, L.H)(),
-            i = () => {
-                null != t && t(k.i.DISMISS), n(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, D.D)();
-            };
-        return (0, r.jsxs)("div", {
-            className: F.nV,
+            n = (0, D.H)();
+        return (0, i.jsxs)("div", {
+            className: B.nV,
             children: [
-                (0, r.jsx)(d.DUT, {
-                    className: F.VV,
-                    onClick: i,
-                    children: (0, r.jsx)(d.aXh, { size: "md", color: "currentColor", className: F.P0 }),
+                (0, i.jsx)(_.D, {
+                    className: B.VV,
+                    onClick: () => {
+                        null != t && t(G.i.DISMISS), n(U.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, j.D)();
+                    },
+                    children: (0, i.jsx)(E.a, { size: "md", color: "currentColor", className: B.P0 }),
                 }),
-                (0, r.jsx)(d.Heading, { variant: "heading-lg/extrabold", children: G.intl.string(G.t["xSR+a/"]) }),
+                (0, i.jsx)(d.D, { variant: "heading-lg/extrabold", children: V.intl.string(V.t["xSR+a/"]) }),
             ],
         });
     },
-    H = (e) => {
+    $ = (e) => {
         let { onSubscribeSuccess: t, markAsDismissed: n } = e,
-            { analyticsLocations: i } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-            [s, a] = (0, l.yK)([C.default, b.A], () => [
-                b.A.gradientPreset,
-                O.Ay.isPremium(C.default.getCurrentUser()),
+            { analyticsLocations: l } = (0, p.Ay)(S.A.CLIENT_THEMES_EDITOR),
+            [r, s] = (0, c.yK)([N.default, y.A], () => [
+                y.A.gradientPreset,
+                M.Ay.isPremium(N.default.getCurrentUser()),
             ]),
-            o = (0, A.V)(),
-            c = (0, O.FY)({
-                intervalType: o?.subscription_trial?.interval,
-                intervalCount: o?.subscription_trial?.interval_count,
+            a = (0, x.V)(),
+            u = (0, M.FY)({
+                intervalType: a?.subscription_trial?.interval,
+                intervalCount: a?.subscription_trial?.interval_count,
             }),
-            d = a
-                ? G.intl.string(G.t.IJI7yk)
-                : o?.subscription_trial?.sku_id === U.pe.TIER_2
-                  ? c
-                  : G.intl.string(G.t.mr4K7D),
-            f = (e) => {
+            d = s
+                ? V.intl.string(V.t.IJI7yk)
+                : a?.subscription_trial?.sku_id === W.pe.TIER_2
+                  ? u
+                  : V.intl.string(V.t.mr4K7D);
+        return (0, i.jsx)(b.A, {
+            subscriptionTier: W.pe.TIER_2,
+            defaultTextOverride: d,
+            premiumModalAnalyticsLocation: { object: U.ZSU.BUTTON_CTA, objectType: U.AnalyticsObjectTypes.BUY },
+            onSubscribeModalClose: (e) => {
                 e &&
                     (t?.(),
-                    null != n && n(k.i.PRIMARY),
-                    null != s &&
-                        ((0, M.X8)({ isPersisted: !0, themeName: u.ju[s.id], analyticsLocations: i }),
-                        (0, _.u_)({ backgroundGradientPresetId: s.id, theme: s.theme })));
-            };
-        return (0, r.jsx)(I.A, {
-            subscriptionTier: U.pe.TIER_2,
-            defaultTextOverride: d,
-            premiumModalAnalyticsLocation: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.BUY },
-            onSubscribeModalClose: f,
+                    null != n && n(G.i.PRIMARY),
+                    null != r &&
+                        ((0, w.X8)({ isPersisted: !0, themeName: o.ju[r.id], analyticsLocations: l }),
+                        (0, f.u_)({ backgroundGradientPresetId: r.id, theme: r.theme })));
+            },
             fullWidth: !0,
         });
     },
-    j = (e) => {
+    z = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
-            { isPreview: s } = (0, l.cf)([b.A], () => ({ isPreview: b.A.isPreview })),
-            [a, u] = i.useState(!1),
-            d = (0, L.H)(),
-            _ = (0, N.St)("client_themes_editor_footer"),
-            f = () => {
-                null != t && t(k.i.DISMISS),
-                    d(x.HAw.CLIENT_THEME_PREVIEW_CLOSED),
-                    (0, D.D)(),
-                    n || (0, v.openUserSettings)(y.X.APPEARANCE_THEME_CATEGORY);
-            },
-            p = (0, g.X)(
-                { no: G.t["3D5yo/"], "sv-SE": G.t["3D5yo/"], uk: G.t["3D5yo/"], de: G.t["3D5yo/"] },
-                G.t["dqH+qr"],
+            { isPreview: r } = (0, c.cf)([y.A], () => ({ isPreview: y.A.isPreview })),
+            [s, o] = l.useState(!1),
+            d = (0, D.H)(),
+            _ = (0, R.St)("client_themes_editor_footer"),
+            E = (0, v.X)(
+                { no: V.t["3D5yo/"], "sv-SE": V.t["3D5yo/"], uk: V.t["3D5yo/"], de: V.t["3D5yo/"] },
+                V.t["dqH+qr"],
             ),
-            m = (0, o.YW)({ isPreview: s, isCoachmark: n, forceShowCloseButton: a })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => G.intl.string(G.t.cpT0Cq))
-                .with({ isPreview: !0 }, () => p)
-                .otherwise(() => G.intl.string(G.t.Olc2K3)),
-            E = (0, r.jsx)(H, {
+            m = (0, a.YW)({ isPreview: r, isCoachmark: n, forceShowCloseButton: s })
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => V.intl.string(V.t.cpT0Cq))
+                .with({ isPreview: !0 }, () => E)
+                .otherwise(() => V.intl.string(V.t.Olc2K3)),
+            T = (0, i.jsx)($, {
                 onSubscribeSuccess: () => {
-                    u(!0);
+                    o(!0);
                 },
                 markAsDismissed: t,
             });
-        return (0, r.jsxs)("div", {
-            className: F.N3,
+        return (0, i.jsxs)("div", {
+            className: B.N3,
             children: [
-                s &&
+                r &&
                     (_
-                        ? (0, r.jsxs)("div", {
-                              className: F.rV,
+                        ? (0, i.jsxs)("div", {
+                              className: B.rV,
                               children: [
-                                  (0, r.jsx)(T.l, {
+                                  (0, i.jsx)(I.l, {
                                       size: "md",
-                                      className: F.Tf,
-                                      location: h.A.PREMIUM_WISHLIST_CLIENT_THEMES_EDITOR,
+                                      className: B.Tf,
+                                      location: S.A.PREMIUM_WISHLIST_CLIENT_THEMES_EDITOR,
                                   }),
-                                  E,
+                                  T,
                               ],
                           })
-                        : E),
-                (0, r.jsx)(c.$nd, { fullWidth: !0, onClick: f, variant: "secondary", text: m }),
+                        : T),
+                (0, i.jsx)(u.$, {
+                    fullWidth: !0,
+                    onClick: () => {
+                        null != t && t(G.i.DISMISS),
+                            d(U.HAw.CLIENT_THEME_PREVIEW_CLOSED),
+                            (0, j.D)(),
+                            n || (0, O.openUserSettings)(H.X.APPEARANCE_THEME_CATEGORY);
+                    },
+                    variant: "secondary",
+                    text: m,
+                }),
             ],
         });
-    },
-    Y = 16,
-    W = 24;
-function K(e) {
-    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: s = P.ni.SIZE_60 } = e,
-        { analyticsLocations: o } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-        { isPreview: u, shouldEditorAnimate: c } = (0, l.cf)([b.A, p.A], () => ({
-            isPreview: b.A.isPreview,
-            shouldEditorAnimate: n && !p.A.useReducedMotion,
+    };
+function Y(e) {
+    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: r = L.ni.SIZE_60 } = e,
+        { analyticsLocations: a } = (0, p.Ay)(S.A.CLIENT_THEMES_EDITOR),
+        { isPreview: o, shouldEditorAnimate: u } = (0, c.cf)([y.A, h.A], () => ({
+            isPreview: y.A.isPreview,
+            shouldEditorAnimate: n && !h.A.useReducedMotion,
         })),
-        _ = (0, E.fy)().activePanel === E.HP.CLIENT_THEMES,
-        g = (0, L.H)();
-    i.useEffect(() => g(x.HAw.CLIENT_THEME_PREVIEW_VIEWED), [g]),
-        i.useEffect(() => {
-            u &&
-                R.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: U.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                    location_stack: o,
+        d = (0, C.fy)().activePanel === C.HP.CLIENT_THEMES,
+        _ = (0, D.H)();
+    l.useEffect(() => _(U.HAw.CLIENT_THEME_PREVIEW_VIEWED), [_]),
+        l.useEffect(() => {
+            o &&
+                k.default.track(U.HAw.PREMIUM_UPSELL_VIEWED, {
+                    type: W.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    location_stack: a,
                 });
-        }, [u, o]);
-    let A = (0, L.Z)(),
-        I = (0, f.A)(null, u ? A : x.tEg);
-    i.useEffect(() => {
-        if (u && !_) return A;
-    }, [u, _, A]);
-    let T = i.useMemo(
+        }, [o, a]);
+    let E = (0, D.Z)(),
+        f = (0, A.A)(null, o ? E : U.tEg);
+    l.useEffect(() => {
+        if (o && !d) return E;
+    }, [o, d, E]);
+    let v = l.useMemo(
         () => ({
-            "--custom-client-themes-editor-content-width": `${3 * s + 2 * W}px`,
-            "--custom-client-themes-editor-padding": `${Y}px`,
+            "--custom-client-themes-editor-content-width": `${3 * r + 48}px`,
+            "--custom-client-themes-editor-padding": "16px",
         }),
-        [s],
+        [r],
     );
-    return (0, r.jsx)(m.f5, {
-        value: o,
-        children: (0, r.jsx)("div", {
-            ref: I,
+    return (0, i.jsx)(p.f5, {
+        value: a,
+        children: (0, i.jsx)("div", {
+            ref: f,
             "data-app-right-panel": !0,
-            className: a()(F.HS, c ? F.hP : null),
-            style: T,
-            children: (0, r.jsxs)(d.Fmo, {
+            className: s()(B.HS, u ? B.hP : null),
+            style: v,
+            children: (0, i.jsxs)(m.F, {
                 children: [
-                    n ? (0, r.jsx)(V, {}) : (0, r.jsx)(B, { markAsDismissed: t }),
-                    (0, r.jsx)(w.A, {}),
-                    (0, r.jsx)(d.HOs, {
-                        className: F.sV,
-                        children: (0, r.jsxs)(M.Ay, {
-                            type: M.v0.EDITOR,
+                    n ? (0, i.jsx)(F, {}) : (0, i.jsx)(K, { markAsDismissed: t }),
+                    (0, i.jsx)(P.A, {}),
+                    (0, i.jsx)(T.Ip, {
+                        className: B.sV,
+                        children: (0, i.jsxs)(w.Ay, {
+                            type: w.v0.EDITOR,
                             children: [
-                                !u && (0, r.jsx)(M.Ay.Basic, { className: F.Gg, iconSize: s }),
-                                (0, r.jsx)(M.Ay.Gradient, { className: F.Gg, isCoachmark: n, iconSize: s }),
+                                !o && (0, i.jsx)(w.Ay.Basic, { className: B.Gg, iconSize: r }),
+                                (0, i.jsx)(w.Ay.Gradient, { className: B.Gg, isCoachmark: n, iconSize: r }),
                             ],
                         }),
                     }),
-                    (0, r.jsx)(j, { markAsDismissed: t, isCoachmark: n }),
+                    (0, i.jsx)(z, { markAsDismissed: t, isCoachmark: n }),
                 ],
             }),
         }),

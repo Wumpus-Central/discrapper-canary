@@ -1,28 +1,28 @@
-n.d(t, { A: () => m });
-var i = n(627968);
-n(64700);
-var s = n(397927),
-    r = n(502060),
-    a = n(772927),
-    l = n(983806),
-    o = n(683167),
-    c = n(351104),
-    d = n(46184),
-    u = n(901794),
-    _ = n(985018);
-let m = () =>
-    (0, i.jsxs)(s.BJc, {
+l.d(t, { A: () => h });
+var n = l(627968);
+l(64700);
+var i = l(331322),
+    s = l(983806),
+    a = l(804643),
+    r = l(677428),
+    d = l(683167),
+    c = l(351104),
+    u = l(46184),
+    o = l(901794),
+    x = l(985018);
+let h = () =>
+    (0, n.jsxs)(i.B, {
         gap: 32,
         children: [
-            (0, i.jsx)(l.b, {}),
-            (0, i.jsxs)("div", {
+            (0, n.jsx)(s.b, {}),
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(r.G, { title: _.intl.string(_.t.xVRG4P), children: (0, i.jsx)(u.f, {}) }),
-                    (0, i.jsx)(r.G, {
-                        title: _.intl.string(_.t["y62Z/d"]),
-                        children: (0, i.jsxs)(a.A, { children: [(0, i.jsx)(o.A, {}), (0, i.jsx)(c.Z, {})] }),
+                    (0, n.jsx)(a.A, { title: x.intl.string(x.t.xVRG4P), children: (0, n.jsx)(o.f, {}) }),
+                    (0, n.jsx)(a.A, {
+                        title: x.intl.string(x.t["y62Z/d"]),
+                        children: (0, n.jsxs)(r.A, { children: [(0, n.jsx)(d.A, {}), (0, n.jsx)(c.Z, {})] }),
                     }),
-                    (0, i.jsx)(r.G, { title: _.intl.string(_.t["1Qn8iV"]), children: (0, i.jsx)(d.A, {}) }),
+                    (0, n.jsx)(a.A, { title: x.intl.string(x.t["1Qn8iV"]), children: (0, n.jsx)(u.A, {}) }),
                 ],
             }),
         ],

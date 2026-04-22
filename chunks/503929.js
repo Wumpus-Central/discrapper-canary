@@ -1,28 +1,28 @@
-"use strict";
-n.d(t, { l: () => d });
+n.d(t, { l: () => c });
 var i = n(627968),
-    s = n(64700),
-    l = n(397927),
-    r = n(997509),
-    a = n(652215),
-    o = n(985018);
-function d(e) {
-    let { isInventoryFeedEnabled: t, canManageGuild: n, features: d } = e,
-        c = s.useCallback(
+    l = n(64700),
+    s = n(270003),
+    r = n(243721),
+    a = n(997509),
+    o = n(652215),
+    d = n(985018);
+function c(e) {
+    let { isInventoryFeedEnabled: t, canManageGuild: n, features: c } = e,
+        u = l.useCallback(
             (e) => {
-                let t = new Set(d);
+                let t = new Set(c);
                 e
-                    ? (t.add(a.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER),
-                      t.delete(a.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER))
-                    : (t.add(a.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER),
-                      t.delete(a.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER)),
-                    r.A.updateGuild({ features: t });
+                    ? (t.add(o.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER),
+                      t.delete(o.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER))
+                    : (t.add(o.GuildFeatures.ACTIVITY_FEED_DISABLED_BY_USER),
+                      t.delete(o.GuildFeatures.ACTIVITY_FEED_ENABLED_BY_USER)),
+                    a.A.updateGuild({ features: t });
             },
-            [d],
+            [c],
         );
-    return (0, i.jsx)(l.nVY, {
-        label: o.intl.string(o.t["oQ/7Bc"]),
-        description: o.intl.string(o.t.fZ0qZU),
-        children: (0, i.jsx)(l.dOG, { label: o.intl.string(o.t.WompT5), checked: t, onChange: c, disabled: !n }),
+    return (0, i.jsx)(s.n, {
+        label: d.intl.string(d.t["oQ/7Bc"]),
+        description: d.intl.string(d.t.fZ0qZU),
+        children: (0, i.jsx)(r.d, { label: d.intl.string(d.t.WompT5), checked: t, onChange: u, disabled: !n }),
     });
 }

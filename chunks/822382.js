@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, {
-    E3: () => K,
-    EH: () => $,
+    E3: () => j,
+    EH: () => K,
     Gk: () => P,
     IY: () => Y,
     Jl: () => I,
-    L5: () => D,
-    Pe: () => B,
-    Pp: () => M,
+    L5: () => b,
+    Pe: () => F,
+    Pp: () => w,
     Rt: () => W,
-    TZ: () => k,
-    XC: () => C,
+    TZ: () => U,
+    XC: () => R,
     Y7: () => T,
-    Zf: () => L,
-    Zh: () => j,
+    Zf: () => D,
+    Zh: () => H,
     _B: () => y,
-    _b: () => v,
+    _b: () => N,
     _o: () => V,
-    av: () => H,
+    av: () => B,
     bS: () => A,
-    dX: () => w,
-    lX: () => U,
+    dX: () => L,
+    lX: () => k,
     mt: () => S,
-    nm: () => N,
-    sh: () => R,
-    zZ: () => x,
+    nm: () => O,
+    sh: () => v,
+    zZ: () => M,
 }),
     n(321073);
 var r = n(735438),
@@ -35,51 +35,51 @@ var s = n(988665),
     o = n(734057),
     l = n(808728),
     u = n(517019),
-    c = n(994500),
-    d = n(309010),
+    d = n(994500),
+    c = n(309010),
     _ = n(287809),
     f = n(661191),
-    p = n(427262),
+    E = n(427262),
     h = n(256796),
-    m = n(771650);
+    p = n(771650);
 n(768570);
-var E = n(652215),
+var m = n(652215),
     g = n(985018);
 function A(e) {
     switch (e.type) {
-        case E.I4_.GUILD:
+        case m.I4_.GUILD:
             return e.guildId;
-        case E.I4_.GUILD_CHANNEL:
-        case E.I4_.CHANNEL:
-        case E.I4_.THREAD:
+        case m.I4_.GUILD_CHANNEL:
+        case m.I4_.CHANNEL:
+        case m.I4_.THREAD:
             return e.channelId;
-        case E.I4_.DMS:
+        case m.I4_.DMS:
             return e.type;
     }
 }
 function I(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.A;
-    return e.type === E.I4_.DMS ? (t.getChannelId(E.ME) ?? null) : A(e);
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.A;
+    return e.type === m.I4_.DMS ? (t.getChannelId(m.ME) ?? null) : A(e);
 }
 function T(e) {
     switch (e.type) {
-        case E.I4_.CHANNEL:
+        case m.I4_.CHANNEL:
             return g.intl.string(g.t.Q0JJjv);
-        case E.I4_.DMS:
+        case m.I4_.DMS:
             return g.intl.string(g.t.Br0xJA);
-        case E.I4_.GUILD_CHANNEL:
-        case E.I4_.GUILD:
-        case E.I4_.THREAD:
+        case m.I4_.GUILD_CHANNEL:
+        case m.I4_.GUILD:
+        case m.I4_.THREAD:
             return g.intl.string(g.t.AXPbZr);
     }
 }
 function S(e) {
     switch (e.type) {
-        case E.I4_.GUILD_CHANNEL:
-        case E.I4_.GUILD:
-        case E.I4_.THREAD:
+        case m.I4_.GUILD_CHANNEL:
+        case m.I4_.GUILD:
+        case m.I4_.THREAD:
             return e.guildId;
-        case E.I4_.CHANNEL:
+        case m.I4_.CHANNEL:
             let t = o.A.getChannel(e.channelId);
             return t?.guild_id ?? null;
         default:
@@ -87,135 +87,132 @@ function S(e) {
     }
 }
 function y(e) {
-    return e.type === E.I4_.GUILD || e.type === E.I4_.GUILD_CHANNEL || e.type === E.I4_.THREAD;
+    return e.type === m.I4_.GUILD || e.type === m.I4_.GUILD_CHANNEL || e.type === m.I4_.THREAD;
 }
-function v(e) {
+function N(e) {
     switch (e.type) {
-        case E.I4_.GUILD_CHANNEL:
-        case E.I4_.CHANNEL:
-        case E.I4_.THREAD:
+        case m.I4_.GUILD_CHANNEL:
+        case m.I4_.CHANNEL:
+        case m.I4_.THREAD:
             return e.channelId;
         default:
             return null;
     }
 }
-function N(e) {
+function O(e) {
     switch (e) {
-        case E.BBH.MOST_RELEVANT:
+        case m.BBH.MOST_RELEVANT:
             return { sort_by: "relevance", sort_order: "desc" };
-        case E.BBH.OLDEST:
+        case m.BBH.OLDEST:
             return { sort_by: "timestamp", sort_order: "asc" };
-        case E.BBH.NEWEST:
+        case m.BBH.NEWEST:
         default:
             return { sort_by: "timestamp", sort_order: "desc" };
     }
 }
-function C(e) {
-    return null == e.sort_by || null == e.sort_order
-        ? E.BBH.NEWEST
-        : "relevance" === e.sort_by
-          ? E.BBH.MOST_RELEVANT
-          : "asc" === e.sort_order
-            ? E.BBH.OLDEST
-            : E.BBH.NEWEST;
-}
 function R(e) {
+    return null == e.sort_by || null == e.sort_order
+        ? m.BBH.NEWEST
+        : "relevance" === e.sort_by
+          ? m.BBH.MOST_RELEVANT
+          : "asc" === e.sort_order
+            ? m.BBH.OLDEST
+            : m.BBH.NEWEST;
+}
+function v(e) {
     switch (e) {
-        case E.LWr.FILTER_FROM:
+        case m.LWr.FILTER_FROM:
             return g.intl.string(g.t.E466pL);
-        case E.LWr.FILTER_MENTIONS:
+        case m.LWr.FILTER_MENTIONS:
             return g.intl.string(g.t.BYvFWl);
-        case E.LWr.FILTER_HAS:
+        case m.LWr.FILTER_HAS:
             return g.intl.string(g.t.bhSYbc);
-        case E.LWr.FILTER_BEFORE:
-        case E.LWr.FILTER_ON:
-        case E.LWr.FILTER_AFTER:
+        case m.LWr.FILTER_BEFORE:
+        case m.LWr.FILTER_ON:
+        case m.LWr.FILTER_AFTER:
             return g.intl.string(g.t.Zbbc1E);
-        case E.LWr.FILTER_IN:
+        case m.LWr.FILTER_IN:
             return g.intl.string(g.t["GpM+/7"]);
-        case E.LWr.FILTER_LINK_FROM:
+        case m.LWr.FILTER_LINK_FROM:
             return g.intl.string(g.t.FdDTni);
-        case E.LWr.FILTER_FILE_TYPE:
+        case m.LWr.FILTER_FILE_TYPE:
             return g.intl.string(g.t.FXcAFe);
-        case E.LWr.FILTER_FILE_NAME:
+        case m.LWr.FILTER_FILE_NAME:
             return g.intl.string(g.t.uAbFDM);
-        case E.LWr.FILTER_PINNED:
+        case m.LWr.FILTER_PINNED:
             return g.intl.string(g.t.UJxL3V);
-        case E.LWr.FILTER_AUTHOR_TYPE:
+        case m.LWr.FILTER_AUTHOR_TYPE:
             return g.intl.string(g.t.qCQzBl);
     }
 }
-let O = { [E.LWr.FILTER_BEFORE]: !0, [E.LWr.FILTER_AFTER]: !0, [E.LWr.FILTER_ON]: !0 };
-function b(e) {
-    let t = m.Ay[e],
-        n = null != t ? t.queryKey : null;
-    return null == n && (n = "content"), n;
-}
-function D(e, t) {
+let C = { [m.LWr.FILTER_BEFORE]: !0, [m.LWr.FILTER_AFTER]: !0, [m.LWr.FILTER_ON]: !0 };
+function b(e, t) {
     if (u.A.didAgree(t)) {
         let t = _.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function L(e) {
+function D(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
-        let { type: n } = e;
-        if (E.l90.test(n)) return;
-        switch (n) {
-            case E.LWr.ANSWER_BEFORE:
-            case E.LWr.ANSWER_ON:
-            case E.LWr.ANSWER_AFTER:
-                let r = e.getData("start"),
-                    i = e.getData("end");
-                r && (t.min_id = f.default.fromTimestamp(r)), i && (t.max_id = f.default.fromTimestamp(i));
+        let n,
+            r,
+            { type: i } = e;
+        if (m.l90.test(i)) return;
+        switch (i) {
+            case m.LWr.ANSWER_BEFORE:
+            case m.LWr.ANSWER_ON:
+            case m.LWr.ANSWER_AFTER:
+                let s = e.getData("start"),
+                    a = e.getData("end");
+                s && (t.min_id = f.default.fromTimestamp(s)), a && (t.max_id = f.default.fromTimestamp(a));
                 return;
         }
-        let s = b(n);
-        null == t[s] && (t[s] = new Set());
-        let a = t[s];
-        switch (n) {
-            case E.LWr.ANSWER_USERNAME_FROM:
-            case E.LWr.ANSWER_USERNAME_MENTIONS:
-                a.add(e.getData("userId"));
+        let o = (null == (r = null != (n = p.Ay[i]) ? n.queryKey : null) && (r = "content"), r);
+        null == t[o] && (t[o] = new Set());
+        let l = t[o];
+        switch (i) {
+            case m.LWr.ANSWER_USERNAME_FROM:
+            case m.LWr.ANSWER_USERNAME_MENTIONS:
+                l.add(e.getData("userId"));
                 break;
-            case E.LWr.ANSWER_LINK_FROM:
-            case E.LWr.ANSWER_FILE_TYPE:
-            case E.LWr.ANSWER_FILE_NAME:
-                a.add(e.getMatch(1));
+            case m.LWr.ANSWER_LINK_FROM:
+            case m.LWr.ANSWER_FILE_TYPE:
+            case m.LWr.ANSWER_FILE_NAME:
+                l.add(e.getMatch(1));
                 break;
-            case E.LWr.ANSWER_IN:
-                for (let t of e.getData("channelIds") ?? []) a.add(t);
+            case m.LWr.ANSWER_IN:
+                for (let t of e.getData("channelIds") ?? []) l.add(t);
                 break;
-            case E.LWr.ANSWER_HAS:
-                a.add(e.getData("has"));
+            case m.LWr.ANSWER_HAS:
+                l.add(e.getData("has"));
                 break;
-            case E.LWr.ANSWER_PINNED:
-                a.add(e.getData("pinned"));
+            case m.LWr.ANSWER_PINNED:
+                l.add(e.getData("pinned"));
                 break;
-            case E.LWr.ANSWER_AUTHOR_TYPE:
-                a.add(e.getData("author_type"));
+            case m.LWr.ANSWER_AUTHOR_TYPE:
+                l.add(e.getData("author_type"));
                 break;
             default:
-                a.add(e.getFullMatch().trim());
+                l.add(e.getFullMatch().trim());
         }
     }),
     Object.entries(t)))
         r instanceof Set && (t[n] = Array.from(r));
     return t.content && (delete t.contents, (t.content = t.content.join(" ").trim()), t.content || delete t.content), t;
 }
-function w(e) {
+function L(e) {
     return e?.contents != null && e.contents.length > 0
         ? e?.contents?.map((e) => e.split("|").slice(1).join("|")).join(" ")
         : e?.content;
 }
-function M(e) {
+function w(e) {
     return e
         .map((e) => (e.type === s.Ay.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
         .join(" ")
         .trim();
 }
-function x(e, t, n) {
+function M(e, t, n) {
     let r,
         i,
         s = e.find((s, a) =>
@@ -228,53 +225,53 @@ function x(e, t, n) {
 function P(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: a } = (e = e ?? {});
-    if (0 === t.length) return { type: E.o$q.EMPTY, filter: null, token: null };
-    if (null == r) return { type: E.o$q.FILTER_ALL, filter: null, token: null };
-    if ((0, m.If)(r.type)) {
-        if (null == i || i.type === s.Ay.NON_TOKEN_TYPE) return { type: E.o$q.FILTER, filter: r.type, token: i };
-        if (null != i && !E.T2E.test(i.type)) return { type: E.o$q.FILTER, filter: r.type, token: null };
+    if (0 === t.length) return { type: m.o$q.EMPTY, filter: null, token: null };
+    if (null == r) return { type: m.o$q.FILTER_ALL, filter: null, token: null };
+    if ((0, p.If)(r.type)) {
+        if (null == i || i.type === s.Ay.NON_TOKEN_TYPE) return { type: m.o$q.FILTER, filter: r.type, token: i };
+        if (null != i && !m.T2E.test(i.type)) return { type: m.o$q.FILTER, filter: r.type, token: null };
     }
-    return r.type === s.Ay.NON_TOKEN_TYPE && null != a && (0, m.If)(a.type)
-        ? { type: E.o$q.FILTER, filter: a.type, token: r }
-        : (r.type === s.Ay.NON_TOKEN_TYPE && (n = r), { type: E.o$q.FILTER_ALL, filter: null, token: n });
+    return r.type === s.Ay.NON_TOKEN_TYPE && null != a && (0, p.If)(a.type)
+        ? { type: m.o$q.FILTER, filter: a.type, token: r }
+        : (r.type === s.Ay.NON_TOKEN_TYPE && (n = r), { type: m.o$q.FILTER_ALL, filter: null, token: n });
 }
-function k(e) {
+function U(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => `\\${t}`);
         return `"${t}"`;
     }
 }
-function U(e) {
+function k(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let G = new s.Ay(),
-    F = new s.Ay();
+let x = new s.Ay(),
+    G = new s.Ay();
 function V(e) {
-    return G.tokenize(e);
+    return x.tokenize(e);
 }
-function B() {
-    G.clearCache(), F.clearCache();
+function F() {
+    x.clearCache(), G.clearCache();
 }
-function H(e) {
-    return null != e ? O[e] : null;
+function B(e) {
+    return null != e ? C[e] : null;
 }
-function j(e, t) {
-    let n = E.l90.test(e.type);
-    return (null != t || !n) && (null == t || !n || !!E.T2E.test(t.type));
+function H(e, t) {
+    let n = m.l90.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!m.T2E.test(t.type));
 }
 function Y() {
-    (0, m.G0)(), G.reset(), i()(m.Ay).forOwn((e, t) => G.addRule({ type: t, ...e })), F.reset();
-    let e = (0, m.gU)();
-    i()(e).forOwn((e, t) => F.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
+    (0, p.G0)(), x.reset(), i()(p.Ay).forOwn((e, t) => x.addRule({ type: t, ...e })), G.reset();
+    let e = (0, p.gU)();
+    i()(e).forOwn((e, t) => G.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
 }
 function W(e) {
-    let t = (0, a.m1)(e, _.default, c.A),
+    let t = (0, a.m1)(e, _.default, d.A),
         n = !1;
     if (e.isDM()) {
         let n = e.getRecipientId(),
             r = _.default.getUser(n),
-            i = p.Ay.getUserTag(r);
+            i = E.Ay.getUserTag(r);
         if (null == i) return null;
         t = i;
     } else if (!e.isGroupDM()) {
@@ -282,23 +279,23 @@ function W(e) {
         let r = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         r?.name != null && (t = r.name);
     }
-    return ((t = k(t)), n) ? `#${t}` : t;
+    return ((t = U(t)), n) ? `#${t}` : t;
 }
-function K(e) {
-    if (e.isGroupDM()) return (0, a.m1)(e, _.default, c.A);
+function j(e) {
+    if (e.isGroupDM()) return (0, a.m1)(e, _.default, d.A);
     if (e.isDM()) {
         let t = e.getRecipientId(),
             n = _.default.getUser(t);
-        return p.Ay.getUserTag(n);
+        return E.Ay.getUserTag(n);
     }
     let t = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
-    return t?.name ?? (0, a.m1)(e, _.default, c.A);
+    return t?.name ?? (0, a.m1)(e, _.default, d.A);
 }
-function $(e) {
-    let t = F.tokenize(e),
+function K(e) {
+    let t = G.tokenize(e),
         n = [];
     t.forEach((e) => {
-        e.type !== E.LWr.FILTER_IN && e.type !== E.LWr.ANSWER_IN && n.push(e);
+        e.type !== m.LWr.FILTER_IN && e.type !== m.LWr.ANSWER_IN && n.push(e);
     });
     let r = "";
     return (

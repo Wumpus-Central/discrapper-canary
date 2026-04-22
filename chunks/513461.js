@@ -1,30 +1,25 @@
 "use strict";
-n.d(t, { B5: () => s, _e: () => i, i7: () => a, j5: () => o, rX: () => r });
-var r = (function (e) {
-        return (
-            (e.TERMS = "TERMS"),
-            (e.TEXT_INPUT = "TEXT_INPUT"),
-            (e.PARAGRAPH = "PARAGRAPH"),
-            (e.MULTIPLE_CHOICE = "MULTIPLE_CHOICE"),
-            (e.VERIFICATION = "VERIFICATION"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e.TIMESTAMP_DESC = "NEWEST"), (e.TIMESTAMP_ASC = "OLDEST"), e;
-    })({}),
-    s = (function (e) {
-        return (
-            (e.STARTED = "STARTED"),
-            (e.SUBMITTED = "SUBMITTED"),
-            (e.REJECTED = "REJECTED"),
-            (e.APPROVED = "APPROVED"),
-            e
-        );
-    })({});
-function a(e) {
+n.d(t, { B5: () => l, _e: () => o, i7: () => u, j5: () => d, rX: () => a });
+var r,
+    i,
+    s,
+    a =
+        (((r = {}).TERMS = "TERMS"),
+        (r.TEXT_INPUT = "TEXT_INPUT"),
+        (r.PARAGRAPH = "PARAGRAPH"),
+        (r.MULTIPLE_CHOICE = "MULTIPLE_CHOICE"),
+        (r.VERIFICATION = "VERIFICATION"),
+        r),
+    o = (((i = {}).TIMESTAMP_DESC = "NEWEST"), (i.TIMESTAMP_ASC = "OLDEST"), i),
+    l =
+        (((s = {}).STARTED = "STARTED"),
+        (s.SUBMITTED = "SUBMITTED"),
+        (s.REJECTED = "REJECTED"),
+        (s.APPROVED = "APPROVED"),
+        s);
+function u(e) {
     return null != e && "TERMS" === e.field_type;
 }
-function o(e) {
-    return null != e && e.some((e) => !a(e));
+function d(e) {
+    return null != e && e.some((e) => !u(e));
 }

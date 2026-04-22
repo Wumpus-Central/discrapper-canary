@@ -1,32 +1,33 @@
-n.d(t, { p: () => m });
-var i = n(627968);
-n(64700);
-var a = n(342494),
-    r = n(397927),
-    l = n(688810),
-    s = n(532794),
-    o = n(113359),
-    d = n(788868),
-    c = n(88001),
-    u = n(49999),
-    A = n(519412),
-    _ = n(985018),
-    h = n(438705);
-let m = (e) => {
-    let { targetElementRef: t, dismissPopover: m, children: g } = e,
-        p = (0, o.Q)({ location: "nitro_tab_popover" }),
-        { analyticsLocations: E } = (0, l.Ay)(),
-        I = p
-            ? _.intl.string(A.default.oOSj1l)
-            : _.intl.format(A.default["c+NBSl"], { premiumGroupProductName: (0, c.DP)() }),
-        f = p
-            ? _.intl.string(A.default.nCLJQn)
-            : _.intl.format(A.default.MuUV5u, { premiumGroupProductName: (0, c.DP)(), totalSeats: c.aw }),
-        C = (0, i.jsx)(a.AM, {
-            targetElementRef: t,
-            title: I,
-            body: f,
-            graphic: { type: "image", src: h },
+a.d(l, { p: () => f });
+var t = a(627968);
+a(64700);
+var s = a(265486),
+    i = a(192308),
+    n = a(403581),
+    c = a(688810),
+    h = a(532794),
+    r = a(113359),
+    o = a(788868),
+    d = a(88001),
+    v = a(49999),
+    g = a(466919),
+    p = a(985018),
+    m = a(438705);
+let f = (e) => {
+    let { targetElementRef: l, dismissPopover: f, children: w } = e,
+        x = (0, r.Q)({ location: "nitro_tab_popover" }),
+        { analyticsLocations: u } = (0, c.Ay)(),
+        A = x
+            ? p.intl.string(g.default.oOSj1l)
+            : p.intl.format(g.default["c+NBSl"], { premiumGroupProductName: (0, d.DP)() }),
+        I = x
+            ? p.intl.string(g.default.nCLJQn)
+            : p.intl.format(g.default.MuUV5u, { premiumGroupProductName: (0, d.DP)(), totalSeats: d.aw }),
+        M = (0, t.jsx)(s.A, {
+            targetElementRef: l,
+            title: A,
+            body: I,
+            graphic: { type: "image", src: m },
             badge: { type: "beta", variant: "expressive" },
             gradientColor: "nitro-pink",
             size: "md",
@@ -35,27 +36,27 @@ let m = (e) => {
             caretConfig: { align: "start" },
             actions: [
                 {
-                    text: p
-                        ? _.intl.format(A.default.LwdrNi, { premiumGroupProductName: (0, c.DP)() })
-                        : _.intl.string(A.default["IO+nlU"]),
-                    variant: p ? "expressive" : "primary",
+                    text: x
+                        ? p.intl.format(g.default.LwdrNi, { premiumGroupProductName: (0, d.DP)() })
+                        : p.intl.string(g.default["IO+nlU"]),
+                    variant: x ? "expressive" : "primary",
                     onClick: () => {
-                        m(u.i.TAKE_ACTION),
-                            p
-                                ? (0, s.A)({
-                                      subscriptionTier: d.pe.TIER_2,
-                                      initialPlanId: d.gD.PREMIUM_GROUP_MONTH,
-                                      analyticsLocations: E,
+                        f(v.i.TAKE_ACTION),
+                            x
+                                ? (0, h.A)({
+                                      subscriptionTier: o.pe.TIER_2,
+                                      initialPlanId: o.gD.PREMIUM_GROUP_MONTH,
+                                      analyticsLocations: u,
                                   })
-                                : (0, r.mMO)(async () => {
-                                      let { default: e } = await n.e("91976").then(n.bind(n, 526710));
-                                      return (t) => (0, i.jsx)(e, { ...t });
+                                : (0, i.openModalLazy)(async () => {
+                                      let { default: e } = await a.e("24833").then(a.bind(a, 526710));
+                                      return (l) => (0, t.jsx)(e, { ...l });
                                   });
                     },
-                    ...(p ? { icon: r.tvc, iconPosition: "start" } : {}),
+                    ...(x ? { icon: n.t, iconPosition: "start" } : {}),
                 },
             ],
-            onRequestClose: () => m(u.i.USER_DISMISS),
+            onRequestClose: () => f(v.i.USER_DISMISS),
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: g }), C] });
+    return (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("div", { children: w }), M] });
 };

@@ -1,51 +1,61 @@
-i.d(t, { A: () => m });
-var l = i(627968),
-    n = i(64700),
-    s = i(397927),
-    a = i(9578),
-    r = i(573648),
-    d = i(954571),
-    c = i(652215),
-    o = i(492171);
-let u = {
-    [c.fg2.TWITCH]: s.aWO,
-    [c.fg2.YOUTUBE]: s.CiD,
-    [c.fg2.TWITTER]: s.p3p,
-    [c.fg2.TWITTER_LEGACY]: s.p3p,
-    [c.fg2.FACEBOOK]: s.Zc1,
-    [c.fg2.INSTAGRAM]: s.LyU,
-    [c.fg2.REDDIT]: s.T1e,
-    [c.fg2.TIKTOK]: s.Xsb,
-    [c.fg2.SPOTIFY]: s.L5T,
-    [c.fg2.BLUESKY]: s.akf,
+t.d(i, { A: () => I });
+var l = t(627968),
+    s = t(64700),
+    a = t(454346),
+    n = t(80500),
+    r = t(274997),
+    d = t(319745),
+    o = t(488225),
+    c = t(72265),
+    u = t(218471),
+    h = t(109487),
+    m = t(967492),
+    _ = t(827734),
+    x = t(998445),
+    g = t(9578),
+    A = t(573648),
+    p = t(954571),
+    v = t(652215),
+    E = t(963120);
+let j = {
+    [v.fg2.TWITCH]: a.a,
+    [v.fg2.YOUTUBE]: n.C,
+    [v.fg2.TWITTER]: r.p,
+    [v.fg2.TWITTER_LEGACY]: r.p,
+    [v.fg2.FACEBOOK]: d.Z,
+    [v.fg2.INSTAGRAM]: o.L,
+    [v.fg2.REDDIT]: c.T,
+    [v.fg2.TIKTOK]: u.X,
+    [v.fg2.SPOTIFY]: h.L,
+    [v.fg2.BLUESKY]: m.a,
 };
-function m(e) {
-    let { url: t, invite: i } = e,
-        m = r.A.getByUrl(t),
-        x = null != m ? u[m.type] : void 0,
-        _ = n.useCallback(
+function I(e) {
+    let { url: i, invite: t } = e,
+        a = A.A.getByUrl(i),
+        n = null != a ? j[a.type] : void 0,
+        r = s.useCallback(
             () => (
-                d.default.track(c.HAw.INVITE_ACCEPT_SOCIAL_LINK_CLICKED, {
-                    guild_id: i.guild?.id,
-                    invite_code: i.code,
-                    social_platform: m?.type,
-                    social_platform_url: t,
+                p.default.track(v.HAw.INVITE_ACCEPT_SOCIAL_LINK_CLICKED, {
+                    guild_id: t.guild?.id,
+                    invite_code: t.code,
+                    social_platform: a?.type,
+                    social_platform_url: i,
                 }),
                 null
             ),
-            [i.code, i.guild?.id, m, t],
+            [t.code, t.guild?.id, a, i],
         );
-    return (0, l.jsx)(a.A, {
-        href: t,
-        trusted: null != m,
+    return (0, l.jsx)(g.A, {
+        href: i,
+        trusted: null != a,
         useDefaultUnderlineStyles: !1,
-        onClick: _,
+        onClick: r,
         children:
-            null != x
-                ? (0, l.jsx)(x, { className: o.zg, size: "xs", color: s.LU0.colors.ICON_MUTED, "aria-hidden": !0 })
-                : (0, l.jsx)(s.L_e, {
-                      className: o.zg,
-                      color: s.LU0.colors.ICON_MUTED,
+            null != n
+                ? (0, l.jsx)(n, { className: E.zg, size: "xs", color: _.A.colors.ICON_MUTED, "aria-hidden": !0 })
+                : (0, l.jsx)(x.L, {
+                      className: E.zg,
+                      color: _.A.colors.ICON_MUTED,
                       width: 16,
                       height: 16,
                       size: "custom",

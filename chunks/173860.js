@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -7,7 +7,7 @@ var i = n(627968),
     o = n.n(r),
     d = n(615300),
     c = n(52133),
-    u = n(397927),
+    u = n(844222),
     h = n(21);
 let A = { friction: 10, tension: 300 };
 class _ extends l.Component {
@@ -65,7 +65,7 @@ class _ extends l.Component {
     }
 }
 class m extends l.PureComponent {
-    static contextType = u.CZY;
+    static contextType = u.C;
     static defaultProps = { className: h.kL, reverse: !1, hide: !1, animate: !0 };
     state = { unread: null, mention: null };
     componentDidMount() {
@@ -155,4 +155,4 @@ class m extends l.PureComponent {
         });
     }
 }
-let p = m;
+let g = m;

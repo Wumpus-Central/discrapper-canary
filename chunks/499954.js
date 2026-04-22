@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(729426),
     i = n(321034),
-    a = n(687658);
-class s {
-    cpuHistogram = new a.d();
-    memoryHistogram = new a.d();
+    s = n(687658);
+class a {
+    cpuHistogram = new s.d();
+    memoryHistogram = new s.d();
     startCPU = i.A.getCumulativeCPUUsage();
     lastCPU = this.startCPU;
     lastBattery = null;
@@ -42,8 +42,8 @@ class s {
             if (null != this.lastCPU) {
                 let n = e.sampleTime - this.lastCPU.sampleTime;
                 if (n >= 1) {
-                    let t = ((e.usage - this.lastCPU.usage) / (n / 1e3)) * 100;
-                    this.cpuHistogram.addSample(t, n);
+                    let t = e.usage - this.lastCPU.usage;
+                    this.cpuHistogram.addSample((t / (n / 1e3)) * 100, n);
                 } else t = !1;
             }
             t && (this.lastCPU = e);

@@ -1,47 +1,48 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968),
-    s = n(158954),
-    l = n(739929),
-    r = n(652215),
-    a = n(985018),
-    o = n(92577);
-function d(e) {
+    l = n(683071),
+    s = n(512950),
+    r = n(821609),
+    a = n(739929),
+    o = n(652215),
+    d = n(985018),
+    c = n(83377);
+function u(e) {
     let t,
         { guild: n } = e,
         {
-            resubmittingEnableRequest: d,
-            resubmissionError: c,
-            createEnableRequest: u,
-            resubmittedRequest: m,
-            requestRejectedNoticeText: g,
-            reapplyNoticeText: x,
-        } = (0, l.A)(n),
-        h = n.features.has(r.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
-        _ = n.features.has(r.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
-    if (null != c)
+            resubmittingEnableRequest: u,
+            resubmissionError: m,
+            createEnableRequest: g,
+            resubmittedRequest: h,
+            requestRejectedNoticeText: x,
+            reapplyNoticeText: _,
+        } = (0, a.A)(n),
+        p = n.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
+        A = n.features.has(o.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+    if (null != m)
         return (0, i.jsx)("div", {
-            className: o.U,
-            children: (0, i.jsx)(s.wx6, { type: "critical", children: c.getAnyErrorMessage() }),
+            className: c.U,
+            children: (0, i.jsx)(l.w, { type: "critical", children: m.getAnyErrorMessage() }),
         });
-    let A = null;
+    let E = null;
     return (
-        null != g
-            ? (A = g)
-            : m
-              ? (A = a.intl.string(a.t.MyJpJT))
-              : null != x
-                ? ((A = x), (t = a.intl.string(a.t["YKw/NQ"])))
-                : _
-                  ? (A = a.intl.string(a.t.e2g9sW))
-                  : h && (A = a.intl.string(a.t.rxI9sl)),
-        null != A
+        null != x
+            ? (E = x)
+            : h
+              ? (E = d.intl.string(d.t.MyJpJT))
+              : null != _
+                ? ((E = _), (t = d.intl.string(d.t["YKw/NQ"])))
+                : A
+                  ? (E = d.intl.string(d.t.e2g9sW))
+                  : p && (E = d.intl.string(d.t.rxI9sl)),
+        null != E
             ? (0, i.jsx)("div", {
-                  className: o.U,
-                  children: (0, i.jsx)(s.po8, {
-                      messageType: s.YCn.WARNING,
-                      action: (0, i.jsx)(s.$nd, { variant: "overlay-secondary", text: t, onClick: u, loading: d }),
-                      children: A,
+                  className: c.U,
+                  children: (0, i.jsx)(s.p, {
+                      messageType: s.Y.WARNING,
+                      action: (0, i.jsx)(r.$, { variant: "overlay-secondary", text: t, onClick: g, loading: u }),
+                      children: E,
                   }),
               })
             : null

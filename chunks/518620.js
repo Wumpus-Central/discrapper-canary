@@ -1,89 +1,89 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(627968),
-    l = n(64700),
-    a = n(884362),
-    r = n(837381),
-    s = n(311907),
-    o = n(397927),
-    d = n(775602);
+    s = n(64700),
+    l = n(884362),
+    a = n(837381),
+    r = n(311907),
+    o = n(475825),
+    c = n(775602);
 n(646363);
-var c = n(652215),
+var d = n(652215),
     u = n(788868),
-    A = n(795733);
-let h = function (e) {
-    let { rows: t, renderRow: n, renderSection: h, footer: _, sectionFilter: m, renderSectionFooter: g } = e,
-        p = (e) => {
-            let { section: i, row: l } = e,
-                a = t[i];
-            if (null == a || null == l) return null;
-            let r = a[l];
-            return null == r ? null : n(r, i);
+    m = n(795733);
+let A = function (e) {
+    let { rows: t, renderRow: n, renderSection: A, footer: h, sectionFilter: x, renderSectionFooter: p } = e,
+        g = (e) => {
+            let { section: i, row: s } = e,
+                l = t[i];
+            if (null == l || null == s) return null;
+            let a = l[s];
+            return null == a ? null : n(a, i);
         },
-        E = l.useCallback(
+        N = s.useCallback(
             (e, n) => {
                 let i = t[e]?.[n];
-                return m === c.m3P.ALL && i?.giftIntentType === u.np.FRIEND_ANNIVERSARY && 0 === e ? 72 : 61;
+                return x === d.m3P.ALL && i?.giftIntentType === u.np.FRIEND_ANNIVERSARY && 0 === e ? 72 : 61;
             },
-            [t, m],
+            [t, x],
         ),
-        I = l.useCallback(
+        f = s.useCallback(
             (e) => {
                 let { section: t } = e;
-                return h(t);
+                return A(t);
             },
-            [h],
+            [A],
         ),
-        f = l.useCallback((e) => (null == g ? null : g(e.section)), [g]),
-        C = l.useCallback((e) => (null == g ? 0 : 48 * (null != g(e))), [g]),
-        T = (0, s.bG)([d.A], () => d.A.keyboardModeEnabled),
-        N = l.useRef(null),
-        S = l.useCallback(
+        _ = s.useCallback((e) => (null == p ? null : p(e.section)), [p]),
+        I = s.useCallback((e) => (null == p ? 0 : 48 * (null != p(e))), [p]),
+        v = (0, r.bG)([c.A], () => c.A.keyboardModeEnabled),
+        j = s.useRef(null),
+        C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = N.current;
+                    let t = j.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             [],
         ),
-        x = l.useCallback(
+        y = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = N.current;
+                    let t = j.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             [],
         ),
-        v = l.useCallback((e) => {
+        S = s.useCallback((e) => {
             let t = document.querySelector(e),
-                n = N.current;
+                n = j.current;
             null != t && null != n && n.scrollIntoViewNode({ node: t, padding: 8, callback: () => t?.focus() });
         }, []),
-        b = (0, a.Ay)({ id: "people-list", isEnabled: T, scrollToStart: S, scrollToEnd: x, setFocus: v }),
-        y = l.useMemo(() => t.map((e) => e.length), [t]);
-    return (0, i.jsx)(r.hD, {
-        navigator: b,
-        children: (0, i.jsx)(r.PR, {
+        E = (0, l.Ay)({ id: "people-list", isEnabled: v, scrollToStart: C, scrollToEnd: y, setFocus: S }),
+        T = s.useMemo(() => t.map((e) => e.length), [t]);
+    return (0, i.jsx)(a.hD, {
+        navigator: E,
+        children: (0, i.jsx)(a.PR, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(o.Eie, {
+                        (0, i.jsx)(o.Ei, {
                             ref: (e) => {
-                                (N.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                (j.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            renderRow: p,
-                            rowHeight: E,
-                            renderSection: I,
+                            renderRow: g,
+                            rowHeight: N,
+                            renderSection: f,
                             sectionHeight: 50,
-                            renderFooter: f,
-                            footerHeight: C,
-                            sections: y,
-                            className: A.e3,
+                            renderFooter: _,
+                            footerHeight: I,
+                            sections: T,
+                            className: m.e3,
                             ...n,
                         }),
-                        _,
+                        h,
                     ],
                 });
             },

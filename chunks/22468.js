@@ -1,37 +1,20 @@
 "use strict";
 let r;
-n.d(t, { i: () => f }), n(142703), n(321073);
+n.d(t, { i: () => _ }), n(142703), n(321073);
 var i = n(284009),
-    a = n.n(i),
-    s = n(61090);
+    s = n.n(i),
+    a = n(61090);
 n(423034);
 var o = n(152036),
     l = n(390225);
 let u = [],
-    c = !1,
-    d = new Promise((e) => {
+    d = !1,
+    c = new Promise((e) => {
         r = () => {
             e(), (r = null);
         };
     });
-function _(e, t) {
-    let n = null;
-    return 0 === e
-        ? function () {
-              clearImmediate(n), (n = setImmediate(t));
-          }
-        : function () {
-              null == n &&
-                  (n = setTimeout(() => {
-                      try {
-                          t();
-                      } finally {
-                          n = null;
-                      }
-                  }, e));
-          };
-}
-class f {
+class _ {
     _changeCallbacks = new o.E();
     _reactChangeCallbacks = new o.E();
     _syncWiths = [];
@@ -41,9 +24,9 @@ class f {
     _isInitialized = !1;
     static displayName;
     static initialize() {
-        (c = !0), u.forEach((e) => e.initializeIfNeeded()), null != r && r();
+        (d = !0), u.forEach((e) => e.initializeIfNeeded()), null != r && r();
     }
-    static initialized = d;
+    static initialized = c;
     static destroy() {
         (u.length = 0), l.A.destroy();
     }
@@ -55,7 +38,7 @@ class f {
             (this._dispatchToken = this._dispatcher.createToken()),
             this.registerActionHandlers(t ?? {}, n),
             u.push(this),
-            c && this.initializeIfNeeded();
+            d && this.initializeIfNeeded();
     }
     doEmitChanges = (e) => {
         (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) &&
@@ -73,17 +56,37 @@ class f {
             let e = Date.now();
             this.initialize(), (this._isInitialized = !0);
             let t = Date.now() - e;
-            t > 5 && s.A.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t);
+            t > 5 && a.A.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t);
         }
     }
     initialize() {}
     syncWith(e, t, n) {
         if ((this.waitFor(...e), null != n)) {
-            let r = 0,
-                i = () => {
-                    r !== l.A.getChangeSentinel() && ((r = l.A.getChangeSentinel()), !1 !== t() && this.emitChange());
+            var r, i;
+            let s,
+                a = 0,
+                o = () => {
+                    a !== l.A.getChangeSentinel() && ((a = l.A.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
-            (i = _(n ?? 0, i)), e.forEach((e) => e.addChangeListener(i));
+            (r = n ?? 0),
+                (i = o),
+                (s = null),
+                (o =
+                    0 === r
+                        ? function () {
+                              clearImmediate(s), (s = setImmediate(i));
+                          }
+                        : function () {
+                              null == s &&
+                                  (s = setTimeout(() => {
+                                      try {
+                                          i();
+                                      } finally {
+                                          s = null;
+                                      }
+                                  }, r));
+                          }),
+                e.forEach((e) => e.addChangeListener(o));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({ func: t, store: this });
@@ -92,9 +95,9 @@ class f {
     waitFor() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         let r = t.map((e, t) =>
-            (a()(null != e, `Store.waitFor(...) called with null Store at index ${t} for store ${this.getName()}`),
+            (s()(null != e, `Store.waitFor(...) called with null Store at index ${t} for store ${this.getName()}`),
             null != e._dispatcher)
-                ? (a()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."),
+                ? (s()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."),
                   e.getDispatchToken())
                 : null,
         );

@@ -1,19 +1,21 @@
-n.d(t, { M: () => d });
+n.d(t, { M: () => u });
 var i = n(627968);
 n(64700);
-var a = n(503698),
-    r = n.n(a),
-    l = n(397927),
-    s = n(375045),
-    o = n(886981);
-function d(e) {
+var l = n(503698),
+    a = n.n(l),
+    s = n(231483),
+    r = n(827734),
+    o = n(834730),
+    d = n(646645),
+    c = n(861173);
+function u(e) {
     let { text: t } = e;
     return (0, i.jsxs)("div", {
-        className: r()(o.oR, s.o),
+        className: a()(c.oR, d.o),
         children: [
-            (0, i.jsx)(l.lmn, { color: l.LU0.colors.TEXT_BRAND }),
-            (0, i.jsx)(l.Text, {
-                className: o.__invalid_content,
+            (0, i.jsx)(s.l, { color: r.A.colors.TEXT_BRAND }),
+            (0, i.jsx)(o.E, {
+                className: c.__invalid_content,
                 color: "text-strong",
                 variant: "text-md/normal",
                 children: t,

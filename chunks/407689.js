@@ -1,22 +1,17 @@
 "use strict";
-n.d(t, { Ao: () => u, id: () => d, mG: () => l }), n(321073);
-var r = n(284009),
-    i = n.n(r),
-    a = n(73153);
-let s = 6e4,
-    o = 3e3;
-var l = (function (e) {
-        return (e.FORUM_CHANNEL = "forum_channel"), e;
-    })({}),
-    u = (function (e) {
-        return (
-            (e[(e.IMMEDIATE = 0)] = "IMMEDIATE"),
-            (e[(e.IMMEDIATE_WITH_COOLDOWN = 1)] = "IMMEDIATE_WITH_COOLDOWN"),
-            (e[(e.IMMEDIATE_WITH_DELAY = 2)] = "IMMEDIATE_WITH_DELAY"),
-            e
-        );
-    })({});
-class c {
+n.d(t, { Ao: () => u, id: () => c, mG: () => l }), n(321073);
+var r,
+    i,
+    s = n(284009),
+    a = n.n(s),
+    o = n(73153),
+    l = (((r = {}).FORUM_CHANNEL = "forum_channel"), r),
+    u =
+        (((i = {})[(i.IMMEDIATE = 0)] = "IMMEDIATE"),
+        (i[(i.IMMEDIATE_WITH_COOLDOWN = 1)] = "IMMEDIATE_WITH_COOLDOWN"),
+        (i[(i.IMMEDIATE_WITH_DELAY = 2)] = "IMMEDIATE_WITH_DELAY"),
+        i);
+class d {
     seenIntervals;
     constructor() {
         this.seenIntervals = [];
@@ -49,11 +44,11 @@ class c {
             n.push(r);
         }
         return (
-            i()(n.length < 2, "there should only be a single left over data"), (this.seenIntervals = n), Math.round(t)
+            a()(n.length < 2, "there should only be a single left over data"), (this.seenIntervals = n), Math.round(t)
         );
     }
 }
-class d {
+class c {
     trackedFeedItems;
     _lastFlushTimeMillis;
     _pausedFeedItemIds;
@@ -75,19 +70,19 @@ class d {
     onFeedItemSeen;
     onFeedItemUnseen;
     initialize = () => {
-        a.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            a.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            a.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            a.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            a.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
+        o.h.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+            o.h.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+            o.h.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+            o.h.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+            o.h.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
             this.onInitialize?.();
     };
     terminate = () => {
-        a.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
-            a.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
-            a.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
-            a.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
-            a.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
+        o.h.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen),
+            o.h.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen),
+            o.h.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush),
+            o.h.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
+            o.h.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
             this.onTerminate?.(),
             this.maybeFlushSeenItems(0);
     };
@@ -97,8 +92,8 @@ class d {
     };
     maybeFlushSeenItems(e) {
         if (
-            (null == e && Date.now() - this._lastFlushTimeMillis < s) ||
-            (1 === e && Date.now() - this._lastFlushTimeMillis < o)
+            (null == e && Date.now() - this._lastFlushTimeMillis < 6e4) ||
+            (1 === e && Date.now() - this._lastFlushTimeMillis < 3e3)
         )
             return Promise.resolve();
         let t = this.createFlushSeenItemsFunction(e);
@@ -135,7 +130,7 @@ class d {
         this.onFeedItemUnseen?.(r, i), this.maybeFlushSeenItems();
     };
     getTrackedFeedItem = (e) => (
-        null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new c()), this.trackedFeedItems[e]
+        null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d()), this.trackedFeedItems[e]
     );
     getVisibleFeedItemIds = () =>
         new Set(Object.keys(this.trackedFeedItems).filter((e) => this.trackedFeedItems[e]?.isVisible()));

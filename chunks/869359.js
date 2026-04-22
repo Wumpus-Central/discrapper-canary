@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var r = n(789999),
     i = n(69114),
     s = n(322683),
@@ -7,23 +7,12 @@ var r = n(789999),
     o = n(954571),
     l = n(859703),
     u = n(302654),
-    c = n(652215);
-let d = 0.1;
-function _(e, t) {
-    let n = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"),
-        r = n(e),
-        i = n(t);
-    return "quest" !== r || "quest" !== i
-        ? `${r}_to_${i}`
-        : e?.questId === t?.questId
-          ? "same_quest"
-          : "different_quest";
-}
-function f(e, t, n) {
-    if (Math.random() > d) return;
+    d = n(652215);
+function c(e, t, n) {
+    if (Math.random() > 0.1) return;
     let l = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         u = (0, s.O)();
-    o.default.track(c.HAw.QUEST_DECISION_ROUNDTRIP, {
+    o.default.track(d.HAw.QUEST_DECISION_ROUNDTRIP, {
         ...(0, i.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
@@ -39,7 +28,7 @@ function f(e, t, n) {
         is_foregrounded: (0, r.R)(),
     });
 }
-class p {
+class _ {
     pendingRequests = new Map();
     recordQuestRequestAttempt(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -58,7 +47,7 @@ class p {
         this.pendingRequests.set(e, s),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (f(t, "timeout", null), this.pendingRequests.delete(e));
+                null != t && (c(t, "timeout", null), this.pendingRequests.delete(e));
             }, 3e4);
     }
     recordQuestRequestApiResponse(e, t) {
@@ -66,24 +55,35 @@ class p {
             a = this.pendingRequests.get(e);
         if (null != a) {
             let t,
-                o,
-                { enableNewRequestBehavior: l } = u.A.getConfig({ location: "recordQuestRequestApiResponse" });
-            if (l) {
-                let e =
-                    null !== s
-                        ? {
-                              questId: i,
-                              adCreativeId: i,
-                              fetchedAt: s,
-                              ttlMillis: 0,
-                              adDecisionData: null != r ? { decision_id: r } : void 0,
-                          }
-                        : null;
-                (t = _(a.previousAdDecision, e)), (o = s);
-            } else (t = "legacy"), (o = null);
-            f({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: r }, t, o),
+                d,
+                { enableNewRequestBehavior: _ } = u.A.getConfig({ location: "recordQuestRequestApiResponse" });
+            if (_) {
+                var o, l;
+                let e, n, u;
+                (o = a.previousAdDecision),
+                    (l =
+                        null !== s
+                            ? {
+                                  questId: i,
+                                  adCreativeId: i,
+                                  fetchedAt: s,
+                                  ttlMillis: 0,
+                                  adDecisionData: null != r ? { decision_id: r } : void 0,
+                              }
+                            : null),
+                    (n = (e = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"))(o)),
+                    (u = e(l)),
+                    (t =
+                        "quest" !== n || "quest" !== u
+                            ? `${n}_to_${u}`
+                            : o?.questId === l?.questId
+                              ? "same_quest"
+                              : "different_quest"),
+                    (d = s);
+            } else (t = "legacy"), (d = null);
+            c({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: r }, t, d),
                 this.pendingRequests.delete(e);
         }
     }
 }
-let h = new p();
+let f = new _();

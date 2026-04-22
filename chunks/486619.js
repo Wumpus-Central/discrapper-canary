@@ -1,28 +1,29 @@
-"use strict";
-n.d(t, { G: () => u });
+n.d(t, { G: () => g });
 var i = n(627968),
-    s = n(397927),
-    l = n(529942),
-    r = n(209700),
-    a = n(997509),
-    o = n(652215),
-    d = n(985018),
-    c = n(180216);
-function u(e) {
+    l = n(452027),
+    s = n(821609),
+    r = n(554830),
+    a = n(529942),
+    o = n(209700),
+    d = n(997509),
+    c = n(652215),
+    u = n(985018),
+    m = n(872584);
+function g(e) {
     let { guildId: t, role: n } = e;
     return (0, i.jsx)("div", {
-        className: c.k,
-        children: (0, i.jsx)(s.D0$, {
-            label: d.intl.string(d.t.arFPfJ),
-            description: d.intl.string(d.t["IT/0AI"]),
-            children: (0, i.jsx)(s.Button, {
+        className: m.k,
+        children: (0, i.jsx)(l.D, {
+            label: u.intl.string(u.t.arFPfJ),
+            description: u.intl.string(u.t["IT/0AI"]),
+            children: (0, i.jsx)(s.$, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    a.A.close(), (0, l.Tk)(t, { type: r._.ROLES, roles: { [n.id]: n }, returnToSection: o.BEX.ROLES });
+                    d.A.close(), (0, a.Tk)(t, { type: o._.ROLES, roles: { [n.id]: n }, returnToSection: c.BEX.ROLES });
                 },
-                text: d.intl.string(d.t.arFPfJ),
-                icon: s.KS6,
+                text: u.intl.string(u.t.arFPfJ),
+                icon: r.K,
                 iconPosition: "end",
             }),
         }),

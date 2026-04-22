@@ -1,34 +1,38 @@
 "use strict";
-n.d(t, { f: () => R });
+n.d(t, { f: () => L });
 var l = n(627968),
-    i = n(64700),
+    a = n(64700),
     s = n(503698),
-    a = n.n(s),
+    i = n.n(s),
     r = n(284009),
     o = n.n(r),
     d = n(942381),
     c = n(417597),
-    u = n(421380),
-    m = n(397927),
-    h = n(608299),
-    x = n(775602),
-    g = n(355622),
-    f = n(851023),
-    p = n(349688),
-    _ = n(915089),
-    j = n(607470),
-    b = n(703007),
-    v = n(218152),
-    A = n(715493),
-    C = n(518960),
-    T = n(286911),
-    N = n(985018),
-    S = n(403094);
-let y = [{ name: "Media Post Thumbnail", extensions: ["jpg", "jpeg", "png", "gif", "webp"] }],
-    E = (0, _.Ld)();
-function I(e) {
-    let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        s = (0, A.eX)({ numAttachments: t.length, containerWidth: n, containerHeight: i });
+    u = n(862482),
+    m = n(192308),
+    h = n(750943),
+    g = n(834730),
+    x = n(22231),
+    f = n(241326),
+    _ = n(608299),
+    p = n(775602),
+    j = n(355622),
+    b = n(851023),
+    v = n(349688),
+    C = n(915089),
+    A = n(607470),
+    N = n(703007),
+    S = n(218152),
+    E = n(715493),
+    T = n(518960),
+    y = n(286911),
+    I = n(985018),
+    w = n(222209);
+let R = [{ name: "Media Post Thumbnail", extensions: ["jpg", "jpeg", "png", "gif", "webp"] }],
+    k = (0, C.Ld)();
+function M(e) {
+    let { mediaAttachments: t, containerWidth: n, containerHeight: a } = e,
+        s = (0, E.eX)({ numAttachments: t.length, containerWidth: n, containerHeight: a });
     return (0, l.jsx)(l.Fragment, {
         children: t.map((e, t) =>
             (0, l.jsx)(
@@ -37,58 +41,58 @@ function I(e) {
                     style: s[t],
                     children:
                         !0 === e.isVideo
-                            ? (0, l.jsx)(j.A, { src: e.src, className: S.xn, "aria-hidden": !0 })
-                            : (0, l.jsx)("img", { src: e.src, className: S.xn, "aria-hidden": !0, alt: e?.alt ?? "" }),
+                            ? (0, l.jsx)(A.A, { src: e.src, className: w.xn, "aria-hidden": !0 })
+                            : (0, l.jsx)("img", { src: e.src, className: w.xn, "aria-hidden": !0, alt: e?.alt ?? "" }),
                 },
                 e.src,
             ),
         ),
     });
 }
-let R = (e) => {
+let L = (e) => {
     let { parentChannel: t } = e,
-        { textAreaState: s } = (0, v.kU)((e) => {
+        { textAreaState: s } = (0, S.kU)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, d.x),
-        r = (0, c.bG)([x.A], () => x.A.keyboardModeEnabled),
-        _ = (0, T.A)(t, s.textValue?.trim()),
-        j = i.useMemo(() => _.find((e) => e.isThumbnail), [_]),
-        A = null != _ && _.length > 0,
-        R = i.useMemo(() => {
-            let e = _?.length > 1 ? 1.15 : 1;
+        r = (0, c.bG)([p.A], () => p.A.keyboardModeEnabled),
+        C = (0, y.A)(t, s.textValue?.trim()),
+        A = a.useMemo(() => C.find((e) => e.isThumbnail), [C]),
+        E = null != C && C.length > 0,
+        L = a.useMemo(() => {
+            let e = C?.length > 1 ? 1.15 : 1;
             return { width: 153 * e, height: 86 * e };
-        }, [_]),
-        M = i.useCallback(
+        }, [C]),
+        D = a.useCallback(
             (e) => {
-                null != j && h.A.remove(t.id, j.id, g.oU.CREATE_FORUM_POST.drafts.type),
-                    (0, C.R)(e.currentTarget.files, t, g.oU.CREATE_FORUM_POST.drafts.type, {
+                null != A && _.A.remove(t.id, A.id, j.oU.CREATE_FORUM_POST.drafts.type),
+                    (0, T.R)(e.currentTarget.files, t, j.oU.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
                     }),
                     (e.currentTarget.value = null);
             },
-            [t, j],
+            [t, A],
         ),
-        k = (e) => {
+        P = (e) => {
             e.stopPropagation(),
-                j?.upload != null &&
-                    (0, m.mMO)(async () => {
-                        let e = j.upload;
+                A?.upload != null &&
+                    (0, m.openModalLazy)(async () => {
+                        let e = A.upload;
                         o()(null != e, "upload should not be null");
-                        let { default: i } = await Promise.resolve().then(n.bind(n, 427281));
+                        let { default: a } = await Promise.resolve().then(n.bind(n, 427281));
                         return (n) =>
-                            (0, l.jsx)(i, {
+                            (0, l.jsx)(a, {
                                 ...n,
                                 upload: e,
                                 channelId: t.id,
-                                draftType: g.oU.CREATE_FORUM_POST.drafts.type,
+                                draftType: j.oU.CREATE_FORUM_POST.drafts.type,
                                 onSubmit: (n) => {
-                                    let { name: l, description: i, spoiler: s } = n;
-                                    h.A.update(t.id, e.id, g.oU.CREATE_FORUM_POST.drafts.type, {
+                                    let { name: l, description: a, spoiler: s } = n;
+                                    _.A.update(t.id, e.id, j.oU.CREATE_FORUM_POST.drafts.type, {
                                         filename: l,
-                                        description: i,
+                                        description: a,
                                         spoiler: s,
                                     });
                                 },
@@ -96,83 +100,82 @@ let R = (e) => {
                             });
                     });
         },
-        w = (0, l.jsx)(b.A, {
+        O = (0, l.jsx)(N.A, {
             color: u.XD.CUSTOM,
-            className: S.zL,
-            innerClassName: S.Nr,
-            onChange: M,
+            className: w.zL,
+            innerClassName: w.Nr,
+            onChange: D,
             multiple: !1,
             "aria-hidden": !0,
-            filters: y,
-            "aria-describedby": E,
-            "aria-label": A ? N.intl.string(N.t.MxJI3f) : N.intl.string(N.t.Cbiofa),
-            children: A
+            filters: R,
+            "aria-describedby": k,
+            "aria-label": E ? I.intl.string(I.t.MxJI3f) : I.intl.string(I.t.Cbiofa),
+            children: E
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(I, { mediaAttachments: _, containerWidth: R.width, containerHeight: R.height }),
+                          (0, l.jsx)(M, { mediaAttachments: C, containerWidth: L.width, containerHeight: L.height }),
                           (0, l.jsxs)("div", {
-                              className: a()(S.On, { [S.bP]: _?.length > 2 }),
+                              className: i()(w.On, { [w.bP]: C?.length > 2 }),
                               children: [
-                                  (0, l.jsx)(m.Text, {
+                                  (0, l.jsx)(g.E, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: N.intl.string(N.t.MxJI3f),
+                                      children: I.intl.string(I.t.MxJI3f),
                                   }),
-                                  null == j &&
-                                      (0, l.jsx)(m.R2l, { size: "xs", color: "currentColor", className: S.IZ }),
+                                  null == A && (0, l.jsx)(x.R, { size: "xs", color: "currentColor", className: w.IZ }),
                               ],
                           }),
                       ],
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(m.XGR, {
+                          (0, l.jsx)(h.X, {
                               size: "custom",
                               width: 39,
                               height: 39,
                               color: "currentColor",
-                              className: S.T3,
+                              className: w.T3,
                           }),
-                          (0, l.jsx)(m.Text, {
+                          (0, l.jsx)(g.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: N.intl.string(N.t.Cbiofa),
+                              children: I.intl.string(I.t.Cbiofa),
                           }),
                       ],
                   }),
         });
     return (0, l.jsx)("div", {
-        className: S.iT,
-        style: R,
+        className: w.iT,
+        style: L,
         children:
-            null != j
-                ? (0, l.jsx)(p.A, {
+            null != A
+                ? (0, l.jsx)(v.A, {
                       actions: (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(f.A, {
-                                  className: S.XI,
-                                  tooltip: N.intl.string(N.t.Y8ujqr),
-                                  onClick: k,
-                                  children: (0, l.jsx)(m.R2l, { size: "xs", color: "currentColor" }),
+                              (0, l.jsx)(b.A, {
+                                  className: w.XI,
+                                  tooltip: I.intl.string(I.t.Y8ujqr),
+                                  onClick: P,
+                                  children: (0, l.jsx)(x.R, { size: "xs", color: "currentColor" }),
                               }),
-                              (0, l.jsx)(f.A, {
-                                  className: S.XI,
-                                  tooltip: N.intl.string(N.t.vN7REz),
-                                  onClick: () => h.A.remove(t.id, j.id, g.oU.CREATE_FORUM_POST.drafts.type),
+                              (0, l.jsx)(b.A, {
+                                  className: w.XI,
+                                  tooltip: I.intl.string(I.t.vN7REz),
+                                  onClick: () => _.A.remove(t.id, A.id, j.oU.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
-                                  children: (0, l.jsx)(m.ucK, { size: "md", color: "currentColor" }),
+                                  children: (0, l.jsx)(f.u, { size: "md", color: "currentColor" }),
                               }),
                           ],
                       }),
-                      draftType: g.oU.CREATE_FORUM_POST.drafts.type,
-                      id: j.id,
+                      draftType: j.oU.CREATE_FORUM_POST.drafts.type,
+                      id: A.id,
                       channelId: t.id,
-                      handleEditModal: k,
+                      handleEditModal: P,
                       keyboardModeEnabled: r,
-                      size: p.L.SMALL,
-                      className: S.Xc,
-                      children: w,
+                      size: v.L.SMALL,
+                      className: w.Xc,
+                      children: O,
                   })
-                : w,
+                : O,
     });
 };

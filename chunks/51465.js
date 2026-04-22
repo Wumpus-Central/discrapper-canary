@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     dt: "upsellFooter__5e07c",
     YW: "upsellFooterIcon__5e07c",

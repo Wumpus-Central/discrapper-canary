@@ -1,39 +1,40 @@
-r.d(t, { A: () => p });
-var n = r(627968);
-r(64700);
-var a = r(503698),
-    l = r.n(a),
-    s = r(892227),
-    i = r(827734),
-    d = r(732955),
-    u = r(613566),
-    o = r(649032),
-    c = r(320118),
-    m = r(837902);
-let h = {
+s.d(t, { A: () => C });
+var n = s(627968);
+s(64700);
+var a = s(503698),
+    r = s.n(a),
+    l = s(892227),
+    i = s(827734),
+    d = s(403581),
+    o = s(318254),
+    c = s(914410),
+    u = s(649032),
+    h = s(320118),
+    m = s(992501);
+let x = {
         churning: { start: i.A.unsafe_rawColors.OPACITY_RED_80.css, end: i.A.unsafe_rawColors.RED_NEW_30.css },
         active: { start: i.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: i.A.unsafe_rawColors.GREEN_NEW_30.css },
     },
-    p = (e) => {
+    C = (e) => {
         let { className: t } = e,
-            { passesProgressBarInvariant: r, programReward: a, totalDays: i } = (0, c.F)();
-        if (!r || null == a || null == i) return null;
-        let p = (0, s.default)(new Date(a.next_reward_date), new Date()),
-            x = a.program_current_state === o.L.PREMIUM_CHURNING,
-            f = x ? h.churning.start : h.active.start,
-            g = x ? h.churning.end : h.active.end;
+            { passesProgressBarInvariant: s, programReward: a, totalDays: i } = (0, h.F)();
+        if (!s || null == a || null == i) return null;
+        let C = (0, l.default)(new Date(a.next_reward_date), new Date()),
+            _ = a.program_current_state === u.L.PREMIUM_CHURNING,
+            p = _ ? x.churning.start : x.active.start,
+            g = _ ? x.churning.end : x.active.end;
         return (0, n.jsxs)("div", {
-            className: l()(m.k, t),
+            className: r()(m.k, t),
             children: [
-                (0, n.jsx)(u.Ay, {
-                    variant: u.qP.UNSET,
-                    progress: i - p,
+                (0, n.jsx)(c.Ay, {
+                    variant: c.qP.UNSET,
+                    progress: i - C,
                     maximum: i,
-                    override: { default: { gradientStart: f, gradientEnd: g } },
+                    override: { default: { gradientStart: p, gradientEnd: g } },
                 }),
-                x
-                    ? (0, n.jsx)(d.tvc, { size: "sm", color: "currentColor", className: m.K })
-                    : (0, n.jsx)(d.Cp8, { size: "sm", color: "currentColor", className: m.K }),
+                _
+                    ? (0, n.jsx)(d.t, { size: "sm", color: "currentColor", className: m.K })
+                    : (0, n.jsx)(o.C, { size: "sm", color: "currentColor", className: m.K }),
             ],
         });
     };

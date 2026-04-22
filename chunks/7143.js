@@ -1,30 +1,29 @@
 "use strict";
-n.d(t, { A: () => d, p: () => a });
-var r = n(311907),
-    i = n(73153),
-    a = (function (e) {
-        return (
-            (e[(e.NOT_STARTED = 0)] = "NOT_STARTED"),
-            (e[(e.IN_PROGRESS = 1)] = "IN_PROGRESS"),
-            (e[(e.FAILED = 2)] = "FAILED"),
-            (e[(e.SKIPPED = 3)] = "SKIPPED"),
-            e
-        );
-    })({});
-let s = 0;
-function o() {
-    s = 1;
-}
-function l() {
-    s = 2;
-}
-function u() {
-    s = 3;
-}
-class c extends r.Ay.Store {
+n.d(t, { A: () => u, p: () => a });
+var r,
+    i = n(311907),
+    s = n(73153),
+    a =
+        (((r = {})[(r.NOT_STARTED = 0)] = "NOT_STARTED"),
+        (r[(r.IN_PROGRESS = 1)] = "IN_PROGRESS"),
+        (r[(r.FAILED = 2)] = "FAILED"),
+        (r[(r.SKIPPED = 3)] = "SKIPPED"),
+        r);
+let o = 0;
+class l extends i.Ay.Store {
     static displayName = "DomainMigrationStore";
     getMigrationStatus() {
-        return s;
+        return o;
     }
 }
-let d = new c(i.h, { DOMAIN_MIGRATION_START: o, DOMAIN_MIGRATION_FAILURE: l, DOMAIN_MIGRATION_SKIP: u });
+let u = new l(s.h, {
+    DOMAIN_MIGRATION_START: function () {
+        o = 1;
+    },
+    DOMAIN_MIGRATION_FAILURE: function () {
+        o = 2;
+    },
+    DOMAIN_MIGRATION_SKIP: function () {
+        o = 3;
+    },
+});

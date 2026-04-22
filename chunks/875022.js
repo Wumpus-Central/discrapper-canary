@@ -1,70 +1,70 @@
-n.d(e, { A: () => h });
-var l = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
-    o = n(397927),
-    c = n(775602),
-    d = n(607470),
-    u = n(351182),
-    m = n(891260),
-    x = n(950158);
-function h(t) {
-    let { mediaUrls: e, isSuccess: n, transitionState: s, onClose: h, children: g } = t,
-        p = (0, r.bG)([c.A], () => c.A.useReducedMotion),
-        [f, b] = (0, i.useState)("entry"),
-        [j, v] = (0, i.useState)("entry"),
-        C = (0, i.useRef)(null),
-        y = (0, i.useCallback)(() => {
-            "entry" === f && (b("idle"), v("idle"), C.current?.play());
-        }, [f]),
-        A = (0, i.useCallback)(async () => {
-            "exit" !== f && (b("exit"), await new Promise((t) => setTimeout(t, 175)), await h());
-        }, [f, h]),
-        S = s === o.ip4.EXITING;
+n.d(t, { A: () => f });
+var a = n(627968),
+    c = n(64700),
+    i = n(503698),
+    r = n.n(i),
+    s = n(311907),
+    d = n(231723),
+    l = n(775602),
+    o = n(607470),
+    b = n(196527),
+    u = n(891260),
+    p = n(950158);
+function f(e) {
+    let { mediaUrls: t, isSuccess: n, transitionState: i, onClose: f, children: m } = e,
+        y = (0, s.bG)([l.A], () => l.A.useReducedMotion),
+        [E, R] = (0, c.useState)("entry"),
+        [A, h] = (0, c.useState)("entry"),
+        v = (0, c.useRef)(null),
+        I = (0, c.useCallback)(() => {
+            "entry" === E && (R("idle"), h("idle"), v.current?.play());
+        }, [E]),
+        S = (0, c.useCallback)(async () => {
+            "exit" !== E && (R("exit"), await new Promise((e) => setTimeout(e, 175)), await f());
+        }, [E, f]),
+        x = i === d.ip.EXITING;
     if (
-        !p &&
+        !y &&
         n &&
-        null != e.activationEntry &&
-        null != e.activationIdle &&
-        null != e.celebrationEntry &&
-        null != e.celebrationIdle
+        null != t.activationEntry &&
+        null != t.activationIdle &&
+        null != t.celebrationEntry &&
+        null != t.celebrationIdle
     ) {
-        let t =
-                "idle" === j
-                    ? { type: "video", src: e.activationIdle, fallbackImageSrc: m.A, loop: !0 }
-                    : { type: "video", src: e.activationEntry, fallbackImageSrc: m.A, loop: !1 },
-            n = "exit" === f || S;
-        return (0, l.jsxs)("div", {
+        let e =
+                "idle" === A
+                    ? { type: "video", src: t.activationIdle, fallbackImageSrc: u.A, loop: !0 }
+                    : { type: "video", src: t.activationEntry, fallbackImageSrc: u.A, loop: !1 },
+            n = "exit" === E || x;
+        return (0, a.jsxs)("div", {
             children: [
-                (0, l.jsxs)("div", {
-                    className: a()(u.j, { [u.Xn]: n }),
+                (0, a.jsxs)("div", {
+                    className: r()(b.j, { [b.Xn]: n }),
                     children: [
-                        (0, l.jsx)(d.A, {
+                        (0, a.jsx)(o.A, {
                             playsInline: !0,
                             muted: !0,
                             autoPlay: !0,
-                            onEnded: y,
-                            className: a()(u.Ki, "entry" === f ? u.RK : u.R),
-                            children: (0, l.jsx)("source", { src: e.celebrationEntry }),
+                            onEnded: I,
+                            className: r()(b.Ki, "entry" === E ? b.RK : b.R),
+                            children: (0, a.jsx)("source", { src: t.celebrationEntry }),
                         }),
-                        (0, l.jsx)(d.A, {
-                            ref: C,
+                        (0, a.jsx)(o.A, {
+                            ref: v,
                             playsInline: !0,
                             muted: !0,
                             loop: !0,
-                            className: a()(u.Ki, "idle" === f ? u.RK : u.R),
-                            children: (0, l.jsx)("source", { src: e.celebrationIdle }),
+                            className: r()(b.Ki, "idle" === E ? b.RK : b.R),
+                            children: (0, a.jsx)("source", { src: t.celebrationIdle }),
                         }),
                     ],
                 }),
-                (0, l.jsx)("div", { className: n ? u.aO : u.ws, children: g(t, A) }),
+                (0, a.jsx)("div", { className: n ? b.aO : b.ws, children: m(e, S) }),
             ],
         });
     }
-    let N = { type: "image", src: m.A, aspectRatio: "16/9" };
-    return (0, l.jsxs)(l.Fragment, {
-        children: [!p && !S && (0, l.jsx)("img", { src: x.A, alt: "", className: u.hK }), g(N, h)],
+    let j = { type: "image", src: u.A, aspectRatio: "16/9" };
+    return (0, a.jsxs)(a.Fragment, {
+        children: [!y && !x && (0, a.jsx)("img", { src: p.A, alt: "", className: b.hK }), m(j, f)],
     });
 }

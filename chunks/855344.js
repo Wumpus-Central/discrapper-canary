@@ -1,85 +1,89 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var l = n(627968);
 n(64700);
-var i = n(311907),
+var a = n(311907),
     s = n(3026),
-    r = n(397927),
-    a = n(964486),
-    o = n(58149),
-    u = n(376304),
-    c = n(509536),
-    d = n(98318),
-    m = n(657048),
-    h = n(976860),
-    g = n(734057),
-    A = n(317525),
-    f = n(309010),
-    p = n(954571),
-    x = n(652176),
-    C = n(652215),
-    N = n(746080),
-    v = n(985018),
-    E = n(183819);
-let T = (e) => {
+    i = n(305866),
+    r = n(534514),
+    o = n(834730),
+    c = n(821609),
+    u = n(104510),
+    d = n(964486),
+    m = n(58149),
+    g = n(376304),
+    h = n(509536),
+    p = n(98318),
+    A = n(657048),
+    _ = n(976860),
+    f = n(734057),
+    v = n(317525),
+    x = n(309010),
+    C = n(954571),
+    I = n(652176),
+    N = n(652215),
+    E = n(746080),
+    b = n(985018),
+    T = n(433211);
+let S = (e) => {
     let { roleIcon: t, guild: n } = e,
-        { name: T } = t;
-    (0, a.Ay)(() => {
-        p.default.track(C.HAw.OPEN_POPOUT, {
+        { name: S } = t;
+    (0, d.Ay)(() => {
+        C.default.track(N.HAw.OPEN_POPOUT, {
             type: "Role Icon Popout",
             guild_id: n.id,
-            ...(0, o.dI)(g.A.getChannel(f.A.getChannelId(n.id))),
+            ...(0, m.dI)(f.A.getChannel(x.A.getChannelId(n.id))),
         });
     });
-    let b = (0, i.bG)([A.A], () => (null != t.roleId ? A.A.getRole(n.id, t.roleId) : void 0)),
-        _ = (0, d.U)(b),
-        j = _
-            ? v.intl.formatToPlainString(v.t.t0928V, { name: T })
-            : v.intl.formatToPlainString(v.t.UDDkGy, { name: T }),
-        I = { ...t, src: null == t.src ? t.src : (0, u.ux)(t.src, 40), size: 40 },
-        S = _
+    let y = (0, a.bG)([v.A], () => (null != t.roleId ? v.A.getRole(n.id, t.roleId) : void 0)),
+        j = (0, p.U)(y),
+        R = j
+            ? b.intl.formatToPlainString(b.t.t0928V, { name: S })
+            : b.intl.formatToPlainString(b.t.UDDkGy, { name: S }),
+        M = { ...t, src: null == t.src ? t.src : (0, g.ux)(t.src, 40), size: 40 },
+        w = j
             ? () => {
-                  (0, h.pX)(C.BVt.CHANNEL(n.id, N.VV.ROLE_SUBSCRIPTIONS));
+                  (0, _.pX)(N.BVt.CHANNEL(n.id, E.VV.ROLE_SUBSCRIPTIONS));
               }
             : () => {
-                  (0, c.K4)({ guildId: n.id, location: { section: C.JJy.ROLE_ICON_POPOUT } });
+                  (0, h.K4)({ guildId: n.id, location: { section: N.JJy.ROLE_ICON_POPOUT } });
               };
-    return (0, l.jsx)(r.lGe, {
-        children: (0, l.jsx)(x.Uq, {
+    return (0, l.jsx)(i.l, {
+        children: (0, l.jsx)(I.Uq, {
             children: (0, l.jsxs)("div", {
-                className: E.jC,
+                className: T.jC,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: E.rb,
+                        className: T.rb,
                         children: [
                             (0, l.jsx)("div", {
-                                className: E.Xq,
-                                children: (0, l.jsx)(m.A, {
-                                    ...I,
+                                className: T.Xq,
+                                children: (0, l.jsx)(A.A, {
+                                    ...M,
                                     enableTooltip: !1,
-                                    className: E.__invalid_roleIcon,
+                                    className: T.__invalid_roleIcon,
                                     enableHeight: !1,
                                 }),
                             }),
                             (0, l.jsxs)("div", {
-                                className: E.bM,
+                                className: T.bM,
                                 children: [
-                                    (0, l.jsx)(r.Heading, {
+                                    (0, l.jsx)(r.D, {
                                         variant: "heading-md/semibold",
-                                        className: E.S3,
-                                        children: (0, l.jsx)(s.A, { children: T }),
+                                        className: T.S3,
+                                        children: (0, l.jsx)(s.A, { children: S }),
                                     }),
-                                    (0, l.jsx)(r.Text, { variant: "text-sm/normal", children: j }),
+                                    (0, l.jsx)(o.E, { variant: "text-sm/normal", children: R }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, l.jsx)(r.Button, {
+                    (0, l.jsx)(c.$, {
                         size: "sm",
                         variant: "secondary",
-                        text: v.intl.string(v.t["H930+H"]),
-                        onClick: S,
-                        icon: r._Jp,
+                        text: b.intl.string(b.t["H930+H"]),
+                        onClick: w,
+                        icon: u._,
                         fullWidth: !0,
                         autoFocus: !0,
                     }),

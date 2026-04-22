@@ -1,3 +1,7 @@
-d.d(c, { A: () => a });
-let a =
-    "https://cdn.discordapp.com/assets/content/2fd9dc63d23dcb51a4b7b8f909b0d63df0e834220eb50c2a879d48bed16c3e3a.png";
+r.d(t, { A: () => s });
+var n = r(620749);
+class s extends n.A {
+    patternBetween() {
+        return RegExp("^\\s*(T|um|am|,|-)?\\s*$");
+    }
+}

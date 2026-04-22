@@ -1,15 +1,15 @@
-n.d(t, { B: () => u });
-var i = n(158954),
+n.d(t, { B: () => c });
+var i = n(307301),
     s = n(419954),
     l = n(933297),
     a = n(665671),
     r = n(87707),
     o = n(780964),
     d = n(264717),
-    c = n(985018);
-let u = (0, s.zZ)(o.X.SECURITY_KEYS_CATEGORY, {
-        useTitle: () => c.intl.string(c.t.IBq4Y3),
-        useSubtitle: () => c.intl.string(c.t.yK9edS),
+    u = n(985018);
+let c = (0, s.zZ)(o.X.SECURITY_KEYS_CATEGORY, {
+        useTitle: () => u.intl.string(u.t.IBq4Y3),
+        useSubtitle: () => u.intl.string(u.t.yK9edS),
         useHeaderDecoration: function () {
             if ((0, r.dI)() === r.gW.AVAILABLE)
                 return {
@@ -18,8 +18,8 @@ let u = (0, s.zZ)(o.X.SECURITY_KEYS_CATEGORY, {
                         {
                             type: l.UV.BUTTON,
                             id: "add-security-key-button",
-                            text: c.intl.string(c.t["Tzs/fw"]),
-                            icon: i.j96,
+                            text: u.intl.string(u.t["Tzs/fw"]),
+                            icon: i.j,
                             onClick: a.A,
                         },
                     ],
@@ -32,18 +32,18 @@ let u = (0, s.zZ)(o.X.SECURITY_KEYS_CATEGORY, {
                         return {
                             type: l.lT.INLINE_NOTICE,
                             noticeType: "info",
-                            useText: () => c.intl.string(c.t.bWCGI9),
+                            useText: () => u.intl.string(u.t.bWCGI9),
                         };
                     case r.gW.UNAVAILABLE_UNVERIFIED:
                         return {
                             type: l.lT.INLINE_NOTICE,
                             noticeType: "warning",
-                            useText: () => c.intl.string(c.t.uggF7o),
+                            useText: () => u.intl.string(u.t.uggF7o),
                         };
                     case r.gW.AVAILABLE:
                         return;
                 }
             })(),
-        buildLayout: () => [m],
+        buildLayout: () => [g],
     }),
-    m = (0, s.E2)(o.X.SECURITY_KEYS_LIST, { useSearchTerms: () => [c.intl.string(c.t.y7SXYX)], Component: d.A });
+    g = (0, s.E2)(o.X.SECURITY_KEYS_LIST, { useSearchTerms: () => [u.intl.string(u.t.y7SXYX)], Component: d.A });

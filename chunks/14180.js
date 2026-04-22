@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = [
+        a = [
             "div",
             "mod",
             "in",
@@ -28,35 +28,49 @@ e.exports = function (e) {
             "with",
             "var",
         ],
-        r = "false true",
-        i = [
+        n = [
             e.C_LINE_COMMENT_MODE,
             e.COMMENT(/\{/, /\}/, { relevance: 0 }),
             e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
         ],
-        s = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
-        a = { className: "string", begin: /(#\d+)+/ },
-        o = { className: "number", begin: "\\b\\d+(\\.\\d+)?(DT|D|T)", relevance: 0 },
-        l = { className: "string", begin: '"', end: '"' },
-        u = {
+        r = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
+        i = { className: "string", begin: /(#\d+)+/ },
+        o = {
             match: [/procedure/, /\s+/, /[a-zA-Z_][\w@]*/, /\s*/],
             scope: { 1: "keyword", 3: "title.function" },
             contains: [
-                { className: "params", begin: /\(/, end: /\)/, keywords: n, contains: [s, a, e.NUMBER_MODE] },
-                ...i,
+                { className: "params", begin: /\(/, end: /\)/, keywords: a, contains: [r, i, e.NUMBER_MODE] },
+                ...n,
             ],
         },
-        c = ["Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"],
-        d = {
-            match: [/OBJECT/, /\s+/, t.either(...c), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
+        s = {
+            match: [
+                /OBJECT/,
+                /\s+/,
+                t.either("Table", "Form", "Report", "Dataport", "Codeunit", "XMLport", "MenuSuite", "Page", "Query"),
+                /\s+/,
+                /\d+/,
+                /\s+(?=[^\s])/,
+                /.*/,
+                /$/,
+            ],
             relevance: 3,
             scope: { 1: "keyword", 3: "type", 5: "number", 7: "title" },
         };
     return {
         name: "C/AL",
         case_insensitive: !0,
-        keywords: { keyword: n, literal: r },
+        keywords: { keyword: a, literal: "false true" },
         illegal: /\/\*/,
-        contains: [{ match: /[\w]{1,149}(?=\=)/, scope: "attribute", relevance: 0 }, s, a, o, l, e.NUMBER_MODE, d, u],
+        contains: [
+            { match: /[\w]{1,149}(?=\=)/, scope: "attribute", relevance: 0 },
+            r,
+            i,
+            { className: "number", begin: "\\b\\d+(\\.\\d+)?(DT|D|T)", relevance: 0 },
+            { className: "string", begin: '"', end: '"' },
+            e.NUMBER_MODE,
+            s,
+            o,
+        ],
     };
 };

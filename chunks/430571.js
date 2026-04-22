@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => o });
 var r = n(64700),
     i = n(508425),
-    a = n(397927);
-function s(e) {
-    let t = (0, a.rdh)(a.LU0.colors.TEXT_DEFAULT).int();
+    s = n(602853),
+    a = n(827734);
+function o(e) {
+    let t = (0, s.r)(a.A.colors.TEXT_DEFAULT).int();
     return r.useMemo(() => {
         switch (e) {
             case i.z.GRADIENT:

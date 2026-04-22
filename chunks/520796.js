@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => u, P: () => l });
-var r = n(627968);
+n.d(t, { A: () => u, P: () => o });
+var l = n(627968);
 n(64700);
 var i = n(94420),
-    s = n(525723),
-    a = n(516248),
-    o = n(985018);
-let l = () => {
+    a = n(525723),
+    r = n(516248),
+    s = n(985018);
+let o = () => {
     let e = (0, i.t4)((e) => e.selectedSkuId);
-    return (0, s.vw)({ skuId: e }) ? o.intl.format(o.t.fsOXXO, {}) : null;
+    return (0, a.vw)({ skuId: e }) ? s.intl.format(s.t.fsOXXO, {}) : null;
 };
 function u() {
-    let e = l();
-    return null == e ? null : (0, r.jsx)(a.A, { message: e });
+    let e = o();
+    return null == e ? null : (0, l.jsx)(r.A, { message: e });
 }

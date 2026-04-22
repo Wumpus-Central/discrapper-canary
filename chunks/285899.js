@@ -1,102 +1,99 @@
-a.d(t, { O: () => _, default: () => I });
+a.d(t, { O: () => I, default: () => g });
 var n = a(627968),
     r = a(64700),
     s = a(512750),
-    i = a(158954),
-    l = a(397927),
-    o = a(503852),
-    c = a(661685),
-    d = a(898190),
-    u = a(490557),
-    m = a(193157),
-    f = a(568065),
-    b = a(333354),
-    k = a(985018),
-    p = a(438619);
-function _(e) {
+    i = a(834730),
+    l = a(189213),
+    o = a(150934),
+    c = a(503852),
+    d = a(661685),
+    u = a(898190),
+    m = a(490557),
+    f = a(193157),
+    b = a(568065),
+    k = a(853513),
+    p = a(985018),
+    _ = a(832952);
+function I(e) {
     let {
             size: t,
             title: a,
             body: s,
-            warningText: o,
-            acknowledgementText: c,
-            error: d,
-            isLoading: u,
-            onDeactivate: m,
-            ...f
+            warningText: c,
+            acknowledgementText: d,
+            error: u,
+            isLoading: m,
+            onDeactivate: f,
+            ...b
         } = e,
-        [_, I] = r.useState(!1);
-    return (0, n.jsxs)(i.Modal, {
-        ...f,
+        [I, g] = r.useState(!1);
+    return (0, n.jsxs)(l.Modal, {
+        ...b,
         size: t,
-        title: k.intl.formatToPlainString(b.default.iEBw1M, { perk: a }),
-        subtitle: k.intl.formatToPlainString(b.default["7o0K+2"], { perk: a }),
+        title: p.intl.formatToPlainString(k.default.iEBw1M, { perk: a }),
+        subtitle: p.intl.formatToPlainString(k.default["7o0K+2"], { perk: a }),
         actions: [
-            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: f.onClose },
+            { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: b.onClose },
             {
                 variant: "critical-primary",
-                text: k.intl.string(b.default.PYPdl4),
-                loading: u,
-                onClick: m,
-                disabled: null != c && !_,
+                text: p.intl.string(k.default.PYPdl4),
+                loading: m,
+                onClick: f,
+                disabled: null != d && !I,
             },
         ],
         children: [
             s,
             (0, n.jsxs)("div", {
-                className: p.UW,
+                className: _.UW,
                 children: [
-                    (0, n.jsx)(i.EYj, {
+                    (0, n.jsx)(i.E, {
                         color: "text-feedback-critical",
                         variant: "eyebrow",
-                        children: k.intl.string(b.default.OVt5CC),
+                        children: p.intl.string(k.default.OVt5CC),
                     }),
-                    (0, n.jsx)(i.EYj, { className: p.i4, tag: "span", variant: "text-sm/medium", children: o }),
+                    (0, n.jsx)(i.E, { className: _.i4, tag: "span", variant: "text-sm/medium", children: c }),
                 ],
             }),
-            null != d &&
-                (0, n.jsx)(i.EYj, {
-                    className: p.kc,
+            null != u &&
+                (0, n.jsx)(i.E, {
+                    className: _.kc,
                     color: "text-feedback-critical",
                     variant: "text-sm/semibold",
-                    children: d,
+                    children: u,
                 }),
-            null != c &&
+            null != d &&
                 (0, n.jsx)("div", {
-                    className: p.ud,
-                    children: (0, n.jsx)(l.Checkbox, { checked: _, onChange: I, label: c, labelType: "secondary" }),
+                    className: _.ud,
+                    children: (0, n.jsx)(o.S, { checked: I, onChange: g, label: d, labelType: "secondary" }),
                 }),
         ],
     });
 }
-function I(e) {
+function g(e) {
     let { guildId: t, powerup: a, ...l } = e,
-        { onDeactivate: b, error: k, isLoading: I } = (0, d.A)(t, a),
+        { onDeactivate: o, error: k, isLoading: p } = (0, u.A)(t, a),
         { onClose: g } = l,
         T = r.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    b().then(() => {
+                    o().then(() => {
                         g?.();
                     });
             },
-            [g, b],
+            [g, o],
         ),
         x = (function (e, t) {
-            let { warningText: a, vanityUrlWarning: l } = (0, c.A)(e, t);
+            let { warningText: a, vanityUrlWarning: l } = (0, d.A)(e, t);
             return r.useMemo(
                 () =>
                     t.skuId === s.FB
-                        ? (0, n.jsx)(i.EYj, {
-                              color: "text-feedback-critical",
-                              variant: "text-sm/semibold",
-                              children: a,
-                          })
+                        ? (0, n.jsx)(i.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: a })
                         : null != l
                           ? (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     a,
-                                    (0, n.jsx)(i.EYj, {
+                                    (0, n.jsx)(i.E, {
                                         color: "text-feedback-critical",
                                         variant: "text-sm/semibold",
                                         children: l,
@@ -108,21 +105,21 @@ function I(e) {
             );
         })(t, a);
     return (
-        (0, o.Z)(t, a, o.q.DEACTIVATE),
-        (0, n.jsx)(_, {
-            size: a.type === f.o9.LEVEL ? "md" : "sm",
+        (0, c.Z)(t, a, c.q.DEACTIVATE),
+        (0, n.jsx)(I, {
+            size: a.type === b.o9.LEVEL ? "md" : "sm",
             title: a.title,
             body: (() => {
                 switch (a.type) {
-                    case f.o9.LEVEL:
-                        return (0, n.jsx)(m.A, { powerup: a });
-                    case f.o9.PERK:
-                        return (0, n.jsx)(u.l, { className: p.Sl, powerup: a });
+                    case b.o9.LEVEL:
+                        return (0, n.jsx)(f.A, { powerup: a });
+                    case b.o9.PERK:
+                        return (0, n.jsx)(m.l, { className: _.Sl, powerup: a });
                 }
             })(),
             warningText: x,
             error: k,
-            isLoading: I,
+            isLoading: p,
             onDeactivate: T,
             ...l,
         })

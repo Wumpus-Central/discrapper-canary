@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_d28fa1",
     yF: "divider_d28fa1",

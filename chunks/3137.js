@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => c });
 var r = n(735438),
     i = n(311907),
-    a = n(73153),
-    s = n(31408);
+    s = n(73153),
+    a = n(31408);
 let o = !1,
     l = {
         settingsVisible: !1,
@@ -12,28 +12,21 @@ let o = !1,
         combosRequiredCount: 5,
         comboSoundsEnabled: !0,
         screenshakeEnabled: !0,
-        screenshakeEnabledLocations: { [s.uD.CHAT_INPUT]: !0, [s.uD.VOICE_USER]: !1, [s.uD.MENTION]: !1 },
+        screenshakeEnabledLocations: { [a.uD.CHAT_INPUT]: !0, [a.uD.VOICE_USER]: !1, [a.uD.MENTION]: !1 },
         shakeIntensity: 1,
         confettiEnabled: !0,
         confettiEnabledLocations: {
-            [s.k.CHAT_INPUT]: !0,
-            [s.k.REACTION]: !0,
-            [s.k.MEMBER_USER]: !0,
-            [s.k.CALL_TILE]: !0,
+            [a.k.CHAT_INPUT]: !0,
+            [a.k.REACTION]: !0,
+            [a.k.MEMBER_USER]: !0,
+            [a.k.CALL_TILE]: !0,
         },
         confettiSize: 16,
         confettiCount: 5,
         warningSeen: !1,
     },
     u = (0, r.cloneDeep)(l);
-function c(e) {
-    let { settings: t } = e;
-    u = { ...u, ...t };
-}
-function d() {
-    o = !0;
-}
-class _ extends i.Ay.DeviceSettingsStore {
+class d extends i.Ay.DeviceSettingsStore {
     static displayName = "PoggermodeSettingsStore";
     static persistKey = "PoggermodeSettingsStore";
     initialize(e) {
@@ -71,4 +64,12 @@ class _ extends i.Ay.DeviceSettingsStore {
         return u.comboSoundsEnabled;
     }
 }
-let f = new _(a.h, { POGGERMODE_SETTINGS_UPDATE: c, POGGERMODE_TEMPORARILY_DISABLED: d });
+let c = new d(s.h, {
+    POGGERMODE_SETTINGS_UPDATE: function (e) {
+        let { settings: t } = e;
+        u = { ...u, ...t };
+    },
+    POGGERMODE_TEMPORARILY_DISABLED: function () {
+        o = !0;
+    },
+});

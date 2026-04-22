@@ -1,43 +1,44 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968),
-    l = n(64700),
+    r = n(64700),
     a = n(503698),
-    r = n.n(a),
+    l = n.n(a),
     s = n(311907),
     o = n(506774),
-    d = n(397927),
+    d = n(939249),
+    u = n(789645),
     c = n(521502),
-    u = n(380610),
-    A = n(828184),
-    h = n(985018),
-    _ = n(932553);
-let m = "isHideDevBanner",
-    g = () => {
-        let [e, t] = (0, l.useState)(o.w.get(m, "false")?.toString() === "true"),
-            n = (0, s.bG)([c.A], () => ((0, u.kK)() ? c.A.getCurrentBuildOverride().overrides?.discord_web : null));
+    A = n(380610),
+    h = n(828184),
+    _ = n(985018),
+    E = n(932553);
+let p = "isHideDevBanner",
+    m = () => {
+        let [e, t] = (0, r.useState)(o.w.get(p, "false")?.toString() === "true"),
+            n = (0, s.bG)([c.A], () => ((0, A.kK)() ? c.A.getCurrentBuildOverride().overrides?.discord_web : null));
         if (e) return null;
         let a = () => {
-                o.w.set(m, !0), t(!0);
+                o.w.set(p, !0), t(!0);
             },
-            g = () =>
-                (0, i.jsx)(d.DUT, {
+            m = () =>
+                (0, i.jsx)(d.D, {
                     onClick: a,
-                    className: _.b,
-                    "aria-label": h.intl.string(h.t.WAI6xu),
-                    children: (0, i.jsx)(d.PGe, { size: "md", color: "currentColor", className: _.ut }),
+                    className: E.b,
+                    "aria-label": _.intl.string(_.t.WAI6xu),
+                    children: (0, i.jsx)(u.P, { size: "md", color: "currentColor", className: E.ut }),
                 });
         return null != n
             ? (0, i.jsxs)("div", {
-                  className: r()(_.Wz, _.DM),
-                  children: [(0, i.jsx)(A.A, { className: _.Kk }), h.intl.string(h.t.Wj3LW4), (0, i.jsx)(g, {})],
+                  className: l()(E.Wz, E.DM),
+                  children: [(0, i.jsx)(h.A, { className: E.Kk }), _.intl.string(_.t.Wj3LW4), (0, i.jsx)(m, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, i.jsxs)("div", {
-                    className: r()(_.Wz, _.mr),
+                    className: l()(E.Wz, E.mr),
                     children: [
-                        (0, i.jsx)(A.A, { className: _.Kk }),
-                        h.intl.format(h.t.uyrfYF, { buildNumber: "530043" }),
-                        (0, i.jsx)(g, {}),
+                        (0, i.jsx)(h.A, { className: E.Kk }),
+                        _.intl.format(_.t.uyrfYF, { buildNumber: "533526" }),
+                        (0, i.jsx)(m, {}),
                     ],
                 })
               : null;

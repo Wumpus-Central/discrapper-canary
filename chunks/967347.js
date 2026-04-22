@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { w: () => m });
+n.d(t, { w: () => h });
 var r = n(311907),
     i = n(73153),
     s = n(49463),
@@ -7,8 +7,8 @@ var r = n(311907),
     o = n(723702),
     l = n(837921),
     u = n(652215);
-let c = { hashes: {} };
-async function d() {
+let d = { hashes: {} };
+async function c() {
     if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
     await l.Ay.ensureModule("discord_media");
     let e = l.Ay.requireModule("discord_media");
@@ -16,35 +16,36 @@ async function d() {
 }
 async function _() {
     try {
-        let e = (await d()).filter((e) => c.hashes[e.name] !== e.hash);
+        let e = (await c()).filter((e) => d.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: r } of e) {
             let e = { ...r, gpus: r.gpus?.map((e) => JSON.stringify(e)) };
-            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
+            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((d = { hashes: { ...d.hashes } }).hashes[t] = n);
         }
-        e.length > 0 && h.emitChange();
+        e.length > 0 && E.emitChange();
     } catch (e) {}
 }
-function f() {
-    return _(), !1;
-}
-class p extends r.Ay.PersistedStore {
+class f extends r.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
     initialize(e) {
-        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
+        (d = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
     }
     getState() {
-        return c;
+        return d;
     }
     async info() {
         try {
-            let e = (await d()).find((e) => "hardware_detected" === e.name);
+            let e = (await c()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-let h = new p(i.h, { START_SESSION: f });
-function m() {
-    return h.info();
+let E = new f(i.h, {
+    START_SESSION: function () {
+        return _(), !1;
+    },
+});
+function h() {
+    return E.info();
 }

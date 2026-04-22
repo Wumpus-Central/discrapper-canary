@@ -1,23 +1,24 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var l = n(397927),
+var l = n(477782),
+    a = n(534890),
     r = n(604681),
-    a = n(17447),
-    s = n(141850),
-    o = n(736339);
-function d(e, t) {
-    if (!(0, a.f)("message_context_menu")) return null;
-    let n = o.A.getConversationForMessage(t.id, e.id);
+    s = n(17447),
+    o = n(141850),
+    d = n(736339);
+function c(e, t) {
+    if (!(0, s.f)("message_context_menu")) return null;
+    let n = d.A.getConversationForMessage(t.id, e.id);
     return null == n
         ? null
-        : (0, i.jsx)(l.Drp, {
+        : (0, i.jsx)(l.Dr, {
               id: "view-conversation",
               label: "View Conversation",
-              leadingAccessory: { type: "icon", icon: l.oyn },
-              icon: l.oyn,
+              leadingAccessory: { type: "icon", icon: a.o },
+              icon: a.o,
               action: () => {
-                  r.A.openConversationsSection(), (0, s.s4)(t.id, n);
+                  r.A.openConversationsSection(), (0, o.xI)(t.id, n);
               },
           });
 }

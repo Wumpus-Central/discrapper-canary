@@ -1,50 +1,49 @@
-"use strict";
-n.d(t, { V: () => h, t: () => p });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    s = n(572164),
-    a = n(532624),
-    o = n(350535),
-    l = n(22802),
-    u = n(592598),
-    c = n(581730),
-    d = n(672396),
-    _ = n(652215),
-    f = n(985018);
-function p() {
+i.d(e, { V: () => p, t: () => y });
+var n = i(627968);
+i(64700);
+var l = i(176781),
+    a = i(572164),
+    r = i(532624),
+    s = i(350535),
+    o = i(22802),
+    u = i(592598),
+    c = i(581730),
+    d = i(672396),
+    A = i(652215),
+    f = i(985018);
+function y() {
     if (u.A.isNotificationDisabled(d.KS.ClipsReminderNotification)) return null;
-    let { trackView: e, trackClick: t } = (0, c.Y9)(d.KS.ClipsReminderNotification, {
+    let { trackView: t, trackClick: e } = (0, c.Y9)(d.KS.ClipsReminderNotification, {
             notif_type: d.KS.ClipsReminderNotification,
         }),
-        n = a.Ay.getKeybindForAction(_.hCu.SAVE_CLIP),
-        p = (0, s.TD)();
-    if (null == n || !p) return null;
-    let h = o.dI(n.shortcut, !0);
+        i = r.Ay.getKeybindForAction(A.hCu.SAVE_CLIP),
+        y = (0, a.TD)();
+    if (null == i || !y) return null;
+    let p = s.dI(i.shortcut, !0);
     return {
         title: f.intl.format(f.t.S5uhCN, {
-            keybind: h,
-            keybindHook: (e, t) => (0, r.jsx)(l.b, { keybind: h.split("+") }, t),
+            keybind: p,
+            keybindHook: (t, e) => (0, n.jsx)(o.b, { keybind: p.split("+") }, e),
         }),
-        icon: (0, r.jsx)(i.xgA, { size: "lg", color: "currentColor" }),
-        onNotificationShow: () => {
-            e();
-        },
-        onDismissClick: () => {
-            t("dismiss");
-        },
-    };
-}
-function h(e) {
-    let { trackView: t, trackClick: n } = (0, c.Y9)(d.KS.ClipsNotification, { notif_type: d.KS.ClipsNotification });
-    return {
-        title: e,
-        icon: (0, r.jsx)(i.xgA, { size: "lg", color: "currentColor" }),
+        icon: (0, n.jsx)(l.x, { size: "lg", color: "currentColor" }),
         onNotificationShow: () => {
             t();
         },
         onDismissClick: () => {
-            n("dismiss");
+            e("dismiss");
+        },
+    };
+}
+function p(t) {
+    let { trackView: e, trackClick: i } = (0, c.Y9)(d.KS.ClipsNotification, { notif_type: d.KS.ClipsNotification });
+    return {
+        title: t,
+        icon: (0, n.jsx)(l.x, { size: "lg", color: "currentColor" }),
+        onNotificationShow: () => {
+            e();
+        },
+        onDismissClick: () => {
+            i("dismiss");
         },
     };
 }

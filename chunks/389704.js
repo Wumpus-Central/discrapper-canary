@@ -1,16 +1,18 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, {
+    A: () =>
+        function e(t, n) {
+            void 0 === n && (n = []);
+            var o,
+                l = (0, r.A)(t),
+                u = l === (null == (o = t.ownerDocument) ? void 0 : o.body),
+                d = (0, s.A)(l),
+                c = u ? [d].concat(d.visualViewport || [], (0, a.A)(l) ? l : []) : l,
+                _ = n.concat(c);
+            return u ? _ : _.concat(e((0, i.A)(c)));
+        },
+});
 var r = n(847267),
     i = n(543894),
-    a = n(559374),
-    s = n(324049);
-function o(e, t) {
-    void 0 === t && (t = []);
-    var n,
-        l = (0, r.A)(e),
-        u = l === (null == (n = e.ownerDocument) ? void 0 : n.body),
-        c = (0, a.A)(l),
-        d = u ? [c].concat(c.visualViewport || [], (0, s.A)(l) ? l : []) : l,
-        _ = t.concat(d);
-    return u ? _ : _.concat(o((0, i.A)(d)));
-}
+    s = n(559374),
+    a = n(324049);

@@ -1,7 +1,6 @@
-"use strict";
 n.d(t, { A: () => o });
 var i = n(615300);
-class s {
+class l {
     animation;
     constructor(e) {
         this.animation = e;
@@ -17,7 +16,7 @@ class s {
         this.animation.stop();
     }
 }
-class l {
+class s {
     animations;
     constructor(e) {
         this.animations = e;
@@ -49,7 +48,7 @@ class r {
     }
 }
 function a(e, t, n) {
-    return new s(n(e, { ...t }));
+    return new l(n(e, { ...t }));
 }
 let o = {
     ...i.A,
@@ -60,7 +59,7 @@ let o = {
         return a(e, t, i.A.spring);
     },
     parallel: function (e) {
-        return new l(e);
+        return new s(e);
     },
     sequence: function (e) {
         return new r(e);

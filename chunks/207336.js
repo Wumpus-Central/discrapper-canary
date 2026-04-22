@@ -1,108 +1,114 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => R });
 var l = n(627968),
-    i = n(64700),
+    a = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(407045),
+    i = n.n(s),
+    r = n(517738),
     o = n(311907),
-    d = n(397927),
-    c = n(517461),
-    u = n(835369),
-    m = n(997509),
-    h = n(95035),
-    x = n(576705),
-    g = n(975571),
-    f = n(652215),
-    _ = n(221314),
-    p = n(985018),
-    j = n(50897),
-    b = n(419949),
-    v = n(330070),
-    A = n(207532);
-let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
-    T = (e) => {
+    d = n(866323),
+    c = n(331322),
+    u = n(834730),
+    m = n(111159),
+    h = n(534514),
+    g = n(939249),
+    x = n(789645),
+    f = n(517461),
+    _ = n(835369),
+    p = n(997509),
+    j = n(95035),
+    b = n(576705),
+    v = n(975571),
+    C = n(652215),
+    A = n(221314),
+    N = n(985018),
+    S = n(50897),
+    E = n(419949),
+    T = n(330070),
+    y = n(207532);
+let I = { mass: 1, tension: 250, friction: 18, clamp: !0 },
+    w = (e) => {
         let { guild: t } = e,
-            n = (0, o.bG)([x.A], () => x.A.can(f.xBc.MANAGE_GUILD, t));
-        return (0, l.jsxs)(d.BJc, {
+            n = (0, o.bG)([b.A], () => b.A.can(C.xBc.MANAGE_GUILD, t));
+        return (0, l.jsxs)(c.B, {
             direction: "horizontal",
             gap: 8,
             children: [
-                (0, l.jsxs)(d.BJc, {
+                (0, l.jsxs)(c.B, {
                     direction: "vertical",
                     gap: 16,
                     children: [
-                        (0, l.jsx)(d.BJc, {
+                        (0, l.jsx)(c.B, {
                             direction: "vertical",
                             gap: 4,
-                            children: (0, l.jsx)(d.Text, {
+                            children: (0, l.jsx)(u.E, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: p.intl.string(_.default.fP8DVx),
+                                children: N.intl.string(A.default.fP8DVx),
                             }),
                         }),
-                        (0, l.jsxs)(d.BJc, {
+                        (0, l.jsxs)(c.B, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, l.jsx)(d.Text, {
+                                (0, l.jsx)(u.E, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
-                                    children: p.intl.string(_.default["i7CH/I"]),
+                                    children: N.intl.string(A.default["i7CH/I"]),
                                 }),
                                 (0, l.jsxs)("ol", {
-                                    className: a()(j.p_, j.o8, j.ap),
+                                    className: i()(S.p_, S.o8, S.ap),
                                     children: [
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(d.Text, {
+                                            children: (0, l.jsx)(u.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: p.intl.string(_.default["+Izoz7"]),
+                                                children: N.intl.string(A.default["+Izoz7"]),
                                             }),
                                         }),
                                         (0, l.jsxs)("li", {
                                             children: [
-                                                (0, l.jsx)(d.Text, {
+                                                (0, l.jsx)(u.E, {
                                                     variant: "text-md/normal",
                                                     color: "text-default",
-                                                    children: p.intl.string(_.default["iu/RkU"]),
+                                                    children: N.intl.string(A.default["iu/RkU"]),
                                                 }),
                                                 (0, l.jsxs)("ul", {
-                                                    className: a()(j.p_, j.t3, j.zS),
+                                                    className: i()(S.p_, S.t3, S.zS),
                                                     children: [
                                                         (0, l.jsx)("li", {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                            children: (0, l.jsx)(u.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: p.intl.string(_.default.QogKbP),
+                                                                children: N.intl.string(A.default.QogKbP),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                            children: (0, l.jsx)(u.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: p.intl.string(_.default.V4orHT),
+                                                                children: N.intl.string(A.default.V4orHT),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                            children: (0, l.jsx)(u.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: p.intl.string(_.default.VrrQXe),
+                                                                children: N.intl.string(A.default.VrrQXe),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                            children: (0, l.jsx)(u.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: p.intl.string(_.default.pSuM5e),
+                                                                children: N.intl.string(A.default.pSuM5e),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
-                                                            children: (0, l.jsx)(d.Text, {
+                                                            children: (0, l.jsx)(u.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: p.intl.string(_.default["/RLXlI"]),
+                                                                children: N.intl.string(A.default["/RLXlI"]),
                                                             }),
                                                         }),
                                                     ],
@@ -110,20 +116,20 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                             ],
                                         }),
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(d.Text, {
+                                            children: (0, l.jsx)(u.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: p.intl.string(_.default.j4AmYy),
+                                                children: N.intl.string(A.default.j4AmYy),
                                             }),
                                         }),
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(d.Text, {
+                                            children: (0, l.jsx)(u.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: p.intl.format(_.default["/g+PvX"], {
-                                                    termsOfService: f.X7G.TERMS,
-                                                    communityGuidelines: f.X7G.GUIDELINES,
-                                                    helpArticle: g.A.getArticleURL(f.MVz.FLAG_TO_MOD),
+                                                children: N.intl.format(A.default["/g+PvX"], {
+                                                    termsOfService: C.X7G.TERMS,
+                                                    communityGuidelines: C.X7G.GUIDELINES,
+                                                    helpArticle: v.A.getArticleURL(C.MVz.FLAG_TO_MOD),
                                                 }),
                                             }),
                                         }),
@@ -131,32 +137,32 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 }),
                             ],
                         }),
-                        (0, l.jsxs)(d.BJc, {
+                        (0, l.jsxs)(c.B, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, l.jsx)(d.Text, {
+                                (0, l.jsx)(u.E, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
-                                    children: p.intl.string(_.default.qJWXsz),
+                                    children: N.intl.string(A.default.qJWXsz),
                                 }),
                                 (0, l.jsxs)("ul", {
-                                    className: a()(j.p_, j.zS, j.ap),
+                                    className: i()(S.p_, S.zS, S.ap),
                                     children: [
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(d.Text, {
+                                            children: (0, l.jsx)(u.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: p.intl.format(_.default.FUBV1P, {
+                                                children: N.intl.format(A.default.FUBV1P, {
                                                     survey: "https://discord.sjc1.qualtrics.com/jfe/form/SV_3WvT7SqlWpCJ4HQ",
                                                 }),
                                             }),
                                         }),
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(d.Text, {
+                                            children: (0, l.jsx)(u.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: p.intl.format(_.default.W4MIAG, {
+                                                children: N.intl.format(A.default.W4MIAG, {
                                                     feedback: "https://forms.gle/RbDhW46PMmR39XUP7",
                                                 }),
                                             }),
@@ -165,52 +171,52 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 }),
                             ],
                         }),
-                        (0, l.jsxs)(d.BJc, {
+                        (0, l.jsxs)(c.B, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, l.jsx)(d.Text, {
+                                (0, l.jsx)(u.E, {
                                     variant: "text-md/normal",
                                     color: "text-default",
-                                    children: p.intl.string(_.default.J3HKmx),
+                                    children: N.intl.string(A.default.J3HKmx),
                                 }),
                                 n &&
-                                    (0, l.jsx)(d.Text, {
+                                    (0, l.jsx)(u.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
-                                        children: p.intl.format(_.default["9x2vbP"], {
+                                        children: N.intl.format(A.default["9x2vbP"], {
                                             optOutHook: (e) =>
-                                                (0, l.jsx)(h.A, {
+                                                (0, l.jsx)(j.A, {
                                                     onClick: () =>
-                                                        m.A.open(t.id, f.BEX.MODERATION, null, f.nd0.SAFETY_OVERVIEW),
+                                                        p.A.open(t.id, C.BEX.MODERATION, null, C.nd0.SAFETY_OVERVIEW),
                                                     children: e,
                                                 }),
                                         }),
                                     }),
-                                (0, l.jsx)(d.Text, {
+                                (0, l.jsx)(u.E, {
                                     variant: "text-md/normal",
                                     color: "text-default",
-                                    children: p.intl.string(_.default.KcCY25),
+                                    children: N.intl.string(A.default.KcCY25),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, l.jsx)("img", { src: A, alt: p.intl.string(p.t.gAlJzV), width: u.T5, height: u.T5 }),
+                (0, l.jsx)("img", { src: y, alt: N.intl.string(N.t.gAlJzV), width: _.T5, height: _.T5 }),
             ],
         });
     };
-function N(e) {
+function R(e) {
     let t,
         { guild: n } = e,
-        [s, o] = (0, c.V)("report-to-mod-education-dismissed", !1),
-        [u, m] = (0, c.V)("report-to-mod-education-expanded", !1),
-        { transitions: h, setVisible: x } = (() => {
-            let [e, t] = i.useState(!0);
+        [s, o] = (0, f.V)("report-to-mod-education-dismissed", !1),
+        [c, _] = (0, f.V)("report-to-mod-education-expanded", !1),
+        { transitions: p, setVisible: j } = (() => {
+            let [e, t] = a.useState(!0);
             return {
-                transitions: (0, d.pnh)(e, {
+                transitions: (0, d.p)(e, {
                     keys: (e) => (e ? "shown" : "hidden"),
-                    config: C,
+                    config: I,
                     from: { opacity: 0 },
                     enter: { opacity: 1 },
                     leave: { opacity: 0 },
@@ -219,73 +225,73 @@ function N(e) {
                 setVisible: t,
             };
         })(),
-        g =
-            ((t = u ?? !1),
-            (0, d.pnh)(t, {
+        b =
+            ((t = c ?? !1),
+            (0, d.p)(t, {
                 from: { maxHeight: 0 },
                 enter: { maxHeight: 850 },
                 leave: { maxHeight: 0 },
                 config: { duration: 200 },
             }));
-    return (i.useEffect(() => {
-        s && x(!1);
-    }, [s, x]),
+    return (a.useEffect(() => {
+        s && j(!1);
+    }, [s, j]),
     s)
         ? null
-        : h((e, t) =>
+        : p((e, t) =>
               t
                   ? (0, l.jsxs)(r.animated.div, {
                         style: e,
-                        onClick: () => m(!u),
-                        className: a()(v.kL, j.kL, b.mainCard),
+                        onClick: () => _(!c),
+                        className: i()(T.kL, S.kL, E.mainCard),
                         children: [
                             (0, l.jsxs)("div", {
-                                className: j.mG,
+                                className: S.mG,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: j.cy,
+                                        className: S.cy,
                                         children: [
-                                            (0, l.jsx)(d.pVd, {
+                                            (0, l.jsx)(m.p, {
                                                 size: "custom",
                                                 width: 28,
                                                 height: 28,
                                                 color: "currentColor",
-                                                className: j.Mg,
+                                                className: S.Mg,
                                             }),
-                                            (0, l.jsx)(d.Text, {
+                                            (0, l.jsx)(u.E, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
-                                                children: p.intl.string(p.t.uvGmCx),
+                                                children: N.intl.string(N.t.uvGmCx),
                                             }),
-                                            (0, l.jsx)(d.Text, {
+                                            (0, l.jsx)(u.E, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
                                                 children: "—",
                                             }),
-                                            (0, l.jsx)(d.Heading, {
+                                            (0, l.jsx)(h.D, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: p.intl.string(_.default["95qQRB"]),
+                                                children: N.intl.string(A.default["95qQRB"]),
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(d.DUT, {
+                                    (0, l.jsx)(g.D, {
                                         onClick: () => o(!0),
-                                        children: (0, l.jsx)(d.PGe, {
+                                        children: (0, l.jsx)(x.P, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: j.ut,
+                                            className: S.ut,
                                         }),
                                     }),
                                 ],
                             }),
-                            g((e, t) =>
+                            b((e, t) =>
                                 t
                                     ? (0, l.jsxs)(r.animated.div, {
                                           style: e,
                                           children: [
-                                              (0, l.jsx)("hr", { className: j.me }),
-                                              (0, l.jsx)(T, { guild: n }),
+                                              (0, l.jsx)("hr", { className: S.me }),
+                                              (0, l.jsx)(w, { guild: n }),
                                           ],
                                       })
                                     : null,

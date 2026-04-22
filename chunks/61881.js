@@ -1,56 +1,19 @@
 "use strict";
-n.d(t, { A: () => b }), n(321073);
+n.d(t, { A: () => m }), n(321073);
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(287809),
     l = n(622543);
 let u = null,
-    c = null,
-    d = !1,
+    d = null,
+    c = !1,
     _ = { suggestedGamesIds: [], suggestedWishlistGamesIds: [] },
     f = !1,
-    p = !1,
+    E = !1,
     h = !1;
-function m(e) {
-    let { widgets: t } = e;
-    if (((u = t), null === c)) {
-        let e = o.default.getCurrentUser();
-        if (null != e) {
-            let t = l.A.getUserProfile(e.id);
-            c = t?.widgets ?? [];
-        }
-    }
-}
-function g() {
-    (u = null), (c = null);
-}
-function E(e) {
-    let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-    (_.suggestedGamesIds = t), (_.suggestedWishlistGamesIds = n), (p = !1), (f = !1);
-}
-function A() {
-    (f = !0), (p = !1);
-}
-function I() {
-    (p = !0), (f = !1), (h = !0);
-}
-function T(e) {
-    d = !0;
-}
-function y(e) {
-    (d = !1), null !== u && ((c = null), (u = null));
-}
-function S(e) {
-    d = !1;
-}
-function v(e) {
-    let { applicationId: t } = e;
-    (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
-        (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
-}
-class C extends a.Ay.Store {
+class p extends s.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
@@ -61,12 +24,12 @@ class C extends a.Ay.Store {
         return null == u ? null : u.filter((e) => !e.isDiscardable());
     }
     hasPendingChanges() {
-        return null !== u && (null === c || !i().isEqual(u, c));
+        return null !== u && (null === d || !i().isEqual(u, d));
     }
     getWidgetUpdates() {
         let e = this.getSaveablePendingWidgets();
-        if (null == e || null == c) return { changedWidgets: e ?? [], removedWidgets: [], hasOrderChanges: !1 };
-        let t = new Map(c.map((e) => [e.id, e])),
+        if (null == e || null == d) return { changedWidgets: e ?? [], removedWidgets: [], hasOrderChanges: !1 };
+        let t = new Map(d.map((e) => [e.id, e])),
             n = new Map(e.map((e) => [e.id, e])),
             r = [],
             i = [];
@@ -75,13 +38,13 @@ class C extends a.Ay.Store {
             (null != n && i.isEqual(n)) || r.push(i);
         }
         for (let [e, r] of t) n.has(e) || i.push(r);
-        let a = !1;
+        let s = !1;
         for (let t = 0; t < e.length; t++)
-            if (e[t]?.id !== c[t]?.id) {
-                a = !0;
+            if (e[t]?.id !== d[t]?.id) {
+                s = !0;
                 break;
             }
-        return { changedWidgets: r, removedWidgets: i, hasOrderChanges: a };
+        return { changedWidgets: r, removedWidgets: i, hasOrderChanges: s };
     }
     getChangedWidgets() {
         let { changedWidgets: e } = this.getWidgetUpdates();
@@ -100,13 +63,13 @@ class C extends a.Ay.Store {
         return null != e && e.every((e) => e.isValid());
     }
     get isSubmitting() {
-        return d;
+        return c;
     }
     get suggestedFetchError() {
         return f;
     }
     get suggestedFetchIsLoading() {
-        return p;
+        return E;
     }
     get suggestedFetchAttempted() {
         return h;
@@ -115,14 +78,42 @@ class C extends a.Ay.Store {
         return _;
     }
 }
-let b = new C(s.h, {
-    WIDGET_PENDING_SET: m,
-    WIDGET_PENDING_SAVE_START: T,
-    WIDGET_PENDING_SAVE_SUCCESS: y,
-    WIDGET_PENDING_SAVE_FAILURE: S,
-    WIDGET_SUGGESTED_FETCH_SUCCESS: E,
-    WIDGET_SUGGESTED_FETCH_FAILURE: A,
-    WIDGET_SUGGESTED_FETCH_START: I,
-    WIDGET_PENDING_CLEAR: g,
-    WIDGET_SUGGESTED_REMOVE_GAME: v,
+let m = new p(a.h, {
+    WIDGET_PENDING_SET: function (e) {
+        let { widgets: t } = e;
+        if (((u = t), null === d)) {
+            let e = o.default.getCurrentUser();
+            if (null != e) {
+                let t = l.A.getUserProfile(e.id);
+                d = t?.widgets ?? [];
+            }
+        }
+    },
+    WIDGET_PENDING_SAVE_START: function (e) {
+        c = !0;
+    },
+    WIDGET_PENDING_SAVE_SUCCESS: function (e) {
+        (c = !1), null !== u && ((d = null), (u = null));
+    },
+    WIDGET_PENDING_SAVE_FAILURE: function (e) {
+        c = !1;
+    },
+    WIDGET_SUGGESTED_FETCH_SUCCESS: function (e) {
+        let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
+        (_.suggestedGamesIds = t), (_.suggestedWishlistGamesIds = n), (E = !1), (f = !1);
+    },
+    WIDGET_SUGGESTED_FETCH_FAILURE: function () {
+        (f = !0), (E = !1);
+    },
+    WIDGET_SUGGESTED_FETCH_START: function () {
+        (E = !0), (f = !1), (h = !0);
+    },
+    WIDGET_PENDING_CLEAR: function () {
+        (u = null), (d = null);
+    },
+    WIDGET_SUGGESTED_REMOVE_GAME: function (e) {
+        let { applicationId: t } = e;
+        (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
+            (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
+    },
 });

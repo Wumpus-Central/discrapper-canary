@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => x });
 var i = n(635377),
-    s = n.n(i),
-    l = n(311907),
+    l = n.n(i),
+    s = n(311907),
     r = n(73153),
     a = n(950762),
     o = n(967198),
@@ -10,8 +9,8 @@ var i = n(635377),
 let c = {},
     u = {},
     m = 0,
-    g = new (s())({ max: 5, maxAge: d.A.Millis.HOUR });
-class x extends l.Ay.Store {
+    g = new (l())({ max: 5, maxAge: d.A.Millis.HOUR });
+class h extends s.Ay.Store {
     static displayName = "GuildSettingsEmojiStore";
     initialize() {
         this.waitFor(o.A);
@@ -29,7 +28,7 @@ class x extends l.Ay.Store {
         return g.get(e);
     }
 }
-let h = new x(r.h, {
+let x = new h(r.h, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;
         u[t] = u[t].filter((e) => e.id !== n);

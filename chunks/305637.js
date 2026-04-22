@@ -1,68 +1,71 @@
-n.d(e, { A: () => f });
+n.d(t, { A: () => C });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    r = n(990078),
-    a = n(397927),
-    s = n(630054),
-    o = n(956793),
-    d = n(401843),
-    u = n(279250),
-    c = n(267102),
-    A = n(616356),
+    a = n(990078),
+    s = n(821609),
+    r = n(183623),
+    o = n(408278),
+    c = n(622631),
+    d = n(630054),
+    u = n(956793),
+    h = n(401843),
+    m = n(279250),
+    A = n(267102),
+    g = n(616356),
     p = n(734057),
-    m = n(203982),
-    h = n(652215),
-    g = n(985018);
-function f(t) {
-    let { isCurrentUser: e, applicationStream: n, onAction: f } = t,
-        { activeStream: E, watchingOtherStream: C } = (0, l.cf)([A.A], () => ({
-            activeStream: A.A.getActiveStreamForApplicationStream(n),
+    _ = n(203982),
+    f = n(652215),
+    E = n(985018);
+function C(e) {
+    let { isCurrentUser: t, applicationStream: n, onAction: C } = e,
+        { activeStream: x, watchingOtherStream: S } = (0, l.cf)([g.A], () => ({
+            activeStream: g.A.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
                 null != n &&
-                A.A.getAllActiveStreamsForChannel(n.channelId).filter((t) => {
-                    let { ownerId: e } = t;
-                    return e !== n.ownerId;
+                g.A.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
+                    let { ownerId: t } = e;
+                    return t !== n.ownerId;
                 }).length > 0,
         })),
-        S = (0, l.bG)([p.A], () => p.A.getChannel(n?.channelId)),
-        [T, v] = (0, u.zP)(S),
-        y = (0, c.aL)(),
-        x = null != E && null != n && E.state !== h.XYD.ENDED && E.ownerId === n.ownerId,
-        N = (t) => {
+        I = (0, l.bG)([p.A], () => p.A.getChannel(n?.channelId)),
+        [N, v] = (0, m.zP)(I),
+        T = (0, A.aL)(),
+        y = null != x && null != n && x.state !== f.XYD.ENDED && x.ownerId === n.ownerId,
+        b = (e) => {
             null != n &&
-                (f?.(),
-                o.default.selectVoiceChannel(n.channelId),
-                x || (0, d.Nl)(n, { forceMultiple: t }),
-                y.dispatch(h.jej.POPOUT_CLOSE),
-                m._.dispatch(h.jej.MODAL_CLOSE),
-                s.A.popAll());
+                (C?.(),
+                u.default.selectVoiceChannel(n.channelId),
+                y || (0, h.Nl)(n, { forceMultiple: e }),
+                T.dispatch(f.jej.POPOUT_CLOSE),
+                _._.dispatch(f.jej.MODAL_CLOSE),
+                d.A.popAll());
         };
     if (null == n) return null;
-    let _ = (0, u.CT)(v);
+    let j = (0, m.CT)(v);
     return (
-        e ? (_ = g.intl.string(g.t.XvBdeT)) : x && (_ = g.intl.string(g.t["JH1SJ+"])),
+        t ? (j = E.intl.string(E.t.XvBdeT)) : y && (j = E.intl.string(E.t["JH1SJ+"])),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.Button, {
+                (0, i.jsx)(s.$, {
                     size: "sm",
-                    variant: x ? "secondary" : "active",
-                    icon: a.Fzq,
-                    text: _,
-                    disabled: e || x || !T,
-                    onClick: () => N(!1),
+                    variant: y ? "secondary" : "active",
+                    icon: r.F,
+                    text: j,
+                    disabled: t || y || !N,
+                    onClick: () => b(!1),
                     fullWidth: !0,
                 }),
-                C && !x
-                    ? (0, i.jsx)(r.m, {
-                          text: g.intl.string(g.t.wCrzut),
-                          children: (0, i.jsx)(a.K0, {
+                S && !y
+                    ? (0, i.jsx)(a.m, {
+                          text: E.intl.string(E.t.wCrzut),
+                          children: (0, i.jsx)(o.K, {
                               variant: "secondary",
                               size: "sm",
-                              icon: a.vAm,
-                              "aria-label": g.intl.string(g.t.wCrzut),
+                              icon: c.v,
+                              "aria-label": E.intl.string(E.t.wCrzut),
                               onClick: () => {
-                                  N(!0);
+                                  b(!0);
                               },
                           }),
                       })

@@ -1,83 +1,84 @@
-n.d(t, { A: () => g });
-var i = n(627968);
-n(64700);
-var l = n(417597),
-    s = n(397927),
-    a = n(882997),
-    r = n(731474),
-    o = n(383501),
-    d = n(977997),
-    c = n(458829),
-    u = n(857253),
-    h = n(694967),
-    A = n(431516),
-    _ = n(652215),
-    m = n(985018);
-function g(e) {
-    let t = (0, l.bG)([o.A], () => o.A.getChannelId() === e.id),
-        g = (0, u.A)(),
-        p = g?.channelId === e.id,
-        f = (0, r.J)(e) && !e.isPrivate(),
-        x = (0, r.A)(e),
-        E = (!(0, l.bG)([d.A], () => d.A.isInChannel(e.id)) && x) || f,
-        I = (0, h.A)();
-    if (!p && 0 === I.length) return null;
-    let C = (0, A.A)(void 0);
-    return p
-        ? (0, i.jsx)(s.Drp, {
-              label: m.intl.string(m.t.PlwgdU),
+t.d(n, { A: () => f });
+var l = t(627968);
+t(64700);
+var i = t(417597),
+    a = t(192308),
+    s = t(477782),
+    r = t(882997),
+    o = t(731474),
+    c = t(383501),
+    u = t(977997),
+    d = t(458829),
+    A = t(857253),
+    h = t(694967),
+    p = t(431516),
+    m = t(652215),
+    g = t(985018);
+function f(e) {
+    let n = (0, i.bG)([c.A], () => c.A.getChannelId() === e.id),
+        f = (0, A.A)(),
+        C = f?.channelId === e.id,
+        E = (0, o.J)(e) && !e.isPrivate(),
+        v = (0, o.A)(e),
+        I = (!(0, i.bG)([u.A], () => u.A.isInChannel(e.id)) && v) || E,
+        x = (0, h.A)();
+    if (!C && 0 === x.length) return null;
+    let T = (0, p.A)(void 0);
+    return C
+        ? (0, l.jsx)(s.Dr, {
+              label: g.intl.string(g.t.PlwgdU),
               id: "handoff",
               action: () => {
-                  (0, c.x)(g);
+                  (0, d.x)(f);
               },
-              icon: C,
-              leadingAccessory: { type: "icon", icon: C },
-              disabled: E,
+              icon: T,
+              leadingAccessory: { type: "icon", icon: T },
+              disabled: I,
           })
-        : I.map((l) => {
-              var r, o;
-              let d = (0, A.A)(l.type);
-              return (0, i.jsx)(
-                  s.Drp,
+        : x.map((i) => {
+              var o, c;
+              let u = (0, p.A)(i.type);
+              return (0, l.jsx)(
+                  s.Dr,
                   {
-                      id: `transfer-${l.type}-${l.id}`,
+                      id: `transfer-${i.type}-${i.id}`,
                       label:
-                          ((r = l.type),
-                          (o = t),
-                          r === _.fg2.XBOX
-                              ? o
-                                  ? m.intl.string(m.t["qVE/VF"])
-                                  : m.intl.string(m.t.E8euSk)
-                              : r === _.fg2.PLAYSTATION
-                                ? o
-                                    ? m.intl.string(m.t.vzfxmY)
-                                    : m.intl.string(m.t.QxEYDj)
-                                : r === _.fg2.PLAYSTATION_STAGING
-                                  ? o
-                                      ? m.intl.string(m.t.BDiXtV)
-                                      : m.intl.string(m.t["bhdB9+"])
+                          ((o = i.type),
+                          (c = n),
+                          o === m.fg2.XBOX
+                              ? c
+                                  ? g.intl.string(g.t["qVE/VF"])
+                                  : g.intl.string(g.t.E8euSk)
+                              : o === m.fg2.PLAYSTATION
+                                ? c
+                                    ? g.intl.string(g.t.vzfxmY)
+                                    : g.intl.string(g.t.QxEYDj)
+                                : o === m.fg2.PLAYSTATION_STAGING
+                                  ? c
+                                      ? g.intl.string(g.t.BDiXtV)
+                                      : g.intl.string(g.t["bhdB9+"])
                                   : void 0),
                       action: () => {
-                          !l.twoWayLink || l.revoked
-                              ? (0, a.A)({ platformType: l.type, location: "Console Transfer Item" })
-                              : l.type === _.fg2.XBOX
-                                ? (0, s.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("77406"), n.e("67670")]).then(
-                                          n.bind(n, 188072),
+                          !i.twoWayLink || i.revoked
+                              ? (0, r.A)({ platformType: i.type, location: "Console Transfer Item" })
+                              : i.type === m.fg2.XBOX
+                                ? (0, a.openModalLazy)(async () => {
+                                      let { default: n } = await Promise.all([t.e("66535"), t.e("67670")]).then(
+                                          t.bind(t, 188072),
                                       );
-                                      return (n) => (0, i.jsx)(t, { ...n, channel: e });
+                                      return (t) => (0, l.jsx)(n, { ...t, channel: e });
                                   })
-                                : (l.type === _.fg2.PLAYSTATION || l.type === _.fg2.PLAYSTATION_STAGING) &&
-                                  (0, s.mMO)(async () => {
-                                      let { default: t } = await n.e("71282").then(n.bind(n, 315337));
-                                      return (n) => (0, i.jsx)(t, { ...n, platform: l.type, channel: e });
+                                : (i.type === m.fg2.PLAYSTATION || i.type === m.fg2.PLAYSTATION_STAGING) &&
+                                  (0, a.openModalLazy)(async () => {
+                                      let { default: n } = await t.e("71282").then(t.bind(t, 315337));
+                                      return (t) => (0, l.jsx)(n, { ...t, platform: i.type, channel: e });
                                   });
                       },
-                      icon: d,
-                      leadingAccessory: { type: "icon", icon: d },
-                      disabled: E,
+                      icon: u,
+                      leadingAccessory: { type: "icon", icon: u },
+                      disabled: I,
                   },
-                  l.id,
+                  i.id,
               );
           });
 }

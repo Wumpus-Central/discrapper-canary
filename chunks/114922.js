@@ -1,15 +1,13 @@
 "use strict";
-var r;
-function i(e) {
+var r, i;
+function s(e) {
     return e < r.HOURLY;
 }
-n.d(t, { d: () => i, j: () => r }),
-    (function (e) {
-        (e[(e.YEARLY = 0)] = "YEARLY"),
-            (e[(e.MONTHLY = 1)] = "MONTHLY"),
-            (e[(e.WEEKLY = 2)] = "WEEKLY"),
-            (e[(e.DAILY = 3)] = "DAILY"),
-            (e[(e.HOURLY = 4)] = "HOURLY"),
-            (e[(e.MINUTELY = 5)] = "MINUTELY"),
-            (e[(e.SECONDLY = 6)] = "SECONDLY");
-    })(r || (r = {}));
+n.d(t, { d: () => s, j: () => r }),
+    ((i = r || (r = {}))[(i.YEARLY = 0)] = "YEARLY"),
+    (i[(i.MONTHLY = 1)] = "MONTHLY"),
+    (i[(i.WEEKLY = 2)] = "WEEKLY"),
+    (i[(i.DAILY = 3)] = "DAILY"),
+    (i[(i.HOURLY = 4)] = "HOURLY"),
+    (i[(i.MINUTELY = 5)] = "MINUTELY"),
+    (i[(i.SECONDLY = 6)] = "SECONDLY");

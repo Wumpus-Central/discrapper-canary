@@ -1,46 +1,46 @@
-n.d(t, { l: () => d });
-var i = n(627968),
-    l = n(64700),
-    a = n(397927),
-    r = n(646881),
-    s = n(92534),
-    o = n(383614);
-function d(e) {
-    let { onOpen: t, onClose: n, children: d, popoutPosition: c, popoutAlign: u } = e,
-        [A, h] = l.useState(!1),
-        _ = l.useRef(null),
-        m = l.useCallback(() => {
-            h(!1), n?.();
-        }, [n]),
-        { handlePrimaryAction: g, handleContextMenu: p } = (0, s.B)(m),
-        E = l.useCallback(() => {
-            h((e) => {
-                let i = !e;
-                return i ? t?.() : n?.(), i;
+a.d(n, { l: () => c });
+var t = a(627968),
+    r = a(64700),
+    l = a(265872),
+    i = a(646881),
+    o = a(92534),
+    _ = a(383614);
+function c(e) {
+    let { onOpen: n, onClose: a, children: c, popoutPosition: d, popoutAlign: s } = e,
+        [u, I] = r.useState(!1),
+        f = r.useRef(null),
+        p = r.useCallback(() => {
+            I(!1), a?.();
+        }, [a]),
+        { handlePrimaryAction: h, handleContextMenu: C } = (0, o.B)(p),
+        E = r.useCallback(() => {
+            I((e) => {
+                let t = !e;
+                return t ? n?.() : a?.(), t;
             });
-        }, [n, t]),
-        I = l.useCallback(
+        }, [a, n]),
+        N = r.useCallback(
             () =>
-                (0, i.jsx)("div", {
-                    className: o.k,
-                    children: (0, i.jsx)(r.$, { onPrimaryAction: g, onContextMenu: p }),
+                (0, t.jsx)("div", {
+                    className: _.k,
+                    children: (0, t.jsx)(i.$, { onPrimaryAction: h, onContextMenu: C }),
                 }),
-            [p, g],
+            [C, h],
         );
-    return (0, i.jsx)(a.YNO, {
-        targetElementRef: _,
-        animation: a.YNO.Animation.NONE,
-        position: c,
-        align: u,
+    return (0, t.jsx)(l.Y, {
+        targetElementRef: f,
+        animation: l.Y.Animation.NONE,
+        position: d,
+        align: s,
         autoInvert: !1,
-        shouldShow: A,
-        onRequestClose: m,
-        renderPopout: I,
+        shouldShow: u,
+        onRequestClose: p,
+        renderPopout: N,
         ignoreModalClicks: !0,
         clickTrap: !0,
-        children: (e, t) => {
-            let { isShown: n } = t;
-            return d(E, n, e, _);
+        children: (e, n) => {
+            let { isShown: a } = n;
+            return c(E, a, e, f);
         },
     });
 }

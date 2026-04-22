@@ -1,8 +1,6 @@
 "use strict";
-var r;
+var r, i;
 n.d(t, { U: () => r }),
-    (function (e) {
-        (e.BORDER_BOX = "border-box"),
-            (e.CONTENT_BOX = "content-box"),
-            (e.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
-    })(r || (r = {}));
+    ((i = r || (r = {})).BORDER_BOX = "border-box"),
+    (i.CONTENT_BOX = "content-box"),
+    (i.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");

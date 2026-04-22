@@ -1,35 +1,35 @@
-"use strict";
-n.d(t, { V: () => l });
-var r = n(627968),
-    i = n(397927),
-    a = n(405139),
+n.d(t, { V: () => u });
+var l = n(627968),
+    i = n(289873),
+    a = n(452027),
+    r = n(405139),
     s = n(985018),
-    o = n(802177);
-function l(e) {
+    o = n(387650);
+function u(e) {
     let t,
         {
             onChooseType: n,
-            onStripePaymentMethodReceived: l,
-            onPaymentRequestFailure: u,
-            onValidPaymentRequest: c,
-            paymentRequestRef: d,
-            paymentRequestWallet: _,
+            onStripePaymentMethodReceived: u,
+            onPaymentRequestFailure: c,
+            onValidPaymentRequest: d,
+            paymentRequestRef: p,
+            paymentRequestWallet: m,
         } = e,
-        f = {
+        h = {
             paymentLabel: s.intl.string(s.t.ZURqX0),
-            paymentRequestRef: d,
+            paymentRequestRef: p,
             renderConnectorView: !0,
-            onStripePaymentMethodReceived: l,
-            onPaymentRequestFailure: u,
-            onValidPaymentRequest: c,
+            onStripePaymentMethodReceived: u,
+            onPaymentRequestFailure: c,
+            onValidPaymentRequest: d,
             onChooseType: n,
-            loadingComponent: (0, r.jsx)(i.y$y, { style: { marginTop: 16 }, type: i.tVU.PULSING_ELLIPSIS }),
+            loadingComponent: (0, l.jsx)(i.y, { style: { marginTop: 16 }, type: i.t.PULSING_ELLIPSIS }),
         };
     return (
-        (t = "applePay" === _ ? (0, r.jsx)(a.Mv, { ...f }) : (0, r.jsx)(a.dP, { ...f })),
-        (0, r.jsx)("div", {
+        (t = "applePay" === m ? (0, l.jsx)(r.Mv, { ...h }) : (0, l.jsx)(r.dP, { ...h })),
+        (0, l.jsx)("div", {
             className: o.r,
-            children: (0, r.jsx)(i.D0$, { label: s.intl.string(s.t.eQ2bLp), children: t }),
+            children: (0, l.jsx)(a.D, { label: s.intl.string(s.t.eQ2bLp), children: t }),
         })
     );
 }

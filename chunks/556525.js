@@ -1,58 +1,49 @@
 "use strict";
-n.d(t, { O: () => m, v: () => E });
-var r = n(64700),
-    i = n(311907),
-    s = n(775602),
-    a = n(531685);
-let o = 0,
-    l = 2,
-    u = 3,
-    c = 0.03,
-    d = -45,
-    _ = 3,
-    f = 1,
-    p = 0.5;
-function h(e, t) {
-    return p + (t - p) / (1 + Math.exp(-c * (e - d)));
+n.d(t, { O: () => u, v: () => d });
+var r,
+    i = n(64700),
+    s = n(311907),
+    a = n(775602),
+    o = n(531685);
+function l(e, t) {
+    return 0.5 + (t - 0.5) / (1 + Math.exp(-0.03 * (e - -45)));
 }
-var m = (function (e) {
-    return (e.BOTH = "BOTH"), (e.INSET_ONLY = "INSET_ONLY"), (e.OUTSET_ONLY = "OUTSET_ONLY"), e;
-})({});
-function E(e) {
+var u = (((r = {}).BOTH = "BOTH"), (r.INSET_ONLY = "INSET_ONLY"), (r.OUTSET_ONLY = "OUTSET_ONLY"), r);
+function d(e) {
     let {
             isSpeaking: t,
-            voiceDb: c,
-            spreadDirection: d = "BOTH",
-            maxOuterSpreadRadius: p = _,
-            maxInnerSpreadRadius: m = f,
-            hideIfVolumeMissing: E = !1,
+            voiceDb: r,
+            spreadDirection: u = "BOTH",
+            maxOuterSpreadRadius: d = 3,
+            maxInnerSpreadRadius: c = 1,
+            hideIfVolumeMissing: _ = !1,
         } = e,
-        g = n(242286).default,
+        f = n(242286).default,
         {
-            shouldReduceMotion: A,
-            useForcedColors: I,
-            isAppFocusedOrOverlayVisible: T,
-        } = (0, i.cf)([s.A, a.A, g], () => ({
-            shouldReduceMotion: s.A.useReducedMotion,
-            useForcedColors: s.A.useForcedColors,
-            isAppFocusedOrOverlayVisible: a.A.isAppFocused() || null != g.getFocusedPID(),
+            shouldReduceMotion: E,
+            useForcedColors: h,
+            isAppFocusedOrOverlayVisible: p,
+        } = (0, s.cf)([a.A, o.A, f], () => ({
+            shouldReduceMotion: a.A.useReducedMotion,
+            useForcedColors: a.A.useForcedColors,
+            isAppFocusedOrOverlayVisible: o.A.isAppFocused() || null != f.getFocusedPID(),
         }));
-    return r.useMemo(() => {
+    return i.useMemo(() => {
         let e = {};
-        if (c === -1 / 0 && E) return e;
+        if (r === -1 / 0 && _) return e;
         if (t) {
-            let t = o,
-                n = l,
-                r = u;
-            c !== -1 / 0 &&
-                !A &&
-                T &&
-                ((t = "INSET_ONLY" === d ? 0 : h(c, p)),
-                (n = "OUTSET_ONLY" === d ? 0 : h(c, m)),
-                (r = "OUTSET_ONLY" === d ? 0 : n + 1));
-            let i = I ? "Highlight" : "var(--status-speaking)";
-            e.boxShadow = `0 0 0 ${t}px ${i}, inset 0 0 0 ${n}px ${i}, inset 0 0 0 ${r}px var(--background-base-lower)`;
+            let t = 0,
+                n = 2,
+                i = 3;
+            r !== -1 / 0 &&
+                !E &&
+                p &&
+                ((t = "INSET_ONLY" === u ? 0 : l(r, d)),
+                (n = "OUTSET_ONLY" === u ? 0 : l(r, c)),
+                (i = "OUTSET_ONLY" === u ? 0 : n + 1));
+            let s = h ? "Highlight" : "var(--status-speaking)";
+            e.boxShadow = `0 0 0 ${t}px ${s}, inset 0 0 0 ${n}px ${s}, inset 0 0 0 ${i}px var(--background-base-lower)`;
         }
-        return T && (e.transition = "box-shadow 50ms ease-out"), e;
-    }, [t, T, A, I, c, d, p, m, E]);
+        return p && (e.transition = "box-shadow 50ms ease-out"), e;
+    }, [t, p, E, h, r, u, d, c, _]);
 }

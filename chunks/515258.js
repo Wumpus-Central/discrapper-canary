@@ -1,14 +1,16 @@
-n.d(t, { default: () => h });
-var s = n(627968),
-    a = n(64700),
-    i = n(110259),
-    l = n(158954),
-    o = n(397927),
-    r = n(13008),
-    E = n(457570),
-    d = n(985018),
-    c = n(603344);
-class u extends a.PureComponent {
+s.d(t, { default: () => C });
+var n = s(627968),
+    l = s(64700),
+    a = s(110259),
+    o = s(189213),
+    i = s(834730),
+    r = s(452027),
+    d = s(331322),
+    h = s(13008),
+    u = s(457570),
+    c = s(985018),
+    p = s(762995);
+class f extends l.PureComponent {
     constructor(e) {
         super(e), (this.state = { phone: "" });
     }
@@ -18,52 +20,52 @@ class u extends a.PureComponent {
     render() {
         let e,
             t,
-            n,
-            a,
-            { error: u, working: h, transitionState: R, validPhone: I, layerContext: p } = this.props,
-            { phone: _ } = this.state,
-            f = [];
+            s,
+            l,
+            { error: f, working: C, transitionState: g, validPhone: m, layerContext: y } = this.props,
+            { phone: b } = this.state,
+            x = [];
         return (
-            I
-                ? (e = d.intl.string(d.t["4qMI6A"]))
-                : ((e = d.intl.string(d.t.Vp9je2)),
-                  (t = (0, s.jsx)(o.Text, { variant: "text-sm/normal", children: d.intl.format(d.t["3BTmqX"], {}) }))),
-            I
-                ? ((n = (0, s.jsx)(o.D0$, {
-                      label: d.intl.string(d.t.Xclkxp),
+            m
+                ? (e = c.intl.string(c.t["4qMI6A"]))
+                : ((e = c.intl.string(c.t.Vp9je2)),
+                  (t = (0, n.jsx)(i.E, { variant: "text-sm/normal", children: c.intl.format(c.t["3BTmqX"], {}) }))),
+            m
+                ? ((s = (0, n.jsx)(r.D, {
+                      label: c.intl.string(c.t.Xclkxp),
                       hideLabel: !0,
-                      errorMessage: u ?? void 0,
-                      children: (0, s.jsx)(r.A, { onSubmit: this.handleVerifyPhone }),
+                      errorMessage: f ?? void 0,
+                      children: (0, n.jsx)(h.A, { onSubmit: this.handleVerifyPhone }),
                   })),
-                  (f = [
+                  (x = [
                       {
                           variant: "secondary",
-                          text: d.intl.string(d.t["5b60gi"]),
+                          text: c.intl.string(c.t["5b60gi"]),
                           onClick: this.handleResendCode,
-                          loading: h,
+                          loading: C,
                       },
                   ]))
-                : ((n = (0, s.jsx)(E.A, {
-                      label: d.intl.string(d.t["64bX0M"]),
-                      errorMessage: u ?? void 0,
-                      className: c.ZZ,
+                : ((s = (0, n.jsx)(u.A, {
+                      label: c.intl.string(c.t["64bX0M"]),
+                      errorMessage: f ?? void 0,
+                      className: p.ZZ,
                       onChange: this.handlePhoneChange,
-                      submitting: h,
-                      layerContext: p,
+                      submitting: C,
+                      layerContext: y,
                   })),
-                  (f = [
-                      { text: d.intl.string(d.t.TXNS7S), disabled: "" === _, loading: h, onClick: this.handleAddPhone },
+                  (x = [
+                      { text: c.intl.string(c.t.TXNS7S), disabled: "" === b, loading: C, onClick: this.handleAddPhone },
                   ])),
-            (a = I ? d.intl.string(d.t.Xclkxp) : d.intl.string(d.t.uR76s6)),
-            (0, s.jsx)(l.Modal, {
-                size: I ? "sm" : "md",
-                title: a,
+            (l = m ? c.intl.string(c.t.xDBSN9) : c.intl.string(c.t.hY8QTR)),
+            (0, n.jsx)(o.Modal, {
+                size: m ? "sm" : "md",
+                title: l,
                 subtitle: e,
-                actions: f,
+                actions: x,
                 onClose: this.props.onClose,
-                trackingProps: { impression: { impressionName: i.ImpressionNames.USER_VERIFY_PHONE } },
-                transitionState: R,
-                children: (0, s.jsxs)(o.BJc, { gap: 8, children: [n, t] }),
+                trackingProps: { impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE } },
+                transitionState: g,
+                children: (0, n.jsxs)(d.B, { gap: 8, children: [s, t] }),
             })
         );
     }
@@ -81,4 +83,4 @@ class u extends a.PureComponent {
         e?.(this.state.phone);
     };
 }
-let h = u;
+let C = f;

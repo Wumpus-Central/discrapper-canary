@@ -1,37 +1,38 @@
-n.d(t, { A: () => c });
-var i = n(627968),
-    s = n(158954),
-    l = n(272053),
-    r = n(590089),
-    a = n(688897),
-    o = n(669353),
-    d = n(104419);
-function c(e) {
-    let { node: t } = e,
-        { useTitle: n, useSubtitle: c, useLeadingDecoration: u, useTrailingDecoration: m } = t,
-        g = n?.(),
-        _ = c?.(),
-        x = u?.(),
-        h = m?.(),
-        A = t.layout[0].key,
-        { parentPanelNode: p } = (0, a.x)(A),
-        T = p?.useTitle?.(),
-        f = g ?? T;
-    return null == p || null == f
+t.d(n, { A: () => u });
+var l = t(627968),
+    r = t(331322),
+    i = t(881636),
+    s = t(272053),
+    a = t(590089),
+    o = t(688897),
+    c = t(669353),
+    d = t(104419);
+function u(e) {
+    let { node: n } = e,
+        { useTitle: t, useSubtitle: u, useLeadingDecoration: x, useTrailingDecoration: j } = n,
+        h = t?.(),
+        m = u?.(),
+        f = x?.(),
+        p = j?.(),
+        y = n.layout[0].key,
+        { parentPanelNode: g } = (0, o.x)(y),
+        v = g?.useTitle?.(),
+        A = h ?? v;
+    return null == g || null == A
         ? null
-        : (0, i.jsx)(r.U, {
+        : (0, l.jsx)(a.U, {
               role: "link",
-              "aria-label": T,
-              title: f,
-              leadingElement: null != x ? (0, i.jsx)(o.N, { decoration: x }) : null,
-              description: _,
-              trailingElement: (0, i.jsxs)(s.BJc, {
+              "aria-label": v,
+              title: A,
+              leadingElement: null != f ? (0, l.jsx)(c.N, { decoration: f }) : null,
+              description: m,
+              trailingElement: (0, l.jsxs)(r.B, {
                   direction: "horizontal",
                   align: "center",
                   justify: "end",
                   gap: "sm",
-                  children: [null != h && (0, i.jsx)(d.V, { decoration: h }), (0, i.jsx)(s.uhT, {})],
+                  children: [null != p && (0, l.jsx)(d.V, { decoration: p }), (0, l.jsx)(i.u, {})],
               }),
-              onClick: () => l.A.navigate(A),
+              onClick: () => s.A.navigate(y),
           });
 }

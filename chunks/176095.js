@@ -1,34 +1,29 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(311907),
-    i = n(73153);
-let s = {},
-    a = new Set();
-function o(e) {
-    (a = new Set(a)).add(e.paymentSourceId);
-}
-function l(e) {
-    (a = new Set(a)).delete(e.paymentSourceId),
-        (s = { ...s, [e.paymentSourceId]: { currency: e.currency, amount: e.amount } });
-}
-function u(e) {
-    (a = new Set(a)).delete(e.paymentSourceId);
-}
-function c() {
-    (s = {}), (a = new Set());
-}
-class d extends r.Ay.Store {
+n.d(t, { A: () => o });
+var a = n(311907),
+    r = n(73153);
+let l = {},
+    i = new Set();
+class s extends a.Ay.Store {
     static displayName = "WalletBalanceStore";
     getBalance(e) {
-        return s[e] ?? null;
+        return l[e] ?? null;
     }
     getIsFetching(e) {
-        return a.has(e);
+        return i.has(e);
     }
 }
-let _ = new d(i.h, {
-    BILLING_WALLET_BALANCE_FETCH_START: o,
-    BILLING_WALLET_BALANCE_FETCH_SUCCESS: l,
-    BILLING_WALLET_BALANCE_FETCH_FAIL: u,
-    LOGOUT: c,
+let o = new s(r.h, {
+    BILLING_WALLET_BALANCE_FETCH_START: function (e) {
+        (i = new Set(i)).add(e.paymentSourceId);
+    },
+    BILLING_WALLET_BALANCE_FETCH_SUCCESS: function (e) {
+        (i = new Set(i)).delete(e.paymentSourceId),
+            (l = { ...l, [e.paymentSourceId]: { currency: e.currency, amount: e.amount } });
+    },
+    BILLING_WALLET_BALANCE_FETCH_FAIL: function (e) {
+        (i = new Set(i)).delete(e.paymentSourceId);
+    },
+    LOGOUT: function () {
+        (l = {}), (i = new Set());
+    },
 });

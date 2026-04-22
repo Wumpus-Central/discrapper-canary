@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { A: () => s }), n(321073);
+n.d(t, { A: () => a }), n(321073);
 var r = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(985018);
-let s = {
+var i = n(192308),
+    s = n(985018);
+let a = {
     show(e) {
         let {
             title: t,
-            body: s,
+            body: a,
             confirmText: o,
             confirmVariant: l = "primary",
             cancelText: u,
-            onConfirm: c,
-            onCancel: d,
+            onConfirm: d,
+            onCancel: c,
             onCloseCallback: _,
             contextKey: f,
         } = e;
-        (0, i.mMO)(
+        (0, i.openModalLazy)(
             async () => {
                 let { Modal: e } = await Promise.resolve().then(n.bind(n, 189213));
                 return (n) => {
@@ -28,18 +28,18 @@ let s = {
                             i.push({
                                 text: u,
                                 onClick: async () => {
-                                    d?.(), await n.onClose();
+                                    c?.(), await n.onClose();
                                 },
                                 variant: "secondary",
                             }),
                         i.push({
-                            text: null != o ? o : a.intl.string(a.t.BddRzS),
+                            text: null != o ? o : s.intl.string(s.t.BddRzS),
                             onClick: async () => {
-                                c?.(), await n.onClose();
+                                d?.(), await n.onClose();
                             },
                             variant: l,
                         }),
-                        (0, r.jsx)(e, { ...n, size: "sm", title: t, subtitle: s, actions: i })
+                        (0, r.jsx)(e, { ...n, size: "sm", title: t, subtitle: a, actions: i })
                     );
                 };
             },
@@ -53,7 +53,7 @@ let s = {
                 onConfirm() {
                     t(!0);
                 },
-                cancelText: a.intl.string(a.t["ETE/oC"]),
+                cancelText: s.intl.string(s.t["ETE/oC"]),
                 onCancel() {
                     t(!1);
                 },

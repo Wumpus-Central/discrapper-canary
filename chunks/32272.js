@@ -1,10 +1,11 @@
-a.d(l, { V: () => r });
+a.d(l, { V: () => d });
 var t = a(627968),
-    o = a(64700),
-    n = a(508382),
-    i = a(158954),
-    s = a(868249);
-let r = {
+    n = a(64700),
+    o = a(508382),
+    i = a(834730),
+    r = a(821609),
+    s = a(481224);
+let d = {
     title: "FloatingLayer",
     stories: [
         {
@@ -14,37 +15,34 @@ let r = {
                 let {
                         placement: l,
                         spacing: a,
-                        autoFlip: r,
-                        autoShift: d,
-                        strategy: u,
-                        portal: c,
-                        blockPointerEvents: b,
+                        autoFlip: d,
+                        autoShift: u,
+                        strategy: c,
+                        portal: b,
+                        blockPointerEvents: p,
                     } = e,
-                    [p, m] = o.useState(!1);
-                return (0, t.jsx)(n.Ow, {
-                    open: p,
-                    onOpenChange: m,
+                    [m, h] = n.useState(!1);
+                return (0, t.jsx)(o.Ow, {
+                    open: m,
+                    onOpenChange: h,
                     placement: l,
                     spacing: a,
-                    autoFlip: r,
-                    autoShift: d,
-                    strategy: u,
-                    portal: c,
-                    blockPointerEvents: b,
+                    autoFlip: d,
+                    autoShift: u,
+                    strategy: c,
+                    portal: b,
+                    blockPointerEvents: p,
                     renderLayer: () =>
                         (0, t.jsx)("div", {
                             className: s.q,
-                            children: (0, t.jsx)(i.EYj, {
-                                variant: "text-sm/medium",
-                                children: "FloatingLayer Content",
-                            }),
+                            children: (0, t.jsx)(i.E, { variant: "text-sm/medium", children: "FloatingLayer Content" }),
                         }),
                     children: (e) => {
                         let { ref: l, props: a } = e;
-                        return (0, t.jsx)(i.$nd, {
+                        return (0, t.jsx)(r.$, {
                             variant: "primary",
                             text: "Target Element",
-                            onClick: () => m(!p),
+                            onClick: () => h(!m),
                             ...a,
                             buttonRef: l,
                         });

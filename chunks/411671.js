@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { y: () => s });
+n.d(t, { y: () => l });
 var i = n(290349);
-function s(e, t) {
+function l(e, t) {
     return t.owner_user_id === e || t.members.find((t) => t.user.id === e)?.role === i.D.ADMIN;
 }

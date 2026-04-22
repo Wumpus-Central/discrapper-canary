@@ -1,24 +1,26 @@
 "use strict";
 var r = n(64700),
-    i = n(524519);
-function a(e, t) {
-    return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
-}
-var s = "function" == typeof Object.is ? Object.is : a,
-    o = i.useSyncExternalStore,
-    l = r.useRef,
-    u = r.useEffect,
-    c = r.useMemo,
+    i = n(524519),
+    s =
+        "function" == typeof Object.is
+            ? Object.is
+            : function (e, t) {
+                  return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
+              },
+    a = i.useSyncExternalStore,
+    o = r.useRef,
+    l = r.useEffect,
+    u = r.useMemo,
     d = r.useDebugValue;
 t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
-    var a = l(null);
-    if (null === a.current) {
+    var c = o(null);
+    if (null === c.current) {
         var _ = { hasValue: !1, value: null };
-        a.current = _;
-    } else _ = a.current;
-    var f = o(
+        c.current = _;
+    } else _ = c.current;
+    var f = a(
         e,
-        (a = c(
+        (c = u(
             function () {
                 function e(e) {
                     if (!l) {
@@ -49,10 +51,10 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
             },
             [t, n, r, i],
         ))[0],
-        a[1],
+        c[1],
     );
     return (
-        u(
+        l(
             function () {
                 (_.hasValue = !0), (_.value = f);
             },

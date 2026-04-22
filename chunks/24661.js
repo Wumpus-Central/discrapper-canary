@@ -1,39 +1,40 @@
-n.d(e, { A: () => E });
+n.d(e, { A: () => A });
 var l = n(627968);
 n(64700);
 var i = n(311907),
-    r = n(397927),
-    a = n(931991),
-    d = n(849736),
-    s = n(698441),
-    u = n(496092),
-    o = n(988794),
-    c = n(985018);
-function E(t, e, E) {
-    let { canManageGuildEvent: A } = (0, a.nr)(E ?? e),
-        g = (0, i.bG)([s.Ay], () => s.Ay.isActive(t)),
-        _ = (0, i.bG)([s.Ay], () => s.Ay.getGuildScheduledEvent(t), [t]),
-        h = A(_);
-    if (null == t || !h || !g || _?.entity_type === o.Ps.EXTERNAL) return null;
-    let T = () => {
-        E?.isGuildStageVoice() ? (0, d.OE)(E) : null != t && u.A.endEvent(t, e.id), (0, r.s7G)();
+    r = n(192308),
+    a = n(477782),
+    d = n(931991),
+    s = n(849736),
+    u = n(698441),
+    o = n(496092),
+    c = n(988794),
+    g = n(985018);
+function A(t, e, A) {
+    let { canManageGuildEvent: E } = (0, d.nr)(A ?? e),
+        m = (0, i.bG)([u.Ay], () => u.Ay.isActive(t)),
+        f = (0, i.bG)([u.Ay], () => u.Ay.getGuildScheduledEvent(t), [t]),
+        v = E(f);
+    if (null == t || !v || !m || f?.entity_type === c.Ps.EXTERNAL) return null;
+    let y = () => {
+        A?.isGuildStageVoice() ? (0, s.OE)(A) : null != t && o.A.endEvent(t, e.id), (0, r.closeAllModals)();
     };
-    return (0, l.jsx)(r.Drp, {
-        id: c.intl.string(c.t.qaYzPA),
-        label: c.intl.string(c.t.qaYzPA),
+    return (0, l.jsx)(a.Dr, {
+        id: g.intl.string(g.t.qaYzPA),
+        label: g.intl.string(g.t.qaYzPA),
         action: function () {
-            (0, r.mMO)(async () => {
-                let { Modal: t } = await Promise.resolve().then(n.bind(n, 158954));
+            (0, r.openModalLazy)(async () => {
+                let { Modal: t } = await n.e("4823").then(n.bind(n, 158954));
                 return (e) => {
                     let { onClose: n, transitionState: i } = e;
                     return (0, l.jsx)(t, {
                         transitionState: i,
-                        title: c.intl.string(c.t.qaYzPA),
-                        subtitle: c.intl.string(c.t.bnDQ7E),
+                        title: g.intl.string(g.t.qaYzPA),
+                        subtitle: g.intl.string(g.t.bnDQ7E),
                         onClose: n,
                         actions: [
-                            { onClick: n, variant: "secondary", text: c.intl.string(c.t["ETE/oC"]) },
-                            { onClick: T, variant: "critical-primary", text: c.intl.string(c.t.mjB9pd) },
+                            { onClick: n, variant: "secondary", text: g.intl.string(g.t["ETE/oC"]) },
+                            { onClick: y, variant: "critical-primary", text: g.intl.string(g.t.mjB9pd) },
                         ],
                     });
                 };

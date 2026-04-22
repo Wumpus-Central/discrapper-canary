@@ -1,8 +1,5 @@
 e.exports = function (e) {
-    let t = { className: "number", begin: /[$%]\d+/ },
-        n = { className: "number", begin: /\b\d+/ },
-        r = { className: "number", begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/ },
-        i = { className: "number", begin: /:\d{1,5}/ };
+    let t = { className: "number", begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/ };
     return {
         name: "Apache config",
         aliases: ["apacheconf"],
@@ -13,7 +10,11 @@ e.exports = function (e) {
                 className: "section",
                 begin: /<\/?/,
                 end: />/,
-                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })],
+                contains: [
+                    t,
+                    { className: "number", begin: /:\d{1,5}/ },
+                    e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
+                ],
             },
             {
                 className: "attribute",
@@ -46,9 +47,14 @@ e.exports = function (e) {
                     contains: [
                         { scope: "punctuation", match: /\\\n/ },
                         { className: "meta", begin: /\s\[/, end: /\]$/ },
-                        { className: "variable", begin: /[\$%]\{/, end: /\}/, contains: ["self", t] },
-                        r,
-                        n,
+                        {
+                            className: "variable",
+                            begin: /[\$%]\{/,
+                            end: /\}/,
+                            contains: ["self", { className: "number", begin: /[$%]\d+/ }],
+                        },
+                        t,
+                        { className: "number", begin: /\b\d+/ },
                         e.QUOTE_STRING_MODE,
                     ],
                 },

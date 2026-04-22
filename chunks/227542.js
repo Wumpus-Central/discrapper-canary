@@ -3,29 +3,29 @@ n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    s = n(397927),
+    s = n(477782),
     a = n(817281),
     o = n(775602),
     l = n(688810),
     u = n(692798),
-    c = n(544028),
-    d = n(964404),
+    d = n(544028),
+    c = n(964404),
     _ = n(185928),
     f = n(652215),
-    p = n(985018);
+    E = n(985018);
 function h() {
     let { analyticsLocations: e } = (0, l.Ay)(),
         {
             theme: t,
             useSystemTheme: n,
             useForcedColors: h,
-        } = (0, i.cf)([c.A, d.Ay, o.A], () => ({
-            theme: c.A.theme,
-            useSystemTheme: d.Ay.useSystemTheme,
+        } = (0, i.cf)([d.A, c.Ay, o.A], () => ({
+            theme: d.A.theme,
+            useSystemTheme: c.Ay.useSystemTheme,
             useForcedColors: o.A.useForcedColors,
         })),
-        m = (i, o) =>
-            (0, r.jsx)(s.iDA, {
+        p = (i, o) =>
+            (0, r.jsx)(s.iD, {
                 id: i,
                 group: "input-modes",
                 label: o,
@@ -38,14 +38,14 @@ function h() {
             });
     return [
         (0, r.jsxs)(
-            s.rXV,
+            s.rX,
             {
                 children: [
-                    m(f.NJ8.LIGHT, p.intl.string(p.t.K2sFfo)),
-                    m(f.NJ8.DARK, p.intl.string(p.t.SMPT1k)),
-                    m(f.NJ8.DARKER, p.intl.string(p.t.b8Cei3)),
-                    m(f.NJ8.MIDNIGHT, p.intl.string(p.t.Do4ZJx)),
-                    m("system", p.intl.string(p.t["7rOU6j"])),
+                    p(f.NJ8.LIGHT, E.intl.string(E.t.K2sFfo)),
+                    p(f.NJ8.DARK, E.intl.string(E.t.SMPT1k)),
+                    p(f.NJ8.DARKER, E.intl.string(E.t.b8Cei3)),
+                    p(f.NJ8.MIDNIGHT, E.intl.string(E.t.Do4ZJx)),
+                    p("system", E.intl.string(E.t["7rOU6j"])),
                 ],
             },
             "theme-items",

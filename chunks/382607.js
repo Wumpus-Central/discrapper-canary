@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
+n.d(t, { A: () => u });
+var l = n(627968),
     i = n(64700),
-    a = n(397927),
+    a = n(821609),
     s = n(954571),
-    o = n(500049),
-    l = n(522305),
-    u = n(652215),
-    c = n(985018);
-function d(e) {
-    let { botUserId: t, applicationId: n, analyticsLocations: d } = e,
-        [_, f] = i.useState(!1),
-        p = i.useRef(null),
-        h = i.useCallback(async () => {
-            s.default.track(u.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+    r = n(500049),
+    o = n(522305),
+    c = n(652215),
+    d = n(985018);
+function u(e) {
+    let { botUserId: t, applicationId: n, analyticsLocations: u } = e,
+        [m, p] = i.useState(!1),
+        _ = i.useRef(null),
+        A = i.useCallback(async () => {
+            s.default.track(c.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
-                button_action: o.F5.OPEN_APP_DM,
+                button_action: r.F5.OPEN_APP_DM,
             }),
-                f(!0);
+                p(!0);
             try {
-                await (0, l.Q)({ appId: n, botId: t, analyticsLocations: d });
+                await (0, o.Q)({ appId: n, botId: t, analyticsLocations: u });
             } catch (e) {}
-            clearTimeout(p.current), f(!1);
-        }, [t, n, d]);
-    return (0, r.jsx)(a.Button, {
+            clearTimeout(_.current), p(!1);
+        }, [t, n, u]);
+    return (0, l.jsx)(a.$, {
         type: "submit",
         size: "md",
         variant: "secondary",
-        loading: _,
-        onClick: h,
-        "aria-label": c.intl.string(c.t.AUM8hY),
-        text: c.intl.string(c.t.AUM8hY),
+        loading: m,
+        onClick: A,
+        "aria-label": d.intl.string(d.t.AUM8hY),
+        text: d.intl.string(d.t.AUM8hY),
     });
 }

@@ -1,8 +1,8 @@
 n.d(a, { default: () => g });
 var e = n(627968),
     i = n(64700),
-    l = n(158954),
-    s = n(397927),
+    l = n(189213),
+    s = n(260598),
     o = n(843472),
     c = n(855057),
     r = n(309010),
@@ -10,7 +10,7 @@ var e = n(627968),
     u = n(652215),
     C = n(381941),
     _ = n(985018),
-    h = n(787790);
+    h = n(487837);
 function g(t) {
     let {
             transitionState: a,
@@ -56,7 +56,7 @@ function g(t) {
         transitionState: a,
         onClose: n,
         title: p,
-        input: (0, e.jsx)(s.fs1, { value: I, onChange: (t) => T(t), placeholder: E }),
+        input: (0, e.jsx)(s.f, { value: I, onChange: (t) => T(t), placeholder: E }),
         actions: [
             { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: n },
             { variant: "primary", text: _.intl.string(_.t.TXNS7S), onClick: v, loading: !1, disabled: null == S },

@@ -1,17 +1,17 @@
-n.d(t, { A: () => d });
-var a = n(627968),
-    i = n(397927),
-    l = n(641324),
-    s = n(669550),
-    r = n(23901),
-    o = n(930821);
+a.d(t, { A: () => d });
+var n = a(627968),
+    l = a(573613),
+    i = a(641324),
+    s = a(669550),
+    r = a(66993),
+    o = a(505206);
 function d() {
     let { node: e } = (0, s.Ay)(r.F, "");
-    return (0, a.jsx)(i.IpV, {
+    return (0, n.jsx)(l.Ip, {
         className: o.nd,
-        children: (0, a.jsx)("div", {
+        children: (0, n.jsx)("div", {
             style: { padding: "var(--space-8)" },
-            children: (0, a.jsx)(l.A, { node: e }, e.key),
+            children: (0, n.jsx)(i.A, { node: e }, e.key),
         }),
     });
 }

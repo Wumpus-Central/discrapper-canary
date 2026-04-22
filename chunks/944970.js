@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_b962dc",
     uC: "guildSidebar_b962dc",

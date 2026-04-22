@@ -1,21 +1,30 @@
-n.d(t, { A: () => C });
+"use strict";
+n.d(t, { A: () => P });
 var i = n(627968),
-    r = n(64700),
-    a = n(311907),
-    l = n(314116),
-    s = n(397927),
-    o = n(466472),
-    d = n(29160),
-    c = n(235986),
-    u = n(212408),
-    A = n(775228),
-    h = n(255438),
-    _ = n(723702),
-    m = n(837921),
-    p = n(985018),
-    g = n(629859),
-    E = n(473169);
-class f extends r.PureComponent {
+    s = n(64700),
+    l = n(311907),
+    r = n(314116),
+    a = n(534514),
+    o = n(834730),
+    c = n(821609),
+    d = n(359778),
+    h = n(292666),
+    p = n(150934),
+    u = n(404778),
+    A = n(825484),
+    m = n(452027),
+    g = n(466472),
+    f = n(29160),
+    _ = n(235986),
+    x = n(212408),
+    y = n(775228),
+    N = n(255438),
+    C = n(723702),
+    I = n(837921),
+    T = n(985018),
+    S = n(744832),
+    b = n(818050);
+class R extends s.PureComponent {
     state = { label: void 0, isDefault: null };
     handleStartEditing = () => {
         let { path: e, label: t, isDefault: n, onToggleEditing: i } = this.props;
@@ -26,17 +35,17 @@ class f extends r.PureComponent {
         e(null), this.setState({ label: void 0, isDefault: null });
     };
     handleRemoveLocation = () => {
-        (0, l.A)({
-            title: p.intl.string(p.t.iBUzS5),
-            subtitle: p.intl.string(p.t["1XqeW2"]),
-            confirmText: p.intl.string(p.t.iBUzS5),
+        (0, r.A)({
+            title: T.intl.string(T.t.iBUzS5),
+            subtitle: T.intl.string(T.t["1XqeW2"]),
+            confirmText: T.intl.string(T.t.iBUzS5),
             onConfirm: () => {
-                this.handleStopEditing(), (0, o.JN)(this.props.path);
+                this.handleStopEditing(), (0, g.JN)(this.props.path);
             },
         });
     };
     handleSaveChanges = () => {
-        (0, o.a8)(this.props.path, {
+        (0, g.a8)(this.props.path, {
             label: null != this.state.label ? this.state.label : this.props.label,
             isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault,
         }),
@@ -51,53 +60,53 @@ class f extends r.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
-            ? (0, i.jsx)(u.A, { total: e.totalKB, used: e.totalKB - e.availableKB })
+            ? (0, i.jsx)(x.A, { total: e.totalKB, used: e.totalKB - e.availableKB })
             : null;
     }
     renderViewing() {
         let e,
             t,
-            { path: n, label: r, editingPath: a, isDefault: l, metadata: o } = this.props;
+            { path: n, label: s, editingPath: l, isDefault: r, metadata: d } = this.props;
         return (
-            null != o &&
-                ((e = null != o.availableKB ? (0, h.Xq)(o.availableKB, { useKibibytes: !0 }) : null),
-                (t = null != o.totalKB ? (0, h.Xq)(o.totalKB, { useKibibytes: !0 }) : null)),
-            (0, i.jsxs)(c.A, {
-                className: g.ce,
-                align: c.A.Align.CENTER,
+            null != d &&
+                ((e = null != d.availableKB ? (0, N.Xq)(d.availableKB, { useKibibytes: !0 }) : null),
+                (t = null != d.totalKB ? (0, N.Xq)(d.totalKB, { useKibibytes: !0 }) : null)),
+            (0, i.jsxs)(_.A, {
+                className: S.ce,
+                align: _.A.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(c.A, {
-                        direction: c.A.Direction.VERTICAL,
-                        className: g.__invalid_descriptionWrapper,
+                    (0, i.jsxs)(_.A, {
+                        direction: _.A.Direction.VERTICAL,
+                        className: S.__invalid_descriptionWrapper,
                         children: [
-                            (0, i.jsxs)(c.A, {
-                                align: c.A.Align.CENTER,
+                            (0, i.jsxs)(_.A, {
+                                align: _.A.Align.CENTER,
                                 children: [
-                                    (0, i.jsx)(s.Heading, {
-                                        className: g.nM,
+                                    (0, i.jsx)(a.D, {
+                                        className: S.nM,
                                         variant: "heading-md/semibold",
-                                        children: null != r ? r : A.A.getLabelFromPath(n),
+                                        children: null != s ? s : y.A.getLabelFromPath(n),
                                     }),
-                                    l
-                                        ? (0, i.jsx)("span", { className: g.Zn, children: p.intl.string(p.t.bBvAEH) })
+                                    r
+                                        ? (0, i.jsx)("span", { className: S.Zn, children: T.intl.string(T.t.bBvAEH) })
                                         : null,
                                 ],
                             }),
-                            null != o && null != e && null != t
-                                ? (0, i.jsx)(d.A, {
-                                      className: g.fw,
-                                      hoverText: p.intl.formatToPlainString(p.t["Fxo9e+"], { available: e, total: t }),
+                            null != d && null != e && null != t
+                                ? (0, i.jsx)(f.A, {
+                                      className: S.fw,
+                                      hoverText: T.intl.formatToPlainString(T.t["Fxo9e+"], { available: e, total: t }),
                                       children: n,
                                   })
-                                : (0, i.jsx)(s.Text, { className: g.fw, variant: "text-xs/normal", children: n }),
+                                : (0, i.jsx)(o.E, { className: S.fw, variant: "text-xs/normal", children: n }),
                         ],
                     }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(c.$, {
                         variant: "secondary",
                         size: "sm",
-                        text: p.intl.string(p.t.bt75uw),
-                        disabled: null != a,
+                        text: T.intl.string(T.t.bt75uw),
+                        disabled: null != l,
                         onClick: this.handleStartEditing,
                     }),
                 ],
@@ -106,66 +115,62 @@ class f extends r.PureComponent {
     }
     renderEditing() {
         let { path: e, hasGamesInstalledInPath: t } = this.props,
-            { label: n, isDefault: r } = this.state;
-        return (0, i.jsx)(s.ZpM, {
+            { label: n, isDefault: s } = this.state;
+        return (0, i.jsx)(d.Z, {
             editable: !0,
-            className: g.uP,
-            children: (0, i.jsxs)(c.A, {
+            className: S.uP,
+            children: (0, i.jsxs)(_.A, {
                 children: [
                     this.renderDiskUsageCircle(),
-                    (0, i.jsxs)(c.A.Child, {
+                    (0, i.jsxs)(_.A.Child, {
                         children: [
-                            (0, i.jsx)(s.ksK, {
-                                label: p.intl.string(p.t.AJkKCB),
+                            (0, i.jsx)(h.k, {
+                                label: T.intl.string(T.t.AJkKCB),
                                 value: n,
-                                placeholder: A.A.getLabelFromPath(e),
+                                placeholder: y.A.getLabelFromPath(e),
                                 onChange: this.handleLabelChange,
                             }),
                             (0, i.jsx)("div", {
-                                className: E.QX,
-                                children: (0, i.jsx)(s.ksK, {
-                                    label: p.intl.string(p.t.lnUCwX),
-                                    disabled: !0,
-                                    value: e,
-                                }),
+                                className: b.QX,
+                                children: (0, i.jsx)(h.k, { label: T.intl.string(T.t.lnUCwX), disabled: !0, value: e }),
                             }),
                             (0, i.jsx)("div", {
-                                className: g.gZ,
-                                children: (0, i.jsx)(s.Checkbox, {
-                                    checked: null != r ? r : this.props.isDefault,
+                                className: S.gZ,
+                                children: (0, i.jsx)(p.S, {
+                                    checked: null != s ? s : this.props.isDefault,
                                     disabled: this.props.isDefault,
                                     onChange: this.handleToggleDefault,
-                                    label: p.intl.string(p.t.Z2MWuH),
+                                    label: T.intl.string(T.t.Z2MWuH),
                                 }),
                             }),
-                            (0, i.jsx)(s.cGx, { className: g.me }),
-                            (0, i.jsxs)(c.A, {
+                            (0, i.jsx)(u.c, { className: S.me }),
+                            (0, i.jsxs)(_.A, {
                                 children: [
-                                    (0, i.jsx)(s.Button, {
+                                    (0, i.jsx)(c.$, {
                                         variant: "critical-secondary",
                                         size: "sm",
-                                        text: p.intl.string(p.t.iBUzS5),
+                                        text: T.intl.string(T.t.iBUzS5),
                                         disabled: t || this.props.isDefault,
                                         onClick: this.handleRemoveLocation,
                                     }),
-                                    (0, i.jsx)(c.A, {
-                                        justify: c.A.Justify.END,
-                                        children: (0, i.jsxs)(s.ButtonGroup, {
+                                    (0, i.jsx)(_.A, {
+                                        justify: _.A.Justify.END,
+                                        children: (0, i.jsxs)(A.e, {
                                             children: [
-                                                (0, i.jsx)(s.Button, {
+                                                (0, i.jsx)(c.$, {
                                                     variant: "secondary",
                                                     size: "sm",
-                                                    text: p.intl.string(p.t["ETE/oC"]),
+                                                    text: T.intl.string(T.t["ETE/oC"]),
                                                     onClick: this.handleStopEditing,
                                                 }),
-                                                (0, i.jsx)(s.Button, {
+                                                (0, i.jsx)(c.$, {
                                                     variant: "active",
                                                     size: "sm",
-                                                    text: p.intl.string(p.t["R3BPH+"]),
+                                                    text: T.intl.string(T.t["R3BPH+"]),
                                                     disabled:
                                                         e === this.props.path &&
                                                         n === this.props.label &&
-                                                        r === this.props.isDefault,
+                                                        s === this.props.isDefault,
                                                     onClick: this.handleSaveChanges,
                                                 }),
                                             ],
@@ -183,10 +188,10 @@ class f extends r.PureComponent {
         return this.props.editingPath === this.props.path ? this.renderEditing() : this.renderViewing();
     }
 }
-class I extends r.PureComponent {
+class v extends s.PureComponent {
     state = { editingPath: null };
     componentDidMount() {
-        (0, o.UQ)(
+        (0, g.UQ)(
             this.props.installationPaths.map((e) => {
                 let { path: t } = e;
                 return t;
@@ -194,8 +199,8 @@ class I extends r.PureComponent {
         );
     }
     handleAddInstallationLocation = () => {
-        m.Ay.showOpenDialog(["openDirectory"]).then((e) => {
-            null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, o.SA)(e[0]);
+        I.Ay.showOpenDialog(["openDirectory"]).then((e) => {
+            null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, g.SA)(e[0]);
         });
     };
     handleToggleEditing = (e) => {
@@ -203,35 +208,35 @@ class I extends r.PureComponent {
     };
     render() {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
-            { editingPath: r } = this.state;
+            { editingPath: s } = this.state;
         return (0, i.jsx)("div", {
-            className: g.iE,
-            children: (0, i.jsxs)(s.D0$, {
-                label: p.intl.string(p.t.aLszkC),
+            className: S.iE,
+            children: (0, i.jsxs)(m.D, {
+                label: T.intl.string(T.t.aLszkC),
                 children: [
                     e.map((e) => {
-                        let { path: a, label: l } = e;
+                        let { path: l, label: r } = e;
                         return (0, i.jsx)(
-                            f,
+                            R,
                             {
-                                path: a,
-                                label: l,
-                                metadata: t[a],
-                                isDefault: n === a,
-                                editingPath: r,
-                                hasGamesInstalledInPath: A.A.hasGamesInstalledInPath(a),
+                                path: l,
+                                label: r,
+                                metadata: t[l],
+                                isDefault: n === l,
+                                editingPath: s,
+                                hasGamesInstalledInPath: y.A.hasGamesInstalledInPath(l),
                                 onToggleEditing: this.handleToggleEditing,
                             },
-                            a,
+                            l,
                         );
                     }),
                     (0, i.jsx)("div", {
-                        className: g.sW,
-                        children: (0, i.jsx)(s.Button, {
+                        className: S.sW,
+                        children: (0, i.jsx)(c.$, {
                             variant: "primary",
                             size: "sm",
-                            text: p.intl.string(p.t.pnZ2uk),
-                            disabled: !_.isPlatformEmbedded,
+                            text: T.intl.string(T.t.pnZ2uk),
+                            disabled: !C.isPlatformEmbedded,
                             onClick: this.handleAddInstallationLocation,
                         }),
                     }),
@@ -240,8 +245,8 @@ class I extends r.PureComponent {
         });
     }
 }
-let C = a.Ay.connectStores([A.A], () => ({
-    installationPaths: A.A.installationPaths,
-    installationPathsMetadata: A.A.installationPathsMetadata,
-    defaultInstallationPath: A.A.defaultInstallationPath,
-}))(I);
+let P = l.Ay.connectStores([y.A], () => ({
+    installationPaths: y.A.installationPaths,
+    installationPathsMetadata: y.A.installationPathsMetadata,
+    defaultInstallationPath: y.A.defaultInstallationPath,
+}))(v);

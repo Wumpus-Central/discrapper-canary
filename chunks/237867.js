@@ -1,50 +1,51 @@
-i.d(t, { Hs: () => h, e6: () => m, o7: () => x });
+i.d(t, { Hs: () => g, e6: () => x, o7: () => h });
 var l = i(627968);
 i(64700);
-var n = i(397927),
+var n = i(534514),
+    s = i(834730),
     a = i(724609),
-    s = i(580630),
-    r = i(500345),
-    c = i(922975),
-    d = i(380203),
-    o = i(985018),
-    u = i(687427);
-let m = (e) => {
+    r = i(580630),
+    c = i(500345),
+    d = i(922975),
+    o = i(380203),
+    u = i(985018),
+    m = i(461144);
+let x = (e) => {
     let { listingName: t } = e;
-    return (0, l.jsx)(n.Heading, {
+    return (0, l.jsx)(n.D, {
         variant: "text-md/normal",
         color: "interactive-text-active",
-        className: u.KR,
+        className: m.KR,
         children: t,
     });
 };
-function x(e) {
+function h(e) {
     let { image: t } = e;
-    return null == t ? null : (0, l.jsx)("img", { src: t, alt: "", className: u.ah });
+    return null == t ? null : (0, l.jsx)("img", { src: t, alt: "", className: m.ah });
 }
-let h = (e) => {
+let g = (e) => {
     let { listingId: t, isListingPublished: i } = e,
-        h = (0, d.A)(),
-        [g] = c.tx(t),
-        [v] = c.lK(t, h),
-        [j] = c.A_(t);
+        n = (0, o.A)(),
+        [g] = d.tx(t),
+        [v] = d.lK(t, n),
+        [j] = d.A_(t);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(m, { listingName: g }),
-            (0, l.jsx)(x, { image: v }),
-            !i && (0, l.jsx)("div", { className: u.U0, children: (0, l.jsx)(a.k, {}) }),
-            (0, l.jsx)(n.Text, {
+            (0, l.jsx)(x, { listingName: g }),
+            (0, l.jsx)(h, { image: v }),
+            !i && (0, l.jsx)("div", { className: m.U0, children: (0, l.jsx)(a.k, {}) }),
+            (0, l.jsx)(s.E, {
                 variant: "heading-xl/semibold",
-                className: u.Us,
+                className: m.Us,
                 tag: "div",
-                children: (0, s.$g)(j.price, j.currency),
+                children: (0, r.$g)(j.price, j.currency),
             }),
-            (0, l.jsx)(n.Text, {
+            (0, l.jsx)(s.E, {
                 variant: "text-xs/normal",
                 color: "interactive-text-default",
-                className: u.gV,
-                children: o.intl.format(o.t.isLGyX, {
-                    period: (0, r.cV)({ interval: j.interval, interval_count: j.interval_count }),
+                className: m.gV,
+                children: u.intl.format(u.t.isLGyX, {
+                    period: (0, c.cV)({ interval: j.interval, interval_count: j.interval_count }),
                 }),
             }),
         ],

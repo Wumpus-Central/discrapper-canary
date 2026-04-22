@@ -1,54 +1,56 @@
-n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(64700),
-    a = n(397927),
-    l = n(890687),
-    s = n(651892),
-    o = n(264580),
-    d = n(985018),
-    c = n(819446);
-let u = function (e) {
-    let { onChange: t, selectedFilters: n } = e,
-        u = (0, l.Nb)(),
-        A = r.useCallback(
-            (e) => (i) => {
-                let r = e.filter((e) => i.includes(e.filter));
-                t([...n.filter((t) => !e.some((e) => e.filter === t.filter)), ...r]);
+s.d(t, { A: () => _ });
+var n = s(627968),
+    l = s(64700),
+    a = s(167417),
+    r = s(821609),
+    i = s(783977),
+    o = s(890687),
+    c = s(651892),
+    u = s(264580),
+    d = s(985018),
+    m = s(612539);
+let _ = function (e) {
+    let { onChange: t, selectedFilters: s } = e,
+        _ = (0, o.Nb)(),
+        h = l.useCallback(
+            (e) => (n) => {
+                let l = e.filter((e) => n.includes(e.filter));
+                t([...s.filter((t) => !e.some((e) => e.filter === t.filter)), ...l]);
             },
-            [n, t],
+            [s, t],
         );
-    return (0, i.jsx)(o.A, {
-        renderPopout: (e, l) => {
-            let { closePopout: h } = e;
-            return (0, i.jsxs)("div", {
+    return (0, n.jsx)(u.A, {
+        renderPopout: (e, i) => {
+            let { closePopout: o } = e;
+            return (0, n.jsxs)("div", {
                 children: [
-                    u.map((e, t) => {
-                        let d = e.options.map((e) => ({ label: (0, s.up)(e.filter), value: e.filter })),
-                            u = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
-                        return (0, i.jsxs)(
-                            r.Fragment,
+                    _.map((e, t) => {
+                        let r = e.options.map((e) => ({ label: (0, c.up)(e.filter), value: e.filter })),
+                            o = s.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
+                        return (0, n.jsxs)(
+                            l.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, i.jsx)("hr", { className: c.B }),
-                                    (0, i.jsx)(o.q, { id: l, children: e.heading }),
-                                    (0, i.jsx)(a.$QX, {
-                                        "aria-labelledby": l,
-                                        options: d,
-                                        selectedValues: u,
-                                        onChange: A(e.options),
+                                    t > 0 && (0, n.jsx)("hr", { className: m.B }),
+                                    (0, n.jsx)(u.q, { id: i, children: e.heading }),
+                                    (0, n.jsx)(a.$, {
+                                        "aria-labelledby": i,
+                                        options: r,
+                                        selectedValues: o,
+                                        onChange: h(e.options),
                                     }),
                                 ],
                             },
                             t,
                         );
                     }),
-                    (0, i.jsx)("hr", { className: c.B }),
-                    (0, i.jsx)("div", {
-                        className: c.W,
-                        children: (0, i.jsx)(a.Button, {
+                    (0, n.jsx)("hr", { className: m.B }),
+                    (0, n.jsx)("div", {
+                        className: m.W,
+                        children: (0, n.jsx)(r.$, {
                             fullWidth: !0,
                             onClick: () => {
-                                t([]), h();
+                                t([]), o();
                             },
                             size: "sm",
                             text: d.intl.string(d.t.VkKicb),
@@ -59,12 +61,12 @@ let u = function (e) {
             });
         },
         children: (e, t) =>
-            (0, i.jsx)(a.Button, {
+            (0, n.jsx)(r.$, {
                 ...e,
                 buttonRef: t,
                 size: "sm",
-                text: d.intl.formatToPlainString(d.t.CEfkXl, { numSelectedFilters: n.length }),
-                icon: a.RgP,
+                text: d.intl.formatToPlainString(d.t.CEfkXl, { numSelectedFilters: s.length }),
+                icon: i.R,
                 iconPosition: "end",
                 variant: "secondary",
             }),

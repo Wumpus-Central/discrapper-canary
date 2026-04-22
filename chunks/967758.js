@@ -1,19 +1,14 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(515718);
-let i = 24,
-    s = 36,
-    a = 76,
-    o = 88,
-    l = 272;
-function u(e, t) {
-    let n = window.innerWidth - (e ? a : i) * 2,
-        u = window.innerHeight - 2 * o;
-    if (!(0, r.eJ)(t)) return { width: n, height: u };
-    let { width: c, height: d } = t,
-        _ = window.innerWidth - 2 * l,
-        f = window.innerHeight - (e ? o : s) * 2,
-        p = (0, r.Uj)({ width: c, height: d, maxWidth: n, maxHeight: u }),
-        h = (0, r.Uj)({ width: c, height: d, maxWidth: _, maxHeight: f });
-    return p.width >= h.width ? p : h;
+n.d(t, { A: () => l });
+var i = n(515718);
+function l(e, t) {
+    let n = window.innerWidth - (e ? 76 : 24) * 2,
+        l = window.innerHeight - 176;
+    if (!(0, i.eJ)(t)) return { width: n, height: l };
+    let { width: s, height: r } = t,
+        a = window.innerWidth - 544,
+        o = window.innerHeight - (e ? 88 : 36) * 2,
+        c = (0, i.Uj)({ width: s, height: r, maxWidth: n, maxHeight: l }),
+        u = (0, i.Uj)({ width: s, height: r, maxWidth: a, maxHeight: o });
+    return c.width >= u.width ? c : u;
 }

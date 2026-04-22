@@ -1,21 +1,23 @@
-r.d(t, { A: () => c });
+r.d(t, { A: () => m });
 var n = r(627968),
-    a = r(735438),
-    i = r.n(a),
-    s = r(397927),
-    l = r(828904),
-    o = r(974175),
-    d = r(985018);
-function c(e) {
+    i = r(735438),
+    a = r.n(i),
+    o = r(289873),
+    l = r(331322),
+    s = r(534514),
+    d = r(828904),
+    c = r(974175),
+    u = r(985018);
+function m(e) {
     let { camera: t } = e;
-    if (null == t) return (0, n.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE });
-    let r = i().map(t, (e, t) => {
-        if (!(o.R[t] || void 0 === e)) return (0, n.jsx)(o.q7, { label: t, value: e }, t);
+    if (null == t) return (0, n.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE });
+    let r = a().map(t, (e, t) => {
+        if (!(c.R[t] || void 0 === e)) return (0, n.jsx)(c.q7, { label: t, value: e }, t);
     });
-    return (0, n.jsxs)(s.BJc, {
+    return (0, n.jsxs)(l.B, {
         children: [
-            (0, n.jsx)(s.Heading, { variant: "heading-md/medium", children: d.intl.string(d.t["2AGBWH"]) }),
-            (0, l.C6)(r),
+            (0, n.jsx)(s.D, { variant: "heading-md/medium", children: u.intl.string(u.t["2AGBWH"]) }),
+            (0, d.C6)(r),
         ],
     });
 }

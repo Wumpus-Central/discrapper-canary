@@ -1,42 +1,45 @@
-"use strict";
 n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
+var l = n(503698),
+    i = n.n(l),
     a = n(990078),
-    o = n(397927),
-    l = n(51183),
+    s = n(834730),
+    o = n(51183),
     u = n(613125);
 n(851883);
-var c = n(496496);
+var c = n(124704);
 function d(e) {
-    let {
-            customStatusActivity: t,
-            iconClassName: n,
-            textClassName: i,
-            userId: d,
-            textSize: _ = "xs",
-            animateEmoji: f = !0,
-            hideEmoji: p = !1,
-            hideTooltip: h = !1,
+    let t,
+        {
+            customStatusActivity: n,
+            iconClassName: l,
+            textClassName: d,
+            userId: _,
+            textSize: p = "xs",
+            animateEmoji: h = !0,
+            hideEmoji: m = !1,
+            hideTooltip: A = !1,
         } = e,
-        m = t?.emoji,
-        E = (0, u.Z)({ customStatusActivity: t, statusOwnerId: d, location: "CustomStatusVoiceDare" }),
-        g = E.statusTextOverride ?? t?.state,
-        A = null != g && "" !== g,
+        f = n?.emoji,
+        g = (0, u.Z)({ customStatusActivity: n, statusOwnerId: _, location: "CustomStatusVoiceDare" }),
+        E = g.statusTextOverride ?? n?.state,
+        C = null != E && "" !== E,
         I = null;
-    null == m || p || (I = (0, r.jsx)(l.A, { emoji: m, animate: f, className: n, hideTooltip: h || A }));
-    let T = A ? (null != I ? ` ${g}` : g) : null,
-        S = () => {
-            let e = null != m && !p && !A;
-            return h || e
-                ? (0, r.jsxs)(r.Fragment, { children: [I, T] })
-                : null != E.presence
-                  ? (0, r.jsx)(a.m, { delay: 150, children: (0, r.jsxs)("span", { children: [I, T] }) })
-                  : (0, r.jsxs)("span", { children: [I, T] });
-        };
-    return null == t
+    null == f || m || (I = (0, r.jsx)(o.A, { emoji: f, animate: h, className: l, hideTooltip: A || C }));
+    let v = C ? (null != I ? ` ${E}` : E) : null;
+    return null == n
         ? null
-        : (0, r.jsx)(o.Text, { variant: `text-${_}/medium`, color: "none", className: s()(c.ps, i), children: S() });
+        : (0, r.jsx)(s.E, {
+              variant: `text-${p}/medium`,
+              color: "none",
+              className: i()(c.ps, d),
+              children:
+                  ((t = null != f && !m && !C),
+                  A || t
+                      ? (0, r.jsxs)(r.Fragment, { children: [I, v] })
+                      : null != g.presence
+                        ? (0, r.jsx)(a.m, { delay: 150, children: (0, r.jsxs)("span", { children: [I, v] }) })
+                        : (0, r.jsxs)("span", { children: [I, v] })),
+          });
 }

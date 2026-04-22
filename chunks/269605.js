@@ -1,42 +1,34 @@
 "use strict";
-n.d(t, { C: () => l });
+n.d(t, { C: () => s });
 var r = n(313027);
-function i(e, t) {
-    if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
-}
-function a(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1),
-            (r.configurable = !0),
-            "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
-    }
-}
-function s(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
-}
-function o(e, t, n) {
+function i(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var l = (function () {
-    function e(t) {
-        i(this, e), o(this, "entered", []), o(this, "isNodeInDocument", void 0), (this.isNodeInDocument = t);
+var s = (function () {
+    var e;
+    function t(e) {
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        i(this, "entered", []), i(this, "isNodeInDocument", void 0), (this.isNodeInDocument = e);
     }
     return (
-        s(e, [
+        (e = [
             {
                 key: "enter",
                 value: function (e) {
                     var t = this,
-                        n = this.entered.length,
-                        i = function (n) {
-                            return t.isNodeInDocument(n) && (!n.contains || n.contains(e));
-                        };
-                    return (this.entered = (0, r.KC)(this.entered.filter(i), [e])), 0 === n && this.entered.length > 0;
+                        n = this.entered.length;
+                    return (
+                        (this.entered = (0, r.KC)(
+                            this.entered.filter(function (n) {
+                                return t.isNodeInDocument(n) && (!n.contains || n.contains(e));
+                            }),
+                            [e],
+                        )),
+                        0 === n && this.entered.length > 0
+                    );
                 },
             },
             {
@@ -56,6 +48,15 @@ var l = (function () {
                 },
             },
         ]),
-        e
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1),
+                    (r.configurable = !0),
+                    "value" in r && (r.writable = !0),
+                    Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

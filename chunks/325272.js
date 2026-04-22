@@ -1,40 +1,42 @@
-n.d(t, { A: () => c });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => u });
+var a = n(627968);
 n(64700);
-var a = n(311907),
-    r = n(397927),
-    i = n(263063),
-    s = n(71393),
-    d = n(985018),
-    o = n(336007);
-let c = (e) => {
+var i = n(311907),
+    r = n(534514),
+    l = n(834730),
+    s = n(263063),
+    d = n(71393),
+    o = n(985018),
+    c = n(336007);
+let u = (e) => {
     let { event: t } = e,
-        n = (0, a.bG)([s.A], () => s.A.getGuild(t.guild_id));
+        n = (0, i.bG)([d.A], () => d.A.getGuild(t.guild_id));
     return null == n
         ? null
-        : (0, l.jsxs)("div", {
-              className: o.kL,
+        : (0, a.jsxs)("div", {
+              className: c.kL,
               children: [
-                  (0, l.jsx)(r.Heading, {
-                      className: o.wx,
+                  (0, a.jsx)(r.D, {
+                      className: c.wx,
                       variant: "heading-sm/semibold",
-                      children: d.intl.string(d.t.SDTOL7),
+                      children: o.intl.string(o.t.SDTOL7),
                   }),
-                  (0, l.jsxs)("div", {
-                      className: o.bo,
+                  (0, a.jsxs)("div", {
+                      className: c.bo,
                       children: [
-                          (0, l.jsxs)("div", {
-                              className: o.OA,
+                          (0, a.jsxs)("div", {
+                              className: c.OA,
                               children: [
-                                  (0, l.jsx)(i.Ay, { guild: n, size: i.Ay.Sizes.MINI, className: o.$f }),
-                                  (0, l.jsx)(r.Text, {
+                                  (0, a.jsx)(s.Ay, { guild: n, size: s.Ay.Sizes.MINI, className: c.$f }),
+                                  (0, a.jsx)(l.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(r.Text, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
+                          (0, a.jsx)(l.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                       ],
                   }),
               ],

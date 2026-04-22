@@ -1,57 +1,59 @@
-s.d(t, { A: () => u });
+s.d(t, { A: () => m });
 var r = s(627968),
     n = s(64700),
-    a = s(503698),
-    i = s.n(a),
-    l = s(382222),
-    o = s(397927),
-    c = s(557722),
-    h = s(219716),
-    d = s(834265);
-function u(e) {
-    let { show: t, alpha2: s, countryCode: a } = e,
-        u = n.useRef(null),
-        p = n.useRef(null),
-        [m, C] = n.useState(0),
-        [A, g] = n.useState(!1);
+    l = s(503698),
+    a = s.n(l),
+    i = s(517738),
+    o = s(717421),
+    c = s(265872),
+    h = s(939249),
+    d = s(557722),
+    u = s(219716),
+    p = s(696841);
+function m(e) {
+    let { show: t, alpha2: s, countryCode: l } = e,
+        m = n.useRef(null),
+        C = n.useRef(null),
+        [f, A] = n.useState(0),
+        [g, y] = n.useState(!1);
     n.useEffect(() => {
         function e() {
-            C(t ? (p.current?.getBoundingClientRect().width ?? 0) : 0);
+            A(t ? (C.current?.getBoundingClientRect().width ?? 0) : 0);
         }
         return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-    }, [t, s, a]);
-    let S = (0, o.zhh)({
-        width: `${m}px`,
+    }, [t, s, l]);
+    let x = (0, o.z)({
+        width: `${f}px`,
         onStart: () => {
-            g(!0);
+            y(!0);
         },
         onRest: () => {
-            g(!1);
+            y(!1);
         },
     });
-    return (0, r.jsx)(o.YNO, {
-        targetElementRef: u,
+    return (0, r.jsx)(c.Y, {
+        targetElementRef: m,
         position: "top",
         renderPopout: (e) =>
-            (0, r.jsx)(h.A, {
-                className: d.SW,
+            (0, r.jsx)(u.A, {
+                className: p.SW,
                 onClick: (t) => {
-                    c.A.setCountryCode(t), e.closePopout();
+                    d.A.setCountryCode(t), e.closePopout();
                 },
             }),
         children: (e) =>
             (0, r.jsx)("div", {
-                className: i()(d.nw, { [d.R]: !(t || A) }),
-                ref: u,
-                children: (0, r.jsx)(l.animated.div, {
-                    className: d.kL,
-                    style: S,
+                className: a()(p.nw, { [p.R]: !(t || g) }),
+                ref: m,
+                children: (0, r.jsx)(i.animated.div, {
+                    className: p.kL,
+                    style: x,
                     children: (0, r.jsxs)("div", {
-                        className: d.WH,
-                        ref: p,
+                        className: p.WH,
+                        ref: C,
                         children: [
-                            (0, r.jsxs)(o.DUT, { ...e, className: d.kf, children: [s, " ", a] }),
-                            (0, r.jsx)("div", { className: d.me }),
+                            (0, r.jsxs)(h.D, { ...e, className: p.kf, children: [s, " ", l] }),
+                            (0, r.jsx)("div", { className: p.me }),
                         ],
                     }),
                 }),

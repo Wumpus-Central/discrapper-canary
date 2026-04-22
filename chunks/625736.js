@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { B: () => l, q: () => u });
-var r = n(224507),
-    i = n(825733),
-    a = n(547576),
-    s = n(47276);
-function o(e) {
-    return e && e.__esModule ? e.default : e;
-}
-function l(e, t) {
-    let { key: n } = e,
-        { checkboxProps: i } = (0, a.b)(e, t);
-    return { checkboxProps: { ...i, "aria-labelledby": `${i.id} ${(0, r.VJ)(t, n)}` } };
+l.d(t, { B: () => s, q: () => u });
+var n = l(224507),
+    o = l(825733),
+    r = l(547576),
+    i = l(47276);
+function s(e, t) {
+    let { key: l } = e,
+        { checkboxProps: o } = (0, r.b)(e, t);
+    return { checkboxProps: { ...o, "aria-labelledby": `${o.id} ${(0, n.VJ)(t, l)}` } };
 }
 function u(e) {
-    let { isEmpty: t, isSelectAll: n, selectionMode: r } = e.selectionManager;
+    var t;
+    let { isEmpty: l, isSelectAll: n, selectionMode: r } = e.selectionManager;
     return {
         checkboxProps: {
-            "aria-label": (0, s.o)(o(i.A), "@react-aria/table").format("single" === r ? "select" : "selectAll"),
+            "aria-label": (0, i.o)((t = o.A) && t.__esModule ? t.default : t, "@react-aria/table").format(
+                "single" === r ? "select" : "selectAll",
+            ),
             isSelected: n,
             isDisabled:
                 "multiple" !== r ||
                 0 === e.collection.size ||
                 (1 === e.collection.rows.length && "loader" === e.collection.rows[0].type),
-            isIndeterminate: !t && !n,
+            isIndeterminate: !l && !n,
             onChange: () => e.selectionManager.toggleSelectAll(),
         },
     };

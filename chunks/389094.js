@@ -1,58 +1,62 @@
-r.d(t, { default: () => j });
+r.d(t, { default: () => b });
 var n = r(627968),
     s = r(64700),
     i = r(284009),
     l = r.n(i),
-    a = r(397927),
-    c = r(10005),
-    d = r(534654),
-    o = r(208993),
-    x = r(842130),
-    u = r(985018),
-    h = r(765488);
-let j = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: i, onClose: j } = e,
-        [m, C] = s.useState(!1),
-        _ = s.useCallback(() => {
-            C(!0);
+    a = r(224640),
+    c = r(683071),
+    d = r(430993),
+    o = r(789645),
+    u = r(696208),
+    x = r(10005),
+    h = r(534654),
+    j = r(208993),
+    m = r(602339),
+    C = r(985018),
+    _ = r(971653);
+let b = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: i, onClose: b } = e,
+        [f, g] = s.useState(!1),
+        p = s.useCallback(() => {
+            g(!0);
         }, []),
-        b = s.useCallback(() => {
-            j();
-        }, [j]),
-        f = (0, d.A)(),
-        { declineLinkRequest: g, isDeclineLoading: p } = (0, c.A)({ onError: _, onSuccess: b });
+        v = s.useCallback(() => {
+            b();
+        }, [b]),
+        k = (0, h.A)(),
+        { declineLinkRequest: A, isDeclineLoading: N } = (0, x.A)({ onError: p, onSuccess: v });
     return (
-        l()(f, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
-        (0, n.jsxs)(a.dWK, {
+        l()(k, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        (0, n.jsxs)(a.d, {
             transitionState: i,
-            onClose: j,
+            onClose: b,
             children: [
-                m && (0, n.jsx)(a.wx6, { type: "critical", children: u.intl.string(x.default.tJAUyn) }),
-                (0, n.jsxs)(a.cwr, {
+                f && (0, n.jsx)(c.w, { type: "critical", children: C.intl.string(m.default.tJAUyn) }),
+                (0, n.jsxs)(d.c, {
                     children: [
-                        (0, n.jsx)(o.A.Header, {
+                        (0, n.jsx)(j.A.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: u.intl.string(x.default.teIRCR),
-                            icon: (0, n.jsx)(a.PGe, { size: "md", color: "currentColor", className: h.u }),
+                            header: C.intl.string(m.default.teIRCR),
+                            icon: (0, n.jsx)(o.P, { size: "md", color: "currentColor", className: _.u }),
                         }),
-                        (0, n.jsx)(o.A.Content, {
-                            children: (0, n.jsx)(o.A.Notice, { notice: u.intl.string(x.default.LcM8BS) }),
+                        (0, n.jsx)(j.A.Content, {
+                            children: (0, n.jsx)(j.A.Notice, { notice: C.intl.string(m.default.LcM8BS) }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(a.H7u, {
+                (0, n.jsx)(u.H, {
                     actionsFullWidth: !0,
                     actions: [
-                        { variant: "secondary", text: u.intl.string(u.t["ETE/oC"]), onClick: j, disabled: p },
+                        { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: b, disabled: N },
                         {
                             variant: "critical-primary",
-                            text: u.intl.string(x.default.dKxFcn),
+                            text: C.intl.string(m.default.dKxFcn),
                             onClick: () => {
-                                C(!1), g(r.id);
+                                g(!1), A(r.id);
                             },
-                            disabled: p,
-                            loading: p,
+                            disabled: N,
+                            loading: N,
                         },
                     ],
                 }),

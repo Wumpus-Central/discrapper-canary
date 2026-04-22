@@ -1,69 +1,73 @@
 "use strict";
-a.d(t, { H: () => p });
-var s = a(627968),
-    r = a(64700),
-    n = a(492462),
-    i = a(960488),
-    l = a(397927),
-    o = a(716965),
-    c = a(102028),
-    d = a(533553),
-    u = a(985018),
-    h = a(694900);
-function p(e) {
-    let { onUserCodeAccepted: t, usePrefilledCode: a } = e,
-        [p, x] = r.useState(() => {
+s.d(t, { H: () => m });
+var a = s(627968),
+    r = s(64700),
+    n = s(492462),
+    i = s(873263),
+    l = s(534514),
+    o = s(331322),
+    c = s(834730),
+    d = s(292666),
+    u = s(821609),
+    h = s(716965),
+    p = s(102028),
+    x = s(533553),
+    f = s(985018),
+    _ = s(442205);
+function m(e) {
+    let { onUserCodeAccepted: t, usePrefilledCode: s } = e,
+        [m, g] = r.useState(() => {
             let { user_code: e } = n.parse(window.location.search);
-            return a ? (e ?? "") : "";
+            return s ? (e ?? "") : "";
         }),
-        f = (0, i.zy)(),
-        _ = r.useCallback(() => {
-            (0, o.Vh)(f, "user_code_input_unauthorized");
-        }, [f]),
-        { manualSubmit: m, error: g, submitting: v } = (0, c.e)(p, t, _);
-    return (0, s.jsxs)("div", {
-        className: h.Qs,
+        v = (0, i.zy)(),
+        C = r.useCallback(() => {
+            (0, h.Vh)(v, "user_code_input_unauthorized");
+        }, [v]),
+        { manualSubmit: N, error: y, submitting: b } = (0, p.e)(m, t, C);
+    return (0, a.jsxs)("div", {
+        className: _.Qs,
         children: [
-            (0, s.jsxs)("div", {
-                className: h.gx,
+            (0, a.jsxs)("div", {
+                className: _.gx,
                 children: [
-                    (0, s.jsx)(l.Heading, {
+                    (0, a.jsx)(l.D, {
                         variant: "heading-xl/extrabold",
-                        className: h.Qq,
-                        children: u.intl.string(u.t.KYPNUv),
+                        className: _.Qq,
+                        children: f.intl.string(f.t.KYPNUv),
                     }),
-                    (0, s.jsxs)(l.BJc, {
+                    (0, a.jsxs)(o.B, {
                         gap: 24,
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, a.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                className: h.Qq,
-                                children: u.intl.string(u.t.xRHk7f),
+                                className: _.Qq,
+                                children: f.intl.string(f.t.xRHk7f),
                             }),
-                            (0, s.jsx)(l.ksK, {
-                                placeholder: u.intl.formatToPlainString(u.t["0tbz6x"], {
-                                    number: d.D.USER_CODE_LENGTH,
+                            (0, a.jsx)(d.k, {
+                                placeholder: f.intl.formatToPlainString(f.t["0tbz6x"], {
+                                    number: x.D.USER_CODE_LENGTH,
                                 }),
-                                maxLength: d.D.USER_CODE_LENGTH,
+                                maxLength: x.D.USER_CODE_LENGTH,
                                 autoComplete: "off",
                                 autoFocus: !0,
-                                value: p,
-                                onChange: x,
-                                error: g,
+                                value: m,
+                                onChange: g,
+                                error: y,
                                 fullWidth: !0,
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, s.jsx)(l.Button, {
+            (0, a.jsx)(u.$, {
                 fullWidth: !0,
                 variant: "primary",
-                text: u.intl.string(u.t["3PatSz"]),
-                onClick: m,
-                loading: v,
-                disabled: p.length !== d.D.USER_CODE_LENGTH,
+                text: f.intl.string(f.t["3PatSz"]),
+                onClick: N,
+                loading: b,
+                disabled: m.length !== x.D.USER_CODE_LENGTH,
             }),
         ],
     });

@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(47167),
-    i = n(652215),
-    s = n(985018);
-function a(e) {
-    let { channel: t, isReadonly: n = !1, isCreatingThread: a = !1 } = e,
-        o = (0, r.Ay)(t, !0),
-        l = (0, r.Ay)(t, !1);
-    return null == t || null == o
-        ? { placeholder: s.intl.string(s.t.MKDeyL), accessibilityLabel: s.intl.string(s.t.MKDeyL) }
-        : a
-          ? { placeholder: s.intl.string(s.t.YzpScd), accessibilityLabel: s.intl.string(s.t.YzpScd) }
-          : n
-            ? { placeholder: s.intl.string(s.t["RRvRp/"]), accessibilityLabel: s.intl.string(s.t["RRvRp/"]) }
-            : t.isForumPost()
+i.d(e, { A: () => o });
+var n = i(47167),
+    a = i(652215),
+    l = i(985018);
+function o(t) {
+    let { channel: e, isReadonly: i = !1, isCreatingThread: o = !1 } = t,
+        r = (0, n.Ay)(e, !0),
+        c = (0, n.Ay)(e, !1);
+    return null == e || null == r
+        ? { placeholder: l.intl.string(l.t.MKDeyL), accessibilityLabel: l.intl.string(l.t.MKDeyL) }
+        : o
+          ? { placeholder: l.intl.string(l.t.YzpScd), accessibilityLabel: l.intl.string(l.t.YzpScd) }
+          : i
+            ? { placeholder: l.intl.string(l.t["RRvRp/"]), accessibilityLabel: l.intl.string(l.t["RRvRp/"]) }
+            : e.isForumPost()
               ? {
-                    placeholder: s.intl.formatToPlainString(s.t.Y6qWLc, { channel: o }),
-                    accessibilityLabel: s.intl.formatToPlainString(s.t.KffKoR, { channel: l }),
+                    placeholder: l.intl.formatToPlainString(l.t.Y6qWLc, { channel: r }),
+                    accessibilityLabel: l.intl.formatToPlainString(l.t.KffKoR, { channel: c }),
                 }
-              : i.kvI.THREADS.has(t.type)
+              : a.kvI.THREADS.has(e.type)
                 ? {
-                      placeholder: s.intl.formatToPlainString(s.t["8lzR/R"], { channel: o }),
-                      accessibilityLabel: s.intl.formatToPlainString(s.t.UZIMWS, { channel: l }),
+                      placeholder: l.intl.formatToPlainString(l.t["8lzR/R"], { channel: r }),
+                      accessibilityLabel: l.intl.formatToPlainString(l.t.UZIMWS, { channel: c }),
                   }
-                : t.type === i.rbe.DM
+                : e.type === a.rbe.DM
                   ? {
-                        placeholder: s.intl.formatToPlainString(s.t["4c+CAx"], { channel: o }),
-                        accessibilityLabel: s.intl.formatToPlainString(s.t.fqOxbV, { channel: l }),
+                        placeholder: l.intl.formatToPlainString(l.t["4c+CAx"], { channel: r }),
+                        accessibilityLabel: l.intl.formatToPlainString(l.t.fqOxbV, { channel: c }),
                     }
                   : {
-                        placeholder: s.intl.formatToPlainString(s.t["8lzR/R"], { channel: o }),
-                        accessibilityLabel: s.intl.formatToPlainString(s.t.ih7ZSA, { channel: l }),
+                        placeholder: l.intl.formatToPlainString(l.t["8lzR/R"], { channel: r }),
+                        accessibilityLabel: l.intl.formatToPlainString(l.t.ih7ZSA, { channel: c }),
                     };
 }

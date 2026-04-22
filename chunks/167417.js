@@ -1,40 +1,34 @@
-"use strict";
-n.d(t, { $: () => d });
-var r = n(627968),
-    i = n(64700),
-    s = n(974213),
-    a = n(568385),
-    o = n(150934),
-    l = n(452027),
-    u = n(460890),
-    c = n(1172);
-function d(e) {
-    let { onChange: t, options: n, selectedValues: d, disabled: _ = !1, ...f } = e,
-        p = i.useContext(u.VO),
-        h = p?.experiments?.enabledExperiments?.includes("mana-toggle-inputs"),
-        m = (e) => {
-            t?.(e);
-        },
-        E = (e, n) => {
-            let r = n ? [...d, e] : d.filter((t) => t !== e);
-            t?.(r);
-        };
-    return (0, r.jsx)(l.D, {
-        ...f,
+a.d(l, { $: () => c });
+var t = a(627968),
+    n = a(64700),
+    o = a(974213),
+    i = a(568385),
+    r = a(150934),
+    s = a(452027),
+    d = a(460890),
+    u = a(1172);
+function c(e) {
+    let { onChange: l, options: a, selectedValues: c, disabled: b = !1, ...p } = e,
+        m = n.useContext(d.VO),
+        h = m?.experiments?.enabledExperiments?.includes("mana-toggle-inputs");
+    return (0, t.jsx)(s.D, {
+        ...p,
         role: "group",
         children: h
-            ? (0, r.jsx)(s.$Q, {
-                  className: c.O,
-                  value: d.map(String),
-                  onChange: m,
+            ? (0, t.jsx)(o.$Q, {
+                  className: u.O,
+                  value: c.map(String),
+                  onChange: (e) => {
+                      l?.(e);
+                  },
                   "data-mana-component": "checkbox-group",
-                  isDisabled: _,
-                  children: n.map((e) =>
-                      (0, r.jsx)(
-                          a.J,
+                  isDisabled: b,
+                  children: a.map((e) =>
+                      (0, t.jsx)(
+                          i.J,
                           {
-                              disabled: _ || e.disabled,
-                              checked: d.includes(e.value),
+                              disabled: b || e.disabled,
+                              checked: c.includes(e.value),
                               label: e.label,
                               value: e.value,
                               description: e.description,
@@ -44,20 +38,24 @@ function d(e) {
                       ),
                   ),
               })
-            : (0, r.jsx)("div", {
-                  className: c.O,
-                  children: n.map((e) =>
-                      (0, r.jsx)(
+            : (0, t.jsx)("div", {
+                  className: u.O,
+                  children: a.map((e) =>
+                      (0, t.jsx)(
                           "div",
                           {
-                              className: c.I,
-                              children: (0, r.jsx)(o.K, {
-                                  disabled: _ || e.disabled,
-                                  checked: d.includes(e.value),
+                              className: u.I,
+                              children: (0, t.jsx)(r.K, {
+                                  disabled: b || e.disabled,
+                                  checked: c.includes(e.value),
                                   label: e.label,
                                   description: e.description,
                                   leadingIcon: e.leadingIcon,
-                                  onChange: (t) => E(e.value, t),
+                                  onChange: (a) => {
+                                      var t;
+                                      let n;
+                                      return (t = e.value), (n = a ? [...c, t] : c.filter((e) => e !== t)), void l?.(n);
+                                  },
                               }),
                           },
                           String(e.value),

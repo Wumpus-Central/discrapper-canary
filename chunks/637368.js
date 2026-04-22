@@ -1,49 +1,51 @@
-l.d(t, { A: () => f });
+l.d(t, { A: () => g });
 var n = l(627968),
     a = l(64700),
-    i = l(397927),
-    s = l(102597),
-    r = l(904054),
-    u = l(236972),
-    o = l(667920),
-    d = l(997098),
-    c = l(985018),
-    m = l(214606);
-let f = a.memo(function (e) {
-    let { sound: t, volume: l, disabled: f } = e,
-        [h, g] = a.useState(!1),
-        x = a.useRef(null),
-        { file: v, audio: j, loadAudioFromFile: p } = (0, u.L)(),
-        N = a.useMemo(() => (0, s.A)(t.soundId), [t]);
+    i = l(939249),
+    s = l(29080),
+    r = l(782134),
+    u = l(102597),
+    o = l(904054),
+    d = l(236972),
+    c = l(667920),
+    m = l(997098),
+    f = l(985018),
+    h = l(919195);
+let g = a.memo(function (e) {
+    let { sound: t, volume: l, disabled: g } = e,
+        [x, v] = a.useState(!1),
+        j = a.useRef(null),
+        { file: p, audio: N, loadAudioFromFile: A } = (0, d.L)(),
+        C = a.useMemo(() => (0, u.A)(t.soundId), [t]);
     return (
         a.useEffect(() => {
-            null == x.current && (x.current = (0, o.a)(N, t.name).then(p));
-        }, [N, p, t.name]),
+            null == j.current && (j.current = (0, c.a)(C, t.name).then(A));
+        }, [C, A, t.name]),
         (0, n.jsxs)("div", {
-            className: m.i1,
+            className: h.i1,
             children: [
-                (0, n.jsx)(i.DUT, {
-                    onClick: f
+                (0, n.jsx)(i.D, {
+                    onClick: g
                         ? void 0
                         : function () {
-                              null != j &&
-                                  (j.paused
-                                      ? ((j.volume = (0, r.A)(l)),
-                                        (j.currentTime = 0),
-                                        j.play(),
-                                        g(!0),
-                                        j.addEventListener("ended", () => g(!1), { once: !0 }))
-                                      : (j.pause(), g(!1)));
+                              null != N &&
+                                  (N.paused
+                                      ? ((N.volume = (0, o.A)(l)),
+                                        (N.currentTime = 0),
+                                        N.play(),
+                                        v(!0),
+                                        N.addEventListener("ended", () => v(!1), { once: !0 }))
+                                      : (N.pause(), v(!1)));
                           },
-                    className: m.Rr,
-                    "aria-label": h ? c.intl.string(c.t.hHBkuG) : c.intl.string(c.t.RscU7I),
-                    children: h
-                        ? (0, n.jsx)(i.wFz, { size: "xs", color: "currentColor", className: m.uZ })
-                        : (0, n.jsx)(i.udU, { size: "xs", color: "currentColor", className: m.uZ }),
+                    className: h.Rr,
+                    "aria-label": x ? f.intl.string(f.t.hHBkuG) : f.intl.string(f.t.RscU7I),
+                    children: x
+                        ? (0, n.jsx)(s.w, { size: "xs", color: "currentColor", className: h.uZ })
+                        : (0, n.jsx)(r.u, { size: "xs", color: "currentColor", className: h.uZ }),
                 }),
                 (0, n.jsx)("div", {
-                    className: m.FU,
-                    children: (0, n.jsx)(d.A, { className: m.ou, file: v, audio: j }),
+                    className: h.FU,
+                    children: (0, n.jsx)(m.A, { className: h.ou, file: p, audio: N }),
                 }),
             ],
         })

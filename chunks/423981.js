@@ -1,77 +1,79 @@
-"use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => L });
 var i = n(627968),
-    s = n(64700),
-    l = n(835245),
+    l = n(64700),
+    s = n(835245),
     r = n(118751),
     a = n(311907),
     o = n(562465),
-    d = n(397927),
-    c = n(974544),
-    u = n(421838),
-    m = n(773669),
-    g = n(498642),
-    x = n(71393),
-    h = n(351906),
-    _ = n(954571),
-    A = n(555337),
-    p = n(855537),
-    f = n(907445),
-    j = n(11725),
-    N = n(652215),
-    E = n(897513),
-    C = n(985018),
-    T = n(229344);
-let I = function (e, t, n) {
+    d = n(683071),
+    c = n(821609),
+    u = n(534514),
+    m = n(834730),
+    g = n(974544),
+    h = n(421838),
+    x = n(773669),
+    _ = n(498642),
+    p = n(71393),
+    A = n(351906),
+    E = n(954571),
+    f = n(555337),
+    j = n(855537),
+    N = n(907445),
+    I = n(11725),
+    C = n(652215),
+    b = n(897513),
+    v = n(985018),
+    S = n(229344);
+let T = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            s = null;
+            l = null;
         return (
             null == t || Number.isNaN(t)
-                ? (null == t || Number.isNaN(t)) && null != e && (s = C.intl.string(C.t.xO2msf))
-                : (s = C.intl.formatToPlainString(C.t.nskeMw, { percentage: (0, r.s)(Math.abs(t), n) })),
+                ? (null == t || Number.isNaN(t)) && null != e && (l = v.intl.string(v.t.xO2msf))
+                : (l = v.intl.formatToPlainString(v.t.nskeMw, { percentage: (0, r.s)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? `${(0, r.s)(e, n)}${i ? "%" : ""}` : C.intl.string(C.t.jHpxwo),
-                subtext: s,
+                localizedNumber: null != e ? `${(0, r.s)(e, n)}${i ? "%" : ""}` : v.intl.string(v.t.jHpxwo),
+                subtext: l,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0,
             }
         );
     },
-    b = function (e) {
+    y = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === N.t02.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === C.t02.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, i.jsx)("div", {
-                  className: T.NA,
-                  children: (0, i.jsx)(d.wx6, { type: "info", children: C.intl.string(C.t["FsgE/B"]) }),
+                  className: S.NA,
+                  children: (0, i.jsx)(d.w, { type: "info", children: v.intl.string(v.t["FsgE/B"]) }),
               })
             : null == e
               ? null
-              : (0, i.jsx)(d.wx6, { type: "critical", children: C.intl.string(C.t.Iju63e) });
+              : (0, i.jsx)(d.w, { type: "critical", children: v.intl.string(v.t.Iju63e) });
     },
-    v = () => {
-        let [e, t] = s.useState(!1),
-            n = (0, a.bG)([A.A], () => A.A.getGuildId());
+    R = () => {
+        let [e, t] = l.useState(!1),
+            n = (0, a.bG)([f.A], () => f.A.getGuildId());
         return (0, i.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
-            className: T.XU,
-            children: (0, i.jsx)(d.Button, {
+            className: S.XU,
+            children: (0, i.jsx)(c.$, {
                 variant: "primary",
-                text: C.intl.string(C.t.Uskgxx),
+                text: v.intl.string(v.t.Uskgxx),
                 onClick: () => {
                     let e, i;
                     t(!0),
-                        (_.default.track(N.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: n }),
-                        (e = null == n ? N.dSh.DEVELOPER_PORTAL : N.dSh.DEVELOPER_PORTAL_GUILD_ANALYTICS(n)),
-                        (i = (0, l.A)()),
+                        (E.default.track(C.HAw.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: n }),
+                        (e = null == n ? C.dSh.DEVELOPER_PORTAL : C.dSh.DEVELOPER_PORTAL_GUILD_ANALYTICS(n)),
+                        (i = (0, s.A)()),
                         o.Bo.post({
-                            url: N.Rsh.HANDOFF,
+                            url: C.Rsh.HANDOFF,
                             body: { key: i },
                             oldFormErrors: !0,
                             rejectWithError: !0,
                         }).then(
                             (t) => {
                                 let n = t.body.handoff_token;
-                                window.open(N.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(i, n, e));
+                                window.open(C.X7G.DEVELOPER_PORTAL_LOGIN_HANDOFF(i, n, e));
                             },
                             () => {
                                 window.open(e);
@@ -84,55 +86,55 @@ let I = function (e, t, n) {
             }),
         });
     },
-    S = () => {
-        let e = (0, a.bG)([A.A], () => A.A.getGuildId()),
-            t = (0, a.bG)([g.A], () => g.A.getMemberCount(e)),
-            n = (0, a.bG)([x.A], () => x.A.getGuild(e)),
-            l = (0, a.bG)([m.default], () => m.default.locale),
-            { analytics: r, errorCode: o } = (0, a.cf)([f.A], () => ({
-                analytics: null != e ? f.A.getOverviewAnalytics(e) : null,
-                errorCode: f.A.getError(),
+    L = () => {
+        let e = (0, a.bG)([f.A], () => f.A.getGuildId()),
+            t = (0, a.bG)([_.A], () => _.A.getMemberCount(e)),
+            n = (0, a.bG)([p.A], () => p.A.getGuild(e)),
+            s = (0, a.bG)([x.default], () => x.default.locale),
+            { analytics: r, errorCode: o } = (0, a.cf)([N.A], () => ({
+                analytics: null != e ? N.A.getOverviewAnalytics(e) : null,
+                errorCode: N.A.getError(),
             })),
-            _ = (0, a.bG)([h.A], () => h.A.getSettings().enabled),
-            S =
+            d = (0, a.bG)([A.A], () => A.A.getSettings().enabled),
+            c =
                 null == t ||
                 null == n ||
                 (null != t &&
                     t < 500 &&
                     null != n &&
-                    !n.features.has(N.GuildFeatures.PARTNERED) &&
-                    !n.features.has(N.GuildFeatures.VERIFIED));
-        s.useEffect(() => {
-            null == e || S || ((0, p.p9)(e), (0, p.fe)(e), (0, p._z)(e));
-        }, [e, S]),
-            s.useEffect(() => {
-                (0, u.sF)(E._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+                    !n.features.has(C.GuildFeatures.PARTNERED) &&
+                    !n.features.has(C.GuildFeatures.VERIFIED));
+        l.useEffect(() => {
+            null == e || c || ((0, j.p9)(e), (0, j.fe)(e), (0, j._z)(e));
+        }, [e, c]),
+            l.useEffect(() => {
+                (0, h.sF)(b._.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
             }, []);
-        let y =
+        let E =
             null != r
                 ? (0, i.jsx)("div", {
-                      className: T.__invalid_guildAnalyticsOverviewWrapper,
+                      className: S.__invalid_guildAnalyticsOverviewWrapper,
                       children: (0, i.jsxs)("div", {
-                          className: T.SJ,
+                          className: S.SJ,
                           children: [
-                              (0, i.jsx)(j.A, {
-                                  title: C.intl.string(C.t.i0NorT),
-                                  tooltipText: C.intl.string(C.t.KiRbLJ),
-                                  ...I(r.visitors, r.visitorsChange, l),
+                              (0, i.jsx)(I.A, {
+                                  title: v.intl.string(v.t.i0NorT),
+                                  tooltipText: v.intl.string(v.t.KiRbLJ),
+                                  ...T(r.visitors, r.visitorsChange, s),
                               }),
-                              (0, i.jsx)(j.A, {
-                                  title: C.intl.string(C.t.DDAHdQ),
-                                  tooltipText: C.intl.string(C.t.HxWUkU),
-                                  ...I(r.communicators, r.communicatorsChange, l),
+                              (0, i.jsx)(I.A, {
+                                  title: v.intl.string(v.t.DDAHdQ),
+                                  tooltipText: v.intl.string(v.t.HxWUkU),
+                                  ...T(r.communicators, r.communicatorsChange, s),
                               }),
-                              (0, i.jsx)(j.A, {
-                                  title: C.intl.string(C.t.hYeOqC),
-                                  ...I(r.newMembers, r.newMembersChange, l),
+                              (0, i.jsx)(I.A, {
+                                  title: v.intl.string(v.t.hYeOqC),
+                                  ...T(r.newMembers, r.newMembersChange, s),
                               }),
-                              (0, i.jsx)(j.A, {
-                                  title: C.intl.string(C.t.jj7OPw),
-                                  tooltipText: C.intl.string(C.t.MQCslz),
-                                  ...I(r.pctRetained, r.pctRetainedChange, l, !0),
+                              (0, i.jsx)(I.A, {
+                                  title: v.intl.string(v.t.jj7OPw),
+                                  tooltipText: v.intl.string(v.t.MQCslz),
+                                  ...T(r.pctRetained, r.pctRetainedChange, s, !0),
                               }),
                           ],
                       }),
@@ -140,22 +142,22 @@ let I = function (e, t, n) {
                 : null;
         return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(d.Heading, { variant: "heading-lg/semibold", children: C.intl.string(C.t["0wWfUG"]) }),
-                (0, i.jsx)(d.Text, { variant: "text-sm/normal", children: C.intl.format(C.t.NIZ60a, {}) }),
-                b(o, S),
+                (0, i.jsx)(u.D, { variant: "heading-lg/semibold", children: v.intl.string(v.t["0wWfUG"]) }),
+                (0, i.jsx)(m.E, { variant: "text-sm/normal", children: v.intl.format(v.t.NIZ60a, {}) }),
+                y(o, c),
                 (0, i.jsxs)("div", {
-                    className: T.Pg,
+                    className: S.Pg,
                     children: [
-                        (0, i.jsx)("div", { className: T.jM }),
-                        (0, i.jsx)(d.Text, {
-                            className: T.WO,
+                        (0, i.jsx)("div", { className: S.jM }),
+                        (0, i.jsx)(m.E, {
+                            className: S.WO,
                             variant: "text-sm/normal",
-                            children: C.intl.string(C.t.A5vswv),
+                            children: v.intl.string(v.t.A5vswv),
                         }),
-                        (0, i.jsx)(v, {}),
+                        (0, i.jsx)(R, {}),
                     ],
                 }),
-                _ ? (0, i.jsx)("div", { className: T.Rc, children: (0, i.jsx)(c.A, {}) }) : y,
+                d ? (0, i.jsx)("div", { className: S.Rc, children: (0, i.jsx)(g.A, {}) }) : E,
             ],
         });
     };

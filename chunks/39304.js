@@ -1,13 +1,12 @@
 "use strict";
-n.d(t, { HV: () => o, WQ: () => a, lK: () => s }), n(321073);
-let r = 10,
-    i = [];
-function a(e) {
-    for (i.push(e); i.length > r; ) i.shift();
+n.d(t, { HV: () => a, WQ: () => i, lK: () => s }), n(321073);
+let r = [];
+function i(e) {
+    for (r.push(e); r.length > 10; ) r.shift();
 }
 function s() {
-    return i.join(" -> ");
+    return r.join(" -> ");
 }
-function o() {
-    return i.length > 0 ? i[i.length - 1] : null;
+function a() {
+    return r.length > 0 ? r[r.length - 1] : null;
 }

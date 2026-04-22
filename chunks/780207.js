@@ -1,10 +1,10 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
-var s = n(397927),
+var s = n(192308),
     l = n(652215);
-function r() {
-    (0, s.mMO)(async () => {
+function a() {
+    (0, s.openModalLazy)(async () => {
         let { default: e } = await n.e("32482").then(n.bind(n, 861177));
         return (t) =>
             (0, i.jsx)(e, {

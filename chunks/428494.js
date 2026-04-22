@@ -1,18 +1,18 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = {
+        a = {
             className: "number",
             relevance: 0,
             variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }],
         },
-        r = e.COMMENT();
-    r.variants = [
+        n = e.COMMENT();
+    n.variants = [
         { begin: /;/, end: /$/ },
         { begin: /#/, end: /$/ },
     ];
-    let i = { className: "variable", variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
-        s = { className: "literal", begin: /\bon|off|true|false|yes|no\b/ },
-        a = {
+    let r = { className: "variable", variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
+        i = { className: "literal", begin: /\bon|off|true|false|yes|no\b/ },
+        o = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -22,23 +22,29 @@ e.exports = function (e) {
                 { begin: "'", end: "'" },
             ],
         },
-        o = { begin: /\[/, end: /\]/, contains: [r, s, i, a, n, "self"], relevance: 0 },
-        l = /[A-Za-z0-9_-]{1,149}/,
-        u = /"(\\"|[^"])*"/,
-        c = /'[^']*'/,
-        d = t.either(l, u, c);
+        s = t.either(/[A-Za-z0-9_-]{1,149}/, /"(\\"|[^"])*"/, /'[^']*'/);
     return {
         name: "TOML, also INI",
         aliases: ["toml"],
         case_insensitive: !0,
         illegal: /\S/,
         contains: [
-            r,
+            n,
             { className: "section", begin: /\[+/, end: /\]+/ },
             {
-                begin: t.concat(d, "(\\s*\\.\\s*", d, ")*", t.lookahead(/\s*=\s*[^#\s]/)),
+                begin: t.concat(s, "(\\s*\\.\\s*", s, ")*", t.lookahead(/\s*=\s*[^#\s]/)),
                 className: "attr",
-                starts: { end: /$/, contains: [r, o, s, i, a, n] },
+                starts: {
+                    end: /$/,
+                    contains: [
+                        n,
+                        { begin: /\[/, end: /\]/, contains: [n, i, r, o, a, "self"], relevance: 0 },
+                        i,
+                        r,
+                        o,
+                        a,
+                    ],
+                },
             },
         ],
     };

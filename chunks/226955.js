@@ -1,21 +1,23 @@
 "use strict";
 e.exports = function (e, t, r, i) {
-    var a = this;
-    function s(t) {
-        return function () {
-            (a.nextExpectedAction = t), ++a.sequenceLevels[e], a.resetSequenceTimer();
-        };
-    }
-    function o(t) {
-        a.fireCallback(r, t, e),
-            "keyup" !== i && (a.ignoreNextKeyup = n(780594)(t)),
+    var s = this;
+    function a(t) {
+        s.fireCallback(r, t, e),
+            "keyup" !== i && (s.ignoreNextKeyup = n(780594)(t)),
             setTimeout(function () {
-                a.resetSequences();
+                s.resetSequences();
             }, 10);
     }
-    a.sequenceLevels[e] = 0;
-    for (var l = 0; l < t.length; ++l) {
-        var u = l + 1 === t.length ? o : s(i || a.getKeyInfo(t[l + 1]).action);
-        a.bindSingle(t[l], u, i, e, l);
+    s.sequenceLevels[e] = 0;
+    for (var o = 0; o < t.length; ++o) {
+        var l =
+            o + 1 === t.length
+                ? a
+                : (function (t) {
+                      return function () {
+                          (s.nextExpectedAction = t), ++s.sequenceLevels[e], s.resetSequenceTimer();
+                      };
+                  })(i || s.getKeyInfo(t[o + 1]).action);
+        s.bindSingle(t[o], l, i, e, o);
     }
 };

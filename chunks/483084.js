@@ -3,10 +3,10 @@ n.d(t, { K: () => i });
 var r = n(64700);
 function i(e) {
     let { active: t, options: n, renderOption: i } = e,
-        a = "function" == typeof n,
-        [s, o] = r.useState({ options: a ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
-        { options: l, loading: u, query: c, debouncedQuery: d } = s,
-        _ = r.useCallback((e) => o((t) => ({ ...t, loading: a, query: e, debouncedQuery: e })), [a]);
+        s = "function" == typeof n,
+        [a, o] = r.useState({ options: s ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
+        { options: l, loading: u, query: d, debouncedQuery: c } = a,
+        _ = r.useCallback((e) => o((t) => ({ ...t, loading: s, query: e, debouncedQuery: e })), [s]);
     return (
         r.useEffect(() => {
             t && _("");
@@ -14,32 +14,29 @@ function i(e) {
         r.useEffect(() => {
             let e;
             return (
-                a
+                s
                     ? (o((e) => ({ ...e, loading: !0, debouncedQuery: null })),
                       (e = setTimeout(() => {
-                          _(c);
+                          _(d);
                       }, 500)))
-                    : _(c),
+                    : _(d),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [a, c, _]),
+        }, [s, d, _]),
         r.useEffect(() => {
             let e = !1;
-            function r() {
-                return "function" == typeof n ? n(d) : Promise.resolve(n);
-            }
             return (
-                ((t && null !== d && a) || !a) &&
-                    r().then((t) => {
+                ((t && null !== c && s) || !s) &&
+                    ("function" == typeof n ? n(c) : Promise.resolve(n)).then((t) => {
                         e || (null != i && (t = t.map(i)), o((e) => ({ ...e, options: t, loading: !1 })));
                     }),
                 () => {
                     e = !0;
                 }
             );
-        }, [t, n, d, i, a]),
+        }, [t, n, c, i, s]),
         {
             options: l,
             loading: u,

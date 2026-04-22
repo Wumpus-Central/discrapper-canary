@@ -1,33 +1,34 @@
-i.d(e, { default: () => f });
+i.d(e, { default: () => h });
 var a = i(627968),
     n = i(64700),
     s = i(311907),
-    c = i(397927),
-    o = i(442433),
-    r = i(684013),
-    d = i(592598),
-    l = i(672396),
-    u = i(985018);
-function f(t) {
+    c = i(861672),
+    o = i(477782),
+    r = i(442433),
+    d = i(684013),
+    l = i(592598),
+    u = i(672396),
+    f = i(985018);
+function h(t) {
     let { onSelect: e, onClose: i } = t,
-        f = (0, s.bG)([d.A], () => d.A.isNotificationDisabled(l.KS.TextChat)),
-        h = n.useRef(i);
+        h = (0, s.bG)([l.A], () => l.A.isNotificationDisabled(u.KS.TextChat)),
+        p = n.useRef(i);
     return (
         n.useEffect(() => {
-            h.current = i;
+            p.current = i;
         }),
-        n.useEffect(() => () => h.current?.(), []),
-        (0, a.jsx)(c.W1t, {
+        n.useEffect(() => () => p.current?.(), []),
+        (0, a.jsx)(c.W, {
             "data-menu-migrated-auto": !0,
             navId: "overlay-notifications-widget-context-menu",
-            onClose: o.Z_,
-            "aria-label": u.intl.string(u.t.tPfVWi),
+            onClose: r.Z_,
+            "aria-label": f.intl.string(f.t.tPfVWi),
             onSelect: e,
-            children: (0, a.jsx)(c.sLh, {
-                label: u.intl.string(u.t.Fy5kPp),
-                checked: !f,
+            children: (0, a.jsx)(o.sL, {
+                label: f.intl.string(f.t.Fy5kPp),
+                checked: !h,
                 id: "overlay-text-chat-notifications",
-                action: () => r.A.setNotificationDisabled(l.KS.TextChat, !f),
+                action: () => d.A.setNotificationDisabled(u.KS.TextChat, !h),
             }),
         })
     );

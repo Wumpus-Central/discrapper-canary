@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Du: "stepBody_d947e6",
     mh: "stepBodyCustomGift_d947e6",

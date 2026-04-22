@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { v: () => c });
 var i = n(64700),
-    s = n(735438),
-    l = n.n(s),
+    l = n(735438),
+    s = n.n(l),
     r = n(311907),
     a = n(492494),
     o = n(885617),
@@ -19,12 +18,12 @@ function c(e) {
             totalAnimatedEmoji: 0,
         };
     let n = (0, d.sN)(t),
-        s = (0, r.bG)([o.A], () => o.A.getEmojis(t.id)),
+        l = (0, r.bG)([o.A], () => o.A.getEmojis(t.id)),
         [c, u] = i.useMemo(() => {
-            let e = s?.filter((e) => !(0, a.Eg)(e, t.id)),
-                [n, i] = l().partition(e, (e) => !e.animated);
+            let e = l?.filter((e) => !(0, a.Eg)(e, t.id)),
+                [n, i] = s().partition(e, (e) => !e.animated);
             return [n, i];
-        }, [s, t]),
+        }, [l, t]),
         m = Math.max(n - c.length, n - u.length);
     return {
         maxEmojiSlots: n,

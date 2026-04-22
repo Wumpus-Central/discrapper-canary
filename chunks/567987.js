@@ -2,92 +2,94 @@ n.d(t, { E: () => I });
 var r = n(627968),
     i = n(64700),
     l = n(284009),
-    s = n.n(l),
-    a = n(442433),
+    a = n.n(l),
+    s = n(442433),
     o = n(793574),
     u = n(326567),
     d = n(287809),
     c = n(480890),
-    h = n(806931),
-    A = n(652215);
+    A = n(806931),
+    h = n(652215);
 function I(e) {
     let { channel: t } = e;
     return i.useCallback(
         (e, i, l, I) => {
             if (null == t) return;
-            let p = { context: A.BRT.CALL_TILE_POPOUT };
+            let w = { context: h.BRT.CALL_TILE_POPOUT };
             switch (e.type) {
-                case h.lp.HIDDEN_STREAM:
-                case h.lp.STREAM:
-                    (0, a.L3)(
+                case A.lp.HIDDEN_STREAM:
+                case A.lp.STREAM:
+                    (0, s.L3)(
                         i,
                         async () => {
-                            let { default: t } = await n.e("66692").then(n.bind(n, 796175));
+                            let { default: t } = await Promise.all([n.e("66692"), n.e("31988")]).then(
+                                n.bind(n, 796175),
+                            );
                             return (n) =>
                                 (0, r.jsx)(t, {
                                     stream: e.stream,
-                                    appContext: A.BRT.CALL_TILE_POPOUT,
+                                    appContext: h.BRT.CALL_TILE_POPOUT,
                                     minimal: l,
                                     exitFullscreen: () => {},
                                     onInteraction: (0, c.s)("StreamContextMenu", o.A.CALL_TILE_POPOUT, {
                                         entrypoint: I,
-                                        tileType: h.qs.STREAM,
+                                        tileType: A.qs.STREAM,
                                         targetUserId: e.user.id,
                                     }),
                                     ...n,
                                 });
                         },
-                        p,
+                        w,
                     );
                     return;
-                case h.lp.USER:
-                    let w = d.default.getUser(e.id);
-                    if (null != w) {
+                case A.lp.USER:
+                    let C = d.default.getUser(e.id);
+                    if (null != C) {
                         if (l)
-                            return (0, u.r)(i, w, t, p, (e, t) => {
+                            return (0, u.r)(i, C, t, w, (e, t) => {
                                 (0, c.s)(e, o.A.CALL_TILE_POPOUT, {
-                                    entrypoint: h.GK.THREE_DOT,
-                                    tileType: h.qs.USER,
-                                    targetUserId: w.id,
+                                    entrypoint: A.GK.THREE_DOT,
+                                    tileType: A.qs.USER,
+                                    targetUserId: C.id,
                                 })(t);
                             });
                         switch (t.type) {
-                            case A.rbe.DM:
-                                return (0, a.L3)(
+                            case h.rbe.DM:
+                                return (0, s.L3)(
                                     i,
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("97262"),
                                             n.e("42128"),
                                             n.e("39778"),
-                                            n.e("60770"),
+                                            n.e("44607"),
                                         ]).then(n.bind(n, 385913));
                                         return (n) =>
                                             (0, r.jsx)(e, {
                                                 ...n,
                                                 showChannelCallItems: !0,
                                                 showMediaItems: !0,
-                                                user: w,
+                                                user: C,
                                                 channel: t,
                                                 showModalItems: !0,
                                                 onInteraction: (0, c.s)("DMUserContextMenu", o.A.CALL_TILE_POPOUT, {
                                                     entrypoint: I,
-                                                    tileType: h.qs.USER,
-                                                    targetUserId: w.id,
+                                                    tileType: A.qs.USER,
+                                                    targetUserId: C.id,
                                                 }),
                                             });
                                     },
-                                    p,
+                                    w,
                                 );
-                            case A.rbe.GROUP_DM:
-                                return (0, a.L3)(
+                            case h.rbe.GROUP_DM:
+                                return (0, s.L3)(
                                     i,
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("97262"),
                                             n.e("42128"),
                                             n.e("62891"),
-                                            n.e("77473"),
+                                            n.e("2425"),
                                         ]).then(n.bind(n, 228006));
                                         return (n) =>
                                             (0, r.jsx)(e, {
@@ -95,32 +97,32 @@ function I(e) {
                                                 showChannelCallItems: !0,
                                                 showMediaItems: !0,
                                                 showChatItems: !1,
-                                                user: w,
+                                                user: C,
                                                 channel: t,
                                                 showModalItems: !0,
                                                 onInteraction: (0, c.s)(
                                                     "GroupDMUserContextMenu",
                                                     o.A.CALL_TILE_POPOUT,
-                                                    { entrypoint: I, tileType: h.qs.USER, targetUserId: w.id },
+                                                    { entrypoint: I, tileType: A.qs.USER, targetUserId: C.id },
                                                 ),
                                             });
                                     },
-                                    p,
+                                    w,
                                 );
-                            case A.rbe.GUILD_VOICE:
-                            case A.rbe.PUBLIC_THREAD:
-                            case A.rbe.PRIVATE_THREAD:
+                            case h.rbe.GUILD_VOICE:
+                            case h.rbe.PUBLIC_THREAD:
+                            case h.rbe.PRIVATE_THREAD:
                                 let e = t.getGuildId();
                                 return (
-                                    s()(null != e, "GuildID null for guild voice channel"),
-                                    (0, a.L3)(
+                                    a()(null != e, "GuildID null for guild voice channel"),
+                                    (0, s.L3)(
                                         i,
                                         async () => {
                                             let { default: i } = await Promise.all([
                                                 n.e("97262"),
                                                 n.e("42128"),
                                                 n.e("84841"),
-                                                n.e("38389"),
+                                                n.e("52463"),
                                             ]).then(n.bind(n, 107632));
                                             return (n) =>
                                                 (0, r.jsx)(i, {
@@ -128,24 +130,24 @@ function I(e) {
                                                     showMediaItems: !0,
                                                     showChannelCallItems: !0,
                                                     showChatItems: !1,
-                                                    user: w,
+                                                    user: C,
                                                     channel: t,
                                                     guildId: e,
                                                     showModalItems: !0,
                                                     onInteraction: (0, c.s)(
                                                         "GuildChannelUserContextMenu",
                                                         o.A.CALL_TILE_POPOUT,
-                                                        { entrypoint: I, tileType: h.qs.USER, targetUserId: w.id },
+                                                        { entrypoint: I, tileType: A.qs.USER, targetUserId: C.id },
                                                     ),
                                                 });
                                         },
-                                        p,
+                                        w,
                                     )
                                 );
                         }
                     }
                     return;
-                case h.lp.ACTIVITY:
+                case A.lp.ACTIVITY:
                     return;
             }
         },

@@ -1,16 +1,10 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => l });
 var r = n(311907),
     i = n(73153),
     s = n(961350);
 let a = {};
-function o(e) {
-    delete a[e.socketId];
-}
-function l(e) {
-    delete a[e.socketId], e.suppressNotifications && (a[e.socketId] = e.targetUserId);
-}
-class u extends r.Ay.Store {
+class o extends r.Ay.Store {
     initialize() {
         this.waitFor(s.default);
     }
@@ -20,4 +14,11 @@ class u extends r.Ay.Store {
         return !1;
     }
 }
-let c = new u(i.h, { RPC_APP_DISCONNECTED: o, SET_RPC_NOTIFICATION_SETTINGS: l });
+let l = new o(i.h, {
+    RPC_APP_DISCONNECTED: function (e) {
+        delete a[e.socketId];
+    },
+    SET_RPC_NOTIFICATION_SETTINGS: function (e) {
+        delete a[e.socketId], e.suppressNotifications && (a[e.socketId] = e.targetUserId);
+    },
+});

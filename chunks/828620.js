@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = {
         ss: "sekundes_sekundēm_sekunde_sekundes".split("_"),
@@ -24,10 +22,7 @@
     function i(e, r, i) {
         return n(t[i], e, r);
     }
-    function s(e, t) {
-        return t ? "dažas sekundes" : "dažām sekundēm";
-    }
-    return e.defineLocale("lv", {
+    e.defineLocale("lv", {
         months: "janvāris_februāris_marts_aprīlis_maijs_jūnijs_jūlijs_augusts_septembris_oktobris_novembris_decembris".split(
             "_",
         ),
@@ -55,7 +50,9 @@
         relativeTime: {
             future: "pēc %s",
             past: "pirms %s",
-            s: s,
+            s: function (e, t) {
+                return t ? "dažas sekundes" : "dažām sekundēm";
+            },
             ss: r,
             m: i,
             mm: r,
@@ -72,4 +69,4 @@
         ordinal: "%d.",
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

@@ -1,45 +1,44 @@
-"use strict";
 n.d(t, {
-    Jr: () => N,
-    K: () => m,
-    KH: () => I,
-    QK: () => T,
-    Wp: () => A,
-    as: () => C,
-    cq: () => E,
-    e_: () => v,
-    jL: () => S,
-    pj: () => y,
+    Jr: () => C,
+    K: () => _,
+    KH: () => S,
+    QK: () => I,
+    Wp: () => b,
+    as: () => R,
+    cq: () => v,
+    e_: () => T,
+    jL: () => f,
+    pj: () => A,
     tT: () => g,
-    z9: () => h,
+    z9: () => E,
 });
 var r = n(562465),
     i = n(73153),
-    s = n(773669),
-    a = n(287809),
-    o = n(954571),
-    l = n(371794),
-    u = n(79133),
+    a = n(773669),
+    l = n(287809),
+    s = n(954571),
+    d = n(371794),
+    o = n(79133),
     c = n(532555),
-    d = n(627072),
-    _ = n(760321),
-    f = n(800007),
+    u = n(627072),
+    h = n(760321),
+    m = n(800007),
     p = n(652215);
-function h(e) {
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t)
         return void setTimeout(() => {
             i.h.dispatch({
                 type: "GAME_SERVER_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: u.q.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: o.q.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5e3);
-    let n = a.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, l.aP)({
-        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
+    let n = l.default.getCurrentUser()?.isStaff() ?? !1;
+    return (0, d.aP)({
+        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(m.q4),
         query: {
-            locale: s.default.locale,
+            locale: a.default.locale,
             guild_id: e,
             include_unpublished_products: n,
             include_unpublished_collection: n,
@@ -49,29 +48,29 @@ function h(e) {
         retries: 2,
     }).then((t) => {
         let n = t.body.products.reduce((e, t) => {
-            let n = (0, d.o)(t);
+            let n = (0, u.o)(t);
             return (e[n.id] = n), e;
         }, {});
         i.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: n });
     });
 }
-function m() {
-    let e = a.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, l.aP)({
-        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
-        query: { locale: s.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
+function _() {
+    let e = l.default.getCurrentUser()?.isStaff() ?? !1;
+    return (0, d.aP)({
+        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(m.q4),
+        query: { locale: a.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
         oldFormErrors: !0,
         rejectWithError: !1,
         retries: 2,
     }).then((e) => {
         let t = e.body.products.reduce((e, t) => {
-            let n = (0, d.o)(t);
+            let n = (0, u.o)(t);
             return (e[n.id] = n), e;
         }, {});
         i.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
     });
 }
-function E(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return t
@@ -79,7 +78,7 @@ function E(e) {
               i.h.dispatch({
                   type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
-                  instances: u.L.reduce((e, t) => ((e[t.id] = t), e), {}),
+                  instances: o.L.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
           }, 5e3),
           Promise.resolve())
@@ -91,9 +90,9 @@ function E(e) {
           });
 }
 function g(e, t) {
-    return (0, l.aP)({
+    return (0, d.aP)({
         url: p.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
-        query: { locale: s.default.locale },
+        query: { locale: a.default.locale },
         rejectWithError: !0,
         retries: 3,
     }).then((n) => {
@@ -108,20 +107,20 @@ function g(e, t) {
         }
     });
 }
-function A(e, t) {
+function b(e, t) {
     e &&
-        o.default.track(p.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
-            user_id: a.default.getCurrentUser()?.id,
+        s.default.track(p.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+            user_id: l.default.getCurrentUser()?.id,
             provider: t,
         });
 }
-function I() {
+function S() {
     i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
-function T(e, t) {
+function I(e, t) {
     i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function S(e, t, n, i) {
+function f(e, t, n, i) {
     return r.Bo.post({
         url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         body: { game_server_name: n, game_server_region: i },
@@ -129,7 +128,7 @@ function S(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
-function y(e, t, n, i) {
+function A(e, t, n, i) {
     return r.Bo.patch({
         url: p.Rsh.GUILD_POWERUP_UPDATE(e, t),
         body: { game_server_name: i, sku_id: n },
@@ -137,7 +136,7 @@ function y(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
-function v(e, t, n) {
+function T(e, t, n) {
     return r.Bo.del({
         url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
@@ -145,17 +144,17 @@ function v(e, t, n) {
         oldFormErrors: !0,
     });
 }
-function N(e) {
+function C(e) {
     return r.Bo.get({ url: p.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             i.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(_.A).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.map(h.A).sort((e, t) => e.name.localeCompare(t.name)),
             });
         },
     );
 }
-function C(e, t) {
+function R(e, t) {
     return r.Bo.post({ url: p.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
         i.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, c.A)(t.body) });
     });

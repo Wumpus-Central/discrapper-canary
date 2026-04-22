@@ -1,137 +1,140 @@
-s.d(t, { A: () => w });
-var r = s(627968);
+s.d(t, { A: () => N });
+var i = s(627968);
 s(64700);
-var i = s(503698),
-    n = s.n(i),
+var r = s(503698),
+    n = s.n(r),
     l = s(141931),
     a = s(311907),
-    o = s(397927),
-    c = s(627363),
-    d = s(769015),
-    u = s(74848),
-    f = s(430452),
-    h = s(723702),
-    x = s(688465),
-    p = s(461430),
-    m = s(56439),
-    _ = s(654291),
-    g = s(420659),
-    j = s(753070),
-    v = s(731854),
-    A = s(191850),
-    S = s(985018),
-    y = s(725647);
-function C() {
-    return (0, r.jsx)("span", { className: y.gO, children: "•" });
+    o = s(183623),
+    c = s(834730),
+    d = s(625903),
+    u = s(358618),
+    f = s(627363),
+    h = s(769015),
+    x = s(74848),
+    p = s(430452),
+    _ = s(723702),
+    m = s(688465),
+    g = s(461430),
+    j = s(56439),
+    v = s(654291),
+    A = s(420659),
+    C = s(753070),
+    S = s(731854),
+    y = s(710787),
+    b = s(985018),
+    w = s(860876);
+function E() {
+    return (0, i.jsx)("span", { className: w.gO, children: "•" });
 }
-function b(e) {
+function I(e) {
     let { source: t } = e,
-        { data: s } = (0, c.YY)(null != t && (0, _.l)(t) ? t.id : void 0);
+        { data: s } = (0, f.YY)(null != t && (0, v.l)(t) ? t.id : void 0);
     return null == t
-        ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
-        : (0, _.l)(t)
-          ? (0, r.jsx)(d.A, { game: s, pid: t.pid })
+        ? (0, i.jsx)(o.F, { className: w.Jd, size: "md", color: "currentColor" })
+        : (0, v.l)(t)
+          ? (0, i.jsx)(h.A, { game: s, pid: t.pid })
           : null == t.icon || "" === t.icon
-            ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
-            : (0, r.jsx)("img", { src: t.icon, alt: "", className: y.pI });
+            ? (0, i.jsx)(o.F, { className: w.Jd, size: "md", color: "currentColor" })
+            : (0, i.jsx)("img", { src: t.icon, alt: "", className: w.pI });
 }
-function w() {
-    let [{ preset: e, resolution: t, fps: s, muteStreamAudio: i, selectedSource: c, sourceType: d, audioSourceId: _ }] =
-            (0, x.tS)(),
-        w = (0, u.tR)(v.oh.AUDIO_INPUT),
-        [I, E] = (0, g.A)(e) ?? [t, s],
-        N = (0, p.K)(e),
-        O = (0, m.b)(I),
-        T = d === l.fS.CAMERA,
-        R = null != c,
-        M = null != c ? c?.id?.startsWith(l.fS.CAMERA) : T,
-        U = e === j.jQ.PRESET_AUTO,
-        G = R
+function N() {
+    let [{ preset: e, resolution: t, fps: s, muteStreamAudio: r, selectedSource: o, sourceType: f, audioSourceId: h }] =
+            (0, m.tS)(),
+        v = (0, x.tR)(S.oh.AUDIO_INPUT),
+        [N, O] = (0, A.A)(e) ?? [t, s],
+        R = (0, g.K)(e),
+        T = (0, j.b)(N),
+        M = f === l.fS.CAMERA,
+        D = null != o,
+        G = null != o ? o?.id?.startsWith(l.fS.CAMERA) : M,
+        U = e === C.jQ.PRESET_AUTO,
+        L = D
             ? void 0
-            : e === j.jQ.PRESET_VIDEO
-              ? S.intl.string(A.default.MuHUFe)
-              : e === j.jQ.PRESET_DOCUMENTS
-                ? S.intl.string(A.default.y0JuYR)
-                : e === j.jQ.PRESET_AUTO
-                  ? S.intl.string(A.default.m4jtlc)
+            : e === C.jQ.PRESET_VIDEO
+              ? b.intl.string(y.default.MuHUFe)
+              : e === C.jQ.PRESET_DOCUMENTS
+                ? b.intl.string(y.default.y0JuYR)
+                : e === C.jQ.PRESET_AUTO
+                  ? b.intl.string(y.default.m4jtlc)
                   : void 0,
-        L = (0, a.bG)([f.Ay], () => f.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)());
-    return (0, r.jsxs)("div", {
-        className: y.zr,
+        P = (0, a.bG)([p.Ay], () => p.Ay.getUseSystemScreensharePicker() && (0, _.isLinux)());
+    return (0, i.jsxs)("div", {
+        className: w.zr,
         children: [
-            R && (0, r.jsx)(b, { source: c }),
-            (0, r.jsxs)("div", {
-                className: y.z,
+            D && (0, i.jsx)(I, { source: o }),
+            (0, i.jsxs)("div", {
+                className: w.z,
                 children: [
-                    (0, r.jsx)(o.Text, {
-                        className: y.fB,
+                    (0, i.jsx)(c.E, {
+                        className: w.fB,
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: R ? (c?.name ?? S.intl.string(A.default["hJMA+x"])) : N,
+                        children: D ? (o?.name ?? b.intl.string(y.default["hJMA+x"])) : R,
                     }),
-                    (0, r.jsxs)(o.Text, {
-                        className: y.kI,
+                    (0, i.jsxs)(c.E, {
+                        className: w.kI,
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
-                            R &&
-                                (0, r.jsxs)(r.Fragment, {
+                            D &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, r.jsxs)("span", {
-                                            className: y.x5,
+                                        (0, i.jsxs)("span", {
+                                            className: w.x5,
                                             children: [
-                                                (0, r.jsx)(o.Zes, {
-                                                    className: y.Kk,
+                                                (0, i.jsx)(d.Z, {
+                                                    className: w.Kk,
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                N,
+                                                R,
                                             ],
                                         }),
-                                        (0, r.jsx)(C, {}),
+                                        (0, i.jsx)(E, {}),
                                     ],
                                 }),
-                            null != G && (0, r.jsx)("span", { children: G }),
+                            null != L && (0, i.jsx)("span", { children: L }),
                             !U &&
-                                (0, r.jsxs)(r.Fragment, {
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: O }),
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: `${E}fps` }),
+                                        (0, i.jsx)(E, {}),
+                                        (0, i.jsx)("span", { children: T }),
+                                        (0, i.jsx)(E, {}),
+                                        (0, i.jsx)("span", { children: `${O}fps` }),
                                     ],
                                 }),
-                            i &&
-                                (0, r.jsxs)(r.Fragment, {
+                            r &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsxs)("span", {
-                                            className: y.x5,
+                                        (0, i.jsx)(E, {}),
+                                        (0, i.jsxs)("span", {
+                                            className: w.x5,
                                             children: [
-                                                (0, r.jsx)(o._RO, {
-                                                    className: n()(y.Kk, y.tG),
+                                                (0, i.jsx)(u._, {
+                                                    className: n()(w.Kk, w.tG),
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                S.intl.string(A.default.FzMGWR),
+                                                b.intl.string(y.default.FzMGWR),
                                             ],
                                         }),
                                     ],
                                 }),
-                            !i &&
-                                !M &&
-                                L &&
-                                (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), S.intl.string(A.default["n9/rUq"])],
+                            !r &&
+                                !G &&
+                                P &&
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [(0, i.jsx)(E, {}), b.intl.string(y.default["n9/rUq"])],
                                 }),
-                            M
-                                ? (0, r.jsxs)(r.Fragment, {
+                            G
+                                ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, r.jsx)(C, {}),
-                                          (0, r.jsx)("span", {
-                                              children: w.find((e) => {
+                                          (0, i.jsx)(E, {}),
+                                          (0, i.jsx)("span", {
+                                              children: v.find((e) => {
                                                   let { id: t } = e;
-                                                  return _ === t;
+                                                  return h === t;
                                               })?.name,
                                           }),
                                       ],

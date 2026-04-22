@@ -1,9 +1,9 @@
 i.d(n, { default: () => d });
 var l = i(627968);
 i(64700);
-var r = i(158954),
+var r = i(189213),
     a = i(311907),
-    e = i(397927),
+    e = i(834730),
     s = i(47167),
     c = i(734057),
     o = i(985018);
@@ -18,7 +18,7 @@ function d(t) {
             { variant: "secondary", text: o.intl.string(o.t["ETE/oC"]), onClick: d.onClose },
             { variant: "critical-primary", text: o.intl.string(o.t.N86XcP), onClick: n },
         ],
-        children: (0, l.jsx)(e.Text, {
+        children: (0, l.jsx)(e.E, {
             variant: "text-sm/normal",
             children: null != u ? o.intl.format(o.t["1KT3Fp"], { channelName: p }) : o.intl.string(o.t.VOPUVy),
         }),

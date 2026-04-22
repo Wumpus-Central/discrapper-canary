@@ -1,21 +1,20 @@
-"use strict";
 n.d(t, {
     C5: () => g,
-    E9: () => x,
-    JY: () => A,
+    E9: () => h,
+    JY: () => p,
     Ts: () => a,
     Ul: () => o,
     Y_: () => d,
     ZH: () => u,
-    n3: () => h,
+    n3: () => x,
     nK: () => c,
     pn: () => _,
     uc: () => m,
     yy: () => r,
 });
 var i = n(73153),
-    s = n(686956),
-    l = n(619006);
+    l = n(686956),
+    s = n(619006);
 function r(e) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles: e });
 }
@@ -40,10 +39,10 @@ function m(e, t, n) {
 function g(e, t) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE", id: e, currentStyle: t });
 }
-function x(e, t, n) {
+function h(e, t, n) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id: e, hoist: t, mentionable: n });
 }
-function h(e, t, n) {
+function x(e, t, n) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id: e, icon: t, unicodeEmoji: n });
 }
 function _(e, t) {
@@ -53,15 +52,15 @@ function _(e, t) {
         roleConnectionConfigurations: t,
     });
 }
-async function A(e, t, n, r, a) {
+async function p(e, t, n, r, a) {
     let o = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
     try {
-        for (null != n && n.length > 0 && (await s.A.batchRoleUpdate(e, n)); null != t && t.length > 0; ) {
+        for (null != n && n.length > 0 && (await l.A.batchRoleUpdate(e, n)); null != t && t.length > 0; ) {
             let n = t.pop();
             null != n &&
                 "" !== n.name &&
-                (await s.A.updateRole(e, n.id, {
+                (await l.A.updateRole(e, n.id, {
                     name: n.name,
                     description: n.description ?? void 0,
                     permissions: n.permissions,
@@ -76,7 +75,7 @@ async function A(e, t, n, r, a) {
         if (null != a && null != r)
             for await (let t of r) {
                 let n = a.get(t);
-                await (0, l.qK)(e, t, n ?? []);
+                await (0, s.qK)(e, t, n ?? []);
             }
         i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });
     } catch (e) {

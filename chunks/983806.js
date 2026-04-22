@@ -1,94 +1,100 @@
-n.d(t, { b: () => C });
-var i = n(627968),
-    s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(843282),
-    o = n(397927),
-    c = n(10005),
-    d = n(809697),
-    u = n(153739),
-    _ = n(834981),
-    m = n(343906),
-    A = n(191627),
-    g = n(842130),
-    E = n(985018),
-    h = n(377148);
-let p = () => {
-        let e = (0, _.vx)(),
-            t = (0, u.y3)(),
-            { selectTeenUser: n } = (0, c.A)({}),
-            r = e.map((e) => ({ label: e, value: e })),
-            d = s.useCallback(
-                (e) => (0, i.jsx)(m.O, { userId: e.value, avatarSize: o._3J.SIZE_24, hideUserTag: !0 }),
+l.d(t, { b: () => y });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(843282),
+    d = l(778712),
+    c = l(331322),
+    u = l(939249),
+    o = l(548411),
+    x = l(827734),
+    h = l(834730),
+    m = l(534514),
+    g = l(10005),
+    j = l(809697),
+    A = l(153739),
+    v = l(834981),
+    f = l(343906),
+    E = l(191627),
+    N = l(602339),
+    p = l(985018),
+    T = l(336541);
+let S = () => {
+        let e = (0, v.vx)(),
+            t = (0, A.y3)(),
+            { selectTeenUser: l } = (0, g.A)({}),
+            s = e.map((e) => ({ label: e, value: e })),
+            c = i.useCallback(
+                (e) => (0, n.jsx)(f.O, { userId: e.value, avatarSize: d._3.SIZE_24, hideUserTag: !0 }),
                 [],
             );
         return 0 === e.length
             ? null
-            : (0, i.jsx)("div", {
-                  className: a()(h.Gq, { [h.wS]: e.length > 1 }),
+            : (0, n.jsx)("div", {
+                  className: a()(T.Gq, { [T.wS]: e.length > 1 }),
                   children:
                       e.length > 1
-                          ? (0, i.jsx)(l.Pw, {
-                                renderOptionLabel: d,
+                          ? (0, n.jsx)(r.Pw, {
+                                renderOptionLabel: c,
                                 renderOptionValue: (e) => {
                                     let [t] = e;
-                                    return d(t);
+                                    return c(t);
                                 },
                                 serialize: (e) => e,
                                 select: (e) => {
-                                    n(e);
+                                    l(e);
                                 },
                                 isSelected: (e) => e === t?.id,
-                                options: r,
+                                options: s,
                                 "data-migration-pending": !0,
                             })
-                          : (0, i.jsx)(m.O, { userId: e[0], avatarSize: o._3J.SIZE_24, hideUserTag: !0 }),
+                          : (0, n.jsx)(f.O, { userId: e[0], avatarSize: d._3.SIZE_24, hideUserTag: !0 }),
               });
     },
-    C = () => {
-        let { selectedTab: e, handleTabChange: t } = (0, d.A)(),
-            n = s.useCallback(() => {
-                t(A.u9.ACTIVITY);
+    y = () => {
+        let { selectedTab: e, handleTabChange: t } = (0, j.A)(),
+            l = i.useCallback(() => {
+                t(E.u9.ACTIVITY);
             }, [t]);
-        return (0, i.jsxs)(o.BJc, {
+        return (0, n.jsxs)(c.B, {
             gap: 32,
             children: [
-                (0, i.jsxs)(o.DUT, {
-                    className: h.Gv,
-                    onClick: n,
-                    "aria-label": E.intl.string(E.t.ybUZql),
+                (0, n.jsxs)(u.D, {
+                    className: T.Gv,
+                    onClick: l,
+                    "aria-label": p.intl.string(p.t.ybUZql),
                     children: [
-                        (0, i.jsx)(o.Zge, { size: "sm", color: o.LU0.colors.INTERACTIVE_TEXT_DEFAULT }),
-                        (0, i.jsx)(o.Text, {
+                        (0, n.jsx)(o.Z, { size: "sm", color: x.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                        (0, n.jsx)(h.E, {
                             variant: "eyebrow",
                             color: "text-default",
-                            children: E.intl.string(E.t["13/7kX"]),
+                            children: p.intl.string(p.t["13/7kX"]),
                         }),
                     ],
                 }),
-                (0, i.jsxs)(o.BJc, {
+                (0, n.jsxs)(c.B, {
                     direction: "horizontal",
                     align: "center",
                     justify: "space-between",
                     children: [
-                        (0, i.jsxs)(o.BJc, {
+                        (0, n.jsxs)(c.B, {
                             gap: 4,
-                            className: h.gn,
+                            className: T.gn,
                             children: [
-                                (0, i.jsx)(o.Text, {
+                                (0, n.jsx)(h.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: E.intl.string(g.default.RZqaJn),
+                                    children: p.intl.string(N.default.RZqaJn),
                                 }),
-                                (0, i.jsx)(o.Heading, {
+                                (0, n.jsx)(m.D, {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",
-                                    children: E.intl.string(e === A.u9.CONTENT_AND_SOCIAL ? E.t["+o1pDZ"] : E.t.OAuOHD),
+                                    children: p.intl.string(e === E.u9.CONTENT_AND_SOCIAL ? p.t["+o1pDZ"] : p.t.OAuOHD),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(p, {}),
+                        (0, n.jsx)(S, {}),
                     ],
                 }),
             ],

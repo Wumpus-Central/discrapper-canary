@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     XG: "scroller__981c8",
     Ei: "colorPicker__981c8",

@@ -1,80 +1,80 @@
-n.d(t, { A: () => m });
-var i = n(627968);
+n.d(t, { A: () => _ });
+var r = n(627968);
 n(64700);
-var s = n(503698),
+var a = n(503698),
+    i = n.n(a),
+    s = n(989349),
     l = n.n(s),
-    a = n(989349),
-    r = n.n(a),
-    o = n(397927),
-    d = n(496431),
-    c = n(985018),
-    u = n(485697);
-let m = (e) => {
+    c = n(834730),
+    o = n(496431),
+    d = n(985018),
+    u = n(116689);
+let _ = (e) => {
     let { expiresAt: t, className: n } = e,
-        s = (0, d.A)(r()(t).toDate(), 1e3);
-    if (null == s) return null;
-    let { days: a, hours: m, minutes: _, seconds: g } = s,
-        x = [
-            { unitValue: a, unitType: "days" },
-            { unitValue: m, unitType: "hours" },
-            { unitValue: _, unitType: "minutes" },
-            { unitValue: g, unitType: "seconds" },
+        a = (0, o.A)(l()(t).toDate(), 1e3);
+    if (null == a) return null;
+    let { days: s, hours: _, minutes: m, seconds: p } = a,
+        f = [
+            { unitValue: s, unitType: "days" },
+            { unitValue: _, unitType: "hours" },
+            { unitValue: m, unitType: "minutes" },
+            { unitValue: p, unitType: "seconds" },
         ];
-    return (0, i.jsxs)("div", {
-        className: l()(u.Xl, n),
+    return (0, r.jsxs)("div", {
+        className: i()(u.Xl, n),
         children: [
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(c.E, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: c.intl.string(c.t["/ARFVE"]),
+                children: d.intl.string(d.t["/ARFVE"]),
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: u.$R,
-                children: x.map((e, t) =>
+                children: f.map((e, t) =>
                     (function (e, t) {
                         let n,
-                            [s, l] = 1 === (n = e.unitValue.toString()).length ? ["0", n[0]] : [n[0], n[1]];
-                        return (0, i.jsxs)(i.Fragment, {
+                            [a, i] = 1 === (n = e.unitValue.toString()).length ? ["0", n[0]] : [n[0], n[1]];
+                        return (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsxs)(
+                                (0, r.jsxs)(
                                     "div",
                                     {
                                         className: u.bh,
                                         children: [
-                                            (0, i.jsxs)("div", {
+                                            (0, r.jsxs)("div", {
                                                 className: u.kB,
                                                 children: [
-                                                    (0, i.jsx)("div", {
+                                                    (0, r.jsx)("div", {
                                                         className: u.B2,
-                                                        children: (0, i.jsx)(o.Text, {
+                                                        children: (0, r.jsx)(c.E, {
                                                             variant: "text-md/medium",
                                                             color: "text-strong",
-                                                            children: s,
+                                                            children: a,
                                                         }),
                                                     }),
-                                                    (0, i.jsx)("div", {
+                                                    (0, r.jsx)("div", {
                                                         className: u.B2,
-                                                        children: (0, i.jsx)(o.Text, {
+                                                        children: (0, r.jsx)(c.E, {
                                                             variant: "text-md/medium",
                                                             color: "text-strong",
-                                                            children: l,
+                                                            children: i,
                                                         }),
                                                     }),
                                                 ],
                                             }),
-                                            (0, i.jsx)(o.Text, {
+                                            (0, r.jsx)(c.E, {
                                                 variant: "text-xs/semibold",
                                                 color: "text-strong",
                                                 children: (function (e) {
                                                     switch (e) {
                                                         case "days":
-                                                            return c.intl.string(c.t.ixASa2);
+                                                            return d.intl.string(d.t.ixASa2);
                                                         case "hours":
-                                                            return c.intl.string(c.t["8sNvNn"]);
+                                                            return d.intl.string(d.t["8sNvNn"]);
                                                         case "minutes":
-                                                            return c.intl.string(c.t["Gv6kP/"]);
+                                                            return d.intl.string(d.t["Gv6kP/"]);
                                                         case "seconds":
-                                                            return c.intl.string(c.t.JhaiLW);
+                                                            return d.intl.string(d.t.JhaiLW);
                                                         default:
                                                             return "";
                                                     }
@@ -85,7 +85,7 @@ let m = (e) => {
                                     e.unitType,
                                 ),
                                 !t &&
-                                    (0, i.jsx)(o.Text, {
+                                    (0, r.jsx)(c.E, {
                                         className: u.cV,
                                         variant: "text-lg/normal",
                                         color: "text-strong",
@@ -93,7 +93,7 @@ let m = (e) => {
                                     }),
                             ],
                         });
-                    })(e, t === x.length - 1),
+                    })(e, t === f.length - 1),
                 ),
             }),
         ],

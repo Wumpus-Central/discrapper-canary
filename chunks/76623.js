@@ -1,34 +1,38 @@
 "use strict";
 n.d(t, { C: () => d });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(834730),
-    o = n(927057),
-    l = n(151282),
-    u = n(985018),
-    c = n(1372);
+var l = n(503698),
+    s = n.n(l),
+    r = n(834730),
+    a = n(927057),
+    o = n(151282),
+    c = n(985018),
+    u = n(1372);
 function d(e) {
     let { pendingScheduledMessage: t } = e,
-        { channelId: n, scheduledTimestamp: i } = t;
-    function d(e) {
-        e.stopPropagation(), (0, l.Ps)(n);
-    }
-    return (0, r.jsx)("div", {
-        className: c.e1,
-        children: (0, r.jsx)("div", {
-            className: c.kL,
-            children: (0, r.jsxs)("div", {
-                className: c.g3,
+        { channelId: n, scheduledTimestamp: l } = t;
+    return (0, i.jsx)("div", {
+        className: u.e1,
+        children: (0, i.jsx)("div", {
+            className: u.kL,
+            children: (0, i.jsxs)("div", {
+                className: u.g3,
                 children: [
-                    (0, r.jsx)(a.E, {
+                    (0, i.jsx)(r.E, {
                         color: "text-default",
-                        className: s()(c.Qq, c.a3),
+                        className: s()(u.Qq, u.a3),
                         variant: "text-sm/normal",
-                        children: u.intl.formatToPlainString(u.t["MQcRX/"], { timestamp: new Date(i).valueOf() }),
+                        children: c.intl.formatToPlainString(c.t["MQcRX/"], { timestamp: new Date(l).valueOf() }),
                     }),
-                    (0, r.jsx)("div", { className: c.o1, children: (0, r.jsx)(o.x, { onClick: d }) }),
+                    (0, i.jsx)("div", {
+                        className: u.o1,
+                        children: (0, i.jsx)(a.x, {
+                            onClick: function (e) {
+                                e.stopPropagation(), (0, o.Ps)(n);
+                            },
+                        }),
+                    }),
                 ],
             }),
         }),

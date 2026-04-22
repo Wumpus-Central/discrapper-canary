@@ -1,88 +1,88 @@
-"use strict";
-n.d(t, { e: () => O });
-var r = n(627968);
+n.d(t, { e: () => v });
+var l = n(627968);
 n(64700);
-var i = n(311907),
-    s = n(397927),
+var r = n(311907),
+    i = n(192308),
+    s = n(123292),
     a = n(964486),
     o = n(793574),
-    l = n(688810),
-    u = n(427675),
+    u = n(688810),
+    d = n(427675),
     c = n(94420),
-    d = n(979286),
-    _ = n(993408),
-    f = n(482246),
-    p = n(734925),
-    h = n(687033),
-    m = n(871181),
-    E = n(318007),
-    g = n(285719),
-    A = n(976860),
-    I = n(287809),
-    T = n(954571),
+    C = n(979286),
+    p = n(993408),
+    m = n(482246),
+    E = n(734925),
+    A = n(687033),
+    h = n(871181),
+    f = n(318007),
+    _ = n(285719),
+    g = n(976860),
+    T = n(287809),
+    x = n(954571),
     S = n(937008),
-    y = n(156312),
-    v = n(652215),
-    N = n(788868),
-    C = n(985018),
+    I = n(156312),
+    O = n(652215),
+    y = n(788868),
+    N = n(985018),
     R = n(353791);
-let O = (e) => {
+let v = (e) => {
     let { handleStepChange: t, handleClose: n } = e,
         {
-            customGiftMessage: s = "",
-            setCustomGiftMessage: o,
-            giftRecipientError: l,
-            setGiftRecipientError: A,
-            validatingGiftRecipient: O,
-            giftRecipient: D,
-            giftingOrigin: L,
-            setValidatingGiftRecipient: w,
+            customGiftMessage: i = "",
+            setCustomGiftMessage: s,
+            giftRecipientError: o,
+            setGiftRecipientError: u,
+            validatingGiftRecipient: g,
+            giftRecipient: v,
+            giftingOrigin: b,
+            setValidatingGiftRecipient: L,
         } = (0, S.Pv)(),
-        M = (0, c.t4)((e) => e.selectedSkuId),
-        { paymentSourceId: P } = (0, y.P5)(),
-        x = (0, u.Hf)(),
-        k = (0, u.RR)(),
-        U = (0, u.gU)(),
-        G = (0, i.bG)([I.default], () => I.default.getCurrentUser()),
-        F = (0, h.A)(),
-        V = async (e, t) => {
-            w(!0), null != l && A(), (await (0, d.JJ)(e.id, t)) || A(C.intl.string(C.t["4kgVqQ"])), w(!1);
+        k = (0, c.t4)((e) => e.selectedSkuId),
+        { paymentSourceId: j } = (0, I.P5)(),
+        U = (0, d.Hf)(),
+        M = (0, d.RR)(),
+        w = (0, d.gU)(),
+        F = (0, r.bG)([T.default], () => T.default.getCurrentUser()),
+        D = (0, A.A)(),
+        H = async (e, t) => {
+            L(!0), null != o && u(), (await (0, C.JJ)(e.id, t)) || u(N.intl.string(N.t["4kgVqQ"])), L(!1);
         };
     (0, a.Ay)(() => {
-        null != M &&
-            null != D &&
-            (L !== N.vQ.DM_CHANNEL_WISHLIST &&
-                T.default.track(v.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: M }),
-            V(D, M));
+        null != k &&
+            null != v &&
+            (b !== y.vQ.DM_CHANNEL_WISHLIST &&
+                x.default.track(O.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: k }),
+            H(v, k));
     });
-    let B = () =>
-        (0, r.jsx)(m.A, {
-            onTextChange: (e) => o?.(e),
-            pendingText: s,
-            currentText: s,
+    let G = () =>
+        (0, l.jsx)(h.A, {
+            onTextChange: (e) => s?.(e),
+            pendingText: i,
+            currentText: i,
             disableThemedBackground: !0,
             className: R.iX,
             innerClassName: R.pt,
         });
     return {
-        renderLeftColumn: () => (0, r.jsx)("div", { className: R.qL, children: (0, r.jsx)(E.t, { isShopGift: !0 }) }),
+        renderLeftColumn: () => (0, l.jsx)("div", { className: R.qL, children: (0, l.jsx)(f.t, { isShopGift: !0 }) }),
         renderRightColumn: () => {
-            let e = (0, _.pA)({
-                selectedSkuPricePreview: x,
-                paymentSourceId: P,
-                selectedSkuId: M,
-                skuPricePreviewsById: k,
-                skusById: U,
+            let e = (0, p.pA)({
+                selectedSkuPricePreview: U,
+                paymentSourceId: j,
+                selectedSkuId: k,
+                skuPricePreviewsById: M,
+                skusById: w,
             });
-            return L === N.vQ.USER_PROFILE_WISHLIST || L === N.vQ.DM_CHANNEL_WISHLIST
-                ? (0, r.jsxs)("div", {
+            return b === y.vQ.USER_PROFILE_WISHLIST || b === y.vQ.DM_CHANNEL_WISHLIST
+                ? (0, l.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(g.Z, { giftRecipient: D }),
-                          B(),
+                          (0, l.jsx)(_.Z, { giftRecipient: v }),
+                          G(),
                           null != e &&
-                              null != M &&
-                              (0, r.jsx)(f.A, {
-                                  skuId: M,
+                              null != k &&
+                              (0, l.jsx)(m.A, {
+                                  skuId: k,
                                   priceAmount: e.amount,
                                   priceCurrency: e.currency,
                                   className: R.uW,
@@ -91,25 +91,25 @@ let O = (e) => {
                                   shouldDisplayHeader: !0,
                                   hideProfilePreview: !0,
                               }),
-                          (0, r.jsx)("div", {
+                          (0, l.jsx)("div", {
                               className: R.fi,
-                              children: (0, r.jsx)(b, { handleClose: n, selectedSkuId: M }),
+                              children: (0, l.jsx)(P, { handleClose: n, selectedSkuId: k }),
                           }),
                       ],
                   })
-                : (0, r.jsxs)("div", {
+                : (0, l.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(p.A, {
-                              selectedSkuId: M,
-                              recipients: F,
+                          (0, l.jsx)(E.A, {
+                              selectedSkuId: k,
+                              recipients: D,
                               className: R.uh,
-                              validateSelectedGift: V,
+                              validateSelectedGift: H,
                           }),
-                          B(),
+                          G(),
                           null != e &&
-                              null != M &&
-                              (0, r.jsx)(f.A, {
-                                  skuId: M,
+                              null != k &&
+                              (0, l.jsx)(m.A, {
+                                  skuId: k,
                                   priceAmount: e.amount,
                                   priceCurrency: e.currency,
                                   className: R.Ng,
@@ -121,19 +121,22 @@ let O = (e) => {
         },
         onStepChange: t,
         onBackClick: n,
-        ctaDisabled: null != l || null == D || D.id === G?.id || s.length > N.Jo,
-        loading: O,
+        ctaDisabled: null != o || null == v || v.id === F?.id || i.length > y.Jo,
+        loading: g,
     };
 };
-function b(e) {
+function P(e) {
     let { handleClose: t, selectedSkuId: n } = e,
-        { analyticsLocations: i } = (0, l.Ay)(o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
-    function a() {
-        t(),
-            (0, s.s7G)(),
-            null == n
-                ? (0, d.Cz)({ analyticsLocations: i, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
-                : (0, A.pX)(`${v.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
-    }
-    return (0, r.jsx)(s.QWc, { text: C.intl.string(C.t.J82mpK), onClick: a, textVariant: "text-sm/medium" });
+        { analyticsLocations: r } = (0, u.Ay)(o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+    return (0, l.jsx)(s.Q, {
+        text: N.intl.string(N.t.J82mpK),
+        onClick: function () {
+            t(),
+                (0, i.closeAllModals)(),
+                null == n
+                    ? (0, C.Cz)({ analyticsLocations: r, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
+                    : (0, g.pX)(`${O.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
+        },
+        textVariant: "text-sm/medium",
+    });
 }

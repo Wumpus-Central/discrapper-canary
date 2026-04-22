@@ -1,26 +1,28 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    a = n(397927),
-    s = n(994500),
-    o = n(231156);
-function l(e) {
-    let { user: t, guildId: n, iconColor: l } = e,
-        u = (0, i.bG)([s.A], () => s.A.isBlocked(t.id));
-    return (0, r.jsxs)("div", {
-        className: o.kL,
+var l = n(311907),
+    s = n(97808),
+    a = n(778712),
+    r = n(428678),
+    o = n(952270),
+    d = n(994500),
+    c = n(387881);
+function u(e) {
+    let { user: t, guildId: n, iconColor: u } = e,
+        h = (0, l.bG)([d.A], () => d.A.isBlocked(t.id));
+    return (0, i.jsxs)("div", {
+        className: c.kL,
         children: [
-            (0, r.jsx)(a.euF, {
-                className: o.my,
-                size: a._3J.SIZE_56,
+            (0, i.jsx)(s.eu, {
+                className: c.my,
+                size: a._3.SIZE_56,
                 src: t.getAvatarURL(n, 64),
                 "aria-label": t.username,
             }),
-            (0, r.jsx)("div", {
-                className: o.mI,
-                children: u ? (0, r.jsx)(a.KTN, { color: l }) : (0, r.jsx)(a.G3N, { color: l }),
+            (0, i.jsx)("div", {
+                className: c.mI,
+                children: h ? (0, i.jsx)(r.K, { color: u }) : (0, i.jsx)(o.G, { color: u }),
             }),
         ],
     });

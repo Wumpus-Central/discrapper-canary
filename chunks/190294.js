@@ -1,48 +1,50 @@
-s.d(t, { A: () => o });
-var r = s(627968);
-s(64700);
-var l = s(397927),
-    n = s(758836),
-    a = s(985018);
-function o(e) {
-    let { tabs: t, selectedTab: s, onTabSelect: o, onClose: i, showOrbRentalNewBadge: c } = e;
-    return (0, r.jsx)(l.W1t, {
+r.d(t, { A: () => c });
+var n = r(627968);
+r(64700);
+var s = r(861672),
+    l = r(477782),
+    a = r(628284),
+    o = r(758836),
+    i = r(985018);
+function c(e) {
+    let { tabs: t, selectedTab: r, onTabSelect: c, onClose: d, showOrbRentalNewBadge: u } = e;
+    return (0, n.jsx)(s.W, {
         "data-menu-migrated-auto": !0,
         navId: "collectibles-shop-tabs-overflow-menu",
-        "aria-label": a.intl.string(a.t["UKOtz+"]),
+        "aria-label": i.intl.string(i.t["UKOtz+"]),
         hideScroller: !0,
-        onClose: i,
-        onSelect: i,
-        children: (0, r.jsx)(
-            l.rXV,
+        onClose: d,
+        onSelect: d,
+        children: (0, n.jsx)(
+            l.rX,
             {
                 children: t.map((e) => {
-                    let { tab: t, label: a, renderOverflowContent: u } = e;
-                    if (null != u) {
-                        let e = t === s;
-                        return (0, r.jsx)(
-                            l.Drp,
+                    let { tab: t, label: s, renderOverflowContent: i } = e;
+                    if (null != i) {
+                        let e = t === r;
+                        return (0, n.jsx)(
+                            l.Dr,
                             {
                                 id: t,
-                                label: a,
-                                icon: e ? l.yr3 : void 0,
-                                leadingAccessory: e ? { type: "icon", icon: l.yr3 } : void 0,
+                                label: s,
+                                icon: e ? a.y : void 0,
+                                leadingAccessory: e ? { type: "icon", icon: a.y } : void 0,
                                 hasSubmenu: !0,
-                                children: u({ onClose: i }),
+                                children: i({ onClose: d }),
                             },
                             t,
                         );
                     }
-                    let d = t === n.G2.ORBS && c;
-                    return (0, r.jsx)(
-                        l.Drp,
+                    let _ = t === o.G2.ORBS && u;
+                    return (0, n.jsx)(
+                        l.Dr,
                         {
                             id: t,
-                            label: a,
-                            icon: t === s ? l.yr3 : void 0,
-                            leadingAccessory: t === s ? { type: "icon", icon: l.yr3 } : void 0,
-                            badge: d ? "new" : void 0,
-                            action: () => o(t),
+                            label: s,
+                            icon: t === r ? a.y : void 0,
+                            leadingAccessory: t === r ? { type: "icon", icon: a.y } : void 0,
+                            badge: _ ? "new" : void 0,
+                            action: () => c(t),
                         },
                         t,
                     );

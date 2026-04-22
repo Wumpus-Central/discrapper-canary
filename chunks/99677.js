@@ -1,39 +1,38 @@
-"use strict";
 n.d(t, { t: () => o });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(827734),
-    a = n(996682),
+var l = n(827734),
+    r = n(996682),
     s = n(27989);
 let o = (e) => {
     let {
             size: t = "md",
             width: n,
             height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
+            color: a = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
             ...c
         } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsxs)("svg", {
-        ...(0, a.A)(c),
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        A = u?.height ?? o;
+    return (0, i.jsxs)("svg", {
+        ...(0, r.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: _,
-        height: f,
+        height: A,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, r.jsx)("path", {
+            (0, i.jsx)("path", {
                 d: "M12.2 22c.5-.01.66-.84.37-1.24A3 3 0 0 1 15 16h.46c.35 0 .6-.34.56-.69a3 3 0 0 1 5.1-2.43l.06.06c.29.28.77.12.8-.28L22 12a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22h10Z",
-                fill: "string" == typeof l ? l : l.css,
-                className: u,
+                fill: "string" == typeof a ? a : a.css,
+                className: d,
             }),
-            (0, r.jsx)("path", {
+            (0, i.jsx)("path", {
                 d: "M19.7 14.3a1 1 0 0 0-1.4 1.4l.29.3 2 2H15a1 1 0 1 0 0 2h5.59l-2.3 2.3a1 1 0 0 0 1.42 1.4l4-4a1 1 0 0 0 0-1.4l-2.57-2.58-1.43-1.43Z",
-                fill: "string" == typeof l ? l : l.css,
-                className: u,
+                fill: "string" == typeof a ? a : a.css,
+                className: d,
             }),
         ],
     });

@@ -1,62 +1,65 @@
-n.d(t, { A: () => f, s: () => h });
+n.d(t, { A: () => b, s: () => x });
 var a = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
+var l = n(503698),
+    i = n.n(l),
     r = n(808380),
-    s = n(934551),
-    o = n(990078),
-    c = n(504186),
-    d = n(985018),
-    u = n(282063);
-function m(e) {
+    s = n(31300),
+    o = n(802516),
+    d = n(22363),
+    c = n(418524),
+    u = n(990078),
+    m = n(504186),
+    _ = n(985018),
+    h = n(141535);
+function f(e) {
     switch (e) {
         case r.Y.DESKTOP:
-            return d.intl.string(d.t.KT6uCJ);
+            return _.intl.string(_.t.KT6uCJ);
         case r.Y.XBOX:
-            return d.intl.string(d.t.DDWUJp);
+            return _.intl.string(_.t.DDWUJp);
         case r.Y.PLAYSTATION:
-            return d.intl.string(d.t.fzMz2s);
+            return _.intl.string(_.t.fzMz2s);
         case r.Y.NINTENDO:
-            return d.intl.string(d.t.AMW8je);
-        default:
-            return null;
-    }
-}
-function x(e) {
-    let { platform: t, ...n } = e;
-    switch (t) {
-        case r.Y.DESKTOP:
-            return (0, a.jsx)(s.ScreenIcon, { size: "xs", ...n });
-        case r.Y.XBOX:
-            return (0, a.jsx)(s.XboxNeutralIcon, { size: "xs", ...n });
-        case r.Y.PLAYSTATION:
-            return (0, a.jsx)(s.PlaystationNeutralIcon, { size: "xs", ...n });
-        case r.Y.NINTENDO:
-            return (0, a.jsx)(s.NintendoSwitchNeutralIcon, { size: "xs", ...n });
+            return _.intl.string(_.t.AMW8je);
         default:
             return null;
     }
 }
 function g(e) {
+    let { platform: t, ...n } = e;
+    switch (t) {
+        case r.Y.DESKTOP:
+            return (0, a.jsx)(s.k, { size: "xs", ...n });
+        case r.Y.XBOX:
+            return (0, a.jsx)(o.Y, { size: "xs", ...n });
+        case r.Y.PLAYSTATION:
+            return (0, a.jsx)(d.X, { size: "xs", ...n });
+        case r.Y.NINTENDO:
+            return (0, a.jsx)(c.M, { size: "xs", ...n });
+        default:
+            return null;
+    }
+}
+function p(e) {
     let { platforms: t } = e;
     return (0, a.jsx)("div", {
-        className: l()(u.nM, u.Lc),
+        className: i()(h.nM, h.Lc),
         style: { alignItems: "center" },
-        children: t.map((e) => (0, a.jsx)(o.m, { text: m(e), children: (0, a.jsx)(x, { platform: e }) }, e)),
+        children: t.map((e) => (0, a.jsx)(u.m, { text: f(e), children: (0, a.jsx)(g, { platform: e }) }, e)),
     });
 }
-function h(e) {
+function x(e) {
     let { platform: t } = e;
-    return (0, a.jsx)(o.m, { text: m(t), children: (0, a.jsx)(x, { platform: t }) }, t);
+    return (0, a.jsx)(u.m, { text: f(t), children: (0, a.jsx)(g, { platform: t }) }, t);
 }
-function f(e) {
+function b(e) {
     let { game: t, className: n } = e,
-        i = (0, c.A)(t);
-    return 0 === i.length
+        l = (0, m.A)(t);
+    return 0 === l.length
         ? null
         : (0, a.jsx)("div", {
-              className: l()(u.fi, u.iH, n),
-              children: i.length > 0 && (0, a.jsx)(g, { platforms: i }),
+              className: i()(h.fi, h.iH, n),
+              children: l.length > 0 && (0, a.jsx)(p, { platforms: l }),
           });
 }

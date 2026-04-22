@@ -1,24 +1,26 @@
 e.exports = function (e) {
     let t = e.regex,
-        n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
-        r = "decltype\\(auto\\)",
-        i = "[a-zA-Z_]\\w{0,149}::",
-        s = "<[^<>]+>",
-        a = "(" + r + "|" + t.optional(i) + "[a-zA-Z_]\\w{0,149}" + t.optional(s) + ")",
+        a = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
+        n = "decltype\\(auto\\)",
+        r = "[a-zA-Z_]\\w{0,149}::",
+        i = "(" + n + "|" + t.optional(r) + "[a-zA-Z_]\\w{0,149}" + t.optional("<[^<>]+>") + ")",
         o = {
             className: "type",
             variants: [{ begin: "\\b[a-z\\d_]{0,149}_t\\b" }, { match: /\batomic_[a-z]{3,6}\b/ }],
         },
-        l = "\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)",
-        u = {
+        s = {
             className: "string",
             variants: [
                 { begin: '(u8?|U|L)?"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
-                { begin: "(u8?|U|L)?'(" + l + "|.)", end: "'", illegal: "." },
+                {
+                    begin: "(u8?|U|L)?'(\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)|.)",
+                    end: "'",
+                    illegal: ".",
+                },
                 e.END_SAME_AS_BEGIN({ begin: /(?:u8?|U|L)?R"([^()\\ ]{0,16})\(/, end: /\)([^()\\ ]{0,16})"/ }),
             ],
         },
-        c = {
+        l = {
             className: "number",
             variants: [
                 { match: /\b(0b[01']+)/ },
@@ -30,7 +32,7 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        d = {
+        c = {
             className: "meta",
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -40,15 +42,15 @@ e.exports = function (e) {
             },
             contains: [
                 { begin: /\\\n/, relevance: 0 },
-                e.inherit(u, { className: "string" }),
+                e.inherit(s, { className: "string" }),
                 { className: "string", begin: /<.*?>/ },
-                n,
+                a,
                 e.C_BLOCK_COMMENT_MODE,
             ],
         },
-        _ = { className: "title", begin: t.optional(i) + e.IDENT_RE, relevance: 0 },
-        f = t.optional(i) + e.IDENT_RE + "\\s*\\(",
-        p = {
+        _ = { className: "title", begin: t.optional(r) + e.IDENT_RE, relevance: 0 },
+        d = t.optional(r) + e.IDENT_RE + "\\s*\\(",
+        m = {
             keyword: [
                 "asm",
                 "auto",
@@ -129,64 +131,64 @@ e.exports = function (e) {
             built_in:
                 "std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr",
         },
-        h = [d, o, n, e.C_BLOCK_COMMENT_MODE, c, u],
-        m = {
+        p = [c, o, a, e.C_BLOCK_COMMENT_MODE, l, s],
+        u = {
             variants: [
                 { begin: /=/, end: /;/ },
                 { begin: /\(/, end: /\)/ },
                 { beginKeywords: "new throw return else", end: /;/ },
             ],
-            keywords: p,
-            contains: h.concat([{ begin: /\(/, end: /\)/, keywords: p, contains: h.concat(["self"]), relevance: 0 }]),
+            keywords: m,
+            contains: p.concat([{ begin: /\(/, end: /\)/, keywords: m, contains: p.concat(["self"]), relevance: 0 }]),
             relevance: 0,
         },
-        E = {
-            begin: "(" + a + "[\\*&\\s]+){1,12}" + f,
+        g = {
+            begin: "(" + i + "[\\*&\\s]+){1,12}" + d,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: p,
+            keywords: m,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
-                { begin: r, keywords: p, relevance: 0 },
-                { begin: f, returnBegin: !0, contains: [e.inherit(_, { className: "title.function" })], relevance: 0 },
+                { begin: n, keywords: m, relevance: 0 },
+                { begin: d, returnBegin: !0, contains: [e.inherit(_, { className: "title.function" })], relevance: 0 },
                 { relevance: 0, match: /,/ },
                 {
                     className: "params",
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: m,
                     relevance: 0,
                     contains: [
-                        n,
+                        a,
                         e.C_BLOCK_COMMENT_MODE,
-                        u,
-                        c,
+                        s,
+                        l,
                         o,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: p,
+                            keywords: m,
                             relevance: 0,
-                            contains: ["self", n, e.C_BLOCK_COMMENT_MODE, u, c, o],
+                            contains: ["self", a, e.C_BLOCK_COMMENT_MODE, s, l, o],
                         },
                     ],
                 },
                 o,
-                n,
+                a,
                 e.C_BLOCK_COMMENT_MODE,
-                d,
+                c,
             ],
         };
     return {
         name: "C",
         aliases: ["h"],
-        keywords: p,
+        keywords: m,
         disableAutodetect: !0,
         illegal: "</",
-        contains: [].concat(m, E, h, [
-            d,
-            { begin: e.IDENT_RE + "::", keywords: p },
+        contains: [].concat(u, g, p, [
+            c,
+            { begin: e.IDENT_RE + "::", keywords: m },
             {
                 className: "class",
                 beginKeywords: "enum class struct union",
@@ -194,6 +196,6 @@ e.exports = function (e) {
                 contains: [{ beginKeywords: "final class struct" }, e.TITLE_MODE],
             },
         ]),
-        exports: { preprocessor: d, strings: u, keywords: p },
+        exports: { preprocessor: c, strings: s, keywords: m },
     };
 };

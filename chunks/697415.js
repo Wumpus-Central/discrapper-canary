@@ -3,8 +3,8 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    a = n(397927),
-    r = n(626302);
+    a = n(428689),
+    r = n(852878);
 function o(e) {
     let { total: t, users: n, videoLimit: l } = e;
     return (0, i.jsxs)("div", {
@@ -13,7 +13,7 @@ function o(e) {
             (0, i.jsxs)("span", {
                 className: s()(r.VV, { [r.Ki]: l, [r.$G]: n >= 100 }),
                 children: [
-                    l ? (0, i.jsx)(a.npA, { size: "md", color: "currentColor", className: r.LB }) : null,
+                    l ? (0, i.jsx)(a.n, { size: "md", color: "currentColor", className: r.LB }) : null,
                     n.toString().padStart(2, "0"),
                 ],
             }),

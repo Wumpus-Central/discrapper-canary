@@ -1,6 +1,4 @@
 !(function (e) {
-    e(n(989349));
-})(function (e) {
     "use strict";
     var t = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
         n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
@@ -20,7 +18,7 @@
         ],
         i =
             /^(januari|februari|maart|april|mei|april|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
-    return e.defineLocale("nl-be", {
+    e.defineLocale("nl-be", {
         months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
         monthsShort: function (e, r) {
             return e ? (/-MMM-/.test(r) ? n[e.month()] : t[e.month()]) : t;
@@ -74,4 +72,4 @@
         },
         week: { dow: 1, doy: 4 },
     });
-});
+})(n(989349));

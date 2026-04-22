@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { Wb: () => u, _U: () => l, a3: () => c, qf: () => i, sP: () => o, tl: () => s });
+n.d(t, { Wb: () => l, _U: () => o, a3: () => u, qf: () => i, sP: () => a, tl: () => s });
 var r = n(626584);
 function i() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return t.find((e) => null != e && a(e));
-}
-function a(e) {
-    return (
-        null != e.requestFullscreen ||
-        null != e.webkitRequestFullscreen ||
-        e.webkitSupportsFullscreen ||
-        null != e.mozRequestFullScreen ||
-        null != e.msRequestFullscreen
-    );
+    return t.find((e) => {
+        var t;
+        return (
+            null != e &&
+            (null != (t = e).requestFullscreen ||
+                null != t.webkitRequestFullscreen ||
+                t.webkitSupportsFullscreen ||
+                null != t.mozRequestFullScreen ||
+                null != t.msRequestFullscreen)
+        );
+    });
 }
 function s(e) {
     "function" == typeof e.requestFullscreen
@@ -27,9 +28,9 @@ function s(e) {
                 ? e.msRequestFullscreen()
                 : new r.A("FullScreenUtils").warn("Fullscreen API is not supported.");
 }
-function o(e, t) {
+function a(e, t) {
     let n = null != t ? t : document;
-    l(null, n) &&
+    o(null, n) &&
         ("function" == typeof n.exitFullscreen
             ? n.exitFullscreen()
             : "function" == typeof n.webkitExitFullscreen
@@ -42,7 +43,7 @@ function o(e, t) {
                     ? n.msExitFullscreen()
                     : new r.A("FullScreenUtils").warn("Fullscreen API is not supported."));
 }
-function l(e, t) {
+function o(e, t) {
     let n = null != t ? t : document;
     return !!(
         null != n.fullscreenElement ||
@@ -52,7 +53,7 @@ function l(e, t) {
         (null != e && e.webkitDisplayingFullscreen)
     );
 }
-let u = (() => {
+let l = (() => {
     if ("u" > typeof document) {
         let e = document.createElement("video");
         if ("function" == typeof e.requestFullscreen);
@@ -63,12 +64,12 @@ let u = (() => {
     } else console.warn("FullScreenUtils has been imported in a non-web environment");
     return "fullscreenchange";
 })();
-function c(e, t) {
+function u(e, t) {
     return (
-        e.addEventListener(u, t),
+        e.addEventListener(l, t),
         e.addEventListener("webkitfullscreenchange", t),
         () => {
-            e.removeEventListener(u, t), e.removeEventListener("webkitfullscreenchange", t);
+            e.removeEventListener(l, t), e.removeEventListener("webkitfullscreenchange", t);
         }
     );
 }

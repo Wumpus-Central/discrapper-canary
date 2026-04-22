@@ -1,134 +1,137 @@
-n.d(t, { default: () => f });
-var a = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { default: () => S });
+var i = n(627968),
+    a = n(64700),
     r = n(503698),
-    o = n.n(r),
-    l = n(935462),
-    s = n(397927),
-    c = n(707685),
-    d = n(775121),
-    u = n(775602),
-    _ = n(203982),
-    m = n(700331),
-    p = n(454290),
-    A = n(369254),
-    b = n(847816),
-    S = n(652215),
-    h = n(985018),
-    C = n(264482);
-function g(e, t) {
+    l = n.n(r),
+    s = n(935462),
+    o = n(717421),
+    c = n(231723),
+    u = n(43990),
+    d = n(707685),
+    _ = n(775121),
+    p = n(775602),
+    m = n(203982),
+    A = n(700331),
+    h = n(454290),
+    f = n(369254),
+    g = n(847816),
+    E = n(652215),
+    I = n(985018),
+    v = n(264482);
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    !0 === n || u.A.useReducedMotion ? e.set(t) : e.start(t);
+    !0 === n || p.A.useReducedMotion ? e.set(t) : e.start(t);
 }
-function f(e) {
+function S(e) {
     let {
             onClose: t,
             onIndexChange: n,
             items: r,
-            startingIndex: f,
-            enabledContentHarmTypeFlags: T,
-            shouldHideMediaOptions: E = !1,
-            transitionState: I,
+            startingIndex: S,
+            enabledContentHarmTypeFlags: C,
+            shouldHideMediaOptions: b = !1,
+            transitionState: x,
             ...y
         } = e,
-        [v, x] = i.useState(f ?? 0),
-        [M, O] = i.useState(!1),
-        [R, N] = (0, s.zhh)(() => ({
-            scale: u.A.useReducedMotion ? 1 : 0.9,
+        [R, N] = a.useState(S ?? 0),
+        [L, O] = a.useState(!1),
+        [M, w] = (0, o.z)(() => ({
+            scale: p.A.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
             config: { friction: 30, tension: 300 },
         })),
-        D = i.useRef(null);
-    i.useEffect(() => {
+        D = a.useRef(null);
+    a.useEffect(() => {
         if (null != t)
             return (
-                _._.subscribe(S.jej.MEDIA_MODAL_CLOSE, t),
+                m._.subscribe(E.jej.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    _._.unsubscribe(S.jej.MEDIA_MODAL_CLOSE, t);
+                    m._.unsubscribe(E.jej.MEDIA_MODAL_CLOSE, t);
                 }
             );
     }, [t]);
-    let j = i.useRef(null);
-    i.useEffect(() => {
-        if (I !== j.current)
-            switch (((j.current = I), I)) {
-                case s.ip4.ENTERING:
-                    g(R.scale, 1);
+    let P = a.useRef(null);
+    a.useEffect(() => {
+        if (x !== P.current)
+            switch (((P.current = x), x)) {
+                case c.ip.ENTERING:
+                    T(M.scale, 1);
                     break;
-                case s.ip4.EXITING:
-                    u.A.useReducedMotion || (g(R.x, 0), g(R.y, 0), g(R.scale, 0.9));
+                case c.ip.EXITING:
+                    p.A.useReducedMotion || (T(M.x, 0), T(M.y, 0), T(M.scale, 0.9));
             }
-    }, [I, R]),
-        I === s.ip4.HIDDEN && M && (O(!1), R.x.set(0), R.y.set(0), R.scale.set(1)),
-        i.useEffect(() => {
-            I === s.ip4.ENTERED && (d.A.disable(), d.A.enableTemp(c.w)),
-                I === s.ip4.HIDDEN && (d.A.disable(), d.A.enableTemp(c.b));
+    }, [x, M]),
+        x === c.ip.HIDDEN && L && (O(!1), M.x.set(0), M.y.set(0), M.scale.set(1)),
+        a.useEffect(() => {
+            x === c.ip.ENTERED && (_.A.disable(), _.A.enableTemp(d.w)),
+                x === c.ip.HIDDEN && (_.A.disable(), _.A.enableTemp(d.b));
             let e = () => {
-                    d.A.disable(), I === s.ip4.ENTERED ? d.A.enableTemp(c.w) : d.A.enableTemp(c.b);
+                    _.A.disable(), x === c.ip.ENTERED ? _.A.enableTemp(d.w) : _.A.enableTemp(d.b);
                 },
                 t = () => {
-                    d.A.disableTemp();
+                    _.A.disableTemp();
                 },
                 n = D.current?.ownerDocument?.defaultView;
             return (
                 n?.addEventListener("focus", e),
                 n?.addEventListener("blur", t),
                 () => {
-                    n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), d.A.disableTemp();
+                    n?.removeEventListener("focus", e), n?.removeEventListener("blur", t), _.A.disableTemp();
                 }
             );
-        }, [I]);
-    let P = i.useCallback(
+        }, [x]);
+    let j = a.useCallback(
             (e) => {
-                x(e), n?.(e), m.l.markActionPerformed(m.N.SELECTED_ITEM_CHANGE);
+                N(e), n?.(e), A.l.markActionPerformed(A.N.SELECTED_ITEM_CHANGE);
             },
             [n],
         ),
-        w = i.useMemo(
+        F = a.useMemo(
             () => ({
-                scale: R.scale,
-                x: R.x,
-                y: R.y,
+                scale: M.scale,
+                x: M.x,
+                y: M.y,
                 setScale(e, t) {
-                    g(R.scale, e, t?.immediate);
+                    T(M.scale, e, t?.immediate);
                 },
                 setOffset(e, t, n) {
-                    g(R.x, e, n?.immediate), g(R.y, t, n?.immediate);
+                    T(M.x, e, n?.immediate), T(M.y, t, n?.immediate);
                 },
-                zoomed: M,
+                zoomed: L,
                 setZoomed(e) {
-                    O(e), g(R.scale, e ? 2.5 : 1), e || (g(R.x, 0), g(R.y, 0));
+                    O(e), T(M.scale, e ? 2.5 : 1), e || (T(M.x, 0), T(M.y, 0));
                 },
             }),
-            [M, R],
+            [L, M],
         );
-    return (0, a.jsx)(s.NPJ, {
-        theme: S.NJ8.MIDNIGHT,
+    return (0, i.jsx)(u.N, {
+        theme: E.NJ8.MIDNIGHT,
         children: (e) =>
-            (0, a.jsx)(s.EOs, {
+            (0, i.jsx)(s.EO, {
                 "data-migration-pending": !0,
                 hideShadow: !0,
-                className: o()(C.O, e),
-                transitionState: I,
+                className: l()(v.O, e),
+                transitionState: x,
                 ...y,
-                size: s.rIJ.DYNAMIC,
-                animation: l.WM.SUBTLE,
+                size: s.rI.DYNAMIC,
+                animation: s.WM.SUBTLE,
                 fullscreenOnMobile: !1,
                 onClick: t,
-                "aria-label": h.intl.string(h.t.AMTX3j),
+                "aria-label": I.intl.string(I.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
-                children: (0, a.jsxs)(p.f.Provider, {
-                    value: w,
+                children: (0, i.jsxs)(h.f.Provider, {
+                    value: F,
                     children: [
-                        (0, a.jsx)(b.A, { item: r[v], hideMediaOptions: E, onClose: t }),
-                        (0, a.jsx)("div", { style: { display: "none" }, ref: D }),
-                        (0, a.jsx)(A.A, {
+                        (0, i.jsx)(g.A, { item: r[R], hideMediaOptions: b, onClose: t }),
+                        (0, i.jsx)("div", { style: { display: "none" }, ref: D }),
+                        (0, i.jsx)(f.A, {
                             items: r,
-                            startIndex: v,
-                            onIndexChange: P,
-                            enabledContentHarmTypeFlags: T,
-                            shouldHideMediaOptions: E,
+                            startIndex: R,
+                            onIndexChange: j,
+                            enabledContentHarmTypeFlags: C,
+                            shouldHideMediaOptions: b,
                         }),
                     ],
                 }),
