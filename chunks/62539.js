@@ -1,15 +1,14 @@
-"use strict";
-s.d(t, { J: () => o, _: () => i }), s(321073);
+a.d(t, { J: () => o, _: () => r }), a(321073);
 var n,
-    l = s(64700),
-    r = s(735438),
-    a = s.n(r),
-    i = (((n = {}).PAGE = "PAGE"), (n.GAP = "GAP"), (n.BACK = "BACK"), (n.NEXT = "NEXT"), n);
+    l = a(64700),
+    i = a(735438),
+    s = a.n(i),
+    r = (((n = {}).PAGE = "PAGE"), (n.GAP = "GAP"), (n.BACK = "BACK"), (n.NEXT = "NEXT"), n);
 class o extends l.PureComponent {
     static defaultProps = { maxVisiblePages: 9, hideMaxPage: !1 };
     changePageTo = (e) => {
-        let { selectedPage: t, onPageChange: s } = this.props;
-        t !== e && null != s && s(e);
+        let { selectedPage: t, onPageChange: a } = this.props;
+        t !== e && null != a && a(e);
     };
     handleForward = () => {
         this.changePageTo(Math.min(this.props.selectedPage + 1, this.props.totalPageCount));
@@ -21,17 +20,17 @@ class o extends l.PureComponent {
         this.changePageTo(e);
     };
     getNeighborBounds() {
-        let { totalPageCount: e, maxVisiblePages: t, selectedPage: s } = this.props,
+        let { totalPageCount: e, maxVisiblePages: t, selectedPage: a } = this.props,
             n = Math.ceil(t / 2),
             l = Math.floor(t / 2),
-            [r, a] = s <= n ? [1, t] : s > e - l ? [e - t + 1, e] : [s - n + 1, s + l];
-        return [Math.max(r, 1), Math.min(a, e)];
+            [i, s] = a <= n ? [1, t] : a > e - l ? [e - t + 1, e] : [a - n + 1, a + l];
+        return [Math.max(i, 1), Math.min(s, e)];
     }
     getPageList() {
-        let { totalPageCount: e, selectedPage: t, hideMaxPage: s } = this.props,
+        let { totalPageCount: e, selectedPage: t, hideMaxPage: a } = this.props,
             [n, l] = this.getNeighborBounds(),
-            r = { type: "BACK", key: "back", disabled: 1 === t, selected: !1, navigateToPage: this.handleBackward },
-            i = { type: "NEXT", key: "next", disabled: t === e, selected: !1, navigateToPage: this.handleForward },
+            i = { type: "BACK", key: "back", disabled: 1 === t, selected: !1, navigateToPage: this.handleBackward },
+            r = { type: "NEXT", key: "next", disabled: t === e, selected: !1, navigateToPage: this.handleForward },
             o = [],
             c = [];
         return (
@@ -43,13 +42,13 @@ class o extends l.PureComponent {
                 (n += 2)),
             l < e &&
                 ((c = [{ type: "GAP", key: "right-gap" }]),
-                s ||
+                a ||
                     c.push({ type: "PAGE", key: `page-${e}`, targetPage: e, navigateToPage: () => this.handleJump(e) }),
                 (l -= 2)),
             [
-                r,
+                i,
                 ...o,
-                ...a()
+                ...s()
                     .range(n, l + 1)
                     .map((e) => ({
                         type: "PAGE",
@@ -60,7 +59,7 @@ class o extends l.PureComponent {
                         navigateToPage: () => this.handleJump(e),
                     })),
                 ...c,
-                i,
+                r,
             ]
         );
     }
