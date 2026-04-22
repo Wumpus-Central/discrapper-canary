@@ -919,6 +919,30 @@ let r = {
                     return 0;
                 },
             },
+            VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 14;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 9;
+                    return 14;
+                },
+            },
+            VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 17;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 17;
+                },
+            },
+            VOICE_MESSAGE_DURATION_TEXT_STYLE: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return "text-sm/semibold";
+                    for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/semibold";
+                    return "text-sm/semibold";
+                },
+            },
             VOICE_PANEL_CONTROLS_BORDER_RADIUS: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;

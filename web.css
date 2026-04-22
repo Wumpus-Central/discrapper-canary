@@ -67424,6 +67424,9 @@ html.disable-forced-colors * {
     --mobile-user-row-label-line-height-android: 16px;
     --mobile-user-row-label-line-height-ios: 22px;
     --mobile-voice-channel-user-limit-border-width: 0px;
+    --mobile-voice-message-duration-line-height-android: 14px;
+    --mobile-voice-message-duration-line-height-ios: 17px;
+    --mobile-voice-message-duration-text-style: text-sm/semibold;
     --mobile-voice-panel-controls-border-radius: 32px;
     --mobile-voice-panel-controls-padding: 16px;
     --mobile-voice-panel-disconnect-button-min-width: 0px;
@@ -67540,6 +67543,9 @@ html.disable-forced-colors * {
     --mobile-user-profile-about-me-heading-text-style: text-md/medium;
     --mobile-user-row-label-line-height-ios: 20px;
     --mobile-voice-channel-user-limit-border-width: 1px;
+    --mobile-voice-message-duration-line-height-android: 9px;
+    --mobile-voice-message-duration-line-height-ios: 12px;
+    --mobile-voice-message-duration-text-style: text-xs/semibold;
     --mobile-voice-panel-controls-border-radius: 16px;
     --mobile-voice-panel-controls-padding: 4px;
     --mobile-voice-panel-disconnect-button-min-width: 64px;
