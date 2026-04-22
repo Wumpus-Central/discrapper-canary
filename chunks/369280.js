@@ -69,27 +69,27 @@ function j(e) {
             hasPaymentSources: eo,
             enablePremiumBrandRefresh: el,
             isPremiumGroupPurchase: eu,
-            displayCurrency: ec,
+            paymentSourceId: ec,
+            displayCurrency: ed,
         } = (0, A.P5)(),
-        ed = (0, E.sw)(),
-        { isGift: e_ } = (0, g.Pv)(),
-        ef = o.paymentSourceId,
-        ep = (0, N.g)(s, ef),
-        eh = i.useMemo(() => (0, b.l6)(o, ed?.checkoutContext?.available_plans), [ed, o]),
+        e_ = (0, E.sw)(),
+        { isGift: ef } = (0, g.Pv)(),
+        ep = (0, N.g)(s, ec),
+        eh = i.useMemo(() => (0, b.l6)(o, e_?.checkoutContext?.available_plans), [e_, o]),
         em = (0, c.bG)([R.A], () => R.A.get(Y));
     l()(null != em, "Missing newPlan");
     let { showFractionalPremiumBanner: eE, fractionalPremiumInfo: eg } = (0, y._V)({
             premiumSubscription: n,
             selectedPlanId: Y,
             planGroup: Z,
-            isGift: e_,
+            isGift: ef,
         }),
         [eA, eI] = i.useState(null),
         eT = u.M.EEA_COUNTRIES.has(C.A.ipCountryCodeWithFallback),
         eS = ee === I.h.PURCHASING || ee === I.h.COMPLETED,
         ey = (0, T.vT)({
             isTrial: !1,
-            isGift: e_,
+            isGift: ef,
             selectedSkuId: er,
             startedPaymentFlowWithPaymentSources: ea.current,
         }),
@@ -136,16 +136,16 @@ function j(e) {
               )
             : { content: null, isInvoiceBilledImmediately: !0, shouldRenderToUnifiedSubscriptionDetailsDirectly: !1 },
         ex = n?.eligiblePaymentGateways,
-        ek = null != ex && ex.length > 0 && (ef === O.B || null === ep) && eo ? M.fU.SELECT_PAYMENT_METHOD : void 0,
+        ek = null != ex && ex.length > 0 && (ec === O.B || null === ep) && eo ? M.fU.SELECT_PAYMENT_METHOD : void 0,
         eU = i.useMemo(
             () => ({
                 label: B.intl.string(B.t["/AAR02"]),
-                selectedCurrency: o.currency ?? ec,
+                selectedCurrency: o.currency ?? ed,
                 currencies: X,
                 onChange: Q,
                 disabled: eS,
             }),
-            [X, Q, o, ec, eS],
+            [X, Q, o, ed, eS],
         ),
         eG = i.useMemo(
             () => ({
@@ -166,19 +166,19 @@ function j(e) {
         eV = null != n && (0, D.Ge)(n, Y, Z),
         eB = eV && null != q,
         eH = en
-            ? null != ed && null != eA
+            ? null != e_ && null != eA
                 ? (0, r.jsx)(v.PI, {
                       overrideRenewalDate: eb,
                       planGroup: Z,
                       activeSubscription: n,
                       isTrial: !1,
                       plan: em,
-                      isGift: e_,
+                      isGift: ef,
                       paymentSourceType: ep,
                       isInvoiceBilledImmediately: eM,
                       invoiceSummaryTypeWithPreview: {
                           type: x.N$.PREMIUM_SWITCH_PLAN,
-                          invoicePreview: ed,
+                          invoicePreview: e_,
                           renewalInvoicePreview: eA,
                       },
                       hideLegalContent: eB,
@@ -206,7 +206,7 @@ function j(e) {
                             finePrint: (0, r.jsx)(f.A, {
                                 subscriptionPlan: em,
                                 paymentSourceType: ep,
-                                basePrice: (0, b.y8)(em.id, !1, e_, eh),
+                                basePrice: (0, b.y8)(em.id, !1, ef, eh),
                                 currentSubscription: n,
                                 planGroup: Z,
                             }),
@@ -230,7 +230,7 @@ function j(e) {
               paymentRestrictionBannerType: ek,
               invoiceError: q,
               unifiedPlainNoticeText: eR,
-              invoicePreview: ed,
+              invoicePreview: e_,
               invoicePreviewComponent: ew,
               shouldShowPlanSelectAndPromoBanner: ej,
               shouldRenderInvoicePreviewSubscriptionDetailsDirectly:

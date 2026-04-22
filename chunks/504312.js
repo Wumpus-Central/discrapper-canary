@@ -382,6 +382,7 @@ let E = {
                             giftCardCheckboxProps: _,
                         } = (0, u.Y)({
                             checkoutPaymentSources: b,
+                            paymentSourceId: p,
                             setPaymentSourceId: x,
                             location: "revenue_playground",
                         });

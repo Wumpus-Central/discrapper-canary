@@ -11,15 +11,15 @@ var i = t(627968),
     p = t(918022),
     m = t(69882),
     _ = t(93159),
-    f = t(596034),
-    S = t(270537),
+    S = t(596034),
+    f = t(270537),
     x = t(241989),
     g = t(94420),
     b = t(958340),
     h = t(826469),
     I = t(908419),
-    E = t(888751),
-    y = t(216641),
+    y = t(888751),
+    E = t(216641),
     P = t(543767),
     A = t(874638),
     N = t(881489),
@@ -44,9 +44,9 @@ function O(e) {
             startDate: a,
         } = e,
         { immediateDelivery: o } = (0, I.U)();
-    return (0, i.jsx)(f._, {
+    return (0, i.jsx)(S._, {
         variant: {
-            type: f.I.Subscription,
+            type: S.I.Subscription,
             purchaseButtonText: U.intl.string(U.t.eUEeCt),
             totalDue: r,
             renewalPrice: l,
@@ -125,9 +125,9 @@ function W(e) {
                 lineItemType: "adjustment",
             }),
         0 !== s.tax && o.push({ id: "tax", label: U.intl.string(U.t.jiRvC7), amount: s.tax, lineItemType: "tax" });
-    let { lineItems: c, currency: u } = (0, E.EA)({ id: "main-line-item", amount: n, ...a }),
+    let { lineItems: c, currency: u } = (0, y.EA)({ id: "main-line-item", amount: n, ...a }),
         d = [...c, ...o];
-    return (0, i.jsx)(S.Vm, { defaultExpanded: !0, label: U.intl.string(k.default.eoXh7B), lineItems: d, currency: u });
+    return (0, i.jsx)(f.Vm, { defaultExpanded: !0, label: U.intl.string(k.default.eoXh7B), lineItems: d, currency: u });
 }
 function F(e) {
     let {
@@ -161,14 +161,15 @@ function V(e) {
             guildId: n,
             paymentSources: t,
             priceOptions: r,
-            currentPremiumSubscription: f,
-            premiumSubscriptionPaymentSourceId: S,
+            currentPremiumSubscription: S,
+            premiumSubscriptionPaymentSourceId: f,
             premiumSubscriptionPlan: I,
-            newAdditionalPlans: E,
-            setPaymentSourceId: w,
-            onPaymentSourceAdd: B,
+            newAdditionalPlans: y,
+            paymentSourceId: w,
+            setPaymentSourceId: B,
+            onPaymentSourceAdd: V,
         } = e,
-        V = (function (e) {
+        Y = (function (e) {
             let n,
                 {
                     guildId: t,
@@ -185,59 +186,56 @@ function V(e) {
                 m = r.intervalCount,
                 _ = (0, a.bG)([j.A], () => j.A.getForSkuAndInterval((0, M.mH)(R.pe.GUILD), p, m));
             s()(null != _, "Missing guildBoostingSubscriptionPlan");
-            let f = (0, M.J$)(i.paymentSourceId),
-                S = (0, N.ds)(),
-                x = i.paymentSourceId;
+            let S = (0, M.J$)(i.paymentSourceId),
+                f = (0, N.ds)();
             n = null != l ? (0, M.Om)(l, o[0].quantity, o[0].planId) : o;
-            let { analyticsLocations: h } = (0, d.Ay)(),
-                [I] = (0, P.Kq)({
+            let { analyticsLocations: x } = (0, d.Ay)(),
+                [h] = (0, P.Kq)({
                     subscriptionId: l?.id,
                     items: n,
                     renewal: !1,
                     applyEntitlements: !0,
-                    paymentSourceId: x,
+                    paymentSourceId: i.paymentSourceId,
                     currency: i.currency,
-                    analyticsLocations: h,
+                    analyticsLocations: x,
                     analyticsLocation: u.A.GUILD_BOOSTING_REVIEW_PRORATED,
                 }),
-                [E] = (0, P.Kq)({
+                [I] = (0, P.Kq)({
                     subscriptionId: l?.id,
                     items: n,
                     renewal: !0,
-                    paymentSourceId: x,
+                    paymentSourceId: i.paymentSourceId,
                     currency: i.currency,
-                    analyticsLocations: h,
+                    analyticsLocations: x,
                     analyticsLocation: u.A.GUILD_BOOSTING_REVIEW_RENEWAL,
                 });
             return (
-                (0, g.F0)(I),
+                (0, g.F0)(h),
                 {
                     guild: c ?? null,
                     guildBoostingSubscriptionPlan: _,
-                    isPrepaid: f,
-                    isReverseTrial: S,
-                    paymentSourceId: x,
-                    proratedInvoicePreview: I,
-                    renewalInvoicePreview: E,
+                    isPrepaid: S,
+                    isReverseTrial: f,
+                    proratedInvoicePreview: h,
+                    renewalInvoicePreview: I,
                     isSubscriptionUpdate: null != l,
                 }
             );
         })({
             guildId: n,
             priceOptions: r,
-            currentPremiumSubscription: f,
+            currentPremiumSubscription: S,
             premiumSubscriptionPlan: I,
-            newAdditionalPlans: E,
+            newAdditionalPlans: y,
         }),
         {
-            isSubscriptionUpdate: Y,
-            guild: H,
-            paymentSourceId: z,
+            isSubscriptionUpdate: H,
+            guild: z,
             isPrepaid: K,
             isReverseTrial: J,
             proratedInvoicePreview: q,
             renewalInvoicePreview: $,
-        } = V,
+        } = Y,
         Q = l.useMemo(() => {
             let e = q?.checkoutContext;
             return null == e || null == e.payment_sources ? [] : e.payment_sources.map(h.A.createFromCheckoutContext);
@@ -250,16 +248,17 @@ function V(e) {
             giftCardCheckboxProps: et,
         } = (0, p.Y)({
             checkoutPaymentSources: Q,
-            setPaymentSourceId: w,
+            paymentSourceId: w,
+            setPaymentSourceId: B,
             location: "GuildBoostReview",
-            subscriptionPaymentSourceId: S,
+            subscriptionPaymentSourceId: f,
             itemAmount: q?.total,
         }),
         ei = (0, a.bG)([T.A], () => T.A.hidePersonalInformation);
-    if (null == q || null == $ || null == H) return (0, i.jsx)(m.Ed, {});
+    if (null == q || null == $ || null == z) return (0, i.jsx)(m.Ed, {});
     let el = (0, i.jsx)(F, {
-            isSubscriptionUpdate: Y,
-            premiumSubscription: f,
+            isSubscriptionUpdate: H,
+            premiumSubscription: S,
             proratedInvoicePreview: q,
             renewalInvoicePreview: $,
             isPrepaid: K,
@@ -271,15 +270,15 @@ function V(e) {
             giftCardsEnabled: Z,
             giftCardCheckboxProps: et,
             paymentSourceDropdownProps: {
-                tooltipText: null == S ? null : U.intl.string(U.t.XiuuV9),
+                tooltipText: null == f ? null : U.intl.string(U.t.XiuuV9),
                 paymentSources: X,
                 selectedPaymentSourceId: ee,
                 onChange: en,
-                onPaymentSourceAdd: B,
+                onPaymentSourceAdd: V,
                 hidePersonalInformation: ei,
                 shouldUseUnifiedCheckoutUI: !0,
             },
-            disabled: null != S,
+            disabled: null != f,
         }),
         es = (function (e) {
             let {
@@ -291,7 +290,7 @@ function V(e) {
                 paymentSourceId: s,
             } = e;
             return {
-                paymentSourceType: (0, y.g)(r, s),
+                paymentSourceType: (0, E.g)(r, s),
                 premiumSubscriptionPlan: t,
                 renewalPrice: i.subtotal,
                 totalDue: l.total,
@@ -299,12 +298,12 @@ function V(e) {
                 startDate: (0, C.de)({ isSubscriptionUpdate: n, currentInvoice: l, renewalInvoice: i }),
             };
         })({
-            isSubscriptionUpdate: Y,
+            isSubscriptionUpdate: H,
             premiumSubscriptionPlan: I,
             renewalInvoicePreview: $,
             proratedInvoicePreview: q,
             paymentSources: t,
-            paymentSourceId: z,
+            paymentSourceId: w,
         }),
         ea = (0, i.jsx)(O, { ...es }),
         eo = (function (e) {
@@ -320,33 +319,33 @@ function V(e) {
                 p = t.interval,
                 m = t.intervalCount,
                 _ = (e) => (0, A.Z)(i.invoiceItems).find((n) => R.pW.has(n.subscriptionPlanId) && e(n)),
-                f = _((e) => e.amount >= 0);
-            s()(null != f, "Missing guild boosting invoice item");
-            let S = _((e) => e.amount < 0),
-                x = null != S ? f.quantity - S.quantity : f.quantity,
+                S = _((e) => e.amount >= 0);
+            s()(null != S, "Missing guild boosting invoice item");
+            let f = _((e) => e.amount < 0),
+                x = null != f ? S.quantity - f.quantity : S.quantity,
                 g = i.invoiceItems.filter((e) => (0, M.xq)(e.subscriptionPlanId)),
                 b = g.reduce((e, n) => e + n.amount, 0),
-                h = (0, P.sL)(f) * x,
+                h = (0, P.sL)(S) * x,
                 I = (0, L.$g)(h, i.currency),
-                E = (0, L.CE)(I, p, m),
-                y = (0, L.$g)(i.total, i.currency) + (i.currency !== D.Yr.USD ? "*" : ""),
+                y = (0, L.CE)(I, p, m),
+                E = (0, L.$g)(i.total, i.currency) + (i.currency !== D.Yr.USD ? "*" : ""),
                 N = i.subtotal - h - b,
-                C = f.discounts.map((e) => {
-                    let n = e.amount / f.quantity;
+                C = S.discounts.map((e) => {
+                    let n = e.amount / S.quantity;
                     return { ...e, amount: n * x };
                 }),
                 v = C.find((e) => e.type === c.iS.SUBSCRIPTION_PLAN),
                 T = C.find((e) => e.type === c.iS.ENTITLEMENT),
-                j = f.subscriptionPlanPrice * x;
+                j = S.subscriptionPlanPrice * x;
             return {
                 addedQuantity: x,
                 guildBoostingSubscriptionPlan: o,
                 isPrepaid: u,
                 isReverseTrial: d,
                 formattedGuildBoostPrice: I,
-                formattedGuildBoostRate: E,
+                formattedGuildBoostRate: y,
                 formattedOriginalAmountGuildBoostRate: (0, L.CE)((0, L.$g)(j, i.currency), p, m),
-                formattedTotal: y,
+                formattedTotal: E,
                 basePlanAdjustment: b,
                 basePlanInvoiceItems: g,
                 guildBoostingAdjustment: N,
@@ -359,12 +358,12 @@ function V(e) {
                 priceOptions: r,
             };
         })({
-            premiumSubscription: f,
+            premiumSubscription: S,
             premiumSubscriptionPlan: I,
             proratedInvoicePreview: q,
             renewalInvoicePreview: $,
             priceOptions: r,
-            reviewState: V,
+            reviewState: Y,
         }),
         ec = (0, i.jsx)(W, { ...eo }),
         eu = (function (e, n, t) {
@@ -391,15 +390,15 @@ function V(e) {
                 bottomSubText: t?.text ?? null,
             };
         })(
-            H,
+            z,
             eo,
             (function (e) {
                 let { isPrepaid: n, isReverseTrial: t, premiumSubscription: i } = e;
                 return !n && t && null != i ? { type: "reverseTrial", text: G(i.currentPeriodEnd) } : null;
-            })({ isPrepaid: K, isReverseTrial: J, premiumSubscription: f }),
+            })({ isPrepaid: K, isReverseTrial: J, premiumSubscription: S }),
         ),
         ed = (0, i.jsx)(x.f7, { ...eu });
-    return (0, i.jsx)(m.rg, {
+    return (0, i.jsx)(m.T_, {
         shouldShowGlobalNotices: !0,
         purchaseItemContent: ed,
         subscriptionDetailsContent: el,

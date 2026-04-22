@@ -70,6 +70,7 @@ let M = (e) => {
             giftCardCheckboxProps: ec,
         } = (0, h.Y)({
             checkoutPaymentSources: j,
+            paymentSourceId: x,
             setPaymentSourceId: k,
             location: "OneTimePurchaseReview",
             isReady: Y,
