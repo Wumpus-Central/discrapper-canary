@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c, x: () => d });
+n.d(t, { A: () => d, x: () => c });
 var r = n(575593),
     i = n(384726),
     s = n(696444),
@@ -7,7 +7,7 @@ var r = n(575593),
     o = n(931772),
     l = n(758836),
     u = n(652215);
-class c extends o.A {
+class d extends o.A {
     prices;
     type;
     premiumType;
@@ -43,10 +43,10 @@ class c extends o.A {
             prices: o,
             bundled_products: _,
             preview_assets: f,
-            variants: p,
+            variants: E,
             ...h
         } = e;
-        return new c({
+        return new d({
             ...super.fromServer(h),
             type: t,
             premiumType: n === u.oA2 ? null : n,
@@ -67,7 +67,7 @@ class c extends o.A {
                           bgAnimated: f.bg_animated,
                       }
                     : void 0,
-            variants: p?.map(d.fromServer),
+            variants: E?.map(c.fromServer),
             googleSkuIds: h.google_sku_ids,
             eligibleOffers: h.eligible_offers,
         });
@@ -79,12 +79,12 @@ class c extends o.A {
         if (null == n) return;
         let i = e.skus.length > 1 ? r.R.VARIANTS_GROUP : n.type,
             { items: o, item: _ } = (0, a.T)(t) ?? {};
-        return new c({
+        return new d({
             storeListingId: t.id,
             skuId: t.id,
             name: e.name,
             summary: e.summary,
-            styles: void 0,
+            styles: e.primaryCollectionStyles,
             type: i,
             premiumType: n.premiumType === u.oA2 ? null : n.premiumType,
             items: o ?? [_].filter((e) => null != e),
@@ -102,7 +102,7 @@ class c extends o.A {
                               if (null == r) return null;
                               let { items: i, item: s } = (0, a.T)(n) ?? {},
                                   [o] = n.selectedOptions;
-                              return new d({
+                              return new c({
                                   baseVariantName: e.name,
                                   baseVariantSkuId: t.id,
                                   variantLabel: o?.optionValue ?? "",
@@ -152,7 +152,7 @@ class c extends o.A {
         });
     }
 }
-class d extends c {
+class c extends d {
     baseVariantName;
     baseVariantSkuId;
     variantLabel;
@@ -166,7 +166,7 @@ class d extends c {
     }
     static fromServer(e) {
         let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...s } = e;
-        return new d({
+        return new c({
             ...super.fromServer(s),
             baseVariantName: t,
             baseVariantSkuId: n,

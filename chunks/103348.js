@@ -1,7 +1,8 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(260811);
-class i {
+n.d(t, { A: () => s });
+var r = n(749394),
+    i = n(260811);
+class s {
     id;
     skuIds;
     name;
@@ -11,6 +12,9 @@ class i {
     updatedAt;
     skus;
     primaryCollectionId;
+    primaryCollectionStyles;
+    primaryCollectionPdpBgUrl;
+    primaryCollectionWillUnpublishAt;
     constructor(e) {
         (this.id = e.id),
             (this.skuIds = e.skuIds),
@@ -20,18 +24,30 @@ class i {
             (this.createdAt = e.createdAt),
             (this.updatedAt = e.updatedAt),
             (this.skus = e.skus),
-            (this.primaryCollectionId = e.primaryCollectionId);
+            (this.primaryCollectionId = e.primaryCollectionId),
+            (this.primaryCollectionStyles = e.primaryCollectionStyles),
+            (this.primaryCollectionPdpBgUrl = e.primaryCollectionPdpBgUrl),
+            (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt);
     }
     static fromServer(e) {
-        let { sku_ids: t, options: n, created_at: s, updated_at: a, skus: o, tenant_metadata: l, ...u } = e;
-        return new i({
-            ...u,
+        let { sku_ids: t, options: n, created_at: a, updated_at: o, skus: l, tenant_metadata: u, ...d } = e;
+        return new s({
+            ...d,
             skuIds: t,
             options: n.map((e) => ({ name: e.name, optionValues: e.option_values })),
-            createdAt: new Date(s),
-            updatedAt: new Date(a),
-            skus: o.map((e) => r.A.createFromServer(e)),
-            primaryCollectionId: l.collectibles.primary_collection_id,
+            createdAt: new Date(a),
+            updatedAt: new Date(o),
+            skus: l.map((e) => i.A.createFromServer(e)),
+            primaryCollectionId: u.collectibles.primary_collection_id,
+            primaryCollectionStyles:
+                null != u.collectibles.primary_collection_styles
+                    ? r.A.fromServer(u.collectibles.primary_collection_styles)
+                    : void 0,
+            primaryCollectionPdpBgUrl: u.collectibles.primary_collection_pdp_bg_url,
+            primaryCollectionWillUnpublishAt:
+                null != u.collectibles.primary_collection_will_unpublish_at
+                    ? new Date(u.collectibles.primary_collection_will_unpublish_at)
+                    : void 0,
         });
     }
 }

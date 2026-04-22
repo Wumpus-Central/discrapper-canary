@@ -1,61 +1,60 @@
-"use strict";
-s.d(t, { A: () => u });
-var r = s(735438),
-    n = s.n(r),
-    o = s(247775),
-    i = s(311907),
-    a = s(73153);
-let c = !1,
-    l = [],
-    d = "",
-    h = !1,
+n.d(t, { A: () => R });
+var i = n(735438),
+    E = n.n(i),
+    l = n(247775),
+    a = n(311907),
+    s = n(73153);
+let r = !1,
+    o = [],
+    c = "",
+    u = !1,
     _ = { viewNonce: "", regenerateNonce: "" };
-class p extends i.Ay.Store {
+class I extends a.Ay.Store {
     static displayName = "MFAStore";
     getVerificationKey() {
-        return d;
+        return c;
     }
     getBackupCodes() {
-        return l;
+        return o;
     }
     get togglingSMS() {
-        return c;
+        return r;
     }
     getNonces() {
         return _;
     }
     get hasSeenBackupPrompt() {
-        return h;
+        return u;
     }
 }
-let u = new p(a.h, {
+let R = new I(s.h, {
     MFA_ENABLE_SUCCESS: function (e) {
-        let { token: t, codes: s } = e;
-        void 0 !== t && o.setToken(t), (l = s);
+        let { token: t, codes: n } = e;
+        void 0 !== t && l.setToken(t), (o = n);
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
-        o.setToken(t);
+        l.setToken(t);
     },
     MFA_SMS_TOGGLE: function () {
-        c = !0;
+        r = !0;
     },
     MFA_SMS_TOGGLE_COMPLETE: function () {
-        c = !1;
+        r = !1;
     },
     MFA_CLEAR_BACKUP_CODES: function () {
-        l = [];
+        o = [];
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
-        let { codes: t, key: s } = e;
-        (l = n().sortBy(t, "code")), (d = s);
+        let { codes: t, key: n } = e;
+        (o = E().sortBy(t, "code")), (c = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;
         _ = t;
     },
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
-        h = !0;
+        u = !0;
     },
     CONNECTION_OPEN: () => {},
 });
