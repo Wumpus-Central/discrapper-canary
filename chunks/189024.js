@@ -42,12 +42,12 @@ var r = n(627968),
     F = n(652215),
     H = n(758836),
     W = n(654487),
-    K = n(466919),
-    X = n(365720),
-    Y = n(490285),
+    K = n(963458),
+    X = n(509287),
+    Y = n(587416),
     Z = n(985018),
-    $ = n(555599),
-    q = n(459391),
+    $ = n(853903),
+    q = n(580799),
     Q = n(817577),
     J = n(419455),
     ee = n(716925),
@@ -124,7 +124,7 @@ function es() {
         { shouldShowBonusOrbsUX: eR, multiplier: eN } = (0, j.Dl)(W.rE.NITRO_HOME_MARKETING),
         eE = (0, b.l)("useWhatsNewPerkCards"),
         { isEligible: ej, programReward: eT } = (0, I.F)({ location: "useWhatsNewPerkCards" }),
-        ey = eE && ej;
+        ey = eE && ej && null != eT;
     return (0, a.useMemo)(() => {
         let e = null;
         if (null != em) {

@@ -1,32 +1,35 @@
-n.d(t, { F: () => u });
-var r = n(311907),
-    a = n(895944),
-    l = n(649032),
-    s = n(26508),
-    i = n(673608),
-    d = n(861495);
-function u(e) {
+s.d(t, { F: () => c });
+var n = s(311907),
+    a = s(166403),
+    r = s(895944),
+    l = s(649032),
+    i = s(26508),
+    d = s(673608),
+    o = s(861495);
+function c(e) {
     let t = e?.location ?? "useNitroProgramReward",
-        n = (0, s.DK)(l.W.NITRO, t),
+        s = (0, i.DK)(l.W.NITRO, t),
         {
-            isReady: u,
-            programReward: o,
-            totalDays: c,
-        } = (0, r.cf)([a.A], () => ({
-            isReady: a.A.isReady(),
-            programReward: a.A.getRewardForProgram(l.W.NITRO),
-            totalDays: a.A.getTotalDaysInDuration(l.W.NITRO),
+            isReady: c,
+            programReward: u,
+            totalDays: m,
+        } = (0, n.cf)([r.A], () => ({
+            isReady: r.A.isReady(),
+            programReward: r.A.getRewardForProgram(l.W.NITRO),
+            totalDays: r.A.getTotalDaysInDuration(l.W.NITRO),
         })),
-        m = (0, i.q)(),
-        h = (0, d.Q)(o, n),
-        x = (0, d.Y)(o, c, n);
+        h = (0, n.bG)([a.A], () => a.A.getPremiumTypeSubscription()?.isPurchasedExternally ?? !1),
+        x = (0, d.q)(),
+        C = (0, o.Q)(u, s),
+        _ = (0, o.Y)(u, m, s);
     return {
-        isEligible: n,
-        isReady: u,
-        passesGeneralUIInvariant: h,
-        passesProgressBarInvariant: x,
-        programReward: o,
-        shouldFetch: m,
-        totalDays: c,
+        isEligible: s,
+        isReady: c,
+        passesGeneralUIInvariant: C,
+        passesProgressBarInvariant: _,
+        programReward: u,
+        shouldFetch: x,
+        totalDays: m,
+        wouldBeEligibleForNitroOrbsButIsExternalSub: s && h,
     };
 }
