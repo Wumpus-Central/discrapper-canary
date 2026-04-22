@@ -1,13 +1,12 @@
-n.d(t, { N: () => d });
-var i = n(49111),
-    s = n(691451),
-    l = n(419954),
-    a = n(253932),
-    r = n(780964),
-    o = n(985018);
-let d = (0, l.zD)(r.X.SERVER_TRENDING_NOTIFICATIONS, {
-    useTitle: () => o.intl.string(o.t["k51K1+"]),
-    useValue: a.Qr.useSetting,
-    setValue: s.k,
-    usePredicate: () => (0, i._9)("ServerTrendingNotifications").showSettingsToggle,
+n.d(t, { N: () => o });
+var i = n(691451),
+    s = n(419954),
+    l = n(253932),
+    a = n(780964),
+    r = n(985018);
+let o = (0, s.zD)(a.X.SERVER_TRENDING_NOTIFICATIONS, {
+    useTitle: () => r.intl.string(r.t["k51K1+"]),
+    useValue: l.Qr.useSetting,
+    setValue: i.k,
+    usePredicate: () => !1,
 });
