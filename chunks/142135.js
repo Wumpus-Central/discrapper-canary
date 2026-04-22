@@ -76,6 +76,7 @@ function u(e) {
                   channelId: e.string(),
                   isFavorite: e.boolean(),
                   isTemporary: e.boolean(),
+                  isCandidate: e.boolean(),
                   decision: e
                       .object()
                       .keys({

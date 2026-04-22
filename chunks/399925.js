@@ -1,28 +1,29 @@
 "use strict";
 n.d(t, {
-    $N: () => es,
+    $N: () => ea,
     Fb: () => Z,
     GS: () => G,
-    H1: () => J,
+    H1: () => ee,
     HU: () => U,
+    K7: () => X,
     MI: () => W,
     Mt: () => k,
-    PW: () => et,
+    PW: () => en,
     Su: () => q,
-    Ts: () => ei,
-    VO: () => Q,
+    Ts: () => es,
+    VO: () => J,
     XK: () => $,
     Yy: () => K,
-    dR: () => en,
-    e6: () => ee,
+    dR: () => er,
+    e6: () => et,
     eQ: () => M,
     fd: () => x,
     h$: () => F,
     jA: () => z,
-    l0: () => ea,
-    oH: () => X,
-    pM: () => er,
-    w7: () => eo,
+    l0: () => eo,
+    oH: () => Q,
+    pM: () => ei,
+    w7: () => el,
     yO: () => P,
     yT: () => Y,
     yd: () => j,
@@ -157,18 +158,21 @@ async function H() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,
-        r = y.A.getSettings().storageLocation,
-        i = (0, C.A)(e, v.nQ.CLIP, t, n),
-        s = `${(0, N.A)(i.applicationName.substring(0, 20))}_${i.id}.mp4`,
-        a = o.A.fileManager.join(r, s),
-        l = m.Ay.getMediaEngine(),
-        u = JSON.stringify(i),
-        c = V(i);
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        i = y.A.getSettings().storageLocation,
+        s = (0, C.A)(e, v.nQ.CLIP, t, n);
+    s.isCandidate = r ?? !1;
+    let l = `${(0, N.A)(s.applicationName.substring(0, 20))}_${s.id}.mp4`,
+        u = o.A.fileManager.join(i, l),
+        c = m.Ay.getMediaEngine(),
+        d = JSON.stringify(s),
+        _ = V(s);
+    r && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...s, pending: !0, filepath: u } });
     try {
         let { duration: e, clipStats: t } = await (null != p.A.getCurrentUserActiveStream()
-                ? l.saveClipForUser(h.default.getId(), a, u)
-                : l.saveClip(a, u)),
-            n = B(c, t);
+                ? c.saveClipForUser(h.default.getId(), u, d)
+                : c.saveClip(u, d)),
+            n = B(_, t);
         (n.clip_save_time_ms = t.clipSaveTimeMs),
             (n.clip_size_bytes = t.clipSizeBytes),
             null != t.viewerDecodeFps &&
@@ -177,22 +181,23 @@ async function H() {
                 (n.target_fps = null));
         let r = "";
         try {
-            r = await (0, D.m)(o.A.clips.getClipProtocolURLFromPath(a), 0);
+            r = await (0, D.m)(o.A.clips.getClipProtocolURLFromPath(u), 0);
         } catch (e) {
             L.nx.warn("Failed to generate clip thumbnail:", e);
         }
         return (
-            (i.thumbnail = r),
-            (i.length = e),
+            (s.thumbnail = r),
+            (s.length = e),
             I.default.track(w.HAw.CLIP_SAVED, n),
             L.nx.info(`Clip save succeeded with ${e}ms and thumbnail ${r.length} bytes thumbnail.`),
-            await l.updateClipMetadata(a, JSON.stringify(i)),
-            { ...i, filepath: a }
+            await c.updateClipMetadata(u, JSON.stringify(s)),
+            { ...s, filepath: u }
         );
     } catch (n) {
-        if (!("errorMessage" in n)) throw (I.default.track(w.HAw.CLIP_SAVE_FAILURE, c), n);
+        if ((r && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: s.id }), !("errorMessage" in n)))
+            throw (I.default.track(w.HAw.CLIP_SAVE_FAILURE, _), n);
         let e = n,
-            t = B(c, e);
+            t = B(_, e);
         throw (
             ((t.error_at = e.errorAt),
             (t.error_message = e.errorMessage),
@@ -204,18 +209,19 @@ async function H() {
 async function j() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
         t = arguments.length > 1 ? arguments[1] : void 0,
-        n = arguments.length > 2 ? arguments[2] : void 0;
+        n = arguments.length > 2 ? arguments[2] : void 0,
+        o = arguments.length > 3 ? arguments[3] : void 0;
     if (y.A.getIsAtMaxSaveClipOperations()) return;
-    let o = (0, R.TD)() && null != p.A.getCurrentUserActiveStream(),
-        l = (0, R.Ao)() && u.Ay.getVisibleGame()?.windowHandle != null && m.Ay.hasClipsSource(),
-        _ = (0, S.Vr)() && (0, R.TD)() && null == p.A.getCurrentUserActiveStream() && null != E.A.getChannelId();
-    if (!o && !l && !_) return;
-    let f = p.A.getCurrentUserActiveStream(),
-        h = null != f ? (0, c._z)(f) : void 0,
-        g = null != f ? L.Fv.STREAMER : l ? L.Fv.DECOUPLED : L.Fv.VOICE,
-        I = await (async () => {
-            if (null == h) return;
-            let { ownerId: e, guildId: t } = (0, c.Iy)(h),
+    let l = (0, R.TD)() && null != p.A.getCurrentUserActiveStream(),
+        _ = (0, R.Ao)() && u.Ay.getVisibleGame()?.windowHandle != null && m.Ay.hasClipsSource(),
+        f = (0, S.Vr)() && (0, R.TD)() && null == p.A.getCurrentUserActiveStream() && null != E.A.getChannelId();
+    if (!l && !_ && !f) return;
+    let h = p.A.getCurrentUserActiveStream(),
+        g = null != h ? (0, c._z)(h) : void 0,
+        I = null != h ? L.Fv.STREAMER : _ ? L.Fv.DECOUPLED : L.Fv.VOICE,
+        T = await (async () => {
+            if (null == g) return;
+            let { ownerId: e, guildId: t } = (0, c.Iy)(g),
                 n = A.A.getStreamId(e, t, i.x.STREAM);
             if (null != n)
                 try {
@@ -226,11 +232,17 @@ async function j() {
                     return;
                 }
         })();
-    a.h.dispatch({ type: "CLIPS_SAVE_CLIP_START", clipType: g, streamKey: h, thumbnail: I, clipMethod: e });
-    let T = "manual" === e ? (0, d.Ak)("clip_save", 0.5) : null,
-        v = performance.now();
+    a.h.dispatch({
+        type: "CLIPS_SAVE_CLIP_START",
+        clipType: I,
+        streamKey: g,
+        thumbnail: o ? void 0 : T,
+        clipMethod: e,
+    });
+    let v = "manual" === e ? (0, d.Ak)("clip_save", 0.5) : null,
+        N = performance.now();
     try {
-        if ("auto" === e) {
+        if ("auto" === e && !o) {
             let e = y.A.getSettings().maxAutoClips,
                 t = y.A.getClips().filter((e) => !0 === e.isTemporary),
                 n = t.length - e + 1;
@@ -238,32 +250,43 @@ async function j() {
                 let r = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
                 for (let t of (L.nx.info(`Deleting ${r.length} temporary clips to stay within limit of ${e}`), r))
                     try {
-                        await X(t.filepath, t.id);
+                        await Q(t.filepath, t.id);
                     } catch (e) {
                         L.nx.error("Failed to delete temporary clip", e);
                     }
             }
         }
-        let i = await H(e, t, n);
-        a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: i });
-        let s = E.A.getChannelId();
-        null != s &&
-            null != i.applicationId &&
-            (0, S.J)() &&
-            r.Bo.post({
-                url: w.Rsh.SEND_CLIPS_REMOTE_TRIGGER(s),
-                body: { application_id: i.applicationId },
-                rejectWithError: !0,
-            }).catch((e) => {
-                L.nx.warn("Failed to send remote clip trigger", e);
-            });
+        let i = await H(e, t, n, o);
+        if (
+            o &&
+            !y.A.getPendingClipCandidates().some((e) => {
+                let { id: t } = e;
+                return t === i.id;
+            })
+        ) {
+            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), Q(i.filepath, i.id);
+            return;
+        }
+        if ((a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: i }), !o)) {
+            let e = E.A.getChannelId();
+            null != e &&
+                null != i.applicationId &&
+                (0, S.J)() &&
+                r.Bo.post({
+                    url: w.Rsh.SEND_CLIPS_REMOTE_TRIGGER(e),
+                    body: { application_id: i.applicationId },
+                    rejectWithError: !0,
+                }).catch((e) => {
+                    L.nx.warn("Failed to send remote clip trigger", e);
+                });
+        }
     } catch (e) {
         L.nx.error("Clip Failed to Save", e),
-            T?.stop(),
-            (0, d.Ak)("clip_error", 0.5),
+            v?.stop(),
+            o || (0, d.Ak)("clip_error", 0.5),
             a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
     }
-    L.nx.info(`${y.A.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - v)}ms`);
+    L.nx.info(`${y.A.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - N)}ms`);
 }
 async function Y(e) {
     let t, n;
@@ -322,7 +345,7 @@ function W(e, t) {
     a.h.dispatch({ type: "CLIPS_SAVE_ANIMATION_END", streamKey: e, timestamp: t });
 }
 async function K(e, t) {
-    let n = y.A.getClipById(e);
+    let n = y.A.getClipById(e) ?? y.A.getClipCandidateById(e);
     if (null == n) return;
     let r = { ...n, ...t };
     null != (await (0, O.q)(r)) &&
@@ -349,12 +372,16 @@ async function Z(e) {
     }
     a.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
 }
-async function X(e, t) {
+function X(e) {
+    K(e.id, { isCandidate: !1 }),
+        a.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...e, isCandidate: !1 } });
+}
+async function Q(e, t) {
     (0, T.isDesktop)() &&
         o.A.clips?.deleteClip != null &&
         (await o.A.clips.deleteClip(e), a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
 }
-async function Q(e) {
+async function J(e) {
     let t = m.Ay.getMediaEngine(),
         { filepath: n, ...r } = e;
     await K(e.id, r);
@@ -364,19 +391,19 @@ async function Q(e) {
     );
     return e.type === v.nQ.SCREENSHOT ? i : (0, b.A)(i);
 }
-function J(e) {
+function ee(e) {
     a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
 }
-function ee(e) {
+function et(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
-function et(e) {
+function en(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { clipSignals: { ...y.A.getSettings().clipSignals, ...e } },
     });
 }
-function en(e) {
+function er(e) {
     let t = m.Ay.getMediaEngine().setClipsMLPipelineTypeEnabled;
     null != t &&
         (t("emotion_classifier", e.emotionClassifier),
@@ -389,18 +416,18 @@ function en(e) {
             settings: { mlPipelinesEnabled: { ...y.A.getSettings().mlPipelinesEnabled, ...e } },
         });
 }
-function er(e) {
+function ei(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { autoClipPhrases: e } });
 }
-function ei(e, t) {
+function es(e, t) {
     a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function es(e) {
+function ea(e) {
     a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function ea() {
-    ei({ type: v.Gy.MANUAL });
+function eo() {
+    es({ type: v.Gy.MANUAL });
 }
-async function eo(e) {
+async function el(e) {
     await K(e, { isTemporary: !1 });
 }

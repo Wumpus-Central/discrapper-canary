@@ -534,6 +534,8 @@ let i = {
             "GUILD_SOUNDBOARD_SOUND_PLAY_START",
             "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             "VOICE_CHANNEL_SELECT",
+            "STREAM_STOP",
+            "CLIPS_SAVE_CLIP",
         ],
         inlineRequire: () => n(63389).A,
     },
