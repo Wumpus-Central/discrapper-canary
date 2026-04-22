@@ -107,8 +107,9 @@ function h(e) {
     }
 }
 function m(e) {
-    let { channel: t, muted: n, userStatus: r } = e;
-    if (!0 === n) return c.intl.string(c.t.C4zCMb);
-    let i = [];
-    return t.type === u.rbe.DM && null != r && i.push(h(r)), i.length > 0 ? i.join(", ") : void 0;
+    let { channel: t, muted: n, userStatus: r, isFavorite: i } = e,
+        s = [];
+    return (i && s.push(c.intl.string(c.t.cCPjSK)), !0 === n)
+        ? (s.push(c.intl.string(c.t.C4zCMb)), s.join(", "))
+        : (t.type === u.rbe.DM && null != r && s.push(h(r)), s.length > 0 ? s.join(", ") : void 0);
 }
