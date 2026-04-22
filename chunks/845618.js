@@ -31,8 +31,8 @@ var r = n(136722),
     L = n(718446),
     w = n(260509),
     M = n(734057),
-    x = n(71393),
-    P = n(320501),
+    P = n(71393),
+    x = n(320501),
     k = n(803224),
     U = n(576705),
     G = n(222823),
@@ -104,7 +104,7 @@ function eh(e) {
     let { channelId: i, guildId: s, suppress: a, requestToSpeakTimestamp: o } = r,
         l = !a && null != o;
     if (null == i || null == s || !l) return;
-    let u = x.A.getGuild(s),
+    let u = P.A.getGuild(s),
         c = M.A.getChannel(i),
         d = O.A.getStageInstanceByChannel(i);
     null != u &&
@@ -140,6 +140,7 @@ function eE(e) {
         _ = k.A.getNotifyMessagesInSelectedChannel() && (0, T.kY)(r, t);
     if (
         (!d && !_) ||
+        em() ||
         (r.type === Z.lAJ.CHANGELOG && (null == r.changelog_id || f.A.latestChangelogId() !== r.changelog_id))
     )
         return !1;
@@ -156,7 +157,7 @@ function eE(e) {
         k.A.getDesktopType() === Z.nRU.NEVER)
     )
         return p && q.A.playNotificationSound(et, en), !1;
-    let R = P.A.getMessage(t, r.id) ?? (0, A.rh)(r);
+    let R = x.A.getMessage(t, r.id) ?? (0, A.rh)(r);
     q.A.showNotification(
         E,
         g,
@@ -257,7 +258,7 @@ function eS(e) {
     if (null == r || !Z.kvI.GUILD_THREADS_ONLY.has(r.type) || !n || !(0, T.q1)(t, r, !eu)) return !1;
     let { author: i, user: s } = (0, h.tY)(t);
     if (null == s) return !1;
-    let a = x.A.getGuild(r.guild_id);
+    let a = P.A.getGuild(r.guild_id);
     if (null == a) return !1;
     let o = ee.intl.formatToPlainString(ee.t["2IGVl5"], {
             channelName: (0, p.m1)(r, j.default, F.A),
@@ -289,7 +290,7 @@ function ev(e) {
     let t = e.channel_id;
     if (null == t || ey(t)) return !1;
     let n = j.default.getCurrentUser(),
-        i = x.A.getGuild(e.guild_id),
+        i = P.A.getGuild(e.guild_id),
         s = M.A.getChannel(e.channel_id),
         a = j.default.getUser(e.host_id);
     if (null == n || null == s || null == i || null == a || !U.A.can(r.kg(Z.xBc.CONNECT, Z.xBc.VIEW_CHANNEL), s))
@@ -311,7 +312,7 @@ function ev(e) {
 function eN(e) {
     if (em()) return !1;
     let t = j.default.getCurrentUser(),
-        n = x.A.getGuild(e.guild_id);
+        n = P.A.getGuild(e.guild_id);
     if (null == t || null == n) return !1;
     q.A.showNotification(
         (0, w.Iv)(n, 128),
@@ -338,7 +339,7 @@ function eR(e) {
     let { instance: t } = e;
     if (em() || !t.send_start_notification || ey(t.channel_id)) return !1;
     let n = j.default.getCurrentUser(),
-        i = x.A.getGuild(t.guild_id),
+        i = P.A.getGuild(t.guild_id),
         s = M.A.getChannel(t.channel_id),
         a = j.default.getUser(t.host_id);
     if (
@@ -391,6 +392,11 @@ function eb(e) {
     );
 }
 function eD(e) {
+    let { title: t, subtitle: r } = e;
+    if (em()) return !1;
+    q.A.showNotification(n(608598), t, r, { notif_type: "RESTRICTED_HOURS_WARNING" }, { isUserAvatar: !1 });
+}
+function eL(e) {
     let t,
         { icon: n, title: r, body: i, route: s, trackingType: a, tag: o } = e;
     if (em() || null == r || null == i || null == a || "reactions_push_notification" === a.toLowerCase()) return !1;
@@ -410,7 +416,7 @@ function eD(e) {
         null != e && null != t && ef.track(t, e.notification, e.trackingProps);
     });
 }
-function eL(e) {
+function ew(e) {
     let { icon: t, title: n, body: r, route: i, trackingType: s, message: a, reactorUserId: o } = e;
     if (em() || null == n || null == r || null == s) return !1;
     let l = a.channel_id;
@@ -436,11 +442,11 @@ function eL(e) {
         null != e && null != l && ef.track(l, e.notification, e.trackingProps);
     });
 }
-function ew(e) {
+function eM(e) {
     let { icon: t, title: n, body: r, trackingProps: i, options: s } = e;
     return !em() && (q.A.showNotification(t, n, r, i, s), !1);
 }
-function eM(e) {
+function eP(e) {
     let { countryCode: t, guilds: n } = e;
     (ec = t), ed.clear(), n.forEach((e) => e.stage_instances.forEach((e) => ed.add(e.id)));
 }
@@ -471,22 +477,22 @@ function ex() {
             !1)
     );
 }
-function eP() {
+function ek() {
     return s.w.remove(el), !1;
 }
-class ek extends i.Ay.Store {
+class eU extends i.Ay.Store {
     static displayName = "NotificationStore";
     initialize() {
-        this.waitFor(f.A, M.A, v.A, x.A, g.A, P.A, k.A, U.A, F.A, V.A, B.A, O.A, H.A, j.default, Y.A);
+        this.waitFor(f.A, M.A, v.A, P.A, g.A, x.A, k.A, U.A, F.A, V.A, B.A, O.A, H.A, j.default, Y.A);
     }
 }
-new ek(
+new eU(
     a.h,
     __OVERLAY__
         ? {}
         : {
               NOTIFICATIONS_SET_PERMISSION_STATE: eg,
-              NOTIFICATION_CREATE: ew,
+              NOTIFICATION_CREATE: eM,
               WINDOW_FOCUS: ep,
               MESSAGE_CREATE: eE,
               CHANNEL_SELECT: eA,
@@ -497,11 +503,12 @@ new ek(
               STAGE_INSTANCE_DELETE: eO,
               GUILD_SCHEDULED_EVENT_UPDATE: eC,
               THREAD_CREATE: eS,
-              GENERIC_PUSH_NOTIFICATION_SENT: eD,
-              REACTION_NOTIFICATION_SENT: eL,
+              GENERIC_PUSH_NOTIFICATION_SENT: eL,
+              REACTION_NOTIFICATION_SENT: ew,
               WINDOW_HIDDEN: ex,
-              LOGOUT: eP,
-              CONNECTION_OPEN: eM,
+              LOGOUT: ek,
+              CONNECTION_OPEN: eP,
               MESSAGE_REMINDER_DUE: eb,
+              RESTRICTED_HOURS_WARNING: eD,
           },
 );

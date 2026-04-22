@@ -926,6 +926,15 @@ let eU = l.memo(function () {
             return (0, i.jsx)(ee.A, { premiumSubscription: s.metadata.premiumSubscription });
         case eN.kqX.SYSTEM_SERVICE_WARNING:
             return (0, i.jsx)(er.A, {});
+        case eN.kqX.RESTRICTED_HOURS_WARNING:
+            return (0, i.jsxs)(h.$Td, {
+                color: h.Hv$.WARNING,
+                children: [
+                    (0, i.jsx)(h.PMB, { onClick: () => eD(), noticeType: s.type }),
+                    s.message,
+                    s.metadata?.subtitle != null ? ` \xb7 ${s.metadata.subtitle}` : null,
+                ],
+            });
         default:
             return null;
     }
