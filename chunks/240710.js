@@ -26,7 +26,7 @@ var i = n(627968),
     _ = n(654487),
     y = n(818348),
     R = n(985018),
-    O = n(970197);
+    O = n(27669);
 function L(t) {
     let { quest: e, sourceQuestContent: n, onLoadComplete: L, preCtaClick: k } = t,
         M = (0, f.Ay)(),

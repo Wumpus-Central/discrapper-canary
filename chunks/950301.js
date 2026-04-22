@@ -21,7 +21,7 @@ var s = r(627968),
     C = r(247683),
     v = r(652215),
     w = r(985018),
-    S = r(736212);
+    S = r(34516);
 let y = (e, t) => (0, s.jsx)(A.XW, { columns: e }, t);
 class x extends l.PureComponent {
     _masonryRef = l.createRef();

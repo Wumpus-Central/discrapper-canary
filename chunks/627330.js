@@ -6,7 +6,7 @@ var n = a(627968),
     s = a(349288),
     o = a(534514),
     c = a(834730),
-    d = a(824078);
+    d = a(77006);
 function u(e) {
     let { title: t, body: a, badge: r, className: i, textLink: u } = e,
         p = u?.external ?? !0;

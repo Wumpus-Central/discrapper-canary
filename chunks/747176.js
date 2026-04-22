@@ -1,19 +1,19 @@
-n.d(t, { A: () => i });
-var l = n(627968);
+n.d(t, { A: () => s });
+var a = n(627968);
 n(64700);
-var a = n(594808),
+var l = n(594808),
     r = n(207963),
-    s = n(100558);
-function i(e) {
+    i = n(43915);
+function s(e) {
     let { components: t, renderComponents: n } = e,
-        { message: i } = (0, r.jc)();
+        { message: s } = (0, r.jc)();
     return null == t || 0 === t.length
         ? null
-        : (0, l.jsxs)("div", {
-              className: s.kL,
+        : (0, a.jsxs)("div", {
+              className: i.kL,
               children: [
-                  (0, l.jsx)("div", { className: s.Y_, children: n(t) }),
-                  null != i ? (0, l.jsx)(a.Ay, { className: s.z3, message: i, component: e }) : null,
+                  (0, a.jsx)("div", { className: i.Y_, children: n(t) }),
+                  null != s ? (0, a.jsx)(l.Ay, { className: i.z3, message: s, component: e }) : null,
               ],
           });
 }

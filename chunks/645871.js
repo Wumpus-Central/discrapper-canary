@@ -3,9 +3,9 @@ var r = n(627968),
     l = n(64700),
     a = n(503698),
     i = n.n(a),
-    s = n(825638),
+    s = n(517738),
     u = n(876230),
-    o = n(6821);
+    o = n(19557);
 let c = (e) => {
     let {
             segment: t,
@@ -18,8 +18,8 @@ let c = (e) => {
             timelineWidth: h,
             preloadedBuffers: p,
             maxSeekableX: E,
-            segmentBorderRadius: x = 99,
-            progressClassName: v,
+            segmentBorderRadius: v = 99,
+            progressClassName: x,
         } = e,
         { startPx: b, endPx: g, leftIndicatorIndex: y, rightIndicatorIndex: A } = t,
         C = g - b,
@@ -64,7 +64,7 @@ let c = (e) => {
         D = null != w ? (w <= 0 ? 0 : 1) : S.to((e) => (e <= 0 ? 0 : 1)),
         M = c !== u.Q6.ENDED,
         j = Math.max(0, (E ?? 0) - b),
-        k = { borderRadius: `${x}px` },
+        k = { borderRadius: `${v}px` },
         I = l.useMemo(
             () =>
                 p
@@ -73,7 +73,7 @@ let c = (e) => {
             [p, b, g, h],
         );
     return (0, r.jsxs)(s.animated.div, {
-        className: i()(o.Td, v),
+        className: i()(o.Td, x),
         style: {
             left: N ? f.to((e) => b + e) : b,
             width: L ? f.to((e) => C - e) : C,

@@ -15,7 +15,7 @@ var i = n(627968),
     m = n(167681),
     I = n(652215),
     T = n(985018),
-    N = n(914342);
+    N = n(62630);
 let g = (e) => {
         let { channel: t, message: n } = e,
             l = (0, m.dv)(n.id),

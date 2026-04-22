@@ -32,8 +32,8 @@ var i = n(627968),
     L = n(287809),
     M = n(427262),
     k = n(985018),
-    O = n(992595),
-    P = n(204865);
+    O = n(168147),
+    P = n(354817);
 function D(e) {
     let { member: t, guildId: s, channelId: r, role: a } = e,
         c = l.useRef(null),
@@ -79,7 +79,7 @@ function D(e) {
                                           n.e("35313"),
                                           n.e("81653"),
                                           n.e("84841"),
-                                          n.e("63143"),
+                                          n.e("9091"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
                                           (0, i.jsx)(e, { ...t, user: d, guildId: s, channel: h, showMediaItems: !0 });

@@ -27,8 +27,8 @@ var i = n(627968),
     y = n(652215);
 n(281405);
 var R = n(985018),
-    j = n(89682),
-    L = n(80442);
+    j = n(793042),
+    L = n(58298);
 let O = (e) => 1 - Math.pow(1 - e, 4);
 function G(e) {
     let { channel: t, onClose: s } = e,
@@ -69,7 +69,7 @@ function G(e) {
         $ = l.useCallback(() => {
             null != F &&
                 (0, u.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
+                    let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("76530")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: F, channel: t, source: y.PE1.VOICE_INVITE_SUGGESTIONS });

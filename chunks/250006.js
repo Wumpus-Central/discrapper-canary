@@ -19,7 +19,7 @@ var i = n(627968),
     f = n(923121),
     j = n(539916),
     N = n(985018),
-    I = n(415293);
+    I = n(61437);
 function C(e) {
     let { connection: t, index: s, onDragStart: C, onDragReset: b, onDragComplete: v, draggingId: S } = e,
         T = (0, _.Ay)(),

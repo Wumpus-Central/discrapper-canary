@@ -10,7 +10,7 @@ var s = a(627968),
     u = a(282026),
     h = a(926277),
     g = a(931222),
-    A = a(65283);
+    A = a(360067);
 function _(e) {
     let { categoryId: t, loadId: a } = e;
     u.A.setState({ categoryId: t }),

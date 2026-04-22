@@ -22,7 +22,7 @@ var r = s(627968),
     N = s(652215),
     I = s(788868),
     T = s(985018),
-    v = s(50596);
+    v = s(547876);
 let E = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))(
     (0, _.A)((e) => {
         let { isAuthenticated: t, user: s } = e,

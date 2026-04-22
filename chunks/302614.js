@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => N });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,17 +7,17 @@ var r = n(627968),
     o = n(111956),
     l = n.n(o),
     u = n(835245),
-    c = n(311907),
-    d = n(52133),
+    d = n(311907),
+    c = n(52133),
     _ = n(684013),
     f = n(869146),
-    p = n(256415),
+    E = n(256415),
     h = n(723702),
-    m = n(41984),
-    E = n(127242),
+    p = n(41984),
+    m = n(127242),
     g = n(545807),
     A = n(392164),
-    I = n(18897);
+    I = n(140305);
 function T(e, t) {
     return {
         name: e,
@@ -69,7 +69,7 @@ class S {
             for (let [t, n] of this.zones) {
                 let r = t.getBoundingClientRect(),
                     i = T(n.zone.name, r);
-                (0, d.A)(i, n.zone) || ((e = !0), (n = { element: n.element, zone: i }), this.zones.set(t, n));
+                (0, c.A)(i, n.zone) || ((e = !0), (n = { element: n.element, zone: i }), this.zones.set(t, n));
             }
             e && this.updateZones();
         },
@@ -103,11 +103,11 @@ class S {
     }
 }
 let y = i.createContext(new S((0, g.b)()));
-function v(e) {
+function N(e) {
     let { observe: t = !0, className: n, style: s, children: o } = e,
         l = i.useContext(y),
-        u = (0, c.bG)([E.A], () => E.A.hasRenderDebugMode(m.x7.ClickZones)),
-        d = (0, c.bG)([p.default], () => p.default.disableClickableRegions),
+        u = (0, d.bG)([m.A], () => m.A.hasRenderDebugMode(p.x7.ClickZones)),
+        c = (0, d.bG)([E.default], () => E.default.disableClickableRegions),
         [{ refHandler: _, setObserve: f }] = i.useState(() => {
             let e = null;
             return {
@@ -121,8 +121,8 @@ function v(e) {
         });
     return (
         i.useLayoutEffect(() => {
-            d ? f(!1) : f(t);
-        }, [t, f, d]),
+            c ? f(!1) : f(t);
+        }, [t, f, c]),
         (0, r.jsx)("div", { ref: _, style: s, className: a()(n, I.v, u && I.p), "data-click-zone": !0, children: o })
     );
 }

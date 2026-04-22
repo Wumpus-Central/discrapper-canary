@@ -13,7 +13,7 @@ var a = n(91871),
     m = n(508675),
     h = n(435470),
     g = n(985018),
-    x = n(6858);
+    x = n(156810);
 let f = (e) => {
     let { tag: t } = e,
         { id: n, name: a, emojiId: s, emojiName: c } = t,

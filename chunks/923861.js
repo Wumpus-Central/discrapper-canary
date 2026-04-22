@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(732139),
     v = n(652215),
     y = n(985018),
-    S = n(6376);
+    S = n(503656);
 let b = (e) => {
     let {
             emojiDescriptors: t,

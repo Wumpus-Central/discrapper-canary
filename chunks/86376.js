@@ -12,17 +12,17 @@ var i = n(627968),
     _ = n(986268),
     h = n(345942),
     m = n(773669),
-    p = n(961350),
-    g = n(696451),
+    g = n(961350),
+    p = n(696451),
     A = n(860689),
     f = n(661191),
     x = n(107123),
     E = n(985018),
-    I = n(73045);
+    I = n(446037);
 function v(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         r = t.id,
-        l = (0, a.bG)([g.Ay, p.default], () => g.Ay.getMember(r, p.default.getId())?.joinedAt != null, [r]),
+        l = (0, a.bG)([p.Ay, g.default], () => p.Ay.getMember(r, g.default.getId())?.joinedAt != null, [r]),
         u = s.useCallback(
             (e) => {
                 l && (e.stopPropagation(), (0, h.u)(t.id));

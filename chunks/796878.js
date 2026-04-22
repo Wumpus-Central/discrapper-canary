@@ -7,7 +7,7 @@ var s = a(877624),
     c = a(834730),
     h = a(549996),
     r = a(807098),
-    o = a(306125);
+    o = a(88077);
 function d(e) {
     let { children: l } = e,
         a = (0, h.c)(s.C.PREMIUM_TAB_TOOLTIP),

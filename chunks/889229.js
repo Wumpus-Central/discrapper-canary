@@ -1,35 +1,35 @@
 n.d(e, { A: () => c });
-var a = n(627968);
+var s = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    i = n(534514),
-    l = n(834730),
-    o = n(822030);
+var i = n(503698),
+    l = n.n(i),
+    r = n(534514),
+    a = n(834730),
+    o = n(74958);
 function c(t) {
-    let { tips: e, className: n, headerText: r } = t;
-    return (0, a.jsxs)("div", {
-        className: s()(o.iB, n),
+    let { tips: e, className: n, headerText: i } = t;
+    return (0, s.jsxs)("div", {
+        className: l()(o.iB, n),
         children: [
-            (0, a.jsx)("div", {
+            (0, s.jsx)("div", {
                 className: o.oO,
-                children: (0, a.jsx)(i.D, { variant: "heading-lg/bold", className: o.TK, children: r }),
+                children: (0, s.jsx)(r.D, { variant: "heading-lg/bold", className: o.TK, children: i }),
             }),
-            (0, a.jsx)("ul", {
+            (0, s.jsx)("ul", {
                 className: o.T6,
                 children: e.map((t, e) =>
-                    (0, a.jsxs)(
+                    (0, s.jsxs)(
                         "li",
                         {
                             className: o.eL,
                             children: [
-                                (0, a.jsx)(i.D, {
+                                (0, s.jsx)(r.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-brand",
                                     className: o.VX,
                                     children: e + 1,
                                 }),
-                                (0, a.jsx)(l.E, { variant: "text-sm/medium", children: t }),
+                                (0, s.jsx)(a.E, { variant: "text-sm/medium", children: t }),
                             ],
                         },
                         `safety-tips-${e}`,

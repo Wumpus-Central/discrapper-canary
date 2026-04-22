@@ -10,9 +10,9 @@ var i = l(417597),
     u = l(254847),
     o = l(773349),
     x = l(994987),
-    h = l(602339),
+    h = l(477480),
     m = l(985018),
-    g = l(833802);
+    g = l(92362);
 let j = () => {
     let e = (0, i.bG)([r.A], () => r.A.getTopUserActivities()),
         t = (0, i.bG)([r.A], () => r.A.getTopGuildActivities());

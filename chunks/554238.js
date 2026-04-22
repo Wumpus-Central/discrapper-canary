@@ -1,8 +1,8 @@
-a.r(t), a.d(t, { default: () => k });
+a.r(t), a.d(t, { default: () => h });
 var s = a(627968),
     l = a(64700),
-    i = a(341856),
-    r = a(955874),
+    r = a(341856),
+    i = a(955874),
     n = a(560958),
     o = a(311907),
     c = a(817281),
@@ -10,8 +10,8 @@ var s = a(627968),
     _ = a(954571),
     N = a(652215),
     A = a(985018),
-    u = a(764083);
-class I extends l.Component {
+    u = a(25507);
+class p extends l.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
         return (
@@ -30,7 +30,7 @@ class I extends l.Component {
             render: (t, n) =>
                 (0, s.jsxs)(l.Fragment, {
                     children: [
-                        (0, s.jsx)(r.Y, {
+                        (0, s.jsx)(i.Y, {
                             avoidRouter: !0,
                             locale: o,
                             authRedirectTo: e.pathname,
@@ -43,7 +43,7 @@ class I extends l.Component {
                             skipToContentLabel: A.intl.string(A.t["18gavA"]),
                         }),
                         a(t, n),
-                        (0, s.jsx)(i.w, {
+                        (0, s.jsx)(r.w, {
                             locale: o,
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,
@@ -55,4 +55,4 @@ class I extends l.Component {
         });
     }
 }
-let k = o.Ay.connectStores([d.default], () => ({ locale: d.default.locale }))(I);
+let h = o.Ay.connectStores([d.default], () => ({ locale: d.default.locale }))(p);

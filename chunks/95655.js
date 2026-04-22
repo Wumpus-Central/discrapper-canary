@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(954571),
     E = n(652215),
     x = n(985018),
-    I = n(762432);
+    I = n(910720);
 let C = (e) => {
         let { channel: t } = e;
         return (0, p.bG)({ channelId: t.id })
@@ -50,7 +50,7 @@ let C = (e) => {
                             (0, h.L3)(
                                 e,
                                 () =>
-                                    Promise.all([n.e("97262"), n.e("95834"), n.e("60200")])
+                                    Promise.all([n.e("97262"), n.e("2271"), n.e("60200")])
                                         .then(n.bind(n, 4027))
                                         .then((e) => {
                                             let { default: n } = e;

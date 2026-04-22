@@ -10,7 +10,7 @@ var r = n(627968),
     u = n(834730),
     _ = n(658675),
     m = n(854627),
-    p = n(3161);
+    p = n(191577);
 function f(e) {
     let { user: t, checked: n, onChange: i, disabled: f, tooltipConfig: A } = e,
         g = a.useRef(null),

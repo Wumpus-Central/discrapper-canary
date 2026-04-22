@@ -38,9 +38,9 @@ var n = l(627968),
     z = l(794905),
     V = l(429364),
     _ = l(696016),
-    H = l(16590),
+    H = l(788077),
     $ = l(985018),
-    B = l(567282);
+    B = l(330994);
 function F(e) {
     let { clip: t, channelId: F, onClose: K } = e,
         Z = t.type === P.nQ.SCREENSHOT,

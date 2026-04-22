@@ -6,7 +6,7 @@ var l = n(192308),
     s = n(885574),
     r = n(834730),
     o = n(985018),
-    d = n(987773);
+    d = n(61181);
 function c(e) {
     let { message: t } = e;
     return (0, i.jsxs)(a.D, {

@@ -13,7 +13,7 @@ var a = n(627968),
     h = n(503364),
     f = n(305080),
     g = n(985018),
-    p = n(8208);
+    p = n(150544);
 function x(e) {
     let { game: t, application: n, show: l, onClose: i, trackAction: o } = e,
         d = t.name ?? n?.name,

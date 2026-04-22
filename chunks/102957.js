@@ -9,7 +9,7 @@ var a = l(627968),
     c = l(558179),
     u = l(156312),
     p = l(252561),
-    m = l(76488);
+    m = l(779848);
 let b = {
         DEFAULT: "Express Checkout Element - Default (No Config)",
         GPAY_FILTERED: "Express Checkout Element - Filtered for Google Pay",

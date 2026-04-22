@@ -8,7 +8,7 @@ var l = n(503698),
     o = n(834730),
     c = n(831544),
     d = n(985018),
-    u = n(63892);
+    u = n(240660);
 function _(e) {
     let { guild: t, speakers: n, speakerCount: l, className: _ } = e,
         h = n.slice(0, 5),

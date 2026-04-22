@@ -11,7 +11,7 @@ var s = n(534514),
     c = n(652215),
     g = n(788868),
     m = n(985018),
-    _ = n(342933);
+    _ = n(38357);
 let A = function (e) {
     let {
             hasAppliedGuildBoosts: t,

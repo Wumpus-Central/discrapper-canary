@@ -22,8 +22,8 @@ var l = n(627968),
     x = n(253932),
     P = n(53228),
     p = n(985018),
-    b = n(582068),
-    S = n(28289);
+    b = n(873063),
+    S = n(808961);
 function D(e) {
     let { message: t, forwardOptions: n, channel: i } = e,
         D = x.hH.useSetting(),

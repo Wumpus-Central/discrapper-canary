@@ -9,7 +9,7 @@ var n = r(834730),
     l = r(380083),
     c = r(788868),
     d = r(985018),
-    p = r(20374);
+    p = r(306326);
 function u(e) {
     let { onClose: t } = e,
         r = (0, o.jsx)(n.E, { className: p.h, variant: "text-md/normal", children: d.intl.string(d.t.FCsTCk) });

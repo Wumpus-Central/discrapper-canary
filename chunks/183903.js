@@ -36,7 +36,7 @@ var a = n(311907),
     O = n(602902),
     T = n(696016);
 n(980504);
-var N = n(16590),
+var N = n(788077),
     Z = n(985018),
     U = n(264572).Buffer;
 function G(e) {
@@ -68,7 +68,7 @@ function G(e) {
             let t = await (0, k.VO)(W);
             (0, r.openModalLazy)(
                 async () => {
-                    let { default: a } = await Promise.all([n.e("40556"), n.e("34681")]).then(n.bind(n, 6503)),
+                    let { default: a } = await Promise.all([n.e("40556"), n.e("51205")]).then(n.bind(n, 6503)),
                         r = e?.guild_id != null ? v.A.getGuild(e.guild_id) : null,
                         l = null != r && (0, x.ie)(r, S.A, R.default).canCreateExpressions,
                         o = null == W.name || "" === W.name ? (0, T.cM)(W.createdAt) : W.name,

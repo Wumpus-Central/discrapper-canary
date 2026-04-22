@@ -6,7 +6,7 @@ var s = r(778712),
     a = r(713654),
     i = r(598104),
     o = r(287809),
-    u = r(21799);
+    u = r(785511);
 let c = function (e) {
     let { channel: t, avatarSize: r, iconSize: c, iconClassName: h } = e;
     if (t.isDM()) {

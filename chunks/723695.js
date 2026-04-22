@@ -33,8 +33,8 @@ var l = n(627968),
     k = n(382607),
     M = n(652215),
     w = n(985018),
-    D = n(727510),
-    U = n(992595);
+    D = n(97686),
+    U = n(168147);
 function H(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: o, sectionName: c, hasCommands: d } = e,
         u = i.useMemo(() => (0, L.u8)(n) ?? "", [n]),

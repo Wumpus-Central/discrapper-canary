@@ -21,7 +21,7 @@ let i = [
         },
         analyticsType: "@Everyone Warning",
         animation: {
-            dark: () => n.e("80467").then(n.t.bind(n, 661022, 19)),
+            dark: () => n.e("2848").then(n.t.bind(n, 661022, 19)),
             light: () => n.e("92705").then(n.t.bind(n, 111992, 19)),
         },
     },

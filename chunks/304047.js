@@ -19,7 +19,7 @@ var i = n(627968),
     v = n(360469),
     I = n(818348),
     E = n(985018),
-    C = n(391308);
+    C = n(24908);
 function j(e) {
     let t,
         { applicationId: n, hideApplicationName: a } = e,

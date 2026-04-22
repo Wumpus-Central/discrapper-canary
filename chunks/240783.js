@@ -14,8 +14,8 @@ var n = a(627968),
     g = a(738759),
     b = a(518477),
     f = a(985018),
-    x = a(928666),
-    h = a(551652);
+    x = a(2074),
+    h = a(837604);
 function A(e) {
     let { section: t, user: a, currentUser: i, displayProfile: l, guildId: r, channelId: d, onClose: o } = e;
     return t === b.RP.ACTIVITY

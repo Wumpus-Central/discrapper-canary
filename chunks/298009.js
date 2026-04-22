@@ -1,20 +1,20 @@
-n.d(t, { A: () => c, u: () => d });
-var l = n(64700),
-    r = n(27023),
-    i = n(294726),
-    s = n(985018);
-let a = ["/", "\\\\"];
+t.d(n, { A: () => o, u: () => d });
+var l = t(64700),
+    r = t(27023),
+    a = t(76660),
+    i = t(985018);
+let s = ["/", "\\\\"];
 function d(e) {
-    let t = l.useMemo(() => a.some((t) => (e ?? "").includes(t)), [e]);
+    let n = l.useMemo(() => s.some((n) => (e ?? "").includes(n)), [e]);
     return {
-        isValid: !t,
+        isValid: !n,
         errors: {
-            name: t ? s.intl.formatToPlainString(i.default.jYZD44, { forbiddenCharacters: a.join(", ") }) : void 0,
+            name: n ? i.intl.formatToPlainString(a.default.jYZD44, { forbiddenCharacters: s.join(", ") }) : void 0,
         },
     };
 }
-function c() {
-    let { regionId: e, gameServerInstance: t, name: n, planId: l } = (0, r.bv)(),
-        i = "" !== n && "" !== e && void 0 !== l;
-    return null != t ? i && (t.name !== n || t.regionId !== e || t.planId !== l) : i;
+function o() {
+    let { regionId: e, gameServerInstance: n, name: t, planId: l } = (0, r.bv)(),
+        a = "" !== t && "" !== e && void 0 !== l;
+    return null != n ? a && (n.name !== t || n.regionId !== e || n.planId !== l) : a;
 }

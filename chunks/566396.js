@@ -14,7 +14,7 @@ var i = n(311907),
     f = n(287809),
     h = n(977997),
     E = n(652215),
-    I = n(499214),
+    I = n(21197),
     v = n(985018);
 let _ = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
 function x(e) {

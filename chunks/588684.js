@@ -4,7 +4,7 @@ var a = n(627968);
 n(64700);
 var i = n(534514),
     r = n(985018),
-    l = n(146985);
+    l = n(55849);
 function s(e) {
     let { children: t, title: n } = e;
     return (0, a.jsxs)("div", {

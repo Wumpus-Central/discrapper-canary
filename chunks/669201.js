@@ -37,7 +37,7 @@ var i = n(627968),
     D = n(994048),
     U = n(823894),
     V = n(652215),
-    G = n(854138);
+    G = n(2426);
 let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     B = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     H = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -107,7 +107,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         case j.op.CREATE_STICKER:
                             I.default.track(V.HAw.OPEN_MODAL, { type: V.JJy.CREATE_STICKER_MODAL, location: J }),
                                 (0, u.openModalLazy)(async () => {
-                                    let { default: t } = await Promise.all([n.e("29143"), n.e("93796")]).then(
+                                    let { default: t } = await Promise.all([n.e("29143"), n.e("52672")]).then(
                                         n.bind(n, 445002),
                                     );
                                     return (n) => (0, i.jsx)(t, { guildId: e.guild_id, ...n });

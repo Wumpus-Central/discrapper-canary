@@ -11,7 +11,7 @@ var n,
     u = a(615300),
     S = a(544048),
     m = a(982147),
-    I = a(526399),
+    I = a(23679),
     p =
         (((n = p || {}).NORMAL = "normal"),
         (n.SPEED_START = "speed_start"),

@@ -1,22 +1,22 @@
 n.d(t, { z: () => u });
-var a = n(627968),
+var i = n(627968),
     r = n(311907),
-    i = n(287070),
-    s = n(101058),
-    l = n(836602),
+    a = n(287070),
+    l = n(101058),
+    s = n(836602),
     o = n(927578),
     c = n(132198),
-    d = n(83554);
+    d = n(508962);
 let u = (e) => {
     let { user: t } = e,
         n = o.Ay.canUsePremiumProfileCustomization(t),
-        { pendingAvatar: u, ...m } = (0, r.cf)([l.A], () => l.A.getPendingChanges()),
-        p = (0, s.V7)({ userId: t.id, image: u });
-    return (0, a.jsx)("div", {
+        { pendingAvatar: u, ..._ } = (0, r.cf)([s.A], () => s.A.getPendingChanges()),
+        m = (0, l.V7)({ userId: t.id, image: u });
+    return (0, i.jsx)("div", {
         className: d.k,
-        children: (0, a.jsx)(i.A, {
-            ...m,
-            pendingAvatar: p,
+        children: (0, i.jsx)(a.A, {
+            ..._,
+            pendingAvatar: m,
             user: t,
             pendingBadges: [(0, c._)()],
             canUsePremiumCustomization: n,

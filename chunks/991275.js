@@ -51,7 +51,7 @@ var x = n(442433),
     $ = n(47167),
     X = n(652215),
     Q = n(985018),
-    ee = n(540808);
+    ee = n(689096);
 let et = J.Ay.getEnableHardwareAcceleration(),
     en = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
     ei = l.memo(function (e) {
@@ -92,7 +92,7 @@ let et = J.Ay.getEnableHardwareAcceleration(),
                                 n.e("35313"),
                                 n.e("81653"),
                                 n.e("84841"),
-                                n.e("63143"),
+                                n.e("9091"),
                             ]).then(n.bind(n, 107632)),
                             t = z.A.isInChannel(H.A.getVoiceChannelId(), u.id);
                         return (n) => (0, i.jsx)(e, { ...n, user: u, guildId: _, channel: g, showMediaItems: t });

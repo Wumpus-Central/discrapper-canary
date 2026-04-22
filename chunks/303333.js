@@ -13,9 +13,9 @@ var i = n(627968),
     _ = n(522435),
     m = n(493819),
     g = n(722884),
-    p = n(844045),
+    p = n(746216),
     f = n(985018),
-    E = n(31950);
+    E = n(289102);
 function x(e) {
     let { channel: t, imageUrl: n, animatedUrl: d, canModifyHangout: c } = e,
         A = (0, u.S)(n),

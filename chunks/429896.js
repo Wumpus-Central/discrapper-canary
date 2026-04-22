@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"+utqaz":["Опция за фон на подарък: ",[1,"giftStyle"]],"B9XqQk":["Кутия"],"AJ4iir":["Торта"],"P5keo3":["Сандък"],"w84vET":["Кафе"],"6dCq/u":["Чаша"],"+HMF8k":["Nitroween"],"vd1fu/":["Празнична кутия"],"aubYGR":["Празнична торта"],"vjxYqU":["Празничен сандък"],"bHuJLa":["Празнично кафе"],"M6cPwB":["Снежен глобус"],"GzPel1":["Кутия"]}',
+a.exports = JSON.parse(
+    '{"o/An3l":[[1,"username"]," bad dig att streama ",[1,"applicationName"]],"DKHhec":["Be att streama"],"8qq+H7":["Be att streama ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," ber dig att streama ",[1,"applicationName"]],"7pndSl":["Du bad n\xe5gon att streama ",[1,"applicationName"]],"P0wwmM":["Streamar redan"],"u4QmWl":["Beg\xe4ran har g\xe5tt ut"],"qRXats":["Inte i r\xf6stkanal"],"43zohO":["K\xf6r inte spelet"],"fac+eE":["Ingen beh\xf6righet"],"8HU1M2":["Beg\xe4ran skickad"],"5+172e":["Streama"],"nAyuPp":["Streambeg\xe4ran"],"d/qbC0":[[1,"username"]," bad dig att streama"],"8B3U5O":["Du har bett n\xe5gon att streama"],"UGbmBp":["Streama"],"jTbTAF":[[8,"$b",[[1,"username"]]]," vill titta p\xe5 n\xe4r du spelar ",[8,"$b",[[1,"game"]]],"."]}',
 );

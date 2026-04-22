@@ -2,7 +2,7 @@ n.d(t, { X: () => r });
 var i = n(627968);
 n(64700);
 var l = n(834730),
-    s = n(111019);
+    s = n(52779);
 let r = (e) => {
     let { title: t, subtitle: n, icon: r } = e;
     return (0, i.jsxs)("div", {

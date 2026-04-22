@@ -20,7 +20,7 @@ var l = n(503698),
     C = n(747926),
     E = n(650583),
     I = n(985018),
-    v = n(74791);
+    v = n(964135);
 function b(e) {
     let { message: t, compact: n } = e,
         l = (0, s.bG)([h.A], () => h.A.getChannel(p.default.castMessageIdAsChannelId(t.id)));
@@ -73,7 +73,7 @@ function T(e) {
                 onContextMenu: function (e) {
                     (0, u.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("95834"),
+                            n.e("2271"),
                             n.e("99011"),
                             n.e("94989"),
                             n.e("219"),

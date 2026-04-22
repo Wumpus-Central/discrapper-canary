@@ -14,7 +14,7 @@ var i = n(627968),
     x = n(911144),
     _ = n(652215),
     p = n(985018),
-    A = n(133191);
+    A = n(10503);
 function E(e) {
     let { guild: t } = e,
         n = l.useRef(null),

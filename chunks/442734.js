@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(545986),
     m = n(652215),
     _ = n(985018),
-    h = n(900601);
+    h = n(22009);
 function p(e) {
     let { onClick: t, questId: n, canUseQuestOrbMultiplier: p } = e,
         g = (0, c.ZP)(n),

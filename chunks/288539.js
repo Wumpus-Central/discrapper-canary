@@ -64,7 +64,7 @@ function C(e) {
                                     n.e("35313"),
                                     n.e("81653"),
                                     n.e("84841"),
-                                    n.e("63143"),
+                                    n.e("9091"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, { ...t, viewingChannelId: y, user: N, channel: T, guildId: j });
@@ -80,11 +80,11 @@ function C(e) {
                                     n.e("42128"),
                                     n.e("97278"),
                                     n.e("35313"),
-                                    n.e("95834"),
+                                    n.e("2271"),
                                     n.e("99011"),
                                     n.e("81653"),
                                     n.e("39778"),
-                                    n.e("81042"),
+                                    n.e("21054"),
                                 ]).then(n.bind(n, 385913));
                                 return (t) => (0, i.jsx)(e, { ...t, user: N, channel: T, targetIsUser: !0 });
                             });

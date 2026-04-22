@@ -15,9 +15,9 @@ var n = a(627968),
     g = a(405269),
     v = a(367744),
     b = a(652215),
-    _ = a(51846),
-    f = a(214868),
-    j = a(505206);
+    _ = a(993606),
+    f = a(472020),
+    j = a(611190);
 let A = {
         [b.GD.QUEST_REWARD]: "Quest Reward",
         [b.GD.DEVELOPER_GIFT]: "Developer Gift",

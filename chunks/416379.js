@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(927057),
     v = n(652215),
     y = n(985018),
-    S = n(1468);
+    S = n(776380);
 function b(e) {
     let { channel: t, message: n, replyChainLength: s } = e,
         r = l.useRef(s);

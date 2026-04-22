@@ -35,7 +35,7 @@ var i = n(627968),
     w = n(652215),
     U = n(696016),
     k = n(985018),
-    G = n(644268);
+    G = n(69676);
 let F = l.memo(function (e) {
     let { className: t, channel: a, draftType: F, editorTextContent: H, setValue: B, canOnlyUseTextCommands: V } = e,
         z = (0, C.Us)(),
@@ -66,7 +66,7 @@ let F = l.memo(function (e) {
     function eh() {
         (0, o.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("42784"), n.e("24588")]).then(n.bind(n, 543428));
+                let { default: e } = await Promise.all([n.e("42784"), n.e("69612")]).then(n.bind(n, 543428));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: a.id, onClipClick: (e) => et({ clips: [e] }) });
             },
             { modalKey: U.nm },

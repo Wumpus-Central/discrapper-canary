@@ -11,7 +11,7 @@ var l = n(989349),
     u = n(123292),
     m = n(239093),
     _ = n(985018),
-    h = n(89453);
+    h = n(387757);
 function p(e) {
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let t = e.message.embeds[0],
@@ -24,7 +24,7 @@ function p(e) {
         : (0, i.jsxs)(o.D, {
               onClick: () => {
                   (0, r.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("93992")]).then(
+                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("6916")]).then(
                           n.bind(n, 956450),
                       );
                       return (t) =>

@@ -3,7 +3,7 @@ var l = n(627968);
 n(64700);
 var a = n(97808),
     r = n(778712),
-    i = n(151900);
+    i = n(67804);
 function s(e) {
     let { user: t, nickname: n } = e,
         s = null != n;

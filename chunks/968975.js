@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(652215),
     x = n(49999),
     I = n(985018),
-    C = n(617348);
+    C = n(75780);
 function b(e) {
     let { unownedWishlistItems: t = [], profileOwner: n, onClick: b, wishlistId: N, title: S } = e,
         { analyticsLocations: v } = (0, d.Ay)(),

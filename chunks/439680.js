@@ -11,10 +11,10 @@ var s = n(331322),
     d = n(438842),
     u = n(652215),
     _ = n(985018),
-    h = n(888849);
+    h = n(10257);
 function m(e) {
-    let { invite: t, guild: n, profile: m, onAcceptInvite: p } = e,
-        { gamesToDisplay: g, lastGameToDisplay: A, remainingGames: f } = (0, c.A)(m),
+    let { invite: t, guild: n, profile: m, onAcceptInvite: g } = e,
+        { gamesToDisplay: p, lastGameToDisplay: A, remainingGames: f } = (0, c.A)(m),
         x = (function (e) {
             let { state: t } = e;
             switch (t) {
@@ -59,7 +59,7 @@ function m(e) {
                                             children: E,
                                         }),
                                     (0, i.jsx)(d.A, {
-                                        gamesToDisplay: g,
+                                        gamesToDisplay: p,
                                         lastGameToDisplay: A,
                                         remainingGames: f,
                                         activity: m.gameActivity,
@@ -76,7 +76,7 @@ function m(e) {
                     variant: "primary",
                     size: "md",
                     text: _.intl.string(_.t.ohMvm1),
-                    onClick: p,
+                    onClick: g,
                     loading: x,
                     fullWidth: !0,
                 }),

@@ -12,9 +12,9 @@ var i = n(627968),
     A = n(115063),
     _ = n(365258),
     m = n(704037),
-    g = n(395277),
+    g = n(900640),
     p = n(985018),
-    f = n(141710);
+    f = n(31054);
 let E = () => {
     (0, u.openUserSettings)(c.X.ACTIVITY_PRIVACY_PANEL);
 };

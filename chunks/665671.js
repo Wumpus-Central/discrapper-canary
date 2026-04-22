@@ -11,7 +11,7 @@ async function c() {
     try {
         let { ticket: e, challenge: t } = await d.startRegisterWebAuthnCredential();
         (0, s.openModalLazy)(async () => {
-            let { RegisterWebAuthnCredentialModal: s } = await Promise.all([n.e("44667"), n.e("6022")]).then(
+            let { RegisterWebAuthnCredentialModal: s } = await Promise.all([n.e("44667"), n.e("69734")]).then(
                 n.bind(n, 359990),
             );
             return (n) => (0, i.jsx)(s, { ...n, ticket: e, challenge: t });

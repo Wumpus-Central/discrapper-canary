@@ -1,3 +1,15 @@
-a.d(l, { A: () => t });
-let t =
-    "https://cdn.discordapp.com/assets/content/43b5fa41a3e3cada2b5bb7dfdc456d22a834d01c2947ffc986b4996ee40c063b.riv";
+"use strict";
+e.exports = {
+    kL: "container_e0f8ae",
+    N1: "headerContainer_e0f8ae",
+    VW: "headerContent_e0f8ae",
+    if: "headerTextContainer_e0f8ae",
+    LA: "gameGrid_e0f8ae",
+    zR: "gameClickable_e0f8ae",
+    Vj: "placeholderArt_e0f8ae coverArt_e0f8ae",
+    _M: "coverArtContainer_e0f8ae",
+    xe: "coverArt_e0f8ae",
+    b: "closeButton_e0f8ae",
+    s3: "instructionsLink_e0f8ae",
+    rC: "gameTile_e0f8ae",
+};

@@ -2,7 +2,7 @@ n.d(t, { A: () => l });
 var a = n(627968);
 n(64700);
 var s = n(496587),
-    i = n(673658);
+    i = n(6701);
 function l() {
     let e = (0, a.jsx)("div", { className: i.Uy });
     return (0, a.jsx)(s.A, {

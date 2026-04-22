@@ -13,9 +13,9 @@ var a = n(627968),
     x = n(355609),
     f = n(843095),
     g = n(800007),
-    v = n(576709),
+    v = n(76660),
     j = n(985018),
-    h = n(452123);
+    h = n(229851);
 let A = { ...g.ZN, initialStep: g.HS.SERVER_SETTINGS };
 function p(e) {
     let { guildId: t, isAdmin: n } = e,

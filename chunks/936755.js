@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(627968);
+n.d(t, { A: () => s });
+var i = n(627968);
 n(64700);
-var i = n(451947);
-function a(e) {
+var l = n(19590);
+function s(e) {
     let { children: t } = e;
-    return (0, r.jsxs)("span", { className: i.O, children: [t, "⁠"] });
+    return (0, i.jsxs)("span", { className: l.O, children: [t, "⁠"] });
 }

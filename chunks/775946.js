@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(827734),
     s = n(777666),
-    a = n(701665);
+    a = n(31009);
 function r(e) {
     let { mentionsCount: t, isMentionLowImportance: n } = e;
     return (0, i.jsx)("div", {

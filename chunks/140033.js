@@ -34,9 +34,9 @@ var a = n(627968),
     D = n(680127),
     P = n(858192),
     O = n(49999),
-    F = n(576709),
+    F = n(76660),
     U = n(985018),
-    B = n(615990);
+    B = n(364214);
 function V(e) {
     let { guildId: t, instance: n } = e,
         [i, l] = s.useState(!1),

@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(552117),
     x = n(652215),
     C = n(788868),
-    E = n(76513);
+    E = n(182497);
 let I = (0, h.xI)(s.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: s } = e,

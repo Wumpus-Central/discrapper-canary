@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(615300),
     c = n(52133),
     u = n(844222),
-    h = n(21);
+    h = n(884117);
 let A = { friction: 10, tension: 300 };
 class _ extends l.Component {
     _timeout;

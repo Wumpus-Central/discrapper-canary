@@ -21,7 +21,7 @@ var i = n(627968),
     E = n(652215),
     I = n(874864),
     v = n(985018),
-    y = n(832938);
+    y = n(9706);
 let S = (e) => {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: S, setTrackedUpsellViewed: b } = e,
         { location: N } = (0, h.p)(),

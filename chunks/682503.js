@@ -19,7 +19,7 @@ var n = i(627968),
     x = i(652215),
     v = i(339984),
     E = i(985018),
-    N = i(877774);
+    N = i(57358);
 function w(e) {
     let { transitionState: t, onClose: s, onComplete: w, uploadType: I, showUpsellHeader: y, analyticsPage: C } = e,
         [T, j] = a.useState(!1),
@@ -56,7 +56,7 @@ function w(e) {
         s(),
             (0, d.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([i.e("29259"), i.e("74571"), i.e("82842")]).then(
+                    let { default: e } = await Promise.all([i.e("29259"), i.e("74571"), i.e("50598")]).then(
                         i.bind(i, 142630),
                     );
                     return (t) =>

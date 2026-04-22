@@ -15,7 +15,7 @@ var a = i(627968),
     g = i(515718),
     j = i(307731),
     C = i(985018),
-    b = i(94777),
+    b = i(529657),
     f = i(230279);
 function I() {
     return [{ name: C.intl.string(C.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];

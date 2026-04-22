@@ -22,8 +22,8 @@ var n = r(627968),
     x = r(974175),
     D = r(731854),
     E = r(985018),
-    S = r(41604),
-    R = r(818050);
+    S = r(178116),
+    R = r(373378);
 class _ extends i.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: i } = this.props;

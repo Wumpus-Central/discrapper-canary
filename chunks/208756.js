@@ -5,7 +5,7 @@ var r = a(503698),
     l = a.n(r),
     i = a(825484),
     s = a(821609),
-    o = a(824078);
+    o = a(77006);
 function c(e) {
     let { actions: t, className: a } = e;
     return (0, n.jsx)("div", {

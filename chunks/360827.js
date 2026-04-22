@@ -32,7 +32,7 @@ var i = n(627968),
     O = n(652215),
     G = n(539916),
     M = n(985018),
-    k = n(964416);
+    k = n(37824);
 function U(e) {
     let { guildId: t, prompts: n } = e,
         r = (0, s.bG)([C.A], () => C.A.editedDefaultChannelIds),

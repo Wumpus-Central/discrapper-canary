@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(948040),
     u = n(636547),
     m = n(985018),
-    g = n(746523);
+    g = n(32475);
 function h(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: h, guildId: x } = e,
         { results: p, query: A, setQuery: b, unfilteredCount: f } = (0, d._)();

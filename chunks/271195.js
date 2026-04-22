@@ -15,7 +15,7 @@ var i = n(503698),
     E = n(6155),
     h = n(919706),
     p = n(985018),
-    m = n(27600);
+    m = n(429904);
 function g(e) {
     let { title: t, onJumpToChannel: n, idle: i, preventIdleComponent: s } = e,
         o = (0, a.bG)([f.A], () => f.A.getChannelId()),

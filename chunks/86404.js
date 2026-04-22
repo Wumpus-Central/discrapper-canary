@@ -11,7 +11,7 @@ var n = a(627968),
     u = a(657331),
     m = a(503062),
     p = a(985018),
-    g = a(928666);
+    g = a(2074);
 function b(e) {
     let { user: t, guildId: a, channelId: b, onClose: f } = e,
         { mutualFriends: x } = (0, c.A)(t),

@@ -1,62 +1,62 @@
-n.d(t, { A: () => h });
-var i = n(627968),
-    l = n(64700),
-    a = n(163126),
-    r = n(688810),
-    s = n(114212),
-    o = n(183555),
-    d = n(913453),
-    c = n(229187),
-    u = n(657331),
-    g = n(503062),
-    m = n(782505),
-    x = n(515054),
-    f = n(828151);
-function h(e) {
-    let { user: t, guildId: n, channelId: h, onClose: p } = e,
-        { analyticsLocations: _ } = (0, r.Ay)(),
-        { context: A, trackUserProfileAction: I } = (0, o.NJ)(),
-        { mutualFriends: j, mutualFriendsCount: v } = (0, d.A)(t),
-        T = (0, a.A)();
+i.d(t, { A: () => p });
+var n = i(627968),
+    l = i(64700),
+    s = i(163126),
+    a = i(688810),
+    r = i(114212),
+    d = i(183555),
+    o = i(913453),
+    c = i(229187),
+    u = i(657331),
+    g = i(503062),
+    m = i(782505),
+    h = i(515054),
+    x = i(63060);
+function p(e) {
+    let { user: t, guildId: i, channelId: p, onClose: A } = e,
+        { analyticsLocations: j } = (0, a.Ay)(),
+        { context: f, trackUserProfileAction: I } = (0, d.NJ)(),
+        { mutualFriends: v, mutualFriendsCount: S } = (0, o.A)(t),
+        E = (0, s.A)();
     return (
         l.useEffect(() => {
-            (0, c.A)(t.id, T);
-        }, [t.id, T]),
-        (0, i.jsx)(x.K, {
-            className: f.XG,
+            (0, c.A)(t.id, E);
+        }, [t.id, E]),
+        (0, n.jsx)(h.K, {
+            className: x.XG,
             children:
-                null == j
-                    ? Array.from({ length: v ?? 10 }).map((e, t) =>
-                          (0, i.jsxs)(
+                null == v
+                    ? Array.from({ length: S ?? 10 }).map((e, t) =>
+                          (0, n.jsxs)(
                               "div",
                               {
-                                  className: f.D$,
+                                  className: x.D$,
                                   children: [
-                                      (0, i.jsx)(s.FQ, { width: 40, opacity: 0.08 }),
-                                      (0, i.jsx)(s.FQ, { width: 135, opacity: 0.08 }),
+                                      (0, n.jsx)(r.FQ, { width: 40, opacity: 0.08 }),
+                                      (0, n.jsx)(r.FQ, { width: 135, opacity: 0.08 }),
                                   ],
                               },
                               t,
                           ),
                       )
-                    : 0 === j.length
-                      ? (0, i.jsx)(m.IA, {})
-                      : j.map((e) => {
-                            let { key: t, user: l, status: a } = e;
-                            return (0, i.jsx)(
+                    : 0 === v.length
+                      ? (0, n.jsx)(m.IA, {})
+                      : v.map((e) => {
+                            let { key: t, user: l, status: s } = e;
+                            return (0, n.jsx)(
                                 g.A,
                                 {
                                     user: l,
-                                    status: a,
-                                    guildId: n,
-                                    channelId: h,
+                                    status: s,
+                                    guildId: i,
+                                    channelId: p,
                                     onSelect: () => {
-                                        p?.(),
+                                        A?.(),
                                             I({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, u.openUserProfileModal)({
-                                                ...A,
+                                                ...f,
                                                 userId: l.id,
-                                                sourceAnalyticsLocations: _,
+                                                sourceAnalyticsLocations: j,
                                             });
                                     },
                                 },

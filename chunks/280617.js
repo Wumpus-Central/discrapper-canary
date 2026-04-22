@@ -1,26 +1,26 @@
-a.d(t, { i: () => I });
+a.d(t, { i: () => p });
 var s = a(627968),
     l = a(64700),
-    i = a(503698),
-    r = a.n(i),
+    r = a(503698),
+    i = a.n(r),
     n = a(359459),
     o = a(137540),
     c = a(709808),
     d = a(464261),
     _ = a(818348),
     N = a(563853),
-    A = a(510057);
+    A = a(77378);
 let u = _.sE.MAIN_NAVIGATION_MENU;
-function I(e) {
+function p(e) {
     let {
             className: t,
             TrackClick: a,
-            onChangeLocale: i,
-            avoidRouter: I,
-            openNavAriaLabel: k,
-            hideNavAriaLabel: h,
+            onChangeLocale: r,
+            avoidRouter: p,
+            openNavAriaLabel: h,
+            hideNavAriaLabel: I,
         } = e,
-        p = l.useId(),
+        k = l.useId(),
         [m, g] = l.useState(!1),
         T = l.useCallback(() => g(!m), [m]),
         O = l.useCallback(
@@ -32,7 +32,7 @@ function I(e) {
     return (
         l.useEffect(() => (window.addEventListener("keydown", O), () => window.removeEventListener("keydown", O)), [O]),
         (0, s.jsx)("header", {
-            className: r()(A.header, t),
+            className: i()(A.header, t),
             children: (0, s.jsxs)("nav", {
                 className: A.headerInner,
                 children: [
@@ -42,7 +42,7 @@ function I(e) {
                         className: A.headerLogo,
                         data: { linkClicked: "logo" },
                         children: (0, s.jsx)(o.A, {
-                            avoidRouter: I,
+                            avoidRouter: p,
                             className: A.logoWrapper,
                             to: _.Tk.INDEX,
                             from: _.sE.MAIN_NAVIGATION_MENU,
@@ -62,17 +62,17 @@ function I(e) {
                         children: (0, s.jsx)(n._, {
                             open: m,
                             "aria-haspopup": "true",
-                            "aria-label": m ? h : k,
+                            "aria-label": m ? I : h,
                             "aria-expanded": m,
-                            "aria-controls": p,
+                            "aria-controls": k,
                             onClick: T,
                         }),
                     }),
                     (0, s.jsxs)("ul", {
                         className: m ? A.headerNavOpen : A.headerNav,
                         children: [
-                            (0, s.jsx)(d.C, { avoidRouter: I, TrackClick: a, styles: A, isMobile: !0, isVisible: m }),
-                            (0, s.jsx)(c.B, { onChange: i }),
+                            (0, s.jsx)(d.C, { avoidRouter: p, TrackClick: a, styles: A, isMobile: !0, isVisible: m }),
+                            (0, s.jsx)(c.B, { onChange: r }),
                         ],
                     }),
                 ],

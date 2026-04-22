@@ -5,7 +5,7 @@ n(64700);
 var l = n(503698),
     s = n.n(l),
     r = n(834730),
-    a = n(235686);
+    a = n(10534);
 function o(e) {
     let { width: t, variant: n, className: l } = e;
     return (0, i.jsx)(r.E, {

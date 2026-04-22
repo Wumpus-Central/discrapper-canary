@@ -8,7 +8,7 @@ var i = n(627968),
     o = n(939249),
     c = n(692051),
     u = n(985018),
-    d = n(83699);
+    d = n(233651);
 function h(e) {
     let { onPlay: t, className: n, inactive: s } = e,
         h = l.useRef(null),

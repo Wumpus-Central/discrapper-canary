@@ -12,37 +12,37 @@ var i = n(627968),
     A = n(976860),
     _ = n(823471),
     m = n(734057),
-    p = n(31717),
-    g = n(71393),
+    g = n(31717),
+    p = n(71393),
     f = n(853742),
-    x = n(985018),
-    E = n(136917);
+    E = n(985018),
+    x = n(37509);
 function I(e) {
     let { channelId: t } = e,
         I = (0, s.bG)([m.A], () => m.A.getChannel(t)),
         C = (0, s.bG)([m.A], () => m.A.getChannel(I?.parent_id)),
-        N = (0, s.bG)([g.A], () => g.A.getGuild(I?.getGuildId())),
-        T = (0, o.Ay)(I),
+        b = (0, s.bG)([p.A], () => p.A.getGuild(I?.getGuildId())),
+        N = (0, o.Ay)(I),
         S = l.useRef(!1);
     if (
         (l.useEffect(() => {
             null == I || S.current || ((S.current = !0), (0, f.rH)(I));
         }, [I]),
-        null == I || null == N)
+        null == I || null == b)
     )
         return null;
-    let b = (0, i.jsx)(_.A, { channel: I });
+    let v = (0, i.jsx)(_.A, { channel: I });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.A, { channel: I, draftType: p.C.ChannelMessage }),
+            (0, i.jsx)(r.A, { channel: I, draftType: g.C.ChannelMessage }),
             (0, i.jsx)(u.Ay, {
-                toolbar: b,
-                "aria-label": x.intl.string(x.t.Pwe8tN),
+                toolbar: v,
+                "aria-label": E.intl.string(E.t.Pwe8tN),
                 children: (0, h.zF)({
                     channel: I,
                     parentChannel: C,
-                    channelName: T,
-                    guild: N,
+                    channelName: N,
+                    guild: b,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, a.L3)(e, async () => {
@@ -56,8 +56,8 @@ function I(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: E.T,
-                children: (0, i.jsx)(d.A, { channel: I, guild: N, chatInputType: c.oU.SIDEBAR }, t),
+                className: x.T,
+                children: (0, i.jsx)(d.A, { channel: I, guild: b, chatInputType: c.oU.SIDEBAR }, t),
             }),
         ],
     });

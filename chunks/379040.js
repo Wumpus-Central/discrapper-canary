@@ -6,7 +6,7 @@ var a = s(97808),
     n = s(854627),
     l = s(778712),
     o = s(985018),
-    c = s(45861);
+    c = s(331813);
 function d(e) {
     let { referrer: t } = e,
         { avatarSrc: s, eventHandlers: d } = (0, n.A)({ userId: t?.id, size: l._3.SIZE_24, animateOnHover: !0 });

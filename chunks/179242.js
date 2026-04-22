@@ -13,27 +13,27 @@ var l = n(163126),
     A = n(503062),
     _ = n(51943),
     m = n(946356),
-    p = n(359656),
-    g = n(985018),
-    f = n(54557);
+    g = n(359656),
+    p = n(985018),
+    f = n(424733);
 function E(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: E } = (0, s.Ay)(),
         { context: x } = (0, o.NJ)(),
         I = (0, l.A)(),
-        { mutualFriendsCount: C, mutualFriends: N, mutualGuilds: T } = (0, d.A)(t),
+        { mutualFriendsCount: C, mutualFriends: b, mutualGuilds: N } = (0, d.A)(t),
         S = !t.bot && null != C && C > 0,
-        b = null != T && T.length > 0;
-    return S || b
+        v = null != N && N.length > 0;
+    return S || v
         ? (0, i.jsxs)(m.A.Overlay, {
               className: f.Lw,
               children: [
-                  b &&
-                      (0, i.jsx)(p.A, {
+                  v &&
+                      (0, i.jsx)(g.A, {
                           section: "MUTUAL_GUILDS",
-                          header: g.intl.string(g.t["4lTDZq"]),
+                          header: p.intl.string(p.t["4lTDZq"]),
                           listClassName: f.p_,
-                          items: T.map((e) => {
+                          items: N.map((e) => {
                               let { guild: n, nick: l } = e;
                               return (0, i.jsx)(
                                   _.A,
@@ -42,15 +42,15 @@ function E(e) {
                               );
                           }),
                       }),
-                  b && S && (0, i.jsx)(h.A, { className: f.yF }),
+                  v && S && (0, i.jsx)(h.A, { className: f.yF }),
                   S &&
-                      (0, i.jsx)(p.A, {
+                      (0, i.jsx)(g.A, {
                           section: "MUTUAL_FRIENDS",
-                          header: g.intl.string(g.t["0mTJ3j"]),
+                          header: p.intl.string(p.t["0mTJ3j"]),
                           listClassName: f.p_,
                           onExpand: () => (0, c.A)(t.id, I),
                           items:
-                              null == N
+                              null == b
                                   ? Array.from({ length: C }).map((e, t) =>
                                         (0, i.jsxs)(
                                             "div",
@@ -64,7 +64,7 @@ function E(e) {
                                             t,
                                         ),
                                     )
-                                  : N.map((e) => {
+                                  : b.map((e) => {
                                         let { key: t, user: l, status: s } = e;
                                         return (0, i.jsx)(
                                             A.A,

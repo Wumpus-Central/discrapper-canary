@@ -7,7 +7,7 @@ var i = l(171283),
     a = l(333672),
     o = l(652215),
     d = l(985018),
-    c = l(786148);
+    c = l(87204);
 let u = { type: "rive", rive: i.D, aspectRatio: "16/9" };
 function m(t) {
     let {

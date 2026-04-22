@@ -24,7 +24,7 @@ var i = n(627968),
     T = n(168428),
     S = n(652215),
     y = n(985018),
-    N = n(14712);
+    N = n(778424);
 function j(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: u, onAcceptInstantInvite: A } = e,
         x = l.useRef(null),

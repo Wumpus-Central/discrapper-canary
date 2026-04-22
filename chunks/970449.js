@@ -9,7 +9,7 @@ var s = t(627968),
     o = t(247683),
     d = t(131955),
     g = t(652215),
-    m = t(573436);
+    m = t(70716);
 let h = d.xP.map(function (e) {
     return { type: g.dD.TRENDING_CATEGORY, name: e.name, src: e.previewUrl, format: r.TL.IMAGE };
 });

@@ -16,7 +16,7 @@ var i = n(627968),
     p = n(50249),
     A = n(652215),
     E = n(985018),
-    f = n(73787);
+    f = n(250555);
 function j(e) {
     let { color: t, children: n } = e;
     return (0, i.jsxs)("div", {

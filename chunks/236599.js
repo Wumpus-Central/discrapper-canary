@@ -8,16 +8,16 @@ var i = n(627968),
     c = n(834730),
     d = n(821609),
     u = n(307301),
-    _ = n(773669),
-    g = n(183555),
-    f = n(985018),
-    m = n(79284);
+    g = n(773669),
+    m = n(183555),
+    _ = n(985018),
+    f = n(392756);
 function x(e) {
     let { className: t } = e,
-        l = ["en-US", "en-GB"].includes((0, r.bG)([_.default], () => _.default.locale))
-            ? f.intl.string(f.t.OYlggR)
-            : f.intl.string(f.t.Y55Tua),
-        { trackUserProfileEditAction: x } = (0, g.NJ)(),
+        l = ["en-US", "en-GB"].includes((0, r.bG)([g.default], () => g.default.locale))
+            ? _.intl.string(_.t.OYlggR)
+            : _.intl.string(_.t.Y55Tua),
+        { trackUserProfileEditAction: x } = (0, m.NJ)(),
         p = a.useCallback(() => {
             x({ action: "PRESS_ADD_WIDGET" }),
                 (0, o.openModalLazy)(
@@ -29,12 +29,12 @@ function x(e) {
                 );
         }, [x]);
     return (0, i.jsxs)("div", {
-        className: s()(m.w, t),
+        className: s()(f.w, t),
         children: [
             (0, i.jsx)(c.E, { variant: "text-xs/semibold", color: "text-subtle", children: l }),
             (0, i.jsx)(d.$, {
                 icon: u.j,
-                text: f.intl.string(f.t["lBG2s/"]),
+                text: _.intl.string(_.t["lBG2s/"]),
                 size: "sm",
                 variant: "secondary",
                 onClick: p,

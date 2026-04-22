@@ -13,7 +13,7 @@ var i = n(627968),
     m = n(446868),
     _ = n(652215),
     A = n(985018),
-    f = n(72828);
+    f = n(854780);
 let g = h.A.getArticleURL(_.MVz.VERIFICATION_FAQ);
 class x extends s.PureComponent {
     static defaultProps = { types: [_.Fz7.CAPTCHA], onCaptchaVerify: _.tEg, onLogout: _.tEg };

@@ -26,7 +26,7 @@ var i = n(627968),
     y = n(387408),
     N = n(427209),
     j = n(985018),
-    L = n(249847);
+    L = n(24759);
 function R() {
     return (0, i.jsxs)("div", {
         className: L.N1,

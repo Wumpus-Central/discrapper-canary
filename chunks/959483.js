@@ -20,8 +20,8 @@ var i = n(627968),
     S = n(780964),
     f = n(731854),
     b = n(985018),
-    C = n(640940),
-    v = n(160671);
+    C = n(34604),
+    v = n(266655);
 let N = (0, x.Ld)();
 function I(e) {
     let { isSpeaking: t, className: n, id: s, ariaDescribedBy: l, ariaLabelledBy: r, disabled: o } = e;

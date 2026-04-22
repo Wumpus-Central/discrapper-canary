@@ -1,7 +1,7 @@
-n.d(t, { A: () => s });
-var l = n(281445),
-    r = n(294726),
-    i = n(985018);
-function s(e) {
-    return e === l.X.SHOCKBYTE ? i.intl.string(r.default.z5lesv) : null;
+t.d(n, { A: () => i });
+var l = t(281445),
+    r = t(76660),
+    a = t(985018);
+function i(e) {
+    return e === l.X.SHOCKBYTE ? a.intl.string(r.default.z5lesv) : null;
 }

@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(900179),
     c = n(652215),
     u = n(985018),
-    h = n(192795);
+    h = n(76379);
 function A(e) {
     let { applicationId: t, commandIds: n, guildId: A, channel: _, onClick: m } = e,
         { trackUserProfileAction: g } = (0, r.NJ)(),

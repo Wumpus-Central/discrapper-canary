@@ -32,7 +32,7 @@ var i = r(627968),
     L = r(666839),
     S = r(935094),
     H = r(758836),
-    V = r(496569);
+    V = r(84217);
 let B = n.memo(function (e) {
         let {
                 product: t,

@@ -7,8 +7,8 @@ var l = a(311907),
     r = a(270003),
     o = a(331322),
     d = a(450510),
-    c = a(320681),
-    u = a(505206);
+    c = a(84393),
+    u = a(611190);
 function m(e) {
     let { hotspotLocation: t } = e,
         [a, s] = (0, l.yK)([d.HP], () => [d.HP.hasHotspot(t, !0), d.HP.getHotspotOverride(t)]);

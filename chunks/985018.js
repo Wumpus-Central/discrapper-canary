@@ -3,10 +3,10 @@ n.r(t),
     n.d(t, {
         getAvailableLocales: () => u.Be,
         getLanguages: () => u.kG,
-        getSystemLocale: () => d,
+        getSystemLocale: () => c,
         initialLocale: () => f,
-        international: () => c.A,
-        intl: () => p,
+        international: () => d.A,
+        intl: () => E,
         systemLocale: () => _,
         t: () => l.X,
         useSyncMessages: () => h,
@@ -18,8 +18,8 @@ var r = n(627968),
     o = n.n(a),
     l = n(356422),
     u = n(226536),
-    c = n(50134);
-function d(e) {
+    d = n(319295);
+function c(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
         navigator.language,
@@ -28,9 +28,9 @@ function d(e) {
         e,
     ].find((e) => null != e && "" !== e);
 }
-let _ = d("en-US"),
+let _ = c("en-US"),
     f = (0, u.kt)(_, "en-US"),
-    p = new s.IntlManager({ initialLocale: f, defaultLocale: "en-US" }).withFormatters({
+    E = new s.IntlManager({ initialLocale: f, defaultLocale: "en-US" }).withFormatters({
         format: (0, s.makeReactFormatter)({
             $i: (e, t) => (0, r.jsx)("em", { children: e }, t),
             $b: (e, t) => (0, r.jsx)("strong", { children: e }, t),
@@ -60,4 +60,4 @@ let _ = d("en-US"),
         formatToMarkdownString: s.markdownFormatter,
         formatToParts: s.astFormatter,
     }),
-    h = (e) => (0, u.tp)(e, p);
+    h = (e) => (0, u.tp)(e, E);

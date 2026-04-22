@@ -25,8 +25,8 @@ var i = n(627968),
     N = n(788868),
     I = n(818348),
     y = n(985018),
-    j = n(687788),
-    O = n(12762);
+    j = n(665644),
+    O = n(600410);
 function R(e) {
     let { payments: t, locale: n, compactMode: l, numPages: r } = e,
         o = s.useRef(null),

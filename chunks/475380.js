@@ -27,8 +27,8 @@ var i = n(627968),
     y = n(652215),
     j = n(650583),
     O = n(985018),
-    R = n(402627),
-    L = n(653307);
+    R = n(7683),
+    L = n(489979);
 let D = (0, I.isWindows)();
 function P(e) {
     let { rawGame: t, nowPlaying: l = !1, isOverride: G, subgames: M, isSubgame: U = !1, parentGame: k } = e,

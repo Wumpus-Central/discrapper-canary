@@ -1,5 +1,5 @@
 i.d(t, { A: () => r });
-var n = i(872863);
+var n = i(95244);
 let r = {
     isAvifFile: function (e) {
         if (!e) return !1;

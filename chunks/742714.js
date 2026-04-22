@@ -3,7 +3,7 @@ n.d(t, { b: () => a });
 var r = n(627968);
 n(64700);
 var i = n(298063),
-    s = n(32271);
+    s = n(359823);
 function a() {
     let e = (0, i.Y)("MenuSeparator");
     return (0, r.jsx)("div", {

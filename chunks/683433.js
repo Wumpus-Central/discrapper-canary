@@ -5,7 +5,7 @@ var i = n(503698),
     a = n.n(i),
     r = n(349288),
     s = n(985018),
-    o = n(39584);
+    o = n(304736);
 let u = (e) => {
         let { className: t, onClick: n, children: i } = e;
         return (0, l.jsx)(r.Anchor, { onClick: n, className: a()(o.n, t), children: i });

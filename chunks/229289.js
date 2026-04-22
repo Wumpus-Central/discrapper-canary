@@ -1,42 +1,42 @@
 n.d(t, { A: () => d });
-var i = n(627968),
-    s = n(417597),
-    r = n(775602),
-    a = n(608416),
+var r = n(627968),
+    a = n(417597),
+    i = n(775602),
+    s = n(608416),
     l = n(307973),
-    o = n(369877),
-    c = n(180894);
+    c = n(21588),
+    o = n(180894);
 let d = (e) => {
     let { containerVisibilityPercentage: t } = e,
-        n = (0, s.bG)([r.A], () => r.A.useReducedMotion);
-    return (0, i.jsxs)(i.Fragment, {
+        n = (0, a.bG)([i.A], () => i.A.useReducedMotion);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)("div", {
-                className: o.BI,
-                children: (0, i.jsx)(a.Ay, {
-                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: a.$G },
-                    yAxisAnimationData: { range: 20, duration: a.Mp, path: a.aV.SINE },
+            (0, r.jsx)("div", {
+                className: c.BI,
+                children: (0, r.jsx)(s.Ay, {
+                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: s.$G },
+                    yAxisAnimationData: { range: 20, duration: s.Mp, path: s.aV.SINE },
                     animateXAxisWiggle: !0,
                     isMotionReduced: n,
                     parallaxAnimationData: {
-                        pathDirection: a.MN.UP,
+                        pathDirection: s.MN.UP,
                         range: 125,
                         containerVisibilityPercentage: t,
                         changeOpacity: !0,
                     },
                     animationSpeedScale: 2,
-                    children: (0, i.jsx)("img", { src: c.A, alt: "", className: o.Q }),
+                    children: (0, r.jsx)("img", { src: o.A, alt: "", className: c.Q }),
                 }),
             }),
-            (0, i.jsx)(l.A, {
+            (0, r.jsx)(l.A, {
                 isMotionReduced: n,
                 containerVisibilityPercentage: t,
-                hammerContainerClassName: o.Gj,
-                keyContainerClassName: o.FV,
-                starContainerClassName: o.E1,
-                hammerAssetClassName: o.Wv,
-                keyAssetClassName: o.rs,
-                starAssetClassName: o.OY,
+                hammerContainerClassName: c.Gj,
+                keyContainerClassName: c.FV,
+                starContainerClassName: c.E1,
+                hammerAssetClassName: c.Wv,
+                keyAssetClassName: c.rs,
+                starAssetClassName: c.OY,
                 animationSpeedScale: 2,
             }),
         ],

@@ -20,8 +20,8 @@ var i = a(311907),
     A = a(282797),
     v = a(518477),
     I = a(985018),
-    y = a(437781),
-    C = a(928666);
+    y = a(862997),
+    C = a(2074);
 function j(e) {
     let { user: t, currentUser: a, guildId: j, onClose: N } = e,
         { live: E, recent: S, stream: T } = (0, p.A)(t.id),

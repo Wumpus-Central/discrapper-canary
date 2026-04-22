@@ -11,9 +11,9 @@ var n = a(627968),
     h = a(900797),
     m = a(847374),
     p = a(770178),
-    _ = a(124589),
+    _ = a(346970),
     g = a(985018),
-    x = a(33095);
+    x = a(948999);
 function A(e) {
     let { onTabSelect: t, tabs: a, selectedTab: i } = e,
         r = l.useMemo(

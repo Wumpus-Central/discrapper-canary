@@ -58,8 +58,8 @@ var i = n(627968),
 n(827669), n(294920);
 var ea = n(478644),
     es = n(985018),
-    er = n(150679),
-    eo = n(266599);
+    er = n(59543),
+    eo = n(871655);
 function ec(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
@@ -190,7 +190,7 @@ let ed = l.memo(
             {
                 handleTab: e2,
                 handleEnter: e3,
-                handleMoveSelection: e9,
+                handleMoveSelection: e7,
             } = ((n = l.useCallback(
                 () => !!(!eF && ej.current?.onTabOrEnter(!1)) || e$.current?.onTabOrEnter(!1) || !1,
                 [eF],
@@ -207,12 +207,12 @@ let ed = l.memo(
                 ),
             }),
             {
-                expressionPickerView: e7,
+                expressionPickerView: e9,
                 shouldHideExpressionPicker: e6,
                 handleOuterClick: e4,
             } = (0, et.MD)(N, eR, I.id),
-            { handleAutocompleteVisibilityChange: e8 } = (0, et.uW)(N, I.id),
-            e5 = (0, et.NO)(eR),
+            { handleAutocompleteVisibilityChange: e5 } = (0, et.uW)(N, I.id),
+            e8 = (0, et.NO)(eR),
             te = (0, et.Vu)(eJ, N, eR),
             tt = (0, et.HG)(eR),
             tn = (0, et.C)({
@@ -333,7 +333,7 @@ let ed = l.memo(
                                                             onSubmit: eJ,
                                                             onTab: e2,
                                                             onEnter: e3,
-                                                            onMoveSelection: e9,
+                                                            onMoveSelection: e7,
                                                             onSelectionChanged: eW,
                                                             onMaybeShowAutocomplete: eZ,
                                                             onHideAutocomplete: eX,
@@ -451,12 +451,12 @@ let ed = l.memo(
                                 canSendStickers: !0,
                                 textValue: a,
                                 focused: v,
-                                expressionPickerView: e7,
+                                expressionPickerView: e9,
                                 type: N,
                                 editorRef: eR,
                                 onSendMessage: eJ,
                                 onSendSticker: () => {},
-                                onVisibilityChange: e8,
+                                onVisibilityChange: e5,
                                 editorHeight: e0,
                                 setValue: (e, t) => T?.(null, e, t),
                                 position: ef,
@@ -469,7 +469,7 @@ let ed = l.memo(
                               positionTargetRef: eb,
                               type: N,
                               onSelectGIF: te,
-                              onSelectEmoji: e5,
+                              onSelectEmoji: e8,
                               onSelectKaomoji: tt,
                               onSelectSticker: tn,
                               channel: I,

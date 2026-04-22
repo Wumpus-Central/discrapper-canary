@@ -1,15 +1,10 @@
-n.d(i, { default: () => a });
-var s = n(627968);
-n(64700);
-var e = n(189213),
-    r = n(985018);
-function a(t) {
-    let { onClose: i, transitionState: n, body: a } = t;
-    return (0, s.jsx)(e.Modal, {
-        title: r.intl.string(r.t.KTjjrG),
-        transitionState: n,
-        actions: [{ text: r.intl.string(r.t.i4jeWR), onClick: i }],
-        onClose: i,
-        children: a,
-    });
-}
+"use strict";
+e.exports = {
+    lj: "elevated__3f12a",
+    x6: "button__3f12a elevated__3f12a",
+    p8: "buttonTitle__3f12a",
+    Nr: "card__3f12a elevated__3f12a",
+    p_: "cardContents__3f12a",
+    q8: "cardAccentLeft__3f12a",
+    dw: "cardAccentRight__3f12a",
+};

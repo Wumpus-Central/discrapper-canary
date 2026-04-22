@@ -41,7 +41,7 @@ var a = n(627968),
     j = n(788868),
     M = n(652215),
     R = n(985018),
-    k = n(47463);
+    k = n(348519);
 function D(e) {
     let {
             invoiceItem: t,

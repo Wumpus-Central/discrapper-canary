@@ -29,7 +29,7 @@ var i,
     N = n(34307),
     R = n(652215),
     M = n(985018),
-    O = n(95231),
+    O = n(870143),
     k = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
 let D = a.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,

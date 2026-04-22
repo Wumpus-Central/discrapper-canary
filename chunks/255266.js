@@ -6,17 +6,17 @@ var n,
     i = l(713654),
     u = l(573435),
     c = l(260509),
-    o = l(23047),
+    o = l(303111),
     d = (((n = {}).SMALL_32 = "SMALL_32"), n);
 let h = { SMALL_32: 24 },
     m = { SMALL_32: [13, 11, 10, 10, 10, 10, 10] },
     f = function (e) {
-        let { className: t, iconClassName: l, size: n, channel: r, guild: d, locked: f, hasActiveThreads: x } = e;
+        let { className: t, iconClassName: l, size: n, channel: r, guild: d, locked: f, hasActiveThreads: g } = e;
         if (null == d) return null;
-        let g = (0, c.Iv)(d, 48),
-            b = m[n],
+        let b = (0, c.Iv)(d, 48),
+            x = m[n],
             A = h[n],
-            _ = (0, i.gU)(r, d, { locked: f, hasActiveThreads: x });
+            _ = (0, i.gU)(r, d, { locked: f, hasActiveThreads: g });
         if (null == _) return null;
         let p = null != d ? (0, c.Rb)(d) : "";
         return (0, s.jsxs)("div", {
@@ -26,12 +26,12 @@ let h = { SMALL_32: 24 },
                 (0, s.jsx)(u.Ay, {
                     mask: u.hW.GUILD_ICON_WITH_CHANNEL_TYPE,
                     children:
-                        null != g
-                            ? (0, s.jsx)("img", { alt: "", src: g, className: o.Aq, style: { width: A, height: A } })
+                        null != b
+                            ? (0, s.jsx)("img", { alt: "", src: b, className: o.Aq, style: { width: A, height: A } })
                             : (0, s.jsx)("div", {
                                   className: a()(o.Aq, o.q9),
                                   style: {
-                                      fontSize: p.length - 1 > b.length ? b[b.length - 1] : b[p.length - 1],
+                                      fontSize: p.length - 1 > x.length ? x[x.length - 1] : x[p.length - 1],
                                       width: A,
                                       height: A,
                                   },

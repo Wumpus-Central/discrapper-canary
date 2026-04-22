@@ -21,7 +21,7 @@ var l = n(627968),
     x = n(287809),
     T = n(562153),
     _ = n(985018),
-    y = n(830666);
+    y = n(7434);
 function v(e) {
     let { icon: t, ...n } = e;
     switch (t) {

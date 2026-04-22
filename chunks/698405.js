@@ -14,7 +14,7 @@ var n,
     g = i(857071),
     A = i(652215),
     f = i(985018),
-    E = i(35787),
+    E = i(292939),
     T = (((n = {})[(n.CHAT = 0)] = "CHAT"), (n[(n.REACTIONS = 1)] = "REACTIONS"), n);
 let I = (e) => {
     let { type: t, guild: n, closePopout: T, ctaRef: I } = e,

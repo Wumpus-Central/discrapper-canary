@@ -5,7 +5,7 @@ var r = t(331322),
     i = t(534514),
     s = t(641324),
     a = t(985018),
-    o = t(722899);
+    o = t(16979);
 function c(e) {
     let { node: n } = e;
     return (0, l.jsxs)(r.B, {

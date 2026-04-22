@@ -37,7 +37,7 @@ var i = n(627968),
     U = n(652215),
     G = n(381941),
     B = n(985018),
-    F = n(38208),
+    F = n(295360),
     H = n(278664);
 function V(e) {
     let { embedUrl: t, message: n, channel: a } = e,

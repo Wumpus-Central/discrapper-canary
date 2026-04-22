@@ -41,9 +41,9 @@ var i = n(627968),
     H = n(427262),
     F = n(582904),
     W = n(985018),
-    Y = n(176277),
-    K = n(824078),
-    z = n(518229);
+    Y = n(869397),
+    K = n(77006),
+    z = n(813013);
 let q = "VoiceInviteSuggestionsPopover";
 function X(e) {
     let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: c } = e,
@@ -67,7 +67,7 @@ function X(e) {
         let e = w.A.getGuild(t.guild_id);
         o()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, h.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
+                let { default: l } = await Promise.all([n.e("28136"), n.e("43600"), n.e("76530")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: p.PE1.VOICE_INVITE_SUGGESTIONS });

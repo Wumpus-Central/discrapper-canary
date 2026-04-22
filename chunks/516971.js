@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(32271);
+    a = n(359823);
 function o(e) {
     let { indicator: t } = e,
         { type: n, icon: i, color: o = "currentColor", className: l, ...u } = t;

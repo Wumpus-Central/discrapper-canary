@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { d: () => c });
+n.d(t, { d: () => d });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(563014),
     l = n(885621),
-    u = n(32271);
-function c(e) {
+    u = n(359823);
+function d(e) {
     let {
             color: t = "default",
             disabled: n,
             isFocused: s,
-            showDefaultFocus: c = !1,
-            menuItemProps: d,
+            showDefaultFocus: d = !1,
+            menuItemProps: c,
             children: _,
         } = e,
         f = i.useRef(null);
@@ -28,9 +28,9 @@ function c(e) {
         }, [s]),
         (0, r.jsx)("div", {
             ref: f,
-            className: a()(u.item, l.jV[t], { [u.disabled]: n, [u.focused]: c && s, [u.hideInteraction]: !c }),
+            className: a()(u.item, l.jV[t], { [u.disabled]: n, [u.focused]: d && s, [u.hideInteraction]: !d }),
             "aria-disabled": n,
-            ...d,
+            ...c,
             children: _,
         })
     );

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { a: () => d });
+n.d(t, { a: () => c });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -7,57 +7,57 @@ var r = n(627968),
     o = n(900283),
     l = n(563014),
     u = n(885621),
-    c = n(32271);
-function d(e) {
+    d = n(359823);
+function c(e) {
     let {
             color: t = "default",
             label: n,
             control: s,
-            disabled: d,
+            disabled: c,
             isFocused: _,
             showDefaultFocus: f = !1,
-            interactive: p = !0,
+            interactive: E = !0,
             menuItemProps: h,
-            onClose: m,
+            onClose: p,
         } = e,
-        { onInteraction: E } = i.useContext(o.x),
+        { onInteraction: m } = i.useContext(o.x),
         g = i.useRef(null),
         A = i.useRef(null);
     i.useLayoutEffect(() => {
         _ ? ((0, l.Y)(g), A.current?.focus()) : A.current?.blur?.();
     }, [_]);
     let I = i.useCallback(() => {
-            A.current?.activate?.() && m();
-        }, [m]),
+            A.current?.activate?.() && p();
+        }, [p]),
         T = s(
             {
-                onClose: m,
-                disabled: d,
+                onClose: p,
+                disabled: c,
                 isFocused: _,
                 onInteraction: i.useCallback(
                     (e) => {
-                        E?.({ type: e ?? o.Q.DEFAULT });
+                        m?.({ type: e ?? o.Q.DEFAULT });
                     },
-                    [E],
+                    [m],
                 ),
             },
             A,
         );
     return (0, r.jsxs)("div", {
         onClick: I,
-        className: a()(c.item, u.jV[t], {
-            [c.disabled]: d,
-            [c.focused]: f && _,
-            [c.hideInteraction]: !f,
-            [c.nonInteractive]: !p,
+        className: a()(d.item, u.jV[t], {
+            [d.disabled]: c,
+            [d.focused]: f && _,
+            [d.hideInteraction]: !f,
+            [d.nonInteractive]: !E,
         }),
-        "aria-disabled": d,
+        "aria-disabled": c,
         ...h,
         children: [
             null != n
                 ? (0, r.jsx)("div", {
-                      className: c.labelContainer,
-                      children: (0, r.jsx)("div", { className: c.label, children: n }),
+                      className: d.labelContainer,
+                      children: (0, r.jsx)("div", { className: d.label, children: n }),
                   })
                 : null,
             T,

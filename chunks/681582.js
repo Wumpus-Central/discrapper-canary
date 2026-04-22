@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => d });
+n.d(t, { l: () => c });
 var r = n(627968),
     i = n(64700),
     s = n(106778),
@@ -7,25 +7,25 @@ var r = n(627968),
     o = n(309010),
     l = n(21161),
     u = n(851110),
-    c = n(64684);
-function d(e) {
+    d = n(668972);
+function c(e) {
     let { children: t } = e,
-        [n, d] = i.useState(null),
+        [n, c] = i.useState(null),
         [_, f] = i.useState(null),
-        p = i.useRef(new Set()),
-        [h, m] = i.useState(!1),
-        E = (0, a.bG)([o.A], () => o.A.getCurrentlySelectedChannelId()),
+        E = i.useRef(new Set()),
+        [h, p] = i.useState(!1),
+        m = (0, a.bG)([o.A], () => o.A.getCurrentlySelectedChannelId()),
         g = i.useCallback((e) => {
-            p.current.delete(e), m(p.current.size > 0);
+            E.current.delete(e), p(E.current.size > 0);
         }, []),
-        A = i.useCallback((e) => (p.current.add(e), m(!0), () => g(e)), [g]),
+        A = i.useCallback((e) => (E.current.add(e), p(!0), () => g(e)), [g]),
         I = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+            for (let n of E.current) n(e, t);
         }, []);
     return (
         i.useEffect(() => {
             _?.clearConfetti();
-        }, [_, E]),
+        }, [_, m]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.k, {
@@ -36,8 +36,8 @@ function d(e) {
                     removeClickListener: g,
                     children: t,
                 }),
-                (0, r.jsx)(s.Fk, { ref: f, className: c.J, environment: u.XA, onClick: h ? I : void 0 }),
-                (0, r.jsx)(s.K_, { ref: d, colors: u._t, sprites: u.uI, spriteWidth: u.wn, spriteHeight: u.wn }),
+                (0, r.jsx)(s.Fk, { ref: f, className: d.J, environment: u.XA, onClick: h ? I : void 0 }),
+                (0, r.jsx)(s.K_, { ref: c, colors: u._t, sprites: u.uI, spriteWidth: u.wn, spriteHeight: u.wn }),
             ],
         })
     );
