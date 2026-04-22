@@ -46,7 +46,7 @@ var r = n(627968),
     K = n(87952),
     $ = n(652215),
     z = n(788868),
-    q = n(106451);
+    q = n(359379);
 let [X, Q, J] = (0, w.A)();
 function Z(e) {
     let { stepConfigs: t, breadcrumbs: n, ...i } = e;
@@ -133,71 +133,70 @@ function ee(e) {
         [eZ, e0] = i.useState(null),
         [e1, e2] = i.useState(void 0),
         [e3, e6] = i.useState([]),
-        [e4, e5] = i.useState([]),
-        e7 = i.useMemo(() => null == eH || (0, M.ys)(eH), [eH]),
-        e8 = i.useRef(null != a ? a.planId : null);
+        e4 = i.useMemo(() => null == eH || (0, M.ys)(eH), [eH]),
+        e5 = i.useRef(null != a ? a.planId : null);
     i.useEffect(() => {
-        null == e8.current && null != a && (e8.current = a.planId);
+        null == e5.current && null != a && (e5.current = a.planId);
     }, [a]);
-    let { endsAt: e9 } = (0, g.A)({ forceFetch: !1, excludeReverseTrial: !0 }),
-        te = i.useRef(e9.isSame(o()(0)) ? null : e9);
+    let { endsAt: e7 } = (0, g.A)({ forceFetch: !1, excludeReverseTrial: !0 }),
+        e8 = i.useRef(e7.isSame(o()(0)) ? null : e7);
     i.useEffect(() => {
-        null != te.current || e9.isSame(o()(0)) || (te.current = e9);
-    }, [e9]);
-    let tt = i.useMemo(() => ({ paymentSourceId: eg, paymentGateway: es, loadId: t }), [eg, es, t]);
-    (0, k.A)(ef, tt);
-    let tn = i.useMemo(() => J.filter((e) => !z.oz.includes(e)), [JSON.stringify(J)]),
-        { previewErrorsById: tr } = (0, W.A)({
+        null != e8.current || e7.isSame(o()(0)) || (e8.current = e7);
+    }, [e7]);
+    let e9 = i.useMemo(() => ({ paymentSourceId: eg, paymentGateway: es, loadId: t }), [eg, es, t]);
+    (0, k.A)(ef, e9);
+    let te = i.useMemo(() => J.filter((e) => !z.oz.includes(e)), [JSON.stringify(J)]),
+        { previewErrorsById: tt } = (0, W.A)({
             applicationId: er ?? z.tv,
-            skuIDs: tn,
+            skuIDs: te,
             currentPaymentSourceId: eg,
             isGift: Z,
             excludeSKUPurchasePreviews: eo,
             loadId: eF.loadId,
             currency: eN.loaded ? eN.currency : void 0,
         }),
-        ti = null != eB ? tr[eB] : null,
-        [ts, ta] = i.useState(ti),
-        { paymentSourceRecords: to, hasCheckoutContextForSession: tl } = (0, T.Fy)(),
-        { data: tu } = (0, h.YY)(er),
-        td = C.Q_.useSetting(),
-        tc = (0, u.bG)([c.A], () => c.A.getFetchState());
+        tn = null != eB ? tt[eB] : null,
+        [tr, ti] = i.useState(tn),
+        { paymentSourceRecords: ts, hasCheckoutContextForSession: ta } = (0, T.Fy)(),
+        { data: to } = (0, h.YY)(er),
+        tl = C.Q_.useSetting(),
+        tu = (0, u.bG)([c.A], () => c.A.getFetchState());
     i.useEffect(() => {
-        null != tu && (0, p.n)(tu, $.gfo.EMBEDDED) && td && null == tc && (0, _.SE)();
-    }, [tu, td, tc]);
-    let t_ = null != tu && (0, p.n)(tu, $.gfo.EMBEDDED) && (0, p.n)(tu, $.gfo.EMBEDDED_IAP),
-        tf = (0, u.bG)([f.Ay], () =>
+        null != to && (0, p.n)(to, $.gfo.EMBEDDED) && tl && null == tu && (0, _.SE)();
+    }, [to, tl, tu]);
+    let td = null != to && (0, p.n)(to, $.gfo.EMBEDDED) && (0, p.n)(to, $.gfo.EMBEDDED_IAP),
+        tc = (0, u.bG)([f.Ay], () =>
             Array.from(f.Ay.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
                 return t === er;
             }),
         ),
-        tE = tf?.compositeInstanceId,
-        th = (0, u.bG)([L.A], () => (null != eB ? L.A.getForSKU(eB) : null), [eB]),
-        tp = (0, N.ds)() && !Z,
-        { isDisplayingWowMomentConfirmation: tm } = (0, u.cf)([O.A], () => ({
+        t_ = tc?.compositeInstanceId,
+        tf = (0, u.bG)([L.A], () => (null != eB ? L.A.getForSKU(eB) : null), [eB]),
+        tE = (0, N.ds)() && !Z,
+        { isDisplayingWowMomentConfirmation: th } = (0, u.cf)([O.A], () => ({
             isDisplayingWowMomentConfirmation: O.A.isDisplayingWowMomentConfirmation,
         })),
-        tg = e7 ? q.Ot : void 0,
-        { enabled: tA } = (0, A.Y)({ location: "PaymentContext" }),
-        tI = (0, U.$w)(),
-        tT = i.useMemo(() => null != eH && eH === z.gD.PREMIUM_GROUP_MONTH, [eH]),
-        tS = (0, v.V)(eu ?? void 0),
-        ty = !tT && !Z && null != tS && null != eB && z.TP[tS.trial_id].skus.includes(eB),
-        tN = (0, R.O)(),
-        tO = tN?.discount?.plan_ids.some((e) => z.hd[e].skuId === eB),
-        tR = !!(!tT && !Z && null != tN && null != eB && tO),
-        tv = null != eg && null != ep[eg] ? ep[eg]?.type : null,
-        tC = i.useMemo(
-            () => ({ payment_source_id: eg, payment_gateway: es, payment_source_type: tv, checkout_flow: y }),
-            [eg, es, tv, y],
+        tp = e4 ? q.Ot : void 0,
+        { enabled: tm } = (0, A.Y)({ location: "PaymentContext" }),
+        tg = (0, U.$w)(),
+        tA = i.useMemo(() => null != eH && eH === z.gD.PREMIUM_GROUP_MONTH, [eH]),
+        tI = (0, v.V)(eu ?? void 0),
+        tT = !tA && !Z && null != tI && null != eB && z.TP[tI.trial_id].skus.includes(eB),
+        tS = (0, R.O)(),
+        ty = tS?.discount?.plan_ids.some((e) => z.hd[e].skuId === eB),
+        tN = !!(!tA && !Z && null != tS && null != eB && ty),
+        tO = null != eg && null != ep[eg] ? ep[eg]?.type : null,
+        tR = i.useMemo(
+            () => ({ payment_source_id: eg, payment_gateway: es, payment_source_type: tO, checkout_flow: y }),
+            [eg, es, tO, y],
         ),
-        tb = (0, E.Db)();
+        tv = (0, E.Db)();
     return (0, r.jsx)(X.Provider, {
         value: {
             stripe: ed,
             unifiedCheckoutFlow: y,
-            paymentElementsEnabled: tA,
+            paymentElementsEnabled: tm,
             contextMetadata: eF,
             blockedPayments: ec,
             activeSubscription: a,
@@ -226,8 +225,8 @@ function ee(e) {
             paymentError: eU,
             purchaseError: ex,
             setPurchaseError: eV,
-            purchasePreviewError: ts,
-            setPurchasePreviewError: ta,
+            purchasePreviewError: tr,
+            setPurchasePreviewError: ti,
             purchaseErrorBlockRef: eG,
             purchaseTokenAuthState: eY,
             purchaseTokenHash: eW,
@@ -237,54 +236,52 @@ function ee(e) {
             setFooterNode: ez,
             modalOverlayNode: eq,
             setModalOverlayNode: eX,
-            selectedStoreListing: th,
+            selectedStoreListing: tf,
             readySlideId: e1,
             setReadySlideId: e2,
             defaultPlanId: et,
-            isPremium: e7,
+            isPremium: e4,
             isGift: Z,
-            startingFractionalPremiumEndsAtRef: te,
+            startingFractionalPremiumEndsAtRef: e8,
             startedPaymentFlowWithPaymentSourcesRef: eT,
-            startingPremiumSubscriptionPlanIdRef: e8,
-            defaultFetchableSkuIds: tn,
-            checkoutPaymentSources: to,
-            hasCheckoutContextLoaded: tl,
-            application: tu,
+            startingPremiumSubscriptionPlanIdRef: e5,
+            defaultFetchableSkuIds: te,
+            checkoutPaymentSources: ts,
+            hasCheckoutContextLoaded: ta,
+            application: to,
             purchaseType: en,
-            isEmbeddedIAP: t_,
-            activitySessionId: tE,
-            devShelfFetchState: tc,
-            entitlementsGranted: e3,
-            setEntitlementsGranted: e6,
-            appliedUserDiscounts: e4,
-            setAppliedUserDiscounts: e5,
+            isEmbeddedIAP: td,
+            activitySessionId: t_,
+            devShelfFetchState: tu,
+            appliedUserDiscounts: e3,
+            setAppliedUserDiscounts: e6,
             referralCode: ei,
-            inReverseTrial: tp,
-            enablePremiumBrandRefresh: e7,
-            isDisplayingWowMomentConfirmation: tm,
-            premiumBrandRefreshBackgroundClassName: tg,
+            inReverseTrial: tE,
+            enablePremiumBrandRefresh: e4,
+            isDisplayingWowMomentConfirmation: th,
+            premiumBrandRefreshBackgroundClassName: tp,
             wasTier2PremiumBeforePurchase: el,
-            customCheckoutFlow: tI,
-            isPremiumGroupPurchase: tT,
-            isEligibleForTrial: ty,
-            isEligibleForDiscount: tR,
-            userTrialOffer: tS,
+            customCheckoutFlow: tg,
+            isPremiumGroupPurchase: tA,
+            isEligibleForTrial: tT,
+            isEligibleForDiscount: tN,
+            userTrialOffer: tI,
             referralTrialOfferId: eu,
-            discountOffer: tN,
+            discountOffer: tS,
         },
         children: (0, r.jsx)(s.Elements, {
             options: $.XL8,
             stripe: ed,
             children: (0, r.jsx)(I.j, {
                 shouldRethrowError: w,
-                locationStack: tb,
+                locationStack: tv,
                 onUnhandledError: Q,
                 loadId: eF.loadId,
                 selectedSkuId: eB ?? null,
                 selectedPlanId: eH ?? null,
                 isGift: Z,
                 purchaseType: en,
-                additionalAnalyticsData: tC,
+                additionalAnalyticsData: tR,
                 children: ee,
             }),
         }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F0: () => d, Ni: () => a, Tr: () => _, sw: () => c, t4: () => l, y$: () => u });
+n.d(t, { F0: () => c, Ni: () => a, Tr: () => _, sw: () => d, t4: () => l, y$: () => u });
 var r = n(64700),
     i = n(942381),
     s = n(265690);
@@ -26,16 +26,18 @@ function u() {
             invoiceOrderContext: null,
             invoiceOrderCheckoutSessionId: null,
             invoiceOrderPreviewPaymentSourceId: null,
+            entitlementsGranted: [],
+            setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
         }),
         i.x,
     );
 }
-let c = () =>
+let d = () =>
         l((e) => {
             let { checkoutInvoicePreview: t } = e;
             return t;
         }),
-    d = (e) => {
+    c = (e) => {
         let t = l((e) => {
             let { setCheckoutInvoicePreview: t } = e;
             return t;
