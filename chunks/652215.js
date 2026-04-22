@@ -3807,6 +3807,7 @@ var nl = (function (e) {
             (e.NOTIFICATION_MIGRATION_OPTOUT = "notification_migration_optout"),
             (e.CALLKIT_CLICKED = "callkit_clicked"),
             (e.PUSH_NOTIFICATION_RECEIVED = "push_notification_received"),
+            (e.ANDROID_NOTIFICATION_CHANNELS_SYNCED = "android_notification_channels_synced"),
             (e.GAME_MENTIONS_NOTIFICATION_SETTING_UPDATED = "game_mentions_notification_settings_updated"),
             (e.OVERLAY_DISABLED_SURVEY = "overlay_disabled_survey"),
             (e.OVERLAY_BUG_REPORT = "overlay_bug_report"),
