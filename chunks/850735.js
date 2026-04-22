@@ -35,18 +35,9 @@ let I = (e) => {
         null == s)
             ? t !== i.g.HOME || h || l
                 ? null
-                : (0, n.jsx)("div", {
-                      className: v.YB,
-                      children: (0, n.jsx)(_.Z_, { tenantId: A.FYj, templateId: "shop-home", requestParams: g }),
-                  })
+                : (0, n.jsx)(_.Z_, { tenantId: A.FYj, templateId: "shop-home", requestParams: g })
             : (0, n.jsxs)(n.Fragment, {
-                  children: [
-                      t === i.g.ORBS && (0, n.jsx)(E.A, {}),
-                      (0, n.jsx)("div", {
-                          className: v.YB,
-                          children: (0, n.jsx)(_.Qs, { tenantId: A.FYj, layoutId: s }),
-                      }),
-                  ],
+                  children: [t === i.g.ORBS && (0, n.jsx)(E.A, {}), (0, n.jsx)(_.Qs, { tenantId: A.FYj, layoutId: s })],
               });
     },
     L = (e) => {
@@ -65,7 +56,7 @@ let I = (e) => {
         }, [t]),
         null == s)
             ? null
-            : (0, n.jsx)("div", { className: v.YB, children: (0, n.jsx)(_.Ay, { layout: s }) });
+            : (0, n.jsx)(_.Ay, { layout: s });
     },
     j = (e) => {
         let { handleTransition: t, tab: s, transitionState: l } = e,
