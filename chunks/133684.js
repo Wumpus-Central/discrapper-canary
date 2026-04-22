@@ -2,8 +2,8 @@
 n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(442433),
     u = n(721768),
@@ -14,8 +14,8 @@ var r = n(627968),
     p = n(408018),
     h = n(652215);
 let m = ":",
-    g = /(\t|\s)/;
-class E extends i.PureComponent {
+    E = /(\t|\s)/;
+class g extends i.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
@@ -40,9 +40,9 @@ class E extends i.PureComponent {
         if (0 === t.trim().length) return { word: null, fullWord: null, isAtStart: !1 };
         let n = e.selectionStart,
             r = e.selectionEnd;
-        for (; n > 0 && !g.test(t[n - 1]); ) n--;
+        for (; n > 0 && !E.test(t[n - 1]); ) n--;
         let i = e.selectionEnd;
-        for (; i < t.length && !g.test(t[i]); ) i++;
+        for (; i < t.length && !E.test(t[i]); ) i++;
         return { word: t.slice(n, r), fullWord: t.slice(n, i), isAtStart: 0 === n };
     }
     focus = () => {
@@ -54,20 +54,20 @@ class E extends i.PureComponent {
         null != e && e.blur();
     }
     submit(e) {
-        return e.preventDefault(), this.props.onSubmit(this.props.value);
+        return e?.preventDefault(), this.props.onSubmit(this.props.value);
     }
     insertAutocomplete(e, t) {
         let { addSpace: n = !0, replaceFullWord: r = !1 } =
                 arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { word: i, fullWord: a } = this.getCurrentWord();
+            { word: i, fullWord: s } = this.getCurrentWord();
         if (null == i) this.insertText(e, t, n);
         else {
             let t = this._ref;
             if (null == t) return;
-            let s = t.value.slice(0, t.selectionStart - i.length),
-                o = r && null != a ? a.length - i.length : 0,
+            let a = t.value.slice(0, t.selectionStart - i.length),
+                o = r && null != s ? s.length - i.length : 0,
                 l = t.value.slice(t.selectionEnd + o);
-            this._insertText(e, s, l, n);
+            this._insertText(e, a, l, n);
         }
     }
     insertInlineAutocompleteInput(e) {}
@@ -77,17 +77,17 @@ class E extends i.PureComponent {
             r = this._ref;
         if (null == r) return;
         let i = r.value.slice(0, r.selectionStart),
-            a = r.value.slice(r.selectionEnd);
-        this._insertText(e, i, a, n);
+            s = r.value.slice(r.selectionEnd);
+        this._insertText(e, i, s, n);
     }
     _insertText(e, t, n, r) {
         if (null == this._ref) return;
         r && (e += " ");
         let i = t + e + n,
-            { onChange: a } = this.props;
-        a?.(null, i, (0, p.x7)(i));
-        let s = t.length + e.length;
-        this.setState({ nextSelection: s }, () => {
+            { onChange: s } = this.props;
+        s?.(null, i, (0, p.x7)(i));
+        let a = t.length + e.length;
+        this.setState({ nextSelection: a }, () => {
             this.props.maybeShowAutocomplete();
         });
     }
@@ -103,7 +103,7 @@ class E extends i.PureComponent {
             disabled: t,
             placeholder: n,
             required: i,
-            onResize: a,
+            onResize: s,
             className: l,
             id: u,
             submitting: c,
@@ -111,14 +111,14 @@ class E extends i.PureComponent {
             spellcheckEnabled: f,
             "aria-controls": p,
             "aria-expanded": m,
-            "aria-activedescendant": g,
+            "aria-activedescendant": E,
         } = this.props;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(d.EG, { event: h.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
                 (0, r.jsx)(o.d4u, {
                     ref: this.handleSetRef,
-                    className: s()(l, _),
+                    className: a()(l, _),
                     id: u,
                     rows: 1,
                     fontWidthEstimate: 6,
@@ -126,7 +126,7 @@ class E extends i.PureComponent {
                     disabled: t || c,
                     required: i,
                     onChange: this.handleOnChange,
-                    onResize: a,
+                    onResize: s,
                     onKeyPress: this.handleKeyPress,
                     onKeyDown: this.handleKeyDown,
                     onKeyUp: this.handleKeyUp,
@@ -140,7 +140,7 @@ class E extends i.PureComponent {
                     spellCheck: f,
                     "aria-controls": p,
                     "aria-expanded": m,
-                    "aria-activedescendant": g,
+                    "aria-activedescendant": E,
                     "aria-haspopup": "listbox",
                     "aria-autocomplete": "list",
                     "aria-multiline": !0,
@@ -237,4 +237,4 @@ class E extends i.PureComponent {
         return this.props.value;
     }
 }
-let A = E;
+let A = g;

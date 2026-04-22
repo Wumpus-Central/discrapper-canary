@@ -2,8 +2,8 @@
 n.d(t, { A: () => A });
 var r = n(64700),
     i = n(284009),
-    a = n.n(i),
-    s = n(253018),
+    s = n.n(i),
+    a = n(253018),
     o = n(155718),
     l = n(861382),
     u = n(317681),
@@ -16,38 +16,38 @@ var r = n(64700),
 let m = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
-        e.preventDefault(), n();
+        e?.preventDefault(), n();
     },
     focus() {
         _.VW.focus(e);
     },
     blur() {
-        s.rL.blur(e);
+        a.rL.blur(e);
     },
     getCurrentWord() {
         let t = e.selection;
         if (null == t || !_.Ot.isValid(e, t) || _.ZF.isExpanded(t) || (0, f.Q9)(e))
             return { word: null, isAtStart: !1 };
         let [n, r] = _.VW.node(e, _.PW.parent(t.anchor.path)),
-            [i, a] = _.VW.node(e, t.anchor.path),
-            s = t.anchor.offset;
-        if (!_.PW.hasPrevious(a) && _.l5.isText(i)) {
-            let e = i.text.substring(0, s);
-            if (_.AS.isType(n, "applicationCommand") && s < n.command.displayName.length + 2)
+            [i, s] = _.VW.node(e, t.anchor.path),
+            a = t.anchor.offset;
+        if (!_.PW.hasPrevious(s) && _.l5.isText(i)) {
+            let e = i.text.substring(0, a);
+            if (_.AS.isType(n, "applicationCommand") && a < n.command.displayName.length + 2)
                 return { word: e, isAtStart: !0 };
         }
         let o = "",
             l = !1;
         for (;;) {
-            if (--s < 0) {
-                if (!_.PW.hasPrevious(a)) {
+            if (--a < 0) {
+                if (!_.PW.hasPrevious(s)) {
                     l = !0;
                     break;
                 }
-                [i, a] = _.VW.node(e, _.PW.previous(a));
+                [i, s] = _.VW.node(e, _.PW.previous(s));
             }
             if (!_.l5.isText(i)) break;
-            let t = i.text[s];
+            let t = i.text[a];
             if (h.ug.test(t)) break;
             o = t + o;
         }
@@ -81,36 +81,36 @@ let m = (e, t, n) => ({
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         c.o.withSingleEntry(e, () => {
-            let a = u.M3(e),
-                s = null != a && g(t, a[0]);
-            if ((null != r && s && (d.b.removeInlineChildren(e, a), (i = !1)), E(e, n, r, i), null != r && s)) {
+            let s = u.M3(e),
+                a = null != s && E(t, s[0]);
+            if ((null != r && a && (d.b.removeInlineChildren(e, s), (i = !1)), g(e, n, r, i), null != r && a)) {
                 let n = u.n$(e);
-                if (((a = _.cv.updateElement(e, a)), null != n)) {
+                if (((s = _.cv.updateElement(e, s)), null != n)) {
                     let r = _.cv.markdown(n[0], t.guild_id);
-                    (0, p.lE)(e, a, t.id, r) && (a = _.cv.updateElement(e, a));
+                    (0, p.lE)(e, s, t.id, r) && (s = _.cv.updateElement(e, s));
                 }
-                u.ke(e, t.guild_id, t.id, _.cv.updateElement(e, a), !1), d.b.selectNextCommandOption(e);
+                u.ke(e, t.guild_id, t.id, _.cv.updateElement(e, s), !1), d.b.selectNextCommandOption(e);
             }
         });
     },
     insertAutocomplete(n) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            { addSpace: i = !0, replaceFullWord: a = !1 } =
+            { addSpace: i = !0, replaceFullWord: s = !1 } =
                 arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         c.o.withSingleEntry(e, () => {
-            let s = u.M3(e),
-                o = null != s && g(t, s[0]);
-            if (o) d.b.removeInlineChildren(e, s), (i = !1);
+            let a = u.M3(e),
+                o = null != a && E(t, a[0]);
+            if (o) d.b.removeInlineChildren(e, a), (i = !1);
             else {
                 let { word: t, fullWord: n } = this.getCurrentWord();
                 null != t && t.length > 0 && d.b.delete(e, { distance: t.length, unit: "character", reverse: !0 }),
-                    a &&
+                    s &&
                         null != t &&
                         null != n &&
                         n.length - t.length > 0 &&
                         d.b.delete(e, { distance: n.length - t.length, unit: "character" });
             }
-            E(e, n, r, i), o && d.b.selectNextCommandOption(e);
+            g(e, n, r, i), o && d.b.selectNextCommandOption(e);
         });
     },
     insertInlineAutocompleteInput(t) {
@@ -123,9 +123,9 @@ let m = (e, t, n) => ({
     replaceInlineAutocompleteInput(t, n, r) {
         c.o.withSingleEntry(e, () => {
             let i = _.VW.getSelectedParentOfType(e, [t]);
-            a()(null != i, `Cannot replace inline input of type ${t} when none is selected`),
+            s()(null != i, `Cannot replace inline input of type ${t} when none is selected`),
                 d.b.removeNodes(e, { at: i[1] }),
-                E(e, n, r, !0);
+                g(e, n, r, !0);
         });
     },
     insertEmoji(t) {
@@ -133,16 +133,16 @@ let m = (e, t, n) => ({
         c.o.withSingleEntry(e, () => {
             let t = n.animated ? "a" : "",
                 i = n.originalName ?? n.name ?? "";
-            E(e, `:${n.name}:`, null != n.id ? `<${t}:${i.replace(/:/g, "")}:${n.id}>` : null, r);
+            g(e, `:${n.name}:`, null != n.id ? `<${t}:${i.replace(/:/g, "")}:${n.id}>` : null, r);
         });
     },
 });
-function g(e, t) {
+function E(e, t) {
     let n = l.A.getActiveCommand(e.id),
         r = n?.options?.find((e) => e.name === t.optionName);
     return null != r && (r.type !== o.n4.STRING || r?.choices != null || r?.autocomplete);
 }
-function E(e, t, n, r) {
+function g(e, t, n, r) {
     let i = _.VW.areStylesDisabled(e) || null == n ? t : n;
     c.o.withSingleEntry(e, () => {
         d.b.insertText(e, r ? i + " " : i);
