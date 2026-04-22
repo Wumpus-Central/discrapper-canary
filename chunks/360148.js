@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { a: () => m });
+n.d(t, { a: () => h });
 var r = n(651162),
     i = n(510801),
     s = n(419709),
@@ -8,12 +8,11 @@ var r = n(651162),
     l = n(793295),
     u = n(824699),
     c = n(53941),
-    d = n(686647),
-    _ = n(163608),
-    f = n(237463),
-    p = n(150493),
-    h = n(893998);
-class m {
+    d = n(163608),
+    _ = n(237463),
+    f = n(150493),
+    p = n(893998);
+class h {
     shopBlocks;
     categories;
     userDiscounts;
@@ -28,19 +27,17 @@ class m {
                     case r.g.FEED:
                         return l.l.fromServer(e);
                     case r.g.WIDE_BANNER:
-                        return h.y.fromServer(e);
+                        return p.y.fromServer(e);
                     case r.g.SHELF:
-                        return f.r.fromServer(e);
+                        return _.r.fromServer(e);
                     case r.g.COUNTDOWN_TIMER:
                         return a.z.fromServer(e);
                     case r.g.IMMERSIVE_BANNER:
                         return c.A.fromServer(e);
                     case r.g.REWARD_HERO:
-                        return _.E.fromServer(e);
-                    case r.g.MARVEL_RIVALS_PROMOTIONAL_BANNER:
-                        return d.T.fromServer(e);
+                        return d.E.fromServer(e);
                     case r.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER:
-                        return p.$.fromServer(e);
+                        return f.$.fromServer(e);
                     default:
                         return;
                 }
@@ -50,6 +47,6 @@ class m {
             (this.userDiscounts = e.user_discounts?.map((e) => s.T.fromServer(e)));
     }
     static fromServer(e) {
-        return new m(e);
+        return new h(e);
     }
 }
