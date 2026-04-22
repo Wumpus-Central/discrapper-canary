@@ -16,8 +16,8 @@ var l = n(627968),
     x = n(374966),
     A = n(803957),
     v = n(905074),
-    b = n(384826),
-    f = n(80718),
+    f = n(384826),
+    b = n(80718),
     T = n(676978),
     S = n(657679),
     E = n(404192),
@@ -48,8 +48,8 @@ var l = n(627968),
     Y = n(964448),
     q = n(652215),
     Z = n(985018),
-    J = n(641131),
-    X = n(687404);
+    J = n(221314),
+    X = n(777148);
 let ee = ["user_urf", "message_urf", "guild_urf", "media_takedown"];
 function et(e, t) {
     let { elements: n } = e;
@@ -87,8 +87,8 @@ let el = (e) => {
         ex = en(t, "dropdown"),
         eA = et(t, "country_select"),
         ev = et(t, "inline_notice"),
-        eb = en(t, "radio_group"),
-        ef = et(t, "text"),
+        ef = en(t, "radio_group"),
+        eb = et(t, "text"),
         eT = et(t, "content_url_input"),
         eS = r.x.REPORT_TO_MOD.has(n.name),
         eE = n.name === _.tY.MEDIA_TAKEDOWN,
@@ -103,10 +103,10 @@ let el = (e) => {
             (e) => ({
                 nodeRef: t.id,
                 destination: e,
-                textInput: null != eh || null != ex || null != eA || eb.length > 0 || null != eT ? eM : void 0,
+                textInput: null != eh || null != ex || null != eA || ef.length > 0 || null != eT ? eM : void 0,
                 multiSelect: null != em ? { name: em.name, state: eR } : void 0,
             }),
-            [t, eh, ex, eA, eb, eT, em, eR, eM],
+            [t, eh, ex, eA, ef, eT, em, eR, eM],
         ),
         eU = a.useMemo(
             () =>
@@ -115,13 +115,13 @@ let el = (e) => {
                         freeTextElements: eh,
                         dropdownElements: ex,
                         countrySelectElement: eA,
-                        radioGroupElements: eb,
+                        radioGroupElements: ef,
                         multiSelectElement: em,
                         contentUrlInputElement: eT,
                     },
                     { textInput: eM, multiSelect: eR },
                 ),
-            [eh, ex, eA, eb, em, eT, eM, eR],
+            [eh, ex, eA, ef, em, eT, eM, eR],
         ),
         eP = a.useCallback(
             (e, t) => {
@@ -220,7 +220,13 @@ let el = (e) => {
         ),
         ez = a.useCallback(
             (e) => {
-                "Enter" !== e.key || eU || eI || null == t.button || (e.preventDefault(), eW(t.button));
+                if ("Enter" === e.key && !eU && !eI && null != t.button) {
+                    let n = e.target;
+                    "BUTTON" !== n.tagName &&
+                        "A" !== n.tagName &&
+                        "button" !== n.getAttribute("role") &&
+                        (e.preventDefault(), eW(t.button));
+                }
             },
             [eU, eI, t.button, eW],
         );
@@ -264,7 +270,7 @@ let el = (e) => {
                 className: X.rf,
                 children: [
                     null != ep && (0, l.jsx)(K.A, { element: ep }),
-                    null != ef && (0, l.jsx)(z.A, { element: ef }),
+                    null != eb && (0, l.jsx)(z.A, { element: eb }),
                     null != et(t, "message_preview") &&
                         ("message" === n.name || "first_dm" === n.name || "report_to_mod_message" === n.name) &&
                         (0, l.jsx)(w.A, { message: n.record }),
@@ -326,7 +332,7 @@ let el = (e) => {
                                     (0, l.jsx)(O.A, { guildId: n.record.id, reportId: ec }),
                                 null != et(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, l.jsx)(f.A, { application: n.record, reportId: ec }),
+                                    (0, l.jsx)(b.A, { application: n.record, reportId: ec }),
                                 null != et(t, "deauthorize_app") &&
                                     "application" === n.name &&
                                     (0, l.jsx)(B.A, { application: n.record, reportId: ec }),
@@ -362,7 +368,7 @@ let el = (e) => {
                         null != ex &&
                         ex.length > 0 &&
                         (0, l.jsx)("div", { children: (0, l.jsx)(S.A, { elements: ex, onChange: eB, state: eM }) }),
-                    eb.map((e) => (0, l.jsx)(U.A, { element: e, onChange: eB, state: eM }, e.name)),
+                    ef.map((e) => (0, l.jsx)(U.A, { element: e, onChange: eB, state: eM }, e.name)),
                     null != ev &&
                         (function (e, t, n) {
                             let { visible_when: l } = e.data;
@@ -377,7 +383,7 @@ let el = (e) => {
                             return null != a && n?.[a.name]?.value === l.value;
                         })(ev, t, eM) &&
                         (0, l.jsx)(M.A, { element: ev }),
-                    null != eA && (0, l.jsx)(b.A, { element: eA, onChange: eB, state: eM }),
+                    null != eA && (0, l.jsx)(f.A, { element: eA, onChange: eB, state: eM }),
                     ee.includes(n.name) &&
                         null != eh &&
                         eh.length > 0 &&
