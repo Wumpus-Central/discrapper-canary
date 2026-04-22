@@ -1,22 +1,25 @@
-a.d(t, { A: () => l });
-var s = a(649032),
-    r = a(26508),
+a.d(t, { A: () => d });
+var r = a(649032),
+    s = a(26508),
     n = a(398523),
     i = a(881373),
     o = a(612669),
-    d = a(23003);
-function l(e) {
+    l = a(23003);
+function d(e) {
     let t = (0, i.YS)({ location: "bento_box" }).functionalityEnabled,
         { enabled: a } = n.Ay.useConfig({ location: "bento_box" }),
-        l = (0, o.O9)(),
-        c = (0, r.DK)(s.W.NITRO, "useBentoBoxes");
+        d = (0, o.O9)(),
+        c = (0, s.DK)(r.W.NITRO, "useBentoBoxes"),
+        p = c && e;
     return [
-        ...(t || a ? [d.NI.THREE_P_PROMOTIONS] : []),
-        ...(c && e ? [d.NI.COMBINED_ORBS] : []),
-        ...(l ? [d.NI.PREMIUM_GROUP] : []),
-        d.NI.DISPLAY_NAME_STYLES,
-        d.NI.CUSTOM_THEMES,
-        d.NI.SERVER_PROFILES,
-        d.NI.REFERRAL_PROGRAM,
+        ...(t || a ? [l.NI.THREE_P_PROMOTIONS] : []),
+        ...(p ? [l.NI.COMBINED_ORBS] : []),
+        ...(!p && e ? [l.NI.ORB_MULTIPLIER] : []),
+        ...(d ? [l.NI.PREMIUM_GROUP] : []),
+        ...(!p && c ? [l.NI.ORB_REWARDS] : []),
+        l.NI.DISPLAY_NAME_STYLES,
+        l.NI.CUSTOM_THEMES,
+        l.NI.SERVER_PROFILES,
+        l.NI.REFERRAL_PROGRAM,
     ];
 }

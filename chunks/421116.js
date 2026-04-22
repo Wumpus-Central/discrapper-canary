@@ -73,27 +73,25 @@ let F = () => {
     }, []);
     let eo = (0, C.DK)(f.W.NITRO, "PremiumMarketingHome"),
         { shouldShowBonusOrbsUX: ec } = (0, h.Dl)(L.rE.NITRO_HOME_MARKETING),
-        ed = a.useMemo(
-            () => !!eo && !!ec && "orbs" === new URLSearchParams(e.search).get("section"),
-            [e.search, eo, ec],
-        );
-    (0, I.z)(B.NI.COMBINED_ORBS, ed);
-    let em = [R.k.HOME, R.k.WHATS_NEW, R.k.BEST_OF_NITRO, R.k.PLANS, R.k.COMPARE],
-        { navBarSections: eu, activeSectionId: e_ } = (0, G.o)(em),
-        { home: ex, whatsNew: ep, bestOfNitro: eg, plans: eh, compare: ef } = eu,
-        eC = (0, r.jsxs)("div", {
+        ed = eo && ec ? B.NI.COMBINED_ORBS : ec ? B.NI.ORB_MULTIPLIER : eo ? B.NI.ORB_REWARDS : null,
+        em = a.useMemo(() => null != ed && "orbs" === new URLSearchParams(e.search).get("section"), [e.search, ed]);
+    (0, I.z)(ed ?? B.NI.COMBINED_ORBS, em);
+    let eu = [R.k.HOME, R.k.WHATS_NEW, R.k.BEST_OF_NITRO, R.k.PLANS, R.k.COMPARE],
+        { navBarSections: e_, activeSectionId: ex } = (0, G.o)(eu),
+        { home: ep, whatsNew: eg, bestOfNitro: eh, plans: ef, compare: eC } = e_,
+        eb = (0, r.jsxs)("div", {
             ref: s,
             className: n()(U.kL, U.Gd, U.iI, { [U.Hq]: !V }),
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, r.jsx)(E.A, { className: U.yH }),
-                (0, r.jsx)(P.A, { navBarSections: eu, activeSectionId: e_, isAnimationComplete: K }),
+                (0, r.jsx)(P.A, { navBarSections: e_, activeSectionId: ex, isAnimationComplete: K }),
                 (0, r.jsxs)("div", {
                     className: U.Qr,
                     children: [
                         (0, r.jsx)("div", {
                             className: U.qY,
-                            ref: ex.ref,
+                            ref: ep.ref,
                             children: (0, r.jsx)(c.L, {
                                 innerRef: F,
                                 onChange: (e) => Y(e),
@@ -113,17 +111,17 @@ let F = () => {
                             }),
                         (0, r.jsx)("div", {
                             className: U.So,
-                            ref: ep.ref,
+                            ref: eg.ref,
                             children: (0, r.jsx)(k.Ct, { shouldLoadVideo: ee, isReducedMotion: V }),
                         }),
                         (0, r.jsx)("div", {
                             className: U.KQ,
-                            ref: eg.ref,
+                            ref: eh.ref,
                             children: (0, r.jsx)(k.oO, { shouldLoadVideo: ee, isReducedMotion: V }),
                         }),
                         (0, r.jsx)("div", {
                             className: U.s5,
-                            ref: eh.ref,
+                            ref: ef.ref,
                             children: (0, r.jsx)(c.L, {
                                 innerRef: i,
                                 onChange: (e) => X(e),
@@ -132,7 +130,7 @@ let F = () => {
                                 children: (0, r.jsx)(v.jP, { innerRef: i }),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: U.aC, ref: ef.ref, children: (0, r.jsx)(S.A, {}) }),
+                        (0, r.jsx)("div", { className: U.aC, ref: eC.ref, children: (0, r.jsx)(S.A, {}) }),
                     ],
                 }),
                 (0, r.jsx)(c.L, {
@@ -152,6 +150,6 @@ let F = () => {
         });
     return (0, r.jsx)(d.N, {
         theme: H.NJ.DARKER,
-        children: (e) => (0, r.jsx)(m.Gt, { className: n()(U.XG, e), ref: t, children: eC }),
+        children: (e) => (0, r.jsx)(m.Gt, { className: n()(U.XG, e), ref: t, children: eb }),
     });
 };
