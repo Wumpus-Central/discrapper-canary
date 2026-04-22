@@ -5,11 +5,11 @@ var a = n(627968),
     d = n.n(r),
     l = n(311907),
     s = n(939249),
-    u = n(834730),
-    c = n(86182),
+    c = n(834730),
+    u = n(86182),
     E = n(517905),
-    f = n(544028),
-    o = n(287809),
+    o = n(544028),
+    f = n(287809),
     A = n(685073),
     S = n(743981),
     G = n(985018),
@@ -55,10 +55,10 @@ let _ = i.memo(function (e) {
             guildBadge: i,
             className: r,
             textClassName: l,
-            badgeClassName: c,
+            badgeClassName: u,
             onClick: E,
-            onMouseEnter: f,
-            textVariant: o = "text-xs/semibold",
+            onMouseEnter: o,
+            textVariant: f = "text-xs/semibold",
             textColor: I = "text-default",
             badgeSize: O = S.Sl.SIZE_14,
             inline: R = !0,
@@ -68,17 +68,17 @@ let _ = i.memo(function (e) {
             tag: "span",
             tabIndex: null == E ? -1 : void 0,
             onClick: E,
-            onMouseEnter: f,
+            onMouseEnter: o,
             className: d()(b.nz, R && b.os, null != E && b.vk, r),
-            children: (0, a.jsxs)(u.E, {
+            children: (0, a.jsxs)(c.E, {
                 tag: "span",
-                variant: o,
+                variant: f,
                 lineClamp: 1,
                 color: I,
                 className: d()(b.Qq, l),
                 children: [
                     null != i && "string" == typeof i
-                        ? (0, a.jsx)(_, { src: (0, A.gC)(t, i, O), size: O, className: c }, (0, A.gC)(t, i, O) ?? t)
+                        ? (0, a.jsx)(_, { src: (0, A.gC)(t, i, O), size: O, className: u }, (0, A.gC)(t, i, O) ?? t)
                         : i,
                     (0, a.jsx)("span", { className: b.em, children: n }),
                 ],
@@ -94,7 +94,7 @@ let _ = i.memo(function (e) {
                 userId: n,
                 contextGuildId: r,
                 className: s,
-                containerClassName: u,
+                containerClassName: c,
                 textVariant: S,
                 textColor: G,
                 badgeSize: L,
@@ -105,23 +105,23 @@ let _ = i.memo(function (e) {
                 Component: h = O,
             } = e,
             m = i.useRef(null),
-            N = (0, l.bG)([o.default], () => o.default.getUser(n), [n]),
-            g = (0, l.bG)([f.A], () => f.A.theme),
+            N = (0, l.bG)([f.default], () => f.default.getUser(n), [n]),
+            g = (0, l.bG)([o.A], () => o.A.theme),
             C = void 0 !== t ? t : N?.primaryGuild,
-            { tag: D, badge: p, guildId: P } = (0, A.Zo)(C);
+            { tag: p, badge: D, guildId: P } = (0, A.Zo)(C);
         return (0, A.Wb)(n, r, C) && null != P
             ? _
                 ? (0, a.jsx)(h, {
                       guildId: P,
-                      guildTag: D,
-                      guildBadge: p,
+                      guildTag: p,
+                      guildBadge: D,
                       className: d()(b.Zy, s),
                       textVariant: S,
                       textColor: G,
                       badgeSize: L,
                       inline: I,
                   })
-                : (0, a.jsx)(c.w, {
+                : (0, a.jsx)(u.w, {
                       theme: g,
                       children: (0, a.jsx)(E.A, {
                           guildId: P,
@@ -131,12 +131,13 @@ let _ = i.memo(function (e) {
                           clickTrap: !1,
                           children: (e) =>
                               (0, a.jsx)("span", {
-                                  className: u,
+                                  className: c,
                                   ref: m,
+                                  onClick: (e) => e.stopPropagation(),
                                   children: (0, a.jsx)(h, {
                                       guildId: P,
-                                      guildTag: D,
-                                      guildBadge: p,
+                                      guildTag: p,
+                                      guildBadge: D,
                                       className: s,
                                       textVariant: S,
                                       textColor: G,
