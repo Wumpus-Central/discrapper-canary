@@ -11,22 +11,22 @@ var i = n(627968),
     u = n(564864),
     m = n(260197),
     g = n(985018),
-    x = n(284818);
+    x = n(395074);
 function h(e) {
     let { guild: t, formFields: n } = e,
         [d, h] = s.useState(n);
     s.useEffect(() => h(n), [n]);
-    let p = (0, a.H)({ guildId: t.id }) ?? 0,
-        [A, f] = s.useState(null),
+    let A = (0, a.H)({ guildId: t.id }) ?? 0,
+        [p, f] = s.useState(null),
         j = s.useMemo(() => d?.some((e) => (0, r.i7)(e)), [d]),
         N = s.useMemo(() => d.length === m.OK, [d]),
         E = s.useCallback(
             (e) => {
-                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != A && f(null);
+                u.A.setPendingMemberVerificationRules(t.id, e), h(e), null != p && f(null);
             },
-            [A, t.id],
+            [p, t.id],
         ),
-        b = s.useCallback(
+        T = s.useCallback(
             (e) => {
                 E([...d, e]);
             },
@@ -38,7 +38,7 @@ function h(e) {
             },
             [d, E],
         ),
-        T = s.useCallback(
+        I = s.useCallback(
             (e, t) => {
                 if (d[e] === t) return;
                 let n = [...d];
@@ -46,14 +46,14 @@ function h(e) {
             },
             [d, E],
         ),
-        I = s.useCallback(
+        b = s.useCallback(
             (e, t, n) => {
                 let i = d.indexOf(e),
                     s = [...d];
                 null != t && t !== i && (s.splice(i, 1), s.splice(t, 0, e), h(s)),
-                    n ? (E(s), null !== A && f(null)) : A !== t && f(t);
+                    n ? (E(s), null !== p && f(null)) : p !== t && f(t);
             },
-            [A, d, E],
+            [p, d, E],
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -65,26 +65,25 @@ function h(e) {
             }),
             d.map((e) =>
                 (0, c.Td)({
-                    dropHoveredIndex: A,
+                    dropHoveredIndex: p,
                     formField: e,
                     guild: t,
                     index: d.indexOf(e),
                     isDragEnabled: d.length > 1,
-                    submittedGuildJoinRequestsCount: p,
+                    submittedGuildJoinRequestsCount: A,
                     removeFormField: C,
-                    updateFormField: T,
-                    updateFormFieldOrder: I,
+                    updateFormField: I,
+                    updateFormFieldOrder: b,
                     canRemove: d.length > 1,
                     actionsLocation: "side",
-                    fieldStyle: r.Vf.COMPACT,
                 }),
             ),
             !N &&
                 (0, i.jsx)("div", {
                     className: x.At,
-                    children: (0, i.jsx)(o.A, { addFormField: b, guild: t, allowTerms: !j }),
+                    children: (0, i.jsx)(o.A, { addFormField: T, guild: t, allowTerms: !j }),
                 }),
-            !N && (0, i.jsx)(_, { addFormField: b }),
+            !N && (0, i.jsx)(_, { addFormField: T }),
         ],
     });
 }

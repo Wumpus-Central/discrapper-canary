@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B5: () => a, Vf: () => l, _e: () => i, i7: () => s, j5: () => o, rX: () => r });
+n.d(t, { B5: () => s, _e: () => i, i7: () => a, j5: () => o, rX: () => r });
 var r = (function (e) {
         return (
             (e.TERMS = "TERMS"),
@@ -13,7 +13,7 @@ var r = (function (e) {
     i = (function (e) {
         return (e.TIMESTAMP_DESC = "NEWEST"), (e.TIMESTAMP_ASC = "OLDEST"), e;
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e.STARTED = "STARTED"),
             (e.SUBMITTED = "SUBMITTED"),
@@ -22,12 +22,9 @@ var r = (function (e) {
             e
         );
     })({});
-function s(e) {
+function a(e) {
     return null != e && "TERMS" === e.field_type;
 }
 function o(e) {
-    return null != e && e.some((e) => !s(e));
+    return null != e && e.some((e) => !a(e));
 }
-var l = (function (e) {
-    return (e.REGULAR = "REGULAR"), (e.COMPACT = "COMPACT"), e;
-})({});
