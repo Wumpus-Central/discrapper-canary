@@ -1,10 +1,11 @@
+"use strict";
 let l;
-n.d(t, { A: () => a });
-var s = n(9302);
-function a(e, t) {
+n.d(t, { A: () => r });
+var i = n(9302);
+function r(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, s.getPID)();
+            n = (0, i.getPID)();
         return null == e || null == n
             ? null
             : l?.id === e.id && l?.pid === n
