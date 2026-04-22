@@ -2051,7 +2051,10 @@ class ew extends a.G {
         super(
             "discord_protos.discord_experimentation.v1.GuildIds",
             [{ no: 1, name: "guild_ids", kind: "scalar", repeat: 1, T: 6 }],
-            { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD" },
+            {
+                "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD",
+                "discord_protos.discord_experimentation.v1.filter_evaluation_mode": "FILTER_EVALUATION_MODE_LAZY",
+            },
         );
     }
     create(e) {
@@ -2100,7 +2103,10 @@ class eP extends a.G {
                 { no: 1, name: "min_count", kind: "message", T: () => o.ZQ },
                 { no: 2, name: "max_count", kind: "message", T: () => o.ZQ },
             ],
-            { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD" },
+            {
+                "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD",
+                "discord_protos.discord_experimentation.v1.filter_evaluation_mode": "FILTER_EVALUATION_MODE_STICKY",
+            },
         );
     }
     create(e) {
@@ -2146,7 +2152,10 @@ class ek extends a.G {
         super(
             "discord_protos.discord_experimentation.v1.GuildHasFeature",
             [{ no: 1, name: "features", kind: "scalar", repeat: 2, T: 9 }],
-            { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD" },
+            {
+                "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD",
+                "discord_protos.discord_experimentation.v1.filter_evaluation_mode": "FILTER_EVALUATION_MODE_STICKY",
+            },
         );
     }
     create(e) {
