@@ -4160,6 +4160,7 @@
   "fR1cof": "Character count, {remainingCharacters, plural, one { character} other { characters} } remaining",
   "tU6YQ7": "Message is at max length",
   "qH8uFW": "!!{count}!! characters remaining",
+  "c2Jqed": "Character limit reached",
   "YSRIqa": "Message is too long",
   "/VQax8": "Chat",
   "ErXDEH": "Chats",
