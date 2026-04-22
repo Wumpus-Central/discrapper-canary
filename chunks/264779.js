@@ -103,6 +103,6 @@ function w(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
 function M(e) {
-    let { promotionPartner: t, promotionType: n } = e;
-    return n === E.pt.THIRD_PARTY_OUTBOUND_RECURRING || E.SW.has(t.toLocaleLowerCase());
+    let { promotionType: t } = e;
+    return t === E.pt.THIRD_PARTY_OUTBOUND_RECURRING;
 }
