@@ -26,23 +26,23 @@ var s = i(627968),
     j = i(946261),
     v = i(209932),
     E = i(30793),
-    N = i(189081),
-    O = i(287809),
-    w = i(97352),
-    P = i(67480),
-    k = i(954571),
-    L = i(690521),
-    G = i(45938),
-    M = i(615396),
-    D = i(427262),
-    F = i(242874),
+    O = i(189081),
+    N = i(287809),
+    P = i(97352),
+    w = i(67480),
+    L = i(954571),
+    k = i(690521),
+    M = i(45938),
+    G = i(615396),
+    F = i(427262),
+    D = i(242874),
     U = i(518926),
     H = i(75825),
     B = i(788868),
     V = i(652215),
     z = i(758836),
     $ = i(985018),
-    Q = i(930225);
+    Q = i(886898);
 let q = (t) => {
         let { openedGift: e } = t,
             { createMultipleConfettiAt: i } = n.useContext(R.x);
@@ -80,16 +80,16 @@ class J extends n.Component {
         null == t && null != e && h.Ay.fetchApplication(e.applicationId);
         let l = null != i || null != s.giftStyle,
             a = (0, A.hU)(s),
-            r = null != n ? L.Ay.getURL(n) : void 0;
+            r = null != n ? k.Ay.getURL(n) : void 0;
         this.setState({ isCustomGift: l, isCollectiblesGift: a, emojiURL: r, opened: a }), this.trackStepAnalytics();
     }
     get step() {
         let { libraryApplication: t, accepting: e, giftCode: i } = this.props,
             { error: s, accepted: n, opened: l, isCustomGift: a } = this.state;
-        return (0, G.v3)(t, i, { error: s, accepted: n, accepting: e, opened: l, isCustomGift: a });
+        return (0, M.v3)(t, i, { error: s, accepted: n, accepting: e, opened: l, isCustomGift: a });
     }
     get buttonText() {
-        return (0, G.UJ)(this.step, this.props.giftCode, { isCustomGift: this.state.isCustomGift });
+        return (0, M.UJ)(this.step, this.props.giftCode, { isCustomGift: this.state.isCustomGift });
     }
     get firstHeaderText() {
         let { isCustomGift: t, opened: e, accepted: i } = this.state,
@@ -98,11 +98,11 @@ class J extends n.Component {
         if (t && !i)
             if (!e)
                 return $.intl.formatToPlainString($.t.xHzRub, {
-                    recipientDisplayName: D.Ay.getName(O.default.getCurrentUser()),
+                    recipientDisplayName: F.Ay.getName(N.default.getCurrentUser()),
                 });
             else {
-                let t = O.default.getUser(s.userId),
-                    e = D.Ay.getName(t);
+                let t = N.default.getUser(s.userId),
+                    e = F.Ay.getName(t);
                 if (null != l)
                     switch (l) {
                         case r.R.AVATAR_DECORATION:
@@ -111,6 +111,8 @@ class J extends n.Component {
                             return $.intl.formatToPlainString($.t["1w42T2"], { sender: e });
                         case r.R.NAMEPLATE:
                             return $.intl.formatToPlainString($.t.vFiQlU, { sender: e });
+                        case r.R.PROFILE_FRAME:
+                            return $.intl.formatToPlainString($.t["UH/EQL"], { sender: e });
                         default:
                             return $.intl.formatToPlainString($.t.U4Ko2y, { sender: e });
                     }
@@ -119,12 +121,12 @@ class J extends n.Component {
                     timeInterval: n?.interval === B.WT.MONTH ? $.intl.string($.t.FPybU7) : $.intl.string($.t.tfqrhj),
                 });
             }
-        return null == this.props.sku ? null : (0, G.n$)(this.step, this.props.giftCode, this.props.sku);
+        return null == this.props.sku ? null : (0, M.n$)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = O.default.getUser(this.props.giftCode.userId);
-        return $.intl.formatToPlainString($.t.DDO4Wz, { sender: D.Ay.getName(t) });
+        let t = N.default.getUser(this.props.giftCode.userId);
+        return $.intl.formatToPlainString($.t.DDO4Wz, { sender: F.Ay.getName(t) });
     }
     get bodyText() {
         let { sku: t, accepting: e, libraryApplication: i, subscriptionPlan: s } = this.props;
@@ -132,7 +134,7 @@ class J extends n.Component {
         let { error: n, accepted: l, isCustomGift: a, opened: r } = this.state;
         return !r && a
             ? null
-            : (0, G.e_)({
+            : (0, M.e_)({
                   step: this.step,
                   sku: t,
                   libraryApplication: i,
@@ -146,7 +148,7 @@ class J extends n.Component {
     get errorMessage() {
         let { libraryApplication: t, accepting: e } = this.props,
             { error: i, accepted: s } = this.state;
-        return (0, G.u1)(t, i, s, e, this.handleGoToLibrary);
+        return (0, M.u1)(t, i, s, e, this.handleGoToLibrary);
     }
     get handleClick() {
         let { giftCode: t, onClose: e } = this.props;
@@ -181,14 +183,14 @@ class J extends n.Component {
         let { onClose: t, libraryApplication: e } = this.props;
         (0, T.pX)(V.BVt.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
     };
-    getDefaultAnimationStatus = () => (this.step === V.frR.OPEN ? F.oA.IDLE : F.oA.ACTION);
+    getDefaultAnimationStatus = () => (this.step === V.frR.OPEN ? D.oA.IDLE : D.oA.ACTION);
     getIdleAnimationStatus = () => {
-        if (this.step !== V.frR.OPEN) return F.oA.LOOP;
+        if (this.step !== V.frR.OPEN) return D.oA.LOOP;
     };
     trackStepAnalytics() {
         let { giftCode: t, customGiftMessage: e, emojiName: i, soundId: s, sku: n, analyticsLocations: l } = this.props,
             { isCustomGift: a } = this.state;
-        k.default.track(V.HAw.GIFT_ACCEPT_STEP, {
+        L.default.track(V.HAw.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             location_stack: l,
             has_custom_message: a,
@@ -214,9 +216,9 @@ class J extends n.Component {
                 emojiName: f,
                 soundId: p,
             } = this.props,
-            h = O.default.getUser(n.userId),
+            h = N.default.getUser(n.userId),
             { isCustomGift: m, isCollectiblesGift: g, accepted: A, opened: x, emojiURL: y } = this.state,
-            R = O.default.getCurrentUser(),
+            R = N.default.getCurrentUser(),
             S = this.step === V.frR.ERROR,
             T = n?.userId != null && null != R && R?.id != null && n.userId === R.id;
         switch (this.step) {
@@ -303,7 +305,7 @@ class J extends n.Component {
                                             (0, s.jsx)(u.Heading, {
                                                 id: l,
                                                 variant: "heading-md/semibold",
-                                                children: $.intl.format($.t.DDO4Wz, { sender: D.Ay.getName(h) }),
+                                                children: $.intl.format($.t.DDO4Wz, { sender: F.Ay.getName(h) }),
                                             }),
                                             (0, s.jsx)(u.Text, {
                                                 className: Q.$B,
@@ -338,17 +340,17 @@ class J extends n.Component {
         });
     }
 }
-let K = o.Ay.connectStores([N.A, P.A, m.A, E.A, w.A, c.A, g.A], (t) => {
+let K = o.Ay.connectStores([O.A, w.A, m.A, E.A, P.A, c.A, g.A], (t) => {
         let { giftCode: e } = t,
-            i = P.A.get(e.skuId),
+            i = w.A.get(e.skuId),
             s = null != i ? m.A.getApplication(i.applicationId) : null,
             n = c.A.useReducedMotion;
         return {
             sku: i,
             libraryApplication:
-                null != i && e?.entitlementBranches != null ? (0, G.YI)(e.entitlementBranches, i, N.A) : null,
+                null != i && e?.entitlementBranches != null ? (0, M.YI)(e.entitlementBranches, i, O.A) : null,
             application: s,
-            subscriptionPlan: null != e.subscriptionPlanId ? (0, M.c9)(e.subscriptionPlanId) : null,
+            subscriptionPlan: null != e.subscriptionPlanId ? (0, G.c9)(e.subscriptionPlanId) : null,
             accepting: E.A.getIsAccepting(e.code),
             useReducedMotion: n,
         };

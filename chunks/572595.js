@@ -46,7 +46,8 @@ let o = "collectibles shop product details modal",
                     n.e("98141"),
                     n.e("41595"),
                     n.e("21957"),
-                    n.e("56024"),
+                    n.e("52506"),
+                    n.e("22424"),
                 ]).then(n.bind(n, 929400));
                 return (n) =>
                     (0, i.jsx)(s.R9, {

@@ -24,8 +24,9 @@ let u = {
                     let { default: e } = await Promise.all([
                         n.e("18976"),
                         n.e("21957"),
+                        n.e("52506"),
                         n.e("58801"),
-                        n.e("55007"),
+                        n.e("70231"),
                     ]).then(n.bind(n, 225732));
                     return (n) =>
                         (0, r.jsx)(e, {
@@ -44,9 +45,13 @@ let u = {
         let { gameId: t, source: i, initialScrollOffset: s } = e;
         l(t),
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("18976"), n.e("21957"), n.e("58801"), n.e("55007")]).then(
-                    n.bind(n, 225732),
-                );
+                let { default: e } = await Promise.all([
+                    n.e("18976"),
+                    n.e("21957"),
+                    n.e("52506"),
+                    n.e("58801"),
+                    n.e("70231"),
+                ]).then(n.bind(n, 225732));
                 return (n) => (0, r.jsx)(e, { applicationId: t, source: i, initialScrollOffset: s, ...n });
             });
     },

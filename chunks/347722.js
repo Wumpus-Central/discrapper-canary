@@ -1,11 +1,14 @@
-n.d(t, { X: () => l });
-var r = n(607399),
-    a = n(993408),
-    i = n(623373),
-    s = n(561769);
-let l = (e, t) => {
-    let n = (0, a.G0)(e),
-        l = (0, a.tt)(e),
-        o = (0, i.Ab)(e);
-    return !n && !l && !o && t !== s.Hi.ORBS && !r.Fr;
+a.d(t, { X: () => u });
+var n = a(607399),
+    l = a(575593),
+    r = a(993408),
+    s = a(772427),
+    i = a(623373),
+    o = a(561769);
+let u = (e, t) => {
+    let a = (0, r.G0)(e),
+        u = (0, r.tt)(e),
+        c = (0, i.Ab)(e),
+        d = (0, s.rV)("useCanGiftProduct");
+    return !a && !u && !c && t !== o.Hi.ORBS && !n.Fr && (e.type !== l.R.PROFILE_FRAME || !!d);
 };
