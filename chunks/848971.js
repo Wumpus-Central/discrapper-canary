@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E, m: () => m });
+n.d(t, { A: () => m, m: () => h });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,9 +12,8 @@ var i = n(311907),
     d = n(603880),
     _ = n(635917),
     f = n(985018),
-    p = n(846606),
-    h = n(421361);
-function m(e) {
+    p = n(182686);
+function h(e) {
     let { disabled: t, size: n } = e,
         [s] = (0, i.yK)([c.A], () => [c.A.getCurrentDesktopIcon()]),
         a = (e) => {
@@ -43,12 +42,12 @@ function m(e) {
             ),
     });
 }
-function E(e) {
+function m(e) {
     let { className: t, disabled: n, isEditor: i, renderCTAButtons: o, iconSize: c } = e,
         d = (0, l.GV)(),
-        { ref: _, ...E } = (0, s._u)({ orientation: "horizontal", labelledBy: d });
+        { ref: _, ...m } = (0, s._u)({ orientation: "horizontal", labelledBy: d });
     return (0, r.jsx)("div", {
-        ...E,
+        ...m,
         ref: _,
         children: (0, r.jsxs)("div", {
             className: t,
@@ -74,7 +73,7 @@ function E(e) {
                                     }),
                                 (0, r.jsx)(a.Heading, {
                                     variant: "text-sm/normal",
-                                    className: h.W$,
+                                    className: p.W$,
                                     children: f.intl.string(f.t.IgENJo),
                                 }),
                             ],
@@ -87,7 +86,7 @@ function E(e) {
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, r.jsx)(m, { disabled: n, size: c }),
+                    children: (0, r.jsx)(h, { disabled: n, size: c }),
                 }),
             ],
         }),
