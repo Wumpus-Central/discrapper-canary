@@ -12171,6 +12171,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background: var(--text-status-online)
 }
 
+.dotHighContrast__6e500 {
+    background: var(--text-default)
+}
+
 .established__6e500 {
     display: flex
 }

@@ -54,7 +54,7 @@ function I(e) {
           });
 }
 function T(e) {
-    let { onlineCount: t, memberCount: n, className: i } = e;
+    let { onlineCount: t, memberCount: n, className: i, highContrast: s = !1 } = e;
     return (0, r.jsxs)("div", {
         className: a()(A.ol, i),
         children: [
@@ -64,7 +64,7 @@ function T(e) {
                     (0, r.jsx)("div", { className: A.JX }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        color: "text-subtle",
+                        color: s ? "text-default" : "text-subtle",
                         children: g.intl.format(g.t["LC+S+m"], { membersOnline: t }),
                     }),
                 ],
@@ -72,10 +72,10 @@ function T(e) {
             (0, r.jsxs)("div", {
                 className: A.Kl,
                 children: [
-                    (0, r.jsx)("div", { className: A.Om }),
+                    (0, r.jsx)("div", { className: a()(A.Om, s && A.i7) }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        color: "text-subtle",
+                        color: s ? "text-default" : "text-subtle",
                         children: g.intl.format(g.t.zRl6XR, { count: n }),
                     }),
                 ],

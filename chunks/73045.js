@@ -5,6 +5,7 @@ e.exports = {
     Kl: "memberCount__6e500",
     Om: "dot__6e500",
     JX: "dotOnline__6e500",
+    i7: "dotHighContrast__6e500",
     b5: "established__6e500",
     VW: "nameContainer__6e500",
     YS: "guildNameContainer__6e500",
