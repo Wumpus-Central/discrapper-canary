@@ -4,7 +4,6 @@ e.exports = {
     j2: "backIcon_aa7162",
     Gt: "frame_aa7162",
     Nb: "frameRounded_aa7162",
-    uk: "frameSquircle_aa7162",
-    A3: "squircleFrameInner_aa7162",
-    ZY: "iconContent_aa7162",
+    pU: "squircleIconWrapper_aa7162",
+    v9: "squircleBorder_aa7162",
 };
