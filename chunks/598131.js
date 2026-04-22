@@ -220,13 +220,7 @@ let el = (e) => {
         ),
         ez = a.useCallback(
             (e) => {
-                if ("Enter" === e.key && !eU && !eI && null != t.button) {
-                    let n = e.target;
-                    "BUTTON" !== n.tagName &&
-                        "A" !== n.tagName &&
-                        "button" !== n.getAttribute("role") &&
-                        (e.preventDefault(), eW(t.button));
-                }
+                "Enter" !== e.key || eU || eI || null == t.button || (e.preventDefault(), eW(t.button));
             },
             [eU, eI, t.button, eW],
         );
