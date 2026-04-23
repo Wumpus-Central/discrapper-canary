@@ -12,22 +12,23 @@ var r = i(627968),
     S = i(49999),
     h = i(985018);
 function I(t) {
-    let { userId: e, skuId: a, nuxGraphic: o, onNuxShow: u, location: d, onError: h } = t,
-        [I, f] = (0, c.kn)([n.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        A = I === n.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        E = s.useCallback(() => {
-            A &&
+    let { userId: e, skuId: a, nuxGraphic: o, onNuxShow: u, location: d, onAddSuccess: h, onError: I } = t,
+        [A, f] = (0, c.kn)([n.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+        E = A === n.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+        m = s.useCallback(() => {
+            E &&
                 null != o &&
                 (u?.(),
                 (0, l.openModalLazy)(async () => {
                     let { default: t } = await i.e("64581").then(i.bind(i, 38884));
                     return (e) => (0, r.jsx)(t, { ...e, graphic: o });
                 }),
-                f(S.i.USER_DISMISS));
-        }, [f, o, u, A]);
+                f(S.i.USER_DISMISS)),
+                h?.();
+        }, [f, o, u, E, h]);
     return {
-        ...(0, p.c)({ userId: e, skuId: a, location: d, onAddSuccess: E, onError: h ?? _ }),
-        isFirstTimeWishlister: A,
+        ...(0, p.c)({ userId: e, skuId: a, location: d, onAddSuccess: m, onError: I ?? _ }),
+        isFirstTimeWishlister: E,
     };
 }
 function _() {
