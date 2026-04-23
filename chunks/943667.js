@@ -1,5 +1,11 @@
-n.d(t, { A: () => i });
-var a = n(652215);
-function i(e) {
-    return e.type === a.lAJ.DEFAULT && null != e.messageReference && e.messageReference.type !== a.SH7.FORWARD;
+n.d(t, { A: () => l }), n(938796);
+var a = n(665260),
+    i = n(652215);
+function l(e) {
+    return (
+        e.type === i.lAJ.DEFAULT &&
+        (0, a.Lt)(e.flags, i.pr7.IS_CROSSPOST) &&
+        null != e.messageReference &&
+        e.messageReference.type !== i.SH7.FORWARD
+    );
 }

@@ -26,11 +26,12 @@ function c(e) {
         children: p,
         handleToggle: A,
         handleClear: I,
+        variant: T = "default",
     } = e;
     return (0, i.jsxs)(d.F, {
         ref: t,
         containerClassName: s()(u.cQ, { [u.Ij]: l }),
-        className: s()(u.Bd, { [u.ar]: _, [u.ND]: c }),
+        className: s()(u.Bd, { [u.ar]: _, [u.ND]: c, [u.O_]: "unsupported_payment_modal_card" === T }),
         "data-mana-component": "select-input-field",
         disabled: n,
         readOnly: r,

@@ -21,4 +21,5 @@ e.exports = {
     mt: "clearButton__0edde",
     kK: "hiddenVisually__0edde",
     S_: "selectDropdown__0edde",
+    O_: "variantUnsupportedPaymentModalCard__0edde",
 };

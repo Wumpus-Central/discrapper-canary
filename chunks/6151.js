@@ -81,6 +81,7 @@ function A(e) {
                     disabled: g || 0 === n.length,
                     errorMessage: S,
                     fullWidth: !0,
+                    variant: "unsupported_payment_modal_card",
                 }),
                 null != T
                     ? (0, r.jsxs)("div", {
