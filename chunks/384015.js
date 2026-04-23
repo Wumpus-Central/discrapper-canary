@@ -40,7 +40,6 @@ let d = (e) => {
               target: m,
               rel: h,
               className: n,
-              "aria-label": u.intl.string(u.t["1WjMbC"]),
               focusProps: g,
               ...x,
               children: f,
