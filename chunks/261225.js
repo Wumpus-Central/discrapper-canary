@@ -94,29 +94,46 @@ let m = 6,
     },
     A = (e) => {
         let { columns: t = 3, paginationOptions: l, children: a } = e,
-            { paginationStrategy: c = d.o.PAGINATE, perPage: i, paginationPosition: o = "bottom" } = l ?? {},
-            h = c === d.o.TRUNCATE,
-            A = Math.max(1, Math.min(m, Math.floor(t))),
-            [E, f] = n.useState(0),
-            [g, v] = n.useState(i),
-            [x, y] = n.useState(n.Children.count(a)),
-            C = n.Children.count(a),
-            S = null == i || i < 1 ? 0 : Math.ceil(C / i),
-            T = null != i && i > 0,
-            j = !h && T && S > 1;
-        (g !== i || x !== C) && (v(i), y(C), f(0));
-        let _ = n.useMemo(
-            () => (T ? (h ? n.Children.toArray(a).slice(0, i) : n.Children.toArray(a).slice(i * E, i * (E + 1))) : a),
-            [E, i, a, T, h],
-        );
+            {
+                paginationStrategy: c = d.o.PAGINATE,
+                perPage: i,
+                paginationPosition: o = "bottom",
+                scrollToTop: h = !0,
+            } = l ?? {},
+            A = c === d.o.TRUNCATE,
+            f = Math.max(1, Math.min(m, Math.floor(t))),
+            [E, g] = n.useState(0),
+            [v, x] = n.useState(i),
+            [y, C] = n.useState(n.Children.count(a)),
+            S = n.useRef(null),
+            T = n.Children.count(a),
+            j = null == i || i < 1 ? 0 : Math.ceil(T / i),
+            _ = null != i && i > 0,
+            b = !A && _ && j > 1;
+        (v !== i || y !== T) && (x(i), C(T), g(0));
+        let L = n.useCallback(
+                (e) => {
+                    g(e),
+                        setTimeout(() => {
+                            h && null != S.current && S.current.scrollIntoView({ behavior: "instant", block: "start" });
+                        }, 300);
+                },
+                [h],
+            ),
+            k = n.useMemo(
+                () =>
+                    _ ? (A ? n.Children.toArray(a).slice(0, i) : n.Children.toArray(a).slice(i * E, i * (E + 1))) : a,
+                [E, i, a, _, A],
+            );
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                j && "top" === o && (0, r.jsx)(p, { page: E, pages: S, setPage: f }),
+                b && "top" === o && (0, r.jsx)(p, { page: E, pages: j, setPage: L }),
                 (0, r.jsx)("div", {
+                    ref: S,
                     className: u.gridContainer,
-                    children: (0, r.jsx)("div", { className: s()(u.grid, u[`columns${A}`]), children: _ }),
+                    children: (0, r.jsx)("div", { className: s()(u.grid, u[`columns${f}`]), children: k }),
                 }),
-                j && "bottom" === o && (0, r.jsx)(p, { page: E, pages: S, setPage: f }),
+                b && "bottom" === o && (0, r.jsx)(p, { page: E, pages: j, setPage: L }),
             ],
         });
     };

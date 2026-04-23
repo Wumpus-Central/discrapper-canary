@@ -14,5 +14,4 @@ e.exports = {
     ZE: "products__6db1d",
     Ej: "paginationContainer__6db1d",
     cI: "bannerContainer__6db1d",
-    K6: "collectionIndexContent__6db1d",
 };

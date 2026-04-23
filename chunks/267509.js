@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     mG: "inline__6c706",
     sC: "hiddenMosaicItem__6c706",

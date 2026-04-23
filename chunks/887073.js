@@ -41,7 +41,7 @@ let x = (e) => {
                   (0, o.jsx)(h.G, { handleTransition: m, selectedTab: x }),
                   (0, o.jsx)(d.Ip, {
                       children: (0, o.jsx)("div", {
-                          className: a()(g.GS, g.rb, p.K6),
+                          className: a()(g.GS, g.rb),
                           children: (0, o.jsx)(l.Z_, {
                               tenantId: f.FYj,
                               templateId: "collection-index",
