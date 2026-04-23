@@ -113,10 +113,7 @@ let m = 6,
         (v !== i || y !== T) && (x(i), C(T), g(0));
         let L = n.useCallback(
                 (e) => {
-                    g(e),
-                        setTimeout(() => {
-                            h && null != S.current && S.current.scrollIntoView({ behavior: "instant", block: "start" });
-                        }, 300);
+                    g(e), h && null != S.current && S.current.scrollIntoView({ behavior: "instant", block: "start" });
                 },
                 [h],
             ),
