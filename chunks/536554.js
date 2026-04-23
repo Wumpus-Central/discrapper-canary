@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     N4: "note__2ef07",
     Kk: "icon__2ef07",

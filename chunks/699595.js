@@ -1,31 +1,32 @@
-n.d(t, { J: () => r, c: () => s });
-var l = n(64700),
+"use strict";
+n.d(t, { J: () => a, c: () => o });
+var r = n(64700),
     i = n(155718),
-    a = n(94420);
-let r = (e) => {
-        let t = (0, a.t4)((e) => {
+    s = n(94420);
+let a = (e) => {
+        let t = (0, s.t4)((e) => {
                 let { discountInvoicePreview: t } = e;
                 return t;
             }),
-            n = l.useMemo(
+            n = r.useMemo(
                 () =>
                     ((e, t) => {
                         if (null == e) return null;
                         let n = e.invoiceItems.find((e) => e.subscriptionPlanId === t);
                         if (null == n) return null;
-                        let l = n.discounts.find((e) => e.type === i.iS.SUBSCRIPTION_PLAN);
-                        return null != l ? l.amount : null;
+                        let r = n.discounts.find((e) => e.type === i.iS.SUBSCRIPTION_PLAN);
+                        return null != r ? r.amount : null;
                     })(t, e),
                 [t, e],
             );
         return { discountInvoicePreview: t, discountAmountOff: n };
     },
-    s = (e, t) => {
-        let n = (0, a.t4)((e) => {
+    o = (e, t) => {
+        let n = (0, s.t4)((e) => {
             let { setDiscountInvoicePreview: t } = e;
             return t;
         });
-        l.useEffect(
+        r.useEffect(
             () => (
                 t ? n(e) : n(null),
                 () => {

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__10737",
     b: "closeButton__10737",

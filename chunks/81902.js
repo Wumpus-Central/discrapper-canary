@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ui: "giftRecipientInfo__57118",
     Qs: "content__57118",

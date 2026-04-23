@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     rJ: "collection__38b7f",
     rf: "body__38b7f",

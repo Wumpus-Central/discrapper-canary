@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(64700),
     a = n(311907),
     l = n(704824),
@@ -8,17 +8,17 @@ var i = n(64700),
     c = n(287809),
     d = n(403362),
     u = n(369374),
-    _ = n(395332);
-function g(e) {
+    g = n(395332);
+function m(e) {
     let { enabled: t } = u.A.useConfig({ location: e.location }),
         n = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
-        g = (0, _.w$)({ location: e.location }),
-        f = i.useMemo(() => g?.filter((e) => e.isEligibleForSuggestions()), [g]),
-        m = i.useMemo(() => f?.map((e) => e.applicationId) ?? [], [f]),
-        x = (0, s.A)(m),
-        { tokens: p, fetched: I } = (0, l.j)(m),
+        m = (0, g.w$)({ location: e.location }),
+        _ = i.useMemo(() => m?.filter((e) => e.isEligibleForSuggestions()), [m]),
+        f = i.useMemo(() => _?.map((e) => e.applicationId) ?? [], [_]),
+        x = (0, s.A)(f),
+        { tokens: p, fetched: I } = (0, l.j)(f),
         A = (0, o.A)(n?.id),
-        h = null == n || null == f || null == p || !I;
+        h = null == n || null == _ || null == p || !I;
     return i.useMemo(
         () =>
             h
@@ -27,18 +27,16 @@ function g(e) {
                   ? { isLoading: h, suggestions: [], currentUser: n }
                   : {
                         isLoading: h,
-                        suggestions: f
-                            .map((e) => {
-                                let t = x.find((t) => t?.id === e.applicationId);
-                                return null == t ||
-                                    null == p.find((t) => t.application.id === e.applicationId) ||
-                                    null != A.find((t) => t instanceof r.R && t.applicationId === e.applicationId)
-                                    ? null
-                                    : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
-                            })
-                            .filter(d.Vq),
+                        suggestions: _.map((e) => {
+                            let t = x.find((t) => t?.id === e.applicationId);
+                            return null == t ||
+                                null == p.find((t) => t.application.id === e.applicationId) ||
+                                null != A.find((t) => t instanceof r.R && t.applicationId === e.applicationId)
+                                ? null
+                                : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
+                        }).filter(d.Vq),
                         currentUser: n,
                     },
-        [t, h, f, n, x, p, A],
+        [t, h, _, n, x, p, A],
     );
 }

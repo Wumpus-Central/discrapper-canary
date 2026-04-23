@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Zm: "childButton__3ed08",
     OH: "childContent__3ed08",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iA: "buttonIcon__92b20",
     R: "hidden__92b20",

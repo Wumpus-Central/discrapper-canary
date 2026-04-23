@@ -1,38 +1,39 @@
-i.d(t, { A: () => m });
-var s = i(627968),
-    l = i(64700),
-    a = i(192308),
-    n = i(939249),
-    r = i(65154),
-    c = i(985018),
-    o = i(853513),
-    d = i(387772),
-    u = i(519636);
-function m(e) {
-    let { guild: t, analyticsLocation: m, videoPlacement: g, sourceAnalyticsLocations: T } = e,
-        x = l.useCallback(() => {
-            (0, a.openModalLazy)(async () => {
-                let { default: e } = await i.e("64251").then(i.bind(i, 430326));
-                return (i) =>
-                    (0, s.jsx)(e, {
-                        ...i,
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(627968),
+    i = n(64700),
+    s = n(192308),
+    a = n(939249),
+    o = n(65154),
+    l = n(985018),
+    u = n(853513),
+    c = n(387772),
+    d = n(519636);
+function _(e) {
+    let { guild: t, analyticsLocation: _, videoPlacement: f, sourceAnalyticsLocations: p } = e,
+        h = i.useCallback(() => {
+            (0, s.openModalLazy)(async () => {
+                let { default: e } = await n.e("64251").then(n.bind(n, 430326));
+                return (n) =>
+                    (0, r.jsx)(e, {
+                        ...n,
                         guildId: t.id,
-                        analyticsLocation: m,
-                        videoPlacement: g,
-                        sourceAnalyticsLocations: T,
+                        analyticsLocation: _,
+                        videoPlacement: f,
+                        sourceAnalyticsLocations: p,
                     });
             });
-        }, [m, t.id, T, g]);
-    return (0, s.jsxs)(n.D, {
-        className: d.kL,
-        onClick: x,
-        "aria-label": c.intl.string(o.default["103aY+"]),
+        }, [_, t.id, p, f]);
+    return (0, r.jsxs)(a.D, {
+        className: c.kL,
+        onClick: h,
+        "aria-label": l.intl.string(u.default["103aY+"]),
         children: [
-            (0, s.jsx)("img", { alt: "", className: d.xn, src: u.A }),
-            (0, s.jsx)("div", { className: d.Lw }),
-            (0, s.jsx)("div", {
-                className: d.Rr,
-                children: (0, s.jsx)(r.S, { size: "custom", width: 76, height: 76, color: "white" }),
+            (0, r.jsx)("img", { alt: "", className: c.xn, src: d.A }),
+            (0, r.jsx)("div", { className: c.Lw }),
+            (0, r.jsx)("div", {
+                className: c.Rr,
+                children: (0, r.jsx)(o.S, { size: "custom", width: 76, height: 76, color: "white" }),
             }),
         ],
     });

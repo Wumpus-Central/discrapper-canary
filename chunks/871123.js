@@ -1,18 +1,19 @@
 "use strict";
 n.d(t, {
-    Cv: () => R,
-    NE: () => N,
+    Cv: () => O,
+    NE: () => v,
     OY: () => D,
+    Ox: () => x,
     Q6: () => L,
     Ri: () => I,
     Ye: () => w,
     bF: () => S,
-    fq: () => O,
+    fq: () => R,
     jd: () => T,
-    jz: () => v,
+    jz: () => N,
     mC: () => g,
     nG: () => P,
-    pV: () => E,
+    pV: () => m,
     sq: () => C,
     wH: () => M,
     xf: () => b,
@@ -33,8 +34,8 @@ var r = n(735438),
     f = n(832163),
     p = n(188275),
     h = n(652215),
-    m = n(818348);
-let E = d.QB ? "webp" : "jpg";
+    E = n(818348);
+let m = d.QB ? "webp" : "jpg";
 function g(e) {
     return null != e.price || null != e.prices[h.lid.DEFAULT];
 }
@@ -48,8 +49,8 @@ function A(e, t) {
             : null;
 }
 function I(e) {
-    let t = A(e, h.lid.DEFAULT) ?? { amount: 0, currency: m.Yr.USD },
-        n = A(e, h.lid.GIFT) ?? { amount: 0, currency: m.Yr.USD };
+    let t = A(e, h.lid.DEFAULT) ?? { amount: 0, currency: E.Yr.USD },
+        n = A(e, h.lid.GIFT) ?? { amount: 0, currency: E.Yr.USD };
     return t.currency !== n.currency || t.amount !== n.amount;
 }
 function T(e) {
@@ -68,10 +69,10 @@ function y() {
     let e = c.A.getGuild(p.v8);
     return null != e && e.features.has(h.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : p.Kf;
 }
-function v(e) {
+function N(e) {
     return !!f.A.getStorefrontGuildIds().has(e.id) || (e.features?.has(h.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
-function N(e) {
+function v(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
 }
 function C(e) {
@@ -98,7 +99,7 @@ function C(e) {
         storefrontPricing: null != e.storefront_pricing ? (0, o.Oj)(e.storefront_pricing) : void 0,
     };
 }
-function R(e, t) {
+function O(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -113,7 +114,7 @@ function R(e, t) {
               primaryIconLabel: n.label,
           };
 }
-function O(e) {
+function R(e) {
     let t = e?.applicationId,
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != n && null != t) return _.A.toURLSafe((0, d.YE)(t, n, 512, "webp"));
@@ -121,7 +122,7 @@ function O(e) {
 function b(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return _.A.toURLSafe(
-            (0, d.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, E),
+            (0, d.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, m),
         );
 }
 function D(e, t) {
@@ -134,7 +135,7 @@ function L(e, t) {
 }
 function w(e) {
     let t = c.A.getGuild(e);
-    return null != t && v(t);
+    return null != t && N(t);
 }
 function M(e, t, n) {
     return 0 === e.length
@@ -162,4 +163,7 @@ function P(e) {
     let t = (0, s.bG)([f.A], () => f.A.getGuildIdFromApplicationId(e)),
         n = (0, a.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
+}
+function x(e) {
+    return i().mapValues(e, (e) => ({ isEligible: e.is_eligible }));
 }

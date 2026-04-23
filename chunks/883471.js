@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => c });
-var a = n(627968);
+var l = n(627968);
 n(64700);
-var i = n(534514),
-    r = n(834730),
-    l = n(263063),
+var a = n(534514),
+    i = n(834730),
+    r = n(263063),
     s = n(71393),
     d = n(985018),
     o = n(618282);
@@ -13,29 +12,29 @@ let c = (e) => {
         n = s.A.getGuild(t.guild_id);
     return null == n
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: o.kL,
               children: [
-                  (0, a.jsx)(i.D, {
+                  (0, l.jsx)(a.D, {
                       className: o.wx,
                       variant: "heading-sm/semibold",
                       children: d.intl.string(d.t.InbJ8x),
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, l.jsxs)("div", {
                       className: o.bo,
                       children: [
-                          (0, a.jsxs)("div", {
+                          (0, l.jsxs)("div", {
                               className: o.OA,
                               children: [
-                                  (0, a.jsx)(l.Ay, { guild: n, size: l.Ay.Sizes.MINI, className: o.$f }),
-                                  (0, a.jsx)(r.E, {
+                                  (0, l.jsx)(r.Ay, { guild: n, size: r.Ay.Sizes.MINI, className: o.$f }),
+                                  (0, l.jsx)(i.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, a.jsx)(r.E, { variant: "text-md/semibold", color: "text-strong", children: t.topic }),
+                          (0, l.jsx)(i.E, { variant: "text-md/semibold", color: "text-strong", children: t.topic }),
                       ],
                   }),
               ],

@@ -1,99 +1,100 @@
+"use strict";
 n.d(t, { L: () => b });
-var l = n(627968),
+var r = n(627968),
     i = n(64700),
-    a = n(284009),
-    r = n.n(a),
-    s = n(935462),
-    o = n(546605),
+    s = n(284009),
+    a = n.n(s),
+    o = n(935462),
+    l = n(546605),
     u = n(742810),
     c = n(364995),
     d = n(558620),
-    p = n(427675),
-    m = n(584160),
-    h = n(169797),
-    A = n(94420),
-    _ = n(242874),
-    C = n(75825),
-    E = n(499369),
-    y = n(490744),
-    f = n(45938),
-    P = n(937008),
+    _ = n(427675),
+    f = n(584160),
+    p = n(169797),
+    h = n(94420),
+    E = n(242874),
+    m = n(75825),
+    g = n(499369),
+    A = n(490744),
+    I = n(45938),
+    T = n(937008),
     S = n(156312),
-    x = n(166532),
-    T = n(615310),
-    N = n(652215),
-    g = n(788868),
-    I = n(818348),
-    v = n(575650);
+    y = n(166532),
+    N = n(615310),
+    v = n(652215),
+    C = n(788868),
+    O = n(818348),
+    R = n(575650);
 function b(e) {
     let { renderHeader: t, handleClose: n } = e,
-        a = (0, A.t4)((e) => e.selectedSkuId),
+        s = (0, h.t4)((e) => e.selectedSkuId),
         {
             purchaseState: b,
-            purchaseType: R,
-            enablePremiumBrandRefresh: M,
-            isDisplayingWowMomentConfirmation: j,
-            isPremiumGroupPurchase: L,
-            isEligibleForTrial: O,
-            isEligibleForDiscount: D,
+            purchaseType: D,
+            enablePremiumBrandRefresh: L,
+            isDisplayingWowMomentConfirmation: w,
+            isPremiumGroupPurchase: M,
+            isEligibleForTrial: P,
+            isEligibleForDiscount: x,
         } = (0, S.P5)(),
-        U = (0, d.A)(),
-        w = (0, p.S3)(),
-        k = (0, T.bB)(),
+        k = (0, d.A)(),
+        U = (0, _.S3)(),
+        G = (0, N.bB)(),
         F = (0, c.P7)(),
-        { isGift: G, selectedGiftStyle: B, giftRecipient: Y } = (0, P.Pv)(),
-        W = (0, o.vg)("PaymentModalHeader"),
-        V = w?.productLine === N.EZt.COLLECTIBLES,
-        H = w?.productLine === N.EZt.SOCIAL_LAYER_GAME_ITEM,
-        K = G && (0, f.Ik)(Y) && k === x.pn.CONFIRM && null != B && !V && !H,
-        Z = null != t && null != k,
-        q = [x.pn.SKU_SELECT, x.pn.SELECT_FREE_SKU],
-        z = null != k && !q.includes(k) && null != a,
-        $ = (0, u.D7)({ location: "PaymentModalHeader" });
+        { isGift: V, selectedGiftStyle: B, giftRecipient: H } = (0, T.Pv)(),
+        j = (0, l.vg)("PaymentModalHeader"),
+        Y = U?.productLine === v.EZt.COLLECTIBLES,
+        W = U?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = V && (0, I.Ik)(H) && G === y.pn.CONFIRM && null != B && !Y && !W,
+        $ = null != t && null != G,
+        z = [y.pn.SKU_SELECT, y.pn.SELECT_FREE_SKU],
+        q = null != G && !z.includes(G) && null != s,
+        X = (0, u.D7)({ location: "PaymentModalHeader" });
     return i.useMemo(() => {
-        if (null == k) return;
-        if ($ && m.M.includes(k)) {
-            let e = (0, m.u)({
-                step: k,
-                skuId: a ?? (null != w ? w.id : null),
-                showTrialBadge: O,
-                showPromoBadge: D,
+        if (null == G) return;
+        if (X && f.M.includes(G)) {
+            let e = (0, f.u)({
+                step: G,
+                skuId: s ?? (null != U ? U.id : null),
+                showTrialBadge: P,
+                showPromoBadge: x,
                 storeCountryFromCheckoutContext: F,
-                isStoreCountryEnabled: W,
+                isStoreCountryEnabled: j,
             });
-            return (0, l.jsx)(h.s3, { ...e });
+            return (0, r.jsx)(p.s3, { ...e });
         }
         let e = null;
         return (
             K
-                ? (e = (0, l.jsxs)("div", {
-                      className: v.kL,
+                ? (e = (0, r.jsxs)("div", {
+                      className: R.kL,
                       children: [
-                          (0, l.jsx)(C.A, { defaultAnimationState: _.oA.LOOP, giftStyle: B, className: v.qq }),
-                          (0, l.jsx)(s.s_, { onClick: n, className: v.b, "data-migration-pending": !0 }),
+                          (0, r.jsx)(m.A, { defaultAnimationState: E.oA.LOOP, giftStyle: B, className: R.qq }),
+                          (0, r.jsx)(o.s_, { onClick: n, className: R.b, "data-migration-pending": !0 }),
                       ],
                   }))
-                : Z
-                  ? (e = t(U ?? null, n, k))
-                  : R === I.VV.ONE_TIME
-                    ? (e = (0, l.jsx)(y.fs, { step: k, onClose: n }))
-                    : z &&
-                      (r()(a in g.WN, `invalid sku id: ${a}`),
-                      (e = (0, l.jsx)(E.A, {
-                          currentStep: k ?? void 0,
+                : $
+                  ? (e = t(k ?? null, n, G))
+                  : D === O.VV.ONE_TIME
+                    ? (e = (0, r.jsx)(A.fs, { step: G, onClose: n }))
+                    : q &&
+                      (a()(s in C.WN, `invalid sku id: ${s}`),
+                      (e = (0, r.jsx)(g.A, {
+                          currentStep: G ?? void 0,
                           purchaseState: b,
-                          premiumType: g.WN[a],
+                          premiumType: C.WN[s],
                           onClose: n,
-                          showTrialBadge: O,
-                          showDiscountBadge: D,
-                          isGift: G,
-                          giftRecipient: Y,
-                          isEligibleForTrial: O,
-                          enablePremiumBrandRefresh: M,
-                          isDisplayingWowMomentConfirmation: j,
-                          isPremiumGroupPurchase: L,
+                          showTrialBadge: P,
+                          showDiscountBadge: x,
+                          isGift: V,
+                          giftRecipient: H,
+                          isEligibleForTrial: P,
+                          enablePremiumBrandRefresh: L,
+                          isDisplayingWowMomentConfirmation: w,
+                          isPremiumGroupPurchase: M,
                       }))),
             e
         );
-    }, [$, W, F, B, n, b, t, U, w, a, k, O, D, K, z, Z, R, G, Y, M, j, L]);
+    }, [X, j, F, B, n, b, t, k, U, s, G, P, x, K, q, $, D, V, H, L, w, M]);
 }

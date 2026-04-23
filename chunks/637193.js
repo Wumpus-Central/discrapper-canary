@@ -6,7 +6,7 @@ let l = (e) => {
     let { analyticsLocations: t, guildId: l, initialSelectedNameplate: a, stackingBehavior: r } = e;
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("76640"), n.e("23353"), n.e("87650")]).then(n.bind(n, 303318));
+            let { default: e } = await n.e("42491").then(n.bind(n, 303318));
             return (n) => (0, i.jsx)(e, { ...n, guildId: l, analyticsLocations: t, initialSelectedNameplate: a });
         },
         { stackingBehavior: r },

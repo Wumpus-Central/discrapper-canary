@@ -1,16 +1,17 @@
-n.d(t, { A: () => s });
-var a = n(64700),
-    r = n(311907),
-    l = n(451988),
-    i = n(775602),
+"use strict";
+n.d(t, { A: () => l });
+var r = n(64700),
+    i = n(311907),
+    s = n(451988),
+    a = n(775602),
     o = n(21161);
-function s(e) {
+function l(e) {
     let { enabled: t } = e,
-        n = (0, r.bG)([i.A], () => i.A.useReducedMotion),
-        s = a.useRef(null),
-        c = a.useRef(0),
-        { createMultipleConfettiAt: u } = a.useContext(o.x),
-        d = a.useMemo(
+        n = (0, i.bG)([a.A], () => a.A.useReducedMotion),
+        l = r.useRef(null),
+        u = r.useRef(0),
+        { createMultipleConfettiAt: c } = r.useContext(o.x),
+        d = r.useMemo(
             () => ({
                 size: { type: "static-random", minValue: 2, maxValue: 6 },
                 velocity: { type: "static-random", minValue: { x: -10, y: -25 }, maxValue: { x: 10, y: -5 } },
@@ -18,22 +19,22 @@ function s(e) {
             }),
             [],
         ),
-        f = a.useCallback(() => {
+        _ = r.useCallback(() => {
             if (n) return;
-            let e = s.current?.getBoundingClientRect();
-            null != e && u(e.left + e.width / 2, e.top + e.height / 2, d, 30);
-        }, [u, n, d]);
+            let e = l.current?.getBoundingClientRect();
+            null != e && c(e.left + e.width / 2, e.top + e.height / 2, d, 30);
+        }, [c, n, d]);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             if (!t || n) return;
-            let e = new l.J_(1e3, f);
+            let e = new s.J_(1e3, _);
             return e.delay(), () => e.cancel();
-        }, [t, n, f]),
+        }, [t, n, _]),
         {
-            giftButtonRef: s,
-            handleMouseEnter: a.useCallback(() => {
-                t && ((c.current += 1), c.current % 4 == 0 && f());
-            }, [t, f]),
+            giftButtonRef: l,
+            handleMouseEnter: r.useCallback(() => {
+                t && ((u.current += 1), u.current % 4 == 0 && _());
+            }, [t, _]),
         }
     );
 }

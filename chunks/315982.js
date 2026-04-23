@@ -8,7 +8,7 @@ var i = n(192308),
 function o(e) {
     (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("28367"), n.e("1143"), n.e("30943")]).then(n.bind(n, 284778));
+            let { default: e } = await n.e("1143").then(n.bind(n, 284778));
             return (t) => (0, r.jsx)(e, { ...t });
         },
         { modalKey: s.jc, onCloseRequest: a.tE, onCloseCallback: e },

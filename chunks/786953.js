@@ -1,56 +1,57 @@
-n.d(t, { Bf: () => C, J$: () => p });
-var l = n(562465),
-    r = n(73153),
-    i = n(198982),
-    s = n(626584),
-    a = n(977445),
-    o = n(67480),
+"use strict";
+n.d(t, { Bf: () => _, J$: () => f });
+var r = n(562465),
+    i = n(73153),
+    s = n(198982),
+    a = n(626584),
+    o = n(977445),
+    l = n(67480),
     u = n(728458),
-    d = n(652215);
-let c = new s.A("VirtualCurrencyActionCreators");
-async function C() {
-    r.h.wait(() => {
-        r.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
+    c = n(652215);
+let d = new a.A("VirtualCurrencyActionCreators");
+async function _() {
+    i.h.wait(() => {
+        i.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
     });
     try {
-        let e = await l.Bo.get({ url: d.Rsh.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: !1 }),
+        let e = await r.Bo.get({ url: c.Rsh.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: !1 }),
             t = e.body.balance;
-        return r.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance: t }), e.body;
+        return i.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance: t }), e.body;
     } catch (t) {
-        let e = t instanceof i.Ey ? t : new i.Ey(t);
-        r.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL", error: e });
+        let e = t instanceof s.Ey ? t : new s.Ey(t);
+        i.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL", error: e });
     }
 }
-async function p(e) {
+async function f(e) {
     let {
         skuId: t,
         loadId: n,
-        onRedeemStart: s,
-        onRedeemSucceed: p,
-        onRedeemFail: m,
-        shouldRefetchBalance: E = !0,
+        onRedeemStart: a,
+        onRedeemSucceed: f,
+        onRedeemFail: p,
+        shouldRefetchBalance: h = !0,
     } = e;
-    r.h.wait(() => {
-        r.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t });
+    i.h.wait(() => {
+        i.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t });
     }),
-        s?.();
+        a?.();
     try {
-        let e = o.A.get(t),
-            i = e?.applicationId,
-            s = null != i && (0, a.F)(i),
-            m = { checkout_session_id: n };
-        s && (m.test_mode = !0);
-        let A = (await l.Bo.post({ url: d.Rsh.VIRTUAL_CURRENCY_SKU_REDEEM(t), body: m, rejectWithError: !1 })).body;
-        if (null == A || !Array.isArray(A)) {
+        let e = l.A.get(t),
+            s = e?.applicationId,
+            a = null != s && (0, o.F)(s),
+            p = { checkout_session_id: n };
+        a && (p.test_mode = !0);
+        let E = (await r.Bo.post({ url: c.Rsh.VIRTUAL_CURRENCY_SKU_REDEEM(t), body: p, rejectWithError: !1 })).body;
+        if (null == E || !Array.isArray(E)) {
             let e = "Could not read entitlements from Virtual Currency redemption response. Response: ",
-                t = Error(e, A);
-            throw (c.error(e, A), u.A.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
+                t = Error(e, E);
+            throw (d.error(e, E), u.A.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
         }
         return (
-            r.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: t, entitlements: A }), E && C(), p?.(A), A
+            i.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: t, entitlements: E }), h && _(), f?.(E), E
         );
     } catch (n) {
-        let e = n instanceof i.Ey ? n : new i.Ey(n);
-        r.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), E && C(), m?.(e);
+        let e = n instanceof s.Ey ? n : new s.Ey(n);
+        i.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), h && _(), p?.(e);
     }
 }

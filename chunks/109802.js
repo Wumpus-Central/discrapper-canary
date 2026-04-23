@@ -1,32 +1,33 @@
-n.d(t, { e: () => A, q: () => h });
-var l = n(627968),
+"use strict";
+n.d(t, { e: () => h, q: () => p });
+var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(862482),
-    o = n(504345),
+    s = n(503698),
+    a = n.n(s),
+    o = n(862482),
+    l = n(504345),
     u = n(187322),
     c = n(235986),
     d = n(821589),
-    p = n(985018),
-    m = n(797525);
-let h = { DEFAULT: "default", SUCCESS: "success", ERROR: "error" };
-class A extends i.PureComponent {
+    _ = n(985018),
+    f = n(797525);
+let p = { DEFAULT: "default", SUCCESS: "success", ERROR: "error" };
+class h extends i.PureComponent {
     inputRef = i.createRef();
     containerRef = i.createRef();
-    static contextType = o.cK;
-    static defaultProps = { supportsCopy: !0, buttonColor: s.XD.PRIMARY, buttonLook: s.pR.FILLED, mode: h.DEFAULT };
-    static Modes = h;
-    static ButtonColors = s.XD;
-    static ButtonLooks = s.pR;
+    static contextType = l.cK;
+    static defaultProps = { supportsCopy: !0, buttonColor: o.XD.PRIMARY, buttonLook: o.pR.FILLED, mode: p.DEFAULT };
+    static Modes = p;
+    static ButtonColors = o.XD;
+    static ButtonLooks = o.pR;
     select() {
         this.inputRef.current?.select();
     }
     renderInput(e) {
-        let { value: t, mode: n, autoFocus: i, spellCheck: a, inputClassName: s, placeholder: o } = this.props,
+        let { value: t, mode: n, autoFocus: i, spellCheck: s, inputClassName: o, placeholder: l } = this.props,
             u = this.context?.titleId;
-        return (0, l.jsx)("input", {
-            className: r()((0, d.t)(m, "input", n), s, { [m.inputHidden]: e }),
+        return (0, r.jsx)("input", {
+            className: a()((0, d.t)(f, "input", n), o, { [f.inputHidden]: e }),
             ref: this.inputRef,
             type: "text",
             value: t,
@@ -34,62 +35,62 @@ class A extends i.PureComponent {
             readOnly: !0,
             "aria-labelledby": u,
             autoFocus: i,
-            spellCheck: a,
-            placeholder: o,
+            spellCheck: s,
+            placeholder: l,
         });
     }
     render() {
         let e,
             {
-                text: t = p.intl.string(p.t.OpuAlK),
+                text: t = _.intl.string(_.t.OpuAlK),
                 mode: n,
                 hideMessage: i,
-                className: a,
-                buttonLook: o,
-                supportsCopy: A,
-                disabled: _,
+                className: s,
+                buttonLook: l,
+                supportsCopy: h,
+                disabled: E,
             } = this.props,
-            C = null != i;
+            m = null != i;
         switch (n) {
-            case h.SUCCESS:
-                e = s.XD.GREEN;
+            case p.SUCCESS:
+                e = o.XD.GREEN;
                 break;
-            case h.ERROR:
-                e = s.XD.RED;
+            case p.ERROR:
+                e = o.XD.RED;
                 break;
             default:
                 e = this.props.buttonColor;
         }
-        return (0, l.jsx)(u.vN, {
+        return (0, r.jsx)(u.vN, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
-            children: (0, l.jsx)("div", {
-                className: r()((0, d.t)(m, "copyInput", n), a),
+            children: (0, r.jsx)("div", {
+                className: a()((0, d.t)(f, "copyInput", n), s),
                 ref: this.containerRef,
-                "data-disabled": _,
-                children: (0, l.jsxs)(c.A, {
-                    className: m.layout,
+                "data-disabled": E,
+                children: (0, r.jsxs)(c.A, {
+                    className: f.layout,
                     children: [
-                        (0, l.jsxs)(c.A, {
-                            className: m.inputWrapper,
+                        (0, r.jsxs)(c.A, {
+                            className: f.inputWrapper,
                             children: [
-                                this.renderInput(C),
-                                C ? (0, l.jsx)("div", { className: m.hiddenMessage, children: i }) : null,
+                                this.renderInput(m),
+                                m ? (0, r.jsx)("div", { className: f.hiddenMessage, children: i }) : null,
                             ],
                         }),
-                        A
-                            ? (0, l.jsx)(c.A, {
+                        h
+                            ? (0, r.jsx)(c.A, {
                                   shrink: 1,
                                   grow: 0,
                                   style: { margin: 0 },
-                                  children: (0, l.jsx)(s.$n, {
+                                  children: (0, r.jsx)(o.$n, {
                                       "data-migration-pending": !0,
-                                      className: m.button,
+                                      className: f.button,
                                       onClick: this.handleButtonClick,
-                                      size: s.lO.MIN,
+                                      size: o.lO.MIN,
                                       color: e,
-                                      look: o,
-                                      disabled: _,
+                                      look: l,
+                                      disabled: E,
                                       children: t,
                                   }),
                               })

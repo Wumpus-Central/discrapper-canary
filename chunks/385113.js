@@ -1,37 +1,38 @@
-n.d(t, { A: () => A, e: () => a });
+"use strict";
+n.d(t, { A: () => E, e: () => a });
 var r,
-    l = n(311907),
-    i = n(73153),
+    i = n(311907),
+    s = n(73153),
     a =
         (((r = {}).NOT_FETCHED = "NOT_FETCHED"),
         (r.FETCHING = "FETCHING"),
         (r.SUCCESS = "SUCCESS"),
         (r.FAILURE = "FAILURE"),
         r);
-let s = [],
-    o = {},
+let o = [],
+    l = {},
     u = {},
     c = "NOT_FETCHED",
     d = [],
     _ = "NOT_FETCHED",
-    p = [];
-function h(e) {
+    f = [];
+function p(e) {
     if (0 !== Object.keys(e).length) {
         for (let [t, n] of Object.entries(e)) {
             let e = new Set(n.map((e) => e.config_id)),
-                r = o[t]?.filter((t) => !e.has(t.config_id)) ?? [];
-            o[t] = [...r, ...n];
+                r = l[t]?.filter((t) => !e.has(t.config_id)) ?? [];
+            l[t] = [...r, ...n];
         }
-        (o = { ...o }), (u = { ...u, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
+        (l = { ...l }), (u = { ...u, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-class m extends l.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
-        return o[e]?.[0] ?? void 0;
+        return l[e]?.[0] ?? void 0;
     }
     getConfigs(e) {
-        return o[e] ?? s;
+        return l[e] ?? o;
     }
     getFetchState(e) {
         return u[e] ?? "NOT_FETCHED";
@@ -43,24 +44,24 @@ class m extends l.Ay.Store {
         return _;
     }
     getAllConfigsByApplication() {
-        return o;
+        return l;
     }
     getFeaturedApplicationIds() {
         return d;
     }
     getDeveloperApplicationIds() {
-        return p;
+        return f;
     }
 }
-let A = new m(i.h, {
+let E = new h(s.h, {
     LOGOUT: function () {
-        (o = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (p = []);
+        (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (f = []);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
         c = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (c = "SUCCESS"), (d = Object.keys(e.configs)), h(e.configs);
+        (c = "SUCCESS"), (d = Object.keys(e.configs)), p(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         c = "FAILURE";
@@ -69,7 +70,7 @@ let A = new m(i.h, {
         _ = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (_ = "SUCCESS"), (p = Object.keys(e.configs)), h(e.configs);
+        (_ = "SUCCESS"), (f = Object.keys(e.configs)), p(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
         _ = "FAILURE";
@@ -78,7 +79,7 @@ let A = new m(i.h, {
         u = { ...u, [e.applicationId]: "FETCHING" };
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        h({ [e.applicationId]: e.configs });
+        p({ [e.applicationId]: e.configs });
     },
     APPLICATION_WIDGET_CONFIG_FETCH_FAILURE: function (e) {
         u = { ...u, [e.applicationId]: "FAILURE" };

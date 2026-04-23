@@ -1,6 +1,5 @@
-"use strict";
-a.d(t, { U: () => i });
-var r = a(221997),
-    l = a(480773),
+a.d(t, { U: () => s });
+var l = a(221997),
+    r = a(480773),
     n = a(966739);
-let i = { title: "Featured Blocks", stories: [r.Q, l.u, n.V] };
+let s = { title: "Featured Blocks", stories: [l.Q, r.u, n.V] };

@@ -1,5 +1,6 @@
-n.d(t, { D: () => l, J: () => i });
-let l = [
+"use strict";
+n.d(t, { D: () => r, J: () => i });
+let r = [
         { label: "Alabama", value: "AL" },
         { label: "Alaska", value: "AK" },
         { label: "American Samoa", value: "AS" },
@@ -63,4 +64,4 @@ let l = [
         { label: "Wisconsin", value: "WI" },
         { label: "Wyoming", value: "WY" },
     ],
-    i = Object.freeze(l.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {}));
+    i = Object.freeze(r.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {}));

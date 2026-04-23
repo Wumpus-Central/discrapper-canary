@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iA: "buttonIcon__4151b",
     yW: "connectionInstructions__4151b",

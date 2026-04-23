@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__7c626",
     bo: "guildContainer__7c626",

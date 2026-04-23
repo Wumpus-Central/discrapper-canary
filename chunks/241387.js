@@ -1,69 +1,70 @@
-i.d(e, { A: () => h });
-var s = i(64700),
-    n = i(965609),
-    l = i(484702),
-    r = i(403431);
+"use strict";
+n.d(t, { A: () => l });
+var r = n(64700),
+    i = n(965609),
+    s = n(484702),
+    a = n(403431);
 let o = Object.freeze({
     coordsMap: {},
     visibleSections: {},
     totalHeight: 0,
     gridData: { boundaries: [], coordinates: {} },
 });
-function h(t) {
+function l(e) {
     let {
-            sections: e,
-            columns: i,
-            getItemKey: h,
+            sections: t,
+            columns: n,
+            getItemKey: l,
             getItemHeight: u,
-            getSectionHeight: d,
-            chunkSize: a = 250,
-            getScrollerState: c,
-            maxBufferWidth: g,
-            itemGutter: m,
-            removeEdgeItemGutters: p,
-            sectionGutter: f,
-            padding: b,
-            paddingVertical: H,
-            paddingHorizontal: v,
-            dir: y,
-        } = t,
-        C = (0, l.A)(),
-        G = (0, s.useRef)(o),
-        [w] = (0, s.useState)(() => new n.Ay()),
-        S = c(),
-        M = Math.min(g ?? 1 / 0, S.offsetWidth),
-        x = null != g ? Math.max(0, S.offsetWidth - g) : 0,
+            getSectionHeight: c,
+            chunkSize: d = 250,
+            getScrollerState: _,
+            maxBufferWidth: f,
+            itemGutter: p,
+            removeEdgeItemGutters: h,
+            sectionGutter: E,
+            padding: m,
+            paddingVertical: g,
+            paddingHorizontal: A,
+            dir: I,
+        } = e,
+        T = (0, s.A)(),
+        S = (0, r.useRef)(o),
+        [y] = (0, r.useState)(() => new i.Ay()),
+        N = _(),
+        v = Math.min(f ?? 1 / 0, N.offsetWidth),
+        C = null != f ? Math.max(0, N.offsetWidth - f) : 0,
         {
-            dirty: I,
+            dirty: O,
             chunkStart: R,
-            chunkEnd: P,
-            forceUpdateOnChunkChange: _,
-        } = (0, r.A)({ chunkSize: a, getScrollerState: c, forceUpdate: C });
+            chunkEnd: b,
+            forceUpdateOnChunkChange: D,
+        } = (0, a.A)({ chunkSize: d, getScrollerState: _, forceUpdate: T });
     return (
-        (G.current = (0, s.useMemo)(
+        (S.current = (0, r.useMemo)(
             () =>
-                I > 0
-                    ? G.current
-                    : (w.mergeProps({
-                          sections: e,
-                          columns: i,
-                          getItemKey: h,
+                O > 0
+                    ? S.current
+                    : (y.mergeProps({
+                          sections: t,
+                          columns: n,
+                          getItemKey: l,
                           getItemHeight: u,
-                          getSectionHeight: d,
-                          bufferWidth: M,
-                          itemGutter: m,
-                          removeEdgeItemGutters: p,
-                          sectionGutter: f,
-                          padding: b,
-                          paddingVertical: H,
-                          paddingHorizontal: v,
-                          marginLeft: x / 2,
-                          dir: y,
+                          getSectionHeight: c,
+                          bufferWidth: v,
+                          itemGutter: p,
+                          removeEdgeItemGutters: h,
+                          sectionGutter: E,
+                          padding: m,
+                          paddingVertical: g,
+                          paddingHorizontal: A,
+                          marginLeft: C / 2,
+                          dir: I,
                       }),
-                      w.computeVisibleSections(Math.max(0, R * a), P * a),
-                      w.getState()),
-            [I, w, e, i, h, u, d, R, P, a, m, p, f, b, H, v, M, x, y],
+                      y.computeVisibleSections(Math.max(0, R * d), b * d),
+                      y.getState()),
+            [O, y, t, n, l, u, c, R, b, d, p, h, E, m, g, A, v, C, I],
         )),
-        { ...G.current, masonryComputer: w, forceUpdateOnChunkChange: _, forceUpdate: C }
+        { ...S.current, masonryComputer: y, forceUpdateOnChunkChange: D, forceUpdate: T }
     );
 }

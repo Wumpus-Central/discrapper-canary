@@ -1,105 +1,106 @@
-n.d(t, { A: () => I });
-var a = n(627968);
+"use strict";
+n.d(t, { A: () => T });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    l = n.n(r),
-    i = n(834730),
-    s = n(935462),
-    o = n(235986),
+var i = n(503698),
+    s = n.n(i),
+    a = n(834730),
+    o = n(935462),
+    l = n(235986),
     u = n(224016),
     c = n(217392),
     d = n(336378),
-    m = n(183942),
-    p = n(927578),
-    _ = n(580630),
-    f = n(422936),
-    g = n(234419),
-    b = n(788868),
-    v = n(985018),
-    x = n(778167);
-let h = (e) => {
+    _ = n(183942),
+    f = n(927578),
+    p = n(580630),
+    h = n(422936),
+    E = n(234419),
+    m = n(788868),
+    g = n(985018),
+    A = n(778167);
+let I = (e) => {
         let { isTier0: t, discountAmount: n } = e,
-            r = (0, g.V)(),
-            s = null != r && r.trial_id === b.Dw,
-            o = v.intl.string(v.t.IBYG5U);
+            i = (0, E.V)(),
+            o = null != i && i.trial_id === m.Dw,
+            l = g.intl.string(g.t.IBYG5U);
         return (
             void 0 !== n
-                ? (o = v.intl.formatToPlainString(v.t.iiLbvu, { percent: n }))
-                : s && (o = v.intl.string(v.t.gtNqJQ)),
-            (0, a.jsx)("div", {
-                className: x.TX,
-                children: (0, a.jsx)(i.E, {
+                ? (l = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n }))
+                : o && (l = g.intl.string(g.t.gtNqJQ)),
+            (0, r.jsx)("div", {
+                className: A.TX,
+                children: (0, r.jsx)(a.E, {
                     variant: "text-xs/bold",
-                    className: l()(x.El, { [x.LD]: t }),
-                    children: o,
+                    className: s()(A.El, { [A.LD]: t }),
+                    children: l,
                 }),
             })
         );
     },
-    I = function (e) {
+    T = function (e) {
         let t,
             {
                 hideCloseButton: n = !1,
-                hideCloseOnFullScreen: r,
-                shouldShowPrice: i,
-                plan: g,
-                renderAnimation: I,
-                onClose: A,
+                hideCloseOnFullScreen: i,
+                shouldShowPrice: a,
+                plan: E,
+                renderAnimation: T,
+                onClose: S,
                 isGift: y,
-                upgradeToPremiumType: T,
-                className: E,
+                upgradeToPremiumType: N,
+                className: v,
                 showTrialBadge: C = !1,
-                showDiscountBadge: P = !1,
+                showDiscountBadge: O = !1,
             } = e,
-            L = T === b.PremiumTypes.TIER_2;
-        t = T === b.PremiumTypes.TIER_0 ? c.A : T === b.PremiumTypes.TIER_1 ? d.A : u.A;
-        let S = (0, f.O)(),
-            N = S?.discount?.amount;
-        return (0, a.jsxs)("div", {
+            R = N === m.PremiumTypes.TIER_2;
+        t = N === m.PremiumTypes.TIER_0 ? c.A : N === m.PremiumTypes.TIER_1 ? d.A : u.A;
+        let b = (0, h.O)(),
+            D = b?.discount?.amount;
+        return (0, r.jsxs)("div", {
             "aria-hidden": !0,
-            className: l()({ [x.y2]: !L, [x.qG]: L }, E),
+            className: s()({ [A.y2]: !R, [A.qG]: R }, v),
             children: [
-                (C || P) && (0, a.jsx)(m.A, { className: x.N8 }),
-                I(),
-                (0, a.jsxs)(o.A, {
-                    align: o.A.Align.START,
-                    justify: o.A.Justify.BETWEEN,
-                    className: x.LI,
+                (C || O) && (0, r.jsx)(_.A, { className: A.N8 }),
+                T(),
+                (0, r.jsxs)(l.A, {
+                    align: l.A.Align.START,
+                    justify: l.A.Justify.BETWEEN,
+                    className: A.LI,
                     children: [
-                        (0, a.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             children: [
-                                (0, a.jsx)(t, { className: l()(x.nr, { [x.w6]: !L }) }),
-                                (C || P) &&
-                                    (0, a.jsx)(h, {
-                                        isTier0: T === b.PremiumTypes.TIER_0,
-                                        discountAmount: P ? N : void 0,
+                                (0, r.jsx)(t, { className: s()(A.nr, { [A.w6]: !R }) }),
+                                (C || O) &&
+                                    (0, r.jsx)(I, {
+                                        isTier0: N === m.PremiumTypes.TIER_0,
+                                        discountAmount: O ? D : void 0,
                                     }),
                             ],
                         }),
                         !n &&
-                            (0, a.jsx)(s.s_, {
+                            (0, r.jsx)(o.s_, {
                                 "data-migration-pending": !0,
-                                hideOnFullscreen: r,
-                                onClick: A,
-                                className: x.b,
+                                hideOnFullscreen: i,
+                                onClick: S,
+                                className: A.b,
                             }),
                     ],
                 }),
-                i && null != g
-                    ? (0, a.jsx)("div", {
-                          className: x.q9,
+                a && null != E
+                    ? (0, r.jsx)("div", {
+                          className: A.q9,
                           children: (function (e, t) {
-                              let n = p.Ay.getDefaultPrice(e),
-                                  { intervalType: a } = p.Ay.getInterval(e),
-                                  r = (0, _.$g)(n.amount, n.currency);
-                              if (t) return r;
-                              switch (a) {
-                                  case b.WT.MONTH:
-                                      return v.intl.formatToPlainString(v.t.AbOLNu, { price: r });
-                                  case b.WT.YEAR:
-                                      return v.intl.formatToPlainString(v.t["rS8FA+"], { price: r });
+                              let n = f.Ay.getDefaultPrice(e),
+                                  { intervalType: r } = f.Ay.getInterval(e),
+                                  i = (0, p.$g)(n.amount, n.currency);
+                              if (t) return i;
+                              switch (r) {
+                                  case m.WT.MONTH:
+                                      return g.intl.formatToPlainString(g.t.AbOLNu, { price: i });
+                                  case m.WT.YEAR:
+                                      return g.intl.formatToPlainString(g.t["rS8FA+"], { price: i });
                               }
-                          })(g, y),
+                          })(E, y),
                       })
                     : null,
             ],

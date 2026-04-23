@@ -1,4 +1,3 @@
-"use strict";
 s.d(e, {
     h: () =>
         function t(e, s, r = 2) {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Kh: () => E, Rw: () => p, SP: () => m, Xw: () => g, iR: () => A, qf: () => h });
+n.d(t, { Kh: () => m, Rw: () => p, SP: () => E, Xw: () => g, dS: () => I, iR: () => A, qf: () => h });
 var r = n(562465),
     i = n(73153),
     s = n(927813),
@@ -67,10 +67,10 @@ async function h(e, t) {
         i.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: t });
     }
 }
-function m(e, t, n) {
+function E(e, t, n) {
     i.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", guildId: e, pageIndex: t, skuId: n });
 }
-async function E(e) {
+async function m(e) {
     try {
         i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: e });
         let t = (await r.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e), rejectWithError: !0 })).body;
@@ -114,6 +114,13 @@ async function g() {
                             applicationId: e.application_id,
                             gameId: e.game_id,
                         })) ?? [],
+                    announcementModalConfig:
+                        null != e.announcement_modal_config
+                            ? {
+                                  version: e.announcement_modal_config.version,
+                                  applicationId: e.announcement_modal_config.application_id,
+                              }
+                            : null,
                 },
             });
         } catch {
@@ -149,4 +156,13 @@ function A(e, t) {
                     httpStatus: e?.status,
                 });
             }));
+}
+async function I() {
+    i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START" });
+    try {
+        let e = (await r.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ELIGIBILITY, rejectWithError: !0 })).body;
+        return i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS", affinity: (0, a.Ox)(e) }), e;
+    } catch (e) {
+        return i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE" }), null;
+    }
 }

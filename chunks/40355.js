@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Y5: "widgetContainer__0ea1a",
     aK: "subtle__0ea1a",

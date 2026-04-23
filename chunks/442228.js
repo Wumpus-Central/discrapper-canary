@@ -1,55 +1,56 @@
-n.d(t, { A: () => p });
-var a = n(627968),
-    r = n(64700),
-    l = n(503698),
-    i = n.n(l),
+"use strict";
+n.d(t, { A: () => E });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
     o = n(140735),
-    s = n(707554),
-    c = n(123292),
-    u = n(688810),
+    l = n(707554),
+    u = n(123292),
+    c = n(688810),
     d = n(183555),
-    f = n(657331),
-    _ = n(389996),
-    h = n(985018),
-    A = n(851929);
-let p = r.memo(function (e) {
-    let { user: t, onClose: n, bio: l, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
-        { context: S } = (0, d.NJ)(),
-        { analyticsLocations: g } = (0, u.Ay)(),
-        b = r.useId(),
-        [x, T] = r.useState(!1),
-        [E, R] = r.useState(!1),
-        v = r.useRef(null);
-    return p || null == l || "" === l
+    _ = n(657331),
+    f = n(389996),
+    p = n(985018),
+    h = n(851929);
+let E = i.memo(function (e) {
+    let { user: t, onClose: n, bio: s, hidePersonalInformation: E, viewFullBioDisabled: m = !1 } = e,
+        { context: g } = (0, d.NJ)(),
+        { analyticsLocations: A } = (0, c.Ay)(),
+        I = i.useId(),
+        [T, S] = i.useState(!1),
+        [y, N] = i.useState(!1),
+        v = i.useRef(null);
+    return E || null == s || "" === s
         ? null
-        : (0, a.jsxs)("section", {
-              "aria-labelledby": b,
+        : (0, r.jsxs)("section", {
+              "aria-labelledby": I,
               children: [
-                  (0, a.jsx)(o.A, { children: (0, a.jsx)(s.H, { id: b, children: h.intl.string(h.t.ZzAR2Y) }) }),
-                  (0, a.jsx)("div", {
+                  (0, r.jsx)(o.A, { children: (0, r.jsx)(l.H, { id: I, children: p.intl.string(p.t.ZzAR2Y) }) }),
+                  (0, r.jsx)("div", {
                       ref: (e) => {
                           (v.current = e),
                               null == e ||
-                                  (T(!E && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && R(!0));
+                                  (S(!y && e.scrollHeight - e.clientHeight > 1),
+                                  e.getBoundingClientRect().height > 57.75 && N(!0));
                       },
-                      className: i()(A.mA, E && A.Em),
+                      className: a()(h.mA, y && h.Em),
                       onBlur: (e) => {
                           null == v.current || v.current.contains(e.relatedTarget) || (v.current.scrollTop = 0);
                       },
-                      children: (0, a.jsx)(_.A, { userBio: l, setLineClamp: !1, textColor: "text-strong" }),
+                      children: (0, r.jsx)(f.A, { userBio: s, setLineClamp: !1, textColor: "text-strong" }),
                   }),
-                  (x || E) &&
-                      (0, a.jsx)("div", {
-                          className: A.HV,
-                          children: (0, a.jsx)(c.Q, {
+                  (T || y) &&
+                      (0, r.jsx)("div", {
+                          className: h.HV,
+                          children: (0, r.jsx)(u.Q, {
                               textVariant: "text-xs/normal",
                               size: "sm",
                               variant: "secondary",
-                              text: h.intl.string(h.t.YDiPq8),
+                              text: p.intl.string(p.t.YDiPq8),
                               onClick: () => {
                                   n?.(),
-                                      (0, f.openUserProfileModal)({ ...S, userId: t.id, sourceAnalyticsLocations: g });
+                                      (0, _.openUserProfileModal)({ ...g, userId: t.id, sourceAnalyticsLocations: A });
                               },
                               disabled: m,
                           }),

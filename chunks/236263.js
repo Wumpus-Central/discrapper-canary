@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     i1: "previewContainer_d74b94",
     Ah: "effectDescriptionBorder_d74b94",

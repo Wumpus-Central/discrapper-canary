@@ -1,7 +1,8 @@
-n.d(t, { L: () => d, q: () => s });
+"use strict";
+n.d(t, { L: () => l, q: () => o });
 var r = n(281445),
     i = n(390544);
-let a = [
+let s = [
     {
         id: "1",
         name: "GameServer #1",
@@ -33,31 +34,31 @@ let a = [
         ],
     },
 ];
-function l(e, t) {
+function a(e, t) {
     return {
         id: e,
         name: t,
         provider: r.X.SHOCKBYTE,
-        plans: a,
-        baseCost: Math.min(...a.map((e) => e.cost)),
+        plans: s,
+        baseCost: Math.min(...s.map((e) => e.cost)),
         gameId: "1",
     };
 }
-let s = [
-        l("1", "GameServer Test #1"),
-        l("2", "GameServer Test #2"),
-        l("3", "GameServer Test #3"),
-        l("4", "GameServer Test #4"),
-        l("5", "GameServer Test #5"),
-        l("6", "GameServer Test #6"),
-        l("7", "GameServer Test #7"),
-        l("8", "GameServer Test #8"),
-        l("9", "GameServer Test #9"),
-        l("10", "GameServer Test #10"),
-        l("11", "GameServer Test #11"),
-        l("12", "GameServer Test #12"),
+let o = [
+        a("1", "GameServer Test #1"),
+        a("2", "GameServer Test #2"),
+        a("3", "GameServer Test #3"),
+        a("4", "GameServer Test #4"),
+        a("5", "GameServer Test #5"),
+        a("6", "GameServer Test #6"),
+        a("7", "GameServer Test #7"),
+        a("8", "GameServer Test #8"),
+        a("9", "GameServer Test #9"),
+        a("10", "GameServer Test #10"),
+        a("11", "GameServer Test #11"),
+        a("12", "GameServer Test #12"),
     ],
-    d = [
+    l = [
         {
             id: "1",
             gameId: "1",
@@ -65,8 +66,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,
@@ -81,8 +82,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,
@@ -97,8 +98,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,
@@ -113,8 +114,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,
@@ -129,8 +130,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,
@@ -145,8 +146,8 @@ let s = [
             port: "25565",
             regionId: "us-east",
             regionName: "US East",
-            planId: a[1].id,
-            planName: a[1].name,
+            planId: s[1].id,
+            planName: s[1].name,
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: i.M.ONLINE,

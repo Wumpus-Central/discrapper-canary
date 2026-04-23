@@ -1,54 +1,55 @@
-r.d(t, { A: () => _ });
-var s = r(627968),
-    l = r(64700),
-    n = r(503698),
-    i = r.n(n),
-    o = r(990078),
-    a = r(27232),
-    c = r(505930),
-    u = r(939249),
-    d = r(497685),
-    h = r(996566),
-    m = r(203982),
-    f = r(652215),
-    p = r(650583),
-    g = r(985018),
-    E = r(280312);
-let _ = l.memo(function (e) {
-    let { width: t, height: r, src: n, gifSrc: _, url: R, format: I, className: A } = e,
-        [C, v] = l.useState(!1),
-        w = (0, h.km)((0, d.xo)(R)),
-        S = w ? g.intl.string(g.t["5/NS74"]) : g.intl.string(g.t.nIH0v8),
-        y = w ? a.G : c.y;
-    l.useEffect(() => {
-        if (!C) return;
+"use strict";
+n.d(t, { A: () => g });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(27232),
+    u = n(505930),
+    c = n(939249),
+    d = n(497685),
+    _ = n(996566),
+    f = n(203982),
+    p = n(652215),
+    h = n(650583),
+    E = n(985018),
+    m = n(280312);
+let g = i.memo(function (e) {
+    let { width: t, height: n, src: s, gifSrc: g, url: A, format: I, className: T } = e,
+        [S, y] = i.useState(!1),
+        N = (0, _.km)((0, d.xo)(A)),
+        v = N ? E.intl.string(E.t["5/NS74"]) : E.intl.string(E.t.nIH0v8),
+        C = N ? l.G : u.y;
+    i.useEffect(() => {
+        if (!S) return;
         let e = setTimeout(() => {
-            v(!1);
+            y(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [C]);
-    let x = (e) => {
+    }, [S]);
+    let O = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            v(!0),
-            w
-                ? (0, d.Tr)(R)
-                : ((0, d.wg)({ url: R, src: n, gifSrc: _, width: t, height: r, format: I }),
-                  m._.dispatch(f.jej.FAVORITE_GIF));
+            y(!0),
+            N
+                ? (0, d.Tr)(A)
+                : ((0, d.wg)({ url: A, src: s, gifSrc: g, width: t, height: n, format: I }),
+                  f._.dispatch(p.jej.FAVORITE_GIF));
     };
-    return (0, s.jsx)(o.m, {
-        text: S,
-        children: (0, s.jsx)(u.D, {
-            "aria-label": S,
+    return (0, r.jsx)(o.m, {
+        text: v,
+        children: (0, r.jsx)(c.D, {
+            "aria-label": v,
             ignoreKeyPress: !0,
-            className: i()(A, E.jj, { [E.wH]: w, [E.TV]: C }),
+            className: a()(T, m.jj, { [m.wH]: N, [m.TV]: S }),
             onMouseDown: (e) => e.preventDefault(),
-            onClick: x,
+            onClick: O,
             onKeyDown: (e) => {
-                (e.key === p.dh.ENTER || e.key === p.dh.SPACE) && x(e);
+                (e.key === h.dh.ENTER || e.key === h.dh.SPACE) && O(e);
             },
             onDoubleClick: (e) => e.preventDefault(),
-            children: (0, s.jsx)(y, { color: "currentColor", className: E.Kk, size: "custom", width: 20, height: 20 }),
+            children: (0, r.jsx)(C, { color: "currentColor", className: m.Kk, size: "custom", width: 20, height: 20 }),
         }),
     });
 });

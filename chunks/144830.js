@@ -31,9 +31,9 @@ var n = s(627968),
     y = s(957153),
     k = s(577718),
     M = s(652215),
-    P = s(897513),
-    w = s(339984),
-    L = s(788868),
+    w = s(897513),
+    L = s(339984),
+    P = s(788868),
     V = s(985018),
     B = s(941531);
 function R(e) {
@@ -120,7 +120,7 @@ function H(e) {
             v &&
             (O.sF(g),
             b.default.track(M.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: L.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
+                type: P.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: A.location,
                 location_stack: h,
             }));
@@ -157,9 +157,9 @@ function W() {
 }
 function F(e) {
     let { onClick: t, tooltipText: s, disabled: l = !1 } = e,
-        i = (0, o.bG)([E.A], () => E.A.hasHotspot(P._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+        i = (0, o.bG)([E.A], () => E.A.hasHotspot(w._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function a() {
-        O.sF(P._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        O.sF(w._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let c = i ? V.intl.string(V.t["5TUJOv"]) : s;
     return (0, n.jsx)(r.m, {
@@ -195,7 +195,7 @@ function K(e) {
     return (
         (0, N.Ay)(() => {
             b.default.track(M.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: L.e.VIDEO_BACKGROUNDS_INLINE,
+                type: P.e.VIDEO_BACKGROUNDS_INLINE,
                 location: s.location,
                 location_stack: l,
             });
@@ -213,12 +213,9 @@ function z(e) {
         onClick: function () {
             (0, A.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([
-                        s.e("63070"),
-                        s.e("79149"),
-                        s.e("53653"),
-                        s.e("44322"),
-                    ]).then(s.bind(s, 551028));
+                    let { default: e } = await Promise.all([s.e("79149"), s.e("53653"), s.e("79354")]).then(
+                        s.bind(s, 551028),
+                    );
                     return (s) =>
                         (0, n.jsx)(e, {
                             maxFileSizeBytes: k.G9,
@@ -226,7 +223,7 @@ function z(e) {
                                 let { imageUri: s, file: n, isFromTenor: l } = e;
                                 return t(s, n, l);
                             },
-                            uploadType: w.HL.VIDEO_BACKGROUND,
+                            uploadType: L.HL.VIDEO_BACKGROUND,
                             filters: o,
                             modalTitle: V.intl.string(V.t.yG2pUi),
                             imageSpecifications: V.intl.string(V.t["72OaxN"]),

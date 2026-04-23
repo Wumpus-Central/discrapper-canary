@@ -1,10 +1,11 @@
-i.d(t, { E: () => o });
-var n = i(627968);
-i(64700);
-var l = i(790795),
-    r = i(786558),
-    a = i(799226);
-let s = {
+"use strict";
+n.d(t, { E: () => l });
+var r = n(627968);
+n(64700);
+var i = n(790795),
+    s = n(786558),
+    a = n(799226);
+let o = {
     Game_Server_Hosting_Main: { reducedMotion: "boolean" },
     c_chara_5: {},
     hytale_gameplay: { reducedMotion: "boolean" },
@@ -13,19 +14,19 @@ let s = {
     c_chara_2: {},
     c_chara_3: {},
 };
-function o(e) {
-    let { artboard: t = "Game_Server_Hosting_Main", stateMachine: i, ...o } = e,
-        { status: d, buffer: c } = (0, a.CE)(l.A),
-        _ = (0, a.m2)(l.A);
-    return d === a.BW.Loading
+function l(e) {
+    let { artboard: t = "Game_Server_Hosting_Main", stateMachine: n, ...l } = e,
+        { status: u, buffer: c } = (0, a.CE)(i.A),
+        d = (0, a.m2)(i.A);
+    return u === a.BW.Loading
         ? null
-        : (0, n.jsx)(r.w, {
-              ...(_ ? { key: "override" } : {}),
+        : (0, r.jsx)(s.w, {
+              ...(d ? { key: "override" } : {}),
               buffer: c,
               artboard: t,
-              stateMachine: i,
-              artboardProperties: s,
-              ...o,
+              stateMachine: n,
+              artboardProperties: o,
+              ...l,
           });
 }
-o.riveSrc = l.A;
+l.riveSrc = i.A;

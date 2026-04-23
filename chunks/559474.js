@@ -1,51 +1,52 @@
+"use strict";
 n.d(t, {
-    GF: () => b,
-    Jn: () => v,
-    KE: () => h,
-    Kx: () => m,
-    Li: () => _,
-    Ni: () => E,
-    RN: () => p,
-    aL: () => A,
-    ds: () => k,
-    eg: () => S,
-    pd: () => T,
+    GF: () => I,
+    Jn: () => E,
+    KE: () => S,
+    Kx: () => g,
+    Li: () => h,
+    Ni: () => A,
+    RN: () => _,
+    aL: () => f,
+    ds: () => w,
+    eg: () => L,
+    pd: () => v,
 }),
     n(321073);
-var a,
-    r,
-    l,
-    i = n(64700),
+var r,
+    i,
+    s,
+    a = n(64700),
     o = n(691540),
-    s = n(857250),
-    c = n(97483),
-    u = n(77350),
+    l = n(857250),
+    u = n(97483),
+    c = n(77350),
     d = n(940622),
-    p =
-        (((a = {}).CATALOG_BANNER_STATIC = "catalog_banner"),
-        (a.CATALOG_BANNER_ANIMATED = "catalog_banner_animated"),
-        (a.CATALOG_BANNER_RIVE = "catalog_banner_rive"),
-        (a.HERO_BANNER_STATIC = "hero_banner"),
-        (a.HERO_BANNER_ANIMATED = "hero_banner_animated"),
-        (a.HERO_BANNER_RIVE = "hero_rive"),
-        (a.HERO_LOGO = "hero_logo"),
-        (a.FEATURED_BLOCK = "featured_block"),
-        (a.UPSELL_BANNER = "upsell_banner"),
-        (a.UPSELL_BANNER_POPOUT = "upsell_banner_popout"),
-        (a.PDP_BACKGROUND = "pdp_bg"),
-        (a.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover"),
-        (a.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark"),
-        (a.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light"),
-        (a.SHOP_BUTTON_BG_RESTING = "shop_button_bg_resting"),
-        (a.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark"),
-        (a.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light"),
-        (a.TAB_TOOLTIP = "tab_tooltip"),
-        (a.LOGO = "logo"),
-        (a.MOBILE_BANNER = "mobile_banner"),
-        (a.MOBILE_BACKGROUND = "mobile_bg"),
-        (a.MOBILE_HERO = "mobile_hero"),
-        a);
-let A = {
+    _ =
+        (((r = {}).CATALOG_BANNER_STATIC = "catalog_banner"),
+        (r.CATALOG_BANNER_ANIMATED = "catalog_banner_animated"),
+        (r.CATALOG_BANNER_RIVE = "catalog_banner_rive"),
+        (r.HERO_BANNER_STATIC = "hero_banner"),
+        (r.HERO_BANNER_ANIMATED = "hero_banner_animated"),
+        (r.HERO_BANNER_RIVE = "hero_rive"),
+        (r.HERO_LOGO = "hero_logo"),
+        (r.FEATURED_BLOCK = "featured_block"),
+        (r.UPSELL_BANNER = "upsell_banner"),
+        (r.UPSELL_BANNER_POPOUT = "upsell_banner_popout"),
+        (r.PDP_BACKGROUND = "pdp_bg"),
+        (r.SHOP_BUTTON_BG_HOVER = "shop_button_bg_hover"),
+        (r.SHOP_BUTTON_BG_HOVER_DARK = "shop_button_bg_hover_dark"),
+        (r.SHOP_BUTTON_BG_HOVER_LIGHT = "shop_button_bg_hover_light"),
+        (r.SHOP_BUTTON_BG_RESTING = "shop_button_bg_resting"),
+        (r.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark"),
+        (r.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light"),
+        (r.TAB_TOOLTIP = "tab_tooltip"),
+        (r.LOGO = "logo"),
+        (r.MOBILE_BANNER = "mobile_banner"),
+        (r.MOBILE_BACKGROUND = "mobile_bg"),
+        (r.MOBILE_HERO = "mobile_hero"),
+        r);
+let f = {
         catalog_banner: ["jpg", "png"],
         catalog_banner_animated: ["webm"],
         catalog_banner_rive: ["riv"],
@@ -69,115 +70,115 @@ let A = {
         mobile_bg: ["jpg"],
         mobile_hero: ["jpg"],
     },
-    g = new Map(Object.values(p).flatMap((e) => A[e].map((t) => [`${e}.${t}`, e]))),
-    _ = new Set(g.keys());
-var v = (((r = {}).PROFILE_EFFECT = "profile_effect"), (r.AVATAR_DECORATION = "avatar_decoration"), r);
-let f = ".DS_Store";
-var m =
-    (((l = {}).COLLECTION = "collection"),
-    (l.AVATAR_DECORATIONS = "avatar_decorations"),
-    (l.PROFILE_EFFECTS = "profile_effects"),
-    l);
-let E = (e) => {
-        (0, o.P0)((0, s.o)(e, c.Ck.FAILURE));
+    p = new Map(Object.values(_).flatMap((e) => f[e].map((t) => [`${e}.${t}`, e]))),
+    h = new Set(p.keys());
+var E = (((i = {}).PROFILE_EFFECT = "profile_effect"), (i.AVATAR_DECORATION = "avatar_decoration"), i);
+let m = ".DS_Store";
+var g =
+    (((s = {}).COLLECTION = "collection"),
+    (s.AVATAR_DECORATIONS = "avatar_decorations"),
+    (s.PROFILE_EFFECTS = "profile_effects"),
+    s);
+let A = (e) => {
+        (0, o.P0)((0, l.o)(e, u.Ck.FAILURE));
     },
-    b = (e) => {
-        (0, o.P0)((0, s.o)(e, c.Ck.SUCCESS));
+    I = (e) => {
+        (0, o.P0)((0, l.o)(e, u.Ck.SUCCESS));
     },
-    R = (e, t) => {
+    T = (e, t) => {
         let n = new FileReader();
         (n.onload = (n) => {
             null == n.target || "string" != typeof n.target.result
-                ? E("Error uploading file. Try again!")
+                ? A("Error uploading file. Try again!")
                 : t(e, n.target.result);
         }),
             n.readAsDataURL(e);
     },
-    h = (e, t, n) => {
+    S = (e, t, n) => {
         if (0 === e.length) return void n?.("No files found!");
-        for (let n of e) R(n, t);
+        for (let n of e) T(n, t);
     },
-    O = (e, t) => `${e}/${t}`,
-    D = (e) => (0, u.tT)(e.type) || (0, u.XB)(e.type) || (0, u.XA)(e.name),
-    T = (e) => g.get(e.name) ?? null,
-    I = async (e) => {
+    y = (e, t) => `${e}/${t}`,
+    N = (e) => (0, c.tT)(e.type) || (0, c.XB)(e.type) || (0, c.XA)(e.name),
+    v = (e) => p.get(e.name) ?? null,
+    C = async (e) => {
         let t = [];
         if (e.isFile) {
             let n = await new Promise((t) => e.file(t));
-            n.name !== f && t.push(n);
+            n.name !== m && t.push(n);
         } else if (e.isDirectory) {
             let n = e.createReader(),
-                a = await new Promise((e) => n.readEntries(e)),
-                r = await Promise.all(a.map((e) => I(e)));
-            t.push(...r.flat());
+                r = await new Promise((e) => n.readEntries(e)),
+                i = await Promise.all(r.map((e) => C(e)));
+            t.push(...i.flat());
         }
         return t;
     },
-    N = (e, t, n, a) => {
-        if (t.name === f) return;
-        let r = O(e, t.name);
+    O = (e, t, n, r) => {
+        if (t.name === m) return;
+        let i = y(e, t.name);
         if ("profile_effects" === n)
-            D(t) || t.name.endsWith(".txt")
-                ? (e in a.profileEffectFilesMap || (a.profileEffectFilesMap[e] = []),
-                  a.profileEffectFilesMap[e].push(t))
-                : a.ignoredFilenames.push(O(e, t.name));
+            N(t) || t.name.endsWith(".txt")
+                ? (e in r.profileEffectFilesMap || (r.profileEffectFilesMap[e] = []),
+                  r.profileEffectFilesMap[e].push(t))
+                : r.ignoredFilenames.push(y(e, t.name));
         else
-            D(t)
+            N(t)
                 ? "collection" === n || null === n
-                    ? null != T(t)
-                        ? a.collectionFiles.push(t)
-                        : a.ignoredFilenames.push(r)
+                    ? null != v(t)
+                        ? r.collectionFiles.push(t)
+                        : r.ignoredFilenames.push(i)
                     : "avatar_decorations" === n
-                      ? a.avatarDecorationFiles.push(t)
-                      : a.ignoredFilenames.push(r)
-                : a.ignoredFilenames.push(r);
+                      ? r.avatarDecorationFiles.push(t)
+                      : r.ignoredFilenames.push(i)
+                : r.ignoredFilenames.push(i);
     },
-    C = async (e, t, n) => {
-        let a = e.createReader();
-        for (let r of await new Promise((e) => a.readEntries(e)))
-            if (r.isFile) {
-                let a = r,
-                    l = await new Promise((e) => a.file(e));
-                N(e.name, l, t, n);
+    R = async (e, t, n) => {
+        let r = e.createReader();
+        for (let i of await new Promise((e) => r.readEntries(e)))
+            if (i.isFile) {
+                let r = i,
+                    s = await new Promise((e) => r.file(e));
+                O(e.name, s, t, n);
             } else {
-                let e = await I(r);
-                n.ignoredFilenames.push(...e.map((e) => O(r.name, e.name)));
+                let e = await C(i);
+                n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
             }
     },
-    L = async (e, t) => {
+    b = async (e, t) => {
         let n = e.createReader();
-        for (let a of await new Promise((e) => n.readEntries(e)))
-            a.isDirectory
-                ? await C(a, "profile_effects", t)
-                : a.isFile && a.name !== f && t.ignoredFilenames.push(O(e.name, a.name));
+        for (let r of await new Promise((e) => n.readEntries(e)))
+            r.isDirectory
+                ? await R(r, "profile_effects", t)
+                : r.isFile && r.name !== m && t.ignoredFilenames.push(y(e.name, r.name));
     },
-    w = async (e, t) => {
+    D = async (e, t) => {
         let n = e.createReader();
         for (let e of await new Promise((e) => n.readEntries(e)))
             if (e.isDirectory) {
                 let n = e;
-                if ("collection" === n.name) await C(n, "collection", t);
-                else if ("avatar_decorations" === n.name) await C(n, "avatar_decorations", t);
-                else if ("profile_effects" === n.name) await L(n, t);
+                if ("collection" === n.name) await R(n, "collection", t);
+                else if ("avatar_decorations" === n.name) await R(n, "avatar_decorations", t);
+                else if ("profile_effects" === n.name) await b(n, t);
                 else {
-                    let e = await I(n);
-                    t.ignoredFilenames.push(...e.map((e) => O(n.name, e.name)));
+                    let e = await C(n);
+                    t.ignoredFilenames.push(...e.map((e) => y(n.name, e.name)));
                 }
             }
     },
-    S = async (e) => {
+    L = async (e) => {
         let t = { collectionFiles: [], avatarDecorationFiles: [], profileEffectFilesMap: {}, ignoredFilenames: [] };
         for (let n of e)
             if (n.isDirectory) {
                 let e = n.name;
                 "collection" === e || "avatar_decorations" === e
-                    ? await C(n, e, t)
+                    ? await R(n, e, t)
                     : "profile_effects" === e
-                      ? await L(n, t)
-                      : await w(n, t);
+                      ? await b(n, t)
+                      : await D(n, t);
             } else if (n.isFile) {
                 let e = n;
-                N("", await new Promise((t) => e.file(t)), null, t);
+                O("", await new Promise((t) => e.file(t)), null, t);
             }
         return (
             t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)),
@@ -186,43 +187,43 @@ let E = (e) => {
             t
         );
     },
-    k = () => {
-        let [e, t] = i.useState(() => ({
+    w = () => {
+        let [e, t] = a.useState(() => ({
                 collectionFiles: [],
                 avatarDecorationFiles: [],
                 profileEffectFilesMap: {},
                 ignoredFilenames: [],
             })),
-            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: a } = (0, d.JE)(),
-            r = i.useCallback(
+            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: r } = (0, d.JE)(),
+            i = a.useCallback(
                 async (e) => {
-                    let r = await S(e);
-                    t(r),
-                        (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
-                            (r.collectionFiles.forEach((e) => {
-                                R(e, (e) => {
-                                    let t = T(e);
+                    let i = await L(e);
+                    t(i),
+                        (0 !== i.collectionFiles.length || 0 !== i.avatarDecorationFiles.length) &&
+                            (i.collectionFiles.forEach((e) => {
+                                T(e, (e) => {
+                                    let t = v(e);
                                     null != t && n(t, e);
                                 });
                             }),
-                            r.avatarDecorationFiles.forEach((e) => {
-                                R(e, (e) => {
-                                    a(e);
+                            i.avatarDecorationFiles.forEach((e) => {
+                                T(e, (e) => {
+                                    r(e);
                                 });
                             }));
                 },
-                [n, a],
+                [n, r],
             ),
-            l = i.useCallback(() => {
+            s = a.useCallback(() => {
                 t((e) => ({ ...e, collectionFiles: [], avatarDecorationFiles: [], profileEffectFilesMap: {} }));
             }, []),
-            o = i.useCallback(() => {
+            o = a.useCallback(() => {
                 t((e) => ({ ...e, ignoredFilenames: [] }));
             }, []);
         return {
             ignoredFilenames: e.ignoredFilenames,
-            clearAssets: l,
+            clearAssets: s,
             clearIgnoredFilenames: o,
-            processAndUpsertAssets: r,
+            processAndUpsertAssets: i,
         };
     };

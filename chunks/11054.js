@@ -1,78 +1,79 @@
-n.d(t, { M: () => I });
-var l = n(627968),
-    r = n(64700),
-    i = n(284009),
-    s = n.n(i),
-    a = n(821609),
-    o = n(534514),
+"use strict";
+n.d(t, { M: () => N });
+var r = n(627968),
+    i = n(64700),
+    s = n(284009),
+    a = n.n(s),
+    o = n(821609),
+    l = n(534514),
     u = n(834730),
-    d = n(318254),
-    c = n(262427),
-    C = n(688810),
-    p = n(427675),
-    m = n(94420),
-    E = n(937008),
-    A = n(156312),
-    h = n(482132),
-    f = n(921925),
-    _ = n(510022),
-    g = n(317560),
+    c = n(318254),
+    d = n(262427),
+    _ = n(688810),
+    f = n(427675),
+    p = n(94420),
+    h = n(937008),
+    E = n(156312),
+    m = n(482132),
+    g = n(921925),
+    A = n(510022),
+    I = n(317560),
     T = n(366523),
     S = n(985018),
-    x = n(578909);
-function I(e) {
+    y = n(208733);
+function N(e) {
     let { handleClose: t } = e,
-        { analyticsLocations: n } = (0, C.Ay)(),
-        { selectedSkuId: i, entitlementsGranted: I } = (0, m.t4)((e) => ({
+        { analyticsLocations: n } = (0, _.Ay)(),
+        { selectedSkuId: s, entitlementsGranted: N } = (0, p.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             entitlementsGranted: e.entitlementsGranted,
         })),
-        { application: O } = (0, A.P5)(),
-        y = (0, p.gU)(),
-        { isGift: N, giftRecipient: R } = (0, E.Pv)();
-    s()(null != i, "Expected selectedSkuId"), s()(null != O, "Expected application");
-    let v = y[i];
-    s()(null != v, "Expected sku");
-    let P = I.find((e) => e.sku_id === i),
-        b = P?.metadata?.orbs_reward;
+        { application: v } = (0, E.P5)(),
+        C = (0, f.gU)(),
+        { isGift: O, giftRecipient: R } = (0, h.Pv)();
+    a()(null != s, "Expected selectedSkuId"), a()(null != v, "Expected application");
+    let b = C[s];
+    a()(null != b, "Expected sku");
+    let D = N.find((e) => e.sku_id === s),
+        L = D?.metadata?.orbs_reward;
     if (
-        (r.useEffect(() => {
-            N || ((0, g.j)(), t(), (0, _.n)({ sku: v, application: O, analyticsLocations: n, orbsReward: b }));
-        }, [N, v, O, t, n, b]),
-        !N)
+        (i.useEffect(() => {
+            O || ((0, I.j)(), t(), (0, A.n)({ sku: b, application: v, analyticsLocations: n, orbsReward: L }));
+        }, [O, b, v, t, n, L]),
+        !O)
     )
         return null;
-    let L = null != b && b > 0;
-    return (0, l.jsxs)(h.dZ, {
+    let w = null != L && L > 0;
+    return (0, r.jsxs)(m.dZ, {
         children: [
-            (0, l.jsx)(f.A, {}),
-            (0, l.jsxs)("div", {
-                className: x.EL,
+            (0, r.jsx)(g.A, {}),
+            (0, r.jsxs)("div", {
+                className: y.EL,
                 children: [
-                    (0, l.jsx)(T.e, { sku: v, shape: "square", containerClassName: x.LC }),
-                    (0, l.jsx)(o.D, {
+                    (0, r.jsx)(T.e, { sku: b, shape: "square", containerClassName: y.LC }),
+                    (0, r.jsx)(l.D, {
                         variant: "heading-xl/semibold",
-                        className: x.RS,
+                        className: y.RS,
                         children: S.intl.string(S.t["5glWta"]),
                     }),
-                    (0, l.jsx)(u.E, {
+                    (0, r.jsx)(u.E, {
                         variant: "text-md/normal",
                         children: S.intl.formatToPlainString(S.t["2VjPTw"], {
-                            itemName: v.name,
+                            itemName: b.name,
                             giftRecipient: R?.username ?? "your recipient",
                         }),
                     }),
-                    L &&
-                        (0, l.jsx)("div", {
-                            className: x.Is,
-                            children: (0, l.jsx)(c.J, {
-                                Icon: d.C,
-                                text: S.intl.format(S.t["ZV+aS9"], { orbCount: b }),
+                    w &&
+                        (0, r.jsx)("div", {
+                            className: y.Is,
+                            children: (0, r.jsx)(d.J, {
+                                Icon: c.C,
+                                text: S.intl.format(S.t["ZV+aS9"], { orbCount: L }),
                             }),
                         }),
-                    (0, l.jsx)("div", {
-                        className: x.UD,
-                        children: (0, l.jsx)(a.$, { onClick: t, text: S.intl.string(S.t.cpT0Cq), fullWidth: !0 }),
+                    (0, r.jsx)("div", {
+                        className: y.UD,
+                        children: (0, r.jsx)(o.$, { onClick: t, text: S.intl.string(S.t.cpT0Cq), fullWidth: !0 }),
                     }),
                 ],
             }),

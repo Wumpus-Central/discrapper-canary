@@ -1,4 +1,4 @@
-n.d(t, { o: () => r });
+"use strict";
 function r(e) {
     let t = e.skus
             .map((e) => {
@@ -19,3 +19,4 @@ function r(e) {
         can_market: e.tenant_metadata?.guild_monetization?.game_server?.can_market,
     };
 }
+n.d(t, { o: () => r });

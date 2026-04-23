@@ -10,7 +10,7 @@ function u(e, t) {
     let u = s.A.isBlocked(t);
     (0, i.openModalLazy)(
         async () => {
-            let { default: i } = await Promise.all([n.e("83792"), n.e("49222")]).then(n.bind(n, 552258));
+            let { default: i } = await n.e("39679").then(n.bind(n, 552258));
             return (n) => {
                 let { transitionState: s, onClose: a } = n;
                 return (0, r.jsx)(i, { channelId: e, userId: t, transitionState: s, onClose: a });

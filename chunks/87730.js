@@ -1,61 +1,62 @@
-n.d(t, { o: () => v });
-var a = n(627968),
-    r = n(64700),
-    l = n(503698),
-    i = n.n(l),
-    s = n(417597),
-    o = n(939249),
+"use strict";
+n.d(t, { o: () => g });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(417597),
+    l = n(939249),
     u = n(150934),
     c = n(289873),
     d = n(323082),
-    m = n(176095),
-    p = n(580630),
-    _ = n(327105),
-    f = n(985018),
-    g = n(677665);
-let b = (e) => e.stopPropagation(),
-    v = (e) => {
-        let { giftCardWallet: t, checked: n, onChange: l, itemAmount: v, className: x, disabled: h = !1 } = e,
-            I = (0, s.bG)([m.A], () => m.A.getBalance(t.id), [t.id]),
-            A = (0, s.bG)([m.A], () => m.A.getIsFetching(t.id), [t.id]);
-        r.useEffect(() => {
+    _ = n(176095),
+    f = n(580630),
+    p = n(327105),
+    h = n(985018),
+    E = n(677665);
+let m = (e) => e.stopPropagation(),
+    g = (e) => {
+        let { giftCardWallet: t, checked: n, onChange: s, itemAmount: g, className: A, disabled: I = !1 } = e,
+            T = (0, o.bG)([_.A], () => _.A.getBalance(t.id), [t.id]),
+            S = (0, o.bG)([_.A], () => _.A.getIsFetching(t.id), [t.id]);
+        i.useEffect(() => {
             (0, d.YP)(t.id);
         }, [t.id]);
-        let y = null == I && !A,
-            T = r.useMemo(() => {
-                if (null == I) return null;
-                let e = (0, p.$g)(I.amount, I.currency);
-                return f.intl.format(_.default["9Nb9Bz"], { amount: e });
-            }, [I]),
-            E = null != v && null != I && I.amount < v;
-        r.useEffect(() => {
-            (E || y) && n && l(!1);
-        }, [E, y, n, l]);
-        let C = h || A || E || y,
-            P = r.useCallback(() => {
-                C || l(!n);
-            }, [l, n, C]);
+        let y = null == T && !S,
+            N = i.useMemo(() => {
+                if (null == T) return null;
+                let e = (0, f.$g)(T.amount, T.currency);
+                return h.intl.format(p.default["9Nb9Bz"], { amount: e });
+            }, [T]),
+            v = null != g && null != T && T.amount < g;
+        i.useEffect(() => {
+            (v || y) && n && s(!1);
+        }, [v, y, n, s]);
+        let C = I || S || v || y,
+            O = i.useCallback(() => {
+                C || s(!n);
+            }, [s, n, C]);
         return y
             ? null
-            : (0, a.jsxs)(o.D, {
-                  className: i()(g.k, x),
-                  onClick: P,
+            : (0, r.jsxs)(l.D, {
+                  className: a()(E.k, A),
+                  onClick: O,
                   role: "checkbox",
                   "aria-checked": n,
                   "aria-disabled": C,
                   tabIndex: 0,
                   children: [
-                      (0, a.jsx)(o.D, {
-                          onClick: b,
-                          children: (0, a.jsx)(u.S, {
-                              checked: n && !E && !y,
-                              onChange: P,
+                      (0, r.jsx)(l.D, {
+                          onClick: m,
+                          children: (0, r.jsx)(u.S, {
+                              checked: n && !v && !y,
+                              onChange: O,
                               disabled: C,
-                              label: f.intl.string(_.default["febr+T"]),
-                              description: A ? void 0 : (T ?? void 0),
+                              label: h.intl.string(p.default["febr+T"]),
+                              description: S ? void 0 : (N ?? void 0),
                           }),
                       }),
-                      A && (0, a.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS }),
+                      S && (0, r.jsx)(c.y, { type: c.y.Type.PULSING_ELLIPSIS }),
                   ],
               });
     };

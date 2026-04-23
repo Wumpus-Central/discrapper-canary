@@ -35,7 +35,7 @@ let u = (e) => {
                 variant: t ? "secondary" : "active",
                 onClick: () =>
                     (0, c.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([a.e("98363"), a.e("7206")]).then(a.bind(a, 780086));
+                        let { default: e } = await a.e("98363").then(a.bind(a, 780086));
                         return (t) => (0, s.jsx)(e, { ...t });
                     }),
                 text: t ? o.intl.string(o.t.IyjHD9) : o.intl.string(o.t["KU/aN4"]),

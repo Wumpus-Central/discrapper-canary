@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { E3: () => l, KH: () => u, Vw: () => c, dJ: () => s });
-var r = n(64700),
-    i = n(870844),
-    a = n(353640);
-let s = "custom-themes-share-modal",
-    o = {
+l.d(t, { E3: () => o, KH: () => c, Vw: () => d, dJ: () => r });
+var a = l(64700),
+    n = l(870844),
+    s = l(353640);
+let r = "custom-themes-share-modal",
+    i = {
         searchText: "",
         selectedDestinations: [],
         message: {},
@@ -15,9 +14,9 @@ let s = "custom-themes-share-modal",
         sending: !1,
         canSend: () => !1,
     },
-    l = () =>
-        (0, i.y)()((e, t) => ({
-            ...o,
+    o = () =>
+        (0, n.y)()((e, t) => ({
+            ...i,
             canSend: () => !t().sending && t().selectedDestinations.length > 0,
             updateSearchText: (t) => e({ searchText: t }),
             updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
@@ -27,5 +26,5 @@ let s = "custom-themes-share-modal",
             updateMessageText: (t) => e({ messageText: t }),
             setSend: (t) => e({ send: t }),
         })),
-    u = (0, r.createContext)(null),
-    c = () => (0, a.P)((0, r.useContext)(u));
+    c = (0, a.createContext)(null),
+    d = () => (0, s.P)((0, a.useContext)(c));

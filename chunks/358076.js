@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ZK: "hero__22de7",
     Qs: "content__22de7",

@@ -44,7 +44,7 @@ function N(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = M.current;
             e ? (0, p.S1)(s, I, { track: !1 }).catch(() => t(null)) : null != s && t(null);
         }, [I]);
-    let P = (e) => {
+    let w = (e) => {
         _(e),
             (0, p.S1)(e, I, { location: y.location })
                 .then(() => C(null))
@@ -62,12 +62,10 @@ function N(e) {
                       canUseCustomBackgrounds: T,
                       customBackgroundOptions: U,
                       selectedOption: N,
-                      onSelectOption: P,
+                      onSelectOption: w,
                       onUpsellClick: () => {
                           (0, a.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([s.e("76640"), s.e("14138"), s.e("45799")]).then(
-                                  s.bind(s, 210402),
-                              );
+                              let { default: e } = await s.e("95743").then(s.bind(s, 210402));
                               return (s) =>
                                   (0, n.jsx)(e, {
                                       ...s,
@@ -81,7 +79,7 @@ function N(e) {
                           return new Promise(async (n) => {
                               try {
                                   let n = await (0, u.F9)(e, h.yZ.BACKGROUND);
-                                  P(n), (0, x.D1)(n, t.type === f.a.MP4, s), C(null);
+                                  w(n), (0, x.D1)(n, t.type === f.a.MP4, s), C(null);
                               } catch (e) {
                                   C(e.message);
                               }

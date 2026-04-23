@@ -1,27 +1,28 @@
-n.d(t, { Qf: () => x, Vm: () => f });
-var a = n(627968),
-    r = n(64700),
-    l = n(503698),
-    i = n.n(l),
-    s = n(450873),
-    o = n.n(s),
+"use strict";
+n.d(t, { Qf: () => A, Vm: () => h });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(450873),
+    l = n.n(o),
     u = n(834730),
     c = n(580630);
 n(717201);
 var d = n(381247),
-    m = n(327105),
-    p = n(985018),
-    _ = n(961100);
-function f(e) {
-    return (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)("div", { className: _.y }), (0, a.jsx)(b, { ...e })] });
+    _ = n(327105),
+    f = n(985018),
+    p = n(961100);
+function h(e) {
+    return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)("div", { className: p.y }), (0, r.jsx)(m, { ...e })] });
 }
-function g(e) {
+function E(e) {
     return "tax" === e.id;
 }
-function b(e) {
-    let { label: t, lineItems: n, currency: l, collapsedContentLabelOverride: i, defaultExpanded: s = !1 } = e,
-        m = n.length > 0,
-        { hasAdjustments: p, totalAdjustmentsOrSavings: _ } = r.useMemo(
+function m(e) {
+    let { label: t, lineItems: n, currency: s, collapsedContentLabelOverride: a, defaultExpanded: o = !1 } = e,
+        _ = n.length > 0,
+        { hasAdjustments: f, totalAdjustmentsOrSavings: p } = i.useMemo(
             () => ({
                 hasAdjustments: n.some(
                     (e) => "adjustment" === e.lineItemType || ("string" == typeof e.id && e.id.includes("adjustment")),
@@ -38,63 +39,63 @@ function b(e) {
             }),
             [n],
         ),
-        f = (function (e) {
-            let t = e.filter((e) => !(g(e) && 0 === e.amount)),
-                { tax: n = 0, other: a = 0 } = o()(t, (e) => (g(e) ? "tax" : "other"));
-            if (1 === a) {
+        h = (function (e) {
+            let t = e.filter((e) => !(E(e) && 0 === e.amount)),
+                { tax: n = 0, other: r = 0 } = l()(t, (e) => (E(e) ? "tax" : "other"));
+            if (1 === r) {
                 if (0 === n) return [];
-                if (1 === n) return [t.find(g)];
+                if (1 === n) return [t.find(E)];
             }
             return t;
         })(n);
-    if (0 === f.length) return null;
-    if (1 === f.length) {
-        let { amount: e, ...t } = f[0],
-            n = (0, c.$g)(e, l);
-        return (0, a.jsx)(d.i, { value: n, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
+    if (0 === h.length) return null;
+    if (1 === h.length) {
+        let { amount: e, ...t } = h[0],
+            n = (0, c.$g)(e, s);
+        return (0, r.jsx)(d.i, { value: n, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
     }
-    return (0, a.jsx)(d.h, {
+    return (0, r.jsx)(d.h, {
         label: t,
-        defaultExpanded: s,
-        isDisabled: !m,
+        defaultExpanded: o,
+        isDisabled: !_,
         collapsedContent:
-            null != i
-                ? (0, a.jsx)(u.E, { variant: "text-md/medium", color: "text-feedback-positive", children: i })
-                : (0, a.jsx)(v, {
-                      amount: _ < 0 ? Math.abs(_) : null,
-                      currency: l,
-                      labelType: p ? "adjustments" : "savings",
+            null != a
+                ? (0, r.jsx)(u.E, { variant: "text-md/medium", color: "text-feedback-positive", children: a })
+                : (0, r.jsx)(g, {
+                      amount: p < 0 ? Math.abs(p) : null,
+                      currency: s,
+                      labelType: f ? "adjustments" : "savings",
                   }),
-        children: f.map((e) => {
-            let { id: t, label: n, amount: r, ...i } = e,
-                s = (0, c.$g)(r, l);
-            return (0, a.jsx)(
+        children: h.map((e) => {
+            let { id: t, label: n, amount: i, ...a } = e,
+                o = (0, c.$g)(i, s);
+            return (0, r.jsx)(
                 d.i,
-                { label: n, value: s, valueColor: r < 0 ? "text-feedback-positive" : "text-muted", ...i },
+                { label: n, value: o, valueColor: i < 0 ? "text-feedback-positive" : "text-muted", ...a },
                 t,
             );
         }),
     });
 }
-function v(e) {
-    let { amount: t, currency: n, labelType: r } = e;
+function g(e) {
+    let { amount: t, currency: n, labelType: i } = e;
     if (0 === t || null == t) return null;
-    let l = (0, c.$g)(t, n);
-    return (0, a.jsx)(u.E, {
+    let s = (0, c.$g)(t, n);
+    return (0, r.jsx)(u.E, {
         variant: "text-md/medium",
         color: "text-feedback-positive",
-        children: p.intl.format("adjustments" === r ? m.default["i3Q/6S"] : m.default.pDVleg, { amount: l }),
+        children: f.intl.format("adjustments" === i ? _.default["i3Q/6S"] : _.default.pDVleg, { amount: s }),
     });
 }
-function x(e) {
-    let { label: t, value: n, className: r } = e;
-    return (0, a.jsxs)(u.E, {
+function A(e) {
+    let { label: t, value: n, className: i } = e;
+    return (0, r.jsxs)(u.E, {
         variant: "text-lg/semibold",
         color: "text-strong",
-        className: i()(_.p, r),
+        className: a()(p.p, i),
         children: [
-            (0, a.jsx)("span", { children: t ?? p.intl.string(m.default.Zxav97) }),
-            (0, a.jsx)("span", { children: n }),
+            (0, r.jsx)("span", { children: t ?? f.intl.string(_.default.Zxav97) }),
+            (0, r.jsx)("span", { children: n }),
         ],
     });
 }

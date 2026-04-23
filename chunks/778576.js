@@ -12,8 +12,8 @@ var n = a(627968),
     h = a(192308),
     f = a(140735),
     g = a(452027),
-    m = a(289873),
-    x = a(287809),
+    x = a(289873),
+    m = a(287809),
     p = a(101058),
     C = a(989299),
     E = a(348),
@@ -27,8 +27,8 @@ var y = a(985018),
 function b(e) {
     let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: s, avatarButtonRef: i } = e,
         { id: A, storageHash: h, description: f = y.intl.string(y.t.lqaIxI) } = t,
-        { avatarSrc: g, eventHandlers: m } = (0, j.A)({ avatarId: A, storageHash: h }),
-        { onMouseEnter: x, onMouseLeave: p } = m,
+        { avatarSrc: g, eventHandlers: x } = (0, j.A)({ avatarId: A, storageHash: h }),
+        { onMouseEnter: m, onMouseLeave: p } = x,
         C = l.useRef(null),
         E = f ?? h.substring(0, 6).toUpperCase(),
         N = y.intl.formatToPlainString(y.t.tmJ75y, { orderNumber: a + 1, description: E }),
@@ -38,7 +38,7 @@ function b(e) {
         children: [
             (0, n.jsx)(o.D, {
                 onClick: () => r(t),
-                onMouseEnter: x,
+                onMouseEnter: m,
                 onMouseLeave: p,
                 className: v.Hk,
                 "aria-label": N,
@@ -66,10 +66,10 @@ function b(e) {
 }
 function _(e) {
     let { avatars: t, onComplete: r, setFetchError: c, className: o } = e,
-        u = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
+        u = (0, i.bG)([m.default], () => m.default.getCurrentUser()),
         d = l.useRef([]),
         g = l.useRef(null),
-        m = l.useRef(t.length),
+        x = l.useRef(t.length),
         E = l.useRef(null),
         [j, _] = l.useState(!1),
         [F, L] = l.useState(!1),
@@ -95,14 +95,9 @@ function _(e) {
                         { filename: o, type: u } = (0, p.yM)(l, s);
                     (0, h.openModalLazy)(
                         async () => {
-                            let { default: t } = await Promise.all([
-                                a.e("24199"),
-                                a.e("55202"),
-                                a.e("51793"),
-                                a.e("29259"),
-                                a.e("74571"),
-                                a.e("69752"),
-                            ]).then(a.bind(a, 142630));
+                            let { default: t } = await Promise.all([a.e("29259"), a.e("74571"), a.e("89973")]).then(
+                                a.bind(a, 142630),
+                            );
                             return (a) =>
                                 (0, n.jsx)(t, {
                                     imageUri: i,
@@ -156,12 +151,12 @@ function _(e) {
     return (
         l.useEffect(() => {
             F ||
-                (t.length < m.current &&
+                (t.length < x.current &&
                     null != E.current &&
                     requestAnimationFrame(() => {
                         E.current?.focus();
                     }),
-                (m.current = t.length));
+                (x.current = t.length));
         }, [t.length, F]),
         (0, n.jsx)("div", {
             className: s()(v.AU, o),
@@ -227,7 +222,7 @@ function F(e) {
                 description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: 6 }),
                 errorMessage: d,
                 children: i
-                    ? (0, n.jsx)(m.y, { className: v.u1 })
+                    ? (0, n.jsx)(x.y, { className: v.u1 })
                     : (0, n.jsx)(_, {
                           avatars: r,
                           onComplete: a,

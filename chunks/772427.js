@@ -1,9 +1,10 @@
-i.d(e, { QW: () => s, rV: () => n });
-let r = (0, i(945810).mj)({
+"use strict";
+n.d(t, { QW: () => i, rV: () => s });
+let r = (0, n(945810).mj)({
         name: "2026-04-profile-frame-gifting",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    s = (t) => r.getConfig({ location: t }).enabled,
-    n = (t) => r.useConfig({ location: t }).enabled;
+    i = (e) => r.getConfig({ location: e }).enabled,
+    s = (e) => r.useConfig({ location: e }).enabled;

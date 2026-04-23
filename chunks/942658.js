@@ -1,17 +1,16 @@
-"use strict";
-r.d(t, { B: () => l });
-var i = r(311907),
-    a = r(71393),
-    n = r(60175),
-    s = r(652215);
-function l(e) {
+r.d(t, { B: () => s });
+var n = r(311907),
+    i = r(71393),
+    l = r(60175),
+    a = r(652215);
+function s(e) {
     let { guildId: t } = e;
-    return (0, i.bG)([n.A, a.A], () => {
-        let e = n.A.get(t),
+    return (0, n.bG)([l.A, i.A], () => {
+        let e = l.A.get(t),
             r = e?.guild,
-            i = a.A.getGuild(t),
-            l = i?.verificationLevel,
+            n = i.A.getGuild(t),
+            s = n?.verificationLevel,
             o = r?.verification_level;
-        return l ?? o ?? s.PvD.NONE;
+        return s ?? o ?? a.PvD.NONE;
     }, [t]);
 }

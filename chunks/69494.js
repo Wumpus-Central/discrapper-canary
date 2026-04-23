@@ -1,31 +1,32 @@
-n.d(l, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
-var s = n(503698),
-    t = n.n(s),
-    i = n(40474),
-    a = n(156312),
-    d = n(166532),
-    c = n(615310),
-    o = n(756925);
-function u(e) {
-    let { className: l, isEligibleForTrial: n = !1 } = e,
-        { step: s, breadcrumbsData: u } = (0, c.Ay)(),
-        { startedPaymentFlowWithPaymentSourcesRef: p, enablePremiumBrandRefresh: m } = (0, a.P5)();
-    if (m || null == u || 0 === u.length) return null;
-    let N = u.flatMap((e) => {
-        let l = e.useBreadcrumbLabel(n);
-        return null != l ? { id: e.id, label: l } : [];
+var i = n(503698),
+    s = n.n(i),
+    a = n(40474),
+    o = n(156312),
+    l = n(166532),
+    u = n(615310),
+    c = n(756925);
+function d(e) {
+    let { className: t, isEligibleForTrial: n = !1 } = e,
+        { step: i, breadcrumbsData: d } = (0, u.Ay)(),
+        { startedPaymentFlowWithPaymentSourcesRef: _, enablePremiumBrandRefresh: f } = (0, o.P5)();
+    if (f || null == d || 0 === d.length) return null;
+    let p = d.flatMap((e) => {
+        let t = e.useBreadcrumbLabel(n);
+        return null != t ? { id: e.id, label: t } : [];
     });
-    return 0 === N.length
+    return 0 === p.length
         ? null
-        : ((N = N.filter((e) => {
-              let l = e.id !== d.pn.ADD_PAYMENT_STEPS,
-                  r = e.id === d.pn.ADD_PAYMENT_STEPS && !p.current;
-              return !n || l || r;
+        : ((p = p.filter((e) => {
+              let t = e.id !== l.pn.ADD_PAYMENT_STEPS,
+                  r = e.id === l.pn.ADD_PAYMENT_STEPS && !_.current;
+              return !n || t || r;
           })),
           (0, r.jsx)("div", {
-              className: t()("breadcrumb", o.i, l),
-              children: (0, r.jsx)(i.A, { activeId: s, breadcrumbs: N }),
+              className: s()("breadcrumb", c.i, t),
+              children: (0, r.jsx)(a.A, { activeId: i, breadcrumbs: p }),
           }));
 }

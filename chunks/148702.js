@@ -1,44 +1,43 @@
-"use strict";
 a.d(t, { A: () => c });
-var r = a(627968),
-    l = a(64700),
+var l = a(627968),
+    r = a(64700),
     n = a(503698),
-    i = a.n(n),
-    s = a(157941),
-    o = a(752238),
-    d = a(585289);
+    s = a.n(n),
+    i = a(157941),
+    d = a(752238),
+    o = a(585289);
 function c(e) {
     let { value: t, onChange: a } = e,
         n = "json",
-        c = l.useRef(null),
-        [u, h] = l.useState("");
+        c = r.useRef(null),
+        [u, h] = r.useState("");
     return (
-        l.useEffect(() => {
-            if (null != t && o.default.hasLanguage(n)) {
-                let e = o.default.highlight(n, t, !0);
+        r.useEffect(() => {
+            if (null != t && d.default.hasLanguage(n)) {
+                let e = d.default.highlight(n, t, !0);
                 null != e ? h(e.value + "\n") : h(t + "\n");
             } else h(t + "\n");
         }, [t, n]),
-        (0, r.jsxs)("div", {
-            className: d.t,
+        (0, l.jsxs)("div", {
+            className: o.t,
             children: [
-                (0, r.jsx)("pre", {
-                    className: d.c5,
+                (0, l.jsx)("pre", {
+                    className: o.c5,
                     "aria-hidden": "true",
-                    children: (0, r.jsx)(s.l, {
+                    children: (0, l.jsx)(i.l, {
                         location: "LayoutEditor",
                         code: t,
                         lang: "json",
                         className: "hljs",
-                        children: (0, r.jsx)("code", {
-                            className: i()("hljs", n),
+                        children: (0, l.jsx)("code", {
+                            className: s()("hljs", n),
                             dangerouslySetInnerHTML: { __html: u ?? "" },
                         }),
                     }),
                 }),
-                (0, r.jsx)("textarea", {
+                (0, l.jsx)("textarea", {
                     ref: c,
-                    className: d.mW,
+                    className: o.mW,
                     value: t,
                     onChange: (e) => {
                         a(e.target.value);
@@ -51,30 +50,30 @@ function c(e) {
                     onKeyDown: (e) => {
                         if ("Tab" === e.key) {
                             e.preventDefault();
-                            let r = e.target,
-                                l = r.selectionStart,
-                                n = r.selectionEnd;
+                            let l = e.target,
+                                r = l.selectionStart,
+                                n = l.selectionEnd;
                             if (e.shiftKey) {
-                                let e = t.lastIndexOf("\n", l - 1) + 1,
-                                    r = t.indexOf("\n", l),
-                                    n = t.substring(e, -1 === r ? t.length : r),
-                                    i = 0;
+                                let e = t.lastIndexOf("\n", r - 1) + 1,
+                                    l = t.indexOf("\n", r),
+                                    n = t.substring(e, -1 === l ? t.length : l),
+                                    s = 0;
                                 for (let e = 0; e < Math.min(2, n.length); e++)
-                                    if (" " === n[e]) i++;
+                                    if (" " === n[e]) s++;
                                     else break;
-                                i > 0 &&
-                                    (a(t.substring(0, e) + t.substring(e + i)),
+                                s > 0 &&
+                                    (a(t.substring(0, e) + t.substring(e + s)),
                                     setTimeout(() => {
                                         if (null != c.current) {
-                                            let t = Math.max(e, l - i);
+                                            let t = Math.max(e, r - s);
                                             c.current.selectionStart = c.current.selectionEnd = t;
                                         }
                                     }, 0));
                             } else
-                                a(t.substring(0, l) + "  " + t.substring(n)),
+                                a(t.substring(0, r) + "  " + t.substring(n)),
                                     setTimeout(() => {
                                         null != c.current &&
-                                            (c.current.selectionStart = c.current.selectionEnd = l + 2);
+                                            (c.current.selectionStart = c.current.selectionEnd = r + 2);
                                     }, 0);
                         }
                     },

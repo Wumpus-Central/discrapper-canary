@@ -1,147 +1,148 @@
+"use strict";
 n.d(t, { A: () => v });
-var a = n(627968),
-    r = n(64700),
-    l = n(503698),
-    i = n.n(l),
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
     o = n(478437),
-    s = n(305866),
-    c = n(355622),
-    u = n(408018),
+    l = n(305866),
+    u = n(355622),
+    c = n(408018),
     d = n(133343),
-    f = n(95701),
-    _ = n(403362),
-    h = n(562153),
-    A = n(427262),
-    p = n(448613),
+    _ = n(95701),
+    f = n(403362),
+    p = n(562153),
+    h = n(427262),
+    E = n(448613),
     m = n(679492),
-    S = n(8925),
-    g = n(939496),
-    b = n(518477),
-    x = n(650583),
-    T = n(985018),
-    E = n(450262);
-let R = (0, f.createChannelRecord)({ id: "1", type: o.r.DM });
+    g = n(8925),
+    A = n(939496),
+    I = n(518477),
+    T = n(650583),
+    S = n(985018),
+    y = n(450262);
+let N = (0, _.createChannelRecord)({ id: "1", type: o.r.DM });
 function v(e) {
     let {
             user: t,
             guildId: n,
-            channelId: l,
+            channelId: s,
             sourceType: o,
-            sourceDetails: f,
+            sourceDetails: _,
             setPopoutRef: v,
             modalKey: C,
-            onAction: y,
-            onClose: j,
-            entry: I,
+            onAction: O,
+            onClose: R,
+            entry: b,
         } = e,
-        { resetInteraction: L, setInteractionToast: P } = (0, m.Pq)(),
-        { primaryColor: N } = (0, g.E)(),
-        [U, w] = r.useState(""),
-        [k, M] = r.useState((0, u.x7)(U)),
-        O = r.useRef(!1),
-        V = r.useRef(null),
-        $ = r.useCallback(
+        { resetInteraction: D, setInteractionToast: L } = (0, m.Pq)(),
+        { primaryColor: w } = (0, A.E)(),
+        [M, P] = i.useState(""),
+        [x, k] = i.useState((0, c.x7)(M)),
+        U = i.useRef(!1),
+        G = i.useRef(null),
+        F = i.useCallback(
             (e) => {
-                e.key === x.dh.ESCAPE && (e.stopPropagation(), L());
+                e.key === T.dh.ESCAPE && (e.stopPropagation(), D());
             },
-            [L],
+            [D],
         );
-    r.useEffect(() => {
-        v?.(V?.current);
-    }, [V, v]);
-    let F = async (e) => {
+    i.useEffect(() => {
+        v?.(G?.current);
+    }, [G, v]);
+    let V = async (e) => {
             if (null == e) return;
-            o === b.dS.AVATAR
-                ? y({ action: "SEND_REPLY_AVATAR" })
-                : o === b.dS.STATUS
-                  ? y({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : y({ action: "SEND_REPLY_ACTIVITY" });
+            o === I.dS.AVATAR
+                ? O({ action: "SEND_REPLY_AVATAR" })
+                : o === I.dS.STATUS
+                  ? O({ action: "SEND_REPLY_CUSTOM_STATUS" })
+                  : O({ action: "SEND_REPLY_ACTIVITY" });
             let n = ((e) => {
-                let { input: t, username: n, sourceType: a, sourceDetails: r } = e;
-                switch (a) {
-                    case b.dS.ACTIVITY:
-                        let l = T.intl.formatToPlainString(T.t.WmvMCo, { username: n }),
-                            i = `
-> ${r}`;
-                        return null != r
-                            ? `${S.c5}${l}*${i}
+                let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
+                switch (r) {
+                    case I.dS.ACTIVITY:
+                        let s = S.intl.formatToPlainString(S.t.WmvMCo, { username: n }),
+                            a = `
+> ${i}`;
+                        return null != i
+                            ? `${g.c5}${s}*${a}
 ${t}`
-                            : `${S.c5}${l}*
+                            : `${g.c5}${s}*
 ${t}`;
-                    case b.dS.AVATAR:
-                        let o = T.intl.formatToPlainString(T.t.lpaBsB, { username: n });
-                        return `${S.c5}${o}*
+                    case I.dS.AVATAR:
+                        let o = S.intl.formatToPlainString(S.t.lpaBsB, { username: n });
+                        return `${g.c5}${o}*
 ${t}`;
-                    case b.dS.STATUS:
-                        let s = T.intl.formatToPlainString(T.t.lFXgFV, { username: n }),
-                            c = `
-> ${r}`;
-                        return null != r
-                            ? `${S.c5}${s}*${c}
+                    case I.dS.STATUS:
+                        let l = S.intl.formatToPlainString(S.t.lFXgFV, { username: n }),
+                            u = `
+> ${i}`;
+                        return null != i
+                            ? `${g.c5}${l}*${u}
 ${t}`
-                            : `${S.c5}${s}*
+                            : `${g.c5}${l}*
 ${t}`;
                     default:
-                        (0, _.xb)(a);
+                        (0, f.xb)(r);
                 }
-            })({ input: e, username: A.Ay.getName(t), sourceType: o, sourceDetails: f });
-            P(null);
+            })({ input: e, username: h.Ay.getName(t), sourceType: o, sourceDetails: _ });
+            L(null);
             try {
-                await (0, p.p)({
+                await (0, E.p)({
                     userId: t.id,
                     content: n,
                     location: "UserProfileReplyPopout",
                     openChannel: !1,
                     whenReady: !1,
-                    entry: I,
+                    entry: b,
                 });
             } catch (e) {}
-            P(b.AQ.REPLY);
+            L(I.AQ.REPLY);
         },
-        D = { [E.h5]: o === b.dS.STATUS, [E.my]: o === b.dS.AVATAR, [E.Eb]: o === b.dS.ACTIVITY };
-    return (0, a.jsx)(s.l, {
-        ref: V,
-        onKeyDown: $,
-        children: (0, a.jsx)("div", {
-            className: i()(E.kL, D, { [E.GE]: null != N }),
-            children: (0, a.jsx)(d.Ay, {
+        B = { [y.h5]: o === I.dS.STATUS, [y.my]: o === I.dS.AVATAR, [y.Eb]: o === I.dS.ACTIVITY };
+    return (0, r.jsx)(l.l, {
+        ref: G,
+        onKeyDown: F,
+        children: (0, r.jsx)("div", {
+            className: a()(y.kL, B, { [y.GE]: null != w }),
+            children: (0, r.jsx)(d.Ay, {
                 parentModalKey: C,
                 emojiPickerCloseOnModalOuterClick: !0,
-                className: E.hF,
-                innerClassName: E.rn,
-                editorClassName: E.EN,
-                type: c.oU.USER_PROFILE_REPLY,
-                placeholder: T.intl.formatToPlainString(
+                className: y.hF,
+                innerClassName: y.rn,
+                editorClassName: y.EN,
+                type: u.oU.USER_PROFILE_REPLY,
+                placeholder: S.intl.formatToPlainString(
                     ((e) => {
                         switch (e) {
-                            case b.dS.ACTIVITY:
-                                return T.t.Qn081O;
-                            case b.dS.AVATAR:
-                                return T.t.xGNPFK;
-                            case b.dS.STATUS:
-                                return T.t.g9BTCM;
+                            case I.dS.ACTIVITY:
+                                return S.t.Qn081O;
+                            case I.dS.AVATAR:
+                                return S.t.xGNPFK;
+                            case I.dS.STATUS:
+                                return S.t.g9BTCM;
                             default:
-                                (0, _.xb)(e);
+                                (0, f.xb)(e);
                         }
                     })(o),
-                    { username: h.Ay.getName(n, l, t) },
+                    { username: p.Ay.getName(n, s, t) },
                 ),
-                channel: R,
-                textValue: U,
-                richValue: k,
+                channel: N,
+                textValue: M,
+                richValue: x,
                 onChange: (e, t, n) => {
-                    t !== U && (w(t), M(n));
+                    t !== M && (P(t), k(n));
                 },
-                focused: O.current,
+                focused: U.current,
                 onFocus: () => {
-                    O.current = !0;
+                    U.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
                         n = t.trim();
                     if (0 === n.length) return { shouldClear: !1, shouldRefocus: !1 };
                     try {
-                        return await F(n), L(), j?.(), { shouldClear: !0, shouldRefocus: !1 };
+                        return await V(n), D(), R?.(), { shouldClear: !0, shouldRefocus: !1 };
                     } catch {
                         return { shouldClear: !1, shouldRefocus: !1 };
                     }

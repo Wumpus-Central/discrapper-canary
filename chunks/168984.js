@@ -1,16 +1,17 @@
-n.d(t, { A: () => A });
-var l = n(627968),
+"use strict";
+n.d(t, { A: () => h });
+var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    r = n(534514),
-    s = n(834730),
-    o = n(812745),
+    s = n(311907),
+    a = n(534514),
+    o = n(834730),
+    l = n(812745),
     u = n(825755),
     c = n(682449),
     d = n(490581),
-    p = n(985018),
-    m = n(40417);
-class h extends i.PureComponent {
+    _ = n(985018),
+    f = n(40417);
+class p extends i.PureComponent {
     componentDidMount() {
         this.maybeOpenCashAppOverlay();
     }
@@ -27,36 +28,36 @@ class h extends i.PureComponent {
         let { className: e, cashAppPayComponent: t } = this.props,
             n = this.props.adyenPaymentData,
             i = n?.paymentMethod?.cashtag ?? "",
-            a = null != n && "" !== i;
-        return (0, l.jsxs)("div", {
+            s = null != n && "" !== i;
+        return (0, r.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(o.Ay, { type: o.Ay.Types.CASH_APP, size: o.y3.MEDIUM, className: m.K }),
-                a
-                    ? (0, l.jsxs)(l.Fragment, {
+                (0, r.jsx)(l.Ay, { type: l.Ay.Types.CASH_APP, size: l.y3.MEDIUM, className: f.K }),
+                s
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, l.jsx)(r.D, {
+                              (0, r.jsx)(a.D, {
                                   variant: i.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
-                                  className: m.y,
-                                  children: p.intl.format(p.t["ze/1yE"], { cashtag: i }),
+                                  className: f.y,
+                                  children: _.intl.format(_.t["ze/1yE"], { cashtag: i }),
                               }),
-                              (0, l.jsx)(s.E, {
+                              (0, r.jsx)(o.E, {
                                   variant: "text-md/medium",
-                                  className: m.y,
-                                  children: p.intl.string(p.t.VPOx7N),
+                                  className: f.y,
+                                  children: _.intl.string(_.t.VPOx7N),
                               }),
                           ],
                       })
-                    : (0, l.jsx)(s.E, {
+                    : (0, r.jsx)(o.E, {
                           variant: "text-md/medium",
-                          className: m.y,
-                          children: null == t ? p.intl.string(p.t["CgVe/w"]) : p.intl.string(p.t["1MqcjI"]),
+                          className: f.y,
+                          children: null == t ? _.intl.string(_.t["CgVe/w"]) : _.intl.string(_.t["1MqcjI"]),
                       }),
             ],
         });
     }
 }
-let A = a.Ay.connectStores([d.A, u.A], () => ({
+let h = s.Ay.connectStores([d.A, u.A], () => ({
     cashAppPayComponent: d.A.cashAppPayComponent,
     adyenPaymentData: u.A.adyenPaymentData,
-}))(h);
+}))(p);

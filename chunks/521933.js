@@ -8,7 +8,7 @@ let r = {
     openNewUserAgeGateModal: (e) => {
         (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("1143"), n.e("20969")]).then(n.bind(n, 284778));
+                let { default: e } = await n.e("1143").then(n.bind(n, 284778));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             { modalKey: l.jc, onCloseRequest: a.tE, onCloseCallback: e },

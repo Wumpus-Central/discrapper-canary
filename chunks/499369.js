@@ -1,85 +1,86 @@
-n.d(t, { A: () => b });
-var a = n(627968);
+"use strict";
+n.d(t, { A: () => m });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    l = n.n(r),
-    i = n(311907),
-    s = n(20742),
-    o = n(775602),
+var i = n(503698),
+    s = n.n(i),
+    a = n(311907),
+    o = n(20742),
+    l = n(775602),
     u = n(166532),
     c = n(45938),
     d = n(682610),
-    m = n(763795),
-    p = n(602980),
-    _ = n(788868),
-    f = n(985018),
-    g = n(156076);
-function b(e) {
+    _ = n(763795),
+    f = n(602980),
+    p = n(788868),
+    h = n(985018),
+    E = n(156076);
+function m(e) {
     let {
             currentStep: t,
             className: n,
-            purchaseState: r,
-            premiumType: b,
-            onClose: v,
-            hideCloseButton: x,
-            showTrialBadge: h,
-            showDiscountBadge: I,
-            isGift: A,
+            purchaseState: i,
+            premiumType: m,
+            onClose: g,
+            hideCloseButton: A,
+            showTrialBadge: I,
+            showDiscountBadge: T,
+            isGift: S,
             giftRecipient: y,
-            isEligibleForTrial: T,
-            enablePremiumBrandRefresh: E,
+            isEligibleForTrial: N,
+            enablePremiumBrandRefresh: v,
             forceBrandRefreshHeader: C,
-            isDisplayingWowMomentConfirmation: P,
-            isPremiumGroupPurchase: L,
+            isDisplayingWowMomentConfirmation: O,
+            isPremiumGroupPurchase: R,
         } = e,
-        S = (0, i.bG)([o.A], () => o.A.useReducedMotion);
-    return A && (0, c.Ik)(y) && t !== u.pn.CONFIRM
-        ? (0, a.jsx)(s.rQ, {
+        b = (0, a.bG)([l.A], () => l.A.useReducedMotion);
+    return S && (0, c.Ik)(y) && t !== u.pn.CONFIRM
+        ? (0, r.jsx)(o.rQ, {
               title: (() => {
                   switch (t) {
                       case u.pn.PLAN_SELECT:
-                          return b === _.PremiumTypes.TIER_0 ? f.intl.string(f.t.rk4Uu8) : f.intl.string(f.t["7YWj6+"]);
+                          return m === p.PremiumTypes.TIER_0 ? h.intl.string(h.t.rk4Uu8) : h.intl.string(h.t["7YWj6+"]);
                       case u.pn.ADD_PAYMENT_STEPS:
-                          return f.intl.string(f.t.vHqbJE);
+                          return h.intl.string(h.t.vHqbJE);
                       case u.pn.REVIEW:
-                          return f.intl.string(f.t.wKaVLC);
+                          return h.intl.string(h.t.wKaVLC);
                       default:
-                          return f.intl.string(f.t["7YWj6+"]);
+                          return h.intl.string(h.t["7YWj6+"]);
                   }
               })(),
               titleTextVariant: "heading-lg/semibold",
           })
-        : E || P
-          ? (0, a.jsx)(m.A, {
+        : v || O
+          ? (0, r.jsx)(_.A, {
                 hideCloseOnFullScreen: !0,
                 forceBrandRefreshHeader: C,
-                hideCloseButton: x,
-                upgradeToPremiumType: b,
-                onClose: v,
-                isEligibleForTrial: T,
-                showTrialBadge: h,
-                showDiscountBadge: I,
-                isPremiumGroupPurchase: L,
+                hideCloseButton: A,
+                upgradeToPremiumType: m,
+                onClose: g,
+                isEligibleForTrial: N,
+                showTrialBadge: I,
+                showDiscountBadge: T,
+                isPremiumGroupPurchase: R,
             })
-          : (0, a.jsx)("div", {
-                className: l()(g.Q$, n),
-                children: (0, a.jsx)(d.A, {
+          : (0, r.jsx)("div", {
+                className: s()(E.Q$, n),
+                children: (0, r.jsx)(d.A, {
                     hideCloseOnFullScreen: !0,
-                    hideCloseButton: x,
+                    hideCloseButton: A,
                     shouldShowPrice: !0,
-                    upgradeToPremiumType: b,
+                    upgradeToPremiumType: m,
                     renderAnimation: () =>
-                        b === _.PremiumTypes.TIER_0
-                            ? (0, a.jsx)(p.Ss, { className: g.mv, currentStep: t, purchaseState: r, pause: S })
-                            : b === _.PremiumTypes.TIER_1
-                              ? (0, a.jsx)(p.LQ, { className: g.mv, currentStep: t, purchaseState: r, pause: S })
-                              : (0, a.jsx)(p.Ec, { className: g.mv, currentStep: t, purchaseState: r, pause: S }),
+                        m === p.PremiumTypes.TIER_0
+                            ? (0, r.jsx)(f.Ss, { className: E.mv, currentStep: t, purchaseState: i, pause: b })
+                            : m === p.PremiumTypes.TIER_1
+                              ? (0, r.jsx)(f.LQ, { className: E.mv, currentStep: t, purchaseState: i, pause: b })
+                              : (0, r.jsx)(f.Ec, { className: E.mv, currentStep: t, purchaseState: i, pause: b }),
                     plan: null,
                     isGift: !1,
-                    className: g.wx,
-                    onClose: v,
-                    showTrialBadge: h,
-                    showDiscountBadge: I,
+                    className: E.wx,
+                    onClose: g,
+                    showTrialBadge: I,
+                    showDiscountBadge: T,
                 }),
             });
 }

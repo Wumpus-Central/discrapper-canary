@@ -30,34 +30,15 @@ var i = n(627968),
     L = n(576705),
     O = n(290863),
     G = n(977997),
-    D = n(954571),
-    M = n(427262),
+    M = n(954571),
+    D = n(427262),
     U = n(329554),
     P = n(402313),
     w = n(699976),
     k = n(415679),
     V = n(824078);
 let B = (0, f.Fe)({
-    createPromise: () =>
-        Promise.all([
-            n.e("61943"),
-            n.e("28367"),
-            n.e("27411"),
-            n.e("49318"),
-            n.e("12721"),
-            n.e("58283"),
-            n.e("17601"),
-            n.e("8087"),
-            n.e("55057"),
-            n.e("60471"),
-            n.e("42257"),
-            n.e("48563"),
-            n.e("27355"),
-            n.e("67876"),
-            n.e("72589"),
-            n.e("6453"),
-            n.e("20667"),
-        ]).then(n.bind(n, 93879)),
+    createPromise: () => Promise.all([n.e("13066"), n.e("20667")]).then(n.bind(n, 93879)),
     webpackId: 93879,
 });
 function H(e) {
@@ -85,7 +66,7 @@ function H(e) {
 function F(e) {
     let { user: t, guildId: n } = e,
         l = (0, r.bG)([j.Ay], () => j.Ay.getMember(n, t.id)),
-        s = M.Ay.useName(t),
+        s = D.Ay.useName(t),
         a = l?.nick ?? s,
         { avatarDecorationSrc: h, avatarSrc: A } = (0, v.A)({ userId: t.id, size: o._3.SIZE_32, guildId: n }),
         {
@@ -119,7 +100,7 @@ function W(e) {
         f = l.useMemo(() => ({ [s.guild_id]: [o.id] }), [s.guild_id, o.id]);
     (0, A.Eq)(f, "VoiceUserActivities");
     let { enabled: v } = P.A.useExperiment({ guildId: s.guild_id, location: "VoiceUserPopout" }),
-        [j, M] = (0, r.yK)(
+        [j, D] = (0, r.yK)(
             [T.A],
             () => [T.A.getStreamForUser(o.id, s.getGuildId()), T.A.getActiveStreamForUser(o.id, s.getGuildId())],
             [s, o.id],
@@ -135,15 +116,15 @@ function W(e) {
         q = (0, S.W)(),
         X = (0, N.m)({ location: "voice_channel_activities" }),
         Q = (0, r.bG)([b.A], () => b.A.getDetectableIdsToApplicationIds()),
-        J = u ?? Y,
-        Z = (0, _.m)(o, J),
+        Z = u ?? Y,
+        J = (0, _.m)(o, Z),
         $ = null != j && null != g && !K,
-        ee = $ || Z.length > 0 || z.length > 0,
+        ee = $ || J.length > 0 || z.length > 0,
         et = ee || v;
     if (
         (l.useEffect(() => {
             et &&
-                D.default.track(c.HAw.OPEN_POPOUT, {
+                M.default.track(c.HAw.OPEN_POPOUT, {
                     type: "Voice User Activities",
                     channel_id: s.id,
                     other_user_id: o.id,
@@ -157,7 +138,7 @@ function W(e) {
             $ &&
                 (0, i.jsx)(C.P, {
                     stream: j,
-                    activeStream: M,
+                    activeStream: D,
                     streamActivity: Y,
                     user: o,
                     currentUserId: W,
@@ -180,7 +161,7 @@ function W(e) {
                     e.application.id,
                 ),
             ),
-            Z.map((e) => {
+            J.map((e) => {
                 let t = q ?? e.application_id;
                 return (0, i.jsx)(
                     H,

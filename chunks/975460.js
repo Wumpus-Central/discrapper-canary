@@ -1,17 +1,18 @@
-t.d(i, { g: () => s, t: () => r });
-var n = t(64700),
-    l = t(587895),
-    a = t(223273),
-    o = t(705751);
-function r(e) {
+"use strict";
+n.d(t, { g: () => l, t: () => o });
+var r = n(64700),
+    i = n(587895),
+    s = n(223273),
+    a = n(705751);
+function o(e) {
     if (null == e) return null;
-    if (e.type !== o.S7.GAME) return e;
-    for (let i of e.linkedGames ?? []) {
-        let e = l.A.getApplication(i.id);
-        if (null != e && i.type === a.Mh.OFFICIAL) return e;
+    if (e.type !== a.S7.GAME) return e;
+    for (let t of e.linkedGames ?? []) {
+        let e = i.A.getApplication(t.id);
+        if (null != e && t.type === s.Mh.OFFICIAL) return e;
     }
     return null;
 }
-function s(e) {
-    return n.useMemo(() => r(e), [e]);
+function l(e) {
+    return r.useMemo(() => o(e), [e]);
 }

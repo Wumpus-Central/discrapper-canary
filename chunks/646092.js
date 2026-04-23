@@ -1,15 +1,14 @@
-"use strict";
-a.d(t, { A: () => s });
-var r = a(627968),
-    l = a(821609),
+a.d(t, { A: () => i });
+var l = a(627968),
+    r = a(821609),
     n = a(976860),
-    i = a(53566);
-let s = (e) => {
-    let { href: t, ctaText: a, variant: s = "secondary" } = e,
-        o = (0, i.S)(a);
-    return (0, r.jsx)(l.$, {
-        variant: s,
-        text: o,
+    s = a(53566);
+let i = (e) => {
+    let { href: t, ctaText: a, variant: i = "secondary" } = e,
+        d = (0, s.S)(a);
+    return (0, l.jsx)(r.$, {
+        variant: i,
+        text: d,
         onClick: () => {
             (0, n.pX)(t);
         },

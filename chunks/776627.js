@@ -1,13 +1,14 @@
-i.d(t, { A: () => s });
-var r = i(627968);
-i(64700);
-var n = i(953727);
+"use strict";
+n.d(t, { A: () => s });
+var r = n(627968);
+n(64700);
+var i = n(953727);
 function s(e) {
-    let { width: t = 40, height: i = 40, color: s = "currentColor", ...o } = e;
+    let { width: t = 40, height: n = 40, color: s = "currentColor", ...a } = e;
     return (0, r.jsx)("svg", {
-        ...(0, n.A)(o),
+        ...(0, i.A)(a),
         width: t,
-        height: i,
+        height: n,
         viewBox: "0 0 20 21",
         fill: s,
         xmlns: "http://www.w3.org/2000/svg",

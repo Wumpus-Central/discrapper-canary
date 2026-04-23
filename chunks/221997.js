@@ -1,52 +1,51 @@
-"use strict";
-a.d(t, { Q: () => d });
-var r = a(627968);
+a.d(t, { Q: () => o });
+var l = a(627968);
 a(64700);
-var l = a(834730),
+var r = a(834730),
     n = a(261225),
-    i = a(673277),
-    s = a(219561),
-    o = a(304973);
-let d = {
+    s = a(673277),
+    i = a(219561),
+    d = a(304973);
+let o = {
     name: "FeaturedChip",
     id: "featured-chip",
     component: (e) => {
         let { backgroundImage: t, ...a } = e,
-            d = { backgroundImage: { src: t }, ...a };
-        return (0, r.jsxs)("div", {
+            o = { backgroundImage: { src: t }, ...a };
+        return (0, l.jsxs)("div", {
             children: [
-                (0, r.jsx)(l.E, {
+                (0, l.jsx)(r.E, {
                     variant: "text-lg/semibold",
                     children:
                         "Featured Chip will take up the full width of the parent, so it is best suited for CmsStack or Grid parents",
                 }),
-                (0, r.jsx)(i.A, { children: (0, r.jsx)(o.A, { ...d }) }),
-                (0, r.jsxs)(i.A, {
+                (0, l.jsx)(s.A, { children: (0, l.jsx)(d.A, { ...o }) }),
+                (0, l.jsxs)(s.A, {
                     children: [
-                        (0, r.jsx)(l.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
-                        (0, r.jsxs)(n.A, {
+                        (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
+                        (0, l.jsxs)(n.A, {
                             columns: 3,
                             children: [
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsxs)(i.A, {
+                (0, l.jsxs)(s.A, {
                     children: [
-                        (0, r.jsx)(l.E, { variant: "text-lg/semibold", children: "Stack:" }),
-                        (0, r.jsxs)(s.Kp, {
+                        (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Stack:" }),
+                        (0, l.jsxs)(i.Kp, {
                             direction: "horizontal",
                             children: [
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
-                                (0, r.jsx)(o.A, { ...d }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
+                                (0, l.jsx)(d.A, { ...o }),
                             ],
                         }),
                     ],

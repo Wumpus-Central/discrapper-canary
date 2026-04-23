@@ -1,6 +1,5 @@
-"use strict";
-function r(e) {
+n.d(t, { A: () => l });
+function l(e) {
     let t = e?.activeElement;
     return ["INPUT", "TEXTAREA"].includes(t?.tagName) || t?.isContentEditable;
 }
-n.d(t, { A: () => r });

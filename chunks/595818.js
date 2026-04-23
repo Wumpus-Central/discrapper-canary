@@ -1,5 +1,6 @@
-r.d(t, { x: () => l });
-var n = r(652215);
-function l() {
-    return n.BEX.PROFILE;
+"use strict";
+n.d(t, { x: () => i });
+var r = n(652215);
+function i() {
+    return r.BEX.PROFILE;
 }

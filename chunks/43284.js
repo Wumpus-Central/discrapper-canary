@@ -1,11 +1,12 @@
+"use strict";
 n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
+var i = n(503698),
+    s = n.n(i),
     a = n(990078),
-    s = n(834730),
-    o = n(51183),
+    o = n(834730),
+    l = n(51183),
     u = n(613125);
 n(851883);
 var c = n(124704);
@@ -13,33 +14,33 @@ function d(e) {
     let t,
         {
             customStatusActivity: n,
-            iconClassName: l,
+            iconClassName: i,
             textClassName: d,
             userId: _,
-            textSize: p = "xs",
-            animateEmoji: h = !0,
-            hideEmoji: m = !1,
-            hideTooltip: A = !1,
+            textSize: f = "xs",
+            animateEmoji: p = !0,
+            hideEmoji: h = !1,
+            hideTooltip: E = !1,
         } = e,
-        f = n?.emoji,
+        m = n?.emoji,
         g = (0, u.Z)({ customStatusActivity: n, statusOwnerId: _, location: "CustomStatusVoiceDare" }),
-        E = g.statusTextOverride ?? n?.state,
-        C = null != E && "" !== E,
-        I = null;
-    null == f || m || (I = (0, r.jsx)(o.A, { emoji: f, animate: h, className: l, hideTooltip: A || C }));
-    let v = C ? (null != I ? ` ${E}` : E) : null;
+        A = g.statusTextOverride ?? n?.state,
+        I = null != A && "" !== A,
+        T = null;
+    null == m || h || (T = (0, r.jsx)(l.A, { emoji: m, animate: p, className: i, hideTooltip: E || I }));
+    let S = I ? (null != T ? ` ${A}` : A) : null;
     return null == n
         ? null
-        : (0, r.jsx)(s.E, {
-              variant: `text-${p}/medium`,
+        : (0, r.jsx)(o.E, {
+              variant: `text-${f}/medium`,
               color: "none",
-              className: i()(c.ps, d),
+              className: s()(c.ps, d),
               children:
-                  ((t = null != f && !m && !C),
-                  A || t
-                      ? (0, r.jsxs)(r.Fragment, { children: [I, v] })
+                  ((t = null != m && !h && !I),
+                  E || t
+                      ? (0, r.jsxs)(r.Fragment, { children: [T, S] })
                       : null != g.presence
-                        ? (0, r.jsx)(a.m, { delay: 150, children: (0, r.jsxs)("span", { children: [I, v] }) })
-                        : (0, r.jsxs)("span", { children: [I, v] })),
+                        ? (0, r.jsx)(a.m, { delay: 150, children: (0, r.jsxs)("span", { children: [T, S] }) })
+                        : (0, r.jsxs)("span", { children: [T, S] })),
           });
 }

@@ -1,14 +1,15 @@
+"use strict";
 n.d(t, { A: () => c });
-var l = n(64700),
+var r = n(64700),
     i = n(311907),
-    a = n(427157),
-    r = n(994500),
-    s = n(816733),
-    o = n(378135),
+    s = n(427157),
+    a = n(994500),
+    o = n(816733),
+    l = n(378135),
     u = n(788868);
 function c() {
-    let e = (0, o.k)(u.Dw),
-        t = (0, i.bG)([s.A], () => s.A.getReferrer(e?.trial_id)),
-        n = (0, i.bG)([r.A], () => null == t || r.A.isBlockedOrIgnored(t.id));
-    return l.useMemo(() => (n || null == t ? null : new a.A(t)), [t, n]);
+    let e = (0, l.k)(u.Dw),
+        t = (0, i.bG)([o.A], () => o.A.getReferrer(e?.trial_id)),
+        n = (0, i.bG)([a.A], () => null == t || a.A.isBlockedOrIgnored(t.id));
+    return r.useMemo(() => (n || null == t ? null : new s.A(t)), [t, n]);
 }

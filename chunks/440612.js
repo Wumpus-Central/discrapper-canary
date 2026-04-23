@@ -1,98 +1,99 @@
-n.d(t, { HG: () => E, My: () => A, e1: () => m });
-var l = n(64700),
-    r = n(136857),
-    i = n(964486),
-    s = n(94420),
-    a = n(525723),
-    o = n(156312),
+"use strict";
+n.d(t, { HG: () => h, My: () => E, e1: () => p });
+var r = n(64700),
+    i = n(136857),
+    s = n(964486),
+    a = n(94420),
+    o = n(525723),
+    l = n(156312),
     u = n(566980),
-    d = n(855104),
-    c = n(373856),
-    C = n(652215),
-    p = n(985018);
-let m = (e) => {
+    c = n(855104),
+    d = n(373856),
+    _ = n(652215),
+    f = n(985018);
+let p = (e) => {
         let { handleClose: t } = e,
-            { purchaseState: n } = (0, o.P5)();
-        (0, l.useEffect)(() => {
+            { purchaseState: n } = (0, l.P5)();
+        (0, r.useEffect)(() => {
             n === u.h.COMPLETED && t();
         }, [n, t]);
     },
-    E = (e) => {
+    h = (e) => {
         let {
                 skuId: t,
                 onRedeemVirtualCurrency: n,
-                orbRedemptionError: m,
-                orbProductContext: E,
-                analyticsLocations: A,
-                analyticsSourceLocation: h,
+                orbRedemptionError: p,
+                orbProductContext: h,
+                analyticsLocations: E,
+                analyticsSourceLocation: m,
             } = e,
-            f = (0, s.t4)((e) => e.selectedSkuId),
-            { setPurchaseState: _ } = (0, o.P5)(),
-            g = (0, d.gN)(),
-            T = (0, l.useRef)(g),
-            { emitOrbCheckoutPaymentFlowEvent: x } = (0, c.O)({
+            g = (0, a.t4)((e) => e.selectedSkuId),
+            { setPurchaseState: A } = (0, l.P5)(),
+            I = (0, c.gN)(),
+            T = (0, r.useRef)(I),
+            { emitOrbCheckoutPaymentFlowEvent: S } = (0, d.O)({
                 skuId: t,
-                orbProductContext: E,
-                analyticsLocations: A,
-                analyticsSourceLocation: h,
+                orbProductContext: h,
+                analyticsLocations: E,
+                analyticsSourceLocation: m,
             });
-        (0, i.Ay)(() => {
-            x(C.HAw.PAYMENT_FLOW_LOADED);
+        (0, s.Ay)(() => {
+            S(_.HAw.PAYMENT_FLOW_LOADED);
         }),
-            (0, l.useEffect)(() => {
-                null != m && null !== T.current && (x(C.HAw.PAYMENT_FLOW_FAILED, m), (T.current = null));
-            }, [m, x]);
-        let S = (0, l.useCallback)(() => {
-                (T.current = g),
-                    x(C.HAw.PAYMENT_FLOW_COMPLETED),
+            (0, r.useEffect)(() => {
+                null != p && null !== T.current && (S(_.HAw.PAYMENT_FLOW_FAILED, p), (T.current = null));
+            }, [p, S]);
+        let y = (0, r.useCallback)(() => {
+                (T.current = I),
+                    S(_.HAw.PAYMENT_FLOW_COMPLETED),
                     n(() => {
-                        _(u.h.COMPLETED), x(C.HAw.PAYMENT_FLOW_SUCCEEDED);
+                        A(u.h.COMPLETED), S(_.HAw.PAYMENT_FLOW_SUCCEEDED);
                     });
-            }, [n, _, g, x]),
-            I = T.current ?? g,
-            O = null != E ? E.orbPriceAmount : null;
+            }, [n, A, I, S]),
+            N = T.current ?? I,
+            v = null != h ? h.orbPriceAmount : null;
         return {
-            isStepLoading: null == E,
-            showCollectiblesDiscountWarning: (0, a.vw)({ skuId: t, isOrbsPurchase: !0 }),
-            errorMessage: (0, l.useMemo)(
+            isStepLoading: null == h,
+            showCollectiblesDiscountWarning: (0, o.vw)({ skuId: t, isOrbsPurchase: !0 }),
+            errorMessage: (0, r.useMemo)(
                 () =>
-                    null == m
+                    null == p
                         ? null
-                        : m.code === r.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
-                          ? p.intl.string(p.t.keFvXM)
-                          : m.code === r.tG.ALREADY_PURCHASED
-                            ? p.intl.string(p.t.m371Mx)
-                            : p.intl.string(p.t.fqJZ11),
-                [m],
+                        : p.code === i.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
+                          ? f.intl.string(f.t.keFvXM)
+                          : p.code === i.tG.ALREADY_PURCHASED
+                            ? f.intl.string(f.t.m371Mx)
+                            : f.intl.string(f.t.fqJZ11),
+                [p],
             ),
-            orbPriceAmount: O,
-            orbBalanceToDisplay: I,
-            onClickCheckout: S,
-            selectedSkuId: f,
+            orbPriceAmount: v,
+            orbBalanceToDisplay: N,
+            onClickCheckout: y,
+            selectedSkuId: g,
         };
     },
-    A = (e) => {
-        let { skuId: t, analyticsLocations: n, analyticsSourceLocation: r, orbProductContext: i, onClose: s } = e,
-            { emitOrbCheckoutPaymentFlowEvent: a } = (0, c.O)({
+    E = (e) => {
+        let { skuId: t, analyticsLocations: n, analyticsSourceLocation: i, orbProductContext: s, onClose: a } = e,
+            { emitOrbCheckoutPaymentFlowEvent: o } = (0, d.O)({
                 skuId: t,
-                orbProductContext: i,
+                orbProductContext: s,
                 analyticsLocations: n,
-                analyticsSourceLocation: r,
+                analyticsSourceLocation: i,
             });
         return {
-            analyticsDataOverride: (0, l.useMemo)(() => {
-                if (null != i)
+            analyticsDataOverride: (0, r.useMemo)(() => {
+                if (null != s)
                     return {
-                        price: i.orbPriceAmount ?? void 0,
-                        regular_price: i.orbPriceAmount ?? void 0,
-                        currency: C.Yri.DISCORD_ORB,
+                        price: s.orbPriceAmount ?? void 0,
+                        regular_price: s.orbPriceAmount ?? void 0,
+                        currency: _.Yri.DISCORD_ORB,
                     };
-            }, [i]),
-            onClose: (0, l.useCallback)(
+            }, [s]),
+            onClose: (0, r.useCallback)(
                 async (e) => {
-                    e || a(C.HAw.PAYMENT_FLOW_CANCELED), await s();
+                    e || o(_.HAw.PAYMENT_FLOW_CANCELED), await a();
                 },
-                [s, a],
+                [a, o],
             ),
         };
     };

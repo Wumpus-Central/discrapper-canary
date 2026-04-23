@@ -1,56 +1,55 @@
-"use strict";
-i.d(t, { A: () => p });
-var n = i(627968);
-i(64700);
-var r = i(311907),
-    a = i(477782),
-    l = i(192308),
-    s = i(49229),
-    o = i(662502),
-    c = i(994500),
-    d = i(287809),
-    u = i(652215),
-    _ = i(985018);
-function p(e) {
+n.d(t, { A: () => E });
+var l = n(627968);
+n(64700);
+var i = n(311907),
+    r = n(477782),
+    a = n(192308),
+    o = n(49229),
+    d = n(662502),
+    u = n(994500),
+    s = n(287809),
+    c = n(652215),
+    A = n(985018);
+function E(e) {
     let {
             user: t,
-            guildId: p,
-            channelId: h,
-            onBlock: f,
-            onIgnore: A,
-            onUnblock: g,
-            location: m = "ContextMenu",
-            appContext: E = u.BRT.APP,
+            guildId: E,
+            channelId: _,
+            onBlock: g,
+            onIgnore: I,
+            onUnblock: S,
+            location: f = "ContextMenu",
+            appContext: M = c.BRT.APP,
         } = e,
-        { id: b } = t,
-        v = (0, r.bG)([d.default], () => d.default.getCurrentUser()?.id === b, [b]),
-        I = (0, r.bG)([c.A], () => c.A.isBlocked(b), [b]);
-    return v
+        { id: y } = t,
+        O = (0, i.bG)([s.default], () => s.default.getCurrentUser()?.id === y, [y]),
+        N = (0, i.bG)([u.A], () => u.A.isBlocked(y), [y]);
+    return O
         ? null
-        : (0, n.jsx)(a.Dr, {
+        : (0, l.jsx)(r.Dr, {
               id: "block",
-              color: (I ? "default" : "danger") ?? "default",
-              label: I ? _.intl.string(_.t.XyHpKH) : _.intl.string(_.t.l4Emac),
-              action: I
+              color: (N ? "default" : "danger") ?? "default",
+              label: N ? A.intl.string(A.t.XyHpKH) : A.intl.string(A.t.l4Emac),
+              action: N
                   ? () => {
-                        g?.(), s.A.unblockUser(b, { location: m }), o.A.showUnblockSuccessToast(b, h ?? void 0);
+                        S?.(), o.A.unblockUser(y, { location: f }), d.A.showUnblockSuccessToast(y, _ ?? void 0);
                     }
                   : () => {
-                        (0, l.openModalLazy)(
+                        (0, a.openModalLazy)(
                             async () => {
-                                let { default: e } = await i.e("28969").then(i.bind(i, 994288));
-                                return (i) =>
-                                    (0, n.jsx)(e, {
-                                        ...i,
+                                let { default: e } = await n.e("28969").then(n.bind(n, 994288));
+                                return (n) =>
+                                    (0, l.jsx)(e, {
+                                        ...n,
                                         user: t,
-                                        guildId: p,
-                                        channelId: h,
-                                        onBlock: f,
-                                        onIgnore: A,
-                                        location: m,
+                                        guildId: E,
+                                        channelId: _,
+                                        onBlock: g,
+                                        onIgnore: I,
+                                        location: f,
                                     });
                             },
-                            { contextKey: (0, l.modalContextFromAppContext)(E) },
+                            { contextKey: (0, a.modalContextFromAppContext)(M) },
                         );
                     },
           });

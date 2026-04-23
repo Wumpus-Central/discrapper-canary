@@ -1,5 +1,6 @@
-var r = i(315069);
-class s extends r.A {
+"use strict";
+var r = n(315069);
+class i extends r.A {
     id;
     applicationId;
     displayName;
@@ -9,45 +10,45 @@ class s extends r.A {
     appliesToAllSkus;
     startsAt;
     endsAt;
-    static createFromServer(t) {
-        var e;
-        return new s({
-            id: t.id,
-            applicationId: t.application_id,
-            displayName: t.display_name ?? null,
-            rewardType: t.reward_type,
+    static createFromServer(e) {
+        var t;
+        return new i({
+            id: e.id,
+            applicationId: e.application_id,
+            displayName: e.display_name ?? null,
+            rewardType: e.reward_type,
             rewardConfig:
-                null != t.reward_config
-                    ? null == (e = t.reward_config)
+                null != e.reward_config
+                    ? null == (t = e.reward_config)
                         ? null
                         : {
                               discount:
-                                  null != e.discount
-                                      ? { id: e.discount.id, type: e.discount.type, amount: e.discount.amount }
+                                  null != t.discount
+                                      ? { id: t.discount.id, type: t.discount.type, amount: t.discount.amount }
                                       : null,
                           }
                     : null,
-            skuIds: (function (t) {
-                if (null == t) return null;
-                let e = {};
-                for (let [i, r] of Object.entries(t)) e[i] = { priceTiers: r.price_tiers };
-                return e;
-            })(t.sku_ids),
-            appliesToAllSkus: t.applies_to_all_skus,
-            startsAt: null != t.starts_at ? new Date(t.starts_at) : null,
-            endsAt: null != t.ends_at ? new Date(t.ends_at) : null,
+            skuIds: (function (e) {
+                if (null == e) return null;
+                let t = {};
+                for (let [n, r] of Object.entries(e)) t[n] = { priceTiers: r.price_tiers };
+                return t;
+            })(e.sku_ids),
+            appliesToAllSkus: e.applies_to_all_skus,
+            startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
+            endsAt: null != e.ends_at ? new Date(e.ends_at) : null,
         });
     }
-    constructor(t) {
+    constructor(e) {
         super(),
-            (this.id = t.id),
-            (this.applicationId = t.applicationId),
-            (this.displayName = t.displayName),
-            (this.rewardType = t.rewardType),
-            (this.rewardConfig = t.rewardConfig),
-            (this.skuIds = t.skuIds),
-            (this.appliesToAllSkus = t.appliesToAllSkus),
-            (this.startsAt = t.startsAt),
-            (this.endsAt = t.endsAt);
+            (this.id = e.id),
+            (this.applicationId = e.applicationId),
+            (this.displayName = e.displayName),
+            (this.rewardType = e.rewardType),
+            (this.rewardConfig = e.rewardConfig),
+            (this.skuIds = e.skuIds),
+            (this.appliesToAllSkus = e.appliesToAllSkus),
+            (this.startsAt = e.startsAt),
+            (this.endsAt = e.endsAt);
     }
 }

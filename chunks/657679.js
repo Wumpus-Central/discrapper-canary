@@ -1,33 +1,32 @@
-"use strict";
 n.d(t, { A: () => d });
-var a = n(627968),
-    i = n(64700),
-    r = n(691885),
-    l = n(818050);
+var l = n(627968),
+    a = n(64700),
+    i = n(691885),
+    r = n(818050);
 let s = (e) => {
         let { element: t, onChange: n, initialOption: s } = e,
-            [d, o] = i.useState("");
-        i.useEffect(() => {
+            [d, o] = a.useState("");
+        a.useEffect(() => {
             o(s ?? "");
         }, [s]);
         let c = t.name,
             { title: u, options: _ } = t.data,
-            m = i.useMemo(() => _.map((e) => ({ ...e, id: e.id ?? e.value })), [_]),
-            p = i.useCallback(
+            m = a.useMemo(() => _.map((e) => ({ ...e, id: e.id ?? e.value })), [_]),
+            h = a.useCallback(
                 (e) => {
                     null != e && (o(e), n(e));
                 },
                 [n],
             );
-        return (0, a.jsx)(
+        return (0, l.jsx)(
             "div",
             {
-                className: l.QB,
-                children: (0, a.jsx)(r.l, {
+                className: r.QB,
+                children: (0, l.jsx)(i.l, {
                     label: u,
                     value: d,
                     required: t.should_submit_data,
-                    onSelectionChange: p,
+                    onSelectionChange: h,
                     options: m,
                     selectionMode: "single",
                     fullWidth: !0,
@@ -37,14 +36,14 @@ let s = (e) => {
         );
     },
     d = (e) => {
-        let { elements: t, onChange: n, state: i } = e,
-            r = t.map((e) => {
+        let { elements: t, onChange: n, state: a } = e,
+            i = t.map((e) => {
                 let t = e.name;
-                return (0, a.jsx)(
+                return (0, l.jsx)(
                     s,
-                    { element: e, initialOption: i?.[t]?.value ?? void 0, onChange: (e) => n(t, e) },
+                    { element: e, initialOption: a?.[t]?.value ?? void 0, onChange: (e) => n(t, e) },
                     t,
                 );
             });
-        return (0, a.jsx)("div", { children: r });
+        return (0, l.jsx)("div", { children: i });
     };

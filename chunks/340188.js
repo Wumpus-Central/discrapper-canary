@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     I0: "blurb_cd2ff7",
     _c: "giftSentMessage_cd2ff7",

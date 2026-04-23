@@ -1,22 +1,23 @@
-t.d(i, { A: () => d });
-var n = t(64700),
-    l = t(858177),
-    a = t(227309),
-    o = t(847521),
-    r = t(60465),
-    s = t(611656);
-function d(e) {
-    let { onOpened: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { applicationId: t } = e,
-        d = (0, l.O)(t),
-        u = n.useMemo(() => (null == d ? t : (0, o.bB)(d) ? a.a7 : t), [d, t]),
-        c = (0, s.Ay)({ ...e, applicationId: u });
-    return c.shouldOpenGameProfile && null != u
-        ? (t) => {
-              t?.stopPropagation(),
-                  t?.preventDefault(),
-                  r.A.openGameProfileModal({ ...e, applicationId: c.applicationId ?? u, gameProfileModalChecks: c }),
-                  i?.();
+"use strict";
+n.d(t, { A: () => u });
+var r = n(64700),
+    i = n(858177),
+    s = n(227309),
+    a = n(847521),
+    o = n(60465),
+    l = n(611656);
+function u(e) {
+    let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { applicationId: n } = e,
+        u = (0, i.O)(n),
+        c = r.useMemo(() => (null == u ? n : (0, a.bB)(u) ? s.a7 : n), [u, n]),
+        d = (0, l.Ay)({ ...e, applicationId: c });
+    return d.shouldOpenGameProfile && null != c
+        ? (n) => {
+              n?.stopPropagation(),
+                  n?.preventDefault(),
+                  o.A.openGameProfileModal({ ...e, applicationId: d.applicationId ?? c, gameProfileModalChecks: d }),
+                  t?.();
           }
         : void 0;
 }

@@ -30,8 +30,8 @@ var i = n(627968),
     L = n(688810),
     O = n(139286),
     G = n(941314),
-    D = n(362490),
-    M = n(627363),
+    M = n(362490),
+    D = n(627363),
     U = n(429913),
     P = n(568598),
     w = n(384059),
@@ -47,14 +47,14 @@ var i = n(627968),
     q = n(769015),
     X = n(334074),
     Q = n(279250),
-    J = n(880144),
-    Z = n(277680),
+    Z = n(880144),
+    J = n(277680),
     $ = n(118277),
     ee = n(905552),
     et = n(95035),
     en = n(716965),
     ei = n(87001),
-    el = n(27591),
+    el = n(249972),
     es = n(277009),
     ea = n(201805),
     er = n(95701),
@@ -84,8 +84,8 @@ var i = n(627968),
     eL = n(49999),
     eO = n(165610),
     eG = n(9626),
-    eD = n(985018),
-    eM = n(911070),
+    eM = n(985018),
+    eD = n(911070),
     eU = n(490696),
     eP = n(268920),
     ew = n(633217);
@@ -122,10 +122,10 @@ function ek(e) {
         f)
     )
         return null;
-    let E = eD.intl.formatToPlainString(m.altTitle ? eD.t.hUbQT2 : eD.t["lo6H6+"], { gameName: p.name }),
-        x = eD.intl.string(g ?? (m.altBody ? eD.t["JKqu+4"] : eD.t.qYAzOp)),
-        I = eD.intl.string(m.altCta ? eD.t.jynBQ5 : eD.t.lw71Nf);
-    a && (I = eD.intl.string(eM.default["2cOIOr"]));
+    let E = eM.intl.formatToPlainString(m.altTitle ? eM.t.hUbQT2 : eM.t["lo6H6+"], { gameName: p.name }),
+        x = eM.intl.string(g ?? (m.altBody ? eM.t["JKqu+4"] : eM.t.qYAzOp)),
+        I = eM.intl.string(m.altCta ? eM.t.jynBQ5 : eM.t.lw71Nf);
+    a && (I = eM.intl.string(eD.default["2cOIOr"]));
     let C = [
         {
             text: I,
@@ -137,10 +137,10 @@ function ek(e) {
     return (
         a &&
             ((t = "beta"),
-            (E = eD.intl.formatToPlainString(eM.default.dPuaZE, { applicationName: p.name })),
-            (x = eD.intl.string(eM.default.jR3bbS)),
+            (E = eM.intl.formatToPlainString(eD.default.dPuaZE, { applicationName: p.name })),
+            (x = eM.intl.string(eD.default.jR3bbS)),
             (n = {
-                text: eD.intl.string(eD.t.hvVgAZ),
+                text: eM.intl.string(eM.t.hvVgAZ),
                 link: "https://www.riotgames.com/integrating-with-discord",
                 external: !0,
             })),
@@ -168,11 +168,11 @@ function ek(e) {
 function eV(e) {
     let t,
         { incentivizedAccountLinkingRewarded: n, markAsDismissed: l, accountLinkUpsellTargetRef: s } = e,
-        a = eD.intl.string(eD.t.MxAlrB),
-        r = eD.intl.string(eD.t["/UTTEg"]),
+        a = eM.intl.string(eM.t.MxAlrB),
+        r = eM.intl.string(eM.t["/UTTEg"]),
         o = [
             {
-                text: eD.intl.string(eD.t.aRIFWD),
+                text: eM.intl.string(eM.t.aRIFWD),
                 onClick: () => {
                     l(eL.i.TAKE_ACTION), window.open(eI.A.getArticleURL(ey.MVz.IN_GAME_FEATURES), "_blank");
                 },
@@ -180,8 +180,8 @@ function eV(e) {
         ];
     return (
         n &&
-            ((a = eD.intl.string(eM.default.ublzTG)),
-            (r = eD.intl.string(eM.default.JgM2xu)),
+            ((a = eM.intl.string(eD.default.ublzTG)),
+            (r = eM.intl.string(eD.default.JgM2xu)),
             (t = { type: "video", src: ew.A, fallbackImageSrc: eP.A, aspectRatio: "2/1", loop: !0 })),
         (0, i.jsx)(_.A, {
             graphic: t,
@@ -223,7 +223,7 @@ function eB(e) {
         { isEligible: y, displayedApp: j } = (function (e) {
             let { connectionApp: t } = e,
                 { enabled: n } = G.A.useConfig({ location: "ActivityPanelGameCard" }),
-                { data: i } = (0, M.YY)(t?.parentId ?? t?.id);
+                { data: i } = (0, D.YY)(t?.parentId ?? t?.id);
             return { isEligible: n && null != t && eR.Y.has(t.id), displayedApp: i };
         })({ connectionApp: n }),
         R = !1;
@@ -241,7 +241,7 @@ function eB(e) {
             dismissibleContentGroupName: eL.m.ACCOUNT_NAME_ZONE,
             bypassAutoDismiss: !0,
         }),
-        { rewarded: D } = (function (e) {
+        { rewarded: M } = (function (e) {
             let { isEligible: t, hasAlreadyLinked: n, didStartAuthorization: i, application: s } = e,
                 [a, r] = l.useState(!1);
             return (
@@ -274,8 +274,8 @@ function eB(e) {
                   let { visibleContent: l, markAsDismissed: a } = e;
                   return l === h.M.ACCOUNT_LINK_INVITE_FRIENDS
                       ? (0, i.jsx)(_.A, {
-                            title: eD.intl.string(eD.t["0l2pEt"]),
-                            body: eD.intl.string(eD.t["DSZUK/"]),
+                            title: eM.intl.string(eM.t["0l2pEt"]),
+                            body: eM.intl.string(eM.t["DSZUK/"]),
                             targetElementRef: g,
                             align: "right",
                             shouldShow: !0,
@@ -283,7 +283,7 @@ function eB(e) {
                             caretConfig: { align: "end" },
                             actions: [
                                 {
-                                    text: eD.intl.string(eD.t.YdkBCH),
+                                    text: eM.intl.string(eM.t.YdkBCH),
                                     onClick: () => {
                                         a(eL.i.TAKE_ACTION),
                                             o()(null != s, "Received null activity"),
@@ -305,7 +305,7 @@ function eB(e) {
                         })
                       : l === h.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER
                         ? (0, i.jsx)(eV, {
-                              incentivizedAccountLinkingRewarded: D,
+                              incentivizedAccountLinkingRewarded: M,
                               markAsDismissed: a,
                               accountLinkUpsellTargetRef: m,
                           })
@@ -412,7 +412,7 @@ class eF extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: s } = (0, Z.A)(t);
+            { title: l, sanitizedTitle: s } = (0, J.A)(t);
         return (0, i.jsxs)("div", {
             className: eU.cm,
             ref: this.accountLinkUpsellTargetRef,
@@ -603,12 +603,12 @@ let eW = (0, b.A)(function (e) {
         ]),
         I = (0, u.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         C = (0, j.u)() && null != I && (0, v.f)(),
-        b = (0, u.bG)([eA.Ay], () => (0, J.A)(eA.Ay) && (0, eC.isWindows)()),
+        b = (0, u.bG)([eA.Ay], () => (0, Z.A)(eA.Ay) && (0, eC.isWindows)()),
         T = (0, u.bG)([em.A], () => (null != s ? em.A.findActivity(s, (e) => e.type === ey.$pd.PLAYING) : null)),
         R = null != _ && _.ownerId === s && _.state !== ey.XYD.ENDED,
         O = (0, u.bG)([ef.default, eg.A], () => (null != h ? (0, k.m1)(h, ef.default, eg.A) : void 0)),
         G = (0, el.A)(),
-        [M, P] = l.useState(!1),
+        [D, P] = l.useState(!1),
         w = (0, u.bG)([ei.A], () => ei.A.getWindowOpen(ey.MLl.ACTIVITY_POPOUT)),
         { parentAnalyticsLocation: V, analyticsLocations: B } = (0, L.Ay)(),
         {
@@ -616,12 +616,12 @@ let eW = (0, b.A)(function (e) {
             canStartAuthorization: F,
             connectionApp: Y,
             startAuthorization: q,
-        } = (0, D.RD)(x, { allowedFlows: [D._M.RPC, D._M.WEB] }),
-        [X, Z] = l.useState(!1),
+        } = (0, M.RD)(x, { allowedFlows: [M._M.RPC, M._M.WEB] }),
+        [X, J] = l.useState(!1),
         $ = (0, N.A)(x?.id);
     l.useEffect(() => {
-        $ !== x?.id && Z(!1);
-    }, [x, $, Z]);
+        $ !== x?.id && J(!1);
+    }, [x, $, J]);
     let et = (0, c.K)((e) => {
             e &&
                 null != Y &&
@@ -654,7 +654,7 @@ let eW = (0, b.A)(function (e) {
         channelName: O,
         guildForConnectedChannel: A,
         streamQualityIndicator: G,
-        isForceShowSharingPopout: M,
+        isForceShowSharingPopout: D,
         setIsForceShowSharingPopout: P,
         isActivityPopoutOpen: w,
         hasAlreadyLinked: H,
@@ -664,7 +664,7 @@ let eW = (0, b.A)(function (e) {
         accountLinkButtonRef: et,
         startAuthorization: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return Z(!0), q(...t);
+            return J(!0), q(...t);
         },
         didStartAuthorization: X,
         connectionApp: Y,

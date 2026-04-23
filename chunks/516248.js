@@ -1,16 +1,17 @@
-n.d(t, { A: () => o });
-var l = n(627968),
+"use strict";
+n.d(t, { A: () => l });
+var r = n(627968),
     i = n(834730),
-    a = n(827734),
-    r = n(738188),
-    s = n(897831);
-function o(e) {
+    s = n(827734),
+    a = n(738188),
+    o = n(897831);
+function l(e) {
     let { message: t } = e;
-    return (0, l.jsxs)("div", {
-        className: s.U,
+    return (0, r.jsxs)("div", {
+        className: o.U,
         children: [
-            (0, l.jsx)(r.i, { color: a.A.colors.ICON_STRONG }),
-            (0, l.jsx)(i.E, { variant: "text-sm/medium", color: "text-feedback-warning", children: t }),
+            (0, r.jsx)(a.i, { color: s.A.colors.ICON_STRONG }),
+            (0, r.jsx)(i.E, { variant: "text-sm/medium", color: "text-feedback-warning", children: t }),
         ],
     });
 }

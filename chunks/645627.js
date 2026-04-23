@@ -1,64 +1,63 @@
-"use strict";
-i.d(t, { HJ: () => d, Ln: () => c });
-var n = i(64700),
-    r = i(975807),
-    a = i(829219),
-    l = i(341915),
-    s = i(18437),
-    o = i(590202);
-function c(e) {
-    let { isClaimingReward: t, isFetchingRewardCode: i, questContent: r, quest: s, rewardCode: o, preview: c } = e,
-        [d, u] = n.useState(!1),
-        [_, p] = n.useState(!1),
-        h = n.useCallback(async (e, t, i) => {
+n.d(t, { HJ: () => c, Ln: () => d });
+var a = n(64700),
+    s = n(975807),
+    r = n(829219),
+    o = n(341915),
+    i = n(18437),
+    l = n(590202);
+function d(e) {
+    let { isClaimingReward: t, isFetchingRewardCode: n, questContent: s, quest: i, rewardCode: l, preview: d } = e,
+        [c, u] = a.useState(!1),
+        [C, p] = a.useState(!1),
+        _ = a.useCallback(async (e, t, n) => {
             try {
-                p(!0), await (0, a.Oq)(e, t, i), u(!1), p(!1);
+                p(!0), await (0, r.Oq)(e, t, n), u(!1), p(!1);
             } catch (e) {
                 u(!0), p(!1);
             }
         }, []),
-        f = n.useCallback((e) => {
+        h = a.useCallback((e) => {
             try {
-                (0, a.jh)(e);
+                (0, r.jh)(e);
             } catch (e) {
                 u(!0);
             }
         }, []);
     return (
-        n.useEffect(() => {
-            !0 === c ||
-                null != o ||
-                d ||
+        a.useEffect(() => {
+            !0 === d ||
+                null != l ||
+                c ||
                 t ||
-                _ ||
-                i ||
+                C ||
+                n ||
                 (u(!1),
-                s.userStatus?.claimedAt == null
-                    ? h(s.id, l.pY.CROSS_PLATFORM, r)
-                    : s.userStatus?.claimedAt != null && f(s.id));
-        }, [h, f, d, t, _, i, r, s, o, c]),
-        { claimCode: h, fetchCode: f, hasError: d, setHasError: u }
+                i.userStatus?.claimedAt == null
+                    ? _(i.id, o.pY.CROSS_PLATFORM, s)
+                    : i.userStatus?.claimedAt != null && h(i.id));
+        }, [_, h, c, t, C, n, s, i, l, d]),
+        { claimCode: _, fetchCode: h, hasError: c, setHasError: u }
     );
 }
-function d(e) {
-    let { quest: t, redemptionLink: i, questContent: a, questContentPosition: l, sourceQuestContent: c } = e,
-        d = (0, s.Ut)();
-    return n.useCallback(() => {
-        null != i &&
-            (d({
+function c(e) {
+    let { quest: t, redemptionLink: n, questContent: r, questContentPosition: o, sourceQuestContent: d } = e,
+        c = (0, i.Ut)();
+    return a.useCallback(() => {
+        null != n &&
+            (c({
                 questId: t.id,
-                questContent: a,
-                questContentCTA: o.Cy.REDEEM_REWARD,
-                questContentPosition: l,
-                sourceQuestContent: c,
+                questContent: r,
+                questContentCTA: l.Cy.REDEEM_REWARD,
+                questContentPosition: o,
+                sourceQuestContent: d,
             }),
-            d({
+            c({
                 questId: t.id,
-                questContent: a,
-                questContentCTA: o.Cy.VISIT_REDEMPTION_LINK,
-                questContentPosition: l,
-                sourceQuestContent: c,
+                questContent: r,
+                questContentCTA: l.Cy.VISIT_REDEMPTION_LINK,
+                questContentPosition: o,
+                sourceQuestContent: d,
             }),
-            (0, r.A)(i));
-    }, [t.id, a, l, c, d, i]);
+            (0, s.A)(n));
+    }, [t.id, r, o, d, c, n]);
 }

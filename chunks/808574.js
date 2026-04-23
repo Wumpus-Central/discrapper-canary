@@ -1,59 +1,60 @@
-n.d(t, { w: () => _ });
-var l = n(627968),
+"use strict";
+n.d(t, { w: () => E });
+var r = n(627968),
     i = n(64700),
-    a = n(323082),
-    r = n(648335),
-    s = n(626584),
-    o = n(156312),
+    s = n(323082),
+    a = n(648335),
+    o = n(626584),
+    l = n(156312),
     u = n(166532),
     c = n(19311),
     d = n(71532),
-    p = n(836308),
-    m = n(818348),
-    h = n(985018);
-let A = new s.A("PaymentElementStepFooter.tsx"),
-    _ = (e) => {
-        let { stripe: t } = (0, o.P5)(),
+    _ = n(836308),
+    f = n(818348),
+    p = n(985018);
+let h = new o.A("PaymentElementStepFooter.tsx"),
+    E = (e) => {
+        let { stripe: t } = (0, l.P5)(),
             {
                 shouldUseManaModal: n,
-                paymentModalArgs: s,
-                handleStepChange: _,
-                setPaymentMethodSteps: C,
-                onBack: E,
-                primarySubmitting: y,
-                primaryDisabled: f,
-                PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: P,
+                paymentModalArgs: o,
+                handleStepChange: E,
+                setPaymentMethodSteps: m,
+                onBack: g,
+                primarySubmitting: A,
+                primaryDisabled: I,
+                PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: T,
             } = e,
-            { setIsSubmittingCurrentStep: S, setBillingAddressState: x } = s,
-            { paymentElementSelectedType: T, combinedStripeElementsRef: N, remountAddressElement: g } = e,
-            I = i.useCallback(async () => {
+            { setIsSubmittingCurrentStep: S, setBillingAddressState: y } = o,
+            { paymentElementSelectedType: N, combinedStripeElementsRef: v, remountAddressElement: C } = e,
+            O = i.useCallback(async () => {
                 S(!0);
                 try {
-                    if (null == T || !(0, r.PE)(T)) throw (0, a.ne)("Valid Payment Element source type not found", !0);
-                    let { steps: e, methodType: n } = P[T];
-                    if ((C({ steps: e, methodType: n === m.he.UNKNOWN ? T : n }), T === m.he.PAYMENT_REQUEST)) {
-                        let e = N.current,
-                            { paymentMethod: n } = await (0, a.YB)(t, e),
-                            { billingAddressInfo: l } = (0, d.uK)(n);
-                        x((e) => ({ ...e, info: l })), g(), _(u.pn.ADDRESS);
+                    if (null == N || !(0, a.PE)(N)) throw (0, s.ne)("Valid Payment Element source type not found", !0);
+                    let { steps: e, methodType: n } = T[N];
+                    if ((m({ steps: e, methodType: n === f.he.UNKNOWN ? N : n }), N === f.he.PAYMENT_REQUEST)) {
+                        let e = v.current,
+                            { paymentMethod: n } = await (0, s.YB)(t, e),
+                            { billingAddressInfo: r } = (0, d.uK)(n);
+                        y((e) => ({ ...e, info: r })), C(), E(u.pn.ADDRESS);
                     } else {
-                        let e = (0, r.eI)(T);
-                        null != e ? _(e) : _(u.pn.ADDRESS);
+                        let e = (0, a.eI)(N);
+                        null != e ? E(e) : E(u.pn.ADDRESS);
                     }
                 } catch (e) {
-                    A.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
+                    h.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
                 } finally {
                     S(!1);
                 }
-            }, [T, P, N, g, _, t, C, S, x]);
-        return (0, l.jsx)(p.uv, {
-            onBack: E,
+            }, [N, T, v, C, E, t, m, S, y]);
+        return (0, r.jsx)(_.uv, {
+            onBack: g,
             primaryCTA: c.Ay.CTAType.CONTINUE,
             primaryType: "submit",
-            primaryText: h.intl.string(h.t.PDTjLN),
-            primarySubmitting: y,
-            primaryDisabled: f,
-            onPrimary: I,
+            primaryText: p.intl.string(p.t.PDTjLN),
+            primarySubmitting: A,
+            primaryDisabled: I,
+            onPrimary: O,
             shouldUseManaModal: n,
         });
     };

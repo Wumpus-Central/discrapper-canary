@@ -1,9 +1,10 @@
-n.d(t, { A: () => i });
+"use strict";
+n.d(t, { A: () => s });
 var r = n(354328),
-    l = n(747198);
-function i(e, t) {
+    i = n(747198);
+function s(e, t) {
     let n = e?.paymentGateway,
-        i = (0, r.A)("shop_disable_cache"),
+        s = (0, r.A)("shop_disable_cache"),
         a = (0, r.A)("shop_include_unpublished");
-    return (0, l.i)({ noCache: i, includeUnpublished: a, paymentGateway: n, logPerf: e?.logPerf }, void 0, t);
+    return (0, i.i)({ noCache: s, includeUnpublished: a, paymentGateway: n, logPerf: e?.logPerf }, void 0, t);
 }

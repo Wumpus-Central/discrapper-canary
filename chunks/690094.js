@@ -1,4 +1,3 @@
-"use strict";
 s.d(e, { my: () => n });
 var r = s(780755),
     i = s(272469);

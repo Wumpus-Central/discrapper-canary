@@ -1,44 +1,45 @@
-n.d(t, { k: () => h });
-var l = n(627968);
+"use strict";
+n.d(t, { k: () => m });
+var r = n(627968);
 n(64700);
-var r = n(284009),
-    i = n.n(r),
-    s = n(821609),
-    a = n(534514),
-    o = n(834730),
+var i = n(284009),
+    s = n.n(i),
+    a = n(821609),
+    o = n(534514),
+    l = n(834730),
     u = n(427675),
-    d = n(94420),
-    c = n(937008),
-    C = n(156312),
-    p = n(921925),
-    m = n(482132),
-    E = n(985018),
-    A = n(989553);
-function h(e) {
+    c = n(94420),
+    d = n(937008),
+    _ = n(156312),
+    f = n(921925),
+    p = n(482132),
+    h = n(985018),
+    E = n(989553);
+function m(e) {
     let { handleClose: t } = e,
-        n = (0, d.t4)((e) => e.selectedSkuId),
-        { application: r } = (0, C.P5)(),
-        h = (0, u.gU)(),
-        { isGift: f, giftRecipient: _ } = (0, c.Pv)();
-    i()(null != n, "Expected selectedSkuId"), i()(null != r, "Expected application");
-    let g = h[n];
-    i()(null != g, "Expected sku");
-    let T = f
-        ? E.intl.formatToPlainString(E.t["2VjPTw"], {
-              itemName: g.name,
-              giftRecipient: _?.username ?? "your recipient",
+        n = (0, c.t4)((e) => e.selectedSkuId),
+        { application: i } = (0, _.P5)(),
+        m = (0, u.gU)(),
+        { isGift: g, giftRecipient: A } = (0, d.Pv)();
+    s()(null != n, "Expected selectedSkuId"), s()(null != i, "Expected application");
+    let I = m[n];
+    s()(null != I, "Expected sku");
+    let T = g
+        ? h.intl.formatToPlainString(h.t["2VjPTw"], {
+              itemName: I.name,
+              giftRecipient: A?.username ?? "your recipient",
           })
-        : E.intl.formatToPlainString(E.t.wK0IbP, { applicationName: r.name, itemName: g.name });
-    return (0, l.jsxs)(m.dZ, {
+        : h.intl.formatToPlainString(h.t.wK0IbP, { applicationName: i.name, itemName: I.name });
+    return (0, r.jsxs)(p.dZ, {
         children: [
-            (0, l.jsx)(p.A, {}),
-            (0, l.jsxs)("div", {
-                className: A.EL,
+            (0, r.jsx)(f.A, {}),
+            (0, r.jsxs)("div", {
+                className: E.EL,
                 children: [
-                    (0, l.jsx)(a.D, { variant: "heading-xxl/bold", className: A.RS, children: "Success!" }),
-                    (0, l.jsx)(o.E, { variant: "text-md/normal", children: T }),
-                    (0, l.jsx)("div", { className: A.yF }),
-                    (0, l.jsx)(s.$, { onClick: t, text: E.intl.string(E.t.cpT0Cq), fullWidth: !0 }),
+                    (0, r.jsx)(o.D, { variant: "heading-xxl/bold", className: E.RS, children: "Success!" }),
+                    (0, r.jsx)(l.E, { variant: "text-md/normal", children: T }),
+                    (0, r.jsx)("div", { className: E.yF }),
+                    (0, r.jsx)(a.$, { onClick: t, text: h.intl.string(h.t.cpT0Cq), fullWidth: !0 }),
                 ],
             }),
         ],

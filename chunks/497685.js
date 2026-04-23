@@ -1,213 +1,214 @@
-r.d(t, {
+"use strict";
+n.d(t, {
     $P: () => D,
-    H9: () => x,
-    Qh: () => y,
-    Se: () => G,
-    Tr: () => O,
-    V$: () => j,
-    Z4: () => M,
-    _E: () => F,
-    g4: () => P,
-    k8: () => L,
-    wg: () => b,
-    xo: () => k,
+    H9: () => O,
+    Qh: () => C,
+    Se: () => w,
+    Tr: () => V,
+    V$: () => P,
+    Z4: () => k,
+    _E: () => L,
+    g4: () => M,
+    k8: () => x,
+    wg: () => F,
+    xo: () => U,
 });
-var s = r(735438),
-    l = r.n(s),
-    n = r(835245),
-    i = r(562465),
-    o = r(803805),
-    a = r(73153),
-    c = r(58149),
-    u = r(380544),
-    d = r(202803),
-    h = r(773669),
-    m = r(594061),
-    f = r(821102),
-    p = r(954571),
-    g = r(11187),
-    E = r(998218),
-    _ = r(157559),
-    R = r(652215),
-    I = r(355097),
-    A = r(985018);
-let C = /-/g,
-    v = ".webp",
-    w = ".avif",
-    S = ".gif";
-function y(e) {
+var r = n(735438),
+    i = n.n(r),
+    s = n(835245),
+    a = n(562465),
+    o = n(803805),
+    l = n(73153),
+    u = n(58149),
+    c = n(380544),
+    d = n(202803),
+    _ = n(773669),
+    f = n(594061),
+    p = n(821102),
+    h = n(954571),
+    E = n(11187),
+    m = n(998218),
+    g = n(157559),
+    A = n(652215),
+    I = n(355097),
+    T = n(985018);
+let S = /-/g,
+    y = ".webp",
+    N = ".avif",
+    v = ".gif";
+function C(e) {
     let t = null != e ? { [e]: 1 } : {};
-    c.Ay.trackWithMetadata(R.HAw.SEARCH_STARTED, {
-        search_type: R.I4_.GIF,
-        load_id: f.A.getAnalyticsID(),
+    u.Ay.trackWithMetadata(A.HAw.SEARCH_STARTED, {
+        search_type: A.I4_.GIF,
+        load_id: p.A.getAnalyticsID(),
         num_modifiers: Object.keys(t).length,
         modifiers: t,
-        gif_provider: (0, u.cf)(),
+        gif_provider: (0, c.cf)(),
     });
 }
-function x(e, t) {
-    let { startTime: r, ...s } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        l = { offset: 0, limit: null, totalResults: e.length },
-        n = (0, g.QL)(f.A.getAnalyticsID(), t, { ...l, ...s, results: e.length }),
-        i = null == r ? {} : { load_duration_ms: Date.now() - r };
-    c.Ay.trackWithMetadata(R.HAw.SEARCH_RESULT_VIEWED, { ...n, ...i, gif_provider: (0, u.cf)() });
+function O(e, t) {
+    let { startTime: n, ...r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = { offset: 0, limit: null, totalResults: e.length },
+        s = (0, E.QL)(p.A.getAnalyticsID(), t, { ...i, ...r, results: e.length }),
+        a = null == n ? {} : { load_duration_ms: Date.now() - n };
+    u.Ay.trackWithMetadata(A.HAw.SEARCH_RESULT_VIEWED, { ...s, ...a, gif_provider: (0, c.cf)() });
 }
-function T(e, t, r) {
-    let s = Date.now();
-    y(t),
-        i.Bo.get({
-            url: R.Rsh.GIFS_SEARCH,
+function R(e, t, n) {
+    let r = Date.now();
+    C(t),
+        a.Bo.get({
+            url: A.Rsh.GIFS_SEARCH,
             query: {
                 q: e,
-                media_format: f.A.getSelectedFormat(),
-                provider: (0, u.cf)(),
-                locale: h.default.locale,
-                limit: r,
+                media_format: p.A.getSelectedFormat(),
+                provider: (0, c.cf)(),
+                locale: _.default.locale,
+                limit: n,
             },
             oldFormErrors: !0,
             rejectWithError: !0,
         }).then(
-            (l) => {
-                let n = l.body;
-                x(n, t, { startTime: s, limit: r }),
-                    a.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: n });
+            (i) => {
+                let s = i.body;
+                O(s, t, { startTime: r, limit: n }),
+                    l.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: s });
             },
-            () => a.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
+            () => l.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
         );
 }
-let N = l().debounce(T, 250);
+let b = i().debounce(R, 250);
 function D(e, t) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        s = arguments.length > 3 ? arguments[3] : void 0;
-    "" === e ? G() : (a.h.dispatch({ type: "GIF_PICKER_QUERY", query: e }), r ? T(e, t, s) : N(e, t, s));
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = arguments.length > 3 ? arguments[3] : void 0;
+    "" === e ? w() : (l.h.dispatch({ type: "GIF_PICKER_QUERY", query: e }), n ? R(e, t, r) : b(e, t, r));
 }
-function F(e) {
+function L(e) {
     "" !== e &&
         null != e &&
-        i.Bo.get({
-            url: R.Rsh.GIFS_SUGGEST,
-            query: { q: e, provider: (0, u.cf)(), limit: 5, locale: h.default.locale },
+        a.Bo.get({
+            url: A.Rsh.GIFS_SUGGEST,
+            query: { q: e, provider: (0, c.cf)(), limit: 5, locale: _.default.locale },
             oldFormErrors: !0,
             rejectWithError: !0,
         }).then((t) => {
-            let r = t.body;
-            a.h.dispatch({ type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: e, items: r });
+            let n = t.body;
+            l.h.dispatch({ type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: e, items: n });
         });
 }
-function G() {
-    a.h.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
+function w() {
+    l.h.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
 }
-function P(e) {
-    let { type: t, index: r, offset: s, limit: l, results: n, totalResults: o, query: a, gifId: d } = e,
-        h = (0, g.QL)(f.A.getAnalyticsID(), t, { offset: s, limit: l, results: n, totalResults: o });
+function M(e) {
+    let { type: t, index: n, offset: r, limit: i, results: s, totalResults: o, query: l, gifId: d } = e,
+        _ = (0, E.QL)(p.A.getAnalyticsID(), t, { offset: r, limit: i, results: s, totalResults: o });
     if (
-        (c.Ay.trackWithMetadata(R.HAw.SEARCH_RESULT_SELECTED, {
-            ...h,
-            index_num: r,
+        (u.Ay.trackWithMetadata(A.HAw.SEARCH_RESULT_SELECTED, {
+            ..._,
+            index_num: n,
             source_object: "GIF Picker",
-            query: a,
+            query: l,
         }),
         null != d)
     ) {
-        let e = (0, u.cf)();
-        i.Bo.post({
-            url: R.Rsh.GIFS_SELECT,
-            body: { id: d, q: a, provider: e },
+        let e = (0, c.cf)();
+        a.Bo.post({
+            url: A.Rsh.GIFS_SELECT,
+            body: { id: d, q: l, provider: e },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
     }
 }
-function j() {
-    let e = (0, n.A)().replace(C, "");
-    c.Ay.trackWithMetadata(R.HAw.SEARCH_OPENED, { search_type: R.I4_.GIF, load_id: e }),
-        a.h.wait(() => {
-            a.h.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: e });
+function P() {
+    let e = (0, s.A)().replace(S, "");
+    u.Ay.trackWithMetadata(A.HAw.SEARCH_OPENED, { search_type: A.I4_.GIF, load_id: e }),
+        l.h.wait(() => {
+            l.h.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: e });
         });
 }
-function L() {
-    i.Bo.get({
-        url: R.Rsh.GIFS_TRENDING,
-        query: { provider: (0, u.cf)(), locale: h.default.locale, media_format: f.A.getSelectedFormat() },
+function x() {
+    a.Bo.get({
+        url: A.Rsh.GIFS_TRENDING,
+        query: { provider: (0, c.cf)(), locale: _.default.locale, media_format: p.A.getSelectedFormat() },
         oldFormErrors: !0,
         rejectWithError: !0,
     }).then((e) => {
         let { body: t } = e,
-            { categories: r, gifs: s } = t;
-        a.h.dispatch({ type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: r, trendingGIFPreview: s[0] });
+            { categories: n, gifs: r } = t;
+        l.h.dispatch({ type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: n, trendingGIFPreview: r[0] });
     });
 }
-function M(e) {
+function k(e) {
     let t = Date.now();
-    y(R.dD.TRENDING_GIFS),
-        i.Bo.get({
-            url: R.Rsh.GIFS_TRENDING_GIFS,
-            query: { media_format: f.A.getSelectedFormat(), provider: (0, u.cf)(), locale: h.default.locale, limit: e },
+    C(A.dD.TRENDING_GIFS),
+        a.Bo.get({
+            url: A.Rsh.GIFS_TRENDING_GIFS,
+            query: { media_format: p.A.getSelectedFormat(), provider: (0, c.cf)(), locale: _.default.locale, limit: e },
             oldFormErrors: !0,
             rejectWithError: !0,
         }).then(
-            (r) => {
-                let { body: s } = r;
-                x(s, R.dD.TRENDING_GIFS, { startTime: t, limit: e }),
-                    a.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: s });
+            (n) => {
+                let { body: r } = n;
+                O(r, A.dD.TRENDING_GIFS, { startTime: t, limit: e }),
+                    l.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: r });
             },
             () => {
-                a.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
+                l.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
             },
         );
 }
-function k(e) {
-    let t = E.A.toURLSafe(e);
+function U(e) {
+    let t = m.A.toURLSafe(e);
     return null == t ? e : (0, d.fr)(t) ? (0, d.w6)(t).toString() : e;
 }
-function U(e) {
-    let t = E.A.toURLSafe(e.src);
+function G(e) {
+    let t = m.A.toURLSafe(e.src);
     return null != t && ((0, d.BX)(t) || (0, d.fr)(t));
 }
-function b(e) {
-    m.bW.updateAsync(
+function F(e) {
+    f.bW.updateAsync(
         "favoriteGifs",
         (t) => {
-            let r = l().max(Object.values(t.gifs).map((e) => e.order)) ?? 0,
-                s = U(e) && null != e.gifSrc ? e.gifSrc : e.src,
-                n =
-                    U(e) &&
+            let n = i().max(Object.values(t.gifs).map((e) => e.order)) ?? 0,
+                r = G(e) && null != e.gifSrc ? e.gifSrc : e.src,
+                s =
+                    G(e) &&
                     (function (e) {
-                        let t = E.A.toURLSafe(e);
+                        let t = m.A.toURLSafe(e);
                         if (null == t) return !1;
-                        let r = t.pathname.toLowerCase();
-                        return r.endsWith(v) || r.endsWith(w) || r.endsWith(S);
-                    })(s),
-                i = n
+                        let n = t.pathname.toLowerCase();
+                        return n.endsWith(y) || n.endsWith(N) || n.endsWith(v);
+                    })(r),
+                a = s
                     ? (function (e) {
-                          let t = E.A.toURLSafe(e);
+                          let t = m.A.toURLSafe(e);
                           if (null == t) return e;
-                          let r = t.pathname.toLowerCase(),
-                              s = r.endsWith(v),
-                              l = r.endsWith(w),
-                              n = r.endsWith(S);
-                          return s || l || n
-                              ? ((l || n) && t.searchParams.set("format", "webp"),
+                          let n = t.pathname.toLowerCase(),
+                              r = n.endsWith(y),
+                              i = n.endsWith(N),
+                              s = n.endsWith(v);
+                          return r || i || s
+                              ? ((i || s) && t.searchParams.set("format", "webp"),
                                 t.searchParams.set("animated", "true"),
                                 t.toString())
                               : e;
-                      })(s)
-                    : s,
-                a = n ? o.TL.IMAGE : e.format;
-            if (((t.gifs[k(e.url)] = { ...e, src: i, format: a, order: r + 1 }), o.uz.toBinary(t).length > 762880))
-                return _.A.show({ title: A.intl.string(A.t["+XYXtZ"]), body: A.intl.string(A.t.YSDH9n) }), !1;
-            let c = l().size(t.gifs);
-            c > 2 && (t.hideTooltip = !0), p.default.track(R.HAw.GIF_FAVORITED, { total_num_favorited: c });
+                      })(r)
+                    : r,
+                l = s ? o.TL.IMAGE : e.format;
+            if (((t.gifs[U(e.url)] = { ...e, src: a, format: l, order: n + 1 }), o.uz.toBinary(t).length > 762880))
+                return g.A.show({ title: T.intl.string(T.t["+XYXtZ"]), body: T.intl.string(T.t.YSDH9n) }), !1;
+            let u = i().size(t.gifs);
+            u > 2 && (t.hideTooltip = !0), h.default.track(A.HAw.GIF_FAVORITED, { total_num_favorited: u });
         },
         I.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function O(e) {
-    m.bW.updateAsync(
+function V(e) {
+    f.bW.updateAsync(
         "favoriteGifs",
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[k(e)],
-                p.default.track(R.HAw.GIF_UNFAVORITED, { total_num_favorited: l().size(t.gifs) });
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[U(e)],
+                h.default.track(A.HAw.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
         },
         I.Sb.INFREQUENT_USER_ACTION,
     );

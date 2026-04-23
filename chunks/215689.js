@@ -1,31 +1,32 @@
-n.d(t, { A: () => p });
-var a = n(64700),
-    r = n(311907),
-    l = n(919395),
-    i = n(696451),
+"use strict";
+n.d(t, { A: () => _ });
+var r = n(64700),
+    i = n(311907),
+    s = n(919395),
+    a = n(696451),
     o = n(486020),
-    s = n(338932),
-    c = n(940622),
-    u = n(601255),
+    l = n(338932),
+    u = n(940622),
+    c = n(601255),
     d = n(476324);
-let p = (e) => {
-    let { user: t, guildId: n, size: p, avatarDecorationOverride: A, onlyAnimateOnHoverOrFocus: g = !1 } = e,
-        [_, v] = a.useState(!1),
-        { canAnimate: f } = (0, s.T)(_, g),
-        m = (0, r.bG)([i.Ay], () => (null != n && null != t ? i.Ay.getMember(n, t.id) : null)),
-        E = (0, u.A)((0, l.lw)({ userValue: t?.avatarDecoration, guildValue: m?.avatarDecoration, guildId: n })),
-        b = (0, c.VU)(),
-        R = a.useMemo(
+let _ = (e) => {
+    let { user: t, guildId: n, size: _, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: p = !1 } = e,
+        [h, E] = r.useState(!1),
+        { canAnimate: m } = (0, l.T)(h, p),
+        g = (0, i.bG)([a.Ay], () => (null != n && null != t ? a.Ay.getMember(n, t.id) : null)),
+        A = (0, c.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: g?.avatarDecoration, guildId: n })),
+        I = (0, u.VU)(),
+        T = r.useMemo(
             () =>
-                null != b && "" !== b
-                    ? b
-                    : (0, o.F_)({ avatarDecoration: void 0 !== A ? A : E, canAnimate: f, size: p }),
-            [b, A, E, f, p],
+                null != I && "" !== I
+                    ? I
+                    : (0, o.F_)({ avatarDecoration: void 0 !== f ? f : A, canAnimate: m, size: _ }),
+            [I, f, A, m, _],
         );
     return {
         avatarPlaceholderSrc: d,
-        avatarDecorationSrc: R,
-        isAvatarDecorationAnimating: f,
-        eventHandlers: { onMouseEnter: a.useCallback(() => v(!0), []), onMouseLeave: a.useCallback(() => v(!1), []) },
+        avatarDecorationSrc: T,
+        isAvatarDecorationAnimating: m,
+        eventHandlers: { onMouseEnter: r.useCallback(() => E(!0), []), onMouseLeave: r.useCallback(() => E(!1), []) },
     };
 };

@@ -1,54 +1,55 @@
+"use strict";
 n.d(t, { A: () => d });
-var a = n(627968);
+var r = n(627968);
 n(64700);
-var r = n(265872),
-    l = n(679492),
-    i = n(403777),
+var i = n(265872),
+    s = n(679492),
+    a = n(403777),
     o = n(23568),
-    s = n(187921),
-    c = n(518477),
-    u = n(996988);
+    l = n(187921),
+    u = n(518477),
+    c = n(996988);
 function d(e) {
-    let { user: t, guildId: n, channelId: d, themeType: f, onClose: _, children: h, ...A } = e,
+    let { user: t, guildId: n, channelId: d, themeType: _, onClose: f, children: p, ...h } = e,
         {
-            interactionType: p,
+            interactionType: E,
             interactionSource: m,
-            resetInteraction: S,
-            interactionSourceId: g,
-            interactionPopoutTargetRef: b,
-        } = (0, l.Pq)(),
-        x = [u.d.MODAL, u.d.MODAL_V2].includes(f) ? (0, i.n)(t.id, n) : void 0,
-        T = m === A.sourceType && p === c.AQ.REACT,
-        E = m === A.sourceType && p === c.AQ.REPLY,
-        R = (T || E) && g === A.sourceId;
-    return (0, a.jsx)(r.Y, {
-        targetElementRef: b ?? void 0,
+            resetInteraction: g,
+            interactionSourceId: A,
+            interactionPopoutTargetRef: I,
+        } = (0, s.Pq)(),
+        T = [c.d.MODAL, c.d.MODAL_V2].includes(_) ? (0, a.n)(t.id, n) : void 0,
+        S = m === h.sourceType && E === u.AQ.REACT,
+        y = m === h.sourceType && E === u.AQ.REPLY,
+        N = (S || y) && A === h.sourceId;
+    return (0, r.jsx)(i.Y, {
+        targetElementRef: I ?? void 0,
         renderPopout: (e) => {
-            let { setPopoutRef: r } = e,
-                l = T ? o.A : s.A;
-            return (0, a.jsx)(l, {
+            let { setPopoutRef: i } = e,
+                s = S ? o.A : l.A;
+            return (0, r.jsx)(s, {
                 user: t,
                 guildId: n,
                 channelId: d,
-                themeType: f,
-                onClose: _,
-                modalKey: x,
-                setPopoutRef: r,
-                ...A,
+                themeType: _,
+                onClose: f,
+                modalKey: T,
+                setPopoutRef: i,
+                ...h,
             });
         },
         onRequestClose: () => {
-            S(), _?.();
+            g(), f?.();
         },
-        shouldShow: R,
+        shouldShow: N,
         ...(function (e) {
-            let { interactionType: t, interactionSource: n, themeType: a } = e;
-            return t === c.AQ.REACT
+            let { interactionType: t, interactionSource: n, themeType: r } = e;
+            return t === u.AQ.REACT
                 ? { position: "left", align: "top", animationPosition: "right", spacing: 8 }
-                : a === u.d.MODAL || a === u.d.MODAL_V2 || n === c.dS.ACTIVITY
+                : r === c.d.MODAL || r === c.d.MODAL_V2 || n === u.dS.ACTIVITY
                   ? { position: "bottom", align: "center", animationPosition: "top", spacing: 6 }
                   : { position: "bottom", align: "left", animationPosition: "top", spacing: 6 };
-        })({ interactionType: p, interactionSource: m, themeType: f }),
-        children: h,
+        })({ interactionType: E, interactionSource: m, themeType: _ }),
+        children: p,
     });
 }

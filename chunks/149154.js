@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ZK: "hero_c5c8f4",
     vK: "banner_c5c8f4",

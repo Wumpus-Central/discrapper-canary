@@ -1,51 +1,52 @@
-t.d(i, { O: () => p }), t(321073);
-var n = t(64700),
-    l = t(735438),
-    a = t.n(l),
-    o = t(311907),
-    r = t(451988),
-    s = t(627363),
-    d = t(587895);
-class u {
+"use strict";
+n.d(t, { O: () => _ }), n(321073);
+var r = n(64700),
+    i = n(735438),
+    s = n.n(i),
+    a = n(311907),
+    o = n(451988),
+    l = n(627363),
+    u = n(587895);
+class c {
     _lastFetchedAttempted = new Map();
     _pending = new Set();
-    _flushHandler = new r.J_(32, () => this._flush());
+    _flushHandler = new o.J_(32, () => this._flush());
     request(e) {
         if (this._pending.has(e)) return;
-        let i = this._lastFetchedAttempted.get(e);
-        (null != i && Date.now() - i < 6e4) || (this._pending.add(e), this._flushHandler.delay(!1));
+        let t = this._lastFetchedAttempted.get(e);
+        (null != t && Date.now() - t < 6e4) || (this._pending.add(e), this._flushHandler.delay(!1));
     }
     _flush() {
         let e = [];
-        this._pending.forEach((i) => {
-            this._lastFetchedAttempted.set(i, Date.now()), e.push(i);
+        this._pending.forEach((t) => {
+            this._lastFetchedAttempted.set(t, Date.now()), e.push(t);
         }),
             this._pending.clear();
-        let i = [],
-            t = [];
+        let t = [],
+            n = [];
         e.forEach((e) => {
-            d.A.didFetchingApplicationFail(e) ? t.push(e) : i.push(e);
+            u.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
         }),
-            i.length > 0 &&
-                a()
-                    .chunk(i, 20)
-                    .forEach((e) => {
-                        s.Ay.fetchApplications(e, !1);
-                    }),
             t.length > 0 &&
-                a()
+                s()
                     .chunk(t, 20)
                     .forEach((e) => {
-                        s.Ay.fetchApplications(e, !0);
+                        l.Ay.fetchApplications(e, !1);
+                    }),
+            n.length > 0 &&
+                s()
+                    .chunk(n, 20)
+                    .forEach((e) => {
+                        l.Ay.fetchApplications(e, !0);
                     });
     }
 }
-let c = new u();
-function p(e) {
+let d = new c();
+function _(e) {
     return (
-        n.useEffect(() => {
-            null != e && "" !== e && c.request(e);
+        r.useEffect(() => {
+            null != e && "" !== e && d.request(e);
         }, [e]),
-        (0, o.bG)([d.A], () => (null != e && "" !== e ? d.A.getApplication(e) : null), [e])
+        (0, a.bG)([u.A], () => (null != e && "" !== e ? u.A.getApplication(e) : null), [e])
     );
 }

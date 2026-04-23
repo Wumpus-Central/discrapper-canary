@@ -1,76 +1,75 @@
-"use strict";
-i.d(t, { A: () => v });
-var n = i(627968),
-    r = i(64700),
-    a = i(503698),
-    l = i.n(a),
-    s = i(91871),
-    o = i.n(s),
-    c = i(735438),
-    d = i.n(c),
-    u = i(44482),
-    _ = i(311907),
-    p = i(545442),
-    h = i(305866),
-    f = i(389723),
-    A = i(676608),
-    g = i(317525),
-    m = i(652215),
-    E = i(985018),
-    b = i(673753);
-let v = function (e) {
-    let { className: t, guild: i, roleStyle: a, roleFilter: s, onSelect: c, onClose: v } = e,
-        I = (0, _.bG)([g.A], () => g.A.getSortedRoles(i.id)),
-        T = (0, A.Ay)(i.id, null),
-        C = r.useMemo(
+n.d(t, { A: () => b });
+var a = n(627968),
+    i = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    o = n(91871),
+    s = n.n(o),
+    d = n(735438),
+    c = n.n(d),
+    u = n(44482),
+    _ = n(311907),
+    p = n(545442),
+    f = n(305866),
+    A = n(389723),
+    g = n(676608),
+    h = n(317525),
+    x = n(652215),
+    m = n(985018),
+    I = n(673753);
+let b = function (e) {
+    let { className: t, guild: n, roleStyle: l, roleFilter: o, onSelect: d, onClose: b } = e,
+        v = (0, _.bG)([h.A], () => h.A.getSortedRoles(n.id)),
+        C = (0, g.Ay)(n.id, null),
+        y = i.useMemo(
             () =>
-                d()(I)
-                    .filter(s)
+                c()(v)
+                    .filter(o)
                     .map((e) => ({
                         id: e.id,
                         value: e.id,
                         label: e.name,
                         leading:
-                            "dot" === a
-                                ? (0, n.jsx)(p.W, {
-                                      className: b.b8,
-                                      color: e.colorString ?? m.TpD,
-                                      colors: T ? e.colorStrings : null,
+                            "dot" === l
+                                ? (0, a.jsx)(p.W, {
+                                      className: I.b8,
+                                      color: e.colorString ?? x.TpD,
+                                      colors: C ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1,
                                   })
-                                : (0, n.jsx)(p.R, {
-                                      className: b.kb,
-                                      color: e.colorString ?? m.TpD,
-                                      colors: T ? e.colorStrings : null,
+                                : (0, a.jsx)(p.R, {
+                                      className: I.kb,
+                                      color: e.colorString ?? x.TpD,
+                                      colors: C ? e.colorStrings : null,
                                   }),
                     }))
                     .value(),
-            [I, s, a, T],
+            [v, o, l, C],
         ),
-        S = r.useCallback(
-            (e, t) => ("" === t.trim() ? e : e.filter((e) => o()(t.toLowerCase(), e.label.toLowerCase()))),
+        P = i.useCallback(
+            (e, t) => ("" === t.trim() ? e : e.filter((e) => s()(t.toLowerCase(), e.label.toLowerCase()))),
             [],
         );
-    return (0, n.jsx)(h.l, {
-        className: l()(b.kL, t),
-        "aria-label": E.intl.string(E.t.ljnBlo),
-        children: (0, n.jsxs)(f.iS, {
+    return (0, a.jsx)(f.l, {
+        className: r()(I.kL, t),
+        "aria-label": m.intl.string(m.t.ljnBlo),
+        children: (0, a.jsxs)(A.iS, {
             selectionMode: "single",
             value: void 0,
             onSelectionChange: (e) => {
-                null != e && (c(e), v());
+                null != e && (d(e), b());
             },
-            options: C,
-            customMatchSorter: S,
+            options: y,
+            customMatchSorter: P,
             children: [
-                (0, n.jsx)(f.a3, {
-                    label: E.intl.string(E.t.ljnBlo),
+                (0, a.jsx)(A.a3, {
+                    label: m.intl.string(m.t.ljnBlo),
                     hideLabel: !0,
-                    placeholder: E.intl.string(E.t.XPGZXP),
+                    placeholder: m.intl.string(m.t.XPGZXP),
                     autoFocus: !0,
                 }),
-                (0, n.jsx)(f.X2, { renderListItem: (e) => (0, n.jsx)(u.c, { ...e }) }),
+                (0, a.jsx)(A.X2, { renderListItem: (e) => (0, a.jsx)(u.c, { ...e }) }),
             ],
         }),
     });

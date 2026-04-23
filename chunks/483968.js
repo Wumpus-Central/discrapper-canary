@@ -1,39 +1,38 @@
-"use strict";
-r.d(t, { A: () => f });
-var i = r(627968),
-    n = r(311907),
-    s = r(827734),
-    a = r(777666),
-    l = r(194261),
-    c = r(403581),
-    o = r(590180),
-    d = r(4227),
-    u = r(993408),
-    p = r(985018),
-    _ = r(651491);
-let f = (e) => {
-    let { skuId: t, canUsePremiumCollectibles: r, isPurchaseSection: f, isPremiumSection: h } = e,
-        m = (0, u.aT)(t),
-        g = (0, n.bG)([o.A, d.A], () => {
-            let e = o.A.getProduct(t),
-                r = d.A.getPurchase(t);
-            return null != r ? (0, u.gA)(r) : (0, u.G0)(e);
+l.d(t, { A: () => x });
+var a = l(627968),
+    s = l(311907),
+    r = l(827734),
+    i = l(777666),
+    n = l(194261),
+    c = l(403581),
+    d = l(590180),
+    o = l(4227),
+    u = l(993408),
+    m = l(985018),
+    p = l(386339);
+let x = (e) => {
+    let { skuId: t, canUsePremiumCollectibles: l, isPurchaseSection: x, isPremiumSection: _ } = e,
+        h = (0, u.aT)(t),
+        A = (0, s.bG)([d.A, o.A], () => {
+            let e = d.A.getProduct(t),
+                l = o.A.getPurchase(t);
+            return null != l ? (0, u.gA)(l) : (0, u.G0)(e);
         });
-    return f || (h && r)
+    return x || (_ && l)
         ? null
-        : m
-          ? (0, i.jsx)(a.JI, {
-                className: _.Ad,
-                text: (0, i.jsxs)("div", {
-                    className: _.rm,
-                    children: [(0, i.jsx)(l.X, { size: "xxs", color: "currentColor" }), p.intl.string(p.t.y2b7CA)],
+        : h
+          ? (0, a.jsx)(i.JI, {
+                className: p.Ad,
+                text: (0, a.jsxs)("div", {
+                    className: p.rm,
+                    children: [(0, a.jsx)(n.X, { size: "xxs", color: "currentColor" }), m.intl.string(m.t.y2b7CA)],
                 }),
             })
-          : (0, i.jsx)(a.fk, {
-                icon: g
-                    ? () => (0, i.jsx)(c.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
-                    : () => (0, i.jsx)(l.X, { size: "xxs", color: "currentColor" }),
-                color: s.A.colors.BACKGROUND_MOD_STRONG.css,
-                className: _.bG,
+          : (0, a.jsx)(i.fk, {
+                icon: A
+                    ? () => (0, a.jsx)(c.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
+                    : () => (0, a.jsx)(n.X, { size: "xxs", color: "currentColor" }),
+                color: r.A.colors.BACKGROUND_MOD_STRONG.css,
+                className: p.bG,
             });
 };

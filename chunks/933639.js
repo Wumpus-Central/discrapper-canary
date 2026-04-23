@@ -1,79 +1,76 @@
-n.d(t, { A: () => x });
-var a = n(627968),
-    r = n(64700),
-    l = n(503698),
-    i = n.n(l),
+"use strict";
+n.d(t, { A: () => T });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
-    s = n(990078),
-    c = n(192308),
-    u = n(22231),
+    l = n(990078),
+    u = n(192308),
+    c = n(22231),
     d = n(241326),
-    f = n(775602),
-    _ = n(688810),
-    h = n(101555),
-    A = n(253932),
-    p = n(183555),
+    _ = n(775602),
+    f = n(688810),
+    p = n(101555),
+    h = n(253932),
+    E = n(183555),
     m = n(939496),
-    S = n(996988),
-    g = n(985018),
-    b = n(242744);
-function x(e) {
-    let { isVisible: t, isExpandable: l, onCloseProfile: x } = e,
-        { analyticsLocations: T } = (0, _.Ay)(),
-        { trackUserProfileAction: E } = (0, p.NJ)(),
-        R = r.useRef(null),
-        v = r.useRef(null),
-        [C, y] = (0, o.yK)([f.A], () => [f.A.useReducedMotion, f.A.keyboardModeEnabled]),
-        j = !l || C || y ? 0 : 300,
-        { themeType: I } = (0, m.E)();
-    return (0, a.jsxs)(h.Ay, {
-        className: i()(b.oO, { [b.RK]: t, [b.lu]: l }),
+    g = n(996988),
+    A = n(985018),
+    I = n(242744);
+function T(e) {
+    let { isVisible: t, isExpandable: s, onCloseProfile: T } = e,
+        { analyticsLocations: S } = (0, f.Ay)(),
+        { trackUserProfileAction: y } = (0, E.NJ)(),
+        N = i.useRef(null),
+        v = i.useRef(null),
+        [C, O] = (0, o.yK)([_.A], () => [_.A.useReducedMotion, _.A.keyboardModeEnabled]),
+        R = !s || C || O ? 0 : 300,
+        { themeType: b } = (0, m.E)();
+    return (0, r.jsxs)(p.Ay, {
+        className: a()(I.oO, { [I.RK]: t, [I.lu]: s }),
         children: [
-            (0, a.jsx)(s.m, {
+            (0, r.jsx)(l.m, {
                 asContainer: !0,
-                targetElementRef: R,
-                text: g.intl.string(g.t.bt75uw),
-                delay: j,
+                targetElementRef: N,
+                text: A.intl.string(A.t.bt75uw),
+                delay: R,
                 ariaHidden: !0,
-                children: (0, a.jsx)(h.$n, {
-                    ref: R,
-                    className: i()(b.x6, b.kb),
-                    "aria-label": g.intl.string(g.t.QdHxos),
+                children: (0, r.jsx)(p.$n, {
+                    ref: N,
+                    className: a()(I.x6, I.kb),
+                    "aria-label": A.intl.string(A.t.QdHxos),
                     "aria-haspopup": "dialog",
                     onClick: () => {
-                        E({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
+                        y({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
                             ((e) => {
-                                let { analyticsLocations: t, stackingBehavior: r } = e;
-                                return (0, c.openModalLazy)(
+                                let { analyticsLocations: t, stackingBehavior: i } = e;
+                                return (0, u.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([
-                                            n.e("28367"),
-                                            n.e("27411"),
-                                            n.e("82166"),
-                                        ]).then(n.bind(n, 431374));
-                                        return (n) => (0, a.jsx)(e, { ...n, sourceAnalyticsLocations: t });
+                                        let { default: e } = await n.e("41091").then(n.bind(n, 431374));
+                                        return (n) => (0, r.jsx)(e, { ...n, sourceAnalyticsLocations: t });
                                     },
-                                    null != r ? { stackingBehavior: r } : void 0,
+                                    null != i ? { stackingBehavior: i } : void 0,
                                 );
-                            })({ analyticsLocations: T, stackingBehavior: I === S.d.MODAL_V2 ? "stack" : void 0 }),
-                            x?.();
+                            })({ analyticsLocations: S, stackingBehavior: b === g.d.MODAL_V2 ? "stack" : void 0 }),
+                            T?.();
                     },
-                    children: (0, a.jsx)(u.R, { size: "xs", colorClass: b.Kk }),
+                    children: (0, r.jsx)(c.R, { size: "xs", colorClass: I.Kk }),
                 }),
             }),
-            (0, a.jsx)(s.m, {
+            (0, r.jsx)(l.m, {
                 asContainer: !0,
-                text: g.intl.string(g.t.VkKicb),
-                delay: j,
+                text: A.intl.string(A.t.VkKicb),
+                delay: R,
                 ariaHidden: !0,
-                children: (0, a.jsx)(h.$n, {
+                children: (0, r.jsx)(p.$n, {
                     ref: v,
-                    className: i()(b.x6, b.pG),
-                    "aria-label": g.intl.string(g.t.wfYTHe),
+                    className: a()(I.x6, I.pG),
+                    "aria-label": A.intl.string(A.t.wfYTHe),
                     onClick: () => {
-                        E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), A.G2.updateSetting(void 0);
+                        y({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), h.G2.updateSetting(void 0);
                     },
-                    children: (0, a.jsx)(d.u, { size: "xs", colorClass: b.Kk }),
+                    children: (0, r.jsx)(d.u, { size: "xs", colorClass: I.Kk }),
                 }),
             }),
         ],

@@ -1,15 +1,14 @@
-"use strict";
-a.d(t, { b: () => s });
+a.d(t, { b: () => i });
 var l = a(311907),
-    i = a(836602),
-    r = a(696451),
-    n = a(427262);
-function s(e, t) {
-    let a = n.Ay.useName(e);
+    n = a(836602),
+    s = a(696451),
+    r = a(427262);
+function i(e, t) {
+    let a = r.Ay.useName(e);
     return (
-        (0, l.bG)([i.A, r.Ay], () => {
-            let a = i.A.getPendingChanges(t);
-            return null != t ? (a.pendingNickname ?? r.Ay.getNick(t, e?.id)) : a.pendingGlobalName;
+        (0, l.bG)([n.A, s.Ay], () => {
+            let a = n.A.getPendingChanges(t);
+            return null != t ? (a.pendingNickname ?? s.Ay.getNick(t, e?.id)) : a.pendingGlobalName;
         }, [t, e]) ??
         a ??
         ""

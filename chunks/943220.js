@@ -1,13 +1,12 @@
-"use strict";
-i.d(t, { A: () => s });
-var n = i(627968);
-i(64700);
-var l = i(763754),
-    r = i(635071),
-    a = i(812299);
+n.d(t, { A: () => s });
+var a = n(627968);
+n(64700);
+var i = n(763754),
+    l = n(635071),
+    r = n(812299);
 function s(e) {
-    let t = (0, l.Ay)(e.message),
-        i = (0, a.y)({
+    let t = (0, i.Ay)(e.message),
+        n = (0, r.y)({
             message: e.message,
             channel: e.channel,
             user: e.message?.author ?? e.userOverride,
@@ -15,5 +14,5 @@ function s(e) {
             isRepliedMessage: !!e.isRepliedMessage,
         }),
         s = {};
-    return null != i && (s[r.w.SYSTEM_TAG] = i), (0, n.jsx)(r.A, { ...e, author: t, decorations: s });
+    return null != n && (s[l.w.SYSTEM_TAG] = n), (0, a.jsx)(l.A, { ...e, author: t, decorations: s });
 }

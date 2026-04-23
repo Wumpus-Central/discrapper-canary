@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { A: () => c });
-var a = n(627968);
+var l = n(627968);
 n(64700);
-var i = n(735438),
-    r = n(534514),
-    l = n(834730),
+var a = n(735438),
+    i = n(534514),
+    r = n(834730),
     s = n(985018),
     d = n(221314),
     o = n(660261);
 let c = (e) => {
-    let t = (0, i.flatMap)(e.history, (e) => {
+    let t = (0, a.flatMap)(e.history, (e) => {
         let {
                 destination: [t],
                 multiSelect: n,
             } = e,
-            a = [null, null],
-            i = Object.values(n?.state ?? {});
-        return i.length > 0 && (a[0] = i.join(", ")), "" !== t && (a[1] = t), a;
+            l = [null, null],
+            a = Object.values(n?.state ?? {});
+        return a.length > 0 && (l[0] = a.join(", ")), "" !== t && (l[1] = t), l;
     }).filter((e) => null != e);
     return 0 === t.length
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: o.kL,
               children: [
-                  (0, a.jsx)(r.D, {
+                  (0, l.jsx)(i.D, {
                       className: o.MR,
                       color: "text-default",
                       variant: "heading-sm/semibold",
                       children: e.isModeratorReport ? s.intl.string(d.default["6mx/DP"]) : s.intl.string(s.t["+3V9Tp"]),
                   }),
                   t.map((e, t) =>
-                      (0, a.jsxs)(
+                      (0, l.jsxs)(
                           "div",
                           {
                               className: o.P,
                               children: [
-                                  (0, a.jsx)("div", { className: o.RL }),
-                                  (0, a.jsx)(l.E, { variant: "text-md/normal", className: o.b, children: e }),
+                                  (0, l.jsx)("div", { className: o.RL }),
+                                  (0, l.jsx)(r.E, { variant: "text-md/normal", className: o.b, children: e }),
                               ],
                           },
                           `${e}+${t}`,

@@ -1,20 +1,19 @@
-"use strict";
 n.d(t, { e: () => f }), n(321073);
 var r = n(64700),
     i = n(311907),
-    l = n(532624),
-    a = n(531685),
-    s = n(350535),
-    o = n(365971),
-    d = n(395011),
-    u = n(222506),
-    c = n(545807);
-let A = new Set(["shift", "ctrl", "control", "alt", "meta", "os"]);
-function h(e) {
-    let { keyCode: t, shiftKey: n, metaKey: r, altKey: i, ctrlKey: l } = e;
-    return { keyCode: t, shiftKey: n, metaKey: r, altKey: i, ctrlKey: l };
+    a = n(532624),
+    l = n(531685),
+    o = n(350535),
+    d = n(365971),
+    s = n(395011),
+    c = n(222506),
+    u = n(545807);
+let _ = new Set(["shift", "ctrl", "control", "alt", "meta", "os"]);
+function A(e) {
+    let { keyCode: t, shiftKey: n, metaKey: r, altKey: i, ctrlKey: a } = e;
+    return { keyCode: t, shiftKey: n, metaKey: r, altKey: i, ctrlKey: a };
 }
-function g(e, t) {
+function h(e, t) {
     return (
         e.keyCode === t.keyCode &&
         e.shiftKey === t.shiftKey &&
@@ -24,48 +23,48 @@ function g(e, t) {
     );
 }
 function f() {
-    let e = (0, c.A)(),
-        t = (0, i.bG)([d.A], () => d.A.getTargetPID(), []),
-        n = (0, i.bG)([l.Ay], () => {
-            let e = l.Ay.getOverlayKeybind();
+    let e = (0, u.A)(),
+        t = (0, i.bG)([s.A], () => s.A.getTargetPID(), []),
+        n = (0, i.bG)([a.Ay], () => {
+            let e = a.Ay.getOverlayKeybind();
             return null != e ? e.shortcut : [];
         }, []),
-        f = (0, i.bG)([u.A], () => u.A.isInputLocked(t), [t]),
-        m = (0, i.bG)([a.A], () => {
-            let t = (0, o.Q2)(e);
-            return a.A.isVisible(t) && a.A.isFocused(t);
+        f = (0, i.bG)([c.A], () => c.A.isInputLocked(t), [t]),
+        g = (0, i.bG)([l.A], () => {
+            let t = (0, d.Q2)(e);
+            return l.A.isVisible(t) && l.A.isFocused(t);
         }, [e]),
-        v = r.useRef([]),
-        y = r.useMemo(() => (0, s.pi)(n).map((e) => h(e)), [n]),
+        m = r.useRef([]),
+        b = r.useMemo(() => (0, o.pi)(n).map((e) => A(e)), [n]),
         p = r.useMemo(() => n.length > 0, [n]),
-        _ = !f && p && m;
+        v = !f && p && g;
     r.useEffect(() => {
-        v.current = [];
-    }, [f, y]),
+        m.current = [];
+    }, [f, b]),
         r.useEffect(() => {
-            if (!_) {
-                v.current = [];
+            if (!v) {
+                m.current = [];
                 return;
             }
             let t = (e) => {
-                    let t = h(e),
-                        n = v.current,
-                        r = n.some((e) => g(e, t)),
+                    let t = A(e),
+                        n = m.current,
+                        r = n.some((e) => h(e, t)),
                         i = (function (e) {
                             let t = e.key.toLowerCase();
-                            for (let e of A) if (t.includes(e)) return !0;
+                            for (let e of _) if (t.includes(e)) return !0;
                             return !1;
                         })(e);
                     r || i || n.push(t),
-                        0 !== y.length &&
-                            n.length === y.length &&
-                            y.every((e) => n.some((t) => g(e, t))) &&
+                        0 !== b.length &&
+                            n.length === b.length &&
+                            b.every((e) => n.some((t) => h(e, t))) &&
                             (e.preventDefault(), e.stopPropagation());
                 },
                 n = (e) => {
-                    let t = h(e),
-                        n = v.current,
-                        r = n.findIndex((e) => g(e, t));
+                    let t = A(e),
+                        n = m.current,
+                        r = n.findIndex((e) => h(e, t));
                     r > -1 && n.splice(r, 1);
                 };
             return (
@@ -75,5 +74,5 @@ function f() {
                     e.removeEventListener("keydown", t, !0), e.removeEventListener("keyup", n, !0);
                 }
             );
-        }, [_, y, e]);
+        }, [v, b, e]);
 }

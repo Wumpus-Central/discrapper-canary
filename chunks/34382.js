@@ -1,3 +1,4 @@
+"use strict";
 n.r(
     (e.exports = {
         cardIcon: "cardIcon__29abc",

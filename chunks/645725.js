@@ -1,6 +1,6 @@
 n.d(t, { A: () => V });
-var l = n(627968),
-    i = n(64700),
+var i = n(627968),
+    l = n(64700),
     a = n(503698),
     s = n.n(a),
     r = n(311907),
@@ -16,17 +16,17 @@ var l = n(627968),
     f = n(192308),
     x = n(365199),
     C = n(58149),
-    N = n(392054),
-    g = n(658575),
+    g = n(392054),
+    N = n(658575),
     E = n(342384),
-    v = n(20015),
-    b = n(204776),
-    I = n(50268),
+    b = n(20015),
+    I = n(204776),
+    v = n(50268),
     y = n(928658),
     j = n(611010),
     P = n(967198),
-    T = n(287809),
-    L = n(954571),
+    L = n(287809),
+    T = n(954571),
     S = n(957565),
     R = n(692848),
     O = n(989837),
@@ -38,80 +38,66 @@ var l = n(627968),
     H = n(527080);
 function V(e) {
     let { application: t, context: a, className: V, sectionName: W } = e,
-        B = i.useRef(null),
-        F = (0, r.bG)([O.A], () => O.A.entrypoint()),
-        G = (0, k.Pp)(t),
-        z = (0, b.Ie)(G),
-        $ = (0, g.G)(t.id),
+        B = l.useRef(null),
+        G = (0, r.bG)([O.A], () => O.A.entrypoint()),
+        F = (0, k.Pp)(t),
+        z = (0, I.Ie)(F),
+        $ = (0, N.G)(t.id),
         K = (0, r.bG)([P.A], () => P.A.getGuildId() ?? void 0, []),
-        Y = {
-            location: N.Oh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
+        q = {
+            location: g.Oh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: t.id,
             section_name: W,
             source: O.A.lastShownEntrypoint(),
         },
-        q = T.default.getCurrentUser(),
-        X = (0, I.A)({ id: t.id, label: U.intl.string(U.t["+NP/b2"]) }),
+        Y = L.default.getCurrentUser(),
+        X = (0, v.A)({ id: t.id, label: U.intl.string(U.t["+NP/b2"]) }),
         Z = (0, M.r)({ application: t }),
-        Q = (0, v.n)(t, D.gfo.EMBEDDED),
+        Q = (0, b.n)(t, D.gfo.EMBEDDED),
         J = "channel" === a.type ? a.channel : void 0;
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: H.k,
         children: [
-            (0, l.jsx)(o.D, {
+            (0, i.jsx)(o.D, {
                 onClick: () => {
-                    let e = Q ? (0, E.W)({ applicationId: t.id, referrerId: q?.id }) : (0, E.V)({ id: t.id, ...G });
+                    let e = Q ? (0, E.W)({ applicationId: t.id, referrerId: Y?.id }) : (0, E.V)({ id: t.id, ...F });
                     (0, S.C)(e, () => (0, c.P0)((0, d.o)(U.intl.string(U.t["L/PwZf"]), u.Ck.SUCCESS))),
-                        L.default.track(D.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        T.default.track(D.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
-                            source: F,
+                            source: G,
                         });
                 },
                 className: s()(H.v, V),
                 "aria-label": U.intl.string(U.t.WqhZss),
-                children: (0, l.jsx)(m.q, { size: "sm", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                children: (0, i.jsx)(m.q, { size: "sm", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
             }),
-            (0, l.jsx)(_.Y, {
+            (0, i.jsx)(_.Y, {
                 targetElementRef: B,
                 renderPopout: (e) => {
-                    let { closePopout: i } = e;
-                    return (0, l.jsxs)(A.W, {
+                    let { closePopout: l } = e;
+                    return (0, i.jsxs)(A.W, {
                         "data-menu-needs-review": !0,
                         className: w.qp,
                         navId: "app-details-more-menu",
-                        onClose: i,
+                        onClose: l,
                         "aria-label": U.intl.string(U.t.AXIHpV),
                         onSelect: void 0,
                         children: [
-                            (0, l.jsxs)(h.rX, {
+                            (0, i.jsxs)(h.rX, {
                                 children: [
                                     $ &&
-                                        (0, l.jsx)(h.Dr, {
+                                        (0, i.jsx)(h.Dr, {
                                             id: "open-storefront",
                                             label: U.intl.string(U.t.kRvlKJ),
                                             action: () => {
                                                 (0, f.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("61943"),
-                                                        n.e("28367"),
-                                                        n.e("27411"),
-                                                        n.e("49318"),
-                                                        n.e("12721"),
-                                                        n.e("58283"),
-                                                        n.e("17601"),
-                                                        n.e("8087"),
-                                                        n.e("55057"),
-                                                        n.e("60471"),
-                                                        n.e("42257"),
-                                                        n.e("48563"),
-                                                        n.e("27355"),
-                                                        n.e("67876"),
                                                         n.e("374"),
                                                         n.e("33563"),
-                                                        n.e("40343"),
+                                                        n.e("42944"),
                                                     ]).then(n.bind(n, 719847));
                                                     return (n) =>
-                                                        (0, l.jsx)(e, {
+                                                        (0, i.jsx)(e, {
                                                             transitionState: n.transitionState,
                                                             onClose: n.onClose,
                                                             appId: t.id,
@@ -121,20 +107,20 @@ function V(e) {
                                             },
                                         }),
                                     z
-                                        ? (0, l.jsx)(h.Dr, {
+                                        ? (0, i.jsx)(h.Dr, {
                                               id: "add-app",
                                               label: U.intl.string(U.t.NgXl3C),
                                               action: () => {
-                                                  null == G.customInstallUrl &&
-                                                      (0, C.zV)(D.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Y),
+                                                  null == F.customInstallUrl &&
+                                                      (0, C.zV)(D.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, q),
                                                       (0, R.o)({
-                                                          ...G,
+                                                          ...F,
                                                           oauth2Callback: (e) => {
                                                               let { location: t } = e;
                                                               null != t &&
                                                                   (0, C.zV)(
                                                                       D.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
-                                                                      Y,
+                                                                      q,
                                                                   );
                                                           },
                                                           source: "app_launcher_app_details",
@@ -145,10 +131,10 @@ function V(e) {
                                     Z,
                                 ],
                             }),
-                            (0, l.jsx)(h.rX, {
+                            (0, i.jsx)(h.rX, {
                                 children:
                                     t instanceof j.Ay
-                                        ? (0, l.jsx)(h.Dr, {
+                                        ? (0, i.jsx)(h.Dr, {
                                               id: "report-app",
                                               color: "danger",
                                               label: U.intl.string(U.t.jhJzez),
@@ -163,20 +149,20 @@ function V(e) {
                                           })
                                         : null,
                             }),
-                            (0, l.jsx)(h.rX, { children: X }),
+                            (0, i.jsx)(h.rX, { children: X }),
                         ],
                     });
                 },
                 align: "right",
                 position: "bottom",
                 children: (e) =>
-                    (0, l.jsx)(o.D, {
+                    (0, i.jsx)(o.D, {
                         innerRef: B,
                         ...e,
                         onClick: e.onClick,
                         className: s()(H.v, V),
                         "aria-label": U.intl.string(U.t["UKOtz+"]),
-                        children: (0, l.jsx)(x.j, { size: "sm", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                        children: (0, i.jsx)(x.j, { size: "sm", color: p.A.colors.INTERACTIVE_TEXT_ACTIVE }),
                     }),
             }),
         ],

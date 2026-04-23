@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Ui: "cardContainer__5b393",
     Nr: "card__5b393",

@@ -1,41 +1,42 @@
+"use strict";
 n.d(t, { A: () => c });
-var a = n(627968);
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    l = n.n(r),
-    i = n(834730),
-    s = n(147925),
-    o = n(89892);
+var i = n(503698),
+    s = n.n(i),
+    a = n(834730),
+    o = n(147925),
+    l = n(89892);
 function u(e) {
-    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: r, separatorClassName: u } = e;
-    return (0, a.jsxs)(
+    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: u } = e;
+    return (0, r.jsxs)(
         "div",
         {
-            className: l()(o.hj, { [o.jQ]: r }),
+            className: s()(l.hj, { [l.jQ]: i }),
             children: [
-                (0, a.jsx)(i.E, {
+                (0, r.jsx)(a.E, {
                     variant: "text-sm/medium",
                     color: n ? "text-strong" : "text-muted",
                     children: t.label,
                 }),
-                r ? null : (0, a.jsx)(s.A, { className: l()(o.LJ, u), direction: s.A.Directions.RIGHT }),
+                i ? null : (0, r.jsx)(o.A, { className: s()(l.LJ, u), direction: o.A.Directions.RIGHT }),
             ],
         },
         t.id,
     );
 }
 let c = function (e) {
-    let { breadcrumbs: t, activeId: n, className: r, separatorClassName: i } = e;
-    return (0, a.jsx)("div", {
-        className: l()(o.jD, r),
-        children: t.map((e, r) =>
-            (0, a.jsx)(
+    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: a } = e;
+    return (0, r.jsx)("div", {
+        className: s()(l.jD, i),
+        children: t.map((e, i) =>
+            (0, r.jsx)(
                 u,
                 {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === n,
-                    isFinalBreadcrumb: r === t.length - 1,
-                    separatorClassName: i,
+                    isFinalBreadcrumb: i === t.length - 1,
+                    separatorClassName: a,
                 },
                 e.id,
             ),

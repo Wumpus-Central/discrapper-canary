@@ -1,19 +1,20 @@
-n.d(t, { A: () => p, k: () => r });
-var l,
+"use strict";
+n.d(t, { A: () => _, k: () => a });
+var r,
     i = n(311907),
-    a = n(73153),
-    r = (((l = {})[(l.UNKNOWN = 0)] = "UNKNOWN"), (l[(l.PENDING = 1)] = "PENDING"), (l[(l.DONE = 2)] = "DONE"), l);
-let s = 0,
-    o = null,
+    s = n(73153),
+    a = (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"), (r[(r.PENDING = 1)] = "PENDING"), (r[(r.DONE = 2)] = "DONE"), r);
+let o = 0,
+    l = null,
     u = null,
     c = null;
 class d extends i.Ay.Store {
     static displayName = "BrowserCheckoutStateStore";
     get browserCheckoutState() {
-        return s;
+        return o;
     }
     get loadId() {
-        return o;
+        return l;
     }
     get skuId() {
         return u;
@@ -22,11 +23,11 @@ class d extends i.Ay.Store {
         return c;
     }
 }
-let p = new d(a.h, {
+let _ = new d(s.h, {
     USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (e) {
-        (s = 1), (o = e.loadId);
+        (o = 1), (l = e.loadId);
     },
     USER_PAYMENT_BROWSER_CHECKOUT_DONE: function (e) {
-        o === e.loadId && ((u = e.skuId ?? null), (c = e.skuSubscriptionPlanId ?? null), (s = 2));
+        l === e.loadId && ((u = e.skuId ?? null), (c = e.skuSubscriptionPlanId ?? null), (o = 2));
     },
 });

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__16eb0",
     Wl: "datePickerContainer__16eb0",

@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
-var l = n(64700),
+"use strict";
+n.d(t, { A: () => s });
+var r = n(64700),
     i = n(73153);
-function a(e) {
-    let t = (0, l.useRef)(e);
-    (0, l.useEffect)(() => {
+function s(e) {
+    let t = (0, r.useRef)(e);
+    (0, r.useEffect)(() => {
         t.current = e;
     }, [e]),
-        (0, l.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (__OVERLAY__) {
                 function e(e) {
                     e.locked && t.current();

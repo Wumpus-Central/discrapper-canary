@@ -1,4 +1,4 @@
-a.d(t, { A: () => C });
+a.d(t, { A: () => E });
 var n = a(627968),
     l = a(64700),
     i = a(503698),
@@ -15,77 +15,82 @@ var n = a(627968),
     g = a(867099),
     v = a(147964),
     b = a(760716),
-    _ = a(652215),
-    f = a(115093),
-    j = a(505206),
-    A = a(11039);
-let y = window.GLOBAL_ENV.RELEASE_CHANNEL === f.B.STAGING ? "1438571444891025408" : "1346069614634864772";
-function C() {
+    _ = a(533406),
+    f = a(652215),
+    j = a(115093),
+    A = a(505206),
+    y = a(11039);
+let C = window.GLOBAL_ENV.RELEASE_CHANNEL === j.B.STAGING ? "1438571444891025408" : "1346069614634864772";
+function E() {
     let e = (0, b.i)((e) => e.overrideApplicationId),
         t = (0, b.i)((e) => e.setOverrideApplicationId),
         a = null != e,
-        [i, f] = l.useState(y),
-        [C, E] = l.useState(_.FYj),
-        S = l.useCallback(
+        [i, j] = l.useState(C),
+        [E, S] = l.useState(f.FYj),
+        N = l.useCallback(
             (e) => {
                 e ? t(i) : t(null);
             },
             [i, t],
         ),
-        N = l.useCallback(
+        k = l.useCallback(
             (e) => {
-                f(e), a && t(e);
+                j(e), a && t(e);
             },
             [a, t],
         ),
-        k = (0, b.i)((e) => e.showSelfActivity),
-        I = (0, b.i)((e) => e.setShowSelfActivity),
-        D = (0, b.i)((e) => e.recommendationApplicationIds),
-        T = (0, b.i)((e) => e.setRecommendationApplicationIds),
-        w = l.useCallback(
+        I = (0, b.i)((e) => e.showSelfActivity),
+        D = (0, b.i)((e) => e.setShowSelfActivity),
+        T = (0, b.i)((e) => e.recommendationApplicationIds),
+        w = (0, b.i)((e) => e.setRecommendationApplicationIds),
+        O = l.useCallback(
             (e) => {
-                e ? T(C) : T(null);
+                e ? w(E) : w(null);
             },
-            [C, T],
+            [E, w],
         ),
-        O = (0, r.bG)([v.A], () => null != v.A.testModeApplicationId),
-        R = l.useCallback((e) => {
+        R = (0, r.bG)([v.A], () => null != v.A.testModeApplicationId),
+        L = l.useCallback((e) => {
             e ? (0, o.openModal)((e) => (0, n.jsx)(g.A, { ...e })) : h.cL();
         }, []),
-        L = (0, x.A)({
+        M = (0, x.A)({
             location: "DevToolsSlayerStorefrontPanel",
             applicationId: i,
             source: p.Ob.Embed,
             trackEntryPointImpression: !0,
         }),
-        M = l.useCallback(
+        P = l.useCallback(
             (e) => {
-                L?.(e);
+                M?.(e);
             },
-            [L],
-        );
+            [M],
+        ),
+        U = l.useCallback(() => {
+            (0, _.B)();
+        }, []);
     return (0, n.jsx)("div", {
-        className: s()(j.nd, A.n),
+        className: s()(A.nd, y.n),
         children: (0, n.jsxs)("div", {
-            className: A.k,
+            className: y.k,
             children: [
-                (0, n.jsx)(d.k, { label: "Application ID", value: i, onChange: N }),
+                (0, n.jsx)(d.k, { label: "Application ID", value: i, onChange: k }),
                 (0, n.jsx)(c.D, { variant: "heading-lg/normal", children: "Activity Override" }),
-                (0, n.jsx)(u.d, { label: "Override activity application ID", checked: a, onChange: S }),
-                (0, n.jsx)(u.d, { label: "Show own voice activity (bypass self check)", checked: k, onChange: I }),
-                (0, n.jsx)(u.d, { label: "Enable application test mode", checked: O, onChange: R }),
-                (0, n.jsx)(m.$, { text: "Open Game Profile Modal", onClick: M }),
+                (0, n.jsx)(u.d, { label: "Override activity application ID", checked: a, onChange: N }),
+                (0, n.jsx)(u.d, { label: "Show own voice activity (bypass self check)", checked: I, onChange: D }),
+                (0, n.jsx)(u.d, { label: "Enable application test mode", checked: R, onChange: L }),
+                (0, n.jsx)(m.$, { text: "Open Game Profile Modal", onClick: P }),
+                (0, n.jsx)(m.$, { text: "Open Announcement Modal", onClick: U }),
                 (0, n.jsx)(c.D, { variant: "heading-lg/normal", children: "Wishlists" }),
                 (0, n.jsx)(d.k, {
                     label: "Recommendation application IDs",
-                    value: C,
-                    onChange: E,
-                    disabled: null == D,
+                    value: E,
+                    onChange: S,
+                    disabled: null == T,
                 }),
                 (0, n.jsx)(u.d, {
                     label: "Enable recommendation application IDs override",
-                    checked: null != D,
-                    onChange: w,
+                    checked: null != T,
+                    onChange: O,
                 }),
             ],
         }),

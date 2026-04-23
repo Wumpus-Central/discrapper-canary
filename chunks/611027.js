@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     DB: "itemContainer__971b5",
     AS: "item__971b5",

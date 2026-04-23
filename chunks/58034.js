@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { H: () => m, Z: () => h });
-var r = n(64700),
-    i = n(311907),
-    a = n(873298),
-    s = n(973654),
-    o = n(964404),
-    l = n(617617),
-    u = n(954571),
-    c = n(823459),
-    d = n(47671),
-    _ = n(652215),
-    f = n(788868),
-    p = n(185928);
-let h = () => {
-        let e = (0, i.bG)([d.A], () => d.A.gradientPreset),
-            t = (0, i.bG)([o.Ay], () => o.Ay.useSystemTheme === p.Q_.ON),
-            [n, a] = (0, r.useState)(t);
+a.d(t, { H: () => S, Z: () => m });
+var s = a(64700),
+    r = a(311907),
+    i = a(873298),
+    n = a(973654),
+    l = a(964404),
+    c = a(617617),
+    _ = a(954571),
+    E = a(823459),
+    o = a(47671),
+    d = a(652215),
+    T = a(788868),
+    u = a(185928);
+let m = () => {
+        let e = (0, r.bG)([o.A], () => o.A.gradientPreset),
+            t = (0, r.bG)([l.Ay], () => l.Ay.useSystemTheme === u.Q_.ON),
+            [a, i] = (0, s.useState)(t);
         return (
-            (0, r.useEffect)(() => {
-                null == e && a(t);
+            (0, s.useEffect)(() => {
+                null == e && i(t);
             }, [e, t]),
-            (0, r.useCallback)(() => {
-                null == e || ((0, c.S8)(), n && (0, s.k7)(p.Q_.ON));
-            }, [e, n])
+            (0, s.useCallback)(() => {
+                null == e || ((0, E.S8)(), a && (0, n.k7)(u.Q_.ON));
+            }, [e, a])
         );
     },
-    m = () => {
-        let { previewPaneVariant: e } = (0, i.cf)([d.A], () => ({
-                previewPaneVariant: d.A.isPreview ? f.tz.FREE : f.tz.PREMIUM_STANDARD,
+    S = () => {
+        let { previewPaneVariant: e } = (0, r.cf)([o.A], () => ({
+                previewPaneVariant: o.A.isPreview ? T.tz.FREE : T.tz.PREMIUM_STANDARD,
             })),
-            t = (0, i.bG)([l.A], () => {
-                let e = l.A.settings.appearance?.theme;
-                return `default ${e === a.Sx.LIGHT ? _.NJ8.LIGHT : _.NJ8.DARK}`;
+            t = (0, r.bG)([c.A], () => {
+                let e = c.A.settings.appearance?.theme;
+                return `default ${e === i.Sx.LIGHT ? d.NJ8.LIGHT : d.NJ8.DARK}`;
             });
-        return (0, r.useCallback)(
-            (n) => {
-                u.default.track(n, { preview_pane_variant: e, original_theme: t });
+        return (0, s.useCallback)(
+            (a) => {
+                _.default.track(a, { preview_pane_variant: e, original_theme: t });
             },
             [e, t],
         );

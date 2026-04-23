@@ -1,45 +1,44 @@
-"use strict";
-r.d(t, { Ay: () => _, ZK: () => p, dP: () => u, wn: () => d }), r(321073);
-var i,
-    n = r(64700),
-    s = r(417597),
-    a = r(590180),
-    l = r(4227),
-    c = r(993408),
-    o = r(985018),
-    d = (((i = {}).PURCHASE = "purchase"), (i.PREMIUM_PURCHASE = "premium_purchase"), (i.PREVIEW = "preview"), i);
+n.d(t, { Ay: () => p, ZK: () => m, dP: () => u, wn: () => d }), n(321073);
+var r,
+    s = n(64700),
+    i = n(417597),
+    l = n(590180),
+    a = n(4227),
+    o = n(993408),
+    c = n(985018),
+    d = (((r = {}).PURCHASE = "purchase"), (r.PREMIUM_PURCHASE = "premium_purchase"), (r.PREVIEW = "preview"), r);
 let u = { skuId: "None" },
-    p = { skuId: "Shop" },
-    _ = () => {
-        let e = (0, s.bG)([l.A], () => l.A.purchases),
-            [t, r] = (0, s.yK)([a.A], () => [a.A.categories, a.A.products]);
-        return (0, n.useMemo)(() => {
-            let i = (0, c.wo)(e, t).reduce(
-                (t, i) => {
-                    let n = e.get(i.skuId);
+    m = { skuId: "Shop" },
+    p = () => {
+        let e = (0, i.bG)([a.A], () => a.A.purchases),
+            [t, n] = (0, i.yK)([l.A], () => [l.A.categories, l.A.products]);
+        return (0, s.useMemo)(() => {
+            let r = (0, o.wo)(e, t).reduce(
+                (t, r) => {
+                    let s = e.get(r.skuId);
                     return (
-                        (null != n ? (0, c.gA)(n) : (0, c.G0)(r.get(i.skuId)))
-                            ? t.premium_purchase.push(i)
-                            : null != n
-                              ? t.purchase.push(i)
-                              : t.preview.push(i),
+                        (null != s ? (0, o.gA)(s) : (0, o.G0)(n.get(r.skuId)))
+                            ? t.premium_purchase.push(r)
+                            : null != s
+                              ? t.purchase.push(r)
+                              : t.preview.push(r),
                         t
                     );
                 },
                 { purchase: [], premium_purchase: [], preview: [] },
             );
             return [
-                { section: "purchase", items: [u, p, ...i.purchase], height: 12, header: o.intl.string(o.t["9x1v/p"]) },
+                { section: "purchase", items: [u, m, ...r.purchase], height: 12, header: c.intl.string(c.t["9x1v/p"]) },
                 {
                     section: "premium_purchase",
-                    items: i.premium_purchase,
+                    items: r.premium_purchase,
                     height: 12,
-                    header: o.intl.string(o.t.TiLCgw),
+                    header: c.intl.string(c.t.TiLCgw),
                 },
-                { section: "preview", items: i.preview, height: 12, header: o.intl.string(o.t["1vbbee"]) },
+                { section: "preview", items: r.preview, height: 12, header: c.intl.string(c.t["1vbbee"]) },
             ].filter((e) => {
                 let { items: t } = e;
                 return t.length > 0;
             });
-        }, [t, r, e]);
+        }, [t, n, e]);
     };

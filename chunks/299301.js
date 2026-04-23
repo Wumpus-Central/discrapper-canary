@@ -1,83 +1,84 @@
-n.d(t, { IJ: () => p, N$: () => m, eb: () => f, yf: () => _ });
-var a,
-    r = n(627968);
+"use strict";
+n.d(t, { IJ: () => f, N$: () => _, eb: () => h, yf: () => p });
+var r,
+    i = n(627968);
 n(64700);
-var l = n(834730),
-    i = n(580630),
-    s = n(735164),
-    o = n(156962),
+var s = n(834730),
+    a = n(580630),
+    o = n(735164),
+    l = n(156962),
     u = n(692440),
     c = n(985018),
     d = n(814304),
-    m =
-        (((a = {}).PREMIUM_GIFT = "PREMIUM_GIFT"),
-        (a.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
-        (a.PREMIUM_DEFAULT = "PREMIUM_DEFAULT"),
-        (a.PREMIUM_SWITCH_PLAN = "PREMIUM_SWITCH_PLAN"),
-        (a.LOADING = "LOADING"),
-        a);
-let p = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
-    _ = (e) => {
+    _ =
+        (((r = {}).PREMIUM_GIFT = "PREMIUM_GIFT"),
+        (r.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
+        (r.PREMIUM_DEFAULT = "PREMIUM_DEFAULT"),
+        (r.PREMIUM_SWITCH_PLAN = "PREMIUM_SWITCH_PLAN"),
+        (r.LOADING = "LOADING"),
+        r);
+let f = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
+    p = (e) => {
         let {
             error: t,
             isGift: n,
-            oneTimePurchaseNitroGiftInvoicePreview: a,
-            trialInvoicePreview: r,
-            proratedInvoicePreview: l,
-            renewalInvoicePreview: i,
-            planSwitchLoading: s,
+            oneTimePurchaseNitroGiftInvoicePreview: r,
+            trialInvoicePreview: i,
+            proratedInvoicePreview: s,
+            renewalInvoicePreview: a,
+            planSwitchLoading: o,
         } = e;
         return null != t
             ? null
-            : n && null != a
-              ? { type: "PREMIUM_GIFT", invoicePreview: a }
-              : null != r
-                ? { type: "PREMIUM_WITH_TRIAL", invoicePreview: r, renewalInvoicePreview: i }
-                : null == l || null == i || s
+            : n && null != r
+              ? { type: "PREMIUM_GIFT", invoicePreview: r }
+              : null != i
+                ? { type: "PREMIUM_WITH_TRIAL", invoicePreview: i, renewalInvoicePreview: a }
+                : null == s || null == a || o
                   ? { type: "LOADING", invoicePreview: null }
-                  : { type: "PREMIUM_DEFAULT", invoicePreview: l, renewalInvoicePreview: i };
+                  : { type: "PREMIUM_DEFAULT", invoicePreview: s, renewalInvoicePreview: a };
     },
-    f = (e) => {
+    h = (e) => {
         let {
             invoiceSummaryTypeWithPreview: t,
             priceOptions: n,
-            trialFooterMessageOverride: a,
-            hideSubscriptionDetails: m,
-            referralTrialOfferId: p,
-            isTrial: _,
-            inReverseTrial: f,
-            fractionalPremiumInfo: g,
-            plan: b,
-            showFractionalPremiumBanner: v,
-            isPrepaid: x,
-            isCustomGift: h,
-            enablePremiumBrandRefresh: I,
+            trialFooterMessageOverride: r,
+            hideSubscriptionDetails: _,
+            referralTrialOfferId: f,
+            isTrial: p,
+            inReverseTrial: h,
+            fractionalPremiumInfo: E,
+            plan: m,
+            showFractionalPremiumBanner: g,
+            isPrepaid: A,
+            isCustomGift: I,
+            enablePremiumBrandRefresh: T,
         } = e;
         if (null == t || "LOADING" === t.type) return null;
-        let { invoicePreview: A } = t;
+        let { invoicePreview: S } = t;
         if ("PREMIUM_GIFT" === t.type)
-            return (0, r.jsx)(u.DP, {
-                plan: b,
+            return (0, i.jsx)(u.DP, {
+                plan: m,
                 className: d.SU,
-                isPrepaidPaymentSource: x,
-                isCustomGift: h,
-                invoicePreview: A,
+                isPrepaidPaymentSource: A,
+                isCustomGift: I,
+                invoicePreview: S,
             });
         if ("PREMIUM_WITH_TRIAL" === t.type)
-            return (0, r.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(s.pK, { negativeMarginTop: !f, invisible: !0 }),
-                    (0, r.jsxs)(s.Yx, {
+                    (0, i.jsx)(o.pK, { negativeMarginTop: !h, invisible: !0 }),
+                    (0, i.jsxs)(o.Yx, {
                         className: d.SU,
                         children: [
-                            (0, r.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 className: d.W3,
                                 children: [
-                                    (0, r.jsx)(l.E, { variant: "text-md/bold", children: c.intl.string(c.t.txajQG) }),
-                                    (0, r.jsx)(l.E, {
+                                    (0, i.jsx)(s.E, { variant: "text-md/bold", children: c.intl.string(c.t.txajQG) }),
+                                    (0, i.jsx)(s.E, {
                                         variant: "text-md/normal",
                                         children: c.intl.format(c.t.hXcaLT, {
-                                            price: (0, i.$g)(0, A.currency, {
+                                            price: (0, a.$g)(0, S.currency, {
                                                 minimumFractionDigits: 0,
                                                 maximumFractionDigits: 0,
                                             }),
@@ -85,38 +86,38 @@ let p = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", { className: d.SV, children: (0, r.jsx)(u.tC, { invoice: A, plan: b }) }),
+                            (0, i.jsx)("div", { className: d.SV, children: (0, i.jsx)(u.tC, { invoice: S, plan: m }) }),
                         ],
                     }),
                 ],
             });
         if ("PREMIUM_DEFAULT" === t.type) {
             let e,
-                { renewalInvoicePreview: l } = t;
+                { renewalInvoicePreview: s } = t;
             return (
-                _ && A.subscriptionPeriodEnd !== l.subscriptionPeriodEnd && (e = A.subscriptionPeriodEnd),
-                (0, r.jsxs)(r.Fragment, {
+                p && S.subscriptionPeriodEnd !== s.subscriptionPeriodEnd && (e = S.subscriptionPeriodEnd),
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        v && !f && (0, r.jsx)(o.vi, { fractionalPremiumInfo: g, enablePremiumBrandRefresh: I }),
-                        (0, r.jsxs)(s.Yx, {
+                        g && !h && (0, i.jsx)(l.vi, { fractionalPremiumInfo: E, enablePremiumBrandRefresh: T }),
+                        (0, i.jsxs)(o.Yx, {
                             className: d.SU,
                             children: [
-                                (0, r.jsx)(s.Xd, { children: c.intl.string(c.t["2eh+Co"]) }),
-                                (0, r.jsx)(u.mT, {
-                                    invoice: A,
-                                    newPlan: b,
-                                    isPrepaidPaymentSource: x,
-                                    referralTrialOfferId: p,
+                                (0, i.jsx)(o.Xd, { children: c.intl.string(c.t["2eh+Co"]) }),
+                                (0, i.jsx)(u.mT, {
+                                    invoice: S,
+                                    newPlan: m,
+                                    isPrepaidPaymentSource: A,
+                                    referralTrialOfferId: f,
                                 }),
-                                x
+                                A
                                     ? null
-                                    : (0, r.jsx)(u.m0, {
-                                          renewalInvoice: l,
-                                          isTrial: _,
+                                    : (0, i.jsx)(u.m0, {
+                                          renewalInvoice: s,
+                                          isTrial: p,
                                           priceOptions: n,
                                           overrideRenewalDate: e,
-                                          trialFooterMessageOverride: a,
-                                          hideSubscriptionDetails: m,
+                                          trialFooterMessageOverride: r,
+                                          hideSubscriptionDetails: _,
                                       }),
                             ],
                         }),

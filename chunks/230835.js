@@ -1,69 +1,68 @@
-"use strict";
-l.d(t, { $Y: () => p, IE: () => x, JB: () => g, eq: () => T, tr: () => v, vC: () => E });
-var n,
-    a = l(64700),
+l.d(t, { $Y: () => A, IE: () => E, JB: () => x, eq: () => T, tr: () => C, vC: () => f });
+var a,
+    n = l(64700),
     s = l(311907),
-    i = l(462887),
-    r = l(973654),
+    r = l(462887),
+    i = l(973654),
     o = l(544028),
     c = l(253932),
-    u = l(467135),
-    d = l(823459),
+    d = l(467135),
+    u = l(823459),
     h = l(74396),
     m = l(385803),
     _ = l(818348),
-    g = (((n = {}).RESET_BUTTON = "reset_button"), (n.EDITOR_CLOSE = "editor_close"), n);
-function f(e) {
-    return (0, i.M)(e) ? _.NJ.DARK : _.NJ.LIGHT;
+    x = (((a = {}).RESET_BUTTON = "reset_button"), (a.EDITOR_CLOSE = "editor_close"), a);
+function g(e) {
+    return (0, r.M)(e) ? _.NJ.DARK : _.NJ.LIGHT;
 }
-function x(e) {
+function E(e) {
     let t = c.eh.getSetting(),
         l =
             null != t.backgroundGradientPresetId &&
             t.backgroundGradientPresetId in m.ag &&
             m.ag[t.backgroundGradientPresetId].theme !== e;
-    (0, r.GQ)(e), l && (0, d.S8)();
+    (0, i.GQ)(e), l && (0, u.S8)();
 }
-function E() {
-    let [e] = a.useState(() => o.A.theme);
-    return a.useCallback(
+function f() {
+    let [e] = n.useState(() => o.A.theme);
+    return n.useCallback(
         (t) => {
-            let { resetColors: l, resetGradientAngle: n, resetChassisMixAmount: a, resetBaseTheme: s } = A(t, e);
-            u.ko.getState().setAll({ colors: l, gradientAngle: n, chassisMixAmount: a }),
-                "reset_button" === t ? x(f(s ?? o.A.theme)) : (0, r.XG)();
-            let i = c.eh.getSetting().backgroundGradientPresetId;
-            null != i && (0, d.bc)(i);
+            let { resetColors: l, resetGradientAngle: a, resetChassisMixAmount: n, resetBaseTheme: s } = p(t, e);
+            d.ko.getState().setAll({ colors: l, gradientAngle: a, chassisMixAmount: n }),
+                "reset_button" === t ? E(g(s ?? o.A.theme)) : (0, i.XG)();
+            let r = c.eh.getSetting().backgroundGradientPresetId;
+            null != r && (0, u.bc)(r);
         },
         [e],
     );
 }
 function T() {
-    let e = f(o.A.theme);
-    e !== o.A.theme && x(e);
+    let e = g(o.A.theme);
+    e !== o.A.theme && E(e);
 }
-function p(e, t, l) {
+function A(e, t, l) {
     0 === e.length && l([t]), T();
 }
-function A(e, t) {
+function p(e, t) {
     let l = c.eh.getSetting().customUserThemeSettings,
-        n = h.A.getSavedCustomTheme(),
-        a = "reset_button" === e ? [u.OT] : [],
+        a = h.A.getSavedCustomTheme(),
+        n = "reset_button" === e ? [d.OT] : [],
         s = 0,
-        i = u.kJ,
-        r = t;
+        r = d.kJ,
+        i = t;
     return (
         l?.colors != null
-            ? ((a = l.colors), (s = l.gradientAngle ?? 0), (i = l.baseMix ?? u.kJ))
+            ? ((n = l.colors), (s = l.gradientAngle ?? 0), (r = l.baseMix ?? d.kJ))
             : "reset_button" === e &&
-              null != n &&
-              ((a = n.colors), (s = n.gradient_angle ?? 0), (i = n.base_mix ?? u.kJ), (r = n.base_theme)),
-        { resetColors: a, resetGradientAngle: s, resetChassisMixAmount: i, resetBaseTheme: r }
+              null != a &&
+              ((n = a.colors), (s = a.gradient_angle ?? 0), (r = a.base_mix ?? d.kJ), (i = a.base_theme)),
+        { resetColors: n, resetGradientAngle: s, resetChassisMixAmount: r, resetBaseTheme: i }
     );
 }
-function v() {
-    let { colors: e, chassisMixAmount: t, gradientAngle: l } = (0, u.ko)(),
-        n = (0, s.bG)([o.A], () => o.A.theme),
-        [i] = a.useState(() => o.A.theme),
-        { resetColors: r, resetGradientAngle: c, resetChassisMixAmount: d, resetBaseTheme: h } = A("reset_button", i);
-    return JSON.stringify(e) === JSON.stringify(r) && t === d && l === c && n === h;
+function C() {
+    let { colors: e, chassisMixAmount: t, gradientAngle: l } = (0, d.ko)(),
+        a = (0, s.bG)([o.A], () => o.A.theme),
+        [r] = n.useState(() => o.A.theme),
+        { resetColors: i, resetGradientAngle: c, resetChassisMixAmount: u, resetBaseTheme: h } = p("reset_button", r);
+    return JSON.stringify(e) === JSON.stringify(i) && t === u && l === c && a === h;
 }

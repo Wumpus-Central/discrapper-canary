@@ -1,23 +1,24 @@
-n.d(t, { NQ: () => _, uA: () => p, vi: () => f });
-var a,
-    r = n(627968);
+"use strict";
+n.d(t, { NQ: () => p, uA: () => f, vi: () => h });
+var r,
+    i = n(627968);
 n(64700);
-var l = n(683071),
-    i = n(834730),
-    s = n(403581),
-    o = n(709917),
+var s = n(683071),
+    a = n(834730),
+    o = n(403581),
+    l = n(709917),
     u = n(788868),
     c = n(985018),
     d = n(637650),
-    m = n(694414),
-    p = (((a = {}).TRIAL = "trial"), (a.DEFAULT = "default"), (a.REVERSE_TRIAL = "reverse_trial"), a);
-let _ = (e) => {
-    let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: a, trialEnd: r } = e,
-        l = t.fractionalState === u.xc.FP_SUB_PAUSED,
-        i = (0, o.A)(t.endsAt, l),
-        s = "";
+    _ = n(694414),
+    f = (((r = {}).TRIAL = "trial"), (r.DEFAULT = "default"), (r.REVERSE_TRIAL = "reverse_trial"), r);
+let p = (e) => {
+    let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: r, trialEnd: i } = e,
+        s = t.fractionalState === u.xc.FP_SUB_PAUSED,
+        a = (0, l.A)(t.endsAt, s),
+        o = "";
     if ("reverse_trial" === n) {
-        let e = Math.max(1, i.days);
+        let e = Math.max(1, a.days);
         return c.intl.format(c.t.rzTJXq, { days: e });
     }
     let d = {
@@ -25,72 +26,72 @@ let _ = (e) => {
         default: { days_and_hours: c.t["6r9LLp"], days: c.t.c2BbVA, hours: c.t["8Xm6uL"] },
     };
     return (
-        "trial" === n && null != a && null != r
-            ? i.days > 0 && i.hours > 0
-                ? (s = c.intl.format(d.trial.days_and_hours, {
-                      days: i.days,
-                      hours: i.hours,
-                      trialPeriod: a,
-                      trialEnd: r,
+        "trial" === n && null != r && null != i
+            ? a.days > 0 && a.hours > 0
+                ? (o = c.intl.format(d.trial.days_and_hours, {
+                      days: a.days,
+                      hours: a.hours,
+                      trialPeriod: r,
+                      trialEnd: i,
                   }))
-                : i.days > 0
-                  ? (s = c.intl.format(d.trial.days, { days: i.days, trialPeriod: a, trialEnd: r }))
-                  : i.hours > 0 && (s = c.intl.format(d.trial.hours, { hours: i.hours, trialPeriod: a, trialEnd: r }))
-            : i.days > 0 && i.hours > 0
-              ? (s = c.intl.format(d.default.days_and_hours, { days: i.days, hours: i.hours }))
-              : i.days > 0
-                ? (s = c.intl.format(d.default.days, { days: i.days }))
-                : i.hours > 0 && (s = c.intl.format(d.default.hours, { hours: i.hours })),
-        s
+                : a.days > 0
+                  ? (o = c.intl.format(d.trial.days, { days: a.days, trialPeriod: r, trialEnd: i }))
+                  : a.hours > 0 && (o = c.intl.format(d.trial.hours, { hours: a.hours, trialPeriod: r, trialEnd: i }))
+            : a.days > 0 && a.hours > 0
+              ? (o = c.intl.format(d.default.days_and_hours, { days: a.days, hours: a.hours }))
+              : a.days > 0
+                ? (o = c.intl.format(d.default.days, { days: a.days }))
+                : a.hours > 0 && (o = c.intl.format(d.default.hours, { hours: a.hours })),
+        o
     );
 };
-function f(e) {
+function h(e) {
     let {
             fractionalPremiumInfo: t,
             variant: n = "default",
-            enablePremiumBrandRefresh: a = !1,
-            style: o,
+            enablePremiumBrandRefresh: r = !1,
+            style: l,
             trialPeriod: u,
             trialEnd: c,
         } = e,
-        p = _({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
+        f = p({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
     return "reverse_trial" === n
-        ? "" === p
+        ? "" === f
             ? null
-            : (0, r.jsx)("div", { className: d.OK, children: (0, r.jsx)(l.w, { type: "info", children: p }) })
+            : (0, i.jsx)("div", { className: d.OK, children: (0, i.jsx)(s.w, { type: "info", children: f }) })
         : "trial" === n && null != u && null != c
-          ? "" === p
+          ? "" === f
               ? null
-              : (0, r.jsxs)("div", {
+              : (0, i.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(i.E, { variant: "text-sm/normal", className: d.OK, children: p }),
-                        (0, r.jsx)("hr", { className: d.oz }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: f }),
+                        (0, i.jsx)("hr", { className: d.oz }),
                     ],
                 })
-          : "" === p
+          : "" === f
             ? null
-            : a
-              ? (0, r.jsxs)("div", {
+            : r
+              ? (0, i.jsxs)("div", {
                     className: d.bD,
-                    style: o,
+                    style: l,
                     children: [
-                        (0, r.jsx)("img", { src: m, alt: "Nitro Icon", className: d.Zb }),
-                        (0, r.jsx)(i.E, { variant: "text-sm/medium", children: p }),
+                        (0, i.jsx)("img", { src: _, alt: "Nitro Icon", className: d.Zb }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: f }),
                     ],
                 })
-              : (0, r.jsxs)("div", {
+              : (0, i.jsxs)("div", {
                     className: d.s2,
-                    style: o,
+                    style: l,
                     children: [
-                        (0, r.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             className: d.Dl,
                             children: [
-                                (0, r.jsx)(s.t, { size: "md", color: "white", className: d.T8 }),
-                                (0, r.jsx)(s.t, { size: "md", color: "currentColor", className: d.XI }),
+                                (0, i.jsx)(o.t, { size: "md", color: "white", className: d.T8 }),
+                                (0, i.jsx)(o.t, { size: "md", color: "currentColor", className: d.XI }),
                             ],
                         }),
-                        (0, r.jsx)(i.E, { variant: "text-sm/normal", children: p }),
-                        (0, r.jsx)("div", { className: d.WW }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", children: f }),
+                        (0, i.jsx)("div", { className: d.WW }),
                     ],
                 });
 }

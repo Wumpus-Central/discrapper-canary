@@ -1,5 +1,6 @@
-r.d(t, { R: () => s }), r(321073);
-class s {
+"use strict";
+n.d(t, { R: () => r }), n(321073);
+class r {
     _elements;
     _createElement;
     _cleanElement;

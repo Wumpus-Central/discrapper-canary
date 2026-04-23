@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { A: () => u });
-var a = n(627968);
+var l = n(627968);
 n(64700);
-var i = n(311907),
-    r = n(534514),
-    l = n(834730),
+var a = n(311907),
+    i = n(534514),
+    r = n(834730),
     s = n(263063),
     d = n(71393),
     o = n(985018),
     c = n(336007);
 let u = (e) => {
     let { event: t } = e,
-        n = (0, i.bG)([d.A], () => d.A.getGuild(t.guild_id));
+        n = (0, a.bG)([d.A], () => d.A.getGuild(t.guild_id));
     return null == n
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: c.kL,
               children: [
-                  (0, a.jsx)(r.D, {
+                  (0, l.jsx)(i.D, {
                       className: c.wx,
                       variant: "heading-sm/semibold",
                       children: o.intl.string(o.t.SDTOL7),
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, l.jsxs)("div", {
                       className: c.bo,
                       children: [
-                          (0, a.jsxs)("div", {
+                          (0, l.jsxs)("div", {
                               className: c.OA,
                               children: [
-                                  (0, a.jsx)(s.Ay, { guild: n, size: s.Ay.Sizes.MINI, className: c.$f }),
-                                  (0, a.jsx)(l.E, {
+                                  (0, l.jsx)(s.Ay, { guild: n, size: s.Ay.Sizes.MINI, className: c.$f }),
+                                  (0, l.jsx)(r.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, a.jsx)(l.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
+                          (0, l.jsx)(r.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                       ],
                   }),
               ],

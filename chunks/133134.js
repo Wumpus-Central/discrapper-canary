@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => h });
-var a = n(627968),
-    i = n(64700),
-    r = n(311907),
-    l = n(49229),
+n.d(t, { A: () => g });
+var l = n(627968),
+    a = n(64700),
+    i = n(311907),
+    r = n(49229),
     s = n(58149),
     d = n(662502),
     o = n(632738),
@@ -11,24 +10,24 @@ var a = n(627968),
     u = n(994500),
     _ = n(562153),
     m = n(652215),
-    p = n(985018);
-let h = (e) => {
-    let { user: t, channelId: n, reportId: h, reportType: g } = e,
-        f = (0, r.bG)([u.A], () => u.A.isBlocked(t.id), [t.id]),
-        b = (0, r.bG)([c.A], () => c.A.getChannel(n), [n]),
-        A = i.useMemo(() => _.Ay.getName(b?.guild_id, b?.id, t), [b, t]),
-        x = i.useCallback(() => {
-            s.Ay.trackWithMetadata(m.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: h }),
-                l.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
+    h = n(985018);
+let g = (e) => {
+    let { user: t, channelId: n, reportId: g, reportType: p } = e,
+        x = (0, i.bG)([u.A], () => u.A.isBlocked(t.id), [t.id]),
+        A = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
+        f = a.useMemo(() => _.Ay.getName(A?.guild_id, A?.id, t), [A, t]),
+        v = a.useCallback(() => {
+            s.Ay.trackWithMetadata(m.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: g }),
+                r.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
                     d.A.showBlockSuccessToast(t.id, n);
                 });
-        }, [t, h, n]);
-    return (0, a.jsx)(o.PQ, {
-        title: p.intl.formatToPlainString(p.t["Q1o/f3"], { username: A }),
-        description: p.intl.string(p.t.G08MKu),
-        buttonText: f ? p.intl.string(p.t.ot2tSp) : p.intl.string(p.t["l+7PZY"]),
-        buttonDisabled: f,
-        onButtonPress: x,
-        buttonVariant: "application" === g.name && f ? "secondary" : "critical-primary",
+        }, [t, g, n]);
+    return (0, l.jsx)(o.PQ, {
+        title: h.intl.formatToPlainString(h.t["Q1o/f3"], { username: f }),
+        description: h.intl.string(h.t.G08MKu),
+        buttonText: x ? h.intl.string(h.t.ot2tSp) : h.intl.string(h.t["l+7PZY"]),
+        buttonDisabled: x,
+        onButtonPress: v,
+        buttonVariant: "application" === p.name && x ? "secondary" : "critical-primary",
     });
 };

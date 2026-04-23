@@ -1,159 +1,160 @@
-n.d(t, { A: () => A });
-var l = n(627968),
+"use strict";
+n.d(t, { A: () => h });
+var r = n(627968),
     i = n(64700),
-    a = n(342393),
-    r = n(503698),
-    s = n.n(r),
-    o = n(827734),
+    s = n(342393),
+    a = n(503698),
+    o = n.n(a),
+    l = n(827734),
     u = n(602853),
     c = n(511274),
     d = n(812745),
-    p = n(985018),
-    m = n(50579),
-    h = n(482188);
-let A = function (e) {
+    _ = n(985018),
+    f = n(50579),
+    p = n(482188);
+let h = function (e) {
     let t = i.useRef(null),
-        { stripeType: n, flipped: r, updateCompleted: A, onFocus: _, onBlur: C } = e,
-        [E, y] = i.useState(d.Be.UNKNOWN),
-        [f, P] = i.useState(!1),
-        [S, x] = i.useState(!1),
-        [T, N] = i.useState(null),
-        [g, I] = i.useState({}),
-        v = (0, a.useElements)(),
+        { stripeType: n, flipped: a, updateCompleted: h, onFocus: E, onBlur: m } = e,
+        [g, A] = i.useState(d.Be.UNKNOWN),
+        [I, T] = i.useState(!1),
+        [S, y] = i.useState(!1),
+        [N, v] = i.useState(null),
+        [C, O] = i.useState({}),
+        R = (0, s.useElements)(),
         b = i.useCallback(() => {
-            if (null != v)
+            if (null != R)
                 switch (n) {
                     case "cardNumber": {
-                        let e = v.getElement(a.CardNumberElement);
+                        let e = R.getElement(s.CardNumberElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                         break;
                     }
                     case "cardExpiry": {
-                        let e = v.getElement(a.CardExpiryElement);
+                        let e = R.getElement(s.CardExpiryElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                         break;
                     }
                     case "cardCvc": {
-                        let e = v.getElement(a.CardCvcElement);
+                        let e = R.getElement(s.CardCvcElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                     }
                 }
-        }, [v, n]),
-        R = i.useCallback(
+        }, [R, n]),
+        D = i.useCallback(
             (e) => {
-                S || e.empty || x(!0), null != A && A(e.complete), null != e.error && P(!1);
+                S || e.empty || y(!0), null != h && h(e.complete), null != e.error && T(!1);
             },
-            [S, A],
+            [S, h],
         ),
-        M = i.useCallback(() => {
-            P(!0), _?.();
-        }, [_]),
-        j = i.useCallback(() => {
-            P(!1), C?.();
-        }, [C]),
         L = i.useCallback(() => {
-            if (null != v)
+            T(!0), E?.();
+        }, [E]),
+        w = i.useCallback(() => {
+            T(!1), m?.();
+        }, [m]),
+        M = i.useCallback(() => {
+            if (null != R)
                 switch (n) {
                     case "cardNumber": {
-                        let e = v.getElement(a.CardNumberElement);
+                        let e = R.getElement(s.CardNumberElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            E !== e.brand && y(e.brand),
+                            g !== e.brand && A(e.brand),
                                 e.empty && S
-                                    ? N(p.intl.string(p.t.eOIfuy))
+                                    ? v(_.intl.string(_.t.eOIfuy))
                                     : null != e.error
-                                      ? N(p.intl.string(p.t.x4pWtJ))
-                                      : N(null),
-                                R(e);
+                                      ? v(_.intl.string(_.t.x4pWtJ))
+                                      : v(null),
+                                D(e);
                         }),
-                            e.on("focus", M),
-                            e.on("blur", j);
+                            e.on("focus", L),
+                            e.on("blur", w);
                         break;
                     }
                     case "cardExpiry": {
-                        let e = v.getElement(a.CardExpiryElement);
+                        let e = R.getElement(s.CardExpiryElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && S) ? N(p.intl.string(p.t["9/zZdl"])) : N(null), R(e);
+                            null != e.error || (e.empty && S) ? v(_.intl.string(_.t["9/zZdl"])) : v(null), D(e);
                         }),
-                            e.on("focus", M),
-                            e.on("blur", j);
+                            e.on("focus", L),
+                            e.on("blur", w);
                         break;
                     }
                     case "cardCvc": {
-                        let e = v.getElement(a.CardCvcElement);
+                        let e = R.getElement(s.CardCvcElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && S) ? N(p.intl.string(p.t.ro4isZ)) : N(null), R(e);
+                            null != e.error || (e.empty && S) ? v(_.intl.string(_.t.ro4isZ)) : v(null), D(e);
                         }),
-                            e.on("focus", M),
-                            e.on("blur", j);
+                            e.on("focus", L),
+                            e.on("blur", w);
                     }
                 }
-        }, [j, R, M, E, v, S, n]);
+        }, [w, D, L, g, R, S, n]);
     i.useEffect(
         () => (
-            L(),
+            M(),
             () => {
                 b();
             }
         ),
-        [L, b],
+        [M, b],
     );
-    let O = (0, u.r)(o.A.colors.TEXT_SUBTLE).hex(),
-        D = (0, u.r)(o.A.colors.TEXT_STRONG).hex();
-    function U() {
-        return s()(m.vB, { [m.Tn]: null !== T, [m.iH]: f, [m.yD]: "cardNumber" === n });
+    let P = (0, u.r)(l.A.colors.TEXT_SUBTLE).hex(),
+        x = (0, u.r)(l.A.colors.TEXT_STRONG).hex();
+    function k() {
+        return o()(f.vB, { [f.Tn]: null !== N, [f.iH]: I, [f.yD]: "cardNumber" === n });
     }
     return (
         i.useLayoutEffect(() => {
             let { current: e } = t;
             if (null == e) return;
             let n = window.getComputedStyle(e),
-                l = n.getPropertyValue("font-family");
-            I({
+                r = n.getPropertyValue("font-family");
+            O({
                 base: {
-                    fontFamily: l,
+                    fontFamily: r,
                     fontWeight: n.getPropertyValue("font-weight"),
-                    color: D,
+                    color: x,
                     fontSize: n.getPropertyValue("font-size"),
-                    "::placeholder": { color: O },
+                    "::placeholder": { color: P },
                 },
             });
-        }, [t, O, D]),
-        (0, l.jsxs)("div", {
-            className: m.Zm,
+        }, [t, P, x]),
+        (0, r.jsxs)("div", {
+            className: f.Zm,
             "data-stripe-type": n,
             children: [
-                (0, l.jsx)("div", { ref: t, className: s()(m.iw, h.hF) }),
+                (0, r.jsx)("div", { ref: t, className: o()(f.iw, p.hF) }),
                 (function () {
                     switch (n) {
                         case "cardNumber":
-                            return (0, l.jsxs)("div", {
+                            return (0, r.jsxs)("div", {
                                 children: [
-                                    (0, l.jsx)(d.Ay, { className: m.Ie, type: E, flipped: r }),
-                                    (0, l.jsx)(a.CardNumberElement, {
-                                        options: { style: g, placeholder: p.intl.string(p.t.gPRHfw), disableLink: !1 },
-                                        className: U(),
+                                    (0, r.jsx)(d.Ay, { className: f.Ie, type: g, flipped: a }),
+                                    (0, r.jsx)(s.CardNumberElement, {
+                                        options: { style: C, placeholder: _.intl.string(_.t.gPRHfw), disableLink: !1 },
+                                        className: k(),
                                     }),
                                 ],
                             });
                         case "cardExpiry":
-                            return (0, l.jsx)(a.CardExpiryElement, {
-                                options: { style: g, placeholder: p.intl.string(p.t.xeEWQ6) },
-                                className: U(),
+                            return (0, r.jsx)(s.CardExpiryElement, {
+                                options: { style: C, placeholder: _.intl.string(_.t.xeEWQ6) },
+                                className: k(),
                             });
                         case "cardCvc":
-                            return (0, l.jsx)(a.CardCvcElement, {
-                                options: { style: g, placeholder: p.intl.string(p.t.wZz04F) },
-                                className: U(),
+                            return (0, r.jsx)(s.CardCvcElement, {
+                                options: { style: C, placeholder: _.intl.string(_.t.wZz04F) },
+                                className: k(),
                             });
                     }
                 })(),
-                (0, l.jsx)(c.U, { error: T }),
+                (0, r.jsx)(c.U, { error: N }),
             ],
         })
     );

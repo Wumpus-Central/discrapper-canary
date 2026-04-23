@@ -1,57 +1,58 @@
-a.d(i, { A: () => h });
-var r = a(627968);
-a(64700);
-var n = a(22231),
-    l = a(403581),
-    s = a(939249),
-    t = a(534514),
-    d = a(688810),
-    o = a(702211),
-    u = a(915614),
-    c = a(385612),
-    m = a(339984),
-    g = a(996988),
-    p = a(985018),
-    v = a(662177);
-function h(e) {
+"use strict";
+n.d(t, { A: () => E });
+var r = n(627968);
+n(64700);
+var i = n(22231),
+    s = n(403581),
+    a = n(939249),
+    o = n(534514),
+    l = n(688810),
+    u = n(702211),
+    c = n(915614),
+    d = n(385612),
+    _ = n(339984),
+    f = n(996988),
+    p = n(985018),
+    h = n(662177);
+function E(e) {
     let {
-            user: i,
-            displayProfile: a,
-            guildId: h,
-            canUsePremiumCustomization: A,
-            pendingBanner: y,
-            pendingAccentColor: x,
-            isTryItOut: P,
-            disabledInputs: f,
-            onUpsellClick: j,
+            user: t,
+            displayProfile: n,
+            guildId: E,
+            canUsePremiumCustomization: m,
+            pendingBanner: g,
+            pendingAccentColor: A,
+            isTryItOut: I,
+            disabledInputs: T,
+            onUpsellClick: S,
         } = e,
-        { newestAnalyticsLocation: b } = (0, d.Ay)(),
-        C = A || a?.canUsePremiumProfileCustomization || !1,
-        I = C ? n.R : l.t,
-        w = (0, o.b)(C);
-    return (0, r.jsx)(u.A, {
-        user: i,
-        displayProfile: a,
-        guildId: h,
-        themeType: g.d.POPOUT,
-        pendingBanner: y,
-        pendingAccentColor: x,
-        canUsePremiumProfileCustomization: A,
+        { newestAnalyticsLocation: y } = (0, l.Ay)(),
+        N = m || n?.canUsePremiumProfileCustomization || !1,
+        v = N ? i.R : s.t,
+        C = (0, u.b)(N);
+    return (0, r.jsx)(c.A, {
+        user: t,
+        displayProfile: n,
+        guildId: E,
+        themeType: f.d.POPOUT,
+        pendingBanner: g,
+        pendingAccentColor: A,
+        canUsePremiumProfileCustomization: m,
         children:
-            !f &&
-            (0, r.jsxs)(s.D, {
+            !T &&
+            (0, r.jsxs)(a.D, {
                 onClick: () => {
-                    C || w
-                        ? (0, c.XD)({ uploadType: m.HL.BANNER, analyticsSource: b, guildId: h, isTryItOut: P })
-                        : j?.();
+                    N || C
+                        ? (0, d.XD)({ uploadType: _.HL.BANNER, analyticsSource: y, guildId: E, isTryItOut: I })
+                        : S?.();
                 },
-                className: v.v,
+                className: h.v,
                 children: [
-                    (0, r.jsx)(I, { size: "xs", color: "white" }),
-                    (0, r.jsx)(t.D, {
+                    (0, r.jsx)(v, { size: "xs", color: "white" }),
+                    (0, r.jsx)(o.D, {
                         variant: "text-sm/medium",
                         color: "always-white",
-                        children: C || w ? p.intl.string(p.t.N0bC3P) : p.intl.string(p.t.O1sT5v),
+                        children: N || C ? p.intl.string(p.t.N0bC3P) : p.intl.string(p.t.O1sT5v),
                     }),
                 ],
             }),

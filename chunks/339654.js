@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { m: () => l });
-var r = n(627968);
-n(64700);
-var i = n(980441),
-    a = n(786558),
-    s = n(799226);
-let o = { "Icon Dice": { fill: "color", muted: "boolean" } };
-function l(e) {
-    let { artboard: t = "Icon Dice", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, s.CE)(i.A),
-        d = (0, s.m2)(i.A);
-    return u === s.BW.Loading
+a.d(t, { m: () => o });
+var l = a(627968);
+a(64700);
+var n = a(980441),
+    s = a(786558),
+    r = a(799226);
+let i = { "Icon Dice": { fill: "color", muted: "boolean" } };
+function o(e) {
+    let { artboard: t = "Icon Dice", stateMachine: a, ...o } = e,
+        { status: c, buffer: d } = (0, r.CE)(n.A),
+        u = (0, r.m2)(n.A);
+    return c === r.BW.Loading
         ? null
-        : (0, r.jsx)(a.w, {
-              ...(d ? { key: "override" } : {}),
-              buffer: c,
+        : (0, l.jsx)(s.w, {
+              ...(u ? { key: "override" } : {}),
+              buffer: d,
               artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+              stateMachine: a,
+              artboardProperties: i,
+              ...o,
           });
 }
-l.riveSrc = i.A;
+o.riveSrc = n.A;

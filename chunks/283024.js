@@ -1,14 +1,15 @@
-a.d(t, { L: () => s });
-var n = a(64700),
-    r = a(844222),
-    l = a(866323),
-    i = a(555115);
-function s(e) {
-    let { shouldShow: t, caretPosition: a, onExitComplete: s } = e,
-        { reducedMotion: o } = n.useContext(r.C),
-        { config: c, ...d } = ((e, t) => {
-            let a = { opacity: 0, transform: "" },
-                n = { opacity: 0, transform: "" };
+"use strict";
+n.d(t, { L: () => o });
+var r = n(64700),
+    i = n(844222),
+    s = n(866323),
+    a = n(555115);
+function o(e) {
+    let { shouldShow: t, caretPosition: n, onExitComplete: o } = e,
+        { reducedMotion: l } = r.useContext(i.C),
+        { config: u, ...c } = ((e, t) => {
+            let n = { opacity: 0, transform: "" },
+                r = { opacity: 0, transform: "" };
             if (t)
                 return {
                     from: { opacity: 0 },
@@ -18,26 +19,26 @@ function s(e) {
                 };
             switch (e) {
                 case "top":
-                    (a.transform = "translate3d(0, -10px, 0)"), (n.transform = "translate3d(0, -10px, 0)");
+                    (n.transform = "translate3d(0, -10px, 0)"), (r.transform = "translate3d(0, -10px, 0)");
                     break;
                 case "bottom":
-                    (a.transform = "translate3d(0, 10px, 0)"), (n.transform = "translate3d(0, 10px, 0)");
+                    (n.transform = "translate3d(0, 10px, 0)"), (r.transform = "translate3d(0, 10px, 0)");
                     break;
                 case "left":
-                    (a.transform = "translate3d(-10px, 0, 0)"), (n.transform = "translate3d(-10px, 0, 0)");
+                    (n.transform = "translate3d(-10px, 0, 0)"), (r.transform = "translate3d(-10px, 0, 0)");
                     break;
                 case "right":
-                    (a.transform = "translate3d(10px, 0, 0)"), (n.transform = "translate3d(10px, 0, 0)");
+                    (n.transform = "translate3d(10px, 0, 0)"), (r.transform = "translate3d(10px, 0, 0)");
             }
-            return { from: a, enter: { opacity: 1, transform: "translate3d(0px, 0px, 0)" }, leave: n, config: void 0 };
-        })(a, o.enabled);
-    return (0, l.p)(
+            return { from: n, enter: { opacity: 1, transform: "translate3d(0px, 0px, 0)" }, leave: r, config: void 0 };
+        })(n, l.enabled);
+    return (0, s.p)(
         t,
         {
-            ...d,
-            config: c ?? ((e, a) => (t ? i.n : i.t)),
+            ...c,
+            config: u ?? ((e, n) => (t ? a.n : a.t)),
             onRest: () => {
-                t || null == s || s();
+                t || null == o || o();
             },
         },
         "animate-always",

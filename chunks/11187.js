@@ -1,22 +1,23 @@
-r.d(t, { QL: () => n, mW: () => l });
-var s = r(652215);
-function l(e) {
+"use strict";
+n.d(t, { QL: () => s, mW: () => i });
+var r = n(652215);
+function i(e) {
     if ("Klipy" !== e.providerName) return;
     let { thumbnail: t } = e;
     if (null != t) return t.proxyURL ?? t.url ?? t.uri;
 }
-function n(e, t, r) {
-    let l = null != t ? { [t]: 1 } : {},
-        { offset: n, limit: i, results: o, totalResults: a } = r ?? {};
+function s(e, t, n) {
+    let i = null != t ? { [t]: 1 } : {},
+        { offset: s, limit: a, results: o, totalResults: l } = n ?? {};
     return {
-        search_type: s.I4_.GIF,
+        search_type: r.I4_.GIF,
         load_id: e,
-        limit: i,
-        offset: n,
-        page: null != i && null != n ? Math.floor(n / i) + 1 : 1,
-        total_results: a,
+        limit: a,
+        offset: s,
+        page: null != a && null != s ? Math.floor(s / a) + 1 : 1,
+        total_results: l,
         page_results: null != o ? o : null,
-        num_modifiers: Object.keys(l).length,
-        modifiers: l,
+        num_modifiers: Object.keys(i).length,
+        modifiers: i,
     };
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wC: "paymentSourceLabel_f38e43",
     IF: "paymentSourceSelectedOption_f38e43",

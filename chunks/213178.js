@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     b: "closeButton__3bf54",
     Tn: "upsellImage__3bf54",

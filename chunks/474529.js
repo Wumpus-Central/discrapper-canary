@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => T });
-var i = n(627968);
-n(64700);
-var l = n(110259),
-    r = n(821609),
-    s = n(834730),
-    a = n(688810),
-    c = n(139286),
-    o = n(793943),
-    u = n(738419),
-    d = n(693227),
-    _ = n(985018),
-    E = n(863816),
-    m = n(114149);
-function T() {
-    let { analyticsLocations: e } = (0, a.Ay)();
+a.d(t, { A: () => m });
+var s = a(627968);
+a(64700);
+var r = a(110259),
+    i = a(821609),
+    n = a(834730),
+    l = a(688810),
+    c = a(139286),
+    _ = a(793943),
+    E = a(738419),
+    o = a(693227),
+    d = a(985018),
+    T = a(863816),
+    u = a(114149);
+function m() {
+    let { analyticsLocations: e } = (0, l.Ay)();
     return (
         (0, c.A)({
-            name: l.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
-            type: l.ImpressionTypes.VIEW,
+            name: r.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
+            type: r.ImpressionTypes.VIEW,
             properties: { location_stack: e },
         }),
-        (0, i.jsxs)("div", {
-            className: E.kL,
+        (0, s.jsxs)("div", {
+            className: T.kL,
             children: [
-                (0, i.jsxs)("div", {
-                    className: E.r$,
+                (0, s.jsxs)("div", {
+                    className: T.r$,
                     children: [
-                        (0, i.jsx)("img", { src: m.A, className: E._e, alt: "" }),
-                        (0, i.jsxs)("div", {
-                            className: E.P_,
+                        (0, s.jsx)("img", { src: u.A, className: T._e, alt: "" }),
+                        (0, s.jsxs)("div", {
+                            className: T.P_,
                             children: [
-                                (0, i.jsx)(s.E, {
+                                (0, s.jsx)(n.E, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
-                                    children: _.intl.string(d.default.XP4jzJ),
+                                    children: d.intl.string(o.default.XP4jzJ),
                                 }),
-                                (0, i.jsx)(s.E, {
+                                (0, s.jsx)(n.E, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: _.intl.string(d.default.MJYvmG),
+                                    children: d.intl.string(o.default.MJYvmG),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, i.jsx)(r.$, {
+                (0, s.jsx)(i.$, {
                     variant: "secondary",
                     size: "sm",
-                    text: _.intl.string(d.default.eGxkmm),
+                    text: d.intl.string(o.default.eGxkmm),
                     onClick: () => {
-                        (0, u.b0)(u.G8.PREVIEW_THEMES),
-                            (0, o.nf)(o.HP.CUSTOM_THEME, { from: o.xv.CLIENT_THEMES_EDITOR });
+                        (0, E.b0)(E.G8.PREVIEW_THEMES),
+                            (0, _.nf)(_.HP.CUSTOM_THEME, { from: _.xv.CLIENT_THEMES_EDITOR });
                     },
                     fullWidth: !0,
                 }),

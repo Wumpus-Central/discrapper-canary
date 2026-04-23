@@ -1,23 +1,24 @@
-n.d(t, { n: () => o });
-var l = n(627968),
-    r = n(192308),
-    i = n(954571),
-    s = n(188275),
-    a = n(652215);
-let o = (e) => {
-    let { sku: t, application: o, analyticsLocations: u, orbsReward: d } = e;
-    (0, r.openModalLazy)(
+"use strict";
+n.d(t, { n: () => l });
+var r = n(627968),
+    i = n(192308),
+    s = n(954571),
+    a = n(188275),
+    o = n(652215);
+let l = (e) => {
+    let { sku: t, application: l, analyticsLocations: u, orbsReward: c } = e;
+    (0, i.openModalLazy)(
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await n.e("80307").then(n.bind(n, 472734));
-            return (n) => (0, l.jsx)(e, { ...n, sku: t, application: o, analyticsLocations: u, orbsReward: d });
+            return (n) => (0, r.jsx)(e, { ...n, sku: t, application: l, analyticsLocations: u, orbsReward: c });
         },
         {
             modalKey: "social-layer-storefront-item-claimed-successfully-modal",
             onCloseCallback: () => {
-                i.default.track(a.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
-                    type: s.e2,
+                s.default.track(o.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                    type: a.e2,
                     sku_id: t.id,
-                    application_id: o.id,
+                    application_id: l.id,
                     location_stack: u ?? [],
                 });
             },

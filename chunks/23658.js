@@ -1,39 +1,40 @@
-n.d(t, { D: () => A, openUploadError: () => g });
-var a = n(627968);
+"use strict";
+n.d(t, { D: () => f, openUploadError: () => p });
+var r = n(627968);
 n(64700);
-var r = n(192308),
-    l = n(189213),
-    i = n(523527),
+var i = n(192308),
+    s = n(189213),
+    a = n(523527),
     o = n(218252),
-    s = n(976860),
-    c = n(954571),
-    u = n(652215),
+    l = n(976860),
+    u = n(954571),
+    c = n(652215),
     d = n(985018);
-function p(e) {
-    let { title: t, help: n, showPremiumUpsell: r, transitionState: p, onClose: A } = e;
-    return r
-        ? (0, a.jsx)(o.A, {
-              transitionState: p,
-              onClose: A,
+function _(e) {
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: _, onClose: f } = e;
+    return i
+        ? (0, r.jsx)(o.A, {
+              transitionState: _,
+              onClose: f,
               handleLearnMore: () => {
-                  (0, i.A)(),
-                      A(),
-                      c.default.track(u.HAw.PREMIUM_PROMOTION_OPENED, {
-                          location_section: u.JJy.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: u.ZSU.NAVIGATION_LINK,
+                  (0, a.A)(),
+                      f(),
+                      u.default.track(c.HAw.PREMIUM_PROMOTION_OPENED, {
+                          location_section: c.JJy.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: c.ZSU.NAVIGATION_LINK,
                       }),
-                      (0, s.pX)(u.BVt.APPLICATION_STORE);
+                      (0, l.pX)(c.BVt.APPLICATION_STORE);
               },
           })
-        : (0, a.jsx)(l.Modal, {
+        : (0, r.jsx)(s.Modal, {
               title: t,
               subtitle: n,
-              transitionState: p,
-              actions: [{ text: d.intl.string(d.t["NX+WJN"]), onClick: A, variant: "primary" }],
-              onClose: A,
+              transitionState: _,
+              actions: [{ text: d.intl.string(d.t["NX+WJN"]), onClick: f, variant: "primary" }],
+              onClose: f,
           });
 }
-let A = "UPLOAD_ERROR_MODAL_KEY";
-function g(e) {
-    (0, r.openModal)((t) => (0, a.jsx)(p, { ...t, ...e }), { modalKey: A });
+let f = "UPLOAD_ERROR_MODAL_KEY";
+function p(e) {
+    (0, i.openModal)((t) => (0, r.jsx)(_, { ...t, ...e }), { modalKey: f });
 }

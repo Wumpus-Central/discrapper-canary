@@ -1,35 +1,36 @@
-n.d(t, { A: () => f });
-var l = n(627968),
+"use strict";
+n.d(t, { A: () => I });
+var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(827734),
-    o = n(834730),
+    s = n(503698),
+    a = n.n(s),
+    o = n(827734),
+    l = n(834730),
     u = n(265872),
     c = n(305866),
     d = n(939249),
-    p = n(460905),
-    m = n(937773),
-    h = n(652215),
-    A = n(307731),
-    _ = n(985018),
-    C = n(24238);
-let E = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    y = A.EmojiIntention.GIFT;
-function f(e) {
+    _ = n(460905),
+    f = n(937773),
+    p = n(652215),
+    h = n(307731),
+    E = n(985018),
+    m = n(24238);
+let g = { section: p.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    A = h.EmojiIntention.GIFT;
+function I(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [a, h] = i.useState(!1),
-        A = i.useRef(null),
-        f = r()(C.Qq, C.Ow),
-        P = (e) =>
-            (0, l.jsxs)("div", {
-                className: C.ZC,
+        [s, p] = i.useState(!1),
+        h = i.useRef(null),
+        I = a()(m.Qq, m.Ow),
+        T = (e) =>
+            (0, r.jsxs)("div", {
+                className: m.ZC,
                 children: [
-                    (0, l.jsxs)("div", {
-                        className: C.Ry,
+                    (0, r.jsxs)("div", {
+                        className: m.Ry,
                         children: [
-                            (0, l.jsx)(o.E, { variant: "text-md/bold", children: _.intl.string(_.t.Hl2Ige) }),
-                            (0, l.jsx)(o.E, { variant: "text-sm/normal", children: _.intl.string(_.t.stGFA3) }),
+                            (0, r.jsx)(l.E, { variant: "text-md/bold", children: E.intl.string(E.t.Hl2Ige) }),
+                            (0, r.jsx)(l.E, { variant: "text-sm/normal", children: E.intl.string(E.t.stGFA3) }),
                         ],
                     }),
                     e,
@@ -37,68 +38,68 @@ function f(e) {
             }),
         S = (e) => {
             let { emoji: n } = e;
-            null != t && (t(n), h(!1));
+            null != t && (t(n), p(!1));
         };
-    return (0, l.jsx)(u.Y, {
-        targetElementRef: A,
-        shouldShow: a,
+    return (0, r.jsx)(u.Y, {
+        targetElementRef: h,
+        shouldShow: s,
         position: "bottom",
         align: "left",
-        onRequestClose: () => h(!1),
+        onRequestClose: () => p(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(c.l, {
-                children: (0, l.jsx)(m.A, {
-                    analyticsOverride: E,
+            return (0, r.jsx)(c.l, {
+                children: (0, r.jsx)(f.A, {
+                    analyticsOverride: g,
                     closePopout: t,
                     onSelectEmoji: S,
                     wrapper: "div",
-                    pickerIntention: y,
+                    pickerIntention: A,
                     showAddEmojiButton: !1,
-                    renderHeader: P,
-                    headerClassName: C.a8,
-                    className: C.vX,
-                    listHeaderClassName: C.vX,
-                    categoryListClassName: C.jv,
-                    searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
+                    renderHeader: T,
+                    headerClassName: m.a8,
+                    className: m.vX,
+                    listHeaderClassName: m.vX,
+                    categoryListClassName: m.jv,
+                    searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
                 }),
             });
         },
         children: () =>
-            (0, l.jsx)(d.D, {
-                className: r()(C.kL, C.Ow),
-                onClick: () => h(!0),
-                innerRef: A,
+            (0, r.jsx)(d.D, {
+                className: a()(m.kL, m.Ow),
+                onClick: () => p(!0),
+                innerRef: h,
                 children:
                     n?.name == null
-                        ? (0, l.jsxs)("div", {
-                              className: C.hQ,
+                        ? (0, r.jsxs)("div", {
+                              className: m.hQ,
                               children: [
-                                  (0, l.jsx)(p.n, {
+                                  (0, r.jsx)(_.n, {
                                       size: "custom",
-                                      color: s.A.colors.ICON_STRONG,
-                                      className: C.mI,
+                                      color: o.A.colors.ICON_STRONG,
+                                      className: m.mI,
                                       width: 14,
                                       height: 14,
                                   }),
-                                  (0, l.jsx)(o.E, {
-                                      className: f,
+                                  (0, r.jsx)(l.E, {
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: _.intl.string(_.t.Hl2Ige),
+                                      children: E.intl.string(E.t.Hl2Ige),
                                   }),
                               ],
                           })
-                        : (0, l.jsxs)("div", {
-                              className: C.hQ,
+                        : (0, r.jsxs)("div", {
+                              className: m.hQ,
                               children: [
-                                  (0, l.jsx)(o.E, {
-                                      className: f,
+                                  (0, r.jsx)(l.E, {
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
-                                  (0, l.jsx)(o.E, {
-                                      className: f,
+                                  (0, r.jsx)(l.E, {
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),

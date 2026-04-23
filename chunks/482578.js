@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => u });
-var a = n(627968),
-    i = n(64700),
-    r = n(935462),
-    l = n(825484),
+var l = n(627968),
+    a = n(64700),
+    i = n(935462),
+    r = n(825484),
     s = n(821609),
     d = n(235986),
     o = n(985018),
@@ -15,52 +14,52 @@ let u = (e) => {
             submitting: u,
             disableNext: _,
             onClick: m,
-            canNavigateBack: p,
-            onBackClicked: h,
-            isModeratorReport: g,
-            className: f,
+            canNavigateBack: h,
+            onBackClicked: g,
+            isModeratorReport: p,
+            className: x,
         } = e,
-        b = i.useRef(null),
-        A = null != n && "cancel" !== n.type,
-        x = p && n?.type !== "done",
-        v = A || x;
+        A = a.useRef(null),
+        f = null != n && "cancel" !== n.type,
+        v = h && n?.type !== "done",
+        b = f || v;
     if (
-        (i.useEffect(() => {
-            (n?.type === "submit" || n?.type === "done") && b.current?.focus();
+        (a.useEffect(() => {
+            (n?.type === "submit" || n?.type === "done") && A.current?.focus();
         }, [n?.type]),
-        !v)
+        !b)
     )
         return null;
-    let E = o.intl.string(o.t.i4jeWR);
+    let N = o.intl.string(o.t.i4jeWR);
     return (
         n?.type === "submit"
-            ? ((t = "critical-primary"), (E = g ? o.intl.string(c.default.ZUyreS) : o.intl.string(o.t["G+vU89"])))
+            ? ((t = "critical-primary"), (N = p ? o.intl.string(c.default.ZUyreS) : o.intl.string(o.t["G+vU89"])))
             : n?.type === "next"
-              ? (E = o.intl.string(o.t.PDTjLN))
-              : n?.type === "cancel" && ((E = o.intl.string(o.t["ETE/oC"])), (t = "secondary")),
-        (0, a.jsx)(r.jl, {
+              ? (N = o.intl.string(o.t.PDTjLN))
+              : n?.type === "cancel" && ((N = o.intl.string(o.t["ETE/oC"])), (t = "secondary")),
+        (0, l.jsx)(i.jl, {
             "data-migration-pending": !0,
             direction: d.A.Direction.HORIZONTAL,
-            className: f,
-            children: (0, a.jsxs)(l.e, {
+            className: x,
+            children: (0, l.jsxs)(r.e, {
                 fullWidth: !0,
                 children: [
-                    x &&
-                        (0, a.jsx)(s.$, {
-                            onClick: h,
+                    v &&
+                        (0, l.jsx)(s.$, {
+                            onClick: g,
                             variant: "secondary",
                             disabled: u,
                             text: o.intl.string(o.t["13/7kX"]),
                         }),
-                    A &&
-                        (0, a.jsx)(s.$, {
+                    f &&
+                        (0, l.jsx)(s.$, {
                             onClick: () => {
                                 null != n && m(n);
                             },
                             variant: t,
                             disabled: u || _,
-                            buttonRef: b,
-                            text: E,
+                            buttonRef: A,
+                            text: N,
                         }),
                 ],
             }),

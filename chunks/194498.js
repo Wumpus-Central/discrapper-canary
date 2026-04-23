@@ -1,11 +1,12 @@
-t.d(a, { A: () => i });
-var n = t(66455),
-    r = t(964486);
-function i(e) {
-    let a = (0, n.A)(e);
-    (0, r.Ay)(() => {
-        let e = requestAnimationFrame(function t() {
-            a.current?.(), (e = requestAnimationFrame(t));
+"use strict";
+n.d(t, { A: () => s });
+var r = n(66455),
+    i = n(964486);
+function s(e) {
+    let t = (0, r.A)(e);
+    (0, i.Ay)(() => {
+        let e = requestAnimationFrame(function n() {
+            t.current?.(), (e = requestAnimationFrame(n));
         });
         return () => cancelAnimationFrame(e);
     });

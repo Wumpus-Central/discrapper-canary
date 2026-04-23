@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Hc: "baseContainer__40d5b",
     Nr: "card__40d5b",

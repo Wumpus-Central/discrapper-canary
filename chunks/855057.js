@@ -1,107 +1,108 @@
-r.d(t, { A: () => N });
-var s = r(627968),
-    l = r(64700),
-    n = r(503698),
-    i = r.n(n),
-    o = r(311907),
-    a = r(534514),
-    c = r(892547),
-    u = r(939249),
-    d = r(477155),
-    h = r(73153),
-    m = r(497685),
-    f = r(235986),
-    p = r(151271),
-    g = r(821102),
-    E = r(996566),
-    _ = r(291147),
-    R = r(380544),
-    I = r(950301),
-    A = r(247683),
-    C = r(652215),
-    v = r(732139),
-    w = r(650583),
-    S = r(985018),
-    y = r(874926);
-let x = (e) => e.stopPropagation();
-class T extends l.PureComponent {
+"use strict";
+n.d(t, { A: () => b });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(311907),
+    l = n(534514),
+    u = n(892547),
+    c = n(939249),
+    d = n(477155),
+    _ = n(73153),
+    f = n(497685),
+    p = n(235986),
+    h = n(151271),
+    E = n(821102),
+    m = n(996566),
+    g = n(291147),
+    A = n(380544),
+    I = n(950301),
+    T = n(247683),
+    S = n(652215),
+    y = n(732139),
+    N = n(650583),
+    v = n(985018),
+    C = n(874926);
+let O = (e) => e.stopPropagation();
+class R extends i.PureComponent {
     state = { resultType: null };
     componentDidMount() {
-        m.V$(),
+        f.V$(),
             document.addEventListener("keydown", this.backToFrontPage),
-            "" !== this.props.query && this.search(this.props.query, C.dD.SEARCH);
+            "" !== this.props.query && this.search(this.props.query, S.dD.SEARCH);
     }
     componentDidUpdate(e) {
         "" === e.query &&
             "" !== this.props.query &&
             null == this.state.resultType &&
-            this.search(this.props.query, C.dD.SEARCH);
+            this.search(this.props.query, S.dD.SEARCH);
     }
     componentWillUnmount() {
-        h.h.wait(() => m.Se()), document.removeEventListener("keydown", this.backToFrontPage);
+        _.h.wait(() => f.Se()), document.removeEventListener("keydown", this.backToFrontPage);
     }
-    search(e, t, r) {
-        m.$P(e, t, r),
+    search(e, t, n) {
+        f.$P(e, t, n),
             "" === e
                 ? this.setState({ resultType: null })
-                : this.state.resultType !== C.dD.SEARCH && this.setState({ resultType: C.dD.SEARCH });
+                : this.state.resultType !== S.dD.SEARCH && this.setState({ resultType: S.dD.SEARCH });
     }
     backToFrontPage = (e) => {
         let { resultType: t } = this.state;
-        e.key !== w.dh.ESCAPE || (null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery()));
+        e.key !== N.dh.ESCAPE || (null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery()));
     };
     handleChangeQuery = (e) => {
-        (0, p.Ri)(e), this.search(e, C.dD.SEARCH);
+        (0, h.Ri)(e), this.search(e, S.dD.SEARCH);
     };
     handleSelectSuggestion = (e) => {
-        (0, p.Ri)(""), m.Se(), this.search(e, C.dD.SEARCH_SUGGESTION, !0);
+        (0, h.Ri)(""), f.Se(), this.search(e, S.dD.SEARCH_SUGGESTION, !0);
     };
     handleClearQuery = () => {
         let { current: e } = this.props.searchBarRef;
-        (0, p.Ri)(""), m.Se(), this.setState({ resultType: null }), null != e && e.focus();
+        (0, h.Ri)(""), f.Se(), this.setState({ resultType: null }), null != e && e.focus();
     };
     handleSelectGIF = (e) => {
         let { onSelectGIF: t } = this.props;
         null != t && t(e);
     };
     handleSelectItem = (e, t) => {
-        let { current: r } = this.props.searchBarRef;
+        let { current: n } = this.props.searchBarRef;
         switch (e) {
-            case C.dD.TRENDING_CATEGORY:
-                m.$P(t, C.dD.TRENDING_CATEGORY, !0), null != r && r.focus();
+            case S.dD.TRENDING_CATEGORY:
+                f.$P(t, S.dD.TRENDING_CATEGORY, !0), null != n && n.focus();
                 break;
-            case C.dD.TRENDING_GIFS:
-                m.Z4();
+            case S.dD.TRENDING_GIFS:
+                f.Z4();
         }
         this.setState({ resultType: e });
     };
     renderHeaderContent() {
         let { query: e, headingColor: t } = this.props,
-            { resultType: r } = this.state;
-        switch (r) {
-            case C.dD.FAVORITES:
-                return (0, s.jsx)(a.D, {
+            { resultType: n } = this.state;
+        switch (n) {
+            case S.dD.FAVORITES:
+                return (0, r.jsx)(l.D, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: y.wL,
-                    children: S.intl.string(S.t.y3LQCG),
+                    className: C.wL,
+                    children: v.intl.string(v.t.y3LQCG),
                 });
-            case C.dD.TRENDING_GIFS:
-                return (0, s.jsx)(a.D, {
+            case S.dD.TRENDING_GIFS:
+                return (0, r.jsx)(l.D, {
                     variant: "heading-md/semibold",
                     color: t,
-                    className: y.wL,
-                    children: S.intl.string(S.t.H6zNFz),
+                    className: C.wL,
+                    children: v.intl.string(v.t.H6zNFz),
                 });
             default: {
-                let t = (0, R.cf)(),
-                    r = (0, _.w)(t);
-                return (0, s.jsx)(c.I, {
+                let t = (0, A.cf)(),
+                    n = (0, g.w)(t);
+                return (0, r.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
-                    placeholder: r,
-                    "aria-label": r,
+                    placeholder: n,
+                    "aria-label": n,
                     ref: this.props.searchBarRef,
                     autoFocus: !0,
                 });
@@ -113,90 +114,90 @@ class T extends l.PureComponent {
             t = null;
         return (
             null != e &&
-                (t = (0, s.jsx)(u.D, {
+                (t = (0, r.jsx)(c.D, {
                     onClick: this.handleClearQuery,
-                    className: y.Gv,
-                    "aria-label": S.intl.string(S.t["13/7kX"]),
-                    children: (0, s.jsx)(d.r, { size: "md", color: "currentColor" }),
+                    className: C.Gv,
+                    "aria-label": v.intl.string(v.t["13/7kX"]),
+                    children: (0, r.jsx)(d.r, { size: "md", color: "currentColor" }),
                 })),
-            (0, s.jsxs)(f.A, { align: f.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
+            (0, r.jsxs)(p.A, { align: p.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
         );
     }
     renderContent() {
         let {
                 contentClassName: e,
                 resultItems: t,
-                resultQuery: r,
-                query: l,
-                favorites: n,
-                searchOffset: i,
+                resultQuery: n,
+                query: i,
+                favorites: s,
+                searchOffset: a,
                 searchLimit: o,
-                searchTotalResults: a,
-                suggestions: c,
-                hideFavorites: u,
+                searchTotalResults: l,
+                suggestions: u,
+                hideFavorites: c,
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, s.jsx)(I.A, { className: e, hideFavoritesTile: u, onSelectItem: this.handleSelectItem })
-            : (0, s.jsx)(A.Ay, {
+            ? (0, r.jsx)(I.A, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
+            : (0, r.jsx)(T.Ay, {
                   className: e,
-                  data: d === C.dD.FAVORITES ? n : t,
+                  data: d === S.dD.FAVORITES ? s : t,
                   onSelectGIF: this.handleSelectGIF,
                   resultType: d,
-                  resultQuery: r,
-                  query: l,
-                  searchOffset: i,
+                  resultQuery: n,
+                  query: i,
+                  searchOffset: a,
                   searchLimit: o,
-                  searchTotalResults: a,
-                  suggestions: c,
+                  searchTotalResults: l,
+                  suggestions: u,
                   onSelectSuggestion: this.handleSelectSuggestion,
                   selectedGIF: this.props.selectedGIF,
               });
     }
     render() {
         let { className: e, forwardedRef: t } = this.props;
-        return (0, s.jsxs)("div", {
-            id: v.ni,
+        return (0, r.jsxs)("div", {
+            id: y.ni,
             role: "tabpanel",
-            "aria-labelledby": v.g9,
-            className: i()(y.kL, e),
-            onClick: x,
+            "aria-labelledby": y.g9,
+            className: a()(C.kL, e),
+            onClick: O,
             ref: t,
             children: [
-                (0, s.jsx)("div", { className: i()(y.wx, this.props.headerClassName), children: this.renderHeader() }),
-                (0, s.jsx)("div", { className: y.Qs, children: this.renderContent() }),
+                (0, r.jsx)("div", { className: a()(C.wx, this.props.headerClassName), children: this.renderHeader() }),
+                (0, r.jsx)("div", { className: C.Qs, children: this.renderContent() }),
             ],
         });
     }
 }
-let N = l.forwardRef((e, t) => {
-    l.useEffect(() => {
-        e.persistSearch || ((0, p.Ri)(e.initialQuery ?? ""), m.$P(e.initialQuery ?? "", C.dD.SEARCH));
+let b = i.forwardRef((e, t) => {
+    i.useEffect(() => {
+        e.persistSearch || ((0, h.Ri)(e.initialQuery ?? ""), f.$P(e.initialQuery ?? "", S.dD.SEARCH));
     }, [e.persistSearch, e.initialQuery]);
     let {
-            query: r,
-            resultQuery: n,
-            resultItems: i,
-            suggestions: a,
-        } = (0, o.cf)([g.A], () => ({
-            query: g.A.getQuery(),
-            resultQuery: g.A.getResultQuery(),
-            resultItems: g.A.getResultItems(),
-            suggestions: g.A.getSuggestions(),
+            query: n,
+            resultQuery: s,
+            resultItems: a,
+            suggestions: l,
+        } = (0, o.cf)([E.A], () => ({
+            query: E.A.getQuery(),
+            resultQuery: E.A.getResultQuery(),
+            resultItems: E.A.getResultItems(),
+            suggestions: E.A.getSuggestions(),
         })),
-        c = (0, p.RQ)((e) => e.searchQuery),
-        u = (0, E.IE)(),
-        d = l.useRef(null);
-    return (0, s.jsx)(T, {
+        u = (0, h.RQ)((e) => e.searchQuery),
+        c = (0, m.IE)(),
+        d = i.useRef(null);
+    return (0, r.jsx)(R, {
         ...e,
         forwardedRef: t,
-        query: null != r && "" !== r ? r : c,
-        resultQuery: n,
-        resultItems: i,
-        suggestions: a,
-        favorites: u,
+        query: null != n && "" !== n ? n : u,
+        resultQuery: s,
+        resultItems: a,
+        suggestions: l,
+        favorites: c,
         searchOffset: 0,
-        searchTotalResults: g.A.getResultItems().length,
+        searchTotalResults: E.A.getResultItems().length,
         searchLimit: null,
         searchBarRef: d,
         selectedGIF: e.selectedGIF,

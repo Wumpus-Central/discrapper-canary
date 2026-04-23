@@ -1,30 +1,31 @@
-n.d(t, { K: () => c });
-var l = n(627968),
-    r = n(503698),
-    i = n.n(r),
-    s = n(311907),
-    a = n(462887),
-    o = n(607470),
+"use strict";
+n.d(t, { K: () => d });
+var r = n(627968),
+    i = n(503698),
+    s = n.n(i),
+    a = n(311907),
+    o = n(462887),
+    l = n(607470),
     u = n(544028),
-    d = n(475437);
-let c = (e) => {
+    c = n(475437);
+let d = (e) => {
     let { className: t, options: n } = e,
-        r = (0, s.bG)([u.A], () => (0, a.M)(u.A.theme));
+        i = (0, a.bG)([u.A], () => (0, o.M)(u.A.theme));
     return null == n
         ? null
         : null != n
           ? n.animated
-              ? (0, l.jsx)(o.A, {
-                    src: n.getSrc(r),
-                    className: i()(d.O, t),
+              ? (0, r.jsx)(l.A, {
+                    src: n.getSrc(i),
+                    className: s()(c.O, t),
                     style: n.style,
                     loop: !1,
                     muted: !0,
                     autoPlay: !0,
                 })
-              : (0, l.jsx)("img", {
-                    src: n.getSrc(r),
-                    className: i()(d.O, t),
+              : (0, r.jsx)("img", {
+                    src: n.getSrc(i),
+                    className: s()(c.O, t),
                     style: n.style,
                     alt: "",
                     "aria-hidden": "true",

@@ -1,48 +1,47 @@
-"use strict";
-a.d(t, { A: () => p });
-var l = a(627968),
-    i = a(64700),
-    r = a(503698),
-    n = a.n(r),
-    s = a(384231),
-    o = a(903369),
-    d = a(491182),
-    c = a(538355),
-    u = a(699352),
-    _ = a(715628),
-    h = a(752636),
-    m = a(798204);
-let p = i.memo(function (e) {
+n.d(t, { A: () => h });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    s = n(384231),
+    c = n(903369),
+    o = n(491182),
+    d = n(538355),
+    u = n(699352),
+    _ = n(715628),
+    m = n(752636),
+    p = n(701628);
+let h = i.memo(function (e) {
     let {
             message: t,
-            channel: a,
-            compact: r,
-            className: p,
-            isGroupStart: g,
-            hideSimpleEmbedContent: f = !0,
-            disableInteraction: b,
-            previewGuildId: A,
-            preview: x,
-            author: v,
+            channel: n,
+            compact: a,
+            className: h,
+            isGroupStart: f,
+            hideSimpleEmbedContent: E = !0,
+            disableInteraction: A,
+            previewGuildId: v,
+            preview: I,
+            author: g,
         } = e,
-        C = A ?? (0, o.U)(t),
-        E = (0, s.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        { content: y } = (0, c.A)(t, {
-            hideSimpleEmbedContent: f,
-            allowList: E,
-            allowHeading: E,
+        S = v ?? (0, c.U)(t),
+        x = (0, s.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        { content: R } = (0, d.A)(t, {
+            hideSimpleEmbedContent: E,
+            allowList: x,
+            allowHeading: x,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        I = i.useMemo(() => (0, h.A)({ ...e, channel: a, guildId: C }), [e, a, C]);
-    return (0, l.jsx)(d.A, {
-        compact: r,
-        className: n()(p, { [m.iU]: !0, [m.HJ]: !r, [m._A]: g }),
-        childrenHeader: I,
-        childrenMessageContent: (0, _.A)(e, y),
-        childrenAccessories: null != a ? (0, u.J)({ message: t, channel: a, compact: r }, !1, !1) : null,
-        disableInteraction: b,
-        author: v,
-        preview: x,
+        T = i.useMemo(() => (0, m.A)({ ...e, channel: n, guildId: S }), [e, n, S]);
+    return (0, r.jsx)(o.A, {
+        compact: a,
+        className: l()(h, { [p.iU]: !0, [p.HJ]: !a, [p._A]: f }),
+        childrenHeader: T,
+        childrenMessageContent: (0, _.A)(e, R),
+        childrenAccessories: null != n ? (0, u.J)({ message: t, channel: n, compact: a }, !1, !1) : null,
+        disableInteraction: A,
+        author: g,
+        preview: I,
     });
 });

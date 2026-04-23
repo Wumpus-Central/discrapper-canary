@@ -1,23 +1,24 @@
-i.d(e, { b: () => n });
-var r = i(575593),
-    s = i(116833);
-function n(t) {
-    let { product: e } = t,
-        i = "6/4";
-    switch (e.type) {
+"use strict";
+n.d(t, { b: () => s });
+var r = n(575593),
+    i = n(116833);
+function s(e) {
+    let { product: t } = e,
+        n = "6/4";
+    switch (t.type) {
         case r.R.NAMEPLATE:
         case r.R.AVATAR_DECORATION:
-            i = "16/9";
+            n = "16/9";
             break;
         case r.R.BUNDLE:
         case r.R.PROFILE_EFFECT:
         default:
-            i = "6/4";
+            n = "6/4";
     }
     return {
         type: "dynamic",
-        component: s.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
-        aspectRatio: i,
-        props: { product: e, forCollectedModal: !0 },
+        component: i.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+        aspectRatio: n,
+        props: { product: t, forCollectedModal: !0 },
     };
 }

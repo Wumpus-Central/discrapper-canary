@@ -1,24 +1,25 @@
+"use strict";
 n.d(t, { e: () => c });
 var r = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
+var i = n(503698),
+    s = n.n(i),
     a = n(834730),
-    s = n(788868),
-    o = n(985018),
-    u = n(799510);
+    o = n(788868),
+    l = n(985018),
+    u = n(577129);
 function c(e) {
     let t,
-        { premiumType: n, size: l, className: c, tag: d = "span", ..._ } = e;
+        { premiumType: n, size: i, className: c, tag: d = "span", ..._ } = e;
     switch (n) {
-        case s.PremiumTypes.TIER_0:
-            t = o.intl.string(o.t["t9uG/o"]);
+        case o.PremiumTypes.TIER_0:
+            t = l.intl.string(l.t["t9uG/o"]);
             break;
-        case s.PremiumTypes.TIER_1:
-            t = o.intl.string(o.t.FSOz78);
+        case o.PremiumTypes.TIER_1:
+            t = l.intl.string(l.t.FSOz78);
             break;
-        case s.PremiumTypes.TIER_2:
-            t = o.intl.string(o.t.lG6a5x);
+        case o.PremiumTypes.TIER_2:
+            t = l.intl.string(l.t.lG6a5x);
     }
-    return (0, r.jsx)(a.E, { tag: d, variant: `display-${l}`, className: i()(c, u.Q), ..._, children: t });
+    return (0, r.jsx)(a.E, { tag: d, variant: `display-${i}`, className: s()(c, u.Q), ..._, children: t });
 }

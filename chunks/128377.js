@@ -1,5 +1,4 @@
-"use strict";
-s.d(e, { H: () => l });
+s.d(e, { H: () => d });
 var r = s(680753),
     i = s(875565),
     n = s(272469),
@@ -115,7 +114,7 @@ class _ {
         if (!t) return this;
         let e = "function" == typeof t ? t(this) : t,
             [s, r] =
-                e instanceof l ? [e.getScopeData(), e.getRequestSession()] : (0, i.Qd)(e) ? [t, t.requestSession] : [],
+                e instanceof d ? [e.getScopeData(), e.getRequestSession()] : (0, i.Qd)(e) ? [t, t.requestSession] : [],
             { tags: n, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: _ } = s || {};
         return (
             (this._tags = { ...this._tags, ...n }),
@@ -235,4 +234,4 @@ class _ {
             (this._notifyingListeners = !1));
     }
 }
-let l = _;
+let d = _;

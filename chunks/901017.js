@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    a = n.n(r),
-    l = n(940072);
-function s(e) {
-    let { icon: t, iconClassName: n, description: r, color: s } = e;
+t.d(n, { A: () => a });
+var i = t(627968);
+t(64700);
+var l = t(503698),
+    r = t.n(l),
+    s = t(940072);
+function a(e) {
+    let { icon: n, iconClassName: t, description: l, color: a } = e;
     return (0, i.jsxs)("div", {
-        className: l.bK,
+        className: s.bK,
         children: [
             (0, i.jsx)("div", {
-                className: l.f8,
-                children: (0, i.jsx)(t, { color: s ?? "currentColor", className: a()(l.kf, n) }),
+                className: s.f8,
+                children: (0, i.jsx)(n, { color: a ?? "currentColor", className: r()(s.kf, t) }),
             }),
-            (0, i.jsx)("div", { className: l.jV, children: r }),
+            (0, i.jsx)("div", { className: s.jV, children: l }),
         ],
     });
 }

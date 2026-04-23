@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     vJ: "extrasContainer__19b74",
     vw: "fullFlex__19b74",

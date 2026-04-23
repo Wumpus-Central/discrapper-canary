@@ -1,20 +1,21 @@
-t.d(l, { l: () => d });
-var r = t(627968),
-    n = t(64700),
-    i = t(945810);
-let a = n.lazy(() =>
-        Promise.all([t.e("95317"), t.e("91081")])
-            .then(t.bind(t, 441136))
+"use strict";
+n.d(t, { l: () => l });
+var r = n(627968),
+    i = n(64700),
+    s = n(945810);
+let a = i.lazy(() =>
+        Promise.all([n.e("95317"), n.e("91081")])
+            .then(n.bind(n, 441136))
             .then((e) => ({ default: e.SyntaxHighlight })),
     ),
-    s = (0, i.mj)({
+    o = (0, s.mj)({
         name: "2026-03-arborium-highlight",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-function d(e) {
-    let { children: l, location: t, ...i } = e,
-        { enabled: d } = s.useConfig({ location: t });
-    return d ? (0, r.jsx)(n.Suspense, { fallback: l, children: (0, r.jsx)(a, { ...i }) }) : l;
+function l(e) {
+    let { children: t, location: n, ...s } = e,
+        { enabled: l } = o.useConfig({ location: n });
+    return l ? (0, r.jsx)(i.Suspense, { fallback: t, children: (0, r.jsx)(a, { ...s }) }) : t;
 }

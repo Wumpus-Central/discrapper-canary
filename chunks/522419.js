@@ -8,16 +8,16 @@ var i = n(192308),
     o = n(64175),
     l = n(652215);
 function u(e) {
-    let { channelId: t, blockedUserIds: u, ignoredUserIds: d } = e;
+    let { channelId: t, blockedUserIds: u, ignoredUserIds: c } = e;
     (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("83792"), n.e("47000")]).then(n.bind(n, 876717));
+            let { default: e } = await n.e("24958").then(n.bind(n, 876717));
             return (n) => {
                 let { transitionState: i, onClose: s } = n;
                 return (0, r.jsx)(e, {
                     channelId: t,
                     blockedUserIds: u,
-                    ignoredUserIds: d,
+                    ignoredUserIds: c,
                     transitionState: i,
                     onClose: s,
                 });
@@ -31,7 +31,7 @@ function u(e) {
                         channel_id: t,
                         warning_medium: o.W_.MODAL,
                         blocked_user_ids: u,
-                        ignored_user_ids: d,
+                        ignored_user_ids: c,
                     });
             },
         },

@@ -1,2 +1,2 @@
 "use strict";
-e.exports = { Q: "text_eaab0b" };
+e.exports = "/assets/6b1ddffb1414f8fe.png";

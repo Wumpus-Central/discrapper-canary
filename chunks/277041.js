@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qr: "footer__57c71",
     k0: "subscriberButtonContainer__57c71",

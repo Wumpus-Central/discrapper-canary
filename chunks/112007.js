@@ -171,9 +171,7 @@ function R(e) {
                                 children: j.intl.format(j.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, _.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("98363"), n.e("7206")]).then(
-                                                n.bind(n, 780086),
-                                            );
+                                            let { default: e } = await n.e("98363").then(n.bind(n, 780086));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         }),
                                 }),

@@ -1,7 +1,7 @@
-n.d(t, { Be: () => o, aU: () => r, fO: () => s, vK: () => d });
-var a = n(627968);
+n.d(t, { Be: () => o, aU: () => r, fO: () => s, vK: () => c });
+var l = n(627968);
 n(64700);
-var l = n(192308),
+var a = n(192308),
     i = n(530912);
 let r = "forward-modal";
 function s(e) {
@@ -9,23 +9,21 @@ function s(e) {
         message: t,
         source: s,
         initialSelectedDestinations: o = [],
-        forwardOptions: d,
-        onRequestSent: c,
+        forwardOptions: c,
+        onRequestSent: d,
         customSendHandler: u,
     } = e;
     (0, i.pp)(t.channel_id, t.id, s),
-        (0, l.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("23965"), n.e("64618")]).then(
-                    n.bind(n, 911269),
-                );
+                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("54289")]).then(n.bind(n, 911269));
                 return (n) =>
-                    (0, a.jsx)(e, {
+                    (0, l.jsx)(e, {
                         ...n,
                         message: t,
                         initialSelectedDestinations: o,
-                        forwardOptions: d,
-                        onRequestSent: c,
+                        forwardOptions: c,
+                        onRequestSent: d,
                         customSendHandler: u,
                         source: s,
                     });
@@ -34,12 +32,12 @@ function s(e) {
         );
 }
 function o() {
-    (0, l.closeModal)(r);
+    (0, a.closeModal)(r);
 }
-function d(e) {
+function c(e) {
     let { message: t, failedDestinations: i, forwardOptions: r } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("66139").then(n.bind(n, 181622));
-        return (n) => (0, a.jsx)(e, { ...n, message: t, failedDestinations: i, forwardOptions: r });
+        return (n) => (0, l.jsx)(e, { ...n, message: t, failedDestinations: i, forwardOptions: r });
     });
 }

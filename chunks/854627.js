@@ -1,50 +1,51 @@
-n.d(t, { A: () => u });
-var a = n(64700),
-    r = n(311907),
-    l = n(778712),
-    i = n(562819),
+"use strict";
+n.d(t, { A: () => c });
+var r = n(64700),
+    i = n(311907),
+    s = n(778712),
+    a = n(562819),
     o = n(215689),
-    s = n(287809),
-    c = n(62199);
-function u(e) {
+    l = n(287809),
+    u = n(62199);
+function c(e) {
     let {
             userId: t,
             guildId: n,
-            size: u,
+            size: c,
             showPending: d = !1,
-            animateOnHover: p = !1,
-            avatarDecorationOverride: A,
-            avatarOverride: g,
+            animateOnHover: _ = !1,
+            avatarDecorationOverride: f,
+            avatarOverride: p,
         } = e,
-        _ = (0, r.bG)([s.default], () => s.default.getUser(t)),
+        h = (0, i.bG)([l.default], () => l.default.getUser(t)),
         {
-            avatarSrc: v,
-            isAvatarAnimating: f,
-            eventHandlers: m,
-        } = (0, c.A)({ user: _, guildId: n, size: (0, l.FT)(u), showPending: d, animateOnHover: p, avatarOverride: g }),
+            avatarSrc: E,
+            isAvatarAnimating: m,
+            eventHandlers: g,
+        } = (0, u.A)({ user: h, guildId: n, size: (0, s.FT)(c), showPending: d, animateOnHover: _, avatarOverride: p }),
         {
-            avatarPlaceholderSrc: E,
-            avatarDecorationSrc: b,
-            eventHandlers: R,
+            avatarPlaceholderSrc: A,
+            avatarDecorationSrc: I,
+            eventHandlers: T,
         } = (0, o.A)({
-            user: _,
+            user: h,
             guildId: n,
-            avatarDecorationOverride: A,
-            size: (0, i.Te)(u),
-            onlyAnimateOnHoverOrFocus: p,
+            avatarDecorationOverride: f,
+            size: (0, a.Te)(c),
+            onlyAnimateOnHoverOrFocus: _,
         });
     return {
-        avatarPlaceholderSrc: E,
-        avatarDecorationSrc: b,
-        avatarSrc: v,
-        isAnimating: f,
+        avatarPlaceholderSrc: A,
+        avatarDecorationSrc: I,
+        avatarSrc: E,
+        isAnimating: m,
         eventHandlers: {
-            onMouseEnter: a.useCallback(() => {
-                m.onMouseEnter(), R.onMouseEnter();
-            }, [m, R]),
-            onMouseLeave: a.useCallback(() => {
-                m.onMouseLeave(), R.onMouseLeave();
-            }, [m, R]),
+            onMouseEnter: r.useCallback(() => {
+                g.onMouseEnter(), T.onMouseEnter();
+            }, [g, T]),
+            onMouseLeave: r.useCallback(() => {
+                g.onMouseLeave(), T.onMouseLeave();
+            }, [g, T]),
         },
     };
 }

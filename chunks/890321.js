@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     NK: "transitionGroup__6ba63",
     PG: "measurement__6ba63",

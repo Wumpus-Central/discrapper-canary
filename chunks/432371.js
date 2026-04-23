@@ -1,10 +1,11 @@
-n.d(t, { Kc: () => o, cI: () => d, pk: () => u, vC: () => _ });
+"use strict";
+n.d(t, { Kc: () => l, cI: () => d, pk: () => u, vC: () => _ });
 var r = n(417597),
-    l = n(260509),
-    i = n(71393),
+    i = n(260509),
+    s = n(71393),
     a = n(652215),
-    s = n(746080);
-function o(e) {
+    o = n(746080);
+function l(e) {
     return u(e, !0, !1);
 }
 function u(e) {
@@ -15,13 +16,13 @@ function u(e) {
             null == e ||
             !(function (e) {
                 if (null == e) return !1;
-                let t = i.A.getGuild(e?.guild_id ?? ""),
+                let t = s.A.getGuild(e?.guild_id ?? ""),
                     n = null != t && t.rulesChannelId === e.id,
-                    r = (0, l.wh)(t);
+                    r = (0, i.wh)(t);
                 return a.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !n && !r;
             })(e) ||
-            (!1 === t && e.hasFlag(s.lx.SUMMARIES_DISABLED))
-        ) && c(i.A.getGuild(e.guild_id), n)
+            (!1 === t && e.hasFlag(o.lx.SUMMARIES_DISABLED))
+        ) && c(s.A.getGuild(e.guild_id), n)
     );
 }
 function c(e) {
@@ -42,6 +43,6 @@ function d(e) {
 function _(e) {
     return (
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        (0, r.bG)([i.A], () => c(i.A.getGuild(e?.id ?? a.dJq), !1), [e])
+        (0, r.bG)([s.A], () => c(s.A.getGuild(e?.id ?? a.dJq), !1), [e])
     );
 }

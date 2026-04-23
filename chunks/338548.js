@@ -1,28 +1,29 @@
-i.d(t, { A: () => T });
-var s = i(627968),
-    l = i(503698),
-    a = i.n(l),
-    n = i(990078),
-    r = i(462887),
-    c = i(834730),
-    o = i(736653),
-    d = i(88001),
-    u = i(466919),
-    m = i(985018),
-    g = i(408373);
-let T = (e) => {
+"use strict";
+n.d(t, { A: () => p });
+var r = n(627968),
+    i = n(503698),
+    s = n.n(i),
+    a = n(990078),
+    o = n(462887),
+    l = n(834730),
+    u = n(736653),
+    c = n(88001),
+    d = n(466919),
+    _ = n(985018),
+    f = n(408373);
+let p = (e) => {
     let { alwaysWhite: t = !1 } = e,
-        i = (0, o.DP)(),
-        l = (0, r.q)(i);
-    return (0, s.jsx)(n.m, {
-        text: m.intl.formatToPlainString(u.default["5xN/C1"], { premiumGroupProductName: (0, d.DP)() }),
-        children: (0, s.jsx)("div", {
-            className: a()(g.bE, { [g._k]: !t && l }),
-            children: (0, s.jsx)(c.E, {
+        n = (0, u.DP)(),
+        i = (0, o.q)(n);
+    return (0, r.jsx)(a.m, {
+        text: _.intl.formatToPlainString(d.default["5xN/C1"], { premiumGroupProductName: (0, c.DP)() }),
+        children: (0, r.jsx)("div", {
+            className: s()(f.bE, { [f._k]: !t && i }),
+            children: (0, r.jsx)(l.E, {
                 variant: "eyebrow",
                 color: t ? "always-white" : void 0,
-                className: g.gp,
-                children: m.intl.string(m.t["5nrJDO"]),
+                className: f.gp,
+                children: _.intl.string(_.t["5nrJDO"]),
             }),
         }),
     });

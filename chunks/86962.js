@@ -1,28 +1,27 @@
-"use strict";
-a.d(t, { O: () => i });
-var r = a(627968);
+a.d(t, { O: () => s });
+var l = a(627968);
 a(64700);
-var l = a(834730),
+var r = a(834730),
     n = a(605248);
-let i = {
+let s = {
     name: "Text",
     id: "cms-text",
     component: (e) =>
-        (0, r.jsxs)(r.Fragment, {
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsx)(l.E, { variant: "text-lg/semibold", children: "Text component for CMS content." }),
-                (0, r.jsx)(n.A, { ...e }),
-                (0, r.jsx)("hr", {}),
-                (0, r.jsx)(n.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
-                (0, r.jsx)(n.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
+                (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Text component for CMS content." }),
+                (0, l.jsx)(n.A, { ...e }),
+                (0, l.jsx)("hr", {}),
+                (0, l.jsx)(n.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
+                (0, l.jsx)(n.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
             ],
         }),
     controls: {

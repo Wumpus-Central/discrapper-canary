@@ -1,116 +1,115 @@
-"use strict";
-a.d(t, { Ae: () => h, Wv: () => _, ZV: () => b, g2: () => u });
-var r = a(627968),
-    i = a(64700),
-    n = a(503698),
-    s = a.n(n),
-    l = a(990078),
-    o = a(765671),
-    d = a(985018),
-    c = a(197669);
-function _(e) {
-    let { itemGapPx: t, items: a, maxLines: r, containerWidth: n } = e,
-        [s, l] = i.useState(0),
-        o = i.useRef([]),
-        d = i.useRef(0),
-        c = i.useRef(0),
-        _ = i.useRef(null),
-        u = i.useCallback((e, t) => {
-            o.current[e] = t;
+a.d(t, { Ae: () => h, Wv: () => c, ZV: () => A, g2: () => u });
+var n = a(627968),
+    r = a(64700),
+    i = a(503698),
+    l = a.n(i),
+    s = a(990078),
+    _ = a(765671),
+    o = a(985018),
+    d = a(197669);
+function c(e) {
+    let { itemGapPx: t, items: a, maxLines: n, containerWidth: i } = e,
+        [l, s] = r.useState(0),
+        _ = r.useRef([]),
+        o = r.useRef(0),
+        d = r.useRef(0),
+        c = r.useRef(null),
+        u = r.useCallback((e, t) => {
+            _.current[e] = t;
         }, []);
     return (
-        i.useLayoutEffect(() => {
-            if (null == _.current) return;
-            (o.current.length = a.length), (d.current = _.current.getBoundingClientRect().width ?? 0);
+        r.useLayoutEffect(() => {
+            if (null == c.current) return;
+            (_.current.length = a.length), (o.current = c.current.getBoundingClientRect().width ?? 0);
             let e = (function (e) {
-                let { items: t, maxLines: a, itemWidths: r, itemGapPx: i, containerWidth: n, overflowWidth: s } = e,
-                    l = 0,
-                    o = 0,
-                    d = 0;
+                let { items: t, maxLines: a, itemWidths: n, itemGapPx: r, containerWidth: i, overflowWidth: l } = e,
+                    s = 0,
+                    _ = 0,
+                    o = 0;
                 for (let e = 0; e < t.length; e++) {
-                    let c = r[e];
-                    if (isNaN(c) || c > n) continue;
-                    let _ = l === a - 1,
+                    let d = n[e];
+                    if (isNaN(d) || d > i) continue;
+                    let c = s === a - 1,
                         u = e === t.length - 1;
-                    if (!(Math.round(o + c + (_ && !u ? s + i : 0)) < Math.round(n))) {
-                        if (_) break;
-                        l++, (o = 0);
+                    if (!(Math.round(_ + d + (c && !u ? l + r : 0)) < Math.round(i))) {
+                        if (c) break;
+                        s++, (_ = 0);
                     }
-                    (d = e), (o += c + i);
+                    (o = e), (_ += d + r);
                 }
-                return d;
+                return o;
             })({
                 items: a,
-                maxLines: r,
+                maxLines: n,
                 itemGapPx: t,
-                containerWidth: n,
-                itemWidths: o.current,
-                overflowWidth: d.current,
+                containerWidth: i,
+                itemWidths: _.current,
+                overflowWidth: o.current,
             });
-            e !== c.current && ((c.current = e), l((e) => e + 1));
-        }, [n, t, a, r]),
-        i.useMemo(
-            () => ({ lastVisibleIndex: c.current, onItemLayout: u, overflowItemsRef: _, itemWidthsRef: o, version: s }),
-            [u, s],
+            e !== d.current && ((d.current = e), s((e) => e + 1));
+        }, [i, t, a, n]),
+        r.useMemo(
+            () => ({ lastVisibleIndex: d.current, onItemLayout: u, overflowItemsRef: c, itemWidthsRef: _, version: l }),
+            [u, l],
         )
     );
 }
 function u(e) {
     let { items: t, renderItem: a } = e;
-    return (0, r.jsx)(l.m, {
-        __unsupportedReactNodeAsText: (0, r.jsx)("div", { className: c.YL, children: t.map(a) }),
+    return (0, n.jsx)(s.m, {
+        __unsupportedReactNodeAsText: (0, n.jsx)("div", { className: d.YL, children: t.map(a) }),
         "aria-label": "overflow",
-        children: (0, r.jsx)("div", { children: a(d.intl.formatToPlainString(d.t.vGclWm, { count: t.length })) }),
+        children: (0, n.jsx)("div", { children: a(o.intl.formatToPlainString(o.t.vGclWm, { count: t.length })) }),
     });
 }
 function h(e) {
-    let { onItemLayout: t, index: a, children: n } = e,
-        s = i.useRef(null);
+    let { onItemLayout: t, index: a, children: i } = e,
+        l = r.useRef(null);
     return (
-        i.useLayoutEffect(() => {
-            null == s.current || t(a, s.current.getBoundingClientRect().width);
+        r.useLayoutEffect(() => {
+            null == l.current || t(a, l.current.getBoundingClientRect().width);
         }),
-        (0, r.jsx)("div", { ref: s, children: n })
+        (0, n.jsx)("div", { ref: l, children: i })
     );
 }
-function b(e) {
-    let { className: t, items: a, renderItem: n, itemGapPx: l = 0, maxLines: b, renderOverflow: m } = e,
-        { ref: p, width: f = 0 } = (0, o.Ay)(),
+function A(e) {
+    let { className: t, items: a, renderItem: i, itemGapPx: s = 0, maxLines: A, renderOverflow: m } = e,
+        { ref: p, width: I = 0 } = (0, _.Ay)(),
         {
-            lastVisibleIndex: A,
-            onItemLayout: g,
-            overflowItemsRef: E,
-        } = _({ items: a, itemGapPx: l, maxLines: b, containerWidth: f }),
-        I = i.useCallback((e) => (0, r.jsx)(u, { items: e, renderItem: n }), [n]),
-        T = i.useMemo(() => a.slice(0, A + 1), [a, A]),
-        x = i.useMemo(() => a.slice(A + 1), [a, A]);
-    return (0, r.jsxs)("div", {
-        className: s()(t, c.ld),
+            lastVisibleIndex: b,
+            onItemLayout: E,
+            overflowItemsRef: f,
+        } = c({ items: a, itemGapPx: s, maxLines: A, containerWidth: I }),
+        C = r.useCallback((e) => (0, n.jsx)(u, { items: e, renderItem: i }), [i]),
+        g = r.useMemo(() => a.slice(0, b + 1), [a, b]),
+        L = r.useMemo(() => a.slice(b + 1), [a, b]);
+    return (0, n.jsxs)("div", {
+        className: l()(t, d.ld),
         ref: p,
         children: [
-            (0, r.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 "aria-hidden": !0,
-                className: c.Kk,
+                className: d.Kk,
                 children: [
-                    (0, r.jsx)("div", {
-                        className: c.R5,
+                    (0, n.jsx)("div", {
+                        className: d.R5,
                         children: a.map((e, t) =>
-                            (0, r.jsx)(
+                            (0, n.jsx)(
                                 h,
-                                { index: t, onItemLayout: g, children: n(e) },
+                                { index: t, onItemLayout: E, children: i(e) },
                                 "string" == typeof e ? e : e.key,
                             ),
                         ),
                     }),
-                    (0, r.jsx)("div", {
-                        className: c.zd,
-                        ref: E,
-                        children: n(d.intl.formatToPlainString(d.t.vGclWm, { count: Number(`1${a.length}`) })),
+                    (0, n.jsx)("div", {
+                        className: d.zd,
+                        ref: f,
+                        children: i(o.intl.formatToPlainString(o.t.vGclWm, { count: Number(`1${a.length}`) })),
                     }),
                 ],
             }),
-            T.map(n),
-            x.length > 0 && (m ?? I)(x),
+            g.map(i),
+            L.length > 0 && (m ?? C)(L),
         ],
     });
 }

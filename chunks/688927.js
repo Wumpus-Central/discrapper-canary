@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => u });
-var a = n(627968),
-    i = n(64700),
-    r = n(534514),
-    l = n(834730),
+var l = n(627968),
+    a = n(64700),
+    i = n(534514),
+    r = n(834730),
     s = n(46054),
     d = n(861662),
     o = n(985018),
@@ -13,20 +12,20 @@ let u = (e) => {
             node: { header: t, subheader: n, button: u },
             isModeratorReport: _,
             isTidaReport: m = !1,
-            hideTitle: p = !1,
+            hideTitle: h = !1,
         } = e,
-        h = u?.type === "submit",
-        g = i.useMemo(() => s.A.reactParserFor({ ...s.A.defaultRules, link: d.B }), []);
-    return (0, a.jsxs)("div", {
+        g = u?.type === "submit",
+        p = a.useMemo(() => s.A.reactParserFor({ ...s.A.defaultRules, link: d.B }), []);
+    return (0, l.jsxs)("div", {
         className: c.N,
         children: [
-            p || null == t || "" === t
+            h || null == t || "" === t
                 ? null
-                : (0, a.jsx)(r.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                : (0, l.jsx)(i.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
             null != n && "" !== t
-                ? (0, a.jsx)(l.E, { variant: "text-md/normal", color: "text-subtle", className: c.m, children: g(n) })
+                ? (0, l.jsx)(r.E, { variant: "text-md/normal", color: "text-subtle", className: c.m, children: p(n) })
                 : null,
-            h && !_ && !m && (0, a.jsx)(l.E, { variant: "text-sm/normal", children: o.intl.format(o.t.Q0tSKT, {}) }),
+            g && !_ && !m && (0, l.jsx)(r.E, { variant: "text-sm/normal", children: o.intl.format(o.t.Q0tSKT, {}) }),
         ],
     });
 };

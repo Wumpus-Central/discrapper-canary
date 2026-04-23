@@ -1,4 +1,3 @@
-"use strict";
 s.d(e, { pq: () => a, vF: () => c });
 var r = s(780755),
     i = s(978862);

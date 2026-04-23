@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => h });
-var a = n(627968);
+n.d(t, { A: () => g });
+var l = n(627968);
 n(64700);
-var i = n(503698),
-    r = n.n(i),
-    l = n(939249),
+var a = n(503698),
+    i = n.n(a),
+    r = n(939249),
     s = n(834730),
     d = n(509434),
     o = n(534514),
@@ -12,33 +11,33 @@ var i = n(503698),
     u = n(985018),
     _ = n(777148),
     m = n(135363);
-let p = (e) => {
+let h = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: i, is_localized: o },
+        data: { url: t, link_text: n, link_description: a, is_localized: o },
     } = e;
     return o
-        ? (0, a.jsxs)(l.D, {
+        ? (0, l.jsxs)(r.D, {
               role: "link",
-              className: r()(m.$J, _.lD),
+              className: i()(m.$J, _.lD),
               onClick: () => {
                   (0, c.A)(t);
               },
               children: [
-                  (0, a.jsxs)("div", {
+                  (0, l.jsxs)("div", {
                       className: m.xU,
                       children: [
-                          (0, a.jsx)(s.E, { className: m.__invalid_linkText, variant: "text-md/normal", children: n }),
-                          null != i &&
-                              "" !== i &&
-                              (0, a.jsx)(s.E, { variant: "text-md/normal", color: "text-muted", children: i }),
+                          (0, l.jsx)(s.E, { className: m.__invalid_linkText, variant: "text-md/normal", children: n }),
+                          null != a &&
+                              "" !== a &&
+                              (0, l.jsx)(s.E, { variant: "text-md/normal", color: "text-muted", children: a }),
                       ],
                   }),
-                  (0, a.jsx)(d.I, { size: "sm", color: "currentColor", className: m.wP }),
+                  (0, l.jsx)(d.I, { size: "sm", color: "currentColor", className: m.wP }),
               ],
           })
         : null;
 };
-function h(e) {
+function g(e) {
     let { elements: t } = e;
     if (
         null == t ||
@@ -52,17 +51,17 @@ function h(e) {
         return null;
     let n = t.map((e, t) => {
             let { data: n } = e;
-            return (0, a.jsx)(p, { data: n }, `external-link+${t}`);
+            return (0, l.jsx)(h, { data: n }, `external-link+${t}`);
         }),
-        i = t.some((e) => {
+        a = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
-    return (0, a.jsxs)("div", {
-        className: r()(m.nV, _.E8),
+    return (0, l.jsxs)("div", {
+        className: i()(m.nV, _.E8),
         children: [
-            !i &&
-                (0, a.jsx)(o.D, {
+            !a &&
+                (0, l.jsx)(o.D, {
                     variant: "heading-sm/semibold",
                     color: "text-default",
                     className: m.wx,

@@ -1,12 +1,11 @@
-"use strict";
-a.d(t, { H: () => c, M: () => d });
-var r = a(627968);
+a.d(t, { H: () => c, M: () => o });
+var l = a(627968);
 a(64700);
-var l = a(534514),
+var r = a(534514),
     n = a(834730),
-    i = a(41770),
-    s = a(785330);
-let o = {
+    s = a(41770),
+    i = a(785330);
+let d = {
         id: "dummy-show-of-skeletons",
         children: [
             {
@@ -67,30 +66,30 @@ let o = {
             },
         ],
     },
-    d = {
+    o = {
         name: "SubLayout",
         id: "sub-layout-basic",
         component: () =>
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.D, {
+                    (0, l.jsx)(r.D, {
                         variant: "heading-lg/bold",
                         children: 'The SubLayout component accepts a layout id and "get or fetch"es the layout',
                     }),
-                    (0, r.jsx)(n.E, {
+                    (0, l.jsx)(n.E, {
                         variant: "text-md/semibold",
                         children:
                             "When resolved, the layout trees are merged into one layout. This allows for the asynchronous resolution of layouts, for faster first paints",
                     }),
-                    (0, r.jsx)(n.E, {
+                    (0, l.jsx)(n.E, {
                         variant: "text-md/semibold",
                         children:
                             "Here, the \"popular picks\" are actually a sub layout with the id 'dummy-popular-picks'",
                     }),
-                    (0, r.jsx)("br", {}),
-                    (0, r.jsx)("hr", {}),
-                    (0, r.jsx)("br", {}),
-                    (0, r.jsx)(s.Ay, { layout: i.uG }),
+                    (0, l.jsx)("br", {}),
+                    (0, l.jsx)("hr", {}),
+                    (0, l.jsx)("br", {}),
+                    (0, l.jsx)(i.Ay, { layout: s.uG }),
                 ],
             }),
         controls: {},
@@ -99,22 +98,22 @@ let o = {
         name: "SubLayout - Loading State",
         id: "sub-layout-skeleton",
         component: () =>
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.D, {
+                    (0, l.jsx)(r.D, {
                         variant: "heading-lg/bold",
                         children:
                             'The SubLayout can take a "Skeleton" property which is just `children` to display if the layout is being fetched from the api',
                     }),
-                    (0, r.jsx)(n.E, {
+                    (0, l.jsx)(n.E, {
                         variant: "text-md/semibold",
                         children:
                             "Here we use the `Skeleton` component to show the shop cards loading while the (dummy) Shop Cards SubLayout are resolving (it will never stop loading for demonstration purposes)",
                     }),
-                    (0, r.jsx)("br", {}),
-                    (0, r.jsx)("hr", {}),
-                    (0, r.jsx)("br", {}),
-                    (0, r.jsx)(s.Ay, { layout: o }),
+                    (0, l.jsx)("br", {}),
+                    (0, l.jsx)("hr", {}),
+                    (0, l.jsx)("br", {}),
+                    (0, l.jsx)(i.Ay, { layout: d }),
                 ],
             }),
         controls: {},

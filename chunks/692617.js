@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { A: () => m });
-var a = n(627968);
+var l = n(627968);
 n(64700);
-var i = n(503698),
-    r = n.n(i),
-    l = n(735438),
-    s = n.n(l),
+var a = n(503698),
+    i = n.n(a),
+    r = n(735438),
+    s = n.n(r),
     d = n(990078),
     o = n(862482),
     c = n(834730),
@@ -15,14 +14,14 @@ function m(e) {
     let {
             className: t,
             maxGuilds: n,
-            guilds: i,
-            onFocus: l,
+            guilds: a,
+            onFocus: r,
             onClick: m,
-            size: p = u.Ay.Sizes.SMALLER,
-            hideOverflowCount: h = !1,
-            disableGuildNameTooltip: g = !1,
+            size: h = u.Ay.Sizes.SMALLER,
+            hideOverflowCount: g = !1,
+            disableGuildNameTooltip: p = !1,
         } = e,
-        f = (function () {
+        x = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
             switch (e) {
                 case u.Ay.Sizes.SMOL:
@@ -33,38 +32,38 @@ function m(e) {
                 default:
                     return _.q1;
             }
-        })(p);
-    return i.length <= 0
+        })(h);
+    return a.length <= 0
         ? null
-        : (0, a.jsx)("div", {
-              className: r()(t, _.HD),
+        : (0, l.jsx)("div", {
+              className: i()(t, _.HD),
               children: (function () {
-                  let e = i.length - n,
+                  let e = a.length - n,
                       t = e + 1,
-                      b = e > 0 && !h,
-                      A = Math.min(i.length, n) - 1,
-                      x = s()(i)
+                      A = e > 0 && !g,
+                      f = Math.min(a.length, n) - 1,
+                      v = s()(a)
                           .take(n)
                           .map((e, t) => {
                               let n = e.name,
-                                  i = r()(_.my, f, t === A && !b && _.NE);
-                              return g
-                                  ? (0, a.jsx)("div", {
-                                        className: i,
-                                        children: (0, a.jsx)(u.Ay, { guild: e, onClick: m, size: p, showTooltip: !1 }),
+                                  a = i()(_.my, x, t === f && !A && _.NE);
+                              return p
+                                  ? (0, l.jsx)("div", {
+                                        className: a,
+                                        children: (0, l.jsx)(u.Ay, { guild: e, onClick: m, size: h, showTooltip: !1 }),
                                     })
-                                  : (0, a.jsx)(
+                                  : (0, l.jsx)(
                                         d.m,
                                         {
                                             asContainer: !0,
                                             text: n,
-                                            children: (0, a.jsx)(u.Ay, { guild: e, onClick: m, size: p }),
+                                            children: (0, l.jsx)(u.Ay, { guild: e, onClick: m, size: h }),
                                         },
                                         e.id,
                                     );
                           })
                           .value();
-                  if (b) {
+                  if (A) {
                       let e = (function () {
                           let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
                           switch (e) {
@@ -75,17 +74,17 @@ function m(e) {
                               default:
                                   return "text-xs/medium";
                           }
-                      })(p);
-                      x[x.length - 1] = (0, a.jsx)(o.$n, {
-                          className: r()(_.ju, f),
-                          onFocus: l,
+                      })(h);
+                      v[v.length - 1] = (0, l.jsx)(o.$n, {
+                          className: i()(_.ju, x),
+                          onFocus: r,
                           onClick: (e) => m?.(e),
                           look: o.$n.Looks.BLANK,
                           size: o.$n.Sizes.NONE,
-                          children: (0, a.jsx)(c.E, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
+                          children: (0, l.jsx)(c.E, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
                       });
                   }
-                  return x;
+                  return v;
               })(),
           });
 }

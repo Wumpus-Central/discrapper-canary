@@ -1,165 +1,166 @@
-i.d(t, { A: () => V });
-var s = i(627968),
-    l = i(64700),
-    a = i(503698),
-    n = i.n(a),
-    r = i(311907),
-    c = i(230109),
-    o = i(534514),
-    d = i(104510),
-    u = i(827734),
-    m = i(834730),
-    g = i(821609),
-    T = i(597770),
-    x = i(688810),
-    A = i(263063),
-    f = i(532794),
-    h = i(864310),
-    j = i(338548),
-    p = i(287809),
-    N = i(178368),
-    E = i(927578),
-    b = i(987144),
-    v = i(652215),
-    I = i(788868),
-    _ = i(985018),
-    R = i(474236);
-let V = function (e) {
-    let { className: t, closeLayer: i, guild: a, onCtaVisibilityChange: V } = e,
-        S = l.useRef(null),
-        P = (0, r.bG)([p.default], () => p.default.getCurrentUser()),
-        y = (0, r.bG)([N.A], () => N.A.boostSlots),
-        C = P?.isPremiumGroupMember(),
-        { analyticsLocations: k } = (0, x.Ay)(),
-        [L, U] = l.useState(!1),
-        M = l.useMemo(
+"use strict";
+n.d(t, { A: () => R });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(311907),
+    l = n(230109),
+    u = n(534514),
+    c = n(104510),
+    d = n(827734),
+    _ = n(834730),
+    f = n(821609),
+    p = n(597770),
+    h = n(688810),
+    E = n(263063),
+    m = n(532794),
+    g = n(864310),
+    A = n(338548),
+    I = n(287809),
+    T = n(178368),
+    S = n(927578),
+    y = n(987144),
+    N = n(652215),
+    v = n(788868),
+    C = n(985018),
+    O = n(474236);
+let R = function (e) {
+    let { className: t, closeLayer: n, guild: s, onCtaVisibilityChange: R } = e,
+        b = i.useRef(null),
+        D = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
+        L = (0, o.bG)([T.A], () => T.A.boostSlots),
+        w = D?.isPremiumGroupMember(),
+        { analyticsLocations: M } = (0, h.Ay)(),
+        [P, x] = i.useState(!1),
+        k = i.useMemo(
             () =>
-                Object.keys(y).filter((e) => {
-                    let t = y[e];
-                    return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === a.id;
+                Object.keys(L).filter((e) => {
+                    let t = L[e];
+                    return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === s.id;
                 }).length,
-            [y, a.id],
+            [L, s.id],
         ),
-        O = (0, h.A)(e.guild.id).total;
+        U = (0, g.A)(e.guild.id).total;
     async function G() {
-        U(!0),
-            await (0, b.g)({
-                analyticsLocations: k,
+        x(!0),
+            await (0, y.g)({
+                analyticsLocations: M,
                 analyticsLocation: {
-                    page: v.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: v.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: v.ZSU.BUTTON_CTA,
-                    objectType: v.AnalyticsObjectTypes.BUY,
+                    page: N.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: N.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: N.ZSU.BUTTON_CTA,
+                    objectType: N.AnalyticsObjectTypes.BUY,
                 },
-                guild: a,
-                closeLayer: i,
+                guild: s,
+                closeLayer: n,
             }),
-            U(!1);
+            x(!1);
     }
-    return (0, s.jsxs)("div", {
-        className: n()(R.kL, t),
+    return (0, r.jsxs)("div", {
+        className: a()(O.kL, t),
         children: [
-            (0, s.jsxs)("div", {
-                className: R.$R,
+            (0, r.jsxs)("div", {
+                className: O.$R,
                 children: [
-                    (0, s.jsx)(A.Ay, { className: R.$f, guild: a, size: A.Ay.Sizes.LARGER, iconSize: 70, active: !0 }),
-                    (0, s.jsxs)("div", {
-                        className: R.CR,
+                    (0, r.jsx)(E.Ay, { className: O.$f, guild: s, size: E.Ay.Sizes.LARGER, iconSize: 70, active: !0 }),
+                    (0, r.jsxs)("div", {
+                        className: O.CR,
                         children: [
-                            (0, s.jsx)(o.D, { className: R.J5, variant: "heading-lg/semibold", children: a.name }),
-                            (0, s.jsxs)("div", {
-                                className: R.SJ,
+                            (0, r.jsx)(u.D, { className: O.J5, variant: "heading-lg/semibold", children: s.name }),
+                            (0, r.jsxs)("div", {
+                                className: O.SJ,
                                 children: [
-                                    (0, s.jsx)(d._, {
+                                    (0, r.jsx)(c._, {
                                         color:
-                                            O > 0 ? u.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
-                                        className: n()(R.Me, { [R.S3]: O > 0 }),
+                                            U > 0 ? d.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
+                                        className: a()(O.Me, { [O.S3]: U > 0 }),
                                     }),
-                                    (0, s.jsx)(m.E, {
-                                        className: R.n,
+                                    (0, r.jsx)(_.E, {
+                                        className: O.n,
                                         variant: "text-md/semibold",
-                                        children: _.intl.format(_.t["pob/cL"], { subscriptions: O }),
+                                        children: C.intl.format(C.t["pob/cL"], { subscriptions: U }),
                                     }),
                                 ],
                             }),
-                            M > 0
-                                ? (0, s.jsx)(m.E, {
-                                      className: R.EV,
+                            k > 0
+                                ? (0, r.jsx)(_.E, {
+                                      className: O.EV,
                                       variant: "text-sm/normal",
-                                      children: _.intl.format(_.t.Jeto2u, { numSubscriptions: M }),
+                                      children: C.intl.format(C.t.Jeto2u, { numSubscriptions: k }),
                                   })
                                 : null,
                         ],
                     }),
                 ],
             }),
-            (0, s.jsxs)("div", {
-                className: R.mY,
+            (0, r.jsxs)("div", {
+                className: O.mY,
                 children: [
-                    (0, s.jsx)("h1", { className: R.R_, children: _.intl.string(_.t.N4sqzL) }),
-                    C ? (0, s.jsx)(j.A, { alwaysWhite: !0 }) : null,
-                    (0, s.jsxs)("div", {
-                        className: R.Sq,
+                    (0, r.jsx)("h1", { className: O.R_, children: C.intl.string(C.t.N4sqzL) }),
+                    w ? (0, r.jsx)(A.A, { alwaysWhite: !0 }) : null,
+                    (0, r.jsxs)("div", {
+                        className: O.Sq,
                         children: [
-                            (0, s.jsx)(c.L, {
-                                innerRef: S,
-                                onChange: V,
+                            (0, r.jsx)(l.L, {
+                                innerRef: b,
+                                onChange: R,
                                 threshold: 0.9,
-                                children: (0, s.jsx)("div", {
-                                    ref: S,
-                                    className: R.dp,
-                                    children: (0, s.jsx)(g.$, {
+                                children: (0, r.jsx)("div", {
+                                    ref: b,
+                                    className: O.dp,
+                                    children: (0, r.jsx)(f.$, {
                                         variant: "expressive",
                                         size: "md",
-                                        icon: d._,
-                                        text: _.intl.string(_.t.gKmQ1G),
+                                        icon: c._,
+                                        text: C.intl.string(C.t.gKmQ1G),
                                         onClick: G,
-                                        loading: L,
-                                        disabled: C,
+                                        loading: P,
+                                        disabled: w,
                                     }),
                                 }),
                             }),
-                            E.Ay.hasFreeBoosts(P) || E.Ay.isPremium(P, I.PremiumTypes.TIER_2)
-                                ? (0, s.jsx)(g.$, {
+                            S.Ay.hasFreeBoosts(D) || S.Ay.isPremium(D, v.PremiumTypes.TIER_2)
+                                ? (0, r.jsx)(f.$, {
                                       variant: "secondary",
                                       size: "md",
-                                      icon: T.o,
-                                      text: _.intl.string(_.t["8MYSQw"]),
+                                      icon: p.o,
+                                      text: C.intl.string(C.t["8MYSQw"]),
                                       onClick: function () {
-                                          (0, f.A)({
+                                          (0, m.A)({
                                               initialPlanId: null,
-                                              subscriptionTier: I.pe.TIER_2,
+                                              subscriptionTier: v.pe.TIER_2,
                                               isGift: !0,
-                                              analyticsLocations: k,
+                                              analyticsLocations: M,
                                               analyticsObject: {
-                                                  page: v.liQ.PREMIUM_GUILD_USER_MODAL,
-                                                  section: v.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                                  object: v.ZSU.BUTTON_ICON,
-                                                  objectType: v.AnalyticsObjectTypes.GIFT,
+                                                  page: N.liQ.PREMIUM_GUILD_USER_MODAL,
+                                                  section: N.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                                  object: N.ZSU.BUTTON_ICON,
+                                                  objectType: N.AnalyticsObjectTypes.GIFT,
                                               },
-                                              onClose: (e) => e && i(),
+                                              onClose: (e) => e && n(),
                                           });
                                       },
                                   })
-                                : (0, s.jsx)(g.$, {
+                                : (0, r.jsx)(f.$, {
                                       variant: "secondary",
                                       size: "md",
-                                      text: _.intl.string(_.t.Q43TvC),
+                                      text: C.intl.string(C.t.Q43TvC),
                                       onClick: function () {
-                                          (0, f.A)({
+                                          (0, m.A)({
                                               initialPlanId: null,
-                                              subscriptionTier: I.pe.TIER_2,
-                                              analyticsLocations: k,
+                                              subscriptionTier: v.pe.TIER_2,
+                                              analyticsLocations: M,
                                               analyticsObject: {
-                                                  page: v.liQ.PREMIUM_GUILD_USER_MODAL,
-                                                  section: v.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                                  object: v.ZSU.BUTTON_ICON,
-                                                  objectType: v.AnalyticsObjectTypes.BUY,
+                                                  page: N.liQ.PREMIUM_GUILD_USER_MODAL,
+                                                  section: N.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                                  object: N.ZSU.BUTTON_ICON,
+                                                  objectType: N.AnalyticsObjectTypes.BUY,
                                               },
-                                              onClose: (e) => e && i(),
+                                              onClose: (e) => e && n(),
                                           });
                                       },
-                                      disabled: C,
+                                      disabled: w,
                                   }),
                         ],
                     }),

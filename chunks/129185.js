@@ -1,81 +1,82 @@
-n.d(t, { Xq: () => b, q6: () => x, wE: () => C });
-var i = n(627968),
-    s = n(64700),
-    r = n(311907),
+"use strict";
+n.d(t, { Xq: () => A, q6: () => T, wE: () => m });
+var r = n(627968),
+    i = n(64700),
+    s = n(311907),
     a = n(775602),
-    l = n(7584),
-    o = n(267102),
+    o = n(7584),
+    l = n(267102),
     u = n(320501),
-    d = n(223567),
-    c = n(552122),
-    m = n(401266),
-    h = n(187584),
+    c = n(223567),
+    d = n(552122),
+    _ = n(401266),
+    f = n(187584),
     p = n(764917),
-    f = n(652215);
-function g(e) {
-    if (null == e || null == d.A.emojiAnimationTriggers) return !1;
-    for (let t of d.A.emojiAnimationTriggers) {
-        let n = l.Ay.getByName(t);
+    h = n(652215);
+function E(e) {
+    if (null == e || null == c.A.emojiAnimationTriggers) return !1;
+    for (let t of c.A.emojiAnimationTriggers) {
+        let n = o.Ay.getByName(t);
         if (null != n) {
             if (`:${n.uniqueName}:` === e) return !0;
             for (let t in n.diversityChildren) {
-                let i = n.diversityChildren[t];
-                if (`:${i.uniqueName}:` === e) return !0;
+                let r = n.diversityChildren[t];
+                if (`:${r.uniqueName}:` === e) return !0;
             }
         }
     }
     return !1;
 }
-let C = s.createContext({ triggerAnimation: () => {}, untriggerAnimation: () => {} });
-function y(e) {
+let m = i.createContext({ triggerAnimation: () => {}, untriggerAnimation: () => {} });
+function g(e) {
     let { children: t } = e,
-        { triggerAnimation: n, untriggerAnimation: r } = s.useContext(C),
-        a = (0, o.Us)(),
-        l = s.useMemo(
+        { triggerAnimation: n, untriggerAnimation: s } = i.useContext(m),
+        a = (0, l.Us)(),
+        o = i.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    a !== f.BRT.OVERLAY && g(e) && n(e);
+                    a !== h.BRT.OVERLAY && E(e) && n(e);
                 },
                 untriggerAnimation: (e) => {
-                    a !== f.BRT.OVERLAY && g(e) && r(e);
+                    a !== h.BRT.OVERLAY && E(e) && s(e);
                 },
             }),
-            [a, n, r],
+            [a, n, s],
         );
-    return (0, i.jsx)(C.Provider, { value: l, children: t });
+    return (0, r.jsx)(m.Provider, { value: o, children: t });
 }
-function b(e) {
+function A(e) {
     let { children: t } = e,
-        n = c.A.useIsEligible(),
-        r = s.useCallback((e, t) => {
+        n = d.A.useIsEligible(),
+        s = i.useCallback((e, t) => {
             switch (t) {
-                case d.n.THROW_EMOJI:
-                    return (0, i.jsx)(p.V, { children: e });
-                case d.n.SNOW:
-                    return (0, i.jsx)(h.i, { children: e });
+                case c.n.THROW_EMOJI:
+                    return (0, r.jsx)(p.V, { children: e });
+                case c.n.SNOW:
+                    return (0, r.jsx)(f.i, { children: e });
             }
         }, []);
-    return n && null != d.A.emojiAnimationType ? r((0, i.jsx)(y, { children: t }), d.A.emojiAnimationType) : t;
+    return n && null != c.A.emojiAnimationType ? s((0, r.jsx)(g, { children: t }), c.A.emojiAnimationType) : t;
 }
-function v(e) {
-    let { emojiRef: t, channelId: n, messageId: i, emojiName: a } = e,
-        l = (0, r.bG)([u.A], () => u.A.getMessage(n, i)),
-        { triggerAnimation: o } = s.useContext(C);
+function I(e) {
+    let { emojiRef: t, channelId: n, messageId: r, emojiName: a } = e,
+        o = (0, s.bG)([u.A], () => u.A.getMessage(n, r)),
+        { triggerAnimation: l } = i.useContext(m);
     return (
-        s.useEffect(() => {
-            if (!d.A.triggerEmojiAnimationFromSentMessage || l?.state !== f.cmJ.SENT || (0, m.AI)(i)) return;
+        i.useEffect(() => {
+            if (!c.A.triggerEmojiAnimationFromSentMessage || o?.state !== h.cmJ.SENT || (0, _.AI)(r)) return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
-            e >= 0 && n <= window.innerHeight && (o(a), (0, m.IL)(i));
-        }, [a, t, l?.state, i, o]),
+            e >= 0 && n <= window.innerHeight && (l(a), (0, _.IL)(r));
+        }, [a, t, o?.state, r, l]),
         null
     );
 }
-function x(e) {
-    let { channelId: t, messageId: n, emojiName: s, disable: l, emojiRef: u } = e,
-        d = (0, r.bG)([a.A], () => a.A.useReducedMotion),
-        m = c.A.useIsEligible(),
-        h = (0, o.Us)();
-    return l || h === f.BRT.OVERLAY || !m || null == n || null == t || d || null == u || !g(s)
+function T(e) {
+    let { channelId: t, messageId: n, emojiName: i, disable: o, emojiRef: u } = e,
+        c = (0, s.bG)([a.A], () => a.A.useReducedMotion),
+        _ = d.A.useIsEligible(),
+        f = (0, l.Us)();
+    return o || f === h.BRT.OVERLAY || !_ || null == n || null == t || c || null == u || !E(i)
         ? null
-        : (0, i.jsx)(v, { emojiRef: u, channelId: t, messageId: n, emojiName: s });
+        : (0, r.jsx)(I, { emojiRef: u, channelId: t, messageId: n, emojiName: i });
 }

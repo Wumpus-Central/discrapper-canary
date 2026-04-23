@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => x });
-var a = n(627968),
-    i = n(64700),
-    r = n(311907),
-    l = n(534514),
+n.d(t, { A: () => v });
+var l = n(627968),
+    a = n(64700),
+    i = n(311907),
+    r = n(534514),
     s = n(573613),
     d = n(387408),
     o = n(763754),
@@ -11,45 +10,45 @@ var a = n(627968),
     u = n(291812),
     _ = n(643204),
     m = n(448368),
-    p = n(538355),
-    h = n(253932),
-    g = n(734057),
-    f = n(838541),
-    b = n(985018),
-    A = n(121940);
-let x = (e) => {
+    h = n(538355),
+    g = n(253932),
+    p = n(734057),
+    x = n(838541),
+    A = n(985018),
+    f = n(121940);
+let v = (e) => {
     let { message: t } = e,
         n = (0, o.Ay)(t),
-        x = (0, r.bG)([g.A], () => g.A.getChannel(t.channel_id)),
-        v = i.useMemo(() => (0, d.A)(t), [t]),
-        { content: E } = (0, p.A)(v, { hideSimpleEmbedContent: !1 }),
-        I = h.hH.useSetting(),
-        T = i.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: n } = (0, m.o)(t, E, !1, !1, "", {
-                leadingIconClass: A.$r,
-                trailingIconClass: A.$r,
-                iconSize: f.eJ,
+        v = (0, i.bG)([p.A], () => p.A.getChannel(t.channel_id)),
+        b = a.useMemo(() => (0, d.A)(t), [t]),
+        { content: N } = (0, h.A)(b, { hideSimpleEmbedContent: !1 }),
+        E = g.hH.useSetting(),
+        S = a.useCallback(() => {
+            let { leadingIcon: e, trailingIcon: n } = (0, m.o)(t, N, !1, !1, "", {
+                leadingIconClass: f.$r,
+                trailingIconClass: f.$r,
+                iconSize: x.eJ,
             });
-            return (0, a.jsxs)("div", {
-                className: A.hQ,
-                children: [e, (0, a.jsx)(u.Ay, { message: t, content: E, compact: I }), n],
+            return (0, l.jsxs)("div", {
+                className: f.hQ,
+                children: [e, (0, l.jsx)(u.Ay, { message: t, content: N, compact: E }), n],
             });
-        }, [t, E, I]);
-    return null == x
+        }, [t, N, E]);
+    return null == v
         ? null
-        : (0, a.jsxs)("div", {
-              className: A.kL,
+        : (0, l.jsxs)("div", {
+              className: f.kL,
               children: [
-                  (0, a.jsx)(l.D, {
-                      className: A.wx,
+                  (0, l.jsx)(r.D, {
+                      className: f.wx,
                       variant: "heading-sm/semibold",
-                      children: b.intl.string(b.t.iouM3a),
+                      children: A.intl.string(A.t.iouM3a),
                   }),
-                  (0, a.jsx)(s.Ip, {
-                      className: A.PI,
-                      children: (0, a.jsx)(c.A, {
-                          childrenMessageContent: T(),
-                          childrenHeader: (0, a.jsx)(_.Ay, { message: t, channel: x, author: n, guildId: x.guild_id }),
+                  (0, l.jsx)(s.Ip, {
+                      className: f.PI,
+                      children: (0, l.jsx)(c.A, {
+                          childrenMessageContent: S(),
+                          childrenHeader: (0, l.jsx)(_.Ay, { message: t, channel: v, author: n, guildId: v.guild_id }),
                           disableInteraction: !0,
                           author: n,
                       }),

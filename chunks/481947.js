@@ -44,10 +44,7 @@ var t = l(627968),
     H = l(544105),
     P = l(985018),
     B = l(80442);
-let W = (0, R.Fe)({
-        createPromise: () => Promise.all([l.e("23353"), l.e("28966")]).then(l.bind(l, 217356)),
-        webpackId: 217356,
-    }),
+let W = (0, R.Fe)({ createPromise: () => l.e("28966").then(l.bind(l, 217356)), webpackId: 217356 }),
     X = (s) => {
         let { children: e, collapsed: l = !1, className: a } = s;
         return (0, t.jsx)("div", { className: r()(a, B.p_, l ? B.GT : B.m3), role: "group", children: e });

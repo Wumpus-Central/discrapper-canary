@@ -11,9 +11,7 @@ function l(e, t) {
     a.bm.getSetting() || l
         ? (0, i.openModalLazy)(
               async () => {
-                  let { default: t } = await Promise.all([n.e("28367"), n.e("95782"), n.e("89480")]).then(
-                      n.bind(n, 308229),
-                  );
+                  let { default: t } = await Promise.all([n.e("95782"), n.e("78270")]).then(n.bind(n, 308229));
                   return (n) => (0, r.jsx)(t, { ...n, onEnable: e, videoEnabled: !1 });
               },
               { modalKey: "camera-preview", contextKey: t === o.BRT.POPOUT ? s.KX : s.SY },

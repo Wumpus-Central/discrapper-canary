@@ -1,46 +1,47 @@
-t.d(l, { A: () => h });
-var r = t(627968),
-    n = t(64700),
-    i = t(311907),
-    a = t(148810),
-    s = t(521502),
-    d = t(380610),
-    o = t(446347),
-    u = t(390486);
-async function c(e) {
+"use strict";
+n.d(t, { A: () => p });
+var r = n(627968),
+    i = n(64700),
+    s = n(311907),
+    a = n(148810),
+    o = n(521502),
+    l = n(380610),
+    u = n(446347),
+    c = n(390486);
+async function d(e) {
     if (200 !== (await (0, a.oA)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function v(e) {
+async function _(e) {
     if (200 !== (await (0, a.Zk)(e)).status) throw Error("Build override couldn't apply");
     window.location.reload(!0);
 }
-async function C() {
+async function f() {
     await (0, a.iD)(), window.location.reload(!0);
 }
-let h = n.memo(function (e) {
-    let { url: l } = e,
-        t = (0, i.cf)([s.A], () => s.A.getCurrentBuildOverride()),
-        a = (0, i.bG)([s.A], () => s.A.getBuildOverride(l)),
-        { payload: h, validatedURL: m } = a,
-        g = t.state === s.U.Resolving || a.state === s.U.Resolving,
-        f = n.useCallback(
+let p = i.memo(function (e) {
+    let { url: t } = e,
+        n = (0, s.cf)([o.A], () => o.A.getCurrentBuildOverride()),
+        a = (0, s.bG)([o.A], () => o.A.getBuildOverride(t)),
+        { payload: p, validatedURL: h } = a,
+        E = n.state === o.U.Resolving || a.state === o.U.Resolving,
+        m = i.useCallback(
             () =>
-                (0, d.h4)(a.url) && null != a.override
-                    ? v(a.override?.targetBuildOverride)
-                    : null == h
+                (0, l.h4)(a.url) && null != a.override
+                    ? _(a.override?.targetBuildOverride)
+                    : null == p
                       ? Promise.reject(Error("Invalid override payload"))
-                      : ((0, u.R)(a.override, h), c(h)),
-            [h, a],
+                      : ((0, c.R)(a.override, p), d(p)),
+            [p, a],
         );
-    return null != m
-        ? (0, r.jsx)(o.A, {
-              loading: g,
+    return null != h
+        ? (0, r.jsx)(u.A, {
+              loading: E,
               linkMeta: a.override,
-              currentOverrides: t.overrides,
-              applyBuildOverride: f,
-              clearBuildOverride: C,
-              url: m,
+              currentOverrides: n.overrides,
+              applyBuildOverride: m,
+              clearBuildOverride: f,
+              url: h,
           })
         : null;
 });

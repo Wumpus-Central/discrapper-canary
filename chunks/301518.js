@@ -1,14 +1,13 @@
-"use strict";
-a.d(t, { S: () => i });
-var r = a(123633),
-    l = a(624210),
-    n = a(26279);
-async function i(e) {
+n.d(t, { S: () => a });
+var i = n(123633),
+    l = n(624210),
+    s = n(26279);
+async function a(e) {
     let { checkoutSucceeded: t } = e;
     if (t) return;
-    let a = r.A.currentOrder;
-    if (a?.id != null && a.status === n.Re.DRAFT)
+    let n = i.A.currentOrder;
+    if (n?.id != null && n.status === s.Re.DRAFT)
         try {
-            await (0, l.Nl)(a.id);
+            await (0, l.Nl)(n.id);
         } catch (e) {}
 }

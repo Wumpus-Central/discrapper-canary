@@ -1,13 +1,14 @@
-n.d(t, { $: () => r, W: () => s });
-var l = n(788868),
+"use strict";
+n.d(t, { $: () => a, W: () => o });
+var r = n(788868),
     i = n(652215);
-let a = new Set([
+let s = new Set([
     i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
     i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
     i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
 ]);
-function r(e) {
-    return e === l.np.FRIEND_ANNIVERSARY
+function a(e) {
+    return e === r.np.FRIEND_ANNIVERSARY
         ? {
               chat: i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
               actionButton: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
@@ -15,6 +16,6 @@ function r(e) {
           }
         : {};
 }
-function s(e) {
-    return a.has(e);
+function o(e) {
+    return s.has(e);
 }

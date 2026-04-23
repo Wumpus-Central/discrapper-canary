@@ -1,5 +1,6 @@
-n.d(t, { I: () => l });
+"use strict";
+n.d(t, { I: () => i });
 var r = n(425059);
-function l() {
+function i() {
     return new r.A();
 }

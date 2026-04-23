@@ -1,15 +1,16 @@
-a.d(t, { q: () => c });
-var n = a(627968),
-    r = a(64700),
-    l = a(113325),
-    i = a(815021),
-    s = a(985018),
-    o = a(824078);
-function c(e) {
-    let { onClick: t, "aria-label": a = s.intl.string(s.t.cpT0Cq), variant: c } = e,
-        { firstFocusableItemProps: d } = r.useContext(l.M);
-    return (0, n.jsx)("div", {
-        className: o.closeButton,
-        children: (0, n.jsx)(i.J, { size: "sm", "aria-label": a, onClick: t, variant: c, ...d }),
+"use strict";
+n.d(t, { q: () => u });
+var r = n(627968),
+    i = n(64700),
+    s = n(113325),
+    a = n(815021),
+    o = n(985018),
+    l = n(824078);
+function u(e) {
+    let { onClick: t, "aria-label": n = o.intl.string(o.t.cpT0Cq), variant: u } = e,
+        { firstFocusableItemProps: c } = i.useContext(s.M);
+    return (0, r.jsx)("div", {
+        className: l.closeButton,
+        children: (0, r.jsx)(a.J, { size: "sm", "aria-label": n, onClick: t, variant: u, ...c }),
     });
 }

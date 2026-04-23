@@ -1,32 +1,33 @@
+"use strict";
 n.d(t, { A: () => d });
-var a = n(284009),
-    r = n.n(a),
-    l = n(451909),
-    i = n(963307),
+var r = n(284009),
+    i = n.n(r),
+    s = n(451909),
+    a = n(963307),
     o = n(576705),
-    s = n(652215);
-let c = new RegExp(/@(:?everyone|here)/);
-function u(e, t) {
+    l = n(652215);
+let u = new RegExp(/@(:?everyone|here)/);
+function c(e, t) {
     let n = 0;
     return t.isThread()
         ? (t.memberCount ?? 0)
-        : (i.Ay.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
-              ("@everyone" === e || t.id !== s.clD.OFFLINE) && (n += t.count);
+        : (a.Ay.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
+              ("@everyone" === e || t.id !== l.clD.OFFLINE) && (n += t.count);
           }),
           n);
 }
 let d = {
     shouldShowEveryoneGuard: function (e, t) {
         let n = t.getGuildId();
-        return r()(n, "isGuildChannel with null guildId"), u(e, t) > 30 && o.A.can(s.xBc.MENTION_EVERYONE, t);
+        return i()(n, "isGuildChannel with null guildId"), c(e, t) > 30 && o.A.can(l.xBc.MENTION_EVERYONE, t);
     },
-    everyoneMemberCount: u,
+    everyoneMemberCount: c,
     extractEveryoneRole: function (e, t) {
-        for (let n of l.Ay.parsePreprocessor(t, e)) {
+        for (let n of s.Ay.parsePreprocessor(t, e)) {
             let e = (function e(t) {
                 if ("string" == typeof t.content) {
                     if ("inlineCode" === t.type || "codeBlock" === t.type) return null;
-                    let e = t.content?.match(c);
+                    let e = t.content?.match(u);
                     if (null != e) {
                         let [t] = e;
                         return t;

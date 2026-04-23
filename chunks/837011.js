@@ -1,115 +1,116 @@
-i.d(t, { A: () => m, X: () => o });
-var n,
-    l = i(311907),
-    r = i(73153),
-    a = i(9994),
-    s = i(652215),
-    o = (((n = {}).NOT_FETCHED = "NOT_FETCHED"), (n.FETCHING = "FETCHING"), (n.FETCHED = "FETCHED"), n);
-let d = new Map(),
+"use strict";
+n.d(t, { A: () => h, X: () => l });
+var r,
+    i = n(311907),
+    s = n(73153),
+    a = n(9994),
+    o = n(652215),
+    l = (((r = {}).NOT_FETCHED = "NOT_FETCHED"), (r.FETCHING = "FETCHING"), (r.FETCHED = "FETCHED"), r);
+let u = new Map(),
     c = { profile: null, lastSyncTimestamp: null, fetchStatus: "NOT_FETCHED", isUpdating: !1, error: null };
-function _(e) {
+function d(e) {
     let { guildId: t } = e,
-        i = d.get(t);
-    null == i ? d.set(t, { ...c, isUpdating: !0 }) : d.set(t, { ...i, isUpdating: !0 });
+        n = u.get(t);
+    null == n ? u.set(t, { ...c, isUpdating: !0 }) : u.set(t, { ...n, isUpdating: !0 });
 }
-function u(e) {
-    let { guildId: t, error: i } = e,
-        n = d.get(t);
-    null == n ? d.set(t, { ...c, error: i }) : d.set(t, { ...n, error: i, isUpdating: !1 });
+function _(e) {
+    let { guildId: t, error: n } = e,
+        r = u.get(t);
+    null == r ? u.set(t, { ...c, error: n }) : u.set(t, { ...r, error: n, isUpdating: !1 });
 }
-function p(e) {
+function f(e) {
     let { invite: t } = e,
-        { profile: i } = t;
-    if (null == i) return;
-    let n = d.get(i.id),
-        l = (0, a.wr)(i);
-    null == n
-        ? d.set(i.id, { ...c, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
-        : d.set(i.id, { ...n, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
+        { profile: n } = t;
+    if (null == n) return;
+    let r = u.get(n.id),
+        i = (0, a.wr)(n);
+    null == r
+        ? u.set(n.id, { ...c, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
+        : u.set(n.id, { ...r, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
 }
-class h extends l.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "GuildProfileStore";
     getProfile(e) {
-        return null == e ? null : (d.get(e)?.profile ?? null);
+        return null == e ? null : (u.get(e)?.profile ?? null);
     }
     getFetchStatus(e) {
-        return null == e ? "NOT_FETCHED" : (d.get(e)?.fetchStatus ?? "NOT_FETCHED");
+        return null == e ? "NOT_FETCHED" : (u.get(e)?.fetchStatus ?? "NOT_FETCHED");
     }
     getLastSyncTimestamp(e) {
-        return null == e ? null : (d.get(e)?.lastSyncTimestamp ?? null);
+        return null == e ? null : (u.get(e)?.lastSyncTimestamp ?? null);
     }
     getIsUpdating(e) {
-        return null != e && (d.get(e)?.isUpdating ?? !1);
+        return null != e && (u.get(e)?.isUpdating ?? !1);
     }
     getErrorCode(e) {
-        return null == e ? null : (d.get(e)?.error?.code ?? null);
+        return null == e ? null : (u.get(e)?.error?.code ?? null);
     }
 }
-let m = new h(r.h, {
+let h = new p(s.h, {
     GUILD_PROFILE_FETCH: function (e) {
         let { guildId: t } = e,
-            i = d.get(t);
-        null == i ? d.set(t, { ...c, fetchStatus: "FETCHING" }) : d.set(t, { ...i, fetchStatus: "FETCHING" });
+            n = u.get(t);
+        null == n ? u.set(t, { ...c, fetchStatus: "FETCHING" }) : u.set(t, { ...n, fetchStatus: "FETCHING" });
     },
     GUILD_PROFILE_FETCH_SUCCESS: function (e) {
-        let { guildId: t, profile: i } = e,
-            n = d.get(t);
-        null == n
-            ? d.set(t, { ...c, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
-            : d.set(t, { ...n, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
+        let { guildId: t, profile: n } = e,
+            r = u.get(t);
+        null == r
+            ? u.set(t, { ...c, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
+            : u.set(t, { ...r, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
     },
     GUILD_PROFILE_FETCH_FAILURE: function (e) {
-        let { guildId: t, error: i } = e,
-            n = d.get(t);
-        null == n
-            ? d.set(t, { ...c, error: i, fetchStatus: "FETCHED" })
-            : d.set(t, { ...n, error: i, fetchStatus: "FETCHED" });
+        let { guildId: t, error: n } = e,
+            r = u.get(t);
+        null == r
+            ? u.set(t, { ...c, error: n, fetchStatus: "FETCHED" })
+            : u.set(t, { ...r, error: n, fetchStatus: "FETCHED" });
     },
-    GUILD_PROFILE_UPDATE: _,
+    GUILD_PROFILE_UPDATE: d,
     GUILD_PROFILE_UPDATE_SUCCESS: function (e) {
-        let { guildId: t, profile: i } = e,
-            n = d.get(t);
-        null == n ? d.set(t, { ...c, profile: i }) : d.set(t, { ...n, profile: i, isUpdating: !1 });
+        let { guildId: t, profile: n } = e,
+            r = u.get(t);
+        null == r ? u.set(t, { ...c, profile: n }) : u.set(t, { ...r, profile: n, isUpdating: !1 });
     },
-    GUILD_PROFILE_UPDATE_FAILURE: u,
+    GUILD_PROFILE_UPDATE_FAILURE: _,
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-        let { form: t, guildId: i } = e,
-            n = t?.profile;
-        if (null == n) return;
-        let l = d.get(i);
-        null == l
-            ? d.set(i, { ...c, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
-            : d.set(i, { ...l, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
+        let { form: t, guildId: n } = e,
+            r = t?.profile;
+        if (null == r) return;
+        let i = u.get(n);
+        null == i
+            ? u.set(n, { ...c, profile: r, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
+            : u.set(n, { ...i, profile: r, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
     },
-    INVITE_RESOLVE_SUCCESS: p,
-    INSTANT_INVITE_CREATE_SUCCESS: p,
+    INVITE_RESOLVE_SUCCESS: f,
+    INSTANT_INVITE_CREATE_SUCCESS: f,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        t.type === s.rbe.GUILD_ANNOUNCEMENT && null != t.guild_id && d.delete(t.guild_id);
+        t.type === o.rbe.GUILD_ANNOUNCEMENT && null != t.guild_id && u.delete(t.guild_id);
     },
     GUILD_SETTINGS_SET_WIDGET: function (e) {
-        let { guildId: t, enabled: i } = e;
-        null != t && i && d.delete(t);
+        let { guildId: t, enabled: n } = e;
+        null != t && n && u.delete(t);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
-            i = d.get(t.id);
-        if (null == i || null == i.profile) return !1;
-        let n = {
-            ...i.profile,
+            n = u.get(t.id);
+        if (null == n || null == n.profile) return !1;
+        let r = {
+            ...n.profile,
             name: t.name,
             icon: t.icon ?? null,
             description: t.description ?? "",
             customBanner: t.discovery_splash ?? null,
         };
-        d.set(t.id, { ...i, profile: n });
+        u.set(t.id, { ...n, profile: r });
     },
-    GUILD_PROFILE_UPDATE_VISIBILITY: _,
+    GUILD_PROFILE_UPDATE_VISIBILITY: d,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function (e) {
-        let { guildId: t, visibility: i } = e,
-            n = d.get(t),
-            l = n?.profile;
-        null != n && null != l && d.set(t, { ...n, isUpdating: !1, profile: { ...l, visibility: i } });
+        let { guildId: t, visibility: n } = e,
+            r = u.get(t),
+            i = r?.profile;
+        null != r && null != i && u.set(t, { ...r, isUpdating: !1, profile: { ...i, visibility: n } });
     },
-    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: u,
+    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: _,
 });

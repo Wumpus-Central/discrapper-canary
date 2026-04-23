@@ -1,9 +1,10 @@
-i.d(e, { i: () => r });
-let r = (0, i(353640).v)()((t) => ({
+"use strict";
+n.d(t, { i: () => r });
+let r = (0, n(353640).v)()((e) => ({
     overrideApplicationId: null,
-    setOverrideApplicationId: (e) => t({ overrideApplicationId: e }),
+    setOverrideApplicationId: (t) => e({ overrideApplicationId: t }),
     showSelfActivity: !1,
-    setShowSelfActivity: (e) => t({ showSelfActivity: e }),
+    setShowSelfActivity: (t) => e({ showSelfActivity: t }),
     recommendationApplicationIds: null,
-    setRecommendationApplicationIds: (e) => t({ recommendationApplicationIds: null != e ? e.split(",") : null }),
+    setRecommendationApplicationIds: (t) => e({ recommendationApplicationIds: null != t ? t.split(",") : null }),
 }));

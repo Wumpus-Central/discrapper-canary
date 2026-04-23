@@ -1,35 +1,36 @@
-n.d(t, { Q: () => E });
-var l = n(64700),
-    r = n(311907),
-    i = n(562465),
-    s = n(136857),
-    a = n(158317),
-    o = n(123633),
+"use strict";
+n.d(t, { Q: () => h });
+var r = n(64700),
+    i = n(311907),
+    s = n(562465),
+    a = n(136857),
+    o = n(158317),
+    l = n(123633),
     u = n(786953),
-    d = n(310829),
-    c = n(211287),
-    C = n(652215),
-    p = n(26279),
-    m = n(985018);
-function E(e) {
-    let [t, n] = (0, l.useState)(""),
-        [E, A] = (0, l.useState)([]),
-        [h, f] = (0, l.useState)(null),
-        [_, g] = (0, l.useState)(!1),
-        T = (0, l.useRef)(null),
-        { enabled: x } = c.A.useConfig({ location: "orb_checkout_modal" }),
-        S = (0, r.bG)([o.A], () => o.A.isCreatingOrder),
-        I = (0, r.bG)([o.A], () => o.A.currentOrder);
-    (0, l.useEffect)(() => {
-        x && null != I && T.current?.id !== I.id && (T.current = I);
-    }, [I, x]);
-    let O = (0, l.useCallback)(async (e, t) => {
-            let n = t ?? (0, d.P)(e);
+    c = n(310829),
+    d = n(211287),
+    _ = n(652215),
+    f = n(26279),
+    p = n(985018);
+function h(e) {
+    let [t, n] = (0, r.useState)(""),
+        [h, E] = (0, r.useState)([]),
+        [m, g] = (0, r.useState)(null),
+        [A, I] = (0, r.useState)(!1),
+        T = (0, r.useRef)(null),
+        { enabled: S } = d.A.useConfig({ location: "orb_checkout_modal" }),
+        y = (0, i.bG)([l.A], () => l.A.isCreatingOrder),
+        N = (0, i.bG)([l.A], () => l.A.currentOrder);
+    (0, r.useEffect)(() => {
+        S && null != N && T.current?.id !== N.id && (T.current = N);
+    }, [N, S]);
+    let v = (0, r.useCallback)(async (e, t) => {
+            let n = t ?? (0, c.P)(e);
             try {
                 return (
                     (
-                        await i.Bo.get({
-                            url: C.Rsh.ENTITLEMENTS_FOR_APPLICATION(n),
+                        await s.Bo.get({
+                            url: _.Rsh.ENTITLEMENTS_FOR_APPLICATION(n),
                             query: { sku_ids: e, exclude_consumed: !0 },
                             rejectWithError: !1,
                         })
@@ -39,81 +40,81 @@ function E(e) {
                 return [];
             }
         }, []),
-        y = (0, l.useCallback)(
+        C = (0, r.useCallback)(
             async (e, t, n) => {
-                let l = T.current;
-                if (null == l) {
-                    f(new s.Ay("Order not created yet")), g(!1);
+                let r = T.current;
+                if (null == r) {
+                    g(new a.Ay("Order not created yet")), I(!1);
                     return;
                 }
-                g(!0), f(null);
+                I(!0), g(null);
                 try {
-                    let r = await (0, a.U)({ orderId: l.id, expectedRevision: l.revision, loadId: t });
-                    if (((T.current = r), r.status !== p.Re.SIGNED)) {
-                        if (r.errors && r.errors.length > 0) {
-                            let e = r.errors;
+                    let i = await (0, o.U)({ orderId: r.id, expectedRevision: r.revision, loadId: t });
+                    if (((T.current = i), i.status !== f.Re.SIGNED)) {
+                        if (i.errors && i.errors.length > 0) {
+                            let e = i.errors;
                             if (e.includes(2e3)) {
-                                let e = new s.Ay("Insufficient balance");
-                                throw ((e.code = s.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE), e);
+                                let e = new a.Ay("Insufficient balance");
+                                throw ((e.code = a.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE), e);
                             }
                             let t = `Order signing failed with errors: ${e.join(", ")}`;
                             throw Error(t);
                         }
-                        if (r.status === p.Re.DRAFT) throw Error("Order could not be signed.");
-                        throw Error(`Unexpected order status: ${r.status}`);
+                        if (i.status === f.Re.DRAFT) throw Error("Order could not be signed.");
+                        throw Error(`Unexpected order status: ${i.status}`);
                     }
-                    let i = (0, d.P)(e),
-                        o = await O(e, i);
-                    if (0 === o.length) {
+                    let s = (0, c.P)(e),
+                        l = await v(e, s);
+                    if (0 === l.length) {
                         await new Promise((e) => setTimeout(e, 500));
-                        let t = await O(e, i);
+                        let t = await v(e, s);
                         if (0 === t.length) throw Error("No entitlements found after order signing");
-                        A(t), g(!1), n?.(t);
-                    } else A(o), g(!1), n?.(o);
+                        E(t), I(!1), n?.(t);
+                    } else E(l), I(!1), n?.(l);
                 } catch (e) {
-                    f(e instanceof s.Ay ? e : new s.Ay(e)), g(!1);
+                    g(e instanceof a.Ay ? e : new a.Ay(e)), I(!1);
                 }
             },
-            [O],
+            [v],
         ),
-        N = (0, l.useCallback)(
+        O = (0, r.useCallback)(
             (e, t, n) =>
                 (0, u.J$)({
                     skuId: e,
                     loadId: t,
                     onRedeemStart: () => {
-                        g(!0), f(null);
+                        I(!0), g(null);
                     },
                     onRedeemSucceed: (e) => {
-                        A(e), g(!1), n?.(e);
+                        E(e), I(!1), n?.(e);
                     },
                     onRedeemFail: (e) => {
-                        f(e), g(!1);
+                        g(e), I(!1);
                     },
                 }),
             [],
         ),
-        R = (0, l.useCallback)(
+        R = (0, r.useCallback)(
             (e, t, n) => {
-                x ? y(e, t, n) : N(e, t, n);
+                S ? C(e, t, n) : O(e, t, n);
             },
-            [x, y, N],
+            [S, C, O],
         );
     return (
-        (0, l.useEffect)(() => {
-            if (null != h) return void n(m.intl.format(m.t["7gHWrd"], { amount: "1 orb", errorMessage: h.message }));
-            if (null != E && E.length > 0) {
-                let e = E.map((e) => e.sku?.name);
+        (0, r.useEffect)(() => {
+            if (null != m) return void n(p.intl.format(p.t["7gHWrd"], { amount: "1 orb", errorMessage: m.message }));
+            if (null != h && h.length > 0) {
+                let e = h.map((e) => e.sku?.name);
                 n(
-                    m.intl.format(m.t.JxNFav, {
+                    p.intl.format(p.t.JxNFav, {
                         amountDescription: "1 orb",
-                        redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === E.length ? "ID" : "IDs"}: ${E.map((e) => e.id).join(", ")}`,
+                        redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === h.length ? "ID" : "IDs"}: ${h.map((e) => e.id).join(", ")}`,
                     }),
                 );
                 return;
             }
             n("");
-        }, [E, h]),
-        { entitlements: E, error: h, isSubmitting: _ || (x && S), responseMessage: t, redeemVirtualCurrency: R }
+        }, [h, m]),
+        { entitlements: h, error: m, isSubmitting: A || (S && y), responseMessage: t, redeemVirtualCurrency: R }
     );
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     xK: "externalErrorBlock__65b48",
     MR: "helpMessageWrapper__65b48",

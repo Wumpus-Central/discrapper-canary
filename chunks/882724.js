@@ -1,4 +1,3 @@
-"use strict";
 a.r(
     (e.exports = {
         gridContainer: "gridContainer__1b670",

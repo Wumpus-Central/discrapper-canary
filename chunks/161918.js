@@ -1,13 +1,12 @@
-"use strict";
-a.d(t, { Mk: () => i, iM: () => s });
-var r = a(627968),
-    l = a(64700);
-let n = l.createContext(null);
-function i() {
-    return l.useContext(n);
+n.d(t, { Mk: () => a, iM: () => r });
+var i = n(627968),
+    l = n(64700);
+let s = l.createContext(null);
+function a() {
+    return l.useContext(s);
 }
-function s(e) {
-    let { tab: t, children: a } = e,
-        i = l.useMemo(() => ({ tab: t }), [t]);
-    return (0, r.jsx)(n.Provider, { value: i, children: a });
+function r(e) {
+    let { tab: t, children: n } = e,
+        a = l.useMemo(() => ({ tab: t }), [t]);
+    return (0, i.jsx)(s.Provider, { value: a, children: n });
 }

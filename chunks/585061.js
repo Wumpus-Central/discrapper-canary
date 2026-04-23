@@ -1,43 +1,44 @@
-n.d(t, { A: () => E });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => g });
+var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    r = n(462887),
-    s = n(97808),
-    o = n(834730),
+    s = n.n(i),
+    a = n(462887),
+    o = n(97808),
+    l = n(834730),
     u = n(736653),
     c = n(854627),
     d = n(427262),
-    p = n(236834),
-    m = n(243809),
-    h = n(165856),
-    A = n(778712),
-    _ = n(985018),
-    C = n(577454);
-let E = (e) => {
+    _ = n(236834),
+    f = n(243809),
+    p = n(165856),
+    h = n(778712),
+    E = n(985018),
+    m = n(577454);
+let g = (e) => {
     let { className: t } = e,
-        n = (0, p.A)(),
-        { avatarSrc: i, eventHandlers: E } = (0, c.A)({ userId: n?.id, size: A._3.SIZE_32, animateOnHover: !0 }),
-        y = (0, u.DP)(),
-        f = (0, r.q)(y),
-        P = d.Ay.getName(n),
-        S = f ? m.A : h.A;
+        n = (0, _.A)(),
+        { avatarSrc: i, eventHandlers: g } = (0, c.A)({ userId: n?.id, size: h._3.SIZE_32, animateOnHover: !0 }),
+        A = (0, u.DP)(),
+        I = (0, a.q)(A),
+        T = d.Ay.getName(n),
+        S = I ? f.A : p.A;
     return null == n
         ? null
-        : (0, l.jsxs)("div", {
-              className: a()(C.$6, t),
+        : (0, r.jsxs)("div", {
+              className: s()(m.$6, t),
               children: [
-                  (0, l.jsx)("div", {
-                      className: C.H,
-                      children: (0, l.jsx)(s.eu, { src: i, "aria-label": n.username, size: A._3.SIZE_32, ...E }),
+                  (0, r.jsx)("div", {
+                      className: m.H,
+                      children: (0, r.jsx)(o.eu, { src: i, "aria-label": n.username, size: h._3.SIZE_32, ...g }),
                   }),
-                  (0, l.jsx)(o.E, {
+                  (0, r.jsx)(l.E, {
                       variant: "text-xs/bold",
-                      className: C.U_,
-                      children: _.intl.format(_.t.oxhCOl, { userName: P }),
+                      className: m.U_,
+                      children: E.intl.format(E.t.oxhCOl, { userName: T }),
                   }),
-                  (0, l.jsx)(S, { className: C.q3 }),
+                  (0, r.jsx)(S, { className: m.q3 }),
               ],
           });
 };

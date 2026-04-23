@@ -1,88 +1,87 @@
-"use strict";
-r.d(t, { $x: () => b, Qg: () => f, dy: () => v, he: () => E, x$: () => x });
-var i,
-    a = r(64700),
-    n = r(311907),
-    s = r(555337),
-    l = r(306846),
+r.d(t, { $x: () => x, Qg: () => p, dy: () => v, he: () => I, x$: () => g });
+var n,
+    i = r(64700),
+    l = r(311907),
+    a = r(555337),
+    s = r(306846),
     o = r(894222),
-    c = r(71393),
-    d = r(860689),
-    _ = r(408213),
-    u = r(60175),
-    p = r(513461),
-    m = r(709977),
-    h = r(890620),
-    g = r(985018),
-    f =
-        (((i = {})[(i.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
-        (i[(i.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
-        (i[(i.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
-        i);
-function b(e, t, r) {
-    let [i, s] = a.useState(!1),
-        c = (0, n.bG)([u.A], () => u.A.get(e)),
-        d = (0, n.bG)([l.A], () => l.A.pendingState);
+    d = r(71393),
+    c = r(860689),
+    u = r(408213),
+    _ = r(60175),
+    m = r(513461),
+    h = r(709977),
+    E = r(890620),
+    f = r(985018),
+    p =
+        (((n = {})[(n.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
+        (n[(n.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
+        (n[(n.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
+        n);
+function x(e, t, r) {
+    let [n, a] = i.useState(!1),
+        d = (0, l.bG)([_.A], () => _.A.get(e)),
+        c = (0, l.bG)([s.A], () => s.A.pendingState);
     return (
-        a.useEffect(() => {
-            t || _.Ay.fetchVerificationForm(e, r).finally(() => s(!0));
+        i.useEffect(() => {
+            t || u.Ay.fetchVerificationForm(e, r).finally(() => a(!0));
         }, [e, r, t]),
         {
-            hasFetched: i,
+            hasFetched: n,
             verificationForm:
-                a.useMemo(() => {
+                i.useMemo(() => {
                     let e;
-                    if (!t || null == d) return null;
-                    if (d.joinType === o.J.APPLY)
-                        e = null != d.pendingVerificationFields ? [...d.pendingVerificationFields] : void 0;
-                    else if (null != d.termRules) {
-                        let t = d.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
-                        e = [{ field_type: p.rX.TERMS, label: g.intl.string(g.t["9suSIA"]), values: t, required: !0 }];
+                    if (!t || null == c) return null;
+                    if (c.joinType === o.J.APPLY)
+                        e = null != c.pendingVerificationFields ? [...c.pendingVerificationFields] : void 0;
+                    else if (null != c.termRules) {
+                        let t = c.termRules.map((e) => e.value.trim()).filter((e) => "" !== e);
+                        e = [{ field_type: m.rX.TERMS, label: f.intl.string(f.t["9suSIA"]), values: t, required: !0 }];
                     }
                     return null == e
                         ? null
                         : {
-                              version: c?.version ?? "",
-                              description: c?.description ?? "",
+                              version: d?.version ?? "",
+                              description: d?.description ?? "",
                               formFields: e,
-                              guild: c?.guild,
+                              guild: d?.guild,
                           };
-                }, [t, d, c]) ?? c,
+                }, [t, c, d]) ?? d,
         }
     );
 }
-function x(e, t, r) {
-    let i = (0, n.bG)([c.A], () => c.A.getGuild(e)),
-        l = (0, n.bG)([s.A], () => s.A.getGuild());
-    return a.useMemo(() => (r && l?.id === e ? l : null != i ? i : null != t ? (0, d.Yh)(t) : null), [r, l, e, i, t]);
+function g(e, t, r) {
+    let n = (0, l.bG)([d.A], () => d.A.getGuild(e)),
+        s = (0, l.bG)([a.A], () => a.A.getGuild());
+    return i.useMemo(() => (r && s?.id === e ? s : null != n ? n : null != t ? (0, c.Yh)(t) : null), [r, s, e, n, t]);
 }
 function v(e) {
     let t = !e?.isClaimed(),
         r = e?.verified,
-        [i, n] = a.useState(2 * !t);
+        [n, l] = i.useState(2 * !t);
     return (
-        a.useEffect(() => {
-            null != e && e.isClaimed() && n(2);
+        i.useEffect(() => {
+            null != e && e.isClaimed() && l(2);
         }, [e]),
-        a.useEffect(() => {
-            1 === i && r && n(2);
-        }, [i, r]),
-        { currentStep: i, setCurrentStep: n }
+        i.useEffect(() => {
+            1 === n && r && l(2);
+        }, [n, r]),
+        { currentStep: n, setCurrentStep: l }
     );
 }
-function E(e) {
-    let t = (0, h.YN)((e) => e.hasUnsubmittedChanges);
-    a.useEffect(
+function I(e) {
+    let t = (0, E.YN)((e) => e.hasUnsubmittedChanges);
+    i.useEffect(
         () => (
-            (0, h.Yb)(!1),
+            (0, E.Yb)(!1),
             () => {
-                (0, h.Yb)(!1);
+                (0, E.Yb)(!1);
             }
         ),
         [],
     ),
-        a.useEffect(() => {
-            let r = e.some((e) => e.field_type !== p.rX.TERMS && (0, m.Ge)(e));
-            r && !t ? (0, h.Yb)(!0) : !r && t && (0, h.Yb)(!1);
+        i.useEffect(() => {
+            let r = e.some((e) => e.field_type !== m.rX.TERMS && (0, h.Ge)(e));
+            r && !t ? (0, E.Yb)(!0) : !r && t && (0, E.Yb)(!1);
         }, [e, t]);
 }

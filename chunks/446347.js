@@ -1,191 +1,192 @@
-t.d(l, { A: () => y }), t(321073);
-var r = t(627968),
-    n = t(64700),
-    i = t(503698),
-    a = t.n(i),
-    s = t(284009),
-    d = t.n(s),
-    o = t(939249),
-    u = t(173936),
-    c = t(834730),
-    v = t(821609),
-    C = t(349288),
-    h = t(885574),
-    m = t(579872),
-    g = t(383501),
-    f = t(710067),
-    p = t(957565),
-    x = t(975571),
-    b = t(723702),
-    j = t(938463),
-    k = t(652215),
-    w = t(985018),
-    A = t(722836);
-function N(e) {
-    let { url: l } = e,
-        [t, i] = n.useState(!1),
-        s = n.useRef(void 0),
-        d = n.useCallback(() => {
-            t ||
-                (0, p.C)(l, () => {
-                    i(!0), (s.current = setTimeout(() => i(!1), 2e3));
+"use strict";
+n.d(t, { A: () => O }), n(321073);
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(284009),
+    l = n.n(o),
+    u = n(939249),
+    c = n(173936),
+    d = n(834730),
+    _ = n(821609),
+    f = n(349288),
+    p = n(885574),
+    h = n(579872),
+    E = n(383501),
+    m = n(710067),
+    g = n(957565),
+    A = n(975571),
+    I = n(723702),
+    T = n(938463),
+    S = n(652215),
+    y = n(985018),
+    N = n(722836);
+function v(e) {
+    let { url: t } = e,
+        [n, s] = i.useState(!1),
+        o = i.useRef(void 0),
+        l = i.useCallback(() => {
+            n ||
+                (0, g.C)(t, () => {
+                    s(!0), (o.current = setTimeout(() => s(!1), 2e3));
                 });
-        }, [l, t]);
+        }, [t, n]);
     return (
-        n.useEffect(() => () => clearTimeout(s.current), []),
-        p.p5
-            ? (0, r.jsxs)(o.D, {
-                  className: a()(A.S, t ? A.pG : null),
-                  onClick: d,
+        i.useEffect(() => () => clearTimeout(o.current), []),
+        g.p5
+            ? (0, r.jsxs)(u.D, {
+                  className: a()(N.S, n ? N.pG : null),
+                  onClick: l,
                   children: [
-                      (0, r.jsx)(u.q, { size: "md", color: "currentColor", className: A.n7 }),
-                      t ? w.intl.string(w.t.GmrIJY) : w.intl.string(w.t.iVzBOh),
+                      (0, r.jsx)(c.q, { size: "md", color: "currentColor", className: N.n7 }),
+                      n ? y.intl.string(y.t.GmrIJY) : y.intl.string(y.t.iVzBOh),
                   ],
               })
             : null
     );
 }
-function E(e) {
+function C(e) {
     let {
-        subHead: l,
-        buildDetails: t,
-        variant: i,
+        subHead: t,
+        buildDetails: n,
+        variant: s,
         buttonClick: a,
-        buttonText: s,
-        disabled: d = !1,
-        submitting: o = !1,
+        buttonText: o,
+        disabled: l = !1,
+        submitting: u = !1,
     } = e;
-    return (0, r.jsxs)(n.Fragment, {
+    return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: A.NT,
+                className: N.NT,
                 children: [
-                    (0, r.jsx)(c.E, { variant: "text-sm/medium", className: A.V$, children: l }),
-                    (0, r.jsx)("div", { className: A.Jb, children: t }),
+                    (0, r.jsx)(d.E, { variant: "text-sm/medium", className: N.V$, children: t }),
+                    (0, r.jsx)("div", { className: N.Jb, children: n }),
                 ],
             }),
-            (0, r.jsx)(v.$, { text: s, loading: o, variant: i, onClick: a, fullWidth: !0, disabled: d }),
+            (0, r.jsx)(_.$, { text: o, loading: u, variant: s, onClick: a, fullWidth: !0, disabled: l }),
         ],
     });
 }
-let y = (e) => {
-    let { loading: l = !1, currentOverrides: t, linkMeta: i, url: s, applyBuildOverride: o, clearBuildOverride: u } = e,
-        [v, p] = n.useState(!1),
-        y = n.useCallback(() => {
-            v || (p(!0), o().catch(() => p(!1)));
-        }, [o, v]),
-        L = n.useCallback(() => {
-            v || (p(!0), u().catch(() => p(!1)));
-        }, [u, v]);
+let O = (e) => {
+    let { loading: t = !1, currentOverrides: n, linkMeta: s, url: o, applyBuildOverride: u, clearBuildOverride: c } = e,
+        [_, g] = i.useState(!1),
+        O = i.useCallback(() => {
+            _ || (g(!0), u().catch(() => g(!1)));
+        }, [u, _]),
+        R = i.useCallback(() => {
+            _ || (g(!0), c().catch(() => g(!1)));
+        }, [c, _]);
     return (0, r.jsxs)("div", {
-        className: A.iE,
+        className: N.iE,
         children: [
-            (0, r.jsxs)(c.E, {
+            (0, r.jsxs)(d.E, {
                 variant: "text-xs/normal",
-                className: A.lS,
+                className: N.lS,
                 children: [
                     (0, r.jsx)("strong", {
-                        className: A.DD,
+                        className: N.DD,
                         children:
-                            null != i && null != i.releaseChannel
-                                ? w.intl.formatToPlainString(w.t.bFj63b, { releaseChannel: i.releaseChannel })
-                                : w.intl.string(w.t.Wj3LW4),
+                            null != s && null != s.releaseChannel
+                                ? y.intl.formatToPlainString(y.t.bFj63b, { releaseChannel: s.releaseChannel })
+                                : y.intl.string(y.t.Wj3LW4),
                     }),
-                    (0, r.jsx)(C.Anchor, {
-                        className: A.Pl,
-                        href: x.A.getArticleURL(k.MVz.BUILD_OVERRIDE_EMBED),
+                    (0, r.jsx)(f.Anchor, {
+                        className: N.Pl,
+                        href: A.A.getArticleURL(S.MVz.BUILD_OVERRIDE_EMBED),
                         target: "_blank",
-                        children: (0, r.jsx)(h.m, { size: "xs", color: "currentColor", className: A.G }),
+                        children: (0, r.jsx)(p.m, { size: "xs", color: "currentColor", className: N.G }),
                     }),
-                    l ? null : (0, r.jsx)(N, { url: s }),
+                    t ? null : (0, r.jsx)(v, { url: o }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: A.Qs,
+                className: N.Qs,
                 children: [
-                    (0, r.jsx)(f.A, { className: A.Kk }),
-                    l
-                        ? (0, r.jsxs)(n.Fragment, {
+                    (0, r.jsx)(m.A, { className: N.Kk }),
+                    t
+                        ? (0, r.jsxs)(i.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: A.NT,
+                                      className: N.NT,
                                       children: [
-                                          (0, r.jsx)("div", { className: a()(A.Pz, A.w9) }),
-                                          (0, r.jsx)("div", { className: A.Pz }),
+                                          (0, r.jsx)("div", { className: a()(N.Pz, N.w9) }),
+                                          (0, r.jsx)("div", { className: N.Pz }),
                                       ],
                                   }),
-                                  (0, r.jsx)("div", { className: A.MM }),
+                                  (0, r.jsx)("div", { className: N.MM }),
                               ],
                           })
                         : (function (e) {
-                              let l,
-                                  t,
+                              let t,
+                                  n,
                                   r,
                                   {
-                                      currentOverrides: n,
-                                      linkMeta: i,
+                                      currentOverrides: i,
+                                      linkMeta: s,
                                       applyBuildOverride: a,
-                                      clearBuildOverride: s,
-                                      submitting: o,
+                                      clearBuildOverride: o,
+                                      submitting: u,
                                   } = e,
-                                  u = ["discord_web"];
-                              b.isPlatformEmbedded || u.push("discord_marketing", "discord_developers");
-                              let c = (0, j.A)(i, u);
-                              if (!c.valid) {
-                                  var v;
+                                  c = ["discord_web"];
+                              I.isPlatformEmbedded || c.push("discord_marketing", "discord_developers");
+                              let d = (0, T.A)(s, c);
+                              if (!d.valid) {
+                                  var _;
                                   return (
-                                      (v = c.reason),
-                                      E({
-                                          subHead: w.intl.string(w.t.ODXApH),
+                                      (_ = d.reason),
+                                      C({
+                                          subHead: y.intl.string(y.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
-                                          buildDetails: v,
+                                          buildDetails: _,
                                           disabled: !0,
                                       })
                                   );
                               }
-                              d()(
-                                  null != i,
+                              l()(
+                                  null != s,
                                   "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved",
                               );
-                              let { discord_web: C, discord_developers: h } = i.targetBuildOverride,
-                                  f = C ?? h;
+                              let { discord_web: f, discord_developers: p } = s.targetBuildOverride,
+                                  m = f ?? p;
                               return (
-                                  (d()(
-                                      null != f,
+                                  (l()(
+                                      null != m,
                                       "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
                                   ),
-                                  null == n || null == n.discord_web
+                                  null == i || null == i.discord_web
                                       ? 1
-                                      : f.id !== n.discord_web.id || f.type !== n.discord_web.type)
-                                      ? ((t = w.intl.string(w.t.nOunHC)), (l = a), (r = "primary"))
-                                      : ((t = w.intl.string(w.t.tX4xrt)), (l = s), (r = "critical-primary")),
-                                  E({
-                                      subHead: w.intl.string(w.t.RCYGot),
-                                      buildDetails: f.id,
+                                      : m.id !== i.discord_web.id || m.type !== i.discord_web.type)
+                                      ? ((n = y.intl.string(y.t.nOunHC)), (t = a), (r = "primary"))
+                                      : ((n = y.intl.string(y.t.tX4xrt)), (t = o), (r = "critical-primary")),
+                                  C({
+                                      subHead: y.intl.string(y.t.RCYGot),
+                                      buildDetails: m.id,
                                       buttonClick: () => {
-                                          g.A.isConnected()
-                                              ? m.A.show({
-                                                    title: w.intl.string(w.t.tiu1ly),
-                                                    body: w.intl.string(w.t["zK+lqW"]),
-                                                    onConfirm: l,
-                                                    cancelText: w.intl.string(w.t["ETE/oC"]),
-                                                    confirmText: w.intl.string(w.t["QDX/qu"]),
+                                          E.A.isConnected()
+                                              ? h.A.show({
+                                                    title: y.intl.string(y.t.tiu1ly),
+                                                    body: y.intl.string(y.t["zK+lqW"]),
+                                                    onConfirm: t,
+                                                    cancelText: y.intl.string(y.t["ETE/oC"]),
+                                                    confirmText: y.intl.string(y.t["QDX/qu"]),
                                                     confirmVariant: "critical-primary",
                                                 })
-                                              : l();
+                                              : t();
                                       },
-                                      buttonText: t,
+                                      buttonText: n,
                                       variant: r,
-                                      submitting: o,
+                                      submitting: u,
                                   })
                               );
                           })({
-                              currentOverrides: t,
-                              linkMeta: i,
-                              applyBuildOverride: y,
-                              clearBuildOverride: L,
-                              submitting: v,
+                              currentOverrides: n,
+                              linkMeta: s,
+                              applyBuildOverride: O,
+                              clearBuildOverride: R,
+                              submitting: _,
                           }),
                 ],
             }),

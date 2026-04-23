@@ -1,93 +1,92 @@
-"use strict";
-i.r(t), i.d(t, { default: () => T });
-var r = i(627968),
-    l = i(64700),
-    n = i(485845),
-    a = i(283973),
-    s = i(664121),
-    o = i(939249),
-    c = i(834730),
-    u = i(320448),
-    d = i(534514),
-    _ = i(900797),
-    h = i(827734),
-    p = i(847374),
-    f = i(735991),
-    g = i(717048),
-    m = i(396533),
-    A = i(611371),
-    v = i(566615),
-    b = i(985018),
-    E = i(442793),
-    I = i(992595),
-    x = i(291071);
-function T(e) {
-    let { application: t, onSelect: i } = e,
+l.r(t), l.d(t, { default: () => y });
+var n = l(627968),
+    s = l(64700),
+    i = l(485845),
+    r = l(283973),
+    a = l(664121),
+    c = l(939249),
+    u = l(834730),
+    o = l(320448),
+    d = l(534514),
+    h = l(900797),
+    f = l(827734),
+    m = l(847374),
+    x = l(735991),
+    g = l(717048),
+    p = l(396533),
+    b = l(611371),
+    v = l(566615),
+    j = l(985018),
+    N = l(442793),
+    A = l(992595),
+    _ = l(291071);
+function y(e) {
+    let { application: t, onSelect: l } = e,
         d = (0, v.i)(),
-        { iconURL: _ } = l.useMemo(() => (0, f.X2)(t, { fakeAppIconURL: x, size: 84 }), [t]),
-        h = l.useMemo(
+        { iconURL: h } = s.useMemo(() => (0, x.X2)(t, { fakeAppIconURL: _, size: 84 }), [t]),
+        f = s.useMemo(
             () =>
                 [
                     {
-                        type: n.b.USER_INSTALL,
-                        icon: a.R,
-                        title: b.intl.string(b.t.aCg60P),
-                        subtitle: b.intl.string(b.t.YeiIUZ),
+                        type: i.b.USER_INSTALL,
+                        icon: r.R,
+                        title: j.intl.string(j.t.aCg60P),
+                        subtitle: j.intl.string(j.t.YeiIUZ),
                         beta: !1,
                     },
                     {
-                        type: n.b.GUILD_INSTALL,
-                        icon: s.R,
-                        title: b.intl.string(b.t.E64YCz),
-                        subtitle: b.intl.string(b.t.bbtoKm),
+                        type: i.b.GUILD_INSTALL,
+                        icon: a.R,
+                        title: j.intl.string(j.t.E64YCz),
+                        subtitle: j.intl.string(j.t.bbtoKm),
                         beta: !1,
                     },
                 ].filter((e) => t.integrationTypesConfig?.[e.type]?.oauth2InstallParams != null),
             [t.integrationTypesConfig],
         );
-    return (0, r.jsxs)("div", {
-        className: E.kL,
+    return (0, n.jsxs)("div", {
+        className: N.kL,
         children: [
-            (0, r.jsxs)("header", {
+            (0, n.jsxs)("header", {
                 id: d,
-                className: E.wx,
+                className: N.wx,
                 children: [
-                    (0, r.jsx)(g.A, { src: _, className: E.Z2, rendersPlaceholder: !0 }),
-                    (0, r.jsx)(y, { application: t }),
-                    (0, r.jsx)(C, { application: t }),
+                    (0, n.jsx)(g.A, { src: h, className: N.Z2, rendersPlaceholder: !0 }),
+                    (0, n.jsx)(w, { application: t }),
+                    (0, n.jsx)(C, { application: t }),
                 ],
             }),
-            (0, r.jsx)("ul", {
-                className: E.Ge,
-                children: h.map((e) =>
-                    (0, r.jsxs)(
-                        o.D,
+            (0, n.jsx)("ul", {
+                className: N.Ge,
+                children: f.map((e) =>
+                    (0, n.jsxs)(
+                        c.D,
                         {
                             tag: "li",
-                            className: E.nM,
-                            onClick: () => i(e.type),
+                            className: N.nM,
+                            onClick: () => l(e.type),
                             children: [
-                                (0, r.jsx)(e.icon, { size: "md", color: "currentColor", className: E.hc }),
-                                (0, r.jsxs)("div", {
-                                    className: E.bL,
+                                (0, n.jsx)(e.icon, { size: "md", color: "currentColor", className: N.hc }),
+                                (0, n.jsxs)("div", {
+                                    className: N.bL,
                                     children: [
-                                        (0, r.jsxs)("div", {
-                                            className: E.pt,
+                                        (0, n.jsxs)("div", {
+                                            className: N.pt,
                                             children: [
-                                                (0, r.jsx)(c.E, {
+                                                (0, n.jsx)(u.E, {
                                                     variant: "text-md/medium",
                                                     color: "interactive-text-active",
                                                     children: e.title,
                                                 }),
-                                                (0, r.jsx)(c.E, {
+                                                (0, n.jsx)(u.E, {
                                                     variant: "text-xs/medium",
                                                     color: "text-muted",
                                                     children: e.subtitle,
                                                 }),
                                             ],
                                         }),
-                                        e.beta && (0, r.jsx)(A.A, {}),
-                                        (0, r.jsx)(u._, { size: "md", color: "currentColor", className: E.gN }),
+                                        e.beta && (0, n.jsx)(b.A, {}),
+                                        (0, n.jsx)(o._, { size: "md", color: "currentColor", className: N.gN }),
                                     ],
                                 }),
                             ],
@@ -101,100 +100,100 @@ function T(e) {
 }
 function C(e) {
     let { application: t } = e,
-        i = t.description;
-    return null == i || 0 === i.length
+        l = t.description;
+    return null == l || 0 === l.length
         ? null
-        : (0, r.jsx)("div", {
-              className: E.wt,
-              children: (0, r.jsx)("div", {
-                  className: E.bH,
-                  children: null != i && i.length > 0 ? (0, r.jsx)(S, { description: i }) : null,
+        : (0, n.jsx)("div", {
+              className: N.wt,
+              children: (0, n.jsx)("div", {
+                  className: N.bH,
+                  children: null != l && l.length > 0 ? (0, n.jsx)(L, { description: l }) : null,
               }),
           });
 }
-function y(e) {
+function w(e) {
     let { application: t } = e,
-        i = t.name,
-        l = (0, f.b7)(t);
-    return (0, r.jsxs)("div", {
-        className: E.gn,
+        l = t.name,
+        s = (0, x.b7)(t);
+    return (0, n.jsxs)("div", {
+        className: N.gn,
         children: [
-            (0, r.jsx)(d.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: i }),
-            l
-                ? (0, r.jsx)("div", {
-                      className: E.s3,
-                      children: (0, r.jsx)(c.E, {
+            (0, n.jsx)(d.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: l }),
+            s
+                ? (0, n.jsx)("div", {
+                      className: N.s3,
+                      children: (0, n.jsx)(u.E, {
                           variant: "text-xs/medium",
                           color: "text-default",
-                          children: b.intl.string(b.t.LO4f0P),
+                          children: j.intl.string(j.t.LO4f0P),
                       }),
                   })
                 : null,
         ],
     });
 }
-function S(e) {
+function L(e) {
     let { description: t } = e,
-        [n, a] = l.useState(!0);
-    l.useLayoutEffect(() => a(!1), []);
-    let s = l.useMemo(() => {
-            let { parseBioReact: e } = i(713804);
+        [i, r] = s.useState(!0);
+    s.useLayoutEffect(() => r(!1), []);
+    let a = s.useMemo(() => {
+            let { parseBioReact: e } = l(713804);
             return e(t);
         }, [t]),
         {
-            ref: u,
+            ref: o,
             lineHeight: d,
-            lineCount: f,
+            lineCount: x,
         } = (function () {
-            let e = l.useRef(null),
-                [t, i] = l.useState(null),
-                [r, n] = l.useState(null);
+            let e = s.useRef(null),
+                [t, l] = s.useState(null),
+                [n, i] = s.useState(null);
             return (
-                l.useLayoutEffect(() => {
+                s.useLayoutEffect(() => {
                     let t = e.current;
                     if (null === t || 0 === t.clientHeight) return;
-                    let r = parseInt(getComputedStyle(t).lineHeight);
-                    isNaN(r) || (i(r), n(Math.floor(t.clientHeight / r)));
+                    let n = parseInt(getComputedStyle(t).lineHeight);
+                    isNaN(n) || (l(n), i(Math.floor(t.clientHeight / n)));
                 }, []),
-                { ref: e, lineHeight: t, lineCount: r }
+                { ref: e, lineHeight: t, lineCount: n }
             );
         })(),
-        g = l.useMemo(() => {
-            if (null == d || null == f) return { key: 0 };
-            let e = d * f;
+        g = s.useMemo(() => {
+            if (null == d || null == x) return { key: 0 };
+            let e = d * x;
             return { key: 1, minHeightOverride: Math.min(e, 3 * d), maxHeightOverride: e };
-        }, [f, d]),
-        { ref: A, isTransitioning: v, onTransitionEnd: x } = (0, m.A)({ isExpanded: n, ...g }),
-        T = n || v;
-    return (0, r.jsxs)("div", {
-        className: E.iQ,
+        }, [x, d]),
+        { ref: b, isTransitioning: v, onTransitionEnd: _ } = (0, p.A)({ isExpanded: i, ...g }),
+        y = i || v;
+    return (0, n.jsxs)("div", {
+        className: N.iQ,
         children: [
-            (0, r.jsx)("div", {
-                ref: A,
-                className: E.ZT,
-                onTransitionEnd: x,
-                children: (0, r.jsx)(c.E, {
-                    ref: u,
-                    className: I.PT,
+            (0, n.jsx)("div", {
+                ref: b,
+                className: N.ZT,
+                onTransitionEnd: _,
+                children: (0, n.jsx)(u.E, {
+                    ref: o,
+                    className: A.PT,
                     variant: "text-sm/medium",
-                    lineClamp: T ? void 0 : 3,
-                    style: { maxHeight: T ? void 0 : g.minHeightOverride },
-                    children: s,
+                    lineClamp: y ? void 0 : 3,
+                    style: { maxHeight: y ? void 0 : g.minHeightOverride },
+                    children: a,
                 }),
             }),
-            null != f && f > 3
-                ? (0, r.jsxs)(o.D, {
-                      className: E.lP,
-                      onClick: () => a((e) => !e),
+            null != x && x > 3
+                ? (0, n.jsxs)(c.D, {
+                      className: N.lP,
+                      onClick: () => r((e) => !e),
                       children: [
-                          (0, r.jsx)(c.E, {
+                          (0, n.jsx)(u.E, {
                               variant: "text-sm/semibold",
                               color: "text-brand",
-                              children: T ? b.intl.string(b.t.u4YJ8g) : b.intl.string(b.t["N/tajD"]),
+                              children: y ? j.intl.string(j.t.u4YJ8g) : j.intl.string(j.t["N/tajD"]),
                           }),
-                          T
-                              ? (0, r.jsx)(_.t, { size: "sm", color: h.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(p.a, { size: "sm", color: h.A.colors.TEXT_BRAND }),
+                          y
+                              ? (0, n.jsx)(h.t, { size: "sm", color: f.A.colors.TEXT_BRAND })
+                              : (0, n.jsx)(m.a, { size: "sm", color: f.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,

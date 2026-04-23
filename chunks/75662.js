@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_e99fef",
     Ps: "progressHeader_e99fef",

@@ -1,14 +1,15 @@
-n.d(t, { i: () => f });
-var i = n(627968),
-    s = n(64700),
-    r = n(106778),
+"use strict";
+n.d(t, { i: () => h });
+var r = n(627968),
+    i = n(64700),
+    s = n(106778),
     a = n(21161),
-    l = n(531301),
-    o = n(267102),
+    o = n(531301),
+    l = n(267102),
     u = n(129185),
-    d = n(652215);
-let c = 1e3 / 60,
-    m = {
+    c = n(652215);
+let d = 1e3 / 60,
+    _ = {
         velocity: { type: "static-random", minValue: { x: 8, y: 0 }, maxValue: { x: 50, y: 0 } },
         rotation: {
             type: "linear-random",
@@ -21,37 +22,37 @@ let c = 1e3 / 60,
         dragCoefficient: { type: "static", value: 0.8 },
         opacity: { type: "static-random", minValue: 0.7, maxValue: 0.5 },
     },
-    h = ["#FFFFFF"],
-    p = [n(426560), ...(0, l.A)(["snowflake"])];
-function f(e) {
+    f = ["#FFFFFF"],
+    p = [n(426560), ...(0, o.A)(["snowflake"])];
+function h(e) {
     let { children: t } = e,
-        [n, l] = s.useState(!1),
-        f = (0, o.Us)(),
-        [g, C] = s.useState(null),
-        { confettiCanvas: y } = s.useContext(a.x),
-        b = (0, r.f9)(y, g),
-        v = s.useMemo(() => ({ triggerAnimation: () => l(!0), untriggerAnimation: () => l(!1) }), []),
-        x = s.useCallback(() => {
-            let e = y?.getCanvas();
+        [n, o] = i.useState(!1),
+        h = (0, l.Us)(),
+        [E, m] = i.useState(null),
+        { confettiCanvas: g } = i.useContext(a.x),
+        A = (0, s.f9)(g, E),
+        I = i.useMemo(() => ({ triggerAnimation: () => o(!0), untriggerAnimation: () => o(!1) }), []),
+        T = i.useCallback(() => {
+            let e = g?.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            b.createConfetti({
-                ...m,
+            A.createConfetti({
+                ..._,
                 position: {
                     type: "static-random",
                     minValue: { x: -t.width / 2, y: -24 },
                     maxValue: { x: t.width, y: -24 },
                 },
             });
-        }, [b, y]);
-    return (s.useEffect(() => {
-        let e = n ? setInterval(x, c) : null;
+        }, [A, g]);
+    return (i.useEffect(() => {
+        let e = n ? setInterval(T, d) : null;
         return () => clearInterval(e);
-    }, [n, x]),
-    f === d.BRT.OVERLAY)
+    }, [n, T]),
+    h === c.BRT.OVERLAY)
         ? t
-        : (0, i.jsxs)(u.wE.Provider, {
-              value: v,
-              children: [t, (0, i.jsx)(r.K_, { ref: C, colors: h, sprites: p, spriteWidth: 24, spriteHeight: 24 })],
+        : (0, r.jsxs)(u.wE.Provider, {
+              value: I,
+              children: [t, (0, r.jsx)(s.K_, { ref: m, colors: f, sprites: p, spriteWidth: 24, spriteHeight: 24 })],
           });
 }

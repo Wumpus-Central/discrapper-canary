@@ -1,7 +1,8 @@
-t.d(n, { A: () => i });
-var l = t(627968),
-    r = t(775549);
-let i = (e) => {
-    let { assetComponent: n, tooltipWordmarkComponent: t, children: i } = e;
-    return (0, l.jsxs)("div", { className: r.R, children: [n, (0, l.jsx)("div", { className: r.A, children: t }), i] });
+"use strict";
+n.d(t, { A: () => s });
+var r = n(627968),
+    i = n(775549);
+let s = (e) => {
+    let { assetComponent: t, tooltipWordmarkComponent: n, children: s } = e;
+    return (0, r.jsxs)("div", { className: i.R, children: [t, (0, r.jsx)("div", { className: i.A, children: n }), s] });
 };

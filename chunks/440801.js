@@ -41,7 +41,7 @@ function g(e) {
                     lang: n,
                     className: s()(x.kw, "hljs"),
                     children: (0, l.jsx)(u.c2, {
-                        createPromise: () => Promise.all([t.e("57036"), t.e("75134")]).then(t.bind(t, 752238)),
+                        createPromise: () => Promise.resolve().then(t.bind(t, 752238)),
                         webpackId: 752238,
                         renderFallback: a,
                         render: (e) => {

@@ -1,25 +1,26 @@
-t.d(n, { A: () => c });
-var l = t(627968),
-    r = t(534514),
-    i = t(834730),
-    a = t(206418),
-    s = t(224016),
-    o = t(149757),
-    d = t(985018),
-    u = t(74824);
-let c = (e) => {
-    let { profileBadge: n, tenureBadge: t } = e,
-        c = (0, o.I)(t.id).standard;
-    return (0, l.jsxs)(a.A, {
-        assetComponent: (0, l.jsx)("img", { src: c, alt: "" }),
-        tooltipWordmarkComponent: (0, l.jsx)(s.A, { width: 56, className: u.R }),
+"use strict";
+n.d(t, { A: () => d });
+var r = n(627968),
+    i = n(534514),
+    s = n(834730),
+    a = n(206418),
+    o = n(224016),
+    l = n(149757),
+    u = n(985018),
+    c = n(74824);
+let d = (e) => {
+    let { profileBadge: t, tenureBadge: n } = e,
+        d = (0, l.I)(n.id).standard;
+    return (0, r.jsxs)(a.A, {
+        assetComponent: (0, r.jsx)("img", { src: d, alt: "" }),
+        tooltipWordmarkComponent: (0, r.jsx)(o.A, { width: 56, className: c.R }),
         children: [
-            (0, l.jsx)(r.D, { variant: "heading-xl/extrabold", children: d.intl.string(t.nameUnformatted) }),
-            (0, l.jsx)(i.E, {
+            (0, r.jsx)(i.D, { variant: "heading-xl/extrabold", children: u.intl.string(n.nameUnformatted) }),
+            (0, r.jsx)(s.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                className: u.K,
-                children: n.description,
+                className: c.K,
+                children: t.description,
             }),
         ],
     });

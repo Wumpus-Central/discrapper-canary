@@ -1,44 +1,45 @@
-i.d(t, { V: () => a });
-var n = i(426983),
-    l = i(176128),
-    r = i(985018);
+"use strict";
+n.d(t, { V: () => a });
+var r = n(426983),
+    i = n(176128),
+    s = n(985018);
 function a(e, t) {
-    let i =
-        t === l.qo.PUBLIC
-            ? r.intl.string(r.t.op2cJ6)
-            : t === l.qo.APPLY_TO_JOIN
-              ? r.intl.string(r.t.YwZfbt)
-              : r.intl.string(r.t.TME4LJ);
+    let n =
+        t === i.qo.PUBLIC
+            ? s.intl.string(s.t.op2cJ6)
+            : t === i.qo.APPLY_TO_JOIN
+              ? s.intl.string(s.t.YwZfbt)
+              : s.intl.string(s.t.TME4LJ);
     switch (e) {
-        case n._.STAFF:
+        case r._.STAFF:
             return {
-                tooltipTitle: r.intl.string(r.t.lMrv96),
-                tooltipSubtitle: r.intl.string(r.t.lMrv96),
-                tooltipDescription: r.intl.string(r.t.lMrv96),
+                tooltipTitle: s.intl.string(s.t.lMrv96),
+                tooltipSubtitle: s.intl.string(s.t.lMrv96),
+                tooltipDescription: s.intl.string(s.t.lMrv96),
             };
-        case n._.VERIFIED:
+        case r._.VERIFIED:
             return {
-                tooltipTitle: r.intl.string(r.t.K7iRig),
-                tooltipSubtitle: r.intl.string(r.t.iCehw9),
-                tooltipDescription: i,
+                tooltipTitle: s.intl.string(s.t.K7iRig),
+                tooltipSubtitle: s.intl.string(s.t.iCehw9),
+                tooltipDescription: n,
             };
-        case n._.PARTNERED:
+        case r._.PARTNERED:
             return {
-                tooltipTitle: r.intl.string(r.t.K7iRig),
-                tooltipSubtitle: r.intl.string(r.t.hfYfEE),
-                tooltipDescription: i,
+                tooltipTitle: s.intl.string(s.t.K7iRig),
+                tooltipSubtitle: s.intl.string(s.t.hfYfEE),
+                tooltipDescription: n,
             };
-        case n._.VERIFIED_AND_PARTNERED:
+        case r._.VERIFIED_AND_PARTNERED:
             return {
-                tooltipTitle: r.intl.string(r.t.K7iRig),
-                tooltipSubtitle: r.intl.string(r.t["TX+iFC"]),
-                tooltipDescription: i,
+                tooltipTitle: s.intl.string(s.t.K7iRig),
+                tooltipSubtitle: s.intl.string(s.t["TX+iFC"]),
+                tooltipDescription: n,
             };
-        case n._.COMMUNITY:
-            return { tooltipTitle: r.intl.string(r.t.K7iRig), tooltipDescription: i };
-        case n._.DISCOVERABLE:
-            return { tooltipTitle: r.intl.string(r.t.K7iRig), tooltipDescription: r.intl.string(r.t.op2cJ6) };
+        case r._.COMMUNITY:
+            return { tooltipTitle: s.intl.string(s.t.K7iRig), tooltipDescription: n };
+        case r._.DISCOVERABLE:
+            return { tooltipTitle: s.intl.string(s.t.K7iRig), tooltipDescription: s.intl.string(s.t.op2cJ6) };
         default:
-            return { tooltipTitle: r.intl.string(r.t["iZRkC/"]) };
+            return { tooltipTitle: s.intl.string(s.t["iZRkC/"]) };
     }
 }

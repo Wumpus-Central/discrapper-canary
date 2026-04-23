@@ -1,21 +1,22 @@
-n.d(t, { m: () => i });
-var a = n(76522),
-    r = n(652215),
-    l = n(985018);
-let i = [
+"use strict";
+n.d(t, { m: () => a });
+var r = n(76522),
+    i = n(652215),
+    s = n(985018);
+let a = [
     {
         check(e, t, n) {
             if (!n || null == t.getGuildId()) return !1;
-            let r = a.A.extractEveryoneRole(e, t);
-            if (null == r || !a.A.shouldShowEveryoneGuard(r, t)) return !1;
-            let i = a.A.everyoneMemberCount(r, t),
-                o = Math.pow(10, Math.floor(Math.log10(i))),
-                s = l.t["47E5Rz"];
+            let i = r.A.extractEveryoneRole(e, t);
+            if (null == i || !r.A.shouldShowEveryoneGuard(i, t)) return !1;
+            let a = r.A.everyoneMemberCount(i, t),
+                o = Math.pow(10, Math.floor(Math.log10(a))),
+                l = s.t["47E5Rz"];
             return (
-                t.isForumPost() ? (s = l.t.sYW2cy) : t.isThread() && (s = l.t["2YaiQ1"]),
+                t.isForumPost() ? (l = s.t.sYW2cy) : t.isThread() && (l = s.t["2YaiQ1"]),
                 {
-                    body: l.intl.formatToPlainString(s, { role: r, count: (Math.trunc(i / o) * o).toLocaleString() }),
-                    footer: l.intl.string(l.t.mVyrtu),
+                    body: s.intl.formatToPlainString(l, { role: i, count: (Math.trunc(a / o) * o).toLocaleString() }),
+                    footer: s.intl.string(s.t.mVyrtu),
                 }
             );
         },
@@ -25,5 +26,5 @@ let i = [
             light: () => n.e("92705").then(n.t.bind(n, 111992, 19)),
         },
     },
-    { check: (e) => !!r.AKn.test(e) && { body: l.intl.string(l.t.sTwS1a) }, analyticsType: "API Token Warning" },
+    { check: (e) => !!i.AKn.test(e) && { body: s.intl.string(s.t.sTwS1a) }, analyticsType: "API Token Warning" },
 ];

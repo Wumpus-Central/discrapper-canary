@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(64700),
-    i = n(311907),
-    a = n(775602);
-function s(e, t) {
-    let n = (0, i.bG)([a.A], () => a.A.useReducedMotion);
-    r.useEffect(() => {
-        if (!t) return;
-        let r = e.current;
-        if (null == r) return;
-        let i = requestAnimationFrame(() => {
-            r.scrollIntoView({ behavior: n ? "auto" : "smooth" });
+l.d(e, { A: () => s });
+var a = l(64700),
+    n = l(311907),
+    i = l(775602);
+function s(t, e) {
+    let l = (0, n.bG)([i.A], () => i.A.useReducedMotion);
+    a.useEffect(() => {
+        if (!e) return;
+        let a = t.current;
+        if (null == a) return;
+        let n = requestAnimationFrame(() => {
+            a.scrollIntoView({ behavior: l ? "auto" : "smooth" });
         });
-        return () => cancelAnimationFrame(i);
-    }, [e, t, n]);
+        return () => cancelAnimationFrame(n);
+    }, [t, e, l]);
 }

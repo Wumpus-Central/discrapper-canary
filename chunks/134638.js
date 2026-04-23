@@ -1,142 +1,143 @@
-n.d(t, { _: () => T });
-var l = n(627968),
+"use strict";
+n.d(t, { _: () => N });
+var r = n(627968),
     i = n(311907),
-    a = n(587895),
-    r = n(93159),
-    s = n(241989),
-    o = n(263063),
+    s = n(587895),
+    a = n(93159),
+    o = n(241989),
+    l = n(263063),
     u = n(815545),
     c = n(958720),
     d = n(299301),
-    p = n(71393),
-    m = n(967198),
-    h = n(67480),
-    A = n(486020),
-    _ = n(927578),
-    C = n(580630),
-    E = n(888751),
-    y = n(652215),
-    f = n(88001),
-    P = n(985018),
+    _ = n(71393),
+    f = n(967198),
+    p = n(67480),
+    h = n(486020),
+    E = n(927578),
+    m = n(580630),
+    g = n(888751),
+    A = n(652215),
+    I = n(88001),
+    T = n(985018),
     S = n(327105),
-    x = n(466919);
-function T(e) {
+    y = n(466919);
+function N(e) {
     let {
             type: t,
             invoicePreview: n,
-            subscriptionPlan: s,
-            isPrepaidPaymentSource: T,
-            giftRecipient: v,
+            subscriptionPlan: o,
+            isPrepaidPaymentSource: N,
+            giftRecipient: R,
             isPremiumGroupPurchase: b = !1,
-            guildId: R,
-            bottomSubText: M,
-            storeListing: j,
+            guildId: D,
+            bottomSubText: L,
+            storeListing: w,
         } = e,
-        L = (function (e) {
+        M = (function (e) {
             let {
                     invoiceSummaryType: t,
                     invoicePreview: n,
-                    subscriptionPlan: l,
+                    subscriptionPlan: r,
                     isPremiumGroupPurchase: i,
-                    isPrepaidPaymentSource: a,
+                    isPrepaidPaymentSource: s,
                 } = e,
-                { subscriptionPlanInvoiceItem: r } = (0, u.Sb)(n, l);
+                { subscriptionPlanInvoiceItem: a } = (0, u.Sb)(n, r);
             return i
-                ? null != r
-                    ? (0, u.Tp)(r, l)
-                    : P.intl.formatToPlainString(x.default["8bPDtb"], { premiumGroupProductName: (0, f.DP)() })
-                : g(t)
-                  ? (0, E.iK)(l)
-                  : (0, _.ys)(l.id)
-                    ? (0, _.Mn)(l.id, !1, a)
-                    : l.name;
+                ? null != a
+                    ? (0, u.Tp)(a, r)
+                    : T.intl.formatToPlainString(y.default["8bPDtb"], { premiumGroupProductName: (0, I.DP)() })
+                : C(t)
+                  ? (0, g.iK)(r)
+                  : (0, E.ys)(r.id)
+                    ? (0, E.Mn)(r.id, !1, s)
+                    : r.name;
         })({
             invoiceSummaryType: t,
             invoicePreview: n,
-            subscriptionPlan: s,
+            subscriptionPlan: o,
             isPremiumGroupPurchase: b,
-            isPrepaidPaymentSource: T,
+            isPrepaidPaymentSource: N,
         }),
-        O = (function (e) {
-            let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
-                a = (0, i.bG)([p.A], () => (null != t ? p.A.getGuild(t) : null), [t]);
-            return g(n) && null != l
-                ? { type: "gift", user: l }
-                : null != a
-                  ? { type: "guildSubscription", guild: a }
+        P = (function (e) {
+            let { guildId: t, invoiceSummaryType: n, giftRecipient: r } = e,
+                s = (0, i.bG)([_.A], () => (null != t ? _.A.getGuild(t) : null), [t]);
+            return C(n) && null != r
+                ? { type: "gift", user: r }
+                : null != s
+                  ? { type: "guildSubscription", guild: s }
                   : void 0;
-        })({ guildId: R, invoiceSummaryType: t, giftRecipient: v }),
-        D = (function (e) {
-            let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
-            return g(t)
-                ? null == l
-                    ? P.intl.string(S.default.AM9XGb)
+        })({ guildId: D, invoiceSummaryType: t, giftRecipient: R }),
+        x = (function (e) {
+            let { invoiceSummaryType: t, guildId: n, giftRecipient: r } = e;
+            return C(t)
+                ? null == r
+                    ? T.intl.string(S.default.AM9XGb)
                     : ""
                 : null == n
-                  ? P.intl.string(S.default["2zUa6I"])
+                  ? T.intl.string(S.default["2zUa6I"])
                   : void 0;
-        })({ guildId: R, invoiceSummaryType: t, giftRecipient: v }),
+        })({ guildId: D, invoiceSummaryType: t, giftRecipient: R }),
         {
-            header: U,
-            headerIconSrc: w,
-            guildForIcon: k,
+            header: k,
+            headerIconSrc: U,
+            guildForIcon: G,
         } = (function (e) {
             let { skuId: t } = e;
-            return (0, i.cf)([a.A, h.A, p.A, m.A], () => {
-                let e = h.A.get(t);
+            return (0, i.cf)([s.A, p.A, _.A, f.A], () => {
+                let e = p.A.get(t);
                 if (null == e) return {};
-                let n = a.A.getApplication(e.applicationId);
+                let n = s.A.getApplication(e.applicationId);
                 if (null == n) return {};
-                if (e.productLine === y.EZt.GUILD_ROLE) {
-                    let e = m.A.getGuildId(),
-                        t = p.A.getGuild(e);
+                if (e.productLine === A.EZt.GUILD_ROLE) {
+                    let e = f.A.getGuildId(),
+                        t = _.A.getGuild(e);
                     return null != t ? { header: t.name, guildForIcon: t } : {};
                 }
-                let l = A.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
-                return { header: n.name, headerIconSrc: l };
+                let r = h.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
+                return { header: n.name, headerIconSrc: r };
             }, [t]);
-        })({ skuId: s.skuId }),
-        F = null != k ? (0, l.jsx)(o.Ay, { guild: k, size: o.Ay.Sizes.SMOL }) : void 0,
+        })({ skuId: o.skuId }),
+        F = null != G ? (0, r.jsx)(l.Ay, { guild: G, size: l.Ay.Sizes.SMOL }) : void 0,
         {
-            price: G,
+            price: V,
             priceSubText: B,
-            priceSubTextHasStrikethrough: Y,
+            priceSubTextHasStrikethrough: H,
         } = (function (e) {
-            let { invoiceSummaryType: t, subscriptionPlan: n, invoicePreview: l } = e,
-                { subscriptionPlanInvoiceItem: i } = (0, u.Sb)(l, n),
-                a = (g(t) ? i?.amount : i?.subscriptionPlanPrice) ?? 0,
-                r = (0, C.$g)(a, l.currency),
-                s = (0, C.CE)(r, n.interval, n.intervalCount),
-                o = I(t) ? (0, c.O7)(n, { amount: a, currency: l.currency }) : null,
-                p = s;
+            let { invoiceSummaryType: t, subscriptionPlan: n, invoicePreview: r } = e,
+                { subscriptionPlanInvoiceItem: i } = (0, u.Sb)(r, n),
+                s = (C(t) ? i?.amount : i?.subscriptionPlanPrice) ?? 0,
+                a = (0, m.$g)(s, r.currency),
+                o = (0, m.CE)(a, n.interval, n.intervalCount),
+                l = O(t) ? (0, c.O7)(n, { amount: s, currency: r.currency }) : null,
+                _ = o;
             return (
-                I(t) ? (p = (0, E.ib)(l.currency, { includeNowSuffix: !0 })) : t === d.N$.PREMIUM_GIFT && (p = r),
-                { price: p, priceSubText: o, priceSubTextHasStrikethrough: !I(t) }
+                O(t) ? (_ = (0, g.ib)(r.currency, { includeNowSuffix: !0 })) : t === d.N$.PREMIUM_GIFT && (_ = a),
+                { price: _, priceSubText: l, priceSubTextHasStrikethrough: !O(t) }
             );
-        })({ invoiceSummaryType: t, subscriptionPlan: s, invoicePreview: n });
-    return (0, l.jsx)(r.f7, {
-        label: L,
-        description: D,
-        price: G,
+        })({ invoiceSummaryType: t, subscriptionPlan: o, invoicePreview: n });
+    return (0, r.jsx)(a.f7, {
+        label: M,
+        description: x,
+        price: V,
         priceSubText: B,
-        priceSubTextHasStrikethrough: Y,
-        target: O,
-        graphic: (0, l.jsx)(N, { subscriptionPlan: s, storeListing: j }),
-        header: U,
-        headerIconSrc: w,
+        priceSubTextHasStrikethrough: H,
+        target: P,
+        graphic: (0, r.jsx)(v, { subscriptionPlan: o, storeListing: w }),
+        header: k,
+        headerIconSrc: U,
         headerIconComponent: F,
-        bottomSubText: M,
+        bottomSubText: L,
     });
 }
-function N(e) {
+function v(e) {
     let { subscriptionPlan: t, storeListing: n } = e,
-        a = (0, i.bG)([h.A], () => h.A.get(t.skuId), [t.skuId]),
-        r = (0, _.ys)(t.id) ? (0, _.m6)(t.id) : void 0;
-    return (0, l.jsx)(s.WH, { sku: a, premiumType: r, storeListing: n });
+        s = (0, i.bG)([p.A], () => p.A.get(t.skuId), [t.skuId]),
+        a = (0, E.ys)(t.id) ? (0, E.m6)(t.id) : void 0;
+    return (0, r.jsx)(o.WH, { sku: s, premiumType: a, storeListing: n });
 }
-function g(e) {
+function C(e) {
     return e === d.N$.PREMIUM_GIFT;
 }
-function I(e) {
+function O(e) {
     return e === d.N$.PREMIUM_WITH_TRIAL;
 }

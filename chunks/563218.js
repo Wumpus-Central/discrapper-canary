@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => x });
-var a = n(627968),
-    i = n(64700),
-    r = n(311907),
-    l = n(534514),
+n.d(t, { A: () => v });
+var l = n(627968),
+    a = n(64700),
+    i = n(311907),
+    r = n(534514),
     s = n(123292),
     d = n(964486),
     o = n(58149),
@@ -11,65 +10,65 @@ var a = n(627968),
     u = n(780964),
     _ = n(858897),
     m = n(734057),
-    p = n(319582),
-    h = n(369053),
-    g = n(652215),
-    f = n(985018),
-    b = n(998436);
-function A(e) {
-    let { title: t, description: n, onButtonClick: r, trackSettingsUpsellsAction: l } = e,
-        [s, o] = i.useState(!1);
+    h = n(319582),
+    g = n(369053),
+    p = n(652215),
+    x = n(985018),
+    A = n(998436);
+function f(e) {
+    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: r } = e,
+        [s, o] = a.useState(!1);
     return (
         (0, d.Ay)(() => {
-            l(h.lJ.SETTINGS_UPSELLS_VIEWED);
+            r(g.lJ.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, a.jsx)(c.PQ, {
+        (0, l.jsx)(c.PQ, {
             title: t,
             description: n,
-            buttonText: s ? f.intl.string(f.t["h+WsPb"]) : f.intl.string(f.t.A8t4Nf),
+            buttonText: s ? x.intl.string(x.t["h+WsPb"]) : x.intl.string(x.t.A8t4Nf),
             buttonDisabled: s,
             onButtonPress: () => {
-                r(), o(!0), l(h.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
+                i(), o(!0), r(g.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
             },
         })
     );
 }
-function x(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: d, reportType: c, reportSubType: x } = e,
-        v = (0, r.bG)([m.A], () => m.A.getChannel(n)),
-        E = (0, p.MR)(t, v?.type),
-        I = (0, h.Mw)(c, x, d);
-    return 0 === E.length
+function v(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: d, reportType: c, reportSubType: v } = e,
+        b = (0, i.bG)([m.A], () => m.A.getChannel(n)),
+        N = (0, h.MR)(t, b?.type),
+        E = (0, g.Mw)(c, v, d);
+    return 0 === N.length
         ? null
-        : (0, a.jsxs)("div", {
-              className: b.kL,
+        : (0, l.jsxs)("div", {
+              className: A.kL,
               children: [
-                  (0, a.jsx)(l.D, {
+                  (0, l.jsx)(r.D, {
                       variant: "text-sm/semibold",
-                      className: b.wx,
-                      children: f.intl.string(f.t["1yxTIJ"]),
+                      className: A.wx,
+                      children: x.intl.string(x.t["1yxTIJ"]),
                   }),
-                  (0, a.jsx)("div", {
-                      className: b.uk,
-                      children: E.map((e, n) => {
-                          let { getTitle: i, getDescription: r, onApply: l } = e;
-                          return (0, a.jsx)(
-                              A,
-                              { title: i(), description: r(), onButtonClick: l, trackSettingsUpsellsAction: I(t[n]) },
+                  (0, l.jsx)("div", {
+                      className: A.uk,
+                      children: N.map((e, n) => {
+                          let { getTitle: a, getDescription: i, onApply: r } = e;
+                          return (0, l.jsx)(
+                              f,
+                              { title: a(), description: i(), onButtonClick: r, trackSettingsUpsellsAction: E(t[n]) },
                               n,
                           );
                       }),
                   }),
-                  (0, a.jsx)(s.Q, {
-                      text: f.intl.string(f.t.olebGx),
+                  (0, l.jsx)(s.Q, {
+                      text: x.intl.string(x.t.olebGx),
                       onClick: () => {
                           (0, _.openUserSettings)(u.X.CONTENT_AND_SOCIAL_PANEL),
-                              i(),
-                              o.Ay.trackWithMetadata(g.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
+                              a(),
+                              o.Ay.trackWithMetadata(p.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: d,
                                   report_type: c.name,
-                                  report_subtype: x,
-                                  action: h.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
+                                  report_subtype: v,
+                                  action: g.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
                               });
                       },
                   }),

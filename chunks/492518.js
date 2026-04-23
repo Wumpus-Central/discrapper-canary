@@ -1,5 +1,4 @@
-"use strict";
-a.d(t, { k: () => n });
-var r = a(627968),
-    i = a(289873);
-let n = () => (0, r.jsx)("div", { children: (0, r.jsx)(i.y, { type: i.t.SPINNING_CIRCLE }) });
+n.d(t, { k: () => a });
+var i = n(627968),
+    r = n(289873);
+let a = () => (0, i.jsx)("div", { children: (0, i.jsx)(r.y, { type: r.t.SPINNING_CIRCLE }) });

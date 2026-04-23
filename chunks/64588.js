@@ -1,28 +1,27 @@
-"use strict";
-r.d(t, { U: () => o });
-var a = r(64700),
-    i = r(954571),
-    n = r(501957),
-    l = r(473702),
-    s = r(652215);
-let o = (e, t, r) => {
-    let [o, c] = a.useState(e),
-        [d, u] = a.useState(Date.now()),
-        [_] = a.useState(Date.now()),
-        p = a.useCallback(
-            (e) => {
-                i.default.track(s.HAw.CANCELLATION_FLOW_STEP, {
-                    from_step: l.T[o],
-                    to_step: l.T[e],
-                    step_duration_ms: Date.now() - d,
-                    flow_duration_ms: Date.now() - _,
-                    location_stack: r,
-                    ...(0, n.j)(t),
+n.d(e, { U: () => l });
+var r = n(64700),
+    a = n(954571),
+    o = n(501957),
+    i = n(473702),
+    s = n(652215);
+let l = (t, e, n) => {
+    let [l, _] = r.useState(t),
+        [c, u] = r.useState(Date.now()),
+        [d] = r.useState(Date.now()),
+        m = r.useCallback(
+            (t) => {
+                a.default.track(s.HAw.CANCELLATION_FLOW_STEP, {
+                    from_step: i.T[l],
+                    to_step: i.T[t],
+                    step_duration_ms: Date.now() - c,
+                    flow_duration_ms: Date.now() - d,
+                    location_stack: n,
+                    ...(0, o.j)(e),
                 }),
-                    c(e),
+                    _(t),
                     u(Date.now());
             },
-            [r, _, d, o, t],
+            [n, d, c, l, e],
         );
-    return [o, p, d, _];
+    return [l, m, c, d];
 };

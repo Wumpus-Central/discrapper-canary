@@ -1,69 +1,70 @@
-t.d(n, { d: () => p });
-var l = t(627968),
-    r = t(64700),
-    i = t(534514),
-    a = t(834730),
-    s = t(964892),
-    o = t(135564),
-    d = t(206418),
-    u = t(679970),
-    c = t(985018),
-    m = t(414690);
-function p(e) {
-    let { children: n, targetElementRef: t, delay: i, showSubtext: a, forceOpen: d } = e,
-        [u, c] = r.useState(!1),
-        m = r.useRef(null),
-        p = r.useCallback(() => {
-            null != m.current && (clearTimeout(m.current), (m.current = null));
+"use strict";
+n.d(t, { d: () => f });
+var r = n(627968),
+    i = n(64700),
+    s = n(534514),
+    a = n(834730),
+    o = n(964892),
+    l = n(135564),
+    u = n(206418),
+    c = n(679970),
+    d = n(985018),
+    _ = n(414690);
+function f(e) {
+    let { children: t, targetElementRef: n, delay: s, showSubtext: a, forceOpen: u } = e,
+        [c, d] = i.useState(!1),
+        _ = i.useRef(null),
+        f = i.useCallback(() => {
+            null != _.current && (clearTimeout(_.current), (_.current = null));
         }, []);
-    r.useEffect(() => p, [p]);
-    let g = r.useCallback(() => {
-        p(),
-            (m.current = window.setTimeout(() => {
-                (m.current = null), c(!0);
-            }, i));
-    }, [i, p]);
-    r.useEffect(() => {
-        d && !u && g();
-    }, [d, u, g]);
-    let h = r.useCallback(() => {
-            g();
-        }, [g]),
-        x = r.useCallback(() => {
-            p(), c(!1);
-        }, [p]);
-    return (0, l.jsxs)("div", {
-        onMouseEnter: h,
-        onMouseLeave: x,
+    i.useEffect(() => f, [f]);
+    let h = i.useCallback(() => {
+        f(),
+            (_.current = window.setTimeout(() => {
+                (_.current = null), d(!0);
+            }, s));
+    }, [s, f]);
+    i.useEffect(() => {
+        u && !c && h();
+    }, [u, c, h]);
+    let E = i.useCallback(() => {
+            h();
+        }, [h]),
+        m = i.useCallback(() => {
+            f(), d(!1);
+        }, [f]);
+    return (0, r.jsxs)("div", {
+        onMouseEnter: E,
+        onMouseLeave: m,
         children: [
-            n,
-            (0, l.jsxs)(s.x, {
-                targetElementRef: t,
-                shouldShow: !!(u || d),
+            t,
+            (0, r.jsxs)(o.x, {
+                targetElementRef: n,
+                shouldShow: !!(c || u),
                 position: "top",
                 caretConfig: { align: "center" },
-                children: [(0, l.jsx)(f, { showSubtext: a }), (0, l.jsx)(o.F, {})],
+                children: [(0, r.jsx)(p, { showSubtext: a }), (0, r.jsx)(l.F, {})],
             }),
         ],
     });
 }
-function f(e) {
-    let { showSubtext: n = !1 } = e;
-    return (0, l.jsxs)(d.A, {
-        assetComponent: (0, l.jsx)(u.A, { className: m.jc }),
-        tooltipWordmarkComponent: (0, l.jsx)(i.D, {
+function p(e) {
+    let { showSubtext: t = !1 } = e;
+    return (0, r.jsxs)(u.A, {
+        assetComponent: (0, r.jsx)(c.A, { className: _.jc }),
+        tooltipWordmarkComponent: (0, r.jsx)(s.D, {
             variant: "heading-md/extrabold",
-            className: m.RK,
-            children: c.intl.string(c.t.ElYQFS),
+            className: _.RK,
+            children: d.intl.string(d.t.ElYQFS),
         }),
         children: [
-            (0, l.jsx)(i.D, {
+            (0, r.jsx)(s.D, {
                 variant: "heading-xl/extrabold",
-                className: n ? void 0 : m.Qn,
-                children: c.intl.string(c.t.lTHkqd),
+                className: t ? void 0 : _.Qn,
+                children: d.intl.string(d.t.lTHkqd),
             }),
-            n
-                ? (0, l.jsx)(a.E, { variant: "text-xs/normal", className: m.lV, children: c.intl.string(c.t.MEV0GI) })
+            t
+                ? (0, r.jsx)(a.E, { variant: "text-xs/normal", className: _.lV, children: d.intl.string(d.t.MEV0GI) })
                 : void 0,
         ],
     });

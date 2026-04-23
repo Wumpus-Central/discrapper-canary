@@ -1,32 +1,33 @@
-a.d(t, { _: () => l }), a(323874), a(14289), a(35956);
-var n = a(64700),
-    r = a(835245);
-let i = new Worker(new URL("/assets/" + a.u("58531"), a.b));
-function l(e, t, a) {
-    let l = a && 1 === t && null != e,
-        [o, s] = n.useState(void 0);
+"use strict";
+n.d(t, { _: () => a }), n(323874), n(14289), n(35956);
+var r = n(64700),
+    i = n(835245);
+let s = new Worker(new URL("/assets/" + n.u("58531"), n.b));
+function a(e, t, n) {
+    let a = n && 1 === t && null != e,
+        [o, l] = r.useState(void 0);
     return (
-        n.useEffect(() => {
+        r.useEffect(() => {
             let t = !1;
             return (
-                l &&
+                a &&
                     new Promise((t) => {
-                        let a = (0, r.A)(),
-                            n = (e) => {
+                        let n = (0, i.A)(),
+                            r = (e) => {
                                 let {
-                                    data: { id: r, png: l },
+                                    data: { id: i, png: a },
                                 } = e;
-                                a === r && (t(l), i.removeEventListener("message", n));
+                                n === i && (t(a), s.removeEventListener("message", r));
                             };
-                        i.addEventListener("message", n), i.postMessage({ id: a, placeholderData: e });
+                        s.addEventListener("message", r), s.postMessage({ id: n, placeholderData: e });
                     }).then((e) => {
-                        t || s(e);
+                        t || l(e);
                     }),
                 () => {
                     t = !0;
                 }
             );
-        }, [e, l]),
+        }, [e, a]),
         o
     );
 }

@@ -1,41 +1,42 @@
-n.d(t, { Ay: () => _, Be: () => c, Nj: () => d, y3: () => m });
-var a,
-    r = n(627968),
-    l = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    o = n(355522),
+"use strict";
+n.d(t, { Ay: () => p, Be: () => c, Nj: () => d, y3: () => _ });
+var r,
+    i = n(627968),
+    s = n(64700),
+    a = n(503698),
+    o = n.n(a),
+    l = n(355522),
     u = n(34382),
     c =
-        (((a = {}).UNKNOWN = "unknown"),
-        (a.VISA = "visa"),
-        (a.DISCOVER = "discover"),
-        (a.MASTERCARD = "mastercard"),
-        (a.AMEX = "amex"),
-        (a.PAYPAL = "paypal"),
-        (a.PAYMENT_REQUEST = "paymentRequest"),
-        (a.G_PAY = "gPay"),
-        (a.DINERS = "diners"),
-        (a.JCB = "jcb"),
-        (a.UNIONPAY = "unionpay"),
-        (a.SOFORT = "sofort"),
-        (a.PRZELEWY24 = "przelewy24"),
-        (a.GIROPAY = "giropay"),
-        (a.PAYSAFECARD = "paysafecard"),
-        (a.GCASH = "gcash"),
-        (a.GRABPAY = "grabpay"),
-        (a.MOMO_WALLET = "momo_wallet"),
-        (a.VENMO = "venmo"),
-        (a.KAKAOPAY = "kakaopay"),
-        (a.GOPAY_WALLET = "gopay_wallet"),
-        (a.BANCONTACT = "bancontact"),
-        (a.EPS = "eps"),
-        (a.IDEAL = "ideal"),
-        (a.CASH_APP = "cash_app"),
-        (a.APPLE = "apple"),
-        (a.APPLE_LIGHT = "apple_light"),
-        (a.BANK = "bank"),
-        a);
+        (((r = {}).UNKNOWN = "unknown"),
+        (r.VISA = "visa"),
+        (r.DISCOVER = "discover"),
+        (r.MASTERCARD = "mastercard"),
+        (r.AMEX = "amex"),
+        (r.PAYPAL = "paypal"),
+        (r.PAYMENT_REQUEST = "paymentRequest"),
+        (r.G_PAY = "gPay"),
+        (r.DINERS = "diners"),
+        (r.JCB = "jcb"),
+        (r.UNIONPAY = "unionpay"),
+        (r.SOFORT = "sofort"),
+        (r.PRZELEWY24 = "przelewy24"),
+        (r.GIROPAY = "giropay"),
+        (r.PAYSAFECARD = "paysafecard"),
+        (r.GCASH = "gcash"),
+        (r.GRABPAY = "grabpay"),
+        (r.MOMO_WALLET = "momo_wallet"),
+        (r.VENMO = "venmo"),
+        (r.KAKAOPAY = "kakaopay"),
+        (r.GOPAY_WALLET = "gopay_wallet"),
+        (r.BANCONTACT = "bancontact"),
+        (r.EPS = "eps"),
+        (r.IDEAL = "ideal"),
+        (r.CASH_APP = "cash_app"),
+        (r.APPLE = "apple"),
+        (r.APPLE_LIGHT = "apple_light"),
+        (r.BANK = "bank"),
+        r);
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
@@ -93,19 +94,19 @@ function d(e) {
             return n(511403);
     }
 }
-let m = { SMALL: u.cardIconSmall, MEDIUM: u.cardIconMedium, LARGE: u.cardIconLarge, XLARGE: u.cardIconXLarge };
-class p extends l.PureComponent {
+let _ = { SMALL: u.cardIconSmall, MEDIUM: u.cardIconMedium, LARGE: u.cardIconLarge, XLARGE: u.cardIconXLarge };
+class f extends s.PureComponent {
     static Types = c;
-    static Sizes = m;
+    static Sizes = _;
     static getType(e) {
         return null == e ? "unknown" : c[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: m.SMALL, flipped: !1 };
+    static defaultProps = { size: _.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: t, className: n, size: a } = this.props;
+        let { flipped: e, type: t, className: n, size: r } = this.props;
         return "bank" === t
-            ? (0, r.jsx)(o.M, { className: n })
-            : (0, r.jsx)("div", { className: s()(a, u[t], n, { [u.flipped]: e }), children: t });
+            ? (0, i.jsx)(l.M, { className: n })
+            : (0, i.jsx)("div", { className: o()(r, u[t], n, { [u.flipped]: e }), children: t });
     }
 }
-let _ = p;
+let p = f;

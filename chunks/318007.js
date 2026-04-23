@@ -1,75 +1,76 @@
-n.d(t, { t: () => C });
-var l = n(627968),
+"use strict";
+n.d(t, { t: () => m });
+var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(785007),
-    o = n(289873),
+    s = n(503698),
+    a = n.n(s),
+    o = n(785007),
+    l = n(289873),
     u = n(937008),
     c = n(650588),
     d = n(45938),
-    p = n(242874),
-    m = n(75825),
-    h = n(238017),
-    A = n(985018),
-    _ = n(92814);
-let C = (e) => {
+    _ = n(242874),
+    f = n(75825),
+    p = n(238017),
+    h = n(985018),
+    E = n(92814);
+let m = (e) => {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
-            selectedGiftStyle: a,
-            emojiConfetti: C,
-            soundEffect: E,
-            setEmojiConfetti: y,
-            setSoundEffect: f,
+            selectedGiftStyle: s,
+            emojiConfetti: m,
+            soundEffect: g,
+            setEmojiConfetti: A,
+            setSoundEffect: I,
         } = (0, u.Pv)(),
-        [P] = i.useState(!1),
+        [T] = i.useState(!1),
         S = i.useRef(null),
-        { ref: x, ...T } = (0, s._u)({ orientation: "horizontal" }),
-        N = (0, d.lo)(n, t),
-        g = N === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        I = N !== d.tB.DEFAULT;
-    return (0, l.jsxs)("div", {
+        { ref: y, ...N } = (0, o._u)({ orientation: "horizontal" }),
+        v = (0, d.lo)(n, t),
+        C = v === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        O = v !== d.tB.DEFAULT;
+    return (0, r.jsxs)("div", {
         children: [
-            I &&
-                (0, l.jsxs)("div", {
-                    className: _.Os,
+            O &&
+                (0, r.jsxs)("div", {
+                    className: E.Os,
                     children: [
-                        null != a
-                            ? (0, l.jsx)(m.A, {
-                                  giftStyle: a,
-                                  defaultAnimationState: p.oA.ACTION,
-                                  idleAnimationState: p.oA.LOOP,
+                        null != s
+                            ? (0, r.jsx)(f.A, {
+                                  giftStyle: s,
+                                  defaultAnimationState: _.oA.ACTION,
+                                  idleAnimationState: _.oA.LOOP,
                                   shouldAnimate: !0,
-                                  className: _.lY,
+                                  className: E.lY,
                               })
-                            : (0, l.jsx)(o.y, { className: _.u1 }),
-                        g &&
-                            (0, l.jsxs)("div", {
-                                className: r()(_.b7, _.Ow),
+                            : (0, r.jsx)(l.y, { className: E.u1 }),
+                        C &&
+                            (0, r.jsxs)("div", {
+                                className: a()(E.b7, E.Ow),
                                 children: [
-                                    (0, l.jsx)(c.A, {
-                                        sound: E,
+                                    (0, r.jsx)(c.A, {
+                                        sound: g,
                                         onSelect: (e) => {
-                                            null != f && f(null == e ? void 0 : e);
+                                            null != I && I(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(h.A, { setEmojiConfetti: y, emojiConfetti: null == C ? void 0 : C }),
+                                    (0, r.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == m ? void 0 : m }),
                                 ],
                             }),
                     ],
                 }),
-            (0, l.jsx)("div", {
-                tabIndex: null != a || P ? void 0 : 0,
+            (0, r.jsx)("div", {
+                tabIndex: null != s || T ? void 0 : 0,
                 onFocus: (e) => {
                     e.target === e.currentTarget && S.current?.focus();
                 },
-                className: _.Qh,
-                "aria-label": A.intl.string(A.t.v54NrN),
-                ref: x,
-                ...T,
+                className: E.Qh,
+                "aria-label": h.intl.string(h.t.v54NrN),
+                ref: y,
+                ...N,
             }),
-            (0, l.jsx)("div", { className: _.__invalid_selectPlanDivider }),
+            (0, r.jsx)("div", { className: E.__invalid_selectPlanDivider }),
         ],
     });
 };
