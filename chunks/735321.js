@@ -2,21 +2,20 @@
 n.d(t, {
     BF: () => T,
     FM: () => m,
-    L: () => p,
+    L: () => E,
     R_: () => L,
     Un: () => w,
-    XX: () => G,
-    Y5: () => O,
+    XX: () => U,
+    Y5: () => v,
     cv: () => I,
     ef: () => M,
     ew: () => D,
     g1: () => k,
     mS: () => A,
-    nS: () => x,
     oc: () => b,
-    qA: () => R,
-    s1: () => v,
-    tg: () => C,
+    qA: () => C,
+    s1: () => O,
+    tg: () => R,
     uA: () => P,
     y9: () => g,
 });
@@ -27,13 +26,13 @@ var r = n(425927),
     o = n(223273),
     l = n(454908),
     u = n(287809),
-    d = n(289173),
-    c = n(622543),
+    c = n(289173),
+    d = n(622543),
     _ = n(958805),
     f = n(61881),
-    E = n(229231),
+    p = n(229231),
     h = n(985018);
-let p = (e) => E.Ok[e.type](e);
+let E = (e) => p.Ok[e.type](e);
 function m(e, t) {
     let { isCurrentUser: n } = t,
         r = e.games.length > 0;
@@ -41,17 +40,17 @@ function m(e, t) {
         return 1 === s.u[e.type] ? h.intl.string(h.t.wiXdEa) : h.intl.format(h.t["zR1+0/"], { numGames: s.u[e.type] });
 }
 function g(e) {
-    return E._u.includes(e);
+    return p._u.includes(e);
 }
 function A(e) {
-    return E.gk.includes(e);
+    return p.gk.includes(e);
 }
 function I(e) {
     return e in s.u ? s.u[e] : 0;
 }
 function T() {
     let e = u.default.getCurrentUser(),
-        t = null != e ? c.A.getUserProfile(e.id) : null;
+        t = null != e ? d.A.getUserProfile(e.id) : null;
     return t?.widgets ?? [];
 }
 function S() {
@@ -60,7 +59,7 @@ function S() {
 function y(e) {
     return (
         S()
-            .filter(d.fu)
+            .filter(c.fu)
             .find((t) => t.type === e) ?? null
     );
 }
@@ -73,15 +72,15 @@ function N(e) {
         return (r[n] = e), r;
     }
 }
-function O(e) {
+function v(e) {
     let t = S();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) && _.A.setPendingWidgets([e, ...t]);
 }
-function R(e) {
+function C(e) {
     let t = S().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
     _.A.setPendingWidgets(t);
 }
-function v(e, t, n) {
+function O(e, t, n) {
     let r = Object.values(a.X).length;
     if (n.length > r) return;
     let i = y(e);
@@ -90,16 +89,16 @@ function v(e, t, n) {
     if (null == s) return;
     let o = { ...s, tags: n },
         l = i.games.map((e) => (e.applicationId === t ? o : e)),
-        u = N(new d.Yy({ ...i, games: l }));
+        u = N(new c.Yy({ ...i, games: l }));
     _.A.setPendingWidgets(u);
 }
-function C(e, t, n) {
+function R(e, t, n) {
     let r = y(e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
     let s = i.tags.filter((e) => e !== n);
-    v(r.type, t, s.length > 0 ? s : []);
+    O(r.type, t, s.length > 0 ? s : []);
 }
 function b(e, t, n) {
     let r = y(e);
@@ -108,7 +107,7 @@ function b(e, t, n) {
     if (null == i || n === i.comment) return;
     let s = { ...i, comment: n },
         a = r.games.map((e) => (e.applicationId === t ? s : e)),
-        o = N(new d.Yy({ ...r, games: a }));
+        o = N(new c.Yy({ ...r, games: a }));
     _.A.setPendingWidgets(o);
 }
 function D(e) {
@@ -122,7 +121,7 @@ function D(e) {
     }
     let o = { applicationId: r.applicationId, comment: r.comment, tags: r.tags };
     t = null != s ? [o, ...(s.games ?? [])] : [o];
-    let u = N(new d.Yy({ ...(s ?? { type: n }), games: t }));
+    let u = N(new c.Yy({ ...(s ?? { type: n }), games: t }));
     _.A.setPendingWidgets(u), l.I.fetchMany([r.applicationId]);
 }
 function L(e, t) {
@@ -140,21 +139,21 @@ function w(e, t, n) {
     if (t < 0 || t >= i.length || n < 0 || n >= i.length) return;
     let [s] = i.splice(t, 1);
     i.splice(n, 0, s);
-    let a = N(new d.Yy({ ...r, games: i }));
+    let a = N(new c.Yy({ ...r, games: i }));
     _.A.setPendingWidgets(a);
 }
 function M(e, t) {
     let n = y(e);
     if (null == n) return;
     let r = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
-        i = N(new d.Yy({ ...n, games: r }));
+        i = N(new c.Yy({ ...n, games: r }));
     _.A.setPendingWidgets(i);
 }
 function P(e) {
     let t = I(e.type);
     return e.games.length >= t;
 }
-function U(e) {
+function x(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
 function k(e, t, n) {
@@ -162,10 +161,10 @@ function k(e, t, n) {
         e.length === t.length &&
         e.every((e, r) =>
             (function (e, t, n) {
-                if (e.applicationId !== t.applicationId || (g(n) && U(e.comment) !== U(t.comment))) return !1;
+                if (e.applicationId !== t.applicationId || (g(n) && x(e.comment) !== x(t.comment))) return !1;
                 if (A(n)) {
-                    let n = U(e.tags),
-                        r = U(t.tags);
+                    let n = x(e.tags),
+                        r = x(t.tags);
                     if (
                         (null === n) != (null === r) ||
                         (null !== n && null !== r && (n.length !== r.length || !n.every((e, t) => e === r[t])))
@@ -177,12 +176,9 @@ function k(e, t, n) {
         )
     );
 }
-function x(e) {
-    return e?.themes != null && e.themes.includes(o.q0.EROTIC);
-}
-function G(e) {
+function U(e) {
     return (
-        !x(e) &&
+        !(e?.themes != null && e.themes.includes(o.q0.EROTIC)) &&
         (null == e.content_classification ||
             (0, r.U1)({ type: r.fS.MINIMAL, data: e.content_classification }) !== i.Y.ADULT) &&
         !s.Z.has(e.id)
