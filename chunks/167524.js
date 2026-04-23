@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_bb1234",
     dQ: "sparkle_bb1234",

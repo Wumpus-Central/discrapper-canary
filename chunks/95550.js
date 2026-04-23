@@ -62,7 +62,7 @@ var N = n(73153),
     ec = n(652215),
     ed = n(650583),
     eu = n(985018),
-    eh = n(426057);
+    eh = n(203785);
 let em = (0, k.Ld)(),
     eA = (e) => {
         let { channel: t, onClose: n } = e,
@@ -267,29 +267,35 @@ class ep extends l.PureComponent {
         let { query: e, hasFriends: t, selectedUsers: n } = this.props;
         if (!t || this.isNotFriends() || this.isPartyFull()) return null;
         let l = [];
-        return (
-            n.forEach((e) => {
-                let t = Q.default.getUser(e);
-                null != t && l.push({ id: e, label: ea.Ay.getName(t) });
-            }),
-            (0, i.jsxs)("div", {
-                className: eh.ON,
-                children: [
-                    (0, i.jsx)(p.k, {
-                        inputRef: this.searchBarRef,
-                        autoFocus: !0,
-                        fullWidth: !0,
-                        placeholder: 0 === n.size ? eu.intl.string(eu.t.K5e6bn) : "",
-                        disabled: this.isPartyFull(),
-                        value: e,
-                        leading: { type: "tags", items: l, onRemove: this.handleRemoveUser },
-                        onChange: this.handleQueryChange,
-                        onKeyDown: this.handleKeyDown.bind(this),
-                    }),
-                    this.renderAddUsersButton(),
-                ],
-            })
-        );
+        n.forEach((e) => {
+            let t = Q.default.getUser(e);
+            null != t && l.push({ id: e, label: ea.Ay.getName(t) });
+        });
+        let { results: a, selectedRow: s } = this.props,
+            r = a.length > 0;
+        return (0, i.jsxs)("div", {
+            className: eh.ON,
+            children: [
+                (0, i.jsx)(p.k, {
+                    inputRef: this.searchBarRef,
+                    autoFocus: !0,
+                    fullWidth: !0,
+                    placeholder: 0 === n.size ? eu.intl.string(eu.t.K5e6bn) : "",
+                    disabled: this.isPartyFull(),
+                    value: e,
+                    leading: { type: "tags", items: l, onRemove: this.handleRemoveUser },
+                    onChange: this.handleQueryChange,
+                    onKeyDown: this.handleKeyDown.bind(this),
+                    role: "combobox",
+                    "aria-autocomplete": "list",
+                    "aria-haspopup": "listbox",
+                    "aria-controls": em,
+                    "aria-expanded": r,
+                    "aria-activedescendant": r ? `user-row-${s}` : void 0,
+                }),
+                this.renderAddUsersButton(),
+            ],
+        });
     }
     renderMobileCloseButton = () =>
         (0, i.jsx)("div", {
