@@ -90,7 +90,17 @@ function N(e) {
 }
 let O = {
     ...l().defaultRules.link,
-    match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
+    match(e, t, n) {
+        if (!t.allowLinks || -1 === e.indexOf("](")) return null;
+        let r = 0;
+        for (let t = 0; t < e.length; t++) {
+            let n = e[t];
+            if ("[" === n) {
+                if (++r > 10) return null;
+            } else "]" === n && r > 0 && r--;
+        }
+        return l().defaultRules.link.match(e, t, n);
+    },
     parse(e, t, n) {
         let [r, s, a, o] = e,
             c = () => ({ type: _.D.TEXT, content: r });
