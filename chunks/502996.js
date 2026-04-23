@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_df39b2",
     WB: "fitInAccount_df39b2",

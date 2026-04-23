@@ -1,17 +1,18 @@
-s.d(t, { v: () => l });
-var n = s(311907),
-    a = s(439174),
-    r = s(622543);
+"use strict";
+r.d(t, { v: () => l });
+var a = r(311907),
+    i = r(439174),
+    n = r(622543);
 function l(e) {
-    return (0, n.bG)([r.A], () => {
+    return (0, a.bG)([n.A], () => {
         let t,
-            s = null != e ? r.A.getUserProfile(e) : null,
-            n = s?.premiumSince;
-        return null == s || null == n
+            r = null != e ? n.A.getUserProfile(e) : null,
+            a = r?.premiumSince;
+        return null == r || null == a
             ? null
-            : (s?.badges?.forEach((e) => {
-                  let s = (0, a.cZ)(e.id);
-                  null != s && (t = s);
+            : (r?.badges?.forEach((e) => {
+                  let r = (0, i.cZ)(e.id);
+                  null != r && (t = r);
               }),
               t);
     });

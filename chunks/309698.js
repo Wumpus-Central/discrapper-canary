@@ -1,42 +1,43 @@
-i.d(t, { A: () => A });
-var l = i(478437),
-    n = i(311907),
-    s = i(73153),
-    a = i(142120);
-let d = new Set(),
-    r = {};
-function o() {
-    d.clear();
+"use strict";
+a.d(t, { A: () => u });
+var n = a(478437),
+    r = a(311907),
+    i = a(73153),
+    s = a(142120);
+let l = new Set(),
+    o = {};
+function d() {
+    l.clear();
 }
 function c(e) {
-    d.delete(e.guild.id);
+    l.delete(e.guild.id);
 }
-class u extends n.Ay.Store {
+class _ extends r.Ay.Store {
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(s.A);
     }
     static displayName = "ChannelStatusStore";
     getChannelStatus(e) {
-        if (null != e && null != e.guild_id && e.type === l.r.GUILD_VOICE) return r[e.guild_id]?.[e.id];
+        if (null != e && null != e.guild_id && e.type === n.r.GUILD_VOICE) return o[e.guild_id]?.[e.id];
     }
     hasRequestedStatuses(e) {
-        return d.has(e);
+        return l.has(e);
     }
 }
-let A = new u(s.h, {
+let u = new _(i.h, {
     GUILD_CREATE: c,
     GUILD_DELETE: c,
-    CONNECTION_RESUMED: o,
-    CONNECTION_OPEN: o,
+    CONNECTION_RESUMED: d,
+    CONNECTION_OPEN: d,
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {
-        null == r[e.guildId] && (r[e.guildId] = {}), (r[e.guildId][e.id] = e.status);
+        null == o[e.guildId] && (o[e.guildId] = {}), (o[e.guildId][e.id] = e.status);
     },
     CHANNEL_INFO: function (e) {
-        let { guildId: t, channels: i } = e;
-        for (let { id: e, status: l } of ((r[t] = {}), i)) r[t][e] = l;
+        let { guildId: t, channels: a } = e;
+        for (let { id: e, status: n } of ((o[t] = {}), a)) o[t][e] = n;
     },
     FETCH_CHANNEL_INFO: function (e) {
         let { guildId: t } = e;
-        d.add(t);
+        l.add(t);
     },
 });

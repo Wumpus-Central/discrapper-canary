@@ -1,57 +1,58 @@
-t.r(e), t.d(e, { default: () => h });
-var c = t(627968);
-t(64700);
-var n = t(192308),
-    o = t(80556),
-    r = t(577015),
-    p = t(320028);
-let h = {
-    showCaptcha: function (a, e) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: h, captchaService: s, options: i } = a;
-        (0, n.openModalLazy)(
+"use strict";
+i.r(t), i.d(t, { default: () => o });
+var n = i(627968);
+i(64700);
+var r = i(192308),
+    a = i(80556),
+    l = i(577015),
+    s = i(320028);
+let o = {
+    showCaptcha: function (e, t) {
+        let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: o, captchaService: c, options: d } = e;
+        (0, r.openModalLazy)(
             async () => {
-                let { default: a } = await t.e("39522").then(t.bind(t, 252345));
-                return (t) =>
-                    (0, c.jsx)(a, {
-                        onCaptchaVerify: (a, t) => e({ captcha_key: a, captcha_rqtoken: t }),
-                        captchaService: s,
-                        sitekey: h,
-                        ...r,
+                let { default: e } = await i.e("39522").then(i.bind(i, 252345));
+                return (i) =>
+                    (0, n.jsx)(e, {
+                        onCaptchaVerify: (e, i) => t({ captcha_key: e, captcha_rqtoken: i }),
+                        captchaService: c,
+                        sitekey: o,
+                        ...l,
+                        ...d,
                         ...i,
-                        ...t,
                     });
             },
-            { Layer: o.Ay, modalKey: p.f },
+            { Layer: a.Ay, modalKey: s.f },
         );
     },
-    showCaptchaAsync: function (a) {
-        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: h, captchaService: s, captchaSessionId: i, options: d } = a;
-        return new Promise((a, l) => {
-            (0, n.openModalLazy)(
+    showCaptchaAsync: function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { sitekey: o, captchaService: c, captchaSessionId: d, options: u } = e;
+        return new Promise((e, _) => {
+            (0, r.openModalLazy)(
                 async () => {
-                    let { default: n } = await t.e("39522").then(t.bind(t, 252345));
-                    return (t) =>
-                        (0, c.jsx)(n, {
-                            onCaptchaVerify: (e, t) => a({ captcha_key: e, captcha_rqtoken: t, captcha_session_id: i }),
-                            captchaService: s,
-                            sitekey: h,
-                            onReject: (a) => {
-                                a === r.CaptchaError.CANCEL
-                                    ? l(new r.CaptchaCancelError())
-                                    : l(Error("cancel captcha"));
+                    let { default: r } = await i.e("39522").then(i.bind(i, 252345));
+                    return (i) =>
+                        (0, n.jsx)(r, {
+                            onCaptchaVerify: (t, i) => e({ captcha_key: t, captcha_rqtoken: i, captcha_session_id: d }),
+                            captchaService: c,
+                            sitekey: o,
+                            onReject: (e) => {
+                                e === l.CaptchaError.CANCEL
+                                    ? _(new l.CaptchaCancelError())
+                                    : _(Error("cancel captcha"));
                             },
-                            ...e,
-                            ...d,
                             ...t,
+                            ...u,
+                            ...i,
                         });
                 },
-                { Layer: o.Ay, modalKey: p.f },
+                { Layer: a.Ay, modalKey: s.f },
             );
         });
     },
     useIsCaptchaModalOpen: function () {
-        return (0, n.useModalsStore)((a) => (0, n.hasModalOpenSelector)(a, p.f));
+        return (0, r.useModalsStore)((e) => (0, r.hasModalOpenSelector)(e, s.f));
     },
 };

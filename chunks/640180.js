@@ -1,23 +1,24 @@
-a.d(l, { u: () => s });
-var t = a(627968);
-a(64700);
-var n = a(999519),
-    o = a(786558),
-    i = a(799226);
-let r = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } };
-function s(e) {
-    let { artboard: l = "Nitro Wishlist", stateMachine: a, ...s } = e,
-        { status: d, buffer: u } = (0, i.CE)(n.A),
-        c = (0, i.m2)(n.A);
-    return d === i.BW.Loading
+"use strict";
+n.d(t, { u: () => d });
+var a = n(627968);
+n(64700);
+var i = n(999519),
+    r = n(786558),
+    l = n(799226);
+let s = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } };
+function d(e) {
+    let { artboard: t = "Nitro Wishlist", stateMachine: n, ...d } = e,
+        { status: o, buffer: c } = (0, l.CE)(i.A),
+        u = (0, l.m2)(i.A);
+    return o === l.BW.Loading
         ? null
-        : (0, t.jsx)(o.w, {
-              ...(c ? { key: "override" } : {}),
-              buffer: u,
-              artboard: l,
-              stateMachine: a,
-              artboardProperties: r,
-              ...s,
+        : (0, a.jsx)(r.w, {
+              ...(u ? { key: "override" } : {}),
+              buffer: c,
+              artboard: t,
+              stateMachine: n,
+              artboardProperties: s,
+              ...d,
           });
 }
-s.riveSrc = n.A;
+d.riveSrc = i.A;

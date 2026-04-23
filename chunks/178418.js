@@ -1,6 +1,7 @@
-i.d(t, { c: () => n });
-var l = i(734057);
-function n(e, t) {
-    let i = l.A.getChannel(t);
+"use strict";
+i.d(t, { c: () => a });
+var r = i(734057);
+function a(e, t) {
+    let i = r.A.getChannel(t);
     return null != i && e.bot && i.isPrivate() && null == i.rawRecipients.find((t) => t.id === e.id);
 }

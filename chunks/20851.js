@@ -1,47 +1,48 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    l = n(64700),
-    r = n(503698),
-    o = n.n(r),
-    a = n(384231),
-    s = n(903369),
-    u = n(491182),
-    c = n(538355),
-    d = n(699352),
-    m = n(715628),
-    f = n(752636),
-    g = n(798204);
-let p = l.memo(function (e) {
+"use strict";
+a.d(t, { A: () => p });
+var l = a(627968),
+    i = a(64700),
+    r = a(503698),
+    n = a.n(r),
+    s = a(384231),
+    o = a(903369),
+    d = a(491182),
+    c = a(538355),
+    u = a(699352),
+    _ = a(715628),
+    h = a(752636),
+    m = a(798204);
+let p = i.memo(function (e) {
     let {
             message: t,
-            channel: n,
+            channel: a,
             compact: r,
             className: p,
-            isGroupStart: A,
-            hideSimpleEmbedContent: v = !0,
-            disableInteraction: _,
-            previewGuildId: S,
-            preview: y,
-            author: h,
+            isGroupStart: g,
+            hideSimpleEmbedContent: f = !0,
+            disableInteraction: b,
+            previewGuildId: A,
+            preview: x,
+            author: v,
         } = e,
-        E = S ?? (0, s.U)(t),
-        b = (0, a.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        { content: N } = (0, c.A)(t, {
-            hideSimpleEmbedContent: v,
-            allowList: b,
-            allowHeading: b,
+        C = A ?? (0, o.U)(t),
+        E = (0, s.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        { content: y } = (0, c.A)(t, {
+            hideSimpleEmbedContent: f,
+            allowList: E,
+            allowHeading: E,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        C = l.useMemo(() => (0, f.A)({ ...e, channel: n, guildId: E }), [e, n, E]);
-    return (0, i.jsx)(u.A, {
+        I = i.useMemo(() => (0, h.A)({ ...e, channel: a, guildId: C }), [e, a, C]);
+    return (0, l.jsx)(d.A, {
         compact: r,
-        className: o()(p, { [g.iU]: !0, [g.HJ]: !r, [g._A]: A }),
-        childrenHeader: C,
-        childrenMessageContent: (0, m.A)(e, N),
-        childrenAccessories: null != n ? (0, d.J)({ message: t, channel: n, compact: r }, !1, !1) : null,
-        disableInteraction: _,
-        author: h,
-        preview: y,
+        className: n()(p, { [m.iU]: !0, [m.HJ]: !r, [m._A]: g }),
+        childrenHeader: I,
+        childrenMessageContent: (0, _.A)(e, y),
+        childrenAccessories: null != a ? (0, u.J)({ message: t, channel: a, compact: r }, !1, !1) : null,
+        disableInteraction: b,
+        author: v,
+        preview: x,
     });
 });

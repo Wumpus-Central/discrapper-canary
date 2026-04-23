@@ -1,23 +1,37 @@
-l.d(n, { A: () => g });
-var t = l(311907),
-    i = l(778712),
-    r = l(919395),
-    s = l(101058),
-    a = l(836602),
-    o = l(996988),
-    d = l(985253);
+t.d(n, { A: () => g });
+var l = t(311907),
+    i = t(778712),
+    r = t(919395),
+    a = t(101058),
+    s = t(836602),
+    o = t(996988),
+    d = t(985253);
 let c = (0, i.FT)(d.T[o.d.MODAL_V2].avatarSize),
-    u = { pendingThemeColors: void 0, avatarDecorationOverride: void 0, avatarOverride: void 0 };
+    u = {
+        pendingThemeColors: void 0,
+        avatarOverride: void 0,
+        avatarDecorationOverride: void 0,
+        bannerOverride: void 0,
+        profileEffectOverride: void 0,
+    };
 function g(e) {
-    let { user: n, guildId: l, allowEditingInModal: i } = e;
-    return (0, t.cf)([a.A], () => {
+    let { user: n, guildId: t, allowEditingInModal: i } = e;
+    return (0, l.cf)([s.A], () => {
         if (!i) return u;
-        let { pendingThemeColors: e, pendingAvatarDecoration: t, pendingAvatar: o } = a.A.getPendingChanges(l);
+        let {
+            pendingThemeColors: e,
+            pendingAvatarDecoration: l,
+            pendingAvatar: o,
+            pendingBanner: d,
+            pendingProfileEffect: g,
+        } = s.A.getPendingChanges(t);
         return {
             pendingThemeColors: e,
             avatarDecorationOverride:
-                void 0 === t ? void 0 : (0, r.lw)({ userValue: n.avatarDecoration, pendingValue: t, guildId: l }),
-            avatarOverride: (0, s.V7)({ userId: n.id, image: o, size: c }),
+                void 0 === l ? void 0 : (0, r.lw)({ userValue: n.avatarDecoration, pendingValue: l, guildId: t }),
+            avatarOverride: (0, a.V7)({ userId: n.id, image: o, size: c }),
+            bannerOverride: d,
+            profileEffectOverride: g,
         };
-    }, [n, l, i]);
+    }, [n, t, i]);
 }

@@ -1,6 +1,7 @@
-n.r(t), n.d(t, { default: () => l, messagesLoader: () => a });
+"use strict";
+n.r(t), n.d(t, { default: () => l, messagesLoader: () => r });
 let { createLoader: i } = n(919523),
-    a = i(
+    r = i(
         {
             bg: () => n.e("35299").then(n.t.bind(n, 703982, 19)),
             cs: () => n.e("55508").then(n.t.bind(n, 360607, 19)),
@@ -36,5 +37,5 @@ let { createLoader: i } = n(919523),
         },
         "en-US",
     ),
-    { makeMessagesProxy: r } = n(919523),
-    l = r(a);
+    { makeMessagesProxy: a } = n(919523),
+    l = a(r);

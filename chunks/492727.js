@@ -1,3 +1,4 @@
+"use strict";
 a.r(
     (e.exports = {
         textButton: "textButton__7a01b",

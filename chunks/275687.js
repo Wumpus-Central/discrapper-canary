@@ -1,63 +1,64 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
+    r = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(268218),
-    d = n(776231),
-    u = n(734057),
-    h = n(67281),
-    c = n(315955),
-    m = n(658610);
-let g = (0, o.Fe)({
+    c = n(776231),
+    d = n(734057),
+    u = n(67281),
+    _ = n(315955),
+    p = n(658610);
+let h = (0, o.Fe)({
     createPromise: () => Promise.all([n.e("57174"), n.e("91652"), n.e("49884")]).then(n.bind(n, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
-    renderLoader: () => (0, i.jsx)("div", { className: m.Lq }),
+    renderLoader: () => (0, i.jsx)("div", { className: p.Lq }),
 });
-function p(e) {
+function f(e) {
     let {
             attachment: t,
             posterUrl: n,
-            className: r,
+            className: a,
             active: o = !1,
-            autoPlay: p,
-            src: f,
+            autoPlay: f,
+            src: m,
             embed: A = !1,
-            fillContainer: x = !1,
-            minWidth: y = 500,
-            maxWidth: w = 1 / 0,
-            maxHeight: _ = 1 / 0,
-            channelId: E,
-            messageId: C,
-            showTextContent: S = w >= 250,
-            showParticipants: b = !0,
-            volume: I,
-            autoMute: v,
-            onVolumeChange: M,
-            onMutedChange: j,
-            onClick: T,
-            onContextMenu: N,
+            fillContainer: g = !1,
+            minWidth: E = 500,
+            maxWidth: b = 1 / 0,
+            maxHeight: I = 1 / 0,
+            channelId: y,
+            messageId: T,
+            showTextContent: v = b >= 250,
+            showParticipants: S = !0,
+            volume: C,
+            autoMute: x,
+            onVolumeChange: L,
+            onMutedChange: w,
+            onClick: R,
+            onContextMenu: O,
         } = e,
-        O = t.width ?? 0,
+        N = t.width ?? 0,
         P = t.height ?? 0,
-        D = (0, s.bG)([u.A], () => u.A.getBasicChannel(E)?.guild_id, [E]),
-        R = O > 0 && P > 0 ? O / P : 16 / 9,
-        L = Math.min(O > 0 ? O : y, w),
-        U = L / R;
-    U > _ && (L = (U = _) * R), L < y && (U = (L = y) / R);
-    let V = Math.round(Math.min(L, w)),
-        k = Math.round(Math.min(U, _)),
-        H = O > 0 && P > 0 ? Math.min(V / O, k / P, 1) : 1,
-        F = (0, d.AE)({ src: n, width: Math.round(O * H), height: Math.round(P * H) }),
-        [W, G] = a.useState(!1),
-        X = a.useCallback(
+        M = (0, s.bG)([d.A], () => d.A.getBasicChannel(y)?.guild_id, [y]),
+        j = N > 0 && P > 0 ? N / P : 16 / 9,
+        D = Math.min(N > 0 ? N : E, b),
+        k = D / j;
+    k > I && (D = (k = I) * j), D < E && (k = (D = E) / j);
+    let G = Math.round(Math.min(D, b)),
+        U = Math.round(Math.min(k, I)),
+        F = N > 0 && P > 0 ? Math.min(G / N, U / P, 1) : 1,
+        B = (0, c.AE)({ src: n, width: Math.round(N * F), height: Math.round(P * F) }),
+        [H, V] = r.useState(!1),
+        W = r.useCallback(
             (e) => {
-                let { playerState: n, isControlBarExpanded: a } = e;
-                return (0, i.jsx)(h.A, {
+                let { playerState: n, isControlBarExpanded: r } = e;
+                return (0, i.jsx)(u.A, {
                     createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                    participantIds: b
+                    participantIds: S
                         ? (t.clip_participants?.map((e) => {
                               let { id: t } = e;
                               return t;
@@ -65,45 +66,45 @@ function p(e) {
                         : [],
                     applicationId: t.application?.id,
                     title: t.title,
-                    guildId: D,
+                    guildId: M,
                     playerState: n,
-                    isControlBarExpanded: a,
-                    isFullScreen: W,
-                    showTextContent: S,
-                    shareCTA: null != C && null != E && (0, i.jsx)(c.A, { attachment: t, messageId: C, channelId: E }),
+                    isControlBarExpanded: r,
+                    isFullScreen: H,
+                    showTextContent: v,
+                    shareCTA: null != T && null != y && (0, i.jsx)(_.A, { attachment: t, messageId: T, channelId: y }),
                 });
             },
-            [t, D, W, b, S, E, C],
+            [t, M, H, S, v, y, T],
         );
     return (0, i.jsx)("div", {
-        className: l()(m.kL, { [m.HA]: x }, r),
+        className: l()(p.kL, { [p.HA]: g }, a),
         onClick: (e) => e.stopPropagation(),
         onKeyUp: A ? (e) => e.stopPropagation() : void 0,
         onKeyDown: A ? (e) => e.stopPropagation() : void 0,
-        onContextMenu: N,
-        style: x ? void 0 : { width: V, height: k },
-        children: (0, i.jsx)(g, {
+        onContextMenu: O,
+        style: g ? void 0 : { width: G, height: U },
+        children: (0, i.jsx)(h, {
             crossOrigin: null,
-            src: f,
+            src: m,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            poster: F,
+            poster: B,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
             active: o,
-            autoplay: p,
-            initialVolume: I,
-            initialMuted: v,
-            onVolumeChange: M,
-            onMutedChange: j,
+            autoplay: f,
+            initialVolume: C,
+            initialMuted: x,
+            onVolumeChange: L,
+            onMutedChange: w,
             orientation: "landscape",
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: X,
+            renderPersistentOverlay: W,
             parentTransitionState: null,
-            onFullscreenChange: G,
-            onClick: T,
+            onFullscreenChange: V,
+            onClick: R,
             withVideoHalo: !0,
-            objectFit: x ? "cover" : void 0,
+            objectFit: g ? "cover" : void 0,
         }),
     });
 }

@@ -1,40 +1,41 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var l = n(231723),
-    r = n(192308),
-    a = n(709055),
-    s = n(222823),
-    o = n(954571),
-    c = n(211401),
-    d = n(500049),
-    u = n(60809),
-    g = n(652215);
+"use strict";
+a.d(t, { A: () => h });
+var n = a(627968);
+a(64700);
+var r = a(231723),
+    i = a(192308),
+    s = a(709055),
+    l = a(222823),
+    o = a(954571),
+    d = a(211401),
+    c = a(500049),
+    _ = a(60809),
+    u = a(652215);
 function h(e) {
-    let { context: t, openInPopout: h, analyticsLocation: _ = "open-activity-shelf", initialState: m } = e;
-    h && (0, a.A)(g.MLl.CHANNEL_CALL_POPOUT);
-    let p = h ? l.KX : l.SY;
-    (0, c.k)(d.Se.DISMISSED), (0, c.R)(d.s4.VOICE, void 0, m, "channel" === t.type ? t.channel.id : void 0);
-    let f = "contextless" !== t.type && (s.Ay.hasUnread(t.channel.id) || s.Ay.getMentionCount(t.channel.id) > 0);
+    let { context: t, openInPopout: h, analyticsLocation: p = "open-activity-shelf", initialState: b } = e;
+    h && (0, s.A)(u.MLl.CHANNEL_CALL_POPOUT);
+    let g = h ? r.KX : r.SY;
+    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, b, "channel" === t.type ? t.channel.id : void 0);
+    let f = "contextless" !== t.type && (l.Ay.hasUnread(t.channel.id) || l.Ay.getMentionCount(t.channel.id) > 0);
     return (
-        o.default.track(g.HAw.VOICE_PANEL_TAB_OPENED, {
+        o.default.track(u.HAw.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: _,
-            source: d.s4.VOICE,
+            location: p,
+            source: c.s4.VOICE,
             is_chat_badged: f,
         }),
-        (0, r.openModalLazy)(
+        (0, i.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("93103"),
-                    n.e("97278"),
-                    n.e("35313"),
-                    n.e("41529"),
-                    n.e("12313"),
-                ]).then(n.bind(n, 126784));
-                return (n) => (0, i.jsx)(e, { context: t, ...n });
+                    a.e("93103"),
+                    a.e("97278"),
+                    a.e("35313"),
+                    a.e("41529"),
+                    a.e("12313"),
+                ]).then(a.bind(a, 126784));
+                return (a) => (0, n.jsx)(e, { context: t, ...a });
             },
-            { modalKey: u.gS, contextKey: p },
+            { modalKey: _.gS, contextKey: g },
         )
     );
 }

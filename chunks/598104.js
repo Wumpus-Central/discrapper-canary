@@ -1,35 +1,36 @@
+"use strict";
 a.d(t, { A: () => o });
-var i = a(627968),
-    r = a(64700),
-    l = a(97808),
-    n = a(571694),
-    s = a(954376);
-let o = r.memo(function (e) {
+var r = a(627968),
+    i = a(64700),
+    n = a(97808),
+    s = a(571694),
+    l = a(954376);
+let o = i.memo(function (e) {
     let {
         channel: t,
         size: a,
-        facepileSizeOverride: r,
+        facepileSizeOverride: i,
         isTyping: o,
-        status: c,
-        className: d,
+        status: d,
+        className: c,
         animated: _ = !1,
         ...u
     } = e;
     return t.recipients.length >= 2 && null == t.icon
-        ? (0, i.jsx)(s.A, {
+        ? (0, r.jsx)(l.A, {
               "aria-label": u["aria-label"],
               "aria-hidden": u["aria-hidden"],
-              className: d,
+              className: c,
               recipients: t.recipients,
-              size: r ?? a,
+              size: i ?? a,
               isTyping: o,
-              status: c,
+              status: d,
           })
-        : (0, i.jsx)(l.eu, {
+        : (0, r.jsx)(n.eu, {
               "aria-hidden": u["aria-hidden"],
               "aria-label": u["aria-label"],
-              className: d,
+              className: c,
               size: a,
-              src: (0, n.Y)(t, 80, _),
+              src: (0, s.Y)(t, 80, _),
           });
 });

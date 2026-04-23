@@ -1,38 +1,39 @@
-l.d(t, { A: () => o });
-var r = l(627968),
-    a = l(64700),
-    s = l(503698),
-    n = l.n(s),
-    i = l(173318);
-let c = a.forwardRef((e, t) => {
+"use strict";
+n.d(t, { A: () => o });
+var a = n(627968),
+    i = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(173318);
+let d = i.forwardRef((e, t) => {
     let {
-        muted: l = !1,
-        highlighted: a = !1,
-        avatar: s,
-        decorators: c,
+        muted: n = !1,
+        highlighted: i = !1,
+        avatar: r,
+        decorators: d,
         name: o,
-        subText: u,
-        avatarClassName: d,
-        innerClassName: m,
-        withDisplayNameStyles: A = !1,
+        subText: c,
+        avatarClassName: u,
+        innerClassName: _,
+        withDisplayNameStyles: m = !1,
     } = e;
-    return (0, r.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         ref: t,
-        className: n()(i.Zp, m, { [i.SU]: l, [i.mr]: a }),
+        className: l()(s.Zp, _, { [s.SU]: n, [s.mr]: i }),
         children: [
-            (0, r.jsx)("div", { className: n()(i.my, d), children: s }),
-            (0, r.jsxs)("div", {
-                className: n()(i.Qs, { [i.e8]: A }),
+            (0, a.jsx)("div", { className: l()(s.my, u), children: r }),
+            (0, a.jsxs)("div", {
+                className: l()(s.Qs, { [s.e8]: m }),
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: i.BG,
-                        children: [(0, r.jsx)("div", { className: i.UU, children: o }), c],
+                    (0, a.jsxs)("div", {
+                        className: s.BG,
+                        children: [(0, a.jsx)("div", { className: s.UU, children: o }), d],
                     }),
-                    null != u ? (0, r.jsx)("div", { className: i.Sv, children: u }) : null,
+                    null != c ? (0, a.jsx)("div", { className: s.Sv, children: c }) : null,
                 ],
             }),
         ],
     });
 });
-c.displayName = "AvatarWithText";
-let o = c;
+d.displayName = "AvatarWithText";
+let o = d;

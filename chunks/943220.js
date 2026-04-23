@@ -1,18 +1,19 @@
-t.d(s, { A: () => r });
-var a = t(627968);
-t(64700);
-var n = t(763754),
-    l = t(635071),
-    i = t(812299);
-function r(e) {
-    let s = (0, n.Ay)(e.message),
-        t = (0, i.y)({
+"use strict";
+i.d(t, { A: () => s });
+var n = i(627968);
+i(64700);
+var l = i(763754),
+    r = i(635071),
+    a = i(812299);
+function s(e) {
+    let t = (0, l.Ay)(e.message),
+        i = (0, a.y)({
             message: e.message,
             channel: e.channel,
             user: e.message?.author ?? e.userOverride,
             compact: !!e.compact,
             isRepliedMessage: !!e.isRepliedMessage,
         }),
-        r = {};
-    return null != t && (r[l.w.SYSTEM_TAG] = t), (0, a.jsx)(l.A, { ...e, author: s, decorations: r });
+        s = {};
+    return null != i && (s[r.w.SYSTEM_TAG] = i), (0, n.jsx)(r.A, { ...e, author: t, decorations: s });
 }

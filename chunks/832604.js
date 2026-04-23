@@ -1,38 +1,39 @@
-n.d(t, { A: () => u });
-var r = n(64700),
-    i = n(635377),
-    l = n.n(i),
-    a = n(306044);
-let o = new (l())({ max: 1e3 });
-function u(e, t) {
-    let [n, i] = r.useState();
+"use strict";
+i.d(t, { A: () => o });
+var n = i(64700),
+    l = i(635377),
+    r = i.n(l),
+    a = i(306044);
+let s = new (r())({ max: 1e3 });
+function o(e, t) {
+    let [i, l] = n.useState();
     return (
-        r.useEffect(() => {
-            if (null == e || null != t) return void i(void 0);
-            let n = o.get(e);
-            if (null != n) return void i(n);
-            let r = !1;
+        n.useEffect(() => {
+            if (null == e || null != t) return void l(void 0);
+            let i = s.get(e);
+            if (null != i) return void l(i);
+            let n = !1;
             return (
                 (0, a.A)()
                     .then((t) => {
                         null == t ||
-                            r ||
-                            t.identifyGame(e, (t, n) => {
-                                if (r) return;
-                                if (0 !== t || null == n.icon || "" === n.icon || null == n.name || "" === n.name)
-                                    return void i(void 0);
-                                let l = `data:image/png;base64,${n.icon}`;
-                                o.set(e, l), i(l);
+                            n ||
+                            t.identifyGame(e, (t, i) => {
+                                if (n) return;
+                                if (0 !== t || null == i.icon || "" === i.icon || null == i.name || "" === i.name)
+                                    return void l(void 0);
+                                let r = `data:image/png;base64,${i.icon}`;
+                                s.set(e, r), l(r);
                             });
                     })
                     .catch(() => {
-                        r || i(void 0);
+                        n || l(void 0);
                     }),
                 () => {
-                    r = !0;
+                    n = !0;
                 }
             );
         }, [e, t]),
-        t ?? n
+        t ?? i
     );
 }

@@ -1,23 +1,24 @@
-a.d(l, { M: () => s });
-var t = a(627968);
-a(64700);
-var n = a(63239),
-    o = a(786558),
-    i = a(799226);
-let r = { Artboard: {} };
-function s(e) {
-    let { artboard: l = "Artboard", stateMachine: a, ...s } = e,
-        { status: d, buffer: u } = (0, i.CE)(n.A),
-        c = (0, i.m2)(n.A);
-    return d === i.BW.Loading
+"use strict";
+n.d(t, { M: () => o });
+var i = n(627968);
+n(64700);
+var s = n(63239),
+    r = n(786558),
+    l = n(799226);
+let a = { Artboard: {} };
+function o(e) {
+    let { artboard: t = "Artboard", stateMachine: n, ...o } = e,
+        { status: c, buffer: d } = (0, l.CE)(s.A),
+        u = (0, l.m2)(s.A);
+    return c === l.BW.Loading
         ? null
-        : (0, t.jsx)(o.w, {
-              ...(c ? { key: "override" } : {}),
-              buffer: u,
-              artboard: l,
-              stateMachine: a,
-              artboardProperties: r,
-              ...s,
+        : (0, i.jsx)(r.w, {
+              ...(u ? { key: "override" } : {}),
+              buffer: d,
+              artboard: t,
+              stateMachine: n,
+              artboardProperties: a,
+              ...o,
           });
 }
-s.riveSrc = n.A;
+o.riveSrc = s.A;
