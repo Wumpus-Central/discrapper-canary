@@ -1,30 +1,33 @@
-l.d(t, { A: () => o });
+l.d(t, { A: () => c });
 var n = l(627968);
 l(64700);
 var i = l(503698),
     s = l.n(i),
-    a = l(939249),
-    r = l(834730),
-    d = l(505244);
-function o(e) {
-    let { steps: t, stepIndex: l, onClick: i } = e;
+    a = l(460890),
+    r = l(939249),
+    d = l(834730),
+    o = l(505244);
+function c(e) {
+    let { steps: t, stepIndex: l, onClick: i } = e,
+        { i18n: c } = (0, a.G9)();
     return (0, n.jsx)("div", {
-        className: d.kL,
+        className: o.kL,
         role: "tablist",
-        children: t.map((e, t) => {
-            let o = l === t;
+        children: t.map((e, a) => {
+            let u = l === a;
             return (0, n.jsxs)(
-                a.D,
+                r.D,
                 {
-                    onClick: () => i(t),
-                    className: d._h,
+                    onClick: () => i(a),
+                    className: o._h,
                     role: "tab",
-                    "aria-selected": o,
-                    "aria-current": o ? "step" : void 0,
+                    "aria-selected": u,
+                    "aria-label": `${c.STEP_INDICATOR(a + 1, t.length)}: ${e}`,
+                    "aria-current": u ? "step" : void 0,
                     children: [
-                        (0, n.jsx)("div", { className: s()(d.hr, { [d.YD]: o }) }),
-                        (0, n.jsx)(r.E, {
-                            color: o ? "text-brand" : "text-muted",
+                        (0, n.jsx)("div", { className: s()(o.hr, { [o.YD]: u }) }),
+                        (0, n.jsx)(d.E, {
+                            color: u ? "text-brand" : "text-muted",
                             variant: "text-xs/normal",
                             children: e,
                         }),
