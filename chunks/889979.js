@@ -1,12 +1,13 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => h });
 var i = n(554146),
     r = n(439372),
-    l = n(826673),
-    a = n(367727),
+    l = n(367727),
+    a = n(710195),
     s = n(733391),
     o = n(832163),
-    d = n(533406);
-class u extends r.A {
+    d = n(271049),
+    u = n(533406);
+class c extends r.A {
     _didAttemptToOpenModal = !1;
     _didConnectionOpen = !1;
     actions = {
@@ -15,7 +16,9 @@ class u extends r.A {
         SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: (e) => this._handleStorefrontConfigFetchSuccess(e),
         SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS: () => this._handleShowAnnouncementModal(),
     };
-    stores = new Map().set(o.A, () => this._handleSocialLayerStorefrontUpdate());
+    stores = new Map()
+        .set(o.A, () => this._handleSocialLayerStorefrontUpdate())
+        .set(a.A, () => this._handleExperimentChange());
     _handleLogout = () => {
         (this._didAttemptToOpenModal = !1), (this._didConnectionOpen = !1);
     };
@@ -25,22 +28,31 @@ class u extends r.A {
     _handleSocialLayerStorefrontUpdate = () => {
         this._handleShowAnnouncementModal();
     };
+    _handleExperimentChange = () => {
+        this._handleShowAnnouncementModal();
+    };
     _handleStorefrontConfigFetchSuccess = (e) => {
         let { config: t } = e,
             n = t.announcementModalConfig?.version ?? 0;
         0 === n ||
-            (0, a.En)(i.M.GAME_SHOP_ANNOUNCEMENT_MODAL, n).isDismissed ||
+            (0, l.En)(i.M.GAME_SHOP_ANNOUNCEMENT_MODAL, n).isDismissed ||
             ("idle" === o.A.getStorefrontAffinity().state && (0, s.dS)(), this._handleShowAnnouncementModal());
     };
     _handleShowAnnouncementModal = () => {
-        if (this._didAttemptToOpenModal || !this._didConnectionOpen) return;
+        if (
+            this._didAttemptToOpenModal ||
+            !this._didConnectionOpen ||
+            !(0, d.N)({ location: "SocialLayerStorefrontAnnouncementManager" })
+        )
+            return;
         let e = o.A.getStorefrontAffinity(),
             t = o.A.getAnnouncementModalConfig(),
             n = t?.version ?? 0,
             r = "success" === e.state && e.affinity[t?.applicationId ?? ""]?.isEligible;
-        !(0 === n || (0, l.k8)(i.M.GAME_SHOP_ANNOUNCEMENT_MODAL)) &&
+        0 !== n &&
+            !(0, l.En)(i.M.GAME_SHOP_ANNOUNCEMENT_MODAL, n).isDismissed &&
             r &&
-            ((this._didAttemptToOpenModal = !0), (0, d.B)());
+            ((this._didAttemptToOpenModal = !0), (0, u.B)());
     };
 }
-let c = new u();
+let h = new c();
