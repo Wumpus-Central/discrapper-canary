@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -22,27 +22,27 @@ var i = n(627968),
     I = n(518950),
     v = n(652215),
     y = n(985018),
-    S = n(132246);
+    S = n(253654);
 let b = l.lazy(() => n.e("94436").then(n.bind(n, 660207)));
 function N(e) {
     let { played: t, duration: n, currentTime: l } = e,
         s = null == n ? "--:--" : t ? (0, g.rB)(Math.ceil(n - l)) : (0, g.rB)(Math.ceil(n));
     return (0, i.jsx)(o.E, { variant: "text-sm/normal", className: S.p0, tabularNumbers: !0, children: s });
 }
-let T = l.memo(function (e) {
+let j = l.memo(function (e) {
     let t,
         {
             src: n,
             volume: s = 1,
             onVolumeChange: g,
-            onMute: T,
-            waveform: j,
+            onMute: j,
+            waveform: T,
             durationSecs: R,
             onVolumeShow: w,
             onVolumeHide: L,
             onPlay: M,
-            onPause: k,
-            onError: O,
+            onPause: O,
+            onError: k,
             playbackCacheKey: P,
         } = e,
         D = l.useRef(null),
@@ -92,8 +92,8 @@ let T = l.memo(function (e) {
             let e = D.current;
             if (null == e) return;
             let t = e.error;
-            O?.(t);
-        }, [O]),
+            k?.(t);
+        }, [k]),
         em = l.useCallback(
             (e) => {
                 let t = (0, C.w)(e, 1);
@@ -102,8 +102,8 @@ let T = l.memo(function (e) {
             [g],
         ),
         ep = l.useCallback(() => {
-            Z(!z), T?.(!z);
-        }, [z, T]),
+            Z(!z), j?.(!z);
+        }, [z, j]),
         ef = l.useCallback(() => {
             $(!0);
         }, []),
@@ -121,7 +121,7 @@ let T = l.memo(function (e) {
         !G && q && F(!0);
     }, [q, G]);
     let ex = l.useRef(null),
-        eA = { played: X, currentTime: B, onPause: k, onPlay: M },
+        eA = { played: X, currentTime: B, onPause: O, onPlay: M },
         eC = l.useRef(eA);
     l.useEffect(() => {
         eC.current = eA;
@@ -179,7 +179,7 @@ let T = l.memo(function (e) {
             }
         }, [n, q, Y]);
     let eE = q ? c.E : u.u,
-        eI = q ? y.intl.string(y.t.ZcgDJX) : y.intl.string(y.t.RscU7I),
+        eI = q ? y.intl.string(y.t["3XohGn"]) : y.intl.string(y.t.AlHqHT),
         ev = y.intl.formatToPlainString(y.t.LgCPMt, { playbackRate: V }),
         ey = `${V.toString().replace(/^0/, "")}X`;
     t =
@@ -217,6 +217,8 @@ let T = l.memo(function (e) {
     return (0, i.jsxs)("div", {
         className: r()(S.kL, { [S.he]: q }),
         onMouseEnter: er,
+        role: "region",
+        "aria-label": y.intl.string(y.t.c8U6xd),
         children: [
             (0, i.jsx)("div", {
                 className: S.Kl,
@@ -230,7 +232,7 @@ let T = l.memo(function (e) {
             }),
             (0, i.jsx)(E.A, {
                 className: S.ou,
-                waveform: j,
+                waveform: T,
                 currentTime: B,
                 duration: W ?? 1,
                 playing: q,

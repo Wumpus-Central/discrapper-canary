@@ -31,6 +31,7 @@ function d(e) {
                             onClick: function (e) {
                                 e.stopPropagation(), (0, o.Ps)(n);
                             },
+                            "aria-label": c.intl.string(c.t.cpT0Cq),
                         }),
                     }),
                 ],

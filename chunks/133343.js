@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
-    Ay: () => eR,
-    C: () => eC,
-    HG: () => eE,
-    L0: () => eS,
-    MD: () => ej,
-    NO: () => eA,
-    N_: () => eI,
-    Sk: () => eN,
-    Vu: () => ex,
-    Zx: () => e_,
-    ck: () => eb,
-    ml: () => ev,
-    uW: () => eT,
-    v7: () => ey,
+    Ay: () => ew,
+    C: () => eE,
+    HG: () => eI,
+    L0: () => eb,
+    MD: () => eT,
+    NO: () => eC,
+    N_: () => ev,
+    Sk: () => ej,
+    Vu: () => eA,
+    Zx: () => ex,
+    ck: () => eN,
+    ml: () => ey,
+    uW: () => eR,
+    v7: () => eS,
 });
 var i = n(627968),
     l = n(64700),
@@ -70,21 +70,22 @@ var i = n(627968),
     et = n(486319),
     en = n(355622),
     ei = n(415409),
-    el = n(824842),
-    es = n(612394),
-    er = n(877146),
-    ea = n(147025),
-    eo = n(776384),
-    ec = n(171593),
-    eu = n(257108),
-    ed = n(135261),
-    eh = n(711371),
-    em = n(476739),
-    ep = n(652215);
+    el = n(416379),
+    es = n(824842),
+    er = n(612394),
+    ea = n(877146),
+    eo = n(147025),
+    ec = n(776384),
+    eu = n(171593),
+    ed = n(257108),
+    eh = n(135261),
+    em = n(711371),
+    ep = n(476739),
+    ef = n(652215);
 n(827669);
-var ef = n(698279),
-    eg = n(871655);
-function e_(e, t, s, r, a) {
+var eg = n(698279),
+    e_ = n(871655);
+function ex(e, t, s, r, a) {
     let [o, c] = l.useState(!1),
         u = l.useCallback(
             (l, d, h, m, f, g) => {
@@ -146,7 +147,7 @@ function e_(e, t, s, r, a) {
         ),
     };
 }
-function ex(e, t, n) {
+function eA(e, t, n) {
     return l.useCallback(
         (i) => {
             if (t === en.oU.CREATE_FORUM_POST || t === en.oU.CREATE_ANNOUNCEMENT_POST) n.current?.insertGIF(i);
@@ -165,7 +166,7 @@ function ex(e, t, n) {
         [n, e, t],
     );
 }
-function eA(e) {
+function eC(e) {
     return l.useCallback(
         (t) => {
             let { emoji: n, willClose: i } = t,
@@ -175,14 +176,14 @@ function eA(e) {
         [e],
     );
 }
-function eC(e) {
+function eE(e) {
     let { editorRef: t, disabled: n, textValue: i, channelId: s, chatInputType: r, submit: a } = e,
         { analyticsLocations: o } = (0, E.Ay)();
     return l.useCallback(
         (e, l) => {
             n ||
                 (r === en.oU.CREATE_ANNOUNCEMENT_POST || (0, G.YS)(l, i, s, r.drafts.type)
-                    ? ((0, es.fh)({
+                    ? ((0, er.fh)({
                           sticker: e,
                           stickerSelectLocation: l,
                           isReplacement: null != U.A.getStickerPreview(s, r.drafts.type),
@@ -196,7 +197,7 @@ function eC(e) {
         [n, i, s, t, o, a, r],
     );
 }
-function eE(e) {
+function eI(e) {
     return l.useCallback(
         (t) => {
             let n = e.current;
@@ -205,21 +206,21 @@ function eE(e) {
         [e],
     );
 }
-function eI(e, t, n) {
+function ev(e, t, n) {
     let i = l.useCallback(() => {
-            t || (0, w.r$)(ef.kx.EMOJI, e, n);
+            t || (0, w.r$)(eg.kx.EMOJI, e, n);
         }, [t, e, n]),
         s = l.useCallback(() => {
-            !t && e.gifs?.allowSending && (0, w.r$)(ef.kx.GIF, e, n);
+            !t && e.gifs?.allowSending && (0, w.r$)(eg.kx.GIF, e, n);
         }, [t, e, n]),
         r = l.useCallback(() => {
-            !t && e.stickers?.allowSending && (0, w.r$)(ef.kx.STICKER, e, n);
+            !t && e.stickers?.allowSending && (0, w.r$)(eg.kx.STICKER, e, n);
         }, [t, e, n]);
-    (0, $.Vo)({ event: ep.jej.TOGGLE_EMOJI_POPOUT, handler: i }),
-        (0, $.Vo)({ event: ep.jej.TOGGLE_GIF_PICKER, handler: s }),
-        (0, $.Vo)({ event: ep.jej.TOGGLE_STICKER_PICKER, handler: r });
+    (0, $.Vo)({ event: ef.jej.TOGGLE_EMOJI_POPOUT, handler: i }),
+        (0, $.Vo)({ event: ef.jej.TOGGLE_GIF_PICKER, handler: s }),
+        (0, $.Vo)({ event: ef.jej.TOGGLE_STICKER_PICKER, handler: r });
 }
-function ev(e, t, n) {
+function ey(e, t, n) {
     let [i] = l.useState(() => new a.EventEmitter());
     return (
         l.useEffect(() => {
@@ -233,7 +234,7 @@ function ev(e, t, n) {
         }
     );
 }
-function ey() {
+function eS() {
     let e = l.useRef(null),
         t = l.useCallback(() => {
             e.current?.onMaybeShowAutocomplete();
@@ -243,12 +244,12 @@ function ey() {
         }, []);
     return { autocompleteRef: e, handleMaybeShowAutocomplete: t, handleHideAutocomplete: n };
 }
-function eS(e) {
+function eb(e) {
     let t = l.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function eb(e) {
+function eN(e) {
     let [t, n] = l.useState(0);
     return {
         editorHeight: t,
@@ -260,7 +261,7 @@ function eb(e) {
         ),
     };
 }
-function eN(e, t, n, i) {
+function ej(e, t, n, i) {
     let l = e.getGuildId(),
         s = (0, m.bG)([k.A], () => null != l && k.A.isLurking(l), [l]),
         r = (0, m.bG)([H.Ay, q.default], () => {
@@ -270,23 +271,23 @@ function eN(e, t, n, i) {
         a = (0, m.cf)([W.A], () => {
             let l = e.isPrivate(),
                 s = W.A.computePermissions(e),
-                a = h.zy(s, ep.xBc.CREATE_PUBLIC_THREADS) || h.zy(s, ep.xBc.CREATE_PRIVATE_THREADS),
+                a = h.zy(s, ef.xBc.CREATE_PUBLIC_THREADS) || h.zy(s, ef.xBc.CREATE_PRIVATE_THREADS),
                 o =
                     (!t.permissions?.requireCreateTherads || a) &&
-                    (!t.permissions?.requireSendMessages || h.zy(s, ep.xBc.SEND_MESSAGES)),
-                c = o && h.zy(s, ep.xBc.ATTACH_FILES),
+                    (!t.permissions?.requireSendMessages || h.zy(s, ef.xBc.SEND_MESSAGES)),
+                c = o && h.zy(s, ef.xBc.ATTACH_FILES),
                 u = null != n,
                 d = (0, F.UJ)(e);
             return {
                 disabled: i || r || (!l && !o) || d,
                 canAttachFiles: !0 === t.attachments && (l || r || c || u),
                 canCreateThreads: a,
-                canEveryoneSendMessages: Q.MJ(ep.xBc.SEND_MESSAGES, e),
+                canEveryoneSendMessages: Q.MJ(ef.xBc.SEND_MESSAGES, e),
             };
         }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, i, r]);
     return { isLurking: s, isPendingMember: r, ...a };
 }
-function ej(e, t, n) {
+function eT(e, t, n) {
     let [i, s, r] = (0, w.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], u.x),
         a = (0, m.bG)([v.A], () => v.A.shouldShowPopup() && v.A.activeViewType() === e && v.A.activeChannelId() === n);
     l.useEffect(
@@ -301,7 +302,7 @@ function ej(e, t, n) {
         c = null == i || null == s || s !== e || r !== n;
     return { expressionPickerView: i, shouldHideExpressionPicker: c, handleOuterClick: o };
 }
-let eT = (e, t) => ({
+let eR = (e, t) => ({
         handleAutocompleteVisibilityChange: l.useCallback(
             (n) => {
                 n && (0, w.v8)(e, t);
@@ -309,7 +310,7 @@ let eT = (e, t) => ({
             [e, t],
         ),
     }),
-    eR = l.memo(
+    ew = l.memo(
         l.forwardRef(function (e, t) {
             let n,
                 {
@@ -336,81 +337,81 @@ let eT = (e, t) => ({
                     onBlur: Y,
                     onFocus: $,
                     onKeyDown: Q,
-                    onSubmit: es,
-                    promptToUpload: ef,
-                    highlighted: eR,
-                    canMentionRoles: ew,
-                    canMentionChannels: eL,
-                    maxCharacterCount: eM,
-                    showRemainingCharsAfterCount: eO,
-                    allowNewLines: ek = !0,
-                    characterCountClassName: eP,
-                    "aria-describedby": eD,
-                    "aria-labelledby": eU,
-                    setEditorRef: eV,
-                    autoCompletePosition: eG,
-                    children: eF,
-                    disableThemedBackground: eB = !1,
-                    emojiPickerCloseOnModalOuterClick: eH,
-                    parentModalKey: eW,
-                    pendingScheduledMessage: eK,
-                    showValueWhenDisabled: ez = !1,
+                    onSubmit: er,
+                    promptToUpload: eg,
+                    highlighted: ew,
+                    canMentionRoles: eL,
+                    canMentionChannels: eM,
+                    maxCharacterCount: eO,
+                    showRemainingCharsAfterCount: ek,
+                    allowNewLines: eP = !0,
+                    characterCountClassName: eD,
+                    "aria-describedby": eU,
+                    "aria-labelledby": eV,
+                    setEditorRef: eG,
+                    autoCompletePosition: eF,
+                    children: eB,
+                    disableThemedBackground: eH = !1,
+                    emojiPickerCloseOnModalOuterClick: eW,
+                    parentModalKey: eK,
+                    pendingScheduledMessage: ez,
+                    showValueWhenDisabled: eZ = !1,
                 } = e;
             c()(null != U, "chat input type must be set");
-            let { analyticsLocations: eZ } = (0, E.Ay)(C.A.CHANNEL_TEXT_AREA),
-                eq = eS(t),
-                eY = l.useRef(null),
+            let { analyticsLocations: eq } = (0, E.Ay)(C.A.CHANNEL_TEXT_AREA),
+                eY = eb(t),
                 eJ = l.useRef(null),
                 e$ = l.useRef(null),
                 eX = l.useRef(null),
-                eQ = l.useRef(null);
-            eV?.(e$.current);
-            let e0 = (0, I.A)(k),
-                [e1, e2] = l.useState(!e0);
-            (0, x.i4)(eq, (e) => {
+                eQ = l.useRef(null),
+                e0 = l.useRef(null);
+            eG?.(eX.current);
+            let e1 = (0, I.A)(k),
+                [e2, e3] = l.useState(!e1);
+            (0, x.i4)(eY, (e) => {
                 let { width: t } = e;
-                return e2(!e0 && (null == t || t > 450));
+                return e3(!e1 && (null == t || t > 450));
             });
-            let { activeCommand: e3, activeCommandSection: e6 } = (0, m.cf)([S.A], () => ({
+            let { activeCommand: e6, activeCommandSection: e7 } = (0, m.cf)([S.A], () => ({
                     activeCommand: U.commands?.enabled ? S.A.getActiveCommand(k.id) : null,
                     activeCommandSection: U.commands?.enabled ? S.A.getActiveCommandSection(k.id) : null,
                 })),
                 {
-                    isLurking: e7,
-                    isPendingMember: e4,
-                    disabled: e8,
-                    canAttachFiles: e5,
-                    canCreateThreads: e9,
-                    canEveryoneSendMessages: te,
-                } = eN(k, U, e3, v),
-                tt = U.toolbarType === en.O1.STATIC,
-                tn = !B.D_.useSetting() && !(0, ee.isAndroidWeb)() && null != window.ResizeObserver,
-                ti = !tn || !U.commands?.enabled || !V || "/" !== s,
-                tl = (0, P.A)(),
-                { fontSize: ts } = (0, m.cf)([A.A], () => ({ fontSize: A.A.fontSize })),
-                tr = (0, m.bG)([z.A], () => z.A.isEnabled());
-            eI(U, e8, k.id);
-            let { eventEmitter: ta, handleEditorSelectionChanged: to } = ev(e$, s, a),
-                tc = l.useRef(s);
-            tc.current = s;
-            let tu = l.useCallback(
+                    isLurking: e4,
+                    isPendingMember: e8,
+                    disabled: e5,
+                    canAttachFiles: e9,
+                    canCreateThreads: te,
+                    canEveryoneSendMessages: tt,
+                } = ej(k, U, e6, v),
+                tn = U.toolbarType === en.O1.STATIC,
+                ti = !B.D_.useSetting() && !(0, ee.isAndroidWeb)() && null != window.ResizeObserver,
+                tl = !ti || !U.commands?.enabled || !V || "/" !== s,
+                ts = (0, P.A)(),
+                { fontSize: tr } = (0, m.cf)([A.A], () => ({ fontSize: A.A.fontSize })),
+                ta = (0, m.bG)([z.A], () => z.A.isEnabled());
+            ev(U, e5, k.id);
+            let { eventEmitter: to, handleEditorSelectionChanged: tc } = ey(eX, s, a),
+                tu = l.useRef(s);
+            tu.current = s;
+            let td = l.useCallback(
                     (e, t, n) => {
-                        "/" === t && "" === tc.current && U.commands?.enabled && ta.emit("command-sentinel-typed"),
+                        "/" === t && "" === tu.current && U.commands?.enabled && to.emit("command-sentinel-typed"),
                             Z?.(e, t, n);
                     },
-                    [Z, U.commands?.enabled, ta],
+                    [Z, U.commands?.enabled, to],
                 ),
-                { submitting: td, submit: th, handleSubmit: tm } = e_(es, U, e$, eQ, k.id),
-                { autocompleteRef: tp, handleMaybeShowAutocomplete: tf, handleHideAutocomplete: tg } = ey(),
-                t_ = ex(th, U, e$),
-                tx = eA(e$),
-                tA = eC({ editorRef: e$, disabled: e8, textValue: s, channelId: k.id, chatInputType: U, submit: es }),
-                tC = l.useCallback(
+                { submitting: th, submit: tm, handleSubmit: tp } = ex(er, U, eX, e0, k.id),
+                { autocompleteRef: tf, handleMaybeShowAutocomplete: tg, handleHideAutocomplete: t_ } = eS(),
+                tx = eA(tm, U, eX),
+                tA = eC(eX),
+                tC = eE({ editorRef: eX, disabled: e5, textValue: s, channelId: k.id, chatInputType: U, submit: er }),
+                tE = l.useCallback(
                     (e, t, n) => {
-                        let i = e$.current;
+                        let i = eX.current;
                         null != e &&
                             null != i &&
-                            (J.default.track(ep.HAw.SOUNDMOJI_SELECT, {
+                            (J.default.track(ef.HAw.SOUNDMOJI_SELECT, {
                                 channel_id: k.id,
                                 guild_id: k.guild_id,
                                 sound_guild_id: e.guildId,
@@ -421,32 +422,32 @@ let eT = (e, t) => ({
                             n && (0, w.v8)(),
                             i?.focus();
                     },
-                    [e$, k.id, k.guild_id],
+                    [eX, k.id, k.guild_id],
                 ),
-                tE = eE(e$),
-                tI = l.useCallback(() => eQ?.current?.hide(), []),
-                { editorHeight: tv, handleResize: ty } = eb(q),
+                tI = eI(eX),
+                tv = l.useCallback(() => e0?.current?.hide(), []),
+                { editorHeight: ty, handleResize: tS } = eN(q),
                 {
-                    handleTab: tS,
-                    handleEnter: tb,
-                    handleMoveSelection: tN,
+                    handleTab: tb,
+                    handleEnter: tN,
+                    handleMoveSelection: tj,
                 } = ((n = l.useCallback(
-                    () => !!(!ti && eY.current?.onTabOrEnter(!1)) || tp.current?.onTabOrEnter(!1) || !1,
-                    [ti, eY, tp],
+                    () => !!(!tl && eJ.current?.onTabOrEnter(!1)) || tf.current?.onTabOrEnter(!1) || !1,
+                    [tl, eJ, tf],
                 )),
                 {
                     handleTab: n,
                     handleEnter: l.useCallback(
-                        () => !!(!ti && eY.current?.onTabOrEnter(!0)) || tp.current?.onTabOrEnter(!0) || !1,
-                        [ti, eY, tp],
+                        () => !!(!tl && eJ.current?.onTabOrEnter(!0)) || tf.current?.onTabOrEnter(!0) || !1,
+                        [tl, eJ, tf],
                     ),
                     handleMoveSelection: l.useCallback(
-                        (e) => !!(!ti && eY.current?.onMoveSelection(e)) || tp.current?.onMoveSelection(e) || !1,
-                        [ti, eY, tp],
+                        (e) => !!(!tl && eJ.current?.onMoveSelection(e)) || tf.current?.onMoveSelection(e) || !1,
+                        [tl, eJ, tf],
                     ),
                 }),
-                { expressionPickerView: tj, shouldHideExpressionPicker: tT, handleOuterClick: tR } = ej(U, e$, k.id),
-                { selectedAutocompleteInputType: tw, selectedAutocompleteInputError: tL } = (function (e, t) {
+                { expressionPickerView: tT, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eT(U, eX, k.id),
+                { selectedAutocompleteInputType: tL, selectedAutocompleteInputError: tM } = (function (e, t) {
                     let [n, i] = l.useState({
                             selectedAutocompleteInputType: null,
                             selectedAutocompleteInputError: !1,
@@ -454,7 +455,7 @@ let eT = (e, t) => ({
                         s = l.useCallback(() => {
                             let e,
                                 n = t.current?.getSlateEditor();
-                            null != n && (e = eh.VW.getSelectedParentOfType(n, T.mk)?.[0]),
+                            null != n && (e = em.VW.getSelectedParentOfType(n, T.mk)?.[0]),
                                 i({
                                     selectedAutocompleteInputType: e?.type ?? null,
                                     selectedAutocompleteInputError: e?.error ?? !1,
@@ -474,213 +475,214 @@ let eT = (e, t) => ({
                         ),
                         n
                     );
-                })(ta, e$),
-                { handleAutocompleteVisibilityChange: tM } = eT(U, k.id),
-                tO = (0, N.A)({ type: U, channelId: k.id }),
-                tk = l.useCallback(() => {
-                    ta.emit("submit-failure");
-                }, [ta]);
-            (0, et.R)(ta, k.guild_id, k.id);
-            let tP = null != K,
-                tD = (e8 && !((e7 || e4) && te)) || (td && U.submit?.useDisabledStylesOnSubmit),
-                tU = null;
-            null != e3 ? (tU = H?.(e3, e6, eg.g$)) : (!e8 || e9) && (tU = F?.(tP, eg.g$));
-            let tV = tn && null != a && !e8 && U.showCharacterCount && null == e3,
-                tG = tn && !__OVERLAY__ && null != a && null == e3 && U.toolbarType !== en.O1.NONE && !e8,
-                tF = (0, er.Y)({
+                })(to, eX),
+                { handleAutocompleteVisibilityChange: tO } = eR(U, k.id),
+                tk = (0, N.A)({ type: U, channelId: k.id }),
+                tP = l.useCallback(() => {
+                    to.emit("submit-failure");
+                }, [to]);
+            (0, et.R)(to, k.guild_id, k.id);
+            let tD = null != K,
+                tU = (e5 && !((e4 || e8) && tt)) || (th && U.submit?.useDisabledStylesOnSubmit),
+                tV = null;
+            null != e6 ? (tV = H?.(e6, e7, e_.g$)) : (!e5 || te) && (tV = F?.(tD, e_.g$));
+            let tG = ti && null != a && !e5 && U.showCharacterCount && null == e6,
+                tF = ti && !__OVERLAY__ && null != a && null == e6 && U.toolbarType !== en.O1.NONE && !e5,
+                tB = (0, ea.Y)({
                     channel: k,
                     type: U,
-                    activeCommand: e3,
+                    activeCommand: e6,
                     pendingReply: K,
-                    pendingScheduledMessage: eK,
-                    selectedAutocompleteInputType: tw,
-                    selectedAutocompleteInputError: tL,
+                    pendingScheduledMessage: ez,
+                    selectedAutocompleteInputType: tL,
+                    selectedAutocompleteInputError: tM,
                 }),
-                tB = 0 === s.trim().length,
-                tH = U.layout === en.wt.INLINE,
-                tW = U.layout === en.wt.FLUSH,
-                tK = (0, i.jsx)("div", { ref: eJ, className: eg.BW }),
-                tz = tO ? (0, i.jsx)(y.A, { align: "right", positionTargetRef: eJ, channel: k }) : null,
-                tZ =
+                tH = 0 === s.trim().length,
+                tW = null != K ? [eU, el.i].filter(Boolean).join(" ") : eU,
+                tK = U.layout === en.wt.INLINE,
+                tz = U.layout === en.wt.FLUSH,
+                tZ = (0, i.jsx)("div", { ref: e$, className: e_.BW }),
+                tq = tk ? (0, i.jsx)(y.A, { align: "right", positionTargetRef: e$, channel: k }) : null,
+                tY =
                     null != W
                         ? W()
-                        : (0, i.jsx)(ea.A, {
+                        : (0, i.jsx)(eo.A, {
                               type: U,
-                              disabled: e8,
+                              disabled: e5,
                               channel: k,
-                              handleSubmit: tm,
-                              isEmpty: tB,
-                              showAllButtons: e1,
+                              handleSubmit: tp,
+                              isEmpty: tH,
+                              showAllButtons: e2,
                           }),
-                tq = tV
-                    ? (0, i.jsx)(eu.A, {
+                tJ = tG
+                    ? (0, i.jsx)(ed.A, {
                           type: U,
                           textValue: s,
-                          className: eP,
-                          maxCharacterCount: eM,
-                          showRemainingCharsAfterCount: eO,
+                          className: eD,
+                          maxCharacterCount: eO,
+                          showRemainingCharsAfterCount: ek,
                       })
                     : null;
             return (
                 l.useEffect(() => {
-                    V && X._.dispatch(ep.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: k.id });
+                    V && X._.dispatch(ef.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: k.id });
                 }, [V, k.id]),
                 (0, i.jsx)(R.Sv, {
-                    value: ta,
+                    value: to,
                     children: (0, i.jsxs)(E.f5, {
-                        value: eZ,
+                        value: eq,
                         children: [
-                            tG && tt
-                                ? (0, i.jsx)(em.A, { editorRef: e$, type: U, channel: k })
-                                : tG
-                                  ? (0, i.jsx)(ed.A, { ref: eQ, editorRef: e$, containerRef: eX, options: U.markdown })
+                            tF && tn
+                                ? (0, i.jsx)(ep.A, { editorRef: eX, type: U, channel: k })
+                                : tF
+                                  ? (0, i.jsx)(eh.A, { ref: e0, editorRef: eX, containerRef: eQ, options: U.markdown })
                                   : null,
                             (0, i.jsxs)("div", {
-                                ref: eq,
+                                ref: eY,
                                 className: r()(o, {
-                                    [eg.gM]: !0,
-                                    [eg.h9]: tD,
-                                    [eg.mr]: eR,
-                                    [eg.Wn]: d.Fr,
-                                    [eg.Ls]: tH,
-                                    [eg.AH]: tW,
-                                    [eg.z3]: null != G,
+                                    [e_.gM]: !0,
+                                    [e_.h9]: tU,
+                                    [e_.mr]: ew,
+                                    [e_.Wn]: d.Fr,
+                                    [e_.Ls]: tK,
+                                    [e_.AH]: tz,
+                                    [e_.z3]: null != G,
                                 }),
                                 children: [
-                                    tH || tW ? null : (0, i.jsx)(er.A, { bars: tF }),
+                                    tK || tz ? null : (0, i.jsx)(ea.A, { bars: tB }),
                                     (0, i.jsxs)("div", {
-                                        ref: eX,
-                                        onScroll: tI,
+                                        ref: eQ,
+                                        onScroll: tv,
                                         className: r()(u, {
-                                            [eg.xx]: !0,
-                                            [eg.k6]: !eB,
-                                            [eg.Ri]: tF.stacked.length > 0,
+                                            [e_.xx]: !0,
+                                            [e_.k6]: !eH,
+                                            [e_.Ri]: tB.stacked.length > 0,
                                         }),
                                         children: [
-                                            (0, i.jsx)(el.A, { channelId: k.id, chatInputType: U }),
+                                            (0, i.jsx)(es.A, { channelId: k.id, chatInputType: U }),
                                             U.hideAttachmentArea
                                                 ? null
-                                                : (0, i.jsx)(ec.A, { channelId: k.id, type: U, canAttachFiles: e5 }),
+                                                : (0, i.jsx)(eu.A, { channelId: k.id, type: U, canAttachFiles: e9 }),
                                             (0, i.jsxs)("div", {
-                                                className: r()(eg.vW, {
-                                                    [eg.BF]: tD,
-                                                    [eg.RL]:
-                                                        U !== en.oU.EDIT && (null != tU || (tD && null == tU) || e7),
-                                                    [eg.fk]: U === en.oU.THREAD_CREATION,
-                                                    [eg.TZ]:
+                                                className: r()(e_.vW, {
+                                                    [e_.BF]: tU,
+                                                    [e_.RL]:
+                                                        U !== en.oU.EDIT && (null != tV || (tU && null == tV) || e4),
+                                                    [e_.fk]: U === en.oU.THREAD_CREATION,
+                                                    [e_.TZ]:
                                                         U === en.oU.CREATE_FORUM_POST ||
                                                         U === en.oU.FORWARD_MESSAGE_INPUT,
-                                                    [eg.$i]: U === en.oU.USER_PROFILE_REPLY,
+                                                    [e_.$i]: U === en.oU.USER_PROFILE_REPLY,
                                                 }),
-                                                onMouseDown: tR,
+                                                onMouseDown: tw,
                                                 children: [
-                                                    tz,
-                                                    tU,
+                                                    tq,
+                                                    tV,
                                                     (0, i.jsx)(f.vN, {
-                                                        ringTarget: eq,
-                                                        ringClassName: eg.Rg,
+                                                        ringTarget: eY,
+                                                        ringClassName: e_.Rg,
                                                         children: (0, i.jsx)(ei.A, {
-                                                            ref: e$,
+                                                            ref: eX,
                                                             id: p,
                                                             focused: V,
-                                                            useSlate: tn,
+                                                            useSlate: ti,
                                                             textValue: s,
                                                             richValue: a,
-                                                            disabled: e8,
+                                                            disabled: e5,
                                                             placeholder: M,
                                                             required: _,
                                                             accessibilityLabel: O,
-                                                            isPreviewing: (e7 || e4) && te,
+                                                            isPreviewing: (e4 || e8) && tt,
                                                             channel: k,
                                                             type: U,
-                                                            canPasteFiles: e5,
-                                                            uploadPromptCharacterCount: ep.CS1,
-                                                            maxCharacterCount: eM ?? tl,
-                                                            allowNewLines: ek,
-                                                            "aria-describedby": eD,
-                                                            onChange: tu,
-                                                            onResize: ty,
+                                                            canPasteFiles: e9,
+                                                            uploadPromptCharacterCount: ef.CS1,
+                                                            maxCharacterCount: eO ?? ts,
+                                                            allowNewLines: eP,
+                                                            "aria-describedby": tW,
+                                                            onChange: td,
+                                                            onResize: tS,
                                                             onBlur: Y,
                                                             onFocus: $,
                                                             onKeyDown: Q,
-                                                            onSubmit: th,
-                                                            onSubmitFailure: tk,
-                                                            onTab: tS,
-                                                            onEnter: tb,
-                                                            onMoveSelection: tN,
-                                                            onSelectionChanged: to,
-                                                            onMaybeShowAutocomplete: tf,
-                                                            onHideAutocomplete: tg,
-                                                            promptToUpload: ef,
-                                                            fontSize: ts,
-                                                            spellcheckEnabled: tr,
-                                                            canOnlyUseTextCommands: tP,
+                                                            onSubmit: tm,
+                                                            onSubmitFailure: tP,
+                                                            onTab: tb,
+                                                            onEnter: tN,
+                                                            onMoveSelection: tj,
+                                                            onSelectionChanged: tc,
+                                                            onMaybeShowAutocomplete: tg,
+                                                            onHideAutocomplete: t_,
+                                                            promptToUpload: eg,
+                                                            fontSize: tr,
+                                                            spellcheckEnabled: ta,
+                                                            canOnlyUseTextCommands: tD,
                                                             className: r()(
                                                                 {
-                                                                    [eg.QI]: U === en.oU.THREAD_CREATION,
-                                                                    [eg.AV]: U === en.oU.PROFILE_BIO_INPUT,
-                                                                    [eg.GR]: U === en.oU.OVERLAY_INLINE_REPLY,
+                                                                    [e_.QI]: U === en.oU.THREAD_CREATION,
+                                                                    [e_.AV]: U === en.oU.PROFILE_BIO_INPUT,
+                                                                    [e_.GR]: U === en.oU.OVERLAY_INLINE_REPLY,
                                                                 },
                                                                 h,
                                                             ),
-                                                            "aria-labelledby": eU,
-                                                            showValueWhenDisabled: ez,
+                                                            "aria-labelledby": eV,
+                                                            showValueWhenDisabled: eZ,
                                                         }),
                                                     }),
+                                                    tY,
                                                     tZ,
-                                                    tK,
                                                 ],
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(eo.a, { channel: k, type: U, pendingScheduledMessage: eK }),
-                                    ti ? null : (0, i.jsx)(b.A, { ref: eY, channel: k, canOnlyUseTextCommands: tP }),
+                                    (0, i.jsx)(ec.a, { channel: k, type: U, pendingScheduledMessage: ez }),
+                                    tl ? null : (0, i.jsx)(b.A, { ref: eJ, channel: k, canOnlyUseTextCommands: tD }),
                                     (0, i.jsx)(j.A, {
-                                        ref: tp,
+                                        ref: tf,
                                         channel: k,
-                                        canMentionRoles: ew,
-                                        canMentionChannels: eL,
-                                        useNewSlashCommands: tn,
-                                        canOnlyUseTextCommands: tP,
+                                        canMentionRoles: eL,
+                                        canMentionChannels: eM,
+                                        useNewSlashCommands: ti,
+                                        canOnlyUseTextCommands: tD,
                                         canSendStickers: U.stickers?.allowSending,
                                         canSendSoundmoji: U.soundmoji?.allowSending,
                                         textValue: s,
                                         focused: V,
-                                        expressionPickerView: tj,
+                                        expressionPickerView: tT,
                                         type: U,
-                                        targetRef: eq,
-                                        editorRef: e$,
-                                        onSendMessage: th,
-                                        onSendSticker: tA,
-                                        onVisibilityChange: tM,
-                                        editorScrollerRef: eX,
-                                        editorHeight: tv,
-                                        barsHeight: 40 * tF.floating.length,
-                                        setValue: (e, t) => tu?.(null, e, t),
-                                        position: eG,
+                                        targetRef: eY,
+                                        editorRef: eX,
+                                        onSendMessage: tm,
+                                        onSendSticker: tC,
+                                        onVisibilityChange: tO,
+                                        editorScrollerRef: eQ,
+                                        editorHeight: ty,
+                                        barsHeight: 40 * tB.floating.length,
+                                        setValue: (e, t) => td?.(null, e, t),
+                                        position: eF,
                                     }),
-                                    (0, i.jsx)(D.A, { textValue: s, editorHeight: tv, channelId: k.id }),
-                                    tq,
-                                    eF,
+                                    (0, i.jsx)(D.A, { textValue: s, editorHeight: ty, channelId: k.id }),
+                                    tJ,
+                                    eB,
                                 ],
                             }),
                             (0, i.jsx)(g.U, { error: G }),
-                            tT
+                            tR
                                 ? null
                                 : (0, i.jsx)(L.A, {
-                                      positionTargetRef: eq,
+                                      positionTargetRef: eY,
                                       type: U,
-                                      onSelectGIF: t_,
-                                      onSelectEmoji: tx,
-                                      onSelectSticker: tA,
-                                      onSelectSound: tC,
-                                      onSelectKaomoji: tE,
+                                      onSelectGIF: tx,
+                                      onSelectEmoji: tA,
+                                      onSelectSticker: tC,
+                                      onSelectSound: tE,
+                                      onSelectKaomoji: tI,
                                       channel: k,
-                                      closeOnModalOuterClick: eH,
-                                      parentModalKey: eW,
+                                      closeOnModalOuterClick: eW,
+                                      parentModalKey: eK,
                                       position: "top",
                                       align: "right",
-                                      positionLayerClassName: eg.BD,
+                                      positionLayerClassName: e_.BD,
                                   }),
                         ],
                     }),

@@ -53,6 +53,9 @@ let x = new _(o.h, {}),
                     className: s()(f.Qq, f.Fn),
                     children: p.intl.string(p.t["2UvR1E"]),
                 }),
-                (0, i.jsx)("div", { className: f.o1, children: (0, i.jsx)(c.x, { onClick: C }) }),
+                (0, i.jsx)("div", {
+                    className: f.o1,
+                    children: (0, i.jsx)(c.x, { onClick: C, "aria-label": p.intl.string(p.t.cpT0Cq) }),
+                }),
             ],
         });
