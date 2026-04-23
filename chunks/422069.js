@@ -42,11 +42,11 @@ class f extends l.Ay.Store {
 }
 let _ = new f(a.h, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-        let { applicationId: t, games: n } = e;
+        let { gameId: t, games: n } = e;
         i[t] = n;
     },
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
-        let { applicationId: t, error: n } = e;
+        let { gameId: t, error: n } = e;
         r[t] = n;
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_START: function (e) {

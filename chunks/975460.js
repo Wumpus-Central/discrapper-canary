@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { g: () => l, t: () => o });
-var r = n(64700),
-    i = n(587895),
-    s = n(223273),
-    a = n(705751);
-function o(e) {
+n.d(t, { g: () => _, t: () => d });
+var i = n(64700),
+    r = n(587895),
+    s = n(429913),
+    a = n(223273),
+    o = n(395671),
+    l = n(705751);
+function d(e) {
     if (null == e) return null;
-    if (e.type !== a.S7.GAME) return e;
-    for (let t of e.linkedGames ?? []) {
-        let e = i.A.getApplication(t.id);
-        if (null != e && t.type === s.Mh.OFFICIAL) return e;
-    }
-    return null;
+    if (e.type !== l.S7.GAME) return e;
+    let t = e.linkedGames?.find((e) => e.type === a.Mh.OFFICIAL);
+    return t?.application ?? r.A.getApplication(t?.id) ?? null;
 }
-function l(e) {
-    return r.useMemo(() => o(e), [e]);
+function _(e) {
+    let t = null == e || e instanceof o.Ay ? void 0 : e.getOfficialApplicationId(),
+        n = (0, s.h)(t);
+    return i.useMemo(() => (null == e ? null : e instanceof o.Ay ? d(e) : (n ?? null)), [e, n]);
 }

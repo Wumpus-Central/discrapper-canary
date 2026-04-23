@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { MT: () => a, CO: () => o, n1: () => l, bB: () => d, hD: () => s }),
+n.d(t, { Zb: () => _, MT: () => a, CO: () => o, n1: () => l, bB: () => d, hD: () => s }),
     n(735438),
     n(975807),
     n(328153),
@@ -29,4 +29,7 @@ function l(e) {
 }
 function d(e) {
     return e.thirdPartySkus.some((e) => e.distributor === r.d3x.ROBLOX);
+}
+function _(e) {
+    return e.id !== i.aX && e.thirdPartySkus.some((e) => e.distributor === r.d3x.ROBLOX);
 }
