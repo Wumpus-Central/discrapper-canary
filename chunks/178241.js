@@ -7,9 +7,9 @@ var n = l(192308),
     d = l(175665);
 function c(e) {
     if (!(0, n.hasModalOpen)(r.USER_SETTINGS_MODAL_KEY)) return;
-    let t = s.A.getAnalyticsLocation(),
+    let t = d.A.getField("previousPanelKey"),
         l = s.A.getAnalyticsLocations();
-    (0, a.iY)({ destinationPane: e, originPane: d.A.getField("previousPanelKey"), source: t, locationStack: l }),
+    (0, a.iY)({ destinationPane: e, originPane: t, locationStack: l }),
         d.A.setState({ previousPanelKey: e }),
-        (null != t || l.length > 0) && i.A.clearLocation();
+        l.length > 0 && i.A.clearLocation();
 }

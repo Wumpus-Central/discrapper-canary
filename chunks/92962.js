@@ -1,28 +1,29 @@
-n.d(i, { default: () => p });
-var l = n(627968);
-n(64700);
-var r = n(861672),
-    t = n(477782),
-    d = n(358367),
-    o = n(793574),
-    a = n(828559),
-    s = n(858897),
-    c = n(921854),
-    u = n(722718),
-    y = n(616621),
-    v = n(985018);
-let p = (0, d.A)(
+"use strict";
+i.d(t, { default: () => v });
+var n = i(627968);
+i(64700);
+var r = i(861672),
+    a = i(477782),
+    o = i(358367),
+    s = i(793574),
+    l = i(828559),
+    d = i(858897),
+    u = i(921854),
+    c = i(722718),
+    p = i(616621),
+    f = i(985018);
+let v = (0, o.A)(
     function (e) {
-        let i = (0, u.A)(),
-            n = (0, y.A)(!0),
-            d = (0, a.A)(c.D, (e) => (0, s.openUserSettings)(e));
-        return (0, l.jsxs)(r.W, {
+        let t = (0, c.A)(),
+            i = (0, p.A)(!0),
+            o = (0, l.A)(u.D, (e) => (0, d.openUserSettings)(e));
+        return (0, n.jsxs)(r.W, {
             navId: "settings-menu",
-            "aria-label": v.intl.string(v.t.opYYHn),
+            "aria-label": f.intl.string(f.t.opYYHn),
             onSelect: void 0,
             ...e,
-            children: [d, null != n && (0, l.jsx)(t.rX, { children: n }), i],
+            children: [o, null != i && (0, n.jsx)(a.rX, { children: i }), t],
         });
     },
-    [o.A.CONTEXT_MENU, o.A.USER_SETTINGS_MENU],
+    [s.A.CONTEXT_MENU, s.A.USER_SETTINGS_MENU],
 );
