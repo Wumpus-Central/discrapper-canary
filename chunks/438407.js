@@ -115,7 +115,10 @@ function p(e) {
                                         : r;
                                 })(),
                                 d = (() => {
-                                    if (t.action === h.F_X.MEMBER_ROLE_UPDATE)
+                                    if (
+                                        t.action === h.F_X.MEMBER_ROLE_UPDATE ||
+                                        (t.action === h.F_X.INVITE_CREATE && r.key === h.gGk.ROLE_IDS)
+                                    )
                                         return (function (e) {
                                             let { newValue: t } = e;
                                             return Array.isArray(t)

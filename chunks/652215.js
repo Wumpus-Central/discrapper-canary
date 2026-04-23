@@ -5512,6 +5512,7 @@ var iB = (((eH = {}).ALL = "ALL"), (eH.CREATE = "CREATE"), (eH.UPDATE = "UPDATE"
         (eK.CODE = "code"),
         (eK.CHANNEL_ID = "channel_id"),
         (eK.INVITER_ID = "inviter_id"),
+        (eK.ROLE_IDS = "role_ids"),
         (eK.MAX_USES = "max_uses"),
         (eK.USES = "uses"),
         (eK.MAX_AGE = "max_age"),

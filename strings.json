@@ -10578,6 +10578,7 @@
   "uWrLvw": "Which **never** expires",
   "3ygnwU": "Which expires after **!!{newValue}!!** uses",
   "Yx8LNm": "Which has **unlimited** uses",
+  "gb1Owj": "With {count, plural, one {**a role**} other {**some roles**} }",
   "omiqTH": "With temporary **off**",
   "MWp6H7": "With temporary **on**",
   "ja3kGS": "$[**!!{user}!!**]({{userHook}}) updated an invite $[**!!{target}!!**]({{targetHook}})",
