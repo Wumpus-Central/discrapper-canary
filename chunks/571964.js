@@ -1,7 +1,7 @@
 n.d(t, { A: () => A }), n(321073);
 var r = n(627968);
 n(64700);
-var i = n(311907),
+var i = n(17928),
     l = n(477782),
     a = n(192308),
     d = n(545059),
@@ -15,10 +15,10 @@ function A(e) {
         h = t.id,
         [E, I] = (0, i.yK)([u.A, s.A], () => [u.A.isFriend(h), s.A.getGroups()], [h]);
     if (!f || !E) return null;
-    let v = [];
+    let _ = [];
     return (
         I.length > 0
-            ? v.push(
+            ? _.push(
                   (0, r.jsxs)(
                       l.Dr,
                       {
@@ -60,7 +60,7 @@ function A(e) {
                   ),
               )
             : 0 === I.length &&
-              v.push(
+              _.push(
                   (0, r.jsx)(
                       l.Dr,
                       {
@@ -78,7 +78,7 @@ function A(e) {
                   ),
               ),
         null != g &&
-            v.push(
+            _.push(
                 (0, r.jsx)(
                     l.Dr,
                     {
@@ -91,6 +91,6 @@ function A(e) {
                     "remove-from-group",
                 ),
             ),
-        v
+        _
     );
 }

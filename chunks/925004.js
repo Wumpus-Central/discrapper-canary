@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Qw: "downloadProgressCircle_e6b769",
     QI: "hideGameUpdateProgressIndicator_e6b769",

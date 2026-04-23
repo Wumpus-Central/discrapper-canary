@@ -1,66 +1,65 @@
-"use strict";
-let r;
+let i;
 n.r(t),
     n.d(t, {
-        DEV_PID: () => h,
+        DEV_PID: () => I,
         OVERLAY_DEFAULT_RESOLUTION: () => d,
-        OVERLAY_LAYOUT_ID: () => f,
-        OVERLAY_MIN_RESOLUTION: () => _,
-        OVERLAY_VERSION: () => c,
-        UNSET_PID: () => p,
-        getPID: () => E,
-        getRPCAuthToken: () => T,
-        isValidGamePID: () => I,
-        log: () => y,
-        setOutOfProcessSupport: () => v,
-        setPID: () => A,
-        supportsLegacy: () => b,
-        supportsOutOfProcess: () => C,
-        validResolution: () => S,
+        OVERLAY_LAYOUT_ID: () => u,
+        OVERLAY_MIN_RESOLUTION: () => c,
+        OVERLAY_VERSION: () => E,
+        UNSET_PID: () => A,
+        getPID: () => S,
+        getRPCAuthToken: () => R,
+        isValidGamePID: () => O,
+        log: () => f,
+        setOutOfProcessSupport: () => p,
+        setPID: () => N,
+        supportsLegacy: () => L,
+        supportsOutOfProcess: () => m,
+        validResolution: () => C,
     }),
     n(323874),
     n(14289),
     n(35956);
-var i = n(719129),
+var r = n(719129),
     a = n(996308),
     s = n(206885),
-    o = n(723702),
-    l = n(837921),
-    u = n(652215);
-let c = 2,
+    _ = n(723702),
+    l = n(19575),
+    o = n(652215);
+let E = 2,
     d = { width: 3840, height: 2160 },
-    _ = { width: 768, height: 432 },
-    f = "overlay_default",
-    h = -2,
-    p = -1,
-    g = !1;
-function E() {
-    if (void 0 !== r && r !== p) return r;
+    c = { width: 768, height: 432 },
+    u = "overlay_default",
+    I = -2,
+    A = -1,
+    T = !1;
+function S() {
+    if (void 0 !== i && i !== A) return i;
     let e = parseInt(new URLSearchParams(window.location.search).get("pid") ?? "", 10);
-    return isNaN(e) && (e = p), (r = e);
+    return isNaN(e) && (e = A), (i = e);
 }
-function A(e) {
-    r = e;
+function N(e) {
+    i = e;
 }
-function I(e) {
-    return null != e && 0 !== e && e !== p;
+function O(e) {
+    return null != e && 0 !== e && e !== A;
 }
-function T() {
+function R() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
 }
-function y(e) {
-    (0, a.tN)({ type: u.kGV.LOG_MESSAGES, pid: E(), token: T(), payload: e });
+function f(e) {
+    (0, a.tN)({ type: o.kGV.LOG_MESSAGES, pid: S(), token: R(), payload: e });
 }
-function S(e) {
-    return !o.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);
+function C(e) {
+    return !_.isPlatformEmbedded || (e.width >= c.width && e.height >= c.height);
 }
-function v(e) {
-    g = e;
+function p(e) {
+    T = e;
 }
-function C() {
-    return g;
+function m() {
+    return T;
 }
-function b() {
-    let e = (0, o.isWindows)() && "arm64" === l.Ay.architecture;
-    return s.O && !e && !(0, i.Zi)();
+function L() {
+    let e = (0, _.isWindows)() && "arm64" === l.Ay.architecture;
+    return s.O && !e && !(0, r.Zi)();
 }

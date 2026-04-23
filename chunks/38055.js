@@ -1,51 +1,51 @@
 "use strict";
-n.d(t, { A: () => A, MemberListContentSettingsMenu: () => x });
+n.d(t, { A: () => A, MemberListContentSettingsMenu: () => p });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    r = n(861672),
-    a = n(477782),
-    o = n(885574),
-    c = n(192308),
-    u = n(952270),
-    d = n(265872),
-    h = n(939249),
-    m = n(625903),
-    p = n(708197),
-    f = n(435738),
-    g = n(652215),
-    _ = n(985018);
-let x = (e) => {
+    r = n(64700),
+    s = n(17928),
+    a = n(550079),
+    o = n(477782),
+    l = n(885574),
+    d = n(192308),
+    _ = n(952270),
+    u = n(922016),
+    c = n(939249),
+    E = n(625903),
+    h = n(180170),
+    m = n(435738),
+    f = n(652215),
+    g = n(985018);
+let p = (e) => {
         let { closePopout: t } = e,
-            l = (0, s.bG)([f.A], () => f.A.hidden);
-        return (0, i.jsx)(r.W, {
+            r = (0, s.bG)([m.A], () => m.A.hidden);
+        return (0, i.jsx)(a.W, {
             "data-menu-migrated": !0,
             onSelect: () => {},
             navId: "member-list-settings-menu",
-            onClose: null != t ? t : g.tEg,
-            "aria-label": _.intl.string(_.t.w2jvOf),
-            children: (0, i.jsxs)(a.rX, {
+            onClose: null != t ? t : f.tEg,
+            "aria-label": g.intl.string(g.t.w2jvOf),
+            children: (0, i.jsxs)(o.rX, {
                 children: [
-                    (0, i.jsx)(a.Dr, {
+                    (0, i.jsx)(o.Dr, {
                         id: "about",
-                        label: _.intl.string(_.t.pWLGnF),
-                        leadingAccessory: { type: "icon", icon: o.m },
-                        icon: o.m,
+                        label: g.intl.string(g.t.pWLGnF),
+                        leadingAccessory: { type: "icon", icon: l.m },
+                        icon: l.m,
                         action: () => {
-                            (0, c.openModalLazy)(async () => {
+                            (0, d.openModalLazy)(async () => {
                                 let { default: e } = await n.e("90309").then(n.bind(n, 643460));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             }),
                                 t?.();
                         },
                     }),
-                    (0, i.jsx)(a.sL, {
+                    (0, i.jsx)(o.sL, {
                         id: "hide",
-                        label: _.intl.string(_.t.AhNYuY),
-                        checked: l,
-                        leadingAccessory: { type: "icon", icon: u.G },
+                        label: g.intl.string(g.t.AhNYuY),
+                        checked: r,
+                        leadingAccessory: { type: "icon", icon: _.G },
                         action: () => {
-                            (0, p.Il)(), t?.();
+                            (0, h.Il)(), t?.();
                         },
                     }),
                 ],
@@ -53,25 +53,25 @@ let x = (e) => {
         });
     },
     A = () => {
-        let e = l.useRef(null);
-        return (0, i.jsx)(d.Y, {
+        let e = r.useRef(null);
+        return (0, i.jsx)(u.Y, {
             targetElementRef: e,
-            animation: d.Y.Animation.NONE,
+            animation: u.Y.Animation.NONE,
             position: "bottom",
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, i.jsx)(x, { closePopout: t });
+                return (0, i.jsx)(p, { closePopout: t });
             },
             children: (t) =>
-                (0, i.jsx)(h.D, {
+                (0, i.jsx)(c.D, {
                     ...t,
                     innerRef: e,
                     onClick: (e) => {
                         e.stopPropagation(), t.onClick(e);
                     },
                     style: { width: "12px", height: "12px", display: "flex" },
-                    children: (0, i.jsx)(m.Z, { size: "xxs" }),
+                    children: (0, i.jsx)(E.Z, { size: "xxs" }),
                 }),
         });
     };

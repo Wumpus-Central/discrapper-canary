@@ -1,106 +1,106 @@
 "use strict";
-n.d(t, { Hp: () => N, UA: () => S, ZB: () => T, Zp: () => y, dM: () => j, eG: () => v, ik: () => R });
+n.d(t, { Hp: () => y, UA: () => R, ZB: () => v, Zp: () => C, dM: () => D, eG: () => N, ik: () => L });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    r = n(311907),
-    a = n(97808),
-    o = n(778712),
-    c = n(463930),
-    u = n(834730),
-    d = n(140735),
-    h = n(534514),
-    m = n(573435),
-    p = n(73392),
-    f = n(967144),
-    g = n(696451),
-    _ = n(317525),
-    x = n(287809),
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(97808),
+    l = n(778712),
+    d = n(463930),
+    _ = n(834730),
+    u = n(140735),
+    c = n(534514),
+    E = n(573435),
+    h = n(73392),
+    m = n(967144),
+    f = n(696451),
+    g = n(317525),
+    p = n(287809),
     A = n(562153),
-    C = n(576757),
-    E = n(985018),
-    I = n(352760);
-function v() {
-    return (0, i.jsx)("div", { className: I.kL, "aria-hidden": !0 });
+    I = n(576757),
+    T = n(985018),
+    S = n(352760);
+function N() {
+    return (0, i.jsx)("div", { className: S.kL, "aria-hidden": !0 });
 }
-function y(e) {
-    let { children: t, selected: n, className: l, usesCardRows: r = !1 } = e;
-    return (0, i.jsx)("div", { className: s()(I.kL, I.fi, { [I.wH]: n, [I._V]: r }, l), children: t });
+function C(e) {
+    let { children: t, selected: n, className: r, usesCardRows: a = !1 } = e;
+    return (0, i.jsx)("div", { className: s()(S.kL, S.fi, { [S.wH]: n, [S._V]: a }, r), children: t });
 }
-function S(e) {
+function R(e) {
     let { children: t } = e;
-    return (0, i.jsx)("div", { className: I.iY, children: t });
+    return (0, i.jsx)("div", { className: S.iY, children: t });
 }
-function b(e) {
-    let { users: t, guildId: n, "aria-hidden": l } = e;
+function O(e) {
+    let { users: t, guildId: n, "aria-hidden": r } = e;
     return (0, i.jsx)("div", {
-        className: I.wn,
+        className: S.wn,
         children: t.map((e, s) => {
-            let r = (0, i.jsx)(a.eu, {
+            let a = (0, i.jsx)(o.eu, {
                 src: e.getAvatarURL(n, 80),
-                size: o._3.SIZE_16,
-                "aria-label": l ? void 0 : e.username,
-                "aria-hidden": l,
+                size: l._3.SIZE_16,
+                "aria-label": r ? void 0 : e.username,
+                "aria-hidden": r,
             });
             return s === t.length - 1
-                ? (0, i.jsx)("div", { className: I.tr, children: r }, e.id)
+                ? (0, i.jsx)("div", { className: S.tr, children: a }, e.id)
                 : (0, i.jsx)(
-                      m.Ay,
+                      E.Ay,
                       {
                           width: 16,
                           height: 16,
-                          className: I.tr,
-                          mask: m.Ay.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
-                          children: r,
+                          className: S.tr,
+                          mask: E.Ay.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+                          children: a,
                       },
                       e.id,
                   );
         }),
     });
 }
-function N(e) {
-    let { guildId: t, channelId: n, entry: l, maxAvatars: s = 3 } = e,
-        a = l.author_id,
-        o = (0, r.bG)([x.default], () => x.default.getUser(a)),
-        { displayParticipants: h, participant1: m, participant2: v, numOtherParticipants: y } = (0, C.A)(l, s),
-        S = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
-        N = (0, p.a)({ displayNameStyles: o?.displayNameStyles }),
-        T = (0, r.bG)([_.A], () => (S?.colorRoleId != null ? _.A.getRole(t, S.colorRoleId)?.name : void 0), [t, S]),
-        j = (0, f.gn)(t, a, S?.colorStrings ?? null);
-    if (null == o) return null;
-    let R = S?.colorString,
-        w = A.Ay.getName(t, n, o);
+function y(e) {
+    let { guildId: t, channelId: n, entry: r, maxAvatars: s = 3 } = e,
+        o = r.author_id,
+        l = (0, a.bG)([p.default], () => p.default.getUser(o)),
+        { displayParticipants: c, participant1: E, participant2: N, numOtherParticipants: C } = (0, I.A)(r, s),
+        R = (0, a.bG)([f.Ay], () => f.Ay.getMember(t, o)),
+        y = (0, h.a)({ displayNameStyles: l?.displayNameStyles }),
+        v = (0, a.bG)([g.A], () => (R?.colorRoleId != null ? g.A.getRole(t, R.colorRoleId)?.name : void 0), [t, R]),
+        D = (0, m.gn)(t, o, R?.colorStrings ?? null);
+    if (null == l) return null;
+    let L = R?.colorString,
+        b = A.Ay.getName(t, n, l);
     return (0, i.jsxs)("div", {
-        className: I.dw,
+        className: S.dw,
         children: [
-            (0, i.jsx)(b, { users: h, guildId: t, "aria-hidden": !0 }),
-            (0, i.jsx)(c.g, {
-                colorString: R ?? null,
-                roleName: T,
-                colorStrings: j,
-                name: w,
-                className: I.nT,
-                displayNameStylesFont: N,
+            (0, i.jsx)(O, { users: c, guildId: t, "aria-hidden": !0 }),
+            (0, i.jsx)(d.g, {
+                colorString: L ?? null,
+                roleName: v,
+                colorStrings: D,
+                name: b,
+                className: S.nT,
+                displayNameStylesFont: y,
                 "aria-hidden": !0,
             }),
-            y > 0
+            C > 0
                 ? (0, i.jsx)("div", {
-                      className: I.kx,
+                      className: S.kx,
                       "aria-hidden": !0,
-                      children: (0, i.jsxs)(u.E, {
+                      children: (0, i.jsxs)(_.E, {
                           variant: "text-xxs/medium",
                           color: "text-default",
-                          className: I.b4,
-                          children: ["+", y],
+                          className: S.b4,
+                          children: ["+", C],
                       }),
                   })
                 : null,
-            (0, i.jsx)(d.A, {
-                children: E.intl.format(E.t.rH95Gu, {
-                    user0: A.Ay.getName(t, n, m),
-                    user1: A.Ay.getName(t, n, v),
-                    countOthers: y,
+            (0, i.jsx)(u.A, {
+                children: T.intl.format(T.t.rH95Gu, {
+                    user0: A.Ay.getName(t, n, E),
+                    user1: A.Ay.getName(t, n, N),
+                    countOthers: C,
                     name0Hook: (e, t) => (0, i.jsx)("span", { children: e }, t),
                     name1Hook: (e, t) => (0, i.jsx)("span", { children: e }, t),
                     countOthersHook: (e, t) => (0, i.jsx)("span", { children: e }, t),
@@ -109,20 +109,20 @@ function N(e) {
         ],
     });
 }
-function T(e) {
+function v(e) {
     let { children: t } = e;
-    return (0, i.jsx)(h.D, {
+    return (0, i.jsx)(c.D, {
         color: "text-default",
         variant: "heading-sm/medium",
-        className: I.eu,
+        className: S.eu,
         lineClamp: 1,
         children: t,
     });
 }
-function j(e) {
-    let { children: t, className: n, ref: l } = e;
-    return (0, i.jsx)("div", { className: s()(I.RA, n), ref: l, children: t });
+function D(e) {
+    let { children: t, className: n, ref: r } = e;
+    return (0, i.jsx)("div", { className: s()(S.RA, n), ref: r, children: t });
 }
-function R() {
-    return (0, i.jsx)("div", { className: I.yF });
+function L() {
+    return (0, i.jsx)("div", { className: S.yF });
 }

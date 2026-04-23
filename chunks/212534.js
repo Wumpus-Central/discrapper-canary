@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => f, e: () => o });
-var r,
-    i = n(311907),
-    s = n(73153),
-    a = n(611010),
-    o = (((r = {})[(r.FETCHING = 0)] = "FETCHING"), (r[(r.FETCHED = 1)] = "FETCHED"), (r[(r.ERROR = 2)] = "ERROR"), r);
+n.d(t, { A: () => E, e: () => o });
+var i,
+    r = n(17928),
+    s = n(228366),
+    a = n(395671),
+    o = (((i = {})[(i.FETCHING = 0)] = "FETCHING"), (i[(i.FETCHED = 1)] = "FETCHED"), (i[(i.ERROR = 2)] = "ERROR"), i);
 let l = {},
-    u = {},
-    d = new Set(),
-    c = {};
-class _ extends i.Ay.Store {
+    d = {},
+    _ = new Set(),
+    u = {};
+class c extends r.Ay.Store {
     static displayName = "ApplicationDirectoryApplicationsStore";
     getApplication(e) {
         if (null != e) return l[e];
@@ -23,37 +23,37 @@ class _ extends i.Ay.Store {
         return l;
     }
     getApplicationFetchState(e) {
-        if (null != e) return u[e];
+        if (null != e) return d[e];
     }
     getApplicationFetchStates() {
-        return u;
+        return d;
     }
     isInvalidApplication(e) {
-        return null != e && d.has(e);
+        return null != e && _.has(e);
     }
     getInvalidApplicationIds() {
-        return d;
+        return _;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
     }
     getApplicationLastFetchTime(e) {
-        if (null != e) return c[e];
+        if (null != e) return u[e];
     }
 }
-let f = new _(s.h, {
+let E = new c(s.h, {
     APPLICATION_DIRECTORY_FETCH_APPLICATION: function (e) {
         let { applicationId: t } = e;
-        u = { ...u, [t]: 0 };
+        d = { ...d, [t]: 0 };
     },
     APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: function (e) {
         let { application: t } = e;
-        (l = { ...l, [t.id]: t }), (u = { ...u, [t.id]: 1 });
+        (l = { ...l, [t.id]: t }), (d = { ...d, [t.id]: 1 });
         let n = Date.now();
-        (c = { ...c, [t.id]: n }), d.has(t.id) && (d.delete(t.id), (d = new Set(d)));
+        (u = { ...u, [t.id]: n }), _.has(t.id) && (_.delete(t.id), (_ = new Set(_)));
     },
     APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: function (e) {
         let { applicationId: t, isInvalidApplication: n } = e;
-        (u = { ...u, [t]: 2 }), n && (d.add(t), (d = new Set(d)));
+        (d = { ...d, [t]: 2 }), n && (_.add(t), (_ = new Set(_)));
     },
 });

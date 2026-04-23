@@ -1,51 +1,51 @@
 "use strict";
-n.d(t, { JW: () => _, K5: () => m, MD: () => A, Mq: () => h, gc: () => E, kz: () => p, px: () => f, x: () => g });
-var r = n(64700),
-    i = n(877624),
-    s = n(311907),
+n.d(t, { JW: () => c, K5: () => f, MD: () => A, Mq: () => m, gc: () => g, kz: () => h, px: () => E, x: () => p });
+var i = n(64700),
+    r = n(877624),
+    s = n(17928),
     a = n(554146),
     o = n(841702),
     l = n(826673),
-    u = n(412260),
-    c = n(860300),
-    d = n(788868);
-function _() {
-    let [e, t] = r.useState(),
-        n = (0, s.yK)([u.A], () => u.A.getGiftPromotionRewardSkuIds()),
-        { purchases: i, hasPreviouslyFetched: a, fetchPurchasesError: l } = (0, o.Wg)(),
-        c = r.useRef(!1);
+    d = n(374200),
+    _ = n(860300),
+    u = n(788868);
+function c() {
+    let [e, t] = i.useState(),
+        n = (0, s.yK)([d.A], () => d.A.getGiftPromotionRewardSkuIds()),
+        { purchases: r, hasPreviouslyFetched: a, fetchPurchasesError: l } = (0, o.Wg)(),
+        _ = i.useRef(!1);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             a &&
-                !c.current &&
+                !_.current &&
                 n.length > 0 &&
-                (t(null == l ? n.filter((e) => null == i.get(e)) : []), (c.current = !0));
-        }, [n, i, a, l]),
+                (t(null == l ? n.filter((e) => null == r.get(e)) : []), (_.current = !0));
+        }, [n, r, a, l]),
         e
     );
 }
-function f(e, t, n) {
-    let r = h(e),
-        i = null != n && n.length >= 1;
-    return t && r && i;
+function E(e, t, n) {
+    let i = m(e),
+        r = null != n && n.length >= 1;
+    return t && i && r;
 }
-function p(e, t, n) {
-    let r = h(e);
-    return null != n && 1 === n.length && r && t;
+function h(e, t, n) {
+    let i = m(e);
+    return null != n && 1 === n.length && i && t;
 }
-function h(e) {
-    return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
+function m(e) {
+    return [u.gD.PREMIUM_YEAR_TIER_2, u.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
 }
-function m(e, t) {
+function f(e, t) {
     if (null == e) return;
-    let { reverse: n = !1, colorStops: r, defaultAngle: i = 78.98 } = t ?? {},
+    let { reverse: n = !1, colorStops: i, defaultAngle: r = 78.98 } = t ?? {},
         s = Array.isArray(e) ? e : e.gradient,
-        a = Array.isArray(e) || null == e.angle ? i : e.angle;
+        a = Array.isArray(e) || null == e.angle ? r : e.angle;
     n && (a = (a + 180) % 360);
-    let o = null != r ? s.map((e, t) => `${e} ${r[t]}%`).join(", ") : s.join(", ");
+    let o = null != i ? s.map((e, t) => `${e} ${i[t]}%`).join(", ") : s.join(", ");
     return { background: `linear-gradient(${a}deg, ${o})` };
 }
-function E(e) {
+function g(e) {
     if (null != e)
         return {
             backgroundImage: `url(${e})`,
@@ -54,12 +54,12 @@ function E(e) {
             backgroundRepeat: "no-repeat",
         };
 }
-function g(e, t) {
+function p(e, t) {
     if (null != e && null != t) {
         let n = t.background,
-            r = e.backgroundImage;
+            i = e.backgroundImage;
         return (
-            (e.backgroundImage = `${r}, ${n}`),
+            (e.backgroundImage = `${i}, ${n}`),
             (e.backgroundColor = "lightgray"),
             (e.backgroundRepeat = "no-repeat, no-repeat"),
             null == e.backgroundSize && (e.backgroundSize = "auto 110%, auto"),
@@ -70,9 +70,9 @@ function g(e, t) {
     return null != e ? e : null != t ? t : {};
 }
 function A() {
-    let { enabled: e } = c.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
-    if (!e || null == u.A.getMarketingComponentByType(i.C.GIFT_REMINDER_NAGBAR)) return !1;
-    let t = u.A.getGiftPromotion()?.id;
+    let { enabled: e } = _.J.getConfig({ location: "shouldShowGiftPromotionReminderNotice" });
+    if (!e || null == d.A.getMarketingComponentByType(r.C.GIFT_REMINDER_NAGBAR)) return !1;
+    let t = d.A.getGiftPromotion()?.id;
     return (
         null != t &&
         !!(0, l.u$)(a.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, t).isDismissed &&

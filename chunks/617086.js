@@ -1,14 +1,14 @@
 n.d(t, { A: () => o });
-var i = n(311907),
-    l = n(205184),
-    a = n(287809),
-    r = n(403362),
-    s = n(939496);
+var i = n(17928),
+    a = n(205184),
+    l = n(287809),
+    s = n(403362),
+    r = n(939496);
 function o(e) {
-    let { userId: t } = (0, s.E)(),
-        n = (0, l.s)(e);
-    return (0, i.yK)([a.default], () => {
-        let e = a.default.getCurrentUser(),
+    let { userId: t } = (0, r.E)(),
+        n = (0, a.s)(e);
+    return (0, i.yK)([l.default], () => {
+        let e = l.default.getCurrentUser(),
             i = new Set();
         return (
             n.forEach((e) => {
@@ -19,8 +19,8 @@ function o(e) {
             }),
             Array.from(i)
                 .filter((n) => n !== e?.id && n !== t)
-                .map((e) => a.default.getUser(e))
-                .filter(r.Vq)
+                .map((e) => l.default.getUser(e))
+                .filter(s.Vq)
         );
     }, [n, t]);
 }

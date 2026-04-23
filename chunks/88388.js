@@ -1,11 +1,10 @@
-"use strict";
-var r = n(860511),
-    i = Object.defineProperty;
-e.exports = function (e, t) {
+var n = e(860511),
+    o = Object.defineProperty;
+r.exports = function (r, t) {
     try {
-        i(r, e, { value: t, configurable: !0, writable: !0 });
-    } catch (n) {
-        r[e] = t;
+        o(n, r, { value: t, configurable: !0, writable: !0 });
+    } catch (e) {
+        n[r] = t;
     }
     return t;
 };

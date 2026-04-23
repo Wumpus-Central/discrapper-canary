@@ -1,30 +1,31 @@
-var n = t(860511),
-    o = t(257943),
-    a = t(485155),
-    i = t(693510),
-    s = t(503628),
-    u = n.RegExp,
-    l = u.prototype;
-o &&
-    s(function () {
-        var r = !0;
+"use strict";
+var n = r(860511),
+    a = r(257943),
+    s = r(485155),
+    i = r(693510),
+    o = r(503628),
+    l = n.RegExp,
+    u = l.prototype;
+a &&
+    o(function () {
+        var e = !0;
         try {
-            u(".", "d");
-        } catch (e) {
-            r = !1;
+            l(".", "d");
+        } catch (t) {
+            e = !1;
         }
-        var e = {},
-            t = "",
-            n = r ? "dgimsy" : "gimsy",
-            o = function (r, n) {
-                Object.defineProperty(e, r, {
+        var t = {},
+            r = "",
+            n = e ? "dgimsy" : "gimsy",
+            a = function (e, n) {
+                Object.defineProperty(t, e, {
                     get: function () {
-                        return (t += n), !0;
+                        return (r += n), !0;
                     },
                 });
             },
-            a = { dotAll: "s", global: "g", ignoreCase: "i", multiline: "m", sticky: "y" };
-        for (var i in (r && (a.hasIndices = "d"), a)) o(i, a[i]);
-        return Object.getOwnPropertyDescriptor(l, "flags").get.call(e) !== n || t !== n;
+            s = { dotAll: "s", global: "g", ignoreCase: "i", multiline: "m", sticky: "y" };
+        for (var i in (e && (s.hasIndices = "d"), s)) a(i, s[i]);
+        return Object.getOwnPropertyDescriptor(u, "flags").get.call(t) !== n || r !== n;
     }) &&
-    a(l, "flags", { configurable: !0, get: i });
+    s(u, "flags", { configurable: !0, get: i });

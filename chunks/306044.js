@@ -1,26 +1,26 @@
 "use strict";
-let r;
-n.d(t, { A: () => E, v: () => f }), n(321073);
-var i = n(735438),
-    s = n.n(i),
+let i;
+n.d(t, { A: () => h, v: () => E }), n(321073);
+var r = n(735438),
+    s = n.n(r),
     a = n(77729),
     o = n(626584),
     l = n(723702),
-    u = n(837921);
-let d = [];
-function c(e) {
+    d = n(19575);
+let _ = [];
+function u(e) {
     return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e;
 }
-function _(e) {
+function c(e) {
     null != e &&
         "" !== e &&
-        ((e = c(e)).endsWith("/") || (e += "/"), d.push(e), (0, l.isLinux)() && d.push("/var" + e));
+        ((e = u(e)).endsWith("/") || (e += "/"), _.push(e), (0, l.isLinux)() && _.push("/var" + e));
 }
-function f(e) {
-    e = c(e);
+function E(e) {
+    e = u(e);
     let t = !1;
     if (
-        (d.forEach((n) => {
+        (_.forEach((n) => {
             !t && e.startsWith(n) && ((e = e.substr(n.length)), (t = !0));
         }),
         !t)
@@ -32,32 +32,32 @@ function f(e) {
     }
     return (e = e.includes("dosbox.exe") ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/"));
 }
-async function E() {
-    if (null != r) return r;
+async function h() {
+    if (null != i) return i;
     try {
-        await u.Ay.ensureModule("discord_game_utils"), (r = await u.Ay.requireModule("discord_game_utils"));
+        await d.Ay.ensureModule("discord_game_utils"), (i = await d.Ay.requireModule("discord_game_utils"));
     } catch (e) {
         new o.A("GamesActionCreators").error("could not load discord_game_utils", e);
     }
     if ((0, l.isWindows)()) {
         let e = a.A.process.env;
-        _(e.LOCALAPPDATA),
-            _(e["PROGRAMFILES(X86)"]),
-            _(e.PROGRAMFILES),
-            _(e.PROGRAMW6432),
-            _(e.PROGRAMDATA),
-            _("/games/"),
-            _("/steamlibrary/steamapps/common/");
+        c(e.LOCALAPPDATA),
+            c(e["PROGRAMFILES(X86)"]),
+            c(e.PROGRAMFILES),
+            c(e.PROGRAMW6432),
+            c(e.PROGRAMDATA),
+            c("/games/"),
+            c("/steamlibrary/steamapps/common/");
     } else
-        (0, l.isMac)() ? _("/Applications") : (0, l.isLinux)() && (_("/app/bin"), _("/usr/bin"), _("/usr/local/bin"));
+        (0, l.isMac)() ? c("/Applications") : (0, l.isLinux)() && (c("/app/bin"), c("/usr/bin"), c("/usr/local/bin"));
     let e = a.A.app.getPath;
     return (
-        _(await e("home")),
-        _(await e("appData")),
-        _(await e("desktop")),
-        _(await e("documents")),
-        _(await e("downloads")),
-        (d = s().uniq(d)).sort((e, t) => t.length - e.length),
-        r
+        c(await e("home")),
+        c(await e("appData")),
+        c(await e("desktop")),
+        c(await e("documents")),
+        c(await e("downloads")),
+        (_ = s().uniq(_)).sort((e, t) => t.length - e.length),
+        i
     );
 }

@@ -1,6 +1,6 @@
-n.d(t, { A: () => u });
-var i = n(311907),
-    r = n(73153),
+n.d(t, { A: () => c });
+var i = n(17928),
+    r = n(228366),
     a = n(686956);
 let l = {},
     s = 0;
@@ -10,7 +10,7 @@ function o(e) {
 function d() {
     l = {};
 }
-class c extends i.Ay.Store {
+class u extends i.Ay.Store {
     isFetchingFriendsForGuild(e) {
         return 1 === o(e);
     }
@@ -21,7 +21,7 @@ class c extends i.Ay.Store {
             a.A.requestMembersById(e, t, !1));
     }
 }
-let u = new c(r.h, {
+let c = new u(r.h, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
     RELATIONSHIP_ADD: d,

@@ -1,82 +1,82 @@
-n.d(_, { default: () => h });
-var s = n(627968),
-    t = n(64700),
-    i = n(110259),
-    r = n(311907),
-    a = n(738188),
-    c = n(956793),
-    o = n(964486),
-    d = n(734057),
-    l = n(994500),
-    u = n(287809),
-    g = n(954571),
-    p = n(549022),
-    N = n(212758),
-    A = n(90386),
-    C = n(64175),
-    f = n(652215),
-    m = n(985018),
-    E = n(897455);
-function h(e) {
-    let { channelId: _, userId: n, transitionState: h, onClose: O } = e,
-        b = t.useRef(!1),
-        I = (0, r.bG)([l.A], () => l.A.isBlocked(n)),
-        M = (0, r.bG)([d.A], () => d.A.getChannel(_));
+_.d(t, { default: () => f });
+var s = _(627968),
+    i = _(64700),
+    a = _(110259),
+    n = _(17928),
+    r = _(738188),
+    A = _(956793),
+    l = _(964486),
+    o = _(734057),
+    c = _(994500),
+    I = _(287809),
+    d = _(954571),
+    E = _(549022),
+    u = _(212758),
+    h = _(90386),
+    L = _(64175),
+    N = _(652215),
+    C = _(985018),
+    g = _(897455);
+function f(e) {
+    let { channelId: t, userId: _, transitionState: f, onClose: O } = e,
+        m = i.useRef(!1),
+        G = (0, n.bG)([c.A], () => c.A.isBlocked(_)),
+        P = (0, n.bG)([o.A], () => o.A.getChannel(t));
     if (
-        ((0, o.l0)(() => {
-            b.current || (0, p.$Y)(n);
+        ((0, l.l0)(() => {
+            m.current || (0, E.$Y)(_);
         }),
-        null == u.default.getUser(n))
+        null == I.default.getUser(_))
     )
         return null;
-    let x = [
-            { icon: (0, A.I)([n], M?.guild_id), text: (0, A.T)([n], 1, M?.guild_id, _), className: E.n },
+    let p = [
+            { icon: (0, h.I)([_], P?.guild_id), text: (0, h.T)([_], 1, P?.guild_id, t), className: g.n },
             {
-                icon: (0, s.jsx)("div", { className: E.K, children: (0, s.jsx)(a.i, {}) }),
-                text: m.intl.string(m.t["+4O9nX"]),
-                className: E.n,
+                icon: (0, s.jsx)("div", { className: g.K, children: (0, s.jsx)(r.i, {}) }),
+                text: C.intl.string(C.t["+4O9nX"]),
+                className: g.n,
             },
         ],
-        L = I ? m.intl.string(m.t.QnTzrp) : m.intl.string(m.t.QsWbfY);
-    return (0, s.jsx)(N.A, {
-        headerText: m.intl.string(m.t["1/gpFh"]),
-        descriptionText: L,
-        infoRows: x,
+        D = G ? C.intl.string(C.t.QnTzrp) : C.intl.string(C.t.QsWbfY);
+    return (0, s.jsx)(u.A, {
+        headerText: C.intl.string(C.t["1/gpFh"]),
+        descriptionText: D,
+        infoRows: p,
         onDismissAndStay: () => {
-            (b.current = !0),
+            (m.current = !0),
                 O(),
-                (0, p.$Y)(n),
-                g.default.track(f.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: C.Qi.CLICK_TO_STAY,
-                    channel_id: _,
-                    blocked_user_ids: I ? [n] : [],
-                    ignored_user_ids: I ? [] : [n],
-                    warning_surface: C.gD.POST_JOIN_MODAL,
+                (0, E.$Y)(_),
+                d.default.track(N.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: L.Qi.CLICK_TO_STAY,
+                    channel_id: t,
+                    blocked_user_ids: G ? [_] : [],
+                    ignored_user_ids: G ? [] : [_],
+                    warning_surface: L.gD.POST_JOIN_MODAL,
                 });
         },
         onDismissAndLeave: () => {
-            (b.current = !0),
+            (m.current = !0),
                 O(),
-                c.default.disconnect(),
-                g.default.track(f.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: C.Qi.CLICK_TO_LEAVE,
-                    channel_id: _,
-                    blocked_user_ids: I ? [n] : [],
-                    ignored_user_ids: I ? [] : [n],
-                    warning_surface: C.gD.POST_JOIN_MODAL,
+                A.default.disconnect(),
+                d.default.track(N.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: L.Qi.CLICK_TO_LEAVE,
+                    channel_id: t,
+                    blocked_user_ids: G ? [_] : [],
+                    ignored_user_ids: G ? [] : [_],
+                    warning_surface: L.gD.POST_JOIN_MODAL,
                 });
         },
-        leaveButtonText: m.intl.string(m.t["Hi1/aQ"]),
-        stayButtonText: m.intl.string(m.t["Z+/hfb"]),
-        transitionState: h,
+        leaveButtonText: C.intl.string(C.t["Hi1/aQ"]),
+        stayButtonText: C.intl.string(C.t["Z+/hfb"]),
+        transitionState: f,
         onClose: O,
         impression: {
-            impressionName: i.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: a.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
-                channel_id: _,
-                blocked_user_ids: I ? [n] : [],
-                ignored_user_ids: I ? [] : [n],
-                warning_surface: C.gD.POST_JOIN_MODAL,
+                channel_id: t,
+                blocked_user_ids: G ? [_] : [],
+                ignored_user_ids: G ? [] : [_],
+                warning_surface: L.gD.POST_JOIN_MODAL,
             },
         },
     });

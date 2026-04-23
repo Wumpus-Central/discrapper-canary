@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(t, { A: () => l });
 var i = n(64700),
-    l = n(139675);
-let s = ["embedded_cover", "embedded_background"];
-function r(e) {
-    let { applicationId: t, size: n, names: r = s, format: a = "png" } = e,
-        [o, c] = i.useState(null),
-        [u, d] = i.useState(!0),
-        h = (0, l.uD)(t, o, n, a),
-        m = i.useRef(r);
+    r = n(970928);
+let a = ["embedded_cover", "embedded_background"];
+function l(e) {
+    let { applicationId: t, size: n, names: l = a, format: s = "png" } = e,
+        [o, u] = i.useState(null),
+        [_, E] = i.useState(!0),
+        A = (0, r.uD)(t, o, n, s),
+        c = i.useRef(l);
     return (
         i.useEffect(() => {
-            m.current = r;
+            c.current = l;
         }),
         i.useEffect(() => {
-            let { current: e } = m;
+            let { current: e } = c;
             null != t &&
-                (0, l.Y)(t).then((t) => {
-                    for (let [n, i] of (d(!1), Object.entries(t)))
-                        if (null != i && "" !== i.id && e.includes(i.name)) return void c(i.id);
+                (0, r.Y)(t).then((t) => {
+                    for (let [n, i] of (E(!1), Object.entries(t)))
+                        if (null != i && "" !== i.id && e.includes(i.name)) return void u(i.id);
                 });
         }, [t]),
-        { url: h, state: u ? "loading" : null != h ? "fetched" : "not-found" }
+        { url: A, state: _ ? "loading" : null != A ? "fetched" : "not-found" }
     );
 }

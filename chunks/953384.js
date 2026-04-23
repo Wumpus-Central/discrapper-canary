@@ -1,62 +1,62 @@
 "use strict";
-let r;
-n.d(t, { A: () => p });
-var i = n(311907),
-    s = n(73153),
+let i;
+n.d(t, { A: () => f });
+var r = n(17928),
+    s = n(228366),
     a = n(194862),
-    o = n(611010),
+    o = n(395671),
     l = n(927813),
-    u = n(723702);
-let d = l.A.Millis.DAY,
-    c = new a.A(),
-    _ = "",
-    f = null,
-    E = !1;
-class h extends i.Ay.PersistedStore {
+    d = n(723702);
+let _ = l.A.Millis.DAY,
+    u = new a.A(),
+    c = "",
+    E = null,
+    h = !1;
+class m extends r.Ay.PersistedStore {
     static displayName = "NonGameStore";
     static persistKey = "NonGameStore";
     initialize(e) {
-        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => c.set(e.id, e)));
+        null != e && (null != e.etag && (c = e.etag), e.nonGames?.forEach((e) => u.set(e.id, e)));
     }
     getState() {
-        return (0, u.isDesktop)() ? { etag: _, nonGames: c.values() } : { etag: "", nonGames: [] };
+        return (0, d.isDesktop)() ? { etag: c, nonGames: u.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
-        return c.values();
+        return u.values();
     }
     get fetching() {
-        return !0 === r;
+        return !0 === i;
     }
     get etag() {
-        return _;
+        return c;
     }
     get lastFetched() {
-        return f;
-    }
-    get hasAttemptedFetch() {
         return E;
     }
+    get hasAttemptedFetch() {
+        return h;
+    }
     get ttl() {
-        return d;
+        return _;
     }
     getById(e) {
-        return c.get(e);
+        return u.get(e);
     }
     canFetch() {
-        return !r && (null == f || Date.now() >= f + d);
+        return !i && (null == E || Date.now() >= E + _);
     }
 }
-let p = new h(s.h, {
+let f = new m(s.h, {
     NON_GAMES_DATABASE_FETCH: function () {
-        r = !0;
+        i = !0;
     },
     NON_GAMES_DATABASE_FETCH_FAIL: function () {
-        (r = !1), (E = !0);
+        (i = !1), (h = !0);
     },
     NON_GAMES_DATABASE_UPDATE: function (e) {
         let { nonGames: t, etag: n } = e;
-        for (let e of (null != n && _ !== n && (c.clear(), (_ = n)), t))
-            c.set(e.id, {
+        for (let e of (null != n && c !== n && (u.clear(), (c = n)), t))
+            u.set(e.id, {
                 id: e.id,
                 name: e.name,
                 executables: (e.executables ?? []).map(o.lg),
@@ -64,6 +64,6 @@ let p = new h(s.h, {
                 icon: e.icon_hash ?? void 0,
                 thirdPartySkus: e.third_party_skus ?? [],
             });
-        (r = void 0), (f = Date.now()), (E = !0);
+        (i = void 0), (E = Date.now()), (h = !0);
     },
 });

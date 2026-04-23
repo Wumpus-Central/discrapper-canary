@@ -1,70 +1,69 @@
-"use strict";
 n.d(t, {
-    $Q: () => _,
-    Gq: () => d,
-    IN: () => h,
-    Kf: () => u,
-    RI: () => m,
-    Vh: () => f,
-    cG: () => E,
-    qY: () => c,
-    zf: () => p,
+    $Q: () => c,
+    Gq: () => E,
+    IN: () => A,
+    Kf: () => o,
+    RI: () => S,
+    Vh: () => u,
+    cG: () => I,
+    qY: () => d,
+    zf: () => T,
 });
-var r = n(323125),
-    i = n(562465),
-    s = n(830215),
-    a = n(734057),
-    o = n(309010),
+var i = n(323125),
+    r = n(636537),
+    a = n(830215),
+    s = n(734057),
+    _ = n(309010),
     l = n(652215);
-function u(e) {
-    return i.Bo.post({
+function o(e) {
+    return r.Bo.post({
         url: l.Rsh.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
 }
-async function d(e) {
+async function E(e) {
     let t,
         n,
         {
-            authorize: r,
-            clientId: s,
-            scopes: u,
-            responseType: d,
-            redirectUri: c,
-            codeChallenge: _,
-            codeChallengeMethod: f,
-            state: E,
-            permissions: h,
-            guildId: p,
-            channelId: m,
-            integrationType: g,
-            nonce: A,
+            authorize: i,
+            clientId: a,
+            scopes: o,
+            responseType: E,
+            redirectUri: d,
+            codeChallenge: c,
+            codeChallengeMethod: u,
+            state: I,
+            permissions: A,
+            guildId: T,
+            channelId: S,
+            integrationType: N,
+            nonce: O,
         } = e;
     return (
-        await i.Bo.post({
+        await r.Bo.post({
             url: l.Rsh.OAUTH2_AUTHORIZE,
             query: {
-                client_id: s,
-                response_type: d,
-                redirect_uri: c,
-                code_challenge: _,
-                code_challenge_method: f,
-                scope: u.join(" "),
-                state: E,
-                nonce: A,
+                client_id: a,
+                response_type: E,
+                redirect_uri: d,
+                code_challenge: c,
+                code_challenge_method: u,
+                scope: o.join(" "),
+                state: I,
+                nonce: O,
             },
             body: {
-                guild_id: p,
-                webhook_channel_id: null != p && null != m ? m : void 0,
-                channel_id: null == p && null != m ? m : void 0,
-                permissions: h,
-                authorize: r,
-                integration_type: g,
+                guild_id: T,
+                webhook_channel_id: null != T && null != S ? S : void 0,
+                channel_id: null == T && null != S ? S : void 0,
+                permissions: A,
+                authorize: i,
+                integration_type: N,
                 location_context:
-                    ((t = o.A.getChannelId()),
-                    (n = a.A.getBasicChannel(t)),
+                    ((t = _.A.getChannelId()),
+                    (n = s.A.getBasicChannel(t)),
                     {
                         guild_id: n?.guild_id ?? "10000",
                         channel_id: n?.id ?? "10000",
@@ -76,42 +75,42 @@ async function d(e) {
         })
     ).body;
 }
-async function c(e) {
+async function d(e) {
     let {
         clientId: t,
         scopes: n,
-        responseType: r,
-        redirectUri: s,
-        codeChallenge: a,
-        codeChallengeMethod: o,
-        state: u,
-        integrationType: d,
-        nonce: c,
-        signal: _,
+        responseType: i,
+        redirectUri: a,
+        codeChallenge: s,
+        codeChallengeMethod: _,
+        state: o,
+        integrationType: E,
+        nonce: d,
+        signal: c,
     } = e;
     return (
-        await i.Bo.get({
+        await r.Bo.get({
             url: l.Rsh.OAUTH2_AUTHORIZE,
             query: {
                 client_id: t,
-                response_type: r,
-                redirect_uri: s,
-                code_challenge: a,
-                code_challenge_method: o,
+                response_type: i,
+                redirect_uri: a,
+                code_challenge: s,
+                code_challenge_method: _,
                 scope: n.join(" "),
-                state: u,
-                integration_type: d,
-                nonce: c,
+                state: o,
+                integration_type: E,
+                nonce: d,
             },
-            signal: _,
+            signal: c,
             retries: 3,
             oldFormErrors: !0,
             rejectWithError: !1,
         })
     ).body;
 }
-async function _(e) {
-    let { body: t } = await i.Bo.get({
+async function c(e) {
+    let { body: t } = await r.Bo.get({
         url: l.Rsh.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
         oldFormErrors: !0,
@@ -119,32 +118,32 @@ async function _(e) {
     });
     return t;
 }
-function f(e, t) {
-    s.A.logout(t, (0, r.T2)(e.pathname + e.search, !1));
+function u(e, t) {
+    a.A.logout(t, (0, i.T2)(e.pathname + e.search, !1));
 }
-async function E(e) {
-    return await i.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_VERIFY, body: { user_code: e }, rejectWithError: !1 });
+async function I(e) {
+    return await r.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_VERIFY, body: { user_code: e }, rejectWithError: !1 });
 }
-async function h(e, t) {
-    return await i.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_FINISH, body: { user_code: e, result: t }, rejectWithError: !1 });
+async function A(e, t) {
+    return await r.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_FINISH, body: { user_code: e, result: t }, rejectWithError: !1 });
 }
-async function p(e, t, n) {
-    return await i.Bo.post({
+async function T(e, t, n) {
+    return await r.Bo.post({
         url: l.Rsh.OAUTH2_DEVICE_FINISH,
         body: { user_code: e, result: "two_way_link_error", error_code: t, error_source: n },
         rejectWithError: !1,
     });
 }
-async function m(e) {
-    let { applicationId: t, onSuccess: n, onError: r } = e;
+async function S(e) {
+    let { applicationId: t, onSuccess: n, onError: i } = e;
     try {
-        await i.Bo.post({
+        await r.Bo.post({
             url: l.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
             body: { application_id: t },
             rejectWithError: !0,
         }),
             n?.();
     } catch (e) {
-        r?.(e);
+        i?.(e);
     }
 }

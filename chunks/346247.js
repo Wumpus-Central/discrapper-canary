@@ -1,14 +1,14 @@
 n.d(t, { A: () => M });
 var l = n(627968),
     i = n(64700),
-    r = n(311907),
+    r = n(17928),
     a = n(477782),
     o = n(192308),
     d = n(80682),
     u = n(267102),
     s = n(206835),
     c = n(576622),
-    A = n(961350),
+    A = n(495544),
     E = n(696451),
     _ = n(71393),
     g = n(576705),
@@ -30,13 +30,13 @@ function M(e) {
     if (null == R || U) return null;
     let G = p === M && (g.A.can(S.xBc.CHANGE_NICKNAME, R) || g.A.can(S.xBc.MANAGE_NICKNAMES, R)),
         D = p === M,
-        v = g.A.canManageUser(S.xBc.MANAGE_NICKNAMES, M, R);
-    if (!(G || v || D) || null == m || T) return null;
-    let x = R.features.has(S.GuildFeatures.HUB) ? f.intl.string(f.t["+MWrWt"]) : f.intl.string(f.t["PKQB/H"]),
-        P = D ? x : f.intl.string(f.t.dilOF6);
+        x = g.A.canManageUser(S.xBc.MANAGE_NICKNAMES, M, R);
+    if (!(G || x || D) || null == m || T) return null;
+    let P = R.features.has(S.GuildFeatures.HUB) ? f.intl.string(f.t["+MWrWt"]) : f.intl.string(f.t["PKQB/H"]),
+        v = D ? P : f.intl.string(f.t.dilOF6);
     return (0, l.jsx)(a.Dr, {
         id: "change-nickname",
-        label: P,
+        label: v,
         icon: h,
         leadingAccessory: null != h ? { type: "icon", icon: h } : void 0,
         action: () => {

@@ -1,4 +1,3 @@
-"use strict";
 n.r(
     (e.exports = {
         outerContainer: "outerContainer__8a031",

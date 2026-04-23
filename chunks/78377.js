@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { O: () => i, p: () => a });
-var r = n(64700);
-let i = r.createContext(null);
-function a() {
-    return r.useContext(i);
+n.d(t, { O: () => r, p: () => s });
+var i = n(64700);
+let r = i.createContext(null);
+function s() {
+    return i.useContext(r);
 }

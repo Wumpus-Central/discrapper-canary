@@ -1,65 +1,65 @@
-n.r(t), n.d(t, { default: () => _ });
-var r = n(627968),
-    s = n(64700),
-    l = n(621466),
-    i = n(192308),
-    u = n(315710),
-    a = n(315246),
-    o = n(267102),
-    c = n(712687),
-    d = n(203982),
-    p = n(211401),
-    E = n(500049),
-    f = n(7691),
-    h = n(699803),
-    A = n(60809),
-    S = n(652215),
-    T = n(732139);
-function O() {
-    p.k(E.Se.DISMISSED);
+n.r(t), n.d(t, { default: () => A });
+var s = n(627968),
+    i = n(64700),
+    u = n(621466),
+    r = n(192308),
+    a = n(315710),
+    o = n(315246),
+    c = n(267102),
+    l = n(712687),
+    d = n(625494),
+    f = n(211401),
+    p = n(500049),
+    v = n(554601),
+    E = n(699803),
+    L = n(60809),
+    O = n(652215),
+    b = n(732139);
+function h() {
+    f.k(p.Se.DISMISSED);
 }
-let _ = function (e) {
-    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: p } = e,
-        _ = s.useRef(null),
-        { renderWindow: y, windowDispatch: v } = s.useContext(o.Ay),
-        F = null != p,
-        U = (0, i.useIsModalAtTop)(p ?? ""),
-        L = s.useCallback(
+let A = function (e) {
+    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: f } = e,
+        A = i.useRef(null),
+        { renderWindow: T, windowDispatch: m } = i.useContext(c.Ay),
+        S = null != f,
+        j = (0, r.useIsModalAtTop)(f ?? ""),
+        y = i.useCallback(
             (e) => {
-                if ((!F && (0, i.hasAnyModalOpen)()) || (F && !(U && n)) || c.A.isOpen() || e.defaultPrevented) return;
+                if ((!S && (0, r.hasAnyModalOpen)()) || (S && !(j && n)) || l.A.isOpen() || e.defaultPrevented) return;
                 let { target: t } = e;
-                if ((0, l.vq)(t) && null != t.closest("." + A.Wx)) return;
-                for (; (0, l.vq)(t); ) {
-                    if (t === _.current) return;
-                    if (t.classList.contains(A.KG) || t.classList.contains(A.Gu)) return void e.preventDefault();
-                    if (t.classList.contains(A.qp)) return;
-                    let n = [T.Do, a.n];
-                    if (t.classList.contains(A.TY) || n.includes(t.id)) return;
+                if ((0, u.vq)(t) && null != t.closest("." + L.Wx)) return;
+                for (; (0, u.vq)(t); ) {
+                    if (t === A.current) return;
+                    if (t.classList.contains(L.KG) || t.classList.contains(L.Gu)) return void e.preventDefault();
+                    if (t.classList.contains(L.qp)) return;
+                    let n = [b.Do, o.n];
+                    if (t.classList.contains(L.TY) || n.includes(t.id)) return;
                     t = t.parentNode;
                 }
-                O();
-                let r = (0, l.BF)(e)?.activeElement;
-                (null == r || "BODY" === r.tagName) && d._.dispatchToLastSubscribed(S.jej.TEXTAREA_FOCUS);
+                h();
+                let s = (0, u.BF)(e)?.activeElement;
+                (null == s || "BODY" === s.tagName) && d._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS);
             },
-            [n, U, F],
+            [n, j, S],
         );
-    s.useLayoutEffect(
+    i.useLayoutEffect(
         () => (
-            y.addEventListener("mousedown", L),
-            y.addEventListener("contextmenu", L),
-            v.subscribe(S.jej.POPOUT_CLOSE, O),
+            T.addEventListener("mousedown", y),
+            T.addEventListener("contextmenu", y),
+            m.subscribe(O.jej.POPOUT_CLOSE, h),
             () => {
-                y.removeEventListener("mousedown", L),
-                    y.removeEventListener("contextmenu", L),
-                    v.unsubscribe(S.jej.POPOUT_CLOSE, O);
+                T.removeEventListener("mousedown", y),
+                    T.removeEventListener("contextmenu", y),
+                    m.unsubscribe(O.jej.POPOUT_CLOSE, h);
             }
         ),
-        [L, y, v],
+        [y, T, m],
     ),
-        (0, u.t)(_),
-        s.useEffect(() => {
-            ((!F && (0, i.hasAnyModalOpen)()) || (F && !U)) && O();
-        }, [U, F]);
-    let m = (0, h.A)();
-    return (0, r.jsx)(f.A, { ref: _, context: { channel: t, type: "channel" }, entrypoint: E.s4.TEXT, initHistory: m });
+        (0, a.t)(A),
+        i.useEffect(() => {
+            ((!S && (0, r.hasAnyModalOpen)()) || (S && !j)) && h();
+        }, [j, S]);
+    let C = (0, E.A)();
+    return (0, s.jsx)(v.A, { ref: A, context: { channel: t, type: "channel" }, entrypoint: p.s4.TEXT, initHistory: C });
 };

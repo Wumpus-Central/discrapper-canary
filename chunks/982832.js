@@ -1,29 +1,29 @@
 n.d(t, { A: () => m });
-var i = n(311907),
-    l = n(73153),
+var i = n(17928),
+    l = n(228366),
     s = n(555337),
-    r = n(660496),
-    a = n(652215);
-let o = r.C.OVERVIEW,
+    a = n(660496),
+    r = n(652215);
+let o = a.C.OVERVIEW,
     d = null;
 function c(e) {
     let { subsection: t } = e;
     switch (t) {
-        case a.nd0.SAFETY_AUTOMOD:
-            o = r.C.AUTOMOD;
+        case r.nd0.SAFETY_AUTOMOD:
+            o = a.C.AUTOMOD;
             break;
-        case a.nd0.SAFETY_DM_AND_SPAM_PROTECTION:
-            o = r.C.DM_AND_SPAM_PROTECTION;
+        case r.nd0.SAFETY_DM_AND_SPAM_PROTECTION:
+            o = a.C.DM_AND_SPAM_PROTECTION;
             break;
-        case a.nd0.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-            o = r.C.CAPTCHA_AND_RAID_PROTECTION;
+        case r.nd0.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
+            o = a.C.CAPTCHA_AND_RAID_PROTECTION;
             break;
-        case a.nd0.SAFETY_PERMISSIONS:
-            o = r.C.PERMISSIONS;
+        case r.nd0.SAFETY_PERMISSIONS:
+            o = a.C.PERMISSIONS;
             break;
-        case a.nd0.SAFETY_OVERVIEW:
+        case r.nd0.SAFETY_OVERVIEW:
         default:
-            o = r.C.OVERVIEW;
+            o = a.C.OVERVIEW;
     }
 }
 class u extends i.Ay.Store {

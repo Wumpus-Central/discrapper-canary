@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => d });
+var i = n(17928),
+    r = n(228366),
     s = n(536194);
 n(436317);
 let a = new Set(),
     o = {};
-class l extends r.Ay.PersistedStore {
+class l extends i.Ay.PersistedStore {
     static displayName = "HotspotStore";
     static persistKey = "hotspots";
     static migrations = [(e) => ({ hiddenHotspots: e ?? [], hotspotOverrides: {} })];
@@ -30,7 +30,7 @@ class l extends r.Ay.PersistedStore {
         return { hiddenHotspots: a, hotspotOverrides: o };
     }
 }
-let u = new l(i.h, {
+let d = new l(r.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { hiddenHotspots: t } = e;
         a = new Set(t);

@@ -1,94 +1,94 @@
 "use strict";
-n.d(t, { A: () => g });
-var r = n(627968);
+n.d(t, { A: () => p });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(311907),
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
     o = n(990078),
     l = n(709066),
-    u = n(824994),
-    d = n(922301),
-    c = n(750112),
-    _ = n(270574),
-    f = n(351906),
-    E = n(427262),
-    h = n(985018),
-    p = n(375930);
-let m = (e) => {
+    d = n(824994),
+    _ = n(922301),
+    u = n(368919),
+    c = n(270574),
+    E = n(351906),
+    h = n(427262),
+    m = n(985018),
+    f = n(375930);
+let g = (e) => {
         let {
                 primary: t,
                 secondary: n,
-                botType: i,
+                botType: r,
                 botVerified: a,
-                discriminatorClass: d,
-                className: _,
-                usernameClass: f,
-                botClass: E,
-                showStreamerModeTooltip: m,
-                displayNameStyles: g,
+                discriminatorClass: _,
+                className: c,
+                usernameClass: E,
+                botClass: h,
+                showStreamerModeTooltip: g,
+                displayNameStyles: p,
                 displayNameStylesType: A,
             } = e,
-            I = (0, u.W)({ location: "DiscordTag" });
-        return (0, r.jsxs)("div", {
-            className: s()(p.pq, { [p.e8]: I && null != g }, _),
+            I = (0, d.W)({ location: "DiscordTag" });
+        return (0, i.jsxs)("div", {
+            className: s()(f.pq, { [f.e8]: I && null != p }, c),
             children: [
-                (0, r.jsx)(o.m, {
-                    text: h.intl.string(h.t.Br1ls3),
-                    shouldShow: m,
-                    ariaHidden: !m,
-                    children: (0, r.jsx)("span", {
-                        className: s()(p.__invalid_username, f),
+                (0, i.jsx)(o.m, {
+                    text: m.intl.string(m.t.Br1ls3),
+                    shouldShow: g,
+                    ariaHidden: !g,
+                    children: (0, i.jsx)("span", {
+                        className: s()(f.__invalid_username, E),
                         children:
-                            null != g
-                                ? (0, r.jsx)(c.A, { userName: t, displayNameStyles: g, effectDisplayType: A })
+                            null != p
+                                ? (0, i.jsx)(u.A, { userName: t, displayNameStyles: p, effectDisplayType: A })
                                 : t,
                     }),
                 }),
-                null != n ? (0, r.jsx)("span", { className: s()(p.ok, d), children: n }) : void 0,
-                null != i && (0, r.jsx)(l.A, { type: i, className: s()(p.ok, E), verified: a }),
+                null != n ? (0, i.jsx)("span", { className: s()(f.ok, _), children: n }) : void 0,
+                null != r && (0, i.jsx)(l.A, { type: r, className: s()(f.ok, h), verified: a }),
             ],
         });
     },
-    g = (e) => {
+    p = (e) => {
         let {
                 user: t,
                 nick: n,
-                forceUsername: i,
+                forceUsername: r,
                 showAccountIdentifier: s,
                 overrideDiscriminator: o,
                 hideBotTag: l = !1,
-                hideDiscriminator: u = !1,
-                displayNameStylesType: c = d.G.PLAIN,
-                ...h
+                hideDiscriminator: d = !1,
+                displayNameStylesType: u = _.G.PLAIN,
+                ...m
             } = e,
-            p = (0, a.bG)([f.A], () => f.A.hidePersonalInformation),
-            g = p || u || t.isNonUserBot(),
+            f = (0, a.bG)([E.A], () => E.A.hidePersonalInformation),
+            p = f || d || t.isNonUserBot(),
             A = t.toString(),
-            I = l ? null : t.isSystemUser() ? _.v.SYSTEM_DM : t.bot ? _.v.BOT : null,
+            I = l ? null : t.isSystemUser() ? c.v.SYSTEM_DM : t.bot ? c.v.BOT : null,
             T = t.isVerifiedBot(),
-            S = E.Ay.getName(t),
-            y = i ? A : (n ?? S),
-            N = t.hasUniqueUsername();
-        if (N || y !== A) {
-            let e = y === A && N && i ? E.Ay.getUserTag(t) : y,
-                n = s && e !== `@${A}` ? E.Ay.getUserTag(t) : void 0;
-            return (0, r.jsx)(m, {
+            S = h.Ay.getName(t),
+            N = r ? A : (n ?? S),
+            C = t.hasUniqueUsername();
+        if (C || N !== A) {
+            let e = N === A && C && r ? h.Ay.getUserTag(t) : N,
+                n = s && e !== `@${A}` ? h.Ay.getUserTag(t) : void 0;
+            return (0, i.jsx)(g, {
                 primary: e,
                 secondary: n,
                 botType: I,
                 botVerified: T,
-                showStreamerModeTooltip: p && E.Ay.isNameConcealed(e),
-                displayNameStyles: y !== A ? t.displayNameStyles : null,
-                displayNameStylesType: c,
-                ...h,
+                showStreamerModeTooltip: f && h.Ay.isNameConcealed(e),
+                displayNameStyles: N !== A ? t.displayNameStyles : null,
+                displayNameStylesType: u,
+                ...m,
             });
         }
-        return (0, r.jsx)(_.A, {
-            name: y,
+        return (0, i.jsx)(c.A, {
+            name: N,
             botType: I,
             botVerified: T,
-            discriminator: g || y !== A ? null : (o ?? t.discriminator),
-            ...h,
+            discriminator: p || N !== A ? null : (o ?? t.discriminator),
+            ...m,
         });
     };

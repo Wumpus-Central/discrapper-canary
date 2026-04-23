@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { NK: () => s, Oe: () => o, ar: () => a, mf: () => i });
-var r = n(513461);
-function i(e) {
-    return e === r.B5.APPROVED || e === r.B5.REJECTED;
+n.d(t, { NK: () => s, Oe: () => _, ar: () => a, mf: () => r });
+var i = n(513461);
+function r(e) {
+    return e === i.B5.APPROVED || e === i.B5.REJECTED;
 }
 function a(e) {
-    return e === r.B5.SUBMITTED;
+    return e === i.B5.SUBMITTED;
 }
 function s(e) {
-    return e.applicationStatus === r.B5.APPROVED && null != e.lastSeen;
+    return e.applicationStatus === i.B5.APPROVED && null != e.lastSeen;
 }
-function o(e) {
-    return i(e.applicationStatus) && null == e.lastSeen;
+function _(e) {
+    return r(e.applicationStatus) && null == e.lastSeen;
 }

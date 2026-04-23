@@ -1,42 +1,42 @@
-n.d(t, { A: () => h, S: () => A });
+n.d(e, { A: () => b, S: () => k });
 var i = n(627968),
-    s = n(64700),
+    a = n(64700),
     l = n(284009),
-    a = n.n(l),
-    r = n(189213),
-    o = n(311907),
-    d = n(139033),
+    r = n.n(l),
+    s = n(189213),
+    d = n(17928),
+    o = n(139033),
     u = n(192308),
     c = n(821609),
-    g = n(830215),
-    m = n(287809),
-    _ = n(985018);
-function A(e) {
-    return g.A.verifyResend()
+    m = n(830215),
+    f = n(287809),
+    g = n(985018);
+function k(t) {
+    return m.A.verifyResend()
         .then(() => {
-            (0, d.A)({ title: _.intl.string(_.t.LykQYk), subtitle: _.intl.format(_.t.azKEPy, { email: e.email }) });
+            (0, o.A)({ title: g.intl.string(g.t.LykQYk), subtitle: g.intl.format(g.t.azKEPy, { email: t.email }) });
         })
-        .catch((e) => {
-            let { body: t } = e,
-                n = _.intl.string(_.t.XcrQN5);
-            null != t && t.email && (n = t.email),
-                (0, u.openModal)((e) =>
-                    (0, i.jsx)(r.Modal, {
-                        actions: [{ variant: "primary", text: _.intl.string(_.t.BddRzS), onClick: e.onClose }],
-                        title: _.intl.string(_.t.VbTh0E),
+        .catch((t) => {
+            let { body: e } = t,
+                n = g.intl.string(g.t.XcrQN5);
+            null != e && e.email && (n = e.email),
+                (0, u.openModal)((t) =>
+                    (0, i.jsx)(s.Modal, {
+                        actions: [{ variant: "primary", text: g.intl.string(g.t.BddRzS), onClick: t.onClose }],
+                        title: g.intl.string(g.t.VbTh0E),
                         subtitle: n,
-                        ...e,
+                        ...t,
                     }),
                 );
         });
 }
-function h(e) {
-    let { size: t, variant: n } = e,
-        l = (0, o.bG)([m.default], () => m.default.getCurrentUser());
-    a()(null != l, "ResendEmailVerificationButton: currentUser cannot be undefined");
-    let [r, d] = s.useState(!1),
-        u = s.useCallback(() => {
-            d(!0), A(l).then(() => d(!1));
+function b(t) {
+    let { size: e, variant: n } = t,
+        l = (0, d.bG)([f.default], () => f.default.getCurrentUser());
+    r()(null != l, "ResendEmailVerificationButton: currentUser cannot be undefined");
+    let [s, o] = a.useState(!1),
+        u = a.useCallback(() => {
+            o(!0), k(l).then(() => o(!1));
         }, [l]);
-    return (0, i.jsx)(c.$, { size: t, variant: n, onClick: u, text: _.intl.string(_.t.lm1UKt), disabled: r });
+    return (0, i.jsx)(c.$, { size: e, variant: n, onClick: u, text: g.intl.string(g.t.lm1UKt), disabled: s });
 }

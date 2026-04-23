@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(481613),
-    i = n.n(r),
-    s = n(72290);
-function a(e, t) {
-    if (!e.startsWith("discord:")) return (location.href = e), s.nextTick(() => t(!0));
+n.d(t, { A: () => E });
+var i = n(481613),
+    r = n.n(i),
+    a = n(72290);
+function s(e, t) {
+    if (!e.startsWith("discord:")) return (location.href = e), a.nextTick(() => t(!0));
     let { body: n } = document;
-    if (null == n) return s.nextTick(() => t(!1));
-    let r = document.createElement("iframe");
-    n.appendChild(r);
+    if (null == n) return a.nextTick(() => t(!1));
+    let i = document.createElement("iframe");
+    n.appendChild(i);
     try {
-        null != r.contentWindow && (r.contentWindow.location.href = e), s.nextTick(() => t(!0));
+        null != i.contentWindow && (i.contentWindow.location.href = e), a.nextTick(() => t(!0));
     } catch (e) {
-        "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && s.nextTick(() => t(!1));
+        "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && a.nextTick(() => t(!1));
     }
     window.setTimeout(() => {
-        (r?.parentElement ?? null) !== null && n.removeChild(r);
+        (i?.parentElement ?? null) !== null && n.removeChild(i);
     }, 1e3);
 }
-function o(e, t) {
+function _(e, t) {
     let n = !1;
-    function r() {
+    function i() {
         n = !0;
     }
-    window.addEventListener("blur", r),
+    window.addEventListener("blur", i),
         (location.href = e),
         setTimeout(() => {
-            window.removeEventListener("blur", r), t(n);
+            window.removeEventListener("blur", i), t(n);
         }, 1e3);
 }
 function l(e, t) {
     t(!1);
 }
-function u(e, t) {
-    (location.href = e), s.nextTick(() => t(!0));
+function o(e, t) {
+    (location.href = e), a.nextTick(() => t(!0));
 }
-let d = {
+let E = {
     launch:
-        i().os?.family === "Android" || i().os?.family === "iOS"
-            ? u
-            : "Gecko" === i().layout
-              ? a
-              : null != i().ua && -1 !== i().ua.indexOf("Valve Steam GameOverlay")
+        r().os?.family === "Android" || r().os?.family === "iOS"
+            ? o
+            : "Gecko" === r().layout
+              ? s
+              : null != r().ua && -1 !== r().ua.indexOf("Valve Steam GameOverlay")
                 ? l
-                : o,
+                : _,
 };

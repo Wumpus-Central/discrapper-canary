@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pz: "sidebar__9835e",
     Y_: "children__9835e",

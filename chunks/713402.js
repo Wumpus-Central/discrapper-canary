@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { J: () => o });
-var r = n(391470),
-    i = n.n(r);
-function a(e, t, n, r) {
+n.d(t, { J: () => s });
+var i = n(391470),
+    r = n.n(i);
+function a(e, t, n, i) {
     if (null != t) {
-        let n = i()(e, t, r);
+        let n = r()(e, t, i);
         for (; e[n] !== t && n < e.length - 1; ) n += 1;
         e.splice(n, 1);
     }
-    null != n && e.splice(i()(e, n, r), 0, n);
+    null != n && e.splice(r()(e, n, i), 0, n);
 }
-let s = [];
-class o {
+let l = [];
+class s {
     indexBy;
     sortBy;
     isEqual;
@@ -42,7 +41,7 @@ class o {
     }
     values(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null == e ? this.valueArray : (this.indexes(t)[e] ?? s);
+        return null == e ? this.valueArray : (this.indexes(t)[e] ?? l);
     }
     size(e) {
         return null == e ? this.valueArray.length : (this.valueIndexes[e]?.length ?? 0);

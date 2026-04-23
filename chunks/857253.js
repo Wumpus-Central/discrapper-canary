@@ -1,12 +1,12 @@
-n.d(t, { A: () => r });
-var i = n(311907),
-    l = n(961350),
+n.d(t, { A: () => a });
+var i = n(17928),
+    l = n(495544),
     s = n(977997),
-    a = n(643501);
-function r() {
-    return (0, i.bG)([l.default, s.A, a.default], () => {
+    r = n(643501);
+function a() {
+    return (0, i.bG)([l.default, s.A, r.default], () => {
         let e = l.default.getId(),
-            t = a.default.getRemoteSessionId();
+            t = r.default.getRemoteSessionId();
         return s.A.getVoiceStateForSession(e, t) ?? void 0;
     }, []);
 }

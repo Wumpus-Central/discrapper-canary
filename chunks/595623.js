@@ -1,40 +1,40 @@
-s.d(t, { Ay: () => $ }), s(321073);
-var i = s(735438),
-    n = s.n(i),
-    a = s(311907),
-    r = s(73153),
-    l = s(49229),
-    o = s(315069),
-    u = s(49463),
-    h = s(217222),
-    c = s(346084),
-    A = s(800828),
-    m = s(275759),
-    d = s(616356),
-    p = s(696451),
-    N = s(71393),
-    I = s(290863),
-    E = s(994500),
-    y = s(287809),
-    g = s(652215),
-    f = s(788868);
-function C(e) {
-    let t = y.default.getUser(e);
+i.d(t, { Ay: () => M }), i(321073);
+var s = i(735438),
+    n = i.n(s),
+    a = i(17928),
+    r = i(228366),
+    o = i(49229),
+    l = i(315069),
+    c = i(736056),
+    u = i(710195),
+    d = i(586774),
+    h = i(800828),
+    m = i(275759),
+    p = i(616356),
+    A = i(696451),
+    N = i(71393),
+    _ = i(290863),
+    I = i(994500),
+    g = i(287809),
+    y = i(652215),
+    f = i(788868);
+function E(e) {
+    let t = g.default.getUser(e);
     return { user: t, usernameLower: null != t ? t.username.toLowerCase() : null };
 }
-function D(e) {
+function v(e) {
     return {
-        status: I.A.getStatus(e),
-        isMobile: I.A.isMobileOnline(e),
-        isVR: I.A.isVROnline(e),
-        activities: I.A.getActivities(e),
-        applicationStream: d.A.getAnyStreamForUser(e),
+        status: _.A.getStatus(e),
+        isMobile: _.A.isMobileOnline(e),
+        isVR: _.A.isVROnline(e),
+        activities: _.A.getActivities(e),
+        applicationStream: p.A.getAnyStreamForUser(e),
     };
 }
-function L(e) {
+function C(e) {
     let t = [];
     return (
-        n()(p.Ay.memberOf(e))
+        n()(A.Ay.memberOf(e))
             .map(N.A.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
@@ -43,7 +43,7 @@ function L(e) {
         { mutualGuildsLength: t.length, mutualGuilds: t.slice(0, 5) }
     );
 }
-class w extends o.A {
+class D extends l.A {
     key;
     userId;
     type;
@@ -87,75 +87,75 @@ class w extends o.A {
         return [this.type, this.nickname?.toLowerCase() ?? this.user?.globalName?.toLowerCase() ?? this.usernameLower];
     }
 }
-class G {
+class k {
     _rows;
     constructor(e = []) {
         this._rows = e;
     }
     reset() {
         let e = new Set(),
-            t = Array.from(E.A.getMutableRelationships().entries()).map((t) => {
-                let [s, i] = t;
+            t = Array.from(I.A.getMutableRelationships().entries()).map((t) => {
+                let [i, s] = t;
                 return (
-                    i === g.eA$.FRIEND && e.add(s),
-                    new w({
-                        key: s,
-                        type: i,
-                        userId: s,
-                        nickname: E.A.getNickname(s),
-                        ...C(s),
-                        ...D(s),
-                        ...L(s),
-                        spam: E.A.isSpam(s),
-                        ignoredUser: E.A.isIgnored(s),
+                    s === y.eA$.FRIEND && e.add(i),
+                    new D({
+                        key: i,
+                        type: s,
+                        userId: i,
+                        nickname: I.A.getNickname(i),
+                        ...E(i),
+                        ...v(i),
+                        ...C(i),
+                        spam: I.A.isSpam(i),
+                        ignoredUser: I.A.isIgnored(i),
                         giftIntentType:
-                            i === g.eA$.FRIEND && m.Ay.getFriendAnniversaries().includes(s)
+                            s === y.eA$.FRIEND && m.Ay.getFriendAnniversaries().includes(i)
                                 ? f.np.FRIEND_ANNIVERSARY
                                 : void 0,
-                        applicationId: E.A.getOriginApplicationId(s),
+                        applicationId: I.A.getOriginApplicationId(i),
                     })
                 );
             }),
-            s = [],
-            i = A.A.getGameRelationships().values(),
+            i = [],
+            s = h.A.getGameRelationships().values(),
             a = new Set();
-        i.forEach((t) => {
-            let { id: i, applicationId: n, type: r } = t;
-            (r === g.eA$.FRIEND && e.has(i)) ||
-                (r === g.eA$.FRIEND && a.has(i)) ||
-                (r === g.eA$.FRIEND && a.add(i),
-                s.push(
-                    new w({
-                        key: `${i}-${n}`,
+        s.forEach((t) => {
+            let { id: s, applicationId: n, type: r } = t;
+            (r === y.eA$.FRIEND && e.has(s)) ||
+                (r === y.eA$.FRIEND && a.has(s)) ||
+                (r === y.eA$.FRIEND && a.add(s),
+                i.push(
+                    new D({
+                        key: `${s}-${n}`,
                         type: r,
-                        userId: i,
+                        userId: s,
                         applicationId: n,
-                        nickname: E.A.getNickname(i),
-                        ...C(i),
-                        ...D(i),
-                        ...L(i),
-                        spam: E.A.isSpam(i),
-                        ignoredUser: E.A.isIgnored(i),
+                        nickname: I.A.getNickname(s),
+                        ...E(s),
+                        ...v(s),
+                        ...C(s),
+                        spam: I.A.isSpam(s),
+                        ignoredUser: I.A.isIgnored(s),
                         isGameRelationship: !0,
                     }),
                 ));
         });
         let r = n().map(
-            c.A.getSuggestions(),
+            d.A.getSuggestions(),
             (e) =>
-                new w({ key: e.key, userId: e.key, type: 99, nickname: e.name, ...C(e.key), ...D(e.key), ...L(e.key) }),
+                new D({ key: e.key, userId: e.key, type: 99, nickname: e.name, ...E(e.key), ...v(e.key), ...C(e.key) }),
         );
-        return new G(n().concat(t, s, r));
+        return new k(n().concat(t, i, r));
     }
     clone() {
-        return new G(this._rows);
+        return new k(this._rows);
     }
     update(e) {
         let t = !1;
-        for (let s = 0; s < this._rows.length; s++) {
-            let i = this._rows[s],
-                n = i.merge(e(i.userId));
-            (t = t || n !== i), (this._rows[s] = n);
+        for (let i = 0; i < this._rows.length; i++) {
+            let s = this._rows[i],
+                n = s.merge(e(s.userId));
+            (t = t || n !== s), (this._rows[i] = n);
         }
         return t;
     }
@@ -164,31 +164,31 @@ class G {
             .filter((e) => {
                 if (null == e.user) return !1;
                 if (null != t && "" !== t) {
-                    let s = t.toLowerCase();
+                    let i = t.toLowerCase();
                     return [e.usernameLower, e.nickname, e.user.globalName]
                         .map((e) => e?.toLowerCase())
-                        .some((e) => e?.includes(s));
+                        .some((e) => e?.includes(i));
                 }
                 return !0;
             })
             .filter((t) => {
                 switch (e) {
-                    case g.m3P.ONLINE:
-                        return t.type === g.eA$.FRIEND && t.status !== g.clD.OFFLINE;
-                    case g.m3P.PENDING:
+                    case y.m3P.ONLINE:
+                        return t.type === y.eA$.FRIEND && t.status !== y.clD.OFFLINE;
+                    case y.m3P.PENDING:
                         return (
-                            (t.type === g.eA$.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
-                            t.type === g.eA$.PENDING_OUTGOING
+                            (t.type === y.eA$.PENDING_INCOMING && !t.spam && !t.ignoredUser) ||
+                            t.type === y.eA$.PENDING_OUTGOING
                         );
-                    case g.m3P.SPAM:
-                        return t.type === g.eA$.PENDING_INCOMING && t.spam;
-                    case g.m3P.PENDING_IGNORED:
-                        return t.type === g.eA$.PENDING_INCOMING && t.ignoredUser;
-                    case g.m3P.SUGGESTIONS:
+                    case y.m3P.SPAM:
+                        return t.type === y.eA$.PENDING_INCOMING && t.spam;
+                    case y.m3P.PENDING_IGNORED:
+                        return t.type === y.eA$.PENDING_INCOMING && t.ignoredUser;
+                    case y.m3P.SUGGESTIONS:
                         return 99 === t.type;
-                    case g.m3P.ALL:
+                    case y.m3P.ALL:
                     default:
-                        return t.type === g.eA$.FRIEND;
+                        return t.type === y.eA$.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -196,11 +196,11 @@ class G {
     }
     getRelationshipCounts() {
         let e = {
-            [g.eA$.FRIEND]: 0,
-            [g.eA$.PENDING_INCOMING]: 0,
-            [g.eA$.PENDING_OUTGOING]: 0,
+            [y.eA$.FRIEND]: 0,
+            [y.eA$.PENDING_INCOMING]: 0,
+            [y.eA$.PENDING_OUTGOING]: 0,
             99: 0,
-            [g.eA$.BLOCKED]: 0,
+            [y.eA$.BLOCKED]: 0,
         };
         return (
             this._rows.forEach((t) => {
@@ -210,63 +210,63 @@ class G {
         );
     }
 }
-let S = !0,
-    v = !1,
-    R = g.m3P.ONLINE,
-    _ = new G(),
-    O = !0,
-    P = !1;
-function k() {
+let x = !0,
+    S = !1,
+    P = y.m3P.ONLINE,
+    L = new k(),
+    R = !0,
+    w = !1;
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    S && (e || (R !== g.m3P.ONLINE && R !== g.m3P.ADD_FRIEND)) && !v && ((S = !1), (v = !0), l.A.fetchRelationships());
+    x && (e || (P !== y.m3P.ONLINE && P !== y.m3P.ADD_FRIEND)) && !S && ((x = !1), (S = !0), o.A.fetchRelationships());
 }
-function M() {
-    if (((S = !0), O ? (v = !1) : k(), (_ = _.reset()), P)) return;
-    let e = _.getRelationshipCounts();
-    R = 0 === e[g.eA$.FRIEND] ? (0 !== e[g.eA$.PENDING_INCOMING] ? g.m3P.PENDING : g.m3P.ADD_FRIEND) : g.m3P.ONLINE;
+function G() {
+    if (((x = !0), R ? (S = !1) : O(), (L = L.reset()), w)) return;
+    let e = L.getRelationshipCounts();
+    P = 0 === e[y.eA$.FRIEND] ? (0 !== e[y.eA$.PENDING_INCOMING] ? y.m3P.PENDING : y.m3P.ADD_FRIEND) : y.m3P.ONLINE;
 }
-function F() {
-    _ = O ? new G() : _.reset();
+function b() {
+    L = R ? new k() : L.reset();
 }
-function x(e) {
+function F(e) {
     return function () {
-        return !O && !!_.update(e) && ((_ = _.clone()), !0);
+        return !R && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
 class T extends a.Ay.Store {
     static displayName = "FriendsStore";
     initialize() {
-        this.waitFor(h.A, d.A, u.A, c.A, A.A, p.Ay, N.A, m.Ay, I.A, E.A, y.default),
-            this.syncWith([E.A], F),
-            this.syncWith([A.A], F),
-            this.syncWith([c.A], F),
-            this.syncWith([m.Ay], F),
-            this.syncWith([y.default], x(C)),
-            this.syncWith([I.A, d.A], x(D)),
-            M();
+        this.waitFor(u.A, p.A, c.A, d.A, h.A, A.Ay, N.A, m.Ay, _.A, I.A, g.default),
+            this.syncWith([I.A], b),
+            this.syncWith([h.A], b),
+            this.syncWith([d.A], b),
+            this.syncWith([m.Ay], b),
+            this.syncWith([g.default], F(E)),
+            this.syncWith([_.A, p.A], F(v)),
+            G();
     }
     getState() {
-        return { fetching: v, section: R, rows: _ };
+        return { fetching: S, section: P, rows: L };
     }
 }
-let $ = new T(r.h, {
+let M = new T(r.h, {
     CONNECTION_OPEN: function () {
-        M();
+        G();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (R = e.section), k();
+        (P = e.section), O();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (O = null != t), F(), !O;
+        return (R = null != t), b(), !R;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        v = !1;
+        S = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (S = !0), (v = !0);
+        (x = !0), (S = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (R = e.section), (P = !0);
+        (P = e.section), (w = !0);
     },
 });

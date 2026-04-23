@@ -1,6 +1,5 @@
-"use strict";
-var r = n(503199);
-e.exports = function (e, t, n) {
-    for (var i = 0, a = arguments.length > 2 ? n : r(t), s = new e(a); a > i; ) s[i] = t[i++];
-    return s;
+var n = e(503199);
+r.exports = function (r, t, e) {
+    for (var o = 0, a = arguments.length > 2 ? e : n(t), i = new r(a); a > o; ) i[o] = t[o++];
+    return i;
 };

@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => d, j: () => c }), n(938796);
-var r = n(665260),
-    i = n(311907),
-    a = n(164956),
-    s = n(696451),
+n.d(t, { A: () => u, j: () => _ }), n(938796);
+var i = n(665260),
+    r = n(17928),
+    s = n(164956),
+    a = n(696451),
     o = n(927813),
     l = n(340837);
-function u(e, t, n) {
+function d(e, t, n) {
     if (n.isFullServerPreview(e)) return !0;
-    let i = t.getSelfMember(e);
-    if (null == i) return !1;
-    let a = t.getSelfMemberJoinedAt(e);
+    let r = t.getSelfMember(e);
+    if (null == r) return !1;
+    let s = t.getSelfMemberJoinedAt(e);
     return (
-        !(null == a || (0, r.Lt)(i.flags ?? 0, l.D.COMPLETED_HOME_ACTIONS)) &&
-        Date.now() - a.getTime() < o.A.Millis.WEEK
+        !(null == s || (0, i.Lt)(r.flags ?? 0, l.D.COMPLETED_HOME_ACTIONS)) &&
+        Date.now() - s.getTime() < o.A.Millis.WEEK
     );
 }
-function c(e) {
-    return u(e, s.Ay, a.A);
+function _(e) {
+    return d(e, a.Ay, s.A);
 }
-function d(e) {
-    return (0, i.bG)([s.Ay, a.A], () => u(e, s.Ay, a.A));
+function u(e) {
+    return (0, r.bG)([a.Ay, s.A], () => d(e, a.Ay, s.A));
 }

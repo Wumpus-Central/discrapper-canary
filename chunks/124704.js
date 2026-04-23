@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_c9d15c",
     Dk: "textXs_c9d15c",

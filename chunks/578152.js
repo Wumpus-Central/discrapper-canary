@@ -1,21 +1,21 @@
 "use strict";
 n.d(t, { A: () => I }), n(321073);
-var r = n(562465),
-    i = n(506774),
-    s = n(73153),
+var i = n(636537),
+    r = n(506774),
+    s = n(228366),
     a = n(439372),
     o = n(380610),
     l = n(626584),
-    u = n(927813),
-    c = n(723702),
-    d = n(728458),
-    _ = n(837921);
-let f = +u.A.Millis.HOUR,
-    p = 7 * u.A.Millis.DAY,
-    h = +u.A.Millis.DAY,
-    m = i.w.get("lastNonRequiredUpdateShown", Date.now()),
-    E = ["win", "osx"],
-    g = new l.A("AutoUpdateManager");
+    d = n(927813),
+    _ = n(723702),
+    u = n(38405),
+    c = n(19575);
+let E = +d.A.Millis.HOUR,
+    h = 7 * d.A.Millis.DAY,
+    m = +d.A.Millis.DAY,
+    f = r.w.get("lastNonRequiredUpdateShown", Date.now()),
+    g = ["win", "osx"],
+    p = new l.A("AutoUpdateManager");
 class A extends a.A {
     _checkInterval = null;
     _callbacks = [];
@@ -29,13 +29,13 @@ class A extends a.A {
         AUTO_UPDATER_QUIT_AND_INSTALL: () => this.quitAndInstall(),
     };
     _initialize() {
-        c.isPlatformEmbedded &&
-            (_.Ay.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates),
-            _.Ay.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable),
-            _.Ay.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)),
-            _.Ay.on("UPDATE_ERROR", this._handleUpdateError),
-            _.Ay.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)),
-            _.Ay.on("UPDATE_MANUALLY", this._handleUpdateManually));
+        _.isPlatformEmbedded &&
+            (c.Ay.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates),
+            c.Ay.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable),
+            c.Ay.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)),
+            c.Ay.on("UPDATE_ERROR", this._handleUpdateError),
+            c.Ay.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)),
+            c.Ay.on("UPDATE_MANUALLY", this._handleUpdateManually));
     }
     _terminate() {
         clearInterval(this._checkInterval);
@@ -45,19 +45,19 @@ class A extends a.A {
             (this.nativeUpdateAvailable
                 ? null != this._bootstrapper
                     ? this._bootstrapper.finishBootstrap()
-                    : _.Ay.send("QUIT_AND_INSTALL")
+                    : c.Ay.send("QUIT_AND_INSTALL")
                 : location.reload(!0));
     }
     isNewUpdater() {
-        return E.includes((0, c.getNewUpdaterPlatformName)() ?? "");
+        return g.includes((0, _.getNewUpdaterPlatformName)() ?? "");
     }
     canBootstrapNewUpdater() {
-        return "win32" === (0, c.getPlatformName)();
+        return "win32" === (0, _.getPlatformName)();
     }
     handlePostConnectionOpen() {
         this.checkForUpdates(),
             clearInterval(this._checkInterval),
-            (this._checkInterval = setInterval(this.checkForUpdates, f));
+            (this._checkInterval = setInterval(this.checkForUpdates, E));
     }
     checkForUpdates = (() => {
         var e = this;
@@ -66,10 +66,10 @@ class A extends a.A {
                 n = e.isNewUpdater() && e.nativeUpdatesDownloaded < e.nativeUpdateCountThreshold;
             return (
                 (t || !e.nativeUpdateAvailable || n) &&
-                    (c.isPlatformEmbedded
-                        ? e.canBootstrapNewUpdater() && _.Ay.canBootstrapNewUpdater
+                    (_.isPlatformEmbedded
+                        ? e.canBootstrapNewUpdater() && c.Ay.canBootstrapNewUpdater
                             ? e._requestNewUpdaterBootstrap()
-                            : _.Ay.send("CHECK_FOR_UPDATES", { allowMultipleUpdates: !1 })
+                            : c.Ay.send("CHECK_FOR_UPDATES", { allowMultipleUpdates: !1 })
                         : e._handleNativeUpdateNotAvailable()),
                 new Promise((t) => {
                     e.updateAvailable ? t(!0) : e._callbacks.push(t);
@@ -79,10 +79,10 @@ class A extends a.A {
     })();
     async _requestNewUpdaterBootstrap() {
         let e;
-        g.log("Bootstrapping new updater host...");
+        p.log("Bootstrapping new updater host...");
         try {
-            await _.Ay.ensureModule("discord_updater_bootstrap"),
-                (e = _.Ay.requireModule("discord_updater_bootstrap")),
+            await c.Ay.ensureModule("discord_updater_bootstrap"),
+                (e = c.Ay.requireModule("discord_updater_bootstrap")),
                 (this._bootstrapper = e);
         } catch (e) {
             this._handleNativeUpdateNotAvailable();
@@ -90,14 +90,14 @@ class A extends a.A {
         }
         try {
             this._handleCheckingForUpdates(),
-                await e.bootstrap(_.Ay.releaseChannel, "win"),
+                await e.bootstrap(c.Ay.releaseChannel, "win"),
                 (this.updateAvailable = !0),
                 (this.nativeUpdateAvailable = !0),
                 this._handleUpdateDownloaded(!0);
         } catch (e) {
-            g.log("Failed to bootstrap new updater:", e),
+            p.log("Failed to bootstrap new updater:", e),
                 this._handleNativeUpdateNotAvailable(),
-                d.A.captureException(e);
+                u.A.captureException(e);
         }
     }
     _emitCallbacks() {
@@ -108,19 +108,19 @@ class A extends a.A {
     };
     _handleNativeUpdateNotAvailable = () => {
         this._handleCheckingForUpdates(),
-            r.Bo.get({
+            i.Bo.get({
                 url: `${location.protocol}//${location.host}/assets/version.${window.GLOBAL_ENV.RELEASE_CHANNEL}.json`,
                 query: { _: (Date.now() / 1e3 / 60 / 5) | 0 },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "b1224f1f371f5ab2ab61f50546b0bef4b6e5ffe5" === e.body.hash)
+                    if (null == e.body || "b9cd5f8a3120f3477fa7bdf83b487928662f0d4b" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, o.kK)()) return this._handleUpdateDownloaded(!1);
-                    let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? p : h;
-                    if (Date.now() - m > t)
-                        return i.w.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1);
+                    let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : m;
+                    if (Date.now() - f > t)
+                        return r.w.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1);
                 },
                 () => this._handleUpdateError(),
             );
@@ -137,10 +137,10 @@ class A extends a.A {
     _handleUpdateError = (e) => {
         (this.updateAvailable = !1), s.h.dispatch({ type: "UPDATE_ERROR", message: e });
     };
-    _handleUpdateDownloaded = (e, t, n, r, i) => {
+    _handleUpdateDownloaded = (e, t, n, i, r) => {
         e && (this.nativeUpdatesDownloaded += 1),
             this._handleUpdateAvailable(e),
-            s.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: r, updateURL: i }),
+            s.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: i, updateURL: r }),
             this._emitCallbacks();
     };
 }

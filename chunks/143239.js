@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { A: () => d });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(311907),
-    s = n(526181),
-    a = n(47167),
-    o = n(734057),
+var r = n(17928),
+    a = n(526181),
+    s = n(47167),
+    _ = n(734057),
     l = n(864436),
-    u = n(200041),
-    c = n(985018);
+    o = n(200041),
+    E = n(985018);
 function d(e) {
     let {
             stream: t,
             game: n,
             textVariant: d,
-            textClassName: _,
-            iconClassName: f,
-            hideIcon: p = !1,
-            hideText: h = !1,
-            hideTooltip: E = !1,
-            canTruncate: m = !0,
-            showChannelName: g = !1,
+            textClassName: c,
+            iconClassName: u,
+            hideIcon: I = !1,
+            hideText: A = !1,
+            hideTooltip: T = !1,
+            canTruncate: S = !0,
+            showChannelName: N = !1,
         } = e,
-        A = (0, i.bG)([o.A], () => o.A.getChannel(t.channelId)),
-        I = (0, a.Ay)(A),
-        T = n?.name === "" ? null : n?.name,
-        S = null != T ? T : c.intl.string(c.t.eXan7B),
-        y = null != I ? `${S} (${I})` : S,
-        N = g ? y : S;
-    return (0, r.jsx)(u.A, {
-        icon: p ? void 0 : (0, r.jsx)(l.A, { icon: s.U, className: f }),
-        text: N,
-        tooltipText: E ? void 0 : y,
+        O = (0, r.bG)([_.A], () => _.A.getChannel(t.channelId)),
+        R = (0, s.Ay)(O),
+        f = n?.name === "" ? null : n?.name,
+        C = null != f ? f : E.intl.string(E.t.eXan7B),
+        p = null != R ? `${C} (${R})` : C,
+        m = N ? p : C;
+    return (0, i.jsx)(o.A, {
+        icon: I ? void 0 : (0, i.jsx)(l.A, { icon: a.U, className: u }),
+        text: m,
+        tooltipText: T ? void 0 : p,
         textVariant: d,
-        className: _,
-        canTruncate: m,
-        hideTooltip: E,
-        "aria-label": y,
-        hideText: h,
+        className: c,
+        canTruncate: S,
+        hideTooltip: T,
+        "aria-label": p,
+        hideText: A,
     });
 }

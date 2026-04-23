@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(503698),
-    s = n.n(i),
-    a = n(577473),
-    o = n(827734),
+n.d(t, { A: () => o });
+var i = n(627968),
+    r = n(503698),
+    a = n.n(r),
+    s = n(577473),
+    _ = n(661531),
     l = n(124704);
-function u(e) {
+function o(e) {
     let { className: t } = e;
-    return (0, r.jsx)(a.r, {
-        className: s()(l.tt, t),
+    return (0, i.jsx)(s.r, {
+        className: a()(l.tt, t),
         size: "custom",
         height: 14,
         width: 14,
-        color: o.A.unsafe_rawColors.BRAND_345.css,
+        color: _.A.unsafe_rawColors.BRAND_345.css,
     });
 }

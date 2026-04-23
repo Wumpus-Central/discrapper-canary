@@ -1,71 +1,71 @@
 "use strict";
-n.d(t, { A: () => R }), n(321073);
-var r = n(735438),
-    i = n.n(r),
-    s = n(311907),
-    a = n(73153),
+n.d(t, { A: () => O }), n(321073);
+var i = n(735438),
+    r = n.n(i),
+    s = n(17928),
+    a = n(228366),
     o = n(164956),
     l = n(734057),
-    u = n(927813),
-    d = n(661191),
-    c = n(112389),
-    _ = n(713125),
-    f = n(539916);
-let E = {},
-    h = {},
-    p = {},
-    m = !1;
-function g(e, t, n) {
+    d = n(927813),
+    _ = n(935208),
+    u = n(112389),
+    c = n(713125),
+    E = n(539916);
+let h = {},
+    m = {},
+    f = {},
+    g = !1;
+function p(e, t, n) {
     return e.map((e) =>
         (function (e, t, n) {
-            let r = !1,
-                i = [];
+            let i = !1,
+                r = [];
             for (let t = 0; t < e.options.length; t++) {
                 let s = e.options[t],
                     a = null == n[s.id];
-                a && (r = !0), i.push({ ...s, isUnseen: a });
+                a && (i = !0), r.push({ ...s, isUnseen: a });
             }
-            return { ...e, options: i, hasNewAnswers: r, isNew: null == t[e.id] };
+            return { ...e, options: r, hasNewAnswers: i, isNew: null == t[e.id] };
         })(e, t, n),
     );
 }
 function A(e) {
     let { guildId: t, updates: n } = e,
-        r = n.onboardingPromptsSeen ?? E[t]?.onboardingPromptsSeen ?? {},
-        i = n.onboardingResponsesSeen ?? E[t]?.onboardingResponsesSeen ?? {},
-        s = g(n.prompts ?? E[t]?.prompts ?? [], r, i);
-    E[t] = { ...E[t], ...n, prompts: s };
+        i = n.onboardingPromptsSeen ?? h[t]?.onboardingPromptsSeen ?? {},
+        r = n.onboardingResponsesSeen ?? h[t]?.onboardingResponsesSeen ?? {},
+        s = p(n.prompts ?? h[t]?.prompts ?? [], i, r);
+    h[t] = { ...h[t], ...n, prompts: s };
 }
 function I(e, t) {
-    if (null == h[e]) return;
+    if (null == m[e]) return;
     let n = {};
-    Object.keys(h[e]).forEach((r) => {
-        !t.includes(r) && h[e][r] ? (n[r] = !0) : t.includes(r) && !1 === h[e][r] && (n[r] = !1);
+    Object.keys(m[e]).forEach((i) => {
+        !t.includes(i) && m[e][i] ? (n[i] = !0) : t.includes(i) && !1 === m[e][i] && (n[i] = !1);
     }),
-        (h[e] = n);
-    let r = t.filter((e) => null == n[e] || !0 === n[e]);
+        (m[e] = n);
+    let i = t.filter((e) => null == n[e] || !0 === n[e]);
     Object.keys(n).forEach((e) => {
-        !0 !== n[e] || t.includes(e) || r.push(e);
+        !0 !== n[e] || t.includes(e) || i.push(e);
     }),
-        (E[e] = { ...E[e], responses: r });
+        (h[e] = { ...h[e], responses: i });
 }
 let T = [],
     S = [],
-    y = [],
-    N = [];
-class O extends s.Ay.Store {
+    N = [],
+    C = [];
+class R extends s.Ay.Store {
     static displayName = "GuildOnboardingPromptsStore";
     initialize() {
-        this.waitFor(l.A, _.Ay, o.A);
+        this.waitFor(l.A, c.Ay, o.A);
     }
     getOnboardingPromptsForOnboarding(e) {
-        return E[e]?.onboardingPrompts ?? T;
+        return h[e]?.onboardingPrompts ?? T;
     }
     getOnboardingPrompts(e) {
-        return E[e]?.prompts ?? T;
+        return h[e]?.prompts ?? T;
     }
     getOnboardingResponses(e) {
-        return o.A.isFullServerPreview(e) ? Array.from(o.A.getOnboardingResponses(e) ?? S) : (E[e]?.responses ?? S);
+        return o.A.isFullServerPreview(e) ? Array.from(o.A.getOnboardingResponses(e) ?? S) : (h[e]?.responses ?? S);
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -75,43 +75,43 @@ class O extends s.Ay.Store {
             .filter((e) => t.includes(e.id));
     }
     getOnboardingResponsesForPrompt(e, t) {
-        let n = E[e];
+        let n = h[e];
         if (null == n) return S;
-        let r = n.prompts.find((e) => e.id === t);
-        return null == r
+        let i = n.prompts.find((e) => e.id === t);
+        return null == i
             ? S
-            : i().intersection(
-                  r.options.map((e) => e.id),
+            : r().intersection(
+                  i.options.map((e) => e.id),
                   this.getOnboardingResponses(e),
               );
     }
     getEnabledOnboardingPrompts(e) {
-        let t = E[e];
+        let t = h[e];
         return o.A.isFullServerPreview(e) ? (t?.prompts ?? T) : null != t && t.enabled ? (t.prompts ?? T) : T;
     }
     getDefaultChannelIds(e) {
-        return E[e]?.defaultChannelIds ?? y;
+        return h[e]?.defaultChannelIds ?? N;
     }
     getEnabled(e) {
-        return o.A.isFullServerPreview(e) ? null != E[e] : (E[e]?.enabled ?? !1);
+        return o.A.isFullServerPreview(e) ? null != h[e] : (h[e]?.enabled ?? !1);
     }
     getOnboardingPrompt(e) {
-        return Object.values(E)
+        return Object.values(h)
             .map((e) => e.prompts)
             .flat()
             .find((t) => t.id === e);
     }
     isLoading() {
-        return m;
+        return g;
     }
     shouldFetchPrompts(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A.Millis.HOUR;
-        if (m) return !1;
-        let n = p[e];
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.A.Millis.HOUR;
+        if (g) return !1;
+        let n = f[e];
         return null == n || Date.now() - n > t;
     }
     getPendingResponseOptions(e) {
-        return h[e];
+        return m[e];
     }
     ackIdForGuild(e) {
         let t = this.getEnabledOnboardingPrompts(e),
@@ -119,110 +119,110 @@ class O extends s.Ay.Store {
         return (
             t.forEach((e) => {
                 e.options.forEach((e) => {
-                    d.default.compare(e.id, n) > 0 && (n = e.id);
+                    _.default.compare(e.id, n) > 0 && (n = e.id);
                 }),
-                    d.default.compare(e.id, n) > 0 && (n = e.id);
+                    _.default.compare(e.id, n) > 0 && (n = e.id);
             }),
             n
         );
     }
     lastFetchedAt(e) {
-        return p[e];
+        return f[e];
     }
     isAdvancedMode(e) {
-        return null != e && E[e]?.mode === f.SD.ONBOARDING_ADVANCED;
+        return null != e && h[e]?.mode === E.SD.ONBOARDING_ADVANCED;
     }
     getConnections(e) {
-        return E[e]?.connections ?? N;
+        return h[e]?.connections ?? C;
     }
 }
-let R = new O(a.h, {
+let O = new R(a.h, {
     CONNECTION_OPEN: function () {
-        (m = !1), (E = {});
+        (g = !1), (h = {});
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete E[t.id], delete h[t.id], delete p[t.id];
+        delete h[t.id], delete m[t.id], delete f[t.id];
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
-        m = !0;
+        g = !0;
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
         let {
             guildId: t,
             prompts: n,
-            defaultChannelIds: r,
-            enabled: i,
+            defaultChannelIds: i,
+            enabled: r,
             responses: s,
             onboardingPromptsSeen: a,
             onboardingResponsesSeen: o,
             mode: l,
-            belowRequirements: u,
-            connections: d,
+            belowRequirements: d,
+            connections: _,
         } = e;
-        m = !1;
-        let f = _.Ay.getOnboardingStatus(t) === _.$o.READY,
-            h = g(n, a, o);
-        (E[t] = {
-            enabled: i,
+        g = !1;
+        let E = c.Ay.getOnboardingStatus(t) === c.$o.READY,
+            m = p(n, a, o);
+        (h[t] = {
+            enabled: r,
             mode: l,
-            belowRequirements: u,
-            prompts: h,
-            onboardingPrompts: h.filter((e) => e.inOnboarding),
-            defaultChannelIds: r.filter((e) => (0, c.S)(t, e)),
-            responses: f ? [] : s,
+            belowRequirements: d,
+            prompts: m,
+            onboardingPrompts: m.filter((e) => e.inOnboarding),
+            defaultChannelIds: i.filter((e) => (0, u.S)(t, e)),
+            responses: E ? [] : s,
             onboardingPromptsSeen: a,
             onboardingResponsesSeen: o,
-            connections: d ?? [],
+            connections: _ ?? [],
         }),
-            f || I(t, s),
-            (p[t] = Date.now());
+            E || I(t, s),
+            (f[t] = Date.now());
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
-        m = !1;
+        g = !1;
     },
     GUILD_ONBOARDING_SELECT_OPTION: function (e) {
-        let { guildId: t, optionId: n, selected: r, removedOptionIds: s } = e;
+        let { guildId: t, optionId: n, selected: i, removedOptionIds: s } = e;
         return (
             !!o.A.isFullServerPreview(t) ||
-            (null != E[t] &&
-                (null != s && s.length > 0 && i().pullAll(E[t].responses, s),
-                r ? E[t].responses.push(n) : i().pull(E[t].responses, n),
-                null == h[t] && (h[t] = {}),
-                (h[t][n] = r),
-                null != s && s.forEach((e) => (h[t][e] = !1)),
-                (h[t] = { ...h[t] }),
+            (null != h[t] &&
+                (null != s && s.length > 0 && r().pullAll(h[t].responses, s),
+                i ? h[t].responses.push(n) : r().pull(h[t].responses, n),
+                null == m[t] && (m[t] = {}),
+                (m[t][n] = i),
+                null != s && s.forEach((e) => (m[t][e] = !1)),
+                (m[t] = { ...m[t] }),
                 !0))
         );
     },
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function (e) {
-        let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
+        let { guildId: t, options: n, prompts_seen: i, options_seen: r } = e;
         I(t, n);
-        let s = E[t];
+        let s = h[t];
         if (null == s) return !1;
-        let a = g(s.prompts, r, i);
-        E[t] = {
+        let a = p(s.prompts, i, r);
+        h[t] = {
             ...s,
             prompts: a,
             onboardingPrompts: a.filter((e) => e.inOnboarding),
-            onboardingPromptsSeen: r,
-            onboardingResponsesSeen: i,
+            onboardingPromptsSeen: i,
+            onboardingResponsesSeen: r,
         };
     },
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: A,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: A,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: function (e) {
         let { guildId: t, channelIds: n } = e;
-        E[t] = { ...E[t], defaultChannelIds: n };
+        h[t] = { ...h[t], defaultChannelIds: n };
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_SUCCESS: function (e) {
         let { guildId: t, connections: n } = e;
-        if (null == E[t]) return !1;
-        E[t] = { ...E[t], connections: n };
+        if (null == h[t]) return !1;
+        h[t] = { ...h[t], connections: n };
     },
     GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
         let { guildId: t, mode: n } = e,
-            r = E[t];
-        null != r && (r.mode = n);
+            i = h[t];
+        null != i && (i.mode = n);
     },
 });

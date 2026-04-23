@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { BW: () => h, J: () => E, L_: () => c, Pm: () => d, Vr: () => m, cx: () => p, sw: () => _ });
-var r = n(311907),
-    i = n(945810),
-    s = n(430452),
-    a = n(287809),
-    o = n(927578),
+n.d(t, { BW: () => A, J: () => S, L_: () => E, Pm: () => d, Vr: () => T, cx: () => I, sw: () => c });
+var i = n(17928),
+    r = n(945810),
+    a = n(969341),
+    s = n(287809),
+    _ = n(927578),
     l = n(915618),
-    u = n(788868);
-let c = (0, i.mj)({
+    o = n(788868);
+let E = (0, r.mj)({
     kind: "user",
     name: "2026-03-clips-experiment",
     defaultConfig: {
@@ -46,33 +45,33 @@ let c = (0, i.mj)({
     },
 });
 function d() {
-    if (!(0, l.A)(s.Ay)) return !1;
-    let e = f(a.default.getCurrentUser()),
-        { enableClips: t } = c.getConfig({ location: "areClipsEnabled" });
+    if (!(0, l.A)(a.Ay)) return !1;
+    let e = u(s.default.getCurrentUser()),
+        { enableClips: t } = E.getConfig({ location: "areClipsEnabled" });
     return e || t;
 }
-function _() {
-    let e = (0, l.A)(s.Ay),
-        t = (0, r.bG)([a.default], () => f(a.default.getCurrentUser())),
-        { enableClips: n } = c.getConfig({ location: "useEnableClips" });
+function c() {
+    let e = (0, l.A)(a.Ay),
+        t = (0, i.bG)([s.default], () => u(s.default.getCurrentUser())),
+        { enableClips: n } = E.getConfig({ location: "useEnableClips" });
     return (n || t) && e;
 }
-function f(e) {
-    return o.Ay.isPremiumAtLeast(e?.premiumType, u.PremiumTypes.TIER_2);
+function u(e) {
+    return _.Ay.isPremiumAtLeast(e?.premiumType, o.PremiumTypes.TIER_2);
 }
-function p() {
-    let { enableScreenshotKeybind: e } = c.getConfig({ location: "isScreenshotKeybindEnabled" });
+function I() {
+    let { enableScreenshotKeybind: e } = E.getConfig({ location: "isScreenshotKeybindEnabled" });
     return e;
 }
-function h() {
-    let { enableScreenshotKeybind: e } = c.useConfig({ location: "useScreenshotKeybindEnabled" });
+function A() {
+    let { enableScreenshotKeybind: e } = E.useConfig({ location: "useScreenshotKeybindEnabled" });
     return e;
 }
-function m() {
-    let { enableVoiceOnlyClips: e } = c.getConfig({ location: "areVoiceOnlyClipsEnabled" });
+function T() {
+    let { enableVoiceOnlyClips: e } = E.getConfig({ location: "areVoiceOnlyClipsEnabled" });
     return e;
 }
-function E() {
-    let { enableAdvancedSignals: e } = c.getConfig({ location: "areAdvancedSignalsEnabled" });
+function S() {
+    let { enableAdvancedSignals: e } = E.getConfig({ location: "areAdvancedSignalsEnabled" });
     return e;
 }

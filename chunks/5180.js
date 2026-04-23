@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { IF: () => l, YC: () => a, ai: () => o });
-var r = n(349828),
-    i = n(652215),
-    s = n(985018);
-function a(e) {
-    if (null != e) return o(e.id) ? s.intl.string(s.t.wMWyci) : e.name;
+n.d(t, { IF: () => l, YC: () => s, ai: () => _ });
+var i = n(349828),
+    r = n(652215),
+    a = n(985018);
+function s(e) {
+    if (null != e) return _(e.id) ? a.intl.string(a.t.wMWyci) : e.name;
 }
-function o(e) {
-    return e === r.Vc || e === i.YYv;
+function _(e) {
+    return e === i.Vc || e === r.YYv;
 }
 function l(e, t) {
     return !e.isThread() || t;

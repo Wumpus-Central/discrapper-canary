@@ -1,21 +1,21 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => m });
 var i = n(627968),
     a = n(64700),
     l = n(688807),
-    s = n(311907),
+    s = n(17928),
     r = n(425763),
-    o = n(86638),
+    o = n(647924),
     c = n(287809),
     d = n(788593),
-    u = n(742710),
-    _ = n(463259),
+    u = n(908683),
+    _ = n(751162),
     g = n(524063);
-function f(e) {
+function m(e) {
     let { scrollerRef: t } = e,
         {
             isDragging: n,
-            item: f,
-            sourceClientOffset: m,
+            item: m,
+            sourceClientOffset: f,
         } = (0, l.V)((e) => ({
             isDragging: e.isDragging(),
             item: e.getItem(),
@@ -25,7 +25,7 @@ function f(e) {
         p = (0, r.VU)(),
         I = a.useMemo(
             () =>
-                null == x || null == f
+                null == x || null == m
                     ? null
                     : (function (e, t) {
                           let { id: n, itemType: a, itemPreviewProps: l } = e;
@@ -80,8 +80,8 @@ function f(e) {
                               });
                           }
                           return null;
-                      })(f, x),
-            [f, x],
+                      })(m, x),
+            [m, x],
         ),
         A = a.useRef(null),
         h = a.useCallback(() => {
@@ -97,12 +97,12 @@ function f(e) {
             }
             null == A.current && h();
         }, [n, h]),
-        !0 !== n || null == m || null == I)
+        !0 !== n || null == f || null == I)
     )
         return null;
     null == A.current && h();
     let { x: E, y: v } = A.current ?? { x: 0, y: 0 },
-        C = m.x - E - 60 * !!p,
-        b = m.y - v;
-    return (0, i.jsx)("div", { className: g.kL, style: { transform: `translate3d(${C}px, ${b}px, 0)` }, children: I });
+        j = f.x - E - 60 * !!p,
+        b = f.y - v;
+    return (0, i.jsx)("div", { className: g.kL, style: { transform: `translate3d(${j}px, ${b}px, 0)` }, children: I });
 }

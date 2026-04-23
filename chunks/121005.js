@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var r = n(64700),
-    i = n(311907),
-    a = n(384904),
-    s = n(166403);
-function o() {
-    let e = (0, i.bG)([s.A], () => s.A.hasFetchedSubscriptions());
+    a = n(17928),
+    i = n(323082),
+    o = n(166403);
+function l() {
+    let e = (0, a.bG)([o.A], () => o.A.hasFetchedSubscriptions());
     return (
         r.useEffect(() => {
-            e || (0, a.hP)();
+            e || (0, i.hP)();
         }, [e]),
         e
     );

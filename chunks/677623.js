@@ -1,109 +1,110 @@
-function e(t) {
-    if (((this._capacity = a(t)), (this._length = 0), (this._front = 0), this._makeCapacity(), r(t))) {
-        for (var e = t.length, n = 0; n < e; ++n) this[n] = t[n];
-        this._length = e;
+"use strict";
+function t(e) {
+    if (((this._capacity = a(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), r(e))) {
+        for (var t = e.length, n = 0; n < t; ++n) this[n] = e[n];
+        this._length = t;
     }
 }
-(e.prototype.toArray = function () {
-    for (var t = this._length, e = Array(t), r = this._front, n = this._capacity, a = 0; a < t; ++a)
-        e[a] = this[(r + a) & (n - 1)];
-    return e;
+(t.prototype.toArray = function () {
+    for (var e = this._length, t = Array(e), r = this._front, n = this._capacity, a = 0; a < e; ++a)
+        t[a] = this[(r + a) & (n - 1)];
+    return t;
 }),
-    (e.prototype.push = function (t) {
-        var e = arguments.length,
+    (t.prototype.push = function (e) {
+        var t = arguments.length,
             r = this._length;
-        if (e > 1) {
+        if (t > 1) {
             var n = this._capacity;
-            if (r + e > n) {
-                for (var a = 0; a < e; ++a) {
+            if (r + t > n) {
+                for (var a = 0; a < t; ++a) {
                     this._checkCapacity(r + 1);
-                    var i = (this._front + r) & (this._capacity - 1);
-                    (this[i] = arguments[a]), r++, (this._length = r);
+                    var s = (this._front + r) & (this._capacity - 1);
+                    (this[s] = arguments[a]), r++, (this._length = r);
                 }
                 return r;
             }
-            for (var i = this._front, a = 0; a < e; ++a) (this[(i + r) & (n - 1)] = arguments[a]), i++;
-            return (this._length = r + e), r + e;
+            for (var s = this._front, a = 0; a < t; ++a) (this[(s + r) & (n - 1)] = arguments[a]), s++;
+            return (this._length = r + t), r + t;
         }
-        if (0 === e) return r;
+        if (0 === t) return r;
         this._checkCapacity(r + 1);
         var a = (this._front + r) & (this._capacity - 1);
-        return (this[a] = t), (this._length = r + 1), r + 1;
+        return (this[a] = e), (this._length = r + 1), r + 1;
     }),
-    (e.prototype.pop = function () {
-        var t = this._length;
-        if (0 !== t) {
-            var e = (this._front + t - 1) & (this._capacity - 1),
-                r = this[e];
-            return (this[e] = void 0), (this._length = t - 1), r;
+    (t.prototype.pop = function () {
+        var e = this._length;
+        if (0 !== e) {
+            var t = (this._front + e - 1) & (this._capacity - 1),
+                r = this[t];
+            return (this[t] = void 0), (this._length = e - 1), r;
         }
     }),
-    (e.prototype.shift = function () {
-        var t = this._length;
-        if (0 !== t) {
-            var e = this._front,
-                r = this[e];
-            return (this[e] = void 0), (this._front = (e + 1) & (this._capacity - 1)), (this._length = t - 1), r;
+    (t.prototype.shift = function () {
+        var e = this._length;
+        if (0 !== e) {
+            var t = this._front,
+                r = this[t];
+            return (this[t] = void 0), (this._front = (t + 1) & (this._capacity - 1)), (this._length = e - 1), r;
         }
     }),
-    (e.prototype.unshift = function (t) {
-        var e = this._length,
+    (t.prototype.unshift = function (e) {
+        var t = this._length,
             r = arguments.length;
         if (r > 1) {
             var n = this._capacity;
-            if (e + r > n) {
+            if (t + r > n) {
                 for (var a = r - 1; a >= 0; a--) {
-                    this._checkCapacity(e + 1);
+                    this._checkCapacity(t + 1);
                     var n = this._capacity,
-                        i = (((this._front - 1) & (n - 1)) ^ n) - n;
-                    (this[i] = arguments[a]), e++, (this._length = e), (this._front = i);
+                        s = (((this._front - 1) & (n - 1)) ^ n) - n;
+                    (this[s] = arguments[a]), t++, (this._length = t), (this._front = s);
                 }
-                return e;
+                return t;
             }
-            for (var o = this._front, a = r - 1; a >= 0; a--) {
-                var i = (((o - 1) & (n - 1)) ^ n) - n;
-                (this[i] = arguments[a]), (o = i);
+            for (var i = this._front, a = r - 1; a >= 0; a--) {
+                var s = (((i - 1) & (n - 1)) ^ n) - n;
+                (this[s] = arguments[a]), (i = s);
             }
-            return (this._front = o), (this._length = e + r), e + r;
+            return (this._front = i), (this._length = t + r), t + r;
         }
-        if (0 === r) return e;
-        this._checkCapacity(e + 1);
+        if (0 === r) return t;
+        this._checkCapacity(t + 1);
         var n = this._capacity,
             a = (((this._front - 1) & (n - 1)) ^ n) - n;
-        return (this[a] = t), (this._length = e + 1), (this._front = a), e + 1;
+        return (this[a] = e), (this._length = t + 1), (this._front = a), t + 1;
     }),
-    (e.prototype.peekBack = function () {
-        var t = this._length;
-        if (0 !== t) return this[(this._front + t - 1) & (this._capacity - 1)];
+    (t.prototype.peekBack = function () {
+        var e = this._length;
+        if (0 !== e) return this[(this._front + e - 1) & (this._capacity - 1)];
     }),
-    (e.prototype.peekFront = function () {
+    (t.prototype.peekFront = function () {
         if (0 !== this._length) return this[this._front];
     }),
-    (e.prototype.get = function (t) {
-        var e = t;
-        if (e === (0 | e)) {
+    (t.prototype.get = function (e) {
+        var t = e;
+        if (t === (0 | t)) {
             var r = this._length;
-            if ((e < 0 && (e += r), !(e < 0) && !(e >= r))) return this[(this._front + e) & (this._capacity - 1)];
+            if ((t < 0 && (t += r), !(t < 0) && !(t >= r))) return this[(this._front + t) & (this._capacity - 1)];
         }
     }),
-    (e.prototype.isEmpty = function () {
+    (t.prototype.isEmpty = function () {
         return 0 === this._length;
     }),
-    (e.prototype.clear = function () {
+    (t.prototype.clear = function () {
         (this._length = 0), (this._front = 0), this._makeCapacity();
     }),
-    (e.prototype.toString = function () {
+    (t.prototype.toString = function () {
         return this.toArray().toString();
     }),
-    (e.prototype.valueOf = e.prototype.toString),
-    (e.prototype.removeFront = e.prototype.shift),
-    (e.prototype.removeBack = e.prototype.pop),
-    (e.prototype.insertFront = e.prototype.unshift),
-    (e.prototype.insertBack = e.prototype.push),
-    (e.prototype.enqueue = e.prototype.push),
-    (e.prototype.dequeue = e.prototype.shift),
-    (e.prototype.toJSON = e.prototype.toArray),
-    Object.defineProperty(e.prototype, "length", {
+    (t.prototype.valueOf = t.prototype.toString),
+    (t.prototype.removeFront = t.prototype.shift),
+    (t.prototype.removeBack = t.prototype.pop),
+    (t.prototype.insertFront = t.prototype.unshift),
+    (t.prototype.insertBack = t.prototype.push),
+    (t.prototype.enqueue = t.prototype.push),
+    (t.prototype.dequeue = t.prototype.shift),
+    (t.prototype.toJSON = t.prototype.toArray),
+    Object.defineProperty(t.prototype, "length", {
         get: function () {
             return this._length;
         },
@@ -111,40 +112,40 @@ function e(t) {
             throw RangeError("");
         },
     }),
-    (e.prototype._makeCapacity = function () {
-        for (var t = this._capacity, e = 0; e < t; ++e) this[e] = void 0;
+    (t.prototype._makeCapacity = function () {
+        for (var e = this._capacity, t = 0; t < e; ++t) this[t] = void 0;
     }),
-    (e.prototype._checkCapacity = function (t) {
-        this._capacity < t && this._resizeTo(a(1.5 * this._capacity + 16));
+    (t.prototype._checkCapacity = function (e) {
+        this._capacity < e && this._resizeTo(a(1.5 * this._capacity + 16));
     }),
-    (e.prototype._resizeTo = function (t) {
-        var e = this._front,
+    (t.prototype._resizeTo = function (e) {
+        var t = this._front,
             r = this._capacity,
             a = Array(r),
-            i = this._length;
-        if ((n(this, 0, a, 0, r), (this._capacity = t), this._makeCapacity(), (this._front = 0), e + i <= r))
-            n(a, e, this, 0, i);
+            s = this._length;
+        if ((n(this, 0, a, 0, r), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + s <= r))
+            n(a, t, this, 0, s);
         else {
-            var o = i - ((e + i) & (r - 1));
-            n(a, e, this, 0, o), n(a, 0, this, o, i - o);
+            var i = s - ((t + s) & (r - 1));
+            n(a, t, this, 0, i), n(a, 0, this, i, s - i);
         }
     });
 var r = Array.isArray;
-function n(t, e, r, n, a) {
-    for (var i = 0; i < a; ++i) r[i + n] = t[i + e];
+function n(e, t, r, n, a) {
+    for (var s = 0; s < a; ++s) r[s + n] = e[s + t];
 }
-function a(t) {
-    var e;
-    if ("number" != typeof t)
-        if (!r(t)) return 16;
-        else t = t.length;
+function a(e) {
+    var t;
+    if ("number" != typeof e)
+        if (!r(e)) return 16;
+        else e = e.length;
     return (
-        (e = (Math.min(Math.max(16, t), 0x40000000) >>> 0) - 1),
-        (e |= e >> 1),
-        (e |= e >> 2),
-        (e |= e >> 4),
-        (e |= e >> 8),
-        (e |= e >> 16) + 1
+        (t = (Math.min(Math.max(16, e), 0x40000000) >>> 0) - 1),
+        (t |= t >> 1),
+        (t |= t >> 2),
+        (t |= t >> 4),
+        (t |= t >> 8),
+        (t |= t >> 16) + 1
     );
 }
-t.exports = e;
+e.exports = t;

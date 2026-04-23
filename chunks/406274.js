@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(311907),
-    i = n(287809);
-let a = () =>
-    (0, r.bG)([i.default], () => {
-        let e = i.default.getCurrentUser();
+n.d(t, { A: () => s });
+var i = n(17928),
+    r = n(287809);
+let s = () =>
+    (0, i.bG)([r.default], () => {
+        let e = r.default.getCurrentUser();
         return e?.nsfwAllowed ?? null;
     });

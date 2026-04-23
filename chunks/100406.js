@@ -1,60 +1,60 @@
-n.d(t, { CA: () => d, NI: () => u, cR: () => c });
-var i = n(110259),
-    s = n(933681),
-    r = n(73153),
-    a = n(499785),
-    l = n(431144),
-    o = n(652215);
+l.d(t, { CA: () => u, NI: () => o, cR: () => c });
+var n = l(110259),
+    i = l(933681),
+    s = l(228366),
+    a = l(499785),
+    r = l(431144),
+    d = l(652215);
 async function c() {
     try {
         let e = await a.A.get({
-            url: o.Rsh.EMAIL_SETTINGS,
+            url: d.Rsh.EMAIL_SETTINGS,
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+                event: n.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                 properties: (e) => {
                     let t = e?.body?.initialized;
-                    return (0, s.e0)({ initialized: t });
+                    return (0, i.e0)({ initialized: t });
                 },
             },
             rejectWithError: !0,
         });
-        return r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body;
+        return s.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body;
     } catch {
-        r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
+        s.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
     }
 }
-async function d(e, t) {
-    r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: { [e]: t } });
+async function u(e, t) {
+    s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: { [e]: t } });
     try {
-        let n = await a.A.patch({
-            url: o.Rsh.EMAIL_SETTINGS,
+        let l = await a.A.patch({
+            url: d.Rsh.EMAIL_SETTINGS,
             body: { settings: { categories: { [e]: t } } },
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: n.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: { category: e, value: t },
             },
             rejectWithError: !0,
         });
-        r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: n.body });
+        s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: l.body });
     } catch (e) {
-        r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+        s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }
-async function u() {
-    let e = l.Zk.reduce((e, t) => ({ ...e, [t]: !1 }), {});
-    r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: e });
+async function o() {
+    let e = r.Zk.reduce((e, t) => ({ ...e, [t]: !1 }), {});
+    s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE", updates: e });
     try {
         let t = await a.A.patch({
-            url: o.Rsh.EMAIL_SETTINGS,
+            url: d.Rsh.EMAIL_SETTINGS,
             body: { settings: { categories: e } },
             trackedActionData: {
-                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: n.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: { category: "marketing", value: !1 },
             },
             rejectWithError: !0,
         });
-        r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: t.body });
+        s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_SUCCESS", settings: t.body });
     } catch (e) {
-        r.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
+        s.h.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }

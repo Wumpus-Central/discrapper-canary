@@ -1,12 +1,12 @@
-n.d(t, { A: () => a });
-var l = n(311907),
-    s = n(961350),
-    i = n(470710);
-function a(e) {
-    return (0, l.cf)([i.A, s.default], () => {
-        let t = i.A.getCall(e),
-            n = s.default.getId(),
-            l = null != t && null != n && t.ringing.includes(n);
-        return { isIncomingCall: l, isOngoingCall: i.A.isCallActive(e) && !l };
+n.d(t, { A: () => i });
+var a = n(17928),
+    r = n(495544),
+    l = n(470710);
+function i(e) {
+    return (0, a.cf)([l.A, r.default], () => {
+        let t = l.A.getCall(e),
+            n = r.default.getId(),
+            a = null != t && null != n && t.ringing.includes(n);
+        return { isIncomingCall: a, isOngoingCall: l.A.isCallActive(e) && !a };
     });
 }

@@ -1,29 +1,29 @@
-n.d(t, { A: () => d });
-var i = n(311907),
-    r = n(73153),
-    a = n(652215);
-let l = null,
-    s = {};
-class o extends i.Ay.Store {
+s.d(l, { A: () => d });
+var t = s(17928),
+    c = s(228366),
+    e = s(652215);
+let i = null,
+    f = {};
+class r extends t.Ay.Store {
     static displayName = "CodedLinkNativeAppStateStore";
-    getState(e) {
-        return s[e];
+    getState(a) {
+        return f[a];
     }
     getHighestState() {
-        return l;
+        return i;
     }
 }
-let d = new o(r.h, {
-    NATIVE_APP_MODAL_OPENING: function (e) {
-        let { code: t } = e;
-        (s[t] = a.fAW.OPENING), null === l && (l = a.fAW.OPENING);
+let d = new r(c.h, {
+    NATIVE_APP_MODAL_OPENING: function (a) {
+        let { code: l } = a;
+        (f[l] = e.fAW.OPENING), null === i && (i = e.fAW.OPENING);
     },
-    NATIVE_APP_MODAL_OPENED: function (e) {
-        let { code: t } = e;
-        (s[t] = a.fAW.OPEN), (l = a.fAW.OPEN);
+    NATIVE_APP_MODAL_OPENED: function (a) {
+        let { code: l } = a;
+        (f[l] = e.fAW.OPEN), (i = e.fAW.OPEN);
     },
-    NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
-        let { code: t } = e;
-        (s[t] = a.fAW.OPEN_FAIL), (null === l || l === a.fAW.OPENING) && (l = a.fAW.OPEN_FAIL);
+    NATIVE_APP_MODAL_OPEN_FAILED: function (a) {
+        let { code: l } = a;
+        (f[l] = e.fAW.OPEN_FAIL), (null === i || i === e.fAW.OPENING) && (i = e.fAW.OPEN_FAIL);
     },
 });

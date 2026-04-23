@@ -1,6 +1,6 @@
 n.d(t, { Ey: () => u, O$: () => s, Rw: () => o, S9: () => d, q0: () => a });
-var r = n(562465),
-    i = n(73153),
+var r = n(636537),
+    i = n(228366),
     l = n(652215);
 function a() {
     i.h.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });

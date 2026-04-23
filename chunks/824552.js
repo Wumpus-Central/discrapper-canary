@@ -1,45 +1,45 @@
 "use strict";
-a.d(t, { A: () => c });
-var r = a(562465),
-    l = a(451988),
-    n = a(73153),
-    i = a(546183),
-    s = a(652215);
-let o = new l.OC(d, (e) => i.default.getFetchStateForApplication(e) !== i.FetchState.FETCHING);
+n.d(t, { A: () => _ });
+var i = n(636537),
+    r = n(451988),
+    s = n(228366),
+    a = n(546183),
+    o = n(652215);
+let l = new r.OC(d, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
 async function d(e) {
-    n.h.dispatch({
+    s.h.dispatch({
         type: "USER_AUTHORIZED_APPS_REQUEST",
         request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
     }),
-        await r.Bo.get({
-            url: s.Rsh.OAUTH2_TOKENS,
+        await i.Bo.get({
+            url: o.Rsh.OAUTH2_TOKENS,
             oldFormErrors: !0,
             rejectWithError: !0,
             query: { application_ids: e },
         }).then(
             (t) =>
-                n.h.dispatch({
+                s.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_UPDATE",
                     isFullFetch: null == e,
                     tokens: (function (e, t) {
-                        let a = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
-                        for (let t of e) a[t.application.id] = t;
-                        return a;
+                        let n = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
+                        for (let t of e) n[t.application.id] = t;
+                        return n;
                     })(t.body, e),
                 }),
             () =>
-                n.h.dispatch({
+                s.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
                     request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
                 }),
         );
 }
-let c = {
+let _ = {
     fetch(e) {
-        i.default.getFetchState() !== i.FetchState.FETCHING && (null != e ? o.queue(e) : (o.reset(), d()));
+        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), d()));
     },
     delete(e) {
-        r.Bo.del({ url: s.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+        i.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             this.fetch();
         });
     },

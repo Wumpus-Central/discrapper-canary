@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Gg: "focusLock__49fc1",
     zr: "root__49fc1",

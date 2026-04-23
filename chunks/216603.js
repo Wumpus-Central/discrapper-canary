@@ -1,62 +1,62 @@
-l.d(t, { default: () => p });
+l.d(e, { default: () => h });
 var n = l(627968),
     r = l(64700),
-    a = l(621466),
-    i = l(477782),
-    s = l(861672),
+    i = l(621466),
+    s = l(477782),
+    a = l(550079),
     c = l(442433),
-    o = l(614203),
-    u = l(723702),
-    d = l(837921),
-    L = l(985018);
-function p(e) {
-    let { text: t, target: l, onHeightUpdate: p, onSelect: E } = e,
-        h = r.useCallback(() => {
-            (0, c.Z_)(), (0, a.vq)(l, HTMLElement) && (l.focus(), setTimeout(() => l.focus(), 0));
+    u = l(316254),
+    o = l(723702),
+    d = l(19575),
+    p = l(985018);
+function h(t) {
+    let { text: e, target: l, onHeightUpdate: h, onSelect: E } = t,
+        L = r.useCallback(() => {
+            (0, c.Z_)(), (0, i.vq)(l, HTMLElement) && (l.focus(), setTimeout(() => l.focus(), 0));
         }, [l]),
-        [C, f] = (0, o.A)({ text: t, target: l, onHeightUpdate: p });
-    if (!u.isPlatformEmbedded || !((0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement))) return null;
-    let A =
-        "" !== t
+        [m, x] = (0, u.A)({ text: e, target: l, onHeightUpdate: h });
+    if (!o.isPlatformEmbedded || !((0, i.vq)(l, HTMLInputElement) || (0, i.vq)(l, HTMLTextAreaElement))) return null;
+    let C =
+        "" !== e
             ? [
                   (0, n.jsx)(
-                      i.Dr,
+                      s.Dr,
                       {
                           id: "cut",
-                          label: L.intl.string(L.t.pNPVhe),
-                          shortcut: (0, u.isMac)() ? "⌘X" : "Ctrl+X",
+                          label: p.intl.string(p.t.pNPVhe),
+                          shortcut: (0, o.isMac)() ? "⌘X" : "Ctrl+X",
                           action: () => setTimeout(() => d.Ay.cut(), 0),
                       },
                       "cut",
                   ),
                   (0, n.jsx)(
-                      i.Dr,
+                      s.Dr,
                       {
                           id: "copy",
-                          label: L.intl.string(L.t.OpuAlK),
-                          shortcut: (0, u.isMac)() ? "⌘C" : "Ctrl+C",
-                          action: () => d.Ay.copy(t),
+                          label: p.intl.string(p.t.OpuAlK),
+                          shortcut: (0, o.isMac)() ? "⌘C" : "Ctrl+C",
+                          action: () => d.Ay.copy(e),
                       },
                       "copy",
                   ),
               ]
             : null;
-    return (0, n.jsxs)(s.W, {
+    return (0, n.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: "textarea-context",
-        onClose: h,
-        "aria-label": L.intl.string(L.t.NWlDSI),
+        onClose: L,
+        "aria-label": p.intl.string(p.t.NWlDSI),
         onSelect: E,
         children: [
-            (0, n.jsx)(i.rX, { children: C }),
-            (0, n.jsx)(i.rX, { children: f }),
-            (0, n.jsxs)(i.rX, {
+            (0, n.jsx)(s.rX, { children: m }),
+            (0, n.jsx)(s.rX, { children: x }),
+            (0, n.jsxs)(s.rX, {
                 children: [
-                    A,
-                    (0, n.jsx)(i.Dr, {
+                    C,
+                    (0, n.jsx)(s.Dr, {
                         id: "paste",
-                        label: L.intl.string(L.t.lMUxVi),
-                        shortcut: (0, u.isMac)() ? "⌘V" : "Ctrl+V",
+                        label: p.intl.string(p.t.lMUxVi),
+                        shortcut: (0, o.isMac)() ? "⌘V" : "Ctrl+V",
                         action: () => setTimeout(() => d.Ay.paste(), 0),
                     }),
                 ],

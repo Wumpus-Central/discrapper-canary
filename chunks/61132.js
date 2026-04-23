@@ -1,6 +1,7 @@
-var o = e(524152),
-    n = TypeError;
-r.exports = function (r, t) {
-    if (o(t, r)) return r;
-    throw new n("Incorrect invocation");
+"use strict";
+var n = r(524152),
+    a = TypeError;
+e.exports = function (e, t) {
+    if (n(t, e)) return e;
+    throw new a("Incorrect invocation");
 };

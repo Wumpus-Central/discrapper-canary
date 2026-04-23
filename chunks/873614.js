@@ -1,119 +1,119 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => N });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(311907),
+    r = n.n(s),
+    a = n(17928),
     o = n(331322),
-    d = n(827734),
+    d = n(661531),
     c = n(192308),
     u = n(834730),
     h = n(939249),
-    A = n(599319),
+    A = n(689175),
     _ = n(686956),
-    m = n(847599),
-    g = n(47167),
+    g = n(847599),
+    m = n(47167),
     p = n(713654),
     f = n(46054),
     E = n(506164),
-    x = n(734057),
-    I = n(985018),
-    C = n(240389),
+    C = n(734057),
+    x = n(985018),
+    I = n(240389),
     b = n(311177);
-function N(e) {
+function S(e) {
     let { guild: t, channelId: s } = e,
-        a = (0, r.bG)([x.A], () => x.A.getChannel(s)),
+        r = (0, a.bG)([C.A], () => C.A.getChannel(s)),
         [A, b] = l.useState(!1),
-        N = l.useCallback(() => {
+        S = l.useCallback(() => {
             _.A.nsfwReturnToSafety(t?.id);
         }, [t]),
-        S = l.useCallback(() => {
+        N = l.useCallback(() => {
             _.A.spoilerAgree(s);
         }, [s]),
-        v = (0, g.Ay)(a),
-        T = null != a ? (0, p.gU)(a) : null,
+        T = (0, m.Ay)(r),
+        v = null != r ? (0, p.gU)(r) : null,
         y =
-            null != a
+            null != r
                 ? (0, i.jsxs)(o.B, {
                       direction: "horizontal",
                       align: "center",
                       gap: 4,
-                      className: C.$,
+                      className: I.$,
                       children: [
-                          null != T &&
+                          null != v &&
                               (0, i.jsx)("span", {
-                                  className: C.P0,
-                                  children: (0, i.jsx)(T, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
+                                  className: I.P0,
+                                  children: (0, i.jsx)(v, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
                               }),
-                          (0, i.jsx)("span", { className: C.HA, children: v }),
+                          (0, i.jsx)("span", { className: I.HA, children: T }),
                       ],
                   })
-                : I.intl.string(I.t["q38/ae"]),
+                : x.intl.string(x.t["q38/ae"]),
         R = l.useCallback((e) => {
             null != e && b(e.scrollHeight - e.clientHeight > 1);
         }, []),
         j = l.useCallback(() => {
-            null != a &&
+            null != r &&
                 null != t &&
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e("8939").then(n.bind(n, 181094));
-                    return (n) => (0, i.jsx)(e, { ...n, channel: a, guild: t });
+                    return (n) => (0, i.jsx)(e, { ...n, channel: r, guild: t });
                 });
-        }, [a, t]),
+        }, [r, t]),
         L =
-            a?.topic != null && "" !== a.topic.trim()
+            r?.topic != null && "" !== r.topic.trim()
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(u.E, {
                               ref: R,
                               variant: "text-md/medium",
                               color: "text-muted",
-                              className: C.VA,
+                              className: I.VA,
                               lineClamp: 3,
-                              children: f.A.parseTopic(a.topic, !0, { channelId: s }),
+                              children: f.A.parseTopic(r.topic, !0, { channelId: s }),
                           }),
                           A &&
                               (0, i.jsx)(h.D, {
-                                  className: C.zT,
+                                  className: I.zT,
                                   onClick: j,
                                   children: (0, i.jsx)(u.E, {
                                       variant: "text-md/medium",
                                       color: "text-brand",
-                                      className: C.ql,
-                                      children: I.intl.string(I.t["/QvRak"]),
+                                      className: I.ql,
+                                      children: x.intl.string(x.t["/QvRak"]),
                                   }),
                               }),
-                          (0, i.jsx)("div", { className: C.yF }),
+                          (0, i.jsx)("div", { className: I.yF }),
                       ],
                   })
                 : null;
     return (0, i.jsx)(E.A, {
-        onAgree: S,
-        onDisagree: N,
-        modalType: m.A5.SPOILER_CHANNEL,
+        onAgree: N,
+        onDisagree: S,
+        modalType: g.A5.SPOILER_CHANNEL,
         title: y,
         subtitle: L,
-        description: I.intl.string(I.t["34D1HC"]),
-        agreement: I.intl.string(I.t.KmRwcW),
-        disagreement: I.intl.string(I.t["/g10LC"]),
+        description: x.intl.string(x.t["34D1HC"]),
+        agreement: x.intl.string(x.t.KmRwcW),
+        disagreement: x.intl.string(x.t["/g10LC"]),
         guildId: t?.id,
         channelId: s,
     });
 }
-let S = function (e) {
+let N = function (e) {
     let { guild: t, channelId: n, className: s } = e,
-        r = l.useRef(null);
+        a = l.useRef(null);
     return (
         l.useEffect(() => {
-            let { current: e } = r;
+            let { current: e } = a;
             e?.scrollToBottom();
         }, []),
         (0, i.jsx)(A.Ch, {
-            ref: r,
+            ref: a,
             className: b.X,
             children: (0, i.jsx)("div", {
-                className: a()(s, b.i),
-                children: (0, i.jsx)(N, { guild: t, channelId: n }, n),
+                className: r()(s, b.i),
+                children: (0, i.jsx)(S, { guild: t, channelId: n }, n),
             }),
         })
     );

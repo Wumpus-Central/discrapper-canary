@@ -1,58 +1,57 @@
-"use strict";
-a.d(t, { A: () => b, f: () => m });
-var r = a(627968);
-a(64700);
-var l = a(451394),
-    n = a(687966),
-    i = a(323384),
-    s = a(432017),
-    o = a(526181),
-    d = a(765379),
-    c = a(82149),
-    u = a(566903),
-    h = a(864436),
-    p = a(200041),
-    _ = a(652215);
-let m = function (e) {
+n.d(t, { A: () => T, f: () => A });
+var i = n(627968);
+n(64700);
+var r = n(451394),
+    a = n(687966),
+    s = n(323384),
+    _ = n(432017),
+    l = n(526181),
+    o = n(765379),
+    E = n(82149),
+    d = n(566903),
+    c = n(864436),
+    u = n(200041),
+    I = n(652215);
+let A = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, c.Cy)(e)
-        ? l.q
-        : (0, d.A)(e)
+    return (0, E.Cy)(e)
+        ? r.q
+        : (0, o.A)(e)
           ? t
-              ? n._
-              : i.k
-          : e.type === _.$pd.PLAYING
-            ? n._
-            : e.type === _.$pd.LISTENING
-              ? s.T
-              : e.type === _.$pd.WATCHING || e.type === _.$pd.STREAMING
-                ? o.U
-                : e.type === _.$pd.COMPETING
-                  ? n._
+              ? a._
+              : s.k
+          : e.type === I.$pd.PLAYING
+            ? a._
+            : e.type === I.$pd.LISTENING
+              ? _.T
+              : e.type === I.$pd.WATCHING || e.type === I.$pd.STREAMING
+                ? l.U
+                : e.type === I.$pd.COMPETING
+                  ? a._
                   : null;
 };
-function b(e) {
+function T(e) {
     let {
             activity: t,
-            textVariant: a,
-            textClassName: l,
-            iconClassName: n,
-            hideIcon: i = !1,
-            hideText: s = !1,
-            hideTooltip: o = !1,
-            canTruncate: d = !0,
+            textVariant: n,
+            textClassName: r,
+            iconClassName: a,
+            hideIcon: s = !1,
+            hideText: _ = !1,
+            hideTooltip: l = !1,
+            canTruncate: o = !0,
         } = e,
-        { text: c, tooltip: _ } = (0, u.A)(t, !0),
-        b = m(t),
-        g = null != b && !i;
-    return (0, r.jsx)(p.A, {
-        icon: g ? (0, r.jsx)(h.A, { icon: b, className: n }) : void 0,
-        text: c ?? "",
-        textVariant: a,
-        textClassName: l,
-        hideTooltip: o,
-        canTruncate: d,
-        "aria-label": _ ?? "",
-        hideText: s,
+        { text: E, tooltip: I } = (0, d.A)(t, !0),
+        T = A(t),
+        S = null != T && !s;
+    return (0, i.jsx)(u.A, {
+        icon: S ? (0, i.jsx)(c.A, { icon: T, className: a }) : void 0,
+        text: E ?? "",
+        textVariant: n,
+        textClassName: r,
+        hideTooltip: l,
+        canTruncate: o,
+        "aria-label": I ?? "",
+        hideText: _,
     });
 }

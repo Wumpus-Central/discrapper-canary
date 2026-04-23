@@ -1,46 +1,46 @@
 "use strict";
-n.d(t, { Ay: () => E, Gc: () => _.Gc, Vg: () => f });
-var r = n(64700),
-    i = n(503698),
-    s = n.n(i),
+n.d(t, { Ay: () => h, Gc: () => c.Gc, Vg: () => E });
+var i = n(64700),
+    r = n(503698),
+    s = n.n(r),
     a = n(735438),
-    o = n(311907),
-    l = n(544028),
-    u = n(617617),
-    d = n(467135),
-    c = n(47671),
-    _ = n(153469);
-let f = "data-client-themes";
-function E() {
+    o = n(17928),
+    l = n(363195),
+    d = n(617617),
+    _ = n(467135),
+    u = n(47671),
+    c = n(153469);
+let E = "data-client-themes";
+function h() {
     let e,
         t =
-            ((e = (0, o.bG)([c.A], () => c.A.gradientPreset)),
-            r.useMemo(() => {
+            ((e = (0, o.bG)([u.A], () => u.A.gradientPreset)),
+            i.useMemo(() => {
                 if (null == e) return null;
-                let t = c.A.getLinearGradient();
-                return null == t ? null : (0, _.hm)(e, t);
+                let t = u.A.getLinearGradient();
+                return null == t ? null : (0, c.hm)(e, t);
             }, [e])),
         n = (function () {
             let e = (0, o.bG)([l.A], () => l.A.theme),
-                { colors: t, chassisMixAmount: n, gradientAngle: i, setAll: s } = (0, d.ko)(),
-                c = (0, o.bG)([u.A], () => u.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
-                f = r.useRef(void 0);
+                { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: s } = (0, _.ko)(),
+                u = (0, o.bG)([d.A], () => d.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
+                E = i.useRef(void 0);
             return (
-                r.useEffect(() => {
-                    (0, a.isEqual)(c, f.current) ||
-                        ((f.current = c),
+                i.useEffect(() => {
+                    (0, a.isEqual)(u, E.current) ||
+                        ((E.current = u),
                         s({
-                            colors: c?.colors ?? [],
-                            gradientAngle: c?.gradientAngle ?? 0,
-                            chassisMixAmount: c?.baseMix ?? d.kJ,
+                            colors: u?.colors ?? [],
+                            gradientAngle: u?.gradientAngle ?? 0,
+                            chassisMixAmount: u?.baseMix ?? _.kJ,
                         }));
-                }, [c, s]),
-                r.useMemo(() => (0 === t.length ? null : (0, _.dY)(t, i, n, e)), [t, n, i, e])
+                }, [u, s]),
+                i.useMemo(() => (0 === t.length ? null : (0, c.dY)(t, r, n, e)), [t, n, r, e])
             );
         })();
     return null != n
-        ? { clientThemesCSS: n, clientThemesClassName: s()(_.Gc, _.hK) }
+        ? { clientThemesCSS: n, clientThemesClassName: s()(c.Gc, c.hK) }
         : null === t
           ? { clientThemesCSS: "", clientThemesClassName: "" }
-          : { clientThemesCSS: t, clientThemesClassName: _.Gc };
+          : { clientThemesCSS: t, clientThemesClassName: c.Gc };
 }

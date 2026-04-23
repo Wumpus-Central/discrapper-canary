@@ -1,75 +1,75 @@
-n.d(t, { A: () => C, q: () => x });
+n.d(t, { A: () => C, q: () => S });
 var a,
     i = n(627968),
     l = n(64700),
     r = n(503698),
     s = n.n(r),
     o = n(837381),
-    c = n(311907),
-    u = n(990078),
-    d = n(789645),
+    c = n(17928),
+    d = n(990078),
+    u = n(789645),
     m = n(834730),
     _ = n(939249),
     h = n(442433),
     p = n(565645),
-    f = n(775602),
-    g = n(508675),
+    g = n(775602),
+    f = n(159273),
     A = n(253932),
     b = n(957565),
-    I = n(985018),
-    S = n(422017),
-    T = (((a = T || {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), a);
+    T = n(985018),
+    I = n(422017),
+    E = (((a = E || {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), a);
 function C(e) {
-    let { tag: t, size: a = 1, disabled: r, className: u, onClick: T, onRemove: C, selected: x, ariaLabel: E } = e,
-        { name: y, emojiId: v, emojiName: M } = t,
-        w = null != C,
-        [L, R] = l.useState(!1),
-        j = (0, c.bG)([g.Ay], () => (null != v ? g.Ay.getUsableCustomEmojiById(v) : null)),
-        N = w || null != T,
-        k = (!w || !L) && (null != v || null != M),
-        O = 0 === a,
+    let { tag: t, size: a = 1, disabled: r, className: d, onClick: E, onRemove: C, selected: S, ariaLabel: y } = e,
+        { name: x, emojiId: v, emojiName: O } = t,
+        N = null != C,
+        [w, M] = l.useState(!1),
+        R = (0, c.bG)([f.Ay], () => (null != v ? f.Ay.getUsableCustomEmojiById(v) : null)),
+        L = N || null != E,
+        j = (!N || !w) && (null != v || null != O),
+        k = 0 === a,
         D = l.useRef(null),
-        F = (0, c.bG)([f.A], () => f.A.keyboardModeEnabled),
-        G = (0, i.jsxs)(i.Fragment, {
+        F = (0, c.bG)([g.A], () => g.A.keyboardModeEnabled),
+        P = (0, i.jsxs)(i.Fragment, {
             children: [
-                k
+                j
                     ? (0, i.jsx)(p.A, {
-                          className: s()(S.emoji, { [S.small]: O }),
+                          className: s()(I.emoji, { [I.small]: k }),
                           emojiId: v,
-                          emojiName: M,
-                          animated: !!j?.animated,
+                          emojiName: O,
+                          animated: !!R?.animated,
                           size: "reaction",
                       })
                     : null,
-                L &&
-                    w &&
+                w &&
+                    N &&
                     (0, i.jsx)("div", {
-                        className: S.closeCircle,
-                        children: (0, i.jsx)(d.P, { size: "md", color: "currentColor", className: S.close }),
+                        className: I.closeCircle,
+                        children: (0, i.jsx)(u.P, { size: "md", color: "currentColor", className: I.close }),
                     }),
                 (0, i.jsx)(m.E, {
-                    variant: O ? "text-xs/semibold" : "text-sm/semibold",
+                    variant: k ? "text-xs/semibold" : "text-sm/semibold",
                     lineClamp: 1,
                     color: "currentColor",
-                    children: y,
+                    children: x,
                 }),
             ],
         }),
-        U = {
+        G = {
             key: t.id,
             className: s()(
-                S.pill,
+                I.pill,
                 {
-                    [S.disabled]: r,
-                    [S.clickable]: N,
-                    [S.small]: O,
-                    [S.selected]: x,
-                    [S[t.color]]: null != t.color && !N,
+                    [I.disabled]: r,
+                    [I.clickable]: L,
+                    [I.small]: k,
+                    [I.selected]: S,
+                    [I[t.color]]: null != t.color && !L,
                 },
-                u,
+                d,
             ),
             onClick: (e) => {
-                T?.(e), C?.(t), F || null == D.current || D.current.blur();
+                E?.(e), C?.(t), F || null == D.current || D.current.blur();
             },
             onContextMenu: (e) => {
                 let a;
@@ -85,35 +85,35 @@ function C(e) {
                     )
                 );
             },
-            onMouseEnter: () => w && R(!0),
-            onMouseLeave: () => w && R(!1),
+            onMouseEnter: () => N && M(!0),
+            onMouseLeave: () => N && M(!1),
         },
-        P = (0, o.rm)(`forum-tag-${t.id}`);
-    return N
+        U = (0, o.rm)(`forum-tag-${t.id}`);
+    return L
         ? (0, i.jsx)(_.D, {
-              ...P,
+              ...U,
               innerRef: D,
               focusProps: { ringTarget: D },
-              "aria-label": null != E ? E : I.intl.formatToPlainString(I.t.iyRTLm, { tagName: y }),
+              "aria-label": null != y ? y : T.intl.formatToPlainString(T.t.iyRTLm, { tagName: x }),
               role: "button",
-              "aria-pressed": x,
-              ...U,
-              children: G,
+              "aria-pressed": S,
+              ...G,
+              children: P,
           })
-        : (0, i.jsx)("div", { ...U, children: G });
+        : (0, i.jsx)("div", { ...G, children: P });
 }
-function x(e) {
+function S(e) {
     let { tags: t, count: n, size: a = 1 } = e,
         l = 0 === a;
-    return (0, i.jsx)(u.m, {
-        "aria-label": I.intl.string(I.t["P/y+sj"]),
+    return (0, i.jsx)(d.m, {
+        "aria-label": T.intl.string(T.t["P/y+sj"]),
         __unsupportedReactNodeAsText: (0, i.jsx)(i.Fragment, {
-            children: t.map((e) => (0, i.jsx)(C, { tag: e, className: S.tooltipPill, size: C.Sizes.SMALL }, e.id)),
+            children: t.map((e) => (0, i.jsx)(C, { tag: e, className: I.tooltipPill, size: C.Sizes.SMALL }, e.id)),
         }),
         children: (0, i.jsx)("div", {
-            className: s()(S.pill, { [S.small]: l }),
+            className: s()(I.pill, { [I.small]: l }),
             children: (0, i.jsxs)(m.E, { variant: l ? "text-xs/semibold" : "text-sm/semibold", children: ["+", n] }),
         }),
     });
 }
-C.Sizes = T;
+C.Sizes = E;

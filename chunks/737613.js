@@ -1,52 +1,51 @@
-"use strict";
-let r, i;
-n.d(t, { A: () => h });
-var s = n(311907),
+let i, r;
+n.d(t, { A: () => p });
+var l = n(17928),
     a = n(506774),
-    o = n(73153),
-    l = n(734057),
-    u = n(71393);
-let d = "hideSuppressWarning",
+    s = n(228366),
+    o = n(734057),
+    d = n(71393);
+let u = "hideSuppressWarning",
     c = !1,
-    _ = !0,
-    f = !1;
-class E extends s.Ay.Store {
+    h = !0,
+    E = !1;
+class _ extends l.Ay.Store {
     static displayName = "PermissionSpeakStore";
     initialize() {
-        this.waitFor(l.A, u.A), (f = a.w.get(d) || f);
+        this.waitFor(o.A, d.A), (E = a.w.get(u) || E);
     }
     isAFKChannel() {
-        let e = l.A.getChannel(i);
+        let e = o.A.getChannel(r);
         if (null == e) return !1;
-        let t = u.A.getGuild(e.getGuildId());
+        let t = d.A.getGuild(e.getGuildId());
         return null != t && e.id === t.afkChannelId;
     }
     shouldShowWarning() {
-        return !l.A.getChannel(i)?.isGuildStageVoice() && !_;
+        return !o.A.getChannel(r)?.isGuildStageVoice() && !h;
     }
 }
-let h = new E(o.h, {
+let p = new _(s.h, {
     CONNECTION_OPEN: function (e) {
-        (r = e.sessionId), (c = !1);
+        (i = e.sessionId), (c = !1);
     },
     CONNECTION_CLOSED: function () {
-        (r = null), (i = null), (_ = !0);
+        (i = null), (r = null), (h = !0);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce(
             (e, t) =>
-                r !== t.sessionId
+                i !== t.sessionId
                     ? e
-                    : (c !== t.suppress && (_ = !(c = t.suppress)),
-                      i !== t.channelId && ((i = t.channelId), (_ = !c)),
-                      (f || null == t.channelId) && (_ = !0),
+                    : (c !== t.suppress && (h = !(c = t.suppress)),
+                      r !== t.channelId && ((r = t.channelId), (h = !c)),
+                      (E || null == t.channelId) && (h = !0),
                       !0),
             !1,
         );
     },
     PERMISSION_CLEAR_SUPPRESS_WARNING: function (e) {
         let { forever: t } = e;
-        (_ = !0), t && ((f = !0), a.w.set(d, f));
+        (h = !0), t && ((E = !0), a.w.set(u, E));
     },
 });

@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { A: () => r });
-let r = { escape: (e) => e.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&") };
+n.d(t, { A: () => i });
+let i = { escape: (e) => e.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&") };

@@ -1,204 +1,203 @@
-"use strict";
-n.d(t, { A: () => Y });
-var r = n(311907),
-    i = n(713402),
-    s = n(73153),
-    a = n(380335),
-    o = n(87001),
-    l = n(734057),
-    u = n(320501),
-    d = n(383501),
-    c = n(222823),
-    _ = n(309010),
-    f = n(543465),
-    E = n(645959),
-    h = n(927813),
-    p = n(661191),
-    m = n(206885),
-    g = n(41984),
-    A = n(956753),
-    I = n(395011),
-    T = n(222506),
-    S = n(680243),
-    y = n(141048);
-function N(e, t) {
+n.d(t, { A: () => W });
+var i = n(17928),
+    r = n(713402),
+    a = n(228366),
+    l = n(380335),
+    s = n(567249),
+    o = n(734057),
+    u = n(232835),
+    _ = n(763827),
+    E = n(222823),
+    A = n(309010),
+    c = n(543465),
+    d = n(567761),
+    I = n(927813),
+    T = n(935208),
+    N = n(206885),
+    S = n(41984),
+    p = n(956753),
+    O = n(489277),
+    C = n(222506),
+    g = n(680243),
+    R = n(141048);
+function m(e, t) {
     return String(Math.max(0, Math.min(Math.floor(e), Number.MAX_SAFE_INTEGER))).padStart(t, "0");
 }
-let O = new i.J(
+let h = new r.J(
         function (e) {
-            return [e.isPrivateChannel ? y.B.PRIVATE_CHANNELS : y.B.GUILD_CHANNELS];
+            return [e.isPrivateChannel ? R.B.PRIVATE_CHANNELS : R.B.GUILD_CHANNELS];
         },
         function (e) {
             let t = e.isPrivateChannel ? "0" : "1",
-                n = e.mentionCount > 0 ? y.G.MENTION : e.hasUnread ? y.G.UNREAD : y.G.READ,
-                r = String(y.G.MENTION - n),
-                i = N(Number.MAX_SAFE_INTEGER - e.mentionCount, 16),
-                s = N(Number.MAX_SAFE_INTEGER - e.lastActivityAtMs, 16);
-            return `${t}\0${r}\0${i}\0${s}\0${e.channelId}`;
+                n = e.mentionCount > 0 ? R.G.MENTION : e.hasUnread ? R.G.UNREAD : R.G.READ,
+                i = String(R.G.MENTION - n),
+                r = m(Number.MAX_SAFE_INTEGER - e.mentionCount, 16),
+                a = m(Number.MAX_SAFE_INTEGER - e.lastActivityAtMs, 16);
+            return `${t}\0${i}\0${r}\0${a}\0${e.channelId}`;
         },
     ),
-    R = null,
-    v = null,
-    C = !1,
-    b = null,
-    D = 30 * h.A.Millis.MINUTE;
-function L(e) {
-    let t = l.A.getChannel(e),
+    M = null,
+    f = null,
+    L = !1,
+    y = null,
+    D = 30 * I.A.Millis.MINUTE;
+function U(e) {
+    let t = o.A.getChannel(e),
         n = t?.lastMessageId;
-    return null != n ? p.default.extractTimestamp(n) : Date.now();
+    return null != n ? T.default.extractTimestamp(n) : Date.now();
 }
-function w(e, t, n, r, i) {
-    let s;
+function P(e, t, n, i, r) {
+    let a;
     return {
         channelId: e,
         source: t,
         addedOnMs: n,
-        lastActivityAtMs: r,
-        lastMessageId: i,
-        isPrivateChannel: ((s = l.A.getChannel(e)), s?.isPrivate() ?? !1),
-        mentionCount: c.Ay.getMentionCount(e),
-        hasUnread: c.Ay.hasUnread(e),
+        lastActivityAtMs: i,
+        lastMessageId: r,
+        isPrivateChannel: ((a = o.A.getChannel(e)), a?.isPrivate() ?? !1),
+        mentionCount: E.Ay.getMentionCount(e),
+        hasUnread: E.Ay.hasUnread(e),
     };
 }
-function M() {
-    O.clear(), (R = null), (v = null), (C = !1), (b = null);
+function G() {
+    h.clear(), (M = null), (f = null), (L = !1), (y = null);
 }
-function P() {
+function v() {
     let e = Date.now();
-    M(),
-        (v = e),
-        (b = d.A.getChannelId() ?? null),
+    G(),
+        (f = e),
+        (y = _.A.getChannelId() ?? null),
         (function (e) {
-            let t = _.A.getChannelId();
-            if (null != t && null != l.A.getChannel(t)) {
-                if (((R = t), !O.has(t))) {
-                    let n = L(t),
-                        r = l.A.getChannel(t)?.lastMessageId ?? void 0,
-                        i = w(t, g.B9.MANUAL, e, n, r);
-                    O.set(t, i);
+            let t = A.A.getChannelId();
+            if (null != t && null != o.A.getChannel(t)) {
+                if (((M = t), !h.has(t))) {
+                    let n = U(t),
+                        i = o.A.getChannel(t)?.lastMessageId ?? void 0,
+                        r = P(t, S.B9.MANUAL, e, n, i);
+                    h.set(t, r);
                 }
             }
         })(e),
         (function (e) {
-            let t = E.default.getPrivateChannelIds(),
+            let t = d.default.getPrivateChannelIds(),
                 n = 0;
-            for (let r of t) {
+            for (let i of t) {
                 if (n >= 3) return;
-                if (O.has(r)) continue;
-                let t = l.A.getChannel(r);
-                if (null == t || !t.isPrivate() || f.Ay.isChannelMuted(null, r) || a.A.isMessageRequest(r)) continue;
-                let i = t.lastMessageId;
-                if (null == i) continue;
-                let s = p.default.extractTimestamp(i);
-                if (e - s > D) continue;
-                let o = w(r, g.B9.MANUAL, e, s, i);
-                O.set(r, o), n++;
+                if (h.has(i)) continue;
+                let t = o.A.getChannel(i);
+                if (null == t || !t.isPrivate() || c.Ay.isChannelMuted(null, i) || l.A.isMessageRequest(i)) continue;
+                let r = t.lastMessageId;
+                if (null == r) continue;
+                let a = T.default.extractTimestamp(r);
+                if (e - a > D) continue;
+                let s = P(i, S.B9.MANUAL, e, a, r);
+                h.set(i, s), n++;
             }
         })(e),
-        x();
+        w();
 }
-function U() {
-    return d.A.getChannelId() ?? null;
+function B() {
+    return _.A.getChannelId() ?? null;
 }
-function k(e) {
-    if (null == e) return O.values()[0]?.channelId ?? null;
-    for (let t of O.values()) if (t.channelId !== e) return t.channelId;
+function b(e) {
+    if (null == e) return h.values()[0]?.channelId ?? null;
+    for (let t of h.values()) if (t.channelId !== e) return t.channelId;
     return null;
 }
-function x() {
-    let e = U();
-    return null != e && !C && null == R && ((R = e), !0);
+function w() {
+    let e = B();
+    return null != e && !L && null == M && ((M = e), !0);
 }
-function G() {
+function H() {
     let e,
         t = (function () {
-            if (null == R) return !1;
-            let e = U();
-            return e !== R && b === R && e !== R && ((R = k(b)), !0);
+            if (null == M) return !1;
+            let e = B();
+            return e !== M && y === M && e !== M && ((M = b(y)), !0);
         })(),
-        n = null == (e = U()) ? ((b = null), !!C && ((C = !1), !0)) : b !== e && ((b = e), !!C && ((C = !1), !0)),
-        r = x();
-    return t || n || r;
-}
-function V(e) {
-    let t = O.get(e);
-    if (null == t) return !1;
-    let n = c.Ay.getMentionCount(e),
-        r = c.Ay.hasUnread(e);
-    return (t.mentionCount !== n || t.hasUnread !== r) && (O.set(e, { ...t, mentionCount: n, hasUnread: r }), !0);
+        n = null == (e = B()) ? ((y = null), !!L && ((L = !1), !0)) : y !== e && ((y = e), !!L && ((L = !1), !0)),
+        i = w();
+    return t || n || i;
 }
 function F(e) {
-    let { channelId: t } = e;
-    return V(t);
+    let t = h.get(e);
+    if (null == t) return !1;
+    let n = E.Ay.getMentionCount(e),
+        i = E.Ay.hasUnread(e);
+    return (t.mentionCount !== n || t.hasUnread !== i) && (h.set(e, { ...t, mentionCount: n, hasUnread: i }), !0);
 }
-class B extends r.Ay.Store {
+function V(e) {
+    let { channelId: t } = e;
+    return F(t);
+}
+class k extends i.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        this.waitFor(S.A, T.A, I.A, o.A, l.A, u.A, a.A, d.A, E.default, c.Ay, _.A, f.Ay), P();
+        this.waitFor(g.A, C.A, O.A, s.A, o.A, u.A, l.A, _.A, d.default, E.Ay, A.A, c.Ay), v();
     }
     isChannelTracked(e) {
-        return O.has(e);
+        return h.has(e);
     }
     getSessionEntries(e) {
-        return [null != e ? O.values(e) : O.values(), O.version];
+        return [null != e ? h.values(e) : h.values(), h.version];
     }
     getSelectedChannelId() {
-        return R;
+        return M;
     }
     getVoiceChatMinimized() {
-        return C;
+        return L;
     }
 }
-let H = (e) => (0, A.U5)(e, "OverlayTextChatStore"),
-    Y = new B(
-        s.h,
-        __OVERLAY__ || (!m.O && !m.e)
+let x = (e) => (0, p.U5)(e, "OverlayTextChatStore"),
+    W = new k(
+        a.h,
+        __OVERLAY__ || (!N.O && !N.e)
             ? {}
             : {
-                  OVERLAY_MOUNTED: H(function (e) {
-                      return null == v && (P(), !0);
+                  OVERLAY_MOUNTED: x(function (e) {
+                      return null == f && (v(), !0);
                   }),
-                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: H(function () {
-                      return M(), !0;
+                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: x(function () {
+                      return G(), !0;
                   }),
-                  MESSAGE_ACK: H(function (e) {
+                  MESSAGE_ACK: x(function (e) {
                       let { channelId: t } = e;
-                      return V(t);
+                      return F(t);
                   }),
-                  CHANNEL_ACK: H(F),
-                  CHANNEL_LOCAL_ACK: H(F),
-                  BULK_ACK: H(function (e) {
+                  CHANNEL_ACK: x(V),
+                  CHANNEL_LOCAL_ACK: x(V),
+                  BULK_ACK: x(function (e) {
                       let { channels: t } = e,
                           n = !1;
-                      for (let { channelId: e } of t) V(e) && (n = !0);
+                      for (let { channelId: e } of t) F(e) && (n = !0);
                       return n;
                   }),
-                  VOICE_STATE_UPDATES: H(G),
-                  VOICE_CHANNEL_SELECT: H(G),
-                  OVERLAY_TEXT_CHAT_SELECT_CHANNEL: H(function (e) {
+                  VOICE_STATE_UPDATES: x(H),
+                  VOICE_CHANNEL_SELECT: x(H),
+                  OVERLAY_TEXT_CHAT_SELECT_CHANNEL: x(function (e) {
                       let { channelId: t, source: n } = e;
                       return (function (e, t) {
                           if (null == e) return !1;
-                          null == v && (v = Date.now()), R !== e && (R = e);
-                          let n = U();
-                          if ((null != n && e === n && C && (C = !1), null != R && !O.has(R))) {
+                          null == f && (f = Date.now()), M !== e && (M = e);
+                          let n = B();
+                          if ((null != n && e === n && L && (L = !1), null != M && !h.has(M))) {
                               let e = Date.now(),
-                                  n = L(R),
-                                  r = l.A.getChannel(R)?.lastMessageId ?? void 0,
-                                  i = w(R, t, e, n, r);
-                              O.set(R, i);
+                                  n = U(M),
+                                  i = o.A.getChannel(M)?.lastMessageId ?? void 0,
+                                  r = P(M, t, e, n, i);
+                              h.set(M, r);
                           }
                           return !0;
                       })(t ?? null, n);
                   }),
-                  OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: H(function (e) {
+                  OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: x(function (e) {
                       let t = (function (e) {
-                              let { channelId: t, source: n, lastActivityAtMs: r, lastMessageId: i } = e,
-                                  s = O.get(t) ?? null,
-                                  a = null == s ? r : Math.max(s.lastActivityAtMs, r),
-                                  o = i ?? s?.lastMessageId,
-                                  l = w(t, n, s?.addedOnMs ?? r, a, o);
-                              return O.set(t, l);
+                              let { channelId: t, source: n, lastActivityAtMs: i, lastMessageId: r } = e,
+                                  a = h.get(t) ?? null,
+                                  l = null == a ? i : Math.max(a.lastActivityAtMs, i),
+                                  s = r ?? a?.lastMessageId,
+                                  o = P(t, n, a?.addedOnMs ?? i, l, s);
+                              return h.set(t, o);
                           })({
                               channelId: e.channelId,
                               source: e.source,
@@ -206,29 +205,29 @@ let H = (e) => (0, A.U5)(e, "OverlayTextChatStore"),
                               lastMessageId: e.lastMessageId,
                           }),
                           n = !1;
-                      return null == R && ((R = e.channelId), (n = !0)), t || n;
+                      return null == M && ((M = e.channelId), (n = !0)), t || n;
                   }),
-                  OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: H(function (e) {
-                      let t = O.delete(e.channelId),
+                  OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: x(function (e) {
+                      let t = h.delete(e.channelId),
                           n = !1;
-                      if (R === e.channelId) {
-                          let e = U();
-                          (R = k(e) ?? (C || null == e ? null : e)), (n = !0);
+                      if (M === e.channelId) {
+                          let e = B();
+                          (M = b(e) ?? (L || null == e ? null : e)), (n = !0);
                       }
                       return t || n;
                   }),
-                  OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: H(function () {
-                      let e = O.size() > 0;
-                      O.clear();
-                      let t = U();
-                      return (R = C || null == t ? null : t), e;
+                  OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: x(function () {
+                      let e = h.size() > 0;
+                      h.clear();
+                      let t = B();
+                      return (M = L || null == t ? null : t), e;
                   }),
-                  OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: H(function (e) {
+                  OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: x(function (e) {
                       let { minimized: t } = e;
-                      if (C === t) return !1;
-                      if (((C = t), !t)) return x(), !0;
-                      let n = U();
-                      return null != n && R === n && (R = k(n)), !0;
+                      if (L === t) return !1;
+                      if (((L = t), !t)) return w(), !0;
+                      let n = B();
+                      return null != n && M === n && (M = b(n)), !0;
                   }),
               },
     );

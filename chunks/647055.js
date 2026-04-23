@@ -1,7 +1,6 @@
-"use strict";
-var r = n(410323),
-    i = r({}.toString),
-    a = r("".slice);
-e.exports = function (e) {
-    return a(i(e), 8, -1);
+var n = e(410323),
+    o = n({}.toString),
+    i = n("".slice);
+r.exports = function (r) {
+    return i(o(r), 8, -1);
 };

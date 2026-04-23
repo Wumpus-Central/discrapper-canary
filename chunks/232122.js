@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => g, m: () => m });
+n.d(t, { A: () => A, m: () => m });
 var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(534514),
-    l = n(696986),
-    u = n(939249),
-    c = n(834730),
-    d = n(847374),
-    _ = n(827734),
-    f = n(975571),
-    p = n(652215),
+    a = n(64700),
+    i = n(503698),
+    o = n.n(i),
+    l = n(534514),
+    s = n(696986),
+    d = n(939249),
+    u = n(834730),
+    c = n(847374),
+    _ = n(661531),
+    p = n(975571),
+    C = n(652215),
     h = n(985018),
     E = n(159607);
 let m = [
     { getQuestion: () => h.intl.string(h.t.C4J8UB), getAnswer: () => h.intl.string(h.t.nhkk6k) },
     {
         getQuestion: () => h.intl.string(h.t.ai4ym2),
-        getAnswer: () => h.intl.format(h.t["8zlqlD"], { helpCenterUrl: f.A.getArticleURL(p.MVz.GUILD_BOOSTING_FAQ) }),
+        getAnswer: () => h.intl.format(h.t["8zlqlD"], { helpCenterUrl: p.A.getArticleURL(C.MVz.GUILD_BOOSTING_FAQ) }),
     },
     { getQuestion: () => h.intl.string(h.t.kMVGsC), getAnswer: () => h.intl.string(h.t["Vz/SCQ"]) },
     { getQuestion: () => h.intl.string(h.t.kYmXWF), getAnswer: () => h.intl.string(h.t["+OURPp"]) },
@@ -28,50 +27,50 @@ let m = [
     { getQuestion: () => h.intl.string(h.t["6EN+TZ"]), getAnswer: () => h.intl.string(h.t.NZax1u) },
     { getQuestion: () => h.intl.string(h.t.f5B4EW), getAnswer: () => h.intl.string(h.t.Aje8Pb) },
 ];
-function g(e) {
+function A(e) {
     let { className: t } = e,
-        [n, s] = i.useState(null),
-        [f, p] = i.useState(null);
+        [n, i] = a.useState(null),
+        [p, C] = a.useState(null);
     return (0, r.jsxs)("div", {
-        className: a()(E.iE, t),
+        className: o()(E.iE, t),
         children: [
-            (0, r.jsx)(o.D, { className: E.R_, variant: "heading-xxl/semibold", children: h.intl.string(h.t.HPJ6Nj) }),
-            (0, r.jsx)(l.h, { size: 32 }),
+            (0, r.jsx)(l.D, { className: E.R_, variant: "heading-xxl/semibold", children: h.intl.string(h.t.HPJ6Nj) }),
+            (0, r.jsx)(s.h, { size: 32 }),
             (0, r.jsx)("ul", {
                 className: E.p_,
                 children: m.map((e, t) => {
-                    let i = n === t,
-                        o = f === t,
-                        l = i || o ? "text-default" : "text-muted";
+                    let a = n === t,
+                        l = p === t,
+                        s = a || l ? "text-default" : "text-muted";
                     return (0, r.jsxs)(
-                        u.D,
+                        d.D,
                         {
                             tag: "li",
-                            className: a()(E.Aw, { [E.$K]: i }),
-                            onClick: () => s((e) => (e === t ? null : t)),
-                            onMouseEnter: () => p(t),
-                            onMouseLeave: () => p(null),
+                            className: o()(E.Aw, { [E.$K]: a }),
+                            onClick: () => i((e) => (e === t ? null : t)),
+                            onMouseEnter: () => C(t),
+                            onMouseLeave: () => C(null),
                             children: [
                                 (0, r.jsxs)("div", {
                                     className: E.k7,
                                     children: [
-                                        (0, r.jsx)(c.E, {
+                                        (0, r.jsx)(u.E, {
                                             className: E.b1,
-                                            color: l,
+                                            color: s,
                                             variant: "heading-md/semibold",
                                             tag: "span",
                                             children: e.getQuestion(),
                                         }),
-                                        (0, r.jsx)(d.a, {
+                                        (0, r.jsx)(c.a, {
                                             size: "sm",
                                             color: _.A.colors.INTERACTIVE_ICON_DEFAULT,
                                             className: E.q4,
-                                            style: { transform: i ? "rotate(180deg)" : "rotate(0deg)" },
+                                            style: { transform: a ? "rotate(180deg)" : "rotate(0deg)" },
                                         }),
                                     ],
                                 }),
-                                i &&
-                                    (0, r.jsx)(c.E, {
+                                a &&
+                                    (0, r.jsx)(u.E, {
                                         className: E.ZF,
                                         color: "text-muted",
                                         variant: "text-sm/medium",

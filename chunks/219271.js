@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { u: () => l });
-var r = n(562465),
-    i = n(73153),
-    s = n(153488),
-    a = n(21119),
-    o = n(652215);
-function l() {
+n.d(t, { u: () => o });
+var i = n(636537),
+    r = n(228366),
+    a = n(153488),
+    l = n(427358),
+    s = n(652215);
+function o() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return a.A.shouldFetch() && s.A.hasConsented(o.YAq.PERSONALIZATION)
-        ? (i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
-          r.Bo.get({ url: o.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
+    return l.A.shouldFetch() && a.A.hasConsented(s.YAq.PERSONALIZATION)
+        ? (r.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
+          i.Bo.get({ url: s.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
               (e) => {
                   let { body: t } = e;
-                  i.h.dispatch({
+                  r.h.dispatch({
                       type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
                       affineUsers: t.user_affinities.map((e) => ({
                           otherUserId: e.other_user_id,
@@ -31,7 +30,7 @@ function l() {
                   });
               },
               () => {
-                  i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+                  r.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
               },
           ))
         : Promise.resolve();

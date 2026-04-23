@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => l });
-var r = n(731738),
-    i = n(183636),
-    s = n(831062),
-    a = n(954571),
-    o = n(652215);
+var i = n(731738),
+    r = n(183636),
+    a = n(831062),
+    s = n(954571),
+    _ = n(652215);
 let l = new (class {
     startTime = null;
     questId = null;
@@ -14,8 +13,8 @@ let l = new (class {
     }
     sendMetric(e, t, n) {
         Math.random() > 0.1 ||
-            (s.A.distribution({ name: r.K.QUEST_BAR_RENDER_DELAY, tags: [`quest_id:${e}`, `timeout:${t}`] }, n),
-            a.default.track(o.HAw.QUEST_BAR_RENDER_DELAY, { quest_id: e, timeout: t, duration: n }));
+            (a.A.distribution({ name: i.K.QUEST_BAR_RENDER_DELAY, tags: [`quest_id:${e}`, `timeout:${t}`] }, n),
+            s.default.track(_.HAw.QUEST_BAR_RENDER_DELAY, { quest_id: e, timeout: t, duration: n }));
     }
     startTracking(e) {
         this.clearTracking(),
@@ -28,7 +27,7 @@ let l = new (class {
     stopTracking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null !== this.startTime && this.questId === e) {
-            if ("focused" === i.A.getState()) {
+            if ("focused" === r.A.getState()) {
                 let n = Math.min(t ? 3e4 : Math.round(performance.now() - this.startTime), 3e4);
                 this.sendMetric(e, t, n);
             }

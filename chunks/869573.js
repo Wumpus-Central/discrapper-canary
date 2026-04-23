@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { Q: () => a });
-var r = n(64700),
-    i = n(166532),
-    s = n(293700);
-function a(e, t, n) {
-    r.useEffect(() => {
-        null != e && e !== i.pn.AWAITING_PURCHASE_TOKEN_AUTH && t === s.C.PENDING
-            ? n(i.pn.AWAITING_PURCHASE_TOKEN_AUTH)
-            : e === i.pn.AWAITING_PURCHASE_TOKEN_AUTH && t === s.C.SUCCESS && n(i.pn.REVIEW);
+n.d(t, { Q: () => s });
+var i = n(64700),
+    r = n(166532),
+    l = n(293700);
+function s(e, t, n) {
+    i.useEffect(() => {
+        null != e && e !== r.pn.AWAITING_PURCHASE_TOKEN_AUTH && t === l.C.PENDING
+            ? n(r.pn.AWAITING_PURCHASE_TOKEN_AUTH)
+            : e === r.pn.AWAITING_PURCHASE_TOKEN_AUTH && t === l.C.SUCCESS && n(r.pn.REVIEW);
     }, [e, t, n]);
 }

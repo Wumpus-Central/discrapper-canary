@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { J: () => r, d: () => s });
-var i = n(843472),
-    l = n(451909);
-function s(e) {
-    let { channel: t, content: n, entry: s, whenReady: r, doNotNotifyOnError: a, location: o } = e,
-        c = l.Ay.parse(t, n);
-    return i.A.sendMessage(t.id, c, r, {
-        contentInventoryEntry: { unverified_content: s },
-        doNotNotifyOnError: a,
-        location: o,
+n.d(t, { J: () => s, d: () => a });
+var i = n(720149),
+    r = n(451909);
+function a(e) {
+    let { channel: t, content: n, entry: a, whenReady: s, doNotNotifyOnError: _, location: l } = e,
+        o = r.Ay.parse(t, n);
+    return i.A.sendMessage(t.id, o, s, {
+        contentInventoryEntry: { unverified_content: a },
+        doNotNotifyOnError: _,
+        location: l,
     });
 }
-function r(e) {
-    let { channel: t, content: n, whenReady: s, doNotNotifyOnError: r, location: a } = e,
-        o = l.Ay.parse(t, n);
-    return i.A.sendMessage(t.id, o, s, { doNotNotifyOnError: r, location: a });
+function s(e) {
+    let { channel: t, content: n, whenReady: a, doNotNotifyOnError: s, location: _ } = e,
+        l = r.Ay.parse(t, n);
+    return i.A.sendMessage(t.id, l, a, { doNotNotifyOnError: s, location: _ });
 }

@@ -1,92 +1,92 @@
-r.d(t, { default: () => p });
-var n = r(627968),
-    s = r(64700),
-    l = r(534514),
-    a = r(834730),
-    i = r(821609),
-    o = r(829219),
-    u = r(890687),
-    c = r(92246),
-    d = r(646764),
-    _ = r(109174),
-    f = r(524728),
-    m = r(654487),
-    A = r(985018),
-    x = r(577777);
-function h(e) {
-    let { quest: t, rewardName: r, location: s, sourceQuestContent: o } = e;
-    return (0, n.jsxs)("div", {
-        className: x.hQ,
+n.d(t, { default: () => C });
+var r = n(627968),
+    a = n(64700),
+    s = n(534514),
+    o = n(834730),
+    i = n(821609),
+    l = n(829219),
+    _ = n(890687),
+    c = n(801365),
+    d = n(646764),
+    u = n(801870),
+    f = n(448109),
+    p = n(654487),
+    m = n(985018),
+    h = n(577777);
+function x(e) {
+    let { quest: t, rewardName: n, location: a, sourceQuestContent: l } = e;
+    return (0, r.jsxs)("div", {
+        className: h.hQ,
         children: [
-            (0, n.jsx)("div", {
-                className: x.tE,
-                children: (0, n.jsx)(d.A, {
+            (0, r.jsx)("div", {
+                className: h.tE,
+                children: (0, r.jsx)(d.A, {
                     autoplay: !0,
-                    className: x.Qq,
+                    className: h.Qq,
                     learnMoreStyle: null,
                     quest: t,
-                    questContent: s,
-                    sourceQuestContent: o,
+                    questContent: a,
+                    sourceQuestContent: l,
                 }),
             }),
-            (0, n.jsxs)("div", {
-                className: x.dD,
+            (0, r.jsxs)("div", {
+                className: h.dD,
                 children: [
-                    (0, n.jsx)(l.D, {
+                    (0, r.jsx)(s.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        className: x.R_,
-                        children: A.intl.string(A.t["0/Yz+Y"]),
+                        className: h.R_,
+                        children: m.intl.string(m.t["0/Yz+Y"]),
                     }),
-                    (0, n.jsx)(a.E, {
+                    (0, r.jsx)(o.E, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: A.intl.format(A.t["v1u/zq"], { rewardName: r }),
+                        children: m.intl.format(m.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
             }),
-            (0, n.jsx)(i.$, {
+            (0, r.jsx)(i.$, {
                 variant: "secondary",
                 size: "sm",
-                text: A.intl.string(A.t.OD6Tvf),
+                text: m.intl.string(m.t.OD6Tvf),
                 disabled: !0,
                 fullWidth: !0,
             }),
         ],
     });
 }
-function p(e) {
-    let { initialQuest: t, onClose: r, transitionState: l, location: a, sourceQuestContent: i } = e,
-        d = (0, u.C5)(t.id) ?? t,
-        A = s.useMemo(() => (0, c.f)(d.config), [d]),
-        x = d.userStatus?.claimedAt != null,
-        p = !d.preview && !x,
-        [C, g] = s.useState(p ? "loading" : "claimed");
-    s.useEffect(() => {
-        if (p) {
+function C(e) {
+    let { initialQuest: t, onClose: n, transitionState: s, location: o, sourceQuestContent: i } = e,
+        d = (0, _.C5)(t.id) ?? t,
+        m = a.useMemo(() => (0, c.f)(d.config), [d]),
+        h = d.userStatus?.claimedAt != null,
+        C = !d.preview && !h,
+        [b, g] = a.useState(C ? "loading" : "claimed");
+    a.useEffect(() => {
+        if (C) {
             let e = (0, c.$s)(d.config);
-            (0, o.Oq)(d.id, e, a)
+            (0, l.Oq)(d.id, e, o)
                 .then(() => g("claimed"))
                 .catch(() => g("error"));
         }
-    }, [d, a, p]);
-    let w = "error" === C || null == A;
-    return (0, n.jsx)(f.A, {
-        onClose: r,
-        transitionState: l,
+    }, [d, o, C]);
+    let w = "error" === b || null == m;
+    return (0, r.jsx)(f.A, {
+        onClose: n,
+        transitionState: s,
         quest: d,
         sourceQuestContent: i,
-        location: m.rE.INGAME_REWARD_MODAL,
-        isRewardContentLoading: "loading" === C,
+        location: p.rE.INGAME_REWARD_MODAL,
+        isRewardContentLoading: "loading" === b,
         rewardContentHasError: w,
         rewardContent: w
             ? null
-            : (0, n.jsx)(_.A, {
-                  rewardName: A.messages.name,
-                  children: (0, n.jsx)(h, {
+            : (0, r.jsx)(u.A, {
+                  rewardName: m.messages.name,
+                  children: (0, r.jsx)(x, {
                       quest: d,
-                      rewardName: A.messages.name,
-                      location: a,
+                      rewardName: m.messages.name,
+                      location: o,
                       sourceQuestContent: i,
                   }),
               }),

@@ -1,13 +1,13 @@
 t.d(n, { A: () => _, P: () => M });
 var l = t(627968),
     r = t(64700),
-    a = t(311907),
+    a = t(17928),
     s = t(192308),
     c = t(442433),
     i = t(47167),
     d = t(721592),
     u = t(376943),
-    o = t(987877),
+    o = t(706083),
     h = t(990474),
     m = t(232042),
     x = t(906754),
@@ -15,8 +15,8 @@ var l = t(627968),
     g = t(37632),
     f = t(593284),
     p = t(288539),
-    I = t(78377),
-    v = t(734057),
+    v = t(78377),
+    I = t(734057),
     A = t(317525),
     y = t(71393),
     k = t(994500),
@@ -53,8 +53,8 @@ function _(e) {
             iconType: p,
             isForumPost: A,
             hasAccess: y,
-        } = (0, a.cf)([v.A, b.default, k.A], () => {
-            let e = v.A.getChannel(n);
+        } = (0, a.cf)([I.A, b.default, k.A], () => {
+            let e = I.A.getChannel(n);
             return {
                 name: null != e ? (0, i.m1)(e, b.default, k.A) : void 0,
                 iconType: (0, C.QG)(e),
@@ -62,7 +62,7 @@ function _(e) {
                 hasAccess: null == e || (0, u.nc)(e),
             };
         }, [n]),
-        N = (0, I.p)();
+        N = (0, v.p)();
     if (null == p) return;
     let w = r === N?.guildId || null == r,
         M =
@@ -86,9 +86,9 @@ function _(e) {
                 e?.stopPropagation(), (0, o.o)(r, n, h), (0, s.closeAllModals)();
             },
             onContextMenu: (e) => {
-                let r = v.A.getChannel(n);
+                let r = I.A.getChannel(n);
                 (0, c.L3)(e, async () => {
-                    let { default: e } = await t.e("99041").then(t.bind(t, 612856));
+                    let { default: e } = await t.e("4391").then(t.bind(t, 254106));
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: h });
                 });
@@ -105,7 +105,7 @@ function E(e) {
 }
 function z(e) {
     let { id: n } = e,
-        t = (0, I.p)();
+        t = (0, v.p)();
     return (0, l.jsx)(p.A, {
         className: "mention",
         userId: n,
@@ -117,19 +117,19 @@ function z(e) {
 }
 function P(e) {
     let { id: n } = e,
-        t = (0, I.p)(),
+        t = (0, v.p)(),
         r = t?.guildId,
         s = (0, a.bG)([A.A], () => (null != r ? A.A.getRole(r, n)?.name : null) ?? $.intl.string($.t.sKdZ6U), [r, n]);
     return (0, l.jsx)(f.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${s}` });
 }
 function T(e) {
     let { roleName: n } = e,
-        t = (0, I.p)();
+        t = (0, v.p)();
     return (0, l.jsx)(f.A, { roleName: n, channelId: t?.channelId, guildId: t?.guildId, children: n });
 }
 function L(e) {
     let { id: n, name: t } = e,
-        a = (0, I.p)(),
+        a = (0, v.p)(),
         s = r.useMemo(() => {
             let [, ...e] = t.split(" ");
             return `${n}${[...e].map((e) => `${w.v4}${e}`).join("")}`;

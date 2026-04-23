@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(64700),
-    i = n(253932),
+n.d(t, { A: () => l });
+var i = n(64700),
+    r = n(253932),
     a = n(824744);
-function s() {
-    let [e, t] = r.useState(i.HO.getSetting());
+function l() {
+    let [e, t] = i.useState(r.HO.getSetting());
     return {
         volume: e,
-        onVolumeChange: r.useCallback((e) => {
+        onVolumeChange: i.useCallback((e) => {
             let n = (0, a.w)(e);
-            t(n), i.HO.updateSetting(n);
+            t(n), r.HO.updateSetting(n);
         }, []),
     };
 }

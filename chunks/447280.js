@@ -1,8 +1,7 @@
-"use strict";
-var r = n(860511),
-    i = n(598349),
-    a = r.document,
-    s = i(a) && i(a.createElement);
-e.exports = function (e) {
-    return s ? a.createElement(e) : {};
+var n = e(860511),
+    o = e(598349),
+    i = n.document,
+    u = o(i) && o(i.createElement);
+r.exports = function (r) {
+    return u ? i.createElement(r) : {};
 };

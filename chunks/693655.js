@@ -1,20 +1,19 @@
-"use strict";
-var r = n(339626),
-    i = n(4940),
-    a = n(313400),
-    s = n(88388);
-e.exports = function (e, t, n, o) {
-    o || (o = {});
-    var l = o.enumerable,
-        u = void 0 !== o.name ? o.name : t;
-    if ((r(n) && a(n, u, o), o.global)) l ? (e[t] = n) : s(t, n);
+var n = e(339626),
+    o = e(4940),
+    i = e(313400),
+    u = e(88388);
+r.exports = function (r, t, e, a) {
+    a || (a = {});
+    var c = a.enumerable,
+        f = void 0 !== a.name ? a.name : t;
+    if ((n(e) && i(e, f, a), a.global)) c ? (r[t] = e) : u(t, e);
     else {
         try {
-            o.unsafe ? e[t] && (l = !0) : delete e[t];
-        } catch (e) {}
-        l
-            ? (e[t] = n)
-            : i.f(e, t, { value: n, enumerable: !1, configurable: !o.nonConfigurable, writable: !o.nonWritable });
+            a.unsafe ? r[t] && (c = !0) : delete r[t];
+        } catch (r) {}
+        c
+            ? (r[t] = e)
+            : o.f(r, t, { value: e, enumerable: !1, configurable: !a.nonConfigurable, writable: !a.nonWritable });
     }
-    return e;
+    return r;
 };

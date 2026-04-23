@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { O: () => s, h: () => a });
-var r = n(600975),
-    i = n(688151);
-let s = (0, r.C)({
+n.d(t, { O: () => l, h: () => a });
+var i = n(600975),
+    r = n(688151);
+let l = (0, i.C)({
     kind: "guild",
     id: "2026-04_voice_invite_suggestion_placement",
     label: "Voice Invite Suggestion Placement",
-    commonTriggerPoint: i.$G.VOICE_CALL,
+    commonTriggerPoint: r.$G.VOICE_CALL,
     defaultConfig: { placement: "top" },
     treatments: [
         { id: 0, label: "Control (Top Placement)", config: { placement: "top" } },
@@ -14,5 +13,5 @@ let s = (0, r.C)({
     ],
 });
 function a(e, t) {
-    return s.useExperiment({ guildId: e.guildId, location: e.location }, { autoTrackExposure: t.autoTrackExposure });
+    return l.useExperiment({ guildId: e.guildId, location: e.location }, { autoTrackExposure: t.autoTrackExposure });
 }

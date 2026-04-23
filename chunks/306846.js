@@ -2,8 +2,8 @@ let l;
 t.d(i, { A: () => P });
 var n = t(735438),
     r = t.n(n),
-    s = t(311907),
-    a = t(73153),
+    s = t(17928),
+    a = t(228366),
     u = t(60175),
     d = t(513461),
     E = t(837011),
@@ -21,12 +21,12 @@ function h() {
     let i = c.Ay.getDiscoveryChecklist(e.id);
     if (null != i) return (0, _.l)(e, i);
 }
-function m() {
+function g() {
     let e = o.A.getGuildId();
     return null == e ? null : u.A.get(e)?.formFields;
 }
-function g() {
-    let e = m();
+function m() {
+    let e = g();
     if (null == e) return;
     let i = e.find((e) => (0, d.i7)(e));
     return null == i
@@ -34,7 +34,7 @@ function g() {
         : i.values.map((e) => ({ id: (0, n.uniqueId)(), value: e }));
 }
 function C() {
-    let e = m();
+    let e = g();
     if (null == e) return;
     let i = e.find((e) => (0, d.i7)(e));
     if (0 === e.length || (1 === e.length && null != i)) {
@@ -56,7 +56,7 @@ function N(e, i) {
         l = e.ownerConfiguredContentLevel === f.ftr.AGE_RESTRICTED;
     switch (i) {
         case I.J.INVITE:
-            return { joinType: I.J.INVITE, requireTerms: t, termRules: g(), isAgeRestricted: l };
+            return { joinType: I.J.INVITE, requireTerms: t, termRules: m(), isAgeRestricted: l };
         case I.J.APPLY:
             return { joinType: I.J.APPLY, pendingVerificationFields: C(), isAgeRestricted: l };
         case I.J.DISCOVERABLE:
@@ -64,7 +64,7 @@ function N(e, i) {
                 joinType: I.J.DISCOVERABLE,
                 settingsView: h(),
                 requireTerms: t,
-                termRules: g(),
+                termRules: m(),
                 isAgeRestricted: !1,
             };
     }
@@ -76,7 +76,7 @@ function D(e, i) {
         e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) !== t
     )
         return !0;
-    let n = m() ?? [];
+    let n = g() ?? [];
     if (n.length > 1) return !0;
     let s = n.find((e) => (0, d.i7)(e))?.values ?? [],
         a = l?.map((e) => e.value.trim()).filter((e) => "" !== e) ?? [];
@@ -96,7 +96,7 @@ function L() {
             break;
         case I.J.APPLY:
             let n,
-                s = m(),
+                s = g(),
                 { pendingVerificationFields: a } = l,
                 u =
                     !e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) ||
@@ -118,11 +118,11 @@ function L() {
             };
     }
 }
-function y() {
+function p() {
     if (null == o.A.getGuildId() || null == l) return !1;
-    (l = l.joinType === I.J.APPLY ? { ...l, pendingVerificationFields: C() } : { ...l, termRules: g() }), L();
+    (l = l.joinType === I.J.APPLY ? { ...l, pendingVerificationFields: C() } : { ...l, termRules: m() }), L();
 }
-function p(e) {
+function y(e) {
     let { section: i, subsection: t } = e;
     if (i !== f.BEX.ACCESS) return v();
     let n = o.A.getGuild();
@@ -178,10 +178,10 @@ let P = new F(a.h, {
         if (i !== n?.id) return !1;
         (l = { ...(l ?? N(n, R(n))), isAgeRestricted: t }), L();
     },
-    MEMBER_VERIFICATION_FORM_UPDATE: y,
-    MEMBER_VERIFICATION_FORM_FETCH_FAIL: y,
-    GUILD_SETTINGS_INIT: p,
-    GUILD_SETTINGS_SET_SECTION: p,
+    MEMBER_VERIFICATION_FORM_UPDATE: p,
+    MEMBER_VERIFICATION_FORM_FETCH_FAIL: p,
+    GUILD_SETTINGS_INIT: y,
+    GUILD_SETTINGS_SET_SECTION: y,
     GUILD_SETTINGS_CLOSE: v,
     DISCOVER_CHECKLIST_FETCH_SUCCESS: G,
     GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: G,

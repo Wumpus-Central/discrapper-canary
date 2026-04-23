@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(455207),
-    a = n(943667);
-function r(e) {
+n.d(t, { A: () => l });
+var a = n(715138),
+    i = n(943667);
+function l(e) {
     return (
-        !((0, i.MZ)(e) || ((0, a.A)(e) && e.messageReference?.guild_id != null)) &&
+        !((0, a.MZ)(e) || ((0, i.A)(e) && e.messageReference?.guild_id != null)) &&
         (null == e.interaction || "SENDING" !== e.state)
     );
 }

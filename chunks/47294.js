@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(189213),
-    a = n(150934),
-    o = n(192308),
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    a = n(189213),
+    s = n(150934),
+    _ = n(192308),
     l = n(231723),
-    u = n(817281),
-    d = n(964404),
-    c = n(985018);
-function _(e) {
-    let { onConfirm: t, onCancel: n, ...o } = e,
-        [l, d] = i.useState(!1);
+    o = n(817281),
+    E = n(964404),
+    d = n(985018);
+function c(e) {
+    let { onConfirm: t, onCancel: n, ..._ } = e,
+        [l, E] = r.useState(!1);
     return (
-        i.useEffect(() => {
-            u.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: l });
+        r.useEffect(() => {
+            o.Ay.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: l });
         }, [l]),
-        (0, r.jsx)(s.Modal, {
-            ...o,
+        (0, i.jsx)(a.Modal, {
+            ..._,
             size: "md",
-            title: c.intl.string(c.t.ye21jI),
-            subtitle: c.intl.string(c.t.hbagWD),
+            title: d.intl.string(d.t.ye21jI),
+            subtitle: d.intl.string(d.t.hbagWD),
             actions: [
                 {
-                    text: c.intl.string(c.t.B8pz37),
+                    text: d.intl.string(d.t.B8pz37),
                     onClick: () => {
-                        n?.(), o.onClose();
+                        n?.(), _.onClose();
                     },
                     variant: "secondary",
                 },
                 {
-                    text: c.intl.string(c.t.makWn9),
+                    text: d.intl.string(d.t.makWn9),
                     onClick: () => {
-                        t(), o.onClose();
+                        t(), _.onClose();
                     },
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, r.jsx)(a.S, { checked: l, onChange: (e) => d(e), label: c.intl.string(c.t.wGAwOS) }),
+            actionBarInput: (0, i.jsx)(s.S, { checked: l, onChange: (e) => E(e), label: d.intl.string(d.t.wGAwOS) }),
         })
     );
 }
-function f(e) {
-    let { onConfirm: t, onCancel: n, usesPopoutContext: i = !1 } = e;
-    d.Ay.disableEmbeddedActivityPopOutAlert
+function u(e) {
+    let { onConfirm: t, onCancel: n, usesPopoutContext: r = !1 } = e;
+    E.Ay.disableEmbeddedActivityPopOutAlert
         ? t()
-        : (0, o.openModal)((e) => (0, r.jsx)(_, { ...e, onConfirm: t, onCancel: n }), {}, i ? l.KX : void 0);
+        : (0, _.openModal)((e) => (0, i.jsx)(c, { ...e, onConfirm: t, onCancel: n }), {}, r ? l.KX : void 0);
 }

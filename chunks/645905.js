@@ -7,13 +7,13 @@ var s = e(627968),
     d = e(834730),
     o = e(821609),
     c = e(675704),
-    h = e(512513),
+    h = e(28647),
     m = e(915089),
     x = e(975571),
     j = e(955572),
     p = e(652215),
-    u = e(985018),
-    b = e(262476);
+    b = e(985018),
+    u = e(262476);
 function E(t) {
     let { transitionState: a, onClose: e } = t,
         E = (0, m.GV)();
@@ -28,26 +28,26 @@ function E(t) {
             parentComponent: "KeyboardNavigationModal",
             children: [
                 (0, s.jsxs)(n.$m, {
-                    className: b.Qs,
+                    className: u.Qs,
                     children: [
                         (0, s.jsx)(r.D, {
                             variant: "heading-xl/semibold",
                             id: E,
-                            className: b.wx,
-                            children: u.intl.format(u.t.V4fxrp, {
-                                tab: (t, a) => (0, s.jsx)(l.e, { shortcut: "tab", className: b.Wj }, a),
+                            className: u.wx,
+                            children: b.intl.format(b.t.V4fxrp, {
+                                tab: (t, a) => (0, s.jsx)(l.e, { shortcut: "tab", className: u.Wj }, a),
                             }),
                         }),
-                        (0, s.jsx)(d.E, { variant: "text-md/normal", children: u.intl.string(u.t["oQA/OB"]) }),
+                        (0, s.jsx)(d.E, { variant: "text-md/normal", children: b.intl.string(b.t["oQA/OB"]) }),
                         (0, s.jsxs)("ul", {
-                            className: b.Xq,
+                            className: u.Xq,
                             children: [
                                 (0, s.jsxs)("li", {
                                     children: [
                                         (0, s.jsx)(l.e, { shortcut: h.z.binds["0"] }),
                                         (0, s.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: u.intl.string(u.t["43Qn2r"]),
+                                            children: b.intl.string(b.t["43Qn2r"]),
                                         }),
                                     ],
                                 }),
@@ -56,7 +56,7 @@ function E(t) {
                                         (0, s.jsx)(l.e, { shortcut: c.R.binds["0"] }),
                                         (0, s.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: u.intl.string(u.t.zJg4FY),
+                                            children: b.intl.string(b.t.zJg4FY),
                                         }),
                                     ],
                                 }),
@@ -64,7 +64,7 @@ function E(t) {
                         }),
                         (0, s.jsx)(d.E, {
                             variant: "text-md/normal",
-                            children: u.intl.format(u.t.EWFVSW, { link: x.A.getArticleURL(p.MVz.KEYBOARD_NAVIGATION) }),
+                            children: b.intl.format(b.t.EWFVSW, { link: x.A.getArticleURL(p.MVz.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
@@ -72,7 +72,7 @@ function E(t) {
                     children: (0, s.jsx)(o.$, {
                         variant: "primary",
                         size: "sm",
-                        text: u.intl.string(u.t.BddRzS),
+                        text: b.intl.string(b.t.BddRzS),
                         onClick: e,
                         autoFocus: !0,
                     }),

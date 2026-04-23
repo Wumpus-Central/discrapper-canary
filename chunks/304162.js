@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A8: () => i, et: () => s, m3: () => a });
-var r = n(77350);
-let i = 4;
+n.d(t, { A8: () => r, et: () => s, m3: () => a });
+var i = n(77350);
+let r = 4;
 function a(e) {
     if (null == e) return;
     let { thumbnail: t, image: n } = e;
@@ -10,5 +9,5 @@ function a(e) {
 function s(e) {
     if (null == e) return;
     let { url: t, proxy_url: n } = e;
-    return null != t && null != n ? ((0, r.r1)(t) ? `${n}?format=webp` : n) : t;
+    return null != t && null != n ? ((0, i.r1)(t) ? `${n}?format=webp` : n) : t;
 }

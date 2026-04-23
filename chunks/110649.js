@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper_e03935",
     wX: "disabledSelected_e03935",

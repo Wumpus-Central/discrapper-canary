@@ -3,8 +3,8 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(356197),
-    d = i(311907),
+    r = i(419354),
+    d = i(17928),
     o = i(866323),
     c = i(765178),
     u = i(834730),
@@ -13,16 +13,16 @@ var n = i(627968),
     h = i(775602),
     x = i(159001),
     p = i(933725),
-    A = i(203982),
-    j = i(587600),
-    f = i(207803),
+    A = i(625494),
+    f = i(56348),
+    j = i(207803),
     I = i(183555),
     v = i(289173),
     S = i(836602),
     E = i(958805),
     y = i(61881),
-    b = i(624826),
-    w = i(606758),
+    w = i(624826),
+    b = i(606758),
     N = i(518477),
     T = i(652215),
     C = i(985018),
@@ -36,8 +36,8 @@ function k(e) {
         [_, M] = l.useState(!1),
         {
             widgetsToSave: P,
-            changedWidgets: U,
-            removedWidgets: D,
+            changedWidgets: D,
+            removedWidgets: U,
             hasUnsavedWidgets: F,
             canSaveWidgets: W,
         } = (function () {
@@ -51,15 +51,15 @@ function k(e) {
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
         B = (0, d.bG)([S.A], () => S.A.hasUnsavedChanges()),
-        H = F || B,
-        V = !(F && !W),
-        z = (0, o.p)(H, {
+        V = F || B,
+        H = !(F && !W),
+        z = (0, o.p)(V, {
             from: { opacity: 0, y: 80 * !k },
             enter: { opacity: 1, y: 0 },
             leave: { opacity: 0, y: 80 * !k },
         }),
         X = l.useCallback(() => {
-            E.A.clearPendingWidgets(), (0, f.XQ)();
+            E.A.clearPendingWidgets(), (0, j.XQ)();
         }, []),
         Y = l.useCallback(async () => {
             M(!0);
@@ -68,15 +68,15 @@ function k(e) {
                 try {
                     if (null == i) {
                         let t = S.A.getPendingChanges(),
-                            i = (0, j.Sk)(t),
-                            n = (0, j.yX)(t),
-                            l = (0, j.yg)(t);
+                            i = (0, f.Sk)(t),
+                            n = (0, f.yX)(t),
+                            l = (0, f.yg)(t);
                         if (Object.keys(i).length > 0) {
                             let n = await (0, m._L)(i);
                             (e = n?.ok ?? !1),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, b.t)({
+                                        (0, w.t)({
                                             avatarHash: n.body.avatar,
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -84,8 +84,8 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(n).length > 0) {
-                            let t = await (0, f.gi)(n);
-                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
+                            let t = await (0, j.gi)(n);
+                            (e = e && (t?.ok ?? !1)), t?.ok && (0, j.RE)();
                         }
                         if (Object.keys(l).length > 0) {
                             let { primaryGuildId: t } = l;
@@ -96,14 +96,14 @@ function k(e) {
                         }
                     } else {
                         let t = S.A.getPendingChanges(i),
-                            n = (0, j.C5)(t),
-                            l = (0, j.yX)(t, i);
+                            n = (0, f.C5)(t),
+                            l = (0, f.yX)(t, i);
                         if (Object.keys(n).length > 0) {
                             let l = await (0, x.GL)(i, n);
                             (e = l?.ok ?? !1),
                                 l?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, b.t)({
+                                        (0, w.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: n.avatarId,
@@ -112,8 +112,8 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(l).length > 0) {
-                            let t = await (0, f.gi)(l, i);
-                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
+                            let t = await (0, j.gi)(l, i);
+                            (e = e && (t?.ok ?? !1)), t?.ok && (0, j.RE)();
                         }
                     }
                 } catch {
@@ -121,7 +121,7 @@ function k(e) {
                 }
             if (F)
                 try {
-                    for (let e of (await E.A.savePendingWidgets(P), U)) {
+                    for (let e of (await E.A.savePendingWidgets(P), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, v.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -129,12 +129,12 @@ function k(e) {
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                             s(t);
                     }
-                    for (let e of D) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                    for (let e of U) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
                 } catch {
                     e = !1;
                 }
-            e ? (0, m.x8)() : (0, w.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), M(!1);
-        }, [B, F, P, U, D, s, i]);
+            e ? (0, m.x8)() : (0, b.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), M(!1);
+        }, [B, F, P, D, U, s, i]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -149,8 +149,8 @@ function k(e) {
             );
         }, []),
         l.useEffect(() => {
-            H && c.O.announce(C.intl.string(C.t["0Y/qkL"]));
-        }, [H]),
+            V && c.O.announce(C.intl.string(C.t["0Y/qkL"]));
+        }, [V]),
         z((e, i) =>
             i
                 ? (0, n.jsx)(r.animated.div, {
@@ -175,7 +175,7 @@ function k(e) {
                                           variant: "secondary",
                                           text: C.intl.string(C.t.yBZMsQ),
                                           onClick: X,
-                                          disabled: !H || _,
+                                          disabled: !V || _,
                                       }),
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
@@ -183,7 +183,7 @@ function k(e) {
                                           text: C.intl.string(C.t["R3BPH+"]),
                                           onClick: Y,
                                           loading: _,
-                                          disabled: !V || !H,
+                                          disabled: !H || !V,
                                       }),
                                   ],
                               }),

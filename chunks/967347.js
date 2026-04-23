@@ -1,51 +1,50 @@
-"use strict";
-n.d(t, { w: () => h });
-var r = n(311907),
-    i = n(73153),
-    s = n(49463),
-    a = n(954571),
-    o = n(723702),
-    l = n(837921),
-    u = n(652215);
-let d = { hashes: {} };
-async function c() {
-    if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
+n.d(t, { w: () => A });
+var i = n(17928),
+    r = n(228366),
+    a = n(736056),
+    s = n(954571),
+    _ = n(723702),
+    l = n(19575),
+    o = n(652215);
+let E = { hashes: {} };
+async function d() {
+    if (!_.isPlatformEmbedded || !(0, _.isWindows)()) return [];
     await l.Ay.ensureModule("discord_media");
     let e = l.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) ?? [];
 }
-async function _() {
+async function c() {
     try {
-        let e = (await c()).filter((e) => d.hashes[e.name] !== e.hash);
-        for (let { name: t, hash: n, data: r } of e) {
-            let e = { ...r, gpus: r.gpus?.map((e) => JSON.stringify(e)) };
-            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((d = { hashes: { ...d.hashes } }).hashes[t] = n);
+        let e = (await d()).filter((e) => E.hashes[e.name] !== e.hash);
+        for (let { name: t, hash: n, data: i } of e) {
+            let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
+            s.default.track(o.HAw.HARDWARE_DETECTED, e), ((E = { hashes: { ...E.hashes } }).hashes[t] = n);
         }
-        e.length > 0 && E.emitChange();
+        e.length > 0 && I.emitChange();
     } catch (e) {}
 }
-class f extends r.Ay.PersistedStore {
+class u extends i.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
     initialize(e) {
-        (d = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
+        (E = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A);
     }
     getState() {
-        return d;
+        return E;
     }
     async info() {
         try {
-            let e = (await c()).find((e) => "hardware_detected" === e.name);
+            let e = (await d()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-let E = new f(i.h, {
+let I = new u(r.h, {
     START_SESSION: function () {
-        return _(), !1;
+        return c(), !1;
     },
 });
-function h() {
-    return E.info();
+function A() {
+    return I.info();
 }

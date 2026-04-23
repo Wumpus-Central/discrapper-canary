@@ -1,13 +1,13 @@
 i.d(n, { Gk: () => r, Is: () => c, Sy: () => s });
-var e = i(73153);
-let a = Date.now();
+var a = i(228366);
+let e = Date.now();
 function s(t, n) {
-    let i = { id: String(a++), name: t, prompt: n };
-    return e.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_ADD", transform: i }), i;
+    let i = { id: String(e++), name: t, prompt: n };
+    return a.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_ADD", transform: i }), i;
 }
 function r(t) {
-    e.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_UPDATE", transform: t });
+    a.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_UPDATE", transform: t });
 }
 function c(t) {
-    e.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_DELETE", id: t });
+    a.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_DELETE", id: t });
 }

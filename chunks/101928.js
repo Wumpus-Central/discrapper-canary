@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => E });
 var i = n(317097),
-    r = n(311907),
-    l = n(374994),
+    r = n(17928),
+    s = n(374994),
     a = n(462887),
-    s = n(736653),
-    o = n(775602),
-    c = n(654107),
-    u = n(543699),
-    d = n(837529),
-    h = n(652215);
-function _(e) {
-    let { user: t, displayProfile: n, pendingThemeColors: _, pendingAvatarSrc: p, isPreview: A, forceUserTheme: f } = e,
-        m = (0, s.Ay)(),
-        g = (0, d.Wd)(),
-        E = (0, r.bG)([o.A], () => o.A.syncProfileThemeWithUserTheme),
-        I = p ?? t?.getAvatarURL(n?.guildId, 80),
-        v = (0, l.nt)("PRIMARY_530", { saturation: 1 }),
-        [b, S] = (0, c.rh)(I, v, !1);
-    if (null != g) return g;
-    if (!n?.canEditThemes && !A) return { theme: m, primaryColor: null, secondaryColor: null };
-    let T = n?.getPreviewThemeColors(_),
-        y = T?.[0] ?? (0, i.LX)(b),
-        C = T?.[1] ?? (0, i.LX)(S),
-        x = E || f ? m : ((0, u.tM)(y) ?? m);
+    o = n(736653),
+    l = n(775602),
+    d = n(654107),
+    _ = n(543699),
+    u = n(837529),
+    c = n(652215);
+function E(e) {
+    let { user: t, displayProfile: n, pendingThemeColors: E, pendingAvatarSrc: h, isPreview: m, forceUserTheme: f } = e,
+        g = (0, o.Ay)(),
+        p = (0, u.Wd)(),
+        A = (0, r.bG)([l.A], () => l.A.syncProfileThemeWithUserTheme),
+        I = h ?? t?.getAvatarURL(n?.guildId, 80),
+        T = (0, s.nt)("PRIMARY_530", { saturation: 1 }),
+        [S, N] = (0, d.rh)(I, T, !1);
+    if (null != p) return p;
+    if (!n?.canEditThemes && !m) return { theme: g, primaryColor: null, secondaryColor: null };
+    let C = n?.getPreviewThemeColors(E),
+        R = C?.[0] ?? (0, i.LX)(S),
+        O = C?.[1] ?? (0, i.LX)(N),
+        y = A || f ? g : ((0, _.tM)(R) ?? g);
     return (
-        x === h.NJ8.DARK && (0, a.M)(m) ? (x = m) : x === h.NJ8.DARK && (0, a.q)(m) && (x = h.NJ8.DARKER),
-        { theme: x, primaryColor: y, secondaryColor: C }
+        y === c.NJ8.DARK && (0, a.M)(g) ? (y = g) : y === c.NJ8.DARK && (0, a.q)(g) && (y = c.NJ8.DARKER),
+        { theme: y, primaryColor: R, secondaryColor: O }
     );
 }

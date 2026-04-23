@@ -8,12 +8,12 @@ function r(t, e) {
         async () => {
             switch (e.type) {
                 case i.o9.LEVEL: {
-                    let { default: a } = await l.e("54508").then(l.bind(l, 278087));
+                    let { default: a } = await l.e("2988").then(l.bind(l, 787367));
                     return (l) => (0, n.jsx)(a, { guildId: t, powerup: e, ...l });
                 }
                 case i.o9.PERK: {
-                    let { default: a } = await Promise.all([l.e("63379"), l.e("94253"), l.e("57909")]).then(
-                        l.bind(l, 940481),
+                    let { default: a } = await Promise.all([l.e("42749"), l.e("15666"), l.e("40066")]).then(
+                        l.bind(l, 288416),
                     );
                     return (l) => (0, n.jsx)(a, { guildId: t, powerup: e, ...l });
                 }

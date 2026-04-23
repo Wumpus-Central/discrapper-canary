@@ -1,8 +1,8 @@
-n.d(t, { A: () => r });
-var l = n(835245),
-    i = n(73153),
-    s = n(870391);
-let r = {
+n.d(t, { A: () => s });
+var l = n(132500),
+    i = n(228366),
+    r = n(870391);
+let s = {
     createGroup(e) {
         let t = (0, l.A)();
         return i.h.dispatch({ type: "CREATE_FRIEND_GROUP", groupId: t, name: e }), t;
@@ -25,7 +25,7 @@ let r = {
         i.h.dispatch({ type: "REMOVE_USERS_FROM_GROUP", groupId: e, userIds: n });
     },
     toggleUserInGroup(e, t) {
-        let n = s.A.getGroup(e);
+        let n = r.A.getGroup(e);
         null != n && (n.userIds.includes(t) ? this.removeUsersFromGroup(e, t) : this.addUsersToGroup(e, t));
     },
 };

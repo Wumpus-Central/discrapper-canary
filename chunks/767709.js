@@ -1,14 +1,13 @@
-"use strict";
-var r = n(739305),
-    i = n(410323),
-    a = n(514575),
-    s = n(412405),
-    o = r.aTypedArray,
-    l = r.getTypedArrayConstructor,
-    u = r.exportTypedArrayMethod,
-    c = i(r.TypedArrayPrototype.sort);
-u("toSorted", function (e) {
-    void 0 !== e && a(e);
-    var t = o(this);
-    return c(s(l(t), t), e);
+var n = e(739305),
+    o = e(410323),
+    a = e(514575),
+    i = e(412405),
+    p = n.aTypedArray,
+    u = n.getTypedArrayConstructor,
+    y = n.exportTypedArrayMethod,
+    f = o(n.TypedArrayPrototype.sort);
+y("toSorted", function (r) {
+    void 0 !== r && a(r);
+    var t = p(this);
+    return f(i(u(t), t), r);
 });

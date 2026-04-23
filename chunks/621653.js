@@ -1,35 +1,35 @@
-s.d(t, { g: () => i }), s(321073);
-var r = s(64700),
-    l = s(417597),
-    n = s(73153),
-    a = s(248352),
-    o = s(652215);
+r.d(t, { g: () => i }), r(321073);
+var n = r(64700),
+    s = r(702841),
+    l = r(228366),
+    a = r(248352),
+    o = r(652215);
 function i() {
-    let e = r.useRef(new Map()),
-        t = (0, l.bG)([a.A], () => a.A.getUserDiscounts());
-    r.useEffect(() => {
-        let s = e.current,
-            r = Date.now(),
-            l = [];
+    let e = n.useRef(new Map()),
+        t = (0, s.bG)([a.A], () => a.A.getUserDiscounts());
+    n.useEffect(() => {
+        let r = e.current,
+            n = Date.now(),
+            s = [];
         return (
             t.forEach((e) => {
                 if (null == e.expiresAt) return;
-                let t = e.expiresAt.getTime() - r;
-                if (t <= 0) l.push(e.discountId);
+                let t = e.expiresAt.getTime() - n;
+                if (t <= 0) s.push(e.discountId);
                 else {
-                    let r = setTimeout(
+                    let n = setTimeout(
                         () => {
-                            n.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
-                                s.delete(e.discountId);
+                            l.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
+                                r.delete(e.discountId);
                         },
                         Math.min(o.mnr, t),
                     );
-                    s.set(e.discountId, r);
+                    r.set(e.discountId, n);
                 }
             }),
-            l.length > 0 && n.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: l }),
+            s.length > 0 && l.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: s }),
             () => {
-                s.forEach((e) => clearTimeout(e)), s.clear();
+                r.forEach((e) => clearTimeout(e)), r.clear();
             }
         );
     }, [t]);

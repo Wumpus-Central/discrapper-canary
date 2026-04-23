@@ -1,195 +1,195 @@
-n.r(e), n.d(e, { default: () => D });
+n.r(t), n.d(t, { default: () => B });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(284009),
-    o = n.n(s),
-    d = n(534514),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    d = n(284009),
+    r = n.n(d),
+    o = n(534514),
     c = n(289873),
-    u = n(408278),
-    h = n(807072),
-    p = n(834730),
-    b = n(821609),
-    f = n(707554),
-    _ = n(311907),
+    h = n(408278),
+    u = n(807072),
+    x = n(834730),
+    m = n(821609),
+    b = n(707554),
+    f = n(17928),
     A = n(761508),
-    m = n(824552),
-    x = n(933958),
-    E = n(869003),
-    v = n(793574),
-    g = n(688810),
+    _ = n(824552),
+    g = n(933958),
+    j = n(869003),
+    p = n(793574),
+    v = n(688810),
     O = n(429913),
-    y = n(793943),
-    j = n(409626),
-    C = n(692969),
-    N = n(134861),
-    R = n(147964),
-    T = n(362490),
-    S = n(487431),
-    F = n(311350),
-    w = n(985018),
-    L = n(564741);
-function D() {
-    let t = (0, O.h)(R.A.testModeApplicationId),
-        { analyticsLocations: e } = (0, g.Ay)(v.A.SDK_DEBUG_TOOLS),
-        n = (0, y.fy)().metadata,
-        a = l.useRef(!1),
+    E = n(793943),
+    N = n(409626),
+    L = n(692969),
+    C = n(134861),
+    D = n(147964),
+    I = n(46225),
+    W = n(487431),
+    R = n(311350),
+    k = n(985018),
+    y = n(564741);
+function B() {
+    let e = (0, O.h)(D.A.testModeApplicationId),
+        { analyticsLocations: t } = (0, v.Ay)(p.A.SDK_DEBUG_TOOLS),
+        n = (0, E.fy)().metadata,
+        l = s.useRef(!1),
         {
-            canStartAuthorization: s,
-            hasAlreadyLinked: D,
-            startAuthorization: I,
-            chosenFlow: k,
-            connectionApp: W,
-            debug: { isSubscribedToAuthorizeRequest: U, oauth2Token: B, hasConnectionEntrypointUrl: V, validFlows: G },
-        } = (0, T.RD)(t, { debug: !0 }),
-        K = (0, _.bG)([N.A], () => null != t && N.A.isConnected(t.id)),
-        H = (0, _.bG)([x.Ay], () => x.Ay.getSelfEmbeddedActivities()),
-        P = t?.id ?? "",
-        M = (0, C.A)({ applicationId: P, source: j.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
-    l.useEffect(() => {
-        n?.shouldAutoOpenGameProfile !== !0 || null == M || a.current || ((a.current = !0), M());
-    }, [n, M]);
-    let z = "authorization_debug",
-        q = [{ id: "authorization_debug", name: w.intl.string(F.default.vR0zs6) }];
+            canStartAuthorization: d,
+            hasAlreadyLinked: B,
+            startAuthorization: V,
+            chosenFlow: w,
+            connectionApp: T,
+            debug: { isSubscribedToAuthorizeRequest: G, oauth2Token: S, hasConnectionEntrypointUrl: K, validFlows: F },
+        } = (0, I.RD)(e, { debug: !0 }),
+        M = (0, f.bG)([C.A], () => null != e && C.A.isConnected(e.id)),
+        U = (0, f.bG)([g.Ay], () => g.Ay.getSelfEmbeddedActivities()),
+        z = e?.id ?? "",
+        P = (0, L.A)({ applicationId: z, source: N.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
+    s.useEffect(() => {
+        n?.shouldAutoOpenGameProfile !== !0 || null == P || l.current || ((l.current = !0), P());
+    }, [n, P]);
+    let H = "authorization_debug",
+        J = [{ id: "authorization_debug", name: k.intl.string(R.default.vR0zs6) }];
     return (0, i.jsx)("div", {
         "data-app-right-panel": !0,
-        className: L.nE,
-        children: (0, i.jsx)(f.F, {
+        className: y.nE,
+        children: (0, i.jsx)(b.F, {
             children:
-                null != t
-                    ? (o()(null != t, "Application should be defined when rendering the test mode panel"),
+                null != e
+                    ? (r()(null != e, "Application should be defined when rendering the test mode panel"),
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: L.wx,
+                                  className: y.wx,
                                   children: [
                                       (0, i.jsx)("div", {
-                                          className: L.if,
-                                          children: (0, i.jsx)(d.D, {
+                                          className: y.if,
+                                          children: (0, i.jsx)(o.D, {
                                               variant: "heading-lg/extrabold",
-                                              children: w.intl.format(F.default.KoK4J9, { appName: t.name }),
+                                              children: k.intl.format(R.default.KoK4J9, { appName: e.name }),
                                           }),
                                       }),
-                                      (0, i.jsx)(u.K, {
+                                      (0, i.jsx)(h.K, {
                                           variant: "icon-only",
-                                          icon: h.U,
+                                          icon: u.U,
                                           "aria-label": "Close",
-                                          onClick: () => (0, y.Jp)(),
+                                          onClick: () => (0, E.Jp)(),
                                       }),
                                   ],
                               }),
                               (0, i.jsxs)("div", {
-                                  className: L.rf,
+                                  className: y.rf,
                                   children: [
                                       (0, i.jsx)(A.V, {
-                                          className: L.$H,
-                                          selectedItem: z,
+                                          className: y.$H,
+                                          selectedItem: H,
                                           onItemSelect: () => {},
                                           orientation: "horizontal",
                                           type: "top",
                                           look: "brand",
-                                          children: q.map((t) =>
+                                          children: J.map((e) =>
                                               (0, i.jsx)(
                                                   A.V.Item,
                                                   {
-                                                      className: r()(L.Mf, { [L.wH]: t.id === z }),
-                                                      id: t.id,
-                                                      "aria-label": t.name,
-                                                      children: t.name,
+                                                      className: a()(y.Mf, { [y.wH]: e.id === H }),
+                                                      id: e.id,
+                                                      "aria-label": e.name,
+                                                      children: e.name,
                                                   },
-                                                  t.id,
+                                                  e.id,
                                               ),
                                           ),
                                       }),
-                                      (0, i.jsx)(p.E, {
+                                      (0, i.jsx)(x.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: w.intl.string(F.default["no+FQS"]),
+                                          children: k.intl.string(R.default["no+FQS"]),
                                       }),
-                                      (0, i.jsx)(S.VT, {
-                                          overallStatus: U ? S.nW.OVERALL_GOOD : K ? S.nW.WARN : S.nW.OVERALL_BAD,
-                                          name: w.intl.string(F.default.AGLx00),
+                                      (0, i.jsx)(W.VT, {
+                                          overallStatus: G ? W.nW.OVERALL_GOOD : M ? W.nW.WARN : W.nW.OVERALL_BAD,
+                                          name: k.intl.string(R.default.AGLx00),
                                           steps: [
                                               {
-                                                  status: K ? S.nW.GOOD : S.nW.BAD,
-                                                  text: w.intl.string(F.default.kxF9br),
-                                                  description: K ? null : w.intl.string(F.default.PFxxJa),
-                                                  learnMoreLink: K
+                                                  status: M ? W.nW.GOOD : W.nW.BAD,
+                                                  text: k.intl.string(R.default.kxF9br),
+                                                  description: M ? null : k.intl.string(R.default.PFxxJa),
+                                                  learnMoreLink: M
                                                       ? null
                                                       : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                               },
                                               {
-                                                  status: U ? S.nW.GOOD : K ? S.nW.WARN : S.nW.BAD,
-                                                  text: w.intl.string(F.default.S94dzs),
-                                                  description: U || !K ? null : w.intl.string(F.default.aTULMB),
+                                                  status: G ? W.nW.GOOD : M ? W.nW.WARN : W.nW.BAD,
+                                                  text: k.intl.string(R.default.S94dzs),
+                                                  description: G || !M ? null : k.intl.string(R.default.aTULMB),
                                                   learnMoreLink:
-                                                      U || !K
+                                                      G || !M
                                                           ? null
                                                           : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                               },
                                           ],
-                                          isChosen: k === T._M.RPC,
+                                          isChosen: w === I._M.RPC,
                                       }),
-                                      (0, i.jsx)(S.VT, {
-                                          overallStatus: V ? S.nW.OVERALL_GOOD : S.nW.OVERALL_BAD,
-                                          name: w.intl.string(F.default.K3ObrU),
+                                      (0, i.jsx)(W.VT, {
+                                          overallStatus: K ? W.nW.OVERALL_GOOD : W.nW.OVERALL_BAD,
+                                          name: k.intl.string(R.default.K3ObrU),
                                           steps: [
                                               {
-                                                  status: V ? S.nW.GOOD : S.nW.BAD,
-                                                  text: w.intl.string(F.default["8a7IrV"]),
-                                                  description: V
-                                                      ? w.intl.formatToPlainString(F.default["9iLeL2"], {
-                                                            url: W?.connectionEntrypointUrl,
+                                                  status: K ? W.nW.GOOD : W.nW.BAD,
+                                                  text: k.intl.string(R.default["8a7IrV"]),
+                                                  description: K
+                                                      ? k.intl.formatToPlainString(R.default["9iLeL2"], {
+                                                            url: T?.connectionEntrypointUrl,
                                                         })
                                                       : null,
                                               },
                                           ],
-                                          isChosen: k === T._M.WEB,
+                                          isChosen: w === I._M.WEB,
                                       }),
                                   ],
                               }),
                               (0, i.jsxs)("div", {
-                                  className: L.qr,
+                                  className: y.qr,
                                   children: [
-                                      (0, i.jsx)(S.Sy, {
-                                          status: D ? S.nW.OVERALL_GOOD : S.nW.OVERALL_BAD,
-                                          text: w.intl.string(w.t["Vu/zmQ"]),
+                                      (0, i.jsx)(W.Sy, {
+                                          status: B ? W.nW.OVERALL_GOOD : W.nW.OVERALL_BAD,
+                                          text: k.intl.string(k.t["Vu/zmQ"]),
                                       }),
-                                      0 === G.length &&
-                                          (0, i.jsx)(p.E, {
+                                      0 === F.length &&
+                                          (0, i.jsx)(x.E, {
                                               style: { minWidth: 0, overflow: "hidden" },
                                               variant: "text-md/medium",
-                                              children: w.intl.string(F.default.eg0mNa),
+                                              children: k.intl.string(R.default.eg0mNa),
                                           }),
-                                      (0, i.jsx)(b.$, {
+                                      (0, i.jsx)(m.$, {
                                           variant: "secondary",
-                                          disabled: !s || D,
-                                          onClick: () => I({ analyticsLocations: e }),
-                                          text: w.intl.string(F.default.w0pN4R),
+                                          disabled: !d || B,
+                                          onClick: () => V({ analyticsLocations: t }),
+                                          text: k.intl.string(R.default.w0pN4R),
                                           fullWidth: !0,
                                       }),
-                                      null != B &&
-                                          (0, i.jsx)(b.$, {
+                                      null != S &&
+                                          (0, i.jsx)(m.$, {
                                               variant: "secondary",
                                               onClick: () => {
-                                                  m.A.delete(B.id);
-                                                  let e = H.get(t.id);
-                                                  null != e &&
-                                                      E.A.leaveActivity({
-                                                          location: e.location,
-                                                          applicationId: t.id,
+                                                  _.A.delete(S.id);
+                                                  let t = U.get(e.id);
+                                                  null != t &&
+                                                      j.A.leaveActivity({
+                                                          location: t.location,
+                                                          applicationId: e.id,
                                                           showFeedback: !1,
                                                       });
                                               },
-                                              text: w.intl.string(F.default.tkIymA),
+                                              text: k.intl.string(R.default.tkIymA),
                                               fullWidth: !0,
                                           }),
-                                      (0, i.jsx)(b.$, {
+                                      (0, i.jsx)(m.$, {
                                           variant: "secondary",
-                                          onClick: M ?? void 0,
-                                          disabled: null == M,
-                                          text: w.intl.string(F.default.cCvdJy),
+                                          onClick: P ?? void 0,
+                                          disabled: null == P,
+                                          text: k.intl.string(R.default.cCvdJy),
                                           fullWidth: !0,
                                       }),
                                   ],
@@ -199,16 +199,16 @@ function D() {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", {
-                                  className: L.wx,
+                                  className: y.wx,
                                   children: (0, i.jsx)("div", {
-                                      className: L.if,
-                                      children: (0, i.jsx)(d.D, {
+                                      className: y.if,
+                                      children: (0, i.jsx)(o.D, {
                                           variant: "heading-lg/extrabold",
-                                          children: w.intl.format(F.default.KoK4J9, { appName: "" }),
+                                          children: k.intl.format(R.default.KoK4J9, { appName: "" }),
                                       }),
                                   }),
                               }),
-                              (0, i.jsx)("div", { className: L.rf, children: (0, i.jsx)(c.y, { className: L.u1 }) }),
+                              (0, i.jsx)("div", { className: y.rf, children: (0, i.jsx)(c.y, { className: y.u1 }) }),
                           ],
                       }),
         }),

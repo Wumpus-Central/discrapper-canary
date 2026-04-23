@@ -1,16 +1,17 @@
-var n = t(101968);
-r.exports = function () {
-    var r = n(this),
-        e = "";
+"use strict";
+var n = r(101968);
+e.exports = function () {
+    var e = n(this),
+        t = "";
     return (
-        r.hasIndices && (e += "d"),
-        r.global && (e += "g"),
-        r.ignoreCase && (e += "i"),
-        r.multiline && (e += "m"),
-        r.dotAll && (e += "s"),
-        r.unicode && (e += "u"),
-        r.unicodeSets && (e += "v"),
-        r.sticky && (e += "y"),
-        e
+        e.hasIndices && (t += "d"),
+        e.global && (t += "g"),
+        e.ignoreCase && (t += "i"),
+        e.multiline && (t += "m"),
+        e.dotAll && (t += "s"),
+        e.unicode && (t += "u"),
+        e.unicodeSets && (t += "v"),
+        e.sticky && (t += "y"),
+        t
     );
 };

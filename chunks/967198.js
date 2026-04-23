@@ -1,82 +1,82 @@
 "use strict";
 n.d(t, { A: () => I });
-var r = n(311907),
-    i = n(73153),
+var i = n(17928),
+    r = n(228366),
     s = n(212455),
     a = n(463347),
     o = n(334465),
     l = n(976860),
-    u = n(961350),
-    d = n(650048),
-    c = n(71393),
-    _ = n(652215);
-let f = null,
-    E = null,
-    h = {};
-function p() {
-    null != f && null == c.A.getGuild(f) && null == s.A.getRequest(f) && (f = null),
-        null != E && null == c.A.getGuild(E) && null == s.A.getRequest(E) && (E = null),
-        m(f);
-}
-function m(e) {
-    null != e && (h[e] = Date.now());
+    d = n(495544),
+    _ = n(650048),
+    u = n(71393),
+    c = n(652215);
+let E = null,
+    h = null,
+    m = {};
+function f() {
+    null != E && null == u.A.getGuild(E) && null == s.A.getRequest(E) && (E = null),
+        null != h && null == u.A.getGuild(h) && null == s.A.getRequest(h) && (h = null),
+        g(E);
 }
 function g(e) {
+    null != e && (m[e] = Date.now());
+}
+function p(e) {
     let t = !1;
     return (
-        delete h[e],
-        E === e && ((E = null), (t = !0)),
-        f === e && (c.A.getGuildsArray().find((t) => t.id !== e), (f = null), (0, l.bG)(_.BVt.ME), (t = !0)),
+        delete m[e],
+        h === e && ((h = null), (t = !0)),
+        E === e && (u.A.getGuildsArray().find((t) => t.id !== e), (E = null), (0, l.bG)(c.BVt.ME), (t = !0)),
         t
     );
 }
-class A extends r.Ay.PersistedStore {
+class A extends i.Ay.PersistedStore {
     static displayName = "SelectedGuildStore";
     static persistKey = "SelectedGuildStore";
     initialize(e) {
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
-            this.waitFor(u.default, d.A, c.A, s.A),
-            (h = e?.selectedGuildTimestampMillis ?? {}),
-            (f = e?.selectedGuildId ?? null),
-            (E = e?.lastSelectedGuildId ?? null);
-        let t = d.A.lastNonVoiceRoute,
-            n = (0, o.B)(t, { path: _.BVt.CHANNEL(a.pv.guildId()) });
-        n?.params?.guildId, _.ME;
+            this.waitFor(d.default, _.A, u.A, s.A),
+            (m = e?.selectedGuildTimestampMillis ?? {}),
+            (E = e?.selectedGuildId ?? null),
+            (h = e?.lastSelectedGuildId ?? null);
+        let t = _.A.lastNonVoiceRoute,
+            n = (0, o.B)(t, { path: c.BVt.CHANNEL(a.pv.guildId()) });
+        n?.params?.guildId, c.ME;
     }
     getState() {
-        return { selectedGuildTimestampMillis: h, selectedGuildId: f, lastSelectedGuildId: E };
+        return { selectedGuildTimestampMillis: m, selectedGuildId: E, lastSelectedGuildId: h };
     }
     getGuildId() {
-        return f;
-    }
-    getLastSelectedGuildId() {
         return E;
     }
+    getLastSelectedGuildId() {
+        return h;
+    }
     getLastSelectedTimestamp(e) {
-        return f === e ? -1 : h[e];
+        return E === e ? -1 : m[e];
     }
 }
-let I = new A(i.h, {
-    CONNECTION_OPEN: p,
+let I = new A(r.h, {
+    CONNECTION_OPEN: f,
     OVERLAY_INITIALIZE: function (e) {
-        (f = e.selectedGuildId), (E = void 0), p();
+        (E = e.selectedGuildId), (h = void 0), f();
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        if (f === t) return !1;
-        m(f), m(t), null != t && (E = t), (f = t);
+        if (E === t) return !1;
+        g(E), g(t), null != t && (h = t), (E = t);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return n.id === u.default.getId() && g(t);
+        return n.id === d.default.getId() && p(t);
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t, unavailable: n },
         } = e;
-        return !0 !== n && g(t);
+        return !0 !== n && p(t);
     },
     LOGOUT: function () {
-        (f = null), (E = null);
+        (E = null), (h = null);
     },
 });

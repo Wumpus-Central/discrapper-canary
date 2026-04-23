@@ -1,6 +1,6 @@
 n.d(e, { A: () => c }), n(321073);
 var s = n(64700),
-    l = n(311907),
+    l = n(17928),
     r = n(555337),
     i = n(645619),
     a = n(743981);
@@ -16,9 +16,9 @@ function c() {
                     let r = a.Tf[l],
                         i = a.kO[l],
                         c = e?.[i],
-                        o = c?.title,
-                        d = r.map((t) => ({ kind: t, packName: o }));
-                    t.features.has(l) ? n.push(...d) : s.push(...d);
+                        d = c?.title,
+                        o = r.map((t) => ({ kind: t, packName: d }));
+                    t.features.has(l) ? n.push(...o) : s.push(...o);
                 }),
             { unlockedBadges: n, lockedBadges: s }
         );

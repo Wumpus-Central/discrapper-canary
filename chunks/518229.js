@@ -1,4 +1,3 @@
-"use strict";
 n.r(
     (e.exports = {
         button: "button_a22cb0",

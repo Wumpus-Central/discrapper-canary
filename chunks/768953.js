@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => _ });
+var i = n(17928),
+    r = n(228366),
     s = n(734057);
 let a = {};
 function o(e) {
@@ -12,7 +12,7 @@ function l(e) {
     let t = a[e] ?? { query: null, loading: !1, results: null };
     return (a[e] = t), t;
 }
-class u extends r.Ay.Store {
+class d extends i.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
@@ -34,7 +34,7 @@ class u extends r.Ay.Store {
         return t?.results != null && t.results.length > 0;
     }
 }
-let d = new u(i.h, {
+let _ = new d(r.h, {
     CONNECTION_OPEN: function () {
         a = {};
     },
@@ -42,9 +42,9 @@ let d = new u(i.h, {
         let { channel: t } = e,
             n = t.parent_id;
         if (null == n) return !1;
-        let r = a[n];
-        if (null == r) return !1;
-        a[n] = { ...r, results: r.results?.filter((e) => t.id !== e) };
+        let i = a[n];
+        if (null == i) return !1;
+        a[n] = { ...i, results: i.results?.filter((e) => t.id !== e) };
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -53,8 +53,8 @@ let d = new u(i.h, {
     FORUM_SEARCH_QUERY_UPDATED: function (e) {
         let { channelId: t, query: n } = e;
         if (!o(t)) return !1;
-        let r = l(t);
-        a[t] = { ...r, query: n };
+        let i = l(t);
+        a[t] = { ...i, query: n };
     },
     FORUM_SEARCH_START: function (e) {
         let { channelId: t } = e;
@@ -65,8 +65,8 @@ let d = new u(i.h, {
     FORUM_SEARCH_SUCCESS: function (e) {
         let { channelId: t, threadIds: n } = e;
         if (!o(t)) return !1;
-        let r = l(t);
-        a[t] = { ...r, loading: !1, results: n };
+        let i = l(t);
+        a[t] = { ...i, loading: !1, results: n };
     },
     FORUM_SEARCH_FAILURE: function (e) {
         let { channelId: t } = e;

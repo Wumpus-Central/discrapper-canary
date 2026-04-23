@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { i: () => r });
-let r = {
+n.d(t, { i: () => i });
+let i = {
     __proto__: null,
     bg: { group: " ", decimal: "," },
     cs: { group: " ", decimal: "," },

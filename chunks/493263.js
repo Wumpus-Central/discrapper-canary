@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_fa285e",
     n2: "guildBadge_fa285e",

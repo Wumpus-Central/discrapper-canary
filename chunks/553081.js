@@ -2,36 +2,36 @@ n.d(t, { Ay: () => W, WU: () => F, x6: () => H }), n(321073), n(323874), n(14289
 var i = n(627968),
     l = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(873263),
-    o = n(311907),
+    r = n.n(s),
+    a = n(873263),
+    o = n(17928),
     d = n(230109),
     c = n(289873),
-    u = n(599319),
+    u = n(689175),
     h = n(315629),
-    A = n(73153),
+    A = n(228366),
     _ = n(793574),
-    m = n(688810),
-    g = n(31502),
+    g = n(688810),
+    m = n(715547),
     p = n(726649),
     f = n(611924),
     E = n(961250),
-    x = n(320118),
-    I = n(622543),
-    C = n(576622),
+    C = n(320118),
+    x = n(841595),
+    I = n(576622),
     b = n(166403),
-    N = n(954571),
-    S = n(881489),
-    v = n(131168),
-    T = n(482589),
+    S = n(954571),
+    N = n(881489),
+    T = n(131168),
+    v = n(482589),
     y = n(511484),
     R = n(935956),
-    j = n(568031),
-    L = n(518491),
+    j = n(563347),
+    L = n(555199),
     O = n(965591),
-    G = n(495022),
-    D = n(382694),
-    M = n(235365),
+    G = n(136735),
+    M = n(382694),
+    D = n(549384),
     U = n(994763),
     P = n(788868),
     w = n(652215),
@@ -42,24 +42,24 @@ let H = "section",
     F = "perk",
     W = (e) => {
         let { userId: t } = e,
-            n = (0, S.ds)(),
-            s = (0, g.l)("PremiumSubscriberHome"),
-            W = (0, r.zy)();
+            n = (0, N.ds)(),
+            s = (0, m.l)("PremiumSubscriberHome"),
+            W = (0, a.zy)();
         l.useEffect(() => {
             A.h.wait(async () => {
                 let e = [(0, E.Ay)()];
-                null != t && e.push((0, C.A)(t)), await Promise.all(e);
+                null != t && e.push((0, I.A)(t)), await Promise.all(e);
             });
         }, [t]),
             l.useEffect(() => {
                 ei(!0);
             }, []),
-            (0, T.j)(),
+            (0, v.j)(),
             (0, f.P)(p.b);
-        let Y = l.useRef(null),
-            K = l.useRef(null),
+        let K = l.useRef(null),
+            Y = l.useRef(null),
             z = (0, o.bG)([b.A], () => b.A.getPremiumTypeSubscription()),
-            { isReady: q, programReward: X, isEligible: Q } = (0, x.F)({ location: "PremiumSubscriberHome" }),
+            { isReady: q, programReward: X, isEligible: Q } = (0, C.F)({ location: "PremiumSubscriberHome" }),
             {
                 scrollTargetId: J,
                 glowingSectionId: Z,
@@ -78,29 +78,29 @@ let H = "section",
             }, [W.search]);
         (0, U.z)(J ?? "", null != J, ee, et);
         let [en, ei] = l.useState(!1),
-            el = (0, v.p)(),
+            el = (0, T.p)(),
             es = l.useRef(null),
-            [ea, er] = l.useState(!1),
+            [er, ea] = l.useState(!1),
             eo = null != el && null != z && z.status === w.Dmq.CANCELED,
             ed = (0, y.iU)(P.gD.PREMIUM_MONTH_TIER_2, el, z),
-            ec = !ea && eo,
-            { analyticsLocations: eu } = (0, m.Ay)(_.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
+            ec = !er && eo,
+            { analyticsLocations: eu } = (0, g.Ay)(_.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [eh, eA] = l.useState(!1);
-        return null != (0, o.bG)([I.A], () => (null != t ? I.A.getUserProfile(t) : null)) && (q || null != X)
+        return null != (0, o.bG)([x.A], () => (null != t ? x.A.getUserProfile(t) : null)) && (q || null != X)
             ? (0, i.jsxs)(u.Gt, {
                   className: V.xW,
-                  ref: Y,
+                  ref: K,
                   children: [
                       (0, i.jsx)(h.h, {
                           color: "nitro-pink",
-                          className: a()(V.kL, V.Gd),
+                          className: r()(V.kL, V.Gd),
                           offsetBottom: n ? 0.55 : 0.8,
-                          children: (0, i.jsxs)(m.f5, {
+                          children: (0, i.jsxs)(g.f5, {
                               value: eu,
                               children: [
                                   (0, i.jsx)(d.L, {
                                       innerRef: es,
-                                      onChange: (e) => er(e),
+                                      onChange: (e) => ea(e),
                                       threshold: 0.1,
                                       active: !0,
                                       children: (0, i.jsx)(L.A, {
@@ -110,12 +110,12 @@ let H = "section",
                                           discountedPrice: ed,
                                       }),
                                   }),
-                                  (0, i.jsx)(D.A, { glowingPerkId: $ }),
+                                  (0, i.jsx)(M.A, { glowingPerkId: $ }),
                                   (0, i.jsx)(R.A, { glowingSectionId: Z }),
                                   null != X &&
                                       Q &&
                                       !s &&
-                                      (0, i.jsx)(M.A, { location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
+                                      (0, i.jsx)(D.A, { location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
                                   (0, i.jsx)(G.A, { glowingPerkId: $ }),
                                   (0, i.jsx)(j.A, {
                                       className: V.Zy,
@@ -124,16 +124,16 @@ let H = "section",
                                   }),
                                   (0, i.jsx)("div", { className: V.hz }),
                                   (0, i.jsx)(d.L, {
-                                      innerRef: K,
+                                      innerRef: Y,
                                       onChange: (e) => {
                                           e &&
                                               !eh &&
-                                              (N.default.track(w.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                              (S.default.track(w.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                                   location_stack: eu,
                                               }),
                                               eA(!0));
                                       },
-                                      children: (0, i.jsx)("div", { ref: K, className: V._Z }),
+                                      children: (0, i.jsx)("div", { ref: Y, className: V._Z }),
                                   }),
                                   (0, i.jsx)("img", {
                                       src: B,
@@ -155,5 +155,5 @@ let H = "section",
                           }),
                   ],
               })
-            : (0, i.jsx)("div", { className: a()(V.kL, V.Lq), children: (0, i.jsx)(c.y, {}) });
+            : (0, i.jsx)("div", { className: r()(V.kL, V.Lq), children: (0, i.jsx)(c.y, {}) });
     };

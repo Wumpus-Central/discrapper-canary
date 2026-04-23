@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { B5: () => l, _e: () => o, i7: () => u, j5: () => d, rX: () => a });
-var r,
-    i,
-    s,
-    a =
-        (((r = {}).TERMS = "TERMS"),
-        (r.TEXT_INPUT = "TEXT_INPUT"),
-        (r.PARAGRAPH = "PARAGRAPH"),
-        (r.MULTIPLE_CHOICE = "MULTIPLE_CHOICE"),
-        (r.VERIFICATION = "VERIFICATION"),
-        r),
-    o = (((i = {}).TIMESTAMP_DESC = "NEWEST"), (i.TIMESTAMP_ASC = "OLDEST"), i),
+n.d(t, { B5: () => l, _e: () => _, i7: () => o, j5: () => E, rX: () => s });
+var i,
+    r,
+    a,
+    s =
+        (((i = {}).TERMS = "TERMS"),
+        (i.TEXT_INPUT = "TEXT_INPUT"),
+        (i.PARAGRAPH = "PARAGRAPH"),
+        (i.MULTIPLE_CHOICE = "MULTIPLE_CHOICE"),
+        (i.VERIFICATION = "VERIFICATION"),
+        i),
+    _ = (((r = {}).TIMESTAMP_DESC = "NEWEST"), (r.TIMESTAMP_ASC = "OLDEST"), r),
     l =
-        (((s = {}).STARTED = "STARTED"),
-        (s.SUBMITTED = "SUBMITTED"),
-        (s.REJECTED = "REJECTED"),
-        (s.APPROVED = "APPROVED"),
-        s);
-function u(e) {
+        (((a = {}).STARTED = "STARTED"),
+        (a.SUBMITTED = "SUBMITTED"),
+        (a.REJECTED = "REJECTED"),
+        (a.APPROVED = "APPROVED"),
+        a);
+function o(e) {
     return null != e && "TERMS" === e.field_type;
 }
-function d(e) {
-    return null != e && e.some((e) => !u(e));
+function E(e) {
+    return null != e && e.some((e) => !o(e));
 }

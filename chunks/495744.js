@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { C: () => r });
-let r = "content-inventory-feed";
+n.d(t, { C: () => i });
+let i = "content-inventory-feed";

@@ -1,8 +1,7 @@
-"use strict";
-function r(e) {
+function i(e) {
     return null != e && new Date(e) > new Date();
 }
-function i(e) {
-    return r(e?.communicationDisabledUntil);
+function r(e) {
+    return i(e?.communicationDisabledUntil);
 }
-n.d(t, { Z: () => i, n: () => r });
+n.d(t, { Z: () => r, n: () => i });

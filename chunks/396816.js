@@ -1,27 +1,27 @@
 let i, l, s;
-n.d(t, { A: () => Y, y: () => C });
-var r,
-    a = n(735438),
-    o = n.n(a),
+n.d(t, { A: () => Y, y: () => I });
+var a,
+    r = n(735438),
+    o = n.n(r),
     d = n(136722),
     c = n(317097),
-    u = n(311907),
-    m = n(73153),
+    u = n(17928),
+    m = n(228366),
     g = n(867051),
     h = n(145643),
     x = n(176201),
     _ = n(676608),
     p = n(317525),
-    A = n(111613),
-    E = n(403362),
-    f = n(488926),
-    j = n(555337),
-    N = n(652215),
-    I = n(178758),
-    C = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
+    E = n(111613),
+    f = n(403362),
+    j = n(488926),
+    N = n(555337),
+    A = n(652215),
+    C = n(178758),
+    I = (((a = {}).SOLID = "solid"), (a.GRADIENT = "gradient"), (a.HOLOGRAPHIC = "holographic"), a);
 let b = new Set(),
-    v = N.XlH.CLOSED,
-    S = !1,
+    S = A.XlH.CLOSED,
+    v = !1,
     T = !1,
     y = [],
     R = [],
@@ -33,7 +33,7 @@ let b = new Set(),
 function k() {
     return null == i || null == y
         ? []
-        : A.Ay.calculatePositionDeltas({
+        : E.Ay.calculatePositionDeltas({
               oldOrdering: p.A.getSortedRoles(i.id),
               newOrdering: y,
               idGetter: (e) => e.id,
@@ -43,18 +43,18 @@ function k() {
 }
 function U(e) {
     let { section: t } = e;
-    if (null != i || t !== N.BEX.ROLES) return !1;
+    if (null != i || t !== A.BEX.ROLES) return !1;
     w();
 }
 function w() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    (i = j.A.getProps().guild),
-        (S = !1),
+    (i = N.A.getProps().guild),
+        (v = !1),
         (T = !1),
         (s = void 0),
         b.clear(),
         M.clear(),
-        (v = N.XlH.OPEN),
+        (S = A.XlH.OPEN),
         (R = [...(y = null != i ? [...p.A.getSortedRoles(i.id)] : [])]),
         P(i?.id, R),
         (L = !1),
@@ -74,21 +74,21 @@ function P(e, t) {
                 ? (n = "holographic")
                 : null != t.colors.secondary_color && (n = "gradient"));
         let l = {
-            solid: { primary_color: N.TGz, secondary_color: null, tertiary_color: null },
+            solid: { primary_color: A.TGz, secondary_color: null, tertiary_color: null },
             gradient: {
-                primary_color: I.lO.primary_color,
-                secondary_color: I.lO.secondary_color,
+                primary_color: C.lO.primary_color,
+                secondary_color: C.lO.secondary_color,
                 tertiary_color: null,
             },
             holographic: {
-                primary_color: I.jl.primary_color,
-                secondary_color: I.jl.secondary_color,
-                tertiary_color: I.jl.tertiary_color,
+                primary_color: C.jl.primary_color,
+                secondary_color: C.jl.secondary_color,
+                tertiary_color: C.jl.tertiary_color,
             },
         };
         null != t.colors &&
             (l[n] = {
-                primary_color: t.colors.primary_color ?? N.TGz,
+                primary_color: t.colors.primary_color ?? A.TGz,
                 secondary_color: t.colors.secondary_color ?? null,
                 tertiary_color: t.colors.tertiary_color ?? null,
             }),
@@ -109,7 +109,7 @@ let B = o().debounce(() => {
                 })),
             ) && (b.delete(t), (e = !0));
         }),
-        0 === b.size && (S = !1),
+        0 === b.size && (v = !1),
         L && o().isEqual(O, G) && ((e = !0), (L = !1)),
         e && W.emitChange();
 }, 500);
@@ -118,7 +118,7 @@ function F(e, t) {
     if (n < 0) return !1;
     let i = { ...e, ...t },
         l = [...y];
-    (l[n] = i), (y = l), (S = !0), b.add(i.id), B();
+    (l[n] = i), (y = l), (v = !0), b.add(i.id), B();
 }
 function H(e) {
     return y.find((t) => {
@@ -128,7 +128,7 @@ function H(e) {
 }
 function V(e) {
     let { guildId: t } = e;
-    if (null == (i = j.A.getProps().guild) || t !== i.id || v === N.XlH.SUBMITTING) return !1;
+    if (null == (i = N.A.getProps().guild) || t !== i.id || S === A.XlH.SUBMITTING) return !1;
     let n = [...p.A.getSortedRoles(i.id)];
     b.forEach((e) => {
         let t = H(e),
@@ -141,7 +141,7 @@ function V(e) {
             ? b.delete(e)
             : (n[i] = t);
     }),
-        0 === b.size && (S = !1);
+        0 === b.size && (v = !1);
     let l = new Map();
     b.forEach((e) => {
         let t = M.get(e);
@@ -158,10 +158,10 @@ function V(e) {
 class z extends u.Ay.Store {
     static displayName = "GuildSettingsRolesStore";
     initialize() {
-        this.waitFor(j.A, h.A, p.A);
+        this.waitFor(N.A, h.A, p.A);
     }
     hasChanges() {
-        return S || T || L;
+        return v || T || L;
     }
     getRoleStyleData(e) {
         return M.get(e);
@@ -188,7 +188,7 @@ class z extends u.Ay.Store {
         return y;
     }
     get formState() {
-        return v;
+        return S;
     }
     getSortDeltas() {
         return k();
@@ -217,7 +217,7 @@ let W = new z(
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != y && t.length !== y.length) return !1;
-                      (y = t.map((e) => H(e)).filter(E.Vq)), (T = !0), B();
+                      (y = t.map((e) => H(e)).filter(f.Vq)), (T = !0), B();
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                       let { id: t, flag: n, allow: i } = e,
@@ -234,7 +234,7 @@ let W = new z(
                   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                       let { id: t } = e,
                           n = H(t);
-                      return null != n && F(n, { permissions: f.x3 });
+                      return null != n && F(n, { permissions: j.x3 });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                       let { id: t, name: n } = e,
@@ -271,12 +271,12 @@ let W = new z(
                           l = H(t);
                       if (null == l) return !1;
                       let s = (0, x.K3)(n),
-                          r = M.get(t);
+                          a = M.get(t);
                       return (
-                          null != r &&
-                          ((r.styleColors[i] = n),
-                          (r.currentStyle = i),
-                          M.set(t, { ...r }),
+                          null != a &&
+                          ((a.styleColors[i] = n),
+                          (a.currentStyle = i),
+                          M.set(t, { ...a }),
                           F(l, { color: n.primary_color, colors: n, colorString: s.primaryColor, colorStrings: s }))
                       );
                   },
@@ -305,12 +305,12 @@ let W = new z(
                       if (null == l) return !1;
                       M.set(t, { currentStyle: n, styleColors: l.styleColors });
                       let s = l.styleColors[n],
-                          r = (0, x.K3)(s);
+                          a = (0, x.K3)(s);
                       return F(i, {
                           color: s.primary_color ?? void 0,
                           colors: s,
-                          colorString: r.primaryColor,
-                          colorStrings: r,
+                          colorString: a.primaryColor,
+                          colorStrings: a,
                       });
                   },
                   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
@@ -335,10 +335,10 @@ let W = new z(
                           M.clear(),
                           G.clear(),
                           (D = new Set()),
-                          (S = !1),
+                          (v = !1),
                           (T = !1),
                           (L = !1),
-                          (v = N.XlH.CLOSED);
+                          (S = A.XlH.CLOSED);
                   },
                   GUILD_ROLE_CREATE: V,
                   GUILD_ROLE_UPDATE: V,
@@ -349,11 +349,11 @@ let W = new z(
                       );
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
-                      v = N.XlH.SUBMITTING;
+                      S = A.XlH.SUBMITTING;
                   },
                   GUILD_SETTINGS_ROLES_SAVE_FAIL: function (e) {
                       let { message: t } = e;
-                      (v = N.XlH.OPEN), (s = t);
+                      (S = A.XlH.OPEN), (s = t);
                   },
                   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
                       w(!1);
@@ -364,7 +364,7 @@ let W = new z(
                       i = (0, g.hZ)(
                           i,
                           "features",
-                          new Set([...i.features, N.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
+                          new Set([...i.features, A.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE]),
                       );
                   },
                   GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED: function (e) {
@@ -373,7 +373,7 @@ let W = new z(
                       i = (0, g.hZ)(
                           i,
                           "features",
-                          new Set([...i.features, N.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
+                          new Set([...i.features, A.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
                       );
                   },
               },

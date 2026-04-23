@@ -1,108 +1,108 @@
 "use strict";
 n.r(t),
-    n.d(t, { enable: () => O, isNotSupported: () => y, trackToggleSelfDeaf: () => v, trackToggleSelfMute: () => R });
-var r = n(627968);
+    n.d(t, { enable: () => R, isNotSupported: () => N, trackToggleSelfDeaf: () => y, trackToggleSelfMute: () => O });
+var i = n(627968);
 n(64700);
-var i = n(862482),
+var r = n(862482),
     s = n(192308),
     a = n(640238),
     o = n(834730),
-    l = n(73153),
-    u = n(626584),
-    d = n(734057),
-    c = n(430452),
-    _ = n(309010),
-    f = n(532624),
-    E = n(531685),
-    h = n(954571),
-    p = n(350535),
-    m = n(427603),
-    g = n(652215),
+    l = n(228366),
+    d = n(626584),
+    _ = n(734057),
+    u = n(969341),
+    c = n(309010),
+    E = n(532624),
+    h = n(531685),
+    m = n(954571),
+    f = n(350535),
+    g = n(427603),
+    p = n(652215),
     A = n(765682),
     I = n(985018);
-let T = new u.A("AudioActionCreators");
+let T = new d.A("AudioActionCreators");
 function S() {
     (0, s.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("56423"), n.e("25280")]).then(n.bind(n, 987482));
-        return (t) => (0, r.jsx)(e, { source: "Unsupported Browser", ...t });
+        return (t) => (0, i.jsx)(e, { source: "Unsupported Browser", ...t });
     });
 }
-function y() {
+function N() {
     return (
-        !c.Ay.isSupported() &&
+        !u.Ay.isSupported() &&
         ((0, s.openModal)((e) =>
-            (0, r.jsx)(a.a, {
+            (0, i.jsx)(a.a, {
                 header: I.intl.string(I.t.ilMTy0),
                 confirmText: I.intl.string(I.t["BK8LK+"]),
                 cancelText: I.intl.string(I.t["ETE/oC"]),
                 onConfirm: S,
-                confirmButtonColor: i.$n.Colors.BRAND,
+                confirmButtonColor: r.$n.Colors.BRAND,
                 ...e,
-                children: (0, r.jsx)(o.E, { variant: "text-md/normal", children: I.intl.string(I.t.h66vlB) }),
+                children: (0, i.jsx)(o.E, { variant: "text-md/normal", children: I.intl.string(I.t.h66vlB) }),
             }),
         ),
         !0)
     );
 }
-function N(e) {
-    h.default.track(g.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
+function C(e) {
+    m.default.track(p.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
 }
-function O() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return y()
+    return N()
         ? Promise.resolve(!1)
-        : (h.default.track(g.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
-          c.Ay.getMediaEngine()
+        : (m.default.track(p.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
+          u.Ay.getMediaEngine()
               .enable()
               .then(
                   () => {
                       l.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: e }),
-                          N(A.hL.ACCEPTED);
+                          C(A.hL.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
-                          case g.xei.NO_DEVICES_FOUND:
-                              N(A.hL.NO_DEVICES);
+                          case p.xei.NO_DEVICES_FOUND:
+                              C(A.hL.NO_DEVICES);
                               break;
-                          case g.xei.PERMISSION_DENIED:
-                              N(A.hL.DENIED);
+                          case p.xei.PERMISSION_DENIED:
+                              C(A.hL.DENIED);
                               break;
-                          case g.xei.PERMISSION_DISMISSED:
-                              N(A.hL.DISMISSED);
+                          case p.xei.PERMISSION_DISMISSED:
+                              C(A.hL.DISMISSED);
                               break;
                           default:
-                              N(A.hL.ERROR), T.warn(`unknown getUserMedia error: ${e}`);
+                              C(A.hL.ERROR), T.warn(`unknown getUserMedia error: ${e}`);
                       }
                   },
               )
               .then(() => !0));
 }
-function R(e) {
+function O(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = f.Ay.getKeybindForAction(g.hCu.TOGGLE_MUTE, !1, !0),
-        i = _.A.getVoiceChannelId(),
-        s = null != i ? d.A.getChannel(i) : null;
-    h.default.track(g.HAw.INPUT_MUTE_TOGGLED, {
-        enabled: !c.Ay.isSelfMute(),
-        custom_keybind_assigned: null != r,
+        i = E.Ay.getKeybindForAction(p.hCu.TOGGLE_MUTE, !1, !0),
+        r = c.A.getVoiceChannelId(),
+        s = null != r ? _.A.getChannel(r) : null;
+    m.default.track(p.HAw.INPUT_MUTE_TOGGLED, {
+        enabled: !u.Ay.isSelfMute(),
+        custom_keybind_assigned: null != i,
         used_keybind: t,
-        app_in_focus: E.A.isAppFocused(),
-        overlay_activated: null != (0, m.A)(),
+        app_in_focus: h.A.isAppFocused(),
+        overlay_activated: null != (0, g.A)(),
         voice_channel_type: null != s ? s.type : null,
         location: n,
     });
 }
-function v(e) {
+function y(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = f.Ay.getKeybindForAction(g.hCu.TOGGLE_DEAFEN, !1, !0),
-        i = _.A.getVoiceChannelId(),
-        s = null != i ? d.A.getChannel(i) : null;
-    h.default.track(g.HAw.SELF_DEAFEN_TOGGLED, {
-        enabled: !c.Ay.isSelfDeaf(),
-        keybind_assigned: null != r ? (0, p.dI)(r.shortcut) : void 0,
+        i = E.Ay.getKeybindForAction(p.hCu.TOGGLE_DEAFEN, !1, !0),
+        r = c.A.getVoiceChannelId(),
+        s = null != r ? _.A.getChannel(r) : null;
+    m.default.track(p.HAw.SELF_DEAFEN_TOGGLED, {
+        enabled: !u.Ay.isSelfDeaf(),
+        keybind_assigned: null != i ? (0, f.dI)(i.shortcut) : void 0,
         used_keybind: t,
-        app_in_focus: E.A.isAppFocused(),
-        overlay_activated: null != (0, m.A)(),
+        app_in_focus: h.A.isAppFocused(),
+        overlay_activated: null != (0, g.A)(),
         voice_channel_type: null != s ? s.type : null,
         location: n,
     });

@@ -1,22 +1,22 @@
-a.d(t, { q: () => s });
-var n = a(64700),
-    i = a(311907),
-    l = a(994500),
-    r = a(287809),
-    d = a(922590);
+n.d(t, { q: () => d });
+var a = n(64700),
+    i = n(17928),
+    l = n(994500),
+    r = n(287809),
+    s = n(922590);
 let o = [];
-function s(e) {
+function d(e) {
     let { userId: t } = e,
-        a = (0, i.bG)([l.A, r.default], () => l.A.isFriend(t) || r.default.getUser(t)?.isProvisional),
-        s = (0, d.f1)(t);
-    return n.useMemo(
+        n = (0, i.bG)([l.A, r.default], () => l.A.isFriend(t) || r.default.getUser(t)?.isProvisional),
+        d = (0, s.f1)(t);
+    return a.useMemo(
         () =>
-            a
+            n
                 ? o
-                : s.map((e) => {
+                : d.map((e) => {
                       let { applicationId: t } = e;
                       return t;
                   }),
-        [s, a],
+        [d, n],
     );
 }

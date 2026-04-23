@@ -1,4 +1,3 @@
-"use strict";
 function r(e) {
     return `${location.protocol}//${window.GLOBAL_ENV.INVITE_HOST}/${e}`;
 }

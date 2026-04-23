@@ -1,29 +1,29 @@
-r.d(e, { default: () => w });
-var n = r(627968),
-    i = r(64700),
-    o = r(158954),
-    a = r(964486),
-    l = r(954571),
-    s = r(96304),
-    u = r(677185),
+r.d(e, { default: () => x });
+var o = r(627968),
+    n = r(64700),
+    a = r(189213),
+    i = r(964486),
+    s = r(954571),
+    l = r(380124),
+    _ = r(751877),
     c = r(788868),
-    d = r(88001),
-    m = r(652215),
-    _ = r(519412),
-    p = r(985018);
-let P = { 1: "what_you_lose", 2: "confirmation" },
+    u = r(88001),
+    d = r(652215),
+    m = r(466919),
+    C = r(985018);
+let p = { 1: "what_you_lose", 2: "confirmation" },
     f = (t) => {
-        let { onClose: e, currentUser: r, onNext: i, ...a } = t;
-        return (0, n.jsx)(o.Modal, {
-            title: p.intl.formatToPlainString(_.default["4e7WtF"], { premiumGroupProductName: (0, d.DP)() }),
-            subtitle: p.intl.formatToPlainString(_.default["3kVEg0"], { cooldownMonths: d.wl }),
+        let { onClose: e, currentUser: r, onNext: n, ...i } = t;
+        return (0, o.jsx)(a.Modal, {
+            title: C.intl.formatToPlainString(m.default["4e7WtF"], { premiumGroupProductName: (0, u.DP)() }),
+            subtitle: C.intl.formatToPlainString(m.default["3kVEg0"], { cooldownMonths: u.wl }),
             onClose: e,
-            ...a,
+            ...i,
             actions: [
-                { text: p.intl.string(_.default.UFHNtO), variant: "secondary", onClick: e },
-                { text: p.intl.string(p.t["3PatSz"]), variant: "primary", onClick: i },
+                { text: C.intl.string(m.default.UFHNtO), variant: "secondary", onClick: e },
+                { text: C.intl.string(C.t["3PatSz"]), variant: "primary", onClick: n },
             ],
-            children: (0, n.jsx)(s.l, {
+            children: (0, o.jsx)(l.l, {
                 currentUser: r,
                 premiumType: c.PremiumTypes.TIER_2,
                 onClose: e,
@@ -32,65 +32,65 @@ let P = { 1: "what_you_lose", 2: "confirmation" },
             }),
         });
     },
-    C = (t) => {
-        let { onClose: e, onConfirm: r, isRemovingUser: i, ...a } = t;
-        return (0, n.jsx)(o.Modal, {
+    h = (t) => {
+        let { onClose: e, onConfirm: r, isRemovingUser: n, ...i } = t;
+        return (0, o.jsx)(a.Modal, {
             size: "md",
-            title: p.intl.formatToPlainString(_.default.IrvJHs, { premiumGroupProductName: (0, d.DP)() }),
-            subtitle: p.intl.formatToPlainString(_.default.cQDYKU, {
-                premiumGroupProductName: (0, d.DP)(),
-                cooldownMonths: d.wl,
+            title: C.intl.formatToPlainString(m.default.IrvJHs, { premiumGroupProductName: (0, u.DP)() }),
+            subtitle: C.intl.formatToPlainString(m.default.cQDYKU, {
+                premiumGroupProductName: (0, u.DP)(),
+                cooldownMonths: u.wl,
             }),
             onClose: e,
             actions: [
-                { text: p.intl.string(_.default.UFHNtO), variant: "secondary", onClick: e },
-                { text: p.intl.string(p.t["cY+Oob"]), variant: "critical-primary", onClick: r, loading: i },
+                { text: C.intl.string(m.default.UFHNtO), variant: "secondary", onClick: e },
+                { text: C.intl.string(C.t["cY+Oob"]), variant: "critical-primary", onClick: r, loading: n },
             ],
-            ...a,
+            ...i,
         });
     },
-    w = (t) => {
-        let { premiumGroupSubscriptionId: e, currentUser: r, onClose: o, ...s } = t,
-            [c, d] = i.useState(1),
-            [_, p] = i.useState(!1),
-            w = i.useRef(0),
-            E = i.useRef(0);
-        (0, a.Ay)(() => {
+    x = (t) => {
+        let { premiumGroupSubscriptionId: e, currentUser: r, onClose: a, ...l } = t,
+            [c, u] = n.useState(1),
+            [m, C] = n.useState(!1),
+            x = n.useRef(0),
+            g = n.useRef(0);
+        (0, i.Ay)(() => {
             let t = Date.now();
-            (w.current = t),
-                (E.current = t),
-                l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: e });
+            (x.current = t),
+                (g.current = t),
+                s.default.track(d.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: e });
         });
-        let M = (t, r) => {
-                l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
+        let P = (t, r) => {
+                s.default.track(d.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
                     subscription_id: e,
-                    from_step: P[t],
+                    from_step: p[t],
                     to_step: r,
-                    step_duration_ms: Date.now() - E.current,
-                    flow_duration_ms: Date.now() - w.current,
+                    step_duration_ms: Date.now() - g.current,
+                    flow_duration_ms: Date.now() - x.current,
                 }),
-                    (E.current = Date.now());
+                    (g.current = Date.now());
             },
-            R = async () => {
-                M(c, null), await o();
+            b = async () => {
+                P(c, null), await a();
             },
-            T = async () => {
-                p(!0),
-                    (await (0, u.oO)(e, r.id)).ok &&
-                        (l.default.track(m.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: e }),
-                        o()),
-                    p(!1);
+            N = async () => {
+                C(!0),
+                    (await (0, _.oO)(e, r.id)).ok &&
+                        (s.default.track(d.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: e }),
+                        a()),
+                    C(!1);
             };
         return 1 === c
-            ? (0, n.jsx)(f, {
-                  ...s,
+            ? (0, o.jsx)(f, {
+                  ...l,
                   onNext: () => {
-                      M(c, P[2]), d(2);
+                      P(c, p[2]), u(2);
                   },
                   currentUser: r,
-                  onClose: R,
+                  onClose: b,
               })
             : 2 === c
-              ? (0, n.jsx)(C, { ...s, onConfirm: T, onClose: R, isRemovingUser: _ })
+              ? (0, o.jsx)(h, { ...l, onConfirm: N, onClose: b, isRemovingUser: m })
               : null;
     };

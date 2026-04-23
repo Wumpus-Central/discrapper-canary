@@ -1,64 +1,64 @@
-r.d(t, { default: () => R });
-var n = r(627968),
-    a = r(64700),
-    l = r(311907),
-    i = r(562465),
-    s = r(189213),
-    c = r(359778),
-    d = r(834730),
-    u = r(292666),
-    o = r(123292),
-    N = r(964486),
-    A = r(504049),
-    x = r(961350),
-    _ = r(696451),
-    g = r(71393),
-    m = r(576705),
-    C = r(287809),
-    h = r(954571),
-    k = r(427262),
-    E = r(652215),
-    p = r(985018),
-    y = r(371469);
-function f(e) {
-    let { disabled: t = !1, user: r, setNickname: l, nickname: i, error: s, hasNick: N } = e,
-        A = a.useRef(null),
-        _ = a.useCallback(() => {
-            l(""), A.current?.focus();
-        }, [l]);
-    return (0, n.jsxs)(n.Fragment, {
+n.d(e, { default: () => _ });
+var l = n(627968),
+    r = n(64700),
+    a = n(17928),
+    i = n(636537),
+    s = n(189213),
+    c = n(359778),
+    u = n(834730),
+    d = n(292666),
+    o = n(123292),
+    x = n(964486),
+    A = n(504049),
+    N = n(495544),
+    g = n(696451),
+    k = n(71393),
+    m = n(576705),
+    h = n(287809),
+    E = n(954571),
+    p = n(427262),
+    C = n(652215),
+    y = n(985018),
+    b = n(371469);
+function f(t) {
+    let { disabled: e = !1, user: n, setNickname: a, nickname: i, error: s, hasNick: x } = t,
+        A = r.useRef(null),
+        g = r.useCallback(() => {
+            a(""), A.current?.focus();
+        }, [a]);
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            t || null == r || r.id === x.default.getId()
+            e || null == n || n.id === N.default.getId()
                 ? null
-                : (0, n.jsx)(c.Z, {
+                : (0, l.jsx)(c.Z, {
                       type: c.Z.Types.WARNING,
-                      className: y.Nr,
-                      children: (0, n.jsx)(d.E, { variant: "text-md/normal", children: p.intl.string(p.t.dq3At2) }),
+                      className: b.Nr,
+                      children: (0, l.jsx)(u.E, { variant: "text-md/normal", children: y.intl.string(y.t.dq3At2) }),
                   }),
-            (0, n.jsx)(u.k, {
-                label: t ? p.intl.string(p.t.EyA4q5) : p.intl.string(p.t["621LJD"]),
-                disabled: t,
+            (0, l.jsx)(d.k, {
+                label: e ? y.intl.string(y.t.EyA4q5) : y.intl.string(y.t["621LJD"]),
+                disabled: e,
                 inputRef: A,
-                maxLength: E.d0r,
+                maxLength: C.d0r,
                 value: i,
-                placeholder: k.Ay.getName(r),
-                onChange: l,
+                placeholder: p.Ay.getName(n),
+                onChange: a,
                 autoFocus: !0,
             }),
             null != s
-                ? (0, n.jsx)(d.E, {
+                ? (0, l.jsx)(u.E, {
                       variant: "text-xs/normal",
                       color: "text-feedback-critical",
-                      className: y.wt,
+                      className: b.wt,
                       children: s,
                   })
                 : null,
-            N && !t
-                ? (0, n.jsx)("div", {
-                      className: y.cL,
-                      children: (0, n.jsx)(o.Q, {
-                          text: p.intl.string(p.t.aE02Rz),
-                          onClick: _,
+            x && !e
+                ? (0, l.jsx)("div", {
+                      className: b.cL,
+                      children: (0, l.jsx)(o.Q, {
+                          text: y.intl.string(y.t.aE02Rz),
+                          onClick: g,
                           textVariant: "text-sm/normal",
                       }),
                   })
@@ -66,64 +66,64 @@ function f(e) {
         ],
     });
 }
-let R = function (e) {
-    let { transitionState: t, user: r, guildId: c, onClose: d, analyticsSource: u, analyticsLocations: o } = e,
-        x = (0, l.bG)([_.Ay], () => (null != c ? _.Ay.getMember(c, r.id) : null)),
-        k = (0, l.bG)([m.A, C.default, g.A], () => {
-            let e = g.A.getGuild(c);
+let _ = function (t) {
+    let { transitionState: e, user: n, guildId: c, onClose: u, analyticsSource: d, analyticsLocations: o } = t,
+        N = (0, a.bG)([g.Ay], () => (null != c ? g.Ay.getMember(c, n.id) : null)),
+        p = (0, a.bG)([m.A, h.default, k.A], () => {
+            let t = k.A.getGuild(c);
             return (
-                null != e &&
-                (C.default.getCurrentUser()?.id === r.id
-                    ? m.A.can(E.xBc.CHANGE_NICKNAME, e) || m.A.can(E.xBc.MANAGE_NICKNAMES, e)
-                    : m.A.canManageUser(E.xBc.MANAGE_NICKNAMES, r.id, e))
+                null != t &&
+                (h.default.getCurrentUser()?.id === n.id
+                    ? m.A.can(C.xBc.CHANGE_NICKNAME, t) || m.A.can(C.xBc.MANAGE_NICKNAMES, t)
+                    : m.A.canManageUser(C.xBc.MANAGE_NICKNAMES, n.id, t))
             );
         }),
-        [y, R] = a.useState(!1),
-        [b, M] = a.useState(x?.nick ?? ""),
-        [v, S] = a.useState({});
-    (0, N.Ay)(() => {
-        h.default.track(E.HAw.OPEN_MODAL, { type: "Change Server Identity", location: E.liQ.GUILD_CHANNEL, source: u });
+        [b, _] = r.useState(!1),
+        [j, M] = r.useState(N?.nick ?? ""),
+        [v, G] = r.useState({});
+    (0, x.Ay)(() => {
+        E.default.track(C.HAw.OPEN_MODAL, { type: "Change Server Identity", location: C.liQ.GUILD_CHANNEL, source: d });
     });
-    let j = (0, A.$9)(c, { location: o?.[0], targetUserId: r.id }),
-        I = a.useCallback(
-            async (e) => {
-                e.preventDefault();
-                let t = null;
-                if ((b !== (x?.nick ?? "") && (t = { nick: b }), null == t)) return void d();
+    let I = (0, A.$9)(c, { location: o?.[0], targetUserId: n.id }),
+        S = r.useCallback(
+            async (t) => {
+                t.preventDefault();
+                let e = null;
+                if ((j !== (N?.nick ?? "") && (e = { nick: j }), null == e)) return void u();
                 try {
-                    R(!0),
-                        await i.Bo.patch({ url: E.Rsh.GUILD_MEMBER(c, r.id), body: t, rejectWithError: !1 }),
-                        j(A.Nj.CHANGE_NICKNAME),
-                        d();
-                } catch (r) {
-                    let e;
-                    R(!1);
-                    let t = r.body?.errors ?? null;
-                    t?.nick != null
-                        ? (e = t.nick?._errors?.[0]?.message || p.intl.string(p.t.xex86n))
-                        : t?.username != null && (e = t.username?._errors?.[0]?.message || p.intl.string(p.t.xex86n)),
-                        S({ nick: e });
+                    _(!0),
+                        await i.Bo.patch({ url: C.Rsh.GUILD_MEMBER(c, n.id), body: e, rejectWithError: !1 }),
+                        I(A.Nj.CHANGE_NICKNAME),
+                        u();
+                } catch (n) {
+                    let t;
+                    _(!1);
+                    let e = n.body?.errors ?? null;
+                    e?.nick != null
+                        ? (t = e.nick?._errors?.[0]?.message || y.intl.string(y.t.xex86n))
+                        : e?.username != null && (t = e.username?._errors?.[0]?.message || y.intl.string(y.t.xex86n)),
+                        G({ nick: t });
                 }
             },
-            [c, b, d, r, x, j],
+            [c, j, u, n, N, I],
         );
-    return (0, n.jsx)("form", {
-        onSubmit: I,
-        children: (0, n.jsx)(s.Modal, {
-            transitionState: t,
-            onClose: d,
-            title: p.intl.string(p.t.dilOF6),
+    return (0, l.jsx)("form", {
+        onSubmit: S,
+        children: (0, l.jsx)(s.Modal, {
+            transitionState: e,
+            onClose: u,
+            title: y.intl.string(y.t.dilOF6),
             actions: [
-                { text: p.intl.string(p.t["ETE/oC"]), onClick: d, variant: "secondary" },
-                { text: p.intl.string(p.t["R3BPH+"]), variant: "primary", type: "submit", disabled: y },
+                { text: y.intl.string(y.t["ETE/oC"]), onClick: u, variant: "secondary" },
+                { text: y.intl.string(y.t["R3BPH+"]), variant: "primary", type: "submit", disabled: b },
             ],
-            children: (0, n.jsx)(f, {
-                disabled: !k,
-                user: r,
+            children: (0, l.jsx)(f, {
+                disabled: !p,
+                user: n,
                 error: v.nick,
-                nickname: b,
+                nickname: j,
                 setNickname: M,
-                hasNick: x?.nick != null,
+                hasNick: N?.nick != null,
             }),
         }),
     });

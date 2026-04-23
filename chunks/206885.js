@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { O: () => s, e: () => i });
-var r = n(723702);
-let i = !1,
-    s = r.isPlatformEmbedded && ((0, r.isWindows)() || i) && !0;
+n.d(t, { O: () => a, e: () => r });
+var i = n(723702);
+let r = !1,
+    a = i.isPlatformEmbedded && ((0, i.isWindows)() || r) && !0;

@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(311907),
-    s = n(531685),
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(531685),
     o = n(620141),
     l = n(966598),
-    u = n(224964);
-function c(e) {
+    d = n(224964);
+function _(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
-        r = (0, a.bG)([s.A], () => s.A.isFocused()),
-        o = (0, u.A)(),
-        c = (0, l.A)(t);
+        i = (0, s.bG)([a.A], () => a.A.isFocused()),
+        o = (0, d.A)(),
+        _ = (0, l.A)(t);
     return (
-        i.useEffect(() => {
-            r && n && null != c && o.fire(c.x, c.y);
-        }, [o, r, c, n]),
+        r.useEffect(() => {
+            i && n && null != _ && o.fire(_.x, _.y);
+        }, [o, i, _, n]),
         null
     );
 }
-function d(e) {
-    return (0, r.jsx)(o.A, { confettiLocation: e.confettiLocation, children: (0, r.jsx)(c, { ...e }) });
+function u(e) {
+    return (0, i.jsx)(o.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(_, { ...e }) });
 }

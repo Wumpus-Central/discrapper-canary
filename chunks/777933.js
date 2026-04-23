@@ -1,126 +1,126 @@
-n.d(t, { A: () => L }), n(323874), n(14289), n(35956), n(321073);
-var i = n(627968);
+n.d(e, { A: () => T }), n(323874), n(14289), n(35956), n(321073);
+var a = n(627968);
 n(64700);
-var s = n(691540),
-    l = n(857250),
-    r = n(97483),
-    a = n(477782),
-    c = n(173936),
-    o = n(93688),
+var i = n(691540),
+    r = n(857250),
+    l = n(97483),
+    s = n(477782),
+    o = n(173936),
+    c = n(93688),
     d = n(509434),
     u = n(803316),
-    E = n(207133),
-    A = n(253932),
-    m = n(155078),
-    g = n(954571),
-    p = n(307600),
-    f = n(723702),
-    h = n(837921),
-    D = n(179581),
-    _ = n(652215),
-    I = n(985018);
-let N = /^(tel|sms|mailto):([^?;]+)/,
-    v = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
-    S = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
-    y = /^\/emojis\/\d+\./;
-function L(e, t, n, L) {
-    let O = (0, E.A)(n?.getChannelId()),
-        M = A.Q_.useSetting();
+    h = n(207133),
+    p = n(253932),
+    g = n(155078),
+    m = n(954571),
+    f = n(76843),
+    A = n(723702),
+    v = n(19575),
+    E = n(179581),
+    y = n(652215),
+    C = n(985018);
+let _ = /^(tel|sms|mailto):([^?;]+)/,
+    w = /\.(png|jpe?g|webp|avif|bmp|svg)(\?|$)/i,
+    N = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
+    I = /^\/emojis\/\d+\./;
+function T(t, e, n, T) {
+    let x = (0, h.A)(n?.getChannelId()),
+        P = p.Q_.useSetting();
     if (
-        !f.isPlatformEmbedded ||
-        null == e ||
-        "" === e ||
-        (!M &&
-            (function (e) {
+        !A.isPlatformEmbedded ||
+        null == t ||
+        "" === t ||
+        (!P &&
+            (function (t) {
                 try {
-                    return y.test(new URL(e).pathname);
+                    return I.test(new URL(t).pathname);
                 } catch {
                     return !1;
                 }
-            })(e)) ||
-        O ||
-        L?.shouldHideMediaOptions === !0 ||
-        !(0, u.fW)(e)
+            })(t)) ||
+        x ||
+        T?.shouldHideMediaOptions === !0 ||
+        !(0, u.fW)(t)
     )
         return null;
-    let C = (0, m.E)(e),
-        w = (e) => {
-            g.default.track(_.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: C, ...(0, D.N)() }),
-                h.Ay.copy(e),
-                (0, s.P0)((0, l.o)(I.intl.string(I.t["L/PwZf"]), r.Ck.SUCCESS));
+    let b = (0, g.E)(t),
+        D = (t) => {
+            m.default.track(y.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: b, ...(0, E.N)() }),
+                v.Ay.copy(t),
+                (0, i.P0)((0, r.o)(C.intl.string(C.t["L/PwZf"]), l.Ck.SUCCESS));
         },
-        x = (n, i) => {
-            let s = !0 === i ? e.replace("tel:", "sms:") : e;
-            g.default.track(_.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: C, ...(0, D.N)() }),
-                (0, p.h)({ href: s, trusted: (0, p.m)(e, t), shouldConfirm: !0 }, n);
+        U = (n, a) => {
+            let i = !0 === a ? t.replace("tel:", "sms:") : t;
+            m.default.track(y.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: b, ...(0, E.N)() }),
+                (0, f.h)({ href: i, trusted: (0, f.m)(t, e), shouldConfirm: !0 }, n);
         },
-        T = [],
-        R = e.match(N);
-    if (null != R) {
-        let e = I.intl.string("mailto" === R[1] ? I.t.ZYLVKo : I.t["3zozoR"]);
-        T.push(
-            (0, i.jsx)(
-                a.Dr,
+        O = [],
+        S = t.match(_);
+    if (null != S) {
+        let t = C.intl.string("mailto" === S[1] ? C.t.ZYLVKo : C.t["3zozoR"]);
+        O.push(
+            (0, a.jsx)(
+                s.Dr,
                 {
                     id: "copy-native-contact",
-                    label: e,
+                    label: t,
                     action: () => {
-                        w(R[2]);
+                        D(S[2]);
                     },
                 },
                 "copy-native-contact",
             ),
         ),
-            "tel" === R[1] &&
-                T.push(
-                    (0, i.jsx)(
-                        a.Dr,
-                        { id: "native-send-sms", label: I.intl.string(I.t["+wbjMW"]), action: (e) => x(e, !0) },
+            "tel" === S[1] &&
+                O.push(
+                    (0, a.jsx)(
+                        s.Dr,
+                        { id: "native-send-sms", label: C.intl.string(C.t["+wbjMW"]), action: (t) => U(t, !0) },
                         "native-send-sms",
                     ),
                 );
     }
-    let b = (function (e) {
+    let j = (function (t) {
             try {
-                let t = new URL(e);
-                return "cdn.discordapp.com" === t.hostname && v.test(t.pathname);
+                let e = new URL(t);
+                return "cdn.discordapp.com" === e.hostname && w.test(e.pathname);
             } catch {
                 return !1;
             }
-        })(e),
-        G =
-            !b &&
-            (function (e) {
+        })(t),
+        M =
+            !j &&
+            (function (t) {
                 try {
-                    return S.test(new URL(e).pathname);
+                    return N.test(new URL(t).pathname);
                 } catch {
                     return !1;
                 }
-            })(e),
-        P = b ? I.t["8xHmxo"] : G ? I.t["92CPQ+"] : I.t.WqhZss,
-        j = b ? I.t.w8ldGK : G ? I.t.q5FbIB : I.t.wuRE8M;
+            })(t),
+        k = j ? C.t["8xHmxo"] : M ? C.t["92CPQ+"] : C.t.WqhZss,
+        L = j ? C.t.w8ldGK : M ? C.t.q5FbIB : C.t.wuRE8M;
     return [
-        (0, i.jsx)(
-            a.Dr,
+        (0, a.jsx)(
+            s.Dr,
             {
                 id: "copy-native-link",
-                label: I.intl.string(P),
-                leadingAccessory: { type: "icon", icon: c.q },
+                label: C.intl.string(k),
+                leadingAccessory: { type: "icon", icon: o.q },
                 action: () => {
-                    w(e);
+                    D(t);
                 },
             },
             "copy-native-link",
         ),
-        ...T,
-        (0, i.jsx)(
-            a.Dr,
+        ...O,
+        (0, a.jsx)(
+            s.Dr,
             {
                 id: "open-native-link",
-                label: I.intl.string(j),
-                leadingAccessory: { type: "icon", icon: o.W },
+                label: C.intl.string(L),
+                leadingAccessory: { type: "icon", icon: c.W },
                 trailingIndicator: { type: "icon", icon: d.I },
-                action: (e) => x(e),
+                action: (t) => U(t),
             },
             "open-native-link",
         ),

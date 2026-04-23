@@ -1,106 +1,106 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => C });
 var i = n(627968),
-    l = n(64700),
+    r = n(64700),
     s = n(56121),
-    r = n(205327),
-    a = n(311907),
-    o = n(210528),
-    c = n(287809),
-    u = n(121090),
-    d = n(403362),
-    h = n(562153),
-    m = n(583846),
-    p = n(405310),
-    f = n(434200),
-    g = n(176563),
-    _ = n(620708),
-    x = n(506326),
-    A = n(910692),
-    C = n(18282),
-    E = n(652215),
-    I = n(272984),
-    v = n(985018);
-let y = (e) => {
+    a = n(205327),
+    o = n(17928),
+    l = n(210528),
+    d = n(287809),
+    _ = n(121090),
+    u = n(403362),
+    c = n(562153),
+    E = n(583846),
+    h = n(405310),
+    m = n(434200),
+    f = n(140651),
+    g = n(620708),
+    p = n(506326),
+    A = n(236812),
+    I = n(18282),
+    T = n(652215),
+    S = n(272984),
+    N = n(985018);
+let C = (e) => {
     let t,
         n,
-        { channel: y, entry: S, onReaction: b, onVoiceChannelPreview: N } = e,
-        { parent_title: T, provider: j, image_url: R } = S.extra.media,
-        w = S.extra.artist.name,
-        L = (0, a.bG)([c.default], () => c.default.getUser(S.author_id)),
-        { primaryColor: M, secondaryColor: k } = (0, g.A)(R),
-        O = (0, m.TQ)(S),
-        P = l.useCallback(() => {
+        { channel: C, entry: R, onReaction: O, onVoiceChannelPreview: y } = e,
+        { parent_title: v, provider: D, image_url: L } = R.extra.media,
+        b = R.extra.artist.name,
+        w = (0, o.bG)([d.default], () => d.default.getUser(R.author_id)),
+        { primaryColor: P, secondaryColor: k } = (0, f.A)(L),
+        M = (0, E.TQ)(R),
+        U = r.useCallback(() => {
             var e, t, n;
-            let i, l, r;
-            if (null == y || null == L || !(0, d.S1)(O, _.wE)) return;
-            let a =
-                ((e = S),
-                (t = y),
-                (n = L),
+            let i, r, a;
+            if (null == C || null == w || !(0, u.S1)(M, g.wE)) return;
+            let o =
+                ((e = R),
+                (t = C),
+                (n = w),
                 (i = (function (e) {
-                    if (e === s.j.WEEK) return v.t.SjOZfm;
-                })(O)),
-                (l = h.Ay.getName(t.guild_id, t.id, n)),
-                (r = e.extra.artist.name),
-                v.intl.formatToMarkdownString(i, { artist: r, userName: l }).replaceAll("*", ""));
-            return (0, p.Lu)({
-                user: L,
-                channel: y,
-                mediaImageSrc: R,
-                artist: w,
-                description: a,
-                colors: [M, k],
-                badges: (0, p.KR)(S),
+                    if (e === s.j.WEEK) return N.t.SjOZfm;
+                })(M)),
+                (r = c.Ay.getName(t.guild_id, t.id, n)),
+                (a = e.extra.artist.name),
+                N.intl.formatToMarkdownString(i, { artist: a, userName: r }).replaceAll("*", ""));
+            return (0, h.Lu)({
+                user: w,
+                channel: C,
+                mediaImageSrc: L,
+                artist: b,
+                description: o,
+                colors: [P, k],
+                badges: (0, h.KR)(R),
             });
-        }, [R, w, y, S, M, O, k, L]),
-        D = (0, f.A)(E.fg2.SPOTIFY);
-    if (null == L || !(0, d.S1)(O, _.wE)) return null;
-    let U = () => {
-        let e = I.M0.ALBUM,
-            t = o.A.isProtocolRegistered()
-                ? I.RQ.PLAYER_OPEN(e, S.extra.media.external_parent_id)
-                : I.RQ.WEB_OPEN(e, S.extra.media.external_parent_id);
+        }, [L, b, C, R, P, M, k, w]),
+        x = (0, m.A)(T.fg2.SPOTIFY);
+    if (null == w || !(0, u.S1)(M, g.wE)) return null;
+    let G = () => {
+        let e = S.M0.ALBUM,
+            t = l.A.isProtocolRegistered()
+                ? S.RQ.PLAYER_OPEN(e, R.extra.media.external_parent_id)
+                : S.RQ.WEB_OPEN(e, R.extra.media.external_parent_id);
         window.open(t);
     };
     return (0, i.jsxs)(A.YN, {
         children: [
             (0, i.jsx)(A.BC, {
-                onClickTitle: U,
+                onClickTitle: G,
                 onClickSubtitle: () => {
-                    let e = I.M0.ARTIST,
-                        t = o.A.isProtocolRegistered()
-                            ? I.RQ.PLAYER_OPEN(e, S.extra.artist.external_id)
-                            : I.RQ.WEB_OPEN(e, S.extra.artist.external_id);
+                    let e = S.M0.ARTIST,
+                        t = l.A.isProtocolRegistered()
+                            ? S.RQ.PLAYER_OPEN(e, R.extra.artist.external_id)
+                            : S.RQ.WEB_OPEN(e, R.extra.artist.external_id);
                     window.open(t);
                 },
-                onClickThumbnail: U,
-                channel: y,
-                entry: S,
+                onClickThumbnail: G,
+                channel: C,
+                entry: R,
                 headerIcons:
-                    j === r.X.SPOTIFY
-                        ? (0, i.jsx)(C.A, { onClick: D, Icon: u.A, "aria-label": v.intl.string(v.t["0ZB/XE"]) })
+                    D === a.X.SPOTIFY
+                        ? (0, i.jsx)(I.A, { onClick: x, Icon: _.A, "aria-label": N.intl.string(N.t["0ZB/XE"]) })
                         : null,
-                userDescription: v.t.CcVI1T,
-                title: T,
-                subtitle: w,
-                badges: (0, i.jsx)(x.mG, {
-                    location: x.N5.POPOUT,
-                    children: _.$u.map((e, t) => (0, i.jsx)(e, { entry: S }, t)),
+                userDescription: N.t.CcVI1T,
+                title: v,
+                subtitle: b,
+                badges: (0, i.jsx)(p.mG, {
+                    location: p.N5.POPOUT,
+                    children: g.$u.map((e, t) => (0, i.jsx)(e, { entry: R }, t)),
                 }),
             }),
             (0, i.jsx)(A.Eh, {
                 children: (0, i.jsx)(A.fD, {
-                    onReaction: b,
-                    onVoiceChannelPreview: N,
-                    user: L,
-                    channel: y,
-                    generateReactionImage: P,
+                    onReaction: O,
+                    onVoiceChannelPreview: y,
+                    user: w,
+                    channel: C,
+                    generateReactionImage: U,
                     reactionImageAltText:
-                        ((t = S),
-                        (n = L),
-                        v.intl.formatToPlainString(v.t.Osmpr9, { username: n.username, artist: t.extra.artist.name })),
-                    entry: S,
+                        ((t = R),
+                        (n = w),
+                        N.intl.formatToPlainString(N.t.Osmpr9, { username: n.username, artist: t.extra.artist.name })),
+                    entry: R,
                 }),
             }),
         ],

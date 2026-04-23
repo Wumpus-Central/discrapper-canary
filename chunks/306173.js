@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, {
-    G1: () => r.G1,
-    Ih: () => r.Ih,
-    Oy: () => r.Oy,
-    kk: () => r.kk,
-    t7: () => r.t7,
-    tR: () => r.tR,
-    uU: () => r.uU,
-    xd: () => r.xd,
-    xy: () => r.xy,
+    G1: () => i.G1,
+    Ih: () => i.Ih,
+    Oy: () => i.Oy,
+    kk: () => i.kk,
+    t7: () => i.t7,
+    tR: () => i.tR,
+    uU: () => i.uU,
+    xd: () => i.xd,
+    xy: () => i.xy,
 });
-var r = n(515925);
+var i = n(515925);

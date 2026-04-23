@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { $: () => a, A: () => s });
-var r = n(444927),
-    i = n(964486);
-function s() {
-    let e = (0, r.A)(() => new AbortController());
+n.d(t, { $: () => s, A: () => a });
+var i = n(444927),
+    r = n(964486);
+function a() {
+    let e = (0, i.A)(() => new AbortController());
     return (
-        (0, i.l0)(() => {
+        (0, r.l0)(() => {
             e.abort();
         }),
         e.signal
     );
 }
-function a(e) {
-    let t = (0, r.A)(() => new AbortController());
+function s(e) {
+    let t = (0, i.A)(() => new AbortController());
     return (
-        (0, i.l0)(() => {
+        (0, r.l0)(() => {
             setTimeout(() => {
                 t.abort();
             }, e);

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__477aa",
     GC: "buttonGroup__477aa",

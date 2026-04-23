@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { B1: () => c, B6: () => u, QW: () => d, iy: () => o });
-var r,
-    i,
-    s = n(73153);
+n.d(t, { B1: () => u, B6: () => d, QW: () => _, iy: () => o });
+var i,
+    r,
+    s = n(228366);
 let a = new (n(626584).A)("AVError");
 var o =
-    (((r = {}).STREAM_FAILED_TO_START = "stream-failed-to-start"),
-    (r.NO_INPUT_DEVICES = "no-input-devices"),
-    (r.NO_AUDIO_INPUT_DETECTED = "no-audio-input-detected"),
-    (r.DEBUG_LOG_UPLOAD_FAILED = "debug-log-upload-failed"),
-    (r.STREAM_VIEW_LOW_FPS = "stream-view-low-fps"),
-    (r.STREAM_VIEW_HIGH_PACKET_LOSS = "stream-view-high-packet-loss"),
-    (r.STREAM_SEND_LOW_FPS = "stream-send-low-encode-fps"),
-    (r.STREAM_SEND_HIGH_PACKET_LOSS = "stream-send-high-packet-loss"),
-    (r.STREAM_BAD_NETWORK_QUALITY = "stream-send-network-quality"),
-    (r.STREAM_SOUNDSHARE_FAILED = "stream-soundshare-failed"),
-    (r.NOISE_CANCELLER_ERROR = "noise-canceller-error"),
-    (r.SCREENSHARE_OS_NOT_SUPPORTED = "screenshare-min-os-requirement"),
-    (r.STREAM_RECONNECTING = "stream-reconnecting"),
-    (r.VIDEO_DECODE_ERROR = "video-decode-error"),
-    (r.VIDEO_ENCODE_ERROR = "video-encode-error"),
-    (r.STREAM_FULL = "stream-full"),
-    (r.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH = "audio-capture-sample-rate-mismatch"),
-    (r.VIDEO_STREAM_SENDER_READY_TIMEOUT = "video-stream-sender-ready-timeout"),
-    (r.VIDEO_STREAM_RECEIVER_READY_TIMEOUT = "video-stream-receiver-ready-timeout"),
-    (r.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM = "video-stream-sender-ready-timeout-no-stream"),
-    (r.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = "video-stream-receiver-ready-timeout-no-stream"),
-    (r.CAMERA_SEND_LOW_FPS = "camera-send-low-encode-fps"),
-    (r.SCREENSHARE_OS_ERROR = "screenshare-os-error"),
-    r);
+    (((i = {}).STREAM_FAILED_TO_START = "stream-failed-to-start"),
+    (i.NO_INPUT_DEVICES = "no-input-devices"),
+    (i.NO_AUDIO_INPUT_DETECTED = "no-audio-input-detected"),
+    (i.DEBUG_LOG_UPLOAD_FAILED = "debug-log-upload-failed"),
+    (i.STREAM_VIEW_LOW_FPS = "stream-view-low-fps"),
+    (i.STREAM_VIEW_HIGH_PACKET_LOSS = "stream-view-high-packet-loss"),
+    (i.STREAM_SEND_LOW_FPS = "stream-send-low-encode-fps"),
+    (i.STREAM_SEND_HIGH_PACKET_LOSS = "stream-send-high-packet-loss"),
+    (i.STREAM_BAD_NETWORK_QUALITY = "stream-send-network-quality"),
+    (i.STREAM_SOUNDSHARE_FAILED = "stream-soundshare-failed"),
+    (i.NOISE_CANCELLER_ERROR = "noise-canceller-error"),
+    (i.SCREENSHARE_OS_NOT_SUPPORTED = "screenshare-min-os-requirement"),
+    (i.STREAM_RECONNECTING = "stream-reconnecting"),
+    (i.VIDEO_DECODE_ERROR = "video-decode-error"),
+    (i.VIDEO_ENCODE_ERROR = "video-encode-error"),
+    (i.STREAM_FULL = "stream-full"),
+    (i.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH = "audio-capture-sample-rate-mismatch"),
+    (i.VIDEO_STREAM_SENDER_READY_TIMEOUT = "video-stream-sender-ready-timeout"),
+    (i.VIDEO_STREAM_RECEIVER_READY_TIMEOUT = "video-stream-receiver-ready-timeout"),
+    (i.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM = "video-stream-sender-ready-timeout-no-stream"),
+    (i.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = "video-stream-receiver-ready-timeout-no-stream"),
+    (i.CAMERA_SEND_LOW_FPS = "camera-send-low-encode-fps"),
+    (i.SCREENSHARE_OS_ERROR = "screenshare-os-error"),
+    i);
 let l = {
     "stream-soundshare-failed": { errorCode: 1001, severity: "warning", category: "audio", isErrorOutbound: !0 },
     "noise-canceller-error": { errorCode: 1002, severity: "warning", category: "audio", isErrorOutbound: !0 },
@@ -84,41 +84,41 @@ let l = {
     "screenshare-os-error": { errorCode: 3004, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "debug-log-upload-failed": { errorCode: 4001, severity: "info", category: "debug", isErrorOutbound: !0 },
 };
-var u =
-    (((i = {}).Unknown = "Unknown"),
-    (i.UploadErrorGeneral = "UploadErrorCodes.GENERAL"),
-    (i.UploadErrorNoFile = "UploadErrorCodes.NO_FILE"),
-    (i.UploadErrorProgress = "UploadErrorCodes.PROGRESS"),
-    (i.UploadErrorUpload = "UploadErrorCodes.UPLOAD"),
-    (i.UploadErrorRead = "UploadErrorCodes.READ"),
-    (i.NoiseCancellerCpuOveruse = "NoiseCancellerError.CPU_OVERUSE"),
-    (i.NoiseCancellerFailed = "NoiseCancellerError.FAILED"),
-    (i.NoiseCancellerVadCpuOveruse = "NoiseCancellerError.VAD_CPU_OVERUSE"),
-    i);
-function d(e) {
+var d =
+    (((r = {}).Unknown = "Unknown"),
+    (r.UploadErrorGeneral = "UploadErrorCodes.GENERAL"),
+    (r.UploadErrorNoFile = "UploadErrorCodes.NO_FILE"),
+    (r.UploadErrorProgress = "UploadErrorCodes.PROGRESS"),
+    (r.UploadErrorUpload = "UploadErrorCodes.UPLOAD"),
+    (r.UploadErrorRead = "UploadErrorCodes.READ"),
+    (r.NoiseCancellerCpuOveruse = "NoiseCancellerError.CPU_OVERUSE"),
+    (r.NoiseCancellerFailed = "NoiseCancellerError.FAILED"),
+    (r.NoiseCancellerVadCpuOveruse = "NoiseCancellerError.VAD_CPU_OVERUSE"),
+    r);
+function _(e) {
     let { type: t, ...n } = e;
     a.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
-    let r = l[t];
+    let i = l[t];
     s.h.dispatch({
         type: "REPORT_AV_ERROR",
         error: t,
-        errorCode: r.errorCode,
-        severity: r.severity,
-        category: r.category,
+        errorCode: i.errorCode,
+        severity: i.severity,
+        category: i.category,
         context: e,
     });
 }
-function c(e) {
+function u(e) {
     return l[e];
 }
-let _ = Object.values(l).map((e) => e.errorCode),
-    f = new Set(_);
-if (_.length !== f.size) {
-    let e = _.filter((e, t) => _.indexOf(e) !== t),
+let c = Object.values(l).map((e) => e.errorCode),
+    E = new Set(c);
+if (c.length !== E.size) {
+    let e = c.filter((e, t) => c.indexOf(e) !== t),
         t = Object.entries(l)
             .filter((t) => {
-                let [n, r] = t;
-                return e.includes(r.errorCode);
+                let [n, i] = t;
+                return e.includes(i.errorCode);
             })
             .map((e) => {
                 let [t, n] = e;

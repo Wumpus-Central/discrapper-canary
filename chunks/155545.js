@@ -1,16 +1,15 @@
-"use strict";
 n.d(t, { A: () => a });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(953727);
+var r = n(953727);
 function a(e) {
-    let { width: t = 12, height: n = 12, color: a = "currentColor", foreground: s, ...o } = e;
-    return (0, r.jsx)("svg", {
-        ...(0, i.A)(o),
+    let { width: t = 12, height: n = 12, color: a = "currentColor", foreground: s, ..._ } = e;
+    return (0, i.jsx)("svg", {
+        ...(0, r.A)(_),
         width: t,
         height: n,
         viewBox: "0 0 12 12",
-        children: (0, r.jsx)("rect", {
+        children: (0, i.jsx)("rect", {
             width: "9",
             height: "9",
             x: "1.5",

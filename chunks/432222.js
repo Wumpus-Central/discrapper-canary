@@ -1,41 +1,41 @@
-n.d(t, { A: () => E, w: () => x });
-var l = n(64700),
-    a = n(989349),
-    r = n.n(a),
-    i = n(311907),
-    s = n(691540),
-    o = n(857250),
+n.d(t, { A: () => b, w: () => I });
+var a = n(64700),
+    i = n(989349),
+    l = n.n(i),
+    r = n(17928),
+    o = n(691540),
+    s = n(857250),
     d = n(97483),
-    u = n(843472),
-    c = n(976860),
-    A = n(74114),
+    c = n(720149),
+    u = n(976860),
+    _ = n(74114),
     f = n(994500),
-    _ = n(954571),
-    p = n(405269),
-    h = n(661191),
-    g = n(652215),
-    I = n(381941),
-    m = n(985018);
-let x = "749054660769218631";
-function E(e, t) {
-    let [n, a] = l.useState(!1),
-        E = l.useCallback(async () => {
+    p = n(954571),
+    A = n(58703),
+    g = n(935208),
+    h = n(652215),
+    m = n(381941),
+    x = n(985018);
+let I = "749054660769218631";
+function b(e, t) {
+    let [n, i] = a.useState(!1),
+        b = a.useCallback(async () => {
             if (!n) {
-                a(!0), (0, c.pX)(g.BVt.CHANNEL(g.ME, e.id));
+                i(!0), (0, u.pX)(h.BVt.CHANNEL(h.ME, e.id));
                 try {
-                    await u.A.sendStickers(e.id, [x], "", { location: I.Hx.SEND_WAVE });
+                    await c.A.sendStickers(e.id, [I], "", { location: m.Hx.SEND_WAVE });
                 } catch (e) {
-                    e.ok || 429 !== e.status || (0, s.P0)((0, o.o)(m.intl.string(m.t.Whhv4w), d.Ck.FAILURE));
+                    e.ok || 429 !== e.status || (0, o.P0)((0, s.o)(x.intl.string(x.t.Whhv4w), d.Ck.FAILURE));
                 }
-                _.default.track(g.HAw.WAVE_CTA_CLICKED, { source: "DM Channel" }), a(!1);
+                p.default.track(h.HAw.WAVE_CTA_CLICKED, { source: "DM Channel" }), i(!1);
             }
         }, [e.id, n]),
         v = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
-        b = v ? e.getRecipientId() : null,
-        N = (0, i.bG)([f.A], () => null != b && f.A.isFriend(b)),
-        P = (0, i.bG)([f.A], () => null != b && f.A.isIgnored(b)),
-        y = h.default.extractTimestamp(e.id),
-        C = (0, p.v0)(r()(), r()(y), 18144e5),
-        S = (0, A.l)(e.id);
-    return { waveShouldShow: v && N && !P && null == t && C && null == S, wavePressed: E };
+        C = v ? e.getRecipientId() : null,
+        y = (0, r.bG)([f.A], () => null != C && f.A.isFriend(C)),
+        P = (0, r.bG)([f.A], () => null != C && f.A.isIgnored(C)),
+        E = g.default.extractTimestamp(e.id),
+        S = (0, A.v0)(l()(), l()(E), 18144e5),
+        T = (0, _.l)(e.id);
+    return { waveShouldShow: v && y && !P && null == t && S && null == T, wavePressed: b };
 }

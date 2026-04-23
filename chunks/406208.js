@@ -1,9 +1,8 @@
-"use strict";
 var t = String;
-e.exports = function (e) {
+r.exports = function (r) {
     try {
-        return t(e);
-    } catch (e) {
+        return t(r);
+    } catch (r) {
         return "Object";
     }
 };

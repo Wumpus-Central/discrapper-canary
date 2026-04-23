@@ -1,7 +1,7 @@
 l.d(t, { A: () => C });
 var a = l(627968),
     n = l(64700),
-    r = l(311907),
+    r = l(17928),
     i = l(778712),
     o = l(97808),
     s = l(688810),
@@ -10,12 +10,12 @@ var a = l(627968),
     u = l(713517),
     p = l(919395),
     m = l(71393),
-    b = l(837921),
+    b = l(19575),
     h = l(84540),
     x = l(854627),
     y = l(930349),
-    v = l(985018),
-    g = l(209150);
+    g = l(985018),
+    v = l(209150);
 let f = i._3.SIZE_72,
     _ = b.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
 function E(e) {
@@ -34,9 +34,9 @@ function E(e) {
             animateOnHover: !i,
         });
     return (0, a.jsx)(_, {
-        className: r ? g.yT : void 0,
+        className: r ? v.yT : void 0,
         src: i ? d : c,
-        imageClassName: i && !o ? g.WG : void 0,
+        imageClassName: i && !o ? v.WG : void 0,
         avatarDecoration: s,
         size: f,
         "aria-hidden": !0,
@@ -48,8 +48,8 @@ function C(e) {
         { analyticsLocations: o } = (0, s.Ay)(),
         b = (0, r.bG)([m.A], () => (null != l ? m.A.getGuild(l) : null)),
         x = null != l,
-        g = n.useRef(null),
-        { isHoveringOrFocusing: f } = (0, u.A)(g),
+        v = n.useRef(null),
+        { isHoveringOrFocusing: f } = (0, u.A)(v),
         _ = (0, p.a4)({ user: t }),
         C = (0, p.a4)({ user: t, guildId: l ?? void 0 }),
         { pendingAvatarDecoration: S } = (0, p.CP)(l ?? void 0),
@@ -62,7 +62,7 @@ function C(e) {
                 ? {
                       onClick: () => (0, h.p)({ guildId: l ?? void 0, avatarDecoration: null }),
                       type: I ? "reset" : "remove",
-                      accessibleLabel: v.intl.string(I ? v.t.pJsnPf : v.t["2U4Bga"]),
+                      accessibleLabel: g.intl.string(I ? g.t.pJsnPf : g.t["2U4Bga"]),
                   }
                 : void 0,
         k = (0, a.jsx)(E, {
@@ -74,20 +74,20 @@ function C(e) {
             disabled: i,
         });
     return (0, a.jsx)("div", {
-        ref: g,
+        ref: v,
         children:
             null == j
                 ? (0, a.jsx)(y.kL, {
                       variant: "square",
                       onClick: P,
-                      accessibleLabel: v.intl.string(v.t.HykynS),
+                      accessibleLabel: g.intl.string(g.t.HykynS),
                       disabled: i,
                       children: k,
                   })
                 : (0, a.jsx)(y.NW, {
                       variant: "square",
                       onClick: P,
-                      accessibleLabel: v.intl.string(v.t.HykynS),
+                      accessibleLabel: g.intl.string(g.t.HykynS),
                       deleteButtonConfig: A,
                       disabled: i,
                       children: k,

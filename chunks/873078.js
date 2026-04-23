@@ -1,19 +1,18 @@
-"use strict";
-var r = n(257943),
-    i = n(446474),
-    a = n(988366),
-    s = n(231977),
-    o = n(581390),
-    l = n(706598),
-    u = n(210140),
-    c = n(804272),
-    d = Object.getOwnPropertyDescriptor;
-t.f = r
-    ? d
-    : function (e, t) {
-          if (((e = o(e)), (t = l(t)), c))
+var n = e(257943),
+    o = e(446474),
+    i = e(988366),
+    u = e(231977),
+    a = e(581390),
+    c = e(706598),
+    f = e(210140),
+    s = e(804272),
+    p = Object.getOwnPropertyDescriptor;
+t.f = n
+    ? p
+    : function (r, t) {
+          if (((r = a(r)), (t = c(t)), s))
               try {
-                  return d(e, t);
-              } catch (e) {}
-          if (u(e, t)) return s(!i(a.f, e, t), e[t]);
+                  return p(r, t);
+              } catch (r) {}
+          if (f(r, t)) return u(!o(i.f, r, t), r[t]);
       };

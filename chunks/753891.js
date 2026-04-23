@@ -1,8 +1,7 @@
-"use strict";
-var r = n(410323),
-    i = 0,
-    a = Math.random(),
-    s = r((1).toString);
-e.exports = function (e) {
-    return "Symbol(" + (void 0 === e ? "" : e) + ")_" + s(++i + a, 36);
+var n = e(410323),
+    o = 0,
+    i = Math.random(),
+    u = n((1).toString);
+r.exports = function (r) {
+    return "Symbol(" + (void 0 === r ? "" : r) + ")_" + u(++o + i, 36);
 };

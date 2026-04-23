@@ -1,18 +1,18 @@
-a.d(t, { D: () => o });
-var n = a(311907),
-    i = a(994500),
-    l = a(800828),
-    r = a(652215),
-    d = a(985018);
+n.d(t, { D: () => o });
+var a = n(17928),
+    i = n(994500),
+    l = n(800828),
+    r = n(652215),
+    s = n(985018);
 function o(e) {
-    return (0, n.bG)(
+    return (0, a.bG)(
         [l.A, i.A],
         () =>
             i.A.getRelationshipType(e) === r.eA$.PENDING_INCOMING
-                ? d.intl.string(d.t.wPI56w)
+                ? s.intl.string(s.t.wPI56w)
                 : l.A.getGameRelationshipsForUser(e).length > 0
-                  ? d.intl.string(d.t.LAcY7m)
-                  : d.intl.string(d.t.w5uwoI),
+                  ? s.intl.string(s.t.LAcY7m)
+                  : s.intl.string(s.t.w5uwoI),
         [e],
     );
 }

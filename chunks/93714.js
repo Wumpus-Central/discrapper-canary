@@ -1,13 +1,12 @@
-"use strict";
-var r = n(410323),
-    i = n(503628),
-    a = n(647055),
-    s = Object,
-    o = r("".split);
-e.exports = i(function () {
-    return !s("z").propertyIsEnumerable(0);
+var n = e(410323),
+    o = e(503628),
+    i = e(647055),
+    u = Object,
+    a = n("".split);
+r.exports = o(function () {
+    return !u("z").propertyIsEnumerable(0);
 })
-    ? function (e) {
-          return "String" === a(e) ? o(e, "") : s(e);
+    ? function (r) {
+          return "String" === i(r) ? a(r, "") : u(r);
       }
-    : s;
+    : u;

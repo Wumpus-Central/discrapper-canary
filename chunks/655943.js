@@ -1,8 +1,8 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var i = n(735438),
     l = n.n(i),
-    s = n(311907),
-    r = n(73153),
+    s = n(17928),
+    r = n(228366),
     a = n(591552),
     d = n(555337),
     o = n(652215),
@@ -12,7 +12,7 @@ let u = !1,
     N = [],
     h = !1,
     I = [];
-function g() {
+function E() {
     (u = !1),
         (m = null),
         (I = []),
@@ -21,7 +21,7 @@ function g() {
             d.A.getSection() === o.BEX.ONBOARDING &&
             ((N = a.A.getOnboardingPrompts(m)), (h = a.A.isAdvancedMode(m)));
 }
-class A extends s.Ay.Store {
+class g extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingPromptsStore";
     initialize() {
         this.waitFor(d.A, a.A);
@@ -53,13 +53,13 @@ class A extends s.Ay.Store {
         return h;
     }
 }
-let E = new A(r.h, {
-    GUILD_SETTINGS_INIT: g,
-    GUILD_SETTINGS_SET_SECTION: g,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: g,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: g,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: g,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: g,
+let A = new g(r.h, {
+    GUILD_SETTINGS_INIT: E,
+    GUILD_SETTINGS_SET_SECTION: E,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: E,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: E,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: E,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         (I = e.errors ?? []), (u = !1);
     },

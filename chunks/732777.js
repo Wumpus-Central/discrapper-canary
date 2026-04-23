@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(311907),
-    i = n(695870),
-    a = n(998740);
-let s = { roomId: i.E, participants: [], seats: [] };
+var i = n(17928),
+    r = n(695870),
+    s = n(998740);
+let a = { roomId: r.E, participants: [], seats: [] };
 function o(e) {
-    return (0, r.bG)([a.A], () => a.A.getRoom(e) ?? s);
+    return (0, i.bG)([s.A], () => s.A.getRoom(e) ?? a);
 }

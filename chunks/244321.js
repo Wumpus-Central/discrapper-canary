@@ -1,83 +1,83 @@
-n.d(e, { default: () => g });
-var i = n(627968),
-    l = n(64700),
-    s = n(189213),
-    r = n(311907),
-    a = n(331322),
-    c = n(834730),
-    o = n(935649),
-    d = n(847599),
-    x = n(754302),
-    u = n(632738),
-    m = n(67521),
-    h = n(308645),
-    j = n(207913),
-    v = n(239093),
-    _ = n(985018);
-let b = [
-        { title: _.intl.string(_.t["1+E7LP"]), description: _.intl.string(_.t["BXiat/"]) },
-        { title: _.intl.string(_.t.iMQXtK), description: _.intl.string(_.t.oQ0vwu) },
-        { title: _.intl.string(_.t["oY/z1Q"]), description: _.intl.string(_.t.wtj02W) },
+e.d(i, { default: () => g });
+var n = e(627968),
+    s = e(64700),
+    l = e(189213),
+    a = e(17928),
+    r = e(331322),
+    c = e(834730),
+    A = e(139716),
+    o = e(847599),
+    _ = e(754302),
+    d = e(632738),
+    E = e(67521),
+    p = e(308645),
+    h = e(207913),
+    u = e(239093),
+    T = e(985018);
+let P = [
+        { title: T.intl.string(T.t["1+E7LP"]), description: T.intl.string(T.t["BXiat/"]) },
+        { title: T.intl.string(T.t.iMQXtK), description: T.intl.string(T.t.oQ0vwu) },
+        { title: T.intl.string(T.t["oY/z1Q"]), description: T.intl.string(T.t.wtj02W) },
     ],
     g = function (t) {
-        let { onClose: e, transitionState: n, classificationId: g } = t,
-            f = (0, r.bG)([j.A], () => j.A.getAgeVerificationWebviewUrl()),
-            N = (0, r.bG)([j.A], () => j.A.getIsLoadingAgeVerification()),
-            p = l.useCallback(() => {
-                e(), m.A.close();
-            }, [e]),
-            A = l.useCallback(() => {
-                m.A.success(), p(), m.A.start_verification_check();
-            }, [p]);
+        let { onClose: i, transitionState: e, classificationId: g } = t,
+            U = (0, a.bG)([h.A], () => h.A.getAgeVerificationWebviewUrl()),
+            L = (0, a.bG)([h.A], () => h.A.getIsLoadingAgeVerification()),
+            b = s.useCallback(() => {
+                i(), E.A.close();
+            }, [i]),
+            x = s.useCallback(() => {
+                E.A.success(), b(), E.A.start_verification_check();
+            }, [b]);
         return (
-            l.useEffect(() => {
-                "" !== f &&
-                    o.A.showAgeVerification({
-                        webviewUrl: f,
-                        onComplete: A,
-                        entryPoint: d.q1.AUTOMATED_UNDERAGE_APPEALS,
+            s.useEffect(() => {
+                "" !== U &&
+                    A.A.showAgeVerification({
+                        webviewUrl: U,
+                        onComplete: x,
+                        entryPoint: o.q1.AUTOMATED_UNDERAGE_APPEALS,
                     });
-            }, [f, A]),
-            (0, i.jsx)(s.Modal, {
-                onClose: e,
-                transitionState: n,
-                title: _.intl.string(_.t["9SDLnj"]),
-                subtitle: _.intl.string(_.t["yvx//1"]),
+            }, [U, x]),
+            (0, n.jsx)(l.Modal, {
+                onClose: i,
+                transitionState: e,
+                title: T.intl.string(T.t["9SDLnj"]),
+                subtitle: T.intl.string(T.t["yvx//1"]),
                 actions: [
-                    { text: _.intl.string(_.t.dKacJ8), onClick: p, variant: "secondary" },
-                    { text: _.intl.string(_.t["54b8V0"]), onClick: () => (0, h.k9)(g), loading: N },
+                    { text: T.intl.string(T.t.dKacJ8), onClick: b, variant: "secondary" },
+                    { text: T.intl.string(T.t["54b8V0"]), onClick: () => (0, p.k9)(g), loading: L },
                 ],
-                children: (0, i.jsxs)(a.B, {
+                children: (0, n.jsxs)(r.B, {
                     gap: 8,
                     direction: "vertical",
                     children: [
-                        (0, i.jsx)(x.q, {
-                            children: b.map((t, e) => {
-                                let { title: n, description: l } = t;
-                                return (0, i.jsx)(x.B, { title: n, description: l, index: e, listType: "numbered" }, e);
+                        (0, n.jsx)(_.q, {
+                            children: P.map((t, i) => {
+                                let { title: e, description: s } = t;
+                                return (0, n.jsx)(_.B, { title: e, description: s, index: i, listType: "numbered" }, i);
                             }),
                         }),
-                        (0, i.jsxs)(a.B, {
+                        (0, n.jsxs)(r.B, {
                             gap: 8,
                             direction: "vertical",
                             children: [
-                                (0, i.jsx)(u.Y0, {
-                                    title: _.intl.string(_.t.WPwp1b),
-                                    children: (0, i.jsx)(u.PQ, {
-                                        title: _.intl.string(_.t.N9WJMM),
-                                        description: _.intl.string(_.t.NHq382),
-                                        buttonText: _.intl.string(_.t["9iy4lB"]),
+                                (0, n.jsx)(d.Y0, {
+                                    title: T.intl.string(T.t.WPwp1b),
+                                    children: (0, n.jsx)(d.PQ, {
+                                        title: T.intl.string(T.t.N9WJMM),
+                                        description: T.intl.string(T.t.NHq382),
+                                        buttonText: T.intl.string(T.t["9iy4lB"]),
                                         titleVariant: "text-md/medium",
-                                        onButtonPress: () => window.open(v.d$.AGE_VERIFICATION_LINK, "_blank"),
+                                        onButtonPress: () => window.open(u.d$.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
                                 }),
-                                (0, i.jsx)(a.B, {
+                                (0, n.jsx)(r.B, {
                                     align: "center",
-                                    children: (0, i.jsx)(c.E, {
+                                    children: (0, n.jsx)(c.E, {
                                         variant: "text-sm/medium",
                                         color: "text-subtle",
-                                        children: _.intl.format(_.t.ZbWsOF, {
-                                            learnMoreLink: v.d$.LEARN_MORE_UU_APPEAL_LINK,
+                                        children: T.intl.format(T.t.ZbWsOF, {
+                                            learnMoreLink: u.d$.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
                                 }),

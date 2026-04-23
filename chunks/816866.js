@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { ZK: () => f, pF: () => g, wu: () => h }), n(323874), n(14289), n(35956), n(321073);
-var a = n(64700),
-    i = n(942381),
-    r = n(265690),
-    l = n(121894),
-    s = n(506774),
-    d = n(691540),
-    o = n(857250),
-    c = n(97483),
-    u = n(87558);
+n.d(t, { ZK: () => m, pF: () => E, wu: () => h }), n(323874), n(14289), n(35956), n(321073);
+var r = n(64700),
+    a = n(942381),
+    i = n(265690),
+    o = n(121894),
+    l = n(506774),
+    s = n(691540),
+    d = n(857250),
+    u = n(97483),
+    c = n(87558);
 let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
-    m = { profileEffects: s.w.get(_) ?? {} },
-    p = (e) => {
+    p = { profileEffects: l.w.get(_) ?? {} },
+    C = (e) => {
         try {
-            s.w.set(_, e.profileEffects);
+            l.w.set(_, e.profileEffects);
         } catch (e) {
             console.error(e),
-                (0, d.P0)(
-                    (0, o.o)(
+                (0, s.P0)(
+                    (0, d.o)(
                         "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
-                        c.Ck.FAILURE,
+                        u.Ck.FAILURE,
                     ),
                 );
         }
     },
-    h = (0, r.h)((e) => ({
-        ...m,
+    h = (0, i.h)((e) => ({
+        ...p,
         upsertProfileEffect: (t) =>
-            (0, l.r)(() => {
+            (0, o.r)(() => {
                 e((e) => {
                     let n = { ...e };
-                    return (n.profileEffects[t.skuId] = t), p(n), n;
+                    return (n.profileEffects[t.skuId] = t), C(n), n;
                 });
             }),
         deleteProfileEffect: (t) =>
-            (0, l.r)(() => {
+            (0, o.r)(() => {
                 e((e) => {
                     let n = { ...e };
-                    return delete n.profileEffects[t], p(n), n;
+                    return delete n.profileEffects[t], C(n), n;
                 });
             }),
         clearAll: () =>
-            (0, l.r)(() => {
-                e(() => (s.w.remove(_), { profileEffects: {} }));
+            (0, o.r)(() => {
+                e(() => (l.w.remove(_), { profileEffects: {} }));
             }),
     })),
-    g = () =>
+    E = () =>
         h((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, i.x),
-    f = (e) => {
+        }, a.x),
+    m = (e) => {
         let t = h((t) => (null != e ? t.profileEffects[e] : null)),
-            n = a.useRef([]);
+            n = r.useRef([]);
         return (
-            a.useEffect(
+            r.useEffect(
                 () => () => {
                     n.current.forEach((e) => {
                         URL.revokeObjectURL(e);
@@ -63,19 +62,19 @@ let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
                 },
                 [],
             ),
-            a.useMemo(() => {
+            r.useMemo(() => {
                 if (null == t) return null;
                 let e = (e) => {
-                        let t = (0, u.fB)(e);
+                        let t = (0, c.fB)(e);
                         return n.current.push(t), t;
                     },
-                    a = t.stillFrames,
-                    i = null != a ? { ...a } : {};
-                for (let t in i) {
-                    let n = i[t];
-                    null != n && (i[t] = { ...n, src: e(n.base64) });
+                    r = t.stillFrames,
+                    a = null != r ? { ...r } : {};
+                for (let t in a) {
+                    let n = a[t];
+                    null != n && (a[t] = { ...n, src: e(n.base64) });
                 }
-                return { ...t, stillFrames: i };
+                return { ...t, stillFrames: a };
             }, [t])
         );
     };

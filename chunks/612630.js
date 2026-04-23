@@ -1,8 +1,8 @@
 n.d(t, { A: () => u });
 var i = n(64700),
-    l = n(311907),
-    r = n(562465),
-    a = n(73153),
+    l = n(17928),
+    a = n(636537),
+    r = n(228366),
     o = n(279263),
     d = n(652215);
 function u(e) {
@@ -15,12 +15,12 @@ function u(e) {
     );
 }
 async function s(e) {
-    a.h.dispatch({ type: "USER_NOTE_LOAD_START", userId: e });
+    r.h.dispatch({ type: "USER_NOTE_LOAD_START", userId: e });
     try {
-        let { body: t } = await r.Bo.get({ url: d.Rsh.NOTE(e), oldFormErrors: !0, rejectWithError: !0 });
+        let { body: t } = await a.Bo.get({ url: d.Rsh.NOTE(e), oldFormErrors: !0, rejectWithError: !0 });
         if (t.note_user_id !== e) throw Error("Invalid response from server");
-        a.h.dispatch({ type: "USER_NOTE_UPDATE", id: e, note: t.note });
+        r.h.dispatch({ type: "USER_NOTE_UPDATE", id: e, note: t.note });
     } catch (t) {
-        a.h.dispatch({ type: "USER_NOTE_UPDATE", id: e });
+        r.h.dispatch({ type: "USER_NOTE_UPDATE", id: e });
     }
 }

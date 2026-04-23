@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { ME: () => c, Z1: () => d, oS: () => u });
-var r = n(311907),
-    i = n(287809),
-    s = n(615405),
-    a = n(652215);
-let o = new Set(["US"]);
+n.d(t, { ME: () => d, Z1: () => E, oS: () => o });
+var i = n(17928),
+    r = n(287809),
+    a = n(615405),
+    s = n(652215);
+let _ = new Set(["US"]);
 function l() {
-    return i.default.getCurrentUser()?.storeCountry?.country ?? s.A.ipCountryCode;
+    return r.default.getCurrentUser()?.storeCountry?.country ?? a.A.ipCountryCode;
 }
-function u() {
-    return (0, r.bG)([i.default, s.A], () => {
+function o() {
+    return (0, i.bG)([r.default, a.A], () => {
         let e = l();
-        return null != e && o.has(e);
+        return null != e && _.has(e);
     });
 }
-function d() {
+function E() {
     let e = l();
-    return null != e && o.has(e);
+    return null != e && _.has(e);
 }
-function c(e) {
+function d(e) {
     let t = null != e?.id,
-        n = null != e && e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
+        n = null != e && e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE);
     return t || n;
 }

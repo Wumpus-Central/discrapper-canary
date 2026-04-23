@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(311907),
-    i = n(73153);
+var i = n(17928),
+    r = n(228366);
 let s = 0,
     a = {};
-class o extends r.Ay.Store {
+class o extends i.Ay.Store {
     static displayName = "BasicGuildStore";
     getGuild(e) {
         let t = a[e];
@@ -21,7 +21,7 @@ class o extends r.Ay.Store {
         return s;
     }
 }
-let l = new o(i.h, {
+let l = new o(r.h, {
     BASIC_GUILD_FETCH: function (e) {
         return (a[e.guildId] = { type: "loading" }), !1;
     },

@@ -1,12 +1,12 @@
-n.d(t, { A: () => f, k: () => g });
+n.d(t, { A: () => m, k: () => g });
 var i = n(627968);
 n(64700);
 var a = n(503698),
     l = n.n(a),
-    s = n(311907),
+    s = n(17928),
     r = n(425763),
     o = n(447453),
-    c = n(961350),
+    c = n(495544),
     d = n(953963),
     u = n(485745),
     _ = n(367414);
@@ -16,7 +16,7 @@ function g(e) {
         i = (0, u.A)();
     return t && (n || i);
 }
-function f(e) {
+function m(e) {
     let { userId: t, guildId: n, className: a } = e,
         u = (0, s.bG)([c.default], () => c.default.getId() === t),
         g = (0, r.VU)();

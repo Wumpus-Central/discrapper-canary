@@ -1,12 +1,11 @@
-"use strict";
-var r = n(503199),
-    i = n(120394),
+var n = e(503199),
+    o = e(120394),
     a = RangeError;
-e.exports = function (e, t, n, s) {
-    var o = r(e),
-        l = i(n),
-        u = l < 0 ? o + l : l;
-    if (u >= o || u < 0) throw new a("Incorrect index");
-    for (var c = new t(o), d = 0; d < o; d++) c[d] = d === u ? s : e[d];
-    return c;
+r.exports = function (r, t, e, i) {
+    var p = n(r),
+        u = o(e),
+        y = u < 0 ? p + u : u;
+    if (y >= p || y < 0) throw new a("Incorrect index");
+    for (var f = new t(p), c = 0; c < p; c++) f[c] = c === y ? i : r[c];
+    return f;
 };

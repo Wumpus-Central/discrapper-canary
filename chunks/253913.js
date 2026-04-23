@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { EG: () => o, X_: () => a, _G: () => s });
-var r,
-    i,
-    s =
-        (((r = {}).PERMISSIONS = "Permissions"),
-        (r.GUIDELINES = "Guidelines"),
-        (r.TAGS = "Tags"),
-        (r.DEFAULT_REACTION = "Default Reaction"),
-        (r.CREATE_POST = "Create Post"),
-        r);
-let a = "https://discord.com/community/creating-value-with-conversation";
-var o =
-    (((i = {})[(i.DURATION_AGO = 0)] = "DURATION_AGO"), (i[(i.POSTED_DURATION_AGO = 1)] = "POSTED_DURATION_AGO"), i);
+n.d(t, { EG: () => _, X_: () => s, _G: () => a });
+var i,
+    r,
+    a =
+        (((i = {}).PERMISSIONS = "Permissions"),
+        (i.GUIDELINES = "Guidelines"),
+        (i.TAGS = "Tags"),
+        (i.DEFAULT_REACTION = "Default Reaction"),
+        (i.CREATE_POST = "Create Post"),
+        i);
+let s = "https://discord.com/community/creating-value-with-conversation";
+var _ =
+    (((r = {})[(r.DURATION_AGO = 0)] = "DURATION_AGO"), (r[(r.POSTED_DURATION_AGO = 1)] = "POSTED_DURATION_AGO"), r);

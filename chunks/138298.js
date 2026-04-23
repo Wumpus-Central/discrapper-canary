@@ -1,90 +1,89 @@
-"use strict";
 n.d(t, { A: () => c });
-var r = n(73153),
-    i = n(843472),
-    a = n(56562),
-    s = n(225142),
-    o = n(547),
-    l = n(940382),
-    u = n(746080);
+var i = n(228366),
+    l = n(720149),
+    r = n(56562),
+    a = n(225142),
+    s = n(547),
+    u = n(940382),
+    o = n(746080);
 let c = {
     openPrivateChannelAsSidebar(e) {
-        let { channelId: t, messageId: n, baseChannelId: a, hasSingleMessageRequest: s } = e;
-        r.h.dispatch({
+        let { channelId: t, messageId: n, baseChannelId: r, hasSingleMessageRequest: a } = e;
+        i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
-            sidebarType: l.PE.VIEW_MESSAGE_REQUEST,
-            baseChannelId: a,
+            sidebarType: u.PE.VIEW_MESSAGE_REQUEST,
+            baseChannelId: r,
             channelId: t,
-            details: { type: l.LU.MESSAGE_REQUEST, hasSingleMessageRequest: s },
+            details: { type: u.LU.MESSAGE_REQUEST, hasSingleMessageRequest: a },
         }),
             null != n
-                ? i.A.jumpToMessage({ channelId: t, messageId: n, flash: !0 })
-                : o.A.fetchMessages({ channelId: t });
+                ? l.A.jumpToMessage({ channelId: t, messageId: n, flash: !0 })
+                : s.A.fetchMessages({ channelId: t });
     },
     openChannelAsSidebar(e) {
-        let { guildId: t, channelId: n, baseChannelId: s, flash: u = !0, details: c } = e;
-        r.h.dispatch({
+        let { guildId: t, channelId: n, baseChannelId: a, flash: o = !0, details: c } = e;
+        i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
-            sidebarType: l.PE.VIEW_CHANNEL,
+            sidebarType: u.PE.VIEW_CHANNEL,
             guildId: t,
-            baseChannelId: s,
+            baseChannelId: a,
             channelId: n,
             details: c,
         });
         let d = c?.initialMessageId;
         null != d
-            ? i.A.jumpToMessage({ channelId: n, messageId: d, flash: u, jumpType: a.US.INSTANT })
-            : o.A.fetchMessages({ guildId: t, channelId: n });
+            ? l.A.jumpToMessage({ channelId: n, messageId: d, flash: o, jumpType: r.US.INSTANT })
+            : s.A.fetchMessages({ guildId: t, channelId: n });
     },
     openResourceChannelAsSidebar(e) {
         let { guildId: t, channelId: n } = e;
         null != t &&
-            ((0, s.bN)(t, n, !1),
-            r.h.dispatch({
+            ((0, a.bN)(t, n, !1),
+            i.h.dispatch({
                 type: "SIDEBAR_VIEW_CHANNEL",
-                sidebarType: l.PE.VIEW_CHANNEL,
+                sidebarType: u.PE.VIEW_CHANNEL,
                 guildId: t,
-                baseChannelId: u.VV.GUILD_HOME,
+                baseChannelId: o.VV.GUILD_HOME,
                 channelId: n,
             }));
     },
     openModReportAsSidebar(e) {
-        let { guildId: t, baseChannelId: n, channelId: s, flash: u = !0, details: c } = e;
-        r.h.dispatch({
+        let { guildId: t, baseChannelId: n, channelId: a, flash: o = !0, details: c } = e;
+        i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
-            sidebarType: l.PE.VIEW_MOD_REPORT,
+            sidebarType: u.PE.VIEW_MOD_REPORT,
             baseChannelId: n,
-            channelId: s,
+            channelId: a,
             details: c,
         }),
             c?.initialMessageId != null
-                ? i.A.jumpToMessage({ channelId: s, messageId: c.initialMessageId, flash: u, jumpType: a.US.INSTANT })
-                : o.A.fetchMessages({ guildId: t, channelId: s });
+                ? l.A.jumpToMessage({ channelId: a, messageId: c.initialMessageId, flash: o, jumpType: r.US.INSTANT })
+                : s.A.fetchMessages({ guildId: t, channelId: a });
     },
     openThreadAsSidebar(e) {
-        let { guildId: t, baseChannelId: n, channelId: s, flash: u = !0, details: c } = e;
-        r.h.dispatch({
+        let { guildId: t, baseChannelId: n, channelId: a, flash: o = !0, details: c } = e;
+        i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
-            sidebarType: l.PE.VIEW_THREAD,
+            sidebarType: u.PE.VIEW_THREAD,
             baseChannelId: n,
-            channelId: s,
+            channelId: a,
             details: c,
         }),
             c?.initialMessageId != null
-                ? i.A.jumpToMessage({ channelId: s, messageId: c.initialMessageId, flash: u, jumpType: a.US.INSTANT })
-                : o.A.fetchMessages({ guildId: t, channelId: s });
+                ? l.A.jumpToMessage({ channelId: a, messageId: c.initialMessageId, flash: o, jumpType: r.US.INSTANT })
+                : s.A.fetchMessages({ guildId: t, channelId: a });
     },
     closeChannelSidebar(e) {
-        r.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e });
+        i.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e });
     },
     openGuildSidebar(e) {
-        let { guildId: t, baseChannelId: n, sidebarType: i, details: a } = e;
-        return r.h.dispatch({ type: "SIDEBAR_VIEW_GUILD", sidebarType: i, baseChannelId: n, guildId: t, details: a });
+        let { guildId: t, baseChannelId: n, sidebarType: l, details: r } = e;
+        return i.h.dispatch({ type: "SIDEBAR_VIEW_GUILD", sidebarType: l, baseChannelId: n, guildId: t, details: r });
     },
     closeGuildSidebar(e) {
-        r.h.dispatch({ type: "SIDEBAR_CLOSE_GUILD", guildId: e });
+        i.h.dispatch({ type: "SIDEBAR_CLOSE_GUILD", guildId: e });
     },
     setSelectedSearchContext(e) {
-        r.h.dispatch({ type: "SIDEBAR_SET_SELECTED_SEARCH_CONTEXT", searchContextId: e });
+        i.h.dispatch({ type: "SIDEBAR_SET_SELECTED_SEARCH_CONTEXT", searchContextId: e });
     },
 };

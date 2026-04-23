@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { yq: () => u });
-var r = n(311907),
-    i = n(626584),
-    a = n(242286),
-    s = n(256415),
+n.d(t, { yq: () => d });
+var i = n(17928),
+    r = n(626584),
+    s = n(773371),
+    a = n(256415),
     o = n(41984),
     l = n(833551);
-function u() {
-    return (0, r.bG)([l.default, a.default, s.default], () => {
-        if (__OVERLAY__) return s.default.isInstanceLocked();
+function d() {
+    return (0, i.bG)([l.default, s.default, a.default], () => {
+        if (__OVERLAY__) return a.default.isInstanceLocked();
         let e = l.default.getOverlayRenderingTrackedGames();
-        return 0 !== e.length && e.some((e) => e.overlayMethod !== o.Ue.Disabled && a.default.isInputLocked(e.pid));
+        return 0 !== e.length && e.some((e) => e.overlayMethod !== o.Ue.Disabled && s.default.isInputLocked(e.pid));
     });
 }
-new i.A("OverlayUtils");
+new r.A("OverlayUtils");

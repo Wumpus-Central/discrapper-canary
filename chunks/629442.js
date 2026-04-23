@@ -1,71 +1,75 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => c });
+var i = n(627968),
+    r = n(64700),
     s = n(136722),
     a = n(834730),
     o = n(150934),
     l = n(789645),
-    u = n(376092),
-    c = n(985018),
-    d = n(751645);
-function _(e) {
-    let { application: t, permissions: n, deniedPermissions: _, onPermissionsChange: f, guild: p } = e,
-        h = i.useMemo(() => s.B8(p.permissions), [p.permissions]);
-    i.useEffect(() => {
-        f(!1, s.pb(n, h));
-    }, [h, f, n]);
-    let E = u.Q.filter((e) => s.zy(n, e)),
-        m = E.filter((e) => !s.zy(h, e)).map((e) => {
-            let t = (0, u.hx)(e),
-                n = !s.zy(_, e);
-            return (0, r.jsx)(
-                "li",
-                { className: d.EK, children: (0, r.jsx)(o.S, { checked: n, onChange: (t) => f(t, e), label: t }) },
-                String(e),
-            );
-        }),
-        g = E.filter((e) => s.zy(h, e)).map((e) => {
-            let t = (0, u.hx)(e);
-            return (0, r.jsxs)(
-                "li",
-                {
-                    className: d.EK,
-                    children: [
-                        (0, r.jsx)("div", {
-                            className: d.nW,
-                            children: (0, r.jsx)(l.P, { size: "md", color: "currentColor", className: d.Kk }),
-                        }),
-                        (0, r.jsx)(a.E, { variant: "text-md/normal", children: t }),
-                    ],
-                },
-                String(e),
-            );
-        });
-    return (0, r.jsxs)("div", {
-        className: d.AS,
+    d = n(376092),
+    _ = n(985018),
+    u = n(751645);
+function c(e) {
+    let { application: t, permissions: n, deniedPermissions: c, onPermissionsChange: E, guild: h } = e,
+        m = r.useMemo(() => s.B8(h.permissions), [h.permissions]);
+    r.useEffect(() => {
+        E(!1, s.pb(n, m));
+    }, [m, E, n]);
+    let f = d.Q.filter((e) => s.zy(n, e)),
+        g = f
+            .filter((e) => !s.zy(m, e))
+            .map((e) => {
+                let t = (0, d.hx)(e),
+                    n = !s.zy(c, e);
+                return (0, i.jsx)(
+                    "li",
+                    { className: u.EK, children: (0, i.jsx)(o.S, { checked: n, onChange: (t) => E(t, e), label: t }) },
+                    String(e),
+                );
+            }),
+        p = f
+            .filter((e) => s.zy(m, e))
+            .map((e) => {
+                let t = (0, d.hx)(e);
+                return (0, i.jsxs)(
+                    "li",
+                    {
+                        className: u.EK,
+                        children: [
+                            (0, i.jsx)("div", {
+                                className: u.nW,
+                                children: (0, i.jsx)(l.P, { size: "md", color: "currentColor", className: u.Kk }),
+                            }),
+                            (0, i.jsx)(a.E, { variant: "text-md/normal", children: t }),
+                        ],
+                    },
+                    String(e),
+                );
+            });
+    return (0, i.jsxs)("div", {
+        className: u.AS,
         children: [
-            m.length > 0
-                ? (0, r.jsxs)("div", {
+            g.length > 0
+                ? (0, i.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(a.E, {
+                          (0, i.jsx)(a.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: c.intl.format(c.t.sOaT2j, { applicationName: t.name, guildName: p.name }),
+                              children: _.intl.format(_.t.sOaT2j, { applicationName: t.name, guildName: h.name }),
                           }),
-                          (0, r.jsx)("ul", { className: d.RH, children: m }),
+                          (0, i.jsx)("ul", { className: u.RH, children: g }),
                       ],
                   })
                 : null,
-            g.length > 0
-                ? (0, r.jsxs)("div", {
+            p.length > 0
+                ? (0, i.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(a.E, {
+                          (0, i.jsx)(a.E, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: c.intl.format(c.t.fsOkF4, { applicationName: t.name }),
+                              children: _.intl.format(_.t.fsOkF4, { applicationName: t.name }),
                           }),
-                          (0, r.jsx)("ul", { className: d.RH, children: g }),
+                          (0, i.jsx)("ul", { className: u.RH, children: p }),
                       ],
                   })
                 : null,

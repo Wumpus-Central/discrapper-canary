@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(98115),
-    l = n(767246);
-function u(e) {
-    let { children: t, size: n = 16, className: s, flowerStarClassName: u, ...d } = e,
-        c = i.Children.only(t),
-        _ = !e.allowFullSizedIcon;
-    return (0, r.jsxs)("div", {
-        className: a()(l.jH, s),
+n.d(t, { A: () => o });
+var i = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    s = n(98115),
+    u = n(767246);
+function o(e) {
+    let { children: t, size: n = 16, className: r, flowerStarClassName: o, ...c } = e,
+        d = l.Children.only(t),
+        E = !e.allowFullSizedIcon;
+    return (0, i.jsxs)("div", {
+        className: a()(u.jH, r),
         style: { width: n, height: n },
         children: [
-            (0, r.jsx)(o.A, { ...d, className: a()(u, l.mP) }),
-            (0, r.jsx)("div", { className: a()(l.sn, { [l.Qu]: _ }), children: c }),
+            (0, i.jsx)(s.A, { ...c, className: a()(o, u.mP) }),
+            (0, i.jsx)("div", { className: a()(u.sn, { [u.Qu]: E }), children: d }),
         ],
     });
 }

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(311907),
-    i = n(73153);
-class a extends r.Ay.Store {
+n.d(t, { A: () => a });
+var i = n(17928),
+    r = n(228366);
+class l extends i.Ay.Store {
     guildIds = new Set();
     allGuildIds() {
         return this.guildIds;
@@ -12,7 +11,7 @@ class a extends r.Ay.Store {
     }
     constructor() {
         super(
-            i.h,
+            r.h,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
                 CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
@@ -20,7 +19,7 @@ class a extends r.Ay.Store {
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
             },
-            i.A.Early,
+            r.A.Early,
         );
     }
     handleConnectionOpen(e) {
@@ -39,4 +38,4 @@ class a extends r.Ay.Store {
         !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id);
     }
 }
-let s = new a();
+let a = new l();

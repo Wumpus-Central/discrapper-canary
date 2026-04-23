@@ -1,7 +1,7 @@
 l.d(t, { A: () => x });
 var a = l(627968),
-    s = l(311907),
-    r = l(827734),
+    s = l(17928),
+    r = l(661531),
     i = l(777666),
     n = l(194261),
     c = l(403581),
@@ -13,7 +13,7 @@ var a = l(627968),
 let x = (e) => {
     let { skuId: t, canUsePremiumCollectibles: l, isPurchaseSection: x, isPremiumSection: _ } = e,
         h = (0, u.aT)(t),
-        A = (0, s.bG)([d.A, o.A], () => {
+        g = (0, s.bG)([d.A, o.A], () => {
             let e = d.A.getProduct(t),
                 l = o.A.getPurchase(t);
             return null != l ? (0, u.gA)(l) : (0, u.G0)(e);
@@ -29,7 +29,7 @@ let x = (e) => {
                 }),
             })
           : (0, a.jsx)(i.fk, {
-                icon: A
+                icon: g
                     ? () => (0, a.jsx)(c.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
                     : () => (0, a.jsx)(n.X, { size: "xxs", color: "currentColor" }),
                 color: r.A.colors.BACKGROUND_MOD_STRONG.css,

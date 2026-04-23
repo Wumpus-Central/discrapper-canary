@@ -1,73 +1,72 @@
-"use strict";
-n.d(t, { K4: () => g, Zt: () => E });
-var r = n(627968),
-    i = n(64700),
-    s = n(311907),
+n.d(t, { K4: () => S, Zt: () => I });
+var i = n(627968),
+    l = n(64700),
+    r = n(17928),
     a = n(444927),
-    o = n(793574),
-    l = n(688810),
-    u = n(361158),
+    s = n(793574),
+    u = n(688810),
+    o = n(361158),
     c = n(71393),
     d = n(287809),
-    _ = n(954571),
-    f = n(203982),
-    p = n(426760),
-    h = n(652215);
-let E = "BoostedGuildPerksModalConnected",
-    m = (e) => {
-        let { guildId: t, close: n, location: u, registerDismissModalHandler: f, scrollToPowerupCards: E } = e,
-            m = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
-            g = (0, s.bG)([c.A], () => c.A.getGuild(t), [t]),
-            A = (0, a.A)(() => Date.now()),
-            { analyticsLocations: I } = (0, l.Ay)(o.A.BOOSTED_GUILD_PERKS_MODAL),
-            T = g?.id,
-            S = i.useCallback(() => {
+    E = n(954571),
+    _ = n(625494),
+    A = n(281910),
+    p = n(652215);
+let I = "BoostedGuildPerksModalConnected",
+    f = (e) => {
+        let { guildId: t, close: n, location: o, registerDismissModalHandler: _, scrollToPowerupCards: I } = e,
+            f = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
+            S = (0, r.bG)([c.A], () => c.A.getGuild(t), [t]),
+            T = (0, a.A)(() => Date.now()),
+            { analyticsLocations: m } = (0, u.Ay)(s.A.BOOSTED_GUILD_PERKS_MODAL),
+            h = S?.id,
+            C = l.useCallback(() => {
                 n(),
-                    null != T &&
-                        _.default.track(h.HAw.MODAL_DISMISSED, {
-                            type: h.liQ.PREMIUM_GUILD_USER_MODAL,
-                            location_stack: I,
-                            location_section: u.section,
-                            location_object: u.object,
-                            guild_id: T,
-                            duration_open_ms: Date.now() - A,
+                    null != h &&
+                        E.default.track(p.HAw.MODAL_DISMISSED, {
+                            type: p.liQ.PREMIUM_GUILD_USER_MODAL,
+                            location_stack: m,
+                            location_section: o.section,
+                            location_object: o.object,
+                            guild_id: h,
+                            duration_open_ms: Date.now() - T,
                         });
-            }, [I, A, u.object, u.section, n, T]);
-        return (i.useLayoutEffect(() => {
-            f?.(S);
-        }, [S, f]),
-        null == m || null == g)
+            }, [m, T, o.object, o.section, n, h]);
+        return (l.useLayoutEffect(() => {
+            _?.(C);
+        }, [C, _]),
+        null == f || null == S)
             ? null
-            : (0, r.jsx)(l.f5, {
-                  value: I,
-                  children: (0, r.jsx)(p.A, { analyticsLocation: u, onClose: S, guild: g, scrollToPowerupCards: E }),
+            : (0, i.jsx)(u.f5, {
+                  value: m,
+                  children: (0, i.jsx)(A.A, { analyticsLocation: o, onClose: C, guild: S, scrollToPowerupCards: I }),
               });
     };
-function g(e) {
-    let { guildId: t, location: n, scrollToPowerupCards: i } = e,
-        s = { current: null };
-    (0, u.B8)(
+function S(e) {
+    let { guildId: t, location: n, scrollToPowerupCards: l } = e,
+        r = { current: null };
+    (0, o.B8)(
         (e) => {
             let { closeLayer: a } = e;
             return (
-                null == s.current && (s.current = a),
-                (0, r.jsx)(m, {
+                null == r.current && (r.current = a),
+                (0, i.jsx)(f, {
                     close: a,
                     guildId: t,
                     location: n,
                     registerDismissModalHandler: (e) => {
-                        s.current = e;
+                        r.current = e;
                     },
-                    scrollToPowerupCards: i,
+                    scrollToPowerupCards: l,
                 })
             );
         },
         {
-            layerKey: E,
+            layerKey: I,
             onEscape: () =>
-                f._.hasSubscribers(h.jej.MODAL_CLOSE)
-                    ? (f._.dispatch(h.jej.MODAL_CLOSE), !0)
-                    : null != s.current && (s.current(), !0),
+                _._.hasSubscribers(p.jej.MODAL_CLOSE)
+                    ? (_._.dispatch(p.jej.MODAL_CLOSE), !0)
+                    : null != r.current && (r.current(), !0),
         },
     );
 }

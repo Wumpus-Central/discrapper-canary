@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Uw: "staticGlow__1bd8a",
     j: "videoContainer__1bd8a",

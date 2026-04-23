@@ -1,73 +1,72 @@
-"use strict";
-r.d(t, { Ay: () => T, PS: () => A, S0: () => E });
-var i = r(627968),
-    a = r(64700),
-    n = r(503698),
-    l = r.n(n),
-    s = r(27867),
-    o = r(311907),
-    c = r(863610),
-    d = r(695366),
-    u = r(834730),
-    _ = r(814890),
-    p = r(436283),
-    h = r(296043),
-    f = r(652215),
-    m = r(985018),
-    g = r(304033);
-function b(e) {
-    return { text: e, icon: (0, i.jsx)(c.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
+n.d(t, { Ay: () => T, PS: () => C, S0: () => S });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    l = n(27867),
+    o = n(17928),
+    c = n(863610),
+    d = n(695366),
+    u = n(834730),
+    m = n(814890),
+    h = n(436283),
+    p = n(296043),
+    f = n(652215),
+    E = n(985018),
+    A = n(304033);
+function g(e) {
+    return { text: e, icon: (0, i.jsx)(c.n, { className: A.Kk, dotRadius: 3.5, themed: !0 }) };
 }
-function A(e) {
+function C(e) {
     return {
-        text: e ?? m.intl.string(m.t.VCsUJu),
+        text: e ?? E.intl.string(E.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, i.jsx)(d.E, { size: "xs", color: "currentColor", className: l()(g.Kk, g.ik) }),
+        icon: (0, i.jsx)(d.E, { size: "xs", color: "currentColor", className: a()(A.Kk, A.ik) }),
     };
 }
-function E(e) {
-    let { className: t, icon: r, text: a, color: n } = e;
+function S(e) {
+    let { className: t, icon: n, text: r, color: s } = e;
     return (0, i.jsxs)("div", {
-        className: l()(g.iE, t),
+        className: a()(A.iE, t),
         children: [
-            r,
-            (0, i.jsx)(u.E, { variant: "text-md/normal", color: n, scaleFontToUserSetting: !0, children: a }),
+            n,
+            (0, i.jsx)(u.E, { variant: "text-md/normal", color: s, scaleFontToUserSetting: !0, children: r }),
         ],
     });
 }
-let T = a.memo(function (e) {
-    let { message: t, className: r, component: n } = e,
-        l = (0, s.A)(),
-        c = (0, o.bG)([p.Ay], () => p.Ay.getInteraction(t), [t]);
-    a.useEffect(() => {
+let T = r.memo(function (e) {
+    let { message: t, className: n, component: s } = e,
+        a = (0, l.A)(),
+        c = (0, o.bG)([h.Ay], () => h.Ay.getInteraction(t), [t]);
+    r.useEffect(() => {
         let e = null;
         if (t.hasFlag(f.pr7.LOADING) && null != c) {
-            let r = (0, h.I5)(t.id) - Date.now();
-            r > 0 && (e = setTimeout(() => l(), 1e3 + r));
+            let n = (0, p.I5)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => a(), 1e3 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [l, c, t]);
+    }, [a, c, t]);
     let d = null;
-    if (null == n)
+    if (null == s)
         d = (function (e, t) {
-            switch ((0, h.fK)(t, e)) {
-                case h.h0.SENDING:
-                    return b(m.intl.string(m.t.RiLfBY));
-                case h.h0.CREATED:
-                    return b(m.intl.formatToPlainString(m.t["7ePV4t"], { applicationName: t.author.username }));
-                case h.h0.TIMED_OUT:
-                    return A(m.intl.string(m.t.h8hzPd));
-                case h.h0.FAILED:
-                    return A(t.interactionError);
+            switch ((0, p.fK)(t, e)) {
+                case p.h0.SENDING:
+                    return g(E.intl.string(E.t.RiLfBY));
+                case p.h0.CREATED:
+                    return g(E.intl.formatToPlainString(E.t["7ePV4t"], { applicationName: t.author.username }));
+                case p.h0.TIMED_OUT:
+                    return C(E.intl.string(E.t.h8hzPd));
+                case p.h0.FAILED:
+                    return C(t.interactionError);
             }
         })(c, t);
     else {
-        let e = (0, _.zv)(c, t, n);
-        null != e && (d = A(e));
+        let e = (0, m.zv)(c, t, s);
+        null != e && (d = C(e));
     }
     if (null == d) return null;
-    let { text: u, icon: g, color: T } = d;
-    return (0, i.jsx)(E, { icon: g, text: u, className: r, color: T });
+    let { text: u, icon: A, color: T } = d;
+    return (0, i.jsx)(S, { icon: A, text: u, className: n, color: T });
 });

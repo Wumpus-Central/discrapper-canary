@@ -1,41 +1,42 @@
-l.d(t, { g: () => a, s: () => d });
-var n = l(287809),
-    r = l(975571),
-    i = l(927578),
-    s = l(652215),
-    o = l(985018);
-function a(e) {
+"use strict";
+n.d(t, { g: () => o, s: () => d });
+var i = n(287809),
+    s = n(975571),
+    l = n(927578),
+    r = n(652215),
+    a = n(985018);
+function o(e) {
     switch (e) {
-        case s.t02.TOO_MANY_USER_GUILDS:
-            let t = n.default.getCurrentUser(),
-                l = i.Ay.canUseIncreasedGuildCap(t) || t?.isStaff() ? s.cZu : s.qlD;
+        case r.t02.TOO_MANY_USER_GUILDS:
+            let t = i.default.getCurrentUser(),
+                n = l.Ay.canUseIncreasedGuildCap(t) || t?.isStaff() ? r.cZu : r.qlD;
             return {
-                title: o.intl.formatToPlainString(o.t["ttJ/hj"], { quantity: l }),
-                description: o.intl.string(o.t.iLyuDO),
+                title: a.intl.formatToPlainString(a.t["ttJ/hj"], { quantity: n }),
+                description: a.intl.string(a.t.iLyuDO),
             };
-        case s.t02.GUILD_AT_CAPACITY:
-            return { title: o.intl.string(o.t.ZZlox4), description: o.intl.string(o.t.ZUEGFn) };
-        case s.t02.GUILD_JOIN_INVITE_LIMITED_ACCESS:
-            return { title: o.intl.string(o.t.kJwpBW), description: o.intl.string(o.t.ZUEGFn) };
-        case s.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED:
-            return { title: o.intl.string(o.t["u/xsK9"]), description: o.intl.string(o.t.SxY4IW) };
+        case r.t02.GUILD_AT_CAPACITY:
+            return { title: a.intl.string(a.t.ZZlox4), description: a.intl.string(a.t.ZUEGFn) };
+        case r.t02.GUILD_JOIN_INVITE_LIMITED_ACCESS:
+            return { title: a.intl.string(a.t.kJwpBW), description: a.intl.string(a.t.ZUEGFn) };
+        case r.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED:
+            return { title: a.intl.string(a.t["u/xsK9"]), description: a.intl.string(a.t.SxY4IW) };
         default:
             return null;
     }
 }
 function d(e) {
     switch (e) {
-        case s.t02.TOO_MANY_USER_GUILDS:
-            return o.intl.string(o.t.iLyuDO);
-        case s.t02.GUILD_AT_CAPACITY:
-            return o.intl.string(o.t.M6unNJ);
-        case s.t02.INVALID_COUNTRY_CODE:
-            return o.intl.string(o.t.sRJGR1);
-        case s.t02.INVALID_CANNOT_FRIEND_SELF:
-            return o.intl.string(o.t["mY2R+F"]);
-        case s.t02.INVITES_DISABLED:
-            return o.intl.format(o.t.RXSeLl, { articleLink: r.A.getArticleURL(s.MVz.INVITE_DISABLED) });
+        case r.t02.TOO_MANY_USER_GUILDS:
+            return a.intl.string(a.t.iLyuDO);
+        case r.t02.GUILD_AT_CAPACITY:
+            return a.intl.string(a.t.M6unNJ);
+        case r.t02.INVALID_COUNTRY_CODE:
+            return a.intl.string(a.t.sRJGR1);
+        case r.t02.INVALID_CANNOT_FRIEND_SELF:
+            return a.intl.string(a.t["mY2R+F"]);
+        case r.t02.INVITES_DISABLED:
+            return a.intl.format(a.t.RXSeLl, { articleLink: s.A.getArticleURL(r.MVz.INVITE_DISABLED) });
         default:
-            return o.intl.string(o.t.dDZRdy);
+            return a.intl.string(a.t.dDZRdy);
     }
 }

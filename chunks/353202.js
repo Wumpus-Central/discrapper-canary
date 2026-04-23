@@ -1,62 +1,61 @@
-"use strict";
-n.d(t, { A: () => p });
-var r = n(562465),
-    i = n(73153),
-    s = n(695870),
-    a = n(142120),
-    o = n(463347),
+n.d(t, { A: () => T });
+var i = n(636537),
+    r = n(228366),
+    a = n(695870),
+    s = n(366853),
+    _ = n(463347),
     l = n(334465),
-    u = n(95701),
-    d = n(734057),
-    c = n(309010),
-    _ = n(652215),
-    f = n(746080);
-let E = {},
-    h = !1,
-    p = {
+    o = n(95701),
+    E = n(734057),
+    d = n(309010),
+    c = n(652215),
+    u = n(746080);
+let I = {},
+    A = !1,
+    T = {
         loadThread: function e(t) {
             if (
                 null == t ||
-                t === s.E ||
-                (0, f.jq)(t) ||
-                null != d.A.getChannel(t) ||
-                (h ||
-                    ((h = !0),
-                    i.h.subscribe("CONNECTION_OPEN", () => {
-                        E = {};
-                        let t = c.A.getChannelId(),
-                            n = d.A.getChannel(t);
+                t === a.E ||
+                (0, u.jq)(t) ||
+                null != E.A.getChannel(t) ||
+                (A ||
+                    ((A = !0),
+                    r.h.subscribe("CONNECTION_OPEN", () => {
+                        I = {};
+                        let t = d.A.getChannelId(),
+                            n = E.A.getChannel(t);
                         null != t && null == n && e(t);
                     })),
-                !a.A.isConnected())
+                !s.A.isConnected())
             )
                 return Promise.resolve();
-            let n = E[t];
+            let n = I[t];
             if (null != n)
                 if ("LOADING" === n.type) return n.promise;
                 else return Promise.resolve();
-            let p = (0, l.B)(location.pathname, {
-                    path: _.BVt.CHANNEL(o.pv.guildId(), o.pv.channelId(), ":messageId"),
+            let T = (0, l.B)(location.pathname, {
+                    path: c.BVt.CHANNEL(_.pv.guildId(), _.pv.channelId(), ":messageId"),
                     exact: !0,
                 }),
-                m = r.Bo.get({ url: _.Rsh.CHANNEL(t), rejectWithError: !1 })
+                S = i.Bo.get({ url: c.Rsh.CHANNEL(t), rejectWithError: !1 })
                     .then((e) => {
                         let { body: n } = e;
-                        (E[t] = { type: "LOADED" }),
-                            u.Le.has(n.type) &&
-                                i.h.dispatch({
+                        (I[t] = { type: "LOADED" }),
+                            o.Le.has(n.type) &&
+                                r.h.dispatch({
                                     type: "THREAD_CREATE",
-                                    channel: (0, u.UE)(n),
-                                    messageId: p?.params?.messageId,
+                                    channel: (0, o.UE)(n),
+                                    messageId: T?.params?.messageId,
                                 });
                     })
                     .catch(() => {
-                        (E[t] = { type: "NOT_FOUND" }),
-                            i.h.dispatch({
+                        (I[t] = { type: "NOT_FOUND" }),
+                            r.h.dispatch({
                                 type: "CHANNEL_DELETE",
-                                channel: { id: t, guild_id: p?.params?.guildId, parent_id: void 0 },
+                                channel: { id: t, guild_id: T?.params?.guildId, parent_id: void 0 },
                             });
                     });
-            return (E[t] = { type: "LOADING", promise: m }), m;
+            return (I[t] = { type: "LOADING", promise: S }), S;
         },
     };

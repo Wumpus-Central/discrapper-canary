@@ -7,14 +7,14 @@ n.d(t, {
     U_: () => m,
     Uo: () => u,
     _L: () => f,
-    _e: () => A,
-    fw: () => v,
+    _e: () => v,
+    fw: () => A,
     pZ: () => p,
     x8: () => g,
 });
-var l = n(562465),
+var l = n(636537),
     a = n(506774),
-    i = n(73153),
+    i = n(228366),
     r = n(976860);
 n(624826);
 var s = n(830215);
@@ -60,10 +60,10 @@ function f(e) {
         legacyUsername: p,
         nameplate: x,
         primaryGuildId: E,
-        displayNameStyles: A,
+        displayNameStyles: v,
     } = e;
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
-    let v = {
+    let A = {
         username: t,
         email: l,
         email_token: r,
@@ -76,22 +76,22 @@ function f(e) {
         legacy_username: p,
         new_password: _,
     };
-    void 0 !== f && (v.avatar_decoration_sku_id = f?.skuId ?? null),
-        void 0 !== x && (v.nameplate_sku_id = x?.skuId ?? null),
-        void 0 !== E && (v.primary_guild_id = E),
-        null != A
-            ? ((v.display_name_font_id = A.fontId),
-              (v.display_name_effect_id = A.effectId),
-              (v.display_name_colors = A.colors))
-            : null === A &&
-              ((v.display_name_font_id = null), (v.display_name_effect_id = null), (v.display_name_colors = null));
+    void 0 !== f && (A.avatar_decoration_sku_id = f?.skuId ?? null),
+        void 0 !== x && (A.nameplate_sku_id = x?.skuId ?? null),
+        void 0 !== E && (A.primary_guild_id = E),
+        null != v
+            ? ((A.display_name_font_id = v.fontId),
+              (A.display_name_effect_id = v.effectId),
+              (A.display_name_colors = v.colors))
+            : null === v &&
+              ((A.display_name_font_id = null), (A.display_name_effect_id = null), (A.display_name_colors = null));
     let I = a.w.get(o.Xlh),
         b = (0, c.oH)();
-    null != b && null != I && ((v.push_provider = b), (v.push_token = I));
+    null != b && null != I && ((A.push_provider = b), (A.push_token = I));
     let j = a.w.get(o.Ahp);
     return (
-        null != c.vz && null != j && ((v.push_voip_provider = c.vz), (v.push_voip_token = j)),
-        h(v).then(
+        null != c.vz && null != j && ((A.push_voip_provider = c.vz), (A.push_voip_token = j)),
+        h(A).then(
             (e) => (
                 i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" }),
                 (null != d || null != m) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
@@ -116,9 +116,9 @@ function x() {
 function E() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
 }
-function A() {
+function v() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function v() {
+function A() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

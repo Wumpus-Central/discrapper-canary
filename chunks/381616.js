@@ -1,45 +1,45 @@
 let i;
-r.d(t, { A: () => _ }), r(321073);
-var a = r(311907),
-    s = r(73153);
-let n = { guildNoticeDismissed: [] },
-    o = new Map(),
-    l = new Set();
-class c extends a.Ay.PersistedStore {
+n.d(t, { A: () => u }), n(321073);
+var r = n(17928),
+    a = n(228366);
+let l = { guildNoticeDismissed: [] },
+    s = new Map(),
+    o = new Set();
+class d extends r.Ay.PersistedStore {
     static displayName = "CommandsMigrationStore";
     static persistKey = "CommandsMigrationStore";
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : n;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
         i = e;
     }
     getState() {
         return i;
     }
     shouldShowChannelNotice(e) {
-        return !i.guildNoticeDismissed.includes(e) && (o.get(e)?.size ?? 0) > 0;
+        return !i.guildNoticeDismissed.includes(e) && (s.get(e)?.size ?? 0) > 0;
     }
     canShowOverviewTooltip(e, t) {
-        return o.get(e)?.has(t) === !0;
+        return s.get(e)?.has(t) === !0;
     }
     canShowToggleTooltip(e) {
-        return l.has(e);
+        return o.has(e);
     }
 }
-let _ = new c(s.h, {
+let u = new d(a.h, {
     COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
-        let { guildId: t, integrationIdsWithAppCommands: r } = e;
-        return o.set(t, new Set(r)), !0;
+        let { guildId: t, integrationIdsWithAppCommands: n } = e;
+        return s.set(t, new Set(n)), !0;
     },
     COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
         let { guildId: t } = e;
         i.guildNoticeDismissed.push(t);
     },
     COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
-        let { guildId: t, integrationId: r } = e;
-        o.get(t)?.clear(), l.add(r);
+        let { guildId: t, integrationId: n } = e;
+        s.get(t)?.clear(), o.add(n);
     },
     COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
         let { integrationId: t } = e;
-        l.delete(t);
+        o.delete(t);
     },
 });

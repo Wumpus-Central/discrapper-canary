@@ -1,27 +1,26 @@
-"use strict";
-n.d(t, { AX: () => l, Gp: () => d, pE: () => u });
-var r = n(478437),
-    i = n(311907),
-    s = n(734057),
-    a = n(576705),
-    o = n(818348);
+n.d(t, { AX: () => l, Gp: () => E, pE: () => o });
+var i = n(478437),
+    r = n(17928),
+    a = n(734057),
+    s = n(576705),
+    _ = n(818348);
 function l(e) {
     var t;
     if (null == e) return !1;
-    let n = s.A.getChannel(e.parent_id);
+    let n = a.A.getChannel(e.parent_id);
     return (
-        (null == n || n?.type === r.r.GUILD_CATEGORY) &&
-        ((t = e.type), [r.r.GUILD_TEXT, r.r.GUILD_VOICE, r.r.GROUP_DM, r.r.DM].includes(t))
+        (null == n || n?.type === i.r.GUILD_CATEGORY) &&
+        ((t = e.type), [i.r.GUILD_TEXT, i.r.GUILD_VOICE, i.r.GROUP_DM, i.r.DM].includes(t))
     );
 }
-function u(e) {
-    return c(e, a.A);
+function o(e) {
+    return d(e, s.A);
 }
-function d(e) {
-    return (0, i.bG)([s.A, a.A], () => c(s.A.getChannel(e), a.A));
+function E(e) {
+    return (0, r.bG)([a.A, s.A], () => d(a.A.getChannel(e), s.A));
 }
-function c(e, t) {
+function d(e, t) {
     return (
-        null != e && void 0 !== e && !!l(e) && (null == e.guild_id || !!t.can(o.xB.USE_EMBEDDED_ACTIVITIES, e)) && !0
+        null != e && void 0 !== e && !!l(e) && (null == e.guild_id || !!t.can(_.xB.USE_EMBEDDED_ACTIVITIES, e)) && !0
     );
 }

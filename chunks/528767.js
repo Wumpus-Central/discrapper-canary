@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(735438),
-    i = n.n(r),
-    a = n(311907),
-    s = n(73153),
-    o = n(961350);
+n.d(t, { A: () => c });
+var i = n(735438),
+    r = n.n(i),
+    s = n(17928),
+    a = n(228366),
+    o = n(495544);
 let l = Object.freeze([]),
-    u = {};
-function c(e) {
-    (u = {}),
+    d = {};
+function _(e) {
+    (d = {}),
         e.sessions.forEach((e) => {
-            u[e.sessionId] = e;
+            d[e.sessionId] = e;
         });
 }
-class d extends a.Ay.Store {
+class u extends s.Ay.Store {
     static displayName = "SessionsStore";
     initialize() {
         this.waitFor(o.default);
     }
     getSessions() {
-        return u;
+        return d;
     }
     getSession() {
         let e = o.default.getSessionId();
@@ -27,19 +27,19 @@ class d extends a.Ay.Store {
     }
     getRemoteActivities() {
         let e = o.default.getSessionId(),
-            t = i().find(u, (t) => t.active && t.sessionId !== e);
+            t = r().find(d, (t) => t.active && t.sessionId !== e);
         return null != t ? t.activities : l;
     }
     getHiddenActivities() {
         let e = o.default.getSessionId(),
-            t = i().find(u, (t) => t.active && t.sessionId !== e);
+            t = r().find(d, (t) => t.active && t.sessionId !== e);
         return null != t && null != t.hiddenActivities ? t.hiddenActivities : l;
     }
     getSessionById(e) {
-        return u[e];
+        return d[e];
     }
     getActiveSession() {
-        return i().find(u, (e) => {
+        return r().find(d, (e) => {
             let { active: t } = e;
             return t;
         });
@@ -47,10 +47,10 @@ class d extends a.Ay.Store {
     getRemoteApplicationActivity(e) {
         if (null == e) return null;
         let t = o.default.getSessionId(),
-            n = i().find(u, (e) => e.active && e.sessionId !== t);
+            n = r().find(d, (e) => e.active && e.sessionId !== t);
         if (null == n) return null;
-        let r = n.activities.find((t) => t.application_id === e);
-        return null != r ? r : n.hiddenActivities?.find((t) => t.application_id === e);
+        let i = n.activities.find((t) => t.application_id === e);
+        return null != i ? i : n.hiddenActivities?.find((t) => t.application_id === e);
     }
 }
-let _ = new d(s.h, { CONNECTION_OPEN: c, SESSIONS_REPLACE: c });
+let c = new u(a.h, { CONNECTION_OPEN: _, SESSIONS_REPLACE: _ });

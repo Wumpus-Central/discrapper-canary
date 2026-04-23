@@ -1,40 +1,40 @@
 "use strict";
-n.d(t, { A: () => E, h: () => m });
-var r,
-    i = n(627968);
+n.d(t, { A: () => f, h: () => g });
+var i,
+    r = n(627968);
 n(64700);
-var s = n(311907),
+var s = n(17928),
     a = n(462887),
     o = n(534514),
     l = n(834730),
-    u = n(821609),
-    c = n(736653),
-    d = n(287809),
-    _ = n(985018),
-    f = n(588651),
-    p = n(626768),
-    h = n(464896),
-    E = (((r = {})[(r.SHOP_PAGE = 0)] = "SHOP_PAGE"), (r[(r.GIFT_MODAL = 1)] = "GIFT_MODAL"), r);
-let m = (e) => {
-    let { onRetry: t, errorOrigin: n, errorMessage: r } = e,
-        E = (0, c.Ay)(),
-        m = (0, s.bG)([d.default], () => {
-            let e = d.default.getCurrentUser();
+    d = n(821609),
+    _ = n(736653),
+    u = n(287809),
+    c = n(985018),
+    E = n(588651),
+    h = n(626768),
+    m = n(464896),
+    f = (((i = {})[(i.SHOP_PAGE = 0)] = "SHOP_PAGE"), (i[(i.GIFT_MODAL = 1)] = "GIFT_MODAL"), i);
+let g = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
+        f = (0, _.Ay)(),
+        g = (0, s.bG)([u.default], () => {
+            let e = u.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
-        g = 1 === n ? f.tV : f.Df,
-        A = 1 === n ? _.intl.string(_.t["+2QBZX"]) : _.intl.string(_.t.LuhKs2);
-    return (0, i.jsxs)("div", {
-        className: g,
+        p = 1 === n ? E.tV : E.Df,
+        A = 1 === n ? c.intl.string(c.t["+2QBZX"]) : c.intl.string(c.t.LuhKs2);
+    return (0, r.jsxs)("div", {
+        className: p,
         children: [
-            (0, i.jsx)("img", { className: f.__invalid_loadIssueImg, src: (0, a.M)(E) ? p : h, alt: "" }),
-            (0, i.jsx)(o.D, { className: f.st, variant: "heading-xl/semibold", children: _.intl.string(_.t.i5SQ74) }),
-            (0, i.jsx)(l.E, { className: f.h_, variant: "text-md/normal", children: A }),
-            m && null != r && (0, i.jsx)(l.E, { variant: "text-md/normal", children: "staff-only debug: " + r }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("img", { className: E.__invalid_loadIssueImg, src: (0, a.M)(f) ? h : m, alt: "" }),
+            (0, r.jsx)(o.D, { className: E.st, variant: "heading-xl/semibold", children: c.intl.string(c.t.i5SQ74) }),
+            (0, r.jsx)(l.E, { className: E.h_, variant: "text-md/normal", children: A }),
+            g && null != i && (0, r.jsx)(l.E, { variant: "text-md/normal", children: "staff-only debug: " + i }),
+            (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: f.yQ,
-                children: (0, i.jsx)(u.$, { variant: "primary", text: _.intl.string(_.t["+hivLW"]), onClick: t }),
+                className: E.yQ,
+                children: (0, r.jsx)(d.$, { variant: "primary", text: c.intl.string(c.t["+hivLW"]), onClick: t }),
             }),
         ],
     });

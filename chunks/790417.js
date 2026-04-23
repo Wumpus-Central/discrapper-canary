@@ -1,7 +1,7 @@
 i.d(t, { A: () => y });
 var n = i(627968);
 i(64700);
-var l = i(311907),
+var l = i(17928),
     s = i(652215),
     a = i(349288),
     r = i(517164),
@@ -11,20 +11,20 @@ var l = i(311907),
     u = i(975571),
     g = i(146655),
     m = i(489379),
-    h = i(837924),
-    x = i(558628),
+    h = i(402857),
+    x = i(353394),
     p = i(842241),
-    A = i(282797),
-    j = i(782505),
-    f = i(83013),
+    A = i(986712),
+    f = i(782505),
+    j = i(83013),
     I = i(515054),
     v = i(518477),
     S = i(985018),
     E = i(740620);
 function y(e) {
-    let { user: t, currentUser: i, displayProfile: y, guildId: b, channelId: w, onClose: N } = e,
+    let { user: t, currentUser: i, displayProfile: y, guildId: w, channelId: b, onClose: N } = e,
         { live: T, recent: C, stream: R } = (0, g.A)(t.id),
-        { voiceChannel: O, voiceActivity: k } = (0, m.A)({ userId: t.id, guildId: b }),
+        { voiceChannel: O, voiceActivity: k } = (0, m.A)({ userId: t.id, guildId: w }),
         L = (0, l.bG)([r.A], () => r.A.isFetchingUserOutbox(t.id)),
         G = t.id === i.id,
         _ = (0, l.bG)([c.A, o.A], () => {
@@ -33,16 +33,16 @@ function y(e) {
         }),
         M = T.length > 0 || null != R,
         P = y?.private !== !0 && null == R && null == k && null != O,
-        U = !_ && (M || P),
-        D = C.length > 0;
-    return U || D || !L
-        ? U || D || L
+        D = !_ && (M || P),
+        U = C.length > 0;
+    return D || U || !L
+        ? D || U || L
             ? (0, n.jsxs)(I.K, {
                   className: E.XG,
                   fade: !0,
                   children: [
-                      U
-                          ? (0, n.jsx)(f.A, {
+                      D
+                          ? (0, n.jsx)(j.A, {
                                 heading: S.intl.string(S.t.J6STd9),
                                 children: (0, n.jsxs)("ul", {
                                     className: E.kR,
@@ -83,8 +83,8 @@ function y(e) {
                                 }),
                             })
                           : null,
-                      D
-                          ? (0, n.jsx)(f.A, {
+                      U
+                          ? (0, n.jsx)(j.A, {
                                 heading: S.intl.string(S.t.jzgEoL),
                                 introText: G
                                     ? S.intl.format(S.t["4bk9Ak"], {
@@ -115,8 +115,8 @@ function y(e) {
                   ],
               })
             : G
-              ? (0, n.jsx)(j.qv, { onClose: N })
-              : (0, n.jsx)(j.zf, { user: t, guildId: y?.guildId ?? b, channelId: w, onClose: N })
+              ? (0, n.jsx)(f.qv, { onClose: N })
+              : (0, n.jsx)(f.zf, { user: t, guildId: y?.guildId ?? w, channelId: b, onClose: N })
         : (0, n.jsx)("div", {
               className: E.kR,
               children: Array.from({ length: 8 }).map((e, t) =>

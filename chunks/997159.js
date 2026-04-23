@@ -1,10 +1,9 @@
-"use strict";
-var r = n(410323),
-    i = n(339626),
-    a = n(121536),
-    s = r(Function.toString);
-i(a.inspectSource) ||
-    (a.inspectSource = function (e) {
-        return s(e);
+var n = e(410323),
+    o = e(339626),
+    i = e(121536),
+    u = n(Function.toString);
+o(i.inspectSource) ||
+    (i.inspectSource = function (r) {
+        return u(r);
     }),
-    (e.exports = a.inspectSource);
+    (r.exports = i.inspectSource);

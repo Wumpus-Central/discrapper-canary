@@ -1,12 +1,11 @@
-"use strict";
-var r,
-    i,
-    a = n(860511),
-    s = n(65978),
-    o = a.process,
-    l = a.Deno,
-    u = (o && o.versions) || (l && l.version),
-    c = u && u.v8;
-c && (i = (r = c.split("."))[0] > 0 && r[0] < 4 ? 1 : +(r[0] + r[1])),
-    !i && s && (!(r = s.match(/Edge\/(\d+)/)) || r[1] >= 74) && (r = s.match(/Chrome\/(\d+)/)) && (i = +r[1]),
-    (e.exports = i);
+var n,
+    o,
+    i = e(860511),
+    u = e(65978),
+    a = i.process,
+    c = i.Deno,
+    f = (a && a.versions) || (c && c.version),
+    s = f && f.v8;
+s && (o = (n = s.split("."))[0] > 0 && n[0] < 4 ? 1 : +(n[0] + n[1])),
+    !o && u && (!(n = u.match(/Edge\/(\d+)/)) || n[1] >= 74) && (n = u.match(/Chrome\/(\d+)/)) && (o = +n[1]),
+    (r.exports = o);

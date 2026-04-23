@@ -1,13 +1,24 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(998280),
-    i = n(29583),
-    a = n(44134),
-    s = n(618027);
-function o(e, t) {
-    (0, s.A)(2, arguments);
-    var n = (0, i.default)(e),
-        o = (0, r.A)(t),
-        l = (0, a.A)(n) - o;
-    return n.setUTCDate(n.getUTCDate() - 7 * l), n;
-}
+e.exports = {
+    $P: "upsellHeader_d9161f",
+    tU: "islands_d9161f",
+    $h: "mainIsland_d9161f",
+    Sb: "balloonDog_d9161f",
+    KF: "upsellHeaderText_d9161f",
+    JO: "upsellButtons_d9161f",
+    a7: "valuesContainer_d9161f",
+    fP: "valueContainer_d9161f",
+    Ru: "valueText_d9161f",
+    Zj: "upsellContainer_d9161f",
+    SI: "upsellPreview_d9161f",
+    CQ: "previewListItem_d9161f",
+    wH: "selected_d9161f",
+    Pf: "spacingSmall_d9161f",
+    f5: "spacingLarge_d9161f",
+    p: "channelIcon_d9161f",
+    Ix: "channel_d9161f",
+    p9: "spaceBetween_d9161f",
+    kv: "checkbox_d9161f",
+    AI: "checkmark_d9161f",
+    ct: "checkboxCircle_d9161f",
+    YL: "tooltip_d9161f",
+};

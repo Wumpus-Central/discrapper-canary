@@ -3,9 +3,9 @@ var a = n(833291);
 n(100392);
 var i = n(46054),
     l = n(659674),
-    s = n(728458),
-    r = n(652215);
-let o = new Set([r.Auw.IMAGE, r.Auw.GIFV]),
+    r = n(38405),
+    s = n(652215);
+let o = new Set([s.Auw.IMAGE, s.Auw.GIFV]),
     c = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 function d(e, t) {
     let n = u({ channelId: e.channel_id, messageId: e.id, renderOptions: t }),
@@ -48,7 +48,7 @@ function m(e) {
     return (function (e, t, n) {
         let {
                 toAST: i = !1,
-                hideSimpleEmbedContent: r = !0,
+                hideSimpleEmbedContent: s = !0,
                 formatInline: u = !1,
                 postProcessor: m,
                 contentMessage: _,
@@ -63,7 +63,7 @@ function m(e) {
                     (g = i ?? !1),
                     Array.isArray(e) || (e = [e]),
                     g && (e = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
-                    r &&
+                    s &&
                         (e = (function (e, t) {
                             if (1 !== e.length || 1 !== t.length) return e;
                             let n = e[0],
@@ -99,7 +99,7 @@ function m(e) {
                                             ? e(t.content)
                                             : "string" == typeof t.content
                                               ? (t.content = t.content.replace(/\n/g, " "))
-                                              : s.A.captureMessage(
+                                              : r.A.captureMessage(
                                                     `AST node type:${t.type} with content typeof ${typeof t.content}. Keys ${Object.keys(t)}`,
                                                 ));
                                 }),

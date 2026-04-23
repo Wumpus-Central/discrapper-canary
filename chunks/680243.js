@@ -1,43 +1,42 @@
-"use strict";
-n.d(t, { A: () => N });
-var r = n(311907),
-    i = n(118356),
-    s = n(73153),
-    a = n(49463),
-    o = n(9302),
-    l = n(211753),
-    u = n(206885),
-    d = n(682763),
+n.d(t, { A: () => C });
+var i = n(17928),
+    r = n(118356),
+    l = n(228366),
+    a = n(736056),
+    s = n(9302),
+    o = n(211753),
+    d = n(206885),
+    u = n(682763),
     c = n(327194);
-let _ = new i.Vy("OverlayV3NativeModuleStore"),
-    f = !1,
+let h = new r.Vy("OverlayV3NativeModuleStore"),
     E = !1,
-    h = null,
-    p = !1,
-    m = null,
+    _ = !1,
+    p = null,
+    A = !1,
+    f = null,
     g = null,
-    A = (() => {
+    I = (() => {
         async function e() {
-            T(), (h = c.P.getInstance());
+            S(), (p = c.P.getInstance());
             try {
-                await h.initialize(), (f = !0);
+                await p.initialize(), (E = !0);
             } catch (e) {
-                (0, d._r)(null, "module_initialization_failed", { error: e }),
-                    (f = !1),
-                    (0, d.mD)(o.UNSET_PID, e, { crashType: "native" });
+                (0, u._r)(null, "module_initialization_failed", { error: e }),
+                    (E = !1),
+                    (0, u.mD)(s.UNSET_PID, e, { crashType: "native" });
             } finally {
-                y.emitChange();
+                O.emitChange();
             }
         }
         return () => (null == g && (g = e()), g);
     })();
-function I(e) {
-    __OVERLAY__ || !u.O || (E !== e && ((E = e), e && (0, o.setOutOfProcessSupport)(!0)));
+function T(e) {
+    __OVERLAY__ || !d.O || (_ !== e && ((_ = e), e && (0, s.setOutOfProcessSupport)(!0)));
 }
-function T() {
-    !__OVERLAY__ && u.O && ((m = null), (p = !1), _.verbose("Maybe Enable Overlay"), I(l.x.oopEnabled));
+function S() {
+    !__OVERLAY__ && d.O && ((f = null), (A = !1), h.verbose("Maybe Enable Overlay"), T(o.x.oopEnabled));
 }
-class S extends r.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Module-Store";
     initialize() {
         this.waitFor(a.A);
@@ -46,44 +45,44 @@ class S extends r.Ay.Store {
         return null != g;
     }
     get isOverlayEnabled() {
-        return E;
+        return _;
     }
     get isSupported() {
-        return u.O;
+        return d.O;
     }
     get isModuleLoaded() {
-        return f;
+        return E;
     }
     get isCrashedDisabled() {
-        return p;
+        return A;
     }
     get errorMessage() {
-        return m;
+        return f;
     }
     getNativeModule() {
-        return h;
+        return p;
     }
 }
-let y = new S(
-        s.h,
-        __OVERLAY__ || !u.O
+let O = new m(
+        l.h,
+        __OVERLAY__ || !d.O
             ? {}
             : {
                   CONNECTION_OPEN: function () {
-                      return A(), !1;
+                      return I(), !1;
                   },
-                  EXPERIMENT_OVERRIDE_BUCKET: T,
+                  EXPERIMENT_OVERRIDE_BUCKET: S,
                   OVERLAY_SET_ENABLED: function (e) {
                       let { oopEnabled: t } = e;
-                      (m = null), I(t);
+                      (f = null), T(t);
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE: function () {
-                      return (m = null), A(), !1;
+                      return (f = null), I(), !1;
                   },
                   OVERLAY_CRASHED: function (e) {
                       let { isCrashedDisabled: t, error: n } = e;
-                      return !0 === t && (p = !0), null != n && (m = n instanceof Error ? n.message : String(n)), !0;
+                      return !0 === t && (A = !0), null != n && (f = n instanceof Error ? n.message : String(n)), !0;
                   },
               },
     ),
-    N = y;
+    C = O;

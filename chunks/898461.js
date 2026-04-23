@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => s, T: () => a });
-var r = n(575593),
-    i = n(149807);
-let a = (e) => e instanceof s;
-class s extends i.A {
+n.d(t, { A: () => l, T: () => a });
+var i = n(575593),
+    r = n(149807);
+let a = (e) => e instanceof l;
+class l extends r.A {
     asset;
     label;
     constructor(e) {
-        super(e), (this.type = r.R.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
+        super(e), (this.type = i.R.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
     }
     static fromServer(e) {
-        return new s({ ...super.fromServer(e), ...e });
+        return new l({ ...super.fromServer(e), ...e });
     }
 }

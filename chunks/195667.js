@@ -1,24 +1,24 @@
-n.d(t, { r: () => a });
-var i = n(311907),
-    s = n(899847),
-    r = n(842144);
-function a(e, t, n, a) {
-    var l, o;
-    let { comparator: c = (e, t) => e === t } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        d = (i) => n(r.A.getSettings(i)?.[e]?.[t]);
+n.d(t, { r: () => u });
+var l = n(17928),
+    r = n(899847),
+    i = n(842144);
+function u(e, t, n, u) {
+    var o, d;
+    let { comparator: s = (e, t) => e === t } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        a = (l) => n(i.A.getSettings(l)?.[e]?.[t]);
     return {
-        getControlledSetting: d,
+        getControlledSetting: a,
         updateControlledSetting:
-            ((l = d),
-            (o = (n, i) =>
+            ((o = a),
+            (d = (n, l) =>
                 null == n
                     ? Promise.resolve()
-                    : s.Ay.updateTeenSettings(n, e, (e) => {
-                          e[t] = a(i, e[t]);
+                    : r.Ay.updateTeenSettings(n, e, (e) => {
+                          e[t] = u(l, e[t]);
                       })),
             function (e, t) {
-                return "function" == typeof t ? o(e, t(l(e))) : o(e, t);
+                return "function" == typeof t ? d(e, t(o(e))) : d(e, t);
             }),
-        useControlledSetting: (e) => (0, i.bG)([r.A], () => d(e), [e], c),
+        useControlledSetting: (e) => (0, l.bG)([i.A], () => a(e), [e], s),
     };
 }

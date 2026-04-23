@@ -1,97 +1,96 @@
-"use strict";
-n.d(t, { A: () => E }), n(321073);
-var r = n(685908),
-    i = n(497387),
-    s = n.n(i),
-    a = n(94809),
-    o = n.n(a),
+n.d(t, { A: () => I }), n(321073);
+var i = n(685908),
+    r = n(497387),
+    a = n.n(r),
+    s = n(94809),
+    _ = n.n(s),
     l = n(505737),
-    u = n.n(l);
-function d(e) {
+    o = n.n(l);
+function E(e) {
     let t = Object.keys(e)[0];
     return `${t}(${e[t]})`;
 }
-let c = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
-function _(e) {
-    let t = e.match(c);
+let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+function c(e) {
+    let t = e.match(d);
     return null != t && (e = `rgba(${0 | t[1]}, ${0 | t[2]}, ${0 | t[3]}, ${t[4]})`), e;
 }
-function f(e, t, n) {
-    return void 0 !== t && void 0 != n ? o()(t, n) : e;
+function u(e, t, n) {
+    return void 0 !== t && void 0 != n ? _()(t, n) : e;
 }
-r.inject.ApplyAnimatedValues(
+i.inject.ApplyAnimatedValues(
     function (e, t, n) {
         if (e.setNativeProps) e.setNativeProps(t);
         else {
-            var r;
+            var i;
             if (!e.nodeType || void 0 === e.setAttribute) return !1;
-            u().setValueForStyles(
+            o().setValueForStyles(
                 e,
-                ((r = t.style) &&
-                    (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(d).join(" ")),
-                    r.color && (r.color = _(r.color)),
-                    r.backgroundColor && (r.backgroundColor = _(r.backgroundColor))),
-                r),
+                ((i = t.style) &&
+                    (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(E).join(" ")),
+                    i.color && (i.color = c(i.color)),
+                    i.backgroundColor && (i.backgroundColor = c(i.backgroundColor))),
+                i),
                 n._reactInternalInstance,
             );
         }
     },
     (e) => e,
 );
-let E = {
-    ...r,
-    Easing: s(),
+let I = {
+    ...i,
+    Easing: a(),
     accelerate: function (e) {
         return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
     },
     animate: function e(t, n) {
-        let i,
+        let r,
             {
-                toValueMin: s,
-                toValueMax: a,
-                tension: o = 0,
+                toValueMin: a,
+                toValueMax: s,
+                tension: _ = 0,
                 friction: l = 0,
-                loop: u,
-                reverse: d,
-                invert: c,
-                callback: _,
-                type: E = "spring",
-                shouldLoop: h,
-                durationMin: p,
-                durationMax: m,
-                ...g
+                loop: o,
+                reverse: E,
+                invert: d,
+                callback: c,
+                type: I = "spring",
+                shouldLoop: A,
+                durationMin: T,
+                durationMax: S,
+                ...N
             } = n,
-            A = t._value,
-            I = f(n.duration, p, m),
-            T = f(n.toValue, s, a),
-            S = r[E](t, { ...g, toValue: T, tension: o, friction: l, duration: I }),
-            y = S;
-        if (d || c) {
-            let e = f(n.duration, p, m);
-            (i = r[E](t, { ...g, toValue: d ? A : -T, tension: o, friction: l, duration: e })),
-                (y = r.sequence([S, i]));
+            O = t._value,
+            R = u(n.duration, T, S),
+            f = u(n.toValue, a, s),
+            C = i[I](t, { ...N, toValue: f, tension: _, friction: l, duration: R }),
+            p = C;
+        if (E || d) {
+            let e = u(n.duration, T, S);
+            (r = i[I](t, { ...N, toValue: E ? O : -f, tension: _, friction: l, duration: e })),
+                (p = i.sequence([C, r]));
         }
-        u
-            ? y.start(() => {
-                  (!h || (h && h())) && (_ ? _(e.bind(null, t, n)) : e(t, n));
+        o
+            ? p.start(() => {
+                  (!A || (A && A())) && (c ? c(e.bind(null, t, n)) : e(t, n));
               })
-            : y.start(_);
+            : p.start(c);
     },
     interpolate: function (e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         return e.interpolate({ inputRange: [0, 1], outputRange: n });
     },
     Extrapolate: { CLAMP: "clamp" },
-    div: r.createAnimatedComponent("div"),
-    span: r.createAnimatedComponent("span"),
-    img: r.createAnimatedComponent("img"),
-    a: r.createAnimatedComponent("a"),
-    form: r.createAnimatedComponent("form"),
-    ul: r.createAnimatedComponent("ul"),
-    li: r.createAnimatedComponent("li"),
-    g: r.createAnimatedComponent("g"),
-    use: r.createAnimatedComponent("use"),
-    path: r.createAnimatedComponent("path"),
-    section: r.createAnimatedComponent("section"),
-    video: r.createAnimatedComponent("video"),
+    div: i.createAnimatedComponent("div"),
+    span: i.createAnimatedComponent("span"),
+    img: i.createAnimatedComponent("img"),
+    a: i.createAnimatedComponent("a"),
+    form: i.createAnimatedComponent("form"),
+    ul: i.createAnimatedComponent("ul"),
+    li: i.createAnimatedComponent("li"),
+    g: i.createAnimatedComponent("g"),
+    use: i.createAnimatedComponent("use"),
+    path: i.createAnimatedComponent("path"),
+    section: i.createAnimatedComponent("section"),
+    video: i.createAnimatedComponent("video"),
 };

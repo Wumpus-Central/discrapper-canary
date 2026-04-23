@@ -1,202 +1,201 @@
-"use strict";
-n.d(t, { A: () => V }), n(321073), n(667532);
-var r = n(735438),
-    i = n.n(r),
-    s = n(311907),
+n.d(t, { A: () => k }), n(321073), n(667532);
+var i = n(735438),
+    r = n.n(i),
+    l = n(17928),
     a = n(506774),
-    o = n(73153),
-    l = n(92077),
-    u = n(15285),
-    d = n(961350),
+    s = n(228366),
+    o = n(92077),
+    d = n(328153),
+    u = n(495544),
     c = n(568004),
-    _ = n(674378),
-    f = n(962052),
-    E = n(723702),
-    h = n(194871),
-    p = n(652215),
-    m = n(613057);
-let g = [m.Hi.AUTHENTICATION_FAILED, m.Hi.NOT_ENTITLED],
-    A = "DispatchManagerStore",
-    I = [],
+    h = n(674378),
+    E = n(962052),
+    _ = n(723702),
+    p = n(340829),
+    A = n(652215),
+    f = n(613057);
+let g = [f.Hi.AUTHENTICATION_FAILED, f.Hi.NOT_ENTITLED],
+    I = "DispatchManagerStore",
     T = [],
-    S = !1,
-    y = null,
-    N = null,
-    O = !1,
-    R = new Map(),
-    v = !1,
-    C = null;
-function b() {
-    let e = { queue: I, paused: S, userActions: Array.from(R) };
-    a.w.set(A, e);
+    S = [],
+    m = !1,
+    O = null,
+    C = null,
+    N = !1,
+    y = new Map(),
+    R = !1,
+    L = null;
+function v() {
+    let e = { queue: T, paused: m, userActions: Array.from(y) };
+    a.w.set(I, e);
 }
 function D() {
-    let e = I[0];
+    let e = T[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
-            { applicationId: r, branchId: i } = (0, _.r0)(t);
+            { applicationId: i, branchId: r } = (0, h.r0)(t);
         if (
-            (null == y || y.applicationId !== r || y.branchId !== i) &&
-            (null == N || N.applicationId !== r || N.branchId !== i) &&
+            (null == O || O.applicationId !== i || O.branchId !== r) &&
+            (null == C || C.applicationId !== i || C.branchId !== r) &&
             1
         ) {
-            let e = d.default.getToken(),
-                t = d.default.getId();
+            let e = u.default.getToken(),
+                t = u.default.getId();
             if (null == e) throw Error("missing user token");
-            v = !f.A.setCurrentTask(r, i, n, t, e);
+            R = !E.A.setCurrentTask(i, r, n, t, e);
         }
     }
 }
-function L(e, t) {
-    let n = (0, _.gW)(e, t);
-    return I.findIndex((e) => e.comboId === n);
+function b(e, t) {
+    let n = (0, h.gW)(e, t);
+    return T.findIndex((e) => e.comboId === n);
 }
-function w(e, t, n, r) {
-    let i = (0, _.gW)(e, t),
-        s = { comboId: i, action: r },
-        a = T.indexOf(i);
-    -1 !== a && T.splice(a, 1);
-    let o = L(e, t);
-    0 !== o && (n ? -1 === o && (I.push(s), D()) : (o > 0 && I.splice(o, 1), I.unshift(s), D())),
-        !n && S && f.A.resume(),
-        b();
+function U(e, t, n, i) {
+    let r = (0, h.gW)(e, t),
+        l = { comboId: r, action: i },
+        a = S.indexOf(r);
+    -1 !== a && S.splice(a, 1);
+    let s = b(e, t);
+    0 !== s && (n ? -1 === s && (T.push(l), D()) : (s > 0 && T.splice(s, 1), T.unshift(l), D())),
+        !n && m && E.A.resume(),
+        v();
 }
-function M(e, t) {
-    let n = (0, _.gW)(e, t),
-        r = T.indexOf(n);
-    -1 !== r && T.splice(r, 1);
-    let i = L(e, t);
-    -1 !== i && (I.splice(i, 1), b()), D();
+function P(e, t) {
+    let n = (0, h.gW)(e, t),
+        i = S.indexOf(n);
+    -1 !== i && S.splice(i, 1);
+    let r = b(e, t);
+    -1 !== r && (T.splice(r, 1), v()), D();
 }
-function P(e) {
+function M(e) {
     let { applicationId: t, branchId: n } = e;
-    M(t, n);
+    P(t, n);
 }
-function U(e) {
+function w(e) {
     let { applicationId: t, branchId: n } = e,
-        r = (0, _.gW)(t, n),
-        i = T.indexOf(r);
-    -1 !== i && T.splice(i, 1);
+        i = (0, h.gW)(t, n),
+        r = S.indexOf(i);
+    -1 !== r && S.splice(r, 1);
 }
-function k() {
-    let e = d.default.getToken(),
-        t = d.default.getId();
-    null != e && f.A.setCredentials(t, e);
+function G() {
+    let e = u.default.getToken(),
+        t = u.default.getId();
+    null != e && E.A.setCredentials(t, e);
 }
-function x() {
-    for (let e of u.Ay.getRunningDiscordApplicationIds()) l.ZT(e, e);
-    let e = u.Ay.getVisibleGame();
-    return S || null == e || e.pid === C || l.v7(), (C = null == e ? null : e.pid), !1;
+function F() {
+    for (let e of d.Ay.getRunningDiscordApplicationIds()) o.ZT(e, e);
+    let e = d.Ay.getVisibleGame();
+    return m || null == e || e.pid === L || o.v7(), (L = null == e ? null : e.pid), !1;
 }
-class G extends s.Ay.Store {
+class V extends l.Ay.Store {
     static displayName = "DispatchManagerStore";
     initialize() {
-        let e = a.w.get(A) ?? { queue: null, paused: null, userActions: null };
-        null != e.queue && (I = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
-            null != e.paused && (S = e.paused),
-            null != e.userActions && (R = new Map(Array.from(e.userActions))),
-            this.waitFor(h.A, u.Ay),
-            this.syncWith([u.Ay], x),
-            this.waitFor(c.A, d.default, h.A);
+        let e = a.w.get(I) ?? { queue: null, paused: null, userActions: null };
+        null != e.queue && (T = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
+            null != e.paused && (m = e.paused),
+            null != e.userActions && (y = new Map(Array.from(e.userActions))),
+            this.waitFor(p.A, d.Ay),
+            this.syncWith([d.Ay], F),
+            this.waitFor(c.A, u.default, p.A);
     }
     get activeItems() {
-        return I.map((e) => {
+        return T.map((e) => {
             let { comboId: t } = e;
-            return (0, _.r0)(t);
+            return (0, h.r0)(t);
         });
     }
     get finishedItems() {
-        return T.map(_.r0);
+        return S.map(h.r0);
     }
     get paused() {
-        return S;
+        return m;
     }
     getQueuePosition(e, t) {
-        return L(e, t);
+        return b(e, t);
     }
     isCorruptInstallation() {
-        return v;
+        return R;
     }
 }
-let V = new G(o.h, {
+let k = new V(s.h, {
     DISPATCH_APPLICATION_INSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        R.set((0, _.gW)(t, n), "Install"), w(t, n, !1, "Patch");
+        y.set((0, h.gW)(t, n), "Install"), U(t, n, !1, "Patch");
     },
     DISPATCH_APPLICATION_UPDATE: function (e) {
-        let { applicationId: t, branchId: n, automatic: r } = e;
-        w(t, n, r, "Patch");
+        let { applicationId: t, branchId: n, automatic: i } = e;
+        U(t, n, i, "Patch");
     },
     DISPATCH_APPLICATION_UNINSTALL: function (e) {
-        P(e), U(e);
+        M(e), w(e);
     },
-    DISPATCH_APPLICATION_CANCEL: P,
+    DISPATCH_APPLICATION_CANCEL: M,
     DISPATCH_APPLICATION_REPAIR: function (e) {
         let { applicationId: t, branchId: n } = e;
-        R.set((0, _.gW)(t, n), "Repair"), w(t, n, !1, "Repair");
+        y.set((0, h.gW)(t, n), "Repair"), U(t, n, !1, "Repair");
     },
     DISPATCH_APPLICATION_MOVE_UP: function (e) {
         let { applicationId: t, branchId: n } = e,
-            r = L(t, n);
-        if (r < 1) return !1;
-        I.splice(0, 0, I.splice(r, 1)[0]), D(), S && f.A.resume(), b();
+            i = b(t, n);
+        if (i < 1) return !1;
+        T.splice(0, 0, T.splice(i, 1)[0]), D(), m && E.A.resume(), v();
     },
-    DISPATCH_APPLICATION_REMOVE_FINISHED: U,
+    DISPATCH_APPLICATION_REMOVE_FINISHED: w,
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        !O && ((O = !0), D(), S || f.A.resume());
-        let n = S;
-        (S = t.paused), (y = t.currentTask), (N = t.nextTask);
-        let r = !1;
-        (I = I.filter((e) => {
+        !N && ((N = !0), D(), m || E.A.resume());
+        let n = m;
+        (m = t.paused), (O = t.currentTask), (C = t.nextTask);
+        let i = !1;
+        (T = T.filter((e) => {
             let { comboId: t } = e,
-                { applicationId: n, branchId: s } = (0, _.r0)(t),
-                a = h.A.getState(n, s),
-                o = c.A.getTargetBuildId(n, s),
-                u = c.A.getTargetManifests(n, s);
+                { applicationId: n, branchId: l } = (0, h.r0)(t),
+                a = p.A.getState(n, l),
+                s = c.A.getTargetBuildId(n, l),
+                d = c.A.getTargetManifests(n, l);
             if (
                 null != a &&
-                a.type === p.WTw.UP_TO_DATE &&
+                a.type === A.WTw.UP_TO_DATE &&
                 a.buildId === a.targetBuildId &&
-                a.buildId === o &&
-                i().isEqual(a.manifestIds, a.targetManifestIds) &&
-                i().isEqual(a.manifestIds, u)
+                a.buildId === s &&
+                r().isEqual(a.manifestIds, a.targetManifestIds) &&
+                r().isEqual(a.manifestIds, d)
             ) {
-                if ((T.push(t), R.has(t))) {
-                    switch (R.get(t)) {
+                if ((S.push(t), y.has(t))) {
+                    switch (y.get(t)) {
                         case "Install":
-                            l.BK(n, a);
+                            o.BK(n, a);
                             break;
                         case "Repair":
-                            l.jU(n, a);
+                            o.jU(n, a);
                     }
-                    R.delete(t);
+                    y.delete(t);
                 }
-                return (r = !0), !1;
+                return (i = !0), !1;
             }
             return !0;
         })),
             D(),
-            (r || n !== S) && b();
+            (i || n !== m) && v();
     },
     DISPATCH_APPLICATION_ERROR: function (e) {
         let { error: t } = e,
             { code: n } = t;
         if (null != n) {
-            if (g.includes(n)) k();
-            else if (n === m.Hi.APPLICATION_NOT_FOUND) {
+            if (g.includes(n)) G();
+            else if (n === f.Hi.APPLICATION_NOT_FOUND) {
                 let { context: e } = t;
                 if (null != e) {
                     let { application_id: t, branch_id: n } = e;
-                    M(t, n);
+                    P(t, n);
                 }
             }
         }
     },
     CONNECTION_OPEN: function () {
-        (0, E.isDesktop)() && k();
+        (0, _.isDesktop)() && G();
     },
     LOGOUT: function () {
-        a.w.remove(A), (0, E.isDesktop)() && f.A.pause();
+        a.w.remove(I), (0, _.isDesktop)() && E.A.pause();
     },
 });

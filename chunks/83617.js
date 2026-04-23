@@ -1,82 +1,81 @@
-"use strict";
-n.d(t, { Yk: () => p, _w: () => E, c_: () => f, jJ: () => h });
-var r = n(64700),
-    i = n(284009),
-    s = n.n(i),
-    a = n(73153),
-    o = n(73825),
-    l = n(160946),
-    u = n(97352),
-    d = n(927578),
-    c = n(652215),
-    _ = n(788868);
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.oz];
-    return null == e || u.A.hasPaymentSourceForSKUIds(e, t)
+n.d(t, { Yk: () => I, _w: () => C, c_: () => h, jJ: () => m });
+var i = n(64700),
+    r = n(284009),
+    l = n.n(r),
+    s = n(228366),
+    a = n(73825),
+    u = n(160946),
+    o = n(97352),
+    c = n(927578),
+    d = n(652215),
+    p = n(788868);
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...p.oz];
+    return null == e || o.A.hasPaymentSourceForSKUIds(e, t)
         ? Promise.resolve()
         : new Promise((e, n) => {
-              a.h.wait(async () => {
+              s.h.wait(async () => {
                   try {
-                      await (0, o.jv)(t), e();
+                      await (0, a.jv)(t), e();
                   } catch (e) {
                       n(e);
                   }
               });
           });
 }
-function E(e, t, n) {
-    let r,
-        i = [],
-        a = { purchaseType: n ? c.lid.GIFT : c.lid.DEFAULT };
+function C(e, t, n) {
+    let i,
+        r = [],
+        s = { purchaseType: n ? d.lid.GIFT : d.lid.DEFAULT };
     return (
-        (r = "string" == typeof e ? u.A.get(e) : e),
-        s()(r, "subscription plan not loaded"),
-        null != t && u.A.hasPaymentSourceForSKUId(t, r.skuId) && (a.paymentSourceId = t),
-        (i = (0, d.pb)(r.id, a).map((e) => e.currency)).length < 1 && (i = [c.Yri.USD]),
-        i
+        (i = "string" == typeof e ? o.A.get(e) : e),
+        l()(i, "subscription plan not loaded"),
+        null != t && o.A.hasPaymentSourceForSKUId(t, i.skuId) && (s.paymentSourceId = t),
+        (r = (0, c.pb)(i.id, s).map((e) => e.currency)).length < 1 && (r = [d.Yri.USD]),
+        r
     );
 }
-function h(e, t, n) {
-    let r = u.A.get(e);
-    return s()(null != r, "plan is undefined"), E(r, n, !1).includes(t);
+function m(e, t, n) {
+    let i = o.A.get(e);
+    return l()(null != i, "plan is undefined"), C(i, n, !1).includes(t);
 }
-function p(e) {
+function I(e) {
     let {
             initialCurrency: t,
             subscriptionPlanId: n,
-            paymentSourceId: i,
-            isGift: s,
-            skuIDs: a,
-            excludeSubscriptionPlansBySKU: o,
+            paymentSourceId: r,
+            isGift: l,
+            skuIDs: s,
+            excludeSubscriptionPlansBySKU: a,
         } = e,
-        [u, d] = r.useReducer(
+        [o, c] = i.useReducer(
             (e, t) => ({ ...e, ...t }),
-            null != i ? { paymentSourceId: i, currency: t, loaded: !1 } : { currency: t, loaded: !1 },
+            null != r ? { paymentSourceId: r, currency: t, loaded: !1 } : { currency: t, loaded: !1 },
         ),
-        c = (0, l.Y)(a),
-        _ = JSON.stringify(a),
-        E = r.useRef(a);
-    r.useEffect(() => {
-        E.current = a;
+        d = (0, u.Y)(s),
+        p = JSON.stringify(s),
+        C = i.useRef(s);
+    i.useEffect(() => {
+        C.current = s;
     }),
-        r.useEffect(() => {
+        i.useEffect(() => {
             (async () => {
-                let { current: e } = E;
+                let { current: e } = C;
                 try {
-                    e.length > 0 && !o && (await f(i, e));
+                    e.length > 0 && !a && (await h(r, e));
                 } catch (e) {
                     if (10027 !== e.code) throw e;
                 }
-                d({ paymentSourceId: i, currency: void 0, loaded: !0 });
+                c({ paymentSourceId: r, currency: void 0, loaded: !0 });
             })();
-        }, [i, _, n, s, c, o]);
-    let h = u.paymentSourceId !== i || null == n || !c || !0 !== u.loaded;
+        }, [r, p, n, l, d, a]);
+    let m = o.paymentSourceId !== r || null == n || !d || !0 !== o.loaded;
     return {
-        hasFetchedSubscriptionPlans: c,
-        priceOptions: u,
+        hasFetchedSubscriptionPlans: d,
+        priceOptions: o,
         setCurrency: (e) => {
-            d({ currency: e });
+            c({ currency: e });
         },
-        currencyLoading: h,
+        currencyLoading: m,
     };
 }

@@ -1,57 +1,57 @@
-n.d(e, { p: () => c });
-var i = n(64700),
-    a = n(575593),
-    r = n(631670),
-    l = n(587600),
+n.d(t, { p: () => u });
+var a = n(64700),
+    l = n(575593),
+    i = n(631670),
+    r = n(56348),
     s = n(207803),
-    d = n(442759),
-    o = n(985018);
-let c = (t) => {
-    let { product: e, onSuccess: c, onError: E } = t,
-        [p, u] = i.useState(!1),
-        { firstAvatarDecoration: _, firstProfileEffect: T, firstNameplate: A, firstProfileFrame: R } = (0, d.f5)(e),
-        S = ((t) => {
-            switch (t.type) {
-                case a.R.AVATAR_DECORATION:
-                    return o.intl.string(o.t.zOA4ax);
-                case a.R.NAMEPLATE:
-                    return o.intl.string(o.t.gOzMvx);
-                case a.R.PROFILE_FRAME:
-                    return o.intl.string(o.t.lOF4zR);
-                case a.R.PROFILE_EFFECT:
-                    return o.intl.string(o.t.SWm2ai);
-                case a.R.BUNDLE:
+    o = n(442759),
+    d = n(985018);
+let u = (e) => {
+    let { product: t, onSuccess: u, onError: c } = e,
+        [p, g] = a.useState(!1),
+        { firstAvatarDecoration: v, firstProfileEffect: m, firstNameplate: h, firstProfileFrame: A } = (0, o.f5)(t),
+        C = ((e) => {
+            switch (e.type) {
+                case l.R.AVATAR_DECORATION:
+                    return d.intl.string(d.t.zOA4ax);
+                case l.R.NAMEPLATE:
+                    return d.intl.string(d.t.gOzMvx);
+                case l.R.PROFILE_FRAME:
+                    return d.intl.string(d.t.lOF4zR);
+                case l.R.PROFILE_EFFECT:
+                    return d.intl.string(d.t.SWm2ai);
+                case l.R.BUNDLE:
                 default:
-                    return o.intl.string(o.t.tf1ZZ4);
+                    return d.intl.string(d.t.tf1ZZ4);
             }
-        })(e);
+        })(t);
     return {
-        handleUseNow: i.useCallback(async () => {
-            u(!0);
-            let t = {};
+        handleUseNow: a.useCallback(async () => {
+            g(!0);
+            let e = {};
             try {
-                if ((null != _ && (t.avatarDecoration = _), null != T || null != R)) {
-                    let t = (0, l.yX)({ pendingProfileEffect: T ?? void 0, pendingProfileFrame: R ?? void 0 });
-                    await (0, s.gi)(t);
+                if ((null != v && (e.avatarDecoration = v), null != m || null != A)) {
+                    let e = (0, r.yX)({ pendingProfileEffect: m ?? void 0, pendingProfileFrame: A ?? void 0 });
+                    await (0, s.gi)(e);
                 }
-                null != A && (t.nameplate = A), Object.keys(t).length > 0 && (await (0, r._L)(t));
+                null != h && (e.nameplate = h), Object.keys(e).length > 0 && (await (0, i._L)(e));
                 {
                     let {
-                        ToastPosition: t,
-                        ToastType: e,
-                        createToast: i,
-                        popToast: a,
-                        showToast: r,
-                    } = await n.e("77260").then(n.bind(n, 397927));
-                    a(), r(i(S, e.MESSAGE, { duration: 6e3, position: t.TOP }));
+                        ToastPosition: e,
+                        ToastType: t,
+                        createToast: a,
+                        popToast: l,
+                        showToast: i,
+                    } = await n.e("88017").then(n.bind(n, 844616));
+                    l(), i(a(C, t.MESSAGE, { duration: 6e3, position: e.TOP }));
                 }
-                c?.();
-            } catch (t) {
-                E?.(t);
+                u?.();
+            } catch (e) {
+                c?.(e);
             } finally {
-                u(!1);
+                g(!1);
             }
-        }, [_, T, A, R, c, S, E]),
+        }, [v, m, h, A, u, C, c]),
         isApplying: p,
     };
 };

@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { U: () => l });
-var n = s(311907),
-    r = s(590180);
-let l = () => (0, n.bG)([r.A], () => r.A.isFetchingCategories);
+n.d(t, { U: () => a });
+var s = n(17928),
+    l = n(590180);
+let a = () => (0, s.bG)([l.A], () => l.A.isFetchingCategories);

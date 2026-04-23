@@ -1,7 +1,7 @@
 let i, l, s;
-n.d(t, { A: () => h });
-var a = n(311907),
-    r = n(73153),
+n.d(t, { A: () => x });
+var a = n(17928),
+    r = n(228366),
     o = n(168186),
     d = n(200662);
 let c = {},
@@ -10,7 +10,7 @@ let c = {},
 function g() {
     (i = void 0), (c = {}), (u = {}), (l = void 0), (s = void 0), (m = !1);
 }
-class x extends a.Ay.Store {
+class h extends a.Ay.Store {
     static displayName = "IntegrationPermissionStore";
     getApplicationPermissions() {
         return c;
@@ -34,7 +34,7 @@ class x extends a.Ay.Store {
         return i;
     }
 }
-let h = new x(r.h, {
+let x = new h(r.h, {
     LOGOUT: g,
     INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;

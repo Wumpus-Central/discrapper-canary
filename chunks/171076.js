@@ -1,78 +1,78 @@
 "use strict";
 n.d(t, { A: () => H });
-var r = n(684013),
-    i = n(439372),
+var i = n(684013),
+    r = n(439372),
     s = n(547),
-    a = n(742984),
+    a = n(938005),
     o = n(95701),
     l = n(734057),
-    u = n(320501),
-    c = n(309010),
-    d = n(543465),
-    _ = n(287809),
-    f = n(728458),
-    p = n(1193),
-    h = n(41984),
-    E = n(267355),
-    m = n(956753),
-    g = n(833551),
-    A = n(395011),
+    d = n(232835),
+    _ = n(309010),
+    u = n(543465),
+    c = n(287809),
+    E = n(38405),
+    h = n(1193),
+    m = n(41984),
+    f = n(267355),
+    g = n(956753),
+    p = n(833551),
+    A = n(489277),
     I = n(222506),
     T = n(897720),
     S = n(145567),
-    y = n(652215);
-let N = (e) => (0, m.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
-    v = new Map(),
-    C = null,
-    O = !1;
-async function R() {
+    N = n(652215);
+let C = (e) => (0, g.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
+    R = new Map(),
+    O = null,
+    y = !1;
+async function v() {
     try {
         return (
-            await Promise.all([n.e("99011"), n.e("87306"), n.e("70233"), n.e("94432"), n.e("39417")]).then(
-                n.bind(n, 703552),
+            await Promise.all([n.e("99011"), n.e("27752"), n.e("92847"), n.e("25013"), n.e("15933")]).then(
+                n.bind(n, 21076),
             )
         ).default;
     } catch (e) {
-        return f.A.captureException(e), null;
+        return E.A.captureException(e), null;
     }
 }
-function b(e) {
-    let { channelId: t, guildId: n, messageId: r } = e;
-    if (!g.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || u.A.isReady(t)) return;
-    let i = v.get(t);
-    null != i && clearTimeout(i);
+function D(e) {
+    let { channelId: t, guildId: n, messageId: i } = e;
+    if (!p.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || d.A.isReady(t)) return;
+    let r = R.get(t);
+    null != r && clearTimeout(r);
     let a = setTimeout(() => {
-        v.delete(t), u.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: r });
+        R.delete(t), d.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
     }, 1e3);
-    v.set(t, a);
+    R.set(t, a);
 }
-async function D(e) {
-    let t = await R();
+async function L(e) {
+    let t = await v();
     if (!(null == t || I.A.isInputLocked(A.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) r.A.updateNotificationStatus(n.id, y.yFH.DISMISSED);
+        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
-function L() {
+function b() {
     !(function () {
-        if (!g.default.isAnyOverlayRendering()) return;
-        let e = p.A.getSelectedChannelId();
-        if (null == e || e === C) return;
+        if (!p.default.isAnyOverlayRendering()) return;
+        let e = h.A.getSelectedChannelId();
+        if (null == e || e === O) return;
         let t = l.A.getChannel(e);
         null != t &&
             (0, o.pQ)(t.type) &&
-            ((C = e), b({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
+            ((O = e), D({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
 function w(e) {
     let { channelId: t, message: n } = e;
-    if (!g.default.isAnyOverlayRendering()) return;
-    let r = l.A.getChannel(t);
-    if (null == r) return;
-    let i = _.default.getCurrentUser()?.id;
-    if ((null != i && n.author?.id === i && D(t), p.A.isChannelTracked(t))) return;
-    if (r.isPrivate()) {
-        if (d.Ay.isChannelMuted(null, t)) return;
-    } else if (d.Ay.isChannelMuted(r.getGuildId(), t) || !(0, a.lx)(n, t, !0)) return;
-    let s = r.isPrivate() ? h.B9.INCOMING_DM_MESSAGE : h.B9.INCOMING_MENTION_MESSAGE,
+    if (!p.default.isAnyOverlayRendering()) return;
+    let i = l.A.getChannel(t);
+    if (null == i) return;
+    let r = c.default.getCurrentUser()?.id;
+    if ((null != r && n.author?.id === r && L(t), h.A.isChannelTracked(t))) return;
+    if (i.isPrivate()) {
+        if (u.Ay.isChannelMuted(null, t)) return;
+    } else if (u.Ay.isChannelMuted(i.getGuildId(), t) || !(0, a.lx)(n, t, !0)) return;
+    let s = i.isPrivate() ? m.B9.INCOMING_DM_MESSAGE : m.B9.INCOMING_MENTION_MESSAGE,
         o = (function (e) {
             if (null == e.timestamp) return Date.now();
             let t = new Date(e.timestamp).getTime();
@@ -80,80 +80,80 @@ function w(e) {
         })(n);
     (0, S.Ml)({ channelId: t, source: s, lastActivityAtMs: o, lastMessageId: n.id });
 }
-function M(e) {
-    let { channelId: t, lastMessageId: n } = e,
-        r = l.A.getChannel(t);
-    b({ channelId: t, guildId: r?.getGuildId?.() ?? r?.guild_id ?? null, messageId: n ?? null });
-}
 function P(e) {
-    let { channelId: t, guildId: n, messageId: r, source: i } = e;
-    i !== h.B9.AUTOMATIC_CHANNEL_SELECT && ((O = !0), D(t)), b({ channelId: t, guildId: n, messageId: r });
+    let { channelId: t, lastMessageId: n } = e,
+        i = l.A.getChannel(t);
+    D({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
 }
-function x(e) {
+function k(e) {
+    let { channelId: t, guildId: n, messageId: i, source: r } = e;
+    r !== m.B9.AUTOMATIC_CHANNEL_SELECT && ((y = !0), L(t)), D({ channelId: t, guildId: n, messageId: i });
+}
+function M(e) {
     let { channelId: t } = e,
-        n = v.get(t);
-    null != n && (clearTimeout(n), v.delete(t)),
+        n = R.get(t);
+    null != n && (clearTimeout(n), R.delete(t)),
         setTimeout(() => {
-            let e = p.A.getSelectedChannelId();
-            if ((null == e && (O = !1), null == e || e === t)) return;
+            let e = h.A.getSelectedChannelId();
+            if ((null == e && (y = !1), null == e || e === t)) return;
             let n = l.A.getChannel(e);
-            b({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
+            D({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
         }, 0);
 }
-function k() {
-    for (let [e, t] of v) clearTimeout(t), v.delete(e);
-    O = !1;
+function U() {
+    for (let [e, t] of R) clearTimeout(t), R.delete(e);
+    y = !1;
 }
-function U(e) {
+function x(e) {
     let { minimized: t } = e;
     if (!t) return;
-    let n = p.A.getSelectedChannelId();
+    let n = h.A.getSelectedChannelId();
     if (null == n) return;
-    let r = l.A.getChannel(n);
-    b({ channelId: n, guildId: r?.getGuildId?.() ?? r?.guild_id ?? null, messageId: null });
+    let i = l.A.getChannel(n);
+    D({ channelId: n, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: null });
 }
 function G(e) {
     let t = l.A.getChannel(e);
     null != t &&
         (0, o.pQ)(t.type) &&
-        p.A.getSelectedChannelId() !== e &&
+        h.A.getSelectedChannelId() !== e &&
         (0, S.D$)({
             target: { kind: S.bB.CHANNEL, channelId: e, guildId: t.getGuildId(), messageId: null },
-            source: h.B9.AUTOMATIC_CHANNEL_SELECT,
+            source: m.B9.AUTOMATIC_CHANNEL_SELECT,
             widgetType: null,
         });
 }
-function F(e) {
+function V(e) {
     let { channelId: t } = e;
-    !g.default.isAnyOverlayRendering() || null == t || ((0, E.isOverlayCurrentlyVisibleAndUnlocked)() && G(t));
+    !p.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && G(t));
 }
-async function V(e) {
+async function F(e) {
     if (e.locked) {
-        let e = p.A.getSelectedChannelId();
-        null != e && r.A.ackTextChatChannel(e);
+        let e = h.A.getSelectedChannelId();
+        null != e && i.A.ackTextChatChannel(e);
         return;
     }
-    let t = await R();
-    if (null == t || !g.default.isAnyOverlayRendering()) return;
-    let n = p.A.getSelectedChannelId();
+    let t = await v();
+    if (null == t || !p.default.isAnyOverlayRendering()) return;
+    let n = h.A.getSelectedChannelId();
     if (null != n && t.hasNotificationForChannel(n)) return;
-    let i = null,
+    let r = null,
         s = t.getMostRecentNotificationChannelId();
-    null != s ? (i = s) : O || (i = c.A.getChannelId() ?? null), null != i && (G(i), D(i));
+    null != s ? (r = s) : y || (r = _.A.getChannelId() ?? null), null != r && (G(r), L(r));
 }
-class B extends i.A {
+class B extends r.A {
     actions = {
-        CHANNEL_SELECT: N(F),
-        SIDEBAR_VIEW_CHANNEL: N(F),
-        MESSAGE_CREATE: N(w),
-        VOICE_STATE_UPDATES: N(L),
-        VOICE_CHANNEL_SELECT: N(L),
-        OVERLAY_SET_INPUT_LOCKED: N(V),
-        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: N(M),
-        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: N(P),
-        OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: N(x),
-        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: N(k),
-        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: N(U),
+        CHANNEL_SELECT: C(V),
+        SIDEBAR_VIEW_CHANNEL: C(V),
+        MESSAGE_CREATE: C(w),
+        VOICE_STATE_UPDATES: C(b),
+        VOICE_CHANNEL_SELECT: C(b),
+        OVERLAY_SET_INPUT_LOCKED: C(F),
+        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(P),
+        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(k),
+        OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: C(M),
+        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: C(U),
+        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: C(x),
     };
 }
 let H = new B();

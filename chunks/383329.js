@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { R: () => u });
-var a = n(64700),
-    i = n(735438),
-    r = n.n(i),
-    s = n(311907),
+var i = n(64700),
+    a = n(735438),
+    r = n.n(a),
+    s = n(17928),
     l = n(735321),
     o = n(760751),
     c = n(282435);
@@ -12,7 +12,7 @@ function d(e) {
 }
 function u() {
     let e = (0, s.bG)([o.A], () => o.A.games),
-        t = a.useMemo(
+        t = i.useMemo(
             () =>
                 r()(e)
                     .filter((e) => (0, l.XX)(e))
@@ -25,6 +25,6 @@ function u() {
                     .value(),
             [e],
         ),
-        n = a.useCallback((e, t) => d(t.item.value) - d(e.item.value), []);
-    return { options: t, matchSorterOptions: a.useMemo(() => ({ baseSort: n, keys: ["label"] }), [n]) };
+        n = i.useCallback((e, t) => d(t.item.value) - d(e.item.value), []);
+    return { options: t, matchSorterOptions: i.useMemo(() => ({ baseSort: n, keys: ["label"] }), [n]) };
 }

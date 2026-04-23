@@ -1,27 +1,27 @@
-s.d(t, { Fr: () => N, Kk: () => T, Mu: () => S, jO: () => w });
+s.d(t, { Fr: () => N, Kk: () => S, Mu: () => w, jO: () => T });
 var l = s(64700),
     n = s(735438),
     a = s.n(n),
-    r = s(311907),
+    r = s(17928),
     i = s(919577),
     o = s(212007),
     d = s(734057),
     c = s(576705),
     u = s(222823),
     h = s(403362),
-    g = s(661191),
+    g = s(935208),
     m = s(970278),
     x = s(45494),
     A = s(152007),
     f = s(867455),
     j = s(707539),
     v = s(818348);
-function T() {
+function S() {
     l.useEffect(() => {
         (0, j.ju)();
     }, []);
 }
-function w(e) {
+function T(e) {
     let t,
         s =
             ((t = (0, r.yK)(
@@ -50,7 +50,7 @@ function w(e) {
         [n, i] = (0, r.bG)([A.A], () => a().partition(s, (e) => A.A.hasJoined(e)), [s], r.My);
     return { joinedThreadIds: n, unjoinedThreadIds: i };
 }
-function S(e) {
+function w(e) {
     let t = (0, r.yK)(
         [c.A, m.A, d.A],
         () =>
@@ -91,7 +91,7 @@ function N(e, t, s, n) {
             canLoadMore: x.A.canLoadMore,
             nextOffset: x.A.nextOffset,
         })),
-        T = l.useCallback(() => {
+        S = l.useCallback(() => {
             c.A.can(v.xB.READ_MESSAGE_HISTORY, e) &&
                 (!u || h) &&
                 f.A.loadArchivedThreads({
@@ -103,13 +103,13 @@ function N(e, t, s, n) {
                     offset: A,
                 });
         }, [e, t, s, n, A, h, u]),
-        w = l.useRef(T);
+        T = l.useRef(S);
     return (
         l.useEffect(() => {
-            w.current = T;
+            T.current = S;
         }),
         l.useEffect(() => {
-            j && w.current();
+            j && T.current();
         }, [e.id, t, s, j, h]),
         l.useEffect(() => {
             i.A.resort(e.id);
@@ -126,7 +126,7 @@ function N(e, t, s, n) {
             ),
             canLoadMore: g,
             loading: (m || j) && h && c.A.can(v.xB.READ_MESSAGE_HISTORY, e),
-            loadMore: T,
+            loadMore: S,
         }
     );
 }

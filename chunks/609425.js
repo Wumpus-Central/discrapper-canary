@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(64700),
-    i = n(311907),
-    a = n(386467),
-    s = n(696451),
+n.d(t, { A: () => d });
+var i = n(64700),
+    r = n(17928),
+    s = n(386467),
+    a = n(696451),
     o = n(287809),
     l = n(824994);
-function u() {
+function d() {
     let {
             userId: e,
             guildId: t,
             pendingDisplayNameStyles: n,
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        u = (0, l.W)({ location: "useDisplayNameStyles" }),
-        c = (0, i.bG)([o.default], () => (null != e ? o.default.getUser(e) : o.default.getCurrentUser())),
-        d = (0, r.useContext)(a.A);
-    null == t && (t = d);
-    let _ = (0, i.bG)([s.Ay], () => (null != t && null != c ? s.Ay.getMember(t, c.id) : null));
-    return u
+        d = (0, l.W)({ location: "useDisplayNameStyles" }),
+        _ = (0, r.bG)([o.default], () => (null != e ? o.default.getUser(e) : o.default.getCurrentUser())),
+        u = (0, i.useContext)(s.A);
+    null == t && (t = u);
+    let c = (0, r.bG)([a.Ay], () => (null != t && null != _ ? a.Ay.getMember(t, _.id) : null));
+    return d
         ? void 0 !== n
             ? null === n && null != t
-                ? c?.displayNameStyles
+                ? _?.displayNameStyles
                 : n
-            : (_?.displayNameStyles ?? c?.displayNameStyles)
+            : (c?.displayNameStyles ?? _?.displayNameStyles)
         : null;
 }

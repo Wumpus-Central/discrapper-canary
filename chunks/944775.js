@@ -1,12 +1,12 @@
-n.d(t, { Lk: () => c, hK: () => o }), n(627968), n(64700);
-var i = n(73153),
-    l = n(395011);
-n(923917), n(574172), n(734057), n(383501);
-var a = n(256415);
-n(837921), n(927421);
-var s = n(980504);
-n(652215), n(985018);
-let r = {
+l.d(t, { Lk: () => c, hK: () => u }), l(627968), l(64700);
+var n = l(228366),
+    r = l(489277);
+l(979186), l(574172), l(734057), l(763827);
+var a = l(256415);
+l(19575), l(317084);
+var s = l(980504);
+l(652215), l(985018);
+let i = {
     width: s.ed.width,
     height: s.ed.height,
     resizable: !1,
@@ -20,16 +20,16 @@ let r = {
     backgroundColor: "#00000000",
     titleBarStyle: null,
 };
-function o(e, t) {
-    let n = l.A.isOverlayV3EnabledForPID(t),
+function u(e, t) {
+    let l = r.A.isOverlayV3EnabledForPID(t),
         s = a.default.disableClickableRegions;
-    n || s || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
-        i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e });
+    l || s || n.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
+        n.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e });
 }
 function c(e) {
-    i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
-    let t = l.A.isOverlayV3EnabledForPID(e),
-        n = a.default.disableClickableRegions;
-    a.default.isLocked(e) || t || n || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
+    n.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
+    let t = r.A.isOverlayV3EnabledForPID(e),
+        l = a.default.disableClickableRegions;
+    a.default.isLocked(e) || t || l || n.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
 }
-s.ed.padding, r.width, r.height;
+s.ed.padding, i.width, i.height;

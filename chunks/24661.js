@@ -1,7 +1,7 @@
-n.d(e, { A: () => A });
+n.d(e, { A: () => E });
 var l = n(627968);
 n(64700);
-var i = n(311907),
+var i = n(17928),
     r = n(192308),
     a = n(477782),
     d = n(931991),
@@ -10,14 +10,14 @@ var i = n(311907),
     o = n(496092),
     c = n(988794),
     g = n(985018);
-function A(t, e, A) {
-    let { canManageGuildEvent: E } = (0, d.nr)(A ?? e),
+function E(t, e, E) {
+    let { canManageGuildEvent: A } = (0, d.nr)(E ?? e),
         m = (0, i.bG)([u.Ay], () => u.Ay.isActive(t)),
         f = (0, i.bG)([u.Ay], () => u.Ay.getGuildScheduledEvent(t), [t]),
-        v = E(f);
-    if (null == t || !v || !m || f?.entity_type === c.Ps.EXTERNAL) return null;
-    let y = () => {
-        A?.isGuildStageVoice() ? (0, s.OE)(A) : null != t && o.A.endEvent(t, e.id), (0, r.closeAllModals)();
+        y = A(f);
+    if (null == t || !y || !m || f?.entity_type === c.Ps.EXTERNAL) return null;
+    let _ = () => {
+        E?.isGuildStageVoice() ? (0, s.OE)(E) : null != t && o.A.endEvent(t, e.id), (0, r.closeAllModals)();
     };
     return (0, l.jsx)(a.Dr, {
         id: g.intl.string(g.t.qaYzPA),
@@ -34,7 +34,7 @@ function A(t, e, A) {
                         onClose: n,
                         actions: [
                             { onClick: n, variant: "secondary", text: g.intl.string(g.t["ETE/oC"]) },
-                            { onClick: y, variant: "critical-primary", text: g.intl.string(g.t.mjB9pd) },
+                            { onClick: _, variant: "critical-primary", text: g.intl.string(g.t.mjB9pd) },
                         ],
                     });
                 };

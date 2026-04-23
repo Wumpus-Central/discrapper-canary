@@ -1,7 +1,7 @@
 a.d(l, { $: () => c });
 var t = a(627968),
-    n = a(64700),
-    o = a(974213),
+    o = a(64700),
+    n = a(47948),
     i = a(568385),
     r = a(150934),
     s = a(452027),
@@ -9,13 +9,13 @@ var t = a(627968),
     u = a(1172);
 function c(e) {
     let { onChange: l, options: a, selectedValues: c, disabled: b = !1, ...p } = e,
-        m = n.useContext(d.VO),
+        m = o.useContext(d.VO),
         h = m?.experiments?.enabledExperiments?.includes("mana-toggle-inputs");
     return (0, t.jsx)(s.D, {
         ...p,
         role: "group",
         children: h
-            ? (0, t.jsx)(o.$Q, {
+            ? (0, t.jsx)(n.$Q, {
                   className: u.O,
                   value: c.map(String),
                   onChange: (e) => {
@@ -53,8 +53,8 @@ function c(e) {
                                   leadingIcon: e.leadingIcon,
                                   onChange: (a) => {
                                       var t;
-                                      let n;
-                                      return (t = e.value), (n = a ? [...c, t] : c.filter((e) => e !== t)), void l?.(n);
+                                      let o;
+                                      return (t = e.value), (o = a ? [...c, t] : c.filter((e) => e !== t)), void l?.(o);
                                   },
                               }),
                           },

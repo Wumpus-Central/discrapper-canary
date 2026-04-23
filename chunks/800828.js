@@ -1,91 +1,90 @@
-"use strict";
-n.d(t, { A: () => I }), n(321073);
-var r = n(311907),
-    i = n(713402),
-    s = n(73153),
+n.d(t, { A: () => T }), n(321073);
+var i = n(17928),
+    r = n(713402),
+    l = n(228366),
     a = n(994500),
-    o = n(652215);
-let l = (e, t) => `${t}-${e}`,
-    u = (e) => `application-id-${e}`,
-    d = (e) => `user-id-${e}`,
+    s = n(652215);
+let o = (e, t) => `${t}-${e}`,
+    d = (e) => `application-id-${e}`,
+    u = (e) => `user-id-${e}`,
     c = (e) => `relationship-type-${e}`,
-    _ = new i.J(
+    h = new r.J(
         function (e) {
             let t = [];
-            return t.push(u(e.applicationId)), t.push(d(e.id)), t.push(c(e.type)), t;
+            return t.push(d(e.applicationId)), t.push(u(e.id)), t.push(c(e.type)), t;
         },
         (e) => `${e.since}`,
     ),
-    f = 0,
     E = 0,
-    h = 0;
-function p() {
+    _ = 0,
+    p = 0;
+function A() {
     let e = 0,
         t = 0,
         n = 0;
-    _.values().forEach((r) => {
-        let { type: i, id: s } = r;
-        if (i === o.eA$.FRIEND) n += 1;
-        else if (i === o.eA$.PENDING_OUTGOING) t += 1;
-        else if (i === o.eA$.PENDING_INCOMING) {
-            if (a.A.isSpam(s) || a.A.isIgnored(s)) return;
+    h.values().forEach((i) => {
+        let { type: r, id: l } = i;
+        if (r === s.eA$.FRIEND) n += 1;
+        else if (r === s.eA$.PENDING_OUTGOING) t += 1;
+        else if (r === s.eA$.PENDING_INCOMING) {
+            if (a.A.isSpam(l) || a.A.isIgnored(l)) return;
             e += 1;
         }
     }),
-        (f = e),
-        (E = t),
-        (h = n);
+        (E = e),
+        (_ = t),
+        (p = n);
 }
-function m(e) {
-    _.set(l(e.id, e.applicationId), e);
+function f(e) {
+    h.set(o(e.id, e.applicationId), e);
 }
 function g(e, t) {
-    _.delete(l(e, t));
+    h.delete(o(e, t));
 }
-class A extends r.Ay.Store {
+class I extends i.Ay.Store {
     static displayName = "GameRelationshipStore";
     initialize() {
         this.waitFor(a.A);
     }
     getPendingIncomingCount() {
-        return f;
-    }
-    getPendingOutgoingCount() {
         return E;
     }
+    getPendingOutgoingCount() {
+        return _;
+    }
     getGameFriendCount() {
-        return h;
+        return p;
     }
     getGameFriendsForApplication(e) {
-        return _.values(u(e), !0).filter((e) => e.type === o.eA$.FRIEND);
+        return h.values(d(e), !0).filter((e) => e.type === s.eA$.FRIEND);
     }
     getGameRelationshipsForUser(e) {
-        return _.values(d(e), !0);
+        return h.values(u(e), !0);
     }
     getGameRelationshipsForUserByType(e, t) {
         return this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
     }
     getGameFriendsForUser(e) {
-        return this.getGameRelationshipsForUserByType(e, o.eA$.FRIEND);
+        return this.getGameRelationshipsForUserByType(e, s.eA$.FRIEND);
     }
     getGameRelationshipCount() {
-        return _.size();
+        return h.size();
     }
     getGameRelationships() {
-        return _;
+        return h;
     }
     getGameRelationshipsByType(e) {
-        return _.values(c(e), !0);
+        return h.values(c(e), !0);
     }
     getGameRelationshipsVersion() {
-        return _.version;
+        return h.version;
     }
 }
-let I = new A(s.h, {
+let T = new I(l.h, {
     CONNECTION_OPEN: function (e) {
-        _.clear(),
+        h.clear(),
             e.gameRelationships.forEach((e) => {
-                m({
+                f({
                     id: e.id,
                     applicationId: e.application_id,
                     type: e.type,
@@ -93,21 +92,21 @@ let I = new A(s.h, {
                     dmAccessType: e.dm_access_type,
                 });
             }),
-            p();
+            A();
     },
     GAME_RELATIONSHIP_ADD: function (e) {
-        m(e.gameRelationship), p();
+        f(e.gameRelationship), A();
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
-        g(e.userId, e.applicationId), p();
+        g(e.userId, e.applicationId), A();
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;
         if (null != t) {
             for (let e of t)
-                for (let t of _.values(u(e)))
-                    (t.type === o.eA$.PENDING_INCOMING || t.type === o.eA$.PENDING_OUTGOING) && g(t.id, e);
-            p();
+                for (let t of h.values(d(e)))
+                    (t.type === s.eA$.PENDING_INCOMING || t.type === s.eA$.PENDING_OUTGOING) && g(t.id, e);
+            A();
         }
     },
 });

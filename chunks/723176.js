@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { A: () => c });
-var r = n(311907),
-    i = n(35033),
-    a = n(73153),
-    s = n(961350),
-    o = n(989950);
-i.CV.KvCache, i.CV.KvCache;
-class l extends r.Ay.Store {
-    database = (e) => o.A.database(e ?? s.default.getId());
-    channels = u((e) => new i.Be("guild_channels", i.CV.KvCache, e));
-    channelsTemp = u((e) => new i.iW("guild_channels_temp", i.CV.KvCache, e));
-    basicChannels = u((e) => new i.Ls("basic_channels", i.CV.KvCache, e));
-    syncedBasicChannels = u((e) => new i.Ls("basic_channels_synced", i.CV.KvCache, e));
-    cache = u((e) => new i.Ls("cache", i.CV.KvCache, e));
-    forceResyncVersion = u((e) => new i.Ls("force_resync_version", i.CV.KvCache, e));
-    emojis = u((e) => new i.Be("guild_emojis", i.CV.KvCache, e));
-    guilds = u((e) => new i.uh("guilds", i.CV.KvCache, e));
-    guildsRequiringDeletedIdsSync = u((e) => new i.uh("guilds_requiring_deleted_ids_sync", i.CV.KvCache, e));
-    guildsRequiringChannelSync = u((e) => new i.uh("guilds_requiring_channel_sync", i.CV.KvCache, e));
-    messages = u((e) => new i.AR("messages", i.CV.Messages, e));
-    stickers = u((e) => new i.Be("guild_stickers", i.CV.KvCache, e));
-    guildVersions = u((e) => new i.uh("guild_versions", i.CV.KvCache, e));
-    nonGuildVersions = u((e) => new i.uh("non_guild_versions", i.CV.KvCache, e));
-    userSettings = u((e) => new i.uh("user_settings", i.CV.KvCache, e));
-    readStates = u((e) => new i.Ls("read_states", i.CV.KvCache, e));
-    userGuildSettings = u((e) => new i.Ls("user_guild_settings", i.CV.KvCache, e));
-    userSearchItems = u((e) => new i.uh("user_search_items", i.CV.KvCache, e));
+n.d(t, { A: () => _ });
+var i = n(17928),
+    r = n(519551),
+    s = n(228366),
+    a = n(495544),
+    o = n(45773);
+r.CV.KvCache, r.CV.KvCache;
+class l extends i.Ay.Store {
+    database = (e) => o.A.database(e ?? a.default.getId());
+    channels = d((e) => new r.Be("guild_channels", r.CV.KvCache, e));
+    channelsTemp = d((e) => new r.iW("guild_channels_temp", r.CV.KvCache, e));
+    basicChannels = d((e) => new r.Ls("basic_channels", r.CV.KvCache, e));
+    syncedBasicChannels = d((e) => new r.Ls("basic_channels_synced", r.CV.KvCache, e));
+    cache = d((e) => new r.Ls("cache", r.CV.KvCache, e));
+    forceResyncVersion = d((e) => new r.Ls("force_resync_version", r.CV.KvCache, e));
+    emojis = d((e) => new r.Be("guild_emojis", r.CV.KvCache, e));
+    guilds = d((e) => new r.uh("guilds", r.CV.KvCache, e));
+    guildsRequiringDeletedIdsSync = d((e) => new r.uh("guilds_requiring_deleted_ids_sync", r.CV.KvCache, e));
+    guildsRequiringChannelSync = d((e) => new r.uh("guilds_requiring_channel_sync", r.CV.KvCache, e));
+    messages = d((e) => new r.AR("messages", r.CV.Messages, e));
+    stickers = d((e) => new r.Be("guild_stickers", r.CV.KvCache, e));
+    guildVersions = d((e) => new r.uh("guild_versions", r.CV.KvCache, e));
+    nonGuildVersions = d((e) => new r.uh("non_guild_versions", r.CV.KvCache, e));
+    userSettings = d((e) => new r.uh("user_settings", r.CV.KvCache, e));
+    readStates = d((e) => new r.Ls("read_states", r.CV.KvCache, e));
+    userGuildSettings = d((e) => new r.Ls("user_guild_settings", r.CV.KvCache, e));
+    userSearchItems = d((e) => new r.uh("user_search_items", r.CV.KvCache, e));
     channelsTransaction = (e) => this.channels(e.database).upgradeTransaction(e);
     channelsTempTransaction = (e) => this.channelsTemp(e.database).upgradeTransaction(e);
     basicChannelsTransaction = (e) => this.basicChannels(e.database).upgradeTransaction(e);
@@ -46,13 +46,13 @@ class l extends r.Ay.Store {
     guildsRequiringChannelSyncTransaction = (e) => this.guildsRequiringChannelSync(e.database).upgradeTransaction(e);
     userSearchItemsTransaction = (e) => this.userSearchItems(e.database).upgradeTransaction(e);
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
 }
-function u(e) {
+function d(e) {
     return function (t) {
-        let n = t ?? o.A.database(s.default.getId());
+        let n = t ?? o.A.database(a.default.getId());
         return null == n ? null : e(n);
     };
 }
-let c = new l(a.h, {});
+let _ = new l(s.h, {});

@@ -1,42 +1,42 @@
-n.d(t, { default: () => R });
+n.d(t, { default: () => M });
 var a = n(627968),
     i = n(64700),
     l = n(189213),
-    r = n(311907),
-    s = n(562465),
+    r = n(17928),
+    s = n(636537),
     o = n(123292),
-    c = n(843472),
-    u = n(608299),
-    d = n(425059),
+    c = n(720149),
+    d = n(608299),
+    u = n(425059),
     m = n(390248),
     _ = n(946274),
     h = n(734057),
     p = n(31717),
-    f = n(71393),
-    g = n(320501),
+    g = n(71393),
+    f = n(232835),
     A = n(453771),
-    b = n(661191),
-    I = n(292348),
-    S = n(518960),
-    T = n(382287),
+    b = n(935208),
+    T = n(292348),
+    I = n(518960),
+    E = n(382287),
     C = n(853742),
-    x = n(835369),
-    E = n(218152),
-    y = n(652215),
+    S = n(350527),
+    y = n(218152),
+    x = n(652215),
     v = n(818348),
-    M = n(985018),
-    w = n(158482);
-async function L(e) {
+    O = n(985018),
+    N = n(158482);
+async function w(e) {
     let t,
         { thread: n, attachments: a, setIsUploading: i, guild: l, onClose: r } = e,
         o = b.default.castChannelIdAsMessageId(n.id),
-        _ = new d.A();
+        _ = new u.A();
     _.on("progress", (e) => {
         let t = (0, A.o2)(l.id);
-        e.currentSize > t && (_.cancel(), i(!1), r(), (0, S.V)(n, (0, T.LJ)(a)));
+        e.currentSize > t && (_.cancel(), i(!1), r(), (0, I.V)(n, (0, E.LJ)(a)));
     });
-    let h = g.A.getMessage(n.id, o),
-        f = null != h ? h.attachments : [];
+    let h = f.A.getMessage(n.id, o),
+        g = null != h ? h.attachments : [];
     i(!0);
     try {
         t = await _.uploadFiles(a);
@@ -44,66 +44,66 @@ async function L(e) {
         i(!1);
         return;
     }
-    let C = [...f, ...(t.map((e, t) => (0, I.OW)(e, t)) ?? [])];
+    let C = [...g, ...(t.map((e, t) => (0, T.OW)(e, t)) ?? [])];
     try {
-        await s.Bo.patch({ url: y.Rsh.MESSAGE(n.id, o), body: { attachments: C }, rejectWithError: !1 }),
+        await s.Bo.patch({ url: x.Rsh.MESSAGE(n.id, o), body: { attachments: C }, rejectWithError: !1 }),
             r(),
-            u.A.clearAll(n.id, p.C.ChannelMessage);
+            d.A.clearAll(n.id, p.C.ChannelMessage);
     } catch (e) {
         i(!1),
-            e.body?.code === y.t02.EXPLICIT_CONTENT &&
+            e.body?.code === x.t02.EXPLICIT_CONTENT &&
                 (r(),
                 c.A.sendExplicitMediaClydeError(
                     n.id,
                     e.body?.attachments,
                     m.SW.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
                 ),
-                u.A.clearAll(n.id, p.C.ChannelMessage));
+                d.A.clearAll(n.id, p.C.ChannelMessage));
     }
 }
-function R(e) {
-    let { threadId: t, attachments: n, sendMessage: s, transitionState: c, onClose: u } = e,
-        d = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
-        m = (0, r.bG)([f.A], () => f.A.getGuild(d?.getGuildId()), [d]),
-        p = (0, r.bG)([h.A], () => h.A.getChannel(d?.parent_id), [d]),
-        g = n[0]?.item,
+function M(e) {
+    let { threadId: t, attachments: n, sendMessage: s, transitionState: c, onClose: d } = e,
+        u = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
+        m = (0, r.bG)([g.A], () => g.A.getGuild(u?.getGuildId()), [u]),
+        p = (0, r.bG)([h.A], () => h.A.getChannel(u?.parent_id), [u]),
+        f = n[0]?.item,
         [A, b] = i.useState(null);
     i.useEffect(() => {
-        null != g && (0, _.JF)(g.file, (e, t) => b(e), v.tE);
-    }, [g]);
-    let I =
-            null != g && null != A
-                ? { src: A, width: x.T5, height: x.Co, spoiler: n[0].spoiler, alt: n[0].description }
+        null != f && (0, _.JF)(f.file, (e, t) => b(e), v.tE);
+    }, [f]);
+    let T =
+            null != f && null != A
+                ? { src: A, width: S.T5, height: S.Co, spoiler: n[0].spoiler, alt: n[0].description }
                 : null,
-        [S, T] = i.useState(!1),
-        y = i.useCallback(() => {
-            (0, C.jh)({ added: !1 }), s(), u();
-        }, [s, u]),
-        R = i.useCallback(() => {
-            null != d &&
+        [I, E] = i.useState(!1),
+        x = i.useCallback(() => {
+            (0, C.jh)({ added: !1 }), s(), d();
+        }, [s, d]),
+        M = i.useCallback(() => {
+            null != u &&
                 null != m &&
-                ((0, C.jh)({ added: !0 }), L({ thread: d, attachments: n, setIsUploading: T, guild: m, onClose: u }));
-        }, [d, n, T, m, u]);
+                ((0, C.jh)({ added: !0 }), w({ thread: u, attachments: n, setIsUploading: E, guild: m, onClose: d }));
+        }, [u, n, E, m, d]);
     return null == p
         ? null
         : (0, a.jsx)(l.Modal, {
-              title: M.intl.string(M.t["+SZF6S"]),
-              subtitle: M.intl.string(M.t["0Ycgw5"]),
+              title: O.intl.string(O.t["+SZF6S"]),
+              subtitle: O.intl.string(O.t["0Ycgw5"]),
               transitionState: c,
-              onClose: u,
+              onClose: d,
               actionBarInput: (0, a.jsx)(o.Q, {
                   variant: "secondary",
-                  disabled: S,
-                  onClick: u,
-                  text: M.intl.string(M.t["ETE/oC"]),
+                  disabled: I,
+                  onClick: d,
+                  text: O.intl.string(O.t["ETE/oC"]),
               }),
               actions: [
-                  { variant: "secondary", text: M.intl.string(M.t["8rKVHL"]), disabled: S, onClick: y },
-                  { variant: "primary", text: M.intl.string(M.t.d611xH), loading: S, onClick: R, autoFocus: !0 },
+                  { variant: "secondary", text: O.intl.string(O.t["8rKVHL"]), disabled: I, onClick: x },
+                  { variant: "primary", text: O.intl.string(O.t.d611xH), loading: I, onClick: M, autoFocus: !0 },
               ],
-              children: (0, a.jsx)(E.Cp, {
+              children: (0, a.jsx)(y.Cp, {
                   channel: p,
-                  children: (0, a.jsx)(x.Ay, { threadId: t, goToThread: v.tE, overrideMedia: I, className: w.u }),
+                  children: (0, a.jsx)(S.Ay, { threadId: t, goToThread: v.tE, overrideMedia: T, className: N.u }),
               }),
           });
 }

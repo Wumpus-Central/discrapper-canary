@@ -1,56 +1,56 @@
 "use strict";
 n.d(t, { A: () => s });
-var r = n(64700),
-    i = n(311907);
+var i = n(64700),
+    r = n(17928);
 function s(e, t, n, s) {
-    let { name: a, kind: o, variations: l, defaultConfig: u } = e;
+    let { name: a, kind: o, variations: l, defaultConfig: d } = e;
     return (
         t.registerExperiment(e),
         {
             definition: e,
             useConfig: function (e) {
                 let n = s(o, e),
-                    d = s("user", e),
-                    [c, _] = (0, i.yK)([t], () => t.getEvaluationAndAssignment(o, n, a, d), [n, d]),
-                    f = _?.variantId,
-                    E = _?.trackedVariantId ?? f,
-                    h = _?.revision,
-                    p = _?.isOverride,
-                    m = _?.exposureTrackingEnabled,
-                    g = _?.useAsEligibility;
-                return ((0, r.useEffect)(() => {
-                    null != c &&
-                        null != E &&
+                    _ = s("user", e),
+                    [u, c] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(o, n, a, _), [n, _]),
+                    E = c?.variantId,
+                    h = c?.trackedVariantId ?? E,
+                    m = c?.revision,
+                    f = c?.isOverride,
+                    g = c?.exposureTrackingEnabled,
+                    p = c?.useAsEligibility;
+                return ((0, i.useEffect)(() => {
+                    null != u &&
                         null != h &&
-                        !1 === p &&
-                        !0 === m &&
-                        !0 !== g &&
-                        t.trackExperimentExposure(c, a, e.location, o, h, E, n);
-                }, [n, c, E, h, e.location, p, m, g]),
-                null == f || !0 === g)
-                    ? u
-                    : (l[f] ?? u);
+                        null != m &&
+                        !1 === f &&
+                        !0 === g &&
+                        !0 !== p &&
+                        t.trackExperimentExposure(u, a, e.location, o, m, h, n);
+                }, [n, u, h, m, e.location, f, g, p]),
+                null == E || !0 === p)
+                    ? d
+                    : (l[E] ?? d);
             },
             getConfig: function (e) {
-                let r = n(o, e),
-                    i = "guild" === o ? n("user", { location: e.location }) : void 0,
-                    [s, d] = t.getEvaluationAndAssignment(o, r, a, i),
-                    c = d?.variantId,
-                    _ = d?.trackedVariantId ?? c,
-                    f = d?.revision,
-                    E = d?.isOverride,
-                    h = d?.exposureTrackingEnabled,
-                    p = d?.useAsEligibility;
+                let i = n(o, e),
+                    r = "guild" === o ? n("user", { location: e.location }) : void 0,
+                    [s, _] = t.getEvaluationAndAssignment(o, i, a, r),
+                    u = _?.variantId,
+                    c = _?.trackedVariantId ?? u,
+                    E = _?.revision,
+                    h = _?.isOverride,
+                    m = _?.exposureTrackingEnabled,
+                    f = _?.useAsEligibility;
                 return (null != s &&
-                    null != _ &&
-                    null != f &&
-                    !1 === E &&
-                    !0 === h &&
-                    !0 !== p &&
-                    t.trackExperimentExposure(s, a, e.location, o, f, _, r),
-                null == c || !0 === p)
-                    ? u
-                    : (l[c] ?? u);
+                    null != c &&
+                    null != E &&
+                    !1 === h &&
+                    !0 === m &&
+                    !0 !== f &&
+                    t.trackExperimentExposure(s, a, e.location, o, E, c, i),
+                null == u || !0 === f)
+                    ? d
+                    : (l[u] ?? d);
             },
         }
     );

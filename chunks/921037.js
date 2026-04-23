@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => _, B: () => c });
+n.d(t, { A: () => h, B: () => d });
 var r = n(362474),
-    i = n(73153),
-    a = n(846293),
-    s = n(439372),
-    o = n(961350),
-    l = n(723702),
+    i = n(228366),
+    a = n(376728),
+    l = n(439372),
+    o = n(495544),
+    s = n(723702),
     u = n(652215);
-let c = "guestInviteToAccept";
-class d extends s.A {
+let d = "guestInviteToAccept";
+class c extends l.A {
     actions = { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() };
     handleConnectionOpen = async () => {
-        if ((0, l.isWeb)()) {
-            let e = r.u.get(c);
+        if ((0, s.isWeb)()) {
+            let e = r.u.get(d);
             if (null != e && "string" == typeof e && o.default.isAuthenticated()) {
                 let { invite: t } = await a.Ay.resolveInvite(e, "Desktop Modal");
                 null != t &&
                     (i.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: t, code: e, context: u.BRT.APP }),
-                    r.u.remove(c));
+                    r.u.remove(d));
             }
         }
     };
 }
-let _ = new d();
+let h = new c();

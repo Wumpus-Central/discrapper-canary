@@ -1,58 +1,58 @@
 "use strict";
 n.d(t, {
-    IC: () => _,
+    IC: () => c,
     Ju: () => l,
     Vz: () => o,
-    cC: () => h,
-    jn: () => f,
-    uD: () => u,
-    uF: () => p,
-    uv: () => d,
-    v0: () => c,
+    cC: () => m,
+    jn: () => E,
+    uD: () => d,
+    uF: () => h,
+    uv: () => u,
+    v0: () => _,
 });
-var r = n(73153),
-    i = n(810412),
-    s = n(555528),
+var i = n(228366),
+    r = n(810412),
+    s = n(38502),
     a = n(9302);
 function o(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.OVERLAY_DEFAULT_RESOLUTION;
-    r.h.dispatch({ type: "LAYOUT_CREATE", layoutId: e, widgets: t, version: n, defaultResolution: i });
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.OVERLAY_DEFAULT_RESOLUTION;
+    i.h.dispatch({ type: "LAYOUT_CREATE", layoutId: e, widgets: t, version: n, defaultResolution: r });
 }
 function l(e) {
-    let { widgetId: t, anchor: n, size: i, minSize: s, defaultSize: a, opacity: o } = e;
-    r.h.dispatch({
+    let { widgetId: t, anchor: n, size: r, minSize: s, defaultSize: a, opacity: o } = e;
+    i.h.dispatch({
         type: "LAYOUT_UPDATE_WIDGET",
         widgetId: t,
         anchor: n,
-        size: i,
+        size: r,
         minSize: s,
         defaultSize: a,
         opacity: o,
     });
 }
-function u(e) {
-    r.h.dispatch({ type: "LAYOUT_SET_TOP_WIDGET", widgetId: e });
-}
-function c(e) {
-    let { forcedPinnedState: t, shouldTrack: n = !0 } =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        a = r.h.dispatch({ type: "LAYOUT_SET_PINNED", widgetId: e, pinned: t });
-    if (!n) return a;
-    let o = s.A.getWidget(e);
-    return null == o || (0, i.xp)(o.type, { pinned: t ?? !o.pinned }), a;
-}
 function d(e) {
-    r.h.dispatch({ type: "LAYOUT_DELETE_WIDGET", widgetId: e });
+    i.h.dispatch({ type: "LAYOUT_SET_TOP_WIDGET", widgetId: e });
 }
 function _(e) {
-    r.h.dispatch({ type: "LAYOUT_DELETE_ALL_WIDGETS", layoutId: e });
+    let { forcedPinnedState: t, shouldTrack: n = !0 } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        a = i.h.dispatch({ type: "LAYOUT_SET_PINNED", widgetId: e, pinned: t });
+    if (!n) return a;
+    let o = s.A.getWidget(e);
+    return null == o || (0, r.xp)(o.type, { pinned: t ?? !o.pinned }), a;
 }
-function f(e) {
-    p([e]);
+function u(e) {
+    i.h.dispatch({ type: "LAYOUT_DELETE_WIDGET", widgetId: e });
 }
-function p(e) {
-    r.h.dispatch({ type: "LAYOUT_CREATE_WIDGETS", widgetConfigs: e });
+function c(e) {
+    i.h.dispatch({ type: "LAYOUT_DELETE_ALL_WIDGETS", layoutId: e });
 }
-function h(e, t) {
-    r.h.dispatch({ type: "LAYOUT_SET_WIDGET_META", widgetId: e, meta: t });
+function E(e) {
+    h([e]);
+}
+function h(e) {
+    i.h.dispatch({ type: "LAYOUT_CREATE_WIDGETS", widgetConfigs: e });
+}
+function m(e, t) {
+    i.h.dispatch({ type: "LAYOUT_SET_WIDGET_META", widgetId: e, meta: t });
 }

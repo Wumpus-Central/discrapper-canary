@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { Ay: () => L, Tc: () => b, dD: () => N, mB: () => O, oF: () => v, oo: () => S, pd: () => y, uW: () => R }),
+n.d(t, { Ay: () => P, Tc: () => b, dD: () => m, mB: () => L, oF: () => h, oo: () => C, pd: () => p, uW: () => D }),
     n(667532);
-var r = n(265690),
-    i = n(121894),
-    s = n(311907),
-    a = n(73153),
-    o = n(715314),
+var i = n(265690),
+    r = n(121894),
+    a = n(17928),
+    s = n(228366),
+    _ = n(715314),
     l = n(45143),
-    u = n(870570),
-    d = n(787925);
-let c = new (n(863620).u)(),
-    _ = () => ({
+    o = n(870570),
+    E = n(787925);
+let d = new (n(863620).u)(),
+    c = () => ({
         candidates: new Map(),
         shownFatigableCandidate: null,
         prevFatigableCandidate: null,
@@ -20,22 +19,22 @@ let c = new (n(863620).u)(),
         lastWinnerTime: 0,
         postConnectionOpen: !1,
     }),
-    f = (0, r.h)(_),
-    E = !1,
-    h = (e) => ({
+    u = (0, i.h)(c),
+    I = !1,
+    A = (e) => ({
         ...e,
         candidates: new Map(e.candidates),
         currentlyShown: new Set(e.currentlyShown),
         currentlyShownGroup: new Set(e.currentlyShownGroup),
     }),
-    p = (e, t) => (
+    T = (e, t) => (
         null == t ||
             (null != t.content && e.currentlyShown.delete(t.content),
             null != t.groupName && e.currentlyShownGroup.delete(t.groupName),
             e.shownFatigableCandidate?.content === t.content && (e.shownFatigableCandidate = null)),
         e
     ),
-    m = (e, t) => {
+    S = (e, t) => {
         if (null == t) return e;
         e.currentlyShown.add(t.content);
         let n = e.recentlyShown.filter((e) => e !== t.content);
@@ -44,7 +43,7 @@ let c = new (n(863620).u)(),
             n.splice(5),
             (e.recentlyShown = n),
             null != t.groupName && e.currentlyShownGroup.add(t.groupName),
-            d.C.has(t.content) ||
+            E.C.has(t.content) ||
                 ((e.shownFatigableCandidate = t),
                 e.prevFatigableCandidate?.content !== t.content &&
                     ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
@@ -52,9 +51,9 @@ let c = new (n(863620).u)(),
             e
         );
     },
-    g = (e, t) => (e.candidates.delete(t.content), e),
-    A = (e, t) => m(p(e, e.shownFatigableCandidate), t),
-    I = (e) => {
+    N = (e, t) => (e.candidates.delete(t.content), e),
+    O = (e, t) => S(T(e, e.shownFatigableCandidate), t),
+    R = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > 3e5;
         if (
@@ -64,19 +63,19 @@ let c = new (n(863620).u)(),
             !t
         )
             return (
-                c.unschedule(),
-                A(e, null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0)
+                d.unschedule(),
+                O(e, null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0)
             );
         return (
             (null != e.shownFatigableCandidate && !t) ||
-                c.scheduled() ||
-                T(e) ||
-                c.schedule(() => {
-                    (0, i.r)(() => {
-                        f.setState((e) => {
+                d.scheduled() ||
+                f(e) ||
+                d.schedule(() => {
+                    (0, r.r)(() => {
+                        u.setState((e) => {
                             let t,
-                                n = h(e);
-                            return A(
+                                n = A(e);
+                            return O(
                                 n,
                                 ((t = [...n.candidates.keys()]),
                                 null !== n.prevFatigableCandidate &&
@@ -91,54 +90,54 @@ let c = new (n(863620).u)(),
             e
         );
     },
-    T = (e) => {
+    f = (e) => {
         let t = new Date().getTime();
         return null == e.shownFatigableCandidate && t - e.lastWinnerTime < 36e5;
     },
-    S = (e) => {
-        let t = d.C.has(e.content);
-        (0, i.r)(() => {
-            f.setState((n) => {
-                let r = h(n);
-                return E ? r : t ? m(r, e) : I((r.candidates.set(e.content, e), r));
+    C = (e) => {
+        let t = E.C.has(e.content);
+        (0, r.r)(() => {
+            u.setState((n) => {
+                let i = A(n);
+                return I ? i : t ? S(i, e) : R((i.candidates.set(e.content, e), i));
             });
         });
     },
-    y = (e, t) => {
-        (0, i.r)(() => {
-            f.setState((n) => {
-                let r = h(n);
-                return t ? I(p(g(r, e), e)) : p(g(r, e), e);
+    p = (e, t) => {
+        (0, r.r)(() => {
+            u.setState((n) => {
+                let i = A(n);
+                return t ? R(T(N(i, e), e)) : T(N(i, e), e);
             });
         });
     },
-    N = (e) => f.getState().currentlyShown.has(e),
-    O = (e) => f((t) => t.currentlyShown.has(e)),
-    R = (e) => f((t) => e.some((e) => t.currentlyShown.has(e))),
-    v = () => {
-        let e = [...f.getState().currentlyShown].filter((e) => !d.C.has(e)).length;
-        return [f.getState().currentlyShown.size, e];
+    m = (e) => u.getState().currentlyShown.has(e),
+    L = (e) => u((t) => t.currentlyShown.has(e)),
+    D = (e) => u((t) => e.some((e) => t.currentlyShown.has(e))),
+    h = () => {
+        let e = [...u.getState().currentlyShown].filter((e) => !E.C.has(e)).length;
+        return [u.getState().currentlyShown.size, e];
     },
-    C = () => {
-        (0, i.r)(() => {
-            f.setState(() => {
-                let e = _();
+    g = () => {
+        (0, r.r)(() => {
+            u.setState(() => {
+                let e = c();
                 return (e.postConnectionOpen = !0), e;
             });
         }),
-            c.unschedule();
+            d.unschedule();
     },
-    b = () => f.getState().postConnectionOpen;
-class D extends s.Ay.Store {
+    b = () => u.getState().postConnectionOpen;
+class U extends a.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
-        this.waitFor(o.A, u.A), this.syncWith([o.A, u.A], () => this.setHasRequiredAction());
+        this.waitFor(_.A, o.A), this.syncWith([_.A, o.A], () => this.setHasRequiredAction());
     }
     setHasRequiredAction() {
-        E = (0, l.A)(o.A, u.A);
+        I = (0, l.A)(_.A, o.A);
     }
 }
-function L(e, t) {
-    return f(e, t);
+function P(e, t) {
+    return u(e, t);
 }
-new D(a.h, { CONNECTION_OPEN: () => C(), LOGOUT: () => C() });
+new U(s.h, { CONNECTION_OPEN: () => g(), LOGOUT: () => g() });

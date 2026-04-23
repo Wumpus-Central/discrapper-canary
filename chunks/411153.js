@@ -1,133 +1,133 @@
-n.d(t, { Ag: () => E, Ay: () => d, QO: () => c, pq: () => u });
+n.d(t, { Ag: () => _, Ay: () => d, QO: () => u, pq: () => o });
 var l = n(989349),
-    r = n.n(l),
-    a = n(315069),
-    i = n(728458),
-    s = n(661191),
-    o = n(652215);
-function E(e) {
-    if (e === o.F_X.ALL) return o.GaG.ALL;
-    if (e <= o.F_X.GUILD_UPDATE) return o.GaG.GUILD;
-    if (e <= o.F_X.CHANNEL_DELETE || e === o.F_X.MESSAGE_BULK_DELETE) return o.GaG.CHANNEL;
-    if (e <= o.F_X.CHANNEL_OVERWRITE_DELETE) return o.GaG.CHANNEL_OVERWRITE;
-    if (e <= o.F_X.BOT_ADD || e === o.F_X.MESSAGE_DELETE || e === o.F_X.MESSAGE_PIN || e === o.F_X.MESSAGE_UNPIN)
-        return o.GaG.USER;
-    else if (e <= o.F_X.ROLE_DELETE) return o.GaG.ROLE;
-    else if (e <= o.F_X.INVITE_DELETE) return o.GaG.INVITE;
-    else if (e <= o.F_X.WEBHOOK_DELETE) return o.GaG.WEBHOOK;
-    else if (e <= o.F_X.EMOJI_DELETE) return o.GaG.EMOJI;
-    else if (e <= o.F_X.INTEGRATION_DELETE) return o.GaG.INTEGRATION;
-    else if (e <= o.F_X.STAGE_INSTANCE_DELETE) return o.GaG.STAGE_INSTANCE;
-    else if (e <= o.F_X.STICKER_DELETE) return o.GaG.STICKER;
-    else if (e <= o.F_X.GUILD_SCHEDULED_EVENT_DELETE) return o.GaG.GUILD_SCHEDULED_EVENT;
-    else if (e <= o.F_X.THREAD_DELETE) return o.GaG.THREAD;
-    else if (e === o.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE) return o.GaG.APPLICATION_COMMAND;
-    else if (e <= o.F_X.SOUNDBOARD_SOUND_DELETE) return o.GaG.GUILD_SOUNDBOARD;
-    else if (e < o.F_X.AUTO_MODERATION_BLOCK_MESSAGE) return o.GaG.AUTO_MODERATION_RULE;
-    else if (e === o.F_X.AUTO_MODERATION_BLOCK_MESSAGE) return o.GaG.USER;
-    else if (e === o.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL) return o.GaG.USER;
-    else if (e === o.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) return o.GaG.USER;
-    else if (e === o.F_X.AUTO_MODERATION_QUARANTINE_USER) return o.GaG.USER;
-    else if (e <= o.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED) return o.GaG.GUILD;
-    else if (e <= o.F_X.ONBOARDING_PROMPT_DELETE) return o.GaG.ONBOARDING_PROMPT;
-    else if (e <= o.F_X.ONBOARDING_UPDATE) return o.GaG.GUILD_ONBOARDING;
-    else if (e <= o.F_X.GUILD_HOME_REMOVE_ITEM) return o.GaG.GUILD_HOME;
-    else if (e <= o.F_X.HARMFUL_LINKS_BLOCKED_MESSAGE) return o.GaG.GUILD;
-    else if (e <= o.F_X.HOME_SETTINGS_UPDATE) return o.GaG.HOME_SETTINGS;
-    else if (e <= o.F_X.VOICE_CHANNEL_STATUS_DELETE) return o.GaG.VOICE_CHANNEL_STATUS;
-    else if (e <= o.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION;
-    else if (e <= o.F_X.GUILD_MEMBER_VERIFICATION_UPDATE) return o.GaG.GUILD_MEMBER_VERIFICATION;
-    else if (e <= o.F_X.GUILD_PROFILE_UPDATE) return o.GaG.GUILD_PROFILE;
-    else if (e <= o.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return o.GaG.GUILD;
-    return i.A.captureMessage(`Unknown target type for: ${e}`), o.GaG.UNKNOWN;
+    a = n.n(l),
+    r = n(315069),
+    i = n(38405),
+    s = n(935208),
+    E = n(652215);
+function _(e) {
+    if (e === E.F_X.ALL) return E.GaG.ALL;
+    if (e <= E.F_X.GUILD_UPDATE) return E.GaG.GUILD;
+    if (e <= E.F_X.CHANNEL_DELETE || e === E.F_X.MESSAGE_BULK_DELETE) return E.GaG.CHANNEL;
+    if (e <= E.F_X.CHANNEL_OVERWRITE_DELETE) return E.GaG.CHANNEL_OVERWRITE;
+    if (e <= E.F_X.BOT_ADD || e === E.F_X.MESSAGE_DELETE || e === E.F_X.MESSAGE_PIN || e === E.F_X.MESSAGE_UNPIN)
+        return E.GaG.USER;
+    else if (e <= E.F_X.ROLE_DELETE) return E.GaG.ROLE;
+    else if (e <= E.F_X.INVITE_DELETE) return E.GaG.INVITE;
+    else if (e <= E.F_X.WEBHOOK_DELETE) return E.GaG.WEBHOOK;
+    else if (e <= E.F_X.EMOJI_DELETE) return E.GaG.EMOJI;
+    else if (e <= E.F_X.INTEGRATION_DELETE) return E.GaG.INTEGRATION;
+    else if (e <= E.F_X.STAGE_INSTANCE_DELETE) return E.GaG.STAGE_INSTANCE;
+    else if (e <= E.F_X.STICKER_DELETE) return E.GaG.STICKER;
+    else if (e <= E.F_X.GUILD_SCHEDULED_EVENT_DELETE) return E.GaG.GUILD_SCHEDULED_EVENT;
+    else if (e <= E.F_X.THREAD_DELETE) return E.GaG.THREAD;
+    else if (e === E.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE) return E.GaG.APPLICATION_COMMAND;
+    else if (e <= E.F_X.SOUNDBOARD_SOUND_DELETE) return E.GaG.GUILD_SOUNDBOARD;
+    else if (e < E.F_X.AUTO_MODERATION_BLOCK_MESSAGE) return E.GaG.AUTO_MODERATION_RULE;
+    else if (e === E.F_X.AUTO_MODERATION_BLOCK_MESSAGE) return E.GaG.USER;
+    else if (e === E.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL) return E.GaG.USER;
+    else if (e === E.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) return E.GaG.USER;
+    else if (e === E.F_X.AUTO_MODERATION_QUARANTINE_USER) return E.GaG.USER;
+    else if (e <= E.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED) return E.GaG.GUILD;
+    else if (e <= E.F_X.ONBOARDING_PROMPT_DELETE) return E.GaG.ONBOARDING_PROMPT;
+    else if (e <= E.F_X.ONBOARDING_UPDATE) return E.GaG.GUILD_ONBOARDING;
+    else if (e <= E.F_X.GUILD_HOME_REMOVE_ITEM) return E.GaG.GUILD_HOME;
+    else if (e <= E.F_X.HARMFUL_LINKS_BLOCKED_MESSAGE) return E.GaG.GUILD;
+    else if (e <= E.F_X.HOME_SETTINGS_UPDATE) return E.GaG.HOME_SETTINGS;
+    else if (e <= E.F_X.VOICE_CHANNEL_STATUS_DELETE) return E.GaG.VOICE_CHANNEL_STATUS;
+    else if (e <= E.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return E.GaG.GUILD_SCHEDULED_EVENT_EXCEPTION;
+    else if (e <= E.F_X.GUILD_MEMBER_VERIFICATION_UPDATE) return E.GaG.GUILD_MEMBER_VERIFICATION;
+    else if (e <= E.F_X.GUILD_PROFILE_UPDATE) return E.GaG.GUILD_PROFILE;
+    else if (e <= E.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return E.GaG.GUILD;
+    return i.A.captureMessage(`Unknown target type for: ${e}`), E.GaG.UNKNOWN;
 }
-function u(e) {
+function o(e) {
     switch (e) {
-        case o.F_X.CHANNEL_CREATE:
-        case o.F_X.CHANNEL_OVERWRITE_CREATE:
-        case o.F_X.MEMBER_BAN_REMOVE:
-        case o.F_X.ROLE_CREATE:
-        case o.F_X.INVITE_CREATE:
-        case o.F_X.WEBHOOK_CREATE:
-        case o.F_X.EMOJI_CREATE:
-        case o.F_X.STICKER_CREATE:
-        case o.F_X.MESSAGE_PIN:
-        case o.F_X.BOT_ADD:
-        case o.F_X.INTEGRATION_CREATE:
-        case o.F_X.STAGE_INSTANCE_CREATE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_CREATE:
-        case o.F_X.THREAD_CREATE:
-        case o.F_X.AUTO_MODERATION_RULE_CREATE:
-        case o.F_X.CREATOR_MONETIZATION_REQUEST_CREATED:
-        case o.F_X.ONBOARDING_PROMPT_CREATE:
-        case o.F_X.ONBOARDING_CREATE:
-        case o.F_X.GUILD_HOME_FEATURE_ITEM:
-        case o.F_X.SOUNDBOARD_SOUND_CREATE:
-        case o.F_X.HOME_SETTINGS_CREATE:
-        case o.F_X.VOICE_CHANNEL_STATUS_CREATE:
-            return o.RWi.CREATE;
-        case o.F_X.CHANNEL_DELETE:
-        case o.F_X.CHANNEL_OVERWRITE_DELETE:
-        case o.F_X.MEMBER_KICK:
-        case o.F_X.MEMBER_PRUNE:
-        case o.F_X.MEMBER_BAN_ADD:
-        case o.F_X.ROLE_DELETE:
-        case o.F_X.INVITE_DELETE:
-        case o.F_X.WEBHOOK_DELETE:
-        case o.F_X.EMOJI_DELETE:
-        case o.F_X.STICKER_DELETE:
-        case o.F_X.MESSAGE_DELETE:
-        case o.F_X.MESSAGE_BULK_DELETE:
-        case o.F_X.MESSAGE_UNPIN:
-        case o.F_X.INTEGRATION_DELETE:
-        case o.F_X.MEMBER_DISCONNECT:
-        case o.F_X.STAGE_INSTANCE_DELETE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_DELETE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
-        case o.F_X.THREAD_DELETE:
-        case o.F_X.AUTO_MODERATION_BLOCK_MESSAGE:
-        case o.F_X.AUTO_MODERATION_RULE_DELETE:
-        case o.F_X.ONBOARDING_PROMPT_DELETE:
-        case o.F_X.GUILD_HOME_REMOVE_ITEM:
-        case o.F_X.SOUNDBOARD_SOUND_DELETE:
-        case o.F_X.VOICE_CHANNEL_STATUS_DELETE:
-            return o.RWi.DELETE;
-        case o.F_X.GUILD_UPDATE:
-        case o.F_X.CHANNEL_UPDATE:
-        case o.F_X.CHANNEL_OVERWRITE_UPDATE:
-        case o.F_X.MEMBER_UPDATE:
-        case o.F_X.MEMBER_ROLE_UPDATE:
-        case o.F_X.ROLE_UPDATE:
-        case o.F_X.INVITE_UPDATE:
-        case o.F_X.WEBHOOK_UPDATE:
-        case o.F_X.EMOJI_UPDATE:
-        case o.F_X.STICKER_UPDATE:
-        case o.F_X.INTEGRATION_UPDATE:
-        case o.F_X.MEMBER_MOVE:
-        case o.F_X.STAGE_INSTANCE_UPDATE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_UPDATE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
-        case o.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
-        case o.F_X.THREAD_UPDATE:
-        case o.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE:
-        case o.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-        case o.F_X.AUTO_MODERATION_RULE_UPDATE:
-        case o.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL:
-        case o.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-        case o.F_X.AUTO_MODERATION_QUARANTINE_USER:
-        case o.F_X.ONBOARDING_PROMPT_UPDATE:
-        case o.F_X.ONBOARDING_UPDATE:
-        case o.F_X.SOUNDBOARD_SOUND_UPDATE:
-        case o.F_X.HOME_SETTINGS_UPDATE:
-        case o.F_X.GUILD_MEMBER_VERIFICATION_UPDATE:
-        case o.F_X.GUILD_PROFILE_UPDATE:
-        case o.F_X.GUILD_MIGRATE_PIN_PERMISSION:
-        case o.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION:
-            return o.RWi.UPDATE;
+        case E.F_X.CHANNEL_CREATE:
+        case E.F_X.CHANNEL_OVERWRITE_CREATE:
+        case E.F_X.MEMBER_BAN_REMOVE:
+        case E.F_X.ROLE_CREATE:
+        case E.F_X.INVITE_CREATE:
+        case E.F_X.WEBHOOK_CREATE:
+        case E.F_X.EMOJI_CREATE:
+        case E.F_X.STICKER_CREATE:
+        case E.F_X.MESSAGE_PIN:
+        case E.F_X.BOT_ADD:
+        case E.F_X.INTEGRATION_CREATE:
+        case E.F_X.STAGE_INSTANCE_CREATE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_CREATE:
+        case E.F_X.THREAD_CREATE:
+        case E.F_X.AUTO_MODERATION_RULE_CREATE:
+        case E.F_X.CREATOR_MONETIZATION_REQUEST_CREATED:
+        case E.F_X.ONBOARDING_PROMPT_CREATE:
+        case E.F_X.ONBOARDING_CREATE:
+        case E.F_X.GUILD_HOME_FEATURE_ITEM:
+        case E.F_X.SOUNDBOARD_SOUND_CREATE:
+        case E.F_X.HOME_SETTINGS_CREATE:
+        case E.F_X.VOICE_CHANNEL_STATUS_CREATE:
+            return E.RWi.CREATE;
+        case E.F_X.CHANNEL_DELETE:
+        case E.F_X.CHANNEL_OVERWRITE_DELETE:
+        case E.F_X.MEMBER_KICK:
+        case E.F_X.MEMBER_PRUNE:
+        case E.F_X.MEMBER_BAN_ADD:
+        case E.F_X.ROLE_DELETE:
+        case E.F_X.INVITE_DELETE:
+        case E.F_X.WEBHOOK_DELETE:
+        case E.F_X.EMOJI_DELETE:
+        case E.F_X.STICKER_DELETE:
+        case E.F_X.MESSAGE_DELETE:
+        case E.F_X.MESSAGE_BULK_DELETE:
+        case E.F_X.MESSAGE_UNPIN:
+        case E.F_X.INTEGRATION_DELETE:
+        case E.F_X.MEMBER_DISCONNECT:
+        case E.F_X.STAGE_INSTANCE_DELETE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_DELETE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+        case E.F_X.THREAD_DELETE:
+        case E.F_X.AUTO_MODERATION_BLOCK_MESSAGE:
+        case E.F_X.AUTO_MODERATION_RULE_DELETE:
+        case E.F_X.ONBOARDING_PROMPT_DELETE:
+        case E.F_X.GUILD_HOME_REMOVE_ITEM:
+        case E.F_X.SOUNDBOARD_SOUND_DELETE:
+        case E.F_X.VOICE_CHANNEL_STATUS_DELETE:
+            return E.RWi.DELETE;
+        case E.F_X.GUILD_UPDATE:
+        case E.F_X.CHANNEL_UPDATE:
+        case E.F_X.CHANNEL_OVERWRITE_UPDATE:
+        case E.F_X.MEMBER_UPDATE:
+        case E.F_X.MEMBER_ROLE_UPDATE:
+        case E.F_X.ROLE_UPDATE:
+        case E.F_X.INVITE_UPDATE:
+        case E.F_X.WEBHOOK_UPDATE:
+        case E.F_X.EMOJI_UPDATE:
+        case E.F_X.STICKER_UPDATE:
+        case E.F_X.INTEGRATION_UPDATE:
+        case E.F_X.MEMBER_MOVE:
+        case E.F_X.STAGE_INSTANCE_UPDATE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_UPDATE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+        case E.F_X.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+        case E.F_X.THREAD_UPDATE:
+        case E.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE:
+        case E.F_X.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+        case E.F_X.AUTO_MODERATION_RULE_UPDATE:
+        case E.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL:
+        case E.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+        case E.F_X.AUTO_MODERATION_QUARANTINE_USER:
+        case E.F_X.ONBOARDING_PROMPT_UPDATE:
+        case E.F_X.ONBOARDING_UPDATE:
+        case E.F_X.SOUNDBOARD_SOUND_UPDATE:
+        case E.F_X.HOME_SETTINGS_UPDATE:
+        case E.F_X.GUILD_MEMBER_VERIFICATION_UPDATE:
+        case E.F_X.GUILD_PROFILE_UPDATE:
+        case E.F_X.GUILD_MIGRATE_PIN_PERMISSION:
+        case E.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION:
+            return E.RWi.UPDATE;
     }
-    return o.RWi.ALL;
+    return E.RWi.ALL;
 }
-class c {
+class u {
     key;
     oldValue;
     newValue;
@@ -136,7 +136,7 @@ class c {
         (this.key = e), (this.oldValue = t), (this.newValue = n);
     }
 }
-class _ extends a.A {
+class c extends r.A {
     id;
     actionType;
     action;
@@ -153,16 +153,16 @@ class _ extends a.A {
         super(),
             (this.id = e.id),
             (this.action = e.action),
-            (this.actionType = u(this.action)),
+            (this.actionType = o(this.action)),
             (this.targetId = e.targetId),
-            (this.timestampStart = e.timestampStart ?? r()(s.default.extractTimestamp(this.id))),
+            (this.timestampStart = e.timestampStart ?? a()(s.default.extractTimestamp(this.id))),
             (this.timestampEnd = e.timestampEnd ?? this.timestampStart),
             (this.userId = e.userId),
             (this.changes = e.changes ?? []),
-            (this.targetType = E(this.action)),
+            (this.targetType = _(this.action)),
             (this.options = e.options ?? {}),
             (this.target = e.target ?? e.id),
             (this.user = e.user ?? null);
     }
 }
-let d = _;
+let d = c;

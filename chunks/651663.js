@@ -1,124 +1,124 @@
-n.d(t, { default: () => P });
-var r = n(627968),
+n.d(t, { default: () => U });
+var a = n(627968),
     i = n(64700),
-    a = n(575593),
-    l = n(311907),
+    r = n(575593),
+    l = n(17928),
     o = n(778712),
-    _ = n(534514),
+    d = n(534514),
     s = n(834730),
-    E = n(821609),
-    d = n(631670),
-    u = n(162232),
-    c = n(674658),
-    p = n(587600),
-    A = n(84540),
-    I = n(836602),
-    S = n(287809),
-    T = n(728458),
-    R = n(829219),
-    f = n(341915),
-    h = n(890687),
-    N = n(579473),
-    O = n(92246),
-    g = n(109174),
-    C = n(524728),
-    D = n(654487),
-    y = n(985018),
-    L = n(845612);
-function U(e) {
-    let { quest: t, avatarDeco: n, onUseNow: i, user: a, mode: l } = e,
-        d = (0, N.tW)(t, N.fY.REWARD).url,
-        c = (0, h.FA)(t.config),
-        p = a.avatarDecoration?.skuId != null && a.avatarDecoration.skuId === n?.skuId;
-    return (0, r.jsxs)("div", {
-        className: L.hQ,
+    _ = n(821609),
+    u = n(631670),
+    c = n(162232),
+    p = n(674658),
+    E = n(56348),
+    S = n(84540),
+    h = n(836602),
+    A = n(287809),
+    I = n(38405),
+    v = n(829219),
+    R = n(507107),
+    g = n(890687),
+    T = n(859387),
+    f = n(801365),
+    m = n(801870),
+    y = n(448109),
+    N = n(654487),
+    C = n(985018),
+    D = n(845612);
+function L(e) {
+    let { quest: t, avatarDeco: n, onUseNow: i, user: r, mode: l } = e,
+        u = (0, T.tW)(t, T.fY.REWARD).url,
+        p = (0, g.FA)(t.config),
+        E = r.avatarDecoration?.skuId != null && r.avatarDecoration.skuId === n?.skuId;
+    return (0, a.jsxs)("div", {
+        className: D.hQ,
         children: [
-            (0, r.jsx)("div", {
-                className: L.i1,
-                children: (0, r.jsx)(u.A, {
-                    user: a,
+            (0, a.jsx)("div", {
+                className: D.i1,
+                children: (0, a.jsx)(c.A, {
+                    user: r,
                     guildId: null,
                     avatarDecorationOverride: n,
                     avatarSize: o._3.SIZE_152,
-                    questPreviewRewardAssetUrl: d,
+                    questPreviewRewardAssetUrl: u,
                 }),
             }),
-            (0, r.jsxs)("div", {
-                className: L.dD,
+            (0, a.jsxs)("div", {
+                className: D.dD,
                 children: [
-                    (0, r.jsx)(_.D, {
+                    (0, a.jsx)(d.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        className: L.R_,
-                        children: y.intl.string(y.t["0/Yz+Y"]),
+                        className: D.R_,
+                        children: C.intl.string(C.t["0/Yz+Y"]),
                     }),
-                    (0, r.jsx)(s.E, { variant: "text-sm/medium", color: "text-subtle", children: c }),
+                    (0, a.jsx)(s.E, { variant: "text-sm/medium", color: "text-subtle", children: p }),
                 ],
             }),
-            (0, r.jsx)(E.$, {
+            (0, a.jsx)(_.$, {
                 variant: "secondary",
                 size: "sm",
-                text: p ? y.intl.string(y.t.hjaYYn) : y.intl.string(y.t.MAS7uK),
+                text: E ? C.intl.string(C.t.hjaYYn) : C.intl.string(C.t.MAS7uK),
                 loading: "applying" === l,
-                disabled: "claimed" !== l || p,
+                disabled: "claimed" !== l || E,
                 onClick: i,
                 fullWidth: !0,
             }),
         ],
     });
 }
-function P(e) {
-    let { initialQuest: t, onClose: n, transitionState: o, preview: _, location: s, sourceQuestContent: E } = e,
-        u = (0, h.C5)(t.id) ?? t,
-        N = i.useMemo(() => (0, O.nj)(u.config), [u]),
-        y = (0, l.bG)([S.default], () => S.default.getCurrentUser()),
-        [L, P] = (function (e) {
-            let { product: t, isFetching: n } = (0, c.q)(e),
-                r = i.useMemo(
-                    () => (null == t || n ? null : (t.items.find((e) => e.type === a.R.AVATAR_DECORATION) ?? null)),
+function U(e) {
+    let { initialQuest: t, onClose: n, transitionState: o, preview: d, location: s, sourceQuestContent: _ } = e,
+        c = (0, g.C5)(t.id) ?? t,
+        T = i.useMemo(() => (0, f.nj)(c.config), [c]),
+        C = (0, l.bG)([A.default], () => A.default.getCurrentUser()),
+        [D, U] = (function (e) {
+            let { product: t, isFetching: n } = (0, p.q)(e),
+                a = i.useMemo(
+                    () => (null == t || n ? null : (t.items.find((e) => e.type === r.R.AVATAR_DECORATION) ?? null)),
                     [t, n],
                 ),
                 l = async () => {
-                    if (null == r)
-                        return T.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
-                    (0, A.p)({ avatarDecoration: r });
-                    let e = I.A.getPendingChanges(),
-                        t = (0, p.Sk)(e),
-                        n = await (0, d._L)(t);
-                    return (0, d.pZ)(), !!n?.ok;
+                    if (null == a)
+                        return I.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                    (0, S.p)({ avatarDecoration: a });
+                    let e = h.A.getPendingChanges(),
+                        t = (0, E.Sk)(e),
+                        n = await (0, u._L)(t);
+                    return (0, u.pZ)(), !!n?.ok;
                 };
-            return [r, l];
-        })(N?.skuId ?? null),
-        v = u.userStatus?.claimedAt != null,
-        m = !_ && !v,
-        [G, F] = i.useState(m ? "loading" : "claimed");
+            return [a, l];
+        })(T?.skuId ?? null),
+        O = c.userStatus?.claimedAt != null,
+        P = !d && !O,
+        [k, G] = i.useState(P ? "loading" : "claimed");
     i.useEffect(() => {
-        m &&
-            (0, R.Oq)(u.id, f.pY.CROSS_PLATFORM, s)
-                .then(() => F("claimed"))
-                .catch(() => F("error"));
-    }, [u.id, s, m]);
-    let b = !0 === _ && null === L && N?.skuId !== "",
-        M = null == y,
-        w = M || (null == L && !0 !== _) || b || "loading" === G,
-        B = "error" === G || null == N,
-        k = async () => {
-            F("applying"), F((await P()) ? "applied" : "claimed");
+        P &&
+            (0, v.Oq)(c.id, R.pY.CROSS_PLATFORM, s)
+                .then(() => G("claimed"))
+                .catch(() => G("error"));
+    }, [c.id, s, P]);
+    let b = !0 === d && null === D && T?.skuId !== "",
+        F = null == C,
+        w = F || (null == D && !0 !== d) || b || "loading" === k,
+        x = "error" === k || null == T,
+        M = async () => {
+            G("applying"), G((await U()) ? "applied" : "claimed");
         };
-    return (0, r.jsx)(C.A, {
+    return (0, a.jsx)(y.A, {
         onClose: n,
         transitionState: o,
-        quest: u,
-        sourceQuestContent: E,
-        location: D.rE.COLLECTIBLE_REWARD_MODAL,
+        quest: c,
+        sourceQuestContent: _,
+        location: N.rE.COLLECTIBLE_REWARD_MODAL,
         isRewardContentLoading: w,
-        rewardContentHasError: B,
+        rewardContentHasError: x,
         rewardContent:
-            B || M
+            x || F
                 ? null
-                : (0, r.jsx)(g.A, {
-                      rewardName: N.messages.name,
-                      children: (0, r.jsx)(U, { quest: u, avatarDeco: L, user: y, mode: G, onUseNow: k }),
+                : (0, a.jsx)(m.A, {
+                      rewardName: T.messages.name,
+                      children: (0, a.jsx)(L, { quest: c, avatarDeco: D, user: C, mode: k, onUseNow: M }),
                   }),
     });
 }

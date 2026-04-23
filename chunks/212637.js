@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(627968);
+n.d(t, { A: () => m });
+var i = n(627968);
 n(64700);
-var i = n(231723),
+var r = n(231723),
     s = n(192308),
     a = n(157559),
     o = n(73825),
     l = n(323082),
-    u = n(166403),
-    c = n(954571),
-    d = n(927578),
-    _ = n(652215),
-    f = n(985018);
-let p = "guild-boost-purchase-modal";
-async function h(e) {
+    d = n(166403),
+    _ = n(954571),
+    u = n(927578),
+    c = n(652215),
+    E = n(985018);
+let h = "guild-boost-purchase-modal";
+async function m(e) {
     let {
             analyticsLocations: t,
-            analyticsLocation: h,
-            analyticsSourceLocation: E,
-            guildId: m,
-            closeLayer: g,
+            analyticsLocation: m,
+            analyticsSourceLocation: f,
+            guildId: g,
+            closeLayer: p,
             onCloseModal: A,
             totalNumberOfSlotsToAssign: I = 1,
             disablePremiumUpsell: T,
             onSubscribeComplete: S,
-            onSubscriptionConfirmation: y,
-            inPopout: N,
-            applicationId: v,
-            intent: C,
+            onSubscriptionConfirmation: N,
+            inPopout: C,
+            applicationId: R,
+            intent: O,
         } = e,
-        O = N ? i.KX : i.SY,
-        R = u.A.getPremiumTypeSubscription();
-    if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
-        null != g && g(),
+        y = C ? r.KX : r.SY,
+        v = d.A.getPremiumTypeSubscription();
+    if (null != v && v.isPurchasedExternally && null != v.paymentGateway) {
+        null != p && p(),
             a.A.show({
-                title: f.intl.formatToPlainString(f.t["rTk9v/"], { paymentGatewayName: _.qmC[R.paymentGateway] }),
-                body: f.intl.format(f.t.NY03WF, {
-                    paymentGatewayName: _.qmC[R.paymentGateway],
-                    subscriptionManagementLink: (0, d.tW)(R.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                title: E.intl.formatToPlainString(E.t["rTk9v/"], { paymentGatewayName: c.qmC[v.paymentGateway] }),
+                body: E.intl.format(E.t.NY03WF, {
+                    paymentGatewayName: c.qmC[v.paymentGateway],
+                    subscriptionManagementLink: (0, u.tW)(v.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
@@ -45,39 +45,43 @@ async function h(e) {
     Promise.all([(0, l.$o)(), (0, o.zS)()]),
         await (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("62175"), n.e("81694"), n.e("67646"), n.e("4945")]).then(
-                    n.bind(n, 34645),
-                );
+                let { default: e } = await Promise.all([
+                    n.e("62175"),
+                    n.e("96817"),
+                    n.e("67646"),
+                    n.e("21309"),
+                    n.e("75636"),
+                ]).then(n.bind(n, 532299));
                 return (n) => {
-                    let { transitionState: i, onClose: s } = n;
-                    return (0, r.jsx)(e, {
-                        transitionState: i,
+                    let { transitionState: r, onClose: s } = n;
+                    return (0, i.jsx)(e, {
+                        transitionState: r,
                         onClose: (e) => {
                             s(), A?.(e);
                         },
                         analyticsLocations: t,
-                        analyticsLocation: h,
-                        analyticsSourceLocation: E ?? h,
-                        guildId: m,
+                        analyticsLocation: m,
+                        analyticsSourceLocation: f ?? m,
+                        guildId: g,
                         totalNumberOfSlotsToAssign: I,
-                        closeGuildPerksModal: g,
+                        closeGuildPerksModal: p,
                         disablePremiumUpsell: T,
-                        onSubscriptionConfirmation: y,
+                        onSubscriptionConfirmation: N,
                         onSubscribeComplete: S,
-                        applicationId: v,
-                        intent: C,
+                        applicationId: R,
+                        intent: O,
                     });
                 };
             },
             {
-                modalKey: p,
+                modalKey: h,
                 onCloseCallback: () => {
-                    c.default.track(_.HAw.MODAL_DISMISSED, { type: _.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: h });
+                    _.default.track(c.HAw.MODAL_DISMISSED, { type: c.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: m });
                 },
                 onCloseRequest: () => {
-                    (0, s.closeModal)(p), A?.(!1);
+                    (0, s.closeModal)(h), A?.(!1);
                 },
-                contextKey: O,
+                contextKey: y,
             },
         );
 }

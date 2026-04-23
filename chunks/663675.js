@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { d: () => i });
-var r,
-    i = (((r = {}).STATIC = "STATIC"), (r.RESPONSIVE = "RESPONSIVE"), (r.MOSAIC = "MOSAIC"), r);
+n.d(t, { d: () => r });
+var i,
+    r = (((i = {}).STATIC = "STATIC"), (i.RESPONSIVE = "RESPONSIVE"), (i.MOSAIC = "MOSAIC"), i);

@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { Ch: () => R, SD: () => b, dn: () => N, hg: () => O });
-var r = n(64700),
-    i = n(735438),
-    a = n.n(i),
-    s = n(311907),
+n.d(t, { Ch: () => v, SD: () => O, dn: () => y, hg: () => D });
+var i = n(64700),
+    r = n(735438),
+    s = n.n(r),
+    a = n(17928),
     o = n(436857),
     l = n(212245),
-    u = n(849269),
-    c = n(869003),
-    d = n(58149),
-    _ = n(264322),
-    f = n(392054),
-    p = n(999443),
-    h = n(542664),
-    m = n(551965),
-    g = n(203982),
-    E = n(211401),
+    d = n(849269),
+    _ = n(869003),
+    u = n(58149),
+    c = n(264322),
+    E = n(392054),
+    h = n(365347),
+    m = n(29814),
+    f = n(551965),
+    g = n(625494),
+    p = n(211401),
     A = n(989837),
     I = n(500049),
     T = n(615807),
-    y = n(652215),
-    S = n(985018);
-let v = {
-        ...h.A.RULES.commandMention,
-        parse: (e, t, n) => ({ content: h.A.RULES.commandMention.parse(e, t, n).content }),
+    S = n(652215),
+    N = n(985018);
+let C = {
+        ...m.A.RULES.commandMention,
+        parse: (e, t, n) => ({ content: m.A.RULES.commandMention.parse(e, t, n).content }),
     },
-    C = a().pick(
-        (0, m.A)([h.A.RULES, { commandMention: v }, (0, p.A)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
+    R = s().pick(
+        (0, f.A)([m.A.RULES, { commandMention: C }, (0, h.A)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
             "customEmoji",
@@ -44,77 +44,77 @@ let v = {
             "spoiler",
         ],
     ),
-    b = o.aV(C);
-function N(e) {
+    O = o.aV(R);
+function y(e) {
     let {
             context: t,
             application: n,
-            location: i,
-            sectionName: a,
+            location: r,
+            sectionName: s,
             commandName: o,
-            autoDismissOnClick: p = !0,
-            launchingComponentId: h,
-            submitting: m = !1,
+            autoDismissOnClick: h = !0,
+            launchingComponentId: m,
+            submitting: f = !1,
             fetchesApplication: g = !0,
-            onConfirmActivityLaunchChecksAlertOpen: v,
+            onConfirmActivityLaunchChecksAlertOpen: C,
         } = e,
-        C = (0, l.p)(),
-        b = (0, u.Hq)({ context: t, applicationId: n.id, fetchesApplication: g }),
-        N = (0, T.G)(b),
-        R = (0, s.bG)([A.A], () => A.A.entrypoint()),
-        O = r.useMemo(() => {
-            if ("channel" !== t.type) return n.bot?.id ?? (0, _.Sx)(t, n.id).descriptor?.botId;
+        R = (0, l.p)(),
+        O = (0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: g }),
+        y = (0, T.G)(O),
+        v = (0, a.bG)([A.A], () => A.A.entrypoint()),
+        D = i.useMemo(() => {
+            if ("channel" !== t.type) return n.bot?.id ?? (0, c.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
-        D = (0, u.wK)({
+        L = (0, d.wK)({
             application: n,
-            botUserIdForAppDM: O,
-            embeddedActivitiesManager: c.A,
+            botUserIdForAppDM: D,
+            embeddedActivitiesManager: _.A,
             context: t,
-            locationObject: C.location,
+            locationObject: R.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                p && E.k(I.Se.ACTIVITY),
-                    (0, d.zV)(y.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
-                        location: i,
+                h && p.k(I.Se.ACTIVITY),
+                    (0, u.zV)(S.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                        location: r,
                         application_id: t,
-                        section_name: a,
-                        action: N,
-                        source: R,
+                        section_name: s,
+                        action: y,
+                        source: v,
                     });
             },
-            launchingComponentId: h,
-            commandOrigin: f.iw.APPLICATION_LAUNCHER,
-            sectionName: a,
-            source: R,
+            launchingComponentId: m,
+            commandOrigin: E.iw.APPLICATION_LAUNCHER,
+            sectionName: s,
+            source: v,
             fetchesApplication: g,
-            onConfirmActivityLaunchChecksAlertOpen: v,
+            onConfirmActivityLaunchChecksAlertOpen: C,
         }),
-        L = "primary",
-        w = o ?? S.intl.string(S.t.zKX8Nu);
+        b = "primary",
+        w = o ?? N.intl.string(N.t.zKX8Nu);
     return (
-        N === u.o6.JOIN
-            ? ((L = "active"), (w = S.intl.string(S.t.d9PsMj)))
-            : N !== u.o6.LEAVE || m || ((L = "critical-primary"), (w = S.intl.string(S.t["Hi1/aQ"]))),
-        { onActivityItemSelected: D, activityAction: N, buttonVariant: L, buttonText: w }
+        y === d.o6.JOIN
+            ? ((b = "active"), (w = N.intl.string(N.t.d9PsMj)))
+            : y !== d.o6.LEAVE || f || ((b = "critical-primary"), (w = N.intl.string(N.t["Hi1/aQ"]))),
+        { onActivityItemSelected: L, activityAction: y, buttonVariant: b, buttonText: w }
     );
 }
-function R(e, t) {
+function v(e, t) {
     let n = A.A.entrypoint(),
-        a = r.useMemo(
+        s = i.useMemo(
             () =>
-                (0, i.debounce)(
+                (0, r.debounce)(
                     (e, t) => {
-                        (0, d.zV)(y.HAw.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, { type: e, source: t });
+                        (0, u.zV)(S.HAw.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, { type: e, source: t });
                     },
                     400,
                     { leading: !1, trailing: !0 },
                 ),
             [],
         );
-    r.useEffect(() => {
-        null != e && a(e, n);
-    }, [e, t, n, a]);
+    i.useEffect(() => {
+        null != e && s(e, n);
+    }, [e, t, n, s]);
 }
-function O(e) {
-    g._.dispatchToLastSubscribed(y.jej.OPEN_APP_LAUNCHER, { applicationId: e });
+function D(e) {
+    g._.dispatchToLastSubscribed(S.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }
