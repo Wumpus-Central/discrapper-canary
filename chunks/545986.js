@@ -247,7 +247,7 @@ function et(e) {
 }
 function en(e, t) {
     (0, _.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e("62092"), n.e("9931"), n.e("62505")]).then(n.bind(n, 50292));
+        let { default: r } = await Promise.all([n.e("62092"), n.e("96045"), n.e("62505")]).then(n.bind(n, 50292));
         return (n) => (0, i.jsx)(r, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
     });
 }

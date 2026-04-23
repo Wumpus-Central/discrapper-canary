@@ -3707,7 +3707,7 @@ let sB = "isHideDevBanner",
                     className: ti()(sH.Wz, sH.mr),
                     children: [
                         (0, p.jsx)(sV.A, { className: sH.Kk }),
-                        k.intl.format(k.t.uyrfYF, { buildNumber: "534155" }),
+                        k.intl.format(k.t.uyrfYF, { buildNumber: "534170" }),
                         (0, p.jsx)(r, {}),
                     ],
                 })
@@ -5236,9 +5236,9 @@ let d2 = (0, C.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 60111
     ua = (0, C.Fe)({
         createPromise: () =>
             Promise.all([n.e("83438"), n.e("21595"), n.e("62609"), n.e("41343"), n.e("49287"), n.e("51357")]).then(
-                n.bind(n, 73025),
+                n.bind(n, 749322),
             ),
-        webpackId: 73025,
+        webpackId: 749322,
         name: "PrivateChannels",
         renderLoader: tA.bM,
     }),
