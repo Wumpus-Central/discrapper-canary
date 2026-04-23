@@ -90,6 +90,7 @@ function x(t) {
             text: v.intl.string(v.t.DlcqlU),
             onClick: p,
             disabled: n,
+            "aria-pressed": t,
         });
     }
     return (
