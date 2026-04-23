@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { Be: () => o, aU: () => l, fO: () => s, vK: () => c });
-var i = n(627968);
+n.d(t, { Be: () => o, aU: () => r, fO: () => s, vK: () => d });
+var a = n(627968);
 n(64700);
-var a = n(192308),
-    r = n(530912);
-let l = "forward-modal";
+var l = n(192308),
+    i = n(530912);
+let r = "forward-modal";
 function s(e) {
     let {
         message: t,
         source: s,
         initialSelectedDestinations: o = [],
-        forwardOptions: c,
-        onRequestSent: u,
-        customSendHandler: d,
+        forwardOptions: d,
+        onRequestSent: c,
+        customSendHandler: u,
     } = e;
-    (0, r.pp)(t.channel_id, t.id, s),
-        (0, a.openModalLazy)(
+    (0, i.pp)(t.channel_id, t.id, s),
+        (0, l.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("79133"), n.e("73148")]).then(
+                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("23965"), n.e("64618")]).then(
                     n.bind(n, 911269),
                 );
                 return (n) =>
-                    (0, i.jsx)(e, {
+                    (0, a.jsx)(e, {
                         ...n,
                         message: t,
                         initialSelectedDestinations: o,
-                        forwardOptions: c,
-                        onRequestSent: u,
-                        customSendHandler: d,
+                        forwardOptions: d,
+                        onRequestSent: c,
+                        customSendHandler: u,
                         source: s,
                     });
             },
-            { modalKey: l },
+            { modalKey: r },
         );
 }
 function o() {
-    (0, a.closeModal)(l);
+    (0, l.closeModal)(r);
 }
-function c(e) {
-    let { message: t, failedDestinations: r, forwardOptions: l } = e;
-    (0, a.openModalLazy)(async () => {
+function d(e) {
+    let { message: t, failedDestinations: i, forwardOptions: r } = e;
+    (0, l.openModalLazy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("66139").then(n.bind(n, 181622));
-        return (n) => (0, i.jsx)(e, { ...n, message: t, failedDestinations: r, forwardOptions: l });
+        return (n) => (0, a.jsx)(e, { ...n, message: t, failedDestinations: i, forwardOptions: r });
     });
 }

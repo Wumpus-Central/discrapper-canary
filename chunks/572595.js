@@ -29,7 +29,7 @@ let o = "collectibles shop product details modal",
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    a.e("37457"),
+                    a.e("25412"),
                     a.e("374"),
                     a.e("8555"),
                     a.e("40396"),
@@ -41,13 +41,13 @@ let o = "collectibles shop product details modal",
                     a.e("92414"),
                     a.e("94857"),
                     a.e("16419"),
-                    a.e("7034"),
-                    a.e("51000"),
+                    a.e("82561"),
+                    a.e("37201"),
                     a.e("37372"),
                     a.e("95752"),
                     a.e("55360"),
                     a.e("89"),
-                    a.e("17535"),
+                    a.e("26730"),
                     a.e("3347"),
                 ]).then(a.bind(a, 929400));
                 return (a) =>

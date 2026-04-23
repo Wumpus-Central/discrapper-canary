@@ -42,7 +42,8 @@ function u(e) {
             (a.title = e.clip.name),
             (a.application_id = e.clip.applicationId),
             (a.clip_created_at = (0, i.U)(e.clip.createdAt)),
-            (a.clip_participant_ids = (0, i.g)(e.clip.users))),
+            (a.clip_participant_ids = (0, i.g)(e.clip.users)),
+            (a.clip_remote_id = e.clip.remoteClipId)),
         "item" in e &&
             null != e.item &&
             e.item.platform === r.xz.WEB &&

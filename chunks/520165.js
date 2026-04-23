@@ -83,6 +83,7 @@ function g() {
         channelId: y ?? void 0,
         timeline: n,
         decision: g,
+        remoteClipId: g?.signal?.type === E.Gy.DISTRIBUTED ? g.signal.remoteTriggerClipId : void 0,
         length: 0,
         thumbnail: "",
         type: R,

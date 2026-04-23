@@ -81,6 +81,7 @@ async function u(e) {
                           isFavorite: t.boolean(),
                           isTemporary: t.boolean(),
                           isCandidate: t.boolean(),
+                          remoteClipId: t.string(),
                           decision: t
                               .object()
                               .keys({

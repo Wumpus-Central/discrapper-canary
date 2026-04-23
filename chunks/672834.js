@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eb });
+n.d(t, { A: () => ek });
 var i = n(627968),
     r = n(64700),
     l = n(311907),
@@ -20,8 +20,8 @@ var i = n(627968),
     p = n(379114),
     C = n(698441),
     f = n(484724),
-    h = n(997509),
-    R = n(850131),
+    R = n(997509),
+    h = n(850131),
     S = n(31051),
     O = n(659203),
     x = n(446028),
@@ -74,18 +74,17 @@ var i = n(627968),
     ep = n(293657),
     eC = n(269802),
     ef = n(576471),
-    eh = n(808821),
     eR = n(933762),
-    eS = n(62614),
-    eO = n(536030),
-    ex = n(912746),
-    eM = n(817253),
-    eD = n(911726),
-    eP = n(904854),
-    eU = n(652215),
-    ey = n(502075),
-    eL = n(985018);
-function ev(e) {
+    eh = n(62614),
+    eS = n(536030),
+    eO = n(912746),
+    ex = n(817253),
+    eM = n(911726),
+    eD = n(904854),
+    eP = n(652215),
+    eU = n(502075),
+    ey = n(985018);
+function eL(e) {
     let { message: t, channel: n, compact: s } = e,
         { author: a } = t,
         { guild_id: o } = n,
@@ -95,23 +94,23 @@ function ev(e) {
             null != u &&
                 (0, T.K4)({
                     guildId: u.id,
-                    location: { section: eU.JJy.CHANNEL_TEXT_AREA, object: eU.ZSU.BOOST_ANNOUNCEMENT_UPSELL },
+                    location: { section: eP.JJy.CHANNEL_TEXT_AREA, object: eP.ZSU.BOOST_ANNOUNCEMENT_UPSELL },
                 });
         }, [u]),
         _ = (0, ee.P)({ user: a, channelId: c, guildId: n.guild_id, messageId: t.id, stopPropagation: !0 });
-    return (0, i.jsx)(eD.Ay, { message: t, compact: s, guild: u, usernameHook: _, onClickMessage: d });
+    return (0, i.jsx)(eM.Ay, { message: t, compact: s, guild: u, usernameHook: _, onClickMessage: d });
 }
-function ej(e) {
+function ev(e) {
     let { message: t, compact: n, channel: r } = e,
         l = (0, ee.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id });
     return (0, i.jsx)(ec.A, { message: t, compact: n, usernameHook: l });
 }
-let ek = Object.freeze({
-        [eU.lAJ.DEFAULT]: void 0,
-        [eU.lAJ.REPLY]: void 0,
-        [eU.lAJ.CHAT_INPUT_COMMAND]: void 0,
-        [eU.lAJ.CONTEXT_MENU_COMMAND]: void 0,
-        [eU.lAJ.RECIPIENT_ADD]: function (e) {
+let ej = Object.freeze({
+        [eP.lAJ.DEFAULT]: void 0,
+        [eP.lAJ.REPLY]: void 0,
+        [eP.lAJ.CHAT_INPUT_COMMAND]: void 0,
+        [eP.lAJ.CONTEXT_MENU_COMMAND]: void 0,
+        [eP.lAJ.RECIPIENT_ADD]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 { author: s } = t,
                 a = t.getChannelId(),
@@ -120,7 +119,7 @@ let ek = Object.freeze({
                 u = (0, ee.P)({ user: s, channelId: a, guildId: n.guild_id, messageId: t.id }),
                 d = (0, ee.P)({ user: o, channelId: a, guildId: n.guild_id, messageId: t.id });
             return n.isThread()
-                ? (0, i.jsx)(eS.A, {
+                ? (0, i.jsx)(eh.A, {
                       message: t,
                       channel: n,
                       compact: r,
@@ -130,7 +129,7 @@ let ek = Object.freeze({
                   })
                 : (0, i.jsx)(eI.A, { message: t, compact: r, otherUsername: c, usernameHook: u, otherUsernameHook: d });
         },
-        [eU.lAJ.RECIPIENT_REMOVE]: function (e) {
+        [eP.lAJ.RECIPIENT_REMOVE]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 { author: s } = t,
                 a = t.getChannelId(),
@@ -138,7 +137,7 @@ let ek = Object.freeze({
                 c = (0, ee.P)({ user: s, channelId: a, guildId: n.guild_id, messageId: t.id }),
                 u = (0, ee.P)({ user: o, channelId: a, guildId: n.guild_id, messageId: t.id });
             return n.isThread()
-                ? (0, i.jsx)(eO.A, {
+                ? (0, i.jsx)(eS.A, {
                       message: t,
                       channel: n,
                       compact: r,
@@ -157,13 +156,13 @@ let ek = Object.freeze({
                     })
                   : (0, i.jsx)(eT.A, { message: t, channel: n, usernameHook: c });
         },
-        [eU.lAJ.CALL]: function (e) {
+        [eP.lAJ.CALL]: function (e) {
             let { message: t, compact: n, channel: s } = e,
                 { id: a, author: o } = t,
                 c = b.default.getId(),
                 u = t.getChannelId(),
                 _ = (0, l.bG)([G.A], () => G.A.isCallActive(u, a), [u, a]),
-                E = (0, l.bG)([V.A], () => V.A.getVoiceState(eU.ME, c)),
+                E = (0, l.bG)([V.A], () => V.A.getVoiceState(eP.ME, c)),
                 A = !_ && null != t.call && !t.call.participants.includes(c),
                 m = _ && (null == E || E.channelId !== u),
                 I = r.useCallback(() => d.default.selectVoiceChannel(u), [u]),
@@ -183,21 +182,21 @@ let ek = Object.freeze({
                 onClickJoinCall: I,
             });
         },
-        [eU.lAJ.CHANNEL_NAME_CHANGE]: function (e) {
+        [eP.lAJ.CHANNEL_NAME_CHANGE]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 { author: l } = t,
                 s = t.getChannelId(),
                 a = (0, ee.P)({ user: l, channelId: s, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsx)(es.A, { compact: n, message: t, usernameHook: a, isForumPost: r.isForumPost() });
         },
-        [eU.lAJ.CHANNEL_ICON_CHANGE]: function (e) {
+        [eP.lAJ.CHANNEL_ICON_CHANGE]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 { author: l } = t,
                 s = t.getChannelId(),
                 a = (0, ee.P)({ user: l, channelId: s, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsx)(er.A, { compact: n, message: t, usernameHook: a });
         },
-        [eU.lAJ.CHANNEL_PINNED_MESSAGE]: function (e) {
+        [eP.lAJ.CHANNEL_PINNED_MESSAGE]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { author: s } = t,
                 a = t.getChannelId(),
@@ -206,35 +205,35 @@ let ek = Object.freeze({
                         let e = w.A.getChannel(a);
                         null != e && (0, P.uh)(e.guild_id, e.id);
                     }
-                    setTimeout(() => K._.dispatch(eU.jej.TOGGLE_CHANNEL_PINS), 0);
+                    setTimeout(() => K._.dispatch(eP.jej.TOGGLE_CHANNEL_PINS), 0);
                 }, [a]),
                 c = (0, ee.P)({ user: s, channelId: a, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsx)(ea.A, { message: t, compact: n, usernameHook: c, onClickPins: __OVERLAY__ ? null : o });
         },
-        [eU.lAJ.USER_JOIN]: function (e) {
+        [eP.lAJ.USER_JOIN]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 { author: l } = t,
                 s = t.getChannelId(),
                 a = (0, ee.P)({ user: l, channelId: s, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(eM.A, { message: t, compact: n, usernameHook: a }),
+                    (0, i.jsx)(ex.A, { message: t, compact: n, usernameHook: a }),
                     (0, i.jsx)(k.I, { channel: r, message: t }),
                 ],
             });
         },
-        [eU.lAJ.GUILD_BOOST]: ev,
-        [eU.lAJ.GUILD_BOOST_TIER_1]: ev,
-        [eU.lAJ.GUILD_BOOST_TIER_2]: ev,
-        [eU.lAJ.GUILD_BOOST_TIER_3]: ev,
-        [eU.lAJ.CHANNEL_FOLLOW_ADD]: function (e) {
+        [eP.lAJ.GUILD_BOOST]: eL,
+        [eP.lAJ.GUILD_BOOST_TIER_1]: eL,
+        [eP.lAJ.GUILD_BOOST_TIER_2]: eL,
+        [eP.lAJ.GUILD_BOOST_TIER_3]: eL,
+        [eP.lAJ.CHANNEL_FOLLOW_ADD]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 { author: l } = t,
                 s = t.getChannelId(),
                 a = (0, ee.P)({ user: l, channelId: s, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsx)(ei.A, { message: t, compact: n, usernameHook: a });
         },
-        [eU.lAJ.GUILD_STREAM]: function (e) {
+        [eP.lAJ.GUILD_STREAM]: function (e) {
             let { message: t, compact: n, channel: s } = e,
                 {
                     author: a,
@@ -242,14 +241,14 @@ let ek = Object.freeze({
                     messageReference: c,
                 } = t,
                 u = t.getChannelId(),
-                d = (0, l.bG)([F.A], () => F.A.findActivity(o, (e) => e.type === eU.$pd.PLAYING), [o]),
+                d = (0, l.bG)([F.A], () => F.A.findActivity(o, (e) => e.type === eP.$pd.PLAYING), [o]),
                 E = (0, l.bG)([w.A], () => (null != c ? w.A.getChannel(c.channel_id) : null), [c]),
                 A = c?.guild_id,
                 m = (0, ee.P)({ user: a, channelId: u, guildId: s.guild_id, messageId: t.id }),
                 I = r.useCallback(() => {
                     null != E &&
                         null != A &&
-                        (0, _.Nl)({ streamType: ey.U4.GUILD, ownerId: o, channelId: E.id, guildId: A });
+                        (0, _.Nl)({ streamType: eU.U4.GUILD, ownerId: o, channelId: E.id, guildId: A });
                 }, [o, E, A]);
             return null != c && null != E && null != c.guild_id
                 ? (0, i.jsx)(eA.A, {
@@ -262,7 +261,7 @@ let ek = Object.freeze({
                   })
                 : null;
         },
-        [eU.lAJ.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
+        [eP.lAJ.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
             let { message: t, compact: n } = e,
                 r = t.getChannelId(),
                 s = (0, l.bG)([w.A], () => w.A.getChannel(r), [r]),
@@ -271,14 +270,14 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != a && h.A.open(a, eU.BEX.ACCESS, eU.nd0.ACCESS_DISCOVERABLE);
+                    null != a && R.A.open(a, eP.BEX.ACCESS, eP.nd0.ACCESS_DISCOVERABLE);
                 },
             });
         },
-        [eU.lAJ.GUILD_DISCOVERY_REQUALIFIED]: ed.wj,
-        [eU.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ed.Cq,
-        [eU.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ed.If,
-        [eU.lAJ.THREAD_CREATED]: function (e) {
+        [eP.lAJ.GUILD_DISCOVERY_REQUALIFIED]: ed.wj,
+        [eP.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ed.Cq,
+        [eP.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ed.If,
+        [eP.lAJ.THREAD_CREATED]: function (e) {
             let { message: t, channel: l, compact: a } = e,
                 o = (0, ee.P)({ user: t.author, channelId: t.channel_id, guildId: l.guild_id, messageId: t.id }),
                 u = r.useCallback(
@@ -323,33 +322,33 @@ let ek = Object.freeze({
                 onContextMenuThread: _,
             });
         },
-        [eU.lAJ.THREAD_STARTER_MESSAGE]: ex.A,
-        [eU.lAJ.GUILD_INVITE_REMINDER]: void 0,
-        [eU.lAJ.AUTO_MODERATION_ACTION]: function (e) {
+        [eP.lAJ.THREAD_STARTER_MESSAGE]: eO.A,
+        [eP.lAJ.GUILD_INVITE_REMINDER]: void 0,
+        [eP.lAJ.AUTO_MODERATION_ACTION]: function (e) {
             let { message: t, compact: n, channel: r } = e;
             return (0, I.ER)(t) ? (0, i.jsx)(et.A, { message: t, compact: n, channel: r }) : null;
         },
-        [eU.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED]: ej,
-        [eU.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED]: ej,
-        [eU.lAJ.GUILD_INCIDENT_REPORT_RAID]: function (e) {
+        [eP.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED]: ev,
+        [eP.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED]: ev,
+        [eP.lAJ.GUILD_INCIDENT_REPORT_RAID]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsx)(eE.A, { message: t, compact: n, channel: r, usernameHook: l });
         },
-        [eU.lAJ.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
+        [eP.lAJ.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: r.id, guildId: r.guild_id, messageId: t.id });
             return (0, i.jsx)(e_.A, { message: t, compact: n, channel: r, usernameHook: l });
         },
-        [eU.lAJ.ROLE_SUBSCRIPTION_PURCHASE]: p.A,
-        [eU.lAJ.PURCHASE_NOTIFICATION]: function (e) {
+        [eP.lAJ.ROLE_SUBSCRIPTION_PURCHASE]: p.A,
+        [eP.lAJ.PURCHASE_NOTIFICATION]: function (e) {
             let { message: t, channel: n, compact: r } = e;
             return t.purchaseNotification?.type === E.hE.GUILD_PRODUCT
                 ? (0, i.jsx)(g.A, { message: t, channel: n, compact: r })
                 : null;
         },
-        [eU.lAJ.INTERACTION_PREMIUM_UPSELL]: void 0,
-        [eU.lAJ.STAGE_START]: function (e) {
+        [eP.lAJ.INTERACTION_PREMIUM_UPSELL]: void 0,
+        [eP.lAJ.STAGE_START]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 s = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
                 a = (0, l.bG)([C.Ay], () => C.Ay.getActiveEventByChannel(n.id), [n.id]);
@@ -360,20 +359,20 @@ let ek = Object.freeze({
                 ],
             });
         },
-        [eU.lAJ.STAGE_END]: function (e) {
+        [eP.lAJ.STAGE_END]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, i.jsx)(eN.A, { message: t, compact: r, usernameHook: l });
         },
-        [eU.lAJ.STAGE_SPEAKER]: function (e) {
+        [eP.lAJ.STAGE_SPEAKER]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, i.jsx)(ep.A, { message: t, compact: r, usernameHook: l });
         },
-        [eU.lAJ.STAGE_RAISE_HAND]: function (e) {
+        [eP.lAJ.STAGE_RAISE_HAND]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 s = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
-                c = (0, l.bG)([H.A], () => H.A.can(eU.xBc.MUTE_MEMBERS, n)),
+                c = (0, l.bG)([H.A], () => H.A.can(eP.xBc.MUTE_MEMBERS, n)),
                 d = (0, l.bG)([y.A], () => y.A.getParticipant(n.id, t.author.id)),
                 _ =
                     new Date(z.default.extractTimestamp(t.id)).toISOString() ===
@@ -388,22 +387,22 @@ let ek = Object.freeze({
                               onClick: () => {
                                   (0, U.lL)(n, t.author.id, !1), u.A.deleteMessage(n.id, t.id, !0);
                               },
-                              text: eL.intl.string(eL.t.f0T7hI),
+                              text: ey.intl.string(ey.t.f0T7hI),
                               icon: o.L,
                           })
                         : null,
                 ],
             });
         },
-        [eU.lAJ.STAGE_TOPIC]: function (e) {
+        [eP.lAJ.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, i.jsx)(ef.A, { message: t, compact: r, usernameHook: l });
         },
-        [eU.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: x.A,
-        [eU.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: M.R,
-        [eU.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: M.d,
-        [eU.lAJ.PREMIUM_REFERRAL]: function (e) {
+        [eP.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: x.A,
+        [eP.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: M.R,
+        [eP.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: M.d,
+        [eP.lAJ.PREMIUM_REFERRAL]: function (e) {
             let { message: t, compact: n } = e;
             return (0, i.jsx)(O.A, {
                 userTrialOfferId: t.referralTrialOfferId,
@@ -411,21 +410,21 @@ let ek = Object.freeze({
                 compact: n,
             });
         },
-        [eU.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT]: void 0,
-        [eU.lAJ.CUSTOM_GIFT]: void 0,
-        [eU.lAJ.GUILD_GAMING_STATS_PROMPT]: void 0,
-        [eU.lAJ.VOICE_HANGOUT_INVITE]: void 0,
-        [eU.lAJ.POLL_RESULT]: R.A,
-        [eU.lAJ.CHANGELOG]: void 0,
-        [eU.lAJ.NITRO_NOTIFICATION]: function (e) {
+        [eP.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT]: void 0,
+        [eP.lAJ.CUSTOM_GIFT]: void 0,
+        [eP.lAJ.GUILD_GAMING_STATS_PROMPT]: void 0,
+        [eP.lAJ.VOICE_HANGOUT_INVITE]: void 0,
+        [eP.lAJ.POLL_RESULT]: h.A,
+        [eP.lAJ.CHANGELOG]: void 0,
+        [eP.lAJ.NITRO_NOTIFICATION]: function (e) {
             let { message: t, channel: n } = e;
             return (0, i.jsx)($.A, { message: t, channel: n });
         },
-        [eU.lAJ.CHANNEL_LINKED_TO_LOBBY]: function (e) {
+        [eP.lAJ.CHANNEL_LINKED_TO_LOBBY]: function (e) {
             let { message: t, channel: n, compact: r } = e;
             return (0, i.jsx)(el.A, { message: t, channel: n, compact: r });
         },
-        [eU.lAJ.GIFTING_PROMPT]: function (e) {
+        [eP.lAJ.GIFTING_PROMPT]: function (e) {
             let { message: t, channel: n } = e,
                 r = t.giftingPrompt,
                 s = (0, l.bG)([q.default], () => q.default.getUser(r?.recipientUserId));
@@ -433,51 +432,47 @@ let ek = Object.freeze({
                 ? null
                 : (0, i.jsx)(Q.A, { giftIntentType: r.giftIntentType, recipientUser: s, channel: n });
         },
-        [eU.lAJ.IN_GAME_MESSAGE_NUX]: function (e) {
+        [eP.lAJ.IN_GAME_MESSAGE_NUX]: function (e) {
             let { message: t, channel: n, compact: r } = e;
             return (0, i.jsx)(em.A, { message: t, channel: n, author: t.author, compact: r });
         },
-        [eU.lAJ.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: N.Z_,
-        [eU.lAJ.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: N.QN,
-        [eU.lAJ.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: N.ez,
-        [eU.lAJ.HD_STREAMING_UPGRADED]: void 0,
-        [eU.lAJ.EMOJI_ADDED]: function (e) {
+        [eP.lAJ.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: N.Z_,
+        [eP.lAJ.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: N.QN,
+        [eP.lAJ.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: N.ez,
+        [eP.lAJ.HD_STREAMING_UPGRADED]: void 0,
+        [eP.lAJ.EMOJI_ADDED]: function (e) {
             let { message: t, channel: n, compact: r } = e,
                 l = (0, ee.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, i.jsx)(m._W, { message: t, channel: n, compact: r, usernameHook: l });
         },
-        [eU.lAJ.CHAT_WALLPAPER_SET]: void 0,
-        [eU.lAJ.CHAT_WALLPAPER_REMOVED]: void 0,
-        [eU.lAJ.REPORT_TO_MOD_BAN_USER]: D.A,
-        [eU.lAJ.REPORT_TO_MOD_KICK_USER]: D.A,
-        [eU.lAJ.REPORT_TO_MOD_TIMEOUT_USER]: D.A,
-        [eU.lAJ.REPORT_TO_MOD_DELETED_MESSAGE]: D.A,
-        [eU.lAJ.REPORT_TO_MOD_CLOSED_REPORT]: D.A,
-        [eU.lAJ.PREMIUM_GROUP_INVITE]: function (e) {
+        [eP.lAJ.CHAT_WALLPAPER_SET]: void 0,
+        [eP.lAJ.CHAT_WALLPAPER_REMOVED]: void 0,
+        [eP.lAJ.REPORT_TO_MOD_BAN_USER]: D.A,
+        [eP.lAJ.REPORT_TO_MOD_KICK_USER]: D.A,
+        [eP.lAJ.REPORT_TO_MOD_TIMEOUT_USER]: D.A,
+        [eP.lAJ.REPORT_TO_MOD_DELETED_MESSAGE]: D.A,
+        [eP.lAJ.REPORT_TO_MOD_CLOSED_REPORT]: D.A,
+        [eP.lAJ.PREMIUM_GROUP_INVITE]: function (e) {
             let { message: t, channel: n, compact: r } = e;
             return (0, i.jsx)(S.A, { message: t, channel: n, compact: r });
         },
-        [eU.lAJ.VOICE_SESSION]: function (e) {
+        [eP.lAJ.VOICE_SESSION]: function (e) {
             let { message: t, channel: n, compact: r } = e;
-            return (0, i.jsx)(eP.A, { message: t, channel: n, compact: r });
+            return (0, i.jsx)(eD.A, { message: t, channel: n, compact: r });
         },
-        [eU.lAJ.GUILD_BOOST_UPSELL]: function (e) {
+        [eP.lAJ.GUILD_BOOST_UPSELL]: function (e) {
             let { message: t, channel: n } = e;
             return null == t.boostingPrompt ? null : (0, i.jsx)(eu.A, { boostingPrompt: t.boostingPrompt, channel: n });
         },
-        [eU.lAJ.FRIEND_REQUEST_ACCEPTED]: function (e) {
+        [eP.lAJ.FRIEND_REQUEST_ACCEPTED]: function (e) {
             let { message: t, channel: n, compact: r } = e;
             return (0, i.jsx)(eo.A, { message: t, channel: n, compact: r });
         },
-        68: function (e) {
-            let { message: t, compact: n } = e;
-            return (0, i.jsx)(eh.A, { message: t, compact: n });
-        },
     }),
-    eb = r.memo(function (e) {
+    ek = r.memo(function (e) {
         let { message: t, channel: n, compact: r, disableInteraction: l } = e,
             { type: s } = t,
-            a = ek[s];
+            a = ej[s];
         if (null == a) {
             var o;
             return (

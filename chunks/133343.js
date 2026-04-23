@@ -4,7 +4,7 @@ n.d(t, {
     C: () => eC,
     HG: () => eE,
     L0: () => eS,
-    MD: () => eT,
+    MD: () => ej,
     NO: () => eA,
     N_: () => eI,
     Sk: () => eN,
@@ -12,7 +12,7 @@ n.d(t, {
     Zx: () => e_,
     ck: () => eb,
     ml: () => ev,
-    uW: () => ej,
+    uW: () => eT,
     v7: () => ey,
 });
 var i = n(627968),
@@ -40,14 +40,14 @@ var i = n(627968),
     S = n(861382),
     b = n(391848),
     N = n(186226),
-    T = n(875163),
-    j = n(31498),
+    j = n(875163),
+    T = n(31498),
     R = n(598071),
     w = n(151271),
     L = n(834755),
     M = n(256265),
-    k = n(380544),
-    O = n(857071),
+    O = n(380544),
+    k = n(857071),
     P = n(135621),
     D = n(235430),
     U = n(931664),
@@ -99,7 +99,7 @@ function e_(e, t, s, r, a) {
                                 n.e("49681"),
                                 n.e("99011"),
                                 n.e("94857"),
-                                n.e("7034"),
+                                n.e("82561"),
                                 n.e("10730"),
                                 n.e("7602"),
                                 n.e("76593"),
@@ -152,7 +152,7 @@ function ex(e, t, n) {
             if (t === en.oU.CREATE_FORUM_POST || t === en.oU.CREATE_ANNOUNCEMENT_POST) n.current?.insertGIF(i);
             else {
                 let t = {
-                    gif_provider: i.provider ?? (0, k.cf)(),
+                    gif_provider: i.provider ?? (0, O.cf)(),
                     load_id: Y.A.getAnalyticsID(),
                     source_object: "GIF Picker",
                     gif_url: i.url,
@@ -262,7 +262,7 @@ function eb(e) {
 }
 function eN(e, t, n, i) {
     let l = e.getGuildId(),
-        s = (0, m.bG)([O.A], () => null != l && O.A.isLurking(l), [l]),
+        s = (0, m.bG)([k.A], () => null != l && k.A.isLurking(l), [l]),
         r = (0, m.bG)([H.Ay, q.default], () => {
             let e = q.default.getCurrentUser();
             return (null != l && null != e ? H.Ay.getMember(l, e.id)?.isPending : null) ?? !1;
@@ -286,7 +286,7 @@ function eN(e, t, n, i) {
         }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, i, r]);
     return { isLurking: s, isPendingMember: r, ...a };
 }
-function eT(e, t, n) {
+function ej(e, t, n) {
     let [i, s, r] = (0, w.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], u.x),
         a = (0, m.bG)([v.A], () => v.A.shouldShowPopup() && v.A.activeViewType() === e && v.A.activeChannelId() === n);
     l.useEffect(
@@ -301,7 +301,7 @@ function eT(e, t, n) {
         c = null == i || null == s || s !== e || r !== n;
     return { expressionPickerView: i, shouldHideExpressionPicker: c, handleOuterClick: o };
 }
-let ej = (e, t) => ({
+let eT = (e, t) => ({
         handleAutocompleteVisibilityChange: l.useCallback(
             (n) => {
                 n && (0, w.v8)(e, t);
@@ -322,8 +322,8 @@ let ej = (e, t) => ({
                     required: _,
                     disabled: v,
                     placeholder: M,
-                    accessibilityLabel: k,
-                    channel: O,
+                    accessibilityLabel: O,
+                    channel: k,
                     type: U,
                     focused: V,
                     error: G,
@@ -342,8 +342,8 @@ let ej = (e, t) => ({
                     canMentionRoles: ew,
                     canMentionChannels: eL,
                     maxCharacterCount: eM,
-                    showRemainingCharsAfterCount: ek,
-                    allowNewLines: eO = !0,
+                    showRemainingCharsAfterCount: eO,
+                    allowNewLines: ek = !0,
                     characterCountClassName: eP,
                     "aria-describedby": eD,
                     "aria-labelledby": eU,
@@ -365,15 +365,15 @@ let ej = (e, t) => ({
                 eX = l.useRef(null),
                 eQ = l.useRef(null);
             eV?.(e$.current);
-            let e0 = (0, I.A)(O),
+            let e0 = (0, I.A)(k),
                 [e1, e2] = l.useState(!e0);
             (0, x.i4)(eq, (e) => {
                 let { width: t } = e;
                 return e2(!e0 && (null == t || t > 450));
             });
             let { activeCommand: e3, activeCommandSection: e6 } = (0, m.cf)([S.A], () => ({
-                    activeCommand: U.commands?.enabled ? S.A.getActiveCommand(O.id) : null,
-                    activeCommandSection: U.commands?.enabled ? S.A.getActiveCommandSection(O.id) : null,
+                    activeCommand: U.commands?.enabled ? S.A.getActiveCommand(k.id) : null,
+                    activeCommandSection: U.commands?.enabled ? S.A.getActiveCommandSection(k.id) : null,
                 })),
                 {
                     isLurking: e7,
@@ -382,14 +382,14 @@ let ej = (e, t) => ({
                     canAttachFiles: e5,
                     canCreateThreads: e9,
                     canEveryoneSendMessages: te,
-                } = eN(O, U, e3, v),
+                } = eN(k, U, e3, v),
                 tt = U.toolbarType === en.O1.STATIC,
                 tn = !B.D_.useSetting() && !(0, ee.isAndroidWeb)() && null != window.ResizeObserver,
                 ti = !tn || !U.commands?.enabled || !V || "/" !== s,
                 tl = (0, P.A)(),
                 { fontSize: ts } = (0, m.cf)([A.A], () => ({ fontSize: A.A.fontSize })),
                 tr = (0, m.bG)([z.A], () => z.A.isEnabled());
-            eI(U, e8, O.id);
+            eI(U, e8, k.id);
             let { eventEmitter: ta, handleEditorSelectionChanged: to } = ev(e$, s, a),
                 tc = l.useRef(s);
             tc.current = s;
@@ -400,19 +400,19 @@ let ej = (e, t) => ({
                     },
                     [Z, U.commands?.enabled, ta],
                 ),
-                { submitting: td, submit: th, handleSubmit: tm } = e_(es, U, e$, eQ, O.id),
+                { submitting: td, submit: th, handleSubmit: tm } = e_(es, U, e$, eQ, k.id),
                 { autocompleteRef: tp, handleMaybeShowAutocomplete: tf, handleHideAutocomplete: tg } = ey(),
                 t_ = ex(th, U, e$),
                 tx = eA(e$),
-                tA = eC({ editorRef: e$, disabled: e8, textValue: s, channelId: O.id, chatInputType: U, submit: es }),
+                tA = eC({ editorRef: e$, disabled: e8, textValue: s, channelId: k.id, chatInputType: U, submit: es }),
                 tC = l.useCallback(
                     (e, t, n) => {
                         let i = e$.current;
                         null != e &&
                             null != i &&
                             (J.default.track(ep.HAw.SOUNDMOJI_SELECT, {
-                                channel_id: O.id,
-                                guild_id: O.guild_id,
+                                channel_id: k.id,
+                                guild_id: k.guild_id,
                                 sound_guild_id: e.guildId,
                                 sound_id: e.soundId,
                                 source: t,
@@ -421,7 +421,7 @@ let ej = (e, t) => ({
                             n && (0, w.v8)(),
                             i?.focus();
                     },
-                    [e$, O.id, O.guild_id],
+                    [e$, k.id, k.guild_id],
                 ),
                 tE = eE(e$),
                 tI = l.useCallback(() => eQ?.current?.hide(), []),
@@ -445,7 +445,7 @@ let ej = (e, t) => ({
                         [ti, eY, tp],
                     ),
                 }),
-                { expressionPickerView: tT, shouldHideExpressionPicker: tj, handleOuterClick: tR } = eT(U, e$, O.id),
+                { expressionPickerView: tj, shouldHideExpressionPicker: tT, handleOuterClick: tR } = ej(U, e$, k.id),
                 { selectedAutocompleteInputType: tw, selectedAutocompleteInputError: tL } = (function (e, t) {
                     let [n, i] = l.useState({
                             selectedAutocompleteInputType: null,
@@ -454,7 +454,7 @@ let ej = (e, t) => ({
                         s = l.useCallback(() => {
                             let e,
                                 n = t.current?.getSlateEditor();
-                            null != n && (e = eh.VW.getSelectedParentOfType(n, j.mk)?.[0]),
+                            null != n && (e = eh.VW.getSelectedParentOfType(n, T.mk)?.[0]),
                                 i({
                                     selectedAutocompleteInputType: e?.type ?? null,
                                     selectedAutocompleteInputError: e?.error ?? !1,
@@ -475,12 +475,12 @@ let ej = (e, t) => ({
                         n
                     );
                 })(ta, e$),
-                { handleAutocompleteVisibilityChange: tM } = ej(U, O.id),
-                tk = (0, N.A)({ type: U, channelId: O.id }),
-                tO = l.useCallback(() => {
+                { handleAutocompleteVisibilityChange: tM } = eT(U, k.id),
+                tO = (0, N.A)({ type: U, channelId: k.id }),
+                tk = l.useCallback(() => {
                     ta.emit("submit-failure");
                 }, [ta]);
-            (0, et.R)(ta, O.guild_id, O.id);
+            (0, et.R)(ta, k.guild_id, k.id);
             let tP = null != K,
                 tD = (e8 && !((e7 || e4) && te)) || (td && U.submit?.useDisabledStylesOnSubmit),
                 tU = null;
@@ -488,7 +488,7 @@ let ej = (e, t) => ({
             let tV = tn && null != a && !e8 && U.showCharacterCount && null == e3,
                 tG = tn && !__OVERLAY__ && null != a && null == e3 && U.toolbarType !== en.O1.NONE && !e8,
                 tF = (0, er.Y)({
-                    channel: O,
+                    channel: k,
                     type: U,
                     activeCommand: e3,
                     pendingReply: K,
@@ -500,14 +500,14 @@ let ej = (e, t) => ({
                 tH = U.layout === en.wt.INLINE,
                 tW = U.layout === en.wt.FLUSH,
                 tK = (0, i.jsx)("div", { ref: eJ, className: eg.BW }),
-                tz = tk ? (0, i.jsx)(y.A, { align: "right", positionTargetRef: eJ, channel: O }) : null,
+                tz = tO ? (0, i.jsx)(y.A, { align: "right", positionTargetRef: eJ, channel: k }) : null,
                 tZ =
                     null != W
                         ? W()
                         : (0, i.jsx)(ea.A, {
                               type: U,
                               disabled: e8,
-                              channel: O,
+                              channel: k,
                               handleSubmit: tm,
                               isEmpty: tB,
                               showAllButtons: e1,
@@ -518,20 +518,20 @@ let ej = (e, t) => ({
                           textValue: s,
                           className: eP,
                           maxCharacterCount: eM,
-                          showRemainingCharsAfterCount: ek,
+                          showRemainingCharsAfterCount: eO,
                       })
                     : null;
             return (
                 l.useEffect(() => {
-                    V && X._.dispatch(ep.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: O.id });
-                }, [V, O.id]),
+                    V && X._.dispatch(ep.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: k.id });
+                }, [V, k.id]),
                 (0, i.jsx)(R.Sv, {
                     value: ta,
                     children: (0, i.jsxs)(E.f5, {
                         value: eZ,
                         children: [
                             tG && tt
-                                ? (0, i.jsx)(em.A, { editorRef: e$, type: U, channel: O })
+                                ? (0, i.jsx)(em.A, { editorRef: e$, type: U, channel: k })
                                 : tG
                                   ? (0, i.jsx)(ed.A, { ref: eQ, editorRef: e$, containerRef: eX, options: U.markdown })
                                   : null,
@@ -557,10 +557,10 @@ let ej = (e, t) => ({
                                             [eg.Ri]: tF.stacked.length > 0,
                                         }),
                                         children: [
-                                            (0, i.jsx)(el.A, { channelId: O.id, chatInputType: U }),
+                                            (0, i.jsx)(el.A, { channelId: k.id, chatInputType: U }),
                                             U.hideAttachmentArea
                                                 ? null
-                                                : (0, i.jsx)(ec.A, { channelId: O.id, type: U, canAttachFiles: e5 }),
+                                                : (0, i.jsx)(ec.A, { channelId: k.id, type: U, canAttachFiles: e5 }),
                                             (0, i.jsxs)("div", {
                                                 className: r()(eg.vW, {
                                                     [eg.BF]: tD,
@@ -589,14 +589,14 @@ let ej = (e, t) => ({
                                                             disabled: e8,
                                                             placeholder: M,
                                                             required: _,
-                                                            accessibilityLabel: k,
+                                                            accessibilityLabel: O,
                                                             isPreviewing: (e7 || e4) && te,
-                                                            channel: O,
+                                                            channel: k,
                                                             type: U,
                                                             canPasteFiles: e5,
                                                             uploadPromptCharacterCount: ep.CS1,
                                                             maxCharacterCount: eM ?? tl,
-                                                            allowNewLines: eO,
+                                                            allowNewLines: ek,
                                                             "aria-describedby": eD,
                                                             onChange: tu,
                                                             onResize: ty,
@@ -604,7 +604,7 @@ let ej = (e, t) => ({
                                                             onFocus: $,
                                                             onKeyDown: Q,
                                                             onSubmit: th,
-                                                            onSubmitFailure: tO,
+                                                            onSubmitFailure: tk,
                                                             onTab: tS,
                                                             onEnter: tb,
                                                             onMoveSelection: tN,
@@ -633,11 +633,11 @@ let ej = (e, t) => ({
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(eo.a, { channel: O, type: U, pendingScheduledMessage: eK }),
-                                    ti ? null : (0, i.jsx)(b.A, { ref: eY, channel: O, canOnlyUseTextCommands: tP }),
-                                    (0, i.jsx)(T.A, {
+                                    (0, i.jsx)(eo.a, { channel: k, type: U, pendingScheduledMessage: eK }),
+                                    ti ? null : (0, i.jsx)(b.A, { ref: eY, channel: k, canOnlyUseTextCommands: tP }),
+                                    (0, i.jsx)(j.A, {
                                         ref: tp,
-                                        channel: O,
+                                        channel: k,
                                         canMentionRoles: ew,
                                         canMentionChannels: eL,
                                         useNewSlashCommands: tn,
@@ -646,7 +646,7 @@ let ej = (e, t) => ({
                                         canSendSoundmoji: U.soundmoji?.allowSending,
                                         textValue: s,
                                         focused: V,
-                                        expressionPickerView: tT,
+                                        expressionPickerView: tj,
                                         type: U,
                                         targetRef: eq,
                                         editorRef: e$,
@@ -659,13 +659,13 @@ let ej = (e, t) => ({
                                         setValue: (e, t) => tu?.(null, e, t),
                                         position: eG,
                                     }),
-                                    (0, i.jsx)(D.A, { textValue: s, editorHeight: tv, channelId: O.id }),
+                                    (0, i.jsx)(D.A, { textValue: s, editorHeight: tv, channelId: k.id }),
                                     tq,
                                     eF,
                                 ],
                             }),
                             (0, i.jsx)(g.U, { error: G }),
-                            tj
+                            tT
                                 ? null
                                 : (0, i.jsx)(L.A, {
                                       positionTargetRef: eq,
@@ -675,7 +675,7 @@ let ej = (e, t) => ({
                                       onSelectSticker: tA,
                                       onSelectSound: tC,
                                       onSelectKaomoji: tE,
-                                      channel: O,
+                                      channel: k,
                                       closeOnModalOuterClick: eH,
                                       parentModalKey: eW,
                                       position: "top",

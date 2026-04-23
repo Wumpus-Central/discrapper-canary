@@ -21,7 +21,7 @@ var i = n(627968),
     I = n(838541),
     v = n(652215),
     b = n(985018),
-    T = n(697841);
+    T = n(803761);
 function S(e) {
     let t = e.item.originalItem;
     return (0, E.LL)({
@@ -78,6 +78,7 @@ function y(e) {
                         channelId: e.message.channel_id,
                         className: s()(T.m0, e.className, { [T.g$]: n }),
                         embed: !0,
+                        messageId: e.message.id,
                         fillContainer: !e.isSingleMosaicItem,
                         onClick: e.onClick ?? void 0,
                         onContextMenu: e.onContextMenu ?? void 0,
@@ -85,7 +86,7 @@ function y(e) {
                         maxHeight: e.maxHeight ?? I.Rk,
                         showParticipants: e.isSingleMosaicItem,
                     }),
-                    null != e.renderAdjacentContent && e.renderAdjacentContent(),
+                    e.renderAdjacentContent?.(),
                 ],
             })
           : (0, E.$o)({

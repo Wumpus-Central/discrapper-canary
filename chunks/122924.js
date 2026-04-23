@@ -19,6 +19,7 @@ let l = {
                 application_id: e.clip?.applicationId,
                 clip_created_at: null != e.clip ? (0, o.U)(e.clip.createdAt) : void 0,
                 clip_participant_ids: null != e.clip ? (0, o.g)(e.clip.users) : void 0,
+                clip_remote_id: e.clip?.remoteClipId,
                 original_content_type: e.mimeType,
             }
         );

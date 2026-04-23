@@ -1,76 +1,41 @@
-n.d(t, { r: () => A }), n(938796);
+n.d(t, { r: () => h }), n(938796);
 var i = n(253506),
     l = n(665260),
-    a = n(734066),
-    s = n(274372),
-    r = n(704844),
-    o = n(961350),
-    c = n(141468),
-    d = n(963852),
-    u = n(652215);
-let h = new Map();
-function m(e, t) {
-    let n = (0, d.Ay)({
+    a = n(704844),
+    s = n(961350),
+    r = n(141468),
+    o = n(963852),
+    c = n(652215);
+let d = new Map();
+function u(e, t) {
+    let n = (0, o.Ay)({
             channelId: t,
-            type: u.lAJ.IN_GAME_MESSAGE_NUX,
+            type: c.lAJ.IN_GAME_MESSAGE_NUX,
             content: "",
             author: e.author,
-            flags: u.pr7.EPHEMERAL,
-            state: u.cmJ.SENT,
+            flags: c.pr7.EPHEMERAL,
+            state: c.cmJ.SENT,
         }),
-        i = (0, c.rh)(n);
+        i = (0, r.rh)(n);
     return (i.applicationId = e.applicationId), (i.timestamp = e.timestamp), i;
 }
-function A(e, t) {
+function h(e, t) {
     let n = (function (e, t) {
-        if (h.get(t.id) === e.id) return m(e, t.id);
+        if (d.get(t.id) === e.id) return u(e, t.id);
         if (
             null == e.applicationId ||
-            !(0, l.Lt)(e.flags, u.pr7.SENT_BY_SOCIAL_LAYER_INTEGRATION) ||
+            !(0, l.Lt)(e.flags, c.pr7.SENT_BY_SOCIAL_LAYER_INTEGRATION) ||
             !t.isDM() ||
-            e.author.id === o.default.getId() ||
+            e.author.id === s.default.getId() ||
             null != e.activity ||
             (0, l.Lt)(t.recipientFlags ?? 0, i.o.DISMISSED_IN_GAME_MESSAGE_NUX) ||
-            h.has(t.id)
+            d.has(t.id)
         )
             return null;
-        let n = m(e, t.id);
-        h.set(t.id, e.id);
-        let a = (0, l.lA)(t.recipientFlags ?? 0, i.o.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
-        return r.A.updatePrivateChannelRecipientFlags(t.id, a), n;
+        let n = u(e, t.id);
+        d.set(t.id, e.id);
+        let r = (0, l.lA)(t.recipientFlags ?? 0, i.o.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+        return a.A.updatePrivateChannelRecipientFlags(t.id, r), n;
     })(e, t);
-    if (null != n) return { message: n, position: "before" };
-    let A = (function (e, t) {
-        var n;
-        let i, r;
-        if (
-            !(0, a.J)() ||
-            null == e.attachments.find((e) => (0, l.Lt)(e.flags ?? 0, u.sbO.IS_CLIP)) ||
-            e.author.id === o.default.getId()
-        )
-            return null;
-        let { clipId: h, remoteTriggerClipId: m } = (function (e) {
-            let t = "__CLIP_METADATA__",
-                n = e.indexOf(t);
-            if (-1 === n) return {};
-            let i = n + t.length,
-                l = e.substring(i);
-            try {
-                let e = JSON.parse(l);
-                return { clipId: e.id, remoteTriggerClipId: e.remoteTriggerClipId };
-            } catch (e) {
-                return {};
-            }
-        })(e.content);
-        if (null == h && null == m) return null;
-        let A = s.A.getMatchingGroupClip(h, m);
-        return null == A || s.A.wasClipSharedInChannel(A.id, t.id)
-            ? null
-            : ((n = t.id),
-              (i = (0, d.Ay)({ channelId: n, type: 66, content: "", author: e.author, state: u.cmJ.SENT })),
-              ((r = (0, c.rh)(i)).timestamp = e.timestamp),
-              (r.messageReference = { channel_id: n, message_id: e.id }),
-              r);
-    })(e, t);
-    return null != A ? { message: A, position: "after" } : null;
+    return null != n ? { message: n, position: "before" } : null;
 }
