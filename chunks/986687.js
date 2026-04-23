@@ -162,7 +162,7 @@ function H(e) {
 }
 var j = n(685073),
     W = n(694720),
-    Y = n(586644),
+    Y = n(878555),
     K = n(442228),
     z = n(192867),
     $ = n(351906),
@@ -194,20 +194,20 @@ function X(e) {
         className: q.rf,
         inert: !0,
         children: [
-            (0, i.jsx)(Y.A, {
+            (0, i.jsx)(Y.Ay, {
                 user: t,
                 guildId: r?.id,
+                displayName: S,
+                pendingDisplayNameStyles: E,
                 usernameIcon: (() => {
                     if (null != p) {
                         if (null !== s && (null != p.avatar || null != s))
                             return (0, i.jsx)(z.A, { user: t, nickname: S });
                     }
                 })(),
-                nickname: S,
-                pendingDisplayNameStyles: E,
                 pronouns: T,
                 primaryGuild: N,
-                tags: (0, i.jsx)(W.A, {
+                trailing: (0, i.jsx)(W.A, {
                     displayProfile: n,
                     themeType: F.d.POPOUT,
                     pendingLegacyUsernameDisabled: u,

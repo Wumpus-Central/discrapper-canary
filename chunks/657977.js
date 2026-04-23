@@ -241,7 +241,7 @@ var J = l(685396),
     ee = l(694720),
     et = l(915614),
     el = l(946356),
-    en = l(586644),
+    en = l(878555),
     ei = l(983495),
     er = l(562153),
     ea = l(996988),
@@ -290,11 +290,11 @@ function eu(e) {
                 (0, n.jsx)("div", {
                     className: es.QV,
                     inert: !0,
-                    children: (0, n.jsx)(en.A, {
+                    children: (0, n.jsx)(en.Ay, {
                         user: t,
-                        nickname: er.Ay.getName(null, null, t),
+                        displayName: er.Ay.getName(null, null, t),
                         pronouns: u?.pronouns,
-                        tags: (0, n.jsx)(ee.A, { displayProfile: u, themeType: ea.d.POPOUT }),
+                        trailing: (0, n.jsx)(ee.A, { displayProfile: u, themeType: ea.d.POPOUT }),
                     }),
                 }),
             ],

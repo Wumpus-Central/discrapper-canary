@@ -87,7 +87,7 @@ var ei = t(716804),
     eA = t(501193),
     eh = t(383448),
     ev = t(946356),
-    ej = t(586644),
+    ej = t(878555),
     eI = t(983495),
     eb = t(280645),
     eC = t(109112),
@@ -1578,14 +1578,14 @@ function tJ(e) {
                 className: tY.profileBody,
                 children: [
                     (0, l.jsx)(ec.A, { userId: n.id }),
-                    (0, l.jsx)(ej.A, {
+                    (0, l.jsx)(ej.Ay, {
                         user: n,
                         guildId: g?.guildId ?? void 0,
-                        onClose: x,
-                        nickname: m,
-                        nicknameVariant: "heading-xl/semibold",
+                        displayName: m,
+                        displayNameSize: "lg",
                         pronouns: g?.pronouns,
-                        tags: (0, l.jsx)(es.A, { displayProfile: g, themeType: Z.d.MODAL_V2, onClose: x }),
+                        onClose: x,
+                        trailing: (0, l.jsx)(es.A, { displayProfile: g, themeType: Z.d.MODAL_V2, onClose: x }),
                     }),
                     F === eY.eA$.PENDING_INCOMING &&
                         (0, l.jsx)(ev.A.Overlay, {

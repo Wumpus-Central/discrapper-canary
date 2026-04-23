@@ -20,7 +20,7 @@ var a = n(627968),
     v = n(915614),
     I = n(559506),
     j = n(946356),
-    y = n(586644),
+    y = n(878555),
     C = n(570314),
     N = n(984545),
     E = n(571077),
@@ -28,19 +28,19 @@ var a = n(627968),
     w = n(982985),
     P = n(983495),
     L = n(17928),
-    k = n(761508),
-    S = n(834730),
+    S = n(761508),
+    k = n(834730),
     R = n(351906),
     D = n(364522),
     B = n(534514),
     O = n(534890),
     M = n(687966),
     G = n(177953),
-    U = n(203363),
-    F = n(841595),
+    F = n(203363),
+    U = n(841595),
     H = n(985018),
     V = n(935059);
-function W(e) {
+function z(e) {
     let { icon: t, title: n, description: i } = e;
     return (0, a.jsxs)("div", {
         className: V.nM,
@@ -53,29 +53,29 @@ function W(e) {
                 className: V.qg,
                 children: [
                     (0, a.jsx)(B.D, { variant: "text-xs/semibold", children: n }),
-                    (0, a.jsx)(S.E, { variant: "text-sm/normal", children: i }),
+                    (0, a.jsx)(k.E, { variant: "text-sm/normal", children: i }),
                 ],
             }),
         ],
     });
 }
-function z(e) {
+function W(e) {
     let { user: t } = e,
-        n = (0, L.bG)([F.A], () => F.A.getUserProfile(t.id)?.application),
-        { hasMessageContent: i, hasGuildPresences: l, hasGuildMembers: r } = (0, U.Z)(n);
+        n = (0, L.bG)([U.A], () => U.A.getUserProfile(t.id)?.application),
+        { hasMessageContent: i, hasGuildPresences: l, hasGuildMembers: r } = (0, F.Z)(n);
     return (0, a.jsxs)(D.Ip, {
         fade: !0,
         className: V.XG,
         children: [
             i &&
-                (0, a.jsx)(W, {
+                (0, a.jsx)(z, {
                     icon: O.o,
                     title: H.intl.string(H.t["7Tmhfu"]),
                     description: H.intl.string(H.t.eu5x7z),
                 }),
-            l && (0, a.jsx)(W, { icon: M._, title: H.intl.string(H.t.awYSsM), description: H.intl.string(H.t.TpsXoC) }),
-            r && (0, a.jsx)(W, { icon: G.n, title: H.intl.string(H.t.WuKeSJ), description: H.intl.string(H.t.wOBmtV) }),
-            (0, a.jsx)(S.E, {
+            l && (0, a.jsx)(z, { icon: M._, title: H.intl.string(H.t.awYSsM), description: H.intl.string(H.t.TpsXoC) }),
+            r && (0, a.jsx)(z, { icon: G.n, title: H.intl.string(H.t.WuKeSJ), description: H.intl.string(H.t.wOBmtV) }),
+            (0, a.jsx)(k.E, {
                 variant: "text-xs/normal",
                 children: H.intl.format(H.t.b6nqk0, {
                     helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975",
@@ -84,8 +84,8 @@ function z(e) {
         ],
     });
 }
-var X = n(734057),
-    Y = n(309010),
+var Y = n(734057),
+    X = n(309010),
     K = n(383199),
     J = n(308244),
     Q = n(743987),
@@ -112,8 +112,8 @@ function en(e) {
 var ea = n(741036);
 function ei(e) {
     let { user: t, displayProfile: n, guildId: i, onClose: l } = e,
-        r = (0, L.bG)([F.A], () => F.A.getUserProfile(t.id)?.application),
-        s = (0, L.bG)([X.A, Y.A], () => X.A.getChannel(Y.A.getChannelId()));
+        r = (0, L.bG)([U.A], () => U.A.getUserProfile(t.id)?.application),
+        s = (0, L.bG)([Y.A, X.A], () => Y.A.getChannel(X.A.getChannelId()));
     return (0, a.jsxs)(D.Ip, {
         fade: !0,
         className: ea.XG,
@@ -162,7 +162,7 @@ function eA(e) {
             let e = u ? ec.A.getStatus() : ed.A.getStatus(t.id);
             return e === el.clD.OFFLINE || e === el.clD.INVISIBLE;
         }),
-        m = (0, L.bG)([F.A], () => F.A.getUserProfile(t.id)?.private === !0),
+        m = (0, L.bG)([U.A], () => U.A.getUserProfile(t.id)?.private === !0),
         f = r.length > 0 || null != o,
         x = !m && null == o && null == c && null != d,
         g = !p && (f || x),
@@ -317,17 +317,17 @@ function eL(e) {
         ],
     });
 }
-var ek = n(163126),
-    eS = n(913453),
+var eS = n(163126),
+    ek = n(913453),
     eR = n(229187),
     eD = n(975732),
     eB = n(503062);
 function eO(e) {
     let { user: t, guildId: n, channelId: l, onClose: r } = e,
-        { mutualFriends: s } = (0, eS.A)(t),
+        { mutualFriends: s } = (0, ek.A)(t),
         { analyticsLocations: o } = (0, u.Ay)(),
         { context: d, trackUserProfileAction: c } = (0, f.NJ)(),
-        _ = (0, ek.A)();
+        _ = (0, eS.A)();
     return (
         i.useEffect(() => {
             (0, eR.A)(t.id, _);
@@ -375,11 +375,11 @@ function eO(e) {
 }
 var eM = n(398590),
     eG = n(345942),
-    eU = n(51943);
-function eF(e) {
+    eF = n(51943);
+function eU(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: i } = (0, f.NJ)(),
-        { mutualGuilds: l, isFetching: r } = (0, eS.A)(t);
+        { mutualGuilds: l, isFetching: r } = (0, ek.A)(t);
     return (0, a.jsx)(D.Ip, {
         className: eb.DK,
         fade: !0,
@@ -390,7 +390,7 @@ function eF(e) {
                   ? l?.map((e) => {
                         let { guild: l, nick: r } = e;
                         return (0, a.jsx)(
-                            eU.A,
+                            eF.A,
                             {
                                 user: t,
                                 guild: l,
@@ -420,14 +420,14 @@ function eV(e) {
         : t === ee.RP.MUTUAL_FRIENDS
           ? (0, a.jsx)(eO, { user: n, guildId: r, channelId: s, onClose: o })
           : t === ee.RP.MUTUAL_GUILDS
-            ? (0, a.jsx)(eF, { user: n, onClose: o })
+            ? (0, a.jsx)(eU, { user: n, onClose: o })
             : t === ee.RP.BOT_DATA_ACCESS
-              ? (0, a.jsx)(z, { user: n })
+              ? (0, a.jsx)(W, { user: n })
               : t === ee.RP.BOT_INFO
                 ? (0, a.jsx)(ei, { user: n, displayProfile: l, guildId: r, onClose: o })
                 : (0, a.jsx)(eL, { user: n, displayProfile: l, onClose: o });
 }
-function eW(e) {
+function ez(e) {
     let {
             user: t,
             currentUser: n,
@@ -469,7 +469,7 @@ function eW(e) {
         : (0, a.jsxs)("div", {
               className: eH.kL,
               children: [
-                  (0, a.jsx)(k.V, {
+                  (0, a.jsx)(S.V, {
                       className: eH.$H,
                       type: "top",
                       selectedItem: u,
@@ -477,12 +477,12 @@ function eW(e) {
                       children: s.map((e) => {
                           let { section: t, text: n } = e;
                           return (0, a.jsx)(
-                              k.V.Item,
+                              S.V.Item,
                               {
                                   className: eH.YU,
                                   id: t,
                                   "aria-label": n,
-                                  children: (0, a.jsx)(S.E, { variant: "text-sm/normal", children: n }),
+                                  children: (0, a.jsx)(k.E, { variant: "text-sm/normal", children: n }),
                               },
                               t,
                           );
@@ -500,9 +500,9 @@ function eW(e) {
               ],
           });
 }
-var ez = n(186272),
-    eX = n(996988),
-    eY = n(872116);
+var eW = n(186272),
+    eY = n(996988),
+    eX = n(872116);
 function eK(e) {
     let {
             user: t,
@@ -510,44 +510,44 @@ function eK(e) {
             guildId: i,
             originGuildId: l,
             channelId: L,
-            messageId: k,
-            roleId: S,
+            messageId: S,
+            roleId: k,
             sessionId: R,
             initialTabSection: D,
             initialScrollTarget: B,
             transitionState: O,
             openedAt: M,
             onClose: G,
-            sourceAnalyticsLocations: U = [],
+            sourceAnalyticsLocations: F = [],
         } = e,
-        F = i === el.ME ? void 0 : i,
-        V = (0, x.Ay)(t.id, F),
-        W = m.Ay.getName(F, L, t),
-        z = (0, p.GV)(),
-        { analyticsLocations: X } = (0, u.Ay)([...U, _.A.USER_PROFILE_MODAL]),
-        Y = (0, f.pb)({
+        U = i === el.ME ? void 0 : i,
+        V = (0, x.Ay)(t.id, U),
+        z = m.Ay.getName(U, L, t),
+        W = (0, p.GV)(),
+        { analyticsLocations: Y } = (0, u.Ay)([...F, _.A.USER_PROFILE_MODAL]),
+        X = (0, f.pb)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: R,
-            guildId: F,
+            guildId: U,
             channelId: L,
-            messageId: k,
-            roleId: S,
+            messageId: S,
+            roleId: k,
         }),
         K = (function (e) {
-            let { mutualGuilds: t } = (0, eS.A)(e),
+            let { mutualGuilds: t } = (0, ek.A)(e),
                 n = t?.length;
             return [
                 { section: ee.RP.BOT_INFO, text: H.intl.string(H.t.ZzAR2Y) },
-                { section: ee.RP.MUTUAL_GUILDS, text: (0, ez.A)(n) },
+                { section: ee.RP.MUTUAL_GUILDS, text: (0, eW.A)(n) },
                 { section: ee.RP.BOT_DATA_ACCESS, text: H.intl.string(H.t.WstFb0) },
             ];
         })(t),
         J = (0, g.A)({ user: t, guildId: l, channelId: L, displayProfile: V, onClose: G });
     return (0, a.jsx)(u.f5, {
-        value: X,
+        value: Y,
         children: (0, a.jsx)(f.of, {
-            value: Y,
+            value: X,
             openedAt: M,
             fetchStartedAt: V?.fetchStartedAt,
             fetchEndedAt: V?.fetchEndedAt,
@@ -557,47 +557,47 @@ function eK(e) {
                 children: (0, a.jsx)(r.EO, {
                     "data-migration-pending": !0,
                     transitionState: O,
-                    className: eY.zr,
+                    className: eX.zr,
                     hideShadow: !0,
-                    "aria-labelledby": z,
+                    "aria-labelledby": W,
                     parentComponent: "BotUserProfileModal",
                     children: (0, a.jsx)(s.F, {
                         component: (0, a.jsx)(o.A, {
-                            children: (0, a.jsx)(s.H, { id: z, children: H.intl.format(H.t.KRe1Fk, { name: W }) }),
+                            children: (0, a.jsx)(s.H, { id: W, children: H.intl.format(H.t.KRe1Fk, { name: z }) }),
                         }),
                         children: (0, a.jsxs)(j.A, {
                             user: t,
                             displayProfile: V,
-                            themeType: eX.d.MODAL,
+                            themeType: eY.d.MODAL,
                             children: [
                                 (0, a.jsx)(T.A, {
-                                    children: (0, a.jsx)(N.A, { user: t, guildId: F, viewProfileItem: J }),
+                                    children: (0, a.jsx)(N.A, { user: t, guildId: U, viewProfileItem: J }),
                                 }),
                                 (0, a.jsxs)("div", {
                                     children: [
-                                        (0, a.jsx)(v.A, { user: t, displayProfile: V, themeType: eX.d.MODAL }),
+                                        (0, a.jsx)(v.A, { user: t, displayProfile: V, themeType: eY.d.MODAL }),
                                         (0, a.jsxs)("div", {
-                                            className: eY.El,
+                                            className: eX.El,
                                             children: [
                                                 (0, a.jsx)(b.A, {
                                                     user: t,
                                                     displayProfile: V,
-                                                    guildId: F,
+                                                    guildId: U,
                                                     channelId: L,
-                                                    themeType: eX.d.MODAL,
+                                                    themeType: eY.d.MODAL,
                                                 }),
                                                 (0, a.jsx)(P.A, {
                                                     user: t,
-                                                    themeType: eX.d.MODAL,
+                                                    themeType: eY.d.MODAL,
                                                     hasEntered: O === d.ip.ENTERED,
                                                     onCloseProfile: G,
                                                     disableToolbar: !0,
                                                 }),
                                                 (0, a.jsxs)("div", {
-                                                    className: eY.Pz,
+                                                    className: eX.Pz,
                                                     children: [
                                                         (0, a.jsx)("div", {
-                                                            className: eY.jS,
+                                                            className: eX.jS,
                                                             children: (0, a.jsx)(w.e, {
                                                                 variant: "secondary",
                                                                 userId: t.id,
@@ -605,14 +605,14 @@ function eK(e) {
                                                             }),
                                                         }),
                                                         (0, a.jsx)("div", {
-                                                            className: eY.pg,
+                                                            className: eX.pg,
                                                             children: (0, a.jsx)(w.l, {
                                                                 variant: "secondary",
                                                                 userId: t.id,
                                                                 onClose: c.A.popAll,
                                                             }),
                                                         }),
-                                                        (0, a.jsx)(E.A, { user: t, guildId: F }),
+                                                        (0, a.jsx)(E.A, { user: t, guildId: U }),
                                                         (0, a.jsx)(C.A, { user: t }),
                                                     ],
                                                 }),
@@ -620,28 +620,28 @@ function eK(e) {
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)(I.A, { userId: t.id, className: eY.Fd }),
+                                (0, a.jsx)(I.A, { userId: t.id, className: eX.Fd }),
                                 (0, a.jsxs)("div", {
-                                    className: eY.rf,
+                                    className: eX.rf,
                                     children: [
-                                        (0, a.jsx)(y.A, {
-                                            className: eY.Xh,
+                                        (0, a.jsx)(y.Ay, {
+                                            className: eX.eF,
                                             user: t,
-                                            guildId: F,
-                                            nickname: W,
+                                            guildId: U,
+                                            displayName: z,
+                                            displayNameSize: "lg",
                                             pronouns: V?.pronouns,
-                                            nicknameVariant: "heading-xl/bold",
-                                            tags: (0, a.jsx)(A.A, {
+                                            trailing: (0, a.jsx)(A.A, {
                                                 displayProfile: V,
-                                                themeType: eX.d.MODAL,
+                                                themeType: eY.d.MODAL,
                                                 onClose: G,
                                             }),
                                         }),
-                                        (0, a.jsx)(eW, {
+                                        (0, a.jsx)(ez, {
                                             user: t,
                                             currentUser: n,
                                             displayProfile: V,
-                                            guildId: F,
+                                            guildId: U,
                                             items: K,
                                             initialSection: D ?? ee.RP.BOT_INFO,
                                             onClose: G,
@@ -699,7 +699,7 @@ function eZ(e) {
             children: (0, a.jsxs)(r.EO, {
                 "data-migration-pending": !0,
                 transitionState: h,
-                className: eY.zr,
+                className: eX.zr,
                 hideShadow: !0,
                 "aria-labelledby": L,
                 parentComponent: "NonUserBotProfileModal",
@@ -711,56 +711,56 @@ function eZ(e) {
                         children: (0, a.jsxs)(j.A, {
                             user: t,
                             displayProfile: w,
-                            themeType: eX.d.MODAL,
+                            themeType: eY.d.MODAL,
                             ref: w?.profileEffect != null ? O : void 0,
                             children: [
                                 (0, a.jsx)(T.A, { children: (0, a.jsx)(eq.A, { user: t }) }),
                                 (0, a.jsxs)("div", {
                                     children: [
-                                        (0, a.jsx)(v.A, { user: t, displayProfile: w, themeType: eX.d.MODAL }),
+                                        (0, a.jsx)(v.A, { user: t, displayProfile: w, themeType: eY.d.MODAL }),
                                         (0, a.jsx)("div", {
-                                            className: eY.El,
+                                            className: eX.El,
                                             children: (0, a.jsx)(b.A, {
                                                 user: t,
                                                 displayProfile: w,
                                                 guildId: E,
                                                 channelId: l,
-                                                themeType: eX.d.MODAL,
+                                                themeType: eY.d.MODAL,
                                             }),
                                         }),
                                     ],
                                 }),
                                 (0, a.jsxs)("div", {
-                                    className: eY.rf,
+                                    className: eX.rf,
                                     children: [
-                                        (0, a.jsx)(y.A, {
-                                            className: eY.Xh,
+                                        (0, a.jsx)(y.Ay, {
+                                            className: eX.eF,
                                             user: t,
                                             guildId: E,
-                                            nickname: P,
+                                            displayName: P,
+                                            displayNameSize: "lg",
                                             pronouns: w?.pronouns,
-                                            nicknameVariant: "heading-xl/bold",
-                                            tags: (0, a.jsx)(A.A, {
+                                            trailing: (0, a.jsx)(A.A, {
                                                 displayProfile: w,
-                                                themeType: eX.d.MODAL,
+                                                themeType: eY.d.MODAL,
                                                 onClose: C,
                                             }),
                                         }),
                                         (0, a.jsxs)("div", {
                                             className: eH.kL,
                                             children: [
-                                                (0, a.jsx)(k.V, {
+                                                (0, a.jsx)(S.V, {
                                                     className: eH.$H,
                                                     type: "top",
                                                     selectedItem: ee.RP.BOT_INFO,
                                                     onItemSelect: el.tEg,
                                                     children: (0, a.jsx)(
-                                                        k.V.Item,
+                                                        S.V.Item,
                                                         {
                                                             className: eH.YU,
                                                             id: ee.RP.BOT_INFO,
                                                             "aria-label": H.intl.string(H.t.ZzAR2Y),
-                                                            children: (0, a.jsx)(S.E, {
+                                                            children: (0, a.jsx)(k.E, {
                                                                 variant: "text-sm/normal",
                                                                 children: H.intl.string(H.t.ZzAR2Y),
                                                             }),
@@ -804,12 +804,12 @@ var e$ = n(628284),
     e0 = n(331322),
     e9 = n(632738),
     e1 = n(994500),
-    e2 = n(47675),
-    e8 = n(249790),
+    e8 = n(47675),
+    e2 = n(249790),
     e7 = n(254828),
     e3 = n(783123),
-    e6 = n(449572);
-function e5(e) {
+    e5 = n(449572);
+function e6(e) {
     let {
             user: t,
             guildId: n,
@@ -843,28 +843,28 @@ function e5(e) {
             children: (0, a.jsx)(r.EO, {
                 "data-migration-pending": !0,
                 transitionState: o,
-                className: e6.zr,
+                className: e5.zr,
                 "aria-label": C,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, a.jsxs)(j.A, {
                     user: t,
                     displayProfile: I,
-                    themeType: eX.d.MODAL_V2,
+                    themeType: eY.d.MODAL_V2,
                     children: [
-                        (0, a.jsx)("div", { className: e6.Tp }),
+                        (0, a.jsx)("div", { className: e5.Tp }),
                         (0, a.jsxs)("div", {
-                            className: e6.Qs,
+                            className: e5.Qs,
                             children: [
-                                (0, a.jsx)(e8.A, { user: t, guildId: g }),
+                                (0, a.jsx)(e2.A, { user: t, guildId: g }),
                                 (0, a.jsxs)("div", {
-                                    className: e6.FS,
+                                    className: e5.FS,
                                     children: [
                                         (0, a.jsx)(B.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
                                             children: H.intl.string(H.t.b33pLD),
                                         }),
-                                        (0, a.jsx)(S.E, {
+                                        (0, a.jsx)(k.E, {
                                             variant: "text-md/medium",
                                             color: "text-default",
                                             children: H.intl.format(h ? H.t.T7QiLn : H.t.MnEowy, { username: y }),
@@ -872,7 +872,7 @@ function e5(e) {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: e6.vb,
+                                    className: e5.vb,
                                     children: v.map((e, t) => {
                                         let { icon: n, description: i } = e;
                                         return (0, a.jsx)(
@@ -895,7 +895,7 @@ function e5(e) {
                                             isBlocked: h,
                                             onClick: () => {
                                                 c(),
-                                                    (0, e2.Wn)({
+                                                    (0, e8.Wn)({
                                                         action: h ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: b,
                                                         ...A,
@@ -906,7 +906,7 @@ function e5(e) {
                                             userId: t.id,
                                             onClick: () => {
                                                 c(),
-                                                    (0, e2.Wn)({
+                                                    (0, e8.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                         analyticsLocations: b,
                                                         ...A,
@@ -929,7 +929,7 @@ function te(e) {
         { user: i } = n,
         [r, s] = (0, l.A)(i.id);
     return r && !t
-        ? (0, a.jsx)(e5, { onHide: s, ...n })
+        ? (0, a.jsx)(e6, { onHide: s, ...n })
         : i.isNonUserBot()
           ? (0, a.jsx)(eZ, { ...n })
           : i.bot

@@ -33429,143 +33429,137 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 100%
 }
 
-.container__63ed3 {
-    --custom-nickname-line-height: 24px;
-    --custom-nickname-icon-size: 16px;
+.displayNameRow__26b1f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    line-height: 24px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
 }
 
-.user-profile-modal .container__63ed3,
-.user-profile-modal-v2 .container__63ed3 {
-    --custom-nickname-line-height: 30px;
-    --custom-nickname-icon-size: 18px
+.displayNameRow__26b1f.lg__26b1f {
+    line-height: 30px
 }
 
-.container__63ed3.bot__63ed3 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px
-}
-
-.clickableUsername__63ed3 {
-    cursor: pointer
-}
-
-.clickableUsername__63ed3:focus-visible .nickname__63ed3,
-.clickableUsername__63ed3:focus-visible .userTagUsername__63ed3,
-.clickableUsername__63ed3:hover .nickname__63ed3,
-.clickableUsername__63ed3:hover .userTagUsername__63ed3 {
-    text-decoration: underline
-}
-
-.nickname__63ed3 {
-    overflow: hidden
-}
-
-.nickname__63ed3,
-.nicknameWithDisplayNameStyles__63ed3 {
-    max-height: calc(var(--custom-nickname-line-height)*3);
-    word-break: break-word
-}
-
-.nicknameIcons__63ed3 {
-    align-self: flex-start;
-    display: flex;
-    gap: 2px;
-    padding-top: calc((var(--custom-nickname-line-height) - var(--custom-nickname-icon-size))/2)
-}
-
-.usernameRow__63ed3 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 8px
-}
-
-.usernameRow__63ed3 .botTag__63ed3 {
+.displayNameRow__26b1f .botTag__26b1f {
     vertical-align: baseline
 }
 
-.tags__63ed3 {
+.displayNameTrailing__26b1f {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    height: 1lh
+}
+
+.clickable__26b1f {
+    cursor: pointer
+}
+
+.displayName__26b1f {
+    max-height: 3lh;
+    word-break: break-word
+}
+
+.displayName__26b1f.noStyles__26b1f {
+    overflow: hidden
+}
+
+.clickable__26b1f:focus-visible .displayName__26b1f.noStyles__26b1f,
+.clickable__26b1f:hover .displayName__26b1f.noStyles__26b1f {
+    text-decoration: underline
+}
+
+.usernameAndPronounsRow__26b1f {
     align-items: center;
     -moz-column-gap: 9.33px;
     column-gap: 9.33px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
 }
 
-.user-profile-popout .tags__63ed3,
-.user-profile-sidebar .tags__63ed3 {
+.user-profile-popout .usernameAndPronounsRow__26b1f,
+.user-profile-sidebar .usernameAndPronounsRow__26b1f {
     row-gap: 2px
 }
 
-.user-profile-modal-v2 .tags__63ed3 {
+.user-profile-modal-v2 .usernameAndPronounsRow__26b1f {
     row-gap: 4px
 }
 
-.user-profile-modal .tags__63ed3 {
+.user-profile-modal .usernameAndPronounsRow__26b1f {
     row-gap: 8px
 }
 
-.tags__63ed3.bot__63ed3,
-.tags__63ed3.pronouns__63ed3 {
+.usernameAndPronounsRow__26b1f.hasPronouns__26b1f,
+.usernameAndPronounsRow__26b1f.isBot__26b1f {
     -moz-column-gap: 6px;
     column-gap: 6px
 }
 
-.userTag__63ed3 {
+.usernameAndPronounsRow__26b1f.isBot__26b1f {
+    margin-block-start: 8px
+}
+
+.userTag__26b1f {
     font-family: var(--text-strong);
     font-size: 14px;
     font-weight: var(--font-weight-normal);
     line-height: 18px
 }
 
-.pronounsTooltip__63ed3 {
-    max-width: 100%
-}
-
-.pronounsText__63ed3 {
+.pronouns__26b1f {
     margin-inline-end: 2px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.userTagUsername__63ed3 {
+.userTagUsername__26b1f {
+    color: var(--text-strong);
     display: inline;
     text-overflow: unset;
+    vertical-align: top;
     white-space: normal;
     word-break: break-all
 }
 
-.userTagDiscriminator__63ed3,
-.userTagUsername__63ed3 {
+.clickable__26b1f:focus-visible .userTagUsername__26b1f,
+.clickable__26b1f:hover .userTagUsername__26b1f {
+    text-decoration: underline
+}
+
+.userTagDiscriminator__26b1f {
     color: var(--text-strong);
     vertical-align: top
 }
 
-.dotSpacer__63ed3 {
+.dotSpacer__26b1f {
     background-color: var(--text-default);
     border-radius: 50%;
     height: 4px;
     width: 4px
 }
 
-.guildTagContainer__63ed3 {
+.guildTagContainer__26b1f {
     border: 1px solid var(--user-profile-border);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     height: 20px
 }
 
-.guildTagContainer__63ed3:hover {
+.guildTagContainer__26b1f:hover {
     background-color: var(--user-profile-background-hover)
 }
 
-.guildTag__63ed3 {
+.guildTag__26b1f {
     background: unset;
     margin: 0 auto
 }

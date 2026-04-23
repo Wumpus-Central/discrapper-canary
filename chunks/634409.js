@@ -16,14 +16,14 @@ var l = t(627968),
     v = t(562153),
     P = t(183555),
     x = t(47675),
-    O = t(999291),
-    _ = t(975732),
+    _ = t(999291),
+    O = t(975732),
     j = t(718019),
     g = t(694720),
-    R = t(915614),
-    E = t(308244),
-    y = t(946356),
-    T = t(586644),
+    y = t(915614),
+    R = t(308244),
+    E = t(946356),
+    T = t(878555),
     I = t(35241),
     S = t(587168),
     b = t(652215),
@@ -45,7 +45,7 @@ function L(e) {
             disableAutoFocus: F = !1,
             onClickContainer: H,
         } = e,
-        z = (0, O.Ay)(i.id, t),
+        z = (0, _.Ay)(i.id, t),
         G = (0, h.aL)(),
         { analyticsLocations: X } = (0, c.Ay)([...D, u.A.USER_PROFILE_POPOUT]),
         Y = (0, P.pb)({ layout: "POPOUT", userId: i.id, guildId: t, channelId: L, messageId: k, roleId: w }),
@@ -57,7 +57,7 @@ function L(e) {
     let J = () => {
             W?.(),
                 G.dispatch(b.jej.POPOUT_CLOSE),
-                (0, _.openUserProfileModal)({ sourceAnalyticsLocations: X, hideRestrictedProfile: !0, ...Y });
+                (0, O.openUserProfileModal)({ sourceAnalyticsLocations: X, hideRestrictedProfile: !0, ...Y });
         },
         K = !q && (0, A.A)(i.id),
         Q = F ? "div" : r.l,
@@ -79,7 +79,7 @@ function L(e) {
                     (0, l.jsx)(a.A, {
                         children: (0, l.jsx)(d.H, { id: Z, children: U.intl.format(U.t.KRe1Fk, { name: ee }) }),
                     }),
-                    (0, l.jsxs)(y.A, {
+                    (0, l.jsxs)(E.A, {
                         user: i,
                         displayProfile: z,
                         themeType: N.d.POPOUT,
@@ -106,7 +106,7 @@ function L(e) {
                             (0, l.jsxs)("div", {
                                 className: C.wx,
                                 children: [
-                                    (0, l.jsx)(R.A, { user: i, displayProfile: z, guildId: t, themeType: N.d.POPOUT }),
+                                    (0, l.jsx)(y.A, { user: i, displayProfile: z, guildId: t, themeType: N.d.POPOUT }),
                                     (0, l.jsx)(j.A, {
                                         user: i,
                                         displayProfile: z,
@@ -121,14 +121,18 @@ function L(e) {
                                 fade: !0,
                                 className: C.rf,
                                 children: [
-                                    (0, l.jsx)(T.A, {
+                                    (0, l.jsx)(T.Ay, {
                                         user: i,
                                         guildId: t,
-                                        nickname: v.Ay.getName(t, L, i),
-                                        onOpenProfile: K ? J : void 0,
-                                        tags: (0, l.jsx)(g.A, { displayProfile: z, themeType: N.d.POPOUT, onClose: W }),
+                                        displayName: v.Ay.getName(t, L, i),
+                                        onClickName: K ? J : void 0,
+                                        trailing: (0, l.jsx)(g.A, {
+                                            displayProfile: z,
+                                            themeType: N.d.POPOUT,
+                                            onClose: W,
+                                        }),
                                     }),
-                                    (0, l.jsx)(E.E, {
+                                    (0, l.jsx)(R.E, {
                                         userId: i.id,
                                         userBio: z?.bio,
                                         setLineClamp: !1,

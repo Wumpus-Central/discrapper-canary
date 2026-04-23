@@ -487,7 +487,7 @@ var ts = n(206835),
     th = n(646986),
     tm = n(349419),
     t_ = n(946356),
-    tf = n(586644),
+    tf = n(878555),
     tg = n(624479),
     tA = n(206845),
     tx = n(957565),
@@ -1166,20 +1166,20 @@ function nE(e) {
                                         style: { pointerEvents: $ ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(tp.A, { userId: f.id }),
-                                            (0, i.jsx)(tf.A, {
+                                            (0, i.jsx)(tf.Ay, {
+                                                className: eP.eF,
                                                 user: f,
-                                                className: eP.Xh,
-                                                nickname: ty.Ay.getName(void 0, null, f),
-                                                onOpenProfile: b ? void 0 : X,
+                                                displayName: ty.Ay.getName(void 0, null, f),
+                                                onClickName: b ? void 0 : X,
+                                                displayNameTrailing: (0, i.jsx)(tT, { user: f, isVisible: N }),
                                                 pronouns: v?.pronouns,
-                                                tags: (0, i.jsx)(tc.A, {
+                                                trailing: (0, i.jsx)(tc.A, {
                                                     displayProfile: v,
                                                     themeType: nA.d.POPOUT,
                                                     onClose: A,
                                                     shouldOpenBadgeTooltip: null != C ? (e) => e === C : void 0,
                                                     shouldGlowTenureBadge: z.current,
                                                 }),
-                                                nicknameIcons: (0, i.jsx)(tT, { user: f, isVisible: N }),
                                             }),
                                             (0, i.jsx)(td.A, { isPremiumUser: V, onInteraction: A }),
                                             (0, i.jsx)(tb.A, {
