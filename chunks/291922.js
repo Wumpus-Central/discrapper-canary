@@ -25,9 +25,9 @@ var j = s(419354),
     y = s(123292),
     S = s(331322),
     T = s(939249),
-    I = s(782134),
-    _ = s(365199),
-    w = s(820081),
+    _ = s(782134),
+    w = s(365199),
+    I = s(820081),
     Q = s(765671),
     q = s(736653),
     L = s(496885),
@@ -202,7 +202,7 @@ function J(e) {
                                                 className: G.iI,
                                                 "aria-label": B.intl.string(B.t.RscU7I),
                                                 onClick: et,
-                                                children: (0, n.jsx)(I.u, { color: "currentColor", className: G.A9 }),
+                                                children: (0, n.jsx)(_.u, { color: "currentColor", className: G.A9 }),
                                             }),
                                         }),
                                     (0, n.jsx)(P.C, {
@@ -220,7 +220,7 @@ function J(e) {
                                                 ...e,
                                                 className: G.iI,
                                                 "aria-label": B.intl.string(B.t.DEoVWZ),
-                                                children: (0, n.jsx)(_.j, {
+                                                children: (0, n.jsx)(w.j, {
                                                     size: "md",
                                                     color: "currentColor",
                                                     className: G.A9,
@@ -259,7 +259,7 @@ function J(e) {
                                                 size: 16,
                                                 color: A.A.unsafe_rawColors.GREEN_360.css,
                                                 allowFullSizedIcon: !0,
-                                                children: (0, n.jsx)(w.B, {
+                                                children: (0, n.jsx)(I.B, {
                                                     color: A.A.unsafe_rawColors.WHITE.css,
                                                     size: "custom",
                                                     width: 13,
@@ -325,8 +325,8 @@ var eN = s(112142),
     ey = s(212614),
     eS = s(79545),
     eT = s(654487),
-    eI = s(562296);
-let e_ = [
+    e_ = s(562296);
+let ew = [
     {
         value: eT.fO.DESKTOP,
         get label() {
@@ -340,7 +340,7 @@ let e_ = [
         },
     },
 ];
-function ew(e) {
+function eI(e) {
     let t,
         s,
         { value: i } = e;
@@ -354,19 +354,19 @@ function ew(e) {
         default:
             return null;
     }
-    return (0, n.jsxs)("div", { className: eI.FL, children: [s, t] });
+    return (0, n.jsxs)("div", { className: e_.FL, children: [s, t] });
 }
 function eQ(e) {
     if (0 === e.length) return null;
     switch (e[0].value) {
         case eT.fO.DESKTOP:
             return (0, n.jsxs)("span", {
-                className: eI.FL,
+                className: e_.FL,
                 children: [(0, n.jsx)(eC.k, {}), B.intl.string(B.t.g6Dr44)],
             });
         case eT.fO.CONSOLE:
             return (0, n.jsxs)("span", {
-                className: eI.FL,
+                className: e_.FL,
                 children: [(0, n.jsx)(ej._, {}), B.intl.string(B.t.iyNbj5)],
             });
         default:
@@ -443,9 +443,9 @@ function ek(e) {
             isQuestEnrollmentBlocked: null != k.A.questEnrollmentBlockedUntil,
         })),
         T = l.userStatus?.enrolledAt != null,
-        I = l.userStatus?.completedAt != null,
-        _ = I && l.userStatus?.claimedAt == null,
-        w = (0, R.if)(l),
+        _ = l.userStatus?.completedAt != null,
+        w = _ && l.userStatus?.claimedAt == null,
+        I = (0, R.if)(l),
         Q = !(0, R.Ic)(l),
         q = (0, o.In)(l),
         L = (0, d.IO)(l),
@@ -511,7 +511,7 @@ function ek(e) {
         eD = null;
     return ($.enabled && G === eS.UA.EXPIRED_CLAIMABLE && $.enabledQuestStates.has(G)
         ? (eD = (0, n.jsx)("div", {
-              className: eI.x6,
+              className: e_.x6,
               children: (0, n.jsx)(ey.A, {
                   quest: l,
                   surface: eS.V3.QUEST_HOME_TILE_FOOTER,
@@ -521,9 +521,9 @@ function ek(e) {
                   analyticsCtxQuestContentRowIndex: j,
               }),
           }))
-        : w && _
+        : I && w
           ? (eD = (0, n.jsx)("div", {
-                className: eI.x6,
+                className: e_.x6,
                 children: (0, n.jsx)(em.$, {
                     variant: "primary",
                     loading: A,
@@ -573,7 +573,7 @@ function ek(e) {
                           ],
                       })
                     : (0, n.jsx)("div", {
-                          className: eI.x6,
+                          className: e_.x6,
                           children: (0, n.jsx)(ey.A, {
                               quest: l,
                               surface: eS.V3.QUEST_HOME_TILE_FOOTER,
@@ -583,7 +583,7 @@ function ek(e) {
                               analyticsCtxQuestContentRowIndex: j,
                           }),
                       }))
-            : I
+            : _
               ? (eD = L
                     ? (0, n.jsx)(eL, { quest: l, sourceQuestContent: E, onClick: ee, text: J })
                     : (0, D.vA)(l)
@@ -604,7 +604,7 @@ function ek(e) {
                             ],
                         })
                       : (0, n.jsx)("div", {
-                            className: eI.x6,
+                            className: e_.x6,
                             children: (0, n.jsx)(em.$, {
                                 variant: "primary",
                                 onClick: ee ?? void 0,
@@ -615,7 +615,7 @@ function ek(e) {
               : Q
                 ? M
                     ? (eD = (0, n.jsx)("div", {
-                          className: eI.x6,
+                          className: e_.x6,
                           children:
                               $.enabled &&
                               (G === eS.UA.UNENROLLED || G === eS.UA.ENROLLED || G === eS.UA.INCOMPLETE) &&
@@ -651,11 +651,11 @@ function ek(e) {
                     : T && !ei
                       ? (eD = V
                             ? (0, n.jsx)(ed.Pw, {
-                                  className: eI.dd,
+                                  className: e_.dd,
                                   isSelected: () => !1,
-                                  options: e_,
+                                  options: ew,
                                   placeholder: B.intl.string(B.t.drVw4T),
-                                  renderOptionLabel: ew,
+                                  renderOptionLabel: eI,
                                   renderOptionValue: eQ,
                                   select: Y,
                                   serialize: (e) => {
@@ -675,9 +675,9 @@ function ek(e) {
                                 (G === eS.UA.ENROLLED || G === eS.UA.INCOMPLETE) &&
                                 $.enabledQuestStates.has(G)
                               ? eC && (0, d.t)({ quest: l }) && !(0, d.g5)(l)
-                                  ? (0, n.jsx)("div", { className: eI.x6, children: ek })
+                                  ? (0, n.jsx)("div", { className: e_.x6, children: ek })
                                   : (0, n.jsx)("div", {
-                                        className: eI.x6,
+                                        className: e_.x6,
                                         children: (0, n.jsxs)(ex.e, {
                                             direction: "horizontal",
                                             fullWidth: !0,
@@ -697,7 +697,7 @@ function ek(e) {
                               : (0, d.g5)(l) && !O && U !== r.X0.DESKTOP
                                 ? g
                                     ? (0, n.jsx)("div", {
-                                          className: eI.x6,
+                                          className: e_.x6,
                                           children: (0, n.jsx)(em.$, {
                                               variant: "secondary",
                                               onClick: ee ?? void 0,
@@ -710,16 +710,16 @@ function ek(e) {
                                           color: eh.XD.PRIMARY,
                                           onClick: en,
                                           disabled: et,
-                                          className: eI.x6,
+                                          className: e_.x6,
                                           children: (0, n.jsxs)("div", {
-                                              className: eI.tn,
+                                              className: e_.tn,
                                               children: [v.render(), B.intl.string(B.t.nPThNb)],
                                           }),
                                       })
                                 : L
                                   ? eC
                                       ? (0, n.jsx)("div", {
-                                            className: eI.x6,
+                                            className: e_.x6,
                                             children: (0, n.jsxs)(ex.e, {
                                                 direction: "horizontal",
                                                 fullWidth: !0,
@@ -735,7 +735,7 @@ function ek(e) {
                                             }),
                                         })
                                       : (0, n.jsx)("div", {
-                                            className: eI.x6,
+                                            className: e_.x6,
                                             children: (0, n.jsx)(em.$, {
                                                 variant: "primary",
                                                 onClick: ee ?? void 0,
@@ -746,7 +746,7 @@ function ek(e) {
                                   : (0, D.vA)(l)
                                     ? eC
                                         ? (0, n.jsx)("div", {
-                                              className: eI.x6,
+                                              className: e_.x6,
                                               children: (0, n.jsxs)(ex.e, {
                                                   direction: "horizontal",
                                                   fullWidth: !0,
@@ -763,7 +763,7 @@ function ek(e) {
                                               }),
                                           })
                                         : (0, n.jsx)("div", {
-                                              className: eI.x6,
+                                              className: e_.x6,
                                               children: (0, n.jsx)(em.$, {
                                                   variant: "primary",
                                                   icon: (0, m.Oz)(l),
@@ -773,7 +773,7 @@ function ek(e) {
                                               }),
                                           })
                                     : (0, n.jsx)("div", {
-                                          className: eI.x6,
+                                          className: e_.x6,
                                           children: eC
                                               ? ek
                                               : (0, n.jsx)(em.$, {
@@ -803,7 +803,7 @@ function ek(e) {
                                   ],
                               })
                             : (0, n.jsx)("div", {
-                                  className: eI.x6,
+                                  className: e_.x6,
                                   children: (0, n.jsxs)(ex.e, {
                                       direction: "horizontal",
                                       fullWidth: !0,
@@ -850,14 +850,14 @@ function ek(e) {
     null == eD)
         ? null
         : (0, n.jsxs)("div", {
-              className: eI.kL,
+              className: e_.kL,
               children: [
-                  (0, n.jsx)("div", { className: eI.qz, children: eD }),
+                  (0, n.jsx)("div", { className: e_.qz, children: eD }),
                   K &&
                       (0, n.jsx)("div", {
-                          className: eI.qz,
+                          className: e_.qz,
                           children: (0, n.jsx)(ed.Pw, {
-                              className: eI.xZ,
+                              className: e_.xZ,
                               isSelected: (e) => {
                                   switch (U) {
                                       case r.X0.DESKTOP:
@@ -868,9 +868,9 @@ function ek(e) {
                                           return !1;
                                   }
                               },
-                              options: e_,
+                              options: ew,
                               placeholder: B.intl.string(B.t.drVw4T),
-                              renderOptionLabel: ew,
+                              renderOptionLabel: eI,
                               renderOptionValue: eQ,
                               select: Y,
                               serialize: (e) => {
@@ -912,15 +912,15 @@ function eM(e) {
         y = null != A && A > 104,
         { onAssetLoadComplete: S } = i.useContext(W.M),
         { expansionSpring: T } = (0, g.z)({ expansionSpring: +!!a, config: { ...K.N, clamp: !0 } }),
-        I = t.userStatus?.completedAt != null,
-        _ = t.userStatus?.claimedAt != null,
-        w = (0, el.ks)(t.config),
+        _ = t.userStatus?.completedAt != null,
+        w = t.userStatus?.claimedAt != null,
+        I = (0, el.ks)(t.config),
         q = (0, el._Z)(t.config),
         { completedRatio: L, completedRatioDisplay: b } = (0, o.O9)(t),
         k = (0, ea.gj)(t, x, en.Ob.QuestHome, m),
         D = i.useMemo(
             () =>
-                _ && w
+                w && I
                     ? B.intl.format(B.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, n.jsxs)(
@@ -939,9 +939,9 @@ function eM(e) {
                                   t.id,
                               ),
                       })
-                    : _
+                    : w
                       ? (0, n.jsx)(ez, { questId: t.id, children: f })
-                      : w
+                      : I
                         ? B.intl.format(B.t.ro1sze, {
                               balanceHook: () =>
                                   (0, n.jsxs)(
@@ -963,7 +963,7 @@ function eM(e) {
                         : B.intl.format(B.t["0IUT4Y"], {
                               rewardWithArticleHook: () => (0, n.jsx)(ez, { questId: t.id, children: v }, t.id),
                           }),
-            [f, _, v, t.id, q, w],
+            [f, w, v, t.id, q, I],
         ),
         M = i.useMemo(() => {
             if (null != k)
@@ -991,12 +991,12 @@ function eM(e) {
                         children: (0, n.jsxs)("div", {
                             className: eR.c6,
                             children: [
-                                !_ && I && (0, n.jsx)("div", { className: eR.Nz }),
+                                !w && _ && (0, n.jsx)("div", { className: eR.Nz }),
                                 O
                                     ? (0, n.jsxs)("div", {
                                           className: eR.Tr,
                                           children: [
-                                              I &&
+                                              _ &&
                                                   (0, n.jsx)(ee.a, {
                                                       importData: eD,
                                                       className: eR.t_,
@@ -1111,22 +1111,22 @@ function eU(e) {
                 A({
                     questId: t.id,
                     event: $.HAw.QUEST_HOVER,
-                    properties: { content_id: a, content_name: (0, u.jO)(a), content_position: r },
+                    properties: { content_id: a, content_name: (0, u.jO)(a), content_position: r, row_index: x },
                     sourceQuestContent: E,
                 }),
                 p && (0, m.l9)();
-        }, [A, t.id, a, p, E, r]),
+        }, [A, t.id, a, p, E, r, x]),
         S = i.useCallback(() => {
             v(!1),
                 A({
                     questId: t.id,
                     event: $.HAw.QUEST_HOVER_OFF,
-                    properties: { content_id: a, content_name: (0, u.jO)(a), content_position: r },
+                    properties: { content_id: a, content_name: (0, u.jO)(a), content_position: r, row_index: x },
                     sourceQuestContent: E,
                 });
-        }, [A, t.id, a, E, r]),
+        }, [A, t.id, a, E, r, x]),
         T = i.useContext(C.X),
-        { visibilityElementRef: I, almostVisibleInViewport: _ } = (function (e) {
+        { visibilityElementRef: _, almostVisibleInViewport: w } = (function (e) {
             let [t, s] = i.useState(!1),
                 n = i.useCallback((e) => {
                     e.isIntersecting && s(!0);
@@ -1143,7 +1143,7 @@ function eU(e) {
     return (0, n.jsxs)("div", {
         id: `quest-tile-${t.id}`,
         ref: (e) => {
-            (j.current = e), (I.current = e);
+            (j.current = e), (_.current = e);
         },
         className: l()(eP.k, s),
         onMouseEnter: y,
@@ -1156,7 +1156,7 @@ function eU(e) {
                 isHovering: f,
                 errorHints: N,
                 warningHints: O,
-                isVisibleInViewport: _,
+                isVisibleInViewport: w,
                 sourceQuestContent: E,
             }),
             (0, n.jsx)(eM, {
@@ -1166,7 +1166,7 @@ function eU(e) {
                 contentPosition: r,
                 rowIndex: x,
                 onReceiveErrorHints: g,
-                isVisibleInViewport: _,
+                isVisibleInViewport: w,
                 sourceQuestContent: E,
             }),
         ],
