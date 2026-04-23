@@ -50,6 +50,8 @@ function r(e) {
             return a.intl.string(a.t.Z0ozta);
         case "eur":
             return a.intl.string(a.t["uhxR+U"]);
+        case "gbp":
+            return a.intl.string(a.t.RKkD0b);
         default:
             return "";
     }
