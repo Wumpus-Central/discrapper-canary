@@ -24104,6 +24104,7 @@
   "WaP/lz": "Add top channels and DMs to your Favorites for quick access. Only with Nitro.",
   "+dSwhE": "Preview Favorites",
   "aA0vO8": "Favorite this with Nitro",
+  "rIK0E2": "{giftsToNextTier, plural, one { gift} other { gifts} } from !!{nextTierName}!!",
   "QsbVMM": "{count, plural, one { gift} other { gifts} }",
   "SvqMnV": "Get a limited-edition Nameplate when you join by {date, date, MMMM d}. Yours to use with Nitro. [Terms apply](Terms apply).",
   "PyQY5+": "Get a limited-edition Nameplate when you upgrade by {date, date, MMMM d}. Yours to use with Nitro. [Terms apply](Terms apply).",
