@@ -17745,7 +17745,10 @@ async function S8() {
         n = (await S5.A.fetchTeams(!0)).body;
     } catch {}
     n.filter((e) => e.owner_user_id === t.id).length > 0
-        ? (0, rA.A)({ title: _.intl.string(_.t.UNGZDI), subtitle: _.intl.string(_.t.alpAUm) })
+        ? (0, rA.A)({
+              title: _.intl.string(_.t.UNGZDI),
+              subtitle: _.intl.format(_.t.alpAUm, { devPortalLink: "https://discord.com/developers/teams" }),
+          })
         : K.A.getGuildsArray().filter((e) => e.ownerId === t.id).length > 0
           ? (0, rA.A)({ title: _.intl.string(_.t.I5UrbV), subtitle: _.intl.string(_.t.UyVVan) })
           : t.isClaimed()
