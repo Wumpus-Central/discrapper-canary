@@ -11,7 +11,7 @@ var i = n(627968),
 async function s() {
     return [
         (
-            await Promise.all([n.e("30204"), n.e("8555"), n.e("68883"), n.e("24805"), n.e("9172")]).then(
+            await Promise.all([n.e("30204"), n.e("8555"), n.e("68883"), n.e("24805"), n.e("31063")]).then(
                 n.bind(n, 264311),
             )
         ).playgroundConfig,
