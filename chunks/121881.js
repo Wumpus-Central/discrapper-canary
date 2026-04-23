@@ -29,7 +29,7 @@ function d(e) {
                 clearTimeout(d.current), e();
             };
         }, [n.key, n.type]),
-        (0, l.jsx)("div", { "data-nav-anchor-key": n.key, className: a()(u.k, s && u.j), children: t })
+        (0, l.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(u.k, s && u.j), children: t })
     );
 }
 var x = t(331322);
