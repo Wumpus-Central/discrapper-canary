@@ -181,6 +181,7 @@ function L(t) {
                                                 }),
                                                 (0, s.jsx)(x.k, {
                                                     value: f,
+                                                    "aria-label": J.intl.string(J.t["Jzd+z/"]),
                                                     onChange: (t) => {
                                                         b(t), L(0 === t.length);
                                                     },
