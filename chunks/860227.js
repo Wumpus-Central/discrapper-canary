@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { CJ: () => a, JH: () => c, XL: () => d, ZD: () => g, d$: () => o, fF: () => m, nS: () => r, xl: () => u });
+n.d(t, { CJ: () => i, JH: () => u, XL: () => d, ZD: () => g, d$: () => o, fF: () => m, nS: () => r, xl: () => c });
 var l = n(264927),
-    i = n(143413),
+    a = n(143413),
     s = n(652215);
-function a(e) {
+function i(e) {
     return `message-content-${e.id}`;
 }
 function r(e) {
@@ -13,48 +13,48 @@ function o(e, t) {
     let n = t ?? e.id;
     return `message-username-${n}`;
 }
-function u(e) {
+function c(e) {
     return `message-timestamp-${e.id}`;
 }
-function c(e) {
+function u(e) {
     return `message-reactions-${e.id}`;
 }
 function d(e) {
     return `message-accessories-${e.id}`;
 }
 function m(e, t, n) {
-    let c = e.type === s.lAJ.REPLY && null != e.messageReference,
+    let u = e.type === s.lAJ.REPLY && null != e.messageReference,
         m = e.embeds.length > 0,
         g = e.attachments.length > 0,
         h = e.stickerItems.length > 0,
-        A = e.codedLinks.length > 0,
-        f = e.components.length > 0,
-        p = e.hasFlag(s.pr7.HAS_THREAD),
-        x = m || g || h || A || p || f || e.type === s.lAJ.THREAD_CREATED,
+        p = e.codedLinks.length > 0,
+        A = e.components.length > 0,
+        _ = e.hasFlag(s.pr7.HAS_THREAD),
+        f = m || g || h || p || _ || A || e.isPoll() || e.type === s.lAJ.THREAD_CREATED,
         v = m && e.content === e.embeds[0].url && e.embeds[0].type === s.Auw.GIFV,
-        C = e.type !== s.lAJ.DEFAULT || (!v && "" !== e.content),
-        N = (0, i.A)(e),
-        E = !N && n?.hasTimestamp !== !1,
-        I = e.hasFlag(s.pr7.IS_GUILD_OFFICIAL),
-        _ = o(e, t),
+        x = e.type !== s.lAJ.DEFAULT || (!v && "" !== e.content),
+        C = (0, a.A)(e),
+        I = !C && n?.hasTimestamp !== !1,
+        N = e.hasFlag(s.pr7.IS_GUILD_OFFICIAL),
+        E = o(e, t),
         b = r(e),
-        S = N ? "" : `${c ? b : _} ${l.lW}`;
-    if (C) {
-        let t = a(e);
-        S += ` ${t}`;
-    }
+        T = C ? "" : `${u ? b : E} ${l.lW}`;
     if (x) {
+        let t = i(e);
+        T += ` ${t}`;
+    }
+    if (f) {
         let t = d(e);
-        S += ` ${t}`;
+        T += ` ${t}`;
     }
-    if (E) {
-        let t = u(e);
-        S += ` ${l.l6} ${t}`;
+    if (I) {
+        let t = c(e);
+        T += ` ${l.l6} ${t}`;
     }
-    return I && (S += ` ${l.zV}`), S.trim();
+    return N && (T += ` ${l.zV}`), T.trim();
 }
 function g(e) {
     if (0 === e.reactions.length) return;
-    let t = c(e);
+    let t = u(e);
     return `${l.oz} ${t}`;
 }
