@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     EO: "oneByOneGrid_f4758a",
     Gj: "oneByOneGridSingle_f4758a",
