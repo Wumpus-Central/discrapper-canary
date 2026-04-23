@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { A: () => c });
-var l = n(627968);
+n.d(a, { A: () => c });
+var t = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(939249),
-    r = n(285796),
-    o = n(985018),
-    d = n(814438);
+var _ = n(503698),
+    i = n.n(_),
+    l = n(939249),
+    o = n(285796),
+    r = n(985018),
+    s = n(519846);
 function c(e) {
-    let { className: t, "aria-label": n, ...i } = e;
-    return (0, l.jsx)(a.D, {
-        ...i,
-        "aria-label": null != n ? n : o.intl.string(o.t.N86XcP),
-        className: s()(d.x, t),
-        children: (0, l.jsx)(r.a, { size: "xs", color: "currentColor" }),
+    let { className: a, "aria-label": n, ..._ } = e;
+    return (0, t.jsx)(l.D, {
+        ..._,
+        "aria-label": null != n ? n : r.intl.string(r.t.N86XcP),
+        className: i()(s.x, a),
+        children: (0, t.jsx)(o.a, { size: "xs", color: "currentColor" }),
     });
 }

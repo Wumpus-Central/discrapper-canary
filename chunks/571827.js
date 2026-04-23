@@ -1,84 +1,83 @@
-"use strict";
-r.d(t, { A: () => p });
-var i = r(627968);
-r(64700);
-var n = r(575593),
-    s = r(192308),
-    a = r(403581),
-    l = r(834730),
-    c = r(404374),
-    o = r(788868),
-    d = r(985018),
-    u = r(485466);
-function p(e) {
-    let { itemType: t, onClose: p } = e,
-        _ =
-            t === n.R.AVATAR_DECORATION
+l.d(t, { A: () => m });
+var r = l(627968);
+l(64700);
+var a = l(575593),
+    s = l(192308),
+    n = l(403581),
+    i = l(834730),
+    c = l(404374),
+    o = l(788868),
+    u = l(985018),
+    d = l(135642);
+function m(e) {
+    let { itemType: t, onClose: m } = e,
+        A =
+            t === a.R.AVATAR_DECORATION
                 ? o.e.AVATAR_DECORATION_MODAL_UPSELL
-                : t === n.R.PROFILE_EFFECT
+                : t === a.R.PROFILE_EFFECT
                   ? o.e.PROFILE_EFFECT_MODAL_UPSELL
-                  : t === n.R.NAMEPLATE
+                  : t === a.R.NAMEPLATE
                     ? o.e.NAMEPLATE_MODAL_UPSELL
                     : null;
-    return null == _
+    return null == A
         ? null
-        : (0, i.jsxs)("div", {
-              className: u.hc,
+        : (0, r.jsxs)("div", {
+              className: d.hc,
               children: [
-                  (0, i.jsx)(a.t, { className: u.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
-                  (0, i.jsx)(l.E, {
-                      className: u.cf,
+                  (0, r.jsx)(n.t, { className: d.ax, size: "md", color: c.k0.PREMIUM_TIER_2 }),
+                  (0, r.jsx)(i.E, {
+                      className: d.cf,
                       variant: "text-md/medium",
                       children:
-                          _ === o.e.AVATAR_DECORATION_MODAL_UPSELL
-                              ? d.intl.format(d.t["aFR/EI"], {
+                          A === o.e.AVATAR_DECORATION_MODAL_UPSELL
+                              ? u.intl.format(u.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, s.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([r.e("64864"), r.e("699")]).then(
-                                                r.bind(r, 948265),
+                                            let { default: e } = await Promise.all([l.e("64864"), l.e("699")]).then(
+                                                l.bind(l, 948265),
                                             );
                                             return (t) =>
-                                                (0, i.jsx)(e, {
-                                                    premiumUpsellType: _,
-                                                    title: d.intl.string(d.t.JI7uhc),
-                                                    body: d.intl.string(d.t["5XvsdZ"]),
-                                                    onSecondaryClick: p,
+                                                (0, r.jsx)(e, {
+                                                    premiumUpsellType: A,
+                                                    title: u.intl.string(u.t.JI7uhc),
+                                                    body: u.intl.string(u.t["5XvsdZ"]),
+                                                    onSecondaryClick: m,
                                                     ...t,
                                                 });
                                         });
                                     },
                                 })
-                              : _ === o.e.PROFILE_EFFECT_MODAL_UPSELL
-                                ? d.intl.format(d.t.eWNONM, {
+                              : A === o.e.PROFILE_EFFECT_MODAL_UPSELL
+                                ? u.intl.format(u.t.eWNONM, {
                                       onClick: () => {
                                           (0, s.openModalLazy)(async () => {
-                                              let { default: e } = await Promise.all([r.e("64864"), r.e("699")]).then(
-                                                  r.bind(r, 948265),
+                                              let { default: e } = await Promise.all([l.e("64864"), l.e("699")]).then(
+                                                  l.bind(l, 948265),
                                               );
                                               return (t) =>
-                                                  (0, i.jsx)(e, {
-                                                      premiumUpsellType: _,
-                                                      title: d.intl.string(d.t.sYm15X),
-                                                      body: d.intl.string(d.t["Hza+Bu"]),
-                                                      onSecondaryClick: p,
+                                                  (0, r.jsx)(e, {
+                                                      premiumUpsellType: A,
+                                                      title: u.intl.string(u.t.sYm15X),
+                                                      body: u.intl.string(u.t["Hza+Bu"]),
+                                                      onSecondaryClick: m,
                                                       ...t,
                                                   });
                                           });
                                       },
                                   })
-                                : _ === o.e.NAMEPLATE_MODAL_UPSELL
-                                  ? d.intl.format(d.t.G6b8TF, {
+                                : A === o.e.NAMEPLATE_MODAL_UPSELL
+                                  ? u.intl.format(u.t.G6b8TF, {
                                         onClick: () => {
                                             (0, s.openModalLazy)(async () => {
-                                                let { default: e } = await Promise.all([r.e("64864"), r.e("699")]).then(
-                                                    r.bind(r, 948265),
+                                                let { default: e } = await Promise.all([l.e("64864"), l.e("699")]).then(
+                                                    l.bind(l, 948265),
                                                 );
                                                 return (t) =>
-                                                    (0, i.jsx)(e, {
-                                                        premiumUpsellType: _,
-                                                        title: d.intl.string(d.t.k7UN4k),
-                                                        body: d.intl.string(d.t["0/QPxO"]),
-                                                        onSecondaryClick: p,
+                                                    (0, r.jsx)(e, {
+                                                        premiumUpsellType: A,
+                                                        title: u.intl.string(u.t.k7UN4k),
+                                                        body: u.intl.string(u.t["0/QPxO"]),
+                                                        onSecondaryClick: m,
                                                         ...t,
                                                     });
                                             });

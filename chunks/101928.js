@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(317097),
-    r = n(311907),
-    l = n(374994),
-    a = n(462887),
-    s = n(736653),
-    o = n(775602),
-    c = n(654107),
-    u = n(543699),
-    d = n(837529),
-    h = n(652215);
-function _(e) {
-    let { user: t, displayProfile: n, pendingThemeColors: _, pendingAvatarSrc: p, isPreview: A, forceUserTheme: f } = e,
-        m = (0, s.Ay)(),
-        g = (0, d.Wd)(),
-        E = (0, r.bG)([o.A], () => o.A.syncProfileThemeWithUserTheme),
-        I = p ?? t?.getAvatarURL(n?.guildId, 80),
-        v = (0, l.nt)("PRIMARY_530", { saturation: 1 }),
-        [b, S] = (0, c.rh)(I, v, !1);
-    if (null != g) return g;
-    if (!n?.canEditThemes && !A) return { theme: m, primaryColor: null, secondaryColor: null };
-    let T = n?.getPreviewThemeColors(_),
-        y = T?.[0] ?? (0, i.LX)(b),
-        C = T?.[1] ?? (0, i.LX)(S),
-        x = E || f ? m : ((0, u.tM)(y) ?? m);
+i.d(t, { A: () => m });
+var r = i(317097),
+    l = i(311907),
+    a = i(374994),
+    n = i(462887),
+    s = i(736653),
+    o = i(775602),
+    d = i(654107),
+    c = i(543699),
+    u = i(837529),
+    _ = i(652215);
+function m(e) {
+    let { user: t, displayProfile: i, pendingThemeColors: m, pendingAvatarSrc: f, isPreview: p, forceUserTheme: A } = e,
+        h = (0, s.Ay)(),
+        v = (0, u.Wd)(),
+        E = (0, l.bG)([o.A], () => o.A.syncProfileThemeWithUserTheme),
+        I = f ?? t?.getAvatarURL(i?.guildId, 80),
+        x = (0, a.nt)("PRIMARY_530", { saturation: 1 }),
+        [y, b] = (0, d.rh)(I, x, !1);
+    if (null != v) return v;
+    if (!i?.canEditThemes && !p) return { theme: h, primaryColor: null, secondaryColor: null };
+    let g = i?.getPreviewThemeColors(m),
+        R = g?.[0] ?? (0, r.LX)(y),
+        O = g?.[1] ?? (0, r.LX)(b),
+        N = E || A ? h : ((0, c.tM)(R) ?? h);
     return (
-        x === h.NJ8.DARK && (0, a.M)(m) ? (x = m) : x === h.NJ8.DARK && (0, a.q)(m) && (x = h.NJ8.DARKER),
-        { theme: x, primaryColor: y, secondaryColor: C }
+        N === _.NJ8.DARK && (0, n.M)(h) ? (N = h) : N === _.NJ8.DARK && (0, n.q)(h) && (N = _.NJ8.DARKER),
+        { theme: N, primaryColor: R, secondaryColor: O }
     );
 }

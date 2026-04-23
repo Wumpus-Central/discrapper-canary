@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { W: () => o });
-var r = n(627968);
+n.d(e, { W: () => s });
+var i = n(627968);
 n(64700);
-var i = n(827734),
-    s = n(996682),
-    a = n(27989);
-let o = (e) => {
+var a = n(827734),
+    l = n(996682),
+    r = n(27989);
+let s = (t) => {
     let {
-            size: t = "md",
+            size: e = "md",
             width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, a.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsxs)("svg", {
-        ...(0, s.A)(c),
+            height: s,
+            color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: c = "",
+            ...d
+        } = t,
+        u = (0, r.J)(e),
+        h = u?.width ?? n,
+        p = u?.height ?? s;
+    return (0, i.jsxs)("svg", {
+        ...(0, l.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: h,
+        height: p,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
                 d: "M20 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h16ZM4 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z",
-                className: u,
+                className: c,
             }),
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof o ? o : o.css,
                 fillRule: "evenodd",
                 d: "M20 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h16ZM4 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z",
                 clipRule: "evenodd",
-                className: u,
+                className: c,
             }),
         ],
     });

@@ -1,78 +1,77 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(607470),
-    l = n(373054),
-    u = n(253292),
-    c = n(351952),
-    d = n(88686),
-    _ = n(998980);
-function f(e) {
-    let { nameplate: t, hovered: n, selected: s, content: o, placement: u } = e,
-        f = (0, c._)(o, t, n, s, u),
-        h = (0, l.i)(n, s),
-        m = i.useRef(null == t);
-    return (i.useEffect(() => {
-        m.current || null != t || (m.current = !0);
+l.d(t, { A: () => A });
+var r = l(627968),
+    a = l(64700),
+    s = l(503698),
+    n = l.n(s),
+    i = l(607470),
+    c = l(373054),
+    o = l(253292),
+    u = l(351952),
+    d = l(88686),
+    m = l(502996);
+function A(e) {
+    let { nameplate: t, hovered: l, selected: s, content: i, placement: o } = e,
+        A = (0, u._)(i, t, l, s, o),
+        _ = (0, c.i)(l, s),
+        h = a.useRef(null == t);
+    return (a.useEffect(() => {
+        h.current || null != t || (h.current = !0);
     }, [t]),
     null == t)
         ? null
         : (0, r.jsx)("div", {
-              className: a()(_.kL, { [_.qG]: m.current, [_.WB]: u === d.u.ACCOUNT }),
-              style: { background: f.background },
+              className: n()(m.kL, { [m.qG]: h.current, [m.WB]: o === d.u.ACCOUNT }),
+              style: { background: A.background },
               "aria-hidden": !0,
               children: (0, r.jsx)(p, {
                   nameplate: t,
-                  className: a()(_._8, {
-                      [_.PT]: n,
-                      [_.wH]: s,
-                      [_.ct]: u === d.u.ACCOUNT,
-                      [_.VH]: u === d.u.PREVIEW,
-                      [_.Hh]: u === d.u.MINI_PREVIEW,
-                      [_.Ix]: u === d.u.CHANNEL,
+                  className: n()(m._8, {
+                      [m.PT]: l,
+                      [m.wH]: s,
+                      [m.ct]: o === d.u.ACCOUNT,
+                      [m.VH]: o === d.u.PREVIEW,
+                      [m.Hh]: o === d.u.MINI_PREVIEW,
+                      [m.Ix]: o === d.u.CHANNEL,
                   }),
-                  style: { maskImage: f.maskImage },
-                  animate: h,
-                  loop: !0 === h && !0 === n,
+                  style: { maskImage: A.maskImage },
+                  animate: _,
+                  loop: !0 === _ && !0 === l,
               }),
           });
 }
 function p(e) {
-    let { nameplate: t, className: n, style: i, animate: s, loop: a } = e,
-        { staticImageUrl: o, animatedImageUrl: l, videoUrl: c } = (0, u.K)(t);
-    if (null == o) return null;
-    if (null != c)
-        return (0, r.jsx)(h, { animatedAsset: c, staticAsset: o, animate: s, loop: a, style: i, className: n });
-    let d = s && null != l ? l : o;
-    return (0, r.jsx)(m, { asset: d, className: n, style: i });
+    let { nameplate: t, className: l, style: a, animate: s, loop: n } = e,
+        { staticImageUrl: i, animatedImageUrl: c, videoUrl: u } = (0, o.K)(t);
+    if (null == i) return null;
+    if (null != u)
+        return (0, r.jsx)(_, { animatedAsset: u, staticAsset: i, animate: s, loop: n, style: a, className: l });
+    let d = s && null != c ? c : i;
+    return (0, r.jsx)(h, { asset: d, className: l, style: a });
 }
-function h(e) {
-    let { staticAsset: t, animatedAsset: n, animate: s, loop: a, className: l, style: u } = e,
-        c = i.useRef(null);
+function _(e) {
+    let { staticAsset: t, animatedAsset: l, animate: s, loop: n, className: c, style: o } = e,
+        u = a.useRef(null);
     return (
-        i.useEffect(() => {
-            null != c.current && (s || a ? c.current.play() : c.current.pause());
-        }, [s, a]),
+        a.useEffect(() => {
+            null != u.current && (s || n ? u.current.play() : u.current.pause());
+        }, [s, n]),
         (0, r.jsx)("div", {
-            className: _.j,
-            style: u,
-            children: (0, r.jsx)(o.A, {
-                src: n,
+            className: m.j,
+            style: o,
+            children: (0, r.jsx)(i.A, {
+                src: l,
                 poster: t,
-                ref: c,
+                ref: u,
                 playsInline: !0,
-                loop: a,
+                loop: n,
                 controls: !1,
-                className: l,
+                className: c,
                 tabIndex: -1,
             }),
         })
     );
 }
-function m(e) {
-    let { asset: t, className: n, style: i } = e;
-    return (0, r.jsx)("img", { src: t, className: n, style: i, alt: "" });
+function h(e) {
+    let { asset: t, className: l, style: a } = e;
+    return (0, r.jsx)("img", { src: t, className: l, style: a, alt: "" });
 }

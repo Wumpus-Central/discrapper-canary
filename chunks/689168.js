@@ -1,37 +1,36 @@
-"use strict";
-a.d(t, { A: () => b });
-var r = a(311907),
-    l = a(451988),
-    n = a(73153),
-    i = a(375492),
-    s = a(461213),
-    o = a(652215);
-let d = {},
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(451988),
+    l = n(73153),
+    a = n(375492),
+    o = n(461213),
+    u = n(652215);
+let s = {},
     c = {};
-function u(e, t, a) {
+function d(e, t, n) {
     null != c[e] && c[e].stop();
-    let r = new l.Ep();
-    r.start(a, () => n.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: e, activityType: t })), (c[e] = r);
+    let r = new i.Ep();
+    r.start(n, () => l.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: e, activityType: t })), (c[e] = r);
 }
-function h(e, t, a) {
-    let { applicationId: r, remotePartyId: l } = a;
-    if (e === o.eAD.COMPLETE) {
-        delete d[r]?.[t], null != c[r] && (c[r].stop(), delete c[r]);
+function A(e, t, n) {
+    let { applicationId: r, remotePartyId: i } = n;
+    if (e === u.eAD.COMPLETE) {
+        delete s[r]?.[t], null != c[r] && (c[r].stop(), delete c[r]);
         return;
     }
-    let n = d[r] ?? {};
-    (n[t] = { state: e, remotePartyId: l }),
-        (d[r] = n),
-        __OVERLAY__ || e !== o.eAD.FAILED ? e === o.eAD.LOADING && null != l && u(r, t, 15e3) : u(r, t, 12e4);
+    let l = s[r] ?? {};
+    (l[t] = { state: e, remotePartyId: i }),
+        (s[r] = l),
+        __OVERLAY__ || e !== u.eAD.FAILED ? e === u.eAD.LOADING && null != i && d(r, t, 15e3) : d(r, t, 12e4);
 }
-function p(e) {
-    return h(o.eAD.COMPLETE, o.xL.JOIN, e);
+function f(e) {
+    return A(u.eAD.COMPLETE, u.xL.JOIN, e);
 }
-function _() {
-    let e = Object.entries(d)
+function g() {
+    let e = Object.entries(s)
             .map((e) => {
-                let [t, a] = e;
-                return { applicationId: t, remotePartyId: a[o.xL.JOIN]?.remotePartyId };
+                let [t, n] = e;
+                return { applicationId: t, remotePartyId: n[u.xL.JOIN]?.remotePartyId };
             })
             .filter((e) => {
                 let { remotePartyId: t } = e;
@@ -40,11 +39,11 @@ function _() {
         t = !1;
     return (
         e.forEach((e) => {
-            let { applicationId: a, remotePartyId: r } = e,
-                l = i.A.getApplicationActivity(a),
-                n = s.A.getApplicationActivity(a);
-            (l?.party?.id === r || n?.party?.id === r) &&
-                (h(o.eAD.COMPLETE, o.xL.JOIN, { applicationId: a, remotePartyId: r }), (t = !0));
+            let { applicationId: n, remotePartyId: r } = e,
+                i = a.A.getApplicationActivity(n),
+                l = o.A.getApplicationActivity(n);
+            (i?.party?.id === r || l?.party?.id === r) &&
+                (A(u.eAD.COMPLETE, u.xL.JOIN, { applicationId: n, remotePartyId: r }), (t = !0));
         }),
         t
     );
@@ -52,29 +51,29 @@ function _() {
 class m extends r.Ay.Store {
     static displayName = "ActivityLauncherStore";
     initialize() {
-        this.syncWith([i.A, s.A], _);
+        this.syncWith([a.A, o.A], g);
     }
     getState(e, t) {
-        let a = d[e];
-        return a?.[t]?.state;
+        let n = s[e];
+        return n?.[t]?.state;
     }
     getStates() {
-        return d;
+        return s;
     }
 }
-let b = new m(n.h, {
+let _ = new m(l.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { activityLauncherStates: t } = e;
-        d = { ...t };
+        s = { ...t };
     },
-    ACTIVITY_JOIN_LOADING: (e) => h(o.eAD.LOADING, o.xL.JOIN, e),
-    ACTIVITY_JOIN_FAILED: (e) => h(o.eAD.FAILED, o.xL.JOIN, e),
-    ACTIVITY_JOIN: p,
-    EMBEDDED_ACTIVITY_CLOSE: p,
+    ACTIVITY_JOIN_LOADING: (e) => A(u.eAD.LOADING, u.xL.JOIN, e),
+    ACTIVITY_JOIN_FAILED: (e) => A(u.eAD.FAILED, u.xL.JOIN, e),
+    ACTIVITY_JOIN: f,
+    EMBEDDED_ACTIVITY_CLOSE: f,
     ACTIVITY_LAUNCH_FAIL: function (e) {
-        let { applicationId: t, activityType: a } = e,
-            r = d[t];
+        let { applicationId: t, activityType: n } = e,
+            r = s[t];
         if (null == r) return !1;
-        delete r[a];
+        delete r[n];
     },
 });

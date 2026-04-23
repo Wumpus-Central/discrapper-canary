@@ -527,8 +527,9 @@ class ep extends l.PureComponent {
     };
     handleClick = (e) => {
         let { selectedUsers: t, query: n, channel: i } = this.props;
-        t.has(e) ? j.A.removeUser(e) : this.getRemaining() > 0 && (j.A.addUser(e), n.length > 0 && j.A.clear(i?.id)),
-            this.forceFocus();
+        t.has(e)
+            ? j.A.removeUser(e)
+            : this.getRemaining() > 0 && (j.A.addUser(e), n.length > 0 && (j.A.clear(i?.id), this.forceFocus()));
     };
     handleAddFriendNavigation = () => {
         y.A.transitionToSection(ec.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();

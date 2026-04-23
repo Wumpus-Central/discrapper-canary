@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => u });
 var r = n(64700),
     i = n(635377),
-    a = n.n(i),
-    s = n(306044);
-let o = new (a())({ max: 1e3 });
-function l(e, t) {
+    l = n.n(i),
+    a = n(306044);
+let o = new (l())({ max: 1e3 });
+function u(e, t) {
     let [n, i] = r.useState();
     return (
         r.useEffect(() => {
@@ -14,7 +13,7 @@ function l(e, t) {
             if (null != n) return void i(n);
             let r = !1;
             return (
-                (0, s.A)()
+                (0, a.A)()
                     .then((t) => {
                         null == t ||
                             r ||
@@ -22,8 +21,8 @@ function l(e, t) {
                                 if (r) return;
                                 if (0 !== t || null == n.icon || "" === n.icon || null == n.name || "" === n.name)
                                     return void i(void 0);
-                                let a = `data:image/png;base64,${n.icon}`;
-                                o.set(e, a), i(a);
+                                let l = `data:image/png;base64,${n.icon}`;
+                                o.set(e, l), i(l);
                             });
                     })
                     .catch(() => {

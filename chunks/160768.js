@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var r = n(272984),
     i = n(985018);
-function a(e, t) {
+function l(e, t) {
     switch (t) {
         case r.Qp.USER_ACTIVITY_PLAY:
             return e.hasSpotifyAccount

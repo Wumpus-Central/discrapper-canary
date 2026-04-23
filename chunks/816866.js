@@ -1,81 +1,80 @@
-"use strict";
-a.d(t, { ZK: () => g, pF: () => b, wu: () => m }), a(323874), a(14289), a(35956), a(321073);
-var r = a(64700),
-    l = a(942381),
-    n = a(265690),
-    i = a(121894),
-    s = a(506774),
-    o = a(691540),
-    d = a(857250),
-    c = a(97483),
-    u = a(87558);
-let h = "__DEBUG_PROFILE_EFFECTS_STORE",
-    p = { profileEffects: s.w.get(h) ?? {} },
-    _ = (e) => {
+l.d(t, { ZK: () => g, pF: () => h, wu: () => _ }), l(323874), l(14289), l(35956), l(321073);
+var r = l(64700),
+    a = l(942381),
+    s = l(265690),
+    n = l(121894),
+    i = l(506774),
+    c = l(691540),
+    o = l(857250),
+    u = l(97483),
+    d = l(87558);
+let m = "__DEBUG_PROFILE_EFFECTS_STORE",
+    A = { profileEffects: i.w.get(m) ?? {} },
+    p = (e) => {
         try {
-            s.w.set(h, e.profileEffects);
+            i.w.set(m, e.profileEffects);
         } catch (e) {
             console.error(e),
-                (0, o.P0)(
-                    (0, d.o)(
+                (0, c.P0)(
+                    (0, o.o)(
                         "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
-                        c.Ck.FAILURE,
+                        u.Ck.FAILURE,
                     ),
                 );
         }
     },
-    m = (0, n.h)((e) => ({
-        ...p,
+    _ = (0, s.h)((e) => ({
+        ...A,
         upsertProfileEffect: (t) =>
-            (0, i.r)(() => {
+            (0, n.r)(() => {
                 e((e) => {
-                    let a = { ...e };
-                    return (a.profileEffects[t.skuId] = t), _(a), a;
+                    let l = { ...e };
+                    return (l.profileEffects[t.skuId] = t), p(l), l;
                 });
             }),
         deleteProfileEffect: (t) =>
-            (0, i.r)(() => {
+            (0, n.r)(() => {
                 e((e) => {
-                    let a = { ...e };
-                    return delete a.profileEffects[t], _(a), a;
+                    let l = { ...e };
+                    return delete l.profileEffects[t], p(l), l;
                 });
             }),
         clearAll: () =>
-            (0, i.r)(() => {
-                e(() => (s.w.remove(h), { profileEffects: {} }));
+            (0, n.r)(() => {
+                e(() => (i.w.remove(m), { profileEffects: {} }));
             }),
     })),
-    b = () =>
-        m((e) => {
+    h = () =>
+        _((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, l.x),
+        }, a.x),
     g = (e) => {
-        let t = m((t) => (null != e ? t.profileEffects[e] : null)),
-            a = r.useRef([]);
+        let t = _((t) => (null != e ? t.profileEffects[e] : null)),
+            l = r.useRef([]);
         return (
             r.useEffect(
                 () => () => {
-                    a.current.forEach((e) => {
+                    l.current.forEach((e) => {
                         URL.revokeObjectURL(e);
                     }),
-                        (a.current = []);
+                        (l.current = []);
                 },
                 [],
             ),
             r.useMemo(() => {
                 if (null == t) return null;
                 let e = (e) => {
-                        let t = (0, u.fB)(e);
-                        return a.current.push(t), t;
+                        let t = (0, d.fB)(e);
+                        return l.current.push(t), t;
                     },
                     r = t.stillFrames,
-                    l = null != r ? { ...r } : {};
-                for (let t in l) {
-                    let a = l[t];
-                    null != a && (l[t] = { ...a, src: e(a.base64) });
+                    a = null != r ? { ...r } : {};
+                for (let t in a) {
+                    let l = a[t];
+                    null != l && (a[t] = { ...l, src: e(l.base64) });
                 }
-                return { ...t, stillFrames: l };
+                return { ...t, stillFrames: a };
             }, [t])
         );
     };

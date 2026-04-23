@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(311907),
-    r = n(73153);
-let s = l();
-function l() {
+r.d(t, { A: () => s });
+var o = r(311907),
+    a = r(73153);
+let l = n();
+function n() {
     return { ignoreTimestamps: {} };
 }
-class a extends i.Ay.PersistedStore {
+class i extends o.Ay.PersistedStore {
     static displayName = "IgnoreNoticeStore";
     static persistKey = "IgnoreNoticeStore";
     initialize(e) {
         let t = e?.ignoreTimestamps ?? {};
-        s = { ...l(), ignoreTimestamps: t };
+        l = { ...n(), ignoreTimestamps: t };
     }
     getState() {
-        return s;
+        return l;
     }
     getIgnoreTimestamps() {
-        return s.ignoreTimestamps;
+        return l.ignoreTimestamps;
     }
 }
-let c = new a(r.h, {
+let s = new i(a.h, {
     RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
-        let { userId: t, timestamp: n } = e;
-        s.ignoreTimestamps[t] = n;
+        let { userId: t, timestamp: r } = e;
+        l.ignoreTimestamps[t] = r;
     },
 });

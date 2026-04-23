@@ -1,4 +1,3 @@
-"use strict";
 a.r(
     (e.exports = {
         popover: "popover_d6f39b",

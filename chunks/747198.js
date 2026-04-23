@@ -1,40 +1,39 @@
-"use strict";
-a.d(t, { i: () => d });
-var r = a(64700),
-    l = a(635358),
-    n = a(311907),
-    i = a(49463),
-    s = a(979286),
-    o = a(590180);
-function d(e, t, a) {
-    let d = (0, n.bG)([i.A], () => i.A.hasLoadedExperiments),
-        [c, u, h, p, _, m, b] = (0, n.yK)([o.A], () => [
-            o.A.isFetchingCategories,
-            o.A.lastFetchOptions,
-            o.A.error,
-            o.A.lastErrorTimestamp ?? 0,
-            o.A.lastSuccessfulFetch ?? 0,
-            o.A.categories,
-            o.A.skipNumCategories,
+l.d(t, { i: () => o });
+var r = l(64700),
+    a = l(635358),
+    s = l(311907),
+    n = l(49463),
+    i = l(979286),
+    c = l(590180);
+function o(e, t, l) {
+    let o = (0, s.bG)([n.A], () => n.A.hasLoadedExperiments),
+        [u, d, m, A, p, _, h] = (0, s.yK)([c.A], () => [
+            c.A.isFetchingCategories,
+            c.A.lastFetchOptions,
+            c.A.error,
+            c.A.lastErrorTimestamp ?? 0,
+            c.A.lastSuccessfulFetch ?? 0,
+            c.A.categories,
+            c.A.skipNumCategories,
         ]);
     return (
         (0, r.useEffect)(() => {
-            if (!d || o.A.isFetchingCategories) return;
-            let r = Date.now() - p < 6e5;
-            if (h && r) return;
-            let n = { ...e, variantsReturnStyle: l.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: b },
-                i = !(0, s.gn)(u, n),
-                c = Date.now() - _ < 6e5;
-            (i || !c) && (0, s.CK)(n, t, a);
-        }, [d, u, _, e, h, p, t, a, b]),
+            if (!o || c.A.isFetchingCategories) return;
+            let r = Date.now() - A < 6e5;
+            if (m && r) return;
+            let s = { ...e, variantsReturnStyle: a.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: h },
+                n = !(0, i.gn)(d, s),
+                u = Date.now() - p < 6e5;
+            (n || !u) && (0, i.CK)(s, t, l);
+        }, [o, d, p, e, m, A, t, l, h]),
         {
-            isFetching: c,
-            categories: m,
-            fetchCategoriesError: h,
+            isFetching: u,
+            categories: _,
+            fetchCategoriesError: m,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = { ...e, variantsReturnStyle: l.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: b };
-                (0, s.CK)(t, void 0, a);
-            }, [e, a, b]),
+                let t = { ...e, variantsReturnStyle: a.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: h };
+                (0, i.CK)(t, void 0, l);
+            }, [e, l, h]),
         }
     );
 }

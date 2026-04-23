@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { Q: () => u });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(426333),
-    o = n(834730),
-    l = n(726770);
-function u(e) {
+a.d(l, { Q: () => d });
+var t = a(627968);
+a(64700);
+var n = a(503698),
+    o = a.n(n),
+    i = a(187322),
+    r = a(834730),
+    s = a(492727);
+function d(e) {
     let {
-        focusProps: t,
-        lineClamp: n = 1,
-        role: i = "button",
-        text: u,
-        textVariant: c = "text-md/medium",
-        type: d = "button",
-        variant: _ = "primary",
-        buttonRef: f,
-        className: p,
+        focusProps: l,
+        lineClamp: a = 1,
+        role: n = "button",
+        text: d,
+        textVariant: u = "text-md/medium",
+        type: c = "button",
+        variant: b = "primary",
+        buttonRef: p,
+        className: m,
         style: h,
-        ...m
+        ...x
     } = e;
-    return (0, r.jsx)(s.vN, {
-        ...t,
-        children: (0, r.jsx)("button", {
-            className: a()(l.textButton, l[_]),
+    return (0, t.jsx)(i.vN, {
+        ...l,
+        children: (0, t.jsx)("button", {
+            className: o()(s.textButton, s[b]),
             "data-mana-component": "text-button",
-            role: i,
-            type: d,
-            ref: f,
-            ...m,
-            children: (0, r.jsx)(o.E, {
+            role: n,
+            type: c,
+            ref: p,
+            ...x,
+            children: (0, t.jsx)(r.E, {
                 tag: "span",
-                variant: c,
+                variant: u,
                 color: "none",
-                lineClamp: n,
-                className: l.text,
-                children: u,
+                lineClamp: a,
+                className: s.text,
+                children: d,
             }),
         }),
     });

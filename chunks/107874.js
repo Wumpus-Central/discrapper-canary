@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+t.exports = {
     wx: "header__7c901",
     VA: "subtitle__7c901",
     b: "closeButton__7c901",

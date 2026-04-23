@@ -1,4 +1,3 @@
-"use strict";
 a.r(
     (e.exports = {
         "heading-sm/normal": "heading-sm/normal_b717a1",
