@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { A: () => p });
-var i = n(627968);
+n.d(t, { A: () => g });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(17928),
+var i = n(503698),
+    s = n.n(i),
+    a = n(311907),
     o = n(990078),
     l = n(821609),
-    d = n(408278),
-    _ = n(622631),
-    u = n(401843),
-    c = n(616356),
-    E = n(495544),
-    h = n(200749),
-    m = n(985018),
-    f = n(559216);
-let g = n(913516);
-function p(e) {
-    let { participant: t, width: n, noArt: r = !1, selected: p = !1 } = e,
+    u = n(408278),
+    c = n(622631),
+    d = n(401843),
+    _ = n(616356),
+    f = n(961350),
+    p = n(200749),
+    h = n(985018),
+    E = n(559216);
+let m = n(913516);
+function g(e) {
+    let { participant: t, width: n, noArt: i = !1, selected: g = !1 } = e,
         A = n < 195,
-        I = (0, a.bG)([c.A, E.default], () =>
-            c.A.getAllActiveStreams().some((e) => {
+        I = (0, a.bG)([_.A, f.default], () =>
+            _.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
-                return t !== E.default.getId();
+                return t !== f.default.getId();
             }),
         );
-    return (0, i.jsx)("div", {
-        className: s()(f.Qs, f.FY),
-        children: (0, i.jsx)(h.A, {
-            className: f.FP,
-            artURL: g,
-            noArt: r,
-            selected: p,
-            size: (0, h.J)(n),
-            header: A ? null : m.intl.string(m.t.epU4Ec),
-            description: p
+    return (0, r.jsx)("div", {
+        className: s()(E.Qs, E.FY),
+        children: (0, r.jsx)(p.A, {
+            className: E.FP,
+            artURL: m,
+            noArt: i,
+            selected: g,
+            size: (0, p.J)(n),
+            header: A ? null : h.intl.string(h.t.epU4Ec),
+            description: g
                 ? null
-                : (0, i.jsxs)("div", {
-                      className: s()(f.t2, { [f.y8]: !A }),
+                : (0, r.jsxs)("div", {
+                      className: s()(E.t2, { [E.y8]: !A }),
                       children: [
-                          (0, i.jsx)("div", {
-                              className: f.lO,
-                              children: (0, i.jsx)(l.$, {
+                          (0, r.jsx)("div", {
+                              className: E.lO,
+                              children: (0, r.jsx)(l.$, {
                                   variant: "secondary",
                                   size: A ? "sm" : "md",
-                                  text: n < 175 ? m.intl.string(m.t.I6JG46) : m.intl.string(m.t["7Xq/nV"]),
+                                  text: n < 175 ? h.intl.string(h.t.I6JG46) : h.intl.string(h.t["7Xq/nV"]),
                               }),
                           }),
                           I
-                              ? (0, i.jsx)("div", {
-                                    className: s()(f.lO, f.EU),
-                                    children: (0, i.jsx)(o.m, {
-                                        text: m.intl.string(m.t.wCrzut),
-                                        children: (0, i.jsx)(d.K, {
+                              ? (0, r.jsx)("div", {
+                                    className: s()(E.lO, E.EU),
+                                    children: (0, r.jsx)(o.m, {
+                                        text: h.intl.string(h.t.wCrzut),
+                                        children: (0, r.jsx)(u.K, {
                                             variant: "secondary",
                                             size: A ? "sm" : "md",
-                                            icon: _.v,
-                                            "aria-label": m.intl.string(m.t.wCrzut),
+                                            icon: c.v,
+                                            "aria-label": h.intl.string(h.t.wCrzut),
                                             onClick: (e) => {
-                                                e.stopPropagation(), (0, u.A9)(t.stream, { forceMultiple: !0 });
+                                                e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 });
                                             },
                                         }),
                                     }),

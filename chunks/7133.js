@@ -1,17 +1,18 @@
+"use strict";
 n.d(t, { A: () => d }), n(938796);
-var i = n(989349),
-    r = n.n(i),
-    a = n(665260),
-    s = n(315069),
-    _ = n(835095),
+var r = n(989349),
+    i = n.n(r),
+    s = n(665260),
+    a = n(315069),
+    o = n(835095),
     l = n(832946),
-    o = n(788868);
-let E = Object.freeze({
+    u = n(788868);
+let c = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class d extends s.A {
+class d extends a.A {
     userId;
     code;
     skuId;
@@ -38,7 +39,7 @@ class d extends s.A {
             uses: e.uses,
             maxUses: e.max_uses,
             storeListingId: null != e.store_listing ? e.store_listing.id : null,
-            expiresAt: null != e.expires_at ? r()(e.expires_at) : null,
+            expiresAt: null != e.expires_at ? i()(e.expires_at) : null,
             redeemed: e.redeemed,
             subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
             subscriptionPlan: null != e.subscription_plan ? l.Ay.createFromServer(e.subscription_plan) : null,
@@ -55,7 +56,7 @@ class d extends s.A {
                           skuId: e.subscription_trial.sku_id,
                       }
                     : null,
-            promotion: null != e.promotion ? _.A.createFromServer(e.promotion) : null,
+            promotion: null != e.promotion ? o.A.createFromServer(e.promotion) : null,
         });
     }
     constructor(e) {
@@ -80,7 +81,7 @@ class d extends s.A {
     }
     isExpired() {
         let e = this.expiresAt;
-        return null != e && r()().isAfter(e);
+        return null != e && i()().isAfter(e);
     }
     get hasMultipleCopies() {
         return this.maxUses > 1;
@@ -95,13 +96,13 @@ class d extends s.A {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return this.isSubscription ? (o.WN[this.skuId] ?? null) : null;
+        return this.isSubscription ? (u.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, a.Lt)(this.flags, E.NOT_SELF_REDEEMABLE);
+        return !(0, s.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, a.Lt)(this.flags, E.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, s.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };

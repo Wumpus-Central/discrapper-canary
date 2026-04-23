@@ -1,43 +1,44 @@
-n.d(t, { Ay: () => u, LU: () => I, xi: () => A });
-var i = n(17928),
-    r = n(587895),
-    a = n(20015),
-    s = n(567249),
-    _ = n(646865),
+"use strict";
+n.d(t, { Ay: () => f, LU: () => p, xi: () => h });
+var r = n(311907),
+    i = n(587895),
+    s = n(20015),
+    a = n(87001),
+    o = n(646865),
     l = n(933958),
-    o = n(969151),
-    E = n(108959),
+    u = n(969151),
+    c = n(108959),
     d = n(5867),
-    c = n(652215);
-function u(e) {
+    _ = n(652215);
+function f(e) {
     let { application: t, channelId: n } = e;
-    if (null != t && (0, a.n)(t, c.gfo.EMBEDDED)) {
-        if (s.A.getWindowOpen(c.MLl.ACTIVITY_POPOUT) && l.Ay.getActivityPanelMode() === d.Gd.ACTIVITY_POPOUT_WINDOW)
-            return c.MLl.ACTIVITY_POPOUT;
-        if (s.A.getWindowOpen(c.MLl.CHANNEL_CALL_POPOUT) && (0, E.A)(n) && !(0, _.f)())
-            return c.MLl.CHANNEL_CALL_POPOUT;
+    if (null != t && (0, s.n)(t, _.gfo.EMBEDDED)) {
+        if (a.A.getWindowOpen(_.MLl.ACTIVITY_POPOUT) && l.Ay.getActivityPanelMode() === d.Gd.ACTIVITY_POPOUT_WINDOW)
+            return _.MLl.ACTIVITY_POPOUT;
+        if (a.A.getWindowOpen(_.MLl.CHANNEL_CALL_POPOUT) && (0, c.A)(n) && !(0, o.f)())
+            return _.MLl.CHANNEL_CALL_POPOUT;
     }
 }
-function I(e) {
+function p(e) {
     let { applicationId: t } = e,
         n = l.Ay.getCurrentEmbeddedActivity();
     if (null == n || n.applicationId !== t) return;
-    let i = r.A.getApplication(t);
-    if (null != i) return u({ application: i, channelId: (0, o.H)(n.location) });
+    let r = i.A.getApplication(t);
+    if (null != r) return f({ application: r, channelId: (0, u.H)(n.location) });
 }
-function A(e) {
+function h(e) {
     let { channelId: t } = e;
-    return (0, i.bG)([s.A, l.Ay, r.A], () => {
+    return (0, r.bG)([a.A, l.Ay, i.A], () => {
         let e = (function (e) {
-            let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
-                r = n.getSelfEmbeddedActivityForChannel(t),
-                a = i.getApplication(r?.applicationId);
-            if (null != a) return u({ application: a, channelId: t });
+            let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: r } = e,
+                i = n.getSelfEmbeddedActivityForChannel(t),
+                s = r.getApplication(i?.applicationId);
+            if (null != s) return f({ application: s, channelId: t });
         })({
             channelId: t ?? l.Ay.getConnectedActivityChannelId(),
             EmbeddedActivitiesStore: l.Ay,
-            ApplicationStore: r.A,
+            ApplicationStore: i.A,
         });
-        return null != e ? s.A.getWindow(e) : void 0;
+        return null != e ? a.A.getWindow(e) : void 0;
     });
 }

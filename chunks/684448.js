@@ -1,47 +1,48 @@
-n.d(t, { A: () => E });
-var i = n(627968);
+"use strict";
+n.d(t, { A: () => c });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(3026),
-    _ = n(834730),
+var i = n(503698),
+    s = n.n(i),
+    a = n(3026),
+    o = n(834730),
     l = n(51183);
 n(851883);
-var o = n(124704);
-function E(e) {
+var u = n(124704);
+function c(e) {
     let t,
         n,
         {
-            customStatusActivity: r,
-            textClassName: E,
+            customStatusActivity: i,
+            textClassName: c,
             iconClassName: d,
-            tooltipClassName: c,
-            textSize: u = "xs",
-            animateEmoji: I = !0,
-            hideEmoji: A = !1,
-            hideTooltip: T = !1,
+            tooltipClassName: _,
+            textSize: f = "xs",
+            animateEmoji: p = !0,
+            hideEmoji: h = !1,
+            hideTooltip: E = !1,
         } = e;
-    if (null == r) return null;
-    let S = r?.emoji,
-        N = r?.state,
-        O = null != N && "" !== N,
-        R = null;
-    null == S || A || (R = (0, i.jsx)(l.A, { emoji: S, animate: I, className: d, hideTooltip: T || O }));
-    let f = O && (null != R ? ` ${N}` : N);
-    return (0, i.jsx)(_.E, {
-        variant: `text-${u}/medium`,
+    if (null == i) return null;
+    let m = i?.emoji,
+        g = i?.state,
+        A = null != g && "" !== g,
+        I = null;
+    null == m || h || (I = (0, r.jsx)(l.A, { emoji: m, animate: p, className: d, hideTooltip: E || A }));
+    let T = A && (null != I ? ` ${g}` : g);
+    return (0, r.jsx)(o.E, {
+        variant: `text-${f}/medium`,
         color: "none",
-        className: a()(o.ps, E),
+        className: s()(u.ps, c),
         children:
-            ((t = null != S && !A && !O),
-            (n = null != N && N.length > 30),
-            T || t
-                ? (0, i.jsxs)(i.Fragment, { children: [R, f] })
-                : (0, i.jsxs)(s.A, {
+            ((t = null != m && !h && !A),
+            (n = null != g && g.length > 30),
+            E || t
+                ? (0, r.jsxs)(r.Fragment, { children: [I, T] })
+                : (0, r.jsxs)(a.A, {
                       delay: 150,
-                      tooltipClassName: c,
-                      className: a()({ [o.D7]: !n }),
-                      children: [R, f],
+                      tooltipClassName: _,
+                      className: s()({ [u.D7]: !n }),
+                      children: [I, T],
                   })),
     });
 }

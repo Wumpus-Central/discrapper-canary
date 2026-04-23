@@ -1,54 +1,55 @@
-n.d(t, { s: () => d });
+"use strict";
+n.d(t, { s: () => u });
 var r = n(927578),
-    a = n(422936),
-    i = n(234419),
-    o = n(511484),
-    l = n(788868),
-    s = n(985018);
-let d = (e) => {
+    i = n(422936),
+    s = n(234419),
+    a = n(511484),
+    o = n(788868),
+    l = n(985018);
+let u = (e) => {
     var t;
-    let { subscriptionTier: n, hasActivePromotion: d = !1, useShorterCTA: u = !1, isPersistentCTA: c = !1 } = e,
-        _ = (0, i.V)(),
-        p = _?.subscription_trial,
-        C = (0, a.O)(),
-        h = (0, o.U9)(C, l.pe.TIER_2) ? l.pe.TIER_2 : void 0,
-        E = (0, r.tS)({ intervalType: p?.interval, intervalCount: p?.interval_count }),
+    let { subscriptionTier: n, hasActivePromotion: u = !1, useShorterCTA: c = !1, isPersistentCTA: d = !1 } = e,
+        _ = (0, s.V)(),
+        f = _?.subscription_trial,
+        p = (0, i.O)(),
+        h = (0, a.U9)(p, o.pe.TIER_2) ? o.pe.TIER_2 : void 0,
+        E = (0, r.tS)({ intervalType: f?.interval, intervalCount: f?.interval_count }),
         m = n ?? _?.subscription_trial?.sku_id ?? h,
-        A = null != p && m === p.sku_id,
-        I = _?.trial_id === l.Dw;
+        g = null != f && m === f.sku_id,
+        A = _?.trial_id === o.Dw;
     return {
-        buttonText: d
-            ? s.intl.string(s.t.J61px0)
-            : null != C
-              ? ((t = C.discount.amount),
-                u || c
-                    ? s.intl.string(s.t.fkPGat)
-                    : m === l.pe.TIER_2
-                      ? s.intl.formatToPlainString(s.t.bkQ4bH, { percent: t })
+        buttonText: u
+            ? l.intl.string(l.t.J61px0)
+            : null != p
+              ? ((t = p.discount.amount),
+                c || d
+                    ? l.intl.string(l.t.fkPGat)
+                    : m === o.pe.TIER_2
+                      ? l.intl.formatToPlainString(l.t.bkQ4bH, { percent: t })
                       : void 0)
               : ((e) => {
                     let {
                         showTrialCTA: t,
                         subscriptionTier: n,
-                        trialDurationCopy: a,
-                        isPersistentCTA: i,
-                        shouldShowReferralTrialCopy: o,
-                        subscriptionTrial: d,
+                        trialDurationCopy: i,
+                        isPersistentCTA: s,
+                        shouldShowReferralTrialCopy: a,
+                        subscriptionTrial: u,
                     } = e;
-                    return t && o
-                        ? s.intl.string(s.t.bXTClc)
-                        : t && (n === l.pe.TIER_2 || i)
-                          ? (0, r.FY)({ intervalType: d?.interval, intervalCount: d?.interval_count })
+                    return t && a
+                        ? l.intl.string(l.t.bXTClc)
+                        : t && (n === o.pe.TIER_2 || s)
+                          ? (0, r.FY)({ intervalType: u?.interval, intervalCount: u?.interval_count })
                           : t
-                            ? s.intl.formatToPlainString(s.t.nTmm2v, { freeTrialText: a })
+                            ? l.intl.formatToPlainString(l.t.nTmm2v, { freeTrialText: i })
                             : void 0;
                 })({
-                    showTrialCTA: A,
+                    showTrialCTA: g,
                     subscriptionTier: m,
                     trialDurationCopy: E,
-                    isPersistentCTA: c,
-                    shouldShowReferralTrialCopy: I,
-                    subscriptionTrial: p,
+                    isPersistentCTA: d,
+                    shouldShowReferralTrialCopy: A,
+                    subscriptionTrial: f,
                 }),
         marketingSubscriptionTierSkuId: m,
     };

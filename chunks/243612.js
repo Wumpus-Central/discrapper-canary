@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { JH: () => g, VC: () => u, b4: () => h, oQ: () => c, qv: () => E, tg: () => f, xl: () => m });
-var i = n(17928),
-    r = n(52133),
+n.d(t, { JH: () => m, VC: () => d, b4: () => p, oQ: () => _, qv: () => f, tg: () => E, xl: () => h });
+var r = n(311907),
+    i = n(52133),
     s = n(833349);
 n(313961);
-var a = n(328153);
-n(652896), n(567249), n(616356), n(495544), n(38502);
+var a = n(15285);
+n(652896), n(87001), n(616356), n(961350), n(555528);
 var o = n(375492);
 n(309010);
 var l = n(461213);
-n(773371);
-var d = n(489277);
+n(242286);
+var u = n(395011);
 n(897720), n(644434), n(392164);
-var _ = n(652215);
-function u(e, t) {
+var c = n(652215);
+function d(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
     return !0;
 }
-function c(e, t) {
+function _(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
@@ -27,22 +27,22 @@ function c(e, t) {
             return !1;
     return !0;
 }
-function E() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Ay,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.A,
-        i = n.getTargetPID(),
-        r = e.getGameForPID(i),
-        s = t.getActivityForPID(i);
-    return (null == r || null == r.id || null == r.name) && (null == s || null == s.application_id)
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.A,
+        r = n.getTargetPID(),
+        i = e.getGameForPID(r),
+        s = t.getActivityForPID(r);
+    return (null == i || null == i.id || null == i.name) && (null == s || null == s.application_id)
         ? void 0
-        : { id: r?.id ?? s?.application_id, altId: s?.application_id, name: r?.name ?? s?.name };
+        : { id: i?.id ?? s?.application_id, altId: s?.application_id, name: i?.name ?? s?.name };
 }
-function h() {
-    return (0, i.bG)([a.Ay, o.A, d.A], () => E(a.Ay, o.A, d.A), [], r.A);
+function p() {
+    return (0, r.bG)([a.Ay, o.A, u.A], () => f(a.Ay, o.A, u.A), [], i.A);
 }
-function m(e) {
-    return (0, i.bG)(
+function h(e) {
+    return (0, r.bG)(
         [l.A, o.A],
         () =>
             (function (e) {
@@ -53,15 +53,15 @@ function m(e) {
         [e],
     );
 }
-function f(e) {
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A,
         n = t.getActivities(!0);
     return (
-        (null != e ? n.find((t) => (0, s.A)(t, _.jUm.JOIN) && t.application_id === e) : void 0) ??
-        n.find((e) => (0, s.A)(e, _.jUm.JOIN)) ??
+        (null != e ? n.find((t) => (0, s.A)(t, c.jUm.JOIN) && t.application_id === e) : void 0) ??
+        n.find((e) => (0, s.A)(e, c.jUm.JOIN)) ??
         null
     );
 }
-function g(e) {
-    return (0, i.bG)([l.A], () => f(e, l.A), [e]);
+function m(e) {
+    return (0, r.bG)([l.A], () => E(e, l.A), [e]);
 }

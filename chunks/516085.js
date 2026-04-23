@@ -1,28 +1,29 @@
-n.d(t, { Fm: () => o, IS: () => E, Ij: () => l });
-var i = n(627968);
+"use strict";
+n.d(t, { Fm: () => u, IS: () => c, Ij: () => l });
+var r = n(627968);
 n(64700);
-var r = n(875731),
-    a = n(516607),
-    s = n(492213);
-let _ = { [a.SS]: new r.d() };
+var i = n(875731),
+    s = n(516607),
+    a = n(492213);
+let o = { [s.SS]: new i.d() };
 function l(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = _[t];
+    let n = o[t];
     if (null != n && n.shouldShow?.(e) !== !1) return n.createHeader(e);
 }
-function o(e) {
+function u(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = _[t];
+    let n = o[t];
     if (n?.body != null && n.shouldShow?.(e) !== !1) {
-        let r = n.body;
-        return (0, i.jsx)("section", { className: s.uW, children: (0, i.jsx)(r, { activity: e }) }, `delegate-${t}`);
+        let i = n.body;
+        return (0, r.jsx)("section", { className: a.uW, children: (0, r.jsx)(i, { activity: e }) }, `delegate-${t}`);
     }
 }
-function E(e) {
+function c(e) {
     let t = e.application_id;
     if (null == t) return !0;
-    let n = _[t];
+    let n = o[t];
     return null == n || n.shouldShow?.(e) !== !1;
 }

@@ -1,6 +1,7 @@
+"use strict";
 n.d(t, { A: () => l });
 var i = n(803306),
-    s = n(841595);
+    s = n(622543);
 function l(e, t) {
     if (s.A.isFetchingFriends(e)) return;
     let n = s.A.getMutualFriendsCount(e);

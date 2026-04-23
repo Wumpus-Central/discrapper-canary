@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(228366);
+var r = n(311907),
+    i = n(73153);
 let s = !1;
 function a() {
     s = !1;
 }
-class o extends i.Ay.Store {
+class o extends r.Ay.Store {
     static displayName = "ThreadSummaryStore";
     summaryInProgress = !1;
     initialize() {
@@ -16,7 +16,7 @@ class o extends i.Ay.Store {
         return s;
     }
 }
-let l = new o(r.h, {
+let l = new o(i.h, {
     SUMMARIZE_THREAD_START: function () {
         s = !0;
     },

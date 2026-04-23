@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => l });
-var i = n(517846),
-    r = n(439372),
-    s = n(27620),
+var r = n(517846),
+    i = n(439372),
+    s = n(236698),
     a = n(859703);
-class o extends r.A {
+class o extends i.A {
     questCompletionStates = new Map();
     handleQuestStoreChange = () => {
         let e = a.A.quests;
@@ -23,7 +23,7 @@ class o extends r.A {
             this.questCompletionStates.set(e, n);
     };
     onQuestCompleted = (e) => {
-        (0, s.hs)(i.w.QUEST_COMPLETED, { quest_id: e });
+        (0, s.hs)(r.w.QUEST_COMPLETED, { quest_id: e });
     };
     _terminate() {
         this.questCompletionStates.clear();

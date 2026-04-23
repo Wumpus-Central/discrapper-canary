@@ -1,7 +1,8 @@
-function i(e) {
+"use strict";
+function r(e) {
     return e.split(".")[0];
 }
-function r(e) {
-    return null == e ? null : i(e);
+function i(e) {
+    return null == e ? null : r(e);
 }
-n.d(t, { d: () => i, v: () => r });
+n.d(t, { d: () => r, v: () => i });

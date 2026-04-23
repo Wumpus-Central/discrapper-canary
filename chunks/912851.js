@@ -1,10 +1,11 @@
-n.d(t, { A: () => r });
-var i = n(228366);
-let r = {
-    show(e, t, n, r, a) {
-        i.h.dispatch({ type: "NOTICE_SHOW", notice: { id: a, type: e, message: t, buttonText: n, callback: r } });
+"use strict";
+n.d(t, { A: () => i });
+var r = n(73153);
+let i = {
+    show(e, t, n, i, s) {
+        r.h.dispatch({ type: "NOTICE_SHOW", notice: { id: s, type: e, message: t, buttonText: n, callback: i } });
     },
     dismiss(e) {
-        i.h.dispatch({ type: "NOTICE_DISMISS", ...e });
+        r.h.dispatch({ type: "NOTICE_DISMISS", ...e });
     },
 };

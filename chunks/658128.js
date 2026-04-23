@@ -1,26 +1,27 @@
-n.d(t, { W: () => h });
+"use strict";
+n.d(t, { W: () => _ });
 var r = n(713125),
     i = n(473529),
-    a = n(871123),
-    l = n(734057),
+    s = n(871123),
+    a = n(734057),
     o = n(808728),
-    s = n(309010),
-    u = n(567761),
-    d = n(652215),
-    c = n(746080);
-function h(e) {
-    let t = s.A.getChannelId(e),
+    l = n(309010),
+    u = n(645959),
+    c = n(652215),
+    d = n(746080);
+function _(e) {
+    let t = l.A.getChannelId(e),
         n =
             o.Ay.getDefaultChannel(e)?.id ??
             (function (e) {
-                if (e !== d.ME) return;
+                if (e !== c.ME) return;
                 let t = u.default.getPrivateChannelIds();
                 return t.length > 0 ? t[0] : void 0;
             })(e);
-    return (t !== c.VV.GUILD_ONBOARDING || r.Ay.shouldShowOnboarding(e)) && (t !== c.VV.GUILD_HOME || (0, i.K)(e))
-        ? t === c.VV.GAME_SHOP && (0, a.Ye)(e)
+    return (t !== d.VV.GUILD_ONBOARDING || r.Ay.shouldShowOnboarding(e)) && (t !== d.VV.GUILD_HOME || (0, i.K)(e))
+        ? t === d.VV.GAME_SHOP && (0, s.Ye)(e)
             ? t
-            : null == l.A.getChannel(t)
+            : null == a.A.getChannel(t)
               ? n
               : t
         : n;

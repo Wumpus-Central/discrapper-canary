@@ -1,35 +1,36 @@
-n.d(t, { U: () => o, j: () => u });
-var i = n(64700),
-    l = n(17928),
-    r = n(824552),
+"use strict";
+n.d(t, { U: () => u, j: () => l });
+var r = n(64700),
+    i = n(311907),
+    s = n(824552),
     a = n(546183),
-    s = n(403362);
-function u(e, t) {
+    o = n(403362);
+function l(e, t) {
     let { disableFetch: n = !1 } = t ?? {},
-        u = (0, l.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(s.Vq) ?? [], [
+        l = (0, i.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
             e,
         ]),
-        o = (0, l.bG)(
+        u = (0, i.bG)(
             [a.default],
             () => e?.every((e) => a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED) ?? !1,
             [e],
         ),
-        c = (0, l.yK)(
+        c = (0, i.yK)(
             [a.default],
             () => e?.filter((e) => a.default.getFetchStateForApplication(e) === a.FetchState.NOT_FETCHED) ?? [],
             [e],
         );
     return (
-        i.useEffect(() => {
-            n || 0 === c.length || r.A.fetch(c);
+        r.useEffect(() => {
+            n || 0 === c.length || s.A.fetch(c);
         }, [n, c]),
-        { tokens: u, fetched: o }
+        { tokens: l, fetched: u }
     );
 }
-function o(e, t) {
-    let { tokens: n, fetched: l } = u(
-        i.useMemo(() => (null != e ? [e] : null), [e]),
+function u(e, t) {
+    let { tokens: n, fetched: i } = l(
+        r.useMemo(() => (null != e ? [e] : null), [e]),
         t,
     );
-    return { token: n.length > 0 ? n[0] : null, fetched: l };
+    return { token: n.length > 0 ? n[0] : null, fetched: i };
 }

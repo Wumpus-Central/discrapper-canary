@@ -1,4 +1,5 @@
-var n = e(598349);
-r.exports = function (r) {
-    return n(r) || null === r;
+"use strict";
+var r = n(598349);
+e.exports = function (e) {
+    return r(e) || null === e;
 };

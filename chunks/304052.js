@@ -1,19 +1,20 @@
-var n = e(221015),
-    o = e(93714),
-    a = e(250594),
-    i = e(503199),
-    p = function (r) {
-        var t = 1 === r;
-        return function (e, p, u) {
-            for (var y, f = a(e), c = o(f), s = i(c), d = n(p, u); s-- > 0; )
-                if (d((y = c[s]), s, f))
-                    switch (r) {
+"use strict";
+var r = n(221015),
+    i = n(93714),
+    s = n(250594),
+    a = n(503199),
+    o = function (e) {
+        var t = 1 === e;
+        return function (n, o, l) {
+            for (var u, c = s(n), d = i(c), _ = a(d), f = r(o, l); _-- > 0; )
+                if (f((u = d[_]), _, c))
+                    switch (e) {
                         case 0:
-                            return y;
+                            return u;
                         case 1:
-                            return s;
+                            return _;
                     }
             return t ? -1 : void 0;
         };
     };
-r.exports = { findLast: p(0), findLastIndex: p(1) };
+e.exports = { findLast: o(0), findLastIndex: o(1) };

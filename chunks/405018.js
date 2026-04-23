@@ -1,15 +1,16 @@
-n.d(t, { A: () => _, M: () => l });
-var i = n(17928),
-    r = n(71393),
-    a = n(607567),
-    s = n(652215);
-function _(e) {
-    return (0, i.cf)([a.Ay, r.A], () => {
-        let t = a.Ay.countVoiceStatesForChannel(e.id),
-            n = r.A.getGuild(e.getGuildId());
+"use strict";
+n.d(t, { A: () => o, M: () => l });
+var r = n(311907),
+    i = n(71393),
+    s = n(607567),
+    a = n(652215);
+function o(e) {
+    return (0, r.cf)([s.Ay, i.A], () => {
+        let t = s.Ay.countVoiceStatesForChannel(e.id),
+            n = i.A.getGuild(e.getGuildId());
         return null == n
             ? { reachedLimit: !1, limit: -1 }
-            : e.type === s.rbe.GUILD_STAGE_VOICE
+            : e.type === a.rbe.GUILD_STAGE_VOICE
               ? { reachedLimit: t > n.maxStageVideoChannelUsers, limit: n.maxStageVideoChannelUsers }
               : {
                     reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
@@ -18,11 +19,11 @@ function _(e) {
     }, [e]);
 }
 function l(e) {
-    let t = a.Ay.countVoiceStatesForChannel(e.id),
-        n = r.A.getGuild(e.getGuildId());
+    let t = s.Ay.countVoiceStatesForChannel(e.id),
+        n = i.A.getGuild(e.getGuildId());
     return null == n
         ? { reachedLimit: !1, limit: -1 }
-        : e.type === s.rbe.GUILD_STAGE_VOICE
+        : e.type === a.rbe.GUILD_STAGE_VOICE
           ? { reachedLimit: t > n.maxStageVideoChannelUsers, limit: n.maxStageVideoChannelUsers }
           : { reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers, limit: n.maxVideoChannelUsers };
 }

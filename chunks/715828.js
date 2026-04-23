@@ -1,8 +1,9 @@
-function i(e) {
+"use strict";
+function r(e) {
     return "row" === e.type;
 }
-n.d(t, { A: () => r, o: () => i }), n(321073);
-let r = class {
+n.d(t, { A: () => i, o: () => r }), n(321073);
+let i = class {
     sectionHeight = 0;
     rowHeight = 0;
     footerHeight = 0;
@@ -16,21 +17,21 @@ let r = class {
         let {
             sectionHeight: t,
             rowHeight: n,
-            footerHeight: i,
-            listHeaderHeight: r,
-            paddingTop: a,
-            paddingBottom: s,
-            sections: _,
+            footerHeight: r,
+            listHeaderHeight: i,
+            paddingTop: s,
+            paddingBottom: a,
+            sections: o,
             getAnchorId: l,
         } = e;
-        (this.sections = _),
+        (this.sections = o),
             (this.sectionHeight = t),
             (this.rowHeight = n),
-            (this.footerHeight = i),
-            (this.listHeaderHeight = r),
+            (this.footerHeight = r),
+            (this.listHeaderHeight = i),
             (this.uniform = "number" == typeof n),
-            (this.paddingTop = a),
-            (this.paddingBottom = s),
+            (this.paddingTop = s),
+            (this.paddingBottom = a),
             (this.getAnchorId = l ?? this.getAnchorId);
     }
     getHeight() {
@@ -61,88 +62,88 @@ let r = class {
     }
     compute(e, t) {
         let n = this.paddingTop,
-            i = n,
             r = n,
-            a = 0,
+            i = n,
             s = 0,
-            _ = [],
-            l = (a) => (((r = n), (n += a) < e) ? ((i += a), !1) : !(r > t));
-        l(this.getListHeaderHeight()) && _.push({ type: "header", section: -1, offsetTop: r });
+            a = 0,
+            o = [],
+            l = (s) => (((i = n), (n += s) < e) ? ((r += s), !1) : !(i > t));
+        l(this.getListHeaderHeight()) && o.push({ type: "header", section: -1, offsetTop: i });
         for (let e = 0; e < this.sections.length; e++) {
             let t = this.sections[e];
             if (0 !== t) {
                 if (
                     (l(this.getHeightForSection(e)) &&
-                        _.push({
+                        o.push({
                             type: "section",
                             section: e,
-                            listIndex: s,
-                            offsetTop: r,
+                            listIndex: a,
+                            offsetTop: i,
                             anchorId: this.getAnchorId(e),
                         }),
-                    (s += 1),
+                    (a += 1),
                     this.uniform)
                 ) {
                     let n = this.getHeightForRow(e, 0);
-                    for (let i = 0; i < t; i++)
+                    for (let r = 0; r < t; r++)
                         l(n) &&
-                            _.push({
+                            o.push({
                                 type: "row",
                                 section: e,
-                                listIndex: s,
-                                row: i,
-                                rowIndex: a,
-                                offsetTop: r,
-                                anchorId: this.getAnchorId(e, i),
+                                listIndex: a,
+                                row: r,
+                                rowIndex: s,
+                                offsetTop: i,
+                                anchorId: this.getAnchorId(e, r),
                             }),
-                            (a += 1),
-                            (s += 1);
+                            (s += 1),
+                            (a += 1);
                 } else
                     for (let n = 0; n < t; n++)
                         l(this.getHeightForRow(e, n)) &&
-                            _.push({
+                            o.push({
                                 type: "row",
                                 section: e,
-                                listIndex: s,
+                                listIndex: a,
                                 row: n,
-                                rowIndex: a,
-                                offsetTop: r,
+                                rowIndex: s,
+                                offsetTop: i,
                                 anchorId: this.getAnchorId(e, n),
                             }),
-                            (a += 1),
-                            (s += 1);
-                l(this.getHeightForFooter(e)) && _.push({ type: "footer", section: e, offsetTop: r });
+                            (s += 1),
+                            (a += 1);
+                l(this.getHeightForFooter(e)) && o.push({ type: "footer", section: e, offsetTop: i });
             }
         }
-        return { spacerTop: i, totalHeight: n + this.paddingBottom, items: _ };
+        return { spacerTop: r, totalHeight: n + this.paddingBottom, items: o };
     }
     computeScrollPosition(e, t) {
         let { paddingTop: n } = this,
-            i = n + this.getListHeaderHeight(),
-            r = 0,
-            a = !1;
-        for (; r <= e; ) {
-            let n = this.sections[r];
-            if (r === e && null == t) {
-                a = !0;
+            r = n + this.getListHeaderHeight(),
+            i = 0,
+            s = !1;
+        for (; i <= e; ) {
+            let n = this.sections[i];
+            if (i === e && null == t) {
+                s = !0;
                 break;
             }
             if (0 === n) {
-                r += 1;
+                i += 1;
                 continue;
             }
-            if (((i += this.getHeightForSection(r)), this.uniform)) {
-                let s = this.getHeightForRow(r, 0);
-                r === e && null != t ? ((i += s * t), (a = !0)) : (i += s * n);
+            if (((r += this.getHeightForSection(i)), this.uniform)) {
+                let a = this.getHeightForRow(i, 0);
+                i === e && null != t ? ((r += a * t), (s = !0)) : (r += a * n);
             } else
-                for (let s = 0; s < n; s++)
-                    if (r < e || (r === e && null != t && s < t)) i += this.getHeightForRow(r, s);
-                    else if (r === e && null != t && s === t) {
-                        a = !0;
+                for (let a = 0; a < n; a++)
+                    if (i < e || (i === e && null != t && a < t)) r += this.getHeightForRow(i, a);
+                    else if (i === e && null != t && a === t) {
+                        s = !0;
                         break;
                     }
-            a || (i += this.getHeightForFooter(r)), (r += 1);
+            s || (r += this.getHeightForFooter(i)), (i += 1);
         }
-        return [i, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(r)];
+        return [r, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(i)];
     }
 };

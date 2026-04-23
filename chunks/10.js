@@ -1,1 +1,2 @@
-return[ey(e,t,n),ey(e,t+4,n)]
+"use strict";
+e.exports = { A: "skeletonsContainer__72fa0", s: "bannerSkeleton__72fa0" };

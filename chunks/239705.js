@@ -1,38 +1,39 @@
-l.d(e, { x: () => N });
-var n = l(285796),
-    i = l(276293),
-    r = l(60270),
-    a = l(353182),
-    s = l(47167),
-    c = l(734057),
-    A = l(994500),
-    u = l(287809),
-    d = l(243277),
-    o = l(200700),
-    h = l(985018);
-let E = function (t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uh.KEYWORD;
-    switch (t) {
+"use strict";
+n.d(t, { x: () => m });
+var i = n(285796),
+    r = n(276293),
+    l = n(60270),
+    s = n(353182),
+    a = n(47167),
+    o = n(734057),
+    c = n(994500),
+    u = n(287809),
+    d = n(411335),
+    _ = n(200700),
+    E = n(985018);
+let A = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uh.KEYWORD;
+    switch (e) {
         case d.AH.BLOCK_MESSAGE:
-            switch (e) {
+            switch (t) {
                 case d.uh.MENTION_SPAM:
-                    return h.intl.string(h.t["8hdId3"]);
+                    return E.intl.string(E.t["8hdId3"]);
                 case d.uh.ML_SPAM:
-                    return h.intl.string(h.t.tLQYs5);
+                    return E.intl.string(E.t.tLQYs5);
                 default:
-                    return h.intl.string(h.t.xAAoci);
+                    return E.intl.string(E.t.xAAoci);
             }
         case d.AH.FLAG_TO_CHANNEL:
-            return h.intl.string(h.t.BHAXfa);
+            return E.intl.string(E.t.BHAXfa);
         case d.AH.USER_COMMUNICATION_DISABLED:
-            return h.intl.string(h.t["bNK+gI"]);
+            return E.intl.string(E.t["bNK+gI"]);
         case d.AH.QUARANTINE_USER:
-            return h.intl.string(h.t["/7nL5R"]);
+            return E.intl.string(E.t["/7nL5R"]);
     }
 };
-function N(t, e, l) {
-    return ((t) => {
-        switch (t) {
+function m(e, t, n) {
+    return ((e) => {
+        switch (e) {
             case d.AH.BLOCK_MESSAGE:
             case d.AH.FLAG_TO_CHANNEL:
             case d.AH.USER_COMMUNICATION_DISABLED:
@@ -41,58 +42,58 @@ function N(t, e, l) {
             default:
                 return !1;
         }
-    })(t)
+    })(e)
         ? {
               headerText:
-                  ((t) => {
-                      switch (t) {
+                  ((e) => {
+                      switch (e) {
                           case d.AH.BLOCK_MESSAGE:
-                              return h.intl.string(h.t.d1ab8n);
+                              return E.intl.string(E.t.d1ab8n);
                           case d.AH.FLAG_TO_CHANNEL:
-                              return h.intl.string(h.t["Y+VmvU"]);
+                              return E.intl.string(E.t["Y+VmvU"]);
                           case d.AH.USER_COMMUNICATION_DISABLED:
-                              return h.intl.string(h.t.Xz2njA);
+                              return E.intl.string(E.t.Xz2njA);
                           case d.AH.QUARANTINE_USER:
-                              return h.intl.string(h.t.NPO8ee);
+                              return E.intl.string(E.t.NPO8ee);
                       }
-                  })(t) ?? "",
-              descriptionText: E(t, l) ?? "",
+                  })(e) ?? "",
+              descriptionText: A(e, n) ?? "",
               helperText:
-                  ((t, e) => {
-                      switch (t) {
+                  ((e, t) => {
+                      switch (e) {
                           case d.AH.QUARANTINE_USER:
                           case d.AH.BLOCK_MESSAGE:
                               return null;
                           case d.AH.FLAG_TO_CHANNEL: {
-                              let t = e?.metadata?.channelId;
-                              if (null == t) return null;
-                              let l = c.A.getChannel(t);
-                              if (null == l) return null;
-                              let n = (0, s.m1)(l, u.default, A.A);
-                              return h.intl.format(h.t.xQXnkK, { channelName: n });
+                              let e = t?.metadata?.channelId;
+                              if (null == e) return null;
+                              let n = o.A.getChannel(e);
+                              if (null == n) return null;
+                              let i = (0, a.m1)(n, u.default, c.A);
+                              return E.intl.format(E.t.xQXnkK, { channelName: i });
                           }
                           case d.AH.USER_COMMUNICATION_DISABLED: {
-                              let t = e?.metadata?.durationSeconds ?? 0,
-                                  l = (0, o.getFriendlyDurationString)(t);
-                              if (null == l) return null;
-                              return h.intl.format(h.t.AFmbfS, { duration: l });
+                              let e = t?.metadata?.durationSeconds ?? 0,
+                                  n = (0, _.getFriendlyDurationString)(e);
+                              if (null == n) return null;
+                              return E.intl.format(E.t.AFmbfS, { duration: n });
                           }
                       }
-                  })(t, e) ?? null,
+                  })(e, t) ?? null,
               icon:
-                  ((t) => {
-                      switch (t) {
+                  ((e) => {
+                      switch (e) {
                           case d.AH.BLOCK_MESSAGE:
-                              return n.a;
+                              return i.a;
                           case d.AH.FLAG_TO_CHANNEL:
-                              return i.N;
+                              return r.N;
                           case d.AH.USER_COMMUNICATION_DISABLED:
-                              return r.g;
+                              return l.g;
                           case d.AH.QUARANTINE_USER:
-                              return a._;
+                              return s._;
                       }
-                  })(t) ?? n.a,
-              isEditable: t !== d.AH.QUARANTINE_USER,
+                  })(e) ?? i.a,
+              isEditable: e !== d.AH.QUARANTINE_USER,
           }
         : null;
 }

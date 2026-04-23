@@ -1,10 +1,11 @@
+"use strict";
 n.d(t, { A: () => a });
-var i = n(439372),
-    r = n(733391);
-class l extends i.A {
+var r = n(439372),
+    i = n(733391);
+class s extends r.A {
     actions = { POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this) };
     onPostConnectionOpen() {
-        (0, r.Xw)();
+        (0, i.Xw)();
     }
 }
-let a = new l();
+let a = new s();

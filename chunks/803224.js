@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153),
     s = n(723702),
     a = n(652215);
 let o = {
@@ -14,11 +14,11 @@ let o = {
         notifyMessagesInSelectedChannel: !1,
     },
     l = o;
-function d(e) {
+function u(e) {
     let { desktopType: t } = e;
     l.desktopType = t;
 }
-class _ extends i.Ay.DeviceSettingsStore {
+class c extends r.Ay.DeviceSettingsStore {
     static displayName = "NotificationSettingsStore";
     static persistKey = "notifications";
     static migrations = [
@@ -65,8 +65,8 @@ class _ extends i.Ay.DeviceSettingsStore {
         return l.disableAllSounds || -1 !== l.disabledSounds.indexOf(e);
     }
 }
-let u = new _(r.h, {
-    NOTIFICATIONS_SET_DESKTOP_TYPE: d,
+let d = new c(i.h, {
+    NOTIFICATIONS_SET_DESKTOP_TYPE: u,
     NOTIFICATIONS_SET_TTS_TYPE: function (e) {
         let { ttsType: t } = e;
         l.ttsType = t;
@@ -80,7 +80,7 @@ let u = new _(r.h, {
     },
     NOTIFICATIONS_SET_PERMISSION_STATE: function (e) {
         let { enabled: t } = e;
-        t === a.kCE.BLOCKED ? d({ desktopType: a.nRU.NEVER }) : t === a.kCE.ENABLED && d({ desktopType: a.nRU.ALL });
+        t === a.kCE.BLOCKED ? u({ desktopType: a.nRU.NEVER }) : t === a.kCE.ENABLED && u({ desktopType: a.nRU.ALL });
     },
     NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: function (e) {
         let { disableUnreadBadge: t } = e;

@@ -1,10 +1,10 @@
 s.d(t, { default: () => f });
 var n = s(627968),
     l = s(64700),
-    a = s(17928),
+    a = s(311907),
     o = s(181658),
     i = s(557722),
-    r = s(914724),
+    r = s(515258),
     d = s(870570),
     h = s(287809),
     u = s(446868),
@@ -14,8 +14,8 @@ let f = l.forwardRef(function (e, t) {
     let { onAddedPhone: s, onClose: f, transitionState: C, reason: g, layerContext: m } = e,
         y = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
         b = (0, a.bG)([d.A], () => d.A.getAction()),
-        [x, k] = l.useState(null),
-        [A, v] = l.useState(null),
+        [x, A] = l.useState(null),
+        [k, v] = l.useState(null),
         [R, S] = l.useState(null),
         [j, P] = l.useState(!1),
         w = l.useCallback(
@@ -26,7 +26,7 @@ let f = l.forwardRef(function (e, t) {
                         ? await i.A.beginReverifyPhone(e, g)
                         : await i.A.beginAddPhone(e, g),
                         S(null),
-                        k(e);
+                        A(e);
                 } catch (e) {
                     S(new o.A(e));
                 }
@@ -49,17 +49,17 @@ let f = l.forwardRef(function (e, t) {
             },
             [y, x],
         ),
-        B = l.useCallback(
+        E = l.useCallback(
             async (e) => {
-                null != A &&
-                    (u.A.isPhoneReverification(y, b) ? await i.A.reverifyPhone(A, e, g) : await i.A.addPhone(A, e, g),
+                null != k &&
+                    (u.A.isPhoneReverification(y, b) ? await i.A.reverifyPhone(k, e, g) : await i.A.addPhone(k, e, g),
                     s?.(),
                     f());
             },
-            [s, f, A, g, y, b],
+            [s, f, k, g, y, b],
         );
-    return null != A
-        ? (0, n.jsx)(c.default, { onClose: f, transitionState: C, title: p.intl.string(p.t.ZtCDc2), handleSubmit: B })
+    return null != k
+        ? (0, n.jsx)(c.default, { onClose: f, transitionState: C, title: p.intl.string(p.t.ZtCDc2), handleSubmit: E })
         : (0, n.jsx)(r.default, {
               onClose: f,
               transitionState: C,

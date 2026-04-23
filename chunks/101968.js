@@ -1,7 +1,8 @@
-var n = e(598349),
-    o = String,
-    i = TypeError;
-r.exports = function (r) {
-    if (n(r)) return r;
-    throw new i(o(r) + " is not an object");
+"use strict";
+var r = n(598349),
+    i = String,
+    s = TypeError;
+e.exports = function (e) {
+    if (r(e)) return e;
+    throw new s(i(e) + " is not an object");
 };

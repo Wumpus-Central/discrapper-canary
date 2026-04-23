@@ -1,19 +1,20 @@
-n.d(t, { Gk: () => l, Gl: () => o });
-var i = n(531815),
-    r = n.n(i);
+"use strict";
+n.d(t, { Gk: () => l, Gl: () => u });
+var r = n(531815),
+    i = n.n(r);
 n(989349);
-var a = n(927813),
-    s = n(37411),
-    _ = n(985018);
+var s = n(927813),
+    a = n(37411),
+    o = n(985018);
 function l() {
     return [
-        { id: "1hour", label: _.intl.string(_.t.cs8A1c), value: a.A.Minutes.HOUR },
-        { id: "24hours", label: _.intl.string(_.t.zFKbrF), value: a.A.Minutes.DAY },
-        { id: "3days", label: _.intl.string(_.t.TmPIZX), value: 3 * a.A.Minutes.DAY },
-        { id: "1week", label: _.intl.string(_.t["/7i2el"]), value: a.A.Minutes.WEEK },
+        { id: "1hour", label: o.intl.string(o.t.cs8A1c), value: s.A.Minutes.HOUR },
+        { id: "24hours", label: o.intl.string(o.t.zFKbrF), value: s.A.Minutes.DAY },
+        { id: "3days", label: o.intl.string(o.t.TmPIZX), value: 3 * s.A.Minutes.DAY },
+        { id: "1week", label: o.intl.string(o.t["/7i2el"]), value: s.A.Minutes.WEEK },
     ];
 }
-function o(e, t) {
-    return t ?? e?.defaultAutoArchiveDuration ?? s.cM;
+function u(e, t) {
+    return t ?? e?.defaultAutoArchiveDuration ?? a.cM;
 }
-a.A.Minutes.HOUR, a.A.Minutes.DAY, a.A.Minutes.DAY, a.A.Minutes.WEEK, r()(() => l().map((e) => e.value));
+s.A.Minutes.HOUR, s.A.Minutes.DAY, s.A.Minutes.DAY, s.A.Minutes.WEEK, i()(() => l().map((e) => e.value));

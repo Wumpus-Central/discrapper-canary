@@ -1,31 +1,32 @@
-n.d(t, { $l: () => _, Ay: () => E, O_: () => o, xx: () => l }), n(321073);
-var i = n(543531),
-    r = n(407689),
-    a = n(853742),
-    s = n(759735);
-function _(e) {
-    return `${r.mG.FORUM_CHANNEL}_${e}`;
+"use strict";
+n.d(t, { $l: () => o, Ay: () => c, O_: () => u, xx: () => l }), n(321073);
+var r = n(543531),
+    i = n(407689),
+    s = n(853742),
+    a = n(759735);
+function o(e) {
+    return `${i.mG.FORUM_CHANNEL}_${e}`;
 }
 function l(e, t, n) {
-    (0, i.wR)(_(e), t, n);
+    (0, r.wR)(o(e), t, n);
 }
-function o(e, t, n) {
-    (0, i.zK)(_(e), t, n);
+function u(e, t, n) {
+    (0, r.zK)(o(e), t, n);
 }
-class E extends r.id {
+class c extends i.id {
     guildId;
     channelId;
     sessionId;
-    constructor({ guildId: e, channelId: t, windowId: n, isPaused: i }) {
-        super({ windowId: n, isPaused: i, id: _(t) }),
+    constructor({ guildId: e, channelId: t, windowId: n, isPaused: r }) {
+        super({ windowId: n, isPaused: r, id: o(t) }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, s.cr)(t));
+            (this.sessionId = (0, a.cr)(t));
     }
     createFlushSeenItemsFunction = (e) => {
         let t = this.trackedFeedItems,
             n = this.channelId,
-            i = {
+            r = {
                 guildId: this.guildId,
                 channelId: n,
                 sessionId: this.sessionId,
@@ -34,14 +35,14 @@ class E extends r.id {
             };
         return () =>
             (function (e) {
-                let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: r, isForcedFlush: s } = e,
-                    _ = [],
+                let { guildId: t, channelId: n, sessionId: r, trackedFeedItems: i, isForcedFlush: a } = e,
+                    o = [],
                     l = [];
-                for (let e of Object.keys(r)) {
-                    let t = r[e].computeSeenTimeDestructive(s);
-                    t > 0 && (_.push(e), l.push(t));
+                for (let e of Object.keys(i)) {
+                    let t = i[e].computeSeenTimeDestructive(a);
+                    t > 0 && (o.push(e), l.push(t));
                 }
-                0 !== _.length && (0, a.Z_)({ guildId: t, channelId: n, sessionId: i, postIds: _, additionalTimes: l });
-            })(i);
+                0 !== o.length && (0, s.Z_)({ guildId: t, channelId: n, sessionId: r, postIds: o, additionalTimes: l });
+            })(r);
     };
 }

@@ -1,137 +1,138 @@
-let i;
-n.d(t, { A: () => U });
-var r = n(735438),
-    l = n.n(r),
-    a = n(17928),
-    s = n(228366),
-    o = n(323176),
-    d = n(736056),
-    u = n(655116),
-    c = n(495544),
-    h = n(963307),
-    E = n(761640),
-    _ = n(734057),
-    p = n(919638),
-    A = n(696451),
-    f = n(71393),
-    g = n(763827),
-    I = n(994500),
-    T = n(309010),
-    S = n(967198),
-    m = n(652215);
-let O = new o.Ay((e) => {
-    for (let t in e) null != f.A.getGuild(t) || p.A.isUnavailable(t) || delete e[t];
-    s.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
+"use strict";
+let r;
+n.d(t, { A: () => w });
+var i = n(735438),
+    s = n.n(i),
+    a = n(311907),
+    o = n(73153),
+    l = n(432703),
+    u = n(49463),
+    c = n(655116),
+    d = n(961350),
+    _ = n(963307),
+    f = n(761640),
+    p = n(734057),
+    h = n(919638),
+    E = n(696451),
+    m = n(71393),
+    g = n(383501),
+    A = n(994500),
+    I = n(309010),
+    T = n(967198),
+    S = n(652215);
+let y = new l.Ay((e) => {
+    for (let t in e) null != m.A.getGuild(t) || h.A.isUnavailable(t) || delete e[t];
+    o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: e });
 });
-function C(e, t) {
-    let n = {};
-    O.forEach((r) => {
-        r !== S.A.getGuildId() &&
-            r !== g.A.getGuildId() &&
-            r !== _.A.getChannel(T.A.getChannelId())?.getGuildId() &&
-            (null == i || i.guildId !== r) &&
-            (O.clearWithoutFlushing(r, e), t && (n[r] = O.get(r)));
-    }),
-        l().isEmpty(n) || s.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
-}
 function N(e, t) {
-    return O.subscribeToGuild(e), null != t && E.Ay.getSection(t) === m.YvQ.MEMBERS && y(e, t, o.LD);
+    let n = {};
+    y.forEach((i) => {
+        i !== T.A.getGuildId() &&
+            i !== g.A.getGuildId() &&
+            i !== p.A.getChannel(I.A.getChannelId())?.getGuildId() &&
+            (null == r || r.guildId !== i) &&
+            (y.clearWithoutFlushing(i, e), t && (n[i] = y.get(i)));
+    }),
+        s().isEmpty(n) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
 }
-function y(e, t, n) {
-    if (t === h.sN) return O.subscribeChannel(e, t, n);
-    let i = _.A.getChannel(t);
-    if (null == i) return !1;
-    let r = i.getGuildId();
-    return (r !== e && e === m.YYv && O.subscribeToGuild(r), i?.isThread())
-        ? i.type === m.rbe.ANNOUNCEMENT_THREAD
-            ? O.subscribeChannel(r, i.parent_id, n)
-            : !!i.isActiveThread() && O.subscribeThreadMemberList(r, t, T.A.getChannelId())
-        : O.subscribeChannel(r, t, n);
+function v(e, t) {
+    return y.subscribeToGuild(e), null != t && f.Ay.getSection(t) === S.YvQ.MEMBERS && C(e, t, l.LD);
+}
+function C(e, t, n) {
+    if (t === _.sN) return y.subscribeChannel(e, t, n);
+    let r = p.A.getChannel(t);
+    if (null == r) return !1;
+    let i = r.getGuildId();
+    return (i !== e && e === S.YYv && y.subscribeToGuild(i), r?.isThread())
+        ? r.type === S.rbe.ANNOUNCEMENT_THREAD
+            ? y.subscribeChannel(i, r.parent_id, n)
+            : !!r.isActiveThread() && y.subscribeThreadMemberList(i, t, I.A.getChannelId())
+        : y.subscribeChannel(i, t, n);
+}
+function O(e) {
+    let { type: t } = e;
+    "CONNECTION_OPEN" === t && N(!0, !1);
+    let n = T.A.getGuildId();
+    null != n && v(n, I.A.getChannelId(n));
+    let r = {};
+    y.forEach((e) => {
+        null == m.A.getGuild(e) ? y.clearWithoutFlushing(e, !0) : (r[e] = y.get(e));
+    }),
+        s().isEmpty(r) || o.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: r });
 }
 function R(e) {
-    let { type: t } = e;
-    "CONNECTION_OPEN" === t && C(!0, !1);
-    let n = S.A.getGuildId();
-    null != n && N(n, T.A.getChannelId(n));
-    let i = {};
-    O.forEach((e) => {
-        null == f.A.getGuild(e) ? O.clearWithoutFlushing(e, !0) : (i[e] = O.get(e));
-    }),
-        l().isEmpty(i) || s.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: i });
-}
-function L(e) {
     let { guildId: t, channelId: n } = e;
-    return !p.A.isUnavailable(t) && N(t, n);
+    return !h.A.isUnavailable(t) && v(t, n);
 }
-function v() {
-    return N(S.A.getGuildId(), T.A.getChannelId());
+function b() {
+    return v(T.A.getGuildId(), I.A.getChannelId());
 }
 function D() {
-    let e = u.A.getSyncingWith();
-    if (null == e) null != i && (O.unsubscribeUser(i.guildId, i.userId), (i = null));
+    let e = c.A.getSyncingWith();
+    if (null == e) null != r && (y.unsubscribeUser(r.guildId, r.userId), (r = null));
     else {
         let { userId: t } = e;
-        if ((null != i && i.userId === t) || I.A.isFriend(t)) return !1;
-        let n = A.Ay.memberOf(t);
+        if ((null != r && r.userId === t) || A.A.isFriend(t)) return !1;
+        let n = E.Ay.memberOf(t);
         if (0 === n.length) return !1;
-        let [r] = n;
-        (i = { guildId: r, userId: t }), O.subscribeUser(r, t);
+        let [i] = n;
+        (r = { guildId: i, userId: t }), y.subscribeUser(i, t);
     }
     return !1;
 }
-class b extends a.Ay.Store {
+class L extends a.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        this.waitFor(c.default, E.Ay, _.A, d.A, p.A, A.Ay, f.A, g.A, I.A, T.A, S.A, u.A),
-            this.syncWith([u.A], D),
-            this.syncWith([E.Ay], v);
+        this.waitFor(d.default, f.Ay, p.A, u.A, h.A, E.Ay, m.A, g.A, A.A, I.A, T.A, c.A),
+            this.syncWith([c.A], D),
+            this.syncWith([f.Ay], b);
     }
     getSubscribedThreadIds() {
-        return O.getSubscribedThreadIds();
+        return y.getSubscribedThreadIds();
     }
     isSubscribedToThreads(e) {
-        return O.isSubscribedToThreads(e);
+        return y.isSubscribedToThreads(e);
     }
     isSubscribedToAnyMember(e) {
-        return O.isSubscribedToAnyMember(e);
+        return y.isSubscribedToAnyMember(e);
     }
     isSubscribedToMemberUpdates(e) {
-        return O.isSubscribedToMemberUpdates(e);
+        return y.isSubscribedToMemberUpdates(e);
     }
     isSubscribedToAnyGuildChannel(e) {
-        let t = O.get(e).channels;
+        let t = y.get(e).channels;
         return null != t && Object.keys(t).length > 0;
     }
 }
-let U = new b(s.h, {
-    CONNECTION_OPEN: R,
-    CONNECTION_RESUMED: R,
+let w = new L(o.h, {
+    CONNECTION_OPEN: O,
+    CONNECTION_RESUMED: O,
     CONNECTION_CLOSED: function () {
-        C(!1, !1);
+        N(!1, !1);
     },
     IDLE: function (e) {
         let { idle: t } = e;
         if (!t) return !1;
-        C(!1, !0);
+        N(!1, !0);
     },
     LOGOUT: function () {
-        O.reset();
+        y.reset();
     },
-    VOICE_CHANNEL_SELECT: L,
-    CHANNEL_SELECT: L,
+    VOICE_CHANNEL_SELECT: R,
+    CHANNEL_SELECT: R,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        t.id === S.A.getGuildId() && v();
+        t.id === T.A.getGuildId() && b();
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        O.clearWithoutFlushing(t.id, !0);
+        y.clearWithoutFlushing(t.id, !0);
     },
     GUILD_SUBSCRIPTIONS_MEMBERS_ADD: function (e) {
         let { guildId: t, userIds: n } = e;
         return (
             n.forEach((e) => {
-                e !== c.default.getId() && O.subscribeUser(t, e);
+                e !== d.default.getId() && y.subscribeUser(t, e);
             }),
             !1
         );
@@ -140,47 +141,47 @@ let U = new b(s.h, {
         let { guildId: t, userIds: n } = e;
         return (
             n.forEach((e) => {
-                O.unsubscribeUser(t, e);
+                y.unsubscribeUser(t, e);
             }),
             !1
         );
     },
     GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: function (e) {
         let { guildId: t } = e;
-        O.subscribeToMemberUpdates(t);
+        y.subscribeToMemberUpdates(t);
     },
     GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: function (e) {
         let { guildId: t } = e;
-        O.unsubscribeFromMemberUpdates(t);
+        y.unsubscribeFromMemberUpdates(t);
     },
     GUILD_SUBSCRIPTIONS_CHANNEL: function (e) {
-        let { guildId: t, channelId: n, ranges: i } = e;
-        return y(t, n, i);
+        let { guildId: t, channelId: n, ranges: r } = e;
+        return C(t, n, r);
     },
     GUILD_SUBSCRIPTIONS: function (e) {
         let { guildId: t } = e;
-        return O.subscribeToGuild(t);
+        return y.subscribeToGuild(t);
     },
     CHANNEL_PRELOAD: function (e) {
         let { guildId: t, channelId: n } = e;
-        return N(t, n);
+        return v(t, n);
     },
     INBOX_OPEN: function (e) {
         let { guildIds: t } = e;
-        for (let e of t) null != e && O.subscribeToGuild(e);
+        for (let e of t) null != e && y.subscribeToGuild(e);
         return !1;
     },
     THREAD_UPDATE: function (e) {
         let { channel: t } = e;
         return t.isArchivedThread()
-            ? O.unsubscribeThreadMemberList(t.guild_id, t.id)
+            ? y.unsubscribeThreadMemberList(t.guild_id, t.id)
             : !!t.isActiveThread() &&
-                  T.A.getChannelId() === t.id &&
-                  void O.subscribeThreadMemberList(t.guild_id, t.id, T.A.getChannelId());
+                  I.A.getChannelId() === t.id &&
+                  void y.subscribeThreadMemberList(t.guild_id, t.id, I.A.getChannelId());
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
-        return O.unsubscribeThreadMemberList(t.guild_id, t.id);
+        return y.unsubscribeThreadMemberList(t.guild_id, t.id);
     },
-    THREAD_LIST_SYNC: v,
+    THREAD_LIST_SYNC: b,
 });

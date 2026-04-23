@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { $: () => c, A: () => S });
-var i = n(228366),
-    r = n(439372),
+n.d(t, { $: () => _, A: () => S });
+var r = n(73153),
+    i = n(439372),
     s = n(287809),
     a = n(219893),
     o = n(695515),
     l = n(936926),
-    d = n(580296),
-    _ = n(602339),
-    u = n(985018);
-function c() {
+    u = n(390660),
+    c = n(602339),
+    d = n(985018);
+function _() {
     return o.A.isCurrentUserInRestrictedHours();
 }
-let E = !1,
+let f = !1,
+    p = null,
     h = null,
-    m = null,
-    f = null;
-function g() {
-    null != m && (clearTimeout(m), (m = null));
+    E = null;
+function m() {
+    null != h && (clearTimeout(h), (h = null));
     let e = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (!(0, l.Eq)({ location: "RestrictedHoursManager" })) return null;
@@ -36,47 +36,47 @@ function g() {
         if (e.minutesUntil <= 16) {
             var t;
             let n = `${e.rule.ruleId}:${e.startAtMs}`;
-            if (n !== f) {
-                let r, s;
+            if (n !== E) {
+                let i, s;
                 (t = e.rule),
-                    (r = u.intl.string(_.default["0JlDg0"])),
+                    (i = d.intl.string(c.default["0JlDg0"])),
                     (s = `${(0, a.n1)(t.days)} ${(0, a.li)(t)}`.trim()),
-                    i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: r, subtitle: s }),
-                    (f = n);
+                    r.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: i, subtitle: s }),
+                    (E = n);
             }
-            m = setTimeout(() => {
-                (m = null), g();
+            h = setTimeout(() => {
+                (h = null), m();
             }, 6e4);
         } else
-            m = setTimeout(
+            h = setTimeout(
                 () => {
-                    (m = null), g();
+                    (h = null), m();
                 },
                 Math.max(0, (e.minutesUntil - 16) * 6e4),
             );
 }
-function p() {
-    let e = c();
-    e !== E && ((E = e) ? (0, d.openRestrictedHoursModal)() : (0, d.k)(), g());
+function g() {
+    let e = _();
+    e !== f && ((f = e) ? (0, u.openRestrictedHoursModal)() : (0, u.k)(), m());
 }
 function A() {
-    (E = !1), (f = null), (0, d.k)(), null != m && (clearTimeout(m), (m = null));
+    (f = !1), (E = null), (0, u.k)(), null != h && (clearTimeout(h), (h = null));
 }
 function I() {
-    p(), g();
+    g(), m();
 }
-class T extends r.A {
+class T extends i.A {
     stores = new Map().set(s.default, I).set(o.A, I);
     actions = { POST_CONNECTION_OPEN: I, CURRENT_USER_UPDATE: I, LOGOUT: A };
     _initialize() {
-        (E = c()) && (0, d.openRestrictedHoursModal)(), (h = setInterval(p, 6e4)), g();
+        (f = _()) && (0, u.openRestrictedHoursModal)(), (p = setInterval(g, 6e4)), m();
     }
     _terminate() {
-        null != h && (clearInterval(h), (h = null)),
-            null != m && (clearTimeout(m), (m = null)),
-            (f = null),
-            (0, d.k)(),
-            (E = !1);
+        null != p && (clearInterval(p), (p = null)),
+            null != h && (clearTimeout(h), (h = null)),
+            (E = null),
+            (0, u.k)(),
+            (f = !1);
     }
 }
 let S = new T();

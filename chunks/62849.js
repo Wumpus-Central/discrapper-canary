@@ -1,13 +1,13 @@
 t.d(n, { A: () => _, P: () => M });
 var l = t(627968),
     r = t(64700),
-    a = t(17928),
+    a = t(311907),
     s = t(192308),
     c = t(442433),
     i = t(47167),
     d = t(721592),
     u = t(376943),
-    o = t(706083),
+    o = t(987877),
     h = t(990474),
     m = t(232042),
     x = t(906754),
@@ -88,7 +88,7 @@ function _(e) {
             onContextMenu: (e) => {
                 let r = I.A.getChannel(n);
                 (0, c.L3)(e, async () => {
-                    let { default: e } = await t.e("4391").then(t.bind(t, 254106));
+                    let { default: e } = await t.e("99041").then(t.bind(t, 612856));
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: h });
                 });

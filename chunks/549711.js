@@ -1,23 +1,24 @@
+"use strict";
 n.d(t, { A: () => l });
-var i = n(627968);
+var r = n(627968);
 n(64700);
-var r = n(873263),
-    a = n(110259),
-    s = n(334465),
-    _ = n(139286);
+var i = n(873263),
+    s = n(110259),
+    a = n(334465),
+    o = n(139286);
 function l(e) {
-    let { impressionName: t, impressionProperties: n, disableTrack: l, ...o } = e,
-        E = (0, r.zy)(),
-        d = o.location?.pathname ?? E.pathname,
-        c = n;
-    if ("function" == typeof c) {
-        let e = Array.isArray(o.path) ? o.path : null != o.path ? [o.path] : [],
+    let { impressionName: t, impressionProperties: n, disableTrack: l, ...u } = e,
+        c = (0, i.zy)(),
+        d = u.location?.pathname ?? c.pathname,
+        _ = n;
+    if ("function" == typeof _) {
+        let e = Array.isArray(u.path) ? u.path : null != u.path ? [u.path] : [],
             t = null;
-        for (let n of e) if (null != (t = (0, s.B)(d, { path: n, exact: o.exact, strict: o.strict }))) break;
-        c = c({ match: t });
+        for (let n of e) if (null != (t = (0, a.B)(d, { path: n, exact: u.exact, strict: u.strict }))) break;
+        _ = _({ match: t });
     }
     return (
-        (0, _.A)({ type: a.ImpressionTypes.PAGE, name: t, properties: c }, { disableTrack: l }, [d]),
-        (0, i.jsx)(r.qh, { ...o })
+        (0, o.A)({ type: s.ImpressionTypes.PAGE, name: t, properties: _ }, { disableTrack: l }, [d]),
+        (0, r.jsx)(i.qh, { ...u })
     );
 }

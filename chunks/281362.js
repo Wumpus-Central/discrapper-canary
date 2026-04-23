@@ -1,44 +1,44 @@
 "use strict";
-n.d(t, { E: () => g });
-var i = n(157559),
-    r = n(627363),
+n.d(t, { E: () => m });
+var r = n(157559),
+    i = n(627363),
     s = n(192552),
-    a = n(395671),
+    a = n(611010),
     o = n(734057),
     l = n(71393),
-    d = n(576705),
-    _ = n(287809),
-    u = n(977997),
-    c = n(933958),
-    E = n(62583),
-    h = n(170148),
-    m = n(550151),
-    f = n(985018);
-async function g(e) {
+    u = n(576705),
+    c = n(287809),
+    d = n(977997),
+    _ = n(933958),
+    f = n(447031),
+    p = n(170148),
+    h = n(550151),
+    E = n(985018);
+async function m(e) {
     let {
             channelId: t,
             applicationId: n,
-            launchId: g,
-            inputApplication: p,
+            launchId: m,
+            inputApplication: g,
             analyticsLocations: A,
             launchingComponentId: I,
             sectionName: T,
             inviterUserId: S,
         } = e,
-        N = c.Ay.getEmbeddedActivitiesForChannel(t).find(
-            (e) => e.applicationId === n && (null == g || e.launchId === g),
+        y = _.Ay.getEmbeddedActivitiesForChannel(t).find(
+            (e) => e.applicationId === n && (null == m || e.launchId === m),
         ),
-        C = p;
-    if (null == C) {
-        let e = await r.Ay.fetchApplication(n);
-        C = a.Ay.createFromServer(e);
+        N = g;
+    if (null == N) {
+        let e = await i.Ay.fetchApplication(n);
+        N = a.Ay.createFromServer(e);
     }
-    if (null == N || null == C) return;
-    let R = _.default.getCurrentUser();
-    async function O() {
-        null != N &&
-            (await (0, E.A)({
-                applicationId: N.applicationId,
+    if (null == y || null == N) return;
+    let v = c.default.getCurrentUser();
+    async function C() {
+        null != y &&
+            (await (0, f.A)({
+                applicationId: y.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: A,
@@ -50,39 +50,39 @@ async function g(e) {
     !(function (e) {
         let { embeddedActivityJoinability: t, handleCanJoin: n } = e;
         switch (t) {
-            case m.Gy.CAN_JOIN:
+            case h.Gy.CAN_JOIN:
                 n?.();
                 break;
-            case m.Gy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+            case h.Gy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
                 (0, s.i)();
                 break;
-            case m.Gy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                i.A.show({ title: f.intl.string(f.t.PtobXW), body: f.intl.string(f.t.UXoQTp), hideActionSheet: !1 });
+            case h.Gy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                r.A.show({ title: E.intl.string(E.t.PtobXW), body: E.intl.string(E.t.UXoQTp), hideActionSheet: !1 });
                 break;
-            case m.Gy.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                i.A.show({ title: f.intl.string(f.t.PtobXW), body: f.intl.string(f.t.uGDCcw), hideActionSheet: !1 });
+            case h.Gy.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                r.A.show({ title: E.intl.string(E.t.PtobXW), body: E.intl.string(E.t.uGDCcw), hideActionSheet: !1 });
                 break;
-            case m.Gy.ACTIVITY_AGE_GATED:
-                i.A.show({ title: f.intl.string(f.t.PtobXW), body: f.intl.string(f.t["4WuFRE"]), hideActionSheet: !1 });
+            case h.Gy.ACTIVITY_AGE_GATED:
+                r.A.show({ title: E.intl.string(E.t.PtobXW), body: E.intl.string(E.t["4WuFRE"]), hideActionSheet: !1 });
                 break;
-            case m.Gy.NO_CHANNEL_CONNECT_PERMISSION:
-            case m.Gy.CHANNEL_FULL:
-            case m.Gy.NO_CHANNEL:
-            case m.Gy.NO_USER:
-                i.A.show({ title: f.intl.string(f.t.PtobXW), body: f.intl.string(f.t.FUCQco), hideActionSheet: !1 });
+            case h.Gy.NO_CHANNEL_CONNECT_PERMISSION:
+            case h.Gy.CHANNEL_FULL:
+            case h.Gy.NO_CHANNEL:
+            case h.Gy.NO_USER:
+                r.A.show({ title: E.intl.string(E.t.PtobXW), body: E.intl.string(E.t.FUCQco), hideActionSheet: !1 });
         }
     })({
-        embeddedActivityJoinability: (0, m.Ay)({
-            userId: R?.id,
-            application: C,
+        embeddedActivityJoinability: (0, h.Ay)({
+            userId: v?.id,
+            application: N,
             channelId: t,
-            currentUser: R,
-            isActivitiesEnabledForCurrentPlatform: (0, h.A)(),
+            currentUser: v,
+            isActivitiesEnabledForCurrentPlatform: (0, p.A)(),
             ChannelStore: o.A,
-            VoiceStateStore: u.A,
-            PermissionStore: d.A,
+            VoiceStateStore: d.A,
+            PermissionStore: u.A,
             GuildStore: l.A,
         }),
-        handleCanJoin: O,
+        handleCanJoin: C,
     });
 }

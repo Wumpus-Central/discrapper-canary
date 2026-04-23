@@ -1,37 +1,38 @@
-var n = e(257943),
-    o = e(804272),
-    i = e(516549),
-    u = e(101968),
-    a = e(706598),
-    c = TypeError,
-    f = Object.defineProperty,
-    s = Object.getOwnPropertyDescriptor,
-    p = "enumerable",
-    l = "configurable",
-    v = "writable";
-t.f = n
-    ? i
-        ? function (r, t, e) {
+"use strict";
+var r = n(257943),
+    i = n(804272),
+    s = n(516549),
+    a = n(101968),
+    o = n(706598),
+    l = TypeError,
+    u = Object.defineProperty,
+    c = Object.getOwnPropertyDescriptor,
+    d = "enumerable",
+    _ = "configurable",
+    f = "writable";
+t.f = r
+    ? s
+        ? function (e, t, n) {
               if (
-                  (u(r),
-                  (t = a(t)),
-                  u(e),
-                  "function" == typeof r && "prototype" === t && "value" in e && v in e && !e[v])
+                  (a(e),
+                  (t = o(t)),
+                  a(n),
+                  "function" == typeof e && "prototype" === t && "value" in n && f in n && !n[f])
               ) {
-                  var n = s(r, t);
-                  n &&
-                      n[v] &&
-                      ((r[t] = e.value),
-                      (e = { configurable: l in e ? e[l] : n[l], enumerable: p in e ? e[p] : n[p], writable: !1 }));
+                  var r = c(e, t);
+                  r &&
+                      r[f] &&
+                      ((e[t] = n.value),
+                      (n = { configurable: _ in n ? n[_] : r[_], enumerable: d in n ? n[d] : r[d], writable: !1 }));
               }
-              return f(r, t, e);
+              return u(e, t, n);
           }
-        : f
-    : function (r, t, e) {
-          if ((u(r), (t = a(t)), u(e), o))
+        : u
+    : function (e, t, n) {
+          if ((a(e), (t = o(t)), a(n), i))
               try {
-                  return f(r, t, e);
-              } catch (r) {}
-          if ("get" in e || "set" in e) throw new c("Accessors not supported");
-          return "value" in e && (r[t] = e.value), r;
+                  return u(e, t, n);
+              } catch (e) {}
+          if ("get" in n || "set" in n) throw new l("Accessors not supported");
+          return "value" in n && (e[t] = n.value), e;
       };

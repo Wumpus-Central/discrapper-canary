@@ -1,14 +1,15 @@
-n.d(t, { $: () => E, E: () => o }), n(321073);
-var i = n(636537),
-    r = n(228366),
-    a = n(954571),
-    s = n(927813),
-    _ = n(403362),
+"use strict";
+n.d(t, { $: () => c, E: () => u }), n(321073);
+var r = n(562465),
+    i = n(73153),
+    s = n(954571),
+    a = n(927813),
+    o = n(403362),
     l = n(652215);
-async function o(e, t) {
+async function u(e, t) {
     let n,
-        o = performance.now(),
-        E = 0,
+        u = performance.now(),
+        c = 0,
         d = [];
     switch (e.type) {
         case "channel":
@@ -23,46 +24,46 @@ async function o(e, t) {
         case "application":
             n = l.Rsh.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
-    let c = async (t) =>
-            E >= 3
+    let _ = async (t) =>
+            c >= 3
                 ? (d.push(1002),
-                  I({ error: !0 }),
-                  r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }))
-                : (await new Promise((e) => setTimeout(e, t)), u()),
-        u = () =>
-            i.Bo.get({
+                  p({ error: !0 }),
+                  i.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }))
+                : (await new Promise((e) => setTimeout(e, t)), f()),
+        f = () =>
+            r.Bo.get({
                 url: n,
-                retries: 3 - E - 1,
+                retries: 3 - c - 1,
                 signal: t.signal,
-                onRequestCreated: () => E++,
+                onRequestCreated: () => c++,
                 rejectWithError: !1,
             }).then(
                 (t) =>
                     202 === t.status
-                        ? (d.push(202), c(5e3))
-                        : (I({ error: !1 }),
-                          r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: e, index: t.body })),
+                        ? (d.push(202), _(5e3))
+                        : (p({ error: !1 }),
+                          i.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: e, index: t.body })),
                 (n) => {
                     if (t.signal.aborted) {
-                        d.push(1001), I({ error: !0 });
+                        d.push(1001), p({ error: !0 });
                         return;
                     }
                     return 429 === n.status
-                        ? (d.push(429), c(n.body.retry_after * s.A.Millis.SECOND))
+                        ? (d.push(429), _(n.body.retry_after * a.A.Millis.SECOND))
                         : (d.push(n.status ?? 1e3),
-                          I({ error: !0 }),
-                          r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }));
+                          p({ error: !0 }),
+                          i.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }));
                 },
             ),
-        I = (i) => {
-            let { error: r } = i,
-                s = performance.now() - o;
-            a.default.track(l.HAw.APPLICATION_COMMAND_PERFORMANCE, {
-                duration_ms: s,
-                error: r,
+        p = (r) => {
+            let { error: i } = r,
+                a = performance.now() - u;
+            s.default.track(l.HAw.APPLICATION_COMMAND_PERFORMANCE, {
+                duration_ms: a,
+                error: i,
                 aborted: t.signal.aborted,
                 include_applications: !0,
-                retries: Math.max(E - 1, 0),
+                retries: Math.max(c - 1, 0),
                 kind: null,
                 command_type: null,
                 url: n,
@@ -78,14 +79,14 @@ async function o(e, t) {
                         case "application":
                             return e.applicationId;
                         default:
-                            (0, _.xb)(e);
+                            (0, o.xb)(e);
                     }
                 })(e),
                 failure_statuses: d,
             });
         };
-    await u();
+    await f();
 }
-function E(e) {
-    r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target: e });
+function c(e) {
+    i.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target: e });
 }

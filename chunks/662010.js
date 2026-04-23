@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { O: () => o });
-var i = n(627968),
-    r = n(349288),
-    s = n(76843),
+var r = n(627968),
+    i = n(349288),
+    s = n(307600),
     a = n(144843);
 function o(e) {
     let { children: t, href: n } = e;
     return null == n
         ? t
-        : (0, i.jsx)(r.Anchor, {
+        : (0, r.jsx)(i.Anchor, {
               className: a.n,
               href: n,
               onClick: (e) => {

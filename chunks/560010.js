@@ -1,34 +1,34 @@
-t.d(s, { A: () => a });
-var l = t(17928),
-    n = t(228366);
-let i = {};
-class o extends l.Ay.Store {
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(73153);
+let a = {};
+class s extends i.Ay.Store {
     static displayName = "ChannelFollowerStatsStore";
     getFollowerStatsForChannel(e) {
-        return i[e];
+        return a[e];
     }
 }
-let a = new o(n.h, {
+let r = new s(l.h, {
     CONNECTION_OPEN: function () {
-        i = {};
+        a = {};
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
-        let { channelId: s, stats: t } = e;
-        (t = null != t ? t : {}),
-            (i[s] = {
+        let { channelId: t, stats: n } = e;
+        (n = null != n ? n : {}),
+            (a[t] = {
                 loadingStatus: "succeeded",
                 lastFetched: Date.now(),
-                channelsFollowing: t.channels_following,
-                guildMembers: t.guild_members,
-                guildsFollowing: t.guilds_following,
-                usersSeenEver: t.users_seen_ever,
-                subscribersGainedSinceLastPost: t.subscribers_gained_since_last_post,
-                subscribersLostSinceLastPost: t.subscribers_lost_since_last_post,
+                channelsFollowing: n.channels_following,
+                guildMembers: n.guild_members,
+                guildsFollowing: n.guilds_following,
+                usersSeenEver: n.users_seen_ever,
+                subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
+                subscribersLostSinceLastPost: n.subscribers_lost_since_last_post,
             });
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
-        let { channelId: s } = e;
-        i[s] = {
+        let { channelId: t } = e;
+        a[t] = {
             loadingStatus: "failed",
             lastFetched: Date.now(),
             channelsFollowing: 0,

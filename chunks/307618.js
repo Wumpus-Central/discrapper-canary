@@ -1,0 +1,113 @@
+"use strict";
+n.d(t, { W: () => i });
+var r = n(985018);
+let i = [
+    {
+        category: "wave",
+        categoryMessageKey: r.t.GrrYHn,
+        keywords: ["wave", "waving", "hand", "hello", "hi", "hey"],
+        kaomojis: ["ヾ(＾-＾)ノ", "ヽ(•̀ᴗ•́)ノ", "ヾ(＾∇＾)", "|˶˙ᵕ˙ )ﾉﾞ", "☆ﾐ(o*･ω･)ﾉ", "(｡･ω･｡)ﾉ♡"],
+    },
+    {
+        category: "happy",
+        categoryMessageKey: r.t.Tj0FXM,
+        keywords: ["happy", "smile", "smiling", "joy"],
+        kaomojis: ["^▽^", "⸂⸂⸜(രᴗര๑)⸝⸃⸃", "(◍•ᴗ•◍)", "(◕‿◕)", "꒰｡•◡•｡꒱", "(\xb4▽`)", "ദ്ദി ( ᵔ ᗜ ᵔ )", "( ͡• ͜ʖ ͡• )"],
+    },
+    {
+        category: "excited",
+        categoryMessageKey: r.t.gQsrOG,
+        keywords: ["excited", "enthusiastic", "thrilled", "cheerful", "hype", "yay"],
+        kaomojis: ["(๑˃ᴗ˂)ﻭ", "ᕕ( ᐛ )ᕗ", "(ﾉ◕ヮ◕)ﾉ･ﾟ✧", "(☆▽☆)", "(੭ ˙ᗜ˙)੭", "(ﾉ≧∀≦)ﾉ", "ദ്ദി◝ ⩊ ◜.ᐟ"],
+    },
+    {
+        category: "cute",
+        categoryMessageKey: r.t["/jZYwz"],
+        keywords: ["cute", "kawaii", "adorable", "sweet"],
+        kaomojis: [
+            "ฅ^•ﻌ•^ฅ",
+            "ʕ•ᴥ•ʔ",
+            "૮ • ﻌ - ა",
+            "(\xb4｡• ᵕ •｡`)",
+            "|っ˘ω˘ς)",
+            `𐔌՞ ܸ.ˬ.ܸ՞𐦯`,
+            "༼ つ ◕_◕ ༽つ",
+            "⊂༼ ◕_◕ ⊂ ༽",
+        ],
+    },
+    {
+        category: "love",
+        categoryMessageKey: r.t["4nnQWB"],
+        keywords: ["love", "heart", "hearts", "affection"],
+        kaomojis: ["(｡♥‿♥｡)", "(ෆ˙ᵕ˙ෆ)♡", "(灬\xba‿\xba灬)♡", "(◕‿◕)♡", "♡(˃͈ દ ˂͈ ༶ )", "(｡˃ ᵕ ˂ )⸝♡", "（╹◡╹）♡"],
+    },
+    {
+        category: "cool",
+        categoryMessageKey: r.t.X4O8dY,
+        keywords: ["cool", "chill", "awesome", "swag", "mischievous", "smug"],
+        kaomojis: [
+            "(｡•̀ᴗ-)✧",
+            "(⌐■_■)",
+            "ᕦ(\xf2_\xf3ˇ)ᕤ",
+            "(•̀ᴗ•́)و ̑̑",
+            "(\xac‿\xac )✧",
+            "( ͡\xb0 ͜ʖ ͡\xb0)",
+            "(≖ᴗ≖✿)",
+            "( ͡ಠ ͜ʖ ͡ಠ)",
+            "\xaf\\_(ツ)_/\xaf",
+        ],
+    },
+    {
+        category: "confused",
+        categoryMessageKey: r.t.ZUaZLp,
+        keywords: ["confused", "huh", "what", "shrug", "idk"],
+        kaomojis: ["(\xb7•᷄‎ࡇ•᷅ )", "(•́＿•̀)", "( ・◇・)？", "(◉＿◉)", "(⊙＿⊙)", "(o\xb4〰`o)"],
+    },
+    {
+        category: "sad",
+        categoryMessageKey: r.t["/9vZ+t"],
+        keywords: ["sad", "cry", "crying", "tears", "depressed", "sorrow"],
+        kaomojis: ["(｡•́⌓•̀｡)", "(ㅠ﹏ㅠ)", "(｡•́︿•̀｡)", "(◞‸◟)", "(\xb4;ω;｀)", "( • ᴖ • ｡)", "(｡ŏ_ŏ)"],
+    },
+    {
+        category: "angry",
+        categoryMessageKey: r.t.GUrGRo,
+        keywords: ["angry", "mad", "rage", "frustrated", "annoyed"],
+        kaomojis: ["(ಠ＿ಠ)", "(｀皿\xb4)", "(\xac＿\xac)", "(ಠ益ಠ)", "(≖＿≖ )", "(ᓀ‸ᓂ)", "( `へ\xb4* )"],
+    },
+    {
+        category: "music",
+        categoryMessageKey: r.t.SwOaV2,
+        keywords: ["music", "vibe", "beat", "bop"],
+        kaomojis: [
+            "d[.‿.]b",
+            "♫⋆｡♪ ₊˚♬ ﾟ.",
+            "↻ ◁ || ▷ ↺",
+            "₊♪\uD834\uDD1E\uD834\uDD22₊⊹",
+            "‧₊˚♪\uD834\uDD1E࿐₊˚⊹",
+            "lıllılı.ıllı.ılılıı",
+            "ᶻ \uD835\uDDD3 \uD803\uDC01 .ᐟ",
+        ],
+    },
+    {
+        category: "decorative",
+        categoryMessageKey: r.t.UisscN,
+        keywords: ["deco", "decorative", "miscellaneous", "misc"],
+        kaomojis: [
+            "⋆˚꩜｡",
+            "⊹ ࣪ ˖",
+            "⋆˚✿˖\xb0",
+            "⋆౨ৎ˚⟡˖ ࣪",
+            "\uD81A\uDC7C.\uD81A\uDD23\uD81A\uDD67\uD81A\uDC7C.\uD81A\uDD23\uD81A\uDD67",
+            "-ˋˏ✄┈┈⋆｡ﾟ",
+            "☾.✴˚˖⁺✦",
+        ],
+    },
+    {
+        category: "flip",
+        categoryMessageKey: r.t["q/yMTa"],
+        keywords: ["flip", "unflip", "tableflip"],
+        kaomojis: ["(╯\xb0□\xb0)╯︵ ┻━┻", "┬─┬ノ( \xba _ \xbaノ)"],
+        hidden: !0,
+    },
+];

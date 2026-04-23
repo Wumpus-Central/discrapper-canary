@@ -1,14 +1,15 @@
-n.d(t, { e: () => s, x: () => o });
-var i = n(398590),
-    r = n(976860),
-    a = n(780964),
-    l = n(652215);
-let s = () => {
+"use strict";
+n.d(t, { e: () => o, x: () => l });
+var r = n(398590),
+    i = n(976860),
+    s = n(780964),
+    a = n(652215);
+let o = () => {
         {
             let { openUserSettings: e } = n(858897);
-            e(a.X.NITRO_PANEL);
+            e(s.X.NITRO_PANEL);
         }
     },
-    o = (e) => {
-        e?.(), (0, i.jH)(), (0, r.pX)(l.BVt.APPLICATION_STORE);
+    l = (e) => {
+        e?.(), (0, r.jH)(), (0, i.pX)(a.BVt.APPLICATION_STORE);
     };

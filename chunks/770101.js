@@ -1,15 +1,15 @@
-l.d(e, { default: () => N }), l(321073);
+l.d(e, { default: () => y }), l(321073);
 var n = l(627968),
     i = l(64700),
     s = l(91871),
     r = l.n(s),
     a = l(189213),
-    o = l(17928),
+    o = l(311907),
     d = l(892547),
     c = l(834730),
     u = l(939249),
     m = l(398590),
-    x = l(548118),
+    x = l(263063),
     h = l(976860),
     g = l(71393),
     C = l(711014),
@@ -27,7 +27,7 @@ function S(t) {
         onClear: () => e(""),
     });
 }
-function y(t) {
+function A(t) {
     let { isTransfer: e = !1, selectedSlotGuilds: l, onClose: i, onSelectGuild: s, query: a } = t,
         d = (0, o.bG)([C.Ay], () => C.Ay.getFlattenedGuildIds()),
         S = (0, o.yK)([g.A], () =>
@@ -41,7 +41,7 @@ function y(t) {
                 );
             }, []),
         );
-    function y() {
+    function A() {
         i(), (0, m.jH)(), (0, h.pX)(v.BVt.GUILD_DISCOVERY);
     }
     return (0, n.jsxs)(n.Fragment, {
@@ -55,7 +55,7 @@ function y(t) {
                             0 === d.length
                                 ? f.intl.format(f.t["E3tB6+"], {
                                       publicGuildDirectoryHook: (t, e) =>
-                                          (0, n.jsx)(u.D, { onClick: y, tag: "a", children: t }, e),
+                                          (0, n.jsx)(u.D, { onClick: A, tag: "a", children: t }, e),
                                   })
                                 : f.intl.string(f.t.w3GLl9),
                     }),
@@ -96,7 +96,7 @@ function y(t) {
         ],
     });
 }
-function N(t) {
+function y(t) {
     let { onClose: e, onSelectGuild: l, transitionState: s, isTransfer: r = !1, selectedSlotGuilds: o } = t,
         [d, c] = i.useState(""),
         u = async () => {
@@ -110,6 +110,6 @@ function N(t) {
         title: m,
         input: (0, n.jsx)(S, { query: d, setQuery: c }),
         actions: [],
-        children: (0, n.jsx)(y, { onClose: e, onSelectGuild: l, query: d, isTransfer: r, selectedSlotGuilds: o }),
+        children: (0, n.jsx)(A, { onClose: e, onSelectGuild: l, query: d, isTransfer: r, selectedSlotGuilds: o }),
     });
 }

@@ -3,7 +3,7 @@ var a = n(627968);
 n(64700);
 var s = n(192308),
     r = n(80556),
-    o = n(888548),
+    o = n(577015),
     i = n(320028);
 let l = {
     showCaptcha: function (e, t) {
@@ -11,7 +11,7 @@ let l = {
             { sitekey: l, captchaService: d, options: c } = e;
         (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await n.e("80568").then(n.bind(n, 91967));
+                let { default: e } = await n.e("39522").then(n.bind(n, 252345));
                 return (n) =>
                     (0, a.jsx)(e, {
                         onCaptchaVerify: (e, n) => t({ captcha_key: e, captcha_rqtoken: n }),
@@ -31,7 +31,7 @@ let l = {
         return new Promise((e, C) => {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: s } = await n.e("80568").then(n.bind(n, 91967));
+                    let { default: s } = await n.e("39522").then(n.bind(n, 252345));
                     return (n) =>
                         (0, a.jsx)(s, {
                             onCaptchaVerify: (t, n) => e({ captcha_key: t, captcha_rqtoken: n, captcha_session_id: c }),

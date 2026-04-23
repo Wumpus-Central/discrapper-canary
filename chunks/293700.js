@@ -1,58 +1,59 @@
-n.d(t, { A: () => h, C: () => s });
+"use strict";
+n.d(t, { A: () => h, C: () => l });
 var r,
-    a = n(17928),
-    i = n(228366),
-    o = n(136857),
-    l = n(366853),
-    s =
+    i = n(311907),
+    s = n(73153),
+    a = n(136857),
+    o = n(142120),
+    l =
         (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
         (r[(r.PENDING = 1)] = "PENDING"),
         (r[(r.SUCCESS = 2)] = "SUCCESS"),
         (r[(r.ERROR = 3)] = "ERROR"),
         r);
-let d = 0,
-    u = null,
-    c = null;
+let u = 0,
+    c = null,
+    d = null;
 function _(e) {
     let { error: t } = e,
-        n = t instanceof o.Ay ? t : new o.Ay(t);
-    l.A.isConnected() && n.code === o.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (d = 1);
+        n = t instanceof a.Ay ? t : new a.Ay(t);
+    o.A.isConnected() && n.code === a.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
-function p() {
-    (d = 0), (u = null), (c = null);
+function f() {
+    (u = 0), (c = null), (d = null);
 }
-class C extends a.Ay.Store {
+class p extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.A);
+        this.waitFor(o.A);
     }
     static displayName = "PurchaseTokenAuthStore";
     get purchaseTokenAuthState() {
-        return d;
-    }
-    get purchaseTokenHash() {
         return u;
     }
-    get expiresAt() {
+    get purchaseTokenHash() {
         return c;
     }
+    get expiresAt() {
+        return d;
+    }
 }
-let h = new C(i.h, {
+let h = new p(s.h, {
     SKU_PURCHASE_FAIL: _,
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
     USER_PAYMENT_CLIENT_ADD: function (e) {
-        (d = 2), (u = e.purchaseTokenHash), (c = e.expiresAt);
+        (u = 2), (c = e.purchaseTokenHash), (d = e.expiresAt);
     },
-    BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: p,
-    BILLING_SUBSCRIPTION_UPDATE_START: p,
-    PAYMENT_AUTHENTICATION_CLEAR_ERROR: p,
-    PREMIUM_PAYMENT_ERROR_CLEAR: p,
-    PREMIUM_PAYMENT_MODAL_CLOSE: p,
-    PREMIUM_PAYMENT_MODAL_OPEN: p,
-    PREMIUM_PAYMENT_SUBSCRIBE_START: p,
-    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: p,
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: p,
-    SKU_PURCHASE_MODAL_CLOSE: p,
-    SKU_PURCHASE_MODAL_OPEN: p,
-    SKU_PURCHASE_START: p,
-    SKU_PURCHASE_SUCCESS: p,
+    BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: f,
+    BILLING_SUBSCRIPTION_UPDATE_START: f,
+    PAYMENT_AUTHENTICATION_CLEAR_ERROR: f,
+    PREMIUM_PAYMENT_ERROR_CLEAR: f,
+    PREMIUM_PAYMENT_MODAL_CLOSE: f,
+    PREMIUM_PAYMENT_MODAL_OPEN: f,
+    PREMIUM_PAYMENT_SUBSCRIBE_START: f,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: f,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: f,
+    SKU_PURCHASE_MODAL_CLOSE: f,
+    SKU_PURCHASE_MODAL_OPEN: f,
+    SKU_PURCHASE_START: f,
+    SKU_PURCHASE_SUCCESS: f,
 });

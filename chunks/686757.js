@@ -1,34 +1,35 @@
-n.d(t, { SD: () => d, Vm: () => u, eE: () => c, g$: () => p, u5: () => o, uJ: () => h });
-var i = n(265690),
-    r = n(110259),
-    l = n(121894);
-let s = Object.freeze({ debugTrackedData: null, impressions: [] }),
-    a = (0, i.h)((e) => s),
-    u = (e) => {
-        (0, l.r)(() => {
-            a.setState((t) => ({ impressions: [...t.impressions, e] }));
+"use strict";
+n.d(t, { SD: () => d, Vm: () => l, eE: () => c, g$: () => _, u5: () => u, uJ: () => f });
+var r = n(265690),
+    i = n(110259),
+    s = n(121894);
+let a = Object.freeze({ debugTrackedData: null, impressions: [] }),
+    o = (0, r.h)((e) => a),
+    l = (e) => {
+        (0, s.r)(() => {
+            o.setState((t) => ({ impressions: [...t.impressions, e] }));
         });
     },
-    o = (e) => {
-        (0, l.r)(() => {
-            a.setState((t) => ({ impressions: t.impressions.filter((t) => t.sequenceId !== e.sequenceId) }));
+    u = (e) => {
+        (0, s.r)(() => {
+            o.setState((t) => ({ impressions: t.impressions.filter((t) => t.sequenceId !== e.sequenceId) }));
         });
     },
     c = (e, t) => {
-        (0, l.r)(() => {
-            a.setState(() => ({ debugTrackedData: { name: e, ...t } }));
+        (0, s.r)(() => {
+            o.setState(() => ({ debugTrackedData: { name: e, ...t } }));
         });
     },
-    d = a;
-function p() {
+    d = o;
+function _() {
     let e = {};
     return (
-        a.getState().impressions.forEach((t) => {
-            t.type === r.ImpressionTypes.PAGE ? (e.page = t.name) : (e.section = t.name);
+        o.getState().impressions.forEach((t) => {
+            t.type === i.ImpressionTypes.PAGE ? (e.page = t.name) : (e.section = t.name);
         }),
         e
     );
 }
-function h() {
-    return a.getState().impressions;
+function f() {
+    return o.getState().impressions;
 }

@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, { Kl: () => o, LF: () => l, sF: () => a });
-var i = n(228366),
-    r = n(954571),
+var r = n(73153),
+    i = n(954571),
     s = n(652215);
 function a(e) {
-    r.default.track(s.HAw.HOTSPOT_HIDDEN, { hotspot_location: e }),
-        i.h.wait(() => {
-            i.h.dispatch({ type: "HOTSPOT_HIDE", location: e });
+    i.default.track(s.HAw.HOTSPOT_HIDDEN, { hotspot_location: e }),
+        r.h.wait(() => {
+            r.h.dispatch({ type: "HOTSPOT_HIDE", location: e });
         });
 }
 function o(e, t) {
-    i.h.dispatch({ type: "HOTSPOT_OVERRIDE_SET", location: e, enabled: t });
+    r.h.dispatch({ type: "HOTSPOT_OVERRIDE_SET", location: e, enabled: t });
 }
 function l(e) {
-    i.h.dispatch({ type: "HOTSPOT_OVERRIDE_CLEAR", location: e });
+    r.h.dispatch({ type: "HOTSPOT_OVERRIDE_CLEAR", location: e });
 }

@@ -1,34 +1,34 @@
 n.d(t, { A: () => I });
 var l = n(627968);
 n(64700);
-var i = n(503698),
-    r = n.n(i),
+var r = n(503698),
+    i = n.n(r),
     a = n(419354),
-    s = n(17928),
+    s = n(311907),
     o = n(866323),
     c = n(857250),
     u = n(97483),
     d = n(933832),
-    m = n(661531),
+    m = n(827734),
     f = n(834730),
     x = n(289873),
-    g = n(308528),
-    A = n(775602),
+    A = n(308528),
+    g = n(775602),
     p = n(183555),
     E = n(679492),
     h = n(518477),
     N = n(985018),
-    R = n(682676),
-    b = n(861173);
-let v = (e) => {
-        let { message: t, userId: n, onClose: i } = e,
+    v = n(682676),
+    R = n(861173);
+let b = (e) => {
+        let { message: t, userId: n, onClose: r } = e,
             { trackUserProfileAction: a } = (0, p.NJ)();
         return (0, l.jsxs)("div", {
-            className: r()(b.oR, R.d6),
+            className: i()(R.oR, v.d6),
             children: [
-                (0, l.jsx)(d.A, { size: "sm", className: R.RC, color: m.A.colors.STATUS_POSITIVE.css }),
+                (0, l.jsx)(d.A, { size: "sm", className: v.RC, color: m.A.colors.STATUS_POSITIVE.css }),
                 (0, l.jsxs)("div", {
-                    className: R.Zx,
+                    className: v.Zx,
                     children: [
                         (0, l.jsx)(f.E, { color: "text-strong", variant: "text-sm/semibold", children: t }),
                         (0, l.jsx)(f.E, {
@@ -36,8 +36,8 @@ let v = (e) => {
                             children: N.intl.format(N.t.QEW8Mq, {
                                 onClick: () => {
                                     a({ action: "PRESS_REACT_REPLY_TOAST" }),
-                                        i?.(),
-                                        g.A.openPrivateChannel({ recipientIds: n });
+                                        r?.(),
+                                        A.A.openPrivateChannel({ recipientIds: n });
                                 },
                             }),
                         }),
@@ -48,9 +48,9 @@ let v = (e) => {
     },
     j = () =>
         (0, l.jsxs)("div", {
-            className: r()(b.oR, R.d6),
+            className: i()(R.oR, v.d6),
             children: [
-                (0, l.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE, className: R.RC }),
+                (0, l.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE, className: v.RC }),
                 (0, l.jsx)(f.E, {
                     color: "text-strong",
                     variant: "text-sm/semibold",
@@ -59,11 +59,11 @@ let v = (e) => {
             ],
         }),
     I = (e) => {
-        let { userId: t, onClose: n, className: i } = e,
+        let { userId: t, onClose: n, className: r } = e,
             { interactionTypeSent: d, showInteractionToast: m } = (0, E.Pq)(),
             f = d === h.AQ.REPLY ? N.intl.string(N.t.BPaiaa) : N.intl.string(N.t.Ry2EtG),
-            x = (0, s.bG)([A.A], () => A.A.useReducedMotion),
-            g = (0, o.p)(
+            x = (0, s.bG)([g.A], () => g.A.useReducedMotion),
+            A = (0, o.p)(
                 m,
                 {
                     from: { transform: x ? "translateY(0)" : "translateY(16px)", opacity: 0 },
@@ -75,11 +75,11 @@ let v = (e) => {
                 "animate-always",
             );
         return (0, l.jsx)(l.Fragment, {
-            children: g(
+            children: A(
                 (e, s) =>
                     s &&
                     (0, l.jsx)(a.animated.div, {
-                        className: r()(R.Jt, i),
+                        className: i()(v.Jt, r),
                         style: e,
                         children:
                             null != d
@@ -87,7 +87,7 @@ let v = (e) => {
                                       message: "",
                                       type: u.Ck.CUSTOM,
                                       id: "react_reply_success_toast",
-                                      options: { component: (0, l.jsx)(v, { userId: t, message: f, onClose: n }) },
+                                      options: { component: (0, l.jsx)(b, { userId: t, message: f, onClose: n }) },
                                   })
                                 : (0, l.jsx)(c.y, {
                                       message: "",

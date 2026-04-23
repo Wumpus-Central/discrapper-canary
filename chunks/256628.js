@@ -1,4 +1,4 @@
-var i = {
+var r = {
     "./1f004.svg": "352753",
     "./1f0cf.svg": "668954",
     "./1f170.svg": "318665",
@@ -139,7 +139,7 @@ var i = {
     "./1f1ee-1f1f6.svg": "714871",
     "./1f1ee-1f1f7.svg": "809542",
     "./1f1ee-1f1f8.svg": "777073",
-    "./1f1ee-1f1f9.svg": "362688",
+    "./1f1ee-1f1f9.svg": "140307",
     "./1f1ee.svg": "227182",
     "./1f1ef-1f1ea.svg": "233006",
     "./1f1ef-1f1f2.svg": "604920",
@@ -1958,7 +1958,7 @@ var i = {
     "./1f575-1f3fd-200d-2642-fe0f.svg": "816489",
     "./1f575-1f3fd.svg": "991973",
     "./1f575-1f3fe-200d-2640-fe0f.svg": "622148",
-    "./1f575-1f3fe-200d-2642-fe0f.svg": "754050",
+    "./1f575-1f3fe-200d-2642-fe0f.svg": "531669",
     "./1f575-1f3fe.svg": "37252",
     "./1f575-1f3ff-200d-2640-fe0f.svg": "667797",
     "./1f575-1f3ff-200d-2642-fe0f.svg": "177871",
@@ -3128,7 +3128,7 @@ var i = {
     "./1f9d1-1f3ff-200d-1f37c.svg": "988248",
     "./1f9d1-1f3ff-200d-1f384.svg": "470030",
     "./1f9d1-1f3ff-200d-1f393.svg": "332830",
-    "./1f9d1-1f3ff-200d-1f3a4.svg": "81241",
+    "./1f9d1-1f3ff-200d-1f3a4.svg": "303622",
     "./1f9d1-1f3ff-200d-1f3a8.svg": "710717",
     "./1f9d1-1f3ff-200d-1f3eb.svg": "80371",
     "./1f9d1-1f3ff-200d-1f3ed.svg": "105165",
@@ -3411,7 +3411,7 @@ var i = {
     "./1f9f7.svg": "356377",
     "./1f9f8.svg": "839582",
     "./1f9f9.svg": "975983",
-    "./1f9fa.svg": "347959",
+    "./1f9fa.svg": "570340",
     "./1f9fb.svg": "243364",
     "./1f9fc.svg": "621381",
     "./1f9fd.svg": "202810",
@@ -3838,19 +3838,19 @@ var i = {
     "./ae.svg": "352196",
     "./e50a.svg": "516897",
 };
-function r(e) {
+function i(e) {
     return n(s(e));
 }
 function s(e) {
-    if (!n.o(i, e)) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = s),
-    (e.exports = r),
-    (r.id = 256628);
+    (i.resolve = s),
+    (e.exports = i),
+    (i.id = 256628);

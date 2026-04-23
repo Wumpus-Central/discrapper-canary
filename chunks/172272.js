@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { C1: () => _, Or: () => d, YR: () => l });
-var i = n(627968),
-    r = n(353640),
-    s = n(17928),
+n.d(t, { C1: () => c, Or: () => u, YR: () => l });
+var r = n(627968),
+    i = n(353640),
+    s = n(311907),
     a = n(111162),
     o = n(650761);
 let l = 64,
-    d = (0, r.v)((e) => ({
+    u = (0, i.v)((e) => ({
         horizontalSpacing: 4,
         verticalSpacing: 4,
         setHorizontalSpacing: (t) => {
@@ -16,13 +16,13 @@ let l = 64,
             e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), l)) });
         },
     }));
-function _() {
+function c() {
     let e = (0, s.bG)([a.default], () => a.default.layoutDebuggingEnabled),
-        { horizontalSpacing: t, verticalSpacing: n } = d();
+        { horizontalSpacing: t, verticalSpacing: n } = u();
     return e
-        ? (0, i.jsx)("div", {
+        ? (0, r.jsx)("div", {
               className: o.k,
-              children: (0, i.jsx)("div", {
+              children: (0, r.jsx)("div", {
                   className: o.Z,
                   "data-horizontal": t > 0,
                   "data-vertical": n > 0,

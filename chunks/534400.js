@@ -1,148 +1,148 @@
 "use strict";
-n.d(t, { Ay: () => C, Cw: () => S, Z9: () => A, o9: () => T });
-var i = n(627968),
-    r = n(64700),
+n.d(t, { Ay: () => N, Cw: () => S, Z9: () => A, o9: () => T });
+var r = n(627968),
+    i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(17928),
+    o = n(311907),
     l = n(939249),
-    d = n(834730),
-    _ = n(86182),
-    u = n(517905),
-    c = n(363195),
-    E = n(287809),
-    h = n(685073),
-    m = n(743981),
-    f = n(985018),
-    g = n(661023),
-    p = n(330411);
-let A = r.memo(function (e) {
-        let { src: t, className: n, size: s = m.Sl.SIZE_16 } = e,
-            [o, l] = r.useState(!1);
+    u = n(834730),
+    c = n(86182),
+    d = n(517905),
+    _ = n(544028),
+    f = n(287809),
+    p = n(685073),
+    h = n(743981),
+    E = n(985018),
+    m = n(661023),
+    g = n(330411);
+let A = i.memo(function (e) {
+        let { src: t, className: n, size: s = h.Sl.SIZE_16 } = e,
+            [o, l] = i.useState(!1);
         return null == t || o
-            ? (0, i.jsx)("span", { className: a()(p.HH, n) })
-            : (0, i.jsx)("img", {
+            ? (0, r.jsx)("span", { className: a()(g.HH, n) })
+            : (0, r.jsx)("img", {
                   src: t,
                   alt: "",
-                  className: a()(p.qS, n),
+                  className: a()(g.qS, n),
                   width: s,
                   height: s,
                   onError: () => l(!0),
               });
     }),
-    I = r.memo(function (e) {
-        let { guildTag: t, className: n, textClassName: r, badgeClassName: s, ...o } = e;
-        return (0, i.jsxs)(i.Fragment, {
+    I = i.memo(function (e) {
+        let { guildTag: t, className: n, textClassName: i, badgeClassName: s, ...o } = e;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)("span", {
-                    className: p.fl,
+                (0, r.jsxs)("span", {
+                    className: g.fl,
                     "aria-hidden": "true",
-                    children: ["\xa0", f.intl.formatToPlainString(g.default["4cGHIl"], { tag: t }), ",\xa0"],
+                    children: ["\xa0", E.intl.formatToPlainString(m.default["4cGHIl"], { tag: t }), ",\xa0"],
                 }),
-                (0, i.jsx)(T, {
+                (0, r.jsx)(T, {
                     guildTag: t,
-                    className: a()(n, p.sM),
-                    textClassName: a()(r, p.Lo),
-                    badgeClassName: a()(s, p.VD),
+                    className: a()(n, g.sM),
+                    textClassName: a()(i, g.Lo),
+                    badgeClassName: a()(s, g.VD),
                     ...o,
                 }),
             ],
         });
     }),
-    T = r.memo(function (e) {
+    T = i.memo(function (e) {
         let {
             guildId: t,
             guildTag: n,
-            guildBadge: r,
+            guildBadge: i,
             className: s,
             textClassName: o,
-            badgeClassName: _,
-            onClick: u,
-            onMouseEnter: c,
-            textVariant: E = "text-xs/semibold",
+            badgeClassName: c,
+            onClick: d,
+            onMouseEnter: _,
+            textVariant: f = "text-xs/semibold",
             textColor: I = "text-default",
-            badgeSize: T = m.Sl.SIZE_14,
+            badgeSize: T = h.Sl.SIZE_14,
             inline: S = !0,
         } = e;
-        return (0, i.jsx)(l.D, {
-            "aria-label": f.intl.formatToPlainString(g.default["fw2p/x"], { tag: n }),
+        return (0, r.jsx)(l.D, {
+            "aria-label": E.intl.formatToPlainString(m.default["fw2p/x"], { tag: n }),
             tag: "span",
-            tabIndex: null == u ? -1 : void 0,
-            onClick: u,
-            onMouseEnter: c,
-            className: a()(p.nz, S && p.os, null != u && p.vk, s),
-            children: (0, i.jsxs)(d.E, {
+            tabIndex: null == d ? -1 : void 0,
+            onClick: d,
+            onMouseEnter: _,
+            className: a()(g.nz, S && g.os, null != d && g.vk, s),
+            children: (0, r.jsxs)(u.E, {
                 tag: "span",
-                variant: E,
+                variant: f,
                 lineClamp: 1,
                 color: I,
-                className: a()(p.Qq, o),
+                className: a()(g.Qq, o),
                 children: [
-                    null != r && "string" == typeof r
-                        ? (0, i.jsx)(A, { src: (0, h.gC)(t, r, T), size: T, className: _ }, (0, h.gC)(t, r, T) ?? t)
-                        : r,
-                    (0, i.jsx)("span", { className: p.em, children: n }),
+                    null != i && "string" == typeof i
+                        ? (0, r.jsx)(A, { src: (0, p.gC)(t, i, T), size: T, className: c }, (0, p.gC)(t, i, T) ?? t)
+                        : i,
+                    (0, r.jsx)("span", { className: g.em, children: n }),
                 ],
             }),
         });
     }),
-    S = r.memo(function (e) {
-        return (0, i.jsx)(N, { Component: I, ...e });
+    S = i.memo(function (e) {
+        return (0, r.jsx)(y, { Component: I, ...e });
     }),
-    N = r.memo(function (e) {
+    y = i.memo(function (e) {
         let {
                 primaryGuild: t,
                 userId: n,
                 contextGuildId: s,
                 className: l,
-                containerClassName: d,
-                textVariant: m,
-                textColor: f,
-                badgeSize: g,
+                containerClassName: u,
+                textVariant: h,
+                textColor: E,
+                badgeSize: m,
                 disableGuildProfile: A = !1,
                 inline: I = !0,
                 onShowProfile: S,
-                onClose: N,
-                Component: C = T,
+                onClose: y,
+                Component: N = T,
             } = e,
-            R = r.useRef(null),
-            O = (0, o.bG)([E.default], () => E.default.getUser(n), [n]),
-            y = (0, o.bG)([c.A], () => c.A.theme),
-            v = void 0 !== t ? t : O?.primaryGuild,
-            { tag: D, badge: L, guildId: b } = (0, h.Zo)(v);
-        return (0, h.Wb)(n, s, v) && null != b
+            v = i.useRef(null),
+            C = (0, o.bG)([f.default], () => f.default.getUser(n), [n]),
+            O = (0, o.bG)([_.A], () => _.A.theme),
+            R = void 0 !== t ? t : C?.primaryGuild,
+            { tag: b, badge: D, guildId: L } = (0, p.Zo)(R);
+        return (0, p.Wb)(n, s, R) && null != L
             ? A
-                ? (0, i.jsx)(C, {
-                      guildId: b,
-                      guildTag: D,
-                      guildBadge: L,
-                      className: a()(p.Zy, l),
-                      textVariant: m,
-                      textColor: f,
-                      badgeSize: g,
+                ? (0, r.jsx)(N, {
+                      guildId: L,
+                      guildTag: b,
+                      guildBadge: D,
+                      className: a()(g.Zy, l),
+                      textVariant: h,
+                      textColor: E,
+                      badgeSize: m,
                       inline: I,
                   })
-                : (0, i.jsx)(_.w, {
-                      theme: y,
-                      children: (0, i.jsx)(u.A, {
-                          guildId: b,
+                : (0, r.jsx)(c.w, {
+                      theme: O,
+                      children: (0, r.jsx)(d.A, {
+                          guildId: L,
                           onRequestOpen: S,
-                          onClose: N,
-                          targetElementRef: R,
+                          onClose: y,
+                          targetElementRef: v,
                           clickTrap: !1,
                           children: (e) =>
-                              (0, i.jsx)("span", {
-                                  className: d,
-                                  ref: R,
+                              (0, r.jsx)("span", {
+                                  className: u,
+                                  ref: v,
                                   onClick: (e) => e.stopPropagation(),
-                                  children: (0, i.jsx)(C, {
-                                      guildId: b,
-                                      guildTag: D,
-                                      guildBadge: L,
+                                  children: (0, r.jsx)(N, {
+                                      guildId: L,
+                                      guildTag: b,
+                                      guildBadge: D,
                                       className: l,
-                                      textVariant: m,
-                                      textColor: f,
-                                      badgeSize: g,
+                                      textVariant: h,
+                                      textColor: E,
+                                      badgeSize: m,
                                       inline: I,
                                       ...e,
                                   }),
@@ -151,6 +151,6 @@ let A = r.memo(function (e) {
                   })
             : null;
     }),
-    C = r.memo(function (e) {
-        return (0, i.jsx)(N, { Component: T, ...e });
+    N = i.memo(function (e) {
+        return (0, r.jsx)(y, { Component: T, ...e });
     });

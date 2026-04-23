@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { op: () => _ });
-var i = n(64700),
-    r = n(17928),
-    s = n(785401),
+n.d(t, { op: () => c });
+var r = n(64700),
+    i = n(311907),
+    s = n(949355),
     a = n(102609),
     o = n(620233),
-    l = n(710195),
-    d = n(375441);
-function _() {
-    (0, i.useEffect)(() => {
+    l = n(217222),
+    u = n(375441);
+function c() {
+    (0, r.useEffect)(() => {
         (0, o.sD)(s.Um.APP);
     }, []);
-    let e = (0, r.bG)([l.A], () => l.A.getExperimentsMetadata()),
-        t = (0, r.bG)([l.A], () => l.A.getRegisteredExperiments()),
-        n = (0, i.useMemo)(
+    let e = (0, i.bG)([l.A], () => l.A.getExperimentsMetadata()),
+        t = (0, i.bG)([l.A], () => l.A.getRegisteredExperiments()),
+        n = (0, r.useMemo)(
             () =>
                 (function (e, t) {
                     let n = {};
-                    for (let [t, i] of Object.entries(e))
+                    for (let [t, r] of Object.entries(e))
                         n[t] = {
                             system: a.l5.APEX,
-                            kind: i.unitType === d.ni.User ? "user" : "guild",
-                            name: i.name,
-                            title: i.title,
-                            variants: i.variants.map((e) => ({
+                            kind: r.unitType === u.ni.User ? "user" : "guild",
+                            name: r.name,
+                            title: r.title,
+                            variants: r.variants.map((e) => ({
                                 id: e.id,
                                 label: `Variant ${e.id}: ${e.label}`,
                                 shortLabel: `Variant ${e.id}`,
                                 type: e.type,
                             })),
                         };
-                    for (let [e, i] of Object.entries(t))
+                    for (let [e, r] of Object.entries(t))
                         null == n[e] &&
                             (n[e] = {
                                 system: a.l5.APEX,
-                                kind: i.kind,
-                                name: i.name,
-                                title: i.name,
-                                variants: Object.entries(i.variations).map((e) => {
+                                kind: r.kind,
+                                name: r.name,
+                                title: r.name,
+                                variants: Object.entries(r.variations).map((e) => {
                                     let [t, n] = e;
                                     return {
                                         id: Number(t),
@@ -51,18 +51,18 @@ function _() {
                 })(e, t),
             [e, t],
         ),
-        _ = (0, r.bG)([l.A], () => l.A.getClientOverrides());
+        c = (0, i.bG)([l.A], () => l.A.getClientOverrides());
     return {
         experiments: n,
-        overridesInfo: (0, i.useMemo)(
+        overridesInfo: (0, r.useMemo)(
             () =>
                 (function (e) {
                     let t = {};
-                    for (let [n, i] of Object.entries(e))
-                        t[n] = { experimentId: n, variantId: i.variantId, originalDescriptor: i };
+                    for (let [n, r] of Object.entries(e))
+                        t[n] = { experimentId: n, variantId: r.variantId, originalDescriptor: r };
                     return t;
-                })(_),
-            [_],
+                })(c),
+            [c],
         ),
     };
 }

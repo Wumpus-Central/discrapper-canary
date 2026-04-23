@@ -1,118 +1,118 @@
 "use strict";
-let i;
-n.d(t, { A: () => L, c: () => p });
-var r = n(17928),
+let r;
+n.d(t, { A: () => D, c: () => g });
+var i = n(311907),
     s = n(506774),
-    a = n(228366),
+    a = n(73153),
     o = n(313961),
     l = n(253932),
-    d = n(617617),
-    _ = n(164891),
-    u = n(495544),
-    c = n(734057),
-    E = n(461213),
-    h = n(607567),
-    m = n(531685),
-    f = n(652215);
-let g = { width: 232, height: 315 },
-    p = { width: 400, height: 374 },
+    u = n(617617),
+    c = n(164891),
+    d = n(961350),
+    _ = n(734057),
+    f = n(461213),
+    p = n(607567),
+    h = n(531685),
+    E = n(652215);
+let m = { width: 232, height: 315 },
+    g = { width: 400, height: 374 },
     A = new Set(),
     I = [],
     T = new Map(),
     S = new Set(),
-    N = !1;
-function C(e) {
+    y = !1;
+function N(e) {
     if (null == e || null == T.get(e)) return !1;
     T.delete(e), (S = new Set(S)).delete(e);
 }
-function R(e) {
+function v(e) {
     let { channelId: t, ongoingRings: n } = e,
-        r = "GUILD_RING_START" === e.type;
-    if (r && !_.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled) return !1;
-    let s = u.default.getId(),
+        i = "GUILD_RING_START" === e.type;
+    if (i && !c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled) return !1;
+    let s = d.default.getId(),
         a = s in n && null != n[s];
     if (!S.has(t) && a) {
         var l;
         let e,
             a,
-            d = c.A.getChannel(t);
-        if (null == d) return !1;
-        let u = 10 * S.size,
-            { x: E, y: f } =
-                ((l = r ? d : void 0),
-                (e = m.A.windowSize()),
+            u = _.A.getChannel(t);
+        if (null == u) return !1;
+        let d = 10 * S.size,
+            { x: f, y: E } =
+                ((l = i ? u : void 0),
+                (e = h.A.windowSize()),
                 (a = (function (e) {
-                    let { enabled: t } = _.A.getCurrentConfig({ guildId: e?.guild_id, location: "IncomingCallStore" });
-                    if (e?.guild_id == null || !t) return g;
-                    let n = h.Ay.getVoiceStatesForChannel(e).filter(
+                    let { enabled: t } = c.A.getCurrentConfig({ guildId: e?.guild_id, location: "IncomingCallStore" });
+                    if (e?.guild_id == null || !t) return m;
+                    let n = p.Ay.getVoiceStatesForChannel(e).filter(
                             (t) => !o.A.getGuildRingingUsers(e.id).has(t.user.id),
                         ),
-                        i = n.length > 2,
-                        r = 48 * Math.min(n.length, 2) + 22 * !!i;
-                    return { ...p, height: p.height + r };
+                        r = n.length > 2,
+                        i = 48 * Math.min(n.length, 2) + 22 * !!r;
+                    return { ...g, height: g.height + i };
                 })(l)),
-                null != i && i.x + a.width < e.width && i.y + a.height < e.height
-                    ? i
+                null != r && r.x + a.width < e.width && r.y + a.height < e.height
+                    ? r
                     : { x: e.width / 2 - a.width / 2, y: e.height / 2 - a.height / 2 });
-        return T.set(t, { channel: d, senderId: n[s], x: E + u, y: f + u }), void (S = new Set(S)).add(t);
+        return T.set(t, { channel: u, senderId: n[s], x: f + d, y: E + d }), void (S = new Set(S)).add(t);
     }
-    return !!S.has(t) && !a && C(t);
+    return !!S.has(t) && !a && N(t);
 }
-function O(e) {
+function C(e) {
     let { channelId: t } = e;
     return (
         ("GUILD_RING_STOP" !== e.type ||
-            (!!_.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallDelete" }).enabled &&
-                !!e.ringing.includes(u.default.getId()))) &&
-        C(t)
+            (!!c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallDelete" }).enabled &&
+                !!e.ringing.includes(d.default.getId()))) &&
+        N(t)
     );
 }
-function y() {
-    N = E.A.getStatus() === f.clD.DND || l.NO.getSetting();
+function O() {
+    y = f.A.getStatus() === E.clD.DND || l.NO.getSetting();
 }
-function v() {
-    let e = u.default.getId();
+function R() {
+    let e = d.default.getId();
     S.forEach((t) => {
-        null == c.A.getChannel(t)?.guild_id || o.A.getGuildRingingUsers(t).has(e) || C(t);
+        null == _.A.getChannel(t)?.guild_id || o.A.getGuildRingingUsers(t).has(e) || N(t);
     });
 }
-class D extends r.Ay.Store {
+class b extends i.Ay.Store {
     static displayName = "IncomingCallStore";
     initialize() {
-        this.waitFor(u.default, o.A, c.A, E.A, h.Ay, d.A, m.A),
-            this.syncWith([E.A], y),
-            this.syncWith([d.A], y),
-            this.syncWith([o.A], v);
+        this.waitFor(d.default, o.A, _.A, f.A, p.Ay, u.A, h.A),
+            this.syncWith([f.A], O),
+            this.syncWith([u.A], O),
+            this.syncWith([o.A], R);
     }
     getIncomingCalls() {
-        return N ? I : Array.from(T.values());
+        return y ? I : Array.from(T.values());
     }
     getIncomingCallChannelIds() {
-        return N ? A : S;
+        return y ? A : S;
     }
     getFirstIncomingCallId() {
-        return N ? null : S.values().next().value;
+        return y ? null : S.values().next().value;
     }
     hasIncomingCalls() {
-        return !N && S.size > 0;
+        return !y && S.size > 0;
     }
 }
-let L = new D(a.h, {
-    CALL_CREATE: R,
-    CALL_UPDATE: R,
-    CALL_DELETE: O,
-    GUILD_RING_START: R,
-    GUILD_RING_STOP: O,
+let D = new b(a.h, {
+    CALL_CREATE: v,
+    CALL_UPDATE: v,
+    CALL_DELETE: C,
+    GUILD_RING_START: v,
+    GUILD_RING_STOP: C,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return C(t);
+        return N(t);
     },
     INCOMING_CALL_MOVE: function (e) {
         let { x: t, y: n } = e;
-        return (i = { x: t, y: n }), s.w.set("IncomingCallStore", i), !1;
+        return (r = { x: t, y: n }), s.w.set("IncomingCallStore", r), !1;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return C(t.id);
+        return N(t.id);
     },
 });

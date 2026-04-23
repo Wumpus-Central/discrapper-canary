@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => r });
-var i = n(19575);
-let r = {
+n.d(t, { A: () => i });
+var r = n(837921);
+let i = {
     clearNavigationHistory() {
-        i.Ay.clearNavigationHistory();
+        r.Ay.clearNavigationHistory();
     },
     flushDNSCache() {
-        i.Ay.flushDNSCache();
+        r.Ay.flushDNSCache();
     },
-    flushCookies: () => i.Ay.flushCookies(),
+    flushCookies: () => r.Ay.flushCookies(),
     setApplicationBackgroundColor(e) {
-        i.Ay.setApplicationBackgroundColor(e);
+        r.Ay.setApplicationBackgroundColor(e);
     },
-    setZoomFactor: (e) => i.Ay.setZoomFactor(e),
+    setZoomFactor: (e) => r.Ay.setZoomFactor(e),
     focus(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        i.Ay.focus(e, t);
+        r.Ay.focus(e, t);
     },
-    submitLiveCrashReport: (e) => i.Ay.submitLiveCrashReport(e),
-    getPidFromDesktopSource: (e) => i.Ay.getPidFromDesktopSource(e),
-    getAudioPid: (e) => i.Ay.getAudioPid(e),
-    generateSessionFromPid: (e) => i.Ay.generateSessionFromPid(e),
-    getAppHardwareAccelerationEnabled: () => i.Ay.getEnableHardwareAcceleration(),
-    getDiscordIsElevated: () => i.Ay.getDiscordIsElevated(),
+    submitLiveCrashReport: (e) => r.Ay.submitLiveCrashReport(e),
+    getPidFromDesktopSource: (e) => r.Ay.getPidFromDesktopSource(e),
+    getAudioPid: (e) => r.Ay.getAudioPid(e),
+    generateSessionFromPid: (e) => r.Ay.generateSessionFromPid(e),
+    getAppHardwareAccelerationEnabled: () => r.Ay.getEnableHardwareAcceleration(),
+    getDiscordIsElevated: () => r.Ay.getDiscordIsElevated(),
 };

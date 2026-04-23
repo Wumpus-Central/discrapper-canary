@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { A: () => p });
-var i = n(132500),
-    r = n(47167),
-    s = n(328153),
+n.d(t, { A: () => g });
+var r = n(835245),
+    i = n(47167),
+    s = n(15285),
     a = n(616356),
-    o = n(495544),
+    o = n(961350),
     l = n(734057),
-    d = n(763827),
-    _ = n(994500),
-    u = n(461213),
-    c = n(287809),
-    E = n(977997),
-    h = n(372684),
-    m = n(696016),
-    f = n(652215),
-    g = n(985018);
-function p() {
+    u = n(383501),
+    c = n(994500),
+    d = n(461213),
+    _ = n(287809),
+    f = n(977997),
+    p = n(372684),
+    h = n(696016),
+    E = n(652215),
+    m = n(985018);
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.nQ.CLIP,
+        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.nQ.CLIP,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        p = arguments.length > 3 ? arguments[3] : void 0,
+        g = arguments.length > 3 ? arguments[3] : void 0,
         {
             sourceName: A,
             sourceApplicationId: I,
@@ -29,24 +29,24 @@ function p() {
             let e = a.A.getStreamerActiveStreamMetadata(),
                 t = e?.pid,
                 n = e?.sourceName,
-                i = (() => {
+                r = (() => {
                     if (null == e) return s.Ay.getVisibleGame();
                     {
                         let e = null != t ? s.Ay.getGameForPID(t) : null,
-                            i = null != n ? s.Ay.getGameForName(n) : null;
-                        return e ?? i;
+                            r = null != n ? s.Ay.getGameForName(n) : null;
+                        return e ?? r;
                     }
                 })(),
-                o = e?.id ?? i?.id,
-                E = e?.sourceName ?? i?.name,
-                h = d.A.getChannelId(),
-                m = null == E && null != h;
-            if (m) {
-                let e = null != h ? l.A.getChannel(h) : null;
-                E = null != e ? (0, r.m1)(e, c.default, _.A) : "";
+                o = e?.id ?? r?.id,
+                f = e?.sourceName ?? r?.name,
+                p = u.A.getChannelId(),
+                h = null == f && null != p;
+            if (h) {
+                let e = null != p ? l.A.getChannel(p) : null;
+                f = null != e ? (0, i.m1)(e, _.default, c.A) : "";
             }
             return {
-                sourceName: E,
+                sourceName: f,
                 sourceApplicationId: o,
                 activity: (function (e) {
                     if (null != e)
@@ -56,36 +56,36 @@ function p() {
                             timestamps: e.timestamps,
                             party: null != e.party ? { id: e.party.id, size: e.party.size } : void 0,
                         };
-                })(u.A.getActivities(!1).find((e) => e.type === f.$pd.PLAYING && e.application_id === o)),
-                isVoiceOnly: m,
+                })(d.A.getActivities(!1).find((e) => e.type === E.$pd.PLAYING && e.application_id === o)),
+                isVoiceOnly: h,
             };
         })(),
-        N = d.A.getChannelId(),
-        C = d.A.getGuildId(),
-        R = new Set([o.default.getId()]);
-    null != N && (R = R.union(new Set(Object.keys(E.A.getVoiceStatesForChannel(N))))),
+        y = u.A.getChannelId(),
+        N = u.A.getGuildId(),
+        v = new Set([o.default.getId()]);
+    null != y && (v = v.union(new Set(Object.keys(f.A.getVoiceStatesForChannel(y))))),
         n.forEach((e) => {
             let { signal: t } = e;
-            "userId" in t && null != t.userId && R.add(t.userId);
+            "userId" in t && null != t.userId && v.add(t.userId);
         });
-    let O = S && t === h.nQ.CLIP ? h.nQ.VOICE_CLIP : t;
+    let C = S && t === p.nQ.CLIP ? p.nQ.VOICE_CLIP : t;
     return {
-        id: (0, i.A)(),
+        id: (0, r.A)(),
         createdAt: Date.now(),
-        version: m.kd,
-        applicationName: A ?? g.intl.string(g.t.qtSJxb),
+        version: h.kd,
+        applicationName: A ?? m.intl.string(m.t.qtSJxb),
         applicationId: I,
         activity: T,
-        users: Array.from(R),
+        users: Array.from(v),
         clipMethod: e,
         isTemporary: "auto" === e,
-        guildId: C ?? void 0,
-        channelId: N ?? void 0,
+        guildId: N ?? void 0,
+        channelId: y ?? void 0,
         timeline: n,
-        decision: p,
-        remoteClipId: p?.signal?.type === h.Gy.DISTRIBUTED ? p.signal.remoteTriggerClipId : void 0,
+        decision: g,
+        remoteClipId: g?.signal?.type === p.Gy.DISTRIBUTED ? g.signal.remoteTriggerClipId : void 0,
         length: 0,
         thumbnail: "",
-        type: O,
+        type: C,
     };
 }

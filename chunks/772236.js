@@ -1,0 +1,19 @@
+n.d(t, { K: () => p });
+var i = n(419954),
+    s = n(780964),
+    l = n(556786),
+    a = n(493501),
+    r = n(690613),
+    o = n(264721),
+    d = n(962983),
+    u = n(9375),
+    c = n(733793),
+    g = n(583863),
+    m = n(568184),
+    _ = n(864592),
+    A = n(702909),
+    h = n(985018);
+let p = (0, i.zZ)(s.X.CLIPS_RECORDING_CATEGORY, {
+    useTitle: () => h.intl.string(h.t.iIwmV5),
+    buildLayout: () => [d.e, a.X, m.T, _.B, A.Z, o.R, u.j, l.k, r.t, c.N, g.$],
+});

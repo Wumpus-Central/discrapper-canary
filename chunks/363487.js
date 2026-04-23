@@ -1,11 +1,12 @@
-n.d(t, { A: () => l, G: () => _ });
-var i = n(17928),
-    r = n(71393),
-    a = n(576705),
-    s = n(818348);
-function _(e, t) {
-    return null == t || null == e.getGuildPermissions(t) ? null : e.can(s.xB.ADMINISTRATOR, t);
+"use strict";
+n.d(t, { A: () => l, G: () => o });
+var r = n(311907),
+    i = n(71393),
+    s = n(576705),
+    a = n(818348);
+function o(e, t) {
+    return null == t || null == e.getGuildPermissions(t) ? null : e.can(a.xB.ADMINISTRATOR, t);
 }
 function l(e) {
-    return (0, i.bG)([a.A, r.A], () => _(a.A, r.A.getGuild(e)));
+    return (0, r.bG)([s.A, i.A], () => o(s.A, i.A.getGuild(e)));
 }

@@ -1,8 +1,8 @@
 l.d(t, { _: () => o });
 var n = l(627968),
-    a = l(17928),
+    a = l(311907),
     i = l(139146),
-    r = l(495544),
+    r = l(961350),
     s = l(471505);
 function o(e) {
     let { sku: t, location: l, isCardHovered: o = !0, trackButtonClick: d, ...c } = e,

@@ -1,21 +1,21 @@
-n.d(t, { Au: () => m, d5: () => h, j7: () => E, kS: () => A, l6: () => p });
+n.d(t, { Au: () => m, d5: () => _, j7: () => E, kS: () => h, l6: () => p });
 var i = n(684013),
     r = n(833551),
-    a = n(489277),
-    l = n(19575),
+    a = n(395011),
+    l = n(837921),
     s = n(350535),
     o = n(636401),
     d = n(90924),
     u = n(613057),
     c = n(652215);
-let _ = ["207646673902501888"];
-function A(e) {
+let A = ["207646673902501888"];
+function h(e) {
     return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && a.A.isReady(e);
 }
-function h(e) {
+function _(e) {
     return null == e
         ? { lock: c.FXj, context: c.BRT.APP }
-        : A(e)
+        : h(e)
           ? (i.A.setInputLocked(!1, e),
             {
                 lock() {
@@ -36,7 +36,7 @@ let E = async (e, t, n) => {
             return (e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve();
         if (null == n || "" === n)
             return Promise.reject(new o.A({ closeCode: c.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
-        let i = l.Ay.releaseChannel !== c.BIo.CANARY && !_.includes(n) && e.transport !== u.z4.POST_MESSAGE;
+        let i = l.Ay.releaseChannel !== c.BIo.CANARY && !A.includes(n) && e.transport !== u.z4.POST_MESSAGE;
         return await (0, d.e2)(n, i, e.abortController.signal), (0, d.uM)(e, n, t);
     },
     p = () =>

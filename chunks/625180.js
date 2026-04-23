@@ -1,14 +1,15 @@
-n.d(t, { A: () => _ });
-var i = n(523527),
-    r = n(267102),
-    a = n(567249),
-    l = n(574172),
-    s = n(494126),
-    o = n(652215);
+"use strict";
+n.d(t, { A: () => c });
+var r = n(523527),
+    i = n(267102),
+    s = n(87001),
+    a = n(574172),
+    o = n(21515),
+    l = n(652215);
 async function u(e) {
-    let t = (0, r.zd)();
-    a.A.getWindowOpen(o.MLl.ACTIVITY_POPOUT) && (0, l.close)(o.MLl.ACTIVITY_POPOUT),
-        await s.launchFrame(e),
-        t === o.BRT.POPOUT && (0, i.A)();
+    let t = (0, i.zd)();
+    s.A.getWindowOpen(l.MLl.ACTIVITY_POPOUT) && (0, a.close)(l.MLl.ACTIVITY_POPOUT),
+        await o.launchFrame(e),
+        t === l.BRT.POPOUT && (0, r.A)();
 }
-let _ = { ...s, launchFrame: u };
+let c = { ...o, launchFrame: u };

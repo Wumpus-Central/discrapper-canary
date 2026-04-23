@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => d });
-var i = n(17928),
-    r = n(228366);
+n.d(t, { A: () => u });
+var r = n(311907),
+    i = n(73153);
 let s = {},
     a = {};
 function o(e) {
     let { invite: t } = e,
-        { guild: n, approximate_presence_count: i } = t;
-    if (n?.id == null || null == i) return !1;
-    a[n.id] = i;
+        { guild: n, approximate_presence_count: r } = t;
+    if (n?.id == null || null == r) return !1;
+    a[n.id] = r;
 }
-class l extends i.Ay.Store {
+class l extends r.Ay.Store {
     static displayName = "GuildMemberCountStore";
     getMemberCounts() {
         return s;
@@ -22,7 +22,7 @@ class l extends i.Ay.Store {
         return null != e ? a[e] : null;
     }
 }
-let d = new l(r.h, {
+let u = new l(i.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
         (s = {}),
@@ -43,9 +43,9 @@ let d = new l(r.h, {
         delete s[t.id], delete a[t.id];
     },
     GUILD_MEMBER_LIST_UPDATE: function (e) {
-        let { guildId: t, memberCount: n, onlineCount: i } = e,
-            r = !1;
-        return s[t] !== n && ((s[t] = n), (r = !0)), a[t] !== i && ((a[t] = i), (r = !0)), r;
+        let { guildId: t, memberCount: n, onlineCount: r } = e,
+            i = !1;
+        return s[t] !== n && ((s[t] = n), (i = !0)), a[t] !== r && ((a[t] = r), (i = !0)), i;
     },
     INVITE_ACCEPT_SUCCESS: o,
     INVITE_RESOLVE_SUCCESS: o,

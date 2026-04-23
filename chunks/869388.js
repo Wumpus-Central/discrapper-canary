@@ -1,7 +1,7 @@
 "use strict";
-s.d(e, { A: () => o });
-var n = s(17928),
-    r = s(228366);
+s.d(e, { A: () => c });
+var n = s(311907),
+    r = s(73153);
 let a = { transforms: [] },
     i = a;
 class l extends n.Ay.PersistedStore {
@@ -17,7 +17,7 @@ class l extends n.Ay.PersistedStore {
         return i;
     }
 }
-let o = new l(r.h, {
+let c = new l(r.h, {
     CUSTOM_TEXT_TRANSFORM_ADD: function (t) {
         let { transform: e } = t;
         i = { ...i, transforms: [...i.transforms, e] };

@@ -1,12 +1,13 @@
-n.d(t, { GL: () => l, IM: () => u, JJ: () => s, RE: () => d, V2: () => o, go: () => c, x8: () => _ });
-var r = n(636537),
-    i = n(228366),
-    a = n(652215);
-async function l(e, t) {
+"use strict";
+n.d(t, { GL: () => s, IM: () => u, JJ: () => l, RE: () => d, V2: () => o, go: () => c, x8: () => _ });
+var a = n(562465),
+    i = n(73153),
+    r = n(652215);
+async function s(e, t) {
     let {
         nick: n,
-        avatar: l,
-        avatarDescription: s,
+        avatar: s,
+        avatarDescription: l,
         avatarId: o,
         avatarDecoration: c,
         nameplate: d,
@@ -16,8 +17,8 @@ async function l(e, t) {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: e });
     let _ = {
         nick: n,
-        avatar: l,
-        avatar_description: s,
+        avatar: s,
+        avatar_description: l,
         avatar_id: o,
         avatar_decoration_sku_id: void 0 !== c ? (c?.skuId ?? null) : void 0,
         collectibles: void 0 !== d ? { nameplate: null === d ? null : { sku_id: d.skuId } } : void 0,
@@ -26,12 +27,12 @@ async function l(e, t) {
         display_name_colors: void 0 !== u ? (null !== u ? u.colors : null) : void 0,
     };
     try {
-        let t = await r.Bo.patch({ url: a.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
+        let t = await a.Bo.patch({ url: r.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
             n = t.body;
         return (
             i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: e }),
             i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: n, guildId: e }),
-            (null != l || null != o) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            (null != s || null != o) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
             t
         );
     } catch (n) {
@@ -43,7 +44,7 @@ async function l(e, t) {
         );
     }
 }
-function s(e) {
+function l(e) {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: e });
 }
 function o(e) {

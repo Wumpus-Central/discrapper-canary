@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { E: () => a, a: () => s });
-var i = n(228366),
-    r = n(969341);
+var r = n(73153),
+    i = n(430452);
 function s(e) {
-    r.Ay.getMediaEngine()?.presentNativeScreenSharePicker?.(e),
-        i.h.dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_PRESENT", style: e });
+    i.Ay.getMediaEngine()?.presentNativeScreenSharePicker?.(e),
+        r.h.dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_PRESENT", style: e });
 }
 function a() {
-    r.Ay.getMediaEngine()?.releaseNativeDesktopVideoSourcePickerStream?.(),
-        i.h.dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_RELEASE" });
+    i.Ay.getMediaEngine()?.releaseNativeDesktopVideoSourcePickerStream?.(),
+        r.h.dispatch({ type: "NATIVE_SCREEN_SHARE_PICKER_RELEASE" });
 }

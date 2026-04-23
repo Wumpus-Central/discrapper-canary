@@ -1,6 +1,6 @@
 n.d(t, { A: () => s });
 var i = n(64700),
-    l = n(17928),
+    l = n(311907),
     a = n(775602);
 function s(e) {
     let {
@@ -15,8 +15,8 @@ function s(e) {
         [u, m] = i.useState(null),
         p = i.useCallback(() => {}, []),
         _ = i.useRef(null),
-        h = i.useRef(null),
-        A = i.useRef(t),
+        A = i.useRef(null),
+        h = i.useRef(t),
         f = i.useRef(s);
     f.current = s;
     let x = i.useRef(r);
@@ -29,17 +29,17 @@ function s(e) {
         b = i.useCallback(() => E(!1), []);
     return (
         i.useLayoutEffect(() => {
-            void 0 !== t && ((_.current = null), (h.current = null), E(!1));
+            void 0 !== t && ((_.current = null), (A.current = null), E(!1));
         }, [t]),
         i.useLayoutEffect(() => {
             if (null == u) return;
             let { height: e } = u.getBoundingClientRect();
             !n && (null == _.current || e < _.current) && (_.current = e),
-                n && (null == h.current || e > h.current) && (h.current = e);
+                n && (null == A.current || e > A.current) && (A.current = e);
             let i = x.current ?? _.current,
-                l = C.current ?? h.current,
-                a = A.current !== t;
-            if (((A.current = t), null == i || null == l || a)) return;
+                l = C.current ?? A.current,
+                a = h.current !== t;
+            if (((h.current = t), null == i || null == l || a)) return;
             let s = Math.min(g.current ?? l, l),
                 r = n ? i : s,
                 o = n ? s : i;

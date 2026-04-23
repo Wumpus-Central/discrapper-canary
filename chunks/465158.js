@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__133bf",
     N3: "inviteToolbar__133bf",

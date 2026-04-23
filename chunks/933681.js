@@ -1,11 +1,12 @@
-function i(e) {
+"use strict";
+function r(e) {
     return e;
 }
-function l(e, t) {
+function i(e, t) {
     return Object.setPrototypeOf(e, t.prototype);
 }
-function r(e) {
+function s(e) {
     let { andFail: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (t) throw Error();
 }
-n.d(t, { dr: () => r, e0: () => i, pp: () => l });
+n.d(t, { dr: () => s, e0: () => r, pp: () => i });

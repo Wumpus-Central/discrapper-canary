@@ -1,40 +1,41 @@
+"use strict";
 n.d(t, { A: () => u });
-var i = n(77729),
-    r = n(626584),
-    a = n(832213),
-    l = n(19575);
-let s = new r.A("ProcessUtilsElectron");
-class o extends a.D {
+var r = n(77729),
+    i = n(626584),
+    s = n(832213),
+    a = n(837921);
+let o = new i.A("ProcessUtilsElectron");
+class l extends s.D {
     lastMemoryUsageKB = void 0;
     constructor() {
-        super(), (this.cpuCoreCount = i.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer();
+        super(), (this.cpuCoreCount = r.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer();
     }
     setupReportingTimer() {
-        let e = i.A?.processUtils?.setMemoryInformation;
+        let e = r.A?.processUtils?.setMemoryInformation;
         null == e
-            ? s.log("setMemoryInformation not available.")
-            : (performance.memory?.usedJSHeapSize == null && s.error("usedJSHeapSize is not available."),
+            ? o.log("setMemoryInformation not available.")
+            : (performance.memory?.usedJSHeapSize == null && o.error("usedJSHeapSize is not available."),
               setInterval(() => {
                   let t = performance.memory?.usedJSHeapSize ?? 0;
                   e({ memoryUsageKB: this.lastMemoryUsageKB ?? 0, usedJSHeapSizeKB: Math.ceil(t / 1024) });
               }, 1e4));
     }
     getProcessUptime() {
-        return i.A?.processUtils?.getProcessUptime?.();
+        return r.A?.processUtils?.getProcessUptime?.();
     }
     getCurrentCPUUsagePercent() {
-        return i.A?.processUtils?.getCurrentCPUUsagePercent?.();
+        return r.A?.processUtils?.getCurrentCPUUsagePercent?.();
     }
     getCumulativeCPUUsage() {
-        return i.A?.processUtils?.getCumulativeCPUUsage?.();
+        return r.A?.processUtils?.getCumulativeCPUUsage?.();
     }
     getCurrentMemoryUsageKB() {
-        let e = o.getCurrentMemoryUsageKBCore();
+        let e = l.getCurrentMemoryUsageKBCore();
         return (this.lastMemoryUsageKB = e), e;
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = l.Ay.getDiscordMemoryUsage();
+            let e = a.Ay.getDiscordMemoryUsage();
             if (null == e) return 0;
             let t = Object.values(e).reduce((e, t) => e + t, 0);
             return Math.ceil(t / 1024);
@@ -43,86 +44,86 @@ class o extends a.D {
         }
     }
     getMemoryUsageDetails() {
-        return l.Ay.getDiscordMemoryUsage();
+        return a.Ay.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return l.Ay.getDiscordMemoryUsageElectronRenderer();
+            return a.Ay.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
     }
     getMemoryPrivateUsageElectronRenderer() {
         try {
-            return l.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
+            return a.Ay.getDiscordMemoryPrivateUsageElectronRenderer();
         } catch (e) {
             return null;
         }
     }
     getMemoryUsageElectronRendererUsedHeapSize() {
-        return i.A?.processUtils?.getUsedHeapSize?.();
+        return r.A?.processUtils?.getUsedHeapSize?.();
     }
     getMemoryHeapStats() {
-        return i.A?.processUtils?.getHeapStats?.();
+        return r.A?.processUtils?.getHeapStats?.();
     }
     getBlinkMemoryInfo() {
-        return i.A?.processUtils?.getBlinkMemoryInfo?.();
+        return r.A?.processUtils?.getBlinkMemoryInfo?.();
     }
     getMemoryUsageElectronProcessTypeDetails() {
         try {
-            return l.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
+            return a.Ay.getDiscordMemoryUsageElectronProcessTypeDetails();
         } catch (e) {
             return null;
         }
     }
     enablePerfMemoryHooks(e) {
         try {
-            return l.Ay.enablePerfMemoryHooks(e);
+            return a.Ay.enablePerfMemoryHooks(e);
         } catch (e) {
             return null;
         }
     }
     disablePerfMemoryHooks() {
         try {
-            return l.Ay.disablePerfMemoryHooks();
+            return a.Ay.disablePerfMemoryHooks();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemory() {
         try {
-            return l.Ay.getPerfAttributedMemory();
+            return a.Ay.getPerfAttributedMemory();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryCallstacks(e) {
         try {
-            return l.Ay.getPerfAttributedMemoryCallstacks(e);
+            return a.Ay.getPerfAttributedMemoryCallstacks(e);
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedMemoryStats() {
         try {
-            return l.Ay.getPerfAttributedMemoryStats();
+            return a.Ay.getPerfAttributedMemoryStats();
         } catch (e) {
             return null;
         }
     }
     startCPUProfiling(e) {
         try {
-            return l.Ay.startCPUProfiling(e);
+            return a.Ay.startCPUProfiling(e);
         } catch (e) {
             return null;
         }
     }
     stopCPUProfiling() {
-        return l.Ay.stopCPUProfiling();
+        return a.Ay.stopCPUProfiling();
     }
     enablePAMemoryProfiler(e) {
         try {
-            let t = i.A?.processUtils?.enablePAMemoryProfiler;
+            let t = r.A?.processUtils?.enablePAMemoryProfiler;
             if (void 0 === t) return null;
             return t(e), !0;
         } catch (e) {
@@ -131,7 +132,7 @@ class o extends a.D {
     }
     disablePAMemoryProfiler() {
         try {
-            let e = i.A?.processUtils?.disablePAMemoryProfiler;
+            let e = r.A?.processUtils?.disablePAMemoryProfiler;
             if (void 0 === e) return null;
             return e(), !0;
         } catch (e) {
@@ -140,52 +141,52 @@ class o extends a.D {
     }
     getPerfAttributedPAMemory() {
         try {
-            return i.A?.processUtils?.getPerfAttributedPAMemory?.();
+            return r.A?.processUtils?.getPerfAttributedPAMemory?.();
         } catch (e) {
             return null;
         }
     }
     getPerfAttributedPAMemoryCallstacks(e) {
         try {
-            return i.A?.processUtils?.getPerfAttributedPAMemoryCallstacks?.(e);
+            return r.A?.processUtils?.getPerfAttributedPAMemoryCallstacks?.(e);
         } catch (e) {
             return null;
         }
     }
     getPartitionAllocatorStats() {
         try {
-            return i.A?.processUtils?.getPartitionAllocatorStats?.();
+            return r.A?.processUtils?.getPartitionAllocatorStats?.();
         } catch (e) {
             return null;
         }
     }
     enableProfilingV8Heap(e) {
         try {
-            return i.A?.processUtils?.enableProfilingV8Heap?.(e);
+            return r.A?.processUtils?.enableProfilingV8Heap?.(e);
         } catch (e) {
             return;
         }
     }
     disableProfilingV8Heap() {
         try {
-            return i.A?.processUtils?.disableProfilingV8Heap?.();
+            return r.A?.processUtils?.disableProfilingV8Heap?.();
         } catch (e) {
             return;
         }
     }
     getProfilerV8MemoryCallstacks() {
         try {
-            return i.A?.processUtils?.getProfilerV8MemoryCallstacks?.();
+            return r.A?.processUtils?.getProfilerV8MemoryCallstacks?.();
         } catch (e) {
             return null;
         }
     }
     getSystemMetrics() {
         try {
-            return i.A?.processUtils?.getSystemMetrics?.() ?? Promise.resolve(null);
+            return r.A?.processUtils?.getSystemMetrics?.() ?? Promise.resolve(null);
         } catch (e) {
             return Promise.resolve(null);
         }
     }
 }
-let u = new o();
+let u = new l();

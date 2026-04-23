@@ -1,0 +1,10 @@
+n.d(t, { A: () => a });
+var s,
+    a =
+        (((s = {})[(s.SCHEDULED = 0)] = "SCHEDULED"),
+        (s[(s.ERROR_SCHEDULED_MESSAGES_DISABLED = 1)] = "ERROR_SCHEDULED_MESSAGES_DISABLED"),
+        (s[(s.ERROR_USER_NOT_FOUND = 2)] = "ERROR_USER_NOT_FOUND"),
+        (s[(s.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES = 3)] = "ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES"),
+        (s[(s.ERROR_CHANNEL_NOT_FOUND = 4)] = "ERROR_CHANNEL_NOT_FOUND"),
+        (s[(s.ERROR_SEND_FAILED = 5)] = "ERROR_SEND_FAILED"),
+        s);

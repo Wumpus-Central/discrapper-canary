@@ -1,23 +1,24 @@
+"use strict";
 n.r(t),
     n.d(t, {
-        getAvailableLocales: () => o.Be,
-        getLanguages: () => o.kG,
+        getAvailableLocales: () => u.Be,
+        getLanguages: () => u.kG,
         getSystemLocale: () => d,
-        initialLocale: () => u,
-        international: () => E.A,
-        intl: () => I,
-        systemLocale: () => c,
+        initialLocale: () => f,
+        international: () => c.A,
+        intl: () => p,
+        systemLocale: () => _,
         t: () => l.X,
-        useSyncMessages: () => A,
+        useSyncMessages: () => h,
     });
-var i = n(627968),
-    r = n(64700),
-    a = n(919523),
-    s = n(791332),
-    _ = n.n(s),
-    l = n(508493),
-    o = n(226536),
-    E = n(48456);
+var r = n(627968),
+    i = n(64700),
+    s = n(919523),
+    a = n(791332),
+    o = n.n(a),
+    l = n(356422),
+    u = n(226536),
+    c = n(48456);
 function d(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
@@ -27,36 +28,36 @@ function d(e) {
         e,
     ].find((e) => null != e && "" !== e);
 }
-let c = d("en-US"),
-    u = (0, o.kt)(c, "en-US"),
-    I = new a.IntlManager({ initialLocale: u, defaultLocale: "en-US" }).withFormatters({
-        format: (0, a.makeReactFormatter)({
-            $i: (e, t) => (0, i.jsx)("em", { children: e }, t),
-            $b: (e, t) => (0, i.jsx)("strong", { children: e }, t),
-            $del: (e, t) => (0, i.jsx)("del", { children: e }, t),
-            $p: (e, t) => (0, i.jsx)("p", { children: e }, t),
-            $code: (e, t) => (0, i.jsx)("code", { children: e }, t),
-            $link: (e, t, i) => {
-                let [a] = i,
-                    { Anchor: s } = n(349288),
+let _ = d("en-US"),
+    f = (0, u.kt)(_, "en-US"),
+    p = new s.IntlManager({ initialLocale: f, defaultLocale: "en-US" }).withFormatters({
+        format: (0, s.makeReactFormatter)({
+            $i: (e, t) => (0, r.jsx)("em", { children: e }, t),
+            $b: (e, t) => (0, r.jsx)("strong", { children: e }, t),
+            $del: (e, t) => (0, r.jsx)("del", { children: e }, t),
+            $p: (e, t) => (0, r.jsx)("p", { children: e }, t),
+            $code: (e, t) => (0, r.jsx)("code", { children: e }, t),
+            $link: (e, t, r) => {
+                let [s] = r,
+                    { Anchor: a } = n(349288),
                     l = {};
-                switch (typeof a) {
+                switch (typeof s) {
                     case "string":
-                        l.href = _().sanitizeUrl(a);
+                        l.href = o().sanitizeUrl(s);
                         break;
                     case "function":
                     default:
-                        l.onClick = a;
+                        l.onClick = s;
                         break;
                     case "object":
-                        if (null == a) break;
-                        (l.onClick = a.onClick ?? a), (l.onContextMenu = a.onContextMenu);
+                        if (null == s) break;
+                        (l.onClick = s.onClick ?? s), (l.onContextMenu = s.onContextMenu);
                 }
-                return (0, r.createElement)(s, { ...l, key: t }, e);
+                return (0, i.createElement)(a, { ...l, key: t }, e);
             },
         }),
-        formatToPlainString: a.stringFormatter,
-        formatToMarkdownString: a.markdownFormatter,
-        formatToParts: a.astFormatter,
+        formatToPlainString: s.stringFormatter,
+        formatToMarkdownString: s.markdownFormatter,
+        formatToParts: s.astFormatter,
     }),
-    A = (e) => (0, o.tp)(e, I);
+    h = (e) => (0, u.tp)(e, p);

@@ -1,55 +1,55 @@
-n.d(t, { Ay: () => A, B$: () => E, j: () => p });
-var s = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    a = n(17928),
-    o = n(573435),
-    d = n(531685),
-    u = n(486020),
-    c = n(240248),
-    h = n(567268);
-function E(e) {
-    let { guildName: t, iconSize: n, className: i } = e,
-        l = (0, c.oN)(t);
-    return (0, s.jsx)(o.Ay, {
-        mask: o.Ay.Masks.CLAN_ICON,
-        width: n,
-        height: n,
-        className: i,
-        children: (0, s.jsx)("div", { className: r()(h.O, h.q), children: l }),
-    });
-}
-function p(e) {
-    let { guildId: t, guildName: n, guildIcon: i, iconSize: l, className: E, acronymClassName: p, animate: A } = e,
-        m = (0, a.bG)([d.A], () => d.A.isFocused()),
-        C = (0, u.V0)(i) ? i : u.Ay.getGuildIconURL({ id: t, icon: i, size: l, canAnimate: A && m });
-    if (null == C) {
-        let e = (0, c.oN)(n);
-        return (0, s.jsx)(o.Ay, {
-            mask: o.Ay.Masks.CLAN_ICON,
-            width: l,
-            height: l,
-            className: E,
-            children: (0, s.jsx)("div", { className: r()(h.O, h.q, p), children: e }),
-        });
-    }
-    return (0, s.jsx)(o.Ay, {
-        mask: o.Ay.Masks.CLAN_ICON,
+l.d(t, { Ay: () => x, B$: () => h, j: () => A });
+var i = l(627968),
+    n = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(311907),
+    c = l(573435),
+    o = l(531685),
+    u = l(486020),
+    d = l(240248),
+    m = l(567268);
+function h(e) {
+    let { guildName: t, iconSize: l, className: n } = e,
+        s = (0, d.oN)(t);
+    return (0, i.jsx)(c.Ay, {
+        mask: c.Ay.Masks.CLAN_ICON,
         width: l,
         height: l,
-        className: E,
-        children: (0, s.jsx)("img", { src: C, alt: n, className: h.O }),
+        className: n,
+        children: (0, i.jsx)("div", { className: a()(m.O, m.q), children: s }),
     });
 }
-let A = i.memo(function (e) {
-    let { guild: t, iconSize: n, className: i, animate: l } = e;
-    return (0, s.jsx)(p, {
+function A(e) {
+    let { guildId: t, guildName: l, guildIcon: n, iconSize: s, className: h, acronymClassName: A, animate: x } = e,
+        f = (0, r.bG)([o.A], () => o.A.isFocused()),
+        v = (0, u.V0)(n) ? n : u.Ay.getGuildIconURL({ id: t, icon: n, size: s, canAnimate: x && f });
+    if (null == v) {
+        let e = (0, d.oN)(l);
+        return (0, i.jsx)(c.Ay, {
+            mask: c.Ay.Masks.CLAN_ICON,
+            width: s,
+            height: s,
+            className: h,
+            children: (0, i.jsx)("div", { className: a()(m.O, m.q, A), children: e }),
+        });
+    }
+    return (0, i.jsx)(c.Ay, {
+        mask: c.Ay.Masks.CLAN_ICON,
+        width: s,
+        height: s,
+        className: h,
+        children: (0, i.jsx)("img", { src: v, alt: l, className: m.O }),
+    });
+}
+let x = n.memo(function (e) {
+    let { guild: t, iconSize: l, className: n, animate: s } = e;
+    return (0, i.jsx)(A, {
         guildName: t.name,
         guildId: t.id,
         guildIcon: t.icon,
-        iconSize: n,
-        className: i,
-        animate: l,
+        iconSize: l,
+        className: n,
+        animate: s,
     });
 });

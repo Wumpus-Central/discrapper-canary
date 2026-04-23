@@ -1,6 +1,7 @@
-n.d(t, { A: () => i });
+"use strict";
+n.d(t, { A: () => s });
 var r = n(315069);
-class a extends r.A {
+class i extends r.A {
     id;
     subscriptionId;
     premiumGuildSubscription;
@@ -8,7 +9,7 @@ class a extends r.A {
     cooldownEndsAt;
     subscription;
     static createFromServer(e, t) {
-        return new a({
+        return new i({
             id: e.id,
             subscriptionId: e.subscription_id,
             premiumGuildSubscription:
@@ -36,4 +37,4 @@ class a extends r.A {
             (this.subscription = e.subscription);
     }
 }
-let i = a;
+let s = i;

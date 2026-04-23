@@ -1,62 +1,62 @@
 "use strict";
-let i;
-n.d(t, { A: () => f });
-var r = n(17928),
-    s = n(228366),
+let r;
+n.d(t, { A: () => E });
+var i = n(311907),
+    s = n(73153),
     a = n(194862),
-    o = n(395671),
+    o = n(611010),
     l = n(927813),
-    d = n(723702);
-let _ = l.A.Millis.DAY,
-    u = new a.A(),
-    c = "",
-    E = null,
-    h = !1;
-class m extends r.Ay.PersistedStore {
+    u = n(723702);
+let c = l.A.Millis.DAY,
+    d = new a.A(),
+    _ = "",
+    f = null,
+    p = !1;
+class h extends i.Ay.PersistedStore {
     static displayName = "NonGameStore";
     static persistKey = "NonGameStore";
     initialize(e) {
-        null != e && (null != e.etag && (c = e.etag), e.nonGames?.forEach((e) => u.set(e.id, e)));
+        null != e && (null != e.etag && (_ = e.etag), e.nonGames?.forEach((e) => d.set(e.id, e)));
     }
     getState() {
-        return (0, d.isDesktop)() ? { etag: c, nonGames: u.values() } : { etag: "", nonGames: [] };
+        return (0, u.isDesktop)() ? { etag: _, nonGames: d.values() } : { etag: "", nonGames: [] };
     }
     get nonGames() {
-        return u.values();
+        return d.values();
     }
     get fetching() {
-        return !0 === i;
+        return !0 === r;
     }
     get etag() {
-        return c;
-    }
-    get lastFetched() {
-        return E;
-    }
-    get hasAttemptedFetch() {
-        return h;
-    }
-    get ttl() {
         return _;
     }
+    get lastFetched() {
+        return f;
+    }
+    get hasAttemptedFetch() {
+        return p;
+    }
+    get ttl() {
+        return c;
+    }
     getById(e) {
-        return u.get(e);
+        return d.get(e);
     }
     canFetch() {
-        return !i && (null == E || Date.now() >= E + _);
+        return !r && (null == f || Date.now() >= f + c);
     }
 }
-let f = new m(s.h, {
+let E = new h(s.h, {
     NON_GAMES_DATABASE_FETCH: function () {
-        i = !0;
+        r = !0;
     },
     NON_GAMES_DATABASE_FETCH_FAIL: function () {
-        (i = !1), (h = !0);
+        (r = !1), (p = !0);
     },
     NON_GAMES_DATABASE_UPDATE: function (e) {
         let { nonGames: t, etag: n } = e;
-        for (let e of (null != n && c !== n && (u.clear(), (c = n)), t))
-            u.set(e.id, {
+        for (let e of (null != n && _ !== n && (d.clear(), (_ = n)), t))
+            d.set(e.id, {
                 id: e.id,
                 name: e.name,
                 executables: (e.executables ?? []).map(o.lg),
@@ -64,6 +64,6 @@ let f = new m(s.h, {
                 icon: e.icon_hash ?? void 0,
                 thirdPartySkus: e.third_party_skus ?? [],
             });
-        (i = void 0), (E = Date.now()), (h = !0);
+        (r = void 0), (f = Date.now()), (p = !0);
     },
 });

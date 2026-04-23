@@ -1,144 +1,144 @@
 "use strict";
-let i;
-n.d(t, { A: () => C, _: () => E });
-var r = n(17928),
-    s = n(228366),
+let r;
+n.d(t, { A: () => N, _: () => f });
+var i = n(311907),
+    s = n(73153),
     a = n(652215),
     o = n(349828),
     l = n(849077),
-    d = n(901123);
-let _ = {},
-    u = {},
-    c = {},
-    E = new Set([...d.Cr, o.Vc, l.Hy]),
-    h = {},
-    m = u,
-    f = a.XlH.CLOSED,
-    g = {};
-function p() {
-    (f = a.XlH.OPEN), (g = {});
+    u = n(901123);
+let c = {},
+    d = {},
+    _ = {},
+    f = new Set([...u.Cr, o.Vc, l.Hy]),
+    p = {},
+    h = d,
+    E = a.XlH.CLOSED,
+    m = {};
+function g() {
+    (E = a.XlH.OPEN), (m = {});
 }
 function A() {
-    (f = a.XlH.CLOSED), (g = {});
+    (E = a.XlH.CLOSED), (m = {});
 }
 function I() {
-    m = u;
+    h = d;
 }
 function T() {
-    (h = {}), (g = {});
+    (p = {}), (m = {});
 }
 function S() {
     T(), I(), A();
 }
-class N extends r.Ay.Store {
+class y extends i.Ay.Store {
     static displayName = "UserProfileSettingsStore";
     get selectedGuildId() {
-        return i;
+        return r;
     }
     getFormState() {
-        return f;
+        return E;
     }
     getErrors(e) {
-        return g[e ?? a.ME] ?? c;
+        return m[e ?? a.ME] ?? _;
     }
     getPendingChanges(e) {
-        return h[e ?? a.ME] ?? _;
+        return p[e ?? a.ME] ?? c;
     }
     getTryItOutChanges() {
-        return m;
+        return h;
     }
     hasUnsavedChanges() {
-        return Object.values(h).some((e) => Object.values(e).some((e) => void 0 !== e));
+        return Object.values(p).some((e) => Object.values(e).some((e) => void 0 !== e));
     }
     showNotice() {
         return !!(
             Object.values(this.getPendingChanges(a.ME)).some((e) => void 0 !== e) ||
-            Object.values(this.getPendingChanges(i)).some((e) => void 0 !== e)
+            Object.values(this.getPendingChanges(r)).some((e) => void 0 !== e)
         );
     }
     canSubmit() {
-        for (let e of [a.ME, i]) {
+        for (let e of [a.ME, r]) {
             let t = this.getPendingChanges(e);
             if (void 0 !== t.pendingBio && t.pendingBio.length > a.NA2) return !1;
         }
         return !0;
     }
 }
-let C = new N(s.h, {
-    USER_SETTINGS_MODAL_INIT: p,
-    USER_SETTINGS_MODAL_OPEN: p,
+let N = new y(s.h, {
+    USER_SETTINGS_MODAL_INIT: g,
+    USER_SETTINGS_MODAL_OPEN: g,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== a.nc_.ACCOUNT) return !1;
-        (f = a.XlH.OPEN), (g = {});
+        (E = a.XlH.OPEN), (m = {});
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        (i = null == t || E.has(t) ? void 0 : t), (f = a.XlH.OPEN), (g = {});
+        (r = null == t || f.has(t) ? void 0 : t), (E = a.XlH.OPEN), (m = {});
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        (i = null == t || E.has(t) ? void 0 : t), (g = {});
+        (r = null == t || f.has(t) ? void 0 : t), (m = {});
     },
     USER_PROFILE_SETTINGS_CLOSE: A,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        (f = a.XlH.SUBMITTING), (g = {});
+        (E = a.XlH.SUBMITTING), (m = {});
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
-        if (f !== a.XlH.SUBMITTING) return !1;
-        (f = a.XlH.OPEN), (g[t ?? a.ME] = c);
+        if (E !== a.XlH.SUBMITTING) return !1;
+        (E = a.XlH.OPEN), (m[t ?? a.ME] = _);
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        if (f !== a.XlH.SUBMITTING) return !1;
-        (f = a.XlH.OPEN), (g[t ?? a.ME] = n ?? c);
+        if (E !== a.XlH.SUBMITTING) return !1;
+        (E = a.XlH.OPEN), (m[t ?? a.ME] = n ?? _);
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
-        let { type: t, guildId: n, ...i } = e;
-        h[n ?? a.ME] = { ...h[n ?? a.ME], ...i };
+        let { type: t, guildId: n, ...r } = e;
+        p[n ?? a.ME] = { ...p[n ?? a.ME], ...r };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
-        m = { ...m, tryItOutAvatar: t };
+        h = { ...h, tryItOutAvatar: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
         let { avatarDecoration: t } = e;
-        m = { ...m, tryItOutAvatarDecoration: t };
+        h = { ...h, tryItOutAvatarDecoration: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function (e) {
         let { profileEffect: t } = e;
-        m = { ...m, tryItOutProfileEffect: t };
+        h = { ...h, tryItOutProfileEffect: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function (e) {
         let { banner: t } = e;
-        m = { ...m, tryItOutBanner: t };
+        h = { ...h, tryItOutBanner: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
         let { themeColors: t } = e;
-        m = { ...m, tryItOutThemeColors: t };
+        h = { ...h, tryItOutThemeColors: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function (e) {
         let { displayNameStyles: t } = e;
-        m = { ...m, tryItOutDisplayNameStyles: t };
+        h = { ...h, tryItOutDisplayNameStyles: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
-        let { banner: t, themeColors: n, avatarDecoration: i, displayNameStyles: r } = e;
-        m = {
-            ...m,
+        let { banner: t, themeColors: n, avatarDecoration: r, displayNameStyles: i } = e;
+        h = {
+            ...h,
             tryItOutBanner: t,
             tryItOutThemeColors: n,
-            tryItOutAvatarDecoration: i,
-            tryItOutDisplayNameStyles: r,
+            tryItOutAvatarDecoration: r,
+            tryItOutDisplayNameStyles: i,
         };
     },
     USER_PROFILE_SETTINGS_CLEAR_ERRORS: function () {
-        g = {};
+        m = {};
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function () {
-        h = Object.fromEntries(
-            Object.entries(h).map((e) => {
+        p = Object.fromEntries(
+            Object.entries(p).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -156,8 +156,8 @@ let C = new N(s.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function () {
-        h = Object.fromEntries(
-            Object.entries(h).map((e) => {
+        p = Object.fromEntries(
+            Object.entries(p).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -178,23 +178,23 @@ let C = new N(s.h, {
     USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
     USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: I,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
-        if ((h[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
-        h[a.ME] = { ...h[a.ME], pendingLegacyUsernameDisabled: void 0 };
+        if ((p[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
+        p[a.ME] = { ...p[a.ME], pendingLegacyUsernameDisabled: void 0 };
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function () {
-        if ((h[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
-        h[a.ME] = { ...h[a.ME], pendingPrimaryGuildId: void 0 };
+        if ((p[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
+        p[a.ME] = { ...p[a.ME], pendingPrimaryGuildId: void 0 };
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        (f = a.XlH.OPEN),
-            (g[t ?? a.ME] =
+        (E = a.XlH.OPEN),
+            (m[t ?? a.ME] =
                 Object.fromEntries(
                     Object.entries(n).map((e) => {
                         let [t, n] = e;
                         return [t, [n]];
                     }),
-                ) ?? c);
+                ) ?? _);
     },
     LOGOUT: S,
 });

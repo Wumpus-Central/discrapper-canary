@@ -1,137 +1,137 @@
 "use strict";
-n.d(t, { A: () => v });
-var i = n(627968);
+n.d(t, { A: () => R });
+var r = n(627968);
 n(64700);
-var r = n(296489),
-    s = n.n(r),
-    a = n(132500),
+var i = n(296489),
+    s = n.n(i),
+    a = n(835245),
     o = n(192308),
-    l = n(228366),
-    d = n(391048),
-    _ = n(158032),
-    u = n(636099),
-    c = n(120700),
-    E = n(742810),
-    h = n(803375),
-    m = n(590180),
-    f = n(61750),
-    g = n(573359),
-    p = n(374200),
+    l = n(73153),
+    u = n(391048),
+    c = n(158032),
+    d = n(636099),
+    _ = n(120700),
+    f = n(742810),
+    p = n(979286),
+    h = n(590180),
+    E = n(61750),
+    m = n(573359),
+    g = n(412260),
     A = n(287809),
     I = n(954571),
-    T = n(625494),
+    T = n(203982),
     S = n(927578),
-    N = n(925847),
-    C = n(639289),
-    R = n(652215),
-    O = n(758836),
-    y = n(788868);
-function v(e) {
+    y = n(925847),
+    N = n(639289),
+    v = n(652215),
+    C = n(758836),
+    O = n(788868);
+function R(e) {
     let {
             initialPlanId: t,
-            followupSKUInfo: r,
-            onClose: v,
-            onComplete: D,
-            onSubscriptionConfirmation: L,
-            analyticsLocations: b,
+            followupSKUInfo: i,
+            onClose: R,
+            onComplete: b,
+            onSubscriptionConfirmation: D,
+            analyticsLocations: L,
             analyticsObject: w,
-            analyticsLocation: P,
-            analyticsSourceLocation: k,
-            confirmationFooter: M,
-            isGift: U = !1,
-            giftMessage: x,
+            analyticsLocation: M,
+            analyticsSourceLocation: P,
+            confirmationFooter: x,
+            isGift: k = !1,
+            giftMessage: U,
             giftStyle: G,
-            giftingOrigin: V,
-            subscriptionTier: F,
+            giftingOrigin: F,
+            subscriptionTier: V,
             trialId: B,
             postSuccessGuild: H,
             openInvoiceId: j,
-            applicationId: W,
-            referralTrialOfferId: Y,
+            applicationId: Y,
+            referralTrialOfferId: W,
             giftRecipient: K,
-            returnRef: z,
-            subscription: $,
+            returnRef: $,
+            subscription: z,
             skipConfirm: q,
         } = e ?? {},
         X = !1,
-        Z = (0, N.A)() ?? (0, a.A)(),
-        Q = A.default.getCurrentUser(),
-        J = (0, S.YE)(Q, y.PremiumTypes.TIER_2),
+        Q = (0, y.A)() ?? (0, a.A)(),
+        Z = A.default.getCurrentUser(),
+        J = (0, S.YE)(Z, O.PremiumTypes.TIER_2),
         ee = s()("payment-modal"),
-        et = (0, S.mH)(F),
-        en = U || et !== (0, S.mH)(y.pe.TIER_2) ? null : p.A.getMarketingMomentPromotion(),
-        ei = en?.rewardSkuIds[0] ?? null,
-        er = !1;
+        et = (0, S.mH)(V),
+        en = k || et !== (0, S.mH)(O.pe.TIER_2) ? null : g.A.getMarketingMomentPromotion(),
+        er = en?.rewardSkuIds[0] ?? null,
+        ei = !1;
     return (0, o.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("6159"),
-                n.e("14875"),
+                n.e("41353"),
+                n.e("94212"),
                 n.e("62175"),
                 n.e("29716"),
-                n.e("8739"),
-                n.e("61402"),
-                n.e("38117"),
-            ]).then(n.bind(n, 864353));
+                n.e("14704"),
+                n.e("2824"),
+                n.e("29665"),
+            ]).then(n.bind(n, 674619));
             return (n) => {
                 let { onClose: s, ...a } = n;
-                return (0, i.jsx)(e, {
+                return (0, r.jsx)(e, {
                     ...a,
-                    loadId: Z,
-                    subscriptionTier: F,
+                    loadId: Q,
+                    subscriptionTier: V,
                     skuId: et,
-                    isGift: U,
-                    giftMessage: x,
+                    isGift: k,
+                    giftMessage: U,
                     giftStyle: G,
-                    giftingOrigin: V,
+                    giftingOrigin: F,
                     giftRecipient: K,
                     initialPlanId: t,
-                    followupSKUInfo: r,
+                    followupSKUInfo: i,
                     onClose: (e) => {
-                        if (er) return;
-                        (er = !0), T._.dispatch(R.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
+                        if (ei) return;
+                        (ei = !0), T._.dispatch(v.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
                         let t = async () => {
                             if (
                                 (s(),
-                                v?.(e),
-                                e && L?.(),
+                                R?.(e),
+                                e && D?.(),
                                 l.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                e && null != ei && en.endDate >= new Date())
+                                e && null != er && en.endDate >= new Date())
                             ) {
-                                await (0, h.RE)(ei);
-                                let e = m.A.getProduct(ei);
+                                await (0, p.RE)(er);
+                                let e = h.A.getProduct(er);
                                 null != e &&
-                                    (0, f.A)({
+                                    (0, E.A)({
                                         product: e,
-                                        analyticsLocations: b ?? [],
-                                        purchaseType: O.gs.PROMOTIONAL,
+                                        analyticsLocations: L ?? [],
+                                        purchaseType: C.gs.PROMOTIONAL,
                                         overrideGradientColor: "nitro-pink",
                                     });
                             }
                         };
-                        g.A.isDisplayingWowMomentConfirmation && g.A.isAnimated
+                        m.A.isDisplayingWowMomentConfirmation && m.A.isAnimated
                             ? setTimeout(() => {
                                   t();
-                              }, C.K)
+                              }, N.K)
                             : t();
                     },
                     onComplete: () => {
-                        (X = !0), D?.();
+                        (X = !0), b?.();
                     },
-                    onSubscriptionConfirmation: L,
-                    analyticsLocations: b,
+                    onSubscriptionConfirmation: D,
+                    analyticsLocations: L,
                     analyticsObject: w,
-                    analyticsLocation: P,
-                    analyticsSourceLocation: k,
-                    confirmationFooter: M,
+                    analyticsLocation: M,
+                    analyticsSourceLocation: P,
+                    confirmationFooter: x,
                     trialId: B,
                     postSuccessGuild: H,
-                    planGroup: y.LE,
+                    planGroup: O.LE,
                     openInvoiceId: j,
-                    applicationId: W,
-                    referralTrialOfferId: Y,
-                    returnRef: z,
-                    subscription: $,
+                    applicationId: Y,
+                    referralTrialOfferId: W,
+                    returnRef: $,
+                    subscription: z,
                     skipConfirm: !!q,
                     wasTier2PremiumBeforePurchase: J,
                 });
@@ -139,35 +139,35 @@ function v(e) {
         },
         {
             onCloseRequest: () => {
-                er ||
-                    ((er = !0),
-                    T._.dispatch(R.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                    g.A.isDisplayingWowMomentConfirmation && g.A.isAnimated
+                ei ||
+                    ((ei = !0),
+                    T._.dispatch(v.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                    m.A.isDisplayingWowMomentConfirmation && m.A.isAnimated
                         ? setTimeout(() => {
                               (0, o.closeModal)(ee);
-                          }, C.K)
+                          }, N.K)
                         : (0, o.closeModal)(ee));
             },
             modalKey: ee,
             onCloseCallback: () => {
                 if (!X) {
-                    let e = (0, E.q1)({ location: "PremiumPaymentModal", unifiedCheckoutFlow: c.C.PREMIUM_CHECKOUT });
-                    I.default.track(R.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: Z,
-                        payment_type: R.frM[R.VVm.SUBSCRIPTION],
-                        location: P ?? w,
-                        source: k,
-                        subscription_type: R.rzx.PREMIUM,
-                        is_gift: U,
+                    let e = (0, f.q1)({ location: "PremiumPaymentModal", unifiedCheckoutFlow: _.C.PREMIUM_CHECKOUT });
+                    I.default.track(v.HAw.PAYMENT_FLOW_CANCELED, {
+                        load_id: Q,
+                        payment_type: v.frM[v.VVm.SUBSCRIPTION],
+                        location: M ?? w,
+                        source: P,
+                        subscription_type: v.rzx.PREMIUM,
+                        is_gift: k,
                         sku_id: et,
                         eligible_for_trial: null != B,
-                        application_id: W,
-                        location_stack: b,
-                        checkout_design: e ? E.rS.UNIFIED : E.rS.LEGACY,
-                        checkout_flow: c.C.PREMIUM_CHECKOUT,
+                        application_id: Y,
+                        location_stack: L,
+                        checkout_design: e ? f.rS.UNIFIED : f.rS.LEGACY,
+                        checkout_flow: _.C.PREMIUM_CHECKOUT,
                     });
                 }
-                (0, _.ET)(), (0, d.ET)(), (0, u.z)(), v?.(X), X && L?.();
+                (0, c.ET)(), (0, u.ET)(), (0, d.z)(), R?.(X), X && D?.();
             },
         },
     );

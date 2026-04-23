@@ -1,131 +1,132 @@
-n.d(t, { Ay: () => v });
-var i = n(734057),
-    r = n(498642),
-    l = n(536802),
+"use strict";
+n.d(t, { Ay: () => b });
+var r = n(734057),
+    i = n(498642),
+    s = n(536802),
     a = n(309010),
-    s = n(753027),
-    o = n(509417),
-    d = n(383682),
-    u = n(27548),
-    c = n(363433),
-    h = n(552618),
-    E = n(879658);
-let _ = null,
-    p = new o.o(750, 500),
-    A = new d.K(15),
-    f = !1;
-class g extends l.A {
+    o = n(753027),
+    l = n(447508),
+    u = n(383682),
+    c = n(27548),
+    d = n(363433),
+    _ = n(552618),
+    f = n(879658);
+let p = null,
+    h = new l.o(750, 500),
+    E = new u.K(15),
+    m = !1;
+class g extends s.A {
     static displayName = "SaveableChannelsStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: L,
+            CACHE_LOADED_LAZY_NO_CACHE: R,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: O,
-            CHANNEL_UPDATES: m,
-            CONNECTION_OPEN_SUPPLEMENTAL: T,
-            GUILD_DELETE: y,
-            LOGIN_SUCCESS: R,
-            THREAD_DELETE: N,
-            THREAD_UPDATE: C,
+            CHANNEL_DELETE: y,
+            CHANNEL_UPDATES: S,
+            CONNECTION_OPEN_SUPPLEMENTAL: I,
+            GUILD_DELETE: C,
+            LOGIN_SUCCESS: O,
+            THREAD_DELETE: v,
+            THREAD_UPDATE: N,
         });
     }
     initialize() {
-        this.waitFor(i.A),
+        this.waitFor(r.A),
             this.waitFor(a.A),
-            this.waitFor(r.A),
-            this.syncWith([s.A], () => !0),
-            this.syncWith([a.A], I);
+            this.waitFor(i.A),
+            this.syncWith([o.A], () => !0),
+            this.syncWith([a.A], A);
     }
     loadCache() {
         let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
-        null != e && ((f = !0), g.mergeSnapshot(e));
+        null != e && ((m = !0), g.mergeSnapshot(e));
     }
     canEvictOrphans() {
-        return f;
+        return m;
     }
     saveLimit(e) {
-        let t = i.A.getBasicChannel(e);
-        return (null != t && (0, c.Z)(t)) || (null != t && (a.A.getChannelId() === e || p.has(e))) ? 25 : 1;
+        let t = r.A.getBasicChannel(e);
+        return (null != t && (0, d.Z)(t)) || (null != t && (a.A.getChannelId() === e || h.has(e))) ? 25 : 1;
     }
     getSaveableChannels() {
-        let e = i.A.getChannelIds(null).map((e) => ({ guildId: null, channelId: e }));
-        return s.A.isLowDisk ? (null != _ ? [...e, _] : e) : [...e, ...p.values()];
+        let e = r.A.getChannelIds(null).map((e) => ({ guildId: null, channelId: e }));
+        return o.A.isLowDisk ? (null != p ? [...e, p] : e) : [...e, ...h.values()];
     }
     takeSnapshot() {
         return {
             version: g.LATEST_SNAPSHOT_VERSION,
-            data: { channels: [...p.allValues()].filter((e) => !e.fallback), penalized: [...A.keys()], lastChannel: _ },
+            data: { channels: [...h.allValues()].filter((e) => !e.fallback), penalized: [...E.keys()], lastChannel: p },
         };
     }
     static mergeSnapshot(e) {
-        let t = p,
-            n = A;
-        for (let n of ((p = new o.o(p.primaryCapacity, p.extendedCapacity)),
-        (A = new d.K(A.capacity)),
-        (_ = _ ?? e.lastChannel),
+        let t = h,
+            n = E;
+        for (let n of ((h = new l.o(h.primaryCapacity, h.extendedCapacity)),
+        (E = new u.K(E.capacity)),
+        (p = p ?? e.lastChannel),
         [e.channels, t.values()]))
-            for (let e of n) e.fallback || p.put(e.channelId, e);
-        for (let t of [e.penalized, n.keys()]) for (let e of t) A.put(e, null);
+            for (let e of n) e.fallback || h.put(e.channelId, e);
+        for (let t of [e.penalized, n.keys()]) for (let e of t) E.put(e, null);
     }
     static recordChannel(e) {
-        let t = i.A.getBasicChannel(e);
-        if (null != t && (0, h.c)(t)) {
+        let t = r.A.getBasicChannel(e);
+        if (null != t && (0, _.c)(t)) {
             let n = { guildId: t.guild_id ?? null, channelId: e, channelType: t.type };
-            (_ = n), p.put(e, n), (0, u.qA)(t) && null != A.put(e, null) && p.delete(e);
+            (p = n), h.put(e, n), (0, c.qA)(t) && null != E.put(e, null) && h.delete(e);
         }
     }
     static deleteChannel(e) {
-        p.delete(e);
+        h.delete(e);
     }
     static deleteGuild(e) {
-        for (let t of p.allValues()) t.guildId === e && p.delete(t.channelId);
+        for (let t of h.allValues()) t.guildId === e && h.delete(t.channelId);
     }
     static dropUnreachableChannels() {
-        for (let e of p.keys()) {
-            let t = i.A.getBasicChannel(e);
-            (0, h.c)(t) || g.deleteChannel(e);
+        for (let e of h.keys()) {
+            let t = r.A.getBasicChannel(e);
+            (0, _.c)(t) || g.deleteChannel(e);
         }
     }
     static deleteUnreadableGuildChannels(e) {
-        for (let t of p.values()) e !== t.guildId || (0, h.J)(t.channelId) || g.deleteChannel(t.channelId);
+        for (let t of h.values()) e !== t.guildId || (0, _.J)(t.channelId) || g.deleteChannel(t.channelId);
     }
     static replaceLru(e) {
-        p = e;
+        h = e;
     }
 }
-function I() {
+function A() {
     let e = a.A.getChannelId();
     null != e && g.recordChannel(e);
 }
-function T() {
-    g.dropUnreachableChannels(), g.replaceLru((0, E.I)(p, 1250));
+function I() {
+    g.dropUnreachableChannels(), g.replaceLru((0, f.I)(h, 1250));
+}
+function T(e) {
+    let t = e.id,
+        n = (0, _.c)(e),
+        r = a.A.getChannelId();
+    n && t === r && g.recordChannel(t), n || g.deleteChannel(t);
 }
 function S(e) {
-    let t = e.id,
-        n = (0, h.c)(e),
-        i = a.A.getChannelId();
-    n && t === i && g.recordChannel(t), n || g.deleteChannel(t);
+    for (let t of e.channels) T(t);
 }
-function m(e) {
-    for (let t of e.channels) S(t);
+function y(e) {
+    g.deleteChannel(e.channel.id);
 }
-function O(e) {
+function N(e) {
+    T(e.channel);
+}
+function v(e) {
     g.deleteChannel(e.channel.id);
 }
 function C(e) {
-    S(e.channel);
-}
-function N(e) {
-    g.deleteChannel(e.channel.id);
-}
-function y(e) {
     return !e.guild.unavailable && (g.deleteGuild(e.guild.id), !0);
 }
+function O(e) {
+    h.clear(), E.clear(), (m = !1);
+}
 function R(e) {
-    p.clear(), A.clear(), (f = !1);
+    m = !0;
 }
-function L(e) {
-    f = !0;
-}
-let v = new g();
+let b = new g();

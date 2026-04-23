@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => c });
-var i = n(735438),
-    r = n.n(i),
-    s = n(17928),
-    a = n(228366),
+n.d(t, { A: () => _ });
+var r = n(735438),
+    i = n.n(r),
+    s = n(311907),
+    a = n(73153),
     o = n(927813);
 let l = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null },
-    d = l,
-    _ = +o.A.Millis.HOUR;
-class u extends s.Ay.DeviceSettingsStore {
+    u = l,
+    c = +o.A.Millis.HOUR;
+class d extends s.Ay.DeviceSettingsStore {
     static displayName = "RTCRegionStore";
     static persistKey = "RTCRegionStore";
     static migrations = [
@@ -19,35 +19,35 @@ class u extends s.Ay.DeviceSettingsStore {
         ),
     ];
     initialize(e) {
-        d = e ?? l;
+        u = e ?? l;
     }
     shouldIncludePreferredRegion() {
-        return null != d.preferredRegions;
+        return null != u.preferredRegions;
     }
     getPreferredRegion() {
-        return d.preferredRegions?.[0] ?? null;
+        return u.preferredRegions?.[0] ?? null;
     }
     getPreferredRegions() {
-        return d.preferredRegions;
+        return u.preferredRegions;
     }
     getRegion(e) {
         if (null != e) return e.substr(0, e.search(/\d/));
     }
     getUserAgnosticState() {
-        return d;
+        return u;
     }
     shouldPerformLatencyTest(e) {
         return (
-            null === d.preferredRegions ||
-            !r().isEqual(e, d.lastGeoRankedOrder ?? []) ||
-            Date.now() - (d.lastTestTimestamp ?? 0) >= _
+            null === u.preferredRegions ||
+            !i().isEqual(e, u.lastGeoRankedOrder ?? []) ||
+            Date.now() - (u.lastTestTimestamp ?? 0) >= c
         );
     }
 }
-let c = new u(a.h, {
+let _ = new d(a.h, {
     RTC_LATENCY_TEST_COMPLETE: function (e) {
         e.latencyRankedRegions.length > 0 &&
-            ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
-            (d.lastTestTimestamp = Date.now());
+            ((u.lastGeoRankedOrder = e.geoRankedRegions), (u.preferredRegions = e.latencyRankedRegions)),
+            (u.lastTestTimestamp = Date.now());
     },
 });

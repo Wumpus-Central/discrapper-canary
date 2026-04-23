@@ -1,17 +1,18 @@
-var n = e(581390),
-    o = e(273761),
-    i = e(503199),
-    u = function (r) {
-        return function (t, e, u) {
-            var a,
-                c = n(t),
-                f = i(c);
-            if (0 === f) return !r && -1;
-            var s = o(u, f);
-            if (r && e != e) {
-                for (; f > s; ) if ((a = c[s++]) != a) return !0;
-            } else for (; f > s; s++) if ((r || s in c) && c[s] === e) return r || s || 0;
-            return !r && -1;
+"use strict";
+var r = n(581390),
+    i = n(273761),
+    s = n(503199),
+    a = function (e) {
+        return function (t, n, a) {
+            var o,
+                l = r(t),
+                u = s(l);
+            if (0 === u) return !e && -1;
+            var c = i(a, u);
+            if (e && n != n) {
+                for (; u > c; ) if ((o = l[c++]) != o) return !0;
+            } else for (; u > c; c++) if ((e || c in l) && l[c] === n) return e || c || 0;
+            return !e && -1;
         };
     };
-r.exports = { includes: u(!0), indexOf: u(!1) };
+e.exports = { includes: a(!0), indexOf: a(!1) };

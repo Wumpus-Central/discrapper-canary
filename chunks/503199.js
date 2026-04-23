@@ -1,4 +1,5 @@
-var n = e(370001);
-r.exports = function (r) {
-    return n(r.length);
+"use strict";
+var r = n(370001);
+e.exports = function (e) {
+    return r(e.length);
 };

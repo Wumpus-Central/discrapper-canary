@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, {
     A: () =>
         function e(t) {
             return null == t
                 ? t
-                : Object.keys(t).reduce((n, l) => {
-                      let r = (0, i.snakeCase)(l);
+                : Object.keys(t).reduce((n, r) => {
+                      let l = (0, i.snakeCase)(r);
                       return (
-                          "object" != typeof t[l] || Array.isArray(t[l]) ? (n[r] = t[l]) : (n[r] = e(t[l])),
-                          (n[r] = t[l]),
+                          "object" != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])),
+                          (n[l] = t[r]),
                           n
                       );
                   }, {});
@@ -16,9 +17,9 @@ n.d(t, {
         function e(t) {
             return null == t
                 ? t
-                : Object.keys(t).reduce((n, l) => {
-                      let r = (0, i.camelCase)(l);
-                      return "object" != typeof t[l] || Array.isArray(t[l]) ? (n[r] = t[l]) : (n[r] = e(t[l])), n;
+                : Object.keys(t).reduce((n, r) => {
+                      let l = (0, i.camelCase)(r);
+                      return "object" != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])), n;
                   }, {});
         },
 });

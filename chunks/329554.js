@@ -1,71 +1,71 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
-var a = n(17928);
-if (/^(14256|21552)$/.test(n.j)) var l = n(534514);
-if (/^(14256|21552)$/.test(n.j)) var r = n(939249);
-if (/^(14256|21552)$/.test(n.j)) var s = n(834730);
-var o = n(302959),
+var l = n(311907),
+    s = n(534514),
+    a = n(939249),
+    r = n(834730),
+    o = n(302959),
     d = n(765379),
-    c = n(35903),
+    c = n(592182),
     u = n(506326),
-    p = n(409626),
-    m = n(692969),
-    h = n(78871),
-    g = n(287809),
-    A = n(804630),
-    f = n(145225);
-function v(e) {
-    let { resolvedActivity: t, presenceActivity: n, showHeader: a = !0 } = e,
-        o = (0, m.A)({
+    h = n(409626),
+    A = n(692969),
+    _ = n(78871),
+    m = n(287809),
+    g = n(804630),
+    p = n(145225);
+function f(e) {
+    let { resolvedActivity: t, presenceActivity: n, showHeader: l = !0 } = e,
+        o = (0, A.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: p.Ob.UserProfile,
+            source: h.Ob.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),
         c = null != n && !(0, d.A)(n) && null != n.party,
-        g = null != t.state && t.state.length > 0 && !c;
+        m = null != t.state && t.state.length > 0 && !c;
     return (0, i.jsxs)("div", {
-        className: f.ec,
+        className: p.ec,
         children: [
-            a
+            l
                 ? (0, i.jsx)("div", {
-                      className: f.N1,
-                      children: (0, i.jsx)(l.D, {
+                      className: p.N1,
+                      children: (0, i.jsx)(s.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
-                          children: (0, A._Q)(t.type),
+                          children: (0, g._Q)(t.type),
                       }),
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: f.Wh,
+                className: p.Wh,
                 children: [
-                    (0, i.jsx)(A.Tf, { resolvedActivity: t }),
+                    (0, i.jsx)(g.Tf, { resolvedActivity: t }),
                     (0, i.jsx)("div", {
-                        className: f.wt,
-                        children: (0, i.jsxs)(r.D, {
-                            className: null != o ? f.wv : void 0,
+                        className: p.wt,
+                        children: (0, i.jsxs)(a.D, {
+                            className: null != o ? p.wv : void 0,
                             onClick: o,
                             children: [
-                                (0, i.jsx)(l.D, {
+                                (0, i.jsx)(s.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
-                                    className: f.DD,
+                                    className: p.DD,
                                     lineClamp: 1,
                                     children: t.name,
                                 }),
                                 null != t.details
-                                    ? (0, i.jsx)(s.E, {
+                                    ? (0, i.jsx)(r.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
                                           children: t.details,
                                       })
                                     : null,
-                                g
-                                    ? (0, i.jsx)(s.E, {
+                                m
+                                    ? (0, i.jsx)(r.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
@@ -76,9 +76,9 @@ function v(e) {
                                     ? (0, i.jsxs)(u.mG, {
                                           location: u.N5.VOICE_USER_POPOUT,
                                           children: [
-                                              (0, i.jsx)(h.QA, { activity: n }),
-                                              (0, i.jsx)(h.cy, { activity: n }),
-                                              (0, i.jsx)(h.Rq, { activity: n }),
+                                              (0, i.jsx)(_.QA, { activity: n }),
+                                              (0, i.jsx)(_.cy, { activity: n }),
+                                              (0, i.jsx)(_.Rq, { activity: n }),
                                           ],
                                       })
                                     : null,
@@ -90,37 +90,35 @@ function v(e) {
         ],
     });
 }
-let x = /^(14256|21552)$/.test(n.j)
-    ? function (e) {
-          let {
-                  channel: t,
-                  presenceActivity: n,
-                  userId: l,
-                  embeddedApp: r,
-                  applicationStream: s,
-                  onAction: d,
-                  showHeader: u = !0,
-              } = e,
-              p = (0, a.bG)([g.default], () => (null != l ? g.default.getUser(l) : null), [l]);
-          if (null == p) return null;
-          let m = (0, A.Gf)(p.id, n, r);
-          return (0, i.jsxs)("div", {
-              children: [
-                  m.isSpotify
-                      ? (0, i.jsx)(A.vP, { resolvedActivity: m, showHeader: u })
-                      : (0, i.jsx)(v, { resolvedActivity: m, presenceActivity: n, showHeader: u }),
-                  (0, i.jsx)(c.A, {
-                      type: null != s ? o.M.STREAM_PREVIEW : o.M.VOICE_CHANNEL,
-                      activity: n,
-                      embeddedActivity: r?.embeddedActivity,
-                      applicationStream: s,
-                      user: p,
-                      guildId: t.guild_id,
-                      channelId: t.id,
-                      buttonVariant: "primary",
-                      onAction: d,
-                  }),
-              ],
-          });
-      }
-    : null;
+let E = function (e) {
+    let {
+            channel: t,
+            presenceActivity: n,
+            userId: s,
+            embeddedApp: a,
+            applicationStream: r,
+            onAction: d,
+            showHeader: u = !0,
+        } = e,
+        h = (0, l.bG)([m.default], () => (null != s ? m.default.getUser(s) : null), [s]);
+    if (null == h) return null;
+    let A = (0, g.Gf)(h.id, n, a);
+    return (0, i.jsxs)("div", {
+        children: [
+            A.isSpotify
+                ? (0, i.jsx)(g.vP, { resolvedActivity: A, showHeader: u })
+                : (0, i.jsx)(f, { resolvedActivity: A, presenceActivity: n, showHeader: u }),
+            (0, i.jsx)(c.A, {
+                type: null != r ? o.M.STREAM_PREVIEW : o.M.VOICE_CHANNEL,
+                activity: n,
+                embeddedActivity: a?.embeddedActivity,
+                applicationStream: r,
+                user: h,
+                guildId: t.guild_id,
+                channelId: t.id,
+                buttonVariant: "primary",
+                onAction: d,
+            }),
+        ],
+    });
+};

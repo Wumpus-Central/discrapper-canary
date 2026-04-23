@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => d });
-var i = n(157559),
-    r = n(723702),
-    s = n(19575),
-    a = n(187522),
+n.d(t, { A: () => u });
+var r = n(157559),
+    i = n(723702),
+    s = n(837921),
+    a = n(325639),
     o = n(765682);
 class l extends a.V {
     nativeUtils = s.Ay.getDiscordUtils();
-    platformAlwaysPermits = (0, r.isLinux)() || (0, r.isWindows)();
+    platformAlwaysPermits = (0, i.isLinux)() || (0, i.isWindows)();
     static requestTypeLookup = {
         [o.iL.CAMERA]: s.kw.Camera,
         [o.iL.AUDIO]: s.kw.Microphone,
@@ -30,12 +30,12 @@ class l extends a.V {
         );
     }
     asyncify(e, t, n) {
-        let i = l.requestTypeLookup[t];
-        return void 0 === i
+        let r = l.requestTypeLookup[t];
+        return void 0 === r
             ? Promise.resolve(!0)
             : this.requestAuthorization(
                   t,
-                  () => (null == e ? Promise.resolve(o.F5.AUTHORIZED) : new Promise((t, n) => e(t, i))),
+                  () => (null == e ? Promise.resolve(o.F5.AUTHORIZED) : new Promise((t, n) => e(t, r))),
                   n,
               );
     }
@@ -48,8 +48,8 @@ class l extends a.V {
         return this.storage.hasPermission(e);
     }
     openAlertModal(e) {
-        let { title: t, body: n, onConfirm: r, cancelText: s, confirmText: a } = e;
-        i.A.show({ title: t, body: n, onConfirm: r, cancelText: s, confirmText: a });
+        let { title: t, body: n, onConfirm: i, cancelText: s, confirmText: a } = e;
+        r.A.show({ title: t, body: n, onConfirm: i, cancelText: s, confirmText: a });
     }
 }
-let d = new l();
+let u = new l();

@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { A: () => o });
-var i = n(439372),
-    r = n(495544),
-    s = n(84948);
-class a extends i.A {
+var r = n(439372),
+    i = n(961350),
+    s = n(3928);
+class a extends r.A {
     actions = {
         AUTHENTICATOR_DELETE: this.handleAuthenticatorDelete,
         MFA_WEBAUTHN_CREDENTIALS_LOADED: this.handleWebAuthnCredentialsLoaded,
@@ -15,7 +15,7 @@ class a extends i.A {
     }
     async handleWebAuthnCredentialsLoaded(e) {
         let { credentials: t } = e,
-            n = r.default.getId();
+            n = i.default.getId();
         await s.A.signalAllAcceptedCredentials(t, n);
     }
     async handleCurrentUserUpdate(e) {

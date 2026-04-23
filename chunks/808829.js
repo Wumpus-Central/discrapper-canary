@@ -1,8 +1,9 @@
-n.d(t, { P: () => r });
-var i = n(985018);
-function r(e) {
-    let { application: t, username: n, usernameOnClick: r } = e;
+"use strict";
+n.d(t, { P: () => i });
+var r = n(985018);
+function i(e) {
+    let { application: t, username: n, usernameOnClick: i } = e;
     return null != t
-        ? i.intl.formatToParts(i.t.Tes5Ou, { username: n, applicationName: t.name, usernameOnClick: r })
-        : i.intl.formatToParts(i.t.PUJtgi, { username: n, usernameOnClick: r });
+        ? r.intl.formatToParts(r.t.Tes5Ou, { username: n, applicationName: t.name, usernameOnClick: i })
+        : r.intl.formatToParts(r.t.PUJtgi, { username: n, usernameOnClick: i });
 }

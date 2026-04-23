@@ -1,4 +1,4 @@
-n.d(t, { a: () => h, default: () => E });
+n.d(t, { a: () => _, default: () => E });
 var i = n(627968),
     r = n(64700),
     a = n(189213),
@@ -7,26 +7,26 @@ var i = n(627968),
     o = n(817281),
     d = n(429913),
     u = n(954571),
-    c = n(19575),
-    _ = n(652215),
-    A = n(985018);
-let h = "Activity Encourages Hardware Acceleration";
+    c = n(837921),
+    A = n(652215),
+    h = n(985018);
+let _ = "Activity Encourages Hardware Acceleration";
 function E(e) {
     let { applicationId: t, transitionState: n, onClose: E } = e,
         [p, m] = r.useState(!1),
-        [I] = (0, d.A)([t]),
-        g = I?.name ?? "This Activity";
+        [g] = (0, d.A)([t]),
+        I = g?.name ?? "This Activity";
     r.useEffect(() => {
-        u.default.track(_.HAw.OPEN_MODAL, { type: h });
+        u.default.track(A.HAw.OPEN_MODAL, { type: _ });
     }, []);
     let C = async () => {
             let e = "temporary";
             p && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-                u.default.track(_.HAw.MODAL_DISMISSED, { type: h, dismiss_type: e }),
+                u.default.track(A.HAw.MODAL_DISMISSED, { type: _, dismiss_type: e }),
                 await E();
         },
-        T = async () => {
-            u.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
+        f = async () => {
+            u.default.track(A.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
                 c.Ay.setEnableHardwareAcceleration(!0),
                 await C();
         };
@@ -34,21 +34,21 @@ function E(e) {
         size: "md",
         transitionState: n,
         onClose: C,
-        "aria-label": A.intl.string(A.t.NQkK4l),
-        title: A.intl.string(A.t.NQkK4l),
+        "aria-label": h.intl.string(h.t.NQkK4l),
+        title: h.intl.string(h.t.NQkK4l),
         actionBarInput: (0, i.jsx)(l.S, {
             checked: p,
             onChange: () => m(!p),
-            label: A.intl.string(A.t["5E9SB9"]),
+            label: h.intl.string(h.t["5E9SB9"]),
             labelType: "secondary",
         }),
         actions: [
-            { variant: "secondary", text: A.intl.string(A.t["Ibf5/h"]), onClick: C },
-            { variant: "primary", text: A.intl.string(A.t["/wlDqi"]), onClick: T },
+            { variant: "secondary", text: h.intl.string(h.t["Ibf5/h"]), onClick: C },
+            { variant: "primary", text: h.intl.string(h.t["/wlDqi"]), onClick: f },
         ],
         children: (0, i.jsx)(s.E, {
             variant: "text-md/normal",
-            children: A.intl.format(A.t.B9eiaK, { applicationName: g }),
+            children: h.intl.format(h.t.B9eiaK, { applicationName: I }),
         }),
     });
 }

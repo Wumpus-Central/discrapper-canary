@@ -1,5 +1,6 @@
-n.d(t, { M: () => i, T: () => r });
-let i = (0, n(250105).Ay)({
+"use strict";
+n.d(t, { M: () => r, T: () => i });
+let r = (0, n(250105).Ay)({
     kind: "user",
     name: "2025-11-auto-open-tiv",
     defaultConfig: { collectAnalytics: !1, autoOpenTIV: !1, autoNavigateChannel: !1 },
@@ -10,8 +11,8 @@ let i = (0, n(250105).Ay)({
         3: { collectAnalytics: !0, autoOpenTIV: !1, autoNavigateChannel: !0 },
     },
 });
-function r(e) {
+function i(e) {
     let { channel: t, location: n } = e,
-        { autoOpenTIV: r } = i.useConfig({ location: n });
-    return null != t && !!t.isGuildVocal() && r;
+        { autoOpenTIV: i } = r.useConfig({ location: n });
+    return null != t && !!t.isGuildVocal() && i;
 }

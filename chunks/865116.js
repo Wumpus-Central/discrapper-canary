@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { Ay: () => _, xW: () => a });
-var i,
-    r = n(17928),
-    s = n(228366),
+n.d(t, { Ay: () => c, xW: () => a });
+var r,
+    i = n(311907),
+    s = n(73153),
     a =
-        (((i = {})[(i.MESSAGING = 0)] = "MESSAGING"),
-        (i[(i.OVERLAYS = 1)] = "OVERLAYS"),
-        (i[(i.PREMIUM = 2)] = "PREMIUM"),
-        (i[(i.REPORTING = 3)] = "REPORTING"),
-        (i[(i.APP_COLLECTIONS = 4)] = "APP_COLLECTIONS"),
-        (i[(i.SHOP = 5)] = "SHOP"),
-        (i[(i.LIBDISCORE = 6)] = "LIBDISCORE"),
-        i);
+        (((r = {})[(r.MESSAGING = 0)] = "MESSAGING"),
+        (r[(r.OVERLAYS = 1)] = "OVERLAYS"),
+        (r[(r.PREMIUM = 2)] = "PREMIUM"),
+        (r[(r.REPORTING = 3)] = "REPORTING"),
+        (r[(r.APP_COLLECTIONS = 4)] = "APP_COLLECTIONS"),
+        (r[(r.SHOP = 5)] = "SHOP"),
+        (r[(r.LIBDISCORE = 6)] = "LIBDISCORE"),
+        r);
 let o = {
         visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: 1 },
         obscure_blur_effect_explicit_content_enabled: {
@@ -53,7 +53,7 @@ let o = {
         libdiscore_verbose_telemetry_logging: { label: "Enable verbose telemetry logging for libdiscore", category: 6 },
     },
     l = {};
-class d extends r.Ay.DeviceSettingsStore {
+class u extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDevSettingsStore";
     static persistKey = "DevToolsDevSettingsStore";
     getUserAgnosticState() {
@@ -74,8 +74,8 @@ class d extends r.Ay.DeviceSettingsStore {
     allByCategory(e) {
         return Object.entries(o)
             .filter((t) => {
-                let [n, i] = t;
-                return i.category === e;
+                let [n, r] = t;
+                return r.category === e;
             })
             .map((e) => {
                 let [t, n] = e;
@@ -83,7 +83,7 @@ class d extends r.Ay.DeviceSettingsStore {
             });
     }
 }
-let _ = new d(s.h, {
+let c = new u(s.h, {
     DEV_TOOLS_DEV_SETTING_SET: function (e) {
         !1 === e.value ? delete l[e.toggle] : (l[e.toggle] = e.value);
     },

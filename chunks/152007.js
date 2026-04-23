@@ -1,28 +1,28 @@
 "use strict";
 n.d(t, { A: () => T }), n(938796);
-var i = n(735438),
-    r = n.n(i),
-    s = n(17928),
-    a = n(228366),
+var r = n(735438),
+    i = n.n(r),
+    s = n(311907),
+    a = n(73153),
     o = n(544743),
     l = n(95701),
-    d = n(495544);
-let _ = {},
-    u = new o.Ay(),
-    c = new Set();
-function E(e) {
-    _ = r()(_)
+    u = n(961350);
+let c = {},
+    d = new o.Ay(),
+    _ = new Set();
+function f(e) {
+    c = i()(c)
         .reject((t) => t.guildId === e)
         .keyBy("threadId")
         .value();
 }
-function h(e) {
-    e.threads?.forEach(m);
+function p(e) {
+    e.threads?.forEach(h);
 }
-function m(e) {
+function h(e) {
     l.A_.has(e.type) &&
         null != e.member &&
-        ((_[e.id] = {
+        ((c[e.id] = {
             threadId: e.id,
             guildId: e.guild_id,
             flags: e.member.flags,
@@ -30,24 +30,24 @@ function m(e) {
             muteConfig: e.member.muteConfig,
             joinTimestamp: new Date(e.member.joinTimestamp),
         }),
-        f(e.id));
+        E(e.id));
 }
-function f(e) {
-    let t = _[e];
-    u.clearTimer(e),
+function E(e) {
+    let t = c[e];
+    d.clearTimer(e),
         !0 === t.muted
-            ? ((c = new Set(c)).add(e),
-              u.setTimer(e, t.muteConfig, () => {
-                  (_[e].muted = !1), (c = new Set(c)).delete(e), I.emitChange();
-              }) && ((_[e].muted = !1), (c = new Set(c)).delete(e)))
-            : (c = new Set(c)).delete(e);
+            ? ((_ = new Set(_)).add(e),
+              d.setTimer(e, t.muteConfig, () => {
+                  (c[e].muted = !1), (_ = new Set(_)).delete(e), I.emitChange();
+              }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
+            : (_ = new Set(_)).delete(e);
 }
-function g(e) {
+function m(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
         n.forEach((e) => {
-            (_[e.id] = {
+            (c[e.id] = {
                 threadId: e.id,
                 guildId: t,
                 flags: e.flags,
@@ -55,16 +55,16 @@ function g(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                f(e.id);
+                E(e.id);
         });
 }
-function p(e) {
+function g(e) {
     let { guildId: t, data: n } = e;
     null != t &&
         n.forEach((e) => {
             let { members: n } = e;
             n.forEach((e) => {
-                (_[e.id] = {
+                (c[e.id] = {
                     threadId: e.id,
                     guildId: t,
                     flags: e.flags,
@@ -72,78 +72,78 @@ function p(e) {
                     muteConfig: e.muteConfig,
                     joinTimestamp: new Date(e.joinTimestamp),
                 }),
-                    f(e.id);
+                    E(e.id);
             });
         });
 }
 class A extends s.Ay.Store {
     initialize() {
-        this.waitFor(d.default);
+        this.waitFor(u.default);
     }
     static displayName = "JoinedThreadsStore";
     hasJoined(e) {
-        return e in _;
+        return e in c;
     }
     joinTimestamp(e) {
-        return _[e]?.joinTimestamp;
+        return c[e]?.joinTimestamp;
     }
     flags(e) {
-        return _[e]?.flags;
+        return c[e]?.flags;
     }
     getInitialOverlayState() {
-        return Object.values(_);
+        return Object.values(c);
     }
     getMuteConfig(e) {
-        return _[e]?.muteConfig;
+        return c[e]?.muteConfig;
     }
     getMutedThreads() {
-        return c;
+        return _;
     }
     isMuted(e) {
-        return c.has(e);
+        return _.has(e);
     }
 }
 let I = new A(a.h, {
         CONNECTION_OPEN: function (e) {
-            u.reset(),
-                (c = new Set()),
-                (_ = {}),
+            d.reset(),
+                (_ = new Set()),
+                (c = {}),
                 e.guilds.forEach((e) => {
-                    h(e);
+                    p(e);
                 });
         },
         OVERLAY_INITIALIZE: function (e) {
             let { joinedThreads: t } = e;
-            _ = r()(t)
+            c = i()(t)
                 .map((e) => ({ ...e, joinTimestamp: new Date(e.joinTimestamp) }))
                 .keyBy("threadId")
                 .value();
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            E(t.id), h(t);
+            f(t.id), p(t);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            E(t.id);
+            f(t.id);
         },
         THREAD_CREATE: function (e) {
             let { channel: t } = e;
-            m(t);
+            h(t);
         },
-        THREAD_LIST_SYNC: g,
-        SEARCH_MESSAGES_SUCCESS: p,
-        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: p,
-        LOAD_THREADS_SUCCESS: g,
-        LOAD_ARCHIVED_THREADS_SUCCESS: g,
+        THREAD_LIST_SYNC: m,
+        SEARCH_MESSAGES_SUCCESS: g,
+        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: g,
+        LOAD_THREADS_SUCCESS: m,
+        LOAD_ARCHIVED_THREADS_SUCCESS: m,
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
-            if (!(t.id in _)) return !1;
-            (_ = { ..._ }), delete _[t.id];
+            if (!(t.id in c)) return !1;
+            (c = { ...c }), delete c[t.id];
         },
         THREAD_MEMBER_UPDATE: function (e) {
-            if (d.default.getId() !== e.userId) return !1;
-            (_[e.id] = {
+            if (u.default.getId() !== e.userId) return !1;
+            (c[e.id] = {
                 threadId: e.id,
                 guildId: e.guildId,
                 flags: e.flags,
@@ -151,31 +151,31 @@ let I = new A(a.h, {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                f(e.id);
+                E(e.id);
         },
         THREAD_MEMBER_LOCAL_UPDATE: function (e) {
-            let { id: t, userId: n, guildId: i, isJoining: r } = e;
-            if (d.default.getId() !== n || null === i) return !1;
-            r
-                ? (_[t] = {
+            let { id: t, userId: n, guildId: r, isJoining: i } = e;
+            if (u.default.getId() !== n || null === r) return !1;
+            i
+                ? (c[t] = {
                       threadId: t,
-                      guildId: i,
+                      guildId: r,
                       flags: 0,
                       muted: !0,
                       muteConfig: { end_time: void 0 },
                       joinTimestamp: new Date(),
                   })
-                : delete _[t];
+                : delete c[t];
         },
         THREAD_MEMBERS_UPDATE: function (e) {
             let t = !1;
             return (
-                e.removedMemberIds?.includes(d.default.getId()) &&
-                    e.id in _ &&
-                    ((_ = { ..._ }), delete _[e.id], (t = !0)),
+                e.removedMemberIds?.includes(u.default.getId()) &&
+                    e.id in c &&
+                    ((c = { ...c }), delete c[e.id], (t = !0)),
                 e.addedMembers?.forEach((n) => {
-                    n.userId === d.default.getId() &&
-                        (((_ = { ..._ })[e.id] = {
+                    n.userId === u.default.getId() &&
+                        (((c = { ...c })[e.id] = {
                             threadId: e.id,
                             guildId: e.guildId,
                             flags: n.flags,
@@ -183,7 +183,7 @@ let I = new A(a.h, {
                             muteConfig: n.muteConfig,
                             joinTimestamp: new Date(n.joinTimestamp),
                         }),
-                        f(e.id),
+                        E(e.id),
                         (t = !0));
                 }),
                 t

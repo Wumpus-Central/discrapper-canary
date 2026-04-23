@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153),
     s = n(500049);
 let a = {
     show: !1,
@@ -23,7 +23,7 @@ function o(e) {
         !0
     );
 }
-class l extends i.Ay.Store {
+class l extends r.Ay.Store {
     static displayName = "AppLauncherStore";
     initialize() {}
     shouldShowPopup() {
@@ -51,30 +51,30 @@ class l extends i.Ay.Store {
         return a.initialState;
     }
 }
-function d() {
+function u() {
     o({ closeReason: s.Se.DISMISSED });
 }
-function _() {
+function c() {
     o({ closeReason: s.Se.COMMAND });
 }
-let u = new l(r.h, {
+let d = new l(i.h, {
     APP_LAUNCHER_SHOW: function (e) {
-        let { entrypoint: t, activeViewType: n, initialState: i, activeChannelId: r } = e;
+        let { entrypoint: t, activeViewType: n, initialState: r, activeChannelId: i } = e;
         return (
             (a.show = !0),
             (a.entrypoint = t),
             (a.lastShownEntrypoint = t),
             (a.closeReason = s.Se.DISMISSED),
             (a.activeViewType = n),
-            (a.activeChannelId = r),
-            (a.initialState = i),
+            (a.activeChannelId = i),
+            (a.initialState = r),
             !0
         );
     },
     APP_LAUNCHER_DISMISS: o,
-    CONNECTION_OPEN: d,
-    LOGOUT: d,
-    CHANNEL_SELECT: d,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: _,
+    CONNECTION_OPEN: u,
+    LOGOUT: u,
+    CHANNEL_SELECT: u,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: c,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: c,
 });

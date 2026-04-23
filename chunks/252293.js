@@ -1,24 +1,25 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var r = n(64700),
-    a = n(635358),
-    i = n(830382),
-    o = n(845584),
-    l = n(136857),
-    s = n(354328),
-    d = n(79387),
-    u = n(67480);
-function c(e) {
+    i = n(635358),
+    s = n(830382),
+    a = n(198982),
+    o = n(136857),
+    l = n(354328),
+    u = n(79387),
+    c = n(67480);
+function d(e) {
     let {
             applicationId: t,
             skuIDs: n,
-            currentPaymentSourceId: c,
+            currentPaymentSourceId: d,
             isGift: _,
-            excludeSKUPurchasePreviews: p = !1,
-            loadId: C,
+            excludeSKUPurchasePreviews: f = !1,
+            loadId: p,
             currency: h,
         } = e,
-        E = (0, s.A)("shop_include_unpublished"),
-        { previewErrorsById: m, setErrorById: A } = (function () {
+        E = (0, l.A)("shop_include_unpublished"),
+        { previewErrorsById: m, setErrorById: g } = (function () {
             let [e, t] = r.useState({});
             return {
                 previewErrorsById: e,
@@ -31,26 +32,26 @@ function c(e) {
             };
         })();
     r.useEffect(() => {
-        for (let e of n) u.A.isFetching(e) || null != u.A.get(e) || (0, i.EX)(t, e, a.g.VARIANTS_GROUP, E);
+        for (let e of n) c.A.isFetching(e) || null != c.A.get(e) || (0, s.EX)(t, e, i.g.VARIANTS_GROUP, E);
     }, [t, n, E]);
-    let I = r.useRef(!1);
+    let A = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!p) {
+            if (!f) {
                 for (let e of n)
-                    if (!d.A.isFetchingSKU(e)) {
-                        let n = I.current ? c : null;
-                        (0, i.QX)(t, e, n, { isGift: _, loadId: C, currency: h }).catch((t) => {
-                            t instanceof o.Ey &&
-                                (t.code === l.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
-                                    t.code === l.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
-                                    t.code === l.tG.INVALID_BILLING_ADDRESS) &&
-                                A(e, t);
+                    if (!u.A.isFetchingSKU(e)) {
+                        let n = A.current ? d : null;
+                        (0, s.QX)(t, e, n, { isGift: _, loadId: p, currency: h }).catch((t) => {
+                            t instanceof a.Ey &&
+                                (t.code === o.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
+                                    t.code === o.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
+                                    t.code === o.tG.INVALID_BILLING_ADDRESS) &&
+                                g(e, t);
                         });
                     }
-                I.current = !0;
+                A.current = !0;
             }
-        }, [t, n, c, _, A, p, C, h]),
+        }, [t, n, d, _, g, f, p, h]),
         { previewErrorsById: m }
     );
 }

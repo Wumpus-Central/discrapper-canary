@@ -1,122 +1,122 @@
-n.d(t, { A: () => g });
-var i = n(17928),
-    a = n(228366),
-    l = n(294857),
-    o = n(427358),
-    r = n(290863),
-    s = n(287809),
-    d = n(652215);
-let c = !1,
-    u = {},
+n.d(t, { A: () => S });
+var i = n(311907),
+    r = n(73153),
+    s = n(294857),
+    l = n(21119),
+    a = n(290863),
+    u = n(287809),
+    o = n(652215);
+let d = !1,
+    c = {},
     h = {};
-function _(e) {
+function I(e) {
     let t = !1;
     return (
         e.forEach((e) => {
-            t = !1 !== p(e) || t;
+            t = !1 !== f(e) || t;
         }),
         t
     );
 }
-function f(e) {
+function g(e) {
     let t = h[e];
     if (null == t) return !1;
     let n = t.gameId;
     return (
-        null != u[n] && ((u = { ...u }), delete u[n][e], 0 === Object.values(u[n]).length && delete u[n]),
+        null != c[n] && ((c = { ...c }), delete c[n][e], 0 === Object.values(c[n]).length && delete c[n]),
         (h = { ...h }),
         delete h[e],
         !0
     );
 }
-function p(e) {
+function f(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
-    let i = n.filter((e) => e.type !== d.$pd.CUSTOM_STATUS);
-    if (0 === i.length) return f(t.id);
-    let a = !1;
+    let i = n.filter((e) => e.type !== o.$pd.CUSTOM_STATUS);
+    if (0 === i.length) return g(t.id);
+    let r = !1;
     return (
         i.forEach((e) => {
             (function (e, t) {
-                let n = (0, l.A)(e);
-                if (null == n) return f(t.id);
+                let n = (0, s.A)(e);
+                if (null == n) return g(t.id);
                 let i = h[t.id];
-                null != i && i.gameId !== n && f(t.id);
-                let a = e.timestamps?.start ?? Date.now(),
-                    o = { userId: t.id, activity: e, startedPlaying: a };
+                null != i && i.gameId !== n && g(t.id);
+                let r = e.timestamps?.start ?? Date.now(),
+                    l = { userId: t.id, activity: e, startedPlaying: r };
                 return (
-                    (u = { ...u, [n]: { ...u[n], [o.userId]: o } }),
-                    (h = { ...h, [o.userId]: { gameId: n, startedPlaying: o.startedPlaying } }),
+                    (c = { ...c, [n]: { ...c[n], [l.userId]: l } }),
+                    (h = { ...h, [l.userId]: { gameId: n, startedPlaying: l.startedPlaying } }),
                     !0
                 );
-            })(e, t) && (a = !0);
+            })(e, t) && (r = !0);
         }),
-        a
+        r
     );
 }
 function A() {
     let e,
         t = !1;
     return (
-        o.A.shouldFetch() ||
-            c ||
-            ((u = {}),
+        l.A.shouldFetch() ||
+            d ||
+            ((c = {}),
             (h = {}),
             (e = !1),
-            r.A.getUserIds().forEach((t) => {
-                let n = s.default.getUser(t);
-                null != n && (e = p({ user: n, activities: r.A.getActivities(t) }) || e);
+            a.A.getUserIds().forEach((t) => {
+                let n = u.default.getUser(t);
+                null != n && (e = f({ user: n, activities: a.A.getActivities(t) }) || e);
             }),
             (t = e)),
-        (c = !o.A.shouldFetch()),
+        (d = !l.A.shouldFetch()),
         t
     );
 }
-class m extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "NowPlayingStore";
     initialize() {
-        this.waitFor(r.A, o.A, s.default), this.syncWith([o.A], A);
+        this.waitFor(a.A, l.A, u.default), this.syncWith([l.A], A);
     }
     get games() {
-        return u;
+        return c;
     }
     get usersPlaying() {
         return h;
     }
     get gameIds() {
-        return Object.keys(u);
+        return Object.keys(c);
     }
     getNowPlaying(e) {
-        return u[e];
+        return c[e];
     }
     getUserGame(e) {
         return h[e];
     }
 }
-let g = new m(a.h, {
+let S = new E(r.h, {
     CONNECTION_OPEN: function () {
-        (u = {}), (h = {});
+        (c = {}), (h = {});
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
         return (
             t.forEach((e) => {
-                _(e.presences) && (i = !0);
+                I(e.presences) && (i = !0);
             }),
-            _(n) && (i = !0),
+            I(n) && (i = !0),
             i
         );
     },
     LOGOUT: function () {
-        (u = {}), (h = {});
+        (c = {}), (h = {});
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
-        return t.map((e) => p(e)).some((e) => e);
+        return t.map((e) => f(e)).some((e) => e);
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;
-        return _(t);
+        return I(t);
     },
 });

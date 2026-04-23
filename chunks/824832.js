@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { Ay: () => h, UD: () => u }), n(321073);
-var i = n(627968),
-    r = n(64700),
+n.d(t, { Ay: () => p, UD: () => d }), n(321073);
+var r = n(627968),
+    i = n(64700),
     s = n(192308),
-    a = n(780777),
+    a = n(817363),
     o = n(946274),
-    l = n(73621),
-    d = n(693591);
-async function _(e) {
+    l = n(563863),
+    u = n(693591);
+async function c(e) {
     try {
         let t = await new Promise((t, n) => {
                 if (null != e) {
-                    let i = new FileReader();
-                    (i.onload = (e) => {
+                    let r = new FileReader();
+                    (r.onload = (e) => {
                         "string" == typeof e.target?.result ? t(e.target.result) : n(Error("Failed to read file"));
                     }),
-                        i.readAsDataURL(e);
+                        r.readAsDataURL(e);
                 }
             }),
             n = new Image();
@@ -24,50 +24,50 @@ async function _(e) {
         throw l.o.WRONG_TYPE;
     }
 }
-async function u(e, t) {
+async function d(e, t) {
     let n = [];
-    for (let i = 0; i < e.length; i++) {
-        let r = e[i];
+    for (let r = 0; r < e.length; r++) {
+        let i = e[r];
         try {
-            let { image: e, dataURI: i } = await _(r),
-                s = r.type === d.a.MP4 ? await t(i, r) : await t(i, r, e);
-            null != s && n.push({ type: s, filename: r.name });
+            let { image: e, dataURI: r } = await c(i),
+                s = i.type === u.a.MP4 ? await t(r, i) : await t(r, i, e);
+            null != s && n.push({ type: s, filename: i.name });
         } catch (e) {
-            n.push({ type: e, filename: r.name });
+            n.push({ type: e, filename: i.name });
         }
     }
-    n.length > 0 && c(n);
+    n.length > 0 && _(n);
 }
-let c = (e) => {
+let _ = (e) => {
         (0, s.openModalLazy)(async () => {
             let { default: t } = await n.e("84981").then(n.bind(n, 940372));
-            return (n) => (0, i.jsx)(t, { errors: e, ...n });
+            return (n) => (0, r.jsx)(t, { errors: e, ...n });
         });
     },
-    E = r.forwardRef((e, t) => {
+    f = i.forwardRef((e, t) => {
         let {
                 onChange: l,
-                multiple: d = !0,
-                disabled: _,
-                className: c,
-                tabIndex: E = -1,
-                "aria-label": h,
-                filters: m,
-                setLoading: f,
-                title: g,
+                multiple: u = !0,
+                disabled: c,
+                className: _,
+                tabIndex: f = -1,
+                "aria-label": p,
+                filters: h,
+                setLoading: E,
+                title: m,
             } = e,
-            p = r.useRef(null),
-            [A, I] = r.useState(!1);
-        r.useEffect(() => {
+            g = i.useRef(null),
+            [A, I] = i.useState(!1);
+        i.useEffect(() => {
             A && T();
         }, [A]);
         let T = () => {
-                null !== p.current && ((0, s.closeModal)(p.current), (p.current = null));
+                null !== g.current && ((0, s.closeModal)(g.current), (g.current = null));
             },
             S = async (e) => {
-                f?.(!0), await u(e, l), I(!0), f?.(!1);
+                E?.(!0), await d(e, l), I(!0), E?.(!1);
             },
-            N = async (e) => {
+            y = async (e) => {
                 if (
                     (e.stopPropagation(),
                     e.preventDefault(),
@@ -75,22 +75,22 @@ let c = (e) => {
                 )
                     return;
                 let t = e.currentTarget.files;
-                p.current = await (0, s.openModalLazy)(async () => {
+                g.current = await (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e("17259").then(n.bind(n, 897126));
-                    return (n) => (0, i.jsx)(e, { processFiles: () => S(t), ...n });
+                    return (n) => (0, r.jsx)(e, { processFiles: () => S(t), ...n });
                 });
             };
-        return (0, i.jsx)(a.A, {
+        return (0, r.jsx)(a.A, {
             ref: t,
-            onChange: N,
-            filters: m ?? (0, o.gA)(),
-            multiple: d,
-            disabled: _,
-            className: c,
-            tabIndex: E,
-            "aria-label": h,
-            title: g,
+            onChange: y,
+            filters: h ?? (0, o.gA)(),
+            multiple: u,
+            disabled: c,
+            className: _,
+            tabIndex: f,
+            "aria-label": p,
+            title: m,
         });
     });
-E.displayName = "ImageInputWithModals";
-let h = E;
+f.displayName = "ImageInputWithModals";
+let p = f;

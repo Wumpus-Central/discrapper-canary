@@ -1,14 +1,15 @@
-n.d(t, { A: () => i });
+"use strict";
+n.d(t, { A: () => s });
 var r = n(64700),
-    a = n(27867);
-function i(e) {
+    i = n(27867);
+function s(e) {
     let { delay: t, disable: n = !1 } = e,
-        i = (0, a.A)();
+        s = (0, i.A)();
     r.useEffect(() => {
         if (t <= 0 || n) return;
         let e = setTimeout(() => {
-            i();
+            s();
         }, t);
         return () => clearTimeout(e);
-    }, [t, n, i]);
+    }, [t, n, s]);
 }

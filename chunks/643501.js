@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { default: () => m });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { default: () => h });
+var r = n(311907),
+    i = n(73153),
     s = n(528767),
     a = n(977997);
 let o = null,
     l = null,
-    d = new Set(),
-    _ = {},
-    u = {},
-    c = new Set(),
-    E = Object.freeze({});
-class h extends i.Ay.DeviceSettingsStore {
+    u = new Set(),
+    c = {},
+    d = {},
+    _ = new Set(),
+    f = Object.freeze({});
+class p extends r.Ay.DeviceSettingsStore {
     static displayName = "GameConsoleStore";
     static persistKey = "GameConsoleStore";
     initialize(e) {
-        null != e && (u = e.lastSelectedDeviceByPlatform), this.waitFor(s.A, a.A);
+        null != e && (d = e.lastSelectedDeviceByPlatform), this.waitFor(s.A, a.A);
     }
     getUserAgnosticState() {
-        return { lastSelectedDeviceByPlatform: u };
+        return { lastSelectedDeviceByPlatform: d };
     }
     getDevicesForPlatform(e) {
-        return _[e] ?? E;
+        return c[e] ?? f;
     }
     getLastSelectedDeviceByPlatform(e) {
-        return u[e];
+        return d[e];
     }
     getDevice(e, t) {
-        return _[e]?.[t];
+        return c[e]?.[t];
     }
     getFetchingDevices(e) {
-        return c.has(e);
+        return _.has(e);
     }
     getPendingDeviceCommands() {
-        return d;
+        return u;
     }
     getRemoteSessionId() {
         return o;
@@ -42,7 +42,7 @@ class h extends i.Ay.DeviceSettingsStore {
         return l;
     }
 }
-let m = new h(r.h, {
+let h = new p(i.h, {
     REMOTE_SESSION_CONNECT: function (e) {
         let { sessionId: t } = e;
         (o = t), (l = null);
@@ -51,27 +51,27 @@ let m = new h(r.h, {
         (o = null), (l = null);
     },
     WAIT_FOR_REMOTE_SESSION: function (e) {
-        let { sessionType: t, nonce: n, channelId: i, deviceId: r, commandId: s } = e;
-        l = { type: t, nonce: n, channelId: i, startedAt: Date.now(), deviceId: r, commandId: s };
+        let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: s } = e;
+        l = { type: t, nonce: n, channelId: r, startedAt: Date.now(), deviceId: i, commandId: s };
     },
     GAME_CONSOLE_FETCH_DEVICES_START: function (e) {
         let { platform: t } = e;
-        c.add(t);
+        _.add(t);
     },
     GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function (e) {
         let { platform: t, devices: n } = e;
-        c.delete(t);
-        let i = (_[t] = {}),
-            r = {};
-        for (let e of n) (i[e.id] = e), u[t] === e.id && (r[t] = e.id);
-        u = r;
+        _.delete(t);
+        let r = (c[t] = {}),
+            i = {};
+        for (let e of n) (r[e.id] = e), d[t] === e.id && (i[t] = e.id);
+        d = i;
     },
     GAME_CONSOLE_FETCH_DEVICES_FAIL: function (e) {
         let { platform: t } = e;
-        c.delete(t);
+        _.delete(t);
     },
     GAME_CONSOLE_SELECT_DEVICE: function (e) {
         let { platform: t, deviceId: n } = e;
-        u[t] = n;
+        d[t] = n;
     },
 });

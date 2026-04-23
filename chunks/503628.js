@@ -1,7 +1,8 @@
-r.exports = function (r) {
+"use strict";
+e.exports = function (e) {
     try {
-        return !!r();
-    } catch (r) {
+        return !!e();
+    } catch (e) {
         return !0;
     }
 };

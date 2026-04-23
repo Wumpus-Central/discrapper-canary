@@ -1,22 +1,22 @@
-n.d(r, { A: () => a });
-var e = n(64700),
-    i = n(17928),
-    s = n(654107),
-    l = n(67480),
-    u = n(871123);
-function a(t, r) {
-    let n = (0, i.bG)([l.A], () => l.A.get(t)),
-        [a, c] = e.useState(!1),
-        [d, A] = e.useState(!1),
-        _ = e.useMemo(() => (0, u.xf)(n), [n]),
-        o = e.useMemo(() => (0, u.fq)(n), [n]);
+n.d(e, { A: () => u });
+var r = n(64700),
+    s = n(311907),
+    l = n(654107),
+    i = n(67480),
+    a = n(871123);
+function u(t, e) {
+    let n = (0, s.bG)([i.A], () => i.A.get(t)),
+        [u, c] = r.useState(!1),
+        [o, d] = r.useState(!1),
+        A = r.useMemo(() => (0, a.xf)(n), [n]),
+        _ = r.useMemo(() => (0, a.fq)(n), [n]);
     return (
-        e.useEffect(() => {
-            if (n?.id == null || a || !r) return;
-            if (null == o) return void c(!0);
+        r.useEffect(() => {
+            if (n?.id == null || u || !e) return;
+            if (null == _) return void c(!0);
             let t = new Image();
             return (
-                (t.src = o.toString()),
+                (t.src = _.toString()),
                 (t.onload = () => {
                     c(!0);
                 }),
@@ -27,20 +27,20 @@ function a(t, r) {
                     (t.onerror = null), (t.onload = null), (t.src = "");
                 }
             );
-        }, [o, r, a, n?.id]),
-        e.useEffect(() => {
-            if (n?.id == null || d || !r) return;
-            if (null == _) return void A(!0);
+        }, [_, e, u, n?.id]),
+        r.useEffect(() => {
+            if (n?.id == null || o || !e) return;
+            if (null == A) return void d(!0);
             let t = !0;
             return (
-                (0, s.l0)(_.toString()).finally(() => {
-                    t && A(!0);
+                (0, l.l0)(A.toString()).finally(() => {
+                    t && d(!0);
                 }),
                 () => {
                     t = !1;
                 }
             );
-        }, [d, _, r, n?.id]),
-        e.useMemo(() => a && d, [a, d])
+        }, [o, A, e, n?.id]),
+        r.useMemo(() => u && o, [u, o])
     );
 }

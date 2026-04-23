@@ -1,117 +1,117 @@
 "use strict";
-n.d(t, { V: () => f, g: () => g });
-var i = n(627968),
-    r = n(64700),
+n.d(t, { V: () => E, g: () => m });
+var r = n(627968),
+    i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(834730),
-    l = n(17928),
-    d = n(349288),
-    _ = n(473193),
-    u = n(775602),
-    c = n(36075),
-    E = n(545442),
-    h = n(791347);
-function m(e) {
+    l = n(311907),
+    u = n(349288),
+    c = n(473193),
+    d = n(775602),
+    _ = n(36075),
+    f = n(545442),
+    p = n(791347);
+function h(e) {
     let {
             roleStyle: t,
             name: n,
             colorString: s,
             roleName: l,
-            colorStrings: d,
-            dotAlignment: u = "left",
-            className: m,
-            nameTextClassName: f,
-            animateRoleGradient: g,
-            variant: p,
+            colorStrings: u,
+            dotAlignment: d = "left",
+            className: h,
+            nameTextClassName: E,
+            animateRoleGradient: m,
+            variant: g,
             displayNameStylesFont: A = "",
         } = e,
-        I = r.useContext(_.C),
-        [T, S] = r.useState(!1),
-        N = r.useCallback(() => {
+        I = i.useContext(c.C),
+        [T, S] = i.useState(!1),
+        y = i.useCallback(() => {
             S(!0);
         }, []),
-        C = r.useCallback(() => {
+        N = i.useCallback(() => {
             S(!1);
         }, []),
-        R = "username" === t,
-        O = null != d && null != d.primaryColor && null != d.secondaryColor,
-        y = R && O,
+        v = "username" === t,
+        C = null != u && null != u.primaryColor && null != u.secondaryColor,
+        O = v && C,
         {
-            gradientStyle: v,
-            gradientClassname: D,
-            gradientGlowClassname: L,
-        } = (0, c.v5)({ colorStrings: d, roleStyle: "username", animateGradient: g || T || I?.animate }),
-        b = (0, c.CR)(n),
-        w = { className: a()(h.UU, f, A, { [h.Xh]: R, [D]: y }), children: b },
-        P = { className: a()(h.lD, L, A), children: n },
-        k =
+            gradientStyle: R,
+            gradientClassname: b,
+            gradientGlowClassname: D,
+        } = (0, _.v5)({ colorStrings: u, roleStyle: "username", animateGradient: m || T || I?.animate }),
+        L = (0, _.CR)(n),
+        w = { className: a()(p.UU, E, A, { [p.Xh]: v, [b]: O }), children: L },
+        M = { className: a()(p.lD, D, A), children: n },
+        P =
             "dot" === t
-                ? (0, i.jsx)(E.W, {
+                ? (0, r.jsx)(f.W, {
                       color: s,
-                      colors: O ? d : null,
+                      colors: C ? u : null,
                       name: l,
-                      className: "left" === u ? h.Hf : h.WN,
-                      hoverOverride: g || T || I?.animate,
+                      className: "left" === d ? p.Hf : p.WN,
+                      hoverOverride: m || T || I?.animate,
                   })
                 : null;
-    return (0, i.jsxs)("span", {
-        className: a()(m, h.kL),
-        onMouseEnter: N,
-        onMouseLeave: C,
+    return (0, r.jsxs)("span", {
+        className: a()(h, p.kL),
+        onMouseEnter: y,
+        onMouseLeave: N,
         children: [
-            "left" === u && k,
-            (0, i.jsxs)("span", {
-                className: h.VW,
-                style: { color: R && !O && null != s ? s : void 0, ...(y ? v : {}) },
+            "left" === d && P,
+            (0, r.jsxs)("span", {
+                className: p.VW,
+                style: { color: v && !C && null != s ? s : void 0, ...(O ? R : {}) },
                 children: [
-                    null != p
-                        ? (0, i.jsx)(o.E, { tag: "span", color: "currentColor", variant: p, ...w })
-                        : (0, i.jsx)("span", { ...w }),
-                    y &&
-                        (null != p
-                            ? (0, i.jsx)(o.E, {
+                    null != g
+                        ? (0, r.jsx)(o.E, { tag: "span", color: "currentColor", variant: g, ...w })
+                        : (0, r.jsx)("span", { ...w }),
+                    O &&
+                        (null != g
+                            ? (0, r.jsx)(o.E, {
                                   tag: "span",
                                   color: "currentColor",
                                   "aria-hidden": !0,
-                                  variant: p,
-                                  ...P,
+                                  variant: g,
+                                  ...M,
                               })
-                            : (0, i.jsx)("span", { "aria-hidden": !0, ...P })),
+                            : (0, r.jsx)("span", { "aria-hidden": !0, ...M })),
                 ],
             }),
-            "right" === u && k,
+            "right" === d && P,
         ],
     });
 }
-function f(e) {
+function E(e) {
     let {
             name: t,
             colorString: n,
-            roleName: r,
+            roleName: i,
             dotAlignment: s,
             className: a,
             colorStrings: o,
-            animateRoleGradient: _,
-            ref: c,
-            ...E
+            animateRoleGradient: c,
+            ref: _,
+            ...f
         } = e,
-        h = (0, l.bG)([u.A], () => u.A.roleStyle),
-        f = "username" === h,
-        g = (0, i.jsx)(m, {
-            roleStyle: h,
+        p = (0, l.bG)([d.A], () => d.A.roleStyle),
+        E = "username" === p,
+        m = (0, r.jsx)(h, {
+            roleStyle: p,
             name: t,
             colorString: n,
-            roleName: r,
+            roleName: i,
             dotAlignment: s,
             className: a,
             colorStrings: o,
-            animateRoleGradient: _,
+            animateRoleGradient: c,
         }),
-        p = f && null != n ? { color: n } : void 0;
-    return (0, i.jsx)(d.Anchor, { ...E, children: g, style: p, ref: c });
+        g = E && null != n ? { color: n } : void 0;
+    return (0, r.jsx)(u.Anchor, { ...f, children: m, style: g, ref: _ });
 }
-function g(e) {
-    let t = (0, l.bG)([u.A], () => u.A.roleStyle);
-    return (0, i.jsx)(m, { ...e, roleStyle: t });
+function m(e) {
+    let t = (0, l.bG)([d.A], () => d.A.roleStyle);
+    return (0, r.jsx)(h, { ...e, roleStyle: t });
 }

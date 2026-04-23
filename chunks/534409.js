@@ -1,5 +1,6 @@
-n.d(t, { k5: () => a, lV: () => s, qK: () => r });
-let i = (0, n(945810).mj)({
+"use strict";
+n.d(t, { k5: () => s, lV: () => a, qK: () => i });
+let r = (0, n(945810).mj)({
     kind: "user",
     name: "2025-04-desktop-refresh-fast-follows",
     defaultConfig: { largerGuildIcons: !1, darkerGuildListBackground: !1, distinctBorders: !1 },
@@ -11,12 +12,12 @@ let i = (0, n(945810).mj)({
         5: { largerGuildIcons: !0, darkerGuildListBackground: !1, distinctBorders: !0 },
     },
 });
-function r(e) {
+function i(e) {
     return !1;
 }
-function a(e) {
-    return i.useConfig({ location: e }).darkerGuildListBackground;
-}
 function s(e) {
-    return i.useConfig({ location: e }).distinctBorders;
+    return r.useConfig({ location: e }).darkerGuildListBackground;
+}
+function a(e) {
+    return r.useConfig({ location: e }).distinctBorders;
 }

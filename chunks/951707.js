@@ -4,7 +4,7 @@ var l = n(627968),
     i = n(503698),
     r = n.n(i),
     s = n(735438),
-    o = n(17928),
+    o = n(311907),
     c = n(408278),
     d = n(548411),
     u = n(554830),
@@ -21,14 +21,14 @@ let p = (e) => {
             hideActionsWhenDisabled: p = !0,
             className: x,
             iconButtonSize: E,
-            "aria-label": v,
+            "aria-label": A,
         } = e,
-        A = a.useId(),
+        v = a.useId(),
         I = a.useRef(0),
         b = a.useRef(0),
         j = a.useRef(0),
-        C = a.useRef(!1),
         N = a.useRef(!1),
+        C = a.useRef(!1),
         S = a.useRef(null),
         y = a.useRef(null),
         R = (0, o.bG)([f.A], () => f.A.keyboardModeEnabled),
@@ -51,7 +51,7 @@ let p = (e) => {
             w(b.current > I.current);
         },
         U = a.useCallback(() => {
-            if (N.current) return null;
+            if (C.current) return null;
             let e = B.current;
             if (null == e) return null;
             let t = Math.floor((j.current + e.clientWidth / 2) / (e.scrollWidth / e.childElementCount)),
@@ -109,9 +109,9 @@ let p = (e) => {
                     let { scrollLeft: t } = e,
                         n = Math.max(0, t - I.current);
                     (j.current = n),
-                        (C.current = !0),
+                        (N.current = !0),
                         e.scrollTo({ left: n, behavior: L ? "auto" : "smooth" }),
-                        e.addEventListener("scrollend", () => (C.current = !1), { once: !0 }),
+                        e.addEventListener("scrollend", () => (N.current = !1), { once: !0 }),
                         V();
                     let l = U();
                     null != l && (y.current = l);
@@ -126,9 +126,9 @@ let p = (e) => {
                     let { scrollLeft: t } = e,
                         n = t + I.current;
                     (j.current = n),
-                        (C.current = !0),
+                        (N.current = !0),
                         e.scrollTo({ left: n, behavior: L ? "auto" : "smooth" }),
-                        e.addEventListener("scrollend", () => (C.current = !1), { once: !0 }),
+                        e.addEventListener("scrollend", () => (N.current = !1), { once: !0 }),
                         V();
                     let l = U();
                     null != l && (y.current = l);
@@ -158,8 +158,8 @@ let p = (e) => {
     let Z = { "--custom-edge-fade-width": `var(--space-${i})` };
     return (0, l.jsxs)("div", {
         ref: W,
-        role: null != v ? "region" : void 0,
-        "aria-label": v,
+        role: null != A ? "region" : void 0,
+        "aria-label": A,
         style: Z,
         className: r()(g.kL, x),
         children: [
@@ -178,7 +178,7 @@ let p = (e) => {
                                 disabled: !M,
                                 "aria-label": _.intl.string(_.t.FQx1Ru),
                                 "aria-hidden": !M && p,
-                                "aria-controls": A,
+                                "aria-controls": v,
                             }),
                         }),
                         (0, l.jsx)("div", {
@@ -191,7 +191,7 @@ let p = (e) => {
                                 disabled: !G,
                                 "aria-label": _.intl.string(_.t.H4hwjn),
                                 "aria-hidden": !G && p,
-                                "aria-controls": A,
+                                "aria-controls": v,
                             }),
                         }),
                     ],
@@ -199,8 +199,8 @@ let p = (e) => {
             (0, l.jsx)(m.B, {
                 direction: "horizontal",
                 gap: n,
-                id: A,
-                "aria-label": v,
+                id: v,
+                "aria-label": A,
                 ref: B,
                 className: r()(g.Y_, { [g.jL]: M, [g.w6]: G, [g.XG]: M && G, [g.DY]: R }),
                 tabIndex: 0,
@@ -246,13 +246,13 @@ let p = (e) => {
                                 n = Math.max(0, Math.min(t.scrollWidth - t.clientWidth, e));
                             (j.current = n),
                                 n !== t.scrollLeft &&
-                                    ((C.current = !0),
-                                    (N.current = !0),
+                                    ((N.current = !0),
+                                    (C.current = !0),
                                     t.scrollTo({ left: n, behavior: L ? "auto" : "smooth" }),
                                     t.addEventListener(
                                         "scrollend",
                                         () => {
-                                            (C.current = !1), (N.current = !1);
+                                            (N.current = !1), (C.current = !1);
                                         },
                                         { once: !0 },
                                     )),
@@ -262,7 +262,7 @@ let p = (e) => {
                         } else t.setAttribute("tabIndex", "0"), U();
                 },
                 onScroll: (e) => {
-                    C.current || ((j.current = e.target.scrollLeft), V());
+                    N.current || ((j.current = e.target.scrollLeft), V());
                 },
                 children: T,
             }),

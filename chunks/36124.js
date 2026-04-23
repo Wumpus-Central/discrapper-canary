@@ -1,11 +1,12 @@
-n.d(t, { Ay: () => E, JM: () => _, LD: () => l });
-var i = n(735438),
-    r = n.n(i),
-    a = n(635377),
-    s = n.n(a);
-let _ = 100,
+"use strict";
+n.d(t, { Ay: () => c, JM: () => o, LD: () => l });
+var r = n(735438),
+    i = n.n(r),
+    s = n(635377),
+    a = n.n(s);
+let o = 100,
     l = [[0, 99]];
-function o(e) {
+function u(e) {
     let t = {};
     return (
         e.forEach((e, n) => {
@@ -14,7 +15,7 @@ function o(e) {
         t
     );
 }
-class E {
+class c {
     _subscriptions = {};
     _onChange;
     constructor(e) {
@@ -24,16 +25,16 @@ class E {
         this._subscriptions = {};
     }
     get(e) {
-        return o(this._get(e));
+        return u(this._get(e));
     }
     _get(e) {
-        return this._subscriptions[e] ?? new (s())({ max: 5 });
+        return this._subscriptions[e] ?? new (a())({ max: 5 });
     }
     clear(e) {
         delete this._subscriptions[e];
     }
     subscribe(e, t, n) {
-        let i = this._get(e);
-        return !r().isEqual(i.get(t), n) && (i.set(t, n), (this._subscriptions[e] = i), this._onChange(e, o(i)), !0);
+        let r = this._get(e);
+        return !i().isEqual(r.get(t), n) && (r.set(t, n), (this._subscriptions[e] = r), this._onChange(e, u(r)), !0);
     }
 }

@@ -1,7 +1,7 @@
 e.d(n, { W: () => d, s: () => A });
 var i = e(627968);
 e(64700);
-var l = e(17928),
+var l = e(311907),
     r = e(192308),
     a = e(477782),
     s = e(20805),
@@ -28,7 +28,7 @@ function A(t) {
               action: () => {
                   x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                       (0, r.openModalLazy)(async () => {
-                          let { default: t } = await Promise.all([e.e("19119"), e.e("36946")]).then(e.bind(e, 839785));
+                          let { default: t } = await Promise.all([e.e("10117"), e.e("36946")]).then(e.bind(e, 839785));
                           return (e) => (0, i.jsx)(t, { entry: u, user: n, onAction: x, onOpenGameSettings: p, ...e });
                       });
               },

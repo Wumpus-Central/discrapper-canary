@@ -1,7 +1,7 @@
 t.d(n, { A: () => s });
 var l = t(64700),
-    i = t(17928),
-    r = t(841595);
+    i = t(311907),
+    r = t(622543);
 let a = [];
 function s(e) {
     let n = (0, i.bG)([r.A], () => r.A.getUserProfile(e));

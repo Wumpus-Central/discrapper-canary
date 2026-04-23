@@ -1,51 +1,51 @@
 "use strict";
-let i, r, s, a;
-n.r(t), n.d(t, { default: () => N }), n(938796);
+let r, i, s, a;
+n.r(t), n.d(t, { default: () => y }), n(938796);
 var o = n(158390),
     l = n(247775),
-    d = n(17928),
-    _ = n(636537),
-    u = n(506774),
-    c = n(228366),
-    E = n(926919),
-    h = n(927813),
-    m = n(38405),
-    f = n(652215);
-let g =
-        ((i = `${location.protocol}//${location.host}/__development/source_maps`),
-        (r = null),
-        (s = new o.A(5 * h.A.Millis.SECOND, +h.A.Millis.MINUTE, !0)),
+    u = n(311907),
+    c = n(562465),
+    d = n(506774),
+    _ = n(73153),
+    f = n(926919),
+    p = n(927813),
+    h = n(728458),
+    E = n(652215);
+let m =
+        ((r = `${location.protocol}//${location.host}/__development/source_maps`),
+        (i = null),
+        (s = new o.A(5 * p.A.Millis.SECOND, +p.A.Millis.MINUTE, !0)),
         (a = () => {
-            _.Bo.put({ url: i, headers: { Authorization: l.getToken() }, oldFormErrors: !0, rejectWithError: !0 }).then(
+            c.Bo.put({ url: r, headers: { Authorization: l.getToken() }, oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
                     401 === e.status || 403 === e.status
-                        ? ((r = null), (0, E.x)({ sourceMapsEnabled: !1 }))
+                        ? ((i = null), (0, f.x)({ sourceMapsEnabled: !1 }))
                         : 200 !== e.status
-                          ? (r = setTimeout(a, s.fail()))
+                          ? (i = setTimeout(a, s.fail()))
                           : (s.succeed(),
-                            (r = setTimeout(a, e.body.sourceMapCookieTTLSeconds * h.A.Millis.SECOND * 0.75)));
+                            (i = setTimeout(a, e.body.sourceMapCookieTTLSeconds * p.A.Millis.SECOND * 0.75)));
                 },
                 () => {
-                    r = setTimeout(a, s.fail());
+                    i = setTimeout(a, s.fail());
                 },
             );
         }),
         {
             set: (e) => {
-                e !== (null != r) &&
+                e !== (null != i) &&
                     (e
-                        ? (r = setTimeout(a, 0))
-                        : (clearTimeout(r),
-                          (r = null),
-                          _.Bo.del({
-                              url: i,
+                        ? (i = setTimeout(a, 0))
+                        : (clearTimeout(i),
+                          (i = null),
+                          c.Bo.del({
+                              url: r,
                               headers: { Authorization: l.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0,
                           })));
             },
         }),
-    p = "DeveloperOptionsStore",
+    g = "DeveloperOptionsStore",
     A = {
         trace: !1,
         canary: !1,
@@ -68,12 +68,12 @@ let g =
     },
     I = { ...A };
 function T(e) {
-    (I = { ...A, ...I, ...e }), g.set(I.sourceMapsEnabled), u.w.set(p, I);
+    (I = { ...A, ...I, ...e }), m.set(I.sourceMapsEnabled), d.w.set(g, I);
 }
-class S extends d.Ay.Store {
+class S extends u.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
-        let e = u.w.get(p);
+        let e = d.w.get(g);
         null != e && (I = { ...A, ...e });
     }
     get isTracingRequests() {
@@ -139,14 +139,14 @@ class S extends d.Ay.Store {
         );
     }
 }
-let N = new S(c.h, {
+let y = new S(_.h, {
     LOGOUT: function (e) {
         T(A);
     },
     CONNECTION_OPEN: function (e) {
-        let t = ((e.user.flags ?? 0) & f.nhx.STAFF) === f.nhx.STAFF,
+        let t = ((e.user.flags ?? 0) & E.nhx.STAFF) === E.nhx.STAFF,
             n = t || null != e.user.personal_connection_id;
-        t && g.set(I.sourceMapsEnabled), m.A.setTags({ isStaff: n.toString() });
+        t && m.set(I.sourceMapsEnabled), h.A.setTags({ isStaff: n.toString() });
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;

@@ -1,4 +1,5 @@
-n.d(t, { Ay: () => s, GT: () => l, Mz: () => o, fB: () => d, qH: () => _, rs: () => E }),
+"use strict";
+n.d(t, { Ay: () => a, GT: () => l, Mz: () => u, fB: () => d, qH: () => o, rs: () => c }),
     n(323874),
     n(14289),
     n(35956),
@@ -10,17 +11,17 @@ n.d(t, { Ay: () => s, GT: () => l, Mz: () => o, fB: () => d, qH: () => _, rs: ()
     n(949626),
     n(767709),
     n(65162);
-var i,
-    r = n(115943),
-    a = n.n(r);
-let s = async (e, t, n) => {
-    var i;
+var r,
+    i = n(115943),
+    s = n.n(i);
+let a = async (e, t, n) => {
+    var r;
     return {
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: Math.round(((i = await t.arrayBuffer()), a().decode(i)).frames.reduce((e, t) => e + t.delay, 0)),
+        duration: Math.round(((r = await t.arrayBuffer()), s().decode(r)).frames.reduce((e, t) => e + t.delay, 0)),
         start: 0,
         position: { x: 0, y: 0 },
         zIndex: 100 + n,
@@ -29,9 +30,9 @@ let s = async (e, t, n) => {
         name: t.name,
     };
 };
-var _ = (((i = {}).THUMBNAIL = "Thumbnail"), (i.STATIC = "Static"), (i.REDUCED_MOTION = "Reduced Motion"), i);
+var o = (((r = {}).THUMBNAIL = "Thumbnail"), (r.STATIC = "Static"), (r.REDUCED_MOTION = "Reduced Motion"), r);
 let l = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
-    o = (e, t) => {
+    u = (e, t) => {
         if (null == e) return;
         let n = new FileReader();
         (n.onload = (e) => {
@@ -39,7 +40,7 @@ let l = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
         }),
             n.readAsDataURL(e);
     },
-    E = (e) =>
+    c = (e) =>
         "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
         e
             .map((e) =>
@@ -71,11 +72,11 @@ let l = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
     d = (e) => {
         let t = ((e) => {
             let [t, n] = e.split(","),
-                i = atob(n),
-                r = t.split(";")[0],
-                a = new Uint8Array(i.length);
-            for (let e = 0; e < i.length; e++) a[e] = i.charCodeAt(e);
-            return new Blob([a], { type: r });
+                r = atob(n),
+                i = t.split(";")[0],
+                s = new Uint8Array(r.length);
+            for (let e = 0; e < r.length; e++) s[e] = r.charCodeAt(e);
+            return new Blob([s], { type: i });
         })(e);
         return URL.createObjectURL(t);
     };

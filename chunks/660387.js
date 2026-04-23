@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { F: () => a }), n(17928);
-var i = n(812808),
-    r = n(943577),
+n.d(t, { F: () => a }), n(311907);
+var r = n(812808),
+    i = n(943577),
     s = n(954571);
 function a() {
     var e, t;
     let n,
-        a = (0, i.B)();
+        a = (0, r.B)();
     return (
-        (e = r.A.nowPlayingCards),
+        (e = i.A.nowPlayingCards),
         (t = a),
         (n = e.reduce((e, t) => {
             let n =

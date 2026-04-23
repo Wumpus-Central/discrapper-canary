@@ -1,12 +1,13 @@
-n.d(t, { A: () => E }), n(321073);
-var i = n(490138),
-    r = n(636537),
-    a = n(723702),
-    s = n(290805),
-    _ = n(245903),
+"use strict";
+n.d(t, { A: () => c }), n(321073);
+var r = n(490138),
+    i = n(562465),
+    s = n(723702),
+    a = n(290805),
+    o = n(245903),
     l = n(652215);
-let o = new Set(["darwin", "linux", "win32", "ios", "android"]),
-    E = new (class {
+let u = new Set(["darwin", "linux", "win32", "ios", "android"]),
+    c = new (class {
         constructor() {
             (this._metrics = []),
                 (this._intervalId = setInterval(() => {
@@ -15,22 +16,22 @@ let o = new Set(["darwin", "linux", "win32", "ios", "android"]),
         }
         _getMetricWithDefaults(e, t) {
             let n,
-                { name: r, tags: l } = e,
-                E = { name: r, type: t, tags: (0, _.u)() };
+                { name: i, tags: l } = e,
+                c = { name: i, type: t, tags: (0, o.u)() };
             null != l &&
                 l.forEach((e) => {
-                    E.tags.push(e);
+                    c.tags.push(e);
                 });
             let d = (function () {
-                if ((0, a.isWeb)()) return "web";
+                if ((0, s.isWeb)()) return "web";
                 {
-                    let e = (0, a.getPlatformName)();
-                    return o.has(e) ? e : null;
+                    let e = (0, s.getPlatformName)();
+                    return u.has(e) ? e : null;
                 }
             })();
-            null != d && E.tags.push(`platform:${d}`);
-            let c = null != (n = s.y) && i.f.ALL.has(n) ? n : null;
-            return null != c && E.tags.push(`release_channel:${c}`), E;
+            null != d && c.tags.push(`platform:${d}`);
+            let _ = null != (n = a.y) && r.f.ALL.has(n) ? n : null;
+            return null != _ && c.tags.push(`release_channel:${_}`), c;
         }
         increment(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -39,15 +40,15 @@ let o = new Set(["darwin", "linux", "win32", "ios", "android"]),
         }
         distribution(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = { ...this._getMetricWithDefaults(e, "distribution"), value: t };
-            this._metrics.push(i), (n || this._metrics.length >= 100) && this._flush();
+                r = { ...this._getMetricWithDefaults(e, "distribution"), value: t };
+            this._metrics.push(r), (n || this._metrics.length >= 100) && this._flush();
         }
         _flush() {
             if (this._metrics.length > 0) {
                 let e = [...this._metrics];
-                r.Bo.post({
+                i.Bo.post({
                     url: l.Rsh.METRICS_V2,
-                    body: { metrics: e, client_info: { built_at: "1776967787688", build_number: "534148" } },
+                    body: { metrics: e, client_info: { built_at: "1776967788958", build_number: "534149" } },
                     retries: 1,
                     rejectWithError: !0,
                 }).catch((t) => {

@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { $i: () => c, NC: () => h, qo: () => E });
-var i = n(17928),
-    r = n(462887),
+n.d(t, { $i: () => _, NC: () => p, qo: () => f });
+var r = n(311907),
+    i = n(462887),
     s = n(467135),
     a = n(47671),
-    o = n(363195),
+    o = n(544028),
     l = n(964404),
-    d = n(253932),
-    _ = n(652215);
-function u() {
+    u = n(253932),
+    c = n(652215);
+function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A,
         { darkSidebar: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Ay,
         { gradientPreset: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.A,
-        i = arguments.length > 3 ? arguments[3] : void 0,
+        r = arguments.length > 3 ? arguments[3] : void 0,
         s = arguments.length > 4 ? arguments[4] : void 0,
-        d = null != i.customUserThemeSettings;
-    return (0, r.q)(e.theme) && t && null == n && !(d || s);
+        u = null != r.customUserThemeSettings;
+    return (0, i.q)(e.theme) && t && null == n && !(u || s);
 }
-function c() {
-    let e = d.eh.getSetting(),
+function _() {
+    let e = u.eh.getSetting(),
         t = s.ko.getState().isEditorActive();
-    return u(o.A, l.Ay, a.A, e, t);
+    return d(o.A, l.Ay, a.A, e, t);
 }
-function E() {
-    let e = d.eh.useSetting(),
+function f() {
+    let e = u.eh.useSetting(),
         t = (0, s.ko)((e) => e.isEditorActive());
-    return (0, i.bG)([o.A, l.Ay, a.A], () => u(o.A, l.Ay, a.A, e, t));
+    return (0, r.bG)([o.A, l.Ay, a.A], () => d(o.A, l.Ay, a.A, e, t));
 }
-function h() {
-    return E() ? _.NJ8.DARK : void 0;
+function p() {
+    return f() ? c.NJ8.DARK : void 0;
 }

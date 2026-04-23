@@ -1,27 +1,28 @@
+"use strict";
 n.d(t, { A: () => u });
-var i = n(64700),
-    r = n(17928),
-    a = n(253932),
-    l = n(403362),
-    s = n(382483),
-    o = n(385113);
+var r = n(64700),
+    i = n(311907),
+    s = n(253932),
+    a = n(403362),
+    o = n(382483),
+    l = n(385113);
 function u(e) {
-    let t = a.Q_.useSetting(),
-        n = (0, r.bG)([o.A], () => o.A.getFeaturedFetchState()),
-        u = (0, r.bG)([o.A], () => o.A.getDeveloperFetchState()),
-        _ = (0, r.yK)([o.A], () => e.filter((e) => o.A.getFetchState(e) === o.e.NOT_FETCHED)),
-        E = (0, r.yK)([o.A], () => e.map((e) => o.A.getConfig(e)).filter(l.Vq));
+    let t = s.Q_.useSetting(),
+        n = (0, i.bG)([l.A], () => l.A.getFeaturedFetchState()),
+        u = (0, i.bG)([l.A], () => l.A.getDeveloperFetchState()),
+        c = (0, i.yK)([l.A], () => e.filter((e) => l.A.getFetchState(e) === l.e.NOT_FETCHED)),
+        d = (0, i.yK)([l.A], () => e.map((e) => l.A.getConfig(e)).filter(a.Vq));
     return (
-        i.useEffect(() => {
-            (0, s.Wq)();
+        r.useEffect(() => {
+            (0, o.Wq)();
         }, []),
-        i.useEffect(() => {
-            t && (0, s.i$)();
+        r.useEffect(() => {
+            t && (0, o.i$)();
         }, [t]),
-        i.useEffect(() => {
-            if (n !== o.e.NOT_FETCHED && n !== o.e.FETCHING && (!t || (u !== o.e.NOT_FETCHED && u !== o.e.FETCHING)))
-                for (let e of _) (0, s.un)(e);
-        }, [u, n, _, t]),
-        E
+        r.useEffect(() => {
+            if (n !== l.e.NOT_FETCHED && n !== l.e.FETCHING && (!t || (u !== l.e.NOT_FETCHED && u !== l.e.FETCHING)))
+                for (let e of c) (0, o.un)(e);
+        }, [u, n, c, t]),
+        d
     );
 }

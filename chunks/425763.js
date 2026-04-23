@@ -1,13 +1,14 @@
-n.d(t, { VU: () => _, ef: () => s, ny: () => l });
-var i = n(353640),
-    r = n(121894);
-let a = (0, i.v)((e) => ({ inDndMode: !1 }));
-function s(e) {
-    (0, r.r)(() => a.setState({ inDndMode: e }));
+"use strict";
+n.d(t, { VU: () => o, ef: () => a, ny: () => l });
+var r = n(353640),
+    i = n(121894);
+let s = (0, r.v)((e) => ({ inDndMode: !1 }));
+function a(e) {
+    (0, i.r)(() => s.setState({ inDndMode: e }));
 }
-function _() {
-    return a((e) => e.inDndMode);
+function o() {
+    return s((e) => e.inDndMode);
 }
 function l() {
-    return a.getState().inDndMode;
+    return s.getState().inDndMode;
 }

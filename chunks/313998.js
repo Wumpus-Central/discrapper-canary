@@ -4,7 +4,7 @@ l(64700);
 var i = l(503698),
     r = l.n(i),
     a = l(110259),
-    d = l(17928),
+    d = l(311907),
     s = l(554146),
     o = l(477782),
     u = l(834730),
@@ -20,10 +20,10 @@ var i = l(503698),
     C = l(164891),
     p = l(734057),
     _ = l(309010),
-    N = l(806931),
-    T = l(49999),
-    v = l(985018),
-    j = l(295573);
+    v = l(806931),
+    N = l(49999),
+    j = l(985018),
+    T = l(295573);
 function I(e, n) {
     let l = (0, d.bG)([_.A], () => _.A.getVoiceChannelId()),
         t = (0, d.bG)([p.A], () => p.A.getChannel(l)?.getGuildId() ?? void 0),
@@ -43,7 +43,7 @@ function y(e, n) {
         y = c?.guild_id != null,
         M = _ && y,
         O = null == i,
-        U = null != i && i.type === N.lp.USER && i.ringing,
+        U = null != i && i.type === v.lp.USER && i.ringing,
         S = [];
     M && !I && (O || U) && S.push(s.M.RING_USER_TO_VC_NEW_BADGE);
     let [P, R] = (0, h.kn)(S),
@@ -63,31 +63,31 @@ function y(e, n) {
     )
         return null;
     if (O) {
-        let l = y ? v.intl.string(v.t["3Hv9qQ"]) : v.intl.string(v.t.RDheZm);
+        let l = y ? j.intl.string(j.t["3Hv9qQ"]) : j.intl.string(j.t.RDheZm);
         return (0, t.jsx)(o.Dr, {
             id: "ring",
             label: l,
             badge: D ? "new" : void 0,
             subtext: M ? (0, t.jsx)(G, { channel: c }) : null,
             action: () => {
-                D && R(T.i.TAKE_ACTION), A.A.ring(n, [e.id], "user_context_menu"), M && null != n && (0, E.iN)(n);
+                D && R(N.i.TAKE_ACTION), A.A.ring(n, [e.id], "user_context_menu"), M && null != n && (0, E.iN)(n);
             },
         });
     }
     return U
         ? (0, t.jsx)(o.Dr, {
               id: "stop-ringing",
-              label: v.intl.string(v.t.ygslb0),
+              label: j.intl.string(j.t.ygslb0),
               badge: D ? "new" : void 0,
               subtext: M
                   ? (0, t.jsx)(u.E, {
                         variant: "text-xs/medium",
-                        className: r()(j.W$, j.DF),
-                        children: v.intl.format(v.t.dwfzZi, { channelName: (0, t.jsx)(G, { channel: c }) }),
+                        className: r()(T.W$, T.DF),
+                        children: j.intl.format(j.t.dwfzZi, { channelName: (0, t.jsx)(G, { channel: c }) }),
                     })
                   : null,
               action: () => {
-                  D && R(T.i.TAKE_ACTION), A.A.stopRinging(n, [e.id]);
+                  D && R(N.i.TAKE_ACTION), A.A.stopRinging(n, [e.id]);
               },
           })
         : null;
@@ -96,10 +96,10 @@ let G = (e) => {
     let { channel: n } = e,
         l = (0, f.Ay)(n);
     return (0, t.jsxs)("div", {
-        className: j.W$,
+        className: T.W$,
         children: [
             (0, t.jsx)(c.H, { size: "xs" }),
-            (0, t.jsx)(u.E, { variant: "text-xs/medium", className: j.HA, children: l }),
+            (0, t.jsx)(u.E, { variant: "text-xs/medium", className: T.HA, children: l }),
         ],
     });
 };

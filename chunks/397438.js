@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => c });
-var i = n(17928),
-    r = n(506774),
-    s = n(228366),
+n.d(t, { A: () => _ });
+var r = n(311907),
+    i = n(506774),
+    s = n(73153),
     a = n(617617);
 let o = {},
     l = {};
-function d() {
+function u() {
     let e = a.A.settings;
     return {
         gifAutoPlay: e.textAndImages?.gifAutoPlay?.value,
@@ -14,20 +14,20 @@ function d() {
         animateStickers: e.textAndImages?.animateStickers?.value,
     };
 }
-function _() {
-    return (l = d()), !1;
+function c() {
+    return (l = u()), !1;
 }
-class u extends i.Ay.PersistedStore {
+class d extends r.Ay.PersistedStore {
     static displayName = "UserSettingsOverridesStore";
     static persistKey = "UserSettingsOverridesStore";
     static migrations = [
         () => {
-            let e = r.w.get("UserSettingsStoreOverrides") ?? {};
-            return r.w.remove("UserSettingsStoreOverrides"), e;
+            let e = i.w.get("UserSettingsStoreOverrides") ?? {};
+            return i.w.remove("UserSettingsStoreOverrides"), e;
         },
     ];
     initialize(e) {
-        (o = e ?? {}), this.syncWith([a.A], _);
+        (o = e ?? {}), this.syncWith([a.A], c);
     }
     getState() {
         return o;
@@ -39,9 +39,9 @@ class u extends i.Ay.PersistedStore {
         return o[e];
     }
 }
-let c = new u(s.h, {
+let _ = new d(s.h, {
     USER_SETTINGS_PROTO_UPDATE: function () {
-        let e = d(),
+        let e = u(),
             t = !1;
         for (let n in e) e[n] !== l[n] && (delete o[n], (t = !0));
         return t;

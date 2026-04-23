@@ -1,29 +1,29 @@
-l.d(t, { A: () => p });
-var r = l(400253),
-    n = l(742821),
-    i = l(80703),
-    s = l(197111),
-    a = l(954571),
-    o = l(877062),
-    u = l(292572),
-    c = l(652215);
-let d = "template",
-    p = {
-        ...u.A,
+n.d(t, { A: () => A });
+var i = n(400253),
+    r = n(49485),
+    a = n(80703),
+    l = n(197111),
+    s = n(954571),
+    o = n(877062),
+    d = n(292572),
+    u = n(652215);
+let c = "template",
+    A = {
+        ...d.A,
         openNativeAppModal(e) {
-            s.A.openNativeAppModal(e, c.e$_.GUILD_TEMPLATE_BROWSER);
+            l.A.openNativeAppModal(e, u.e$_.GUILD_TEMPLATE_BROWSER);
         },
         openMobileApp(e, t) {
             if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
-            let l = null != e ? (0, r.FH)(e) : (0, r.BH)(),
-                s = (0, n.I_)(),
-                u = (0, n.Ay)(l, { utmSource: d, fingerprint: t, attemptId: s });
-            a.default.track(c.HAw.DEEP_LINK_CLICKED, {
-                fingerprint: (0, i.v)(t),
-                attempt_id: s,
-                source: d,
+            let n = null != e ? (0, i.FH)(e) : (0, i.BH)(),
+                l = (0, r.I_)(),
+                d = (0, r.Ay)(n, { utmSource: c, fingerprint: t, attemptId: l });
+            s.default.track(u.HAw.DEEP_LINK_CLICKED, {
+                fingerprint: (0, a.v)(t),
+                attempt_id: l,
+                source: c,
                 guild_template_code: e,
             }),
-                o.A.launch(u, () => {});
+                o.A.launch(d, () => {});
         },
     };

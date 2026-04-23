@@ -1,17 +1,18 @@
-n.d(t, { Ay: () => f, gN: () => N });
-var i = n(17928),
-    r = n(713402),
-    a = n(451988),
-    s = n(228366),
-    _ = n(495544),
+"use strict";
+n.d(t, { Ay: () => T, gN: () => g });
+var r = n(311907),
+    i = n(713402),
+    s = n(451988),
+    a = n(73153),
+    o = n(961350),
     l = n(309010),
-    o = n(625494),
-    E = n(3137),
+    u = n(203982),
+    c = n(3137),
     d = n(103640),
-    c = n(31408),
-    u = n(652215);
-let I = new Set(),
-    A = new r.J(
+    _ = n(31408),
+    f = n(652215);
+let p = new Set(),
+    h = new i.J(
         function (e) {
             let { userId: t, channelId: n } = e;
             return [t, n];
@@ -21,113 +22,113 @@ let I = new Set(),
             return `${n}-${t}`;
         },
     ),
-    T = new r.J(
+    E = new i.J(
         function (e) {
             let {
                 messageId: t,
                 channelId: n,
-                combo: { userId: i },
+                combo: { userId: r },
             } = e;
-            return [t, n, i];
+            return [t, n, r];
         },
         function (e) {
             let {
                 messageId: t,
                 channelId: n,
-                combo: { userId: i },
+                combo: { userId: r },
             } = e;
-            return `${n}-${i}-${t}`;
+            return `${n}-${r}-${t}`;
         },
     ),
-    S = (e) => {
+    m = (e) => {
         let { userId: t, channelId: n } = e;
         return `${t}-${n}`;
     };
-function N(e, t, n, i) {
-    return !(e !== t || null == n || i.has(n)) && (i.add(n), !0);
+function g(e, t, n, r) {
+    return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-class O extends i.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "PoggermodeStore";
     initialize() {
-        this.waitFor(_.default, E.A, l.A);
+        this.waitFor(o.default, c.A, l.A);
     }
     getComboScore(e, t) {
-        let n = A.get(S({ userId: e, channelId: t }));
+        let n = h.get(m({ userId: e, channelId: t }));
         return null == n ? 0 : (0, d.RL)(n);
     }
     getUserCombo(e, t) {
-        return A.get(S({ userId: e, channelId: t }));
+        return h.get(m({ userId: e, channelId: t }));
     }
     isComboing(e, t) {
         var n;
-        let i = this.getUserCombo(e, t);
-        return null != i && i.value >= E.A.combosRequiredCount && null != (n = i) && (n.value > 0 || n?.multiplier > 1);
+        let r = this.getUserCombo(e, t);
+        return null != r && r.value >= c.A.combosRequiredCount && null != (n = r) && (n.value > 0 || n?.multiplier > 1);
     }
     getMessageCombo(e) {
-        let t = T.get(e);
+        let t = E.get(e);
         return t?.combo ?? void 0;
     }
     getMostRecentMessageCombo(e) {
-        let t = T.values(e);
+        let t = E.values(e);
         return t[t.length - 1];
     }
-    getUserComboShakeIntensity(e, t, n, i) {
-        let r = this.getUserCombo(e, t);
-        return null != r ? (0, d.U$)(r, i) * n : 0;
+    getUserComboShakeIntensity(e, t, n, r) {
+        let i = this.getUserCombo(e, t);
+        return null != i ? (0, d.U$)(i, r) * n : 0;
     }
 }
-let R = new O(s.h, {
+let I = new A(a.h, {
         POGGERMODE_UPDATE_COMBO: function (e) {
             let { type: t, ...n } = e;
-            if (!E.A.isEnabled()) return !1;
+            if (!c.A.isEnabled()) return !1;
             !(function e(t) {
                 let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    i = A.get(S(t)),
-                    r = {
-                        ...i,
+                    r = h.get(m(t)),
+                    i = {
+                        ...r,
                         ...t,
-                        value: t.value ?? i?.value ?? 0,
-                        multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
-                        decayInterval: i?.decayInterval ?? new a.IX(),
+                        value: t.value ?? r?.value ?? 0,
+                        multiplier: Math.min(t.multiplier ?? r?.multiplier ?? 1, 7),
+                        decayInterval: r?.decayInterval ?? new s.IX(),
                     };
-                A.set(S(t), r),
+                h.set(m(t), i),
                     n &&
-                        r.decayInterval?.start(1e3, () => {
-                            let t = A.get(S(r));
+                        i.decayInterval?.start(1e3, () => {
+                            let t = h.get(m(i));
                             if (null != t) {
-                                let n = r.multiplier !== t.multiplier && r.value !== t.value;
+                                let n = i.multiplier !== t.multiplier && i.value !== t.value;
                                 t.value <= 0 || n
                                     ? (t.decayInterval?.stop(),
-                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), R.emitChange()))
-                                    : (e({ ...t, value: t.value - 1 }), R.emitChange());
+                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), I.emitChange()))
+                                    : (e({ ...t, value: t.value - 1 }), I.emitChange());
                             }
                         });
             })(n);
         },
         POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
             let { comboMessage: t } = e;
-            if (!E.A.isEnabled()) return !1;
-            T.set(t.messageId, t);
+            if (!c.A.isEnabled()) return !1;
+            E.set(t.messageId, t);
         },
         MESSAGE_CREATE: function (e) {
             let {
                 channelId: t,
-                message: { mentions: n, author: i, nonce: r },
+                message: { mentions: n, author: r, nonce: i },
             } = e;
-            if (!E.A.isEnabled()) return !1;
-            let a = _.default.getId();
-            if (!N(i?.id, a, r, I)) return !1;
-            let s = A.get(S({ userId: i?.id ?? "???", channelId: t }));
+            if (!c.A.isEnabled()) return !1;
+            let s = o.default.getId();
+            if (!g(r?.id, s, i, p)) return !1;
+            let a = h.get(m({ userId: r?.id ?? "???", channelId: t }));
             if (
-                E.A.screenshakeEnabled &&
-                E.A.screenshakeEnabledLocations[c.uD.MENTION] &&
+                c.A.screenshakeEnabled &&
+                c.A.screenshakeEnabledLocations[_.uD.MENTION] &&
                 null != n &&
-                null != n.find((e) => e.id === a)
+                null != n.find((e) => e.id === s)
             ) {
-                let e = null != s ? ((0, d.U$)(s, c.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
-                return o._.dispatch(u.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0;
+                let e = null != a ? ((0, d.U$)(a, _.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
+                return u._.dispatch(f.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0;
             }
             return !1;
         },
     }),
-    f = R;
+    T = I;

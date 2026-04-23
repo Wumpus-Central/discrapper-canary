@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => l }), n(321073);
-var i = n(284009),
-    r = n.n(i),
-    s = n(17928),
+var r = n(284009),
+    i = n.n(r),
+    s = n(311907),
     a = n(506774),
-    o = n(228366);
+    o = n(73153);
 class l extends s.Ay.Store {
     static allStores = [];
     static clearAll() {
@@ -12,9 +12,9 @@ class l extends s.Ay.Store {
     }
     constructor(e, t) {
         super(o.h, { ...e, CLEAR_CACHES: () => (this.clear(), !1), WRITE_CACHES: () => (this.save(), !1) }, t),
-            r()(null != this.getClass().displayName, "Snapshot stores need a display name"),
-            r()(!("CLEAR_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action"),
-            r()(!("WRITE_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action"),
+            i()(null != this.getClass().displayName, "Snapshot stores need a display name"),
+            i()(!("CLEAR_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action"),
+            i()(!("WRITE_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action"),
             l.allStores.push(this);
     }
     get persistKey() {

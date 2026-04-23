@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { A: () => I });
-var i = n(627968),
-    s = n(64700),
+n.d(t, { A: () => b });
+var a = n(627968),
+    i = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(91871),
-    o = n.n(a),
+    o = n(91871),
+    s = n.n(o),
     d = n(735438),
     c = n.n(d),
     u = n(44482),
-    _ = n(17928),
-    h = n(545442),
-    p = n(305866),
-    m = n(732771),
+    _ = n(311907),
+    p = n(545442),
+    f = n(305866),
+    A = n(389723),
     g = n(676608),
-    x = n(317525),
-    f = n(652215),
-    A = n(985018),
-    E = n(673753);
-let I = function (e) {
-    let { className: t, guild: n, roleStyle: l, roleFilter: a, onSelect: d, onClose: I } = e,
-        v = (0, _.bG)([x.A], () => x.A.getSortedRoles(n.id)),
-        j = (0, g.Ay)(n.id, null),
-        C = s.useMemo(
+    h = n(317525),
+    x = n(652215),
+    m = n(985018),
+    I = n(673753);
+let b = function (e) {
+    let { className: t, guild: n, roleStyle: l, roleFilter: o, onSelect: d, onClose: b } = e,
+        v = (0, _.bG)([h.A], () => h.A.getSortedRoles(n.id)),
+        C = (0, g.Ay)(n.id, null),
+        y = i.useMemo(
             () =>
                 c()(v)
-                    .filter(a)
+                    .filter(o)
                     .map((e) => ({
                         id: e.id,
                         value: e.id,
                         label: e.name,
                         leading:
                             "dot" === l
-                                ? (0, i.jsx)(h.W, {
-                                      className: E.b8,
-                                      color: e.colorString ?? f.TpD,
-                                      colors: j ? e.colorStrings : null,
+                                ? (0, a.jsx)(p.W, {
+                                      className: I.b8,
+                                      color: e.colorString ?? x.TpD,
+                                      colors: C ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1,
                                   })
-                                : (0, i.jsx)(h.R, {
-                                      className: E.kb,
-                                      color: e.colorString ?? f.TpD,
-                                      colors: j ? e.colorStrings : null,
+                                : (0, a.jsx)(p.R, {
+                                      className: I.kb,
+                                      color: e.colorString ?? x.TpD,
+                                      colors: C ? e.colorStrings : null,
                                   }),
                     }))
                     .value(),
-            [v, a, l, j],
+            [v, o, l, C],
         ),
-        N = s.useCallback(
-            (e, t) => ("" === t.trim() ? e : e.filter((e) => o()(t.toLowerCase(), e.label.toLowerCase()))),
+        P = i.useCallback(
+            (e, t) => ("" === t.trim() ? e : e.filter((e) => s()(t.toLowerCase(), e.label.toLowerCase()))),
             [],
         );
-    return (0, i.jsx)(p.l, {
-        className: r()(E.kL, t),
-        "aria-label": A.intl.string(A.t.ljnBlo),
-        children: (0, i.jsxs)(m.iS, {
+    return (0, a.jsx)(f.l, {
+        className: r()(I.kL, t),
+        "aria-label": m.intl.string(m.t.ljnBlo),
+        children: (0, a.jsxs)(A.iS, {
             selectionMode: "single",
             value: void 0,
             onSelectionChange: (e) => {
-                null != e && (d(e), I());
+                null != e && (d(e), b());
             },
-            options: C,
-            customMatchSorter: N,
+            options: y,
+            customMatchSorter: P,
             children: [
-                (0, i.jsx)(m.a3, {
-                    label: A.intl.string(A.t.ljnBlo),
+                (0, a.jsx)(A.a3, {
+                    label: m.intl.string(m.t.ljnBlo),
                     hideLabel: !0,
-                    placeholder: A.intl.string(A.t.XPGZXP),
+                    placeholder: m.intl.string(m.t.XPGZXP),
                     autoFocus: !0,
                 }),
-                (0, i.jsx)(m.X2, { renderListItem: (e) => (0, i.jsx)(u.c, { ...e }) }),
+                (0, a.jsx)(A.X2, { renderListItem: (e) => (0, a.jsx)(u.c, { ...e }) }),
             ],
         }),
     });

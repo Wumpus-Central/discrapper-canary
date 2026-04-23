@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => r }), n(423034);
-var i = n(228366);
-class r {
+n.d(t, { A: () => i }), n(423034);
+var r = n(73153);
+class i {
     initializedCount = 0;
     initialize() {
         this.initializedCount++,
@@ -9,7 +9,7 @@ class r {
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
-                    i.h.subscribe(t, "function" == typeof n ? n : n.callback);
+                    r.h.subscribe(t, "function" == typeof n ? n : n.callback);
                 }),
                 this.stores.forEach((e, t) => {
                     t.addChangeListener(e), e();
@@ -22,7 +22,7 @@ class r {
                 (this._terminate(),
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
-                    i.h.unsubscribe(t, "function" == typeof n ? n : n.callback);
+                    r.h.unsubscribe(t, "function" == typeof n ? n : n.callback);
                 })));
     }
     actions = {};

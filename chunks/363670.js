@@ -1,45 +1,45 @@
 "use strict";
-n.d(t, { Ay: () => m, hh: () => E, u7: () => h });
-var i = n(627968),
-    r = n(64700),
-    s = n(17928),
+n.d(t, { Ay: () => h, hh: () => f, u7: () => p });
+var r = n(627968),
+    i = n(64700),
+    s = n(311907),
     a = n(287809),
     o = n(939341),
     l = n(352139),
-    d = n(263577),
-    _ = n(506326),
-    u = n(868065),
-    c = n(352760);
-let E = [_.R_];
-function h(e) {
+    u = n(263577),
+    c = n(506326),
+    d = n(868065),
+    _ = n(352760);
+let f = [c.R_];
+function p(e) {
     let t = (0, s.bG)([l.A], () => l.A.getMatchingActivity(e)),
         n = (0, s.bG)([a.default], () => a.default.getUser(e.author_id));
     if (null == t || null == n) return {};
-    let i = e.extra.entries[0],
-        r = t.state ?? i.media.artists[0]?.name ?? i.media.title,
-        o = t.details ?? i.media.title;
-    return { activity: t, artist: r, currentEntry: i, title: o, user: n };
+    let r = e.extra.entries[0],
+        i = t.state ?? r.media.artists[0]?.name ?? r.media.title,
+        o = t.details ?? r.media.title;
+    return { activity: t, artist: i, currentEntry: r, title: o, user: n };
 }
-let m = r.memo(function (e) {
-    let { entry: t, channel: n, selected: r, hovered: s } = e,
-        { activity: a, artist: l } = h(t),
-        { largeImage: m } = (0, o.nO)({ entry: t });
+let h = i.memo(function (e) {
+    let { entry: t, channel: n, selected: i, hovered: s } = e,
+        { activity: a, artist: l } = p(t),
+        { largeImage: h } = (0, o.nO)({ entry: t });
     return null == a
-        ? (0, i.jsx)(u.eG, {})
-        : (0, i.jsxs)(u.Zp, {
-              selected: r,
+        ? (0, r.jsx)(d.eG, {})
+        : (0, r.jsxs)(d.Zp, {
+              selected: i,
               children: [
-                  (0, i.jsxs)(u.UA, {
+                  (0, r.jsxs)(d.UA, {
                       children: [
-                          (0, i.jsx)(u.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                          (0, i.jsx)(u.ZB, { children: l.replace(/; /g, ", ") }),
-                          (0, i.jsx)(_.mG, {
-                              location: _.N5.CARD,
-                              children: E.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: s }, n)),
+                          (0, r.jsx)(d.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                          (0, r.jsx)(d.ZB, { children: l.replace(/; /g, ", ") }),
+                          (0, r.jsx)(c.mG, {
+                              location: c.N5.CARD,
+                              children: f.map((e, n) => (0, r.jsx)(e, { entry: t, hovered: s }, n)),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(d.V, { src: m?.src, size: 48, className: c.xn }),
+                  (0, r.jsx)(u.V, { src: h?.src, size: 48, className: _.xn }),
               ],
           });
 });

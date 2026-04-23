@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => u });
-var i = n(735438),
-    r = n(17928),
-    s = n(228366),
+n.d(t, { A: () => d });
+var r = n(735438),
+    i = n(311907),
+    s = n(73153),
     a = n(31408);
 let o = !1,
     l = {
@@ -25,49 +25,49 @@ let o = !1,
         confettiCount: 5,
         warningSeen: !1,
     },
-    d = (0, i.cloneDeep)(l);
-class _ extends r.Ay.DeviceSettingsStore {
+    u = (0, r.cloneDeep)(l);
+class c extends i.Ay.DeviceSettingsStore {
     static displayName = "PoggermodeSettingsStore";
     static persistKey = "PoggermodeSettingsStore";
     initialize(e) {
-        d = { ...d, ...e };
+        u = { ...u, ...e };
     }
     getUserAgnosticState() {
-        return d;
+        return u;
     }
     get settingsVisible() {
-        return d.settingsVisible;
+        return u.settingsVisible;
     }
     isEnabled() {
         let { confettiLocation: e, shakeLocation: t } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = null == e || (d.confettiEnabled && d.confettiEnabledLocations[e]),
-            i = null == t || (d.screenshakeEnabled && d.screenshakeEnabledLocations[t]);
-        return this.settingsVisible && !o && d.enabled && n && i;
+            n = null == e || (u.confettiEnabled && u.confettiEnabledLocations[e]),
+            r = null == t || (u.screenshakeEnabled && u.screenshakeEnabledLocations[t]);
+        return this.settingsVisible && !o && u.enabled && n && r;
     }
     get shakeIntensity() {
-        return this.isEnabled() ? d.shakeIntensity : 0;
+        return this.isEnabled() ? u.shakeIntensity : 0;
     }
     get combosRequiredCount() {
-        return this.isEnabled() ? d.combosRequiredCount : 0;
+        return this.isEnabled() ? u.combosRequiredCount : 0;
     }
     get screenshakeEnabled() {
-        return d.screenshakeEnabled;
+        return u.screenshakeEnabled;
     }
     get screenshakeEnabledLocations() {
-        return d.screenshakeEnabledLocations;
+        return u.screenshakeEnabledLocations;
     }
     get combosEnabled() {
-        return d.combosEnabled;
+        return u.combosEnabled;
     }
     get comboSoundsEnabled() {
-        return d.comboSoundsEnabled;
+        return u.comboSoundsEnabled;
     }
 }
-let u = new _(s.h, {
+let d = new c(s.h, {
     POGGERMODE_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        d = { ...d, ...t };
+        u = { ...u, ...t };
     },
     POGGERMODE_TEMPORARILY_DISABLED: function () {
         o = !0;

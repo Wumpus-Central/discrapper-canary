@@ -1,10 +1,11 @@
-n.d(t, { Ay: () => o, C3: () => s, HL: () => l });
-var i,
-    r = n(575593),
-    a = n(149807),
-    l = (((i = {}).FromLoop = "fromLoop"), (i.FromStart = "fromStart"), i);
-let s = (e) => e instanceof o;
-class o extends a.A {
+"use strict";
+n.d(t, { Ay: () => l, C3: () => o, HL: () => a });
+var r,
+    i = n(575593),
+    s = n(149807),
+    a = (((r = {}).FromLoop = "fromLoop"), (r.FromStart = "fromStart"), r);
+let o = (e) => e instanceof l;
+class l extends s.A {
     title;
     description;
     accessibilityLabel;
@@ -15,7 +16,7 @@ class o extends a.A {
     staticFrameSrc;
     constructor(e) {
         super(e),
-            (this.type = r.R.PROFILE_EFFECT),
+            (this.type = i.R.PROFILE_EFFECT),
             (this.title = e.title),
             (this.description = e.description),
             (this.accessibilityLabel = e.accessibilityLabel),
@@ -26,6 +27,6 @@ class o extends a.A {
             (this.staticFrameSrc = e.staticFrameSrc);
     }
     static fromServer(e) {
-        return new o({ ...super.fromServer(e), ...e });
+        return new l({ ...super.fromServer(e), ...e });
     }
 }

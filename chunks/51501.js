@@ -1,20 +1,21 @@
-n.d(t, { $: () => s, W: () => a });
-var i = n(788868),
-    r = n(652215);
-let l = new Set([
-    r.ThZ.FRIEND_ANNIVERSARIES_CHAT,
-    r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-    r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+"use strict";
+n.d(t, { $: () => a, W: () => o });
+var r = n(788868),
+    i = n(652215);
+let s = new Set([
+    i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+    i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+    i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
 ]);
-function s(e) {
-    return e === i.np.FRIEND_ANNIVERSARY
+function a(e) {
+    return e === r.np.FRIEND_ANNIVERSARY
         ? {
-              chat: r.ThZ.FRIEND_ANNIVERSARIES_CHAT,
-              actionButton: r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-              actionButtonCoachmark: r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+              chat: i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+              actionButton: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+              actionButtonCoachmark: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
           }
         : {};
 }
-function a(e) {
-    return l.has(e);
+function o(e) {
+    return s.has(e);
 }

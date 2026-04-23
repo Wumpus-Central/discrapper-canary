@@ -1,48 +1,49 @@
+"use strict";
 n.d(t, {
-    A2: () => A,
-    Cx: () => T,
-    FH: () => u,
-    If: () => E,
-    N0: () => I,
-    Vr: () => c,
-    Zm: () => N,
+    A2: () => h,
+    Cx: () => E,
+    FH: () => f,
+    If: () => c,
+    N0: () => p,
+    Vr: () => _,
+    Zm: () => g,
     ib: () => d,
-    uq: () => S,
+    uq: () => m,
 });
-var i,
-    r,
-    a,
+var r,
+    i,
     s,
-    _,
-    l,
+    a,
     o,
-    E =
-        (((i = {})[(i.NONE = 0)] = "NONE"),
-        (i[(i.PLAY = 1)] = "PLAY"),
-        (i[(i.ADD = 2)] = "ADD"),
-        (i[(i.SOUNDMOJI = 3)] = "SOUNDMOJI"),
-        i),
-    d = (((r = {}).ENTRY = "entry_sound"), (r.EXIT = "exit_sound"), (r.DEFAULT = "default"), r),
-    c = (((a = {}).ADDED = "added"), (a.UPDATED = "updated"), (a.REMOVED = "removed"), a),
-    u = (((s = {}).DEFAULT = "default"), (s.CUSTOM = "custom"), s);
-function I(e, t) {
-    let { sound_id: n, emoji_id: i, emoji_name: r, user_id: a, available: s, ..._ } = e;
-    return { ..._, soundId: n, guildId: t, emojiId: i, emojiName: r, userId: a, available: s ?? !0 };
+    l,
+    u,
+    c =
+        (((r = {})[(r.NONE = 0)] = "NONE"),
+        (r[(r.PLAY = 1)] = "PLAY"),
+        (r[(r.ADD = 2)] = "ADD"),
+        (r[(r.SOUNDMOJI = 3)] = "SOUNDMOJI"),
+        r),
+    d = (((i = {}).ENTRY = "entry_sound"), (i.EXIT = "exit_sound"), (i.DEFAULT = "default"), i),
+    _ = (((s = {}).ADDED = "added"), (s.UPDATED = "updated"), (s.REMOVED = "removed"), s),
+    f = (((a = {}).DEFAULT = "default"), (a.CUSTOM = "custom"), a);
+function p(e, t) {
+    let { sound_id: n, emoji_id: r, emoji_name: i, user_id: s, available: a, ...o } = e;
+    return { ...o, soundId: n, guildId: t, emojiId: r, emojiName: i, userId: s, available: a ?? !0 };
 }
-function A(e) {
-    let { soundId: t, guildId: n, emojiId: i, emojiName: r, userId: a, ...s } = e;
-    return { ...s, sound_id: t, guild_id: n, emoji_id: i, emoji_name: r, user_id: a };
+function h(e) {
+    let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: s, ...a } = e;
+    return { ...a, sound_id: t, guild_id: n, emoji_id: r, emoji_name: i, user_id: s };
 }
-var T =
-        (((_ = {})[(_.FAVORITES = 0)] = "FAVORITES"),
-        (_[(_.GUILD = 1)] = "GUILD"),
-        (_[(_.DEFAULTS = 2)] = "DEFAULTS"),
-        (_[(_.SEARCH = 3)] = "SEARCH"),
-        _),
-    S = (((l = {})[(l.SOUND = 0)] = "SOUND"), (l[(l.ADD_SOUND = 1)] = "ADD_SOUND"), l),
-    N =
-        (((o = {})[(o.GIFT_CODE = 0)] = "GIFT_CODE"),
-        (o[(o.SOUNDBOARD = 1)] = "SOUNDBOARD"),
-        (o[(o.JOINED_VOICE_CHANNEL = 2)] = "JOINED_VOICE_CHANNEL"),
-        (o[(o.SOUNDMOJI = 3)] = "SOUNDMOJI"),
-        o);
+var E =
+        (((o = {})[(o.FAVORITES = 0)] = "FAVORITES"),
+        (o[(o.GUILD = 1)] = "GUILD"),
+        (o[(o.DEFAULTS = 2)] = "DEFAULTS"),
+        (o[(o.SEARCH = 3)] = "SEARCH"),
+        o),
+    m = (((l = {})[(l.SOUND = 0)] = "SOUND"), (l[(l.ADD_SOUND = 1)] = "ADD_SOUND"), l),
+    g =
+        (((u = {})[(u.GIFT_CODE = 0)] = "GIFT_CODE"),
+        (u[(u.SOUNDBOARD = 1)] = "SOUNDBOARD"),
+        (u[(u.JOINED_VOICE_CHANNEL = 2)] = "JOINED_VOICE_CHANNEL"),
+        (u[(u.SOUNDMOJI = 3)] = "SOUNDMOJI"),
+        u);

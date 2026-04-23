@@ -1,17 +1,18 @@
-n.d(t, { A: () => o });
-var i = n(17928),
-    r = n(228366);
-let l = null;
-class a extends i.Ay.Store {
+"use strict";
+n.d(t, { A: () => l });
+var r = n(311907),
+    i = n(73153);
+let s = null;
+class a extends r.Ay.Store {
     static displayName = "UserRequiredActionStore";
     hasAction() {
-        return null != l;
+        return null != s;
     }
     getAction() {
-        return l;
+        return s;
     }
 }
-function s(e) {
-    l = e.requiredAction;
+function o(e) {
+    s = e.requiredAction;
 }
-let o = new a(r.h, { CONNECTION_OPEN: s, USER_REQUIRED_ACTION_UPDATE: s });
+let l = new a(i.h, { CONNECTION_OPEN: o, USER_REQUIRED_ACTION_UPDATE: o });

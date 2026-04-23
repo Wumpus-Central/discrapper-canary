@@ -1,19 +1,20 @@
-n.d(t, { J0: () => s, Qh: () => l, ST: () => r, mZ: () => a, uA: () => o });
-var i = n(228366);
-function r() {
+"use strict";
+n.d(t, { J0: () => o, Qh: () => a, ST: () => i, mZ: () => s, uA: () => l });
+var r = n(73153);
+function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
-    i.h.dispatch({ type: "BROWSER_HANDOFF_BEGIN", timeout: e });
+    r.h.dispatch({ type: "BROWSER_HANDOFF_BEGIN", timeout: e });
 }
-function a(e, t) {
-    i.h.dispatch({ type: "BROWSER_HANDOFF_END", handoffToken: e, fingerprint: t });
+function s(e, t) {
+    r.h.dispatch({ type: "BROWSER_HANDOFF_END", handoffToken: e, fingerprint: t });
+}
+function a(e) {
+    let { handoffKey: t, handoffToken: n, handoffSource: i, timeout: s = 1e4 } = e;
+    r.h.dispatch({ type: "BROWSER_HANDOFF_FROM_APP", handoffKey: t, handoffToken: n, handoffSource: i, timeout: s });
+}
+function o() {
+    r.h.dispatch({ type: "BROWSER_HANDOFF_UNAVAILABLE" });
 }
 function l(e) {
-    let { handoffKey: t, handoffToken: n, handoffSource: r, timeout: a = 1e4 } = e;
-    i.h.dispatch({ type: "BROWSER_HANDOFF_FROM_APP", handoffKey: t, handoffToken: n, handoffSource: r, timeout: a });
-}
-function s() {
-    i.h.dispatch({ type: "BROWSER_HANDOFF_UNAVAILABLE" });
-}
-function o(e) {
-    i.h.dispatch({ type: "BROWSER_HANDOFF_SET_USER", user: e });
+    r.h.dispatch({ type: "BROWSER_HANDOFF_SET_USER", user: e });
 }

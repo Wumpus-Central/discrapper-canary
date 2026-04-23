@@ -1,25 +1,26 @@
-n.d(t, { k: () => c, p: () => h }), n(321073);
-var i = n(495544),
-    r = n(763827),
-    l = n(954571),
-    a = n(935208),
-    s = n(85277);
-let o = new Map(),
-    d = -1;
-function u() {
+"use strict";
+n.d(t, { k: () => d, p: () => _ }), n(321073);
+var r = n(961350),
+    i = n(383501),
+    s = n(954571),
+    a = n(661191),
+    o = n(85277);
+let l = new Map(),
+    u = -1;
+function c() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (e) {
-        let e = a.default.extractTimestamp(i.default.getId());
-        e !== d && (h(!1), (d = e));
+        let e = a.default.extractTimestamp(r.default.getId());
+        e !== u && (_(!1), (u = e));
     }
-    return d % 10 == 0;
+    return u % 10 == 0;
 }
-function c(e, t) {
-    u() && (o.has(e) || o.set(e, []), o.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t }));
+function d(e, t) {
+    c() && (l.has(e) || l.set(e, []), l.get(e)?.push({ timestamp: new Date(), rtc_state: i.A.getState(), ...t }));
 }
-function h() {
+function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (!u(e)) return void o.clear();
-    for (let [e, t] of o) l.default.track(e, (0, s.z)(e, t));
-    o.clear();
+    if (!c(e)) return void l.clear();
+    for (let [e, t] of l) s.default.track(e, (0, o.z)(e, t));
+    l.clear();
 }

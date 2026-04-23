@@ -1,20 +1,21 @@
+"use strict";
 n.d(t, {
-    Eg: () => a,
-    UA: () => l,
+    Eg: () => i,
+    UA: () => r,
     WF: () =>
         function e(t) {
-            let { channelId: n, limit: a = 25, before: l, after: o, around: c, isStaleRefresh: d } = t;
-            if (r.h.isDispatching())
+            let { channelId: n, limit: i = 25, before: r, after: o, around: c, isStaleRefresh: u } = t;
+            if (a.h.isDispatching())
                 return void Promise.resolve().then(() =>
-                    e({ channelId: n, limit: a, before: l, after: o, around: c, isStaleRefresh: d }),
+                    e({ channelId: n, limit: i, before: r, after: o, around: c, isStaleRefresh: u }),
                 );
-            let u = null != c ? "around" : null != o ? "after" : "before";
-            r.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: n, direction: u });
-            let m = { limit: a };
-            null != l && (m.before = l),
+            let d = null != c ? "around" : null != o ? "after" : "before";
+            a.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: n, direction: d });
+            let m = { limit: i };
+            null != r && (m.before = r),
                 null != o && (m.after = o),
                 null != c && (m.around = c),
-                i.Bo.get({
+                l.Bo.get({
                     url: s.Rsh.CHANNEL_CONVERSATIONS(n),
                     query: m,
                     oldFormErrors: !0,
@@ -22,36 +23,36 @@ n.d(t, {
                 }).then(
                     (e) => {
                         let t = e.body;
-                        r.h.dispatch({
+                        a.h.dispatch({
                             type: "CONVERSATIONS_FETCH_SUCCESS",
                             channelId: n,
                             conversations: t.conversations,
-                            direction: u,
+                            direction: d,
                             beforeShortCircuited: t.before_short_circuited,
                             afterShortCircuited: t.after_short_circuited,
-                            anchor: c ?? l ?? o,
-                            isStaleRefresh: d ?? !1,
+                            anchor: c ?? r ?? o,
+                            isStaleRefresh: u ?? !1,
                         });
                     },
                     () => {
-                        r.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: n });
+                        a.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: n });
                     },
                 );
         },
     xI: () =>
         function e(t, n) {
-            r.h.isDispatching()
+            a.h.isDispatching()
                 ? Promise.resolve().then(() => e(t, n))
-                : r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: t, conversationId: n });
+                : a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: t, conversationId: n });
         },
 });
-var i = n(636537),
-    r = n(228366);
+var l = n(562465),
+    a = n(73153);
 n(705448);
 var s = n(652215);
-function a() {
-    r.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+function i() {
+    a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function l(e, t) {
-    r.h.dispatch({ type: "CONVERSATIONS_HOVER_CONVERSATION", channelId: e, conversationId: t });
+function r(e, t) {
+    a.h.dispatch({ type: "CONVERSATIONS_HOVER_CONVERSATION", channelId: e, conversationId: t });
 }

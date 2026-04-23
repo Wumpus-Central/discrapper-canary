@@ -1,47 +1,47 @@
 "use strict";
 n.d(t, {
-    CC: () => v,
-    CI: () => b,
-    DS: () => W,
+    CC: () => R,
+    CI: () => L,
+    DS: () => Y,
     G3: () => G,
-    IS: () => h,
-    N5: () => P,
+    IS: () => p,
+    N5: () => M,
     Ri: () => w,
-    X7: () => U,
-    Xx: () => R,
-    Xy: () => m,
-    Ze: () => f,
-    er: () => x,
-    j: () => Y,
-    jd: () => O,
+    X7: () => k,
+    Xx: () => v,
+    Xy: () => h,
+    Ze: () => E,
+    er: () => U,
+    j: () => W,
+    jd: () => C,
     nG: () => H,
-    p$: () => V,
-    sv: () => M,
+    p$: () => F,
+    sv: () => x,
     z7: () => j,
-    zD: () => k,
+    zD: () => P,
 }),
     n(321073);
-var i = n(735438),
-    r = n(989349),
-    s = n.n(r),
-    a = n(902537),
+var r = n(735438),
+    i = n(989349),
+    s = n.n(i),
+    a = n(471691),
     o = n(287809),
-    l = n(58703),
-    d = n(927813),
-    _ = n(935208),
-    u = n(604701),
-    c = n(988794),
-    E = n(985018);
-let h = 365,
-    m = 366,
-    f = 4,
-    g = [a.p3.MO.weekday, a.p3.TU.weekday, a.p3.WE.weekday, a.p3.TH.weekday, a.p3.FR.weekday],
-    p = [a.p3.SU.weekday, a.p3.MO.weekday, a.p3.TU.weekday, a.p3.WE.weekday, a.p3.TH.weekday],
+    l = n(405269),
+    u = n(927813),
+    c = n(661191),
+    d = n(604701),
+    _ = n(988794),
+    f = n(985018);
+let p = 365,
+    h = 366,
+    E = 4,
+    m = [a.p3.MO.weekday, a.p3.TU.weekday, a.p3.WE.weekday, a.p3.TH.weekday, a.p3.FR.weekday],
+    g = [a.p3.SU.weekday, a.p3.MO.weekday, a.p3.TU.weekday, a.p3.WE.weekday, a.p3.TH.weekday],
     A = [a.p3.TU.weekday, a.p3.WE.weekday, a.p3.TH.weekday, a.p3.FR.weekday, a.p3.SA.weekday],
     I = [a.p3.SA.weekday, a.p3.SU.weekday],
     T = [a.p3.FR.weekday, a.p3.SA.weekday],
     S = [a.p3.SU.weekday, a.p3.MO.weekday],
-    N = [
+    y = [
         a.p3.SU.weekday,
         a.p3.MO.weekday,
         a.p3.TU.weekday,
@@ -50,75 +50,75 @@ let h = 365,
         a.p3.FR.weekday,
         a.p3.SA.weekday,
     ],
-    C = new Set([0, 6]);
-function R(e) {
+    N = new Set([0, 6]);
+function v(e) {
     let t = e.toDate(),
         n = Math.ceil(t.getDate() / 7),
-        i = e.format("dddd"),
-        r = [
-            { id: "none", value: u.z.NONE, label: E.intl.string(E.t["0bK0B1"]) },
-            { id: "weekly", value: u.z.WEEKLY, label: E.intl.formatToPlainString(E.t["B8/yfp"], { weekday: i }) },
-            { id: "biweekly", value: u.z.BIWEEKLY, label: E.intl.formatToPlainString(E.t["z+aIuX"], { weekday: i }) },
+        r = e.format("dddd"),
+        i = [
+            { id: "none", value: d.z.NONE, label: f.intl.string(f.t["0bK0B1"]) },
+            { id: "weekly", value: d.z.WEEKLY, label: f.intl.formatToPlainString(f.t["B8/yfp"], { weekday: r }) },
+            { id: "biweekly", value: d.z.BIWEEKLY, label: f.intl.formatToPlainString(f.t["z+aIuX"], { weekday: r }) },
             {
                 id: "monthly",
-                value: u.z.MONTHLY,
-                label: E.intl.formatToPlainString(E.t.mjOEBk, { nth: n, weekday: i }),
+                value: d.z.MONTHLY,
+                label: f.intl.formatToPlainString(f.t.mjOEBk, { nth: n, weekday: r }),
             },
             {
                 id: "yearly",
-                value: u.z.YEARLY,
-                label: E.intl.formatToPlainString(E.t["5DFcVl"], {
-                    date: t.toLocaleString(E.intl.currentLocale, { month: "short", day: "2-digit" }),
+                value: d.z.YEARLY,
+                label: f.intl.formatToPlainString(f.t["5DFcVl"], {
+                    date: t.toLocaleString(f.intl.currentLocale, { month: "short", day: "2-digit" }),
                 }),
             },
         ];
     return (
-        C.has(t.getDay())
+        N.has(t.getDay())
             ? o.default.getCurrentUser()?.isStaff() &&
-              r.push({ id: "weekendOnly", value: u.z.WEEKEND_ONLY, label: E.intl.string(E.t.hRpynV) })
-            : r.push({ id: "weekdayOnly", value: u.z.WEEKDAY_ONLY, label: E.intl.string(E.t["jYR/MY"]) }),
-        r
+              i.push({ id: "weekendOnly", value: d.z.WEEKEND_ONLY, label: f.intl.string(f.t.hRpynV) })
+            : i.push({ id: "weekdayOnly", value: d.z.WEEKDAY_ONLY, label: f.intl.string(f.t["jYR/MY"]) }),
+        i
     );
 }
-let O = () => {
+let C = () => {
         let e = s()().add(1, "hour"),
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
-    y = (e, t) => (0, l.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
-function v(e, t, n) {
-    var i;
-    let r;
+    O = (e, t) => (0, l.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
+function R(e, t, n) {
+    var r;
+    let i;
     null == n && (n = s()());
     let a = s()(e),
         o = null != t && "" !== t ? s()(t) : void 0,
-        d = null != t && a.isSame(o, "day");
+        u = null != t && a.isSame(o, "day");
     return {
         startDateTimeString:
-            ((i = n),
-            (r = (0, l.m_)(a.toDate(), i.toDate())) > 1 || r < 0
-                ? y(a, i)
-                : (0, l.i$)(a, a.localeData().calendar(r < 1 ? "sameDay" : "nextDay", a, i))),
-        endDateTimeString: null != o ? (d ? o.format("LT") : y(o, n)) : void 0,
+            ((r = n),
+            (i = (0, l.m_)(a.toDate(), r.toDate())) > 1 || i < 0
+                ? O(a, r)
+                : (0, l.i$)(a, a.localeData().calendar(i < 1 ? "sameDay" : "nextDay", a, r))),
+        endDateTimeString: null != o ? (u ? o.format("LT") : O(o, n)) : void 0,
         currentOrPastEvent: a <= n,
         upcomingEvent: a <= s()().add(1, "hour"),
         withinStartWindow: a <= s()().add(15, "minute"),
         diffMinutes: a.diff(n, "minutes"),
     };
 }
-function D(e) {
-    return new a.Bw(N[e]);
+function b(e) {
+    return new a.Bw(y[e]);
 }
-function L(e, t) {
+function D(e, t) {
     let n;
     return null != e && ((n = { startDate: s()(e), endDate: void 0 }), null != t && (n.endDate = s()(t))), n;
 }
-function b(e, t) {
+function L(e, t) {
     var n;
-    let i = L((n = t).scheduled_start_time, n.scheduled_end_time),
-        r = s()(_.default.extractTimestamp(e)),
-        a = i?.endDate != null ? r.clone().add(i.endDate.diff(i.startDate)) : void 0;
-    return { startDate: r, endDate: a };
+    let r = D((n = t).scheduled_start_time, n.scheduled_end_time),
+        i = s()(c.default.extractTimestamp(e)),
+        a = r?.endDate != null ? i.clone().add(r.endDate.diff(r.startDate)) : void 0;
+    return { startDate: i, endDate: a };
 }
 function w(e, t) {
     if (null == t) return e;
@@ -128,23 +128,23 @@ function w(e, t) {
         endDate: null != n ? s()(n) : void 0,
     };
 }
-function P(e) {
-    return L(e.scheduledStartTime, e.scheduledEndTime);
+function M(e) {
+    return D(e.scheduledStartTime, e.scheduledEndTime);
 }
-function k(e, t) {
+function P(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
 }
-function M(e, t) {
-    return null == e || null == t ? null == e && null == t : k(e.startDate, t.startDate) && k(e.endDate, t.endDate);
+function x(e, t) {
+    return null == e || null == t ? null == e && null == t : P(e.startDate, t.startDate) && P(e.endDate, t.endDate);
 }
-function U(e) {
+function k(e) {
     let t = null != e.byWeekday ? [...e.byWeekday] : null,
         n = e.byNWeekday?.map((e) => new a.Bw(e.day, e.n)),
-        i = new Date(e.start);
+        r = new Date(e.start);
     return (
-        i.setMilliseconds(0),
+        r.setMilliseconds(0),
         new a.p3({
-            dtstart: i,
+            dtstart: r,
             until: null != e.end ? new Date(e.end) : null,
             freq: e.frequency,
             interval: e.interval,
@@ -156,125 +156,125 @@ function U(e) {
         })
     );
 }
-function x(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        r = n > new Date() ? n : new Date(),
+function U(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        i = n > new Date() ? n : new Date(),
         s = new Date();
-    s.setFullYear(s.getFullYear() + f);
-    let a = t.between(r, s, !0, (t, n) => n < e + 1);
-    return i && a.length > 0 && n.getTime() === a[0].getTime() ? a.slice(1) : a.slice(0, e);
+    s.setFullYear(s.getFullYear() + E);
+    let a = t.between(i, s, !0, (t, n) => n < e + 1);
+    return r && a.length > 0 && n.getTime() === a[0].getTime() ? a.slice(1) : a.slice(0, e);
 }
 function G(e) {
     if (null == e) return null;
     let t = null == e.recurrence_rule ? null : new Date(e.scheduled_start_time);
-    return null != t ? _.default.fromTimestamp(Math.floor(t.getTime() / d.A.Millis.SECOND) * d.A.Millis.SECOND) : null;
+    return null != t ? c.default.fromTimestamp(Math.floor(t.getTime() / u.A.Millis.SECOND) * u.A.Millis.SECOND) : null;
 }
-function V(e, t) {
+function F(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
-        i = new Date(_.default.extractTimestamp(t));
+        r = new Date(c.default.extractTimestamp(t));
     if (
-        n.getUTCHours() !== i.getUTCHours() ||
-        n.getUTCMinutes() !== i.getUTCMinutes() ||
-        n.getUTCSeconds() !== i.getUTCSeconds()
+        n.getUTCHours() !== r.getUTCHours() ||
+        n.getUTCMinutes() !== r.getUTCMinutes() ||
+        n.getUTCSeconds() !== r.getUTCSeconds()
     )
         return !1;
     switch (e.frequency) {
         case a.p3.WEEKLY:
-            return n.getUTCDay() === i.getUTCDay();
+            return n.getUTCDay() === r.getUTCDay();
         case a.p3.YEARLY:
-            return n.getUTCDate() === i.getUTCDate();
+            return n.getUTCDate() === r.getUTCDate();
         default:
             return !0;
     }
 }
-function F(e) {
-    let t = D(e.toDate().getDay()),
-        n = D(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? p : g;
+function V(e) {
+    let t = b(e.toDate().getDay()),
+        n = b(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? g : m;
 }
 function B(e) {
-    let t = D(e.toDate().getDay()),
-        n = D(e.toDate().getUTCDay());
+    let t = b(e.toDate().getDay()),
+        n = b(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? T : I;
 }
 function H(e, t) {
     let n = (function (e, t) {
-        let n = F(t),
-            i = B(t),
-            r = D(t.toDate().getUTCDay()),
+        let n = V(t),
+            r = B(t),
+            i = b(t.toDate().getUTCDay()),
             s = Math.ceil(t.toDate().getUTCDate() / 7),
             o = t.toDate();
         switch ((o.setMilliseconds(0), e)) {
-            case u.z.NONE:
+            case d.z.NONE:
                 return null;
-            case u.z.WEEKLY:
+            case d.z.WEEKLY:
                 return new a.p3({ dtstart: o, freq: a.p3.WEEKLY });
-            case u.z.BIWEEKLY:
+            case d.z.BIWEEKLY:
                 return new a.p3({ dtstart: o, freq: a.p3.WEEKLY, interval: 2 });
-            case u.z.MONTHLY:
-                return new a.p3({ dtstart: o, freq: a.p3.MONTHLY, byweekday: [r.nth(s)] });
-            case u.z.YEARLY:
+            case d.z.MONTHLY:
+                return new a.p3({ dtstart: o, freq: a.p3.MONTHLY, byweekday: [i.nth(s)] });
+            case d.z.YEARLY:
                 return new a.p3({ dtstart: o, freq: a.p3.YEARLY });
-            case u.z.WEEKDAY_ONLY:
+            case d.z.WEEKDAY_ONLY:
                 return new a.p3({ dtstart: o, freq: a.p3.DAILY, byweekday: n });
-            case u.z.WEEKEND_ONLY:
-                return new a.p3({ dtstart: o, freq: a.p3.DAILY, byweekday: i });
+            case d.z.WEEKEND_ONLY:
+                return new a.p3({ dtstart: o, freq: a.p3.DAILY, byweekday: r });
         }
     })(e, t);
     if (null == n) return null;
     let {
-            dtstart: i,
-            until: r,
+            dtstart: r,
+            until: i,
             freq: s,
             interval: o,
             byweekday: l,
-            bynweekday: d,
-            bymonth: _,
-            bymonthday: c,
-            byyearday: E,
-            count: h,
+            bynweekday: u,
+            bymonth: c,
+            bymonthday: _,
+            byyearday: f,
+            count: p,
         } = n.options,
-        m = d?.map((e) => ({ n: e[1], day: e[0] }));
+        h = u?.map((e) => ({ n: e[1], day: e[0] }));
     return {
-        start: i.toISOString(),
-        end: r?.toISOString(),
+        start: r.toISOString(),
+        end: i?.toISOString(),
         frequency: s,
         interval: o,
         byWeekday: l,
-        byNWeekday: m,
-        byMonth: _,
-        byMonthDay: c,
-        byYearDay: E,
-        count: h,
+        byNWeekday: h,
+        byMonth: c,
+        byMonthDay: _,
+        byYearDay: f,
+        count: p,
     };
 }
 function j(e, t) {
-    if (null == t) return u.z.NONE;
-    let n = U(t);
+    if (null == t) return d.z.NONE;
+    let n = k(t);
     switch (n.options.freq) {
         case a.p3.WEEKLY:
-            if (n.options.interval < 1 || n.options.interval > 2) return u.z.NONE;
-            return 1 === n.options.interval ? u.z.WEEKLY : u.z.BIWEEKLY;
+            if (n.options.interval < 1 || n.options.interval > 2) return d.z.NONE;
+            return 1 === n.options.interval ? d.z.WEEKLY : d.z.BIWEEKLY;
         case a.p3.YEARLY:
-            return u.z.YEARLY;
+            return d.z.YEARLY;
         case a.p3.MONTHLY:
-            return u.z.MONTHLY;
+            return d.z.MONTHLY;
         case a.p3.DAILY:
-            if ((0, i.isEqual)(n.options.byweekday, F(e))) return u.z.WEEKDAY_ONLY;
-            if ((0, i.isEqual)(n.options.byweekday, B(e))) return u.z.WEEKEND_ONLY;
-            return u.z.NONE;
+            if ((0, r.isEqual)(n.options.byweekday, V(e))) return d.z.WEEKDAY_ONLY;
+            if ((0, r.isEqual)(n.options.byweekday, B(e))) return d.z.WEEKEND_ONLY;
+            return d.z.NONE;
         default:
-            return u.z.NONE;
+            return d.z.NONE;
     }
 }
-function W(e, t) {
+function Y(e, t) {
     return (
         e?.scheduled_start_time !== t.scheduledStartTime ||
         e.scheduled_end_time !== t.scheduledEndTime ||
-        !(0, i.isEqual)(e.recurrence_rule, t.recurrenceRule)
+        !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule)
     );
 }
-function Y(e, t, n) {
-    return e?.is_canceled ? c.XG.CANCELED : t < n ? c.XG.COMPLETED : null != e ? c.XG.SCHEDULED : null;
+function W(e, t, n) {
+    return e?.is_canceled ? _.XG.CANCELED : t < n ? _.XG.COMPLETED : null != e ? _.XG.SCHEDULED : null;
 }

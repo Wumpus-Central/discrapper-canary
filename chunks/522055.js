@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => h });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { A: () => p });
+var r = n(311907),
+    i = n(73153),
     s = n(410212),
     a = n(532555);
 let o = {},
     l = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 };
-function d(e) {
+function u(e) {
     return null == o[e] && (o[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), o[e];
 }
-function _(e, t) {
+function c(e, t) {
     return Object.values(t).reduce((e, t) => e + ((0, s.A)(t) ?? 0), 0);
 }
-function u(e) {
+function d(e) {
     let { guildId: t, gameServer: n } = e,
-        i = d(t);
-    o = { ...o, [t]: { ...i, instances: { ...i.instances, [n.id]: (0, a.A)(n) } } };
+        r = u(t);
+    o = { ...o, [t]: { ...r, instances: { ...r.instances, [n.id]: (0, a.A)(n) } } };
 }
-function c(e, t) {
-    let n = _(e, t.entitlements);
+function _(e, t) {
+    let n = c(e, t.entitlements);
     o = { ...o, [e]: { ...t, appliedBoosts: n } };
 }
-class E extends i.Ay.PersistedStore {
+class f extends r.Ay.PersistedStore {
     static displayName = "GameServerStore";
     static persistKey = "GameServerStore";
     initialize(e) {
@@ -64,13 +64,13 @@ class E extends i.Ay.PersistedStore {
         return null == e || e + 864e5 < Date.now();
     }
 }
-let h = new E(r.h, {
+let p = new f(i.h, {
     LOGOUT: function () {
         (o = {}), (l = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 });
     },
     GAME_SERVER_FETCH_CATALOG_SUCCESS: function (e) {
         let { guildId: t, catalog: n } = e;
-        o = { ...o, [t]: { ...d(t), catalog: n, hasFetchedCatalog: !0, catalogLastFetchedAt: Date.now() } };
+        o = { ...o, [t]: { ...u(t), catalog: n, hasFetchedCatalog: !0, catalogLastFetchedAt: Date.now() } };
     },
     GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS: function (e) {
         let { catalog: t } = e;
@@ -78,45 +78,45 @@ let h = new E(r.h, {
     },
     GAME_SERVER_FETCH_INSTANCES_SUCCESS: function (e) {
         let { guildId: t, instances: n } = e;
-        o = { ...o, [t]: { ...d(t), instances: n, hasFetchedInstances: !0, instancesLastFetchedAt: Date.now() } };
+        o = { ...o, [t]: { ...u(t), instances: n, hasFetchedInstances: !0, instancesLastFetchedAt: Date.now() } };
     },
     GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: function (e) {
-        let { guildId: t, skuId: n, instructions: i } = e;
-        o = { ...o, [t]: { ...d(t), instructions: { ...d(t).instructions, [n]: i } } };
+        let { guildId: t, skuId: n, instructions: r } = e;
+        o = { ...o, [t]: { ...u(t), instructions: { ...u(t).instructions, [n]: r } } };
     },
     GAME_SERVER_UPDATE_INSTANCE_SUCCESS: function (e) {
         let { guildId: t, instance: n } = e,
-            i = d(t);
-        o = { ...o, [t]: { ...i, instances: { ...i.instances, [n.id]: n } } };
+            r = u(t);
+        o = { ...o, [t]: { ...r, instances: { ...r.instances, [n.id]: n } } };
     },
     GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, unlockedGameServers: n } = e,
-            i = _(t, n);
-        o = { ...o, [t]: { ...d(t), entitlements: n, appliedBoosts: i } };
+            r = c(t, n);
+        o = { ...o, [t]: { ...u(t), entitlements: n, appliedBoosts: r } };
     },
-    GAME_SERVER_CREATE: u,
-    GAME_SERVER_UPDATE: u,
+    GAME_SERVER_CREATE: d,
+    GAME_SERVER_UPDATE: d,
     GAME_SERVER_DELETE: function (e) {
         let { guildId: t, gameServerId: n } = e,
-            i = d(t);
-        delete i.instances[n], (o = { ...o, [t]: { ...i } });
+            r = u(t);
+        delete r.instances[n], (o = { ...o, [t]: { ...r } });
     },
     GUILD_POWERUP_ENTITLEMENTS_CREATE: function (e) {
         let { guildId: t, entitlements: n } = e,
-            i = d(t);
+            r = u(t);
         n
             .filter((e) => e.sku?.tenant_metadata?.guild_monetization?.game_server != null)
             .forEach((e) => {
-                i.entitlements[e.id] = e;
+                r.entitlements[e.id] = e;
             }),
-            c(t, i);
+            _(t, r);
     },
     GUILD_POWERUP_ENTITLEMENTS_DELETE: function (e) {
         let { guildId: t, entitlements: n } = e,
-            i = d(t);
+            r = u(t);
         n.forEach((e) => {
-            delete i.entitlements[e.id];
+            delete r.entitlements[e.id];
         }),
-            c(t, i);
+            _(t, r);
     },
 });

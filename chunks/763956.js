@@ -1,0 +1,26 @@
+"use strict";
+n.d(t, { W: () => i });
+var r,
+    i =
+        (((r = {})[(r.THRILLER = 0)] = "THRILLER"),
+        (r[(r.SCIENCE_FICTION = 1)] = "SCIENCE_FICTION"),
+        (r[(r.ACTION = 2)] = "ACTION"),
+        (r[(r.HORROR = 3)] = "HORROR"),
+        (r[(r.SURVIVAL = 4)] = "SURVIVAL"),
+        (r[(r.FANTASY = 5)] = "FANTASY"),
+        (r[(r.HISTORICAL = 6)] = "HISTORICAL"),
+        (r[(r.STEALTH = 7)] = "STEALTH"),
+        (r[(r.COMEDY = 8)] = "COMEDY"),
+        (r[(r.BUSINESS = 9)] = "BUSINESS"),
+        (r[(r.DRAMA = 10)] = "DRAMA"),
+        (r[(r.NON_FICTION = 11)] = "NON_FICTION"),
+        (r[(r.KIDS = 12)] = "KIDS"),
+        (r[(r.SANDBOX = 13)] = "SANDBOX"),
+        (r[(r.OPEN_WORLD = 14)] = "OPEN_WORLD"),
+        (r[(r.WARFARE = 15)] = "WARFARE"),
+        (r[(r.EDUCATIONAL = 16)] = "EDUCATIONAL"),
+        (r[(r.MYSTERY = 17)] = "MYSTERY"),
+        (r[(r.PARTY = 18)] = "PARTY"),
+        (r[(r.ROMANCE = 19)] = "ROMANCE"),
+        (r[(r.EROTIC = 20)] = "EROTIC"),
+        r);

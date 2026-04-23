@@ -1,0 +1,11 @@
+"use strict";
+n.d(t, { j: () => i });
+var r,
+    i =
+        (((r = {})[(r.NO_CLASSIFICATION = 0)] = "NO_CLASSIFICATION"),
+        (r[(r.MANUAL_CLASSIFICATION = 1)] = "MANUAL_CLASSIFICATION"),
+        (r[(r.AUTOMATED_CLASSIFICATION = 2)] = "AUTOMATED_CLASSIFICATION"),
+        (r[(r.AGENCY_CLASSIFICATION_ESRB = 3)] = "AGENCY_CLASSIFICATION_ESRB"),
+        (r[(r.AGENCY_CLASSIFICATION_PEGI = 4)] = "AGENCY_CLASSIFICATION_PEGI"),
+        (r[(r.DISCORD_CLASSIFICATION = 5)] = "DISCORD_CLASSIFICATION"),
+        r);

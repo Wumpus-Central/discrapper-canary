@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => _ });
-var i = n(636537),
-    r = n(451988),
-    s = n(228366),
+n.d(t, { A: () => c });
+var r = n(562465),
+    i = n(451988),
+    s = n(73153),
     a = n(546183),
     o = n(652215);
-let l = new r.OC(d, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
-async function d(e) {
+let l = new i.OC(u, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
+async function u(e) {
     s.h.dispatch({
         type: "USER_AUTHORIZED_APPS_REQUEST",
         request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
     }),
-        await i.Bo.get({
+        await r.Bo.get({
             url: o.Rsh.OAUTH2_TOKENS,
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -34,12 +34,12 @@ async function d(e) {
                 }),
         );
 }
-let _ = {
+let c = {
     fetch(e) {
-        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), d()));
+        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), u()));
     },
     delete(e) {
-        i.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+        r.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             this.fetch();
         });
     },

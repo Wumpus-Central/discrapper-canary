@@ -1,18 +1,18 @@
 "use strict";
-let i, r, s, a;
-var o = n(17928),
-    l = n(228366);
-function d() {
-    (i = !1), (r = []), (s = new Set()), (a = new Set());
+let r, i, s, a;
+var o = n(311907),
+    l = n(73153);
+function u() {
+    (r = !1), (i = []), (s = new Set()), (a = new Set());
 }
-d();
-class _ extends o.Ay.Store {
+u();
+class c extends o.Ay.Store {
     static displayName = "BountyStore";
     get isFetchingQuestHomeBounties() {
-        return i;
+        return r;
     }
     get questHomeBounties() {
-        return r;
+        return i;
     }
     isBountyCompleted(e) {
         return s.has(e);
@@ -21,22 +21,22 @@ class _ extends o.Ay.Store {
         return a.has(e);
     }
     areAllBountiesCompleted() {
-        return r.every((e) => s.has(e.id));
+        return i.every((e) => s.has(e.id));
     }
 }
-new _(l.h, {
+new c(l.h, {
     LOGOUT: function () {
-        d();
+        u();
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function () {
-        i = !0;
+        r = !0;
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: function (e) {
         let { bounties: t } = e;
-        (i = !1), (r = t), (s = new Set());
+        (r = !1), (i = t), (s = new Set());
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function () {
-        (i = !1), (r = []), (s = new Set());
+        (r = !1), (i = []), (s = new Set());
     },
     BOUNTIES_CLAIM_REWARD_BEGIN: function (e) {
         let { bountyId: t } = e,
@@ -47,8 +47,8 @@ new _(l.h, {
         let { bountyId: t } = e,
             n = new Set(a);
         n.delete(t), (a = n);
-        let i = new Set(s);
-        i.add(t), (s = i);
+        let r = new Set(s);
+        r.add(t), (s = r);
     },
     BOUNTIES_CLAIM_REWARD_FAILURE: function (e) {
         let { bountyId: t } = e,

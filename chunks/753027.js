@@ -1,21 +1,22 @@
-n.d(t, { A: () => c });
-var i = n(17928),
-    r = n(228366),
-    l = n(626584),
+"use strict";
+n.d(t, { A: () => d });
+var r = n(311907),
+    i = n(73153),
+    s = n(626584),
     a = n(927813),
-    s = n(723176);
-let o = new l.A("FileSystemStore"),
-    d = 10 * a.A.Millis.MINUTE;
-class u extends i.Ay.Store {
+    o = n(723176);
+let l = new s.A("FileSystemStore"),
+    u = 10 * a.A.Millis.MINUTE;
+class c extends r.Ay.Store {
     isLowDisk = !1;
     constructor() {
-        super(r.h, {
+        super(i.h, {
             APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
             POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         }),
             this.refresh(),
-            this.waitFor(s.A),
-            setInterval(() => this.refresh(), d);
+            this.waitFor(o.A),
+            setInterval(() => this.refresh(), u);
     }
     handlePostConnectionOpen() {
         return this.refresh(), !1;
@@ -24,9 +25,9 @@ class u extends i.Ay.Store {
         return "active" !== e.state && this.refresh(), !1;
     }
     async refresh() {
-        let e = await s.A.database()
+        let e = await o.A.database()
             ?.fsInfo()
-            ?.catch((e) => o.warn("couldn't get fs info", e));
+            ?.catch((e) => l.warn("couldn't get fs info", e));
         if (null != e) {
             let t =
                     e.fs.available < 0x10000000 ||
@@ -36,9 +37,9 @@ class u extends i.Ay.Store {
                     e.fs.available > 0x30000000 &&
                     e.fs.available > 4 * e.database.used &&
                     e.fs.available > 4 * e.database.total,
-                i = !!t || (!n && null);
-            null != i && this.isLowDisk !== i && ((this.isLowDisk = i), this.emitChange());
+                r = !!t || (!n && null);
+            null != r && this.isLowDisk !== r && ((this.isLowDisk = r), this.emitChange());
         }
     }
 }
-let c = new u();
+let d = new c();

@@ -1,17 +1,17 @@
 n.d(t, { A: () => S, E: () => r });
-var l = n(17928),
-    i = n(228366);
+var l = n(311907),
+    i = n(73153);
 let r = {},
     E = {},
     a = {},
     u = !1,
     c = !1,
     o = !1;
-function s(e) {
+function d(e) {
     let { guild: t } = e.invite;
     return t?.welcome_screen != null && ((E[t.id] = t.welcome_screen), !0);
 }
-function d(e) {
+function s(e) {
     let { welcomeScreen: t, guildId: n } = e;
     E[n] = t ?? r;
 }
@@ -37,10 +37,10 @@ class _ extends l.Ay.Store {
     }
 }
 let S = new _(i.h, {
-    INVITE_RESOLVE_SUCCESS: s,
-    INVITE_ACCEPT_SUCCESS: s,
-    WELCOME_SCREEN_SUBMIT_SUCCESS: d,
-    WELCOME_SCREEN_UPDATE: d,
+    INVITE_RESOLVE_SUCCESS: d,
+    INVITE_ACCEPT_SUCCESS: d,
+    WELCOME_SCREEN_SUBMIT_SUCCESS: s,
+    WELCOME_SCREEN_UPDATE: s,
     WELCOME_SCREEN_VIEW: function (e) {
         let { guildId: t, isLurking: n } = e;
         (a[t] = !0), n && (u = !0);

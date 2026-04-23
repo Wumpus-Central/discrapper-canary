@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { O: () => c }), n(321073);
-var i = n(64700),
-    r = n(735438),
-    s = n.n(r),
-    a = n(17928),
+n.d(t, { O: () => _ }), n(321073);
+var r = n(64700),
+    i = n(735438),
+    s = n.n(i),
+    a = n(311907),
     o = n(451988),
     l = n(627363),
-    d = n(587895);
-class _ {
+    u = n(587895);
+class c {
     _lastFetchedAttempted = new Map();
     _pending = new Set();
     _flushHandler = new o.J_(32, () => this._flush());
@@ -25,7 +25,7 @@ class _ {
         let t = [],
             n = [];
         e.forEach((e) => {
-            d.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
+            u.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
         }),
             t.length > 0 &&
                 s()
@@ -41,12 +41,12 @@ class _ {
                     });
     }
 }
-let u = new _();
-function c(e) {
+let d = new c();
+function _(e) {
     return (
-        i.useEffect(() => {
-            null != e && "" !== e && u.request(e);
+        r.useEffect(() => {
+            null != e && "" !== e && d.request(e);
         }, [e]),
-        (0, a.bG)([d.A], () => (null != e && "" !== e ? d.A.getApplication(e) : null), [e])
+        (0, a.bG)([u.A], () => (null != e && "" !== e ? u.A.getApplication(e) : null), [e])
     );
 }

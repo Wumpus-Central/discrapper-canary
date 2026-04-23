@@ -3,7 +3,7 @@ var n = l(627968),
     a = l(64700),
     s = l(503698),
     i = l.n(s),
-    r = l(17928),
+    r = l(311907),
     d = l(192308),
     o = l(825484),
     c = l(821609),
@@ -13,12 +13,12 @@ var n = l(627968),
     m = l(534514),
     p = l(778492),
     x = l(935462),
-    _ = l(228366),
+    _ = l(73153),
     A = l(857182),
     C = l(47167),
     b = l(713654),
     j = l(915089),
-    y = l(548118),
+    y = l(263063),
     f = l(734057),
     N = l(808728),
     E = l(71393),
@@ -27,7 +27,7 @@ var n = l(627968),
     w = l(309010),
     I = l(287809),
     M = l(954571),
-    k = l(935208),
+    k = l(661191),
     F = l(652215),
     O = l(985018),
     L = l(199214);
@@ -80,7 +80,7 @@ class D extends a.PureComponent {
                     _.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: a, guildId: s }),
                         t(),
                         (0, d.openModalLazy)(async () => {
-                            let { default: e } = await l.e("28907").then(l.bind(l, 209674));
+                            let { default: e } = await l.e("9795").then(l.bind(l, 993390));
                             return (t) => (0, n.jsx)(e, { ...t });
                         });
                 })

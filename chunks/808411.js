@@ -7,14 +7,14 @@ var a = l(627968),
     s = l(150934),
     d = l(834730),
     c = l(914410),
-    u = l(52822);
+    u = l(252561);
 let p = () => {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(c.fh.LIGHT),
-        [y, g] = n.useState(c.qP.BLUE),
-        [v, f] = n.useState("darkslategray"),
+        [y, v] = n.useState(c.qP.BLUE),
+        [g, f] = n.useState("darkslategray"),
         [_, E] = n.useState("blanchedalmond"),
         [C, S] = n.useState("pink"),
         [j, T] = n.useState(!0),
@@ -42,7 +42,7 @@ let p = () => {
                 maximum: l,
                 weight: h,
                 variant: y,
-                override: { default: { background: v, gradientStart: _, gradientEnd: C } },
+                override: { default: { background: g, gradientStart: _, gradientEnd: C } },
                 glowing: j,
             }),
             (0, a.jsx)(u.nB, {}),
@@ -82,7 +82,7 @@ let p = () => {
                     hideLabel: !0,
                     placeholder: "Variant",
                     onSelectionChange: (e) => {
-                        null !== e && g(e);
+                        null !== e && v(e);
                     },
                     value: y,
                     options: I,
@@ -124,7 +124,7 @@ let p = () => {
             }),
             (0, a.jsx)(u.MG, {
                 children: (0, a.jsx)(i.k, {
-                    value: v,
+                    value: g,
                     onChange: (e) => {
                         f(e);
                     },

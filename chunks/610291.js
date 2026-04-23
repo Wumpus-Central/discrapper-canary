@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Lw: "overlay_df3f07",
     LK: "overlayBackground_df3f07",

@@ -1,40 +1,40 @@
-i.d(e, { A: () => s });
-var t = i(627968);
-i(64700);
-var l = i(17928),
-    a = i(477782),
-    r = i(816662),
-    d = i(395504),
-    c = i(543465),
-    o = i(652215),
-    u = i(985018);
-function s(n) {
-    let e = (0, d.jN)(n.guild_id),
-        i = (0, l.bG)([c.Ay], () => c.Ay.isChannelOptedIn(n.guild_id, n.id)),
-        s = (0, l.bG)([c.Ay], () => null != n.parent_id && c.Ay.isChannelOptedIn(n.guild_id, n.parent_id)),
+t.d(n, { A: () => c });
+var i = t(627968);
+t(64700);
+var r = t(311907),
+    l = t(477782),
+    a = t(816662),
+    d = t(395504),
+    s = t(543465),
+    o = t(652215),
+    u = t(985018);
+function c(e) {
+    let n = (0, d.jN)(e.guild_id),
+        t = (0, r.bG)([s.Ay], () => s.Ay.isChannelOptedIn(e.guild_id, e.id)),
+        c = (0, r.bG)([s.Ay], () => null != e.parent_id && s.Ay.isChannelOptedIn(e.guild_id, e.parent_id)),
         A = () => {
-            (0, r.AC)(n.guild_id, n.id, !i, { section: o.JJy.CONTEXT_MENU });
+            (0, a.AC)(e.guild_id, e.id, !t, { section: o.JJy.CONTEXT_MENU });
         };
-    return !e || n.isThread()
+    return !n || e.isThread()
         ? null
-        : n.isCategory()
-          ? (0, t.jsx)(a.Dr, {
+        : e.isCategory()
+          ? (0, i.jsx)(l.Dr, {
                 id: "opt-into-category",
-                label: i ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
+                label: t ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
                 action: () => A(),
             })
-          : s
-            ? (0, t.jsx)(a.Dr, {
+          : c
+            ? (0, i.jsx)(l.Dr, {
                   id: "opt-out-category",
                   label: u.intl.string(u.t.jNphKT),
                   action: () =>
                       void (
-                          null != n.parent_id && (0, r.AC)(n.guild_id, n.parent_id, !1, { section: o.JJy.CONTEXT_MENU })
+                          null != e.parent_id && (0, a.AC)(e.guild_id, e.parent_id, !1, { section: o.JJy.CONTEXT_MENU })
                       ),
               })
-            : (0, t.jsx)(a.Dr, {
+            : (0, i.jsx)(l.Dr, {
                   id: "opt-into-channel",
-                  label: i ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
+                  label: t ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
                   action: () => A(),
               });
 }

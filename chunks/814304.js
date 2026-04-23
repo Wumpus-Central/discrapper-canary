@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wx: "header_e4d803",
     Du: "stepBody_e4d803",

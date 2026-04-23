@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { ES: () => o, Ek: () => a, kk: () => s });
-var i = n(228366);
-let r = new (n(626584).A)("TryLoad");
+var r = n(73153);
+let i = new (n(626584).A)("TryLoad");
 async function s(e) {
     try {
         return await e();
     } catch (e) {
-        return r.log("database load failed.", e), null;
+        return i.log("database load failed.", e), null;
     }
 }
 function a(e, t, n) {
@@ -14,8 +14,8 @@ function a(e, t, n) {
         return t();
     } catch (t) {
         return (
-            r.log(`${e}: exception thrown, resetting socket.`, t, t.stack),
-            i.h.dispatch({
+            i.log(`${e}: exception thrown, resetting socket.`, t, t.stack),
+            r.h.dispatch({
                 type: "RESET_SOCKET",
                 args: {
                     error: t,
@@ -32,8 +32,8 @@ async function o(e, t, n) {
         return await t();
     } catch (t) {
         return (
-            r.log(`${e}: exception thrown, resetting socket.`, t, t.stack),
-            i.h.dispatch({
+            i.log(`${e}: exception thrown, resetting socket.`, t, t.stack),
+            r.h.dispatch({
                 type: "RESET_SOCKET",
                 args: {
                     error: t,

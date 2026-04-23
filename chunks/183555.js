@@ -1,70 +1,70 @@
 "use strict";
-n.d(t, { NJ: () => c, of: () => _, pb: () => u });
-var i,
-    r = n(627968),
+n.d(t, { NJ: () => _, of: () => c, pb: () => d });
+var r,
+    i = n(627968),
     s = n(64700),
-    a = n(132500),
+    a = n(835245),
     o = n(688810),
-    l = n(47675);
-let d = s.createContext(null),
-    _ = (e) => {
-        let { value: t, children: n, openedAt: i, fetchStartedAt: a, fetchEndedAt: _, isLoaded: u = !1 } = e,
-            { analyticsLocations: c } = (0, o.Ay)(),
-            E = s.useRef(void 0),
-            h = { analyticsLocations: c, value: t },
-            m = s.useRef(h);
+    l = n(672385);
+let u = s.createContext(null),
+    c = (e) => {
+        let { value: t, children: n, openedAt: r, fetchStartedAt: a, fetchEndedAt: c, isLoaded: d = !1 } = e,
+            { analyticsLocations: _ } = (0, o.Ay)(),
+            f = s.useRef(void 0),
+            p = { analyticsLocations: _, value: t },
+            h = s.useRef(p);
         return (
             s.useEffect(() => {
-                m.current = h;
+                h.current = p;
             }),
             s.useEffect(() => {
                 let e = Date.now();
-                if ((null == E.current && null != i && (E.current = e - i), !u)) return;
-                let { analyticsLocations: t, value: n } = m.current;
+                if ((null == f.current && null != r && (f.current = e - r), !d)) return;
+                let { analyticsLocations: t, value: n } = h.current;
                 (0, l.Wn)({ action: "VIEW", analyticsLocations: t, ...n }),
                     (0, l.wd)({
                         profileUi: "USER_PROFILE",
-                        timeToInteractiveMs: E.current,
-                        timeToLoadMs: null != i ? e - i : void 0,
-                        timeToFetchMs: null != a && null != _ ? _ - a : void 0,
-                        viewStartedAt: i,
+                        timeToInteractiveMs: f.current,
+                        timeToLoadMs: null != r ? e - r : void 0,
+                        timeToFetchMs: null != a && null != c ? c - a : void 0,
+                        viewStartedAt: r,
                         fetchStartedAt: a,
                         analyticsLocations: t,
                         ...n,
                     });
-            }, [u]),
-            (0, r.jsx)(d.Provider, { value: t, children: n })
+            }, [d]),
+            (0, i.jsx)(u.Provider, { value: t, children: n })
         );
     },
-    u = (e) => {
+    d = (e) => {
         let {
                 layout: t,
-                userId: r,
+                userId: i,
                 guildId: o,
                 channelId: l,
-                messageId: _,
-                roleId: u,
-                sourceSessionId: c,
-                showGuildProfile: E = !0,
+                messageId: c,
+                roleId: d,
+                sourceSessionId: _,
+                showGuildProfile: f = !0,
             } = e,
-            h = (i || (i = n.t(s, 2))).useContext(d)?.sessionId;
+            p = (r || (r = n.t(s, 2))).useContext(u)?.sessionId;
         return s.useMemo(
             () => ({
                 sessionId: (0, a.A)(),
-                sourceSessionId: c ?? h,
+                sourceSessionId: _ ?? p,
                 layout: t,
-                userId: r,
+                userId: i,
                 guildId: o,
                 channelId: l,
-                messageId: _,
-                roleId: u,
-                showGuildProfile: E,
+                messageId: c,
+                roleId: d,
+                showGuildProfile: f,
             }),
-            [h, t, r, o, l, _, u, c, E],
+            [p, t, i, o, l, c, d, _, f],
         );
     },
-    c = () => {
-        let e = s.useContext(d),
+    _ = () => {
+        let e = s.useContext(u),
             { analyticsLocations: t } = (0, o.Ay)();
         return {
             context: e,

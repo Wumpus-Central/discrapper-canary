@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     lm: "notice__6e2b9",
     Fr: "isMobile__6e2b9",

@@ -1,9 +1,10 @@
-n.d(t, { A: () => o });
-var i = n(867051),
-    r = n(548965),
-    l = n(137903);
+"use strict";
+n.d(t, { A: () => l });
+var r = n(867051),
+    i = n(548965),
+    s = n(942269);
 let a = "Note";
-class s extends l.yW {
+class o extends s.yW {
     static displayName = "NoteStore";
     database = this.addKVDatabase("notes");
     getNote(e) {
@@ -13,18 +14,18 @@ class s extends l.yW {
         return this.database;
     }
 }
-let o = new s(
+let l = new o(
     {
         LOGOUT: (e, t) => t.clear(),
         RESET_SOCKET: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => t.clear(),
         OVERLAY_INITIALIZE: (e, t) => t.clear(),
         USER_NOTE_UPDATE: (e, t) => {
-            t.set(e.id, (0, i.yE)(a, { loading: !1, note: e.note }));
+            t.set(e.id, (0, r.yE)(a, { loading: !1, note: e.note }));
         },
         USER_NOTE_LOAD_START: (e, t) => {
-            t.set(e.userId, (0, i.yE)(a, { loading: !0, note: null }));
+            t.set(e.userId, (0, r.yE)(a, { loading: !0, note: null }));
         },
     },
-    r.P4.getCachedBridgedStoreMode(),
+    i.P4.getCachedBridgedStoreMode(),
 );

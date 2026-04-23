@@ -1,17 +1,18 @@
+"use strict";
 n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(462887),
-    a = n(736653),
-    l = n(313961),
-    s = n(309010),
-    o = n(652215);
+var r = n(311907),
+    i = n(462887),
+    s = n(736653),
+    a = n(313961),
+    o = n(309010),
+    l = n(652215);
 function u(e, t) {
-    let n = (0, i.bG)([s.A], () => s.A.getVoiceChannelId()),
-        u = (0, i.bG)([l.A], () => (null != n ? l.A.getMode(n) : null)),
-        _ = (0, a.Ay)();
+    let n = (0, r.bG)([o.A], () => o.A.getVoiceChannelId()),
+        u = (0, r.bG)([a.A], () => (null != n ? a.A.getMode(n) : null)),
+        c = (0, s.Ay)();
     return null != e
         ? e
-        : u === o._Of.VOICE && (0, r.q)(_)
+        : u === l._Of.VOICE && (0, i.q)(c)
           ? t
               ? "activeLight"
               : "primaryLight"

@@ -1,22 +1,22 @@
 n.d(t, { A: () => d });
-var l = n(17928),
-    i = n(228366),
-    s = n(652215);
-let a = {};
+var i = n(311907),
+    l = n(73153),
+    a = n(652215);
+let s = {};
 function r(e) {
-    let t = a[(e = e ?? "null")];
+    let t = s[(e = e ?? "null")];
     return (
         null == t &&
-            (t = a[e] =
-                { state: s.S7L.DISCONNECTED, quality: s.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
+            (t = s[e] =
+                { state: a.S7L.DISCONNECTED, quality: a.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
         t
     );
 }
 function o(e, t, n) {
-    let l = a[(e = e ?? "null")];
-    return null != l ? t(l) : n;
+    let i = s[(e = e ?? "null")];
+    return null != i ? t(i) : n;
 }
-class c extends l.Ay.Store {
+class c extends i.Ay.Store {
     static displayName = "OverlayRTCConnectionStore";
     getConnectionState(e) {
         return o(
@@ -25,7 +25,7 @@ class c extends l.Ay.Store {
                 let { state: t } = e;
                 return t;
             },
-            s.S7L.DISCONNECTED,
+            a.S7L.DISCONNECTED,
         );
     }
     getQuality(e) {
@@ -35,7 +35,7 @@ class c extends l.Ay.Store {
                 let { quality: t } = e;
                 return t;
             },
-            s.bFR.UNKNOWN,
+            a.bFR.UNKNOWN,
         );
     }
     getHostname(e) {
@@ -77,9 +77,9 @@ class c extends l.Ay.Store {
         );
     }
 }
-let d = new c(i.h, {
+let d = new c(l.h, {
     OVERLAY_INITIALIZE: function (e) {
-        a = e.rtcConnectionStates;
+        s = e.rtcConnectionStates;
     },
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;

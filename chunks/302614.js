@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => C });
-var i = n(627968),
-    r = n(64700),
+n.d(t, { A: () => N });
+var r = n(627968),
+    i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(111956),
     l = n.n(o),
-    d = n(132500),
-    _ = n(17928),
-    u = n(52133),
-    c = n(684013),
-    E = n(869146),
-    h = n(256415),
-    m = n(723702),
-    f = n(41984),
-    g = n(127242),
-    p = n(545807),
+    u = n(835245),
+    c = n(311907),
+    d = n(52133),
+    _ = n(684013),
+    f = n(869146),
+    p = n(256415),
+    h = n(723702),
+    E = n(41984),
+    m = n(127242),
+    g = n(545807),
     A = n(392164),
     I = n(18897);
 function T(e, t) {
@@ -42,13 +42,13 @@ class S {
             null == this.mutationObserver)
         ) {
             this.mutationObserver = new MutationObserver(this.handleMutations);
-            let e = E.A.getWindow(A.f);
+            let e = f.A.getWindow(A.f);
             null != e && this.mutationObserver.observe(e?.document.body, { subtree: !0, attributes: !0 });
         }
         let t = this.zones.get(e);
         null != t && this.resizeObserver.unobserve(t.element);
         let n = e.getBoundingClientRect();
-        this.zones.set(e, { element: e, zone: T(t?.zone.name ?? (0, d.A)(), n) }),
+        this.zones.set(e, { element: e, zone: T(t?.zone.name ?? (0, u.A)(), n) }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
             this.updateZones();
@@ -67,9 +67,9 @@ class S {
         () => {
             let e = !1;
             for (let [t, n] of this.zones) {
-                let i = t.getBoundingClientRect(),
-                    r = T(n.zone.name, i);
-                (0, u.A)(r, n.zone) || ((e = !0), (n = { element: n.element, zone: r }), this.zones.set(t, n));
+                let r = t.getBoundingClientRect(),
+                    i = T(n.zone.name, r);
+                (0, d.A)(i, n.zone) || ((e = !0), (n = { element: n.element, zone: i }), this.zones.set(t, n));
             }
             e && this.updateZones();
         },
@@ -77,10 +77,10 @@ class S {
         { trailing: !0, maxWait: 1e3 },
     );
     updateZones() {
-        if (!m.isPlatformEmbedded) return;
-        let e = E.A.getWindow(A.f);
+        if (!h.isPlatformEmbedded) return;
+        let e = f.A.getWindow(A.f);
         null != e &&
-            c.A.setClickZones(
+            _.A.setClickZones(
                 Array.from(this.zones.values()).map((t) => {
                     let { zone: n } = t;
                     return {
@@ -102,13 +102,13 @@ class S {
             this.updateZones();
     }
 }
-let N = r.createContext(new S((0, p.b)()));
-function C(e) {
+let y = i.createContext(new S((0, g.b)()));
+function N(e) {
     let { observe: t = !0, className: n, style: s, children: o } = e,
-        l = r.useContext(N),
-        d = (0, _.bG)([g.A], () => g.A.hasRenderDebugMode(f.x7.ClickZones)),
-        u = (0, _.bG)([h.default], () => h.default.disableClickableRegions),
-        [{ refHandler: c, setObserve: E }] = r.useState(() => {
+        l = i.useContext(y),
+        u = (0, c.bG)([m.A], () => m.A.hasRenderDebugMode(E.x7.ClickZones)),
+        d = (0, c.bG)([p.default], () => p.default.disableClickableRegions),
+        [{ refHandler: _, setObserve: f }] = i.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
@@ -120,9 +120,9 @@ function C(e) {
             };
         });
     return (
-        r.useLayoutEffect(() => {
-            u ? E(!1) : E(t);
-        }, [t, E, u]),
-        (0, i.jsx)("div", { ref: c, style: s, className: a()(n, I.v, d && I.p), "data-click-zone": !0, children: o })
+        i.useLayoutEffect(() => {
+            d ? f(!1) : f(t);
+        }, [t, f, d]),
+        (0, r.jsx)("div", { ref: _, style: s, className: a()(n, I.v, u && I.p), "data-click-zone": !0, children: o })
     );
 }

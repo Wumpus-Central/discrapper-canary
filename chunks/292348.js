@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { OW: () => d, YK: () => l, dm: () => _, eM: () => o, ly: () => u });
-var i = n(565150),
-    r = n(762555),
+n.d(t, { OW: () => u, YK: () => l, dm: () => c, eM: () => o, ly: () => d });
+var r = n(565150),
+    i = n(762555),
     s = n(381941);
 let a = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
@@ -21,7 +21,7 @@ let a = [
     ],
     o = 524288e3,
     l = 500;
-function d(e) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
         a = { id: t?.toString() ?? e.id };
@@ -41,47 +41,47 @@ function d(e) {
             ((a.is_clip = !0),
             (a.title = e.clip.name),
             (a.application_id = e.clip.applicationId),
-            (a.clip_created_at = (0, r.U)(e.clip.createdAt)),
-            (a.clip_participant_ids = (0, r.g)(e.clip.users)),
+            (a.clip_created_at = (0, i.U)(e.clip.createdAt)),
+            (a.clip_participant_ids = (0, i.g)(e.clip.users)),
             (a.clip_remote_id = e.clip.remoteClipId)),
         "item" in e &&
             null != e.item &&
-            e.item.platform === i.xz.WEB &&
+            e.item.platform === r.xz.WEB &&
             "mimeType" in e &&
             null != e.mimeType &&
             (a.original_content_type = e.mimeType),
         a
     );
 }
-function _(e) {
+function c(e) {
     let t = new XMLHttpRequest();
-    return new Promise((n, i) => {
+    return new Promise((n, r) => {
         t.open("GET", e, !0),
             (t.responseType = "blob"),
-            (t.onabort = (e) => i(e)),
-            (t.onerror = (e) => i(e)),
-            (t.ontimeout = (e) => i(e)),
+            (t.onabort = (e) => r(e)),
+            (t.onerror = (e) => r(e)),
+            (t.ontimeout = (e) => r(e)),
             (t.onload = () => n(t?.response?.data)),
             t.send();
     });
 }
-function u(e) {
+function d(e) {
     let t,
-        { uri: n, i, overrideFilename: r, overrideType: s } = e,
+        { uri: n, i: r, overrideFilename: i, overrideType: s } = e,
         o = n.split("/"),
         l = o[o.length - 1];
     l = l.split("?")?.[0]?.toLowerCase() ?? "";
-    let d = a.find((e) => e.reName.test(l));
-    if ((null == d && null != r && (d = a.find((e) => e.reName.test(r))), null != d && null != r)) {
-        let e = d.name(i).split(".").pop(),
-            n = r.lastIndexOf(".");
-        t = -1 !== n ? `${r.substr(0, n)}.${e}` : `${r}.${e}`;
-    } else t = null != d ? d.name(i) : (r ?? "unknown");
+    let u = a.find((e) => e.reName.test(l));
+    if ((null == u && null != i && (u = a.find((e) => e.reName.test(i))), null != u && null != i)) {
+        let e = u.name(r).split(".").pop(),
+            n = i.lastIndexOf(".");
+        t = -1 !== n ? `${i.substr(0, n)}.${e}` : `${i}.${e}`;
+    } else t = null != u ? u.name(r) : (i ?? "unknown");
     return {
         uri: n,
         filename: t,
-        type: s ?? d?.type ?? "unknown",
-        isVideo: -1 !== (s ?? d?.name(i) ?? "").indexOf("video"),
-        isImage: -1 !== (s ?? d?.name(i) ?? "").indexOf("image"),
+        type: s ?? u?.type ?? "unknown",
+        isVideo: -1 !== (s ?? u?.name(r) ?? "").indexOf("video"),
+        isImage: -1 !== (s ?? u?.name(r) ?? "").indexOf("image"),
     };
 }

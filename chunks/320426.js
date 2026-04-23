@@ -1,30 +1,30 @@
 n.d(t, { A: () => p });
 var i = n(64700),
-    r = n(702841),
-    a = n(636537),
-    l = n(228366),
+    r = n(417597),
+    a = n(562465),
+    l = n(73153),
     s = n(58149),
     o = n(71393),
     d = n(576705),
     u = n(954571),
     c = n(927813),
-    _ = n(381616),
-    A = n(652215);
-let h = +c.A.Millis.DAY,
+    A = n(381616),
+    h = n(652215);
+let _ = +c.A.Millis.DAY,
     E = new Map(),
     p = {
         useShouldShowChannelNotice(e) {
             let t = (0, r.bG)([o.A, d.A], () => {
                 let t = o.A.getGuild(e);
-                return null != t && d.A.can(A.xBc.ADMINISTRATOR, t);
+                return null != t && d.A.can(h.xBc.ADMINISTRATOR, t);
             });
             i.useEffect(() => {
                 let n, i;
                 t &&
                     ((n = Date.now()),
-                    n < (i = E.get(e) ?? 0) + h ||
+                    n < (i = E.get(e) ?? 0) + _ ||
                         (E.set(e, n),
-                        a.Bo.post({ url: A.Rsh.GUILD_MIGRATE_COMMAND_SCOPE(e), rejectWithError: !0 }).then(
+                        a.Bo.post({ url: h.Rsh.GUILD_MIGRATE_COMMAND_SCOPE(e), rejectWithError: !0 }).then(
                             (t) => {
                                 l.h.dispatch({
                                     type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
@@ -37,7 +37,7 @@ let h = +c.A.Millis.DAY,
                             },
                         )));
             }, [e, t]);
-            let n = (0, r.bG)([_.A], () => _.A.shouldShowChannelNotice(e));
+            let n = (0, r.bG)([A.A], () => A.A.shouldShowChannelNotice(e));
             return t && n;
         },
         dismissNotice(e) {
@@ -45,7 +45,7 @@ let h = +c.A.Millis.DAY,
         },
         dismissOverviewTooltip(e, t) {
             l.h.dispatch({ type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED", guildId: e, integrationId: t.id }),
-                u.default.track(A.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                u.default.track(h.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
                     ...(0, s.H$)(e),
                     application_id: t.application?.id,
                     location: "overview",
@@ -54,7 +54,7 @@ let h = +c.A.Millis.DAY,
         dismissToggleTooltip(e, t) {
             void 0 !== t &&
                 (l.h.dispatch({ type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED", integrationId: t.id }),
-                u.default.track(A.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                u.default.track(h.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
                     ...(0, s.H$)(e),
                     application_id: t.application?.id,
                     location: "toggle",

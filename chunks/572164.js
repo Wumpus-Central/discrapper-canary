@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { Ao: () => d, Et: () => l, TD: () => o, XT: () => _ });
-var i = n(17928),
-    r = n(723702),
+n.d(t, { Ao: () => u, Et: () => l, TD: () => o, XT: () => c });
+var r = n(311907),
+    i = n(723702),
     s = n(734066),
     a = n(274372);
 function o() {
@@ -11,18 +11,18 @@ function o() {
 }
 function l() {
     let e = (0, s.sw)(),
-        t = (0, i.bG)([a.A], () => a.A.getState().clipsSettings.clipsEnabled);
+        t = (0, r.bG)([a.A], () => a.A.getState().clipsSettings.clipsEnabled);
     return e && t;
 }
-function d() {
+function u() {
     let e = o(),
-        t = (0, r.isWindows)(),
+        t = (0, i.isWindows)(),
         n = a.A.getState().clipsSettings.decoupledClipsEnabled;
     return e && t && n;
 }
-function _() {
+function c() {
     let e = l(),
-        t = (0, r.isWindows)(),
-        n = (0, i.bG)([a.A], () => a.A.getState().clipsSettings.decoupledClipsEnabled);
+        t = (0, i.isWindows)(),
+        n = (0, r.bG)([a.A], () => a.A.getState().clipsSettings.decoupledClipsEnabled);
     return e && t && n;
 }

@@ -1,62 +1,63 @@
-n.d(t, { A: () => _ });
-var i = n(734057),
-    r = n(287809),
-    a = n(646865),
-    l = n(909206),
-    s = n(795816),
-    o = n(817636),
+"use strict";
+n.d(t, { A: () => c });
+var r = n(734057),
+    i = n(287809),
+    s = n(646865),
+    a = n(909206),
+    o = n(795816),
+    l = n(817636),
     u = n(574152);
-async function _(e) {
+async function c(e) {
     let t;
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        (t = await (0, o.A)(e.targetApplicationId, e.channelId)), (n = (0, a.f)());
+        (t = await (0, l.A)(e.targetApplicationId, e.channelId)), (n = (0, s.f)());
     } catch {
         return !1;
     }
-    return (0, a.w)(n, () => E({ ...e, targetApplication: t }));
+    return (0, s.w)(n, () => d({ ...e, targetApplication: t }));
 }
-async function E(e) {
+async function d(e) {
     let {
             targetApplication: t,
             locationObject: n,
-            channelId: a,
-            analyticsLocations: o,
-            componentId: _,
-            commandOrigin: E,
-            sectionName: A,
-            source: c,
-            onExecutedCallback: d,
-            referrerId: I,
-            customId: T,
-            inviterUserId: N,
-            onConfirmActivityLaunchChecksAlertOpen: S,
+            channelId: s,
+            analyticsLocations: l,
+            componentId: c,
+            commandOrigin: d,
+            sectionName: _,
+            source: f,
+            onExecutedCallback: p,
+            referrerId: h,
+            customId: E,
+            inviterUserId: m,
+            onConfirmActivityLaunchChecksAlertOpen: g,
         } = e,
-        p = (0, u.A)(),
-        O = r.default.getCurrentUser();
+        A = (0, u.A)(),
+        I = i.default.getCurrentUser();
     return (
-        null != a &&
-        null != i.A.getChannel(a) &&
-        null != O &&
+        null != s &&
+        null != r.A.getChannel(s) &&
+        null != I &&
         null != t &&
-        (l.MJ(t.id),
-        await (0, s.su)({
-            channelId: a,
+        (a.MJ(t.id),
+        await (0, o.su)({
+            channelId: s,
             applicationId: t.id,
             isStart: !0,
-            embeddedActivitiesManager: p,
-            componentId: _,
-            commandOrigin: E,
-            sectionName: A,
+            embeddedActivitiesManager: A,
+            componentId: c,
+            commandOrigin: d,
+            sectionName: _,
             locationObject: n,
-            analyticsLocations: o,
-            source: c,
-            onExecutedCallback: d,
-            referrerId: I,
-            customId: T,
-            inviterUserId: N,
-            onConfirmActivityLaunchChecksAlertOpen: S,
+            analyticsLocations: l,
+            source: f,
+            onExecutedCallback: p,
+            referrerId: h,
+            customId: E,
+            inviterUserId: m,
+            onConfirmActivityLaunchChecksAlertOpen: g,
         }))
     );
 }

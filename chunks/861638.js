@@ -1,192 +1,193 @@
-n.d(t, { Ht: () => j, Vc: () => q, as: () => K }), n(321073);
-var i = n(132500),
-    r = n(71931),
-    l = n(17928),
+"use strict";
+n.d(t, { Ht: () => z, Vc: () => q, as: () => $ }), n(321073);
+var r = n(835245),
+    i = n(71931),
+    s = n(311907),
     a = n(506774),
-    s = n(228366),
-    o = n(237774),
-    d = n(626584),
-    u = n(366853),
-    c = n(495544),
-    h = n(885576),
-    E = n(763827),
-    _ = n(954571),
-    p = n(927813),
-    A = n(38405),
-    f = n(616005),
+    o = n(73153),
+    l = n(237774),
+    u = n(626584),
+    c = n(142120),
+    d = n(961350),
+    _ = n(885576),
+    f = n(383501),
+    p = n(954571),
+    h = n(927813),
+    E = n(728458),
+    m = n(616005),
     g = n(789999),
-    I = n(604594),
-    T = n(565783),
-    S = n(652215);
-let m = 15 * p.A.Millis.MINUTE,
-    O = p.A.Millis.SECOND,
-    C = "LAST_CLIENT_HEARTBEAT_SESSION",
-    N = "user",
-    y = new d.A("SessionHeartbeatScheduler"),
+    A = n(604594),
+    I = n(565783),
+    T = n(652215);
+let S = 15 * h.A.Millis.MINUTE,
+    y = h.A.Millis.SECOND,
+    N = "LAST_CLIENT_HEARTBEAT_SESSION",
+    v = "user",
+    C = new u.A("SessionHeartbeatScheduler"),
+    O = null,
     R = null,
-    L = null,
-    v = 0,
+    b = 0,
     D = 0,
-    b = { state: "uninitialized" },
-    U = E.A.getState(),
-    P = (0, g.R)(),
-    M = c.default.getToken();
-function w() {
+    L = { state: "uninitialized" },
+    w = f.A.getState(),
+    M = (0, g.R)(),
+    P = d.default.getToken();
+function x() {
     (function () {
-        if (null == R) return !1;
-        switch (R.type) {
+        if (null == O) return !1;
+        switch (O.type) {
             case "timeout":
-                clearTimeout(R.id);
+                clearTimeout(O.id);
                 break;
             case "interval":
-                clearInterval(R.id);
+                clearInterval(O.id);
                 break;
             default:
-                R.type;
+                O.type;
         }
-        return (R = null), !0;
-    })() && (A.A.addBreadcrumb({ category: N, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
+        return (O = null), !0;
+    })() && (E.A.addBreadcrumb({ category: v, message: "Stopping Analytics Heartbeat" }), (0, l.p)());
 }
-async function G() {
+async function k() {
     let e,
         t = Date.now(),
-        n = await j(),
-        i = Date.now();
+        n = await z(),
+        r = Date.now();
     if (null == n)
-        return void A.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${i - t}ms`));
-    A.A.addBreadcrumb({ category: N, message: "Tracking Heartbeat", data: { initialized: n.createdAtTimestamp } });
-    let r = {
+        return void E.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${r - t}ms`));
+    E.A.addBreadcrumb({ category: v, message: "Tracking Heartbeat", data: { initialized: n.createdAtTimestamp } });
+    let i = {
         client_heartbeat_initialization_timestamp: n.createdAtTimestamp,
         client_heartbeat_version: 27,
-        ...(0, f.Q)(),
-        ...((e = h.A.getIdleSince() ?? 0),
+        ...(0, m.Q)(),
+        ...((e = _.A.getIdleSince() ?? 0),
         {
-            is_idle: h.A.isIdle(),
+            is_idle: _.A.isIdle(),
             idle_duration_ms: Date.now() - e,
-            is_afk: h.A.isAFK(),
-            is_system_suspended: h.A.getSystemSuspended(),
-            is_system_locked: h.A.getSystemLocked(),
+            is_afk: _.A.isAFK(),
+            is_system_suspended: _.A.getSystemSuspended(),
+            is_system_locked: _.A.getSystemLocked(),
         }),
     };
-    _.default.track(S.HAw.CLIENT_HEARTBEAT, r), (D = performance.now()), (0, o.p)();
+    p.default.track(T.HAw.CLIENT_HEARTBEAT, i), (D = performance.now()), (0, l.p)();
 }
-function F() {
+function U() {
     let e = [];
     return (
-        null != M && (P && e.push("foregrounded"), U === S.S7L.RTC_CONNECTED && e.push("rtc_connected")),
+        null != P && (M && e.push("foregrounded"), w === T.S7L.RTC_CONNECTED && e.push("rtc_connected")),
         { active: e.length > 0, ver: 27, reasons: e }
     );
 }
-function V() {
-    return F().active;
+function G() {
+    return U().active;
 }
-function k() {
-    V()
+function F() {
+    G()
         ? (function () {
-              if (null != R) return;
-              let e = 0 === D ? 0 : m - (performance.now() - D);
-              A.A.addBreadcrumb({
+              if (null != O) return;
+              let e = 0 === D ? 0 : S - (performance.now() - D);
+              E.A.addBreadcrumb({
                   message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
               }),
-                  (R = {
+                  (O = {
                       type: "timeout",
                       id: setTimeout(() => {
-                          G(),
-                              (R = {
+                          k(),
+                              (O = {
                                   type: "interval",
                                   id: setInterval(() => {
-                                      G();
-                                  }, m),
+                                      k();
+                                  }, S),
                               });
                       }, e),
                   });
           })()
-        : w(),
-        u.A.getSocket()?.handleActiveStateChange(F());
+        : x(),
+        c.A.getSocket()?.handleActiveStateChange(U());
 }
-function x(e) {
+function V(e) {
     return null == e
         ? null
-        : e.version !== I.Ir
-          ? (y.warn(`Throwing away client session with invalid version: ${e.version}, expected ${I.Ir}`), null)
+        : e.version !== A.Ir
+          ? (C.warn(`Throwing away client session with invalid version: ${e.version}, expected ${A.Ir}`), null)
           : e;
 }
-async function H() {
-    let e = await j(!1);
-    null != e && u.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
+async function B() {
+    let e = await z(!1);
+    null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, i.C);
 }
-function B() {
-    let e = c.default.getToken();
-    M !== e && ((M = e), a.w.remove(C), (b = { state: "loaded", session: null }), w(), (D = 0)), k();
+function H() {
+    let e = d.default.getToken();
+    P !== e && ((P = e), a.w.remove(N), (L = { state: "loaded", session: null }), x(), (D = 0)), F();
 }
-function Y() {
-    let e = E.A.getState();
-    U !== e && ((U = e), k());
+function j() {
+    let e = f.A.getState();
+    w !== e && ((w = e), F());
+}
+function Y(e) {
+    let { focused: t } = e;
+    M !== t && ((M = t), F());
 }
 function W(e) {
-    let { focused: t } = e;
-    P !== t && ((P = t), k());
-}
-function $(e) {
     let { state: t } = e,
-        n = t === S.g6G.ACTIVE;
-    P !== n && ((P = n), k());
-}
-function z() {
-    (U = E.A.getState()), (P = (0, g.R)()), B();
+        n = t === T.g6G.ACTIVE;
+    M !== n && ((M = n), F());
 }
 function K() {
-    A.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
-        E.A.addChangeListener(Y),
-        c.default.addChangeListener(B),
-        s.h.subscribe("WINDOW_FOCUS", W),
-        s.h.subscribe("APP_STATE_UPDATE", $),
-        s.h.subscribe("CONNECTION_OPEN", H),
-        k(),
-        null == L &&
-            (L = {
+    (w = f.A.getState()), (M = (0, g.R)()), H();
+}
+function $() {
+    E.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
+        f.A.addChangeListener(j),
+        d.default.addChangeListener(H),
+        o.h.subscribe("WINDOW_FOCUS", Y),
+        o.h.subscribe("APP_STATE_UPDATE", W),
+        o.h.subscribe("CONNECTION_OPEN", B),
+        F(),
+        null == R &&
+            (R = {
                 id: setInterval(() => {
-                    !(null != M && (0, T.$)()) ||
-                        performance.now() - D <= m ||
-                        _.default.track(S.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 27 });
-                }, m),
+                    !(null != P && (0, I.$)()) ||
+                        performance.now() - D <= S ||
+                        p.default.track(T.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 27 });
+                }, S),
                 type: "interval",
             }),
-        l.Ay.initialized.then(z);
+        s.Ay.initialized.then(K);
 }
-async function j() {
+async function z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = null,
-        n = "loaded" === b.state ? b.session?.uuid : null;
+        n = "loaded" === L.state ? L.session?.uuid : null;
     try {
-        t = "uninitialized" === b.state ? x(await a.w.getAfterRefresh(C)) : b.session;
+        t = "uninitialized" === L.state ? V(await a.w.getAfterRefresh(N)) : L.session;
     } catch (e) {
-        A.A.captureException(e);
+        E.A.captureException(e);
     }
-    let l = Date.now();
-    if (V()) {
-        (null == t || (0, I.aE)(t)) &&
-            ((t = { uuid: (0, i.A)(), createdAtTimestamp: l, lastUsedTimestamp: l, version: I.Ir }), (v = 0)),
-            (t.lastUsedTimestamp = l);
-        var s = t;
+    let s = Date.now();
+    if (G()) {
+        (null == t || (0, A.aE)(t)) &&
+            ((t = { uuid: (0, r.A)(), createdAtTimestamp: s, lastUsedTimestamp: s, version: A.Ir }), (b = 0)),
+            (t.lastUsedTimestamp = s);
+        var o = t;
         let e = performance.now();
-        if (!(e - v < O))
+        if (!(e - b < y))
             try {
-                a.w.set(C, s), (v = e);
+                a.w.set(N, o), (b = e);
             } catch (e) {
-                A.A.captureException(e);
+                E.A.captureException(e);
             }
-    } else null != t && (0, I.aE)(t) && (t = null);
+    } else null != t && (0, A.aE)(t) && (t = null);
     return (
-        (b = { state: "loaded", session: t }),
+        (L = { state: "loaded", session: t }),
         null != t &&
             n !== t.uuid &&
             e &&
-            u.A.getSocket()?.handleUpdateTimeSpentSessionId(t.createdAtTimestamp, t.uuid, r.C),
+            c.A.getSocket()?.handleUpdateTimeSpentSessionId(t.createdAtTimestamp, t.uuid, i.C),
         t
     );
 }
 function q() {
-    let e = "uninitialized" === b.state ? x(a.w.get(C)) : b.session;
-    return null == e || (0, I.aE)(e) ? null : e;
+    let e = "uninitialized" === L.state ? V(a.w.get(N)) : L.session;
+    return null == e || (0, A.aE)(e) ? null : e;
 }

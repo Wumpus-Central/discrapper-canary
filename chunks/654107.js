@@ -1,58 +1,59 @@
-n.d(t, { Ay: () => T, D1: () => A, l0: () => u, rh: () => S });
-var i = n(64700),
-    r = n(440745),
-    a = n.n(r),
-    s = n(353640),
-    _ = n(121894),
-    l = n(17928),
-    o = n(775602),
-    E = n(998304),
+"use strict";
+n.d(t, { Ay: () => E, D1: () => h, l0: () => f, rh: () => m });
+var r = n(64700),
+    i = n(440745),
+    s = n.n(i),
+    a = n(353640),
+    o = n(121894),
+    l = n(311907),
+    u = n(775602),
+    c = n(998304),
     d = n(515718);
-let c = (0, s.v)(() => ({ palette: {}, fetching: {} }));
-async function u(e) {
-    null == c.getState().palette[e] && (await I(e));
+let _ = (0, a.v)(() => ({ palette: {}, fetching: {} }));
+async function f(e) {
+    null == _.getState().palette[e] && (await p(e));
 }
-async function I(e) {
-    if (!c.getState().fetching[e]) {
-        (0, _.r)(() => c.setState((t) => ({ fetching: { ...t.fetching, [e]: !0 } })));
+async function p(e) {
+    if (!_.getState().fetching[e]) {
+        (0, o.r)(() => _.setState((t) => ({ fetching: { ...t.fetching, [e]: !0 } })));
         try {
             let t = await (0, d.S4)(e),
-                n = (0, E.Q7)(t[0]);
-            (0, _.r)(() => {
-                c.setState((i) => ({
-                    fetching: { ...i.fetching, [e]: !1 },
-                    palette: { ...i.palette, [e]: [...t.slice(0, 2), ...n] },
+                n = (0, c.Q7)(t[0]);
+            (0, o.r)(() => {
+                _.setState((r) => ({
+                    fetching: { ...r.fetching, [e]: !1 },
+                    palette: { ...r.palette, [e]: [...t.slice(0, 2), ...n] },
                 }));
             });
         } catch (t) {
-            (0, _.r)(() => c.setState((t) => ({ fetching: { ...t.fetching, [e]: !1 } })));
+            (0, o.r)(() => _.setState((t) => ({ fetching: { ...t.fetching, [e]: !1 } })));
         }
     }
 }
-function A(e) {
-    return !c((t) => null != e && t.fetching[e]);
+function h(e) {
+    return !_((t) => null != e && t.fetching[e]);
 }
-function T(e, t) {
+function E(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [i] = S(e, t, n);
-    return i;
+        [r] = m(e, t, n);
+    return r;
 }
-function S(e, t) {
+function m(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        r = c((t) => (null == e ? void 0 : t.palette[e])),
-        s = (0, l.bG)([o.A], () => (n && o.A.desaturateUserColors ? o.A.saturation : 1));
+        i = _((t) => (null == e ? void 0 : t.palette[e])),
+        a = (0, l.bG)([u.A], () => (n && u.A.desaturateUserColors ? u.A.saturation : 1));
     return (
-        i.useEffect(() => {
-            null != e && null == r && I(e);
-        }, [e, r]),
-        i.useMemo(
+        r.useEffect(() => {
+            null != e && null == i && p(e);
+        }, [e, i]),
+        r.useMemo(
             () =>
-                r?.map((e) => {
-                    let [t, n, i] = e,
-                        { h: r, s: _, l } = a()({ r: t, g: n, b: i }).toHsl();
-                    return a()({ h: r, s: _ * s, l }).toHexString();
+                i?.map((e) => {
+                    let [t, n, r] = e,
+                        { h: i, s: o, l } = s()({ r: t, g: n, b: r }).toHsl();
+                    return s()({ h: i, s: o * a, l }).toHexString();
                 }),
-            [r, s],
+            [i, a],
         ) ?? [t, t]
     );
 }

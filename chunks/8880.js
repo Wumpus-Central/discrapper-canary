@@ -1,43 +1,43 @@
 n.d(t, { A: () => o });
-var i = n(17928),
-    l = n(228366);
+var i = n(311907),
+    l = n(73153);
 let s = { speechRate: 1, currentMessage: null },
-    r = s;
-class a extends i.Ay.DeviceSettingsStore {
+    a = s;
+class r extends i.Ay.DeviceSettingsStore {
     static displayName = "TTSStore";
     static persistKey = "TTSStore";
     static migrations = [];
     initialize(e) {
-        r = { ...s, ...(e ?? null) };
+        a = { ...s, ...(e ?? null) };
     }
     isSpeakingMessage(e, t) {
-        let { currentMessage: n } = r;
+        let { currentMessage: n } = a;
         return null !== n && n.channelId === e && n.messageId === t;
     }
     get currentMessage() {
-        return r.currentMessage;
+        return a.currentMessage;
     }
     get speechRate() {
-        return r.speechRate;
+        return a.speechRate;
     }
     getUserAgnosticState() {
-        return r;
+        return a;
     }
 }
-let o = new a(
+let o = new r(
     l.h,
     __OVERLAY__
         ? {}
         : {
               SPEAKING_MESSAGE: function (e) {
                   let { messageId: t, channelId: n } = e;
-                  r = { ...r, currentMessage: { messageId: t, channelId: n } };
+                  a = { ...a, currentMessage: { messageId: t, channelId: n } };
               },
               STOP_SPEAKING: function () {
-                  r = { ...r, currentMessage: null };
+                  a = { ...a, currentMessage: null };
               },
               SET_TTS_SPEECH_RATE: function (e) {
-                  r = { ...r, speechRate: e.speechRate };
+                  a = { ...a, speechRate: e.speechRate };
               },
           },
 );

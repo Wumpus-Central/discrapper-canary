@@ -1,37 +1,38 @@
+"use strict";
 n.d(t, {
-    D1: () => T,
-    Eo: () => S,
-    Hk: () => O,
-    R4: () => N,
-    Uz: () => A,
-    _V: () => I,
-    d1: () => E,
+    D1: () => E,
+    Eo: () => m,
+    Hk: () => A,
+    R4: () => g,
+    Uz: () => h,
+    _V: () => p,
+    d1: () => c,
     pR: () => d,
-    wC: () => u,
+    wC: () => f,
 });
-var i = n(58149),
-    r = n(734057),
-    a = n(763827),
-    s = n(954571),
-    _ = n(486020),
+var r = n(58149),
+    i = n(734057),
+    s = n(383501),
+    a = n(954571),
+    o = n(486020),
     l = n(577718),
-    o = n(652215);
-function E(e) {
+    u = n(652215);
+function c(e) {
     return null != e && "object" == typeof e && "id" in e && e.type === l.yZ.BACKGROUND;
 }
 function d(e) {
     return "number" == typeof e && e in l.ZQ;
 }
-function c(e) {
-    return d(e) ? l.wJ.includes(e) : !!E(e) && ((0, _.VI)(e.asset) || (0, _.q6)(e.asset));
+function _(e) {
+    return d(e) ? l.wJ.includes(e) : !!c(e) && ((0, o.VI)(e.asset) || (0, o.q6)(e.asset));
 }
-function u(e) {
+function f(e) {
     return null != e ? "Video Background" : "None";
 }
-function I(e) {
+function p(e) {
     return null == e
         ? "None"
-        : E(e)
+        : c(e)
           ? "Custom"
           : "blur" === e
             ? "Blur"
@@ -56,42 +57,42 @@ function I(e) {
                   }
               })(e)}`;
 }
-function A(e, t, n) {
-    let _ = a.A.getGuildId(),
-        l = a.A.getChannelId(),
-        E = r.A.getChannel(l),
-        d = (0, i.JK)(_, l, !0);
-    s.default.track(o.HAw.VIDEO_EFFECT_UPDATED, {
+function h(e, t, n) {
+    let o = s.A.getGuildId(),
+        l = s.A.getChannelId(),
+        c = i.A.getChannel(l),
+        d = (0, r.JK)(o, l, !0);
+    a.default.track(u.HAw.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: u(e),
-        effect_detail: I(e),
+        effect_type: f(e),
+        effect_detail: p(e),
         effect_state: n,
         channel_id: l,
-        channel_type: E?.type,
-        guild_id: _,
+        channel_type: c?.type,
+        guild_id: o,
         voice_state_count: d.voice_state_count,
         video_stream_count: d.video_stream_count,
-        media_session_id: a.A.getMediaSessionId(),
-        rtc_connection_id: a.A.getRTCConnectionId(),
-        is_animated: c(e),
+        media_session_id: s.A.getMediaSessionId(),
+        rtc_connection_id: s.A.getRTCConnectionId(),
+        is_animated: _(e),
     });
 }
-function T(e, t, n) {
-    s.default.track(o.HAw.VIDEO_BACKGROUND_ADDED, { is_animated: c(e), is_video: t, is_from_tenor: n });
+function E(e, t, n) {
+    a.default.track(u.HAw.VIDEO_BACKGROUND_ADDED, { is_animated: _(e), is_video: t, is_from_tenor: n });
 }
-function S(e) {
-    s.default.track(o.HAw.VIDEO_BACKGROUND_DELETED, { is_animated: c(e) });
+function m(e) {
+    a.default.track(u.HAw.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
 }
-function N(e) {
+function g(e) {
     return null == e
         ? { oneofKind: void 0 }
-        : E(e)
+        : c(e)
           ? { oneofKind: "customAsset", customAsset: { id: e.id, assetHash: e.asset } }
           : "blur" === e
             ? { oneofKind: "blur", blur: { useBlur: !0 } }
             : { oneofKind: "presetOption", presetOption: e };
 }
-function O(e, t) {
+function A(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {
         case "customAsset":

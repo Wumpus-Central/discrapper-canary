@@ -1,11 +1,12 @@
-n.d(t, { q: () => s });
-var i = n(532309),
-    r = n(636592),
-    a = n(223615);
-function s() {
-    let e = i.A.shouldFetch();
+"use strict";
+n.d(t, { q: () => a });
+var r = n(895944),
+    i = n(649032),
+    s = n(223615);
+function a() {
+    let e = r.A.shouldFetch();
     if (e.shouldFetch) return !0;
-    if (e.reason !== i.V.CACHE_SHOULD_NOT_FETCH) return !1;
-    let t = i.A.getRewardForProgram(r.W.NITRO);
-    return !!(0, a.X)(t);
+    if (e.reason !== r.V.CACHE_SHOULD_NOT_FETCH) return !1;
+    let t = r.A.getRewardForProgram(i.W.NITRO);
+    return !!(0, s.X)(t);
 }

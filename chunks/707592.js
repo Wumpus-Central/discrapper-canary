@@ -1,29 +1,28 @@
-n.d(t, { Py: () => u, Ul: () => d, uR: () => o });
-var i = n(627968);
+"use strict";
+n.d(t, { Py: () => c, Ul: () => u, uR: () => l });
+var r = n(627968);
 n(64700);
-var r = n(192308),
-    l = n(686956),
+var i = n(192308),
+    s = n(686956),
     a = n(652215),
-    s = n(231723);
-function o(e) {
-    let { eventId: t, recurrenceId: l } = e;
-    (0, r.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("17637"), n.e("33297"), n.e("22021"), n.e("26558")]).then(
-            n.bind(n, 640132),
-        );
-        return (n) => (0, i.jsx)(e, { guildScheduledEventId: t, initialRecurrenceId: l, ...n });
+    o = n(231723);
+function l(e) {
+    let { eventId: t, recurrenceId: s } = e;
+    (0, i.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([n.e("48330"), n.e("51354"), n.e("41447")]).then(n.bind(n, 324584));
+        return (n) => (0, r.jsx)(e, { guildScheduledEventId: t, initialRecurrenceId: s, ...n });
     });
 }
-async function d(e, t) {
+async function u(e, t) {
     let { guild_id: n } = e;
-    await l.A.transitionToGuildSync(n, t), o({ eventId: e.id, event: e });
+    await s.A.transitionToGuildSync(n, t), l({ eventId: e.id, event: e });
 }
-function u(e, t) {
-    (0, r.openModalLazy)(
+function c(e, t) {
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("34526").then(n.bind(n, 521549));
-            return (n) => (0, i.jsx)(t, { ...n, channel: e });
+            return (n) => (0, r.jsx)(t, { ...n, channel: e });
         },
-        { contextKey: t === a.BRT.POPOUT ? s.KX : s.SY },
+        { contextKey: t === a.BRT.POPOUT ? o.KX : o.SY },
     );
 }

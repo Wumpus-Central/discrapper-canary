@@ -1,6 +1,6 @@
-n.d(t, { A: () => _ });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { A: () => A });
+var i = n(311907),
+    r = n(73153),
     a = n(891540),
     l = n(71393),
     s = n(652215);
@@ -21,7 +21,7 @@ class c extends i.Ay.Store {
         return !!e.features.has(s.GuildFeatures.LINKED_TO_HUB) && !o;
     }
 }
-let _ = new c(r.h, {
+let A = new c(r.h, {
     CONNECTION_OPEN: function (e) {
         for (let t of e.guilds) if (d(t.id)) return !0;
         return !1;

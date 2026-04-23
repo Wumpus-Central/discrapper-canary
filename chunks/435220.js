@@ -1,21 +1,22 @@
+"use strict";
 n.r(t),
     n.d(t, {
-        ApplicationDirectoryProfileSections: () => c,
-        EMPTY_QUERY: () => r,
-        GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID: () => i,
-        GlobalDiscoveryAppsSections: () => E,
+        ApplicationDirectoryProfileSections: () => _,
+        EMPTY_QUERY: () => i,
+        GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID: () => r,
+        GlobalDiscoveryAppsSections: () => c,
         GlobalDiscoveryAppsTabId: () => d,
-        MAX_PAGES: () => a,
-        PAGE_SIZE: () => s,
+        MAX_PAGES: () => s,
+        PAGE_SIZE: () => a,
     });
-let i = 0,
-    r = "",
-    a = 100,
-    s = 48;
-var _,
+let r = 0,
+    i = "",
+    s = 100,
+    a = 48;
+var o,
     l,
-    o,
-    E = (((_ = {}).ABOUT = "about"), (_.STORE = "store"), _),
+    u,
+    c = (((o = {}).ABOUT = "about"), (o.STORE = "store"), o),
     d =
         (((l = {}).FEATURED = "Featured"),
         (l.GAMES = "Games"),
@@ -24,10 +25,10 @@ var _,
         (l.SOCIAL = "Social"),
         (l.UTILITIES = "Utilities"),
         l),
-    c =
-        (((o = {}).GENERAL = "general"),
-        (o.IMAGES = "images"),
-        (o.PREMIUM_DEPRECATED = "premium"),
-        (o.STORE = "store"),
-        (o.PRIVACY = "privacy"),
-        o);
+    _ =
+        (((u = {}).GENERAL = "general"),
+        (u.IMAGES = "images"),
+        (u.PREMIUM_DEPRECATED = "premium"),
+        (u.STORE = "store"),
+        (u.PRIVACY = "privacy"),
+        u);

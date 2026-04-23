@@ -1,37 +1,37 @@
 "use strict";
 n.d(t, { A: () => B });
-var i = n(735438),
-    r = n.n(i),
+var r = n(735438),
+    i = n.n(r),
     s = n(436857),
-    a = n(365347),
-    o = n(29814),
+    a = n(999443),
+    o = n(542664),
     l = n(551965);
-let d = null;
-d = n(937767).A;
-let _ = ["url", "autolink", "link", "mailto", "tel"];
-function u(e, t) {
+let u = null;
+u = n(937767).A;
+let c = ["url", "autolink", "link", "mailto", "tel"];
+function d(e, t) {
     let n = {};
-    return null != e.mention && null != d && (n = { mention: d }), (0, l.A)([e, ...t, n]);
+    return null != e.mention && null != u && (n = { mention: u }), (0, l.A)([e, ...t, n]);
 }
-let c = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    E = r().once(() => u(o.A.RULES, [(0, a.A)({ enableBuildOverrides: !0 })])),
-    h = r().once(() => r().omit(u(o.A.RULES, [(0, a.A)(c)]), "paragraph", "newline")),
-    m = r().once(() =>
-        u(o.A.CHANNEL_TOPIC_RULES, [
-            (0, a.A)({ ...c, emojiTooltipPosition: "bottom", shouldCloseDefaultModals: !0, shouldStopPropagation: !0 }),
+let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
+    f = i().once(() => d(o.A.RULES, [(0, a.A)({ enableBuildOverrides: !0 })])),
+    p = i().once(() => i().omit(d(o.A.RULES, [(0, a.A)(_)]), "paragraph", "newline")),
+    h = i().once(() =>
+        d(o.A.CHANNEL_TOPIC_RULES, [
+            (0, a.A)({ ..._, emojiTooltipPosition: "bottom", shouldCloseDefaultModals: !0, shouldStopPropagation: !0 }),
             { codeBlock: { react: o.A.RULES.text.react } },
         ]),
     ),
-    f = r().once(() => u(o.A.VOICE_CHANNEL_STATUS_RULES, [(0, a.A)({ ...c, enableEmojiClick: !1 })])),
-    g = r().once(() => u(o.A.EMBED_TITLE_RULES, [(0, a.A)(c)])),
-    p = r().once(() => r().omit(u(o.A.EMBED_TITLE_RULES, [(0, a.A)(c)]), _)),
-    A = r().once(() => u(o.A.INLINE_REPLY_RULES, [(0, a.A)(c)])),
-    I = r().once(() => u(o.A.GUILD_VERIFICATION_FORM_RULES, [(0, a.A)(c)])),
-    T = r().once(() => u(o.A.GUILD_EVENT_RULES, [(0, a.A)(c)])),
-    S = r().once(() => u(o.A.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.A)(c)])),
-    N = r().once(() =>
-        r().omit(
-            u(o.A.RULES, [(0, a.A)(c)]),
+    E = i().once(() => d(o.A.VOICE_CHANNEL_STATUS_RULES, [(0, a.A)({ ..._, enableEmojiClick: !1 })])),
+    m = i().once(() => d(o.A.EMBED_TITLE_RULES, [(0, a.A)(_)])),
+    g = i().once(() => i().omit(d(o.A.EMBED_TITLE_RULES, [(0, a.A)(_)]), c)),
+    A = i().once(() => d(o.A.INLINE_REPLY_RULES, [(0, a.A)(_)])),
+    I = i().once(() => d(o.A.GUILD_VERIFICATION_FORM_RULES, [(0, a.A)(_)])),
+    T = i().once(() => d(o.A.GUILD_EVENT_RULES, [(0, a.A)(_)])),
+    S = i().once(() => d(o.A.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.A)(_)])),
+    y = i().once(() =>
+        i().omit(
+            d(o.A.RULES, [(0, a.A)(_)]),
             "paragraph",
             "newline",
             "strong",
@@ -41,66 +41,66 @@ let c = { enableBuildOverrides: !1, enableEmojiClick: !0 },
             "list",
             "heading",
             "subtext",
-            ..._,
+            ...c,
         ),
     ),
-    C = { text: o.A.RULES.text },
-    R = r().once(() => s.aV(E())),
-    O = r().once(() => s.aV(m())),
-    y = r().once(() => s.aV(f())),
-    v = r().once(() => s.aV(g())),
-    D = r().once(() => s.aV(p())),
-    L = r().once(() => s.aV(A())),
-    b = r().once(() => s.aV(I())),
-    w = r().once(() => s.aV(T())),
-    P = r().once(() => s.aV(S())),
-    k = r().once(() => s.aV(h())),
-    M = r().once(() => s.X(E())),
-    U = r().once(() => s.X(m())),
-    x = r().once(() => s.X(g())),
-    G = r().once(() => s.X(p())),
-    V = r().once(() => s.X(A())),
-    F = r().once(() => s.X(S())),
+    N = { text: o.A.RULES.text },
+    v = i().once(() => s.aV(f())),
+    C = i().once(() => s.aV(h())),
+    O = i().once(() => s.aV(E())),
+    R = i().once(() => s.aV(m())),
+    b = i().once(() => s.aV(g())),
+    D = i().once(() => s.aV(A())),
+    L = i().once(() => s.aV(I())),
+    w = i().once(() => s.aV(T())),
+    M = i().once(() => s.aV(S())),
+    P = i().once(() => s.aV(p())),
+    x = i().once(() => s.X(f())),
+    k = i().once(() => s.X(h())),
+    U = i().once(() => s.X(m())),
+    G = i().once(() => s.X(g())),
+    F = i().once(() => s.X(A())),
+    V = i().once(() => s.X(S())),
     B = {
-        combineAndInjectMentionRule: u,
+        combineAndInjectMentionRule: d,
         createReactRules: a.A,
-        defaultReactRuleOptions: c,
+        defaultReactRuleOptions: _,
         get defaultRules() {
-            return E();
+            return f();
         },
         get guildEventRules() {
             return T();
         },
         get notifCenterV2MessagePreviewRules() {
-            return N();
+            return y();
         },
-        lockscreenWidgetMessageRules: C,
+        lockscreenWidgetMessageRules: N,
         astParserFor: s.X,
         reactParserFor: s.aV,
         parse: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return R()(...t);
+            return v()(...t);
         },
-        parseTopic: (e, t, n, i) => O()(e, t, { allowLinks: !0, ...n }, i),
+        parseTopic: (e, t, n, r) => C()(e, t, { allowLinks: !0, ...n }, r),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return y()(...t);
+            return O()(...t);
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return v()(...t);
+            return R()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return D()(...t);
+            return b()(...t);
         },
         parseInlineReply: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return L()(...t);
+            return D()(...t);
         },
         parseGuildVerificationFormRule: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return b()(...t);
+            return L()(...t);
         },
         parseGuildEventDescription: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -108,23 +108,23 @@ let c = { enableBuildOverrides: !1, enableEmojiClick: !0 },
         },
         parseAutoModerationSystemMessage: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return P()(...t);
+            return M()(...t);
         },
         parseForumPostGuidelines: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return k()(...t);
+            return P()(...t);
         },
         parseToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return M()(...t);
+            return x()(...t);
         },
         parseTopicToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return U()(...t);
+            return k()(...t);
         },
         parseEmbedTitleToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return x()(...t);
+            return U()(...t);
         },
         parseEmbedTitleWithoutLinksToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -132,10 +132,10 @@ let c = { enableBuildOverrides: !1, enableEmojiClick: !0 },
         },
         parseInlineReplyToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return V()(...t);
+            return F()(...t);
         },
         parseAutoModerationSystemMessageToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return F()(...t);
+            return V()(...t);
         },
     };

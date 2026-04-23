@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(228366);
+var r = n(311907),
+    i = n(73153);
 let s = {},
     a = "NOT_FETCHED";
-class o extends i.Ay.Store {
+class o extends r.Ay.Store {
     static displayName = "CollectiblesMarketingsStore";
     getMarketingBySurface(e) {
         return s[e];
@@ -13,7 +13,7 @@ class o extends i.Ay.Store {
         return a;
     }
 }
-let l = new o(r.h, {
+let l = new o(i.h, {
     COLLECTIBLES_MARKETING_FETCH: () => {
         a = "FETCHING";
     },

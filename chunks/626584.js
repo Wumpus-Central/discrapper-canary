@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(118356),
-    r = n(53943);
-let s = Date.now(),
-    a = s;
-(0, i.$o)(function (e, t, n) {
-    for (var o = arguments.length, l = Array(o > 3 ? o - 3 : 0), d = 3; d < o; d++) l[d - 3] = arguments[d];
-    let _ = Date.now(),
-        u = ((_ - s) / 1e3).toFixed(3),
-        c = ((_ - a) / 1e3).toFixed(3),
-        E = `Σ:${u}s, Δ:${c}s`;
-    (a = _), r.z8({ name: e, timing: E }, n, ...l), (0, i.gZ)(e, t, n, ...l);
+r.d(e, { A: () => s });
+var n = r(118356),
+    a = r(53943);
+let i = Date.now(),
+    o = i;
+(0, n.$o)(function (t, e, r) {
+    for (var s = arguments.length, l = Array(s > 3 ? s - 3 : 0), h = 3; h < s; h++) l[h - 3] = arguments[h];
+    let c = Date.now(),
+        f = ((c - i) / 1e3).toFixed(3),
+        p = ((c - o) / 1e3).toFixed(3),
+        u = `Σ:${f}s, Δ:${p}s`;
+    (o = c), a.z8({ name: t, timing: u }, r, ...l), (0, n.gZ)(t, e, r, ...l);
 });
-let o = i.Vy;
+let s = n.Vy;

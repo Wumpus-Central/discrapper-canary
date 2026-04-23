@@ -1,5 +1,6 @@
-var n = e(647055),
-    o = e(410323);
-r.exports = function (r) {
-    if ("Function" === n(r)) return o(r);
+"use strict";
+var r = n(647055),
+    i = n(410323);
+e.exports = function (e) {
+    if ("Function" === r(e)) return i(e);
 };

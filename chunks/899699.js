@@ -1,42 +1,43 @@
-let i;
-n.d(t, { R: () => o, m: () => E });
-var r = n(626584),
-    a = n(206885),
-    s = n(19575);
-let _ = new r.A("OverlayModuleUtils"),
+"use strict";
+let r;
+n.d(t, { R: () => u, m: () => c });
+var i = n(626584),
+    s = n(206885),
+    a = n(837921);
+let o = new i.A("OverlayModuleUtils"),
     l = null;
-function o() {
+function u() {
     async function e() {
-        if (!a.O)
+        if (!s.O)
             throw (
-                (_.error("Attempted to load overlay on an unsupported platform."),
+                (o.error("Attempted to load overlay on an unsupported platform."),
                 Error("Overlay is not supported on this platform."))
             );
         try {
             return (
-                await s.Ay.ensureModule("discord_overlay2"),
-                (i = (function (e) {
+                await a.Ay.ensureModule("discord_overlay2"),
+                (r = (function (e) {
                     for (let t of ["createHostProcess", "connectProcess", "disconnectProcess", "destroyHostProcess"])
                         null == e[t] &&
-                            (_.info(`polyfilling OverlayModule.${t}(); Overlay module is probably out of date.`),
+                            (o.info(`polyfilling OverlayModule.${t}(); Overlay module is probably out of date.`),
                             (e[t] = () => void 0));
                     return e;
-                })(s.Ay.requireModule("discord_overlay2")))
+                })(a.Ay.requireModule("discord_overlay2")))
             );
         } catch (e) {
-            _.error("failed ensuring discord_overlay2", e);
+            o.error("failed ensuring discord_overlay2", e);
             return;
         }
     }
-    return null != i ? Promise.resolve(i) : (null == l && (l = e()), l);
+    return null != r ? Promise.resolve(r) : (null == l && (l = e()), l);
 }
-function E() {
-    if (null == i)
+function c() {
+    if (null == r)
         try {
-            i = s.Ay.requireModule("discord_overlay2");
+            r = a.Ay.requireModule("discord_overlay2");
         } catch (e) {
-            _.error("failed ensuring discord_overlay2", e);
+            o.error("failed ensuring discord_overlay2", e);
             return;
         }
-    return i;
+    return r;
 }

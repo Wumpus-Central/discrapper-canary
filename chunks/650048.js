@@ -1,38 +1,39 @@
+"use strict";
 n.d(t, { A: () => d });
-var i = n(17928),
-    r = n(506774),
-    a = n(228366),
-    s = n(652215);
-let _ = { lastViewedPath: null, lastViewedNonVoicePath: null },
-    l = _,
-    o = "LAST_VIEWED_PATH";
-class E extends i.Ay.PersistedStore {
+var r = n(311907),
+    i = n(506774),
+    s = n(73153),
+    a = n(652215);
+let o = { lastViewedPath: null, lastViewedNonVoicePath: null },
+    l = o,
+    u = "LAST_VIEWED_PATH";
+class c extends r.Ay.PersistedStore {
     static displayName = "DefaultRouteStore";
     static persistKey = "DefaultRouteStore";
     static migrations = [
         () => {
-            let e = r.w.get(o, null);
-            return r.w.remove(o), { lastViewedPath: e };
+            let e = i.w.get(u, null);
+            return i.w.remove(u), { lastViewedPath: e };
         },
     ];
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _;
-        l = e ?? _;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
+        l = e ?? o;
     }
     get defaultRoute() {
-        return s.BVt.ME;
+        return a.BVt.ME;
     }
     get lastNonVoiceRoute() {
-        return l.lastViewedNonVoicePath ?? s.BVt.ME;
+        return l.lastViewedNonVoicePath ?? a.BVt.ME;
     }
     get fallbackRoute() {
-        return s.BVt.ME;
+        return a.BVt.ME;
     }
     getState() {
         return l;
     }
 }
-let d = new E(a.h, {
+let d = new c(s.h, {
     SAVE_LAST_ROUTE: function (e) {
         let { path: t } = e;
         return (l.lastViewedPath = t), !0;

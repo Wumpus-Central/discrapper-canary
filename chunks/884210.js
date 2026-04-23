@@ -1,7 +1,7 @@
 n.d(t, { J3: () => y, sB: () => D });
 var i = n(627968),
-    l = n(64700),
-    s = n(17928),
+    s = n(64700),
+    l = n(311907),
     a = n(554146),
     r = n(821609),
     o = n(331322),
@@ -9,83 +9,83 @@ var i = n(627968),
     u = n(688810),
     c = n(47671),
     g = n(692798),
-    _ = n(793943),
-    m = n(826673),
-    h = n(422936),
-    A = n(234419),
+    m = n(793943),
+    _ = n(826673),
+    A = n(422936),
+    h = n(234419),
     p = n(792656),
-    E = n(511484),
-    T = n(811611),
-    S = n(954571),
-    x = n(779733),
+    x = n(511484),
+    E = n(811611),
+    T = n(954571),
+    S = n(779733),
     f = n(652215),
     b = n(385803),
-    N = n(49999),
-    C = n(788868),
-    I = n(985018),
-    v = n(254604);
+    C = n(49999),
+    v = n(788868),
+    N = n(985018),
+    I = n(254604);
 let y = () => {
-    (0, m.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: N.i.PRIMARY, forceTrack: !0 }),
-        (0, _.nf)(_.HP.CLIENT_THEMES),
-        (0, x.default)();
+    (0, _.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: C.i.PRIMARY, forceTrack: !0 }),
+        (0, m.nf)(m.HP.CLIENT_THEMES),
+        (0, S.default)();
 };
 function j() {
-    let e = (0, h.O)(),
-        t = (0, E.U9)(e, C.pe.TIER_2)
-            ? I.intl.formatToPlainString(I.t.bkQ4bH, { percent: e?.discount.amount })
-            : I.intl.string(I.t.mr4K7D);
+    let e = (0, A.O)(),
+        t = (0, x.U9)(e, v.pe.TIER_2)
+            ? N.intl.formatToPlainString(N.t.bkQ4bH, { percent: e?.discount.amount })
+            : N.intl.string(N.t.mr4K7D);
     return (0, i.jsx)(p.A, {
-        subscriptionTier: C.pe.TIER_2,
+        subscriptionTier: v.pe.TIER_2,
         defaultTextOverride: t,
         premiumModalAnalyticsLocation: { object: f.ZSU.BUTTON_CTA, objectType: f.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
 function O() {
-    let e = (0, s.bG)([c.A], () => c.A.isPreview),
-        t = (0, A.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
+    let e = (0, l.bG)([c.A], () => c.A.isPreview),
+        t = (0, h.V)()?.subscription_trial?.sku_id === v.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
-              className: v.gY,
+              className: I.gY,
               children: [
-                  (0, i.jsx)(r.$, { variant: "secondary", text: I.intl.string(I.t["E+COuA"]), onClick: y }),
+                  (0, i.jsx)(r.$, { variant: "secondary", text: N.intl.string(N.t["E+COuA"]), onClick: y }),
                   (0, i.jsx)(j, {}),
               ],
           });
 }
 function R(e) {
     let { children: t } = e,
-        n = (0, s.bG)([c.A], () => c.A.isPreview),
+        n = (0, l.bG)([c.A], () => c.A.isPreview),
         { analyticsLocations: a } = (0, u.Ay)(d.A.USER_SETTINGS);
-    return (l.useEffect(() => {
+    return (s.useEffect(() => {
         n &&
-            S.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: C.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+            T.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: v.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: a,
             });
     }, [n, a]),
     n)
-        ? (0, i.jsx)("div", { className: v._$, children: t })
+        ? (0, i.jsx)("div", { className: I._$, children: t })
         : t;
 }
 function L() {
-    let e = (0, s.bG)([c.A], () => c.A.isPreview),
-        t = (0, A.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
+    let e = (0, l.bG)([c.A], () => c.A.isPreview),
+        t = (0, h.V)()?.subscription_trial?.sku_id === v.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [
                   (0, i.jsx)("div", {
-                      className: v.c7,
+                      className: I.c7,
                       children: (0, i.jsx)(r.$, {
                           variant: "secondary",
                           fullWidth: !0,
-                          text: I.intl.string(I.t["E+COuA"]),
+                          text: N.intl.string(N.t["E+COuA"]),
                           onClick: () => y(),
                       }),
                   }),
-                  (0, i.jsx)("div", { className: v.BU }),
-                  (0, i.jsx)(T.Ay, { type: C.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: C.pe.TIER_2 }),
+                  (0, i.jsx)("div", { className: I.BU }),
+                  (0, i.jsx)(E.Ay, { type: v.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: v.pe.TIER_2 }),
               ],
           })
         : null;
@@ -98,10 +98,10 @@ function D() {
                 (0, i.jsx)(g.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, i.jsx)(O, {}),
-                    headingClassName: v.EK,
+                    headingClassName: I.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: v.cI,
-                    titleIconClassName: v.Hq,
+                    titleClassName: I.cI,
+                    titleIconClassName: I.Hq,
                 }),
                 (0, i.jsx)(o.B, {
                     direction: "horizontal",

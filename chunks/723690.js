@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    a = n(17928),
+    a = n(311907),
     r = n(297413),
     o = n(966327),
     c = n(994500);
@@ -16,15 +16,15 @@ let u = function (e) {
             subText: s,
             showAccountIdentifier: u,
             status: m,
-            isMobile: h,
-            isVR: A,
+            isMobile: A,
+            isVR: h,
             className: x,
         } = e,
         p = (0, a.bG)([c.A], () => c.A.getNickname(t.id));
     return (0, i.jsxs)("div", {
         className: l()(d.eF, x, { [d.yo]: n }),
         children: [
-            (0, i.jsx)(o.A, { user: t, className: d.my, animate: n, status: m, isMobile: h, isVR: A }),
+            (0, i.jsx)(o.A, { user: t, className: d.my, animate: n, status: m, isMobile: A, isVR: h }),
             (0, i.jsxs)("div", {
                 className: d.Qq,
                 children: [

@@ -1,3 +1,29 @@
-r.exports = JSON.parse(
-    '{"SvqMnV":["在 ",[3,"date","MMMM d"],"前加入，即可领取限定版铭牌。这是 Nitro 用户的专属赠礼。",[8,"$link",["适用条款"],[[1,"helpCenterLink"]]],"。"],"PyQY5+":["在 ",[3,"date","MMMM d"],"前升级，即可领取限定版铭牌。这是 Nitro 用户的专属赠礼。",[8,"$link",["适用条款"],[[1,"helpCenterLink"]]],"。"],"7OPz+z":["装备专属铭牌"],"1Ng1ci":["启动任务"],"QBfwzW":["再玩一次任务游戏"],"VghrI/":["完成 3 轮 Nitro Control 即可获得 150 Orb"],"JXidUB":["返回飞船，征服噩梦模式！"],"lvidGa":["拯救 Wumpus。赚取 Orb。"],"S4okiP":["任务完成。要再玩一次吗？"],"3rpSiP":["开始游戏"],"PforLU":["Nitro Control"],"j/4UAS":["获取 Nitro"],"u29fVK":["打开 Nitro 主页"],"Ri/ZGz":["在 ",[3,"date","MMMM d"],"前加入 Nitro 大家庭即可获得专属铭牌。这是 Nitro 用户的专属赠礼。",[8,"$link",["适用条款"],[[1,"helpCenterLink"]]],"。"],"vxubVL":["订阅 Nitro，升级 Discord 体验。"],"wC4J6d":["前往 Nitro 主页，随时了解 Nitro 的最新动态。"],"E0XZQW":["装备限定版铭牌"],"pVkPgD":["Nitro，解锁特权世界的大门"],"I8cv0h":["探索新鲜事儿"],"SsJkmZ":["完成 3 轮 Nitro Control 即可领取 150 Orb！"],"2rVh2j":["拯救 Wumpus。赚取 Orb。"]}',
-);
+r.d(t, { A: () => a });
+var n = r(996483),
+    s = r(972409);
+class a extends s.w {
+    innerPatternString(e) {
+        return "(?:з|із|від)?\\s*(сьогодні|вчора|завтра|післязавтра|післяпіслязавтра|позапозавчора|позавчора)";
+    }
+    innerExtract(e, t) {
+        let r = t[1].toLowerCase(),
+            s = e.createParsingComponents();
+        switch (r) {
+            case "сьогодні":
+                return n.Ec(e.reference);
+            case "вчора":
+                return n.jI(e.reference);
+            case "завтра":
+                return n.uf(e.reference);
+            case "післязавтра":
+                return n.AV(e.reference, 2);
+            case "післяпіслязавтра":
+                return n.AV(e.reference, 3);
+            case "позавчора":
+                return n.ti(e.reference, 2);
+            case "позапозавчора":
+                return n.ti(e.reference, 3);
+        }
+        return s;
+    }
+}

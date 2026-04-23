@@ -2,11 +2,11 @@ n.d(t, { default: () => R });
 var r = n(627968),
     l = n(64700),
     s = n(189213),
-    i = n(17928),
+    i = n(311907),
     o = n(834730),
     a = n(39255),
-    c = n(845584),
-    d = n(517622),
+    c = n(198982),
+    d = n(845202),
     u = n(695184),
     x = n(427262),
     h = n(545868),
@@ -14,7 +14,7 @@ var r = n(627968),
     w = n(396816),
     g = n(856644),
     f = n(512031),
-    S = n(719366),
+    S = n(737045),
     b = n(985018),
     E = n(468878);
 function R(e) {
@@ -22,8 +22,8 @@ function R(e) {
         j = (0, i.bG)([w.A], () => w.A.getRole(R), [R]),
         [y, p] = l.useState(""),
         [T, k] = l.useState({}),
-        [C, O] = l.useState(!1),
-        [A, M] = l.useState(null),
+        [C, A] = l.useState(!1),
+        [O, M] = l.useState(null),
         _ = l.useRef(null);
     l.useEffect(() => {
         u.A.requestMembers(v, y.trim().toLowerCase(), g.uc);
@@ -33,12 +33,12 @@ function R(e) {
         N = l.useMemo(() => I.filter((e) => (0, g.EF)(y, e)), [y, I]),
         B = l.useCallback(async () => {
             let e = Object.values(T).map((e) => e.row.id);
-            O(!0);
+            A(!0);
             try {
                 await m.A.bulkAddMemberRoles(v, R, e), (0, h.a)(v, R, !1), n();
             } catch (t) {
                 let e = new c.LG(t);
-                O(!1), M(e);
+                A(!1), M(e);
             }
         }, [v, R, T, n]),
         P = l.useMemo(
@@ -89,12 +89,12 @@ function R(e) {
             input: (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(d.A.SearchBox, { placeholderText: b.intl.string(b.t.vMiCaQ) }),
-                    null != A
+                    null != O
                         ? (0, r.jsx)(o.E, {
                               className: E.k,
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
-                              children: A.getAnyErrorMessage(),
+                              children: O.getAnyErrorMessage(),
                           })
                         : null,
                 ],

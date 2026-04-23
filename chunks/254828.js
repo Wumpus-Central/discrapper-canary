@@ -1,16 +1,16 @@
 n.d(t, { A: () => d });
 var i = n(627968),
-    l = n(17928),
+    l = n(311907),
     s = n(123292),
-    r = n(253932),
-    a = n(994500),
+    a = n(253932),
+    r = n(994500),
     o = n(985018);
 function d(e) {
     let { userId: t, onClick: n } = e;
-    return (0, l.bG)([a.A], () => a.A.isIgnored(t))
+    return (0, l.bG)([r.A], () => r.A.isIgnored(t))
         ? (0, i.jsx)(s.Q, {
               onClick: () => {
-                  r.j0.updateSetting(!0), n();
+                  a.j0.updateSetting(!0), n();
               },
               variant: "primary",
               size: "sm",

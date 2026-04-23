@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     AH: "boostedGuildIconGem__97677",
     md: "iconBackgroundTierNone__97677",

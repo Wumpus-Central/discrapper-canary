@@ -1,41 +1,42 @@
-n.d(t, { j: () => d });
+"use strict";
+n.d(t, { j: () => u });
 var r = n(64700),
-    a = n(626584),
-    i = n(954571),
-    o = n(38405),
-    l = n(652215);
-let s = new a.A("CheckoutErrorBoundary.tsx");
-class d extends r.PureComponent {
+    i = n(626584),
+    s = n(954571),
+    a = n(728458),
+    o = n(652215);
+let l = new i.A("CheckoutErrorBoundary.tsx");
+class u extends r.PureComponent {
     state = { error: null, info: null };
     componentDidCatch(e, t) {
         let {
                 loadId: n,
                 selectedSkuId: r,
-                selectedPlanId: a,
-                isGift: d,
-                purchaseType: u,
-                locationStack: c,
+                selectedPlanId: i,
+                isGift: u,
+                purchaseType: c,
+                locationStack: d,
                 additionalAnalyticsData: _,
             } = this.props,
-            p = this.props.shouldRethrowError,
-            C = { loadId: n, selectedSkuId: r, selectedPlanId: a, isGift: d, purchaseType: u, locationStack: c },
+            f = this.props.shouldRethrowError,
+            p = { loadId: n, selectedSkuId: r, selectedPlanId: i, isGift: u, purchaseType: c, locationStack: d },
             h = {
                 tags: {
                     app_context: "billing",
                     checkout_error: "true",
                     billing_context: "checkout",
-                    ...(p ? { crashed: "true" } : {}),
+                    ...(f ? { crashed: "true" } : {}),
                 },
-                extra: { ...C, ...(_ ?? {}), ...(t ?? {}) },
+                extra: { ...p, ...(_ ?? {}), ...(t ?? {}) },
             };
-        o.A.captureException(e, h), s.error("Checkout error occurred:", { error: e, additionalErrorContext: C });
+        a.A.captureException(e, h), l.error("Checkout error occurred:", { error: e, additionalErrorContext: p });
         let E = "string" == typeof e ? e : e.message;
         if (
-            (i.default.track(l.HAw.PAYMENT_FLOW_ERROR, {
+            (s.default.track(o.HAw.PAYMENT_FLOW_ERROR, {
                 load_id: n,
-                crashed: p,
+                crashed: f,
                 error_message: E,
-                location_stack: c ?? [],
+                location_stack: d ?? [],
                 ..._,
             }),
             this.setState({ error: e, info: t }),

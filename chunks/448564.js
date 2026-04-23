@@ -1,8 +1,8 @@
-n.d(t, { A: () => r });
-var i = n(17928),
-    l = n(228366);
+n.d(t, { A: () => a });
+var i = n(311907),
+    l = n(73153);
 let s = { canSeeEnableMonetizationForGuilds: new Set() };
-class a extends i.Ay.PersistedStore {
+class r extends i.Ay.PersistedStore {
     static displayName = "CreatorMonetizationPersistedStore";
     static persistKey = "CreatorMonetizationPersistedStore";
     static migrations = [];
@@ -16,7 +16,7 @@ class a extends i.Ay.PersistedStore {
         return s.canSeeEnableMonetizationForGuilds.has(e);
     }
 }
-let r = new a(l.h, {
+let a = new r(l.h, {
     CREATOR_MONETIZATION_SET_HAS_SEEN_ONBOARDING_FOR_GUILD: function (e) {
         s.canSeeEnableMonetizationForGuilds.has(e.guildId) ||
             (s.canSeeEnableMonetizationForGuilds = new Set(s.canSeeEnableMonetizationForGuilds).add(e.guildId));

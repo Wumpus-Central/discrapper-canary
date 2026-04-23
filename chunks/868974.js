@@ -1,17 +1,18 @@
-n.d(t, { H: () => r, s: () => a });
-let i = (0, n(945810).mj)({
+"use strict";
+n.d(t, { H: () => i, s: () => s });
+let r = (0, n(945810).mj)({
     name: "2025-05-search-results-feedback",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function r(e) {
+function i(e) {
     let { location: t } = e,
-        { enabled: n } = i.useConfig({ location: t });
+        { enabled: n } = r.useConfig({ location: t });
     return n;
 }
-function a(e) {
+function s(e) {
     let { location: t } = e,
-        { enabled: n } = i.getConfig({ location: t });
+        { enabled: n } = r.getConfig({ location: t });
     return n;
 }

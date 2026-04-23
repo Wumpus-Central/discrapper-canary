@@ -1,12 +1,12 @@
-l.d(t, { A: () => v });
+l.d(t, { A: () => g });
 var a = l(627968);
 l(64700);
-var n = l(17928),
+var n = l(311907),
     r = l(778712),
     i = l(97808),
     o = l(688810),
     s = l(919395),
-    d = l(252732),
+    d = l(385612),
     c = l(101058),
     u = l(696451),
     p = l(84540),
@@ -15,15 +15,15 @@ var n = l(17928),
     h = l(930349),
     x = l(339984),
     y = l(985018);
-let g = r._3.SIZE_72;
-function v(e) {
+let v = r._3.SIZE_72;
+function g(e) {
     let { user: t, guildId: l, disabled: r } = e,
-        { newestAnalyticsLocation: v } = (0, o.Ay)(),
+        { newestAnalyticsLocation: g } = (0, o.Ay)(),
         f = null != l,
         _ = (0, n.bG)([u.Ay], () => (null != l ? u.Ay.getMember(l, t.id) : null)),
         E = (0, n.bG)([m.A], () => m.A.getPendingChanges(l ?? void 0).pendingAvatar),
         C = (0, c.V7)({ userId: t.id, image: E }),
-        { avatarSrc: S } = (0, b.A)({ userId: t.id, guildId: l, avatarOverride: C, size: g }),
+        { avatarSrc: S } = (0, b.A)({ userId: t.id, guildId: l, avatarOverride: C, size: v }),
         j = f ? _?.avatar : t.avatar,
         T = null != t.avatar,
         P = f && _?.avatar != null,
@@ -32,14 +32,14 @@ function v(e) {
         k = (0, s.z5)(E, j),
         R = f && T,
         N = () =>
-            (0, d.XD)({ uploadType: x.HL.AVATAR, analyticsSource: v, guildId: l ?? void 0, stackingBehavior: "stack" });
+            (0, d.XD)({ uploadType: x.HL.AVATAR, analyticsSource: g, guildId: l ?? void 0, stackingBehavior: "stack" });
     if (!(A ? f && T : I || P || T))
         return (0, a.jsx)(h.kL, {
             variant: "square",
             onClick: N,
             accessibleLabel: y.intl.string(y.t["4OynCD"]),
             disabled: r,
-            children: (0, a.jsx)(i.eu, { src: S, size: g, "aria-hidden": !0 }),
+            children: (0, a.jsx)(i.eu, { src: S, size: v, "aria-hidden": !0 }),
         });
     let M = k
         ? {
@@ -57,6 +57,6 @@ function v(e) {
         accessibleLabel: y.intl.string(y.t["4OynCD"]),
         deleteButtonConfig: M,
         disabled: r,
-        children: (0, a.jsx)(i.eu, { src: S, size: g, "aria-hidden": !0 }),
+        children: (0, a.jsx)(i.eu, { src: S, size: v, "aria-hidden": !0 }),
     });
 }

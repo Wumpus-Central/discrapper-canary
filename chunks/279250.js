@@ -1,71 +1,71 @@
 "use strict";
-n.d(t, { CQ: () => f, CT: () => m, eo: () => g, vz: () => h, zP: () => p }), n(321073);
-var i = n(17928),
-    r = n(323073),
+n.d(t, { CQ: () => E, CT: () => h, eo: () => m, vz: () => p, zP: () => g }), n(321073);
+var r = n(311907),
+    i = n(323073),
     s = n(890615),
     a = n(643501),
     o = n(95701);
 n(808728);
 var l = n(71393),
-    d = n(576705),
-    _ = n(977997),
-    u = n(147036),
-    c = n(652215),
-    E = n(985018);
-function h(e, t, n) {
-    let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+    u = n(576705),
+    c = n(977997),
+    d = n(147036),
+    _ = n(652215),
+    f = n(985018);
+function p(e, t, n) {
+    let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
-    let r = t.getGuild(e.getGuildId()),
-        a = r?.maxStageVideoChannelUsers ?? 0;
+    let i = t.getGuild(e.getGuildId()),
+        a = i?.maxStageVideoChannelUsers ?? 0;
     return (
         (!e.isGuildStageVoice() || !(a <= 0)) &&
-        (!i || !!(0, s.A)(e, n)) &&
-        !!n.can(c.xBc.STREAM, e) &&
-        null != r &&
-        r.afkChannelId !== e.id
+        (!r || !!(0, s.A)(e, n)) &&
+        !!n.can(_.xBc.STREAM, e) &&
+        null != i &&
+        i.afkChannelId !== e.id
     );
 }
-function m(e) {
+function h(e) {
     switch (e) {
         case 0:
-            return E.intl.string(E.t["1i3tSY"]);
+            return f.intl.string(f.t["1i3tSY"]);
         case 1:
-            return E.intl.string(E.t.elyVbv);
+            return f.intl.string(f.t.elyVbv);
         case 2:
-            return E.intl.string(E.t.pgUTZC);
+            return f.intl.string(f.t.pgUTZC);
         case 3:
-            return E.intl.string(E.t.b5FqhF);
+            return f.intl.string(f.t.b5FqhF);
         default:
-            return E.intl.string(E.t["7Xq/nV"]);
+            return f.intl.string(f.t["7Xq/nV"]);
     }
 }
-function f(e) {
+function E(e) {
     switch (e) {
         case 0:
-            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t["1i3tSY"])}`;
+            return `${f.intl.string(f.t["7Xq/nV"])}: ${f.intl.string(f.t["1i3tSY"])}`;
         case 1:
-            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.elyVbv)}`;
+            return `${f.intl.string(f.t["7Xq/nV"])}: ${f.intl.string(f.t.elyVbv)}`;
         case 2:
-            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.pgUTZC)}`;
+            return `${f.intl.string(f.t["7Xq/nV"])}: ${f.intl.string(f.t.pgUTZC)}`;
         case 3:
-            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t.b5FqhF)}`;
+            return `${f.intl.string(f.t["7Xq/nV"])}: ${f.intl.string(f.t.b5FqhF)}`;
         default:
-            return `${E.intl.string(E.t["7Xq/nV"])}: ${E.intl.string(E.t["9C444m"])}`;
+            return `${f.intl.string(f.t["7Xq/nV"])}: ${f.intl.string(f.t["9C444m"])}`;
     }
 }
-function g(e, t, n, i, a) {
+function m(e, t, n, r, a) {
     let l;
     if (null == e) return [!1, 2];
-    let d = t.isInChannel(e.id),
-        _ = e instanceof o.YB && (0, u.Pd)(e, t, n),
-        c = (0, s.A)(e, i),
-        E = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId(),
-        h = (0, r.r9)() && (0, r.UK)(e.id);
+    let u = t.isInChannel(e.id),
+        c = e instanceof o.YB && (0, d.Pd)(e, t, n),
+        _ = (0, s.A)(e, r),
+        f = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId(),
+        p = (0, i.r9)() && (0, i.UK)(e.id);
     return (
-        E ? (l = 0) : h ? (l = 3) : c || d ? _ && !d && (l = 1) : (l = 2),
-        [!__OVERLAY__ && !E && !h && (d || (c && !_)), l]
+        f ? (l = 0) : p ? (l = 3) : _ || u ? c && !u && (l = 1) : (l = 2),
+        [!__OVERLAY__ && !f && !p && (u || (_ && !c)), l]
     );
 }
-function p(e) {
-    return (0, i.yK)([_.A, l.A, d.A, a.default], () => g(e, _.A, l.A, d.A, a.default));
+function g(e) {
+    return (0, r.yK)([c.A, l.A, u.A, a.default], () => m(e, c.A, l.A, u.A, a.default));
 }

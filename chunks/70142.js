@@ -1,24 +1,25 @@
-let i, l;
-n.d(t, { A: () => p });
-var r = n(17928),
-    a = n(636537),
-    s = n(228366),
-    u = n(723702),
-    o = n(652215);
+"use strict";
+let r, i;
+n.d(t, { A: () => h });
+var s = n(311907),
+    a = n(562465),
+    o = n(73153),
+    l = n(723702),
+    u = n(652215);
 let c = null,
     d = null,
-    E = null;
-(0, u.isDesktop)() &&
+    _ = null;
+(0, l.isDesktop)() &&
     (window.popupBridge = {
         getReturnUrlPrefix: () => {
-            if (null == i) throw Error("popupBridgeState is unset");
-            return (0, a.TP)() + o.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(o.kM_.BRAINTREE, i);
+            if (null == r) throw Error("popupBridgeState is unset");
+            return (0, a.TP)() + u.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.kM_.BRAINTREE, r);
         },
         open: (e) => {
-            (l = e), window.open(e), A.emitChange();
+            (i = e), window.open(e), p.emitChange();
         },
     });
-class _ extends r.Ay.Store {
+class f extends s.Ay.Store {
     static displayName = "BraintreeStore";
     getClient() {
         return c;
@@ -27,13 +28,13 @@ class _ extends r.Ay.Store {
         return d;
     }
     getVenmoClient() {
-        return E;
+        return _;
     }
     getLastURL() {
-        return l;
+        return i;
     }
 }
-let A = new _(s.h, {
+let p = new f(o.h, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function (e) {
             let { client: t } = e;
             c = t;
@@ -43,24 +44,24 @@ let A = new _(s.h, {
             d = t;
         },
         BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
-            let { paymentSourceType: t, state: n, path: l, query: r } = e;
-            if (t !== o.hes.PAYPAL || n !== i) return;
+            let { paymentSourceType: t, state: n, path: i, query: s } = e;
+            if (t !== u.hes.PAYPAL || n !== r) return;
             let a = window.popupBridge.onComplete;
-            "function" == typeof a && a(null, { path: l, queryItems: r });
+            "function" == typeof a && a(null, { path: i, queryItems: s });
         },
         BILLING_POPUP_BRIDGE_STATE_UPDATE: function (e) {
             let { paymentSourceType: t, state: n } = e;
-            t === o.hes.PAYPAL && (i = n);
+            t === u.hes.PAYPAL && (r = n);
         },
         BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function () {
             d = null;
         },
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function (e) {
             let { venmoClient: t } = e;
-            E = t;
+            _ = t;
         },
         BRAINTREE_TEARDOWN_VENMO_CLIENT: function () {
-            E = null;
+            _ = null;
         },
     }),
-    p = A;
+    h = p;

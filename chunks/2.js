@@ -1,1 +1,0 @@
-return e.getUint8(t)

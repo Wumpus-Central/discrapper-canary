@@ -2,7 +2,7 @@ i.d(t, { A: () => m });
 var n = i(627968);
 i(64700);
 var a = i(192308),
-    l = i(228366),
+    l = i(73153),
     s = i(847599),
     o = i(308645),
     r = i(239093);
@@ -24,7 +24,7 @@ let c = {
             (0, a.openModalLazy)(
                 async () => {
                     l.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                    let { default: t } = await i.e("99487").then(i.bind(i, 595746));
+                    let { default: t } = await i.e("18128").then(i.bind(i, 767379));
                     return (i) =>
                         (0, n.jsx)(t, {
                             classificationId: e,

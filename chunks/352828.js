@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__350af",
     tR: "clickBlocker__350af",

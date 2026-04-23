@@ -1,35 +1,36 @@
-n.d(t, { A: () => E });
-var i = n(17928),
-    r = n(228366);
-let a = new Set(),
-    s = {};
-function _(e) {
+"use strict";
+n.d(t, { A: () => c });
+var r = n(311907),
+    i = n(73153);
+let s = new Set(),
+    a = {};
+function o(e) {
     let { applicationId: t } = e;
-    a.add(t);
+    s.add(t);
 }
 function l(e) {
     let { applicationId: t } = e;
-    a.delete(t);
+    s.delete(t);
 }
-class o extends i.Ay.Store {
+class u extends r.Ay.Store {
     static displayName = "LaunchableGameStore";
     get launchingGames() {
-        return a;
-    }
-    get launchableGames() {
         return s;
     }
+    get launchableGames() {
+        return a;
+    }
     isLaunchable(e) {
-        return null != s[e] ? s[e] : ((s[e] = !1), r.h.dispatch({ type: "CHECK_LAUNCHABLE_GAME", gameId: e }), !1);
+        return null != a[e] ? a[e] : ((a[e] = !1), i.h.dispatch({ type: "CHECK_LAUNCHABLE_GAME", gameId: e }), !1);
     }
 }
-let E = new o(r.h, {
+let c = new u(i.h, {
     GAME_LAUNCHABLE_UPDATE: function (e) {
         let { gameId: t, isLaunchable: n } = e;
-        s[t] = n;
+        a[t] = n;
     },
-    GAME_CLOUD_SYNC_START: _,
-    GAME_LAUNCH_START: _,
+    GAME_CLOUD_SYNC_START: o,
+    GAME_LAUNCH_START: o,
     GAME_LAUNCH_SUCCESS: l,
     GAME_LAUNCH_FAIL: l,
     GAME_CLOUD_SYNC_CONFLICT: l,

@@ -1,7 +1,7 @@
 i.d(t, { A: () => u });
 var n = i(627968);
 i(64700);
-var s = i(17928),
+var s = i(311907),
     l = i(477782),
     a = i(192308),
     r = i(5180),
@@ -32,10 +32,10 @@ function u(e) {
                           action: () =>
                               (0, a.openModalLazy)(async () => {
                                   let { default: t } = await Promise.all([
-                                      i.e("42282"),
-                                      i.e("9431"),
+                                      i.e("93142"),
+                                      i.e("64233"),
                                       i.e("36126"),
-                                  ]).then(i.bind(i, 113194));
+                                  ]).then(i.bind(i, 409200));
                                   return (i) => (0, n.jsx)(t, { ...i, channelType: o.rbe.GUILD_TEXT, guildId: e.id });
                               }),
                       },
@@ -49,10 +49,10 @@ function u(e) {
                           action: () =>
                               (0, a.openModalLazy)(async () => {
                                   let { default: t } = await Promise.all([
-                                      i.e("42282"),
-                                      i.e("9431"),
+                                      i.e("93142"),
+                                      i.e("64233"),
                                       i.e("36126"),
-                                  ]).then(i.bind(i, 113194));
+                                  ]).then(i.bind(i, 409200));
                                   return (i) =>
                                       (0, n.jsx)(t, { ...i, channelType: o.rbe.GUILD_CATEGORY, guildId: e.id });
                               }),

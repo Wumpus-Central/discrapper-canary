@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__00943",
     Lw: "overlay__00943",

@@ -1,91 +1,92 @@
-n.d(t, { N: () => S });
-var i = n(627968),
-    r = n(64700),
-    a = n(224640),
-    s = n(20742),
-    _ = n(430993),
+"use strict";
+n.d(t, { N: () => m });
+var r = n(627968),
+    i = n(64700),
+    s = n(224640),
+    a = n(20742),
+    o = n(430993),
     l = n(696208),
-    o = n(192308),
-    E = n(830215),
+    u = n(192308),
+    c = n(830215),
     d = n(854378),
-    c = n(976860),
-    u = n(954571),
-    I = n(652215),
-    A = n(985018);
-function T(e) {
+    _ = n(976860),
+    f = n(954571),
+    p = n(652215),
+    h = n(985018);
+function E(e) {
     let {
         title: t,
         subtitle: n,
-        body: o,
-        actions: T,
+        body: u,
+        actions: E,
     } = (function (e) {
         let { token: t, onClose: n } = e,
-            [a, s] = r.useState("loading");
-        r.useEffect(() => {
-            u.default.track(I.HAw.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != t });
+            [s, a] = i.useState("loading");
+        i.useEffect(() => {
+            f.default.track(p.HAw.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != t });
         }, [t]);
-        let _ = r.useCallback(async () => {
+        let o = i.useCallback(async () => {
             try {
                 if (null == t) {
-                    s("error"),
-                        u.default.track(I.HAw.ONE_TIME_LOGIN_ERROR, {
+                    a("error"),
+                        f.default.track(p.HAw.ONE_TIME_LOGIN_ERROR, {
                             source: "web_modal",
                             error_reason: "missing_token",
                             error_message: "No token provided",
                         });
                     return;
                 }
-                s("loading"),
-                    u.default.track(I.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_modal" }),
-                    await E.A.oneTimeLogin(t),
-                    s("success"),
-                    u.default.track(I.HAw.LOGIN_SUCCESSFUL, { source: "web_modal", login_method: "one_time_login" });
+                a("loading"),
+                    f.default.track(p.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_modal" }),
+                    await c.A.oneTimeLogin(t),
+                    a("success"),
+                    f.default.track(p.HAw.LOGIN_SUCCESSFUL, { source: "web_modal", login_method: "one_time_login" });
             } catch (t) {
-                s("error");
+                a("error");
                 let e = t instanceof Error ? t.message : "Login failed";
-                u.default.track(I.HAw.ONE_TIME_LOGIN_ERROR, {
+                f.default.track(p.HAw.ONE_TIME_LOGIN_ERROR, {
                     source: "web_modal",
                     error_reason: "api_error",
                     error_message: e,
                 });
             }
         }, [t]);
-        r.useEffect(() => {
-            _();
-        }, [_]);
-        let l = r.useCallback(() => {
-            u.default.track(I.HAw.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: a }), n?.();
-        }, [n, a]);
+        i.useEffect(() => {
+            o();
+        }, [o]);
+        let l = i.useCallback(() => {
+            f.default.track(p.HAw.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: s }), n?.();
+        }, [n, s]);
         switch (
-            (r.useEffect(() => {
-                "success" === a && (n?.(), (0, c.pX)(I.BVt.ME));
-            }, [a, n]),
-            a)
+            (i.useEffect(() => {
+                "success" === s && (n?.(), (0, _.pX)(p.BVt.ME));
+            }, [s, n]),
+            s)
         ) {
             case "loading":
             case "success":
-                return { title: A.intl.string(A.t.W9uNdG), body: (0, i.jsx)(d.CK, {}) };
+                return { title: h.intl.string(h.t.W9uNdG), body: (0, r.jsx)(d.CK, {}) };
             case "error":
                 return {
-                    title: A.intl.string(A.t.RtCSr1),
-                    subtitle: A.intl.string(A.t["S+YjYJ"]),
-                    actions: [{ onClick: l, text: A.intl.string(A.t["ETE/oC"]) }],
+                    title: h.intl.string(h.t.RtCSr1),
+                    subtitle: h.intl.string(h.t["S+YjYJ"]),
+                    actions: [{ onClick: l, text: h.intl.string(h.t["ETE/oC"]) }],
                 };
             default:
                 return {};
         }
     })(e);
-    return (0, i.jsxs)(a.d, {
+    return (0, r.jsxs)(s.d, {
         ...e,
         onClose: () => Promise.resolve(e.onClose?.()),
         size: "sm",
         children: [
-            (0, i.jsx)(s.rQ, { title: t ?? "", subtitle: n }),
-            (0, i.jsx)(_.c, { children: o }),
-            (0, i.jsx)(l.H, { actions: T ?? [], actionsFullWidth: !0 }),
+            (0, r.jsx)(a.rQ, { title: t ?? "", subtitle: n }),
+            (0, r.jsx)(o.c, { children: u }),
+            (0, r.jsx)(l.H, { actions: E ?? [], actionsFullWidth: !0 }),
         ],
     });
 }
-function S(e) {
-    (0, o.openModalLazy)(() => Promise.resolve((t) => (0, i.jsx)(T, { ...t, ...e })));
+function m(e) {
+    (0, u.openModalLazy)(() => Promise.resolve((t) => (0, r.jsx)(E, { ...t, ...e })));
 }

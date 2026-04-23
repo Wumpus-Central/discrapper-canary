@@ -1,44 +1,44 @@
 "use strict";
-n.d(t, { A: () => O });
-var i = n(627968);
+n.d(t, { A: () => C });
+var r = n(627968);
 n(64700);
-var r = n(189213),
+var i = n(189213),
     s = n(192308),
     a = n(691540),
     o = n(857250),
     l = n(97483),
-    d = n(228366),
-    _ = n(567249),
-    u = n(574172),
-    c = n(378570),
-    E = n(646865),
-    h = n(795816),
-    m = n(458664),
-    f = n(933958),
-    g = n(969151),
-    p = n(315206),
+    u = n(73153),
+    c = n(87001),
+    d = n(574172),
+    _ = n(378570),
+    f = n(646865),
+    p = n(795816),
+    h = n(458664),
+    E = n(933958),
+    m = n(969151),
+    g = n(315206),
     A = n(594007),
     I = n(5867),
     T = n(652215),
     S = n(985018);
-let N = !1,
-    C = !1;
-class R extends m.A {
+let y = !1,
+    N = !1;
+class v extends h.A {
     _initialize() {
         super._initialize(),
-            _.A.addChangeListener(this.handlePopoutWindowUpdate),
-            d.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            c.A.addChangeListener(this.handlePopoutWindowUpdate),
+            u.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     _terminate() {
         super._terminate(),
-            _.A.removeChangeListener(this.handlePopoutWindowUpdate),
-            d.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            c.A.removeChangeListener(this.handlePopoutWindowUpdate),
+            u.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
     }
     showErrorModal(e) {
         let { code: t, message: n } = e;
         (0, s.openModalLazy)(
             async () => (e) =>
-                (0, i.jsx)(r.Modal, {
+                (0, r.jsx)(i.Modal, {
                     title: S.intl.formatToPlainString(S.t.hbiAO6, { code: t }),
                     subtitle: n,
                     actions: [{ text: S.intl.string(S.t.BddRzS), onClick: e.onClose, variant: "primary" }],
@@ -49,7 +49,7 @@ class R extends m.A {
     showLaunchErrorModal(e) {
         (0, s.openModalLazy)(
             async () => (t) =>
-                (0, i.jsx)(r.Modal, {
+                (0, r.jsx)(i.Modal, {
                     title: S.intl.string(S.t.PtobXW),
                     subtitle: e,
                     actions: [{ text: S.intl.string(S.t.BddRzS), onClick: t.onClose, variant: "primary" }],
@@ -61,16 +61,16 @@ class R extends m.A {
         (0, a.P0)((0, o.o)(S.intl.string(S.t.JfA7IK), l.Ck.SUCCESS));
     }
     leaveActivity(e) {
-        let { location: t, applicationId: n, showFeedback: i, shouldClosePopout: r = !0 } = e;
-        d.h.wait(() => {
-            (0, h._H)({ location: t, applicationId: n, showFeedback: i });
+        let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: i = !0 } = e;
+        u.h.wait(() => {
+            (0, p._H)({ location: t, applicationId: n, showFeedback: r });
         }),
-            (0, E.f)() && r && (0, u.close)(T.MLl.ACTIVITY_POPOUT);
+            (0, f.f)() && i && (0, d.close)(T.MLl.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
-            i = (0, A.A)(t.id, n);
-        (0, p.bK)(i);
+            r = (0, A.A)(t.id, n);
+        (0, g.bK)(r);
     }
     handleRPCDisconnect = (e) => {
         let { reason: t, application: n } = e;
@@ -79,24 +79,24 @@ class R extends m.A {
     releaseWebView() {}
     handlePopoutWindowOpen = (e) => {
         let { key: t } = e;
-        t === T.MLl.ACTIVITY_POPOUT && (C = !1);
+        t === T.MLl.ACTIVITY_POPOUT && (N = !1);
     };
     popInActivity = () => {
-        (C = !0), u.close(T.MLl.ACTIVITY_POPOUT);
-        let e = f.Ay.getCurrentEmbeddedActivity();
+        (N = !0), d.close(T.MLl.ACTIVITY_POPOUT);
+        let e = E.Ay.getCurrentEmbeddedActivity();
         if (null != e) {
-            let t = (0, g.H)(e.location);
-            null != t && (0, c.iN)(t), (0, h.gk)(I.Gd.PANEL);
+            let t = (0, m.H)(e.location);
+            null != t && (0, _.iN)(t), (0, p.gk)(I.Gd.PANEL);
         }
     };
     handlePopoutWindowUpdate = () => {
-        let e = N,
-            t = _.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT);
-        if (e && !t && !C) {
-            let e = f.Ay.getCurrentEmbeddedActivity();
+        let e = y,
+            t = c.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT);
+        if (e && !t && !N) {
+            let e = E.Ay.getCurrentEmbeddedActivity();
             null != e && this.leaveActivity({ location: e.location, applicationId: e.applicationId });
         }
-        N = t;
+        y = t;
     };
 }
-let O = new R();
+let C = new v();

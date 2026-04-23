@@ -1,94 +1,95 @@
+"use strict";
 n.d(t, {
-    Gp: () => D,
-    HN: () => R,
-    Ic: () => A,
-    Kc: () => p,
-    L4: () => m,
+    Gp: () => C,
+    HN: () => I,
+    Ic: () => h,
+    Kc: () => y,
+    L4: () => N,
     Oh: () => d,
-    RF: () => g,
-    ZG: () => N,
-    gO: () => I,
-    if: () => T,
+    RF: () => R,
+    ZG: () => g,
+    gO: () => p,
+    if: () => E,
     r$: () => b,
-    t6: () => O,
-    v1: () => S,
-    vZ: () => h,
-    vc: () => c,
-    vy: () => u,
-    xn: () => f,
-    yI: () => L,
+    t6: () => A,
+    v1: () => m,
+    vZ: () => O,
+    vc: () => _,
+    vy: () => f,
+    xn: () => T,
+    yI: () => v,
 });
-var i = n(665260),
-    r = n(773669),
-    a = n(38405),
-    s = n(859703),
-    _ = n(507107),
+var r = n(665260),
+    i = n(773669),
+    s = n(728458),
+    a = n(859703),
+    o = n(341915),
     l = n(302654),
-    o = n(654487),
-    E = n(652215);
+    u = n(654487),
+    c = n(652215);
 function d(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
-function c(e, t, n) {
-    let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
-        r = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
-        a = i.get(e);
-    if (null != a) return a;
-    let s = r.get(e)?.replacementId;
-    if (null != s) return i.get(s);
+function _(e, t, n) {
+    let r = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
+        i = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
+        s = r.get(e);
+    if (null != s) return s;
+    let a = i.get(e)?.replacementId;
+    if (null != a) return r.get(a);
 }
-function u(e) {
-    return Object.keys(o.TY).includes(_.uF[e]);
+function f(e) {
+    return Object.keys(u.TY).includes(o.uF[e]);
 }
-function I(e, t) {
-    if (!u(t)) return !1;
-    let n = _.uF[t];
-    return (0, i.Lt)(e.dismissedQuestContent, o.TY[n]);
+function p(e, t) {
+    if (!f(t)) return !1;
+    let n = o.uF[t];
+    return (0, r.Lt)(e.dismissedQuestContent, u.TY[n]);
 }
-function A(e) {
+function h(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
-function T(e) {
-    if (!A(e)) return !1;
+function E(e) {
+    if (!h(e)) return !1;
     let t = Date.now() - 2592e6,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function S(e) {
+function m(e) {
     let t = null,
         n = Date.now();
-    for (let i of e) {
-        let e = new Date(i.config.expiresAt).valueOf();
+    for (let r of e) {
+        let e = new Date(r.config.expiresAt).valueOf();
         !(e <= n) && (null == t || e < t) && (t = e);
     }
     return t;
 }
-function N(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
-    return null == e ? "" : new Date(e).toLocaleDateString(r.default.locale, t);
+    return null == e ? "" : new Date(e).toLocaleDateString(i.default.locale, t);
 }
-function O(e, t, n) {
-    let i = t.get(n);
-    if (null == i) return;
-    let r = e.get(i.quest.id);
-    if (null != r && !A(r)) return r;
+function A(e, t, n) {
+    let r = t.get(n);
+    if (null == r) return;
+    let i = e.get(r.quest.id);
+    if (null != i && !h(i)) return i;
 }
-function R(e) {
+function I(e) {
     return {
-        [_.uF.QUEST_BAR]: _.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [_.uF.QUEST_BAR_V2]: _.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [_.uF.QUEST_BAR_MOBILE]: _.yW.MOBILE_HOME_DOCK_AREA,
-        [_.uF.QUEST_HOME_HERO]: _.yW.QUEST_HOME_BANNER_DESKTOP,
+        [o.uF.QUEST_BAR]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        [o.uF.QUEST_BAR_V2]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        [o.uF.QUEST_BAR_MOBILE]: o.yW.MOBILE_HOME_DOCK_AREA,
+        [o.uF.QUEST_HOME_HERO]: o.yW.QUEST_HOME_BANNER_DESKTOP,
     }[e];
 }
-function f(e) {
-    let t = R(e);
-    return null != t && o.J6.has(t);
+function T(e) {
+    let t = I(e);
+    return null != t && u.J6.has(t);
 }
-function C(e) {
+function S(e) {
     let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
-        n = s.A.questAdDecisionByPlacement.get(e);
-    if (e === _.yW.QUEST_HOME_BANNER_DESKTOP && null != n)
+        n = a.A.questAdDecisionByPlacement.get(e);
+    if (e === o.yW.QUEST_HOME_BANNER_DESKTOP && null != n)
         return {
             questId: n.questId,
             adCreativeId: n.adCreativeId,
@@ -111,7 +112,7 @@ function C(e) {
                   trafficMetadataSealed: n.trafficMetadataSealed,
               };
     {
-        let t = s.A.questToDeliverForPlacement.get(e);
+        let t = a.A.questToDeliverForPlacement.get(e);
         return null == t
             ? null
             : {
@@ -125,45 +126,45 @@ function C(e) {
               };
     }
 }
-function p(e, t) {
-    let n = R(t);
-    if (null == n) return o.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: a } = C(n) ?? {};
-    return null != i && (r === e || a === e) ? i : o.K3;
+function y(e, t) {
+    let n = I(t);
+    if (null == n) return u.K3;
+    let { adDecisionData: r, questId: i, adCreativeId: s } = S(n) ?? {};
+    return null != r && (i === e || s === e) ? r : u.K3;
 }
-function m(e) {
-    let t = R(e);
-    if (null != t) return C(t)?.metadataSealed;
+function N(e) {
+    let t = I(e);
+    if (null != t) return S(t)?.metadataSealed;
 }
-function L(e, t) {
-    let n = R(e);
+function v(e, t) {
+    let n = I(e);
     if (null != n) {
-        let { trafficMetadataRaw: e, questId: i } = C(n) ?? {};
-        if (null != e && i === t) return e;
+        let { trafficMetadataRaw: e, questId: r } = S(n) ?? {};
+        if (null != e && r === t) return e;
     }
     if (null != t) {
-        let e = s.A.getQuest(t);
+        let e = a.A.getQuest(t);
         return e?.trafficMetadataRaw;
     }
 }
-function D(e, t) {
-    let n = R(e);
+function C(e, t) {
+    let n = I(e);
     if (null != n) {
-        let { trafficMetadataSealed: e, questId: i } = C(n) ?? {};
-        if (null != e && i === t) return e;
+        let { trafficMetadataSealed: e, questId: r } = S(n) ?? {};
+        if (null != e && r === t) return e;
     }
     if (null != t) {
-        let e = s.A.getQuest(t);
+        let e = a.A.getQuest(t);
         return e?.trafficMetadataSealed;
     }
 }
-function h(e) {
-    let t = R(e);
-    if (null != t) return C(t)?.adContext;
+function O(e) {
+    let t = I(e);
+    if (null != t) return S(t)?.adContext;
 }
-function g(e, t) {
-    a.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
+function R(e, t) {
+    s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
 function b() {
-    return window.location.pathname.startsWith(E.BVt.QUEST_HOME_DEPRECATED);
+    return window.location.pathname.startsWith(c.BVt.QUEST_HOME_DEPRECATED);
 }

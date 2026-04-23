@@ -1,35 +1,35 @@
-n.d(t, { A: () => N, P: () => f });
-var l = n(627968),
-    i = n(64700),
-    s = n(17928),
-    a = n(477782),
-    r = n(403581),
+n.d(t, { A: () => v, P: () => _ });
+var i = n(627968),
+    l = n(64700),
+    a = n(311907),
+    r = n(477782),
+    s = n(403581),
     o = n(606096),
-    c = n(997146),
-    d = n(478016),
+    d = n(997146),
+    c = n(478016),
     u = n(404374),
-    h = n(966597),
-    g = n(164684),
-    m = n(704456),
-    A = n(85109),
-    p = n(226017),
-    C = n(49678),
+    g = n(966597),
+    A = n(164684),
+    h = n(704456),
+    m = n(85109),
+    f = n(226017),
+    p = n(49678),
     E = n(927813),
-    x = n(985018);
-function N(e) {
-    let { enabled: t } = h.A.useConfig({ location: "LongPressMessageActionSheet" }),
-        n = (0, s.bG)([A.A], () => A.A.getSavedMessage(e.channel_id, e.id)),
-        i = f({ message: e, savedMessage: n });
+    y = n(985018);
+function v(e) {
+    let { enabled: t } = g.A.useConfig({ location: "LongPressMessageActionSheet" }),
+        n = (0, a.bG)([m.A], () => m.A.getSavedMessage(e.channel_id, e.id)),
+        l = _({ message: e, savedMessage: n });
     return t
-        ? null != n || (0, p.A)()
-            ? (0, l.jsxs)(a.Dr, {
+        ? null != n || (0, f.A)()
+            ? (0, i.jsxs)(r.Dr, {
                   id: "save-for-later",
-                  label: x.intl.string(x.t.tpxJto),
-                  leadingAccessory: { type: "icon", icon: null != n ? o.c : c.c },
+                  label: y.intl.string(y.t.tpxJto),
+                  leadingAccessory: { type: "icon", icon: null != n ? o.c : d.c },
                   action: () =>
                       null == n
-                          ? (0, g.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 })
-                          : (0, g.x)({
+                          ? (0, A.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 })
+                          : (0, A.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
                                 dueAt: n.saveData.dueAt,
@@ -37,68 +37,68 @@ function N(e) {
                             }),
                   children: [
                       null != n
-                          ? (0, l.jsx)(a.Dr, {
+                          ? (0, i.jsx)(r.Dr, {
                                 id: "remove-from-for-later",
-                                label: x.intl.string(x.t.SvXS1Z),
+                                label: y.intl.string(y.t.SvXS1Z),
                                 leadingAccessory: { type: "icon", icon: o.c },
                                 icon: o.c,
                                 action: () =>
-                                    (0, g.x)({
+                                    (0, A.x)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
                                         dueAt: n.saveData.dueAt,
                                         displayToast: !0,
                                     }),
                             })
-                          : (0, l.jsx)(a.Dr, {
+                          : (0, i.jsx)(r.Dr, {
                                 id: "create-bookmark",
-                                label: x.intl.string(x.t["9p3D9p"]),
-                                leadingAccessory: { type: "icon", icon: c.c },
-                                icon: c.c,
-                                action: () => (0, g.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
+                                label: y.intl.string(y.t["9p3D9p"]),
+                                leadingAccessory: { type: "icon", icon: d.c },
+                                icon: d.c,
+                                action: () => (0, A.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
                             }),
-                      (0, l.jsx)(a.bX, {}),
-                      i,
+                      (0, i.jsx)(r.bX, {}),
+                      l,
                   ],
               })
-            : (0, l.jsx)(a.Dr, {
+            : (0, i.jsx)(r.Dr, {
                   id: "save-for-later-upsell",
-                  label: x.intl.string(x.t.tpxJto),
-                  leadingAccessory: { type: "icon", icon: r.t, color: u.k0.PREMIUM_TIER_2 },
-                  icon: r.t,
+                  label: y.intl.string(y.t.tpxJto),
+                  leadingAccessory: { type: "icon", icon: s.t, color: u.k0.PREMIUM_TIER_2 },
+                  icon: s.t,
                   iconProps: { color: u.k0.PREMIUM_TIER_2 },
-                  action: () => (0, g.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
+                  action: () => (0, A.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
               })
         : null;
 }
-function f(e) {
+function _(e) {
     let { message: t, savedMessage: n } = e,
-        [s, r] = i.useState(new Date());
-    i.useEffect(() => {
-        let e = setInterval(() => r(new Date()), E.A.Millis.MINUTE);
+        [a, s] = l.useState(new Date());
+    l.useEffect(() => {
+        let e = setInterval(() => s(new Date()), E.A.Millis.MINUTE);
         return () => {
             clearInterval(e);
         };
     }, []);
-    let o = i.useCallback(
-            (e) => (0, g.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: e, displayToast: !0 }),
+    let o = l.useCallback(
+            (e) => (0, A.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: e, displayToast: !0 }),
             [t.channel_id, t.id],
         ),
-        c = (0, C.S)({ createReminder: o }),
-        { dueInText: u } = (0, m.Ce)({ dueAt: n?.saveData.dueAt, now: s, type: m.kh.LONG });
+        d = (0, p.S)({ createReminder: o }),
+        { dueInText: u } = (0, h.Ce)({ dueAt: n?.saveData.dueAt, now: a, type: h.kh.LONG });
     return n?.saveData.dueAt == null
-        ? (0, l.jsx)(a.rX, { label: x.intl.string(x.t.roMu1H), children: c })
-        : (0, l.jsxs)(a.rX, {
+        ? (0, i.jsx)(r.rX, { label: y.intl.string(y.t.roMu1H), children: d })
+        : (0, i.jsxs)(r.rX, {
               label: u,
               children: [
-                  (0, l.jsx)(a.Dr, {
+                  (0, i.jsx)(r.Dr, {
                       id: "mark-complete",
-                      label: x.intl.string(x.t.yjGtdJ),
-                      leadingAccessory: { type: "icon", icon: d.U },
-                      icon: d.U,
-                      action: () => (0, g.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: void 0 }),
+                      label: y.intl.string(y.t.yjGtdJ),
+                      leadingAccessory: { type: "icon", icon: c.U },
+                      icon: c.U,
+                      action: () => (0, A.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: void 0 }),
                   }),
-                  (0, l.jsx)(a.Dr, { id: "edit-reminder", label: x.intl.string(x.t.vrbqs1), children: c }),
+                  (0, i.jsx)(r.Dr, { id: "edit-reminder", label: y.intl.string(y.t.vrbqs1), children: d }),
               ],
           });
 }

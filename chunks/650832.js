@@ -1,22 +1,23 @@
-t.d(a, { Ay: () => l });
-var n = t(627968);
-t(64700);
-var _ = t(990078),
-    r = t(243721);
-function i(e) {
-    let { value: a, onChange: t, note: _, title: i, disabled: o } = e;
-    return (0, n.jsx)(r.d, { checked: a, onChange: t, disabled: o, label: i, description: _ });
+"use strict";
+n.d(t, { Ay: () => o });
+var i = n(627968);
+n(64700);
+var s = n(990078),
+    r = n(243721);
+function l(e) {
+    let { value: t, onChange: n, note: s, title: l, disabled: a } = e;
+    return (0, i.jsx)(r.d, { checked: t, onChange: n, disabled: a, label: l, description: s });
 }
-function o(e) {
-    let { tooltipText: a, ...t } = e;
-    return (0, n.jsx)(_.m, {
-        text: a,
+function a(e) {
+    let { tooltipText: t, ...n } = e;
+    return (0, i.jsx)(s.m, {
+        text: t,
         asContainer: !0,
         align: "right",
         caretConfig: { position: "bottom", align: "end" },
-        children: (0, n.jsx)(i, { ...t }),
+        children: (0, i.jsx)(l, { ...n }),
     });
 }
-function l(e) {
-    return "tooltipText" in e && null != e.tooltipText ? (0, n.jsx)(o, { ...e }) : (0, n.jsx)(i, { ...e });
+function o(e) {
+    return "tooltipText" in e && null != e.tooltipText ? (0, i.jsx)(a, { ...e }) : (0, i.jsx)(l, { ...e });
 }

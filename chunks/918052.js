@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(228366);
+var r = n(311907),
+    i = n(73153);
 function s() {
     return { usageByApplicationId: {}, shelfOrder: [] };
 }
 let a = s();
-class o extends i.Ay.PersistedStore {
+class o extends r.Ay.PersistedStore {
     static displayName = "ActivityShelfStore";
     static persistKey = "ActivityShelfStore";
     initialize(e) {
@@ -16,7 +16,7 @@ class o extends i.Ay.PersistedStore {
         return a;
     }
 }
-let l = new o(r.h, {
+let l = new o(i.h, {
     LOGOUT: function () {
         a = s();
     },

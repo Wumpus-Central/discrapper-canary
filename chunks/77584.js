@@ -1,48 +1,32 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
-var r = n(192308),
-    s = n(803306),
-    a = n(439372),
-    o = n(734057),
-    l = n(309010),
-    d = n(287809),
-    _ = n(716371),
-    u = n(652215);
-let c = !1;
-function E(e) {
-    if (__OVERLAY__) return;
-    let t = d.default.getCurrentUser();
-    if (null == t) return;
-    let n = l.A.getChannelId(),
-        i = o.A.getDMFromUserId(_.K);
-    if (!t.hasUrgentMessages() || i === n) return h({ channelId: n });
-    c || ((c = !0), e());
-}
-function h(e) {
-    let { channelId: t } = e,
-        n = d.default.getCurrentUser(),
-        i = t === o.A.getDMFromUserId(_.K);
-    null != n && n.hasUrgentMessages() && i && ((c = !1), s.lA(u.nhx.HAS_UNREAD_URGENT_MESSAGES, !1));
-}
-class m extends a.A {
-    handleShowUrgentMessageAlert;
-    actions = {
-        POST_CONNECTION_OPEN: () => E(this.handleShowUrgentMessageAlert),
-        MESSAGE_CREATE: () => E(this.handleShowUrgentMessageAlert),
-        CHANNEL_SELECT: h,
-    };
-    constructor(e) {
-        super(), (this.handleShowUrgentMessageAlert = e);
-    }
-}
-let f = new m(() =>
-    (0, r.openModalLazy)(
-        async () => {
-            let { default: e } = await n.e("36724").then(n.bind(n, 531519));
-            return (t) => (0, i.jsx)(e, { ...t });
-        },
-        { modalKey: _.r, onCloseRequest: u.FXj },
-    ),
-);
+a.d(l, { e: () => c });
+var t = a(627968);
+a(64700);
+var s = a(827734),
+    i = a(996682),
+    n = a(27989);
+let c = (e) => {
+    let {
+            size: l = "md",
+            width: a,
+            height: c,
+            color: h = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
+            ...o
+        } = e,
+        d = (0, n.J)(l),
+        v = d?.width ?? a,
+        g = d?.height ?? c;
+    return (0, t.jsx)("svg", {
+        ...(0, i.A)(o),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: v,
+        height: g,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof h ? h : h.css,
+            d: "M2 4c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4ZM2 15c0-1.1.9-2 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5ZM15 13a2 2 0 0 0-2 2v5c0 1.1.9 2 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-5Z",
+            className: r,
+        }),
+    });
+};

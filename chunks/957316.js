@@ -4,7 +4,7 @@ n(64700);
 var t = n(192308);
 function a(i) {
     (0, t.openModalLazy)(async () => {
-        let { default: e } = await n.e("86880").then(n.bind(n, 296222));
+        let { default: e } = await n.e("26456").then(n.bind(n, 59430));
         return (n) => (0, l.jsx)(e, { ...n, guildId: i });
     });
 }

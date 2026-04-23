@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { A: () => I }), n(323874), n(14289), n(35956);
-var i = n(17928),
-    r = n(803805),
-    s = n(228366),
+var r = n(311907),
+    i = n(803805),
+    s = n(73153),
     a = n(652215),
     o = n(985018);
 let l = "webm",
-    d = !(function (e) {
+    u = !(function (e) {
         switch (e) {
             case "fixed_height.mp4":
             case "fixed_height_small.mp4":
@@ -25,94 +25,94 @@ let l = "webm",
                 return !1;
         }
     })(l)
-        ? r.TL.IMAGE
-        : r.TL.VIDEO,
-    _ = null,
-    u = "",
-    c = "",
-    E = [],
+        ? i.TL.IMAGE
+        : i.TL.VIDEO,
+    c = null,
+    d = "",
+    _ = "",
+    f = [],
+    p = [],
     h = [],
-    m = [],
-    f = [];
-function g(e) {
+    E = [];
+function m(e) {
     return e.replace(/^https?:/, "");
 }
-function p(e) {
+function g(e) {
     try {
         let t = new URL(e).pathname.toLowerCase();
-        if (t.endsWith(".mp4") || t.endsWith(".webm")) return r.TL.VIDEO;
+        if (t.endsWith(".mp4") || t.endsWith(".webm")) return i.TL.VIDEO;
     } catch {}
-    return r.TL.IMAGE;
+    return i.TL.IMAGE;
 }
-class A extends i.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "GIFPickerViewStore";
     getAnalyticsID() {
-        return _;
-    }
-    getQuery() {
-        return u;
-    }
-    getResultQuery() {
         return c;
     }
+    getQuery() {
+        return d;
+    }
+    getResultQuery() {
+        return _;
+    }
     getResultItems() {
-        return E;
+        return f;
     }
     getTrendingCategories() {
-        return h;
+        return p;
     }
     getSelectedFormat() {
         return l;
     }
     getSuggestions() {
-        return m;
+        return h;
     }
     getTrendingSearchTerms() {
-        return f;
+        return E;
     }
 }
 let I = new A(s.h, {
     GIF_PICKER_INITIALIZE: function (e) {
-        _ = e.analyticsID;
+        c = e.analyticsID;
     },
     GIF_PICKER_QUERY: function (e) {
-        "" === (u = e.query) && ((c = ""), (E = []), (m = []));
+        "" === (d = e.query) && ((_ = ""), (f = []), (h = []));
     },
     GIF_PICKER_QUERY_SUCCESS: function (e) {
-        if (null != e.query && u === c) return !1;
-        null != e.query && (c = e.query),
-            (E = e.items.map((e) => {
-                let { width: t, height: n, src: i, gif_src: r, url: s, id: a } = e;
-                return { width: t, height: n, src: g(i), gifSrc: g(r), url: s, id: a, format: d };
+        if (null != e.query && d === _) return !1;
+        null != e.query && (_ = e.query),
+            (f = e.items.map((e) => {
+                let { width: t, height: n, src: r, gif_src: i, url: s, id: a } = e;
+                return { width: t, height: n, src: m(r), gifSrc: m(i), url: s, id: a, format: u };
             }));
     },
     GIF_PICKER_QUERY_FAILURE: function (e) {
         let { query: t } = e;
         if (null == t) return !1;
-        (c = t), (E = []);
+        (_ = t), (f = []);
     },
     GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
         let t = e.trendingCategories;
-        h = [
+        p = [
             ...(null != e.trendingGIFPreview
                 ? [
                       {
                           type: a.dD.TRENDING_GIFS,
                           name: o.intl.string(o.t.H6zNFz),
-                          src: g(e.trendingGIFPreview.src),
-                          format: p(e.trendingGIFPreview.src),
+                          src: m(e.trendingGIFPreview.src),
+                          format: g(e.trendingGIFPreview.src),
                       },
                   ]
                 : []),
-            ...t.map((e) => ({ ...e, src: g(e.src), type: a.dD.TRENDING_CATEGORY, format: p(e.src) })),
+            ...t.map((e) => ({ ...e, src: m(e.src), type: a.dD.TRENDING_CATEGORY, format: g(e.src) })),
         ];
     },
     GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
         let { items: t } = e;
-        m = t;
+        h = t;
     },
     GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
         let { items: t } = e;
-        f = t;
+        E = t;
     },
 });

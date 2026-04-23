@@ -1,10 +1,10 @@
-n.d(t, { O: () => a, c: () => r });
-var l = n(17928),
-    i = n(380335),
-    s = n(157550);
-function a(e) {
-    return (0, l.bG)([i.A], () => i.A.isMessageRequest(e), [e]);
+n.d(t, { O: () => s, c: () => r });
+var i = n(311907),
+    l = n(380335),
+    a = n(157550);
+function s(e) {
+    return (0, i.bG)([l.A], () => l.A.isMessageRequest(e), [e]);
 }
 function r(e) {
-    return (0, l.bG)([i.A, s.A], () => null != e && (i.A.isMessageRequest(e) || s.A.isSpam(e)));
+    return (0, i.bG)([l.A, a.A], () => null != e && (l.A.isMessageRequest(e) || a.A.isSpam(e)));
 }

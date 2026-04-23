@@ -1,3 +1,4 @@
-r.exports = function (r, t) {
-    return { enumerable: !(1 & r), configurable: !(2 & r), writable: !(4 & r), value: t };
+"use strict";
+e.exports = function (e, t) {
+    return { enumerable: !(1 & e), configurable: !(2 & e), writable: !(4 & e), value: t };
 };

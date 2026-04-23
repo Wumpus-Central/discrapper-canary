@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(228366);
+var r = n(311907),
+    i = n(73153);
 let s = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
@@ -20,7 +20,7 @@ let s = {
         ss04: "Italic - alternate figures (3,4,5,6,7,8,9)",
     },
     a = {};
-class o extends i.Ay.DeviceSettingsStore {
+class o extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDesignTogglesStore";
     static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
@@ -45,7 +45,7 @@ class o extends i.Ay.DeviceSettingsStore {
         });
     }
 }
-let l = new o(r.h, {
+let l = new o(i.h, {
     DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
         !1 === e.value ? delete a[e.toggle] : (a[e.toggle] = e.value);
     },

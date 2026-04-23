@@ -1,26 +1,27 @@
-n.d(t, { Gy: () => s, k9: () => o, nQ: () => d, rb: () => u });
-var i,
-    r,
-    l,
+"use strict";
+n.d(t, { Gy: () => o, k9: () => l, nQ: () => u, rb: () => c });
+var r,
+    i,
+    s,
     a,
-    s =
-        (((i = {}).MANUAL = "manual"),
-        (i.DISTRIBUTED = "distributed"),
-        (i.PHRASE = "phrase"),
-        (i.YELLING = "yelling"),
-        (i.LAUGHTER = "laughter"),
-        (i.GAME_EVENT = "game_event"),
-        (i.SPEAKING = "speaking"),
-        (i.SOUNDBOARD = "soundboard"),
-        i),
     o =
-        (((r = {}).UNKNOWN = "unknown"),
-        (r.BELOW_MINIMUM = "below_minimum"),
-        (r.MEETS_MINIMUM = "meets_minimum"),
-        (r.MEETS_AUTO_ENABLE = "meets_auto_enable"),
+        (((r = {}).MANUAL = "manual"),
+        (r.DISTRIBUTED = "distributed"),
+        (r.PHRASE = "phrase"),
+        (r.YELLING = "yelling"),
+        (r.LAUGHTER = "laughter"),
+        (r.GAME_EVENT = "game_event"),
+        (r.SPEAKING = "speaking"),
+        (r.SOUNDBOARD = "soundboard"),
         r),
-    d = (((l = {}).CLIP = "clip"), (l.SCREENSHOT = "screenshot"), (l.VOICE_CLIP = "voice_clip"), l),
-    u =
+    l =
+        (((i = {}).UNKNOWN = "unknown"),
+        (i.BELOW_MINIMUM = "below_minimum"),
+        (i.MEETS_MINIMUM = "meets_minimum"),
+        (i.MEETS_AUTO_ENABLE = "meets_auto_enable"),
+        i),
+    u = (((s = {}).CLIP = "clip"), (s.SCREENSHOT = "screenshot"), (s.VOICE_CLIP = "voice_clip"), s),
+    c =
         (((a = {}).KILL = "kill"),
         (a.MULTIKILL = "multikill"),
         (a.DEATH = "death"),

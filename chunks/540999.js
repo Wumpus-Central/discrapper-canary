@@ -1,28 +1,29 @@
-n.d(t, { A: () => E });
-var i = n(17928),
-    r = n(228366),
-    l = n(572009),
+"use strict";
+n.d(t, { A: () => f });
+var r = n(311907),
+    i = n(73153),
+    s = n(572009),
     a = n(71393),
-    s = n(287809),
-    o = n(688151),
-    d = n(115093);
-let u = "production" === d.B.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === d.B.STAGING;
-function c() {
-    u = (0, l.I9)(s.default.getCurrentUser());
+    o = n(287809),
+    l = n(688151),
+    u = n(115093);
+let c = "production" === u.B.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.B.STAGING;
+function d() {
+    c = (0, s.I9)(o.default.getCurrentUser());
 }
-class h extends i.Ay.Store {
+class _ extends r.Ay.Store {
     static displayName = "DeveloperExperimentStore";
     isDeveloper = !1;
     initialize() {
-        this.waitFor(s.default, a.A),
-            Object.defineProperties(this, { isDeveloper: { configurable: !1, get: () => u, set: () => {} } }),
-            c(),
+        this.waitFor(o.default, a.A),
+            Object.defineProperties(this, { isDeveloper: { configurable: !1, get: () => c, set: () => {} } }),
+            d(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
-        return u
-            ? { type: "developer", name: "discord_dev_testing", revision: 1, override: !0, bucket: o.RE.TREATMENT_1 }
+        return c
+            ? { type: "developer", name: "discord_dev_testing", revision: 1, override: !0, bucket: l.RE.TREATMENT_1 }
             : null;
     }
 }
-let E = new h(r.h, { CONNECTION_OPEN: c, OVERLAY_INITIALIZE: c, CURRENT_USER_UPDATE: c });
+let f = new _(i.h, { CONNECTION_OPEN: d, OVERLAY_INITIALIZE: d, CURRENT_USER_UPDATE: d });

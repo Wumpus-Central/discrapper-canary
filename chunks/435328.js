@@ -1,13 +1,13 @@
-n.d(t, { l: () => d });
-var l = n(46054),
-    i = n(556300),
-    r = n(881140);
+t.d(l, { l: () => c });
+var n = t(46054),
+    s = t(556300),
+    i = t(49005);
 let a = {
-        ...l.A.guildEventRules.link,
-        react: (0, r.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 }).react,
+        ...n.A.guildEventRules.link,
+        react: (0, i.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 }).react,
     },
-    s = {
-        ...l.A.guildEventRules.channelMention,
-        react: (0, i.A)({ enableBuildOverrides: !1, shouldCloseDefaultModals: !0, shouldStopPropagation: !0 }).react,
+    r = {
+        ...n.A.guildEventRules.channelMention,
+        react: (0, s.A)({ enableBuildOverrides: !1, shouldCloseDefaultModals: !0, shouldStopPropagation: !0 }).react,
     },
-    d = l.A.reactParserFor({ ...l.A.guildEventRules, link: a, channelMention: s });
+    c = n.A.reactParserFor({ ...n.A.guildEventRules, link: a, channelMention: r });

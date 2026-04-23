@@ -1,56 +1,57 @@
-n.d(t, { _: () => c });
+"use strict";
+n.d(t, { _: () => d });
 var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    o = n.n(i),
-    l = n(834730),
-    s = n(580630),
-    d = n(777485),
-    u = n(303519);
-function c(e) {
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(834730),
+    l = n(580630),
+    u = n(381247),
+    c = n(303519);
+function d(e) {
     let {
             label: t,
             totalLineItemLabel: n,
-            totalLineItemLabelSubText: i,
-            totalLineItemValueSubText: c,
+            totalLineItemLabelSubText: s,
+            totalLineItemValueSubText: d,
             showTotalWhenCollapsed: _ = !1,
-            lineItems: p,
-            intervalType: C,
+            lineItems: f,
+            intervalType: p,
             intervalCount: h,
             currency: E,
             defaultExpanded: m = !1,
         } = e,
-        [A, I] = a.useState(m),
-        T = a.useMemo(() => {
-            let e = p.reduce((e, t) => e + t.amount, 0),
-                t = (0, s.$g)(e, E);
-            return (0, s.CE)(t, C, h);
-        }, [p, E, C, h]),
-        y = (0, r.jsxs)(d.h, {
+        [g, A] = i.useState(m),
+        I = i.useMemo(() => {
+            let e = f.reduce((e, t) => e + t.amount, 0),
+                t = (0, l.$g)(e, E);
+            return (0, l.CE)(t, p, h);
+        }, [f, E, p, h]),
+        T = (0, r.jsxs)(u.h, {
             label: t,
             defaultExpanded: m,
-            isDisabled: p.length <= 0,
-            onExpandedChange: I,
+            isDisabled: f.length <= 0,
+            onExpandedChange: A,
             collapsedContent: _
-                ? (0, r.jsx)(l.E, { variant: "text-md/normal", color: "text-subtle", children: T })
+                ? (0, r.jsx)(o.E, { variant: "text-md/normal", color: "text-subtle", children: I })
                 : null,
             children: [
-                p.map((e) => {
-                    let { formatWithoutRate: t, amount: n, ...a } = e,
-                        i = (0, s.$g)(n, E),
-                        o = t ? i : (0, s.CE)(i, C, h);
-                    return (0, r.jsx)(d.i, { value: o, ...a }, a.id);
+                f.map((e) => {
+                    let { formatWithoutRate: t, amount: n, ...i } = e,
+                        s = (0, l.$g)(n, E),
+                        a = t ? s : (0, l.CE)(s, p, h);
+                    return (0, r.jsx)(u.i, { value: a, ...i }, i.id);
                 }),
-                (0, r.jsx)("div", { className: u.m }),
-                (0, r.jsx)(d.i, {
+                (0, r.jsx)("div", { className: c.m }),
+                (0, r.jsx)(u.i, {
                     label: n ?? t,
-                    labelSubText: i,
-                    value: T,
-                    subText: c,
+                    labelSubText: s,
+                    value: I,
+                    subText: d,
                     color: "text-strong",
                     valueColor: "text-strong",
                 }),
             ],
         });
-    return (0, r.jsx)("div", { className: o()({ [u.k]: A }), children: y });
+    return (0, r.jsx)("div", { className: a()({ [c.k]: g }), children: T });
 }

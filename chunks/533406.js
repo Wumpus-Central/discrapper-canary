@@ -1,141 +1,142 @@
+"use strict";
 n.d(t, {
-    B: () => m,
+    B: () => E,
     a: () =>
         function e(t, n) {
-            let { isGift: r, giftRecipient: a, giftingOrigin: u, additionalUserIds: m } = n,
+            let { isGift: r, giftRecipient: s, giftingOrigin: u, additionalUserIds: E } = n,
                 {
-                    discoverySessionId: _,
-                    analyticsLocations: E,
-                    guildId: C,
-                    isEligibilityCheckContinuation: g,
-                    checkoutState: A,
+                    discoverySessionId: m,
+                    analyticsLocations: g,
+                    guildId: A,
+                    isEligibilityCheckContinuation: I,
+                    checkoutState: T,
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                w = h.A.getSKUEligibilityEntry(t.id),
-                k = w?.state,
-                v = !r && null != C && (null == k || "checking" === k || "ineligible" === k);
-            if (!v && !g) {
+                S = _.A.getSKUEligibilityEntry(t.id),
+                y = S?.state,
+                N = !r && null != A && (null == y || "checking" === y || "ineligible" === y);
+            if (!N && !I) {
                 let e = "none";
                 r
                     ? (e = "gift")
-                    : null == C
+                    : null == A
                       ? (e = "no_guild")
-                      : "eligible" === k
+                      : "eligible" === y
                         ? (e = "already_eligible")
-                        : "error" === k && (e = "prior_error"),
-                    c.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                        : "error" === y && (e = "prior_error"),
+                    d.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                         sku_id: t.id,
-                        guild_id: C ?? null,
+                        guild_id: A ?? null,
                         application_id: t.applicationId,
                         is_gift: r,
-                        eligibility_state: k ?? "none",
+                        eligibility_state: y ?? "none",
                         skip_reason: e,
-                        error_http_status: w?.state === "error" ? (w.httpStatus ?? null) : null,
-                        location_stack: E,
+                        error_http_status: S?.state === "error" ? (S.httpStatus ?? null) : null,
+                        location_stack: g,
                     });
             }
-            let M = A ?? { hasFinished: !1 };
-            if (v)
-                return void (0, y.L)({
-                    guildId: C,
+            let v = T ?? { hasFinished: !1 };
+            if (N)
+                return void (0, f.L)({
+                    guildId: A,
                     skuId: t.id,
-                    analyticsLocations: E ?? [],
+                    analyticsLocations: g ?? [],
                     onContinue: () => {
-                        if (!M.hasFinished)
+                        if (!v.hasFinished)
                             return e(
                                 t,
-                                { isGift: r, giftRecipient: a, giftingOrigin: u, additionalUserIds: m },
+                                { isGift: r, giftRecipient: s, giftingOrigin: u, additionalUserIds: E },
                                 {
-                                    discoverySessionId: _,
-                                    analyticsLocations: E,
-                                    guildId: C,
+                                    discoverySessionId: m,
+                                    analyticsLocations: g,
+                                    guildId: A,
                                     isEligibilityCheckContinuation: !0,
-                                    checkoutState: M,
+                                    checkoutState: v,
                                 },
                             );
                     },
                 });
-            let S = !1,
-                I = (0, i.A)();
-            f({
-                loadId: I,
-                discoverySessionId: _,
+            let C = !1,
+                O = (0, i.A)();
+            h({
+                loadId: O,
+                discoverySessionId: m,
                 skuId: t.id,
                 applicationId: t.applicationId,
-                analyticsLocations: E ?? [],
+                analyticsLocations: g ?? [],
                 isGift: r,
-                giftRecipient: a,
+                giftRecipient: s,
                 giftingOrigin: u,
-                additionalUserIds: m,
+                additionalUserIds: E,
                 onCloseCallback: () => {
-                    if (!S) {
-                        let e = (0, d.q1)({
+                    if (!C) {
+                        let e = (0, c.q1)({
                             location: "SocialLayerStorefrontPaymentModal",
-                            unifiedCheckoutFlow: s.C.SLAYER_STOREFRONT_CHECKOUT,
+                            unifiedCheckoutFlow: l.C.SLAYER_STOREFRONT_CHECKOUT,
                         });
-                        c.default.track(p.HAw.PAYMENT_FLOW_CANCELED, {
-                            load_id: I,
-                            discovery_session_id: _,
+                        d.default.track(p.HAw.PAYMENT_FLOW_CANCELED, {
+                            load_id: O,
+                            discovery_session_id: m,
                             payment_type: p.frM[p.VVm.ONE_TIME],
                             is_gift: r,
                             sku_id: t.id,
                             application_id: t.applicationId,
-                            location_stack: E,
+                            location_stack: g,
                             sku_product_line: t.productLine,
-                            checkout_design: e ? d.rS.UNIFIED : d.rS.LEGACY,
-                            checkout_flow: s.C.SLAYER_STOREFRONT_CHECKOUT,
+                            checkout_design: e ? c.rS.UNIFIED : c.rS.LEGACY,
+                            checkout_flow: l.C.SLAYER_STOREFRONT_CHECKOUT,
                         });
                     }
-                    (0, l.ET)(), (0, o.z)(), (0, y.l)(), (M.hasFinished = !0);
+                    (0, a.ET)(), (0, o.z)(), (0, f.l)(), (v.hasFinished = !0);
                 },
                 onComplete: () => {
-                    (S = !0), (M.hasFinished = !0);
+                    (C = !0), (v.hasFinished = !0);
                 },
                 modalKey: "slayer-payment-modal",
             });
         },
 });
 var r = n(627968),
-    i = n(132500),
-    a = n(192308),
-    l = n(391048),
+    i = n(835245),
+    s = n(192308),
+    a = n(391048),
     o = n(636099),
-    s = n(120700),
-    u = n(226991),
-    d = n(742810),
-    c = n(954571),
-    h = n(832163),
-    y = n(556808),
+    l = n(120700),
+    u = n(589078),
+    c = n(742810),
+    d = n(954571),
+    _ = n(832163),
+    f = n(556808),
     p = n(652215);
-let f = (e) => {
+let h = (e) => {
     let {
         loadId: t,
         discoverySessionId: n,
         applicationId: r,
         skuId: i,
-        analyticsLocations: a,
-        isGift: l,
+        analyticsLocations: s,
+        isGift: a,
         giftRecipient: o,
-        additionalUserIds: s,
-        giftingOrigin: d,
-        onCloseCallback: c,
-        onComplete: h,
-        modalKey: y,
+        additionalUserIds: l,
+        giftingOrigin: c,
+        onCloseCallback: d,
+        onComplete: _,
+        modalKey: f,
     } = e;
     return (0, u.KY)().openCheckoutModal({
         loadId: t,
         discoverySessionId: n,
         applicationId: r,
         skuId: i,
-        analyticsLocations: a,
-        onComplete: h,
-        giftContextProps: { isGift: l, giftRecipient: o, giftingOrigin: d, additionalUserIds: s },
-        openModalOptions: { modalKey: y, onCloseCallback: c },
+        analyticsLocations: s,
+        onComplete: _,
+        giftContextProps: { isGift: a, giftRecipient: o, giftingOrigin: c, additionalUserIds: l },
+        openModalOptions: { modalKey: f, onCloseCallback: d },
     });
 };
-function m() {
-    (0, a.openModalLazy)(
+function E() {
+    (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await n.e("26388").then(n.bind(n, 297187));
+            let { default: e } = await n.e("29638").then(n.bind(n, 960997));
             return (t) => (0, r.jsx)(e, { ...t });
         },
         { modalKey: "slayer-storefront-announcement-modal" },

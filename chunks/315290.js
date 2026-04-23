@@ -1,9 +1,9 @@
-n.d(t, { Ot: () => c, do: () => o, hc: () => _, jC: () => u, ju: () => d });
+n.d(t, { Ot: () => d, do: () => o, hc: () => u, jC: () => c, ju: () => A });
 var i,
-    l,
     r,
-    s,
     a,
+    l,
+    s,
     o =
         (((i = {}).UNKNOWN = "unknown"),
         (i.ANY = "any"),
@@ -13,20 +13,19 @@ var i,
         (i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
         (i.CREATE_GUILD = "create_guild"),
         i),
-    c = (((l = {}).AGE_GATE = "age_gate"), (l.AGE_GATE_UNDERAGE = "age_gate_underage"), l),
-    _ = (((r = {}).CLAIM_ACCOUNT = "claim_account"), (r.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), r),
-    u =
-        (((s = {}).GUILD_TEMPLATES = "guild_templates"),
-        (s.GUILD_CREATE = "guild_create"),
-        (s.CREATION_INTENT = "creation_intent"),
-        (s.CHANNEL_PROMPT = "channel_prompt"),
-        (s.JOIN_GUILD = "join_guild"),
-        (s.SUCCESS = "create_success"),
-        s),
-    d = /^(2155|7706)2$/.test(n.j)
-        ? (((a = {}).NUF_STARTED = "nuf_started"),
-          (a.AGE_GATE = "age_gate"),
-          (a.NUF_COMPLETE = "nuf_complete"),
-          (a.HUB_CONNECTION = "hub_connection"),
-          a)
-        : null;
+    d = (((r = {}).AGE_GATE = "age_gate"), (r.AGE_GATE_UNDERAGE = "age_gate_underage"), r),
+    u = (((a = {}).CLAIM_ACCOUNT = "claim_account"), (a.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), a),
+    c =
+        (((l = {}).GUILD_TEMPLATES = "guild_templates"),
+        (l.GUILD_CREATE = "guild_create"),
+        (l.CREATION_INTENT = "creation_intent"),
+        (l.CHANNEL_PROMPT = "channel_prompt"),
+        (l.JOIN_GUILD = "join_guild"),
+        (l.SUCCESS = "create_success"),
+        l),
+    A =
+        (((s = {}).NUF_STARTED = "nuf_started"),
+        (s.AGE_GATE = "age_gate"),
+        (s.NUF_COMPLETE = "nuf_complete"),
+        (s.HUB_CONNECTION = "hub_connection"),
+        s);

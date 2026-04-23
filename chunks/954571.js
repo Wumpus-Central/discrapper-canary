@@ -1,51 +1,52 @@
+"use strict";
 n.r(t),
     n.d(t, {
-        AnalyticEventConfigs: () => R,
-        AnalyticsContext: () => T,
-        AnalyticsSchema: () => p,
-        addExtraAnalyticsDecorator: () => f,
-        clearAnalyticsEventsRecording: () => B,
-        debugLogEvent: () => v,
-        default: () => K,
-        expandEventProperties: () => x,
-        expandLocation: () => L,
-        getAnalyticsEventsRecording: () => w,
-        getNewAnalyticsLoadId: () => H,
-        isGameApplicationType: () => k,
-        launchSignature: () => S,
-        setUTMContext: () => M,
-        startRecordingAnalyticsEvents: () => G,
-        stopRecordingAnalyticsEvents: () => j,
-        trackNetworkAction: () => V,
+        AnalyticEventConfigs: () => C,
+        AnalyticsContext: () => I,
+        AnalyticsSchema: () => f,
+        addExtraAnalyticsDecorator: () => v,
+        clearAnalyticsEventsRecording: () => F,
+        debugLogEvent: () => M,
+        default: () => Y,
+        expandEventProperties: () => w,
+        expandLocation: () => O,
+        getAnalyticsEventsRecording: () => G,
+        getNewAnalyticsLoadId: () => j,
+        isGameApplicationType: () => B,
+        launchSignature: () => y,
+        setUTMContext: () => L,
+        startRecordingAnalyticsEvents: () => k,
+        stopRecordingAnalyticsEvents: () => U,
+        trackNetworkAction: () => H,
     }),
     n(321073);
 var r = n(64700),
-    a = n(132500),
-    i = n(110259),
-    o = n(613345),
-    l = n(306173),
-    s = n(228366),
-    d = n(686757),
-    u = n(53943),
-    c = n(790171),
+    i = n(835245),
+    s = n(110259),
+    a = n(613345),
+    o = n(306173),
+    l = n(73153),
+    u = n(686757),
+    c = n(53943),
+    d = n(790171),
     _ = n(111162),
-    p = n(757811),
-    C = n(321034),
-    h = n(38405),
+    f = n(757811),
+    p = n(321034),
+    h = n(728458),
     E = n(652215),
     m = n(53298),
-    A = n(705751),
-    I = n(985018);
-let T = r.createContext({ location: {} }),
-    y = {},
-    g = performance.now(),
-    S = (0, l.xd)() ? (0, l.xy)((0, o.V)()) : null;
-i.extendSuperProperties({ launch_signature: S });
+    g = n(705751),
+    A = n(985018);
+let I = r.createContext({ location: {} }),
+    T = {},
+    S = performance.now(),
+    y = (0, o.xd)() ? (0, o.xy)((0, a.V)()) : null;
+s.extendSuperProperties({ launch_signature: y });
 let N = [];
-function f(e) {
+function v(e) {
     N.push(e);
 }
-let R = {
+let C = {
     [E.HAw.APP_OPENED]: { throttlePeriod: 3e5, throttleKeys: () => [] },
     [E.HAw.APP_BACKGROUND]: { throttlePeriod: 12e4, throttleKeys: () => [] },
     [E.HAw.ACK_MESSAGES]: (e) =>
@@ -144,7 +145,7 @@ let R = {
     [E.HAw.VIDEO_STREAM_ZOOM_CHANGED]: { throttlePeriod: 1e3, throttleKeys: () => [] },
     [E.HAw.CACHE_STATS_RECORDED]: { throttlePeriod: 9e5, throttleKeys: () => [] },
 };
-function L(e) {
+function O(e) {
     return "string" == typeof e
         ? { location: e }
         : {
@@ -155,19 +156,19 @@ function L(e) {
               location_object_type: e.objectType,
           };
 }
-let O = () => m.O.NONE;
-function P(e) {
-    c.o.includes(e) || h.A.addBreadcrumb({ category: "analytics", message: e });
+let R = () => m.O.NONE;
+function b(e) {
+    d.o.includes(e) || h.A.addBreadcrumb({ category: "analytics", message: e });
 }
-let b = (0, i.trackMaker)({ addBreadcrumb: P, analyticEventConfigs: R, dispatcher: s.h, TRACK_ACTION_NAME: "TRACK" });
-function M(e) {
-    return (y = e);
+let D = (0, s.trackMaker)({ addBreadcrumb: b, analyticEventConfigs: C, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
+function L(e) {
+    return (T = e);
 }
-function x(e) {
+function w(e) {
     let t = e ?? {};
     if (null != t.location) {
         let { location: e, ...n } = t;
-        t = { ...n, ...L(e) };
+        t = { ...n, ...O(e) };
     }
     if (null != t.source) {
         let { source: e, ...n } = t;
@@ -184,73 +185,73 @@ function x(e) {
                   }),
         };
     }
-    (t.client_performance_cpu = C.A.getCurrentCPUUsagePercent()),
-        (t.client_performance_memory = C.A.getCurrentMemoryUsageKB()),
-        (t.cpu_core_count = C.A.getCPUCoreCount()),
-        (t.accessibility_features = O()),
-        (t.rendered_locale = I.intl.currentLocale),
-        (t.uptime_app = Math.floor((performance.now() - g) / 1e3));
-    let n = C.A.getProcessUptime();
+    (t.client_performance_cpu = p.A.getCurrentCPUUsagePercent()),
+        (t.client_performance_memory = p.A.getCurrentMemoryUsageKB()),
+        (t.cpu_core_count = p.A.getCPUCoreCount()),
+        (t.accessibility_features = R()),
+        (t.rendered_locale = A.intl.currentLocale),
+        (t.uptime_app = Math.floor((performance.now() - S) / 1e3));
+    let n = p.A.getProcessUptime();
     null != n && (t.uptime_process_renderer = Math.floor(n));
-    let { utmSource: r, utmMedium: a, utmCampaign: i, utmContent: o } = y;
+    let { utmSource: r, utmMedium: i, utmCampaign: s, utmContent: a } = T;
     return (
         (t.utm_source = t.utm_source ?? r),
-        (t.utm_medium = t.utm_medium ?? a),
-        (t.utm_campaign = t.utm_campaign ?? i),
-        (t.utm_content = t.utm_content ?? o),
-        (t.launch_signature = S),
+        (t.utm_medium = t.utm_medium ?? i),
+        (t.utm_campaign = t.utm_campaign ?? s),
+        (t.utm_content = t.utm_content ?? a),
+        (t.launch_signature = y),
         N.forEach((e) => e(t)),
         t
     );
 }
-function v(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     _.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
-        n ? u.z8("Analytics", e, t) : u.z8("Analytics", e);
+        n ? c.z8("Analytics", e, t) : c.z8("Analytics", e);
 }
-let U = !1,
-    D = {};
+let P = !1,
+    x = {};
+function k() {
+    P = !0;
+}
+function U() {
+    P = !1;
+}
 function G() {
-    U = !0;
+    return x;
 }
-function j() {
-    U = !1;
-}
-function w() {
-    return D;
-}
-function B() {
-    Object.keys(D).forEach((e) => {
-        delete D[e];
+function F() {
+    Object.keys(x).forEach((e) => {
+        delete x[e];
     });
 }
-let F = (0, i.trackMaker)({ addBreadcrumb: P, analyticEventConfigs: R, dispatcher: s.h, TRACK_ACTION_NAME: "TRACK" });
-function k(e) {
-    return e === A.S7.GAME || e === A.S7.DEPRECATED_GAME;
+let V = (0, s.trackMaker)({ addBreadcrumb: b, analyticEventConfigs: C, dispatcher: l.h, TRACK_ACTION_NAME: "TRACK" });
+function B(e) {
+    return e === g.S7.GAME || e === g.S7.DEPRECATED_GAME;
 }
-function V(e, t) {
-    let n = x({ location: (0, d.g$)(), ...t });
-    (0, d.eE)(e, { type: "action", ...t }), v(e, n), F(e, n);
+function H(e, t) {
+    let n = w({ location: (0, u.g$)(), ...t });
+    (0, u.eE)(e, { type: "action", ...t }), M(e, n), V(e, n);
 }
-function H() {
-    return (0, a.A)();
+function j() {
+    return (0, i.A)();
 }
-let K = {
-    ...i,
-    getCampaignParams: i.getCampaignParams,
+let Y = {
+    ...s,
+    getCampaignParams: s.getCampaignParams,
     setSystemAccessibilityFeatures: function (e) {
-        O = e;
+        R = e;
     },
-    expandEventProperties: x,
+    expandEventProperties: w,
     track: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             r = String(e);
         if (
-            (U && null != t && (Array.isArray(D[e]) ? D[e].push(t) : (D[e] = [t])),
+            (P && null != t && (Array.isArray(x[e]) ? x[e].push(t) : (x[e] = [t])),
             null != n.throttlePercent && Math.random() > n.throttlePercent)
         )
             return Promise.resolve();
-        let a = x(t);
-        return v(r, a, n.logEventProperties), b(e, a, { flush: n.flush, fingerprint: n.fingerprint });
+        let i = w(t);
+        return M(r, i, n.logEventProperties), D(e, i, { flush: n.flush, fingerprint: n.fingerprint });
     },
 };

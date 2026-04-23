@@ -1,3 +1,5 @@
-i.exports = JSON.parse(
-    '{"6/dkHh":["Chiudi trascrizione"],"XiLvuG":["Cambia volume"],"dRVF+Z":["Riavvolgi di 10 secondi"],"yV2FLL":["Salta avanti di 10 secondi"],"YWbiPw":["Non puoi ancora saltare le sezioni non viste"],"0DbPcL":["Attiva/Disattiva sottotitoli"],"z9Cnzv":["Attiva/Disattiva schermo intero"],"6EjGUv":["Attiva/Disattiva trascrizione"],"kX3+aM":["Caricamento del video..."],"c7IRfm":["Video in pausa perch\xe9 la finestra non \xe8 pi\xf9 in primo piano"],"9St/zK":["Video in pausa perch\xe9 la finestra non \xe8 visibile"],"VZkd/n":["Trascrizione"],"E527vj":["Miniatura Video"]}',
-);
+n.d(t, { M: () => l });
+var i = n(73153);
+function l(e, t) {
+    i.h.dispatch({ type: "GAME_UPSELL_DISMISS", applicationId: e, dismissedAt: Date.now(), dismissibleContent: t });
+}

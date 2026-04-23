@@ -1,32 +1,33 @@
-n.d(t, { A: () => _ });
-var i = n(762230),
-    r = n(807348),
-    a = n(232835);
-function s(e, t) {
+"use strict";
+n.d(t, { A: () => o });
+var r = n(762230),
+    i = n(807348),
+    s = n(320501);
+function a(e, t) {
     return e?.find((e) => String(e.sound_id) === String(t));
 }
-function _(e, t, n, _) {
-    let l = s(_, n);
-    if (null != l) return (0, r.N0)(l, l.guild_id ?? "0");
-    let o = a.A.getMessage(e, t);
+function o(e, t, n, o) {
+    let l = a(o, n);
+    if (null != l) return (0, i.N0)(l, l.guild_id ?? "0");
+    let u = s.A.getMessage(e, t);
     if (
-        null != o &&
+        null != u &&
         null !=
             (l =
-                o?.messageReference?.type === i.S.FORWARD
+                u?.messageReference?.type === r.S.FORWARD
                     ? (function (e, t) {
                           let n;
-                          for (let i of e) {
-                              let e = s(i.message?.soundboardSounds, t);
+                          for (let r of e) {
+                              let e = a(r.message?.soundboardSounds, t);
                               if (null != e) {
                                   n = e;
                                   break;
                               }
                           }
                           return n;
-                      })(o?.messageSnapshots ?? [], n)
-                    : s(o?.soundboardSounds, n))
+                      })(u?.messageSnapshots ?? [], n)
+                    : a(u?.soundboardSounds, n))
     )
-        return (0, r.N0)(l, l.guild_id ?? "0");
+        return (0, i.N0)(l, l.guild_id ?? "0");
 }
 n(980504);

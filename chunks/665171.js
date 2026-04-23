@@ -1,44 +1,45 @@
+"use strict";
 n.d(t, {
-    Jr: () => L,
-    K: () => T,
-    KH: () => R,
-    QK: () => f,
-    Wp: () => O,
-    as: () => D,
-    cq: () => S,
-    e_: () => m,
-    jL: () => C,
-    pj: () => p,
-    tT: () => N,
-    z9: () => A,
+    Jr: () => v,
+    K: () => E,
+    KH: () => I,
+    QK: () => T,
+    Wp: () => A,
+    as: () => C,
+    cq: () => m,
+    e_: () => N,
+    jL: () => S,
+    pj: () => y,
+    tT: () => g,
+    z9: () => h,
 });
-var i = n(636537),
-    r = n(228366),
-    a = n(773669),
-    s = n(287809),
-    _ = n(954571),
+var r = n(562465),
+    i = n(73153),
+    s = n(773669),
+    a = n(287809),
+    o = n(954571),
     l = n(371794),
-    o = n(79133),
-    E = n(532555),
+    u = n(79133),
+    c = n(532555),
     d = n(627072),
-    c = n(760321),
-    u = n(800007),
-    I = n(652215);
-function A(e) {
+    _ = n(760321),
+    f = n(800007),
+    p = n(652215);
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t)
         return void setTimeout(() => {
-            r.h.dispatch({
+            i.h.dispatch({
                 type: "GAME_SERVER_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: o.q.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: u.q.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5e3);
-    let n = s.default.getCurrentUser()?.isStaff() ?? !1;
+    let n = a.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, l.aP)({
-        url: I.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(u.q4),
+        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
         query: {
-            locale: a.default.locale,
+            locale: s.default.locale,
             guild_id: e,
             include_unpublished_products: n,
             include_unpublished_collection: n,
@@ -51,14 +52,14 @@ function A(e) {
             let n = (0, d.o)(t);
             return (e[n.id] = n), e;
         }, {});
-        r.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: n });
+        i.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: n });
     });
 }
-function T() {
-    let e = s.default.getCurrentUser()?.isStaff() ?? !1;
+function E() {
+    let e = a.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, l.aP)({
-        url: I.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(u.q4),
-        query: { locale: a.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
+        url: p.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(f.q4),
+        query: { locale: s.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
         oldFormErrors: !0,
         rejectWithError: !1,
         retries: 2,
@@ -67,95 +68,95 @@ function T() {
             let n = (0, d.o)(t);
             return (e[n.id] = n), e;
         }, {});
-        r.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
+        i.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
     });
 }
-function S(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return t
         ? (setTimeout(() => {
-              r.h.dispatch({
+              i.h.dispatch({
                   type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
-                  instances: o.L.reduce((e, t) => ((e[t.id] = t), e), {}),
+                  instances: u.L.reduce((e, t) => ((e[t.id] = t), e), {}),
               });
           }, 5e3),
           Promise.resolve())
-        : i.Bo.get({ url: I.Rsh.GAME_SERVERS(e), rejectWithError: !0, retries: 2, signal: n }).then((t) => {
+        : r.Bo.get({ url: p.Rsh.GAME_SERVERS(e), rejectWithError: !0, retries: 2, signal: n }).then((t) => {
               if (null != t.body) {
-                  let n = t.body.reduce((e, t) => ((e[t.id] = (0, E.A)(t)), e), {});
-                  r.h.dispatch({ type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS", guildId: e, instances: n });
+                  let n = t.body.reduce((e, t) => ((e[t.id] = (0, c.A)(t)), e), {});
+                  i.h.dispatch({ type: "GAME_SERVER_FETCH_INSTANCES_SUCCESS", guildId: e, instances: n });
               }
           });
 }
-function N(e, t) {
+function g(e, t) {
     return (0, l.aP)({
-        url: I.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
-        query: { locale: a.default.locale },
+        url: p.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
+        query: { locale: s.default.locale },
         rejectWithError: !0,
         retries: 3,
     }).then((n) => {
         if (null != n.body) {
-            let i = n.body.tenant_metadata?.guild_monetization?.game_server?.instructions.pc ?? [];
-            r.h.dispatch({
+            let r = n.body.tenant_metadata?.guild_monetization?.game_server?.instructions.pc ?? [];
+            i.h.dispatch({
                 type: "GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS",
                 guildId: e,
                 skuId: t,
-                instructions: i,
+                instructions: r,
             });
         }
     });
 }
-function O(e, t) {
+function A(e, t) {
     e &&
-        _.default.track(I.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
-            user_id: s.default.getCurrentUser()?.id,
+        o.default.track(p.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+            user_id: a.default.getCurrentUser()?.id,
             provider: t,
         });
 }
-function R() {
-    r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
+function I() {
+    i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
-function f(e, t) {
-    r.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
+function T(e, t) {
+    i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function C(e, t, n, r) {
-    return i.Bo.post({
-        url: I.Rsh.GUILD_POWERUP_TOGGLE(e, t),
-        body: { game_server_name: n, game_server_region: r },
+function S(e, t, n, i) {
+    return r.Bo.post({
+        url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
+        body: { game_server_name: n, game_server_region: i },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function p(e, t, n, r) {
-    return i.Bo.patch({
-        url: I.Rsh.GUILD_POWERUP_UPDATE(e, t),
-        body: { game_server_name: r, sku_id: n },
+function y(e, t, n, i) {
+    return r.Bo.patch({
+        url: p.Rsh.GUILD_POWERUP_UPDATE(e, t),
+        body: { game_server_name: i, sku_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function m(e, t, n) {
-    return i.Bo.del({
-        url: I.Rsh.GUILD_POWERUP_TOGGLE(e, t),
+function N(e, t, n) {
+    return r.Bo.del({
+        url: p.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function L(e) {
-    return i.Bo.get({ url: I.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
+function v(e) {
+    return r.Bo.get({ url: p.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
-            r.h.dispatch({
+            i.h.dispatch({
                 type: "GAME_SERVER_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(c.A).sort((e, t) => e.name.localeCompare(t.name)),
+                regions: e.body.map(_.A).sort((e, t) => e.name.localeCompare(t.name)),
             });
         },
     );
 }
-function D(e, t) {
-    return i.Bo.post({ url: I.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
-        r.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, E.A)(t.body) });
+function C(e, t) {
+    return r.Bo.post({ url: p.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
+        i.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, c.A)(t.body) });
     });
 }

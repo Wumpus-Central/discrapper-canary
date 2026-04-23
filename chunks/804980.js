@@ -1,118 +1,118 @@
-n.d(t, { Ay: () => G, LN: () => L });
+n.d(t, { Ay: () => U, LN: () => G });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(17928),
+    s = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    r = n(311907),
     o = n(990078),
-    d = n(778712),
-    c = n(834730),
+    c = n(778712),
+    d = n(834730),
     u = n(821609),
-    h = n(212245),
-    m = n(933958),
-    p = n(62583),
-    g = n(878549),
-    f = n(969151),
-    _ = n(550151),
-    x = n(902439),
-    A = n(283488),
-    E = n(732637),
-    S = n(315206),
-    I = n(104171),
-    v = n(594007),
-    b = n(227042),
-    C = n(793574),
-    T = n(688810),
-    y = n(698141),
-    j = n(429913),
-    w = n(567249),
-    N = n(495544),
-    R = n(186111),
-    M = n(287809),
-    O = n(403362),
-    k = n(562153),
-    D = n(985018),
-    z = n(301094);
-let P = ["embedded_background"];
-function L(e) {
-    let { avatarSize: t, guildId: n, channelId: a, users: r } = e,
-        l = t ?? d._3.SIZE_32,
-        s = (0, d.FT)(l);
-    return (0, i.jsx)(I.Ay, {
-        size: s,
+    m = n(212245),
+    A = n(933958),
+    h = n(447031),
+    x = n(878549),
+    p = n(969151),
+    g = n(550151),
+    N = n(902439),
+    f = n(283488),
+    _ = n(732637),
+    I = n(315206),
+    v = n(104171),
+    j = n(594007),
+    C = n(227042),
+    y = n(793574),
+    S = n(688810),
+    E = n(698141),
+    T = n(429913),
+    b = n(87001),
+    P = n(961350),
+    L = n(186111),
+    R = n(287809),
+    D = n(403362),
+    O = n(562153),
+    k = n(985018),
+    F = n(301094);
+let w = ["embedded_background"];
+function G(e) {
+    let { avatarSize: t, guildId: n, channelId: s, users: l } = e,
+        a = t ?? c._3.SIZE_32,
+        r = (0, c.FT)(a);
+    return (0, i.jsx)(v.Ay, {
+        size: r,
         guildId: n,
-        users: r,
+        users: l,
         max: 4,
         renderUser: (e) => {
-            if (null == e || e === I.mt) return null;
-            let t = k.Ay.getName(n, a, e);
+            if (null == e || e === v.mt) return null;
+            let t = O.Ay.getName(n, s, e);
             return (0, i.jsx)(
                 o.m,
-                { text: t, children: (0, i.jsx)("img", { src: e.getAvatarURL(n, s), alt: t, className: z.my }, e.id) },
+                { text: t, children: (0, i.jsx)("img", { src: e.getAvatarURL(n, r), alt: t, className: F.my }, e.id) },
                 e.id,
             );
         },
     });
 }
-function V(e) {
-    let { participants: t, application: n, channel: r, width: o } = e,
-        f = o > 400 ? 2 : +(o > 300),
-        [x] = o > 400 ? [d._3.SIZE_56, 56] : o > 300 ? [d._3.SIZE_32, 32] : [d._3.SIZE_24, 24],
-        A = (0, s.yK)([M.default, N.default], () =>
+function M(e) {
+    let { participants: t, application: n, channel: l, width: o } = e,
+        p = o > 400 ? 2 : +(o > 300),
+        [N] = o > 400 ? [c._3.SIZE_56, 56] : o > 300 ? [c._3.SIZE_32, 32] : [c._3.SIZE_24, 24],
+        f = (0, r.yK)([R.default, P.default], () =>
             Array.from(t)
-                .map((e) => ((0, g.S)(e, N.default) ? null : M.default.getUser(e.userId)))
-                .filter(O.Vq),
+                .map((e) => ((0, x.S)(e, P.default) ? null : R.default.getUser(e.userId)))
+                .filter(D.Vq),
         ),
-        E = (0, s.bG)(
-            [m.Ay],
+        _ = (0, r.bG)(
+            [A.Ay],
             () =>
-                m.Ay.getEmbeddedActivitiesForChannel(r.id).find((e) => e.applicationId === n.id) ??
-                m.Ay.getEmbeddedActivitiesForStartingChannel(r.id).find((e) => e.applicationId === n.id),
+                A.Ay.getEmbeddedActivitiesForChannel(l.id).find((e) => e.applicationId === n.id) ??
+                A.Ay.getEmbeddedActivitiesForStartingChannel(l.id).find((e) => e.applicationId === n.id),
         ),
-        { analyticsLocations: S } = (0, T.Ay)(),
-        I = (0, h.p)(),
-        v = k.Ay.getName(r.getGuildId(), r.id, A?.[0]),
-        b = (0, _.vG)({ userId: M.default.getCurrentUser()?.id, channelId: r.id, application: n }) === _.Gy.CAN_JOIN,
-        C = r.getGuildId() ?? void 0,
-        j = a.useId(),
-        w = n.id,
-        R = a.useMemo(() => ({ channel: r, type: "channel" }), [r]),
-        { submitting: P } = (0, y.A)({ applicationId: w, context: R, launchingComponentId: j });
+        { analyticsLocations: I } = (0, S.Ay)(),
+        v = (0, m.p)(),
+        j = O.Ay.getName(l.getGuildId(), l.id, f?.[0]),
+        C = (0, g.vG)({ userId: R.default.getCurrentUser()?.id, channelId: l.id, application: n }) === g.Gy.CAN_JOIN,
+        y = l.getGuildId() ?? void 0,
+        T = s.useId(),
+        b = n.id,
+        L = s.useMemo(() => ({ channel: l, type: "channel" }), [l]),
+        { submitting: w } = (0, E.A)({ applicationId: b, context: L, launchingComponentId: T });
     return (0, i.jsxs)("div", {
-        className: z.Yi,
+        className: F.Yi,
         children: [
-            (0, i.jsx)(L, { avatarSize: x, guildId: C, channelId: r.id, users: A }),
-            (0, i.jsx)(c.E, {
-                className: l()(z.m_, { [z.EX]: 0 === f, [z.Y]: 1 === f }),
+            (0, i.jsx)(G, { avatarSize: N, guildId: y, channelId: l.id, users: f }),
+            (0, i.jsx)(d.E, {
+                className: a()(F.m_, { [F.EX]: 0 === p, [F.Y]: 1 === p }),
                 variant: "text-sm/normal",
                 children:
-                    A.length > 1
-                        ? D.intl.formatToPlainString(D.t.cpe6CK, { username: v, count: A.length - 1 })
-                        : D.intl.formatToPlainString(D.t["7Uuia2"], { username: v }),
+                    f.length > 1
+                        ? k.intl.formatToPlainString(k.t.cpe6CK, { username: j, count: f.length - 1 })
+                        : k.intl.formatToPlainString(k.t["7Uuia2"], { username: j }),
             }),
-            (0, i.jsx)(c.E, {
-                className: l()(z.wx, { [z.EX]: 0 === f, [z.Y]: 1 === f }),
+            (0, i.jsx)(d.E, {
+                className: a()(F.wx, { [F.EX]: 0 === p, [F.Y]: 1 === p }),
                 variant: "text-sm/normal",
                 children: n.name,
             }),
             (0, i.jsx)("div", {
-                className: z.Uo,
-                children: b
+                className: F.Uo,
+                children: C
                     ? (0, i.jsx)(u.$, {
-                          text: D.intl.string(D.t["4i2vj+"]),
+                          text: k.intl.string(k.t["4i2vj+"]),
                           onClick: function (e) {
                               e.stopPropagation(),
-                                  null != E &&
-                                      (0, p.A)({
-                                          applicationId: E.applicationId,
-                                          activityChannelId: r.id,
-                                          locationObject: I.location,
-                                          analyticsLocations: S,
-                                          componentId: j,
+                                  null != _ &&
+                                      (0, h.A)({
+                                          applicationId: _.applicationId,
+                                          activityChannelId: l.id,
+                                          locationObject: v.location,
+                                          analyticsLocations: I,
+                                          componentId: T,
                                       });
                           },
-                          loading: P,
-                          size: 2 === f ? "md" : "sm",
+                          loading: w,
+                          size: 2 === p ? "md" : "sm",
                           variant: "overlay-primary",
                       })
                     : null,
@@ -120,38 +120,38 @@ function V(e) {
         ],
     });
 }
-function G(e) {
-    let { participant: t, width: n, selected: r, interactible: l, channel: o } = e,
-        { analyticsLocations: d } = (0, T.Ay)(C.A.ACTIVITY_TILE),
-        { applicationId: c } = t,
-        u = (0, x.A)(),
-        h = null != u && (0, f.H)(u.location) === o.id && u.applicationId === c,
-        [m] = (0, j.A)([c]),
-        { url: p } = (0, A.A)({ applicationId: c, names: P, size: 1024 }),
-        g = !r && h,
-        _ = !h,
-        I = !h && !r,
-        y = (0, s.bG)([R.A, w.A], () => (0, b.A)({ LayerStore: R.A, PopoutWindowStore: w.A }));
+function U(e) {
+    let { participant: t, width: n, selected: l, interactible: a, channel: o } = e,
+        { analyticsLocations: c } = (0, S.Ay)(y.A.ACTIVITY_TILE),
+        { applicationId: d } = t,
+        u = (0, N.A)(),
+        m = null != u && (0, p.H)(u.location) === o.id && u.applicationId === d,
+        [A] = (0, T.A)([d]),
+        { url: h } = (0, f.A)({ applicationId: d, names: w, size: 1024 }),
+        x = !l && m,
+        g = !m,
+        v = !m && !l,
+        E = (0, r.bG)([L.A, b.A], () => (0, C.A)({ LayerStore: L.A, PopoutWindowStore: b.A }));
     return (
-        a.useEffect(() => {
-            if (g && null != u && !y) {
-                let e = (0, v.A)(u.location.id, u.applicationId);
-                (0, S.cK)(e);
+        s.useEffect(() => {
+            if (x && null != u && !E) {
+                let e = (0, j.A)(u.location.id, u.applicationId);
+                (0, I.cK)(e);
             }
-        }, [g, u, y]),
-        (0, i.jsx)(T.f5, {
-            value: d,
+        }, [x, u, E]),
+        (0, i.jsx)(S.f5, {
+            value: c,
             children: (0, i.jsxs)("div", {
-                className: z.kL,
+                className: F.kL,
                 children: [
-                    g && null != u && (0, i.jsx)(E.A, { className: z.pU, embedId: (0, v.A)(u.location.id, c) }),
-                    _ && null != m && null != p && "" !== p
-                        ? (0, i.jsx)("img", { className: z.j0, alt: m.name, src: p })
+                    x && null != u && (0, i.jsx)(_.A, { className: F.pU, embedId: (0, j.A)(u.location.id, d) }),
+                    g && null != A && null != h && "" !== h
+                        ? (0, i.jsx)("img", { className: F.j0, alt: A.name, src: h })
                         : null,
-                    I &&
-                        null != m &&
-                        (0, i.jsx)(V, { width: n, channel: o, participants: t.participants, application: m }),
-                    l || _ ? null : (0, i.jsx)("div", { className: z.OB }),
+                    v &&
+                        null != A &&
+                        (0, i.jsx)(M, { width: n, channel: o, participants: t.participants, application: A }),
+                    a || g ? null : (0, i.jsx)("div", { className: F.OB }),
                 ],
             }),
         })

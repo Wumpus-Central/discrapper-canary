@@ -1,168 +1,169 @@
-n.d(t, { A: () => V });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    _ = n(735438),
-    l = n.n(_),
-    o = n(17928),
-    E = n(821609),
+"use strict";
+n.d(t, { A: () => F });
+var r = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(735438),
+    l = n.n(o),
+    u = n(311907),
+    c = n(821609),
     d = n(862482),
-    c = n(109802),
-    u = n(452027),
-    I = n(778712),
-    A = n(534514),
-    T = n(289873),
-    S = n(783878),
-    N = n(398590),
-    O = n(49229),
-    R = n(966327),
-    f = n(137177),
-    C = n(242874),
-    p = n(810498),
-    m = n(219271),
-    L = n(427358),
-    D = n(7133),
-    h = n(994500),
-    g = n(351906),
+    _ = n(109802),
+    f = n(452027),
+    p = n(778712),
+    h = n(534514),
+    E = n(289873),
+    m = n(783878),
+    g = n(398590),
+    A = n(49229),
+    I = n(966327),
+    T = n(769015),
+    S = n(242874),
+    y = n(810498),
+    N = n(219271),
+    v = n(21119),
+    C = n(7133),
+    O = n(994500),
+    R = n(351906),
     b = n(287809),
-    U = n(957565),
-    P = n(45938),
-    M = n(927578),
-    y = n(427262),
-    G = n(937008),
-    v = n(652215),
-    B = n(788868),
-    w = n(985018),
-    F = n(340188);
-function V(e) {
+    D = n(957565),
+    L = n(45938),
+    w = n(927578),
+    M = n(427262),
+    P = n(937008),
+    x = n(652215),
+    k = n(788868),
+    U = n(985018),
+    G = n(340188);
+function F(e) {
     let {
             giftCode: t,
             application: n,
-            sku: a,
-            subscriptionPlan: _,
+            sku: s,
+            subscriptionPlan: o,
             selectedGiftStyle: l,
-            onClose: E,
-            hasSentMessage: S,
-            giftRecipient: N,
-            giftMessageError: O,
-            isSendingMessage: C,
+            onClose: c,
+            hasSentMessage: m,
+            giftRecipient: g,
+            giftMessageError: A,
+            isSendingMessage: S,
         } = e,
-        [m, L] = r.useState(c.e.Modes.DEFAULT),
-        h = (0, o.bG)([g.A], () => g.A.enabled),
-        b = S || (null != l && null != N),
-        V = a?.productLine === v.EZt.COLLECTIBLES,
-        { selectedGiftingPromotionReward: k } = (0, G.Pv)(),
-        x = (0, p.Mq)(_),
-        W = () => (null != _ ? _.skuId : null != a ? a.id : null),
+        [N, v] = i.useState(_.e.Modes.DEFAULT),
+        O = (0, u.bG)([R.A], () => R.A.enabled),
+        b = m || (null != l && null != g),
+        F = s?.productLine === x.EZt.COLLECTIBLES,
+        { selectedGiftingPromotionReward: B } = (0, P.Pv)(),
+        H = (0, y.Mq)(o),
+        j = () => (null != o ? o.skuId : null != s ? s.id : null),
         Y = () => {
             let e;
-            return null != O
-                ? w.intl.string(w.t.qB8aya)
-                : null == _
+            return null != A
+                ? U.intl.string(U.t.qB8aya)
+                : null == o
                   ? null
                   : ((e =
-                        _.interval === B.WT.MONTH ? (b ? w.t["4ZJ+7Z"] : w.t["P+z55d"]) : b ? w.t.p0pZXP : w.t.bXqk3o),
-                    w.intl.format(e, { skuName: (0, M.RH)(_.id), intervalCount: _.intervalCount }));
+                        o.interval === k.WT.MONTH ? (b ? U.t["4ZJ+7Z"] : U.t["P+z55d"]) : b ? U.t.p0pZXP : U.t.bXqk3o),
+                    U.intl.format(e, { skuName: (0, w.RH)(o.id), intervalCount: o.intervalCount }));
         };
-    return C
-        ? (0, i.jsxs)("div", {
-              className: F.EL,
+    return S
+        ? (0, r.jsxs)("div", {
+              className: G.EL,
               children: [
                   null != n
-                      ? (0, i.jsx)(f.A, { game: n, className: F.__invalid_icon, size: f.M.LARGE, skuId: W() })
+                      ? (0, r.jsx)(T.A, { game: n, className: G.__invalid_icon, size: T.M.LARGE, skuId: j() })
                       : null,
-                  (0, i.jsx)(T.y, { type: T.t.PULSING_ELLIPSIS }),
+                  (0, r.jsx)(E.y, { type: E.t.PULSING_ELLIPSIS }),
               ],
           })
-        : (0, i.jsxs)("div", {
-              className: s()(F.EL, { [F.L1]: x && null != k }),
+        : (0, r.jsxs)("div", {
+              className: a()(G.EL, { [G.L1]: H && null != B }),
               children: [
                   null != n
-                      ? (0, i.jsx)(f.A, { game: n, className: F.__invalid_icon, size: f.M.LARGE, skuId: W() })
+                      ? (0, r.jsx)(T.A, { game: n, className: G.__invalid_icon, size: T.M.LARGE, skuId: j() })
                       : null,
-                  (0, i.jsx)(A.D, {
+                  (0, r.jsx)(h.D, {
                       variant: "heading-lg/semibold",
-                      className: s()({ [F.wx]: null == l && !V, [F.$A]: null != l && !V }),
+                      className: a()({ [G.wx]: null == l && !F, [G.$A]: null != l && !F }),
                       children:
-                          null != N || (S && null == O)
-                              ? w.intl.string(w.t.zOmK9N)
-                              : null != O
-                                ? w.intl.string(w.t.d1lrmU)
-                                : w.intl.string(w.t["/s1xR7"]),
+                          null != g || (m && null == A)
+                              ? U.intl.string(U.t.zOmK9N)
+                              : null != A
+                                ? U.intl.string(U.t.d1lrmU)
+                                : U.intl.string(U.t["/s1xR7"]),
                   }),
-                  (S && null != N && null == O) || b
-                      ? (0, i.jsxs)(i.Fragment, {
+                  (m && null != g && null == A) || b
+                      ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsxs)("div", {
-                                    className: F.jx,
+                                (0, r.jsxs)("div", {
+                                    className: G.jx,
                                     children: [
-                                        (0, i.jsx)(R.A, { user: N, size: I._3.SIZE_40 }),
-                                        (0, i.jsxs)("div", {
-                                            className: F.gn,
+                                        (0, r.jsx)(I.A, { user: g, size: p._3.SIZE_40 }),
+                                        (0, r.jsxs)("div", {
+                                            className: G.gn,
                                             children: [
-                                                (0, i.jsx)(A.D, {
+                                                (0, r.jsx)(h.D, {
                                                     variant: "heading-md/semibold",
-                                                    children: y.Ay.getName(N),
+                                                    children: M.Ay.getName(g),
                                                 }),
-                                                (0, i.jsxs)("div", {
-                                                    className: F.Ik,
-                                                    children: [" ", y.Ay.getUserTag(N)],
+                                                (0, r.jsxs)("div", {
+                                                    className: G.Ik,
+                                                    children: [" ", M.Ay.getUserTag(g)],
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)("div", { className: F._c, children: Y() }),
+                                (0, r.jsx)("div", { className: G._c, children: Y() }),
                             ],
                         })
-                      : (0, i.jsxs)(i.Fragment, {
+                      : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)("div", { className: F.I0, children: Y() }),
-                                null == O && (0, i.jsx)(H, { giftCode: t, onClose: E }),
-                                (0, i.jsx)("div", { className: F.yF }),
+                                (0, r.jsx)("div", { className: G.I0, children: Y() }),
+                                null == A && (0, r.jsx)(V, { giftCode: t, onClose: c }),
+                                (0, r.jsx)("div", { className: G.yF }),
                                 (() => {
                                     let e;
                                     if (null == t) return null;
-                                    switch (m) {
-                                        case c.e.Modes.SUCCESS:
-                                            e = w.intl.string(w.t.XVvPjU);
+                                    switch (N) {
+                                        case _.e.Modes.SUCCESS:
+                                            e = U.intl.string(U.t.XVvPjU);
                                             break;
-                                        case c.e.Modes.ERROR:
-                                            e = w.intl.string(w.t.i4GM3L);
+                                        case _.e.Modes.ERROR:
+                                            e = U.intl.string(U.t.i4GM3L);
                                             break;
                                         default:
-                                            e = w.intl.string(w.t.OpuAlK);
+                                            e = U.intl.string(U.t.OpuAlK);
                                     }
-                                    return (0, i.jsxs)("div", {
-                                        className: F.PN,
+                                    return (0, r.jsxs)("div", {
+                                        className: G.PN,
                                         children: [
                                             null != t &&
-                                                (0, i.jsx)(u.D, {
-                                                    label: w.intl.string(w.t["/dG4NA"]),
-                                                    children: (0, i.jsx)(c.e, {
-                                                        hideMessage: h ? w.intl.string(w.t["0RLn47"]) : null,
-                                                        value: (0, P.Zq)(t),
-                                                        mode: m,
+                                                (0, r.jsx)(f.D, {
+                                                    label: U.intl.string(U.t["/dG4NA"]),
+                                                    children: (0, r.jsx)(_.e, {
+                                                        hideMessage: O ? U.intl.string(U.t["0RLn47"]) : null,
+                                                        value: (0, L.Zq)(t),
+                                                        mode: N,
                                                         text: e,
                                                         onCopy: (e) => {
-                                                            null != a && (0, P.AK)(new D.A({ code: t, maxUses: 1 }), a),
-                                                                (0, U.C)(
+                                                            null != s && (0, L.AK)(new C.A({ code: t, maxUses: 1 }), s),
+                                                                (0, D.C)(
                                                                     e,
-                                                                    () => L(c.e.Modes.SUCCESS),
-                                                                    () => L(c.e.Modes.ERROR),
+                                                                    () => v(_.e.Modes.SUCCESS),
+                                                                    () => v(_.e.Modes.ERROR),
                                                                 ),
                                                                 setTimeout(() => {
-                                                                    L(c.e.Modes.DEFAULT);
+                                                                    v(_.e.Modes.DEFAULT);
                                                                 }, 1500);
                                                         },
-                                                        supportsCopy: U.p5,
-                                                        className: F.__invalid_copyInput,
+                                                        supportsCopy: D.p5,
+                                                        className: G.__invalid_copyInput,
                                                         buttonColor: d.XD.LINK,
                                                         buttonLook: d.pR.LINK,
                                                     }),
                                                 }),
-                                            (0, i.jsx)("div", { className: F.W$, children: w.intl.string(w.t.QWKUpn) }),
+                                            (0, r.jsx)("div", { className: G.W$, children: U.intl.string(U.t.QWKUpn) }),
                                         ],
                                     });
                                 })(),
@@ -171,70 +172,70 @@ function V(e) {
               ],
           });
 }
-let H = (e) => {
+let V = (e) => {
     let { giftCode: t, onClose: n } = e;
-    r.useEffect(() => {
-        O.A.fetchRelationships(), (0, m.u)();
+    i.useEffect(() => {
+        A.A.fetchRelationships(), (0, N.u)();
     }, []);
-    let [a, s] = r.useState(),
-        [_, d] = r.useState(!1),
-        [c, u] = r.useState(!1),
-        { userAffinities: A, isLoading: T } = (0, o.cf)([L.A], () => ({
-            userAffinities: L.A.getUserAffinitiesMap(),
-            isLoading: L.A.isFetching(),
+    let [s, a] = i.useState(),
+        [o, d] = i.useState(!1),
+        [_, f] = i.useState(!1),
+        { userAffinities: h, isLoading: E } = (0, u.cf)([v.A], () => ({
+            userAffinities: v.A.getUserAffinitiesMap(),
+            isLoading: v.A.isFetching(),
         })),
-        f = Array.from(A.keys()).sort((e, t) => L.A.compare(e, t)),
-        p = (0, o.bG)([h.A], () => h.A.getFriendIDs()),
-        D = l().difference(p, f),
-        g = [...f, ...D],
-        U = (0, o.bG)([b.default], () => b.default.filter((e) => g.includes(e.id) && !e.bot), [g]);
-    if (null == U || 0 === U.length) return null;
-    let P = l().sortBy(U, (e) => g.indexOf(e.id));
-    return (0, i.jsxs)("div", {
-        className: F.vt,
+        T = Array.from(h.keys()).sort((e, t) => v.A.compare(e, t)),
+        y = (0, u.bG)([O.A], () => O.A.getFriendIDs()),
+        C = l().difference(y, T),
+        R = [...T, ...C],
+        D = (0, u.bG)([b.default], () => b.default.filter((e) => R.includes(e.id) && !e.bot), [R]);
+    if (null == D || 0 === D.length) return null;
+    let L = l().sortBy(D, (e) => R.indexOf(e.id));
+    return (0, r.jsxs)("div", {
+        className: G.vt,
         children: [
-            (0, i.jsxs)("div", {
-                className: F.AQ,
+            (0, r.jsxs)("div", {
+                className: G.AQ,
                 children: [
-                    (0, i.jsx)(S.Z, {
+                    (0, r.jsx)(m.Z, {
                         selectionMode: "single",
-                        label: w.intl.string(w.t.MJw05f),
-                        placeholder: w.intl.string(w.t.J019jZ),
-                        loading: T,
-                        value: a,
+                        label: U.intl.string(U.t.MJw05f),
+                        placeholder: U.intl.string(U.t.J019jZ),
+                        loading: E,
+                        value: s,
                         onSelectionChange: (e) => {
-                            s(e), d(!1);
+                            a(e), d(!1);
                         },
-                        options: P.map((e) => ({
+                        options: L.map((e) => ({
                             id: e.id,
                             value: e,
-                            label: `${y.Ay.getUserTag(e)}`,
-                            leading: (0, i.jsx)(R.A, { user: e, size: I._3.SIZE_20 }),
+                            label: `${M.Ay.getUserTag(e)}`,
+                            leading: (0, r.jsx)(I.A, { user: e, size: p._3.SIZE_20 }),
                         })),
                     }),
-                    (0, i.jsx)("div", {
-                        className: F.Qg,
-                        children: (0, i.jsx)(E.$, {
-                            disabled: null == a,
-                            loading: c,
+                    (0, r.jsx)("div", {
+                        className: G.Qg,
+                        children: (0, r.jsx)(c.$, {
+                            disabled: null == s,
+                            loading: _,
                             onClick: () => {
-                                u(!0),
-                                    (0, C.UN)(a, t)
+                                f(!0),
+                                    (0, S.UN)(s, t)
                                         .then(() => {
-                                            n(), (0, N.bz)();
+                                            n(), (0, g.bz)();
                                         })
                                         .catch(() => {
-                                            d(!0), u(!1);
+                                            d(!0), f(!1);
                                         });
                             },
-                            text: w.intl.string(w.t["+EgwQn"]),
+                            text: U.intl.string(U.t["+EgwQn"]),
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)("div", {
-                className: _ ? F.Sc : F.W$,
-                children: _ ? w.intl.string(w.t.jo5Vbl) : w.intl.string(w.t["8/N3v3"]),
+            (0, r.jsx)("div", {
+                className: o ? G.Sc : G.W$,
+                children: o ? U.intl.string(U.t.jo5Vbl) : U.intl.string(U.t["8/N3v3"]),
             }),
         ],
     });

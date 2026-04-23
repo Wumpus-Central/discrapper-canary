@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     U6: "pulse__1add6",
     M0: "bar__1add6",

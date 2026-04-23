@@ -1,13 +1,13 @@
-n.d(t, { Ay: () => g, D3: () => p, RT: () => h, Ts: () => c, VN: () => u, c4: () => _, fy: () => m }), n(938796);
-var l = n(636537),
-    a = n(228366),
+n.d(t, { Ay: () => p, D3: () => g, RT: () => h, Ts: () => c, VN: () => u, c4: () => _, fy: () => m }), n(938796);
+var l = n(562465),
+    a = n(73153),
     i = n(568185);
 n(250953);
 var r = n(867455);
 n(863036);
 var s = n(734057),
-    o = n(398590),
-    d = n(652215);
+    d = n(398590),
+    o = n(652215);
 function c(e, t, n) {
     a.h.dispatch({ type: "CHANNEL_SETTINGS_INIT", channelId: e, location: t, subsection: n });
 }
@@ -25,20 +25,20 @@ function m(e) {
         bitrate: i,
         userLimit: r,
         nsfw: s,
-        flags: o,
-        rateLimitPerUser: d,
+        flags: d,
+        rateLimitPerUser: o,
         defaultThreadRateLimitPerUser: c,
         defaultAutoArchiveDuration: u,
         template: _,
         defaultReactionEmoji: m,
         rtcRegion: h,
-        videoQualityMode: p,
-        autoArchiveDuration: g,
+        videoQualityMode: g,
+        autoArchiveDuration: p,
         locked: x,
-        invitable: f,
-        availableTags: v,
-        defaultSortOrder: b,
-        defaultForumLayout: A,
+        invitable: A,
+        availableTags: f,
+        defaultSortOrder: v,
+        defaultForumLayout: b,
         defaultTagSetting: N,
         iconEmoji: E,
         themeColor: S,
@@ -51,20 +51,20 @@ function m(e) {
         bitrate: i,
         userLimit: r,
         nsfw: s,
-        flags: o,
-        rateLimitPerUser: d,
+        flags: d,
+        rateLimitPerUser: o,
         defaultThreadRateLimitPerUser: c,
         defaultAutoArchiveDuration: u,
         template: _,
         defaultReactionEmoji: m,
         rtcRegion: h,
-        videoQualityMode: p,
-        autoArchiveDuration: g,
+        videoQualityMode: g,
+        autoArchiveDuration: p,
         locked: x,
-        invitable: f,
-        availableTags: v,
-        defaultSortOrder: b,
-        defaultForumLayout: A,
+        invitable: A,
+        availableTags: f,
+        defaultSortOrder: v,
+        defaultForumLayout: b,
         defaultTagSetting: N,
         iconEmoji: E,
         themeColor: S,
@@ -73,19 +73,19 @@ function m(e) {
 async function h(e, t) {
     let {
             name: n,
-            type: o,
+            type: d,
             position: c,
             topic: u,
             bitrate: _,
             userLimit: m,
             nsfw: h,
-            flags: p,
-            permissionOverwrites: g,
+            flags: g,
+            permissionOverwrites: p,
             rateLimitPerUser: x,
-            defaultThreadRateLimitPerUser: f,
-            defaultAutoArchiveDuration: v,
-            template: b,
-            defaultReactionEmoji: A,
+            defaultThreadRateLimitPerUser: A,
+            defaultAutoArchiveDuration: f,
+            template: v,
+            defaultReactionEmoji: b,
             rtcRegion: N,
             videoQualityMode: E,
             autoArchiveDuration: S,
@@ -103,28 +103,28 @@ async function h(e, t) {
         a.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await r.A.unarchiveThreadIfNecessary(e),
         l.Bo.patch({
-            url: d.Rsh.CHANNEL(e),
+            url: o.Rsh.CHANNEL(e),
             body: {
                 name: n,
-                type: o,
+                type: d,
                 position: c,
                 topic: u,
                 bitrate: _,
                 user_limit: m,
                 nsfw: h,
-                flags: p,
-                permission_overwrites: g,
+                flags: g,
+                permission_overwrites: p,
                 rate_limit_per_user: x,
-                default_thread_rate_limit_per_user: f,
-                default_auto_archive_duration: v,
-                template: b,
+                default_thread_rate_limit_per_user: A,
+                default_auto_archive_duration: f,
+                template: v,
                 rtc_region: N,
                 video_quality_mode: E,
                 auto_archive_duration: S,
                 locked: T,
                 invitable: j,
                 default_reaction_emoji:
-                    null != A ? { emoji_id: A?.emojiId, emoji_name: A?.emojiName } : null === A ? null : void 0,
+                    null != b ? { emoji_id: b?.emojiId, emoji_name: b?.emojiName } : null === b ? null : void 0,
                 available_tags: C?.map((e) => ({
                     id: e.id,
                     name: e.name,
@@ -150,16 +150,16 @@ async function h(e, t) {
         )
     );
 }
-async function p(e) {
+async function g(e) {
     let t = s.A.getChannel(e);
-    await l.Bo.del({ url: d.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
+    await l.Bo.del({ url: o.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
     let n = t?.getGuildId();
     null == n || t?.isThread() || i.A.checkGuildTemplateDirty(n), u();
 }
-let g = {
+let p = {
     init: c,
     open: function (e, t, n) {
-        c(e, t, n), (0, o.id)(d.zgK.CHANNEL_SETTINGS);
+        c(e, t, n), (0, d.id)(o.zgK.CHANNEL_SETTINGS);
     },
     close: u,
     setSection: _,
@@ -168,11 +168,11 @@ let g = {
     },
     updateChannel: m,
     saveChannel: h,
-    deleteChannel: p,
+    deleteChannel: g,
     updateVoiceChannelStatus: function (e, t) {
-        return l.Bo.put({ url: d.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e), body: { status: t }, rejectWithError: !1 });
+        return l.Bo.put({ url: o.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e), body: { status: t }, rejectWithError: !1 });
     },
     removeLinkedLobby: function (e) {
-        return l.Bo.del({ url: d.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
+        return l.Bo.del({ url: o.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
     },
 };

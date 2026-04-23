@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { Ay: () => f });
-var i = n(735438),
-    r = n.n(i),
-    s = n(17928),
+n.d(t, { Ay: () => E });
+var r = n(735438),
+    i = n.n(r),
+    s = n(311907),
     a = n(506774),
-    o = n(228366);
+    o = n(73153);
 n(677313);
 var l = n(185928),
-    d = n(355097),
-    _ = n(652215),
-    u = n(698279);
-let c = (window.innerWidth - _.MdR) / 2,
-    E = null,
-    h = {};
-class m extends s.Ay.DeviceSettingsStore {
+    u = n(355097),
+    c = n(652215),
+    d = n(698279);
+let _ = (window.innerWidth - c.MdR) / 2,
+    f = null,
+    p = {};
+class h extends s.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
@@ -21,7 +21,7 @@ class m extends s.Ay.DeviceSettingsStore {
             let e = a.w.get("UserSettingsStore");
             return (
                 a.w.remove("UserSettingsStore"),
-                r().pick(
+                i().pick(
                     e,
                     "dataSavingMode",
                     "videoUploadQuality",
@@ -48,111 +48,111 @@ class m extends s.Ay.DeviceSettingsStore {
     ];
     initialize(e) {
         let t;
-        ((h = e ?? {}).darkSidebar =
-            h.darkSidebar ??
+        ((p = e ?? {}).darkSidebar =
+            p.darkSidebar ??
             ((t = s.Ay.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state), t?.darkSidebar ?? !1)),
-            (h.hdrDynamicRange = h.hdrDynamicRange ?? "no-limit");
+            (p.hdrDynamicRange = p.hdrDynamicRange ?? "no-limit");
     }
     getUserAgnosticState() {
-        return h;
+        return p;
     }
     get displayCompactAvatars() {
-        return h.displayCompactAvatars ?? !1;
+        return p.displayCompactAvatars ?? !1;
     }
     get lowQualityImageMode() {
-        return h.lowQualityImageMode ?? !1;
+        return p.lowQualityImageMode ?? !1;
     }
     get videoUploadQuality() {
-        return h.videoUploadQuality ?? "standard";
+        return p.videoUploadQuality ?? "standard";
     }
     get dataSavingMode() {
-        return h.dataSavingMode ?? h.lowQualityImageMode ?? !1;
+        return p.dataSavingMode ?? p.lowQualityImageMode ?? !1;
     }
     get expressionPickerWidth() {
-        return h.expressionPickerWidth ?? u.wp.MIN;
+        return p.expressionPickerWidth ?? d.wp.MIN;
     }
     get messageRequestSidebarWidth() {
-        return h.messageRequestSidebarWidth ?? _.ItT;
+        return p.messageRequestSidebarWidth ?? c.ItT;
     }
     get threadSidebarWidth() {
-        return h.threadSidebarWidth ?? _.da6;
+        return p.threadSidebarWidth ?? c.da6;
     }
     get postSidebarWidth() {
-        return h.postSidebarWidth ?? c;
+        return p.postSidebarWidth ?? _;
     }
     get callChatSidebarWidth() {
-        return h.callChatSidebarWidth ?? _.da6;
+        return p.callChatSidebarWidth ?? c.da6;
     }
     get homeSidebarWidth() {
-        return h.homeSidebarWidth ?? (null == E && (E = Math.max((window.innerWidth - _.MdR) * 0.4, _.da6)), E);
+        return p.homeSidebarWidth ?? (null == f && (f = Math.max((window.innerWidth - c.MdR) * 0.4, c.da6)), f);
     }
     get callHeaderHeight() {
-        return h.callHeaderHeight;
+        return p.callHeaderHeight;
     }
     get useSystemTheme() {
-        return h.useSystemTheme ?? l.Q_.UNSET;
+        return p.useSystemTheme ?? l.Q_.UNSET;
     }
     get activityPanelHeight() {
-        return h.activityPanelHeight;
+        return p.activityPanelHeight;
     }
     get disableVoiceChannelChangeAlert() {
-        return h.disableVoiceChannelChangeAlert ?? !1;
+        return p.disableVoiceChannelChangeAlert ?? !1;
     }
     get disableHardwareMuteSilenceAlert() {
-        return h.disableHardwareMuteSilenceAlert ?? !1;
+        return p.disableHardwareMuteSilenceAlert ?? !1;
     }
     get disableEmbeddedActivityPopOutAlert() {
-        return h.disableEmbeddedActivityPopOutAlert ?? !1;
+        return p.disableEmbeddedActivityPopOutAlert ?? !1;
     }
     get disableActivityHardwareAccelerationPrompt() {
-        return h.disableActivityHardwareAccelerationPrompt ?? !1;
+        return p.disableActivityHardwareAccelerationPrompt ?? !1;
     }
     get disableInviteWithTextChannelActivityLaunch() {
-        return h.disableInviteWithTextChannelActivityLaunch ?? !1;
+        return p.disableInviteWithTextChannelActivityLaunch ?? !1;
     }
     get disableHideSelfStreamAndVideoConfirmationAlert() {
-        return h.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
+        return p.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
     }
     get pushUpsellUserSettingsDismissed() {
-        return h.pushUpsellDismissed ?? !1;
+        return p.pushUpsellDismissed ?? !1;
     }
     get disableActivityHostLeftNitroUpsell() {
-        return h.disableActivityHostLeftNitroUpsell ?? !1;
+        return p.disableActivityHostLeftNitroUpsell ?? !1;
     }
     get disableCallUserConfirmationPrompt() {
-        return h.disableCallUserConfirmationPrompt ?? !1;
+        return p.disableCallUserConfirmationPrompt ?? !1;
     }
     get disableApplicationSubscriptionCancellationSurvey() {
-        return h.disableApplicationSubscriptionCancellationSurvey ?? !1;
+        return p.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
     get darkSidebar() {
-        return h.darkSidebar ?? !1;
+        return p.darkSidebar ?? !1;
     }
     get saveCameraUploadsToDevice() {
-        return h.saveCameraUploadsToDevice ?? !0;
+        return p.saveCameraUploadsToDevice ?? !0;
     }
     isVisualRefreshDisabled(e) {
-        return h.disableVisualRefresh ?? e;
+        return p.disableVisualRefresh ?? e;
     }
     get listDensity() {
-        return h.listDensity ?? d.YP.COZY;
+        return p.listDensity ?? u.YP.COZY;
     }
     get hdrDynamicRange() {
-        return h.hdrDynamicRange ?? "no-limit";
+        return p.hdrDynamicRange ?? "no-limit";
     }
 }
-let f = new m(o.h, {
+let E = new h(o.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
-        h = { ...h, ...e.settings };
+        p = { ...p, ...e.settings };
     },
     LOGOUT: function () {
-        h = { useSystemTheme: h.useSystemTheme, darkSidebar: h.darkSidebar };
+        p = { useSystemTheme: p.useSystemTheme, darkSidebar: p.darkSidebar };
     },
     LOGIN_SUCCESS: function () {
-        null == h && (h = {});
+        null == p && (p = {});
     },
     REGISTER_SUCCESS: function () {},
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function () {
-        return (h.darkSidebar = !h.darkSidebar), !0;
+        return (p.darkSidebar = !p.darkSidebar), !0;
     },
 });

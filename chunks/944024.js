@@ -1,8 +1,9 @@
+"use strict";
 var t = Math.ceil,
-    e = Math.floor;
-r.exports =
+    n = Math.floor;
+e.exports =
     Math.trunc ||
-    function (r) {
-        var n = +r;
-        return (n > 0 ? e : t)(n);
+    function (e) {
+        var r = +e;
+        return (r > 0 ? n : t)(r);
     };

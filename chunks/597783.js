@@ -1,6 +1,6 @@
 r.d(t, { Z: () => k });
 var i = r(64700),
-    n = r(17928),
+    n = r(311907),
     l = r(954571),
     s = r(927578),
     a = r(440938),
@@ -32,7 +32,7 @@ function k(e, t) {
                 category_position: k?.categoryPosition,
             });
         }, [k?.sessionId, k?.categoryPosition, k?.pageCategory, k?.pageSection, k?.tilePosition, m, t, p, e, r]),
-        g = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 e
                     ? null === x.current &&
@@ -50,6 +50,6 @@ function k(e, t) {
             },
             [],
         ),
-        { handleCardVisibilityChange: g }
+        { handleCardVisibilityChange: A }
     );
 }

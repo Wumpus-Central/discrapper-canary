@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Gf: "marginReset_fd297e",
     a5: "marginTop4_fd297e",

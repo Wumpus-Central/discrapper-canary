@@ -1,90 +1,90 @@
-l.d(e, { C: () => R });
-var n = l(627968);
-l(64700);
-var r = l(991660),
-    s = l(189213),
-    i = l(224640),
-    a = l(20742),
-    o = l(364840),
-    c = l(17928),
-    d = l(834730),
-    u = l(408278),
-    x = l(173936),
-    _ = l(691540),
-    h = l(857250),
-    m = l(97483),
-    v = l(587895),
-    j = l(212534),
-    E = l(272859),
-    A = l(957565),
-    g = l(943775),
-    p = l(997997),
-    S = l(816709),
-    f = l(652215),
-    I = l(985018),
-    T = l(150171),
-    C = l(967744);
-function R(t) {
-    let { appId: e, skuId: l, transitionState: R, onClose: k, children: N, footer: D } = t,
-        O = (0, c.bG)([v.A, j.A], () => v.A.getApplication(e) ?? j.A.getApplicationRecord(e), [e]),
-        { data: L } = (0, E.d)(l);
-    if (null == O) return null;
-    let b = (0, g.A)(O, 25),
-        { termsOfServiceUrl: P, privacyPolicyUrl: U } = O;
-    if (L?.applicationId !== e)
-        return (0, n.jsx)(s.Modal, {
-            actions: [{ onClick: k, text: I.intl.string(I.t.BddRzS), variant: "primary" }],
-            onClose: k,
+n.d(t, { C: () => S });
+var a = n(627968);
+n(64700);
+var l = n(991660),
+    r = n(189213),
+    i = n(224640),
+    s = n(20742),
+    o = n(364840),
+    d = n(311907),
+    c = n(834730),
+    u = n(408278),
+    m = n(173936),
+    _ = n(691540),
+    p = n(857250),
+    h = n(97483),
+    A = n(587895),
+    C = n(212534),
+    x = n(272859),
+    f = n(957565),
+    E = n(943775),
+    I = n(997997),
+    N = n(816709),
+    g = n(652215),
+    v = n(985018),
+    T = n(150171),
+    b = n(967744);
+function S(e) {
+    let { appId: t, skuId: n, transitionState: S, onClose: j, children: O, footer: y } = e,
+        R = (0, d.bG)([A.A, C.A], () => A.A.getApplication(t) ?? C.A.getApplicationRecord(t), [t]),
+        { data: P } = (0, x.d)(n);
+    if (null == R) return null;
+    let L = (0, E.A)(R, 25),
+        { termsOfServiceUrl: D, privacyPolicyUrl: k } = R;
+    if (P?.applicationId !== t)
+        return (0, a.jsx)(r.Modal, {
+            actions: [{ onClick: j, text: v.intl.string(v.t.BddRzS), variant: "primary" }],
+            onClose: j,
             size: "sm",
-            transitionState: R,
-            title: I.intl.string(I.t["0Bf80I"]),
-            children: (0, n.jsx)(d.E, {
+            transitionState: S,
+            title: v.intl.string(v.t["0Bf80I"]),
+            children: (0, a.jsx)(c.E, {
                 variant: "text-md/normal",
                 color: "text-default",
                 className: T.$r,
-                children: I.intl.string(I.t.omH3bq),
+                children: v.intl.string(v.t.omH3bq),
             }),
         });
-    let B = null != b ? (0, n.jsx)("img", { src: b.href, alt: "", className: T.Z2 }) : void 0;
-    return (0, n.jsxs)(i.d, {
-        onClose: k,
+    let w = null != L ? (0, a.jsx)("img", { src: L.href, alt: "", className: T.Z2 }) : void 0;
+    return (0, a.jsxs)(i.d, {
+        onClose: j,
         size: "lg",
-        transitionState: R,
+        transitionState: S,
         children: [
-            (0, n.jsx)(a.rQ, { leading: B, title: O.name }),
-            (0, n.jsx)(r.A, { children: (0, n.jsx)("main", { className: C.bodyInner, children: N }) }),
-            (0, n.jsx)(o.j, {
-                children: (0, n.jsxs)("div", {
+            (0, a.jsx)(s.rQ, { leading: w, title: R.name }),
+            (0, a.jsx)(l.A, { children: (0, a.jsx)("main", { className: b.bodyInner, children: O }) }),
+            (0, a.jsx)(o.j, {
+                children: (0, a.jsxs)("div", {
                     className: T.qr,
                     children: [
-                        null != P || null != U
-                            ? (0, n.jsx)(d.E, {
+                        null != D || null != k
+                            ? (0, a.jsx)(c.E, {
                                   color: "text-strong",
                                   variant: "text-sm/normal",
-                                  children: (0, n.jsx)(S.A, { termsOfServiceUrl: P, privacyPolicyUrl: U }),
+                                  children: (0, a.jsx)(N.A, { termsOfServiceUrl: D, privacyPolicyUrl: k }),
                               })
-                            : (0, n.jsx)(d.E, {
+                            : (0, a.jsx)(c.E, {
                                   color: "text-strong",
                                   variant: "text-xs/normal",
-                                  children: I.intl.string(I.t["3ZY+0D"]),
+                                  children: v.intl.string(v.t["3ZY+0D"]),
                               }),
-                        (0, n.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: T.Hq,
                             children: [
-                                A.p5 &&
-                                    (0, n.jsx)(u.K, {
-                                        "aria-label": I.intl.string(I.t.WqhZss),
-                                        icon: () => (0, n.jsx)(x.q, { size: "xs", color: "currentColor" }),
+                                f.p5 &&
+                                    (0, a.jsx)(u.K, {
+                                        "aria-label": v.intl.string(v.t.WqhZss),
+                                        icon: () => (0, a.jsx)(m.q, { size: "xs", color: "currentColor" }),
                                         onClick: () => {
-                                            let t = `${location.protocol}//${location.host}${f.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e, l)}`;
-                                            (0, A.C)(t, () =>
-                                                (0, _.P0)((0, h.o)(I.intl.string(I.t["L/PwZf"]), m.Ck.SUCCESS)),
+                                            let e = `${location.protocol}//${location.host}${g.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n)}`;
+                                            (0, f.C)(e, () =>
+                                                (0, _.P0)((0, p.o)(v.intl.string(v.t["L/PwZf"]), h.Ck.SUCCESS)),
                                             ),
-                                                (0, p.K)(e, p.C.DETAILS_MODAL, l);
+                                                (0, I.K)(t, I.C.DETAILS_MODAL, n);
                                         },
                                         variant: "icon-only",
                                     }),
-                                D,
+                                y,
                             ],
                         }),
                     ],

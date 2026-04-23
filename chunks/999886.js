@@ -1,13 +1,14 @@
-n.d(t, { k: () => s });
-var i = n(64700),
-    l = n(17928),
-    r = n(594061),
+"use strict";
+n.d(t, { k: () => o });
+var r = n(64700),
+    i = n(311907),
+    s = n(594061),
     a = n(617617);
-function s() {
+function o() {
     return (
-        i.useEffect(() => {
-            r.bW.loadIfNecessary();
+        r.useEffect(() => {
+            s.bW.loadIfNecessary();
         }, []),
-        (0, l.bG)([a.A], () => a.A.frecencyWithoutFetchingLatest)
+        (0, i.bG)([a.A], () => a.A.frecencyWithoutFetchingLatest)
     );
 }

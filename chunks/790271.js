@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { mz: () => l, ni: () => o });
-var i = n(17928),
-    r = n(945810),
+var r = n(311907),
+    i = n(945810),
     s = n(287809);
-let a = (0, r.mj)({
+let a = (0, i.mj)({
     name: "2026-02-mana-playground-access",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 function o(e) {
-    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
+    let t = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         n = t?.isStaff() === !0 || t?.isStaffPersonal() === !0,
-        r = a.useConfig({ location: e }).enabled;
-    return n || r;
+        i = a.useConfig({ location: e }).enabled;
+    return n || i;
 }
 function l(e) {
     let t = s.default.getCurrentUser();

@@ -1,11 +1,12 @@
-n.d(t, { G: () => a });
-var i = n(64700),
-    r = n(849269);
-function a(e) {
-    let [t, n] = i.useState(e);
+"use strict";
+n.d(t, { G: () => s });
+var r = n(64700),
+    i = n(849269);
+function s(e) {
+    let [t, n] = r.useState(e);
     return (
-        i.useLayoutEffect(() => {
-            if (e === r.o6.LEAVE) {
+        r.useLayoutEffect(() => {
+            if (e === i.o6.LEAVE) {
                 let t = setTimeout(() => n(e), 100);
                 return () => clearTimeout(t);
             }

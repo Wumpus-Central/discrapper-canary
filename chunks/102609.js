@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { LQ: () => o, Ut: () => d, l5: () => _, t$: () => u, wh: () => l });
-var i,
-    r = n(228366),
-    s = n(736056),
+n.d(t, { LQ: () => o, Ut: () => u, l5: () => c, t$: () => d, wh: () => l });
+var r,
+    i = n(73153),
+    s = n(49463),
     a = n(688151);
 function o(e, t, n) {
     s.A.trackExposure({
@@ -16,39 +16,39 @@ function o(e, t, n) {
     });
 }
 function l(e) {
-    let { id: t, title: n, description: i, buckets: r, commonTriggerPoint: o } = e;
+    let { id: t, title: n, description: r, buckets: i, commonTriggerPoint: o } = e;
     return (
         (0, s.N)({
             experimentId: t,
             experimentType: a.Vh.USER,
             title: n,
-            description: i,
-            buckets: r,
+            description: r,
+            buckets: i,
             commonTriggerPoint: o,
         }),
         { id: t }
     );
 }
-function d(e) {
-    let { id: t, title: n, description: i, buckets: r, commonTriggerPoint: o } = e;
+function u(e) {
+    let { id: t, title: n, description: r, buckets: i, commonTriggerPoint: o } = e;
     return (
         (0, s.N)({
             experimentId: t,
             experimentType: a.Vh.GUILD,
             title: n,
-            description: i,
-            buckets: r,
+            description: r,
+            buckets: i,
             commonTriggerPoint: o,
         }),
         { id: t }
     );
 }
-var _ = (((i = {}).LEGACY = "legacy"), (i.APEX = "apex"), i);
-function u(e, t, n) {
+var c = (((r = {}).LEGACY = "legacy"), (r.APEX = "apex"), r);
+function d(e, t, n) {
     "legacy" === e
-        ? r.h.dispatch({ type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: t, experimentBucket: null != n ? n : null })
+        ? i.h.dispatch({ type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: t, experimentBucket: null != n ? n : null })
         : "apex" === e &&
           (null == n
-              ? r.h.dispatch({ type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: t })
-              : r.h.dispatch({ type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: t, variantId: n }));
+              ? i.h.dispatch({ type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: t })
+              : i.h.dispatch({ type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: t, variantId: n }));
 }

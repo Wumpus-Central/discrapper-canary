@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
-var i = n(812729),
-    r = n.n(i),
-    s = n(17928),
-    a = n(228366);
+n.d(t, { A: () => d }), n(321073);
+var r = n(812729),
+    i = n.n(r),
+    s = n(311907),
+    a = n(73153);
 let o = [n(732755).A],
     l = [];
-function d() {
+function u() {
     let e = [];
     for (let t of o) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !r()(e, l) && ((l = e), !0);
+    return !i()(e, l) && ((l = e), !0);
 }
-class _ extends s.Ay.Store {
+class c extends s.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(o, d);
+        this.syncWith(o, u);
     }
     getActivities() {
         return l;
     }
 }
-let u = new _(a.h);
+let d = new c(a.h);

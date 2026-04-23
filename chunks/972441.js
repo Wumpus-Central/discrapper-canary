@@ -1,86 +1,137 @@
-l.d(t, { A: () => x });
-var r = l(17928),
-    n = l(228366),
-    a = l(403362),
-    s = l(41770);
-let c = (0, a.m6)() ? { [s.C8]: { "dummy-shop-home": s.uG, "dummy-orb-shelf": s.oP, "dummy-sku-list": s.Ej } } : {},
-    i = (0, a.m6)() ? ["dummy-skeleton"] : [],
-    d = (0, a.m6)() ? { [s.C8]: { "dummy-popular-picks": s.Ot } } : {},
-    o = (0, a.m6)() ? ["dummy-skeleton-template"] : [],
-    u = (e, t) => `${e}/${t}`,
-    m = c,
-    h = new Set(i),
-    p = {},
-    A = d,
-    f = new Set(o),
-    E = {},
-    g = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            l = Object.entries(t)
-                .sort((e, t) => {
-                    let [l] = e,
-                        [r] = t;
-                    return l.localeCompare(r);
-                })
-                .map((e) => {
-                    let [t, l] = e;
-                    return `${t}:${l}`;
-                })
-                .join("-");
-        return "" !== l ? `${e}-${l}` : e;
-    };
-class v extends r.Ay.Store {
-    static displayName = "CmsLayoutStore";
-    getLayout(e, t) {
-        return null == e || null == t ? null : (m[e]?.[t] ?? null);
-    }
-    isFetchingLayout(e, t) {
-        return null != e && null != t && h.has(u(e, t));
-    }
-    getFetchError(e, t) {
-        return null == e || null == t ? null : (p[u(e, t)] ?? null);
-    }
-    getTemplateLayout(e, t, l) {
-        if (null == e || null == t) return null;
-        let r = g(t, l);
-        return A[e]?.[r] ?? null;
-    }
-    isFetchingTemplate(e, t, l) {
-        let r = g(t ?? "", l);
-        return null != e && null != t && f.has(u(e, r));
-    }
-    getTemplateFetchError(e, t, l) {
-        return null == e || null == t ? null : (E[u(e, g(t ?? "", l))] ?? null);
-    }
+n.d(t, { A: () => c });
+var r = n(64700),
+    l = n(621466),
+    a = n(460890),
+    i = n(61491),
+    s = n(770178),
+    u = n(765548),
+    o = n(650583);
+function c(e) {
+    let {
+            onScrubBack: t,
+            onScrubForward: n,
+            maxSeekableTime: c,
+            interactionEnabled: d,
+            durationSec: m,
+            onClick: f,
+            percent: h,
+            onDragStateChange: p,
+        } = e,
+        [E, v] = r.useState(null),
+        [x, b] = r.useState(null),
+        [g, y] = r.useState(!1),
+        [A, C] = r.useState(!1),
+        [S, N] = r.useState(null),
+        [R, L] = r.useState(!1),
+        { i18n: w } = (0, a.G9)(),
+        T = r.useMemo(() => {
+            let e = { role: "progressbar", "aria-label": "Progress Bar" };
+            return (
+                null != h &&
+                    "number" == typeof h &&
+                    ((e["aria-valuenow"] = h),
+                    (e["aria-valuemin"] = 0),
+                    (e["aria-valuemax"] = 100),
+                    (e["aria-label"] = w.PERCENT_COMPLETE(Math.round(h)))),
+                e
+            );
+        }, [h, w]),
+        P = r.useMemo(() => (null == E || null == c ? null : (0, i.DX)(c, m, E)), [E, c, m]),
+        D = (0, u.A)((e) => {
+            v(e.contentRect);
+        }),
+        M = (0, s.w)(D),
+        j = (e) => {
+            if (null != M.current) {
+                let t = M.current.getBoundingClientRect(),
+                    n = e.clientX - t.left,
+                    r = null != c ? (c / m) * t.width : null;
+                L(null != r && n > r), b(n);
+            }
+        },
+        k = r.useRef(!1),
+        I = r.useRef(null),
+        B = (0, u.A)((e, t) => {
+            if (null == f) return;
+            let n = e - t.left,
+                r = (0, i.hc)(n, t, m);
+            (null != c && r > c) || f(r);
+        }),
+        F = r.useCallback(
+            (e) => {
+                let { key: r } = e;
+                r === o.N$.ArrowLeft && null != t
+                    ? (e.preventDefault(), e.stopPropagation(), t())
+                    : r === o.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
+            },
+            [t, n],
+        );
+    return (
+        r.useEffect(
+            () => () => {
+                (k.current = !1), I.current?.(), (I.current = null);
+            },
+            [],
+        ),
+        {
+            contRef: M,
+            boundingRect: E,
+            handleMouseEnter: (e) => {
+                d && (y(!0), j(e));
+            },
+            handleMouseLeave: (e) => {
+                d && !k.current && (y(!1), b(null), L(!1));
+            },
+            handleMouseMove: (e) => {
+                d && g && j(e);
+            },
+            handleMouseDown: (e) => {
+                if (!d || null == f || 0 !== e.button) return;
+                I.current?.();
+                let t = e.currentTarget.getBoundingClientRect(),
+                    n = (0, i.hc)(e.clientX - t.left, t, m);
+                if (null != c && n > c) return;
+                (k.current = !0),
+                    C(!0),
+                    p?.(!0),
+                    N(Math.max(0, Math.min(e.clientX - t.left, t.width))),
+                    B(e.clientX, t);
+                let r = (e) => {
+                        if (null != M.current) {
+                            let t = M.current.getBoundingClientRect(),
+                                n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
+                                r = null != c ? (c / m) * t.width : null,
+                                l = null != r ? Math.min(n, r) : n;
+                            L(null != r && n > r), b(n), N(l), B(e.clientX, t);
+                        } else B(e.clientX, t);
+                    },
+                    a = (e) => {
+                        (k.current = !1),
+                            (I.current = null),
+                            C(!1),
+                            N(null),
+                            p?.(!1),
+                            L(!1),
+                            null != M.current &&
+                                (((0, l.vq)(e.target, Node) && M.current.contains(e.target)) || (y(!1), b(null))),
+                            window.removeEventListener("mousemove", r),
+                            window.removeEventListener("mouseup", a);
+                    };
+                window.addEventListener("mousemove", r),
+                    window.addEventListener("mouseup", a),
+                    (I.current = () => {
+                        window.removeEventListener("mousemove", r), window.removeEventListener("mouseup", a);
+                    });
+            },
+            handleKeyDown: F,
+            hoveredAtX: x,
+            maxSeekableX: P,
+            isHovering: g,
+            isDragging: A,
+            dragX: S,
+            isHoverBeyondMax: R,
+            handleClick: () => {},
+            ariaProps: T,
+        }
+    );
 }
-let x = new v(n.h, {
-    CMS_LAYOUT_FETCH: (e) => {
-        let { tenantId: t, layoutId: l } = e;
-        h.add(u(t, l));
-    },
-    CMS_LAYOUT_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, layout: l } = e;
-        ((m[t] ??= {})[l.id] = l), delete p[u(t, l.id)], h.delete(u(t, l.id));
-    },
-    CMS_LAYOUT_FETCH_FAILURE: (e) => {
-        let { tenantId: t, layoutId: l, apiError: r } = e;
-        (p[u(t, l)] = r), h.delete(u(t, l));
-    },
-    CMS_TEMPLATE_FETCH: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r } = e;
-        f.add(u(t, g(l, r)));
-    },
-    CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r, layout: n } = e,
-            a = g(l, r);
-        ((A[t] ??= {})[a] = n), delete E[u(t, a)], f.delete(u(t, a));
-    },
-    CMS_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r, apiError: n } = e,
-            a = g(l, r);
-        (E[u(t, a)] = n), f.delete(u(t, a));
-    },
-    LOGOUT: function () {
-        (m = {}), (h = new Set()), (p = {}), (A = {}), (f = new Set()), (E = {});
-    },
-});
