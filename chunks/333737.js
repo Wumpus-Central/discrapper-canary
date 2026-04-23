@@ -46,6 +46,8 @@ class g extends n.PureComponent {
                     className: C.Kf,
                     children: [
                         (0, s.jsx)(c.k, {
+                            label: E.intl.string(E.t.HZPBOd),
+                            hideLabel: !0,
                             value: h,
                             placeholder: "000 000",
                             maxLength: 7,
