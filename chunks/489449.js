@@ -1,6 +1,6 @@
 n.d(t, { default: () => v });
-var l = n(627968),
-    a = n(64700),
+var a = n(627968),
+    l = n(64700),
     i = n(239947),
     r = n(189213),
     o = n(260598),
@@ -24,17 +24,17 @@ var l = n(627968),
     w = n(412136),
     E = n(412728),
     P = n(985018),
-    I = n(210540);
+    I = n(316524);
 function S(e) {
-    let { question: t, onChange: n, error: a, inputRef: i } = e;
-    return (0, l.jsx)(o.f, {
+    let { question: t, onChange: n, error: l, inputRef: i } = e;
+    return (0, a.jsx)(o.f, {
         label: P.intl.string(P.t.WBiKnI),
         inputRef: i,
         placeholder: P.intl.string(P.t["/uQqJW"]),
         value: t,
         onChange: n,
         maxLength: w.jD,
-        error: a,
+        error: l,
         rows: 1,
         autosize: !0,
         autoFocus: !0,
@@ -43,14 +43,14 @@ function S(e) {
 }
 function N(e) {
     let { selectedDuration: t, onSelect: n } = e,
-        a = (0, k.A)(),
-        i = a[t];
-    return (0, l.jsx)("div", {
+        l = (0, k.A)(),
+        i = l[t];
+    return (0, a.jsx)("div", {
         className: I.p0,
-        children: (0, l.jsx)(s.l, {
+        children: (0, a.jsx)(s.l, {
             label: P.intl.string(P.t.bGHzxb),
             "aria-label": P.intl.formatToPlainString(P.t.nXNHNJ, { duration: i }),
-            options: Object.entries(a).map((e) => {
+            options: Object.entries(l).map((e) => {
                 let [t, n] = e;
                 return { id: t.toString(), label: n, value: parseInt(t) };
             }),
@@ -64,10 +64,10 @@ function N(e) {
 function v(e) {
     let { channel: t, transitionState: n, onClose: o, initialQuestion: s, initialAnswers: k, initialDuration: D } = e;
     (0, A.A)({ type: E.z.MODAL, name: i.I.POLL_EDITOR_VIEWED });
-    let y = a.useRef(null),
-        O = a.useRef([]),
-        T = a.useRef(null),
-        L = a.useCallback((e) => {
+    let y = l.useRef(null),
+        O = l.useRef([]),
+        T = l.useRef(null),
+        L = l.useCallback((e) => {
             let { indexToRemove: t, numberOfAnswers: n } = e;
             n === w.FW + 1 ? T.current?.focus() : O.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
         }, []),
@@ -77,8 +77,8 @@ function v(e) {
             allowMultiSelect: Y,
             setAllowMultiSelect: B,
             duration: W,
-            setDuration: q,
-            handleQuestionChange: F,
+            setDuration: F,
+            handleQuestionChange: q,
             handleAnswerTextChange: M,
             handleEmojiSelect: $,
             canAddMoreAnswers: G,
@@ -93,12 +93,12 @@ function v(e) {
             shouldFocusOnInvalidField: et,
             setShouldFocusOnInvalidField: en,
         } = (0, j.A)(t, o, L, { initialQuestion: s, initialAnswers: k, initialDuration: D }),
-        { trackPollCreationCancelled: el } = (0, x.I)(U, Y),
-        ea = a.useRef(U.length),
-        ei = a.useCallback(() => {
-            el(), o();
-        }, [o, el]),
-        er = a.useCallback(() => {
+        { trackPollCreationCancelled: ea } = (0, x.I)(U, Y),
+        el = l.useRef(U.length),
+        ei = l.useCallback(() => {
+            ea(), o();
+        }, [o, ea]),
+        er = l.useCallback(() => {
             (0, R.Wn)(K, U)
                 ? ei()
                 : h.A.show({
@@ -112,13 +112,13 @@ function v(e) {
                       },
                   });
         }, [ei, U, K]);
-    a.useEffect(() => {
-        (0, c.updateModal)(w.sm, (e) => (0, l.jsx)(v, { ...e, channel: t }), er);
+    l.useEffect(() => {
+        (0, c.updateModal)(w.sm, (e) => (0, a.jsx)(v, { ...e, channel: t }), er);
     }, [er, t]),
-        a.useEffect(() => {
-            U.length > ea.current && O.current[U.length - 1]?.focusInput(), (ea.current = U.length);
+        l.useEffect(() => {
+            U.length > el.current && O.current[U.length - 1]?.focusInput(), (el.current = U.length);
         }, [U.length]),
-        a.useEffect(() => {
+        l.useEffect(() => {
             if (et) {
                 if (J?.question != null) y.current?.focus();
                 else {
@@ -128,33 +128,33 @@ function v(e) {
                 en(!1);
             }
         }, [J, U, et, en, O]);
-    let eo = a.useCallback(() => {
+    let eo = l.useCallback(() => {
             n === u.ip.ENTERED && Q();
         }, [Q, n]),
         es = (0, C.A)({ disabled: ee, onSubmit: eo }),
-        ec = a.useMemo(
-            () => [{ variant: "primary", onClick: eo, submitting: ee, text: P.intl.string(P.t.JOj8Zk) }],
+        ec = l.useMemo(
+            () => [{ variant: "primary", onClick: eo, submitting: ee, text: P.intl.string(P.t.JOj8Zk), autoFocus: !1 }],
             [eo, ee],
         );
-    return (0, l.jsx)(r.Modal, {
+    return (0, a.jsx)(r.Modal, {
         transitionState: n,
         onClose: o,
         title: P.intl.string(P.t["GD/8X8"]),
         actions: ec,
-        actionBarInput: (0, l.jsx)(m.S, { checked: Y, onChange: (e) => B(e), label: P.intl.string(P.t["Ux+iQU"]) }),
-        children: (0, l.jsxs)("div", {
+        actionBarInput: (0, a.jsx)(m.S, { checked: Y, onChange: (e) => B(e), label: P.intl.string(P.t["Ux+iQU"]) }),
+        children: (0, a.jsxs)("div", {
             className: I.Qs,
             onKeyDown: es,
             children: [
-                null != X && (0, l.jsx)(d.w, { type: "critical", children: X.getAnyErrorMessage() }),
-                (0, l.jsx)(S, { question: K, onChange: F, error: J?.question, inputRef: y }),
-                (0, l.jsx)(f.h, { size: 26 }),
-                (0, l.jsxs)(g.D, {
+                null != X && (0, a.jsx)(d.w, { type: "critical", children: X.getAnyErrorMessage() }),
+                (0, a.jsx)(S, { question: K, onChange: q, error: J?.question, inputRef: y }),
+                (0, a.jsx)(f.h, { size: 26 }),
+                (0, a.jsxs)(g.D, {
                     role: "group",
                     label: P.intl.string(P.t.oMBfeS),
                     children: [
                         U.map((e, n) =>
-                            (0, l.jsx)(
+                            (0, a.jsx)(
                                 _.A,
                                 {
                                     answer: e,
@@ -178,9 +178,9 @@ function v(e) {
                             ),
                         ),
                         G &&
-                            (0, l.jsx)("div", {
+                            (0, a.jsx)("div", {
                                 className: I.Ox,
-                                children: (0, l.jsx)(b.$, {
+                                children: (0, a.jsx)(b.$, {
                                     icon: p.j,
                                     variant: "secondary",
                                     onClick: V,
@@ -191,8 +191,8 @@ function v(e) {
                             }),
                     ],
                 }),
-                (0, l.jsx)(f.h, { size: 18 }),
-                (0, l.jsx)(N, { selectedDuration: W, onSelect: q }),
+                (0, a.jsx)(f.h, { size: 18 }),
+                (0, a.jsx)(N, { selectedDuration: W, onSelect: F }),
             ],
         }),
     });
