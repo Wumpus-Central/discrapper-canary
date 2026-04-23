@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(635917),
     p = n(652215),
     m = n(985018),
-    g = n(588525);
+    g = n(841453);
 function A(e) {
     let {
             id: t,
@@ -26,14 +26,15 @@ function A(e) {
             tabIndex: A,
             children: I,
             locked: T = !1,
+            disabled: S = !1,
         } = e,
-        [S, y] = i.useState((0, h.gG)(t).name),
-        N = t === f.Ic.PIRATE;
+        [y, N] = i.useState((0, h.gG)(t).name),
+        O = t === f.Ic.PIRATE;
     return (0, r.jsx)(u.m, {
-        text: S,
+        text: y,
         onTooltipShow: () =>
-            N &&
-            y(
+            O &&
+            N(
                 l().sample([
                     m.intl.string(m.t["EgWTY+"]),
                     m.intl.string(m.t.umBn5f),
@@ -48,8 +49,9 @@ function A(e) {
             children: [
                 (0, r.jsx)(d.D, {
                     role: "radio",
-                    "aria-label": S,
+                    "aria-label": y,
                     "aria-checked": E,
+                    "aria-disabled": S,
                     tabIndex: A ?? (E ? 0 : -1),
                     className: a()(g.Ni, { [g.wH]: E }, n),
                     onClick: E ? p.tEg : () => o?.(t),
@@ -76,6 +78,7 @@ function I(e) {
         className: a ? g.r9 : void 0,
         tabIndex: o,
         locked: u,
+        disabled: a,
         children: (0, r.jsx)(E.A, { id: n.id, size: t }),
     });
 }

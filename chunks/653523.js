@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(385803),
     T = n(652215),
     S = n(985018),
-    y = n(180764);
+    y = n(921564);
 function N() {
     return (0, r.jsx)("div", {
         className: y.BO,
@@ -46,18 +46,20 @@ function O(e) {
             showBadge: p,
             showLockedBadge: m,
             showSelectionCircle: g = !1,
+            disabled: A = !1,
         } = e,
-        A = (0, _.Gx)({ label: n, isSelected: u }),
-        S = i.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
+        S = (0, _.Gx)({ label: n, isSelected: u }),
+        O = i.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
     return (0, r.jsx)(d.m, {
         __unsupportedReactNodeAsText: n,
         children: (0, r.jsxs)("div", {
             className: y.RH,
-            style: S,
+            style: O,
             children: [
                 (0, r.jsx)(E.D, {
-                    ...A,
-                    tabIndex: c ?? A.tabIndex,
+                    ...S,
+                    "aria-disabled": A,
+                    tabIndex: c ?? S.tabIndex,
                     className: a()(y.yM, { [y.wH]: u }, s),
                     style: o,
                     onClick: u ? T.tEg : l,
@@ -133,5 +135,6 @@ function v(e) {
         tabIndex: o,
         showBadge: u,
         showLockedBadge: d,
+        disabled: s,
     });
 }
