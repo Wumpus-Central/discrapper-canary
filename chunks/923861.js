@@ -22,21 +22,21 @@ var i = n(627968),
     I = n(732139),
     v = n(652215),
     y = n(985018),
-    S = n(503656);
+    S = n(6376);
 let b = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: s,
             onSelect: b,
             onSelectSoundmoji: N,
-            onInspect: T,
-            surrogateCodePoint: j,
+            onInspect: j,
+            surrogateCodePoint: T,
             getEmojiItemProps: R,
             getEmojiRowProps: w,
             isScrolling: L,
             isUsingKeyboardNavigation: M,
-            rowIndex: k,
-            allowAnimatedEmoji: O,
+            rowIndex: O,
+            allowAnimatedEmoji: k,
             showEmojiFavoriteTooltip: P,
             channelGuildId: D,
             category: U,
@@ -105,10 +105,10 @@ let b = (e) => {
                                 shouldShowRoundHighlight: d,
                             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                             { visibleRowIndex: h, columnIndex: m } = e,
-                            { ref: p, tabIndex: f, onFocus: g, ..._ } = R(m, k) ?? {},
+                            { ref: p, tabIndex: f, onFocus: g, ..._ } = R(m, O) ?? {},
                             x = et.rowIndex === h && et.columnIndex === m,
                             A = () => {
-                                L.current || M.current || T(e);
+                                L.current || M.current || j(e);
                             };
                         return (0, l.createElement)(
                             "li",
@@ -158,17 +158,17 @@ let b = (e) => {
                     return (0, i.jsx)(
                         E.A,
                         {
-                            rowIndex: k,
+                            rowIndex: O,
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: s,
                             isScrolling: L,
                             isUsingKeyboardNavigation: M,
-                            surrogateCodePoint: j,
-                            allowAnimatedEmoji: O,
+                            surrogateCodePoint: T,
+                            allowAnimatedEmoji: k,
                             selectedItemClassName: V,
                             onSelect: b,
-                            onInspect: T,
+                            onInspect: j,
                             channelGuildId: D,
                             getEmojiItemProps: R,
                             isMediumSize: ea,
@@ -190,7 +190,7 @@ let b = (e) => {
         },
         ec = (e) =>
             (0, i.jsx)("ul", {
-                ...w(k),
+                ...w(O),
                 className: r()(S.ND, { [S.HO]: er, [S.X$]: ea }),
                 ref: es,
                 children: e.map(eo),

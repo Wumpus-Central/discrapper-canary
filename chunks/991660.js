@@ -4,7 +4,7 @@ var a = n(627968),
     r = n(503698),
     i = n.n(r),
     s = n(599319),
-    o = n(585003);
+    o = n(15339);
 function d(e) {
     let { children: t, gradientClassName: n, onScroll: r, ...d } = e,
         c = l.useRef(null),

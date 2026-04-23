@@ -46,13 +46,13 @@ function C(e) {
         S = l.useRef(null),
         { analyticsLocations: b } = (0, c.Ay)(o.A.USER_MENTION),
         N = (0, r.bG)([g.default], () => g.default.getUser(u)),
-        T = (0, r.bG)([m.A], () => m.A.getChannel(C)),
-        j = null != T ? T.getGuildId() : null,
+        j = (0, r.bG)([m.A], () => m.A.getChannel(C)),
+        T = null != j ? j.getGuildId() : null,
         R =
-            v || null == N || null == C || null == T
+            v || null == N || null == C || null == j
                 ? void 0
                 : (e) => {
-                      null != j
+                      null != T
                           ? (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("41927"),
@@ -64,12 +64,12 @@ function C(e) {
                                     n.e("35313"),
                                     n.e("81653"),
                                     n.e("84841"),
-                                    n.e("9091"),
+                                    n.e("63143"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, i.jsx)(e, { ...t, viewingChannelId: y, user: N, channel: T, guildId: j });
+                                    (0, i.jsx)(e, { ...t, viewingChannelId: y, user: N, channel: j, guildId: T });
                             })
-                          : T.isDM() &&
+                          : j.isDM() &&
                             (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("41927"),
@@ -80,17 +80,17 @@ function C(e) {
                                     n.e("42128"),
                                     n.e("97278"),
                                     n.e("35313"),
-                                    n.e("2271"),
+                                    n.e("95834"),
                                     n.e("99011"),
                                     n.e("81653"),
                                     n.e("39778"),
-                                    n.e("21054"),
+                                    n.e("81042"),
                                 ]).then(n.bind(n, 385913));
-                                return (t) => (0, i.jsx)(e, { ...t, user: N, channel: T, targetIsUser: !0 });
+                                return (t) => (0, i.jsx)(e, { ...t, user: N, channel: j, targetIsUser: !0 });
                             });
                   },
         w = x.Ay.useName(N),
-        L = (0, r.bG)([m.A, p.Ay, f.A], () => _.Ay.getNickname(j, C, N));
+        L = (0, r.bG)([m.A, p.Ay, f.A], () => _.Ay.getNickname(T, C, N));
     if (null == N) return (0, i.jsx)(A, { userId: E, className: t, children: I });
     let M = (e) => (0, i.jsx)(d.A, { ref: S, className: t, onContextMenu: R, ...e, children: `@${L ?? w}` });
     return v
@@ -100,7 +100,7 @@ function C(e) {
               children: (0, i.jsx)(h.A, {
                   targetElementRef: S,
                   user: N,
-                  guildId: j ?? void 0,
+                  guildId: T ?? void 0,
                   channelId: C,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,

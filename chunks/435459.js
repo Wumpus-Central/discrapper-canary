@@ -73,7 +73,7 @@ let h = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge09.lottie":
         () => a.e("29095").then(a.t.bind(a, 619578, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge12.lottie":
-        () => a.e("16512").then(a.t.bind(a, 676574, 17)),
+        () => a.e("94131").then(a.t.bind(a, 676574, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge15.lottie":
         () => a.e("65404").then(a.t.bind(a, 384407, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/gems/Lottie_NitroGems_Badge18.lottie":
@@ -109,7 +109,7 @@ let h = {
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/gift_icon/seasonal-gifting-wumpus-loop.lottiejson":
         () => a.e("25676").then(a.t.bind(a, 322151, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-action.lottiejson":
-        () => a.e("10803").then(a.t.bind(a, 27870, 19)),
+        () => a.e("10803").then(a.t.bind(a, 805489, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-idle.lottiejson":
         () => a.e("10191").then(a.t.bind(a, 837074, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-loop.lottiejson":
@@ -189,7 +189,7 @@ let h = {
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Fusion_v1.lottiejson": () =>
         a.e("92933").then(a.t.bind(a, 279172, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Pop_v1.lottiejson": () =>
-        a.e("5560").then(a.t.bind(a, 824888, 19)),
+        a.e("5560").then(a.t.bind(a, 157745, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_PowerUp_v1.lottiejson": () =>
         a.e("63011").then(a.t.bind(a, 432302, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Puzzle_v1.lottiejson": () =>
@@ -211,7 +211,7 @@ let h = {
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_lt.json": () =>
         a.e("12512").then(a.t.bind(a, 789091, 19)),
     "discord_common/js/shared/animations/app/activities/AppsIconWordlePromo.lottiejson": () =>
-        a.e("51169").then(a.t.bind(a, 527613, 19)),
+        a.e("73550").then(a.t.bind(a, 527613, 19)),
     "discord_common/js/shared/animations/app/nearby/nearby.lottiejson": () =>
         a.e("93780").then(a.t.bind(a, 957439, 19)),
     "discord_common/js/shared/animations/app/premium_guild_subscribe/dark.lottiejson": () =>
@@ -268,7 +268,7 @@ let h = {
     "discord_app/modules/self_mod/inappropriate_conversation/images/vibing_wumpus.lottiejson": () =>
         a.e("14823").then(a.t.bind(a, 718074, 19)),
     "discord_common/js/shared/animations/app/everyone_popout/dark.lottiejson": () =>
-        a.e("2848").then(a.t.bind(a, 661022, 19)),
+        a.e("80467").then(a.t.bind(a, 661022, 19)),
     "discord_common/js/shared/animations/app/everyone_popout/light.lottiejson": () =>
         a.e("92705").then(a.t.bind(a, 111992, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/coachmark/seasonal-gifting-coachmark.lottiejson":

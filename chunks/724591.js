@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(652793),
     T = n(652215),
     y = n(49999),
-    R = n(985018),
-    j = n(426263);
+    j = n(985018),
+    R = n(645591);
 let L = l.memo(function (e) {
     let { guild: t, selected: s } = e,
         L = l.useRef(null),
@@ -61,7 +61,7 @@ let L = l.memo(function (e) {
             (e) => {
                 null != t &&
                     (0, _.L3)(e, async () => {
-                        let { default: e } = await n.e("99523").then(n.bind(n, 41614));
+                        let { default: e } = await n.e("99523").then(n.bind(n, 819233));
                         return (n) => (0, i.jsx)(e, { ...n, guild: t });
                     });
             },
@@ -86,8 +86,8 @@ let L = l.memo(function (e) {
                         }),
                     text: (0, i.jsx)(h.E, {
                         variant: "text-md/medium",
-                        className: a()(j.UU, n),
-                        children: R.intl.string(R.t.vyaWs7),
+                        className: a()(R.UU, n),
+                        children: j.intl.string(j.t.vyaWs7),
                     }),
                     selected: s,
                     onMouseDown: Y,
@@ -97,7 +97,7 @@ let L = l.memo(function (e) {
                         children: [
                             V &&
                                 (0, i.jsx)(A.Lp, {
-                                    text: R.intl.string(R.t.y2b7CA),
+                                    text: j.intl.string(j.t.y2b7CA),
                                     color: d.A.colors.BACKGROUND_BRAND.css,
                                 }),
                             r,
@@ -125,8 +125,8 @@ let L = l.memo(function (e) {
                           onRequestClose: K,
                           targetElementRef: O,
                           skuImageDetails: Q,
-                          title: R.intl.string(R.t["7PvvS9"]),
-                          body: R.intl.formatToPlainString(R.t["9J4h1a"], { applicationName: P.applicationName }),
+                          title: j.intl.string(j.t["7PvvS9"]),
+                          body: j.intl.formatToPlainString(j.t["9J4h1a"], { applicationName: P.applicationName }),
                       })
                     : null,
             [F, P, W, Y, q, K, Q],

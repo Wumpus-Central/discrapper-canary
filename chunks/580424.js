@@ -25,19 +25,19 @@ var i = n(627968),
     S = n(678473),
     b = n(967144),
     N = n(733509),
-    T = n(679382),
-    j = n(378058),
+    j = n(679382),
+    T = n(378058),
     R = n(253932),
     w = n(71393),
     L = n(994500),
     M = n(287809),
-    k = n(486020),
-    O = n(427262),
+    O = n(486020),
+    k = n(427262),
     P = n(557158),
     D = n(652215),
     U = n(307731),
     V = n(985018),
-    G = n(334021);
+    G = n(81093);
 function F(e) {
     return null != e ? `autocomplete-${e}` : null;
 }
@@ -153,10 +153,10 @@ class Y extends W {
                         status: n,
                     }),
                 }),
-                (0, i.jsx)(P.oC, { children: (0, i.jsx)(P.dB, { children: t ?? r ?? O.Ay.getName(e) }) }),
+                (0, i.jsx)(P.oC, { children: (0, i.jsx)(P.dB, { children: t ?? r ?? k.Ay.getName(e) }) }),
                 (0, i.jsxs)(P.Aq, {
                     children: [
-                        O.Ay.getUserTag(e, { mode: "username", identifiable: l ? "never" : "always" }),
+                        k.Ay.getUserTag(e, { mode: "username", identifiable: l ? "never" : "always" }),
                         l || e.hasUniqueUsername()
                             ? null
                             : (0, i.jsxs)("span", { className: G.T, children: ["#", e.discriminator] }),
@@ -273,7 +273,7 @@ class et extends W {
                           className: G.mp,
                           src:
                               null != e.id
-                                  ? k.Ay.getEmojiURL({
+                                  ? O.Ay.getEmojiURL({
                                         id: e.id,
                                         animated: e.animated && l,
                                         size: U.EMOJI_URL_BASE_SIZE,
@@ -298,9 +298,9 @@ class en extends W {
             { queryMatch: t, renderSticker: n, selected: l, sticker: s } = this.props,
             { hovered: r } = this.state;
         return (
-            (0, j.FD)(s)
-                ? (e = T.A.getStickerPack(s.pack_id)?.name)
-                : (0, j.Xw)(s) && (e = w.A.getGuild(s.guild_id)?.name),
+            (0, T.FD)(s)
+                ? (e = j.A.getStickerPack(s.pack_id)?.name)
+                : (0, T.Xw)(s) && (e = w.A.getGuild(s.guild_id)?.name),
             (0, i.jsxs)(P.Mr, {
                 children: [
                     (0, i.jsx)(P.Ch, { children: n(s, r || !0 === l) }),
@@ -339,7 +339,7 @@ class er extends W {
             t = (0, i.jsx)("img", {
                 alt: "",
                 className: G.Kk,
-                src: k.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 32 }),
+                src: O.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 32 }),
             });
         return (0, i.jsxs)(P.Mr, {
             children: [

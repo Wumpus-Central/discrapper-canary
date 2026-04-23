@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(732777),
     m = n(806931),
     A = n(731854),
-    x = n(203050);
+    x = n(82410);
 let f = a.memo(function (e) {
     let { channel: t, participant: n } = e,
         l = (0, r.bG)([p.default], () => p.default.getUser(n.user.id), [n.user.id]),

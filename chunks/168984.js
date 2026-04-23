@@ -9,7 +9,7 @@ var l = n(627968),
     c = n(682449),
     d = n(490581),
     p = n(985018),
-    m = n(735841);
+    m = n(40417);
 class h extends i.PureComponent {
     componentDidMount() {
         this.maybeOpenCashAppOverlay();

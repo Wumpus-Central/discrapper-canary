@@ -18,7 +18,7 @@ var i = n(627968),
     f = n(661191),
     x = n(107123),
     E = n(985018),
-    I = n(446037);
+    I = n(73045);
 function v(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         r = t.id,

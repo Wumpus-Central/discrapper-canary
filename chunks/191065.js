@@ -4,7 +4,7 @@ var l = n(627968),
     a = n(827734),
     r = n(885574),
     i = n(834730),
-    o = n(50372);
+    o = n(870788);
 let u = s.forwardRef(function (e, t) {
     let { isInventory: n, style: s, children: u } = e;
     return (0, l.jsxs)("div", {

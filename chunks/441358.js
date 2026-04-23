@@ -30,8 +30,8 @@ var n = l(627968),
     N = l(836968),
     I = l(652215),
     S = l(985018),
-    y = l(837719),
-    Z = l(359823);
+    y = l(921815),
+    Z = l(32271);
 let w = [
     E.UP.DISCOVERY,
     E.UP.VANITY_URL,

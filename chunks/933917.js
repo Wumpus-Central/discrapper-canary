@@ -22,9 +22,9 @@ var l = n(627968),
     C = n(652215),
     A = n(851110);
 n(980504);
-var N = n(297897),
+var N = n(221314),
     S = n(985018),
-    E = n(461922);
+    E = n(59618);
 function T(e) {
     let { className: t, sound: n, playSound: s, isPlaying: r, text: d } = e,
         c = n?.emojiId != null || n?.emojiName != null,

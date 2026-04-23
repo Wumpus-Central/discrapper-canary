@@ -25,14 +25,14 @@ var i = n(627968),
     S = n(450510),
     b = n(526292),
     N = n(89366),
-    T = n(202639),
-    j = n(414872),
+    j = n(202639),
+    T = n(414872),
     R = n(400669),
     w = n(253932),
     L = n(909536),
     M = n(287809),
-    k = n(954571),
-    O = n(690521),
+    O = n(954571),
+    k = n(690521),
     P = n(474090),
     D = n(927578),
     U = n(240248),
@@ -46,7 +46,7 @@ var i = n(627968),
     z = n(698279),
     Z = n(788868),
     q = n(985018),
-    Y = n(355242);
+    Y = n(98090);
 let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     $ = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
     X = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
@@ -88,13 +88,13 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             eS = (0, L.St)("emoji_picker_floating_upsell"),
             { location: eb } = (0, f.p)(),
             { analyticsLocations: eN } = (0, _.Ay)(),
-            [eT, ej] = l.useState(0),
+            [ej, eT] = l.useState(0),
             [eR, ew] = l.useState(!1),
             {
                 listPadding: eL,
                 renderRow: eM,
-                renderSection: ek,
-                renderSectionHeader: eO,
+                renderSection: eO,
+                renderSectionHeader: ek,
                 renderSectionFooter: eP,
                 sectionMarginBottom: eD,
                 sectionHeaderHeight: eU,
@@ -114,7 +114,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                         getEmojiRowProps: I,
                         isScrolling: v,
                         isUsingKeyboardNavigation: N,
-                        allowAnimatedEmoji: T,
+                        allowAnimatedEmoji: j,
                         channelGuildId: R,
                         channelId: w,
                         messageId: L,
@@ -150,21 +150,21 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                 l = t.has(e);
                             l ? i.delete(e) : i.add(e),
                                 null != n &&
-                                    k.default.track(K.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                                    O.default.track(K.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                         location: Z.location,
                                         tab: z.kx.EMOJI,
                                         collapsed: !l,
                                         guild_id: n.id,
                                     }),
                                 e === W.R2.SOUNDMOJI &&
-                                    k.default.track(K.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !l }),
+                                    O.default.track(K.HAw.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !l }),
                                 _(i);
                         },
                         [Z, t, _],
                     ),
                     ea = l.useCallback((e) => {
                         let { columnIndex: t, visibleRowIndex: n } = e,
-                            i = e.type === B.bm.SOUNDMOJI ? null : e.type === B.bm.EMOJI ? (0, O.N)(e.emoji) : e.name;
+                            i = e.type === B.bm.SOUNDMOJI ? null : e.type === B.bm.EMOJI ? (0, k.N)(e.emoji) : e.name;
                         en.current !== K.An1 && window.cancelAnimationFrame(en.current),
                             (en.current = window.requestAnimationFrame(() => {
                                 A.Om.setInspectedExpressionPosition(t, n, E.t.MOUSE_EVENT),
@@ -192,7 +192,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                         isScrolling: v,
                                         isUsingKeyboardNavigation: N,
                                         rowIndex: e,
-                                        allowAnimatedEmoji: T,
+                                        allowAnimatedEmoji: j,
                                         showEmojiFavoriteTooltip: eo,
                                         channelGuildId: R,
                                         category: l.sectionId,
@@ -208,7 +208,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                     e,
                                 );
                             }),
-                        [s, g, a, ei, ea, c, h, x, I, v, N, T, eo, R, w, L, M, U],
+                        [s, g, a, ei, ea, c, h, x, I, v, N, j, eo, R, w, L, M, U],
                     );
                 l.useEffect(() => () => ec.cache?.clear?.(), [ec]);
                 let eu = l.useMemo(
@@ -243,7 +243,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                                   className: Y.f3,
                                                   onClick: () => {
                                                       (0, C.U)(z.kx.SOUNDBOARD),
-                                                          k.default.track(K.HAw.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                                          O.default.track(K.HAw.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
                                                   },
                                                   children: q.intl.string(q.t.rUEjBe),
                                               })
@@ -289,8 +289,8 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                         (e) =>
                             es(e)
                                 ? ed
-                                    ? (0, i.jsx)(j.ap, {})
-                                    : (0, i.jsx)(j.Ay, {})
+                                    ? (0, i.jsx)(T.ap, {})
+                                    : (0, i.jsx)(T.Ay, {})
                                 : el(e)
                                   ? (0, i.jsx)("div", { className: Y.pQ })
                                   : null,
@@ -331,7 +331,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 messageId: eg,
                 isBurstReaction: e_,
                 listHeaderClassName: ex,
-                activeSectionIndex: eT,
+                activeSectionIndex: ej,
                 emojiListRef: h,
             }),
             eG = (0, v.Fk)({
@@ -339,7 +339,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 isScrolling: eA,
                 listRef: h,
                 onActiveCategoryIndexChange: (e) => {
-                    ej(e), "" === eE && A.Om.setActiveCategoryIndex(e);
+                    eT(e), "" === eE && A.Om.setActiveCategoryIndex(e);
                 },
                 scrollOffset: 0,
                 searchQuery: eE,
@@ -363,7 +363,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         return (
             l.useEffect(() => {
                 eR &&
-                    k.default.track(K.HAw.PREMIUM_UPSELL_VIEWED, {
+                    O.default.track(K.HAw.PREMIUM_UPSELL_VIEWED, {
                         type: Z.e.EMOJI_PICKER_FLOATING_UPSELL,
                         location: eb,
                         location_stack: eN,
@@ -382,8 +382,8 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                               listPadding: eL,
                               onScroll: eF,
                               renderRow: eM,
-                              renderSection: ek,
-                              renderSectionHeader: eO,
+                              renderSection: eO,
+                              renderSectionHeader: ek,
                               renderSectionFooter: eP,
                               rowCount: eh,
                               rowCountBySection: ea,
@@ -397,7 +397,7 @@ let J = (0, U.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                         : (0, i.jsx)(p.A, { message: q.intl.string(q.t.IxxiKF), className: Y.BZ }),
                     ey || c.Fr
                         ? null
-                        : (0, i.jsx)(T.d, {
+                        : (0, i.jsx)(j.d, {
                               showUpsell: eR,
                               text:
                                   ((t = (0, D.Dd)(Z.PremiumTypes.TIER_2)),

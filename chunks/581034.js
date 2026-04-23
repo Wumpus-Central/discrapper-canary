@@ -13,13 +13,13 @@ var l = n(989349),
     _ = n(393033),
     h = n(239093),
     p = n(985018),
-    g = n(82593);
+    g = n(903009);
 function A(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(o.Anchor, {
         onClick: () => {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("6916")]).then(
+                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("93992")]).then(
                     n.bind(n, 956450),
                 );
                 return (n) =>

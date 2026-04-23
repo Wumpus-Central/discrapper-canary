@@ -14,7 +14,7 @@ function u(e) {
         onDismissed: () => u(s.i.UNKNOWN),
         onClick: function () {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("98363"), n.e("96318")]).then(n.bind(n, 780086));
+                let { default: e } = await Promise.all([n.e("98363"), n.e("7206")]).then(n.bind(n, 780086));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         },

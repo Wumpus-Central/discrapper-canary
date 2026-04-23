@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(652215),
     T = n(37411),
     y = n(985018),
-    R = n(155893),
-    j = n(77006);
+    j = n(550837),
+    R = n(824078);
 function L(e) {
     let { channel: t } = e,
         s = (0, d.yK)([f.A, C.Ay, I.A], () => {
@@ -51,16 +51,16 @@ function L(e) {
             (0, E.TE)();
         }, []),
         (0, i.jsxs)("div", {
-            className: a()(j.popover, R.SW),
+            className: a()(R.popover, j.SW),
             children: [
                 (0, i.jsx)(A.E, {
                     variant: "text-sm/medium",
                     color: "text-muted",
-                    className: R.DD,
+                    className: j.DD,
                     children: t.isForumLikeChannel() ? y.intl.string(y.t.ioVdO2) : y.intl.string(y.t.VNYs2v),
                 }),
                 (0, i.jsxs)("div", {
-                    className: R.p_,
+                    className: j.p_,
                     children: [
                         s
                             .slice(0, t.isForumLikeChannel() ? s.length : r)
@@ -68,7 +68,7 @@ function L(e) {
                             .filter((e) => l.isValidElement(e))
                             .slice(0, r),
                         (0, i.jsxs)(_.D, {
-                            className: R.nM,
+                            className: j.nM,
                             onClick: () => {
                                 t.isForumLikeChannel()
                                     ? (0, p.iN)(t.id)
@@ -79,11 +79,11 @@ function L(e) {
                             },
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: R.R4,
-                                    children: (0, i.jsx)(m, { size: "custom", className: R.Kk }),
+                                    className: j.R4,
+                                    children: (0, i.jsx)(m, { size: "custom", className: j.Kk }),
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: R.Pf,
+                                    className: j.Pf,
                                     children: (0, i.jsx)(A.E, {
                                         variant: "text-sm/normal",
                                         color: "none",
@@ -103,25 +103,25 @@ function O(e) {
         n = (0, d.bG)([b.default], () => b.default.getUser(t.ownerId)),
         l = (0, E.JO)(t);
     return (0, i.jsxs)(_.D, {
-        className: R.nM,
+        className: j.nM,
         onClick: (e) => {
             (0, x.JA)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, T.H9.POPOUT);
         },
         children: [
             (0, i.jsx)("div", {
-                className: R.R4,
+                className: j.R4,
                 children:
                     null == n
-                        ? (0, i.jsx)("img", { className: R.my, src: N.Ay.getDefaultAvatarURL(void 0, void 0), alt: "" })
-                        : (0, i.jsx)(g.A, { className: R.my, user: n, size: m._3.SIZE_16 }),
+                        ? (0, i.jsx)("img", { className: j.my, src: N.Ay.getDefaultAvatarURL(void 0, void 0), alt: "" })
+                        : (0, i.jsx)(g.A, { className: j.my, user: n, size: m._3.SIZE_16 }),
             }),
             (0, i.jsxs)("div", {
-                className: R.Pf,
+                className: j.Pf,
                 children: [
-                    (0, i.jsx)(A.E, { className: R.UU, variant: "text-sm/normal", color: "none", children: t.name }),
+                    (0, i.jsx)(A.E, { className: j.UU, variant: "text-sm/normal", color: "none", children: t.name }),
                     (0, i.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", children: "•" }),
                     (0, i.jsx)(A.E, {
-                        className: R.vE,
+                        className: j.vE,
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: (0, E.aK)(l),

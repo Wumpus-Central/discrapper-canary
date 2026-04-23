@@ -4,7 +4,7 @@ var l = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(414079),
-    o = n(36670);
+    o = n(288446);
 function c(e) {
     let { hasSetEmoji: t, onClick: n, children: s, className: c, buttonClassName: d } = e,
         [u, m] = i.useState(!1),

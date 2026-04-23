@@ -4,7 +4,7 @@ var i = n(627968),
     l = n(834730),
     a = n(652215),
     r = n(985018),
-    o = n(308869);
+    o = n(22917);
 function d() {
     return (0, i.jsx)(s.Z, {
         type: s.Z.Types.PRIMARY,

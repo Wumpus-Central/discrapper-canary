@@ -23,7 +23,7 @@ var i = n(64700),
     O = n(158216),
     P = n(758836),
     m = n(652215),
-    L = n(69626),
+    L = n(625265),
     N = n(985018);
 let b = (t) => (null != t ? N.intl.format(N.t["4kp0AB"], { itemName: t }) : null),
     C = (t) => {

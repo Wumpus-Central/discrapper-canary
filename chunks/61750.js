@@ -22,7 +22,7 @@ let a = (e) => {
     (0, i.openModalLazy)(
         async () => {
             if (t.skuId === s.Dp.FRACTIONAL_PREMIUM || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
-                let { default: e } = await Promise.all([n.e("5554"), n.e("26539")]).then(n.bind(n, 328064));
+                let { default: e } = await Promise.all([n.e("5554"), n.e("6827")]).then(n.bind(n, 328064));
                 return (n) =>
                     (0, r.jsx)(e, {
                         product: t,
@@ -34,7 +34,7 @@ let a = (e) => {
                         ...n,
                     });
             }
-            let { default: e } = await Promise.all([n.e("5554"), n.e("53681")]).then(n.bind(n, 393870));
+            let { default: e } = await Promise.all([n.e("5554"), n.e("80845")]).then(n.bind(n, 393870));
             return (n) =>
                 (0, r.jsx)(e, {
                     product: t,

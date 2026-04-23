@@ -12,8 +12,8 @@ var a,
     _ = n(207963),
     p = n(489414),
     h = n(814890),
-    A = n(568167),
-    C = n(252592);
+    A = n(738343),
+    C = n(40816);
 function x(e) {
     let { icon: t, iconSize: n } = e;
     return (0, l.jsx)("div", { className: A.zc, style: { height: n, width: n }, children: t });

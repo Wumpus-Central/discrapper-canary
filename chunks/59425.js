@@ -1,23 +1,3 @@
-"use strict";
-(t.__esModule = !0),
-    (t.default = {
-        scheme: "codeschool",
-        author: "brettof86",
-        base00: "#232c31",
-        base01: "#1c3657",
-        base02: "#2a343a",
-        base03: "#3f4944",
-        base04: "#84898c",
-        base05: "#9ea7a6",
-        base06: "#a7cfa3",
-        base07: "#b5d8f6",
-        base08: "#2a5491",
-        base09: "#43820d",
-        base0A: "#a03b1e",
-        base0B: "#237986",
-        base0C: "#b02f30",
-        base0D: "#484d79",
-        base0E: "#c59820",
-        base0F: "#c98344",
-    }),
-    (e.exports = t.default);
+o.exports = JSON.parse(
+    '{"RPb8Zk":["Tus comentarios nos ayudan a mejorar las funciones de seguridad de Discord."],"cDP3b4":["Comentarios enviados"],"KZw6kn":["\xbfQu\xe9 es lo que no est\xe1 funcionando bien?"],"eSP1F9":["Ahora prefiero no interactuar con este contenido"],"bC0QVX":["Las instrucciones no estaban claras"],"8JFGXc":["Trat\xe9 de seguir los pasos, pero no funcion\xf3"],"Dl4A+U":["No ten\xeda los documentos adecuados conmigo"],"ZsnNgz":["Me preocupa compartir informaci\xf3n personal"],"ep5SQp":["Otro"],"kkKhVJ":["Esto lleva demasiado tiempo"],"maxf2S":["No sab\xeda por qu\xe9 era necesario esto"],"Q5cQ46":["Describe tu problema"],"zApKaR":["\xbfTe gustar\xeda contarnos m\xe1s?"],"4djgO/":["\xa1Gracias por tus comentarios!"],"RqoA4v":["\xbfC\xf3mo fue tu experiencia con la verificaci\xf3n de edad?"]}',
+);

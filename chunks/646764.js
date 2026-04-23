@@ -23,28 +23,28 @@ var i = n(627968),
     v = n(139384),
     y = n(654487),
     S = n(985018),
-    b = n(1389);
+    b = n(369453);
 let N = function (e) {
     let t,
         {
             className: n,
             quest: s,
             autoplay: N = !0,
-            learnMoreStyle: T = null,
-            learnMoreFontSize: j,
+            learnMoreStyle: j = null,
+            learnMoreFontSize: T,
             sourceQuestContent: R,
             lazyLoad: w = !1,
             fullWidth: L = !1,
             style: M,
         } = e,
-        k = (0, g.Ut)(),
-        O = (0, o.bG)([m.A], () => m.A.useReducedMotion),
+        O = (0, g.Ut)(),
+        k = (0, o.bG)([m.A], () => m.A.useReducedMotion),
         P = l.useMemo(() => (0, f.tW)(s, f.fY.REWARD), [s]),
         D = l.useMemo(() => (0, f.tW)(s, f.fY.REWARD_IMAGE), [s]),
         U = l.useCallback(
             (t) => {
                 (0, a.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    k({
+                    O({
                         questId: s.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -54,7 +54,7 @@ let N = function (e) {
                     (0, I.navigateToQuestHome)({ fromContent: e.questContent, questId: s.id }),
                     e.onClick?.(t);
             },
-            [k, s.id, e, R],
+            [O, s.id, e, R],
         ),
         V = l.useRef(null),
         G = l.useRef(N),
@@ -62,7 +62,7 @@ let N = function (e) {
     if (
         (l.useEffect(() => {
             if (null != V.current) {
-                if (!P.isAnimated || O) {
+                if (!P.isAnimated || k) {
                     (V.current.currentTime = 0), V.current.pause();
                     return;
                 }
@@ -71,7 +71,7 @@ let N = function (e) {
                     : !N && G.current && ((V.current.currentTime = 0), V.current.pause()),
                     (G.current = N);
             }
-        }, [N, P, O]),
+        }, [N, P, k]),
         (0, v.A)(V, y.rE.QUEST_HOME_DESKTOP),
         F)
     )
@@ -106,7 +106,7 @@ let N = function (e) {
                             ref: (e) => {
                                 (t.current = e), (V.current = e);
                             },
-                            autoPlay: !O && N,
+                            autoPlay: !k && N,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
@@ -130,7 +130,7 @@ let N = function (e) {
                     onLoad: e.onLoadComplete,
                 }),
         });
-    return null == T
+    return null == j
         ? (0, i.jsx)("div", { className: r()(b.al, n, { [b.Ij]: L }), style: M, children: t })
         : (0, i.jsxs)(c.D, {
               className: r()(b.a$, b.al, b.Yi, n, { [b.Ij]: L }),
@@ -138,15 +138,15 @@ let N = function (e) {
               style: M,
               children: [
                   t,
-                  "text" === T &&
+                  "text" === j &&
                       (0, i.jsx)(u.E, {
                           color: "always-white",
                           variant: "text-xs/normal",
                           className: b.n_,
-                          style: { fontSize: j },
+                          style: { fontSize: T },
                           children: S.intl.format(S.t.DYAleT, {}),
                       }),
-                  "icon" === T &&
+                  "icon" === j &&
                       (0, i.jsx)("div", {
                           className: b.n_,
                           children: (0, i.jsx)(d.m, { size: "xxs", color: h.A.colors.WHITE.css }),

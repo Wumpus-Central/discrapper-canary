@@ -6,7 +6,7 @@ var s = n(430993),
     a = n(534514),
     r = n(675120),
     o = n(204821),
-    d = n(18075);
+    d = n(831067);
 let c = (e) => {
     let { children: t, actions: n, footerInput: c, title: u } = e;
     return (0, i.jsxs)(l.B, {

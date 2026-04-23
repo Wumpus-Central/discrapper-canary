@@ -8,7 +8,7 @@ var l = n(834730),
     o = n(868048),
     c = n(355097),
     d = n(985018),
-    u = n(1341);
+    u = n(927933);
 function h(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, i.jsxs)("div", {

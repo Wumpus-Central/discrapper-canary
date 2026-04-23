@@ -57,8 +57,8 @@ var r = n(627968),
     er = n(222692),
     ei = n(652215),
     es = n(806931),
-    ea = n(687906),
-    eo = n(794005);
+    ea = n(82850),
+    eo = n(604949);
 class el extends i.PureComponent {
     state = { screensharePopoutOpen: !1 };
     _ref = i.createRef();

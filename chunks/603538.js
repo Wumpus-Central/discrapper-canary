@@ -6,7 +6,7 @@ var l = t(627968),
     s = t(224016),
     o = t(149757),
     d = t(985018),
-    u = t(597531);
+    u = t(74824);
 let c = (e) => {
     let { profileBadge: n, tenureBadge: t } = e,
         c = (0, o.I)(t.id).standard;

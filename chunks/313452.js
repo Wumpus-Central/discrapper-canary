@@ -25,15 +25,15 @@ var i = n(627968),
     v = n(851109),
     T = n(932883),
     y = n(816943),
-    R = n(320697),
-    j = n(394953),
+    j = n(320697),
+    R = n(394953),
     L = n(628325),
     O = n(524628),
     G = n(849077),
     D = n(652215),
-    M = n(405198),
+    M = n(756195),
     U = n(985018),
-    P = n(16051);
+    P = n(645875);
 function w(e) {
     e.stopPropagation();
 }
@@ -88,7 +88,7 @@ function B() {
                 }),
                 (0, i.jsx)(f.$, {
                     variant: "secondary",
-                    onClick: () => (0, j.tZ)(e),
+                    onClick: () => (0, R.tZ)(e),
                     text: U.intl.string(M.default.klSpfs),
                 }),
             ],
@@ -116,17 +116,17 @@ function H(e) {
             isLoading: U,
             isLoadingComplete: H,
             hasLoadedEver: F,
-        } = (0, c.cf)([R.A], () => ({
-            isLoading: R.A.isLoading,
-            isLoadingComplete: R.A.isLoadingComplete,
-            hasLoadedEver: R.A.hasLoadedEver,
+        } = (0, c.cf)([j.A], () => ({
+            isLoading: j.A.isLoading,
+            isLoadingComplete: j.A.isLoadingComplete,
+            hasLoadedEver: j.A.hasLoadedEver,
         })),
         W = !F && U,
         { messageCategoryOpenStates: Y, toggleOpenState: K } = (0, y.A)(),
         z =
-            ((t = (0, c.yK)([R.A], () => R.A.getNotifyingChannelIds() ?? [])),
-            (0, c.bG)([R.A, b.Ay], () => {
-                let e = R.A.getChannelInfoMap();
+            ((t = (0, c.yK)([j.A], () => j.A.getNotifyingChannelIds() ?? [])),
+            (0, c.bG)([j.A, b.Ay], () => {
+                let e = j.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
                     if ((null == t || t.loadState === G.Ve.UNLOADED) && b.Ay.hasUnread(n)) return !0;
@@ -168,7 +168,7 @@ function H(e) {
                               : (i[G.Ur.UNREAD][e.channelId] = [e]);
                     }),
                     o().each(n, (e) => {
-                        let n = (0, j.i7)(e);
+                        let n = (0, R.i7)(e);
                         e.kind === G.yL.MENTION
                             ? t[n].push(e)
                             : e.channelId in i[n]

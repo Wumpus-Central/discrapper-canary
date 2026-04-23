@@ -20,7 +20,7 @@ var r = n(627968),
     E = n(806931),
     U = n(652215),
     _ = n(985018),
-    f = n(807857);
+    f = n(38577);
 let P = [o.z];
 function g(e) {
     let { windowKey: t, channelId: n, participantId: o } = e,

@@ -28,7 +28,7 @@ var i = n(627968),
     y = n(267001),
     w = n(652215),
     O = n(985018),
-    k = n(693354);
+    k = n(234);
 function L(e) {
     let { application: t, guild: n, integration: l, ...s } = e;
     return (0, i.jsx)(a.ConfirmModal, {

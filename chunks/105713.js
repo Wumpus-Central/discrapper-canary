@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => M, Gq: () => L, WE: () => w, qn: () => j });
+n.d(t, { Ay: () => M, Gq: () => L, WE: () => w, qn: () => T });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -25,9 +25,9 @@ var i = n(627968),
     S = n(277044);
 n(980504);
 var b = n(985018),
-    N = n(589812),
-    T = n(14870);
-function j() {
+    N = n(532340),
+    j = n(757718);
+function T() {
     let { volume: e, onVolumeChange: t } = (0, y.A)();
     return (0, i.jsxs)(u.D, {
         className: N.xJ,
@@ -152,17 +152,17 @@ function M(e) {
         children: [
             (0, i.jsx)(L, {
                 setTooltipShowing: l,
-                renderPopout: () => (0, i.jsx)(j, {}),
+                renderPopout: () => (0, i.jsx)(T, {}),
                 tooltipText: b.intl.string(b.t["19lt24"]),
                 position: "top",
-                children: (0, i.jsx)(_.H, { size: "md", color: "currentColor", className: T.Wo }),
+                children: (0, i.jsx)(_.H, { size: "md", color: "currentColor", className: j.Wo }),
             }),
             (0, i.jsx)(L, {
                 setTooltipShowing: l,
                 renderPopout: (e) => (0, i.jsx)(S.A, { sound: t, channel: n, ...e }),
                 tooltipText: b.intl.string(b.t["KVbJU/"]),
                 position: "right",
-                children: (0, i.jsx)(x.m, { size: "md", color: "currentColor", className: T.Wo }),
+                children: (0, i.jsx)(x.m, { size: "md", color: "currentColor", className: j.Wo }),
             }),
         ],
     });

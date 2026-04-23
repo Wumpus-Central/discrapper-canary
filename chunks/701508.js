@@ -8,7 +8,7 @@ var n = a(627968),
     c = a(834730),
     d = a(736653),
     u = a(611371),
-    h = a(45923);
+    h = a(408291);
 function m(e) {
     let { title: t, betaTag: a, color: l = "text-strong" } = e;
     return (0, n.jsxs)(o.D, {

@@ -21,28 +21,28 @@ var i = n(627968),
     E = n(652215),
     I = n(874864),
     v = n(985018),
-    y = n(9706);
+    y = n(832938);
 let S = (e) => {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: S, setTrackedUpsellViewed: b } = e,
         { location: N } = (0, h.p)(),
-        { analyticsLocations: T } = (0, p.Ay)(),
-        j = (0, a.bG)([A.A], () => A.A.getGuild(n)),
-        { canManageAllExpressions: R } = (0, x.nr)(j),
-        w = null != j && 0 === (0, C.aG)(j.premiumTier) && !j.features.has(E.GuildFeatures.MORE_STICKERS);
+        { analyticsLocations: j } = (0, p.Ay)(),
+        T = (0, a.bG)([A.A], () => A.A.getGuild(n)),
+        { canManageAllExpressions: R } = (0, x.nr)(T),
+        w = null != T && 0 === (0, C.aG)(T.premiumTier) && !T.features.has(E.GuildFeatures.MORE_STICKERS);
     return (l.useEffect(() => {
         R &&
             w &&
             S &&
             ((0, m.zV)(E.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: N,
-                guild_id: j?.id,
+                guild_id: T?.id,
                 channel_id: s?.id,
                 type: "Expression Picker Inline Sticker Upsell",
-                location_stack: T,
+                location_stack: j,
             }),
             b(!0));
-    }, [w, j, s, N, S, b, T, R]),
-    null != j && R)
+    }, [w, T, s, N, S, b, j, R]),
+    null != T && R)
         ? w
             ? (0, i.jsxs)("div", {
                   className: r()(y.UX, t),
@@ -59,9 +59,9 @@ let S = (e) => {
                           text: v.intl.string(v.t["Gb+BJD"]),
                           onClick: () => {
                               (0, g.A)({
-                                  analyticsLocations: T,
+                                  analyticsLocations: j,
                                   analyticsSourceLocation: N,
-                                  guild: j,
+                                  guild: T,
                                   perks: (0, I.q5)(),
                               });
                           },

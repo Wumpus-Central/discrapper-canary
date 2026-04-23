@@ -23,18 +23,18 @@ var i = n(627968),
     N = n(736339),
     S = n(701952),
     v = n(652215),
-    T = n(349745);
+    T = n(84593);
 function y(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].conversation.id !== t[n].conversation.id) return !1;
     return !0;
 }
-function R(e, t) {
+function j(e, t) {
     if (e.size !== t.size) return !1;
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
 }
-let j = ["high", "medium", "low"],
+let R = ["high", "medium", "low"],
     L = l.memo(function (e) {
         let { moderation: t } = e,
             n = null != t && 1 === t.status,
@@ -71,7 +71,7 @@ let j = ["high", "medium", "low"],
                           return (
                               e.severity ===
                               ((n = t.flagged_summary_details.map((e) => e.severity)),
-                              j.find((e) => n.includes(e)) ?? null)
+                              R.find((e) => n.includes(e)) ?? null)
                           );
                       }) ?? null)
                     : null,
@@ -209,8 +209,8 @@ let j = ["high", "medium", "low"],
             N = (0, f.e)({ timestamp: C }),
             v = Math.max(1, Math.round((b - C) / 1e3)),
             y = (0, p.WR)({ seconds: v, getFormatter: p.i }),
-            R = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
-            j = null != R ? (0, S.i)(R.content_json) : null;
+            j = t.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
+            R = null != j ? (0, S.i)(j.content_json) : null;
         return (0, i.jsxs)(r.D, {
             innerRef: E,
             className: `${T.Nm}${s ? ` ${T.Sk}` : ""}`,
@@ -224,9 +224,9 @@ let j = ["high", "medium", "low"],
                     children: [
                         (0, i.jsx)(a.E, {
                             variant: "text-md/medium",
-                            color: null != j ? "text-default" : "text-muted",
+                            color: null != R ? "text-default" : "text-muted",
                             className: T.So,
-                            children: j?.title ?? "Summary not available",
+                            children: R?.title ?? "Summary not available",
                         }),
                         (0, i.jsx)(o.K, {
                             icon: d.T,
@@ -257,18 +257,18 @@ let j = ["high", "medium", "low"],
                         " users",
                     ],
                 }),
-                j?.brief_summary != null &&
+                R?.brief_summary != null &&
                     (0, i.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-default",
                         className: T.g5,
-                        children: j.brief_summary,
+                        children: R.brief_summary,
                     }),
-                null != j &&
-                    j.key_points.length > 0 &&
+                null != R &&
+                    R.key_points.length > 0 &&
                     (0, i.jsx)("ul", {
                         className: T.JP,
-                        children: j.key_points.map((e, t) =>
+                        children: R.key_points.map((e, t) =>
                             (0, i.jsx)(
                                 "li",
                                 {
@@ -362,7 +362,7 @@ let j = ["high", "medium", "low"],
 function G(e) {
     let { channel: t } = e,
         n = (0, s.bG)([N.A], () => N.A.getChannelConversations(t.id), [t.id], y),
-        d = (0, s.bG)([N.A], () => N.A.getVisibleConversationIds(t.id), [t.id], R),
+        d = (0, s.bG)([N.A], () => N.A.getVisibleConversationIds(t.id), [t.id], j),
         c = (0, s.bG)([N.A], () => N.A.hasMoreConversations(t.id, "before"), [t.id]),
         u = (0, s.bG)([N.A], () => N.A.hasMoreConversations(t.id, "after"), [t.id]),
         h = (0, s.bG)([N.A], () => N.A.isPendingFetch(t.id), [t.id]),

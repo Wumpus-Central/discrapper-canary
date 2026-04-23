@@ -14,7 +14,7 @@ var n = i(627968),
     p = i(395011),
     m = i(652215),
     I = i(381941),
-    g = i(42387);
+    g = i(267475);
 function E(t) {
     let { id: e, replyToMessageId: i, channel: E, onSend: N } = t,
         _ = (0, y.A)(),

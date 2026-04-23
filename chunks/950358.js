@@ -21,7 +21,7 @@ var i = n(627968),
     N = n(82566),
     I = n(652215),
     C = n(985018),
-    b = n(431509);
+    b = n(650005);
 function v(e) {
     let { guild: t, channel: l } = e,
         s = (0, _.Ay)(l),
@@ -42,7 +42,7 @@ function v(e) {
               onContextMenu: (e) => {
                   (0, x.L3)(e, async () => {
                       let { default: e } = await Promise.all([
-                          n.e("2271"),
+                          n.e("95834"),
                           n.e("99011"),
                           n.e("21420"),
                           n.e("75149"),
@@ -124,7 +124,7 @@ let S = l.memo(function () {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
                                           n.e("93103"),
-                                          n.e("2271"),
+                                          n.e("95834"),
                                           n.e("99011"),
                                           n.e("21420"),
                                           n.e("2381"),
@@ -136,7 +136,7 @@ let S = l.memo(function () {
                                 : (0, x.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
-                                          n.e("2271"),
+                                          n.e("95834"),
                                           n.e("99011"),
                                           n.e("21420"),
                                           n.e("2381"),

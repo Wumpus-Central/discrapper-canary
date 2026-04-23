@@ -6,7 +6,7 @@ var i = n(627968),
     s = n(836602),
     o = n(927578),
     c = n(132198),
-    d = n(508962);
+    d = n(83554);
 let u = (e) => {
     let { user: t } = e,
         n = o.Ay.canUsePremiumProfileCustomization(t),

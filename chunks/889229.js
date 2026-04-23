@@ -5,7 +5,7 @@ var i = n(503698),
     l = n.n(i),
     r = n(534514),
     a = n(834730),
-    o = n(74958);
+    o = n(822030);
 function c(t) {
     let { tips: e, className: n, headerText: i } = t;
     return (0, s.jsxs)("div", {

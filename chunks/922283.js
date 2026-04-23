@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => S });
 var a = n(627968),
     l = n(64700),
     i = n(792216),
@@ -18,7 +18,7 @@ var a = n(627968),
     b = n(778591),
     A = n(465736),
     v = n(985018),
-    E = n(241728);
+    E = n(99392);
 function I(e) {
     let { url: t, trackAction: n, title: i, rating: g, ratingCount: p, tooltipVariant: b = "all" } = e,
         A = (0, x.A)(),
@@ -159,7 +159,7 @@ function j(e) {
         "open-critic-rating",
     );
 }
-let y = function (e) {
+let S = function (e) {
     let { game: t, trackAction: n } = e,
         { applicationId: l } = t,
         r = (0, b.I)(l),
@@ -173,9 +173,9 @@ let y = function (e) {
         A = d.englishEnabled && (0, f.HM)(h),
         N = A ? h?.localizedRating : h?.rating,
         j = A ? h?.localizedRatingCount : h?.ratingCount,
-        y = c ? (A ? v.t["aWb+V4"] : v.t["8e4LiB"]) : v.t.whmopT,
-        S = t.reviews?.opencritic != null && null != o;
-    return u || x || S
+        S = c ? (A ? v.t["aWb+V4"] : v.t["8e4LiB"]) : v.t.whmopT,
+        y = t.reviews?.opencritic != null && null != o;
+    return u || x || y
         ? (0, a.jsxs)("div", {
               className: E.uW,
               children: [
@@ -209,14 +209,14 @@ let y = function (e) {
                                     children: (0, a.jsx)(I, {
                                         url: r,
                                         trackAction: n,
-                                        title: v.intl.string(y),
+                                        title: v.intl.string(S),
                                         rating: N,
                                         ratingCount: j,
                                         tooltipVariant: A ? "localized" : "all",
                                     }),
                                 })
                               : null,
-                          S && null != o
+                          y && null != o
                               ? (0, a.jsx)("div", {
                                     className: E.WH,
                                     children: (0, a.jsx)(C, { game: t, url: o, trackAction: n }),

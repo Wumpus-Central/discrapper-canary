@@ -18,7 +18,7 @@ var i = n(627968),
     N = n(306417),
     g = n(412136),
     p = n(985018),
-    C = n(78762);
+    C = n(972778);
 function f() {
     return (0, i.jsx)("svg", {
         width: "24",
@@ -34,7 +34,7 @@ function f() {
         }),
     });
 }
-function h(e) {
+function R(e) {
     let t,
         { hasNoVotes: n, victorEmoji: r } = e;
     if (n) t = (0, i.jsx)(f, {});
@@ -44,7 +44,7 @@ function h(e) {
     }
     return null != t ? (0, i.jsx)("div", { className: C.ZS, children: t }) : null;
 }
-function R(e) {
+function h(e) {
     let t,
         { type: n, ...r } = e,
         l = "text-muted";
@@ -122,8 +122,8 @@ function S(e) {
     return (0, i.jsxs)("div", {
         className: s()(C.kL, { [C.FS]: o }, t),
         children: [
-            (0, i.jsx)(h, { hasNoVotes: "NO_VOTES" === a.type, victorEmoji: n.victorEmoji }),
-            (0, i.jsx)(R, { ...a }),
+            (0, i.jsx)(R, { hasNoVotes: "NO_VOTES" === a.type, victorEmoji: n.victorEmoji }),
+            (0, i.jsx)(h, { ...a }),
             null != l &&
                 (0, i.jsx)(u.$, { size: "sm", onClick: l, variant: "secondary", text: p.intl.string(p.t.Jw7Vbf) }),
         ],
@@ -137,7 +137,7 @@ function O(e) {
         E = (0, A.Ay)(t),
         N = (0, m.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
         f = t.messageReference,
-        h = r.useCallback(() => {
+        R = r.useCallback(() => {
             null != f &&
                 _.A.jumpToMessage({
                     channelId: f.channel_id,
@@ -158,10 +158,10 @@ function O(e) {
                           username: E.nick,
                           usernameHook: N(E),
                           title: u,
-                          titleOnClick: h,
+                          titleOnClick: R,
                       }),
                   }),
-                  (0, i.jsx)(S, { className: C.E6, data: c, onClickPollLink: s ? void 0 : h }),
+                  (0, i.jsx)(S, { className: C.E6, data: c, onClickPollLink: s ? void 0 : R }),
               ],
           });
 }

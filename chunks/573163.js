@@ -12,8 +12,8 @@ var i = n(627968),
     _ = n(866630),
     h = n(260821),
     p = n(985018),
-    g = n(10585),
-    A = n(471717);
+    g = n(347353),
+    A = n(866661);
 let f = (e, t) => (null == e && null == t) || e === t;
 class x extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length, isHovered: !1 };

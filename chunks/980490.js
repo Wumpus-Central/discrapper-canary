@@ -1,157 +1,157 @@
-n.d(t, { q: () => D });
-var l = n(627968),
-    a = n(64700),
-    i = n(503698),
-    s = n.n(i),
-    r = n(735438),
-    u = n(602853),
-    o = n(477262),
-    c = n(65154),
-    A = n(191023),
-    d = n(588975),
-    h = n(834730),
-    _ = n(827734),
-    I = n(155718),
-    E = n(222713),
-    C = n(57882),
-    m = n(573435),
-    g = n(619517),
-    L = n(448381),
+n.d(t, { q: () => S });
+var a = n(627968),
+    r = n(64700),
+    l = n(503698),
+    s = n.n(l),
+    o = n(735438),
+    i = n(602853),
+    c = n(477262),
+    d = n(65154),
+    _ = n(191023),
+    u = n(588975),
+    A = n(834730),
+    E = n(827734),
+    C = n(155718),
+    h = n(222713),
+    m = n(57882),
+    I = n(573435),
+    N = n(619517),
+    p = n(448381),
     f = n(465364),
-    N = n(291812),
-    x = n(253932),
-    P = n(53228),
-    p = n(985018),
-    b = n(873063),
-    S = n(808961);
-function D(e) {
-    let { message: t, forwardOptions: n, channel: i } = e,
-        D = x.hH.useSetting(),
+    g = n(291812),
+    O = n(253932),
+    T = n(53228),
+    P = n(985018),
+    b = n(582068),
+    R = n(28289);
+function S(e) {
+    let { message: t, forwardOptions: n, channel: l } = e,
+        S = O.hH.useSetting(),
         {
-            attachments: F,
-            embeds: G,
-            hasContent: y,
-            contentMessage: O,
-        } = (0, P.A)({ message: t, channel: i, forwardOptions: n }),
-        T =
-            O.components.length > 0 && O.components[0].type === I.I5.CHECKPOINT_CARD
-                ? O.components[0].checkpointData
+            attachments: L,
+            embeds: y,
+            hasContent: w,
+            contentMessage: D,
+        } = (0, T.A)({ message: t, channel: l, forwardOptions: n }),
+        x =
+            D.components.length > 0 && D.components[0].type === C.I5.CHECKPOINT_CARD
+                ? D.components[0].checkpointData
                 : null,
-        k = E.f[T?.cardId ?? 0],
-        v = (0, u.r)(k.primaryColor).hex(),
-        j = a.useMemo(
+        v = h.f[x?.cardId ?? 0],
+        G = (0, i.r)(v.primaryColor).hex(),
+        k = r.useMemo(
             () =>
-                y
+                w
                     ? (0, f.Ay)(t, {
                           formatInline: !0,
                           allowLinks: !0,
                           allowHeading: !0,
                           allowList: !0,
                           hideSimpleEmbedContent: !1,
-                          contentMessage: O,
+                          contentMessage: D,
                       }).content
                     : null,
-            [O, y, t],
+            [D, w, t],
         ),
-        W = F.length,
-        w = null,
-        R = null,
-        M = null;
-    if (W > 0 || G.length > 0) {
-        let e = (0, r.countBy)(F, (e) => (0, L.NI)(e, !0)),
+        F = L.length,
+        M = null,
+        j = null,
+        H = null;
+    if (F > 0 || y.length > 0) {
+        let e = (0, o.countBy)(L, (e) => (0, p.NI)(e, !0)),
             t = e.IMAGE ?? 0,
             n = e.VIDEO ?? 0;
         t > 0 && n > 0
-            ? ((w = p.intl.formatToPlainString(p.t.Lr0Top, { image_count: t, video_count: n })), (R = o.s))
+            ? ((M = P.intl.formatToPlainString(P.t.Lr0Top, { image_count: t, video_count: n })), (j = c.s))
             : n > 0
-              ? ((w = p.intl.formatToPlainString(p.t.SJ6pPX, { count: n })), (R = c.S))
+              ? ((M = P.intl.formatToPlainString(P.t.SJ6pPX, { count: n })), (j = d.S))
               : t > 0
-                ? ((w = p.intl.formatToPlainString(p.t.h4pFfU, { count: t })), (R = 1 === t ? A.x : o.s))
-                : ((w = p.intl.formatToPlainString(p.t["89ihS8"], { count: W })), (R = d.P)),
-            n > 0 && W === n
-                ? (M = (0, l.jsxs)("div", {
-                      className: s()(S.cR, S.JZ),
+                ? ((M = P.intl.formatToPlainString(P.t.h4pFfU, { count: t })), (j = 1 === t ? _.x : c.s))
+                : ((M = P.intl.formatToPlainString(P.t["89ihS8"], { count: F })), (j = u.P)),
+            n > 0 && F === n
+                ? (H = (0, a.jsxs)("div", {
+                      className: s()(R.cR, R.JZ),
                       children: [
-                          (0, l.jsx)(g.Ay, { className: S.xn, src: F[0].proxy_url, width: 56, height: 56 }),
-                          (0, l.jsx)(c.S, { className: S.uZ, size: "md", color: "white" }),
+                          (0, a.jsx)(N.Ay, { className: R.xn, src: L[0].proxy_url, width: 56, height: 56 }),
+                          (0, a.jsx)(d.S, { className: R.uZ, size: "md", color: "white" }),
                       ],
                   }))
-                : W > 0
-                  ? (M = (0, l.jsx)("div", {
-                        className: S.cR,
-                        children: (0, l.jsx)(g.Ay, { src: F[0].proxy_url, width: 56, height: 56 }),
+                : F > 0
+                  ? (H = (0, a.jsx)("div", {
+                        className: R.cR,
+                        children: (0, a.jsx)(N.Ay, { src: L[0].proxy_url, width: 56, height: 56 }),
                     }))
-                  : G[0]?.thumbnail?.proxyURL != null &&
-                    (M = (0, l.jsx)("div", {
-                        className: S.cR,
-                        children: (0, l.jsx)(g.Ay, { src: G[0].thumbnail.proxyURL, width: 56, height: 56 }),
+                  : y[0]?.thumbnail?.proxyURL != null &&
+                    (H = (0, a.jsx)("div", {
+                        className: R.cR,
+                        children: (0, a.jsx)(N.Ay, { src: y[0].thumbnail.proxyURL, width: 56, height: 56 }),
                     }));
     }
     return (
-        W > 1 &&
-            null != M &&
-            (M = (0, l.jsxs)("div", {
-                className: S.EW,
+        F > 1 &&
+            null != H &&
+            (H = (0, a.jsxs)("div", {
+                className: R.EW,
                 children: [
-                    (0, l.jsx)(m.Ay, {
-                        mask: m.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                    (0, a.jsx)(I.Ay, {
+                        mask: I.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: M,
+                        children: H,
                     }),
-                    (0, l.jsxs)(h.E, {
-                        className: S.mB,
+                    (0, a.jsxs)(A.E, {
+                        className: R.mB,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: ["+", W - 1],
+                        children: ["+", F - 1],
                     }),
                 ],
             })),
-        (0, l.jsxs)("div", {
-            className: S.sq,
+        (0, a.jsxs)("div", {
+            className: R.sq,
             children: [
-                (0, l.jsxs)("div", {
-                    className: S.FG,
+                (0, a.jsxs)("div", {
+                    className: R.FG,
                     children: [
-                        null != T &&
-                            (0, l.jsx)(h.E, { variant: "text-md/medium", children: p.intl.string(b.default.goiR2u) }),
-                        y &&
-                            (0, l.jsx)(N.Ay, {
-                                className: s()(S.vp, W > 0 && S.NL),
+                        null != x &&
+                            (0, a.jsx)(A.E, { variant: "text-md/medium", children: P.intl.string(b.default.goiR2u) }),
+                        w &&
+                            (0, a.jsx)(g.Ay, {
+                                className: s()(R.vp, F > 0 && R.NL),
                                 message: t,
-                                content: j,
-                                compact: D,
+                                content: k,
+                                compact: S,
                             }),
-                        W > 0 &&
-                            (0, l.jsxs)("div", {
-                                className: S.kp,
+                        F > 0 &&
+                            (0, a.jsxs)("div", {
+                                className: R.kp,
                                 children: [
-                                    null != R &&
-                                        (0, l.jsx)(R, {
+                                    null != j &&
+                                        (0, a.jsx)(j, {
                                             size: "custom",
-                                            width: y ? 18 : 20,
-                                            color: _.A.colors.TEXT_MUTED,
+                                            width: w ? 18 : 20,
+                                            color: E.A.colors.TEXT_MUTED,
                                         }),
-                                    null != w &&
-                                        (0, l.jsx)(h.E, {
-                                            variant: y ? "text-sm/medium" : "text-md/medium",
+                                    null != M &&
+                                        (0, a.jsx)(A.E, {
+                                            variant: w ? "text-sm/medium" : "text-md/medium",
                                             color: "text-muted",
-                                            children: w,
+                                            children: M,
                                         }),
                                 ],
                             }),
                     ],
                 }),
-                M,
-                null != T &&
-                    (0, l.jsx)("div", {
-                        className: S.cR,
-                        children: (0, l.jsx)("img", {
+                H,
+                null != x &&
+                    (0, a.jsx)("div", {
+                        className: R.cR,
+                        children: (0, a.jsx)("img", {
                             alt: "",
-                            style: { backgroundColor: v },
+                            style: { backgroundColor: G },
                             width: 56,
                             height: 56,
-                            src: (0, C.OW)(T.cardId ?? 0),
+                            src: (0, m.OW)(x.cardId ?? 0),
                         }),
                     }),
             ],

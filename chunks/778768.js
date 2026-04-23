@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(864436),
     T = n(835072),
     y = n(793574),
-    R = n(688810),
-    j = n(139286),
+    j = n(688810),
+    R = n(139286),
     L = n(47167),
     O = n(713517),
     G = n(854627),
@@ -41,9 +41,9 @@ var i = n(627968),
     H = n(427262),
     F = n(582904),
     W = n(985018),
-    Y = n(869397),
-    K = n(77006),
-    z = n(813013);
+    Y = n(176277),
+    K = n(824078),
+    z = n(518229);
 let q = "VoiceInviteSuggestionsPopover";
 function X(e) {
     let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: c } = e,
@@ -51,8 +51,8 @@ function X(e) {
         g = (0, O.A)(u),
         f = (0, F.kt)({ channel: t }),
         { enabled: E } = M.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
-        { analyticsLocations: x } = (0, R.Ay)(y.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
-    (0, j.A)({
+        { analyticsLocations: x } = (0, j.Ay)(y.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+    (0, R.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
         type: d.ImpressionTypes.POPOUT,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: x },
@@ -67,7 +67,7 @@ function X(e) {
         let e = w.A.getGuild(t.guild_id);
         o()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, h.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([n.e("28136"), n.e("43600"), n.e("76530")]).then(
+                let { default: l } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: p.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -123,8 +123,8 @@ function Q(e) {
         { isHoveringOrFocusing: h } = (0, O.A)(o),
         [m, y] = l.useState(null),
         {
-            icon: R,
-            iconColor: j,
+            icon: j,
+            iconColor: R,
             tooltipText: M,
             disabled: w,
             shouldHideButton: F,
@@ -265,7 +265,7 @@ function Q(e) {
                         className: a()(Y.D9, z.button, z.secondary, { [Y.r9]: w }),
                         onClick: el,
                         "aria-disabled": w,
-                        children: (0, i.jsx)(R, { size: "xxs", color: j, className: Y.Kk }),
+                        children: (0, i.jsx)(j, { size: "xxs", color: R, className: Y.Kk }),
                     }),
                 }),
         ],

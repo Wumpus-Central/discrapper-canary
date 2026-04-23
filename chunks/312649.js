@@ -28,7 +28,7 @@ var l = n(627968),
     b = n(216641),
     R = n(999784),
     M = n(652215),
-    j = n(52402);
+    j = n(650098);
 let L = (e) => {
     let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: a, isGift: r, planGroup: s, isPrepaid: o } = e,

@@ -9,7 +9,7 @@ var n = a(627968),
     d = a(486020),
     u = a(841985),
     h = a(985018),
-    m = a(246384);
+    m = a(92400);
 let p = function (e) {
     let { application: t, onSelectApplication: a, showCategory: p = !1 } = e,
         _ = l.useRef(null),

@@ -16,9 +16,9 @@ var a = n(289873),
     A = n(881373),
     g = n(125877),
     h = n(652215),
-    b = n(778414),
+    b = n(962995),
     x = n(985018),
-    C = n(738894);
+    C = n(75662);
 let v = {
         Logitech30P: { title: b.default.jkdhZq, titleParams: { discountPercent: A.aW }, body: b.default.Yl5ww1 },
         "Logitech G": { title: b.default.jkdhZq, titleParams: { discountPercent: A.aW }, body: b.default.Yl5ww1 },

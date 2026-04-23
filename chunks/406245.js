@@ -11,7 +11,7 @@ var i = n(627968),
     g = n(975571),
     m = n(652215),
     _ = n(985018),
-    A = n(97179);
+    A = n(811227);
 let h = [
         { getQuestion: () => _.intl.string(_.t.C4J8UB), getAnswer: () => _.intl.string(_.t.nhkk6k) },
         {

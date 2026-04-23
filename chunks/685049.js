@@ -1,4 +1,4 @@
-n.d(t, { d: () => g, o: () => u });
+n.d(t, { d: () => _, o: () => u });
 var i = n(627968),
     a = n(409626),
     l = n(692969),
@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(415043),
     o = n(617086),
     c = n(985018),
-    d = n(473486);
+    d = n(73934);
 function u(e) {
     let { applicationId: t, ...n } = e,
         a = (0, o.A)(t);
@@ -19,34 +19,34 @@ function u(e) {
           })
         : null;
 }
-function g(e) {
+function _(e) {
     var t, n, u;
-    let g,
-        { userId: m, applicationId: _, guildId: f, channelId: x, className: p } = e,
-        I = (0, o.A)(_),
+    let _,
+        { userId: g, applicationId: f, guildId: m, channelId: x, className: p } = e,
+        I = (0, o.A)(f),
         A = I.length > 0,
         h =
             ((t = I),
-            (n = f),
+            (n = m),
             (u = x),
-            (g = t.slice(0, 3).map((e) => s.Ay.getName(n, u, e))),
+            (_ = t.slice(0, 3).map((e) => s.Ay.getName(n, u, e))),
             1 === t.length
-                ? c.intl.formatToPlainString(c.t.FURqTU, { name: g[0] })
+                ? c.intl.formatToPlainString(c.t.FURqTU, { name: _[0] })
                 : 2 === t.length
-                  ? c.intl.formatToPlainString(c.t["08Usu/"], { name1: g[0], name2: g[1] })
+                  ? c.intl.formatToPlainString(c.t["08Usu/"], { name1: _[0], name2: _[1] })
                   : 3 === t.length
-                    ? c.intl.formatToPlainString(c.t.NTYHag, { name1: g[0], name2: g[1], name3: g[2] })
+                    ? c.intl.formatToPlainString(c.t.NTYHag, { name1: _[0], name2: _[1], name3: _[2] })
                     : c.intl.formatToPlainString(c.t["i/5oAn"], {
-                          name1: g[0],
-                          name2: g[1],
-                          name3: g[2],
+                          name1: _[0],
+                          name2: _[1],
+                          name3: _[2],
                           numPeople: t.length - 3,
                       })),
         E = (0, l.A)({
             location: "SocialProofButton",
-            applicationId: _,
+            applicationId: f,
             source: a.Ob.UserProfile,
-            sourceUserId: m,
+            sourceUserId: g,
             trackEntryPointImpression: !0,
         });
     return A && null != E
@@ -55,7 +55,7 @@ function g(e) {
               label: h,
               className: p,
               onClick: E,
-              guildId: f,
+              guildId: m,
               channelId: x,
               "aria-label": h,
               overflowCountColor: "text-strong",

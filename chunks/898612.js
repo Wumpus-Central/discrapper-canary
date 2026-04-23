@@ -10,7 +10,7 @@ var l = n(191023),
     c = n(739455),
     d = n(2242),
     m = n(985018),
-    f = n(355711);
+    f = n(60927);
 function g(e) {
     let { channelId: t } = e,
         n = (0, c.fE)(t),

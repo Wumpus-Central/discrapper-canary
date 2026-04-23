@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(563014),
     l = n(885621),
-    u = n(359823);
+    u = n(32271);
 function d(e) {
     let {
             color: t = "default",

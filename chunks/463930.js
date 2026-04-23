@@ -11,7 +11,7 @@ var i = n(627968),
     d = n(775602),
     h = n(36075),
     m = n(545442),
-    p = n(71411);
+    p = n(791347);
 function f(e) {
     let {
             roleStyle: t,
@@ -38,14 +38,14 @@ function f(e) {
         b = null != c && null != c.primaryColor && null != c.secondaryColor,
         N = S && b,
         {
-            gradientStyle: T,
-            gradientClassname: j,
+            gradientStyle: j,
+            gradientClassname: T,
             gradientGlowClassname: R,
         } = (0, h.v5)({ colorStrings: c, roleStyle: "username", animateGradient: _ || E || C?.animate }),
         w = (0, h.CR)(n),
-        L = { className: r()(p.UU, g, A, { [p.Xh]: S, [j]: N }), children: w },
+        L = { className: r()(p.UU, g, A, { [p.Xh]: S, [T]: N }), children: w },
         M = { className: r()(p.lD, R, A), children: n },
-        k =
+        O =
             "dot" === t
                 ? (0, i.jsx)(m.W, {
                       color: s,
@@ -60,10 +60,10 @@ function f(e) {
         onMouseEnter: v,
         onMouseLeave: y,
         children: [
-            "left" === d && k,
+            "left" === d && O,
             (0, i.jsxs)("span", {
                 className: p.VW,
-                style: { color: S && !b && null != s ? s : void 0, ...(N ? T : {}) },
+                style: { color: S && !b && null != s ? s : void 0, ...(N ? j : {}) },
                 children: [
                     null != x
                         ? (0, i.jsx)(a.E, { tag: "span", color: "currentColor", variant: x, ...L })
@@ -80,7 +80,7 @@ function f(e) {
                             : (0, i.jsx)("span", { "aria-hidden": !0, ...M })),
                 ],
             }),
-            "right" === d && k,
+            "right" === d && O,
         ],
     });
 }

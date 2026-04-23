@@ -51,7 +51,7 @@ var i = n(627968),
     Q = n(652215),
     $ = n(980504),
     ee = n(985018),
-    et = n(7225);
+    et = n(864825);
 let en = X.isPlatformEmbedded || "Safari" !== o().name;
 function ei() {
     let e = (0, d.bG)([J.A], () => J.A.getProps().guild),
@@ -179,7 +179,7 @@ function eo(e) {
               text: ee.intl.string(ee.t["/uNYPJ"]),
               onClick: function () {
                   (0, f.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("40556"), n.e("35265")]).then(n.bind(n, 6503));
+                      let { default: e } = await Promise.all([n.e("40556"), n.e("18101")]).then(n.bind(n, 6503));
                       return (n) => (0, i.jsx)(e, { ...n, guildId: t.id });
                   });
               },
@@ -315,7 +315,7 @@ function ed(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, f.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([n.e("40556"), n.e("35265")]).then(
+                                          let { default: e } = await Promise.all([n.e("40556"), n.e("18101")]).then(
                                               n.bind(n, 6503),
                                           );
                                           return (n) => (0, i.jsx)(e, { ...n, guildId: o.id, existingSound: t });

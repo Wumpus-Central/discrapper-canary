@@ -13,7 +13,7 @@ var s = a(627968),
     u = a(396574),
     p = a(563853),
     h = a(855522),
-    I = a(40836);
+    I = a(775684);
 let k = A.sE.MAIN_NAVIGATION_MENU;
 class m extends l.PureComponent {
     state = { isAppCompatible: !0 };

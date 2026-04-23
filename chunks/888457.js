@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(112378),
     p = n(52738),
     m = n(885621),
-    g = n(359823);
+    g = n(32271);
 function A(e) {
     let {
             color: t = "default",

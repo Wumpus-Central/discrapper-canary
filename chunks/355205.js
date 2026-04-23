@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(646865),
     T = n(795816),
     y = n(933958),
-    R = n(47563),
-    j = n(576437),
+    j = n(47563),
+    R = n(576437),
     L = n(688810),
     O = n(139286),
     G = n(941314),
@@ -79,14 +79,14 @@ var i = n(627968),
     ev = n(204722),
     eT = n(535111),
     ey = n(652215),
-    eR = n(5867),
-    ej = n(942370),
+    ej = n(5867),
+    eR = n(942370),
     eL = n(49999),
     eO = n(165610),
     eG = n(9626),
     eD = n(985018),
-    eM = n(41959),
-    eU = n(503432),
+    eM = n(911070),
+    eU = n(490696),
     eP = n(268920),
     ew = n(633217);
 function ek(e) {
@@ -220,23 +220,23 @@ function eB(e) {
         S = !N || !b,
         v = (0, ev.W)(t, s, a),
         T = [],
-        { isEligible: y, displayedApp: R } = (function (e) {
+        { isEligible: y, displayedApp: j } = (function (e) {
             let { connectionApp: t } = e,
                 { enabled: n } = G.A.useConfig({ location: "ActivityPanelGameCard" }),
                 { data: i } = (0, M.YY)(t?.parentId ?? t?.id);
-            return { isEligible: n && null != t && ej.Y.has(t.id), displayedApp: i };
+            return { isEligible: n && null != t && eR.Y.has(t.id), displayedApp: i };
         })({ connectionApp: n }),
-        j = !1;
+        R = !1;
     S ||
         (d && c
             ? v && null == a
                 ? T.push(h.M.ACCOUNT_LINK_INVITE_FRIENDS)
                 : T.push(h.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
-            : !d && u && null != t && (j = !0),
+            : !d && u && null != t && (R = !0),
         null != f && r?.id != null && r?.name != null && T.push(h.M.JOIN_GAME_COMMUNITY_RTC_CTA));
     let { shouldShow: L, markAsDismissed: O } = (0, X.A)({
             application: t,
-            disabled: !j,
+            disabled: !R,
             dismissibleContent: h.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL,
             dismissibleContentGroupName: eL.m.ACCOUNT_NAME_ZONE,
             bypassAutoDismiss: !0,
@@ -314,7 +314,7 @@ function eB(e) {
                                 application: t,
                                 connectionApp: n,
                                 isEligibleForIncentivizedAccountLinking: y,
-                                incentivizedAccountLinkingDisplayedApp: R,
+                                incentivizedAccountLinkingDisplayedApp: j,
                                 markRecurringAsDismissed: O,
                                 startAuthorization: A,
                                 analyticsLocations: I,
@@ -452,7 +452,7 @@ class eF extends l.PureComponent {
                         e.id,
                         (0, P.Qt)({ applicationId: t.applicationId, instanceId: t.compositeInstanceId }),
                     ),
-                (0, er.pQ)(e.type) && (0, T.gk)(eR.Gd.PANEL));
+                (0, er.pQ)(e.type) && (0, T.gk)(ej.Gd.PANEL));
     };
     handleFrameLinkClick = () => {
         let { frame: e, isActivityPopoutOpen: t } = this.props;
@@ -495,7 +495,7 @@ class eF extends l.PureComponent {
                         size: q.M.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
-                    (0, i.jsx)(j.M, {
+                    (0, i.jsx)(R.M, {
                         popoutTargetRef: this.activityPopoutTargetRef,
                         isForceShowSharingPopout: r,
                         setIsForceShowSharingPopout: o,
@@ -602,10 +602,10 @@ let eW = (0, b.A)(function (e) {
                       : void 0) ?? "",
         ]),
         I = (0, u.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
-        C = (0, R.u)() && null != I && (0, v.f)(),
+        C = (0, j.u)() && null != I && (0, v.f)(),
         b = (0, u.bG)([eA.Ay], () => (0, J.A)(eA.Ay) && (0, eC.isWindows)()),
         T = (0, u.bG)([em.A], () => (null != s ? em.A.findActivity(s, (e) => e.type === ey.$pd.PLAYING) : null)),
-        j = null != _ && _.ownerId === s && _.state !== ey.XYD.ENDED,
+        R = null != _ && _.ownerId === s && _.state !== ey.XYD.ENDED,
         O = (0, u.bG)([ef.default, eg.A], () => (null != h ? (0, k.m1)(h, ef.default, eg.A) : void 0)),
         G = (0, el.A)(),
         [M, P] = l.useState(!1),
@@ -646,7 +646,7 @@ let eW = (0, b.A)(function (e) {
         debugRunningGame: r,
         application: x,
         useReducedMotion: g,
-        isStreaming: j,
+        isStreaming: R,
         channel: h,
         canStream: E,
         stream: _,

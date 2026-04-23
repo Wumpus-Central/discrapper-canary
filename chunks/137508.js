@@ -9,7 +9,7 @@ var i = a(627968),
     d = a(31717),
     _ = a(457417),
     u = a(985018),
-    h = a(50631);
+    h = a(785479);
 let A = () => {
     let { message: e, channel: t, updateMessageText: a } = (0, _.Vw)(),
         A = (0, l.bG)([d.A], () => d.A.getDraft(e.channel_id, d.C.ChannelMessage)),

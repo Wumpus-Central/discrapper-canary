@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(652215),
     E = n(307731),
     I = n(985018),
-    v = n(10585),
-    b = n(471717);
+    v = n(347353),
+    b = n(866661);
 class T extends l.Component {
     state = { isReactionPickerActive: !1 };
     ref = l.createRef();

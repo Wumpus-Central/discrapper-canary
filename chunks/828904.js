@@ -22,8 +22,8 @@ var n = r(627968),
     x = r(427262),
     D = r(974175),
     E = r(731854),
-    S = r(178116),
-    R = r(373378);
+    S = r(41604),
+    R = r(818050);
 let _ = { [E.r8.NO_OVERRIDE]: "None", [E.r8.LOW]: "Low Quality Stream", [E.r8.HIGH]: "High Quality Stream" };
 function j(e) {
     let t = [],

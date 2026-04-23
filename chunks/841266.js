@@ -8,7 +8,7 @@ var n = a(627968),
     d = a(534514),
     c = a(151196),
     u = a(473336),
-    m = a(3838);
+    m = a(545406);
 function h(e) {
     let { yaml: t, label: a } = e,
         d = l.useCallback(() => {

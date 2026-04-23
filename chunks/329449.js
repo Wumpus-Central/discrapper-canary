@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(517738),
+    r = n(356197),
     o = n(311907),
     c = n(717421),
     d = n(834730),
@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(103640),
     C = n(924177),
     x = n(985018),
-    S = n(864932);
+    S = n(51940);
 let I = l.memo(function (e) {
         let { channelId: t, width: n } = e,
             a = (0, o.bG)([h.A], () => h.A.useReducedMotion),

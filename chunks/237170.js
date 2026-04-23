@@ -11,7 +11,7 @@ var a,
     E = n(120340),
     h = n(196645),
     _ = n(985018),
-    A = n(717963),
+    A = n(16459),
     x =
         (((a = {})[(a.INTRO = 0)] = "INTRO"),
         (a[(a.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),

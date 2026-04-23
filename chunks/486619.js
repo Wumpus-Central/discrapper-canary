@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(997509),
     c = n(652215),
     u = n(985018),
-    m = n(99720);
+    m = n(872584);
 function g(e) {
     let { guildId: t, role: n } = e;
     return (0, i.jsx)("div", {

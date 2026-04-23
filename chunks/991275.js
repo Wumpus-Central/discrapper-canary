@@ -25,14 +25,14 @@ var x = n(442433),
     S = n(688810),
     b = n(941726),
     N = n(449582),
-    T = n(276055),
-    j = n(83974),
+    j = n(276055),
+    T = n(83974),
     R = n(420706),
     w = n(750770),
     L = n(485947),
     M = n(915089),
-    k = n(509536),
-    O = n(201275),
+    O = n(509536),
+    k = n(201275),
     P = n(657048),
     D = n(728321),
     U = n(342296),
@@ -51,7 +51,7 @@ var x = n(442433),
     $ = n(47167),
     X = n(652215),
     Q = n(985018),
-    ee = n(689096);
+    ee = n(540808);
 let et = J.Ay.getEnableHardwareAcceleration(),
     en = { origin: { x: 38, y: 11 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } },
     ei = l.memo(function (e) {
@@ -77,7 +77,7 @@ let et = J.Ay.getEnableHardwareAcceleration(),
                 ...b
             } = e,
             N = l.useRef(null),
-            [T, j] = l.useState(!1),
+            [j, T] = l.useState(!1),
             R = null != y ? new Date(y) : null,
             w = l.useCallback(
                 (e) => {
@@ -92,7 +92,7 @@ let et = J.Ay.getEnableHardwareAcceleration(),
                                 n.e("35313"),
                                 n.e("81653"),
                                 n.e("84841"),
-                                n.e("9091"),
+                                n.e("63143"),
                             ]).then(n.bind(n, 107632)),
                             t = z.A.isInChannel(H.A.getVoiceChannelId(), u.id);
                         return (n) => (0, i.jsx)(e, { ...n, user: u, guildId: _, channel: g, showMediaItems: t });
@@ -111,7 +111,7 @@ let et = J.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     null != _ &&
                         (e.stopPropagation(),
-                        (0, k.K4)({
+                        (0, O.K4)({
                             guildId: _,
                             location: { section: X.JJy.MEMBER_LIST, object: X.ZSU.BOOST_GEM_ICON },
                         }));
@@ -127,9 +127,9 @@ let et = J.Ay.getEnableHardwareAcceleration(),
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
             onShiftClick: L,
-            shouldShow: T,
+            shouldShow: j,
             onRequestClose: () => {
-                j(!1);
+                T(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: l, ...a } = e;
@@ -155,14 +155,14 @@ let et = J.Ay.getEnableHardwareAcceleration(),
                     isMobile: I,
                     isVR: v,
                     onClickPremiumGuildIcon: M,
-                    selected: T,
+                    selected: j,
                     itemProps: b,
                     nameplate: S,
                     onClick: (e) => {
-                        e.shiftKey ? L?.() : j((e) => !e);
+                        e.shiftKey ? L?.() : T((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        T ? e.stopPropagation() : l?.(e);
+                        j ? e.stopPropagation() : l?.(e);
                     },
                     ...a,
                 });
@@ -181,7 +181,7 @@ let et = J.Ay.getEnableHardwareAcceleration(),
     }),
     es = l.memo(function (e) {
         let { id: t, title: s, count: r, guildId: a, className: o } = e,
-            c = (0, O.$7)({ roleId: t, guildId: a, size: 16 }),
+            c = (0, k.$7)({ roleId: t, guildId: a, size: 16 }),
             u = (0, h.bG)([V.default], () => (null == r ? null : new Intl.NumberFormat(V.default.locale).format(r)), [
                 r,
             ]),
@@ -250,7 +250,7 @@ class ea extends l.Component {
         let { section: t } = e,
             { groups: n, channel: s } = this.props,
             r = n[t];
-        if ((0, T.l)(r)) return (0, l.createElement)(T.A, { ...r, key: `section-${t}` });
+        if ((0, j.l)(r)) return (0, l.createElement)(j.A, { ...r, key: `section-${t}` });
         if (0 === t) {
             let { key: e } = r;
             return (0, i.jsx)(
@@ -346,7 +346,7 @@ class ea extends l.Component {
                     e,
                 );
             }
-            if (r.type === G.S9.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(j.A, {}, "content-inventory-hidden-entry");
+            if (r.type === G.S9.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(T.A, {}, "content-inventory-hidden-entry");
         }
         return (0, i.jsx)(er, { index: l }, `placeholder-${t}:${n}`);
     };
@@ -362,7 +362,7 @@ class ea extends l.Component {
     }, 50);
     getContentFeedGroup = () => {
         let e = this.props.groups[w.f];
-        if ((0, T.l)(e)) return e;
+        if ((0, j.l)(e)) return e;
     };
     hasContentFeed = () => null != this.getContentFeedGroup();
     getRowHeightComputer = () => {

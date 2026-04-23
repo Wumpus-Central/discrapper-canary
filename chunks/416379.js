@@ -23,7 +23,7 @@ var i = n(627968),
     v = n(927057),
     y = n(652215),
     S = n(985018),
-    b = n(776380);
+    b = n(1468);
 let N = "channel-reply-bar-a11y-description";
 function j(e) {
     let { channel: t, message: n, replyChainLength: s } = e,

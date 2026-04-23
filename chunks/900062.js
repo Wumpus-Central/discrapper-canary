@@ -3,7 +3,7 @@ var a = n(627968);
 n(64700);
 var i = n(834730),
     s = n(51183),
-    l = n(202082);
+    l = n(96098);
 function r(e) {
     let { item: t } = e;
     if ("contentInventory" !== t.data.kind) return null;

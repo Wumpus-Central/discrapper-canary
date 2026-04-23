@@ -54,7 +54,7 @@ let C = r().throttle(function (e, t) {
                     return (
                         N !== c.A.getGuildId() && (0, E.i)(N, d.Ay.getDefaultChannel(N)?.id),
                         (0, s.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("9776")]).then(
+                            let { default: e } = await Promise.all([n.e("51354"), n.e("7453"), n.e("19452")]).then(
                                 n.bind(n, 926956),
                             );
                             return (t) => (0, i.jsx)(e, { ...t, guildId: N });

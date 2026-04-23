@@ -5,7 +5,7 @@ n(64700);
 var i = n(503698),
     s = n.n(i),
     a = n(885621),
-    o = n(359823);
+    o = n(32271);
 function l(e) {
     let { contents: t, label: n, className: i, color: l = "default" } = e;
     return 0 === t.length

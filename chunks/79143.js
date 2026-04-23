@@ -17,7 +17,7 @@ var i = n(627968),
     A = n(327325),
     E = n(935206),
     f = n(985018),
-    j = n(494344);
+    j = n(94792);
 function N(e) {
     let {
             guildId: t,

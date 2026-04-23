@@ -30,7 +30,7 @@ var i = n(627968),
     R = n(687021),
     L = n(652215),
     D = n(985018),
-    P = n(9606);
+    P = n(405318);
 function G(e) {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e("65281").then(n.bind(n, 547352));
@@ -47,10 +47,10 @@ function M(e) {
         M = (0, r.bG)([b.Ay], () => (null != t ? b.Ay.getMember(t.id, o.id) : null)),
         U = (0, r.bG)([f.A], () => !f.A.isFetchingProfile(o.id, t?.id)),
         k = (0, r.bG)([C.A], () => C.A.hidePersonalInformation),
-        { pendingAvatar: w, pendingNameplate: V, ...B } = (0, r.cf)([S.A], () => S.A.getPendingChanges(t?.id)),
-        F = (0, T.V7)({ userId: o.id, image: w }),
+        { pendingAvatar: V, pendingNameplate: w, ...B } = (0, r.cf)([S.A], () => S.A.getPendingChanges(t?.id)),
+        F = (0, T.V7)({ userId: o.id, image: V }),
         z = (0, p.lw)({
-            pendingValue: V,
+            pendingValue: w,
             userValue: o?.collectibles?.nameplate,
             guildValue: M?.collectibles?.nameplate,
             guildId: t?.id,

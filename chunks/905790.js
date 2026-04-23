@@ -14,8 +14,8 @@ var r = n(627968),
     E = n(268218),
     h = n(793943),
     p = n(49999),
-    m = n(409915),
-    g = n(277817);
+    m = n(805627),
+    g = n(45945);
 function A() {
     return (0, r.jsx)("div", { "data-app-right-panel": !0, className: g.kL });
 }

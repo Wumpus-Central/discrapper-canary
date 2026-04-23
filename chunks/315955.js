@@ -7,9 +7,9 @@ var i = n(627968),
     s = n(734066),
     o = n(274372),
     c = n(794905),
-    d = n(788077),
+    d = n(16590),
     u = n(985018),
-    _ = n(974114);
+    _ = n(310882);
 function p(e) {
     let { attachment: t, channelId: n, messageId: p } = e,
         { enableAdvancedSignals: h } = s.L_.useConfig({ location: "DistributedClipShareCTA" }),

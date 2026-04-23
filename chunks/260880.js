@@ -4,7 +4,7 @@ var n = a(627968),
     i = a(503698),
     s = a.n(i),
     r = a(761929),
-    o = a(804271);
+    o = a(23599);
 function d(e) {
     let { resizableNode: t, minHeight: a, onResize: l } = e,
         i = (0, r.A)({

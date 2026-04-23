@@ -30,9 +30,9 @@ var i = s(627968),
     R = s(207975),
     T = s(502075),
     M = s(765682),
-    D = s(864204),
+    D = s(710787),
     G = s(985018),
-    U = s(82811);
+    U = s(495163);
 function L(e, t, s, i) {
     let r = (0, w.isWindows)() ? (0, N.A)(v.Ay, y.A) : null,
         n = v.Ay.getRunningGames(),

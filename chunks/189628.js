@@ -20,7 +20,7 @@ var i = n(627968),
     C = n(723702),
     E = n(692092),
     I = n(985018),
-    v = n(503656);
+    v = n(6376);
 let y = (e, t) => `${e}:${t}`,
     S = l.forwardRef(function (e, t) {
         let n,
@@ -39,12 +39,12 @@ let y = (e, t) => `${e}:${t}`,
                 allowAnimatedEmoji: S,
                 selectedItemClassName: b,
                 inNitroLockedSection: N,
-                ...T
+                ...j
             } = e,
-            j = (0, a.bG)([x.A], () => (l.type === m.i.GUILD ? x.A.getGuild(l.guildId) : void 0), [l]);
+            T = (0, a.bG)([x.A], () => (l.type === m.i.GUILD ? x.A.getGuild(l.guildId) : void 0), [l]);
         return (0, i.jsx)(c.vN, {
             children: (0, i.jsx)("button", {
-                ...T,
+                ...j,
                 className: r()(v._X, { [v.lG]: o, [v.Lh]: u, [v.Bx]: d, [b ?? ""]: d, [v.TV]: p }),
                 "data-type": f.g.EMOJI,
                 "data-id": l.id,
@@ -55,8 +55,8 @@ let y = (e, t) => `${e}:${t}`,
                 children: (0, i.jsx)(E.A, {
                     "aria-label":
                         ((n = (0, A.N)(l)),
-                        (j?.name != null &&
-                            (n = I.intl.formatToPlainString(I.t["nXv4/B"], { names: n, guildName: j.name })),
+                        (T?.name != null &&
+                            (n = I.intl.formatToPlainString(I.t["nXv4/B"], { names: n, guildName: T.name })),
                         s)
                             ? I.intl.formatToPlainString(I.t["9FI9Z0"], { names: n })
                             : n),
@@ -85,14 +85,14 @@ function b(e) {
             showEmojiFavoriteTooltip: v,
             surrogateCodePoint: b,
             selectedItemClassName: N,
-            getEmojiItemProps: T,
-            isMediumSize: j,
+            getEmojiItemProps: j,
+            isMediumSize: T,
             isLargeSize: R,
             pulseItemKey: w,
             allowAnimatedEmoji: L,
             setPulseItemKey: M,
-            messageId: k,
-            isBurstReaction: O,
+            messageId: O,
+            isBurstReaction: k,
             rowPosition: P,
             inNitroLockedSection: D,
         } = e,
@@ -104,7 +104,7 @@ function b(e) {
         Z = () => {
             A.current || E.current || f(t);
         },
-        { ref: q, tabIndex: Y, onFocus: J, ...$ } = T(z, c) ?? {},
+        { ref: q, tabIndex: Y, onFocus: J, ...$ } = j(z, c) ?? {},
         X =
             U !== y(z, c)
                 ? (0, i.jsx)(S, {
@@ -112,7 +112,7 @@ function b(e) {
                       emoji: H,
                       isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(H),
                       isLargeSize: R,
-                      isMediumSize: j,
+                      isMediumSize: T,
                       isInspected: r,
                       isDisabled: K,
                       showPulse: w === s,
@@ -123,16 +123,16 @@ function b(e) {
                           if (
                               null != B.current &&
                               null != P &&
-                              null != k &&
+                              null != O &&
                               !e.shiftKey &&
                               null != H.name &&
-                              O &&
+                              k &&
                               !G &&
                               L
                           ) {
                               let e = null == H.id ? p.Ay.convertNameToSurrogate(H.name) : H.name,
                                   t = B.current.getBoundingClientRect();
-                              (t.x = P.x + (z + 1) * W), V(y(z, c)), (0, _.h)(k, e, H.id, t);
+                              (t.x = P.x + (z + 1) * W), V(y(z, c)), (0, _.h)(O, e, H.id, t);
                           }
                           ((e) => {
                               if ((e.stopPropagation(), A.current || E.current)) return;

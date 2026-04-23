@@ -13,7 +13,7 @@ var n = a(627968),
     p = a(973172),
     _ = a(652215),
     g = a(985018),
-    x = a(67976);
+    x = a(668168);
 function A(e) {
     let { applicationId: t, similarApplications: a, onSelectApplication: s, similarLoadId: r } = e,
         o = (function (e) {

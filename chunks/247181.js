@@ -1,8 +1,8 @@
 l.d(t, { A: () => x });
-var n = l(627968),
-    a = l(64700),
-    i = l(231723),
-    s = l(939249),
+var a = l(627968),
+    n = l(64700),
+    s = l(231723),
+    i = l(939249),
     r = l(408278),
     d = l(548411),
     o = l(256905),
@@ -13,7 +13,7 @@ var n = l(627968),
     p = l(584794),
     f = l(429364),
     v = l(985018),
-    g = l(594731);
+    g = l(97451);
 function x(e) {
     let { transitionState: t, clip: l, onClose: x } = e,
         {
@@ -27,7 +27,7 @@ function x(e) {
             audioTracks: w,
         } = (0, f.T)(),
         k = l.type === c.nQ.SCREENSHOT;
-    a.useEffect(() => {
+    n.useEffect(() => {
         if (!k) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
         function e(e) {
             if (document.activeElement?.tagName === "INPUT" || document.activeElement?.role === "textbox") return;
@@ -35,23 +35,23 @@ function x(e) {
             if (null == t) return;
             let l = N.current?.videoElement;
             if (null == l) return;
-            let n = (0, p.A)(l.duration, e.shiftKey),
-                a = !1;
+            let a = (0, p.A)(l.duration, e.shiftKey),
+                n = !1;
             switch (e.key) {
                 case " ":
-                    (a = !0), l.paused ? t.play() : t.pause();
+                    (n = !0), l.paused ? t.play() : t.pause();
                     break;
                 case "ArrowLeft":
-                    (a = !0), t.seek(Math.max(y, l.currentTime - n));
+                    (n = !0), t.seek(Math.max(y, l.currentTime - a));
                     break;
                 case "ArrowRight":
-                    (a = !0), t.seek(Math.min(A, l.currentTime + n));
+                    (n = !0), t.seek(Math.min(A, l.currentTime + a));
             }
-            a && (e.stopPropagation(), e.preventDefault());
+            n && (e.stopPropagation(), e.preventDefault());
         }
     }, [N, k, l.type, y, A]);
-    let I = a.useMemo(() => w.filter((e) => e.trackName.includes(":voice")), [w]),
-        S = a.useCallback(() => {
+    let I = n.useMemo(() => w.filter((e) => e.trackName.includes(":voice")), [w]),
+        S = n.useCallback(() => {
             (0, o.R)(
                 {
                     items: [{ type: "IMAGE", url: l.thumbnail, proxyUrl: l.thumbnail, alt: l.name ?? "" }],
@@ -62,29 +62,29 @@ function x(e) {
             );
         }, [l.thumbnail, l.name]);
     if (k)
-        return (0, n.jsx)("div", {
+        return (0, a.jsx)("div", {
             className: g.OJ,
             children:
-                t !== i.ip.ENTERED
-                    ? (0, n.jsx)(u.A, {})
-                    : (0, n.jsx)("div", {
+                t !== s.ip.ENTERED
+                    ? (0, a.jsx)(u.A, {})
+                    : (0, a.jsx)("div", {
                           className: g.zT,
-                          children: (0, n.jsx)(s.D, {
+                          children: (0, a.jsx)(i.D, {
                               className: g.xS,
                               onClick: S,
-                              children: (0, n.jsx)("img", { className: g.V_, src: l.thumbnail, alt: l.name ?? "" }),
+                              children: (0, a.jsx)("img", { className: g.V_, src: l.thumbnail, alt: l.name ?? "" }),
                           }),
                       }),
         });
-    let L = null == E || t !== i.ip.ENTERED;
-    return (0, n.jsx)("div", {
+    let L = null == E || t !== s.ip.ENTERED;
+    return (0, a.jsx)("div", {
         className: g.OJ,
-        children: (0, n.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
             className: g.zT,
             children: [
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: g.Gv,
-                    children: (0, n.jsx)(r.K, {
+                    children: (0, a.jsx)(r.K, {
                         size: "sm",
                         variant: "icon-only",
                         icon: d.Z,
@@ -93,17 +93,17 @@ function x(e) {
                     }),
                 }),
                 L
-                    ? (0, n.jsx)(u.A, {})
-                    : (0, n.jsxs)(n.Fragment, {
+                    ? (0, a.jsx)(u.A, {})
+                    : (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, n.jsx)(m.A, {
+                              (0, a.jsx)(m.A, {
                                   applicationAudioEnabled: j,
                                   voiceAudioEnabled: b,
                                   soundboardAudioEnabled: C,
                                   ref: N,
                                   clip: l,
                               }),
-                              (0, n.jsx)(h.A, { transitionState: t, sourceURL: E, clip: l, voiceAudioTracks: I }),
+                              (0, a.jsx)(h.A, { transitionState: t, sourceURL: E, clip: l, voiceAudioTracks: I }),
                           ],
                       }),
             ],

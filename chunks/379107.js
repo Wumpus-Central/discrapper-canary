@@ -12,7 +12,7 @@ var a = n(627968),
     _ = n(207963),
     p = n(489414),
     h = n(814890),
-    A = n(252592);
+    A = n(40816);
 function C(e) {
     let { emoji: t, label: n, description: l, isDisabled: r, isOffset: s } = e,
         o = i()(A._A, { [A.r9]: r, [A.cY]: null == t && s });

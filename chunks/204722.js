@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(384059),
     T = n(359348),
     y = n(932001),
-    R = n(625180),
-    j = n(338771),
+    j = n(625180),
+    R = n(338771),
     L = n(212637),
     O = n(397400),
     G = n(488803),
@@ -45,8 +45,8 @@ var i = n(627968),
     K = n(652215),
     z = n(49999),
     q = n(985018),
-    X = n(76660),
-    Q = n(215917);
+    X = n(576709),
+    Q = n(610861);
 function J(e, t, n) {
     return (
         null != e &&
@@ -114,12 +114,12 @@ let Z = l.memo(function (e) {
             ),
             ex = l.useCallback(
                 (e) => () => {
-                    (0, v.X)(ea, v.O.LEAVE_ACTIVITY), R.A.stopFrame({ applicationId: e });
+                    (0, v.X)(ea, v.O.LEAVE_ACTIVITY), j.A.stopFrame({ applicationId: e });
                 },
                 [ea],
             ),
             eI = l.useCallback(() => {
-                (0, j.A)(t);
+                (0, R.A)(t);
             }, [t]),
             eC = l.useCallback(() => {
                 (0, u.openModalLazy)(async () => {
@@ -157,9 +157,9 @@ let Z = l.memo(function (e) {
             l.useEffect(() => {
                 el && (ey(!1), null != ev.current && (clearTimeout(ev.current), (ev.current = null)));
             }, [el]);
-        let eR =
+        let ej =
                 eo?.guildId == null || null == P ? null : (0, i.jsx)(et, { guildId: eo.guildId, applicationId: eo.id }),
-            ej = eg
+            eR = eg
                 ? (0, i.jsx)(ee, {
                       tooltipText: q.intl.formatToPlainString(X.default.YhnUVO, { gameName: eb }),
                       onClick: eN,
@@ -280,9 +280,9 @@ let Z = l.memo(function (e) {
                               ey(!1), null != ev.current && (clearTimeout(ev.current), (ev.current = null));
                           },
                       });
-        return null == eL && null == eO && null == eG && null == eD && null == eU && null == eR && null == ej
+        return null == eL && null == eO && null == eG && null == eD && null == eU && null == ej && null == eR
             ? null
-            : (0, i.jsxs)("div", { className: Q.o1, children: [eR ?? eU ?? eO, ej, eL, eG ?? eD ?? eM, eP] });
+            : (0, i.jsxs)("div", { className: Q.o1, children: [ej ?? eU ?? eO, eR, eL, eG ?? eD ?? eM, eP] });
     }),
     $ = l.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: l, connectionApp: s } = e;

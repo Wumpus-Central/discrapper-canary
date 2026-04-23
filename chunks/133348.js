@@ -11,8 +11,8 @@ var a = n(371444),
     c = n(200463),
     u = n(853742),
     m = n(985018),
-    h = n(297897),
-    g = n(50001);
+    h = n(221314),
+    g = n(901713);
 function x(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: x, layoutType: f, tagSetting: _ } = (0, c.R)(t.id),

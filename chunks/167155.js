@@ -6,7 +6,7 @@ var l = n(503698),
     s = n(834730),
     r = n(29160),
     o = n(985018),
-    c = n(873054);
+    c = n(60062);
 let d = function (e) {
     let { className: t, hasVideo: n, text: l, hasConnectedChannel: d, textVariant: u = "text-md/medium" } = e,
         h = n ? o.intl.string(o.t.IlHdW8) : o.intl.string(o.t.WsOisp);

@@ -1,4 +1,4 @@
-s.d(t, { Ay: () => m, fh: () => h, qP: () => u });
+s.d(t, { Ay: () => h, fh: () => m, qP: () => u });
 var n,
     a,
     r = s(627968),
@@ -7,10 +7,10 @@ var n,
     d = s.n(i);
 s(284009);
 var o = s(736653),
-    c = s(137355),
+    c = s(63947),
     u = (((n = {}).UNSET = "unset"), (n.BLUE = "blue"), (n.ORANGE = "orange"), n),
-    h = (((a = {}).LIGHT = "light"), (a.MEDIUM = "medium"), a);
-let m = (e) => {
+    m = (((a = {}).LIGHT = "light"), (a.MEDIUM = "medium"), a);
+let h = (e) => {
     let {
             progress: t,
             minimum: s = 0,
@@ -18,8 +18,8 @@ let m = (e) => {
             weight: a = "light",
             variant: i,
             override: u,
-            glowing: h = !0,
-            labelledBy: m,
+            glowing: m = !0,
+            labelledBy: h,
         } = e,
         x = null != u && "unset" === i,
         C = (0, o.Ay)(),
@@ -35,7 +35,7 @@ let m = (e) => {
                       "--custom-gradient-glow": _?.gradientEnd,
                   }
                 : {}),
-            ...(!h && { "--custom-gradient-glow": "transparent" }),
+            ...(!m && { "--custom-gradient-glow": "transparent" }),
         };
     return (0, r.jsx)("div", {
         className: d()(c.progressContainer, c[a], c[i]),
@@ -47,7 +47,7 @@ let m = (e) => {
             "aria-valuenow": t,
             "aria-valuemin": s,
             "aria-valuemax": n,
-            "aria-labelledby": m,
+            "aria-labelledby": h,
             children: [
                 (0, r.jsx)("div", { className: d()(c.glow, { [c.empty]: g }) }),
                 (0, r.jsx)("div", { className: d()(c.bar, c[i], { [c.empty]: g }) }),

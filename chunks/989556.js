@@ -12,9 +12,9 @@ var i = n(627968),
     g = n(997509),
     h = n(555337),
     x = n(652215),
-    _ = n(116112),
+    _ = n(661023),
     p = n(985018),
-    A = n(15137);
+    A = n(644961);
 let E = function (e) {
     let { className: t, guildId: n, tag: l, badge: E, primaryColor: f, secondaryColor: j, isDisabled: N = !1 } = e,
         I = (0, r.bG)([h.A], () => h.A.getProps().originalProfile),

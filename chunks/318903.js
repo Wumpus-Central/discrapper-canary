@@ -7,7 +7,7 @@ var l = t(627968),
     o = t(791498),
     c = t(590089),
     d = t(876813),
-    u = t(46144);
+    u = t(869376);
 function x(e) {
     let { node: n } = e,
         { destinationKey: t, useTrailingDecoration: x, useTitle: j, useSubtitle: h } = n,

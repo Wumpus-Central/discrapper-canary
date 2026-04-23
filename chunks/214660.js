@@ -21,8 +21,8 @@ var s = n(503698),
     I = n(652215),
     C = n(53516),
     b = n(985018),
-    N = n(127977),
-    S = n(77006),
+    N = n(725673),
+    S = n(824078),
     v = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let T = (e) => {
     let { type: t, guildId: i, closePopout: s } = e,
@@ -30,8 +30,8 @@ let T = (e) => {
         {
             notClaimed: T,
             notEmailVerified: y,
-            notPhoneVerified: R,
-            newAccount: j,
+            notPhoneVerified: j,
+            newAccount: R,
             newMember: L,
         } = (0, r.bG)([E.A], () => E.A.getCheck(i), [i]),
         O = 0 === t ? b.intl.string(b.t["6zY8BI"]) : null,
@@ -40,14 +40,14 @@ let T = (e) => {
     return (0 === t &&
         (T
             ? ((G = b.intl.string(b.t.IRxUlG)), (D = b.intl.string(b.t.fiNVin)))
-            : R
+            : j
               ? ((G = b.intl.string(b.t.vW8iUF)), (D = b.intl.string(b.t["50gfOv"])))
               : y
                 ? ((G = b.intl.string(b.t.vdSOpz)), (D = b.intl.string(b.t.lm1UKt)))
                 : L
                   ? ((G = b.intl.formatToPlainString(b.t.v1ktYb, { min: I.$8o.MEMBER_AGE })),
                     (D = b.intl.string(b.t.BddRzS)))
-                  : j &&
+                  : R &&
                     ((G = b.intl.formatToPlainString(b.t.sncw41, { min: I.$8o.ACCOUNT_AGE })),
                     (D = b.intl.string(b.t.BddRzS)))),
     null == O || null == G)
@@ -75,12 +75,12 @@ let T = (e) => {
                                                 onClick: () => {
                                                     T
                                                         ? g.R()
-                                                        : R
+                                                        : j
                                                           ? (0, d.openModalLazy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("14171"),
+                                                                        n.e("85543"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, l.jsx)(e, {
@@ -103,7 +103,7 @@ let T = (e) => {
                                             }),
                                         })
                                       : null,
-                                  T || R || y
+                                  T || j || y
                                       ? (0, l.jsx)(_.Q, {
                                             onClick: s,
                                             text: b.intl.string(b.t.oEAioF),

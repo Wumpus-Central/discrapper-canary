@@ -24,9 +24,9 @@ var i = n(627968),
     S = n(788868),
     v = n(518477),
     T = n(985018),
-    y = n(505631),
-    R = n(657190);
-let j = b.Z.SIZE_90;
+    y = n(80223),
+    j = n(997990);
+let R = b.Z.SIZE_90;
 function L(e) {
     let {
             sku: t,
@@ -60,7 +60,7 @@ function L(e) {
             }),
                 _();
         }, [_, t.id, s, t.productLine, g]),
-        { label: N, icon: S, isPromptingPurchase: R } = (0, x.h)({ wishlistOwner: n, isOwned: !1, shortText: !0 }),
+        { label: N, icon: S, isPromptingPurchase: j } = (0, x.h)({ wishlistOwner: n, isOwned: !1, shortText: !0 }),
         [L, O] = l.useState(!1);
     return (0, i.jsxs)(o.B, {
         direction: "horizontal",
@@ -75,7 +75,7 @@ function L(e) {
                     disableRiveHover: h,
                     sku: t,
                     user: n,
-                    spec: j,
+                    spec: R,
                     cardStyle: a()(y.Nr, d),
                     skuPreviewStyle: a()(y.ho, c),
                     skuAssetClassName: L ? u : void 0,
@@ -83,8 +83,8 @@ function L(e) {
                     "aria-label": T.intl.formatToPlainString(T.t.ZBB4Ty, { productName: (0, f.TC)(t) }),
                     onHoverOrFocusChange: O,
                     children: (0, i.jsx)(x.A, {
-                        spec: j,
-                        onClick: R ? b : C,
+                        spec: R,
+                        onClick: j ? b : C,
                         isHoveringOrFocusing: L,
                         label: N,
                         icon: S,
@@ -205,7 +205,7 @@ function D(e) {
         analyticsLocations: s,
         onDetailsClick: r,
         onPurchaseClick: r,
-        skuPreviewStyle: R.MO,
+        skuPreviewStyle: j.MO,
         disableRiveHover: !0,
         singleCardInfo: o,
         ...a,

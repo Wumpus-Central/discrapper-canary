@@ -45,7 +45,7 @@ var i,
     z = n(988794),
     W = n(652215),
     $ = n(985018),
-    q = n(809668);
+    q = n(28164);
 let X = a.memo(function (e) {
     let {
         heading: t,

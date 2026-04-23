@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(517738),
+    r = i(356197),
     d = i(311907),
     o = i(866323),
     c = i(765178),
@@ -26,7 +26,7 @@ var n = i(627968),
     N = i(518477),
     T = i(652215),
     C = i(985018),
-    R = i(82784);
+    R = i(381280);
 let O = "user-profile-save-reset-toolbar-label";
 function k(e) {
     let { className: t, guildId: i } = e,

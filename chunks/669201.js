@@ -25,19 +25,19 @@ var i = n(627968),
     S = n(361670),
     b = n(891090),
     N = n(256449),
-    T = n(679382),
-    j = n(842086),
+    j = n(679382),
+    T = n(842086),
     R = n(313519),
     w = n(647117),
     L = n(234091),
     M = n(275589),
-    k = n(526411),
-    O = n(642550),
+    O = n(526411),
+    k = n(642550),
     P = n(616961),
     D = n(994048),
     U = n(823894),
     V = n(652215),
-    G = n(2426);
+    G = n(854138);
 let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     B = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     H = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -49,7 +49,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     Y = r()(b.HA, 200),
     J = l.forwardRef(function (e, t) {
         let { containerWidth: s, channel: r, onSelectSticker: c, closePopout: d } = e,
-            v = k.A.useConfig({ location: "StickerPicker" }).padding,
+            v = O.A.useConfig({ location: "StickerPicker" }).padding,
             { location: J } = (0, h.p)(),
             { analyticsLocations: $ } = (0, p.Ay)(m.A.STICKER_PICKER),
             X = (0, A.V)()?.subscription_trial != null,
@@ -61,7 +61,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             es = l.useRef("");
         l.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
         let er = (0, N.pD)(r),
-            ea = 0 === er.filter((e) => e.type !== j.Z2.EMPTY_GUILD_UPSELL).length,
+            ea = 0 === er.filter((e) => e.type !== T.Z2.EMPTY_GUILD_UPSELL).length,
             eo = (0, _.oV)({
                 gridWrapperRef: Q,
                 containerWidth: s,
@@ -75,12 +75,12 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eh = l.useMemo(() => (0, P.y)(ei, ed, r), [ei, ed, r]),
             em = (0, N.Gc)(),
             ep = (0, N.UT)(),
-            ef = (0, o.cf)([T.A], () => T.A.getAllGuildStickers()),
+            ef = (0, o.cf)([j.A], () => j.A.getAllGuildStickers()),
             { sendable: eg = [], sendableWithPremium: e_ = [] } = eh ?? {},
             ex = eg.length + e_.length,
             eA = l.useCallback(
                 (e) => {
-                    "" === ei ? (0, b.ry)(e) : (0, b.nQ)(e, ei, ex), c(e.sticker, j.D6.STICKER_PICKER);
+                    "" === ei ? (0, b.ry)(e) : (0, b.nQ)(e, ei, ex), c(e.sticker, T.D6.STICKER_PICKER);
                 },
                 [c, ei, ex],
             ),
@@ -104,16 +104,16 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 (e, t) => {
                     let { location: l } = t;
                     switch (e.type) {
-                        case j.op.CREATE_STICKER:
+                        case T.op.CREATE_STICKER:
                             I.default.track(V.HAw.OPEN_MODAL, { type: V.JJy.CREATE_STICKER_MODAL, location: J }),
                                 (0, u.openModalLazy)(async () => {
-                                    let { default: t } = await Promise.all([n.e("29143"), n.e("52672")]).then(
+                                    let { default: t } = await Promise.all([n.e("29143"), n.e("93796")]).then(
                                         n.bind(n, 445002),
                                     );
                                     return (n) => (0, i.jsx)(t, { guildId: e.guild_id, ...n });
                                 });
                             break;
-                        case j.op.STICKER:
+                        case T.op.STICKER:
                             null != e.sticker && (0, S.G7)(e.sticker, ed, r) && eA(e);
                     }
                 },
@@ -121,8 +121,8 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ),
             {
                 getItemProps: eN,
-                getRowProps: eT,
-                gridContainerProps: ej,
+                getRowProps: ej,
+                gridContainerProps: eT,
                 handleGridContainerKeyDown: eR,
                 isUsingKeyboardNavigation: ew,
             } = (0, R.J)({
@@ -138,7 +138,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         let eL = () => {
             let e = r.getGuildId(),
                 t = [];
-            null !== e && (t = T.A.getStickersByGuildId(e) ?? []);
+            null !== e && (t = j.A.getStickersByGuildId(e) ?? []);
             let n = 0;
             null != ef &&
                 [...ef.values()].forEach((e) => {
@@ -172,7 +172,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(X && ea) &&
                     (0, i.jsx)("div", {
                         className: G.wx,
-                        children: (0, i.jsx)(O.A, { ref: et, onKeyDown: eR, stickersListRef: ee, channel: r }),
+                        children: (0, i.jsx)(k.A, { ref: et, onKeyDown: eR, stickersListRef: ee, channel: r }),
                     }),
                 ea
                     ? (0, i.jsx)(L.A, { className: G.p$, onClose: d })
@@ -182,7 +182,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   ref: Q,
                                   className: G.AD,
                                   id: U.lq,
-                                  ...ej,
+                                  ...eT,
                                   children:
                                       null != eo
                                           ? (0, i.jsx)(M.A, {
@@ -190,7 +190,7 @@ let F = (0, v.xI)(c.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 collapsedStickersCategories: eu,
                                                 filteredStickers: eh,
                                                 getStickerItemProps: eN,
-                                                getStickerRowProps: eT,
+                                                getStickerRowProps: ej,
                                                 gridWidth: eo,
                                                 gutterWidth: ey,
                                                 stickerPadding: v,

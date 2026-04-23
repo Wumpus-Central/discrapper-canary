@@ -5,7 +5,7 @@ n(64700);
 var l = n(503698),
     s = n.n(l),
     r = n(834730),
-    a = n(334021);
+    a = n(81093);
 let o = (e) => {
         let { children: t, className: n } = e;
         return (0, i.jsx)("div", { className: s()(a.um, n), children: t });

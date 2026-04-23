@@ -16,7 +16,7 @@ var i = n(627968),
     g = n(31456),
     _ = n(574842),
     x = n(482361),
-    A = n(47637);
+    A = n(234645);
 class C extends l.PureComponent {
     state = { offsetX: null, offsetY: null };
     contentRef = l.createRef();

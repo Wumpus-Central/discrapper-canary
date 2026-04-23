@@ -30,7 +30,7 @@ var i = n(627968),
     P = n(272812),
     O = n(652215),
     w = n(985018),
-    L = n(766019),
+    L = n(17795),
     D = n(867010);
 function M(e) {
     let {
@@ -104,7 +104,7 @@ function V(e) {
     function h() {
         (0, _.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("76530")]).then(
+                let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, guild: l, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });

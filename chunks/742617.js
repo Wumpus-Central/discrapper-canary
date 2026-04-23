@@ -11,7 +11,7 @@ var l = n(311907),
     u = n(486020),
     h = n(403362),
     A = n(427262),
-    _ = n(61700);
+    _ = n(456644);
 let m = o.DN.SIZE_24;
 function g(e) {
     let { activity: t, embeddedApp: n } = e,

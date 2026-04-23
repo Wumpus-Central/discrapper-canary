@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k });
+n.d(t, { A: () => O });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -25,24 +25,24 @@ var i = n(627968),
     S = n(746388),
     b = n(664929),
     N = n(73510),
-    T = n(652215),
-    j = n(985018),
-    R = n(155633),
+    j = n(652215),
+    T = n(985018),
+    R = n(13297),
     w = n(911385);
 let L = [8, 8, 0, 8],
     M = o().debounce(() => {
-        (0, d.zV)(T.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, d.zV)(j.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
-    k = l.forwardRef(function (e, t) {
+    O = l.forwardRef(function (e, t) {
         let { channel: n, canOnlyUseTextCommands: s } = e,
             a = l.useRef(!1),
             o = l.useRef(0),
-            [k, P] = l.useState(0),
+            [O, P] = l.useState(0),
             D = l.useRef(null),
             [U, V] = l.useState(!1),
             G = g.LS.useStore((e) => e.activeCategoryIndex);
         l.useEffect(() => {
-            (0, d.zV)(T.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
+            (0, d.zV)(j.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
         }, []);
         let {
                 sectionDescriptors: F,
@@ -92,8 +92,8 @@ let L = [8, 8, 0, 8],
         let X = l.useCallback((e) => (e !== B.length - 1 || W ? 16 : 0), [B.length, W]),
             Q = H.map((e) => e.data.length);
         l.useEffect(() => {
-            null != D.current && U && null != k && D.current.scrollRowIntoView(k);
-        }, [U, k]),
+            null != D.current && U && null != O && D.current.scrollRowIntoView(O);
+        }, [U, O]),
             l.useLayoutEffect(() => {
                 null != z && D.current?.scrollToSectionTop(0);
             }, [K, z]);
@@ -113,13 +113,13 @@ let L = [8, 8, 0, 8],
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == k) return !e && (P(0), !0);
-                    if (null == k) return !1;
+                    if (null == O) return !e && (P(0), !0);
+                    if (null == O) return !1;
                     let t = 0,
                         n = 0;
                     for (let e of H)
-                        if (((t = n), k < (n += e.data.length))) {
-                            let n = e.data[k - t],
+                        if (((t = n), O < (n += e.data.length))) {
+                            let n = e.data[O - t],
                                 i = F.find((e) => e.id === n.applicationId);
                             et(n, i, (0, v.$S)(e.section));
                             break;
@@ -130,11 +130,11 @@ let L = [8, 8, 0, 8],
                     if (0 === K.length) return !0;
                     let t = 7 * !!W,
                         n = K.length + t,
-                        i = null == k ? 0 : k + e;
+                        i = null == O ? 0 : O + e;
                     return i >= n ? (i = n - 1) : i < 0 && (i = 0), P(i), V(!0), !0;
                 },
             }),
-            [K.length, H, W, F, et, k],
+            [K.length, H, W, F, et, O],
         );
         let en = l.useCallback(
                 (e) => {
@@ -161,7 +161,7 @@ let L = [8, 8, 0, 8],
                                 t,
                                 0 === s.length &&
                                     (0, i.jsx)(c.A, {
-                                        message: j.intl.format(j.t.WoQXT6, { applicationName: l.name }),
+                                        message: T.intl.format(T.t.WoQXT6, { applicationName: l.name }),
                                         noResultsImageURL: w,
                                         className: R.qK,
                                     }),
@@ -191,7 +191,7 @@ let L = [8, 8, 0, 8],
                             command: s,
                             channel: n,
                             className: R.D5,
-                            selected: k === e,
+                            selected: O === e,
                             showImage: l.section.id !== s.applicationId,
                             section: a,
                             onClick: () => et(s, a, (0, v.$S)(l.section)),
@@ -202,11 +202,11 @@ let L = [8, 8, 0, 8],
                         r,
                     );
                 },
-                [n, H, et, F, k],
+                [n, H, et, F, O],
             ),
             es = (0, f.GV)();
         return (
-            (0, m.gf)(es, !0, (0, h.aI)(k)),
+            (0, m.gf)(es, !0, (0, h.aI)(O)),
             l.useEffect(
                 () => () => {
                     (0, m.nQ)();
@@ -217,7 +217,7 @@ let L = [8, 8, 0, 8],
                 id: es,
                 className: R.x9,
                 innerClassName: R.iE,
-                onMouseDown: O,
+                onMouseDown: k,
                 children: [
                     (0, i.jsx)(y.A, {
                         className: R.H$,
@@ -248,6 +248,6 @@ let L = [8, 8, 0, 8],
             })
         );
     });
-function O(e) {
+function k(e) {
     e.preventDefault();
 }

@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(46054),
     h = n(742589),
     A = n(985018),
-    _ = n(327292),
-    m = n(168147);
+    _ = n(221308),
+    m = n(992595);
 function g(e) {
     return (
         e.matches("a") ||
@@ -37,7 +37,7 @@ class p extends l.Component {
     handleContextMenu = (e) => {
         let { channel: t, guild: l } = this.props;
         (0, c.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("2271"), n.e("17425"), n.e("43156")]).then(n.bind(n, 340968));
+            let { default: e } = await Promise.all([n.e("95834"), n.e("17425"), n.e("43156")]).then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, includeTopic: !0 });
         });
     };

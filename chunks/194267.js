@@ -25,14 +25,14 @@ var i = n(627968),
     S = n(486020),
     b = n(341915),
     N = n(579473),
-    T = n(18437),
-    j = n(590202),
+    j = n(18437),
+    T = n(590202),
     R = n(73473),
     w = n(811500),
     L = n(654487),
     M = n(652215),
-    k = n(985018),
-    O = n(420298);
+    O = n(985018),
+    k = n(420298);
 let P = (e) => {
         let t,
             n,
@@ -41,49 +41,49 @@ let P = (e) => {
             h = (0, s.bG)([I.A], () => I.A.getState().theme),
             m = (0, o.M)(h) ? M.NJ8.DARK : M.NJ8.LIGHT;
         return (0, i.jsxs)("div", {
-            className: O.N1,
+            className: k.N1,
             children: [
                 (0, i.jsxs)("div", {
-                    className: O.VW,
+                    className: k.VW,
                     children: [
                         (0, i.jsx)("img", {
-                            className: O.rC,
+                            className: k.rC,
                             alt: r.config.messages.gameTitle,
                             src: (0, N.tW)(r, N.fY.GAME_TILE, m).url,
                         }),
                         (0, i.jsxs)("div", {
-                            className: O.if,
+                            className: k.if,
                             children: [
                                 (0, i.jsx)(c.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-strong",
                                     children:
                                         ((t = {
-                                            [L.Li.PACKAGE_ACTION_ADVENTURE]: k.t.PYFVdf,
-                                            [L.Li.PACKAGE_RPG_MMO]: k.t.rFQo2F,
-                                            [L.Li.PACKAGE_RACING_SPORTS]: k.t.zDRa6g,
-                                            [L.Li.PACKAGE_SANDBOX_CREATIVE]: k.t.vz9U2Q,
-                                            [L.Li.PACKAGE_FAMILY_FRIENDLY]: k.t.IOiAE0,
-                                            [L.Li.PACKAGE_HOLIDAY_SEASON]: k.t.cJPqvD,
-                                            [L.Li.PACKAGE_NEW_YEARS]: k.t.S0w2mv,
+                                            [L.Li.PACKAGE_ACTION_ADVENTURE]: O.t.PYFVdf,
+                                            [L.Li.PACKAGE_RPG_MMO]: O.t.rFQo2F,
+                                            [L.Li.PACKAGE_RACING_SPORTS]: O.t.zDRa6g,
+                                            [L.Li.PACKAGE_SANDBOX_CREATIVE]: O.t.vz9U2Q,
+                                            [L.Li.PACKAGE_FAMILY_FRIENDLY]: O.t.IOiAE0,
+                                            [L.Li.PACKAGE_HOLIDAY_SEASON]: O.t.cJPqvD,
+                                            [L.Li.PACKAGE_NEW_YEARS]: O.t.S0w2mv,
                                         }),
                                         (l =
                                             (null != (n = r.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                            k.t["D+DkEH"]),
-                                        k.intl.string(l)),
+                                            O.t["D+DkEH"]),
+                                        O.intl.string(l)),
                                 }),
                                 (0, i.jsx)(c.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: k.intl.string(k.t.VgN1Bn),
+                                    children: O.intl.string(O.t.VgN1Bn),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.D, {
-                    className: O.b,
-                    "aria-label": k.intl.string(k.t.cpT0Cq),
+                    className: k.b,
+                    "aria-label": O.intl.string(O.t.cpT0Cq),
                     onClick: a,
                     children: (0, i.jsx)(d.P, { size: "md", color: "currentColor" }),
                 }),
@@ -92,7 +92,7 @@ let P = (e) => {
     },
     D = (e) => {
         let { quest: t, game: r, sourceQuestContent: o, onGameProfileModalOpen: c, onGameProfileModalClose: d } = e,
-            m = (0, T.Ut)(),
+            m = (0, j.Ut)(),
             g = (0, s.bG)([f.A], () => f.A.getApplication(r.applicationId)),
             x = (0, s.bG)([p.A], () => p.A.useReducedMotion),
             C = l.useRef(null),
@@ -101,7 +101,7 @@ let P = (e) => {
                 m({
                     questId: t.id,
                     questContent: b.uF.SPONSORED_QUEST_SHEET,
-                    questContentCTA: j.Cy.GAME_STORE_OPEN_GAME_LINK,
+                    questContentCTA: T.Cy.GAME_STORE_OPEN_GAME_LINK,
                     sourceQuestContent: o,
                 });
             },
@@ -110,7 +110,7 @@ let P = (e) => {
                     (m({
                         questId: t.id,
                         questContent: b.uF.SPONSORED_QUEST_SHEET,
-                        questContentCTA: j.Cy.GAME_PROFILE_OPEN,
+                        questContentCTA: T.Cy.GAME_PROFILE_OPEN,
                         sourceQuestContent: o,
                     }),
                     await (0, h.openModalLazy)(
@@ -135,7 +135,7 @@ let P = (e) => {
                                 n.e("58801"),
                                 n.e("19677"),
                                 n.e("62609"),
-                                n.e("93157"),
+                                n.e("2674"),
                             ]).then(n.bind(n, 225732));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -167,18 +167,18 @@ let P = (e) => {
         return (0, i.jsx)(a.m, {
             text: r.name,
             children: (0, i.jsx)(u.D, {
-                className: O.zR,
+                className: k.zR,
                 onClick: v,
                 onMouseMove: y,
                 onMouseLeave: S,
                 children: (0, i.jsx)("div", {
                     ref: C,
-                    className: O._M,
+                    className: k._M,
                     children:
                         null != r.gameRecord
-                            ? (0, i.jsx)(A.A, { game: r.gameRecord, application: g, className: O.xe, size: A.w.SMALL })
+                            ? (0, i.jsx)(A.A, { game: r.gameRecord, application: g, className: k.xe, size: A.w.SMALL })
                             : null != r.fallbackCoverImageUrl
-                              ? (0, i.jsx)("img", { src: r.fallbackCoverImageUrl, alt: r.name, className: O.xe })
+                              ? (0, i.jsx)("img", { src: r.fallbackCoverImageUrl, alt: r.name, className: k.xe })
                               : null,
                 }),
             }),
@@ -295,12 +295,12 @@ function V(e) {
     ) {
         let e = Math.min(r.length, 10);
         return (0, i.jsxs)("div", {
-            className: O.kL,
+            className: k.kL,
             children: [
                 (0, i.jsx)(P, { quest: t, onClose: a }),
                 (0, i.jsx)("div", {
-                    className: O.LA,
-                    children: r.slice(0, e).map((e) => (0, i.jsx)("div", { className: O.Vj }, e)),
+                    className: k.LA,
+                    children: r.slice(0, e).map((e) => (0, i.jsx)("div", { className: k.Vj }, e)),
                 }),
             ],
         });
@@ -311,11 +311,11 @@ function V(e) {
               ref: (e) => {
                   c.current = e;
               },
-              className: O.kL,
+              className: k.kL,
               children: [
                   (0, i.jsx)(P, { quest: t, onClose: a }),
                   (0, i.jsxs)("div", {
-                      className: O.LA,
+                      className: k.LA,
                       children: [
                           A.map((e) =>
                               (0, i.jsx)(
@@ -348,7 +348,7 @@ function G(e) {
             impressionRef: d,
         } = e,
         [h, p] = l.useState(!1),
-        f = (0, T.Ut)(),
+        f = (0, j.Ut)(),
         g = l.useRef(null),
         _ = t?.current != null,
         x = _ ? t : g,
@@ -378,7 +378,7 @@ function G(e) {
                 f({
                     questId: c.id,
                     questContent: u,
-                    questContentCTA: j.Cy.SPONSORED_QUEST_SHEET,
+                    questContentCTA: T.Cy.SPONSORED_QUEST_SHEET,
                     sourceQuestContent: u,
                 });
         },

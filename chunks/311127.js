@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => h }), n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(136722),
@@ -20,11 +20,11 @@ var i = n(627968),
     p = n(209700),
     C = n(652215),
     f = n(985018),
-    h = n(239326);
-function R(e) {
+    R = n(59742);
+function h(e) {
     let { guildId: t } = e,
         n = (0, a.bG)([m.default], () => m.default.getCurrentUser()),
-        R = (0, a.bG)([A.A], () => A.A.getGuild(t)),
+        h = (0, a.bG)([A.A], () => A.A.getGuild(t)),
         O = (0, a.bG)([E.A], () => E.A.getRolesSnapshot(t)),
         x = (0, a.bG)([E.A], () => E.A.getSortedRoles(t)),
         { impersonateType: M, viewingRoles: D } = (0, a.cf)([g.A], () => ({
@@ -33,12 +33,12 @@ function R(e) {
         })),
         P = M === p._.SERVER_SHOP,
         U = (0, a.bG)([_.Ay], () => (null != n ? _.Ay.getTrueMember(t, n.id) : null)),
-        y = null != R ? O[(0, u.af)(R)] : null,
+        y = null != h ? O[(0, u.af)(h)] : null,
         [L, v] = r.useState(() => {
             let e = null == D ? [] : T.default.keys(D);
             return null != y && e.push(y.id), e;
         }),
-        j = r.useRef(R);
+        j = r.useRef(h);
     r.useEffect(() => {
         let e = {},
             t = j.current;
@@ -50,16 +50,16 @@ function R(e) {
             (0, N.IA)(t.id, { type: M, roles: e });
         }
     }, [L, M, O]);
-    let k = null != R && null != n && null != U ? x.find((e) => U.roles.includes(e.id)) : void 0,
+    let k = null != h && null != n && null != U ? x.find((e) => U.roles.includes(e.id)) : void 0,
         b = r.useMemo(
             () =>
-                null != R && null != n
+                null != h && null != n
                     ? x
                           .filter((e) => !(0, d.Oy)(e))
                           .filter((e) => !P || e.tags?.subscription_listing_id != null)
-                          .filter((e) => k?.id === e.id || I.wO(R, n.id, k, e))
+                          .filter((e) => k?.id === e.id || I.wO(h, n.id, k, e))
                     : [],
-            [R, n, P, k, x],
+            [h, n, P, k, x],
         ),
         G = r.useMemo(() => {
             let e = Array.from(b).map((e) => ({
@@ -70,21 +70,21 @@ function R(e) {
                 disabled: !1,
             }));
             return (
-                null != R &&
+                null != h &&
                     null != y &&
                     e.push({ leading: S(y), value: y.id, label: y.name, id: y.id.toString(), disabled: !0 }),
                 e
             );
-        }, [b, R, y]);
-    if (null == n || null == R || null == U) return null;
+        }, [b, h, y]);
+    if (null == n || null == h || null == U) return null;
     let w = {};
     return (U.roles.forEach((e) => {
         let t = O[e];
         null != t && (w[t.id] = t);
     }),
-    l.zy(I.aH({ forceRoles: w, context: R }), l.kg(C.xBc.MANAGE_GUILD, C.xBc.MANAGE_ROLES)) || (0, u.bM)(R, n))
+    l.zy(I.aH({ forceRoles: w, context: h }), l.kg(C.xBc.MANAGE_GUILD, C.xBc.MANAGE_ROLES)) || (0, u.bM)(h, n))
         ? (0, i.jsx)("div", {
-              className: h.kL,
+              className: R.kL,
               children: (0, i.jsxs)(c.iS, {
                   selectionMode: "multiple",
                   options: G,

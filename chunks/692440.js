@@ -39,9 +39,9 @@ var a = n(627968),
     S = n(787455),
     N = n(815545),
     j = n(788868),
-    M = n(652215),
-    R = n(985018),
-    k = n(348519);
+    R = n(652215),
+    M = n(985018),
+    k = n(47463);
 function D(e) {
     let {
             invoiceItem: t,
@@ -78,12 +78,12 @@ function D(e) {
                 children: [
                     (0, a.jsx)("div", { children: y }),
                     (0, a.jsx)(c.m, {
-                        text: R.intl.format(R.t.UDop9c, {}),
+                        text: M.intl.format(M.t.UDop9c, {}),
                         ariaHidden: !0,
                         children: (0, a.jsx)(d.c, {
                             size: "md",
                             color: "currentColor",
-                            "aria-label": R.intl.string(R.t.P68ePO),
+                            "aria-label": M.intl.string(M.t.P68ePO),
                             className: k.kK,
                         }),
                     }),
@@ -118,7 +118,7 @@ function O(e) {
         ],
     });
 }
-let w = (e) => (e.currency === M.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
+let w = (e) => (e.currency === R.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
 function U(e) {
     let { invoice: t, isPrepaidPaymentSource: n, shouldUseUnifiedCheckoutUI: r } = e,
         {
@@ -136,7 +136,7 @@ function U(e) {
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: n,
         });
-        return (0, a.jsx)(v.Vm, { label: R.intl.string(R.t["2eh+Co"]), lineItems: e, currency: t.currency });
+        return (0, a.jsx)(v.Vm, { label: M.intl.string(M.t["2eh+Co"]), lineItems: e, currency: t.currency });
     }
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -145,7 +145,7 @@ function U(e) {
             (0, a.jsx)(S.A, { invoice: t }),
             (0, a.jsx)(L.pK, {}),
             (0, a.jsx)(L.Sd, {
-                label: R.intl.format(t.taxInclusive ? (n ? R.t.BqdxQt : R.t.XH4raN) : R.t.RUI48E, {}),
+                label: M.intl.format(t.taxInclusive ? (n ? M.t.BqdxQt : M.t.XH4raN) : M.t.RUI48E, {}),
                 value: w(t),
             }),
         ],
@@ -174,7 +174,7 @@ function B(e) {
             (0, a.jsx)(S.A, { invoice: t }),
             (0, a.jsx)(L.pK, {}),
             (0, a.jsx)(L.Sd, {
-                label: R.intl.format(t.taxInclusive ? (r ? R.t.BqdxQt : R.t.XH4raN) : R.t.RUI48E, {}),
+                label: M.intl.format(t.taxInclusive ? (r ? M.t.BqdxQt : M.t.XH4raN) : M.t.RUI48E, {}),
                 value: w(t),
             }),
         ],
@@ -186,7 +186,7 @@ let G = (e) => {
         { intervalType: i, intervalCount: s } = (0, y.Ge)(n);
     if (r !== i || l !== s || t.subscriptionPeriodEnd.getTime() === n.subscriptionPeriodStart.getTime()) return null;
     let o = null != a ? a : t.subscriptionPeriodEnd;
-    return R.intl.format(R.t.JWWD4E, { renewalDate: o });
+    return M.intl.format(M.t.JWWD4E, { renewalDate: o });
 };
 function F(e) {
     let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: r } = e,
@@ -202,7 +202,7 @@ function H(e) {
             null != n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(L.Xd, { children: R.intl.string(R.t.tuqjWQ) }),
+                          (0, a.jsx)(L.Xd, { children: M.intl.string(M.t.tuqjWQ) }),
                           (0, N.Q8)(n).map((e) =>
                               (0, a.jsx)(D, { invoiceItem: e, currency: n.currency, inTrialPeriod: l }, e.id),
                           ),
@@ -210,7 +210,7 @@ function H(e) {
                       ],
                   })
                 : null,
-            (0, a.jsx)(L.Xd, { children: R.intl.string(R.t.qxVrh6) }),
+            (0, a.jsx)(L.Xd, { children: M.intl.string(M.t.qxVrh6) }),
             (0, N.Q8)(r, n, { isSubscriptionUpdate: t }).map((e) => {
                 let { showGuildSubscriptionAdjustmentTooltip: t, isAddedSubscriptionInvoiceItem: n, ...l } = e;
                 return (0, a.jsx)(
@@ -227,7 +227,7 @@ function H(e) {
             (0, a.jsx)(S.A, { invoice: r }),
             (0, a.jsx)(L.pK, {}),
             (0, a.jsx)(L.oR, {
-                label: R.intl.string(R.t.AChTLW),
+                label: M.intl.string(M.t.AChTLW),
                 value: (0, T.CE)((0, T.$g)(r.total, r.currency), s, o),
                 className: k.RV,
             }),
@@ -267,17 +267,17 @@ function Y(e) {
             t = o?.interval === j.WT.DAY && o?.interval_count < 28 ? 2 : 7;
         return (
             s ??
-            R.intl.format(R.t["2FvcjG"], {
+            M.intl.format(M.t["2FvcjG"], {
                 duration: e,
                 days: t,
-                contactLink: M.X7G.CONTACT,
-                helpdeskArticle: A.A.getArticleURL(M.MVz.PREMIUM_TRIAL),
+                contactLink: R.X7G.CONTACT,
+                helpdeskArticle: A.A.getArticleURL(R.MVz.PREMIUM_TRIAL),
             })
         );
     }
-    let d = n.taxInclusive ? R.t["hay+gu"] : R.t.da0lki;
+    let d = n.taxInclusive ? M.t["hay+gu"] : M.t.da0lki;
     return (0, a.jsx)(a.Fragment, {
-        children: R.intl.format(d, {
+        children: M.intl.format(d, {
             rate: (0, T.CE)((0, T.$g)(n.subtotal, n.currency), u, c),
             renewalDate: (function (e) {
                 let { overrideRenewalDate: t, proratedInvoice: n, renewalInvoice: a, isUpdate: r } = e;
@@ -289,8 +289,8 @@ function Y(e) {
                           : a.subscriptionPeriodStart
                       : a.subscriptionPeriodEnd;
             })({ overrideRenewalDate: i, proratedInvoice: t, renewalInvoice: n, isUpdate: l }),
-            contactLink: M.X7G.CONTACT,
-            helpdeskArticle: A.A.getArticleURL(M.MVz.BILLING),
+            contactLink: R.X7G.CONTACT,
+            helpdeskArticle: A.A.getArticleURL(R.MVz.BILLING),
         }),
     });
 }
@@ -350,7 +350,7 @@ function V(e) {
                             onClick: () => P((e) => !e),
                             className: k.K3,
                             children: [
-                                C ? R.intl.string(R.t.aBcRbK) : R.intl.string(R.t.X6duqp),
+                                C ? M.intl.string(M.t.aBcRbK) : M.intl.string(M.t.X6duqp),
                                 (0, a.jsx)(I.A, {
                                     direction: C ? I.A.Directions.UP : I.A.Directions.DOWN,
                                     className: k.ts,
@@ -367,7 +367,7 @@ let z = (e, t) => {
     let { isCustomGift: n, isPrepaidPaymentSource: a } = t;
     return n
         ? (0, y.D8)(e.interval, !0, void 0, void 0, !0, (0, y.m6)(e.id))
-        : R.intl.formatToPlainString(R.t.LQLxkW, { planName: (0, y.Mn)(e.id, !1, a) });
+        : M.intl.formatToPlainString(M.t.LQLxkW, { planName: (0, y.Mn)(e.id, !1, a) });
 };
 function q(e) {
     let { plan: t, className: n, isPrepaidPaymentSource: r = !1, isCustomGift: l = !1, invoicePreview: i } = e,
@@ -379,7 +379,7 @@ function q(e) {
     return (0, a.jsxs)("div", {
         className: n,
         children: [
-            (0, a.jsx)(p.D, { variant: "heading-md/semibold", children: R.intl.string(R.t.PEjaCx) }),
+            (0, a.jsx)(p.D, { variant: "heading-md/semibold", children: M.intl.string(M.t.PEjaCx) }),
             s >= 0 && !1 === o
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
@@ -387,11 +387,11 @@ function q(e) {
                           (0, a.jsxs)(L.Yx, {
                               className: n,
                               children: [
-                                  (0, a.jsx)(L.Xd, { children: R.intl.string(R.t.sail9P) }),
+                                  (0, a.jsx)(L.Xd, { children: M.intl.string(M.t.sail9P) }),
                                   (0, a.jsx)(L.oR, { label: f, value: d }),
                                   (0, a.jsx)(S.A, { invoice: i }),
                                   (0, a.jsx)(L.pK, {}),
-                                  (0, a.jsx)(L.oR, { label: R.intl.string(R.t.txajQG), value: m, className: k.RV }),
+                                  (0, a.jsx)(L.oR, { label: M.intl.string(M.t.txajQG), value: m, className: k.RV }),
                               ],
                           }),
                       ],
@@ -407,13 +407,13 @@ function K(e) {
     return (
         o()(null != l, "newPlanInvoiceItem can not be null"),
         r.interval === j.WT.MONTH
-            ? (t = n.taxInclusive ? R.t.v9QeON : R.t.FALkO5)
+            ? (t = n.taxInclusive ? M.t.v9QeON : M.t.FALkO5)
             : r.interval === j.WT.YEAR
-              ? (t = n.taxInclusive ? R.t.ECT4A5 : R.t["0HQxKW"])
+              ? (t = n.taxInclusive ? M.t.ECT4A5 : M.t["0HQxKW"])
               : o()(!1, "Invalid interval type"),
         (0, a.jsx)(_.E, {
             variant: "text-md/normal",
-            children: R.intl.format(t, { price: (0, T.$g)(l.subscriptionPlanPrice, n.currency) }),
+            children: M.intl.format(t, { price: (0, T.$g)(l.subscriptionPlanPrice, n.currency) }),
         })
     );
 }

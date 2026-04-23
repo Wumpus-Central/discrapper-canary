@@ -29,7 +29,7 @@ var a,
     M = n(988794),
     R = n(652215),
     T = n(985018),
-    D = n(67305),
+    D = n(125545),
     L = (((a = {})[(a.BANNER = 0)] = "BANNER"), (a[(a.THUMBNAIL = 1)] = "THUMBNAIL"), a);
 function O(e) {
     let { channel: t, onClick: n } = e,

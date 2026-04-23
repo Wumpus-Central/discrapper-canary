@@ -1,7 +1,7 @@
 a.d(t, { S: () => l });
 var n = a(627968);
 a(64700);
-var r = a(77006);
+var r = a(824078);
 function l() {
     return (0, n.jsxs)("svg", {
         width: "22",

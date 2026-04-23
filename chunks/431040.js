@@ -14,7 +14,7 @@ var a = n(627968),
     f = n(936636),
     g = n(424994),
     p = n(985018),
-    x = n(287677);
+    x = n(60541);
 function b() {
     return (0, a.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: p.intl.string(p.t.GruYxV) });
 }
@@ -26,14 +26,14 @@ let A = function (e) {
         C = E.map((e) => e.name).join(", "),
         N = I.map((e) => e.name).join(", "),
         j = n.firstReleaseDate,
-        y = (0, m.A)(n),
-        S = (0, u.Y)(n),
+        S = (0, m.A)(n),
+        y = (0, u.Y)(n),
         R = !(0, c.uJ)(v),
         T = !(0, c.uJ)(C),
         L = !(0, c.uJ)(N),
         k = !(0, c.uJ)(j),
-        M = y.length > 0,
-        w = S.length > 0 && !S.every((e) => (0, c.uJ)(e.url));
+        w = S.length > 0,
+        M = y.length > 0 && !y.every((e) => (0, c.uJ)(e.url));
     return (0, a.jsxs)("div", {
         className: x.uW,
         children: [
@@ -126,12 +126,12 @@ let A = function (e) {
                             (0, a.jsx)(r.E, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: y.length > 1 ? p.intl.string(p.t.PNqxNe) : p.intl.string(p.t["UxAag+"]),
+                                children: S.length > 1 ? p.intl.string(p.t.PNqxNe) : p.intl.string(p.t["UxAag+"]),
                             }),
-                            M
+                            w
                                 ? (0, a.jsx)("div", {
                                       className: x.Gu,
-                                      children: y.map((e) => (0, a.jsx)(f.s, { platform: e }, e)),
+                                      children: S.map((e) => (0, a.jsx)(f.s, { platform: e }, e)),
                                   })
                                 : (0, a.jsx)(b, {}),
                         ],
@@ -144,10 +144,10 @@ let A = function (e) {
                                 color: "text-subtle",
                                 children: p.intl.string(p.t["Oj3o1/"]),
                             }),
-                            w
+                            M
                                 ? (0, a.jsx)("div", {
                                       className: x.Gu,
-                                      children: S.map((e) => (0, a.jsx)(h.K, { website: e, trackAction: A }, e.url)),
+                                      children: y.map((e) => (0, a.jsx)(h.K, { website: e, trackAction: A }, e.url)),
                                   })
                                 : (0, a.jsx)(b, {}),
                         ],

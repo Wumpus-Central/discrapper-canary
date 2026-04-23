@@ -5,7 +5,7 @@ var a = n(349288),
     s = n(939249),
     l = n(834730),
     r = n(147925),
-    c = n(83934);
+    c = n(797982);
 function d(i) {
     let { url: e, text: n, onClick: d } = i;
     return (0, t.jsx)(a.Anchor, {

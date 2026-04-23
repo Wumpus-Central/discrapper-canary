@@ -26,7 +26,7 @@ var i = n(627968),
     y = n(168428),
     N = n(652215),
     j = n(985018),
-    L = n(602052);
+    L = n(344900);
 function R(e) {
     let t,
         R,
@@ -171,7 +171,7 @@ function R(e) {
                                 children: j.intl.format(j.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, _.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("98363"), n.e("96318")]).then(
+                                            let { default: e } = await Promise.all([n.e("98363"), n.e("7206")]).then(
                                                 n.bind(n, 780086),
                                             );
                                             return (t) => (0, i.jsx)(e, { ...t });

@@ -37,18 +37,18 @@ var i = n(627968),
     v = n(363487),
     T = n(828162),
     y = n(490557),
-    R = n(306113),
-    j = n(220628),
+    j = n(306113),
+    R = n(220628),
     L = n(867060),
     O = n(800007),
     G = n(568065),
     D = n(652215),
     M = n(746080),
     U = n(49999),
-    P = n(76660),
-    w = n(645704),
+    P = n(576709),
+    w = n(853513),
     k = n(985018),
-    V = n(958651),
+    V = n(945915),
     B = n(570890),
     H = n(108432),
     F = n(581665),
@@ -96,7 +96,7 @@ function z(e) {
 function q(e) {
     let { guildId: t, powerups: n, channelRowRef: l, markAsDismissed: s } = e,
         r = (0, d.bG)([E.A], () => E.A.getGuild(t)?.name),
-        { onActivate: o, isLoading: c, error: u } = (0, j.A)(t, n[0]),
+        { onActivate: o, isLoading: c, error: u } = (0, R.A)(t, n[0]),
         h = (0, N.A)(n[0], !0);
     if (((0, L.A)(u), 0 === n.length)) return;
     let A =
@@ -380,7 +380,7 @@ function et(e) {
     return (0, i.jsx)(ei, {
         asset:
             n.type === G.o9.LEVEL
-                ? (0, i.jsx)(R.n, { powerup: n, eventTargetRef: A, className: V.Lj })
+                ? (0, i.jsx)(j.n, { powerup: n, eventTargetRef: A, className: V.Lj })
                 : (0, i.jsx)("img", { alt: "", src: c, className: V.Sl }),
         title: k.intl.string(w.default.n37JhA),
         body: k.intl.formatToPlainString(h || n.type === G.o9.LEVEL ? w.default.Yr1ogl : w.default["7MZ2tu"], {
@@ -435,7 +435,7 @@ function en(e) {
                   stateMachine: x ? "SM_Main_Int" : "SM_Auto",
               })
             : h?.type === G.o9.LEVEL
-              ? (0, i.jsx)(R.n, { powerup: h, eventTargetRef: f, className: V.Lj })
+              ? (0, i.jsx)(j.n, { powerup: h, eventTargetRef: f, className: V.Lj })
               : (0, i.jsx)("img", { alt: "", src: g, className: V.Sl }),
         title: I,
         body: S,

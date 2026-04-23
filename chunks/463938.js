@@ -15,7 +15,7 @@ var i = n(627968),
     g = n(652215),
     p = n(746080),
     f = n(985018),
-    E = n(138931);
+    E = n(33011);
 function x(e, t) {
     return (0, i.jsx)(o.E, { variant: "text-xs/bold", color: "text-default", children: e }, t);
 }

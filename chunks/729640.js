@@ -2,7 +2,7 @@ s.d(t, { P: () => l });
 var n = s(627968);
 s(64700);
 var a = s(934204),
-    r = s(738894);
+    r = s(75662);
 let l = (e) => {
     let { percentage: t } = e;
     return (0, n.jsxs)("div", {

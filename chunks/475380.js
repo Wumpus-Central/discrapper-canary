@@ -27,29 +27,29 @@ var i = n(627968),
     y = n(652215),
     j = n(650583),
     O = n(985018),
-    R = n(7683),
-    L = n(489979);
+    R = n(402627),
+    L = n(653307);
 let D = (0, I.isWindows)();
 function P(e) {
     let { rawGame: t, nowPlaying: l = !1, isOverride: G, subgames: M, isSubgame: U = !1, parentGame: k } = e,
-        w = (0, r.cf)([S.Ay, C.A, v.A], () => (0, S.xU)(t, S.Ay, C.A, v.A)),
-        { canToggleDetection: V, isCurrentGameDetectionEnabled: B } = (0, r.cf)([S.Ay], () => ({
+        V = (0, r.cf)([S.Ay, C.A, v.A], () => (0, S.xU)(t, S.Ay, C.A, v.A)),
+        { canToggleDetection: w, isCurrentGameDetectionEnabled: B } = (0, r.cf)([S.Ay], () => ({
             canToggleDetection: null == k || S.Ay.isDetectionEnabled(k),
-            isCurrentGameDetectionEnabled: S.Ay.isDetectionEnabled(w),
+            isCurrentGameDetectionEnabled: S.Ay.isDetectionEnabled(V),
         })),
         F = (0, r.bG)([S.Ay], () => S.Ay.getVisibleGame()),
         [z, H] = s.useState(!1),
         Y = s.useMemo(
             () =>
-                (0, b.n1)(w)
+                (0, b.n1)(V)
                     ? U
-                        ? w.gameName
-                        : O.intl.formatToPlainString(O.t.G6BGdx, { subgameName: w.gameName })
-                    : w.name,
-            [w, U],
+                        ? V.gameName
+                        : O.intl.formatToPlainString(O.t.G6BGdx, { subgameName: V.gameName })
+                    : V.name,
+            [V, U],
         ),
         [X, K] = s.useState(Y ?? "???"),
-        W = a()(L.tR, { [R.LO]: !l, [R.Rw]: l, [R.FB]: null != w && l, [R.xL]: U, [R.fG]: null != M && M.length > 0 });
+        W = a()(L.tR, { [R.LO]: !l, [R.Rw]: l, [R.FB]: null != V && l, [R.xL]: U, [R.fG]: null != M && M.length > 0 });
     function Z() {
         null != M && M.length > 0 && B
             ? (0, u.openModalLazy)(async () => {
@@ -64,16 +64,16 @@ function P(e) {
                               {
                                   text: O.intl.string(O.t.Fmjztz),
                                   onClick: () => {
-                                      x.Ay.toggleDetection(w), t.onClose();
+                                      x.Ay.toggleDetection(V), t.onClose();
                                   },
                                   variant: "primary",
                               },
                           ],
                       });
               })
-            : x.Ay.toggleDetection(w);
+            : x.Ay.toggleDetection(V);
     }
-    let q = null != F && (0, S.Es)(w) === (0, S.Es)(F),
+    let q = null != F && (0, S.Es)(V) === (0, S.Es)(F),
         Q = (null != k && k.id === F?.id) || q || (null != M && M.some((e) => e.id === F?.id));
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -83,7 +83,7 @@ function P(e) {
                     (0, i.jsxs)("div", {
                         className: a()(R.$K, L.Vd),
                         children: [
-                            w.verified && !G
+                            V.verified && !G
                                 ? (0, i.jsxs)("div", {
                                       className: R.HS,
                                       children: [
@@ -110,7 +110,7 @@ function P(e) {
                                       maxLength: 128,
                                       value: X,
                                       onBlur: function () {
-                                          w.name !== X && x.Ay.editName(w, X);
+                                          V.name !== X && x.Ay.editName(V, X);
                                       },
                                       onKeyDown: function (e) {
                                           e.key === j.dh.ENTER && (e.currentTarget.blur(), e.preventDefault());
@@ -120,7 +120,7 @@ function P(e) {
                             (function () {
                                 let e,
                                     t,
-                                    { played: n, exePath: s } = w;
+                                    { played: n, exePath: s } = V;
                                 return (
                                     l || q
                                         ? (e = O.intl.string(O.t.VbV5dv))
@@ -152,10 +152,10 @@ function P(e) {
                                       className: R.ym,
                                       onClick: function () {
                                           if (z) return;
-                                          let e = null != w.id ? C.A.getDetectableGame(w.id) : null;
+                                          let e = null != V.id ? C.A.getDetectableGame(V.id) : null;
                                           N.default.track(y.HAw.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
                                               application_id: e?.id,
-                                              game_name: (0, b.n1)(w) ? w.gameName : w.name,
+                                              game_name: (0, b.n1)(V) ? V.gameName : V.name,
                                           }),
                                               H(!0),
                                               (0, u.openModalLazy)(async () => {
@@ -164,8 +164,8 @@ function P(e) {
                                                       (0, i.jsx)(t, {
                                                           ...n,
                                                           detectedActivity: {
-                                                              name: w.name ?? "",
-                                                              application_id: e?.id ?? w.id ?? void 0,
+                                                              name: V.name ?? "",
+                                                              application_id: e?.id ?? V.id ?? void 0,
                                                               type: y.$pd.PLAYING,
                                                           },
                                                           onSubmitted: () => {},
@@ -182,9 +182,9 @@ function P(e) {
                               }),
                           }),
                     (function () {
-                        let { detectable: e } = w,
+                        let { detectable: e } = V,
                             t =
-                                e && V
+                                e && w
                                     ? (0, i.jsx)(A.b, {
                                           size: "md",
                                           color: "currentColor",
@@ -194,14 +194,14 @@ function P(e) {
                                     : (0, i.jsx)(h.G, {
                                           size: "md",
                                           color: "currentColor",
-                                          className: V ? R.$V : R.zN,
+                                          className: w ? R.$V : R.zN,
                                           colorClass: R.GS,
                                       });
                         return (0, i.jsx)("div", {
                             className: a()(L.tR, L.oA, L.LT, R.E3),
                             children: (0, i.jsx)(d.m, {
                                 text: O.intl.string(O.t.QmitzM),
-                                children: V
+                                children: w
                                     ? (0, i.jsx)(_.D, {
                                           "aria-label": O.intl.string(O.t.QmitzM),
                                           className: R.ym,
@@ -214,7 +214,7 @@ function P(e) {
                     })(),
                     (function () {
                         if (!D || null != k) return null;
-                        let { overlay: e, overlayWarn: t } = w,
+                        let { overlay: e, overlayWarn: t } = V,
                             n = e
                                 ? (0, i.jsx)(g.k, {
                                       size: "md",
@@ -245,7 +245,7 @@ function P(e) {
                                         className: R.ym,
                                         onClick: () => {
                                             var t;
-                                            return (t = !e), void x.Ay.toggleOverlay(w, t, t);
+                                            return (t = !e), void x.Ay.toggleOverlay(V, t, t);
                                         },
                                         children: n,
                                     }),
@@ -258,7 +258,7 @@ function P(e) {
                         : (0, i.jsx)(E.A, {
                               className: R.LS,
                               onClick: function () {
-                                  x.Ay.deleteEntry(w),
+                                  x.Ay.deleteEntry(V),
                                       M?.forEach((e) => {
                                           x.Ay.deleteEntry(e);
                                       });
@@ -276,7 +276,7 @@ function P(e) {
                             s.Fragment,
                             {
                                 children: [
-                                    (0, i.jsx)(P, { rawGame: e, isOverride: !1, isSubgame: !0, parentGame: w }),
+                                    (0, i.jsx)(P, { rawGame: e, isOverride: !1, isSubgame: !0, parentGame: V }),
                                     t !== M.length - 1 && (0, i.jsx)("div", { className: R.PQ }),
                                 ],
                             },

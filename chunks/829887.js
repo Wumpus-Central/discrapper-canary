@@ -5,7 +5,7 @@ var a = n(503698),
     r = n.n(a),
     i = n(939249),
     s = n(881636),
-    E = n(437874);
+    E = n(12466);
 let _ = 16;
 function u(e) {
     let { description: t, name: n, icon: a, onNavigate: u, className: o, missingNavIcon: c } = e;

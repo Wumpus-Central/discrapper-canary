@@ -25,21 +25,21 @@ var i = n(627968),
     S = n(850992),
     b = n(105713),
     N = n(109638),
-    T = n(253932),
-    j = n(967198),
+    j = n(253932),
+    T = n(967198),
     R = n(287809),
     w = n(954571),
     L = n(796774),
     M = n(209932),
-    k = n(807348),
-    O = n(536432),
+    O = n(807348),
+    k = n(536432),
     P = n(792348),
     D = n(496502),
     U = n(652215),
     V = n(851110),
     G = n(257645),
     F = n(985018),
-    B = n(14870);
+    B = n(757718);
 function H(e) {
     let { disabled: t = !1, onClick: n, text: l, children: s, tooltipPosition: a = "top", ref: o } = e;
     return (0, i.jsx)(d.m, {
@@ -64,7 +64,7 @@ function W(e) {
                     e.currentTarget.blur(),
                     a
                         ? (0, L.eS)(t.soundId)
-                        : ((0, O.Ni)({ sound: t, location: { ...s, object: U.ZSU.SOUNDBOARD_SOUND } }),
+                        : ((0, k.Ni)({ sound: t, location: { ...s, object: U.ZSU.SOUNDBOARD_SOUND } }),
                           (0, L.Rp)(t.soundId));
             },
             [a, t, s],
@@ -93,7 +93,7 @@ let K = l.forwardRef(function (e, t) {
             onMouseEnter: Z,
             onSelectItem: q,
             analyticsLocations: Y,
-            buttonOverlay: J = k.If.PLAY,
+            buttonOverlay: J = O.If.PLAY,
             showLockForDisabledSound: $ = !0,
             inNitroLockedSection: X = !1,
             isAnimated: Q = !0,
@@ -113,7 +113,7 @@ let K = l.forwardRef(function (e, t) {
         } = (0, P.A)(
             u,
             h?.id ?? null,
-            (et ? T.HO.getSetting() : T.dG.getSetting()?.volume) ?? 100,
+            (et ? j.HO.getSetting() : j.dG.getSetting()?.volume) ?? 100,
             !et && h?.isVocal() ? G.a.VOICE : G.a.DEFAULT,
         ),
         { createMultipleConfettiAt: em } = l.useContext(y.x),
@@ -133,16 +133,16 @@ let K = l.forwardRef(function (e, t) {
         eC = `sound-${u.soundId}`,
         eE = (0, a.rm)(eC),
         eI = null != er || null != ea,
-        ev = !(0, O.Ir)(eo, u, h) && !et,
+        ev = !(0, k.Ir)(eo, u, h) && !et,
         ey = L || (K && !ev),
         eS = S.LW.useStore().bottomPosition ?? 0,
         eb = ep.current?.getBoundingClientRect().bottom ?? 0,
-        [eN, eT] = l.useState(!1),
-        ej = l.useCallback(() => {
-            eT(!0);
+        [eN, ej] = l.useState(!1),
+        eT = l.useCallback(() => {
+            ej(!0);
         }, []),
         eR = l.useCallback(() => {
-            eT(!1);
+            ej(!1);
         }, []),
         ew = ev && $;
     function eL(e) {
@@ -155,11 +155,11 @@ let K = l.forwardRef(function (e, t) {
             : z || eu(Y);
     }
     let eM = (0, i.jsx)("div", {
-            onMouseEnter: ej,
+            onMouseEnter: eT,
             onMouseLeave: eR,
             children: (function (e) {
                 let { sound: t, previewSound: n, disabled: l = !1, tooltipPosition: s = "top" } = e,
-                    r = (0, o.bG)([j.A], () => j.A.getGuildId());
+                    r = (0, o.bG)([T.A], () => T.A.getGuildId());
                 return (0, i.jsx)(H, {
                     tooltipPosition: s,
                     disabled: l,
@@ -179,7 +179,7 @@ let K = l.forwardRef(function (e, t) {
                 });
             })({ sound: u, previewSound: ed, disabled: ev && !L }),
         }),
-        ek = (e) =>
+        eO = (e) =>
             z || ev
                 ? ew
                     ? (0, i.jsx)(_.X, {
@@ -189,8 +189,8 @@ let K = l.forwardRef(function (e, t) {
                       })
                     : null
                 : (0, i.jsx)(g.u, { size: "xs", color: "currentColor", className: r()(B.C4, e) }),
-        eO = (0, i.jsx)("div", {
-            onMouseEnter: ej,
+        ek = (0, i.jsx)("div", {
+            onMouseEnter: eT,
             onMouseLeave: eR,
             children: (0, i.jsx)(W, { sound: u, disabled: !M && !L }),
         });
@@ -255,7 +255,7 @@ let K = l.forwardRef(function (e, t) {
                         }),
                         (function () {
                             switch (J) {
-                                case k.If.ADD:
+                                case O.If.ADD:
                                     return (0, i.jsxs)("div", {
                                         className: B.ec,
                                         children: [
@@ -279,26 +279,26 @@ let K = l.forwardRef(function (e, t) {
                                                             }),
                                                         ],
                                                     }),
-                                                    ey && eO,
+                                                    ey && ek,
                                                 ],
                                             }),
                                         ],
                                     });
-                                case k.If.NONE:
+                                case O.If.NONE:
                                     return null;
-                                case k.If.PLAY:
-                                case k.If.SOUNDMOJI:
+                                case O.If.PLAY:
+                                case O.If.SOUNDMOJI:
                                 default:
                                     return ew && !X
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, i.jsx)("div", { className: B.LQ }),
-                                                  ek(B.B3),
+                                                  eO(B.B3),
                                                   (0, i.jsx)("div", {
                                                       className: B.d7,
                                                       children: (0, i.jsxs)("div", {
                                                           className: B.O5,
-                                                          children: [ey && eM, ey && eO],
+                                                          children: [ey && eM, ey && ek],
                                                       }),
                                                   }),
                                               ],
@@ -310,14 +310,14 @@ let K = l.forwardRef(function (e, t) {
                                                   (0, i.jsx)("div", {
                                                       className: B.O5,
                                                       children:
-                                                          J === k.If.SOUNDMOJI
+                                                          J === O.If.SOUNDMOJI
                                                               ? (0, i.jsx)(b.Ay, {
                                                                     sound: u,
                                                                     channel: h,
-                                                                    setTooltipShowing: eT,
+                                                                    setTooltipShowing: ej,
                                                                 })
                                                               : (0, i.jsxs)(i.Fragment, {
-                                                                    children: [ey && eM, ek(), ey && eO],
+                                                                    children: [ey && eM, eO(), ey && ek],
                                                                 }),
                                                   }),
                                               ],
@@ -333,7 +333,7 @@ let K = l.forwardRef(function (e, t) {
                     shouldShow: !eN,
                     children: (0, i.jsx)("div", {
                         className: B.ET,
-                        children: !X && (0, i.jsxs)("div", { className: B.ld, children: [eM, eO] }),
+                        children: !X && (0, i.jsxs)("div", { className: B.ld, children: [eM, ek] }),
                     }),
                 }),
             !0 === et && (0, i.jsx)(N.A, { sound: u, containerDimensions: eP, ref: en }),

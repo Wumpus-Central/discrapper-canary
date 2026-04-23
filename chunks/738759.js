@@ -9,7 +9,7 @@ var i = a(289873),
     s = a(913453),
     c = a(51943),
     _ = a(985018),
-    u = a(2074);
+    u = a(928666);
 function m(e) {
     let { user: t, onClose: a } = e,
         { trackUserProfileAction: m } = (0, o.NJ)(),

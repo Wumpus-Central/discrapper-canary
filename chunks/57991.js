@@ -28,7 +28,7 @@ var r = i(627968),
     L = i(981883),
     j = i(652215),
     y = i(985018),
-    M = i(628192);
+    M = i(40544);
 let P = {
     [T._.STAFF]: {
         IconComponent: d.V,

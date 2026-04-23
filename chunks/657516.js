@@ -25,7 +25,7 @@ var n = l(627968),
     b = l(652215),
     P = l(568065),
     T = l(985018),
-    w = l(700971);
+    w = l(37739);
 let M = (t) => {
     let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: M, transitionState: G, onClose: I } = t,
         k = (0, m.D)("ApplyGuildBoostModal"),

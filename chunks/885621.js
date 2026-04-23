@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { FD: () => s, H0: () => o, jV: () => i, vx: () => a });
-var r = n(359823);
+var r = n(32271);
 let i = {
         default: r.colorDefault,
         brand: r.colorBrand,

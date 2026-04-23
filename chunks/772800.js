@@ -25,8 +25,8 @@ var i = n(627968),
     v = n(854627),
     T = n(616356),
     y = n(961350),
-    R = n(696451),
-    j = n(71393),
+    j = n(696451),
+    R = n(71393),
     L = n(576705),
     O = n(290863),
     G = n(977997),
@@ -35,8 +35,8 @@ var i = n(627968),
     U = n(329554),
     P = n(402313),
     w = n(699976),
-    k = n(713983),
-    V = n(77006);
+    k = n(415679),
+    V = n(824078);
 let B = (0, f.Fe)({
     createPromise: () =>
         Promise.all([
@@ -45,16 +45,16 @@ let B = (0, f.Fe)({
             n.e("27411"),
             n.e("49318"),
             n.e("12721"),
-            n.e("37383"),
+            n.e("58283"),
             n.e("17601"),
             n.e("8087"),
             n.e("55057"),
-            n.e("20455"),
-            n.e("49141"),
+            n.e("60471"),
+            n.e("42257"),
             n.e("48563"),
             n.e("27355"),
             n.e("67876"),
-            n.e("18897"),
+            n.e("72589"),
             n.e("6453"),
             n.e("20667"),
         ]).then(n.bind(n, 93879)),
@@ -84,7 +84,7 @@ function H(e) {
 }
 function F(e) {
     let { user: t, guildId: n } = e,
-        l = (0, r.bG)([R.Ay], () => R.Ay.getMember(n, t.id)),
+        l = (0, r.bG)([j.Ay], () => j.Ay.getMember(n, t.id)),
         s = M.Ay.useName(t),
         a = l?.nick ?? s,
         { avatarDecorationSrc: h, avatarSrc: A } = (0, v.A)({ userId: t.id, size: o._3.SIZE_32, guildId: n }),
@@ -119,14 +119,14 @@ function W(e) {
         f = l.useMemo(() => ({ [s.guild_id]: [o.id] }), [s.guild_id, o.id]);
     (0, A.Eq)(f, "VoiceUserActivities");
     let { enabled: v } = P.A.useExperiment({ guildId: s.guild_id, location: "VoiceUserPopout" }),
-        [R, M] = (0, r.yK)(
+        [j, M] = (0, r.yK)(
             [T.A],
             () => [T.A.getStreamForUser(o.id, s.getGuildId()), T.A.getActiveStreamForUser(o.id, s.getGuildId())],
             [s, o.id],
         ),
-        [w, B] = (0, r.yK)([G.A, j.A, L.A, E.default], () => (0, x.eo)(s, G.A, j.A, L.A, E.default)),
+        [w, B] = (0, r.yK)([G.A, R.A, L.A, E.default], () => (0, x.eo)(s, G.A, R.A, L.A, E.default)),
         W = (0, r.bG)([y.default], () => y.default.getId()),
-        Y = (0, r.bG)([O.A], () => (0, I.nr)(R, O.A), [R]),
+        Y = (0, r.bG)([O.A], () => (0, I.nr)(j, O.A), [j]),
         K = (0, p.r9)() && (0, p.UK)(s.id),
         z =
             ((t = (0, m.Ay)(s)),
@@ -137,7 +137,7 @@ function W(e) {
         Q = (0, r.bG)([b.A], () => b.A.getDetectableIdsToApplicationIds()),
         J = u ?? Y,
         Z = (0, _.m)(o, J),
-        $ = null != R && null != g && !K,
+        $ = null != j && null != g && !K,
         ee = $ || Z.length > 0 || z.length > 0,
         et = ee || v;
     if (
@@ -156,7 +156,7 @@ function W(e) {
         children: [
             $ &&
                 (0, i.jsx)(C.P, {
-                    stream: R,
+                    stream: j,
                     activeStream: M,
                     streamActivity: Y,
                     user: o,

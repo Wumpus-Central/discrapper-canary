@@ -7,11 +7,11 @@ var i = n(834730),
     s = n(403362),
     o = n(975571),
     u = n(580630),
-    c = n(652215),
-    d = n(788868),
-    _ = n(982772),
+    d = n(652215),
+    c = n(788868),
+    _ = n(327105),
     p = n(985018),
-    h = n(628823);
+    h = n(24535);
 function m(e) {
     let { value: t, onChange: n } = e;
     return (0, l.jsxs)(l.Fragment, {
@@ -25,8 +25,8 @@ function m(e) {
         ],
     });
 }
-let A = { [d.WT.DAY]: _.default.iPorlt, [d.WT.MONTH]: _.default["8CYJ8Y"], [d.WT.YEAR]: _.default.gvaGGA };
-function f(e) {
+let f = { [c.WT.DAY]: _.default.iPorlt, [c.WT.MONTH]: _.default["8CYJ8Y"], [c.WT.YEAR]: _.default.gvaGGA };
+function A(e) {
     let {
             purchaseButtonText: t,
             totalDue: n,
@@ -36,20 +36,20 @@ function f(e) {
             intervalCount: a,
             startDate: s,
         } = e,
-        d = (0, u.$g)(n, l),
+        c = (0, u.$g)(n, l),
         _ = (0, u.$g)(r, l),
-        h = c.X7G.PAID_TERMS,
-        m = c.qF7.CONTACT_US,
-        f = o.A.getArticleURL(c.MVz.BILLING);
+        h = d.X7G.PAID_TERMS,
+        m = d.qF7.CONTACT_US,
+        A = o.A.getArticleURL(d.MVz.BILLING);
     return {
         purchaseButtonText: t,
-        totalDue: d,
+        totalDue: c,
         renewalPrice: _,
-        interval: p.intl.formatToPlainString(A[i], { intervalCount: a }),
+        interval: p.intl.formatToPlainString(f[i], { intervalCount: a }),
         startDate: s,
         paidServicesTermsUrl: h,
         contactUsUrl: m,
-        subscriptionsFaqUrl: f,
+        subscriptionsFaqUrl: A,
     };
 }
 var g =
@@ -70,13 +70,13 @@ function E(e) {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
-                    let t = c.X7G.PAID_TERMS,
-                        n = c.X7G.PAID_TERMS_VIRTUAL_GOODS;
+                    let t = d.X7G.PAID_TERMS,
+                        n = d.X7G.PAID_TERMS_VIRTUAL_GOODS;
                     switch (e.type) {
                         case 0:
-                            return p.intl.format(_.default.OH1Evm, f(e));
+                            return p.intl.format(_.default.OH1Evm, A(e));
                         case 1:
-                            return p.intl.format(_.default["2pNIbI"], f(e));
+                            return p.intl.format(_.default["2pNIbI"], A(e));
                         case 2:
                             return p.intl.format(_.default.IP93kX, {
                                 ...e,
@@ -104,7 +104,7 @@ function E(e) {
                     }
                 })(e.variant),
             }),
-            e.paymentSourceType === c.hes.PAYSAFE_CARD &&
+            e.paymentSourceType === d.hes.PAYSAFE_CARD &&
                 (0, l.jsx)(i.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",

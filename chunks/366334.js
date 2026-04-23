@@ -8,7 +8,7 @@ var n = i(503698),
     c = i(659612),
     d = i(898612),
     o = i(232492),
-    u = i(41068);
+    u = i(740012);
 function m(e) {
     let { benefit: t, guildId: i } = e,
         n = (0, o.A)(i, t.ref_id),

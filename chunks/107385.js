@@ -6,7 +6,7 @@ var l = n(503698),
     a = n(602853),
     r = n(827734),
     o = n(573435),
-    d = n(16910);
+    d = n(643918);
 function c(e) {
     let { className: t, isFolder: n } = e,
         l = (0, a.r)(r.A.modules.guildbar.AVATAR_SIZE);

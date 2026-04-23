@@ -14,7 +14,7 @@ var i = a(311907),
     p = a(928223),
     g = a(518477),
     b = a(985018),
-    f = a(26988);
+    f = a(741036);
 function x(e) {
     let { user: t, displayProfile: a, guildId: x, onClose: h } = e,
         A = (0, i.bG)([o.A], () => o.A.getUserProfile(t.id)?.application),

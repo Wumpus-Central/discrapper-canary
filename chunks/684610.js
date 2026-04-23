@@ -15,9 +15,9 @@ var a = n(627968),
     g = n(365003),
     v = n(843095),
     j = n(800007),
-    h = n(76660),
+    h = n(576709),
     A = n(985018),
-    p = n(590795);
+    p = n(484875);
 let E = { steps: { [j.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
 function C(e) {
     let { guildId: t, instance: n } = e,

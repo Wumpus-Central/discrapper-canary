@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(517738),
+    r = n(356197),
     o = n(110259),
     d = n(311907),
     c = n(990078),
@@ -26,9 +26,9 @@ var i = n(627968),
     T = n(778768),
     y = n(652215);
 n(281405);
-var R = n(985018),
-    j = n(793042),
-    L = n(58298);
+var j = n(985018),
+    R = n(89682),
+    L = n(80442);
 let O = (e) => 1 - Math.pow(1 - e, 4);
 function G(e) {
     let { channel: t, onClose: s } = e,
@@ -69,7 +69,7 @@ function G(e) {
         $ = l.useCallback(() => {
             null != F &&
                 (0, u.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("76530")]).then(
+                    let { default: e } = await Promise.all([n.e("28136"), n.e("43600"), n.e("42738")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: F, channel: t, source: y.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -137,32 +137,32 @@ function G(e) {
               children: (e) => {
                   let { onClick: t, ...n } = e;
                   return (0, i.jsx)(r.animated.div, {
-                      className: j.lY,
+                      className: R.lY,
                       style: ee,
                       children: (0, i.jsx)(_.D, {
                           innerRef: G,
-                          className: a()({ [j.vk]: !W }, L.q7, L.L9, L.vk),
+                          className: a()({ [R.vk]: !W }, L.q7, L.L9, L.vk),
                           "aria-disabled": W,
-                          "aria-label": R.intl.string(R.t.F3qiJr),
+                          "aria-label": j.intl.string(j.t.F3qiJr),
                           onClick: $,
                           ignoreKeyPress: Q,
                           ...n,
                           children: (0, i.jsxs)("div", {
-                              className: a()(j.Qs, L.Qs),
+                              className: a()(R.Qs, L.Qs),
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: j.R4,
+                                      className: R.R4,
                                       style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                       children: [
                                           (0, i.jsxs)(
                                               "svg",
                                               {
-                                                  className: a()(j.O1, { [j.Ft]: J }),
+                                                  className: a()(R.O1, { [R.Ft]: J }),
                                                   viewBox: "0 0 24 24",
                                                   style: { "--custom-voice-invite-suggestions-timer-duration": 1e4 },
                                                   children: [
-                                                      (0, i.jsx)("circle", { className: j.qB }),
-                                                      (0, i.jsx)("circle", { className: j.hN }),
+                                                      (0, i.jsx)("circle", { className: R.qB }),
+                                                      (0, i.jsx)("circle", { className: R.hN }),
                                                   ],
                                               },
                                               `voice-invite-suggestions-timer-${k}`,
@@ -172,36 +172,36 @@ function G(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: a()(j.Hk, j.Kk),
+                                              className: a()(R.Hk, R.Kk),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsx)(c.m, {
-                                      text: R.intl.string(R.t["EE+P0H"]),
+                                      text: j.intl.string(j.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, i.jsx)(g.E, {
                                           variant: "text-sm/medium",
-                                          className: j.Pf,
+                                          className: R.Pf,
                                           lineClamp: 1,
-                                          children: R.intl.string(R.t["EE+P0H"]),
+                                          children: j.intl.string(j.t["EE+P0H"]),
                                       }),
                                   }),
                                   (0, i.jsx)("div", {
                                       ref: D,
                                       children: z
                                           ? (0, i.jsx)(_.D, {
-                                                className: j.VN,
+                                                className: R.VN,
                                                 onClick: (e) => {
                                                     e.stopPropagation(), en("user_explicit");
                                                 },
-                                                "aria-label": R.intl.string(R.t.cpT0Cq),
+                                                "aria-label": j.intl.string(j.t.cpT0Cq),
                                                 children: (0, i.jsx)(p.P, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: j.Kk,
+                                                    className: R.Kk,
                                                 }),
                                             })
-                                          : (0, i.jsx)(f._, { size: "xs", color: "currentColor", className: j.Kk }),
+                                          : (0, i.jsx)(f._, { size: "xs", color: "currentColor", className: R.Kk }),
                                   }),
                               ],
                           }),

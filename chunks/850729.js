@@ -25,13 +25,13 @@ var i = n(627968),
     v = n(87941),
     T = n(941971),
     y = n(900848),
-    R = n(550591),
-    j = n(65611),
+    j = n(550591),
+    R = n(65611),
     L = n(652215),
     O = n(788868),
     G = n(235079),
     D = n(985018),
-    M = n(403178);
+    M = n(30186);
 let U = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function P(e) {
     let { selected: t, user: n, badge: a, link: A, showProgressBadge: m } = e,
@@ -52,7 +52,7 @@ function P(e) {
     let V = t || g || O,
         B = (0, i.jsx)(o.Q, {
             selected: !0,
-            lowerBadge: a > 0 ? (0, j.wN)(a) : null,
+            lowerBadge: a > 0 ? (0, R.wN)(a) : null,
             upperBadge: k,
             lowerBadgeSize: { width: (0, d.o6)(a) },
             children: (0, i.jsx)(c.j, {
@@ -98,7 +98,7 @@ function P(e) {
             children: (0, i.jsxs)(y.c, {
                 children: [
                     (0, i.jsx)(T.A, { selected: t, hovered: g, className: M.Io }),
-                    (0, i.jsx)(R.A, { hideOnClick: !0, text: w, selected: t, children: B }),
+                    (0, i.jsx)(j.A, { hideOnClick: !0, text: w, selected: t, children: B }),
                 ],
             }),
         }),

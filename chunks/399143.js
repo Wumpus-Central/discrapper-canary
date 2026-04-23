@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(71393),
     p = n(915043),
     x = n(985018),
-    g = n(725796);
+    g = n(32676);
 function h(t) {
     let { transitionState: e, onClose: n, sku: h, onSelect: m, currentGuildId: b } = t,
         [f, v] = l.useState(),

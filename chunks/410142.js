@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(834730),
     d = n(243721),
     c = n(885621),
-    _ = n(359823);
+    _ = n(32271);
 function f(e) {
     let {
             color: t = "default",

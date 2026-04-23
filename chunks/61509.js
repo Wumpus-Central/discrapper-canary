@@ -35,8 +35,8 @@ var i = n(627968),
     M = n(571654),
     U = n(411342),
     k = n(179499),
-    w = n(22007),
-    V = n(95035),
+    V = n(22007),
+    w = n(95035),
     B = n(337095),
     F = n(871123),
     z = n(510022),
@@ -64,7 +64,7 @@ var i = n(627968),
     ec = n(788868),
     eg = n(818348),
     em = n(985018),
-    e_ = n(600410);
+    e_ = n(12762);
 let eA = (e) => `https://${eu.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
     eh = [eu.Puh.DURABLE_PRIMARY, eu.Puh.DURABLE, eu.Puh.CONSUMABLE],
     ep = [eu.__0.FAILED, eu.__0.REVERSED, eu.__0.CANCELED],
@@ -120,8 +120,8 @@ function ef(e) {
         o = l?.role_id != null && l?.attachments_count === 0 ? em.intl.string(em.t.H11qcT) : a,
         d = s.useCallback(async () => {
             r?.features.has(eu.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
-                ? await (0, w.A)(eu.BVt.GUILD_PRODUCT(t, n))
-                : await (0, w.A)(eu.BVt.CHANNEL(t)),
+                ? await (0, V.A)(eu.BVt.GUILD_PRODUCT(t, n))
+                : await (0, V.A)(eu.BVt.CHANNEL(t)),
                 (0, K.default)();
         }, [r, t, n]);
     return (0, i.jsxs)(i.Fragment, {
@@ -130,7 +130,7 @@ function ef(e) {
             null != r &&
                 (0, i.jsx)(eS, {
                     description: em.intl.string(em.t.Wpn8z8),
-                    detail: (0, i.jsx)(V.A, { onClick: d, children: r.name }),
+                    detail: (0, i.jsx)(w.A, { onClick: d, children: r.name }),
                 }),
         ],
     });
