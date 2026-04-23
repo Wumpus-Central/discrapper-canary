@@ -47,12 +47,12 @@ var a,
     Z = s(77964),
     Y = s(366010),
     J = s(736653),
-    q = s(303136),
-    X = s(676279);
+    X = s(303136),
+    q = s(676279);
 let $ = (e) => {
     let t,
         { className: s } = e,
-        a = (0, X.TM)(),
+        a = (0, q.TM)(),
         i = (0, Y.q)((0, J.Ay)());
     return (
         (t = a
@@ -65,7 +65,7 @@ let $ = (e) => {
         (0, r.jsx)("div", {
             className: s,
             children: (0, r.jsx)(
-                q.A,
+                X.A,
                 {
                     fallbackImage: i
                         ? "https://cdn.discordapp.com/assets/content/6ddb7f92b6f26f24c70cc7bf84e11bb423378d47cd111866af3980b332bad336.png"
@@ -584,8 +584,8 @@ var eQ = s(939249),
     eZ = s(742589),
     eY = s(909536),
     eJ = s(400669),
-    eq = s(876587),
-    eX = s(503255);
+    eX = s(876587),
+    eq = s(503255);
 let e$ = (e) => {
     let { navBarSections: t, activeSectionId: s, isAnimationComplete: a } = e,
         n = {
@@ -600,25 +600,25 @@ let e$ = (e) => {
         d = i.useRef(null),
         m = Object.values(t).sort((e, t) => e.order - t.order);
     return (0, r.jsxs)(eZ.A, {
-        className: eX.TQ,
+        className: eq.TQ,
         transparent: !0,
         children: [
             (0, r.jsxs)("div", {
-                className: eX.Wc,
+                className: eq.Wc,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: eX.wG,
+                        className: eq.wG,
                         children: [
-                            (0, r.jsx)(ex.t, { className: eX.nE, colorClass: eX.oG }),
+                            (0, r.jsx)(ex.t, { className: eq.nE, colorClass: eq.oG }),
                             (0, r.jsx)("div", {
-                                className: eX.zc,
+                                className: eq.zc,
                                 children: m.map((e) => {
                                     let t = s === e.id,
                                         a = n[e.id];
                                     return (0, r.jsxs)(
                                         eQ.D,
                                         {
-                                            className: eX.S0,
+                                            className: eq.S0,
                                             onClick: e.scrollToSection,
                                             children: [
                                                 (0, r.jsx)(eu.E, {
@@ -626,7 +626,7 @@ let e$ = (e) => {
                                                     color: "text-strong",
                                                     children: a,
                                                 }),
-                                                t && (0, r.jsx)("div", { className: eX.W0 }),
+                                                t && (0, r.jsx)("div", { className: eq.W0 }),
                                             ],
                                         },
                                         a,
@@ -636,7 +636,7 @@ let e$ = (e) => {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: eX.MQ,
+                        className: eq.MQ,
                         children: [
                             o &&
                                 (0, r.jsx)(eJ.l, { ref: d, size: "sm", location: p.A.PREMIUM_WISHLIST_MARKETING_PAGE }),
@@ -645,7 +645,7 @@ let e$ = (e) => {
                     }),
                 ],
             }),
-            o && a && (0, r.jsx)(eq.O, { targetElementRef: d }),
+            o && a && (0, r.jsx)(eX.O, { targetElementRef: d }),
         ],
     });
 };
@@ -663,74 +663,90 @@ function e8() {
         { icon: e3.o, text: eR.intl.string(eM.default["9t2CzW"]), tooltip: eM.default.AyECej },
         { icon: e4.o, text: eR.intl.string(eM.default.R7YJAY) },
     ];
-    return (0, r.jsxs)("div", {
-        className: e6.Nr,
-        children: [
-            (0, r.jsxs)("div", {
-                className: e6.j,
-                children: [
-                    (0, r.jsx)("div", { className: e6._g }),
-                    (0, r.jsx)("div", { className: e6.$h }),
-                    (0, r.jsx)("div", { className: e6.Rv }),
-                    (0, r.jsx)("div", { className: e6.Lw }),
-                ],
-            }),
-            (0, r.jsxs)("div", {
-                className: e6.Qs,
-                children: [
-                    (0, r.jsxs)("div", {
-                        children: [
-                            (0, r.jsx)(e_.D, {
-                                variant: "heading-xxl/bold",
-                                color: "text-strong",
-                                className: e6.R_,
-                                children: eR.intl.string(eM.default.rkt1aw),
-                            }),
-                            (0, r.jsx)("div", {
-                                children: e.map((e) => {
-                                    let { icon: t, text: s, tooltip: a } = e;
-                                    return (0, r.jsxs)(
-                                        "div",
-                                        {
-                                            className: e6.yf,
-                                            children: [
-                                                (0, r.jsx)(t, { size: "sm", color: "var(--icon-strong)" }),
-                                                (0, r.jsx)(eu.E, {
-                                                    variant: "text-md/normal",
-                                                    color: "text-strong",
-                                                    children: s,
-                                                }),
-                                                null != a &&
-                                                    (0, r.jsx)("div", {
-                                                        className: e6.Jn,
-                                                        children: (0, r.jsx)(e0.m, {
-                                                            text: eR.intl.string(a),
-                                                            position: "top",
-                                                            children: (0, r.jsx)(e5.m, {
-                                                                size: "xs",
-                                                                color: "var(--icon-default)",
+    return (0, r.jsx)("div", {
+        className: e6.iE,
+        children: (0, r.jsxs)("div", {
+            className: e6.Nr,
+            children: [
+                (0, r.jsxs)("div", {
+                    className: e6.j,
+                    children: [
+                        (0, r.jsx)("div", { className: e6._g }),
+                        (0, r.jsx)("div", { className: e6.$h }),
+                        (0, r.jsx)("div", { className: e6.Rv }),
+                        (0, r.jsx)("div", { className: e6.Lw }),
+                    ],
+                }),
+                (0, r.jsxs)("div", {
+                    className: e6.CT,
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: e6.Qs,
+                            children: [
+                                (0, r.jsxs)("div", {
+                                    children: [
+                                        (0, r.jsx)(e_.D, {
+                                            variant: "heading-xxl/bold",
+                                            color: "text-strong",
+                                            className: e6.R_,
+                                            children: eR.intl.string(eM.default.rkt1aw),
+                                        }),
+                                        (0, r.jsx)("div", {
+                                            children: e.map((e) => {
+                                                let { icon: t, text: s, tooltip: a } = e;
+                                                return (0, r.jsxs)(
+                                                    "div",
+                                                    {
+                                                        className: e6.yf,
+                                                        children: [
+                                                            (0, r.jsx)(t, { size: "sm", color: "var(--icon-strong)" }),
+                                                            (0, r.jsx)(eu.E, {
+                                                                variant: "text-md/medium",
+                                                                color: "text-strong",
+                                                                children: s,
                                                             }),
-                                                        }),
-                                                    }),
-                                            ],
-                                        },
-                                        s,
-                                    );
+                                                            null != a &&
+                                                                (0, r.jsx)("div", {
+                                                                    className: e6.Jn,
+                                                                    children: (0, r.jsx)(e0.m, {
+                                                                        text: eR.intl.string(a),
+                                                                        position: "top",
+                                                                        children: (0, r.jsx)(e5.m, {
+                                                                            size: "xs",
+                                                                            color: "var(--icon-default)",
+                                                                        }),
+                                                                    }),
+                                                                }),
+                                                        ],
+                                                    },
+                                                    s,
+                                                );
+                                            }),
+                                        }),
+                                    ],
                                 }),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)("div", {
-                        className: e6.WE,
-                        children: (0, r.jsx)(eu.E, {
-                            variant: "text-xs/medium",
-                            color: "text-link",
-                            children: eR.intl.format(eM.default.KDKdWi, { termsLink: "#" }),
+                                (0, r.jsx)("div", {
+                                    className: e6.WE,
+                                    children: (0, r.jsx)(eu.E, {
+                                        variant: "text-xs/medium",
+                                        color: "text-link",
+                                        children: eR.intl.format(eM.default.KDKdWi, { termsLink: "#" }),
+                                    }),
+                                }),
+                            ],
                         }),
-                    }),
-                ],
-            }),
-        ],
+                        (0, r.jsx)("div", {
+                            className: e6.r1,
+                            children: (0, r.jsx)("img", {
+                                className: e6.wm,
+                                src: "https://cdn.discordapp.com/assets/content/183a222feae2555e7a057002bbcae445e70efa78fb204d353c9c93b4a1f210d4.png",
+                                alt: "Xbox Game Pass",
+                            }),
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
 var e7 = s(750338),
@@ -902,7 +918,7 @@ var tI = s(188393);
 let tT = (e) => {
     let { containerVisibilityPercentage: t } = e,
         s = (0, eL.bG)([U.A], () => U.A.useReducedMotion),
-        a = (0, X.TM)();
+        a = (0, q.TM)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(tN, {
@@ -1117,15 +1133,15 @@ let ty = () => {
         Y = B && O ? e9.NI.COMBINED_ORBS : O ? e9.NI.ORB_MULTIPLIER : B ? e9.NI.ORB_REWARDS : null,
         J = i.useMemo(() => null != Y && "orbs" === new URLSearchParams(e.search).get("section"), [e.search, Y]);
     (0, K.z)(Y ?? e9.NI.COMBINED_ORBS, J);
-    let { navBarSections: q, activeSectionId: X } = tR([ee.HOME, ee.WHATS_NEW, ee.BEST_OF_NITRO, ee.PLANS, ee.COMPARE]),
-        { home: et, whatsNew: es, bestOfNitro: ea, plans: er, compare: en } = q,
+    let { navBarSections: X, activeSectionId: q } = tR([ee.HOME, ee.WHATS_NEW, ee.BEST_OF_NITRO, ee.PLANS, ee.COMPARE]),
+        { home: et, whatsNew: es, bestOfNitro: ea, plans: er, compare: en } = X,
         eo = (0, r.jsxs)("div", {
             ref: s,
             className: l()(tS.kL, tS.Gd, tS.iI, { [tS.Hq]: !u }),
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, r.jsx)($, { className: tS.yH }),
-                (0, r.jsx)(e$, { navBarSections: q, activeSectionId: X, isAnimationComplete: _ }),
+                (0, r.jsx)(e$, { navBarSections: X, activeSectionId: q, isAnimationComplete: _ }),
                 (0, r.jsxs)("div", {
                     className: tS.Qr,
                     children: [
@@ -1330,8 +1346,8 @@ var tK = s(374200),
     tZ = s(422253),
     tY = s(359778),
     tJ = s(695366),
-    tq = s(780964),
-    tX = s(858897),
+    tX = s(780964),
+    tq = s(858897),
     t$ = s(824888);
 let t0 = (e) => {
     let t,
@@ -1347,7 +1363,7 @@ let t0 = (e) => {
         null == t)
     )
         return null;
-    let d = () => (0, tX.openUserSettings)(tq.X.SUBSCRIPTIONS_PANEL),
+    let d = () => (0, tq.openUserSettings)(tX.X.SUBSCRIPTIONS_PANEL),
         m = (null != c ? z.Ay.getSkuIdForPlan(c.planId) : null) === eI.pe.TIER_1;
     return (
         (s = null != n ? n : o ? "always-white" : "text-default"),
@@ -1630,7 +1646,7 @@ let sC = (e) => {
                                 {
                                     let { openUserSettings: t } = s(858897);
                                     sc.A.setState({ scrollPosition: su._F.TRY_IT_OUT }),
-                                        t(tq.X.PROFILE_PANEL, { analyticsLocations: e });
+                                        t(tX.X.PROFILE_PANEL, { analyticsLocations: e });
                                 }
                             };
                             return i
@@ -1972,8 +1988,8 @@ let sS = function (e) {
     let Q = (0, o.zy)(),
         Z = i.useRef(!1),
         Y = O && D && F,
-        [J, q] = i.useState(Y);
-    Y && !J && q(!0),
+        [J, X] = i.useState(Y);
+    Y && !J && X(!0),
         i.useEffect(() => {
             if (Z.current || !Y) return;
             let e = new URLSearchParams(Q.search).get("checkout");
@@ -1984,9 +2000,9 @@ let sS = function (e) {
                 (0, I.bG)(ei.BVt.APPLICATION_STORE),
                 (0, N.A)({ subscriptionTier: t, analyticsLocations: n }));
         }, [Y, Q.search, n]);
-    let X = (0, c.bG)([T.A], () => T.A.enabled),
+    let q = (0, c.bG)([T.A], () => T.A.enabled),
         $ = t === eI.Mf.ApplicationStoreHome,
-        ee = X
+        ee = q
             ? (0, r.jsx)(_.A, {})
             : s
               ? (0, r.jsx)(j.uK, {})

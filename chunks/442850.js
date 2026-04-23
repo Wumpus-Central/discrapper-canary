@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SectionDivider: () => d1, default: () => d0 });
+t.r(l), t.d(l, { SectionDivider: () => d5, default: () => d6 });
 var a,
     s,
     i = {};
@@ -38,7 +38,7 @@ t.r(i),
         AsteriskIcon: () => ef,
         AtIcon: () => ew.X,
         AttachmentIcon: () => ex.P,
-        BIcon: () => ej,
+        BIcon: () => eC,
         BackspaceIcon: () => eu,
         BadgeIcon: () => eA.b,
         BankIcon: () => eI.M,
@@ -47,7 +47,7 @@ t.r(i),
         BeakerIcon: () => e_.c,
         BellIcon: () => eE.X,
         BellSlashIcon: () => eT.a,
-        BellZIcon: () => eC.R,
+        BellZIcon: () => ej.R,
         BicycleIcon: () => eN.h,
         BillIcon: () => eR.d,
         BlueskyBrandIcon: () => eV,
@@ -110,8 +110,8 @@ t.r(i),
         CheckmarkSmallBoldIcon: () => l_.B,
         CheckmarkSmallIcon: () => lE.U,
         ChevronLargeDownIcon: () => lT.g,
-        ChevronLargeLeftIcon: () => lC.f,
-        ChevronLargeRightIcon: () => lj.u,
+        ChevronLargeLeftIcon: () => lj.f,
+        ChevronLargeRightIcon: () => lC.u,
         ChevronLargeUpIcon: () => lN.j,
         ChevronSmallDownIcon: () => lR.a,
         ChevronSmallLeftIcon: () => lV.n,
@@ -175,8 +175,8 @@ t.r(i),
         ExperimentalGameControllerLinkIcon: () => t_.A,
         ExperimentalLootboxIcon: () => tE,
         ExperimentalMicrophoneSparkleIcon: () => tT,
-        ExperimentalMicrophoneSparkleMutedIcon: () => tC,
-        ExperimentalPineappleHouseIcon: () => tj,
+        ExperimentalMicrophoneSparkleMutedIcon: () => tj,
+        ExperimentalPineappleHouseIcon: () => tC,
         ExperimentalSnowflakeIcon: () => tN,
         EyeDropperIcon: () => tR.d,
         EyeIcon: () => tV.b,
@@ -242,8 +242,8 @@ t.r(i),
         ImageFileIcon: () => a_.D,
         ImageFileUpIcon: () => aE.k,
         ImageIcon: () => aT.x,
-        ImageLockIcon: () => aC.c,
-        ImagePlusIcon: () => aj.X,
+        ImageLockIcon: () => aj.c,
+        ImagePlusIcon: () => aC.X,
         ImageSparkleIcon: () => aR.d,
         ImageTextIcon: () => aV,
         ImageWarningIcon: () => ay.D,
@@ -307,8 +307,8 @@ t.r(i),
         NatureIcon: () => s_.p,
         NearbyScanIcon: () => sE,
         NewUserIcon: () => sT.N,
-        NewUserSimpleIcon: () => sC.P,
-        NintendoSwitchNeutralIcon: () => sj.M,
+        NewUserSimpleIcon: () => sj.P,
+        NintendoSwitchNeutralIcon: () => sC.M,
         NitroWheelIcon: () => sN.t,
         ObjectIcon: () => sR.D,
         OrbsIcon: () => sV.C,
@@ -369,8 +369,8 @@ t.r(i),
         PhoneHangUpIcon: () => i_.z,
         PhoneIcon: () => iE.E,
         PiggyBankIcon: () => iT.m,
-        PinIcon: () => iC.t,
-        PinUprightIcon: () => ij.q,
+        PinIcon: () => ij.t,
+        PinUprightIcon: () => iC.q,
         PinUprightSlashIcon: () => iN.h,
         PlayIcon: () => iy.u,
         PlaybackOffIcon: () => iR,
@@ -433,8 +433,8 @@ t.r(i),
         ShopPlusIcon: () => n_,
         ShopSparkleIcon: () => nE.U,
         SignPostIcon: () => nT.Z,
-        SkipBackwardIcon: () => nC.q,
-        SkipForwardIcon: () => nj.i,
+        SkipBackwardIcon: () => nj.q,
+        SkipForwardIcon: () => nC.i,
         SkullIcon: () => nN.V,
         SlashBoxIcon: () => nR.k,
         SlashIcon: () => nV.F,
@@ -497,8 +497,8 @@ t.r(i),
         ThreadRetryIcon: () => c_,
         ThreadWarningIcon: () => cE.m,
         ThumbsDownIcon: () => cT.d,
-        ThumbsUpIcon: () => cC.G,
-        TicketIcon: () => cj.q,
+        ThumbsUpIcon: () => cj.G,
+        TicketIcon: () => cC.q,
         TiktokNeutralIcon: () => cN.X,
         TimerIcon: () => cR.x,
         TopicsIcon: () => cV.K,
@@ -560,9 +560,9 @@ t.r(i),
         XLargeBoldIcon: () => h_.U,
         XLargeIcon: () => hE.d,
         XNeutralIcon: () => hT.p,
-        XSmallBoldIcon: () => hC.a,
-        XSmallIcon: () => C.P,
-        XXsmallBoldIcon: () => hj,
+        XSmallBoldIcon: () => hj.a,
+        XSmallIcon: () => j.P,
+        XXsmallBoldIcon: () => hC,
         XXsmallIcon: () => hN,
         XboxNeutralIcon: () => hZ.Y,
         YoutubeNeutralIcon: () => hR.C,
@@ -599,8 +599,8 @@ var x = t(192308),
     _ = t(657044),
     E = t(849516),
     T = t(177953),
-    C = t(789645),
-    j = t(821609),
+    j = t(789645),
+    C = t(821609),
     N = t(308528),
     R = t(711950),
     V = t(696157),
@@ -1026,8 +1026,8 @@ var eZ = t(422688),
     e_ = t(127062),
     eE = t(782603),
     eT = t(780338),
-    eC = t(440971);
-let ej = (e) => {
+    ej = t(440971);
+let eC = (e) => {
     let {
             size: l = "md",
             width: t,
@@ -1720,8 +1720,8 @@ var lx = t(845798),
     l_ = t(820081),
     lE = t(478016),
     lT = t(715482),
-    lC = t(668953),
-    lj = t(881636),
+    lj = t(668953),
+    lC = t(881636),
     lN = t(138017),
     lR = t(847374),
     lV = t(921853),
@@ -2346,7 +2346,7 @@ let tE = (e) => {
             ],
         });
     },
-    tC = (e) => {
+    tj = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -2386,7 +2386,7 @@ let tE = (e) => {
             ],
         });
     },
-    tj = (e) => {
+    tC = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -2979,8 +2979,8 @@ let aZ = (e) => {
 var a_ = t(529689),
     aE = t(626034),
     aT = t(191023),
-    aC = t(532590),
-    aj = t(750943),
+    aj = t(532590),
+    aC = t(750943),
     aN = t(477262),
     aR = t(251391);
 let aV = (e) => {
@@ -3647,8 +3647,8 @@ let sE = (e) => {
     });
 };
 var sT = t(506803),
-    sC = t(246913),
-    sj = t(418524),
+    sj = t(246913),
+    sC = t(418524),
     sN = t(403581),
     sR = t(524501),
     sV = t(318254),
@@ -5782,8 +5782,8 @@ var iI = t(22231),
     i_ = t(960027),
     iE = t(289020),
     iT = t(695458),
-    iC = t(366605),
-    ij = t(788120),
+    ij = t(366605),
+    iC = t(788120),
     iN = t(609731);
 let iR = (e) => {
         let {
@@ -6387,8 +6387,8 @@ let nZ = (e) => {
     };
 var nE = t(503002),
     nT = t(855473),
-    nC = t(461150),
-    nj = t(898196),
+    nj = t(461150),
+    nC = t(898196),
     nN = t(918715),
     nR = t(633018),
     nV = t(88187);
@@ -7253,8 +7253,8 @@ let c_ = (e) => {
 };
 var cE = t(948428),
     cT = t(148795),
-    cC = t(53788),
-    cj = t(638916),
+    cj = t(53788),
+    cC = t(638916),
     cN = t(218471),
     cR = t(291747),
     cV = t(306788),
@@ -7790,8 +7790,8 @@ var hI = t(625657),
     h_ = t(807072),
     hE = t(972213),
     hT = t(274997),
-    hC = t(401432);
-let hj = (e) => {
+    hj = t(401432);
+let hC = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -8249,18 +8249,18 @@ let oT = (0, oE.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function oC(e) {
+function oj(e) {
     let { location: l } = e,
         { enabled: t } = oT.useConfig({ location: l });
     return t;
 }
-var oj = t(398523);
+var oC = t(398523);
 let oN = () => {
         (0, o_.Dr)(m.M.RECURRING_3P_PROMOTION_POPOVER);
     },
     oR = () => {
-        let { enabled: e } = oj.Ay.useConfig({ location: "useIsRecurring3PPopoverShowable" }),
-            l = oC({ location: "useIsRecurring3PPopoverShowable" }),
+        let { enabled: e } = oC.Ay.useConfig({ location: "useIsRecurring3PPopoverShowable" }),
+            l = oj({ location: "useIsRecurring3PPopoverShowable" }),
             t = (0, o_.k8)(m.M.RECURRING_3P_PROMOTION_POPOVER);
         return e && l && !1 === t;
     };
@@ -8511,18 +8511,75 @@ let rm = () => {
 };
 var rf = t(989349),
     rw = t.n(rf),
-    rx = t(890687);
-let ru =
+    rx = t(983060),
+    ru = t(237146);
+function rA(e) {
+    let { targetElementRef: l, dismissPopover: t, children: a } = e;
+    return (0, n.jsxs)(n.Fragment, {
+        children: [
+            (0, n.jsx)("div", { children: a }),
+            (0, n.jsx)(hG.A, {
+                size: "lg",
+                shouldShow: !0,
+                position: "right",
+                align: "top",
+                caretConfig: { align: "start" },
+                targetElementRef: l,
+                onRequestClose: () => t(h0.i.USER_DISMISS),
+                badge: { type: "new", variant: "expressive" },
+                title: hz.intl.string(ru.default.pdaUSE),
+                body: hz.intl.format(ru.default.bsMVNi, { termsLink: (0, rx.W)() }),
+                graphic: {
+                    type: "image",
+                    src: "https://cdn.discordapp.com/assets/content/a626e89f21174d458db77a7934048a601ec3147f0d79fbe3d0f33b76d066c155.png",
+                    aspectRatio: "16/9",
+                },
+                actions: [
+                    {
+                        text: hz.intl.string(hz.t.RzWDqY),
+                        variant: "expressive",
+                        icon: sN.t,
+                        onClick: () => {
+                            t(h0.i.TAKE_ACTION), (0, hW.pX)(hq.BVt.NITRO_HOME);
+                        },
+                    },
+                ],
+            }),
+        ],
+    });
+}
+var rI = t(673589);
+function rM(e) {
+    let { children: l } = e;
+    return (0, n.jsx)(A.u, {
+        asset: (0, n.jsx)("img", {
+            className: rI.L,
+            src: "https://cdn.discordapp.com/assets/content/750de711fd51af6562910d0c2eb3eb39083f784590dcea2ccfc9a20c785721a6.png",
+            alt: "",
+            width: 80,
+            height: 80,
+        }),
+        assetSize: 80,
+        title: hz.intl.string(ru.default.wqhsP3),
+        body: hz.intl.string(ru.default.HCJKFl),
+        padding: "lg",
+        position: "right",
+        asContainer: !0,
+        children: l,
+    });
+}
+var rZ = t(890687);
+let r_ =
         "https://cdn.discordapp.com/assets/content/9ffdc24b65b49158f09308dca984b0e678d50f2710807fbd2b1a14cb7a6457d6.svg",
-    rA = (e) => {
+    rE = (e) => {
         let { children: l, multiplier: t } = e,
-            a = (0, rx.Oq)()
+            a = (0, rZ.Oq)()
                 ? hz.intl.format(hz.t.NpUfej, { bonusOrbMultiplier: t })
                 : hz.intl.format(hz.t["G5k+lZ"], { bonusOrbMultiplier: t });
         return (0, n.jsx)(A.u, {
             title: hz.intl.string(hz.t.F2MShO),
             body: a,
-            asset: (0, n.jsx)("img", { src: ru, alt: "", "aria-hidden": !0 }),
+            asset: (0, n.jsx)("img", { src: r_, alt: "", "aria-hidden": !0 }),
             assetSize: 80,
             position: "right",
             align: "center",
@@ -8530,14 +8587,14 @@ let ru =
             children: l,
         });
     };
-var rI = t(962995),
-    rM = t(208556);
-function rZ(e) {
+var rT = t(962995),
+    rj = t(208556);
+function rC(e) {
     let { children: l } = e;
     return (0, n.jsx)(A.u, {
-        body: hz.intl.format(rI.default.zinfZi, { discountPercent: rn.aW }),
-        title: hz.intl.string(rI.default.OlObRa),
-        asset: (0, n.jsx)("img", { src: rM.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
+        body: hz.intl.format(rT.default.zinfZi, { discountPercent: rn.aW }),
+        title: hz.intl.string(rT.default.OlObRa),
+        asset: (0, n.jsx)("img", { src: rj.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
         assetSize: 80,
         padding: "lg",
         position: "right",
@@ -8545,23 +8602,23 @@ function rZ(e) {
         children: l,
     });
 }
-var r_ = t(312640),
-    rE = t(208756),
-    rT = t(798618),
-    rC = t(916845),
-    rj = t(627330),
-    rN = t(532794),
-    rR = t(146218);
-function rV(e) {
+var rN = t(312640),
+    rR = t(208756),
+    rV = t(798618),
+    ry = t(916845),
+    rH = t(627330),
+    rO = t(532794),
+    rL = t(146218);
+function rB(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         { analyticsLocations: s } = (0, hF.Ay)(),
         i = c.useCallback(() => {
-            t(h0.i.TAKE_ACTION), (0, rN.A)({ subscriptionTier: oV.pe.TIER_2, analyticsLocations: s });
+            t(h0.i.TAKE_ACTION), (0, rO.A)({ subscriptionTier: oV.pe.TIER_2, analyticsLocations: s });
         }, [t, s]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", { children: a }),
-            (0, n.jsx)(r_.x, {
+            (0, n.jsx)(rN.x, {
                 targetElementRef: l,
                 onRequestClose: () => t(h0.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -8572,22 +8629,22 @@ function rV(e) {
                 children: (0, n.jsxs)("div", {
                     "data-mana-component": "popover",
                     children: [
-                        (0, n.jsx)(rC.q, { onClick: () => t(h0.i.USER_DISMISS), variant: "color-mix" }),
+                        (0, n.jsx)(ry.q, { onClick: () => t(h0.i.USER_DISMISS), variant: "color-mix" }),
                         (0, n.jsx)("div", {
-                            className: rR.h,
+                            className: rL.h,
                             children: (0, n.jsx)("img", {
                                 src: "https://cdn.discordapp.com/assets/content/3a2af2dbdf5126902e05051c880579b0b2a4d66577c261a83aa20d3e3fc5c084.svg",
                                 alt: "",
                                 "aria-hidden": !0,
-                                className: rR.S,
+                                className: rL.S,
                             }),
                         }),
-                        (0, n.jsx)(rj.D, {
-                            title: hz.intl.string(rI.default.OlObRa),
-                            body: hz.intl.format(rI.default["A+56/R"], { discountPercent: rn.aW }),
+                        (0, n.jsx)(rH.D, {
+                            title: hz.intl.string(rT.default.OlObRa),
+                            body: hz.intl.format(rT.default["A+56/R"], { discountPercent: rn.aW }),
                             badge: { type: "beta", variant: "expressive" },
                         }),
-                        (0, n.jsx)(rE.Z, {
+                        (0, n.jsx)(rR.Z, {
                             actions: [
                                 {
                                     text: hz.intl.string(hz.t.pj0XBN),
@@ -8598,31 +8655,31 @@ function rV(e) {
                                 },
                             ],
                         }),
-                        (0, n.jsx)(rT.F, {}),
+                        (0, n.jsx)(rV.F, {}),
                     ],
                 }),
             }),
         ],
     });
 }
-var ry = t(88001),
-    rH = t(466919),
-    rO = t(438705);
-let rL = (e) => {
+var rS = t(88001),
+    rF = t(466919),
+    rP = t(438705);
+let rU = (e) => {
     let { targetElementRef: l, dismissPopover: a, children: s } = e,
         i = o1({ location: "nitro_tab_popover" }),
         { analyticsLocations: c } = (0, hF.Ay)(),
         h = i
-            ? hz.intl.string(rH.default.oOSj1l)
-            : hz.intl.format(rH.default["c+NBSl"], { premiumGroupProductName: (0, ry.DP)() }),
+            ? hz.intl.string(rF.default.oOSj1l)
+            : hz.intl.format(rF.default["c+NBSl"], { premiumGroupProductName: (0, rS.DP)() }),
         o = i
-            ? hz.intl.string(rH.default.nCLJQn)
-            : hz.intl.format(rH.default.MuUV5u, { premiumGroupProductName: (0, ry.DP)(), totalSeats: ry.aw }),
+            ? hz.intl.string(rF.default.nCLJQn)
+            : hz.intl.format(rF.default.MuUV5u, { premiumGroupProductName: (0, rS.DP)(), totalSeats: rS.aw }),
         r = (0, n.jsx)(hG.A, {
             targetElementRef: l,
             title: h,
             body: o,
-            graphic: { type: "image", src: rO },
+            graphic: { type: "image", src: rP },
             badge: { type: "beta", variant: "expressive" },
             gradientColor: "nitro-pink",
             size: "md",
@@ -8632,13 +8689,13 @@ let rL = (e) => {
             actions: [
                 {
                     text: i
-                        ? hz.intl.format(rH.default.LwdrNi, { premiumGroupProductName: (0, ry.DP)() })
-                        : hz.intl.string(rH.default["IO+nlU"]),
+                        ? hz.intl.format(rF.default.LwdrNi, { premiumGroupProductName: (0, rS.DP)() })
+                        : hz.intl.string(rF.default["IO+nlU"]),
                     variant: i ? "expressive" : "primary",
                     onClick: () => {
                         a(h0.i.TAKE_ACTION),
                             i
-                                ? (0, rN.A)({
+                                ? (0, rO.A)({
                                       subscriptionTier: oV.pe.TIER_2,
                                       initialPlanId: oV.gD.PREMIUM_GROUP_MONTH,
                                       analyticsLocations: c,
@@ -8655,126 +8712,126 @@ let rL = (e) => {
         });
     return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { children: s }), r] });
 };
-var rB = t(421438);
-function rS(e) {
+var rb = t(421438);
+function rD(e) {
     let { targetElementRef: l, children: t } = e;
     return (0, n.jsx)(A.u, {
         targetElementRef: l,
-        asset: (0, n.jsx)("img", { src: rB, alt: "" }),
-        title: hz.intl.string(rH.default.aFBQ3d),
-        body: hz.intl.string(rH.default.HXu14O),
+        asset: (0, n.jsx)("img", { src: rb, alt: "" }),
+        title: hz.intl.string(rF.default.aFBQ3d),
+        body: hz.intl.string(rF.default.HXu14O),
         padding: "lg",
         caretConfig: { align: "center", position: "left" },
         position: "right",
         children: t,
     });
 }
-var rF = t(567341),
-    rP = t(549384),
-    rU = t(490285);
-function rb(e) {
+var rk = t(567341),
+    rJ = t(549384),
+    rG = t(490285);
+function rW(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         s = c.useCallback(() => {
-            t(h0.i.TAKE_ACTION), (0, hW.pX)(`${hq.BVt.NITRO_HOME}?section=${rP.L}`);
+            t(h0.i.TAKE_ACTION), (0, hW.pX)(`${hq.BVt.NITRO_HOME}?section=${rJ.L}`);
         }, [t]),
         i = (0, n.jsx)(hG.A, {
             targetElementRef: l,
             onRequestClose: () => t(h0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rF.Z },
+            graphic: { type: "rive", rive: rk.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: hz.intl.string(rU.default.UPOlxO),
-            body: hz.intl.string(rU.default.e6r8OX),
+            title: hz.intl.string(rG.default.UPOlxO),
+            body: hz.intl.string(rG.default.e6r8OX),
             actions: [{ text: hz.intl.string(hz.t.RzWDqY), icon: sN.t, onClick: s }],
             gradientColor: "nitro-pink",
         });
     return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { children: a }), i] });
 }
-var rD = t(31502);
-function rk(e) {
+var rq = t(31502);
+function rz(e) {
     let { targetElementRef: l, dismissPopover: t, lastGrantedRewardAmount: a, children: s } = e,
         i = c.useCallback(() => {
             t(h0.i.TAKE_ACTION);
-            let e = (0, rD.Q)("PremiumOrbRewardsOrbDropPopover")
+            let e = (0, rq.Q)("PremiumOrbRewardsOrbDropPopover")
                 ? `${hq.BVt.NITRO_HOME}?perk=${o9.NITRO_ORBS_REWARDS_CARD_ID}`
-                : `${hq.BVt.NITRO_HOME}?section=${rP.L}`;
+                : `${hq.BVt.NITRO_HOME}?section=${rJ.L}`;
             (0, hW.pX)(e);
         }, [t]),
         h = (0, n.jsx)(hG.A, {
             targetElementRef: l,
             onRequestClose: () => t(h0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rF.Z },
+            graphic: { type: "rive", rive: rk.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: hz.intl.string(rU.default["78+gLr"]),
-            body: hz.intl.formatToPlainString(rU.default.Ry1TXC, { orbsCount: a }),
+            title: hz.intl.string(rG.default["78+gLr"]),
+            body: hz.intl.formatToPlainString(rG.default.Ry1TXC, { orbsCount: a }),
             actions: [{ text: hz.intl.string(hz.t.RzWDqY), icon: sN.t, onClick: i }],
             gradientColor: "nitro-pink",
         });
     return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { children: s }), h] });
 }
-function rJ(e) {
+function rK(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         s = c.useCallback(() => {
-            t(h0.i.TAKE_ACTION), (0, hW.pX)(`${hq.BVt.NITRO_HOME}?section=${rP.L}`);
+            t(h0.i.TAKE_ACTION), (0, hW.pX)(`${hq.BVt.NITRO_HOME}?section=${rJ.L}`);
         }, [t]),
         i = (0, n.jsx)(hG.A, {
             targetElementRef: l,
             onRequestClose: () => t(h0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rF.Z },
+            graphic: { type: "rive", rive: rk.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: hz.intl.string(rU.default["3BI7j6"]),
-            body: hz.intl.string(rU.default.XNHr3C),
+            title: hz.intl.string(rG.default["3BI7j6"]),
+            body: hz.intl.string(rG.default.XNHr3C),
             actions: [{ text: hz.intl.string(hz.t.hvVgAZ), onClick: s }],
             gradientColor: "nitro-pink",
         });
     return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { children: a }), i] });
 }
-function rG(e) {
+function rQ(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: s, width: i = 144, height: c = 144 } = e;
     return (0, n.jsx)("img", {
         style: { width: i, height: c },
-        src: ru,
+        src: r_,
         alt: l,
         "aria-label": t,
         "aria-hidden": a,
         role: s ?? "img",
     });
 }
-var rW = t(912293);
-function rq(e) {
+var rX = t(912293);
+function rY(e) {
     let { orbsCount: l } = e;
     return (0, n.jsxs)("div", {
-        className: rW.kL,
+        className: rX.kL,
         children: [
             (0, n.jsx)("div", {
-                className: rW.dy,
-                children: (0, n.jsx)(rG, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
+                className: rX.dy,
+                children: (0, n.jsx)(rQ, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
             }),
-            (0, n.jsx)(hH.E, { variant: "display-lg", color: "text-strong", className: rW.Uq, children: l }),
+            (0, n.jsx)(hH.E, { variant: "display-lg", color: "text-strong", className: rX.Uq, children: l }),
         ],
     });
 }
-var rz = t(664184);
-function rK(e) {
+var r$ = t(664184);
+function r1(e) {
     let { targetElementRef: l, dismissPopover: t, children: a, numOrbs: s } = e,
         { analyticsLocations: i } = (0, hF.Ay)(hS.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
         h = c.useCallback(() => {
             t(h0.i.TAKE_ACTION),
-                (0, rN.A)({
+                (0, rO.A)({
                     subscriptionTier: oV.pe.TIER_2,
                     analyticsLocations: i,
                     analyticsObject: { object: hq.ZSU.BUTTON_CTA, objectType: hq.AnalyticsObjectTypes.TIER_2 },
@@ -8783,7 +8840,7 @@ function rK(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", { children: a }),
-            (0, n.jsx)(r_.x, {
+            (0, n.jsx)(rN.x, {
                 targetElementRef: l,
                 onRequestClose: () => t(h0.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -8794,33 +8851,33 @@ function rK(e) {
                 children: (0, n.jsxs)("div", {
                     "data-mana-component": "popover",
                     children: [
-                        (0, n.jsx)(rC.q, { onClick: () => t(h0.i.USER_DISMISS), variant: "color-mix" }),
-                        (0, n.jsx)("div", { className: rz.O, children: (0, n.jsx)(rq, { orbsCount: s }) }),
-                        (0, n.jsx)(rj.D, {
-                            title: hz.intl.string(rU.default.hx5AFp),
-                            body: hz.intl.formatToPlainString(rU.default.otQEii, { orbsCount: s }),
+                        (0, n.jsx)(ry.q, { onClick: () => t(h0.i.USER_DISMISS), variant: "color-mix" }),
+                        (0, n.jsx)("div", { className: r$.O, children: (0, n.jsx)(rY, { orbsCount: s }) }),
+                        (0, n.jsx)(rH.D, {
+                            title: hz.intl.string(rG.default.hx5AFp),
+                            body: hz.intl.formatToPlainString(rG.default.otQEii, { orbsCount: s }),
                             badge: { type: "beta", variant: "expressive" },
-                            className: rz.Q,
+                            className: r$.Q,
                         }),
-                        (0, n.jsx)(rE.Z, {
+                        (0, n.jsx)(rR.Z, {
                             actions: [
                                 { text: hz.intl.string(hz.t.pj0XBN), variant: "primary", icon: sN.t, onClick: h },
                             ],
                         }),
-                        (0, n.jsx)(rT.F, {}),
+                        (0, n.jsx)(rV.F, {}),
                     ],
                 }),
             }),
         ],
     });
 }
-var rQ = t(511484),
-    rX = t(473702),
-    rY = t(398932);
-let r$ = (e) => {
+var r0 = t(511484),
+    r2 = t(473702),
+    r3 = t(398932);
+let r4 = (e) => {
     let { targetElementRef: l, discountOffer: a, premiumSubscription: s, dismissCoachmark: i, children: c } = e,
         { analyticsLocations: h } = (0, hF.Ay)(hS.A.CHURN_DISCOUNT_POPOVER),
-        o = (0, rQ.iU)(oV.gD.PREMIUM_MONTH_TIER_2, a, s),
+        o = (0, r0.iU)(oV.gD.PREMIUM_MONTH_TIER_2, a, s),
         r = (0, n.jsx)(hG.h, {
             targetElementRef: l,
             position: "right",
@@ -8833,7 +8890,7 @@ let r$ = (e) => {
                 billingPeriod: (0, oM.Ke)(a.discount.user_usage_limit_interval),
                 numMonths: a.discount.user_usage_limit,
             }),
-            graphic: { type: "image", src: rY.A },
+            graphic: { type: "image", src: r3.A },
             gradientColor: "nitro-pink",
             actions: [
                 {
@@ -8852,7 +8909,7 @@ let r$ = (e) => {
                                         ...l,
                                         premiumSubscription: s,
                                         analyticsLocations: h,
-                                        initialStep: rX.g.CONFIRM_DISCOUNT,
+                                        initialStep: r2.g.CONFIRM_DISCOUNT,
                                     });
                             });
                     },
@@ -8865,17 +8922,17 @@ let r$ = (e) => {
         });
     return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { children: c }), r] });
 };
-var r1 = t(498470),
-    r0 = t(807098),
-    r2 = t(637706);
-function r3(e) {
+var r5 = t(498470),
+    r6 = t(807098),
+    r7 = t(637706);
+function r8(e) {
     let { children: l, targetElementRef: t, dismissPopover: a } = e,
         s = (0, ri.c)(oF.C.PREMIUM_TAB_POPOVER),
         i =
             null != s && "premiumTabPopover" === s.properties.properties.oneofKind
                 ? s.properties.properties.premiumTabPopover
                 : null,
-        c = (0, r0.T)(i?.asset);
+        c = (0, r6.T)(i?.asset);
     if (null == i) return l;
     let h =
             i.button?.copy != null
@@ -8883,7 +8940,7 @@ function r3(e) {
                       {
                           text: i.button.copy,
                           variant: "expressive",
-                          onClick: (0, r1.h)({
+                          onClick: (0, r5.h)({
                               buttonAction: i.button.buttonAction,
                               deeplinkSection: i.button.deeplinkSection,
                               onClose: () => a(h0.i.USER_DISMISS),
@@ -8892,7 +8949,7 @@ function r3(e) {
                       },
                   ]
                 : void 0,
-        o = (0, r2.C)(i.helpArticle, i.helpArticleId);
+        o = (0, r7.C)(i.helpArticle, i.helpArticleId);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", { children: l }),
@@ -8914,32 +8971,32 @@ function r3(e) {
         ],
     });
 }
-var r4 = t(990078),
-    r5 = t(534514),
-    r6 = t(306125);
-function r7(e) {
+var r9 = t(990078),
+    de = t(534514),
+    dl = t(306125);
+function dt(e) {
     let { children: l } = e,
         t = (0, ri.c)(oF.C.PREMIUM_TAB_TOOLTIP),
         a =
             null != t && "premiumTabTooltip" === t.properties.properties.oneofKind
                 ? t.properties.properties.premiumTabTooltip
                 : null,
-        s = (0, r0.T)(a?.asset);
+        s = (0, r6.T)(a?.asset);
     if (null == a) return l;
     let i = (0, n.jsxs)("div", {
-        className: r6.$e,
+        className: dl.$e,
         children: [
-            null != s && (0, n.jsx)("img", { className: r6.NC, src: s, alt: "" }),
+            null != s && (0, n.jsx)("img", { className: dl.NC, src: s, alt: "" }),
             (0, n.jsxs)("div", {
-                className: r6.Vm,
+                className: dl.Vm,
                 children: [
-                    (0, n.jsx)(r5.D, { variant: "heading-md/bold", color: "text-strong", children: a.header }),
+                    (0, n.jsx)(de.D, { variant: "heading-md/bold", color: "text-strong", children: a.header }),
                     (0, n.jsx)(hH.E, { variant: "text-sm/normal", color: "text-subtle", children: a.body }),
                 ],
             }),
         ],
     });
-    return (0, n.jsx)(r4.m, {
+    return (0, n.jsx)(r9.m, {
         __unsupportedReactNodeAsText: i,
         position: "right",
         "aria-label": a.header,
@@ -8947,7 +9004,7 @@ function r7(e) {
         children: (0, n.jsx)("div", { children: l }),
     });
 }
-function r8(e) {
+function da(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: s, width: i = 144, height: c = 144 } = e;
     return (0, n.jsx)("img", {
         style: { width: i, height: c },
@@ -8958,25 +9015,25 @@ function r8(e) {
         role: s ?? "img",
     });
 }
-var r9 = t(580630);
-function de(e) {
+var ds = t(580630);
+function di(e) {
     let { children: l, endsAt: t, variant: a = "initial" } = e,
         s = (0, oX.Zb)(t),
-        i = (0, r9.$g)(0, (0, oM.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+        i = (0, ds.$g)(0, (0, oM.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
         c = "followup" === a,
         h = c ? hz.intl.string(hz.t.gzhz8w) : hz.intl.string(hz.t.aopiS6),
         o = c ? hz.intl.format(hz.t["3iUE+U"], { price: i }) : hz.intl.format(hz.t.AQd9tZ, { days: s });
     return (0, n.jsx)(A.u, {
         title: o,
         body: h,
-        asset: (0, n.jsx)(r8, { alt: "", width: 48, height: 48 }),
+        asset: (0, n.jsx)(da, { alt: "", width: 48, height: 48 }),
         assetSize: 48,
         position: "right",
         asContainer: !0,
         children: (0, n.jsx)("div", { children: l }),
     });
 }
-var dl =
+var dn =
     (((s = {}).NONE = "none"),
     (s.CHURN_DISCOUNT = "churn_discount"),
     (s.PREMIUM_GROUP = "premium_group"),
@@ -8993,7 +9050,7 @@ var dl =
     (s.CROISSANT_REHEAT_MOMENT = "croissant_reheat_moment"),
     (s.CROISSANT_REHEAT_TOOLTIP = "croissant_reheat_tooltip"),
     s);
-function dt(e) {
+function dc(e) {
     let {
         children: l,
         popoverType: t,
@@ -9014,7 +9071,7 @@ function dt(e) {
     switch (t) {
         case "churn_discount":
             if (null != s && null != i)
-                return (0, n.jsx)(r$, {
+                return (0, n.jsx)(r4, {
                     targetElementRef: a,
                     discountOffer: s,
                     premiumSubscription: i,
@@ -9023,17 +9080,17 @@ function dt(e) {
                 });
             break;
         case "premium_group":
-            return (0, n.jsx)(rL, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, n.jsx)(rU, { targetElementRef: a, dismissPopover: r, children: l });
         case "premium_group_tooltip":
-            return (0, n.jsx)(rS, { targetElementRef: a, children: l });
+            return (0, n.jsx)(rD, { targetElementRef: a, children: l });
         case "orbs_upsell":
-            if (c) return (0, n.jsx)(rK, { targetElementRef: a, dismissPopover: r, numOrbs: h, children: l });
-            return (0, n.jsx)(rJ, { targetElementRef: a, dismissPopover: r, children: l });
+            if (c) return (0, n.jsx)(r1, { targetElementRef: a, dismissPopover: r, numOrbs: h, children: l });
+            return (0, n.jsx)(rK, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_intro":
-            return (0, n.jsx)(rb, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, n.jsx)(rW, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_drop":
             if (null != o)
-                return (0, n.jsx)(rk, {
+                return (0, n.jsx)(rz, {
                     targetElementRef: a,
                     dismissPopover: d,
                     lastGrantedRewardAmount: o,
@@ -9043,23 +9100,27 @@ function dt(e) {
         case "reverse_trial": {
             let e = m?.trial_id === oV.Tt,
                 t = p ?? (m?.expires_at != null ? rw()(m?.expires_at) : null);
-            if (null != t) return (0, n.jsx)(de, { endsAt: t, variant: e ? "followup" : "initial", children: l });
+            if (null != t) return (0, n.jsx)(di, { endsAt: t, variant: e ? "followup" : "initial", children: l });
             break;
         }
         case "tooltip":
-            return (0, n.jsx)(r7, { children: l });
+            return (0, n.jsx)(dt, { children: l });
         case "marketing_moment_popover":
-            return (0, n.jsx)(r3, { targetElementRef: a, dismissPopover: v, children: l });
+            return (0, n.jsx)(r8, { targetElementRef: a, dismissPopover: v, children: l });
         case "l_premium_sub_tooltip":
-            return (0, n.jsx)(rZ, { children: l });
+            return (0, n.jsx)(rC, { children: l });
         case "l_upsell":
-            return (0, n.jsx)(rV, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, n.jsx)(rB, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_multiplier":
-            return (0, n.jsx)(rA, { multiplier: g, children: l });
+            return (0, n.jsx)(rE, { multiplier: g, children: l });
+        case "croissant_reheat_moment":
+            return (0, n.jsx)(rA, { targetElementRef: a, dismissPopover: r, children: l });
+        case "croissant_reheat_tooltip":
+            return (0, n.jsx)(rM, { children: l });
     }
     return l;
 }
-function da(e) {
+function dh(e) {
     return (0, n.jsxs)("svg", {
         width: "14",
         height: "14",
@@ -9094,31 +9155,31 @@ function da(e) {
         ],
     });
 }
-var ds = t(946332);
-function di(e) {
+var dr = t(946332);
+function dd(e) {
     let { copy: l, showStars: t = !0, className: a } = e;
     return (0, n.jsxs)("div", {
-        className: o()(ds.fC, a),
+        className: o()(dr.fC, a),
         children: [
             t &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)("span", {
-                            className: o()(ds.d4, ds.Cm),
-                            children: (0, n.jsx)(da, { width: "10", height: "10" }),
+                            className: o()(dr.d4, dr.Cm),
+                            children: (0, n.jsx)(dh, { width: "10", height: "10" }),
                         }),
                         (0, n.jsx)("span", {
-                            className: o()(ds.d4, ds.nv),
-                            children: (0, n.jsx)(da, { width: "14", height: "14" }),
+                            className: o()(dr.d4, dr.nv),
+                            children: (0, n.jsx)(dh, { width: "14", height: "14" }),
                         }),
                     ],
                 }),
-            (0, n.jsx)(hH.E, { variant: "eyebrow", className: ds.Ad, children: l }),
+            (0, n.jsx)(hH.E, { variant: "eyebrow", className: dr.Ad, children: l }),
         ],
     });
 }
-let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
-    dc = (e) => {
+let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
+    dg = (e) => {
         let { selected: l } = e,
             t = (0, p.bG)([oI.default], () => oI.default.getCurrentUser()),
             a = (0, p.bG)([oz.A], () => oz.A.getPremiumTypeSubscription()),
@@ -9132,7 +9193,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             d = null != o ? o : t?.createdAt;
         return r || (null != t && null != d && Date.now() - d.getTime() > 12096e5);
     },
-    dh = (e) => {
+    dp = (e) => {
         let l,
             t,
             a,
@@ -9147,8 +9208,8 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             _ = (0, rt.p)(),
             E = (0, oX.ds)(),
             T = (0, oQ.cg)(),
-            C = (0, oH.NF)({ trialOffer: M }),
-            j = (0, rc.bf)(),
+            j = (0, oH.NF)({ trialOffer: M }),
+            C = (0, rc.bf)(),
             [N, R] = rm(),
             {
                 shouldShowBonusOrbsUX: y,
@@ -9188,7 +9249,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             X = null != _ && null != f && f.status === hq.Dmq.CANCELED,
             Y = (0, oq.Gh)("NitroTabButton"),
             { functionalityEnabled: $ } = (0, rn.YS)({ location: "NitroTabButton" }),
-            ee = oC({ location: "NitroTabButton" }),
+            ee = oj({ location: "NitroTabButton" }),
             el = $ && ee && A,
             et = $ && ee && J,
             ea = (function () {
@@ -9226,7 +9287,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
         (0, oa.Tc)() && (S && ev.push(m.M.RECURRING_3P_PROMOTION_POPOVER), T && ev.push(m.M.BOGO_2025_NITRO_TAB_BADGE));
         let [ep, em] = (0, hP.kn)(ev, void 0, !0);
         X && eg.push(m.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
-            j && (D || k ? eg.push(m.M.PREMIUM_GROUP_POPOVER_UPSELL_V2) : eg.push(m.M.PREMIUM_GROUP_POPOVER)),
+            C && (D || k ? eg.push(m.M.PREMIUM_GROUP_POPOVER_UPSELL_V2) : eg.push(m.M.PREMIUM_GROUP_POPOVER)),
             G && eg.push(m.M.PREMIUM_ORBS_UPSELL_POPOVER),
             Q && eg.push(m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
             el && eg.push(m.M.L_3PP_NITRO_TOOLTIP),
@@ -9254,24 +9315,24 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                 !0,
             ),
             [eE, eT] = (0, hP.Cc)(K ? m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, W ?? "", void 0, !0),
-            eC =
+            ej =
                 null != eu &&
                 "premiumTabTooltip" === eu.properties.properties.oneofKind &&
                 eI === m.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
-            ej = el && ef === m.M.L_3PP_NITRO_TOOLTIP,
+            eC = el && ef === m.M.L_3PP_NITRO_TOOLTIP,
             eN = et && ef === m.M.L_3PP_NON_NITRO_POPOVER;
         if (
             (c.useEffect(() => {
                 !0 === s &&
                     (null != ep && em(h0.i.AUTO_DISMISS),
-                    null == ef || dn.has(ef) || ew(h0.i.AUTO_DISMISS),
+                    null == ef || dv.has(ef) || ew(h0.i.AUTO_DISMISS),
                     null != eI && eM(h0.i.AUTO_DISMISS),
                     null != eE && eT(h0.i.AUTO_DISMISS),
                     null != eZ && e_(h0.i.AUTO_DISMISS),
                     y && H(h0.i.AUTO_DISMISS),
                     null != N && R(h0.i.AUTO_DISMISS));
             }, [em, s, ep, ew, ef, eI, eM, eE, eT, eZ, e_, y, H, N, R]),
-            !dc({ selected: s }))
+            !dg({ selected: s }))
         )
             return null;
         let eR = () => {
@@ -9298,7 +9359,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                 upperCase: !0,
             })));
         let eV = ef === m.M.PREMIUM_GROUP_POPOVER || ef === m.M.PREMIUM_GROUP_POPOVER_UPSELL_V2,
-            ey = j && eV;
+            ey = C && eV;
         if (L)
             (l = (0, n.jsx)(hV.E, { type: { text: hz.intl.string(hz.t.RDE0Sc) }, variant: "expressive" })),
                 (eR = () => {
@@ -9318,7 +9379,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                 (r = ex.properties.properties.premiumTab.showHoverGradient),
                 e || (a = ex.properties.properties.premiumTab.deeplinkSection);
         } else if (T) (l = (0, n.jsx)(rh.A, {})), (t = 0);
-        else if (C) {
+        else if (j) {
             let e = (0, oH.ZR)();
             (l = (0, n.jsx)(rd.MA, {
                 isTabSelected: s,
@@ -9338,7 +9399,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                   ? ((l = (0, n.jsx)(hV.E, { type: { text: hz.intl.string(hz.t.raP9dM) }, variant: "expressive" })),
                     (t = 4))
                   : null != N
-                    ? ((l = (0, n.jsx)(di, { copy: N, showStars: !1 })), (t = 1))
+                    ? ((l = (0, n.jsx)(dd, { copy: N, showStars: !1 })), (t = 1))
                     : null != Z
                       ? ((l = (0, n.jsx)(rd.fY, { userDiscount: Z, isTabSelected: s, includesAmountOff: !1 })), (t = 3))
                       : null == M || ed
@@ -9348,7 +9409,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                                 (Q && ef === m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
                                 (K && eE === m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
                               ? ((l = (0, n.jsx)(hV.E, { type: "new", variant: "expressive" })), (t = 2))
-                              : ej
+                              : eC
                                 ? ((l = (0, n.jsx)(hV.E, { type: "new", variant: "expressive" })), (t = 11))
                                 : eN
                                   ? ((l = (0, n.jsx)(hV.E, { type: "new", variant: "expressive" })), (t = 12))
@@ -9360,36 +9421,36 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                                         ef === m.M.CROISSANT_REHEAT_MOMENT &&
                                         ((l = (0, n.jsx)(hV.E, { type: "new", variant: "expressive" })), (t = 2))
                         : ((l = (0, n.jsx)(rd.Ag, { trialOffer: M, isTabSelected: s })), (t = 4));
-        let eH = dl.NONE;
+        let eH = dn.NONE;
         eZ === m.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
-            ? (eH = dl.MARKETING_MOMENT_POPOVER)
+            ? (eH = dn.MARKETING_MOMENT_POPOVER)
             : X && ef === m.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === t
-              ? (eH = dl.CHURN_DISCOUNT)
+              ? (eH = dn.CHURN_DISCOUNT)
               : ey && !k
-                ? (eH = dl.PREMIUM_GROUP)
+                ? (eH = dn.PREMIUM_GROUP)
                 : ey && k
-                  ? ((eH = dl.PREMIUM_GROUP_TOOLTIP), (r = !0))
+                  ? ((eH = dn.PREMIUM_GROUP_TOOLTIP), (r = !0))
                   : G && ef === m.M.PREMIUM_ORBS_UPSELL_POPOVER
-                    ? (eH = dl.ORBS_UPSELL)
+                    ? (eH = dn.ORBS_UPSELL)
                     : Q && ef === m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                      ? (eH = dl.ORBS_INTRO)
+                      ? (eH = dn.ORBS_INTRO)
                       : K && eE === m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                        ? (eH = dl.ORBS_DROP)
-                        : eC
-                          ? (eH = dl.TOOLTIP)
-                          : ej
-                            ? (eH = dl.L_PREMIUM_SUB_TOOLTIP)
+                        ? (eH = dn.ORBS_DROP)
+                        : ej
+                          ? (eH = dn.TOOLTIP)
+                          : eC
+                            ? (eH = dn.L_PREMIUM_SUB_TOOLTIP)
                             : eN
-                              ? (eH = dl.L_UPSELL)
+                              ? (eH = dn.L_UPSELL)
                               : E || M?.trial_id === oV.Tt
-                                ? (eH = dl.REVERSE_TRIAL)
+                                ? (eH = dn.REVERSE_TRIAL)
                                 : y
-                                  ? (eH = dl.ORBS_MULTIPLIER)
+                                  ? (eH = dn.ORBS_MULTIPLIER)
                                   : ea === ok.POPOVER && ef === m.M.CROISSANT_REHEAT_MOMENT
-                                    ? (eH = dl.CROISSANT_REHEAT_MOMENT)
+                                    ? (eH = dn.CROISSANT_REHEAT_MOMENT)
                                     : ea === ok.TOOLTIP &&
                                       ef === m.M.CROISSANT_REHEAT_MOMENT &&
-                                      ((r = !0), (eH = dl.CROISSANT_REHEAT_TOOLTIP));
+                                      ((r = !0), (eH = dn.CROISSANT_REHEAT_TOOLTIP));
         let eO = (0, n.jsx)(V.z9, {
             listItemRef: i,
             selected: s,
@@ -9400,10 +9461,10 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             text: (0, n.jsx)(u.A, { children: A ? hz.intl.string(hz.t["4gwVVn"]) : hz.intl.string(hz.t.Ipxkog) }),
             locationState: o,
             onClick: () => {
-                if (eH === dl.CROISSANT_REHEAT_TOOLTIP) {
+                if (eH === dn.CROISSANT_REHEAT_TOOLTIP) {
                     let e = new URL(h, window.location.origin);
                     e.searchParams.set(rl.x6, re.u), (0, hW.pX)(`${e.pathname}?${e.searchParams.toString()}`);
-                } else if (ej) {
+                } else if (eC) {
                     let e = new URL(h, window.location.origin);
                     e.searchParams.set(rl.WU, o9.LOGITECH_3PP_CARD_ID),
                         (0, hW.pX)(`${e.pathname}?${e.searchParams.toString()}`);
@@ -9417,7 +9478,7 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             ...I,
             children: l,
         });
-        return (0, n.jsx)(dt, {
+        return (0, n.jsx)(dc, {
             popoverType: eH,
             targetElementRef: i,
             churnDiscountOffer: _,
@@ -9434,11 +9495,11 @@ let dn = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             children: eO,
         });
     };
-var dr = t(106778);
-let dd = [t(426560)],
-    dv = ["#FFFFFF"],
-    dg = 1e3 / 60,
-    dp = {
+var dm = t(106778);
+let df = [t(426560)],
+    dw = ["#FFFFFF"],
+    dx = 1e3 / 60,
+    du = {
         velocity: { type: "static-random", minValue: { x: 0, y: 1 }, maxValue: { x: 3, y: 3 } },
         rotation: {
             type: "linear-random",
@@ -9451,18 +9512,18 @@ let dd = [t(426560)],
         dragCoefficient: { type: "static", value: 830 },
         opacity: { type: "static", value: 0.3 },
     };
-function dm(e) {
-    let { className: l, firing: t = !0, wind: a = 2, sprites: s = dd, spriteColors: i = dv, confettiConfig: h } = e,
+function dA(e) {
+    let { className: l, firing: t = !0, wind: a = 2, sprites: s = df, spriteColors: i = dw, confettiConfig: h } = e,
         [o, r] = c.useState(null),
         [d, v] = c.useState(null),
-        g = (0, dr.f9)(d, o),
-        p = c.useMemo(() => new dr.OH({ wind: a }), [a]),
+        g = (0, dm.f9)(d, o),
+        p = c.useMemo(() => new dm.OH({ wind: a }), [a]),
         m = c.useCallback(() => {
             let e = d?.getCanvas();
             if (null == e) return;
             let l = e.getBoundingClientRect();
             g.createConfetti({
-                ...dp,
+                ...du,
                 ...h,
                 position: {
                     type: "static-random",
@@ -9473,26 +9534,26 @@ function dm(e) {
         }, [g, d, h]);
     return (
         c.useEffect(() => {
-            let e = t ? setInterval(m, dg) : null;
+            let e = t ? setInterval(m, dx) : null;
             return () => clearInterval(e);
         }, [t, m]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(dr.Fk, { ref: v, className: l, environment: p }),
-                (0, n.jsx)(dr.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
+                (0, n.jsx)(dm.Fk, { ref: v, className: l, environment: p }),
+                (0, n.jsx)(dm.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
             ],
         })
     );
 }
-var df = t(419354),
-    dw = t(717421),
-    dx = t(770178),
-    du = t(859703),
-    dA = t(87549),
-    dI = t(18437),
-    dM = t(194526),
-    dZ = t(78701);
-function d_(e) {
+var dI = t(419354),
+    dM = t(717421),
+    dZ = t(770178),
+    d_ = t(859703),
+    dE = t(87549),
+    dT = t(18437),
+    dj = t(194526),
+    dC = t(78701);
+function dN(e) {
     let { onNavigateToQuestHome: l, onRender: t, onRequestClose: a, targetElementRef: s } = e,
         i = c.useCallback(() => {
             l(), (0, hW.pX)(hq.BVt.QUEST_HOME);
@@ -9508,7 +9569,7 @@ function d_(e) {
             body: hz.intl.string(hz.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: { type: "image", src: dZ.A },
+            graphic: { type: "image", src: dC.A },
             onRequestClose: a,
             position: "right",
             size: "lg",
@@ -9517,11 +9578,11 @@ function d_(e) {
         })
     );
 }
-var dE = t(398025),
-    dT = t(301958);
-let dC = Math.ceil(Math.sqrt(115200)),
-    dj = (dC - 240) / 2,
-    dN = function (e) {
+var dR = t(398025),
+    dV = t(301958);
+let dy = Math.ceil(Math.sqrt(115200)),
+    dH = (dy - 240) / 2,
+    dO = function (e) {
         let { selected: l } = e,
             t = (0, v.rm)("quests"),
             a = c.useRef(null),
@@ -9531,7 +9592,7 @@ let dC = Math.ceil(Math.sqrt(115200)),
                 dismissOnboardingContent: h,
             } = (function () {
                 let e = (0, x.useHasAnyModalOpen)(),
-                    l = (0, p.bG)([du.A], () => du.A.quests.size > 0),
+                    l = (0, p.bG)([d_.A], () => d_.A.quests.size > 0),
                     t = (0, p.bG)([oI.default], () => oI.default.getCurrentUser()),
                     [a, s] = (0, hP.kn)(
                         !e && l && null != t ? [m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [],
@@ -9545,38 +9606,38 @@ let dC = Math.ceil(Math.sqrt(115200)),
                     h = (0, o_.JZ)(m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
                 return { shouldShowPopover: n, shouldShowGradientAndBadge: l && !h, dismissOnboardingContent: i };
             })(),
-            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dM.I)(),
+            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dj.I)(),
             w = c.useCallback(() => {
-                dA.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
+                dE.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
             }, [r, d]),
-            [{ glowSpring: u }, I] = (0, dw.z)(() => ({
+            [{ glowSpring: u }, I] = (0, dM.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: M }, _] = (0, dw.z)(() => ({
+            [{ shineSpring: M }, _] = (0, dM.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            E = (0, dI.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
+            E = (0, dT.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
             T = c.useCallback(() => {
                 _({ shineSpring: 1 }), I({ glowSpring: 1, delay: 200 }), E.handleMouseEnter();
             }, [_, I, E]),
-            C = c.useCallback(() => {
+            j = c.useCallback(() => {
                 _({ shineSpring: 0, immediate: !0 }), I({ glowSpring: 0, delay: 0 }), E.handleMouseLeave();
             }, [_, I, E]),
-            j = c.useCallback(() => {
+            C = c.useCallback(() => {
                 _({ shineSpring: 1, delay: 500 }), I({ glowSpring: 1, delay: 700 }), E.handleOnboardingPopoutRender();
             }, [_, I, E]),
             [N, R] = c.useState(-1),
             y = c.useCallback((e) => {
                 R(e.contentRect.width);
             }, []),
-            H = (0, dx.w)(y, [], { fireOnMount: !0 }),
+            H = (0, dZ.w)(y, [], { fireOnMount: !0 }),
             O = !r && i,
             L = !r && s,
             B = r && g?.questHomeEntrypoint?.tooltipTitle != null,
             { inlineCssProperties: S, shouldShowQuestHomeHeroGradient: F } = c.useMemo(() => {
-                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dj}px` },
+                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dH}px` },
                     l = g?.questHomeEntrypoint?.linearGradient?.start,
                     t = g?.questHomeEntrypoint?.linearGradient?.end,
                     a = g?.questHomeEntrypoint?.radialGradient?.start,
@@ -9595,16 +9656,16 @@ let dC = Math.ceil(Math.sqrt(115200)),
                 return { inlineCssProperties: e, shouldShowQuestHomeHeroGradient: r && (i || n) };
             }, [r, g]),
             P = (0, n.jsx)("div", {
-                className: dT.iE,
+                className: dV.iE,
                 onMouseEnter: T,
-                onMouseLeave: C,
+                onMouseLeave: j,
                 onFocus: T,
-                onBlur: C,
+                onBlur: j,
                 ref: H,
                 style: S,
                 children: (0, n.jsxs)(V.z9, {
                     showHoverGradient: !1,
-                    className: o()({ [dT.VU]: O || F, [dT.jR]: O, [dT.XO]: r }),
+                    className: o()({ [dV.VU]: O || F, [dV.jR]: O, [dV.XO]: r }),
                     icon: iG.r,
                     listItemRef: a,
                     onClick: w,
@@ -9617,7 +9678,7 @@ let dC = Math.ceil(Math.sqrt(115200)),
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)("div", {
-                                        className: dT.qS,
+                                        className: dV.qS,
                                         children: (0, n.jsx)(hV.E, {
                                             type: { text: hz.intl.string(hz.t.y2b7CA) },
                                             variant: "expressive",
@@ -9626,7 +9687,7 @@ let dC = Math.ceil(Math.sqrt(115200)),
                                     g?.questHomeEntrypoint?.image != null &&
                                         (0, n.jsx)("img", {
                                             src: g?.questHomeEntrypoint?.image,
-                                            className: dT.Nd,
+                                            className: dV.Nd,
                                             alt: "",
                                         }),
                                 ],
@@ -9634,21 +9695,21 @@ let dC = Math.ceil(Math.sqrt(115200)),
                         O &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)(df.animated.div, {
-                                        className: dT.q2,
+                                    (0, n.jsx)(dI.animated.div, {
+                                        className: dV.q2,
                                         style: {
                                             transform: M.to(
                                                 (e) =>
-                                                    `translateX(calc(${e * N}px + ${e * dC}px)) translateY(-50%) rotate(45deg)`,
+                                                    `translateX(calc(${e * N}px + ${e * dy}px)) translateY(-50%) rotate(45deg)`,
                                             ),
                                         },
                                     }),
-                                    (0, n.jsx)(df.animated.div, {
-                                        className: dT.ys,
-                                        style: { opacity: (0, dE.a)(u.to({ range: [0, 1], output: [0, 0.5] })) },
+                                    (0, n.jsx)(dI.animated.div, {
+                                        className: dV.ys,
+                                        style: { opacity: (0, dR.a)(u.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, n.jsx)(Z.Lp, {
-                                        className: dT.qS,
+                                        className: dV.qS,
                                         text: hz.intl.string(hz.t.y2b7CA),
                                         color: f.A.colors.BACKGROUND_BRAND.css,
                                     }),
@@ -9668,7 +9729,7 @@ let dC = Math.ceil(Math.sqrt(115200)),
                                   ? (0, n.jsx)("img", {
                                         src: g.questHomeEntrypoint.tooltipImage,
                                         alt: "",
-                                        className: dT.ut,
+                                        className: dV.ut,
                                     })
                                   : void 0,
                           assetSize: 48,
@@ -9678,31 +9739,31 @@ let dC = Math.ceil(Math.sqrt(115200)),
                           children: P,
                       })
                     : P,
-                L && (0, n.jsx)(d_, { targetElementRef: a, onNavigateToQuestHome: w, onRender: j, onRequestClose: h }),
+                L && (0, n.jsx)(dN, { targetElementRef: a, onNavigateToQuestHome: w, onRender: C, onRequestClose: h }),
             ],
         });
     };
-var dR = t(793322),
-    dV = t(366811),
-    dy = t(728321),
-    dH = t(363195),
-    dO = t(253932),
-    dL = t(189081),
-    dB = t(839067),
-    dS = t(67480),
-    dF = t(619921),
-    dP = t(595623),
-    dU = t(541830),
-    db = t(851110),
-    dD = t(602339),
-    dk = t(925004);
-let dJ = (e) => {
+var dL = t(793322),
+    dB = t(366811),
+    dS = t(728321),
+    dF = t(363195),
+    dP = t(253932),
+    dU = t(189081),
+    db = t(839067),
+    dD = t(67480),
+    dk = t(619921),
+    dJ = t(595623),
+    dG = t(541830),
+    dW = t(851110),
+    dq = t(602339),
+    dz = t(925004);
+let dK = (e) => {
         let { selected: l, ...t } = e,
             a = (0, oi.c)("PrivateChannels.ICYMIButton"),
             s = (0, v.rm)("icymi");
         return a
             ? (0, n.jsx)("div", {
-                  className: dk.F2,
+                  className: dz.F2,
                   children: (0, n.jsx)(V.z9, {
                       selected: l,
                       route: hq.BVt.ICYMI,
@@ -9710,7 +9771,7 @@ let dJ = (e) => {
                       text: (0, n.jsxs)(n.Fragment, {
                           children: [
                               hz.intl.string(hz.t["jnXV/V"]),
-                              (0, n.jsx)("span", { className: dk.HH, children: hz.intl.string(hz.t.Ac2OZA) }),
+                              (0, n.jsx)("span", { className: dz.HH, children: hz.intl.string(hz.t.Ac2OZA) }),
                           ],
                       }),
                       ...t,
@@ -9719,7 +9780,7 @@ let dJ = (e) => {
               })
             : null;
     },
-    dG = (e) => {
+    dQ = (e) => {
         let { selected: l, ...t } = e,
             a = (0, v.rm)("friends"),
             s = (0, op.kX)(),
@@ -9745,7 +9806,7 @@ let dJ = (e) => {
                       (e = hq.m3P.ALL),
                       R.A.setSection(hq.m3P.ALL),
                       g(h0.i.TAKE_ACTION))
-                    : (e = dP.Ay.getState().section),
+                    : (e = dJ.Ay.getState().section),
                     (0, L.A)({ tab_opened: e });
             },
             [u, I] = c.useState(!1),
@@ -9759,7 +9820,7 @@ let dJ = (e) => {
                 (0, n.jsx)(V.z9, {
                     showHoverGradient: !1,
                     onClick: x,
-                    interactiveClassName: f ? dk.hc : void 0,
+                    interactiveClassName: f ? dz.hc : void 0,
                     selected: l,
                     route: hq.BVt.FRIENDS,
                     icon: M.$,
@@ -9771,7 +9832,7 @@ let dJ = (e) => {
                     children: s > 0 ? (0, n.jsx)(Z.hV, { count: s }) : null,
                 });
         return (0, n.jsx)("div", {
-            className: dk.F2,
+            className: dz.F2,
             children: f
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
@@ -9783,11 +9844,11 @@ let dJ = (e) => {
                               children: T(),
                           }),
                           !h &&
-                              (0, n.jsx)(dm, {
-                                  className: dk.t_,
+                              (0, n.jsx)(dA, {
+                                  className: dz.t_,
                                   wind: 0,
-                                  sprites: db.uI,
-                                  spriteColors: db._t,
+                                  sprites: dW.uI,
+                                  spriteColors: dW._t,
                                   firing: u,
                                   confettiConfig: {
                                       opacity: { type: "static", value: 1 },
@@ -9799,7 +9860,7 @@ let dJ = (e) => {
                 : T(),
         });
     },
-    dW = (e) => {
+    dX = (e) => {
         let { selected: l, hideGameUpdateProgressIndicator: t, ...a } = e,
             s = (0, v.rm)("library");
         return (0, n.jsx)(V.z9, {
@@ -9809,14 +9870,14 @@ let dJ = (e) => {
             text: hz.intl.string(hz.t.cw57ar),
             ...a,
             ...s,
-            children: (0, n.jsx)(H.A, { className: o()(dk.Qw, { [dk.QI]: t }) }),
+            children: (0, n.jsx)(H.A, { className: o()(dz.Qw, { [dz.QI]: t }) }),
         });
     },
-    dq = () => {
+    dY = () => {
         let e = (0, oc.W)();
         return e > 0 ? (0, n.jsx)(Z.hV, { count: e }) : null;
     },
-    dz = (e) => {
+    d$ = (e) => {
         let { selected: l } = e,
             t = (0, v.rm)("messageRequests"),
             { channelId: a } = (0, on.N)();
@@ -9829,12 +9890,12 @@ let dJ = (e) => {
             text: hz.intl.string(hz.t.e7GWjQ),
             onClick: s,
             ...t,
-            children: (0, n.jsx)(dq, {}),
+            children: (0, n.jsx)(dY, {}),
         });
     },
-    dK = (e) => {
+    d1 = (e) => {
         let { selected: l } = e,
-            t = hz.intl.string(dD.default.Rkdixs),
+            t = hz.intl.string(dq.default.Rkdixs),
             a = (0, v.rm)("family-center"),
             [s, i] = c.useState(!0);
         return (0, n.jsx)(V.z9, {
@@ -9848,17 +9909,17 @@ let dJ = (e) => {
             onMouseLeave: () => {
                 i(!1);
             },
-            interactiveClassName: dk.M1,
+            interactiveClassName: dz.M1,
             ...a,
-            children: (0, n.jsx)(dQ, { isParentHovered: s }),
+            children: (0, n.jsx)(d0, { isParentHovered: s }),
         });
     },
-    dQ = (e) => {
+    d0 = (e) => {
         let { isParentHovered: l } = e,
             a = (0, og.VT)();
         return l
             ? (0, n.jsx)("div", {
-                  className: dk.lL,
+                  className: dz.lL,
                   children: (0, n.jsx)(V.w_, {
                       onClick: () => {
                           (0, x.openModalLazy)(async () => {
@@ -9867,13 +9928,13 @@ let dJ = (e) => {
                           });
                       },
                       "aria-label": hz.intl.string(hz.t.cpT0Cq),
-                      icon: C.P,
+                      icon: j.P,
                   }),
               })
             : a > 0
-              ? (0, n.jsx)("div", { className: o()(dk.lL, dk.iL), children: (0, n.jsx)(Z.hV, { count: a }) })
+              ? (0, n.jsx)("div", { className: o()(dz.lL, dz.iL), children: (0, n.jsx)(Z.hV, { count: a }) })
               : (0, n.jsx)("div", {
-                    className: dk.lL,
+                    className: dz.lL,
                     children: (0, n.jsx)(os.Ay, {
                         contentTypes: [m.M.FAMILY_CENTER_NEW_BADGE],
                         children: (e) => {
@@ -9888,8 +9949,8 @@ let dJ = (e) => {
                     }),
                 });
     },
-    dX = () => (0, dR.WU)("DM_SEARCH");
-function dY(e) {
+    d2 = () => (0, dL.WU)("DM_SEARCH");
+function d3(e) {
     switch (e) {
         case hq.BVt.APPLICATION_LIBRARY:
             return hq.liQ.LIBRARY;
@@ -9906,7 +9967,7 @@ function dY(e) {
               : hq.liQ.STORE_LISTING
         : hq.liQ.DM_CHANNEL;
 }
-let d$ = c.memo(function (e) {
+let d4 = c.memo(function (e) {
     let {
             showLibrary: l,
             hasLibraryApplication: t,
@@ -9929,22 +9990,22 @@ let d$ = c.memo(function (e) {
     return (
         h ? (M = (0, n.jsx)(oS, { targetElementRef: A })) : r && (M = (0, n.jsx)(oy, { targetElementRef: A })),
         (0, n.jsxs)("nav", {
-            className: dk.AB,
+            className: dz.AB,
             "aria-label": hz.intl.string(hz.t.ZH9aP4),
             children: [
-                (0, n.jsx)(dy.A, {
+                (0, n.jsx)(dS.A, {
                     childRef: f,
                     tutorialId: "direct-messages",
                     position: "right",
                     offsetX: -52,
                     children: (0, n.jsx)("div", {
                         ref: f,
-                        className: o()(dk.ON, { [dk.jD]: g.Fr }),
-                        children: (0, n.jsx)(j.$, {
+                        className: o()(dz.ON, { [dz.jD]: g.Fr }),
+                        children: (0, n.jsx)(C.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             size: "sm",
-                            onClick: dX,
+                            onClick: d2,
                             text: hz.intl.format(hz.t.fH9FBy, {
                                 tooltipHook: (e, l) => (0, n.jsx)(u.A, { children: e }, l),
                             }),
@@ -9958,16 +10019,16 @@ let d$ = c.memo(function (e) {
                     listScrollerRef: x,
                     children: [
                         (0, n.jsx)(
-                            dG,
+                            dQ,
                             { selected: null != m ? m === hq.BVt.FRIENDS : a === hq.BVt.FRIENDS },
                             "friends",
                         ),
                         I
-                            ? (0, n.jsx)(dJ, { selected: null != m ? m === hq.BVt.ICYMI : a === hq.BVt.ICYMI }, "icymi")
+                            ? (0, n.jsx)(dK, { selected: null != m ? m === hq.BVt.ICYMI : a === hq.BVt.ICYMI }, "icymi")
                             : null,
                         t && l
                             ? (0, n.jsx)(
-                                  dW,
+                                  dX,
                                   {
                                       selected:
                                           null == m
@@ -9980,7 +10041,7 @@ let d$ = c.memo(function (e) {
                             : null,
                         d
                             ? (0, n.jsx)(
-                                  dz,
+                                  d$,
                                   {
                                       selected:
                                           null == m
@@ -9995,13 +10056,13 @@ let d$ = c.memo(function (e) {
                                   "div",
                                   {
                                       children: [
-                                          (0, n.jsx)(dh, {
+                                          (0, n.jsx)(dp, {
                                               nitroTabButtonRef: A,
                                               selected: null == m ? s : m.startsWith(hq.BVt.APPLICATION_STORE),
                                               route: hq.BVt.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: dY(a),
+                                                      page: d3(a),
                                                       section: hq.JJy.NAVIGATION,
                                                       object: hq.ZSU.NAVIGATION_LINK,
                                                   },
@@ -10020,7 +10081,7 @@ let d$ = c.memo(function (e) {
                                 listItemRef: w,
                                 locationState: {
                                     analyticsSource: {
-                                        page: dY(a),
+                                        page: d3(a),
                                         section: hq.JJy.NAVIGATION,
                                         object: hq.ZSU.NAVIGATION_LINK,
                                     },
@@ -10030,7 +10091,7 @@ let d$ = c.memo(function (e) {
                         ),
                         v
                             ? (0, n.jsx)(
-                                  dK,
+                                  d1,
                                   {
                                       selected:
                                           (null != a && a.startsWith(hq.BVt.FAMILY_CENTER)) ||
@@ -10040,41 +10101,41 @@ let d$ = c.memo(function (e) {
                               )
                             : null,
                         (0, n.jsx)(
-                            dN,
+                            dO,
                             {
                                 selected:
                                     null == m ? null != a && a.startsWith(hq.BVt.QUEST_HOME) : m === hq.BVt.QUEST_HOME,
                             },
                             "quests",
                         ),
-                        (0, n.jsx)(d1, {}, "section-divider-top"),
+                        (0, n.jsx)(d5, {}, "section-divider-top"),
                     ],
                 }),
             ],
         })
     );
 });
-function d1() {
-    return (0, n.jsx)("div", { className: dk.ts });
+function d5() {
+    return (0, n.jsx)("div", { className: dz.ts });
 }
-function d0() {
+function d6() {
     let e,
         l,
-        t = (0, p.bG)([dF.A], () => dF.A.getHomeLink()),
-        a = (0, p.bG)([dS.A], () => {
+        t = (0, p.bG)([dk.A], () => dk.A.getHomeLink()),
+        a = (0, p.bG)([dD.A], () => {
             if (t === hq.BVt.APPLICATION_STORE) return !0;
-            let e = (0, dU.qt)(t);
-            return null != e && (dS.A.get(e)?.premium ?? !1);
+            let e = (0, dG.qt)(t);
+            return null != e && (dD.A.get(e)?.premium ?? !1);
         }, [t]),
-        s = !dO.l_.useSetting(),
-        { theme: i } = (0, p.cf)([dH.A], () => ({ theme: dH.A.theme })),
-        c = (0, p.bG)([dL.A], () => dL.A.hasLibraryApplication()),
-        h = (0, p.bG)([dB.A], () => dB.A.getCurrentPath()),
-        [o, d] = (0, dV.A)((e) => {
+        s = !dP.l_.useSetting(),
+        { theme: i } = (0, p.cf)([dF.A], () => ({ theme: dF.A.theme })),
+        c = (0, p.bG)([dU.A], () => dU.A.hasLibraryApplication()),
+        h = (0, p.bG)([db.A], () => db.A.getCurrentPath()),
+        [o, d] = (0, dB.A)((e) => {
             let { channelId: l, path: t } = e;
             return [l, t];
         }, r.x),
-        v = dc({ selected: null == d ? a : d.startsWith(hq.BVt.APPLICATION_STORE) }),
+        v = dg({ selected: null == d ? a : d.startsWith(hq.BVt.APPLICATION_STORE) }),
         g = (0, oH.Tp)(),
         f = (0, p.bG)([om.A], () => om.A.getReminderStateId()),
         w = oR(),
@@ -10086,8 +10147,8 @@ function d0() {
         Z = null == A && I === m.M.RECURRING_3P_PROMOTION_POPOVER,
         _ = u ? A === m.M.REFERRAL_PROGRAM_POPOVER_V2 : I === m.M.REFERRAL_PROGRAM_POPOVER,
         E = od(),
-        T = ((e = dO.dm.useSetting()), (l = (0, ov.A)()), !0 === e && !0 === l);
-    return (0, n.jsx)(d$, {
+        T = ((e = dP.dm.useSetting()), (l = (0, ov.A)()), !0 === e && !0 === l);
+    return (0, n.jsx)(d4, {
         theme: i,
         showLibrary: s,
         hasLibraryApplication: c,
