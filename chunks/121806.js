@@ -510,7 +510,7 @@ function Z(e, t) {
                     case H.LWr.ANSWER_HAS:
                         let c = t[H.LWr.FILTER_HAS],
                             h = e.getData("has");
-                        c.push(h), (u += 1);
+                        c.push((0, W.ok)(h)), (u += 1);
                         break;
                     case H.LWr.ANSWER_IN:
                         if (a.has(H.LWr.FILTER_IN)) {
@@ -548,7 +548,7 @@ function Z(e, t) {
                         if (a.has(H.LWr.FILTER_AUTHOR_TYPE)) {
                             let r = t[H.LWr.FILTER_AUTHOR_TYPE],
                                 n = e.getData("author_type");
-                            r.push(n), (u += 1);
+                            r.push((0, W.lq)(n)), (u += 1);
                         }
                 }
         });

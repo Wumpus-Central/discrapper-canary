@@ -1,5 +1,16 @@
 "use strict";
-n.d(t, { Ay: () => et, G0: () => J, If: () => Z, WL: () => ee, Yd: () => F, gU: () => Q, sC: () => G, v1: () => z }),
+n.d(t, {
+    Ay: () => ea,
+    G0: () => er,
+    If: () => ei,
+    WL: () => es,
+    Yd: () => F,
+    gU: () => en,
+    lq: () => $,
+    ok: () => K,
+    sC: () => G,
+    v1: () => Z,
+}),
     n(321073),
     n(667532);
 var r,
@@ -168,8 +179,8 @@ function F(e, t) {
     }
     return !1;
 }
-function B(e) {
-    let t = {
+function B() {
+    return {
         [R.intl.string(R.t.ZNR2fi)]: "link",
         [R.intl.string(R.t["20uQR3"])]: "embed",
         [R.intl.string(R.t.L4lxyE)]: "poll",
@@ -180,24 +191,44 @@ function B(e) {
         [R.intl.string(R.t.F8Wf0e)]: "sound",
         [R.intl.string(R.t.PJgX2h)]: "sticker",
     };
-    return (0, N.d3)("has", t, e);
 }
-function H(e) {
-    let t = {
+function H() {
+    return {
         [R.intl.string(R.t.tPZo4p)]: "user",
         [R.intl.string(R.t.JL7sRS)]: "bot",
         [R.intl.string(R.t.WjkIKU)]: "webhook",
     };
-    return (0, N.d3)("author_type", t, e);
 }
-function Y(e, t, n) {
-    return W(e, t, [...Array.from(v()), ...Array.from(C()), ...Array.from(b()), ...Object.keys(M())]).map((e) => ({
+function Y(e, t) {
+    let n = e.startsWith("-"),
+        r = n ? e.slice(1) : e,
+        i =
+            Object.entries(t).find((e) => {
+                let [, t] = e;
+                return t === r;
+            })?.[0] ?? r;
+    return n ? `-${i}` : i;
+}
+function W(e) {
+    return (0, N.d3)("has", B(), e);
+}
+function j(e) {
+    return (0, N.d3)("author_type", H(), e);
+}
+function K(e) {
+    return Y(e, B());
+}
+function $(e) {
+    return Y(e, H());
+}
+function z(e, t, n) {
+    return q(e, t, [...Array.from(v()), ...Array.from(C()), ...Array.from(b()), ...Object.keys(M())]).map((e) => ({
         ...e,
         group: n,
         key: `${n}-${e.text}`,
     }));
 }
-function W(e, t, n) {
+function q(e, t, n) {
     let r = e.toLocaleLowerCase();
     return o()(n)
         .filter((e) => s()(r, e.toLocaleLowerCase()))
@@ -205,7 +236,7 @@ function W(e, t, n) {
         .map((e) => ({ text: e }))
         .value();
 }
-function j(e) {
+function X(e) {
     let { query: t, searchContext: n, maxResults: r = 10, tokens: i } = e,
         s = { query: (t = t.trim().split("#")[0]), limit: r, request: !1, boosters: (0, g.X3)(d.rD.USER) },
         a = [];
@@ -288,7 +319,7 @@ function j(e) {
             });
     return c && f.unshift({ text: O.ME, user: l }), f;
 }
-function K(e) {
+function Q(e) {
     let { query: t, searchContext: n, maxResults: r } = e;
     return ((t = t.trim()).startsWith('"') && t.endsWith('"')
         ? (t = t.substring(1, t.length - 1).replaceAll(/\\(.)/g, (e, t) => t))
@@ -372,9 +403,9 @@ function K(e) {
                 return s.slice(0, t);
             })(t, r, !0);
 }
-let $ = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
-var z = (((r = {}).FILTER = "FILTER"), (r.ANSWER = "ANSWER"), r);
-function q(e) {
+let J = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
+var Z = (((r = {}).FILTER = "FILTER"), (r.ANSWER = "ANSWER"), r);
+function ee(e) {
     let t = [R.intl.string(R.t.tPZo4p), R.intl.string(R.t.JL7sRS), R.intl.string(R.t.WjkIKU)],
         n = [
             R.intl.string(R.t.TNLcpx),
@@ -394,11 +425,11 @@ function q(e) {
             key: k(R.intl.string(R.t["1TUdFo"])),
             plainText: R.intl.string(R.t["1TUdFo"]),
             validator: () => (0, y.Q6)(),
-            getAutocompletions: j,
+            getAutocompletions: X,
         },
         [O.LWr.ANSWER_USERNAME_FROM]: {
             follows: [O.LWr.FILTER_FROM],
-            regex: $,
+            regex: J,
             validator: G,
             mutable: !0,
             componentType: "ANSWER",
@@ -410,11 +441,11 @@ function q(e) {
             key: k(R.intl.string(R.t["i96lO+"])),
             plainText: R.intl.string(R.t["i96lO+"]),
             validator: () => (0, y.tH)(),
-            getAutocompletions: j,
+            getAutocompletions: X,
         },
         [O.LWr.ANSWER_USERNAME_MENTIONS]: {
             follows: [O.LWr.FILTER_MENTIONS],
-            regex: $,
+            regex: J,
             validator: G,
             mutable: !0,
             componentType: "ANSWER",
@@ -427,13 +458,13 @@ function q(e) {
             plainText: R.intl.string(R.t.CqCvir),
             getAutocompletions(e) {
                 let { query: t, maxResults: r } = e;
-                return W(t, r, n);
+                return q(t, r, n);
             },
         },
         [O.LWr.ANSWER_HAS]: {
             regex: (0, N.er)(n),
             follows: [O.LWr.FILTER_HAS],
-            validator: B,
+            validator: W,
             componentType: "ANSWER",
             queryKey: "has",
         },
@@ -483,7 +514,7 @@ function q(e) {
             plainText: R.intl.string(R.t["qZ+7BA"]),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return Y(t, n, O.LWr.FILTER_BEFORE);
+                return z(t, n, O.LWr.FILTER_BEFORE);
             },
         },
         [O.LWr.FILTER_ON]: {
@@ -493,7 +524,7 @@ function q(e) {
             plainText: R.intl.string(R.t.h2NzSd),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return Y(t, n, O.LWr.FILTER_ON);
+                return z(t, n, O.LWr.FILTER_ON);
             },
         },
         [O.LWr.FILTER_AFTER]: {
@@ -503,7 +534,7 @@ function q(e) {
             plainText: R.intl.string(R.t.KSDx7M),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
-                return Y(t, n, O.LWr.FILTER_AFTER);
+                return z(t, n, O.LWr.FILTER_AFTER);
             },
         },
         [O.LWr.ANSWER_BEFORE]: {
@@ -536,7 +567,7 @@ function q(e) {
                 let t = e ?? I.A.getSelectedSearchContext();
                 return null != t && (0, y.HM)(t);
             },
-            getAutocompletions: K,
+            getAutocompletions: Q,
         },
         [O.LWr.ANSWER_IN]: {
             regex: N.rI,
@@ -573,31 +604,31 @@ function q(e) {
             plainText: R.intl.string(R.t.us8IQi),
             getAutocompletions(e) {
                 let { query: n, maxResults: r } = e;
-                return W(n, r, t);
+                return q(n, r, t);
             },
         },
         [O.LWr.ANSWER_AUTHOR_TYPE]: {
             regex: (0, N.er)(t),
             follows: [O.LWr.FILTER_AUTHOR_TYPE],
-            validator: H,
+            validator: j,
             componentType: "ANSWER",
             queryKey: "author_type",
         },
     };
 }
-let X = {};
-function Q() {
-    return q({ type: O.I4_.DMS });
+let et = {};
+function en() {
+    return ee({ type: O.I4_.DMS });
 }
-function J() {
-    Object.assign(X, q());
+function er() {
+    Object.assign(et, ee());
 }
-function Z(e) {
+function ei(e) {
     return O.l90.test(e);
 }
-function ee(e) {
+function es(e) {
     if (0 === e.length) return !1;
     let t = e.toLowerCase().replace(/^@/, "");
     return R.intl.string(R.t.Qf3ptv).startsWith(t) || O.ME.substring(1).startsWith(t);
 }
-let et = X;
+let ea = et;
