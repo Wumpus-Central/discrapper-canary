@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { Ay: () => l });
 var i = n(250105),
     r = n(753070);
 let s = { videoPresetResolutionMax: r.on.RESOLUTION_1440 },
@@ -26,6 +26,9 @@ function l(e, t, n) {
             ],
             [r.jQ.PRESET_AUTO]: [],
             [r.jQ.PRESET_CUSTOM]: [],
+            [r.jQ.PRESET_MOBILE_DEFAULT]: [{ resolution: r.on.RESOLUTION_720, fps: r.kn.FPS_30 }],
+            [r.jQ.PRESET_MOBILE_PERFORMANCE]: [{ resolution: r.on.RESOLUTION_480, fps: r.kn.FPS_30 }],
+            [r.jQ.PRESET_MOBILE_HIGH_QUALITY]: [{ resolution: r.on.RESOLUTION_1080, fps: r.kn.FPS_60 }],
         };
     })()[e];
     if (null == i) return null;

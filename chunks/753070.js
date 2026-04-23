@@ -49,6 +49,9 @@ var d =
         (a[(a.PRESET_DOCUMENTS = 2)] = "PRESET_DOCUMENTS"),
         (a[(a.PRESET_CUSTOM = 3)] = "PRESET_CUSTOM"),
         (a[(a.PRESET_AUTO = 4)] = "PRESET_AUTO"),
+        (a[(a.PRESET_MOBILE_DEFAULT = 5)] = "PRESET_MOBILE_DEFAULT"),
+        (a[(a.PRESET_MOBILE_PERFORMANCE = 6)] = "PRESET_MOBILE_PERFORMANCE"),
+        (a[(a.PRESET_MOBILE_HIGH_QUALITY = 7)] = "PRESET_MOBILE_HIGH_QUALITY"),
         a);
 function u(e) {
     switch (e) {

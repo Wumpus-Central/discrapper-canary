@@ -2513,6 +2513,7 @@ var iW =
         (el.PREMIUM_UPSELL_FOR_LATER = "Premium Upsell Modal - For Later"),
         (el.PREMIUM_UPSELL_HALLOWEEN_GIFTING_CAMPAIGN = "Premium Upsell Modal - Halloween Gifting Campaign"),
         (el.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN = "Premium Upsell Modal - Seasonal Gifting Campaign"),
+        (el.PREMIUM_UPSELL_STREAM_HIGH_QUALITY = "Premium Upsell Modal - Stream High Quality"),
         (el.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN = "Premium Upsell Modal - Valentines Gifting Campaign"),
         (el.PREMUIM_UPSELL_GIFTING_PROMOTION = "Premium Upsell Modal - Gifting Promotion"),
         (el.PREMIUM_UPSELL_CUSTOM_THEMES = "Premium Upsell Modal - Custom Themes"),

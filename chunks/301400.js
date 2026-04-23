@@ -1,4 +1,4 @@
-s.d(t, { default: () => tq });
+s.d(t, { default: () => tY });
 var i = s(627968),
     r = s(64700),
     l = s(503698),
@@ -19,35 +19,35 @@ var i = s(627968),
     v = s(444927),
     C = s(77729),
     S = s(90804),
-    y = s(793574),
-    b = s(688810),
-    A = s(328153),
-    w = s(253932),
-    E = s(969341),
+    A = s(793574),
+    y = s(688810),
+    b = s(328153),
+    E = s(253932),
+    w = s(969341),
     I = s(763827),
     N = s(287809),
     O = s(157257),
     R = s(723702),
     T = s(927578),
     M = s(997630),
-    D = s(725792),
-    G = s(905552),
-    U = s(560595);
+    L = s(725792),
+    U = s(905552),
+    D = s(560595);
 s(321073), s(839272);
-var L = s(342952),
+var G = s(342952),
     P = s(939249),
     k = s(834730),
     F = s(983851),
     H = s(892547),
-    W = s(475825),
-    B = s(7689),
+    B = s(475825),
+    W = s(7689),
     Z = s(661531),
     V = s(115718),
-    z = s(280157),
-    Q = s(174768),
+    Q = s(280157),
+    z = s(174768),
     q = s(146793),
-    $ = s(95701),
-    Y = s(260509),
+    Y = s(95701),
+    $ = s(260509),
     K = s(734057),
     X = s(205761),
     J = s(808728),
@@ -76,7 +76,7 @@ function ed(e) {
             (0, i.jsxs)("div", {
                 className: ec.nN,
                 children: [
-                    (0, i.jsx)("img", { alt: "", src: null != r ? (0, Y.Iv)(r, 32) : void 0, className: ec.$f }),
+                    (0, i.jsx)("img", { alt: "", src: null != r ? (0, $.Iv)(r, 32) : void 0, className: ec.$f }),
                     (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsxs)(k.E, {
@@ -90,7 +90,7 @@ function ed(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(L.A, { users: l, maxUsers: 3, hideOverflowCount: !0 }),
+            (0, i.jsx)(G.A, { users: l, maxUsers: 3, hideOverflowCount: !0 }),
         ],
     });
 }
@@ -107,15 +107,15 @@ function eu(e) {
             }
             return e;
         }),
-        d = (0, u.yK)([Q.A, K.A, X.A, ee.A, et.A], () => {
+        d = (0, u.yK)([z.A, K.A, X.A, ee.A, et.A], () => {
             let e = [],
                 t = new Set();
-            for (let s of Q.A.getChannelHistory()) {
+            for (let s of z.A.getChannelHistory()) {
                 let i = K.A.getChannel(s);
                 i?.type === en.rbe.GUILD_VOICE && (0, el.vz)(i, ee.A, et.A) && (t.add(i.id), e.push(i));
             }
             for (let s of X.A.getFrequentlyWithoutFetchingLatest())
-                s instanceof $.YB &&
+                s instanceof Y.YB &&
                     s.type === en.rbe.GUILD_VOICE &&
                     !t.has(s.id) &&
                     (0, el.vz)(s, ee.A, et.A) &&
@@ -128,11 +128,11 @@ function eu(e) {
             return [
                 ...c
                     .toSorted((t, s) => (e.has(t.id) && !e.has(s.id) ? -1 : e.has(s.id) && !e.has(t.id) ? 1 : 0))
-                    .map((e) => (0, z.A)(e.id))
+                    .map((e) => (0, Q.A)(e.id))
                     .filter(er.Vq),
                 ...d
                     .filter((e) => !t.has(e.id))
-                    .map((e) => (0, z.A)(e.id))
+                    .map((e) => (0, Q.A)(e.id))
                     .filter(er.Vq),
             ];
         }, [d, c]),
@@ -151,7 +151,7 @@ function eu(e) {
                 }),
             }),
             h.length > 0
-                ? (0, i.jsx)(W.OZ, {
+                ? (0, i.jsx)(B.OZ, {
                       renderListHeader: function () {
                           return (0, i.jsx)(k.E, {
                               variant: "text-xs/semibold",
@@ -176,7 +176,7 @@ function ef() {
     return (0, i.jsxs)("div", {
         className: ec.p$,
         children: [
-            (0, i.jsx)(B.$, { className: ec.Dw, size: "md", color: Z.A.colors.ICON_MUTED }),
+            (0, i.jsx)(W.$, { className: ec.Dw, size: "md", color: Z.A.colors.ICON_MUTED }),
             (0, i.jsx)(k.E, {
                 className: ec.jU,
                 variant: "text-lg/medium",
@@ -197,7 +197,7 @@ s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508
 var ep = s(742459),
     e_ = s(780907);
 async function em() {
-    let e = A.Ay.getRunningGames();
+    let e = b.Ay.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -235,8 +235,8 @@ async function ej(e) {
     var t;
     let s,
         { width: i, height: r, types: l = [d.fS.CAMERA, d.fS.SCREEN, d.fS.WINDOW] } = e,
-        n = E.Ay.getVideoDevices(),
-        a = (0, ep.A)(E.Ay.getMediaEngine(), l, { width: i, height: r }),
+        n = w.Ay.getVideoDevices(),
+        a = (0, ep.A)(w.Ay.getMediaEngine(), l, { width: i, height: r }),
         o = em(),
         c = await o,
         u = await a,
@@ -394,17 +394,17 @@ async function ej(e) {
                                     v = (e[5] >> 4) / 15,
                                     C = p ? 6 : 5,
                                     S = 0,
-                                    y = (t, s, i) => {
+                                    A = (t, s, i) => {
                                         let r = [];
                                         for (let l = 0; l < s; l++)
                                             for (let n = +!l; n * s < t * (s - l); n++)
                                                 r.push((((e[C + (S >> 1)] >> ((1 & S++) << 2)) & 15) / 7.5 - 1) * i);
                                         return r;
                                     },
-                                    b = y(m, g, ((d >> 18) & 31) / 31),
-                                    A = y(3, 3, (((u >> 3) & 63) / 63) * 1.25),
-                                    w = y(3, 3, (((u >> 9) & 63) / 63) * 1.25),
-                                    E = p && y(5, 5, v),
+                                    y = A(m, g, ((d >> 18) & 31) / 31),
+                                    b = A(3, 3, (((u >> 3) & 63) / 63) * 1.25),
+                                    E = A(3, 3, (((u >> 9) & 63) / 63) * 1.25),
+                                    w = p && A(5, 5, v),
                                     I =
                                         ((s = (t = e)[3]),
                                         (i = 128 & t[2]),
@@ -426,16 +426,16 @@ async function ej(e) {
                                             M[t] = o((l / O) * (e + 0.5) * t);
                                         for (let e = 0, t = 0; e < g; e++)
                                             for (let s = +!e, r = 2 * M[e]; s * g < m * (g - e); s++, t++)
-                                                i += b[t] * T[s] * r;
+                                                i += y[t] * T[s] * r;
                                         for (let e = 0, t = 0; e < 3; e++)
                                             for (let s = +!e, i = 2 * M[e]; s < 3 - e; s++, t++) {
                                                 let e = T[s] * i;
-                                                (r += A[t] * e), (c += w[t] * e);
+                                                (r += b[t] * e), (c += E[t] * e);
                                             }
                                         if (p)
                                             for (let e = 0, t = 0; e < 5; e++)
                                                 for (let s = +!e, i = 2 * M[e]; s < 5 - e; s++, t++)
-                                                    d += E[t] * T[s] * i;
+                                                    d += w[t] * T[s] * i;
                                         let u = i - (2 / 3) * r,
                                             _ = (3 * i - u + c) / 2,
                                             v = _ - c;
@@ -457,11 +457,11 @@ async function ej(e) {
 var ev = s(735438),
     eC = s.n(ev),
     eS = s(72978),
-    ey = s(91777),
-    eb = s(929921),
-    eA = s(258585),
-    ew = s(327649),
-    eE = s(753070),
+    eA = s(91777),
+    ey = s(929921),
+    eb = s(258585),
+    eE = s(327649),
+    ew = s(753070),
     eI = s(765682);
 let eN = {
         screenSources: [],
@@ -471,9 +471,9 @@ let eN = {
         muteStreamAudio: !1,
         notifyFriends: !1,
         hidePreview: !1,
-        preset: eE.jQ.PRESET_CUSTOM,
-        resolution: eE.on.RESOLUTION_720,
-        fps: eE.kn.FPS_30,
+        preset: ew.jQ.PRESET_CUSTOM,
+        resolution: ew.on.RESOLUTION_720,
+        fps: ew.kn.FPS_30,
         sourceType: d.fS.WINDOW,
         fetchingSources: !0,
         selectedSource: void 0,
@@ -508,9 +508,9 @@ function eT(e, t) {
             let s = { sourceType: t.sourceType, selectedSource: void 0 };
             return (
                 t.sourceType === d.fS.CAMERA
-                    ? ((e.preset === eE.jQ.PRESET_DOCUMENTS || e.preset === eE.jQ.PRESET_AUTO) &&
-                          (s.preset = eE.jQ.PRESET_VIDEO),
-                      e.resolution === eE.on.RESOLUTION_SOURCE && (s.resolution = eE.on.RESOLUTION_720))
+                    ? ((e.preset === ew.jQ.PRESET_DOCUMENTS || e.preset === ew.jQ.PRESET_AUTO) &&
+                          (s.preset = ew.jQ.PRESET_VIDEO),
+                      e.resolution === ew.on.RESOLUTION_SOURCE && (s.resolution = ew.on.RESOLUTION_720))
                     : (s.selectedSource = null),
                 { ...e, ...s }
             );
@@ -527,13 +527,13 @@ function eT(e, t) {
                 i = { ...e, selectedSource: s },
                 r = s?.name;
             if (null != s && s.id?.startsWith(d.fS.CAMERA) && null != r) {
-                let e = eC().maxBy(Object.values(E.Ay.getInputDevices()), (e) => (0, eS.default)(r, e.name));
-                i.audioSourceId = e?.id ?? E.Ay.getInputDeviceId();
+                let e = eC().maxBy(Object.values(w.Ay.getInputDevices()), (e) => (0, eS.default)(r, e.name));
+                i.audioSourceId = e?.id ?? w.Ay.getInputDeviceId();
             }
             return i;
         }
         case "set_audio_source":
-            return { ...e, audioSourceId: t.audioSourceId ?? E.Ay.getInputDeviceId() };
+            return { ...e, audioSourceId: t.audioSourceId ?? w.Ay.getInputDeviceId() };
         case "set_selected_channel":
             return { ...e, selectedChannel: t.channelId };
         case "set_discord_source_id":
@@ -546,12 +546,12 @@ function eM(e) {
     let { dispatch: t, state: s, children: r } = e;
     return (0, i.jsx)(eR.Provider, { value: t, children: (0, i.jsx)(eO.Provider, { value: s, children: r }) });
 }
-function eD() {
+function eL() {
     return [r.useContext(eO), r.useContext(eR)];
 }
-var eG = s(67788);
-function eU() {
-    let [{ selectedSource: e }] = eD(),
+var eU = s(67788);
+function eD() {
+    let [{ selectedSource: e }] = eL(),
         [t, s] = r.useState(null),
         [l, n] = r.useState(!0);
     return (
@@ -569,7 +569,7 @@ function eU() {
                 let t = "windowHandle" in e ? e.windowHandle : void 0;
                 if (null != t) {
                     try {
-                        let e = E.Ay.getMediaEngine(),
+                        let e = w.Ay.getMediaEngine(),
                             i = await e.getSingleWindowPreview(t, 960, 540);
                         if (null != i) {
                             s(i.url), n(!1);
@@ -593,16 +593,16 @@ function eU() {
             })();
         }, [e]),
         (0, i.jsx)("div", {
-            className: eG.z,
+            className: eU.z,
             children: l
                 ? (0, i.jsx)(eh.y, {})
                 : null != t
-                  ? (0, i.jsx)("img", { src: t, alt: "", className: eG.Q })
+                  ? (0, i.jsx)("img", { src: t, alt: "", className: eU.Q })
                   : null,
         })
     );
 }
-var eL = s(534514),
+var eG = s(534514),
     eP = s(66455),
     ek = s(775602),
     eF = s(120559);
@@ -1476,8 +1476,8 @@ let eH = r.memo(function (e) {
                   }),
     });
 });
-var eW = s(325278),
-    eB = s(818348),
+var eB = s(325278),
+    eW = s(818348),
     eZ = s(538298);
 function eV(e) {
     let { id: t, text: s, icon: r, selected: l, onClick: a } = e;
@@ -1496,31 +1496,31 @@ function eV(e) {
         }),
     });
 }
-function ez(e) {
+function eQ(e) {
     let { onSourceSelect: t } = e;
-    (0, D.jd)(),
+    (0, L.jd)(),
         (function (e, t) {
-            let { lastPickerAction: s, lastPickerError: i } = (0, u.bG)([D.Ay], () => D.Ay.getPickerState()),
+            let { lastPickerAction: s, lastPickerError: i } = (0, u.bG)([L.Ay], () => L.Ay.getPickerState()),
                 [l, n] = r.useState(!1),
                 a = (0, eP.A)(e),
                 o = (0, eP.A)(t);
-            (0, D.XA)(),
+            (0, L.XA)(),
                 r.useEffect(() => {
                     l
-                        ? s === D.JA.Update
+                        ? s === L.JA.Update
                             ? a.current()
-                            : s === D.JA.Cancel && ((0, M.E)(), o.current())
-                        : (null == s || s === D.JA.Present) && n(!0);
+                            : s === L.JA.Cancel && ((0, M.E)(), o.current())
+                        : (null == s || s === L.JA.Present) && n(!0);
                 }, [l, s, a, o]);
-        })(t, eB.FX);
-    let [{ nativeSourceType: s }, l] = eD(),
-        n = (0, R.isMac)() && o().satisfies(C.A?.os.release, eW.WZ),
-        a = E.Ay.getUseGamescopeCapture(),
+        })(t, eW.FX);
+    let [{ nativeSourceType: s }, l] = eL(),
+        n = (0, R.isMac)() && o().satisfies(C.A?.os.release, eB.WZ),
+        a = w.Ay.getUseGamescopeCapture(),
         c = a ? "gamescope" : "screen";
     return (0, i.jsxs)("div", {
         className: eZ.zr,
         children: [
-            (0, i.jsx)(eL.D, {
+            (0, i.jsx)(eG.D, {
                 className: eZ.wx,
                 variant: "heading-lg/semibold",
                 color: "text-default",
@@ -1565,16 +1565,16 @@ function ez(e) {
         ],
     });
 }
-var eQ = s(843402),
+var ez = s(843402),
     eq = s(859703),
-    e$ = s(975571),
-    eY = s(290805),
+    eY = s(975571),
+    e$ = s(290805),
     eK = s(971276),
     eX = s(639214),
     eJ = s(495163);
 function e1(e, t, s, i) {
-    let r = (0, R.isWindows)() ? (0, G.A)(A.Ay, O.A) : null,
-        l = A.Ay.getRunningGames(),
+    let r = (0, R.isWindows)() ? (0, U.A)(b.Ay, O.A) : null,
+        l = b.Ay.getRunningGames(),
         n = s?.split(":")[1],
         a = e.id.split(":")[1];
     if (null != n && n === a) return 0;
@@ -1582,7 +1582,7 @@ function e1(e, t, s, i) {
     if (null != r && (0, ex.A)(e.id, r.windowHandle)) return 4;
     if (null != l.find((t) => (0, ex.A)(e.id, t.windowHandle))) return 3;
     let o = i?.[a];
-    return null != o && eW.F2.has(o) ? 2 : 1;
+    return null != o && eB.F2.has(o) ? 2 : 1;
 }
 function e0(e) {
     let { source: t } = e;
@@ -1646,10 +1646,10 @@ function e5(e) {
                 discordSourceId: p,
                 hasPermission: _,
             },
-        ] = eD(),
-        m = (0, u.bG)([A.Ay], () => A.Ay.getRunningGames()),
-        j = (0, u.cf)([A.Ay], () => {
-            let e = A.Ay.getCandidateGames(),
+        ] = eL(),
+        m = (0, u.bG)([b.Ay], () => b.Ay.getRunningGames()),
+        j = (0, u.cf)([b.Ay], () => {
+            let e = b.Ay.getCandidateGames(),
                 t = {};
             for (let s of e) null != s.windowHandle && (t[s.windowHandle] = s.exeName);
             return t;
@@ -1668,14 +1668,14 @@ function e5(e) {
                 }
                 return null;
             }, [s, t, m, n]));
-    r.useEffect(() => ((0, eQ.a2)(), eQ.e0), []);
+    r.useEffect(() => ((0, ez.a2)(), ez.e0), []);
     let S = r.useMemo(() => [...n].sort((e, t) => e1(t, v?.source.id, p, j) - e1(e, v?.source.id, p, j)), [v, n, p, j]);
     if (h) {
         if (!1 === _) {
             let e = !1;
             if ((0, R.isMac)()) {
                 let t = C.A?.app.getVersion();
-                e = !eY.M || "0.0.0" === t || o().satisfies(t, "0.0.363");
+                e = !e$.M || "0.0.0" === t || o().satisfies(t, "0.0.363");
             }
             return (0, i.jsxs)("div", {
                 className: eJ.Ye,
@@ -1694,7 +1694,7 @@ function e5(e) {
                         (0, i.jsx)(g.$, {
                             text: eo.intl.string(eo.t["XgZk+u"]),
                             onClick: () => {
-                                ey.A.openSettings(eI.iL.SCREEN_RECORDING);
+                                eA.A.openSettings(eI.iL.SCREEN_RECORDING);
                             },
                         }),
                 ],
@@ -1702,12 +1702,12 @@ function e5(e) {
         }
         return (0, i.jsx)("div", { className: eJ.Lq, children: (0, i.jsx)(eh.y, {}) });
     }
-    let y = [];
-    return ((y = f === d.fS.WINDOW ? S : f === d.fS.SCREEN ? c : a), f === d.fS.CAMERA && 0 === y.length)
+    let A = [];
+    return ((A = f === d.fS.WINDOW ? S : f === d.fS.SCREEN ? c : a), f === d.fS.CAMERA && 0 === A.length)
         ? (0, i.jsx)(e3, {})
         : (0, i.jsx)("div", {
               className: eJ.zr,
-              children: y.map((e) =>
+              children: A.map((e) =>
                   (0, i.jsx)(
                       e2,
                       {
@@ -1739,84 +1739,91 @@ function e3() {
             }),
             (0, i.jsx)(k.E, {
                 variant: "text-sm/semibold",
-                children: eo.intl.format(ea.default.xpVzr3, { helpdeskURL: e$.A.getArticleURL(0x53d41ade17) }),
+                children: eo.intl.format(ea.default.xpVzr3, { helpdeskURL: eY.A.getArticleURL(0x53d41ade17) }),
             }),
         ],
     });
 }
 var e4 = s(505312),
-    e7 = s(922016),
-    e9 = s(408278),
+    e9 = s(922016),
+    e7 = s(408278),
     e8 = s(403581),
     e6 = s(550079),
     te = s(477782),
     tt = s(270816),
     ts = s(498642),
-    ti = s(309010);
-function tr(e) {
+    ti = s(309010),
+    tr = s(366340);
+function tl(e) {
     switch (e) {
-        case eE.jQ.PRESET_CUSTOM:
+        case ew.jQ.PRESET_CUSTOM:
             return eo.intl.string(eo.t["+eOtrD"]);
-        case eE.jQ.PRESET_DOCUMENTS:
+        case ew.jQ.PRESET_DOCUMENTS:
             return eo.intl.string(eo.t["rCa/jL"]);
-        case eE.jQ.PRESET_VIDEO:
+        case ew.jQ.PRESET_VIDEO:
             return eo.intl.string(ea.default["G+k1q2"]);
-        case eE.jQ.PRESET_AUTO:
+        case ew.jQ.PRESET_AUTO:
             return eo.intl.string(ea.default.VQ3gwU);
+        case ew.jQ.PRESET_MOBILE_DEFAULT:
+            return eo.intl.string(tr.default["2qmQ8N"]);
+        case ew.jQ.PRESET_MOBILE_PERFORMANCE:
+            return eo.intl.string(tr.default["5eO4/m"]);
+        case ew.jQ.PRESET_MOBILE_HIGH_QUALITY:
+            return eo.intl.string(tr.default.nMcXo1);
         default:
             throw Error(`Not case implemented for ${e}`);
     }
 }
-function tl(e) {
-    return e === eE.on.RESOLUTION_SOURCE ? eo.intl.string(eo.t.XjXqzh) : `${e}p`;
+function tn(e) {
+    return e === ew.on.RESOLUTION_SOURCE ? eo.intl.string(eo.t.XjXqzh) : `${e}p`;
 }
-function tn() {
+function ta() {
     let e = (0, u.bG)([ti.A, K.A], () => K.A.getChannel(ti.A.getVoiceChannelId())),
         t = e?.getGuildId();
     return (0, u.bG)([ee.A], () => (null != t ? ee.A.getGuild(t)?.premiumTier : null));
 }
-var ta = s(192308);
-let to = (e) => {
+var to = s(192308);
+let tc = (e) => {
     let { analyticsLocation: t, onClose: r } = e;
-    (0, ta.openModalLazy)(async () => {
+    (0, to.openModalLazy)(async () => {
         let { default: e } = await s.e("18630").then(s.bind(s, 826789));
         return (s) => (0, i.jsx)(e, { ...s, analyticsSource: t, onClose: () => (r?.(), s.onClose?.()) });
     });
 };
-var tc = s(837859);
-function td(e) {
+var td = s(837859);
+function tu(e) {
     let t = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
         s = (0, u.bG)([ti.A, K.A], () => K.A.getChannel(ti.A.getVoiceChannelId())),
         i = s?.getGuildId(),
         r = (0, u.bG)([ee.A], () => (null != i ? ee.A.getGuild(i)?.premiumTier : null));
-    return (0, tc.A)(e, t, r);
+    return (0, td.Ay)(e, t, r);
 }
-var tu = s(731854),
-    tf = s(396989);
-let th = [
+var tf = s(731854),
+    th = s(396989);
+let tx = [
         {
-            value: eE.jQ.PRESET_AUTO,
-            canUse: (e) => e !== d.fS.CAMERA && (0, eA.eO)({ location: "StreamOptionsMenu" }).allowAutoQuality,
+            value: ew.jQ.PRESET_AUTO,
+            canUse: (e) => e !== d.fS.CAMERA && (0, eb.eO)({ location: "StreamOptionsMenu" }).allowAutoQuality,
         },
-        { value: eE.jQ.PRESET_VIDEO, canUse: (e) => !0 },
-        { value: eE.jQ.PRESET_DOCUMENTS, canUse: (e) => e !== d.fS.CAMERA },
-        { value: eE.jQ.PRESET_CUSTOM, canUse: (e) => !0 },
+        { value: ew.jQ.PRESET_VIDEO, canUse: (e) => !0 },
+        { value: ew.jQ.PRESET_DOCUMENTS, canUse: (e) => e !== d.fS.CAMERA },
+        { value: ew.jQ.PRESET_CUSTOM, canUse: (e) => !0 },
     ],
-    tx = [
-        { value: eE.on.RESOLUTION_720, canUse: (e) => !0 },
-        { value: eE.on.RESOLUTION_1080, canUse: (e) => !0 },
-        { value: eE.on.RESOLUTION_1440, canUse: (e) => !0 },
-        { value: eE.on.RESOLUTION_SOURCE, canUse: (e) => e !== d.fS.CAMERA },
+    tp = [
+        { value: ew.on.RESOLUTION_720, canUse: (e) => !0 },
+        { value: ew.on.RESOLUTION_1080, canUse: (e) => !0 },
+        { value: ew.on.RESOLUTION_1440, canUse: (e) => !0 },
+        { value: ew.on.RESOLUTION_SOURCE, canUse: (e) => e !== d.fS.CAMERA },
     ],
-    tp = [eE.kn.FPS_15, eE.kn.FPS_30, eE.kn.FPS_60];
-function t_(e) {
+    t_ = [ew.kn.FPS_15, ew.kn.FPS_30, ew.kn.FPS_60];
+function tm(e) {
     let { label: t } = e;
     return (0, i.jsxs)("div", {
-        className: tf.g,
+        className: th.g,
         children: [t, (0, i.jsx)(e8.t, { size: "xs", color: Z.A.unsafe_rawColors.GUILD_BOOSTING_PINK })],
     });
 }
-function tm(e) {
+function tg(e) {
     let { onClose: t, onSelect: s } = e,
         [
             {
@@ -1830,7 +1837,7 @@ function tm(e) {
                 sourceType: h,
             },
             x,
-        ] = eD(),
+        ] = eL(),
         p = (0, u.bG)([ti.A], () => ti.A.getVoiceChannelId()),
         _ = (0, u.bG)([K.A, ts.A], () => {
             if (null == p) return !0;
@@ -1838,15 +1845,15 @@ function tm(e) {
                 t = e?.guild_id;
             if (null == t) return !0;
             let s = ts.A.getMemberCount(t);
-            return null == s || (s > eW.oe && s <= eW.G1);
+            return null == s || (s > eB.oe && s <= eB.G1);
         }, [p]),
-        m = tn(),
-        [g, j] = td(eE.jQ.PRESET_VIDEO) ?? [eE.on.RESOLUTION_720, eE.kn.FPS_30],
-        [v, C] = td(eE.jQ.PRESET_DOCUMENTS) ?? [eE.on.RESOLUTION_SOURCE, eE.kn.FPS_15],
+        m = ta(),
+        [g, j] = tu(ew.jQ.PRESET_VIDEO) ?? [ew.on.RESOLUTION_720, ew.kn.FPS_30],
+        [v, C] = tu(ew.jQ.PRESET_DOCUMENTS) ?? [ew.on.RESOLUTION_SOURCE, ew.kn.FPS_15],
         S = (0, tt.H)({
-            deviceType: tu.oh.AUDIO_INPUT,
+            deviceType: tf.oh.AUDIO_INPUT,
             selectedDeviceId: r,
-            analyticsLocations: [y.A.GO_LIVE_MODAL_SETTINGS_SELECTION],
+            analyticsLocations: [A.A.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
             onDeviceSelect: (e) => (x({ type: "set_audio_source", audioSourceId: e }), !1),
             menuItemOverrideProps: {
@@ -1868,7 +1875,7 @@ function tm(e) {
         children: [
             (0, i.jsx)(te.rX, {
                 label: eo.intl.string(ea.default.P2pjmy),
-                children: th
+                children: tx
                     .filter((e) => {
                         let { canUse: t } = e;
                         return t(h);
@@ -1881,22 +1888,25 @@ function tm(e) {
                                 group: "preset",
                                 id: `stream-preset-${t}`,
                                 checked: o === t,
-                                label: tr(t),
+                                label: tl(t),
                                 subtext: (function (e) {
                                     switch (e) {
-                                        case eE.jQ.PRESET_VIDEO:
+                                        case ew.jQ.PRESET_VIDEO:
                                             return eo.intl.format(ea.default.G5O1Mz, {
-                                                resolution: tl(g),
+                                                resolution: tn(g),
                                                 frameRate: j,
                                             });
-                                        case eE.jQ.PRESET_DOCUMENTS:
+                                        case ew.jQ.PRESET_DOCUMENTS:
                                             return eo.intl.format(ea.default["8tcFL5"], {
-                                                resolution: tl(v),
+                                                resolution: tn(v),
                                                 frameRate: C,
                                             });
-                                        case eE.jQ.PRESET_AUTO:
+                                        case ew.jQ.PRESET_AUTO:
                                             return eo.intl.string(ea.default.m4jtlc);
-                                        case eE.jQ.PRESET_CUSTOM:
+                                        case ew.jQ.PRESET_CUSTOM:
+                                        case ew.jQ.PRESET_MOBILE_DEFAULT:
+                                        case ew.jQ.PRESET_MOBILE_HIGH_QUALITY:
+                                        case ew.jQ.PRESET_MOBILE_PERFORMANCE:
                                             return;
                                         default:
                                             throw Error(`No case implemented for ${e}`);
@@ -1908,14 +1918,14 @@ function tm(e) {
                         );
                     }),
             }),
-            o === eE.jQ.PRESET_CUSTOM &&
+            o === ew.jQ.PRESET_CUSTOM &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(te.bX, {}),
                         (0, i.jsx)(te.Dr, {
                             id: "resolution",
                             label: eo.intl.string(ea.default.IG5n0X),
-                            children: tx
+                            children: tp
                                 .filter((e) => {
                                     let { canUse: t } = e;
                                     return t(h);
@@ -1929,14 +1939,14 @@ function tm(e) {
                                             id: `stream-option-resolution-${s}`,
                                             checked: c === s,
                                             void_label:
-                                                s !== eE.on.RESOLUTION_720 ? (0, i.jsx)(t_, { label: tl(s) }) : tl(s),
+                                                s !== ew.on.RESOLUTION_720 ? (0, i.jsx)(tm, { label: tn(s) }) : tn(s),
                                             action: () =>
                                                 (function (e) {
-                                                    if (!(0, ew.A)(o, e, f, N.default.getCurrentUser(), m))
+                                                    if (!(0, eE.A)(o, e, f, N.default.getCurrentUser(), m))
                                                         return (
                                                             t(),
-                                                            to({
-                                                                analyticsLocation: y.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                            tc({
+                                                                analyticsLocation: A.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                             })
                                                         );
                                                     x({ type: "set_resolution", resolution: e });
@@ -1949,7 +1959,7 @@ function tm(e) {
                         (0, i.jsx)(te.Dr, {
                             id: "frame-rate",
                             label: eo.intl.string(eo.t.SkkeIt),
-                            children: tp.map((e) =>
+                            children: t_.map((e) =>
                                 (0, i.jsx)(
                                     te.iD,
                                     {
@@ -1957,13 +1967,13 @@ function tm(e) {
                                         id: `stream-option-frame-rate-${e}`,
                                         checked: f === e,
                                         void_label:
-                                            e === eE.kn.FPS_60 ? (0, i.jsx)(t_, { label: `${e}fps` }) : `${e}fps`,
+                                            e === ew.kn.FPS_60 ? (0, i.jsx)(tm, { label: `${e}fps` }) : `${e}fps`,
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, ew.A)(o, c, e, N.default.getCurrentUser(), m))
+                                                if (!(0, eE.A)(o, c, e, N.default.getCurrentUser(), m))
                                                     return (
                                                         t(),
-                                                        to({ analyticsLocation: y.A.GO_LIVE_MODAL_SETTINGS_SELECTION })
+                                                        tc({ analyticsLocation: A.A.GO_LIVE_MODAL_SETTINGS_SELECTION })
                                                     );
                                                 x({ type: "set_fps", fps: e });
                                             })(e),
@@ -2004,20 +2014,20 @@ function tm(e) {
         ],
     });
 }
-function tg(e) {
+function tj(e) {
     let { align: t = "left" } = e,
         s = r.useRef(null),
         l = (0, e4.w)();
-    return (0, i.jsx)(e7.Y, {
+    return (0, i.jsx)(e9.Y, {
         targetElementRef: s,
         position: "top",
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(tm, { onClose: t, onSelect: void 0 });
+            return (0, i.jsx)(tg, { onClose: t, onSelect: void 0 });
         },
         children: (e) =>
-            (0, i.jsx)(e9.K, {
+            (0, i.jsx)(e7.K, {
                 buttonRef: s,
                 size: "md",
                 variant: "secondary",
@@ -2028,41 +2038,41 @@ function tg(e) {
             }),
     });
 }
-var tj = s(167338);
-function tv(e) {
+var tv = s(167338);
+function tC(e) {
     let { onClose: t } = e,
-        { analyticsLocations: s } = (0, b.Ay)(y.A.GO_LIVE_MODAL_V2);
+        { analyticsLocations: s } = (0, y.Ay)(A.A.GO_LIVE_MODAL_V2);
     return (0, i.jsx)(m.I, {
         options: [
             { name: "SD", value: "sd" },
-            { name: "HD", value: "hd", className: tj.T },
+            { name: "HD", value: "hd", className: tv.T },
         ],
-        className: tj.g,
+        className: tv.g,
         value: "sd",
         look: "pill",
         onChange: function (e) {
-            "hd" === e.value && to({ analyticsLocation: s?.[0], onClose: t });
+            "hd" === e.value && tc({ analyticsLocation: s?.[0], onClose: t });
         },
     });
 }
-var tC = s(862482),
-    tS = s(194261),
+var tS = s(862482),
+    tA = s(194261),
     ty = s(404374),
     tb = s(422936),
-    tA = s(234419),
+    tE = s(234419),
     tw = s(725807),
-    tE = s(511484),
-    tI = s(400669),
-    tN = s(909536),
-    tO = s(788868),
-    tR = s(518728);
-function tT(e) {
+    tI = s(511484),
+    tN = s(400669),
+    tO = s(909536),
+    tR = s(788868),
+    tT = s(518728);
+function tM(e) {
     let { onClose: t } = e,
-        { analyticsLocations: s } = (0, b.Ay)(y.A.GO_LIVE_MODAL_V2),
-        r = (0, tN.St)("hd_streaming_upsell_ribbon"),
-        l = (0, tA.V)(),
+        { analyticsLocations: s } = (0, y.Ay)(A.A.GO_LIVE_MODAL_V2),
+        r = (0, tO.St)("hd_streaming_upsell_ribbon"),
+        l = (0, tE.V)(),
         n = (0, tb.O)(),
-        a = l?.subscription_trial?.sku_id === tO.pe.TIER_2 || (0, tE.U9)(n, tO.pe.TIER_2),
+        a = l?.subscription_trial?.sku_id === tR.pe.TIER_2 || (0, tI.U9)(n, tR.pe.TIER_2),
         o = eo.intl.string(ea.default["+f+cqk"]);
     return (
         a &&
@@ -2073,42 +2083,42 @@ function tT(e) {
                   }))
                 : null != n && (o = eo.intl.formatToPlainString(eo.t.bkQ4bH, { percent: n.discount.amount }))),
         (0, i.jsxs)("div", {
-            className: tR.zr,
+            className: tT.zr,
             children: [
                 (0, i.jsxs)(k.E, {
-                    className: tR.aV,
+                    className: tT.aV,
                     variant: "text-xs/normal",
                     color: "always-white",
                     children: [
-                        (0, i.jsx)(tS.X, { size: "xxs", color: "currentColor" }),
+                        (0, i.jsx)(tA.X, { size: "xxs", color: "currentColor" }),
                         eo.intl.format(eo.t.sLJ3EV, {
                             onNitroClick: function () {
-                                to({ analyticsLocation: s[0], onClose: t });
+                                tc({ analyticsLocation: s[0], onClose: t });
                             },
                         }),
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: tR.OQ,
+                    className: tT.OQ,
                     children: [
                         r &&
-                            (0, i.jsx)(tI.l, {
+                            (0, i.jsx)(tN.l, {
                                 size: "sm",
-                                className: tR.ij,
-                                location: y.A.PREMIUM_WISHLIST_STREAM_UPSELL,
+                                className: tT.ij,
+                                location: A.A.PREMIUM_WISHLIST_STREAM_UPSELL,
                             }),
                         (0, i.jsx)(tw.A, {
-                            className: tR.lI,
-                            iconClassName: tR.PC,
-                            size: tC.$n.Sizes.TINY,
-                            color: tC.$n.Colors.BRAND_INVERTED,
-                            subscriptionTier: tO.pe.TIER_2,
-                            buttonShineClassName: tR.vb,
+                            className: tT.lI,
+                            iconClassName: tT.PC,
+                            size: tS.$n.Sizes.TINY,
+                            color: tS.$n.Colors.BRAND_INVERTED,
+                            subscriptionTier: tR.pe.TIER_2,
+                            buttonShineClassName: tT.vb,
                             iconColor: ty.k0.PREMIUM_TIER_2,
                             onClick: () => {
                                 t();
                             },
-                            textOptions: { subscribeText: o, textClassName: tR.U_ },
+                            textOptions: { subscribeText: o, textClassName: tT.U_ },
                         }),
                     ],
                 }),
@@ -2116,66 +2126,66 @@ function tT(e) {
         })
     );
 }
-var tM = s(183623),
-    tD = s(625903),
-    tG = s(358618),
-    tU = s(627363),
-    tL = s(137177),
-    tP = s(74848);
-function tk(e) {
+var tL = s(183623),
+    tU = s(625903),
+    tD = s(358618),
+    tG = s(627363),
+    tP = s(137177),
+    tk = s(74848);
+function tF(e) {
     return e.hasOwnProperty("pid");
 }
-var tF = s(638495);
-function tH() {
-    return (0, i.jsx)("span", { className: tF.gO, children: "•" });
+var tH = s(638495);
+function tB() {
+    return (0, i.jsx)("span", { className: tH.gO, children: "•" });
 }
 function tW(e) {
     let { source: t } = e,
-        { data: s } = (0, tU.YY)(null != t && tk(t) ? t.id : void 0);
+        { data: s } = (0, tG.YY)(null != t && tF(t) ? t.id : void 0);
     return null == t
-        ? (0, i.jsx)(tM.F, { className: tF.Jd, size: "md", color: "currentColor" })
-        : tk(t)
-          ? (0, i.jsx)(tL.A, { game: s, pid: t.pid })
+        ? (0, i.jsx)(tL.F, { className: tH.Jd, size: "md", color: "currentColor" })
+        : tF(t)
+          ? (0, i.jsx)(tP.A, { game: s, pid: t.pid })
           : null == t.icon || "" === t.icon
-            ? (0, i.jsx)(tM.F, { className: tF.Jd, size: "md", color: "currentColor" })
-            : (0, i.jsx)("img", { src: t.icon, alt: "", className: tF.pI });
+            ? (0, i.jsx)(tL.F, { className: tH.Jd, size: "md", color: "currentColor" })
+            : (0, i.jsx)("img", { src: t.icon, alt: "", className: tH.pI });
 }
-function tB() {
+function tZ() {
     let [{ preset: e, resolution: t, fps: s, muteStreamAudio: r, selectedSource: l, sourceType: a, audioSourceId: o }] =
-            eD(),
-        c = (0, tP.tR)(tu.oh.AUDIO_INPUT),
-        [f, h] = td(e) ?? [t, s],
-        x = tr(e),
-        p = tl(f),
+            eL(),
+        c = (0, tk.tR)(tf.oh.AUDIO_INPUT),
+        [f, h] = tu(e) ?? [t, s],
+        x = tl(e),
+        p = tn(f),
         _ = a === d.fS.CAMERA,
         m = null != l,
         g = null != l ? l?.id?.startsWith(d.fS.CAMERA) : _,
-        j = e === eE.jQ.PRESET_AUTO,
+        j = e === ew.jQ.PRESET_AUTO,
         v = m
             ? void 0
-            : e === eE.jQ.PRESET_VIDEO
+            : e === ew.jQ.PRESET_VIDEO
               ? eo.intl.string(ea.default.MuHUFe)
-              : e === eE.jQ.PRESET_DOCUMENTS
+              : e === ew.jQ.PRESET_DOCUMENTS
                 ? eo.intl.string(ea.default.y0JuYR)
-                : e === eE.jQ.PRESET_AUTO
+                : e === ew.jQ.PRESET_AUTO
                   ? eo.intl.string(ea.default.m4jtlc)
                   : void 0,
-        C = (0, u.bG)([E.Ay], () => E.Ay.getUseSystemScreensharePicker() && (0, R.isLinux)());
+        C = (0, u.bG)([w.Ay], () => w.Ay.getUseSystemScreensharePicker() && (0, R.isLinux)());
     return (0, i.jsxs)("div", {
-        className: tF.zr,
+        className: tH.zr,
         children: [
             m && (0, i.jsx)(tW, { source: l }),
             (0, i.jsxs)("div", {
-                className: tF.z,
+                className: tH.z,
                 children: [
                     (0, i.jsx)(k.E, {
-                        className: tF.fB,
+                        className: tH.fB,
                         variant: "text-md/semibold",
                         color: "text-strong",
                         children: m ? (l?.name ?? eo.intl.string(ea.default["hJMA+x"])) : x,
                     }),
                     (0, i.jsxs)(k.E, {
-                        className: tF.kI,
+                        className: tH.kI,
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
@@ -2183,38 +2193,38 @@ function tB() {
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsxs)("span", {
-                                            className: tF.x5,
+                                            className: tH.x5,
                                             children: [
-                                                (0, i.jsx)(tD.Z, {
-                                                    className: tF.Kk,
+                                                (0, i.jsx)(tU.Z, {
+                                                    className: tH.Kk,
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
                                                 x,
                                             ],
                                         }),
-                                        (0, i.jsx)(tH, {}),
+                                        (0, i.jsx)(tB, {}),
                                     ],
                                 }),
                             null != v && (0, i.jsx)("span", { children: v }),
                             !j &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)(tH, {}),
+                                        (0, i.jsx)(tB, {}),
                                         (0, i.jsx)("span", { children: p }),
-                                        (0, i.jsx)(tH, {}),
+                                        (0, i.jsx)(tB, {}),
                                         (0, i.jsx)("span", { children: `${h}fps` }),
                                     ],
                                 }),
                             r &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)(tH, {}),
+                                        (0, i.jsx)(tB, {}),
                                         (0, i.jsxs)("span", {
-                                            className: tF.x5,
+                                            className: tH.x5,
                                             children: [
-                                                (0, i.jsx)(tG._, {
-                                                    className: n()(tF.Kk, tF.tG),
+                                                (0, i.jsx)(tD._, {
+                                                    className: n()(tH.Kk, tH.tG),
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
@@ -2227,12 +2237,12 @@ function tB() {
                                 !g &&
                                 C &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: [(0, i.jsx)(tH, {}), eo.intl.string(ea.default["n9/rUq"])],
+                                    children: [(0, i.jsx)(tB, {}), eo.intl.string(ea.default["n9/rUq"])],
                                 }),
                             g
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(tH, {}),
+                                          (0, i.jsx)(tB, {}),
                                           (0, i.jsx)("span", {
                                               children: c.find((e) => {
                                                   let { id: t } = e;
@@ -2249,31 +2259,31 @@ function tB() {
         ],
     });
 }
-var tZ = s(451988);
-let tV = [d.fS.CAMERA],
+var tV = s(451988);
+let tQ = [d.fS.CAMERA],
     tz = [d.fS.SCREEN, d.fS.WINDOW, d.fS.CAMERA];
-var tQ = s(456713);
-function tq(e) {
-    let { onClose: t, transitionState: s, sourcePID: l, analyticsLocations: a = [], selectSource: L = !0 } = e,
-        P = (0, u.bG)([A.Ay], () => (null != l ? (A.Ay.getGameForPID(l) ?? void 0) : void 0)),
+var tq = s(456713);
+function tY(e) {
+    let { onClose: t, transitionState: s, sourcePID: l, analyticsLocations: a = [], selectSource: G = !0 } = e,
+        P = (0, u.bG)([b.Ay], () => (null != l ? (b.Ay.getGameForPID(l) ?? void 0) : void 0)),
         k = r.useRef(performance.now()),
         F = (0, u.bG)(
-            [E.Ay],
+            [w.Ay],
             () =>
-                (E.Ay.getUseSystemScreensharePicker() || E.Ay.getUseGamescopeCapture()) &&
-                ((0, R.isLinux)() || ((0, R.isMac)() && o().satisfies(C.A?.os.release, eW.WZ))),
+                (w.Ay.getUseSystemScreensharePicker() || w.Ay.getUseGamescopeCapture()) &&
+                ((0, R.isLinux)() || ((0, R.isMac)() && o().satisfies(C.A?.os.release, eB.WZ))),
         ),
-        { analyticsLocations: H } = (0, b.Ay)(a, y.A.GO_LIVE_MODAL_V2),
-        W = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
-        { state: B, dispatch: Z } = (function (e, t, s) {
-            let { defaultAutoQuality: i, allowAutoQuality: l } = (0, eA.X5)({ location: "useCreateGoLiveModalState" }),
-                { preset: n, resolution: a, fps: o, soundshareEnabled: c } = (0, u.cf)([eb.A], () => eb.A.getState());
-            i && (n = eE.jQ.PRESET_AUTO);
-            let d = (0, u.bG)([E.Ay], () => E.Ay.getInputDeviceId()),
-                f = w.uh.useSetting() ?? !1,
-                h = w.wv.useSetting() ?? !1;
-            (n in eE.jQ && (n !== eE.jQ.PRESET_AUTO || l)) || (n = eE.jQ.PRESET_VIDEO),
-                (0, ew.A)(eE.jQ.PRESET_CUSTOM, a, o, t, s) || ((a = eE.on.RESOLUTION_720), (o = eE.kn.FPS_30));
+        { analyticsLocations: H } = (0, y.Ay)(a, A.A.GO_LIVE_MODAL_V2),
+        B = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
+        { state: W, dispatch: Z } = (function (e, t, s) {
+            let { defaultAutoQuality: i, allowAutoQuality: l } = (0, eb.X5)({ location: "useCreateGoLiveModalState" }),
+                { preset: n, resolution: a, fps: o, soundshareEnabled: c } = (0, u.cf)([ey.A], () => ey.A.getState());
+            i && (n = ew.jQ.PRESET_AUTO);
+            let d = (0, u.bG)([w.Ay], () => w.Ay.getInputDeviceId()),
+                f = E.uh.useSetting() ?? !1,
+                h = E.wv.useSetting() ?? !1;
+            (n in ew.jQ && (n !== ew.jQ.PRESET_AUTO || l)) || (n = ew.jQ.PRESET_VIDEO),
+                (0, eE.A)(ew.jQ.PRESET_CUSTOM, a, o, t, s) || ((a = ew.on.RESOLUTION_720), (o = ew.kn.FPS_30));
             let [x, p] = r.useReducer(eT, {
                 ...eN,
                 muteStreamAudio: !c,
@@ -2283,12 +2293,12 @@ function tq(e) {
                 hidePreview: f,
                 notifyFriends: h,
                 selectedSource: e,
-                nativeSourceType: E.Ay.getUseGamescopeCapture() ? "gamescope" : "",
+                nativeSourceType: w.Ay.getUseGamescopeCapture() ? "gamescope" : "",
                 audioSourceId: d,
             });
             return (
                 r.useEffect(() => {
-                    ey.A.hasPermission(eI.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
+                    eA.A.hasPermission(eI.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
                         p({ type: "set_has_permission", value: e }),
                     ),
                         C.A.window.getMediaSourceId?.().then((e) => {
@@ -2297,19 +2307,19 @@ function tq(e) {
                 }, []),
                 { state: x, dispatch: p }
             );
-        })(P, W, tn()),
-        V = (0, v.A)((0, R.isWindows)() && null != P && L ? "confirm" : "source_select");
+        })(P, B, ta()),
+        V = (0, v.A)((0, R.isWindows)() && null != P && G ? "confirm" : "source_select");
     !(function (e, t) {
         let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = (0, u.bG)([A.Ay], () => A.Ay.getRunningGames().length > 0),
+            i = (0, u.bG)([b.Ay], () => b.Ay.getRunningGames().length > 0),
             l = r.useRef(0),
             n = i ? 2e3 : 1e3,
-            a = r.useRef(new tZ.Ep());
+            a = r.useRef(new tV.Ep());
         r.useEffect(() => {
             if (s) return;
             let i = a.current,
                 r = l.current,
-                o = { width: 447, height: 251, types: e ? tV : tz };
+                o = { width: 447, height: 251, types: e ? tQ : tz };
             async function c() {
                 let { screenSources: e, windowSources: s, cameraSources: a } = await ej(o);
                 l.current > r ||
@@ -2324,12 +2334,12 @@ function tq(e) {
             );
         }, [t, n, e, s]);
     })(F, Z, "confirm" === V);
-    let z = !T.Ay.canStreamQuality(T.Ay.StreamQuality.HIGH, W),
-        Q = !(0, R.isLinux)(),
+    let Q = !T.Ay.canStreamQuality(T.Ay.StreamQuality.HIGH, B),
+        z = !(0, R.isLinux)(),
         q = "confirm" === V,
-        $ = !L && null != P && !q,
-        Y = q || B.sourceType === d.fS.CAMERA,
-        K = F && B.sourceType !== d.fS.CAMERA,
+        Y = !G && null != P && !q,
+        $ = q || W.sourceType === d.fS.CAMERA,
+        K = F && W.sourceType !== d.fS.CAMERA,
         X = r.useMemo(() => {
             let e = [
                 { name: eo.intl.string(eo.t.tHoi7u), value: d.fS.WINDOW, icon: h.W },
@@ -2337,18 +2347,18 @@ function tq(e) {
             ];
             return F || e.splice(1, 0, { name: eo.intl.string(eo.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e;
         }, [F]),
-        { sourceType: J } = B,
+        { sourceType: J } = W,
         ee = r.useCallback(
             async (e) => {
-                w.wv.updateSetting(B.notifyFriends), w.uh.updateSetting(B.hidePreview);
-                let [s, i] = await (0, U.A)(e.hasOwnProperty("pid") ? e.pid : e, {
-                    preset: B.preset,
-                    fps: B.fps,
-                    resolution: B.resolution,
-                    soundshareEnabled: !B.muteStreamAudio,
-                    previewDisabled: B.hidePreview,
+                E.wv.updateSetting(W.notifyFriends), E.uh.updateSetting(W.hidePreview);
+                let [s, i] = await (0, D.A)(e.hasOwnProperty("pid") ? e.pid : e, {
+                    preset: W.preset,
+                    fps: W.fps,
+                    resolution: W.resolution,
+                    soundshareEnabled: !W.muteStreamAudio,
+                    previewDisabled: W.hidePreview,
                     goLiveModalDurationMs: performance.now() - k.current,
-                    audioSourceId: B.audioSourceId,
+                    audioSourceId: W.audioSourceId,
                     analyticsLocations: H,
                 });
                 if (s) return t();
@@ -2356,20 +2366,20 @@ function tq(e) {
                     j.A.show({ title: eo.intl.string(eo.t["X+mXeq"]), body: eo.intl.string(eo.t.MIJCzr) }),
                     t();
             },
-            [t, B, H],
+            [t, W, H],
         );
     async function et(e) {
         (await (0, S.A)({ channelId: e })) && null != P && ee(P);
     }
     let es = r.useCallback(() => {
         ee({
-            id: ("gamescope" === B.nativeSourceType ? "screen:" : "prepicked:") + B.nativeSourceType,
-            name: D.Ay.getLastPickedContentTitle() ?? eo.intl.string(eo.t.KKcy95),
+            id: ("gamescope" === W.nativeSourceType ? "screen:" : "prepicked:") + W.nativeSourceType,
+            name: L.Ay.getLastPickedContentTitle() ?? eo.intl.string(eo.t.KKcy95),
             url: "",
         });
-    }, [ee, B.nativeSourceType]);
+    }, [ee, W.nativeSourceType]);
     return (0, i.jsx)(eM, {
-        state: B,
+        state: W,
         dispatch: Z,
         children: (0, i.jsx)(_.d, {
             transitionState: s,
@@ -2380,27 +2390,27 @@ function tq(e) {
                     impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                     impressionProperties: {
                         location_stack: H,
-                        application_id: (0, R.isWindows)() ? (0, G.A)(A.Ay, O.A)?.id : void 0,
+                        application_id: (0, R.isWindows)() ? (0, U.A)(b.Ay, O.A)?.id : void 0,
                         parent_media_session_id: I.A.getMediaSessionId(),
                     },
                 },
             },
             children: (0, i.jsxs)("div", {
-                className: n()(tQ.zr, { [tQ._g]: F && null == P, [tQ.Tb]: $, [tQ.Fe]: q }),
+                className: n()(tq.zr, { [tq._g]: F && null == P, [tq.Tb]: Y, [tq.Fe]: q }),
                 children: [
-                    $
-                        ? (0, i.jsx)(eu, { className: n()(tQ.or, tQ.Ym), onSelectChannel: et })
+                    Y
+                        ? (0, i.jsx)(eu, { className: n()(tq.or, tq.Ym), onSelectChannel: et })
                         : q
-                          ? (0, i.jsx)(eU, {})
+                          ? (0, i.jsx)(eD, {})
                           : (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: tQ.wx,
+                                        className: tq.wx,
                                         children: (0, i.jsx)(m.I, {
-                                            className: tQ.q0,
+                                            className: tq.q0,
                                             value: J,
                                             look: "pill",
-                                            optionClassName: tQ.LD,
+                                            optionClassName: tq.LD,
                                             onChange: (e) => {
                                                 let { value: t } = e;
                                                 return Z({ type: "set_source_type", sourceType: t });
@@ -2409,10 +2419,10 @@ function tq(e) {
                                         }),
                                     }),
                                     (0, i.jsx)(f.Ar, {
-                                        className: tQ.Qs,
+                                        className: tq.Qs,
                                         children:
                                             F && J !== d.fS.CAMERA
-                                                ? (0, i.jsx)(ez, { onSourceSelect: es })
+                                                ? (0, i.jsx)(eQ, { onSourceSelect: es })
                                                 : (0, i.jsx)(e5, {
                                                       onClick: function (e) {
                                                           e.id?.startsWith(d.fS.CAMERA)
@@ -2424,44 +2434,44 @@ function tq(e) {
                                 ],
                             }),
                     (0, i.jsxs)("div", {
-                        className: tQ.qr,
+                        className: tq.qr,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: tQ.z8,
+                                className: tq.z8,
                                 children: [
-                                    (0, i.jsx)(tB, {}),
+                                    (0, i.jsx)(tZ, {}),
                                     (0, i.jsxs)("div", {
-                                        className: tQ.gt,
+                                        className: tq.gt,
                                         children: [
-                                            z && (0, i.jsx)(tv, { onClose: t }),
-                                            (K || Y) &&
+                                            Q && (0, i.jsx)(tC, { onClose: t }),
+                                            (K || $) &&
                                                 (0, i.jsx)(g.$, {
                                                     variant: "primary",
                                                     size: "md",
                                                     text: eo.intl.string(
-                                                        K && "gamescope" !== B.nativeSourceType
+                                                        K && "gamescope" !== W.nativeSourceType
                                                             ? eo.t.FiBjwU
                                                             : ea.default["5AyH/p"],
                                                     ),
                                                     onClick: () => {
                                                         K
-                                                            ? "gamescope" === B.nativeSourceType
+                                                            ? "gamescope" === W.nativeSourceType
                                                                 ? es()
-                                                                : ((0, M.E)(), (0, M.a)(B.nativeSourceType))
-                                                            : null != B.selectedChannel
-                                                              ? et(B.selectedChannel)
-                                                              : null != B.selectedSource && ee(B.selectedSource);
+                                                                : ((0, M.E)(), (0, M.a)(W.nativeSourceType))
+                                                            : null != W.selectedChannel
+                                                              ? et(W.selectedChannel)
+                                                              : null != W.selectedSource && ee(W.selectedSource);
                                                     },
                                                     disabled:
-                                                        (K && !Q && "" === B.nativeSourceType) ||
-                                                        (Y && null == B.selectedSource),
+                                                        (K && !z && "" === W.nativeSourceType) ||
+                                                        ($ && null == W.selectedSource),
                                                 }),
-                                            (0, i.jsx)(tg, { align: "right" }),
+                                            (0, i.jsx)(tj, { align: "right" }),
                                         ],
                                     }),
                                 ],
                             }),
-                            z && (0, i.jsx)("div", { className: tQ.rO, children: (0, i.jsx)(tT, { onClose: t }) }),
+                            Q && (0, i.jsx)("div", { className: tq.rO, children: (0, i.jsx)(tM, { onClose: t }) }),
                         ],
                     }),
                 ],

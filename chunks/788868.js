@@ -519,6 +519,7 @@ var eV =
         (d.CLIENT_THEMES_UPSELL = "client_themes_upsell"),
         (d.CUSTOM_THEMES_UPSELL = "custom_themes_upsell"),
         (d.APP_ICON_INLINE_UPSELL = "app_icons_inline_upsell"),
+        (d.STREAM_QUALITY_UPSELL = "stream_quality_upsell"),
         d),
     eH =
         (((u = {})[(u.PREMIUM_TIER_1 = 1)] = "PREMIUM_TIER_1"),

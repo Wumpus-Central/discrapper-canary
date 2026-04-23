@@ -19,8 +19,8 @@ var s = n(91777),
     p = n(287809),
     A = n(723702),
     m = n(258585),
-    g = n(327649),
-    y = n(837859),
+    y = n(327649),
+    g = n(837859),
     b = n(725792),
     E = n(830012),
     v = n(753070),
@@ -47,13 +47,13 @@ async function T(e, t) {
         { allowAutoQuality: j } = (0, m.eO)({ location: "startStreamWithSource" });
     D !== v.jQ.PRESET_AUTO || j || (D = v.jQ.PRESET_VIDEO);
     let R = D === v.jQ.PRESET_AUTO ? v.jQ.PRESET_VIDEO : D,
-        [U, V] = (0, y.A)(R, n, x) ?? [],
+        [U, V] = (0, g.Ay)(R, n, x) ?? [],
         B = U ?? t?.resolution ?? P,
         G = V ?? t?.fps ?? M,
         H = t?.previewDisabled ?? d.uh.getSetting(),
         F = t?.soundshareEnabled ?? O;
     return (
-        (0, g.A)(R, B, G, n, x, T) || ((D = v.jQ.PRESET_VIDEO), (B = v.on.RESOLUTION_720), (G = v.kn.FPS_30)),
+        (0, y.A)(R, B, G, n, x, T) || ((D = v.jQ.PRESET_VIDEO), (B = v.on.RESOLUTION_720), (G = v.kn.FPS_30)),
         (0, l.Xd)({ preset: D, resolution: B, frameRate: G, soundshareEnabled: F }),
         (0, l.XI)(N, a, {
             ...(function (e) {
