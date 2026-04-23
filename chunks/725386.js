@@ -8,9 +8,9 @@ var i = n(64700),
     c = n(395332),
     d = n(253932),
     u = n(287809),
-    _ = n(403362),
-    g = n(633075),
-    m = n(289173),
+    g = n(403362),
+    m = n(633075),
+    _ = n(289173),
     f = n(667049),
     x = n(229231);
 function p(e) {
@@ -18,34 +18,34 @@ function p(e) {
         n = d.Q_.useSetting(),
         p = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
         I = (0, f.A)(p?.id),
-        A = (0, c.w$)(e),
-        h = (0, l.bG)([r.A], () => r.A.getAllConfigsByApplication());
+        h = (0, c.w$)(e),
+        A = (0, l.bG)([r.A], () => r.A.getAllConfigsByApplication());
     return (
         i.useEffect(() => {
             t && ((0, s.Wq)(), n && (0, s.i$)());
         }, [t, n]),
         i.useMemo(() => {
-            let e = new Set(I.filter((e) => e instanceof g.R).map((e) => e.applicationId)),
+            let e = new Set(I.filter((e) => e instanceof m.R).map((e) => e.applicationId)),
                 n = new Set(I.map((e) => e.type));
             return x.Zc.flatMap((i) =>
                 i === a.x.APPLICATION
                     ? t
-                        ? Object.values(h)
+                        ? Object.values(A)
                               .map((e) => e[0])
-                              .filter(_.Vq)
+                              .filter(g.Vq)
                               .filter((t) => !e.has(t.application_id))
-                              .map((e) => new g.R({ applicationId: e.application_id }))
-                        : null == A
+                              .map((e) => new m.R({ applicationId: e.application_id }))
+                        : null == h
                           ? []
-                          : A.filter((t) => !e.has(t.applicationId)).map(
-                                (e) => new g.R({ applicationId: e.applicationId }),
-                            )
-                    : (0, m.hL)(i)
+                          : h
+                                .filter((t) => !e.has(t.applicationId))
+                                .map((e) => new m.R({ applicationId: e.applicationId }))
+                    : (0, _.hL)(i)
                       ? n.has(i)
                           ? []
-                          : new m.Yy({ type: i, games: [] })
-                      : void (0, _.xb)(i),
+                          : new _.Yy({ type: i, games: [] })
+                      : void (0, g.xb)(i),
             );
-        }, [t, h, A, I])
+        }, [t, A, h, I])
     );
 }
