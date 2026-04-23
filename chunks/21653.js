@@ -17,9 +17,9 @@ var n,
     A = l(915089),
     E = l(808728),
     p = l(71393),
-    N = l(735547),
-    C = l(645034),
-    f = l(698441),
+    f = l(735547),
+    N = l(645034),
+    C = l(698441),
     y = l(496092),
     b = l(485394),
     S = l(761836),
@@ -36,7 +36,7 @@ var n,
     U = l(652215),
     z = l(985018),
     V = l(780616);
-let { INVITE_OPTIONS_7_DAYS: F, INVITE_OPTIONS_UNLIMITED: w } = N.Ay;
+let { INVITE_OPTIONS_7_DAYS: F, INVITE_OPTIONS_UNLIMITED: w } = f.Ay;
 var B =
     (((n = B || {})[(n.ENTITY = 0)] = "ENTITY"),
     (n[(n.SETTINGS = 1)] = "SETTINGS"),
@@ -88,8 +88,8 @@ function X(e) {
             loading: v,
             error: E,
             onChange: p,
-            onSave: N,
-            onClose: C,
+            onSave: f,
+            onClose: N,
             createdEvent: y,
         } = e,
         b = (0, A.GV)(),
@@ -114,7 +114,7 @@ function X(e) {
             [h, x, I],
         ),
         R = Object.keys(B).length,
-        M = (0, f.Fd)(l),
+        M = (0, C.Fd)(l),
         P = (e) => Math.max(0, Math.min(e, R - 1)),
         [U, F] = s.useState(+!!M),
         [w, X] = s.useState(!1),
@@ -141,7 +141,7 @@ function X(e) {
             y?.id != null && Z.current(3);
         }, [y?.id]);
     let J = () => {
-            H && (2 === Y ? N() : q ? C() : $(U + 1));
+            H && (2 === Y ? f() : q ? N() : $(U + 1));
         },
         K = () => {
             $(U - 1);
@@ -201,9 +201,15 @@ function X(e) {
                                 }),
                                 (0, i.jsx)(o.q, {
                                     id: 2,
-                                    children: (0, i.jsx)(k.A, { guildId: t, guildEvent: l, guildEventId: n, error: E }),
+                                    children: (0, i.jsx)(k.A, {
+                                        guildId: t,
+                                        guildEvent: l,
+                                        guildEventId: n,
+                                        error: E,
+                                        isSlideReady: w,
+                                    }),
                                 }),
-                                (0, i.jsx)(o.q, { id: 3, children: (0, i.jsx)(L.A, { onClose: C, event: y }) }),
+                                (0, i.jsx)(o.q, { id: 3, children: (0, i.jsx)(L.A, { onClose: N, event: y }) }),
                             ],
                         }),
                     ],
@@ -229,7 +235,7 @@ function X(e) {
                                     (0, i.jsx)(u.$, {
                                         variant: "secondary",
                                         text: z.intl.string(z.t["ETE/oC"]),
-                                        onClick: C,
+                                        onClick: N,
                                     }),
                                     (0, i.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
@@ -253,13 +259,13 @@ function X(e) {
 function H(e) {
     let { guildId: t, guildScheduledEventId: n, transitionState: a, onClose: d } = e;
     (0, r.bG)([p.A], () => p.A.getGuild(t));
-    let o = (0, r.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(n), [n]),
+    let o = (0, r.bG)([C.Ay], () => C.Ay.getGuildScheduledEvent(n), [n]),
         c = (0, r.bG)([E.Ay], () => E.Ay.getDefaultChannel(t), [t]),
         u = (0, I.UZ)(o, c),
         [g, v] = s.useState(u),
         [j] = s.useState((0, I.lc)(o)),
-        [A, N] = s.useState(null),
-        [D, { loading: _, error: k }] = (0, C.A)(async () => {
+        [A, f] = s.useState(null),
+        [D, { loading: _, error: k }] = (0, N.A)(async () => {
             var e;
             let l, i;
             if (null != A) return;
@@ -270,7 +276,7 @@ function H(e) {
                 (l = (0, b.K7)(e)),
                 null != (i = e.channel_id ?? c?.id) &&
                     m.Ay.createInvite(i, { max_age: F.value, max_uses: w.value }, U.PE1.GUILD_EVENTS),
-                l ? N(e) : d(),
+                l ? f(e) : d(),
                 s
             );
         }),
