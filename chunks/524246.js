@@ -1,51 +1,50 @@
-"use strict";
-r.d(t, { A: () => s });
-var a = r(627968),
-    i = r(64700),
-    n = r(106778),
-    l = r(851110);
-let s = function (e) {
-    let { confettiTarget: t, confettiCanvas: r, confettiVelocityMultiplier: s, sprites: o, colors: c } = e,
-        [d, u] = i.useState(null),
-        _ = (0, n.f9)(r, d),
-        [p, h] = i.useState(!1);
+n.d(t, { A: () => a });
+var l = n(627968),
+    r = n(64700),
+    i = n(106778),
+    s = n(851110);
+let a = function (e) {
+    let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: a, sprites: o, colors: u } = e,
+        [d, c] = r.useState(null),
+        C = (0, i.f9)(n, d),
+        [p, m] = r.useState(!1);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let e = Array(10).fill(0);
             return (
                 null != t &&
-                    _.isReady &&
+                    C.isReady &&
                     !p &&
-                    (e = e.map((r, a) =>
+                    (e = e.map((n, l) =>
                         setTimeout(() => {
-                            var r, i;
-                            a === e.length - 1 && h(!0),
-                                _.createMultipleConfetti(
-                                    ((r = t.getBoundingClientRect()),
-                                    (i = (i = s) ?? 1),
+                            var n, r;
+                            l === e.length - 1 && m(!0),
+                                C.createMultipleConfetti(
+                                    ((n = t.getBoundingClientRect()),
+                                    (r = (r = a) ?? 1),
                                     {
-                                        ...l.Mw,
+                                        ...s.Mw,
                                         position: {
                                             type: "static-random",
-                                            minValue: { x: r.x, y: r.y },
-                                            maxValue: { x: r.x + r.width, y: r.y + r.height / 2 },
+                                            minValue: { x: n.x, y: n.y },
+                                            maxValue: { x: n.x + n.width, y: n.y + n.height / 2 },
                                         },
                                         velocity: {
                                             type: "static-random",
-                                            minValue: { x: -100 * i, y: -50 * i },
-                                            maxValue: { x: 100 * i, y: -300 * i },
+                                            minValue: { x: -100 * r, y: -50 * r },
+                                            maxValue: { x: 100 * r, y: -300 * r },
                                         },
                                         dragCoefficient: { type: "static", value: 0.166 },
                                     }),
                                     50,
                                 );
-                        }, 100 * a),
+                        }, 100 * l),
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);
                 }
             );
-        }, [_, t, p, s]),
-        (0, a.jsx)(n.K_, { ref: u, sprites: o ?? l.uI, colors: c ?? l._t, spriteWidth: l.wn, spriteHeight: l.wn })
+        }, [C, t, p, a]),
+        (0, l.jsx)(i.K_, { ref: c, sprites: o ?? s.uI, colors: u ?? s._t, spriteWidth: s.wn, spriteHeight: s.wn })
     );
 };
