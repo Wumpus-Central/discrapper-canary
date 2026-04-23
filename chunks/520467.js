@@ -20,6 +20,7 @@ function o(e) {
                     className: d._h,
                     role: "tab",
                     "aria-selected": o,
+                    "aria-current": o ? "step" : void 0,
                     children: [
                         (0, n.jsx)("div", { className: s()(d.hr, { [d.YD]: o }) }),
                         (0, n.jsx)(r.E, {
