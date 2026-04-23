@@ -187,7 +187,7 @@ function F(e, t) {
     let n = _.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
-let V = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER, r.M.ACCOUNT_LINK_PROMPT]);
+let V = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.ACCOUNT_LINK_PROMPT]);
 function H(e, t, n, i) {
     if ((0, A.dD)(e) || I.A.hasUserHitDCCap(e, t?.guildId)) return;
     let r = d.A.getConfig({ location: "requestMarkDismissibleContentAsShown" }).enabled && null == i && V.has(e);
