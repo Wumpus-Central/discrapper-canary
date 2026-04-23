@@ -7,14 +7,9 @@ var i = n(64700),
     o = n(158317),
     l = n(123633),
     d = n(786953),
-    _ = n(310829);
-let u = (0, n(945810).mj)({
-    name: "2025-12-orb-redemption-thru-orders",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var c = n(652215),
+    _ = n(310829),
+    u = n(211287),
+    c = n(652215),
     E = n(26279),
     h = n(985018);
 function m(e) {
@@ -23,7 +18,7 @@ function m(e) {
         [g, p] = (0, i.useState)(null),
         [A, I] = (0, i.useState)(!1),
         T = (0, i.useRef)(null),
-        { enabled: S } = u.useConfig({ location: "orb_checkout_modal" }),
+        { enabled: S } = u.A.useConfig({ location: "orb_checkout_modal" }),
         N = (0, r.bG)([l.A], () => l.A.isCreatingOrder),
         C = (0, r.bG)([l.A], () => l.A.currentOrder);
     (0, i.useEffect)(() => {
