@@ -13,7 +13,7 @@ var l = n(503698),
     m = n(235986),
     A = n(290863),
     g = n(427262),
-    p = n(973081);
+    p = n(271385);
 function _(e) {
     let {
             user: t,
@@ -40,8 +40,8 @@ function _(e) {
             S?.(n);
         },
         ...T,
-        role: "option",
-        "aria-selected": E,
+        role: "checkbox",
+        "aria-checked": E,
         "aria-disabled": C,
         "aria-setsize": I,
         "aria-posinset": N,

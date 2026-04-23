@@ -348,10 +348,8 @@ class ep extends l.PureComponent {
                       paddingBottom: 14,
                       fade: !0,
                       role: void 0,
-                      innerRole: "listbox",
+                      innerRole: "group",
                       innerId: em,
-                      innerAriaMultiselectable: !0,
-                      innerAriaOrientation: "vertical",
                   };
     }
     getRowHeight = (e, t) => {
