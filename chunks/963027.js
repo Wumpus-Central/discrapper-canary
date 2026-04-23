@@ -31,7 +31,10 @@ function u(e) {
             t = _ ? d.t.F2MZsu : d.t.fYqXVY;
             break;
         case c.rbe.GROUP_DM:
-            t = _ ? d.t["fxxUo/"] : d.t.lts3Ld;
+            a = [
+                d.intl.formatToPlainString(_ ? d.t["fxxUo/"] : d.t.lts3Ld, { channelName: E }),
+                d.intl.formatToPlainString(d.t.CxSA5N, { members: u.recipients.length + 1 }),
+            ].join(", ");
             break;
         case c.rbe.GUILD_STORE:
             t = d.t.Bo4msg;
