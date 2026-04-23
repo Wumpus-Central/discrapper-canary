@@ -26,7 +26,7 @@ var i = n(627968),
     O = n(10716),
     y = n(46225),
     v = n(20015),
-    D = n(918022),
+    D = n(606267),
     L = n(427675),
     b = n(94420),
     w = n(977445),
@@ -217,7 +217,8 @@ function ee(e) {
             warningAndErrorMessages: f,
             giftCardsEnabled: g,
             giftCardCheckboxProps: A,
-            disabled: N,
+            walletCoversSubtotal: N,
+            disabled: H,
         } = ((e) => {
             let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s } = e,
                 a = (0, b.t4)((e) => e.selectedSkuId),
@@ -256,63 +257,63 @@ function ee(e) {
                 dropdownPaymentSourceId: el,
                 handleDropdownPaymentSourceChange: ed,
                 giftCardCheckboxProps: e_,
-            } = (0, D.Y)({
+                walletCoversSubtotal: eu,
+            } = (0, D.Y0)({
                 checkoutPaymentSources: g,
                 paymentSourceId: d,
                 setPaymentSourceId: _,
                 location: "OneTimePurchaseReview",
                 isReady: A,
-                itemAmount: ei?.amount,
             });
             I()(null != Q, "SKU must exist and be fetched."), I()(null != o, "Application must exist.");
-            let eu = (0, w.u)(o.id),
-                ec = (0, S.bG)([U.A], () => U.A.enabled),
-                eE = T.M.EEA_COUNTRIES.has(x.A.ipCountryCodeWithFallback),
-                eh = l === B.h.PURCHASING || l === B.h.COMPLETED,
-                em = g.find((e) => e.id === d) ?? null,
-                ef = null != em ? em.type : null,
-                eg = null != J && J.length > 0 && (d === G.B || null === ef) && f ? k.fU.SELECT_PAYMENT_METHOD : void 0,
-                ep = Q.productLine === W.EZt.SOCIAL_LAYER_GAME_ITEM,
-                eA = q && !ep,
-                eI = r.useMemo(
+            let ec = (0, w.u)(o.id),
+                eE = (0, S.bG)([U.A], () => U.A.enabled),
+                eh = T.M.EEA_COUNTRIES.has(x.A.ipCountryCodeWithFallback),
+                em = l === B.h.PURCHASING || l === B.h.COMPLETED,
+                ef = g.find((e) => e.id === d) ?? null,
+                eg = null != ef ? ef.type : null,
+                ep = null != J && J.length > 0 && (d === G.B || null === eg) && f ? k.fU.SELECT_PAYMENT_METHOD : void 0,
+                eA = Q.productLine === W.EZt.SOCIAL_LAYER_GAME_ITEM,
+                eI = q && !eA,
+                eT = r.useMemo(
                     () => ({
-                        testModeWarning: eu ? K.intl.string(K.t.OvMyMd) : null,
+                        testModeWarning: ec ? K.intl.string(K.t.OvMyMd) : null,
                         devShelfError:
                             (0, v.n)(o, W.gfo.EMBEDDED) && m === O.$.ERROR ? K.intl.string(K.t.tAmECt) : null,
-                        socialLayerGameItemDisclaimer: ep && X && !Z && !j ? K.intl.string(K.t["3pLGHL"]) : null,
+                        socialLayerGameItemDisclaimer: eA && X && !Z && !j ? K.intl.string(K.t["3pLGHL"]) : null,
                     }),
-                    [eu, o, m, ep, X, Z, j],
+                    [ec, o, m, eA, X, Z, j],
                 ),
-                eT = r.useMemo(
+                eS = r.useMemo(
                     () => ({
                         paymentSources: es,
                         selectedPaymentSourceId: el,
                         onChange: ed,
                         onPaymentSourceAdd: s,
-                        hidePersonalInformation: ec,
+                        hidePersonalInformation: eE,
                         paymentGatewayRestrictions: J,
                         defaultPaymentSourceId: es.find((e) => e.isDefault)?.id,
                     }),
-                    [es, el, ed, s, ec, J],
+                    [es, el, ed, s, eE, J],
                 ),
-                eS = r.useMemo(
+                eN = r.useMemo(
                     () =>
                         Q.productLine === W.EZt.COLLECTIBLES
-                            ? (0, i.jsx)(Y, { paymentSourceType: ef })
+                            ? (0, i.jsx)(Y, { paymentSourceType: eg })
                             : (0, i.jsx)(P.A, {
                                   isActive: t,
                                   ref: n,
                                   children: (0, i.jsx)(R.A, {
                                       onChange: u,
                                       forceShow: !0,
-                                      showWithdrawalWaiver: eE,
-                                      disabled: eh,
+                                      showWithdrawalWaiver: eh,
+                                      disabled: em,
                                       subscriptionPlan: null,
                                       finePrintClassname: z.i,
                                       purchaseType: E,
                                       isGift: j,
                                       finePrint: (0, i.jsx)(C.A, {
-                                          paymentSourceType: ef,
+                                          paymentSourceType: eg,
                                           isEmbeddedIAP: c,
                                           purchaseType: E,
                                           productLine: Q.productLine,
@@ -322,7 +323,7 @@ function ee(e) {
                                       }),
                                   }),
                               }),
-                    [t, n, u, eE, eh, E, j, ef, c, Q.productLine, o.name, X, Z],
+                    [t, n, u, eh, em, E, j, eg, c, Q.productLine, o.name, X, Z],
                 );
             return {
                 sku: Q,
@@ -331,45 +332,47 @@ function ee(e) {
                 isGift: j,
                 skuPricePreview: ei,
                 isEmbeddedIAP: c,
-                shouldShowPurchaseReviewImage: eA,
-                paymentRestrictionBannerType: eg,
+                shouldShowPurchaseReviewImage: eI,
+                paymentRestrictionBannerType: ep,
                 hasCheckoutContextLoaded: A,
                 devShelfFetchState: m,
                 isStepLoading: !A && null == h,
                 purchasePreviewError: h,
-                warningAndErrorMessages: eI,
-                paymentSourceDropdownProps: eT,
-                purchaseTermsAndLegalContent: eS,
+                warningAndErrorMessages: eT,
+                paymentSourceDropdownProps: eS,
+                purchaseTermsAndLegalContent: eN,
                 giftCardWallet: ea,
                 giftCardsEnabled: eo,
                 giftCardCheckboxProps: e_,
-                disabled: eh,
+                walletCoversSubtotal: eu,
+                disabled: em,
             };
         })({ hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s }),
-        { currencies: H, displayCurrency: j, setCurrency: $, priceOptions: q } = (0, p.P5)(),
-        X = r.useMemo(
+        { currencies: j, displayCurrency: $, setCurrency: q, priceOptions: X } = (0, p.P5)(),
+        Z = r.useMemo(
             () =>
                 (0, i.jsx)(_.qX, {
                     label: K.intl.string(K.t["/AAR02"]),
-                    selectedCurrency: q.currency ?? j,
-                    currencies: H,
-                    onChange: $,
+                    selectedCurrency: X.currency ?? $,
+                    currencies: j,
+                    onChange: q,
                 }),
-            [q.currency, j, H, $],
+            [X.currency, $, j, q],
         ),
-        Z = (0, i.jsxs)(i.Fragment, {
+        Q = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(_.nL, {
                     label: K.intl.string(K.t["u+Cw58"]),
                     giftCardsEnabled: g,
                     giftCardCheckboxProps: A,
                     paymentSourceDropdownProps: { ...c, shouldUseUnifiedCheckoutUI: !0 },
-                    disabled: N,
+                    showCheckboxAboveDropdown: N,
+                    disabled: H,
                 }),
-                X,
+                Z,
             ],
         }),
-        Q = r.useMemo(() => {
+        ee = r.useMemo(() => {
             let e = [];
             return (
                 null != f.testModeWarning &&
@@ -379,7 +382,7 @@ function ee(e) {
                 e.length > 0 ? e : null
             );
         }, [f.testModeWarning, f.devShelfError]),
-        ee = r.useMemo(() => {
+        et = r.useMemo(() => {
             let e = [];
             return (
                 null != f.socialLayerGameItemDisclaimer &&
@@ -399,9 +402,9 @@ function ee(e) {
               isGift: u,
               sku: a,
               skuPricePreview: l,
-              paymentSelectContent: Z,
+              paymentSelectContent: Q,
               legalContent: E,
-              upperInlineNoticeProps: Q,
-              footerInlineNoticeProps: ee,
+              upperInlineNoticeProps: ee,
+              footerInlineNoticeProps: et,
           });
 }

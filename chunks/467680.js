@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => l8,
-        virtualCurrencyCollection: () => l0,
-        playgroundConfig: () => l2,
-        identityCollection: () => l1,
-        RevenuePlaygroundCollectionId: () => lJ,
-        paymentsCollection: () => lQ,
+        nitroCollection: () => l2,
+        virtualCurrencyCollection: () => l1,
+        playgroundConfig: () => l5,
+        identityCollection: () => l4,
+        RevenuePlaygroundCollectionId: () => lQ,
+        paymentsCollection: () => l8,
     });
 var a,
     n = l(700623),
@@ -3023,85 +3023,121 @@ var lD = l(735438),
     lw = l(997101),
     lO = l(597770),
     lB = l(278416),
-    lV = l(918022),
+    lV = l(606267),
     lU = l(169797),
     lG = l(232467),
-    lH = l(826469),
-    lW = l(812745);
-let l$ = {
-        name: "Primitive: Nitro Plan Select",
-        id: "unified-checkout-nitro-plan-select",
-        component: (e) => {
-            let {
-                    variant: t,
-                    leftTitleDescriber: l,
-                    leftPrimaryText: a,
-                    leftSubtext: n,
-                    leftShowSubtext: r,
-                    leftSubtextStrikethrough: i,
-                    rightTitleDescriber: o,
-                    rightPrimaryText: c,
-                    rightSubtext: u,
-                    rightShowSubtext: p,
-                    rightSubtextStrikethrough: m,
-                } = e,
-                [b, h] = d.useState(0);
-            return (0, s.jsxs)("div", {
-                className: U.Cd,
-                children: [
-                    (0, s.jsx)(lG.q7, {
-                        selection: b,
-                        onChange: h,
-                        planOptions: [
-                            {
-                                id: 0,
-                                title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
-                                titleDescriber: l,
-                                primaryText: a,
-                                subtext: r ? (0, s.jsx)(lG.Lo, { strikethrough: i, price: n }) : void 0,
-                            },
-                            {
-                                id: 1,
-                                title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
-                                titleDescriber: o,
-                                primaryText: c,
-                                subtext: p ? (0, s.jsx)(lG.Lo, { strikethrough: m, price: u }) : void 0,
-                            },
-                        ],
-                    }),
-                    (0, s.jsxs)(y.E, { variant: "text-sm/normal", children: ["Selected plan index: ", b] }),
-                ],
-            });
-        },
-        controls: {
-            variant: {
-                label: "Nitro Variant",
-                type: "select",
-                defaultValue: eC.PremiumTypes.TIER_2,
-                options: [
-                    { label: "Nitro", value: eC.PremiumTypes.TIER_2 },
-                    { label: "Nitro Basic", value: eC.PremiumTypes.TIER_0 },
-                ],
-            },
-            leftTitleDescriber: { label: "Left Card - Title Describer", type: "text", defaultValue: "yearly" },
-            leftPrimaryText: { label: "Left Card - Primary Text", type: "text", defaultValue: "$99.99" },
-            leftSubtext: { label: "Left Card - Subtext", type: "text", defaultValue: "$119.99" },
-            leftShowSubtext: { label: "Left Card - Show Subtext", type: "boolean", defaultValue: !0 },
-            leftSubtextStrikethrough: { label: "Left Card - Subtext Strikethrough", type: "boolean", defaultValue: !0 },
-            rightTitleDescriber: { label: "Right Card - Title Describer", type: "text", defaultValue: "monthly" },
-            rightPrimaryText: { label: "Right Card - Primary Text", type: "text", defaultValue: "$9.99" },
-            rightSubtext: { label: "Right Card - Subtext", type: "text", defaultValue: "$11.99" },
-            rightShowSubtext: { label: "Right Card - Show Subtext", type: "boolean", defaultValue: !1 },
-            rightSubtextStrikethrough: {
-                label: "Right Card - Subtext Strikethrough",
-                type: "boolean",
-                defaultValue: !1,
-            },
-        },
+    lH = l(181447),
+    lW = l(826469),
+    l$ = l(812745);
+let lF = {
+    name: "Primitive: Nitro Plan Select",
+    id: "unified-checkout-nitro-plan-select",
+    component: (e) => {
+        let {
+                variant: t,
+                leftTitleDescriber: l,
+                leftPrimaryText: a,
+                leftSubtext: n,
+                leftShowSubtext: r,
+                leftSubtextStrikethrough: i,
+                rightTitleDescriber: o,
+                rightPrimaryText: c,
+                rightSubtext: u,
+                rightShowSubtext: p,
+                rightSubtextStrikethrough: m,
+            } = e,
+            [b, h] = d.useState(0);
+        return (0, s.jsxs)("div", {
+            className: U.Cd,
+            children: [
+                (0, s.jsx)(lG.q7, {
+                    selection: b,
+                    onChange: h,
+                    planOptions: [
+                        {
+                            id: 0,
+                            title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                            titleDescriber: l,
+                            primaryText: a,
+                            subtext: r ? (0, s.jsx)(lG.Lo, { strikethrough: i, price: n }) : void 0,
+                        },
+                        {
+                            id: 1,
+                            title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                            titleDescriber: o,
+                            primaryText: c,
+                            subtext: p ? (0, s.jsx)(lG.Lo, { strikethrough: m, price: u }) : void 0,
+                        },
+                    ],
+                }),
+                (0, s.jsxs)(y.E, { variant: "text-sm/normal", children: ["Selected plan index: ", b] }),
+            ],
+        });
     },
-    lF = { "nitro-wheel": i.t, gift: lO.o, orbs: r.C },
-    lz = lL.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    lY = {
+    controls: {
+        variant: {
+            label: "Nitro Variant",
+            type: "select",
+            defaultValue: eC.PremiumTypes.TIER_2,
+            options: [
+                { label: "Nitro", value: eC.PremiumTypes.TIER_2 },
+                { label: "Nitro Basic", value: eC.PremiumTypes.TIER_0 },
+            ],
+        },
+        leftTitleDescriber: { label: "Left Card - Title Describer", type: "text", defaultValue: "yearly" },
+        leftPrimaryText: { label: "Left Card - Primary Text", type: "text", defaultValue: "$99.99" },
+        leftSubtext: { label: "Left Card - Subtext", type: "text", defaultValue: "$119.99" },
+        leftShowSubtext: { label: "Left Card - Show Subtext", type: "boolean", defaultValue: !0 },
+        leftSubtextStrikethrough: { label: "Left Card - Subtext Strikethrough", type: "boolean", defaultValue: !0 },
+        rightTitleDescriber: { label: "Right Card - Title Describer", type: "text", defaultValue: "monthly" },
+        rightPrimaryText: { label: "Right Card - Primary Text", type: "text", defaultValue: "$9.99" },
+        rightSubtext: { label: "Right Card - Subtext", type: "text", defaultValue: "$11.99" },
+        rightShowSubtext: { label: "Right Card - Show Subtext", type: "boolean", defaultValue: !1 },
+        rightSubtextStrikethrough: { label: "Right Card - Subtext Strikethrough", type: "boolean", defaultValue: !1 },
+    },
+};
+function lz(e) {
+    let { label: t, giftCardsEnabled: l, disabled: a, hidePersonalInformation: n } = e,
+        r = (0, x.bG)([tz.A], () => Object.values(tz.A.paymentSources)),
+        [i, o] = d.useState(void 0);
+    d.useEffect(() => {
+        (0, eo.$o)();
+    }, []);
+    let c = d.useMemo(() => r.map((e) => new lW.A(e, !0, [])), [r]),
+        {
+            dropdownPaymentSources: u,
+            dropdownPaymentSourceId: p,
+            handleDropdownPaymentSourceChange: m,
+            giftCardCheckboxProps: b,
+            walletCoversSubtotal: h,
+        } = (0, lV.Y0)({
+            checkoutPaymentSources: c,
+            paymentSourceId: i,
+            setPaymentSourceId: o,
+            location: "revenue_playground",
+        });
+    return (0, s.jsxs)("div", {
+        children: [
+            (0, s.jsx)(lG.nL, {
+                label: t,
+                giftCardsEnabled: l,
+                giftCardCheckboxProps: b,
+                paymentSourceDropdownProps: {
+                    selectedPaymentSourceId: p,
+                    paymentSources: u,
+                    hidePersonalInformation: n,
+                    onChange: m,
+                },
+                showCheckboxAboveDropdown: h,
+                disabled: a,
+            }),
+            (0, s.jsxs)(y.E, { variant: "text-sm/normal", children: ["Effective payment source: ", i ?? "None"] }),
+        ],
+    });
+}
+let lY = { "nitro-wheel": i.t, gift: lO.o, orbs: r.C },
+    lq = lL.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    lK = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
@@ -3129,7 +3165,7 @@ let l$ = {
                                         primaryButtonProps: {
                                             onClick: e.onClose,
                                             text: t,
-                                            icon: "none" !== l ? lF[l] : void 0,
+                                            icon: "none" !== l ? lY[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
                                         children: (0, s.jsx)(ee.B, {
@@ -3160,7 +3196,7 @@ let l$ = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: lw.d.US, options: lz },
+            countryCode: { label: "Country Code", type: "select", defaultValue: lw.d.US, options: lq },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3177,7 +3213,7 @@ let l$ = {
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    lq = {
+    lX = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3186,9 +3222,9 @@ let l$ = {
         intervalCount: 1,
         startDate: new Date(),
     },
-    lK = {
-        [lG.I0.Subscription]: { type: lG.I0.Subscription, ...lq },
-        [lG.I0.SubscriptionTrial]: { type: lG.I0.SubscriptionTrial, ...lq },
+    lJ = {
+        [lG.I0.Subscription]: { type: lG.I0.Subscription, ...lX },
+        [lG.I0.SubscriptionTrial]: { type: lG.I0.SubscriptionTrial, ...lX },
         [lG.I0.OrbsRedemption]: { type: lG.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
         [lG.I0.Shop]: { type: lG.I0.Shop, purchaseButtonText: "Purchase" },
         [lG.I0.GiftNitro]: { type: lG.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
@@ -3199,10 +3235,10 @@ let l$ = {
             applicationName: "Marvel Rivals",
         },
     },
-    lX = {
+    lZ = {
         title: "Unified Checkout",
         stories: [
-            lY,
+            lK,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -3228,7 +3264,7 @@ let l$ = {
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            l$,
+            lF,
             {
                 name: "Primitive: Subscription Details Accordion",
                 id: "unified-checkout-subscription-details",
@@ -3336,10 +3372,10 @@ let l$ = {
                 component: (e) => {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
-                            { id: "visa-1234", label: "Visa ending in 1234", icon: lW.Be.VISA },
-                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: lW.Be.MASTERCARD },
-                            { id: "paypal", label: "user@example.com", icon: lW.Be.PAYPAL },
-                            { id: "amex-9012", label: "Amex ending in 9012", icon: lW.Be.AMEX },
+                            { id: "visa-1234", label: "Visa ending in 1234", icon: l$.Be.VISA },
+                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: l$.Be.MASTERCARD },
+                            { id: "paypal", label: "user@example.com", icon: l$.Be.PAYPAL },
+                            { id: "amex-9012", label: "Amex ending in 9012", icon: l$.Be.AMEX },
                         ],
                         [r, i] = d.useState(n[0].id);
                     return (0, s.jsxs)("div", {
@@ -3372,46 +3408,7 @@ let l$ = {
             {
                 name: "Primitive: Payment Source Selector",
                 id: "unified-checkout-payment-source-selector",
-                component: (e) => {
-                    let { label: t, giftCardsEnabled: l, disabled: a, hidePersonalInformation: n } = e,
-                        r = (0, x.bG)([tz.A], () => Object.values(tz.A.paymentSources)),
-                        [i, o] = d.useState(void 0);
-                    d.useEffect(() => {
-                        (0, eo.$o)();
-                    }, []);
-                    let c = d.useMemo(() => r.map((e) => new lH.A(e, !0, [])), [r]),
-                        {
-                            dropdownPaymentSources: u,
-                            dropdownPaymentSourceId: p,
-                            handleDropdownPaymentSourceChange: m,
-                            giftCardCheckboxProps: b,
-                        } = (0, lV.Y)({
-                            checkoutPaymentSources: c,
-                            paymentSourceId: i,
-                            setPaymentSourceId: o,
-                            location: "revenue_playground",
-                        });
-                    return (0, s.jsxs)("div", {
-                        children: [
-                            (0, s.jsx)(lG.nL, {
-                                label: t,
-                                giftCardsEnabled: l,
-                                giftCardCheckboxProps: b,
-                                paymentSourceDropdownProps: {
-                                    selectedPaymentSourceId: p,
-                                    paymentSources: u,
-                                    hidePersonalInformation: n,
-                                    onChange: m,
-                                },
-                                disabled: a,
-                            }),
-                            (0, s.jsxs)(y.E, {
-                                variant: "text-sm/normal",
-                                children: ["Effective payment source: ", i ?? "None"],
-                            }),
-                        ],
-                    });
-                },
+                component: (e) => (0, s.jsx)(lH.P, { children: (0, s.jsx)(lz, { ...e }) }),
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Payment Method" },
                     giftCardsEnabled: { label: "Gift Cards Enabled", type: "boolean", defaultValue: !0 },
@@ -3426,7 +3423,7 @@ let l$ = {
                     let { type: t, immediateDelivery: l, paysafecard: a } = e,
                         [n, r] = d.useState(!1);
                     return (0, s.jsx)(lG._P, {
-                        variant: lK[t],
+                        variant: lJ[t],
                         immediateDelivery: l ? { value: n, onChange: r } : void 0,
                         paymentSourceType: a ? M.hes.PAYSAFE_CARD : M.hes.CARD,
                     });
@@ -3495,7 +3492,7 @@ let l$ = {
                     return (0, s.jsx)(lG.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: lw.d.US, options: lz },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: lw.d.US, options: lq },
                 },
             },
             {
@@ -3514,7 +3511,7 @@ let l$ = {
                         label: "Relocation Country",
                         type: "select",
                         defaultValue: lw.d.US,
-                        options: lz,
+                        options: lq,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                     willForfeitGiftCardBalance: {
@@ -3526,19 +3523,19 @@ let l$ = {
             },
         ],
     };
-var lJ =
+var lQ =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let lZ = ["Revenue Storybook", "Revenue Playground"],
-    lQ = {
+let l0 = ["Revenue Storybook", "Revenue Playground"],
+    l8 = {
         id: "payments",
         name: "Payments",
         groups: [
             eA,
-            lX,
+            lZ,
             {
                 title: "Gift Card",
                 stories: [
@@ -3601,10 +3598,10 @@ let lZ = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [eV, eU] },
             lp,
         ],
-        tags: lZ,
+        tags: l0,
         IconComponent: n.d,
     },
-    l0 = {
+    l1 = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3660,10 +3657,10 @@ let lZ = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: lZ,
+        tags: l0,
         IconComponent: r.C,
     },
-    l8 = {
+    l2 = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4023,10 +4020,10 @@ let lZ = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eQ] },
         ],
-        tags: lZ,
+        tags: l0,
         IconComponent: i.t,
     },
-    l1 = {
+    l4 = {
         id: "identity",
         name: "Identity",
         groups: [
@@ -4121,7 +4118,7 @@ let lZ = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: lZ,
+        tags: l0,
         IconComponent: o.n,
     },
-    l2 = { playgroundBaseUrl: "revenue", collections: [lQ, l0, l8, l1] };
+    l5 = { playgroundBaseUrl: "revenue", collections: [l8, l1, l2, l4] };
