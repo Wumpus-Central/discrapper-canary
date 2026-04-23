@@ -48,8 +48,8 @@ function Y(t) {
             targetElementRef: W,
         } = t,
         [B, w] = l.useState(!1),
-        { analyticsLocations: F } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        H = (0, f.A)({ display: s, user: e, activity: r, entry: a, analyticsLocations: F }),
+        { analyticsLocations: H } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        F = (0, f.A)({ display: s, user: e, activity: r, entry: a, analyticsLocations: H }),
         z = (0, _.NR)(),
         X = l.useRef(null),
         $ = z?.interactionPopoutTargetRef ?? X,
@@ -139,7 +139,7 @@ function Y(t) {
                 })(t),
                 (0, P.s)(t),
             ].filter((t) => null != t);
-        })({ entry: a, activity: r, user: e, display: s, onClose: Y, onAction: H, isMenuOpen: B, appContext: k });
+        })({ entry: a, activity: r, user: e, display: s, onClose: Y, onAction: F, isMenuOpen: B, appContext: k });
     return 0 === Q.length || e.bot
         ? null
         : (0, i.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function Y(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  H({ action: "OPEN_MENU" }), w(!0);
+                  F({ action: "OPEN_MENU" }), w(!0);
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
@@ -179,7 +179,7 @@ function W(t) {
             (0, i.jsx)(r.m, {
                 targetElementRef: n,
                 text: y.intl.string(y.t["UKOtz+"]),
-                "aria-label": !1,
+                ariaHidden: !0,
                 children: (0, i.jsx)(a.D, {
                     ...t,
                     innerRef: n,
